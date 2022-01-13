@@ -1,0 +1,524 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en-us" lang="en-us" whc:version="22.0">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><meta charset="UTF-8"/><meta name="DC.rights.owner" content="(C) Copyright 2022"/><meta name="copyright" content="(C) Copyright 2022"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="abstract" content="DXClient is a tool that helps developers and administrators manage tasks, such as uploading one or more portlets or Script Applications, from source development environments to target HCL DX 9.5 deployments. This tool is capable of taking artifacts developed locally and deploying them to DX 9.5 servers deployed to supported on-premises platforms in standalone, cluster, or farm-topologies and supported Kubernetes platforms."/><meta name="description" content="DXClient is a tool that helps developers and administrators manage tasks, such as uploading one or more portlets or Script Applications, from source development environments to target HCL DX 9.5 deployments. This tool is capable of taking artifacts developed locally and deploying them to DX 9.5 servers deployed to supported on-premises platforms in standalone, cluster, or farm-topologies and supported Kubernetes platforms."/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="dxclient"/><meta name="DC.language" content="en-us"/>        
+      <title>DXClient | HCL Digital Experience</title><!--  Generated with Oxygen version 23.1, build number 2021040717.  --><meta name="wh-path2root" content="../"/><meta name="wh-source-relpath" content="containerization/dxclient.dita"/><meta name="wh-out-relpath" content="containerization/dxclient.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/topic-page.css?buildId=2021040717"/>
+    
+    
+    <script type="text/javascript" src="../oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"><!----></script>
+    
+    <script data-main="../oxygen-webhelp/app/topic-page.js" src="../oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/cobalt.css?buildId=2021040717"/></head>
+
+    <body id="dxclient" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header" whc:version="23.1">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    
+                    <div class=" wh_publication_title "><a href="../index.html"><span class="title"><span class="ph">HCL Digital Experience 9.5</span></span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                <button type="button" data-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-toggle="collapse" class="navbar-toggler collapsed wh_toggle_button" aria-expanded="false" aria-label="Toggle menu" aria-controls="wh_top_menu_and_indexterms_link">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                <nav class=" wh_top_menu " aria-label="Menu Container"><ul role="menubar" aria-label="Menu"><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="kc_welcome-d10859e12-mi" data-tocid="kc_welcome-d10859e12" data-state="not-ready" class=" topicref " data-id="kc_welcome"><span class="title"><a href="../welcome/wp95_welcome.html">HCL Digital Experience 9.5</a></span></span></li></ul></nav>
+                <div class=" wh_indexterms_link "><a href="../indexTerms.html" title="Index" aria-label="Go to index terms page"><span>Index</span></a></div>
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <!-- Search form -->
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader"></span></div>
+                        
+                        <!-- External resource link -->
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <!-- Expand/Collapse publishing TOC 
+                             The menu button for mobile devices is copied in the output only when the publication TOC is available
+                        -->
+                        
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">DXClient | HCL Digital Experience</h1>
+    
+    
+    <div class="- topic/body body"><div class="- topic/abstract abstract">
+        <p class="- topic/shortdesc shortdesc">DXClient is a tool that helps developers and administrators manage tasks, such as
+            uploading one or more portlets or Script Applications, from source development
+            environments to target HCL DX 9.5 deployments. This tool is capable of taking artifacts
+            developed locally and deploying them to DX 9.5 servers deployed to supported on-premises
+            platforms in standalone, cluster, or farm-topologies and supported Kubernetes
+            platforms.</p>
+        <div class="- topic/note note note note_note" id="dxclient__dockerimage_introduced" data-ofbid="dxclient__dockerimage_introduced"><span class="note__title">Notes:</span> 
+            <ul class="- topic/ul ul" id="dxclient__ul_kk3_ppn_cqb" data-ofbid="dxclient__ul_kk3_ppn_cqb">
+                <li class="- topic/li li">DXClient is enabled in supported Kubernetes platforms from HCL Digital
+                    Experience 9.5 CF192 and later releases.</li>
+                <li class="- topic/li li">DXClient is available as a Docker image from HCL DX 9.5 CF196 and later
+                    releases, See the <a class="- topic/xref xref" href="#dxclient__dxclient_docker">installation section</a> for more details.</li>
+            </ul>
+        </div>
+        <p class="- topic/p p">DXClient is a <a class="- topic/xref xref" href="https://nodejs.org/en/" target="_blank" rel="external noopener">Node.js</a>-based CLI tool and requires Node.js to be installed as a
+            prerequisite.</p>
+        <p class="- topic/p p">See video: <a class="- topic/xref xref" href="https://www.youtube.com/watch?v=OphJ8-WcLxY" target="_blank" rel="external noopener">Getting Started with DXClient on Red Hat OpenShift using HCL
+                Digital Experience Container Update CF194</a></p>
+        <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">DXConnect</strong></p>
+        <p class="- topic/p p">DXConnect is a servlet-based application deployed on top of IBM WebSphere Application
+            Server in the HCL DX 9.5 CF19 and later deployments, under the <a class="- topic/xref xref" href="../config/cw_overview.html">Configuration
+                Wizard profile - <code class="+ topic/ph pr-d/codeph ph codeph">cw_profile</code></a>. DXConnect enables the DXClient
+            tool to connect over an HTTP or HTTPS connection from a client development machine or
+            remote server to a source or target HCL DX 9.5 server to execute certain tasks requested
+            via DXClient commands.</p>
+    </div>
+        <section class="- topic/section section" id="dxclient__dxclidnet_architecture" data-ofbid="dxclient__dxclidnet_architecture"><h2 class="- topic/title title sectiontitle">Architecture</h2>
+            
+            <figure class="- topic/fig fig fignone" id="dxclient__dxclientarchitecture" data-ofbid="dxclient__dxclientarchitecture">
+                <img class="- topic/image image" id="dxclient__image_zvk_gwm_4nb" src="../assets/HCLDXClient_Architecture_Diagram.jpg" height="480" width="1351" alt="HCL DXClient Architecture diagram"/>
+            </figure>
+            <div class="- topic/note note note note_note" id="dxclient__note_qgm_q5t_yqb" data-ofbid="dxclient__note_qgm_q5t_yqb"><span class="note__title">Notes:</span> 
+                <ol class="- topic/ol ol" id="dxclient__ol_m2p_gmf_4nb" data-ofbid="dxclient__ol_m2p_gmf_4nb">
+                    <li class="- topic/li li">HCL DX 9.5 CF19 or later version is installed on target servers, on <a class="- topic/xref xref" href="https://support.hcltechsw.com/csm?id=kb_article&amp;sysparm_article=KB0013514&amp;sys_kb_id=17d6296a1b5df34077761fc58d4bcb03" target="_blank" rel="external noopener">supported on premises platforms</a>
+                        (Microsoft Windows, Linux or IBM AIX).</li>
+                    <li class="- topic/li li">Beginning with HCL DX 9.5 Container Update CF192 and later releases, the
+                        DXConnect Servlet is pre-configured and started on supported Red Hat
+                        OpenShift and Kubernetes platforms that DX 9.5 containers are deployed
+                        to.</li>
+                    <li class="- topic/li li">For supported on premises platforms with HCL DX 9.5 CF19 and later releases,
+                        the DXConnect application needs to be installed (refer to <a class="- topic/xref xref" href="dxconnect.html#dxconnect__dxconnectinstall">DXConnect
+                            Installation</a>) and started under the Configuration Wizard
+                            (<code class="+ topic/ph pr-d/codeph ph codeph">cw_profile</code>) on target servers. For more information on
+                        starting the Configuration Wizard, refer to <a class="- topic/xref xref" href="../config/cw_run.html">Accessing the Configuration
+                            Wizard</a><div class="- topic/note note remember note_remember" id="dxclient__note_hfz_s5t_yqb" data-ofbid="dxclient__note_hfz_s5t_yqb"><span class="note__title">Remember:</span> Configuration
+                            Wizard Administrator credentials are required to access the DXConnect
+                            application.</div></li>
+                    
+                </ol>
+            </div>
+        </section>
+        <section class="- topic/section section" id="dxclient__dxclient_docker" data-ofbid="dxclient__dxclient_docker"><h2 class="- topic/title title sectiontitle">Installing using the Docker image</h2>
+            
+            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Prerequisites:</strong> You must ensure that Docker is installed on the
+                workstation.</p>
+            <div class="- topic/p p">DXClient docker image comes with a script that you can use to run the docker image.
+                This script creates a store directory,and copies the input files from the absolute
+                path to the shared volume location. <ol class="- topic/ol ol" id="dxclient__ol_nct_lk4_cqb" data-ofbid="dxclient__ol_nct_lk4_cqb">
+                    <li class="- topic/li li">Navigate to &lt;working-directory&gt; folder where you wish to use DXClient
+                        from. </li>
+                    <li class="- topic/li li">Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local
+                        directory on the local workstation from your HCL Digital Experience 9.5
+                        CF196 or higher entitlements on the HCL Software License Portal.</li>
+                    <li class="- topic/li li">Extract the DXClient.zip file locally.</li>
+                    <li class="- topic/li li">Run docker load &lt; dxclient.tar.gz.</li>
+                    
+                    <li class="- topic/li li">Add the execution shell script to the bin directory to the PATH variable to
+                        be able to call dxclient from any directory.
+                            <pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_qtb_hl4_cqb" data-ofbid="dxclient__codeblock_qtb_hl4_cqb"><code> export PATH=&lt;working-directory&gt;/bin:$PATH</code></pre><p class="- topic/p p">For
+                            Microsoft Windows platforms:</p><p class="- topic/p p">use <code class="+ topic/ph pr-d/codeph ph codeph">dxclient.bat</code>
+                            script in the bin directory to the PATH variable to be able to call
+                            DXClient from any directory.</p></li>
+                    <li class="- topic/li li">Set appropriate
+                        permission.<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_hpc_1m4_cqb" data-ofbid="dxclient__codeblock_hpc_1m4_cqb"><code>chmod xxx &lt;working-directory&gt;/bin</code></pre></li>
+                    <li class="- topic/li li">Run 'dxclient -V' to verify that the dxclient command line is installed.
+                            <p class="- topic/p p">A folder named store will be created in your working directory. This
+                            is the shared volume location to your docker container.</p></li>
+                    <li class="- topic/li li">Configuration, logger, output, and sample files under location -
+                        &lt;working-directory&gt;/store.</li>
+                </ol></div>
+            <p class="- topic/p p">Common command arguments can be pre-configured inside the
+                    <code class="+ topic/ph pr-d/codeph ph codeph">config.json</code> file available under
+                    <code class="+ topic/ph pr-d/codeph ph codeph">&lt;working-directory&gt;/store</code> folder. A sample configuration
+                file that could be used on-premises platforms in standalone, cluster platforms is
+                also available under
+                    <code class="+ topic/ph pr-d/codeph ph codeph">&lt;working-directory&gt;/store/samples/sample-configurations/default-config.json</code>
+                for
+                reference.</p>
+        </section>
+        <section class="- topic/section section" id="dxclient__dxclient_node" data-ofbid="dxclient__dxclient_node"><h2 class="- topic/title title sectiontitle">Installing using the node package file (deprecated in CF196)</h2>
+            
+            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Prerequisites:</strong> Node.js version 12.18.3 is the minimum supported version, and
+                must be installed on the local workstation or automation server.</p>
+            <div class="- topic/note note note note_note" id="dxclient__note_mwz_lqn_cqb" data-ofbid="dxclient__note_mwz_lqn_cqb"><span class="note__title">Note:</span>  DXClient node package is deprecated in the HCL Digital
+                Experience Container CF196 release. It might be removed in the future releases. You
+                are encouraged to use the <a class="- topic/xref xref" href="#dxclient__dxclient_docker">DXClient Docker package</a> from CF Container release CF196 and
+                later.</div>
+            <div class="- topic/p p">
+                <ol class="- topic/ol ol" id="dxclient__ol_xqm_4wv_v4b" data-ofbid="dxclient__ol_xqm_4wv_v4b">
+                    <li class="- topic/li li">Complete the following steps to install the DXClient tool in your local
+                        development workstation or automation server.<div class="- topic/note note note note_note"><span class="note__title">Note:</span> If you are upgrading from
+                            CF19, CF191, or later releases, you should first unlink the current
+                            version using the following command before installing the newer
+                                version.<div class="- topic/p p">Syntax for Linux and Apple macOS
+                                platforms:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_ky2_hh4_cqb" data-ofbid="dxclient__codeblock_ky2_hh4_cqb"><code>make unlink</code></pre></div><div class="- topic/p p">Syntax
+                                for Microsoft Windows
+                                platforms:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_cy2_hh4_cqb" data-ofbid="dxclient__codeblock_cy2_hh4_cqb"><code>make_unlink.bat</code></pre></div></div></li>
+                    <li class="- topic/li li">Ensure that Node.js version 12.18.3 or later version is installed to the
+                        local workstation. The DXClient tool is supported on Microsoft Windows,
+                        Linux, and Apple macOS workstations and automation servers.</li>
+                    <li class="- topic/li li">Download the <span class="+ topic/ph sw-d/filepath ph filepath">DXClient.zip</span> file
+                            (<span class="+ topic/ph sw-d/filepath ph filepath">DXClient_VX_XXXXXXXX-XXXX.zip</span>) to a local
+                        directory on the local workstation from your DX 9.5 CF19 or later
+                        entitlements on the <a class="- topic/xref xref" href="https://www.hcltech.com/software/support/release" target="_blank" rel="external noopener">HCL Software License Portal</a>. Reference the <a class="- topic/xref xref" href="../../9.5/containerization/docker.html">Docker</a> topic for the latest list of HCL DX 9.5 files available
+                        for download. </li>
+                    <li class="- topic/li li">Extract the <span class="+ topic/ph sw-d/filepath ph filepath">DXClient.zip</span> file locally. </li>
+                    <li class="- topic/li li">From the extracted folder, run the following command.<div class="- topic/p p">For Linux and Apple
+                            macOS platforms:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>make install</code></pre></div><div class="- topic/p p">For Microsoft
+                            Windows platforms:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>make_install.bat</code></pre></div><p class="- topic/p p">The
+                            following commands are run:</p><figure class="- topic/fig fig fignone" id="dxclient__fig_qrj_sd4_wnb" data-ofbid="dxclient__fig_qrj_sd4_wnb">
+                            <img class="- topic/image image" id="dxclient__image_rrj_sd4_wnb" src="../assets/Install_DXClient_Command.png" height="179" width="530" alt="Install DXClient tool"/>
+                        </figure></li>
+                    <li class="- topic/li li">Run the following command to link your application to the local npm module
+                        in your machine. Refer to the following Notes section before you
+                            proceed.<div class="- topic/p p">For Linux and Apple MacOS
+                            platforms:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>make link</code></pre></div><div class="- topic/p p">For Microsoft Windows
+                                platforms:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>make_link.bat</code></pre><div class="- topic/note note note note_note"><span class="note__title">Notes:</span> 
+                                <ul class="- topic/ul ul" id="dxclient__ul_vfd_kx4_ynb" data-ofbid="dxclient__ul_vfd_kx4_ynb">
+                                    <li class="- topic/li li">Avoid using this command when scripting deployments from an
+                                        automation server (for example, in pipelines) as there is a
+                                        chance of picking up the wrong dependencies during tool
+                                        version upgrades.</li>
+                                    <li class="- topic/li li">If the <code class="+ topic/ph pr-d/codeph ph codeph">link</code> command is not used (such as on
+                                        automation servers), then use the following command to run
+                                        the application:<div class="- topic/p p">For Linux and Apple MacOS
+                                            platforms:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>./bin/dxclient</code></pre></div><div class="- topic/p p">For
+                                            Microsoft Windows
+                                            platforms:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>node bin/dxclient</code></pre></div></li>
+                                </ul>
+                            </div></div></li>
+                </ol>
+            </div>
+            <dl class="- topic/dl dl" id="dxclient__dl_std_jj4_cqb" data-ofbid="dxclient__dl_std_jj4_cqb">
+                
+                    <dt class="- topic/dt dt dlterm">DXClient node installation configuration</dt>
+                    <dd class="- topic/dd dd">
+                        <div class="- topic/p p">Common command arguments can be pre-configured inside the
+                                <code class="+ topic/ph pr-d/codeph ph codeph">config.json</code> file available under
+                                <code class="+ topic/ph pr-d/codeph ph codeph">dist/src/configuration</code> folder. A sample
+                            configuration file that could be used for any of the supported
+                            Kubernetes platforms is also available under
+                                <code class="+ topic/ph pr-d/codeph ph codeph">samples/sample-configurations.json</code> for
+                            reference.<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_n4q_nj4_cqb" data-ofbid="dxclient__codeblock_n4q_nj4_cqb"><code>{
+    "enableLogger": true,
+    "dxProtocol": "",
+    "hostname": "",
+    "dxPort": "",
+    "xmlConfigPath": "/wps/config",
+    "dxUsername": "",
+    "dxPassword": "",
+    "dxSoapPort": "10033",
+    "dxProfilePath": "",
+    "dxConnectHostname": "",
+    "dxConnectUsername": "",
+    "dxConnectPassword": "",
+    "dxConnectPort": "10202",
+    "xmlFile": "",
+    "warFile": "",
+    "applicationFile": "",
+    "applicationName": "",
+    "themeName": "",
+    "themePath": "",
+    "outputFilePath": "",
+    "dxConnectProtocol": "https",
+    "wcmSiteArea": "",
+    "excludes": [
+        "^bin$",
+        "^lib$",
+        "^src$",
+        "^node_modules$",
+        "^\\.classpath$",
+        "^\\.project$",
+        "^\\..*ignore$",
+        "^config.json$",
+        "^sp-cmdln.log$",
+        "^sp.bat$",
+        "^sp.sh$"
+    ],
+    "wcmContentPath": "",
+    "wcmContentName": "",
+    "prebuiltZip": "",
+    "contenthandlerPath": "/wps/mycontenthandler",
+    "mainHtmlFile": "",
+    "wcmContentTitle": "",
+    "contentRoot": "",
+    "wcmContentId": "",
+    "virtualPortalContext": "",
+    "projectContext": "",
+    "versionName": "",
+    "restoreAsPublished": false
+}</code></pre></div>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm">DXClient node uninstalling</dt>
+                    <dd class="- topic/dd dd">
+                        <div class="- topic/p p">
+                            <ul class="- topic/ul ul" id="dxclient__ul_udd_s4x_v4b" data-ofbid="dxclient__ul_udd_s4x_v4b">
+                                <li class="- topic/li li">To uninstall the DXClient tool, perform the following
+                                        commands:<div class="- topic/p p">For Linux and Apple MacOS
+                                        platforms:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_qyn_rj4_cqb" data-ofbid="dxclient__codeblock_qyn_rj4_cqb"><code>make clean</code></pre></div><div class="- topic/p p">For
+                                        Microsoft Windows
+                                        platforms:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_ryn_rj4_cqb" data-ofbid="dxclient__codeblock_ryn_rj4_cqb"><code>make uninstall.bat</code></pre></div></li>
+                                <li class="- topic/li li">To unlink the DXClient tool, perform the following
+                                        commands:<div class="- topic/p p">For Linux and Apple MacOS
+                                        platforms:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_syn_rj4_cqb" data-ofbid="dxclient__codeblock_syn_rj4_cqb"><code>make unlink</code></pre></div><div class="- topic/p p">For
+                                        Microsoft Windows
+                                        platforms:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_tyn_rj4_cqb" data-ofbid="dxclient__codeblock_tyn_rj4_cqb"><code>make_unlink.bat</code></pre></div></li>
+                            </ul>
+                        </div>
+                    </dd>
+                
+            </dl>
+        </section>
+        <section class="- topic/section section" id="dxclient__section_i2h_x11_2qb" data-ofbid="dxclient__section_i2h_x11_2qb"><h2 class="- topic/title title sectiontitle">Verify the DXClient installation</h2>
+            
+            <p class="- topic/p p">Successful installation of the DXClient tool can be checked by using the
+                    "<code class="+ topic/ph pr-d/codeph ph codeph">dxclient -V</code>" command, which should show the version of the
+                DXClient tool installed. </p>
+            <div class="- topic/p p">Once installed, commands can be executed using the DXClient tool to perform CI / CD
+                actions on HCL DX 9.5 servers. <div class="- topic/note note note note_note" id="dxclient__note_spz_kj4_cqb" data-ofbid="dxclient__note_spz_kj4_cqb"><span class="note__title">Notes:</span> Refer to the list of features that were released in the
+                    following HCL DX 9.5 Container releases:<ul class="- topic/ul ul" id="dxclient__ul_qf1_q13_ppb" data-ofbid="dxclient__ul_qf1_q13_ppb">
+                        <li class="- topic/li li">HCL DX 9.5 CF199 release:<ul class="- topic/ul ul" id="dxclient__ul_hff_3kd_lrb" data-ofbid="dxclient__ul_hff_3kd_lrb">
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="dam_subscription_staging.html" title="This topic contains the commands that administrators can use to configure the staging of Digital Asset Management (DAM) content. This allows you to manage subscriber registration or configure periodic sync.">DAM
+                                    Staging</a></li>
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="credentialvaultslot.html" title="This topic describes the commands that are used to create or update credential vault slot in the DX server.">Create credential vault
+                                        slot</a></li>
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="syndicatorsandsubscribers.html#syndicatorsandsubscribers__section_ndj_bcd_lrb">Create syndication relation</a></li>
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="resourceenvironments.html" title="This topic describes the commands that are used to create, update, or delete custom properties from an existing resource environment. It also provides the commands to export or import multiple resource environment providers.">Export and import
+                                        multiple resource environment providers</a></li>
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="personalization.html" title="This topic contains the commands that the administrators can use to export and import the personalization (PZN) rules from the source server to the target server as specified by the user.">Specify the context root for
+                                        exporting and importing personalization rules</a></li>
+                            </ul></li>
+                        <li class="- topic/li li">HCL DX 9.5 CF198 release:<ul class="- topic/ul ul" id="dxclient__ul_aqb_w1r_zqb" data-ofbid="dxclient__ul_aqb_w1r_zqb">
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="damschemas.html#damschemas__listdamschema">List DAM
+                                        schemas</a></li>
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="personalization.html" title="This topic contains the commands that the administrators can use to export and import the personalization (PZN) rules from the source server to the target server as specified by the user.">Personalization export and
+                                        import rules</a></li>
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="resourceenvironments.html" title="This topic describes the commands that are used to create, update, or delete custom properties from an existing resource environment. It also provides the commands to export or import multiple resource environment providers.">Resource environment
+                                        provider</a></li>
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="virtualportals.html" title="This topic describes the commands that are used in managing the virtual portal activities such as creating, listing, importing, or exporting virtual portals.">Manage virtual
+                                    portals</a></li>
+                            </ul></li>
+                        <li class="- topic/li li">HCL DX 9.5 CF197 release:<ul class="- topic/ul ul" id="dxclient__ul_acs_fzq_zqb" data-ofbid="dxclient__ul_acs_fzq_zqb">
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="portlets.html#portlets__section_xjb_2hg_w4b">Undeploy
+                                        portlets</a></li>
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="themes.html" title="This topic provides information about the deployment and undeployment of themes artifacts.">Deploy and undeploy themes</a></li>
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="deployapplication.html#deployapplication__deploydxapp">Deploy application</a></li>
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="syndicatorsandsubscribers.html#syndicatorsandsubscribers__section_zfd_c1c_2qb">manage get-syndication report</a></li>
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="dxcoreserver.html#dxcoreserver__deploydxapp">Restart
+                                        Core</a></li>
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="damschemas.html#damschemas__deletedamschema">Delete
+                                        DAM schema</a></li>
+                            </ul></li>
+                        <li class="- topic/li li">HCL DX 9.5 CF196 release:<ul class="- topic/ul ul" id="dxclient__ul_bjf_zwh_dqb" data-ofbid="dxclient__ul_bjf_zwh_dqb">
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="sharedlibrary.html" title="Shared libraries are jar files representing code that is shared across multiple components of the customer, for example, portlets, themes, preprocessors, and others.">Shared library</a></li>
+                            </ul></li>
+                        <li class="- topic/li li">HCL DX 9.5 CF195 release:<ul class="- topic/ul ul" id="dxclient__ul_xpw_j33_ppb" data-ofbid="dxclient__ul_xpw_j33_ppb">
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="themes.html#themes__section_rsy_qj3_ppb">Undeploy theme</a></li>
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="../wcm/wcm_mls_export_import.html" title="The HCL Multilingual Solution (MLS) export and import capability allows you to support translation of the content of a library by exporting it into a format supported by a translation service and importing the translated content back into HCL Digital Experience using the DXClient tool.">MLS export and
+                                        import of WCM library</a></li>
+                            </ul></li>
+                        <li class="- topic/li li">HCL DX 9.5 CF193 release:<ul class="- topic/ul ul" id="dxclient__ul_prk_jb3_ppb" data-ofbid="dxclient__ul_prk_jb3_ppb">
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="dxcoreserver.html#dxcoreserver__deploydxapp">Restart DX Core server</a></li>
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="deployapplication.html#deployapplication__deploydxapp">Deploy Application</a></li>
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="syndicatorsandsubscribers.html#syndicatorsandsubscribers__deploydxapp">Managing syndicators</a></li>
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="syndicatorsandsubscribers.html#syndicatorsandsubscribers__section_cwj_dpf_dpb">Managing subscribers</a></li>
+                            </ul></li>
+                        <li class="- topic/li li">HCL DX 9.5 CF192 release:<ul class="- topic/ul ul" id="dxclient__ul_qlt_znx_v4b" data-ofbid="dxclient__ul_qlt_znx_v4b">
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="scriptapplications.html#scriptapplications__section_i2y_ttl_4nb">Undeploy script applications</a></li>
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="themes.html#themes__deploytheme">Deploy theme</a> (EAR and WebDAV
+                                    based)</li>
+                            </ul></li>
+                        <li class="- topic/li li">HCL DX 9.5 CF19 release:<ul class="- topic/ul ul" id="dxclient__ul_oqs_mmx_v4b" data-ofbid="dxclient__ul_oqs_mmx_v4b">
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="portlets.html#portlets__section_xzq_tyv_v4b">Deploy Portlets</a> or
+                                        <a class="- topic/xref xref" href="portlets.html#portlets__section_xjb_2hg_w4b">Undeploy portlets</a></li>
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="scriptapplications.html#scriptapplications__section_um4_jqg_w4b">Deploy script applications</a></li>
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="xmlaccess.html#xmlaccess__xmlaccess">XML Access</a></li>
+                                <li class="- topic/li li"><a class="- topic/xref xref" href="scriptapplications.html#scriptapplications__section_fzm_yqg_w4b">Restore Script Application</a></li>
+                            </ul></li>
+                    </ul></div></div>
+        </section>
+        <section class="- topic/section section" id="dxclient__section_gvt_xwv_v4b" data-ofbid="dxclient__section_gvt_xwv_v4b"><h2 class="- topic/title title sectiontitle">DXClient commands</h2>
+            
+            <div class="- topic/p p">Command syntax conventions:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>dxclient [command] [options]</code></pre></div>
+            <div class="- topic/p p">Use the following command to execute the deploy portlet
+                action:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>dxclient deploy-portlet [options]</code></pre></div>
+            <div class="- topic/p p">Use the following command to execute the undeploy portlet
+                action:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>dxclient undeploy-portlet [options]</code></pre></div>
+            <div class="- topic/p p">Use the following command to execute the xmlaccess
+                action:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>dxclient xmlaccess [options]</code></pre></div>
+            <div class="- topic/p p">Use the following command to execute the <cite class="- topic/cite cite">pull</cite> script application
+                action:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>dxclient deploy-scriptapplication pull [options]</code></pre></div>
+            <div class="- topic/p p">Use the following command to execute the <cite class="- topic/cite cite">push</cite> script application
+                action:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>dxclient deploy-scriptapplication push [options]</code></pre></div>
+            <div class="- topic/p p">Use the following command to execute the undeploy script application
+                action:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>dxclient undeploy-scriptapplication [options]</code></pre></div>
+            <div class="- topic/p p">Use the following command to execute the restore script application
+                action:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>dxclient restore-scriptapplication [options]</code></pre></div>
+            <div class="- topic/p p">Use the following command to execute the deploy application
+                action:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>dxclient deploy-application [options]</code></pre></div>
+            <div class="- topic/p p">Use the following command to execute the DX Core restart
+                action:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>dxclient restart-dx-core</code></pre></div>
+            <div class="- topic/p p">Use the following command to execute manage-subscriber
+                action:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_kdv_bn4_cqb" data-ofbid="dxclient__codeblock_kdv_bn4_cqb"><code>dxclient manage-subscriber -h</code></pre></div>
+            <div class="- topic/p p">Use the following command to execute manage-syndicator
+                action:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_zxh_dn4_cqb" data-ofbid="dxclient__codeblock_zxh_dn4_cqb"><code>dxclient manage-syndicator -h</code></pre></div>
+            <div class="- topic/p p">Use the following command to execute the deploy theme
+                action:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_pr4_jn4_cqb" data-ofbid="dxclient__codeblock_pr4_jn4_cqb"><code>dxclient deploy-theme [options]</code></pre></div>
+            <div class="- topic/p p">Use the following command to execute the undeploy theme
+                action:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_spt_p33_ppb" data-ofbid="dxclient__codeblock_spt_p33_ppb"><code>dxclient undeploy-theme [options]
+</code></pre></div>
+            <div class="- topic/p p">Use the following command to execute the manage-syndicator get-syndication-report
+                action:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_i2c_nn4_cqb" data-ofbid="dxclient__codeblock_i2c_nn4_cqb"><code>dxclient  manage-syndicator get-syndication-report [options]</code></pre></div>
+            <div class="- topic/p p">Use the following command to execute the shared-library
+                action:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_lzk_pn4_cqb" data-ofbid="dxclient__codeblock_lzk_pn4_cqb"><code>dxclient  shared-library [options]</code></pre></div>
+            <div class="- topic/p p">Use the following command to execute the delete DAM schema
+                action:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_zjs_lqz_mqb" data-ofbid="dxclient__codeblock_zjs_lqz_mqb"><code>dxclient delete-dam-schema [options]</code></pre></div>
+            <div class="- topic/p p">Use the following command to list all DAM schemas
+                present:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_u2m_xtt_yqb" data-ofbid="dxclient__codeblock_u2m_xtt_yqb"><code>dxclient list-dam-schemas  [options]</code></pre></div>
+            <div class="- topic/p p">Use the following command to export the personalization rules from the target
+                server:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_w52_ztt_yqb" data-ofbid="dxclient__codeblock_w52_ztt_yqb"><code>dxclient pzn-export  [options]</code></pre></div>
+            <div class="- topic/p p">Use the following command to import the personalization rules into the target
+                server:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_ebj_15t_yqb" data-ofbid="dxclient__codeblock_ebj_15t_yqb"><code>dxclient pzn-import  [options]</code></pre></div>
+            <div class="- topic/p p">Use the following command to manage virtual portal tasks in the DX
+                server:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_t1t_c5t_yqb" data-ofbid="dxclient__codeblock_t1t_c5t_yqb"><code>dxclient manage-virtual-portal [options]</code></pre></div>
+            <div class="- topic/p p">Use the following command to register
+                subscriber:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_p4y_3qd_lrb" data-ofbid="dxclient__codeblock_p4y_3qd_lrb"><code>dxclient manage-dam-staging register-dam-subscriber [options]</code></pre></div>
+            <div class="- topic/p p">Use the following command to deregister
+                subscriber:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_fjx_jqd_lrb" data-ofbid="dxclient__codeblock_fjx_jqd_lrb"><code>dxclient manage-dam-staging deregister-dam-subscriber  [options]</code></pre></div>
+            <div class="- topic/p p">Use the following command to trigger manual
+                sync:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_bgb_lqd_lrb" data-ofbid="dxclient__codeblock_bgb_lqd_lrb"><code>dxclient manage-dam-staging trigger-staging  [options]</code></pre></div>
+            <div class="- topic/p p">Use the following command to create credential vault slot in the DX
+                server:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_dv4_mqd_lrb" data-ofbid="dxclient__codeblock_dv4_mqd_lrb"><code>dxclient create-credential-vault  [options]</code></pre></div>
+            <div class="- topic/p p">Use the following command to create the syndication relation between syndicator and
+                subscriber in DX
+                server:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_czp_nqd_lrb" data-ofbid="dxclient__codeblock_czp_nqd_lrb"><code>dxclient create-syndication-relation  [options]</code></pre></div>
+            <div class="- topic/p p">Use the following command to create, update, delete, export or import a custom
+                property from an existing Resource Environment
+                Provider:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="dxclient__codeblock_y2w_4qd_lrb" data-ofbid="dxclient__codeblock_y2w_4qd_lrb"><code>dxclient resource-env-provider [options]</code></pre></div>
+        </section>
+        <section class="- topic/section section" id="dxclient__section_bkx_bxv_v4b" data-ofbid="dxclient__section_bkx_bxv_v4b"><h2 class="- topic/title title sectiontitle">DXClient Help commands</h2>
+            
+            <p class="- topic/p p">The following commands show the Help documents for DXClient command usage.</p>
+            <div class="- topic/p p">Use the following commands to display the Help document for
+                DXClient:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>dxclient</code></pre><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>dxclient -h, --help </code></pre></div>
+            <div class="- topic/p p">Use the following command to display the DXClient version
+                number:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>dxclient -V, --version</code></pre></div>
+            <div class="- topic/p p">Use the following command to display the detailed help for a specific
+                command:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>dxclient help [command]</code></pre></div>
+        </section>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="section-item"><div class="section-title"><a href="#dxclient__dxclidnet_architecture" data-tocid="dxclient__dxclidnet_architecture">Architecture</a></div></li><li class="section-item"><div class="section-title"><a href="#dxclient__dxclient_docker" data-tocid="dxclient__dxclient_docker">Installing using the Docker image</a></div></li><li class="section-item"><div class="section-title"><a href="#dxclient__dxclient_node" data-tocid="dxclient__dxclient_node">Installing using the node package file (deprecated in CF196)</a></div></li><li class="section-item"><div class="section-title"><a href="#dxclient__section_i2h_x11_2qb" data-tocid="dxclient__section_i2h_x11_2qb">Verify the DXClient installation</a></div></li><li class="section-item"><div class="section-title"><a href="#dxclient__section_gvt_xwv_v4b" data-tocid="dxclient__section_gvt_xwv_v4b">DXClient commands</a></div></li><li class="section-item"><div class="section-title"><a href="#dxclient__section_bkx_bxv_v4b" data-tocid="dxclient__section_bkx_bxv_v4b">DXClient Help commands</a></div></li></ul></div>
+                        </nav>
+                        
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer" whc:version="23.1">
+  <div class=" footer-container mx-auto ">
+    
+            Generated by <a class="oxyFooter" href="http://www.oxygenxml.com/xml_webhelp.html" target="_blank">
+            &lt;oXygen/&gt; XML WebHelp
+            </a>
+        
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" alt=""/>
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

@@ -1,0 +1,1697 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://dxonkube.com/containerization-o/helm/architecture/damschemas/">
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.6">
+    
+    
+      
+        <title>Damschemas - DX on Kubernetes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.cd566b2a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dam-schemas-hcl-digital-experience" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="DX on Kubernetes" class="md-header__button md-logo" aria-label="DX on Kubernetes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DX on Kubernetes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Damschemas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="DX on Kubernetes" class="md-nav__button md-logo" aria-label="DX on Kubernetes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    DX on Kubernetes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Welcome to MkDocs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../welcome/" class="md-nav__link">
+        Welcome to HCL Digital Experience 9.5
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Containerization
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Containerization" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Containerization
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../containerization/credentialvaultslot/" class="md-nav__link">
+        Credentialvaultslot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../containerization/dam_subscription_staging/" class="md-nav__link">
+        DAM staging | HCL Digital Experience
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../containerization/damschemas/" class="md-nav__link">
+        Damschemas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../containerization/deployapplication/" class="md-nav__link">
+        Deployapplication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../containerization/deployment/" class="md-nav__link">
+        Deployment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../containerization/dx_non_container/" class="md-nav__link">
+        Dx non container
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../containerization/dxclient/" class="md-nav__link">
+        Dxclient
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../containerization/dxconnect/" class="md-nav__link">
+        Dxconnect
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../containerization/dxcoreserver/" class="md-nav__link">
+        Dxcoreserver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../containerization/helm_arch_applications/" class="md-nav__link">
+        Applications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../containerization/helm_arch_applications_o/" class="md-nav__link">
+        Applications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../containerization/portlets/" class="md-nav__link">
+        Portlets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../containerization/resourceenvironments/" class="md-nav__link">
+        Resourceenvironments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../containerization/scriptapplications/" class="md-nav__link">
+        Scriptapplications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../containerization/sharedlibrary/" class="md-nav__link">
+        Sharedlibrary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../containerization/syndicatorsandsubscribers/" class="md-nav__link">
+        Syndicatorsandsubscribers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../containerization/themes/" class="md-nav__link">
+        Themes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../containerization/virtualportals/" class="md-nav__link">
+        Virtualportals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../containerization/xmlaccess/" class="md-nav__link">
+        Xmlaccess
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_20" type="checkbox" id="__nav_3_20" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_20">
+          Helm
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Helm" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_20">
+          <span class="md-nav__icon md-icon"></span>
+          Helm
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../containerization/helm/personalization/" class="md-nav__link">
+        Personalization
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Containerization o
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Containerization o" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Containerization o
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Helm
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Helm" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Helm
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1_1" type="checkbox" id="__nav_4_1_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1_1">
+          Architecture
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Architecture" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dam_subscription_staging/" class="md-nav__link">
+        Dam subscription staging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Damschemas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Damschemas
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#listing-dam-schemas" class="md-nav__link">
+    Listing DAM schemas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deleting-dam-schemas" class="md-nav__link">
+    Deleting DAM schemas
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployapplication/" class="md-nav__link">
+        Deployapplication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment/" class="md-nav__link">
+        Deployment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dx_non_container/" class="md-nav__link">
+        Dx non container
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dxclient/" class="md-nav__link">
+        Dxclient
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dxconnect/" class="md-nav__link">
+        Dxconnect
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dxcoreserver/" class="md-nav__link">
+        Dxcoreserver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../helm_arch_applications/" class="md-nav__link">
+        Helm arch applications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../personalization/" class="md-nav__link">
+        Personalization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../portlets/" class="md-nav__link">
+        Portlets
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Digital asset mgmt
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Digital asset mgmt" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Digital asset mgmt
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../digital_asset_mgmt/digital_asset_mgmt_overview/" class="md-nav__link">
+        Digital asset mgmt overview
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Helm
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Helm" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Helm
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_1">
+          Architecture
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Architecture" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../helm/architecture/dam_subscription_staging/" class="md-nav__link">
+        Dam subscription staging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../helm/architecture/damschemas/" class="md-nav__link">
+        Damschemas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../helm/architecture/deployapplication/" class="md-nav__link">
+        Deployapplication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../helm/architecture/deployment/" class="md-nav__link">
+        Deployment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../helm/architecture/dx_non_container/" class="md-nav__link">
+        Dx non container
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../helm/architecture/dxclient/" class="md-nav__link">
+        Dxclient
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../helm/architecture/dxconnect/" class="md-nav__link">
+        Dxconnect
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../helm/architecture/dxcoreserver/" class="md-nav__link">
+        Dxcoreserver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../helm/architecture/helm_arch_applications/" class="md-nav__link">
+        Helm arch applications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../helm/architecture/personalization/" class="md-nav__link">
+        Personalization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../helm/architecture/portlets/" class="md-nav__link">
+        Portlets
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Overview
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Overview" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Overview
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../overview/ccf_95_cluster/" class="md-nav__link">
+        Ccf 95 cluster
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../overview/ccf_95_farm/" class="md-nav__link">
+        Ccf 95 farm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../overview/ccf_95_health_checker/" class="md-nav__link">
+        Ccf 95 health checker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../overview/ccf_95_known_issues/" class="md-nav__link">
+        Ccf 95 known issues
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../overview/ccf_95_remote_search/" class="md-nav__link">
+        Ccf 95 remote search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../overview/ccf_95_standalone/" class="md-nav__link">
+        Ccf 95 standalone
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../overview/ccf_strategy9/" class="md-nav__link">
+        Ccf strategy9
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../overview/ccf_strategy95/" class="md-nav__link">
+        Ccf strategy95
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../overview/inst_req/" class="md-nav__link">
+        Inst req
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../overview/inst_req_supt/" class="md-nav__link">
+        Inst req supt
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../overview/intr_new9/" class="md-nav__link">
+        Intr new9
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../overview/new_cf17/" class="md-nav__link">
+        New cf17
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../overview/new_cf_95/" class="md-nav__link">
+        New cf 95
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../overview/was_905/" class="md-nav__link">
+        Was 905
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Practitioner studio
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Practitioner studio" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Practitioner studio
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../practitioner_studio/practitionerstudio_overview/" class="md-nav__link">
+        Practitionerstudio overview
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#listing-dam-schemas" class="md-nav__link">
+    Listing DAM schemas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deleting-dam-schemas" class="md-nav__link">
+    Deleting DAM schemas
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<p>DAM schemas | HCL Digital Experience</p>
+<!---->
+
+<p><a href="#wh_topic_body">Jump to main content</a> </p>
+<p><a href="../index.html">HCL Digital Experience 9.5</a></p>
+<ul>
+<li><a href="../welcome/wp95_welcome.html">HCL Digital Experience 9.5</a></li>
+</ul>
+<p><a href="../indexTerms.html" title="Index">Index</a></p>
+<p>Search</p>
+<h1 id="dam-schemas-hcl-digital-experience">DAM schemas | HCL Digital Experience</h1>
+<p>This topic contains the commands that administrators can use to get a list of all DAM
+ schemas or delete inactive <a href="../digital_asset_mgmt/digital_asset_mgmt_overview.html" title="HCL Digital Asset Management (DAM) delivers a central platform to store and include rich media assets in Digital Experience site content to present engaging, consistently branded experiences across digital channels.">Digital Asset
+ Management</a> (DAM) schemas from persistence.</p>
+<h2 id="listing-dam-schemas">Listing DAM schemas</h2>
+<p>The list-dam-schemas command is used to list all the DAM
+ schemas.</p>
+<p>Command description</p>
+<p>This command invokes list-dam-schemas inside DXClient
+ and provides a list DAM
+ schemas.</p>
+<pre><code>dxclient list-dam-schemas
+</code></pre>
+<p>Help command</p>
+<p>This command shows the help information for
+ <code>list-dam-schemas</code> command
+ usage:</p>
+<pre><code>dxclient list-dam-schemas -h
+</code></pre>
+<p>Command options</p>
+<p>Use this attribute to specify the protocol with which to connect to the
+ server</p>
+<pre><code>-dxProtocol &lt;value&gt;
+</code></pre>
+<p>Use this attribute to specify the hostname of the target
+ server</p>
+<pre><code>-hostname &lt;value&gt;
+</code></pre>
+<p>Use this attribute to specify the port on which to connect to the
+ server(for Kubernetes Environment dxPort is 443)</p>
+<pre><code>-dxPort &lt;value&gt;
+</code></pre>
+<p>Use this attribute to specify the username that is required for
+ authenticating with the
+ server</p>
+<pre><code>-dxUsername &lt;value&gt; 
+</code></pre>
+<p>Use this attribute to specify the password that is required for
+ authenticating with the
+ server</p>
+<pre><code>-dxPassword &lt;value&gt;
+</code></pre>
+<p>Use this attribute to specify the port number of the DAM server(for
+ Kubernetes Environment default port is
+ 443)</p>
+<pre><code>-damAPIPort &lt;value&gt;
+</code></pre>
+<p>Use this attribute to specify the port number of the DX Core API
+ server(for Kubernetes Environment default port is 443)</p>
+<pre><code>-ringAPIPort &lt;value&gt;
+</code></pre>
+<p>Use this attribute to specify the API Version number of DAM(for
+ Kubernetes Environment default port is
+ 443)</p>
+<pre><code>-damAPIVersion &lt;value&gt;
+</code></pre>
+<p>Use this attribute to specify the API Version number of DX Core(for
+ Kubernetes Environment default port is
+ 443)</p>
+<pre><code>-ringAPIVersion &lt;value&gt;
+</code></pre>
+<p>All the above command options can be configured in the
+ config.json file of the tool, which is read by
+ default. The configuration file is located at
+ <code>&lt;working-directory&gt;/store/config.json</code>. The
+ options that are passed through the command line override the default
+ values.</p>
+<p>Example Usage:</p>
+<pre><code>dxclient list-dam-schemas -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -damAPIPort &lt;damAPIPort&gt; -ringAPIPort &lt;ringAPIPort&gt; -ringAPIVersion &lt;ringAPIVersion&gt; -damAPIVersion &lt;damAPIVersion&gt;
+</code></pre>
+<h2 id="deleting-dam-schemas">Deleting DAM schemas</h2>
+<p>Deleting DAM schema is a recommended step when the configuration of the DAM database
+ schema has been changed, due to a release update such as from Container Update CF196
+ to Container Update CF197. When a DAM database is migrated, a new schema gets
+ generated and the old schema is rendered inactive. To avoid the accumulation of
+ inactive schemas, you can use the delete-dam-schema command to
+ delete them.</p>
+<p>Use the delete-dam-schema command to delete the inactive DAM
+ schema.</p>
+<p>Command description</p>
+<p>This command invokes delete-dam-schema inside DXClient
+ and deletes the DAM
+ schema.</p>
+<pre><code>dxclient delete-dam-schema
+</code></pre>
+<p>Help command</p>
+<p>This command shows the help information for
+ <code>delete-dam-schema</code> command
+ usage:</p>
+<pre><code>dxclient delete-dam-schema -h
+</code></pre>
+<p>Command options</p>
+<p>Use this attribute to specify the protocol that is used to connect to the
+ server</p>
+<pre><code>-dxProtocol &lt;value&gt;
+</code></pre>
+<p>Use this attribute to specify the hostname of the target
+ server</p>
+<pre><code>-hostname &lt;value&gt;
+</code></pre>
+<p>Use this attribute to specify the port on which to connect to the server
+ (for Kubernetes Environment dxPort is
+ 443)</p>
+<pre><code>-dxPort &lt;value&gt;
+</code></pre>
+<p>Use this attribute to specify the username that is required for
+ authenticating with the
+ server</p>
+<pre><code>-dxUsername &lt;value&gt; 
+</code></pre>
+<p>Use this attribute to specify the password that is required for
+ authenticating with the
+ server</p>
+<pre><code>-dxPassword &lt;value&gt;
+</code></pre>
+<p>Use this attribute to specify the port number of the DAM server (for
+ Kubernetes Environment default port is
+ 443)</p>
+<pre><code>-damAPIPort &lt;value&gt;
+</code></pre>
+<p>Use this attribute to specify the port number of the DX Core API server
+ (for Kubernetes Environment default port is
+ 443)</p>
+<pre><code>-ringAPIPort &lt;value&gt;
+</code></pre>
+<p>Use this attribute to specify the API Version number of DAM (for
+ Kubernetes Environment default port is
+ 443)</p>
+<pre><code>-damAPIVersion &lt;value&gt;
+</code></pre>
+<p>Use this attribute to specify the API Version number of DX Core (for
+ Kubernetes Environment default port is
+ 443)</p>
+<pre><code>-ringAPIVersion &lt;value&gt;
+</code></pre>
+<p>Use this attribute to specify the DAM Schema Version (for Kubernetes
+ Environment default port is
+ 443)</p>
+<pre><code>-schemaVersion &lt;value&gt;
+</code></pre>
+<p>Note: In case the user does not enter the
+ <code>schemaVersion</code>, user is prompted with a list of
+ inactive schemas to choose from.
+All the above command options can be configured in the
+ config.json file of the tool, which is read by
+ default. The configuration file is located at
+ <code>&lt;working-directory&gt;/store/config.json</code>. The
+ options that are passed through the command line override the default
+ values.</p>
+<p>Example Usage:</p>
+<pre><code>dxclient delete-dam-schema -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -damAPIPort &lt;damAPIPort&gt; -ringAPIPort &lt;ringAPIPort&gt; -ringAPIVersion &lt;ringAPIVersion&gt; -damAPIVersion &lt;damAPIVersion&gt; -schemaVersion &lt;schemaVersion&gt;
+</code></pre>
+<p>On this page* <a href="#damschemas__listdamschema">Listing DAM schemas</a>
+* <a href="#damschemas__deletedamschema">Deleting DAM schemas</a></p>
+<p>Generated by <a href="http://www.oxygenxml.com/xml_webhelp.html"><oXygen/> XML WebHelp</a> </p>
+<p><img alt="" src="" /></p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../dam_subscription_staging/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Dam subscription staging" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Dam subscription staging
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../deployapplication/" class="md-footer__link md-footer__link--next" aria-label="Next: Deployapplication" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Deployapplication
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.1514a9a0.min.js"></script>
+      
+    
+  </body>
+</html>

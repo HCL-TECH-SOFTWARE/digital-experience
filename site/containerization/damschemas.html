@@ -1,0 +1,308 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en-us" lang="en-us" whc:version="22.0">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><meta charset="UTF-8"/><meta name="DC.rights.owner" content="(C) Copyright 2022"/><meta name="copyright" content="(C) Copyright 2022"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="description" content="This topic contains the commands that administrators can use to get a list of all DAM schemas or delete inactive Digital Asset Management (DAM) schemas from persistence."/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="damschemas"/><meta name="DC.language" content="en-us"/>        
+      <title>DAM schemas | HCL Digital Experience</title><!--  Generated with Oxygen version 23.1, build number 2021040717.  --><meta name="wh-path2root" content="../"/><meta name="wh-source-relpath" content="containerization/damschemas.dita"/><meta name="wh-out-relpath" content="containerization/damschemas.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/topic-page.css?buildId=2021040717"/>
+    
+    
+    <script type="text/javascript" src="../oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"><!----></script>
+    
+    <script data-main="../oxygen-webhelp/app/topic-page.js" src="../oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/cobalt.css?buildId=2021040717"/></head>
+
+    <body id="damschemas" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header" whc:version="23.1">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    
+                    <div class=" wh_publication_title "><a href="../index.html"><span class="title"><span class="ph">HCL Digital Experience 9.5</span></span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                <button type="button" data-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-toggle="collapse" class="navbar-toggler collapsed wh_toggle_button" aria-expanded="false" aria-label="Toggle menu" aria-controls="wh_top_menu_and_indexterms_link">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                <nav class=" wh_top_menu " aria-label="Menu Container"><ul role="menubar" aria-label="Menu"><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="kc_welcome-d10859e12-mi" data-tocid="kc_welcome-d10859e12" data-state="not-ready" class=" topicref " data-id="kc_welcome"><span class="title"><a href="../welcome/wp95_welcome.html">HCL Digital Experience 9.5</a></span></span></li></ul></nav>
+                <div class=" wh_indexterms_link "><a href="../indexTerms.html" title="Index" aria-label="Go to index terms page"><span>Index</span></a></div>
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <!-- Search form -->
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader"></span></div>
+                        
+                        <!-- External resource link -->
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <!-- Expand/Collapse publishing TOC 
+                             The menu button for mobile devices is copied in the output only when the publication TOC is available
+                        -->
+                        
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">DAM schemas | HCL Digital Experience</h1>
+    
+    
+    <div class="- topic/body body"><p class="- topic/shortdesc shortdesc">This topic contains the commands that administrators can use to get a list of all DAM
+        schemas or delete inactive <a class="- topic/xref xref" href="../digital_asset_mgmt/digital_asset_mgmt_overview.html" title="HCL Digital Asset Management (DAM) delivers a central platform to store and include rich media assets in Digital Experience site content to present engaging, consistently branded experiences across digital channels.">Digital Asset
+            Management</a> (DAM) schemas from persistence.</p>
+        <section class="- topic/section section" id="damschemas__listdamschema" data-ofbid="damschemas__listdamschema"><h2 class="- topic/title title sectiontitle">Listing DAM schemas</h2>
+            
+            <p class="- topic/p p">The <span class="+ topic/keyword sw-d/cmdname keyword cmdname">list-dam-schemas</span> command is used to list all the DAM
+                schemas.</p>
+            <dl class="- topic/dl dl" id="damschemas__dl_yyr_vwt_yqb" data-ofbid="damschemas__dl_yyr_vwt_yqb">
+                
+                    <dt class="- topic/dt dt dlterm">Command description</dt>
+                    <dd class="- topic/dd dd">
+                        <div class="- topic/p p">This command invokes <span class="+ topic/keyword pr-d/option keyword option">list-dam-schemas</span> inside DXClient
+                            and provides a list DAM
+                            schemas.<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="damschemas__codeblock_zyr_vwt_yqb" data-ofbid="damschemas__codeblock_zyr_vwt_yqb"><code>dxclient list-dam-schemas</code></pre></div>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm">Help command</dt>
+                    <dd class="- topic/dd dd">
+                        <div class="- topic/p p">This command shows the help information for
+                                <code class="+ topic/ph pr-d/codeph ph codeph">list-dam-schemas</code> command
+                            usage:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="damschemas__codeblock_azr_vwt_yqb" data-ofbid="damschemas__codeblock_azr_vwt_yqb"><code>dxclient list-dam-schemas -h</code></pre></div>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm">Command options</dt>
+                    <dd class="- topic/dd dd">
+                        <div class="- topic/p p">Use this attribute to specify the protocol with which to connect to the
+                            server<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="damschemas__codeblock_aqx_gyt_yqb" data-ofbid="damschemas__codeblock_aqx_gyt_yqb"><code>-dxProtocol &lt;value&gt;</code></pre></div>
+                        <div class="- topic/p p">Use this attribute to specify the hostname of the target
+                            server<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="damschemas__codeblock_avh_hyt_yqb" data-ofbid="damschemas__codeblock_avh_hyt_yqb"><code>-hostname &lt;value&gt;</code></pre></div>
+                        <div class="- topic/p p">Use this attribute to specify the port on which to connect to the
+                            server(for Kubernetes Environment dxPort is 443)
+                            <pre class="+ topic/pre pr-d/codeblock pre codeblock" id="damschemas__codeblock_j44_hyt_yqb" data-ofbid="damschemas__codeblock_j44_hyt_yqb"><code>-dxPort &lt;value&gt;</code></pre></div>
+                        <div class="- topic/p p">Use this attribute to specify the username that is required for
+                            authenticating with the
+                            server<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="damschemas__codeblock_pq5_hyt_yqb" data-ofbid="damschemas__codeblock_pq5_hyt_yqb"><code>-dxUsername &lt;value&gt; </code></pre></div>
+                        <div class="- topic/p p">Use this attribute to specify the password that is required for
+                            authenticating with the
+                            server<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="damschemas__codeblock_tgb_3yt_yqb" data-ofbid="damschemas__codeblock_tgb_3yt_yqb"><code>-dxPassword &lt;value&gt;</code></pre></div>
+                        <div class="- topic/p p">Use this attribute to specify the port number of the DAM server(for
+                            Kubernetes Environment default port is
+                            443)<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="damschemas__codeblock_zhh_3yt_yqb" data-ofbid="damschemas__codeblock_zhh_3yt_yqb"><code>-damAPIPort &lt;value&gt;</code></pre></div>
+                        <div class="- topic/p p">Use this attribute to specify the port number of the DX Core API
+                            server(for Kubernetes Environment default port is 443)
+                            <pre class="+ topic/pre pr-d/codeblock pre codeblock" id="damschemas__codeblock_mnn_3yt_yqb" data-ofbid="damschemas__codeblock_mnn_3yt_yqb"><code>-ringAPIPort &lt;value&gt;</code></pre></div>
+                        <div class="- topic/p p">Use this attribute to specify the API Version number of DAM(for
+                            Kubernetes Environment default port is
+                            443)<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="damschemas__codeblock_yt1_syt_yqb" data-ofbid="damschemas__codeblock_yt1_syt_yqb"><code>-damAPIVersion &lt;value&gt;</code></pre></div>
+                        <div class="- topic/p p">Use this attribute to specify the API Version number of DX Core(for
+                            Kubernetes Environment default port is
+                            443)<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="damschemas__codeblock_frn_tyt_yqb" data-ofbid="damschemas__codeblock_frn_tyt_yqb"><code>-ringAPIVersion &lt;value&gt;</code></pre></div>
+                        <p class="- topic/p p">All the above command options can be configured in the
+                                <span class="+ topic/ph sw-d/filepath ph filepath">config.json</span> file of the tool, which is read by
+                            default. The configuration file is located at
+                                <code class="+ topic/ph pr-d/codeph ph codeph">&lt;working-directory&gt;/store/config.json</code>. The
+                            options that are passed through the command line override the default
+                            values.</p>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm">Example Usage:</dt>
+                    <dd class="- topic/dd dd">
+                        <pre class="+ topic/pre pr-d/codeblock pre codeblock" id="damschemas__codeblock_ifb_czt_yqb" data-ofbid="damschemas__codeblock_ifb_czt_yqb"><code>dxclient list-dam-schemas -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -damAPIPort &lt;damAPIPort&gt; -ringAPIPort &lt;ringAPIPort&gt; -ringAPIVersion &lt;ringAPIVersion&gt; -damAPIVersion &lt;damAPIVersion&gt;</code></pre>
+                    </dd>
+                
+            </dl>
+        </section>
+        <section class="- topic/section section" id="damschemas__deletedamschema" data-ofbid="damschemas__deletedamschema"><h2 class="- topic/title title sectiontitle">Deleting DAM schemas</h2>
+            
+            <p class="- topic/p p">Deleting DAM schema is a recommended step when the configuration of the DAM database
+                schema has been changed, due to a release update such as from Container Update CF196
+                to Container Update CF197. When a DAM database is migrated, a new schema gets
+                generated and the old schema is rendered inactive. To avoid the accumulation of
+                inactive schemas, you can use the <span class="+ topic/keyword sw-d/cmdname keyword cmdname">delete-dam-schema</span> command to
+                delete them.</p>
+            <p class="- topic/p p">Use the <span class="+ topic/keyword sw-d/cmdname keyword cmdname">delete-dam-schema</span> command to delete the inactive DAM
+                schema.</p>
+            <dl class="- topic/dl dl">
+                
+                    <dt class="- topic/dt dt dlterm">Command description</dt>
+                    <dd class="- topic/dd dd">
+                        <div class="- topic/p p">This command invokes <span class="+ topic/keyword pr-d/option keyword option">delete-dam-schema</span> inside DXClient
+                            and deletes the DAM
+                            schema.<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>dxclient delete-dam-schema</code></pre></div>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm">Help command</dt>
+                    <dd class="- topic/dd dd">
+                        <div class="- topic/p p">This command shows the help information for
+                                <code class="+ topic/ph pr-d/codeph ph codeph">delete-dam-schema</code> command
+                            usage:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>dxclient delete-dam-schema -h</code></pre></div>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm">Command options</dt>
+                    <dd class="- topic/dd dd">
+                        <div class="- topic/p p">Use this attribute to specify the protocol that is used to connect to the
+                            server<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="damschemas__codeblock_kmd_ppx_mqb" data-ofbid="damschemas__codeblock_kmd_ppx_mqb"><code>-dxProtocol &lt;value&gt;</code></pre></div>
+                        <div class="- topic/p p">Use this attribute to specify the hostname of the target
+                            server<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="damschemas__codeblock_vpg_qpx_mqb" data-ofbid="damschemas__codeblock_vpg_qpx_mqb"><code>-hostname &lt;value&gt;</code></pre></div>
+                        <div class="- topic/p p">Use this attribute to specify the port on which to connect to the server
+                            (for Kubernetes Environment dxPort is
+                            443)<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="damschemas__codeblock_ks1_rpx_mqb" data-ofbid="damschemas__codeblock_ks1_rpx_mqb"><code>-dxPort &lt;value&gt;</code></pre></div>
+                        <div class="- topic/p p">Use this attribute to specify the username that is required for
+                            authenticating with the
+                            server<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="damschemas__codeblock_ajb_spx_mqb" data-ofbid="damschemas__codeblock_ajb_spx_mqb"><code>-dxUsername &lt;value&gt; </code></pre></div>
+                        <div class="- topic/p p">Use this attribute to specify the password that is required for
+                            authenticating with the
+                            server<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="damschemas__codeblock_avw_spx_mqb" data-ofbid="damschemas__codeblock_avw_spx_mqb"><code>-dxPassword &lt;value&gt;</code></pre></div>
+                        <div class="- topic/p p">Use this attribute to specify the port number of the DAM server (for
+                            Kubernetes Environment default port is
+                            443)<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="damschemas__codeblock_hdp_5px_mqb" data-ofbid="damschemas__codeblock_hdp_5px_mqb"><code>-damAPIPort &lt;value&gt;</code></pre></div>
+                        <div class="- topic/p p">Use this attribute to specify the port number of the DX Core API server
+                            (for Kubernetes Environment default port is
+                            443)<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="damschemas__codeblock_tkq_1qx_mqb" data-ofbid="damschemas__codeblock_tkq_1qx_mqb"><code>-ringAPIPort &lt;value&gt;</code></pre></div>
+                        <div class="- topic/p p">Use this attribute to specify the API Version number of DAM (for
+                            Kubernetes Environment default port is
+                            443)<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="damschemas__codeblock_t5s_cqx_mqb" data-ofbid="damschemas__codeblock_t5s_cqx_mqb"><code>-damAPIVersion &lt;value&gt;</code></pre></div>
+                        <div class="- topic/p p">Use this attribute to specify the API Version number of DX Core (for
+                            Kubernetes Environment default port is
+                            443)<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="damschemas__codeblock_ds5_dqx_mqb" data-ofbid="damschemas__codeblock_ds5_dqx_mqb"><code>-ringAPIVersion &lt;value&gt;</code></pre></div>
+                        <div class="- topic/p p">Use this attribute to specify the DAM Schema Version (for Kubernetes
+                            Environment default port is
+                                443)<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="damschemas__codeblock_wbs_fqx_mqb" data-ofbid="damschemas__codeblock_wbs_fqx_mqb"><code>-schemaVersion &lt;value&gt;</code></pre><div class="- topic/note note note note_note" id="damschemas__note_my4_gqx_mqb" data-ofbid="damschemas__note_my4_gqx_mqb"><span class="note__title">Note:</span> In case the user does not enter the
+                                    <code class="+ topic/ph pr-d/codeph ph codeph">schemaVersion</code>, user is prompted with a list of
+                                inactive schemas to choose from.</div></div>
+                        <p class="- topic/p p">All the above command options can be configured in the
+                                <span class="+ topic/ph sw-d/filepath ph filepath">config.json</span> file of the tool, which is read by
+                            default. The configuration file is located at
+                                <code class="+ topic/ph pr-d/codeph ph codeph">&lt;working-directory&gt;/store/config.json</code>. The
+                            options that are passed through the command line override the default
+                            values.</p>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm">Example Usage:</dt>
+                    <dd class="- topic/dd dd">
+                        <div class="- topic/p p">
+                            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>dxclient delete-dam-schema -dxProtocol &lt;dxProtocol&gt; -hostname &lt;hostname&gt; -dxPort &lt;dxPort&gt; -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -damAPIPort &lt;damAPIPort&gt; -ringAPIPort &lt;ringAPIPort&gt; -ringAPIVersion &lt;ringAPIVersion&gt; -damAPIVersion &lt;damAPIVersion&gt; -schemaVersion &lt;schemaVersion&gt;</code></pre>
+                        </div>
+                    </dd>
+                
+            </dl>
+        </section>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="section-item"><div class="section-title"><a href="#damschemas__listdamschema" data-tocid="damschemas__listdamschema">Listing DAM schemas</a></div></li><li class="section-item"><div class="section-title"><a href="#damschemas__deletedamschema" data-tocid="damschemas__deletedamschema">Deleting DAM schemas</a></div></li></ul></div>
+                        </nav>
+                        
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer" whc:version="23.1">
+  <div class=" footer-container mx-auto ">
+    
+            Generated by <a class="oxyFooter" href="http://www.oxygenxml.com/xml_webhelp.html" target="_blank">
+            &lt;oXygen/&gt; XML WebHelp
+            </a>
+        
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" alt=""/>
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

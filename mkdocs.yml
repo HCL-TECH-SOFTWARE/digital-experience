@@ -1,0 +1,17 @@
+site_name: DX on Kubernetes
+site_url: https://dxonkube.com/
+#nav:
+ # - Landing page: welcome.md
+  #- About: index.md
+#  - DX-Containers: containerization/helm_arch_applications.md
+#  - DX-On-Premise: containerization/damschemas.md
+#  - DX-Hybrid: containerization/dam_subscription_staging.md
+  
+ 
+theme:
+  name: material
+
+plugins:
+    - search
+    - awesome-pages
+  #  - git-revision-date  
