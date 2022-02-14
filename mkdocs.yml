@@ -1,17 +1,7 @@
-site_name: DX on Kubernetes
-site_url: https://dxonkube.com/
-#nav:
- # - Landing page: welcome.md
-  #- About: index.md
-#  - DX-Containers: containerization/helm_arch_applications.md
-#  - DX-On-Premise: containerization/damschemas.md
-#  - DX-Hybrid: containerization/dam_subscription_staging.md
-  
- 
+site_name: HCL Digital Experience
+
 theme:
   name: material
+  logo: assets/dx_logo.png
 
-plugins:
-    - search
-    - awesome-pages
-  #  - git-revision-date  
+  custom_dir: theme_overrides/
