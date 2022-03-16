@@ -1,0 +1,1063 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en-us" lang="en-us" whc:version="22.0">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><meta charset="UTF-8"/><meta name="DC.rights.owner" content="(C) Copyright 2022"/><meta name="copyright" content="(C) Copyright 2022"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="concept"/><meta name="description" content="Read the installation instructions to learn how to apply a cumulative fix to a stand-alone portal installation or to roll back the cumulative fix."/><meta name="DC.relation" scheme="URI" content="../overview/ccf_strategy95.html"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="new_cf"/><meta name="DC.language" content="en-us"/>        
+      <title>Cumulative fix instructions: Stand-alone | HCL Digital Experience 9.5</title><!--  Generated with Oxygen version 23.1, build number 2021040717.  --><meta name="wh-path2root" content="../"/><meta name="wh-toc-id" content="new_cf-d10859e1170"/><meta name="wh-source-relpath" content="overview/ccf_95_standalone.dita"/><meta name="wh-out-relpath" content="overview/ccf_95_standalone.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/topic-page.css?buildId=2021040717"/>
+    
+    
+    <script type="text/javascript" src="../oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"><!----></script>
+    
+    <script data-main="../oxygen-webhelp/app/topic-page.js" src="../oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/cobalt.css?buildId=2021040717"/></head>
+
+    <body id="new_cf" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header" whc:version="23.1">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    
+                    <div class=" wh_publication_title "><a href="../index.html"><span class="title"><span class="ph">HCL Digital Experience 9.5</span></span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                <button type="button" data-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-toggle="collapse" class="navbar-toggler collapsed wh_toggle_button" aria-expanded="false" aria-label="Toggle menu" aria-controls="wh_top_menu_and_indexterms_link">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                <nav class=" wh_top_menu " aria-label="Menu Container"><ul role="menubar" aria-label="Menu"><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="kc_welcome-d10859e12-mi" data-tocid="kc_welcome-d10859e12" data-state="not-ready" class=" topicref " data-id="kc_welcome"><span class="title"><a href="../welcome/wp95_welcome.html">HCL Digital Experience 9.5</a></span></span></li></ul></nav>
+                <div class=" wh_indexterms_link "><a href="../indexTerms.html" title="Index" aria-label="Go to index terms page"><span>Index</span></a></div>
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <!-- Search form -->
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="../index.html"><span>Home</span></a></span></li><li><span class="topicref" data-id="kc_welcome"><span class="title"><a href="../welcome/wp95_welcome.html">HCL Digital Experience 9.5</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Welcome to the documentation for HCL Digital Experience                 9.5. Learn how to install, configure, troubleshoot, maintain and use Version 9.5 of                 HCL Digital Experience.</p></span></span></span></li><li><span class="topicref" data-id="concept_xkw_flt_1qb"><span class="title"><a href="../containerization/dx_non_container.html">Digital Experience on non-containerized platforms</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Learn how to deploy HCL Digital Experience as a non-containerized application and         optimize web content and applications to deliver differentiated, personalized experiences         for your customers.</p></span></span></span></li><li><span class="topicref" data-id="new_cf"><span class="title"><a href="../overview/ccf_strategy95.html">Combined Cumulative Fix (CF) installation</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">The Combined Cumulative Fix is a package of HCL Digital Experience fixes. Read the     instructions to learn how to apply or roll back a combined cumulative fix. </p></span></span></span></li><li class="active"><span class="topicref" data-id="new_cf"><span class="title"><a href="../overview/ccf_95_standalone.html">Cumulative fix instructions: Stand-alone</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Read the installation instructions to learn how to apply a cumulative fix to a stand-alone portal  installation or to roll back the cumulative fix.</p></span></span></span></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  </span></div>
+                        
+                        <!-- External resource link -->
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <!-- Expand/Collapse publishing TOC 
+                             The menu button for mobile devices is copied in the output only when the publication TOC is available
+                        -->
+                        <button type="button" data-target="#wh_publication_toc" id="wh_toc_button" data-toggle="collapse" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        
+                        <nav id="wh_publication_toc" class="collapse col-lg-3 col-md-3 col-sm-12 d-md-block d-print-none" aria-label="Table of Contents Container">
+                            <div class=" wh_publication_toc " data-tooltip-position="right"><ul role="tree" aria-label="Table of Contents"><span class="expand-button-action-labels"><span id="button-expand-action" aria-label="Expand"></span><span id="button-collapse-action" aria-label="Collapse"></span><span id="button-pending-action" aria-label="Pending"></span></span><li role="treeitem" aria-expanded="true"><span data-tocid="kc_welcome-d10859e12" class="topicref" data-id="kc_welcome" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action kc_welcome-d10859e12-link" class="wh-expand-btn"></span><span class="title"><a href="../welcome/wp95_welcome.html" id="kc_welcome-d10859e12-link">HCL Digital Experience 9.5</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Welcome to the documentation for HCL Digital Experience                 9.5. Learn how to install, configure, troubleshoot, maintain and use Version 9.5 of                 HCL Digital Experience.</p></span></span></span><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="true"><span data-tocid="concept_xkw_flt_1qb-d10859e23" class="topicref" data-id="concept_xkw_flt_1qb" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action concept_xkw_flt_1qb-d10859e23-link" class="wh-expand-btn"></span><span class="title"><a href="../containerization/dx_non_container.html" id="concept_xkw_flt_1qb-d10859e23-link">Digital Experience on non-containerized platforms</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Learn how to deploy HCL Digital Experience as a non-containerized application and         optimize web content and applications to deliver differentiated, personalized experiences         for your customers.</p></span></span></span><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><span data-tocid="installing_parent2-d10859e34" class="topicref" data-id="installing_parent2" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action installing_parent2-d10859e34-link" class="wh-expand-btn"></span><span class="title"><a href="../install/installing_parent2.html" id="installing_parent2-d10859e34-link">Installing HCL Digital Experience</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Review the planning information on HCL Digital Experience, then select your operating     system and installation pattern that most reflects your business needs.</p></span></span></span></li><li role="treeitem" aria-expanded="true"><span data-tocid="new_cf-d10859e1159" class="topicref" data-id="new_cf" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action new_cf-d10859e1159-link" class="wh-expand-btn"></span><span class="title"><a href="../overview/ccf_strategy95.html" id="new_cf-d10859e1159-link">Combined Cumulative Fix (CF) installation</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">The Combined Cumulative Fix is a package of HCL Digital Experience fixes. Read the     instructions to learn how to apply or roll back a combined cumulative fix. </p></span></span></span><ul role="group" class="navbar-nav nav-list"><li role="treeitem" class="active"><span data-tocid="new_cf-d10859e1170" class="topicref" data-id="new_cf" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../overview/ccf_95_standalone.html" id="new_cf-d10859e1170-link">Cumulative fix instructions: Stand-alone</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Read the installation instructions to learn how to apply a cumulative fix to a stand-alone portal  installation or to roll back the cumulative fix.</p></span></span></span></li><li role="treeitem"><span data-tocid="new_cf-d10859e1181" class="topicref" data-id="new_cf" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../overview/ccf_95_cluster.html" id="new_cf-d10859e1181-link">Cumulative fix instructions: Cluster</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Read the installation instructions to learn how to apply a cumulative fix to a clustered portal installation or to roll back the cumulative fix. </p></span></span></span></li><li role="treeitem"><span data-tocid="new_cf-d10859e1192" class="topicref" data-id="new_cf" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../overview/ccf_95_farm.html" id="new_cf-d10859e1192-link">Cumulative fix instructions: Farm</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Read the installation instructions to learn how to apply a cumulative fix to a portal farm installation or to roll back the cumulative fix.</p></span></span></span></li><li role="treeitem"><span data-tocid="new_cf-d10859e1203" class="topicref" data-id="new_cf" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../overview/ccf_95_remote_search.html" id="new_cf-d10859e1203-link">Cumulative fix instructions: Remote search</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Read the installation instructions to learn how to apply a cumulative fix to a portal remote search installation or to roll back the cumulative fix.</p></span></span></span></li><li role="treeitem"><span data-tocid="new_cf-d10859e1214" class="topicref" data-id="new_cf" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../overview/ccf_95_health_checker.html" id="new_cf-d10859e1214-link">Cumulative Fix Health Checker</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">These instructions are for the HCL Digital Experience Combined Cumulative Fix Health Checker.</p></span></span></span></li><li role="treeitem"><span data-tocid="new_cf-d10859e1225" class="topicref" data-id="new_cf" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../overview/ccf_95_known_issues.html" id="new_cf-d10859e1225-link">Known Issues for the Combined Cumulative Fix</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Learn what are the known issues in the HCL Digital Experience           Combined Cumulative Fixes.</p></span></span></span></li></ul></li><li role="treeitem" aria-expanded="false"><span data-tocid="i_wadm_c_bkup_restr_winlinux-d10859e1236" class="topicref" data-id="i_wadm_c_bkup_restr_winlinux" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action i_wadm_c_bkup_restr_winlinux-d10859e1236-link" class="wh-expand-btn"></span><span class="title"><a href="../admin-system/i_wadm_c_bkup_restr_winlinux.html" id="i_wadm_c_bkup_restr_winlinux-d10859e1236-link">Backup and restore</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Backup and recovery of data files and databases is an essential operation for     any business system, particularly for data and applications that run in production environments.     Create and follow a plan for backing up and recovering data on all tiers of your HCL Digital     Experience deployment. IBM Installation Manager must also be included in backup and recovery     planning. If you back up the HCL Portal file structure and then install a fix pack, your HCL Digital     Experience and IBM Installation Manager become out of sync after you restore the HCL Portal file     system. This condition is not recoverable.</p></span></span></span></li><li role="treeitem" aria-expanded="false"><span data-tocid="migrating_parent-d10859e1418" class="topicref" data-id="migrating_parent" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action migrating_parent-d10859e1418-link" class="wh-expand-btn"></span><span class="title"><a href="../migrate/migration.html" id="migrating_parent-d10859e1418-link">Migrating</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Successful migration requires significant planning and preparation, understanding the     tools that are involved, and careful execution of the appropriate steps in the order     provided.</p></span></span></span></li><li role="treeitem" aria-expanded="false"><span data-tocid="site_setup-d10859e3484" class="topicref" data-id="site_setup" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action site_setup-d10859e3484-link" class="wh-expand-btn"></span><span class="title"><a href="../site/site_setup.html" id="site_setup-d10859e3484-link">Setting up a website</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Setting up a website includes, creating pages, adding navigation, setting up search, and adding content to the site. Themes are used to customize the portal's look-and-feel. Out-of-the-box templates and the site wizard can help you set up your portal site faster. You can add wikis and blogs to your site and let users tag and rate content on your site.</p></span></span></span></li><li role="treeitem" aria-expanded="false"><span data-tocid="dep_intr-d10859e10947" class="topicref" data-id="dep_intr" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action dep_intr-d10859e10947-link" class="wh-expand-btn"></span><span class="title"><a href="../deploy/dep_intr.html" id="dep_intr-d10859e10947-link">Staging to production</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc"> During portal solution development, the solution is initially developed, tested, and refined on one server or a limited number of servers. The solution is deployed later on live systems, referred to as the production environment. The process of moving the solution from the development environment to the production environment is called staging. </p></span></span></span></li><li role="treeitem" aria-expanded="false"><span data-tocid="ctc_intro-d10859e11243" class="topicref" data-id="ctc_intro" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action ctc_intro-d10859e11243-link" class="wh-expand-btn"></span><span class="title"><a href="../ctc/ctc_intro.html" id="ctc_intro-d10859e11243-link">Content Template Catalog 4.4</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">The Content Template (CTC) is a set of templates that accelerate the process of building     a website.</p></span></span></span></li></ul></li></ul></li></ul></div>
+                        </nav>
+                        
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="- topic/title title topictitle1" id="ariaid-title1">Cumulative fix instructions: Stand-alone | HCL Digital Experience 9.5</h1>
+	
+
+<div class="- topic/body concept/conbody body conbody"><p class="- topic/shortdesc shortdesc">Read the installation instructions to learn how to apply a cumulative fix to a stand-alone portal 
+installation or to roll back the cumulative fix.</p>
+<section class="- topic/section section"><h2 class="- topic/title title sectiontitle">Before you begin</h2>
+
+<div class="- topic/p p">
+				<div class="- topic/note note note note_note"><span class="note__title">Note:</span> Unless you are migrating from a previous release or plan to add this node to
+					an existing cluster, you must create your Portal profile before applying the
+					cumulative fix. If you did not do this during the initial installation, you can
+					use the Configuration Wizard to do so now. Portal Version 8.5 CF12 or later
+					introduces support for JDK8. However, if you plan to use JDK 8 with your
+					profile, you must first create the profile using JDK 7 and then upgrade to JDK 8
+					after applying the cumulative fix.</div>
+				<div class="- topic/note note note note_note"><span class="note__title">Note:</span> In Portal Version 8.5 CF12 or later, the blacklist settings have become more
+					restrictive. For inquiries, go to <a class="- topic/xref xref" href="https://support.hcltechsw.com/csm" target="_blank" rel="external noopener">HCL Software Support</a> page.</div>
+			</div>
+<div class="- topic/p p"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Space Requirements</span>: Ensure that enough disk space is available in the
+following directories: <ul class="- topic/ul ul">
+<li class="- topic/li li">For all platforms: 2.0 GB in the download directory to download the cumulative fix, 1.5 GB in
+<code class="+ topic/ph pr-d/codeph ph codeph">Portal_Install_Root</code>, 1 GB temporary disk space in
+<code class="+ topic/ph pr-d/codeph ph codeph">(wp_profile_root)</code>, and 1.66 GB in the shared data space, which is the directory
+where Installation Manager temporarily stores downloaded files for use during the update.</li>
+<li class="- topic/li li">For Solaris: It is recommended that you allocate swap space equal to at least twice your
+physical RAM to avoid memory errors during the configuration of this cumulative fix.</li>
+</ul></div>
+</section>
+<section class="- topic/section section"><h2 class="- topic/title title sectiontitle">Best Practices</h2>
+
+	<p class="- topic/p p">Go to the <a class="- topic/xref xref" href="https://support.hcltechsw.com/csm" target="_blank" rel="external noopener">HCL Software Support</a> page for Portal Upgrade Best Practices.</p>
+</section>
+<section class="- topic/section section"><h2 class="- topic/title title sectiontitle">Syndicator/Subscriber Information</h2>
+
+<p class="- topic/p p">It is recommended that servers utilizing syndication have associated syndicators and subscribers disabled prior to installing the cumulative fixpack.</p>
+<p class="- topic/p p">Otherwise syndication updates that run during install may clash with install modifications and can cause the CF update to fail.</p>
+<p class="- topic/p p">Syndicators and subscribers can be disabled by editing them in the syndication administration portlet. Go to the <a class="- topic/xref xref" href="../panel_help/wcm_reference_syndicatorfields.html">Syndicators</a> 
+and <a class="- topic/xref xref" href="../panel_help/wcm_reference_subscriberfields.html">Subscribers</a>
+topic pages in the HCL Digital Experience Version 8.5 product documentation for more information. Syndication should then be re-enabled after the update is complete.</p>
+<div class="- topic/p p">Alternatively, the following ConfigEngine tasks have also been integrated into CF09 or later to
+globally disable and enable syndication (These tasks can be used in place of the manual updates
+linked above): <ul class="- topic/ul ul">
+<li class="- topic/li li">
+						<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>(wp_profile root)/ConfigEngine/ConfigEngine.sh|.bat disable-syndication-auto-scheduler</code></pre>
+					</li>
+<li class="- topic/li li">
+						<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>(wp_profile root)/ConfigEngine/ConfigEngine.sh|.bat enable-syndication-auto-scheduler</code></pre>
+					</li>
+</ul></div>
+</section>
+<section class="- topic/section section" id="new_cf__search_crawler_info" data-ofbid="new_cf__search_crawler_info"><h2 class="- topic/title title sectiontitle">Search Crawler Information</h2>
+
+<p class="- topic/p p">It is recommended that any search crawlers are disabled before applying the CF. If a CF is
+				applied at the same time the crawler is running, the search collection may be
+				corrupted. The search crawler should be restarted after the CF update is
+				complete.</p>
+</section>
+<section class="- topic/section section" id="new_cf__complete_backup_portal_environment" data-ofbid="new_cf__complete_backup_portal_environment"><h2 class="- topic/title title sectiontitle">Take a complete backup of the Portal environment</h2>
+
+			<p class="- topic/p p">Before performing a CF upgrade, it is strongly recommended that you perform a
+				complete backup of the Portal environment, including IBM Installation Manager.</p>
+	<p class="- topic/p p">See <a class="- topic/xref xref" href="https://help.hcltechsw.com/digital-experience/8.5/admin-system/i_wadm_c_bkup_restr_winlinux.html" target="_blank" rel="external noopener">Backup and Restore</a> topic for guidance on how
+				to do a complete backup of the entire Portal environment.</p>
+</section>
+<section class="- topic/section section" id="new_cf__known_issues_ccf95" data-ofbid="new_cf__known_issues_ccf95"><h2 class="- topic/title title sectiontitle">Known Issues</h2>
+
+<p class="- topic/p p">Review the <a class="- topic/xref xref" href="ccf_95_known_issues.html" title="Learn what are the known issues in the HCL Digital Experience Combined Cumulative Fixes.">Known issues for
+					combined cumulative fix</a> topic page to be aware of any known issues for
+				the HCL Portal Version 9.5 CF releases.</p>
+</section>
+<section class="- topic/section section" id="new_cf__review_supported_hardware_software_req" data-ofbid="new_cf__review_supported_hardware_software_req"><h2 class="- topic/title title sectiontitle">Review supported hardware/software requirements</h2>
+
+<p class="- topic/p p">For Portal Version 8.5 CF08 or later, the minimum recommended WebSphere Application Server level is at least WAS 8.5.5.6 with the corresponding JDK level applied.</p>
+<p class="- topic/p p">Review the <a class="- topic/xref xref" href="https://support.hcltechsw.com/csm?id=kb_article&amp;sysparm_article=KB0013514&amp;sys_kb_id=17d6296a1b5df34077761fc58d4bcb03" target="_blank" rel="external noopener">Supported Hardware and Software
+					Requirements</a> article for this cumulative fix. If necessary, upgrade all
+				hardware and software before applying this cumulative fix, including interim fixes
+				required for WebSphere Application Server.</p>
+<p class="- topic/p p">Note: Ensure that the optional WebSphere Application Server feature "EJBDeploy tool for pre-EJB 3.0 modules" is installed.</p>
+</section>
+<section class="- topic/section section" id="new_cf__check_fixes_installed" data-ofbid="new_cf__check_fixes_installed"><h2 class="- topic/title title sectiontitle">Check fixes installed on your system</h2>
+
+<p class="- topic/p p">All temporary or interim fixes on your system must be removed before installing this cumulative fix.</p>
+<p class="- topic/p p">Also check whether the fixes installed on your system are included in the list of fixes provided in this cumulative fix. If you have temporary or interim fixes on your system that are 
+	not included in this cumulative fix then contact <a class="- topic/xref xref" href="https://support.hcltechsw.com/csm" target="_blank" rel="external noopener">HCL Software Support</a> for an updated version of those fixes or for more information.</p>
+</section>
+<section class="- topic/section section" id="new_cf__ensure_wkplc_properties" data-ofbid="new_cf__ensure_wkplc_properties"><h2 class="- topic/title title sectiontitle">Ensure <code class="+ topic/ph pr-d/codeph ph codeph">wkplc.properties</code> files are correct</h2>
+
+<p class="- topic/p p">The HCL Portal upgrade will run several ConfigEngine scripts. These scripts depend on the <code class="+ topic/ph pr-d/codeph ph codeph">wkplc.properties</code> being up to date and accurate, 
+particularly with the password properties. If you are using multiple profiles, verify that the information in each profile is correct.</p>
+<ol class="- topic/ol ol">
+<li class="- topic/li li">Edit the <span class="+ topic/ph sw-d/filepath ph filepath">(wp_profile root)/ConfigEngine/properties/wkplc.properties</span> file
+					and ensure the following values are set correctly: <ul class="- topic/ul ul">
+						<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">WasRemoteHostName=(the hostname of your WAS
+							instance)</code></li>
+						<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">WasSoapPort=(the soap port of your WAS instance)</code></li>
+						<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">WasUserid=(your WAS admin user)</code></li>
+						<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">WasPassword=(your WAS admin pwd)</code></li>
+						<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">PortalAdminId=(your Portal Admin ID)</code></li>
+						<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">PortalAdminPwd=(your Portal Admin password)</code></li>
+						<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">WpsHostName=(Your Portal hostname)</code></li>
+						<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">WpsHostPort=(The port you use to access Portal)</code></li>
+						<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">WpsContextRoot=(your Portal context root)</code></li>
+						<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">CwUserPwd=xxxxxx (your Config wizard password)</code> HCL DX
+							9.5 CF19 and higher</li>
+					</ul></li>
+<li class="- topic/li li">Edit the <span class="+ topic/ph sw-d/filepath ph filepath">(wp_profile
+						root)/ConfigEngine/properties/wkplc_dbdomain.properties</span> file and
+					ensure the following values are set correctly: <ul class="- topic/ul ul">
+						<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">release.DbPassword=(your database user password)</code></li>
+						<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">community.DbPassword=(your database user password)</code></li>
+						<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">customization.DbPassword=(your database user
+							password)</code></li>
+						<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">jcr.DbPassword=(your database user password)</code></li>
+						<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">likeminds.DbPassword=(your database user password)</code></li>
+						<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">feedback.DbPassword=(your database user password)</code></li>
+					</ul></li>
+<li class="- topic/li li">Edit the <span class="+ topic/ph sw-d/filepath ph filepath">(wp_profile root)/ConfigEngine/properties/wkplc_comp.properties</span>
+					file and ensure the following values are set correctly: <ul class="- topic/ul ul" id="new_cf__ul_rmz_w3w_pnb" data-ofbid="new_cf__ul_rmz_w3w_pnb">
+						<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">XmlAccessHost=(your Portal hostname)</code></li>
+						<li class="- topic/li li">XmlAccessPort=(the port you use to access Portal)</li>
+						<li class="- topic/li li">
+							<div class="- topic/note note note note_note"><span class="note__title">Note:</span> If your server is configured with database runtime users, for
+								example, <code class="+ topic/ph pr-d/codeph ph codeph">feedback.DbRuntimeUser=(your feedback database
+									runtime user)</code>, ensure to set their password values
+								correctly as well, for example, in
+									<code class="+ topic/ph pr-d/codeph ph codeph">feedback.DbRuntimePassword=(your feedback database
+									runtime user password)</code>.</div>
+						</li>
+					</ul></li>
+</ol>
+</section>
+<section class="- topic/section section"><h2 class="- topic/title title sectiontitle">Unix, Linux, Windows, and IBM i:</h2>
+
+<div class="- topic/p p">The update process removes plain text passwords from the <code class="+ topic/ph pr-d/codeph ph codeph">wkplc*.properties</code>
+				files. To keep these passwords in the properties files, include the following line
+				in the <code class="+ topic/ph pr-d/codeph ph codeph">wkplc.properties</code> file:
+				<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>PWordDelete=false</code></pre></div>
+</section>
+<section class="- topic/section section" id="new_cf__multiple_profile_considerations" data-ofbid="new_cf__multiple_profile_considerations"><h2 class="- topic/title title sectiontitle">Multiple profile considerations</h2>
+
+<p class="- topic/p p">Verify that all of your profiles are at the same level before starting the upgrade or rollback.
+				All profiles that share the same Portal installation directory (multiple profile
+				option) must be manually upgraded after the IBM Installation Manager update
+				completes. See the <cite class="- topic/cite cite">Additional configuration steps</cite> for details.</p>
+</section>
+<section class="- topic/section section" id="new_cf__non-root_considerations" data-ofbid="new_cf__non-root_considerations"><h2 class="- topic/title title sectiontitle">Non-root considerations</h2>
+
+<div class="- topic/p p">In Unix/Linux environments, you must install the cumulative fix as the same user which you used to install HCL Portal originally. 
+This could be either root or a non-root user. If you need to use a non-root user, ensure the following conditions are met:
+<ul class="- topic/ul ul">
+<li class="- topic/li li">If you are installing as a non-root user on Unix or Linux, the <code class="+ topic/ph pr-d/codeph ph codeph">umask</code> setting
+						for your login session must be set to <kbd class="+ topic/ph sw-d/userinput ph userinput">0022</kbd> or better.
+							(<code class="+ topic/ph pr-d/codeph ph codeph">umask</code> is a setting that controls what file permissions
+						are set for newly created files and directories. A value of
+							<kbd class="+ topic/ph sw-d/userinput ph userinput">0022</kbd> correspond to permission settings of
+							<code class="+ topic/ph pr-d/codeph ph codeph">(rwxr-xr-x)</code>.) If the <code class="+ topic/ph pr-d/codeph ph codeph">umask</code> is not set
+						appropriately by default, you must set it when you start Installation
+						Manager or when you open a command-line utility to run Installation Manager
+						commands</li>
+<li class="- topic/li li">The non-root user has a <code class="+ topic/ph pr-d/codeph ph codeph">ulimit - n</code> setting of at least
+							<kbd class="+ topic/ph sw-d/userinput ph userinput">18192</kbd>. This must be a number and not
+							<kbd class="+ topic/ph sw-d/userinput ph userinput">unlimited</kbd>.</li>
+<li class="- topic/li li">The non-root user owns the <span class="+ topic/ph sw-d/filepath ph filepath">AppServer</span>, <span class="+ topic/ph sw-d/filepath ph filepath">PortalServer</span>,
+							<span class="+ topic/ph sw-d/filepath ph filepath">ConfigEngine</span>, and <span class="+ topic/ph sw-d/filepath ph filepath">Portal</span>
+						profile directories and has read/write access to all files in these
+						directories. Permission settings of <code class="+ topic/ph pr-d/codeph ph codeph">755 (rwxr-xr-x)</code> are
+						sufficient.</li>
+<li class="- topic/li li">Do not use <code class="+ topic/ph pr-d/codeph ph codeph">sudo</code> or <code class="+ topic/ph pr-d/codeph ph codeph">su</code> to install the fix pack. Either use root
+						explicitly or use a non-root user that meets the above conditions.</li>
+</ul></div>
+<div class="- topic/p p">To open a command-line utility to run Installation Manager commands:
+<ol class="- topic/ol ol">
+<li class="- topic/li li">Open a command line window.</li>
+<li class="- topic/li li">Run this command to check your current umask setting: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>umask</code></pre></li>
+<li class="- topic/li li">If necessary, run this command to set the umask: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>umask 0022</code></pre></li>
+</ol></div>
+</section>
+<section class="- topic/section section" id="new_cf__antivirus_file_indexing_considerations" data-ofbid="new_cf__antivirus_file_indexing_considerations"><h2 class="- topic/title title sectiontitle">Anti-virus and file indexing software considerations (Windows only)</h2>
+
+<p class="- topic/p p">As part of the CF upgrade process, new files will be created in the WebSphere installation directory, as well as the user's temp directory. 
+Anti-viruses and file indexing software (like Google Desktop) have been known to lock newly created files as they are being scanned, which 
+can interfere with the upgrade process. We recommend to exclude the WebSphere installation directory and the user's temp directory from 
+being scanned by this software during the upgrade. Or you can stop / disable these tools for the duration of the upgrade, and re-enable 
+them after the upgrade completes.</p>
+</section>
+<section class="- topic/section section" id="new_cf__was85514_note" data-ofbid="new_cf__was85514_note"><h2 class="- topic/title title sectiontitle">Special note for customers using WAS 8.5.5.14</h2>
+
+<p class="- topic/p p">Support for WebSphere Application Server v8.5.5.14 will be added in Portal Cumulative Fix 16. If you need to apply Portal Cumulative Fix 
+15 or earlier to a WAS v8.5.5.14 installation, you will need to perform an additional manual step during the upgrade.</p>
+<div class="- topic/p p">After running Installation Manager to install the new Portal code but before running the <code class="+ topic/ph pr-d/codeph ph codeph">applyCF.sh</code> or <code class="+ topic/ph pr-d/codeph ph codeph">applyCF.bat</code> command to update the Portal profile, perform these steps:
+<ol class="- topic/ol ol">
+<li class="- topic/li li">Open a command Window and switch to the ConfigEngine home directory. By default this is:<ul class="- topic/ul ul">
+<li class="- topic/li li">Unix/Linux: <span class="+ topic/ph sw-d/filepath ph filepath">/opt/IBM/WebSphere/ConfigEngine</span></li>
+<li class="- topic/li li">Windows: <span class="+ topic/ph sw-d/filepath ph filepath">C:\IBM\WebSphere\ConfigEngine</span></li>
+<li class="- topic/li li">IBM i: <span class="+ topic/ph sw-d/filepath ph filepath">/QIBM/ProdData/WebSphere/ConfigEngine</span></li>
+</ul></li>
+<li class="- topic/li li">Make a backup copy of the ConfigEngine script. This file is named
+							<span class="+ topic/ph sw-d/filepath ph filepath">ConfigEngine.bat</span>  for Windows and
+							<span class="+ topic/ph sw-d/filepath ph filepath">ConfigEngine.sh</span> for all other platforms.</li>
+<li class="- topic/li li">Make sure your user has write permissions for the script file and open it in a text editor.</li>
+<li class="- topic/li li"> Look for the text <code class="+ topic/ph pr-d/codeph ph codeph">EJBDEPLOY_JAVA_HOME</code> in the script.</li>
+<li class="- topic/li li">If you do not find it, no further action is necessary and you can continue with the installation. 
+If you do find it, delete every line that contains the text <code class="+ topic/ph pr-d/codeph ph codeph">EJBDEPLOY_JAVA_HOME</code> anywhere in the line.
+(There should be 3 such lines in the .sh script and 2 lines in the .bat script.)</li>
+<li class="- topic/li li">Save the file.</li>
+</ol></div>
+<p class="- topic/p p">You may now continue with the installation of the Portal CF.</p>
+</section>
+<section class="- topic/section section" id="new_cf__download_ccf95_fix" data-ofbid="new_cf__download_ccf95_fix"><h2 class="- topic/title title sectiontitle">Download the cumulative fix</h2>
+
+<div class="- topic/p p">If you are installing the cumulative fix using a live repository (only possible with CFs prior to
+CF17), then you do not need to download the cumulative fix to your server. If you need to download
+the cumulative fix, then you can follow these steps. <ol class="- topic/ol ol">
+	<li class="- topic/li li">Go and log in to <a class="- topic/xref xref" href="https://support.hcltechsw.com/csm" target="_blank" rel="external noopener">HCL Software Support</a> and download the latest zip file that corresponds
+to the installation on your system.</li>
+<li class="- topic/li li">Create a directory and extract the zip file(s) into this directory. Inside the zip file is a
+readme file, sample response files (Server and Express only), and the actual cumulative fix file
+itself.</li>
+<li class="- topic/li li">Create a sub-directory and extract the appropriate zip file to this directory. The extraction
+						results in a <span class="+ topic/ph sw-d/filepath ph filepath">repository.config</span> file that is used by IBM
+						Installation Manager during the update.</li>
+</ol></div>
+</section>
+<section class="- topic/section section" id="new_cf__section_zkq_dkw_pnb" data-ofbid="new_cf__section_zkq_dkw_pnb"><h2 class="- topic/title title sectiontitle">Steps for installing the cumulative fix</h2>
+			
+			<p class="- topic/p p">There are several different methods to install the cumulative fix. Choose one method
+				that is available for your system. Follow the detailed steps for that option, and
+				then proceed with the Additional configuration steps.</p>
+		</section>
+		<section class="- topic/section section" id="new_cf__section_alq_dkw_pnb" data-ofbid="new_cf__section_alq_dkw_pnb"><h2 class="- topic/title title sectiontitle">Use a Graphical User Interface (available on Windows, Linux, and Unix operating
+				systems)</h2>
+			
+			<ol class="- topic/ol ol" id="new_cf__ol_blq_dkw_pnb" data-ofbid="new_cf__ol_blq_dkw_pnb">
+				<li class="- topic/li li">If you are running an external web server, stop the web server.</li>
+				<li class="- topic/li li">Stop any active application servers by using the <code class="+ topic/ph pr-d/codeph ph codeph">stopServer</code>
+					command. To see which application servers are active, use the
+						<code class="+ topic/ph pr-d/codeph ph codeph">serverStatus</code> command from the
+						<span class="+ topic/ph sw-d/filepath ph filepath">(wp_profile)/bin</span> directory and again from the
+						<span class="+ topic/ph sw-d/filepath ph filepath">(cw_profile)/bin</span> directory:<ul class="- topic/ul ul" id="new_cf__ul_clq_dkw_pnb" data-ofbid="new_cf__ul_clq_dkw_pnb">
+						<li class="- topic/li li">Unix/Linux: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>./serverStatus.sh -all</code></pre></li>
+						<li class="- topic/li li">Windows: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>serverStatus.bat -all</code></pre></li>
+					</ul></li>
+				<li class="- topic/li li">Launch the IBM Installation Manager that was used to install HCL Portal Version
+					8.5.</li>
+				<li class="- topic/li li">Using Installation Manager, click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">File</span> then
+						<span class="+ topic/ph ui-d/uicontrol ph uicontrol">Preferences</span>.</li>
+				<li class="- topic/li li">Go to the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Repositories</span> panel and click "Add
+					Repository".</li>
+				<li class="- topic/li li">Navigate to the repository.config file mentioned earlier and select it.</li>
+				<li class="- topic/li li">Select Update and follow the prompts to update HCL Portal.</li>
+				<li class="- topic/li li">After installation completes, proceed with the <cite class="- topic/cite cite">Additional configuration
+						steps</cite>.</li>
+			</ol>
+		</section>
+		<section class="- topic/section section" id="new_cf__section_ij5_jkw_pnb" data-ofbid="new_cf__section_ij5_jkw_pnb"><h2 class="- topic/title title sectiontitle">Use a live repository via the Graphical User Interface (available on Windows,
+				Linux, and Unix operating systems)</h2>
+			
+			<ol class="- topic/ol ol" id="new_cf__ol_dlq_dkw_pnb" data-ofbid="new_cf__ol_dlq_dkw_pnb">
+				<li class="- topic/li li">If you are running an external web server, stop the web server.</li>
+				<li class="- topic/li li">Stop any active application servers by using the <code class="+ topic/ph pr-d/codeph ph codeph">stopServer</code>
+					command. To see which application servers are active, use the
+						<code class="+ topic/ph pr-d/codeph ph codeph">serverStatus</code> command from the
+						<span class="+ topic/ph sw-d/filepath ph filepath">(wp_profile)/bin</span> directory and again from the
+						<span class="+ topic/ph sw-d/filepath ph filepath">(cw_profile)/bin</span> directory:<ul class="- topic/ul ul" id="new_cf__ul_elq_dkw_pnb" data-ofbid="new_cf__ul_elq_dkw_pnb">
+						<li class="- topic/li li">Unix/Linux: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>./serverStatus.sh -all</code></pre></li>
+						<li class="- topic/li li">Windows: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>serverStatus.bat -all</code></pre></li>
+					</ul></li>
+				<li class="- topic/li li">Launch the IBM Installation Manager that was used to install HCL Portal Version
+					8.5.</li>
+				<li class="- topic/li li">Using Installation Manager, click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">File</span> then
+						<span class="+ topic/ph ui-d/uicontrol ph uicontrol">Preferences</span>.</li>
+				<li class="- topic/li li">Go to the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Repositories</span> panel and click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Search
+						service repositories during installation and updates</span>. Click
+					apply.</li>
+				<li class="- topic/li li">Select Update and follow the prompts to update HCL Portal.</li>
+				<li class="- topic/li li">After installation completes, proceed with the <cite class="- topic/cite cite">Additional configuration
+						steps</cite>.</li>
+			</ol>
+		</section>
+		<section class="- topic/section section" id="new_cf__section_ycm_qkw_pnb" data-ofbid="new_cf__section_ycm_qkw_pnb"><h2 class="- topic/title title sectiontitle">Use a command line (available on Windows, Linux, and Unix operating
+				systems)</h2>
+			
+			<div class="- topic/p p">
+				<ol class="- topic/ol ol" id="new_cf__ol_flq_dkw_pnb" data-ofbid="new_cf__ol_flq_dkw_pnb">
+					<li class="- topic/li li">If you are running an external web server, stop the web server.</li>
+					<li class="- topic/li li">Stop any active application servers by using the <code class="+ topic/ph pr-d/codeph ph codeph">stopServer</code>
+						command. To see which application servers are active, use the
+							<code class="+ topic/ph pr-d/codeph ph codeph">serverStatus</code> command from the <span class="+ topic/ph sw-d/filepath ph filepath">(
+							wp_profile)/bin</span> directory and again from the
+							<span class="+ topic/ph sw-d/filepath ph filepath">(cw_profile)/bin</span> directory:<ul class="- topic/ul ul" id="new_cf__ul_glq_dkw_pnb" data-ofbid="new_cf__ul_glq_dkw_pnb">
+							<li class="- topic/li li">Unix/Linux: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>./serverStatus.sh -all</code></pre></li>
+							<li class="- topic/li li">Windows: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>serverStatus.bat -all</code></pre></li>
+						</ul></li>
+					<li class="- topic/li li">Open a command window and switch to the <span class="+ topic/ph sw-d/filepath ph filepath">eclipse/tools</span>
+						sub-directory of Installation Manager. By default, this is:<ul class="- topic/ul ul" id="new_cf__ul_hlq_dkw_pnb" data-ofbid="new_cf__ul_hlq_dkw_pnb">
+							<li class="- topic/li li">Unix/Linux:
+									<span class="+ topic/ph sw-d/filepath ph filepath">/opt/IBM/InstallationManager/eclipse/tools</span></li>
+							<li class="- topic/li li">Windows: <span class="+ topic/ph sw-d/filepath ph filepath">C:\Program Files\IBM\Installation
+									Manager\eclipse\tools</span></li>
+						</ul></li>
+					<li class="- topic/li li">If you are installing the cumulative fix on HCL Portal Express, skip to step
+						5. Otherwise, run the following command to launch the installation program
+						of IBM Installation Manager. Do note, the commands are shown here on
+						multiple lines for clarity, but the entire command must be entered on one
+						line. Include quotation marks around file paths that include spaces. <div class="- topic/p p">For
+							Unix/Linux:
+							<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>./imcl install com.ibm.websphere.PORTAL.SERVER.v85 
+	-repositories (fullpath/to/repository.config) -installationDirectory (portal_server_root)
+	-installationDirectory(portal_server_root) 
+    -acceptLicense</code></pre></div>
+						For Windows:
+						<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>imcl.exe install com.hcl.websphere.PORTAL.SERVER.v85 
+	-repositories (fullpath/to/repository.config) 
+	-installationDirectory (portal_server_root) 
+	-acceptLicense</code></pre></li>
+					<li class="- topic/li li">For HCL Portal Express only (IBM i must use silent or console mode method),
+						run the following command to launch the installation program from the
+							<span class="+ topic/ph sw-d/filepath ph filepath">eclipse/tools</span> sub-directory of Installation Manager.
+						Do note that the commands are shown here on multiple lines for clarity, but
+						the entire command must be entered on one line. Include quotation marks
+						around file paths that include spaces. <div class="- topic/p p">For Linux:
+							<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>./imcl install com.hcl.websphere.PORTAL.EXPRESS.v85
+	-repositories (fullpath/to/repository.config) 
+	-installationDirectory (portal_server_root) 
+	-acceptLicense</code></pre></div>
+						For Windows:
+						<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>imcl.exe install com.ibm.websphere.PORTAL.EXPRESS.v85 
+	-repositories (fullpath/to/repository.config) 
+	-installationDirectory (portal_server_root) 
+	-acceptLicense</code></pre></li>
+					<li class="- topic/li li">After installation completes, proceed with the <cite class="- topic/cite cite">Additional
+							configuration steps</cite>.</li>
+				</ol>
+			</div>
+		</section>
+		<section class="- topic/section section" id="new_cf__section_oml_clw_pnb" data-ofbid="new_cf__section_oml_clw_pnb"><h2 class="- topic/title title sectiontitle">Use silent mode installation (available on Windows, Linux, Unix, and IBM i
+				operating systems)</h2>
+			
+			<ol class="- topic/ol ol" id="new_cf__ol_ilq_dkw_pnb" data-ofbid="new_cf__ol_ilq_dkw_pnb">
+				<li class="- topic/li li">If you are running an external web server, stop the web server.</li>
+				<li class="- topic/li li">Stop any active application servers by using the <code class="+ topic/ph pr-d/codeph ph codeph">stopServer</code>
+					command. To see which application servers are active, use the
+						<code class="+ topic/ph pr-d/codeph ph codeph">serverStatus</code> command from the <span class="+ topic/ph sw-d/filepath ph filepath">(
+						wp_profile)/bin</span> directory and again from the
+						<span class="+ topic/ph sw-d/filepath ph filepath">(cw_profile)/bin</span> directory: <ul class="- topic/ul ul" id="new_cf__ul_jlq_dkw_pnb" data-ofbid="new_cf__ul_jlq_dkw_pnb">
+						<li class="- topic/li li">Unix/Linux:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>./serverStatus.sh -all</code></pre></li>
+						<li class="- topic/li li">Windows:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>serverStatus.bat -all</code></pre></li>
+						<li class="- topic/li li">IBM i:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>serverStatus -all</code></pre></li>
+					</ul></li>
+				<li class="- topic/li li">For IBM i only, Run the following command from qshell:
+					<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>chown QEJBSVR /QIBM/UserData/WebSphere/AppServer/V85/ND/profiles/cw_profile/ConfigEngine/properties/wkplc.properties</code></pre></li>
+				<li class="- topic/li li">Open a command window and switch to the eclipse/tools sub-directory of
+					Installation Manager. By default, this is:<ul class="- topic/ul ul" id="new_cf__ul_klq_dkw_pnb" data-ofbid="new_cf__ul_klq_dkw_pnb">
+						<li class="- topic/li li">Unix/Linux:
+								<span class="+ topic/ph sw-d/filepath ph filepath">/opt/IBM/InstallationManager/eclipse/tools</span></li>
+						<li class="- topic/li li">Windows: <span class="+ topic/ph sw-d/filepath ph filepath">C:\Program Files\IBM\Installation
+								Manager\eclipse\tools</span></li>
+						<li class="- topic/li li">IBM i:
+								<span class="+ topic/ph sw-d/filepath ph filepath">/QIBM/ProdData/InstallationManager/eclipse/tools</span></li>
+					</ul></li>
+				<li class="- topic/li li">Update the sample response file that is packaged with your cumulative fix level
+					according to the comments in the file. You can also record a response file to
+					use to install the fix in silent mode. Visit the <a class="- topic/xref xref" href="https://support.hcltechsw.com/csm" target="_blank" rel="external noopener">HCL Software Support</a> page for detailed
+					instructions on the procedure for recording an IBM Installation Manager
+					response. Note that the feature set listed in your response file must match the
+					feature set you have installed. You cannot add or remove features during the
+					cumulative fix update. The feature set listed in the sample response file is
+					<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>features='ce.install,portal.binary,portal.profile'</code></pre>
+					If you do not have any profiles on this node (because you are in the process of
+					migration from a previous version of HCL Portal, or creating multiple profiles,
+					or you originally installed HCL Portal as a binary install ), then you should
+					remove the 'portal.profile' feature from this list
+					<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>features='ce.install,portal.binary'</code></pre></li>
+				<li class="- topic/li li">Run the following command to install in silent mode:
+					<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>imcl -acceptLicense -input (Full_path_to_your_response_file) -log (Full_Path_to_a_log_file) -showProgress</code></pre></li>
+				<li class="- topic/li li">After installation completes, proceed with the <cite class="- topic/cite cite">Additional configuration
+						steps</cite>.</li>
+			</ol>
+		</section>
+		<section class="- topic/section section" id="new_cf__section_th5_llw_pnb" data-ofbid="new_cf__section_th5_llw_pnb"><h2 class="- topic/title title sectiontitle">Use Console Mode Interface (available on Windows, Linux, Unix and IBM i operating
+				systems)</h2>
+			
+			<div class="- topic/p p"><ol class="- topic/ol ol" id="new_cf__ol_llq_dkw_pnb" data-ofbid="new_cf__ol_llq_dkw_pnb">
+					<li class="- topic/li li">If you are running an external web server, stop the web server.</li>
+					<li class="- topic/li li">Stop any active application servers by using the <code class="+ topic/ph pr-d/codeph ph codeph">stopServer</code>
+						command. To see which application servers are active, use the
+							<code class="+ topic/ph pr-d/codeph ph codeph">serverStatus</code> command from the <span class="+ topic/ph sw-d/filepath ph filepath">(
+							wp_profile)/bin</span> directory and again from the
+							<span class="+ topic/ph sw-d/filepath ph filepath">(cw_profile)/bin</span> directory:<ul class="- topic/ul ul" id="new_cf__ul_mlq_dkw_pnb" data-ofbid="new_cf__ul_mlq_dkw_pnb">
+							<li class="- topic/li li">Unix/Linux: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>./serverStatus.sh -all</code></pre></li>
+							<li class="- topic/li li">Windows: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>serverStatus.bat -all</code></pre></li>
+							<li class="- topic/li li">IBM i:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>serverStatus -all</code></pre></li>
+						</ul></li>
+					<li class="- topic/li li">For IBM i only, Run the following command from qshell:
+						<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>chown QEJBSVR /QIBM/UserData/WebSphere/AppServer/V85/ND/profiles/cw_profile/ConfigEngine/properties/wkplc.properties</code></pre></li>
+					<li class="- topic/li li">Open a command window and switch to the eclipse/tools sub-directory of
+						Installation Manager. By default, this is:<ul class="- topic/ul ul" id="new_cf__ul_nlq_dkw_pnb" data-ofbid="new_cf__ul_nlq_dkw_pnb">
+							<li class="- topic/li li">Unix/Linux:
+									<span class="+ topic/ph sw-d/filepath ph filepath">/opt/IBM/InstallationManager/eclipse/tools</span></li>
+							<li class="- topic/li li">Windows: <span class="+ topic/ph sw-d/filepath ph filepath">C:\Program Files\IBM\Installation
+									Manager\eclipse\tools</span></li>
+							<li class="- topic/li li">IBM i:
+									<span class="+ topic/ph sw-d/filepath ph filepath">/QIBM/ProdData/InstallationManager/eclipse/tools</span>
+							</li>
+						</ul></li>
+					<li class="- topic/li li">Run the command to start the IBM Installation Manager in console mode: For
+						Unix/Linux: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>./imcl  -c</code></pre> For
+						Windows: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>imcl.exe -c</code></pre> For IBM i:
+						<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>./imcl  -c</code></pre></li>
+					<li class="- topic/li li">Complete the following steps to add the repositories.</li>
+					<li class="- topic/li li">Select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Update</span> and follow the prompts to update HCL
+						Portal.</li>
+					<li class="- topic/li li">After installation completes, proceed with the <cite class="- topic/cite cite">Additional
+							configuration steps</cite>.</li>
+				</ol> To add the repositories for Step 6: <ol class="- topic/ol ol" id="new_cf__ol_olq_dkw_pnb" data-ofbid="new_cf__ol_olq_dkw_pnb">
+					<li class="- topic/li li">Enter <kbd class="+ topic/ph sw-d/userinput ph userinput">P</kbd> to go to the Preferences menu.</li>
+					<li class="- topic/li li">Enter <kbd class="+ topic/ph sw-d/userinput ph userinput">1</kbd> to go to the Repositories menu.</li>
+					<li class="- topic/li li">Enter <kbd class="+ topic/ph sw-d/userinput ph userinput">D</kbd> to add repositories.</li>
+					<li class="- topic/li li">Type the path for your HCL Portal Version 8.5 CF repository file.</li>
+					<li class="- topic/li li">Enter <kbd class="+ topic/ph sw-d/userinput ph userinput">A</kbd> to apply your repositories and return to the
+							<span class="+ topic/ph ui-d/uicontrol ph uicontrol">Preferences</span> menu.</li>
+					<li class="- topic/li li">Enter <kbd class="+ topic/ph sw-d/userinput ph userinput">R</kbd> to return to the Main menu.</li>
+				</ol></div>
+		</section>
+<section class="- topic/section section" id="new_cf__addtl_config_steps" data-ofbid="new_cf__addtl_config_steps"><h2 class="- topic/title title sectiontitle">Additional configuration steps</h2>
+
+<p class="- topic/p p">If you have any profiles the following configuration steps are mandatory.</p>
+<div class="- topic/p p">If you do not have any profiles at this point (because you are in the process of migration from a
+				previous version of HCL Portal or plan to add this node to an existing cluster), no
+				additional configuration steps are necessary and you can continue with the
+					<cite class="- topic/cite cite">Post installation steps</cite>. If you are in the process of a migration,
+				you will need to follow these additional configuration steps after running
+				upgrade-profile for your migrated environment.<div class="- topic/note note note note_note"><span class="note__title">Note:</span> The following configuration
+					steps should be run as the user who normally administers the Portal Server,
+					which may or may not be the same user who runs the installation
+				program.</div></div>
+<p class="- topic/p p"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Linux, Unix, Windows or IBM i</span>
+			</p>
+			<p class="- topic/p p">Use the following commands to update all profiles. These steps must be repeated for
+				each profile, if multiple profiles exist. All profiles that share the same Portal
+				installation directory (multiple profile option) must be at the same level for
+				future upgrades to be applied.</p>
+			<div class="- topic/note note note note_note"><span class="note__title">Note:</span> If a remote search server is used within this environment, it should be started
+				before running the following commands. </div>
+			<div class="- topic/note note note note_note"><span class="note__title">Note:</span> If a WAS update has occurred prior to running the CF update, it is recommended to
+				run the following task:
+				<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>(profile_root)/bin/osgiCfgInit.sh|bat</code></pre></div>
+			<div class="- topic/note note note note_note"><span class="note__title">Note:</span> Optional:<div class="- topic/p p">To skip regeneration of the profile template, add the following flag
+					to the CF update command:
+					<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>ex. applyCF.sh -Dskip.profile.template.update=true</code></pre>
+					If an updated template is needed at a later time, this command can be run to do
+					so at any time:
+					<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>ex. ConfigEngine.sh cf-create-profile-templates</code></pre></div></div>
+<p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Apply CF</span></p>
+<div class="- topic/p p"><ol class="- topic/ol ol">
+	<li class="- topic/li li">Ensure the HCL Portal server is stopped on the profile you intend to upgrade.</li>
+<li class="- topic/li li">Execute the following command from within the path of the profile to configure. If you are
+						installing the CF on an empty portal, see <cite class="- topic/cite cite">Special
+							Considerations</cite> below before running <code class="+ topic/ph pr-d/codeph ph codeph">applyCF</code>. If
+						the <code class="+ topic/ph pr-d/codeph ph codeph">applyCF</code> command fails for any reason, check the error
+						logs and correct error conditions before re-running.<ul class="- topic/ul ul">
+							<li class="- topic/li li">Unix/Linux:
+								<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>(profile_root)/PortalServer/bin/applyCF.sh -DPortalAdminPwd=(password) -DWasPassword=(password)</code></pre></li>
+							<li class="- topic/li li">Windows:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>(profile_root)\PortalServer\bin\applyCF.bat -DPortalAdminPwd=(password) -DWasPassword=(password)</code></pre></li>
+							<li class="- topic/li li">IBM
+								i:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>(profile_root)/PortalServer/bin/applyCF.sh -DPortalAdminPwd=(password) -DWasPassword=(password)</code></pre></li>
+						</ul><div class="- topic/note note note note_note"><span class="note__title">Note:</span> If applying the CF19 update to HCL DX 9.5, a DX Connect servlet
+							is installed as a method to manage <a class="- topic/xref xref" href="../../9.5/containerization/ci_cd.html">Continuous Integration and Continuous Delivery
+								processes</a>. If you supply the Config Wizard password
+								(<code class="+ topic/ph pr-d/codeph ph codeph">CwUserPwd=xxxxxx</code>) during CF191 or higher
+							installation, the DXConnect servlet will be started immediately, a new
+							Resource Environment Provider will be added to the configuration wizard
+							profile along with 2 name/value pairs as shown below in the
+								<code class="+ topic/ph pr-d/codeph ph codeph">DXC_ConfigSettings</code> Resource Environment Provider:<dl class="- topic/dl dl">
+								
+									<dt class="- topic/dt dt dlterm"><code class="+ topic/ph pr-d/codeph ph codeph">DXCONNECT_MAX_MEMORY_SIZE_MB</code></dt>
+									<dd class="- topic/dd dd">The default value is <kbd class="+ topic/ph sw-d/userinput ph userinput">40</kbd>.</dd>
+								
+								
+									<dt class="- topic/dt dt dlterm"><code class="+ topic/ph pr-d/codeph ph codeph">DXCONNECT_MAX_FILE_SIZE_MB</code></dt>
+									<dd class="- topic/dd dd">The default value is <kbd class="+ topic/ph sw-d/userinput ph userinput">50</kbd>.</dd>
+								
+							</dl><p class="- topic/p p">If the Config Wizard password
+								(<code class="+ topic/ph pr-d/codeph ph codeph">CwUserPwd=xxxxxx</code>) is NOT provided at
+									<code class="+ topic/ph pr-d/codeph ph codeph">applyCF</code> time, no resource environment provider
+								is created.</p></div><div class="- topic/note note note note_note"><span class="note__title">Note:</span> The DX Connect servlet will not operate
+							on HCL DX deployments prior to HCL DX 9.5 CF191. </div></li>
+</ol></div>
+<p class="- topic/p p"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Special Consideration for empty portals</span>
+			</p>
+			<div class="- topic/p p">If you are installing the CF on an empty portal then extra steps are required to
+				avoid upgrade errors. <ol class="- topic/ol ol" id="new_cf__ol_obz_2nw_pnb" data-ofbid="new_cf__ol_obz_2nw_pnb">
+					<li class="- topic/li li">If you have created any custom content on top of the empty portal, you must
+						first use XMLAccess to export the Portal content. From the
+							<span class="+ topic/ph sw-d/filepath ph filepath">wp_profile_root/PortalServer/bin</span> directory run:
+						<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>xmlaccess.bat/sh -user Portal_admin_user -password Portal_admin_password -url http://(myhost):(port)/wps/config -in (Portal home)/doc/xml-samples/Export.xml -out result.xml</code></pre></li>
+					<li class="- topic/li li">Upgrade the portal profile to the new CF level. Because many of the expected
+						artifacts will not exist in an empty portal, you must define the
+							<code class="+ topic/ph pr-d/codeph ph codeph">isEmptyPortal</code> property when performing this step. If
+						the <code class="+ topic/ph pr-d/codeph ph codeph">applyCF</code> command fails for any reason, check the error
+						logs and correct error conditions before continuing:<ul class="- topic/ul ul" id="new_cf__ul_pbz_2nw_pnb" data-ofbid="new_cf__ul_pbz_2nw_pnb">
+							<li class="- topic/li li">Unix/Linux:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>(profile_root)/PortalServer/bin/applyCF.sh -DisEmptyPortal=true -DPortalAdminPwd=(password) -DWasPassword=(password)</code></pre></li>
+							<li class="- topic/li li">Windows:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>(profile_root)\PortalServer\bin\applyCF.bat -DisEmptyPortal=true -DPortalAdminPwd=(password) -DWasPassword=(password)</code></pre></li>
+							<li class="- topic/li li">IBM
+								i:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>(profile_root)/PortalServer/bin/applyCF.sh -DisEmptyPortal=true -DPortalAdminPwd=(password) -DWasPassword=(password)</code></pre></li>
+						</ul></li>
+					<li class="- topic/li li">Following a successful run of the <code class="+ topic/ph pr-d/codeph ph codeph">applyCF</code> script, re-run
+						the empty-portal task to remove Portal artifacts that were reintroduced with
+						the CF, as these may cause runtime errors. <ul class="- topic/ul ul" id="new_cf__ul_qbz_2nw_pnb" data-ofbid="new_cf__ul_qbz_2nw_pnb">
+							<li class="- topic/li li">Unix/Linux:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>(profile_root)/ConfigEngine/ ./ConfigEngine.sh empty-portal -DWasPassword=password -DPortalAdminPwd=password</code></pre></li>
+							<li class="- topic/li li">Windows:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>(profile_root)/ConfigEngine/ ConfigEngine.bat empty-portal -DWasPassword=password -DPortalAdminPwd=password</code></pre></li>
+							<li class="- topic/li li">IBM
+								i:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>(profile_root)/ConfigEngine/ ConfigEngine.sh empty-portal -DWasPassword=password -DPortalAdminPwd=password</code></pre></li>
+						</ul></li>
+					<li class="- topic/li li">If you exported custom content in Step 1 above, you can now use XMLAccess to
+						reimport that content. From the
+							<span class="+ topic/ph sw-d/filepath ph filepath">wp_profile_root/PortalServer/bin</span> directory run:
+						<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code> xmlaccess.bat/sh -user (Portal_admin_user) -password (Portal_admin_password) -url http://(myhost):(port)/wps/config -in result.xml -out importResults.xml</code></pre></li>
+				</ol></div>
+</section>
+<section class="- topic/section section" id="new_cf__post_installation_steps_ccf95" data-ofbid="new_cf__post_installation_steps_ccf95"><h2 class="- topic/title title sectiontitle">Post installation steps</h2>
+<div class="- topic/p p"><ol class="- topic/ol ol">
+<li class="- topic/li li">If you are running an external web server and you are using the WebSphere Application Server
+						automatic generation and propagation of the plug-in, then restart the web
+						server. If you are not using the automatic generation and propagation,
+						regenerate the web server plug-in, copy the
+							<span class="+ topic/ph sw-d/filepath ph filepath">plugin-cfg.xml</span> file to the plugin directory, then
+						restart the web server.</li>
+<li class="- topic/li li">If there is a custom theme that contains a static content WAR and the
+<code class="+ topic/ph pr-d/codeph ph codeph">com.ibm.portal.resource.blacklist</code> and
+<code class="+ topic/ph pr-d/codeph ph codeph">com.ibm.portal.resource.whitelist</code> context parameters have not yet been added to the
+	web.xml file, go to the <a class="- topic/xref xref" href="https://support.hcltechsw.com/csm" target="_blank" rel="external noopener">HCL Software Support</a> page to fix security vulnerability. The changes
+associated with this can cause custom themes to produce a lot of warning messages in the logs
+resulting in a significant performance penalty. The custom theme must be redeployed before the
+changes will take effect.</li>
+<li class="- topic/li li">If necessary, redeploy any customizations, including JSPs, to the WCM portlets (if using HCL Web Content Manager), any other portlets, 
+or any other Portal enterprise applications, if these were customized prior to installing the cumulative fix.</li>
+<li class="- topic/li li">Go to the <a class="- topic/xref xref" href="https://support.hcltechsw.com/csm" target="_blank" rel="external noopener">HCL Software Support</a> page see if
+						the Configuration changes and options introduced in the HCL Web Content
+						Manager 8.5 Combined Cumulative Fixes apply to your environment:</li>
+<li class="- topic/li li">If you modified the permissions on the PortalServer home directory tree to install the cumulative fix as non-root, restore 
+the original permissions.</li>
+<li class="- topic/li li">If using HCL Web Content Manager and have installed any official extensions (such as the WCM
+Multilingual Solution (MLS) or WCM Social Media Publisher (SMP)), then run the following task to
+update them. <ul class="- topic/ul ul">
+<li class="- topic/li li">Unix/Linux:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>(profile_root)/ConfigEngine/ConfigEngine.sh action-update-wcm-extensions -DWasPassword=(password) -DPortalAdminPwd=(password)</code></pre></li>
+<li class="- topic/li li">Windows:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>(profile_root)\ConfigEngine\ConfigEngine.bat action-update-wcm-extensions -DWasPassword=(password) -DPortalAdminPwd=(password)</code></pre></li>
+<li class="- topic/li li">IBM
+								i:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>(profile_root)/ConfigEngine/ConfigEngine.sh action-update-wcm-extensions -DWasPassword=(password) -DPortalAdminPwd=(password)</code></pre></li>
+</ul> The task can be run even if you are not sure if you had the extensions enabled. If you want to
+check if they were enabled the following tasks can be used: <ul class="- topic/ul ul">
+<li class="- topic/li li">For MLS use: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>ConfigEngine.sh|bat action-is-wcm-mls-enabled</code></pre></li>
+<li class="- topic/li li">For SMP, use: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>ConfigEngine.sh|bat action-is-wcm-smp-enabled</code></pre></li>
+</ul></li>
+<li class="- topic/li li">If you have set up a remote search server or document conversion server for use with HCL Portal
+						8.5, then whenever you apply a cumulative fix to the portal server, you
+						should also apply the corresponding cumulative fix to the remote server.
+						Refer to the HCL Portal 8.5 <a class="- topic/xref xref" href="ccf_95_remote_search.html" title="Read the installation instructions to learn how to apply a cumulative fix to a portal remote search installation or to roll back the cumulative fix."><cite class="- topic/cite cite">Combined cumulative fix instructions:
+								remote search</cite></a> for the details of applying a cumulative
+						fix to the remote server.</li>
+<li class="- topic/li li">Clear the browser cache.</li>
+	<li class="- topic/li li">Go to the <a class="- topic/xref xref" href="https://support.hcltechsw.com/csm" target="_blank" rel="external noopener">HCL Software Support</a> 
+page for Recommended Updates for HCL Portal and HCL Web Content Manager Version 8.5 to review and apply any recommended Fixes.</li>
+<li class="- topic/li li">Prior to CF07, it was recommended to set the DB2 database configuration parameter
+<code class="+ topic/ph pr-d/codeph ph codeph">dft_queryopt</code> to a value of 2 as this was tested to provide the best balance of
+query optimization time and query execution time for the SQL produced by the JCR. For CF07 or later,
+this recommendation has been changed to use a value of 5 in conjunction with the testing and changes
+made to the JCR and JCR schema. This can be done manually by customers by executing the following
+SQL against the JCR Domain Database:
+<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>db2 update db cfg for JCRDBNAME using DFT_QUERYOPT 5</code></pre> or running the following
+Config Engine Task: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>configure-jcr-db2-dft-queryopt</code></pre></li>
+</ol></div>
+</section>
+<section class="- topic/section section" id="new_cf__section_rk5_k4w_pnb" data-ofbid="new_cf__section_rk5_k4w_pnb"><h2 class="- topic/title title sectiontitle">Steps for rolling back the cumulative fix</h2>
+			
+			<div class="- topic/note note note note_note"><span class="note__title">Note:</span> The steps in these sections for rolling back the cumulative fix describe how to
+				roll back from a successful update to a previous level. However, rolling back from a
+				failed update does not guarantee return to a dependable state. When an update fails,
+				it is advised that you fix the cause of the failure and try again for a successful
+				update; to return to a previous level, you must depend on a system and database
+				backup and restore.</div>
+			<div class="- topic/note note note note_note"><span class="note__title">Note:</span> Versions of Portal prior to CF12 do not support JDK 8. Therefore, if JDK 8 has
+				been enabled in CF12 or later, the <code class="+ topic/ph pr-d/codeph ph codeph">managesdk</code> command must be used
+				to switch back to JDK 7 or 7.1 before performing a rollback to CF11 or
+				earlier.</div>
+			<div class="- topic/p p"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Limitations</span>
+				<ol class="- topic/ol ol" id="new_cf__ol_sk5_k4w_pnb" data-ofbid="new_cf__ol_sk5_k4w_pnb">
+					<li class="- topic/li li">Changing the server context root after upgrading is an unsupported rollback
+						path. To roll back after changing the context root, you must first change
+						the server context root to the values of the previous version.</li>
+					<li class="- topic/li li">When rolling back a CF install, if you have configured an empty context root
+						you cannot roll back to a CF level that does not support the empty context
+						root capability. For instance, if you have applied CF08 and have configured
+						an empty context root you cannot rollback to CF07. If you have applied CF09
+						and have configured an empty context root you can roll back to CF08 but you
+						would not be able to roll back if your previous CF level was CF07 or
+						prior.</li>
+					<li class="- topic/li li">Configuring HCL Portal from a stand-alone environment to a clustered
+						environment after upgrading is an unsupported rollback path.</li>
+				</ol></div>
+			<div class="- topic/p p"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Before you begin rollback</span>
+				<ol class="- topic/ol ol" id="new_cf__ol_tk5_k4w_pnb" data-ofbid="new_cf__ol_tk5_k4w_pnb">
+					<li class="- topic/li li">The HCL Portal rollback scripts depend on the
+							<code class="+ topic/ph pr-d/codeph ph codeph">wkplc.properties</code> being up to date and accurate,
+						particularly with the password properties. If you are using multiple
+						profiles, verify that the information in each profile is correct.</li>
+					<li class="- topic/li li">Edit the <span class="+ topic/ph sw-d/filepath ph filepath">(wp_profile
+							root)/ConfigEngine/properties/wkplc.properties</span> file and
+						ensure the following values are set correctly:<ul class="- topic/ul ul" id="new_cf__ul_uk5_k4w_pnb" data-ofbid="new_cf__ul_uk5_k4w_pnb">
+							<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">WasRemoteHostName=(the hostname of your WAS
+									instance)</code>
+							</li>
+							<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">WasSoapPort=(the soap port of your WAS instance)</code>
+							</li>
+							<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">WasUserid=(your WAS admin user)</code></li>
+							<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">WasPassword=(your WAS admin pwd)</code></li>
+							<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">PortalAdminId=(your Portal Admin ID)</code></li>
+							<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">PortalAdminPwd=(your Portal Admin password)</code></li>
+							<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">WpsHostName=(Your Portal hostname)</code>
+							</li>
+							<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">WpsHostPort=(The port you use to access Portal)</code>
+							</li>
+							<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">WpsContextRoot=(your Portal context root)</code>
+							</li>
+						</ul><div class="- topic/note note note note_note"><span class="note__title">Note:</span> In a Standalone Portal environment, the
+								<code class="+ topic/ph pr-d/codeph ph codeph">WasRemoteHostName</code> should be the local hostname and
+							the <code class="+ topic/ph pr-d/codeph ph codeph">WasSoapPort</code> should be the soap port of the HCL
+							Portal and HCL Web Content Manager server.</div></li>
+					<li class="- topic/li li">Edit the <span class="+ topic/ph sw-d/filepath ph filepath">(wp_profile
+							root)/ConfigEngine/properties/wkplc_dbdomain.properties</span> file
+						and ensure the following values are set correctly: <ul class="- topic/ul ul" id="new_cf__ul_vk5_k4w_pnb" data-ofbid="new_cf__ul_vk5_k4w_pnb">
+							<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">release.DbPassword=(your database user password)</code>
+							</li>
+							<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">community.DbPassword=(your database user password)</code>
+							</li>
+							<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">customization.DbPassword=(your database user
+									password)</code></li>
+							<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">jcr.DbPassword=(your database user password)</code></li>
+							<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">likeminds.DbPassword=(your database user
+								password)</code></li>
+							<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">feedback.DbPassword=(your database user
+								password)</code></li>
+						</ul></li>
+					<li class="- topic/li li">Edit the <code class="+ topic/ph pr-d/codeph ph codeph">(wp_profile
+							root)/ConfigEngine/properties/wkplc_comp.properties</code> file and
+						ensure the following values are set correctly: <ul class="- topic/ul ul" id="new_cf__ul_qdn_24w_pnb" data-ofbid="new_cf__ul_qdn_24w_pnb">
+							<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">XmlAccessHost=(your Portal hostname)</code></li>
+							<li class="- topic/li li"><code class="+ topic/ph pr-d/codeph ph codeph">XmlAccessPort=(the port you use to access
+								Portal)</code></li>
+						</ul></li>
+				</ol></div>
+			<p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Unix, Linux, Windows, and IBM i</strong>
+			</p>
+			<div class="- topic/p p">The update process removes plain text passwords from the
+					<code class="+ topic/ph pr-d/codeph ph codeph">wkplc*.properties</code> files. To keep these passwords in the
+				properties files, include the following line in the
+					<code class="+ topic/ph pr-d/codeph ph codeph">wkplc.properties</code> file:
+				<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>PWordDelete=false</code></pre></div>
+			<div class="- topic/p p">There are several different methods to roll back the cumulative fix, and they are:
+					<ul class="- topic/ul ul" id="new_cf__ul_wk5_k4w_pnb" data-ofbid="new_cf__ul_wk5_k4w_pnb">
+					<li class="- topic/li li">Use a Graphical User Interface (GUI) to roll back</li>
+					<li class="- topic/li li">Use a command line roll back</li>
+					<li class="- topic/li li">Use silent mode roll back</li>
+					<li class="- topic/li li">Use console mode roll back</li>
+				</ul></div>
+			<p class="- topic/p p">Choose one method that is available for your system. Follow the detailed steps for
+				that option, and then proceed with the Post Rollback Steps.</p>
+		</section>
+		<section class="- topic/section section" id="new_cf__section_xk5_k4w_pnb" data-ofbid="new_cf__section_xk5_k4w_pnb"><h2 class="- topic/title title sectiontitle">Use a Graphical User Interface to rollback (available on Windows, Linux, and Unix
+				operating systems)</h2>
+			
+			<div class="- topic/p p">
+				<ol class="- topic/ol ol" id="new_cf__ol_yk5_k4w_pnb" data-ofbid="new_cf__ol_yk5_k4w_pnb">
+					<li class="- topic/li li">If you are running an external web server, stop the web server.</li>
+					<li class="- topic/li li">Stop any active application servers by using the <code class="+ topic/ph pr-d/codeph ph codeph">stopServer</code>
+						command. To see which application servers are active, use the serverStatus
+						command from the <span class="+ topic/ph sw-d/filepath ph filepath">(wp_profile)/bin</span> directory and again
+						from the <span class="+ topic/ph sw-d/filepath ph filepath">(wp_profile)/bin</span> directory:<ul class="- topic/ul ul" id="new_cf__ul_zk5_k4w_pnb" data-ofbid="new_cf__ul_zk5_k4w_pnb">
+							<li class="- topic/li li">Unix/Linux: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>./serverStatus.sh -all</code></pre></li>
+							<li class="- topic/li li">Windows: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>serverStatus.bat -all</code></pre></li>
+						</ul></li>
+					<li class="- topic/li li">Launch the IBM Installation Manager that was used to install HCL Portal
+						Version 8.5.</li>
+					<li class="- topic/li li">Select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Roll Back</span> on the Installation Manager main
+						window and follow the prompts to roll HCL Portal back to the desired
+						level.</li>
+					<li class="- topic/li li">After rollback completes, proceed with the <cite class="- topic/cite cite">Post Rollback
+						Steps</cite>.</li>
+				</ol>
+			</div>
+		</section>
+		<section class="- topic/section section" id="new_cf__section_dt1_t4w_pnb" data-ofbid="new_cf__section_dt1_t4w_pnb"><h2 class="- topic/title title sectiontitle">Use a command line to rollback (available on Windows, Linux, and Unix operating
+				systems)</h2>
+			
+			<div class="- topic/p p">
+				<ol class="- topic/ol ol" id="new_cf__ol_al5_k4w_pnb" data-ofbid="new_cf__ol_al5_k4w_pnb">
+					<li class="- topic/li li">If you are running an external web server, stop the web server.</li>
+					<li class="- topic/li li">Stop any active application servers by using the <code class="+ topic/ph pr-d/codeph ph codeph">stopServer</code>
+						command. To see which application servers are active, use the
+							<code class="+ topic/ph pr-d/codeph ph codeph">serverStatus</code> command from the
+							<span class="+ topic/ph sw-d/filepath ph filepath">(wp_profile)/bin</span> directory and again from the
+							<span class="+ topic/ph sw-d/filepath ph filepath">(cw_profile)/bin</span> directory:<ul class="- topic/ul ul" id="new_cf__ul_bl5_k4w_pnb" data-ofbid="new_cf__ul_bl5_k4w_pnb">
+							<li class="- topic/li li">Unix/Linux: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>./serverStatus.sh -all</code></pre></li>
+							<li class="- topic/li li">Windows: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>serverStatus.bat -all</code></pre></li>
+						</ul></li>
+					<li class="- topic/li li">Open a command window and switch to the <span class="+ topic/ph sw-d/filepath ph filepath">eclipse/tools</span>
+						sub-directory of Installation Manager. By default, this is:<ul class="- topic/ul ul" id="new_cf__ul_cl5_k4w_pnb" data-ofbid="new_cf__ul_cl5_k4w_pnb">
+							<li class="- topic/li li">Unix/Linux:
+									<span class="+ topic/ph sw-d/filepath ph filepath">/opt/IBM/InstallationManager/eclipse/tools</span></li>
+							<li class="- topic/li li">Windows: <span class="+ topic/ph sw-d/filepath ph filepath">C:\Program Files\IBM\Installation
+									Manager\eclipse\tools</span></li>
+						</ul></li>
+					<li class="- topic/li li">If you are rolling back the cumulative fix on HCL Portal Express, skip to
+						step 5. Otherwise, run the following command to launch the installation
+						program of IBM Installation Manager. The commands are shown here on multiple
+						lines for clarity, but the entire command must be entered on one line.
+						Include quotation marks around file paths that include spaces: <div class="- topic/p p">For
+							Unix/Linux:
+							<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>./imcl rollback com.ibm.websphere.PORTAL.SERVER.v85
+	-installationDirectory (portal_server_root)</code></pre></div>
+						For Windows:
+						<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>imcl.exe rollback com.ibm.websphere.PORTAL.SERVER.v85
+	-installationDirectory (portal_server_root)</code></pre></li>
+					<li class="- topic/li li">HCL Portal Express only (IBM i must use silent or console mode method): Run
+						the following command to launch the installation program from the
+						eclipse/tools sub-directory of Installation Manager. The commands are shown
+						here on multiple lines for clarity, but the entire command must be entered
+						on one line. Include quotation marks around file paths that include spaces:
+							<div class="- topic/p p">For Linux:
+							<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>./imcl rollback com.ibm.websphere.PORTAL.EXPRESS.v85 
+	-installationDirectory (portal_server_root)</code></pre></div>
+						For Windows:
+						<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>imcl.exe rollback com.ibm.websphere.PORTAL.EXPRESS.v85 
+	-installationDirectory (portal_server_root)</code></pre></li>
+					<li class="- topic/li li">After rollback completes, proceed with the <cite class="- topic/cite cite">Post Rollback
+						Steps</cite>.</li>
+				</ol>
+			</div>
+		</section>
+		<section class="- topic/section section" id="new_cf__section_hwg_jpw_pnb" data-ofbid="new_cf__section_hwg_jpw_pnb"><h2 class="- topic/title title sectiontitle">Use silent mode to rollback (available on Windows, Linux, Unix, and IBM i
+				operating systems)</h2>
+			
+			<div class="- topic/p p">
+				<ol class="- topic/ol ol" id="new_cf__ol_dl5_k4w_pnb" data-ofbid="new_cf__ol_dl5_k4w_pnb">
+					<li class="- topic/li li">If you are running an external web server, stop the web server.</li>
+					<li class="- topic/li li">Stop any active application servers by using the <code class="+ topic/ph pr-d/codeph ph codeph">stopServer</code>
+						command. To see which application servers are active, use the
+							<code class="+ topic/ph pr-d/codeph ph codeph">serverStatus</code> command from the
+							<span class="+ topic/ph sw-d/filepath ph filepath">(wp_profile)/bin</span> directory and again from the
+							<span class="+ topic/ph sw-d/filepath ph filepath">(cw_profile)/bin</span> directory:<ul class="- topic/ul ul" id="new_cf__ul_el5_k4w_pnb" data-ofbid="new_cf__ul_el5_k4w_pnb">
+							<li class="- topic/li li">Unix/Linux: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>./serverStatus.sh -all</code></pre></li>
+							<li class="- topic/li li">Windows: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>serverStatus.bat -all</code></pre></li>
+							<li class="- topic/li li">IBM i: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>serverStatus -all</code></pre></li>
+						</ul></li>
+					<li class="- topic/li li">For IBM i only, Run the following command from qshell:
+						<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>chown QEJBSVR /QIBM/UserData/WebSphere/AppServer/V85/ND/profiles/cw_profile/ConfigEngine/properties/wkplc.properties</code></pre></li>
+					<li class="- topic/li li">Open a command window and switch to the <span class="+ topic/ph sw-d/filepath ph filepath">eclipse/tools</span>
+						sub-directory of Installation Manager. By default, this is:<ul class="- topic/ul ul" id="new_cf__ul_fl5_k4w_pnb" data-ofbid="new_cf__ul_fl5_k4w_pnb">
+							<li class="- topic/li li">Unix/Linux:
+									<span class="+ topic/ph sw-d/filepath ph filepath">/opt/IBM/InstallationManager/eclipse/tools</span></li>
+							<li class="- topic/li li">Windows: <span class="+ topic/ph sw-d/filepath ph filepath">C:\Program Files\IBM\Installation
+									Manager\eclipse\tools</span></li>
+							<li class="- topic/li li">IBM i:
+									<span class="+ topic/ph sw-d/filepath ph filepath">/QIBM/ProdData/InstallationManager/eclipse/tools</span></li>
+						</ul></li>
+					<li class="- topic/li li">Update the sample response file that is packaged with your cumulative fix
+						level according to the comments in the file.</li>
+					<li class="- topic/li li">Run the following command to roll back in silent mode:
+						<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>imcl -input (Full_path_to_your_response_file) -log (Full_Path_to_a_log_file) -showProgress</code></pre></li>
+					<li class="- topic/li li">After rollback completes, proceed with the <cite class="- topic/cite cite">Post Rollback
+						Steps</cite>.</li>
+				</ol>
+			</div>
+		</section>
+		<section class="- topic/section section" id="new_cf__section_jld_ypw_pnb" data-ofbid="new_cf__section_jld_ypw_pnb"><h2 class="- topic/title title sectiontitle">Use Console Mode Interface (available on Windows, Linux, Unix and IBM i operating
+				systems)</h2>
+			
+			<div class="- topic/p p">
+				<ol class="- topic/ol ol" id="new_cf__ol_gl5_k4w_pnb" data-ofbid="new_cf__ol_gl5_k4w_pnb">
+					<li class="- topic/li li">If you are running an external web server, stop the web server.</li>
+					<li class="- topic/li li">Stop any active application servers by using the stopServer command. To see
+						which application servers are active, use the <code class="+ topic/ph pr-d/codeph ph codeph">serverStatus</code>
+						command from the <span class="+ topic/ph sw-d/filepath ph filepath">(wp_profile)/bin</span> directory and again
+						from the <span class="+ topic/ph sw-d/filepath ph filepath">(cw_profile)/bin</span> directory:<ul class="- topic/ul ul" id="new_cf__ul_hl5_k4w_pnb" data-ofbid="new_cf__ul_hl5_k4w_pnb">
+							<li class="- topic/li li">Unix/Linux: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>./serverStatus.sh -all</code></pre></li>
+							<li class="- topic/li li">Windows: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>serverStatus.bat -all</code></pre></li>
+							<li class="- topic/li li">IBM i: <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>serverStatus -all</code></pre></li>
+						</ul></li>
+					<li class="- topic/li li"><strong class="+ topic/ph hi-d/b ph b">For IBM i only</strong>: Run the following command from qshell:
+						<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>chown QEJBSVR /QIBM/UserData/WebSphere/AppServer/V85/ND/profiles/cw_profile/ConfigEngine/properties/wkplc.properties</code></pre></li>
+					<li class="- topic/li li">Open a command window and switch to the <span class="+ topic/ph sw-d/filepath ph filepath">eclipse/tools</span>
+						sub-directory of Installation Manager. By default, this is: <ul class="- topic/ul ul" id="new_cf__ul_il5_k4w_pnb" data-ofbid="new_cf__ul_il5_k4w_pnb">
+							<li class="- topic/li li">Unix/Linux:
+									<span class="+ topic/ph sw-d/filepath ph filepath">/opt/IBM/InstallationManager/eclipse/tools</span></li>
+							<li class="- topic/li li">Windows: <span class="+ topic/ph sw-d/filepath ph filepath">C:\Program Files\IBM\Installation
+									Manager\eclipse\tools</span></li>
+							<li class="- topic/li li">IBM i:
+									<span class="+ topic/ph sw-d/filepath ph filepath">/QIBM/ProdData/InstallationManager/eclipse/tools</span></li>
+						</ul></li>
+					<li class="- topic/li li">Run the command to start the IBM Installation Manager in console mode.
+							<div class="- topic/p p">For Unix/Linux:
+							<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>./imcl  -c</code></pre></div> For Windows:
+						<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>imcl.exe -c</code></pre> For IBM i:
+						<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>./imcl  -c</code></pre></li>
+					<li class="- topic/li li">Select Roll back and follow the prompts to roll back HCL Portal.</li>
+					<li class="- topic/li li">After installation completes, proceed with the <cite class="- topic/cite cite">Post Rollback
+							Steps</cite>.</li>
+				</ol>
+			</div>
+		</section>
+<section class="- topic/section section" id="new_cf__post_rollback_steos" data-ofbid="new_cf__post_rollback_steos"><h2 class="- topic/title title sectiontitle">Post Rollback Steps</h2>
+
+<p class="- topic/p p"><span class="+ topic/keyword ui-d/wintitle keyword wintitle">Linux, Unix, Windows or IBM i</span>
+			</p>
+			<div class="- topic/p p">Use the following commands to roll back all profiles. These steps must be repeated
+				for each profile, if multiple profiles exist. All profiles that share the same
+				Portal installation directory (multiple profile option) must be at the same level
+				for future upgrades to be applied. The following configuration steps should be run
+				as the user who normally administers the Portal Server, which may or may not be the
+				same user who runs the installation program. If a remote search server is used
+				within this environment, it should be started before running the following commands.
+					<ol class="- topic/ol ol" id="new_cf__ol_c51_mqw_pnb" data-ofbid="new_cf__ol_c51_mqw_pnb">
+					<li class="- topic/li li">Run the following command from within the path of the profile to configure.
+						If you are rolling back the CF on an empty portal then many of the expected
+						artifacts will not exist and the <code class="+ topic/ph pr-d/codeph ph codeph">rollbackCF</code> command will
+						fail. In this case you must define the <code class="+ topic/ph pr-d/codeph ph codeph">isEmptyPortal</code>
+						property on the command line.
+						<p class="- topic/p p">Example:</p><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>rollbackCF.sh -DisEmptyPortal=true</code></pre>
+						If the <code class="+ topic/ph pr-d/codeph ph codeph">rollbackCF</code> command fails for any reason, check the
+						error logs and correct error conditions, then stop HCL Digital Experience
+						before re-running. <ul class="- topic/ul ul" id="new_cf__ul_d51_mqw_pnb" data-ofbid="new_cf__ul_d51_mqw_pnb">
+							<li class="- topic/li li">Unix/Linux:
+								<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>(profile_root)/PortalServer/bin/rollbackCF.sh -DPortalAdminPwd=(password) -DWasPassword=(password)</code></pre></li>
+							<li class="- topic/li li">Windows:
+								<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>(profile_root)\PortalServer\bin\rollbackCF.bat -DPortalAdminPwd=(password) -DWasPassword=(password)</code></pre></li>
+							<li class="- topic/li li">IBM i:
+								<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>(profile_root)/PortalServer/bin/rollbackCF.sh -DPortalAdminPwd=(password) -DWasPassword=(password)</code></pre></li>
+						</ul></li>
+					<li class="- topic/li li">If you are running an external web server and you are using the WebSphere
+						Application Server automatic generation and propagation of the plug-in, then
+						restart the web server. If you are not using the automatic generation and
+						propagation, simply regenerate the web server plugin, copy the
+							<span class="+ topic/ph sw-d/filepath ph filepath">plugin-cfg.xml</span> file to the plugin directory, then
+						restart the web server.</li>
+					<li class="- topic/li li">If you previously customized any configuration files in the
+							<span class="+ topic/ph sw-d/filepath ph filepath">wp_profile_root/PortalServer/config</span> directory,
+						check to see if rolling back the cumulative fix affected those files by
+						restoring a version of the files that was saved when the cumulative fix was
+						originally installed. If it did affect the files, you must perform the same
+						customization on the restored version of each file.</li>
+					<li class="- topic/li li">If necessary, redeploy any customizations, including JSPs, to the WCM
+						portlets (if using Web Content Manager), any other portlets, or any other
+						Portal enterprise applications, if these were customized prior to rolling
+						back the cumulative fix.</li>
+					<li class="- topic/li li">If using HCL Web Content Manager and have installed any official extensions
+						(such as the WCM Multilingual Solution (MLS) or WCM Social Media Publisher
+						(SMP)), then run the following task to update them. <ul class="- topic/ul ul" id="new_cf__ul_e51_mqw_pnb" data-ofbid="new_cf__ul_e51_mqw_pnb">
+							<li class="- topic/li li">Unix/Linux:
+								<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>(profile_root)/ConfigEngine/ConfigEngine.sh action-update-wcm-extensions -DWasPassword=(password) -DPortalAdminPwd=(password)</code></pre></li>
+							<li class="- topic/li li">Windows:
+								<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>(profile_root)\ConfigEngine\ConfigEngine.bat action-update-wcm-extensions -DWasPassword=(password) -DPortalAdminPwd=(password)</code></pre></li>
+							<li class="- topic/li li">IBM i:
+								<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>(profile_root)/ConfigEngine/ConfigEngine.sh action-update-wcm-extensions -DWasPassword=(password) -DPortalAdminPwd=(password)</code></pre></li>
+						</ul> The task can be run even if you are not sure if you had the extensions
+						enabled. If you want to check if they were enabled the following tasks can
+						be used: <ul class="- topic/ul ul" id="new_cf__ul_f51_mqw_pnb" data-ofbid="new_cf__ul_f51_mqw_pnb">
+							<li class="- topic/li li">For MLS,
+								use:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>ConfigEngine.sh|bat action-is-wcm-mls-enabled</code></pre></li>
+							<li class="- topic/li li">For SMP,
+								use:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>ConfigEngine.sh|bat action-is-wcm-smp-enabled</code></pre></li>
+						</ul></li>
+					<li class="- topic/li li">For rollback to CF03 or earlier level only: If the Brightcove integration
+						was enabled, remove the old Brightcove plugins, then configure HCL Portal to
+						add the new Brightcove plugins.</li>
+					<li class="- topic/li li">For rollback to CF03 or earlier level only: If using Rich Media Edition,
+						remove the Rich Media Edition plugin, restart the Portal Server, then
+						configure HCL Portal to add the Rich Media Edition plugins.</li>
+					<li class="- topic/li li">If you have set up a remote search server or document conversion server for
+						use with HCL Portal Version 8.5, then whenever you roll back a cumulative
+						fix to the portal server, you should also roll back the corresponding
+						cumulative fix to the remote server.</li>
+					<li class="- topic/li li">Clear the browser cache.</li>
+				</ol>
+			</div>
+
+</section>
+</div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="section-item"><div class="section-title"><a href="#new_cf__search_crawler_info" data-tocid="new_cf__search_crawler_info">Search Crawler Information</a></div></li><li class="section-item"><div class="section-title"><a href="#new_cf__complete_backup_portal_environment" data-tocid="new_cf__complete_backup_portal_environment">Take a complete backup of the Portal environment</a></div></li><li class="section-item"><div class="section-title"><a href="#new_cf__known_issues_ccf95" data-tocid="new_cf__known_issues_ccf95">Known Issues</a></div></li><li class="section-item"><div class="section-title"><a href="#new_cf__review_supported_hardware_software_req" data-tocid="new_cf__review_supported_hardware_software_req">Review supported hardware/software requirements</a></div></li><li class="section-item"><div class="section-title"><a href="#new_cf__check_fixes_installed" data-tocid="new_cf__check_fixes_installed">Check fixes installed on your system</a></div></li><li class="section-item"><div class="section-title"><a href="#new_cf__ensure_wkplc_properties" data-tocid="new_cf__ensure_wkplc_properties">Ensure <code class="+ topic/ph pr-d/codeph ph codeph">wkplc.properties</code> files are correct</a></div></li><li class="section-item"><div class="section-title"><a href="#new_cf__multiple_profile_considerations" data-tocid="new_cf__multiple_profile_considerations">Multiple profile considerations</a></div></li><li class="section-item"><div class="section-title"><a href="#new_cf__non-root_considerations" data-tocid="new_cf__non-root_considerations">Non-root considerations</a></div></li><li class="section-item"><div class="section-title"><a href="#new_cf__antivirus_file_indexing_considerations" data-tocid="new_cf__antivirus_file_indexing_considerations">Anti-virus and file indexing software considerations (Windows only)</a></div></li><li class="section-item"><div class="section-title"><a href="#new_cf__was85514_note" data-tocid="new_cf__was85514_note">Special note for customers using WAS 8.5.5.14</a></div></li><li class="section-item"><div class="section-title"><a href="#new_cf__download_ccf95_fix" data-tocid="new_cf__download_ccf95_fix">Download the cumulative fix</a></div></li><li class="section-item"><div class="section-title"><a href="#new_cf__section_zkq_dkw_pnb" data-tocid="new_cf__section_zkq_dkw_pnb">Steps for installing the cumulative fix</a></div></li><li class="section-item"><div class="section-title"><a href="#new_cf__section_alq_dkw_pnb" data-tocid="new_cf__section_alq_dkw_pnb">Use a Graphical User Interface (available on Windows, Linux, and Unix operating
+				systems)</a></div></li><li class="section-item"><div class="section-title"><a href="#new_cf__section_ij5_jkw_pnb" data-tocid="new_cf__section_ij5_jkw_pnb">Use a live repository via the Graphical User Interface (available on Windows,
+				Linux, and Unix operating systems)</a></div></li><li class="section-item"><div class="section-title"><a href="#new_cf__section_ycm_qkw_pnb" data-tocid="new_cf__section_ycm_qkw_pnb">Use a command line (available on Windows, Linux, and Unix operating
+				systems)</a></div></li><li class="section-item"><div class="section-title"><a href="#new_cf__section_oml_clw_pnb" data-tocid="new_cf__section_oml_clw_pnb">Use silent mode installation (available on Windows, Linux, Unix, and IBM i
+				operating systems)</a></div></li><li class="section-item"><div class="section-title"><a href="#new_cf__section_th5_llw_pnb" data-tocid="new_cf__section_th5_llw_pnb">Use Console Mode Interface (available on Windows, Linux, Unix and IBM i operating
+				systems)</a></div></li><li class="section-item"><div class="section-title"><a href="#new_cf__addtl_config_steps" data-tocid="new_cf__addtl_config_steps">Additional configuration steps</a></div></li><li class="section-item"><div class="section-title"><a href="#new_cf__post_installation_steps_ccf95" data-tocid="new_cf__post_installation_steps_ccf95">Post installation steps</a></div></li><li class="section-item"><div class="section-title"><a href="#new_cf__section_rk5_k4w_pnb" data-tocid="new_cf__section_rk5_k4w_pnb">Steps for rolling back the cumulative fix</a></div></li><li class="section-item"><div class="section-title"><a href="#new_cf__section_xk5_k4w_pnb" data-tocid="new_cf__section_xk5_k4w_pnb">Use a Graphical User Interface to rollback (available on Windows, Linux, and Unix
+				operating systems)</a></div></li><li class="section-item"><div class="section-title"><a href="#new_cf__section_dt1_t4w_pnb" data-tocid="new_cf__section_dt1_t4w_pnb">Use a command line to rollback (available on Windows, Linux, and Unix operating
+				systems)</a></div></li><li class="section-item"><div class="section-title"><a href="#new_cf__section_hwg_jpw_pnb" data-tocid="new_cf__section_hwg_jpw_pnb">Use silent mode to rollback (available on Windows, Linux, Unix, and IBM i
+				operating systems)</a></div></li><li class="section-item"><div class="section-title"><a href="#new_cf__section_jld_ypw_pnb" data-tocid="new_cf__section_jld_ypw_pnb">Use Console Mode Interface (available on Windows, Linux, Unix and IBM i operating
+				systems)</a></div></li><li class="section-item"><div class="section-title"><a href="#new_cf__post_rollback_steos" data-tocid="new_cf__post_rollback_steos">Post Rollback Steps</a></div></li></ul></div>
+                        </nav>
+                        
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer" whc:version="23.1">
+  <div class=" footer-container mx-auto ">
+    
+            Generated by <a class="oxyFooter" href="http://www.oxygenxml.com/xml_webhelp.html" target="_blank">
+            &lt;oXygen/&gt; XML WebHelp
+            </a>
+        
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" alt=""/>
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

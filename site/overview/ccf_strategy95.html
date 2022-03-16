@@ -1,0 +1,239 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en-us" lang="en-us" whc:version="22.0">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><meta charset="UTF-8"/><meta name="DC.rights.owner" content="(C) Copyright 2022"/><meta name="copyright" content="(C) Copyright 2022"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="concept"/><meta name="description" content="The Combined Cumulative Fix is a package of HCL Digital Experience fixes. Read the instructions to learn how to apply or roll back a combined cumulative fix."/><meta name="DC.relation" scheme="URI" content="../containerization/dx_non_container.html"/><meta name="DC.relation" scheme="URI" content="../overview/ccf_95_standalone.html"/><meta name="DC.relation" scheme="URI" content="../overview/ccf_95_cluster.html"/><meta name="DC.relation" scheme="URI" content="../overview/ccf_95_farm.html"/><meta name="DC.relation" scheme="URI" content="../overview/ccf_95_remote_search.html"/><meta name="DC.relation" scheme="URI" content="../overview/ccf_95_health_checker.html"/><meta name="DC.relation" scheme="URI" content="../overview/ccf_95_known_issues.html"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="new_cf"/><meta name="DC.language" content="en-us"/>        
+      <title>Combined Cumulative Fix (CF) Installation | HCL Digital Experience</title><!--  Generated with Oxygen version 23.1, build number 2021040717.  --><meta name="wh-path2root" content="../"/><meta name="wh-toc-id" content="new_cf-d10859e1159"/><meta name="wh-source-relpath" content="overview/ccf_strategy95.dita"/><meta name="wh-out-relpath" content="overview/ccf_strategy95.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/topic-page.css?buildId=2021040717"/>
+    
+    
+    <script type="text/javascript" src="../oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"><!----></script>
+    
+    <script data-main="../oxygen-webhelp/app/topic-page.js" src="../oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/cobalt.css?buildId=2021040717"/></head>
+
+    <body id="new_cf" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header" whc:version="23.1">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    
+                    <div class=" wh_publication_title "><a href="../index.html"><span class="title"><span class="ph">HCL Digital Experience 9.5</span></span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                <button type="button" data-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-toggle="collapse" class="navbar-toggler collapsed wh_toggle_button" aria-expanded="false" aria-label="Toggle menu" aria-controls="wh_top_menu_and_indexterms_link">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                <nav class=" wh_top_menu " aria-label="Menu Container"><ul role="menubar" aria-label="Menu"><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="kc_welcome-d10859e12-mi" data-tocid="kc_welcome-d10859e12" data-state="not-ready" class=" topicref " data-id="kc_welcome"><span class="title"><a href="../welcome/wp95_welcome.html">HCL Digital Experience 9.5</a></span></span></li></ul></nav>
+                <div class=" wh_indexterms_link "><a href="../indexTerms.html" title="Index" aria-label="Go to index terms page"><span>Index</span></a></div>
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <!-- Search form -->
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="../index.html"><span>Home</span></a></span></li><li><span class="topicref" data-id="kc_welcome"><span class="title"><a href="../welcome/wp95_welcome.html">HCL Digital Experience 9.5</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Welcome to the documentation for HCL Digital Experience                 9.5. Learn how to install, configure, troubleshoot, maintain and use Version 9.5 of                 HCL Digital Experience.</p></span></span></span></li><li><span class="topicref" data-id="concept_xkw_flt_1qb"><span class="title"><a href="../containerization/dx_non_container.html">Digital Experience on non-containerized platforms</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Learn how to deploy HCL Digital Experience as a non-containerized application and         optimize web content and applications to deliver differentiated, personalized experiences         for your customers.</p></span></span></span></li><li class="active"><span class="topicref" data-id="new_cf"><span class="title"><a href="../overview/ccf_strategy95.html">Combined Cumulative Fix (CF) installation</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">The Combined Cumulative Fix is a package of HCL Digital Experience fixes. Read the     instructions to learn how to apply or roll back a combined cumulative fix. </p></span></span></span></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  </span></div>
+                        
+                        <!-- External resource link -->
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <!-- Expand/Collapse publishing TOC 
+                             The menu button for mobile devices is copied in the output only when the publication TOC is available
+                        -->
+                        <button type="button" data-target="#wh_publication_toc" id="wh_toc_button" data-toggle="collapse" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        
+                        <nav id="wh_publication_toc" class="collapse col-lg-3 col-md-3 col-sm-12 d-md-block d-print-none" aria-label="Table of Contents Container">
+                            <div class=" wh_publication_toc " data-tooltip-position="right"><ul role="tree" aria-label="Table of Contents"><span class="expand-button-action-labels"><span id="button-expand-action" aria-label="Expand"></span><span id="button-collapse-action" aria-label="Collapse"></span><span id="button-pending-action" aria-label="Pending"></span></span><li role="treeitem" aria-expanded="true"><span data-tocid="kc_welcome-d10859e12" class="topicref" data-id="kc_welcome" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action kc_welcome-d10859e12-link" class="wh-expand-btn"></span><span class="title"><a href="../welcome/wp95_welcome.html" id="kc_welcome-d10859e12-link">HCL Digital Experience 9.5</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Welcome to the documentation for HCL Digital Experience                 9.5. Learn how to install, configure, troubleshoot, maintain and use Version 9.5 of                 HCL Digital Experience.</p></span></span></span><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="true"><span data-tocid="concept_xkw_flt_1qb-d10859e23" class="topicref" data-id="concept_xkw_flt_1qb" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action concept_xkw_flt_1qb-d10859e23-link" class="wh-expand-btn"></span><span class="title"><a href="../containerization/dx_non_container.html" id="concept_xkw_flt_1qb-d10859e23-link">Digital Experience on non-containerized platforms</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Learn how to deploy HCL Digital Experience as a non-containerized application and         optimize web content and applications to deliver differentiated, personalized experiences         for your customers.</p></span></span></span><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><span data-tocid="installing_parent2-d10859e34" class="topicref" data-id="installing_parent2" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action installing_parent2-d10859e34-link" class="wh-expand-btn"></span><span class="title"><a href="../install/installing_parent2.html" id="installing_parent2-d10859e34-link">Installing HCL Digital Experience</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Review the planning information on HCL Digital Experience, then select your operating     system and installation pattern that most reflects your business needs.</p></span></span></span></li><li role="treeitem" aria-expanded="true" class="active"><span data-tocid="new_cf-d10859e1159" class="topicref" data-id="new_cf" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action new_cf-d10859e1159-link" class="wh-expand-btn"></span><span class="title"><a href="../overview/ccf_strategy95.html" id="new_cf-d10859e1159-link">Combined Cumulative Fix (CF) installation</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">The Combined Cumulative Fix is a package of HCL Digital Experience fixes. Read the     instructions to learn how to apply or roll back a combined cumulative fix. </p></span></span></span><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><span data-tocid="new_cf-d10859e1170" class="topicref" data-id="new_cf" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../overview/ccf_95_standalone.html" id="new_cf-d10859e1170-link">Cumulative fix instructions: Stand-alone</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Read the installation instructions to learn how to apply a cumulative fix to a stand-alone portal  installation or to roll back the cumulative fix.</p></span></span></span></li><li role="treeitem"><span data-tocid="new_cf-d10859e1181" class="topicref" data-id="new_cf" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../overview/ccf_95_cluster.html" id="new_cf-d10859e1181-link">Cumulative fix instructions: Cluster</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Read the installation instructions to learn how to apply a cumulative fix to a clustered portal installation or to roll back the cumulative fix. </p></span></span></span></li><li role="treeitem"><span data-tocid="new_cf-d10859e1192" class="topicref" data-id="new_cf" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../overview/ccf_95_farm.html" id="new_cf-d10859e1192-link">Cumulative fix instructions: Farm</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Read the installation instructions to learn how to apply a cumulative fix to a portal farm installation or to roll back the cumulative fix.</p></span></span></span></li><li role="treeitem"><span data-tocid="new_cf-d10859e1203" class="topicref" data-id="new_cf" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../overview/ccf_95_remote_search.html" id="new_cf-d10859e1203-link">Cumulative fix instructions: Remote search</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Read the installation instructions to learn how to apply a cumulative fix to a portal remote search installation or to roll back the cumulative fix.</p></span></span></span></li><li role="treeitem"><span data-tocid="new_cf-d10859e1214" class="topicref" data-id="new_cf" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../overview/ccf_95_health_checker.html" id="new_cf-d10859e1214-link">Cumulative Fix Health Checker</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">These instructions are for the HCL Digital Experience Combined Cumulative Fix Health Checker.</p></span></span></span></li><li role="treeitem"><span data-tocid="new_cf-d10859e1225" class="topicref" data-id="new_cf" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="../overview/ccf_95_known_issues.html" id="new_cf-d10859e1225-link">Known Issues for the Combined Cumulative Fix</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Learn what are the known issues in the HCL Digital Experience           Combined Cumulative Fixes.</p></span></span></span></li></ul></li><li role="treeitem" aria-expanded="false"><span data-tocid="i_wadm_c_bkup_restr_winlinux-d10859e1236" class="topicref" data-id="i_wadm_c_bkup_restr_winlinux" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action i_wadm_c_bkup_restr_winlinux-d10859e1236-link" class="wh-expand-btn"></span><span class="title"><a href="../admin-system/i_wadm_c_bkup_restr_winlinux.html" id="i_wadm_c_bkup_restr_winlinux-d10859e1236-link">Backup and restore</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Backup and recovery of data files and databases is an essential operation for     any business system, particularly for data and applications that run in production environments.     Create and follow a plan for backing up and recovering data on all tiers of your HCL Digital     Experience deployment. IBM Installation Manager must also be included in backup and recovery     planning. If you back up the HCL Portal file structure and then install a fix pack, your HCL Digital     Experience and IBM Installation Manager become out of sync after you restore the HCL Portal file     system. This condition is not recoverable.</p></span></span></span></li><li role="treeitem" aria-expanded="false"><span data-tocid="migrating_parent-d10859e1418" class="topicref" data-id="migrating_parent" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action migrating_parent-d10859e1418-link" class="wh-expand-btn"></span><span class="title"><a href="../migrate/migration.html" id="migrating_parent-d10859e1418-link">Migrating</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Successful migration requires significant planning and preparation, understanding the     tools that are involved, and careful execution of the appropriate steps in the order     provided.</p></span></span></span></li><li role="treeitem" aria-expanded="false"><span data-tocid="site_setup-d10859e3484" class="topicref" data-id="site_setup" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action site_setup-d10859e3484-link" class="wh-expand-btn"></span><span class="title"><a href="../site/site_setup.html" id="site_setup-d10859e3484-link">Setting up a website</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">Setting up a website includes, creating pages, adding navigation, setting up search, and adding content to the site. Themes are used to customize the portal's look-and-feel. Out-of-the-box templates and the site wizard can help you set up your portal site faster. You can add wikis and blogs to your site and let users tag and rate content on your site.</p></span></span></span></li><li role="treeitem" aria-expanded="false"><span data-tocid="dep_intr-d10859e10947" class="topicref" data-id="dep_intr" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action dep_intr-d10859e10947-link" class="wh-expand-btn"></span><span class="title"><a href="../deploy/dep_intr.html" id="dep_intr-d10859e10947-link">Staging to production</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc"> During portal solution development, the solution is initially developed, tested, and refined on one server or a limited number of servers. The solution is deployed later on live systems, referred to as the production environment. The process of moving the solution from the development environment to the production environment is called staging. </p></span></span></span></li><li role="treeitem" aria-expanded="false"><span data-tocid="ctc_intro-d10859e11243" class="topicref" data-id="ctc_intro" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action ctc_intro-d10859e11243-link" class="wh-expand-btn"></span><span class="title"><a href="../ctc/ctc_intro.html" id="ctc_intro-d10859e11243-link">Content Template Catalog 4.4</a><span class="wh-tooltip"><p xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" class="shortdesc">The Content Template (CTC) is a set of templates that accelerate the process of building     a website.</p></span></span></span></li></ul></li></ul></li></ul></div>
+                        </nav>
+                        
+                    
+                    
+                    <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="- topic/title title topictitle1" id="ariaid-title1">Combined Cumulative Fix (CF) Installation | HCL Digital Experience</h1>
+  
+
+<div class="- topic/body concept/conbody body conbody"><p class="- topic/shortdesc shortdesc">The Combined Cumulative Fix is a package of HCL Digital Experience fixes. Read the
+    instructions to learn how to apply or roll back a combined cumulative fix. </p>
+<section class="- topic/section section">
+<p class="- topic/p p">The following instruction links are for HCL Digital Experience 9.5 CF17 and higher.</p>
+<p class="- topic/p p">These instructions can be applied on an HCL Digital Experience system running either 8.5 or 9.0.
+        CF17 is used as a prerequisite fix in order for users to move up to 9.5 level.</p>
+      <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Video</strong>: <a class="- topic/xref xref" href="https://youtu.be/RUjDkVAR_zM" target="_blank" rel="external noopener">HCL
+          Digital Experience - Installing HCL Portal 9.5 CF18</a></p>
+</section>
+<section class="- topic/section section"><h2 class="- topic/title title sectiontitle">Note</h2>
+  
+<p class="- topic/p p">Each release of a maintenance package is included in your HCL Digital Experience offering.</p>
+</section>
+<section class="- topic/section section"><h2 class="- topic/title title sectiontitle">Overview</h2>
+
+<p class="- topic/p p">Applying the cumulative fix is a multi-step process. You must first update the product files using IBM Installation Manager, and then you must 
+use the Portal ConfigEngine tool to apply the changes to each profile in your system. The update is not complete until you have performed 
+both steps!</p>
+<p class="- topic/p p">Likewise, to roll back a fix, you must first use IBM Installation Manager to restore the older product files and then use 
+ConfigEngine to apply the rollback to each profile.</p>
+<p class="- topic/p p">The procedures below describe these steps in detail.</p>
+<p class="- topic/p p">Go to Installing the HCL Digital Experience software documentation to install according to your
+operating system.</p>
+</section>
+<section class="- topic/section section"><h2 class="- topic/title title sectiontitle">What's new</h2>
+
+<div class="- topic/p p"><ol class="- topic/ol ol">
+<li class="- topic/li li">For a list of the Fixes which have gone into each CF, go to the <a class="- topic/xref xref" href="../../9.5/overview/soft_fixes95.html"> List of software fixes</a> section.</li>
+<li class="- topic/li li">Effective in 8.5 CF08, the update and rollback processes have been streamlined for easier customer application. The previous CF 
+instructions detailing "PRE-APPLY-FIX" and "APPLY-FIX" upgrade commands have now been integrated into the single <code class="+ topic/ph pr-d/codeph ph codeph">applyCF</code> command. 
+Correspondingly, the rollback instructions for "PRE-ROLLBACK-FIX" and "ROLLBACK-FIX" have been integrated into the single "rollbackCF" command.</li>
+<li class="- topic/li li">To assist you with your upgrade, HCL is now providing a Health Checker tool that you can use to validate your Portal installation before 
+applying a cumulative fix. Simply execute this tool on the target system and review the report that is generated to see if there are any 
+issues you need to resolve before installing the update. See the <cite class="- topic/cite cite">Health Checker</cite> in this topic directory or the
+README text in the Combined Cumulative Fix ZIP file.</li>
+<li class="- topic/li li">The HCL Script Application was made available as V1.3 and earlier by the catalog. It was developed further and included with Portal Version 8.5 CF09 and later, 
+then also renamed to "Script Application" for Portal 8.5 CF11. When customers have the old HCL Script Application catalog version 1.3 AND 
+then install CF09 or later, the security settings need to be obtained BEFORE installing the CF. The detailed information can be 
+found under the first optional step of the procedure in <a class="- topic/xref xref" href="../script-portlet/sp_security_upgrade.html"> 
+The Script Application security overview</a> section in the 8.5 documentation.</li>
+<li class="- topic/li li">The Ephox EditLive! Java based Rich Text Editor has been deprecated as of CF11 and replaced by
+            Textbox.io. More details about CF11 can found in <a class="- topic/xref xref" href="../overview/new_cf11.html"> CF11</a> topic page in the
+            Version 8.5 documentation.</li>
+<li class="- topic/li li">Due to security vulnerabilities in the Apache Axis library (JAR file), the "axis.jar" will be removed from the HCL Portal class path 
+  effective in CF12. For inquiries, go to <a class="- topic/xref xref" href="https://support.hcltechsw.com/csm" target="_blank" rel="external noopener">HCL Software Support</a> 
+page.</li>
+<li class="- topic/li li">Portal Version 8.5 CF12 introduces support for JDK8 in conjunction with WAS 8.5.5.10. This will also require WAS iFix PI67166 on top of 
+WAS 8.5.5.10 (scheduled for inclusion in WAS 8.5.5.11.)</li>
+<li class="- topic/li li">Support for IBM Rich Media Edition (RME) has been removed effective with HCL Portal and Web
+Content Manager Version 8.5 CF14, and will not be supported in future releases. For more information
+about this IBM Rich Media Edition support lifecycle announcement,  go to <a class="- topic/xref xref" href="https://support.hcltechsw.com/csm" target="_blank" rel="external noopener">HCL Software Support</a> page.</li>
+<li class="- topic/li li">Ephox EditLive! has been removed effective in Version 8.5 CF14 and is no longer supported. This change follows the steps taken above 
+in Version 8.5 CF11 to deprecate Ephox EditLive! and replace it with Textbox.io as the new advanced rich text editor for HCL Web Content 
+Manager. Customers that have manually installed and configured EditLive! as a Third Party editor option can continue to use EditLive! 
+but will no longer be able to receive support and updates via HCL. Also effective with Version 8.5 CF14, the Textbox.io will support the 
+following <a class="- topic/xref xref" href="https://docs.ephox.com/display/tbio/System+Requirements?_ga=2.91924954.1507673092.1497929717-1652925937.1497929717#SystemRequirements-browsers" target="_blank" rel="external noopener">web browsers/levels</a>.</li>
+<li class="- topic/li li">CF16 for Portal Versions 8.5 and 9.0 contain security fix PH01459 for CVE-2018-1736. It introduces a configurable white list for external 
+hosts, which are allowed as redirects via the CategoryProfileUpdater Module. Server relative redirects are continuously working. Redirects to 
+external hosts not specified in the white list are blocked. The white list is enabled per default, and needs to be filled in with appropriate 
+values, if this functionality is used in your installation. For inquiries, 
+go to <a class="- topic/xref xref" href="https://support.hcltechsw.com/csm" target="_blank" rel="external noopener">HCL Software Support</a> 
+page.</li>
+<li class="- topic/li li">CF16 for Portal Versions 8.5 and 9.0 changes the behavior of Cumulative Fix installation related
+to out of the box resources to address CVE-2018-1420. Prior to CF16, access control settings of out
+of the box resources were reset to their out of the box access control settings, overriding
+potential customizations. This has been changed such that the Cumulative Fix installation leaves the
+access control settings at their current values. A side effect of this change is, that out of the
+box resources introduced in a Cumulative Fix after the initial version of Portal Version 8.5 or
+Version 9.0 will not receive any access control settings, if CF16 or later is installed on top of a
+CF level prior to introduction of an out of the box resource. In such a case the resource will not
+have any access control configured, and will have to be set manually to your security requirements.
+See the HCL Digital Experience 8.5 documentation on <a class="- topic/xref xref" href="../admin-system/sec_ac_adm.html">how to manage the access control</a> and get an overview of <a class="- topic/xref xref" href="../admin-system/init_acc_cntl_set.html">initial access control settings</a>.</li>
+</ol></div>
+</section>
+</div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer" whc:version="23.1">
+  <div class=" footer-container mx-auto ">
+    
+            Generated by <a class="oxyFooter" href="http://www.oxygenxml.com/xml_webhelp.html" target="_blank">
+            &lt;oXygen/&gt; XML WebHelp
+            </a>
+        
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" alt=""/>
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

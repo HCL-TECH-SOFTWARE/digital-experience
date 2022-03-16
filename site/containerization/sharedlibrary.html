@@ -1,0 +1,254 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en-us" lang="en-us" whc:version="22.0">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><meta charset="UTF-8"/><meta name="DC.rights.owner" content="(C) Copyright 2022"/><meta name="copyright" content="(C) Copyright 2022"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="topic"/><meta name="description" content="Shared libraries are jar files representing code that is shared across multiple components of the customer, for example, portlets, themes, preprocessors, and others."/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="themes"/><meta name="DC.language" content="en-us"/>        
+      <title>Shared library | HCL Digital Experience</title><!--  Generated with Oxygen version 23.1, build number 2021040717.  --><meta name="wh-path2root" content="../"/><meta name="wh-source-relpath" content="containerization/sharedlibrary.dita"/><meta name="wh-out-relpath" content="containerization/sharedlibrary.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/topic-page.css?buildId=2021040717"/>
+    
+    
+    <script type="text/javascript" src="../oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"><!----></script>
+    
+    <script data-main="../oxygen-webhelp/app/topic-page.js" src="../oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/cobalt.css?buildId=2021040717"/></head>
+
+    <body id="themes" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header" whc:version="23.1">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    
+                    <div class=" wh_publication_title "><a href="../index.html"><span class="title"><span class="ph">HCL Digital Experience 9.5</span></span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                <button type="button" data-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-toggle="collapse" class="navbar-toggler collapsed wh_toggle_button" aria-expanded="false" aria-label="Toggle menu" aria-controls="wh_top_menu_and_indexterms_link">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                <nav class=" wh_top_menu " aria-label="Menu Container"><ul role="menubar" aria-label="Menu"><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="kc_welcome-d10859e12-mi" data-tocid="kc_welcome-d10859e12" data-state="not-ready" class=" topicref " data-id="kc_welcome"><span class="title"><a href="../welcome/wp95_welcome.html">HCL Digital Experience 9.5</a></span></span></li></ul></nav>
+                <div class=" wh_indexterms_link "><a href="../indexTerms.html" title="Index" aria-label="Go to index terms page"><span>Index</span></a></div>
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <!-- Search form -->
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader"></span></div>
+                        
+                        <!-- External resource link -->
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <!-- Expand/Collapse publishing TOC 
+                             The menu button for mobile devices is copied in the output only when the publication TOC is available
+                        -->
+                        
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                    
+                    <div class="col-12" id="wh_topic_body">
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Shared library | HCL Digital Experience</h1>
+    
+    
+    <div class="- topic/body body"><p class="- topic/shortdesc shortdesc">Shared libraries are jar files representing code that is shared across multiple
+        components of the customer, for example, portlets, themes, preprocessors, and
+        others.</p>
+        <section class="- topic/section section" id="themes__deploytheme" data-ofbid="themes__deploytheme"><h2 class="- topic/title title sectiontitle">Shared library</h2>
+            
+            <p class="- topic/p p">The <span class="+ topic/keyword sw-d/cmdname keyword cmdname">shared-library</span> command is used to manage the jar files in the
+                provided default shared library location.</p>
+            <p class="- topic/p p">Default shared Library: DXCLib</p>
+            <div class="- topic/p p">Default shared library location:
+                    <code class="+ topic/ph pr-d/codeph ph codeph">&lt;dx-server-profile&gt;/PortalServer/sharedLibrary</code><div class="- topic/note note note note_note" id="themes__note_vbd_dgt_cqb" data-ofbid="themes__note_vbd_dgt_cqb"><span class="note__title">Note:</span> For Shared Library artifact, the DX Server needs to be at
+                    HCL DX 9.5 CF196 or higher. The default shared library DXCLib is already
+                    configured and associated to application server.</div></div>
+            <p class="- topic/p p">The shared-library command uses two sub-commands upload and delete to manage files in
+                the DX server. The sub-command upload is used to upload jar files and sub-command
+                delete is used to delete the files from the default shared library location provided
+                below.</p>
+            <dl class="- topic/dl dl" id="themes__dl_bst_sqm_ppb" data-ofbid="themes__dl_bst_sqm_ppb">
+                
+                    <dt class="- topic/dt dt dlterm">Command Description</dt>
+                    <dd class="- topic/dd dd">
+                        <div class="- topic/p p">This command invokes the shared library upload task inside the DXClient.
+                            This is used to upload jar files into the default shared library
+                            location.<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="themes__codeblock_rty_mgt_cqb" data-ofbid="themes__codeblock_rty_mgt_cqb"><code>dxclient shared-library upload</code></pre></div>
+                        <div class="- topic/p p">This command invokes the shared library delete task inside the DXClient.
+                            This is used to delete jar files from the default shared library
+                            location.<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="themes__codeblock_hwq_4gt_cqb" data-ofbid="themes__codeblock_hwq_4gt_cqb"><code>dxclient shared-library delete</code></pre></div>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm">Help command</dt>
+                    <dd class="- topic/dd dd">
+                        <div class="- topic/p p">This command shows the help information for <code class="+ topic/ph pr-d/codeph ph codeph">shared-library
+                                upload</code> command
+                            usage:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="themes__codeblock_kcx_vqm_ppb" data-ofbid="themes__codeblock_kcx_vqm_ppb"><code>dxclient shared-library upload -h</code></pre></div>
+                        <div class="- topic/p p">This command shows the help information for <code class="+ topic/ph pr-d/codeph ph codeph">shared-library
+                                delete</code> command
+                            usage:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="themes__codeblock_mf3_xgt_cqb" data-ofbid="themes__codeblock_mf3_xgt_cqb"><code>dxclient shared-library delete -h</code></pre></div>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm">Common Command options</dt>
+                    <dd class="- topic/dd dd">
+                        <div class="- topic/p p">Use this attribute to specify the username that is required for
+                            authenticating with the
+                            server<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="themes__codeblock_yd4_cht_cqb" data-ofbid="themes__codeblock_yd4_cht_cqb"><code>-dxUsername &lt;value&gt; </code></pre></div>
+                        <div class="- topic/p p">Use this attribute to specify the password that is required for
+                            authenticating with the
+                            server<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="themes__codeblock_qcs_dht_cqb" data-ofbid="themes__codeblock_qcs_dht_cqb"><code>-dxPassword &lt;value&gt;</code></pre></div>
+                        <div class="- topic/p p">Use this attribute to specify the config wizard home (route change only
+                            in case of Open Shift Kubernetes Environment, otherwise same as
+                            hostname) that is required for authenticating to the
+                            cw_profile<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="themes__codeblock_hjw_2ht_cqb" data-ofbid="themes__codeblock_hjw_2ht_cqb"><code>-dxConnectHostname &lt;value&gt;</code></pre></div>
+                        <div class="- topic/p p"> Use this attribute to specify the port number of the cw_profile(for
+                            Kubernetes Environment dxConnectPort is
+                            443)<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="themes__codeblock_q15_fht_cqb" data-ofbid="themes__codeblock_q15_fht_cqb"><code>-dxConnectPort &lt;value&gt;</code></pre></div>
+                        <div class="- topic/p p">Use this attribute to specify the username that is required for
+                            authenticating to the
+                            cw_profile<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="themes__codeblock_s2v_ght_cqb" data-ofbid="themes__codeblock_s2v_ght_cqb"><code>-dxConnectUsername &lt;value&gt;</code></pre></div>
+                        <div class="- topic/p p">Use this attribute to specify the password that is required for
+                            authenticating to the
+                            cw_profile.<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="themes__codeblock_s2p_hht_cqb" data-ofbid="themes__codeblock_s2p_hht_cqb"><code>-dxConnectPassword &lt;value&gt;</code></pre></div>
+                        <div class="- topic/p p">Use this attribute to specify the profile name of the DX
+                            Core<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="themes__codeblock_b2d_jht_cqb" data-ofbid="themes__codeblock_b2d_jht_cqb"><code>-dxProfileName &lt;Name of the DX server profile&gt;</code></pre></div>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm">Command option for upload</dt>
+                    <dd class="- topic/dd dd">Use this attribute to specify the path to a jar/zip file or folder
+                        containing jars in
+                        it.<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="themes__codeblock_zqy_sht_cqb" data-ofbid="themes__codeblock_zqy_sht_cqb"><code>-libFilePath &lt;value&gt;</code></pre></dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm">Command option for delete</dt>
+                    <dd class="- topic/dd dd">
+                        <div class="- topic/p p">Use this attribute to specify the names of the jar files present in the
+                            shared library location on the
+                                server.<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="themes__codeblock_mbz_xht_cqb" data-ofbid="themes__codeblock_mbz_xht_cqb"><code>-libFileNames &lt;value&gt;</code></pre><div class="- topic/note note note note_note" id="themes__note_grm_c3t_cqb" data-ofbid="themes__note_grm_c3t_cqb"><span class="note__title">Note:</span>  For upload, the folder or zip file should
+                                contain only jars files that are to be uploaded to the default
+                                shared library location.</div></div>
+                        <div class="- topic/p p">All the above command options can also be configured inside the
+                            config.json configuration file of the DXClient tool, available in the
+                                <span class="+ topic/ph sw-d/filepath ph filepath">&lt;working-directory&gt;/store</span> directory of the
+                            DXClient installation. <div class="- topic/note note note note_note" id="themes__note_kp4_q2t_cqb" data-ofbid="themes__note_kp4_q2t_cqb"><span class="note__title">Note:</span> If you have installed
+                                DXClient using the node package file, then you can find the
+                                    <span class="+ topic/ph sw-d/filepath ph filepath">config.json</span> file in the following path:
+                                    <span class="+ topic/ph sw-d/filepath ph filepath">dist/src/configuration</span></div></div>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm">Example usage</dt>
+                    <dd class="- topic/dd dd"> Use this attribute to specify the path to a jar/zip file or folder
+                        containing jars in
+                        it.<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="themes__codeblock_nhn_5ht_cqb" data-ofbid="themes__codeblock_nhn_5ht_cqb"><code>dxclient shared-library upload -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -dxConnectHostname &lt;dxConnectHostname&gt; -dxConnectPort &lt;dxConnectPort&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxProfileName &lt;Profile name of the DX Server&gt; -libFilePath &lt;path to jar/zip/Folder&gt; 
+
+dxclient shared-library delete -dxUsername &lt;dxUsername&gt; -dxPassword &lt;dxPassword&gt; -dxConnectHostname &lt;dxConnectHostname&gt; -dxConnectPort &lt;dxConnectPort&gt; -dxConnectUsername &lt;dxConnectUsername&gt; -dxConnectPassword &lt;dxConnectPassword&gt; -dxProfileName &lt;Profile name of the DX Server&gt; -libFileNames &lt;file names&gt; -libFilePath &lt;value&gt;</code></pre></dd>
+                
+            </dl>
+        </section>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer" whc:version="23.1">
+  <div class=" footer-container mx-auto ">
+    
+            Generated by <a class="oxyFooter" href="http://www.oxygenxml.com/xml_webhelp.html" target="_blank">
+            &lt;oXygen/&gt; XML WebHelp
+            </a>
+        
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" alt=""/>
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>
