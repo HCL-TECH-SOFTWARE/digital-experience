@@ -1,7 +1,0 @@
-site_name: HCL Digital Experience
-
-theme:
-  name: material
-  logo: assets/dx_logo.png
-
-  custom_dir: theme_overrides/
