@@ -16,8 +16,8 @@ theme:
   custom_dir: theme_overrides/
   icon:
     repo: fontawesome/brands/github
-repo_url: https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/docs/
-repo_name: CWPdoc/dx-mkdocs/docs/
+repo_url: https://git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/
+repo_name: CWPdoc/dx-mkdocs/
 # extra_css:
 #   - stylesheets/dx_style.css
   # - sofy.css
