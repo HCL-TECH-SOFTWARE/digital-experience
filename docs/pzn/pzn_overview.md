@@ -1,4 +1,4 @@
-# Digital Experience Personalization \| HCL Digital Experience {#pznoverview .concept}
+# Digital Experience Personalization
 
 Digital Experience Personalization provides automatic customization of website content presented to individual users and user groups.
 
@@ -26,22 +26,26 @@ The engine identifies the particular user. Personalization retrieves that person
 
 Beginning with [HCL DX 9.5 Container Update and CF 200](../overview/new_cf_95.md), a new API explorer is available that allows developers using the Digital Experience Personalization REST APIs to explore and test these APIs. See the topic Digital Experience Personalization REST API Explorer below for details.
 
-## Types of Personalization { .section}
+## Types of Personalization
 
 There are three types of Personalization:
 
-Simple filtering
-:   A site displays content based on predefined groups of site visitors. For example, if a site visitor is in the Human Resources department, the site provides access to URLs containing Human Resources policy manuals.
+-   **Simple filtering**
 
-Rules engines
-:   In a rules based system, the site owner defines a set of business rules which determine what category of content is shown when a certain profile type visits the site. An example would be: Display all four wheel drive SUVs to visitors in the northeast in the 21 to 35 age group.
+    A site displays content based on predefined groups of site visitors. For example, if a site visitor is in the Human Resources department, the site provides access to URLs containing Human Resources policy manuals.
+
+-   **Rules engines**
+
+    In a rules based system, the site owner defines a set of business rules which determine what category of content is shown when a certain profile type visits the site. An example would be: Display all four wheel drive SUVs to visitors in the northeast in the 21 to 35 age group.
 
     This approach has the advantage of driving the site's behavior with the business objectives of the site owner. The site owner is usually the owner of a marketing campaign or some other business manager.
 
-Collaborative filtering
-:   A site visitor rates a selection of products, explicitly or implicitly. Those ratings are compared with the ratings offered by other visitors. Software algorithms detect similarities. For example, a visitor receives book recommendations based on the similar purchases of others.
+-   **Collaborative filtering**
 
-## Rules versus collaborative filtering { .section}
+    A site visitor rates a selection of products, explicitly or implicitly. Those ratings are compared with the ratings offered by other visitors. Software algorithms detect similarities. For example, a visitor receives book recommendations based on the similar purchases of others.
+
+
+## Rules versus collaborative filtering
 
 When complex filtering is required, a rule-based system may work better than collaborative filtering, and vice versa. The following table details examples where one type of personalization is better than the other.
 

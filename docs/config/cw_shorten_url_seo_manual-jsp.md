@@ -1,4 +1,4 @@
-# Manual Step: Change the JSP components in the Web Resources v70 Library \| HCL Digital Experience {#manual-seo-jsp .task}
+# Manual Step: Change the JSP components in the Web Resources v70 Library
 
 The Modify Site URLs for Search Engine Optimization option in the Configuration Wizard includes manual steps. For reference only, you can see the details of the manual step for changing the JSP components in the Web Resources v70 Library. To view this step in the Configuration Wizard, you must select Yes to using an HCL Web Content Manager when you provide information about your environment.
 

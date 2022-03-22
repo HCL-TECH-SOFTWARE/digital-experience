@@ -1,7 +1,45 @@
-site_name: HCL Digital Experience
+#Project Information
+site_name: HCL Digital Experience Help Center
+site_description: >-
+  A next-gen documentation site for HCL Digital Experience.
 
+# Theme Configuration
 theme:
   name: material
   logo: assets/dx_logo.png
-
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - navigation.instant
+    # - navigation.expand
+    - search.highlight
+    - search.share
+    - search.suggest
   custom_dir: theme_overrides/
+  icon:
+    repo: fontawesome/brands/github
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+
+# Copyright
+copyright: Copyright &copy; 2022, HCL Technologies Limited
+
+# Repository
+repo_url: https://git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/
+repo_name: CWPdoc/dx-mkdocs/
+
+# Customization
+extra_css:
+  - stylesheets/dx_style.css
+  # - sofy.css
+
+plugins:
+  - awesome-pages
+  - search
+  - git-revision-date-localized:
+      type: date
+

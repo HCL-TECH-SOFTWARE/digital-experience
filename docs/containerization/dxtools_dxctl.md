@@ -1,8 +1,8 @@
-# dxctl \| HCL Digital Experience {#dxtools_dxctl}
+# dxctl
 
 Learn how to use `dxctl` for custom HCL Digital Experience 9.5 container deployments
 
-## About this task {#about_dxctl .section}
+## About this task
 
 Administrators can use the `dxctl` tool provided with Container Update CF19 and later releases to define and configure custom DX container deployments. See the following guidance:
 
@@ -75,14 +75,14 @@ The properties files function as follows:
         **Note:** Experience API must be enabled to deploy Content Composer and Digital Asset Management.
 
 
-## Prerequisites {#dxctl_prereq .section}
+## Prerequisites
 
 The following are the prerequisites for using `dxctl`.
 
 -   Before running the `dxctl` tool, you must log in on the targeted cluster using your platform's cloud-specific command-line interface \(CLI\), such as Azure CLI \(az\), gcloud CLI, AWS CLI, OpenShift CLI \(oc\), etc. For example, in Red Hat OpenShift, you must use `oc login`.
 -   `dxctl` does not deploy the DxDeployment custom resource definition. You must run the `./scripts/deployCrd.sh` before using `dxctl`.
 
-## Creating a deployment {#creating_deployment .section}
+## Creating a deployment
 
 Follow these steps to create a deployment.
 
@@ -108,7 +108,7 @@ Follow these steps to create a deployment.
 
 **Note:** For OpenShift deployments, `/linux/dxctl --deploy` is all you need. For all other Kubernetes environments \(EKS, GKE, etc.\), you need to generate a TLS certification and private key. See the [Generate TLS Certificate](kubernetes_eks_cf192andlater.md#section_generate_tls_cert_cf192andlater) topic for more information.
 
-## Updating a deployment {#updating_deployment .section}
+## Updating a deployment
 
 Limitation: If you have a DX-only deployment \(a deployment that contains only DX without any other features, such as the Experience API, Content Composer, or Digital Asset Management\) installed using the deployment script, the `dxctl` tool cannot be used to update this deployment. You may continue to use the DX deployment script to update this deployment.
 
@@ -170,7 +170,7 @@ Follow these steps to update a deployment.
 
 With the updated deployment, if you were switching to a next release, you can use the properties file to replace the repository, image, and tag as required and perform the update command.
 
-## Deleting a deployment {#deleting_deployment .section}
+## Deleting a deployment
 
 There are two ways to delete a deployment.
 
@@ -193,7 +193,7 @@ If some resources, like services, are not deleted, run the following command:
 kubectl patch services $(kubectl get services -n $NAMESPACE  | grep -v "NAME" |awk  '{print $1}') -p '{"metadata":{"finalizers":null}}' -n $NAMESPACE
 ```
 
-## Main usage {#main_usage .section}
+## Main usage
 
 Usage information for `dxctl`, for additional information, use `--help` with an action.
 
@@ -230,7 +230,7 @@ Usage information for `dxctl`, for additional information, use `--help` with an 
     ```
 
 
-## dxctl help {#section_pvv_2fj_x4b .section}
+## dxctl help
 
 Sub-commands, required: `deploy`, `update`, `collect`, or `destroy`.
 

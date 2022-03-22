@@ -1,12 +1,12 @@
-# Monitor the Digital Experience deployment using metrics \| HCL Digital Experience {#monitor_helm_deployment_metrics .concept}
+# Monitor the Digital Experience deployment using metrics
 
 This topic outlines the use of standards-based metrics to monitor activity and performance of DX container deployments.
 
-## Prometheus metrics and Grafana {#prometheus_metrics_grafana .section}
+## Prometheus metrics and Grafana
 
 The [Digital Experience 9.5 Helm deployment](helm_deployment.md) supports monitoring the deployment activity with advanced metrics and visualization, by exposing standards-based [Prometheus](https://prometheus.io/)-compatible metrics. [Prometheus metrics](https://prometheus.io/) components can `scrape` the metrics of most of the DX 9.5 container applications. The collected data is queried from Prometheus and are visualized in operations dashboard solutions, such as [Grafana](https://grafana.com/). The following information can advise administrators which [Digital Experience 9.5 applications](deploy_applications_using_helm.md) can use these tools with some usage examples.
 
-## Digital Experience 9.5 applications and Prometheus metrics {#dx_apps_prometheus .section}
+## Digital Experience 9.5 applications and Prometheus metrics
 
 The following [Digital Experience 9.5 applications](deploy_applications_using_helm.md) expose metrics that can be tracked with Prometheus metrics.
 
@@ -41,7 +41,7 @@ HCL DX 9.5 metrics are compatible with the following deployment and discovery ty
 
 Administrators can configure the HCL DX 9.5 metrics depending on their specific Prometheus deployment, as outlined in the following sections.
 
-## Configure Prometheus metrics {#configure_prometheus_metrics .section}
+## Configure Prometheus metrics
 
 To configure the metrics for the [Digital Experience 9.5 applications](deploy_applications_using_helm.md) in the DX 9.5 Helm chart, enable scraping in the [`custom-values.yaml`](helm_planning_deployment.md) used for the DX 9.5 deployment. The metrics are configured independently for each DX 9.5 application.
 
@@ -74,7 +74,7 @@ To configure the metrics for the [Digital Experience 9.5 applications](deploy_ap
     ```
 
 
-## Grafana dashboards {#section_fmn_qbs_lrb .section}
+## Grafana dashboards
 
 The exposed DX 9.5 Applications metrics are compatible with a set of existing [Grafana](https://grafana.com/) operations dashboards that are available from the [Grafana dashboard](https://grafana.com/grafana/) page, as well as a set of Granada-supported custom dashboards provided in JSON format. See following examples, which can be [imported](https://grafana.com/docs/grafana/latest/dashboards/export-import/#import-dashboard) directly into Grafana.
 
@@ -89,7 +89,7 @@ You can directly download or import the following dashboards from the Grafana co
 |9628|[PostgreSQL database](https://grafana.com/grafana/dashboards/9628)|DAM persistence|
 |10850|[Ambassador dashboard](https://grafana.com/grafana/dashboards/10850)|Ambassador|
 
-## HCL Digital Experience custom dashboards {#section_a5v_3xn_hsb .section}
+## HCL Digital Experience custom dashboards
 
 The following dashboards are provided by [HCL Software](https://www.hcltechsw.com/wps/portal) for use with [HCL Digital Experience 9.5](https://www.hcltechsw.com/dx) deployments. These examples expose custom metrics for DX applications or provide enhanced features for existing dashboards. They are available in the public [HCL Software Github repository](https://github.com/HCL-TECH-SOFTWARE/dx-metrics-grafana-dashboards).
 
@@ -97,7 +97,7 @@ The following dashboards are provided by [HCL Software](https://www.hcltechsw.co
 |---------|----------------|
 |[dam\_dashboard.json](https://github.com/HCL-TECH-SOFTWARE/dx-metrics-grafana-dashboards/blob/master/dx-dashboards/dam_dashboard.json)|Digital Asset Management|
 
-## References to Prometheus and Grafana installations {#section_ucx_vcs_lrb .section}
+## References to Prometheus and Grafana installations
 
 **Important:** The resources outline here are optional deployment examples. HCL Software does not provide direct support for any issues related to the Prometheus metrics or the Grafana visualization tools.
 
@@ -115,6 +115,4 @@ To leverage the full potential of the [Digital Experience 9.5 applications](depl
     **Note:** The [`kube-prometheus-stack`](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#kube-prometheus-stack) Helm chart is based on the [`kube-prometheus`](https://github.com/prometheus-operator/kube-prometheus) repository, and comes with a set of tools to monitor the Kubernetes cluster, as well as pre-installed Grafana dashboards for visualization.
 
 -   [`prometheus`](https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus) and [`grafana`](https://github.com/grafana/helm-charts) are provided as independent Helm charts.
-
-**Parent topic:**[Troubleshooting your Helm deployment \| HCL Digital Experience](../containerization/helm_troubleshooting.md)
 

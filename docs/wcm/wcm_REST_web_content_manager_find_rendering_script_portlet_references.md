@@ -1,32 +1,35 @@
-# Web Content Manager Find Rendering and Script Portlet References {#wcm_REST_web_content_manager_find_rendering_script_portlet_references .concept}
+# Web Content Manager Find Rendering and Script Portlet References
 
 This API allows you to find any page that has a WCM Rendering or Script portlet on it referencing the given WCM content UUID.
 
-## Special Considerations {#section_xzl_k12_x4b .section}
+## Special Considerations
 
 The API is specific per virtual Portal.
 
-## Limitations {#section_yqk_l12_x4b .section}
+## Limitations
 
 Currently, the API does not support finding draft references in projects.
 
-## Using the Web Content Manager Find Rendering and Script Portlet References API {#section_wff_cjc_smb .section}
+## Using the Web Content Manager Find Rendering and Script Portlet References API
 
-Endpoint
-:   **GET request to:**
+-   **Endpoint**
 
-:   ```
-http://host:port/wps/mycontenthandler/wcmrest/listPageReferences/<uuid>
-```
+    **GET request to:**
 
-:   **Sample URL:**
+    ```
+    http://host:port/wps/mycontenthandler/wcmrest/listPageReferences/<uuid>
+    ```
 
-:   ```
-http://localhost:10039/wps/mycontenthandler/!ut/p/digest!z9Kf8ax_kfhYNQxUVA-0OQ/wcmrest/listPageReferences/42cfcfe8-764d-4733-b409-87cc83a7a4eb
-```
+    **Sample URL:**
 
-Expected Body
-:   The body can have the basic WCM structure or be empty:
+    ```
+    http://localhost:10039/wps/mycontenthandler/!ut/p/digest!z9Kf8ax_kfhYNQxUVA-0OQ/wcmrest/listPageReferences/42cfcfe8-764d-4733-b409-87cc83a7a4eb
+    ```
+
+
+-   **Expected Body**
+
+    The body can have the basic WCM structure or be empty:
 
     ```
     <?xml version="1.0" encoding="UTF-8"?>
@@ -34,13 +37,17 @@ Expected Body
     </feed>
     ```
 
-Expected Headers
-:   LTPA token of the user. Also works anonymously.
 
-Return Body
-:   The found results.
+-   **Expected Headers**
 
-:   Sample:
+    LTPA token of the user. Also works anonymously.
+
+
+-   **Return Body**
+
+    The found results.
+
+    Sample:
 
     ```
     {
@@ -63,4 +70,5 @@ Return Body
         }
     }
     ```
+
 

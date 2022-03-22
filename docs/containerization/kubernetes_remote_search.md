@@ -1,17 +1,17 @@
-# Configure Remote Search in OpenShift and Kubernetes {#getting_the_software-04FEC9BK .reference}
+# Configure Remote Search in OpenShift and Kubernetes
 
 This section shows how to configure Remote Search for your HCL Digital Experience 9.5 environments on supported Red Hat OpenShift and Kubernetes container platforms.
 
 **Note:** Prior to Container Update CF195, the HCL Digital Experience 9.5 Remote Search image is supported for deployment to Red Hat OpenShift. With the Container Update CF195 release, Remote Search can be configured for deployment on supported Kubernetes platforms.
 
-## Introduction {#section_zm4_sy5_5lb .section}
+## Introduction
 
 Using HCL Digital Experience 9.5 Remote Search images in the supported cloud container platforms, such as Red Hat OpenShift, require a different setup and configuration steps than those used to [set up Remote Search on a non-Docker or Kubernetes container platform](../admin-system/installrssman.md).
 
 -   As information, the serverindex.xml file on the Remote Search server when deployed to on-premises environments may have a host name that is not accurate in a container environment with respect to the actual host name of the server hosting the Remote Search server.
 -   Follow the guidance in this section to define collections in the core HCL DX 9.5 container environment with respect to JCR text search collections, rather than guidance published for the on-premises [\(non-Docker or Kubernetes\) platforms](../admin-system/srtcfg_jcr_colls.md) for the JCR collection URL.
 
-## Deploying Remote Search in HCL Digital Experience 9.5 OpenShift and Kubernetes platforms {#section_ewz_zz5_5lb .section}
+## Deploying Remote Search in HCL Digital Experience 9.5 OpenShift and Kubernetes platforms
 
 **Prerequisite**: Download the HCL Digital Experience 9.5 Docker containers from your HCL Digital Experience entitlements from the [HCL Software License Portal](https://www.hcltech.com/software/support/release).
 
@@ -31,7 +31,7 @@ The first one \(dx-core-image\), is the core HCL DX 9.5 Portal and Web Content M
 
 After the Remote Search images are loaded to the Kubernetes environment that you deploy to, follow deployment steps for that platform presented in the **[HCL Digital Experience 9.5 Container Deployment](deployment.md)** topic pages.
 
-## EJBs and host names {#section_r5t_4bv_5lb .section}
+## EJBs and host names
 
 HCL Digital Experience 9.5 Container core and Portal Remote Search each use WebSphere Application Server as a base. As these components are on different hosts \(containers\), they need to communicate via IP. The initial conversation between HCL Digital Experience 9.5 core and the Remote Search server takes place over IIOP \(rmi\) which is the internet protocol of EJBs.
 
@@ -41,7 +41,7 @@ HCL DX 9.5 Container operators that execute image deployment to Kubernetes platf
 
 Portal and Portal Remote Search both use WebSphere Application Server as a base. As they are on different hosts \(containers\), they have to be able to talk to each other via IP. The initial conversation between Portal DX and the Remote Search server take place over IIOP \(rmi\) which is the internet protocol of EJBs.
 
-## Defining serverindex.xml on the Remote Search server {#section_olz_hhv_5lb .section}
+## Defining serverindex.xml on the Remote Search server
 
 When deploying the Remote Search image on supported Kubernetes platforms, additional configuration settings for the serverindex.xml are required. When deployed to Kubernetes, the HCL DX 9.5 container operators are configured to check to ensure that the server name is correct.
 
@@ -49,7 +49,7 @@ Note that dx-deployment-service-remotesearch is a DNS resolvable name from the p
 
 Now, when the HCL DX 9.5 server communicates to the Remote Search server over IIOP, the Remote Search Server returns dx-deployment-service-remotesearch as the host name of the Remote Search Server. The HCL DX 9.5 Server has configuration that appends the port to the host name that was just returned.
 
-## Remote Search services configuration {#section_h1r_5mv_5lb .section}
+## Remote Search services configuration
 
 The following guidance aligns with the Remote Search services configuration instructions available in the [Remote Search services](../admin-system/srcusgrmtsrchsrv.md) topic for deployment to non-container HCL Digital Experience servers.
 
@@ -104,7 +104,7 @@ All of the instructions contained in the [Remote Search services](../admin-syste
         |Search collection location|/opt/HCL/AppServer/profiles/prs\_profile/SearchCollections/JCRCollection1|
 
 
-## JCR Content Source Configuration {#section_mm5_ntg_pmb .section}
+## JCR Content Source Configuration
 
 Use the following URL for **Collect documents linked from this URL**:
 
@@ -118,7 +118,7 @@ The parsing of the `SeedlistId` positional parameter in this URL uses an index o
 
 On the **Security** panel, use `dx-deployment-service` as the host name, along with the username `wpsadmin` and the associated password for `wpsadmin`. One can also specify **Realm** as `CrawlerUsersRealm`
 
-## Configure WCM Authoring Portlet search function {#section_pbd_s5g_pmb .section}
+## Configure WCM Authoring Portlet search function
 
 **Note:** Even though the documents are gathered by the Remote Search function from the JCR, additional configuration is needed in order for the HCL Web Content Manager \(WCM\) Authoring Portlet search to use document search. Set the following values for this configuration.
 
@@ -134,7 +134,7 @@ Set the **Custom properties** for the WebSphere Application Server Resource Envi
 
 **Note:** On the **jcr.textsearch.indexdirectory**, the sub-directory JCRCollection1 is NOT included in the path.
 
-## Additional Routing Configuration for supported Kubernetes platforms {#addl_routing_config .section}
+## Additional Routing Configuration for supported Kubernetes platforms
 
 To configure Remote Search to DX 9.5 container deployments to supported Kubernetes platforms: Amazon Elastic Kubernetes Service \(EKS\), Microsoft Azure Kubernetes Service \(AKS\), or Google Kubernetes Engine \(GKE\) requires specific steps. The HCL DX 9.5 core and Remote Search services each require `/ibm/console` as the route path when accessing the Admin Console. Due to the overlapping of the path mappings, to configure Remote Search, DX administrators can apply a solution to expose the Remote Search route via an additional Load balancer, as follows:
 
@@ -193,5 +193,5 @@ Access the Remote Search Admin Console via the external IP address of your DX 9.
 
 Example: [https://35.xxx.174.3:9043/ibm/console](https://35.xxx.174.3:9043/ibm/console)
 
-**Parent topic:**[Customizing your container deployment \| HCL Digital Experience](../containerization/customization.md)
+**Parent topic:**[Customizing your container deployment](../containerization/customization.md)
 

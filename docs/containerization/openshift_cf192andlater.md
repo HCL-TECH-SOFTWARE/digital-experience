@@ -1,8 +1,8 @@
-# Deploying DX CF192 and later release Containers to Red Hat OpenShift \| HCL Digital Experience {#Deploy_RedHat_CF192_higher}
+# Deploying DX CF192 and later release Containers to Red Hat OpenShift
 
 Learn how to deploy HCL Digital Experience \(DX\) 9.5 DX CF192 and later release Containers using the Red Hat OpenShift platform.
 
-## Prerequisites {#deploy_openshift_prerequisites .section}
+## Prerequisites
 
 Prior to using the procedure below, it is assumed that the HCL DX Administrator is generally experienced in using Kubernetes. Additionally, the DX Administrator must have cluster admin access to the OpenShift environment.
 
@@ -18,15 +18,15 @@ Prior to using the procedure below, it is assumed that the HCL DX Administrator 
         **Note:** HCL Digital Experience is input-output \(I/O\) intensive which requires a high performing file system for optimization.
 
 
-## About this task {#about_deploying_openshift .section}
+## About this task
 
 Follow these steps to deploy HCL Digital Experience 9.5 container release in Red Hat OpenShift Container Update CF192 and later. If deploying a Container Update CF191 and earlier, see the instructions to deploy using script commands instead of the dxctl tool in this section.
 
-**Note:** Reference the latest HCL DX 9.5 Container Release and Update file listings in the [Docker deployment](../containerization/docker.html) topic.
+**Note:** Reference the latest HCL DX 9.5 Container Release and Update file listings in the [Docker deployment](../containerization/docker.md) topic.
 
 Video: [Getting Started to deploy HCL DX 9.5 in Red Hat OpenShift](https://www.youtube.com/watch?v=xXsRECRoV7g&feature=youtu.be)
 
-## Procedure {#section_ifj_4h1_pnb .section}
+## Procedure
 
 Follow these steps to deploy the HCL Digital Experience \(DX\) 9.5 CF192 and later container release in Red Hat OpenShift.
 
@@ -166,9 +166,9 @@ docker load < hcl-dx-core-image-v95_xxxxxxxx-xxxx.tar.gz
     **Note:** For more information, see sections on [Understanding the OpenShift deployment](understanding_openshift_deployment.md)and [Customizing the container deployment](customizing_container_deployment.md).
 
 
-## Update {#section_shj_4h1_pnb .section}
+## Update
 
-To update the deployment to later **[HCL DX 9.5 Container Update](https://help.hcltechsw.com/digital-experience/9.5/containerization/docker.html)** releases, follow these steps:
+To update the deployment to later **[HCL DX 9.5 Container Update](https://help.hcltechsw.com/digital-experience/9.5/containerization/docker.md)** releases, follow these steps:
 
 1.  If using HCL DX 9.5 Container Update CF191 and earlier release, update the deployment properties file with the new image values, and then run the Update command.
 
@@ -230,7 +230,7 @@ The dxctl tool does not deploy or update the DxDeployment custom resource defini
     ```
 
 
-## Delete {#section_gn1_b31_pnb .section}
+## Delete
 
 To delete the deployment, follow one of two methods:
 
@@ -259,5 +259,5 @@ To delete the deployment, follow one of two methods:
     ```
 
 
-**Parent topic:**[Deploying DX Container to Red Hat OpenShift \| HCL Digital Experience](../containerization/deploy_openshift.md)
+**Parent topic:**[Deploying DX Container to Red Hat OpenShift](../containerization/deploy_openshift.md)
 

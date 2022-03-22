@@ -1,4 +1,4 @@
-# Deprecated features for HCL Digital Experience 9.5 {#deprecated_features .concept}
+# Deprecated features for HCL Digital Experience 9.5
 
 If you are migrating from an earlier release of HCL Digital Experience, you should be aware of various features and themes that are deprecated per each release. 
 

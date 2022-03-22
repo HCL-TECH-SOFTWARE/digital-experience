@@ -1,8 +1,8 @@
-# Deploy DX CF191 and earlier release Containers to Amazon EKS \| HCL Digital Experience {#kubernetes_eks_cf191andearlier}
+# Deploy DX CF191 and earlier release Containers to Amazon EKS
 
 This section describes how to deploy HCL Digital Experience 9.5 CF191 and earlier release containers, along with the Ambassador, to Kubernetes as verified in [Amazon Elastic Kubernetes Service \(Amazon EKS\)](https://aws.amazon.com/eks/).
 
-## Prerequisites {#deploy_eks_prerequisites .section}
+## Prerequisites
 
 Prior to using the procedure below, it is assumed that the HCL DX Administrator is generally experienced in using Kubernetes. Additionally, the DX Administrator must have the appropriate access to the target environment. If not, following are some preliminary steps that need to be taken.
 
@@ -38,13 +38,13 @@ Prior to using the procedure below, it is assumed that the HCL DX Administrator 
     **Note:** Images included in the ‘other’ package released with CF183 are optional and used to support use of OpenLDAP, Remote Search, the Experience API, Content Composer, and Digital Asset Management components and services.
 
 
-## About this task {#about_deploying_eks .section}
+## About this task
 
 Follow these steps to deploy HCL Digital Experience 9.5 CF183 and higher container release, along with Ambassador to Kubernetes, as verified in [Amazon Elastic Kubernetes Service \(Amazon EKS\)](https://aws.amazon.com/eks/). This deployment relies heavily on Kubernetes Operators for full functionality.
 
-**Note:** Reference the latest HCL DX 9.5 Container Release and Update file listings in the [Docker deployment](../containerization/docker.html) topic.
+**Note:** Reference the latest HCL DX 9.5 Container Release and Update file listings in the [Docker deployment](../containerization/docker.md) topic.
 
-## DX Container Management {#section_tz1_lh5_4nb .section}
+## DX Container Management
 
 1.  Change directory
 
@@ -87,7 +87,7 @@ docker push <image:tag>
 ```
 
 
-## DX Deployment {#section_ivk_hj5_4nb .section}
+## DX Deployment
 
 1.  Unzip
 
@@ -198,7 +198,7 @@ kubectl create -f hcl-dx-cloud-scripts/deploy/crds/git_v1_dxdeployment_crd.yaml
     ![](../images/container_eks_deploy_example.png "Deploy example")
 
 
-## Generate TLS Certificate {#section_bbw_nr5_4nb .section}
+## Generate TLS Certificate
 
 Create a TLS certification to be used by the deployment:
 
@@ -224,7 +224,7 @@ Create a TLS certification to be used by the deployment:
     **Note:** The default name is the `dx-tls-cert` this can be changed in the configuration. `aws-mynamespace` is your Kubernetes namespace. You can set your preferred namespace but you must consistently use this namespace in subsequent commands. See [Customizing the Kubernetes deployment](customizing_kubernetes_eks_deployment.md).
 
 
-## Final Output {#section_pmj_jr5_4nb .section}
+## Final Output
 
 External IP from **Load balancer** in the below example can be used to access PORTAL
 
@@ -243,5 +243,5 @@ External IP from **Load balancer** in the below example can be used to access PO
     ![](../images/container_eks_portal_example.png "Portal example")
 
 
-**Parent topic:**[Deploy DX Container to Amazon EKS \| HCL Digital Experience](../containerization/deploy_kubernetes_eks.md)
+**Parent topic:**[Deploy DX Container to Amazon EKS](../containerization/deploy_kubernetes_eks.md)
 

@@ -1,16 +1,16 @@
-# Install the HCL Digital Experience 9.5 components \| HCL Digital Experience {#Digital_Asset_Management_installation}
+# Install the HCL Digital Experience 9.5 components
 
 This section provides a high-level overview of the architecture and the steps to install, configure, and update the HCL Digital Experience 9.5 components: Experience API, Content Composer, and Digital Asset Management.
 
 **Video**: [Install HCL Digital Experience components \(Experience API, Content Composer, and Digital Asset Management\) on Red Hat OpenShift](https://youtu.be/Hhop8M89SVA)
 
-## High-level architecture and topology { .section}
+## High-level architecture and topology
 
 ![](../images/container_deploy_tp_cf_181.png "High-level architecture")
 
 ![](../images/cf_181_topology.png "Topology")
 
-## Prerequisite { .section}
+## Prerequisite
 
 DX Administrators can choose to install the DX Core containers then proceed to install Content Composer and Digital Asset Management containers to the supported Kubernetes container platforms as outlined in the following steps. See the [Deployment](deployment.md) section for the latest DX 9.5 container file listings.
 
@@ -18,7 +18,7 @@ Deploying the HCL Digital Asset Management or Content Composer components is sup
 
 **Note:** For initial deployments, it is recommended to install the HCL Digital Experience 9.5 components \(Experience API, Content Composer, and Digital Asset Management\) to a non-production \(test\) HCL Digital Experience 9.5 environment.
 
-## Installing the HCL Digital Experience 9.5 Container components { .section}
+## Installing the HCL Digital Experience 9.5 Container components
 
 Follow these steps to install your HCL Digital Experience 9.5 components \(Experience API, Content Composer, and Digital Asset Management\):
 
@@ -294,7 +294,7 @@ oc apply -f dx-deploy-config-map.yaml
     ```
 
 
-## \(Optional\) Configure Digital Asset Management with a CDN { .section}
+## \(Optional\) Configure Digital Asset Management with a CDN
 
 If you are using a content delivery network \(CDN\) such as [Akamai](https://www.akamai.com/our-thinking/cdn/what-is-a-cdn), using `Vary: Origin` may prevent you from caching content. To bypass this limitation, your CDN configuration must strip the `Vary` header on the way in, to reinstate your ability to cache content. On the way out, you can append the `Origin` parameter to the `Vary` header when serving a response using **'Modify Outgoing Response Header'**.
 

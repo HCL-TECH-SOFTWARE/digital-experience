@@ -1,4 +1,4 @@
-# Understanding the Portal 8.5 modularized theme {#themeopt_defaultparts .concept}
+# Understanding the Portal 8.5 modularized theme
 
 Modern websites and browsers enable incredible new capabilities that can greatly enhance your user's web experiences. However, these capabilities are not without cost in terms of large page sizes and more processing in the browser when each page is rendered. These capabilities are worth it when you need them, but removing them for an entire site or including them only on pages that take advantage of these capabilities provides for more flexibility.
 

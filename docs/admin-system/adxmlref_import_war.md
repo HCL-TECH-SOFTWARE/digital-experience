@@ -1,4 +1,4 @@
-# Importing WAR files \| HCL Digital Experience {#adxmlref_import_war .reference}
+# Importing WAR files
 
 To create new portlet applications, you need additional resources, the WAR files.
 

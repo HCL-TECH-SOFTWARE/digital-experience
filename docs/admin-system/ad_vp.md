@@ -1,4 +1,4 @@
-# Virtual portals \| HCL Digital Experience {#ad_vp .concept}
+# Virtual portals
 
 View information on how you can scope your HCL Portal to have multiple virtual portals.
 

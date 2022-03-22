@@ -1,8 +1,8 @@
-# Deploy DX CF192 and later release Containers to Amazon EKS \| HCL Digital Experience {#kubernetes_eks_cf192andlater_Copy}
+# Deploy DX CF192 and later release Containers to Amazon EKS
 
 This section describes how to deploy HCL Digital Experience 9.5 CF192 and later release containers, along with the Ambassador, to Kubernetes as verified in [Amazon Elastic Kubernetes Service \(Amazon EKS\)](https://aws.amazon.com/eks/).
 
-## Prerequisites {#deploy_eks_prerequisites .section}
+## Prerequisites
 
 Prior to using the following procedures, it is assumed that the HCL DX Administrator is generally experienced in using Kubernetes. Additionally, the DX Administrator must have the appropriate access to the target environment. If not, the following are some preliminary steps that must be taken.
 
@@ -12,7 +12,7 @@ Prior to using the following procedures, it is assumed that the HCL DX Administr
     -   **Docker**
     -   **AWS Command Line Interface \(CLI\)** - used to get image details.
     -   **dxctl tool** - If deploying Digital Experience Container Update CF192 or later, the dcxtl tool is used to install and configure the deployment.
-        -   Documentation resource: [Deploy DX Container to Microsoft Azure Kubernetes Service \(AKS\)](../containerization/azure_aks.html)
+        -   Documentation resource: [Deploy DX Container to Microsoft Azure Kubernetes Service \(AKS\)](../containerization/azure_aks.md)
 -   Volume requirement:
     -   Requires an AccessMode of ReadWriteMany
     -   Requires a minimum of **40 GB**, with the default request set to **100 GB**
@@ -51,11 +51,11 @@ Prior to using the following procedures, it is assumed that the HCL DX Administr
     **Note:** Images included in the ‘other’ package released with CF192 are optional \(in addition to HCL DX 9.5 core Portal and Web Content Manager\) and are used to support the use of OpenLDAP, Remote Search, the Experience API, Content Composer, and Digital Asset Management components and services.
 
 
-## About this task {#about_deploying_eks_192andlater .section}
+## About this task
 
 Follow these steps to deploy HCL Digital Experience 9.5 CF192 and later container release, along with Ambassador to Kubernetes, as verified in [Amazon Elastic Kubernetes Service \(Amazon EKS\)](https://aws.amazon.com/eks/). This deployment relies heavily on Kubernetes Operators for full functionality. If deploying a Container Update CF191 or earlier, [view the instructions to deploy using script-based commands](kubernetes_eks_cf191andearlier.md#about_deploying_eks), instead of the dxctl tool commands used in this section.
 
-## DX Container Management {#eks_dx_container_management_192andlater .section}
+## DX Container Management
 
 Follow these steps to deploy the HCL Digital Experience 9.5 CF192 and later container release in Amazon EKS
 
@@ -114,7 +114,7 @@ docker push <image:tag>
 ```
 
 
-## Persistence volume {#section_persistence_vol_cf192andlater .section}
+## Persistence volume
 
 1.  Set the Persistent volume
 
@@ -163,7 +163,7 @@ docker push <image:tag>
     ```
 
 
-## Configure and deploy {#section_config_deploy_cf192andlater .section}
+## Configure and deploy
 
 Configure and deploy using [HCL DX dxctl tool](dxtools_dxctl.md).
 
@@ -299,7 +299,7 @@ dx.operator.tag: v95_CF192_20210225-0546_xxxxxxxxx_95_CF192
     **Note:** These steps create the DX 9.5 CF192 and later deployment.
 
 
-## Generate TLS Certificate {#section_generate_tls_cert_cf192andlater .section}
+## Generate TLS Certificate
 
 Create a TLS certification to be used by the deployment:
 
@@ -325,7 +325,7 @@ Create a TLS certification to be used by the deployment:
     **Note:** The default name is the `dx-tls-cert` this can be changed in the configuration. `aws-mynamespace` is your Kubernetes namespace. You can set your preferred namespace but you must consistently use this namespace in subsequent commands. See [Customizing the Kubernetes deployment](customizing_kubernetes_eks_deployment.md).
 
 
-## Access the deployment {#section_access_deployment_cf192andlater .section}
+## Access the deployment
 
 Obtain the external IP from the platform **load balancer** as shown in following example to access the HCL DX 9.5 CF192 and later deployment:
 
@@ -345,7 +345,7 @@ https://external-ip/wps/portal
 
 ![](../images/container_eks_portal_example.png "HCL Digital Experience 9.5 Woodburn Studio demonstration site")
 
-## Update {#section_update_deploy_cf192andlater .section}
+## Update
 
 To update the deployment to later **[HCL DX 9.5 Container Update](docker.md)** releases, follow these steps:
 
@@ -394,7 +394,7 @@ To update the deployment to later **[HCL DX 9.5 Container Update](docker.md)** r
 
 **Additional considerations:**For example, once the database is transferred, the **DBTYPE** must be updated so you can scale the instances higher. Additionally, once the database is transferred, the number of replicas could be increased. There are additional options to customize the deployment.
 
-## Delete {#section_delete_deploy_cf192andlater .section}
+## Delete
 
 To delete the deployment, follow either of these methods:
 
@@ -426,5 +426,5 @@ If some deployment resources \(such as services\) are not deleted, run the follo
 kubectl patch services $(kubectl get services -n $NAMESPACE  | grep -v "NAME" |awk  '{print $1}') -p '{"metadata":{"finalizers":null}}' -n $NAMESPACE
 ```
 
-**Parent topic:**[Deploy DX Container to Amazon EKS \| HCL Digital Experience](../containerization/deploy_kubernetes_eks.md)
+**Parent topic:**[Deploy DX Container to Amazon EKS](../containerization/deploy_kubernetes_eks.md)
 

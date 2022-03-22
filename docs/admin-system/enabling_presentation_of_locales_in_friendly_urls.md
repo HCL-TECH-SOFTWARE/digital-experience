@@ -1,4 +1,4 @@
-# Enabling presentation of Locales in friendly URLs {#enabling_presentation_of_locales_in_friendly_urls .concept}
+# Enabling presentation of Locales in friendly URLs
 
 Beginning with HCL DX Container Update CF193 and higher, enablement is provided to present friendly URL’s which retain locale specific definitions when multi-lingual page versions are requested. This enablement can also improve SEO results when users search for language specific DX page topics.
 
@@ -8,13 +8,13 @@ Follow the guidance below to enable locales in the prefix of the HCL DX page URL
 
 This enablement is not supported or executed during presentation of portlet resources such as portlets, REST API calls, or sites presented via Web Application Bridge.
 
-## How the enablement to present locale specific pages with friendly URLs works {#section_tbc_x1x_bpb .section}
+## How the enablement to present locale specific pages with friendly URLs works
 
 When a DX user comes to site by either invoking a page with a locale in the URL, or makes a selection from a list of language page options, the enablement logic is invoked. If no language specific page is requested, the default language version is displayed. The new logic checks if the multi-lingual locale URLs support is enabled, and if the requested page has a locale that matches the list of locales configured to the DX site. Next, the request URL is modified to exclude the locale and request parameter is set. Once the request parameter is set, the *DX State Decoding Plugin* is invoked to retrieve a locale in the request parameter and sets the locale in the current state. All page rendering then has the right locale set, and the response is sent to the user’s browser client.
 
 Whenever a new URL is created via state handling or by Web Content Manager content for presentation to users, these processes will be executed. When language specific URLs are requested, the *DX State Decoding Plugin* is invoked to manage the requested rendering of the language specific URL and page for the end user.
 
-## Enabling the feature to present locale specific friendly URLs {#section_xrr_1bx_bpb .section}
+## Enabling the feature to present locale specific friendly URLs
 
 Use the configuration task or manual steps to enable presentation of language specific friendly URLs.
 
@@ -49,7 +49,7 @@ Use the configuration task or manual steps to enable presentation of language sp
     **Note:** In a cluster, synchronize the nodes and then restart all the HCL DX JVMs.
 
 
-## Disabling the feature to present locale specific friendly URLs {#section_hkc_xbx_bpb .section}
+## Disabling the feature to present locale specific friendly URLs
 
 Use the configuration task or manual steps to disable the process to manage presentation of language specific friendly URLs.
 
@@ -89,7 +89,7 @@ When generating a URL with the `ChangeLanguageCommand`, or using the Navigationa
 
 It also works in the context of the Web Content Management Multi-Lingual Solution feature. When rendering a page, the correct MLS web content library for the requested language is being used. In this case, note that locales defined to the list should be specified and addressed via an underscore, for instance `pt_BR` for Brazilian Portuguese.
 
-## Limitations {#section_wpk_bdx_bpb .section}
+## Limitations
 
 -   When generating a Virtual Portal or DX page at the root level, a State Decoding check is not performed, to avoid conflicts with the defined URLs. The virtual Portal creation cannot not succeed; specifically, the page creation would proceed but the page cannot be accessed without the URL \(i.e. having a locale of `de` and creating a root page of `de`, the URL to access the page would be `/wps/portal/de/de`, assuming a default context root\).
 -   In the [Web Content Management Authoring portlet](../panel_help/wcm_using.md), the Generate button and the according widgets are not translated if friendly locales or a locale in the state is used \(known issue\).

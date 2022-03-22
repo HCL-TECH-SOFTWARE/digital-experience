@@ -1,4 +1,4 @@
-# Web Content Manager Multilingual Solution API \| HCL Digital Experience {#wcm_mls_translated_content_api .concept}
+# Web Content Manager Multilingual Solution API
 
 This set of APIs allow you to retrieve information about the configured Multilingual Solution \(MLS\) libraries and also to retrieve the translated content items for a given default language content ID \(for example, from English content find translated French and Spanish strings\).
 
@@ -11,23 +11,26 @@ The following MLS APIs are available \(as of HCL Digital Experience 9.5 Containe
 -   MLS Library Configuration API
 -   Translated Content API
 
-## MLS Library Configuration API {#section_wff_cjc_smb .section}
+## MLS Library Configuration API
 
-Endpoint
-:   **GET request to:**
+-   **Endpoint**
 
-:   http://host:port/wps/mycontenthandler/wcmrest/mlsConfig/<UUID of the base library\>
+    **GET request to:**
 
-:   **JSON:**
+    http://host:port/wps/mycontenthandler/wcmrest/mlsConfig/<UUID of the base library\>
 
-:   For JSON add ?mime-type=application/json
+    **JSON:**
 
-:   **Sample URL:**
+    For JSON add ?mime-type=application/json
 
-:   http://localhost:10039/wps/mycontenthandler/!ut/p/digest!-qnYtpJ-Sz3gh0FSR\_oeyA/wcmrest/mlsConfig/bf855b83-8387-47a2-a909-953fef58b0af
+    **Sample URL:**
 
-Expected Body
-:   The body can have the basic WCM structure:
+    http://localhost:10039/wps/mycontenthandler/!ut/p/digest!-qnYtpJ-Sz3gh0FSR\_oeyA/wcmrest/mlsConfig/bf855b83-8387-47a2-a909-953fef58b0af
+
+
+-   **Expected Body**
+
+    The body can have the basic WCM structure:
 
     ```
     <?xml version="1.0" encoding="UTF-8"?>
@@ -35,19 +38,27 @@ Expected Body
     </feed>
     ```
 
-Expected Headers
-:   LTPA token of the user.
 
-Query Parameters
-:   None.
+-   **Expected Headers**
 
-Limitations
-:   None.
+    LTPA token of the user.
 
-Return Body
-:   The base library and translated libraries.
 
-:   Sample:
+-   **Query Parameters**
+
+    None.
+
+
+-   **Limitations**
+
+    None.
+
+
+-   **Return Body**
+
+    The base library and translated libraries.
+
+    Sample:
 
     ```
     <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0">
@@ -99,36 +110,42 @@ Return Body
     </feed>
     ```
 
-## Translated Content API {#section_nql_2c2_s4b .section}
 
-Endpoint for GET
-:   **GET request to:**
+## Translated Content API
 
-:   http://host:port/wps/mycontenthandler/wcmrest/translations/<UUID of the base language content item\>
+-   **Endpoint for GET**
 
-:   **JSON:**
+    **GET request to:**
 
-:   For JSON add ?mime-type=application/json
+    http://host:port/wps/mycontenthandler/wcmrest/translations/<UUID of the base language content item\>
 
-:   **Sample URL:**
+    **JSON:**
 
-:   http://localhost:10039/wps/mycontenthandler/!ut/p/digest!-qnYtpJ-Sz3gh0FSR\_oeyA/wcmrest/translations/2b287d10-d60a-43c7-9600-ec66907e635e?allAvailableLang=true&amp;allElements=true
+    For JSON add ?mime-type=application/json
 
-Endpoint for PUT \(From CF193 and higher\)
-:   **PUT request to:**
+    **Sample URL:**
 
-:   http://host:port/wps/mycontenthandler/wcmrest/translations/<UUID of the base language content item\>
+    http://localhost:10039/wps/mycontenthandler/!ut/p/digest!-qnYtpJ-Sz3gh0FSR\_oeyA/wcmrest/translations/2b287d10-d60a-43c7-9600-ec66907e635e?allAvailableLang=true&amp;allElements=true
 
-:   **JSON:**
 
-:   For JSON add ?mime-type=application/json
+-   **Endpoint for PUT \(From CF193 and higher\)**
 
-:   **Sample URL:**
+    **PUT request to:**
 
-:   http://localhost:10039/wps/mycontenthandler/!ut/p/digest!-qnYtpJ-Sz3gh0FSR\_oeyA/wcmrest/translations/2b287d10-d60a-43c7-9600-ec66907e635e?allAvailableLang=true&amp;allElements=true
+    http://host:port/wps/mycontenthandler/wcmrest/translations/<UUID of the base language content item\>
 
-Expected Body for GET
-:   The body can have the basic WCM structure:
+    **JSON:**
+
+    For JSON add ?mime-type=application/json
+
+    **Sample URL:**
+
+    http://localhost:10039/wps/mycontenthandler/!ut/p/digest!-qnYtpJ-Sz3gh0FSR\_oeyA/wcmrest/translations/2b287d10-d60a-43c7-9600-ec66907e635e?allAvailableLang=true&amp;allElements=true
+
+
+-   **Expected Body for GET**
+
+    The body can have the basic WCM structure:
 
     ```
     <?xml version="1.0" encoding="UTF-8"?>
@@ -136,24 +153,33 @@ Expected Body for GET
     </feed>
     ```
 
-Expected Body for PUT \(From CF193 and higher\)
-:   The body for PUT is same as the result of the GET
 
-Expected Headers
-:   LTPA token of the user.
+-   **Expected Body for PUT \(From CF193 and higher\)**
 
-Query Parameters
-:   -   `allAvailableLang=true`- to return all languages
--   `lang=... - e.g. lang=en` - to return only a specific language
--   `allElements=true|false` - to return elements that are not text \(like images\)
+    The body for PUT is same as the result of the GET
 
-Limitations
-:   None.
 
-Return Body
-:   The list of languages and the content of each item in the base language and the translated languages.
+-   **Expected Headers**
 
-:   Sample:
+    LTPA token of the user.
+
+
+-   **Query Parameters**
+
+    -   `allAvailableLang=true`- to return all languages
+    -   `lang=... - e.g. lang=en` - to return only a specific language
+    -   `allElements=true|false` - to return elements that are not text \(like images\)
+
+-   **Limitations**
+
+    None.
+
+
+-   **Return Body**
+
+    The list of languages and the content of each item in the base language and the translated languages.
+
+    Sample:
 
     ```
     <?xml version="1.0" encoding="UTF-8"?><entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0">
@@ -234,4 +260,5 @@ Return Body
         </content>
     </entry>
     ```
+
 

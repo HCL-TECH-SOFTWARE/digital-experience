@@ -1,16 +1,16 @@
-# Migrate a stand-alone server \| HCL Digital Experience {#migrate_standalone .concept}
+# Migrate a stand-alone server
 
 Use the Configuration Wizard to migrate a stand-alone server environment. Use the following information to get familiar with the information that you must provide in the wizard and the configuration procedure that it generates.
 
-## Configuration Wizard { .section}
+## Configuration Wizard
 
 Select **Migrate to a New Version**, and choose the **Migrate a Stand-alone Server** option.
 
-## Worksheet {#worksheet}
+## Worksheet
 
 To set up the migration, you answer questions about your wanted configuration. Some fields apply to migration configurations. Some fields are required based on your environment. The remaining fields are advanced and do not apply to most configurations.
 
-### Minimal required fields { .section}
+### Minimal required fields
 
 The following table lists the fields that are unique to the migrate a stand-alone server configuration. You might be prompted for additional information about system or user IDs and passwords that you defined during the portal installation process.
 
@@ -39,7 +39,7 @@ The following table lists the fields that are unique to the migrate a stand-alon
 |**Where is the target portal installed**|/opt/IBM/WebSphere/PortalServer| |
 |**Target temporary path**|/opt/IBM/WebSphere/PortalServer| |
 
-### Advanced fields { .section}
+### Advanced fields
 
 The following table lists the advanced fields that are unique to the migrate a stand-alone server configuration. Click **Advanced** on the Answer Questions page for the target system to see the advanced properties. Default values are provided for advanced fields that are required.
 
@@ -47,7 +47,7 @@ The following table lists the advanced fields that are unique to the migrate a s
 |-----------|-------|----------|
 |**JVM heap size**|2048| |
 
-# Migrate a stand-alone server option {#task .task}
+# Migrate a stand-alone server option
 
 After you answer questions and provide information about your migration, the wizard generates a custom configuration procedure.
 
@@ -57,43 +57,53 @@ If you click **View Step Command**, you can see the task and properties that are
 
 1.  Manual Step: Install the latest fix packs
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 2.  Generate the files for remote migration
 
-    Condition
-    :   The target portal is on a different server than the source.
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        The target portal is on a different server than the source.
+
+    -   **ConfigEngine task**
+
+        none
 
 3.  Manual Step: Copy the remote migration package to the source environment
 
-    Condition
-    :   The target portal is on a different server than the source.
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        The target portal is on a different server than the source.
+
+    -   **ConfigEngine task**
+
+        none
 
 4.  Create a backup of the remote source portal profile
 
-    Condition
-    :   The target portal is on a different server than the source.
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        The target portal is on a different server than the source.
+
+    -   **ConfigEngine task**
+
+        none
 
 5.  Create a backup profile of the source portal profile
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
     **Note:** If you are migrating from HCL Portal Enable or Portal Extend offerings to Portal Server or Web Content Management offerings, complete the following steps manually.
 
@@ -103,125 +113,153 @@ If you click **View Step Command**, you can see the task and properties that are
     4.  Save changes to the wps.properties file.
 6.  Manual Step: If the backup profile is larger than 2 GB, clean up the backup profile
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 7.  Create a default profile
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 8.  Import backup profile
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 9.  Manual Step: If you cleaned up the backup profile, restore the JCR content
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 10. Upgrade the ConfigEngine
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 11. Manual Step: Update the ports on the target environment
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 12. Manual Step: Update database settings
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 13. Validate database settings
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   validate-database
+        none
+
+    -   **ConfigEngine task**
+
+        validate-database
 
 14. Connect to new database copies
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   connect-database
+        none
+
+    -   **ConfigEngine task**
+
+        connect-database
 
 15. Manual Step: Review database schema changes
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 16. Upgrade the base portal database component
 
-    Condition
-    :   IBM® z/OS®
+    -   **Condition**
 
-    :   DB2®
+        IBM® z/OS®
 
-    ConfigEngine task
-    :   grant-runtime-db-user-privileges
+        DB2®
 
-    :   upgrade-database
+    -   **ConfigEngine task**
+
+        grant-runtime-db-user-privileges
+
+        upgrade-database
 
 17. Manual Step: Remove check pending statuses from table spaces
 
-    Condition
-    :   IBM z/OS
+    -   **Condition**
 
-    :   DB2
+        IBM® z/OS®
 
-    ConfigEngine task
-    :   none
+        DB2®
+
+    -   **ConfigEngine task**
+
+        none
 
 18. Upgrade the remaining portal databases
 
-    Condition
-    :   IBM z/OS
+    -   **Condition**
 
-    :   DB2
+        IBM® z/OS®
 
-    ConfigEngine task
-    :   grant-runtime-db-user-privileges
+        DB2®
 
-    :   upgrade-database
+    -   **ConfigEngine task**
+
+        grant-runtime-db-user-privileges
+
+        upgrade-database
 
 19. Upgrade the portal profile
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   upgrade-profile
+        none
+
+    -   **ConfigEngine task**
+
+        upgrade-profile
 
     **Version 7.0 Server Offering-only migration:** Do not complete the upgrade profile step using the Configuration Wizard. Instead you must run this task manually. For more information about running this task manually, see [Migration from Portal Server Offering 7.0 to Portal 8.5](../migrate/mig_consider_7serveronly.md).
 
@@ -232,11 +270,13 @@ If you click **View Step Command**, you can see the task and properties that are
     -   EJPXA0067E: The following configuration data is needed to create a content-node resource: content-parentref.
 20. Apply the latest Combined Cumulative Fix updates to your system.
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 
 To complete migration, you must perform several post-migration tasks that depend on how you use HCL Digital Experience.

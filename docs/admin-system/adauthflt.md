@@ -1,10 +1,10 @@
-# Configuring authentication filters \| HCL Digital Experience {#adauthflt .concept}
+# Configuring authentication filters
 
 The portal authentication filters are a set of plug-in points. You can use them to intercept or extend the portal login, logout, session timeout, and request processing by custom code, for example to redirect users to a specific URL.
 
-## The authentication filter chain concept {#flt_chain .section}
+## The authentication filter chain concept
 
-The authentication filters in the portal use the same pattern as defined by the J2EE servlet filter facility. For more information, see [The Essentials of Filters](http://www.oracle.com/technetwork/java/filters-137243.html). The following example shows how this pattern is applied to the authentication filters.
+The authentication filters in the portal use the same pattern as defined by the J2EE servlet filter facility. For more information, see [The Essentials of Filters](http://www.oracle.com/technetwork/java/filters-137243.md). The following example shows how this pattern is applied to the authentication filters.
 
 ```
 Trigger of filter chain, |                        |
@@ -26,7 +26,7 @@ A default filter performs the default logic for a particular use case, for examp
 
 After a filter is run or if an exception is thrown, each filter returns to the one that calls it, so it is possible to implement a customized exception handling or perform more operations after it calls the successor. Now you can chain a custom set of filters. Each custom filter can perform operations before and after the following element\(s\) in the chain. You can specify the order and the fully qualified class names of the custom filters by portal configuration properties. For details see the topic about the portal WP Authentication Service. The portal provides only the DefaultFilter implementations and enforces that they are always the last element in the chains; if there are no custom login filters defined, the default filters are the only element.
 
-## Available authentication filter chains {#availbl .section}
+## Available authentication filter chains
 
 The filter chain concept that is described in the previous section is applied to six types of events that concern the flows of Portal login, logout, and session handling. This provides a flexible approach to plug custom logic to each of those flows. In particular, there are filter chains for the following events:
 
@@ -39,7 +39,7 @@ The filter chain concept that is described in the previous section is applied to
 
 Other than the session timeout filter, each of the previous filters has access to the HTTP request and response objects. A special context object can be used to share information between filters and set redirects that are run after the filter chain is processed. For more detailed information about each of the filter and the filter chain interfaces, see the documentation for both HCL Portal and the API JavaDoc. For a filter chain example, see the topic with the Example of a custom authentication filter.
 
-## Configuring the filter chains {#nbl .section}
+## Configuring the filter chains
 
 You can specify the order of filters for each filter chain by setting the following properties in the portal WP Authentication Service:
 
@@ -65,7 +65,7 @@ This makes the value of this property available in the filter configuration obje
 
 For details about setting portal configuration properties see the topic about Setting service configuration properties.
 
-## Example of a custom authentication filter {#xmpl .section}
+## Example of a custom authentication filter
 
 The following gives an example of a custom filter plugged into the filter chain for the explicit Portal login. The custom filter holds properties that define particular redirect URLs for particular user IDs and triggers the corresponding redirect if one of those users who are logged in successfully. To implement such an example, proceed by the following steps:
 

@@ -1,4 +1,4 @@
-# Rich text editor toolbar configuration options \| HCL Digital Experience {#wcm_config_ephox_custom .concept}
+# Rich text editor toolbar configuration options
 
 Run these configuration tasks to change the configuration of the rich text editor toolbar.
 
@@ -6,7 +6,7 @@ Run these configuration tasks to change the configuration of the rich text edito
 
 **Note:** In a clustered environment, these tasks are only run on the primary server.
 
-## Using a custom Textbox.io editor toolbar { .section}
+## Using a custom Textbox.io editor toolbar
 
 1.  The Textbox.io editor uses a custom configuration file that is named tbio\_config.jsp to set custom parameters for the toolbar. Copy your custom configuration file to `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)`\\PortalServer\\wcm\\shared\\app\\config\\textboxio.
 
@@ -15,20 +15,23 @@ Run these configuration tasks to change the configuration of the rich text edito
 2.  Open a command prompt.
 3.  Run the following command from the `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine` directory:
 
-    Windows™
-    :   ```
-ConfigEngine.bat configure-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password
-```
+    -   **Windows™**
 
-    UNIX™Linux™
-    :   ```
-./ConfigEngine.sh configure-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password
-```
+        ```
+        ConfigEngine.bat configure-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password
+        ```
 
-    IBM® i
-    :   ```
-ConfigEngine.sh configure-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password
-```
+    -   **UNIX™Linux™**
+
+        ```
+        ./ConfigEngine.sh configure-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password
+        ```
+
+    -   **IBM® i**
+
+        ```
+        ConfigEngine.sh configure-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password
+        ```
 
     **Note:** An administrator user name and password is not required if you already specified the portal administrator user name and password with the PortalAdminId and PortalAdminPwd settings in the wkplc.properties file.
 
@@ -39,7 +42,7 @@ ConfigEngine.sh configure-wcm-ephox-editor-custom-configuration -DWasPassword=pa
 
 **With HCL Digital Experience 9.5 CF18**, in order to remediate security vulnerabilities in several open source libraries, the Rich Text Editor Textbox.io requires a minimum supported Java level of 1.8. If you are unable to move to Java 8, it is recommended that you use the out-of-the-box, default CKEditor provided with HCL Digital Experience.
 
-## Enabling Textbox I/O editor {#section_sgn_zln_4nb .section}
+## Enabling Textbox I/O editor
 
 1.  To enable the new Textbox I/O editor fix using HCL Digital Experience CF18 or later, run this configuration process in the Textbox I/O editor:
 
@@ -71,7 +74,7 @@ For example, if the URL for accessing DX in your cloud environment is https://dx
 -DWasUserid=wpsadmin -DWasPassword=wpsadmin
 ```
 
-## Disabling Textbox I/O editor to use the OOB editor { .section}
+## Disabling Textbox I/O editor to use the OOB editor
 
 1.  To disable Textbox I/O editor and to revert to an earlier version of the Rich Text editor, run the following process:
 
@@ -89,7 +92,7 @@ For example, if the URL for accessing DX in your cloud environment is https://dx
 
 2.  Restart the WebSphere\_Portal server.
 
-## Using a custom EditLive! editor toolbar { .section}
+## Using a custom EditLive! editor toolbar
 
 **Note:** Ephox EditLive! is a deprecated feature as of CF11 or higher.
 
@@ -100,20 +103,23 @@ For example, if the URL for accessing DX in your cloud environment is https://dx
 2.  Open a command prompt.
 3.  Run the following command from the `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine` directory:
 
-    Windows
-    :   ```
-ConfigEngine.bat configure-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password
-```
+    -   **Windows™**
 
-    UNIXLinux
-    :   ```
-./ConfigEngine.sh configure-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password
-```
+        ```
+        ConfigEngine.bat configure-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password
+        ```
 
-    IBM i
-    :   ```
-ConfigEngine.sh configure-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password
-```
+    -   **UNIX™Linux™**
+
+        ```
+        ./ConfigEngine.sh configure-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password
+        ```
+
+    -   **IBM® i**
+
+        ```
+        ConfigEngine.sh configure-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password
+        ```
 
     **Note:** An administrator user name and password is not required if you already specified the portal administrator user name and password with the PortalAdminId and PortalAdminPwd settings in the wkplc.properties file.
 
@@ -123,7 +129,7 @@ ConfigEngine.sh configure-wcm-ephox-editor-custom-configuration -DWasPassword=pa
 
 **Beginning with HCL Digital Experience Container Update CF182,**, the updated Textbox.io Rich Text editor is deployed out-of-the-box for HCL DX 9.5 Containers. When deployed in supported Kubernetes environments, a ConfigEngine must be required to be run before the Textbox.io editor application will work correctly \(i.e. before for selecting the Advanced editor for use in Web Content Manager.
 
-## Reverting to the EditLive! editor version 7 toolbar { .section}
+## Reverting to the EditLive! editor version 7 toolbar
 
 **Note:** Ephox EditLive! is fully unsupported.
 

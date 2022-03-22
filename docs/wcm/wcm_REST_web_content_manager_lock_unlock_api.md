@@ -1,32 +1,35 @@
-# Web Content Manager Lock/Unlock API {#wcm_REST_web_content_manager_lock_unlock_api .concept}
+# Web Content Manager Lock/Unlock API
 
 The Web Content Manager Lock/Unlock API lets you lock and unlock WCM content components, authoring templates, and item.
 
-It also extends the [WCM Query API](../wcm/wcm_rest_query.html) to pass on the information if an item is locked and who locked it.
+It also extends the [WCM Query API](../wcm/wcm_rest_query.md) to pass on the information if an item is locked and who locked it.
 
 It is equivalent to the functionality in the user interface \(for WCM items\):
 
 ![](../assets/HCL_Web_Content_Manager_Lock_Unlock_API.png "Enable WCM Lock/Unlock API")
 
-## Using the Web Content Manager Lock/Unlock API {#section_wff_cjc_smb .section}
+## Using the Web Content Manager Lock/Unlock API
 
-Endpoint
-:   **POST request to:**
+-   **Endpoint**
 
-:   http://host:port/wps/mycontenthandler/wcmrest/item/<UUID of WCM item\>/lock or
+    **POST request to:**
 
-:   http://host:port/wps/mycontenthandler/wcmrest/item/<UUID of WCM item\>/unlock
+    http://host:port/wps/mycontenthandler/wcmrest/item/<UUID of WCM item\>/lock or
 
-:   **JSON:**
+    http://host:port/wps/mycontenthandler/wcmrest/item/<UUID of WCM item\>/unlock
 
-:   For JSON add ?mime-type=application/json
+    **JSON:**
 
-:   **Sample URL:**
+    For JSON add ?mime-type=application/json
 
-:   localhost:10039/wps/mycontenthandler/wcmrest/item/02d62efb-54ed-430d-9f67-01d8788cb6d6/lock
+    **Sample URL:**
 
-Expected Body
-:   The body can have the basic WCM structure:
+    localhost:10039/wps/mycontenthandler/wcmrest/item/02d62efb-54ed-430d-9f67-01d8788cb6d6/lock
+
+
+-   **Expected Body**
+
+    The body can have the basic WCM structure:
 
     ```
     <?xml version="1.0" encoding="UTF-8"?>
@@ -35,19 +38,27 @@ Expected Body
     
     ```
 
-Expected Headers
-:   LTPA token of the user.
 
-Query Parameters
-:   None.
+-   **Expected Headers**
 
-Limitations
-:   None.
+    LTPA token of the user.
 
-Return Body
-:   The updated item.
 
-:   Sample:
+-   **Query Parameters**
+
+    None.
+
+
+-   **Limitations**
+
+    None.
+
+
+-   **Return Body**
+
+    The updated item.
+
+    Sample:
 
     ```
     <?xml version="1.0" encoding="UTF-8"?>
@@ -119,44 +130,49 @@ Return Body
     
     ```
 
-## Retrieving locked/unlocked status {#section_vf4_kkc_smb .section}
+
+## Retrieving locked/unlocked status
 
 The Web Content Manager Item API as indicated above has the new category field for locked/unlocked status.
 
-Structure
-:   Unlocked:
+-   **Structure**
+
+    Unlocked:
 
     ```
     <category scheme="wcmrest:locked" term="false" label=""/>
     ```
 
-:   Locked:
+    Locked:
 
     ```
     <category scheme="wcmrest:locked" term="true" label="uid=wpsadmin,o=defaultWIMFileBasedRealm"/
     ```
 
+
 When using search when specifying the options=details query parameter the category is also retrieved and added to the REST result feed.
 
-Delete
-:   A content item can be deleted by sending a DELETE request to the following URI: /Content/item-uuid
+-   **Delete**
 
-:   For example:
+    A content item can be deleted by sending a DELETE request to the following URI: /Content/item-uuid
 
-:   **DELETE:**
+    For example:
+
+    **DELETE:**
 
     ```
     HTTP/1.1 DELETE
     http://host:port/wps/mycontenthandler/wcmrest/Content/fa2bfd32-7b2f-4394-a5ab-2e150c5ed8aa/
     ```
 
-:   **Response:**
+    **Response:**
 
     ```
     200 OK
     ```
 
-## Asset Management asset or Web Content Manager item identified by its UUID {#section_utc_r4c_smb .section}
+
+## Asset Management asset or Web Content Manager item identified by its UUID
 
 It is equivalent to the functionality in the user interface \(for finding Web Content Manager items\).
 
@@ -164,31 +180,34 @@ It is equivalent to the functionality in the user interface \(for finding Web Co
 
 **Note:** Currently, the Web Content Manager Reference API only supports the GET operation for retrieving items. To update items, the document outlines how to use existing APIs to make updates.
 
-## Using the Web Content Manager Reference GET API {#section_jpr_jpc_smb .section}
+## Using the Web Content Manager Reference GET API
 
-Endpoint
-:   **GET**
+-   **Endpoint**
 
-:   http://host:port/wps/mycontenthandler/wcmrest/references/wcm/<UUID of WCM item\>
+    **GET**
 
-:   http://host:port/wps/mycontenthandler/wcmrest/references/wcm/<UUID of WCM item\>
+    http://host:port/wps/mycontenthandler/wcmrest/references/wcm/<UUID of WCM item\>
 
-:   **JSON**
+    http://host:port/wps/mycontenthandler/wcmrest/references/wcm/<UUID of WCM item\>
 
-:   For JSON, add ?mime-type=application/json
+    **JSON**
 
-:   Sample URL:
+    For JSON, add ?mime-type=application/json
 
-:   http://samplehost.com:10039/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym\_KoW9OQbyw/wcmrest/references/wcm/3d464f55-d909-41dd-b760-57667ddd290c
+    Sample URL:
 
-:   Sample URL JSON:
+    http://samplehost.com:10039/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym\_KoW9OQbyw/wcmrest/references/wcm/3d464f55-d909-41dd-b760-57667ddd290c
 
-:   http://samplehost.com:10039/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym\_KoW9OQbyw/wcmrest/references/wcm/3d464f55-d909-41dd-b760-57667ddd290c?mime-type=application/json
+    Sample URL JSON:
 
-Expected Body
-:   The body can just have the basic WCM structure:
+    http://samplehost.com:10039/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym\_KoW9OQbyw/wcmrest/references/wcm/3d464f55-d909-41dd-b760-57667ddd290c?mime-type=application/json
 
-:   **BODY**
+
+-   **Expected Body**
+
+    The body can just have the basic WCM structure:
+
+    **BODY**
 
     ```
     <?xml version="1.0" encoding="UTF-8"?>
@@ -196,19 +215,27 @@ Expected Body
     </feed>
     ```
 
-Expected Headers
-:   LTPA token of the user. Also works anonymously.
 
-Query Parameters
-:   None.
+-   **Expected Headers**
 
-Limitations
-:   Currently, Digital Asset Management \(DAM\) UUID references for elements and components are found – but items are not retrieved from within Rich Text. Retrieval of UUID items in Rich Text will be supported in a later update.
+    LTPA token of the user. Also works anonymously.
 
-Return Body
-:   The found/retrieved results.
 
-:   Sample:
+-   **Query Parameters**
+
+    None.
+
+
+-   **Limitations**
+
+    Currently, Digital Asset Management \(DAM\) UUID references for elements and components are found – but items are not retrieved from within Rich Text. Retrieval of UUID items in Rich Text will be supported in a later update.
+
+
+-   **Return Body**
+
+    The found/retrieved results.
+
+    Sample:
 
     ```
     <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0">
@@ -313,117 +340,122 @@ Return Body
     
     ```
 
-## Updating references {#section_rxp_grc_smb .section}
 
-Both Digital Asset Management and Web Content Manager references can be updated with the published APIs as documented here: [How to use REST with components](../wcm/wcm_rest_crud_component.html).
+## Updating references
+
+Both Digital Asset Management and Web Content Manager references can be updated with the published APIs as documented here: [How to use REST with components](../wcm/wcm_rest_crud_component.md).
 
 Example for Digital Asset Management, to retrieve references to UUID: 7e3cb713-251a-485c-a578-1aa219411b5e.
 
-Response:
-:   ```
-<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0">
-    <id>wcmrest:Project/7e3cb713-251a-485c-a578-1aa219411b5e/project-items</id>
-    <title>wcmrest:Project/7e3cb713-251a-485c-a578-1aa219411b5e/project-items</title>
-    <updated>2020-05-11T15:59:18.639Z</updated>
-    <total>1</total>
-    <entry>
+-   **Response:**
+
+    ```
+    <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0">
+        <id>wcmrest:Project/7e3cb713-251a-485c-a578-1aa219411b5e/project-items</id>
+        <title>wcmrest:Project/7e3cb713-251a-485c-a578-1aa219411b5e/project-items</title>
+        <updated>2020-05-11T15:59:18.639Z</updated>
+        <total>1</total>
+        <entry>
+            <id>wcmrest:43174081-4f88-436a-a87b-16e6375c2e8f</id>
+            <title xml:lang="en">testmeout</title>
+            <summary xml:lang="en"></summary>
+            <wcm:name>testmeout</wcm:name>
+            <wcm:type>Content</wcm:type>
+            <updated>2020-05-11T15:52:39.290Z</updated>
+            <author>
+                <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
+                <uri>/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/um/users/profiles/Z9eAeHPOG3SG6HHC2JMOCG1P8MMG6OPO4JM47JHDAJM076RDG3RGCN1C66SOC53</uri>
+                <name>wpsadmin</name>
+            </author>
+            <wcm:lastModifier>
+                <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
+                <uri>/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/um/users/profiles/Z9eAeHPOG3SG6HHC2JMOCG1P8MMG6OPO4JM47JHDAJM076RDG3RGCN1C66SOC53</uri>
+                <name>wpsadmin</name>
+            </wcm:lastModifier>
+            <link rel="edit" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f" xml:lang="en" label="Edit"/>
+            <link rel="alternate" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f" xml:lang="en" label="Read"/>
+            <link rel="library" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Library/f7e965b1-c9e4-4c07-a0e0-de8efb5faf2a" xml:lang="en" label="Library"/>
+            <link rel="preview" href="/wps/poc/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcm/oid:43174081-4f88-436a-a87b-16e6375c2e8f" xml:lang="en" label="Preview"/>
+            <category scheme="wcmrest:workflowState" term="PUBLISHED" label="Published" xml:lang="en"/>
+        </entry>
+    </feed>
+    
+    ```
+
+
+Iterating over the results will use the edit link to fetch the item:
+
+-   **GET:**
+
+    ```
+    /wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f
+    <?xml version="1.0" encoding="UTF-8"?><entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0">
         <id>wcmrest:43174081-4f88-436a-a87b-16e6375c2e8f</id>
         <title xml:lang="en">testmeout</title>
         <summary xml:lang="en"></summary>
         <wcm:name>testmeout</wcm:name>
         <wcm:type>Content</wcm:type>
         <updated>2020-05-11T15:52:39.290Z</updated>
+        <wcm:created>2020-05-11T15:51:52.513Z</wcm:created>
         <author>
             <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
             <uri>/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/um/users/profiles/Z9eAeHPOG3SG6HHC2JMOCG1P8MMG6OPO4JM47JHDAJM076RDG3RGCN1C66SOC53</uri>
             <name>wpsadmin</name>
         </author>
+        <wcm:owner>
+            <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
+            <uri>/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/um/users/profiles/Z9eAeHPOG3SG6HHC2JMOCG1P8MMG6OPO4JM47JHDAJM076RDG3RGCN1C66SOC53</uri>
+            <name>wpsadmin</name>
+        </wcm:owner>
         <wcm:lastModifier>
             <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
             <uri>/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/um/users/profiles/Z9eAeHPOG3SG6HHC2JMOCG1P8MMG6OPO4JM47JHDAJM076RDG3RGCN1C66SOC53</uri>
             <name>wpsadmin</name>
         </wcm:lastModifier>
+        <wcm:creator>
+            <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
+            <uri>/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/um/users/profiles/Z9eAeHPOG3SG6HHC2JMOCG1P8MMG6OPO4JM47JHDAJM076RDG3RGCN1C66SOC53</uri>
+            <name>wpsadmin</name>
+        </wcm:creator>
+        <wcm:profile/>
+        <link rel="self" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f" xml:lang="en" label="Read"/>
         <link rel="edit" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f" xml:lang="en" label="Edit"/>
-        <link rel="alternate" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f" xml:lang="en" label="Read"/>
+        <link rel="delete" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f" xml:lang="en" label="Delete"/>
+        <link rel="create-draft" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/item/43174081-4f88-436a-a87b-16e6375c2e8f/create-draft" xml:lang="en" label="Create Draft"/>
+        <link rel="change-to-draft" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/item/43174081-4f88-436a-a87b-16e6375c2e8f/change-to-draft" xml:lang="en" label="Change To Draft"/>
+        <link rel="access-control" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/ac/access:oid:Z6QReDeKPC2JRG6G1E2JMG663EGJMG6JHD2MM4COPD4MM46M9PCJPS6LPO4JI1763" xml:lang="en" label="Access Control"/>
         <link rel="library" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Library/f7e965b1-c9e4-4c07-a0e0-de8efb5faf2a" xml:lang="en" label="Library"/>
+        <link rel="parent" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/SiteArea/bf117c51-d2ab-4818-b2de-02e6988fe9ad" xml:lang="en" label="Parent"/>
+        <link rel="versions" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/item/43174081-4f88-436a-a87b-16e6375c2e8f/versions" xml:lang="en" label="Versions"/>
         <link rel="preview" href="/wps/poc/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcm/oid:43174081-4f88-436a-a87b-16e6375c2e8f" xml:lang="en" label="Preview"/>
+        <link rel="edit-media" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f" type="application/vnd.ibm.wcm+xml" xml:lang="en" label="Edit Media"/>
+        <link rel="content-template" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/ContentTemplate/c7abf2c0-7eff-4396-90e5-943a096c5ab3" xml:lang="en" label="Content Template"/>
+        <link rel="elements" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f/elements" xml:lang="en" label="Elements"/>
         <category scheme="wcmrest:workflowState" term="PUBLISHED" label="Published" xml:lang="en"/>
+        <category scheme="wcmrest:favorite" term="false" xml:lang="en"/>
+        <content type="application/vnd.ibm.wcm+xml">
+            <wcm:content xmlns="http://www.ibm.com/xmlns/wcm/8.0">
+                <elements xmlns:atom="http://www.w3.org/2005/Atom">
+                    <element name="test">
+                        <title xml:lang="en">test</title>
+                        <type>ImageComponent</type>
+                        <data type="application/vnd.ibm.wcm+xml">
+                            <image>
+                                <dimension height="" width="" border="0"/>
+                                <altText></altText>
+                                <tagName></tagName>
+                                <fileName>Screen Shot 2020-05-07 at 10.26.24 AM.png</fileName>
+                                <resourceUri type="image/png">http://samplehost.com:3000/dx/api/dam/v0/collections/48839939-375e-4f07-a85d-56d13ddba3c8/items/7e3cb713-251a-485c-a578-1aa219411b5e?binary=true</resourceUri>
+                            </image>
+                        </data>
+                    </element>
+                </elements>
+            </wcm:content>
+        </content>
     </entry>
-</feed>
+    
+    ```
 
-```
-
-Iterating over the results will use the edit link to fetch the item:
-
-GET:
-:   ```
-/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f
-<?xml version="1.0" encoding="UTF-8"?><entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0">
-    <id>wcmrest:43174081-4f88-436a-a87b-16e6375c2e8f</id>
-    <title xml:lang="en">testmeout</title>
-    <summary xml:lang="en"></summary>
-    <wcm:name>testmeout</wcm:name>
-    <wcm:type>Content</wcm:type>
-    <updated>2020-05-11T15:52:39.290Z</updated>
-    <wcm:created>2020-05-11T15:51:52.513Z</wcm:created>
-    <author>
-        <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
-        <uri>/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/um/users/profiles/Z9eAeHPOG3SG6HHC2JMOCG1P8MMG6OPO4JM47JHDAJM076RDG3RGCN1C66SOC53</uri>
-        <name>wpsadmin</name>
-    </author>
-    <wcm:owner>
-        <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
-        <uri>/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/um/users/profiles/Z9eAeHPOG3SG6HHC2JMOCG1P8MMG6OPO4JM47JHDAJM076RDG3RGCN1C66SOC53</uri>
-        <name>wpsadmin</name>
-    </wcm:owner>
-    <wcm:lastModifier>
-        <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
-        <uri>/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/um/users/profiles/Z9eAeHPOG3SG6HHC2JMOCG1P8MMG6OPO4JM47JHDAJM076RDG3RGCN1C66SOC53</uri>
-        <name>wpsadmin</name>
-    </wcm:lastModifier>
-    <wcm:creator>
-        <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
-        <uri>/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/um/users/profiles/Z9eAeHPOG3SG6HHC2JMOCG1P8MMG6OPO4JM47JHDAJM076RDG3RGCN1C66SOC53</uri>
-        <name>wpsadmin</name>
-    </wcm:creator>
-    <wcm:profile/>
-    <link rel="self" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f" xml:lang="en" label="Read"/>
-    <link rel="edit" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f" xml:lang="en" label="Edit"/>
-    <link rel="delete" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f" xml:lang="en" label="Delete"/>
-    <link rel="create-draft" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/item/43174081-4f88-436a-a87b-16e6375c2e8f/create-draft" xml:lang="en" label="Create Draft"/>
-    <link rel="change-to-draft" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/item/43174081-4f88-436a-a87b-16e6375c2e8f/change-to-draft" xml:lang="en" label="Change To Draft"/>
-    <link rel="access-control" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/ac/access:oid:Z6QReDeKPC2JRG6G1E2JMG663EGJMG6JHD2MM4COPD4MM46M9PCJPS6LPO4JI1763" xml:lang="en" label="Access Control"/>
-    <link rel="library" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Library/f7e965b1-c9e4-4c07-a0e0-de8efb5faf2a" xml:lang="en" label="Library"/>
-    <link rel="parent" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/SiteArea/bf117c51-d2ab-4818-b2de-02e6988fe9ad" xml:lang="en" label="Parent"/>
-    <link rel="versions" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/item/43174081-4f88-436a-a87b-16e6375c2e8f/versions" xml:lang="en" label="Versions"/>
-    <link rel="preview" href="/wps/poc/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcm/oid:43174081-4f88-436a-a87b-16e6375c2e8f" xml:lang="en" label="Preview"/>
-    <link rel="edit-media" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f" type="application/vnd.ibm.wcm+xml" xml:lang="en" label="Edit Media"/>
-    <link rel="content-template" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/ContentTemplate/c7abf2c0-7eff-4396-90e5-943a096c5ab3" xml:lang="en" label="Content Template"/>
-    <link rel="elements" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f/elements" xml:lang="en" label="Elements"/>
-    <category scheme="wcmrest:workflowState" term="PUBLISHED" label="Published" xml:lang="en"/>
-    <category scheme="wcmrest:favorite" term="false" xml:lang="en"/>
-    <content type="application/vnd.ibm.wcm+xml">
-        <wcm:content xmlns="http://www.ibm.com/xmlns/wcm/8.0">
-            <elements xmlns:atom="http://www.w3.org/2005/Atom">
-                <element name="test">
-                    <title xml:lang="en">test</title>
-                    <type>ImageComponent</type>
-                    <data type="application/vnd.ibm.wcm+xml">
-                        <image>
-                            <dimension height="" width="" border="0"/>
-                            <altText></altText>
-                            <tagName></tagName>
-                            <fileName>Screen Shot 2020-05-07 at 10.26.24 AM.png</fileName>
-                            <resourceUri type="image/png">http://samplehost.com:3000/dx/api/dam/v0/collections/48839939-375e-4f07-a85d-56d13ddba3c8/items/7e3cb713-251a-485c-a578-1aa219411b5e?binary=true</resourceUri>
-                        </image>
-                    </data>
-                </element>
-            </elements>
-        </wcm:content>
-    </content>
-</entry>
-
-```
 
 To send an update to the item to replace the resourceUri and add fileName and type:
 
@@ -495,7 +527,7 @@ To send an update to the item to replace the resourceUri and add fileName and ty
 
 ```
 
-## Create {#section_lcd_1sc_smb .section}
+## Create
 
 A content item can be created by sending a POST request to the following URI with an Atom entry used to represent the content item:
 
@@ -508,30 +540,34 @@ A content item can be created by sending a POST request to the following URI wit
 
 For example:
 
-POST:
-:   ```
-HTTP/1.1 POST 
-http://host:port/wps/mycontenthandler/wcmrest/Content/
-Content-Type: application/atom+xml
-		<atom:entry xmlns:atom="http://www.w3.org/2005/Atom" xmlns:wcm="wcm/namespace">
-			<wcm:name>Content Name</wcm:name>
-			<atom:title>Content Title</atom:title>
-			<atom:link atom:rel="parent" atom:href="/wps/
-            mycontenthandler/wcmrest/item/49f4ed95-a99f-434c-a415-77c341fa4893"/>
-			<atom:link atom:rel="workflow" atom:href="/wps/
-            mycontenthandler/wcmrest/item/abae799b-4cca-47ae-aad8-b3d8204deefb"/>
-			<atom:link atom:rel="content-template" atom:href="/wps/
-            mycontenthandler/wcmrest/item/588127d0-a4f8-44b5-87a4-5fe3f7bd3da7"/>
-		</atom:entry>
+-   **POST:**
 
-```
+    ```
+    HTTP/1.1 POST 
+    http://host:port/wps/mycontenthandler/wcmrest/Content/
+    Content-Type: application/atom+xml
+    		<atom:entry xmlns:atom="http://www.w3.org/2005/Atom" xmlns:wcm="wcm/namespace">
+    			<wcm:name>Content Name</wcm:name>
+    			<atom:title>Content Title</atom:title>
+    			<atom:link atom:rel="parent" atom:href="/wps/
+                mycontenthandler/wcmrest/item/49f4ed95-a99f-434c-a415-77c341fa4893"/>
+    			<atom:link atom:rel="workflow" atom:href="/wps/
+                mycontenthandler/wcmrest/item/abae799b-4cca-47ae-aad8-b3d8204deefb"/>
+    			<atom:link atom:rel="content-template" atom:href="/wps/
+                mycontenthandler/wcmrest/item/588127d0-a4f8-44b5-87a4-5fe3f7bd3da7"/>
+    		</atom:entry>
+    
+    ```
 
-Response:
-:   ```
-201 Created
-```
 
-## Create from a skeleton {#section_dsq_nsc_smb .section}
+-   **Response:**
+
+    ```
+    201 Created
+    ```
+
+
+## Create from a skeleton
 
 A "skeleton" representation of a content item that is created from a content template can be obtained to aid in the creation of content items. This can be obtained by using a GET request to the following URI. When the skeleton is obtained and completed a POST request can be made by using this data to create the item: /ContentTemplate/template-uuid/new-content.
 

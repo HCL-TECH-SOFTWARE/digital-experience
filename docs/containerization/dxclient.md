@@ -1,4 +1,4 @@
-# DXClient \| HCL Digital Experience {#dxclient}
+# DXClient
 
 DXClient is a tool that helps developers and administrators manage tasks, such as uploading one or more portlets or Script Applications, from source development environments to target HCL DX 9.5 deployments. This tool is capable of taking artifacts developed locally and deploying them to DX 9.5 servers deployed to supported on-premises platforms in standalone, cluster, or farm-topologies and supported Kubernetes platforms.
 
@@ -13,9 +13,9 @@ DXClient is enabled in supported Kubernetes platforms from HCL Digital Experienc
 
 **DXConnect**
 
-DXConnect is a servlet-based application deployed on top of IBM WebSphere Application Server in the HCL DX 9.5 CF19 and later deployments, under the [Configuration Wizard profile - `cw_profile`](../config/cw_overview.html). DXConnect enables the DXClient tool to connect over an HTTP or HTTPS connection from a client development machine or remote server to a source or target HCL DX 9.5 server to execute certain tasks requested via DXClient commands.
+DXConnect is a servlet-based application deployed on top of IBM WebSphere Application Server in the HCL DX 9.5 CF19 and later deployments, under the [Configuration Wizard profile - `cw_profile`](../config/cw_overview.md). DXConnect enables the DXClient tool to connect over an HTTP or HTTPS connection from a client development machine or remote server to a source or target HCL DX 9.5 server to execute certain tasks requested via DXClient commands.
 
-## Architecture {#dxclidnet_architecture .section}
+## Architecture
 
 ![HCL DXClient Architecture diagram](../assets/HCLDXClient_Architecture_Diagram.jpg)
 
@@ -28,7 +28,7 @@ DXConnect is a servlet-based application deployed on top of IBM WebSphere Applic
     **Remember:** Configuration Wizard Administrator credentials are required to access the DXConnect application.
 
 
-## Installing using the Docker image {#dxclient_docker .section}
+## Installing using the Docker image
 
 **Prerequisites:** You must ensure that Docker is installed on the workstation.
 
@@ -45,13 +45,13 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 
     Syntax for Linux and Apple macOS platforms:
 
-    ``` {#codeblock_s5b_krd_xrb}
+    ```
     make unlink
     ```
 
     Syntax for Microsoft Windows platforms:
 
-    ``` {#codeblock_k5b_krd_xrb}
+    ```
     make_unlink.bat
     ```
 
@@ -60,7 +60,7 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 5.  Run docker load < dxclient.tar.gz.
 6.  Add the execution shell script to the bin directory to the PATH variable to be able to call dxclient from any directory.
 
-    ``` {#codeblock_qtb_hl4_cqb}
+    ```
      export PATH=<working-directory>/bin:$PATH
     ```
 
@@ -70,7 +70,7 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 
 7.  Set appropriate permission.
 
-    ``` {#codeblock_hpc_1m4_cqb}
+    ```
     chmod xxx <working-directory>/bin
     ```
 
@@ -82,11 +82,11 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 
 Common command arguments can be pre-configured inside the `config.json` file available under `<working-directory>/store` folder. A sample configuration file that could be used on-premises platforms in standalone, cluster platforms is also available under `<working-directory>/store/samples/sample-configurations/default-config.json` for reference.
 
-## DXClient installation configuration {#section_y3g_s4l_xrb .section}
+## DXClient installation configuration
 
 Common command arguments can be pre-configured inside the `config.json` file available under `dist/src/configuration` folder. A sample configuration file that could be used for any of the supported Kubernetes platforms is also available under `samples/sample-configurations.json` for reference.
 
-``` {#codeblock_pqq_cpl_xrb}
+```
 
 {
     "enableLogger": true,
@@ -133,7 +133,7 @@ Common command arguments can be pre-configured inside the `config.json` file ava
 
 ```
 
-## Installing using the node package file \(deprecated in CF196\) {#dxclient_node .section}
+## Installing using the node package file \(deprecated in CF196\)
 
 **Prerequisites:** Node.js version 12.18.3 is the minimum supported version, and must be installed on the local workstation or automation server.
 
@@ -147,18 +147,18 @@ See video: [Getting Started with DXClient on Red Hat OpenShift using HCL Digital
 
     Syntax for Linux and Apple macOS platforms:
 
-    ``` {#codeblock_ky2_hh4_cqb}
+    ```
     make unlink
     ```
 
     Syntax for Microsoft Windows platforms:
 
-    ``` {#codeblock_cy2_hh4_cqb}
+    ```
     make_unlink.bat
     ```
 
 2.  Ensure that Node.js version 12.18.3 or later version is installed to the local workstation. The DXClient tool is supported on Microsoft Windows, Linux, and Apple macOS workstations and automation servers.
-3.  Download the DXClient.zip file \(DXClient\_VX\_XXXXXXXX-XXXX.zip\) to a local directory on the local workstation from your DX 9.5 CF19 or later entitlements on the [HCL Software License Portal](https://www.hcltech.com/software/support/release). Reference the [Docker](../../9.5/containerization/docker.html) topic for the latest list of HCL DX 9.5 files available for download.
+3.  Download the DXClient.zip file \(DXClient\_VX\_XXXXXXXX-XXXX.zip\) to a local directory on the local workstation from your DX 9.5 CF19 or later entitlements on the [HCL Software License Portal](https://www.hcltech.com/software/support/release). Reference the [Docker](../../9.5/containerization/docker.md) topic for the latest list of HCL DX 9.5 files available for download.
 4.  Extract the DXClient.zip file locally.
 5.  From the extracted folder, run the following command.
 
@@ -210,37 +210,38 @@ See video: [Getting Started with DXClient on Red Hat OpenShift using HCL Digital
         ```
 
 
-DXClient node uninstalling
-:   -   To uninstall the DXClient tool, perform the following commands:
+-   **DXClient node uninstalling**
 
-    For Linux and Apple MacOS platforms:
+    -   To uninstall the DXClient tool, perform the following commands:
 
-    ``` {#codeblock_qyn_rj4_cqb}
-    make clean
-    ```
+        For Linux and Apple MacOS platforms:
 
-    For Microsoft Windows platforms:
+        ```
+        make clean
+        ```
 
-    ``` {#codeblock_ryn_rj4_cqb}
-    make uninstall.bat
-    ```
+        For Microsoft Windows platforms:
 
--   To unlink the DXClient tool, perform the following commands:
+        ```
+        make uninstall.bat
+        ```
 
-    For Linux and Apple MacOS platforms:
+    -   To unlink the DXClient tool, perform the following commands:
 
-    ``` {#codeblock_syn_rj4_cqb}
-    make unlink
-    ```
+        For Linux and Apple MacOS platforms:
 
-    For Microsoft Windows platforms:
+        ```
+        make unlink
+        ```
 
-    ``` {#codeblock_tyn_rj4_cqb}
-    make_unlink.bat
-    ```
+        For Microsoft Windows platforms:
+
+        ```
+        make_unlink.bat
+        ```
 
 
-## Verify the DXClient installation {#section_i2h_x11_2qb .section}
+## Verify the DXClient installation
 
 Successful installation of the DXClient tool can be checked by using the "`dxclient -V`" command, which should show the version of the DXClient tool installed.
 
@@ -293,7 +294,7 @@ Once installed, commands can be executed using the DXClient tool to perform CI /
     -   [XML Access](xmlaccess.md#xmlaccess)
     -   [Restore Script Application](scriptapplications.md#section_fzm_yqg_w4b)
 
-## DXClient commands {#section_gvt_xwv_v4b .section}
+## DXClient commands
 
 Command syntax conventions:
 
@@ -357,128 +358,128 @@ dxclient restart-dx-core
 
 Use the following command to execute manage-subscriber action:
 
-``` {#codeblock_kdv_bn4_cqb}
+```
 dxclient manage-subscriber -h
 ```
 
 Use the following command to execute manage-syndicator action:
 
-``` {#codeblock_zxh_dn4_cqb}
+```
 dxclient manage-syndicator -h
 ```
 
 Use the following command to execute the deploy theme action:
 
-``` {#codeblock_pr4_jn4_cqb}
+```
 dxclient deploy-theme [options]
 ```
 
 Use the following command to execute the undeploy theme action:
 
-``` {#codeblock_spt_p33_ppb}
+```
 dxclient undeploy-theme [options]
 
 ```
 
 Use the following command to execute the manage-syndicator get-syndication-report action:
 
-``` {#codeblock_i2c_nn4_cqb}
+```
 dxclient  manage-syndicator get-syndication-report [options]
 ```
 
 Use the following command to execute the shared-library action:
 
-``` {#codeblock_lzk_pn4_cqb}
+```
 dxclient  shared-library [options]
 ```
 
 Use the following command to execute the delete DAM schema action:
 
-``` {#codeblock_zjs_lqz_mqb}
+```
 dxclient delete-dam-schema [options]
 ```
 
 Use the following command to list all DAM schemas present:
 
-``` {#codeblock_u2m_xtt_yqb}
+```
 dxclient list-dam-schemas  [options]
 ```
 
 Use the following command to export the personalization rules from the target server:
 
-``` {#codeblock_w52_ztt_yqb}
+```
 dxclient pzn-export  [options]
 ```
 
 Use the following command to import the personalization rules into the target server:
 
-``` {#codeblock_ebj_15t_yqb}
+```
 dxclient pzn-import  [options]
 ```
 
 Use the following command to manage virtual portal tasks in the DX server:
 
-``` {#codeblock_t1t_c5t_yqb}
+```
 dxclient manage-virtual-portal [options]
 ```
 
 Use the following command to register subscriber:
 
-``` {#codeblock_p4y_3qd_lrb}
+```
 dxclient manage-dam-staging register-dam-subscriber [options]
 ```
 
 Use the following command to deregister subscriber:
 
-``` {#codeblock_fjx_jqd_lrb}
+```
 dxclient manage-dam-staging deregister-dam-subscriber  [options]
 ```
 
 Use the following command to trigger manual sync:
 
-``` {#codeblock_bgb_lqd_lrb}
+```
 dxclient manage-dam-staging trigger-staging  [options]
 ```
 
 Use the following command to create credential vault slot in the DX server:
 
-``` {#codeblock_dv4_mqd_lrb}
+```
 dxclient create-credential-vault  [options]
 ```
 
 Use the following command to create the syndication relation between syndicator and subscriber in DX server:
 
-``` {#codeblock_czp_nqd_lrb}
+```
 dxclient create-syndication-relation  [options]
 ```
 
 Use the following command to create, update, delete, export or import a custom property from an existing Resource Environment Provider:
 
-``` {#codeblock_y2w_4qd_lrb}
+```
 dxclient resource-env-provider [options]
 ```
 
 Use this command to export WCM libraries
 
-``` {#codeblock_x3n_h4w_wrb}
+```
 dxclient wcm-library-export
 
 ```
 
 Use this command to import WCM libraries
 
-``` {#codeblock_b21_4pw_wrb}
+```
 dxclient wcm-library-import
 
 ```
 
 Use the `dx-core-configuration-reports` command to get a summary of the configurations of a single DX server or both source and target DX servers, which users can use to compare.
 
-``` {#codeblock_pvz_nmw_wrb}
+```
 dxclient dx-core-configuration-reports [OPTIONS]
 ```
 
-## DXClient Help commands {#section_bkx_bxv_v4b .section}
+## DXClient Help commands
 
 The following commands show the Help documents for DXClient command usage.
 
@@ -504,9 +505,9 @@ Use the following command to display the detailed help for a specific command:
 dxclient help [command]
 ```
 
-## Accessing the ConfigWizard admin console in a container environment {#section_skh_ccz_msb .section}
+## Accessing the ConfigWizard admin console in a container environment
 
 You can access the ConfigWizard admin console in a container environment from your local system. For more information, refer to [Accessing the ConfigWizard admin console in a container environment](helm_access_configwizard.md).
 
-**Parent topic:**[Deploy DX components using HCL DXClient and DXConnect \| HCL Digital Experience](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)
+**Parent topic:**[Deploy DX components using HCL DXClient and DXConnect](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)
 

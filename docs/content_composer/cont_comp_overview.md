@@ -1,4 +1,4 @@
-# HCL Content Composer \| HCL Digital Experience {#HCL_Content_Composer}
+# HCL Content Composer
 
 The HCL Content Composer delivers simplified processes for creating and managing Digital Experience site content.
 
@@ -6,7 +6,7 @@ Users can access the Content Composer features in HCL Digital Experience 9.5 Con
 
 Follow the instructions below to install, configure, and use the HCL Digital Experience 9.5 Content Composer.
 
-## Limitations {#section_s4j_q2k_xnb .section}
+## Limitations
 
 The following limitations exist in HCL Content Composer:
 
@@ -22,7 +22,7 @@ The following limitations exist in HCL Content Composer:
 
     1.  On a Kubernetes platform, it is recommended that you use authoring for any kind of content editing; or
     2.  Use the IBM Extended Cache Monitor for IBM WebSphere Application Server.
-        -   Documentation resource: [IBM Extended Cache Monitor for IBM WebSphere Application Server technology preview](https://www.ibm.com/developerworks/websphere/downloads/cache_monitor.html)
+        -   Documentation resource: [IBM Extended Cache Monitor for IBM WebSphere Application Server technology preview](https://www.ibm.com/developerworks/websphere/downloads/cache_monitor.md)
 -   HCL Content Composer 9.5 CF191 and higher releases supports the following Content Elements only:
     -   Text elements
     -   Media elements \(File and Image\)

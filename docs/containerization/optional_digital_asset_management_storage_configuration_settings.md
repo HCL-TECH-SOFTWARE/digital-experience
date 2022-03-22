@@ -1,4 +1,4 @@
-# Optional: Configuration Settings to Manage Digital Asset Management Media upload storage services \| HCL Digital Experience {#optional_digital_asset_management_storage_configuration_settings .concept}
+# Optional: Configuration Settings to Manage Digital Asset Management Media upload storage services
 
 This section outlines optional configuration steps to tune Digital Asset Management storage services.
 
@@ -37,5 +37,5 @@ See the following sections for additional information:
 -   [Deployment](deployment.md)
 -   [Containerization Limitations/Requirements](limitations_requirements.md)
 
-**Parent topic:**[Container administration \| HCL Digital Experience 9.5](../containerization/maintenance.md)
+**Parent topic:**[Container administration 9.5](../containerization/maintenance.md)
 

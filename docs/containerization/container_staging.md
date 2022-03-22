@@ -1,12 +1,12 @@
-# Container Staging \| HCL Digital Experience {#Container_Staging}
+# Container Staging
 
 This section describes how to move from an existing HCL Portal environment to a containerized Digital Experience environment.
 
-## Prerequisite {#section_hvg_144_pnb .section}
+## Prerequisite
 
 The target environment that is existing in a customer-owned Kubernetes environment requires HCL Digital Experience 9.5 and IBM WebSphere Application Server 9.0.5. The HCL Digital Experience and IBM WebSphere Application Server product versions for the source and target environment must be at the same level, though it is sufficient to be on IBM WebSphere Application Server 8.5.5.x with JDK 8.
 
-## Export the source HCL Portal server {#section_jwd_qqp_pnb .section}
+## Export the source HCL Portal server
 
 Follow these steps to export the source HCL Portal server.
 
@@ -40,7 +40,7 @@ Follow these steps to export the source HCL Portal server.
     3.  Save the output file.
 10. When applicable, save all custom files \(application and theme EAR files, WAR files\) to an external or shared drive, for use later when importing to the target environment.
 
-## Import the source HCL Portal server {#section_umg_hrp_pnb .section}
+## Import the source HCL Portal server
 
 Log in to the machine from where you will access your HCL Portal Container.
 
@@ -166,7 +166,7 @@ mv /tmp/deployed/archive/* /opt/HCL/wp_profile/PortalServer/deployed/archive/
 
 18. Restart the HCL Portal server and check /opt/HCL/wp\_profile/logs/WebSphere\_Portal/SystemOut.log to ensure no startup errors.
 
-## Syndicate the source and target environments {#section_zkx_z5p_pnb .section}
+## Syndicate the source and target environments
 
 Follow these steps to syndicate the source and target environments.
 
@@ -203,5 +203,5 @@ Follow these steps to syndicate the source and target environments.
     You do not need to disable Practitioner Studio to do this syndication.
 
 
-**Parent topic:**[Digital Experience Application deployment \| HCL Digital Experience](../containerization/ci_cd.md)
+**Parent topic:**[Digital Experience Application deployment](../containerization/ci_cd.md)
 

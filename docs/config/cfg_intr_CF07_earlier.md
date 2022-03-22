@@ -1,4 +1,4 @@
-# CF07 and earlier: Changing the portal URI after an installation {#task_vwk_fy2_vs .task}
+# CF07 and earlier: Changing the portal URI after an installation
 
 You can change the default portal Uniform Resource Identifier \(URI\) any time after you install HCL Digital Experience. Some applications have a fixed context root that cannot be changed.
 

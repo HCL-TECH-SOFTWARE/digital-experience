@@ -1,12 +1,12 @@
-# Create a deployment manager \| HCL Digital Experience {#createadeploymentmanagerprofile .concept}
+# Create a deployment manager
 
 When you set up a cluster, you must create a deployment manager profile. Use the Configuration Wizard to set up the profile.
 
-## Configuration Wizard { .section}
+## Configuration Wizard
 
 The **Create a Deployment Manager** is a sub step in the **Set Up a Cluster** configuration.
 
-# Creating a deployment manager {#task .task}
+# Creating a deployment manager
 
 You can create the new deployment manager profile on the same server as portal or on a remote server.
 
@@ -16,51 +16,63 @@ Each potential step in the configuration is included.
 
 1.  Manual Step: Install the deployment manager software.
 
-    Condition
-    :   Remote server deployment manager
+    -   **Condition**
 
-    ConfigEngine task
-    :   None
+        Remote server deployment manager
+
+    -   **ConfigEngine task**
+
+        None
 
 2.  Create the deployment manager profile.
 
-    Condition
-    :   None
+    -   **Condition**
 
-    ConfigEngine task
-    :   None
+        None
+
+    -   **ConfigEngine task**
+
+        None
 
 3.  Start the deployment manager server.
 
-    Condition
-    :   None
+    -   **Condition**
 
-    ConfigEngine task
-    :   None
+        None
+
+    -   **ConfigEngine task**
+
+        None
 
 4.  Augment the deployment manager profile with the portal profile template.
 
-    Condition
-    :   None
+    -   **Condition**
 
-    ConfigEngine task
-    :   None
+        None
+
+    -   **ConfigEngine task**
+
+        None
 
 5.  Stop the deployment manager.
 
-    Condition
-    :   None
+    -   **Condition**
 
-    ConfigEngine task
-    :   None
+        None
+
+    -   **ConfigEngine task**
+
+        None
 
 6.  Start the deployment manager after the profile augmentation is complete.
 
-    Condition
-    :   None
+    -   **Condition**
 
-    ConfigEngine task
-    :   None
+        None
+
+    -   **ConfigEngine task**
+
+        None
 
 
 If you changed the context root during the installation or configuration of HCL Digital Experience, then you must complete the following steps:

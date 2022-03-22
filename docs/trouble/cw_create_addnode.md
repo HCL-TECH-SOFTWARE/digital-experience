@@ -1,4 +1,4 @@
-# Troubleshooting: Create an additional cluster node {#cw_create_addnode .concept}
+# Troubleshooting: Create an additional cluster node
 
 Adding a node to a cluster is part of setting up a clustered environment. If you encounter a failure during the configuration process, determine whether you can run the step again, skip the step, or if you must clean up the step. For some failed steps, learn how to correct the issue and recover from the failure.
 
@@ -6,7 +6,7 @@ Each potential step in the configuration is included. Because the steps vary dep
 
 **Tip:** If you must go through the wizard again, download the wizard selections that you made to save time. Then, cancel the configuration. Start the process over and upload your saved selections. Correct or enter values for the parameters that caused the failure.
 
-# Manual Step: Install profile templates {#AppropriateActionsForStepIfYouMustR .task}
+# Manual Step: Install profile templates
 
 Manual step errors occur outside the context of the wizard.
 
@@ -16,7 +16,7 @@ Manual step errors occur outside the context of the wizard.
 |Skip the step|If you successfully completed the step before, then skip this step.|
 |Clean up step|None required|
 
-# Manual Step: Install portal binary files on the server where you plan to add a node to your cluster {#AppropriateActionsForIfYouMustRunAC .task}
+# Manual Step: Install portal binary files on the server where you plan to add a node to your cluster
 
 Manual step errors occur outside the context of the wizard.
 
@@ -26,7 +26,7 @@ Manual step errors occur outside the context of the wizard.
 |Skip the step|If you successfully completed the step before, then skip this step.|
 |Clean up step|None required|
 
-# Manual Step: Copy the database drivers from the primary node to the additional node {#AppropriateActionsForIfYouMustRunAC-14 .task}
+# Manual Step: Copy the database drivers from the primary node to the additional node
 
 Manual step errors occur outside the context of the wizard.
 
@@ -36,7 +36,7 @@ Manual step errors occur outside the context of the wizard.
 |Skip the step|If you successfully completed the step before, then skip this step.|
 |Clean up step|None required|
 
-# Manual Step: Verify that the portal node and deployment manager system clocks are within 5 minutes of each other {#AppropriateActionsForIfYouMustRunAC-15 .task}
+# Manual Step: Verify that the portal node and deployment manager system clocks are within 5 minutes of each other
 
 Manual step errors occur outside the context of the wizard.
 
@@ -46,7 +46,7 @@ Manual step errors occur outside the context of the wizard.
 |Skip the step|If you successfully completed the step before, then skip this step.|
 |Clean up step|None required|
 
-# Create the profile for the secondary portal node {#AppropriateActionsForStepIfYouMustR-16 .task}
+# Create the profile for the secondary portal node
 
 If the step fails, see the logs for the manageprofiles command to determine why the step failed. The wizard uses the portal profile templates to create the deployment manager profile. An error might result from a problem with the profile templates. The error message in the log provides more information.
 
@@ -74,7 +74,7 @@ Example:
 
 |
 
-# Federate the node {#AppropriateActionsForStepIfYouMustR-17 .task}
+# Federate the node
 
 If this step fails see the addNode.log to determine why the step failed. In most cases, you can correct the error condition and run the step again. You do not have to cancel or reset the configuration steps.
 
@@ -92,7 +92,7 @@ wp_profile/bin/removeNode.sh
 
 |
 
-# Configure the dynamic cluster node {#AppropriateActionsForStepIfYouMustR-18 .task}
+# Configure the dynamic cluster node
 
 If this step fails, click **View Results** to see the applicable section of the ConfigTrace.log.
 
@@ -102,7 +102,7 @@ If this step fails, click **View Results** to see the applicable section of the 
 |Skip the step|If you successfully completed the step before, then skip this step.|
 |Clean up step|None required|
 
-# Add a secondary node to the cluster {#AppropriateActionsForStepIfYouMustR-19 .task}
+# Add a secondary node to the cluster
 
 |Actions|Notes|
 |-------|-----|
@@ -110,7 +110,7 @@ If this step fails, click **View Results** to see the applicable section of the 
 |Skip the step|If you successfully completed the step before, then skip this step.|
 |Clean up step|None required|
 
-# Start the portal server {#AppropriateActionsForStepIfYouMustR-110 .task}
+# Start the portal server
 
 |Actions|Notes|
 |-------|-----|

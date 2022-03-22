@@ -1,4 +1,4 @@
-# Configure the OpenLDAP container image to the HCL Digital Experience 9.5 Container Deployment {#configure_openldap_image .concept}
+# Configure the OpenLDAP container image 
 
 Read more about configuring the OpenLDAP container image to the 9.5 container deployment, which is available with HCL Digital Experience 9.5 Container Update release CF181 and later.
 
@@ -10,7 +10,7 @@ Consult the HCL Digital Experience 9.5 [Container deployment](../install/rm_cont
 
 **Note:** The OpenLDAP port is not accessible externally on non-OpenShift Kubernetes platforms. This feature is considered for future releases.
 
-## Usage { .section}
+## Usage
 
 Deployment of the OpenLDAP container in a production environment is not supported. This optional process of deploying OpenLDAP is solely intended for non-production environments to help one get started with HCL Digital Experience 9.5 container environment deployment. For production environments, use a production-quality LDAP \(e.g. one with security hardening, firewall protection, etc\). For production use, Administrators can choose to deploy their organization's LDAP \(and possibly mirror the contents of that enterprise LDAP back to this newly deployed LDAP\) or connect to an already defined LDAP server or database or custom user registry.
 
@@ -45,11 +45,11 @@ To work around this limitation, and configure OpenLDAP to DX with custom values,
 
 Once these steps are completed, the DX container is recreated to run the OpenLDAP configuration task.
 
-For more information on `dxctl`, see the [dxctl \| HCL Digital Experience](dxtools_dxctl.md) topic.
+For more information on `dxctl`, see the [dxctl](dxtools_dxctl.md) topic.
 
 Video: [Using OpenLDAP with HCL DX 9.5 on Red Hat OpenShift](https://www.youtube.com/watch?v=JLAahtJI_Y4)
 
-## Deployment { .section}
+## Deployment
 
 To deploy the OpenLDAP image container for use with an HCL Digital Experience 9.5 container deployment, first create or update the dx-deployment config map.
 
@@ -97,7 +97,7 @@ data:
 
 Once the OpenLDAP container is fully deployed, the password entry can be removed from the config map.
 
-Sample users have a password of passw0rd. Additional users can be added or changes made to the data using ldapadd, ldapdelete and ldapmodify commands according to instructions in the [OpenLDAP Administrator Guide](https://www.openldap.org/doc/admin24/guide.html).
+Sample users have a password of passw0rd. Additional users can be added or changes made to the data using ldapadd, ldapdelete and ldapmodify commands according to instructions in the [OpenLDAP Administrator Guide](https://www.openldap.org/doc/admin24/guide.md).
 
 Sample ldif file format for adding users:
 
@@ -175,11 +175,11 @@ If you are adding the OpenLDAP container to an existing HCL Digital Experience 9
 
 **Note:** TLS is 'allowed' out of the box with the HCL Digital Experience 9.5 container deployment, but the certificates created with the OpenLDAP container are not imported for use by HCL Digital Experience 9.5 containers.
 
-## Maintenance and Support {#section_nqz_pld_xlb .section}
+## Maintenance and Support
 
 HCL Digital Experience will periodically provide updated OpenLDAP container images in the HCL Digital Experience entitlements available for customers from the [HCL Software License Portal](https://www.hcltech.com/software/support/release). HCL Product Support may be contacted with questions regarding this installation procedure. For additional information and support for OpenLDAP topics, please reference [https://www.openldap.org/](https://www.openldap.org/).
 
 Consult the HCL Digital Experience 9.5 [Container deployment](../install/rm_container_deployment.md) page for the latest list of Digital Experience 9.5 container components available with your Digital Experience entitlements from the [HCL Software License Portal](https://www.hcltech.com/software/support/release).
 
-**Parent topic:**[Customizing your container deployment \| HCL Digital Experience](../containerization/customization.md)
+**Parent topic:**[Customizing your container deployment](../containerization/customization.md)
 

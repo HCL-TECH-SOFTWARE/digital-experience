@@ -1,18 +1,18 @@
-# Cluster Step 2: Migrate node profiles \| HCL Digital Experience {#cw_migrate_cluster_2 .concept}
+# Cluster Step 2: Migrate node profiles
 
 Use the Configuration Wizard to upgrade the node profiles for a cluster environment. Use the following information to get familiar with the information that you must provide in the wizard and the configuration procedure that it generates.
 
-## Configuration Wizard { .section}
+## Configuration Wizard
 
 Select **Migrate to a New Version**, and choose the **Migrate a Cluster Step 2: Migrate Node Profiles** option.
 
 **Note:** This option is not available for IBM® z/OS®.
 
-# Worksheet {#worksheet .reference}
+# Worksheet
 
 To set up the migration, you answer questions about your wanted configuration. Some fields apply to migration configurations. Some fields are required based on your environment. The remaining fields are advanced and do not apply to most configurations.
 
-## Minimal required fields { .section}
+## Minimal required fields
 
 The following table lists the fields that are unique to the Migrate a cluster step 2: Migrate node profiles configuration. You might be prompted for additional information about system or user IDs and passwords that you defined during the portal installation process.
 
@@ -35,7 +35,7 @@ The following table lists the fields that are unique to the Migrate a cluster st
 |**Where is the target application server installed**|/opt/IBM/WebSphere/AppServer| |
 |**Target temporary path**|/tmp| |
 
-## Advanced fields { .section}
+## Advanced fields
 
 The following table lists the advanced fields that are unique to the Migrate a cluster step 2: Migrate node profiles configuration option. Click **Advanced** on the Answer Questions page for the target system to see the advanced properties. Default values are provided for advanced fields that are required.
 
@@ -43,7 +43,7 @@ The following table lists the advanced fields that are unique to the Migrate a c
 |-----------|-------|----------|
 |**JVM heap size**|2048| |
 
-# Migrate a cluster step 2: Migrate node profiles option {#task .task}
+# Migrate a cluster step 2: Migrate node profiles option
 
 After you answer questions and provide information about your migration, the wizard generates a custom configuration procedure.
 
@@ -53,51 +53,63 @@ If you click **View Step Command**, you can see the task and properties that are
 
 1.  Manual Step: Stop the source deployment manager and node agents
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 2.  Manual Step: Start the target deployment manager
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 3.  Generate the files for remote migration
 
-    Condition
-    :   The target portal is on a different server than the source.
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        The target portal is on a different server than the source.
+
+    -   **ConfigEngine task**
+
+        none
 
 4.  Manual Step: Copy the remote migration package to the source environment
 
-    Condition
-    :   The target portal is on a different server than the source.
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        The target portal is on a different server than the source.
+
+    -   **ConfigEngine task**
+
+        none
 
 5.  Create a backup of the source portal profile
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 6.  Manual Step: Create a backup of the remote source portal profile
 
-    Condition
-    :   The target portal is on a different server than the source.
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        The target portal is on a different server than the source.
+
+    -   **ConfigEngine task**
+
+        none
 
     **Note:** If you are migrating from HCL Portal Enable or Portal Extend offerings to Portal Server or Web Content Management offerings, complete the following steps manually.
 
@@ -107,42 +119,52 @@ If you click **View Step Command**, you can see the task and properties that are
     4.  Save changes to the wps.properties file.
 7.  Manual Step: Update the deployment manager settings
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 8.  Manual Step: If the backup profile is larger than 2 GB, clean up the backup profile
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 9.  Create a default profile
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 10. Import the backup profile
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 11. Manual Step: If you cleaned up the backup profile, restore the JCR content
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 

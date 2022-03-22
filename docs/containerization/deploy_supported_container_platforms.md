@@ -1,4 +1,4 @@
-# HCL Digital Experience 9.5 Container Deployment {#deploy_supported_container_platforms .concept}
+# HCL Digital Experience 9.5 Container Deployment
 
 This section outlines the supported container platforms for HCL Digital Experience 9.5, and instructions on how to deploy to supported container environments.
 
@@ -19,9 +19,9 @@ The following container platforms are supported.
 
 **Note:** Initial login credentials for the DX Docker image are: `wpsadmin/wpsadmin`.
 
--   **[Deploy DX 9.5 Container to Red Hat OpenShift \| HCL Digital Experience](../containerization/openshift.md)**  
+-   **[Deploy DX 9.5 Container to Red Hat OpenShift](../containerization/openshift.md)**  
 Learn how to deploy HCL Digital Experience \(DX\) 9.5 to Red Hat OpenShift platform.
--   **[Deploy DX Container to Amazon EKS \| HCL Digital Experience](../containerization/kubernetes_eks.md)**  
+-   **[Deploy DX Container to Amazon EKS](../containerization/kubernetes_eks.md)**  
 Learn how to deploy, find, understand, and customize the different releases of HCL Digital Experience 9.5 containers, along with Ambassador to Kubernetes, as verified in [Amazon Elastic Kubernetes Service \(Amazon EKS\)](https://aws.amazon.com/eks/).
 -   **[Deploying HCL Digital Experience Containers to Google Kubernetes Engine \(GKE\)](../containerization/google_gke.md)**  
 Learn how to deploy different releases of HCL Digital Experience \(DX\) containers, along with the Ambassador, to Kubernetes as verified in [Google Kubernetes Engine \(GKE\)](https://console.cloud.google.com/marketplace/details/google-cloud-platform/container-engine).

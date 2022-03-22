@@ -1,10 +1,10 @@
-# Search REST API specification \| HCL Digital Experience {#reference_rc2_b34_yr .reference}
+# Search REST API specification
 
 The following topics describe-s- the API calls to search HCL Digital Experience. You can search HCL Digital Experience web pages and content to find content that contains a specific text string in its title or content, or is tagged with a specific tag.
 
 Beginning with [HCL DX 9.5 Container Update and CF 200](../overview/new_cf_95.md), a new API explorer is available that allows developers using the Digital Experience Search REST APIs to explore and test these APIs. See the topic [Digital Experience Search REST API Explorer](search.md) below for details.
 
-## Context Paths { .section}
+## Context Paths
 
 There are a number of different context paths available for this API to allow for different authentication mechanisms:
 
@@ -13,7 +13,7 @@ There are a number of different context paths available for this API to allow fo
 |/PORTAL\_CONTEXT/contenthandler/searchfeed/search|None|
 |/PORTAL\_CONTEXT/mycontenthandler/searchfeed/search|Basic|
 
-## Parameters { .section}
+## Parameters
 
 The order of the parameters in the requests does not matter. The parameter names are case-sensitive; they must be entered in the format documented. Any unknown or unsupported parameters that are submitted as part of a request is ignored.
 
@@ -39,25 +39,32 @@ The request must be a standard HTTP GET or POST command.
 
  The following operators are supported:
 
-AND or &&
-:   Searches for items that contain both words. For example: query=red%20AND%20test returns items that contain both the word red and test. AND is the default operator.
+-   **AND or &&**
 
-NOT or !
-:   Excludes the word that follows the operator from the search. For example: query=test%20NOT%20red returns items that contain the word test, but not the word red.
+Searches for items that contain both words. For example: query=red%20AND%20test returns items that contain both the word red and test. AND is the default operator.
 
-OR
-:   Searches for items that contain either of the words. For example: query=test%20OR%20red.
+-   **NOT or !**
+
+Excludes the word that follows the operator from the search. For example: query=test%20NOT%20red returns items that contain the word test, but not the word red.
+
+-   **OR**
+
+Searches for items that contain either of the words. For example: query=test%20OR%20red.
 
 To search for a phrase, enclose the phrase in quotation marks \(" "\).
 
-+
-:   The plus sign indicates that the word must be present in the result. For example: query=+test%20red returns only items that contain the word test and many that also contain red, but none that contain only the word red.
+-   **+**
 
-?
-:   Use a question mark to match individual characters. For example: query=te%3Ft returns items that contain the words test, text, tent, and others that begin with te.
+The plus sign indicates that the word must be present in the result. For example: query=+test%20red returns only items that contain the word test and many that also contain red, but none that contain only the word red.
 
--:
-:   The dash prohibits the return of a word. This operator is similar to NOT. For example: query=test%20-red returns items that contain the word test, but not the wordred.
+-   **?**
+
+Use a question mark to match individual characters. For example: query=te%3Ft returns items that contain the words test, text, tent, and others that begin with te.
+
+-   **-:**
+
+The dash prohibits the return of a word. This operator is similar to NOT. For example: query=test%20-red returns items that contain the word test, but not the wordred.
+
 
  **Note:** Wildcard searches are permitted, but wildcard only searches \(\*\) are not.
 
@@ -77,11 +84,11 @@ To search for a phrase, enclose the phrase in quotation marks \(" "\).
 |facet|Specifies which facets are returned for the query, in addition to search results.|Addition to search results. For more information, see *Facets API*.|
 |index|Specifies which index \(collection\) to use for the search|For more information, see *Indexes API*.|
 
-## Examples { .section}
+## Examples
 
 /searchfeed/search?queryLang=en&locale=en&resultLang=en&query=development&scope=1345374377545&start=0&results=10 Search query with query text = development.
 
-## Response Format { .section}
+## Response Format
 
 The response is Atom-compliant. The following table describes the significance of the elements that are returned in the response:
 
@@ -128,7 +135,7 @@ The response is Atom-compliant. The following table describes the significance o
 -   The ibmsc identifier is used to refer to the namespace http://www.ibm.com/search/content/2010.
 -   The spelling identifier is used to refer to the namespace http://a9.com/-/opensearch/extensions/spelling/1.0/.
 
-## Example { .section}
+## Example
 
 To search for all content across HCL Digital Experience that contains the text Development, send the following HTTP request:
 

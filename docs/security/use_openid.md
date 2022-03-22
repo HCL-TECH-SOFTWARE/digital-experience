@@ -1,4 +1,4 @@
-# Integrating with OpenID authentication {#use_openid .task}
+# Integrating with OpenID authentication
 
 Web applications provide information and services to public users and personalized information and services to authenticated users. Users often work with multiple web applications, which require multiple IDs and passwords. This requirement can be difficult to maintain. Integrating identity providers \(Google, Yahoo, or Facebook\) into your site can simplify logging in for your users.
 

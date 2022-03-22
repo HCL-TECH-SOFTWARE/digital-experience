@@ -1,8 +1,8 @@
-# Content Security Policy \| HCL Digital Experience {#content_security_policy .concept}
+# Content Security Policy
 
 The Content-Security-Policy header is used by modern browsers to enhance security of HCL Digital Experience site documents or webpages by allowing HCL Digital Experience administrators or developers declare which dynamic resources are allowed to load.
 
-## Overview {#section_urf_1q5_r4b .section}
+## Overview
 
 Content Security Policy \(CSP\) is a well-known defense against cross-site scripting \(XSS\) attacks \(delivery of malicious code along with intended content\). CSP provides browsers with the following capabilities:
 
@@ -16,7 +16,7 @@ For more information, see the introductory Google Web Fundamentals article on [C
 
 With HCL Digital Experience Container Update CF192 and higher releases, developers can apply platform support and guidance to update their DX sites to verify scripts requested to execute are coming from trusted sources before rendering pages to end users. See the guidance topics for Content Security Policy as listed below.
 
-## Limitations {#section_gml_gq5_r4b .section}
+## Limitations
 
 CSP has the following limitations:
 

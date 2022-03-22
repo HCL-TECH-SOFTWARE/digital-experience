@@ -1,4 +1,4 @@
-# Install and uninstall add-ons using the Configuration Wizard {#addons .concept}
+# Install and uninstall add-ons using the Configuration Wizard
 
 You can install add-on functionality to your HCL Portal with the solution installer through the Configuration Wizard. The add-ons that are accepted by the configuration options are .paa files. For more information, see the solution installer documentation.
 
@@ -14,15 +14,17 @@ Complete the following steps to use the Configuration Wizard to install or unins
     -   Click **Download Files** to run the steps remotely.
     -   Click **Run All Steps** to run the steps locally.
 
-## Typical versus advanced installation scenarios { .section}
+## Typical versus advanced installation scenarios
 
 Two different installation scenarios are supported through the **Add On New Capability** options in the Configuration Wizard. These scenarios are the typical and advanced installation scenarios.
 
-Typical
-:   The typical scenario is for simple paa files that often contain only one component, but is not limited to it, and can be installed directly without any additional configuration. The typical scenario installs/registers the paa file with the configEngine and then automatically deploys the content to HCL Portal.
+-   **Typical**
 
-Advanced
-:   The advanced scenario provides you with much greater flexibility in how to install the paa file. If you select **Advanced Install** on the Install type screen, when the workflow completes, the paa file is installed to the ConfigEngine, but it is not deployed to portal. Instead, a new configuration option specific to that paa file is generated. Use the generated instructions to configure the deployment settings. Finally, a **Launch configuration** button displays so that you can continue with the deployment. After you click **Launch configuration**, follow the steps to ensure that the paa file is deployed.
+    The typical scenario is for simple paa files that often contain only one component, but is not limited to it, and can be installed directly without any additional configuration. The typical scenario installs/registers the paa file with the configEngine and then automatically deploys the content to HCL Portal.
+
+-   **Advanced**
+
+    The advanced scenario provides you with much greater flexibility in how to install the paa file. If you select **Advanced Install** on the Install type screen, when the workflow completes, the paa file is installed to the ConfigEngine, but it is not deployed to portal. Instead, a new configuration option specific to that paa file is generated. Use the generated instructions to configure the deployment settings. Finally, a **Launch configuration** button displays so that you can continue with the deployment. After you click **Launch configuration**, follow the steps to ensure that the paa file is deployed.
 
     You can select the components that you want to install, if there is more than one component from the information that is presented in this additional configuration option. This step is useful where demonstration content is included in the paa file. Or, if one of the components is designated as virtual portal content only.
 
@@ -33,4 +35,5 @@ Advanced
     The **Deploy-Remove\_PAA-\*.\*** option is added to the **Add-on new capability** section of the configuration wizard. After the configuration option is added to the configuration wizard, you can add modifications to thepaa file. When you uninstall by using the **Uninstall Add-ons** with the **Advanced** setting the **Deploy-Remove-PAA-\*.\*** option is removed from the configuration wizard repository. However, the option still displays in the list of active configuration options under the **Add On New Capability section** of the wizard. To remove these items, you need to restart server1 in the cw\_profile. Restarting refreshes the repository and ensures that the items no longer show up.
 
     **Note:** If you install and deploy a paa file by using the advanced scenario, you must also remove the content that uses the paa-specific option before you uninstall. You can remove this content by using the advanced selection during the **Uninstall add-ons** option.
+
 

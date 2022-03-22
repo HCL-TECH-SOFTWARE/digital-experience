@@ -1,16 +1,16 @@
-# Configure and access logs in Helm {#helm_dam_backup_restore_image .concept}
+# Configure and access logs in Helm
 
 This topic shows you how to configure logging in Helm, as well as how to access Kubernetes container logs.
 
 HCL Digital Experience logs are important for maintaining and troubleshooting both environments and custom applications. These logs frequently form part of the essential information requested by HCL Support to diagnose issues. In a Helm-based deployment of DX, logs are exposed as Kubernetes container logs which give a consistent mechanism for retrieving the logs of different components, as well as making them consumable by cluster-level logging solutions in Kubernetes.
 
-## Configure logging {#helm_configure_logging .section}
+## Configure logging
 
 In CF200, a new mechanism is introduced for configuring log settings at runtime \(without pod restarts\) in Helm-based DX deployments. Log levels and trace strings are set in your custom-values.yaml file and applied using a `helm upgrade`command. Under the covers, this sets values in a new `<release-name>-global`config map which are monitored by the various running DX containers. When the containers detect a change to the values pertinent to themselves, they update their log configurations accordingly \(without restarting\). At that point, the new log behavior is immediately reflected in their Kubernetes logs.
 
 **Note:** OpenLDAP, Ambassador, and Redis are not yet configurable using this feature.
 
-## Setting the log configuration for a DX application {#setting_log_config_dx_app .section}
+## Setting the log configuration for a DX application
 
 You can set a desired log configuration for a DX application by specifying an appropriate log string in your Helm custom-values.yaml file. Place the log string in the `level` property for the specified application. These properties are found in the `logging` subsection of the `incubator` section. For example, to set the configuration for Content Composer, use the following property:
 
@@ -24,7 +24,7 @@ incubator:
 
 You can see the string format in the following section. Once the property is set, run the `helm upgrade` command.
 
-## Log configuration string format {#log_config_string_format .section}
+## Log configuration string format
 
 Log configuration strings \(the values set in the `level` properties of the custom-values.yaml\) use the following common format, where multiple trace settings for the same application are separated by commas:
 
@@ -50,7 +50,7 @@ wp_profile:com.hcl.App=info,wp_profile:com.hcl.util.Data=finest
 api:server-v1:dist=info,worker:server-v1:dist=info,api:server-v1:dist:server=debug
 ```
 
-## Supported application and component names {#supported_app_component_names .section}
+## Supported application and component names
 
 Following are the supported application and component names, where the application names are the subsections under `logging` in the custom-values.yaml:
 
@@ -67,15 +67,15 @@ Following are the supported application and component names, where the applicati
 |`ringApi`|`api`|
 |`runtimeController`|`controller`|
 
-## Supported log levels {#supported_log_levels .section}
+## Supported log levels
 
 For most applications, three log levels are supported: `debug`, `info`, and `error`. Core and Remote Search, where all existing WebSphere Application Server trace levels are supported, such as `all` or `finest`.
 
-## Accessing Kubernetes container logs {#accessing_k8s_container_logs .section}
+## Accessing Kubernetes container logs
 
 Container logs for DX applications can be accessed individually or collectively, as described in the following subsections. Logs for DX Core and Remote Search are accessed differently from other applications, as those pods have multiple containers to provide access to additional logs.
 
-## Accessing DX Core logs {#accessing_dx_core_logs .section}
+## Accessing DX Core logs
 
 To access a Core application log, use the command:
 
@@ -102,7 +102,7 @@ By default, two sidecar containers are launched with Core:
 
 For information on configuring additional Core sidecar log containers, please see [Configure Core sidecar logging](helm_additional_tasks.md#configure_core_sidecar_logging).
 
-## Accessing Remote Search logs {#accessing_remote_search_logs .section}
+## Accessing Remote Search logs
 
 To access a Remote Search application log, use the command:
 
@@ -129,7 +129,7 @@ By default, two sidecar containers are launched with Remote Search:
 
 For information on configuring additional Remote Search sidecar log containers, please see [Configure Remote Search sidecar logging](helm_additional_tasks.md#configure_rs_sidecar_logging).
 
-## Accessing logs for other applications {#accessing_logs_other_apps .section}
+## Accessing logs for other applications
 
 Applications other than Core and Remote Search do not have logging sidecar containers and only provide a single log per pod, which can typically be obtained using the command: `kubectl logs -n <namespace> <pod-name>` \(omitting a container name\), for example:
 
@@ -145,7 +145,7 @@ kubectl logs -n dxns dx-deployment-persistence-node-0
         persistence-node
 ```
 
-## Accessing all application logs simultaneously {#accessing_all_apps_logs .section}
+## Accessing all application logs simultaneously
 
 All application logs from DX pods in a deployment can be combined into a single output using the command:
 
@@ -158,7 +158,7 @@ where:
 -   `namespace` - is the namespace in which your HCL Digital Experience deployment is installed.
 -   `release-name` - is the Helm release name you used when installing. On UNIX-based operating systems, the output can be directed to a file for convenience by appending `> some-file-name` to the command.
 
-## Default log output {#section_zwc_dmy_gsb .section}
+## Default log output
 
 The log output for a DX deployment is set to a non-verbose configuration by default.
 
@@ -197,5 +197,5 @@ Note that for all applications that do not write their logs separately to a file
 
 We encourage the customers to process the logging of their Kubernetes Cluster in a separate logging solution of their choice.
 
-**Parent topic:**[Troubleshooting your Helm deployment \| HCL Digital Experience](../containerization/helm_troubleshooting.md)
+**Parent topic:**[Troubleshooting your Helm deployment](../containerization/helm_troubleshooting.md)
 

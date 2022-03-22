@@ -1,4 +1,4 @@
-# Manage pages portlets \| HCL Digital Experience {#man_page_manage_pages .task}
+# Manage pages portlets
 
 Use Manage Pages to create, edit, activate, order, and delete pages and external web pages and labels.
 

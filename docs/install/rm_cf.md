@@ -1,4 +1,4 @@
-# HCL Digital Experience roadmap: Applying maintenance {#rm_production_cluster .concept}
+# HCL Digital Experience roadmap: Applying maintenance
 
 Portal maintenance is delivered through individual fixes \(Fixes\) and Combined Cumulative Fixes \(CFs\), which is recommended to your environment.
 
@@ -10,18 +10,18 @@ Use this roadmap to learn more about the following information:
 -   How to apply the latest combined cumulative fix
 -   How to configure and enable new Combined Cumulative Fix features
 
-# Who should use this roadmap {#cf_who .concept}
+# Who should use this roadmap
 
 Use this roadmap if you:
 
 -   Installed HCL Digital Experience for the first time and want to apply a Fix or the latest Combined Cumulative Fix.
 -   Need a high-level view of which features or improvements are ready to use by default after you apply the latest Combined Cumulative Fix and which features need additional configuration.
 
-# Delivering updates {#cd .concept}
+# Delivering updates
 
 This section describes the strategy for delivering Digital Experience maintenance updates, including the release versioning scheme, to provide a clear maintenance and upgrade path for our customers.
 
-## What is continuous delivery? {#continuous_delivery .section}
+## What is continuous delivery?
 
 Continuous delivery consists of short development cycles with continuous integration and automated tests. The result is a releasable product at any time. Continuous delivery has the following benefits:
 
@@ -34,7 +34,7 @@ Continuous delivery consists of short development cycles with continuous integra
 
 The continuous delivery features are delivered with the combined cumulative fixes.
 
-## CF release versioning and update path {#cf_release_versioning_update .section}
+## CF release versioning and update path
 
 CF releases are sequentially numbered.
 
@@ -56,19 +56,19 @@ Please see the following important points about this change:
 -   CF196 and later releases are applicable to HCL DX 8.5, 9.0, and 9.5 on-premise deployments.
 -   Customers can update directly to the latest CF release without installing multiple individual CFs \(for example, 8.5 CF17 to 8.5 CF196\).
 
-# Learning about this Combined Cumulative Fix {#cf-learn .task}
+# Learning about this Combined Cumulative Fix
 
 Some combined cumulative fixes focus on fixing known issues that are identified by APARs. Other cumulative fixes are focused on new features.
 
 1.  Get an overview of the features and improvements delivered in the latest combined cumulative fix.
 
-    -   Documentation resource: [Combined Cumulative Fix Strategy](http://help.hcltechsw.com/digital-experience/9.5/overview/new_cf95.html)
+    -   Documentation resource: [Combined Cumulative Fix Strategy](http://help.hcltechsw.com/digital-experience/9.5/overview/new_cf95.md)
 2.  View the fixes delivered for HCL Digital Experience 9.5. The documentation provides specific information on how to enable and use the new feature.
 
     -   Documentation resource: [What's new with CF17](../overview/new_cf17.md)
     -   Documentation resource: [Fix for IBM WebSphere Application Server 9.0.5](../overview/was_905.md)
 
-# Applying a Combined Cumulative Fix {#cf_apply .task}
+# Applying a Combined Cumulative Fix
 
 To apply a Combined Cumulative Fix, you must update the product files with IBM® Installation Manager. You must also update properties files, download the cumulative fix, and run ConfigEngine tasks to apply the changes to each profile in your system. The HCL Digital Experience Combined Cumulative Fix readme file provides detailed instructions on how to apply a fix and planning information.
 
@@ -81,8 +81,8 @@ Use the Health Checker tool to identify issues with your installation. Use the H
 
 1.  To apply this cumulative fix, follow the readme file instructions that apply to your environment. You can find separate instructions for stand-alone, cluster, farm, and remote search environments from the *Overview* topic.
 
-    -   Documentation resource: [HCL Digital Experience Combined cumulative fix instructions: stand-alone](../../9.5/overview/ccf_95_standalone.html)
-    -   Documentation resource: [HCL Digital Experience Combined cumulative fix instructions: cluster](../../9.5/overview/ccf_95_cluster.html)
-    -   Documentation resource: [HCL Digital Experience Combined cumulative fix instructions: farm](../../9.5/overview/ccf_95_farm.html)
-    -   Documentation resource: [HCL Digital Experience Combined cumulative fix instructions: remote search](../../9.5/overview/ccf_95_remote_search.html)
+    -   Documentation resource: [HCL Digital Experience Combined cumulative fix instructions: stand-alone](../../9.5/overview/ccf_95_standalone.md)
+    -   Documentation resource: [HCL Digital Experience Combined cumulative fix instructions: cluster](../../9.5/overview/ccf_95_cluster.md)
+    -   Documentation resource: [HCL Digital Experience Combined cumulative fix instructions: farm](../../9.5/overview/ccf_95_farm.md)
+    -   Documentation resource: [HCL Digital Experience Combined cumulative fix instructions: remote search](../../9.5/overview/ccf_95_remote_search.md)
 

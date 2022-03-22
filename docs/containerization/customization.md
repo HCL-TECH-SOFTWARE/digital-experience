@@ -1,4 +1,4 @@
-# Customizing your container deployment \| HCL Digital Experience {#customization .concept}
+# Customizing your container deployment
 
 This section outlines the customization options when deploying HCL Digital Experience Container.
 
@@ -12,7 +12,7 @@ HCL Digital Experience 9.5 installs a copy of Derby as the default database. Adm
 This section shows how to configure Remote Search for your HCL Digital Experience 9.5 Docker containers.
 -   **[Configure Remote Search in OpenShift and Kubernetes](../containerization/kubernetes_remote_search.md)**  
 This section shows how to configure Remote Search for your HCL Digital Experience 9.5 environments on supported Red Hat OpenShift and Kubernetes container platforms.
--   **[Configure Remote Search using REST APIs \| HCL Digital Experience](../containerization/REST_APIs_remote_search.md)**  
+-   **[Configure Remote Search using REST APIs](../containerization/REST_APIs_remote_search.md)**  
 This section shows how to configure Remote Search for your HCL Digital Experience 9.5 environments on a traditional IBM WebSphere Application Server Network Deployment-based cluster DX deployment cluster, a Docker container, or on supported Red Hat OpenShift and Kubernetes container platforms using REST APIs.
 -   **[Configure the OpenLDAP container image to the HCL Digital Experience 9.5 Container Deployment](../containerization/configure_openldap_image.md)**  
 Read more about configuring the OpenLDAP container image to the 9.5 container deployment, which is available with HCL Digital Experience 9.5 Container Update release CF181 and later.
@@ -23,5 +23,5 @@ This section describes the procedures to define custom context root URLs, or no 
 -   **[Sample storage class and volume for HCL Digital Experience 9.5 containers](../containerization/sample_storage_class_volume.md)**  
 Learn how to set storage class and volume using a sample storage class and volume scripts for  HCL Digital Experience 9.5 CF171 and higher container releases deployed to Amazon Elastic Container Service \(EKS\) or Red Hat OpenShift environment.
 
-**Parent topic:**[Container administration \| HCL Digital Experience 9.5](../containerization/maintenance.md)
+**Parent topic:**[Container administration 9.5](../containerization/maintenance.md)
 

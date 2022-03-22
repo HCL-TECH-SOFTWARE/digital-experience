@@ -1,8 +1,8 @@
-# Running DX Core configuration tasks \| HCL Digital Experience {#update_cf197_later_container_deployments .concept}
+# Running DX Core configuration tasks
 
 This topic shows how to run manual Core configuration tasks on your HCL DX 9.5 CF197 and later container deployments.
 
-## Running Core Config Engine tasks {#section_hz4_1tb_krb .section}
+## Running Core Config Engine tasks
 
 In an [HCL Digital Experience 9.5 Container deployment using Helm](helm.md), some DX 9.5 Core configuration tasks \(such as change of context root\) are now performed using the Helm upgrade route. However, others \(such as database migration\) are performed using a Config Engine task, as they would be in an on-premise or hybrid environment.
 
@@ -55,5 +55,5 @@ In an [HCL Digital Experience 9.5 Container deployment using Helm](helm.md), som
     **Note:** To reduce the impact on availability, it is recommended that you wait for a pod to be ready again before running the command for the next pod.
 
 
-**Parent topic:**[Update deployment to a later version \| HCL Digital Experience](../containerization/helm_update_deployment.md)
+**Parent topic:**[Update deployment to a later version](../containerization/helm_update_deployment.md)
 

@@ -1,12 +1,12 @@
-# Upgrade options for containerized deployments \| HCL Digital Experience {#container_upgrade_overview .concept}
+# Upgrade options for containerized deployments
 
 HCL Digital Experience on containerized platforms is constantly evolving and incorporating customer feedback. Some of these improvements need extra manual steps to get to the latest version. To make this journey manageable and transparent, this topic shows all possible starting scenarios and their upgrade path.
 
-## Fresh install {#fresh_install .section}
+## Fresh install
 
 For fresh installations on any containerized platform, see [Deploying container platforms using Helm](helm_deployment.md).
 
-## Upgrade from any Operator-based deployment {#upgrade_operator .section}
+## Upgrade from any Operator-based deployment
 
 Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing DX [Operator-based deployments](deploy_container_platforms.md) and provides support only for [Helm-based deployments](helm.md).
 
@@ -18,25 +18,25 @@ For more information on the migration process, see
 
 [Migrating from Operator to Helm deployments](helm_operator_migration.md).
 
-## Upgrade your Helm-based deployment {#upgrade_helm .section}
+## Upgrade your Helm-based deployment
 
 For initial Helm-based deployment from CF196 or CF197, you must [Migrate to new DAM DB in Helm-based deployments](helm_dam_migration_newDB.md). If you are not sure if your deployment is based on the first version of the Digital Asset Management \(DAM\) persistence solution, run the following commands to check:
 
-``` {#codeblock_r5d_ddt_jsb}
+```
   kubectl get -n <namespace> pod/<deployment-name>-persistence-rw-0
   kubectl get -n <namespace> pod/<deployment-name>-persistence-node-0
 ```
 
 Example:
 
-``` {#codeblock_bbc_fdt_jsb}
+```
   kubectl get -n dxns pod/dx-deployment-persistence-rw-0
   kubectl get -n dxns pod/dx-deployment-persistence-node-0
 ```
 
 One of commands will return an error message similar to the following:
 
-``` {#codeblock_tcz_kdt_jsb}
+```
 Error from server (NotFound): pods "dx-deployment-persistence-rw-0" not found
 ```
 

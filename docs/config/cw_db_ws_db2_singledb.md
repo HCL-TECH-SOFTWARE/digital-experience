@@ -1,10 +1,10 @@
-# DB2 worksheet: Transfer to a single database \| HCL Digital Experience {#cw_db_ws_db2_singledb .reference}
+# DB2 worksheet: Transfer to a single database
 
 When you use the database transfer option, you can select the condition to create a single database in the Configuration Wizard. This worksheet highlights the fields and properties that you see in the Configuration Wizard when you select the single database condition.
 
 When you use the database transfer option, you answer questions about your environment. Some fields are required. Other fields are required or removed based on your selections for environment conditions.
 
-## Typical fields { .section}
+## Typical fields
 
 The following table lists the typical fields that display when you select the option to transfer your data to a single database. To see additional fields that apply to an advanced configuration, click **Advanced**.
 
@@ -23,7 +23,7 @@ Values that you enter for some typical fields apply across domains. Rather than 
 |**Runtime password**|The value that you enter is copied to fields in the Advanced view for the dbdomain.DbRuntimeDbRuntimePassword properties.|To see this field, continue to use the default selection of **Yes** for needing a runtime database user for day-to-day operations.| |
 |**IBM DB2 library**|Db2.DbLibrary| | |
 
-## Field used for the database collation condition {#collation .section}
+## Field used for the database collation condition
 
 Database collation is an optional condition available to you.
 

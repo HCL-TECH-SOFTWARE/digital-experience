@@ -1,4 +1,4 @@
-# Creating a simple portlet \| HCL Digital Experience {#wpsbscfg .concept}
+# Creating a simple portlet
 
 To create a simple portlet, you must write the portlet code, compile Java source, create the JAR file, write the portlet descriptors, set up the WAR file directory structure, and package and deploy the portlets.
 
@@ -6,7 +6,7 @@ Before you begin developing portlets, set up an environment that makes the tasks
 
 Rational Application Developer provides wizards to help you build, test, and deploy portlets using all of the APIs and related classes and interfaces available in the portlet run time environment. You can also build portlets using your own development environment and tools. If you are not using wizards to develop portlets, the following topics describe the mechanics of building a simple portlet.
 
-## Writing the portlet code {#hello_world .section}
+## Writing the portlet code
 
 The Hello World portlet provides an introduction to writing your first portlet. The portlet is provided along with the source in the HCL Portlet Samples package, which is available from the portlet catalog by searching for `navcode 1WP10017Z`. See [Sample portlets](jsrsamp.md) for more information. Hello World provides the fewest methods that are required for a portlet. It uses the portlet response object to write simple output directly to the portal page.
 
@@ -38,7 +38,7 @@ public class HelloWorld extends GenericPortlet {
 
 ```
 
-## Compiling Java source {#compile .section}
+## Compiling Java source
 
 Compile your Java source files. Before you compile your Java source, set the class path for the compiler to find the JAR files for any portlet packages that your portlet uses by running the following command:
 
@@ -49,21 +49,24 @@ Compile your Java source files. Before you compile your Java source, set the cla
 
 The following JAR files must be set in the class path to compile portlets:
 
-Standard portlets
-:   |JAR file|Purpose|
-|--------|-------|
-|`portletapi_20.jar`|This file complies with the Java Portlet Specification Version 2.0.|
-|`public_api.jar`|Use this file if you use services from the Public API Javadoc package.|
-|`public_api.jar + public_spi.jar`|Use this file if you use services from the Public SP Javadoc package.|
+-   **Standard portlets**
+
+    |JAR file|Purpose|
+    |--------|-------|
+    |`portletapi_20.jar`|This file complies with the Java Portlet Specification Version 2.0.|
+    |`public_api.jar`|Use this file if you use services from the Public API Javadoc package.|
+    |`public_api.jar + public_spi.jar`|Use this file if you use services from the Public SP Javadoc package.|
 
     These files are in the directory [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/compile.
 
-HCL DX portlets
-:   |JAR file|Purpose|
-|--------|-------|
-|`wp.pe.api.legacy.jar`|HCL Portlet API|
-|`wp.portletservices.api.legacy.jar`|Portlet services|
-|`wp.pe.rt.api.jar`|Portlet menus|
+-   **HCL DX portlets**
+
+    |JAR file|Purpose|
+    |--------|-------|
+    |`wp.pe.api.legacy.jar`|HCL Portlet API|
+    |`wp.portletservices.api.legacy.jar`|Portlet services|
+    |`wp.pe.rt.api.jar`|Portlet menus|
+
 
 Then, compile the portlet using the fully qualified path to the Java portlet source.
 
@@ -79,18 +82,20 @@ Then, compile the portlet using the fully qualified path to the Java portlet sou
 
 ```
 
-Loading classes for portlets
-:   HCL DX class loading follows the WebSphere® Application Server hierarchy for class paths and search orders. You can reference a class if the parent class loader can reference it or your own class loader can reference it. You cannot reference a class if a child class loader references it. The graphic illustrates where HCL DX and portlet applications fit into the class loading hierarchy.
+-   **Loading classes for portlets**
+
+    HCL DX class loading follows the WebSphere® Application Server hierarchy for class paths and search orders. You can reference a class if the parent class loader can reference it or your own class loader can reference it. You cannot reference a class if a child class loader references it. The graphic illustrates where HCL DX and portlet applications fit into the class loading hierarchy.
 
     In the following graphic runtime class path patches \(RCP\) are at the beginning of the hierarchy. Runtime class path \(RP\) branches from runtime class path patches. Runtime extensions \(RE\) branches from runtime class path, and application extensions \(AEX\) branch from runtime extensions. Application class loaders \(AC1\), application class loaders \(AC2\), and application class loaders \(AC3\) are portlet applications that branch from application extensions.
 
     ![Portal class paths](../images/classpaths.jpg)
 
-    As illustrated, HCL DX is an application extension \(AEX\) in WebSphere Application Server. The HCL DX core classes are in the class path [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/shared/app. If an installed portlet application includes a class loader, the portlet application class loader is an application class loader \(ACx\) in HCL DX.
+    As illustrated, HCL DX is an application extension \(AEX\) in WebSphere® Application Server. The HCL DX core classes are in the class path [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/shared/app. If an installed portlet application includes a class loader, the portlet application class loader is an application class loader \(ACx\) in HCL DX.
 
     If you suspect a classloading problem, ensure that the required classes are in the appropriate class path according to the classloading hierarchy.
 
-## Creating the JAR file {#jarfile .section}
+
+## Creating the JAR file
 
 Next, the portlet must be packaged in the JAR file format. To create a JAR file with the name `HelloWorld.jar`, enter the following command:
 
@@ -103,12 +108,13 @@ Next, the portlet must be packaged in the JAR file format. To create a JAR file 
 
 Refer to the JDK documentation for more information about the JAR command.
 
-## Writing the portlet descriptors {#samp_pdd .section}
+## Writing the portlet descriptors
 
 The following samples can be packaged with the Hello World portlet.
 
-Web application deployment descriptor for standard portlets:
-:   According to the Java Portlet Specification, only web resources that are not portlets must be declared in the web.xml. However, the following properties must be set to correspond to the portlet descriptor:
+-   **Web application deployment descriptor for standard portlets:**
+
+    According to the Java Portlet Specification, only web resources that are not portlets must be declared in the web.xml. However, the following properties must be set to correspond to the portlet descriptor:
 
     -   `<description/>`
 
@@ -122,7 +128,6 @@ Web application deployment descriptor for standard portlets:
 
         indicates the portlet application security role mapping. Omit this tag if the portlet does not use this feature.
 
-
     ```xmp
     
     <?xml version="1.0" encoding="UTF-8"?>
@@ -135,68 +140,78 @@ Web application deployment descriptor for standard portlets:
     
     ```
 
-Standard portlet deployment descriptor:
-:   The following shows the minimum elements that are required for the standard portlet deployment descriptor.
+-   **Standard portlet deployment descriptor:**
 
-```xmp
+    The following shows the minimum elements that are required for the standard portlet deployment descriptor.
 
-<?xml version="1.0" encoding="UTF-8"?>
-<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0" 
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-             xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd 
-                                 http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
-   <portlet>
-      <portlet-name>HelloWorld portlet name</portlet-name>
-      <display-name>Hello World portlet (JSR)</display-name>
-      <display-name xml:lang="en">Hello World portlet (JSR)</display-name>
-      <portlet-class>com.ibm.wps.samples.jsr.jsrHelloWorld</portlet-class>
-      <supports>
-         <mime-type>text/html</mime-type>
-         <portlet-mode>view</portlet-mode>
-      </supports>
-      <supported-locale>en</supported-locale>
-      <portlet-info>
-         <title>Hello World (JSR)</title>
-      </portlet-info>
-   </portlet>
-</portlet-app>
-
-```
+    ```xmp
+    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0" 
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                 xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd 
+                                     http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+       <portlet>
+          <portlet-name>HelloWorld portlet name</portlet-name>
+          <display-name>Hello World portlet (JSR)</display-name>
+          <display-name xml:lang="en">Hello World portlet (JSR)</display-name>
+          <portlet-class>com.ibm.wps.samples.jsr.jsrHelloWorld</portlet-class>
+          <supports>
+             <mime-type>text/html</mime-type>
+             <portlet-mode>view</portlet-mode>
+          </supports>
+          <supported-locale>en</supported-locale>
+          <portlet-info>
+             <title>Hello World (JSR)</title>
+          </portlet-info>
+       </portlet>
+    </portlet-app>
+    
+    ```
 
     The standard portlet descriptor is defined by an XML schema and does not require a DTD.
 
-## Setting up the WAR file directory structure {#par .section}
+
+## Setting up the WAR file directory structure
 
 Before you package your portlet, the class files and resources must be arranged in the WAR file directory structure described here. A portlet application exists as a structured hierarchy of directories.
 
 **Note:** Do not package `.tld` files for tag libraries that are provided by the portal or application server installation with the portlet application WAR file. It includes the JSR 168 and 286 portlet tags and the Java Standard Tag Library \(JSTL\).
 
-`/`
-:   The root directory of the portlet file structure.
+-   **`/`**
 
-`/images`
-:   Location for any images the required by the portlet.
+    The root directory of the portlet file structure.
 
-`/WEB-INF`
-:   Location for all protected resources. The `/WEB-INF` directory stores the portlet descriptor document and all of the run time executable JAR files and classes that the packaged portlet requires.
+-   **`/images`**
+
+    Location for any images the required by the portlet.
+
+-   **`/WEB-INF`**
+
+    Location for all protected resources. The `/WEB-INF` directory stores the portlet descriptor document and all of the run time executable JAR files and classes that the packaged portlet requires.
 
     The portlet information directory is not part of the public document tree of the application. Files that are in `/WEB-INF` are not served directly to a client.
 
-`/WEB-INF/lib`
-:   Location for storing portlet JAR files.
+-   **`/WEB-INF/lib`**
 
-`/WEB-INF/jsp`
-:   Location for JSP files. This is a suggested path name. Your JSPs can be packaged in any location. JSPs that are included inside the portlet markup must be placed under the `/WEB-INF` directory. Place them outside the `/WEB-INF` directory if you create direct links to them.
+    Location for storing portlet JAR files.
 
-`/WEB-INF/classes`
-:   Location for portlet class files. Individual class file must be stored in a directory structure within `/WEB-INF/classes` that reflects the class package. For example, the class `HelloWorld.class`, in package `com.ibm.wps.samples`, would be stored in `/WEB-INF/classes/com/ibm/wps/samples/HelloWorld.class`.
+-   **`/WEB-INF/jsp`**
 
-`/META-INF`
-:   Location for the manifest file, `manifest.mf`, and the Java 2 security file, was.policy \(if present\). The manifest is in the standard JAR file format as defined by the Java 1.3 specification. The Java 2 security policy file is used to allow a portlet to execute operations that might be restricted if Java 2 security is enabled. The contents of the `/META-INF` directory is not served to clients.
+    Location for JSP files. This is a suggested path name. Your JSPs can be packaged in any location. JSPs that are included inside the portlet markup must be placed under the `/WEB-INF` directory. Place them outside the `/WEB-INF` directory if you create direct links to them.
+
+-   **`/WEB-INF/classes`**
+
+    Location for portlet class files. Individual class file must be stored in a directory structure within `/WEB-INF/classes` that reflects the class package. For example, the class `HelloWorld.class`, in package `com.ibm.wps.samples`, would be stored in `/WEB-INF/classes/com/ibm/wps/samples/HelloWorld.class`.
+
+-   **`/META-INF`**
+
+    Location for the manifest file, `manifest.mf`, and the Java 2 security file, was.policy \(if present\). The manifest is in the standard JAR file format as defined by the Java 1.3 specification. The Java 2 security policy file is used to allow a portlet to execute operations that might be restricted if Java 2 security is enabled. The contents of the `/META-INF` directory is not served to clients.
+
 
 **Note:** The application server searches for security policy files in the location of the enterprise application archive rather than the web application archive. Therefore, the portal server copies `was.policy` from the `appname.war/META-INF` directory to the generated `appname.ear/META-INF` directory during deployment of a portlet WAR file.
 
-## Packaging and deploying portlets {#wpspar .section}
+## Packaging and deploying portlets
 
 To deploy a portlet and run it on the server, it must be packaged in the form of a Web application ARchive or WAR file. The WAR file format contains the Java classes and resources that make up one or more portlets in a portlet application. The resources can be images, JSP files, writing the portlet descriptions, and property files that contain translated message text. Packaging portlet classes, resources, and descriptive information in a single file makes distribution and deployment of portlets easier.
 
@@ -210,8 +225,9 @@ HCL DX includes an administrative portlet for installing, uninstalling, and upda
 
 **Tip:** You can also run the build-war-file or build-ear-file tasks to build the .war and .ear files. See the "Building .ear and .war files" link in the Related task section for information.
 
-Packaging a portlet and resources into a WAR file
-:   Any JAR file utility can be used to build a WAR file. The following are examples of how to use the JAR file utility that is provided by WebSphere Application Server.
+-   **Packaging a portlet and resources into a WAR file**
+
+    Any JAR file utility can be used to build a WAR file. The following are examples of how to use the JAR file utility that is provided by WebSphere® Application Server.
 
     -   To create a WAR file with the name `HelloWorld.war` and include all of the files in the `/WEB-INF` and `/images` directories:
 
@@ -241,11 +257,11 @@ Packaging a portlet and resources into a WAR file
         
         ```
 
-
     After the WAR file is created, it can be installed to HCL DX as described in [Portal administration portlets](../admin-system/adpltadm.md).
 
-Preparing the portlet application for installation
-:   To facilitate deployment of portlet applications and complex portlets, you can provide a portlet configuration file that can be invoked by the XML configuration interface \(XMLAccess\). The XML configuration interface allows the portlet developer to specify places, pages, themes, skins, supported markups and clients, and other settings for a portlet application. This is especially useful for portlets that use messaging because these portlets must be placed on the same page. For more information, see [The XML configuration interface](../admin-system/admxmlai.md).
+-   **Preparing the portlet application for installation**
+
+    To facilitate deployment of portlet applications and complex portlets, you can provide a portlet configuration file that can be invoked by the XML configuration interface \(XMLAccess\). The XML configuration interface allows the portlet developer to specify places, pages, themes, skins, supported markups and clients, and other settings for a portlet application. This is especially useful for portlets that use messaging because these portlets must be placed on the same page. For more information, see [The XML configuration interface](../admin-system/admxmlai.md).
 
     When you construct XMLAccess scripts for use in installing standard portlets, use the following values:
 
@@ -264,7 +280,6 @@ Preparing the portlet application for installation
     -   referenceid attribute of the <servlet\> element:
 
         Use the content of the <portlet-name/\> element from the portlet.xml appended with the `.servlet` suffix.
-
 
     For example, a portlet application might use a portlet descriptor:
 
@@ -296,4 +311,5 @@ Preparing the portlet application for installation
      </web-app>
     
     ```
+
 

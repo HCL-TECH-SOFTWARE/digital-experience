@@ -1,4 +1,4 @@
-# Setting up a JCR search collection \| HCL Digital Experience {#srtcfg_jcr_colls .task}
+# Setting up a JCR search collection
 
 A JCR search collection is a special purpose search collection that is used by HCL Portal applications. It is not designed to be used alongside user-defined search collections. A JCR search collection requires a special setup. This setup includes the creation of a new content source for the search collection. Under normal circumstances, you do not need to re-create the JCR search collection. However, in rare cases you might need to re-create it, for example if you deleted the default JCR search collection.
 
@@ -6,21 +6,22 @@ The portal installation has the JCR search collection that is created by default
 
 **Notes:**
 
-For Web Content Manager:
-:   If you use Web Content Manager, the `JCRCollection1` collection is created the first time that you create a web content item, if it does not exist. In this case, it might not be necessary to create the collection manually, although it is fine to create it manually first, if required. It is used by the search feature within the Web Content Manager authoring portlet. If you delete this search collection, you might not be able to search for items within the authoring portlet.
+-   **For Web Content Manager:**
 
-For virtual portals:
-:   When you create a virtual portal, the creation of the JCR search collection depends on whether you create the virtual portal with or without content:
+    If you use Web Content Manager, the `JCRCollection1` collection is created the first time that you create a web content item, if it does not exist. In this case, it might not be necessary to create the collection manually, although it is fine to create it manually first, if required. It is used by the search feature within the Web Content Manager authoring portlet. If you delete this search collection, you might not be able to search for items within the authoring portlet.
 
--   If you create the virtual portal with content, the portal creates the JCR collection for the virtual portal by default.
--   If you create only the virtual portal and add no content to it, the portal creates no JCR collection with it. It gets created only when content is added to the virtual portal.
+-   **For virtual portals:**
 
-You can view the URL of the JCR search collection in the search administration portlet Manage Search of the virtual portal. The URL looks as follows: `http://host_name:port_number/wps/seedlist/myserver?Action=GetDocuments&Format=ATOM&Locale=en_US&Range=100&Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&Start=0&SeedlistId=wsid@ootb_crawlerwsid`Where wsid is the actual workspace ID of the virtual portal. The workspace ID is the identifier of the workspace in which the content item is created, stored, and maintained. For example, if the workspace ID of the virtual portal is 10, then the URL looks as follows:`http://host_name:port_number/wps/seedlist/myserver?Action=GetDocuments&Format=ATOM&Locale=en_US&Range=100&Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&Start=0&SeedlistId=10@ootb_crawler10` If the JCR search collection was deleted, or if you added content to an originally empty virtual portal and the JCR search collection was not automatically created, complete the following steps:
+    When you create a virtual portal, the creation of the JCR search collection depends on whether you create the virtual portal with or without content:
 
--   If you are using a virtual portal, go to the Security tab of the content source to verify that the workspace ID of the virtual portal is correct.
--   If the JCR search collection was deleted, run the ConfigEngine task `create-textsearch-collections` to re-create the JCR search collection.
+    -   If you create the virtual portal with content, the portal creates the JCR collection for the virtual portal by default.
+    -   If you create only the virtual portal and add no content to it, the portal creates no JCR collection with it. It gets created only when content is added to the virtual portal.
+    You can view the URL of the JCR search collection in the search administration portlet Manage Search of the virtual portal. The URL looks as follows: `http://host_name:port_number/wps/seedlist/myserver?Action=GetDocuments&Format=ATOM&Locale=en_US&Range=100&Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&Start=0&SeedlistId=wsid@ootb_crawlerwsid`Where wsid is the actual workspace ID of the virtual portal. The workspace ID is the identifier of the workspace in which the content item is created, stored, and maintained. For example, if the workspace ID of the virtual portal is 10, then the URL looks as follows:`http://host_name:port_number/wps/seedlist/myserver?Action=GetDocuments&Format=ATOM&Locale=en_US&Range=100&Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&Start=0&SeedlistId=10@ootb_crawler10` If the JCR search collection was deleted, or if you added content to an originally empty virtual portal and the JCR search collection was not automatically created, complete the following steps:
 
-If neither of the preceding options succeed in creating the JCR search collection, manually set up the JCR search collection.
+    -   If you are using a virtual portal, go to the Security tab of the content source to verify that the workspace ID of the virtual portal is correct.
+    -   If the JCR search collection was deleted, run the ConfigEngine task `create-textsearch-collections` to re-create the JCR search collection.
+    If neither of the preceding options succeed in creating the JCR search collection, manually set up the JCR search collection.
+
 
 To set up a JCR search collection manually, proceed as follows:
 
@@ -32,25 +33,30 @@ To set up a JCR search collection manually, proceed as follows:
 
 4.  Specify the following values for the parameters:
 
-    Search Service
-    :   Select the required search service the JCR collection uses. If you have a stand-alone environment, select **Default Portal Service**. If you have a clustered environment, select **Remote Search Service**.
+    -   **Search Service**
 
-    Location of collection
-    :   The directory location for the collection where you intend the search collection to be created. This parameter is to be specified as index directory location/collection name. For example, if the index directory is c:/JCR and the collection name is JCRCollection1, then the location of the collection must be specified as c:/JCR/JCRCollection1.
+        Select the required search service the JCR collection uses. If you have a stand-alone environment, select **Default Portal Service**. If you have a clustered environment, select **Remote Search Service**.
+
+    -   **Location of collection**
+
+        The directory location for the collection where you intend the search collection to be created. This parameter is to be specified as index directory location/collection name. For example, if the index directory is c:/JCR and the collection name is JCRCollection1, then the location of the collection must be specified as c:/JCR/JCRCollection1.
 
         **Note:** Verify that the jcr.textsearch.indexdirectory resource value is updated with c:/JCR. To view this resource and corresponding value, complete the following steps:
 
         1.  Go to **Resources** \> **Resource Environment** \> **Resource Environment Providers** and select **JCR ConfigService PortalContent**.
         2.  In the Additional Properties section of the Configuration window, select **Custom properties**.
         3.  Find jcr.textsearch.indexdirectory and update the value if needed.
-    Name of collection.
-    :   The name of the collection must be JCRCollection1.
+    -   **Name of collection.**
 
-    Description of collection
-    :   This parameter is optional. Specify JCR seedlist collection.
+        The name of the collection must be JCRCollection1.
 
-    Specify Collection language
-    :   Specify the collection language. By default this parameter is set to English \(United States\).
+    -   **Description of collection**
+
+        This parameter is optional. Specify JCR seedlist collection.
+
+    -   **Specify Collection language**
+
+        Specify the collection language. By default this parameter is set to English \(United States\).
 
     After you create the new collection, you can see the name of the collection you created in the list.
 

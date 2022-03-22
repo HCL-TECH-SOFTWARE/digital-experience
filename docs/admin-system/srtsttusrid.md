@@ -1,4 +1,4 @@
-# Setting the search user ID \| HCL Digital Experience {#srtsttusrid .task}
+# Setting the search user ID
 
 If you work with EJB on a secure server, you need to set the search user ID on the remote search server.
 

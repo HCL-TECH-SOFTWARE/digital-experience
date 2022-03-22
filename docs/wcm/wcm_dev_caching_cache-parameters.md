@@ -1,4 +1,4 @@
-# Cache parameters \| HCL Digital Experience {#wcm_dev_caching_cache-parameters .concept}
+# Cache parameters
 
 Use the cache parameters in HCL Web Content Manager tags and URLs to specify whether the retrieved data is cached or not. If it is cached, how it is cached. The cache parameter is not mandatory.
 
@@ -35,7 +35,7 @@ With HCL DX 9.5 Container Update CF195 and later releases, new options are avail
 http://host:port/wps/wcm/connect/library/sitearea/content?cache=site&contentcache=session
 ```
 
-## Custom caching strategies { .section}
+## Custom caching strategies
 
 -   When you apply custom caching to static content, you would mostly use `CACHE=SITE`, `CACHE=SESSION` or `CONTENTCACHE=USER`.
 -   When User Groups are used in implementing site security, you can use the `SECURED` custom caching strategy: `CONTENTCACHE=SECURED`.
@@ -43,7 +43,7 @@ http://host:port/wps/wcm/connect/library/sitearea/content?cache=site&contentcach
 -   If your Server's default web Content Cache is set to Advanced, you must use `CONTENTCACHE=NONE` to disable caching.
 -   If you retrieve external data, you must use `CONNECTORCACHE=NONE` to disable caching.
 
-## CacheKey parameter { .section}
+## CacheKey parameter
 
 The CacheKey parameter is used when caching content with the basic cache. A CacheKey is used as a key instead of a URL. This strategy is useful if you have multiple URLs for the same page but want it cached only once. This reduces the amount of memory that is used by the cache.
 
@@ -64,7 +64,7 @@ CACHE=SITE CACHEKEY=news >
 
 In this example, "news" is used as the CacheKey to store the value of the response from these connect tags. This means that news.html is cached only once instead of being cached three separate times.
 
-## Caching, content updates, and syndication { .section}
+## Caching, content updates, and syndication
 
 When an item is updated, either directly or as a result of syndication, no cache is updated. The rendered items are not updated until each configured cache is expired. It is important to choose cache timeout parameters that complement your syndication strategy.
 

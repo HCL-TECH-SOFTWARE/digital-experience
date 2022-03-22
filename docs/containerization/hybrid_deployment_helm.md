@@ -1,15 +1,15 @@
-# Hybrid Deployment - Helm \| HCL Digital Experience {#hybrid_deployment_helm .concept}
+# Hybrid Deployment - Helm
 
 This section describes how to install HCL Digital Experience 9.5 Container Update CF198 and later Portal Server and Web Content Manager services to on-premises platforms, operating with Digital Asset Management, Content Composer, Experience API deployed to cloud-based Kubernetes and OpenShift platforms using the Helm deployment method.
 
-## Overview {#Hybrid_helm_overview .section}
+## Overview
 
 The HCL Digital Experience 9.5 Hybrid deployment reference architecture and topics describe an approach to deploy and manage HCL Digital Experience 9.5 core Portal Server and Web Content Manager services on premises, and connect to cloud native components Digital Asset Management, Content Composer, Experience API and related services using Helm, in a production environment.
 
 ![Topology - HCL Digital Experience Hybrid On-premises and Cloud components deployment](../images/topology_hybrid_onprem_cloud_deployment.png "Topology - HCL Digital Experience Hybrid On-premises and Cloud components
                     deployment")
 
-## Prerequisites {#section_nyf_kdl_sqb .section}
+## Prerequisites
 
 -   HCL Digital Experience V9.5 CF198 or a higher release is deployed to supported on-premises platforms in a standalone, cluster, or farm topology. See the [Roadmaps to deploy your Digital Experience 9.5 system](../install/deployment_patterns.md) topic for more information.
 -   Practitioner Studio is enabled in the Digital Experience 9.5 CF198 or higher installation. See the [How to enable Practitioner Studio](../practitioner_studio/enable_prac_studio.md) topic for instructions.
@@ -30,8 +30,4 @@ The HCL Digital Experience 9.5 Hybrid deployment reference architecture and topi
     -   **Step 2: Set the Core application deployment parameter** in your custom-values.yaml file to `false`. Refer to the [Planning your container deployment using Helm](helm_planning_deployment.md) Help Center topic for more information.
 
     -   **Step 3: Proceed to configuration instructions** listed in this Help Center topic: [Helm Deployment Configuration](helm_install_commands.md).
-
-**Parent topic:**[Deploying container platforms using Helm \| HCL Digital Experience](../containerization/helm_deployment.md)
-
-**Parent topic:**[Digital Experience on containerized platforms](../containerization/deployment.md)
 

@@ -1,12 +1,12 @@
-# Web content cache types \| HCL Digital Experience {#wcm_config_delivery_caching_types .concept}
+# Web content cache types
 
 Learn about the types of caching used by HCL Web Content Manager, basic web content caching, and advanced web content caching.
 
-## Basic web content caching { .section}
+## Basic web content caching
 
 This option is the simplest caching option. The first time a web page is rendered by the Web Content Manager application, it is stored in a cache. Users then access this page from the cache until it expires. Only then is the web page rendered afresh. The main benefit of this scenario is improved performance. Basic caching is used only on static content that does not require "real-time" access.
 
-## Advanced web content caching { .section}
+## Advanced web content caching
 
 There are two major differences between basic caching and advanced caching:
 
@@ -21,7 +21,7 @@ There are two major differences between basic caching and advanced caching:
 |Secured caching|Secured caching is used on sites where the item security features are used to grant different users access to different web pages and components based on the groups they belong to.|
 |Personalized caching|Personalized caching is used to cache web pages of users who have the same "personalization profile". This means that users who have selected the same personalization categories and keywords, and who belong to the same group, share a single cache.|
 
-## Default web content caching versus custom caching { .section}
+## Default web content caching versus custom caching
 
 Cache parameters in connect tags and URL requests can be used to override your server's default advanced web content caching settings allowing you to set custom cache settings for individual web pages or components.
 
@@ -29,7 +29,7 @@ In most cases, basic, site and session caching would only be used as your server
 
 **Note:** If basic caching is used as your default web content cache, custom caching cannot be used.
 
-## Cache comparisons { .section}
+## Cache comparisons
 
 |Function|Basic caching|Advanced caching|
 |--------|-------------|:--------------:|

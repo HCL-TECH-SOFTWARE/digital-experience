@@ -1,4 +1,4 @@
-# Finding the Kubernetes EKS deployment \| HCL Digital Experience {#container_docker_deployment .task}
+# Finding the Kubernetes EKS deployment
 
 This section describes how to find your HCL DX deployment.
 
@@ -15,5 +15,5 @@ As an administrator, you can easily display a list of the DxDeployment instances
     ![](../images/container_k8s_instances.png "Instances of DxDeployment")
 
 
-**Parent topic:**[Deploy DX Container to Amazon EKS \| HCL Digital Experience](../containerization/kubernetes_eks.md)
+**Parent topic:**[Deploy DX Container to Amazon EKS](../containerization/kubernetes_eks.md)
 

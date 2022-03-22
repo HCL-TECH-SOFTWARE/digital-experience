@@ -1,4 +1,4 @@
-# ConfigEngine validation targets \| HCL Digital Experience {#concept_zwh_w5j_ns .concept}
+# ConfigEngine validation targets
 
 Some configurations can cause conflicts between Portal resources or with other web modules deployed into the WebSphere Application Server. You can check for conflicts by using ConfigEngine validation targets.
 
@@ -6,18 +6,21 @@ Conflicts can occur when the same value is specified for different resources. Fo
 
 Portal includes three ConfigEngine targets to detect and prevent such conflicts:
 
-`path-conflict-check-full`
-:   This target checks whether there are any conflicts between Portal resources and other servlets that are deployed into WebSphere.
+-   **`path-conflict-check-full`**
 
-`path-conflict-check-path`
-:   Required parameter: checkPath \(for example /path/to/check\)
+    This target checks whether there are any conflicts between Portal resources and other servlets that are deployed into WebSphere.
 
-:   This target checks whether the provided path causes a conflict with the existing configuration.
+-   **`path-conflict-check-path`**
 
-`path-conflict-check-uri`
-:   Required parameter: checkURI
+    Required parameter: checkPath \(for example /path/to/check\)
 
-:   This target checks whether the creation of a Portal resource would cause a conflict with existing resources. The following are possible URI formats:
+    This target checks whether the provided path causes a conflict with the existing configuration.
+
+-   **`path-conflict-check-uri`**
+
+    Required parameter: checkURI
+
+    This target checks whether the creation of a Portal resource would cause a conflict with existing resources. The following are possible URI formats:
 
     -   path:/path/to/check
     -   vp-context:/my-VP
@@ -34,17 +37,22 @@ Also, you cannot use the targets to check whether changing the friendly name of 
 
 The following parameters can be used for all targets. They check whether a configuration change would cause a conflict:
 
-assumeWpsContextRoot
-:   Performs the check as if the WpsContextRoot is set to the specified value.
+-   **assumeWpsContextRoot**
 
-assumeWpsDefaultHome
-:   Performs the check as if the WpsDefaultHome is set to the specified value.
+    Performs the check as if the WpsContextRoot is set to the specified value.
 
-assumeWpsPersonalizedHome
-:   Performs the check as if the WpsPersonalizedHome is set to the specified value.
+-   **assumeWpsDefaultHome**
 
-assumeWsrpContextRoot
-:   Performs the check as if the WsrpContextRoot is set to the specified value.
+    Performs the check as if the WpsDefaultHome is set to the specified value.
+
+-   **assumeWpsPersonalizedHome**
+
+    Performs the check as if the WpsPersonalizedHome is set to the specified value.
+
+-   **assumeWsrpContextRoot**
+
+    Performs the check as if the WsrpContextRoot is set to the specified value.
+
 
 The result of the conflict check is part of the ConfigEngine output. It might look like the following example:
 

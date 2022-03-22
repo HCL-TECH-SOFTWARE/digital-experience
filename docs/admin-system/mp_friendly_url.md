@@ -1,4 +1,4 @@
-# Using friendly URLs \| HCL Digital Experience {#mp_friendly_url .task}
+# Using friendly URLs
 
 You can associate friendly URLs with portal pages and labels. You and your users can use these friendly URLs to access specific portal pages or labels by using a human readable path, which is easy to remember.
 

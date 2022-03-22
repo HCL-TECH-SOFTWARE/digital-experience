@@ -1,13 +1,13 @@
-# How to export and import WCM library content using DXClient \| HCL Digital Experience {#wcm_mls_export_import .concept}
+# How to export and import WCM library content using DXClient
 
 The HCL Multilingual Solution \(MLS\) export and import capability allows you to support translation of the content of a library by exporting it into a format supported by a translation service and importing the translated content back into HCL Digital Experience using the DXClient tool.
 
-## Prerequisites {#wcm_mls_export_import_prerequisites .section}
+## Prerequisites
 
 -   The libraries for the other languages for translated are already existing and are filled with the content from the main language library, like with the MLS copy portlet.
 -   The DXClient tool is used to manage the library export and import functions by providing an integrated solution to export and import CSV files for translation. The DXClient export and import process works on HCL Digital Experience 9.5 only. See the [DXClient Help Center](../containerization/dxclient.md) topic for more information.
 
-## About this task {#about_wcm_mls_export_import .section}
+## About this task
 
 There are two separate command for handling bulk translations, `export` and `import`. These commands deal with the translation of all the WCM library contents. Note, however, that only the following WCM content elements are translated: **short text**, **rich text**, and **HTML**.
 
@@ -17,7 +17,7 @@ There are two separate command for handling bulk translations, `export` and `imp
 
 **Note:** Only the `ShortTextComponent` element type has an explicit maximum data length set at 250 characters. The `**import**` command validates the length of the data for this element type before importing. Errors due to custom configuration of limits are caught by the `**import**` and `**export**` during the cycle and are reported in an error log.
 
-## Export command {#wcm_mls_export .section}
+## Export command
 
 The `**export**` command is used to export the content of a WCM library for translation into a CSV file at the location specified by the user.
 
@@ -52,7 +52,7 @@ dxclient mls-export -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPor
 -contenthandlerPath <contenthandlerPath> -dxUsername <dxUsername> -dxPassword <dxPassword> -wcmLibraryId <wcmLibraryId> -exportPath <exportPath> -virtualPortalContext <virtualPortalContext>
 ```
 
-## Import command {#wcm_mls_import .section}
+## Import command
 
 The `**import**` command is used to import the translated content into DX and overwrites any existing translations in the content of the environment.
 
@@ -86,7 +86,7 @@ dxclient mls-import -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPor
 -contenthandlerPath <contenthandlerPath> -dxUsername <dxUsername> -dxPassword <dxPassword> -importPath <importPath> -virtualPortalContext <virtualPortalContext>
 ```
 
-## Sample pipelines {#wcm_mls_sample_pipelines .section}
+## Sample pipelines
 
 You can use the sample pipelines in this section to run MLS export and import. The sample pipelines \(available under the samples folder in the DXClient root folder\) can be used by developers and administrators as a basis for Jenkins automation server jobs.
 

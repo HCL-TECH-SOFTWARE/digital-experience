@@ -1,4 +1,4 @@
-# Troubleshooting cloud container \| HCL Digital Experience Containers {#troubleshooting .task}
+# Troubleshooting cloud container Containers
 
 This section lists the basics of troubleshooting the containerized image or your deployment.
 

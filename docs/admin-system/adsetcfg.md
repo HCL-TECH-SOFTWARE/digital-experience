@@ -1,8 +1,8 @@
-# Setting service configuration properties \| HCL Digital Experience {#adsetcfg .concept}
+# Setting service configuration properties
 
 HCL Digital Experience comprises a framework of services to accommodate the different scenarios that portals need to address. Services are available for both HCL Portal and HCL Web Content Manager. You can configure some of these services.
 
-# Setting service configuration properties from the user interface {#task_dsy_w1v_2y .task}
+# Setting service configuration properties from the user interface
 
 The configuration for each service is stored in and accessible through the WebSphere® Integrated Solutions Console. Each service is registered as a separate resource environment provider with custom properties that represent the service configuration. Initially in a default installation, only the most common properties are shown as custom properties. You might need to add more properties with key and value as required. Or you might want to remove properties that can be used with their default values or are no longer required.
 
@@ -46,7 +46,7 @@ The configuration for each service is stored in and accessible through the WebSp
 
 Your service configuration properties updates are now in effect.
 
-# Setting service configuration properties from the command line {#otto .task}
+# Setting service configuration properties from the command line
 
 By alternative, you can also set the properties in the properties files and then enable them by running a configuration task.
 

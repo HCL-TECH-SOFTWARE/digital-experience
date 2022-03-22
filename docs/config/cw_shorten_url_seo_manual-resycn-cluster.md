@@ -1,4 +1,4 @@
-# Manual Step: Resynchronizing the nodes and restarting the cluster \| HCL Digital Experience {#manual-seo-resync_nodes .task}
+# Manual Step: Resynchronizing the nodes and restarting the cluster
 
 The Modify Site URLs for Search Engine Optimization option in the Configuration Wizard includes manual steps. For reference only, you can see the details of the manual step for resynchronizing the nodes and restarting the cluster. To view this step in the Configuration Wizard, you click Modify Site URLs for Search Engine Optimization from the Set Up a Cluster page.
 

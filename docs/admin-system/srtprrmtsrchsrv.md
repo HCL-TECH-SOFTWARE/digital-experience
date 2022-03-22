@@ -1,4 +1,4 @@
-# Preparing for remote search service \| HCL Digital Experience {#srtprrmtsrchsrv .task}
+# Preparing for remote search service
 
 Get an overview of how you prepare your portal system for remote search service. You can provide remote search service by either using EJB or SOAP.
 

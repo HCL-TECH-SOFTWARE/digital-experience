@@ -1,4 +1,4 @@
-# Starting and stopping servers, deployment managers, and node agents \| HCL Digital Experience {#stopstart .task}
+# Starting and stopping servers, deployment managers, and node agents
 
 Various installation and configuration tasks require you to start and stop IBM WebSphere Application Server and the HCL Digital Experience application servers, deployment managers, and node agents.
 

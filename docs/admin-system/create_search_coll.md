@@ -1,4 +1,4 @@
-# Creating new search collections \| HCL Digital Experience {#create_search_coll .task}
+# Creating new search collections
 
 Before you can begin using remote search service, you must create two new search collections, one for JCR search, and one for Portal search.
 
@@ -16,20 +16,25 @@ Before you can begin using remote search service, you must create two new search
 
     4.  Specify the following values for the parameters as required:
 
-        Search Service
-        :   Select **Remote Search Service**.
+        -   **Search Service**
 
-        Location of collection
-        :   The directory location for the collection where you intend the search collection to be created. This parameter is to be specified as index directory location/collection name.
+            Select **Remote Search Service**.
 
-        Name of collection.
-        :   Specify the name of the collection.
+        -   **Location of collection**
 
-        Description of collection
-        :   This parameter is optional.
+            The directory location for the collection where you intend the search collection to be created. This parameter is to be specified as index directory location/collection name.
 
-        Specify Collection language
-        :   Specify the collection language. By default this parameter is set to English \(United States\).
+        -   **Name of collection.**
+
+            Specify the name of the collection.
+
+        -   **Description of collection**
+
+            This parameter is optional.
+
+        -   **Specify Collection language**
+
+            Specify the collection language. By default this parameter is set to English \(United States\).
 
     5.  Click **OK**.
 

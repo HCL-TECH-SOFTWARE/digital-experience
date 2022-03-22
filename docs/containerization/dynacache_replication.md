@@ -1,4 +1,4 @@
-# Replicating the DynaCache service {#dynacache .task}
+# Replicating the DynaCache service
 
 This section describes how to replicate Dynacache service in HCL Digital Experience by customizing timeout properties in the WAS Resource Environment Provider \(REP\).
 
@@ -17,7 +17,7 @@ Having a cluster-aware cache does not make sense for HCL Digital Experience 9.5 
     -   `db.cache.invalidation.cleanup.freq` **= \(timeout in milliseconds\)**
         -   Age before an entry in the database table containing invalidation messages is deleted. **By default, timeout is 10 minutes \(600000 milliseconds\)**. Generally, the number should be much larger than the “red” frequency to ensure that invalidation messages are read before they are deleted.
 
-To replicate DynaCache service in an HCL Portal farm deployment, see *Tuning the servers in your environment* in [Roadmap: Portal farm](https://help.hcltechsw.com/digital-experience/8.5/install/rm_production_farm.html).
+To replicate DynaCache service in an HCL Portal farm deployment, see *Tuning the servers in your environment* in [Roadmap: Portal farm](https://help.hcltechsw.com/digital-experience/8.5/install/rm_production_farm.md).
 
-**Parent topic:**[Customizing your container deployment \| HCL Digital Experience](../containerization/customization.md)
+**Parent topic:**[Customizing your container deployment](../containerization/customization.md)
 

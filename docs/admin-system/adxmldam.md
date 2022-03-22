@@ -1,4 +1,4 @@
-# Using XML Access to export and import Digital Asset Management assets {#adxmldam .concept}
+# Using XML Access to export and import Digital Asset Management assets
 
 Using XML Access with HCL DX CF19 and higher, to manage staging scenarios, administrators can import, export, and control Digital Asset Management access control data.
 
@@ -13,7 +13,7 @@ This enables a Digital Asset Management staging scenario in which an administrat
 ![](../images/admin-system-digital-asset-management-access-control-using-xml-access.png "Digital Asset Management access control staging to production scenario using XML
           Access")
 
-## Export Digital Asset Management Access Control Assets - Sample XML Access script {#export_dam_xmlaccess .section}
+## Export Digital Asset Management Access Control Assets - Sample XML Access script
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -52,7 +52,7 @@ This enables a Digital Asset Management staging scenario in which an administrat
 
 ```
 
-## Import Digital Asset Management Access Control Assets - Sample XML Access script {#import_dam_xmlaccess .section}
+## Import Digital Asset Management Access Control Assets - Sample XML Access script
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -74,7 +74,7 @@ This enables a Digital Asset Management staging scenario in which an administrat
 
 ```
 
-## Delete Digital Asset Management Access Control Assets - Sample XML Access script {#section_mzp_pqp_lnb .section}
+## Delete Digital Asset Management Access Control Assets - Sample XML Access script
 
 ```
 ?xml version="1.0" encoding="UTF-8"?>

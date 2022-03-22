@@ -1,8 +1,8 @@
-# Deploying DX CF191 and earlier release Containers to Red Hat OpenShift \| HCL Digital Experience {#Deploy_CF19_and_CF191}
+# Deploying DX CF191 and earlier release Containers to Red Hat OpenShift
 
 Learn how to deploy HCL Digital Experience \(DX\) 9.5 CF191 and earlier release Containers using the Red Hat OpenShift platform.
 
-## Prerequisites {#deploy_openshift_prerequisites .section}
+## Prerequisites
 
 Prior to using the procedure below, it is assumed that the HCL DX Administrator is generally experienced in using Kubernetes. Additionally, the DX Administrator must have cluster admin access to the OpenShift environment.
 
@@ -17,11 +17,11 @@ Prior to using the procedure below, it is assumed that the HCL DX Administrator 
         **Note:** HCL Digital Experience is input-output \(I/O\) intensive which requires a high performing file system for optimization.
 
 
-**Note:** Reference the latest HCL DX 9.5 Container Release and Update file listings in the [Docker deployment](../containerization/docker.html) topic.
+**Note:** Reference the latest HCL DX 9.5 Container Release and Update file listings in the [Docker deployment](../containerization/docker.md) topic.
 
 Video: [Getting Started to deploy HCL DX 9.5 in Red Hat OpenShift](https://www.youtube.com/watch?v=xXsRECRoV7g&feature=youtu.be)
 
-## Procedure {#section_ifj_4h1_pnb .section}
+## Procedure
 
 Follow these steps to deploy the HCL Digital Experience \(DX\) 9.5 container release CF191 or earlier to Red Hat OpenShift.
 
@@ -114,7 +114,7 @@ docker load < hcl-dx-core-image-v95_xxxxxxxx-xxxx.tar.gz
 
 **Note:** For more information, see sections on [Understanding the OpenShift deployment](understanding_openshift_deployment.md)and [Customizing the container deployment](customizing_container_deployment.md).
 
-## Update {#section_shj_4h1_pnb .section}
+## Update
 
 To update the deployment, follow these steps:
 
@@ -137,7 +137,7 @@ To update the deployment, follow these steps:
     ![](../images/Container_upgrade.png "Sample Upgrade")
 
 
-## Delete {#section_gn1_b31_pnb .section}
+## Delete
 
 Removing the entire deployment requires several steps, this is by design.
 
@@ -196,5 +196,5 @@ Removing the entire deployment requires several steps, this is by design.
     -   Ensure you get the `'persistentvolume/your_namespace edited'` message.
     -   You may need to manually remove any data remaining from the previous deployment.
 
-**Parent topic:**[Deploying DX Container to Red Hat OpenShift \| HCL Digital Experience](../containerization/deploy_openshift.md)
+**Parent topic:**[Deploying DX Container to Red Hat OpenShift](../containerization/deploy_openshift.md)
 

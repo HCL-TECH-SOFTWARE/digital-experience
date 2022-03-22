@@ -1,12 +1,12 @@
-# Remove an HCL Portal profile \| HCL Digital Experience {#removeawebsphereportalprofile .concept}
+# Remove an HCL Portal profile
 
 Use the Configuration Wizard to remove a portal profile.
 
-## Configuration Wizard { .section}
+## Configuration Wizard
 
 On the Configuration Wizard home page, click **More Options** to find **Remove an HCL Portal Profile**.
 
-# Removing a profile {#task .task}
+# Removing a profile
 
 After you answer questions and provide information about your migration, the wizard generates a custom configuration procedure.
 
@@ -16,42 +16,52 @@ If you click **View Step Command**, you can see the task and properties that are
 
 1.  Manual Step: Prepare your system
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 2.  Remove portal node from cluster
 
-    Condition
-    :   You have a clustered node.
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        You have a clustered node.
+
+    -   **ConfigEngine task**
+
+        none
 
 3.  Remove portal profile
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 4.  Stop the deployment manager
 
-    Condition
-    :   You selected to remove the deployment manager profile.
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        You selected to remove the deployment manager profile.
+
+    -   **ConfigEngine task**
+
+        none
 
 5.  Remove the deployment manager profile
 
-    Condition
-    :   You selected to remove the deployment manager profile.
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        You selected to remove the deployment manager profile.
+
+    -   **ConfigEngine task**
+
+        none
 
 

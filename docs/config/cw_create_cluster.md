@@ -1,8 +1,8 @@
-# Create a cluster \| HCL Digital Experience {#createacluster .concept}
+# Create a cluster
 
 Use the Configuration Wizard to create the primary node in your cluster. The Create a Cluster option in the wizard refers to setting up the primary node.
 
-## Configuration Wizard { .section}
+## Configuration Wizard
 
 To access the **Create a Cluster** click **Set Up a Cluster** option on the home page of the Configuration Wizard.
 

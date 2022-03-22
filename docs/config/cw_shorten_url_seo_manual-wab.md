@@ -1,4 +1,4 @@
-# Manual Step: Redeploying the HCL Web Application Bridge to a virtual host \| HCL Digital Experience {#manual-seo-wab .task}
+# Manual Step: Redeploying the HCL Web Application Bridge to a virtual host
 
 The Modify Site URLs for Search Engine Optimization option in the Configuration Wizard includes manual steps. For reference only, you can see the details of the manual steps in this section of the product documentation.
 

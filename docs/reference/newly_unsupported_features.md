@@ -1,4 +1,4 @@
-# Newly unsupported features and themes for HCL Digital Experience 8.5 and 9.0 {#newly_unsupported_features .concept}
+# Newly unsupported features and themes for HCL Digital Experience 8.5 and 9.0
 
 Newly unsupported features and themes must be removed prior to migration.
 

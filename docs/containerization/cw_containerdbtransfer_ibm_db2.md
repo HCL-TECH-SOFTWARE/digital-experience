@@ -1,4 +1,4 @@
-# Transfer HCL Digital Experience 9.5 container default database to IBM DB2 {#cw_containerdbtransfer_ibm_db2 .concept}
+# Transfer HCL Digital Experience 9.5 container default database to IBM DB2
 
 HCL Digital Experience 9.5 installs a copy of Derby as the default database. Administrator users can follow these steps to transfer the default database configuration detail to IBM DB2, if preferred for use as the relational database for HCL Digital Experience 9.5 container deployment data.
 
@@ -22,7 +22,7 @@ Prerequisites
 
 2.  IBM DB2 is installed on an on-premises server with a DNS hostname that is available to the HCL Digital Experience 9.5 deployed container.
 
-## Start the HCL Digital Experience 9.5 Container in Docker { .section}
+## Start the HCL Digital Experience 9.5 Container in Docker
 
 Execute the following command to start the DX 9.5 container:
 
@@ -51,7 +51,7 @@ docker run -d --add-host {database DNS name}:{database IP address} -p 10025-1004
     ```
 
 
-## Transferring the Database { .section}
+## Transferring the Database
 
 First, ensure that your HCL Digital Experience 9.5 docker container can access the IBM DB2 on-premises platform server. Using the following command, one can simply "ping" the DNS name of the IBM DB2 database server and verify that it answers:
 
@@ -69,5 +69,5 @@ Proceed to the [Digital Experience database transfer steps](../config/cw_db_tran
 
 Specify the fully qualified DNS name of the database server as set above in the `--add-host` directive in the `docker run` command.
 
-**Parent topic:**[Customizing your container deployment \| HCL Digital Experience](../containerization/customization.md)
+**Parent topic:**[Customizing your container deployment](../containerization/customization.md)
 

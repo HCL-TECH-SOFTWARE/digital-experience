@@ -1,4 +1,4 @@
-# Operator-based deployment {#deploy_container_platforms .concept}
+# Operator-based deployment
 
 This section outlines the supported container platforms for HCL Digital Experience 9.5, and instructions on how to deploy to supported container environments.
 
@@ -21,15 +21,15 @@ The following container platforms are supported.
 -   [Microsoft Azure Kubernetes Service \(AKS\)](azure_aks.md)
 -   [Google Kubernetes Engine \(GKE\)](google_gke.md)
 
--   **[dxctl \| HCL Digital Experience](../containerization/dxtools_dxctl.md)**  
+-   **[dxctl](../containerization/dxtools_dxctl.md)**  
 Learn how to use `dxctl` for custom HCL Digital Experience 9.5 container deployments
 -   **[HCL Digital Experience 9.5 Container Deployment](../containerization/deploy_supported_container_platforms.md)**  
 This section outlines the supported container platforms for HCL Digital Experience 9.5, and instructions on how to deploy to supported container environments.
--   **[Install the HCL Digital Experience 9.5 components \| HCL Digital Experience](../containerization/install_config_cc_dam.md)**  
+-   **[Install the HCL Digital Experience 9.5 components](../containerization/install_config_cc_dam.md)**  
 This section provides a high-level overview of the architecture and the steps to install, configure, and update the HCL Digital Experience 9.5 components: Experience API, Content Composer, and Digital Asset Management.
--   **[Container administration \| HCL Digital Experience 9.5](../containerization/maintenance.md)**  
+-   **[Container administration 9.5](../containerization/maintenance.md)**  
 The information in this section enables administrators to manage select operations performance controls, and to update and replace their HCL Digital Experience 9.5 container images with the latest 9.5 container update release.
--   **[Troubleshooting cloud container \| HCL Digital Experience Containers](../containerization/troubleshooting.md)**  
+-   **[Troubleshooting cloud container Containers](../containerization/troubleshooting.md)**  
 This section lists the basics of troubleshooting the containerized image or your deployment.
 
 **Parent topic:**[Digital Experience on containerized platforms](../containerization/deployment.md)
