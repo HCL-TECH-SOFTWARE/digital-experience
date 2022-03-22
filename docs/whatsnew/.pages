@@ -1,10 +1,11 @@
-title: What's new?
+title: What's new
 nav:
     - Cumulative Fixes for DX Containers: container_update_releases.md
-    - CF19:
+    - CF200 and later:
        - newcf202.md
        - newcf201.md
        - newcf200.md
+    - CF19-199:
        - newcf199.md
        - newcf198.md
        - newcf197.md
@@ -15,13 +16,13 @@ nav:
        - newcf192.md
        - newcf191.md
        - newcf19.md
-    - CF18: 
+    - CF18-184: 
        - newcf184.md
        - newcf183.md
        - newcf182.md
        - new_cf181.md
        - new_cf18.md
-    - CF17: 
+    - CF17-173: 
        - new_cf173.md
        - new_cf172.md
        - new_cf171.md

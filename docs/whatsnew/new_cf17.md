@@ -1,4 +1,4 @@
-# What's new in CF17? 9.5
+# What's new in CF17
 
 Combined Cumulative Fix \(CF17\) includes new software fixes for the latest version of HCL Digital Experience.
 

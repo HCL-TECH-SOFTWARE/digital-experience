@@ -1,4 +1,4 @@
-# What's new in Container Update CF181?
+# What's new in CF181
 
 This HCL Digital Experience 9.5 Container Update release includes new Production releases of Content Composer, Digital Asset Management, and Experience API, new WCM REST APIs, guidance to deploy OpenLDAP, Remote Search and Database transfer processes, and more.
 

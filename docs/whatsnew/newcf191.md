@@ -1,4 +1,4 @@
-# What's new in Container Update CF191?
+# What's new in CF191
 
 This HCL Digital Experience 9.5 Container Update release includes new releases of Digital Experience 9.5 core Portal and Web Content Manager, Content Composer, Digital Asset Management, and Experience API images, that may be used for new deployments only. Upgrading from a previous DX 9.5 Container Release to CF191 is not supported.
 

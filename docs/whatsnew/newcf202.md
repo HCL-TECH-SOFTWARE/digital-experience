@@ -1,4 +1,4 @@
-# What's new in Container Update CF202?
+# What's new in CF202
 
 This HCL Digital Experience 9.5 Container Update and CF202 release includes updated releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management, Experience API, and Design Studio \(Beta\) components. The release also includes updated CICD release process artifacts, new Remote Model REST APIs, Personalization REST APIs, updated Helm deployment guidance to create Persistent Volume Claims for DX Core, configure credentials, also new HCL Digital Experience Cloud Native 9.5 offering, new Digital Experience How-To Videos and Lab exercises, and more.
 

@@ -1,4 +1,4 @@
-# What's new in Container Update CF184?
+# What's new in CF184
 
 This HCL Digital Experience 9.5 Container Update release includes updated production releases of Digital Experience 9.5 core Portal and Web Content Manager, Content Composer, Digital Asset Management, and Experience API images. New additions include additional guidance to deploy to Microsoft Azure Kubernetes Service \(AKS\), new Web Content Manager REST APIs supporting Syndication options, HCL Digital Experience API published to HCL DX GitHub, new HCL Digital Experience ‘How To’ videos, and more.
 

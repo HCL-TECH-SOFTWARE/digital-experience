@@ -1,4 +1,4 @@
-# What's new in Container Update CF173?
+# What's new in CF173
 
 This HCL Digital Experience 9.5 Container Update release include new WCM REST APIs, and Tech Previews for Content Composer and Digital Asset Management, and more.
 

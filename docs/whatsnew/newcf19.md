@@ -1,4 +1,4 @@
-# What's new in Container Update CF19?
+# What's new in CF19
 
 This HCL Digital Experience 9.5 Container Update release includes updated production releases of Digital Experience 9.5 core Portal and Web Content Manager, Content Composer, Digital Asset Management, and Experience API images. New additions include additional guidance to deploy to Google Kubernetes Engine \(GKE\), Hybrid deployment support, Progressive Web Application delivery, Google Analytics integration, Mobile Preview, DXClient and DXConnect tooling supporting CICD release processes, Kaltura video support, new Web Content Manager REST APIs, new HCL Digital Experience ‘How To’ videos, and more.
 

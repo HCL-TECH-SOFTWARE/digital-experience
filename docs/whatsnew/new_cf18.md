@@ -1,4 +1,4 @@
-# What's new in CF18?
+# What's new in CF18
 
 This HCL Digital Experience 9.5 Container Update release includes new WCM REST APIs, updated Tech Preview releases of Content Composer and Digital Asset Management, Rich Text Editor and Java Server Faces bridge updates, and more.
 

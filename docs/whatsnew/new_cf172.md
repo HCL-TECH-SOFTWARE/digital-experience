@@ -1,4 +1,4 @@
-# What's new in Container Update CF172?
+# What's new in CF172
 
 The Container Update release include new features and updates for HCL Digital Experience 9.5 container deployments, including DX tool, Support and API updates.
 

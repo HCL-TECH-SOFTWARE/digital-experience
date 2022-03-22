@@ -1,4 +1,4 @@
-# What's new in Container Update CF182?
+# What's new in CF182
 
 This HCL Digital Experience 9.5 Container Update release includes updated production releases of Digital Experience 9.5 core Portal and Web Content Manager, Content Composer, Digital Asset Management, and Experience API images. This update adds new guidance to minimize downtime when updating container-based deployments with new artifacts, configuration options for Digital Asset Management storage, and more.
 

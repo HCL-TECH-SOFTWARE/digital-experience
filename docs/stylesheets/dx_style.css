@@ -9,8 +9,8 @@
 
 [dir=ltr] .md-header__title {
 	margin-left: 0;
-	}
+}
 
 [dir=rtl] .md-header__title {
-margin-right: 0;
+    margin-right: 0;
 }

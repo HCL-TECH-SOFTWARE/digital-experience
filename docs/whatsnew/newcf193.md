@@ -1,4 +1,4 @@
-# What's new in Container Update CF193?
+# What's new in CF193
 
 This HCL Digital Experience 9.5 Container Update release includes new releases of Digital Experience 9.5 core Portal and Web Content Manager, Content Composer, Digital Asset Management, and Experience API images. New and updated feature references are detailed here.
 

@@ -1,4 +1,4 @@
-# What's new in Container Update CF201?
+# What's new in CF201
 
 This HCL Digital Experience 9.5 Container Update and CF201 release includes updated releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management, Experience API, and Design Studio \(Beta\) components. The release also includes updated CICD release process artifacts, new DX Personalization REST APIs, Updated Helm deployment and logging capacity, LDAP, and environment configuration guidance, also metrics and visualization samples, Script Application updates, new React profile for the DX 8.5 sample Theme, extensibility plugin and sample for Digital Asset Management, and more. 
 

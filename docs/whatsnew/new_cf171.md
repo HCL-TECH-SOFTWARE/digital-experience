@@ -1,4 +1,4 @@
-# What's new in Container Update CF171?
+# What's new in CF171
 
 The Container Update releases include new features and updates for HCL Digital Experience 9.5 container deployments.
 
