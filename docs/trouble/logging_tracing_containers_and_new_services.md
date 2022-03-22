@@ -1,4 +1,4 @@
-# Logging and tracing for containers and new services \| HCL Digital Experience {#logging_tracing_containers_and_new_services .concept}
+# Logging and tracing for containers and new services
 
 The following table outlines the tracing options that are used to capture logging and tracing for HCL Digital Experience 9.5 container-based services with container update CF181 and later releases.
 
@@ -31,7 +31,7 @@ Client-side browser tracing for these container environments can also be enabled
 
 -   **Transaction log \(tranlog\)**.
 
-    With multiple instances of Digital Experience 9.5 containers writing to a shared **[transaction log](https://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.5/com.ibm.websphere.base.doc/ae/tjta_settlog.html)** \(tranlog\) directory, data corruption could happen resulting to DX server start-up issues. To avoid data corruption, beginning with CF192, the default deployment creates individual 1 GB PersistentVolumes \(pvs\) and associated PersistentVolumeClaims \(pvcs\) for each DX 9.5 instance. This behavior is configured with the following values in the properties file used for deployment.
+    With multiple instances of Digital Experience 9.5 containers writing to a shared **[transaction log](https://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.5/com.ibm.websphere.base.doc/ae/tjta_settlog.md)** \(tranlog\) directory, data corruption could happen resulting to DX server start-up issues. To avoid data corruption, beginning with CF192, the default deployment creates individual 1 GB PersistentVolumes \(pvs\) and associated PersistentVolumeClaims \(pvcs\) for each DX 9.5 instance. This behavior is configured with the following values in the properties file used for deployment.
 
     -   `dx.tranlogging: true` - Set this value to `false` so that individual pvs for tranlogs are not created at the deployment time.
     -   `dx.tranlogging.reclaim: Delete` - Kubernetes setting for handling volumes when the deployment is removed.
@@ -51,8 +51,9 @@ Prerequisite: Install and configure Content Composer and Digital Asset Managemen
 
 -   Documentation resource: [Install Content Composer and Digital Asset Management](../containerization/install_config_cc_dam.md)
 
-Trace string format
-:   The trace strings must use the following format. Any text not in angled brackets \("<\>"\) should not be changed:
+-   **Trace string format**
+
+    The trace strings must use the following format. Any text not in angled brackets \("<\>"\) should not be changed:
 
     ```
     hcl.logging.<app-name>.client.<severity>.<client-hierarchy>.*=all
@@ -60,37 +61,42 @@ Trace string format
 
     The text strings in angled bracket placeholders must be replaced as described here.
 
-app-name
-:   The application name is configured in the Digital Asset Management shared settings. The following values are currently in use:
+
+-   **app-name**
+
+    The application name is configured in the Digital Asset Management shared settings. The following values are currently in use:
 
     -   `medialibrary` - for Digital Asset Management
     -   `content-ui` - for Content Composer
 
-severity
-:   This presents the logger severity level. The values used are:
+-   **severity**
+
+    This presents the logger severity level. The values used are:
 
     -   `info`
     -   `debug`
 
-client-hierarchy
-:   This specifies the subsections of the client application where tracing can be enabled. It is specified in dot-separated trace strings and is converted by the Digital Asset Management to colon-separated trace strings. The exact hierarchy depends on the client application. Examples include:
+-   **client-hierarchy**
+
+    This specifies the subsections of the client application where tracing can be enabled. It is specified in dot-separated trace strings and is converted by the Digital Asset Management to colon-separated trace strings. The exact hierarchy depends on the client application. Examples include:
 
     -   `app.*`
     -   `app.redux.*`
     -   `app.redux.actions.*`
 
-Example trace strings
-:   Following are some examples of full trace strings for Content Composer and Digital Asset Management and their results:
+-   **Example trace strings**
+
+    Following are some examples of full trace strings for Content Composer and Digital Asset Management and their results:
 
     -   `hcl.logging.content-ui.*=all` - Enables debug message logging for all files in the DAM application user interface source folder app/redux/actions. Specifically, the debug string `client:debug:app:redux:actions:*` is set for the DAM client logger.
+    This tracing is enabled either permanently or just for the current HCL Digital Experience 9.5 container.
 
-:   This tracing is enabled either permanently or just for the current HCL Digital Experience 9.5 container.
+    HCL Digital Experience 9.5 uses the IBM® WebSphere Application Server trace facilities to create trace information.
 
-:   HCL Digital Experience 9.5 uses the IBM® WebSphere Application Server trace facilities to create trace information.
+    If you need detailed trace output of Content Composer or Digital Asset Management to troubleshoot a problem, follow these steps in the succeeding sections.
 
-:   If you need detailed trace output of Content Composer or Digital Asset Management to troubleshoot a problem, follow these steps in the succeeding sections.
 
-## Permanently enable tracing {#section_myj_g3p_dmb .section}
+## Permanently enable tracing
 
 Procedure
 
@@ -111,7 +117,7 @@ Procedure
 7.  Save the changes.
 8.  Restart HCL Digital Experience 9.5 container session.
 
-## Enable tracing just for the current HCL Digital Experience 9.5 session {#section_vj4_y3p_dmb .section}
+## Enable tracing just for the current HCL Digital Experience 9.5 session
 
 Procedure
 

@@ -1,4 +1,4 @@
-# The Woodburn Studio demo site \| HCL Digital Experience {#woodburn_studio}
+# The Woodburn Studio demo site
 
 The Woodburn Studio is a website that demonstrates the use of some of the popular HCL Digital Experience features.
 
@@ -10,7 +10,7 @@ It is not recommended to use Woodburn Studio for anything but a demo site. Woodb
 
 The Woodburn Studio demo site has a home page and several other microsites with one or more pages. Many of the elements are reused across the demo site, which is styled for the page on which they appear.
 
-## Working with Woodburn Studio { .section}
+## Working with Woodburn Studio
 
 Woodburn Studio is not deployed by default.
 
@@ -26,32 +26,5 @@ However, one can immediately force the indexer to run manually from the **Search
 4.  To start the crawler for the WCM Content Source, click the **Play** icon.
 5.  To start the crawler for the Portal Content Source, click the **Play** icon.
 
-Go to [Configuring a crawler to search your local portal site](../admin-system/srccrwlindxsite.html) for more information about configuring and running a search crawler on your local portal site.
-
-## Language switcher in mobile view { .section}
-
-Beginning with Container Update CF196, the Woodburn Studio demo site provides an icon to switch the languages in the mobile view. You can experience the updated view on your mobile device or by following the steps to switch the language with the mobile simulator. Currently supported languages: English, French and Spanish.
-
-**Note:** Starting from CF201 release, you have an option to disable the language switcher by setting the following parameter at the page or root page level in the configuration page: `disable.languageSwitcher=true`. Once this configuration is set, the language switcher option will not be visible in the UI.
-
-Step to switch the languages
-
-1.  Click on the mobile menu icon to navigate to language lists section.
-
-    ![](../images/Language_Switcher_Menu_icon.png)
-
-2.  Select any of the languages from the listed options.
-
-    ![](../images/Language_Switcher_list_languages.png)
-
-3.  Portal content can now be updated to the corresponding language which was selected.
-
-    Mobile view in French :
-
-    ![](../images/Language_Switcher_French.png)
-
-    Mobile view in Spanish :
-
-    ![](../images/Language_Switcher_Spanish.png)
-
+Go to [Configuring a crawler to search your local portal site](../admin-system/srccrwlindxsite.md) for more information about configuring and running a search crawler on your local portal site.
 

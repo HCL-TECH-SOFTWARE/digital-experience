@@ -1,8 +1,8 @@
-# Hybrid deployment - Operator \| HCL Digital Experience {#hybrid_deployment}
+# Hybrid deployment - Operator
 
 This section describes how to install HCL Digital Experience 9.5 Portal Server and Web Content Manager services to on-premises platforms, operating with Digital Asset Management, Content Composer, Experience API deployed to cloud-based Kubernetes and OpenShift platforms deployed using the Operator \(dxctl\) method.
 
-## Overview {#section_hyq_vl4_pnb .section}
+## Overview
 
 Many organizations are using cloud and containerized deployments as part of their overall systems environments. In parallel, organizations continue to operate software applications and processes on-premises. The HCL Digital Experience 9.5 Hybrid deployment reference architecture and topics describe an approach to deploy and manage HCL Digital Experience 9.5 core Portal Server and Web Content Manager services on premises, and connect to cloud native components Digital Asset Management, Content Composer, Experience API and related services in a production environment.
 
@@ -14,19 +14,19 @@ Many organizations are using cloud and containerized deployments as part of thei
 ![HCL Digital Experience Hybrid On-premises and Cloud components deployment                         ](../assets/HCL_Digital_Experience_Hybrid_On-premises_and_Cloud_components_deployment.png "Topology - HCL Digital Experience Hybrid On-premises and Cloud components
                         deployment")
 
-## Prerequisites {#section_rkr_yn4_pnb .section}
+## Prerequisites
 
--   HCL Digital Experience V9.5 CF19 or higher is deployed to supported on-premises platforms, in a standalone, cluster, or farm topology. See the [Roadmaps to deploy your Digital Experience 9.5 system](../../9.5/install/deployment_patterns.html) topic for more information.
--   Practitioner Studio has been enabled in the Digital Experience 9.5 CF19 or higher installation. See the [How to enable Practitioner Studio](../../9.5/practitioner_studio/enable_prac_studio.html) topic for instructions.
+-   HCL Digital Experience V9.5 CF19 or higher is deployed to supported on-premises platforms, in a standalone, cluster, or farm topology. See the [Roadmaps to deploy your Digital Experience 9.5 system](../../9.5/install/deployment_patterns.md) topic for more information.
+-   Practitioner Studio has been enabled in the Digital Experience 9.5 CF19 or higher installation. See the [How to enable Practitioner Studio](../../9.5/practitioner_studio/enable_prac_studio.md) topic for instructions.
 -   A common domain, using an SSL connection, is established for both the on premise HCL DX 9.5 CF19 and higher on-premises environment, and the target Red Hat Open Shift platform deployment to contain cloud native components HCL DX Experience API, Digital Asset Management and Content Composer. For example, mytargetcloud.dx.com and myonprem.dx.com would have the same domain: dx.com.
 -   Single sign-on must be enabled on HCL DX 9.5 CF19 or higher on-premises environment. On DMGR or WAS Admin console under **Security** \> **Global Security** \> **Web & SIP Security** \> **Single Sign-On**, **Enabled** is checked and **Domain name** is set to common domain. For example, dx.com.
 -   A high-performance network connection is established between the HCL DX 9.5 CF19 and higher on-premises environment, and the target DX Red Hat Open Shift platform deployment.
 -   dxctl tool.
--   **Volume Requirement**: Requires an AccessMode of ReadWriteMany. Reference the [Storage Class and Volume](../../9.5/containerization/sample_storage_class_volume.html) topic for more information.
+-   **Volume Requirement**: Requires an AccessMode of ReadWriteMany. Reference the [Storage Class and Volume](../../9.5/containerization/sample_storage_class_volume.md) topic for more information.
 
-Ensure you have obtained a backup of the HCL DX 9.5 on-premises deployment. See the [Backup and Restore](../admin-system/i_wadm_c_bkup_restr_winlinux.html) topic for additional information.
+Ensure you have obtained a backup of the HCL DX 9.5 on-premises deployment. See the [Backup and Restore](../admin-system/i_wadm_c_bkup_restr_winlinux.md) topic for additional information.
 
-## Enabling Hybrid Deployment support in the HCL Digital Experience 9.5 on-premises environment {#section_jbw_lmp_pnb .section}
+## Enabling Hybrid Deployment support in the HCL Digital Experience 9.5 on-premises environment
 
 Follow the steps below to enable Hybrid deployment support in the HCL Digital Experience 9.5 on-premises environment.
 
@@ -46,17 +46,19 @@ Follow the steps below to enable Hybrid deployment support in the HCL Digital Ex
 
     **Note:** For a Hybrid deployment, the following items should be enabled and/or not included in the deployment:
 
-    Enable
-    :   `api.enabled(eAPI), composer.enabled(Content Composer)` and/or `dam.enabled(DAM)` to true.
+    -   **Enable**
 
-    Not included
-    :   **`**dx.tag**`**
+        `api.enabled(eAPI), composer.enabled(Content Composer)` and/or `dam.enabled(DAM)` to true.
 
-    :   This is not required for a hybrid deployment as DX Portal and WCM is installed on premises.
+    -   **Not included**
 
-    :   **`**dx.database**`**
+        **`**dx.tag**`**
 
-    :   This is not required for a hybrid deployment as it is installed with DX Portal and WCM on premises.
+        This is not required for a hybrid deployment as DX Portal and WCM is installed on premises.
+
+        **`**dx.database**`**
+
+        This is not required for a hybrid deployment as it is installed with DX Portal and WCM on premises.
 
     See the *Reference list* below for explanations of the file items.
 
@@ -101,7 +103,7 @@ Follow the steps below to enable Hybrid deployment support in the HCL Digital Ex
     -   `dx.operator.tag` - Tag of your hcldx-cloud-operator image.
     -   `dam.operator.tag` - Tag of your `Docker hcl-dam-operator` tag.
 
-## Deploy using the dxctl tool {#section_flv_rmp_pnb .section}
+## Deploy using the dxctl tool
 
 1.  Login to the Red Hat OpenShift platform using Kubectl.
 
@@ -146,7 +148,7 @@ Follow the steps below to enable Hybrid deployment support in the HCL Digital Ex
         ```
 
 
-## Validate the Deployment {#section_xjq_wmp_pnb .section}
+## Validate the Deployment
 
 1.  Login to the Red Hat OpenShift Console.
 
@@ -180,7 +182,7 @@ Follow the steps below to enable Hybrid deployment support in the HCL Digital Ex
     If the **Web Content** and **Digital Assets** menu items do not appear in the menu selections, follow the steps below to enable Content Composer and Digital Asset Management using the Configuration Engine.
 
 
-## Enable Content Composer and Digital Asset Management {#section_qzf_hnp_pnb .section}
+## Enable Content Composer and Digital Asset Management
 
 1.  Locate the Content Composer and Digital Asset Management URLs.
 

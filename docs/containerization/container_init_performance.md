@@ -1,8 +1,8 @@
-# HCL Digital Experience 9.5 Docker and Container initialization performance {#container_init_performance}
+# HCL Digital Experience 9.5 Docker and Container initialization performance
 
 Beginning with from [HCL Digital Experience 9.5 Container Update](../overview/container_update_releases.md) CF192 release, container DX applications initialization performance is improved. Review the following guidance for information, defaults, and options to manage container applications initialization performance when deployed to Docker, Red Hat OpenShift, and Kubernetes platforms.
 
-## Introduction {#section_cdn_ssw_q4b .section}
+## Introduction
 
 When deployed on the supported Red Hat OpenShift and Kubernetes environments, the HCL Digital Experience core platform "Pod" must be started before it can start serving requests. Furthermore, once the Pod is started, HCL Digital Experience Portal and Web Content Manager core must be initialized before the OpenShift or Kubernetes “readiness” probes can determine that the Pod is able to serve requests.
 
@@ -10,7 +10,7 @@ The OpenShift or Kubernetes readiness probe functions to execute an HTTP request
 
 In DX 9.5 Container Update CF192 and higher, to support a faster initialization of DX core Portal and Web Content Manager in Docker, Red Hat OpenShift, and supported Kubernetes platforms, most DX portlets not required for initial operations will default to a "lazy load" initialization. Using this means of initialization, an HCL DX portlet application is not started by a user request, but by the first standard HTTP request that occurs and renders a DX portal page that contains the portlet application on the server. Direct access to the portlet, for example an Ajax request, does not start the portlet. In addition, some IBM WebSphere applications not required for initial operations will not be autostarted.
 
-## ConfigEngine Tasks {#section_irr_chn_yqb .section}
+## ConfigEngine Tasks
 
 Three ConfigEngine tasks are deployed to support improvements to HCL DX Core initialization times. They are:
 
@@ -18,7 +18,7 @@ Three ConfigEngine tasks are deployed to support improvements to HCL DX Core ini
 -   *default*-autostart-docker-applications
 -   start-advanced-editor-applications
 
-## stop-autostart-docker-applications {#stopapp .section}
+## stop-autostart-docker-applications
 
 The stop-autostart-docker-applications task is executed during the Docker image build for DX Core when initialized on Docker, Red Hat OpenShift, or Kubernetes platforms. This task manages the following functions:
 
@@ -28,26 +28,28 @@ The stop-autostart-docker-applications task is executed during the Docker image 
 
 ![](../images/config_editor_options.jpg "Configure Editor Options")
 
-## default-autostart-docker-applications {#defaultapp .section}
+## default-autostart-docker-applications
 
 The default-autostart-docker-applications task will restore the autostart status of all applications to their “out of the box” status \(and not apply “Lazy load” initialization functions\).
 
-## start-advanced-editor-applications {#startapp .section}
+## start-advanced-editor-applications
 
 The start-advanced-editor-applications task will start the [Advanced Rich Text Editor.ear \(Textbox.io\)](../wcm/wcm_config_ephox_custom.md) application, if required, and if the customer configures WCM to use the WCM Advanced Editor.
 
-Prerequisites:
-:   Portal Administrators should run the start-advanced-editor-applications task to start the [Advanced Rich Text Editor.ear \(Textbox.io\)](../wcm/wcm_config_ephox_custom.md)application, then proceed to select the Advanced Editor in the Web Content Manager **Authoring** \> **Configure** \> **Editor Options** interface.
+-   **Prerequisites:**
 
-## Important Considerations and Limitations of the Container Initialization Improvements {#section_cvn_kzw_q4b .section}
+    Portal Administrators should run the start-advanced-editor-applications task to start the [Advanced Rich Text Editor.ear \(Textbox.io\)](../wcm/wcm_config_ephox_custom.md)application, then proceed to select the Advanced Editor in the Web Content Manager **Authoring** \> **Configure** \> **Editor Options** interface.
+
+
+## Important Considerations and Limitations of the Container Initialization Improvements
 
 As a result of not autostarting, these applications and portlets, initialization of DX Portal may be faster, but the initial access of most pages will initially be slower due to the fact that the application/portlet must now be initialized. Note this only affects the first access of that application/portlet \(as initialization is a once per system activity\). As new DX PODS are started, initialization of DX pages with non-required applications and portlets will be slower on first HTTP request.
 
-## Using Advanced Editors for WCM {#section_b3j_qtc_v4b .section}
+## Using Advanced Editors for WCM
 
-As noted above, beginning with Container Update CF192, and default settings for ‘lazy load’ of non-required portlets and applications, the [Advanced Rich Text Editor .ear](https://help.hcltechsw.com/digital-experience/8.5/wcm/wcm_config_ephox_custom.html) Textbox.io for WCM is now NOT started. Since this is not a lazy load but rather a stop of the Advanced Rich Text Editor Textbox IO EAR containing the advanced editor, **they must also start the Advanced Rich Text Editor EAR** by running the**"start-advanced-editor-applications" task,**before configuring the Advanced Rich Text editor in the Web Content Manager configuration settings**,** to make the editor available for content authors. It is not necessary in addition to "commit” the new Docker images once this task completes, because these changes are in the profile which is persisted in an external volume and not in the Docker image.
+As noted above, beginning with Container Update CF192, and default settings for ‘lazy load’ of non-required portlets and applications, the [Advanced Rich Text Editor .ear](https://help.hcltechsw.com/digital-experience/8.5/wcm/wcm_config_ephox_custom.md) Textbox.io for WCM is now NOT started. Since this is not a lazy load but rather a stop of the Advanced Rich Text Editor Textbox IO EAR containing the advanced editor, **they must also start the Advanced Rich Text Editor EAR** by running the**"start-advanced-editor-applications" task,**before configuring the Advanced Rich Text editor in the Web Content Manager configuration settings**,** to make the editor available for content authors. It is not necessary in addition to "commit” the new Docker images once this task completes, because these changes are in the profile which is persisted in an external volume and not in the Docker image.
 
-## Source File listing of HCL DX required portlets and applications that will autostart: { .section}
+## Source File listing of HCL DX required portlets and applications that will autostart:
 
 These configuration tasks use four files to obtain the list of HCL DX portlet/applications to autostart. All the files are located in the same directory:
 
@@ -71,8 +73,9 @@ listOfAppsDockerEnable - List of portlets and applications to autostart after ha
 
 ```
 
-**List of portlets and applications that are automatically initialized by default**
-:   \(Container Update CF192 release and later\):
+-   ****List of portlets and applications that are automatically initialized by default****
+
+    \(Container Update CF192 release and later\):
 
     PA\_Login\_Portlet\_App
 
@@ -110,8 +113,10 @@ listOfAppsDockerEnable - List of portlets and applications to autostart after ha
 
     PA\_Theme\_Creator
 
-**List of portlets and applications initialized via “lazy load”**
-:   \(Container Update CF192 release and later\):
+
+-   ****List of portlets and applications initialized via “lazy load”****
+
+    \(Container Update CF192 release and later\):
 
     AJAX Proxy Configuration
 
@@ -311,5 +316,6 @@ listOfAppsDockerEnable - List of portlets and applications to autostart after ha
 
     WSPolicyManager
 
-**Parent topic:**[Container administration \| HCL Digital Experience 9.5](../containerization/maintenance.md)
+
+**Parent topic:**[Container administration 9.5](../containerization/maintenance.md)
 

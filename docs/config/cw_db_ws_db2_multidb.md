@@ -1,10 +1,10 @@
-# DB2 worksheet: Transfer to multiple databases \| HCL Digital Experience {#cw_db_ws_db2_multidb .reference}
+# DB2 worksheet: Transfer to multiple databases
 
 When you use the database transfer option, you can use the condition to create multiple databases in the Configuration Wizard. This condition is selected by default. This worksheet highlights the fields and properties that you see in the Configuration Wizard when you use the multiple databases condition.
 
 When you use the database transfer option, you answer questions about your environment. Some fields are required. Other fields are required or removed based on your selections for environment conditions.
 
-## Typical fields { .section}
+## Typical fields
 
 The following table lists the typical fields that display when you select the condition to transfer your data to multiple databases. To see additional fields that apply to an advanced configuration, click **Advanced**.
 
@@ -116,7 +116,7 @@ Depending on the conditions that you select, values that you enter for some typi
 
 | |
 
-## Field used for the database collation condition { .section}
+## Field used for the database collation condition
 
 Database collation is an optional condition available to you.
 

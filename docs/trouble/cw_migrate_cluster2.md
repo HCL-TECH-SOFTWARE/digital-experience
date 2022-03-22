@@ -1,10 +1,10 @@
-# Troubleshooting: Migrate node profiles for a cluster environment {#cw_migrate_cluster2 .concept}
+# Troubleshooting: Migrate node profiles for a cluster environment
 
 If you encounter a failure during the migration of the node profiles for a cluster environment, learn how to correct the issue and recover from the failure.
 
 Each potential step in the migrate node profiles option is included. Since the steps vary, depending on your selections, the steps are not numbered. Find the step that failed to learn more about correcting and recovering from the failure.
 
-# Manual Step: Stop the source deployment manager and node agents {#trouble_stopdmandnodes .task}
+# Manual Step: Stop the source deployment manager and node agents
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
 
@@ -14,7 +14,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 |Skip the step|If this step was successful, you can skip it if you run the configuration process again.|
 |Clean up step|None required|
 
-# Manual Step: Start the target deployment manager {#trouble_startdm .task}
+# Manual Step: Start the target deployment manager
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
 
@@ -24,7 +24,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 |Skip the step|If this step was successful, you can skip it if you run the configuration process again.|
 |Clean up step|None required|
 
-# Generate the files for remote migration {#trouble_genfilesremote .task}
+# Generate the files for remote migration
 
 |Actions|Notes|
 |-------|-----|
@@ -36,7 +36,7 @@ If the parameter and values that you entered are correct, and the step fails aga
 
 |
 
-# Manual Step: Copy the remote migration package to the source environment {#trouble_copyremotepackage .task}
+# Manual Step: Copy the remote migration package to the source environment
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
 
@@ -46,17 +46,17 @@ Since this is a manual step, any error that occurs is outside the context of the
 |Skip the step|If this step was successful, you can skip it if you run the configuration process again.|
 |Clean up step|None required|
 
-# Create a backup of the source portal profile {#trouble_createbackupremote .task}
+# Create a backup of the source portal profile
 
 |Actions|Notes|
 |-------|-----|
 |Run the step again|If this step fails, you can run this step again after you clean up the issue.|
 |Skip the step|If this step was successful, you can skip it if you run the configuration process again.|
-|Clean up step|If this step fails, delete the path to the temporary backup profile, and run the step again. For more information about troubleshooting the WASPreUpgrade command, see the WebSphere® Application Server documentation on [Troubleshooting migration](http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.migration.base.doc/ae/tmig_troubleshoot.html).
+|Clean up step|If this step fails, delete the path to the temporary backup profile, and run the step again. For more information about troubleshooting the WASPreUpgrade command, see the WebSphere® Application Server documentation on [Troubleshooting migration](http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.migration.base.doc/ae/tmig_troubleshoot.md).
 
 |
 
-# Manual Step: Create a backup of the remote source portal profile {#trouble_createbackupsource .task}
+# Manual Step: Create a backup of the remote source portal profile
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
 
@@ -64,11 +64,11 @@ Since this is a manual step, any error that occurs is outside the context of the
 |-------|-----|
 |Run the step again|If this step fails, you can run this step again after you clean up the issue.|
 |Skip the step|If this step was successful, you can skip it if you run the configuration process again.|
-|Clean up step|If this step fails, delete the path to the temporary backup profile, and run the step again. For more information about troubleshooting the WASPreUpgrade command, see the WebSphere Application Server documentation on [Troubleshooting migration](http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.migration.base.doc/ae/tmig_troubleshoot.html).
+|Clean up step|If this step fails, delete the path to the temporary backup profile, and run the step again. For more information about troubleshooting the WASPreUpgrade command, see the WebSphere Application Server documentation on [Troubleshooting migration](http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.migration.base.doc/ae/tmig_troubleshoot.md).
 
 |
 
-# Manual Step: Update the deployment manager settings {#trouble_updatedm .task}
+# Manual Step: Update the deployment manager settings
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
 
@@ -78,7 +78,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 |Skip the step|If this step was successful, you can skip it if you run the configuration process again.|
 |Clean up step|None required|
 
-# Manual Step: If the backup profile is larger than 2 GB, clean up the backup profile {#trouble_cleanbackup .task}
+# Manual Step: If the backup profile is larger than 2 GB, clean up the backup profile
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
 
@@ -88,7 +88,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 |Skip the step|If you are running the configuration again, you can skip this step only if you skipped all the previous steps.|
 |Clean up step|None required|
 
-# Create a default profile {#trouble_createdefault .task}
+# Create a default profile
 
 |Actions|Notes|
 |-------|-----|
@@ -110,7 +110,7 @@ Example:
 
 |
 
-# Import the backup profile {#trouble_importbackup .task}
+# Import the backup profile
 
 |Actions|Notes|
 |-------|-----|
@@ -132,7 +132,7 @@ Example:
 
 |
 
-# Manual Step: If you cleaned up the backup profile, restore the JCR content {#trouble_restorejcr .task}
+# Manual Step: If you cleaned up the backup profile, restore the JCR content
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
 

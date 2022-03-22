@@ -1,4 +1,4 @@
-# Manually syndicating items \| HCL Digital Experience {#wcm_syndication_manual .task}
+# Manually syndicating items
 
 Although syndication is configured to run automatically by default, from time to time you might need to manually update syndication.
 
@@ -18,14 +18,17 @@ To manually update a syndication relationship:
 
     From CF07, you can manually syndicate by using the following methods:
 
-    Update
-    :   This method syndicates items that are newer than the previous syndication. Items that are newer than the last syndication on the syndicator are sent to the subscriber. Items that are newer on the subscriber are not updated. Items that are created on the subscriber that do not exist on the syndicator are not removed from the subscriber.
+    -   **Update**
 
-    Rebuild
-    :   This method syndicates all items that are newer on the syndicator. All items that are newer on the syndicator are sent to the subscriber. Items that are newer on the subscriber are not updated. Items that are created on the subscriber that do not exist on the syndicator are not removed from the subscriber.
+        This method syndicates items that are newer than the previous syndication. Items that are newer than the last syndication on the syndicator are sent to the subscriber. Items that are newer on the subscriber are not updated. Items that are created on the subscriber that do not exist on the syndicator are not removed from the subscriber.
 
-        Rebuild with mirror
-        :   If you select the mirror option, all items on the subscriber are reset to mirror the syndicator. All items that are newer on the syndicator are sent to the subscriber. Items that are newer on the subscriber are overwritten with the older version from the syndicator. Items that are created on the subscriber that do not exist on the syndicator are removed from the subscriber. Version history is not syndicated.
+    -   **Rebuild**
+
+        This method syndicates all items that are newer on the syndicator. All items that are newer on the syndicator are sent to the subscriber. Items that are newer on the subscriber are not updated. Items that are created on the subscriber that do not exist on the syndicator are not removed from the subscriber.
+
+        -   **Rebuild with mirror**
+
+            If you select the mirror option, all items on the subscriber are reset to mirror the syndicator. All items that are newer on the syndicator are sent to the subscriber. Items that are newer on the subscriber are overwritten with the older version from the syndicator. Items that are created on the subscriber that do not exist on the syndicator are removed from the subscriber. Version history is not syndicated.
 
             **Restriction:** The **Rebuild with mirror** option must not be used with two-way syndication. Two-way syndication means that server A syndicates to server B, and server B syndicates to server A.
 

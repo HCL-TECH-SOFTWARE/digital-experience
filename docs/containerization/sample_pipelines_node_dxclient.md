@@ -1,4 +1,4 @@
-# Sample Pipelines for the DXClient node package file \| HCL Digital Experience {#sample_pipelines_node_dxclient .concept}
+# Sample Pipelines for the DXClient node package file
 
 This topic describes how to install the DXClient tool in a pipeline, by providing a few sample pipelines such as pipelines for deploying a portlet, theme, and script application. It is designed to be run from a Jenkins job with the following parameters:
 
@@ -40,5 +40,5 @@ This topic describes how to install the DXClient tool in a pipeline, by providin
 
 ![Sample pipeline for the DXClient node package file](../assets/dxclient-sample-pipeline-using-node-zip-file2.png)![Sample pipeline for the DXClient node package file](../assets/dxclient-sample-pipeline-using-node-zip-file3.png)
 
-**Parent topic:**[Deploy DX components using HCL DXClient and DXConnect \| HCL Digital Experience](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)
+**Parent topic:**[Deploy DX components using HCL DXClient and DXConnect](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)
 

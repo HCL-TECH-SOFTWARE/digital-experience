@@ -1,4 +1,4 @@
-# Finding the OpenShift deployment \| HCL Digital Experience {#container_docker_deployment .task}
+# Finding the OpenShift deployment
 
 This section describes how to find your HCL Portal deployment.
 
@@ -19,5 +19,5 @@ As an administrator, you can easily display a list of the DxDeployment instances
     ![](../images/finding_openshift_deployment_03.png "Instances of DxDeployment")
 
 
-**Parent topic:**[Deploy DX 9.5 Container to Red Hat OpenShift \| HCL Digital Experience](../containerization/openshift.md)
+**Parent topic:**[Deploy DX 9.5 Container to Red Hat OpenShift](../containerization/openshift.md)
 

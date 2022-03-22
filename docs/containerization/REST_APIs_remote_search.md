@@ -1,8 +1,8 @@
-# Configure Remote Search using REST APIs \| HCL Digital Experience {#REST_APIs_remote_search .concept}
+# Configure Remote Search using REST APIs
 
 This section shows how to configure Remote Search for your HCL Digital Experience 9.5 environments on a traditional IBM WebSphere Application Server Network Deployment-based cluster DX deployment cluster, a Docker container, or on supported Red Hat OpenShift and Kubernetes container platforms using REST APIs.
 
-## Introduction {#section_vdz_ytj_2rb .section}
+## Introduction
 
 REST APIs are available to allow listing, deleting, modifying, and defining Portal Search Services \(and their parameters\). REST APIs may also be used to list, delete, and define Portal Search collections and Portal Search Content Providers \(and their parameters\). Reference the HCL DX 9.5 Help Center topic [REST APIs for Search](../search-rest-api/search.md) for additional information.
 
@@ -10,7 +10,7 @@ Configuring Remote Search for DX Portal requires changes to the WebSphere config
 
 Traditionally, these changes occurred via the Search Admin GUI on DX Portal. Starting HCL Digital Experience 9.5 CF199 and higher deployments, a new set of REST services also enables users to configure Remote Search. A REST service is implemented, and may be used to perform many of the same Remote Search configuration tasks in a selected environment. The environment can be a traditional IBM WebSphere Application Server Network Deployment-based cluster DX deployment, a set of Docker images, or a set of DX Kubernetes PODs.
 
-## Prerequisites {#section_bfr_15j_2rb .section}
+## Prerequisites
 
 -   In general, at least one \(1\) DX Portal Server and exactly one \(1\) DX Remote Search Server instances must be running. This can be in Docker, in Kubernetes, or a cluster.
 -   The Portal Servers must have addressability to the Remote Search Server and vice-versa. Optimally, this is handled through a DNS server so each of the servers has an IP address statically assigned and resolvable via DNS.
@@ -53,13 +53,13 @@ Traditionally, these changes occurred via the Search Admin GUI on DX Portal. Sta
     **Note:** The configuration commands used in the example configures remote search in a DX environment. However, the collections are empty even though they are defined. To populate the collections, the crawlers must be started. This can either be achieved by manually starting them, putting them on a schedule, or a combination of both.
 
 
-## Access Rights {#section_scn_x5j_2rb .section}
+## Access Rights
 
 For any attempted operation, the user that makes the request must first log into the Portal. The logged-in user is then checked for sufficient privileges before the requested action to any subsequent Remote Search REST API request is executed.
 
 If the logged-in user has no sufficient privileges, the Remote Search REST API request is rejected, and an appropriate response is returned.
 
-## New ConfigEngine tasks {#section_b4r_cvj_2rb .section}
+## New ConfigEngine tasks
 
 **ConfigEngine tasks on the DX Portal Server**
 
@@ -113,7 +113,7 @@ The following takes place when the DX Remote Search Server `ConfigEngine` comman
 
 **Important:** Both the remote search server and the portal server must both be restarted after the `ConfigEngine` tasks are complete. Since the changes are IBM WebSphere Application Server Network Deployment-based cluster DX deployment changes in the profile, the changes are not picked up until the restart.
 
-## New REST APIs {#section_s5b_cwj_2rb .section}
+## New REST APIs
 
 Like all REST services, the type of HTTP command \(`GET`, `PUT`, `POST`, `DELETE`\) dictates the type of operation.
 
@@ -148,7 +148,7 @@ All these commands require an "Authenticated" status. The `POST` and `DEL` comma
 
 In all cases, a combination of the HTTP response code along with a potential error message in the response payload indicates a variety of potential issues. Some of these issues may include a lack of access rights for the intended operation, the fact that the resource already exists \(for example, trying to create/POST a service name that already exists\), and more. Otherwise, a successful returns an HTTP response code of 20x
 
-## List {#section_zmm_4xj_2rb .section}
+## List
 
 The following command list details of various remote search resources. No JSON body is required on the request. The HTTP response is the JSON which matches the type of the request.
 
@@ -256,7 +256,7 @@ http://localhost:10039/wps/mycontenthandler/!ut/p/searchadmin/service/Remote+PSE
 }
 ```
 
-## Delete {#section_ey3_byj_2rb .section}
+## Delete
 
 If a resource to be deleted does not exist, then the returned JSON will return null \(e.g. "`{}`"\), which is the same as the returned JSON if the request is successful.
 
@@ -268,7 +268,7 @@ http://localhost:10039/wps/mycontenthandler/!ut/p/searchadmin/service/{service n
 
 In general, after a successful delete operation \(HTTP 200\), expect that the response JSON payload is null \(e.g. "`{}`"\).
 
-## Add {#section_swc_fyj_2rb .section}
+## Add
 
 ```
 http://localhost:10039/wps/mycontenthandler/!ut/p/searchadmin/service/{service name}/
@@ -286,7 +286,7 @@ where \{resource\} is one of "service", "collection" or "content provider" as is
 
 The JSON returned as a result of an `add REST` call is exactly that, which is returned for the same `GET` call. Effectively, the returned JSON echoes the `input add` JSON request.
 
-## Starting a Crawler {#section_tjw_lyj_2rb .section}
+## Starting a Crawler
 
 Once the Service/Collection/Content Provider is configured, the crawlers will still not populate the indexes. To populate the indexes, the crawlers must be started.
 
@@ -312,11 +312,11 @@ Crawlers can be started in one of two different ways:
     ```
 
 
-## Use of API on Main Virtual Portal versus all other Virtual Portals {#section_gng_tyj_2rb .section}
+## Use of API on Main Virtual Portal versus all other Virtual Portals
 
 On a Virtual Portal, the “!ut/p/digest” portal of the URL must be included as the `contenthandler` cannot issue the redirect when using the URL format without the portion mentioned.
 
 As such, referring to the example URLs above, the “!ut/p/digest” portal of the URL is NOT included. This implies that this URL is issued in the "main" VP of the DX Portal. A 302 redirect will take place, and the “!ut/p/digest” will be inserted in the final URL. This portion of the URL can also be used for the VP URL request.
 
-**Parent topic:**[Customizing your container deployment \| HCL Digital Experience](../containerization/customization.md)
+**Parent topic:**[Customizing your container deployment](../containerization/customization.md)
 

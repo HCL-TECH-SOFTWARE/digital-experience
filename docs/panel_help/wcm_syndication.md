@@ -1,4 +1,4 @@
-# How to manage syndicators and subscribers \| HCL Digital Experience {#wcm_syndication .concept}
+# How to manage syndicators and subscribers
 
 Syndication is used to transport data from one instance of HCL Web Content Manager to another.
 

@@ -1,4 +1,4 @@
-# Troubleshooting: Migrate a stand-alone server {#cw_migrate_standalone2 .concept}
+# Troubleshooting: Migrate a stand-alone server
 
 If you encounter a failure during the configuration process, determine whether you can run the step again, skip the step, or if you must clean up the step. For some failed steps, learn how to correct the issue and recover from the failure.
 
@@ -6,7 +6,7 @@ Each potential step in the configuration is included. Because the steps vary dep
 
 **Tip:** If you must go through the wizard again, download the wizard selections that you made to save time. Then, cancel the configuration. Start the process over and upload your saved selections. Correct or enter values for the parameters that caused the failure.
 
-# Manual Step: Install the latest fix packs {#trouble_fixpacks .task}
+# Manual Step: Install the latest fix packs
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
 
@@ -16,7 +16,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 |Skip the step|If this step was successful, you can skip it if you run the configuration process again.|
 |Clean up step|If you encounter an issue when you are installing the fix, refer to the documentation for the fix.|
 
-# Generate the files for remote migration {#trouble_genfiles .task}
+# Generate the files for remote migration
 
 |Actions|Notes|
 |-------|-----|
@@ -26,7 +26,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 
 |
 
-# Manual Step: Copy the remote migration package to the source environment {#trouble_copypkgremote .task}
+# Manual Step: Copy the remote migration package to the source environment
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
 
@@ -36,27 +36,27 @@ Since this is a manual step, any error that occurs is outside the context of the
 |Skip the step|If this step was successful, you can skip it if you run the configuration process again.|
 |Clean up step|None required|
 
-# Create a backup of the remote source portal profile {#trouble_createbackupremote .task}
+# Create a backup of the remote source portal profile
 
 |Actions|Notes|
 |-------|-----|
 |Run the step again|If this step fails, you can run this step again after you clean up the issue.|
 |Skip the step|If this step was successful, you can skip it if you run the configuration process again.|
-|Clean up step|If this step fails, delete the path to the temporary backup profile, and run the step again. For more information about troubleshooting the WASPreUpgrade command, see the WebSphere® Application Server documentation on [Troubleshooting migration](http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.migration.base.doc/ae/tmig_troubleshoot.html).
+|Clean up step|If this step fails, delete the path to the temporary backup profile, and run the step again. For more information about troubleshooting the WASPreUpgrade command, see the WebSphere® Application Server documentation on [Troubleshooting migration](http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.migration.base.doc/ae/tmig_troubleshoot.md).
 
 |
 
-# Create a backup profile of the source portal profile {#trouble_createbackuplocal .task}
+# Create a backup profile of the source portal profile
 
 |Actions|Notes|
 |-------|-----|
 |Run the step again|If this step fails, you can run this step again after you clean up the issue.|
 |Skip the step|If this step was successful, you can skip it if you run the configuration process again.|
-|Clean up step|If this step fails, delete the path to the temporary backup profile, and run the step again. For more information about troubleshooting the WASPreUpgrade command, see the WebSphere Application Server documentation on [Troubleshooting migration](http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.migration.base.doc/ae/tmig_troubleshoot.html).
+|Clean up step|If this step fails, delete the path to the temporary backup profile, and run the step again. For more information about troubleshooting the WASPreUpgrade command, see the WebSphere Application Server documentation on [Troubleshooting migration](http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.migration.base.doc/ae/tmig_troubleshoot.md).
 
 |
 
-# Manual Step: If the backup profile is larger than 2 GB, clean up the backup profile {#trouble_cleanbackupprofile .task}
+# Manual Step: If the backup profile is larger than 2 GB, clean up the backup profile
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
 
@@ -66,7 +66,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 |Skip the step|If you are running the configuration again, you can skip this step only if you skipped all the previous steps.|
 |Clean up step|None required|
 
-# Create a default profile {#trouble_createdefaultprofile .task}
+# Create a default profile
 
 |Actions|Notes|
 |-------|-----|
@@ -88,7 +88,7 @@ Example:
 
 |
 
-# Import backup profile {#trouble_importbackupprofile .task}
+# Import backup profile
 
 |Actions|Notes|
 |-------|-----|
@@ -110,7 +110,7 @@ Example:
 
 |
 
-# Manual Step: If you cleaned up the backup profile, restore the JCR content {#trouble_restorejcr .task}
+# Manual Step: If you cleaned up the backup profile, restore the JCR content
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
 
@@ -120,7 +120,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 |Skip the step|Do not skip this step, if you are running the configuration again. You must restore the JCR content, if you completed the previous manual step to clean up the backup profile that is over 2 GB.|
 |Clean up step|None required|
 
-# Upgrade the ConfigEngine {#trouble_upgradeconfigengine .task}
+# Upgrade the ConfigEngine
 
 |Actions|Notes|
 |-------|-----|
@@ -130,7 +130,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 
 |
 
-# Manual Step: Update the ports on the target environment {#trouble_updateportslocal .task}
+# Manual Step: Update the ports on the target environment
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
 
@@ -140,7 +140,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 |Skip the step|Do not skip this step, if you are running the configuration again.|
 |Clean up step|None required|
 
-# Manual Step: Update database settings {#trouble_updatedbsettings .task}
+# Manual Step: Update database settings
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
 
@@ -150,7 +150,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 |Skip the step|Do not skip this step, if you are running the configuration again.|
 |Clean up step|None required|
 
-# Validate database settings {#trouble_validatedbsettings .task}
+# Validate database settings
 
 |Actions|Notes|
 |-------|-----|
@@ -158,7 +158,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 |Skip the step|Do not skip this step, if you are running the configuration again.|
 |Clean up step|Check your properties files to make sure that you have all of your parameters and values set correctly before you run the step again.|
 
-# Connect to new database copies {#trouble_connectcopies .task}
+# Connect to new database copies
 
 |Actions|Notes|
 |-------|-----|
@@ -166,7 +166,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 |Skip the step|Do not skip this step, if you are running the configuration again.|
 |Clean up step|None required.|
 
-# Manual Step: Review database schema changes {#trouble_reviewschema .task}
+# Manual Step: Review database schema changes
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
 
@@ -176,7 +176,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 |Skip the step|This step is optional. You can skip this step if you do not want to review the database schema changes.|
 |Clean up step|None required|
 
-# Upgrade the base portal database component {#trouble_upgrade1 .task}
+# Upgrade the base portal database component
 
 |Actions|Notes|
 |-------|-----|
@@ -184,7 +184,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 |Skip the step|Do not skip this step, if you are running the configuration again.|
 |Clean up step|If this step fails, delete the database, create a new copy, and run the step again.|
 
-# Manual Step: Remove check pending statuses from table spaces {#trouble_removecheckpendingstatus .task}
+# Manual Step: Remove check pending statuses from table spaces
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
 
@@ -194,7 +194,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 |Skip the step|Do not skip this step, if you are running the configuration again.|
 |Clean up step|If this step fails, delete the database, create a new copy, and rerun the **Upgrade the portal database component** step before you rerun this step again.|
 
-# Upgrade the remaining portal databases {#trouble_upgrade2 .task}
+# Upgrade the remaining portal databases
 
 |Actions|Notes|
 |-------|-----|
@@ -202,7 +202,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 |Skip the step|Do not skip this step, if you are running the configuration again. You must complete the **Upgrade the base portal database components** and **Remove check pending statuses from table spaces** steps before you run this step again.|
 |Clean up step|If this step fails, delete the database, create a new copy, and rerun the **Upgrade the portal database component** and **Remove check pending statuses from table spaces** steps before you run this step again.|
 
-# Upgrade the portal profile {#trouble_upgradeprofile .task}
+# Upgrade the portal profile
 
 |Actions|Notes|
 |-------|-----|

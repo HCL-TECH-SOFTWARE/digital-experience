@@ -1,4 +1,4 @@
-# Update the Digital Experience 9.5 Core Kubernetes or Red Hat OpenShift container deployment {#update_dx_core_kubernetes_container_deployment .concept}
+# Update the Digital Experience 9.5 Core Kubernetes or Red Hat OpenShift container deployment
 
 Update the Digital Experience 9.5 Core Kubernetes container deployment.
 
@@ -33,7 +33,7 @@ HCL DX administrators should not extend the HCL Digital Experience 9.5 container
 
     **Note:** Before starting the tar ensure that your file system has ~50% free capacity.   Once complete, it is recommended that you copy the backup.tar.gz file that is generated to alternate long term storage.
 
-    In addition, as outlined in the [Backup and Recovery](../../9.0/plan/mig_plan_backup_and_recovery.html) topic, the Digital Experience 9.5 database should be backed up at the same time as the `wp_profile`.
+    In addition, as outlined in the [Backup and Recovery](../../9.0/plan/mig_plan_backup_and_recovery.md) topic, the Digital Experience 9.5 database should be backed up at the same time as the `wp_profile`.
 
 2.  **Create a backup of the Persistence layer using the following example commands:**
 
@@ -55,10 +55,10 @@ HCL DX administrators should not extend the HCL Digital Experience 9.5 container
 
     **Note:** Beginning with HCL DX 9.5 Container Update CF192, the dxctl process is used to manage updates to later update releases. See the following deployment topics below for the update instructions details.
 
-    -   Documentation resource: [Deploy HCL Digital Experience 9.5 Container to Red Hat OpenShift](../containerization/deploy_openshift.html)
-    -   Documentation resource: [Deploy HCL Digital Experience 9.5 Container to Amazon EKS](../containerization/deploy_kubernetes_eks.html)
-    -   Documentation resource: [Deploy HCL Digital Experience 9.5 Container to Microsoft Azure AKS](../containerization/azure_aks.html)
-    -   Documentation resource: [Deploy HCL Digital Experience 9.5 Container to Google Kubernetes Engine \(GKE\)](../containerization/google_gke.html)
+    -   Documentation resource: [Deploy HCL Digital Experience 9.5 Container to Red Hat OpenShift](../containerization/deploy_openshift.md)
+    -   Documentation resource: [Deploy HCL Digital Experience 9.5 Container to Amazon EKS](../containerization/deploy_kubernetes_eks.md)
+    -   Documentation resource: [Deploy HCL Digital Experience 9.5 Container to Microsoft Azure AKS](../containerization/azure_aks.md)
+    -   Documentation resource: [Deploy HCL Digital Experience 9.5 Container to Google Kubernetes Engine \(GKE\)](../containerization/google_gke.md)
     -   Video: [Using dxctl to update HCL DX 9.5 on Red Hat OpenShift to Container Update CF192](https://youtu.be/PCsEWiCrRKo)
     -   Video: [Updating the HCL DX 9.5 Portal & IBM WebSphere Application Server Administrator Secrets in OpenShift and Kubernetes](https://www.youtube.com/watch?v=kei6--qMwY4)
 3.  **Download the later version of the HCL DX 9.5 Container Update packages to update from the HCL Software License Portal.**
@@ -190,7 +190,7 @@ BUILD SUCCESSFUL
     -   *kubectl delete crd kubernetesendpointresolvers.getambassador.io -n az-demo*
     Upon completion, these are automatically redeployed at version 1 and version 2, provided you have an active deployment. If not, they are redeployed once the HCL DX 9.5 DX is deployed. The previous ambassador version, prior to CF183 at level 0.85.0, is deployed and uses the ambassador version 1 APIs.
 
-    There are additional options to [customize the deployment](../containerization/customizing_container_deployment.html). For example, once the database is transferred to a non-Derby database, the **DBTYPE** must updated so you can scale the instances higher. Additionally, once the database is transferred, the number of replicas can be increased.
+    There are additional options to [customize the deployment](../containerization/customizing_container_deployment.md). For example, once the database is transferred to a non-Derby database, the **DBTYPE** must updated so you can scale the instances higher. Additionally, once the database is transferred, the number of replicas can be increased.
 
     ![](../assets/Sample_upgrade.png "Sample upgrade")
 
@@ -198,10 +198,10 @@ BUILD SUCCESSFUL
 
     For instructions to update the Content Composer, Digital Asset Management, and Experience API container deployment images, see the following topics.
 
-    -   Documentation resource: [Install the Experience API, Content Composer, and DAM Components](../containerization/install_config_cc_dam.html)
-    -   Documentation resource: [Update the Experience API, Content Composer, and DAM Components](../containerization/update_config_cc_dam.html)
+    -   Documentation resource: [Install the Experience API, Content Composer, and DAM Components](../containerization/install_config_cc_dam.md)
+    -   Documentation resource: [Update the Experience API, Content Composer, and DAM Components](../containerization/update_config_cc_dam.md)
 
-## Instructions to Delete a DX 9.5 Container Deployment {#section_jxf_vt2_4mb .section}
+## Instructions to Delete a DX 9.5 Container Deployment
 
 Removing the entire deployment requires several steps, this is by design.
 
@@ -259,5 +259,5 @@ The persistent volume associated to the deployment needs to be cleaned up by you
 -   Ensure you get the `'persistentvolume/your_namespace edited'` message.
 -   You may need to manually remove any data remaining from the previous deployment.
 
-**Parent topic:**[Container administration \| HCL Digital Experience 9.5](../containerization/maintenance.md)
+**Parent topic:**[Container administration 9.5](../containerization/maintenance.md)
 

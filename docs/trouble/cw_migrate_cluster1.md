@@ -1,4 +1,4 @@
-# Troubleshooting: Migrate the deployment manager profile for a cluster environment {#cw_migrate_cluster_1 .concept}
+# Troubleshooting: Migrate the deployment manager profile for a cluster environment
 
 If you encounter a failure during the configuration process, determine whether you can run the step again, skip the step, or if you must clean up the step. For some failed steps, learn how to correct the issue and recover from the failure.
 
@@ -6,7 +6,7 @@ Each potential step in the configuration is included. Because the steps vary dep
 
 **Tip:** If you must go through the wizard again, download the wizard selections that you made to save time. Then, cancel the configuration. Start the process over and upload your saved selections. Correct or enter values for the parameters that caused the failure.
 
-# Manual Step: Disable automatic synchronization on all nodes in the cluster {#trouble_disableautosync .task}
+# Manual Step: Disable automatic synchronization on all nodes in the cluster
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
 
@@ -16,7 +16,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 |Skip the step|If this step was successful, you can skip it if you run the configuration process again.|
 |Clean up step|None required|
 
-# Manual Step: Install the latest fix packs {#trouble_installfixpacks .task}
+# Manual Step: Install the latest fix packs
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
 
@@ -26,7 +26,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 |Skip the step|If this step was successful, you can skip it if you run the configuration process again.|
 |Clean up step|If you encounter an issue when you are installing the fix, refer to the documentation for the fix.|
 
-# Manual Step: Install the Portal and WebSphere binary files {#trouble_installbinaries .task}
+# Manual Step: Install the Portal and WebSphere binary files
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
 
@@ -36,7 +36,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 |Skip the step|If this step was successful, do not run this step again.|
 |Clean up step|Complete an uninstall of the product, and delete the remaining file structure. Then, start the configuration from the beginning.|
 
-# Manual Step: Copy required portal binary files to the target deployment manager {#trouble_copybinaries .task}
+# Manual Step: Copy required portal binary files to the target deployment manager
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
 
@@ -46,7 +46,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 |Skip the step|If this step was successful, you can skip it if you run the configuration process again.|
 |Clean up step|None required|
 
-# Manual Step: Generate files for remote migration on the deployment manager {#trouble_genfilesremote .task}
+# Manual Step: Generate files for remote migration on the deployment manager
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
 
@@ -60,7 +60,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 
 |
 
-# Manual Step: Copy the remote migration package to the source environment {#trouble_copyremotepkg .task}
+# Manual Step: Copy the remote migration package to the source environment
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
 
@@ -70,7 +70,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 |Skip the step|If this step was successful, you can skip it if you run the configuration process again.|
 |Clean up step|None required|
 
-# Manual Step: Create a backup of the source deployment manager {#trouble_createbckupofsource .task}
+# Manual Step: Create a backup of the source deployment manager
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
 
@@ -78,13 +78,13 @@ Since this is a manual step, any error that occurs is outside the context of the
 |-------|-----|
 |Run the step again|If this step fails, you can run this step again after you clean up the issue.|
 |Skip the step|If this step was successful, you can skip it if you run the configuration process again.|
-|Clean up step|If this step fails, delete the path to the temporary backup profile, and run the step again. For more information about troubleshooting the WASPreUpgrade command, see the WebSphere Application Server documentation on [Troubleshooting migration](http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.migration.base.doc/ae/tmig_troubleshoot.html).
+|Clean up step|If this step fails, delete the path to the temporary backup profile, and run the step again. For more information about troubleshooting the WASPreUpgrade command, see the WebSphere Application Server documentation on [Troubleshooting migration](http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.migration.base.doc/ae/tmig_troubleshoot.md).
 
 **IBMi only:** If this step fails, remove the oldProfile parameter and run the step again.
 
 |
 
-# Manual Step: Create a default deployment manager profile {#trouble_createdefaultdm .task}
+# Manual Step: Create a default deployment manager profile
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
 
@@ -108,7 +108,7 @@ Example:
 
 |
 
-# Manual Step: Import the backup profile {#trouble_importbackup .task}
+# Manual Step: Import the backup profile
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
 
@@ -132,7 +132,7 @@ Example:
 
 |
 
-# Apply the latest Combined Cumulative Fix updates to your system. {#trouble-applyfix .task}
+# Apply the latest Combined Cumulative Fix updates to your system.
 
 |Actions|Notes|
 |-------|-----|

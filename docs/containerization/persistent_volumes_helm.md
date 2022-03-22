@@ -1,4 +1,4 @@
-# PersistentVolumes and related operations considerations \| HCL Digital Experience {#persistent_volumes_helm .concept}
+# PersistentVolumes and related operations considerations
 
 This topic provides details covering the PersistentVolumes \(PVs\) and related operations considerations in storing data for DX 9.5 stateful applications.
 
@@ -8,7 +8,7 @@ As Kubernetes and OpenShift Pods do not have their own persistent file storage, 
 
 **Note:** You need to consider the type of PVs before you perform an installation. The type of volumes used depends on the type of deployment you are performing. If you are using only `ReadWriteOnce` \(RWO\) persistent volumes for all applications, you will not be able to scale them up to multiple Pods.
 
-## Core {#section_e4w_f3k_zpb .section}
+## Core
 
 The DX 9.5 Core application requires multiple PersistentVolumes \(PVs\) of different types and sizes for its operation. From an application perspective, there are three different things that need to be persisted:
 
@@ -34,11 +34,11 @@ n(PV) = 1 + m(Core Pods) * 2
 
 In typical operations, the persistent volumes for logs and transaction logs are relatively small.
 
-## Digital Asset Management {#section_c4c_njk_zpb .section}
+## Digital Asset Management
 
 The Digital Asset Management \(DAM\) application requires one \(1\) PV for storing binary asset data. This persistent volume is shared between all Digital Asset Management Pods. The PV used must be `ReadWriteMany (RWX)`.
 
-## Persistence {#section_ysr_pjk_zpb .section}
+## Persistence
 
 Persistence consists of at least two Pods. One which acts as a read/write primary node, and at least one that acts as a read-only fallback.
 
@@ -46,13 +46,11 @@ All Persistence Pods work with `ReadWriteOnce` \(RWO\) persistent volumes, since
 
 Therefore, the minimum required amount of PVs for Persistence is 2.
 
-## Remote Search {#section_bbb_nvm_vrb .section}
+## Remote Search
 
 Remote Search requires 1 persistent volume for storing the profile \(called `prs_profile`\) with the type `ReadWriteOnce` \(RWO\).
 
 Remote Search is limited to only one Pod, therefore, requires one PV for that Pod.
 
 Refer to **[Networking configuration](helm_configure_networking.md)** for next steps.
-
-**Parent topic:**[Overview of the Helm architecture \| HCL Digital Experience](../containerization/helm_overview.md)
 

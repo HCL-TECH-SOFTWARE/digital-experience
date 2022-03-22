@@ -1,4 +1,4 @@
-# Troubleshooting: Create a cluster option {#cw_create_cluster .concept}
+# Troubleshooting: Create a cluster option
 
 Creating a cluster is part of setting up a clustered environment.If you encounter a failure during the configuration process, determine whether you can run the step again, skip the step, or if you must clean up the step. For some failed steps, learn how to correct the issue and recover from the failure.
 
@@ -6,7 +6,7 @@ Each potential step in the configuration is included. Because the steps vary dep
 
 **Tip:** If you must go through the wizard again, download the wizard selections that you made to save time. Then, cancel the configuration. Start the process over and upload your saved selections. Correct or enter values for the parameters that caused the failure.
 
-# Manual Step: Verify that the portal node and deployment manager system clocks are within 5 minutes of each other {#AppropriateActionsForStepIfYouMustR-12 .task}
+# Manual Step: Verify that the portal node and deployment manager system clocks are within 5 minutes of each other
 
 Manual step errors occur outside the context of the wizard.
 
@@ -16,7 +16,7 @@ Manual step errors occur outside the context of the wizard.
 |Skip the step|If you successfully completed the step before, then skip this step.|
 |Clean up step|None required|
 
-# Federate the node {#AppropriateActionsForStepIfYouMustR .task}
+# Federate the node
 
 When you federate the node, it becomes a managed node in the deployment manager cell.
 
@@ -36,7 +36,7 @@ wp_profile/bin/removeNode.sh
 
 |
 
-# Configure the dynamic cluster node {#WhenYouFederateTheNodeItBecomesAMan .task}
+# Configure the dynamic cluster node
 
 Applies to dynamic clusters only.
 
@@ -46,7 +46,7 @@ Applies to dynamic clusters only.
 |Skip the step|If you successfully completed the step before, then skip this step.|
 |Clean up step|None required|
 
-# Prepare the node for clustering {#AppropriateActionsForStepIfYouMustR-14 .task}
+# Prepare the node for clustering
 
 If this step fails, click **View Results** to see the applicable section of the ConfigTrace.log.
 
@@ -56,7 +56,7 @@ If this step fails, click **View Results** to see the applicable section of the 
 |Skip the step|If you successfully completed the step before, then skip this step.|
 |Clean up step|None required|
 
-# Complete the cluster setup {#K-114 .task}
+# Complete the cluster setup
 
 |Actions|Notes|
 |-------|-----|

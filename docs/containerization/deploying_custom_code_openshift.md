@@ -1,4 +1,4 @@
-# Deploying Custom Code in OpenShift \| HCL Digital Experience {#targeting_device_example}
+# Deploying Custom Code in OpenShift
 
 This section outlines deploying custom code to HCL Digital Experience in OpenShift.
 
@@ -224,7 +224,7 @@ OpenShift Client Jenkins Plugin (if not already installed)
     ```
 
 
-**Parent topic:**[Deploy DX 9.5 Container to Red Hat OpenShift \| HCL Digital Experience](../containerization/openshift.md)
+**Parent topic:**[Deploy DX 9.5 Container to Red Hat OpenShift](../containerization/openshift.md)
 
-**Parent topic:**[Digital Experience Application deployment \| HCL Digital Experience](../containerization/ci_cd.md)
+**Parent topic:**[Digital Experience Application deployment](../containerization/ci_cd.md)
 

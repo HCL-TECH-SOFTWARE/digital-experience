@@ -1,26 +1,29 @@
-# Web Content Manager Access Control Filter REST API {#wcm_REST_web_content_manager_access_control_filter .concept}
+# Web Content Manager Access Control Filter REST API
 
 This API allows you to filter access control roles using the WCM Query API. All other parameters like parent or type still apply, so one can, for example, find all libraries the user has the Editor role on.
 
-## Using the Web Content Manager Access Control Filter REST API {#section_wff_cjc_smb .section}
+## Using the Web Content Manager Access Control Filter REST API
 
-Endpoint
-:   It extends the existing search query API and adds a new parameter. See [REST Query service for web content](wcm_rest_query.md) and [REST Query parameters](wcm_rest_adhoc.md) for more information.
+-   **Endpoint**
 
-:   **GET request to:**
+    It extends the existing search query API and adds a new parameter. See [REST Query service for web content](wcm_rest_query.md) and [REST Query parameters](wcm_rest_adhoc.md) for more information.
 
-:   ```
-http://host:port/wps/mycontenthandler/wcmrest/query?filteraccess=...
-```
+    **GET request to:**
 
-:   **Sample URL:**
+    ```
+    http://host:port/wps/mycontenthandler/wcmrest/query?filteraccess=...
+    ```
 
-:   ```
-http://localhost:10039/wps/mycontenthandler/!ut/p/digest!rQXplcJ7_Lmlz7rU8WOpbA/wcmrest/query?parentid=wcmrest%3a04b24105-2ea0-422f-be83-e009a7766c1b&filteraccess=Editor
-```
+    **Sample URL:**
 
-Expected Body
-:   The body can have the basic WCM structure:
+    ```
+    http://localhost:10039/wps/mycontenthandler/!ut/p/digest!rQXplcJ7_Lmlz7rU8WOpbA/wcmrest/query?parentid=wcmrest%3a04b24105-2ea0-422f-be83-e009a7766c1b&filteraccess=Editor
+    ```
+
+
+-   **Expected Body**
+
+    The body can have the basic WCM structure:
 
     ```
     <?xml version="1.0" encoding="UTF-8"?>
@@ -28,16 +31,21 @@ Expected Body
     </feed>
     ```
 
-Expected Headers
-:   LTPA token of the user. Also work anonymously.
 
-Query Parameters
-:   -   `filteraccess`: Role to be checked. Valid roles: User, Editor, Admin, Manager, Contributor, ...
+-   **Expected Headers**
 
-Return Body
-:   The found results. Same as when calling existing query API
+    LTPA token of the user. Also work anonymously.
 
-:   Sample:
+
+-   **Query Parameters**
+
+    -   `filteraccess`: Role to be checked. Valid roles: User, Editor, Admin, Manager, Contributor, ...
+
+-   **Return Body**
+
+    The found results. Same as when calling existing query API
+
+    Sample:
 
     ```
     <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0">
@@ -162,4 +170,5 @@ Return Body
         </entry>
     </feed>
     ```
+
 

@@ -1,8 +1,8 @@
-# Update the HCL DX 9.5 Experience API, Content Composer, and Digital Asset Management components {#Digital_Asset_Management_installation}
+# Update the HCL DX 9.5 Experience API, Content Composer, and Digital Asset Management components
 
 This section provides the steps to update the HCL Digital Experience 9.5 Experience API, HCL Digital Experience 9.5 Content Composer, and HCL Digital Experience 9.5 Digital Asset Management components.
 
-## Update the HCL Digital Experience 9.5 Experience API, Content Composer, and Digital Asset Management images {#section_ckg_qy1_pmb .section}
+## Update the HCL Digital Experience 9.5 Experience API, Content Composer, and Digital Asset Management images
 
 New HCL Digital Experience 9.5 CFxxx container images are released on a regular cadence, through the**[HCL DX 9.5 Container Update deliveries](../overview/container_update_releases.md).**
 
@@ -83,9 +83,9 @@ oc apply -f dx-deploy-config-map.yaml
             to perform the update. The deployment will automatically restart a few times and make appropriate configuration changes during these restarts. Once complete, the deployment is upgraded.
 
 
-## HCL Digital Experience Solution Feedback { .section}
+## HCL Digital Experience Solution Feedback
 
 HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).
 
-**Parent topic:**[Container administration \| HCL Digital Experience 9.5](../containerization/maintenance.md)
+**Parent topic:**[Container administration 9.5](../containerization/maintenance.md)
 

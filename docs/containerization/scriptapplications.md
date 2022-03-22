@@ -1,14 +1,14 @@
-# Script applications \| HCL Digital Experience {#scriptapplications}
+# Script applications
 
 This topic provides information about the deployment, undeployment, and restoration of script applications.
 
-## Deploy script applications {#section_um4_jqg_w4b .section}
+## Deploy script applications
 
 The `deploy-scriptapplication` command is used with the DXClient tool to push or pull Script Applications between a local development workstation or automation server and DX 9.5 CF19 or later servers. The command will push or pull the files that make up a script application to or from a Script Application instance stored in a Web Content Manager library on the server.
 
 **Required Files**:
 
-The script application push command in the DXClient tool requires a Script Application zip file or an extracted folder of the same \(identified by the `prebuiltZip` or `contentRoot` attributes respectively\). For more information on Script Applications, refer to the [Script Application](../script-portlet/build_apps.html) topics in the HCL DX Help Center.
+The script application push command in the DXClient tool requires a Script Application zip file or an extracted folder of the same \(identified by the `prebuiltZip` or `contentRoot` attributes respectively\). For more information on Script Applications, refer to the [Script Application](../script-portlet/build_apps.md) topics in the HCL DX Help Center.
 
 **Command**
 
@@ -238,7 +238,7 @@ If all required options are configured in the config.json at the /dist/src/co
 dxclient deploy-scriptapplication push
 ```
 
-## Undeploy script applications {#section_i2y_ttl_4nb .section}
+## Undeploy script applications
 
 The `undeploy-scriptapplication` command is used to remove a script application from a target HCL DX 9.5 CF192 or later servers.
 
@@ -333,7 +333,7 @@ dxclient undeploy-scriptapplication -wcmContentId <wcm-content-id>
 dxclient undeploy-scriptapplication -wcmContentId <wcm-content-id> -f
 ```
 
-## Restore Script Application {#section_fzm_yqg_w4b .section}
+## Restore Script Application
 
 The `restore-scriptapplication` command is used to restore a script application into one of its previous versions present in the target HCL DX 9.5 CF 19 or later servers.
 
@@ -433,5 +433,5 @@ Log files from command execution can be found in the logs directory of the DXCli
 dxclient restore-scriptapplication -wcmContentID <wcm-content-id> -versionName <version-name> -restoreAsPublished <restore-as-published>
 ```
 
-**Parent topic:**[DXClient Artifact Types \| HCL Digital Experience](../containerization/dxclientartifacts.md)
+**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
 

@@ -1,18 +1,18 @@
-# Cluster Step 1: Migrate the deployment manager profile \| HCL Digital Experience {#cw_migrate_cluster1 .concept}
+# Cluster Step 1: Migrate the deployment manager profile
 
 Use the Configuration Wizard to migrate the deployment manager profile for a cluster environment. Use the following information to get familiar with the information that you must provide in the wizard and the configuration procedure that it generates.
 
-## Configuration Wizard { .section}
+## Configuration Wizard
 
 Select **Migrate to a New Version**, and choose the **Migrate a Cluster Step 1: Migrate the Deployment Manager Profile** option.
 
 **Note:** This option is not available for IBM® z/OS®.
 
-# Worksheet {#worksheet .reference}
+# Worksheet
 
 To set up the migration, you answer questions about your wanted configuration. Some fields apply to migration configurations. Some fields are required based on your environment. The remaining fields are advanced and do not apply to most configurations.
 
-## Minimal required fields { .section}
+## Minimal required fields
 
 The following table lists the fields that are unique to the Migrate a cluster step 1: Migrate the deployment manager profile configuration option. You might be prompted for additional information about system or user IDs and passwords that you defined during the portal installation process.
 
@@ -37,7 +37,7 @@ The following table lists the fields that are unique to the Migrate a cluster st
 |**Target temporary path**|/tmp| |
 |**WebSphere Application Server Version**|8.5| |
 
-## Advanced fields { .section}
+## Advanced fields
 
 The following table lists the advanced fields that are unique to the Migrate a cluster step 1: Migrate the deployment manager profile configuration option. Click **Advanced** on the Answer Questions page for the target deployment manager system to see the advanced properties. Default values are provided for advanced fields that are required.
 
@@ -45,7 +45,7 @@ The following table lists the advanced fields that are unique to the Migrate a c
 |-----------|-------|----------|
 |**JVM heap size**|2048| |
 
-# Migrate a cluster step 1: Migrate the deployment manager profile option {#task .task}
+# Migrate a cluster step 1: Migrate the deployment manager profile option
 
 After you answer questions and provide information about your migration, the wizard generates a custom configuration procedure.
 
@@ -55,84 +55,104 @@ If you click **View Step Command**, you can see the task and properties that are
 
 1.  Manual Step: Disable automatic synchronization on all nodes in the cluster
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 2.  Manual Step: Stop the deployment manager
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 3.  Manual Step: Install the latest fix packs
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 4.  Manual Step: Install the Portal and WebSphere® binary files
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 5.  Manual Step: Copy required portal binary files to the target deployment manager
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 6.  Manual Step: Generate files for remote migration on the deployment manager
 
-    Condition
-    :   The target portal is on a different server than the source.
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        The target portal is on a different server than the source.
+
+    -   **ConfigEngine task**
+
+        none
 
 7.  Manual Step: Copy the remote migration package to the source environment
 
-    Condition
-    :   The target portal is on a different server than the source.
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        The target portal is on a different server than the source.
+
+    -   **ConfigEngine task**
+
+        none
 
 8.  Manual Step: Create a backup of the source deployment manager
 
     **IBMi only:** You must remove the oldProfile parameter before running the command.
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 9.  Manual Step: Create a default deployment manager profile
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 10. Manual Step: Import the backup profile
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 

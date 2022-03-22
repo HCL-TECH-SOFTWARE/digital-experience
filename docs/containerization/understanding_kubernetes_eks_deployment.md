@@ -1,4 +1,4 @@
-# Understanding the HCL DX 9.5 container deployment on Amazon EKS {#containerdeployment}
+# Understanding the HCL DX 9.5 container deployment on Amazon EKS
 
 This section describes the output and artifacts created when deploying HCL Digital Experience 9.5 container release in on Amazon Elastic Kubernetes Service \(EKS\).
 
@@ -32,7 +32,7 @@ dxdeployment.git.cwp.pnp-hcl.com/dx-deployment created
 
 The following artifacts are created during deployment:
 
-## Artifacts {#section_qt4_d55_4nb .section}
+## Artifacts
 
 Project/Namespace
 
@@ -235,7 +235,7 @@ There are several files created for each deployment. It is recommended to keep t
 -   File 1 `dxNameSpace_NAMESPACE.yaml` can be used to delete the `namespace`/`project` if needed.
 -   File 2 `git_v1_dxdeployment_cr_NAMESPACE.yaml` is a representation of the last deployed deployment for the given `namespace`/`project`.
 
-**Note:** With multiple instances of Digital Experience 9.5 containers writing to a shared **[Transaction log](https://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.5/com.ibm.websphere.base.doc/ae/tjta_settlog.html)** \(tranlog\) directory, there is a possibility of data corruption which could lead to DX server startup issues. To avoid this possibility, beginning with CF192, for each DX 9.5 instance the deployment creates an additional dynamic Persistent Volume \(pv\) and Persistent Volume Claim \(pvc\) to contain the tranlog data of the individual instances.
+**Note:** With multiple instances of Digital Experience 9.5 containers writing to a shared **[Transaction log](https://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.5/com.ibm.websphere.base.doc/ae/tjta_settlog.md)** \(tranlog\) directory, there is a possibility of data corruption which could lead to DX server startup issues. To avoid this possibility, beginning with CF192, for each DX 9.5 instance the deployment creates an additional dynamic Persistent Volume \(pv\) and Persistent Volume Claim \(pvc\) to contain the tranlog data of the individual instances.
 
-**Parent topic:**[Deploy DX Container to Amazon EKS \| HCL Digital Experience](../containerization/kubernetes_eks.md)
+**Parent topic:**[Deploy DX Container to Amazon EKS](../containerization/kubernetes_eks.md)
 

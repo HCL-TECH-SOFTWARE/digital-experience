@@ -1,4 +1,4 @@
-# Manual Step: Updating your themes to reference the correct Dojo context root \| HCL Digital Experience {#manual-seo-themes .task}
+# Manual Step: Updating your themes to reference the correct Dojo context root
 
 The Modify Site URLs for Search Engine Optimization option in the Configuration Wizard includes manual steps. For reference only, you can see the details of the manual step for updating your themes to reference the correct Dojo context root.
 

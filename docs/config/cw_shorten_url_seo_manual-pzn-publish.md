@@ -1,4 +1,4 @@
-# Manual Step: Updating the personalization publishing server with the new site URL \| HCL Digital Experience {#manual-seo-pzn .task}
+# Manual Step: Updating the personalization publishing server with the new site URL
 
 The Modify Site URLs for Search Engine Optimization option in the Configuration Wizard includes manual steps. For reference only, you can see the details of the manual steps in this section of the product documentation.
 

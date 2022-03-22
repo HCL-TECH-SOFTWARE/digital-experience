@@ -1,8 +1,8 @@
-# Basic monitoring \| HCL Digital Experience {#basic_monitor_helm_deployment .concept}
+# Basic monitoring
 
 This topic describes options for monitoring an HCL Digital Experience 9.5 Kubernetes deployments installed using Helm.
 
-## Monitoring {#basic_monitoring .section}
+## Monitoring
 
 **Requirements**
 
@@ -30,5 +30,5 @@ To get memory and CPU usage details for the current Kubernetes node:
 kubectl top node
 ```
 
-**Parent topic:**[Troubleshooting your Helm deployment \| HCL Digital Experience](../containerization/helm_troubleshooting.md)
+**Parent topic:**[Troubleshooting your Helm deployment](../containerization/helm_troubleshooting.md)
 

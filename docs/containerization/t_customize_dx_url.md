@@ -1,4 +1,4 @@
-# Customizing the HCL DX URL when deployed to container platforms {#t_customize_dx_url .task}
+# Customizing the HCL DX URL when deployed to container platforms
 
 This section describes the procedures to define custom context root URLs, or no context root URL definitions, when deploying your HCL DX 9.5 software to the supported container platforms.
 
@@ -9,7 +9,7 @@ This section describes the procedures to define custom context root URLs, or no 
 -   The following configuration procedure is supported for DX container deployments to Kubernetes and OpenShift platforms. To change the HCL DX URL [hybrid container deployment](hybrid_deployment_operator.md) and on-premise deployment, refer to the following topic: [Customizing the HCL DX URL for hybrid deployment](t_customize_dx_url_hybrid_deployment.md).
 -   The [dxctl tool](dxtools_dxctl.md) is used for this configuration process. Before running the dxctl tool, the administrator must log on to the targeted DX cluster using the cloud-specific CLI login commands for the supported Kubernetes and OpenShift platforms; such as Microsoft Azure Kubernetes Services \(AKS\), Google Kubernetes Engine \(GKE\), Amazon Elastic Kubernetes Service \(EKS\), or Red Hat OpenShift. For example, to log in to your DX container cluster on the Red Hat OpenShift platform, use the oc login command.
 -   Ensure that you have updated the DxDeployment custom resource definition to the HCL DX 9.5 Container Update CF192 and later releases. For more information, see [Customizing the container deployment](customizing_container_deployment.md).
--   For more information on the custom URI management for HCL Digital Experience, refer to the following topic: [Changing the portal URI after an installation \| HCL Digital Experience](../config/cfg_intr.md).
+-   For more information on the custom URI management for HCL Digital Experience, refer to the following topic: [Changing the portal URI after an installation](../config/cfg_intr.md).
 -   If you have already defined a custom Digital Experience URL in your existing container deployment, it is mandatory to configure the following properties with the existing values. Otherwise, the properties are updated with the default values.
 
 1.  **Customize the context root in your Digital Experience container deployment:**
@@ -47,7 +47,7 @@ This section describes the procedures to define custom context root URLs, or no 
     ```
 
 
-## Additional Considerations and Example: { .example}
+## Additional Considerations and Example:
 
 Review the following manual, required and optional steps to complete the context root customization updates. Perform the steps that are related to your DX deployment details. \(Some optional steps may not apply to your deployment\).
 
@@ -125,5 +125,5 @@ Configure no context root in your Digital Experience container deployment
     ```
 
 
-**Parent topic:**[Customizing your container deployment \| HCL Digital Experience](../containerization/customization.md)
+**Parent topic:**[Customizing your container deployment](../containerization/customization.md)
 

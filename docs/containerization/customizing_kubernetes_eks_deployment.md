@@ -1,8 +1,8 @@
-# Customizing the Kubernetes EKS deployment {#container_docker_deployment}
+# Customizing the Kubernetes EKS deployment
 
 This section describes how to customize your HCL Portal deployment.
 
-## About this task {#cont_opensh .section}
+## About this task
 
 Follow this procedure to deploy or update your HCL Portal deployment.
 
@@ -13,7 +13,7 @@ DX 9.5 containerization is focused on deployment and it uses an operator-based d
 -   To introduce a supported containerized deployment that HCL Digital Experience can continually extend to provide customers with the best possible experience.
 -   To provide a high level of customization in the deployment and continue to expand on that, along with increased automation.
 
-## Before you begin {#section_inx_phv_4nb .section}
+## Before you begin
 
 Customers need to follow the recommended deployment model to ensure the availability of future functions and prevent potential conflicts.
 
@@ -27,7 +27,7 @@ Once modified, the `deployDx.sh` or the `updateDx.sh` scripts should be run to p
 
 **Note:** All modifications should be made to the custom resource instance and **not the individual parts** of the deployment.
 
-## Procedure {#section_a2l_xhv_4nb .section}
+## Procedure
 
 1.  Create a backup of the git\_v1\_dxdeployment\_cr.yaml file.
 2.  Open the original file in edit mode.
@@ -80,5 +80,5 @@ Once modified, the `deployDx.sh` or the `updateDx.sh` scripts should be run to p
 
 5.  Once modified, the `deployDx.sh` and the `updateDx.sh` scripts should be run to create \(or update\) the target deployment.
 
-**Parent topic:**[Deploy DX Container to Amazon EKS \| HCL Digital Experience](../containerization/kubernetes_eks.md)
+**Parent topic:**[Deploy DX Container to Amazon EKS](../containerization/kubernetes_eks.md)
 

@@ -1,8 +1,8 @@
-# Scaling DX 9.5 container deployments using Helm \| HCL Digital Experience {#container_scaling_helm .concept}
+# Scaling DX 9.5 container deployments using Helm
 
 This topic provides information to apply container scaling capabilities, and how scaling resources are handled within the HCL DX 9.5 deployment using Helm. Refer to `HorizontalPodAutoscaler` details in [Kubernetes](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) and [Red Hat OpenShift documentation](https://docs.openshift.com/container-platform/4.7/nodes/pods/nodes-pods-autoscaling.html) for more information on these services.
 
-## Use of `HorizontalPodAutoscalers` in DX 9.5 Deployments using Helm {#section_ich_wnk_zpb .section}
+## Use of `HorizontalPodAutoscalers` in DX 9.5 Deployments using Helm
 
 The following DX 9.5 applications can be configured to leverage `HorizontalPodAutoscalers` for Kubernetes and OpenShift based automated scaling:
 
@@ -19,7 +19,7 @@ For the above mentioned DX applications, the maximum and minimum count of Replic
 
 Per default, the automated scaling is not active and needs to be enabled before taking effect.
 
-## Known limitations {#section_f3h_f4k_zpb .section}
+## Known limitations
 
 -   **Core**
 
@@ -27,8 +27,8 @@ Per default, the automated scaling is not active and needs to be enabled before 
 
 -   **Persistence**
 
-    The Persistence used for Digital Asset Management currently supports scaling only with the updated persistence feature. For more information, see [Digital Asset Management persistence architecture \| HCL Digital Experience](dam_persistence_architecture.md).
+    The Persistence used for Digital Asset Management currently supports scaling only with the updated persistence feature. For more information, see [Digital Asset Management persistence architecture](dam_persistence_architecture.md).
 
 
-**Parent topic:**[Overview of the Helm architecture \| HCL Digital Experience](../containerization/helm_overview.md)
+**Parent topic:**[Overview of the Helm architecture](../containerization/helm_overview.md)
 

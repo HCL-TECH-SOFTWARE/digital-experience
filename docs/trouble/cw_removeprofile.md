@@ -1,4 +1,4 @@
-# Troubleshooting: Remove a WebSphere Portal profile {#cw_removeprofile .concept}
+# Troubleshooting: Remove a WebSphere Portal profile
 
 View troubleshooting information for creating a HCL Portal profile.
 
@@ -6,7 +6,7 @@ Each potential step in the configuration is included. Because the steps vary dep
 
 **Tip:** If you must go through the wizard again, download the wizard selections that you made to save time. Then, cancel the configuration. Start the process over and upload your saved selections. Correct or enter values for the parameters that caused the failure.
 
-# Manual Step: Prepare your system {#task_prep_system .task}
+# Manual Step: Prepare your system
 
 |Actions|Notes®|
 |-------|------|
@@ -14,7 +14,7 @@ Each potential step in the configuration is included. Because the steps vary dep
 |Skip the step|If this step was successful, you can skip it if you run the configuration process again.|
 |Clean up step|None required|
 
-# Remove portal node from cluster {#task_removenode .task}
+# Remove portal node from cluster
 
 |Actions|Notes|
 |-------|-----|
@@ -22,7 +22,7 @@ Each potential step in the configuration is included. Because the steps vary dep
 |Skip the step|If this step was successful, you can skip it if you run the configuration process again.|
 |Clean up step|Review removeNode.log in wp\_profile/logs for any failures that are indicated by the words "exception" or "error."|
 
-# Remove portal profile {#task_remove_prof .task}
+# Remove portal profile
 
 |Actions|Notes|
 |-------|-----|
@@ -45,7 +45,7 @@ The manageprofiles command creates a log for every profile that it creates, dele
 
 |
 
-# Stop the deployment manager {#task_stopdm .task}
+# Stop the deployment manager
 
 |Actions|Notes|
 |-------|-----|
@@ -55,7 +55,7 @@ The manageprofiles command creates a log for every profile that it creates, dele
 
 |
 
-# Remove the deployment manager profile {#task_remove_dm .task}
+# Remove the deployment manager profile
 
 |Actions|Notes|
 |-------|-----|

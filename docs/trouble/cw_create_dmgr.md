@@ -1,4 +1,4 @@
-# Troubleshooting: Create a deployment manager {#cw_create_dmgr .concept}
+# Troubleshooting: Create a deployment manager
 
 Create a deployment manager for clustered environments. If you encounter a failure during the configuration process, determine whether you can run the step again, skip the step, or if you must clean up the step. For some failed steps, learn how to correct the issue and recover from the failure.
 
@@ -6,7 +6,7 @@ Each potential step in the configuration is included. Because the steps vary dep
 
 **Tip:** If you must go through the wizard again, download the wizard selections that you made to save time. Then, cancel the configuration. Start the process over and upload your saved selections. Correct or enter values for the parameters that caused the failure.
 
-# Manual Step: Install the deployment manager software {#K-114 .task}
+# Manual Step: Install the deployment manager software
 
 This is a manual step; any errors that occur are outside the context of the wizard.
 
@@ -16,7 +16,7 @@ This is a manual step; any errors that occur are outside the context of the wiza
 |Skip the step|If you successfully completed the step before, then skip this step.|
 |Clean up step|None required|
 
-# Create the deployment manager profile {#task-115 .task}
+# Create the deployment manager profile
 
 If the step fails, see the logs for the manageprofiles command to determine why the step failed. The wizard uses the portal profile templates to create the deployment manager profile. An error might result from a problem with the profile templates. The error message in the log provides more information.
 
@@ -42,7 +42,7 @@ Example:
 
 |
 
-# Start the deployment manager server {#task-116 .task}
+# Start the deployment manager server
 
 If the step fails, check the systemout.log for the deployment manager. The log file is in the dmgr\_profile/log/dmgr01 directory.
 
@@ -52,7 +52,7 @@ If the step fails, check the systemout.log for the deployment manager. The log f
 |Skip the step|Do not skip this step if the deployment manager is not running. You cannot successfully run the step to augment the profile unless the deployment manager is running.|
 |Clean up step|None required|
 
-# Augment the deployment manager profile with the portal profile template {#task-117 .task}
+# Augment the deployment manager profile with the portal profile template
 
 If the step fails, see the logs for the manageprofiles command to determine why the step failed. The wizard uses the portal profile templates to create the deployment manager profile. An error might result from a problem with the profile templates. The error message in the log provides more information.
 
@@ -78,7 +78,7 @@ Example:
 
 |
 
-# Stop the deployment manager {#task-118 .task}
+# Stop the deployment manager
 
 If the step fails, check the systemout.log for the deployment manager. The log file is in the dmgr\_profile/log/dmgr01 directory.
 
@@ -88,7 +88,7 @@ If the step fails, check the systemout.log for the deployment manager. The log f
 |Skip the step|Do not skip this step.|
 |Clean up step|None required|
 
-# Start the deployment manager after the profile augmentation is complete {#task-119 .task}
+# Start the deployment manager after the profile augmentation is complete
 
 If the step fails, check the systemout.log for the deployment manager. The log file is in the dmgr\_profile/log/dmgr01 directory.
 

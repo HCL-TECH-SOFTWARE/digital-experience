@@ -1,4 +1,4 @@
-# What's new in CF201? \| HCL Digital Experience {#new_noncf201 .concept}
+# What's new in CF201?
 
 Combined Cumulative Fix \(CF201\) includes new features and software fixes for the latest version of HCL Digital Experience. Release updates for both on-premises platforms and container deployments are available. 
 
@@ -8,27 +8,27 @@ Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_ar
 
 The following features and updates are available to customers installing HCL Digital Experience on supported on-premises platforms, effective with HCL Digital Experience CF201:
 
-## Script Application Updates {#section_pny_klm_lsb .section}
+## Script Application Updates
 
 New features and updates available for the Script Application include a new configuration task for use to configure Web Content Manager properties used to run Single Page Applications \(SPAs\) that use React or Angular. Improvements are added to support uploads of minified content for use in production SPAs. An out-of-the-box React profile, “Deferred with React,” is added for use with the [Digital Experience 8.5 Theme](../dev-theme/themeopt_defaultparts.md).
 
 See the Script Application Improvements topic in the [HCL Digital Experience 9.5](../script-portlet/script_app_improvements.md) or [HCL Digital Experience 8.5](https://help.hcltechsw.com/digital-experience/8.5/script-portlet/script_app_improvements.html) Help center pages, as applicable to your HCL DX deployment, for more information.
 
-## New HCL Digital Experience 9.5 Release Artifacts supporting CICD release processes {#section_ult_3mm_lsb .section}
+## New HCL Digital Experience 9.5 Release Artifacts supporting CICD release processes
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and to automate processes in the development and delivery process. Updates include ability to view and manipulate custom Resource Environment Provider \(REP\) settings, with examples.
 
 See the [DXClient and DXConnect tooling supporting CICD release processes](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md) topic for more information.
 
-## New Personalization REST APIs {#section_qln_nmm_lsb .section}
+## New Personalization REST APIs
 
 New Personalization REST APIs supporting Personalization Folder operations are available with HCL Digital Experience Container Update and CF201.
 
 See the Help Center topic [Personalization Folder APIs](../pzn/dev_pzn_folders_api.md) for more information.
 
-## Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy {#section_czd_vmm_lsb .section}
+## Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
 
 The HCL Software Academy offers technical education for the HCL Software portfolio of products, organized by practitioner role. New modules are available for Digital Experience developers and administrators. See the [HCL Digital Experience section](https://academy.hcltechsw.com/#HCLDXLearningJourneys) of the HCL Software Academy for more information.
 
-**Parent topic:**[Latest Combined CF and 9.5 Container Updates \| HCL Digital Experience](../overview/new_cf_95.md)
+**Parent topic:**[Latest Combined CF and 9.5 Container Updates](../overview/new_cf_95.md)
 

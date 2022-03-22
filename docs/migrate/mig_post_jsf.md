@@ -1,10 +1,10 @@
-# JavaServer Faces implementation \| HCL Digital Experience {#defaultjavaserverfacesimplementationhaschanged .concept}
+# JavaServer Faces implementation
 
 The default JavaServer Faces \(JSF\) implementation has changed starting in WebSphere Application Server 8.
 
 When you are migrating JSF portlets from an earlier version of HCL Digital Experience, be aware that WebSphere® Application Server has changed the default JSF implementation starting in WebSphere Application Server 8. For more information, see *JavaServer Faces migration* in the WebSphere Application Server documentation.
 
-## Replacement of IBM JSF Bridge with HCL Digital Experience JSF Bridge {#section_zhh_wrf_nlb .section}
+## Replacement of IBM JSF Bridge with HCL Digital Experience JSF Bridge
 
 With [HCL Digital Experience 9.5 CF171 Container Update and later release](https://help.hcltechsw.com/digital-experience/9.5/containerization/limitations_requirements.html?hl=java%2Cserver%2Cfaces), IBM WebSphere Application Server 9.0.5.2 is included and that IBM fix pack removed the IBM JSF portlet bridge
 
@@ -42,9 +42,9 @@ For IBM WebSphere Application Server 9.0.5.x:
     ```
 
 
-For additional information on the use of the JavaServer Faces portlet bridge, see [Configuring Portlet Bridge for JavaServer Faces](https://www.ibm.com/support/knowledgecenter/SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/tweb_portletbridge.html).
+For additional information on the use of the JavaServer Faces portlet bridge, see [Configuring Portlet Bridge for JavaServer Faces](https://www.ibm.com/support/knowledgecenter/SSAW57_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/tweb_portletbridge.md).
 
-## JSF 2.2 Support with HCL DX Portlet Bridge { .section}
+## JSF 2.2 Support with HCL DX Portlet Bridge
 
 The JSF implementation which supports the DX Portlet Bridge is provided by IBM’s WAS product. Currently WAS provides the following:
 

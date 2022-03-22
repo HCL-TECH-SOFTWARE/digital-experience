@@ -1,10 +1,10 @@
-# Generating output {#wpsbsoutput .concept}
+# Generating output
 
 View how portlets use JSPs to generate markup, create URLs to portlet resources, support multiple devices, markups, and languages in portlets, and make use of JSTL.
 
 In the previous example, the [Hello World](wpsbscfg.md) portlet provided markup by using a Java PrintWriter. However, most portlets generate output using JSPs. One exception to this is when the portlet has to transform XML source. In this case, the portlet can use XSLT to generate markup.
 
-## Using JSPs to generate markup {#helloWorld_jsps .section}
+## Using JSPs to generate markup
 
 To separate portlet output from the main functionality of the portlet, use a JSP. The following code sample is the JSP for the view page of the jsrHelloJSP.war sample. All sample portlets are available from the portlet catalog by searching for navcode 1WP10017Z. See [Sample portlets](jsrsamp.md) for more information.
 
@@ -54,20 +54,22 @@ There are several points to keep in mind when writing your JSPs:
 3.  Become familiar with the guidelines and best practices for portlet markup. For example, all named elements must be namespace-encoded, using the <portletAPI:encodeNamespace\> tag, to avoid clashes with other named elements on the portal page.
 4.  Portlet JSPs cannot link directly to resources within the portlet's WAR directory structure.
 
-## Creating URLs to portlet resources {#encodeURL .section}
+## Creating URLs to portlet resources
 
 Portlet JSPs cannot link directly to content \(for example, images, applets, other JSPs, or other resources\) within the portlet's WAR directory structure. Instead, they have to use the services of the portlet container to create portlet URLs from which the content can be accessed. Use the encodeURL\(\) method of the PortletResponse to access content within the portlet WAR structure. The following examples are used in the View World portlet samples.
 
-ibmViewWorld.war
-:   ```xmp
+-   **ibmViewWorld.war**
 
-<img src='<%=portletResponse.encodeURL("images/earth.jpg")%>' 
-     alt="Earth" />
+    ```xmp
+    
+    <img src='<%=portletResponse.encodeURL("images/earth.jpg")%>' 
+         alt="Earth" />
+    
+    ```
 
-```
+-   **jsrViewWorld.war**
 
-jsrViewWorld.war
-:   For standard portlets, you also have to add the context path of the portlet from the request:
+    For standard portlets, you also have to add the context path of the portlet from the request:
 
     ```xmp
     
@@ -77,10 +79,12 @@ jsrViewWorld.war
     
     ```
 
+
 The String returned by the encodeURL\(\) method returns the relative URL of the content, without the host name and domain information.
 
-Multimedia example
-:   The following example shows how an audio file can be included in a JSP for a standard portlet.
+-   **Multimedia example**
+
+    The following example shows how an audio file can be included in a JSP for a standard portlet.
 
     ```xmp
     
@@ -97,8 +101,9 @@ Multimedia example
     
     ```
 
-Applet example
-:   The following example shows how an applet can be included in an IBM portlet JSP.
+-   **Applet example**
+
+    The following example shows how an applet can be included in an IBM portlet JSP.
 
     ```xmp
     
@@ -112,7 +117,8 @@ Applet example
     
     ```
 
-## Using JSTL in portlet JSPs {#portlet_jstl .section}
+
+## Using JSTL in portlet JSPs
 
 The following example shows how to use JSTL to retrieve translated Strings from a resource bundle in your JSPs.
 

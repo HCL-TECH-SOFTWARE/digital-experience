@@ -1,4 +1,4 @@
-# Sample storage class and volume for HCL Digital Experience 9.5 containers {#sample_storage_class_volume .concept}
+# Sample storage class and volume for HCL Digital Experience 9.5 containers
 
 Learn how to set storage class and volume using a sample storage class and volume scripts for  HCL Digital Experience 9.5 CF171 and higher container releases deployed to Amazon Elastic Container Service \(EKS\) or Red Hat OpenShift environment.
 
@@ -72,5 +72,5 @@ nfs:    
                 path: /exports/volume_name
 ```
 
-**Parent topic:**[Customizing your container deployment \| HCL Digital Experience](../containerization/customization.md)
+**Parent topic:**[Customizing your container deployment](../containerization/customization.md)
 

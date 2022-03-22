@@ -1,14 +1,14 @@
-# Deploying DX CF192 and later release Containers to Google Kubernetes Engine \(GKE\) {#google_gke}
+# Deploying DX CF192 and later release Containers to Google Kubernetes Engine \(GKE\)
 
 Learn how to deploy HCL Digital Experience \(DX\) 9.5 CF192 and later release containers along with Ambassador to Kubernetes, as verified in [Google Kubernetes Engine \(GKE\)](https://console.cloud.google.com/marketplace/details/google-cloud-platform/container-engine).
 
-## About this task {#section_iwq_pmb_pnb .section}
+## About this task
 
 Follow these steps to deploy HCL Digital Experience 9.5 Container Update CF192 and later release along with Ambassador to Kubernetes, as verified in [Google Kubernetes Engine \(GKE\)](https://console.cloud.google.com/marketplace/details/google-cloud-platform/container-engine). This deployment relies heavily on Kubernetes Operators for full functionality.
 
-**Note:** Refer to the latest HCL DX 9.5 Container Update Release CF192 and later file listings in the [Docker deployment](../containerization/docker.html) topic.
+**Note:** Refer to the latest HCL DX 9.5 Container Update Release CF192 and later file listings in the [Docker deployment](../containerization/docker.md) topic.
 
-## Prerequisites {#section_c2r_r3p_wmb .section}
+## Prerequisites
 
 Prior to using the procedure below, it is assumed that the HCL DX Administrator is generally experienced in using Kubernetes. Additionally, the DX Administrator must have the appropriate access to the target environment. If not, following are some preliminary steps that need to be taken.
 
@@ -34,7 +34,7 @@ Prior to using the procedure below, it is assumed that the HCL DX Administrator 
         -   There are various ways to do this and NFS is one option. For more details, see [NFS Server](#gke_nfs_server).
 6.  For more information, see the [Detailed System Requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03) page.
 
-## Download HCL Digital Experience 9.5 CF192 or later containers {#gke_download_containers .section}
+## Download HCL Digital Experience 9.5 CF192 or later containers
 
 1.  Download container
 
@@ -101,7 +101,7 @@ docker load -i hcl-dx-redis-image-xxx.tar.gz
     ```
 
 
-## Deployment {#gke_deployment .section}
+## Deployment
 
 1.  Persistence volume
 
@@ -157,7 +157,7 @@ docker load -i hcl-dx-redis-image-xxx.tar.gz
 
         ![](../images/dxctl-folder-structure.png "Sample dxctl folder structure")
 
-    For more information on dxctl tool, see [dxctl \| HCL Digital Experience](dxtools_dxctl.md)
+    For more information on dxctl tool, see [dxctl](dxtools_dxctl.md)
 
 6.  Configuring the dxctl properties for the DX 95 CF192 or later deployment
     -   Copy one of the provided properties files to further modify your deployment.
@@ -223,7 +223,7 @@ docker load -i hcl-dx-redis-image-xxx.tar.gz
     **Note:** These steps result in a DX 95 CF192 or later deployment being created.
 
 
-## Generate a TLS Certificate {#section_thr_lvt_mnb .section}
+## Generate a TLS Certificate
 
 1.  Create a TLS certification to be used by the deployment:
     -   For development purposes:
@@ -248,7 +248,7 @@ docker load -i hcl-dx-redis-image-xxx.tar.gz
         **Note:** The default name is the `dx-tls-cert`, and this can be changed in the configuration. In the example, `caps-dx-gke` is the Kubernetes namespace. You can set your preferred namespace, but you must consistently use this namespace in subsequent commands.
 
 
-## Final Output {#section_jjq_cgk_v4b .section}
+## Final Output
 
 The external IP from **Load balancer** in the below example can be used to access PORTAL.
 
@@ -264,7 +264,7 @@ The deployed system will be available at: https://external-ip/wps/portal, where 
 
 ![Portal output example](../images/gke_192_portal_example.png "Example of a Portal output")
 
-## Update the HCL Digital Experience 9.5 GKE deployment to a later release {#section_vyc_1gj_v4b .section}
+## Update the HCL Digital Experience 9.5 GKE deployment to a later release
 
 To update the deployment to a later HCL DX 9.5 Container Update release, perform the following steps:
 
@@ -316,7 +316,7 @@ To update the deployment to a later HCL DX 9.5 Container Update release, perform
 
 **Additional considerations:** Once the database is transferred, the **DBTYPE** might need to be updated, so you can scale the instances higher. Additionally, once the database is transferred, the number of replicas could be increased.
 
-## Delete the HCL Digital Experience 9.5 GKE deployment {#delete_dx_gke .section}
+## Delete the HCL Digital Experience 9.5 GKE deployment
 
 1.  Removing the entire deployment requires several steps, this is by design.
     -   Remove the deployment but allow for redeployment with the same volumes:

@@ -1,10 +1,10 @@
-# How to use REST with drafts and workflows \| HCL Digital Experience {#wcm_rest_crud_workflow .concept}
+# How to use REST with drafts and workflows
 
 You can use the REST services for HCL Web Content Manager to create drafts, approve items in a workflow, retrieve workflow comments from content items, and move items through different stages of a workflow.
 
 New with HCL Digital Experience 9.5 Container Update CF181 and higher releases, two new APIs are added to handle **Process Now** and **Remove Workflow** from an item functionality. HCL DX 9.5 CF19 and higher release adds support to retrieve workflow comments from content items.
 
-## Creating a draft of an item that does not use a workflow { .section}
+## Creating a draft of an item that does not use a workflow
 
 You can create a draft of items that do not use workflows.
 
@@ -23,7 +23,7 @@ http://host:port/wps/mycontenthandler/wcmrest/LibraryLinkComponent
 201 Created
 ```
 
-## Creating a draft in a workflow { .section}
+## Creating a draft in a workflow
 
 You can use the REST service to create a new draft item. This is equivalent to using the **Create Draft** icon in the authoring portlet.
 
@@ -42,7 +42,7 @@ http://host:port/wps/mycontenthandler/wcmrest/item/item-uuid/create-draft
 201 Created
 ```
 
-## Moving an item to the next stage { .section}
+## Moving an item to the next stage
 
 You can use the REST service to move an item to the next stage of a workflow. This is equivalent to using the **Next Stage** icon in the authoring portlet.
 
@@ -61,7 +61,7 @@ http://host:port/wps/mycontenthandler/wcmrest/item/<item-uuid>/next-stage
 201 Created
 ```
 
-## Moving an item to the previous stage { .section}
+## Moving an item to the previous stage
 
 You can use the REST service to move an item to the previous stage of a workflow. This is equivalent to using the **Previous Stage** icon in the authoring portlet.
 
@@ -80,7 +80,7 @@ http://host:port/wps/mycontenthandler/wcmrest/item/item-uuid/previous-stage
 201 Created
 ```
 
-## Approving an item within a workflow { .section}
+## Approving an item within a workflow
 
 You can use the REST service to move an item to the next stage of a workflow by approving it. This is equivalent to using the **Approve** icon in the authoring portlet.
 
@@ -99,7 +99,7 @@ http://host:port/wps/mycontenthandler/wcmrest/item/item-uuid/approve
 201 Created
 ```
 
-## Rejecting an item within a workflow { .section}
+## Rejecting an item within a workflow
 
 You can use the REST service to reject an item in a workflow. This is equivalent to using the **Reject** icon in the authoring portlet.
 
@@ -118,7 +118,7 @@ http://host:port/wps/mycontenthandler/wcmrest/item/item-uuid/reject
 201 Created
 ```
 
-## Restarting a workflow { .section}
+## Restarting a workflow
 
 You can use the REST service to restart a workflow. This is equivalent to using the **Restart** icon in the authoring portlet.
 
@@ -137,7 +137,7 @@ http://host:port/wps/mycontenthandler/wcmrest/item/item-uuid/restart
 201 Created
 ```
 
-## Workflow Comments {#workflow_comments_get .section}
+## Workflow Comments
 
 To ensure that comments are added to workflow stages that require comments, a GET request must be issued to the associated link. This will return an HTML form indicating whether a comment is required.
 
@@ -160,7 +160,7 @@ next-stage" enctype="multipart/form-data" method="POST">
 </html> 
 ```
 
-## Process Now and Remove Workflow APIs {#section_awf_wnh_bmb .section}
+## Process Now and Remove Workflow APIs
 
 The Process Now and Remove Workflow from an item functionality are equivalent to their functionality in user interfaces:
 
@@ -168,19 +168,22 @@ The Process Now and Remove Workflow from an item functionality are equivalent to
 
 ![](../assets/Remove_Workflow_API.png "Remove Workflow")
 
-## Using the Process Now API {#section_nhc_bqh_bmb .section}
+## Using the Process Now API
 
-Endpoint
-:   POST request to:
+-   **Endpoint**
 
-:   http://host:port/wps/mycontenthandler/wcmrest/item/<\(UUID of the content\)\>/process-now
+    POST request to:
 
-:   Sample URL:
+    http://host:port/wps/mycontenthandler/wcmrest/item/<\(UUID of the content\)\>/process-now
 
-:   localhost:10039/wps/mycontenthandler/wcmrest/item/02894453-b03a-4935-8078-5f8ac923a5b0/process-now
+    Sample URL:
 
-Expected Body
-:   The Body can just have the basic Web Content Manager structure or be empty altogether.
+    localhost:10039/wps/mycontenthandler/wcmrest/item/02894453-b03a-4935-8078-5f8ac923a5b0/process-now
+
+
+-   **Expected Body**
+
+    The Body can just have the basic Web Content Manager structure or be empty altogether.
 
     ```
     <?xml version="1.0" encoding="UTF-8"?>
@@ -188,13 +191,17 @@ Expected Body
     </feed>
     ```
 
-Expected Headers
-:   LTPA token of the user.
 
-Return Body
-:   The item API for the updated item. This is the same result as when calling .../wcmrest/item/
+-   **Expected Headers**
 
-:   Sample:
+    LTPA token of the user.
+
+
+-   **Return Body**
+
+    The item API for the updated item. This is the same result as when calling .../wcmrest/item/
+
+    Sample:
 
     ```
     <?xml version="1.0" encoding="UTF-8"?>
@@ -283,19 +290,23 @@ Return Body
     </entry>
     ```
 
-## Using the Remove Workflow API {#section_hhb_s5h_bmb .section}
 
-Endpoint
-:   **POST request to:**
+## Using the Remove Workflow API
 
-:   http://host:port/wps/mycontenthandler/wcmrest/item/<\(UUID of the content\)\>/remove-workflow
+-   **Endpoint**
 
-:   **Sample URL:**
+    **POST request to:**
 
-:   localhost:10039/wps/mycontenthandler/wcmrest/item/02894453-b03a-4935-8078-5f8ac923a5b0/remove-workflow
+    http://host:port/wps/mycontenthandler/wcmrest/item/<\(UUID of the content\)\>/remove-workflow
 
-Expected Body
-:   The Body can just have the basic Web Content Manager structure or just be empty altogether.
+    **Sample URL:**
+
+    localhost:10039/wps/mycontenthandler/wcmrest/item/02894453-b03a-4935-8078-5f8ac923a5b0/remove-workflow
+
+
+-   **Expected Body**
+
+    The Body can just have the basic Web Content Manager structure or just be empty altogether.
 
     ```
     <?xml version="1.0" encoding="UTF-8"?>
@@ -303,13 +314,17 @@ Expected Body
     </feed>
     ```
 
-Expected Headers
-:   LTPA token of the user.
 
-Return Body
-:   The item API for the updated item. The result is the same as when calling .../wcmrest/item/.
+-   **Expected Headers**
 
-:   Sample:
+    LTPA token of the user.
+
+
+-   **Return Body**
+
+    The item API for the updated item. The result is the same as when calling .../wcmrest/item/.
+
+    Sample:
 
     ```
     <?xml version="1.0" encoding="UTF-8"?>
@@ -391,38 +406,46 @@ Return Body
     </entry>
     ```
 
-## Using the Workflow Comments API {#section_cdb_sw1_knb .section}
+
+## Using the Workflow Comments API
 
 The Workflow Comments API supports retrieval of workflow comments for content items included in a defined workflow.
 
-Endpoint
-:   GET request to retrieve any item - e.g. Content item:
+-   **Endpoint**
+
+    GET request to retrieve any item - e.g. Content item:
 
     ```
     http://host:port/wps/mycontenthandler/wcmrest/Content/<uuid>
     ```
 
-:   Sample URL:
+    Sample URL:
 
     ```
     http://dx.dev.com:10039/wps/mycontenthandler/wcmrest/Content/35381882-69e2-4d06-8553-e8bed1e09e68
     ```
 
-Expected Body
-:   With Payload:
+
+-   **Expected Body**
+
+    With Payload:
 
     ```
     {
     }
     ```
 
-Expected Headers
-:   LTPA token of the user.
 
-Return body:
-:   Result: 200 if successful.
+-   **Expected Headers**
 
-:   Result Payload:
+    LTPA token of the user.
+
+
+-   **Return body:**
+
+    Result: 200 if successful.
+
+    Result Payload:
 
     ```
     <?xml version="1.0" encoding="UTF-8"?><entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0">
@@ -444,7 +467,8 @@ Return body:
     ...
     ```
 
-## Using the WCM Add Comment API {#section_tpj_jtt_f4b .section}
+
+## Using the WCM Add Comment API
 
 This API allows you to add a comment to an item \(like content, content template, or others\). Note that the item needs to be saved so a new version is created.
 
@@ -452,39 +476,50 @@ There is no equivalent to the WCM Add Comment API functionality in the user inte
 
 This API works similarly as the other APIs described on this page.
 
-Endpoint
-:   POST request to:
+-   **Endpoint**
+
+    POST request to:
 
     ```
     http://host:port/wps/mycontenthandler/wcmrest/item/<UUID of WCM item>/comment
     ```
 
-:   Sample URL:
+    Sample URL:
 
     ```
     http://localhost:10039/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/wcmrest/item/11e7dded-f65a-426c-b865-d3bc18395ee0/comment
     ```
 
-Expected Body
-:   See the section [Workflow Comment](#workflow_comments_get) section for the structure on how to submit the comment.
+
+-   **Expected Body**
+
+    See the section [Workflow Comment](#workflow_comments_get) section for the structure on how to submit the comment.
 
     To ensure that comments are added to workflow stages that require comments, a GET request must be issued to the associated link. This returns an HTML form indicating whether a comment is required.
 
     To add the comment, you either submit the form or perform an HTTP POST request with the content type of text/plain.
 
-Expected Headers
-:   LTPA token of the user.
 
-Query Parameters
-:   None.
+-   **Expected Headers**
 
-Limitations
-:   None.
+    LTPA token of the user.
 
-Return body:
-:   The updated item.
 
-:   Sample:
+-   **Query Parameters**
+
+    None.
+
+
+-   **Limitations**
+
+    None.
+
+
+-   **Return body:**
+
+    The updated item.
+
+    Sample:
 
     ```
     <?xml version="1.0" encoding="UTF-8"?><entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0">
@@ -567,4 +602,5 @@ Return body:
         </content>
     </entry>
     ```
+
 

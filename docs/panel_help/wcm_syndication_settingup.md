@@ -1,35 +1,40 @@
-# Creating a syndication relationship by using the Administration view {#wcm_syndication_settingup .task}
+# Creating a syndication relationship by using the Administration view
 
 You can set up HCL Digital Experience syndication by using the Administration Portlets or the command line.
 
 Make sure that you have the appropriate configuration setup before you enable syndication.
 
-Disk space
-:   Before you use syndication, you must ensure that your subscriber has sufficient memory to receive the data that is syndicated from the syndicator. For example, if you are going to syndicate all libraries, then you need at least as much space on your subscriber as the database used by your syndicator.
+-   **Disk space**
 
-Swap space
-:   Ensure that you have at least as much swap space allocated on the subscriber server as you have physical memory.
+    Before you use syndication, you must ensure that your subscriber has sufficient memory to receive the data that is syndicated from the syndicator. For example, if you are going to syndicate all libraries, then you need at least as much space on your subscriber as the database used by your syndicator.
 
-Cross version syndication
-:   Cross-version syndication is supported between the following releases. Syndication from a newer release to an older release is not supported:
+-   **Swap space**
 
--   HCL Portal version 7.0.0.2 with CF26 or higher.
--   HCL Portal 8.0.0.1 with CF09 or higher.
--   HCL Portal 8.5 or higher.
+    Ensure that you have at least as much swap space allocated on the subscriber server as you have physical memory.
 
-Library already exists on the subscriber
-:   First-time syndication to an existing library is not supported. If you attempt to syndicate a library to a subscriber that already has a library with the same name, an error results.
+-   **Cross version syndication**
 
-Large library with more that 10000 items
-:   To syndicate a library that contains more than 10000 items, update the maximum Java heap size that is used by the portal application server on the subscriber server:
+    Cross-version syndication is supported between the following releases. Syndication from a newer release to an older release is not supported:
+
+    -   HCL Portal version 7.0.0.2 with CF26 or higher.
+    -   HCL Portal 8.0.0.1 with CF09 or higher.
+    -   HCL Portal 8.5 or higher.
+-   **Library already exists on the subscriber**
+
+    First-time syndication to an existing library is not supported. If you attempt to syndicate a library to a subscriber that already has a library with the same name, an error results.
+
+-   **Large library with more that 10000 items**
+
+    To syndicate a library that contains more than 10000 items, update the maximum Java heap size that is used by the portal application server on the subscriber server:
 
     1.  In the WebSphere® Integrated Solutions Console, browse to the Java virtual machine settings.
+        -   **Stand-alone server:**
 
-        Stand-alone server:
-        :   **Servers** \> **Server Types** \> **WebSphere application servers** \> **HCL Digital Experience** \> **Java and Process Management** \> **Process definition** \> **Java Virtual Machine**
+            **Servers** \> **Server Types** \> **WebSphere application servers** \> **HCL Digital Experience** \> **Java and Process Management** \> **Process definition** \> **Java Virtual Machine**
 
-        Clustered server:
-        :   **System administration** \> **Deployment manager** \> **Java and Process Management** \> **Process Definition** \> **Java Virtual Machine**
+        -   **Clustered server:**
+
+            **System administration** \> **Deployment manager** \> **Java and Process Management** \> **Process Definition** \> **Java Virtual Machine**
 
     2.  Update the value in the **Maximum Heap Size** field. A value of at least 1024 MB is recommended.
     3.  Click **OK**, and then save your changes.
@@ -66,22 +71,25 @@ What can and cannot be syndicated:
 
     When Setting Up WCM Syndication using Digital Experience 9.5 Containers in Kubernetes:
 
-    When you first subscribe to a syndicator, on-prem deployments will use a URL in this format:
-    :   ```
-http://HostName:HostPort/WcmContextRoot
-```
+    -   **When you first subscribe to a syndicator, on-prem deployments will use a URL in this format:**
 
-    When syndicating between Kubernetes setups, the URL should look like this:
-    :   ```
-https://service_name.namespace_name:HostPort/WcmContextRoot
-```
+        ```
+        http://HostName:HostPort/WcmContextRoot
+        ```
+
+    -   **When syndicating between Kubernetes setups, the URL should look like this:**
+
+        ```
+        https://service_name.namespace_name:HostPort/WcmContextRoot
+        ```
 
     **Note:** For syndication to work in HTTPs, you have to import the SSL certificates between syndicator and subscriber servers.
 
-    Once the syndication pair has been created, you must edit the syndicator. The Subscriber URL field needs to be modified to look like this:
-    :   ```
-http://service_name.namespace_name:HostPort/WcmContextRoot/connect?MOD=Subs
-```
+    -   **Once the syndication pair has been created, you must edit the syndicator. The Subscriber URL field needs to be modified to look like this:**
+
+        ```
+        http://service_name.namespace_name:HostPort/WcmContextRoot/connect?MOD=Subs
+        ```
 
     Once the change to the syndicator properties has been made, syndication will work properly.
 
@@ -89,15 +97,17 @@ http://service_name.namespace_name:HostPort/WcmContextRoot/connect?MOD=Subs
 
     When you syndicate from a virtual portal:
 
-    Using the URL context of a virtual portal:
-    :   ```
-http://HostName:HostPort/wps/wcm/url_context
-```
+    -   **Using the URL context of a virtual portal:**
 
-    Using the host name of a virtual portal:
-    :   ```
-http://VirtualHostName:HostPort/wps/wcm
-```
+        ```
+        http://HostName:HostPort/wps/wcm/url_context
+        ```
+
+    -   **Using the host name of a virtual portal:**
+
+        ```
+        http://VirtualHostName:HostPort/wps/wcm
+        ```
 
 8.  Enter a name for the syndicator item. This name is used for the syndicator item that is created on the syndicator server. Enter a name that helps identify the syndication relationship that you are creating. This name must be unique and cannot be the same as an existing syndicator name.
 
@@ -122,15 +132,17 @@ http://VirtualHostName:HostPort/wps/wcm
 
 15. Select the libraries that you want to subscribe to and the syndication type.
 
-    Published items:
-    :   Published item syndication is mostly used when you syndicate to a staging or delivery server. The following items are syndicated:
+    -   **Published items:**
+
+        Published item syndication is mostly used when you syndicate to a staging or delivery server. The following items are syndicated:
 
         -   Published
         -   Expired
         Draft items, projects, project templates, and items in a project are not syndicated.
 
-    All items:
-    :   Use "All items" syndication to gradually syndicate projects to a staging or delivery server, rather than waiting until all items in a project achieve a published state. The following items are syndicated:
+    -   **All items:**
+
+        Use "All items" syndication to gradually syndicate projects to a staging or delivery server, rather than waiting until all items in a project achieve a published state. The following items are syndicated:
 
         -   Published
         -   Expired
@@ -138,8 +150,9 @@ http://VirtualHostName:HostPort/wps/wcm
         -   Projects that contain draft items saved in the configured library. See the HCL Product Documentation topic named **Projects and syndication** for further information.
         Project templates are not syndicated.
 
-    All items and versions:
-    :   "All items and versions" syndication is mostly used when you syndicate between servers within an authoring environment. Selecting this option can increase the amount of time taken for syndication because it includes versions and deleted items.
+    -   **All items and versions:**
+
+        "All items and versions" syndication is mostly used when you syndicate between servers within an authoring environment. Selecting this option can increase the amount of time taken for syndication because it includes versions and deleted items.
 
         The following items are syndicated:
 

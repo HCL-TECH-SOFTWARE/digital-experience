@@ -1,16 +1,16 @@
-# Deploying DX CF19 and CF191 release Containers to Google Kubernetes Engine \(GKE\) {#google_gke}
+# Deploying DX CF19 and CF191 release Containers to Google Kubernetes Engine \(GKE\)
 
 Learn how to deploy HCL Digital Experience \(DX\) 9.5 CF19 and CF191 release containers along with Ambassador to Kubernetes, as verified in [Google Kubernetes Engine \(GKE\)](https://console.cloud.google.com/marketplace/details/google-cloud-platform/container-engine).
 
-**Note:** Refer to the latest HCL DX 9.5 Container Release CF19 and CF191 and Update file listings in the [Docker deployment](../containerization/docker.html) topic.
+**Note:** Refer to the latest HCL DX 9.5 Container Release CF19 and CF191 and Update file listings in the [Docker deployment](../containerization/docker.md) topic.
 
-## About this task { .section}
+## About this task
 
 Follow these steps to deploy HCL Digital Experience 9.5 CF19 and higher container release along with Ambassador to Kubernetes, as verified in [Google Kubernetes Engine \(GKE\)](https://console.cloud.google.com/marketplace/details/google-cloud-platform/container-engine). This deployment relies heavily on Kubernetes Operators for full functionality.
 
-**Note:** Reference the latest HCL DX 9.5 Container Release and Update file listings in the [Docker deployment](../containerization/docker.html) topic.
+**Note:** Reference the latest HCL DX 9.5 Container Release and Update file listings in the [Docker deployment](../containerization/docker.md) topic.
 
-## Prerequisites {#section_c2r_r3p_wmb .section}
+## Prerequisites
 
 Prior to using the procedure below, it is assumed that the HCL DX Administrator is generally experienced in using Kubernetes. Additionally, the DX Administrator must have the appropriate access to the target environment. If not, following are some preliminary steps that need to be taken.
 
@@ -31,7 +31,7 @@ Prior to using the procedure below, it is assumed that the HCL DX Administrator 
         **Note:** HCL Digital Experience is input-output \(I/O\) intensive and requires a high performing file system for optimization.
 
 
-## Download containers {#gke_download_containers .section}
+## Download containers
 
 1.  Download files to your local
 
@@ -84,7 +84,7 @@ docker load -i hcl-dx-redis-image-xxx.tar.gz
     ```
 
 
-## Deployment {#gke_deployment .section}
+## Deployment
 
 1.  Unzip and extract
 
@@ -187,7 +187,7 @@ kubectl create -f hcl-dx-cloud-scripts/deploy/crds/git_v1_dxdeployment_crd.yaml
         ![](../images/container_gke_sample_deployment.png "Sample deployment run")
 
 
-## Generate a TLS Certificate {#section_thr_lvt_mnb .section}
+## Generate a TLS Certificate
 
 1.  Create a TLS certification to be used by the deployment:
     -   For development purposes:
@@ -212,7 +212,7 @@ kubectl create -f hcl-dx-cloud-scripts/deploy/crds/git_v1_dxdeployment_crd.yaml
         **Note:** The default name is the `dx-tls-cert` this can be changed in the configuration. In the example, `dx11` is the Kubernetes namespace. You can set your preferred namespace, but you must consistently use this namespace in subsequent commands. See the [Customizing your Container deployment](customization.md) topic for more information on customizing your deployment.
 
 
-## Check the deployment status {#section_unv_4vt_mnb .section}
+## Check the deployment status
 
 1.  Check the status of the deployment. The following command can be used from the external IP from the Google GKE load balancer to access the deployment.
 
@@ -227,7 +227,7 @@ kubectl create -f hcl-dx-cloud-scripts/deploy/crds/git_v1_dxdeployment_crd.yaml
     ![](../images/container_gke_external_ip_portal.png "External IP")
 
 
-## Install the Experience API, Content Composer, and Digital Asset Management components to GKE {#section_pcq_2rp_wmb .section}
+## Install the Experience API, Content Composer, and Digital Asset Management components to GKE
 
 1.  Create a config map with the same name as the `dx statefulset`. By default, the `dx statefulset`is `dx-deployment`, as shown in this example:
 
@@ -284,9 +284,9 @@ kubectl create -f hcl-dx-cloud-scripts/deploy/crds/git_v1_dxdeployment_crd.yaml
 
 See the following section for additional information:
 
--   [Install Experience API, Content Composer, and Digital Asset Management](https://help.hcltechsw.com/digital-experience/9.5/containerization/install_config_cc_dam.html)
+-   [Install Experience API, Content Composer, and Digital Asset Management](https://help.hcltechsw.com/digital-experience/9.5/containerization/install_config_cc_dam.md)
 
-## Update the HCL Digital Experience 9.5 GKE deployment {#update_dx_gke .section}
+## Update the HCL Digital Experience 9.5 GKE deployment
 
 1.  To update the deployment, run the `updateDx.sh` script with updated values:
 
@@ -316,7 +316,7 @@ See the following section for additional information:
     See [Customizing your Container deployment](customization.md) for more information on customizing your deployment.
 
 
-## Delete the HCL Digital Experience 9.5 GKE deployment {#delete_dx_gke .section}
+## Delete the HCL Digital Experience 9.5 GKE deployment
 
 1.  Removing the entire deployment requires several steps, this is by design.
     -   To remove the deployment in a specific namespace, run the `removeDx.sh` script:

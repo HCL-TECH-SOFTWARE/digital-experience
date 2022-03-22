@@ -1,16 +1,16 @@
-# Theme Editor Portlet \| HCL Digital Experience {#theme_editor .concept}
+# Theme Editor Portlet
 
 The Theme Editor portlet is a new addition to HCL Digital Experience Container Update CF193 and on-permises CF196 and later release capabilities. The portlet allows an administrator to edit static theme resources in WebDAV without the use of a WebDAV client or tool.
 
 WebDAV is a server that allows remote content to be edited and read. HCL Digital Experience stores the static resources \(HTML, CSS, JavaScript, etc.\) for the HCL Digital Experience Portal 8.5 theme and the Simple theme in WebDAV. In addition, any themes created based on these themes will have their static content in WebDAV. For that reason, it is advantageous to have the ability to directly edit the static theme resources without having to be concerned about synchronizing them with a local development environment.
 
-## Availability and previous editions of the Theme Editor portlet {#section_o14_pkx_bpb .section}
+## Availability and previous editions of the Theme Editor portlet
 
 Prior to the integration of the portlet into HCL Digital Experience CF193 and later releases, the Theme Editor portlet was available from IBM business applications catalogs, which required customers to download and install the portlet.
 
 Beginning with HCL Digital Experience CF193 and later versions, the portlet will is available with the software release. If a customer is currently using an earlier version of the Theme Editor portlet from the IBM catalog, it will remain deployed as is and will not be impacted by the application added in later versions.
 
-## Portlet overview {#section_iws_xkx_bpb .section}
+## Portlet overview
 
 The Theme Editor portlet is accessed from the [Theme Manager](themeopt_themedev_manager.md) portlet in the HCL Digital Experience 8.5, 9 or 9.5 environments. 
 
@@ -38,7 +38,7 @@ If the user saves the file, the added markup will display in the theme when the 
 
 ![](../images/display%20added%20markup%20from%20theme%20file.png)
 
-## Limitations {#section_wfs_fnx_bpb .section}
+## Limitations
 
 -   The Theme Editor portlet does not support creating files and folders in the static content.
 -   EAR-based themes are displayed in the Theme Manager portlet. However, the static content for EAR-based themes is not stored in WebDAV. If the user clicks the **Edit** \(pencil\) icon on an EAR-based theme, the portlet will render but no editable content will display.

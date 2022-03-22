@@ -1,4 +1,4 @@
-# Sample Pipelines for the DXClient Docker image file \| HCL Digital Experience {#sample_pipelines_node_dxclient .concept}
+# Sample Pipelines for the DXClient Docker image file
 
 This sample shows how to pull DXClient docker image from the given artifactory, run the DXClient tool in the docker and then deploy a portlet, theme, and script application. It is designed to be run from a Jenkins job that provides the following parameters:
 
@@ -41,5 +41,5 @@ This sample shows how to pull DXClient docker image from the given artifactory, 
 
 ![Sample pipeline for the DXClient Docker image file](../assets/dxclient-sample-pipeline-using-docker-zip-file2.png)![Sample pipeline for the DXClient Docker image file](../assets/dxclient-sample-pipeline-using-docker-zip-file3.png)
 
-**Parent topic:**[Deploy DX components using HCL DXClient and DXConnect \| HCL Digital Experience](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)
+**Parent topic:**[Deploy DX components using HCL DXClient and DXConnect](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)
 

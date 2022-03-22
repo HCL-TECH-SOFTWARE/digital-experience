@@ -1,8 +1,8 @@
-# XML Access \| HCL Digital Experience {#xmlaccess}
+# XML Access
 
 This topic provides information about the xmlaccess command that is used to export or import portlet configurations.
 
-## XML Access {#xmlaccess .section}
+## XML Access
 
 The `xmlaccess` command is used to export or import pages or portlet configurations from a target HCL DX 9.5 CF19 or later server using the input XMLAccess file.
 
@@ -78,5 +78,5 @@ Log files from command execution can be found in the logs directory of the DXCli
 dxclient xmlaccess -xmlFile <xml-file-with-path>
 ```
 
-**Parent topic:**[DXClient Artifact Types \| HCL Digital Experience](../containerization/dxclientartifacts.md)
+**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
 

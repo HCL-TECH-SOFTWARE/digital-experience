@@ -1,4 +1,4 @@
-# Federating the LDAP user registry \| HCL Digital Experience {#mig_t_pre_standalone_ldap .task}
+# Federating the LDAP user registry
 
 The stand-alone LDAP user registry configuration is deprecated. Instead, configure the federated LDAP user registry. Run the wp-modify-federated-security task to change to a federated LDAP user registry.
 

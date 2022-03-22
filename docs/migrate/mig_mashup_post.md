@@ -1,4 +1,4 @@
-# Mashup integration \| HCL Digital Experience {#mig_mashup_post-FA34F621 .task}
+# Mashup integration
 
 The mashup integration feature was removed in Portal Version 8.0 and is not included in later releases. If you used this feature in a previous release and you want to continue using it in HCL Digital Experience 8.5, you need to manually enable mashup integration after migration.
 

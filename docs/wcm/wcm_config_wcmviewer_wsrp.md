@@ -1,4 +1,4 @@
-# Enabling remote rendering with WSRP and the Web Content Viewer \| HCL Digital Experience {#wcm_config_wcmviewer_wsrpmain .task}
+# Enabling remote rendering with WSRP and the Web Content Viewer
 
 To display web content on a portal that does not include HCL Web Content Manager, you can use the Web Content Viewer and the WSRP support in the portal. The Web Content Viewer can then retrieve and display content from a web content system on a different server.
 

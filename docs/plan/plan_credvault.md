@@ -1,11 +1,13 @@
-# Credential Vault \| HCL Digital Experience {#plan_credvault .concept}
+# Credential Vault
 
 The Credential Vault is a service that stores credentials that allow portlets to log in to applications outside the realm on behalf of the user.
 
 Using Credential Vault, a portlet can retrieve a user's authentication identity and then pass the information to a backend application. The Credential Vault features the following level of sign-on:
 
-Passive Credentials
-:   Passive Credentials retrieve stored secret data such as user ID and password or certificates. This option is more flexible. However, it requires portlet writers to manage their own connections and authentication to backend applications with the credentials they retrieved from the Credential Vault.
+-   **Passive Credentials**
+
+    Passive Credentials retrieve stored secret data such as user ID and password or certificates. This option is more flexible. However, it requires portlet writers to manage their own connections and authentication to backend applications with the credentials they retrieved from the Credential Vault.
+
 
 Credential objects can also pass IBM® Security Access Manageror Computer Associates eTrust SiteMinder single sign-on tokens to backend applications.
 

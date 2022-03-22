@@ -1,37 +1,42 @@
-# How to create or update an Option Selection Element \| HCL Digital Experience {#wcm_rest_create_update_option_selection_element .concept}
+# How to create or update an Option Selection Element
 
 You can create or update an Option Selection Element in a Content Template.
 
-## Using the Create or Update Option Selection Element {#section_vbs_rnb_smb .section}
+## Using the Create or Update Option Selection Element
 
-Endpoint POST
-:   **POST request to:**
+-   **Endpoint POST**
 
-:   http://host:port/wps/mycontenthandler/wcmrest/ContentTemplate/<UUID of WCM AT\>/Prototype/elements
+    **POST request to:**
 
-:   **JSON**
+    http://host:port/wps/mycontenthandler/wcmrest/ContentTemplate/<UUID of WCM AT\>/Prototype/elements
 
-:   For **JSON** add ?mime-type=application/json
+    **JSON**
 
-:   **Sample URL:**
+    For **JSON** add ?mime-type=application/json
 
-:   http://localhost:10039/wps/mycontenthandler/!ut/p/digest!o1x8\_lupUwLN0NZh1tKfYQ/wcmrest/ContentTemplate/154592af-1aef-44e9-8b8b-559e6a3463fc/Prototype/elements
+    **Sample URL:**
 
-Endpoint PUT
-:   **PUT request to:**
+    http://localhost:10039/wps/mycontenthandler/!ut/p/digest!o1x8\_lupUwLN0NZh1tKfYQ/wcmrest/ContentTemplate/154592af-1aef-44e9-8b8b-559e6a3463fc/Prototype/elements
 
-:   http://host:port/wps/mycontenthandler/wcmrest/ContentTemplate/<UUID of WCM AT\>/Prototype/elements/<name of element\>
 
-:   **JSON**
+-   **Endpoint PUT**
 
-:   For **JSON** add ?mime-type=application/json
+    **PUT request to:**
 
-:   **Sample URL:**
+    http://host:port/wps/mycontenthandler/wcmrest/ContentTemplate/<UUID of WCM AT\>/Prototype/elements/<name of element\>
 
-:   http://localhost:10039/wps/mycontenthandler/!ut/p/digest!ipSVM\_IHNf-\_uoZ3TPAgrQ/wcmrest/ContentTemplate/154592af-1aef-44e9-8b8b-559e6a3463fc/Prototype/elements/option3
+    **JSON**
 
-Expected Body
-:   Element details. Three samples below for the different types of selection elements.
+    For **JSON** add ?mime-type=application/json
+
+    **Sample URL:**
+
+    http://localhost:10039/wps/mycontenthandler/!ut/p/digest!ipSVM\_IHNf-\_uoZ3TPAgrQ/wcmrest/ContentTemplate/154592af-1aef-44e9-8b8b-559e6a3463fc/Prototype/elements/option3
+
+
+-   **Expected Body**
+
+    Element details. Three samples below for the different types of selection elements.
 
     ```
     <?xml version="1.0" encoding="UTF-8"?><entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0">
@@ -54,21 +59,21 @@ Expected Body
     
     ```
 
-:   ```
-<?xml version="1.0" encoding="UTF-8"?><entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0">
-    <title xml:lang="en">option2</title>
-    <wcm:name>option2</wcm:name>
-    <wcm:type>OptionSelectionComponent</wcm:type>
-    <content type="application/vnd.ibm.wcm+xml">
-        <wcm:optionselection xmlns="http://www.ibm.com/xmlns/wcm/8.0">
-            <displaytype>Automatic</displaytype>
-            <selection>UnrestrictedCategory</selection>
-            <options mode="Singleselect"/>
-        </wcm:optionselection>
-    </content>
-</entry>
-
-```
+    ```
+    <?xml version="1.0" encoding="UTF-8"?><entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0">
+        <title xml:lang="en">option2</title>
+        <wcm:name>option2</wcm:name>
+        <wcm:type>OptionSelectionComponent</wcm:type>
+        <content type="application/vnd.ibm.wcm+xml">
+            <wcm:optionselection xmlns="http://www.ibm.com/xmlns/wcm/8.0">
+                <displaytype>Automatic</displaytype>
+                <selection>UnrestrictedCategory</selection>
+                <options mode="Singleselect"/>
+            </wcm:optionselection>
+        </content>
+    </entry>
+    
+    ```
 
     ```
     <?xml version="1.0" encoding="UTF-8"?><entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0">
@@ -89,19 +94,27 @@ Expected Body
     
     ```
 
-Expected Headers
-:   LTPA token of the user.
 
-Query Parameters
-:   None.
+-   **Expected Headers**
 
-Limitations
-:   None.
+    LTPA token of the user.
 
-Return Body
-:   The updated item.
 
-:   **Sample:**
+-   **Query Parameters**
+
+    None.
+
+
+-   **Limitations**
+
+    None.
+
+
+-   **Return Body**
+
+    The updated item.
+
+    **Sample:**
 
     ```
     <?xml version="1.0" encoding="UTF-8"?>
@@ -127,4 +140,5 @@ Return Body
     </entry>
     
     ```
+
 

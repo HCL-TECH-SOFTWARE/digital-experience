@@ -1,4 +1,4 @@
-# Progressive Web Applications \| HCL Digital Experience {#progressive_web_applications .concept}
+# Progressive Web Applications
 
 Develop support that adds native mobile application experience and performance to your web site using browser-based functionality.
 
@@ -8,7 +8,7 @@ For additional information please consult [Introduction to Progressive Web Appli
 
 **Video**: [Progressive Web Applications with HCL Digital Experience 9.5](https://www.youtube.com/watch?v=JP1cWlM1s2k)
 
-## Progressive Web Application requirements {#section_qff_wyt_hnb .section}
+## Progressive Web Application requirements
 
 To make a Progressive Web Application installable \(as noted in the [Introduction to Progressive Web Applications](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Introduction) topic\), the following items and configurations are required:
 
@@ -23,7 +23,7 @@ To make a Progressive Web Application installable \(as noted in the [Introductio
 
 3.  Register a service worker with a functional fetch handler.
 
-Once an application meets the above criteria, the browser will display a button that will allow the application to be installed. See the PWA install option example shown below using the [Woodburn Studio Demo Site](../woodburn_studio/woodburn_studio.html).
+Once an application meets the above criteria, the browser will display a button that will allow the application to be installed. See the PWA install option example shown below using the [Woodburn Studio Demo Site](../woodburn_studio/woodburn_studio.md).
 
 ![](../assets/woodburn_studio_demo_site.png "Woodburn Studio Demo Site")
 
@@ -45,7 +45,7 @@ HCL Digital Experience 9.5 CF19 and Container Update CF192 add new platform and 
 1.  **Updated System module** delivered in HCL DX 9.5 CF19. This module serves the manifest and service worker files.
 2.  **New Theme scope module** that is defined in the theme.json file. This loads the pwa.js.
 3.  **New page metadata** is created that can be used on the root page of the site \(or other pages in some cases\).
-4.  An updated [Woodburn Studio Demo Site](../woodburn_studio/woodburn_studio.html), which will present a Progressive Web Application enabled for installation and display to supported mobile platforms. PWA installation and display of the updated Woodburn Studio site experience is tested and verified on the following mobile browser platforms:
+4.  An updated [Woodburn Studio Demo Site](../woodburn_studio/woodburn_studio.md), which will present a Progressive Web Application enabled for installation and display to supported mobile platforms. PWA installation and display of the updated Woodburn Studio site experience is tested and verified on the following mobile browser platforms:
 
     -   Apple Safari must be used for Apple Mobile devices. \(Not supported for desktop access\). Apple iOS v13 and v14 are tested and verified.
     -   Google Chrome 85 on Mac and Windows
@@ -65,7 +65,7 @@ Service worker: The scope of the service worker determines which files the servi
 
 The PWA theme module will use the friendly URL of the root page of the PWA site for the value of the `Service-Worker-Allowed` header. This value will also need to be set as the scope when registering the service worker in the theme.
 
-## Authenticated versus Unauthenticated {#section_w4z_dk5_hnb .section}
+## Authenticated versus Unauthenticated
 
 HCL DX generates URLs differently based on whether or not a user is logged into the site. For anonymous sites \(unauthenticated\), the URL for a given page would be of the form /wps/portal/ whereas authenticated pages would be of the form /wps/myportal/. These differences in URL generation have a large effect on PWA processing. For this reason, a site scoped metadata parameter for protected versus non-protected is needed \(`com.hcl.dx.pwa.app.protected`\). The protected parameter impacts the generation of scope and start URL settings in the manifest file and the service worker scope \(i.e. should they be /portal or /myportal\) when `auto` is used. In addition, the PWA configuration cache key \(`pwaConfigCacheKey` in the service-worker.js file\) is generated differently if the protected parameter is set to true.
 
@@ -73,7 +73,7 @@ The protected parameter defaults to false, which means that the **+** sign to in
 
 If the protected parameter is set to true, the **+** sign to install the application will not be visible in the browser address bar until the user logs into the site. 
 
-## Localization {#section_bx2_wm5_hnb .section}
+## Localization
 
 By default, the manifest.json file does not provide any localization information. There is a single name and description field that sets the name of the PWA application. To handle localization for DX PWA applications, the following manifest.json fields are extended to include an array of localized values:
 
@@ -100,7 +100,7 @@ By default, the manifest.json file does not provide any localization information
 
 In this example, if the user accesses the DX Progressive Web Application using German language preferences, the name of the application displayed will be **Woodburn Anwendung**. However, if the user were to access the application in a language that is not defined in the manifest, the value from the name field would be used as a fallback.
 
-## Hiding pages in PWA application mode {#section_wp4_tn5_hnb .section}
+## Hiding pages in PWA application mode
 
 It is important to be able to exclude pages when the site is in PWA application mode. Applications on smaller devices may not appropriately display the entire site as it would be shown on a desktop. For this reason, page metadata has been added to hide pages in application mode. If the `pwa.Hidden` metadata is set to true on a page in the site, that page will not be displayed in the PWA application.
 
@@ -132,7 +132,7 @@ Hidden pages are implemented via CSS included in the theme. There are two places
     ```
 
 
-## Steps required to enable Progressive Web Application capabilities in a Digital Experience site {#section_wjt_w45_hnb .section}
+## Steps required to enable Progressive Web Application capabilities in a Digital Experience site
 
 1.  **Apply Stateless URLs**. In order for a PWA application to function properly in HCL DX 9.5 CF19 and higher, the site is required to use stateless, or friendly URLs. See [Defining friendly URLs without state information for pages in your site](../admin-system/mp_friendly_short_url.html?hl=stateless,urls) to learn how to configure stateless or friendly URLs.
 
@@ -150,7 +150,7 @@ Hidden pages are implemented via CSS included in the theme. There are two places
         ```
 
     -   Restart the HCL DX 9.5 server.
-    Note the display of the PWA install option will vary depending on the device you are using \(e.g. Chrome on MacOS and Safari on iOS\) as noted above in the Updated [Woodburn Studio Demo Site](../woodburn_studio/woodburn_studio.html) detail.
+    Note the display of the PWA install option will vary depending on the device you are using \(e.g. Chrome on MacOS and Safari on iOS\) as noted above in the Updated [Woodburn Studio Demo Site](../woodburn_studio/woodburn_studio.md) detail.
 
     All further steps apply to custom themes and/or to custom sites.
 
@@ -227,7 +227,7 @@ Hidden pages are implemented via CSS included in the theme. There are two places
             ],
     ```
 
-9.  **Depending on how the theme is deployed, the theme caches may need to be cleared** using the Theme Analyzer. See the [Theme Analyzer](../dev-theme/themeopt_an_analyzer.html) Help Center topic for instructions to analyze and clear theme caches.
+9.  **Depending on how the theme is deployed, the theme caches may need to be cleared** using the Theme Analyzer. See the [Theme Analyzer](../dev-theme/themeopt_an_analyzer.md) Help Center topic for instructions to analyze and clear theme caches.
 10. **Add any necessary metadata values** to the pages:
     -   **Required: `com.hcl.dx.pwa.configuration`** - Set on the root label or page of the site to identify the PWA configuration located in the theme pwas directory that will apply. For example, this page metadata parameter is set to `woodburn` on the Woodburn Studio theme root label \(`Woodburn Studio`\).
     -   **Optional: `com.hcl.dx.pwa.app.protected`** - Set on the root label or page of the site to identify whether or not the application will apply to authenticated \(true\) or anonymous \(false\) parts of the site. The value of this parameter will default to false.
@@ -240,7 +240,7 @@ Hidden pages are implemented via CSS included in the theme. There are two places
 
 PWA support in Virtual Portals: Typically, PWAs are designed to serve a single site. Because HCL Digital Experience is capable of serving multiple sites through [Virtual Portal](../admin-system/advppln_scope.html?hl=virtual%2Cportal) support, HCL DX administrators should be able to configure multiple sites to implement PWA capabilities.
 
-## Creating a custom PWA install button {#section_dd4_n4m_ynb .section}
+## Creating a custom PWA install button
 
 It is possible to create a custom PWA install button within the site itself by changing the theme. There is a custom button in the Woodburn Studio theme that can be used as a sample.
 
@@ -286,4 +286,6 @@ The following changes were made to the Woodburn Studio theme to implement the bu
 
 
 For additional information on PWA custom install options, see the following link from the Web.dev site: [How to provide your own in-app install experience](https://web.dev/customize-install/)
+
+**Parent topic:**[Mobile](../overview/mobile.md)
 

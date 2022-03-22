@@ -1,4 +1,4 @@
-# Troubleshooting: Enable federated security option \| HCL Digital Experience {#cw_ldap .concept}
+# Troubleshooting: Enable federated security option
 
 Enabling federated security is part of many environment setups. If you encounter a failure during the configuration process, determine whether you can run the step again, skip the step, or if you must clean up the step. For some failed steps, learn how to correct the issue and recover from the failure.
 
@@ -12,7 +12,7 @@ Each potential step in the configuration is included. Because the steps vary dep
 [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/config/cells/CellName/wim/config/wimconfig.xml
 ```
 
-# Manual Step: Retrieve the SSL certificate from the SSL port {#troubleshooting .task}
+# Manual Step: Retrieve the SSL certificate from the SSL port
 
 |Actions|Notes|
 |-------|-----|
@@ -20,7 +20,7 @@ Each potential step in the configuration is included. Because the steps vary dep
 |Skip the step|Yes, if you completed this manual step successfully, you can skip the step in subsequent configuration attempts|
 |Clean up step|None required|
 
-# Create a backup of the HCL Portal profile before modifying cell security {#task_n24_txj_ls .task}
+# Create a backup of the HCL Portal profile before modifying cell security
 
 |Actions|Notes|
 |-------|-----|
@@ -28,7 +28,7 @@ Each potential step in the configuration is included. Because the steps vary dep
 |Skip step|If this step is successful, you can skip it if you run the configuration process again.|
 |Clean up step|None required|
 
-# Validate your LDAP server settings {#troubleshooting_validation .task}
+# Validate your LDAP server settings
 
 During this step, the wizard attempts to connect to your LDAP server and authenticate by using the provided credentials and LDAP information.
 
@@ -41,7 +41,7 @@ During this step, the wizard attempts to connect to your LDAP server and authent
 1.  Verify that the values used to connect with the LDAP were entered correctly. Click **View Step Command** to see which values are used.
 
 
-# Add an LDAP user registry to the default federated repository {#troubleshootingaddldap .task}
+# Add an LDAP user registry to the default federated repository
 
 During this step, the wizard attempts to add your LDAP to the federated repository. This step uses the same parameters as the step that validates the LDAP server settings.
 
@@ -55,7 +55,7 @@ During this step, the wizard attempts to add your LDAP to the federated reposito
 
 |
 
-# Register the WebSphere Application Server scheduler tasks {#troubleshootingregister .task}
+# Register the WebSphere Application Server scheduler tasks
 
 |Actions|Notes|
 |-------|-----|
@@ -65,7 +65,7 @@ During this step, the wizard attempts to add your LDAP to the federated reposito
 
 |
 
-# Replace the file-based HCL Portal and WebSphere Application Server users and groups with users and groups from your LDAP server {#troubleshootingfilebased .task}
+# Replace the file-based HCL Portal and WebSphere Application Server users and groups with users and groups from your LDAP server
 
 During this step, the wizard attempts to configure the portal to use the administrative user and user group that is stored in your LDAP server. The administrative ID and group must exist in your LDAP server. If the ID and group do not exist, create them and try the step again.
 
@@ -85,7 +85,7 @@ During this step, the wizard attempts to configure the portal to use the adminis
 
 |
 
-# Update the user registry where new users and groups are stored {#troubleshootingentity .task}
+# Update the user registry where new users and groups are stored
 
 |Actions|Notes|
 |-------|-----|
@@ -99,7 +99,7 @@ During this step, the wizard attempts to configure the portal to use the adminis
 
 |
 
-# Recycle the servers after a security change {#troubleshootingrestart .task}
+# Recycle the servers after a security change
 
 During this step, the wizard stops and starts the portal server.
 
@@ -112,7 +112,7 @@ During this step, the wizard stops and starts the portal server.
 |Skip step|If you are running the configuration again, you can skip this step only if you skipped all the previous steps.|
 |Clean up step|None required|
 
-# Update the search administration user {#troubleshootingadminuser .task}
+# Update the search administration user
 
 The wizard updates the user ID that is used to manage the search collections.
 
@@ -127,7 +127,7 @@ The wizard updates the user ID that is used to manage the search collections.
 |Skip step|If you are running the configuration again, you can skip this step only if you skipped all the previous steps.|
 |Clean up step|Log in to the WebSphere Integrated Solutions Console. Go to **Security** \> **Global security** \> **Java Authentication and Authorization Service** \> **J2C authentication data**. Change the user ID and password for the **SearchAdminUser** and the alias.|
 
-# After you change the security model, the servers need to be restarted {#task-110 .task}
+# After you change the security model, the servers need to be restarted
 
 During this step, the wizard stops and starts the portal server.
 
@@ -140,7 +140,7 @@ During this step, the wizard stops and starts the portal server.
 |Skip step|If you are running the configuration again, you can skip this step only if you skipped all the previous steps.|
 |Clean up step|None required|
 
-# Verify that all defined attributes are available in the configured LDAP user registry {#task-111 .task}
+# Verify that all defined attributes are available in the configured LDAP user registry
 
 |Actions|Notes|
 |-------|-----|
@@ -154,7 +154,7 @@ During this step, the wizard stops and starts the portal server.
 |
 |Clean up step|None required|
 
-# Manual Step: Update the appropriate MemberFixerModule.properties file with the values for your LDAP users {#task-112 .task}
+# Manual Step: Update the appropriate MemberFixerModule.properties file with the values for your LDAP users
 
 |Actions|Notes|
 |-------|-----|
@@ -162,7 +162,7 @@ During this step, the wizard stops and starts the portal server.
 |Skip step|Yes, if you previously modified the properties file, you can skip this step.|
 |Clean up step|None required|
 
-# Run the member fixer tool {#task-113 .task}
+# Run the member fixer tool
 
 During this step, the wizard runs the member fixer tool to clean up the entries in the portal server.
 
@@ -175,7 +175,7 @@ During this step, the wizard runs the member fixer tool to clean up the entries 
 |Skip step|If you are running the configuration again, you can skip this step only if you skipped all the previous steps.|
 |Clean up step|None required|
 
-# Manual Step: Map attributes to ensure proper communication between HCL Portal and the LDAP server {#task-114 .task}
+# Manual Step: Map attributes to ensure proper communication between HCL Portal and the LDAP server
 
 |Actions|Notes|
 |-------|-----|

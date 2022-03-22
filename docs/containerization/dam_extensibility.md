@@ -1,4 +1,4 @@
-# Using DAM extensibility \| HCL Digital Experience {#dam_extensibility .concept}
+# Using DAM extensibility
 
 This section describes the DAM extensibility feature and how to configure your setup for extensibility.
 

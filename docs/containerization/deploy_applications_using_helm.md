@@ -1,4 +1,4 @@
-# Deploying DX 9.5 applications to container platforms using Helm \| HCL Digital Experience {#applications_overview_deploy_helm .concept}
+# Deploying DX 9.5 applications to container platforms using Helm
 
 This topic provides a list of all DX applications and resource definitions that configure the application runtime and are deployed to containers using Helm on OpenShift or Kubernetes platforms. As outlined in the overview, applications can also include ConfigMaps, Secrets, and Ingress.
 
@@ -6,7 +6,7 @@ For more information about Helm applications, consult the [Helm documentation](h
 
 Do note that each application defined only lists its next direct dependencies. Sub-dependencies are not explicitly listed.
 
-## DX 9.5 Core {#section_pv4_ygv_ypb .section}
+## DX 9.5 Core
 
 **Depends on:** No dependencies
 
@@ -18,7 +18,7 @@ HCL DX 9.5 CF196 and later Core contains the primary Portal and Web Content Mana
 
 ![DX 9.5 Core Application Definition](../images/DX%209.5%20Core%20Application%20Definition.png "DX 9.5 Core Application definition")
 
-## Ring API {#section_af5_4hv_ypb .section}
+## Ring API
 
 **Depends on:** Core \(deployed to OpenShift, Kubernetes or Hybrid on-premise\)
 
@@ -28,7 +28,7 @@ The Ring API, a component of the [HCL DX Experience API](../open_api/openapi_ove
 
 ![Ring API Application definition](../images/Ring%20API%20Application%20definition.png "Ring API Application definition")
 
-## Content Composer {#section_hcs_nrv_ypb .section}
+## Content Composer
 
 **Depends on:** Ring API
 
@@ -38,7 +38,7 @@ The Ring API, a component of the [HCL DX Experience API](../open_api/openapi_ove
 
 ![Content Composer Application Definition](../images/Content%20Composer%20Application%20Definition.png "Content Composer Application definition")
 
-## Digital Asset Management {#section_rpq_1sv_ypb .section}
+## Digital Asset Management
 
 **Depends on:** Ring API, Image Processor, Persistence
 
@@ -48,7 +48,7 @@ The Ring API, a component of the [HCL DX Experience API](../open_api/openapi_ove
 
 ![Digital Asset Management Application Definition](../images/Digital%20Asset%20Management%20Application%20Definition.png "Digital Asset Management Application definition")
 
-## Persistence {#section_i2x_rsv_ypb .section}
+## Persistence
 
 **Depends on:** No dependencies
 
@@ -60,7 +60,7 @@ The switch between the read/write primary and the read-only nodes is automatical
 
 ![Persistence Application Definition](../images/Persistence%20Application%20Definition.png "Persistence Application definition")
 
-## Image Processor {#section_n5b_btv_ypb .section}
+## Image Processor
 
 **Depends on:** No dependencies
 
@@ -70,7 +70,7 @@ The Image Processor provides image manipulation capabilities that are leveraged 
 
 ![Image Processor Application definition](../images/Image%20Processor%20Application%20definition.png "Image Processor Application definition")
 
-## Design Studio \(Beta\) {#section_n5n_stv_ypb .section}
+## Design Studio \(Beta\)
 
 **Depends on:** Core, Ring API
 
@@ -80,7 +80,7 @@ Refer to the [Design Studio \(Beta\)](../design_studio/design_studio_overview.md
 
 ![Design Studio (Beta) Application Definition](../images/Design%20Studio%20Beta%20Application%20Definition.png "Design Studio (Beta) Application Definition")
 
-## Runtime Controller {#section_wcj_35v_ypb .section}
+## Runtime Controller
 
 **Depends on:** No dependencies
 
@@ -90,7 +90,7 @@ The Runtime Controller incorporates runtime management functionality for the ent
 
 ![Runtime Controller Application definition](../images/Runtime%20Controller%20Application%20definition.png "Runtime Controller Application definition")
 
-## Interdependency Matrix {#section_kvb_w5v_ypb .section}
+## Interdependency Matrix
 
 This matrix shows which HCL DX applications have dependencies on other applications. This also includes sub-dependencies. For example, if an application uses Ring API, it is also dependent on an operational DX 9.5 Core instance.
 
@@ -107,6 +107,4 @@ Application names are defined as follows:
 |DS|Design Studio|
 |PER|Persistence|
 |IMG|Image Processor|
-
-**Parent topic:**[Overview of the Helm architecture \| HCL Digital Experience](../containerization/helm_overview.md)
 

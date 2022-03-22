@@ -1,4 +1,4 @@
-# List of software fixes \| HCL Digital Experience 9.5 {#new_cf16 .concept}
+# List of software fixes 9.5
 
 This includes new features and improvements for the latest version of HCL Digital Experience.
 

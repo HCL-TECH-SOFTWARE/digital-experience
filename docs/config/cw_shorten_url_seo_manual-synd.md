@@ -1,4 +1,4 @@
-# Manual Step: Updating syndicator and subsubscriber servers that reference your URL \| HCL Digital Experience {#manual-seo-synd .task}
+# Manual Step: Updating syndicator and subsubscriber servers that reference your URL
 
 The Modify Site URLs for Search Engine Optimization option in the Configuration Wizard includes manual steps. For reference only, you can see the details of the manual step for updating syndicator and subscriber servers that reference your URL. To view this step in the Configuration Wizard, you must select Yes to using an HCL Web Content Manager when you provide information about your environment.
 

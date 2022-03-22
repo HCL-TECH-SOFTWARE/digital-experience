@@ -1,12 +1,12 @@
-# HCL Experience API \| HCL Digital Experience {#hcl_experience_api}
+# HCL Experience API
 
 This documentation provides developers with documentation on how to provision, configure, and use the HCL Experience API with the HCL Digital Experience 9.5 platform.
 
-## Overview { .section}
+## Overview
 
 The HCL Experience API is a set of OpenAPI-compliant REST APIs available for customers deploying HCL Digital Experience 9.5 containers on supported Kubernetes platforms. It supports the integration and management of HCL Digital Experience content and functionality to any digital channel using any front-end development framework. The HCL Experience API includes REST APIs that serve as a wrapper around previously published HCL Digital Experience HTTP-based APIs.
 
-Reference the [HCL Digital Experience 8.5 and 9.0 topics](../dev/developing_parent.html) for additional information about previously published HCL Digital Experience APIs.
+Reference the [HCL Digital Experience 8.5 and 9.0 topics](../dev/developing_parent.md) for additional information about previously published HCL Digital Experience APIs.
 
 Benefits of using HCL Experience API include:
 
@@ -36,7 +36,7 @@ The HCL Experience API is a component of the HCL Digital Experience offerings. H
 
 Video: [Using the Digital Experience V2 Web Content Manager APIs](https://www.youtube.com/watch?v=7N4yVJUjqOo&list=PLEjl4yzB6ckH2QJw886wkwqmSotdCLxdf&index=6).
 
-Installation instructions for HCL DX 9.5 image components may be viewed in the [Container Deployment](../containerization/deployment.html) pages.
+Installation instructions for HCL DX 9.5 image components may be viewed in the [Container Deployment](../containerization/deployment.md) pages.
 
 Detailed API listings for the HCL Experience API may be viewed at the [HCL Digital Experience GitHub repository](https://github.com/hcl-dx/experience-api-documentation).
 

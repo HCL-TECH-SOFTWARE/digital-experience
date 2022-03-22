@@ -1,4 +1,4 @@
-# The XML configuration interface \| HCL Digital Experience {#admxmlai .concept}
+# The XML configuration interface
 
 Use the XML configuration interface \(XML Access\) for exchanging portal configurations.
 

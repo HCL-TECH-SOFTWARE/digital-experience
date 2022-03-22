@@ -1,4 +1,4 @@
-# Web Content Manager Syndication REST APIs {#wcm_REST_web_content_manager_control_syndication .concept}
+# Web Content Manager Syndication REST APIs
 
 The Web Content Manager Syndication REST APIs let you control syndication processes.
 
@@ -8,14 +8,15 @@ The Web Content Manager Syndication REST APIs let you control syndication proces
 
 The following Web Content Manager REST APIs may be used to query and manage several syndication operations.
 
-## Available Syndication Pairs {#section_vf4_kkc_smb .section}
+## Available Syndication Pairs
 
 These two Web Content Manager REST calls return a list of all defined syndicators or subscribers:
 
-GET
-:   ```
-http(s)://host:port/wps/mycontenthandler/{VP Name}/!ut/p/wcmrest/Syndication/Syndicators
-```
+-   **GET**
+
+    ```
+    http(s)://host:port/wps/mycontenthandler/{VP Name}/!ut/p/wcmrest/Syndication/Syndicators
+    ```
 
     Sample output:
 
@@ -45,10 +46,12 @@ http(s)://host:port/wps/mycontenthandler/{VP Name}/!ut/p/wcmrest/Syndication/Syn
     
     ```
 
-GET
-:   ```
-http(s)://host:port/wps/mycontenthandler/{VP Name}/!ut/p/wcmrest/Syndication/Subscribers
-```
+
+-   **GET**
+
+    ```
+    http(s)://host:port/wps/mycontenthandler/{VP Name}/!ut/p/wcmrest/Syndication/Subscribers
+    ```
 
     Sample output:
 
@@ -78,6 +81,7 @@ http(s)://host:port/wps/mycontenthandler/{VP Name}/!ut/p/wcmrest/Syndication/Sub
     
     ```
 
+
 The Virtual Portal \(VP\) "\{VP Name\}/" may be blank for the base VP. Information returned includes:
 
 -   Name of Syndicator/Subscriber
@@ -98,14 +102,15 @@ If the VP has no syndicators or subscribers, the returned JSON or ATOM will have
 
 Issuers of this REST call must have the DX role of "User" to get either of these lists.
 
-## Status of a Syndicator or Subscriber {#section_q4w_1j4_ymb .section}
+## Status of a Syndicator or Subscriber
 
 Once a specific UUID of a syndicator/subscriber is obtained, the full status of that syndicator/subscriber can be obtained via the following REST call:
 
-GET
-:   ```
-http(s)://host:port/wps/mycontenthandler/{VP Name}/wcmrest/{"Syndicator"/"Subscriber"}/{UUID of syndicator/subscriber}/Status
-```
+-   **GET**
+
+    ```
+    http(s)://host:port/wps/mycontenthandler/{VP Name}/wcmrest/{"Syndicator"/"Subscriber"}/{UUID of syndicator/subscriber}/Status
+    ```
 
     The "\{VP Name\}/" may be blank for the base Virtual Portal \(VP\).
 
@@ -181,14 +186,16 @@ http(s)://host:port/wps/mycontenthandler/{VP Name}/wcmrest/{"Syndicator"/"Subscr
 
     Developers must have the role of Administrator in order to retrieve these attributes.
 
-## Set Enabled/Disabled Status on Syndicator/Subsriber {#section_rhp_zj4_ymb .section}
+
+## Set Enabled/Disabled Status on Syndicator/Subsriber
 
 Once a UUID is available, another set of WCM REST APIs need to be applied to set the syndication status of the Syndicator/Subscriber:
 
-PUT
-:   ```
-http(s)://host:port/wps/mycontenthandler/{VP Name}/wcmrest/{"Syndicator" or "Subscriber"}/{UUID of syndicator/subscriber}/Status
-```
+-   **PUT**
+
+    ```
+    http(s)://host:port/wps/mycontenthandler/{VP Name}/wcmrest/{"Syndicator" or "Subscriber"}/{UUID of syndicator/subscriber}/Status
+    ```
 
     Sample output:
 
@@ -197,7 +204,6 @@ http(s)://host:port/wps/mycontenthandler/{VP Name}/wcmrest/{"Syndicator" or "Sub
     -   "`isEnabled`": Set the enabled state of the syndicator to either "true" or "false"
 
     -   "`State`": Set the overall state of the Syndicator to "update". When set to "update", this will initiate an immediate "update now" request on the Syndicator. The returned state will either be "running" or "idle".
-
 
     Sample output:
 
@@ -210,7 +216,7 @@ http(s)://host:port/wps/mycontenthandler/{VP Name}/wcmrest/{"Syndicator" or "Sub
         Sufficient privilege must be available for the PUT call. Typically, the issuer of this REST call will need to be an HCL DX Administrative user.
 
 
-## Syndicate Now \(Update Syndicator\) {#section_f1g_wk4_ymb .section}
+## Syndicate Now \(Update Syndicator\)
 
 See the previous command for details on how to pro grammatically issue an immediate "update" call on the Syndicator/Subscriber.
 
@@ -218,7 +224,7 @@ Note that in the HCL DX Administration User interface, this action is known as �
 
 The effect of this call will be to override the normal scheduled behavior of the syndicator/subscriber and initiate an immediate syndication request. It need only be done once on either the syndicator or the subscriber. It does not need to be issued on both. This will mimic the “syndicate now” icon on the HCL DX Administration UI for syndication/subscriber.
 
-## Use of the WCM Syndication REST APIs on the Primary Virtual Portal \(VP\) versus all other VPs {#section_ftn_cl4_ymb .section}
+## Use of the WCM Syndication REST APIs on the Primary Virtual Portal \(VP\) versus all other VPs
 
 Note that on a Virtual Portal, the “!ut/p/digest” portion of the DX URL must be included because the content handler cannot issue the redirect when using the URL format without the portion mentioned.
 

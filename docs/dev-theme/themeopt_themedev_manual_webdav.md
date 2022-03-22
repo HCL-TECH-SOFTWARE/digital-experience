@@ -1,4 +1,4 @@
-# Creating a WebDAV-based theme copy \| HCL Digital Experience {#concept_wth_q5x_5t .concept}
+# Creating a WebDAV-based theme copy
 
 With a WebDAV-based theme, static theme content is deployed through WebDAV. Use this option if your theme developers update static theme content by using WebDAV.
 

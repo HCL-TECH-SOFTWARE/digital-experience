@@ -1,358 +1,360 @@
-# Managing virtual portals \| HCL Digital Experience {#virtualportals}
+# Managing virtual portals
 
 This topic describes the commands that are used in managing the virtual portal activities such as creating, listing, importing, or exporting virtual portals.
 
-## Virtual Portal commands {#listdamschema .section}
+## Virtual Portal commands
 
-Command description
-:   The `manage-virtual-portal` command is used to manage virtual portal tasks such as create, list, export, and import in the DX server.
+-   **Command description**
 
-``` {#codeblock_zyr_vwt_yqb}
-dxclient manage-virtual-portal
+    The `manage-virtual-portal` command is used to manage virtual portal tasks such as create, list, export, and import in the DX server.
 
-```
-
-Help command
-:   This command shows the help document on the `manage-virtual-portal` command:
-
--   Help command for creating virtual portals:
-
-    ``` {#codeblock_q3r_j55_yqb}
-    dxclient manage-virtual-portal create -h
+    ```
+    dxclient manage-virtual-portal
+    
     ```
 
--   Help command for listing virtual portals:
+-   **Help command**
 
-    ``` {#codeblock_lpw_m55_yqb}
-    dxclient manage-virtual-portal list -h
-    ```
+    This command shows the help document on the `manage-virtual-portal` command:
 
--   Help command for importing virtual portals:
+    -   Help command for creating virtual portals:
 
-    ``` {#codeblock_jm2_455_yqb}
-    dxclient manage-virtual-portal import -h
-    ```
+        ```
+        dxclient manage-virtual-portal create -h
+        ```
 
--   Help command for exporting virtual portals:
+    -   Help command for listing virtual portals:
 
-    ``` {#codeblock_zwg_yx5_yqb}
-    dxclient manage-virtual-portal export -h 
-    ```
+        ```
+        dxclient manage-virtual-portal list -h
+        ```
 
+    -   Help command for importing virtual portals:
 
-Subcommands
-:   -   Create virtual portal task in the DX server:
+        ```
+        dxclient manage-virtual-portal import -h
+        ```
 
-    ``` {#codeblock_rwc_2y5_yqb}
-    manage-virtual-portal create [OPTIONS]
-    ```
+    -   Help command for exporting virtual portals:
 
--   List virtual portal task in the DX server:
+        ```
+        dxclient manage-virtual-portal export -h 
+        ```
 
-    ``` {#codeblock_swc_2y5_yqb}
-    manage-virtual-portal list [OPTIONS]
-    ```
+-   **Subcommands**
 
--   Import virtual portal task in the DX server:
+    -   Create virtual portal task in the DX server:
 
-    ``` {#codeblock_twc_2y5_yqb}
-    manage-virtual-portal import [OPTIONS]
-    ```
+        ```
+        manage-virtual-portal create [OPTIONS]
+        ```
 
--   Export virtual portal task in the DX server:
+    -   List virtual portal task in the DX server:
 
-    ``` {#codeblock_uwc_2y5_yqb}
-    manage-virtual-portal export [OPTIONS]
-    ```
+        ```
+        manage-virtual-portal list [OPTIONS]
+        ```
 
--   Use this attribute and retrigger the command to check the status of any previous request that was incomplete.
+    -   Import virtual portal task in the DX server:
 
-    ``` {#codeblock_l2b_x1y_lsb}
-    -requestId <Unique ID of a previously triggered create virtual portal request>
-    ```
+        ```
+        manage-virtual-portal import [OPTIONS]
+        ```
 
+    -   Export virtual portal task in the DX server:
 
-Required Commands
-:   -   **`manage-virtual-portal create` command:**
+        ```
+        manage-virtual-portal export [OPTIONS]
+        ```
 
-    Use this parameter to specify the username that is required for authenticating with the server
+    -   Use this attribute and retrigger the command to check the status of any previous request that was incomplete.
 
-    ``` {#codeblock_mll_tgv_yqb}
-    -dxUsername <value> 
-    ```
+        ```
+        -requestId <Unique ID of a previously triggered create virtual portal request>
+        ```
 
-    Use this parameter to specify the password that is required for authenticating with the server
+-   **Required Commands**
 
-    ``` {#codeblock_xdd_vgv_yqb}
-    -dxPassword <value>
-    ```
+    -   **`manage-virtual-portal create` command:**
 
-    Use this parameter to specify the configuration wizard home \(route change only in case of Open Shift Kubernetes Environment, otherwise same as hostname\) that is required for authenticating to the cw\_profile
+        Use this parameter to specify the username that is required for authenticating with the server
 
-    ``` {#codeblock_iyt_zgv_yqb}
-    -dxConnectHostname <value>
-    ```
+        ```
+        -dxUsername <value> 
+        ```
 
-    Use this parameter to specify the port number of the cw\_profile\(for Kubernetes Environment dxConnectPort is 443\)
+        Use this parameter to specify the password that is required for authenticating with the server
 
-    ``` {#codeblock_mjv_bhv_yqb}
-    -dxConnectPort <value>
-    ```
+        ```
+        -dxPassword <value>
+        ```
 
-    Use this parameter to specify the username that is required for authenticating to the cw\_profile
+        Use this parameter to specify the configuration wizard home \(route change only in case of Open Shift Kubernetes Environment, otherwise same as hostname\) that is required for authenticating to the cw\_profile
 
-    ``` {#codeblock_zbr_chv_yqb}
-    -dxConnectUsername <value>
-    ```
+        ```
+        -dxConnectHostname <value>
+        ```
 
-    Use this parameter to specify the password that is required for authenticating to the cw\_profile
+        Use this parameter to specify the port number of the cw\_profile\(for Kubernetes Environment dxConnectPort is 443\)
 
-    ``` {#codeblock_m14_dhv_yqb}
-    -dxConnectPassword <value>
-    ```
+        ```
+        -dxConnectPort <value>
+        ```
 
-    Use this parameter to specify the profile name of the DX core server
+        Use this parameter to specify the username that is required for authenticating to the cw\_profile
 
-    ``` {#codeblock_hgt_2hv_yqb}
-    -dxProfileName <Profile name of the DX core server> 
-    ```
+        ```
+        -dxConnectUsername <value>
+        ```
 
-    Use this parameter to specify the username of the DX WAS server
+        Use this parameter to specify the password that is required for authenticating to the cw\_profile
 
-    ``` {#codeblock_fv4_fhv_yqb}
-    -dxWASUsername <value>
-    ```
+        ```
+        -dxConnectPassword <value>
+        ```
 
-    Use this parameter to specify the password of the DX WAS server
+        Use this parameter to specify the profile name of the DX core server
 
-    ``` {#codeblock_gy4_ghv_yqb}
-    -dxWASPassword <value>
-    ```
+        ```
+        -dxProfileName <Profile name of the DX core server> 
+        ```
 
-    Use this parameter to specify the virtual portal Title
+        Use this parameter to specify the username of the DX WAS server
 
-    ``` {#codeblock_upk_hhv_yqb}
-    -vpTitle <value>
-    ```
+        ```
+        -dxWASUsername <value>
+        ```
 
-    Use this parameter to specify the virtual portal Realm
+        Use this parameter to specify the password of the DX WAS server
 
-    ``` {#codeblock_mpq_3hv_yqb}
-    -vpRealm <value>
-    ```
+        ```
+        -dxWASPassword <value>
+        ```
 
-    Use this parameter to specify the virtual portal AdminGroup
+        Use this parameter to specify the virtual portal Title
 
-    ``` {#codeblock_z5m_jhv_yqb}
-    -vpAdminGroup <value>
-    ```
+        ```
+        -vpTitle <value>
+        ```
 
-    Use this parameter to specify the virtual portal HostName
+        Use this parameter to specify the virtual portal Realm
 
-    ``` {#codeblock_chg_khv_yqb}
-    -vpHostname <value>
-    ```
+        ```
+        -vpRealm <value>
+        ```
 
-    Use this parameter to specify the virtual portal Context
+        Use this parameter to specify the virtual portal AdminGroup
 
-    ``` {#codeblock_wrc_lhv_yqb}
-    -vpContext <value>
-    ```
+        ```
+        -vpAdminGroup <value>
+        ```
 
-    **Note:** Create virtual portal task creates an empty virtual portal in the DX server.
+        Use this parameter to specify the virtual portal HostName
 
-    **Example usage:**
+        ```
+        -vpHostname <value>
+        ```
 
-    ``` {#codeblock_ow1_qlv_yqb}
-     dxclient manage-virtual-portal create -dxConnectHostname <dxConnectHostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxProfileName <Profile name of the DX Server> -dxUsername <dxUsername> -dxPassword <dxPassword> -dxWASUsername < Username of the DX WAS server> -dxWASPassword <Password of the DX WAS server> -vpTitle <virtual-portal-Title> -vpRealm <virtual-portal-realm>  -vpAdminGroup <virtual-portal-adminGroup> -vpHostname <virtual-portal-hostname> -vpContext<virtual-portal-context>
-    ```
+        Use this parameter to specify the virtual portal Context
 
--   **`manage-virtual-portal list` command**
+        ```
+        -vpContext <value>
+        ```
 
-    Use this parameter to specify the username that is required for authenticating with the server
+        **Note:** Create virtual portal task creates an empty virtual portal in the DX server.
 
-    ``` {#codeblock_bvs_whv_yqb}
-    -dxUsername <value> 
-    ```
+        **Example usage:**
 
-    Use this parameter to specify the password that is required for authenticating with the server
+        ```
+         dxclient manage-virtual-portal create -dxConnectHostname <dxConnectHostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxProfileName <Profile name of the DX Server> -dxUsername <dxUsername> -dxPassword <dxPassword> -dxWASUsername < Username of the DX WAS server> -dxWASPassword <Password of the DX WAS server> -vpTitle <virtual-portal-Title> -vpRealm <virtual-portal-realm>  -vpAdminGroup <virtual-portal-adminGroup> -vpHostname <virtual-portal-hostname> -vpContext<virtual-portal-context>
+        ```
 
-    ``` {#codeblock_ozn_xhv_yqb}
-    -dxPassword <value>
-    ```
+    -   **`manage-virtual-portal list` command**
 
-    Use this parameter to specify the configuration wizard home \(route change only in case of Open Shift Kubernetes Environment, otherwise same as hostname\) that is required for authenticating to the cw\_profile
+        Use this parameter to specify the username that is required for authenticating with the server
 
-    ``` {#codeblock_ehj_yhv_yqb}
-    -dxConnectHostname <value>
-    ```
+        ```
+        -dxUsername <value> 
+        ```
 
-    Use this parameter to specify the port number of the cw\_profile\(for Kubernetes Environment dxConnectPort is 443\)
+        Use this parameter to specify the password that is required for authenticating with the server
 
-    ``` {#codeblock_wj2_zhv_yqb}
-    -dxConnectPort <value>
-    ```
+        ```
+        -dxPassword <value>
+        ```
 
-    Use this parameter to specify the username that is required for authenticating to the cw\_profile
+        Use this parameter to specify the configuration wizard home \(route change only in case of Open Shift Kubernetes Environment, otherwise same as hostname\) that is required for authenticating to the cw\_profile
 
-    ``` {#codeblock_gzn_13v_yqb}
-    -dxConnectUsername <value>
-    ```
+        ```
+        -dxConnectHostname <value>
+        ```
 
-    Use this parameter to specify the password that is required for authenticating to the cw\_profile
+        Use this parameter to specify the port number of the cw\_profile\(for Kubernetes Environment dxConnectPort is 443\)
 
-    ``` {#codeblock_lsd_b3v_yqb}
-    -dxConnectPassword <value>
-    ```
+        ```
+        -dxConnectPort <value>
+        ```
 
-    Use this parameter to specify the profile name of the DX core server
+        Use this parameter to specify the username that is required for authenticating to the cw\_profile
 
-    ``` {#codeblock_wbc_c3v_yqb}
-    -dxProfileName <Profile name of the DX core server> 
-    ```
+        ```
+        -dxConnectUsername <value>
+        ```
 
-    Use this parameter to specify the username of the DX WAS server
+        Use this parameter to specify the password that is required for authenticating to the cw\_profile
 
-    ``` {#codeblock_v3d_d3v_yqb}
-    -dxWASUsername <value>
-    ```
+        ```
+        -dxConnectPassword <value>
+        ```
 
-    Use this parameter to specify the password of the DX WAS server
+        Use this parameter to specify the profile name of the DX core server
 
-    ``` {#codeblock_fqg_23v_yqb}
-    -dxWASPassword <value>
-    ```
+        ```
+        -dxProfileName <Profile name of the DX core server> 
+        ```
 
-    **Example usage:**
+        Use this parameter to specify the username of the DX WAS server
 
-    ``` {#codeblock_ifg_bmv_yqb}
-    dxclient manage-virtual-portal list -dxConnectHostname <dxConnectHostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxProfileName <profile-name-of-the-DX-server> -dxUsername <dxUsername> -dxPassword <dxPassword> -dxWASUsername <username-of-the-DX-WAS-server> -dxWASPassword <password-of-the-DX-WAS-server> 
-    ```
+        ```
+        -dxWASUsername <value>
+        ```
 
--   **`manage-virtual-portal import` command:**
+        Use this parameter to specify the password of the DX WAS server
 
-    Use this parameter to specify the protocol with which to connect to the server
+        ```
+        -dxWASPassword <value>
+        ```
 
-    ``` {#codeblock_ntp_v3v_yqb}
-    -dxProtocol <value>
-    ```
+        **Example usage:**
 
-    Use this parameter to specify the username that is required for authenticating with the server
+        ```
+        dxclient manage-virtual-portal list -dxConnectHostname <dxConnectHostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxProfileName <profile-name-of-the-DX-server> -dxUsername <dxUsername> -dxPassword <dxPassword> -dxWASUsername <username-of-the-DX-WAS-server> -dxWASPassword <password-of-the-DX-WAS-server> 
+        ```
 
-    ``` {#codeblock_tfc_y3v_yqb}
-    -dxUsername <value> 
-    ```
+    -   **`manage-virtual-portal import` command:**
 
-    Use this parameter to specify the password that is required for authenticating with the server
+        Use this parameter to specify the protocol with which to connect to the server
 
-    ``` {#codeblock_rtz_y3v_yqb}
-    -dxPassword <value>
-    ```
+        ```
+        -dxProtocol <value>
+        ```
 
-    Use this parameter to specify the hostname of the target server
+        Use this parameter to specify the username that is required for authenticating with the server
 
-    ``` {#codeblock_qhv_z3v_yqb}
-    -hostname <value>
-    ```
+        ```
+        -dxUsername <value> 
+        ```
 
-    Use this parameter to specify the port on which to connect to the server\(for Kubernetes Environment dxPort is 443\)
+        Use this parameter to specify the password that is required for authenticating with the server
 
-    ``` {#codeblock_frt_1jv_yqb}
-    -dxPort <value>
-    ```
+        ```
+        -dxPassword <value>
+        ```
 
-    Use this parameter to specify the path to DX configuration endpoint \(for example: /wps/config\)
+        Use this parameter to specify the hostname of the target server
 
-    ``` {#codeblock_dxp_bjv_yqb}
-    -xmlConfigPath <value>
-    ```
+        ```
+        -hostname <value>
+        ```
 
-    Use this parameter to specify the XML file name with absolute path of the input file
+        Use this parameter to specify the port on which to connect to the server\(for Kubernetes Environment dxPort is 443\)
 
-    ``` {#codeblock_abd_jjv_yqb}
-    -xmlFile <value>
-    ```
+        ```
+        -dxPort <value>
+        ```
 
-    Use this parameter to specify the virtual portal Context
+        Use this parameter to specify the path to DX configuration endpoint \(for example: /wps/config\)
 
-    ``` {#codeblock_iyv_jjv_yqb}
-    -vpContext <value>
-    ```
+        ```
+        -xmlConfigPath <value>
+        ```
 
-    **Limitation:** Currently, import virtual portal feature supports only `vpContext` and does not support `vpHostname`. Support for Virtual portal with host name might be added in the future release.
+        Use this parameter to specify the XML file name with absolute path of the input file
 
-    **Example Usage:**
+        ```
+        -xmlFile <value>
+        ```
 
-    ``` {#codeblock_qrc_4jv_yqb}
-    dxclient manage-virtual-portal import -dxProtocol <http/https> -hostname <host-name> -dxPort <dxPort> -xmlConfigPath <xmlConfigPath> -dxUsername <dxUsername> -dxPassword <dxPassword>  -xmlFile <xml-file-with-path> -vpContext <virtual-portal-context>
-    ```
+        Use this parameter to specify the virtual portal Context
 
--   **`manage-virtual-portal export` command:**
+        ```
+        -vpContext <value>
+        ```
 
-    Use this parameter to specify the protocol with which to connect to the server
+        **Limitation:** Currently, import virtual portal feature supports only `vpContext` and does not support `vpHostname`. Support for Virtual portal with host name might be added in the future release.
 
-    ``` {#codeblock_idw_5jv_yqb}
-    -dxProtocol <value>
-    ```
+        **Example Usage:**
 
-    Use this parameter to specify the user name that is required for authenticating with the server
+        ```
+        dxclient manage-virtual-portal import -dxProtocol <http/https> -hostname <host-name> -dxPort <dxPort> -xmlConfigPath <xmlConfigPath> -dxUsername <dxUsername> -dxPassword <dxPassword>  -xmlFile <xml-file-with-path> -vpContext <virtual-portal-context>
+        ```
 
-    ``` {#codeblock_yv5_vjv_yqb}
-    -dxUsername <value> 
-    ```
+    -   **`manage-virtual-portal export` command:**
 
-    Use this parameter to specify the password that is required for authenticating with the server
+        Use this parameter to specify the protocol with which to connect to the server
 
-    ``` {#codeblock_ccs_wjv_yqb}
-    -dxPassword <value>
-    ```
+        ```
+        -dxProtocol <value>
+        ```
 
-    Use this parameter to specify the host name of the target server
+        Use this parameter to specify the user name that is required for authenticating with the server
 
-    ``` {#codeblock_hbb_yjv_yqb}
-    -hostname <value>
-    ```
+        ```
+        -dxUsername <value> 
+        ```
 
-    Use this parameter to specify the port on which to connect to the server\(for Kubernetes Environment dxPort is 443\)
+        Use this parameter to specify the password that is required for authenticating with the server
 
-    ``` {#codeblock_izf_zjv_yqb}
-    -dxPort <value>
-    ```
+        ```
+        -dxPassword <value>
+        ```
 
-    Use this parameter to specify the path to DX configuration endpoint \(for example: /wps/config\)
+        Use this parameter to specify the host name of the target server
 
-    ``` {#codeblock_u1r_1kv_yqb}
-    -xmlConfigPath <value>
-    ```
+        ```
+        -hostname <value>
+        ```
 
-    Use this parameter to specify the virtual portal Context
+        Use this parameter to specify the port on which to connect to the server\(for Kubernetes Environment dxPort is 443\)
 
-    ``` {#codeblock_mr4_fkv_yqb}
-    -vpContext <value>
-    ```
+        ```
+        -dxPort <value>
+        ```
 
-    Use this parameter to specify the virtual portal Title
+        Use this parameter to specify the path to DX configuration endpoint \(for example: /wps/config\)
 
-    ``` {#codeblock_lz5_3kv_yqb}
-    -vpTitle <value>
-    ```
+        ```
+        -xmlConfigPath <value>
+        ```
 
-    Use this parameter to specify the XML file name with absolute path of the input file to export the virtual portal content.
+        Use this parameter to specify the virtual portal Context
 
-    ``` {#codeblock_z1x_jkv_yqb}
-    -xmlFile <value>
-    ```
+        ```
+        -vpContext <value>
+        ```
 
-    **Limitation:** Currently, exporting virtual portal feature supports only `vpContext` and does not support `vpHostname`. Support for Virtual portal with hostname might be added in the future release.
+        Use this parameter to specify the virtual portal Title
 
-    **Example:**
+        ```
+        -vpTitle <value>
+        ```
 
-    ``` {#codeblock_ec4_tmv_yqb}
-    dxclient manage-virtual-portal export -hostname <hostname> -dxProtocol <dxProtocol> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -vpTitle <vpTitle> -vpContext <vpContext> -xmlFile <xml-file-with-path>
-    ```
+        Use this parameter to specify the XML file name with absolute path of the input file to export the virtual portal content.
 
+        ```
+        -xmlFile <value>
+        ```
+
+        **Limitation:** Currently, exporting virtual portal feature supports only `vpContext` and does not support `vpHostname`. Support for Virtual portal with hostname might be added in the future release.
+
+        **Example:**
+
+        ```
+        dxclient manage-virtual-portal export -hostname <hostname> -dxProtocol <dxProtocol> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -vpTitle <vpTitle> -vpContext <vpContext> -xmlFile <xml-file-with-path>
+        ```
 
     Log files from running the command can be found in the logs directory of the DXClient installation.
 
-**Parent topic:**[DXClient Artifact Types \| HCL Digital Experience](../containerization/dxclientartifacts.md)
+
+**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
 

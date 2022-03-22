@@ -1,8 +1,8 @@
-# Configure Remote Search in Docker {#getting_the_software-04FEC9BD .reference}
+# Configure Remote Search in Docker
 
 This section shows how to configure Remote Search for your HCL Digital Experience 9.5 Docker containers.
 
-## Introduction {#section_zm4_sy5_5lb .section}
+## Introduction
 
 To support search services when deployed to Docker container platforms in Kubernetes, administrators should configure Remote Search services. This requires a different setup and configuration steps than those used to [set up Remote Search on a non-Docker container platform](../admin-system/installrssman.md).
 
@@ -12,7 +12,7 @@ Some differences in the non-Docker container platform procedures are outlined be
 -   Since Docker dynamically allocates the host names for the containers, the /etc/hosts file doesn’t have static entries for the HCL Digital Experience 9.5 container-based server nor the Remote Search server.
 -   The WebSphere Application Server ND Administration console will not have correct host names for the HCL Digital Experience container.
 
-## Deploying Remote Search in HCL Digital Experience 9.5 Docker containers {#section_ewz_zz5_5lb .section}
+## Deploying Remote Search in HCL Digital Experience 9.5 Docker containers
 
 **Prerequisite**: Download the HCL Digital Experience 9.5 Docker containers from your HCL Digital Experience entitlements from the [HCL Software License Portal](https://www.hcltech.com/software/support/release).
 
@@ -28,7 +28,7 @@ hcl-dx-core-image-v95_CF181_xxxxxxxx-xxxx.tar.gz
 hcl-dx-dxrs-image-v95_CF181_xxxxxxxx-xxxx.tar.gz
 ```
 
-## EJBs and host names {#section_r5t_4bv_5lb .section}
+## EJBs and host names
 
 HCL Digital Experience 9.5 Container core and Portal Remote Search each use WebSphere Application Server as a base. As these components are on different hosts \(containers\), they need to communicate via IP. The initial conversation between HCL Digital Experience 9.5 core and the Remote Search server takes place over IIOP \(rmi\) which is the internet protocol of EJBs.
 
@@ -50,7 +50,7 @@ This has the effect of adding an entry in the /etc/hosts file on the HCL Digital
 
 Those familiar with Docker deployment practices will recognize `171.19.0.1` as the IP bridge address of the host machine that starts the Docker containers. Since all Docker containers have unique ports and the Docker host machine is not allowed to use these unique ports, one can refer to a port on any container as `dockerhost:port_number`.
 
-## Launch the HCL Digital Experience 9.5 Core and Remote Search containers {#section_aw5_4fv_5lb .section}
+## Launch the HCL Digital Experience 9.5 Core and Remote Search containers
 
 To deploy, following is the complete `docker run` command for both the HCL Digital Experience 9.5 Core and Remote Search containers. In these examples, `wpsadmin / wpsadmin` are used as the HCL Digital Experience and WebSphere Application Server admin user ID and password credentials.
 
@@ -64,7 +64,7 @@ docker run --add-host=dockerhost:172.19.0.1 -d -e WAS_ADMIN=wpsadmin -e WAS_PASS
 
 The persisted profile for each container is located at /home/dxengineer/Documents/. The HCL Digital Experience admin username and password are passed as environment variables.
 
-## Defining serverindex.xml on the Remote Search server {#section_olz_hhv_5lb .section}
+## Defining serverindex.xml on the Remote Search server
 
 On the HCL DX 9.5 container Remote search server, the serverindex.xml file is located at:
 
@@ -94,7 +94,7 @@ host=”dockerhost” (apply the string “dockerhost”)
 
 Upon completion, when the HCL Digital Experience 9.5 Container core server communicates to the container Remote Search server over "iiop", the Remote Search server will return `“dockerhost”` as the host name of the Remote Search server. The HCL Digital Experience 9.5 Container has a configuration that will append the port to the host name that was just returned.
 
-## Digital Experience instructions for Remote Search configuration {#section_h1r_5mv_5lb .section}
+## Digital Experience instructions for Remote Search configuration
 
 The following guidance aligns with the Remote Search services configuration instructions available in the [Remote Search services](https://help.hcltechsw.com/digital-experience/9.0/admin-system/srcusgrmtsrchsrv.html) topic for deployment to non-container HCL Digital Experience servers.
 
@@ -169,5 +169,5 @@ All of the instructions contained in the [Remote Search services](https://help.h
         **Note:** On the **jcr.textsearch.indexdirectory**, the sub-directory JCRCollection1 is NOT included in the path.
 
 
-**Parent topic:**[Customizing your container deployment \| HCL Digital Experience](../containerization/customization.md)
+**Parent topic:**[Customizing your container deployment](../containerization/customization.md)
 

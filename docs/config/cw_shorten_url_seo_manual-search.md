@@ -1,4 +1,4 @@
-# Manual Step: Refreshing the search collection {#manual-seo-search .task}
+# Manual Step: Refreshing the search collection
 
 The Modify Site URLs for Search Engine Optimization option in the Configuration Wizard includes manual steps. For reference only, you can see the details of the manual step for refreshing the search collection.
 

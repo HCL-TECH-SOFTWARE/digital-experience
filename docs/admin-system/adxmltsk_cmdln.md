@@ -1,4 +1,4 @@
-# Using the XML configuration command line client {#adxmltsk_cmdln .task}
+# Using the XML configuration command line client
 
 You access the XML configuration interface using a command line tool. This command line client is a separate program that connects to the server. Connecting to a remote server makes it possible to configure the portal remotely. You use the command line syntax of the XML configuration interface.
 

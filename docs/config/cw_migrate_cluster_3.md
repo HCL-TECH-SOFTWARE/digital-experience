@@ -1,18 +1,18 @@
-# Cluster Step 3: Upgrade node profiles \| HCL Digital Experience {#cw_migrate_cluster_3 .concept}
+# Cluster Step 3: Upgrade node profiles
 
 Use the Configuration Wizard to upgrade the nodes profiles for a cluster environment. Use the following information to get familiar with the information you must provide in the wizard and the configuration procedure that it generates.
 
-## Configuration Wizard { .section}
+## Configuration Wizard
 
 Select **Migrate to a New Version**, and choose the **Migrate a Cluster Step 3: Upgrade Node Profiles** option.
 
 **Note:** This option is not available for IBM® z/OS®.
 
-# Worksheet {#worksheet .reference}
+# Worksheet
 
 To set up the migration, you answer questions about your wanted configuration. Some fields apply to migration configurations. Some fields are required based on your environment. The remaining fields are advanced and do not apply to most configurations.
 
-## Minimal required fields { .section}
+## Minimal required fields
 
 The following table lists the fields that are unique to the Migrate a cluster step 3: Upgrade node profiles configuration option. You might be prompted for additional information about system or user IDs and passwords that you defined during the portal installation process.
 
@@ -31,7 +31,7 @@ The following table lists the fields that are unique to the Migrate a cluster st
 |**What is the new host name**| | |
 |**Where is the target portal installed**|/opt/IBM/WebSphere/PortalServer| |
 
-## Advanced fields { .section}
+## Advanced fields
 
 The following table lists the advanced fields that are unique to the Migrate a cluster step 3: Upgrade node profiles configuration option. Click **Advanced** on the Answer Questions page for the target node to see the advanced properties. Default values are provided for advanced fields that are required.
 
@@ -39,7 +39,7 @@ The following table lists the advanced fields that are unique to the Migrate a c
 |-----------|-------|----------|
 |**JVM heap size**|2048| |
 
-# Migrate a cluster step 3: Upgrade node profiles option {#task .task}
+# Migrate a cluster step 3: Upgrade node profiles option
 
 After you answer questions and provide information about your migration, the wizard generates a custom configuration procedure.
 
@@ -49,95 +49,115 @@ If you click **View Step Command**, you can see the task and properties that are
 
 1.  Manual Step: Update the ports for the deployment manager and nodes
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 2.  Upgrade the ConfigEngine
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 3.  Update database settings
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 4.  Validate the database settings
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   validate-database
+        none
+
+    -   **ConfigEngine task**
+
+        validate-database
 
 5.  Connect to new databases
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   connect-database
+        none
+
+    -   **ConfigEngine task**
+
+        connect-database
 
 6.  Manual Step: Review database schema changes
 
-    Condition
-    :   IBM z/OS
+    -   **Condition**
 
-    :   DB2®
+        IBM® z/OS®
 
-    ConfigEngine task
-    :   none
+        DB2®
+
+    -   **ConfigEngine task**
+
+        none
 
 7.  Upgrade the base portal database component
 
-    Condition
-    :   IBM z/OS
+    -   **Condition**
 
-    :   DB2
+        IBM® z/OS®
 
-    ConfigEngine task
-    :   grant-runtime-db-user-privileges
+        DB2®
 
-    :   upgrade-database
+    -   **ConfigEngine task**
+
+        grant-runtime-db-user-privileges
+
+        upgrade-database
 
 8.  Manual Step: Remove check pending statuses from table spaces
 
-    Condition
-    :   IBM z/OS
+    -   **Condition**
 
-    :   DB2
+        IBM® z/OS®
 
-    ConfigEngine task
-    :   none
+        DB2®
+
+    -   **ConfigEngine task**
+
+        none
 
 9.  Upgrade the remaining portal databases
 
-    Condition
-    :   IBM z/OS
+    -   **Condition**
 
-    :   DB2
+        IBM® z/OS®
 
-    ConfigEngine task
-    :   grant-runtime-db-user-privileges
+        DB2®
 
-    :   upgrade-database
+    -   **ConfigEngine task**
+
+        grant-runtime-db-user-privileges
+
+        upgrade-database
 
 10. Upgrade the portal profile
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   upgrade-profile
+        none
+
+    -   **ConfigEngine task**
+
+        upgrade-profile
 
     **Version 7.0 Server Offering-only migration:** Do not complete the upgrade profile step using the Configuration Wizard. Instead you must run this task manually. For more information about running this task manually, see [Migration from Portal Server Offering 7.0 to Portal 8.5](../migrate/mig_consider_7serveronly.md).
 
@@ -148,11 +168,13 @@ If you click **View Step Command**, you can see the task and properties that are
     -   EJPXA0067E: The following configuration data is needed to create a content-node resource: content-parentref.
 11. Apply the latest Combined Cumulative Fix updates to your system.
 
-    Condition
-    :   none
+    -   **Condition**
 
-    ConfigEngine task
-    :   none
+        none
+
+    -   **ConfigEngine task**
+
+        none
 
 
 You must repeat the **Migrate a Cluster Step 3: Upgrade Node Profiles** steps on every node in the cluster. The task completes more quickly on the secondary nodes because it does not perform the same application and database upgrades that were performed on the primary node.

@@ -1,16 +1,16 @@
-# Deploy DX Container to Microsoft Azure Kubernetes Service \(AKS\) {#azure_aks}
+# Deploy DX Container to Microsoft Azure Kubernetes Service \(AKS\)
 
 Learn how to deploy HCL Digital Experience \(DX\) 9.5 CF182 and later container release along with Ambassador to Kubernetes, as verified in Microsoft Azure Kubernetes Service \(AKS\).
 
-## About this task { .section}
+## About this task
 
 Follow these steps to deploy HCL Digital Experience 9.5 CF182 and later container release along with Ambassador to Kubernetes, as verified in [Microsoft Azure Kubernetes Service \(AKS\)](https://azure.microsoft.com/en-us/services/kubernetes-service/). This deployment relies heavily on Kubernetes Operators for full functionality.
 
 If deploying HCL DX 9.5 Container Update CF191 and earlier, view the instructions to deploy using script commands instead of the dxctl tool as described below in this Help Center section.
 
-**Note:** Reference the latest HCL DX 9.5 Container Release and Update file list in the [Docker deployment](../containerization/docker.html) topic.
+**Note:** Reference the latest HCL DX 9.5 Container Release and Update file list in the [Docker deployment](../containerization/docker.md) topic.
 
-## Prerequisites {#section_c2r_r3p_wmb .section}
+## Prerequisites
 
 Prior to using the procedure below, it is assumed that the HCL DX Administrator is generally experienced in using Kubernetes. Additionally, the DX Administrator must have the appropriate access to the target environment. If not, following are some preliminary steps that must be taken.
 
@@ -24,7 +24,7 @@ Prior to using the procedure below, it is assumed that the HCL DX Administrator 
 3.  The following tools must be installed on a machine other than the Portal server:
     -   Docker
     -   Microsoft Azure CLI
-    -   If deploying Digital Experience Container Update CF192 and later, the [dxctl tool](../containerization/dxtools_dxctl.html) is used to install and configure the deployment
+    -   If deploying Digital Experience Container Update CF192 and later, the [dxctl tool](../containerization/dxtools_dxctl.md) is used to install and configure the deployment
 4.  Volume requirement:
     -   It requires an AccessMode of **ReadWriteMany**.
     -   It requires a minimum of **40 GB**, with the default request set to **100 GB**.
@@ -34,7 +34,7 @@ Prior to using the procedure below, it is assumed that the HCL DX Administrator 
 
 5.  Azure container registry \(For tagging and pushing\).
 
-## Deploying HCL Digital Experience \(DX\) 9.5 CF192 and later version {#section_n45_g3m_v4b .section}
+## Deploying HCL Digital Experience \(DX\) 9.5 CF192 and later version
 
 Follow these steps to deploy the HCL Digital Experience \(DX\) 9.5 CF192 and later container release to the Microsoft Azure AKS platform:
 
@@ -162,36 +162,46 @@ hcl-dx-ringapi-image-v1.6.0_20210305-1802.tar.gz
 
     There are various ways to do this, and NFS is one option. If NFS is used, here are the parameters that have been tested to work:
 
-    `rw`
-    :   Default.
+    -   **`rw`**
 
-    `sync`
-    :   Default after NFS 1.0, means that the server does not reply until after the commit.
+        Default.
 
-    `insecure`
-    :   Requires requests originate on ports less than 1024. \*\*
+    -   **`sync`**
 
-    `root_squash`
-    :   Map requests to the nobody user.\*\*
+        Default after NFS 1.0, means that the server does not reply until after the commit.
 
-    `Hard`
-    :   Required because this means the system keeps trying to write until it works.\*\*
+    -   **`insecure`**
 
-    `nfsvers=4.1`
-    :       `rsize=8388608`
-    :   Avoids dropped packages, default 8192.
+        Requires requests originate on ports less than 1024. \*\*
 
-    `wsize=8388608`
-    :   Avoids dropped packages, default 8192
+    -   **`root_squash`**
 
-    `timeo=600`
-    :   60 seconds.
+        Map requests to the nobody user.\*\*
 
-    `retrans=2`
-    :   Number of retries after a time out.
+    -   **`Hard`**
 
-    `noresvport`\*\*
-    :   Tells the NFS client to use a new Transmission Control Protocol \(TCP\) source port when a network connection is reestablished. Doing this helps make sure that the EFS file system has uninterrupted availability after a network recovery event.
+        Required because this means the system keeps trying to write until it works.\*\*
+
+    -   **`nfsvers=4.1`**
+    -   **`rsize=8388608`**
+
+        Avoids dropped packages, default 8192.
+
+    -   **`wsize=8388608`**
+
+        Avoids dropped packages, default 8192
+
+    -   **`timeo=600`**
+
+        60 seconds.
+
+    -   **`retrans=2`**
+
+        Number of retries after a time out.
+
+    -   **`noresvport`\*\***
+
+        Tells the NFS client to use a new Transmission Control Protocol \(TCP\) source port when a network connection is reestablished. Doing this helps make sure that the EFS file system has uninterrupted availability after a network recovery event.
 
     **Note:**
 
@@ -211,7 +221,7 @@ hcl-dx-ringapi-image-v1.6.0_20210305-1802.tar.gz
     For more information, refer to the [Microsoft Azure documentation on Cluster](https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest#az_aks_create).
 
 
-## DX-Container Image Management {#section_m3j_2tm_v4b .section}
+## DX-Container Image Management
 
 1.  Change directory.
 
@@ -219,13 +229,15 @@ hcl-dx-ringapi-image-v1.6.0_20210305-1802.tar.gz
 
 2.  Docker load, tag and push by using the following commands:
 
-    List Docker images
-    :   ```
-docker images
-```
+    -   **List Docker images**
 
-    Docker load
-    :   Load the containers into your Docker repository:
+        ```
+        docker images
+        ```
+
+    -   **Docker load**
+
+        Load the containers into your Docker repository:
 
         ```
         docker load -i hcl-dx-core-image-v95_CF192_20210225-035822.tar.gz
@@ -243,8 +255,9 @@ docker images
         docker load -i hcl-dx-redis-image-5.0.1.tar.gz
         ```
 
-    ACR details
-    :   To tag and push the images to ACR, obtain login server details:
+    -   **ACR details**
+
+        To tag and push the images to ACR, obtain login server details:
 
         ```
         az acr list --resource-group <resourceGroup> --query "[].{acrLoginServer:loginServer}" --output table
@@ -252,14 +265,15 @@ docker images
 
         ![MS Azure Container Registry (ACR) details](../images/MS%20Azure%20Container%20Registry%20(ACR)%20details.png)
 
-    Docker tag
-    :   Tag your images using the `tag` command as shown in the examples below:
+    -   **Docker tag**
+
+        Tag your images using the `tag` command as shown in the examples below:
 
         ```
         docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
         ```
 
-    :   **Example:**
+        **Example:**
 
         ```
         docker tag hcl/dx/core:v95_CF192_20210225-035822 YOUR_CONTAINER.azurecr.io/hcl/dx/core:v95_CF192_20210225-035822
@@ -277,14 +291,15 @@ docker images
         docker tag hcl/dx/redis:5.0.1 YOUR_CONTAINER.azurecr.io/hcl/dx/redis:5.0.1
         ```
 
-    Docker push
-    :   Push the images to ACR using the following `push` command:
+    -   **Docker push**
+
+        Push the images to ACR using the following `push` command:
 
         ```
         docker push [OPTIONS] NAME[:TAG]
         ```
 
-    :   **Example commands:**
+        **Example commands:**
 
         ```
         docker push YOUR_CONTAINER.azurecr.io/hcl/dx/core:v95_CF192_20210225-035822
@@ -315,7 +330,7 @@ docker images
     ![Microsoft Azure AKS Console - DX 9.5 example](../images/Microsoft%20Azure%20AKS%20Console%20example.png)
 
 
-## DX-Deployment using `dxctl` {#section_qmc_wvm_v4b .section}
+## DX-Deployment using `dxctl`
 
 1.  Create a `StorageClass`.
 
@@ -460,7 +475,7 @@ docker images
     ![Validate the deployment](../images/Validate%20the%20deployment.png)
 
 
-## Generate TLS Certificate {#section_jmf_41n_v4b .section}
+## Generate TLS Certificate
 
 Create a TLS certification to be used by the deployment. Prior to this step, create a self-signed certificate to enable HTTPS using the following command:
 
@@ -492,9 +507,9 @@ https://EXTERNAL_IP/wps/portal
 
 **Note:** It is required to ensure the Microsoft Azure AKS load balancer configured permits external access. Consult the [Microsoft Azure documentation for Load Balancer setup and default configuration details](https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-overview).
 
-## Update the HCL Digital Experience \(DX\) 9.5 Azure AKS deployment to later HCL DX 9.5 Container Update releases {#section_l4t_ldn_v4b .section}
+## Update the HCL Digital Experience \(DX\) 9.5 Azure AKS deployment to later HCL DX 9.5 Container Update releases
 
-To update the deployment to later [HCL DX 9.5 Container Update](../containerization/docker.html) releases, follow these steps:
+To update the deployment to later [HCL DX 9.5 Container Update](../containerization/docker.md) releases, follow these steps:
 
 1.  Update the deployment properties file with new image values, and run the `Update` command.
 
@@ -531,9 +546,9 @@ To update the deployment to later [HCL DX 9.5 Container Update](../containerizat
     ```
 
 
-**Additional considerations:** For example, once the database is transferred, the `DBTYPE` must be updated so you can scale the instances higher. Additionally, once the database is transferred, the number of replicas could be increased. There are additional options to [customize the deployment](../containerization/customizing_container_deployment.html).
+**Additional considerations:** For example, once the database is transferred, the `DBTYPE` must be updated so you can scale the instances higher. Additionally, once the database is transferred, the number of replicas could be increased. There are additional options to [customize the deployment](../containerization/customizing_container_deployment.md).
 
-## Delete the HCL Digital Experience \(DX\) 9.5 CF192 and later release Azure AKS deployment {#section_rty_4dn_v4b .section}
+## Delete the HCL Digital Experience \(DX\) 9.5 CF192 and later release Azure AKS deployment
 
 To delete the deployment, follow one of two methods:
 
@@ -559,7 +574,7 @@ If some resources like services are still not deleted, run the following command
 kubectl patch services $(kubectl get services -n $NAMESPACE  | grep -v "NAME" |awk  '{print $1}') -p '{"metadata":{"finalizers":null}}' -n $NAMESPACE
 ```
 
-## Deploying HCL Digital Experience \(DX\) 9.5 CF191 and earlier version {#section_rt5_y3p_wmb .section}
+## Deploying HCL Digital Experience \(DX\) 9.5 CF191 and earlier version
 
 Follow these steps to deploy the HCL Digital Experience \(DX\) 9.5 CF191 and earlier container version to the Microsoft Azure AKS platform:
 
@@ -594,7 +609,7 @@ Follow these steps to deploy the HCL Digital Experience \(DX\) 9.5 CF191 and ear
     ![](../images/containerization_aks_azuredxen_repository.png "azuredxen Container Registry")
 
 
-## Install the HCL Digital Experience \(DX\) 9.5 CF182 and later core images {#section_uxf_tkp_wmb .section}
+## Install the HCL Digital Experience \(DX\) 9.5 CF182 and later core images
 
 1.  Load the HCL DX 9.5 CF182 and later images to your deployment. The following example uses the CF183 version in the load command:
 
@@ -733,7 +748,7 @@ Follow these steps to deploy the HCL Digital Experience \(DX\) 9.5 CF191 and ear
     **Note:** It is required to ensure the MS Azure AKS load balancer configured permits external access. For more information, refer to the [MS Azure documentation for Load Balancer setup](https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-overview) for the default configuration details.
 
 
-## \(Optional\) Deploy the OpenLDAP, Experience API, Content Composer, and Digital Asset Management components to Microsoft AKS {#section_pcq_2rp_wmb .section}
+## \(Optional\) Deploy the OpenLDAP, Experience API, Content Composer, and Digital Asset Management components to Microsoft AKS
 
 1.  Create a config map with the same name as the DX statefulset used to deploy the HCL DX 9.5 CF182 and later Core image software. By default, the DX statefulset is dx-deployment, as shown in this example:
 
@@ -811,7 +826,7 @@ Follow these steps to deploy the HCL Digital Experience \(DX\) 9.5 CF191 and ear
 
     -   [Install Experience API, Content Composer, and Digital Asset Management](install_config_cc_dam.md)
 
-## Update the HCL Digital Experience \(DX\) 9.5 Azure AKS deployment {#update_dx_aks .section}
+## Update the HCL Digital Experience \(DX\) 9.5 Azure AKS deployment
 
 To update the deployment to later [HCL DX 9.5 Container Update](docker.md) releases, follow these steps:
 
@@ -865,7 +880,7 @@ To update the deployment to later [HCL DX 9.5 Container Update](docker.md) relea
     See [Customizing your Container deployment](customization.md) for more information on customizing your deployment.
 
 
-## Delete the HCL Digital Experience \(DX\) 9.5 Azure AKS deployment {#delete_dx_aks .section}
+## Delete the HCL Digital Experience \(DX\) 9.5 Azure AKS deployment
 
 1.  Removing the entire deployment requires several steps, this is by design.
     -   To remove the deployment in a specific namespace, run the `removeDx.sh` script:

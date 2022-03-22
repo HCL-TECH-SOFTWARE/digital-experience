@@ -1,4 +1,4 @@
-# What's new in Container Update CF194? \| HCL Digital Experience 9.5 Containers {#newcf194 .concept}
+# What's new in Container Update CF194? 9.5 Containers
 
 This HCL Digital Experience 9.5 Container Update release includes new releases of Digital Experience 9.5 core Portal and Web Content Manager, Content Composer, Digital Asset Management, and Experience API images. No new features were added in this update.
 
@@ -13,5 +13,5 @@ Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_a
 
 The latest Software Requirements and Updates supporting HCL Digital Experience solutions may be accessed from the HCL Support pages, [HCL Digital Experience V9.5, V9.0, and V8.5 detailed system requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03) topic.
 
-**Parent topic:**[Container Update releases \| HCL Digital Experience 9.5](../overview/container_update_releases.md)
+**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
 

@@ -1,4 +1,4 @@
-# Exporting content from the filestore {#themeopt_enable_expfilestore .concept}
+# Exporting content from the filestore
 
 You must export content from the filestore to create your custom theme. There are different options available to export files from the portal file store.
 
@@ -10,7 +10,7 @@ You can access the filestore by using the following URL:
 
 Use one of the following options to export the files stored there.
 
-## Get a compressed file using your browser { .section}
+## Get a compressed file using your browser
 
 You can obtain a compressed file of the content in the filestore using your browser. Enter the following url in your browser:
 
@@ -40,7 +40,7 @@ The following url downloads the content of the themes folder:
 http://<server>:<port>/wps/mycontenthandler/dav/fs-type1/themes/?mime-type=application/zip
 ```
 
-## Automate the export using an Ant task { .section}
+## Automate the export using an Ant task
 
 If you want to automate the export, you can write an Ant task as depicted in the following example:
 
@@ -61,7 +61,7 @@ Where:
 
 **Note:** A / must follow the folder name.
 
-## Use WebDAV to connect to the filestore { .section}
+## Use WebDAV to connect to the filestore
 
 Use a WebDav Client to connect to the filestore using the following url:
 

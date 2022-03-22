@@ -1,4 +1,4 @@
-# Manual Step: Disabling friendly URL redirects \| HCL Digital Experience {#manual-seo-redirects .task}
+# Manual Step: Disabling friendly URL redirects
 
 The Modify Site URLs for Search Engine Optimization option in the Configuration Wizard includes manual steps. For reference only, you can see the details of the manual step for disabling friendly URL redirects. To view this step in the Configuration Wizard, you must select No to wanting navigational state information in your URL.
 

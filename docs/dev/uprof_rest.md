@@ -1,4 +1,4 @@
-# Remote REST service for PUMA \| HCL Digital Experience {#uprof_rest .concept}
+# Remote REST service for PUMA
 
 The remote PUMA SPI gives you access to user profiles through REST services. It provides a remote interface for user and group management for the configured Portal user repository. It is based on the REST \(REpresentational State Transfer\) architecture model.
 

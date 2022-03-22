@@ -1,4 +1,4 @@
-# Manual Step: Configure your external web server \| HCL Digital Experience {#mamual-seo-web-server .task}
+# Manual Step: Configure your external web server
 
 The Modify Site URLs for Search Engine Optimization option in the Configuration Wizard includes manual steps. For reference only, you can see the details of the manual step for configuring an external web server. To view this step in the Configuration Wizard, you must select Yes to using an external web server when you provide information about your environment.
 

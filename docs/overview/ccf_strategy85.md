@@ -1,4 +1,4 @@
-# Combined Cumulative Fix strategy \| HCL Digital Experience 8.5 {#new_cf .concept}
+# Combined Cumulative Fix strategy 8.5
 
 The Combined Cumulative Fix is a package of HCL Digital Experience fixes. Cumulative fixes can only be applied to an existing functional version of HCL Portal Version or an HCL Portal Version with a previous cumulative fix applied. Read the instructions to learn how to apply or roll back an HCL Portal combined cumulative fix.
 
@@ -8,7 +8,7 @@ Beginning with CF14, these instructions can be applied on a Portal system runnin
 
 **Note:** Each release of a maintenance package is included in your HCL Digital Experience offering.
 
-## Overview { .section}
+## Overview
 
 Applying the cumulative fix is a multi-step process. You must first update the product files using IBM Installation Manager, and then you must use the Portal ConfigEngine tool to apply the changes to each profile in your system. The update is not complete until you have performed both steps!
 
@@ -23,7 +23,7 @@ The procedures below describe these steps in detail.
 
 Go to Installing the HCL Digital Experience software documentation to install according your operating system.
 
-## What's new { .section}
+## What's new
 
 1.  For a list of the Fixes which have gone into each CF, go to the [What's new in the Combined Cumulative fixes](../overview/new_cf.html) section in the Version 8.5 documentation.
 2.  Effective in Version 8.5 CF08, the update and rollback processes have been streamlined for easier customer application. The previous CF instructions detailing "PRE-APPLY-FIX" and "APPLY-FIX" upgrade commands have now been integrated into the single `applyCF` command. Correspondingly, the rollback instructions for "PRE-ROLLBACK-FIX" and "ROLLBACK-FIX" have been integrated into the single "rollbackCF" command.

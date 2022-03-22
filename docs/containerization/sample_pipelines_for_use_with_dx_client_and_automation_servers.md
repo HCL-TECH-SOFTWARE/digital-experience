@@ -1,17 +1,17 @@
-# Sample Pipelines for use with HCL DXClient and Automation servers \| HCL Digital Experience {#sample_pipelines_for_use_with_dx_client_and_automation_servers .concept}
+# Sample Pipelines for use with HCL DXClient and Automation servers
 
 A CI/CD pipeline can help automate processes in the development and test cycle, including deploying code to test and production environments. HCL DX 9.5 provides sample pipelines for use with the DXClient tooling to demonstrate how the deployment of portlets, Script Applications, Themes, DX Application, export and import of WCM libraries, etc., can be automated.
 
 **Note:** The sample pipelines referred in this topic are supported only until the HCL Digital Experience Container update version CF195. We recommend that you refer to the following sample pipelines for releases CF196 and later.
 
--   [Sample Pipelines for the DXClient Docker image file \| HCL Digital Experience](sample_pipelines_docker_dxclient.md)
--   [Sample Pipelines for the DXClient node package file \| HCL Digital Experience](sample_pipelines_node_dxclient.md)
+-   [Sample Pipelines for the DXClient Docker image file](sample_pipelines_docker_dxclient.md)
+-   [Sample Pipelines for the DXClient node package file](sample_pipelines_node_dxclient.md)
 
-## Sample Pipeline details {#section_lrd_sgh_w4b .section}
+## Sample Pipeline details
 
 Sample Pipelines are provided for deploying or updating a portlet application, Script Application, or Themes. The sample pipelines are made available under the samples folder in the DXClient root folder. Developers and administrators can use these pipelines as a basis for Jenkins automation server jobs.
 
-## Deploy portlet {#section_w5b_y2h_w4b .section}
+## Deploy portlet
 
 This sample shows how to install the DXClient tool in a pipeline and then deploy or update a portlet. It is designed to be run from a Jenkins job that provides the following parameters:
 
@@ -35,7 +35,7 @@ This sample shows how to install the DXClient tool in a pipeline and then deploy
 
 ![Install DXClient tool and deploy portlet](../assets/pipeline_deploy_portlet_sample.png)
 
-## Deploy script application {#section_hkp_y2h_w4b .section}
+## Deploy script application
 
 This sample shows how to install the DXClient tool in a pipeline and then deploy a Script Application. It is designed to be run from a Jenkins job that provides the following parameters:
 
@@ -56,7 +56,7 @@ This sample shows how to install the DXClient tool in a pipeline and then deploy
 
 ![Pipeline DXClient deploy script application sample](../assets/pipeline_deploy_script_app_sample.png)
 
-## Restore script application {#section_k2q_qfh_w4b .section}
+## Restore script application
 
 This sample shows how to install the DXClient tool in a pipeline and then restore an existing script application to any of its specified previous version. It is designed to be run from a Jenkins job that provides the following parameters:
 
@@ -75,7 +75,7 @@ This sample shows how to install the DXClient tool in a pipeline and then restor
 
 ![Pipeline DXClient deploy script application sample](../assets/pipeline_deploy_script_restore_sample.png)
 
-## Deploy DX application {#section_kr3_ryx_cpb .section}
+## Deploy DX application
 
 This sample shows how to install the DXClient tool in a pipeline and then deploy or update a DX application. It is designed to be run from a Jenkins job that provides the following parameters:
 
@@ -100,7 +100,7 @@ This sample shows how to install the DXClient tool in a pipeline and then deploy
 
 ![Pipeline DXClient deploy application sample](../assets/pipeline_deploy_application_sample.png)
 
-## Restart DX Core server {#section_kyt_y1y_cpb .section}
+## Restart DX Core server
 
 This sample shows how to restart the DX Core server using the DXClient tool in a pipeline. It is designed to be run from a Jenkins job that requires the following parameters:
 
@@ -117,7 +117,7 @@ This sample shows how to restart the DX Core server using the DXClient tool in a
 
 ![Pipeline DXClient Restart DX Core Server sample](../assets/pipeline_dxclient_restart_dxcore_server_DONOTDELETE.png)
 
-## Manage syndication {#section_s4b_bby_cpb .section}
+## Manage syndication
 
 This sample shows how to install the DXClient tool in a pipeline and then enable or disable the syndicator or subscriber. It is designed to be run from a Jenkins job that requires the following parameters:
 
@@ -137,7 +137,7 @@ This sample shows how to install the DXClient tool in a pipeline and then enable
 
 ![Pipeline DXClient manage syndication](../assets/pipeline_dxclient_deploy_manage_syndication_sample.png)
 
-## Deploy theme {#section_rtg_xgh_w4b .section}
+## Deploy theme
 
 This sample shows how to install the DXClient tool in a pipeline and then deploy or update a theme. It is designed to be run from a Jenkins job that provides the following parameters:
 
@@ -167,5 +167,5 @@ This sample shows how to install the DXClient tool in a pipeline and then deploy
 
 ![Pipeline DXClient deploy script application sample](../assets/pipeline_deploy_theme_sample.png)
 
-**Parent topic:**[Deploy DX components using HCL DXClient and DXConnect \| HCL Digital Experience](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)
+**Parent topic:**[Deploy DX components using HCL DXClient and DXConnect](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)
 

@@ -1,4 +1,4 @@
-# Establishing SSO connections through SAML 2.0 tokens \| HCL Digital Experience {#outbhttp_auth_est_sso_saml_tok .concept}
+# Establishing SSO connections through SAML 2.0 tokens
 
 It is possible to establish outbound HTTP connections to remote resources that are authenticated by using the SAML 2.0 protocol. Outbound HTTP connections take care of the communication with the Identity provider \(IDP\) to get an authenticated connection by using SAML tokens. The SAML Authentication handler uses the HTTP POST binding protocol of the SAML specification. Therefore, it is required that both the Identity Provider and the Service Provider support the HTTP POST binding, if they are used by Outbound HTTP Connections for authentication.
 

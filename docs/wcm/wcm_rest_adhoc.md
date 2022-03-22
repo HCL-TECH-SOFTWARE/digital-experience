@@ -1,4 +1,4 @@
-# Query parameters \| HCL Digital Experience {#wcm_rest_adhoc .concept}
+# Query parameters
 
 The following parameters can be used with queries.
 
@@ -337,20 +337,21 @@ For example:
 
 |
 
-## How to use multiple parameters { .section}
+## How to use multiple parameters
 
 -   Multiple instances of the same parameter type in a query can be specified only as "OR" queries, with the following exceptions:
+    -   **Only one value allowed**
 
-    Only one value allowed
-    :   Only one instance of the following parameters can be used in a single query. If multiple instances are used, only the first instance is used by the query:
+        Only one instance of the following parameters can be used in a single query. If multiple instances are used, only the first instance is used by the query:
 
         -   `categoryid`
         -   `dateformat`
         -   `depth`
         -   `page`
         -   `pagesize`
-    "AND" queries allowed
-    :   The following queries can be used as "AND" queries:
+    -   **"AND" queries allowed**
+
+        The following queries can be used as "AND" queries:
 
         -   `createdafter`
         -   `createdbefore`
@@ -360,15 +361,16 @@ For example:
         -   `lastmodifiedbefore`
         -   `publishafter`
         -   `publishbefore`
-    Sort values
-    :   Sort values are comma-separated. For example:
+    -   **Sort values**
+
+        Sort values are comma-separated. For example:
 
         ```
         ?sort=created_ascending,title_descending
         ```
 
 
-## Text Search REST API {#section_snv_tmg_zlb .section}
+## Text Search REST API
 
 This API lets Content Authors search for free form text in the Web Content Manager JCR. It is equivalent to the functionality in the Web Content Manager user interface:
 
@@ -376,94 +378,104 @@ This API lets Content Authors search for free form text in the Web Content Manag
 
 Using the Text Search REST API
 
-The existing search query API is extended and two new parameters are added. See [REST Query service for web content \| HCL Digital Experience](wcm_rest_query.md) and [Table 2](#table_onm_klg_zlb) for more information.
+The existing search query API is extended and two new parameters are added. See [REST Query service for web content](wcm_rest_query.md) and [Table 2](#table_onm_klg_zlb) for more information.
 
-Endpoint
-:   **GET request to:**
+-   **Endpoint**
 
-:   ```
-http://host:port/wps/mycontenthandler/wcmrest/query?textcontainsexact=...
-```
+    **GET request to:**
 
-:   or
+    ```
+    http://host:port/wps/mycontenthandler/wcmrest/query?textcontainsexact=...
+    ```
 
-:   ```
-http://host:port/wps/mycontenthandler/wcmrest/query?textcontains=...
-```
+    or
 
-:   **Sample URL:**
+    ```
+    http://host:port/wps/mycontenthandler/wcmrest/query?textcontains=...
+    ```
 
-:   ```
-http://samplehost.team-q-dev.com:10039/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/query?textcontainsexact=Sample%20Article
-```
+    **Sample URL:**
 
-Expected Body
-:   Body can just have the basic WCM structure:
+    ```
+    http://samplehost.team-q-dev.com:10039/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/query?textcontainsexact=Sample%20Article
+    ```
 
-:   ```
-http://samplehost.team-q-dev.com:10039/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/query?textcontainsexact=Sample%20Article
-```
 
-Expected Headers
-:   LTPA token of the user. Also works anonymously.
+-   **Expected Body**
 
-Query Parameters
-:   ```
-textcontains: Any of the words
-```
+    Body can just have the basic WCM structure:
 
-:   ```
-textcontainsexact: Exact phrase
-```
+    ```
+    http://samplehost.team-q-dev.com:10039/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/query?textcontainsexact=Sample%20Article
+    ```
 
-Return body
-:   The found results. Same as when calling existing query API.
 
-:   ```
-<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0">
-    <id>wcmrest:query?textcontainsexact=Sample%20Article</id>
-    <title>wcmrest:query?textcontainsexact=Sample%20Article</title>
-    <updated>2020-04-14T12:36:14.477Z</updated>
-    <total>2</total>
-    <entry>
-        <id>wcmrest:5bfbd4e2-f203-4912-87c2-4edd3e6fc4de</id>
-        <title xml:lang="en">Sample Article 2</title>
-        <wcm:displayTitle xml:lang="en">Sample Article 2</wcm:displayTitle>
-        <summary xml:lang="en"></summary>
-        <wcm:name>Sample Article 2</wcm:name>
-        <wcm:type>Content</wcm:type>
-        <updated>2020-04-14T12:30:05.676Z</updated>
-        <wcm:lastModifier>
-            <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
-            <uri>/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/um/users/profiles/Z9eAeIHO0JPO64BPIJM4CPHDAMMG65JO6MM07GHO0JMOCHHC43IH6OPC63RS6M1</uri>
-            <name>wpsadmin</name>
-        </wcm:lastModifier>
-        <link rel="edit" href="/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/Content/5bfbd4e2-f203-4912-87c2-4edd3e6fc4de" xml:lang="en" label="Edit"/>
-        <link rel="alternate" href="/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/Content/5bfbd4e2-f203-4912-87c2-4edd3e6fc4de" xml:lang="en" label="Read"/>
-        <link rel="library" href="/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/Library/f2a3c1ee-591d-4fe1-85d5-7d27662154a5" xml:lang="en" label="Library"/>
-        <link rel="preview" href="/wps/poc/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcm/oid:5bfbd4e2-f203-4912-87c2-4edd3e6fc4de" xml:lang="en" label="Preview"/>
-        <category scheme="wcmrest:workflowState" term="PUBLISHED" label="Published" xml:lang="en"/>
-    </entry>
-    <entry>
-        <id>wcmrest:2209b125-a9b3-4f2a-811f-4a297017dc9e</id>
-        <title xml:lang="en">Sample Article</title>
-        <wcm:displayTitle xml:lang="en">Sample Article</wcm:displayTitle>
-        <summary xml:lang="en"></summary>
-        <wcm:name>Sample Article</wcm:name>
-        <wcm:type>Content</wcm:type>
-        <updated>2020-04-14T11:44:10.229Z</updated>
-        <wcm:lastModifier>
-            <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
-            <uri>/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/um/users/profiles/Z9eAeIHO0JPO64BPIJM4CPHDAMMG65JO6MM07GHO0JMOCHHC43IH6OPC63RS6M1</uri>
-            <name>wpsadmin</name>
-        </wcm:lastModifier>
-        <link rel="edit" href="/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/Content/2209b125-a9b3-4f2a-811f-4a297017dc9e" xml:lang="en" label="Edit"/>
-        <link rel="alternate" href="/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/Content/2209b125-a9b3-4f2a-811f-4a297017dc9e" xml:lang="en" label="Read"/>
-        <link rel="library" href="/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/Library/f2a3c1ee-591d-4fe1-85d5-7d27662154a5" xml:lang="en" label="Library"/>
-        <link rel="preview" href="/wps/poc/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcm/oid:2209b125-a9b3-4f2a-811f-4a297017dc9e" xml:lang="en" label="Preview"/>
-        <category scheme="wcmrest:workflowState" term="PUBLISHED" label="Published" xml:lang="en"/>
-    </entry>
-</feed>
+-   **Expected Headers**
 
-```
+    LTPA token of the user. Also works anonymously.
+
+
+-   **Query Parameters**
+
+    ```
+    textcontains: Any of the words
+    ```
+
+    ```
+    textcontainsexact: Exact phrase
+    ```
+
+
+-   **Return body**
+
+    The found results. Same as when calling existing query API.
+
+    ```
+    <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0">
+        <id>wcmrest:query?textcontainsexact=Sample%20Article</id>
+        <title>wcmrest:query?textcontainsexact=Sample%20Article</title>
+        <updated>2020-04-14T12:36:14.477Z</updated>
+        <total>2</total>
+        <entry>
+            <id>wcmrest:5bfbd4e2-f203-4912-87c2-4edd3e6fc4de</id>
+            <title xml:lang="en">Sample Article 2</title>
+            <wcm:displayTitle xml:lang="en">Sample Article 2</wcm:displayTitle>
+            <summary xml:lang="en"></summary>
+            <wcm:name>Sample Article 2</wcm:name>
+            <wcm:type>Content</wcm:type>
+            <updated>2020-04-14T12:30:05.676Z</updated>
+            <wcm:lastModifier>
+                <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
+                <uri>/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/um/users/profiles/Z9eAeIHO0JPO64BPIJM4CPHDAMMG65JO6MM07GHO0JMOCHHC43IH6OPC63RS6M1</uri>
+                <name>wpsadmin</name>
+            </wcm:lastModifier>
+            <link rel="edit" href="/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/Content/5bfbd4e2-f203-4912-87c2-4edd3e6fc4de" xml:lang="en" label="Edit"/>
+            <link rel="alternate" href="/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/Content/5bfbd4e2-f203-4912-87c2-4edd3e6fc4de" xml:lang="en" label="Read"/>
+            <link rel="library" href="/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/Library/f2a3c1ee-591d-4fe1-85d5-7d27662154a5" xml:lang="en" label="Library"/>
+            <link rel="preview" href="/wps/poc/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcm/oid:5bfbd4e2-f203-4912-87c2-4edd3e6fc4de" xml:lang="en" label="Preview"/>
+            <category scheme="wcmrest:workflowState" term="PUBLISHED" label="Published" xml:lang="en"/>
+        </entry>
+        <entry>
+            <id>wcmrest:2209b125-a9b3-4f2a-811f-4a297017dc9e</id>
+            <title xml:lang="en">Sample Article</title>
+            <wcm:displayTitle xml:lang="en">Sample Article</wcm:displayTitle>
+            <summary xml:lang="en"></summary>
+            <wcm:name>Sample Article</wcm:name>
+            <wcm:type>Content</wcm:type>
+            <updated>2020-04-14T11:44:10.229Z</updated>
+            <wcm:lastModifier>
+                <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
+                <uri>/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/um/users/profiles/Z9eAeIHO0JPO64BPIJM4CPHDAMMG65JO6MM07GHO0JMOCHHC43IH6OPC63RS6M1</uri>
+                <name>wpsadmin</name>
+            </wcm:lastModifier>
+            <link rel="edit" href="/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/Content/2209b125-a9b3-4f2a-811f-4a297017dc9e" xml:lang="en" label="Edit"/>
+            <link rel="alternate" href="/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/Content/2209b125-a9b3-4f2a-811f-4a297017dc9e" xml:lang="en" label="Read"/>
+            <link rel="library" href="/wps/mycontenthandler/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcmrest/Library/f2a3c1ee-591d-4fe1-85d5-7d27662154a5" xml:lang="en" label="Library"/>
+            <link rel="preview" href="/wps/poc/!ut/p/digest!2fHfKIZpm7_8BPtgSigLeg/wcm/oid:2209b125-a9b3-4f2a-811f-4a297017dc9e" xml:lang="en" label="Preview"/>
+            <category scheme="wcmrest:workflowState" term="PUBLISHED" label="Published" xml:lang="en"/>
+        </entry>
+    </feed>
+    
+    ```
+
 

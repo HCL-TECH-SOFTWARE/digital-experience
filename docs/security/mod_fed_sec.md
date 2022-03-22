@@ -1,4 +1,4 @@
-# Changing from a stand-alone repository to a federated repository \| HCL Digital Experience {#mod_fed_sec .task}
+# Changing from a stand-alone repository to a federated repository
 
 If you originally configured a stand-alone LDAP user registry but require a robust security configuration, you can change to the federated user repository.
 

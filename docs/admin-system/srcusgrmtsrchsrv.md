@@ -1,4 +1,4 @@
-# Remote search service \| HCL Digital Experience {#srcusgrmtsrchsrv .concept}
+# Remote search service
 
 You can configure the search portlets for local operation, or you can configure them for remote search service. Depending on your configuration, remote search service might have performance benefits by offloading and balancing system load.
 

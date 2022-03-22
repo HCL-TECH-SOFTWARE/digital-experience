@@ -1,8 +1,8 @@
-# Customizing the container deployment {#container_docker_deployment}
+# Customizing the container deployment
 
 This section describes how to customize your HCL Digital Experience 9.5 container deployment.
 
-## About this task {#custom_container .section}
+## About this task
 
 Follow this procedure to deploy or update your HCL Portal deployment.
 
@@ -13,7 +13,7 @@ DX 9.5 containerization is focused on deployment and it uses an operator-based d
 -   To introduce a supported containerized deployment that HCL Digital Experience can continually extend to provide customers with the best possible experience.
 -   To provide a high level of customization in the deployment and continue to expand on that, along with increased automation.
 
-## Before you begin {#section_a4g_xfb_pnb .section}
+## Before you begin
 
 Customers need to follow the recommended deployment model to ensure the availability of future functions and prevent potential conflicts.
 
@@ -21,7 +21,7 @@ Customizing the deployment requires updating the deploy/crds/git.cwp.pnp-hcl.com
 
 ![](../images/container_deployment_file_location.png "Deploy scripts")
 
-Reference the HCL Digital Experience [Deployment topic](deployment.html) for the list of supported platforms and latest HCL DX 9.5 container package list files that can be downloaded from your HCL Digital Experience entitlements on the HCL Software License Portal.
+Reference the HCL Digital Experience [Deployment topic](deployment.md) for the list of supported platforms and latest HCL DX 9.5 container package list files that can be downloaded from your HCL Digital Experience entitlements on the HCL Software License Portal.
 
 Once modified, the `deployDx.sh` or the `updateDx.sh` scripts should be run to perform \(or update\) the target deployment.
 
@@ -29,7 +29,7 @@ Once modified, the `deployDx.sh` or the `updateDx.sh` scripts should be run to p
 
 **Note:** All modifications should be made to the custom resource instance and **not the individual parts** of the deployment.
 
-## Procedure {#section_a2l_xhv_4nb .section}
+## Procedure
 
 1.  Create a backup of the git\_v1\_dxdeployment\_cr.yaml file.
 2.  Open the original file in edit mode.
@@ -117,5 +117,5 @@ Once modified, the `deployDx.sh` or the `updateDx.sh` scripts should be run to p
 
 5.  Once modified, the `deployDx.sh` and the `updateDx.sh` scripts should be run to create \(or update\) the target deployment.
 
-**Parent topic:**[Customizing your container deployment \| HCL Digital Experience](../containerization/customization.md)
+**Parent topic:**[Customizing your container deployment](../containerization/customization.md)
 
