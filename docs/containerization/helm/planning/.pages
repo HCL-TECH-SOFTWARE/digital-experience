@@ -1,0 +1,9 @@
+title: Planning 
+nav:
+    - docker.md
+    - limitations_requirements.md
+    - helm_planning_deployment.md
+    - helm_persistent_volume_claims.md
+    - helm_configure_networking.md
+    - helm_additional_tasks.md
+     

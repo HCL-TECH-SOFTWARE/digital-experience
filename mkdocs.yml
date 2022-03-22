@@ -1,0 +1,27 @@
+site_name: HCL Digital Experience Help Center
+
+theme:
+  name: material
+  logo: assets/dx_logo.png
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - navigation.instant
+    # - navigation.expand
+    - search.highlight
+    - search.share
+    - search.suggest
+  custom_dir: theme_overrides/
+  icon:
+    repo: fontawesome/brands/github
+repo_url: https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/docs/
+repo_name: CWPdoc/dx-mkdocs/docs/
+# extra_css:
+#   - stylesheets/dx_style.css
+  # - sofy.css
+plugins:
+  - awesome-pages
+  - search
+copyright: Copyright &copy; 2022, HCL Technologies Limited
