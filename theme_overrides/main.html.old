@@ -9,7 +9,8 @@
   </a>
 {% endblock %}
 
-<!-- More minimal footer -->
+<!-- More minimal footer 
 {% block footer %}
  
 {% endblock %}
+-->

@@ -33,10 +33,11 @@ repo_url: https://git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/
 repo_name: CWPdoc/dx-mkdocs/
 
 # Customization
-# extra_css:
-#   - stylesheets/dx_style.css
+extra_css:
+  - stylesheets/dx_style.css
   # - sofy.css
 
 plugins:
   - awesome-pages
   - search
+
