@@ -54,6 +54,7 @@ extra_css:
 plugins:
   - awesome-pages
   - search
+  - render_swagger
   - git-revision-date-localized:
       type: date
 
