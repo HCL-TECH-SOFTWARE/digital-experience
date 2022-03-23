@@ -1,4 +1,4 @@
-# Web content cache types
+# Web content cache types 
 
 Learn about the types of caching used by HCL Web Content Manager, basic web content caching, and advanced web content caching.
 
@@ -42,4 +42,6 @@ In most cases, basic, site and session caching would only be used as your server
 **Caching Personalization components:**
 
 Web content caching can sometimes be used with Personalization components but will depend on the conditions set in the personalization rule, or the resources used to determine the rule results. Cache testing will be required to determine if the content returned by your personalization component can be cached using web content caching.
+
+**Parent topic:**[Caching options ](../wcm/wcm_config_delivery_caching.md)
 

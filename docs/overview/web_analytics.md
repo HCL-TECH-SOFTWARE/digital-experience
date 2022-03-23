@@ -1,4 +1,4 @@
-# Web analytics
+# Web analytics 
 
 HCL Digital Experience \(DX\) includes a number of solutions to help you understand how visitors use your site, including server-side analytics and client-side analytics. Client-side analytics is also called active site analytics.
 

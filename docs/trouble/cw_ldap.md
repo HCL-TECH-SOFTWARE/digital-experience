@@ -1,4 +1,4 @@
-# Troubleshooting: Enable federated security option
+# Troubleshooting: Enable federated security option 
 
 Enabling federated security is part of many environment setups. If you encounter a failure during the configuration process, determine whether you can run the step again, skip the step, or if you must clean up the step. For some failed steps, learn how to correct the issue and recover from the failure.
 
@@ -11,6 +11,13 @@ Each potential step in the configuration is included. Because the steps vary dep
 ```
 [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/config/cells/CellName/wim/config/wimconfig.xml
 ```
+
+**Parent topic:**[Troubleshooting the Configuration Wizard ](../trouble/cw_troubleshooting.md)
+
+**Related information**  
+
+
+[Accessing the Configuration Wizard ](../config/cw_run.md)
 
 # Manual Step: Retrieve the SSL certificate from the SSL port
 

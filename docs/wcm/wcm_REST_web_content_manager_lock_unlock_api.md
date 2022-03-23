@@ -2,7 +2,7 @@
 
 The Web Content Manager Lock/Unlock API lets you lock and unlock WCM content components, authoring templates, and item.
 
-It also extends the [WCM Query API](../wcm/wcm_rest_query.md) to pass on the information if an item is locked and who locked it.
+It also extends the [WCM Query API](../wcm/wcm_rest_query.html) to pass on the information if an item is locked and who locked it.
 
 It is equivalent to the functionality in the user interface \(for WCM items\):
 
@@ -343,7 +343,7 @@ It is equivalent to the functionality in the user interface \(for finding Web Co
 
 ## Updating references
 
-Both Digital Asset Management and Web Content Manager references can be updated with the published APIs as documented here: [How to use REST with components](../wcm/wcm_rest_crud_component.md).
+Both Digital Asset Management and Web Content Manager references can be updated with the published APIs as documented here: [How to use REST with components](../wcm/wcm_rest_crud_component.html).
 
 Example for Digital Asset Management, to retrieve references to UUID: 7e3cb713-251a-485c-a578-1aa219411b5e.
 
@@ -615,4 +615,6 @@ mycontenthandler/!ut/p/digest!PQo5Yhy68oeppWcEz2sddA/wcmrest/Content/b7b8b3fb-8f
                     <type>RichTextComponent</type>
 
 ```
+
+**Parent topic:**[REST service for Web Content Manager ](../wcm/wcm_rest.md)
 

@@ -1,4 +1,4 @@
-# Enabling remote rendering with WSRP and the Web Content Viewer
+# Enabling remote rendering with WSRP and the Web Content Viewer 
 
 To display web content on a portal that does not include HCL Web Content Manager, you can use the Web Content Viewer and the WSRP support in the portal. The Web Content Viewer can then retrieve and display content from a web content system on a different server.
 
@@ -34,4 +34,24 @@ When you use the Web Content Viewer for remote rendering with WSRP, the followin
     -   Personalization elements are not supported with WSRP. Therefore, you cannot use features that require personalization rules. Examples: content targeting, federated documents, social rendering, and Digital Data Connector \(DDC\) for HCL Portal.
     **Limitations when using WSRP with the Web Content Viewer with other non-HCL Digital Experience WSRP Consumers:** The link broadcasting feature of the viewer is not supported for the WSRP Consumers of other vendors. This limitation is because the concept of pages and web content pages does not exist in WSRP. When you specify how to broadcast links, you can select only the option **None**.
 
+
+-   **[CORS and remote web content rendering with WSRP and the Web Content Viewer ](../wcm/wcm_config_wcmviewer_wsrp_cors.md)**  
+Cross-origin resource sharing \(CORS\) describes a mechanism for supporting requests that a web page sends to a server that is not in the same domain as the originating web page. The CORS concept must be supported by both the web browser and the server.
+-   **[OpenAjax security and remote web content rendering with WSRP and the Web Content Viewer ](../wcm/wcm_config_wcmviewer_wsrp_open_ajax.md)**  
+The Enabler from the Mashups 3.0.0.1 component that is included in HCL Digital Experience as a theme module implements some features that are specified by the OpenAjax Alliance. One of them is a generic override for Dojo XMLHttpRequests.
+
+**Parent topic:**[Delivering web content on a portal page ](../wcm/wcm_config_delivery_portal.md)
+
+**Related information**  
+
+
+[Web Content Viewers ](../wcm/wcm_deploy_wcmviewer_about.md)
+
+[WSRP services ](../admin-system/wsrpc.md)
+
+[Providing WSRP services as a Producer ](../admin-system/wsrpt_prod_prvd_ws.md)
+
+[Configuring security on the Consumer portal ](../admin-system/wsrpt_cons_prep_sec.md)
+
+[Working with lists of social objects ](../social/soc_rendr_tsk_socl_list.md)
 

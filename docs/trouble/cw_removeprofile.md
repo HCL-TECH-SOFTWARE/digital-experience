@@ -6,6 +6,15 @@ Each potential step in the configuration is included. Because the steps vary dep
 
 **Tip:** If you must go through the wizard again, download the wizard selections that you made to save time. Then, cancel the configuration. Start the process over and upload your saved selections. Correct or enter values for the parameters that caused the failure.
 
+**Parent topic:**[Troubleshooting the Configuration Wizard ](../trouble/cw_troubleshooting.md)
+
+**Related information**  
+
+
+[Remove an HCL Portal profile ](../config/cw_remove_profile.md)
+
+[Accessing the Configuration Wizard ](../config/cw_run.md)
+
 # Manual Step: Prepare your system
 
 |Actions|Notes®|

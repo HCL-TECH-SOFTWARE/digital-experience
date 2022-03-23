@@ -1,4 +1,4 @@
-# Cluster Step 3: Upgrade node profiles
+# Cluster Step 3: Upgrade node profiles 
 
 Use the Configuration Wizard to upgrade the nodes profiles for a cluster environment. Use the following information to get familiar with the information you must provide in the wizard and the configuration procedure that it generates.
 
@@ -7,6 +7,19 @@ Use the Configuration Wizard to upgrade the nodes profiles for a cluster environ
 Select **Migrate to a New Version**, and choose the **Migrate a Cluster Step 3: Upgrade Node Profiles** option.
 
 **Note:** This option is not available for IBM® z/OS®.
+
+**Parent topic:**[Migrate data using the configuration wizard ](../migrate/mig_85_wizard.md)
+
+**Related information**  
+
+
+[Troubleshooting: Upgrade node profiles for a cluster environment](../trouble/cw_migrate_cluster3.md)
+
+[Configuration Wizard ](../config/cw_overview.md)
+
+[Roadmap: Migrating a clustered environment ](../migrate/rm_mig_cluster.md)
+
+[Accessing the Configuration Wizard ](../config/cw_run.md)
 
 # Worksheet
 

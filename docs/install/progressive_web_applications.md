@@ -1,4 +1,4 @@
-# Progressive Web Applications
+# Progressive Web Applications 
 
 Develop support that adds native mobile application experience and performance to your web site using browser-based functionality.
 
@@ -23,7 +23,7 @@ To make a Progressive Web Application installable \(as noted in the [Introductio
 
 3.  Register a service worker with a functional fetch handler.
 
-Once an application meets the above criteria, the browser will display a button that will allow the application to be installed. See the PWA install option example shown below using the [Woodburn Studio Demo Site](../woodburn_studio/woodburn_studio.md).
+Once an application meets the above criteria, the browser will display a button that will allow the application to be installed. See the PWA install option example shown below using the [Woodburn Studio Demo Site](../woodburn_studio/woodburn_studio.html).
 
 ![](../assets/woodburn_studio_demo_site.png "Woodburn Studio Demo Site")
 
@@ -45,7 +45,7 @@ HCL Digital Experience 9.5 CF19 and Container Update CF192 add new platform and 
 1.  **Updated System module** delivered in HCL DX 9.5 CF19. This module serves the manifest and service worker files.
 2.  **New Theme scope module** that is defined in the theme.json file. This loads the pwa.js.
 3.  **New page metadata** is created that can be used on the root page of the site \(or other pages in some cases\).
-4.  An updated [Woodburn Studio Demo Site](../woodburn_studio/woodburn_studio.md), which will present a Progressive Web Application enabled for installation and display to supported mobile platforms. PWA installation and display of the updated Woodburn Studio site experience is tested and verified on the following mobile browser platforms:
+4.  An updated [Woodburn Studio Demo Site](../woodburn_studio/woodburn_studio.html), which will present a Progressive Web Application enabled for installation and display to supported mobile platforms. PWA installation and display of the updated Woodburn Studio site experience is tested and verified on the following mobile browser platforms:
 
     -   Apple Safari must be used for Apple Mobile devices. \(Not supported for desktop access\). Apple iOS v13 and v14 are tested and verified.
     -   Google Chrome 85 on Mac and Windows
@@ -150,7 +150,7 @@ Hidden pages are implemented via CSS included in the theme. There are two places
         ```
 
     -   Restart the HCL DX 9.5 server.
-    Note the display of the PWA install option will vary depending on the device you are using \(e.g. Chrome on MacOS and Safari on iOS\) as noted above in the Updated [Woodburn Studio Demo Site](../woodburn_studio/woodburn_studio.md) detail.
+    Note the display of the PWA install option will vary depending on the device you are using \(e.g. Chrome on MacOS and Safari on iOS\) as noted above in the Updated [Woodburn Studio Demo Site](../woodburn_studio/woodburn_studio.html) detail.
 
     All further steps apply to custom themes and/or to custom sites.
 
@@ -227,7 +227,7 @@ Hidden pages are implemented via CSS included in the theme. There are two places
             ],
     ```
 
-9.  **Depending on how the theme is deployed, the theme caches may need to be cleared** using the Theme Analyzer. See the [Theme Analyzer](../dev-theme/themeopt_an_analyzer.md) Help Center topic for instructions to analyze and clear theme caches.
+9.  **Depending on how the theme is deployed, the theme caches may need to be cleared** using the Theme Analyzer. See the [Theme Analyzer](../dev-theme/themeopt_an_analyzer.html) Help Center topic for instructions to analyze and clear theme caches.
 10. **Add any necessary metadata values** to the pages:
     -   **Required: `com.hcl.dx.pwa.configuration`** - Set on the root label or page of the site to identify the PWA configuration located in the theme pwas directory that will apply. For example, this page metadata parameter is set to `woodburn` on the Woodburn Studio theme root label \(`Woodburn Studio`\).
     -   **Optional: `com.hcl.dx.pwa.app.protected`** - Set on the root label or page of the site to identify whether or not the application will apply to authenticated \(true\) or anonymous \(false\) parts of the site. The value of this parameter will default to false.
@@ -287,5 +287,7 @@ The following changes were made to the Woodburn Studio theme to implement the bu
 
 For additional information on PWA custom install options, see the following link from the Web.dev site: [How to provide your own in-app install experience](https://web.dev/customize-install/)
 
-**Parent topic:**[Mobile](../overview/mobile.md)
+**Parent topic:**[Mobile ](../overview/mobile.md)
+
+**Parent topic:**[Developing websites ](../install/developing_websites.md)
 

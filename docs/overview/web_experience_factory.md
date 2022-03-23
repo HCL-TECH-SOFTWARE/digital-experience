@@ -1,4 +1,4 @@
-# Development tools
+# Development tools 
 
 Both Web Experience Factory and IBM Rational Application Developer include functionality to help you develop exceptional web experiences for your mobile site visitors.
 
@@ -25,5 +25,5 @@ The IBM Rational Application Developer includes tools designed to help you devel
 -   Portlet sample applications, available in the Samples Gallery.
 -   Educational tutorials, available in the Tutorials Gallery.
 
-**Parent topic:**[Mobile](../overview/mobile.md)
+**Parent topic:**[Mobile ](../overview/mobile.md)
 

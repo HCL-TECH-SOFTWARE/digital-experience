@@ -1,4 +1,4 @@
-# Manually syndicating items
+# Manually syndicating items 
 
 Although syndication is configured to run automatically by default, from time to time you might need to manually update syndication.
 
@@ -59,4 +59,6 @@ To manually update a syndication relationship:
 
 5.  Click **Update Subscription**.
 
+
+**Parent topic:**[How to manage syndicators and subscribers ](../panel_help/wcm_syndication.md)
 

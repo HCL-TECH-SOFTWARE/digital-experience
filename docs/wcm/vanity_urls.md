@@ -48,3 +48,27 @@ Business users can create short and arbitrary URLs as vanity URLs. The vanity UR
     You can create both vanity URLs and friendly URLs for the same portal page.
 
 
+-   **[Viewing and creating vanity URLs ](../wcm/van_url_create.md)**  
+To view and create vanity URLs, you work with the HCL Portal toolbar.
+-   **[How vanity URLs work ](../wcm/van_url_work.md)**  
+Learn about vanity URLs, how they work, and how you work with them.
+-   **[Administering vanity URLs ](../wcm/van_url_admin_ref.md)**  
+HCL Digital Experience provides some configuration tasks. You can use these tasks to administer vanity URL support. You can also configure your IBM HTTP Server so that you can use short vanity URLs.
+
+**Parent topic:**[Setting up a website ](../site/site_setup.md)
+
+**Related information**  
+
+
+[URL mapping](../admin-system/adurlmap.md)
+
+[Configuring managed pages ](../wcm/wcm_config_mngpages.md)
+
+[Providing short vanity URLs ](../wcm/van_url_short.md)
+
+[URL generation in HCL Portal ](../dev/url_gen_main.md)
+
+[Changing the theme logo ](../dev-theme/themeopt_change_theme_logo.md)
+
+[Administering managed pages ](../wcm/wcm_mngpages_advadmin.md)
+

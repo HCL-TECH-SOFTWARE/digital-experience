@@ -1,4 +1,4 @@
-# Create an additional cluster node
+# Create an additional cluster node 
 
 After you answer questions and provide information about your environment, the wizard generates a custom configuration procedure. The following set of steps represents all possible configuration steps. The instructions that you generate might include or exclude specific steps based on your wizard selections.
 
@@ -106,4 +106,13 @@ After you create a static or dynamic cluster, you can create an additional horiz
 
         start-portal-server
 
+
+**Parent topic:**[Setting up a cluster ](../config/config_cluster.md)
+
+**Related information**  
+
+
+[Accessing the Configuration Wizard ](../config/cw_run.md)
+
+[Updating DB2 self-tuning memory manager \(STMM\) settings ](../migrate/mig_t_post_db2_stmm.md)
 

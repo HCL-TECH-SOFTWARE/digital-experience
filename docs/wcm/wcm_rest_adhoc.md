@@ -1,4 +1,4 @@
-# Query parameters
+# Query parameters 
 
 The following parameters can be used with queries.
 
@@ -378,7 +378,7 @@ This API lets Content Authors search for free form text in the Web Content Manag
 
 Using the Text Search REST API
 
-The existing search query API is extended and two new parameters are added. See [REST Query service for web content](wcm_rest_query.md) and [Table 2](#table_onm_klg_zlb) for more information.
+The existing search query API is extended and two new parameters are added. See [REST Query service for web content ](wcm_rest_query.md) and [Table 2](#table_onm_klg_zlb) for more information.
 
 -   **Endpoint**
 
@@ -478,4 +478,6 @@ The existing search query API is extended and two new parameters are added. See 
     
     ```
 
+
+**Parent topic:**[REST Query service for web content ](../wcm/wcm_rest_query.md)
 

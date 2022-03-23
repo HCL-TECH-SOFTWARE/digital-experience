@@ -1,4 +1,4 @@
-# Migration from Portal Server Offering 7.0 to Portal 8.5
+# Migration from Portal Server Offering 7.0 to Portal 8.5 
 
 You can migrate from a Portal Server Offering 7.0 to Portal 8.5. For more information about Portal Server Offering, see the Overview topic from the related links section. When you migrate from a 7.0 Server Offering-only installation to HCL Portal Version 8.5, you must complete steps that are not covered in the Configuration Wizard migration options. Instead of using the wizard to complete the final upgrade the Portal profile step, you must complete this step manually.
 
@@ -19,4 +19,15 @@ Manually run the two following ConfigEngine tasks from the [wp\_profile\_root](.
     -   z/OS: .ConfigEngine/ConfigEngine.sh upgrade-profile -DWasPassword=yourpassword -DPortalAdminPwd=yourpassword -javaoption -Xms512m -javaoption -Xmx2048m -Dwcm.transactionTimeout=1200 -Dprevious.family.WPFamilyName=server
     **Note:** If you encounter any problems when you run the upgrade-profile task and you need to restart the task with -Dwp.migration.framework.resume=parameter, then ensure that you continue to use the -Dprevious.family.WPFamilyName=server parameter.
 
+
+**Parent topic:**[Migration considerations ](../plan/mig_plan_high_availability.md)
+
+**Related information**  
+
+
+[Roadmaps for migration ](../install/rm_migration.md)
+
+[Migrate data using the configuration wizard ](../migrate/mig_85_wizard.md)
+
+[Overview  9.5](../overview/intro_container.md)
 

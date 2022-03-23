@@ -1,4 +1,4 @@
-# Enable federated security
+# Enable federated security 
 
 You can use the Configuration Wizard to configure HCL Portal to use a federated LDAP for security. Use the following information to get familiar with the information you must provide in the wizard and the configuration procedure that it generates.
 
@@ -13,6 +13,19 @@ For this configuration option, the wizard can connect to your LDAP directory and
 Two types of validation are performed when you select to validate settings including field syntax and LDAP connection validations. The syntax validation, for example, checks that you entered a valid port number in the range of 1 - 65535. The connection validation, for example, checks that a connection can be made to your LDAP server.
 
 Enabling validation is recommended because it can prevent a possible failure by validating your entries in the wizard before you run the configuration. The LDAP settings including the **Repository ID**, **Host name**, **Port**, **Bind DN**, **Bind password**, **Base DN**, **Administrator group DN**, **Administrator DN**, and **Administrator password** are all validated before the wizard creates your instructions to run the configuration. Review the following worksheet section to see which fields are required based on your selections in the wizard.
+
+**Parent topic:**[User registry ](../config/config_user_registry.md)
+
+**Related information**  
+
+
+[Setting up a stand-alone server ](../config/config_standalone.md)
+
+[Accessing the Configuration Wizard ](../config/cw_run.md)
+
+[Updating DB2 self-tuning memory manager \(STMM\) settings ](../migrate/mig_t_post_db2_stmm.md)
+
+[Establishing single sign-on \(SSO\) between the portal installation and HCL Connections in SmartCloud for Social Business ](../dev-portlet/est_sso_portal_sc4sb.md)
 
 # Worksheet
 

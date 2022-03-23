@@ -1,4 +1,4 @@
-# List of software fixes 9.5
+# List of software fixes  9.5
 
 This includes new features and improvements for the latest version of HCL Digital Experience.
 

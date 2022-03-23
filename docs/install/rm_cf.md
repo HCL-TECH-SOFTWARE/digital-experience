@@ -10,6 +10,8 @@ Use this roadmap to learn more about the following information:
 -   How to apply the latest combined cumulative fix
 -   How to configure and enable new Combined Cumulative Fix features
 
+**Parent topic:**[Roadmaps to deploy your HCL Digital Experience system](../install/deployment_patterns.md)
+
 # Who should use this roadmap
 
 Use this roadmap if you:
@@ -62,7 +64,7 @@ Some combined cumulative fixes focus on fixing known issues that are identified 
 
 1.  Get an overview of the features and improvements delivered in the latest combined cumulative fix.
 
-    -   Documentation resource: [Combined Cumulative Fix Strategy](http://help.hcltechsw.com/digital-experience/9.5/overview/new_cf95.md)
+    -   Documentation resource: [Combined Cumulative Fix Strategy](http://help.hcltechsw.com/digital-experience/9.5/overview/new_cf95.html)
 2.  View the fixes delivered for HCL Digital Experience 9.5. The documentation provides specific information on how to enable and use the new feature.
 
     -   Documentation resource: [What's new with CF17](../overview/new_cf17.md)
@@ -81,8 +83,8 @@ Use the Health Checker tool to identify issues with your installation. Use the H
 
 1.  To apply this cumulative fix, follow the readme file instructions that apply to your environment. You can find separate instructions for stand-alone, cluster, farm, and remote search environments from the *Overview* topic.
 
-    -   Documentation resource: [HCL Digital Experience Combined cumulative fix instructions: stand-alone](../../9.5/overview/ccf_95_standalone.md)
-    -   Documentation resource: [HCL Digital Experience Combined cumulative fix instructions: cluster](../../9.5/overview/ccf_95_cluster.md)
-    -   Documentation resource: [HCL Digital Experience Combined cumulative fix instructions: farm](../../9.5/overview/ccf_95_farm.md)
-    -   Documentation resource: [HCL Digital Experience Combined cumulative fix instructions: remote search](../../9.5/overview/ccf_95_remote_search.md)
+    -   Documentation resource: [HCL Digital Experience Combined cumulative fix instructions: stand-alone](../../9.5/overview/ccf_95_standalone.html)
+    -   Documentation resource: [HCL Digital Experience Combined cumulative fix instructions: cluster](../../9.5/overview/ccf_95_cluster.html)
+    -   Documentation resource: [HCL Digital Experience Combined cumulative fix instructions: farm](../../9.5/overview/ccf_95_farm.html)
+    -   Documentation resource: [HCL Digital Experience Combined cumulative fix instructions: remote search](../../9.5/overview/ccf_95_remote_search.html)
 

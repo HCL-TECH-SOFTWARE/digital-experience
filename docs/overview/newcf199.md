@@ -1,4 +1,4 @@
-# What's new in Container Update CF199? 9.5 Containers
+# What's new in Container Update CF199?  9.5 Containers
 
 This HCL Digital Experience 9.5 Container Update and CF199 release includes new releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management, Experience API, Design Studio \(Beta\), new Helm deployment operations for container deployments, updated CICD release process artifacts, “How To” videos, and more.
 
@@ -53,5 +53,5 @@ Take advantage of new step-by-step guidance for HCL Digital Experience practitio
 -   Video: [Deploy HCL DX 9.5 Container Update using Helm](../containerization/helm_deployment.md)
 -   Video: [Experience API V2 Web Content Manager REST APIs](../open_api/openapi_overview.md)
 
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
+**Parent topic:**[Container Update releases  9.5](../overview/container_update_releases.md)
 

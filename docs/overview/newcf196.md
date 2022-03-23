@@ -1,4 +1,4 @@
-# What's new in Container Update CF196? 9.5 Containers
+# What's new in Container Update CF196?  9.5 Containers
 
 This HCL Digital Experience 9.5 Container Update release includes new releases of HCL Digital Experience 9.5 core Portal and Web Content Manager, Content Composer, Digital Asset Management, and Experience API images, and a beta preview release of Design Studio. New and updated feature references are detailed here.
 
@@ -54,5 +54,5 @@ Take advantage of new step-by-step guidance for HCL Digital Experience practitio
 -   [Deep dive: Progressive Web Applications with HCL DX 9.5](../install/progressive_web_applications.md)
 -   [Content Security Policy with HCL DX 9.5](../security/content_security_policy.md)
 
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
+**Parent topic:**[Container Update releases  9.5](../overview/container_update_releases.md)
 

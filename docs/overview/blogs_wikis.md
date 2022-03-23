@@ -1,4 +1,4 @@
-# Blogs and wikis
+# Blogs and wikis 
 
 A set of preinstalled web content libraries are supplied. With these libraries, you can add blog and wiki features to your websites. Use blogs, blog libraries, and wikis to tap into the power of the community and to change the way you work.
 
@@ -8,5 +8,5 @@ Blogs, blog libraries, and wikis use the template libraries that are provided by
 
 If you show an authoring template in the Create Content toolbar, set the summary presentation on the authoring template. This way, users see this summary presentation when they choose Add to page to add a reference of a piece of content from another page. If you do not set the summary presentation on the authoring template, the portal shows a message that says `There is no summary presentation for this content`. To set the summary presentation on the authoring templates, go to the authoring template and then select a presentation template under Item Properties.
 
-**Parent topic:**[Social business](../overview/social_business.md)
+**Parent topic:**[Social business ](../overview/social_business.md)
 

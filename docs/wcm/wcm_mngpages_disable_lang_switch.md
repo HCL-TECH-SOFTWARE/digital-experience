@@ -15,3 +15,10 @@ Introduced in Container Update CF201, you can disable the language switcher by s
     ```
 
 
+**Parent topic:**[Preparing the site toolbar ](../dev-theme/themeopt_themeshelf.md)
+
+**Related information**  
+
+
+[Using the language switcher ](../admin-system/lang_switch.md)
+

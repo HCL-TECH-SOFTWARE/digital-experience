@@ -1,4 +1,4 @@
-# Manual Step: Configure your external web server
+# Manual Step: Configure your external web server 
 
 The Modify Site URLs for Search Engine Optimization option in the Configuration Wizard includes manual steps. For reference only, you can see the details of the manual step for configuring an external web server. To view this step in the Configuration Wizard, you must select Yes to using an external web server when you provide information about your environment.
 
@@ -38,4 +38,6 @@ The Modify Site URLs for Search Engine Optimization option in the Configuration 
         -   z/OS: ./configurewebservername.sh
     3.  Regenerate the web server plug-in in WebSphere Application Server. If you are using a remote web server, copy the generated plugin-cfg.xml file to the remote server. Note: Do not complete these steps if you are changing only the WSRP Producer context home value.
     4.  Restart the web server.
+
+**Parent topic:**[Manual Steps: Modify Site URLs for Search Engine Optimization ](../config/cw_shorten_url_seo_manual.md)
 

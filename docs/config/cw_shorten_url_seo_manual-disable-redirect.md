@@ -1,4 +1,4 @@
-# Manual Step: Disabling friendly URL redirects
+# Manual Step: Disabling friendly URL redirects 
 
 The Modify Site URLs for Search Engine Optimization option in the Configuration Wizard includes manual steps. For reference only, you can see the details of the manual step for disabling friendly URL redirects. To view this step in the Configuration Wizard, you must select No to wanting navigational state information in your URL.
 
@@ -16,4 +16,6 @@ The Modify Site URLs for Search Engine Optimization option in the Configuration 
 
     For information about this property and how to set it, see the topics [Configuration Service](../admin-system/srvcfgref_config.md) and [Setting service configuration properties](../admin-system/adsetcfg.md).
 
+
+**Parent topic:**[Manual Steps: Modify Site URLs for Search Engine Optimization ](../config/cw_shorten_url_seo_manual.md)
 

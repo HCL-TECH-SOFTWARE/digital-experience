@@ -1,4 +1,4 @@
-# What's new in Container Update CF200? 9.5 Containers
+# What's new in Container Update CF200?  9.5 Containers
 
 This HCL Digital Experience 9.5 Container Update and CF200 release includes updated releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management, Experience API, Design Studio \(Beta\), new Helm deployment operations for container deployments and migration from Operator deployments, updated CICD release process artifacts, new DX API and Explorer services for Personalization, Search and User and Groups REST APIs, new Digital Experience 9.5 Demo Packs on HCL Sofy, new ‘How To’ videos, and more. 
 
@@ -62,5 +62,5 @@ Take advantage of step-by-step guidance for HCL Digital Experience practitioners
 
 The following list of HCL Digital Experience deprecated features will reach end of support beginning with HCL Digital Experience Container update and CF 200. Reference the Help Center topic [Deprecated features and themes for HCL Digital Experience 9.5](../reference/newly_deprecated_features_and_themes.md).
 
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
+**Parent topic:**[Container Update releases  9.5](../overview/container_update_releases.md)
 

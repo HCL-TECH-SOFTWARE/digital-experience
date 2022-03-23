@@ -1,4 +1,4 @@
-# Portlets
+# Portlets 
 
 Portlets are a central part of HCL Digital Experience. Portlets are small applications that are independently developed, deployed, managed, and displayed. Administrators and users compose personalized pages by choosing and arranging portlets, resulting in customized Web pages.
 
@@ -42,5 +42,5 @@ Using Web Experience Factory and its patented dynamic profiling functionality, d
 
 Web Experience Factory applications are standards based and comply with portlet standards including JSR 168 and JSR 286.
 
-**Parent topic:**[Web content](../overview/content.md)
+**Parent topic:**[Web content ](../overview/content.md)
 

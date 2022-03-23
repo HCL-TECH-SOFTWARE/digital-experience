@@ -1,4 +1,4 @@
-# DB2 z/OS: Database transfer
+# DB2 z/OS: Database transfer 
 
 Your portal is installed with an Apache Derby database. The database that is immediately available for use is good for demonstration and portlet and theme development environments. Otherwise, you must configure portal to use a production-level database. Use the Configuration Wizard to transfer the data and configure a new database server.
 
@@ -331,4 +331,20 @@ Next, you can use other options to configure your environment more.
 If you are setting up a stand-alone server environment, you can use the Enable Federated Security option to add an LDAP user registry.
 
 If you are setting up a cluster environment, you can use the Create a Deployment Manager option to create a deployment manager profile that is augmented with HCL Portal resources.
+
+-   **[DB2 for z/OS worksheet: Transfer your database ](../config/cw_db_ws_db2z.md)**  
+This worksheet highlights the fields and properties that you see in the Configuration Wizard when you use the database transfer option.
+
+**Parent topic:**[Database Management Systems ](../config/config_dbms.md)
+
+**Related information**  
+
+
+[Setting up a stand-alone server ](../config/config_standalone.md)
+
+[Accessing the Configuration Wizard ](../config/cw_run.md)
+
+[Updating DB2 self-tuning memory manager \(STMM\) settings ](../migrate/mig_t_post_db2_stmm.md)
+
+[Manual Steps: Database Transfer option in the Configuration Wizard](../eua-workflows/kc-db-parent.md)
 

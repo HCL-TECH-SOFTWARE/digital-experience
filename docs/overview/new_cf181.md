@@ -1,4 +1,4 @@
-# What's new in Container Update CF181? 9.5 Containers
+# What's new in Container Update CF181?  9.5 Containers
 
 This HCL Digital Experience 9.5 Container Update release includes new Production releases of Content Composer, Digital Asset Management, and Experience API, new WCM REST APIs, guidance to deploy OpenLDAP, Remote Search and Database transfer processes, and more.
 
@@ -48,5 +48,5 @@ The Digital Experience Core Configuration API allows developers to retrieve Digi
 
 The Web Developer toolkit for HCL Digital Experience provides the ability to sync themes, content and script portlets \(also known as Script Applications\). It is available on the HCL Digital Experience GitHub repository. See [Web Developer Toolkit](../dev/web_developer_toolkit.html) for details.
 
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
+**Parent topic:**[Container Update releases  9.5](../overview/container_update_releases.md)
 

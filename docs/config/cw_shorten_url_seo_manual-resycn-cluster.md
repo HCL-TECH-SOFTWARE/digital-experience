@@ -1,4 +1,4 @@
-# Manual Step: Resynchronizing the nodes and restarting the cluster
+# Manual Step: Resynchronizing the nodes and restarting the cluster 
 
 The Modify Site URLs for Search Engine Optimization option in the Configuration Wizard includes manual steps. For reference only, you can see the details of the manual step for resynchronizing the nodes and restarting the cluster. To view this step in the Configuration Wizard, you click Modify Site URLs for Search Engine Optimization from the Set Up a Cluster page.
 
@@ -20,4 +20,6 @@ The Modify Site URLs for Search Engine Optimization option in the Configuration 
     5.  Click **Dynamic cluster members**.
     6.  Select the member name that you want to stop and then click **Stop**.
     7.  Select the member name that you want to start and then click **Start**.
+
+**Parent topic:**[Manual Steps: Modify Site URLs for Search Engine Optimization ](../config/cw_shorten_url_seo_manual.md)
 

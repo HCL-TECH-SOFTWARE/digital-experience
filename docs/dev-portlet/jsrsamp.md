@@ -1,4 +1,4 @@
-# Sample portlets
+# Sample portlets 
 
 Learn about the sample portlets included with HCL Digital Experience and view the steps to import these samples into IBM Rational Application Developer.
 
@@ -31,4 +31,6 @@ You can get some sample portlets from the portlet catalog. The samples described
     9.  Check **Overwrite existing sources without warning**.
     10. Click **Finish**.
     11. Check the contents of the new portlet project for errors.
+
+**Parent topic:**[Developing portlets ](../dev-portlet/wpsdev.md)
 

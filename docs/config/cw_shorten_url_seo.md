@@ -1,8 +1,18 @@
-# Configuration Wizard instructions: Modify site URLs for search engine optimization
+# Configuration Wizard instructions: Modify site URLs for search engine optimization 
 
 Use the Configuration Wizard to change or remove /wps/portal \(context root and default home values\) to create shorter, human-readable URLs. Select an option to remove navigational state information from site URLs. This procedure is intended only as a reference.
 
 You can use the Configuration Wizard to shorten site URLs when you set up a stand-alone server or when you set up a cluster.
+
+-   **[Manual Steps: Modify Site URLs for Search Engine Optimization ](../config/cw_shorten_url_seo_manual.md)**  
+The Modify Site URLs for Search Engine Optimization option in the Configuration Wizard includes manual steps. For reference only, you can see the details of the manual steps in this section of the product documentation. The Configuration Wizard provides you custom instructions. Depending on your selections, you might not see all of the manual steps in this section in the instructions created for you in the Configuration Wizard.
+
+**Parent topic:**[Changing the site URL after an installation](../config/cfg_intr_seo.md)
+
+**Related information**  
+
+
+[Manual Step: Redeploying the HCL Web Application Bridge to a virtual host ](../config/cw_shorten_url_seo_manual-wab.md)
 
 # Configuration Wizard instructions
 

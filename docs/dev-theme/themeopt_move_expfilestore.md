@@ -69,3 +69,14 @@ Use a WebDav Client to connect to the filestore using the following url:
 
 Browse to the folder you need and copy the files to your local drive.
 
+**Parent topic:**[Manually packaging themes for deployment ](../dev-theme/themeopt_move_repackstatic.md)
+
+**Related information**  
+
+
+[Development and operations overview ](../dev-theme/themeopt_move_devopaspect.md)
+
+[Adding static content to your custom theme](../dev-theme/themeopt_move_repack_addstatic.md)
+
+[Staging to production list](../deploy/dep_stage_check.md)
+

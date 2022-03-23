@@ -1,4 +1,4 @@
-# Targeted content and Portal Personalization
+# Targeted content and Portal Personalization 
 
 Targeted content provides you with a way to deliver multiple pieces of content to different audiences. Targeted content matches the best content with the most appropriate group by using segments. Segments help you split your audience into meaningful groups with different interests or characteristics.
 
@@ -29,5 +29,5 @@ After you define the content type, attributes of the content are shown to the ru
 -   Personalization also includes a recommendation engine that provides collaborative filtering capabilities. Collaborative filtering uses statistical techniques to identify groups of users with similar interests or behaviors. Inferences can be made about what a particular user might be interested in, based on the interests of the other members of the group.
 -   Campaign management tools are also included with Personalization. Campaigns are sets of business rules that work together to accomplish a business objective. For example, a Human Resources manager might want to run a campaign to encourage employees to enroll in a stock purchase plan or sign up for some other new benefit that is now available to employees. The Human Resources manager would define a set of rules that are shown to accomplish this business objective. Campaigns have start and stop dates and times and can be email and web-page based. Several campaigns can run simultaneously and can be prioritized.
 
-**Parent topic:**[Web content](../overview/content.md)
+**Parent topic:**[Web content ](../overview/content.md)
 

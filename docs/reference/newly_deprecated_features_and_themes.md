@@ -25,7 +25,7 @@ Deprecation means that the features are supported at this time but can be remove
 |Integrating |iNotes portlet |Effective November 2021, integration with Domino will be deprecated. The iFrame integration approach is already obsolete and not used. |November 2021|
 |Migrating |IBM® JSF Bridge |In WAS 9.0.5.2 and 8.5.5.17, IBM removed the JSF Bridge from WAS. To address this, an updated JSF Portlet Bridge is included in DX CF18 release. Customers installing HCL DX CF18, and using an IBM WebSphere Application Server Network Deployment version later than 8.5.5.17 or 9.0.5.2 should utilize the new JSF Portlet Bridge. The HCL JSF Portlet Bridge is built using the same class names as the IBM JSF Portlet Bridge provided in WAS 9.0.0.7 thru 9.0.5.1 and WAS 8.5.5.16 respectively. User applications should be able to continue to function without any modification.
 
--   Documentation source: [What's new in CF18 9.5](../../9.5/overview/new_noncf18.md)
+-   Documentation source: [What's new in CF18  9.5](../../9.5/overview/new_noncf18.html)
 
 |December 2020|
 

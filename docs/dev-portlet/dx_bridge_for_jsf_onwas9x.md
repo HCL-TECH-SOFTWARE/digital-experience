@@ -1,4 +1,4 @@
-# Support for JavaServer Faces 2.2
+# Support for JavaServer Faces 2.2 
 
 HCL Digital Experience 8.5 and 9.5 includes the HCL Portlet 2.0 Bridge for JSF 2.2. The bridge provides customers an interface to developing and running JSF Portlets.
 
@@ -41,4 +41,11 @@ Customers should be aware of the following limitations and best coding practices
     -   `import com.ibm.faces20.portlet.httpbridge.PortletFacesContextWrapper;`
     -   `import com.ibm.faces20.portlet.util.BridgeConfigUtils;`
     -   `import com.ibm.faces20.portlet.FaceletPortletViewHandler;`
+
+**Parent topic:**[Developing ](../dev/developing_parent.md)
+
+**Related information**  
+
+
+[JavaServer Faces implementation ](../migrate/mig_post_jsf.md)
 

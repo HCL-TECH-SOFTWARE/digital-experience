@@ -1,4 +1,4 @@
-# What's new in Container Update CF183? 9.5 Containers
+# What's new in Container Update CF183?  9.5 Containers
 
 This HCL Digital Experience 9.5 Container Update release includes updated production releases of Digital Experience 9.5 core Portal and Web Content Manager, Content Composer, Digital Asset Management, and Experience API images. New additions include guidance to deploy to Microsoft Azure Kubernetes Service \(AKS\), new Web Content Manager REST APIs and Search Query examples, guidance to deploy the Remote Search image on Red Hat OpenShift, new HCL Digital Experience ‘How To’ videos, and more.
 
@@ -36,5 +36,5 @@ Take advantage of new step by step guidance for HCL Digital Experience practitio
 -   [Rich text editor toolbar configuration options](../wcm/wcm_config_ephox_custom.md)
 -   [Data collection and symptom analysis](../trouble/tbl_apdt_over.md)
 
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
+**Parent topic:**[Container Update releases  9.5](../overview/container_update_releases.md)
 

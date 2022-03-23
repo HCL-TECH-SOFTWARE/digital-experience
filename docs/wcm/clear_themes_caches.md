@@ -1,4 +1,4 @@
-# How to Clear the Theme Caches
+# How to Clear the Theme Caches 
 
 The Theme Optimization Analyzer portlet which is part of the Portal administration gives users the ability to clear theme related caches.
 
@@ -49,4 +49,8 @@ The Theme Cache Invalidation API is available with HCL DX CF192 and higher relea
 
     **Note:** Cache replication ensures that the caches are cleared on other nodes in a cluster. This API only needs to be executed on one node of the cluster.
 
+
+**Parent topic:**[Utilities for theme issues ](../dev-theme/themeopt_an_util.md)
+
+**Parent topic:**[Utilities for theme issues ](../dev-theme/themeopt_an_util.md)
 

@@ -1,4 +1,4 @@
-# Configuration Wizard
+# Configuration Wizard 
 
 Use the Configuration Wizard to set up stand-alone servers and new deployments, create clusters, migrate and update to new versions, and add new capabilities to existing deployments.
 
@@ -109,4 +109,38 @@ In clustered environments, you can use the Configuration Wizard from the primary
 The wizard has a unique profile, cw\_profile, and administrator credentials.
 
 **Note:** Running the Configuration Wizard on z/OS® is not supported.
+
+-   **[Accessing the Configuration Wizard ](../config/cw_run.md)**  
+The home page of the Configuration Wizard provides access to common configuration tasks. Supported tasks include setting up a stand-alone server, setting up a cluster, transferring from Apache Derby to another supported database, migrating your server, installing add-ons, and more.
+-   **[Creating scripts and instructions ](../config/cw_scripts.md)**  
+The Configuration Wizard creates multiple files to help you complete your configuration objectives in a three-step process \(Answer Questions, Customize Values, and Configure\). When you select an option to customize for a specific configuration scenario, you provide information about your environment. Instructions, scripts, and helper files with updated property values are created to guide you in completing your configuration goal. You can run your configuration in real time or you can save your settings to use on another server.
+-   **[Configuration Wizard runtime properties ](../config/cw_prop.md)**  
+The Configuration Wizard reads a properties file at startup. You can change these values and restart the wizard to control runtime behaviors.
+-   **[Running the Configuration Wizard silently ](../config/cw_silent.md)**  
+You can run the Configuration Wizard silently if you have multiple deployments or if you want to develop a common deployment template.
+-   **[Installing or uninstalling the Configuration Wizard](../config/install_cfg_wizd.md)**  
+The Configuration Wizard is installed by default when you install HCL Digital Experience. As an alternative to using the default installation, you can install the Configuration Wizard on another server that already has IBM WebSphere Application Server installed.
+
+**Parent topic:**[Configuring ](../config/configuring_parent2.md)
+
+**Related information**  
+
+
+[Roadmaps to deploy your HCL Digital Experience system](../install/deployment_patterns.md)
+
+[Portal administration tools ](../admin-system/admtools.md)
+
+[Using staging to production techniques to complete the migration ](../migrate/mig_plan_was_s2p.md)
+
+[Performing a manual in-place migration ](../migrate/mig_plan_was_manual.md)
+
+[Migrate data using the configuration wizard ](../migrate/mig_85_wizard.md)
+
+[Migrate a stand-alone server ](../config/cw_migrate_stand_alone.md)
+
+[Cluster Step 1: Migrate the deployment manager profile ](../config/cw_migrate_cluster_1.md)
+
+[Cluster Step 2: Migrate node profiles ](../config/cw_migrate_cluster_2.md)
+
+[Cluster Step 3: Upgrade node profiles ](../config/cw_migrate_cluster_3.md)
 

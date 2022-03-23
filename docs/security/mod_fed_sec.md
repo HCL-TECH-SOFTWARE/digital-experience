@@ -1,4 +1,4 @@
-# Changing from a stand-alone repository to a federated repository
+# Changing from a stand-alone repository to a federated repository 
 
 If you originally configured a stand-alone LDAP user registry but require a robust security configuration, you can change to the federated user repository.
 
@@ -47,4 +47,6 @@ Use the wp\_security\_federated.properties helper file that is in the [wp\_profi
 
     7.  Click **OK**.
 
+
+**Parent topic:**[Updating your user registry ](../security/update_ureg.md)
 

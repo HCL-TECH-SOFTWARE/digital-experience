@@ -1,4 +1,4 @@
-# HCL Content Composer
+# HCL Content Composer 
 
 The HCL Content Composer delivers simplified processes for creating and managing Digital Experience site content.
 
@@ -22,7 +22,7 @@ The following limitations exist in HCL Content Composer:
 
     1.  On a Kubernetes platform, it is recommended that you use authoring for any kind of content editing; or
     2.  Use the IBM Extended Cache Monitor for IBM WebSphere Application Server.
-        -   Documentation resource: [IBM Extended Cache Monitor for IBM WebSphere Application Server technology preview](https://www.ibm.com/developerworks/websphere/downloads/cache_monitor.md)
+        -   Documentation resource: [IBM Extended Cache Monitor for IBM WebSphere Application Server technology preview](https://www.ibm.com/developerworks/websphere/downloads/cache_monitor.html)
 -   HCL Content Composer 9.5 CF191 and higher releases supports the following Content Elements only:
     -   Text elements
     -   Media elements \(File and Image\)
@@ -35,4 +35,20 @@ The following limitations exist in HCL Content Composer:
 
     Content authors may use the WCM Authoring portlet to preview the selected image renditions.
 
+
+-   **[Install HCL Digital Experience 9.5 components](../../9.5/containerization/install_config_cc_dam.html)**  
+
+-   **[Configure access \| HCL Content Composer](../content_composer/configure_access.md)**  
+This section provides the steps to configure access to HCL Digital Experience 9.5 Content Composer for specific users.
+-   **[Access and search content and content templates ](../content_composer/access_content_cont_comp.md)**  
+This section provides the steps on how to access HCL Content Composer and use it to search, author, and manage content and content templates.
+-   **[Common tasks \| HCL Content Composer](../content_composer/Content_Comp_common_tasks.md)**  
+Access, author, and manage content and content templates using HCL Content Composer. Users can also manage workflow approvals of content and content templates using HCL Content Composer.
+
+**Parent topic:**[Container-only features](../containerization/container_only_features.md)
+
+**Related information**  
+
+
+[Install the HCL Digital Experience 9.5 components ](../containerization/install_config_cc_dam.md)
 

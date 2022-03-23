@@ -1,4 +1,4 @@
-# What's new in CF199?
+# What's new in CF199? 
 
 Combined Cumulative Fix \(CF199\) includes new features and software fixes for the latest version of HCL Digital Experience. Release updates for both on-premises platforms and container deployments are available. 
 
@@ -30,5 +30,5 @@ See the [HCL Experience API](../open_api/openapi_overview.md) topic for more inf
 
 Beginning with HCL Digital Experience CF and Container Update CF199, additional REST services enable administrators and developers to programatically configure remote search in on-premises and container-based Digital Experience deployments. See the [Configure Remote Search using REST APIs](../containerization/REST_APIs_remote_search.md) topic for more information.
 
-**Parent topic:**[Latest Combined CF and 9.5 Container Updates](../overview/new_cf_95.md)
+**Parent topic:**[Latest Combined CF and 9.5 Container Updates ](../overview/new_cf_95.md)
 

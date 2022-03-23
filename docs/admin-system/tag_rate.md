@@ -1,4 +1,4 @@
-# Tagging and rating portal content
+# Tagging and rating portal content 
 
 Users can tag or rate portal content and view the tags and ratings. Tagging and rating allow users to better organize, categorize, and find portal content. This task includes Web Content Manager, HCL Connections, and custom content. For example, users can tag or rate books in an online bookstore.
 
@@ -48,5 +48,5 @@ Developers can do the following tasks:
 
 **Note:** Depending on your portal and your user groups, administrators or developers might consider creating user documentation for tagging and rating for their portal users.
 
-**Parent topic:**[Social business](../overview/social_business.md)
+**Parent topic:**[Social business ](../overview/social_business.md)
 

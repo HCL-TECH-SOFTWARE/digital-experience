@@ -1,4 +1,4 @@
-# DB2: Database transfer
+# DB2: Database transfer 
 
 Your portal is installed with an Apache Derby database. The database that is immediately available for use is good for demonstration and portlet and theme development environments. Otherwise, you must configure portal to use a production-level database. Use the Configuration Wizard to transfer the data and configure a new database server.
 
@@ -331,4 +331,11 @@ Next, you can use other options to configure your environment more.
 If you are setting up a stand-alone server environment, you can use the Enable Federated Security option to add an LDAP user registry.
 
 If you are setting up a cluster environment, you can use the Create a Deployment Manager option to create a deployment manager profile that is augmented with HCL Portal resources.
+
+-   **[DB2 worksheet: Transfer to a single database ](../config/cw_db_ws_db2_singledb.md)**  
+When you use the database transfer option, you can select the condition to create a single database in the Configuration Wizard. This worksheet highlights the fields and properties that you see in the Configuration Wizard when you select the single database condition.
+-   **[DB2 worksheet: Transfer to multiple databases ](../config/cw_db_ws_db2_multidb.md)**  
+When you use the database transfer option, you can use the condition to create multiple databases in the Configuration Wizard. This condition is selected by default. This worksheet highlights the fields and properties that you see in the Configuration Wizard when you use the multiple databases condition.
+
+**Parent topic:**[Database Management Systems ](../config/config_dbms.md)
 

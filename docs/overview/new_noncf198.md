@@ -1,4 +1,4 @@
-# What's new in CF198?
+# What's new in CF198? 
 
 Combined Cumulative Fix \(CF198\) includes new features and software fixes for the latest version of HCL Digital Experience. Release updates for both on-premises platforms and container deployments are available. 
 
@@ -37,5 +37,5 @@ Take advantage of new step-by-step guidance for HCL Digital Experience practitio
 -   [Video: Creating an HCL Digital Experience 9.5 CF196 cluster](../install/rm_cluster_parent.md)
 -   [Step-by-step guide: How to deploy HCL DX Container update CF197 and later to Microsoft Azure Kubernetes Service](../containerization/helm_install_commands.md)
 
-**Parent topic:**[Latest Combined CF and 9.5 Container Updates](../overview/new_cf_95.md)
+**Parent topic:**[Latest Combined CF and 9.5 Container Updates ](../overview/new_cf_95.md)
 

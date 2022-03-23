@@ -6,6 +6,13 @@ Each potential step in the configuration is included. Because the steps vary dep
 
 **Tip:** If you must go through the wizard again, download the wizard selections that you made to save time. Then, cancel the configuration. Start the process over and upload your saved selections. Correct or enter values for the parameters that caused the failure.
 
+**Parent topic:**[Troubleshooting the Configuration Wizard ](../trouble/cw_troubleshooting.md)
+
+**Related information**  
+
+
+[Accessing the Configuration Wizard ](../config/cw_run.md)
+
 # Manual Step: Install profile templates
 
 Manual step errors occur outside the context of the wizard.

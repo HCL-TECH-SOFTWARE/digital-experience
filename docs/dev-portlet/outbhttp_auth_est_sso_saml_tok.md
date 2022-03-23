@@ -1,4 +1,4 @@
-# Establishing SSO connections through SAML 2.0 tokens
+# Establishing SSO connections through SAML 2.0 tokens 
 
 It is possible to establish outbound HTTP connections to remote resources that are authenticated by using the SAML 2.0 protocol. Outbound HTTP connections take care of the communication with the Identity provider \(IDP\) to get an authenticated connection by using SAML tokens. The SAML Authentication handler uses the HTTP POST binding protocol of the SAML specification. Therefore, it is required that both the Identity Provider and the Service Provider support the HTTP POST binding, if they are used by Outbound HTTP Connections for authentication.
 
@@ -44,4 +44,9 @@ An outbound HTTP connection is activated by setting the metadata SSO\_SAML\_20\_
 
 </mapping>
 ```
+
+-   **[Configuration settings for SAML authenticated connections ](../dev-portlet/config_settings_saml_auth_connections.md)**  
+To enable a connection policy for SAML-based authentication, the following settings must be defined in the metadata section of the policy, the policy mapping, or the default mapping.
+
+**Parent topic:**[Authenticating outbound HTTP connections ](../dev-portlet/outbhttp_authntct.md)
 

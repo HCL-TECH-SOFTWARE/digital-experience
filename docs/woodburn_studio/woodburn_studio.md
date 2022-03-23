@@ -1,4 +1,4 @@
-# The Woodburn Studio demo site
+# The Woodburn Studio demo site 
 
 The Woodburn Studio is a website that demonstrates the use of some of the popular HCL Digital Experience features.
 
@@ -26,5 +26,12 @@ However, one can immediately force the indexer to run manually from the **Search
 4.  To start the crawler for the WCM Content Source, click the **Play** icon.
 5.  To start the crawler for the Portal Content Source, click the **Play** icon.
 
-Go to [Configuring a crawler to search your local portal site](../admin-system/srccrwlindxsite.md) for more information about configuring and running a search crawler on your local portal site.
+Go to [Configuring a crawler to search your local portal site](../admin-system/srccrwlindxsite.html) for more information about configuring and running a search crawler on your local portal site.
+
+-   **[Filtering the Results of a WCM Navigator Component ](../woodburn_studio/woodburn_studio_filtering_WCM.md)**  
+This document helps to filter navigator component results and use the Woodburn Studio site as an example of when this type of filtering might be needed.
+-   **[Update of Woodburn pages optional ](../woodburn_studio/update_pages_optional.md)**  
+
+
+**Parent topic:**[HCL Digital Experience 9.5 Product Documentation](../welcome/wp95_welcome.md)
 

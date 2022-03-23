@@ -1,4 +1,4 @@
-# Digital Experience Personalization
+# Digital Experience Personalization 
 
 Digital Experience Personalization provides automatic customization of website content presented to individual users and user groups.
 
@@ -57,4 +57,53 @@ When complex filtering is required, a rule-based system may work better than col
 |If number of items offered and users who purchase them are rather high.|Collaborative|Cannot write rules covering all items.|
 |If price points are low, all quite dissimilar, or the products offered have a wide range of user appeal.|Collaborative|The wide variance fits the collaborative filtering approach. Collaborative filtering also lowers the risk of making "bad" recommendations.|
 |When not much information is gathered about the user, but the user can be identified, possibly by a login or cookie.|Collaborative|In this case, user attributes on which to base rules may be lacking. Collaborative filtering can compare the user's experiences on the site to other users.|
+
+1.  [How a site is personalized ](../pzn/pzn_how_site_personalized.md)  
+Use this topic to understand how to define a personalized list of new articles for a website, such as a section of an intranet site for targeted employee bulletins or where the content of the site is tailored to the particular user.
+2.  [Personalization terms ](../pzn/pzn_concepts.md)  
+The concepts and principles for working with Portal Personalization require an understanding of terminology.
+3.  [The Personalization interface ](../pzn/pzn_portlets.md)  
+The Portal Personalization user interface consists of three portlets: the Personalization Navigator, Personalization Editor, and the Personalized List.
+4.  [Publishing personalization rules ](../pzn/pzn_depub.md)  
+HCL Digital Experience Personalization sends published rules across HTTP to a servlet which resides on each personalization server.
+5.  [The Web Content resource collection ](../pzn/pzn_wcm_rescoll.md)  
+The Web Content resource collection allows you to write rules that select lists of content from the HCL Web Content Manager.
+6.  [The Portal User resource collection ](../pzn/pzn_usr_rescoll.md)  
+The Portal User resource collection uses public APIs provided by HCL Digital Experience to access user information.
+7.  [LikeMinds Recommendations ](../pzn/pzn_intro_likeminds.md)  
+Personalization contains a dynamic recommendation system based on LikeMinds, which is software that is used with your e-commerce applications.
+8.  [Feedback and analytics ](../pzn/pzn_feedbackanalytics.md)  
+Personalization provides a complete logging framework for collecting data on how visitors are using your Web site. If Feedback is enabled, data is automatically collected about each Personalization rule that is fired. In addition, development tools enable Web sites to collect a variety of data related to visitors' actions and behavior. By default this data is logged to a standard database schema for later analysis and reporting. The framework is also extensible, allowing Web sites to customize and supplement the way data is collected and stored to more fully meet their needs.
+9.  [Developing a personalized portlet ](../pzn/pzn_demooverview.md)  
+This exercise demonstrates how to use Personalization features of HCL Digital Experience and Rational Application Developer to build your first personalized portlet. Your final result is a working portlet that uses Personalization rules and content spots to display personal news based on user attributes \(or profiles\).
+10. [Personalization programming reference ](../pzn/pzn_programming_reference.md)  
+HCL Digital Experience provides the programming model, processes, and APIs for the Personalization rules and resource engines.
+11. [Personalization REST API explorer](../pzn/dev_pzn_rest_api_explorer.md)  
+The Personalization REST API explorer allows developers using the Digital Experience Personalization REST APIs to explore and test these APIs. The following topic presents the Personalization REST APIs available and how developers can use them working with the Personalization REST API explorer.
+12. [How a site is personalized ](../pzn/pzn_how_site_personalized.md)  
+Use this topic to understand how to define a personalized list of new articles for a website, such as a section of an intranet site for targeted employee bulletins or where the content of the site is tailored to the particular user.
+13. [Personalization terms ](../pzn/pzn_concepts.md)  
+The concepts and principles for working with Portal Personalization require an understanding of terminology.
+14. [The Personalization interface ](../pzn/pzn_portlets.md)  
+The Portal Personalization user interface consists of three portlets: the Personalization Navigator, Personalization Editor, and the Personalized List.
+15. [Publishing personalization rules ](../pzn/pzn_depub.md)  
+HCL Digital Experience Personalization sends published rules across HTTP to a servlet which resides on each personalization server.
+16. [The Web Content resource collection ](../pzn/pzn_wcm_rescoll.md)  
+The Web Content resource collection allows you to write rules that select lists of content from the HCL Web Content Manager.
+17. [The Portal User resource collection ](../pzn/pzn_usr_rescoll.md)  
+The Portal User resource collection uses public APIs provided by HCL Digital Experience to access user information.
+18. [LikeMinds Recommendations ](../pzn/pzn_intro_likeminds.md)  
+Personalization contains a dynamic recommendation system based on LikeMinds, which is software that is used with your e-commerce applications.
+19. [Feedback and analytics ](../pzn/pzn_feedbackanalytics.md)  
+Personalization provides a complete logging framework for collecting data on how visitors are using your Web site. If Feedback is enabled, data is automatically collected about each Personalization rule that is fired. In addition, development tools enable Web sites to collect a variety of data related to visitors' actions and behavior. By default this data is logged to a standard database schema for later analysis and reporting. The framework is also extensible, allowing Web sites to customize and supplement the way data is collected and stored to more fully meet their needs.
+20. [Developing a personalized portlet ](../pzn/pzn_demooverview.md)  
+This exercise demonstrates how to use Personalization features of HCL Digital Experience and Rational Application Developer to build your first personalized portlet. Your final result is a working portlet that uses Personalization rules and content spots to display personal news based on user attributes \(or profiles\).
+21. [Personalization programming reference ](../pzn/pzn_programming_reference.md)  
+HCL Digital Experience provides the programming model, processes, and APIs for the Personalization rules and resource engines.
+22. [Personalization REST API explorer](../pzn/dev_pzn_rest_api_explorer.md)  
+The Personalization REST API explorer allows developers using the Digital Experience Personalization REST APIs to explore and test these APIs. The following topic presents the Personalization REST APIs available and how developers can use them working with the Personalization REST API explorer.
+
+**Parent topic:**[Setting up marketing campaigns ](../site/site_market.md)
+
+**Parent topic:**[Personalization ](../practitioner_studio/personalization.md)
 

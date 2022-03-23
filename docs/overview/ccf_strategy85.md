@@ -1,4 +1,4 @@
-# Combined Cumulative Fix strategy 8.5
+# Combined Cumulative Fix strategy  8.5
 
 The Combined Cumulative Fix is a package of HCL Digital Experience fixes. Cumulative fixes can only be applied to an existing functional version of HCL Portal Version or an HCL Portal Version with a previous cumulative fix applied. Read the instructions to learn how to apply or roll back an HCL Portal combined cumulative fix.
 

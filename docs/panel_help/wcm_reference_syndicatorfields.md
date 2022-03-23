@@ -1,4 +1,4 @@
-# Syndicator settings
+# Syndicator settings 
 
 The syndicator view is used to enter details of the server that is subscribing to the syndicator, and display subscription and syndication information.
 
@@ -54,4 +54,6 @@ Project templates are not syndicated.
 
 |
 |**Enabled**|This view indicates whether syndication is enabled or not.|
+
+**Parent topic:**[How to manage syndicators and subscribers ](../panel_help/wcm_syndication.md)
 

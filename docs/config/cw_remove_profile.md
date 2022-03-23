@@ -1,10 +1,19 @@
-# Remove an HCL Portal profile
+# Remove an HCL Portal profile 
 
 Use the Configuration Wizard to remove a portal profile.
 
 ## Configuration Wizard
 
 On the Configuration Wizard home page, click **More Options** to find **Remove an HCL Portal Profile**.
+
+**Parent topic:**[HCL Portal](../config/config_portal.md)
+
+**Related information**  
+
+
+[Troubleshooting: Remove a WebSphere Portal profile](../trouble/cw_removeprofile.md)
+
+[Using the Installation Manager to modify your environment ](../install/iim_modify.md)
 
 # Removing a profile
 

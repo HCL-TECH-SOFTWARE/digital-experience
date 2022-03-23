@@ -238,3 +238,10 @@ What can and cannot be syndicated:
 
 In the case where a security proxy is in place in front of the subscriber cluster, this host name is the host name of the security proxy. Syndication must be set up directly between the syndicator and subscriber, not through the security proxy. After creation of the syndication pair, the syndicator must be manually edited and changed to use the actual subscriber host name rather than the host name of the security proxy. Without this extra step, syndication will not be successful.
 
+**Parent topic:**[How to manage syndicators and subscribers ](../panel_help/wcm_syndication.md)
+
+**Related information**  
+
+
+[Syndication](../wcm/wcm_administering.md)
+

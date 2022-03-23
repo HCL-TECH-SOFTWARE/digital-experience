@@ -1,4 +1,4 @@
-# How to export and import WCM library content using DXClient
+# How to export and import WCM library content using DXClient 
 
 The HCL Multilingual Solution \(MLS\) export and import capability allows you to support translation of the content of a library by exporting it into a format supported by a translation service and importing the translated content back into HCL Digital Experience using the DXClient tool.
 
@@ -126,4 +126,21 @@ MLS Import
 |IMPORT\_FILE\_NAME|File name to import the translated content into DX|Imports the content from this file|
 
 ![](../images/wcm_mls_exim_import_pipeline.png "DXClient MLS import pipeline sample")
+
+**Parent topic:**[HCL Web Content Manager Multilingual Solution](../wcm/wcm_mls.md)
+
+**Related information**  
+
+
+[Deploy DX components using HCL DXClient and DXConnect ](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)
+
+[DXClient ](../containerization/dxclient.md)
+
+[DXClient Artifact Types ](../containerization/dxclientartifacts.md)
+
+[Sample Pipelines for use with HCL DXClient and Automation servers ](../containerization/sample_pipelines_for_use_with_dx_client_and_automation_servers.md)
+
+[Sample Pipelines for the DXClient Docker image file ](../containerization/sample_pipelines_docker_dxclient.md)
+
+[Sample Pipelines for the DXClient node package file ](../containerization/sample_pipelines_node_dxclient.md)
 

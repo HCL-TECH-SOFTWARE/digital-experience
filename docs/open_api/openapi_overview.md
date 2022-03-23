@@ -1,4 +1,4 @@
-# HCL Experience API
+# HCL Experience API 
 
 This documentation provides developers with documentation on how to provision, configure, and use the HCL Experience API with the HCL Digital Experience 9.5 platform.
 
@@ -6,7 +6,7 @@ This documentation provides developers with documentation on how to provision, c
 
 The HCL Experience API is a set of OpenAPI-compliant REST APIs available for customers deploying HCL Digital Experience 9.5 containers on supported Kubernetes platforms. It supports the integration and management of HCL Digital Experience content and functionality to any digital channel using any front-end development framework. The HCL Experience API includes REST APIs that serve as a wrapper around previously published HCL Digital Experience HTTP-based APIs.
 
-Reference the [HCL Digital Experience 8.5 and 9.0 topics](../dev/developing_parent.md) for additional information about previously published HCL Digital Experience APIs.
+Reference the [HCL Digital Experience 8.5 and 9.0 topics](../dev/developing_parent.html) for additional information about previously published HCL Digital Experience APIs.
 
 Benefits of using HCL Experience API include:
 
@@ -36,7 +36,27 @@ The HCL Experience API is a component of the HCL Digital Experience offerings. H
 
 Video: [Using the Digital Experience V2 Web Content Manager APIs](https://www.youtube.com/watch?v=7N4yVJUjqOo&list=PLEjl4yzB6ckH2QJw886wkwqmSotdCLxdf&index=6).
 
-Installation instructions for HCL DX 9.5 image components may be viewed in the [Container Deployment](../containerization/deployment.md) pages.
+Installation instructions for HCL DX 9.5 image components may be viewed in the [Container Deployment](../containerization/deployment.html) pages.
 
 Detailed API listings for the HCL Experience API may be viewed at the [HCL Digital Experience GitHub repository](https://github.com/hcl-dx/experience-api-documentation).
+
+-   **[Prerequisites \| HCL Experience API](../open_api/openapi_prerequisites.md)**  
+The HCL Experience API requires software prerequisites to successfully run. The build package also includes this information, along with the installation and configuration steps.
+-   **[Configuration options \| HCL Experience API](../open_api/openapi_configuration_options.md)**  
+The HCL Experience API comes with a set of default configurations. The build package also includes this information, along with the installation steps.
+-   **[Getting started with HCL Experience API](../open_api/getting_started_ringapi_docker_.md)**  
+Follow these steps to get started with the HCL Experience API.
+-   **[DAM API for friendly URLs](../open_api/dam_friendly_urls.md)**  
+This section describes the DAM API that allows you to create a friendly URL for an asset.
+-   **[Example API calls \| HCL Experience API](../open_api/openapi_example_API_calls.md)**  
+To give users more insight on how to use Experience API, the following samples are provided.
+-   **[Sample Content UI \| HCL Experience API](../open_api/sample_api_overview.md)**  
+Learn how to use the Sample Content UI application for HCL Experience API.
+
+**Parent topic:**[Developing ](../dev/developing_parent.md)
+
+**Related information**  
+
+
+[Digital Experience REST API explorers](../dev/api_explorers.md)
 

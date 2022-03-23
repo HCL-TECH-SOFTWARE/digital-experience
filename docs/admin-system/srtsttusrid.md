@@ -1,4 +1,4 @@
-# Setting the search user ID
+# Setting the search user ID 
 
 If you work with EJB on a secure server, you need to set the search user ID on the remote search server.
 
@@ -48,4 +48,6 @@ In a remote search environment, the remote search server must be configured for 
 
     5.  Restart the WebSphere Application Server on which the PSEStandalone is installed.
 
+
+**Parent topic:**[Remote search service ](../admin-system/srcusgrmtsrchsrv.md)
 

@@ -1,4 +1,4 @@
-# Credential Vault
+# Credential Vault 
 
 The Credential Vault is a service that stores credentials that allow portlets to log in to applications outside the realm on behalf of the user.
 
@@ -24,4 +24,15 @@ HCL Portal also supports the storage and retrieval of credentials from other vau
 -   Solaris
 -   Windows™
 -   z/OS®
+
+**Parent topic:**[Security and authentication considerations ](../plan/plan_secauth.md)
+
+**Parent topic:**[Portal administration ](../practitioner_studio/administration.md)
+
+**Related information**  
+
+
+[Configuring Basic Authentication for SSO for the SAP navigation integration ](../admin-system/sap_int_cfg_basauth_sso_4nav.md)
+
+[Providing user credentials for authenticated connections ](../dev-portlet/outbhttp_auth_prv_ucreds.md)
 

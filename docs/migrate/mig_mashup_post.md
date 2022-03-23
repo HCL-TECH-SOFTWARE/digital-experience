@@ -1,4 +1,4 @@
-# Mashup integration
+# Mashup integration 
 
 The mashup integration feature was removed in Portal Version 8.0 and is not included in later releases. If you used this feature in a previous release and you want to continue using it in HCL Digital Experience 8.5, you need to manually enable mashup integration after migration.
 
@@ -9,4 +9,6 @@ In previous versions of Portal and HCL Digital Experience, the MashupMaker\_Inte
     -   AIX® HP-UX Linux™ Solaris: `./ConfigEngine.sh action-create-ear-wp.mmi.deploy`
     -   IBM® i: `./ConfigEngine.sh action-create-ear-wp.mmi.deploy`
     -   Windows™: `ConfigEngine.bat action-create-ear-wp.mmi.deploy`
+
+**Parent topic:**[Add-ons, features, and third-party integration tasks ](../migrate/mig_post_ptl_int_addon.md)
 

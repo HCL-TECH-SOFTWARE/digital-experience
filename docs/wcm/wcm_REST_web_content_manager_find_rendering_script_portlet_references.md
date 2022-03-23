@@ -72,3 +72,5 @@ Currently, the API does not support finding draft references in projects.
     ```
 
 
+**Parent topic:**[REST service for Web Content Manager ](../wcm/wcm_rest.md)
+

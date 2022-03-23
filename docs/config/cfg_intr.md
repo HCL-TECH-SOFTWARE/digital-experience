@@ -1,4 +1,4 @@
-# Changing the portal URI after an installation
+# Changing the portal URI after an installation 
 
 You can change the default portal Uniform Resource Identifier \(URI\) any time after you install HCL Digital Experience. Some applications have a fixed context root that cannot be changed.
 
@@ -187,4 +187,15 @@ where webservername is the web server definition name you defined previously whe
     7.  Select the member name that you want to start and then click **Start**.
 |
 
+
+**Parent topic:**[HCL Portal](../config/config_portal.md)
+
+**Related information**  
+
+
+[Accessing the Configuration Wizard ](../config/cw_run.md)
+
+[Starting and stopping servers, deployment managers, and node agents ](../admin-system/stopstart.md)
+
+[How to access the Producer WSDL ](../admin-system/wsrpr_prod_wsdl.md)
 

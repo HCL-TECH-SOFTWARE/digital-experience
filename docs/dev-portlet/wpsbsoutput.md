@@ -145,5 +145,7 @@ The JARs required to implement JSTL tags are included with the portal server. Yo
 **Related information**  
 
 
+[JSP tags for standard portlets](../dev-portlet/jsrjsp.md)
+
 [JSP tags for standard portlets](jsrjsp.md)
 

@@ -1,4 +1,4 @@
-# What's new in CF201?
+# What's new in CF201? 
 
 Combined Cumulative Fix \(CF201\) includes new features and software fixes for the latest version of HCL Digital Experience. Release updates for both on-premises platforms and container deployments are available. 
 
@@ -30,5 +30,5 @@ See the Help Center topic [Personalization Folder APIs](../pzn/dev_pzn_folders_a
 
 The HCL Software Academy offers technical education for the HCL Software portfolio of products, organized by practitioner role. New modules are available for Digital Experience developers and administrators. See the [HCL Digital Experience section](https://academy.hcltechsw.com/#HCLDXLearningJourneys) of the HCL Software Academy for more information.
 
-**Parent topic:**[Latest Combined CF and 9.5 Container Updates](../overview/new_cf_95.md)
+**Parent topic:**[Latest Combined CF and 9.5 Container Updates ](../overview/new_cf_95.md)
 

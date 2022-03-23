@@ -1,4 +1,4 @@
-# Rich text editor toolbar configuration options
+# Rich text editor toolbar configuration options 
 
 Run these configuration tasks to change the configuration of the rich text editor toolbar.
 
@@ -134,4 +134,6 @@ For example, if the URL for accessing DX in your cloud environment is https://dx
 **Note:** Ephox EditLive! is fully unsupported.
 
 -   Documentation resource: [Newly unsupported features and themes for HCL Digital Experience 8.5 and 9.0](../reference/newly_unsupported_features.md)
+
+**Parent topic:**[Configuring a web content authoring environment ](../wcm/wcm_install_cfgauthoring.md)
 

@@ -1,4 +1,4 @@
-# Web content library default items
+# Web content library default items 
 
 When you create a web content library, you can choose to include a set of default web content items in the new library. These items can be used as a starting point for your Web Content Manager system and website.
 
@@ -46,4 +46,6 @@ The default items are best displayed by using a web content viewer portlet:
 4.  Complete the rest of the form and click OK.
 5.  Edit the page layout of the new page and add a **Web Content Viewer** portlet to the page.
 6.  The content item that is named **Sample Article** is displayed on the page.
+
+**Parent topic:**[Content libraries ](../site/site_libraries.md)
 

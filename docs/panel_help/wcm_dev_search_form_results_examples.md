@@ -1,4 +1,4 @@
-# Search result examples
+# Search result examples 
 
 These are examples of how to design your search results.
 
@@ -94,12 +94,12 @@ The following parameters can be used to display data in a search result design u
 |`attributeName=category`|The categories of the content item if any are defined. If there is more than one category, then they will be rendered with the string specified in the optional separator attribute between each value.|
 |`attributeName=contentid`|The id of the content item.|
 |`attributeName=contentpath`|The path excluding the server address, port or servlet context \(/wps/wcm\) for this search result.|
-|`attributeName=date`|The value of the date field from the SIAPI result. The format of the date can be specified by using the optional format attribute. See the [Javadoc HTML documentation](../dev/reference_docs.md) for SimpleDateFormat in the Java SDK for details.|
+|`attributeName=date`|The value of the date field from the SIAPI result. The format of the date can be specified by using the optional format attribute. See the [Javadoc HTML documentation](../dev/reference_docs.html) for SimpleDateFormat in the Java SDK for details.|
 |`attributeName=description`|The description of the content item.|
-|`attributeName=effectivedate`|The effective date of the content item. The format of the date can be specified by using the optional format attribute. See the [Javadoc HTML documentation](../dev/reference_docs.md) for SimpleDateFormat in the Java SDK for details.|
-|`attributeName=expirationdate`|The expiration date of the content item. The format of the date can be specified by using the optional format attribute. See the [Javadoc HTML documentation](../dev/reference_docs.md) for SimpleDateFormat in the Java SDK for details.|
+|`attributeName=effectivedate`|The effective date of the content item. The format of the date can be specified by using the optional format attribute. See the [Javadoc HTML documentation](../dev/reference_docs.html) for SimpleDateFormat in the Java SDK for details.|
+|`attributeName=expirationdate`|The expiration date of the content item. The format of the date can be specified by using the optional format attribute. See the [Javadoc HTML documentation](../dev/reference_docs.html) for SimpleDateFormat in the Java SDK for details.|
 |`attributeName=keywords`|The keywords of the content item if any are defined. If there is more than one keyword, then they will be rendered with the string specified in the optional separator attribute between each value.|
-|`attributeName=lastmodifieddate`|The last modified date of the content item. The format of the date can be specified by using the optional format attribute. See the [Javadoc HTML documentation](../dev/reference_docs.md) for SimpleDateFormat in the Java SDK for details.|
+|`attributeName=lastmodifieddate`|The last modified date of the content item. The format of the date can be specified by using the optional format attribute. See the [Javadoc HTML documentation](../dev/reference_docs.html) for SimpleDateFormat in the Java SDK for details.|
 |`attributeName=modifier`|The name of the last person to modify the content item.|
 |`attributeName=name`|The name of the content item.|
 |`attributeName=namelink`|This assembles a complete link based on the name of the item being returned.|
@@ -115,5 +115,7 @@ The following parameters can be used to display data in a search result design u
 |`attributeName=titlelink`|This assembles a complete link based on the title of the item being returned.|
 |`attributeName=url`|Displays the URL of a content item. |
 |`separator=" "`|Enter text or code to be used to separate multiple search results. For example: `separator=" - "`|
-|`format=" "`|The format of date parameters can be set using this parameter. See the [Javadoc HTML documentation](../dev/reference_docs.md) for SimpleDateFormat in the Java SDK for details.|
+|`format=" "`|The format of date parameters can be set using this parameter. See the [Javadoc HTML documentation](../dev/reference_docs.html) for SimpleDateFormat in the Java SDK for details.|
+
+**Parent topic:**[How to use a search element ](../panel_help/wcm_dev_search_form.md)
 

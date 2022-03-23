@@ -1,4 +1,4 @@
-# Data collection and symptom analysis
+# Data collection and symptom analysis 
 
 There is one method to collect data and analyze symptoms for problem determination scenarios. You run a task that can collect and optionally send the data for you. Starting with HCL Digital Experience version 8.5, there is now a task to collect the configuration wizard logs. This task is only necessary if the wizard fails before the steps to create the wp\_profile/ConfigEngine instance.
 
@@ -63,4 +63,13 @@ There is one method to collect data and analyze symptoms for problem determinati
 
 
 
+
+**Parent topic:**[Troubleshooting and diagnostics tools ](../trouble/pd_tools.md)
+
+**Related information**  
+
+
+[Portal version and history information ](../reference/wp_history.md)
+
+[Logging and tracing ](../trouble/pd_intr_logs.md)
 

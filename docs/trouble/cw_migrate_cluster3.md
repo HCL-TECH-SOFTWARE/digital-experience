@@ -4,6 +4,15 @@ If you encounter a failure while upgrading the node profiles for a cluster envir
 
 Each potential step in the upgrade node profiles option is included. Since the steps vary, depending on your selections, the steps are not numbered. Find the step that failed to learn more about correcting and recovering from the failure.
 
+**Parent topic:**[Troubleshooting the Configuration Wizard ](../trouble/cw_troubleshooting.md)
+
+**Related information**  
+
+
+[Cluster Step 3: Upgrade node profiles ](../config/cw_migrate_cluster_3.md)
+
+[Accessing the Configuration Wizard ](../config/cw_run.md)
+
 # Manual Step: Update the ports for the deployment manager and nodes
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.

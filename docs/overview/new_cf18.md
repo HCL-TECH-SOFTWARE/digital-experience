@@ -1,4 +1,4 @@
-# What's new in CF18? 9.5 Containers
+# What's new in CF18?  9.5 Containers
 
 This HCL Digital Experience 9.5 Container Update release includes new WCM REST APIs, updated Tech Preview releases of Content Composer and Digital Asset Management, Rich Text Editor and Java Server Faces bridge updates, and more.
 
@@ -36,5 +36,5 @@ Digital Asset Management delivers a central platform to store and include rich m
 
 See the updates to the [HCL Digital Experience 9.5 detailed system support statements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514) published to the HCL Digital Experience Support site.
 
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
+**Parent topic:**[Container Update releases  9.5](../overview/container_update_releases.md)
 

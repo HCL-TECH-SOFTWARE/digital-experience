@@ -1,4 +1,4 @@
-# What's new in CF19?
+# What's new in CF19? 
 
 Combined Cumulative Fix \(CF19\) includes new features and software fixes for the latest version of HCL Digital Experience.
 
@@ -78,5 +78,5 @@ Take advantage of new step by step guidance for HCL Digital Experience practitio
 -   [Deploy Digital Asset Management, Content Composer and Experience API to Red Hat OpenShift](../../9.5/containerization/install_config_cc_dam.html)
 -   [Configure the OpenLDAP container image to the HCL DX 9.5 Container Deployment](../../9.5/containerization/configure_openldap_image.html)
 
-**Parent topic:**[Latest Combined CF and 9.5 Container Updates](../overview/new_cf_95.md)
+**Parent topic:**[Latest Combined CF and 9.5 Container Updates ](../overview/new_cf_95.md)
 

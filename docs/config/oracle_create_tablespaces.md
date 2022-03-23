@@ -1,4 +1,4 @@
-# Oracle: Creating JCR table spaces \(Automatic Storage Management\)
+# Oracle: Creating JCR table spaces \(Automatic Storage Management\) 
 
 If you configured your database with Automatic Storage Management, you might need to perform additional manual instructions to create JCR table spaces when you use the Database Transfer option in the Configuration Wizard. If you select the option to let the wizard create your database schemas and assign permissions, you must perform the steps in this topic after you run the setup database script.
 
@@ -27,4 +27,6 @@ If you configured your database with Automatic Storage Management, you might nee
 
 2.  Ensure the database is registered with the Oracle listener. Use the tnsnames.ora file to describe this database and recycle the listener.
 
+
+**Parent topic:**[Database Management Systems ](../config/config_dbms.md)
 

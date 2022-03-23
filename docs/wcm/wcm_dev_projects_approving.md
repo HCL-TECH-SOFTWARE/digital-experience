@@ -1,4 +1,4 @@
-# Project States
+# Project States 
 
 When you use a project, the project progresses through a series of states.
 
@@ -30,4 +30,6 @@ When you use a project, the project progresses through a series of states.
 
     When all items are published, the project achieves a state of "published".
 
+
+**Parent topic:**[Projects ](../wcm/wcm_proj_overview.md)
 
