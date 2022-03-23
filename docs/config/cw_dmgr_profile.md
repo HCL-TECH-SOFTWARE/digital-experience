@@ -1,10 +1,19 @@
-# Create a deployment manager
+# Create a deployment manager 
 
 When you set up a cluster, you must create a deployment manager profile. Use the Configuration Wizard to set up the profile.
 
 ## Configuration Wizard
 
 The **Create a Deployment Manager** is a sub step in the **Set Up a Cluster** configuration.
+
+**Parent topic:**[Setting up a cluster ](../config/config_cluster.md)
+
+**Related information**  
+
+
+[Accessing the Configuration Wizard ](../config/cw_run.md)
+
+[Updating DB2 self-tuning memory manager \(STMM\) settings ](../migrate/mig_t_post_db2_stmm.md)
 
 # Creating a deployment manager
 

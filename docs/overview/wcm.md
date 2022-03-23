@@ -1,4 +1,4 @@
-# HCL Web Content Manager
+# HCL Web Content Manager 
 
 HCL Web Content Manager accelerates the creation, maintenance, and delivery of content across intranet, extranet, Internet, and portal sites.
 
@@ -36,5 +36,5 @@ In addition to the authoring home pages, authors can edit content in context on 
 
 The HCL Web Content Manager Multilingual Solution download, available on the solution catalog, provides a reference implementation for a multilingual website. It includes a set of extension plugins that you can use to configure and deliver a multilingual site.
 
-**Parent topic:**[Web content](../overview/content.md)
+**Parent topic:**[Web content ](../overview/content.md)
 

@@ -1,4 +1,4 @@
-# What's new in Container Update CF195? 9.5 Containers
+# What's new in Container Update CF195?  9.5 Containers
 
 This HCL Digital Experience 9.5 Container Update release includes new releases of Digital Experience 9.5 core Portal and Web Content Manager, Content Composer, Digital Asset Management, and Experience API images. New and updated feature references are detailed here.
 
@@ -57,5 +57,5 @@ Take advantage of new step-by-step guidance for HCL Digital Experience practitio
 -   [Create a WebDAV Theme copy using HCL Digital Experience 9.5](../dev-theme/themeopt_themedev_manual_webdav.md)
 -   [Create and apply A/B personalized scenarios with HCL Digital Experience](../pzn/pzn_overview.md)
 
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
+**Parent topic:**[Container Update releases  9.5](../overview/container_update_releases.md)
 

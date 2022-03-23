@@ -1,4 +1,4 @@
-# Theme Editor Portlet
+# Theme Editor Portlet 
 
 The Theme Editor portlet is a new addition to HCL Digital Experience Container Update CF193 and on-permises CF196 and later release capabilities. The portlet allows an administrator to edit static theme resources in WebDAV without the use of a WebDAV client or tool.
 
@@ -44,4 +44,6 @@ If the user saves the file, the added markup will display in the theme when the 
 -   EAR-based themes are displayed in the Theme Manager portlet. However, the static content for EAR-based themes is not stored in WebDAV. If the user clicks the **Edit** \(pencil\) icon on an EAR-based theme, the portlet will render but no editable content will display.
 -   If the user chooses to edit an uncompressed file \(CSS or JavaScript\), the HCL DX server must be in development mode \(i.e. Remote debugging must be turned on in the Theme Analyzer portlet\) in order for the changes to display. 
 -   If the Theme Editor portlet already resides on the system and CF196 is applied and then rolled back, the portlet will need to be reinstalled.
+
+**Parent topic:**[Customizing the theme ](../dev-theme/themeopt_cust.md)
 

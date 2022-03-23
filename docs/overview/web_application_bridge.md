@@ -1,4 +1,4 @@
-# Web Application Bridge integration
+# Web Application Bridge integration 
 
 Use the Web Application Bridge to integrate with web applications, such as Sharepoint.
 
@@ -6,5 +6,5 @@ The web application bridge uses reverse proxy technology to integrate web-based 
 
 Integrating the web application bridge is a multi-step process. First, create the content provider profile. Second, create at least one policy for each content provider profile. Then, create the web dock applications for the content providers. Finally, add the web dock application portlets to a new or existing page.
 
-**Parent topic:**[Integration](../overview/integration.md)
+**Parent topic:**[Integration ](../overview/integration.md)
 

@@ -1,4 +1,4 @@
-# DB2 worksheet: Transfer to a single database
+# DB2 worksheet: Transfer to a single database 
 
 When you use the database transfer option, you can select the condition to create a single database in the Configuration Wizard. This worksheet highlights the fields and properties that you see in the Configuration Wizard when you select the single database condition.
 
@@ -32,4 +32,6 @@ Database collation is an optional condition available to you.
 |**Temporary directory to be used for collation**| |To see this field, you must select the **Yes** option for advanced database collation support. The default selection is **No**.
 
 | |
+
+**Parent topic:**[DB2: Database transfer ](../config/cw_db_transfer-db2.md)
 

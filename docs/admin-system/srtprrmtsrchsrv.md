@@ -1,4 +1,4 @@
-# Preparing for remote search service
+# Preparing for remote search service 
 
 Get an overview of how you prepare your portal system for remote search service. You can provide remote search service by either using EJB or SOAP.
 
@@ -247,4 +247,6 @@ Get an overview of how you prepare your portal system for remote search service.
 
     **Cluster note:** In a clustered environment, complete this step on the primary node only.
 
+
+**Parent topic:**[Remote search service ](../admin-system/srcusgrmtsrchsrv.md)
 

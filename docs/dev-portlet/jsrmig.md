@@ -781,3 +781,13 @@ The existing versions of the Struts Portlet Framework supported the HCL Portal c
     The `com.ibm.wps.portlets.struts.WpsRequestProcessor` class for the legacy container may have been extended to customize the processing. The Request Processor class for the standard container is `com.ibm.portal.struts.portlet.WpRequestProcessor`. If the legacy interfaces were used for the customizations, these changes should be converted to the Standard interfaces.
 
 
+-   **[Converting portlet instances and settings from the HCL DX API to the standard API](../dev-portlet/migrt_ptlt_api.md)**  
+The portal provides a portlet conversion task that allows you to convert the settings and instances of HCL DX API portlets to the corresponding standard API portlets. This is useful when you intend to replace HCL DX API portlets by standard API portlets.
+
+**Parent topic:**[Portlet API ](../dev-portlet/wpspapi.md)
+
+**Related information**  
+
+
+[Standard portlet API ](../dev-portlet/jsrapi.md)
+

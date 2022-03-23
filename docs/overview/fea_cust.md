@@ -1,4 +1,4 @@
-# User experience
+# User experience 
 
 Customizing the user's experience is one of the main goals of HCL Digital Experience. User and administrative portlets are provided for customizing content and the look and layout of pages. In addition, tools are provided that allow subject matter experts to personalize content to the needs and interests of each site visitor.
 
@@ -65,5 +65,5 @@ Implicit profiling services can collect real-time information about site visitor
 
 The system of page templates, themes, skins, and portlet rendering is fully enabled for internationalization and accessibility by people with disabilities. For globally accessible portals, the product searches for and selects the proper JSP pages, based on the target browser and its settings for language and country.
 
-**Parent topic:**[Versatile framework](../overview/fea_vf.md)
+**Parent topic:**[Versatile framework ](../overview/fea_vf.md)
 

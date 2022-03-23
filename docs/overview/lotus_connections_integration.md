@@ -1,4 +1,4 @@
-# HCL Connections
+# HCL Connections 
 
 Integrate HCL Connections into your site by using community pages, search integration, and more.
 
@@ -28,5 +28,5 @@ Content authors can easily create links to files stored on HCL Connections. From
 
 Integration with HCL Connections Files is based on the generic Content Management Interoperability Services \(CMIS\).
 
-**Parent topic:**[Social business](../overview/social_business.md)
+**Parent topic:**[Social business ](../overview/social_business.md)
 

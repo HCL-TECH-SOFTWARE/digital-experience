@@ -1,4 +1,4 @@
-# Creating a simple portlet
+# Creating a simple portlet 
 
 To create a simple portlet, you must write the portlet code, compile Java source, create the JAR file, write the portlet descriptors, set up the WAR file directory structure, and package and deploy the portlets.
 
@@ -312,4 +312,6 @@ HCL DX includes an administrative portlet for installing, uninstalling, and upda
     
     ```
 
+
+**Parent topic:**[Developing portlets ](../dev-portlet/wpsdev.md)
 

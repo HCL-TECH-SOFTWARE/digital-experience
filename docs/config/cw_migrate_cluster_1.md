@@ -1,4 +1,4 @@
-# Cluster Step 1: Migrate the deployment manager profile
+# Cluster Step 1: Migrate the deployment manager profile 
 
 Use the Configuration Wizard to migrate the deployment manager profile for a cluster environment. Use the following information to get familiar with the information that you must provide in the wizard and the configuration procedure that it generates.
 
@@ -7,6 +7,19 @@ Use the Configuration Wizard to migrate the deployment manager profile for a clu
 Select **Migrate to a New Version**, and choose the **Migrate a Cluster Step 1: Migrate the Deployment Manager Profile** option.
 
 **Note:** This option is not available for IBM® z/OS®.
+
+**Parent topic:**[Migrate data using the configuration wizard ](../migrate/mig_85_wizard.md)
+
+**Related information**  
+
+
+[Troubleshooting: Migrate the deployment manager profile for a cluster environment](../trouble/cw_migrate_cluster1.md)
+
+[Configuration Wizard ](../config/cw_overview.md)
+
+[Roadmap: Migrating a clustered environment ](../migrate/rm_mig_cluster.md)
+
+[Accessing the Configuration Wizard ](../config/cw_run.md)
 
 # Worksheet
 

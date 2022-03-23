@@ -1,4 +1,4 @@
-# Logging and tracing for containers and new services
+# Logging and tracing for containers and new services 
 
 The following table outlines the tracing options that are used to capture logging and tracing for HCL Digital Experience 9.5 container-based services with container update CF181 and later releases.
 
@@ -31,7 +31,7 @@ Client-side browser tracing for these container environments can also be enabled
 
 -   **Transaction log \(tranlog\)**.
 
-    With multiple instances of Digital Experience 9.5 containers writing to a shared **[transaction log](https://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.5/com.ibm.websphere.base.doc/ae/tjta_settlog.md)** \(tranlog\) directory, data corruption could happen resulting to DX server start-up issues. To avoid data corruption, beginning with CF192, the default deployment creates individual 1 GB PersistentVolumes \(pvs\) and associated PersistentVolumeClaims \(pvcs\) for each DX 9.5 instance. This behavior is configured with the following values in the properties file used for deployment.
+    With multiple instances of Digital Experience 9.5 containers writing to a shared **[transaction log](https://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.5/com.ibm.websphere.base.doc/ae/tjta_settlog.html)** \(tranlog\) directory, data corruption could happen resulting to DX server start-up issues. To avoid data corruption, beginning with CF192, the default deployment creates individual 1 GB PersistentVolumes \(pvs\) and associated PersistentVolumeClaims \(pvcs\) for each DX 9.5 instance. This behavior is configured with the following values in the properties file used for deployment.
 
     -   `dx.tranlogging: true` - Set this value to `false` so that individual pvs for tranlogs are not created at the deployment time.
     -   `dx.tranlogging.reclaim: Delete` - Kubernetes setting for handling volumes when the deployment is removed.
@@ -135,4 +135,11 @@ Procedure
 Once a trace string is added or removed in the Tracing portlet, the Digital Experience platform page containing the **Tracing portlet** application must be refreshed in the browser.
 
 **Important:** WebSphere Application Server consolidates the trace strings list by removing strings that are logically contained within others. For example, if you have a string `x.y.z.*=all` in the list, it disappears when you add `x.y.*=all`
+
+**Parent topic:**[Logging and tracing ](../trouble/pd_intr_logs.md)
+
+**Related information**  
+
+
+[Troubleshooting your Helm deployment ](../containerization/helm_troubleshooting.md)
 

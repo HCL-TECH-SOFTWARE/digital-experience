@@ -1,4 +1,4 @@
-# Web Content Manager Multilingual Solution API
+# Web Content Manager Multilingual Solution API 
 
 This set of APIs allow you to retrieve information about the configured Multilingual Solution \(MLS\) libraries and also to retrieve the translated content items for a given default language content ID \(for example, from English content find translated French and Spanish strings\).
 
@@ -261,4 +261,11 @@ The following MLS APIs are available \(as of HCL Digital Experience 9.5 Containe
     </entry>
     ```
 
+
+**Parent topic:**[The HCL Web Content Manager API ](../wcm/wcm_dev_api.md)
+
+**Related information**  
+
+
+[HCL Web Content Manager Multilingual Solution](../wcm/wcm_mls.md)
 

@@ -1,4 +1,4 @@
-# What's new in CF197?
+# What's new in CF197? 
 
 Combined Cumulative Fix \(CF197\) includes new features and software fixes for the latest version of HCL Digital Experience. Release updates for both on – premises platforms and container deployments are available. 
 
@@ -19,5 +19,5 @@ Take advantage of new step-by-step guidance for HCL Digital Experience practitio
 -   [Updating the HCL DX 9.5 Portal & IBM WebSphere Application Server Administrator Secrets in OpenShift and Kubernetes](../containerization/update_dx_core_kubernetes_container_deployment.md)
 -   [Use Docker Compose to install HCL DX 9.5 with Cloud Components for Developer Use](../containerization/docker_compose.md)
 
-**Parent topic:**[Latest Combined CF and 9.5 Container Updates](../overview/new_cf_95.md)
+**Parent topic:**[Latest Combined CF and 9.5 Container Updates ](../overview/new_cf_95.md)
 

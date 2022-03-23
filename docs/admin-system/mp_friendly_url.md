@@ -1,4 +1,4 @@
-# Using friendly URLs
+# Using friendly URLs 
 
 You can associate friendly URLs with portal pages and labels. You and your users can use these friendly URLs to access specific portal pages or labels by using a human readable path, which is easy to remember.
 
@@ -34,4 +34,17 @@ You can configure a friendly URL by using the portal toolbar or the Manage Pages
 
 
 To make up the full HCL Portal URL, the portal appends a suffix to that friendly URL. This suffix represents the current state of the page and its components. Some scenarios require short and fully human readable URLs that omit the state information. For information about how to configure short stateless URLs see *Using friendly URLs without state information*.
+
+**Parent topic:**[Manage pages portlets ](../admin-system/mp_manage_pages.md)
+
+**Related information**  
+
+
+[URL mapping](../admin-system/adurlmap.md)
+
+[Navigation options for static pages ](../dev/spa_nav_mcrfrmt.md)
+
+[Defining friendly URLs without state information for pages in your site ](../admin-system/mp_friendly_short_url.md)
+
+[Human readable URL mappings for virtual portals](../admin-system/advppln_shpux_urlmap.md)
 

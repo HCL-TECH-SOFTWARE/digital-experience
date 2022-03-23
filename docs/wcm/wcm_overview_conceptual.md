@@ -1,4 +1,4 @@
-# Conceptual and functional divisions of a website
+# Conceptual and functional divisions of a website 
 
 When you build a website by using Web Content Manager, you break up your website into the following conceptual and functional divisions.
 
@@ -71,5 +71,5 @@ When you are developing a website by using Web Content Manager and HCL Portal, y
 
 When a web page is rendered, Web Content Manager takes all these individual item types and combines them to build a complete web page.
 
-**Parent topic:**[Web content](../overview/content.md)
+**Parent topic:**[Web content ](../overview/content.md)
 

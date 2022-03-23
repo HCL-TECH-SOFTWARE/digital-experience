@@ -1,10 +1,10 @@
-# Configuring authentication filters
+# Configuring authentication filters 
 
 The portal authentication filters are a set of plug-in points. You can use them to intercept or extend the portal login, logout, session timeout, and request processing by custom code, for example to redirect users to a specific URL.
 
 ## The authentication filter chain concept
 
-The authentication filters in the portal use the same pattern as defined by the J2EE servlet filter facility. For more information, see [The Essentials of Filters](http://www.oracle.com/technetwork/java/filters-137243.md). The following example shows how this pattern is applied to the authentication filters.
+The authentication filters in the portal use the same pattern as defined by the J2EE servlet filter facility. For more information, see [The Essentials of Filters](http://www.oracle.com/technetwork/java/filters-137243.html). The following example shows how this pattern is applied to the authentication filters.
 
 ```
 Trigger of filter chain, |                        |
@@ -131,4 +131,20 @@ The following gives an example of a custom filter plugged into the filter chain 
 4.  Restart the portal.
 
 The new filter for the explicit login is now available. Users who are defined in the properties will be redirected to the specified URL after they log in through the login portlet or login URL.
+
+-   **[Enhanced Cross Origin Resource Sharing Configuration ](../admin-system/enhanced_cross_origin_resource_sharing_configuration.md)**  
+Enhanced Cross Origin Resource Sharing Configuration adds new options for HCL Digital  Experience administrators to set configuration for CORS using a WP configuration service in  the IBM WebSphere Application Server resource environment provider. This new configuration  option is supported with HCL DX 9.5 Container Update CF195 and higher, and HCL DX CF196 and  higher for customers deploying to on premises platforms.
+
+**Parent topic:**[Configuring portal behavior ](../admin-system/adptlcfg.md)
+
+**Related information**  
+
+
+[Authentication Service ](../admin-system/srvcfgref_secy_auth.md)
+
+[Configuring Integrator for SAP ](../admin-system/sap_int_cfg.md)
+
+[Configuring Basic Authentication for SSO for the SAP navigation integration ](../admin-system/sap_int_cfg_basauth_sso_4nav.md)
+
+[Page properties for configuring the SAP navigation integration ](../admin-system/sap_int_cfg_parms_4nav.md)
 

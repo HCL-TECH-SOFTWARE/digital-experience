@@ -1,4 +1,4 @@
-# Cache parameters
+# Cache parameters 
 
 Use the cache parameters in HCL Web Content Manager tags and URLs to specify whether the retrieved data is cached or not. If it is cached, how it is cached. The cache parameter is not mandatory.
 
@@ -105,4 +105,6 @@ How to enable these options:
 
 
 Note that it is possible to have **both** options enabled at the same time. However, the second option flushes the whole cache, which renders the first option useless.
+
+**Parent topic:**[Custom caching ](../wcm/wcm_dev_caching.md)
 

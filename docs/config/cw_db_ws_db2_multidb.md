@@ -1,4 +1,4 @@
-# DB2 worksheet: Transfer to multiple databases
+# DB2 worksheet: Transfer to multiple databases 
 
 When you use the database transfer option, you can use the condition to create multiple databases in the Configuration Wizard. This condition is selected by default. This worksheet highlights the fields and properties that you see in the Configuration Wizard when you use the multiple databases condition.
 
@@ -125,4 +125,6 @@ Database collation is an optional condition available to you.
 |**Temporary directory to be used for collation**| |To see this field, you must select the **Yes** option for advanced database collation support. The default selection is **No**.
 
 | |
+
+**Parent topic:**[DB2: Database transfer ](../config/cw_db_transfer-db2.md)
 

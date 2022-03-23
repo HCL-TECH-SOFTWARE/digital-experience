@@ -1,4 +1,4 @@
-# What's new in Container Update CF173? 9.5 Containers
+# What's new in Container Update CF173?  9.5 Containers
 
 This HCL Digital Experience 9.5 Container Update release include new WCM REST APIs, and Tech Previews for Content Composer and Digital Asset Management, and more.
 
@@ -34,5 +34,5 @@ Digital Asset Management delivers a central platform to store and include rich m
 
 The [HCL Digital Experience 9.5 detailed system support statements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514) are updated and published on the HCL Digital Experience Support site. You can go to the [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release) to access and download product software. For more information, see the [Step-by-step guide to downloading DX products and accessing Customer Support](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878).
 
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
+**Parent topic:**[Container Update releases  9.5](../overview/container_update_releases.md)
 

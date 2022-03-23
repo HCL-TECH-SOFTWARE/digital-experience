@@ -1,4 +1,4 @@
-# What's new in CF196?
+# What's new in CF196? 
 
 Combined Cumulative Fix \(CF196\) includes new features and software fixes for the latest version of HCL Digital Experience. Beginning with CF19 and Container Update release CF196, release updates for both on–premises platforms and container deployments will be available.
 
@@ -128,5 +128,5 @@ Take advantage of new step-by-step guidance for HCL Digital Experience practitio
 -   [Create a WAR-based theme copy on HCL Digital Experience 9.5](https://help.hcltechsw.com/digital-experience/8.5/dev-theme/themeopt_themedev_manual_warbased.html)
 
 
-**Parent topic:**[Latest Combined CF and 9.5 Container Updates](../overview/new_cf_95.md)
+**Parent topic:**[Latest Combined CF and 9.5 Container Updates ](../overview/new_cf_95.md)
 

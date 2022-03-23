@@ -1,4 +1,4 @@
-# Combined Cumulative Fix \(CF\) Installation
+# Combined Cumulative Fix \(CF\) Installation 
 
 The Combined Cumulative Fix is a package of HCL Digital Experience fixes. Read the instructions to learn how to apply or roll back a combined cumulative fix.
 
@@ -35,4 +35,26 @@ Go to Installing the HCL Digital Experience software documentation to install ac
 9.  Ephox EditLive! has been removed effective in Version 8.5 CF14 and is no longer supported. This change follows the steps taken above in Version 8.5 CF11 to deprecate Ephox EditLive! and replace it with Textbox.io as the new advanced rich text editor for HCL Web Content Manager. Customers that have manually installed and configured EditLive! as a Third Party editor option can continue to use EditLive! but will no longer be able to receive support and updates via HCL. Also effective with Version 8.5 CF14, the Textbox.io will support the following [web browsers/levels](https://docs.ephox.com/display/tbio/System+Requirements?_ga=2.91924954.1507673092.1497929717-1652925937.1497929717#SystemRequirements-browsers).
 10. CF16 for Portal Versions 8.5 and 9.0 contain security fix PH01459 for CVE-2018-1736. It introduces a configurable white list for external hosts, which are allowed as redirects via the CategoryProfileUpdater Module. Server relative redirects are continuously working. Redirects to external hosts not specified in the white list are blocked. The white list is enabled per default, and needs to be filled in with appropriate values, if this functionality is used in your installation. For inquiries, go to [HCL Software Support](https://support.hcltechsw.com/csm) page.
 11. CF16 for Portal Versions 8.5 and 9.0 changes the behavior of Cumulative Fix installation related to out of the box resources to address CVE-2018-1420. Prior to CF16, access control settings of out of the box resources were reset to their out of the box access control settings, overriding potential customizations. This has been changed such that the Cumulative Fix installation leaves the access control settings at their current values. A side effect of this change is, that out of the box resources introduced in a Cumulative Fix after the initial version of Portal Version 8.5 or Version 9.0 will not receive any access control settings, if CF16 or later is installed on top of a CF level prior to introduction of an out of the box resource. In such a case the resource will not have any access control configured, and will have to be set manually to your security requirements. See the HCL Digital Experience 8.5 documentation on [how to manage the access control](../admin-system/sec_ac_adm.html) and get an overview of [initial access control settings](../admin-system/init_acc_cntl_set.html).
+
+-   **[Cumulative fix instructions: Stand-alone  9.5](../overview/ccf_95_standalone.md)**  
+Read the installation instructions to learn how to apply a cumulative fix to a stand-alone portal installation or to roll back the cumulative fix.
+-   **[Cumulative fix instructions: Cluster  9.5](../overview/ccf_95_cluster.md)**  
+Read the installation instructions to learn how to apply a cumulative fix to a clustered portal installation or to roll back the cumulative fix.
+-   **[Cumulative fix instructions: Farm  9.5](../overview/ccf_95_farm.md)**  
+Read the installation instructions to learn how to apply a cumulative fix to a portal farm installation or to roll back the cumulative fix.
+-   **[Cumulative fix instructions: Remote search ](../overview/ccf_95_remote_search.md)**  
+Read the installation instructions to learn how to apply a cumulative fix to a portal remote search installation or to roll back the cumulative fix.
+-   **[Cumulative Fix Health Checker ](../overview/ccf_95_health_checker.md)**  
+These instructions are for the HCL Digital Experience Combined Cumulative Fix Health Checker.
+-   **[Combined CF Known Issues ](../overview/ccf_95_known_issues.md)**  
+Learn what are the known issues in the HCL Digital Experience Combined Cumulative Fixes.
+
+**Parent topic:**[Digital Experience on non-containerized platforms](../containerization/dx_non_container.md)
+
+**Related information**  
+
+
+[HCL Digital Experience 9.5 Product Documentation](../welcome/wp95_welcome.md)
+
+[Overview  9.5](../overview/intro_container.md)
 

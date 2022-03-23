@@ -1,4 +1,4 @@
-# Starting and stopping servers, deployment managers, and node agents
+# Starting and stopping servers, deployment managers, and node agents 
 
 Various installation and configuration tasks require you to start and stop IBM WebSphere Application Server and the HCL Digital Experience application servers, deployment managers, and node agents.
 
@@ -75,4 +75,55 @@ Various installation and configuration tasks require you to start and stop IBM W
     3.  Select the cluster and click **Stop** or **Immediate Stop**.
 |
 
+
+**Parent topic:**[Administering ](../admin-system/administering_parent.md)
+
+**Related information**  
+
+
+[Changing ports ](../config/port_chg.md)
+
+[Changing the portal URI after an installation ](../config/cfg_intr.md)
+
+[DB2: Enabling support for high availability data replication ](../config/db2_hadr.md)
+
+[Removing attributes ](../install/remove_attr_def.md)
+
+[Adding a database user registry in a clustered environment ](../config/add_db_usr_reg_clus.md)
+
+[Adding a database user registry in a stand-alone environment ](../config/add_db_usr_reg_stdal.md)
+
+[Updating the database user registry ](../security/update_db_ureg.md)
+
+[Integrating HCL Connections profile ](../collab/i_coll_t_enable_lcprofile.md)
+
+[Configure authentication ](../collab/i_coll_t_enable_lctags_auth.md)
+
+[Configuring OpenID authentication ](../security/use_social.md)
+
+[Modifying the list of OpenID providers ](../security/mod_oid_providers.md)
+
+[Configuring transient users ](../security/openid_trans_users.md)
+
+[Disabling transient users and OpenID authentication ](../security/disable_trans_openid.md)
+
+[Cryptographic hardware for SSL acceleration ](../security/sec_pw_crypt.md)
+
+[Creating and configuring federated repositories ](../security/add_cur_fed.md)
+
+[Updating federated repositories ](../security/upd_cur_fed.md)
+
+[Changing the login and logout pages ](../security/sec_chg_login.md)
+
+[Managing access control with external security managers ](../security/man_acc_ext.md)
+
+[Accessing the Configuration Wizard ](../config/cw_run.md)
+
+[Reusing group information ](../admin-system/reuse_group_info.md)
+
+[Enabling and disabling impersonation ](../admin-system/impers_enable_disable.md)
+
+[Managing Single sign-on settings in your cluster ](../admin-system/manage_sso.md)
+
+[System event logging ](../trouble/adsyslog.md)
 

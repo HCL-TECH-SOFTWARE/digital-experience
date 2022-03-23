@@ -1,4 +1,4 @@
-# What's new in Container Update CF197? 9.5 Containers
+# What's new in Container Update CF197?  9.5 Containers
 
 This HCL Digital Experience 9.5 Container Update and CF197 release includes updated releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management and Experience API images, and an updated beta preview release of Design Studio. New and updated feature references are detailed here.
 
@@ -39,5 +39,5 @@ Take advantage of new step-by-step guidance for HCL Digital Experience practitio
 -   [Updating the HCL DX 9.5 Portal & IBM WebSphere Application Server Administrator Secrets in OpenShift and Kubernetes](../containerization/update_dx_core_kubernetes_container_deployment.md)
 -   [Use Docker Compose to install HCL DX 9.5 with Cloud Components for Developer Use](../containerization/docker_compose.md)
 
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
+**Parent topic:**[Container Update releases  9.5](../overview/container_update_releases.md)
 

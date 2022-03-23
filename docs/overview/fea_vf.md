@@ -1,4 +1,4 @@
-# Versatile framework
+# Versatile framework 
 
 HCL Digital Experience provides users a consistent view of portal applications and allows users to define specific sets of applications that are presented in a single context. Depending on the requesting device, the rendering of this application set must vary to fulfill the requirements of the device.
 
@@ -17,7 +17,7 @@ HCL Portal also provides the ability to create a custom navigation model, which 
 
 Another aspect of the versatile framework is the ability to personalize a user's portal experience, using "content spots" that render subscribed content based on the user and user's role in the portal.
 
--   **[User experience](../overview/fea_cust.md)**  
+-   **[User experience ](../overview/fea_cust.md)**  
 Customizing the user's experience is one of the main goals of HCL Digital Experience. User and administrative portlets are provided for customizing content and the look and layout of pages. In addition, tools are provided that allow subject matter experts to personalize content to the needs and interests of each site visitor.
 
 **Parent topic:**[Product capabilities](../overview/intr_ovr.md)

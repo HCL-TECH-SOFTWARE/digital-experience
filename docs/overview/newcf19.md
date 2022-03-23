@@ -1,4 +1,4 @@
-# What's new in Container Update CF19? 9.5 Containers
+# What's new in Container Update CF19?  9.5 Containers
 
 This HCL Digital Experience 9.5 Container Update release includes updated production releases of Digital Experience 9.5 core Portal and Web Content Manager, Content Composer, Digital Asset Management, and Experience API images. New additions include additional guidance to deploy to Google Kubernetes Engine \(GKE\), Hybrid deployment support, Progressive Web Application delivery, Google Analytics integration, Mobile Preview, DXClient and DXConnect tooling supporting CICD release processes, Kaltura video support, new Web Content Manager REST APIs, new HCL Digital Experience ‘How To’ videos, and more.
 
@@ -66,5 +66,5 @@ Take advantage of new step by step guidance for HCL Digital Experience practitio
 -   [Configure the OpenLDAP container image to the HCL DX 9.5 Container Deployment](../../9.5/containerization/configure_openldap_image.html)
 -   [How to manage syndicators and subscribers](../../9.5/panel_help/wcm_syndication.html)
 
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
+**Parent topic:**[Container Update releases  9.5](../overview/container_update_releases.md)
 

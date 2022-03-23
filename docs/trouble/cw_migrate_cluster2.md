@@ -4,6 +4,15 @@ If you encounter a failure during the migration of the node profiles for a clust
 
 Each potential step in the migrate node profiles option is included. Since the steps vary, depending on your selections, the steps are not numbered. Find the step that failed to learn more about correcting and recovering from the failure.
 
+**Parent topic:**[Troubleshooting the Configuration Wizard ](../trouble/cw_troubleshooting.md)
+
+**Related information**  
+
+
+[Cluster Step 2: Migrate node profiles ](../config/cw_migrate_cluster_2.md)
+
+[Accessing the Configuration Wizard ](../config/cw_run.md)
+
 # Manual Step: Stop the source deployment manager and node agents
 
 Since this is a manual step, any error that occurs is outside the context of the wizard.
@@ -52,7 +61,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 |-------|-----|
 |Run the step again|If this step fails, you can run this step again after you clean up the issue.|
 |Skip the step|If this step was successful, you can skip it if you run the configuration process again.|
-|Clean up step|If this step fails, delete the path to the temporary backup profile, and run the step again. For more information about troubleshooting the WASPreUpgrade command, see the WebSphere® Application Server documentation on [Troubleshooting migration](http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.migration.base.doc/ae/tmig_troubleshoot.md).
+|Clean up step|If this step fails, delete the path to the temporary backup profile, and run the step again. For more information about troubleshooting the WASPreUpgrade command, see the WebSphere® Application Server documentation on [Troubleshooting migration](http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.migration.base.doc/ae/tmig_troubleshoot.html).
 
 |
 
@@ -64,7 +73,7 @@ Since this is a manual step, any error that occurs is outside the context of the
 |-------|-----|
 |Run the step again|If this step fails, you can run this step again after you clean up the issue.|
 |Skip the step|If this step was successful, you can skip it if you run the configuration process again.|
-|Clean up step|If this step fails, delete the path to the temporary backup profile, and run the step again. For more information about troubleshooting the WASPreUpgrade command, see the WebSphere Application Server documentation on [Troubleshooting migration](http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.migration.base.doc/ae/tmig_troubleshoot.md).
+|Clean up step|If this step fails, delete the path to the temporary backup profile, and run the step again. For more information about troubleshooting the WASPreUpgrade command, see the WebSphere Application Server documentation on [Troubleshooting migration](http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.migration.base.doc/ae/tmig_troubleshoot.html).
 
 |
 

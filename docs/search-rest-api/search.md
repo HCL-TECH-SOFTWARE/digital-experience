@@ -1,4 +1,4 @@
-# Search REST API specification
+# Search REST API specification 
 
 The following topics describe-s- the API calls to search HCL Digital Experience. You can search HCL Digital Experience web pages and content to find content that contains a specific text string in its title or content, or is tagged with a specific tag.
 
@@ -204,4 +204,24 @@ The following content is returned by the server:
 	      ...
 	</atom:feed>
 ```
+
+-   **[Search scopes REST API specification ](../search-rest-api/scope-spec.md)**  
+The Scopes API returns the set of supported values that can be passed to the scope parameter of the HCL Digital Experience Search API.
+-   **[Search indexes REST API specification ](../search-rest-api/index-spec.md)**  
+The Indexes API returns the set of supported values that can be passed to the index parameter of the HCL Digital Experience Search API.
+-   **[Search constraints REST API specification ](../search-rest-api/constraints-spec.md)**  
+Constraints are part of the Search API. They provide a structured method for advanced search over document metadata. They limit search results to the ones that match specific metadata values. It is an alternative for client-side applications, which include filters and advanced search options.
+-   **[Search facets REST API specification ](../search-rest-api/facets-spec.md)**  
+The following document describes the facet parameter of the Search API and the corresponding response elements. The facet parameter allows obtaining the facets, which are relevant for the search query. The facets that are supported in Portal Search include Tag, Person, Date, Source, and for status updates only Trend.
+-   **[Digital Experience Search REST API Explorer ](../search-rest-api/serach_API_Explore.md)**  
+The Digital Experience Search REST API provides developers programmatic access to search indexed Digital Experience content and web pages. The Digital Experience Search REST API Explorer allows developers to explore and test the Digital Experience Search REST APIs.
+
+**Parent topic:**[Developing ](../dev/developing_parent.md)
+
+**Related information**  
+
+
+[Search ](../wcm/wcm_dev_search.md)
+
+[Paged Feeds](https://datatracker.ietf.org/doc/html/rfc5005#section-3)
 

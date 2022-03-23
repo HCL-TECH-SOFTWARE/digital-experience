@@ -1,4 +1,4 @@
-# Mobile Preview
+# Mobile Preview 
 
 Use the Mobile Preview simulator to view the presentation of Digital Experience site page components on select mobile devices.
 
@@ -12,7 +12,7 @@ This section provides information on the usage of the Mobile Preview Simulator i
 
 ## Installation
 
-The Mobile Preview Simulator is enabled by default in HCL Digital Experience 9.5 CF19 and later releases and deployed along with the [Practitioner Studio](../practitioner_studio/practitionerstudio_overview.md) and [Woodburn Studio demo site](../woodburn_studio/woodburn_studio.md).
+The Mobile Preview Simulator is enabled by default in HCL Digital Experience 9.5 CF19 and later releases and deployed along with the [Practitioner Studio](../practitioner_studio/practitionerstudio_overview.html) and [Woodburn Studio demo site](../woodburn_studio/woodburn_studio.html).
 
 Access the Mobile Preview Simulator
 
@@ -132,5 +132,7 @@ The following examples demonstrate use of the Mobile Preview simulator to view d
 ![](../assets/using_mobile_preview_simulator.png "Using the Mobile Preview simulator to view Woodburn Studio
                                 demonstration site display on mobile devices")
 
-**Parent topic:**[Mobile](../overview/mobile.md)
+**Parent topic:**[Mobile ](../overview/mobile.md)
+
+**Parent topic:**[Developing websites ](../install/developing_websites.md)
 

@@ -17,3 +17,25 @@ There are two options to integrate external users into the HCL Portal environmen
 
 Complete the following tasks to configure the identity providers that are appropriate for your business requirements.
 
+-   **[Configuring OpenID authentication ](../security/use_social.md)**  
+Identity providers include sites such as, but not limited to, Google, Yahoo, and Facebook. As an Administrator, you can select how to configure authentication to work with these identity providers.
+-   **[Modifying the list of OpenID providers ](../security/mod_oid_providers.md)**  
+You can change the list of identity providers that your users can access. You can add or remove providers from the list. You can change the order that the identity providers display in the **Login** and **Profile Management** portlet user interfaces.
+-   **[Configuring transient users ](../security/openid_trans_users.md)**  
+In addition to the basic OpenID authentication option, you can give users, who are trusted and verified from an identity provider, access to HCL Digital Experience. These trusted and verified users do not require a local, registered Portal user account.
+-   **[Disabling transient users and OpenID authentication ](../security/disable_trans_openid.md)**  
+After using the transient users and OpenID authentication, you might decide you want to stop using the function. You can permanently or temporarily disable the transient users function or the full OpenID authentication function.
+
+**Parent topic:**[Securing](../security/securing_wp.md)
+
+**Related information**  
+
+
+[Configuring OpenID authentication ](../security/use_social.md)
+
+[Modifying the list of OpenID providers ](../security/mod_oid_providers.md)
+
+[Configuring transient users ](../security/openid_trans_users.md)
+
+[Disabling transient users and OpenID authentication ](../security/disable_trans_openid.md)
+

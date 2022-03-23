@@ -1,4 +1,4 @@
-# Streamlined site creation
+# Streamlined site creation 
 
 You can use the Site Builder to generate your own portal site.
 

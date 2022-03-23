@@ -26,20 +26,20 @@ Widgets are now included inside the portal. You can even create mash-ups that co
 
 For additional information about new features, main components, and what each component provides to the overall solution, explore the *What's New* section.
 
--   **[Streamlined site creation](../overview/i_c_sample_sites.md)**  
+-   **[Streamlined site creation ](../overview/i_c_sample_sites.md)**  
 You can use the Site Builder to generate your own portal site.
--   **[Web analytics](../overview/web_analytics.md)**  
+-   **[Web analytics ](../overview/web_analytics.md)**  
 HCL Digital Experience \(DX\) includes a number of solutions to help you understand how visitors use your site, including server-side analytics and client-side analytics. Client-side analytics is also called active site analytics.
--   **[Web content](../overview/content.md)**  
+-   **[Web content ](../overview/content.md)**  
  HCL Portal and HCL Web Content Manager help you manage content, share information, and communicate your message.
--   **[Social business](../overview/social_business.md)**  
+-   **[Social business ](../overview/social_business.md)**  
 HCL Portal offers wikis, blogs, and tagging and rating capabilities. In addition, you can integrate existing collaboration applications with your portal site, such as HCL Connections.
--   **[Integration](../overview/integration.md)**  
+-   **[Integration ](../overview/integration.md)**  
 HCL Portal integrates with many products.
--   **[Mobile](../overview/mobile.md)**  
+-   **[Mobile ](../overview/mobile.md)**  
  The HCL Digital Experience platform presents mobile-enabled services support that enables you to deliver consistent, personalized cross-channel experiences quickly.
--   **[Versatile framework](../overview/fea_vf.md)**  
+-   **[Versatile framework ](../overview/fea_vf.md)**  
 HCL Digital Experience provides users a consistent view of portal applications and allows users to define specific sets of applications that are presented in a single context. Depending on the requesting device, the rendering of this application set must vary to fulfill the requirements of the device.
 
-**Parent topic:**[Overview 9.5](../overview/intro_container.md)
+**Parent topic:**[Overview  9.5](../overview/intro_container.md)
 

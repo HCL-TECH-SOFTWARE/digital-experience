@@ -1,4 +1,4 @@
-# HCL Sametime
+# HCL Sametime 
 
 The HCL Sametime portlets are provided with HCL Digital Experience offerings and can be used by customers with entitlements to HCL Sametime Complete or Sametime Communicate V9.
 
@@ -18,5 +18,5 @@ If you choose not to enable Sametime in your portal configuration, people awaren
 
 For updated information on the latest versions of HCL Sametime, visit the [HCL Sametime product information pages.](https://www.hcltechsw.com/sametime)
 
-**Parent topic:**[Social business](../overview/social_business.md)
+**Parent topic:**[Social business ](../overview/social_business.md)
 

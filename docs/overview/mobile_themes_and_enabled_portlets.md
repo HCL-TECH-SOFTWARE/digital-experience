@@ -1,4 +1,4 @@
-# HCL DX Mobile Experience
+# HCL DX Mobile Experience 
 
 Pages are optimized on smart phones, desktops, or almost any device. This optimization is made possible with the HCL DX Mobile Experience, HCL Web Experience Factory smart phone builders.
 
@@ -11,5 +11,5 @@ The Mobile Experience includes:
 
 The Mobile Experience is available on your HCL Digital Experience package.
 
-**Parent topic:**[Mobile](../overview/mobile.md)
+**Parent topic:**[Mobile ](../overview/mobile.md)
 

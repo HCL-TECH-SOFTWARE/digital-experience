@@ -1,4 +1,4 @@
-# How to use REST with drafts and workflows
+# How to use REST with drafts and workflows 
 
 You can use the REST services for HCL Web Content Manager to create drafts, approve items in a workflow, retrieve workflow comments from content items, and move items through different stages of a workflow.
 
@@ -603,4 +603,6 @@ This API works similarly as the other APIs described on this page.
     </entry>
     ```
 
+
+**Parent topic:**[How to manage web content items by using REST ](../wcm/wcm_rest_crud.md)
 

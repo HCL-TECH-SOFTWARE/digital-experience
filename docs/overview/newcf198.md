@@ -1,4 +1,4 @@
-# What's new in Container Update CF198? 9.5 Containers
+# What's new in Container Update CF198?  9.5 Containers
 
 This HCL Digital Experience 9.5 Container Update and CF198 release includes new releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management, Experience API, Design Studio \(Beta\), new Helm deployment operations for container deployments, updated CICD release process artifacts, the new Site Manager Custom Layout Editor, HCL Digital Experience Technical Articles, ‘How To’ videos, and more.
 
@@ -59,5 +59,5 @@ View the latest Kubernetes and OpenShift platforms tested and supported for spec
 
 See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../containerization/c_kubesupportstatement.md) topic for more information.
 
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
+**Parent topic:**[Container Update releases  9.5](../overview/container_update_releases.md)
 

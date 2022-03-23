@@ -1,4 +1,4 @@
-# What's new in CF200?
+# What's new in CF200? 
 
 Combined Cumulative Fix \(CF200\) includes new features and software fixes for the latest version of HCL Digital Experience. Release updates for both on-premises platforms and container deployments are available.
 
@@ -32,5 +32,5 @@ The Digital Experience Search REST API provides developers programmatic access t
 
 [HCL SoFy](https://www.hcltechsw.com/sofy/catalog)  is a next generation software development platform that accelerates deployment and integration of cloud-native products through the application of cloud-centered technologies and practices. Using HCL SoFy to access and deploy HCL Digital Experience 9.5, and other HCL software offerings and demo packs, you can quickly gain hands-on experience working with these cloud-native solutions. See the [Deploying HCL Digital Experience 9.5 with HCL Solution Factory \(SoFy\)](../containerization/hybrid_deployment_HCL_SoFy.md) Help Center topic for more information.
 
-**Parent topic:**[Latest Combined CF and 9.5 Container Updates](../overview/new_cf_95.md)
+**Parent topic:**[Latest Combined CF and 9.5 Container Updates ](../overview/new_cf_95.md)
 

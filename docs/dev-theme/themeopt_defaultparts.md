@@ -15,3 +15,29 @@ By applying these concepts it is possible to turn on and off an arbitrary number
 
 The Portal 8.5 theme contains three types of files: JavaScript, dynamic content \(JSP files\) and static resources.
 
+-   **[Static resources ](../dev-theme/themeopt_defaultparts_static.md)**  
+Static resources include the markup that is defined by .html, .css, and .js files that are used by the theme. Some .json files are used to define menu options, module definitions, and module profiles.
+-   **[Dynamic content \(jsp\) resources ](../dev-theme/themeopt_defaultparts_jsp.md)**  
+Dynamic content includes resources that are defined by jsp files that are used by the theme.
+
+**Parent topic:**[Developing themes and skins ](../dev-theme/themeopt_themes.md)
+
+**Related information**  
+
+
+[Setting up Client Certificate Authentication ](../security/certauth.md)
+
+[Changing the login and logout pages ](../security/sec_chg_login.md)
+
+[Importing a static page from an installed template ](../admin-system/spa_xml_impt_tmplt.md)
+
+[The module framework ](../dev-theme/themeopt_module.md)
+
+[Simple menu framework ](../dev-theme/themeopt_cust_menu.md)
+
+[Modules that are provided with the modularized theme ](../dev-theme/themeopt_oob.md)
+
+[<portal-logic/\> tags](../dev-portlet/dgn_ptllogic.md)
+
+[Dynamically changing the language during the user session ](../admin-system/adchglang_dynamic.md)
+

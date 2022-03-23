@@ -1,4 +1,4 @@
-# Configuration Service
+# Configuration Service 
 
 The portal Configuration Service is responsible for collecting the most essential configuration data of the HCL Digital Experience engine.
 
@@ -512,4 +512,24 @@ In the WebSphere® Integrated Solutions Console, the portal Configuration Servic
 
     **Note:** The stateless friendly redirect feature requires the base tag to be enabled in the theme.
 
+
+-   **[Portlet Response headers ](../admin-system/srvcfgref_ptlt_resp_hdrs.md)**  
+The portlet response headers are part of the portal Configuration Service.
+
+**Parent topic:**[Portal service configuration ](../admin-system/srvcfgref.md)
+
+**Related information**  
+
+
+[How administrators define persistent session options ](../admin-system/adcfgpss_adm_define.md)
+
+[Configuring globally how social object links are resolved ](../social/soc_rendr_cfg_reslv_links.md)
+
+[Authenticating outbound HTTP connections ](../dev-portlet/outbhttp_authntct.md)
+
+[Configuring Integrator for SAP ](../admin-system/sap_int_cfg.md)
+
+[Configuring Tivoli Federated Identity Manager with SAML for single sign-on to SAP NetWeaver Portal ](../admin-system/sap_int_cfg_tfimsaml_sso.md)
+
+[Performance tuning for Integrator for SAP ](../admin-system/sap_int_perf_tun.md)
 

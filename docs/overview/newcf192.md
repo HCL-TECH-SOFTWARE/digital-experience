@@ -1,4 +1,4 @@
-# What's new in Container Update CF192? 9.5 Containers
+# What's new in Container Update CF192?  9.5 Containers
 
 This HCL Digital Experience 9.5 Container Update release includes new releases of Digital Experience 9.5 core Portal and Web Content Manager, Content Composer, Digital Asset Management, and Experience API images.
 
@@ -67,5 +67,5 @@ Take advantage of new step-by-step guidance for HCL Digital Experience practitio
 -   [Using the dxctl tool to deploy Digital Experience 9.5 on Red Hat OpenShift](../containerization/dxtools_dxctl.md)
 -   [Create a WAR-based theme copy on HCL Digital Experience 9.5](../dev-theme/themeopt_themedev_manual_warbased.md)
 
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
+**Parent topic:**[Container Update releases  9.5](../overview/container_update_releases.md)
 

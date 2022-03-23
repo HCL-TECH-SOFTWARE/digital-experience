@@ -1,4 +1,4 @@
-# Creating content items
+# Creating content items 
 
 Content items are based on authoring templates. The fields that are displayed in a content item form can be hidden from different users, so not all of the following steps might be required. Some fields and elements might already contain default data.
 

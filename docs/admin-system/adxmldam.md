@@ -88,3 +88,5 @@ This enables a Digital Asset Management staging scenario in which an administrat
 
 ```
 
+**Parent topic:**[Working with the XML configuration interface](../admin-system/adxmltsk.md)
+

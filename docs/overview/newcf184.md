@@ -1,4 +1,4 @@
-# What's new in Container Update CF184? 9.5 Containers
+# What's new in Container Update CF184?  9.5 Containers
 
 This HCL Digital Experience 9.5 Container Update release includes updated production releases of Digital Experience 9.5 core Portal and Web Content Manager, Content Composer, Digital Asset Management, and Experience API images. New additions include additional guidance to deploy to Microsoft Azure Kubernetes Service \(AKS\), new Web Content Manager REST APIs supporting Syndication options, HCL Digital Experience API published to HCL DX GitHub, new HCL Digital Experience ‘How To’ videos, and more.
 
@@ -22,5 +22,5 @@ Take advantage of new step by step guidance for HCL Digital Experience practitio
 -   [Deploy HCL Digital Experience 9.5 to Red Hat OpenShift](../containerization/openshift.md)
 -   [Deploy Digital Asset Management, Content Composer and Experience API to Red Hat OpenShift](../containerization/install_config_cc_dam.md)
 
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
+**Parent topic:**[Container Update releases  9.5](../overview/container_update_releases.md)
 

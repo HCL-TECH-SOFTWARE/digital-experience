@@ -1,4 +1,4 @@
-# Manual Step: Change the JSP components in the Web Resources v70 Library
+# Manual Step: Change the JSP components in the Web Resources v70 Library 
 
 The Modify Site URLs for Search Engine Optimization option in the Configuration Wizard includes manual steps. For reference only, you can see the details of the manual step for changing the JSP components in the Web Resources v70 Library. To view this step in the Configuration Wizard, you must select Yes to using an HCL Web Content Manager when you provide information about your environment.
 
@@ -32,4 +32,6 @@ The Modify Site URLs for Search Engine Optimization option in the Configuration 
     8.  Update the **Path** field for every JSP component with the new context root path.
     -   The JSP path includes two parts, which are separated by a semi-colon. The first part is the context path to the HCL Web Content Manager extensions web application and then the second part is the path to the JSP. Update the path to the web application.
     -   For example, the other path might be: /wcmextension;/jsp/html/general/UpdateItem.jsp. If you changed the context root to mynewcontext, change the old path to /mynewcontext/wcmextension;/jsp/html/general/UpdateItem.jsp.
+
+**Parent topic:**[Manual Steps: Modify Site URLs for Search Engine Optimization ](../config/cw_shorten_url_seo_manual.md)
 

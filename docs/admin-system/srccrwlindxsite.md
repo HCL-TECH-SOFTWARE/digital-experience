@@ -1,4 +1,4 @@
-# Configuring a crawler to search your local portal site \| HCL Digital Experience
+# Configuring a crawler to search your local portal site 
 
 Configure and run a search crawler on your local portal site to gather information and create a search collection that enables your users to search your portal site.
 
@@ -76,5 +76,5 @@ If you customize search on your portal site, you might find useful information u
 
 If your portal site is multilingual and your users use different languages to search your portal, see the topic about Crawling a multilingual portal site.
 
-**Parent topic:**[Searching your local portal \| HCL Digital Experience](../admin-system/srclocportal.md)
+**Parent topic:**[Searching your local portal ](../admin-system/srclocportal.md)
 

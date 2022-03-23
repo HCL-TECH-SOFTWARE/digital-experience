@@ -1,4 +1,4 @@
-# System requirements
+# System requirements 
 
 Before installing HCL Digital Experience, you must review the system requirements to ensure that you have the supported versions of prerequisite and co-requisite software and hardware.
 
@@ -57,4 +57,15 @@ The following information provides the minimum system requirements for HCL Digit
     |Application server|IBM® WebSphere® Application Server Network Deployment version 8.5.5.12 on-premises or 9.0.x or later|
     |Java 8.0.3 SDK|IBM WebSphere SDK Java Technology Edition|
 
+
+**Parent topic:**[Planning to install HCL Digital Experience](../plan/plan_installation.md)
+
+**Related information**  
+
+
+[HCL Digital Experience 9.5 Product Documentation](../welcome/wp95_welcome.md)
+
+[People Finder ](../collab/i_coll_r_porcc_pfnd.md)
+
+[Prerequisites and support for Integrator for SAP ](../admin-system/sap_int_prereq_supp.md)
 

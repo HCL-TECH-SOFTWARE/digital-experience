@@ -8,7 +8,7 @@ Complete the following steps to integrate Google Analytics to the HCL Digital Ex
 
 ## Installation
 
-HCL Digital Experience utilizes the platform [Active Site Analytics](../admin-system/sa_asa_work.md) framework, which includes application scripts, called Aggregators, to collect page interactions data sent to external web analytics services for analysis. HCL DX administrators and page owners can manage the aggregators. They can assign an aggregator to one or more DX labels or pages.
+HCL Digital Experience utilizes the platform [Active Site Analytics](../admin-system/sa_asa_work.html) framework, which includes application scripts, called Aggregators, to collect page interactions data sent to external web analytics services for analysis. HCL DX administrators and page owners can manage the aggregators. They can assign an aggregator to one or more DX labels or pages.
 
 In HCL DX 9.5 CF19 and higher, a new Active Site Analytics aggregator for Google Analytics is available.
 
@@ -103,7 +103,7 @@ Obtain a Google Analytics account with ability to connect to your Digital Experi
 
     Optionally, you can register the Active Site Analytics tags/microformats as custom dimensions or metrics in the Google Analytics Dashboard and configure the aggregator to use your custom map. See [Google Analytics Custom Dimensions & Metrics](https://support.google.com/analytics/answer/2709828).
 
-    For a list of Active Site Analytics tags associated with HCL DX site pages that can be tracked by the Google Analytics Aggregator, see [How Active Site Analytics data is represented in the portal](../admin-system/sa_asa_data.md) and [Supported aggregator tags](../admin-system/sa_asa_aggr_tags.md).
+    For a list of Active Site Analytics tags associated with HCL DX site pages that can be tracked by the Google Analytics Aggregator, see [How Active Site Analytics data is represented in the portal](../admin-system/sa_asa_data.html) and [Supported aggregator tags](../admin-system/sa_asa_aggr_tags.html).
 
     ![Optionally configure the DX Google Analytics Aggregator to                                     use a custom map](../assets/configure_DX_go0gle_analytics_aggregator_using_custom_map.png "Optionally configure the DX Google Analytics Aggregator to
                                         use a custom map")
@@ -117,8 +117,32 @@ Obtain a Google Analytics account with ability to connect to your Digital Experi
     ![In page analysis of HCL DX 9.5 Woodburn Studio site user interactions in Google Analytics](../assets/in_page_analysis_DX_Woodburn_Studio_site_user_interactions.png "In page analysis of HCL DX 9.5 Woodburn Studio site user
                                         interactions in Google Analytics")
 
-    Refer to the [Analytics tags and site promotions](../admin-system/sa_asa_anal_tags_site_prom.md) topics for more information on how to add additional tags and site promotions in addition to the out-of-the-box ones.
+    Refer to the [Analytics tags and site promotions](../admin-system/sa_asa_anal_tags_site_prom.html) topics for more information on how to add additional tags and site promotions in addition to the out-of-the-box ones.
 
+
+## Using the Active Site Analytics Aggregator for Google Analytics to track DX deployment user sessions
+
+Google Analytics can be used to track user session consumption in HCL Digital Experience deployments. A user session is defined as the number of web sessions or other online interactions, by anonymous or authenticated users interacting with a Digital Experience deployment, including API calls that deliver DX site content to users. A user session begins when a user authenticates with or visits a DX deployment and interacts with website pages and can include multiple website page views. By default, a user session ends when the user interaction with the DX deployment is idle for 30 minutes or until the user ends the interactions by explicitly closing their authentication or web page views session in the DX website. Refer to the Google Analytics documentation for additional information about [How a web session is defined in Universal Analytics](https://support.google.com/analytics/answer/2731565).
+
+Using integration with Google Analytics and Digital Experience deployments, user session tracking is configured through the use of tags with scripts that track the page view requests for each website.
+
+After completing the previous integration steps with the Active Site Analytics Aggregator for Google Analytics and your target DX deployments, you can use Google Analytics dashboards to view the user sessions data.
+
+## Google Analytics Dashboards
+
+As shown in examples above, Google Analytics Dashboards present collections of widgets that allow you to quickly visualize data collected to measure interactions with your deployment sites. An additional example is presented below.
+
+![](../assets/ga_dashboards.png "View interaction data using Google Analytics Dashboards")
+
+Refer to the Google Analytics documentation for additional information about [Google Dashboards](https://support.google.com/analytics/answer/1068216?hl=en#zippy=%2Cin-this-article).
+
+## View user sessions data for Digital Experience deployment
+
+To view the user sessions information for the DX deployment website from the Google Analytics dashboard that you have integrated with, go to the **Audience** tab in the left-side column of the Google Analytics dashboard, then click **Overview** \> **Sessions**. See the following example:
+
+![](../assets/ga_user_session.png "View User Session data for DX deployment site")
+
+**Note:** By default, the user session presents the data for the last 7 days. To revise that time frame, configure the timeline option located in the top-right corner of the dashboard, for example, **Last 30 Days**. Once the time is configured, the data below the graph will present the total number of sessions in the last 30 days.
 
 ## Configuration options for the HCL DX Google Analytics Aggregator
 
@@ -135,4 +159,6 @@ window['ga-disable-GA_MEASUREMENT_ID']  = true
 ```
 
 See [Disable Google Analytics measurement](https://developers.google.com/analytics/devguides/collection/gtagjs/user-opt-out) for additional information.
+
+**Parent topic:**[Analyzing digital site activity ](../install/analyzing_digital_site_activity.md)
 
