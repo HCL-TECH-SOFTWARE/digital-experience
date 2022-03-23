@@ -10,11 +10,9 @@ theme:
   language: en
   features:
     - navigation.tabs
-    - navigation.tabs.sticky
     - navigation.indexes
     - navigation.top
     - navigation.instant
-    # - navigation.expand
     - search.highlight
     - search.share
     - search.suggest
