@@ -10,6 +10,7 @@ theme:
   language: en
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.indexes
     - navigation.top
     - navigation.instant
@@ -25,8 +26,17 @@ theme:
     code: Roboto Mono
   favicon: assets/favicon.png
 
+  # Static files
+  static_templates:
+    - 404.html
+
 # Copyright
 copyright: Copyright &copy; 2022, HCL Technologies Limited
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/HCL-TECH-SOFTWARE
 
 # Repository
 repo_url: https://git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/
