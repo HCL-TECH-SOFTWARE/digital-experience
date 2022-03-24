@@ -1,4 +1,4 @@
-# Configuring DX 9.5 deployments to container platforms using Helm
+# Configuration
 
 This topic covers details the configuration structure in the HCL Digital Experience 9.5 OpenShift and Kubernetes deployment with Helm.
 
@@ -22,7 +22,8 @@ To minimize the impact of operations to configuration changes processing, consid
 
 For development and testing, sometimes it is useful to directly adjust configuration in ConfigMaps via Kubernetes \(for example, `kubectl edit cm`\) or OpenShift commands. In that case, the runtime controller is to notice that there has been a change to a ConfigMap and calculates the checksum for the Pod specification of the affected application. Kubernetes or OpenShift thens proceed to roll out the new configuration. This is the same processing methodology applies as when using Helm upgrade definitions.
 
-**Note:** It is recommended that administrators use Helm upgrade for configuration changes, as the DX 9.5 Helm chart contains logic to calculate certain values. If you choose to edit ConfigMaps directly in the Kubernetes or OpenShift console, do note that running a Helm upgrade overwrites the settings you inserted directly/manually in your deployment. It is recommended to apply configuration changes directly on an as-needed basis and only for development and testing purposes. Please also ensure that the **keys** used inside the ConfigMap are ordered **alphabetically**.
+!!! note "Note"
+    It is recommended that administrators use Helm upgrade for configuration changes, as the DX 9.5 Helm chart contains logic to calculate certain values. If you choose to edit ConfigMaps directly in the Kubernetes or OpenShift console, do note that running a Helm upgrade overwrites the settings you inserted directly/manually in your deployment. It is recommended to apply configuration changes directly on an as-needed basis and only for development and testing purposes. Please also ensure that the **keys** used inside the ConfigMap are ordered **alphabetically**.
 
 ## List of HCL DX 9.5 ConfigMaps
 
@@ -36,6 +37,4 @@ For development and testing, sometimes it is useful to directly adjust configura
 |`<RELEASE-NAME>-persistence`|Persistence|
 |`<RELEASE-NAME>-ring-api`|Ring API|
 |`<RELEASE-NAME>-runtime-controller`|Runtime Controller|
-
-**Parent topic:**[Overview of the Helm architecture](../containerization/helm_overview.md)
 

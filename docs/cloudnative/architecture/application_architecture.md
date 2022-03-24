@@ -1,4 +1,4 @@
-# Deploying DX 9.5 applications to container platforms using Helm
+# DX Applications
 
 This topic provides a list of all DX applications and resource definitions that configure the application runtime and are deployed to containers using Helm on OpenShift or Kubernetes platforms. As outlined in the overview, applications can also include ConfigMaps, Secrets, and Ingress.
 
@@ -107,6 +107,3 @@ Application names are defined as follows:
 |DS|Design Studio|
 |PER|Persistence|
 |IMG|Image Processor|
-
-**Parent topic:**[Overview of the Helm architecture](../containerization/helm_overview.md)
-

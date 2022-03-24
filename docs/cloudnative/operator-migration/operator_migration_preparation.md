@@ -1,8 +1,11 @@
-# Prepare the Operator properties for migration
+# Preparation
 
 This section shows the guidance to prepare the mapping of your Operator deployment properties, so you can reuse them in your Helm deployment.
 
-The Operator-based to Helm-based migration is a strict side-by-side migration. This section outlines the needed steps to configure your new Helm-based deployment with your old Operator-based deployment configuration settings. Once you have extracted the needed data, and have shut down your Operator-based deployment, you can apply your exported data in your new Helm-based deployment. Note that you are not migrating your DX Core database as you will reuse the same database instance in your Helm-based deployment.
+!!!warning
+    The Operator-based to Helm-based migration is a strict side-by-side migration. 
+
+This section outlines the needed steps to configure your new Helm-based deployment with your old Operator-based deployment configuration settings. Once you have extracted the needed data, and have shut down your Operator-based deployment, you can apply your exported data in your new Helm-based deployment. Note that you are not migrating your DX Core database as you will reuse the same database instance in your Helm-based deployment.
 
 **Important:**
 

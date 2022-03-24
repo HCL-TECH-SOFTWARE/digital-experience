@@ -1,4 +1,4 @@
-# Additional Helm tasks
+# More Preparation
 
 This topic shows you how to leverage `NodeSelectors` to allow deploying specific DX 9.5 application Pods only on a specific node.
 

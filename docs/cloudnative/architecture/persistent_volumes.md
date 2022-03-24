@@ -1,4 +1,4 @@
-# PersistentVolumes and related operations considerations
+# Persistent Volumes
 
 This topic provides details covering the PersistentVolumes \(PVs\) and related operations considerations in storing data for DX 9.5 stateful applications.
 

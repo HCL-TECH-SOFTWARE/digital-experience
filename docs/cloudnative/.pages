@@ -1,10 +1,11 @@
 title: DX Cloud Native 
 nav:
-    - index.md
+    - overview.md
+    - limitations_requirements.md
     - architecture
-    - planning
-    - docker
-    - helm
+    - deployment
+    - operations
+    - operator-migration
     - oldstuff
    #  - docker
 

@@ -1,10 +1,11 @@
-# Planning your container deployment using Helm
+# Preparation
 
 Helm is a software package manager that simplifies deployment of applications and services to Red Hat OpenShift and Kubernetes container platforms.
 
 1.  **Before proceeding with your HCL DX 9.5 deployment using Helm, review the following Help Center topics:**
     -   [Deploying HCL DX CF196 to container platforms using Helm](helm_cf192andlater.md) for an understanding of the capabilities, deployment structures, configuration and scaling options available for HCL DX 9.5 CF196 and later deployments.
     -   [Containerization requirements and limitations](limitations_requirements.md) for an understanding of the requirements, including capacity planning, and current limitations for an HCL Digital Experience 9.5 Container Update CF196 and later deployment using [Helm](helm.md).
+    
 2.  **Prepare your HCL DX 9.5 target environment.**
 
     This section outlines mandatory and optional tasks that need to be done before installation of the HCL Digital Experience 9.5 Container Update CF196 to Google Kubernetes Engine using Helm. Support to deploy to Red Hat OpenShift, Amazon Elastic Kubernetes Service \(Amazon EKS\), and Microsoft Azure Kubernetes Service \(AKS\) using Helm is added in Container Update CF197.

@@ -1,4 +1,4 @@
-# Digital Asset Management persistence architecture
+# Digital Asset Management persistence
 
 This topic describes the components of the Digital Asset Management persistence. The updated DAM persistence feature is available from HCL Digital Experience 9.5 Container Update CF198 and later.
 
@@ -84,6 +84,3 @@ The following is an example of a persistence cluster in a successful deployment.
 ![](../images/cluster_status_example.png "Persistence cluster in a successful deployment")
 
 .
-
-**Parent topic:**[Overview of the Helm architecture](../containerization/helm_overview.md)
-

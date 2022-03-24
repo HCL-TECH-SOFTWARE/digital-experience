@@ -1,12 +1,14 @@
-# Install and uninstall commands for HCL DX 9.5 CF196 and later container deployments to Kubernetes and Red Hat OpenShift platforms using Helm
+# Installation
 
 The following are install and uninstall commands that are used to deploy or uninstall HCL Digital Experience 9.5 CF196 and later releases to Kubernetes and Red Hat OpenShift platforms using Helm.
 
-**Note:** Deployment using Helm is supported for new deployments to Google Kubernetes Engine \(GKE\) only with DX 9.5 Container Update CF196. Deployment using Helm is supported for new deployments to Microsoft Azure Kubernetes Service, Amazon Elastic Kubernetes Service, and Red Hat OpenShift beginning with HCL DX Container Update CF197.
+!!!note
+    Deployment using Helm is supported for new deployments to Google Kubernetes Engine \(GKE\) only with DX 9.5 Container Update CF196. Deployment using Helm is supported for new deployments to Microsoft Azure Kubernetes Service, Amazon Elastic Kubernetes Service, and Red Hat OpenShift beginning with HCL DX Container Update CF197.
 
 ## Install command
 
-**Important:** Modification to any files \(chart.yaml, templates, crds\) in hcl-dx-deployment-vX.X.X\_XXXXXXXX-XXXX.tar.gz, except custom-values.yaml or values.yaml, is not supported.
+!!!warning
+    Modification to any files \(chart.yaml, templates, crds\) in hcl-dx-deployment-vX.X.X\_XXXXXXXX-XXXX.tar.gz, except custom-values.yaml or values.yaml, is not supported.
 
 To run the installation of your prepared configurations using Helm, use the following command:
 

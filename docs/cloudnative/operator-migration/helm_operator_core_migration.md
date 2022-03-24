@@ -2,9 +2,7 @@
 
 This section shows the steps to migrate your Core profile. You can create a backup of the profile and restore it later in the Helm deployment.
 
-Follow this guidance to create a backup of the Core profile from your Operator deployment, and restore the profile to a Helm-based deployment.
-
--   **Back up from an Operator-based deployment**
+## Back up from an Operator-based deployment
 
     1.  **Ensure that only one Core pod is running.**
 

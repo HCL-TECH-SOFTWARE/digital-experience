@@ -1,4 +1,4 @@
-# DX 9.5 Core Interactions with Kubernetes
+# Core Operations
 
 This section provides more detailed information about how the [HCL Digital Experience 9.5 Core container](deploy_applications_using_helm.md#) interacts with Kubernetes. Understanding this information may assist in interpreting observed behavior or in troubleshooting your HCL DX 9.5 Container deployments in Helm.
 

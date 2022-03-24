@@ -1,4 +1,4 @@
-# Overview of the Helm architecture
+# Overview
 
 This topic provides administrators with a high-level overview and important pre-requisite guidance to prepare your container environments for later deployments of the HCL Digital Experience 9.5 Kubernetes and OpenShift deployment capabilities using Helm.
 

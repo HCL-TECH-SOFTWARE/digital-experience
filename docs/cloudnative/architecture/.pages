@@ -1,10 +1,9 @@
-title: DX Helm architecture 
+title: Architecture 
 nav:
-    - overview.md
     - helm_overview.md
-    - core_interactions_kubernetes.md
-    - deploy_applications_using_helm.md
-    - persistent_volumes_helm.md
-    - configure_deployment_helm.md
-    - container_scaling_helm.md
+    - application_architecture.md
+    - persistent_volumes.md
+    - configure_deployment.md
+    - container_scaling.md
     - dam_persistence_architecture.md
+    - core_interactions_kubernetes.md
