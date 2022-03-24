@@ -4,141 +4,141 @@ This section shows the guidance to back up and restore your DAM persistence and 
 
 Follow this guidance to create a backup of the DAM persistence and binaries from your Operator deployment, and restore them to a Helm-based deployment.
 
--   **Back up from an Operator-based deployment**
+## Back up from an Operator-based deployment
 
-    1.  You must start Digital Asset Management in maintenance mode, to ensure that no actions are performed during the migration. You can set DAM to maintenance mode by changing the ConfigMap of the Operator deployment:
+1.  You must start Digital Asset Management in maintenance mode, to ensure that no actions are performed during the migration. You can set DAM to maintenance mode by changing the ConfigMap of the Operator deployment:
 
-        ```
-        kubectl -n <namespace> edit cm <configmap>
-        ```
+    ```
+    kubectl -n <namespace> edit cm <configmap>
+    ```
 
-        **Example**:
+    **Example**:
 
-        ```
-        kubectl edit cm -n dxns dx-deployment
-        ```
+    ```
+    kubectl edit cm -n dxns dx-deployment
+    ```
 
-        In the `data` section, add the following entry and save the changes:
+    In the `data` section, add the following entry and save the changes:
 
-        ```
-        data:
-          dx.deploy.dam.features: "maintenance_mode:true"
-        ```
+    ```
+    data:
+        dx.deploy.dam.features: "maintenance_mode:true"
+    ```
 
-        After saving the changes, the DAM pod restarts automatically. Please wait until the pod restarts before proceeding.
+    After saving the changes, the DAM pod restarts automatically. Please wait until the pod restarts before proceeding.
 
-    2.  Verify that persistence \(read-write\) and DAM pods are up and running, and are in maintenance mode. Use the following command to see the current status of the pods:
+2.  Verify that persistence \(read-write\) and DAM pods are up and running, and are in maintenance mode. Use the following command to see the current status of the pods:
 
-        ```
-        kubectl -n <namespace> get pods
-        ```
+    ```
+    kubectl -n <namespace> get pods
+    ```
 
-        If more than one DAM or persistence pod is running, scale down the pods to only one of each type. Adjust the `dxctl` property file:
+    If more than one DAM or persistence pod is running, scale down the pods to only one of each type. Adjust the `dxctl` property file:
 
-        ```
-        dam.minreplicas:1
-        dam.maxreplicas:1
-        
-        persist.minreplicas:1
-        persist.maxreplicas:1
-        ```
+    ```
+    dam.minreplicas:1
+    dam.maxreplicas:1
+    
+    persist.minreplicas:1
+    persist.maxreplicas:1
+    ```
 
-        And apply it using the `dxctl` tool.
+    And apply it using the `dxctl` tool.
 
-        ```
-        ./dxctl -–update -p deployment.properties
-        ```
+    ```
+    ./dxctl -–update -p deployment.properties
+    ```
 
-        The changes are applied and any replicas are terminated. Use `kubectl` to check the progress.
+    The changes are applied and any replicas are terminated. Use `kubectl` to check the progress.
 
-        Verify that DAM is in maintenance mode by running the following command:
+    Verify that DAM is in maintenance mode by running the following command:
 
-        ```
-        kubectl -n <namespace> logs <pod-name>
-        ```
+    ```
+    kubectl -n <namespace> logs <pod-name>
+    ```
 
-        **Example**:
+    **Example**:
 
-        ```
-        kubectl -n dxns logs dx-deployment-dam-0
-        ```
+    ```
+    kubectl -n dxns logs dx-deployment-dam-0
+    ```
 
-        If your output looks similar to the following, maintenance mode is enabled and you can continue:
+    If your output looks similar to the following, maintenance mode is enabled and you can continue:
 
-        -   Maintenance mode is: true
-        -   Listening for SIGTERM
-        -   Maintenance mode is enabled. This mode solely starts the pod without any processes within it.
-    3.  Connect to the persistence pod. The following command opens a shell in the running persistence pod:
+    -   Maintenance mode is: true
+    -   Listening for SIGTERM
+    -   Maintenance mode is enabled. This mode solely starts the pod without any processes within it.
+3.  Connect to the persistence pod. The following command opens a shell in the running persistence pod:
 
-        ```
-        kubectl exec --stdin --tty pod/<pod-name> -n <namespace> -- /bin/bash
-        ```
+    ```
+    kubectl exec --stdin --tty pod/<pod-name> -n <namespace> -- /bin/bash
+    ```
 
-        **Example**:
+    **Example**:
 
-        ```
-        kubectl exec --stdin --tty pod/dx-deployment-persistence-0 -n dxns -- /bin/bash
-        ```
+    ```
+    kubectl exec --stdin --tty pod/dx-deployment-persistence-0 -n dxns -- /bin/bash
+    ```
 
-        1.  Dump the current database using `pg_dump`:
-
-            ```
-            pg_dump dxmediadb > /tmp/dxmediadb.dmp
-            ```
-
-        2.  Exit the shell in the persistence pod
-
-            ```
-            exit
-            ```
-
-    4.  Download the dumped database from the persistence pod to your local system:
+    1.  Dump the current database using `pg_dump`:
 
         ```
-        kubectl cp <namespace>/<pod-name>:<source-file> <target-file>
+        pg_dump dxmediadb > /tmp/dxmediadb.dmp
         ```
 
-        **Example:**
+    2.  Exit the shell in the persistence pod
 
         ```
-        kubectl cp dxns/dx-deployment-persistence-0:/tmp/dxmediadb.dmp /tmp/dxmediadb.dmp
+        exit
         ```
 
-    5.  Connect to the DAM pod. The following command opens a shell in the running DAM pod:
+4.  Download the dumped database from the persistence pod to your local system:
+
+    ```
+    kubectl cp <namespace>/<pod-name>:<source-file> <target-file>
+    ```
+
+    **Example:**
+
+    ```
+    kubectl cp dxns/dx-deployment-persistence-0:/tmp/dxmediadb.dmp /tmp/dxmediadb.dmp
+    ```
+
+5.  Connect to the DAM pod. The following command opens a shell in the running DAM pod:
+
+    ```
+    kubectl exec --stdin --tty pod/<pod-name> -n <namespace> -- /bin/bash
+    ```
+
+    **Example**:
+
+    ```
+    kubectl exec --stdin --tty pod/dx-deployment-dam-0 -n dxns -- /bin/bash
+    ```
+
+    1.  Compress the DAM binaries located in /opt/app/upload:
 
         ```
-        kubectl exec --stdin --tty pod/<pod-name> -n <namespace> -- /bin/bash
+        tar -cvpzf backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system --directory /opt/app/upload .
         ```
 
-        **Example**:
+    2.  Exit the shell in the DAM pod:
 
         ```
-        kubectl exec --stdin --tty pod/dx-deployment-dam-0 -n dxns -- /bin/bash
+        exit
         ```
 
-        1.  Compress the DAM binaries located in /opt/app/upload:
+6.  Download the compressed DAM binaries from the DAM pod to your local system:
 
-            ```
-            tar -cvpzf backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system --directory /opt/app/upload .
-            ```
+    ```
+    kubectl cp <namespace>/<pod-name>:<source-file> <target-file>
+    ```
 
-        2.  Exit the shell in the DAM pod:
+    **Example:**
 
-            ```
-            exit
-            ```
-
-    6.  Download the compressed DAM binaries from the DAM pod to your local system:
-
-        ```
-        kubectl cp <namespace>/<pod-name>:<source-file> <target-file>
-        ```
-
-        **Example:**
-
-        ```
-        kubectl cp dxns/dx-deployment-dam-0:/opt/app/server-v1/backupml.tar.gz /tmp/backupml.tar.gz
-        ```
+    ```
+    kubectl cp dxns/dx-deployment-dam-0:/opt/app/server-v1/backupml.tar.gz /tmp/backupml.tar.gz
+    ```
 
 
 -   **Restore your back up to the Helm-based deployment**
