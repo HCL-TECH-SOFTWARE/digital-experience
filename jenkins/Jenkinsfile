@@ -1,0 +1,39 @@
+/*
+ ********************************************************************
+ * Licensed Materials - Property of HCL                             *
+ *                                                                  *
+ * Copyright HCL Technologies Ltd. 2022. All Rights Reserved.       *
+ *                                                                  *
+ * Note to US Government Users Restricted Rights:                   *
+ *                                                                  *
+ * Use, duplication or disclosure restricted by GSA ADP Schedule    *
+ ********************************************************************
+ */
+
+// Use our DX shared library
+@Library("dx-shared-library") _
+
+pipeline {
+    agent {
+        label 'build_docu'
+    }
+
+    stages {
+        stage("Publish doc") {
+            sshagent(credentials: ['jenkins-git']) {
+                steps {
+                    sh """
+                        cat ${WORKSPACE}@tmp/*.key
+                        ls -lah ${WORKSPACE}@tmp
+                    """
+                }
+            }
+        }
+    }
+
+    post {
+        cleanup {
+            dxWorkspaceDirectoriesCleanup()
+        }
+    }
+}
