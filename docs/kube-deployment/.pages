@@ -1,0 +1,16 @@
+title: Kubernetes Deployment 
+nav:
+    - overview.md
+    - limitations_requirements.md
+    - architecture
+    - deployment
+    - operations
+    - operator-migration
+    - oldstuff
+   #  - docker
+
+   #  - Digital Experience on Docker: docker.md
+   #     - docker/docker_overview.md
+   #     - docker/docker_image_deployment.md
+   #     - docker/docker_compose.md
+     

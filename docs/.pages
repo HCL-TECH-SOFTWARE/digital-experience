@@ -1,8 +1,7 @@
 nav:
     - index.md
-    - overview
     - whatsnew
-    - containerization
+    - kube-deployment
+    - reference
 #    - DX Traditional: dxtraditional
-    - Designing with DX: allnewfeatures
-    # - Latest features: allnewfeatures
+#    - Designing with DX: allnewfeatures

@@ -1,0 +1,1 @@
+!!swagger-http https://raw.githubusercontent.com/HCL-TECH-SOFTWARE/experience-api-documentation/master/dam-api/openapi.json!!

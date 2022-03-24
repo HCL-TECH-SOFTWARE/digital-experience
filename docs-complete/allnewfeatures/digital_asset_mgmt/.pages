@@ -1,0 +1,20 @@
+nav:
+    - Digital Asset Management: digital_asset_mgmt_overview.md
+    - access_digital_asset_mgmt.md
+    - configure_dam_sso.md
+    - configure_dam_kaltura_integration.md
+    - DAM extensibility: 
+      - dam_extensibility.md
+      - dam_plugin_communication.md
+      - configure_dam_extensibility.md
+    - Working with DAM assets:
+      - DAM_common_tasks.md
+      - upload_rich_media_assets.md
+      - manage_media_assets.md
+      - manage_collections.md
+      - Modify media assets:
+        - modify_media_assets.md 
+        - dam_edit_image.md
+        - dam_metadata_properties_media_asset.md
+        - dam_generate_renditions_and_versions.md
+        - dam_set_unique_custom_URL_media_asset.md

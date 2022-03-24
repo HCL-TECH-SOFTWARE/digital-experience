@@ -28,6 +28,12 @@ theme:
   static_templates:
     - 404.html
 
+# Markdown Extensions
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
 # Copyright
 copyright: Copyright &copy; 2022, HCL Technologies Limited
 

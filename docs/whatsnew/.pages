@@ -1,6 +1,6 @@
-title: What's new
+title: What's New
 nav:
-    - Cumulative Fixes for DX Containers: container_update_releases.md
+    - Overview: index.md
     - CF200 and later:
        - newcf202.md
        - newcf201.md
