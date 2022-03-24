@@ -20,8 +20,8 @@ pipeline {
 
     stages {
         stage("Publish doc") {
-            sshagent(credentials: ['jenkins-git']) {
-                steps {
+            steps {
+                sshagent(credentials: ['jenkins-git']) {
                     sh """
                         cat ${WORKSPACE}@tmp/*.key
                         ls -lah ${WORKSPACE}@tmp
