@@ -1,4 +1,4 @@
-title: Docker images 
+title: Docker Compose 
 nav:
     - Digital Experience on Docker: docker_overview.md
     - docker_image_deployment.md
