@@ -57,7 +57,9 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 
 ## Requirements and Limitations for Operator-based deployments
 
-**Attention:** Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience \(DX\) [Operator-based deployments](deploy_container_platforms.md) and will provide support only for [Helm-based deployments](helm.md). There will be no further updates or code fixes provided for the Operator-based deployments. HCL requires all customers to migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based deployments](helm_operator_migration.md).
+!!! warning "Operator-based deployment discontinued"
+
+**Attention** Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience \(DX\) [Operator-based deployments](deploy_container_platforms.md) and will provide support only for [Helm-based deployments](helm.md). There will be no further updates or code fixes provided for the Operator-based deployments. HCL requires all customers to migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based deployments](helm_operator_migration.md).
 
 The following describes the requirements to deploy the HCL Digital Experience 9.5 images to container platforms and current limitations using the [Operator-based](dxtools_dxctl.md) deployment process:
 
@@ -115,10 +117,10 @@ The following describes the requirements to deploy the HCL Digital Experience 9.
 
         With DX 9.5 Container Update CF171 and higher, WebSphere Application Server 9.0.5.2 is included and that IBM fix pack removed the IBM JSF portlet bridge. If you are using JSF portlets and leverage the JSF portlet bridge, proceed to the HCL DX 9.5 Container Update CF18 for the required JavaServer Faces Bridge support before moving to a container-based deployment.
 
-        The HCL JavaServer Faces Bridge is added to HCL Digital Experience offerings with Container Update CF18 and CF18 on-premises platform CF update. For more information please see [What's New in Container Update CF18](../overview/new_cf18.md).
+        The HCL JavaServer Faces Bridge is added to HCL Digital Experience offerings with Container Update CF18 and CF18 on-premises platform CF update. For more information please see [What's New in Container Update CF18](../../whatsnew/new_cf18.md).
 
-        **Note:** For information about the limitations related to JSF 2.2 support, see [Limitations when running HCL DX Portlet Bridge on WebSphere Application Server 9.0](../dev-portlet/dx_bridge_for_jsf_onwas9x.md#section_ig1_5hx_3qb).
+        **Note:** For information about the limitations related to JSF 2.2 support, see [Limitations when running HCL DX Portlet Bridge on WebSphere Application Server 9.0](../../design/dev-portlet/dx_bridge_for_jsf_onwas9x.md#section_ig1_5hx_3qb).
 
 
-**Parent topic:**[Digital Experience on containerized platforms](../containerization/deployment.md)
+**Parent topic:**[Digital Experience on containerized platforms](../../de/deployment.md)
 
