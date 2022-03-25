@@ -21,10 +21,12 @@ pipeline {
     stages {
         stage("Publish doc") {
             steps {
-                sshagent(credentials: ['jenkins-git']) {
+                withCredentials([sshUserPrivateKey(credentialsId: "jenkins-git", keyFileVariable: 'SSH_KEY')]) {
                     sh """
-                        cat ${WORKSPACE}@tmp/*.key
-                        ls -lah ${WORKSPACE}@tmp
+                        docker run -d --name doc-builder quintana-docker.artifactory.cwp.pnp-hcl.com/dxubi:v1.0.0_8.5-204 /bin/bash -c "mkdir /build && mkdir /root/.ssh && tail -f /dev/null"
+                        docker cp ${SSH_KEY} doc-builder:/root/.ssh/id_rsa
+                        docker cp ${WORKSPACE}/jenkins/helpers/* /build
+                        docker exec /bin/bash /build/01-publish-doc.sh
                     """
                 }
             }
@@ -33,6 +35,10 @@ pipeline {
 
     post {
         cleanup {
+            sh """
+                docker stop doc-builder || true
+                docker rm doc-builder || true
+            """
             dxWorkspaceDirectoriesCleanup()
         }
     }
