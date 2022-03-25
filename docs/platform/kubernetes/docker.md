@@ -791,6 +791,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 -   **CF194**
 
     !!! important
+
         Please consult the HCL DX Support Knowledge Base article, [Manual Steps to Apply the Digital Experience 9.5 Container Deployment Core Certificate Update](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0089699), to apply the certificate update to your HCL DX 9.5 container deployment.
 
     If deploying HCL DX 9.5 CF194 release, the package name and images are as follows:

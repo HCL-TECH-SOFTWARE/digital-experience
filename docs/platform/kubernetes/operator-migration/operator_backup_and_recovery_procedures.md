@@ -6,9 +6,11 @@ This section shows the deployment architecture and provides the instructions to 
 
 Learn about the HCL DX 9.5 Container deployment architecture to get a better understanding of the backup and recovery options.
 
-**Note:** This topology is also available in the [Install the HCL Digital Experience 9.5 components](../containerization/install_config_cc_dam.md) topic.
+!!! note
 
-![](../images/cf_173_topology.png)
+    This topology is also available in the [Install the HCL Digital Experience 9.5 components](../containerization/install_config_cc_dam.md) topic.
+
+![](../../../images/cf_173_topology.png)
 
 ## Instructions to back up the Digital Experience 9.5 Container components
 
@@ -18,7 +20,9 @@ The following sections describe how the administrators can create and manage bac
 
     1.  Backup the file systems in the Digital Experience 9.5 container profile \(**Persistent volume claim** `wp_profile`\). Refer to the [Backup and Restore](../admin-system/i_wadm_c_bkup_restr_winlinux.md) topic and component backup guidance for more information.
 
-        **Note:** The HCL Digital Asset Management \(DAM\) component uploads folder and the DAM persistent mount for the primary instance dx-deployment-persistence-0 in the statefulset [dx-deployment-persistence \(https://console-openshift-console.apps.hcl-dxdev.hcl-dx-dev.net/k8s/ns/master-tests/statefulsets/dx-deployment-persistence\)](https://console-openshift-console.apps.hcl-dxdev.hcl-dx-dev.net/k8s/ns/master-tests/statefulsets/dx-deployment-persistence).
+        !!! note
+        
+            The HCL Digital Asset Management \(DAM\) component uploads folder and the DAM persistent mount for the primary instance dx-deployment-persistence-0 in the statefulset [dx-deployment-persistence \(https://console-openshift-console.apps.hcl-dxdev.hcl-dx-dev.net/k8s/ns/master-tests/statefulsets/dx-deployment-persistence\)](https://console-openshift-console.apps.hcl-dxdev.hcl-dx-dev.net/k8s/ns/master-tests/statefulsets/dx-deployment-persistence).
 
         To create a backup of the profile **Persistent volume claim** `wp_profile`, it is recommended that:
 
@@ -33,7 +37,7 @@ The following sections describe how the administrators can create and manage bac
             /stopServer.sh WebSphere_Portal -username <USERNAME> -password <PASSWORD>
             ```
 
-            ![](../images/backup_restore_stop_server_example.png "Example:")
+            ![Example](../../../images/backup_restore_stop_server_example.png)
 
         -   The entire /opt/HCL/wp\_profile directory is backed up.
         In the command line interface, run the following command to back up the Digital Experience 9.5 Persistent volume claim **wp\_profile**:
@@ -46,7 +50,7 @@ The following sections describe how the administrators can create and manage bac
             tar -cvpzf backup.tar.gz --exclude=/backup.tar.gz --one-file-system /opt/HCL/wp_profile/*
             ```
 
-        ![](../images/backup_restore_wp_profile2.png "Example:")
+        ![Example](../../../images/backup_restore_wp_profile2.png)
 
         After the tar backup command is completed, it is recommended that a copy of the backup.tar.gz file is created and placed to alternate long term storage.
 
@@ -70,12 +74,12 @@ The following sections describe how the administrators can create and manage bac
     pg_dump name_of_database > name_of_backup_file
     ```
 
-    ![](../images/backup_restore_persistence_db.png "Example:")
+    ![Example](../../../images/backup_restore_persistence_db.png)
 
     To back up the system components on a remote system:
 
     ```
-    pg_dump -U user_name -h remote_host -p remote_port name_of_database > name_of_backup_file
+       pg_dump -U user_name -h remote_host -p remote_port name_of_database > name_of_backup_file
     ```
 
     After the backup command is completed, it is recommended that a copy of the resulting file is created and placed to an alternate long term storage.
@@ -91,16 +95,16 @@ The following sections describe how the administrators can create and manage bac
         -   Refer to the following examples:
 
             ```
-            tar -cvpzf backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system /opt/app/upload
+               tar -cvpzf backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system /opt/app/upload
             ```
 
-            ![](../images/backup_restore_dam_media1.png "Example 1")
+            ![Example 1](../../../images/backup_restore_dam_media1.png)
 
         -   ```
-tar -C/ -cvpzf backupmlcfg.tar.gz --exclude=/backupmlcfg.tar.gz --one-file-system etc/config/*
-```
+               tar -C/ -cvpzf backupmlcfg.tar.gz --exclude=/backupmlcfg.tar.gz --one-file-system etc/config/*
+            ```
 
-            ![](../images/backup_restore_dam_media2.png "Example 2:")
+            ![Example 2](../../../images/backup_restore_dam_media2.png "Example 2:")
 
             See the [Backup and restore DAM image](../digital_asset_mgmt/dam_backup_restore_image.html) topic for more information.
 
@@ -113,10 +117,9 @@ tar -C/ -cvpzf backupmlcfg.tar.gz --exclude=/backupmlcfg.tar.gz --one-file-syste
     HCL Digital Experience has successfully tested the volume snapshot and CSI volume cloning methods with HCL Digital Experience 9.5 container deployments. It is recommended that customers perform the additional testing if they are using options [Step 2](#vol_snapshots) and [Step 3](#vol_pvc_datasource) to manage the wp\_profile backup.
 
 
--   **[Restore Digital Asset Management image to previous version](../digital_asset_mgmt/dam_restore_image_operator.md)**  
+<!-- -   **[Restore Digital Asset Management image to previous version](../digital_asset_mgmt/dam_restore_image_operator.md)**  
 This shows you how to restore the HCL Digital Experience 9.5 Digital Asset Management image to a previous version.
 -   **[Back up and restore a DAM image](../digital_asset_mgmt/operator_dam_backup_restore_image.md)**  
 This topic shows you how to backup and restore for Digital Asset Management persistence and binaries in an Operator-based deployment using `dxctl`.
-
-**Parent topic:**[Container administration 9.5](../containerization/maintenance.md)
+ -->
 
