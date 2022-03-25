@@ -8,7 +8,7 @@ nav:
     - deployment
     - operations
     - operator-migration
-    # - oldstuff
+    - oldstuff
    #  - docker
 
    #  - Digital Experience on Docker: docker.md
