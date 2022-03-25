@@ -1,4 +1,4 @@
-# Containerization overview
+# Overview
 
 Learn more about the containerization architecture, including the supported container platforms in deploying HCL Digital Experience images for your environment.
 

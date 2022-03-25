@@ -1,4 +1,4 @@
-# Back up and restore a DAM image
+# Back up and restore DAM
 
 This topic shows you how to backup and restore for Digital Asset Management persistence and binaries in a Helm-based deployment.
 

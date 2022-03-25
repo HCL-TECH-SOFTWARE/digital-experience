@@ -1,8 +1,9 @@
-# Configure Remote Search in OpenShift and Kubernetes
+# Configure Remote Search
 
-This section shows how to configure Remote Search for your HCL Digital Experience 9.5 environments on supported Red Hat OpenShift and Kubernetes container platforms.
+This section shows how to configure Remote Search for your HCL Digital Experience 9.5 environments.
 
-**Note:** Prior to Container Update CF195, the HCL Digital Experience 9.5 Remote Search image is supported for deployment to Red Hat OpenShift. With the Container Update CF195 release, Remote Search can be configured for deployment on supported Kubernetes platforms.
+!!!note
+  Prior to Container Update CF195, the HCL Digital Experience 9.5 Remote Search image is supported for deployment to Red Hat OpenShift. With the Container Update CF195 release, Remote Search can be configured for deployment on supported Kubernetes platforms.
 
 ## Introduction
 
