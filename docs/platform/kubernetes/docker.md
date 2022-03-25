@@ -1,8 +1,6 @@
-# Docker image list
+# Container image list
 
-This section presents the latest HCL DX 9.5 Docker container update images available.
-
-## Docker container update file list
+This section presents the latest HCL DX 9.5 Container images available.
 
 The HCL DX 9.5 container update releases may be obtained from your HCL Digital Experience entitlements in the [HCL Software License Portal](https://www.hcltech.com/software/support/release), in the **HCL\_Portal\_8.5\_9.0\_9.5\_CFs** download package entry, and the **HCL\_DX\_9.5\_Container\_Updates** download package entry for HCL Digital Experience Cloud Native 9.5 entitlements.
 
