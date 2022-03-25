@@ -1,4 +1,4 @@
-# Container platform support matrix
+# Container platform support matrix 
 
 View the latest Kubernetes and OpenShift platforms tested and supported for specific HCL Digital Experience 9.5 Container Update deployments.
 
@@ -20,132 +20,38 @@ HCL encourages customers to remain up-to-date on the latest DX and Kubernetes re
 
 |DX CF Releases|Red Hat OpenShift|Amazon EKS|Azure AKS|Google GKE|
 |--------------|-----------------|----------|---------|----------|
-|CF202|OS 4.7-   Kubernetes 1.20
-
-|EKS 1.19|AKS 1.20|GKE 1.21|
-|CF201|OS 4.7-   Kubernetes 1.20
-
-|EKS 1.19|AKS 1.20|GKE 1.21|
-|CF200|OS 4.7-   Kubernetes 1.20
-
-|EKS 1.19|AKS 1.20|GKE 1.21|
-|CF199|OS 4.7-   Kubernetes 1.20
-
-|EKS 1.19|AKS 1.20|GKE 1.21|
-|CF198|OS 4.7-   Kubernetes 1.20
-
-|EKS 1.19|AKS 1.19AKS 1.20
-
-|GKE 1.20|
-|CF197|OS 4.6-   Kubernetes 1.19
-
-OS 4.5
-
--   Kubernetes 1.18
-
-|EKS 1.19|AKS 1.19|GKE 1.20|
-|CF196|OS 4.6-   Kubernetes 1.19
-
-OS 4.5
-
--   Kubernetes 1.18
-
-|EKS 1.19|AKS 1.19|GKE 1.18|
-|CF195|OS 4.6-   Kubernetes 1.19
-
-OS 4.5
-
--   Kubernetes 1.18
-
-|EKS 1.19|AKS 1.19|GKE 1.18|
-|CF194|OS 4.5-   Kubernetes 1.18
-
-OS 4.6
-
--   Kubernetes 1.19
-
-|EKS 1.19|AKS 1.19|GKE 1.18|
-|CF193|OS 4.5-   Kubernetes 1.18
-
-OS 4.6
-
--   Kubernetes 1.19
-
-|EKS 1.19|AKS 1.19AKS 1.17.7
-
-|GKE 1.18|
-|CF192|OS 4.4Kubernetes 1.17
-
-|EKS 1.17EKS 1.18
-
-|AKS 1.17.7 AKS 1.18.4
-
-|GKE 1.16 GKE 1.17   
-
-
-GKE 1.18
-
-|
-|CF191|OS 4.4 Kubernetes 1.17
-
-|EKS 1.17|AKS 1.17.7|GKE 1.16|
-|CF19|OS 4.3Kubernetes 1.16
-
-|EKS 1.17|AKS 1.17.7|GKE 1.16|
-|CF184|OS 4.3Kubernetes 1.16
-
-|EKS 1.17|AKS 1.17.7|GKE 1.16|
+|CF202|OS 4.7<br/>Kubernetes 1.20|EKS 1.19|AKS 1.20|GKE 1.21|
+|CF201|OS 4.7<br/>Kubernetes 1.20|EKS 1.19|AKS 1.20|GKE 1.21|
+|CF200|OS 4.7<br/>Kubernetes 1.20|EKS 1.19|AKS 1.20|GKE 1.21|
+|CF199|OS 4.7<br/>Kubernetes 1.20|EKS 1.19|AKS 1.20|GKE 1.21|
+|CF198|OS 4.7<br/>Kubernetes 1.20|EKS 1.19|AKS 1.19<br/>AKS 1.20|GKE 1.20|
+|CF197|OS 4.6<br/>Kubernetes 1.19<br/>OS 4.5<br/>Kubernetes 1.18|EKS 1.19|AKS 1.19|GKE 1.20|
+|CF196|OS 4.6<br/>Kubernetes 1.19<br/>OS 4.5<br/>Kubernetes 1.18|EKS 1.19|AKS 1.19|GKE 1.18|
+|CF195|OS 4.6<br/>Kubernetes 1.19<br/>OS 4.5<br/>Kubernetes 1.18|EKS 1.19|AKS 1.19|GKE 1.18|
+|CF194|OS 4.5<br/>Kubernetes 1.18<br/>OS 4.6<br/>Kubernetes 1.19|EKS 1.19|AKS 1.19|GKE 1.18|
+|CF193|OS 4.5<br/>Kubernetes 1.18<br/>OS 4.6<br/>Kubernetes 1.19|EKS 1.19|AKS 1.19AKS 1.17.7|GKE 1.18|
+|CF192|OS 4.4<br/>Kubernetes 1.17|EKS 1.17EKS 1.18|AKS 1.17.7 AKS 1.18.4|GKE 1.16<br/>GKE 1.17<br/>GKE 1.18|
+|CF191|OS 4.4<br/>Kubernetes 1.17|EKS 1.17|AKS 1.17.7|GKE 1.16|
+|CF19|OS 4.3<br/>Kubernetes 1.16|EKS 1.17|AKS 1.17.7|GKE 1.16|
+|CF184|OS 4.3<br/>Kubernetes 1.16|EKS 1.17|AKS 1.17.7|GKE 1.16|
 
 |DX CF Releases|Red Hat OpenShift|Amazon EKS|
 |--------------|-----------------|----------|
-|CF202|OS 4.7Kubernetes 1.20  
- \(Standalone Linux + Clustered Linux\)
-
-|EKS 1.19 \(Clustered Linux\)|
-|CF201|OS 4.7Kubernetes 1.20  
- \(Standalone Linux + Clustered Linux\)
-
-|EKS 1.19 \(Clustered Linux\)|
-|CF200|OS 4.7Kubernetes 1.20
-
-\(Standalone Linux + Clustered Linux\)|EKS 1.19 \(Clustered Linux\)|
-|CF199|OS 4.7Kubernetes 1.20
-
-\(Standalone Linux + Clustered Linux\)|EKS 1.19 \(Clustered Linux\)|
-|CF198|OS 4.7-   Kubernetes 1.20
-
-OS 4.5
-
--   Kubernetes 1.18
-
+|CF202|OS 4.7<br/>Kubernetes 1.20<br/>\(Standalone Linux + Clustered Linux\)|EKS 1.19 \(Clustered Linux\)|
+|CF201|OS 4.7<br/>Kubernetes 1.20<br/>\(Standalone Linux + Clustered Linux\)|EKS 1.19 \(Clustered Linux\)|
+|CF200|OS 4.7<br/>Kubernetes 1.20<br/>\(Standalone Linux + Clustered Linux\)|EKS 1.19 \(Clustered Linux\)|
+|CF199|OS 4.7<br/>Kubernetes 1.20<br/>\(Standalone Linux + Clustered Linux\)|EKS 1.19 \(Clustered Linux\)|
+|CF198|OS 4.7<br/>Kubernetes 1.20<br/>OS 4.5<br/>Kubernetes 1.18
 |NA|
-|CF197|OS 4.5Kubernetes 1.18
-
-|NA|
-|CF196|OS 4.5Kubernetes 1.18
-
-|NA|
-|CF195|OS 4.5Kubernetes 1.18
-
-|NA|
-|CF194|OS 4.5Kubernetes 1.18
-
-|NA|
-|CF193|OS 4.5Kubernetes 1.18
-
-|NA|
-|CF192|OS 4.4Kubernetes 1.17
-
-|NA|
-|CF191|OS 4.4Kubernetes 1.17
-
-|NA|
-|CF19|OS 4.3Kubernetes 1.16
-
-|NA|
-|CF184|OS 4.3Kubernetes 1.16
-
-|NA|
+|CF197|OS 4.5<br/>Kubernetes 1.18|NA|
+|CF196|OS 4.5<br/>Kubernetes 1.18|NA|
+|CF195|OS 4.5<br/>Kubernetes 1.18|NA|
+|CF194|OS 4.5<br/>Kubernetes 1.18|NA|
+|CF193|OS 4.5<br/>Kubernetes 1.18|NA|
+|CF192|OS 4.4<br/>Kubernetes 1.17|NA|
+|CF191|OS 4.4<br/>Kubernetes 1.17|NA|
+|CF19|OS 4.3<br/>Kubernetes 1.16|NA|
+|CF184|OS 4.3<br/>Kubernetes 1.16|NA|
 
 **Parent topic:**[Digital Experience on containerized platforms](../containerization/deployment.md)
 
