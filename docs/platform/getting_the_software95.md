@@ -20,7 +20,7 @@ There are different paths that you will start from depending on your current sce
 2.  HCL Digital Experience 9.5 deployment to supported platforms, including Docker or OpenShift/Kubernetes with Docker
 3.  Updating an existing HCL Digital Experience 8.5 or 9.0 system
 
-Users can also test the new HCL Digital Experience API Docker image and run it. Visit the [Experience API documentation](../open_api/openapi_overview.html) to learn more.
+Users can also test the new HCL Digital Experience API Docker image and run it. Visit the [Experience API documentation](../design/api/openapi_overview.md) to learn more.
 
 ## Fresh full installation
 
@@ -41,7 +41,7 @@ The path from an existing HCL Digital Experience 8.5 or 9.0 system to HCL Digita
 
 Afterwards, users start the IBM Installation Manager, then configure the 9.5 repository, and add 9.5. Users who are using HCL Portal Enable, HCL Portal Extend, or HCL Web Content Manager need to add both the HCL Portal 9.5 Server and the applicable edition via IBM Installation Manager.
 
--   Documentation resource: [Fixlist of fixes included in CF17](../overview/new_cf17.html)
+-   Documentation resource: [Fixlist of fixes included in CF17](../whatsnew/new_cf17.md)
 -   Documentation resource: [Combined Cumulative fix strategy for 9.5](../overview/ccf_strategy95.md)
 
 ## Deployment of HCL Digital Experience to Docker and supported Kubernetes platforms
@@ -51,8 +51,7 @@ The following is the installation path from an existing HCL Digital Experience 8
 1.  Download the HCL Digital Experience 9.5 container image files that contains the following:
     -   HCL Digital Experience Docker container; and
     -   The Operator or Ambassador Docker container with a set of scripts to deploy the supported Kubernetes platforms.
-2.  Follow the [documentation here](../docker/docker_overview.html) to deploy to Docker or supported Kubernetes platforms.
+2.  Follow the [documentation here](../platform/docker-compose/docker_overview.md) to deploy to Docker or supported Kubernetes platforms.
 3.  Stage the content to the new environment to move from an existing system to HCL Digital Experience on Docker or supported Kubernetes platforms.
 
-**Parent topic:**[HCL Digital Experience 9.5 Product Documentation](../welcome/wp95_welcome.md)
 

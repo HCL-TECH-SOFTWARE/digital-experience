@@ -21,6 +21,3 @@ Take advantage of new step by step guidance for HCL Digital Experience practitio
 -   [HCL Digital Experience Combined Cumulative Fix \(CF\) Installation](ccf_strategy95.md)
 -   [Deploy HCL Digital Experience 9.5 to Red Hat OpenShift](../containerization/openshift.md)
 -   [Deploy Digital Asset Management, Content Composer and Experience API to Red Hat OpenShift](../containerization/install_config_cc_dam.md)
-
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
-

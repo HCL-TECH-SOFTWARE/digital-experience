@@ -19,5 +19,3 @@ The HCL Digital Experience containers are launched by running a runtime instance
 3.  Once you have completed a Digital Experience 9.5 Container deployment, to update the DX 9.5 container images to the latest Container Update releases, follow steps outlined in the Container Maintenance Help Center topic in this section.
     -   Documentation resource: [Maintenance](../containerization/maintenance.md)
 
-**Parent topic:**[DX on Docker](../docker/dxondocker.md)
-

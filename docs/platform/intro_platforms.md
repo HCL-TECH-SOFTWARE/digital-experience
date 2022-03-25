@@ -1,4 +1,4 @@
-# Platform
+# Supported Platforms
 
 HCL DX provides several deployment options for various purposes.
 

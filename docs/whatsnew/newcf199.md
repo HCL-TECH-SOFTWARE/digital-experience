@@ -52,6 +52,3 @@ Take advantage of new step-by-step guidance for HCL Digital Experience practitio
 
 -   Video: [Deploy HCL DX 9.5 Container Update using Helm](../containerization/helm_deployment.md)
 -   Video: [Experience API V2 Web Content Manager REST APIs](../open_api/openapi_overview.md)
-
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
-

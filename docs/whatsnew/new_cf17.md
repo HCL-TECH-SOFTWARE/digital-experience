@@ -6,5 +6,4 @@ Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_ar
 
 Also, see the following link for Portal maintenance guidance: [HCL Digital Experience Roadmap: Applying maintenance](../install/rm_cf.md)
 
-**Parent topic:**[Latest Combined CF and 9.5 Container Updates](../overview/new_cf_95.md)
 

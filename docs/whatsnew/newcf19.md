@@ -65,6 +65,3 @@ Take advantage of new step by step guidance for HCL Digital Experience practitio
 
 -   [Configure the OpenLDAP container image to the HCL DX 9.5 Container Deployment](../../9.5/containerization/configure_openldap_image.md)
 -   [How to manage syndicators and subscribers](../../9.5/panel_help/wcm_syndication.md)
-
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
-

@@ -53,6 +53,3 @@ Take advantage of new step-by-step guidance for HCL Digital Experience practitio
 -   [Configuring user access permissions to Digital Asset Management assets](../digital_asset_mgmt/manage_collections.md)
 -   [Deep dive: Progressive Web Applications with HCL DX 9.5](../install/progressive_web_applications.md)
 -   [Content Security Policy with HCL DX 9.5](../security/content_security_policy.md)
-
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
-

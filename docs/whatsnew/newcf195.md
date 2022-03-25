@@ -56,6 +56,3 @@ Take advantage of new step-by-step guidance for HCL Digital Experience practitio
 -   [Understanding the Core Persistent Volumes in HCL Digital Experience Container Update CF194](../containerization/sample_storage_class_volume.md)
 -   [Create a WebDAV Theme copy using HCL Digital Experience 9.5](../dev-theme/themeopt_themedev_manual_webdav.md)
 -   [Create and apply A/B personalized scenarios with HCL Digital Experience](../pzn/pzn_overview.md)
-
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
-
