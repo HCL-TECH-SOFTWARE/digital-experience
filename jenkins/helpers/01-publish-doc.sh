@@ -16,4 +16,5 @@ ssh-keyscan git.cwp.pnp-hcl.com >> /root/.ssh/known_hosts
 git clone git@git.cwp.pnp-hcl.com:CWPdoc/dx-mkdocs.git
 
 # Perform GH pages deploy
+cd dx-mkdocs
 mkdocs gh-deploy --force
