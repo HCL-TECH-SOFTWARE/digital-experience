@@ -1,12 +1,14 @@
 title: Kubernetes Deployment 
 nav:
     - overview.md
+    - docker.md
     - limitations_requirements.md
+    - c_kubesupportstatement.md
     - architecture
     - deployment
     - operations
     - operator-migration
-    - oldstuff
+    # - oldstuff
    #  - docker
 
    #  - Digital Experience on Docker: docker.md

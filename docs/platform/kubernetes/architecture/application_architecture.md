@@ -2,7 +2,7 @@
 
 This topic provides a list of all DX applications and resource definitions that configure the application runtime and are deployed to containers using Helm on OpenShift or Kubernetes platforms. As outlined in the overview, applications can also include ConfigMaps, Secrets, and Ingress.
 
-For more information about Helm applications, consult the [Helm documentation](https://helm.sh/docs/). Refer to the DX 9.5 Container component image listing in the DX 9.5 Docker [Image file listing](docker.md) topic.
+For more information about Helm applications, consult the [Helm documentation](https://helm.sh/docs/). Refer to the DX 9.5 Container component image listing in the DX 9.5 Docker [Image file listing](../docker.md) topic.
 
 Do note that each application defined only lists its next direct dependencies. Sub-dependencies are not explicitly listed.
 
@@ -16,7 +16,7 @@ HCL DX 9.5 CF196 and later Core contains the primary Portal and Web Content Mana
 
 **Note:** Application of the hybrid deployment pattern is not yet supported with Helm in HCL DX 9.5 Container Update CF196, and will be added in a later update release.
 
-![DX 9.5 Core Application Definition](../../../images/DX%209.5%20Core%20Application%20Definition.png "DX 9.5 Core Application definition")
+![DX 9.5 Core Application Definition](../../../images/DX%209.5%20Core%20Application%20Definition.png)
 
 ## Ring API
 
@@ -26,7 +26,7 @@ HCL DX 9.5 CF196 and later Core contains the primary Portal and Web Content Mana
 
 The Ring API, a component of the [HCL DX Experience API](../../../design/api/openapi_overview.md), is a REST API wrapping Core functionality. It provides easy-to-use API endpoints and requires that a DX Core 9.5 instance is deployed and started. That instance can either be running inside the Kubernetes or OpenShift deployment or be an existing external on-premise DX-Core installation using the Hybrid pattern.
 
-![Ring API Application definition](../../../images/Ring%20API%20Application%20definition.png "Ring API Application definition")
+![Ring API Application definition](../../../images/Ring%20API%20Application%20definition.png)
 
 ## Content Composer
 

@@ -14,15 +14,15 @@ Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators
 
 See the following Help Center topics for more information:
 
--   [HCL DX 9.5 Helm deployment](../containerization/helm.md)
--   [Configure PersistentVolumeClaims \(PVCs\)](../containerization/helm_persistent_volume_claims.md#)
--   [Additional Helm Tasks](../digital_asset_mgmt/digital_asset_mgmt_overview.md)
+-   [HCL DX 9.5 Helm deployment](../platform/kubernetes/architecture/helm_overview.md)
+-   [Configure PersistentVolumeClaims \(PVCs\)](../platform/kubernetes/deployment/preparation/helm_persistent_volume_claims.md)
+-   [Additional Helm Tasks](../design/digital_asset_mgmt/digital_asset_mgmt_overview.md)
 
 ## Digital Asset Management
 
-New Digital Asset Management \(DAM\) capability enables developers and release managers to use the DXClient capability to Export and Import DAM assets from source to a File system and Import from File system to target DX 9.5 deployment. Enhancements are also available for content authors to access DAM asset versions by name and as reflected in Friendly URLs.
+New Digital Asset Management \(DAM\) capability enables developers and release managers to use the DXClient capability to Export and Import DAM assets from source to a File system and Import from File system to target DX 9.5 deployment. Enhancements are also available for content authors to fix the duplicate DAM asset names in a particular collection, and there are new DAM APIs that allow you to access the assets by versions, name, and as reflected in the friendly URLs.
 
-See the [Deploy DX components using HCL DXClient and DXConnect](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md) and [Digital Asset Management Help Center](../digital_asset_mgmt/digital_asset_mgmt_overview.md) topics for more information.
+See the [Deploy DX components using HCL DXClient and DXConnect](../design/integrationtools/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md) and [Digital Asset Management Help Center](../design/digital_asset_mgmt/digital_asset_mgmt_overview.md) topics for more information.
 
 ## Design Studio \(Beta\)
 
@@ -30,47 +30,47 @@ Design Studio enables content managers and designers to build and style their di
 
 **Note:** Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF202, and includes a sample DX site.  It is not yet supported for use in production deployments. 
 
-See the [Design Studio \(Beta\)](../design_studio/design_studio_overview.md) Help Center topic for more information. 
+See the [Design Studio \(Beta\)](../design/design_studio/design_studio_overview.md) Help Center topic for more information. 
 
 ## Digital Experience Cloud Native 9.5 offering
 
 Beginning with [HCL Digital Experience 9.5 Container Update CF202](new_cf_95.md), HCL Digital Experience Cloud Native 9.5 is available as a new offering option for customers to deploy the cloud-native Digital Experience 9.5 components and services on the Kubernetes container environments. HCL Digital Experience Cloud Native 9.5 is available with cloud-friendly subscription pricing.
 
-See the *Digital Experience Cloud Native 9.5 details* in the [Digital Experience Overview](intro_container.md) Help Center topic.
+See the *Digital Experience Cloud Native 9.5 details* in the [Digital Experience Overview](../platform/intro_platforms.md) Help Center topic.
 
 ## Digital Experience REST API Explorers
 
 Developers can accelerate development tasks using a set of Explorers provided for REST APIs available for use with HCL Digital Experience deployments to on premises platforms, and HCL Digital Experience 9.5 deployments to supported Kubernetes Container platforms. Developers can also initiate and test transactions or other capabilities using the DX REST API explorers.
 
-See the [Digital Experience REST API Explorers](../dev/api_explorers.md) Help Center topic for more information.
+See the [Digital Experience REST API Explorers](../design/api/api_explorers.md) Help Center topic for more information.
 
 ## Digital Experience Remote Model REST API Explorer
 
 The Digital Experience Remote Model REST API Explorer can be used by developers creating solutions for HCL DX on premises and HCL DX 9.5 container deployments to explore and test the Remote Model APIs.
 
-See the [Digital Experience Remote Model REST API Explorer](../dev/remote_model_rest_api.md) Help Center topic for more information.
+See the [Digital Experience Remote Model REST API Explorer](../design/api/remote_model_rest_api.md) Help Center topic for more information.
 
-## HCL Digital Experience Release Artifacts supporting CICD release processes
+## Enhancements to DXClient
 
 The HCL Digital Experience DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and to automate processes in the development and delivery process. Updates include ability to Export and Import DAM assets from source to a File system and Import from File system to target DX 9.5 deployment, and DXConnect parameter updates.
 
-See the [Deploy DX components using HCL DXClient and DXConnect](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md) Help Center topic for more information.
+See the [Deploy DX components using HCL DXClient and DXConnect](../design/integrationtools/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md) Help Center topic for more information.
 
 ## Personalization REST APIs
 
 Personalization REST APIs supporting Personalization Folder Update and Delete operations are available with HCL Digital Experience Container Update and CF202.
 
-See the Help Center topics [Personalization Folder APIs](../pzn/dev_pzn_folders_api.md#) and [Personalization Rules APIs](../pzn/dev_pzn_rules_api.md) for more information.
+See the Help Center topics [Personalization Folder APIs](../design/api/dev_pzn_folders_api.md) and [Personalization Rules APIs](../design/api/dev_pzn_rules_api.md) for more information.
 
 ## Track User sessions in Digital Experience Deployments using Google Analytics
 
 Guidance is added to the Active Site Analytics integration for Google Analytics to track user sessions in Digital Experience deployments.
 
-See the [Integrate Google Analytics with HCL Digital Experience](../install/integrate_google_analytics.md) Help Center topic for more information.
+See the [Integrate Google Analytics with HCL Digital Experience](../design/admin/integrate_google_analytics.md) Help Center topic for more information.
 
 ## Updates to Woodburn Studio Demo Site customizations during upgrades
 
-A new optional process is added to retain customizations made to the [Woodburn Studio demonstration site](../woodburn_studio/update_pages_optional.md) during a Digital Experience upgrade.
+A new optional process is added to retain customizations made to the [Woodburn Studio demonstration site](../design/woodburn_studio/woodburn_studio.md) during a Digital Experience upgrade.
 
 See the [Upgrade to Woodburn Studio Pages Optional](../woodburn_studio/update_pages_optional.md) Help Center topic for additional information.
 
@@ -82,7 +82,7 @@ See the [HCL Digital Experience section](https://academy.hcltechsw.com/#HCLDXLea
 
 ## New Digital Experience 9.5 How-To Video:
 
-[Update HCL DX 9.5 Container to a later DX version using Helm](../containerization/helm_deployment.md)
+[Update HCL DX 9.5 Container to a later DX version using Helm](https://www.youtube.com/watch?v=TwZuNOeWdT4)
 
-**Parent topic:**[Container Update releases ](../overview/container_update_releases.md)
+
 
