@@ -1,4 +1,5 @@
 title: Operator to Helm migration
 nav:
     - operator_migration_preparation.md
+    - helm_operator_core_migration.md
     - ...
