@@ -117,7 +117,7 @@ After a successful Helm deployment in a hybrid deployment, you can add a load ba
 
 -   For Amazon EKS, you must add the external IP to route53.
 
-    ![](../images/helm_dns_eks_host_override_route.png "Sample configuration for Amazon EKS")
+    ![Sample configuration for Amazon EKS](../../../images/helm_dns_eks_host_override_route.png)
 
 
 ## \(Optional\) Automated host extraction

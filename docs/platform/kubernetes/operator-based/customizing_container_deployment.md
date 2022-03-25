@@ -19,13 +19,13 @@ Customers need to follow the recommended deployment model to ensure the availabi
 
 Customizing the deployment requires updating the deploy/crds/git.cwp.pnp-hcl.com\_v1\_dxdeployment\_cr.yamlfile located in the hcl-dx-cloud-scripts/deploy/crds directory in the HCL Digital Experience 9.5 platform packages deployed.
 
-![](../images/container_deployment_file_location.png "Deploy scripts")
+![Deploy scripts](../../../images/container_deployment_file_location.png)
 
 Reference the HCL Digital Experience [Deployment topic](deployment.html) for the list of supported platforms and latest HCL DX 9.5 container package list files that can be downloaded from your HCL Digital Experience entitlements on the HCL Software License Portal.
 
 Once modified, the `deployDx.sh` or the `updateDx.sh` scripts should be run to perform \(or update\) the target deployment.
 
-![](../images/update_script_location.png "Update script location")
+![Update script location](../../../images/update_script_location.png)
 
 **Note:** All modifications should be made to the custom resource instance and **not the individual parts** of the deployment.
 
@@ -39,7 +39,7 @@ Once modified, the `deployDx.sh` or the `updateDx.sh` scripts should be run to p
 
         By default, the volume size is **100 GB**. This can be modified by changing the following:
 
-        ![](../images/container_custom_volume_size.png "Volume size")
+        ![Volume size](../../../images/container_custom_volume_size.png)
 
         **Note:** The `volume name` and `storageClassName` should not be modified here.
 
@@ -47,7 +47,7 @@ Once modified, the `deployDx.sh` or the `updateDx.sh` scripts should be run to p
 
         By default, the resource requests are set at `**2**` CPU and `**7G**` RAM. These values can be changed. It is recommended to adjust the server heap size before changing these values.
 
-        ![](../images/container_custom_resources.png "Resources")
+        ![Resources](../../../images/container_custom_resources.png)
 
         **Note:** Limits are not enforced in the initial 9.5 release.
 
@@ -71,7 +71,7 @@ Once modified, the `deployDx.sh` or the `updateDx.sh` scripts should be run to p
             dx.deploy.dxcore.resources.scale.minreplicas: '1'
             ```
 
-            ![](../images/custom-resource-allocation.png "Custom resource allocation")
+            ![Custom resource allocation](../../../images/custom-resource-allocation.png)
 
     -   Routes/Ingress
 
@@ -81,29 +81,31 @@ Once modified, the `deployDx.sh` or the `updateDx.sh` scripts should be run to p
 
         You can enable or disable any route and change the name of the secret to be used in the TLS context. The Configuration Wizard is still impacted by the number of running instances.
 
-        ![](../images/custom-dx-routes.png "Custom DX routes")
+        ![Custom DX routes](../../../images/custom-dx-routes.png)
 
     -   Probes
 
         The default readiness and liveness probes run against the ../ibm/console. This can and should be overridden.
 
-        ![](../images/container_custom_probes.png "Probes")
+        ![Probes](../../../images/container_custom_probes.png)
 
-        **Notes:** There are two types of checks:
+        !!! notes "Notes"
+            There are two types of checks:
 
-        -   `**command**` runs a command against the server
-        -   `**http**` hits either an **http** or an **https** URL. The syntax and required fields are shown in the above image.
+            -   `**command**` runs a command against the server
+            -   `**http**` hits either an **http** or an **https** URL. The syntax and required fields are shown in the above image.
+        
         -   **Logging**
 
             By default, logging is done on the shared profile so all instances are writing to a single set of logs, with the volume set for each instance at `**1G**`. For diagnosing production issues this is not ideal. This option allows each instance to write the log to its own log directory.
 
-            ![](../images/container_custom_logging.png "Custom logging")
+            ![Custom logging](../../../images/container_custom_logging.pn)
 
-            **Notes:**
+            !!! notes "Notes:"
 
-            -   The environment must have a self-provisioning storage class provisioner.
-            -   `**Enabled**` must be set to `**true**`.
-            -   Adjusting the log settings must be done to prevent running out of disk storage.
+                -   The environment must have a self-provisioning storage class provisioner.
+                -   `**Enabled**` must be set to `**true**`.
+                -   Adjusting the log settings must be done to prevent running out of disk storage.
 
                 See the [Logging and tracing for containers and new services](../trouble/logging_tracing_containers_and_new_services.md) Help Center topic for additional information.
 
@@ -111,11 +113,12 @@ Once modified, the `deployDx.sh` or the `updateDx.sh` scripts should be run to p
 
             By default, the deployment uses the default DX ports. The routes in these ports expose Portal through **http** and **https**.
 
-            ![](../images/container_custom_ports.png "Custom ports")
+            ![Custom ports](../../../images/container_custom_ports.png)
 
-            **Note:** If there is a need to configure the containerized Portal to use different ports, the defaults can be overwritten.
+            !!! note
+            
+            If there is a need to configure the containerized Portal to use different ports, the defaults can be overwritten.
 
 5.  Once modified, the `deployDx.sh` and the `updateDx.sh` scripts should be run to create \(or update\) the target deployment.
 
-**Parent topic:**[Customizing your container deployment](../containerization/customization.md)
 
