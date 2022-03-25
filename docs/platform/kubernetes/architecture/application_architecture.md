@@ -14,7 +14,8 @@ Do note that each application defined only lists its next direct dependencies. S
 
 HCL DX 9.5 CF196 and later Core contains the primary Portal and Web Content Manager HCL Digital Experience functionality. The standard deployment deploys at least one Pod of Core. If you have an existing on-premise installation of DX 9.5 Core, you can also use that one for your deployment using the Hybrid deployment pattern as described in the DX 9.5 [Hybrid deployment](../../hybrid/hybrid_deployment_operator.md) topic.
 
-**Note:** Application of the hybrid deployment pattern is not yet supported with Helm in HCL DX 9.5 Container Update CF196, and will be added in a later update release.
+!!! note
+   Application of the hybrid deployment pattern is not yet supported with Helm in HCL DX 9.5 Container Update CF196, and will be added in a later update release.
 
 ![DX 9.5 Core Application Definition](../../../images/DX%209.5%20Core%20Application%20Definition.png)
 

@@ -48,5 +48,4 @@ The Digital Experience Core Configuration API allows developers to retrieve Digi
 
 The Web Developer toolkit for HCL Digital Experience provides the ability to sync themes, content and script portlets \(also known as Script Applications\). It is available on the HCL Digital Experience GitHub repository. See [Web Developer Toolkit](../dev/web_developer_toolkit.md) for details.
 
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
 

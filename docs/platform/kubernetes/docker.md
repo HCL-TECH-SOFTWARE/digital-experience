@@ -217,7 +217,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
     !!! important
     
-        **Important:** With the Operator-based deployment being removed starting in HCL DX Container Update 9.5 CF200, you will find some changes in the list of files and their names in CF199 and later releases. For more information, see [List of image files and changes from CF198 and later](#simpletable_cst_4lf_yrb).
+       With the Operator-based deployment being removed starting in HCL DX Container Update 9.5 CF200, you will find some changes in the list of files and their names in CF199 and later releases. For more information, see [List of image files and changes from CF198 and later](#simpletable_cst_4lf_yrb).
 
     -   ```
         hCL DX notices V9.5 CF200.txt
@@ -404,7 +404,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 !!! important
 
-    **Important:** With the Operator-based deployment being deprecated in CF198 and planned to be removed in HCL DX Container Update 9.5 CF200, you will find some changes in the list of files and their names in CF199 and later releases.
+     With the Operator-based deployment being deprecated in CF198 and planned to be removed in HCL DX Container Update 9.5 CF200, you will find some changes in the list of files and their names in CF199 and later releases.
 
 |Component|Image name|CF198|CF199|
 |---------|----------|-----|-----|
@@ -429,7 +429,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 !!! note
 
-    **Note:** The new image files and the change in file names are highlighted in the table.
+   The new image files and the change in file names are highlighted in the table.
 ## HCL DX 9.5 CF198
 
 -   **CF198**
@@ -791,7 +791,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 -   **CF194**
 
     !!! important
-        Important: Please consult the HCL DX Support Knowledge Base article, [Manual Steps to Apply the Digital Experience 9.5 Container Deployment Core Certificate Update](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0089699), to apply the certificate update to your HCL DX 9.5 container deployment.
+        Please consult the HCL DX Support Knowledge Base article, [Manual Steps to Apply the Digital Experience 9.5 Container Deployment Core Certificate Update](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0089699), to apply the certificate update to your HCL DX 9.5 container deployment.
 
     If deploying HCL DX 9.5 CF194 release, the package name and images are as follows:
 
@@ -1084,7 +1084,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
     !!! note
 
-       **Note:** HCL DX 9.5 CF191 images are available and may be installed. HCL DX 9.5 CF191 is supported for new deployments only. DX administrators should not upgrade DX 9.5 container deployments to this release.
+       HCL DX 9.5 CF191 images are available and may be installed. HCL DX 9.5 CF191 is supported for new deployments only. DX administrators should not upgrade DX 9.5 container deployments to this release.
 
 ## HCL DX 9.5 CF19
 

@@ -58,6 +58,3 @@ Take advantage of new step-by-step guidance for HCL Digital Experience practitio
 View the latest Kubernetes and OpenShift platforms tested and supported for specific HCL Digital Experience 9.5 Container Update deployments.
 
 See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../containerization/c_kubesupportstatement.md) topic for more information.
-
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
-

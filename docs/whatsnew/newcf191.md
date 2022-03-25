@@ -13,6 +13,3 @@ The [HCL Solution Factory](https://sofy-kc.hclsofy.com/auth/realms/sofySolution/
 ## HCL Digital Experience 9.5 Integration with HCL Commerce
 
 [HCL Commerce integration](https://www.hcltechsw.com/products/commerce) with [HCL Digital Experience](https://www.hcltechsw.com/dx/features) allows content and digital assets managed within HCL Digital Experience to be utilized in any Commerce store. Visit the HCL Commerce Help Center [Digital Experience integration](https://help.hcltechsw.com/commerce/9.1.0/integration/concepts/dx_introduction.md) for more information and pre-requisites.
-
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
-

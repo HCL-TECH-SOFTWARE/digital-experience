@@ -246,6 +246,3 @@ Follow the steps below to enable Hybrid deployment support in the HCL Digital Ex
 
     ![Validate the Web Content and Digital Assets menu items](../assets/validate_Web_Content_and_Digital_Assets_menu_items.png)
 
-
-**Parent topic:**[Digital Experience on containerized platforms](../containerization/deployment.md)
-

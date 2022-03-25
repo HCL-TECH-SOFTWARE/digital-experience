@@ -66,6 +66,3 @@ Take advantage of new step-by-step guidance for HCL Digital Experience practitio
 -   [HCL Digital Experience 9.5 Container Deployment](../containerization/deployment.md)
 -   [Using the dxctl tool to deploy Digital Experience 9.5 on Red Hat OpenShift](../containerization/dxtools_dxctl.md)
 -   [Create a WAR-based theme copy on HCL Digital Experience 9.5](../dev-theme/themeopt_themedev_manual_warbased.md)
-
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
-

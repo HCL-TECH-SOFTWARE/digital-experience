@@ -23,5 +23,3 @@ Combined Cumulative Fix \(CF17\) includes new software fixes for the latest vers
 -   **[Container Update releases 9.5](../whatsnew/container_update_releases.md)**  
 The HCL Digital Experience 9.5 Cumulative Fix and Container Update releases offer new features and software fixes for the HCL Digital Experience 9.5 container releases. Beginning with Container Update release CF196, release updates for both on-premises deployments and container platforms are available.
 
-**Parent topic:**[What's new in HCL Digital Experience?](../whatsnew/intr_new_ov.md)
-

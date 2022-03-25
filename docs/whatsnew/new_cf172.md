@@ -22,5 +22,3 @@ Read the updates to HCL Digital Experience 9.5 detailed system support statement
 
 You can go to the [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release) to access and download product software. See the [Step-by-step guide to downloading DX products and accessing Customer Support](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878) for more information.
 
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
-

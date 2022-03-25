@@ -61,6 +61,3 @@ Take advantage of step-by-step guidance for HCL Digital Experience practitioners
 ## End of Support for HCL Digital Experience Deprecated Features
 
 The following list of HCL Digital Experience deprecated features will reach end of support beginning with HCL Digital Experience Container update and CF 200. Reference the Help Center topic [Deprecated features and themes for HCL Digital Experience 9.5](../reference/newly_deprecated_features_and_themes.md).
-
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
-
