@@ -18,3 +18,8 @@
 [dir=rtl] .md-header__title {
     margin-right: 0;
 }
+
+.announcement__link {
+    color: white !important;
+    text-decoration: underline;
+}
