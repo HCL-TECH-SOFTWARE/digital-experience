@@ -92,7 +92,7 @@ The following section describes the requirements to deploy the HCL Digital Exper
         -   Customers should not modify the [HCL Digital Experience 9.5 Docker images](docker.md) provided by HCL for deployment. This restriction includes use of these images as a base to create a new image, which results in a new image ID and an unsupported configuration. Instead, customers deploying the images should follow best practices and maintain customizations in the wp\_profile and the deployment database. Scripts and custom files should be stored in wp\_profile \(/opt/HCL/wp\_profile/\). See the [Deployment](/operator-based/dxtools_dxctl.md) Help Center topics for more information
         -   Customers should not run multiple HCL Digital Experience 9.5 container deployments in a single Kubernetes namespace \(in the case of Red Hat OpenShift, in a single OpenShift project\).  This configuration is not supported at this time.
         -   It is not supported to run two different versions of HCL Digital Experience 9.5 container deployments in a single Kubernetes cluster.
-    -   Use of [Web Application Bridge](../../design/integrationtools/wab.md)is currently unsupported on HCL Digital Experience 9.5 deployments to container platforms such as Kubernetes and Red Hat OpenShift, using the Operator-based deployment method.
+    -   Use of [Web Application Bridge](../../design/integrationtools/wab.md) is currently unsupported on HCL Digital Experience 9.5 deployments to container platforms such as Kubernetes and Red Hat OpenShift, using the Operator-based deployment method.
     -   Beginning with HCL DX Container Update CF199, Web Application Bridge can be used in container deployments using the Helm deployment method.
 
 -   **Supported file system requirements**:

@@ -2,7 +2,7 @@
 
 This topic provides details covering the PersistentVolumes \(PVs\) and related operations considerations in storing data for DX 9.5 stateful applications.
 
-Digital Experience 9.5 container-based stateful applications \(DX 9.5 Core, Digital Asset Management, and Persistence\) require PersistentVolumes \(PVs\) to store their data. Refer to the [Deploy DX 9.5 applications to container platforms using Helm](deploy_applications_using_helm.md) topic for a description of the DX 9.5 Applications details.
+Digital Experience 9.5 container-based stateful applications \(DX 9.5 Core, Digital Asset Management, and Persistence\) require PersistentVolumes \(PVs\) to store their data. Refer to the [Deploy DX 9.5 applications to container platforms using Helm](../architecture/application_architecture.md) topic for a description of the DX 9.5 Applications details.
 
 As Kubernetes and OpenShift Pods do not have their own persistent file storage, the use of PVs is a must. For more information on PVs, consult the [Kubernetes documentation](https://kubernetes.io/docs/concepts/storage/persistent-volumes/).
 
@@ -26,11 +26,11 @@ To deploy one Core Pod, 3 PVs will be needed. To deploy two Core Pods, the numbe
 
 The following formula example can be used to calculate the required PV count per Core Pods to be deployed:
 
-```
-# Formula to calculate PV count
-n(PV) = 1 + m(Core Pods) * 2
-# E.g. for 3 Pods: 1 + 3 * 2 = 7 PVs
-```
+  ```
+  # Formula to calculate PV count
+  n(PV) = 1 + m(Core Pods) * 2
+  # E.g. for 3 Pods: 1 + 3 * 2 = 7 PVs
+  ```
 
 In typical operations, the persistent volumes for logs and transaction logs are relatively small.
 
@@ -52,7 +52,4 @@ Remote Search requires 1 persistent volume for storing the profile \(called `prs
 
 Remote Search is limited to only one Pod, therefore, requires one PV for that Pod.
 
-Refer to **[Networking configuration](helm_configure_networking.md)** for next steps.
-
-**Parent topic:**[Overview of the Helm architecture](../containerization/helm_overview.md)
-
+Refer to **[Networking configuration](../deployment/preparation/prepare_configure_networking.md)** for next steps.

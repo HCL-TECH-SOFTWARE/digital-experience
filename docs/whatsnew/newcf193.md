@@ -61,6 +61,3 @@ Take advantage of new step-by-step guidance for HCL Digital Experience practitio
 -   [Deploy HCL Digital Experience in Minutes using HCL Solution Factory](../containerization/deployment.md)
 -   [Using the dxctl tool to Update Digital Experience 9.5 on Red Hat OpenShift](../containerization/update_dx_core_kubernetes_container_deployment.md)
 -   [How to Upload HCL Digital Experience 9.5 CF Container Images to a Private Repository](../containerization/docker.md)
-
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
-

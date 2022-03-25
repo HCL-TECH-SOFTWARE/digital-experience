@@ -19,15 +19,15 @@ For the above mentioned DX applications, the maximum and minimum count of Replic
 
 Per default, the automated scaling is not active and needs to be enabled before taking effect.
 
-## Known limitations
+!!! Known limitations "Known limitations"
 
--   **Core**
+   -   **Core**
 
-    The HCL Digital Experience 9.5 Core can only be scaled to more than one Pod if you have performed a database transfer from the default packaged Derby database. Prior to that, any other additional Pod except for Pod-0 fails to start, since the default packaged Derby database does not allow for multiple Pods connecting to it.
+       The HCL Digital Experience 9.5 Core can only be scaled to more than one Pod if you have performed a database transfer from the default packaged Derby database. Prior to that, any other additional Pod except for Pod-0 fails to start, since the default packaged Derby database does not allow for multiple Pods connecting to it.
+       
+   -   **Persistence**
 
--   **Persistence**
-
-    The Persistence used for Digital Asset Management currently supports scaling only with the updated persistence feature. For more information, see [Digital Asset Management persistence architecture](dam_persistence_architecture.md).
+       The Persistence used for Digital Asset Management currently supports scaling only with the updated persistence feature. For more information, see [Digital Asset Management persistence architecture](dam_persistence_architecture.md).
 
 
 

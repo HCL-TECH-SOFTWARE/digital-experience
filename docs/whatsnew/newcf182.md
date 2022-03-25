@@ -11,6 +11,3 @@ This topic provides guidance to update artifacts in HCL Digital Experience 9.5 c
 ## Optional Digital Asset Management Storage Configuration Settings
 
 This topic outlines optional configuration steps to tune Digital Asset Management storage services Storage Class and Volume. See [Optional Digital Asset Management Storage Configuration Settings](../containerization/optional_digital_asset_management_storage_configuration_settings.md) for details.
-
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
-

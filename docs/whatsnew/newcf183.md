@@ -35,6 +35,3 @@ Take advantage of new step by step guidance for HCL Digital Experience practitio
 -   [Combined Cumulative Fix Install](ccf_strategy85.md)
 -   [Rich text editor toolbar configuration options](../wcm/wcm_config_ephox_custom.md)
 -   [Data collection and symptom analysis](../trouble/tbl_apdt_over.md)
-
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
-

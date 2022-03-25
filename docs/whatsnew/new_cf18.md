@@ -36,5 +36,4 @@ Digital Asset Management delivers a central platform to store and include rich m
 
 See the updates to the [HCL Digital Experience 9.5 detailed system support statements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514) published to the HCL Digital Experience Support site.
 
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
 

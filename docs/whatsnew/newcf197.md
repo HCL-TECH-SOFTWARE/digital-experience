@@ -38,6 +38,3 @@ Take advantage of new step-by-step guidance for HCL Digital Experience practitio
 
 -   [Updating the HCL DX 9.5 Portal & IBM WebSphere Application Server Administrator Secrets in OpenShift and Kubernetes](../containerization/update_dx_core_kubernetes_container_deployment.md)
 -   [Use Docker Compose to install HCL DX 9.5 with Cloud Components for Developer Use](../containerization/docker_compose.md)
-
-**Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
-
