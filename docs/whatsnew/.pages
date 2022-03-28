@@ -2,3 +2,5 @@ title: What's New
 order: desc
 nav:
     - ...
+    - deprecated_features.md
+    - unsupported_features.md
