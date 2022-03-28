@@ -78,5 +78,5 @@ Log files from command execution can be found in the logs directory of the DXCli
 dxclient xmlaccess -xmlFile <xml-file-with-path>
 ```
 
-**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
+
 

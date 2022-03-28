@@ -44,5 +44,5 @@ If the first command returned an error, while the second command was successful,
 
 Otherwise, you must upgrade to the new HCL DX persistence solution. For more information, see [Migrate to new DAM DB in Helm-based deployments](helm_dam_migration_newDB.md).
 
-**Parent topic:**[Digital Experience on containerized platforms](../containerization/deployment.md)
+
 

@@ -38,5 +38,5 @@ To optionally remove support for Digital Asset Management in an HCL DX virtual p
 /opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh disable-media-library-vp -DVirtualPortalContext=dam -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
 ```
 
-**Parent topic:**[Customizing your container deployment](../containerization/customization.md)
+
 

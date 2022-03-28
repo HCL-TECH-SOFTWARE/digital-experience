@@ -723,5 +723,5 @@ images:
 
 All pods created now have that secret configured for pulling DX container images.
 
-**Parent topic:**[Deploying container platforms using Helm](../containerization/helm_deployment.md)
+
 

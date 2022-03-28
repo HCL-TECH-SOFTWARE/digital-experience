@@ -33,5 +33,5 @@ This topic describes the commands that are used to create, update, delete, and r
 -   **[Managing virtual portals](../containerization/virtualportals.md)**  
 This topic describes the commands that are used in managing the virtual portal activities such as creating, listing, importing, or exporting virtual portals.
 
-**Parent topic:**[Deploy DX components using HCL DXClient and DXConnect](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)
+
 

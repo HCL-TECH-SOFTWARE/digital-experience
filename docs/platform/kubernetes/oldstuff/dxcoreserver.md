@@ -191,5 +191,5 @@ The restart-dx-core command is used to restart the DX Core server.
     ```
 
 
-**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
+
 

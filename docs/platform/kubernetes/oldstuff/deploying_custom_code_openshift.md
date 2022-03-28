@@ -224,7 +224,4 @@ OpenShift Client Jenkins Plugin (if not already installed)
     ```
 
 
-**Parent topic:**[Deploy DX 9.5 Container to Red Hat OpenShift](../containerization/openshift.md)
-
-**Parent topic:**[Digital Experience Application deployment](../containerization/ci_cd.md)
 

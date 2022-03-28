@@ -30,5 +30,5 @@ To get memory and CPU usage details for the current Kubernetes node:
 kubectl top node
 ```
 
-**Parent topic:**[Troubleshooting your Helm deployment](../containerization/helm_troubleshooting.md)
+
 

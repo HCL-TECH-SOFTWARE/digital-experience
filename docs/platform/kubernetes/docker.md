@@ -215,7 +215,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
     !!! important
     
-       With the Operator-based deployment being removed starting in HCL DX Container Update 9.5 CF200, you will find some changes in the list of files and their names in CF199 and later releases. For more information, see [List of image files and changes from CF198 and later](#simpletable_cst_4lf_yrb).
+        With the Operator-based deployment being removed starting in HCL DX Container Update 9.5 CF200, you will find some changes in the list of files and their names in CF199 and later releases. For more information, see [List of image files and changes from CF198 and later](#simpletable_cst_4lf_yrb).
 
     -   ```
         hCL DX notices V9.5 CF200.txt
@@ -427,7 +427,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 !!! note
 
-   The new image files and the change in file names are highlighted in the table.
+    The new image files and the change in file names are highlighted in the table.
 ## HCL DX 9.5 CF198
 
 -   **CF198**
@@ -1083,7 +1083,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
     !!! note
 
-       HCL DX 9.5 CF191 images are available and may be installed. HCL DX 9.5 CF191 is supported for new deployments only. DX administrators should not upgrade DX 9.5 container deployments to this release.
+        HCL DX 9.5 CF191 images are available and may be installed. HCL DX 9.5 CF191 is supported for new deployments only. DX administrators should not upgrade DX 9.5 container deployments to this release.
 
 ## HCL DX 9.5 CF19
 
@@ -1437,9 +1437,10 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
         ```
 
 -   See the following sections for additional information:
-    -   [Docker image deployment](docker_image_deployment.md)
-    -   [Customizing the container deployment](customizing_container_deployment.md)
-    -   [Requirements and limitations](limitations_requirements.md)
+    -   [Docker image deployment](../docker-compose/docker_image_deployment.md)
+    -   [Requirements and limitations](../kubernetes/limitations_requirements.md)
+    -   [Customizing the container deployment](../kubernetes/operator-based/customizing_container_deployment.md)
+    
 
 
 

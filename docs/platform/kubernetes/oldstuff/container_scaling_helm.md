@@ -30,5 +30,5 @@ Per default, the automated scaling is not active and needs to be enabled before 
     The Persistence used for Digital Asset Management currently supports scaling only with the updated persistence feature. For more information, see [Digital Asset Management persistence architecture](dam_persistence_architecture.md).
 
 
-**Parent topic:**[Overview of the Helm architecture](../containerization/helm_overview.md)
+
 

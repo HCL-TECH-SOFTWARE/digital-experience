@@ -426,5 +426,5 @@ If some deployment resources \(such as services\) are not deleted, run the follo
 kubectl patch services $(kubectl get services -n $NAMESPACE  | grep -v "NAME" |awk  '{print $1}') -p '{"metadata":{"finalizers":null}}' -n $NAMESPACE
 ```
 
-**Parent topic:**[Deploy DX Container to Amazon EKS](../containerization/deploy_kubernetes_eks.md)
+
 

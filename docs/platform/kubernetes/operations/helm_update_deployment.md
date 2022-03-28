@@ -86,5 +86,5 @@ This manual migration process to the new DAM DB is mandatory if you have DX CF19
 -   **[Restore Digital Asset Management image to previous version](../digital_asset_mgmt/dam_restore_image_helm.md)**  
 This section shows you how to restore the HCL Digital Experience 9.5 Digital Asset Management image to a previous version. -->
 
-**Parent topic:**[Deploying container platforms using Helm](../containerization/helm_deployment.md)
+
 

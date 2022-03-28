@@ -18,5 +18,5 @@ Video: [HCL Sofy – A Quick Tour](https://youtu.be/no1BM_BZvb4)
 
 You can also refer to the HCL Software Academy on how to [Setup DX Demo in SoFy lab](https://hclsw.co/dx-demo-pack-install-lab).
 
-**Parent topic:**[Digital Experience on containerized platforms](../containerization/deployment.md)
+
 

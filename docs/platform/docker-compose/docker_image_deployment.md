@@ -65,7 +65,8 @@ Follow these steps to deploy the HCL Digital Experience 9.5 and later CF contain
     See the following sections for additional information:
 
     -   [How to upload HCL Digital Experience 9.5 CF container images to a private repository](https://youtu.be/XJONRdpgCuo)
-    -   [Docker image list](docker_image_deployment.md)
-    -   [Customizing the container deployment](customizing_container_deployment.md)
-    -   [Containerization Limitations/Requirements](limitations_requirements.md)
+    -   [Container image list](../kubernetes/docker.md)
+    -   [Containerization Limitations/Requirements](../kubernetes/limitations_requirements.md)
+    -   [Customizing the container deployment](../kubernetes/operator-based/customizing_container_deployment.md)
+
 

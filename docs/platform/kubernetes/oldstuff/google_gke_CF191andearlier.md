@@ -358,5 +358,5 @@ See the following section for additional information:
     -   Ensure you get the `'persistentvolume/your_volume edited'` message.
     -   You may need to manually remove any data remaining from the previous deployment.
 
-**Parent topic:**[Deploying HCL Digital Experience Containers to Google Kubernetes Engine \(GKE\)](../containerization/google_gke.md)
+
 

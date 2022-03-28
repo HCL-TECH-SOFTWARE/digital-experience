@@ -341,5 +341,5 @@ To update the deployment to a later HCL DX 9.5 Container Update release, perform
         ```
 
 
-**Parent topic:**[Deploying HCL Digital Experience Containers to Google Kubernetes Engine \(GKE\)](../containerization/google_gke.md)
+
 

@@ -41,5 +41,5 @@ This sample shows how to pull DXClient docker image from the given artifactory, 
 
 ![Sample pipeline for the DXClient Docker image file](../assets/dxclient-sample-pipeline-using-docker-zip-file2.png)![Sample pipeline for the DXClient Docker image file](../assets/dxclient-sample-pipeline-using-docker-zip-file3.png)
 
-**Parent topic:**[Deploy DX components using HCL DXClient and DXConnect](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)
+
 

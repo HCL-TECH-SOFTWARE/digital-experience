@@ -19,5 +19,5 @@ This sample shows how to pull DXClient docker image from the given artifactory, 
 -   **[Sample Pipelines for the DXClient node package file](../containerization/sample_pipelines_node_dxclient.md)**  
 This topic describes how to install the DXClient tool in a pipeline, by providing a few sample pipelines such as pipelines for deploying a portlet, theme, and script application. It is designed to be run from a Jenkins job with the following parameters:
 
-**Parent topic:**[Digital Experience Application deployment](../containerization/ci_cd.md)
+
 

@@ -259,5 +259,5 @@ The persistent volume associated to the deployment needs to be cleaned up by you
 -   Ensure you get the `'persistentvolume/your_namespace edited'` message.
 -   You may need to manually remove any data remaining from the previous deployment.
 
-**Parent topic:**[Container administration 9.5](../containerization/maintenance.md)
+
 

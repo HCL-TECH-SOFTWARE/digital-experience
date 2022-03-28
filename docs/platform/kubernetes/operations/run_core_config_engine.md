@@ -55,5 +55,5 @@ In an [HCL Digital Experience 9.5 Container deployment using Helm](helm.md), som
     **Note:** To reduce the impact on availability, it is recommended that you wait for a pod to be ready again before running the command for the next pod.
 
 
-**Parent topic:**[Update deployment to a later version](../containerization/helm_update_deployment.md)
+
 

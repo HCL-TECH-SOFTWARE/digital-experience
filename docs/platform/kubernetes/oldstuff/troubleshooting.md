@@ -106,5 +106,5 @@ oc api-versions
 
 [Logging and tracing for HCL Digital Experience Containers and services](../trouble/logging_tracing_containers_and_new_services.md) - Access the tracing options that can be used to capture logging and tracing for HCL Digital Experience \(DX\) 9.5 container based services with container update CF181 and higher releases.
 
-**Parent topic:**[Operator-based deployment](../containerization/deploy_container_platforms.md)
+
 

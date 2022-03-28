@@ -139,5 +139,5 @@ The deploy-application command is used to deploy the EAR file into the WebSphere
     ```
 
 
-**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
+
 

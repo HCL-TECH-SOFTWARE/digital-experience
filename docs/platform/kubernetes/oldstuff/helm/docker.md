@@ -1355,5 +1355,5 @@ hcl-dx-ambassador-image-xxxx.tar.gz
     -   [Customizing the container deployment](customizing_container_deployment.md)
     -   [Requirements and limitations](limitations_requirements.md)
 
-**Parent topic:**[Digital Experience on containerized platforms](../containerization/deployment.md)
+
 

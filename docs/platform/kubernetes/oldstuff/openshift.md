@@ -11,5 +11,5 @@ This section describes the output and artifacts created when deploying HCL Digit
 -   **[Deploying Custom Code in OpenShift](../containerization/deploying_custom_code_openshift.md)**  
 This section outlines deploying custom code to HCL Digital Experience in OpenShift.
 
-**Parent topic:**[HCL Digital Experience 9.5 Container Deployment](../containerization/deploy_supported_container_platforms.md)
+
 

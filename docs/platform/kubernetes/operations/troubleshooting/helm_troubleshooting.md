@@ -74,5 +74,5 @@ This topic describes options for monitoring an HCL Digital Experience 9.5 Kubern
 -   **[Monitor the Digital Experience deployment using metrics](../containerization/monitor_helm_deployment_metrics.md)**  
 This topic outlines the use of standards-based metrics to monitor activity and performance of DX container deployments.
 
-**Parent topic:**[Operations using Helm](../containerization/helm_operations.md)
+
 

@@ -508,5 +508,5 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
     -   [Customizing the container deployment](customizing_container_deployment.md)
     -   [Requirements and limitations](limitations_requirements.md)
 
-**Parent topic:**[Digital Experience on containerized platforms](../containerization/deployment.md)
+
 

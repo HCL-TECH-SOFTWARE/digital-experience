@@ -23,5 +23,5 @@ This section describes the procedures to define custom context root URLs, or no 
 -   **[Sample storage class and volume for HCL Digital Experience 9.5 containers](../containerization/sample_storage_class_volume.md)**  
 Learn how to set storage class and volume using a sample storage class and volume scripts for  HCL Digital Experience 9.5 CF171 and higher container releases deployed to Amazon Elastic Container Service \(EKS\) or Red Hat OpenShift environment.
 
-**Parent topic:**[Container administration 9.5](../containerization/maintenance.md)
+
 

@@ -331,5 +331,5 @@ Sub-commands, required: `deploy`, `update`, `collect`, or `destroy`.
 
     -   Display messages on the command line. Default: `false`
 
-**Parent topic:**[Operator-based deployment](../containerization/deploy_container_platforms.md)
+
 

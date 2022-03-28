@@ -184,5 +184,5 @@ The `wcm-library-import` command is used to import the WCM libraries from the so
     ```
 
 
-**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
+
 

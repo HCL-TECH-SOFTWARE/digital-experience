@@ -283,5 +283,5 @@ Refer to **[Networking configuration](helm_configure_networking.md)** for the ne
 
 ****
 
-**Parent topic:**[Deploying container platforms using Helm](../containerization/helm_deployment.md)
+
 

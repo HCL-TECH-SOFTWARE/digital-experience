@@ -2,7 +2,7 @@
 
 This topic provides administrators with a high-level overview and important pre-requisite guidance to prepare your container environments for later deployments of the HCL Digital Experience 9.5 Kubernetes and OpenShift deployment capabilities using Helm.
 
-Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to [supported container platforms](../deployment/helm_deployment.md) using Helm Charts. Using a Helm Chart deployment provides administrators a larger degree of transparency in the deployment operations than the operator-based deployment also available using the [HCL DX dxctl process](../operator-based/dxtools_dxctl.md).
+Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to [supported container platforms](../deployment/helm_deployment.md) using Helm Charts. Using a Helm Chart deployment provides administrators a larger degree of transparency in the deployment operations than the operator-based deployment also available using the HCL DX dxctl process *[see **Related information** section]*.
 
 ## Overview
 
@@ -36,7 +36,7 @@ hcl-dx-deployment/
 
 ## Helm deployment flow
 
-![Helm deployment flow](../../../images/hehelm_chart_deployment_flow.png)
+![Helm deployment flow](../../../images/helm_chart_deployment_flow.png)
 
 As outlined in the flow chart, when performing an install \(or upgrade\), the Helm Chart reads the values.yaml \(and any overridden values, either provided through Helm CLI parameters or additional values files\) and perform a schema validation check. After the schema check is successfully performed, Helm runs the templating engine to create the Kubernetes resource definitions out of the templates inside the Helm Charts.
 
@@ -82,3 +82,7 @@ This topic covers details the configuration structure in the HCL Digital Experie
 This topic provides information to apply container scaling capabilities, and how scaling resources are handled within the HCL DX 9.5 deployment using Helm. Refer to `HorizontalPodAutoscaler` details in [Kubernetes](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) and [Red Hat OpenShift documentation](https://docs.openshift.com/container-platform/4.7/nodes/pods/nodes-pods-autoscaling.html) for more information on these services.
 -   **[Digital Asset Management persistence architecture](../architecture/dam_persistence_architecture.md)**  
 This topic describes the components of the Digital Asset Management persistence. The updated DAM persistence feature is available from HCL Digital Experience 9.5 Container Update CF198 and later.
+
+??? note "Related information:"
+    - [HCL DX dxctl process](../operator-based/dxtools_dxctl.md)
+
