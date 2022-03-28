@@ -32,5 +32,5 @@ The information in this section enables administrators to manage select operatio
 -   **[Troubleshooting cloud container Containers](../containerization/troubleshooting.md)**  
 This section lists the basics of troubleshooting the containerized image or your deployment.
 
-**Parent topic:**[Digital Experience on containerized platforms](../containerization/deployment.md)
+
 

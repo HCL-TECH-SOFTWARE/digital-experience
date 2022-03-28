@@ -15,5 +15,5 @@ As an administrator, you can easily display a list of the DxDeployment instances
     ![](../images/container_k8s_instances.png "Instances of DxDeployment")
 
 
-**Parent topic:**[Deploy DX Container to Amazon EKS](../containerization/kubernetes_eks.md)
+
 

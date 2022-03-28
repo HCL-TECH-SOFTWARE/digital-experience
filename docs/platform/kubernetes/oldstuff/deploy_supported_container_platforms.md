@@ -28,5 +28,5 @@ Learn how to deploy different releases of HCL Digital Experience \(DX\) containe
 -   **[Deploy DX Container to Microsoft Azure Kubernetes Service \(AKS\)](../containerization/azure_aks.md)**  
 Learn how to deploy HCL Digital Experience \(DX\) 9.5 CF182 and later container release along with Ambassador to Kubernetes, as verified in Microsoft Azure Kubernetes Service \(AKS\).
 
-**Parent topic:**[Operator-based deployment](../containerization/deploy_container_platforms.md)
+
 

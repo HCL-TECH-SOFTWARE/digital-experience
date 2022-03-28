@@ -266,5 +266,5 @@ This topic describes the commands that are used to create, update, delete, and r
         ```
 
 
-**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
+
 

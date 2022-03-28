@@ -390,5 +390,5 @@ The `create-syndication-relation` command is used to create the syndication rela
     ```
 
 
-**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
+
 

@@ -148,5 +148,5 @@ This section lists the mapping of the `dxctl` deployment.properties file with th
 |`imgproc.limit.cpu`|`resources.imageProcessor.limits.cpu`|CPU limit.|
 |`imgproc.limit.memory`|`resources.imageProcessor.limits.memory`|Memory limit.|
 
-**Parent topic:**[Migrating from Operator to Helm deployments](../containerization/helm_operator_migration.md)
+
 

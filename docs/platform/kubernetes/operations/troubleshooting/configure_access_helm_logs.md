@@ -197,5 +197,5 @@ Note that for all applications that do not write their logs separately to a file
 
 We encourage the customers to process the logging of their Kubernetes Cluster in a separate logging solution of their choice.
 
-**Parent topic:**[Troubleshooting your Helm deployment](../containerization/helm_troubleshooting.md)
+
 

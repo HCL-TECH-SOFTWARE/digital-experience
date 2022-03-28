@@ -30,5 +30,5 @@ This section outlines the customization options when deploying HCL Digital Exper
 -   **[Backup and recovery procedures Containerization](../containerization/operator_backup_and_recovery_procedures.md)**  
 This section shows the deployment architecture and provides the instructions to create and manage backup and recovery of HCL Digital Experience components in containerized DX 9.5 environments.
 
-**Parent topic:**[Operator-based deployment](../containerization/deploy_container_platforms.md)
+
 

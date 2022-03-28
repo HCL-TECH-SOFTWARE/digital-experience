@@ -51,5 +51,5 @@ HCL encourages customers to remain up-to-date on the latest DX and Kubernetes re
 |CF19|OS 4.3<br/>Kubernetes 1.16|NA|
 |CF184|OS 4.3<br/>Kubernetes 1.16|NA|
 
-**Parent topic:**[Digital Experience on containerized platforms](../containerization/deployment.md)
+
 

@@ -313,5 +313,5 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         ```
 
 
-**Parent topic:**[Backup and recovery procedures for Helm Containerization](../containerization/helm_backup_and_recovery_procedures.md)
+
 

@@ -46,5 +46,5 @@ Whenever a Core container is started, it compares its container version with the
 
 As of HCL DX 9.5 Container Update CF199, DX profile directories are not automatically removed. If your DX 9.5 deployment has been around through a number of Container upgrades, you may wish to consider removing very old profile directories to save space \(leaving, at least, two of the most recent profile directories\).
 
-**Parent topic:**[Overview of the Helm architecture](../containerization/helm_overview.md)
+
 

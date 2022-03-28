@@ -118,5 +118,5 @@ This shows you how to restore the HCL Digital Experience 9.5 Digital Asset Manag
 -   **[Back up and restore a DAM image](../digital_asset_mgmt/operator_dam_backup_restore_image.md)**  
 This topic shows you how to backup and restore for Digital Asset Management persistence and binaries in an Operator-based deployment using `dxctl`.
 
-**Parent topic:**[Container administration 9.5](../containerization/maintenance.md)
+
 

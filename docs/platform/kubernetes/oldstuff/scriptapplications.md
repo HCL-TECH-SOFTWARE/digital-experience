@@ -433,5 +433,5 @@ Log files from command execution can be found in the logs directory of the DXCli
 dxclient restore-scriptapplication -wcmContentID <wcm-content-id> -versionName <version-name> -restoreAsPublished <restore-as-published>
 ```
 
-**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
+
 

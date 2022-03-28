@@ -193,5 +193,5 @@ Access the Remote Search Admin Console via the external IP address of your DX 9.
 
 Example: [https://35.xxx.174.3:9043/ibm/console](https://35.xxx.174.3:9043/ibm/console)
 
-**Parent topic:**[Customizing your container deployment](../containerization/customization.md)
+
 

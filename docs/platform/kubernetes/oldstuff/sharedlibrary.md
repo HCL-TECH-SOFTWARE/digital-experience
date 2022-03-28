@@ -115,5 +115,5 @@ The shared-library command uses two sub-commands upload and delete to manage fil
     ```
 
 
-**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
+
 

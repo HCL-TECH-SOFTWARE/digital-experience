@@ -199,5 +199,5 @@ This topic contains the commands that the administrators can use to export and i
     ```
 
 
-**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
+
 

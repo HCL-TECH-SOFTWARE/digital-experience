@@ -11,5 +11,5 @@ This section describes the output and artifacts created when deploying HCL Digit
 -   **[Customizing the Kubernetes EKS deployment](../containerization/customizing_kubernetes_eks_deployment.md)**  
 This section describes how to customize your HCL Portal deployment.
 
-**Parent topic:**[HCL Digital Experience 9.5 Container Deployment](../containerization/deploy_supported_container_platforms.md)
+
 

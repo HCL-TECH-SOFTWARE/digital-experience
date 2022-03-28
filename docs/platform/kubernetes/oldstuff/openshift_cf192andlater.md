@@ -259,5 +259,5 @@ To delete the deployment, follow one of two methods:
     ```
 
 
-**Parent topic:**[Deploying DX Container to Red Hat OpenShift](../containerization/deploy_openshift.md)
+
 

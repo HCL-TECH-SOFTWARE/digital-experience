@@ -243,5 +243,5 @@ External IP from **Load balancer** in the below example can be used to access PO
     ![](../images/container_eks_portal_example.png "Portal example")
 
 
-**Parent topic:**[Deploy DX Container to Amazon EKS](../containerization/deploy_kubernetes_eks.md)
+
 

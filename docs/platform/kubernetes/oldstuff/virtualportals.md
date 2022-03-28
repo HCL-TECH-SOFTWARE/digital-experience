@@ -356,5 +356,5 @@ This topic describes the commands that are used in managing the virtual portal a
     Log files from running the command can be found in the logs directory of the DXClient installation.
 
 
-**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
+
 

@@ -167,5 +167,5 @@ This sample shows how to install the DXClient tool in a pipeline and then deploy
 
 ![Pipeline DXClient deploy script application sample](../assets/pipeline_deploy_theme_sample.png)
 
-**Parent topic:**[Deploy DX components using HCL DXClient and DXConnect](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)
+
 

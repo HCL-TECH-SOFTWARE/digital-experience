@@ -101,5 +101,5 @@ This topic describes the commands that are used to create or update credential v
     ```
 
 
-**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
+
 

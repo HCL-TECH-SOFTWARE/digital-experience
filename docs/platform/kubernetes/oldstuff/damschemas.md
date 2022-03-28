@@ -178,5 +178,5 @@ Use the delete-dam-schema command to delete the inactive DAM schema.
     ```
 
 
-**Parent topic:**[DAM artifacts](../containerization/dam_artifacts.md)
+
 

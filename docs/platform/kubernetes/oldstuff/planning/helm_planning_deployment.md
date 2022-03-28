@@ -376,5 +376,5 @@ Helm is a software package manager that simplifies deployment of applications an
 
 Refer to **[PersistentVolumeClaims \(PVCs\)](helm_persistent_volume_claims.md)** for the next steps.
 
-**Parent topic:**[Deploying container platforms using Helm](../containerization/helm_deployment.md)
+
 

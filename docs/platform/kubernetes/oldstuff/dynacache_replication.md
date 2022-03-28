@@ -19,5 +19,5 @@ Having a cluster-aware cache does not make sense for HCL Digital Experience 9.5 
 
 To replicate DynaCache service in an HCL Portal farm deployment, see *Tuning the servers in your environment* in [Roadmap: Portal farm](https://help.hcltechsw.com/digital-experience/8.5/install/rm_production_farm.md).
 
-**Parent topic:**[Customizing your container deployment](../containerization/customization.md)
+
 

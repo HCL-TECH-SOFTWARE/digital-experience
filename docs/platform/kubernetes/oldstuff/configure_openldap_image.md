@@ -181,5 +181,5 @@ HCL Digital Experience will periodically provide updated OpenLDAP container imag
 
 Consult the HCL Digital Experience 9.5 [Container deployment](../install/rm_container_deployment.md) page for the latest list of Digital Experience 9.5 container components available with your Digital Experience entitlements from the [HCL Software License Portal](https://www.hcltech.com/software/support/release).
 
-**Parent topic:**[Customizing your container deployment](../containerization/customization.md)
+
 

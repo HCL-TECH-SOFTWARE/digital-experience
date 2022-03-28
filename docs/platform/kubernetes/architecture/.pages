@@ -2,8 +2,8 @@ title: Architecture
 nav:
     - helm_overview.md
     - application_architecture.md
+    - core_interactions_kubernetes.md
     - persistent_volumes.md
     - configure_deployment.md
     - container_scaling.md
     - dam_persistence_architecture.md
-    - core_interactions_kubernetes.md

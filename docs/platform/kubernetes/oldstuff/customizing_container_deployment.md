@@ -117,5 +117,5 @@ Once modified, the `deployDx.sh` or the `updateDx.sh` scripts should be run to p
 
 5.  Once modified, the `deployDx.sh` and the `updateDx.sh` scripts should be run to create \(or update\) the target deployment.
 
-**Parent topic:**[Customizing your container deployment](../containerization/customization.md)
+
 

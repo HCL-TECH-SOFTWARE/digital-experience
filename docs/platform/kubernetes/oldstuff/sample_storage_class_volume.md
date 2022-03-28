@@ -72,5 +72,5 @@ nfs:    
                 path: /exports/volume_name
 ```
 
-**Parent topic:**[Customizing your container deployment](../containerization/customization.md)
+
 

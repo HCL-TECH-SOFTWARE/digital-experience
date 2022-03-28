@@ -9,5 +9,5 @@ Learn how to deploy HCL Digital Experience \(DX\) 9.5 CF192 and later release co
 -   **[Deploying DX CF19 and CF191 release Containers to Google Kubernetes Engine \(GKE\)](../containerization/google_gke_CF191andearlier.md)**  
 Learn how to deploy HCL Digital Experience \(DX\) 9.5 CF19 and CF191 release containers along with Ambassador to Kubernetes, as verified in [Google Kubernetes Engine \(GKE\)](https://console.cloud.google.com/marketplace/details/google-cloud-platform/container-engine).
 
-**Parent topic:**[HCL Digital Experience 9.5 Container Deployment](../containerization/deploy_supported_container_platforms.md)
+
 

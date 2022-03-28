@@ -85,5 +85,5 @@ The following is an example of a persistence cluster in a successful deployment.
 
 .
 
-**Parent topic:**[Overview of the Helm architecture](../containerization/helm_overview.md)
+
 

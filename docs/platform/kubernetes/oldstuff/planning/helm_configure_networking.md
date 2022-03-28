@@ -150,5 +150,5 @@ networking:
 
 Refer to **[Additional tasks](helm_additional_tasks.md)** for the next steps.
 
-**Parent topic:**[Deploying container platforms using Helm](../containerization/helm_deployment.md)
+
 

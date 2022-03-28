@@ -119,5 +119,5 @@ The following describes the requirements to deploy the HCL Digital Experience 9.
         **Note:** For information about the limitations related to JSF 2.2 support, see [Limitations when running HCL DX Portlet Bridge on WebSphere Application Server 9.0](../dev-portlet/dx_bridge_for_jsf_onwas9x.md#section_ig1_5hx_3qb).
 
 
-**Parent topic:**[Digital Experience on containerized platforms](../containerization/deployment.md)
+
 

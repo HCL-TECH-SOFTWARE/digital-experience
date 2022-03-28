@@ -169,5 +169,5 @@ All of the instructions contained in the [Remote Search services](https://help.h
         **Note:** On the **jcr.textsearch.indexdirectory**, the sub-directory JCRCollection1 is NOT included in the path.
 
 
-**Parent topic:**[Customizing your container deployment](../containerization/customization.md)
+
 

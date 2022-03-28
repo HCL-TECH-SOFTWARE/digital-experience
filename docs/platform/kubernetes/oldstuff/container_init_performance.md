@@ -317,5 +317,4 @@ listOfAppsDockerEnable - List of portlets and applications to autostart after ha
     WSPolicyManager
 
 
-**Parent topic:**[Container administration 9.5](../containerization/maintenance.md)
 

@@ -203,5 +203,5 @@ Follow these steps to syndicate the source and target environments.
     You do not need to disable Practitioner Studio to do this syndication.
 
 
-**Parent topic:**[Digital Experience Application deployment](../containerization/ci_cd.md)
+
 

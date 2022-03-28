@@ -37,5 +37,5 @@ For development and testing, sometimes it is useful to directly adjust configura
 |`<RELEASE-NAME>-ring-api`|Ring API|
 |`<RELEASE-NAME>-runtime-controller`|Runtime Controller|
 
-**Parent topic:**[Overview of the Helm architecture](../containerization/helm_overview.md)
+
 

@@ -196,5 +196,5 @@ Removing the entire deployment requires several steps, this is by design.
     -   Ensure you get the `'persistentvolume/your_namespace edited'` message.
     -   You may need to manually remove any data remaining from the previous deployment.
 
-**Parent topic:**[Deploying DX Container to Red Hat OpenShift](../containerization/deploy_openshift.md)
+
 

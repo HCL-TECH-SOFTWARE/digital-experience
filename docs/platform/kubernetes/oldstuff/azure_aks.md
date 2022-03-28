@@ -922,5 +922,4 @@ To update the deployment to later [HCL DX 9.5 Container Update](docker.md) relea
     -   Ensure you get the `'persistentvolume/<pv_name> edited'` message.
     -   You may need to manually remove any data remaining from the previous deployment.
 
-**Parent topic:**[HCL Digital Experience 9.5 Container Deployment](../containerization/deploy_supported_container_platforms.md)
 
