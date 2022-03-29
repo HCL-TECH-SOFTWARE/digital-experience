@@ -53,9 +53,9 @@ configuration:
 
 Refer to the following Help Center documentation for more information about LDAP and Configuration Wizard configuration:
 
--   [Configuration Wizard](../config/cw_overview.md)
--   [Enable federated security](../config/cw_ldap.md)
--   [Troubleshooting: Enable federated security option](../trouble/cw_ldap.md)
+-   [Configuration Wizard](https://help.hcltechsw.com/digital-experience/9.5/config/cw_overview.html)<!--  (../config/cw_overview.md) -->
+-   [Enable federated security](https://help.hcltechsw.com/digital-experience/9.5/config/cw_ldap.html)<!-- (../config/cw_ldap.md) -->
+-   [Troubleshooting: Enable federated security option](https://help.hcltechsw.com/digital-experience/9.5/trouble/cw_ldap.html)<!-- (../trouble/cw_ldap.md) -->
 
 
 ### Authoring/Rendering configuration

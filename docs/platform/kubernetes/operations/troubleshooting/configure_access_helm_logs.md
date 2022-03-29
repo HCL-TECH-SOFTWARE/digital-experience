@@ -95,14 +95,14 @@ kubectl logs -n dxns
 This retrieves the log for a single sidecar container, which corresponds to a single Core log file.
 
 !!!note
-    The additional logging enabled for Core goes to trace.log. To configure trace.log for sidecar logging, see [Configure Core sidecar logging](helm_additional_tasks.md#configure_core_sidecar_logging).
+    The additional logging enabled for Core goes to trace.log. To configure trace.log for sidecar logging, see [Configure Core sidecar logging](../../deployment/preparation/optional_core_sidecar_log.md).
 
 By default, two sidecar containers are launched with Core:
 
 -   `system-out-log` - Exposes the `WebSphere_Portal/SystemOut.log` file.
 -   `system-err-log` - Exposes the `WebSphere_Portal/SystemErr.log` file.
 
-For information on configuring additional Core sidecar log containers, please see [Configure Core sidecar logging](helm_additional_tasks.md#configure_core_sidecar_logging).
+For information on configuring additional Core sidecar log containers, please see [Configure Core sidecar logging](../../deployment/preparation/optional_core_sidecar_log.md).
 
 ## Accessing Remote Search logs
 
@@ -123,14 +123,14 @@ kubectl logs -n dxns
 This retrieves the log for a single sidecar container, which corresponds to a single Remote Search log file.
 
 !!!note
-    The additional logging enabled for Remote Search goes to trace.log. To configure trace.log for sidecar logging, see [Configure Remote Search sidecar logging](helm_additional_tasks.md#configure_rs_sidecar_logging).
+    The additional logging enabled for Remote Search goes to trace.log. To configure trace.log for sidecar logging, see [Configure Remote Search sidecar logging](../../deployment/preparation/optional_rs_sidecar_log.md).
 
 By default, two sidecar containers are launched with Remote Search:
 
 -   `system-out-log` - Exposes the `WebSphere_Portal/SystemOut.log` file.
 -   `system-err-log` - Exposes the `WebSphere_Portal/SystemErr.log` file.
 
-For information on configuring additional Remote Search sidecar log containers, please see [Configure Remote Search sidecar logging](helm_additional_tasks.md#configure_rs_sidecar_logging).
+For information on configuring additional Remote Search sidecar log containers, please see [Configure Remote Search sidecar logging](../../deployment/preparation/optional_rs_sidecar_log.md).
 
 ## Accessing logs for other applications
 
