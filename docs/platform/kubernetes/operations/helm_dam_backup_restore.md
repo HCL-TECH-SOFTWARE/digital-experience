@@ -49,7 +49,8 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         kubectl scale statefulsets dx-deployment-persistence-node -d dxns --replicas=1
         ```
 
-        **Note:** Verify that only 1 persistence pod remains in the deployment.
+        !!! note
+            Verify that only 1 persistence pod remains in the deployment.
 
     3.  Connect with the persistence pod \(read-write\). Open a shell in the running persistence pod:
 
@@ -207,7 +208,8 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         kubectl scale statefulsets dx-deployment-persistence-node -d dxns --replicas=1
         ```
 
-        **Note:** Verify that only 1 persistence pod remains in the deployment.
+        !!!note
+            Verify that only 1 persistence pod remains in the deployment.
 
     3.  Copy the database dump file to the persistence pod:
 
@@ -253,7 +255,8 @@ This procedure is not meant for moving DAM data to another deployment. The backu
                 dropdb dxmediadb
                 ```
 
-            **Note:** If you are getting the following error, run the two commands from this step again until it completes without the error occurring.
+            !!!note
+                If you are getting the following error, run the two commands from this step again until it completes without the error occurring.
 
             ```
             ```shell

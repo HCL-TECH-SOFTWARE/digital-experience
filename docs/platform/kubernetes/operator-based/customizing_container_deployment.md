@@ -27,7 +27,8 @@ Once modified, the `deployDx.sh` or the `updateDx.sh` scripts should be run to p
 
 ![Update script location](../../../images/update_script_location.png)
 
-**Note:** All modifications should be made to the custom resource instance and **not the individual parts** of the deployment.
+!!!note
+    All modifications should be made to the custom resource instance and **not the individual parts** of the deployment.
 
 ## Procedure
 
@@ -41,7 +42,8 @@ Once modified, the `deployDx.sh` or the `updateDx.sh` scripts should be run to p
 
         ![Volume size](../../../images/container_custom_volume_size.png)
 
-        **Note:** The `volume name` and `storageClassName` should not be modified here.
+        !!!note
+            The `volume name` and `storageClassName` should not be modified here.
 
     -   Resources
 
@@ -49,7 +51,8 @@ Once modified, the `deployDx.sh` or the `updateDx.sh` scripts should be run to p
 
         ![Resources](../../../images/container_custom_resources.png)
 
-        **Note:** Limits are not enforced in the initial 9.5 release.
+        !!!note
+            Limits are not enforced in the initial 9.5 release.
 
     -   HCL DX 9.5 Container Update CF171 and higher
         -   Limits are enforced.
@@ -115,9 +118,8 @@ Once modified, the `deployDx.sh` or the `updateDx.sh` scripts should be run to p
 
             ![Custom ports](../../../images/container_custom_ports.png)
 
-            !!! note
-            
-            If there is a need to configure the containerized Portal to use different ports, the defaults can be overwritten.
+            !!! note            
+                If there is a need to configure the containerized Portal to use different ports, the defaults can be overwritten.
 
 5.  Once modified, the `deployDx.sh` and the `updateDx.sh` scripts should be run to create \(or update\) the target deployment.
 

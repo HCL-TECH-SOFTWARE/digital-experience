@@ -52,7 +52,9 @@ In an [HCL Digital Experience 9.5 Container deployment using Helm](helm.md), som
     kubectl delete pod -n < namespace > < pod-name >
     ```
 
-    **Note:** To reduce the impact on availability, it is recommended that you wait for a pod to be ready again before running the command for the next pod.
+    !!!note
+        To reduce the impact on availability, it is recommended that you wait for a pod to be ready again before running the command for the next pod.
+        
 
 
 

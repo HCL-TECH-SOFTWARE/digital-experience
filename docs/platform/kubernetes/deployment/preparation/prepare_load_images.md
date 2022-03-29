@@ -13,71 +13,73 @@ In the following guidance, the docker CLI is used as a command reference. Tools 
 
 The HCL Digital Experience 9.5 Container Update packages are provided in a compressed .zip file, that can easily be unzipped using a utility of your choice. Refer to the latest [HCL DX 9.5 Container Update Release CF196 and later file listings in the Docker deployment](docker.md) topic:
 
-**Note:** The following are examples using Container Update CF196 files. Replace those references with the HCL DX 9.5 Container Update CFxxx release files you are deploying.
+!!! note
 
-```
-# Unzip of HCL Digital Experience 9.5 CFxxx package
-unzip hcl-dx-kubernetes-v95-CF196.zip
-```
+    The following are examples using Container Update CF196 files. Replace those references with the HCL DX 9.5 Container Update CFxxx release files you are deploying.
 
-The package includes all DX 9.5 container images, and Helm Charts as tar.gz files.
+    ```
+    # Unzip of HCL Digital Experience 9.5 CFxxx package
+    unzip hcl-dx-kubernetes-v95-CF196.zip
+    ```
 
-The content of the package looks similar to the following structure:
+    The package includes all DX 9.5 container images, and Helm Charts as tar.gz files.
 
-```
-hcl-dx-kubernetes-v95-CF196.zip
+    The content of the package looks similar to the following structure:
 
+    ```
+    hcl-dx-kubernetes-v95-CF196.zip
+    
     HCL DX notices V9.5 CF196.txt                                                                
-# Notices file
+    # Notices file
 
     dx-dx-ambassador-image-154.tar.gz
-# Image for the Ambassador Ingress
+    # Image for the Ambassador Ingress
 
     hcl-dx-cloud-operator-image-v95_CFXXX_XXXXXXXX-XXXX.tar.gz
-# Image for the Core Operator (not needed for Helm deployments)
+    # Image for the Core Operator (not needed for Helm deployments)
 
     hcl-dx-cloud-scripts-v95_CFXXX_XXXXXXXX-XXXX.zip
-# Cloud deployment scripts incl. dxctl (not needed for Helm deployments)
+    # Cloud deployment scripts incl. dxctl (not needed for Helm deployments)
 
     hcl-dx-content-composer-image-vX.X.X_XXXXXXXX-XXXX.tar.gz
-# Image for Content Composer
+    # Image for Content Composer
 
     hcl-dx-core-image-v95_CFXXX_XXXXXXXX-XXXX.tar.gz
-# Image for Core
+    # Image for Core
 
     hcl-dx-digital-asset-management-operator-image-v95_CFXXX_XXXXXXXX-XXXX.tar.gz
-# Image for the Digital Asset Management Operator (not needed for Helm deployments)
+    # Image for the Digital Asset Management Operator (not needed for Helm deployments)
 
     hcl-dx-digital-asset-manager-image-vX.X.X_XXXXXXXX-XXXX.tar.gz
-# Image for Digital Asset Management
+    # Image for Digital Asset Management
 
     hcl-dx-experience-api-sample-ui-vX.X.X.XXXXXXXX-XXXX.zip
-# Sample UI for Experience API
+    # Sample UI for Experience API
 
     hcl-dx-image-processor-image-vX.X.X_XXXXXXXX-XXXX.tar.gz
-# Image for Image Processor
+    # Image for Image Processor
 
     hcl-dx-openldap-image-v1.1.0-master_XXXXXXXX_XXXXXXXXXX.tar.gz
-# Image for OpenLDAP
+    # Image for OpenLDAP
 
     hcl-dx-postgres-image-vX.X.X_XXXXXXXX-XXXX.tar.gz
-# Image for Digital Asset Management Persistence
+    # Image for Digital Asset Management Persistence
 
     hcl-dx-redis-image-X.X.X.tar.gz
-# Image for Ambassador Ingress Redis
+    # Image for Ambassador Ingress Redis
 
     hcl-dx-remote-search-image-v95_CFXXX_XXXXXXXX-XXXX.tar.gz
-# Image for Remote Search
+    # Image for Remote Search
 
     hcl-dx-ringapi-image-vX.X.X_XXXXXXXX-XXXX.tar.gz
-# Image for Ring API
+    # Image for Ring API
 
     hcl-dx-runtime-controller-image-vX.X.X_XXXXXXXX-XXX.tar.gz
-# Image for Runtime Controller
+    # Image for Runtime Controller
 
     hcl-dx-deployment-vX.X.X_XXXXXXXX-XXX.tar.gz
-# Helm Charts
-```
+    # Helm Charts
+    ```
 
 ## Load images locally
 

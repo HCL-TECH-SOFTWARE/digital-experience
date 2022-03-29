@@ -102,7 +102,8 @@ All of the instructions contained in the [Remote Search services](https://help.h
 
 1.  Create a single sign-on \(SSO\) domain between HCL Digital Experience 9.5 container and the Remote Search service container by following the non-container on-premises procedure for [Creating a single sign-on domain between HCL Portal and the Remote Search service](../../9.0/admin-system/sso_portal_rss.md). This entails exchanging SSL certificates and LTPA domain tokens.
 
-    **Note:** When retrieving the SSL certificates from the host server, use dockerhost \(as the host\) and the appropriate port for the SSL access. In the examples, the Remote Search server is on dockerhost:9443 and the DX host is on dockerhost:10042. You must also complete [Setting the search user ID](../../9.0/admin-system/srtsttusrid.md) and [Removing search collections](../../9.0/install/rmv_search_coll.md) before creating a new search service.
+    !!! note
+        When retrieving the SSL certificates from the host server, use dockerhost \(as the host\) and the appropriate port for the SSL access. In the examples, the Remote Search server is on dockerhost:9443 and the DX host is on dockerhost:10042. You must also complete [Setting the search user ID](../../9.0/admin-system/srtsttusrid.md) and [Removing search collections](../../9.0/install/rmv_search_coll.md) before creating a new search service.
 
 2.  Create a new search service and use the following values for a Remote Search services configuration to a Docker container deployment. See the section on [Creating a new search service](../../9.0/admin-system/create_search_service.md) for more information.
 
@@ -115,7 +116,8 @@ All of the instructions contained in the [Remote Search services](https://help.h
     |Search service implementation|Select Portal Search Service Type from the pull down.|
     |CONFIG\_FOLDER\_PATH|Did not set \(differs from non-container instructions\).|
 
-    **Note:** Once completed and saved, the HCL Digital Experience 9.5 container deployment has a new search service called **Remote PSE service EJB**, with a green check mark confirming that the service was correctly set up and is able to communicate with the Remote Search container.
+    !!! note
+        Once completed and saved, the HCL Digital Experience 9.5 container deployment has a new search service called **Remote PSE service EJB**, with a green check mark confirming that the service was correctly set up and is able to communicate with the Remote Search container.
 
 3.  Based on the previously created Remote Search service, create a **Portal Search Collection** and a **JCR Search Collection** using the following parameters.
     1.  Use the following parameters to create a [Portal search collection](../admin-system/create_search_coll.md).
@@ -131,7 +133,8 @@ All of the instructions contained in the [Remote Search services](https://help.h
         https://dockerhost:10042/wps/seedlist/myserver?Source=com.ibm.lotus.search.plugins.seedlist.retriever.portal.PortalRetrieverFactory&amp;Action=GetDocuments&amp;Range=100&amp;locale=en-US
         ```
 
-        **Note:** The host and port are the Docker host and port to which `10042` is mapped. In this case, `10042` is the `HttpQueueInboundDefaultSecure` port on the HCL Digital Experience server. Note that you can also put this URL in a browser \(on the Docker host\) and confirm that the response is an ATOM feed.
+        !!! note 
+            The host and port are the Docker host and port to which `10042` is mapped. In this case, `10042` is the `HttpQueueInboundDefaultSecure` port on the HCL Digital Experience server. Note that you can also put this URL in a browser \(on the Docker host\) and confirm that the response is an ATOM feed.
 
         On the **Security** panel, use `dockerhost` as the host name, along with the username `wpsadmin` and the associated password for `wpsadmin`.
 
@@ -148,7 +151,8 @@ All of the instructions contained in the [Remote Search services](https://help.h
         https://dockerhost:10042/wps/seedlist/myserver?Action=GetDocuments&amp;Format=ATOM&amp;Locale=en_US&amp;Range=100&amp;Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&amp;Start=0&amp;SeedlistId=1@OOTB_CRAWLER1
         ```
 
-        **Note:** The host and port are the Docker host and port to which `10042` is mapped. In this case, `10042` is the `HttpQueueInboundDefaultSecure` port on the HCL Digital Experience server. Note that you can also put this URL in a browser \(on the Docker host\) and confirm that the response is an ATOM feed.
+        !!! note
+            The host and port are the Docker host and port to which `10042` is mapped. In this case, `10042` is the `HttpQueueInboundDefaultSecure` port on the HCL Digital Experience server. Note that you can also put this URL in a browser \(on the Docker host\) and confirm that the response is an ATOM feed.
 
         On the **Security** panel, use `dockerhost` as the host name, along with the username `wpsadmin` and the associated password for `wpsadmin`.
 
@@ -166,5 +170,7 @@ All of the instructions contained in the [Remote Search services](https://help.h
         |jcr.textsearch.EJB.IIOP.URL|iiop://dockerhost:2809|
         |jcr.textsearch.EJB.EJBName|ejb/com/ibm/hrl/portlets/WsPse/WebScannerLiteEJBHome|
 
-        **Note:** On the **jcr.textsearch.indexdirectory**, the sub-directory JCRCollection1 is NOT included in the path.
+        !!! note
+            On the **jcr.textsearch.indexdirectory**, the sub-directory JCRCollection1 is NOT included in the path.
+    
 

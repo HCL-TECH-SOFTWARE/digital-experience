@@ -44,23 +44,24 @@ Follow the steps below to enable Hybrid deployment support in the HCL Digital Ex
 
     Sample properties for deploying Digital Asset Management, Content Composer, and the Experience API for use with an on-premise DX environment are shown below. Use following example to modify the values in the dxctl/properties/hybrid-deployment.properties file to reflect your target Red Hat Open Shift environment to deploy the Content Composer, Digital Asset Management, and the Experience API components.
 
-    **Note:** For a Hybrid deployment, the following items should be enabled and/or not included in the deployment:
+    !!! note "Notes:"
+        For a Hybrid deployment, the following items should be enabled and/or not included in the deployment:
 
-    -   **Enable**
+            -   **Enable**
 
-        `api.enabled(eAPI), composer.enabled(Content Composer)` and/or `dam.enabled(DAM)` to true.
+                `api.enabled(eAPI), composer.enabled(Content Composer)` and/or `dam.enabled(DAM)` to true.
 
-    -   **Not included**
+            -   **Not included**
 
-        **`**dx.tag**`**
+                **`**dx.tag**`**
 
-        This is not required for a hybrid deployment as DX Portal and WCM is installed on premises.
+                This is not required for a hybrid deployment as DX Portal and WCM is installed on premises.
 
-        **`**dx.database**`**
+                **`**dx.database**`**
 
-        This is not required for a hybrid deployment as it is installed with DX Portal and WCM on premises.
+                This is not required for a hybrid deployment as it is installed with DX Portal and WCM on premises.
 
-    See the *Reference list* below for explanations of the file items.
+        See the *Reference list* below for explanations of the file items.
 
     ```
     dx.namespace: dxhybwin

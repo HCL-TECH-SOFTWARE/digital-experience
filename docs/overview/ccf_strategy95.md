@@ -10,7 +10,8 @@ These instructions can be applied on an HCL Digital Experience system running ei
 
 **Video**: [HCL Digital Experience - Installing HCL Portal 9.5 CF18](https://youtu.be/RUjDkVAR_zM)
 
-**Note:** Each release of a maintenance package is included in your HCL Digital Experience offering.
+!!! note
+    Each release of a maintenance package is included in your HCL Digital Experience offering.
 
 ## Overview
 

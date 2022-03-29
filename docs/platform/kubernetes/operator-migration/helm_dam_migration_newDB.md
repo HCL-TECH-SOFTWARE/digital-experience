@@ -6,9 +6,11 @@ This manual migration process to the new DAM DB is mandatory if you have DX CF19
 
 To perform the DAM DB migration you must first upgrade your existing DX deployment to CF200.
 
-**Important:** During upgrading to CF200, the Helm-based upgrade procedure detects the old deprecated DAM DB and notifies you with the following warning. The message indicates that the deployment is using an old DAM DB system that is deprecated, hence you must migrate to the new DAM DB. If you do not migrate to a new DAM DB, you might lose data during future DX updates.
+!!!important
+    During upgrading to CF200, the Helm-based upgrade procedure detects the old deprecated DAM DB and notifies you with the following warning. The message indicates that the deployment is using an old DAM DB system that is deprecated, hence you must migrate to the new DAM DB. If you do not migrate to a new DAM DB, you might lose data during future DX updates.
 
-**Warning message:** Installation of HCL DX 95 CF200 done.
+!!!warning
+    Installation of HCL DX 95 CF200 done.
 
 This deployment is using an old DAM Database system and is deprecated. You must migrate this to the new DAM Database.
 
@@ -26,11 +28,11 @@ Back up of your existing DAM Database. Ensure that the DX pods are in running st
     kubectl exec --stdin --tty pod/<pod-name> -n <namespace> -- /bin/bash
     ```
 
-    **Example:**
+    !!!example "Example:"
 
-    ```
-    kubectl exec --stdin --tty pod/dx-deployment-persistence-rw-0 -n dxns -- /bin/bash
-    ```
+        ```
+        kubectl exec --stdin --tty pod/dx-deployment-persistence-rw-0 -n dxns -- /bin/bash
+        ```
 
 2.  **Dump the current database using the `pg_dump` command:**
 
@@ -52,12 +54,11 @@ Back up of your existing DAM Database. Ensure that the DX pods are in running st
     kubectl cp <namespace>/<pod-name>:<source-file> <target-file>
     ```
 
-    **Example:**
+    !!!example "Example:"
 
-    ```
-    kubectl cp dxns/dx-deployment-persistence-0:/tmp/dxmediadb.dmp /tmp/dxmediadb.dmp
-    ```
-
+        ```
+        kubectl cp dxns/dx-deployment-persistence-0:/tmp/dxmediadb.dmp /tmp/dxmediadb.dmp
+        ```
 
 ## 3. Migrate to new DB
 
@@ -105,11 +106,11 @@ Restore the data from the old database to the new database.
     kubectl cp <source-file> <namespace>/<pod-name>:<target-file>
     ```
 
-    **Example:**
+    !!!example "Example:"
 
-    ```
-    kubectl cp /tmp/dxmediadb.dmp dxns/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp
-    ```
+        ```
+        kubectl cp /tmp/dxmediadb.dmp dxns/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp
+        ```
 
 2.  **Connect to Persistence pod:**
 
@@ -119,11 +120,11 @@ Restore the data from the old database to the new database.
     kubectl exec --stdin --tty pod/<pod-name> -n <namespace> -- /bin/bash
     ```
 
-    **Example:**
+    !!!example "Example:"
 
-    ```
-    kubectl exec --stdin --tty pod/dx-deployment-persistence-node-0 -n dxns -- /bin/bash
-    ```
+        ```
+        kubectl exec --stdin --tty pod/dx-deployment-persistence-node-0 -n dxns -- /bin/bash
+        ```
 
 3.  **Drop the DAM database if it exists:**
 

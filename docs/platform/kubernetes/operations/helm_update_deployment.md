@@ -15,21 +15,20 @@ These instructions assume that you have made all configuration changes using the
 
 When updating CF199 or earlier, you need to update the ambassador CRDs to a newer version. As a known pattern, Helm will not update CRDs by design.
 
-**Important:**
+!!!important
+    The CRDs are currently backward compatible. It is still possible to run or perform an install of an older version of DX on that cluster, even when the CRDs are at the latest version.
 
-The CRDs are currently backward compatible. It is still possible to run or perform an install of an older version of DX on that cluster, even when the CRDs are at the latest version.
-
-**Note:**
-
-Do not remove/downgrade the CF200 CRDs to an older version while having CF200 or later deployments running on your cluster.
+!!!note
+    Do not remove/downgrade the CF200 CRDs to an older version while having CF200 or later deployments running on your cluster.
 
 **Prerequisites:**
 
 You need to have `tar` and HCL DX Helm Chart downloaded. Your `kubectl` configuration must point to the target cluster and the user requires **Cluster Admin Access** to access it.
 
-**Note:** If you changed the Portal or WAS Administrator user, please ensure you have the correct values for `security.core.wasUser/wasPassword` and `wpsUser/wpsPassword` in custom-values.yaml.
+!!!note "Notes:"
+    - If you changed the Portal or WAS Administrator user, please ensure you have the correct values for `security.core.wasUser/wasPassword` and `wpsUser/wpsPassword` in custom-values.yaml.
 
-**Note:** If you performed a database transfer, please ensure the `<database>.DbUser` and `<database>.DbPassword` for all Portal databases reflect the current user and password in /opt/HCL/wp\_profile/ConfigEngine/properties/wkplc\_dbdomain.properties prior to updating the Portal Core image.
+    - If you performed a database transfer, please ensure the `<database>.DbUser` and `<database>.DbPassword` for all Portal databases reflect the current user and password in /opt/HCL/wp\_profile/ConfigEngine/properties/wkplc\_dbdomain.properties prior to updating the Portal Core image.
 
 **Procedure to update CRDs**:
 
@@ -60,7 +59,8 @@ After the action is completed, you can proceed with the DX update procedure. Thi
           operatorToHelm: 
             enabled: true 
     
-    **Note:** The `operatorToHelm` configuration property is not supported in CF200, hence it must be removed. This property was introduced in CF199 to facilitate migration from the previous Operator-based deployments to Helm-based deployments.
+    !!!note
+        The `operatorToHelm` configuration property is not supported in CF200, hence it must be removed. This property was introduced in CF199 to facilitate migration from the previous Operator-based deployments to Helm-based deployments.
 
 4.  **Update the image tags**
 
@@ -73,11 +73,12 @@ After the action is completed, you can proceed with the DX update procedure. Thi
         # Helm upgrade command:
         helm upgrade -n your-namespace -f path/to/your/custom-values.yaml your-release-name path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
 
-    In this example:
+    !!!example
+        In this example:
 
-    -   `your-namespace` is the namespace in which your HCL Digital Experience 9.5 Container Update deployment is installed and `your-release-name` is the Helm release name you used when installing.
-    -   The `-f path/to/your/custom-values.yaml` parameter must point to the custom-values.yaml you updated.
-    -   `path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz` is the HCL Digital Experience 9.5 Container Update Helm Chart that you extracted in the preparation steps.
+        -   `your-namespace` is the namespace in which your HCL Digital Experience 9.5 Container Update deployment is installed and `your-release-name` is the Helm release name you used when installing.
+        -   The `-f path/to/your/custom-values.yaml` parameter must point to the custom-values.yaml you updated.
+        -   `path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz` is the HCL Digital Experience 9.5 Container Update Helm Chart that you extracted in the preparation steps.
 
 <!-- -   **[Running DX Core configuration tasks](../containerization/run_core_config_engine.md)**  
 This topic shows how to run manual Core configuration tasks on your HCL DX 9.5 CF197 and later container deployments.
