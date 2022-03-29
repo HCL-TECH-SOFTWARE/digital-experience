@@ -20,7 +20,7 @@ There are different paths that you will start from depending on your current sce
 2.  HCL Digital Experience 9.5 deployment to supported platforms, including Docker or OpenShift/Kubernetes with Docker
 3.  Updating an existing HCL Digital Experience 8.5 or 9.0 system
 
-Users can also test the new HCL Digital Experience API Docker image and run it. Visit the [Experience API documentation](../design/api/openapi_overview.md) to learn more.
+Users can also test the new HCL Digital Experience API Docker image and run it. Visit the Experience API documentation<!--  [Experience API documentation](../design/api/openapi_overview.md) --> to learn more.
 
 ## Fresh full installation
 
@@ -54,4 +54,6 @@ The following is the installation path from an existing HCL Digital Experience 8
 2.  Follow the [documentation here](../platform/docker-compose/docker_overview.md) to deploy to Docker or supported Kubernetes platforms.
 3.  Stage the content to the new environment to move from an existing system to HCL Digital Experience on Docker or supported Kubernetes platforms.
 
+<!-- ???info "Related information:"
+    -   [Experience API documentation](../design/api/openapi_overview.md) -->
 

@@ -148,5 +148,5 @@ networking:
   minTlsVersion: "v1.2"
 ```
 
-Refer to **[Additional tasks](../../operations/helm_update_deployment.md)** for the next steps.
+Refer to **[Additional tasks](../preparation/overview.md)** for the next steps.
 

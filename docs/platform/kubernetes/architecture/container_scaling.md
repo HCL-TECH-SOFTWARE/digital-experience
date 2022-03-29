@@ -1,6 +1,6 @@
 # Scaling
 
-This topic provides information to apply container scaling capabilities, and how scaling resources are handled within the HCL DX 9.5 deployment using Helm. Refer to `HorizontalPodAutoscaler` details in [Kubernetes](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) and [Red Hat OpenShift documentation](https://docs.openshift.com/container-platform/4.7/nodes/pods/nodes-pods-autoscaling.md) for more information on these services.
+This topic provides information to apply container scaling capabilities, and how scaling resources are handled within the HCL DX 9.5 deployment using Helm. Refer to `HorizontalPodAutoscaler` details in [Kubernetes](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) and [Red Hat OpenShift documentation](https://docs.openshift.com/container-platform/4.7/nodes/pods/nodes-pods-autoscaling.html) for more information on these services.
 
 ## Use of `HorizontalPodAutoscalers` in DX 9.5 Deployments using Helm
 
@@ -19,7 +19,7 @@ For the above mentioned DX applications, the maximum and minimum count of Replic
 
 Per default, the automated scaling is not active and needs to be enabled before taking effect.
 
-!!! Known limitations "Known limitations"
+!!! note "Known limitations:"
 
    -   **Core**
 
@@ -28,6 +28,7 @@ Per default, the automated scaling is not active and needs to be enabled before 
    -   **Persistence**
 
        The Persistence used for Digital Asset Management currently supports scaling only with the updated persistence feature. For more information, see [Digital Asset Management persistence architecture](dam_persistence_architecture.md).
+       
 
 
 
