@@ -71,7 +71,7 @@ Ambassador uses Mappings that are created by the DX 9.5 Helm deployment to decid
 The Ambassador performs SSL termination and must be provided with a TLS secret inside Kubernetes that contains the SSL certificate used.
 
 -   **[DX 9.5 Core Interactions with Kubernetes](../architecture/core_interactions_kubernetes.md)**  
-This section provides more detailed information about how the [HCL Digital Experience 9.5 Core container](deploy_applications_using_helm.md#) interacts with Kubernetes. Understanding this information may assist in interpreting observed behavior or in troubleshooting your HCL DX 9.5 Container deployments in Helm.
+This section provides more detailed information about how the  Digital Experience 9.5 Core container interacts with Kubernetes. Understanding this information may assist in interpreting observed behavior or in troubleshooting your HCL DX 9.5 Container deployments in Helm.
 -   **[Deploying DX 9.5 applications to container platforms using Helm](../deployment/helm_deployment.md)**  
 This topic provides a list of all DX applications and resource definitions that configure the application runtime and are deployed to containers using Helm on OpenShift or Kubernetes platforms. As outlined in the overview, applications can also include ConfigMaps, Secrets, and Ingress.
 -   **[PersistentVolumes and related operations considerations](../architecture/persistent_volumes.md)**  

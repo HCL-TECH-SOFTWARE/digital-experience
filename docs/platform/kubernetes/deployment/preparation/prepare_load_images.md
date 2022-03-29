@@ -11,7 +11,7 @@ In the following guidance, the docker CLI is used as a command reference. Tools 
 
 ## Extract HCL Digital Experience 9.5 package.
 
-The HCL Digital Experience 9.5 Container Update packages are provided in a compressed .zip file, that can easily be unzipped using a utility of your choice. Refer to the latest [HCL DX 9.5 Container Update Release CF196 and later file listings in the Docker deployment](docker.md) topic:
+The HCL Digital Experience 9.5 Container Update packages are provided in a compressed .zip file, that can easily be unzipped using a utility of your choice. Refer to the latest [HCL DX 9.5 Container Update Release CF196 and later file listings in the Docker deployment](../../docker.md) topic:
 
 !!! note
 
@@ -217,7 +217,7 @@ After you have successfully prepared all DX 9.5 images, you need to configure th
 The following syntax may be used to define the correct image configuration for your environment:
 
 !!!note
-    If deploying to a [Hybrid](hybrid_deployment_helm.md) environment, with DX 9.5 Container Update CF198 or later, the Core needs to be set as false, since Core is already installed to an On-premise Server.
+    If deploying to a Hybrid<!-- [Hybrid](hybrid_deployment_helm.md) --> environment, with DX 9.5 Container Update CF198 or later, the Core needs to be set as false, since Core is already installed to an On-premise Server.
 
 ```
 # Fill in the values fitting to your configuration
@@ -258,4 +258,7 @@ images:
 
 If your remote repository requires access credentials, it is necessary to configure an `ImagePullSecret` to allow your cluster nodes to have proper access to the HCL DX 9.5 container images.
 
-Please refer to [Using ImagePullSecrets](prepare_imagepullsecrets.md) topic for instructions on how to configure this.
+Please refer to [Using ImagePullSecrets](optional_imagepullsecrets.md) topic for instructions on how to configure this.
+
+<!-- ???info "Related information:"
+    - [Hybrid](hybrid_deployment_helm.md) -->

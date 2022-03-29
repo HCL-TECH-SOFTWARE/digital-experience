@@ -2,7 +2,7 @@
 
 To run HCL Digital Experience 9.5 Container deployments in your Kubernetes or OpenShift cluster, you need to set up PersistentVolumes \(PVs\) on your cluster and configure the Helm Chart to create the appropriate PersistentVolumeClaims \(PVCs\).
 
-Before you proceed, review the [Persistent Volumes and related operations considerations](persistent_volumes_helm.md) topic in the DX Help Center.
+Before you proceed, review the [Persistent Volumes and related operations considerations](../../architecture/persistent_volumes.md) topic in the DX Help Center.
 
 !!! note
     The provisioning of PersistentVolumes \(PVs\) may differ based on your cluster configuration and your cloud provider. Please reference the documentation of your cloud provider for additional information.
@@ -18,7 +18,7 @@ Before you proceed, review the [Persistent Volumes and related operations consid
 
     In the HCL Digital Experience 9.5 Kubernetes or OpenShift deployment using Helm, the only DX applications leveraging RWO PVs are Core and Persistence.
 
-    Information regarding how to calculate the number of required volumes for the DX Core and Persistence applications is presented in the [Persistent Volumes and related operations considerations](persistent_volumes_helm.md) topic in the DX Help Center.
+    Information regarding how to calculate the number of required volumes for the DX Core and Persistence applications is presented in the [Persistent Volumes and related operations considerations](../../architecture/persistent_volumes.md) topic in the DX Help Center.
 
     Since Core requires RWO PVs per pod, it may be necessary to have auto-provisioning of such volumes configured in your cluster if you don't know the final maximum number of possible Core pods running at the same time. Each Core pod requires 2 RWO PVs.
 
@@ -64,7 +64,7 @@ volumes:
 
     If you enter an empty `StorageClassName`, Kubernetes falls back to the default `StorageClass` configured in your Cluster. Refer to your cloud provider for additional information about your default StorageClass, since this depends on your Kubernetes or OpenShift environment.
 
-    Reference the original values.yaml file you have extracted as outlined in the *Prepare configuration* topic for all configurable PVCs.
+    Reference the original values.yaml file you have extracted as outlined in the [Prepare configuration](../preparation/prepare_configuration.md) topic for all configurable PVCs.
 
 -   **`Requests`**
 
@@ -282,7 +282,7 @@ spec:
 
 ```
 
-Refer to **[Networking configuration](helm_configure_networking.md)** for the next steps.
+Refer to **[Networking configuration](../../deployment/preparation/prepare_configure_networking.md)** for the next steps.
 
-****
+
 
