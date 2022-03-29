@@ -19,7 +19,8 @@ Helm provides you with a way to maintain your own custom values files. You can s
 
 This custom values file only needs to contain the parameters that you want to overwrite with your preferred settings.
 
-**Note:** There is no need to have the same complete set of parameters inside your custom values file, as there are available by default in the Helm Chart `values.yaml`. As outlined previously in this section, everything that is not defined in your custom values file are applied using the defaults from `values.yaml` inside the Helm Charts.
+!!! note
+    There is no need to have the same complete set of parameters inside your custom values file, as there are available by default in the Helm Chart `values.yaml`. As outlined previously in this section, everything that is not defined in your custom values file are applied using the defaults from `values.yaml` inside the Helm Charts.
 
 Please be aware that the parameters you can configure using your custom values file need to exactly align with those provided by the Helm Charts own values.yaml. You cannot configure anything that is not exposed in the values.yaml definition.
 
@@ -42,7 +43,8 @@ helm show values hcl-dx-deployment.tar.gz > values.yaml
 
 The file contains all configurable parameters and their default values. You may use this file as a blueprint to create your own `custom-values.yaml`. You may also just rename the extracted `values.yaml` to `custom-values.yaml`.
 
-**Note:** Having a complete copy of the default `values.yaml` is not necessary and may bloat your configuration file with values that are already present in the DX Helm Chart.
+!!! note
+    Having a complete copy of the default `values.yaml` is not necessary and may bloat your configuration file with values that are already present in the DX Helm Chart.
 
 -   **A custom configuration file**
 

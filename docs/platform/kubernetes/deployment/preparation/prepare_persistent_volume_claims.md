@@ -4,11 +4,13 @@ To run HCL Digital Experience 9.5 Container deployments in your Kubernetes or Op
 
 Before you proceed, review the [Persistent Volumes and related operations considerations](persistent_volumes_helm.md) topic in the DX Help Center.
 
-**Note:** The provisioning of PersistentVolumes \(PVs\) may differ based on your cluster configuration and your cloud provider. Please reference the documentation of your cloud provider for additional information.
+!!! note
+    The provisioning of PersistentVolumes \(PVs\) may differ based on your cluster configuration and your cloud provider. Please reference the documentation of your cloud provider for additional information.
 
 ## Persistent Volume Types
 
-**Important note:** Ensure that your PersistentVolumes \(PVs\) are created with the Reclaim Policy set to RETAIN. This allows for the reuse of PVs after a PersistentVolumeClaim \(PVC\) is deleted. This is important to keep data persisted, for example, between deployments or tests. Refrain from using the Reclaim Policy DELETE unless you have the experience in managing these operations successfully, to avoid unpredictable results. This is not recommended in production use, as deleting PVCs causes the Kubernetes or OpenShift cluster to delete the bound PV as well, thus, deleting all the data on it.
+!!! important
+    Ensure that your PersistentVolumes \(PVs\) are created with the Reclaim Policy set to RETAIN. This allows for the reuse of PVs after a PersistentVolumeClaim \(PVC\) is deleted. This is important to keep data persisted, for example, between deployments or tests. Refrain from using the Reclaim Policy DELETE unless you have the experience in managing these operations successfully, to avoid unpredictable results. This is not recommended in production use, as deleting PVCs causes the Kubernetes or OpenShift cluster to delete the bound PV as well, thus, deleting all the data on it.
 
 -   **`ReadWriteOnce` \(RWO\)**
 
@@ -51,7 +53,8 @@ volumes:
       volumeName:
 ```
 
-**Important note:** Make sure to properly define the PVC configuration in your custom-values.yaml file before running the deployment. This avoids issues when trying to get your deployment up and running.
+!!! important
+    Make sure to properly define the PVC configuration in your custom-values.yaml file before running the deployment. This avoids issues when trying to get your deployment up and running.
 
 -   ****StorageClassName****
 

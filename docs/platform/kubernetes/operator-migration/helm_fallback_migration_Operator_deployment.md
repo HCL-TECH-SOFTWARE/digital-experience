@@ -12,11 +12,11 @@ Follow this guidance to create a backup to support the capability to restore the
     kubectl exec --stdin --tty pod/<pod-name> -n <namespace> -- /bin/bash
     ```
 
-    **Example**:
+    !!!example "Example:"
 
-    ```
-    kubectl exec --stdin --tty pod/dx-deployment-0 -n dxns -- /bin/bash
-    ```
+        ```
+        kubectl exec --stdin --tty pod/dx-deployment-0 -n dxns -- /bin/bash
+        ```
 
     1.  Start the server. Navigate to the profile `bin` folder and run the `startServer` command.
 
@@ -58,11 +58,11 @@ Follow this guidance to create a backup to support the capability to restore the
     kubectl -n <namespace> edit cm <configmap>
     ```
 
-    Example:
+    !!!example "Example:"
 
-    ```
-    kubectl edit cm -n dxns dx-deployment
-    ```
+        ```
+        kubectl edit cm -n dxns dx-deployment
+        ```
 
     In the `data` section, remove `maintenance_mode:true` from the `dx.deploy.dam.features` entry and save the changes. If `maintenance_mode:true` is the only entry for this key, `dx.deploy.dam.features` can be removed completely.
 

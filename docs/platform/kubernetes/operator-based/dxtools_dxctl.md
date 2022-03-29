@@ -72,7 +72,8 @@ The properties files function as follows:
 
         `composer.enabled: false` disables Content Composer.
 
-        **Note:** Experience API must be enabled to deploy Content Composer and Digital Asset Management.
+        !!!note
+            Experience API must be enabled to deploy Content Composer and Digital Asset Management.
 
 
 ## Prerequisites
@@ -106,13 +107,15 @@ Follow these steps to create a deployment.
     ```
 
 
-**Note:** For OpenShift deployments, `/linux/dxctl --deploy` is all you need. For all other Kubernetes environments \(EKS, GKE, etc.\), you need to generate a TLS certification and private key. See the [Generate TLS Certificate](kubernetes_eks_cf192andlater.md#section_generate_tls_cert_cf192andlater) topic for more information.
+!!!note
+    For OpenShift deployments, `/linux/dxctl --deploy` is all you need. For all other Kubernetes environments \(EKS, GKE, etc.\), you need to generate a TLS certification and private key. See the [Generate TLS Certificate](kubernetes_eks_cf192andlater.md#section_generate_tls_cert_cf192andlater) topic for more information.
 
 ## Updating a deployment
 
 Limitation: If you have a DX-only deployment \(a deployment that contains only DX without any other features, such as the Experience API, Content Composer, or Digital Asset Management\) installed using the deployment script, the `dxctl` tool cannot be used to update this deployment. You may continue to use the DX deployment script to update this deployment.
 
-**Note:** When working with HCL Digital Experience 9.5 Container Update CF192 and later, the dxctl tool can be used to update the deployment.
+!!!note
+    When working with HCL Digital Experience 9.5 Container Update CF192 and later, the dxctl tool can be used to update the deployment.
 
 The dxctl tool does not deploy or update the DxDeployment custom resource definition. Prior to running an update process, administrators should check the DxDeployment custom resource definition \(`hcl-dx-cloud-scripts/deploy/crds/git.cwp.pnp-hcl.com_dxdeployments_crd.yaml`\) for changes and update accordingly:
 

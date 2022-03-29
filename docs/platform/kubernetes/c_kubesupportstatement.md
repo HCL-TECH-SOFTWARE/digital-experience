@@ -2,7 +2,8 @@
 
 View the latest Kubernetes and OpenShift platforms tested and supported for specific HCL Digital Experience 9.5 Container Update deployments.
 
-**Attention:** Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience \(DX\) [Operator-based deployments](deploy_container_platforms.md) and will provide support only for [Helm-based deployments](../kubernetes/deployment/helm_deployment.md). There will be no further updates or code fixes provided for the Operator-based deployments. HCL requires all customers to migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based deployments](../kubernetes/operator-migration/operator_migration_preparation.md).
+!!! attention
+    Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience \(DX\) Operator-based deployments<!-- [Operator-based deployments](deploy_container_platforms.md) --> and will provide support only for [Helm-based deployments](../kubernetes/deployment/helm_deployment.md). There will be no further updates or code fixes provided for the Operator-based deployments. HCL requires all customers to migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based deployments](operator-migration/operator_migration_preparation.md).
 
 HCL encourages customers to remain up-to-date on the latest DX and Kubernetes releases. As a result, DX will provide all fixes on the latest release. Customers may be asked to upgrade to the latest DX release to assist with problem determination.
 
@@ -52,3 +53,6 @@ HCL encourages customers to remain up-to-date on the latest DX and Kubernetes re
 |CF191|OS 4.4<br/>Kubernetes 1.17|NA|
 |CF19|OS 4.3<br/>Kubernetes 1.16|NA|
 |CF184|OS 4.3<br/>Kubernetes 1.16|NA|
+
+??? info "Relation information:"
+    - [Operator-based deployments](deploy_container_platforms.md)
