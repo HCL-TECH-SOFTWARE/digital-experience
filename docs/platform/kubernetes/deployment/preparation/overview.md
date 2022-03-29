@@ -50,8 +50,15 @@ There are application specific configurations that you may want to adjust, e.g. 
 This topic explains how you can configure Pod count and automated scaling for applications that support it.
 
 ### [Configure credentials](optional_configure_credentials.md)
-This topic shows you how adjust credentials that are used for the deployment.
+This topic shows you how to adjust credentials that are used for the deployment.
 
+### [Configure Core sidecar logging](optional_core_sidecar.md)
+This topic describes how to expose logs that are written to files by the DX Core application.
+### [Configure Remote Search sidecar logging](optional_rs_sidecar_log.md)
+This topic describes how you can expose logs that are written to files on its PersistentVolumes \(PVs\) by the DX Remote Search application.
+
+### [Configure Labels and Annotations](optional_labels_annotations.md)
+This topic documents the configuration of labels and annotations for different DX resources.
 ### [Try experimental features](optional_experimental_features.md)
 This topic describes the incubator section in the Helm Charts.
 
