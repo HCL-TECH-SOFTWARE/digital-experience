@@ -143,11 +143,11 @@ After saving the changes, the DAM pod restarts automatically. Please wait until 
 ## Restore your back up to the Helm-based deployment
 
 !!!important
-    -   Ensure to note the [requirements and limitations here](helm_extract_operator_properties.md#prereq_lxy_5rt_hrb).
+    -   Ensure to note the [requirements and limitations here](https://help.hcltechsw.com/digital-experience/9.5/containerization/helm_extract_operator_properties.html#helm_extract_operator_properties__prereq_lxy_5rt_hrb)<!-- (helm_extract_operator_properties.md#prereq_lxy_5rt_hrb) -->.
     -   For the new Helm deployment, you must use a different Kubernetes namespace from the one used in the Operator-based deployment.
 
 1.  Ensure that the Helm-based deployment is in the correct state before restoring a backup.
-    -   Ensure that you have [extracted the Kubernetes DX configuration](helm_extract_operator_properties.md) from the Operator-based deployment to a valid custom-values.yaml file is done.
+    -   Ensure that you have [extracted the Kubernetes DX configuration]((https://help.hcltechsw.com/digital-experience/9.5/containerization/helm_extract_operator_properties.html)<!-- (helm_extract_operator_properties.md) --> from the Operator-based deployment to a valid custom-values.yaml file is done.
     -   You must enable `migration` mode for `operatorToHelm` by adding or updating the following value in custom-values.yaml:
 
         ```
@@ -304,3 +304,5 @@ After saving the changes, the DAM pod restarts automatically. Please wait until 
             helm upgrade -n dxns-helm --create-namespace -f custom-values.yaml dx-deployment hcl-dx-deployment
             ```
 
+<!-- ???info "Related information:"
+    - [requirements and limitations here](helm_extract_operator_properties.md) -->
