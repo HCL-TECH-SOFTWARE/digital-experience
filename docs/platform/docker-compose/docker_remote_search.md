@@ -98,7 +98,7 @@ Upon completion, when the HCL Digital Experience 9.5 Container core server commu
 
 The following guidance aligns with the Remote Search services configuration instructions available in the [Remote Search services](https://help.hcltechsw.com/digital-experience/9.5/admin-system/srcusgrmtsrchsrv.html) topic for deployment to non-container HCL Digital Experience servers.
 
-All of the instructions contained in the [Remote Search services](https://help.hcltechsw.com/digital-experience/9.5/admin-system/srcusgrmtsrchsrv.md) topic should also be completed in a Docker-based HCL Digital Experience deployment. The following guidance outlines specific settings that were used in the Remote Search service DX Docker deployment.
+All of the instructions contained in the [Remote Search services](https://help.hcltechsw.com/digital-experience/9.5/admin-system/srcusgrmtsrchsrv.html) topic should also be completed in a Docker-based HCL Digital Experience deployment. The following guidance outlines specific settings that were used in the Remote Search service DX Docker deployment.
 
 1.  Create a single sign-on \(SSO\) domain between HCL Digital Experience 9.5 container and the Remote Search service container by following the non-container on-premises procedure for [Creating a single sign-on domain between HCL Portal and the Remote Search service](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sso_portal_rss.html)<!-- (../../9.0/admin-system/sso_portal_rss.md) -->. This entails exchanging SSL certificates and LTPA domain tokens.
 

@@ -3,7 +3,7 @@
 This section shows how to configure Remote Search for your HCL Digital Experience 9.5 environments.
 
 !!!note
-  Prior to Container Update CF195, the HCL Digital Experience 9.5 Remote Search image is supported for deployment to Red Hat OpenShift. With the Container Update CF195 release, Remote Search can be configured for deployment on supported Kubernetes platforms.
+    Prior to Container Update CF195, the HCL Digital Experience 9.5 Remote Search image is supported for deployment to Red Hat OpenShift. With the Container Update CF195 release, Remote Search can be configured for deployment on supported Kubernetes platforms.
 
 ## Introduction
 

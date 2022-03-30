@@ -64,5 +64,5 @@ networking:
   minTlsVersion: "v1.2"
 ```
 
-Refer to **[Additional tasks](helm_additional_tasks.md)** for the next steps.
+<!-- Refer to **[Additional tasks](helm_additional_tasks.md)** for the next steps. -->
 

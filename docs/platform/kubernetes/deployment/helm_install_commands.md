@@ -32,7 +32,7 @@ TEST SUITE: None
 
 ## Hybrid deployment configuration
 
-If you are installing in a [Hybrid deployment](hybrid_deployment_helm.md) pattern, after successfully running the Helm deployment, you need to configure services in DX Core to be aware of the `external host name` of your hybrid DX environment. To complete these steps, log on to the DX Core Server and run the following Config Engine tasks to enable other DX applications.
+If you are installing in a [Hybrid deployment](https://help.hcltechsw.com/digital-experience/9.5/containerization/hybrid_deployment_helm.html)<!-- (../../hybrid/hybrid_deployment_helm.md) --> pattern, after successfully running the Helm deployment, you need to configure services in DX Core to be aware of the `external host name` of your hybrid DX environment. To complete these steps, log on to the DX Core Server and run the following Config Engine tasks to enable other DX applications.
 
 In the following examples, replace <host-url\> with your corresponding external host name.
 
@@ -122,7 +122,7 @@ After a successful Helm deployment in a hybrid deployment, you can add a load ba
 
 ## \(Optional\) Automated host extraction
 
-As described in the [Configure networking](/preparation/prepare_configure_networking.md) topic, there are instances wherein you do not know the resulting external IP or FQDN for your deployment and you left the host value empty. In that case, run a Helm upgrade command, and it automatically polls the Ambassador Ingress and extract the found IP or FQDN from there. The Helm Chart logic goes ahead and populates all application configuration with the correct settings.
+As described in the [Configure networking](preparation/prepare_configure_networking.md) topic, there are instances wherein you do not know the resulting external IP or FQDN for your deployment and you left the host value empty. In that case, run a Helm upgrade command, and it automatically polls the Ambassador Ingress and extract the found IP or FQDN from there. The Helm Chart logic goes ahead and populates all application configuration with the correct settings.
 
 An example is provided below. You may use the following Helm upgrade command to trigger the automated host extraction:
 

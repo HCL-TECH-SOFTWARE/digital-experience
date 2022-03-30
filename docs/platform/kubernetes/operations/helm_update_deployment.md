@@ -2,7 +2,7 @@
 
 This section shows how to update your HCL DX 9.5 Container Update CF197 and later deployment to a newer DX 9.5 Container Update release version.
 
-To proceed, administrators should have prepared the container platform cluster, together with the HCL DX 9.5 container deployment custom-values.yaml using the following guidance, [Planning your container deployment using Helm](../preparation/overview.md), and then install your deployment using the instructions in [Install and uninstall commands for HCL DX 9.5 CF196 and later container deployments to Kubernetes and Red Hat OpenShift platforms using Helm](../deployment/helm_install_commands.md).
+To proceed, administrators should have prepared the container platform cluster, together with the HCL DX 9.5 container deployment custom-values.yaml using the following guidance, [Planning your container deployment using Helm](../deployment/preparation/overview.md), and then install your deployment using the instructions in [Install and uninstall commands for HCL DX 9.5 CF196 and later container deployments to Kubernetes and Red Hat OpenShift platforms using Helm](../deployment/helm_install_commands.md).
 
 !!!note "Platform Support"
     -   As of HCL DX 9.5 Container Update CF197, you can use this process to update a DX 9.5 deployment from Container Update CF196 on the Google Kubernetes Engine \(GKE\) platform.

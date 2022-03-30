@@ -55,4 +55,4 @@ HCL encourages customers to remain up-to-date on the latest DX and Kubernetes re
 |CF184|OS 4.3<br/>Kubernetes 1.16|NA|
 
 ??? info "Relation information:"
-    - [Operator-based deployments](deploy_container_platforms.md)
+    - [Operator-based deployments](../kubernetes/operator-based/deploy_container_platforms.md)

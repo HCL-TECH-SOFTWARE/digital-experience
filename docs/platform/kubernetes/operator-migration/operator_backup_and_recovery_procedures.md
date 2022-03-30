@@ -8,7 +8,7 @@ Learn about the HCL DX 9.5 Container deployment architecture to get a better und
 
 !!! note
 
-    This topology is also available in the [Install the HCL Digital Experience 9.5 components](../containerization/install_config_cc_dam.md) topic.
+    This topology is also available in the [Install the HCL Digital Experience 9.5 components](https://help.hcltechsw.com/digital-experience/9.5/containerization/install_config_cc_dam.html)<!-- (../containerization/install_config_cc_dam.md) --> topic.
 
 ![](../../../images/cf_173_topology.png)
 
@@ -18,11 +18,11 @@ The following sections describe how the administrators can create and manage bac
 
 -   **1. wp-profile backup**
 
-    1.  Backup the file systems in the Digital Experience 9.5 container profile \(**Persistent volume claim** `wp_profile`\). Refer to the [Backup and Restore](../admin-system/i_wadm_c_bkup_restr_winlinux.md) topic and component backup guidance for more information.
+    1.  Backup the file systems in the Digital Experience 9.5 container profile \(**Persistent volume claim** `wp_profile`\). Refer to the [Backup and Restore](https://help.hcltechsw.com/digital-experience/9.5/admin-system/i_wadm_c_bkup_restr_winlinux.html)<!-- (../admin-system/i_wadm_c_bkup_restr_winlinux.md) --> topic and component backup guidance for more information.
 
         !!! note
         
-            The HCL Digital Asset Management \(DAM\) component uploads folder and the DAM persistent mount for the primary instance dx-deployment-persistence-0 in the statefulset [dx-deployment-persistence \(https://console-openshift-console.apps.hcl-dxdev.hcl-dx-dev.net/k8s/ns/master-tests/statefulsets/dx-deployment-persistence\)](https://console-openshift-console.apps.hcl-dxdev.hcl-dx-dev.net/k8s/ns/master-tests/statefulsets/dx-deployment-persistence).
+            The HCL Digital Asset Management \(DAM\) component uploads folder and the DAM persistent mount for the primary instance dx-deployment-persistence-0 in the statefulset. <!-- [dx-deployment-persistence](https://console-openshift-console.apps.hcl-dxdev.hcl-dx-dev.net/k8s/ns/master-tests/statefulsets/dx-deployment-persistence). -->
 
         To create a backup of the profile **Persistent volume claim** `wp_profile`, it is recommended that:
 
@@ -40,7 +40,7 @@ The following sections describe how the administrators can create and manage bac
             ![Example](../../../images/backup_restore_stop_server_example.png)
 
         -   The entire /opt/HCL/wp\_profile directory is backed up.
-        In the command line interface, run the following command to back up the Digital Experience 9.5 Persistent volume claim **wp\_profile**:
+            In the command line interface, run the following command to back up the Digital Experience 9.5 Persistent volume claim **wp\_profile**:
 
         -   Before running the tar command, ensure that the backup file system that you are using has ~50% free profile.
 
@@ -84,13 +84,13 @@ The following sections describe how the administrators can create and manage bac
 
     After the backup command is completed, it is recommended that a copy of the resulting file is created and placed to an alternate long term storage.
 
-    See the [Backup and restore DAM image](../digital_asset_mgmt/dam_backup_restore_image.html) topic for more information.
+    See the [Backup and restore DAM image](https://help.hcltechsw.com/digital-experience/9.5/digital_asset_mgmt/operator_dam_backup_restore_image.html)<!-- (../digital_asset_mgmt/dam_backup_restore_image.html) --> topic for more information.
 
 -   **3. Digital Asset Management media backup**
 
     Use the following commands to back up the Digital Asset Management media uploads volume:
 
-    1.  A command similar to the backup command outlined in [Step 1](operator_backup_and_recovery_procedures.md#ol_zp1_w1f_ppb) to create a backup of wp\_profile can be used to back up the two /opt/app/upload and /etc/config Digital Asset Management mount points.
+    1.  A command similar to the backup command outlined in [Step 1](https://help.hcltechsw.com/digital-experience/9.5/digital_asset_mgmt/operator_dam_backup_restore_image.html)<!-- (operator_backup_and_recovery_procedures.md#ol_zp1_w1f_ppb) --> to create a backup of wp\_profile can be used to back up the two /opt/app/upload and /etc/config Digital Asset Management mount points.
 
         -   Refer to the following examples:
 
@@ -117,6 +117,11 @@ The following sections describe how the administrators can create and manage bac
 
         HCL Digital Experience has successfully tested the volume snapshot and CSI volume cloning methods with HCL Digital Experience 9.5 container deployments. It is recommended that customers perform the additional testing if they are using options [Step 2](#vol_snapshots) and [Step 3](#vol_pvc_datasource) to manage the wp\_profile backup.
 
+???info "Related information:"
+   - [Install the HCL Digital Experience 9.5 components](../containerization/install_config_cc_dam.md)
+   - [Backup and Restore](../admin-system/i_wadm_c_bkup_restr_winlinux.md)
+   - [Backup and restore DAM image](../digital_asset_mgmt/dam_backup_restore_image.html)
+ 
 
 <!-- -   **[Restore Digital Asset Management image to previous version](../digital_asset_mgmt/dam_restore_image_operator.md)**  
 This shows you how to restore the HCL Digital Experience 9.5 Digital Asset Management image to a previous version.
