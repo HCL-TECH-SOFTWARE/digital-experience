@@ -3,6 +3,10 @@
     font-weight: 600;
 }
 
+.md-tabs__link {
+    opacity: 1;
+}
+
 .md-typeset h1 {
     font-weight: 500;
 }
@@ -13,4 +17,9 @@
 
 [dir=rtl] .md-header__title {
     margin-right: 0;
+}
+
+.announcement__link {
+    color: white !important;
+    text-decoration: underline;
 }

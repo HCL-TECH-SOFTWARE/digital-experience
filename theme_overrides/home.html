@@ -32,7 +32,7 @@
 	
     .tx-container {
         padding-top: 0rem;
-        background: linear-gradient(to bottom, var(--md-primary-fg-color), hsla(290deg,4%,43%,1) 99%,#fff 99%)
+        background: linear-gradient(to bottom, var(--md-primary-fg-color), hsla(292, 33%, 41%) 99%,#fff 99%);
     }
 
     .tx-hero {
@@ -56,7 +56,6 @@
         width:28rem;
         height:17rem;
         order:1;
-        padding-right: 5.5rem;
     }
 
     .tx-hero .md-button {
@@ -87,6 +86,7 @@
 
     .top-hr {
         margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     .feature-item {
@@ -101,7 +101,7 @@
     .feature-item h2 {
         color: #333;
         font-weight: 300;
-        font-size: 18px;
+        font-size: 24px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -112,13 +112,17 @@
     }
 
     .feature-item p {
-        font-size: 13px;
+        font-size: 16px;
         line-height: 1.8em;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
         color: #111;
         margin:  0 40px;
         display: block;
+    }
+
+    .feature-item a {
+        text-decoration: underline;
     }
 
     @media screen and (max-width:30em) {
@@ -222,6 +226,12 @@
         margin-bottom: 30px;
     }
 
+    .md-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%
+    }
+
     .md-footer-meta__inner {
         display: flex;
         flex-wrap: wrap;
@@ -231,6 +241,13 @@
 
     .md-footer-social {
         padding-top: 20px;
+    }
+
+    .md-footer-copyright {
+        font-size: .64rem;
+        margin: auto .6rem;
+        padding: .4rem 0;
+        color: var{--md-footer-fg-color--lighter}
     }
 </style>
 
@@ -243,12 +260,13 @@
 		<!-- <img src="assets/undraw_homepage.png" draggable="false"> -->
         </div>
         <div class="tx-hero__content">
-          <h1>How can we help you?</h1>
-          <p>Welcome to the new HCL Digital Experience Help Center(PoC)! This web site helps us help you to experience the wealth of digitizing your business in a whole new and easy way. We also invite you to provide us feedback and contribute with your thoughts, ideas, and requirements to enhance the user experience.</p>
+          <h1>HCL Digital Experience</h1>
+          <p>Welcome to the new HCL Digital Experience Next-Gen Help Center! </p>
+            <p>This site helps us help you to experience the wealth of digitizing your business in a whole new and easy way. We also invite you to provide us feedback and contribute with your thoughts, ideas, and requirements to enhance the user experience.</p>
           <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | striptags }}" class="md-button md-button--primary">
-            What's DX?
+            What's New?
           </a>
-          <a href="whatsnew/new_cf_95.md" class="md-button">
+          <a href="platform/kubernetes/overview/" class="md-button">
             Get started
           </a>
         </div>
@@ -264,9 +282,14 @@
                 <path
                     d="M15 17v-3h3v-2l4 3.5-4 3.5v-2h-3m2 1v3h-3v2l-4-3.5 4-3.5v2h3M12 8c-2.21 0-4 1.8-4 4 0 1.91 1.35 3.54 3.21 3.92L16 11.86A3.997 3.997 0 0012 8m0 6c-1.1 0-2-.89-2-2s.9-2 2-2 2 .9 2 2-.89 2-2 2m9.66-5.27l-2-3.46c-.12-.22-.38-.31-.61-.22l-2.49 1c-.51-.41-1.06-.74-1.69-1l-.37-2.63A.506.506 0 0014 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.26-1.17.59-1.69 1L5 5.05c-.23-.09-.5 0-.61.22l-2 3.46c-.13.21-.08.49.11.64L4.57 11l-.07 1 .07 1-2.11 1.63c-.2.15-.25.43-.12.64l2 3.46c.11.27.4.38.66.27l2.5-1c.24.19.5.37.76.53l1.65-1.4c-.77-.33-1.45-.82-2-1.45l-2.41 1-.77-1.3L6.8 13.8a5.55 5.55 0 010-3.6L4.69 8.65l.75-1.3 2.41 1c.78-.9 1.83-1.53 3-1.78l.4-2.57h1.5l.37 2.62c1.17.24 2.22.88 3 1.77l2.41-1 .75 1.3-2.08 1.51c.09.26.16.53.2.8h2l2.1-1.63a.48.48 0 00.16-.64M12 8c-2.21 0-4 1.8-4 4 0 1.91 1.35 3.54 3.21 3.92L16 11.86A3.997 3.997 0 0012 8m0 6c-1.1 0-2-.89-2-2s.9-2 2-2 2 .9 2 2-.89 2-2 2m0-6c-2.21 0-4 1.8-4 4 0 1.91 1.35 3.54 3.21 3.92L16 11.86A3.997 3.997 0 0012 8m0 6c-1.1 0-2-.89-2-2s.9-2 2-2 2 .9 2 2-.89 2-2 2z" />
             </svg>
-            Deploying DX on containers
+            DX Help Center
              </h2>
-          <p>Know more about deploying using Helm charts</p>
+          <p>The "legacy" DX Help Center, which contains documentation for all topics not covered in this site.
+            <br> <br> <a href="https://help.hcltechsw.com/digital-experience/9.5/welcome/wp95_welcome.html" class="md-button">
+                Go there
+              </a>
+          </p>
+          
     </div>
     <div class="feature-item">
         <h2>
@@ -275,19 +298,24 @@
                     d="M16 17v2H2v-2s0-4 7-4 7 4 7 4m-3.5-9.5A3.5 3.5 0 109 11a3.5 3.5 0 003.5-3.5m3.44 5.5A5.32 5.32 0 0118 17v2h4v-2s0-3.63-6.06-4M15 4a3.39 3.39 0 00-1.93.59 5 5 0 010 5.82A3.39 3.39 0 0015 11a3.5 3.5 0 000-7z" />
             </svg>DX Support resources
         </h2>
-        <p>DX Support knowledge base articles.</p>
+        <p>DX Support landing page, with knowledge base and access to support contact details, software access.
+            <br> <br> <a href="https://support.hcltechsw.com/csm?id=csm_index" class="md-button">
+                Access support now
+              </a>
+        </p>
+        
     </div>
     <div class="feature-item">
         <h2>
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 26 26" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M20.4 14.5L16 10 4 20"/></svg>
             Software Academy
         </h2>
-        <p>Learning materials from the Academy team.</p>
-    </div>
-</div>
-
-<div class="top-hr">
-    <div class="hr">
+        <p>Learning materials from the Academy team.
+            <br> <br> <a href="https://academy.hcltechsw.com" class="md-button">
+                Start learning
+              </a>
+        </p>
+       
     </div>
 </div>
 
@@ -301,20 +329,17 @@
         <div class="md-footer-meta__inner md-grid">
             <!-- Copyright and theme information -->
             <div class="md-footer-copyright">
-              <a href=" https://www.hcltechsw.com/ " title="MkDocs">HCL Software </a>
-<!--  			   {% if config.copyright %}
-                {% endif %}                
- --><!-- 				powered by
-                <a href="https://www.mkdocs.org" title="MkDocs">mkdocs</a>
-                and
-                <a href="https://squidfunk.github.io/mkdocs-material/"
-                   title="Material for MkDocs">
-                    Material for MkDocs</a>
- -->            
- </div>                
-				<div class="md-footer-copyright__highlight">
-                    {{ config.copyright }}
-                </div>
+              <a href=" https://www.hcltechsw.com/ " title="MkDocs">{{ config.copyright }}</a>              
+				<br>Made with 
+                <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+                    Material for MkDocs
+                  </a>
+            </div>                
+            <div class="md-social">
+                <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+                  </a>
+            </div>
         </div>
     </div>
 </footer>

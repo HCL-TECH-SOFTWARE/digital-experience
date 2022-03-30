@@ -13,7 +13,6 @@ theme:
     - navigation.indexes
     - navigation.top
     - navigation.instant
-    # - navigation.expand
     - search.highlight
     - search.share
     - search.suggest
@@ -25,12 +24,27 @@ theme:
     code: Roboto Mono
   favicon: assets/favicon.png
 
+  # Static files
+  static_templates:
+    - 404.html
+
+# Markdown Extensions
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
 # Copyright
 copyright: Copyright &copy; 2022, HCL Technologies Limited
 
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/HCL-TECH-SOFTWARE
+
 # Repository
-repo_url: https://git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/
-repo_name: CWPdoc/dx-mkdocs/
+repo_url: https://github.com/HCL-TECH-SOFTWARE/digital-experience
+repo_name: HCL-TECH-SOFTWARE/digital-experience
 
 # Customization
 extra_css:

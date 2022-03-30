@@ -1,0 +1,17 @@
+# Database transfer: Create database runtime users and groups 
+
+Manual steps from the Configuration Wizard are included in HCL Digital Experience Product Documentation for reference and for advanced users. The procedure includes variables and steps for different databases. When you use the wizard to configure your deployment, it replaces the variable with information that you provided in the wizard. It also shows only the steps that are specific to your environment. The instructions that the wizard generates are specific to your environment.
+
+**Attention:** All steps for all database environments are included without consideration for your environment. Use the Configuration Wizard to generate custom instructions for your environment.
+
+User and group names must comply with both the database management system software requirements and HCL Portal requirements.
+
+1.  Create the database runtime users for the database domains on the operating system.
+
+2.  Create the `${dbdomain}``dbdomain` database runtime user. Use `${${dbdomain}.DbRuntimeUser}``dbdomain.DbRuntimeUser` as the user ID when you create this user.
+
+3.  Create the `${dbdomain}``dbdomain` database runtime group. Use `${${dbdomain}.DbRuntimeRoleName}``dbdomain.DbConfigRoleName` as the group name on your operating system.
+
+
+**Parent topic:**[Manual Steps: Database Transfer option in the Configuration Wizard](../eua-workflows/kc-db-parent.md)
+
