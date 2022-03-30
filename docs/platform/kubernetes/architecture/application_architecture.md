@@ -12,7 +12,7 @@ Do note that each application defined only lists its next direct dependencies. S
 
 **Type:** Stateful
 
-HCL DX 9.5 CF196 and later Core contains the primary Portal and Web Content Manager HCL Digital Experience functionality. The standard deployment deploys at least one Pod of Core. If you have an existing on-premise installation of DX 9.5 Core, you can also use that one for your deployment using the Hybrid deployment pattern as described in the DX 9.5 [Hybrid deployment](../../hybrid/hybrid_deployment_operator.md) topic.
+HCL DX 9.5 CF196 and later Core contains the primary Portal and Web Content Manager HCL Digital Experience functionality. The standard deployment deploys at least one Pod of Core. If you have an existing on-premise installation of DX 9.5 Core, you can also use that one for your deployment using the Hybrid deployment pattern as described in the DX 9.5 [Hybrid deployment](https://help.hcltechsw.com/digital-experience/9.5/containerization/hybrid_deployment_operator.html)<!-- (../../hybrid/hybrid_deployment_operator.md) --> topic.
 
 !!! note
       Application of the hybrid deployment pattern is not yet supported with Helm in HCL DX 9.5 Container Update CF196, and will be added in a later update release.
@@ -109,8 +109,10 @@ Application names are defined as follows:
 |PER|Persistence|
 |IMG|Image Processor|
 
-???info "Related information:"
+<!-- ???info "Related information:"
     -   [HCL DX Experience API](../../../design/api/openapi_overview.md)
     -   [Content Composer](../../../design/content_composer/cont_comp_overview.md)
     -   [Digital Asset Management](../../../design/digital_asset_mgmt/digital_asset_mgmt_overview.md)
     -   [Design Studio \(Beta\)](../../../design/design_studio/design_studio_overview.md)
+    -   [Hybrid deployment](../../hybrid/hybrid_deployment_operator.md)
+ -->

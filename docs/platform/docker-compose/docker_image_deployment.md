@@ -41,19 +41,19 @@ Follow these steps to deploy the HCL Digital Experience 9.5 and later CF contain
 
     ???+ note
     
-       - Make sure the `~/dx-store/wp\_profile directory` is created before you start the Docker container. This is required for persistence \(for using `-v ~/dx-store/wp_profile:/opt/HCL/wp_profile hcl/dx/ core:v95_xxxxxxxx-xxxx`\).
-       - To use the HCL DX Configuration Wizard, start the Java virtual machine \(JVM\) within the running container with the following command:
+        - Make sure the `~/dx-store/wp\_profile directory` is created before you start the Docker container. This is required for persistence \(for using `-v ~/dx-store/wp_profile:/opt/HCL/wp_profile hcl/dx/ core:v95_xxxxxxxx-xxxx`\).
+        - To use the HCL DX Configuration Wizard, start the Java virtual machine \(JVM\) within the running container with the following command:
 
-            docker exec <CONTAINER ID> /opt/HCL/AppServer/profiles/cw_profile/bin/startServer.sh server1
+                docker exec <CONTAINER ID> /opt/HCL/AppServer/profiles/cw_profile/bin/startServer.sh server1
             
-       - For HCL DX 9.5 CF171 and later, access the Configuration Wizard at https://localhost:10202/hcl/wizard.
+        - For HCL DX 9.5 CF171 and later, access the Configuration Wizard at https://localhost:10202/hcl/wizard.
 
-        !!! note
-            For HCL DX 9.5 release earlier than CF171, access the Configuration Wizard at https://localhost:10202/ibm/wizard.
+            !!! note
+                For HCL DX 9.5 release earlier than CF171, access the Configuration Wizard at https://localhost:10202/ibm/wizard.
 
-       - Upgrading an existing HCL DX 9.5 Docker container, using a persisted volume, to HCL DX 9.5 CF171 or HCL DX 9.5 CF172 may require launching the upgraded container twice.
+        - Upgrading an existing HCL DX 9.5 Docker container, using a persisted volume, to HCL DX 9.5 CF171 or HCL DX 9.5 CF172 may require launching the upgraded container twice.
 
-         For example, if the following command fails with an error, re-running the command allows a successful upgrade and launch the container:
+        For example, if the following command fails with an error, re-running the command allows a successful upgrade and launch the container:
 
             docker run -e WAS_ADMIN=wasadmin -e WAS_PASSWORD=wasadminpwd -e 
             DX_ADMIN=dxadmin -e DX_PASSWORD=dxadminpwd -p 10038:10038 -p 
