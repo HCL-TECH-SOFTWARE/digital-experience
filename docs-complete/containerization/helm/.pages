@@ -1,0 +1,16 @@
+title: Deploying using Helm charts 
+nav:
+    - helm.md
+    - DX Helm architecture: 
+        - helm_overview.md
+        - core_interactions_kubernetes.md
+        - deploy_applications_using_helm.md
+        - persistent_volumes_helm.md
+        - configure_deployment_helm.md
+        - container_scaling_helm.md
+        - dam_persistence_architecture.md
+    - Deploying on containers: helm_deployment.md
+    - planning
+    # - configuring
+    # - installing
+     

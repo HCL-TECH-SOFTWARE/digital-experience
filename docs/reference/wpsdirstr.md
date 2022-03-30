@@ -1,4 +1,4 @@
-# Directory structure
+# Directory structure 
 
 The topic shows the naming conventions that are used to denote the location of files on the servers and the types of resources you can find in those directories.
 
@@ -262,3 +262,17 @@ The following information shows the default WebSphere Application Server install
     C:\\Program Files\\HCL\\WebSphere\\PortalExpress\\AppServer
 
 
+<<<<<<< HEAD
+=======
+**Parent topic:**[Developing themes and skins ](../dev-theme/themeopt_themes.md)
+
+**Parent topic:**[Reference ](../reference/reference.md)
+
+**Related information**  
+
+
+[Language support ](../admin-system/adintern.md)
+
+[System event logging ](../trouble/adsyslog.md)
+
+>>>>>>> master
