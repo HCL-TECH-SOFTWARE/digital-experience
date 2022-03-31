@@ -3,20 +3,20 @@
 This section shows how to configure Remote Search for your HCL Digital Experience 9.5 environments.
 
 !!!note
-  Prior to Container Update CF195, the HCL Digital Experience 9.5 Remote Search image is supported for deployment to Red Hat OpenShift. With the Container Update CF195 release, Remote Search can be configured for deployment on supported Kubernetes platforms.
+    Prior to Container Update CF195, the HCL Digital Experience 9.5 Remote Search image is supported for deployment to Red Hat OpenShift. With the Container Update CF195 release, Remote Search can be configured for deployment on supported Kubernetes platforms.
 
 ## Introduction
 
-Using HCL Digital Experience 9.5 Remote Search images in the supported cloud container platforms, such as Red Hat OpenShift, require a different setup and configuration steps than those used to [set up Remote Search on a non-Docker or Kubernetes container platform](../admin-system/installrssman.md).
+Using HCL Digital Experience 9.5 Remote Search images in the supported cloud container platforms, such as Red Hat OpenShift, require a different setup and configuration steps than those used to [set up Remote Search on a non-Docker or Kubernetes container platform](https://help.hcltechsw.com/digital-experience/9.5/admin-system/installrssman.html)<!-- (../admin-system/installrssman.md) -->.
 
 -   As information, the serverindex.xml file on the Remote Search server when deployed to on-premises environments may have a host name that is not accurate in a container environment with respect to the actual host name of the server hosting the Remote Search server.
--   Follow the guidance in this section to define collections in the core HCL DX 9.5 container environment with respect to JCR text search collections, rather than guidance published for the on-premises [\(non-Docker or Kubernetes\) platforms](../admin-system/srtcfg_jcr_colls.md) for the JCR collection URL.
+-   Follow the guidance in this section to define collections in the core HCL DX 9.5 container environment with respect to JCR text search collections, rather than guidance published for the on-premises [\(non-Docker or Kubernetes\) platforms](https://help.hcltechsw.com/digital-experience/9.5/admin-system/srtcfg_jcr_colls.html)<!-- (../admin-system/srtcfg_jcr_colls.md) --> for the JCR collection URL.
 
 ## Deploying Remote Search in HCL Digital Experience 9.5 OpenShift and Kubernetes platforms
 
 **Prerequisite**: Download the HCL Digital Experience 9.5 Docker containers from your HCL Digital Experience entitlements from the [HCL Software License Portal](https://www.hcltech.com/software/support/release).
 
-The HCL DX 9.5 container update CF181 and later packages include a core software and Remote search container. Load both of these images into an OpenShift release platform supported by HCL DX 9.5 such as Red Hat OpenShift. Use CF195 and later if you deploy to a Kubernetes platform. See the following [Additional Routing Configuration for supported Kubernetes platforms](#addl_routing_config) topic for information about deploying to Kubernetes container platforms such as Amazon EKS, Azure AKS, or Google GKE.
+The HCL DX 9.5 container update CF181 and later packages include a core software and Remote search container. Load both of these images into an OpenShift release platform supported by HCL DX 9.5 such as Red Hat OpenShift. Use CF195 and later if you deploy to a Kubernetes platform. See the following [Additional Routing Configuration for supported Kubernetes platforms](#additional-routing-configuration-for-supported-kubernetes-platforms) topic for information about deploying to Kubernetes container platforms such as Amazon EKS, Azure AKS, or Google GKE.
 
 In this example, the OpenShift load command can be used. Note that if your organization has a corporate OpenShift repository, you might use OpenShift pull instead to put it into your local repository.
 
@@ -30,7 +30,7 @@ hcl-dx-dxrs-image-v95_CF181_xxxxxxxx-xxxx.tar.gz
 
 The first one \(dx-core-image\), is the core HCL DX 9.5 Portal and Web Content Manager image while the second one \(dx-dxrs-image\) is the remote search image.
 
-After the Remote Search images are loaded to the Kubernetes environment that you deploy to, follow deployment steps for that platform presented in the **[HCL Digital Experience 9.5 Container Deployment](deployment.md)** topic pages.
+After the Remote Search images are loaded to the Kubernetes environment that you deploy to, follow deployment steps for that platform presented in the [HCL Digital Experience 9.5 Container Deployment](../deployment/helm_deployment.md) topic pages.
 
 ## EJBs and host names
 
@@ -52,15 +52,16 @@ Now, when the HCL DX 9.5 server communicates to the Remote Search server over II
 
 ## Remote Search services configuration
 
-The following guidance aligns with the Remote Search services configuration instructions available in the [Remote Search services](../admin-system/srcusgrmtsrchsrv.md) topic for deployment to non-container HCL Digital Experience servers.
+The following guidance aligns with the Remote Search services configuration instructions available in the [Remote Search services](https://help.hcltechsw.com/digital-experience/9.5/admin-system/srcusgrmtsrchsrv.html)<!-- (../admin-system/srcusgrmtsrchsrv.md) --> topic for deployment to non-container HCL Digital Experience servers.
 
-All of the instructions contained in the [Remote Search services](../admin-system/srcusgrmtsrchsrv.md) topic must be completed in a Kubernetes container-based HCL Digital Experience deployment. The following guidance outlines specific settings that were used in the Remote Search service DX 9.5 image deployment to supported Kubernetes platforms.
+All of the instructions contained in the [Remote Search services](https://help.hcltechsw.com/digital-experience/9.5/admin-system/srcusgrmtsrchsrv.html)<!-- (../admin-system/srcusgrmtsrchsrv.md) --> topic must be completed in a Kubernetes container-based HCL Digital Experience deployment. The following guidance outlines specific settings that were used in the Remote Search service DX 9.5 image deployment to supported Kubernetes platforms.
 
-1.  Create a single sign-on \(SSO\) domain between HCL Digital Experience 9.5 container and the Remote Search service container by following the non-container on-premises procedure for [Creating a single sign-on domain between HCL Portal and the Remote Search service](../../9.0/admin-system/sso_portal_rss.md). This entails exchanging SSL certificates and LTPA domain tokens.
+1.  Create a single sign-on \(SSO\) domain between HCL Digital Experience 9.5 container and the Remote Search service container by following the non-container on-premises procedure for [Creating a single sign-on domain between HCL Portal and the Remote Search service](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sso_portal_rss.html)<!-- (../../9.0/admin-system/sso_portal_rss.md) -->. This entails exchanging SSL certificates and LTPA domain tokens.
 
-    **Note:** When retrieving the SSL certificates from the host server, use the URL configuration host as defined in the table below \(dx-deployment-service-remotesearch\) as the host, and the appropriate port for the SSL access. You must also complete [Setting the search user ID](../../9.0/admin-system/srtsttusrid.md) and [Removing search collections](../../9.0/install/rmv_search_coll.md) before creating a new search service.
+    !!!note
+        When retrieving the SSL certificates from the host server, use the URL configuration host as defined in the table below \(dx-deployment-service-remotesearch\) as the host, and the appropriate port for the SSL access. You must also complete [Setting the search user ID](https://help.hcltechsw.com/digital-experience/9.5/admin-system/srtsttusrid.html)<!-- (../../9.0/admin-system/srtsttusrid.md) --> and [Removing search collections](https://help.hcltechsw.com/digital-experience/9.5/install/rmv_search_coll.html)<!-- (../../9.0/install/rmv_search_coll.md) --> before creating a new search service.
 
-2.  Create a new search service and use the following values for a Remote Search services configuration to a Kubernetes container deployment. See the section on [Creating a new search service](../../9.0/admin-system/create_search_service.md) for more information.
+2.  Create a new search service and use the following values for a Remote Search services configuration to a Kubernetes container deployment. See the section on [Creating a new search service](https://help.hcltechsw.com/digital-experience/9.5/admin-system/create_search_service.html)<!-- (../../9.0/admin-system/create_search_service.md) --> for more information.
 
     For testing **Search Services** configuration, the following are used:
 
@@ -73,19 +74,21 @@ All of the instructions contained in the [Remote Search services](../admin-syste
     |Search service implementation|Select Portal Search Service Type from the pull down.|
     |CONFIG\_FOLDER\_PATH|Did not set \(differs from non-container instructions\).|
 
-    **Note:** Once completed and saved, the HCL Digital Experience 9.5 container deployment has a new search service called **Remote PSE service EJB**, with a green check mark confirming that the service was correctly set up and is able to communicate with the Remote Search container.
+    !!!note
+        Once completed and saved, the HCL Digital Experience 9.5 container deployment has a new search service called **Remote PSE service EJB**, with a green check mark confirming that the service was correctly set up and is able to communicate with the Remote Search container.
 
 3.  Based on the previously created Remote Search service, create a **Portal Search Collection** and a **JCR Search Collection** using the following parameters.
-    1.  Use the following parameters to create a [Portal search collection](../../9.0/admin-system/create_search_coll.md).
+    1.  Use the following parameters to create a [Portal search collection](https://help.hcltechsw.com/digital-experience/9.5/admin-system/create_search_coll.html)<!-- (../../9.0/admin-system/create_search_coll.md) -->.
 
         |Parameter|Value|
         |---------|-----|
         |Search collection name|Portal Search Collection|
         |Search collection location|/opt/HCL/AppServer/profiles/prs\_profile/SearchCollections/PortalSearchCollection|
 
-        **Note:** The “search collection location” is relative to the remote search container. Furthermore, one places the collection in the **profile** of the Remote Search server because the profile of the remote search server is persisted. One obviously wants the search indexes persisted across restarts.
+        !!!note
+            The “search collection location” is relative to the remote search container. Furthermore, one places the collection in the **profile** of the Remote Search server because the profile of the remote search server is persisted. One obviously wants the search indexes persisted across restarts.
 
-    2.  Use the following parameters to create a Content Source [JCR search collection](../admin-system/srtcfg_jcr_colls.md).
+    2.  Use the following parameters to create a Content Source [JCR search collection](https://help.hcltechsw.com/digital-experience/9.5/admin-system/srtcfg_jcr_colls.html)<!-- (../admin-system/srtcfg_jcr_colls.md) -->.
 
         The **Collect documents linked from this URL** is
 
@@ -115,13 +118,15 @@ https://dx-deployment-service:10042/wps/seedlist/myserver?Action=GetDocuments&Fo
 
 The parsing of the `SeedlistId` positional parameter in this URL uses an index of the virtual portal being crawled. In this case `1` \(in 2 places\) represents the `base` virtual portal.
 
-**Note:** The host and port are the Kubernetes \(for example, Red Hat OpenShift \) service host and the port to which `10042` was mapped. In this case, `10042` is the `HttpQueueInboundDefaultSecure` port on the HCL DX 9.5 server. Note also that one can put this URL in a browser \(on the OpenShift host\) and confirm that the response is an ATOM feed.
+!!!note
+    The host and port are the Kubernetes \(for example, Red Hat OpenShift \) service host and the port to which `10042` was mapped. In this case, `10042` is the `HttpQueueInboundDefaultSecure` port on the HCL DX 9.5 server. Note also that one can put this URL in a browser \(on the OpenShift host\) and confirm that the response is an ATOM feed.
 
 On the **Security** panel, use `dx-deployment-service` as the host name, along with the username `wpsadmin` and the associated password for `wpsadmin`. One can also specify **Realm** as `CrawlerUsersRealm`
 
 ## Configure WCM Authoring Portlet search function
 
-**Note:** Even though the documents are gathered by the Remote Search function from the JCR, additional configuration is needed in order for the HCL Web Content Manager \(WCM\) Authoring Portlet search to use document search. Set the following values for this configuration.
+!!!note
+    Even though the documents are gathered by the Remote Search function from the JCR, additional configuration is needed in order for the HCL Web Content Manager \(WCM\) Authoring Portlet search to use document search. Set the following values for this configuration.
 
 Set the **Custom properties** for the WebSphere Application Server Resource Environment Provider, **JCR ConfigService**, using the following values:
 
@@ -133,7 +138,8 @@ Set the **Custom properties** for the WebSphere Application Server Resource Envi
 |jcr.textsearch.EJB.IIOP.URL|iiop://dx-deployment-service-remotesearch:2809|
 |jcr.textsearch.EJB.EJBName|ejb/com/ibm/hrl/portlets/WsPse/WebScannerLiteEJBHome|
 
-**Note:** On the **jcr.textsearch.indexdirectory**, the sub-directory JCRCollection1 is NOT included in the path.
+!!!note
+    On the **jcr.textsearch.indexdirectory**, the sub-directory JCRCollection1 is NOT included in the path.
 
 ## Additional Routing Configuration for supported Kubernetes platforms
 
@@ -141,7 +147,8 @@ To configure Remote Search to DX 9.5 container deployments to supported Kubernet
 
 -   Create a new service for Remote Search with service type as Loadbalancer.
 
-    **Note:** Do not alter the Remote Search Service created by the DX-Operator.
+    !!!note
+        Do not alter the Remote Search Service created by the DX-Operator.
 
 
 Sample Yaml:
@@ -188,7 +195,7 @@ $ kubectl apply -f filename.yaml
 
 Remote Search Routes \(example results\):
 
-![](../images/Container_deploy_redhat_openshift.png "Remote Search Routes ")
+![](../../../images/Container_deploy_redhat_openshift.png "Remote Search Routes ")
 
 Access the Remote Search Admin Console via the external IP address of your DX 9.5 Container deployment:
 

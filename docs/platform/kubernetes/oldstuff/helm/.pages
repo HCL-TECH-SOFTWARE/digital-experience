@@ -1,7 +1,0 @@
-title: Deploying using Helm charts 
-nav:
-    - Deploying on containers: helm_deployment.md
-    - ...
-    # - configuring
-    # - installing
-     

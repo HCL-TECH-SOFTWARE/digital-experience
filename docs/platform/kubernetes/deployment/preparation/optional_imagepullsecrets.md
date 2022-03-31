@@ -4,7 +4,8 @@ To use a container image registry that has access restrictions and requires cred
 
 In addition, reference your Cloud Provider documentation on how to create `ImagePullSecrets`.
 
-**Note:** Ensure that the `ImagePullSecret` has been created in the same namespace that your DX deployment is installed to.
+!!! note
+    Ensure that the `ImagePullSecret` has been created in the same namespace that your DX deployment is installed to.
 
 ## Configure deployment to use ImagePullSecrets
 

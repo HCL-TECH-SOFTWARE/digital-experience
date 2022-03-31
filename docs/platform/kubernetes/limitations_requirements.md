@@ -18,8 +18,8 @@ This section describes the requirements for supported file systems.
 -   A `persistence-node` relies on PostgreSQL which requires the use of hard links. Storage systems \(like Azure Files\) that do not support the use of hard links cannot be used. For more information, see the [Microsoft documentation for features not supported by the Azure File service](https://docs.microsoft.com/en-us/rest/api/storageservices/features-not-supported-by-the-azure-file-service).
 -   All DX applications require the use of symbolic links and soft links. Storage systems must support the use of symbolic links and soft links. If you are using Azure Files, you must enable `mountOptions` of the StorageClass using `mfsymlinks`. For more information, see the [Microsoft documentation on troubleshooting Azure Files on Linux \(SMB\)](https://docs.microsoft.com/en-us/azure/storage/files/storage-troubleshoot-linux-file-connection-problems#cannot-create-symbolic-links---ln-failed-to-create-symbolic-link-t-operation-not-supported).
 -   You can configure volume sizes individually per volume and these are dependent of the respective usage. For more information, see the following Help Center topics:
-    -   [Configuring PVCs in a Helm deployment](helm_persistent_volume_claims.md#configuration_parameters)
-    -   [Customizing the container for Operator-based deployments](customizing_container_deployment.md#section_a2l_xhv_4nb)
+    -   [Configuring PVCs in a Helm deployment](deployment/preparation/prepare_persistent_volume_claims.md)
+    -   Customizing the container for Operator-based deployments <!-- [see *Related information* section for related topic links] -->
 ## Requirements and Limitations for Helm-based deployments
 
 This section describes requirements and current limitations for HCL Digital Experience 9.5 Container Update CF200 and later deployments using Helm.
@@ -43,7 +43,7 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 
 -   **Migration**:
 
-    For information about migrating from Operator-based to Helm-based deployments, see [Migrating from Operator-based to Helm-based deployments](../../platform/kubernetes/operator-migration/operator_migration_preparation.md).
+    For information about migrating from Operator-based to Helm-based deployments, see [Migrating from Operator-based to Helm-based deployments](operator-migration/operator_migration_preparation.md).
 
 -   **Container platform capacity resource requirements**:
 
@@ -73,33 +73,35 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 !!! warning "Discontinuation of Operator"
     **Attention:** Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience \(DX\) [Operator-based deployments](operator-based/deploy_container_platforms.md) and will provide support only for [Helm-based deployments](architecture/helm_overview.md). There will be no further updates or code fixes provided for the Operator-based deployments. HCL requires all customers to migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based deployments](operator-migration/operator_migration_preparation.md).
 
-The following section describes the requirements to deploy the HCL Digital Experience 9.5 images to container platforms and current limitations using the [Operator-based](operator-based/dxtools_dxctl.md) deployment process:
+The following section describes the requirements to deploy the HCL Digital Experience 9.5 images to container platforms and current limitations using the Operator-based <!--[Operator-based](operator-based/dxtools_dxctl.md)--> deployment process:
 
 -   **HCL Digital Experience 9.5 is supported on Docker, Red Hat OpenShift, Amazon Elastic Kubernetes Service \(EKS\), and Microsoft Azure Kubernetes Service \(AKS\), and Google Kubernetes Engine \(GKE\).** Other Kubernetes platforms are not fully supported. The HCL Operator is not likely to work, however, support for additional Kubernetes as a Service \(KaaS\) is ongoing and additions is reflected in the HCL Digital Experience 9.5 Support Statements.
     -   Additional features and functions may be tied to the use of the HCL DX Operators for deployment.
-    -   ***HCL highly recommends following the deployment strategies outlined within this documentation.*** HCL Digital Experience 9.5 containerization is focused on deployment and it uses an operator-based deployment. The goals are:
+    -   HCL highly recommends following the deployment strategies outlined within this documentation. The operator-based deployment goals are:
 
         1.  To introduce a supported containerized deployment that HCL can continually extend;
         2.  To provide customers with the best possible experience;
-        3.  To provide a high level of [customization](operator-based/customizing_container_deployment.md) in the deployment and continue to expand on that, along with increased automation; and
+        3.  To provide a high level of customization in the deployment and continue to expand on that, along with increased automation; and
         4.  To maintain separation of product and custom code.
         Customers need to follow the recommended deployment model to ensure the availability of future functions and prevent potential conflicts.
 
-        **Notes:**
+            !!! note "Notes:"
 
-        -   HCL Digital Experience is a database-intensive application, it is not recommended to use Apache Derby for production use. For specific versions of databases supported for production, see the [HCL Digital Experience 9.5 Support Statements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514) on the HCL Digital Experience Support pages.
-        -   Creation of Virtual Portals take longer when implemented in Red Hat OpenShift. Plan for adequate time to allow processing, and re-verify the results are completed by refreshing the web browser administrative panel.
-        -   Customers should not modify the [HCL Digital Experience 9.5 Docker images](docker.md) provided by HCL for deployment. This restriction includes use of these images as a base to create a new image, which results in a new image ID and an unsupported configuration. Instead, customers deploying the images should follow best practices and maintain customizations in the wp\_profile and the deployment database. Scripts and custom files should be stored in wp\_profile \(/opt/HCL/wp\_profile/\). See the [Deployment](/operator-based/dxtools_dxctl.md) Help Center topics for more information
-        -   Customers should not run multiple HCL Digital Experience 9.5 container deployments in a single Kubernetes namespace \(in the case of Red Hat OpenShift, in a single OpenShift project\).  This configuration is not supported at this time.
-        -   It is not supported to run two different versions of HCL Digital Experience 9.5 container deployments in a single Kubernetes cluster.
-    -   Use of [Web Application Bridge](../../design/integrationtools/wab.md) is currently unsupported on HCL Digital Experience 9.5 deployments to container platforms such as Kubernetes and Red Hat OpenShift, using the Operator-based deployment method.
+                -   HCL Digital Experience is a database-intensive application, it is not recommended to use Apache Derby for production use. For specific versions of databases supported for production, see the [HCL Digital Experience 9.5 Support Statements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514) on the HCL Digital Experience Support pages.
+                -   Creation of Virtual Portals take longer when implemented in Red Hat OpenShift. Plan for adequate time to allow processing, and re-verify the results are completed by refreshing the web browser administrative panel.
+                -   Customers should not modify the [HCL Digital Experience 9.5 Docker images](docker.md) provided by HCL for deployment. This restriction includes use of these images as a base to create a new image, which results in a new image ID and an unsupported configuration. Instead, customers deploying the images should follow best practices and maintain customizations in the wp\_profile and the deployment database. Scripts and custom files should be stored in wp\_profile \(/opt/HCL/wp\_profile/\). [see *Related information* section for related topic links]
+                -   Customers should not run multiple HCL Digital Experience 9.5 container deployments in a single Kubernetes namespace \(in the case of Red Hat OpenShift, in a single OpenShift project\).  This configuration is not supported at this time.
+                -   It is not supported to run two different versions of HCL Digital Experience 9.5 container deployments in a single Kubernetes cluster.
+
+    -   Use of Web Application Bridge <!-- [Web Application Bridge](../../design/integrationtools/wab.md)-->is currently unsupported on HCL Digital Experience 9.5 deployments to container platforms such as Kubernetes and Red Hat OpenShift, using the Operator-based deployment method.
     -   Beginning with HCL DX Container Update CF199, Web Application Bridge can be used in container deployments using the Helm deployment method.
 
 -   **Supported file system requirements**:
 
     -   Requires an `**AccessMode**` of `**ReadWriteMany**`.
     -   Requires a minimum of **40 GB**, with the default request set to **100 GB**.
-    **Note:** HCL Digital Experience is input-output \(I/O\) intensive and requires a high performing file system for optimization.
+        !!! note
+            HCL Digital Experience is input-output \(I/O\) intensive and requires a high performing file system for optimization.
 
 
 -   **Container platform capacity requirements**:
@@ -129,7 +131,13 @@ The following section describes the requirements to deploy the HCL Digital Exper
 
         With DX 9.5 Container Update CF171 and higher, WebSphere Application Server 9.0.5.2 is included and that IBM fix pack removed the IBM JSF portlet bridge. If you are using JSF portlets and leverage the JSF portlet bridge, proceed to the HCL DX 9.5 Container Update CF18 for the required JavaServer Faces Bridge support before moving to a container-based deployment.
 
-        The HCL JavaServer Faces Bridge is added to HCL Digital Experience offerings with Container Update CF18 and CF18 on-premises platform CF update. For more information please see [What's New in Container Update CF18](../../whatsnew/new_cf18.md).
+        The HCL JavaServer Faces Bridge is added to HCL Digital Experience offerings with Container Update CF18 and CF18 on-premises platform CF update. For more information please see [What's New in Container Update CF18](../../whatsnew/cf18/new_cf18.md).
 
-        **Note:** For information about the limitations related to JSF 2.2 support, see [Limitations when running HCL DX Portlet Bridge on WebSphere Application Server 9.0](../../design/dev-portlet/dx_bridge_for_jsf_onwas9x.md#section_ig1_5hx_3qb).
+        <!-- !!! note
+            For information about the limitations related to JSF 2.2 support, see [Limitations when running HCL DX Portlet Bridge on WebSphere Application Server 9.0](../../design/dev-portlet/dx_bridge_for_jsf_onwas9x.md#section_ig1_5hx_3qb). -->
 
+??? info "Related information:"
+    - [Customizing the container for Operator-based deployments](operator-based/customizing_container_deployment.md)
+    - [Deployment using dxtools](operator-based/dxtools_dxctl.md)
+    <!-- - [Web Application Bridge](../../design/integrationtools/wab.md)-->
+    <!-- - [Limitations when running HCL DX Portlet Bridge on WebSphere Application Server 9.0](../../design/dev-portlet/dx_bridge_for_jsf_onwas9x.md) -->

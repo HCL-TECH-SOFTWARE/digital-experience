@@ -18,7 +18,7 @@ Before you can deploy HCL Digital Experience, it is recommended that you create 
 ### [Prepare the Helm deployment configuration file](prepare_configuration.md)
 Create a configuration file that fits the needs of your target HCL DX 9.5 Container deployment. The configuration file is the heart of your deployment using Helm. It defines how HCL Digital Experience 9.5 is deployed to supported platforms, and how it behaves during runtime operations. This section explains how to create your own configuration file and how to leverage the existing `values.yaml` inside the Helm Chart. It also explains how to optionally overwrite settings in case the default set may not be sufficient.
 
-### [Load container images](load_images.md)
+### [Load container images](prepare_load_images.md)
 This section presents how to load the DX 9.5 Container Update CF196 or later images into your container image repository, tag them to fit your repository structure, and push them to your repository, so that all Nodes in your Kubernetes or OpenShift cluster can deploy HCL Digital Experience 9.5 Pods.
 
 ### [Configure persistent volume claims](prepare_persistent_volume_claims.md)
@@ -34,7 +34,7 @@ The Ambassador Ingress requires a SSL certificate to use, this topic shows how t
 ## Optional
 These tasks may be relevant for you if you have specific requirements for the deployment.
 
-### [Using ImagePullSecrets](prepare_imagepullsecrets.md)
+### [Using ImagePullSecrets](optional_imagepullsecrets.md)
 In your deployment it might be necessary to access a container image registry that requires credentials to pull images from. This topic explains to you how you configure the DX deployment to work under such conditions.
 
 ### [Using NodeSelectors](optional_nodeselectors.md)
@@ -49,9 +49,16 @@ There are application specific configurations that you may want to adjust, e.g. 
 ### [Configure scaling](optional_configure_scaling.md)
 This topic explains how you can configure Pod count and automated scaling for applications that support it.
 
-### [Configure credentials](optional_configure_credentials)
-This topic shows you how adjust credentials that are used for the deployment.
+### [Configure credentials](optional_configure_credentials.md)
+This topic shows you how to adjust credentials that are used for the deployment.
 
+### [Configure Core sidecar logging](optional_core_sidecar_log.md)
+This topic describes how to expose logs that are written to files by the DX Core application.
+### [Configure Remote Search sidecar logging](optional_rs_sidecar_log.md)
+This topic describes how you can expose logs that are written to files on its PersistentVolumes \(PVs\) by the DX Remote Search application.
+
+### [Configure Labels and Annotations](optional_labels_annotations.md)
+This topic documents the configuration of labels and annotations for different DX resources.
 ### [Try experimental features](optional_experimental_features.md)
 This topic describes the incubator section in the Helm Charts.
 

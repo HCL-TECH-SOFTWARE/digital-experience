@@ -67,11 +67,11 @@ kubectl describe configmaps -n your-namespace -l release=your-release-name
 
 In the above examples, `your-namespace` is the namespace in which your HCL Digital Experience deployment is installed and `your-release-name` is the Helm release name you used when installing. On UNIX-based operating systems, the output can be directed to a file by appending `> some-file-name` to any command.
 
--   **[Configure and access logs in Helm](../containerization/configure_access_helm_logs.md)**  
+-   **[Configure and access logs in Helm](../troubleshooting/configure_access_helm_logs.md)**  
 This topic shows you how to configure logging in Helm, as well as how to access Kubernetes container logs.
--   **[Basic monitoring](../containerization/basic_monitor_helm_deployment.md)**  
+-   **[Basic monitoring](../monitoring/basic_monitor_helm_deployment.md)**  
 This topic describes options for monitoring an HCL Digital Experience 9.5 Kubernetes deployments installed using Helm.
--   **[Monitor the Digital Experience deployment using metrics](../containerization/monitor_helm_deployment_metrics.md)**  
+-   **[Monitor the Digital Experience deployment using metrics](../monitoring/monitor_helm_deployment_metrics.md)**  
 This topic outlines the use of standards-based metrics to monitor activity and performance of DX container deployments.
 
 

@@ -26,7 +26,8 @@ To have your deployment and the Ambassador Ingress use the certificate, you must
 
 The secret can be created using the following commands:
 
-**Note:** The secret name can be chosen by you and must be referenced in the next configuration step \(the following example uses `dx-tls-cert`\). The namespace is the Kubernetes namespace where you want to deploy HCL Digital Experience 9.5 to \(the example uses `digital-experience`\).
+!!! note
+    The secret name can be chosen by you and must be referenced in the next configuration step \(the following example uses `dx-tls-cert`\). The namespace is the Kubernetes namespace where you want to deploy HCL Digital Experience 9.5 to \(the example uses `digital-experience`\).
 
 ```
 # Create secret with the name "dx-tls-cert"
@@ -48,7 +49,8 @@ networking:
  tlsCertSecret: "dx-tls-cert"            
 ```
 
-**Note:** Verify you have entered the correct name.
+!!! note
+    Verify you have entered the correct name.
 
 ## Configure minimum TLS version for Ingress
 
@@ -62,5 +64,5 @@ networking:
   minTlsVersion: "v1.2"
 ```
 
-Refer to **[Additional tasks](helm_additional_tasks.md)** for the next steps.
+<!-- Refer to **[Additional tasks](helm_additional_tasks.md)** for the next steps. -->
 
