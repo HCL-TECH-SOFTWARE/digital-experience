@@ -46,8 +46,8 @@ Beginning with HCL Digital Experience CF and Container Update CF199, additional 
 
 Take advantage of new step-by-step guidance for HCL Digital Experience practitioners presented in articles and videos from the following HCL Digital Experience Help Center topics:
 
--   Video: [Deploy HCL DX 9.5 Container Update using Helm](../containerization/helm_deployment.md){:target="_blank"}
--   Video: [Experience API V2 Web Content Manager REST APIs](../open_api/openapi_overview.md){:target="_blank"}
+-   Video: [Deploy HCL DX 9.5 Container Update using Helm](../../platform/kubernetes/deployment/helm_deployment.md)
+-   Video: [Experience API V2 Web Content Manager REST APIs](https://help.hcltechsw.com/digital-experience/9.5/open_api/openapi_overview.html){:target="_blank"}
 
 <!-- ???info "Related information:"
     - [HCL Experience API](../open_api/openapi_overview.md)

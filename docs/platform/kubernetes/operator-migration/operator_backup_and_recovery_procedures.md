@@ -7,7 +7,6 @@ This section shows the deployment architecture and provides the instructions to 
 Learn about the HCL DX 9.5 Container deployment architecture to get a better understanding of the backup and recovery options.
 
 !!! note
-
     This topology is also available in the [Install the HCL Digital Experience 9.5 components](https://help.hcltechsw.com/digital-experience/9.5/containerization/install_config_cc_dam.html)<!-- (../containerization/install_config_cc_dam.md) --> topic.
 
 ![](../../../images/cf_173_topology.png)
@@ -21,8 +20,7 @@ The following sections describe how the administrators can create and manage bac
     1.  Backup the file systems in the Digital Experience 9.5 container profile \(**Persistent volume claim** `wp_profile`\). Refer to the [Backup and Restore](https://help.hcltechsw.com/digital-experience/9.5/admin-system/i_wadm_c_bkup_restr_winlinux.html)<!-- (../admin-system/i_wadm_c_bkup_restr_winlinux.md) --> topic and component backup guidance for more information.
 
         !!! note
-        
-            The HCL Digital Asset Management \(DAM\) component uploads folder and the DAM persistent mount for the primary instance dx-deployment-persistence-0 in the statefulset. <!-- [dx-deployment-persistence](https://console-openshift-console.apps.hcl-dxdev.hcl-dx-dev.net/k8s/ns/master-tests/statefulsets/dx-deployment-persistence). -->
+                    The HCL Digital Asset Management \(DAM\) component uploads folder and the DAM persistent mount for the primary instance dx-deployment-persistence-0 in the statefulset. <!-- [dx-deployment-persistence](https://console-openshift-console.apps.hcl-dxdev.hcl-dx-dev.net/k8s/ns/master-tests/statefulsets/dx-deployment-persistence). -->
 
         To create a backup of the profile **Persistent volume claim** `wp_profile`, it is recommended that:
 
@@ -110,17 +108,17 @@ The following sections describe how the administrators can create and manage bac
 
         Alternatively, the [Kubernetes documentation](https://kubernetes.io/docs/home/) pages present additional options to backup and clone persistent volumes.
 
-    2.  [Volume SnapShots: \(1.17 \[beta\] and later\)](https://kubernetes.io/docs/concepts/storage/volume-snapshots/)
-    3.  [CSI Volume Cloning](https://kubernetes.io/docs/concepts/storage/volume-pvc-datasource/)
+    2.  [Volume SnapShots: \(1.17 \[beta\] and later\)](https://kubernetes.io/docs/concepts/storage/volume-snapshots/){:target="_blank"}
+    3.  [CSI Volume Cloning](https://kubernetes.io/docs/concepts/storage/volume-pvc-datasource/){:target="_blank"}
     !!!note
-        If either of the methods described in [Step 2](#vol_snapshots) or [Step 3](#vol_pvc_datasource) is used, it is important to understand fuzzy backups with the wp\_profile.  A fuzzy backup is a copy of data files or directories that were operating in one state when the backup started, but in a different state by the time the backup completed. In case a volume snapshot or Container Storage Interface \(CSI\) volume cloning approach is used with the `wp_profile`, it is important that the snapshot is taken with the Digital Experience instance in shutdown state to ensure that recovery is performed.
+        If either of the methods described in [Step 2]<!-- (#vol_snapshots) --> or [Step 3]<!-- (#vol_pvc_datasource) --> is used, it is important to understand fuzzy backups with the wp\_profile.  A fuzzy backup is a copy of data files or directories that were operating in one state when the backup started, but in a different state by the time the backup completed. In case a volume snapshot or Container Storage Interface \(CSI\) volume cloning approach is used with the `wp_profile`, it is important that the snapshot is taken with the Digital Experience instance in shutdown state to ensure that recovery is performed.
 
-        HCL Digital Experience has successfully tested the volume snapshot and CSI volume cloning methods with HCL Digital Experience 9.5 container deployments. It is recommended that customers perform the additional testing if they are using options [Step 2](#vol_snapshots) and [Step 3](#vol_pvc_datasource) to manage the wp\_profile backup.
+        HCL Digital Experience has successfully tested the volume snapshot and CSI volume cloning methods with HCL Digital Experience 9.5 container deployments. It is recommended that customers perform the additional testing if they are using options [Step 2]<!-- (#vol_snapshots) --> and [Step 3]<!-- (#vol_pvc_datasource) --> to manage the wp\_profile backup.
 
-???info "Related information:"
+<!-- ???info "Related information:"
    - [Install the HCL Digital Experience 9.5 components](../containerization/install_config_cc_dam.md)
    - [Backup and Restore](../admin-system/i_wadm_c_bkup_restr_winlinux.md)
-   - [Backup and restore DAM image](../digital_asset_mgmt/dam_backup_restore_image.html)
+   - [Backup and restore DAM image](../digital_asset_mgmt/dam_backup_restore_image.html) -->
  
 
 <!-- -   **[Restore Digital Asset Management image to previous version](../digital_asset_mgmt/dam_restore_image_operator.md)**  
