@@ -16,7 +16,7 @@ See the [Deploy HCL Digital Experience 9.5 Container to Google Kubernetes Engine
 
 The HCL Digital Experience 9.5 Hybrid deployment and topics deliver capability to deploy and manage HCL Digital Experience 9.5 core Portal Server and Web Content Manager services on premises, and connect to cloud native components Digital Asset Management, Content Composer, Experience API and related services in a production environment.
 
-See the [Hybrid Deployment](https://help.hcltechsw.com/digital-experience/9.5/containerization/hybrid_deployment.html){:target="_blank"}<!-- (../../9.5/containerization/hybrid_deployment.md) --> topic for more information.
+See the [Hybrid Deployment](https://help.hcltechsw.com/digital-experience/9.5/containerization/operator_backup_and_recovery_procedures.html){:target="_blank"}<!-- (../../9.5/containerization/hybrid_deployment.md) --> topic for more information.
 
 ## Progressive Web Application support
 
