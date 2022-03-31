@@ -41,8 +41,7 @@ Whenever a Core container is started, it compares its container version with the
    7.  Steps 5 and 6 are repeated until there are no further pods using the old image.
 
 !!! note
-
-   If you have more than one DX Core pod, those not yet recycled will still use the previous profile directory. Therefore, any configuration changes made during this time that are stored to the profile \(for example, the installation of a portlet\) are lost, as they are made to the previous profile after it has already been copied. We recommend that you avoid making any configuration changes while a Version-to-Version upgrade is in progress.
+      If you have more than one DX Core pod, those not yet recycled will still use the previous profile directory. Therefore, any configuration changes made during this time that are stored to the profile \(for example, the installation of a portlet\) are lost, as they are made to the previous profile after it has already been copied. We recommend that you avoid making any configuration changes while a Version-to-Version upgrade is in progress.
 
 As of HCL DX 9.5 Container Update CF199, DX profile directories are not automatically removed. If your DX 9.5 deployment has been around through a number of Container upgrades, you may wish to consider removing very old profile directories to save space \(leaving, at least, two of the most recent profile directories\).
 

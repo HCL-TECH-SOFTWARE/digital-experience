@@ -2,7 +2,7 @@
 
 HCL Digital Experience 9.5 supports deployments on Docker and popular Kubernetes platforms. Learn more about the latest list of container images and supported deployment platforms.
 
-HCL Digital Experience 9.5 core and related component images are provided in your HCL Digital Experience entitlements in the [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release). For the latest list of container images and supported deployment platforms please consult the Docker containers [Deployment](../containerization/deployment.md) topic pages in this section.
+HCL Digital Experience 9.5 core and related component images are provided in your HCL Digital Experience entitlements in the [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release). For the latest list of container images and supported deployment platforms please consult the Docker containers [Deployment](../kubernetes/docker.md) topic pages in this section.
 
 ## Overview
 
@@ -13,9 +13,12 @@ The HCL Digital Experience containers are launched by running a runtime instance
 ## Installation, Deployment and Migration Guidance
 
 1.  Proceed to the Deployment topic page and follow the installation steps outlined in the Docker or supported Kubernetes platform of choice.
-    -   Documentation resource: [Deployment](../containerization/docker_image_deployment.md)
+    -   Documentation resource: [Deployment](../docker-compose/docker_image_deployment.md)
 2.  To migrate an existing on-premises platform Digital Experience deployment to a supported Kubernetes platform, access the Staging topic page in this section.
-    -   Documentation resource: [Staging](../containerization/container_staging.md)
+    -   Documentation resource: [Staging](https://help.hcltechsw.com/digital-experience/9.5/containerization/container_staging.html)<!-- (../containerization/container_staging.md) -->
 3.  Once you have completed a Digital Experience 9.5 Container deployment, to update the DX 9.5 container images to the latest Container Update releases, follow steps outlined in the Container Maintenance Help Center topic in this section.
-    -   Documentation resource: [Maintenance](../containerization/maintenance.md)
+    -   Documentation resource: [Maintenance](https://help.hcltechsw.com/digital-experience/9.5/containerization/maintenance.html)<!-- (../containerization/maintenance.md) -->
 
+<!-- ???info "Related information:"
+    - [Maintenance](../containerization/maintenance.md)
+    - [Staging](../containerization/container_staging.md) -->

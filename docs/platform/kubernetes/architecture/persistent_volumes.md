@@ -6,7 +6,8 @@ Digital Experience 9.5 container-based stateful applications \(DX 9.5 Core, Digi
 
 As Kubernetes and OpenShift Pods do not have their own persistent file storage, the use of PVs is a must. For more information on PVs, consult the [Kubernetes documentation](https://kubernetes.io/docs/concepts/storage/persistent-volumes/).
 
-**Note:** You need to consider the type of PVs before you perform an installation. The type of volumes used depends on the type of deployment you are performing. If you are using only `ReadWriteOnce` \(RWO\) persistent volumes for all applications, you will not be able to scale them up to multiple Pods.
+!!! note
+    You need to consider the type of PVs before you perform an installation. The type of volumes used depends on the type of deployment you are performing. If you are using only `ReadWriteOnce` \(RWO\) persistent volumes for all applications, you will not be able to scale them up to multiple Pods.
 
 ## Core
 

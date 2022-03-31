@@ -43,31 +43,32 @@ For example:
 kubectl exec --stdin --tty pod/dx-deployment-0 -n dxns -- /bin/bash
 ```
 
-1.  **Stop the Core application before a backup from the wp\_profile is created.**
+    1.  **Stop the Core application before a backup from the wp\_profile is created.**
 
-    Navigate to the profile bin folder and run the `stopServer` command:
+        Navigate to the profile bin folder and run the `stopServer` command:
 
-    ```
-    cd /opt/HCL/wp_profile/bin/
-    ./stopServer.sh WebSphere_Portal -username <username> -password <password>
-    ```
+            ```
+            cd /opt/HCL/wp_profile/bin/
+            ./stopServer.sh WebSphere_Portal -username <username> -password <password>
+            ```
 
-    **Note:** While the server is stopped, the liveness probe returns a failure result to Kubernetes. Once the maximum allowed number of failures is reached, Kubernetes restarts the pod, closing any `kubectl exec` session and brings the Core pod back online. However, with the default liveness probe settings in `full-deployment.properties`, this process takes approximately two \(2\) hours to occur.
+        !!! note
+            While the server is stopped, the liveness probe returns a failure result to Kubernetes. Once the maximum allowed number of failures is reached, Kubernetes restarts the pod, closing any `kubectl exec` session and brings the Core pod back online. However, with the default liveness probe settings in `full-deployment.properties`, this process takes approximately two \(2\) hours to occur.
 
-    If you need to adjust your liveness probe settings to allow time to perform the profile backup \(for instance, because you have reduced them considerably from the default in your deployment\), make the changes in your `full-deployment.properties` file, and then apply the changes using `dxctl` as described in Step 1.
+        If you need to adjust your liveness probe settings to allow time to perform the profile backup \(for instance, because you have reduced them considerably from the default in your deployment\), make the changes in your `full-deployment.properties` file, and then apply the changes using `dxctl` as described in Step 1.
 
-2.  **Compress the whole Core profile folder /opt/HCL/wp\_profile** by running the following command:
+    2.  **Compress the whole Core profile folder /opt/HCL/wp\_profile** by running the following command:
 
-    ```
-    cd /opt/HCL
-    tar -cvpzf core_prof_95_CF199.tar.gz --exclude=/core_prof_95_CF199.tar.gz --one-file-system wp_profile
-    ```
+            ```
+            cd /opt/HCL
+            tar -cvpzf core_prof_95_CF199.tar.gz --exclude=/core_prof_95_CF199.tar.gz --one-file-system wp_profile
+            ```
 
-3.  **Close the shell in the Core pod** using the following command:
+    3.  **Close the shell in the Core pod** using the following command:
 
-    ```
-    exit
-    ```
+        ```
+        exit
+        ```
 
 ### Download the backup Core profile
 
@@ -108,18 +109,17 @@ Kubernetes eventually brings the Core pod back online by restarting it \(see the
 
 If you want to enable the Operator-based deployment Core pod again, set the values of the `dxctl` property file to values greater than zero and apply the changes using the `dxctl` tool.
 
-
 ## Restore your back up to the Helm-based deployment
 
 !!!important 
-    -   Ensure to note the [requirements and limitations here](helm_extract_operator_properties.md#prereq_lxy_5rt_hrb).
-    -   For the new Helm deployment, you must use a different Kubernetes namespace from the one used in the Operator-based deployment.
 
+        - Ensure to note the [requirements and limitations here](helm_extract_operator_properties.md#prereq_lxy_5rt_hrb).
+        - For the new Helm deployment, you must use a different Kubernetes namespace from the one used in the Operator-based deployment.
 
 ### Ensure correct state
 Ensure that the Helm-based deployment is in the correct state before restoring a backup.
 
--   **Ensure that you have [extracted the Kubernetes DX configuration](helm_extract_operator_properties.md) from the Operator-based deployment to a valid custom-values.yaml file.**
+-   **Ensure that you have extracted the Kubernetes DX configuration<!-- [extracted the Kubernetes DX configuration](helm_extract_operator_properties.md) --> from the Operator-based deployment to a valid custom-values.yaml file.**
 -   **Enable `migration` mode for `operatorToHelm`** by adding or updating the following value in custom-values.yaml:
 
     ```
@@ -204,26 +204,26 @@ For example:
 kubectl exec --stdin --tty pod/dx-deployment-core-0 -n dxns-helm -- /bin/bash
 ```
 
-1.  **Extract the profile.** Move the core\_prof\_95\_CF199.tar.gz from the /temp folder to the profile folder /opt/HCL/profiles before extracting it:
+    1.  **Extract the profile.** Move the core\_prof\_95\_CF199.tar.gz from the /temp folder to the profile folder /opt/HCL/profiles before extracting it:
 
-```
-tar -xf /tmp/core_prof_95_CF199.tar.gz --directory /opt/HCL/profiles
-mv /opt/HCL/profiles/wp_profile /opt/HCL/profiles/prof_95_CF199
-rm /tmp/core_prof_95_CF199.tar.gz
-```
+        ```
+        tar -xf /tmp/core_prof_95_CF199.tar.gz --directory /opt/HCL/profiles
+        mv /opt/HCL/profiles/wp_profile /opt/HCL/profiles/prof_95_CF199
+        rm /tmp/core_prof_95_CF199.tar.gz
+        ```
 
-2.  **Create a symbolink \(symlink\)** by running the following command:
+    2.  **Create a symbolink \(symlink\)** by running the following command:
 
-```
-rm -r /opt/HCL/wp_profile
-ln -s /opt/HCL/profiles/prof_95_CF199 /opt/HCL/wp_profile
-```
+        ```
+        rm -r /opt/HCL/wp_profile
+        ln -s /opt/HCL/profiles/prof_95_CF199 /opt/HCL/wp_profile
+        ```
 
-3.  **Close the shell in the Core pod** using the following command:
+    3.  **Close the shell in the Core pod** using the following command:
 
-```
-exit
-```
+        ```
+        exit
+        ```
 
 ### Disable the migration mode and the deployment.
 

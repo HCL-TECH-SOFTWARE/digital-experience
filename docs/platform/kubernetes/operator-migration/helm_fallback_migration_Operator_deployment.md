@@ -1,6 +1,6 @@
 # Revert operator migration
 
-This section shows the steps necessary to revert a DX 9.5 Container Deployment to the previous [Operator-based deployment](deploy_container_platforms.md) in case of any error during the migration to Helm.
+This section shows the steps necessary to revert a DX 9.5 Container Deployment to the previous [Operator-based deployment](https://help.hcltechsw.com/digital-experience/9.5/containerization/deploy_container_platforms.html)<!-- (deploy_container_platforms.md) --> in case of any error during the migration to Helm.
 
 Follow this guidance to create a backup to support the capability to restore the DX 9.5 Core and Digital Asset Management Operator deployment.
 
@@ -12,11 +12,11 @@ Follow this guidance to create a backup to support the capability to restore the
     kubectl exec --stdin --tty pod/<pod-name> -n <namespace> -- /bin/bash
     ```
 
-    **Example**:
+    !!!example "Example:"
 
-    ```
-    kubectl exec --stdin --tty pod/dx-deployment-0 -n dxns -- /bin/bash
-    ```
+        ```
+        kubectl exec --stdin --tty pod/dx-deployment-0 -n dxns -- /bin/bash
+        ```
 
     1.  Start the server. Navigate to the profile `bin` folder and run the `startServer` command.
 
@@ -58,11 +58,11 @@ Follow this guidance to create a backup to support the capability to restore the
     kubectl -n <namespace> edit cm <configmap>
     ```
 
-    Example:
+    !!!example "Example:"
 
-    ```
-    kubectl edit cm -n dxns dx-deployment
-    ```
+        ```
+        kubectl edit cm -n dxns dx-deployment
+        ```
 
     In the `data` section, remove `maintenance_mode:true` from the `dx.deploy.dam.features` entry and save the changes. If `maintenance_mode:true` is the only entry for this key, `dx.deploy.dam.features` can be removed completely.
 
@@ -88,3 +88,6 @@ Follow this guidance to create a backup to support the capability to restore the
     ```
     ./dxctl -–update -p deployment.properties
     ```
+
+<!-- ???info "Related information:"
+    - [Operator-based deployment](deploy_container_platforms.md) -->

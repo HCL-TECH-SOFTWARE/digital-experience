@@ -8,7 +8,8 @@ HCL Digital Experience logs are important for maintaining and troubleshooting bo
 
 In CF200, a new mechanism is introduced for configuring log settings at runtime \(without pod restarts\) in Helm-based DX deployments. Log levels and trace strings are set in your custom-values.yaml file and applied using a `helm upgrade`command. Under the covers, this sets values in a new `<release-name>-global`config map which are monitored by the various running DX containers. When the containers detect a change to the values pertinent to themselves, they update their log configurations accordingly \(without restarting\). At that point, the new log behavior is immediately reflected in their Kubernetes logs.
 
-**Note:** OpenLDAP, Ambassador, and Redis are not yet configurable using this feature.
+!!!note
+     OpenLDAP, Ambassador, and Redis are not yet configurable using this feature.
 
 ## Setting the log configuration for a DX application
 
@@ -93,14 +94,15 @@ kubectl logs -n dxns
 
 This retrieves the log for a single sidecar container, which corresponds to a single Core log file.
 
-**Note:** The additional logging enabled for Core goes to trace.log. To configure trace.log for sidecar logging, see [Configure Core sidecar logging](helm_additional_tasks.md#configure_core_sidecar_logging).
+!!!note
+    The additional logging enabled for Core goes to trace.log. To configure trace.log for sidecar logging, see [Configure Core sidecar logging](../../deployment/preparation/optional_core_sidecar_log.md).
 
 By default, two sidecar containers are launched with Core:
 
 -   `system-out-log` - Exposes the `WebSphere_Portal/SystemOut.log` file.
 -   `system-err-log` - Exposes the `WebSphere_Portal/SystemErr.log` file.
 
-For information on configuring additional Core sidecar log containers, please see [Configure Core sidecar logging](helm_additional_tasks.md#configure_core_sidecar_logging).
+For information on configuring additional Core sidecar log containers, please see [Configure Core sidecar logging](../../deployment/preparation/optional_core_sidecar_log.md).
 
 ## Accessing Remote Search logs
 
@@ -120,14 +122,15 @@ kubectl logs -n dxns
 
 This retrieves the log for a single sidecar container, which corresponds to a single Remote Search log file.
 
-**Note:** The additional logging enabled for Remote Search goes to trace.log. To configure trace.log for sidecar logging, see [Configure Remote Search sidecar logging](helm_additional_tasks.md#configure_rs_sidecar_logging).
+!!!note
+    The additional logging enabled for Remote Search goes to trace.log. To configure trace.log for sidecar logging, see [Configure Remote Search sidecar logging](../../deployment/preparation/optional_rs_sidecar_log.md).
 
 By default, two sidecar containers are launched with Remote Search:
 
 -   `system-out-log` - Exposes the `WebSphere_Portal/SystemOut.log` file.
 -   `system-err-log` - Exposes the `WebSphere_Portal/SystemErr.log` file.
 
-For information on configuring additional Remote Search sidecar log containers, please see [Configure Remote Search sidecar logging](helm_additional_tasks.md#configure_rs_sidecar_logging).
+For information on configuring additional Remote Search sidecar log containers, please see [Configure Remote Search sidecar logging](../../deployment/preparation/optional_rs_sidecar_log.md).
 
 ## Accessing logs for other applications
 
@@ -183,7 +186,8 @@ All applications send their log output directly to `stdout` and `stderr` of the 
 |Remote Search|/opt/HCL/AppServer/profiles/prs\_profile/logs/server1|
 |Persistence Node|/var/lib/pgsql/11/data/log and /var/lib/pgsql/11/data/dx/repmgr/log|
 
-**Note:** The Core and Remote Search have the following default settings for their log output files and that needs to be considered when sizing their persistent volumes:
+!!!note
+    The Core and Remote Search have the following default settings for their log output files and that needs to be considered when sizing their persistent volumes:
 
 |Output file|Size per file|Files kept|
 |-----------|-------------|----------|

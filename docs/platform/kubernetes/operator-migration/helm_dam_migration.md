@@ -12,11 +12,11 @@ Follow this guidance to create a backup of the DAM persistence and binaries from
 kubectl -n <namespace> edit cm <configmap>
 ```
 
-**Example**:
+!!!example "Example:"
 
-```
-kubectl edit cm -n dxns dx-deployment
-```
+    ```
+    kubectl edit cm -n dxns dx-deployment
+    ```
 
 In the `data` section, add the following entry and save the changes:
 
@@ -57,11 +57,11 @@ After saving the changes, the DAM pod restarts automatically. Please wait until 
     kubectl -n <namespace> logs <pod-name>
     ```
 
-    **Example**:
+    !!!example "Example:"
 
-    ```
-    kubectl -n dxns logs dx-deployment-dam-0
-    ```
+        ```
+        kubectl -n dxns logs dx-deployment-dam-0
+        ```
 
     If your output looks similar to the following, maintenance mode is enabled and you can continue:
 
@@ -74,11 +74,11 @@ After saving the changes, the DAM pod restarts automatically. Please wait until 
     kubectl exec --stdin --tty pod/<pod-name> -n <namespace> -- /bin/bash
     ```
 
-    **Example**:
+    !!! example "Example:"
 
-    ```
-    kubectl exec --stdin --tty pod/dx-deployment-persistence-0 -n dxns -- /bin/bash
-    ```
+        ```
+        kubectl exec --stdin --tty pod/dx-deployment-persistence-0 -n dxns -- /bin/bash
+        ```
 
     1.  Dump the current database using `pg_dump`:
 
@@ -98,11 +98,11 @@ After saving the changes, the DAM pod restarts automatically. Please wait until 
     kubectl cp <namespace>/<pod-name>:<source-file> <target-file>
     ```
 
-    **Example:**
+    !!!example "Example:"
 
-    ```
-    kubectl cp dxns/dx-deployment-persistence-0:/tmp/dxmediadb.dmp /tmp/dxmediadb.dmp
-    ```
+        ```
+        kubectl cp dxns/dx-deployment-persistence-0:/tmp/dxmediadb.dmp /tmp/dxmediadb.dmp
+        ```
 
 5.  Connect to the DAM pod. The following command opens a shell in the running DAM pod:
 
@@ -110,11 +110,11 @@ After saving the changes, the DAM pod restarts automatically. Please wait until 
     kubectl exec --stdin --tty pod/<pod-name> -n <namespace> -- /bin/bash
     ```
 
-    **Example**:
+    !!!example "Example:"
 
-    ```
-    kubectl exec --stdin --tty pod/dx-deployment-dam-0 -n dxns -- /bin/bash
-    ```
+        ```
+        kubectl exec --stdin --tty pod/dx-deployment-dam-0 -n dxns -- /bin/bash
+        ```
 
     1.  Compress the DAM binaries located in /opt/app/upload:
 
@@ -134,20 +134,20 @@ After saving the changes, the DAM pod restarts automatically. Please wait until 
     kubectl cp <namespace>/<pod-name>:<source-file> <target-file>
     ```
 
-    **Example:**
-
-    ```
-    kubectl cp dxns/dx-deployment-dam-0:/opt/app/server-v1/backupml.tar.gz /tmp/backupml.tar.gz
-    ```
+    !!!example "Example:"
+    
+        ```
+        kubectl cp dxns/dx-deployment-dam-0:/opt/app/server-v1/backupml.tar.gz /tmp/backupml.tar.gz
+        ```
 
 ## Restore your back up to the Helm-based deployment
 
 !!!important
-    -   Ensure to note the [requirements and limitations here](helm_extract_operator_properties.md#prereq_lxy_5rt_hrb).
+    -   Ensure to note the [requirements and limitations here](https://help.hcltechsw.com/digital-experience/9.5/containerization/helm_extract_operator_properties.html#helm_extract_operator_properties__prereq_lxy_5rt_hrb)<!-- (helm_extract_operator_properties.md#prereq_lxy_5rt_hrb) -->.
     -   For the new Helm deployment, you must use a different Kubernetes namespace from the one used in the Operator-based deployment.
 
 1.  Ensure that the Helm-based deployment is in the correct state before restoring a backup.
-    -   Ensure that you have [extracted the Kubernetes DX configuration](helm_extract_operator_properties.md) from the Operator-based deployment to a valid custom-values.yaml file is done.
+    -   Ensure that you have [extracted the Kubernetes DX configuration]((https://help.hcltechsw.com/digital-experience/9.5/containerization/helm_extract_operator_properties.html)<!-- (helm_extract_operator_properties.md) --> from the Operator-based deployment to a valid custom-values.yaml file is done.
     -   You must enable `migration` mode for `operatorToHelm` by adding or updating the following value in custom-values.yaml:
 
         ```
@@ -189,11 +189,11 @@ After saving the changes, the DAM pod restarts automatically. Please wait until 
         helm install -n <namespace> --create-namespace -f <custom-values.yaml> <prefix> <chart>
         ```
 
-        **Example**:
+        !!!example "Example:"
 
-        ```
-        helm install -n dxns-helm --create-namespace -f custom-values.yaml dx-deployment hcl-dx-deployment
-        ```
+            ```
+            helm install -n dxns-helm --create-namespace -f custom-values.yaml dx-deployment hcl-dx-deployment
+            ```
 
         If core migration is done first:
 
@@ -201,11 +201,11 @@ After saving the changes, the DAM pod restarts automatically. Please wait until 
         helm upgrade -n <namespace> -f <custom-values.yaml> <prefix> <chart>
         ```
 
-        **Example**:
+        !!!example "Example:"
 
-        ```
-        helm upgrade -n dxns-helm -f custom-values.yaml dx-deployment hcl-dx-deployment
-        ```
+            ```
+            helm upgrade -n dxns-helm -f custom-values.yaml dx-deployment hcl-dx-deployment
+            ```
 
     -   The following outcomes are expected:
         -   The DAM and persistence pods are running and kept alive.
@@ -216,11 +216,11 @@ After saving the changes, the DAM pod restarts automatically. Please wait until 
     kubectl cp <source-file> <namespace>/<pod-name>:<target-file>
     ```
 
-    **Example**:
+    !!!example "Example:"
 
-    ```
-    kubectl cp /tmp/dxmediadb.dmp dxns-helm/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp
-    ```
+        ```
+        kubectl cp /tmp/dxmediadb.dmp dxns-helm/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp
+        ```
 
 3.  Connect to the persistence \(read-write\) pod. Use the following command to open a shell in the running persistence pod:
 
@@ -228,11 +228,11 @@ After saving the changes, the DAM pod restarts automatically. Please wait until 
     kubectl exec --stdin --tty pod/<pod-name> -n <namespace> -- /bin/bash
     ```
 
-    **Example:**
+    !!!example "Example:"
 
-    ```
-    kubectl exec --stdin --tty pod/dx-deployment-persistence-node-0 -n dxns-helm -- /bin/bash
-    ```
+       ```
+       kubectl exec --stdin --tty pod/dx-deployment-persistence-node-0 -n dxns-helm -- /bin/bash
+       ```
 
     1.  You must drop the DAM database, if it exists. Disconnect all connections that use the database and drop any existing databases of the Helm deployment.
 
@@ -260,11 +260,11 @@ After saving the changes, the DAM pod restarts automatically. Please wait until 
     kubectl exec --stdin --tty pod/<pod-name> -n <namespace> -- /bin/bash
     ```
 
-    **Example:**
+    !!!example "Example:"
 
-    ```
-    kubectl exec --stdin --tty pod/dx-deployment-digital-asset-management-0 -n dxns-helm -- /bin/bash
-    ```
+        ```
+        kubectl exec --stdin --tty pod/dx-deployment-digital-asset-management-0 -n dxns-helm -- /bin/bash
+        ```
 
     1.  Restore the DAM binaries:
 
@@ -298,9 +298,11 @@ After saving the changes, the DAM pod restarts automatically. Please wait until 
         helm upgrade -n <namespace> --create-namespace -f <custom-values.yaml> <prefix> <chart>
         ```
 
-        **Example**:
+        !!!example "Example:"
 
-        ```
-        helm upgrade -n dxns-helm --create-namespace -f custom-values.yaml dx-deployment hcl-dx-deployment
-        ```
+            ```
+            helm upgrade -n dxns-helm --create-namespace -f custom-values.yaml dx-deployment hcl-dx-deployment
+            ```
 
+<!-- ???info "Related information:"
+    - [requirements and limitations here](helm_extract_operator_properties.md) -->

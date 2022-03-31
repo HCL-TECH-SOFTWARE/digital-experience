@@ -7,14 +7,14 @@ This section shows the guidance to prepare the mapping of your Operator deployme
 
 This section outlines the needed steps to configure your new Helm-based deployment with your old Operator-based deployment configuration settings. Once you have extracted the needed data, and have shut down your Operator-based deployment, you can apply your exported data in your new Helm-based deployment. Note that you are not migrating your DX Core database as you will reuse the same database instance in your Helm-based deployment.
 
-**Important:**
+!!!important
 
--   Ensure that you go through the requirements in the [HCL DX 9.5 limitations and requirements](../../kubernetes/limitations_requirements.md)topic.
--   Ensure that you have followed the preparation process in [Planning your container deployment using Helm](../../kubernetes/deployment/preparation/overview.md), and that you have already created your custom-values.yaml.
--   As with any migration activity, we recommend that you make backups of the data of your current environment before proceeding. See [Backup and recovery procedures](../operator-migration/operator_backup_and_recovery_procedures.md) for more information.
--   In case of any errors after migration, you can fall back to your previous Operator-based environment. See [Migration to restore Core and DAM Operator deployment](../operator-migration/helm_fallback_migration_Operator_deployment.md) for more information.
--   You must have the properties file you used with `dxctl` in your old Operator deployment. If you do not have the properties file, refer to the [`dxctl` topic](../operator-based/dxtools_dxctl.md) to extract the properties file from your existing deployment using the `getProperties` function.
--   Ensure to prepare any other needed infrastructure-related items \(like persistent volumes, Kubernetes load balancer configuration, etc.\) before proceeding with migration to Helm.
+    -   Ensure that you go through the requirements in the [HCL DX 9.5 limitations and requirements](../../kubernetes/limitations_requirements.md)topic.
+    -   Ensure that you have followed the preparation process in [Planning your container deployment using Helm](../../kubernetes/deployment/preparation/overview.md), and that you have already created your custom-values.yaml.
+    -   As with any migration activity, we recommend that you make backups of the data of your current environment before proceeding. See [Backup and recovery procedures](../operator-migration/operator_backup_and_recovery_procedures.md) for more information.
+    -   In case of any errors after migration, you can fall back to your previous Operator-based environment. See [Migration to restore Core and DAM Operator deployment](../operator-migration/helm_fallback_migration_Operator_deployment.md) for more information.
+    -   You must have the properties file you used with `dxctl` in your old Operator deployment. If you do not have the properties file, refer to the [`dxctl` topic](../operator-based/dxtools_dxctl.md) to extract the properties file from your existing deployment using the `getProperties` function.
+    -   Ensure to prepare any other needed infrastructure-related items \(like persistent volumes, Kubernetes load balancer configuration, etc.\) before proceeding with migration to Helm.
 
 Optionally, you can perform a test deployment to make sure that all prerequisites and requirements for the Helm deployment are met. Follow the [installation steps](../deployment/helm_install_commands.md) and check if all the functionality of the default deployment is accessible. If you do not prefer to do an initial test, you can skip to start with the [Core](../operator-migration/helm_operator_core_migration.md) and [DAM](../operator-migration/operator_backup_and_recovery_procedures.md) migration immediately.
 
@@ -24,7 +24,8 @@ Before migrating to Helm, you must migrate the configuration of your Operator-ba
 
 This section lists the mapping of the `dxctl` deployment.properties file with the custom-values.yaml.
 
-**Note:** You should only transfer settings that you have adjusted for your Operator deployment. It is not recommended to overwrite all Helm defaults with the defaults of the old Operator deployment. Only migrate settings that are relevant for you, or those that have been adjusted by you prior deploying the Operator with `dxctl`.
+!!!note
+    You should only transfer settings that you have adjusted for your Operator deployment. It is not recommended to overwrite all Helm defaults with the defaults of the old Operator deployment. Only migrate settings that are relevant for you, or those that have been adjusted by you prior deploying the Operator with `dxctl`.
 
 |`dxctl` deployment.properties|custom-values.yaml|Description|
 |-----------------------------|------------------|-----------|
@@ -147,6 +148,4 @@ This section lists the mapping of the `dxctl` deployment.properties file with th
 |`imgproc.request.memory`|`resources.imageProcessor.requests.memory`|Memory request.|
 |`imgproc.limit.cpu`|`resources.imageProcessor.limits.cpu`|CPU limit.|
 |`imgproc.limit.memory`|`resources.imageProcessor.limits.memory`|Memory limit.|
-
-
 
