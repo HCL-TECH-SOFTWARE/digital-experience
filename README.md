@@ -7,7 +7,7 @@
 
 ## Contributing
 
-Bug reports on **product documentation** and pull requests are welcome on GitHub at https://github.com/HCL-TECH-SOFTWARE/digital-experience. This is Digital Experience product documentation site not product support platform, all bug reports and pull requests shall pertain to product documentation. Updates shall be performed only to markdown files under **digital-experience/source**.
+Bug reports on **product documentation** and pull requests are welcome on GitHub at https://github.com/HCL-TECH-SOFTWARE/digital-experience. This is Digital Experience product documentation site not product support platform, all bug reports and pull requests shall pertain to product documentation. Updates shall be performed only to markdown files in the `doc` directory.
 
 ### Submitting code changes:
 
