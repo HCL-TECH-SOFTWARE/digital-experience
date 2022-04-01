@@ -1,5 +1,6 @@
-<p align="center"><strong><a href="https://opensource.hcltechsw.com/digital-experience/>HCL Digital Experience Help Center</a></strong></p>
-</p>
+# HCL Digital Experience Help Center
+
+Visit the published site at [https://opensource.hcltechsw.com/digital-experience](https://opensource.hcltechsw.com/digital-experience)
 
 ## Usage
 
