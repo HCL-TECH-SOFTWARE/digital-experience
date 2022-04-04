@@ -1,22 +1,19 @@
-name: Run Mkdocs Deploy
+name: Run Mike Deploy
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
-   # push:
-   #  branches: [ main ]
-   # pull_request:
-   #  branches: [ main ]
-   
+  # push:
+  #  branches: [ main ]
+  # pull_request:
+  #  branches: [ main ]
 
   # Triggers when a new release is published
-  # release:
-  #  types: [released, edited]
+  release:
+    types: [released, edited]
 
   # Allows you to run this workflow manually from the Actions tab
-   workflow_dispatch:
-
-
+  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -39,9 +36,16 @@ jobs:
         run: |
           pip install mkdocs-material
           pip install mkdocs-awesome-pages-plugin
-          pip install mkdocs-git-revision-date-localized-plugin
+          pip install mkdocs-git-revision-date-plugin
           pip install mike
       # Do the actual deployment
-      - name: Deploy GH Pages
+      - name: Setup Git environment
         run: |
-          mkdocs gh-deploy --force
+          git fetch origin gh-pages --depth=1
+          git config --global user.name circularlizard
+          git config --global user.email david.strachan@mac.com
+      - name: Run Mike deploy
+        env: 
+          RELEASE_TAG_VERSION: ${{ github.event.release.tag_name }}
+        run: |
+          mike deploy -u ${RELEASE_TAG_VERSION} latest --push

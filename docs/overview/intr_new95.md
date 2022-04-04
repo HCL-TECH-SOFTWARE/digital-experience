@@ -1,6 +1,6 @@
 # What's new in HCL Digital Experience 9.5?
 
-Learn about the new features, updates, and fixes in the HCL Digital Experience 9.5 release.
+Learn about the new features, updates, and fixes in HCL Digital Experience 9.5.
 
 ## New HCL Digital Experience 9.5 Docker Image
 
