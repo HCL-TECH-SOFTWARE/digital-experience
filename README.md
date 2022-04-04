@@ -1,6 +1,6 @@
 # HCL Digital Experience Help Center
 
-Visit the published site at [https://opensource.hcltechsw.com/digital-experience](https://opensource.hcltechsw.com/digital-experience) 
+Visit the published site at [https://opensource.hcltechsw.com/digital-experience](https://opensource.hcltechsw.com/digital-experience)
 
 ## Usage
 
