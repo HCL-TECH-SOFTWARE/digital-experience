@@ -18,7 +18,7 @@ Developers can use REST and Java APIs to access all of HCL DX capability. The DX
 
 ## For System Administrators
 
-HCL DX can be deployed in a traditional WebSphere cluster, or it can be deployed to a Kubernetes environment. HCL DX provides a range of scriptable interfaces so that you can automate management of your infrastructure.
+HCL DX can be deployed in an IBM&reg; WebSphere Application Server&reg; cluster, or it can be deployed to a Kubernetes environment. HCL DX provides a range of scriptable interfaces so that you can automate management of your infrastructure.
 
 Some services are only available in the Kubernetes environment. These are Digital Asset Management, Design Studio, Experience API and Content Composer.
 
