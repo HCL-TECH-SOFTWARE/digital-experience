@@ -42,8 +42,8 @@ jobs:
       - name: Setup Git environment
         run: |
           git fetch origin gh-pages --depth=1
-          git config --global user.name circularlizard
-          git config --global user.email david.strachan@mac.com
+          git config --global user.name hcl-digital-experience
+          git config --global user.email notarealemail@hcl.dx
       - name: Run Mike deploy
         env: 
           RELEASE_TAG_VERSION: ${{ github.event.release.tag_name }}
