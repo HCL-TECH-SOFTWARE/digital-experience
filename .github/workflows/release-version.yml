@@ -1,0 +1,51 @@
+name: Release a New Version
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  # push:
+  #  branches: [ main ]
+  # pull_request:
+  #  branches: [ main ]
+
+  # Triggers when a new release is published
+  release:
+    types: [released]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Build and publish the site
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      # Install python pre-reqs
+      - name: Install Mkdocs and pre-reqs
+        run: |
+          pip install mkdocs-material
+          pip install mkdocs-awesome-pages-plugin
+          pip install mkdocs-git-revision-date-plugin
+          pip install mike
+      # Do the actual deployment
+      - name: Setup Git environment
+        run: |
+          git fetch origin gh-pages --depth=1
+          git config --global user.name hcl-digital-experience
+          git config --global user.email notarealemail@hcl.dx
+      - name: Run Mike deploy
+        env: 
+          RELEASE_TAG_VERSION: ${{ github.event.release.tag_name }}
+        run: |
+          mike deploy -u ${RELEASE_TAG_VERSION} latest --push

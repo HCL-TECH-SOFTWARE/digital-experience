@@ -1,4 +1,4 @@
-name: Run Mike Deploy
+name: Update a Version
 
 # Controls when the workflow will run
 on:
@@ -10,7 +10,7 @@ on:
 
   # Triggers when a new release is published
   release:
-    types: [released, edited]
+    types: [edited]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -42,10 +42,10 @@ jobs:
       - name: Setup Git environment
         run: |
           git fetch origin gh-pages --depth=1
-          git config --global user.name circularlizard
-          git config --global user.email david.strachan@mac.com
+          git config --global user.name hcl-digital-experience
+          git config --global user.email notarealemail@hcl.dx
       - name: Run Mike deploy
         env: 
           RELEASE_TAG_VERSION: ${{ github.event.release.tag_name }}
         run: |
-          mike deploy -u ${RELEASE_TAG_VERSION} latest --push
+          mike deploy ${RELEASE_TAG_VERSION} --push
