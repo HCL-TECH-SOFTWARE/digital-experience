@@ -38,7 +38,7 @@
     .tx-hero {
         margin: 32px 2.8rem;
         color: var(--md-primary-bg-color);
-        justify-content: center;
+        justify-content: left;
     }
 
     .tx-hero h1 {
@@ -85,22 +85,20 @@
     }
 
     .top-hr {
-        margin-top: 30px;
-        margin-bottom: 30px;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
     }
 
     .feature-item {
-        font-family: 'Roboto', sans-serif;
         font-weight: 300;
-        color: hsla(280deg, 37%, 48%, 1);
         box-sizing: auto;
-        padding: 0 2px;
-        word-break: break-word
+        padding: 0px 5px 20px 5px;
+        word-break: break-word;
+        margin: 0px 10px 0px 10px;
     }
 
     .feature-item h2 {
-        color: #333;
-        font-weight: 300;
+        font-weight: 600;
         font-size: 24px;
         white-space: nowrap;
         overflow: hidden;
@@ -116,18 +114,24 @@
         line-height: 1.8em;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
-        color: #111;
-        margin:  0 40px;
         display: block;
     }
 
     .feature-item a {
+        font-weight: 600;
         text-decoration: underline;
     }
 
     @media screen and (max-width:30em) {
         .tx-hero h1 {
             font-size: 1.2rem
+        }
+
+        .tx-hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 32px 0.8rem;
         }
     }
 
@@ -140,6 +144,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            margin: 32px 0.8rem;
         }
 
         .tx-hero__content {
@@ -179,6 +184,7 @@
         .feature-item {
             flex: 1;
             min-width: 0;
+            padding: 0px 10px 10px 10px;
         }
 
         .feature-item:hover {
@@ -300,7 +306,7 @@
             <span class="infobox-icon">
                 {% include ".icons/fontawesome/regular/lightbulb.svg" %} 
             </span>
-            DX Support resources
+            DX Support
         </h2>
         <p>DX Support landing page, which hosts the knowledge base and contains the support contact and software access details.
             <br> </p>
