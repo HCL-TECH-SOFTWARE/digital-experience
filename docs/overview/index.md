@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Product Overview
 
 HCL DX is the trusted solution for an enterprise's digital experience at the intersection of processes, content and applications, built Cloud Native serving your customers, employees and partners. HCL DX is architected to build more than just websites. Deliver the functionality and stability your users need and expect.

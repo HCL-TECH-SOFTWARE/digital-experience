@@ -1,6 +1,3 @@
 title: Overview
 nav:
-    - HCL Digital Experience 9.5: intr_new95.md
-    - Product capabilities: intr_ovr.md
-    - Combined Cumulative Fixes: ccf_strategy95.md
- 
+    - index.md
