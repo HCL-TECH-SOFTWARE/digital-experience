@@ -1,7 +1,0 @@
-title: DX on Docker 
-nav:
-    - Digital Experience on Docker: docker_overview.md
-    - docker.md
-    - docker_image_deployment.md
-    - docker_compose.md
-     
