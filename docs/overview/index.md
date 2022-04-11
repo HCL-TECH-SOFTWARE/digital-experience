@@ -5,9 +5,9 @@ hide:
 
 # Product Overview
 
-HCL DX is the trusted solution for an enterprise's digital experience at the intersection of processes, content and applications, built Cloud Native serving your customers, employees and partners. HCL DX is architected to build more than just websites. Deliver the functionality and stability your users need and expect.
+HCL Digital Experience (DX) is the trusted solution for an enterprise's digital experience at the intersection of processes, content, and applications. HCL DX is architected to build more than just websites. It is built Cloud Native to serve your customers, employees, and partners and to deliver the functionality and stability that they need and expect.
 
-You can customize HCL DX to meet the needs of your organization, users, and user groups. You can adapt the look and feel of the site to fit the standards of your organization and to customize page content for users and groups in accordance with business rules and user profiles. Users, such as business partners, customers, or employees, can further customize their own views of the sites you build, if you let them. Users can add applications to pages and arrange them as they want. By aggregating portlets in one place and giving users the power to customize their own desktops, the HCL DX gives users a means for doing business efficiently and with high satisfaction.
+You can customize HCL DX to meet the needs of your organization, users, and user groups. You can adapt the look and feel of the site to fit the standards of your organization and to customize page content for users and groups in accordance with business rules and user profiles. Users, such as business partners, customers, or employees, can further customize their own views of the sites, as permitted. Users can add applications to pages and arrange them as they want. By aggregating portlets in one place and giving users the power to customize their own desktops, HCL DX gives users a means for doing business efficiently and with high satisfaction.
 
 ## For Practitioners
 
@@ -17,13 +17,14 @@ Tools for practitioners include content management, asset management, site build
 
 ## For Developers
 
-HCL DX provides a wide range of APIs and tools to enable developers to customize the digital experience. Developers can use Script Applications to produce javascript based applications. Java Portlets written to the JSR168 or JSR286 specification can be deployed too.
+HCL DX provides a wide range of APIs and tools to enable developers to customize the digital experience. Developers can use REST and Java APIs to access the HCL DX capabilities. They can use Script Applications to produce JavaScript-based applications. Java Portlets written to the JSR168 or JSR286 specification can be deployed too.
 
-Developers can use REST and Java APIs to access all of HCL DX capability. The DXClient tool can be used to deploy and manage applications, and to manage servers.
+The DXClient tool can be used to deploy and manage applications, and to manage servers.
 
 ## For System Administrators
 
-HCL DX can be deployed in an IBM&reg; WebSphere Application Server&reg; cluster, or it can be deployed to a Kubernetes environment. HCL DX provides a range of scriptable interfaces so that you can automate management of your infrastructure.
+HCL DX can be deployed in a traditional IBM&reg;  WebSphere Application Server&reg; cluster, or it can be deployed to a Kubernetes environment. HCL DX provides a range of scriptable interfaces  to enable automation of your infrastructure management.
 
-Some services are only available in the Kubernetes environment. These are Digital Asset Management, Design Studio, Experience API and Content Composer.
+Note that some services, such as Digital Asset Management, Design Studio, Experience API, and Content Composer, are available only in the Kubernetes environment. 
+
 
