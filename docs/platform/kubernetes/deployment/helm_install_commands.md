@@ -22,12 +22,12 @@ helm install -n my-namespace -f path/to/your/custom-values.yaml your-release-nam
 After a successful deployment, Helm responds with the following message:
 
 ```
-NAME: dx
-LAST DEPLOYED: Thu Jun 17 14:27:58 2021
-NAMESPACE: my-namespace
-STATUS: deployed
-REVISION: 1
-TEST SUITE: None
+    NAME: dx
+    LAST DEPLOYED: Thu Jun 17 14:27:58 2021
+    NAMESPACE: my-namespace
+    STATUS: deployed
+    REVISION: 1
+    TEST SUITE: None
 ```
 
 ## Hybrid deployment configuration
@@ -83,27 +83,6 @@ Use the following default URLs to access HCL Digital Experience \(Portal and WCM
 
     https://yourserver/hcl/wizard
 
-
-## Uninstall command
-
-To remove your HCL Digital Experience 9.5 deployment from your Cluster deployed using Helm, it is recommended that you use Helm uninstall.
-
-To run the uninstall, use the following command as shown in this example:
-
-```
-# Helm uninstall command
-helm uninstall your-release-name -n my-namespace
-```
-
-The `my-namespace` is the namespace where your HCL Digital Experience 9.5 deployment is installed to. 
-
-`your-release-name` is the Helm release name you selected during installation.
-
-After a successful deployment, Helm responds with the following message:
-
-```
-release "your-release-name" uninstalled
-```
 
 ## \(Optional\) External DNS configuration
 
