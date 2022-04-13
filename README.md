@@ -10,20 +10,22 @@ Visit the published site at [https://opensource.hcltechsw.com/digital-experience
 
 Bug reports on **product documentation** and pull requests are welcome on GitHub at https://github.com/HCL-TECH-SOFTWARE/digital-experience. This is Digital Experience product documentation site not product support platform, all bug reports and pull requests shall pertain to product documentation. Updates shall be performed only to markdown files in the `doc` directory.
 
-### Submitting code changes:
+### Make changes and validate the documentation locally
 
-- Open a [Pull Request](https://github.com/HCL-TECH-SOFTWARE/digital-experience/pulls)
-- Await markdown files review, merge and a build
-- Version number is increased post each build. \<MAJOR.MINOR\> versioning scheme is being followed for Volt MX documentation release.
+To perform updated document check before raising pull request, follow below steps:
 
-### Validate document
-
-To perform updated document check before raising pull request, follow below steps
-
-- Install [MkDocs](https://www.mkdocs.org/) and support libraries 
-- clone [digital-experience repository](https://github.com/HCL-TECH-SOFTWARE/digital-experience)
+- Follow the [MkDocs Installation guide](https://www.mkdocs.org/user-guide/installation/) to install [`MkDocs`](https://www.mkdocs.org/) and `pip`
+- Install the plugins by running  
+  `pip install mkdocs-material mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin`
+- Clone the [digital-experience repository](https://github.com/HCL-TECH-SOFTWARE/digital-experience)
 - Update markdown and perform [mkdocs serve](https://www.mkdocs.org/getting-started/#creating-a-new-project) to validate changes on user system
 - Raise [Pull Request](https://github.com/HCL-TECH-SOFTWARE/digital-experience/pulls) post update validations
+
+### Submitting code changes
+
+- Follow the [previous steps](#make-changes-and-validate-the-documentation-locally) to make changes to the documentation 
+- Await markdown files review, merge and a build
+- Version number is increased post each build. `<MAJOR.MINOR>` versioning scheme is being followed for Volt MX documentation release
 
 ## License
 
