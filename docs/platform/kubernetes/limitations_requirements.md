@@ -66,6 +66,7 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
     |Ambassador Ingress|ambassadorIngress|0.2|300MB|1|
     |Ambassador Redis|ambassadorRedis|0.1|256MB|0|
     |Sidecar|sidecar|0.1|64MB|0|
+    |HAProxy|haproxy|1|1024MB|1|
 
 
 ## Requirements and Limitations for Operator-based deployments
