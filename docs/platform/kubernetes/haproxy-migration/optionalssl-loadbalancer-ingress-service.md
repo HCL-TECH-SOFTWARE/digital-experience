@@ -8,9 +8,9 @@ The `Ingress Controller` is an application that runs in a cluster and configures
   
 -    Coming to the optional `SSL` offloading and `LoadBalancer` part, you will need to add a `Boolean` property into the helm chart values file so that you can make it `true` or `false`. If you make this `true` then `SSL` offloading will be enabled else disabled.
   
--	   You need to add one more property for `LoadBalancer` service. When `SSL` is enabled the service will be `LoadBalancer` and when it is disabled the service will be `ClusterIP`.
+-    You need to add one more property for `LoadBalancer` service. When `SSL` is enabled the service will be `LoadBalancer` and when it is disabled the service will be `ClusterIP`.
 
--	   Following code snippet shows how you can add this property:
+-    Following code snippet shows how you can add this property:
 ```yaml  
    haproxy:
       ssl: true 
