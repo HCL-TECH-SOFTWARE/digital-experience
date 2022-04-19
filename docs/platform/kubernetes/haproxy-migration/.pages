@@ -1,3 +1,4 @@
 nav:
     - haproxy-introduction.md
+    - haproxy-fresh-installation.md
     - optionalssl-loadbalancer-ingress-service.md
