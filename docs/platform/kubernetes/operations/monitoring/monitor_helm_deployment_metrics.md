@@ -10,16 +10,6 @@ The [Digital Experience 9.5 Helm deployment](../../deployment/helm_deployment.md
 
 The following [Digital Experience 9.5 applications](../../architecture/application_architecture.md) expose metrics that can be tracked with Prometheus metrics.
 
--   Core
--   Remote Search
--   Content Composer
--   Design Studio
--   Digital Asset Management
--   Image Processor
--   Experience API
--   DAM persistence
--   Ambassador
-
 |Application|Port|Route|
 |-----------|----|-----|
 |Core|10038|/metrics|
@@ -31,6 +21,7 @@ The following [Digital Experience 9.5 applications](../../architecture/applicati
 |Ring API|3000|/probe/metrics|
 |DAM Persistence|9187|/metrics|
 |Ambassador|8877|/metrics|
+|HAProxy|8404|/metrics|
 
 !!!important
     HCL Digital Experience 9.5 does not include a deployment of [Prometheus](https://prometheus.io/) or [Grafana](https://grafana.com/). When metrics are enabled in the [DX 9.5 Helm chart](../../deployment/preparation/overview.md), the application exposes Prometheus-compatible metrics. Those metrics can be consumed by any common Prometheus installation.
@@ -88,6 +79,7 @@ You can directly download or import the following dashboards from the Grafana co
 |11159|[NodeJS application dashboard](https://grafana.com/grafana/dashboards/11159)|Content Composer, Design Studio, Digital Asset Management, Image Processor, Experience API|
 |9628|[PostgreSQL database](https://grafana.com/grafana/dashboards/9628)|DAM persistence|
 |10850|[Ambassador dashboard](https://grafana.com/grafana/dashboards/10850)|Ambassador|
+|12693|[HAProxy dashboard](https://grafana.com/grafana/dashboards/12693)|HAProxy|
 
 ## HCL Digital Experience custom dashboards
 
