@@ -1,4 +1,4 @@
-title: Ambassador to HAProxy migration
 nav:
     - haproxy-introduction.md
     - haproxy-fresh-installation.md
+    - optionalssl-loadbalancer-ingress-service.md
