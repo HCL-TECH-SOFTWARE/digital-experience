@@ -219,7 +219,7 @@ For testing we can add another image tag an update the port value to the new HAP
 
 After saving the changes, both Ambassador as well the HAProxy fetched images should be visible.
 
-### Disable Ambassador
+## Disable Ambassador
 
 After HAProxy is verified and deployed into the cluster, Ambassador can be disabled such that only HAProxy is running and it handles the requests directly.
 After disabling Ambassador, `31001` port won't be available anymore. That port was solely used within the Ambassador configuration to test HAProxy. Now all the requests will be handled by HAProxy directly.
