@@ -16,7 +16,7 @@ applications:
   haproxy: true
 ```
 
-Now, you need to modify the value of HAProxy (to `true`) and upgrade the helm chart.   
+Change the value of HAProxy (to `true`/`false`) and upgrade the helm chart.
 `helm upgrade -n <namespace> -f <value-file.yaml> <deployment-name> <value-file-path>`
 
 For Example,  
