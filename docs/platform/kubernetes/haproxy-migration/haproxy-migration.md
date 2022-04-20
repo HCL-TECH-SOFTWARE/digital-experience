@@ -16,13 +16,16 @@ applications:
   haproxy: true
 ```
 
-Now, you need to modify the value of HAProxy (to `true`) and upgrade the helm chart.   
+Change the value of HAProxy (to `true`/`false`) and upgrade the helm chart.
 `helm upgrade -n <namespace> -f <value-file.yaml> <deployment-name> <value-file-path>`
 
 For Example,  
 `helm upgrade -n dxns -f deploy-values.yaml dx-deployment native-kube/helm/hcl-dx-deployment`  
 
-After HAProxy deployment, Ambassador and HAProxy are running side by side, the server and Pods are running for both as expected, i.e cluster should look like the following:
+After deploying HAProxy, the services and pods of both applications (Ambassador and HAProxy) should be up and running in the cluster. Make sure that Ambassador is now working as an active request handler so its service type would be a default `LoadBalancer` and HAProxy is running as a passive instance so that its service would be a normal `ClusterIP` service. 
+
+i.e cluster should look like the following:
+``` @
 
 ![HAProxy Enabled](../_img/haproxy-migration/haproxy-enable-1.png)
 
@@ -33,9 +36,10 @@ After HAProxy deployment, Ambassador and HAProxy are running side by side, the s
 
 To test and verify that HAProxy is deployed without any issue into the cluster, follow the below steps.
 
-HAproxy will communicate via port `31001`, so whenever a request is made through the port `31001`, that request first goes to the Ambassador and is then forwarded to HAproxy.
+HAproxy will communicate via port a dedicated port, so whenever a request is made through that dedicated, that request first goes to the Ambassador and is then forwarded to HAproxy.
 
-The port `31001` can be edited in values.yaml file within the helm-charts repository, i.e the key "ambassadorPassthroughPort" stores the HAProxy port. The port can be changed as shown below.
+This dedicated port can be configurable from the value of the helm chart.
+
 
 ```yaml
 # values.yaml
@@ -46,9 +50,15 @@ networking:
 ```
 
 
-#### WebSphere Configuration Setting
+#### WebSphere Configuration Setting (for HAProxy dedicated configurable port)
 
-Virtual host needs to be added for `31001` port into the WebSphere server for side-by-side mode. This is used to identify in the request is ,ade rom the external host with its specific port. See the screenshots below show the steps to be followed
+The virtual host needs to be added for the dedicated port (which is defined in the value file of the helm chart), into the WebSphere server for side-by-side mode. This is used to identify the request made from the external host with that dedicated port for HAProxy.
+
+Make sure that the same dedicated port is used as a virtual host, which is defined in `ambassadorPassthroughPort` the value file (refer to above step).
+
+Here, for the example, the `31001` port is configured as a dedicated port for the HAPRoxy.
+
+Refer to the screenshots below to configure the dedicated port as a virtual host in the `WebSphere` server.
 
 **Step 1:**
 ![WebSphere Config 1](../_img/haproxy-migration/websphere-config-1.png)
@@ -68,13 +78,15 @@ Virtual host needs to be added for `31001` port into the WebSphere server for si
 **Step 6:**
 ![WebSphere Config 6](../_img/haproxy-migration/websphere-config-6.png)
 
-After the above changes are made, you can append the port `31001` into the request URL. The request URL should look like below.
+After the above changes are made, you can append the port the defined dedicated port into the request URL. 
+
+The request URL should look like below (here, `31001` is used for an example).
 
 The normal request to access the portal:  `https://<host-name>/wps/myportal `
 
 Custom request with port `31001` : `https://<host-name>:31001/wps/myportal `  
 
-In the above mentioned scenario, if the request passed through HAProxy faces an issue, the request wont be fulfilled, else if it works as expected then its is proof that HAProxy is up and running in the cluster
+If HAProxy would not be up and running properly and had some issue in generating the instances, the request would not be fulfilled, else if the request works as expected then it is proof that HAProxy is up and running in the cluster.
 
 ## Creating Application to HAProxy Port:
 
