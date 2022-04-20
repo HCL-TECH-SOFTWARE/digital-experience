@@ -22,7 +22,10 @@ Change the value of HAProxy (to `true`/`false`) and upgrade the helm chart.
 For Example,  
 `helm upgrade -n dxns -f deploy-values.yaml dx-deployment native-kube/helm/hcl-dx-deployment`  
 
-After HAProxy deployment, Ambassador and HAProxy are running side by side, the server and Pods are running for both as expected, i.e cluster should look like the following:
+After deploying HAProxy, the services and pods of both applications (Ambassador and HAProxy) should be up and running in the cluster. Make sure that Ambassador is now working as an active request handler so its service type would be a default `LoadBalancer` and HAProxy is running as a passive instance so that its service would be a normal `ClusterIP` service. 
+
+i.e cluster should look like the following:
+``` @
 
 ![HAProxy Enabled](../_img/haproxy-migration/haproxy-enable-1.png)
 
