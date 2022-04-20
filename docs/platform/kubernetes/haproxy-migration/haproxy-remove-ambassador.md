@@ -1,4 +1,4 @@
-# Remove Ambassador CRDs after the migration
+# Remove Ambassador CRDs
 
 !!!note "Notes:"
     This section only applies for **existing** HCL Digital Experience deployments. For fresh deployments please refer to [Fresh Installations without Ambassador](haproxy-fresh-installation.md)
@@ -41,7 +41,7 @@ This should return the `CRDs` listed above. If more `CRDs` are returned this can
 
 To see the actual resources that are using the `CRDs` above, run the following command:
 
-```
+```shell
 kubectl get ambassador-crds --all-namespaces
 ```
 
@@ -82,7 +82,7 @@ kubectl delete crd \
 
 In case after deletion the `CRDs` turn out to be required they can be restored from the HCL Digital Experience Helm chart. To do so, unpack the `CRDs` and apply them by running:
 
-```shell
+```console
 tar zxvf hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz hcl-dx-deployment/crds
 kubectl apply -f ./hcl-dx-deployment/crds
 ```
