@@ -1,4 +1,5 @@
 nav:
     - haproxy-introduction.md
     - haproxy-configuration.md
+    - haproxy-remove-ambassador.md
     - haproxy-fresh-installation.md
