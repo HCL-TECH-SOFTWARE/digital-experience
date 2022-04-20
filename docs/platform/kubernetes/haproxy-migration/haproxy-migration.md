@@ -50,7 +50,7 @@ networking:
 ```
 
 
-#### WebSphere Configuration Setting
+#### WebSphere Configuration Setting (for HAProxy dedicated configurable port)
 
 Virtual host needs to be added for `31001` port into the WebSphere server for side-by-side mode. This is used to identify in the request is ,ade rom the external host with its specific port. See the screenshots below show the steps to be followed
 
