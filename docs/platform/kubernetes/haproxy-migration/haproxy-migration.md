@@ -16,7 +16,7 @@ applications:
   haproxy: true
 ```
 
-Change the value of HAProxy (to `true`/`false`) and upgrade the helm chart.
+Change the value of HAProxy (to `true`/`false`) and upgrade the helm chart. Incase of side-by-side testing the value for Ambassador and HAProxy both needs to be set as `true`
 `helm upgrade -n <namespace> -f <value-file.yaml> <deployment-name> <value-file-path>`
 
 For Example,  
