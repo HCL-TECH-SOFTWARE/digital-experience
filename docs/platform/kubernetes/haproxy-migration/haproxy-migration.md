@@ -78,7 +78,9 @@ Refer to the screenshots below to configure the dedicated port as a virtual host
 **Step 6:**
 ![WebSphere Config 6](../_img/haproxy-migration/websphere-config-6.png)
 
-After the above changes are made, you can append the port `31001` into the request URL. The request URL should look like below.
+After the above changes are made, you can append the port the defined dedicated port into the request URL. 
+
+The request URL should look like below (here, `31001` is used for an example).
 
 The normal request to access the portal:  `https://<host-name>/wps/myportal `
 
