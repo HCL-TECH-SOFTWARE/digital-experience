@@ -52,7 +52,13 @@ networking:
 
 #### WebSphere Configuration Setting (for HAProxy dedicated configurable port)
 
-Virtual host needs to be added for `31001` port into the WebSphere server for side-by-side mode. This is used to identify in the request is ,ade rom the external host with its specific port. See the screenshots below show the steps to be followed
+The virtual host needs to be added for the dedicated port (which is defined in the value file of the helm chart), into the WebSphere server for side-by-side mode. This is used to identify the request made from the external host with that dedicated port for HAProxy.
+
+Make sure that the same dedicated port is used as a virtual host, which is defined in `ambassadorPassthroughPort` the value file (refer to above step).
+
+Here, for the example, the `31001` port is configured as a dedicated port for the HAPRoxy.
+
+Refer to the screenshots below to configure the dedicated port as a virtual host in the `WebSphere` server.
 
 **Step 1:**
 ![WebSphere Config 1](../_img/haproxy-migration/websphere-config-1.png)
