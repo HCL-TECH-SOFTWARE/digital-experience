@@ -1,6 +1,6 @@
 # Haproxy Migration
 
-This documentation explains the method to test HAProxy side by side with ambassador. Here ambassador is running in the default port, and HAProxy is running in its own port (i.e `31001`).
+This documentation explains the method to test HAProxy side by side with Ambassador. Here Ambassador is running in the default port, and HAProxy is running in its own port (i.e `31001`).
 
 ## HAProxy deployment
 In the helm chart value file, you can see an option for HAProxy (same as other applications) to enable/disable the application. If there is a derived value file from the main values file, there would be an option for that as well to enable/disable HAProxy.
@@ -8,50 +8,33 @@ In the helm chart value file, you can see an option for HAProxy (same as other a
 ```yaml
 # Controls which application is deployed and configured
 applications:
-  # Deploys Content Composer
-  contentComposer: true
-  # Deploys Core
-  core: true
-  # Deploys Design Studio
-  designStudio: false
-  # Deploys Digital Asset Management
-  digitalAssetManagement: true
-  # Deploys the Image Processor
-  # Enabling digitalAssetManagement will override this setting with: true
-  imageProcessor: true
-  # Deploy Open LDAP
-  # Setting the ldap type in the core application configuration to dx will override this setting with: true
-  openLdap: true
-  # Deploys the Persistence Layer
-  # Enabling digitalAssetManagement will override this setting with: true
-  persistence: true   
-  # Deploys the Remote Search
-  remoteSearch: true
-  # Deploys the Ring API
-  # Enabling either digitalAssetManagement or contentComposer will override this setting with: true
-  ringApi: true
+  
   # Deploys the Ambassador Ingress and Redis
   ambassador: true
-  # Deploys the Runtime Controller
-  runtimeController: true
+
   # Deploy HAProxy
   haproxy: true
 ```
 
 Now, you need to modify the value of HAProxy (to `true`) and upgrade the helm chart.   
-`$ helm upgrade -n <namespace> -f <value-file.yaml> <deployment-name> <value-file-path>`
+`helm upgrade -n <namespace> -f <value-file.yaml> <deployment-name> <value-file-path>`
 
 For Example,  
-`$ helm upgrade -n dxns -f deploy-values.yaml dx-deployment native-kube/helm/hcl-dx-deployment`  
+`helm upgrade -n dxns -f deploy-values.yaml dx-deployment native-kube/helm/hcl-dx-deployment`  
 
-After HAProxy deployment, the cluster should look like the following:
+After HAProxy deployment, Ambassador and HAProxy are running side by side, the server and Pods are running for both as expected, i.e cluster should look like the following:
 
 ![HAProxy Enabled](../_img/haproxy-migration/haproxy-enable-1.png)
 
 ## HAProxy Testing (deployment verification)
+
+!!! note "Notes:"
+    This does not work for hybrid deployments, hence to have it working in hybrid environment we have "Creating Application to HAProxy Port".
+
 To test and verify that HAProxy is deployed without any issue into the cluster, follow the below steps.
 
 HAproxy will communicate via port `31001`, so whenever a request is made through the port `31001`, that request first goes to the Ambassador and is then forwarded to HAproxy.
+The HAProxy port can be changed [here](https://git.cwp.pnp-hcl.com/websphere-portal-incubator/dx-helm-charts/blob/develop/charts/hcl-dx-deployment/values.yaml#L1141)
 
 #### WebSphere Configuration Setting
 
@@ -77,55 +60,16 @@ Virtual host needs to be added for `31001` port into the WebSphere server for si
 
 After the above changes are made, you can append the port `31001` into the request URL. The request URL should look like below.
 
-The normal request to access the dam UI :  `https://<host-name>/dx/ui/dam/`
+The normal request to access the portal:  `https://<host-name>/wps/myportal `
 
-Custom request with port `31001` : `https://<host-name>:31001/dx/ui/dam/`  
+Custom request with port `31001` : `https://<host-name>:31001/wps/myportal `  
 
 In the above mentioned scenario, if the request passed through HAProxy faces an issue, the request wont be fulfilled, else if it works as expected then its is proof that HAProxy is up and running in the cluster
 
-### Disable Ambassador 
-
-After HAProxy is verified and deployed into the cluster, Ambassador can be disabled such that only HAProxy is running and it handles the requests directly.
-After disabling Ambassador, `31001` port won't be available anymore. That port was solely used within the Ambassador configuration to test HAProxy. Now all the requests will be handled by HAProxy directly
-
-Update the value file with Ambassador application flag (to `false`) and upgrade the helm chart.
-
-```yaml
-applications:
-  designStudio: true
-  # Deploys Content Composer
-  contentComposer: true
-  # Deploys Core
-  core: true
-  # Deploys Digital Asset Management
-  digitalAssetManagement: true
-  # Deploy Open LDAP
-  # Setting the ldap type in the core application configuration to dx will override this setting with: true
-  openLdap: true
-  # Deploys the Persistence Layer
-  # Enabling digitalAssetManagement will override this setting with: true
-  persistence: true
-  # Deploys the Remote Search
-  remoteSearch: true
-  # Deploys the Image Processor
-  # Enabling digitalAssetManagement will override this setting with: true
-  imageProcessor: true
-  # Deploys the Ring API
-  # Enabling either digitalAssetManagement or contentComposer will override this setting with: true
-  ringApi: true
-  # Deploys the Ambassador Ingress and Redis
-  ambassador: false
-  runtimeController: true
-  # Deploys HAProxy application, load balancer service, and configMap to provide the configuration to HAProxy
-  haproxy: true
-```
-
-After disabling Ambassador, the DX namespace looks like the following:
-
-![Ambassador Disabled](../_img/haproxy-migration/ambassador-disable-1.png)
-
-
 ## Creating Application to HAProxy Port:
+
+!!! note "Notes:"
+    This method works mainly for hybrid deployments (can also be used for non-hybrid, but should not be necessary)
 
 Navigate to the Application Menu. The Pages present in the menu are currently pointing to them using Ambassador by default. The goal is to create a new, temporary page which points to HAProxy port for testing.
 To do so we need to go to "Administration"
@@ -186,7 +130,7 @@ The application ID remains the same (`media library`) while the URL is updated s
 |:--:|
 | Adding HAProxy port to the URL|
 
-After you have added the Content, you can view and test the new HAProxy page.Both the original ambassador page is running successfully in its default URL, while the new HAProxy page is also running successfully in its respective port URL.
+After you have added the Content, you can view and test the new HAProxy page.Both the original Ambassador page is running successfully in its default URL, while the new HAProxy page is also running successfully in its respective port URL.
 
 **Ambassador Page:**
 ![Digital Assets](../_img/haproxy-migration/Digital_assets_network.png)
@@ -199,7 +143,7 @@ Hence you can now test both Ambassador and HAProxy side by side
 
 ### Enabling HAProxy port in Web Content (Image)
 
-There is another functionality using which you can test if ambassador as well as HAProxy are running. This is in relation with Web Content, to insert an image from the new Digital Asset Management Page which was created using the HAProxy port.
+There is another functionality using which you can test if Ambassador as well as HAProxy are running. This is in relation with Web Content, to insert an image from the new Digital Asset Management Page which was created using the HAProxy port.
 Traverse through the web content to Open and edit the Sample Article.
 
 | ![library_explorer_sample](../_img/haproxy-migration/library_explorer_sample.png) |
@@ -224,11 +168,30 @@ On clicking Select Image another pop up is displayed. This will always point to 
 |:--:|
 | Insert Image from DAM|
 
-In the source code the image is added via the img tag, since this was selected from the DAM pointing to ambassador the port specified is the default port. 
+In the source code the image is added via the img tag, since this was selected from the DAM pointing to Ambassador the port specified is the default port. 
 For testing we can add anopther image tag an update the port value to the new HAProxy port. 
 
 | ![both_image_tags](../_img/haproxy-migration/both_image_tags.png) |
 |:--:|
 | Image fetched from default DAM and DAM of HAProxy port|
 
-After saving the changes, both ambassador as well the HAProxy fetched images can be viewed. Hence is is another method of testing side by side working of ambassador as well as HAProxy.
+After saving the changes, both Ambassador as well the HAProxy fetched images can be viewed. Hence is is another method of testing side by side working of Ambassador as well as HAProxy.
+
+### Disable Ambassador 
+
+After HAProxy is verified and deployed into the cluster, Ambassador can be disabled such that only HAProxy is running and it handles the requests directly.
+After disabling Ambassador, `31001` port won't be available anymore. That port was solely used within the Ambassador configuration to test HAProxy. Now all the requests will be handled by HAProxy directly
+
+Update the value file with Ambassador application flag (to `false`) and upgrade the helm chart.
+
+```yaml
+applications:
+  # Setting ambassador flag to false
+  ambassador: false
+  # Setting HAProxy flag to true
+  haproxy: true
+```
+
+After disabling Ambassador, the Ambassador pods and services are removed and only HAProxy is up and running. The DX namespace looks like the following:
+
+![Ambassador Disabled](../_img/haproxy-migration/ambassador-disable-1.png)
