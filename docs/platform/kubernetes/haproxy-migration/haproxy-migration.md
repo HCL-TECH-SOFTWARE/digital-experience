@@ -127,7 +127,7 @@ After disabling Ambassador, the DX namespace looks like the following:
 
 ## Creating Application to HAProxy Port:
 
-Navigate to the Application Menu. The Pages presesnt in the menu are currently pointing to them using Ambassador by default. The goal is to create a new, temporary page which points to HAProxy port for testing.
+Navigate to the Application Menu. The Pages present in the menu are currently pointing to them using Ambassador by default. The goal is to create a new, temporary page which points to HAProxy port for testing.
 To do so we need to go to "Administration"
 
 
