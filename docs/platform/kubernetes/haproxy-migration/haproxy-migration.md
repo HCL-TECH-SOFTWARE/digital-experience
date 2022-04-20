@@ -40,7 +40,6 @@ HAproxy will communicate via port a dedicated port, so whenever a request is mad
 
 This dedicated port can be configurable from the value of the helm chart.
 
-The port `31001` can be edited in values.yaml file within the helm-charts repository, i.e the key "ambassadorPassthroughPort" stores the HAProxy port. The port can be changed as shown below.
 
 ```yaml
 # values.yaml
