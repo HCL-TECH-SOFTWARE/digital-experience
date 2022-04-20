@@ -86,7 +86,7 @@ The normal request to access the portal:  `https://<host-name>/wps/myportal `
 
 Custom request with port `31001` : `https://<host-name>:31001/wps/myportal `  
 
-In the above mentioned scenario, if the request passed through HAProxy faces an issue, the request wont be fulfilled, else if it works as expected then its is proof that HAProxy is up and running in the cluster
+If HAProxy would not be up and running properly and had some issue in generating the instances, the request would not be fulfilled, else if the request works as expected then it is proof that HAProxy is up and running in the cluster.
 
 ## Creating Application to HAProxy Port:
 
