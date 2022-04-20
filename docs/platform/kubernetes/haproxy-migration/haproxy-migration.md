@@ -61,27 +61,27 @@ Refer to the screenshots below to configure the dedicated port as a virtual host
 
 | ![WebSphere Config 1](../_img/haproxy-migration/websphere-config-1.png) |
 |:--:|
-| AA|
+| Open WebSphere console and navigate to Virtual Hosts, then click on `default_host` |
 
 | ![WebSphere Config 2](../_img/haproxy-migration/websphere-config-2.png) |
 |:--:|
-| AA|
+| Click on `Host Aliases` to open list of hosts|
 
 | ![WebSphere Config 3](../_img/haproxy-migration/websphere-config-3.png) |
 |:--:|
-| AA|
+|  Click on `New` button to add new host|
 
 | ![WebSphere Config 4](../_img/haproxy-migration/websphere-config-4.png) |
 |:--:|
-| AA|
+|  Enter the port in the textfield, then click on `Apply` to apply the changes|
 
 | ![WebSphere Config 5](../_img/haproxy-migration/websphere-config-5.png) |
 |:--:|
-| aa|
+| Click on `Save`|
 
 | ![WebSphere Config 6](../_img/haproxy-migration/websphere-config-6.png) |
 |:--:|
-| aa|
+| After adding port as a virtual host, it can be viewed in the list|
 
 After the above changes are made, you can append the port the defined dedicated port into the request URL. 
 
