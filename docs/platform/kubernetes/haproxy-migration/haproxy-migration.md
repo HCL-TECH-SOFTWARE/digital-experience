@@ -34,7 +34,17 @@ After HAProxy deployment, Ambassador and HAProxy are running side by side, the s
 To test and verify that HAProxy is deployed without any issue into the cluster, follow the below steps.
 
 HAproxy will communicate via port `31001`, so whenever a request is made through the port `31001`, that request first goes to the Ambassador and is then forwarded to HAproxy.
-The HAProxy port can be changed [here](https://git.cwp.pnp-hcl.com/websphere-portal-incubator/dx-helm-charts/blob/develop/charts/hcl-dx-deployment/values.yaml#L1141)
+
+The port `31001` can be edited in values.yaml file within the helm-charts repository, i.e the key "ambassadorPassthroughPort" stores the HAProxy port. The port can be changed as shown below.
+
+```yaml
+# values.yaml
+networking:
+    haproxy:
+      # The port on which Ambassador redirects traffic to HAProxy to test it in a side-by-side mode before switching to HAProxy
+      ambassadorPassthroughPort: 31001
+```
+
 
 #### WebSphere Configuration Setting
 
