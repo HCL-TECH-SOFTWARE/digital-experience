@@ -2,3 +2,4 @@ nav:
     - haproxy-introduction.md
     - haproxy-configuration.md
     - haproxy-fresh-installation.md
+    - haproxy-migration.md
