@@ -36,7 +36,9 @@ i.e cluster should look like the following:
 
 To test and verify that HAProxy is deployed without any issue into the cluster, follow the below steps.
 
-HAproxy will communicate via port `31001`, so whenever a request is made through the port `31001`, that request first goes to the Ambassador and is then forwarded to HAproxy.
+HAproxy will communicate via port a dedicated port, so whenever a request is made through that dedicated, that request first goes to the Ambassador and is then forwarded to HAproxy.
+
+This dedicated port can be configurable from the value of the helm chart.
 
 The port `31001` can be edited in values.yaml file within the helm-charts repository, i.e the key "ambassadorPassthroughPort" stores the HAProxy port. The port can be changed as shown below.
 
