@@ -59,23 +59,29 @@ Here, for the example, the `31001` port is configured as a dedicated port for th
 
 Refer to the screenshots below to configure the dedicated port as a virtual host in the `WebSphere` server.
 
-**Step 1:**
-![WebSphere Config 1](../_img/haproxy-migration/websphere-config-1.png)
+| ![WebSphere Config 1](../_img/haproxy-migration/websphere-config-1.png) |
+|:--:|
+| AA|
 
-**Step 2:**
-![WebSphere Config 2](../_img/haproxy-migration/websphere-config-2.png)
+| ![WebSphere Config 2](../_img/haproxy-migration/websphere-config-2.png) |
+|:--:|
+| AA|
 
-**Step 3:**
-![WebSphere Config 3](../_img/haproxy-migration/websphere-config-3.png)
+| ![WebSphere Config 3](../_img/haproxy-migration/websphere-config-3.png) |
+|:--:|
+| AA|
 
-**Step 4:**
-![WebSphere Config 4](../_img/haproxy-migration/websphere-config-4.png)
+| ![WebSphere Config 4](../_img/haproxy-migration/websphere-config-4.png) |
+|:--:|
+| AA|
 
-**Step 5:**
-![WebSphere Config 5](../_img/haproxy-migration/websphere-config-5.png)
+| ![WebSphere Config 5](../_img/haproxy-migration/websphere-config-5.png) |
+|:--:|
+| aa|
 
-**Step 6:**
-![WebSphere Config 6](../_img/haproxy-migration/websphere-config-6.png)
+| ![WebSphere Config 6](../_img/haproxy-migration/websphere-config-6.png) |
+|:--:|
+| aa|
 
 After the above changes are made, you can append the port the defined dedicated port into the request URL. 
 
