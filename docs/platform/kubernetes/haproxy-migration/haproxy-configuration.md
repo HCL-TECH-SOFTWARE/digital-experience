@@ -30,7 +30,7 @@ networking:
     serviceNodePort:
 ```
   
-This implementation is helpful for those who want to use a custom `Ingress Controller` to expose the service in a compatible way. Even then, HAProxy will still be active. The `Ingress Controller` will handle the incoming traffic and should then route to the HAProxy service.
+This implementation is helpful for those who want to use a custom `Ingress Controller` to expose the service in a compatible way. Even then, HAProxy will still be active. The `Ingress Controller` will handle the incoming traffic and then route them to the HAProxy service.
 
 ## HAProxy with and without Ambassador
 
