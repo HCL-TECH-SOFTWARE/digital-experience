@@ -1,17 +1,17 @@
 # HAProxy configuration
 
-By default HAProxy is deployed with a `LoadBalancer` type service and will be handling incoming traffic as well as the SSL offloading for HCL Digital Experience. This is the known behavior of Ambassador in the previous versions. In addition the Helm deployment now offers more adjustability for `HAProxy` and its Service to allow for a more flexible deployment and the use of custom `Ingress Controllers`.
+By default HAProxy is deployed with a `LoadBalancer` type service and will be handling incoming traffic as well as the SSL offloading for HCL Digital Experience. This is the known behavior of Ambassador in the previous versions. In addition the Helm deployment now offers more adjustability for HAProxy and its Service to allow for a more flexible deployment and the use of custom `Ingress Controllers`.
 
 ## Networking configuration
 
-The HAProxy networking parameters to configure the `HAProxy` service are located in `networking.haproxy` in the `values.yaml` file.  
+The HAProxy networking parameters to configure the HAProxy service are located in `networking.haproxy` in the `values.yaml` file.  
 
 |Parameter|Description|Default value|
 |---------|-----------|-------------|
 |`ssl` { width="20%" }  |Enable or disable SSL offloading in HAProxy. Depending on this setting HAProxy handles either `HTTP` or `HTTPS` traffic. { width="60%" } |`true` { width="20%" }|
-|`serviceType`|Defines the Kubernetes [`ServiceType`](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types) of the `HAProxy` service. `LoadBalancer`, `ClusterIP` and `NodePort` are supported. |`LoadBalancer`|
-|`servicePort`|This value is used to select the port exposed by the `HAProxy` service. Defaults to `443` if `ssl` is `true`, otherwise port `80` is used. |`null`|
-|`serviceNodePort`|This value is used to select the node port exposed by the `HAProxy` service. Defaults to a port selected by Kubernetes if no value is set. |`null`|
+|`serviceType`|Defines the Kubernetes [`ServiceType`](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types) of the HAProxy service. `LoadBalancer`, `ClusterIP` and `NodePort` are supported. |`LoadBalancer`|
+|`servicePort`|This value is used to select the port exposed by the HAProxy service. Defaults to `443` if `ssl` is `true`, otherwise port `80` is used. |`null`|
+|`serviceNodePort`|This value is used to select the node port exposed by the HAProxy service. Defaults to a port selected by Kubernetes if no value is set. |`null`|
 
 !!!note
     If `ssl` is set to `true`, HAProxy will use the certificate that is supplied as a secret in `networking.tlsCertSecret`.
@@ -30,11 +30,32 @@ networking:
     serviceNodePort:
 ```
   
-This implementation is helpful for those who want to use a custom `Ingress Controller` to expose the service in a compatible way. Even then, `HAproxy` will still be active. The `Ingress Controller` will handle the incoming traffic and should then route to the `HAProxy` service.
+This implementation is helpful for those who want to use a custom `Ingress Controller` to expose the service in a compatible way. Even then, HAProxy will still be active. The `Ingress Controller` will handle the incoming traffic and should then route to the HAProxy service.
+
+## HAProxy with and without Ambassador
+
+Both Ambassador and HAProxy can be enabled or disabled in the `applications` section of the Helm values. Depending on the combination of settings HAProxy is deployed by itself or in a side-by-side mode with Ambassador. The side-by-side mode is mainly used for migration from Ambassador to HAProxy. Refer to the [`Migrate from Ambassador to HAProxy`](./haproxy-migration.md) page for information about the migration.
+
+```yaml
+# Controls which application is deployed and configured
+applications:
+  # Deploys the Ambassador Ingress and Redis
+  ambassador: true
+  # Deploy HAProxy
+  haproxy: true
+```
+
+The matrix below shows the deployment options for combinations of HAProxy and Ambassador:
+
+|Deployment type|`ambassador`|`haproxy`| Result |
+|---------|-----------|-------------|--------|
+| fresh deployment (`helm install`)| *not applied* | `true` (default) | HAProxy |
+| update of existing deployment (`helm upgrade`)| `true` (default) | `true` (default) | Ambassador and HAProxy (side-by-side mode) |
+| update of existing deployment (`helm upgrade`)| `false` | `true` (default) | HAProxy |
 
 ## Scaling
 
-By default 3 replicas of the `HAProxy` Pod will be created. This value can be adjusted in the `custom-values` file for the Helm deployment.
+By default 3 replicas of the HAProxy Pod will be created. This value can be adjusted in the `custom-values` file for the Helm deployment.
 
 ```yaml
 scaling:
@@ -45,7 +66,7 @@ scaling:
 
 ## Resources
 
-`HAProxy` is set to use the below resource allocation values by default. The values are adjustable in the `custom-values` file for the Helm deployment.
+HAProxy is set to use the below resource allocation values by default. The values are adjustable in the `custom-values` file for the Helm deployment.
 
 ```yaml
 resources:

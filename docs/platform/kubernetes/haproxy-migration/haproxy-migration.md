@@ -9,7 +9,7 @@ This documentation explains the method to test HAProxy side by side with Ambassa
 
 ## Ambassador and HAProxy side-by-side deployment
 
-In the Helm chart custom values file, you can see an option for HAProxy similar to the other applications to enable/disable it.
+In the Helm chart custom values file, you can see an option for HAProxy similar to the other applications to enable/disable it. Please refer to the [`HAProxy configuration` page](./haproxy-configuration.md#haproxy-with-and-without-ambassador) for details.
 
 ```yaml
 # Controls which application is deployed and configured
@@ -55,7 +55,7 @@ incubator:
 
 The virtual host needs to be configured for the HAProxy port, into the WebSphere server for side-by-side mode. This is used to identify the request made from the external host with that dedicated port for HAProxy.
 
-Here, for the example, the default port `31001` is configured as a dedicated port for the HAPRoxy.
+Here, for the example, the default port `31001` is configured as a dedicated port for the HAProxy.
 
 Refer to the screenshots below to configure the dedicated port in the virtual host of the `WebSphere` server.
 
@@ -221,8 +221,8 @@ After saving the changes, both Ambassador as well the HAProxy fetched images sho
 
 ## Disable Ambassador
 
-After HAProxy is verified and deployed into the cluster, Ambassador can be disabled such that only HAProxy is running and it handles the requests directly.
-After disabling Ambassador, `31001` port won't be available anymore. That port was solely used within the Ambassador configuration to test HAProxy. Now all the requests will be handled by HAProxy directly.
+After HAProxy is verified and deployed into the cluster, Ambassador can be disabled such that only HAProxy is running and handles the requests directly.
+After disabling Ambassador, the `ambassadorPassthroughPort` (`31001`) won't be available anymore.
 
 To do so update the value file with Ambassador application flag to `false` and upgrade the helm chart.
 
@@ -234,6 +234,6 @@ applications:
   haproxy: true
 ```
 
-After disabling Ambassador, the Ambassador pods and services are removed and only HAProxy is up and running. The DX namespace should look similar to the following:
+After disabling Ambassador, the Ambassador pods and services are removed and only HAProxy is up and running. All the requests will be handled by HAProxy directly. The DX namespace should look similar to the following:
 
 [![Ambassador Disabled](../_img/haproxy-migration/ambassador-disable-1.png)](../_img/haproxy-migration/ambassador-disable-1.png){:target="_blank"}
