@@ -1,11 +1,13 @@
 # Migrate from Ambassador to HAProxy
 
-This documentation explains the method to test HAProxy side by side with Ambassador to confirm the setup is working before switching completely. In this case Ambassador keeps running uninterrupted, and HAProxy is running on its own port (configurable, `31001` by default).
-
 !!!important
+    This page only applies for updates of existing DX deployments and if an immediate switch to HAProxy together with disabling Ambassador is not possible or has to be tested first. For all other cases please refer to the [`Fresh Installations without Ambassador`](haproxy-fresh-installation.md) page or the configuration options in [`HAProxy with and without Ambassador`](haproxy-configuration.md#haproxy-with-and-without-ambassador) to disable Ambassador before the upgrade.
+
     The preferred migration route is a [`blue green deployment`](https://www.redhat.com/en/topics/devops/what-is-blue-green-deployment) where one instance can directly be deployed with Ambassador disabled and HAProxy enabled and tested.
 
     The following instructions are meant to offer an alternative way to test Ambassador and HAProxy side-by-side if a `blue green deployment` is not available.
+
+This documentation explains the method to test HAProxy side by side with Ambassador to confirm the setup is working before switching completely. In this case Ambassador keeps running uninterrupted, and HAProxy is running on its own port (configurable, `31001` by default).
 
 ## Ambassador and HAProxy side-by-side deployment
 
@@ -39,7 +41,7 @@ The deployment should look similar to the following:
 
 To test and verify that HAProxy is deployed without any issue into the cluster, follow the below steps.
 
-HAProxy will communicate via a dedicated port, so whenever a request is made through that dedicated, that request first goes to the Ambassador and is then forwarded to HAProxy.
+HAProxy will communicate via a dedicated port, so whenever a request is made through that port, that request first goes to the Ambassador and is then forwarded to HAProxy.
 
 This dedicated port can be configured from the values of the Helm chart.
 
