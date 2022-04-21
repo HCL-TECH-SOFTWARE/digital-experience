@@ -30,9 +30,27 @@ helm upgrade -n <namespace> -f <custom-values.yaml> <release-name> <path/to/hcl-
 
 After deploying, the services and pods of both applications (Ambassador and HAProxy) should be up and running in the namespace. Make sure that Ambassador is now working as an active request handler so its service type would be a default `LoadBalancer` and HAProxy is running as a passive instance so that its service would be a `ClusterIP` service.
 
-The deployment should look similar to the following:
+To verify this, run below command.
 
-[![HAProxy Enabled](../_img/haproxy-migration/haproxy-enable-1.png)](../_img/haproxy-migration/haproxy-enable-1.png){:target="_blank"}
+```
+kubectl -n <namespace> get all --selector 'app in (<release-name>-haproxy, <release-name>-ambassador)'
+```
+
+This will print as an output for all the instances of Ambassador and HAProxy currently running into the namespace. The output will list out all the running pods as well as services only for Ambassador and HAProxy, which should be similar as shown below.
+
+```
+NAME                                            READY   STATUS    RESTARTS   AGE
+pod/dx-deployment-ambassador-7689f9fd45-sn9nb   1/1     Running   0          2m7s
+pod/dx-deployment-haproxy-6b464bd866-p777b      1/1     Running   0          8m32s
+
+NAME                               TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)                                                                    AGE
+service/dx-deployment-ambassador   LoadBalancer   10.110.149.188   <pending>     80:32633/TCP,443:31627/TCP,31001:32113/TCP,1636:31232/TCP,9043:30319/TCP   2m7s
+service/dx-deployment-haproxy      ClusterIP      10.101.191.20    <none>        443/TCP,9043/TCP,1636/TCP                                                  8m32s
+
+NAME                                                  DESIRED   CURRENT   READY   AGE
+replicaset.apps/dx-deployment-ambassador-7689f9fd45   1         1         1       2m7s
+replicaset.apps/dx-deployment-haproxy-6b464bd866      1         1         1       8m32s
+```
 
 ## HAProxy Testing (deployment verification)
 
@@ -220,6 +238,22 @@ applications:
   haproxy: true
 ```
 
-After disabling Ambassador, the Ambassador pods and services are removed and only HAProxy is up and running. All the requests will be handled by HAProxy directly. The DX namespace should look similar to the following:
+After disabling Ambassador, the Ambassador pods and services are removed and only HAProxy is up and running. All the requests will be handled by HAProxy directly. 
 
-[![Ambassador Disabled](../_img/haproxy-migration/ambassador-disable-1.png)](../_img/haproxy-migration/ambassador-disable-1.png){:target="_blank"}
+To verify that Ambassador pods and services are terminated from the namespace, run below command.
+```
+kubectl -n <namespace> get all --selector 'app in (<release-name>-haproxy, <release-name>-ambassador)'
+```
+
+Make sure that this command will show HAProxy instances only, as Ambassador instances (pods as well as service) should not be there as it's already terminated from the namespace. The output should be similar as shown below.
+
+```
+NAME                                         READY   STATUS    RESTARTS   AGE
+pod/dx-deployment-haproxy-6b464bd866-p777b   1/1     Running   0          39m
+
+NAME                            TYPE           CLUSTER-IP      EXTERNAL-IP     PORT(S)                                       AGE
+service/dx-deployment-haproxy   LoadBalancer   10.101.191.20   10.134.209.53   443:30318/TCP,9043:30521/TCP,1636:31777/TCP   39m
+
+NAME                                               DESIRED   CURRENT   READY   AGE
+replicaset.apps/dx-deployment-haproxy-6b464bd866   1         1         1       39m
+```
