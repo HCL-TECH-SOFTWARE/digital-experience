@@ -34,6 +34,8 @@ This implementation is helpful for those who want to use a custom `Ingress Contr
 
 ## HAProxy with and without Ambassador
 
+In version CF203 Ambassador is still included in the DX Helm chart to allow for a smooth transition to HAProxy. It will be removed in subsequent versions and therefore the configuration options below should be used to test Ambassador and HAProxy side-by-side and to eventually disable Ambassador.
+
 Both Ambassador and HAProxy can be enabled or disabled in the `applications` section of the Helm values. Depending on the combination of settings HAProxy is deployed by itself or in a side-by-side mode with Ambassador. The side-by-side mode is mainly used for migration from Ambassador to HAProxy. Refer to the [`Migrate from Ambassador to HAProxy`](./haproxy-migration.md) page for information about the migration.
 
 ```yaml
