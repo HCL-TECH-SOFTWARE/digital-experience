@@ -1,6 +1,6 @@
 # Overview
 
-Up until version CF202, the Helm deployments of HCL Digital Experience were shipped and deployed with Ambassador as part of the DX namespace. This included a set of [`CustomResourceDefinitions`](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) required by Ambassador.
+Up until version CF202, a deployment of HCL Digital Experience included an ingress controller "Ambassador" as part of the DX Kubernetes namespace. This included a set of [`CustomResourceDefinitions`](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) required by Ambassador which needed to be deployed as a cluster-wide Kubernetes resource.
 
 | [![Containerization Architecture Overview](../_img/ambassador-architecture.png)](../_img/ambassador-architecture.png){:target="_blank"} |
 |:--:|
