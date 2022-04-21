@@ -85,26 +85,10 @@ Refer to the screenshots below to configure the dedicated port in the virtual ho
 |:--:|
 | After adding port to the virtual host, it can be viewed in the list|
 
-For the changes to take effect, the `WebSphere_Portal` server must be restarted. To do so run the appropriate commands in the `Core` Pod.
-
-Stop the server:
+For the changes to take effect, the `WebSphere_Portal` server must be restarted. To do so, recycle the Core Pods using the following command. Make sure to replace `<release-name>` with the Helm release name chosen during deployment and to insert the correct `<namespace>`:
 
 ```shell
-kubectl exec --stdin --tty <DX_POD_NAME> -n <NAMESPACE> -- /bin/bash
-
-cd /opt/HCL/wp_profile/bin/
-
-./stopServer.sh WebSphere_Portal -username <USERNAME> -password <PASSWORD>
-```
-
-And start it again;
-
-```shell
-kubectl exec --stdin --tty <DX_POD_NAME> -n <NAMESPACE> -- /bin/bash
-
-cd /opt/HCL/wp_profile/bin/
-
-./startServer.sh WebSphere_Portal
+kubectl -n <namespace> rollout restart statefulset.apps/<release-name>-core 
 ```
 
 After the above changes are made, you can append the defined dedicated port into the request URL to test DX using HAProxy.
