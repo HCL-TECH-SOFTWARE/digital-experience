@@ -26,7 +26,7 @@ networking:
     serviceType: "LoadBalancer"
     # Configuration to set the port exposed by the HAProxy Service. If this is not set, port 80 is used if SSL offloading is disabled and port 443 if SSL offloading is enabled.
     servicePort:
-    # Only applied for serviceType "NodePort". Configuration to set the NodePort exposed by the HAProxy Service. If this is not set, a port will automatically be selected by Kubernetes
+    # Only applies for the "NodePort" serviceType. Configuration to set the NodePort exposed by the HAProxy service. If this is not set, a port is automatically selected by Kubernetes
     serviceNodePort:
 ```
   
