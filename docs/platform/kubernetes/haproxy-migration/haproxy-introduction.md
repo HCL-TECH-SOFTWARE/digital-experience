@@ -6,7 +6,8 @@ Up until version CF202, a deployment of HCL Digital Experience included an ingre
 |:--:|
 | DX Ambassador before CF203 |
 
-To prevent incompatibilities with newer Ambassador versions and allow a more flexible use of additional [Ingress Controllers](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/) as part of the Kubernetes Cluster, starting with CF203 the DX Ambassador is replaced by HAProxy as a reverse proxy. It acts as the single entrypoint into the DX namespace and handles all internal routing. It can be either configured to expose a [`LoadBalancer`](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer) service to directly accept incoming traffic into the cluster or act as a internal Kubernetes Service only and accept traffic from a Kubernetes Ingress Controller on cluster level.
+To prevent incompatibilities with newer Ambassador versions and allow more flexible use of other [Ingress Controllers](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/), starting with CF203 the Ambassador ingress controller is deprecated, and will be removed subsequently.
+With CF203 a new component "HAProxy" was introduced. It acts as the single entry point into the DX namespace and handles all internal routing. It can be either configured to expose a [`LoadBalancer`](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer) service to directly accept incoming traffic into the cluster or act as an internal Kubernetes Service only and accept traffic from a Kubernetes Ingress Controller on cluster level. HAProxy, therefore, takes over all functionalities that the Ambassador ingress controller provided for DX beforehand.
 
 | [![Containerization Architecture Overview Optional Ingress](./_img/haproxy-optional-ingress-architecture.png)](./_img/haproxy-optional-ingress-architecture.png){:target="_blank"} |
 |:--:|
