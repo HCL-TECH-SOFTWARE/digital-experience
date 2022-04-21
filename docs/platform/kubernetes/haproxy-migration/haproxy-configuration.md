@@ -22,7 +22,7 @@ networking:
   haproxy:
     # Configuration to enable/disable ssl offloading in HAProxy
     ssl: true
-    # Configuration to set the type Service type for the HAProxy Service. Supported values are "ClusterIP", "LoadBalancer" and "NodePort"
+    # Configuration to set the service type for the HAProxy service. Supported values are "ClusterIP", "LoadBalancer", and "NodePort"
     serviceType: "LoadBalancer"
     # Configuration to set the port exposed by the HAProxy Service. If this is not set, port 80 will be used if SSL offloading is disabled. If it is enabled port 443 is used
     servicePort:
