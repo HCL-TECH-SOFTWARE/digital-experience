@@ -28,4 +28,5 @@ git clone git@git.cwp.pnp-hcl.com:CWPdoc/dx-mkdocs.git
 cd dx-mkdocs
 git config --global user.name hcl-digital-experience
 git config --global user.email notarealemail@hcl.dx
-mike deploy in-progress --push
+mike set-default latest
+mike deploy -u in-progress latest --push
