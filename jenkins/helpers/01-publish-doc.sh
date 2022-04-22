@@ -26,4 +26,6 @@ git clone git@git.cwp.pnp-hcl.com:CWPdoc/dx-mkdocs.git
 
 # Perform GH pages deploy
 cd dx-mkdocs
+git config --global user.name hcl-digital-experience
+git config --global user.email notarealemail@hcl.dx
 mike deploy in-progress --push
