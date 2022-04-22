@@ -2,7 +2,6 @@
 
 The HCL Digital Experience 9.5 Cumulative Fix and Container Update releases offer new features and software fixes for the HCL Digital Experience 9.5 container releases.
 
-
 !!! info "Update Strategy"
     Beginning with release CF200 the DX kubernetes operators are not longer supported.
 

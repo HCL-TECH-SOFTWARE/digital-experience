@@ -13,7 +13,7 @@
 microdnf install -y --nodocs git python3
 
 # Install mkdocs
-pip3 install mkdocs-material mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin
+pip3 install mkdocs-material mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin mike
 
 # Chmod private key for Git Access
 chmod -R 600 /root/.ssh/id_rsa
@@ -26,4 +26,7 @@ git clone git@git.cwp.pnp-hcl.com:CWPdoc/dx-mkdocs.git
 
 # Perform GH pages deploy
 cd dx-mkdocs
-mkdocs gh-deploy --force
+git config --global user.name hcl-digital-experience
+git config --global user.email notarealemail@hcl.dx
+mike set-default latest
+mike deploy -u in-progress latest --push
