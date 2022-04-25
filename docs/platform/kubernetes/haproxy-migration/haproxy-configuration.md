@@ -57,7 +57,7 @@ The matrix below shows the deployment options for combinations of HAProxy and Am
 
 ## Scaling
 
-By default 3 replicas of the HAProxy Pod will be created. This value can be adjusted in the `custom-values` file for the Helm deployment.
+Three replicas of the HAProxy Pod are created by default, and this value can be adjusted in the `custom-values.yaml` file for the Helm deployment.
 
 ```yaml
 scaling:
