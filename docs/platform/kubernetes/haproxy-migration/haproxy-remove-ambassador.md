@@ -53,7 +53,7 @@ No resources found
 
 ## Remove the `CustomResourceDefinitions`
 
-If no resources are using the `CRDs` it should be safe to remove the resources from the cluster. For this run the following command:
+If no resources are using `CRDs`, it is safe to remove the resources from the cluster by running the following command:
 
 ```shell
 kubectl delete crd \
