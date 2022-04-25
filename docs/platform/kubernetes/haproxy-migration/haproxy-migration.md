@@ -240,7 +240,7 @@ applications:
 
 After disabling Ambassador, the Ambassador pods and services are removed and only HAProxy is up and running. All the requests will be handled by HAProxy directly. 
 
-To verify that Ambassador pods and services are terminated from the namespace, run below command.
+To verify that Ambassador pods and services are terminated from the namespace, run the following command.
 ```
 kubectl -n <namespace> get all --selector 'app in (<release-name>-haproxy, <release-name>-ambassador)'
 ```
