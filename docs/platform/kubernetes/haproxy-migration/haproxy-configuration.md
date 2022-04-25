@@ -68,7 +68,7 @@ scaling:
 
 ## Resources
 
-HAProxy is set to use the following resource allocation values by default. The values are adjustable in the `custom-values.yaml` file for the Helm deployment.
+HAProxy is set to use the following resource allocation values by default. The values can be adjusted as required in the `custom-values.yaml` file for the Helm deployment.
 
 ```yaml
 resources:
