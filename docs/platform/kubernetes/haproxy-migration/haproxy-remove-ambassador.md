@@ -29,7 +29,7 @@ The following 19 Ambassador `CRDs` were deployed as part of DX deployment:
 
 ## Check the clusters `CustomResourceDefinitions`
 
-To check if the definitions are on the cluster run the following command:
+To check if the definitions are on the cluster, run the following command:
 
 ```shell
 kubectl get crd --selector app.kubernetes.io/name=ambassador
