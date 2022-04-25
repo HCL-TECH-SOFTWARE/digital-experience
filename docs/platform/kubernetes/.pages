@@ -8,6 +8,7 @@ nav:
     - deployment
     - operations
     - operator-migration
+    - haproxy-migration
     # - oldstuff
    #  - docker
 
