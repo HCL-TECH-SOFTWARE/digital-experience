@@ -245,7 +245,7 @@ To verify that Ambassador pods and services are terminated from the namespace, r
 kubectl -n <namespace> get all --selector 'app in (<release-name>-haproxy, <release-name>-ambassador)'
 ```
 
-Make sure that this command will show HAProxy instances only, as Ambassador instances (pods as well as service) should not be there as it's already terminated from the namespace. The output should be similar as shown below.
+Make sure that this command shows only the HAProxy instances, and not the Ambassador instances (pods as well as services) because they are already terminated from the namespace. The output should look as follows.
 
 ```
 NAME                                         READY   STATUS    RESTARTS   AGE
