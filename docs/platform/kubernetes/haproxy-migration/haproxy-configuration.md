@@ -61,7 +61,7 @@ Three replicas of the HAProxy Pod are created by default, and this value can be 
 
 ```yaml
 scaling:
-  # The default amount of replicas per application
+  # The default number of replicas per application
   replicas:
     haproxy: 3 # Change this value as per the replica set requirement for HAProxy.
 ```
