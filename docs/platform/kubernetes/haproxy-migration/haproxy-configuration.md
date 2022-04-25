@@ -51,7 +51,7 @@ The matrix below shows the deployment options for combinations of HAProxy and Am
 
 |Deployment type|`ambassador`|`haproxy`| Result |
 |---------|-----------|-------------|--------|
-| fresh deployment (`helm install`)| *not applied* | `true` (default) | HAProxy |
+| fresh deployment (`helm install`)| *not available* | `true` (default) | HAProxy |
 | update of existing deployment (`helm upgrade`)| `true` (default) | `true` (default) | Ambassador and HAProxy (side-by-side mode) |
 | update of existing deployment (`helm upgrade`)| `false` | `true` (default) | HAProxy |
 
