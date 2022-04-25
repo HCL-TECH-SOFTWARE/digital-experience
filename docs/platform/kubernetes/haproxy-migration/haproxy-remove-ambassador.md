@@ -80,7 +80,7 @@ kubectl delete crd \
 
 ## Restore  `CustomResourceDefinitions` as fallback
 
-In case after deletion the `CRDs` turn out to be required they can be restored from the HCL Digital Experience Helm chart. To do so, unpack the `CRDs` and apply them by running:
+In case you want the deleted `CRDs` back,  you can restore them from the HCL Digital Experience Helm chart. To restore CRDs, unpack the `CRDs` and apply them by running the following command:
 
 ```console
 tar zxvf hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz hcl-dx-deployment/crds
