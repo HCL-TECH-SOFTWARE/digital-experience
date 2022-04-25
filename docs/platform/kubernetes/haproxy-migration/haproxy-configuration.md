@@ -43,7 +43,7 @@ Both Ambassador and HAProxy can be enabled or disabled in the `applications` sec
 applications:
   # Deploys the Ambassador Ingress and Redis
   ambassador: true
-  # Deploy HAProxy
+  # Deploys HAProxy
   haproxy: true
 ```
 
