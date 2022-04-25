@@ -45,7 +45,7 @@ To see the actual resources that are using the `CRDs` above, run the following c
 kubectl get ambassador-crds --all-namespaces
 ```
 
-If HCL Digital Experience was migrated to HAProxy and Ambassador was disabled this should return
+If HCL Digital Experience is migrated to HAProxy and Ambassador is disabled, then the previous command should return the following message:
 
 ```
 No resources found
