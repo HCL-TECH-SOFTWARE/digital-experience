@@ -35,7 +35,7 @@ To check if the definitions are on the cluster, run the following command:
 kubectl get crd --selector app.kubernetes.io/name=ambassador
 ```
 
-This should return the `CRDs` listed previously. If more `CRDs` are returned, it indicates that another Ambassador instance is deployed in your cluster. This needs to be taken into consideration when removing the `CRDs`
+This should return the 19 `CRDs` listed previously. If more `CRDs` are returned, it indicates that another Ambassador instance is deployed in your cluster. This needs to be taken into consideration when removing the `CRDs`
 
 ## Check the clusters `CustomResources`
 
