@@ -116,4 +116,24 @@ This section documents the configuration of labels and annotations for different
               - key: KEY2
                 value: VALUE2
         ```
+# Configure environment variables for DX resources
+This section explains the configuration of environment variables for different DX resources.
 
+## Environment variables
+To configure environment variables for kubernetes pods, update your custom-values.yaml file as below.
+
+!!! note
+    Additional environment values are not mandatory for a deployment.
+
+### Sample environment variables for core pods
+To set environment variable `KEY1` with value `VALUE1` and environment variable `KEY2` with value `VALUE2` on core pods, add the following to your `custom-values.yaml` file:
+
+```
+  environment:
+    pod: 
+      core: 
+        - name: KEY1
+          value: VALUE1
+        - name: KEY2
+          value: VALUE2
+```
