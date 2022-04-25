@@ -10,7 +10,7 @@ The HAProxy networking parameters to configure the HAProxy service are located i
 |---------|-----------|-------------|
 |`ssl` { width="20%" }  |Enable or disable SSL offloading in HAProxy. Depending on this setting, HAProxy handles either `HTTP` or `HTTPS` traffic. { width="60%" } |`true` { width="20%" }|
 |`serviceType`|Defines the Kubernetes [`ServiceType`](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types) of the HAProxy service. `LoadBalancer`, `ClusterIP` and `NodePort` are supported. |`LoadBalancer`|
-|`servicePort`|This value is used to select the port exposed by the HAProxy service. Defaults to `443` if `ssl` is `true`, otherwise port `80` is used. |`null`|
+|`servicePort`|This value is used to select the port exposed by the HAProxy service. Defaults to port `443` if `ssl` is set to `true`, otherwise, port `80` is used. |`null`|
 |`serviceNodePort`|This value is used to select the node port exposed by the HAProxy service. Defaults to a port selected by Kubernetes if no value is set. |`null`|
 
 !!!note
