@@ -61,6 +61,4 @@ extra_css:
 plugins:
   - awesome-pages
   - search
-  - git-revision-date-localized:
-      type: date
 
