@@ -3,7 +3,7 @@
 !!!note "Notes:"
     This section applies only to the **existing** HCL Digital Experience deployments. For fresh deployments, refer to the [Fresh Installations using HAProxy](haproxy-fresh-installation.md) topic.
 
-Even when the migration to HAProxy is finished and Ambassador is not deployed anymore, the Ambassador [`CustomResourceDefinitions`](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) will still be present in your cluster. Helm is not uninstalling them automatically due to them being cluster-wide resources. The following steps can be used to check if the `CRDs` are still in use in the cluster and give guidance on how to remove them manually if they are unused.
+Even after the migration to HAProxy is completed and the Ambassador is not deployed anymore, the Ambassador [`CustomResourceDefinitions`](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) will still be present in your cluster. Helm is not uninstalling them automatically because they are considered cluster-wide resources. The following steps can be used to check if the `CRDs` are still in use in the cluster, and give guidance on how to remove them manually if they are found unused.
 
 The following 19 Ambassador `CRDs` were deployed as part of DX deployment:
 
