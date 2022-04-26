@@ -1,15 +1,15 @@
 # HAProxy configuration
 
-By default, HAProxy is deployed with a `LoadBalancer` type service and will be handling incoming traffic as well as the SSL offloading for HCL Digital Experience. In addition, the Helm deployment offers adjustability for HAProxy and its service to allow for more flexible deployment and the use of custom `Ingress Controllers`.
+By default, HAProxy is deployed with a `LoadBalancer` type service to handle the incoming traffic as well as the SSL offloading for HCL Digital Experience. In addition, the Helm deployment offers adjustability for HAProxy and its services to allow for more flexible deployment and use of custom `Ingress Controllers`.
 
 ## Networking configuration
 
-The HAProxy networking parameters to configure the HAProxy service are located in `networking.haproxy` in the `values.yaml` file.  
+The networking parameters used to configure the HAProxy services are located in `networking.haproxy` in the `values.yaml` file.
 
 |Parameter|Description|Default value|
 |---------|-----------|-------------|
 |`ssl` { width="20%" }  |Enable or disable SSL offloading in HAProxy. Depending on this setting, HAProxy handles either `HTTP` or `HTTPS` traffic. { width="60%" } |`true` { width="20%" }|
-|`serviceType`|Defines the Kubernetes [`ServiceType`](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types) of the HAProxy service. `LoadBalancer`, `ClusterIP` and `NodePort` are supported. |`LoadBalancer`|
+|`serviceType`|Defines the Kubernetes [`ServiceType`](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types) of the HAProxy service. Supported ServiceType includes `LoadBalancer`, `ClusterIP` and `NodePort` |`LoadBalancer`|
 |`servicePort`|This value is used to select the port exposed by the HAProxy service. Defaults to port `443` if `ssl` is set to `true`, otherwise, port `80` is used. |`null`|
 |`serviceNodePort`|This value is used to select the node port exposed by the HAProxy service. Defaults to a port selected by Kubernetes if no value is set. |`null`|
 
@@ -30,7 +30,7 @@ networking:
     serviceNodePort:
 ```
   
-This implementation is helpful for those who want to use a custom `Ingress Controller` to expose the service in a compatible way. Even then, HAProxy will still be active. The `Ingress Controller` will handle the incoming traffic and then route them to the HAProxy service.
+This configuration is helpful for those who want to use a custom `Ingress Controller` to expose the service in a compatible way. Even then, HAProxy will still be active. The `Ingress Controller` will handle the incoming traffic and then route them to the HAProxy service.
 
 ## HAProxy with and without Ambassador
 
