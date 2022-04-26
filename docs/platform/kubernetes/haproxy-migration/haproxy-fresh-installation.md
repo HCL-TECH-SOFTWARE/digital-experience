@@ -1,4 +1,4 @@
-# Fresh Installations without Ambassador
+# Fresh Installations using HAProxy
 
 In fresh DX deployments from CF203 and later, HAProxy is deployed by default, in place of Ambassador.
 
