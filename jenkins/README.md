@@ -1,6 +1,7 @@
 # MKDocs build pipeline
 
 This pipeline will publish the documentation into gh-pages.
+
 ## Directory structure
 
 ```text
