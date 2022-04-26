@@ -35,35 +35,39 @@ Administrators can configure the HCL DX 9.5 metrics depending on their specific 
 
 ## Configure Prometheus metrics
 
-To configure the metrics for the [Digital Experience 9.5 applications](../../architecture/application_architecture.md) in the DX 9.5 Helm chart, enable scraping in the [`custom-values.yaml`](../../deployment/preparation/overview.md) used for the DX 9.5 deployment. The metrics are configured independently for each DX 9.5 application.
+Beginning with Container Update CF203 (Docker image list), metrics for the [Digital Experience 9.5 applications](../../architecture/application_architecture.md) in the DX 9.5 Helm chart are enabled by default, with `prometheusDiscoveryType` set to `annotations`. The metrics are configured independently for each DX 9.5 application. The parameter to disable metrics is included in the example configurations.
 
 |Parameter|Description|Default value|
 |---------|-----------|-------------|
-|`metrics.<application>.scrape`|Determines if the metrics of this application are scraped by Prometheus.|`false`|
+|`metrics.<application>.scrape`|Determines if the metrics of this application are scraped by Prometheus.|`true`|
 |`metrics.<application>.prometheusDiscoveryType`|Determines how Prometheus discovers the metrics of a service. Accepts `"annotation"` and `"serviceMonitor"`. The`"serviceMonitor"` setting requires that the [ServiceMonitor CRD](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/user-guides/getting-started.md#related-resources) \(which comes with the Prometheus Operator\), is installed in the cluster.|`"annotation"`|
 
 !!!example "Example configurations:"
+    -   __Default configuration__: Metrics are enabled for Core with the appropriate [`annotation`](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/) for Prometheus:
 
-    -   Enable the metrics for DX 9.5 core and add the appropriate [`annotation`](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/) for Prometheus:
-
-        ```
+        ```yaml
         metrics:
           core:
             scrape: true
-              # prometheusDiscoveryType is optional here as "annotation" is the default
-              prometheusDiscoveryType: "annotation"
-    
+            prometheusDiscoveryType: "annotation"
         ```
 
     -   Enable the metrics for DX 9.5 Core and create a [`ServiceMonitor`](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/user-guides/getting-started.md#related-resources) for Prometheus Operator:
 
-        ```
+        ```yaml
         metrics:
           core:
             scrape: true
-             prometheusDiscoveryType: "serviceMonitor"
+            prometheusDiscoveryType: "serviceMonitor"
         ```
 
+    -   Disable the metrics for Core:
+
+        ```yaml
+        metrics:
+          core:
+            scrape: false
+        ```
 
 ## Grafana dashboards
 
