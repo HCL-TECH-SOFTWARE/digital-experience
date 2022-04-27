@@ -52,7 +52,7 @@ Metrics for the [Digital Experience 9.5 applications](../../architecture/applica
             prometheusDiscoveryType: "annotation"
         ```
 
-    -   Enable the metrics for DX 9.5 Core and create a [`ServiceMonitor`](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/user-guides/getting-started.md#related-resources) for Prometheus Operator:
+    -   Create a [`ServiceMonitor`](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/user-guides/getting-started.md#related-resources) for Prometheus Operator:
 
         ```yaml
         metrics:
