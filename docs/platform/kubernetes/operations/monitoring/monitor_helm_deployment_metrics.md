@@ -24,7 +24,7 @@ The following [Digital Experience 9.5 applications](../../architecture/applicati
 |HAProxy|8404|/metrics|
 
 !!!important
-    HCL Digital Experience 9.5 does not include a deployment of [Prometheus](https://prometheus.io/) or [Grafana](https://grafana.com/). When metrics are enabled in the [DX 9.5 Helm chart](../../deployment/preparation/overview.md), the application exposes Prometheus-compatible metrics. Those metrics can be consumed by any common Prometheus installation. Effective with Container Update CF203, metrics are __enabled by default__.
+    HCL Digital Experience 9.5 does not include a deployment of [Prometheus](https://prometheus.io/) or [Grafana](https://grafana.com/). But, the metrics that are enabled by default in the [DX 9.5 Helm chart](../../deployment/preparation/overview.md) exposes Prometheus-compatible metrics. Those metrics can be consumed by any common Prometheus installation.
 
 HCL DX 9.5 metrics are compatible with the following deployment and discovery types of Prometheus in [Kubernetes](https://kubernetes.io/) environments:
 
