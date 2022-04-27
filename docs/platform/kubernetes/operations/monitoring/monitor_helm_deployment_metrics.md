@@ -24,7 +24,7 @@ The following [Digital Experience 9.5 applications](../../architecture/applicati
 |HAProxy|8404|/metrics|
 
 !!!important
-    HCL Digital Experience 9.5 does not include a deployment of [Prometheus](https://prometheus.io/) or [Grafana](https://grafana.com/). When metrics are enabled in the [DX 9.5 Helm chart](../../deployment/preparation/overview.md), the application exposes Prometheus-compatible metrics. Those metrics can be consumed by any common Prometheus installation.
+    HCL Digital Experience 9.5 does not include a deployment of [Prometheus](https://prometheus.io/) or [Grafana](https://grafana.com/). When metrics are enabled in the [DX 9.5 Helm chart](../../deployment/preparation/overview.md), the application exposes Prometheus-compatible metrics. Those metrics can be consumed by any common Prometheus installation. Effective with Container Update CF203, metrics are __enabled by default__.
 
 HCL DX 9.5 metrics are compatible with the following deployment and discovery types of Prometheus in [Kubernetes](https://kubernetes.io/) environments:
 
@@ -35,7 +35,7 @@ Administrators can configure the HCL DX 9.5 metrics depending on their specific 
 
 ## Configure Prometheus metrics
 
-Beginning with Container Update CF203 (Docker image list), metrics for the [Digital Experience 9.5 applications](../../architecture/application_architecture.md) in the DX 9.5 Helm chart are enabled by default, with `prometheusDiscoveryType` set to `annotations`. The metrics are configured independently for each DX 9.5 application. The parameter to disable metrics is included in the example configurations.
+Beginning with Container Update CF203, metrics for the [Digital Experience 9.5 applications](../../architecture/application_architecture.md) in the DX 9.5 Helm chart are __enabled by default__, with `prometheusDiscoveryType` set to `annotations`. The metrics are configured independently for each DX 9.5 application. The parameter to disable metrics is included in the example configurations.
 
 |Parameter|Description|Default value|
 |---------|-----------|-------------|
