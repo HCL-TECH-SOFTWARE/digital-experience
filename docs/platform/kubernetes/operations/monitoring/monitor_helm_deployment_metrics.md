@@ -42,7 +42,7 @@ Beginning with Container Update CF203, metrics for the [Digital Experience 9.5 a
 |`metrics.<application>.scrape`|Determines if the metrics of this application are scraped by Prometheus.|`true`|
 |`metrics.<application>.prometheusDiscoveryType`|Determines how Prometheus discovers the metrics of a service. Accepts `"annotation"` and `"serviceMonitor"`. The`"serviceMonitor"` setting requires that the [ServiceMonitor CRD](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/user-guides/getting-started.md#related-resources) \(which comes with the Prometheus Operator\), is installed in the cluster.|`"annotation"`|
 
-!!!example "Example configurations:"
+!!!example "Example:"
     -   __Default configuration__: Metrics are enabled for Core with the appropriate [`annotation`](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/) for Prometheus:
 
         ```yaml
@@ -114,4 +114,3 @@ To leverage the full potential of the [Digital Experience 9.5 applications](../.
             The [`kube-prometheus-stack`](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#kube-prometheus-stack) Helm chart is based on the [`kube-prometheus`](https://github.com/prometheus-operator/kube-prometheus) repository, and comes with a set of tools to monitor the Kubernetes cluster, as well as pre-installed Grafana dashboards for visualization.
             
     -   [`prometheus`](https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus) and [`grafana`](https://github.com/grafana/helm-charts) are provided as independent Helm charts.
-
