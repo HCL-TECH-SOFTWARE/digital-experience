@@ -61,7 +61,7 @@ To test and verify that HAProxy is deployed without any issue into the cluster, 
 
 HAProxy will communicate via a dedicated port, so whenever a request is made through that port, that request first goes to the Ambassador and is then forwarded to HAProxy.
 
-This dedicated port can be configured from the values of the Helm chart.
+This dedicated port can be configured from the values of the Helm chart. The `CORS` configuration has to be temporarily extended with entries including the port.
 
 ```yaml
 incubator:
@@ -69,6 +69,17 @@ incubator:
     haproxy:
       # The port on which Ambassador redirects traffic to HAProxy to test it in a side-by-side mode before switching to HAProxy
       ambassadorPassthroughPort: 31001
+    addon:
+      contentComposer:
+        corsOrigin: https://<hostname>:31001
+      designStudio:
+        corsOrigin: https://<hostname>:31001
+      digitalAssetManagement:
+        corsOrigin: https://<hostname>:31001
+      imageProcessor:
+        corsOrigin: https://<hostname>:31001
+      ringApi:
+        corsOrigin: https://<hostname>:31001
 ```
 
 ### WebSphere Configuration Setting (for HAProxy dedicated configurable port)
