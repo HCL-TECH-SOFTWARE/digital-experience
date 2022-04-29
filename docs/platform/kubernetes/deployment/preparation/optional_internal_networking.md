@@ -34,15 +34,14 @@ Follow the steps to update an existing deployment from an external network to an
 1.  Disable ambassador in your custom `values.yaml` file and then do helm update.
 
     !!! example "Example:"
-
-    ```
-      # Controls which application is deployed and configured
-    applications:
-      --
-      --
-      # Deploys the Ambassador Ingress and Redis
-      ambassador: false
-    ```
+      ```
+        # Controls which application is deployed and configured
+      applications:
+        --
+        --
+        # Deploys the Ambassador Ingress and Redis
+        ambassador: false
+      ```
 
 2.  After updating your custom `values.yaml` file, run helm update command.
 
@@ -94,9 +93,9 @@ Follow the steps to update an existing deployment from an external network to an
     ```
 
     !!! example "Example:"
-    ```
-    helm upgrade dx-deployment -n dxns . -f ./cloud-deploy-values.yaml
-    ```
+      ```
+      helm upgrade dx-deployment -n dxns . -f ./cloud-deploy-values.yaml
+      ```
 
 5.  Do a helm update with your existing custom `values.yaml` file to make sure all the updates are present in the deployment.
 
