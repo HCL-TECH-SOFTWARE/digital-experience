@@ -1,4 +1,4 @@
-# Deploy DX on the internal network
+# Configure to deploy on the internal network
 
 This section contains the procedure to deploy DX on the internal network.
 
@@ -13,36 +13,33 @@ annotations:
     ambassador: []
 ```
 
-Here is the example for GKE
-
-```
-annotations:
-  service: 
-    # Annotations for ambassador service.
-    ambassador:
-     - key: cloud.google.com/load-balancer-type
-       value : "Internal"
-```
-
+!!! example "Example for GKE:"
+  ```
+  annotations:
+    service: 
+      # Annotations for ambassador service.
+      ambassador:
+      - key: cloud.google.com/load-balancer-type
+        value : "Internal"
+  ```
 ## How to update the existing deployment
 
 Follow the steps to update an existing deployment from an external network to an internal network or vice-versa:
 
 !!! note
-  Update to the network type results change in IP address and requires updates to your DNS services.
+    Update to the network type results change in IP address and requires updates to your DNS services.
 
 1.  Disable ambassador in your custom `values.yaml` file and then do helm update.
 
     !!! example "Example:"
-
-    ```
-      # Controls which application is deployed and configured
-    applications:
-      --
-      --
-      # Deploys the Ambassador Ingress and Redis
-      ambassador: false
-    ```
+        ```
+        # Controls which application is deployed and configured 
+        applications:
+        --
+        --
+        # Deploys the Ambassador Ingress and Redis
+        ambassador: false
+        ```
 
 2.  After updating your custom `values.yaml` file, run helm update command.
 
@@ -52,9 +49,9 @@ Follow the steps to update an existing deployment from an external network to an
 
     !!! example "Example:"
 
-    ```
-    helm upgrade dx-deployment -n dxns . -f ./cloud-deploy-values.yaml
-    ```
+        ```
+        helm upgrade dx-deployment -n dxns . -f ./cloud-deploy-values.yaml
+        ```
 
 3.  After the update is completed, enable the ambassador and add annotations specific to your cloud provider in custom `values.yaml` file.
 
@@ -85,7 +82,7 @@ Follow the steps to update an existing deployment from an external network to an
     ```
 
     !!! note
-      To switch your existing deployment from an internal network to a public network, remove the annotation from the ***ambassador service.***
+        To switch your existing deployment from an internal network to a public network, remove the annotation from the ***ambassador service.***
 
 4.  After updating `values.yaml` with annotations, run helm update command.
 
@@ -94,10 +91,10 @@ Follow the steps to update an existing deployment from an external network to an
     ```
 
     !!! example "Example:"
-
-    ```
-    helm upgrade dx-deployment -n dxns . -f ./cloud-deploy-values.yaml
-    ```
+    
+      ```
+      helm upgrade dx-deployment -n dxns . -f ./cloud-deploy-values.yaml
+      ```
 
 5.  Do a helm update with your existing custom `values.yaml` file to make sure all the updates are present in the deployment.
 
@@ -108,8 +105,9 @@ Follow the steps to update an existing deployment from an external network to an
     ```
 
     !!! example "Example:"
-    ```
-    helm upgrade dx-deployment -n external-lb . -f ./cloud-deploy-values.yaml
-    ```
+      
+        ```
+        helm upgrade dx-deployment -n external-lb . -f ./cloud-deploy-values.yaml
+        ```
 
 
