@@ -36,7 +36,7 @@ This section explains what must be configured from a networking perspective to g
 This topic shows you how to leverage `NodeSelectors` to allow deploying specific DX 9.5 application Pods only on a specific node.
 -   **[Install and uninstall commands for HCL DX 9.5 CF196 and later container deployments to Kubernetes and Red Hat OpenShift platforms using Helm](../deployment/helm_install_commands.md)**  
  The following are install and uninstall commands that are used to deploy or uninstall HCL Digital Experience 9.5 CF196 and later releases to Kubernetes and Red Hat OpenShift platforms using Helm.
--   **[Update deployment to a later version](../operations/helm_update_deployment.md)**  
+-   **[Update deployment to a later version](../operations/update_helm_deployment.md)**  
  This section shows how to update your HCL DX 9.5 Container Update CF197 and later deployment to a newer DX 9.5 Container Update release version.
 <!-- -   **[Hybrid Deployment - Helm](../containerization/hybrid_deployment_helm.md)**  
 This section describes how to install HCL Digital Experience 9.5 Container Update CF198 and later Portal Server and Web Content Manager services to on-premises platforms, operating with Digital Asset Management, Content Composer, Experience API deployed to cloud-based Kubernetes and OpenShift platforms using the Helm deployment method. -->
