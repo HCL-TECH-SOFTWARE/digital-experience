@@ -14,7 +14,7 @@ HCL encourages customers to remain up-to-date on the latest DX and Kubernetes re
     -   the Kubernetes platform is hosted on x86\_64 hardware
     -   the Kubernetes platform is officially supported by Helm \([https://helm.sh/docs/topics/kubernetes\_distros/](https://helm.sh/docs/topics/kubernetes_distros/)\).
     
--   Internally, HCL tests DX against a range of Kubernetes platforms that is regularly reviewed and updated, with the intent of staying up-to-date as possible. We do not test with every single platform vendor, but aim to cover a representative sample of popular Kubernetes implementations. See [Table 1](/c_kubesupportstatement.md#table-1-tested-kubernetes-platforms-on-full-container-deployment) for the list of Kubernetes Platforms that HCL tested with.
+-   Internally, HCL tests DX against a range of Kubernetes platforms that is regularly reviewed and updated, with the intent of staying up-to-date as possible. We do not test with every single platform vendor, but aim to cover a representative sample of popular Kubernetes implementations. See [Table 1](#table-1-tested-kubernetes-platforms-on-full-container-deployment) for the list of Kubernetes Platforms that HCL tested with.
 
 ### Table 1: Tested Kubernetes Platforms on Full Container Deployment 
 This table provides information about the sample Kubernetes Platforms that are tested with DX.
@@ -24,10 +24,10 @@ This table provides information about the sample Kubernetes Platforms that are t
 |- Amazon EKS<br/>- Google GKE<br/>- Microsoft Azure AKS<br/>- Red Hat OpenShift|- Amazon EKS / AWS EC2<br/>Red Hat OpenShift on AWS / AWS EC2|
 
 ## Kubernetes Version Support Policy
-The list of Kubernetes versions that are tested and supported by HCL are included in [Table 2](/c_kubesupportstatement.md#table-2-tested-and-supported-kubernetes-versions-on-full-container-deployment). 
+The list of Kubernetes versions that are tested and supported by HCL are included in [Table 2](#table-2-tested-and-supported-kubernetes-versions-on-full-container-deployment). 
 
-    - From time-to-time, platform providers may release previews of upcoming Kubernetes versions. We will not provide support for those versions. 
-    - If you encounter any issue on an unsupported or untested Kubernetes version, you may be asked to install a supported level. 
+- From time-to-time, platform providers may release previews of upcoming Kubernetes versions. We will not provide support for those versions. 
+- If you encounter any issue on an unsupported or untested Kubernetes version, you may be asked to install a supported level. 
 
 ### Table 2: Tested and supported Kubernetes versions on Full Container Deployment 
 This table provides information about the Kubernetes versions that are tested and supported in DX CF releases. 
@@ -37,7 +37,7 @@ This table provides information about the Kubernetes versions that are tested an
 
 |CF Level |Kubernetes versions|
 |--------------|-----------------|
-!CF203| Kube 1.21 <br/>Kube 1.20 <br/>Kube 1.19 <br/>|
+|F203| Kube 1.21 <br/>Kube 1.20 <br/>Kube 1.19 <br/>|
 |CF202| Kube 1.21 <br/>Kube 1.20 <br/>Kube 1.19 <br/>|
 |CF201| Kube 1.21 <br/>Kube 1.20 <br/>Kube 1.19 <br/>|
 
