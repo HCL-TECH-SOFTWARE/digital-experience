@@ -50,6 +50,60 @@ This has the effect of adding an entry in the /etc/hosts file on the HCL Digital
 
 Those familiar with Docker deployment practices will recognize `171.19.0.1` as the IP bridge address of the host machine that starts the Docker containers. Since all Docker containers have unique ports and the Docker host machine is not allowed to use these unique ports, one can refer to a port on any container as `dockerhost:port_number`.
 
+## New ConfigEngine tasks
+
+**ConfigEngine tasks on the DX Portal Server**
+
+Complete configuration of WebSphere on the DX Portal Server is accomplished by executing the following command:
+
+```
+./ConfigEngine.sh configure-portal-for-remote-search -DWasPassword={Was Password}
+```
+
+Parameters may be added to this command to customize it. The following are all given `-D` parameters, along with the default values for each:
+
+```
+-Dremote.search.host.name  default="remotesearch"
+-Dremote.search.host.port  default="9043"
+-Dremote.search.cert.alias  default="remotesearchalias"
+-Dremote.search.iiop.url  default="iiop://remotesearch:2809"
+-Dremote.search.index.directory  default="/opt/HCL/AppServer/profiles/prs_profile/SearchCollections"
+```
+
+The following takes place when the DX Portal Server `ConfigEngine` command is executed:
+
+1.  Retrieve the remote SSL key from the remote search server.
+2.  Export the LPTA key to a file for the Portal server.
+3.  Suppress the automatic creation of the Default Search Server on Portal restart, if it doesn't already exist.
+4.  Set all the Resource Environment Providers for the JCR for WCM Authoring search.
+
+**ConfigEngine tasks on the DX Remote Search Server**
+
+Complete configuration of WebSphere on the DX Remote Search Server may now be accomplished by executing the following command:
+
+```
+./ConfigEngine.sh configure-remote-search-server-for-remote-search -DWasPassword={Was Password}
+```
+
+**Note:** Complete Remote search server configuration require deploying WebScannerEjbEar.ear, and copying and unzipping file PseLibs.zip on remote search server. Refer to the [Preparing for remote service topic](../admin-system/srtprrmtsrchsrv.md) for steps.
+
+Parameters may be added to this command to customize it. The following are all given `-D` parameters, along with the default values for each:
+
+```
+-Dremote.search.host.name  default="remotesearch"
+-Dportal.host.name default="portaldocker"
+-Dportal.port.number default="10042"
+-Dportal.cert.alias default="portaldockeralias"
+```
+
+The following takes place when the DX Remote Search Server `ConfigEngine` command is executed:
+
+1.  Retrieve remote SSL key from the Portal Server.
+2.  Import the LTPA key exported from the Portal Server in the previous step.
+3.  Edit the serverindex.xml file to have the correct Remote Search server host name.
+
+**Important:** Both the remote search server and the portal server must both be restarted after the `ConfigEngine` tasks are complete. Since the changes are IBM WebSphere Application Server Network Deployment-based cluster DX deployment changes in the profile, the changes are not picked up until the restart.
+
 ## Launch the HCL Digital Experience 9.5 Core and Remote Search containers
 
 To deploy, following is the complete `docker run` command for both the HCL Digital Experience 9.5 Core and Remote Search containers. In these examples, `wpsadmin / wpsadmin` are used as the HCL Digital Experience and WebSphere Application Server admin user ID and password credentials.
