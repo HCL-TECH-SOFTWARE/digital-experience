@@ -24,9 +24,9 @@ OpenLDAP Software is an open source implementation of the Lightweight Directory 
 
 HCL Digital Experience 9.5 installs a copy of Derby as the default database. HCL Digital Experience administrators can apply guidance to transfer the default database configuration to IBM DB2, if preferred for use as the relational database for Digital Experience 9.5 Container deployment data. See [Transfer Digital Experience 9.5 Container default database to IBM DB2](https://help.hcltechsw.com/digital-experience/9.5/containerization/cw_containerdbtransfer_ibm_db2.html){:target="_blank"}<!-- (../containerization/cw_containerdbtransfer_ibm_db2.md) --> for details.
 
-## Remote Search services Docker deployment
+<!-- ## Remote Search services Docker deployment
 
-To support search services when deployed to Docker, Digital Experience administrators can configure Remote search services. This will require some different setup and configuration steps than used to set up remote search on a non-Docker container platform. See [Deploy Remote Search services on Docker](../../platform/docker-compose/docker_remote_search.md) for details.
+To support search services when deployed to Docker, Digital Experience administrators can configure Remote search services. This will require some different setup and configuration steps than used to set up remote search on a non-Docker container platform. See [Deploy Remote Search services on Docker](../../platform/docker-compose/docker_remote_search.md) for details. -->
 
 ## New Digital Experience WCM Workflow REST APIs
 
