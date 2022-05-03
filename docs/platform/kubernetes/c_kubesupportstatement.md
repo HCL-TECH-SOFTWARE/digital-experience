@@ -21,7 +21,7 @@ This table provides information about the sample Kubernetes Platforms that are t
 
 |Kubernetes platforms on full deployments|Kubernetes platforms on hybrid deployments|
 |--------------|-----------------|
-|- Amazon EKS<br/>- Google GKE<br/>- Microsoft Azure AKS<br/>- Red Hat OpenShift|- Amazon EKS / AWS EC2<br/>Red Hat OpenShift on AWS / AWS EC2|
+|- Amazon EKS<br/>- Google GKE<br/>- Microsoft Azure AKS<br/>- Red Hat OpenShift|- Amazon EKS / AWS EC2<br/>- Red Hat OpenShift on AWS / AWS EC2|
 
 ## Kubernetes Version Support Policy
 The list of Kubernetes versions that are tested and supported by HCL are included in [Table 2](#table-2-tested-and-supported-kubernetes-versions-on-full-container-deployment). 

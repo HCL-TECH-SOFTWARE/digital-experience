@@ -38,4 +38,4 @@ See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../pla
 Take advantage of new step-by-step guidance for HCL Digital Experience practitioners presented in new videos and webinars. See the following HCL Digital Experience Help Center topics:
 
 -   [Updating the HCL DX 9.5 Portal & IBM WebSphere Application Server Administrator Secrets in OpenShift and Kubernetes](https://help.hcltechsw.com/digital-experience/9.5/containerization/update_dx_core_kubernetes_container_deployment.html){:target="_blank"}
--   [Use Docker Compose to install HCL DX 9.5 with Cloud Components for Developer Use](../../platform/docker-compose/docker_compose.md)
+-   [Use Docker Compose to install HCL DX 9.5 with Cloud Components for Developer Use](../../platform/docker/docker_compose.md)
