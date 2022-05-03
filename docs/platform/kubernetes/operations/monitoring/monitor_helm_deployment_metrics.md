@@ -24,7 +24,7 @@ The following [Digital Experience 9.5 applications](../../architecture/applicati
 |HAProxy|8404|/metrics|
 
 !!!important
-    HCL Digital Experience 9.5 does not include a deployment of [Prometheus](https://prometheus.io/) or [Grafana](https://grafana.com/). But, the metrics that are enabled by default in the [DX 9.5 Helm chart](../../deployment/preparation/overview.md) exposes Prometheus-compatible metrics. Those metrics can be consumed by any common Prometheus installation.
+    HCL Digital Experience 9.5 does not include a deployment of [Prometheus](https://prometheus.io/) or [Grafana](https://grafana.com/). The metrics are enabled by default for the [DX 9.5 Helm chart](../../deployment/preparation/overview.md). This exposes Prometheus-compatible metrics, which can be consumed by any common Prometheus installation.
 
 HCL DX 9.5 metrics are compatible with the following deployment and discovery types of Prometheus in [Kubernetes](https://kubernetes.io/) environments:
 
@@ -71,7 +71,7 @@ Metrics for the [Digital Experience 9.5 applications](../../architecture/applica
 
 ## Grafana dashboards
 
-The exposed DX 9.5 Applications metrics are compatible with a set of existing [Grafana](https://grafana.com/) operations dashboards that are available from the [Grafana dashboard](https://grafana.com/grafana/) page, as well as a set of Granada-supported custom dashboards provided in JSON format. See following examples, which can be [imported](https://grafana.com/docs/grafana/latest/dashboards/export-import/#import-dashboard) directly into Grafana.
+The exposed DX 9.5 applications metrics are compatible with a set of existing [Grafana](https://grafana.com/) operations dashboards that are available from the [Grafana dashboard](https://grafana.com/grafana/) page, as well as a set of Grafana-supported custom dashboards provided in JSON format. See following examples, which can be [imported](https://grafana.com/docs/grafana/latest/dashboards/export-import/#import-dashboard) directly into Grafana.
 
 **Publicly available operations dashboards**
 
@@ -81,13 +81,13 @@ You can directly download or import the following dashboards from the Grafana co
 |--|---------|------------|
 |14151|[WebSphere Application Server PMI metrics dashboard](https://grafana.com/grafana/dashboards/14151)|Core, Remote Search|
 |11159|[NodeJS application dashboard](https://grafana.com/grafana/dashboards/11159)|Content Composer, Design Studio, Digital Asset Management, Image Processor, Experience API|
-|9628|[PostgreSQL database](https://grafana.com/grafana/dashboards/9628)|DAM persistence|
+|9628|[PostgreSQL database](https://grafana.com/grafana/dashboards/9628)|DAM Persistence|
 |10850|[Ambassador dashboard](https://grafana.com/grafana/dashboards/10850)|Ambassador|
 |12693|[HAProxy dashboard](https://grafana.com/grafana/dashboards/12693)|HAProxy|
 
 ## HCL Digital Experience custom dashboards
 
-The following dashboards are provided by [HCL Software](https://www.hcltechsw.com/wps/portal) for use with [HCL Digital Experience 9.5](https://www.hcltechsw.com/dx) deployments. These examples expose custom metrics for DX applications or provide enhanced features for existing dashboards. They are available in the public [HCL Software Github repository](https://github.com/HCL-TECH-SOFTWARE/dx-metrics-grafana-dashboards).
+The following dashboards are provided by [HCL Software](https://www.hcltechsw.com/wps/portal) for use with [HCL Digital Experience 9.5](https://www.hcltechsw.com/dx) deployments. These examples expose custom metrics for DX applications or provide enhanced features for existing dashboards. They are available in the public [HCL Software GitHub repository](https://github.com/HCL-TECH-SOFTWARE/dx-metrics-grafana-dashboards).
 
 |Dashboard|Application\(s\)|
 |---------|----------------|
