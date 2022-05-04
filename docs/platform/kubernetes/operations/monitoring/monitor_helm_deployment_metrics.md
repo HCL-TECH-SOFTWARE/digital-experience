@@ -10,16 +10,6 @@ The [Digital Experience 9.5 Helm deployment](../../deployment/helm_deployment.md
 
 The following [Digital Experience 9.5 applications](../../architecture/application_architecture.md) expose metrics that can be tracked with Prometheus metrics.
 
--   Core
--   Remote Search
--   Content Composer
--   Design Studio
--   Digital Asset Management
--   Image Processor
--   Experience API
--   DAM persistence
--   Ambassador
-
 |Application|Port|Route|
 |-----------|----|-----|
 |Core|10038|/metrics|
@@ -31,9 +21,10 @@ The following [Digital Experience 9.5 applications](../../architecture/applicati
 |Ring API|3000|/probe/metrics|
 |DAM Persistence|9187|/metrics|
 |Ambassador|8877|/metrics|
+|HAProxy|8404|/metrics|
 
 !!!important
-    HCL Digital Experience 9.5 does not include a deployment of [Prometheus](https://prometheus.io/) or [Grafana](https://grafana.com/). When metrics are enabled in the [DX 9.5 Helm chart](../../deployment/preparation/overview.md), the application exposes Prometheus-compatible metrics. Those metrics can be consumed by any common Prometheus installation.
+    HCL Digital Experience 9.5 does not include a deployment of [Prometheus](https://prometheus.io/) or [Grafana](https://grafana.com/). The metrics are enabled by default for the [DX 9.5 Helm chart](../../deployment/preparation/overview.md). This exposes Prometheus-compatible metrics, which can be consumed by any common Prometheus installation.
 
 HCL DX 9.5 metrics are compatible with the following deployment and discovery types of Prometheus in [Kubernetes](https://kubernetes.io/) environments:
 
@@ -44,39 +35,43 @@ Administrators can configure the HCL DX 9.5 metrics depending on their specific 
 
 ## Configure Prometheus metrics
 
-To configure the metrics for the [Digital Experience 9.5 applications](../../architecture/application_architecture.md) in the DX 9.5 Helm chart, enable scraping in the [`custom-values.yaml`](../../deployment/preparation/overview.md) used for the DX 9.5 deployment. The metrics are configured independently for each DX 9.5 application.
+Metrics for the [Digital Experience 9.5 applications](../../architecture/application_architecture.md) in the DX 9.5 Helm chart are enabled by default, with `prometheusDiscoveryType` set to `annotations`. The metrics are configured independently for each DX 9.5 application. The parameter to disable metrics is included in the example configurations.
 
 |Parameter|Description|Default value|
 |---------|-----------|-------------|
-|`metrics.<application>.scrape`|Determines if the metrics of this application are scraped by Prometheus.|`false`|
+|`metrics.<application>.scrape`|Determines if the metrics of this application are scraped by Prometheus.|`true`|
 |`metrics.<application>.prometheusDiscoveryType`|Determines how Prometheus discovers the metrics of a service. Accepts `"annotation"` and `"serviceMonitor"`. The`"serviceMonitor"` setting requires that the [ServiceMonitor CRD](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/user-guides/getting-started.md#related-resources) \(which comes with the Prometheus Operator\), is installed in the cluster.|`"annotation"`|
 
-!!!example "Example configurations:"
+!!!example "Example:"
+    -   __Default configuration__: Metrics are enabled for Core with the appropriate [`annotation`](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/) for Prometheus:
 
-    -   Enable the metrics for DX 9.5 core and add the appropriate [`annotation`](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/) for Prometheus:
-
-        ```
+        ```yaml
         metrics:
           core:
             scrape: true
-              # prometheusDiscoveryType is optional here as "annotation" is the default
-              prometheusDiscoveryType: "annotation"
-    
+            prometheusDiscoveryType: "annotation"
         ```
 
-    -   Enable the metrics for DX 9.5 Core and create a [`ServiceMonitor`](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/user-guides/getting-started.md#related-resources) for Prometheus Operator:
+    -   Create a [`ServiceMonitor`](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/user-guides/getting-started.md#related-resources) for Prometheus Operator:
 
-        ```
+        ```yaml
         metrics:
           core:
             scrape: true
-             prometheusDiscoveryType: "serviceMonitor"
+            prometheusDiscoveryType: "serviceMonitor"
         ```
 
+    -   Disable the metrics for Core:
+
+        ```yaml
+        metrics:
+          core:
+            scrape: false
+        ```
 
 ## Grafana dashboards
 
-The exposed DX 9.5 Applications metrics are compatible with a set of existing [Grafana](https://grafana.com/) operations dashboards that are available from the [Grafana dashboard](https://grafana.com/grafana/) page, as well as a set of Granada-supported custom dashboards provided in JSON format. See following examples, which can be [imported](https://grafana.com/docs/grafana/latest/dashboards/export-import/#import-dashboard) directly into Grafana.
+The exposed DX 9.5 applications metrics are compatible with a set of existing [Grafana](https://grafana.com/) operations dashboards that are available from the [Grafana dashboard](https://grafana.com/grafana/) page, as well as a set of Grafana-supported custom dashboards provided in JSON format. See following examples, which can be [imported](https://grafana.com/docs/grafana/latest/dashboards/export-import/#import-dashboard) directly into Grafana.
 
 **Publicly available operations dashboards**
 
@@ -86,12 +81,13 @@ You can directly download or import the following dashboards from the Grafana co
 |--|---------|------------|
 |14151|[WebSphere Application Server PMI metrics dashboard](https://grafana.com/grafana/dashboards/14151)|Core, Remote Search|
 |11159|[NodeJS application dashboard](https://grafana.com/grafana/dashboards/11159)|Content Composer, Design Studio, Digital Asset Management, Image Processor, Experience API|
-|9628|[PostgreSQL database](https://grafana.com/grafana/dashboards/9628)|DAM persistence|
+|9628|[PostgreSQL database](https://grafana.com/grafana/dashboards/9628)|DAM Persistence|
 |10850|[Ambassador dashboard](https://grafana.com/grafana/dashboards/10850)|Ambassador|
+|12693|[HAProxy dashboard](https://grafana.com/grafana/dashboards/12693)|HAProxy|
 
 ## HCL Digital Experience custom dashboards
 
-The following dashboards are provided by [HCL Software](https://www.hcltechsw.com/wps/portal) for use with [HCL Digital Experience 9.5](https://www.hcltechsw.com/dx) deployments. These examples expose custom metrics for DX applications or provide enhanced features for existing dashboards. They are available in the public [HCL Software Github repository](https://github.com/HCL-TECH-SOFTWARE/dx-metrics-grafana-dashboards).
+The following dashboards are provided by [HCL Software](https://www.hcltechsw.com/wps/portal) for use with [HCL Digital Experience 9.5](https://www.hcltechsw.com/dx) deployments. These examples expose custom metrics for DX applications or provide enhanced features for existing dashboards. They are available in the public [HCL Software GitHub repository](https://github.com/HCL-TECH-SOFTWARE/dx-metrics-grafana-dashboards).
 
 |Dashboard|Application\(s\)|
 |---------|----------------|
@@ -118,4 +114,3 @@ To leverage the full potential of the [Digital Experience 9.5 applications](../.
             The [`kube-prometheus-stack`](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#kube-prometheus-stack) Helm chart is based on the [`kube-prometheus`](https://github.com/prometheus-operator/kube-prometheus) repository, and comes with a set of tools to monitor the Kubernetes cluster, as well as pre-installed Grafana dashboards for visualization.
             
     -   [`prometheus`](https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus) and [`grafana`](https://github.com/grafana/helm-charts) are provided as independent Helm charts.
-

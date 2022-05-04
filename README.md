@@ -3,7 +3,6 @@
 Visit the published site at [https://opensource.hcltechsw.com/digital-experience](https://opensource.hcltechsw.com/digital-experience)
 
 ## Usage
-
 [View the documentation](https://opensource.hcltechsw.com/digital-experience/) for product features and usage information.
 
 ## Contributing

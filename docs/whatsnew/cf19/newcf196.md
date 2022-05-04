@@ -28,7 +28,7 @@ See the [HCL DX 9.5 Helm deployment](../../platform/kubernetes/operator-migratio
 
 Beginning with HCL DX 9.5 Container Update CF196, administrators and developers can deploy HCL DX 9.5 using Docker Compose, for non-production use. Docker Compose scripts for HCL DX 9.5, installation, and configuration instructions for non-production use are available in the [HCL Software Github](https://github.com/HCL-TECH-SOFTWARE){:target="_blank"} page.
 
-See the [Docker image deployment using Docker Compose](../../platform/docker-compose/docker_image_deployment.md) topic for more information.
+See the [Docker image deployment using Docker Compose](../../platform/docker/docker_image_deployment.md) topic for more information.
 
 ## Web Content Manager Multilingual Solution Enhancements
 

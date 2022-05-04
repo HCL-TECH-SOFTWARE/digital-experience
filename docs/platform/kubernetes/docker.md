@@ -6,6 +6,105 @@ The HCL DX 9.5 container update releases may be obtained from your HCL Digital E
 
 Video: [How to upload HCL Digital Experience 9.5 CF container images to a private repository](https://youtu.be/XJONRdpgCuo)
 
+
+## HCL DX 9.5 CF203
+
+-   **Container Update CF203**
+
+    If deploying the HCL DX 9.5 CF203 release, the package name and images are as follows:
+
+    **HCL DX 9.5 CF203 DXClient files**:
+
+    -   ```
+        hcl-dxclient-image-v95_CF203_20220429-1049.zip
+       ```
+
+    -   ```
+        hcl-dxclient-v95_CF203_20220429-1409.zip
+        ```
+
+    **hcl-dx-kubernetes-v95-CF203.zip**:
+
+    -   ```
+        HCL DX notices V9.5 CF203.txt
+        ```
+
+    -   ```
+        hcl-dx-ambassador-image-1142.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-content-composer-image-v1.16.0_20220429-1042.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-core-image-v95_CF203_20220429-1033.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-deployment-v2.6.12_20220503-1239.tgz
+        ```
+
+    -   ```
+        hcl-dx-design-studio-image-v0.9.0_20220429-1029.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-digital-asset-manager-image-v1.15.0_20220429-1035.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-experience-api-sample-ui-v0.2.0.20220429-1030.zip
+        ```
+
+    -   ```
+        hcl-dx-haproxy-image-v0.1.0_20220429-1036.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-image-processor-image-v1.16.0_20220429-1034.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-openldap-image-v1.2.0_20220429-1041.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-persistence-connection-pool-image-v1.16.0_20220429-1031.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-persistence-image-v1.16.0_20220429-1032.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-persistence-metrics-exporter-image-v1.14.0_20220429-1031.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-persistence-node-image-v1.6_20220429-1030.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-redis-image-5.0.14.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-remote-search-image-v95_CF203_20220429-1033.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-ringapi-image-v1.16.0_20220429-1033.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-runtime-controller-image-v95_CF203_20220429-1038.tar.gz
+        ```
+
+    -    ```
+        hcl-dx-sidecar-image-v1.0.0_8.4-205.tar.gz
+        ```
+
 ## HCL DX 9.5 CF202
 
 -   **Container Update CF202**
@@ -1437,7 +1536,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
         ```
 
 -   See the following sections for additional information:
-    -   [Docker image deployment](../docker-compose/docker_image_deployment.md)
+    -   [Docker image deployment](../docker/docker_image_deployment.md)
     -   [Requirements and limitations](../kubernetes/limitations_requirements.md)
     -   [Customizing the container deployment](../kubernetes/operator-based/customizing_container_deployment.md)
     

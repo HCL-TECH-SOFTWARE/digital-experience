@@ -28,7 +28,7 @@ for example, `prof_95_CF199`. During the Core container startup process the lat
 
 When a new version \(tag\) of the DX 9.5 Core container is specified in your [custom values YAML file](../deployment/preparation/overview.md) and you run `helm upgrade`, Kubernetes recycles all the pods in your Core stateful set one by one. It starts with the highest numbered pod and work downwards, only recycling the next pod when the current pod reports that it is "ready".
 
-Whenever a Core container is started, it compares its container version with the latest profile version. If they do not match, perform an [Update](../operations/helm_update_deployment.md) using the process set out below:
+Whenever a Core container is started, it compares its container version with the latest profile version. If they do not match, perform an [Update](../operations/update_helm_deployment.md) using the process set out below:
 
 ![Core_container_Version-to-Version_upgrade](../../../images/Core_container_Version-to-Version_upgrade.png)
 
