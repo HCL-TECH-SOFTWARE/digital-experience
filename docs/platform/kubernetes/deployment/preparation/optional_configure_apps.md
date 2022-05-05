@@ -147,6 +147,8 @@ Following code can be added to `custom-values.yaml` file:
       # Should the configuration interface be exposed
       exposeConfigurationConsole: true
 ```
-When this property is set to true you should be able to access WebSphere Application Server Solution Console on port 10203 on you browser via https://yourHost:10203/ibm/console/
+When this property is set to true you should be able to access WebSphere Application Server Solution Console on port 10203 on you browser via:
+
+```https://yourhost:10203/ibm/console/```
 
 If this is not required you can just make it false.
