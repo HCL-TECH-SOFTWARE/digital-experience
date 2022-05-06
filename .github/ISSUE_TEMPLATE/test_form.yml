@@ -1,14 +1,12 @@
-name: Bug Report Form
-description: File a bug report
-title: "[Bug]: "
-labels: ["bug", "triage"]
-assignees:
-  - octocat
+name: Documentation Update Request
+description: Report an issue with or request an update to DX documentation
+title: "[Doc]: "
+labels: ["doc", "customer-issue"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Thanks for taking the time to give us your feedback on DX Documentation! Use this form to request an update or report an issue.
   - type: input
     id: contact
     attributes:
@@ -18,45 +16,31 @@ body:
     validations:
       required: false
   - type: textarea
+    id: pages-concerned
+    attributes:
+      label: Page(s) impacted
+      description: Please tell us which page(s) are impacted by your feedback
+      placeholder: List of URLs
+    validations:
+      required: false
+  - type: textarea
     id: what-happened
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
+      label: What is the issue?
+      description: Tell us what you are seeing or what update you would like
       placeholder: Tell us what you see!
-      value: "A bug happened!"
     validations:
       required: true
   - type: dropdown
     id: version
     attributes:
       label: Version
-      description: What version of our software are you running?
+      description: What type of DX deployment are you running?
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+        - Kubernetes deployment - Helm charts
+        - Kubernetes deployment - Operator
+        - Hybrid traditional/Kubernetes deployment
+        - Traditional WAS clustered deployment
+        - I'm not running DX
     validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+      required: false
