@@ -154,6 +154,7 @@ Follow the code snippets shown below to configure the server for configWizard an
 When Admin Console is enabled (by setting the property to `true`), you should be able to access WebSphere Application Server Solution Console on port `10203` by requesting the example shown below.
 
 ```
-https://yourhost:10203/ibm/console/```
+https://yourhost:10203/ibm/console/
+```
 
 Admin Console can be disabled by setting the property to `false`.
