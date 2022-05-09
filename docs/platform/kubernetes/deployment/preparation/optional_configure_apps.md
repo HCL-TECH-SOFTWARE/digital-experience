@@ -139,13 +139,17 @@ configuration:
 
 Admin Console (enable/disable) status can be configurable from `custom-values.yaml` file of the helm chart. After enabling the admin console, the configuration wizard can be accessible via `10203` port.
 
-Follow the example code shown below to configure the admin console.
+Follow the code snippets shown below to configure the server for configWizard and expose the port `10203`, which will be placed under `core-tuning` and `core` respectively.
 
 ```yaml
-# Application specific configuration for Admin Console Config Wizard
-    configWizard:
-      # Should the configuration interface be exposed
-      exposeConfigurationConsole: true
+# Configures if the server for configWizard and dxconnect is started.
+      # If this is set to true, the WAS console for configWizard is also exposed on port 10203 at the path /ibm/console
+      configWizard: true
+```
+
+```yaml
+# Defines if the configuration console for the IBM WebSphere Application Server of Core is exposed to the network
+    exposeConfigurationConsole: true
 ```
 When Admin Console is enabled (by setting the property to `true`), you should be able to access WebSphere Application Server Solution Console on port `10203` by requesting the example shown below.
 
