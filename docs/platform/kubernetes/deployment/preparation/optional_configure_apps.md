@@ -135,20 +135,21 @@ configuration:
 
 ```
 
-## Config Wizard configuration
+## Admin Console Config Wizard configuration
 
-You can access Admin Console for CW Profile via your kube environment. 
-This will be exposed on the port 10203. Configuration is added to the `custom-values.yaml` file to enable or disable this property under `core`. 
+Admin Console (enable/disable) status can be configurable from `custom-values.yaml` file of the helm chart. After enabling the admin console, the configuration wizard can be accessible via `10203` port.
 
-Following code can be added to `custom-values.yaml` file:
+Follow the example code shown below to configure the admin console.
+
 ```yaml
 # Application specific configuration for Admin Console Config Wizard
     configWizard:
       # Should the configuration interface be exposed
       exposeConfigurationConsole: true
 ```
-When this property is set to true you should be able to access WebSphere Application Server Solution Console on port 10203 on you browser via:
+When Admin Console is enabled (by setting the property to `true`), you should be able to access WebSphere Application Server Solution Console on port `10203` by requesting the example shown below.
 
-```https://yourhost:10203/ibm/console/```
+```
+https://yourhost:10203/ibm/console/```
 
-If this is not required you can just make it false.
+Admin Console can be disabled by setting the property to `false`.
