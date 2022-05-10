@@ -77,9 +77,29 @@ configuration:
       authoring: true
 ```
 
+### Expose IBM WebSphere Application Server Solution Console 
+Follow the code snippets shown below to configure the server and expose the port `10203`, which will be placed under `configuration.core.exposeConfigurationConsole`:
+
+```yaml
+# Application configuration
+configuration:
+  # Application specific configuration for Core
+  core:
+    # Defines if the configuration console for the IBM WebSphere Application Server of Core is exposed to the network
+    exposeConfigurationConsole: true
+```
+
+When Admin Console is enabled (by setting the property to `true`), the IBM WebSphere Application Server Solution Console is available on port `10203` by requesting the example shown below.
+
+```
+https://yourhost:10203/ibm/console/
+```
+
+Admin Console can be disabled by setting the property to `false`.
 ### Configuration Wizard configuration
 
 You can select whether the Config Wizard is started together with the Core application. This defaults to true.
+If this is enabled the Configuration Wizard IBM WebSphere Application Server Solution Console is also accessible on port `10203`.
 
 If you want to adjust this setting, you can use the following syntax in your file:
 
@@ -90,7 +110,8 @@ configuration:
   core:
     # Settings for tuning
     tuning:
-      # Configures if the server for configWizard and dxconnect is started
+        # Configures if the server for configWizard and dxconnect is started.
+      # If this is set to true, the WAS console for configWizard is also exposed on port 10203 at the path /ibm/console
       configWizard: true
 ```
 
