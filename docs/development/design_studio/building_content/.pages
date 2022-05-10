@@ -1,0 +1,11 @@
+title: Working with content 
+nav:
+    - index.md
+    - create_site_page.md
+    - author_site_page.md
+    - content_lists.md
+    - reusable_blocks
+    - craft_responsive_layouts.md
+    - design_studio_development_APIs.md
+    - site_rendering.md
+    - ... 
