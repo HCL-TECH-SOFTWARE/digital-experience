@@ -89,7 +89,7 @@ configuration:
     exposeConfigurationConsole: true
 ```
 
-When `Admin Console` is enabled by setting its property to `true`, the IBM WebSphere Application Server Solution Console becomes available on port `10203`, as shown in the following example.
+When `Admin Console` is enabled by setting its property to `true`, the IBM WebSphere Application Server Solution Console becomes available on port `10203`, as shown in the following example:
 
 ```
 https://yourhost:10203/ibm/console/
