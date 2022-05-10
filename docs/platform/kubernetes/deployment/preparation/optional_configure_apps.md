@@ -99,7 +99,7 @@ Admin Console can be disabled by setting the property to `false`.
 ### Configuration Wizard configuration
 
 You can select whether the Config Wizard is started together with the Core application. This defaults to true.
-If this is enabled the Configuration Wizard IBM WebSphere Application Server Solution Console is also accessible on port `10203`.
+If this is enabled the Configuration Wizard IBM WebSphere Application Server Solution Console and dxconnect is also accessible on port `10203`.
 
 If you want to adjust this setting, you can use the following syntax in your file:
 
@@ -111,7 +111,7 @@ configuration:
     # Settings for tuning
     tuning:
         # Configures if the server for configWizard and dxconnect is started.
-      # If this is set to true, the WAS console for configWizard is also exposed on port 10203 at the path /ibm/console
+      # If this is set to true, the WAS console for configWizard and dxconnect is also exposed on port 10203 at the path /ibm/console
       configWizard: true
 ```
 
