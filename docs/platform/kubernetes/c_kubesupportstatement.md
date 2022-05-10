@@ -37,7 +37,7 @@ This table provides information about the Kubernetes versions that are tested an
 
 |CF Level |Kubernetes versions|
 |--------------|-----------------|
-|F203| Kube 1.21 <br/>Kube 1.20 <br/>Kube 1.19 <br/>|
+|CF203| Kube 1.21 <br/>Kube 1.20 <br/>Kube 1.19 <br/>|
 |CF202| Kube 1.21 <br/>Kube 1.20 <br/>Kube 1.19 <br/>|
 |CF201| Kube 1.21 <br/>Kube 1.20 <br/>Kube 1.19 <br/>|
 
