@@ -78,7 +78,7 @@ configuration:
 ```
 
 ### Expose IBM WebSphere Application Server Solution Console 
-Follow the code snippets shown below to configure the server and expose the port `10203`, which will be placed under `configuration.core.exposeConfigurationConsole`:
+Refer to the following code sample to configure the server and expose the port `10203`, which will be placed under `configuration.core.exposeConfigurationConsole`:
 
 ```yaml
 # Application configuration
