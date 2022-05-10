@@ -77,7 +77,7 @@ configuration:
       authoring: true
 ```
 
-### Expose Config console 
+### Expose IBM WebSphere Application Server Solution Console 
 Follow the code snippets shown below to configure the server and expose the port `10203`, which will be placed under `configuration.core.exposeConfigurationConsole`:
 
 ```yaml
@@ -89,7 +89,7 @@ configuration:
     exposeConfigurationConsole: true
 ```
 
-When Admin Console is enabled (by setting the property to `true`), you should be able to access WebSphere Application Server Solution Console on port `10203` by requesting the example shown below.
+When Admin Console is enabled (by setting the property to `true`), the IBM WebSphere Application Server Solution Console is available on port `10203` by requesting the example shown below.
 
 ```
 https://yourhost:10203/ibm/console/
@@ -99,7 +99,7 @@ Admin Console can be disabled by setting the property to `false`.
 ### Configuration Wizard configuration
 
 You can select whether the Config Wizard is started together with the Core application. This defaults to true.
-Admin Console (enable/disable) status can be configurable from `custom-values.yaml` file of the helm chart. After enabling the admin console, the configuration wizard can be accessible via `10203` port.
+If this is enabled the Configuration Wizard IBM WebSphere Application Server Solution Console is also accessible on port `10203`.
 
 If you want to adjust this setting, you can use the following syntax in your file:
 
