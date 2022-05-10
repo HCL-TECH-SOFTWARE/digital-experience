@@ -99,7 +99,7 @@ Admin Console can be disabled by setting the property to `false`.
 ### Configuration Wizard configuration
 
 Although the Config Wizard is started together with the Core application by default, you can set the value to 'false' to change the default behavior
-If this is enabled the Configuration Wizard IBM WebSphere Application Server Solution Console and dxconnect is also accessible on port `10203`.
+If `configWizard` is set to `true`, then the Configuration Wizard, IBM WebSphere Application Server Solution Console, and DXConnect are also accessible on port `10203`.
 
 If you want to adjust this setting, you can use the following syntax in your file:
 
