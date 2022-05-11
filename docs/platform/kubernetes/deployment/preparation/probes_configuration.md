@@ -1,6 +1,6 @@
 # Probes configuration in values.yaml file
 
-The liveness and readiness probes can be coonfigured by the customers, i.e the threshold, timing values etc can be modified. The httpGet parameters, such as path, port and scheme which was previously present in values.yaml has been removed and is not configurable anymore.
+The liveness and readiness probes can be configured by the customers, i.e the threshold, timing values etc can be modified. The httpGet parameters, such as path, port and scheme which was previously present in values.yaml has been removed and is not configurable anymore.
 
 
 ```
