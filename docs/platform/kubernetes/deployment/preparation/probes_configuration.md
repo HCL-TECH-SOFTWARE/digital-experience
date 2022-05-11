@@ -1,6 +1,6 @@
 # Probes configuration in values.yaml file
 
-The liveness and readiness probes can be configured, i.e the threshold, timing values etc can be modified. The probe targets were removed from the configuration as they are application specific and should not be changed and is not configurable anymore.
+The `liveness` and `readiness` probes such as the status thresholds and time values can be modified. The probe target values are not configurable anymore because they are application specific and the values must not be changed.
 
 ```yaml
 # Liveness probe using the applications HTTP probe endpoint 
