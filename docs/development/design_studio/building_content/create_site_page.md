@@ -1,4 +1,4 @@
-# Create sites and pages with Design Studio \(Beta\)
+# Create sites and pages
 
 This section provides steps on how to browse your site and its pages, create new ones, and update or delete metadata using HCL Design Studio \(Beta\).
 

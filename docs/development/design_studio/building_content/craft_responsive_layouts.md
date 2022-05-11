@@ -1,8 +1,8 @@
-# Craft responsive layouts to pages with Design Studio \(Beta\)
+# Craft responsive layouts to pages
 
 This section outlines how you can make the layout of your website pages responsive.
 
-## Styling elements in HCL Design Studio \(Beta\)
+## Styling elements
 
 Sites, pages and containers are each linked to a stylesheet component of their own, which are:
 

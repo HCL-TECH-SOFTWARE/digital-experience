@@ -1,4 +1,4 @@
-# Access Design Studio \(Beta\)
+# Access sites
 
 This section provides the steps on how to access HCL Design Studio \(Beta\) and use it to assemble, curate, design, and model pages, content, and applications in DX sites.
 

@@ -1,4 +1,4 @@
-# Render your Design Studio \(Beta\) site
+# Render your site
 
 The following section outlines how to render a site built using HCL Design Studio \(Beta\).
 
