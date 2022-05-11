@@ -1,4 +1,4 @@
-# Author pages and page content with Design Studio \(Beta\)
+# Author pages and page contents
 
 This section details how you can use content items on pages created and managed with HCL Design Studio \(Beta\).
 
