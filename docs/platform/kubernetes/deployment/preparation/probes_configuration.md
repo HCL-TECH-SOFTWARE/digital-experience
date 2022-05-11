@@ -3,7 +3,7 @@
 The liveness and readiness probes can be configured by the customers, i.e the threshold, timing values etc can be modified. The httpGet parameters, such as path, port and scheme which was previously present in values.yaml has been removed and is not configurable anymore.
 
 
-```
+```yaml
 # Liveness probe using the applications HTTP probe endpoint 
     livenessProbe:
       failureThreshold: 4
