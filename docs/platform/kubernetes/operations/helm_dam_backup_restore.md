@@ -103,7 +103,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         kubectl exec --stdin --tty pod/dx-deployment-digital-asset-management-0 -n dxns -- /bin/bash
         ```
 
-    2.  Compress the DAM binaries located under /opt/app/upload directory:
+    2.  Compress the DAM binaries located under `/opt/app/upload` directory:
 
         ```
          tar -cvpzf backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system --directory /opt/app/upload .
