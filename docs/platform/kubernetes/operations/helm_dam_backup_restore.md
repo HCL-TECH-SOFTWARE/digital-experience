@@ -26,7 +26,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         pod/dx-deployment-persistence-node-2                             2/2     Running   0          3h48m
         ```
 
-    2.  Scale down the number persistence pods to 1.
+    2.  Scale down the persistence pods to a single replica.
 
         ```
         helm upgrade -n <namespace> -f <custom-values.yaml> <release-name> <path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz> --set scaling.replicas.persistenceNode=1
@@ -77,7 +77,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         kubectl cp dxns/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp /tmp/dxmediadb.dmp
         ```
 
-    5.  Set the number of persistence pods back to the number you noted from step 1:
+    5.  Reset the persistence pods back to the previous state:
 
         ```
         helm upgrade -n <namespace> -f <custom-values.yaml> <release-name> <path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz>
@@ -184,7 +184,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         kubectl -n dxns get all
         ```
 
-    2.  Scale down the number persistence pods to 1.
+    2.  Scale down the persistence pods to a single replica.
 
         ```
         helm upgrade -n <namespace> -f <custom-values.yaml> <release-name> <path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz> --set scaling.replicas.persistenceNode=1
@@ -274,7 +274,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
             exit
             ```
 
-    5.  Set the number of persistence pods back to the number you noted from step 1 from Back up your database:
+    5.  Reset the persistence pods back to the previous state:
 
         ```
         helm upgrade -n <namespace> -f <custom-values.yaml> <release-name> <path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz>
