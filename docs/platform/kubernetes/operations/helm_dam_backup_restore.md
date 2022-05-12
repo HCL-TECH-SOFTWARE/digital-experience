@@ -26,27 +26,16 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         pod/dx-deployment-persistence-node-2                             2/2     Running   0          3h48m
         ```
 
-        The number of these pods configured as stateful sets is listed at the end of the report. Take note of this number as you will need this for step 5.
-
-        ```
-        NAME                                                      READY   AGE
-        statefulset.apps/dx-deployment-core                       1/1     4h1m
-        statefulset.apps/dx-deployment-digital-asset-management   1/1     4h1m
-        statefulset.apps/dx-deployment-open-ldap                  1/1     4h1m
-        statefulset.apps/dx-deployment-persistence-node           3/3     4h1m
-        statefulset.apps/dx-deployment-remote-search              1/1     4h1m
-        ```
-
     2.  Scale down the number persistence pods to 1.
 
         ```
-        kubectl scale statefulsets <stateful-set-name> -n <namespace> --replicas=1
+        helm upgrade -n <namespace> -f <custom-values.yaml> <release-name> <path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz> --set scaling.replicas.persistenceNode=1
         ```
 
         **Example:**
 
         ```
-        kubectl scale statefulsets dx-deployment-persistence-node -d dxns --replicas=1
+        helm upgrade -n dxns -f custom-values.yaml dx-deployment hcl-dx-deployment.tar.gz --set scaling.replicas.persistenceNode=1
         ```
 
         !!! note
@@ -85,21 +74,20 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         **Example:**
 
         ```
-        kubectl cp dxns/dx-deployment-persistence:/tmp/dxmediadb.dmp /tmp/dxmediadb.dmp
+        kubectl cp dxns/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp /tmp/dxmediadb.dmp
         ```
 
     5.  Set the number of persistence pods back to the number you noted from step 1:
 
         ```
-        kubectl scale statefulsets <stateful-set-name> -n <namespace> --replicas=<new-replicas>
+        helm upgrade -n <namespace> -f <custom-values.yaml> <release-name> <path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz>
         ```
 
         **Example:**
 
         ```
-        kubectl scale statefulsets dx-deployment-persistence-node -n dxns --replicas=3
+        helm upgrade -n dxns -f custom-values.yaml dx-deployment hcl-dx-deployment.tar.gz
         ```
-
 
 -   **Back up your DAM binary**
 
@@ -112,7 +100,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         **Example:**
 
         ```
-        kubectl exec --stdin --tty pod/dx-deployment-dam-0 -n dxns -- /bin/bash
+        kubectl exec --stdin --tty pod/dx-deployment-digital-asset-management-0 -n dxns -- /bin/bash
         ```
 
     2.  Compress the DAM binaries located under /opt/app/upload directory:
@@ -138,7 +126,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         **Example:**
 
         ```
-        kubectl cp dxns/dx-deployment-dam-0:/opt/app/server-v1/backupml.tar.gz /tmp/backupml.tar.gz
+        kubectl cp dxns/dx-deployment-digital-asset-management-0:/opt/app/server-v1/backupml.tar.gz /tmp/backupml.tar.gz
         ```
 
 
@@ -153,7 +141,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         **Example:**
 
         ```
-        kubectl cp /tmp/backupml.tar.gz dxns/dx-deployment-dam-0:/tmp/backupml.tar.gz
+        kubectl cp /tmp/backupml.tar.gz dxns/dx-deployment-digital-asset-management-0:/tmp/backupml.tar.gz
         ```
 
     2.  Connect to the DAM pod. Open a shell in the running DAM pod:
@@ -165,7 +153,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         **Example:**
 
         ```
-        kubectl exec --stdin --tty pod/dx-deployment-dam-0 -n dxns -- /bin/bash
+        kubectl exec --stdin --tty pod/dx-deployment-digital-asset-management-0 -n dxns -- /bin/bash
         ```
 
     3.  Restore the DAM binaries:
@@ -199,13 +187,13 @@ This procedure is not meant for moving DAM data to another deployment. The backu
     2.  Scale down the number persistence pods to 1.
 
         ```
-        kubectl scale statefulsets <stateful-set-name> -n <namespace> --replicas=1
+        helm upgrade -n <namespace> -f <custom-values.yaml> <release-name> <path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz> --set scaling.replicas.persistenceNode=1
         ```
 
         **Example:**
 
         ```
-        kubectl scale statefulsets dx-deployment-persistence-node -d dxns --replicas=1
+        helm upgrade -n dxns -f custom-values.yaml dx-deployment hcl-dx-deployment.tar.gz --set scaling.replicas.persistenceNode=1
         ```
 
         !!!note
@@ -232,7 +220,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         **Example:**
 
         ```
-        kubectl -n dxns exec --stdin --tty pod/dx-deployment-persistence -d dxns -- /bin/bash
+        kubectl -n dxns exec --stdin --tty pod/dx-deployment-persistence-node-0 -n dxns -- /bin/bash
         ```
 
         1.  Run the following commands in order:
@@ -258,10 +246,8 @@ This procedure is not meant for moving DAM data to another deployment. The backu
             !!!note
                 If you are getting the following error, run the two commands from this step again until it completes without the error occurring.
 
-            ```
             ```shell
             dropdb: database removal failed: ERROR:  database "dxmediadb" is being accessed by other users
-            ```
             ```
 
         2.  Create the database.
@@ -291,13 +277,13 @@ This procedure is not meant for moving DAM data to another deployment. The backu
     5.  Set the number of persistence pods back to the number you noted from step 1 from Back up your database:
 
         ```
-        kubectl scale statefulsets <stateful-set-name> -n <namespace> --replicas=<new-replicas>
+        helm upgrade -n <namespace> -f <custom-values.yaml> <release-name> <path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz>
         ```
 
         **Example:**
 
         ```
-        kubectl scale statefulsets dx-deployment-persistence-node -n dxns --replicas=3
+        helm upgrade -n dxns -f custom-values.yaml dx-deployment hcl-dx-deployment.tar.gz
         ```
 
 
@@ -312,9 +298,5 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         **Example:**
 
         ```
-        kubectl delete pod dx-deployment-dam-0 -n dxns
+        kubectl delete pod dx-deployment-digital-asset-management-0 -n dxns
         ```
-
-
-
-
