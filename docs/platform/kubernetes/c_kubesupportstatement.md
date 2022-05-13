@@ -5,7 +5,7 @@ View the latest Kubernetes versions and platforms tested and supported for speci
 !!! attention "Operator-based deployments are discontinued"
     Beginning with HCL DX 9.5 CF200, HCL has discontinued [Operator-based deployments](https://help.hcltechsw.com/digital-experience/9.5/containerization/deploy_container_platforms.html) and will provide support only for [Helm-based deployments](../kubernetes/deployment/helm_deployment.md). There will be no further updates or code fixes provided for the Operator-based deployments. HCL requires all customers to migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based deployments](operator-migration/operator_migration_preparation.md).
 
-HCL encourages customers to remain up-to-date on the latest HCL DX and Kubernetes releases. As a result, HCL DX will provide all fixes on the latest release. Customers may be asked to upgrade to the latest HCL DX release to assist with problem determination.
+HCL encourages customers to remain up-to-date on the latest HCL DX and Kubernetes releases, and be aware that HCL DX provides all fixes on the latest release. Customers may be asked to upgrade to the latest HCL DX release to assist with problem determination.
 
 ## Kubernetes platform support policy
 
