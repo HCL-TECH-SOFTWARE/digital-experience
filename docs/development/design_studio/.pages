@@ -1,6 +1,6 @@
 title: Design Studio 
 nav:
     - index.md
-    - ds_installing.md
+    - Install Design Studio (Beta): ds_installing.md
     - building_content
     - ...
