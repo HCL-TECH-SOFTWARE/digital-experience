@@ -18,7 +18,7 @@ HCL tests DX against a range of Kubernetes platforms that is regularly reviewed 
 
 ### Table 1: Tested Kubernetes Platforms on Full Container Deployment
 
-This table provides information about the sample Kubernetes Platforms that are tested with DX.
+This table provides information about the sample Kubernetes platforms that are tested with DX.
 
 |Kubernetes platforms on full deployments|Hybrid deployments (Kubernetes/on Premise)|
 |--------------|-----------------|
@@ -31,7 +31,7 @@ The list of Kubernetes versions that are supported by HCL are included in [Table
 * Platform providers may release previews of upcoming Kubernetes versions. We will not provide support for those versions.
 * If you encounter any issue on an unsupported or untested Kubernetes version, you may be asked to install a supported level.
 
-### Table 2: Tested and supported Kubernetes versions on Full Container Deployment
+### Table 2: Tested and supported Kubernetes versions
 
 This table provides information about the Kubernetes versions that are tested and supported in HCL DX CF releases.
 Review your chosen Kubernetes platform and ensure that it supports the following Kubernetes versions:
