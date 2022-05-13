@@ -31,7 +31,7 @@ The list of Kubernetes versions that are supported by HCL are included in [Table
 * Platform providers may release previews of upcoming Kubernetes versions. We will not provide support for those versions.
 * If you encounter any issue on an unsupported or untested Kubernetes version, you may be asked to install a supported level.
 
-### Table 2: Tested and supported Kubernetes versions on Full Container Deployment
+### Table 2: Tested and supported Kubernetes versions on Full Container deployment
 
 This table provides information about the Kubernetes versions that are tested and supported in HCL DX CF releases.
 Review your chosen Kubernetes platform and ensure that it supports the following Kubernetes versions:
