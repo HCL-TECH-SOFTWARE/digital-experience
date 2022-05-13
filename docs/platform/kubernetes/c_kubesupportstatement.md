@@ -43,5 +43,5 @@ Review your chosen Kubernetes platform and ensure that it supports the following
 |CF201| Kubernetes 1.21<br/>Kubernetes 1.20<br/>Kubernetes 1.19 <br/>|
 
 !!! attention "__*__ CF203 limited support statement"
-    Starting with CF203 HCL DX supports Kubernetes 1.22 for purely HAProxy based deployments.
+    Starting with CF203, HCL DX supports Kubernetes 1.22 only for HAProxy-based deployments, and not for deployments that are running on Ambassador.
     If you are still running HCL DX's Ambassador, then HCL DX can only run't be run on Kubernetes 1.22 or above.
