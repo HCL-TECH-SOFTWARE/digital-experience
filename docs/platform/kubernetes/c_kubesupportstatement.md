@@ -18,7 +18,7 @@ HCL tests DX against a range of Kubernetes platforms that is regularly reviewed 
 
 ### Table 1: Tested Kubernetes Platforms on Full Container Deployment
 
-This table provides information about the sample Kubernetes Platforms that are tested with DX.
+This table provides information about the sample Kubernetes platforms that are tested with DX.
 
 |Kubernetes platforms on full deployments|Hybrid deployments (Kubernetes/on Premise)|
 |--------------|-----------------|
