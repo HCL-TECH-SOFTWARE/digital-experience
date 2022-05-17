@@ -33,7 +33,7 @@ You can access Digital Asset Management media items when creating content in Con
 
 Follow the steps to create web content in Content Composer.
 
-1.  In HCL Digital Experience 9.5 Practitioner Studio interface, select **Web Content** and then **Content Composer** from the navigator.
+1.  In the HCL Digital Experience 9.5 Practitioner Studio interface, select **Web Content** and then **Content Composer** from the navigator.
 
     ![Select Web Content from the Practitioner Studio navigator](../../images/Select_Web_Content_from_Practitioner_Studio_navigator.png)
 
@@ -64,5 +64,4 @@ To enable users to use DAM as the source while editing the content, use one of t
 <!-- ???Info "Related information:"
     - [Configuring a web content authoring environment](../../wcm/wcm_install_cfgauthoring.md)
     - [Digital Asset Management persistence architecture](../../containerization/dam_persistence_architecture.md) -->
-
 
