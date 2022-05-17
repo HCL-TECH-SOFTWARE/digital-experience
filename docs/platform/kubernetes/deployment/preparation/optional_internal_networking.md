@@ -10,8 +10,8 @@ To deploy DX on the internal network \(with no public access\), we need to add t
 ```
 annotations:
   service: 
-    # Annotations for ambassador service.
-    ambassador: []
+    # Annotations for haproxy service.
+    haproxy: []
 ```
 
 ??? example "Example for GKE:"

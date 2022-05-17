@@ -9,7 +9,7 @@ HCL Digital Experience logs are important for maintaining and troubleshooting bo
 In CF200, a new mechanism is introduced for configuring log settings at runtime \(without pod restarts\) in Helm-based DX deployments. Log levels and trace strings are set in your custom-values.yaml file and applied using a `helm upgrade`command. Under the covers, this sets values in a new `<release-name>-global`config map which are monitored by the various running DX containers. When the containers detect a change to the values pertinent to themselves, they update their log configurations accordingly \(without restarting\). At that point, the new log behavior is immediately reflected in their Kubernetes logs.
 
 !!!note
-     OpenLDAP, Ambassador, and Redis are not yet configurable using this feature.
+     OpenLDAP and Redis are not yet configurable using this feature.
 
 ## Setting the log configuration for a DX application
 
