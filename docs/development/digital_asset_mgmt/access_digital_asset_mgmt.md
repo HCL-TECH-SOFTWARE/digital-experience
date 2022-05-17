@@ -16,7 +16,7 @@ HCL Digital Asset Management should be installed and configured to HCL Digital E
 
 Follow the steps to access HCL Digital Experience 9.5 Digital Asset Management from the Practitioner Studio:
 
-1.  In HCL Digital Experience 9.5 Practitioner Studio interface, select **Digital Assets** from the navigator as shown below.
+1.  In the HCL Digital Experience 9.5 Practitioner Studio interface, select **Digital Assets** from the navigator.
 
     ![Select Digital Assets from the Practitioner Studio navigator](../../images/dam_practitioner_studio_home_page.png)
 
@@ -64,6 +64,5 @@ To enable users to use DAM as the source while editing the content, use one of t
 <!-- ???Info "Related information:"
     - [Configuring a web content authoring environment](../../wcm/wcm_install_cfgauthoring.md)
     - [Digital Asset Management persistence architecture](../../containerization/dam_persistence_architecture.md) -->
-
 
 
