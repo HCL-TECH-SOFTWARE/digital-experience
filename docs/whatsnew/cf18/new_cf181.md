@@ -2,8 +2,6 @@
 
 This HCL Digital Experience 9.5 Container Update release includes new Production releases of Content Composer, Digital Asset Management, and Experience API, new WCM REST APIs, guidance to deploy OpenLDAP, Remote Search and Database transfer processes, and more.
 
-<!-- Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939#CF18) for the list of software fixes, including Container Update releases. Product software can be accessed from the  [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release). Go to this [Step-by-step guide to downloading DX products and accessing Customer Support](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878) for more information. -->
-
 ## Content Composer
 
 Content Composer delivers simplified processes for creating and managing Digital Experience site content.  Users can work with Content Composer features in HCL Digital Experience 9.5 Container Update CF181 and higher releases. See  [HCL Digital Experience 9.5 Content Composer](https://help.hcltechsw.com/digital-experience/9.5/content_composer/cont_comp_overview.html){:target="_blank"} for details.
@@ -26,7 +24,7 @@ HCL Digital Experience 9.5 installs a copy of Derby as the default database. HCL
 
 <!-- ## Remote Search services Docker deployment
 
-To support search services when deployed to Docker, Digital Experience administrators can configure Remote search services. This will require some different setup and configuration steps than used to set up remote search on a non-Docker container platform. See [Deploy Remote Search services on Docker](../../platform/docker-compose/docker_remote_search.md) for details. -->
+To support search services when deployed to Docker, Digital Experience administrators can configure Remote search services. This will require some different setup and configuration steps than used to set up remote search on a non-Docker container platform. See [Deploy Remote Search services on Docker](../../platform/docker/docker_remote_search.md) for details. -->
 
 ## New Digital Experience WCM Workflow REST APIs
 

@@ -12,4 +12,4 @@ HCL DX supports deployment to a range of Kubernetes platforms. Choose this optio
 HCL DX supports deployment to a non-containerised environment via WebSphere clustering. This topic is not yet in this site and can be accessed in the [Help Centre](https://help.hcltechsw.com/digital-experience/9.5/containerization/dx_non_container.html)
 
 ## [Docker](docker/docker_compose.md)
-Docker Compose can be used for developer workstations. Information is available [here](docker-compose/docker_compose.md)
+Docker Compose can be used for developer workstations. Information is available [here](docker/docker_compose.md)

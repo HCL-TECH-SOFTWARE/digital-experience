@@ -42,7 +42,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
         ```
 
     -   ```
-        hcl-dx-deployment-v2.6.11_20220429-1036.tgz
+        hcl-dx-deployment-v2.6.12_20220503-1239.tgz
         ```
 
     -   ```
@@ -101,7 +101,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
         hcl-dx-runtime-controller-image-v95_CF203_20220429-1038.tar.gz
         ```
 
-        ```
+    -    ```
         hcl-dx-sidecar-image-v1.0.0_8.4-205.tar.gz
         ```
 

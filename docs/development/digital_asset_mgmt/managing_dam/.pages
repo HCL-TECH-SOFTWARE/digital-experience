@@ -1,0 +1,13 @@
+title: Managing DAM 
+nav:
+    - index.md
+    - upload_rich_media_assets.md
+    - manage_media_assets.md
+    - dam_exim.md
+    - manage_collections.md
+    - Modify DAM assets:
+        - dam_edit_image.md
+        - dam_metadata_properties.md
+        - dam_generate_renditions_and_versions.md
+        - dam_set_unique_custom_URL_media_asset.md
+    # - ...

@@ -5,6 +5,8 @@ Deprecation means that the features are supported at this time but can be remove
 ## Recently Deprecated Features
 |Category|Deprecated|Recommended Action|Effective Date|
 |--------|----------|------------------|--------------|
+|Deploying|Ambassador|Beginning with Container Update CF203, the Ambassador shipped as part of the DX Helm deployment is deprecated and will be removed in a subsequent HCL DX 9.5 Container Update release. For more information, see [HAProxy replaces Ambassador](../platform/kubernetes/haproxy-migration/haproxy-introduction.md) |May 2022|
+|Deploying|Operator-based deployment|Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience (DX) Operator-based deployments and will provide support only for Helm-based deployments. There will be no further updates or code fixes provided for the Operator-based deployments. For more information, see [Helm-based deployment](../platform/kubernetes/overview.md) |December 2021|
 |Integrating |Sametime Integration |Integration with Sametime will be deprecated. The supported Sametime version 9.0 already reached EOS. |November 2021|
 |Integrating |Add to Sametime List |Effective November 2021, integration with Sametime will be deprecated. The supported Sametime version 9.0 already reached EOS. |November 2021|
 |Online Help |Sametime Web 2.0 Contact List |Effective November 2021, integration with Sametime will be deprecated. The supported Sametime version 9.0 already reached EOS.  |November 2021|
