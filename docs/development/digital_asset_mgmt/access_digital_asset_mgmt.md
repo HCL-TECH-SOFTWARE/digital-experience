@@ -52,7 +52,7 @@ Follow these steps that describes how to access DAM assets when creating web con
 
 ## Access HCL Digital Asset Management from WCM Authoring Portlet or Inline Editing
 
-Content authors can access and use DAM media items when creating or editing content, components, or content templates in Web Content Manager Authoring Portlet or inline editing. Both image and file components and elements can be configured to use DAM as the source.
+Content authors can access and use DAM media items when creating or editing content, components, or content templates in the Web Content Manager authoring portlet or inline editing. Both the image and the file components and elements can be configured to use DAM as the source.
 
 
 To enable users to use DAM as the source while editing the content, use one of the following options:
