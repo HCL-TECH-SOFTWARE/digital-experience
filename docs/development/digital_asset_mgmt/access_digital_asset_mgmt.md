@@ -4,7 +4,7 @@ This section provides the steps on how to access HCL Digital Asset Management \(
 
 ## Prerequisite
 
-HCL DAM should be installed and configured to HCL Digital Experience 9.5 Container Release Update CF181 and higher.
+HCL DAM should be installed and configured to HCL Digital Experience 9.5 Container Release Update CF181 and later.
 
 -   For Operator-based deployments, see the [Install the HCL Digital Experience 9.5 Container components](../containerization/install_config_cc_dam.md) topic for instructions on container components.
 -   For Helm-based deployments, see the [Deploying DX 9.5 applications to container platforms using Helm](../containerization/deploy_applications_using_helm.md) topic for instructions on deploying applications
@@ -65,4 +65,3 @@ To enable users to use DAM as the source while editing the content, use one of t
 <!-- ???Info "Related information:"
     - [Configuring a web content authoring environment](../../wcm/wcm_install_cfgauthoring.md)
     - [Digital Asset Management persistence architecture](../../containerization/dam_persistence_architecture.md) -->
-
