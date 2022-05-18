@@ -37,7 +37,7 @@ Follow these steps that describes how to access DAM assets when creating web con
 
     ![Select Web Content from the Practitioner Studio navigator](../../images/Select_Web_Content_from_Practitioner_Studio_navigator.png)
 
-2.  Select a content template with the **Image** element configured to it, example **Furniture Gallery**.
+2.  Select a content template with the **Image** element configured to it, for example, **Furniture Gallery**.
 
     ![Selecting a Web Content template with the Image element](../../images/Select_Web_Content_from_Practitioner_Studio_navigator_2.png)
 
