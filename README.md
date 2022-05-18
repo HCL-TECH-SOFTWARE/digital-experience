@@ -29,7 +29,7 @@ Configure your email notification preferences to receive notifications.
 
 - Go to [Notifications](https://github.com/settings/notifications)
 - Under **Email notification preferences**, ensure you have a valid email address in the **Default notification email** box
-- Ensure that the following three options are selected to receive updates on conversations you’re participating in or watching
+- Ensure that the following three options are selected to receive updates on conversations that you’re participating in or watching:
   - Comments on Issues and Pull Requests
   - Pull Request reviews
   - Pull Request pushes
