@@ -16,7 +16,7 @@ HCL DAM should be installed and configured to HCL Digital Experience 9.5 Contain
 
 Follow the steps to access HCL Digital Experience 9.5 DAM from the Practitioner Studio:
 
-1.  In HCL Digital Experience 9.5 Practitioner Studio interface, select **Digital Assets** from the navigator as shown below.
+1.  In the HCL Digital Experience 9.5 Practitioner Studio interface, select **Digital Assets** from the navigator.
 
     ![Select Digital Assets from the Practitioner Studio navigator](../../images/dam_practitioner_studio_home_page.png)
 
@@ -33,7 +33,7 @@ Content authors can access and use the DAM media assets when creating content us
 
 Follow these steps that describes how to access DAM assets when creating web content in Content Composer.
 
-1.  In HCL Digital Experience 9.5 Practitioner Studio interface, select **Web Content** and then **Content Composer** from the navigator.
+1.  In the HCL Digital Experience 9.5 Practitioner Studio interface, select **Web Content** and then **Content Composer** from the navigator.
 
     ![Select Web Content from the Practitioner Studio navigator](../../images/Select_Web_Content_from_Practitioner_Studio_navigator.png)
 
@@ -65,6 +65,4 @@ To enable users to use DAM as the source while editing the content, use one of t
 <!-- ???Info "Related information:"
     - [Configuring a web content authoring environment](../../wcm/wcm_install_cfgauthoring.md)
     - [Digital Asset Management persistence architecture](../../containerization/dam_persistence_architecture.md) -->
-
-
 
