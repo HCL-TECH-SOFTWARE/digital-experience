@@ -5,7 +5,7 @@ This section contains the procedure to deploy DX on the internal network.
 
 ## How to deploy DX on the internal network
 
-To deploy DX on the internal network \(with no public access\), we need to add the platform-specific annotations for the ambassador service. Update your custom `values.yaml` file with the annotation specific to your cloud provider. Refer to the list of [annotations](https://kubernetes.io/docs/concepts/services-networking/service/#internal-load-balancer).
+To deploy DX on the internal network \(with no public access\), we need to add the platform-specific annotations for the HAProxy service. Update your custom `values.yaml` file with the annotation specific to your cloud provider. Refer to the list of [annotations](https://kubernetes.io/docs/concepts/services-networking/service/#internal-load-balancer).
 
 ```
 annotations:
@@ -19,8 +19,8 @@ annotations:
     ```
     annotations:
       service: 
-        # Annotations for ambassador service.
-        ambassador:
+        # Annotations for haproxy service.
+        haproxy:
         - key: cloud.google.com/load-balancer-type
           value : "Internal"
     ```
@@ -32,7 +32,7 @@ Follow the steps to update an existing deployment from an external network to an
 
     Update to the network type results change in IP address and requires updates to your DNS services.
 
-1.  Disable ambassador in your custom `values.yaml` file and then do helm update.
+1.  Disable haproxy in your custom `values.yaml` file and then do helm update.
 
     ??? example "Example:"
 
@@ -41,8 +41,8 @@ Follow the steps to update an existing deployment from an external network to an
         applications:
           --
           --
-          # Deploys the Ambassador Ingress and Redis
-          ambassador: false
+          # Deploys haproxy
+          haproxy: false
         ```
 
 2.  After updating your custom `values.yaml` file, run helm update command.
@@ -56,7 +56,7 @@ Follow the steps to update an existing deployment from an external network to an
         helm upgrade dx-deployment -n dxns . -f ./cloud-deploy-values.yaml
         ```
 
-3.  After the update is completed, enable the ambassador and add annotations specific to your cloud provider in custom `values.yaml` file.
+3.  After the update is completed, enable haproxy and add annotations specific to your cloud provider in custom `values.yaml` file.
 
     ```
    
@@ -64,8 +64,8 @@ Follow the steps to update an existing deployment from an external network to an
     applications:
       --
       --
-      # Deploys the Ambassador Ingress and Redis
-      ambassador: true
+      # Deploys haproxy
+      haproxy: true
       --
       --
     # Annotations for different DX Resources.
@@ -78,15 +78,15 @@ Follow the steps to update an existing deployment from an external network to an
     # value: VALUE2
     annotations:
       service: 
-        # Annotations for ambassador service.
-        ambassador:
+        # Annotations for haproxy service.
+        haproxy:
          - key: cloud.google.com/load-balancer-type
            value : "Internal"
     ```
 
     !!! note
 
-            To switch your existing deployment from an internal network to a public network, remove the annotation from the ***ambassador service.***
+            To switch your existing deployment from an internal network to a public network, remove the annotation from the ***haproxy service.***
 
 4.  After updating `values.yaml` with annotations, run helm update command.
 

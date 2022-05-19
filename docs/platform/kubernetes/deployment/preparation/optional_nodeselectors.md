@@ -63,17 +63,15 @@ The node is now labeled with the desired target label:
 
 You can assign all pods \(deployed by the Helm Chart of HCL Digital Experience 9.5\) to specific nodes by using `NodeSelectors`. Modify your custom-values.yaml file to include the `NodeSelector`configuration. Make sure to use the proper indentation as YAML is indent-sensitive.
 
-Example for Ambassador:
+Example for HAProxy:
 
 ```
 nodeSelector:
-  ambassadorIngress:
-    purpose: ingress
-  ambassadorRedis:
+  haproxy:
     purpose: ingress
 ```
 
-This configuration directs the Ambassador Ingress and Ambassador Redis to run nodes with the label purpose: `ingress`.
+This configuration directs HAProxy to run nodes with the label purpose: `ingress`.
 
 Once install is completed, the pods are running on your desired node. For example `k8s-node-4`.
 
@@ -85,12 +83,12 @@ kubectl get pods -o wide -n my-deployment
 
 # Command output
 NAME                                   READY   STATUS    RESTARTS   AGE     IP             NODE         NOMINATED NODE   READINESS GATES
-dx-ambassador-769b86f6ff-knhgt         1/1     Running   0          2m12s   10.244.4.111   k8s-node-4   <none>           <none>
-dx-ambassador-769b86f6ff-qtqmv         1/1     Running   0          2m12s   10.244.4.110   k8s-node-4   <none>           <none>
-dx-ambassador-769b86f6ff-whmw6         1/1     Running   0          2m12s   10.244.4.112   k8s-node-4   <none>           <none>
-dx-ambassador-redis-6cbbf58649-gtqwv   1/1     Running   0          2m12s   10.244.4.106   k8s-node-4   <none>           <none>
-dx-ambassador-redis-6cbbf58649-j8v4d   1/1     Running   0          2m12s   10.244.4.107   k8s-node-4   <none>           <none>	
-dx-ambassador-redis-6cbbf58649-qtgqp   1/1     Running   0          2m12s   10.244.4.109   k8s-node-4   <none>           <none>
+dx-haproxy-769b86f6ff-knhgt         1/1     Running   0          2m12s   10.244.4.111   k8s-node-4   <none>           <none>
+dx-haproxy-769b86f6ff-qtqmv         1/1     Running   0          2m12s   10.244.4.110   k8s-node-4   <none>           <none>
+dx-haproxy-769b86f6ff-whmw6         1/1     Running   0          2m12s   10.244.4.112   k8s-node-4   <none>           <none>
+dx-haproxy-redis-6cbbf58649-gtqwv   1/1     Running   0          2m12s   10.244.4.106   k8s-node-4   <none>           <none>
+dx-haproxy-redis-6cbbf58649-j8v4d   1/1     Running   0          2m12s   10.244.4.107   k8s-node-4   <none>           <none>	
+dx-haproxy-redis-6cbbf58649-qtgqp   1/1     Running   0          2m12s   10.244.4.109   k8s-node-4   <none>           <none>
 ```
 
 **OpenShift Client:**
@@ -101,11 +99,11 @@ oc get pods -o wide -n my-deployment
 
 # Command output
 NAME                                   READY   STATUS    RESTARTS   AGE     IP             NODE         NOMINATED NODE
-dx-ambassador-769b86f6ff-knhgt         1/1     Running   0          2m12s   10.244.4.111   k8s-node-4   <none>
-dx-ambassador-769b86f6ff-qtqmv         1/1     Running   0          2m12s   10.244.4.110   k8s-node-4   <none>
-dx-ambassador-769b86f6ff-whmw6         1/1     Running   0          2m12s   10.244.4.112   k8s-node-4   <none>
-dx-ambassador-redis-6cbbf58649-gtqwv   1/1     Running   0          2m12s   10.244.4.106   k8s-node-4   <none>
-dx-ambassador-redis-6cbbf58649-j8v4d   1/1     Running   0          2m12s   10.244.4.107   k8s-node-4   <none>
-dx-ambassador-redis-6cbbf58649-qtgqp   1/1     Running   0          2m12s   10.244.4.109   k8s-node-4   <none>
+dx-haproxy-769b86f6ff-knhgt         1/1     Running   0          2m12s   10.244.4.111   k8s-node-4   <none>
+dx-haproxy-769b86f6ff-qtqmv         1/1     Running   0          2m12s   10.244.4.110   k8s-node-4   <none>
+dx-haproxy-769b86f6ff-whmw6         1/1     Running   0          2m12s   10.244.4.112   k8s-node-4   <none>
+dx-haproxy-redis-6cbbf58649-gtqwv   1/1     Running   0          2m12s   10.244.4.106   k8s-node-4   <none>
+dx-haproxy-redis-6cbbf58649-j8v4d   1/1     Running   0          2m12s   10.244.4.107   k8s-node-4   <none>
+dx-haproxy-redis-6cbbf58649-qtgqp   1/1     Running   0          2m12s   10.244.4.109   k8s-node-4   <none>
 
 ```
