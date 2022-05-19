@@ -62,13 +62,11 @@ In front of all Pods is a Service which manages routing the traffic to the Pods.
 
 **Ingress and routing**
 
-For accessing applications from the outside, we deploy an [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) in form of an [Ambassador.](https://www.getambassador.io/learn/kubernetes-ingress/) This Ingress routes the incoming requests to all application Services, which then distributes the requests to the corresponding Pods hosting the applications.
+For accessing applications from the outside, we deploy an [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) in form of an HAProxy. This Ingress routes the incoming requests to all application Services, which then distributes the requests to the corresponding Pods hosting the applications.
 
-![Ingress and routing](../../../images/helm_chart_ingress_routing.png)
+![Ingress and routing](/docs/platform/kubernetes/_img/ambassador-architecture.png)
 
-Ambassador uses Mappings that are created by the DX 9.5 Helm deployment to decide which requests needs to be mapped to which application in the DX 9.5 deployment \(back-end\). When requests are initiated from outside the Kubernetes or OpenShift cluster, the Ambassador tries to fulfill that request by using the configured Mappings. If it finds a matching endpoint, it forwards the request to the corresponding Service, which then forwards the same requests to a Pod that is ready to fulfill the request.
-
-The Ambassador performs SSL termination and must be provided with a TLS secret inside Kubernetes that contains the SSL certificate used.
+HAProxy uses Mappings that are created by the DX 9.5 Helm deployment to decide which requests needs to be mapped to which application in the DX 9.5 deployment \(back-end\). When requests are initiated from outside the Kubernetes or OpenShift cluster, HAProxy tries to fulfill that request by using the configured Mappings. If it finds a matching endpoint, it forwards the request to the corresponding Service, which then forwards the same requests to a Pod that is ready to fulfill the request.
 
 -   **[DX 9.5 Core Interactions with Kubernetes](../architecture/core_interactions_kubernetes.md)**  
 This section provides more detailed information about how the  Digital Experience 9.5 Core container interacts with Kubernetes. Understanding this information may assist in interpreting observed behavior or in troubleshooting your HCL DX 9.5 Container deployments in Helm.

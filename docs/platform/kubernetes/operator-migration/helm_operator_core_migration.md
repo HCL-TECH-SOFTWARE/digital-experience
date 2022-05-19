@@ -142,7 +142,7 @@ Ensure that the Helm-based deployment is in the correct state before restoring a
         persistence: false
         remoteSearch: false
         ringApi: false
-        ambassador: false
+        haproxy: false
     ```
 
 -   **Start the Helm deployment.** If you are running the migration of the Core first, run the following command:

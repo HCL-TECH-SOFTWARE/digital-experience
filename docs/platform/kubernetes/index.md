@@ -15,7 +15,7 @@ This section presents the latest HCL DX 9.5 Docker container update images avail
 -   **[DX on Docker](../docker/dxondocker.md)**  
 
 -   **[Helm-based deployment](../containerization/helm.md)**  
-Learn how to deploy HCL Digital Experience 9.5 containers along with Ambassador to Kubernetes, as verified in Helm. Support to deploy to Red Hat OpenShift, Amazon Elastic Kubernetes Service \(Amazon EKS\), and Microsoft Azure Kubernetes Service \(AKS\) using Helm is added in Container Update CF197.
+Learn how to deploy HCL Digital Experience 9.5 containers along with HAProxy to Kubernetes, as verified in Helm. Support to deploy to Red Hat OpenShift, Amazon Elastic Kubernetes Service \(Amazon EKS\), and Microsoft Azure Kubernetes Service \(AKS\) using Helm is added in Container Update CF197.
 -   **[Operator-based deployment](../containerization/deploy_container_platforms.md)**  
 This section outlines the supported container platforms for HCL Digital Experience 9.5, and instructions on how to deploy to supported container environments.
 -   **[Hybrid deployment - Operator](../containerization/hybrid_deployment_operator.md)**  
