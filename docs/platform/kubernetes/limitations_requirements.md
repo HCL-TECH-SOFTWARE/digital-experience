@@ -74,9 +74,9 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 !!! warning "Discontinuation of Operator"
     **Attention:** Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience \(DX\) [Operator-based deployments](operator-based/deploy_container_platforms.md) and will provide support only for [Helm-based deployments](architecture/helm_overview.md). There will be no further updates or code fixes provided for the Operator-based deployments. HCL requires all customers to migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based deployments](operator-migration/operator_migration_preparation.md).
 
-The following section describes the requirements to deploy the HCL Digital Experience 9.5 images to container platforms and current limitations using the Operator-based <!--[Operator-based](operator-based/dxtools_dxctl.md)--> deployment process:
+The following section describes the requirements to deploy the HCL Digital Experience 9.5 images to container platforms and current limitations using the Operator-based <!--[Operator-based](operator-based/dxtools_dxctl.md)  deployment process:-->
 
--   **HCL Digital Experience 9.5 is supported on Docker, Red Hat OpenShift, Amazon Elastic Kubernetes Service \(EKS\), and Microsoft Azure Kubernetes Service \(AKS\), and Google Kubernetes Engine \(GKE\).** Other Kubernetes platforms are not fully supported. The HCL Operator is not likely to work, however, support for additional Kubernetes as a Service \(KaaS\) is ongoing and additions is reflected in the HCL Digital Experience 9.5 Support Statements.
+<!-- -   **HCL Digital Experience 9.5 is supported on Docker, Red Hat OpenShift, Amazon Elastic Kubernetes Service \(EKS\), and Microsoft Azure Kubernetes Service \(AKS\), and Google Kubernetes Engine \(GKE\).** Other Kubernetes platforms are not fully supported. The HCL Operator is not likely to work, however, support for additional Kubernetes as a Service \(KaaS\) is ongoing and additions is reflected in the HCL Digital Experience 9.5 Support Statements.
     -   Additional features and functions may be tied to the use of the HCL DX Operators for deployment.
     -   HCL highly recommends following the deployment strategies outlined within this documentation. The operator-based deployment goals are:
 
@@ -94,7 +94,7 @@ The following section describes the requirements to deploy the HCL Digital Exper
                 -   Customers should not run multiple HCL Digital Experience 9.5 container deployments in a single Kubernetes namespace \(in the case of Red Hat OpenShift, in a single OpenShift project\).  This configuration is not supported at this time.
                 -   It is not supported to run two different versions of HCL Digital Experience 9.5 container deployments in a single Kubernetes cluster.
 
-    -   Use of Web Application Bridge <!-- [Web Application Bridge](../../design/integrationtools/wab.md)-->is currently unsupported on HCL Digital Experience 9.5 deployments to container platforms such as Kubernetes and Red Hat OpenShift, using the Operator-based deployment method.
+    -   Use of Web Application Bridge <!-- [Web Application Bridge](../../design/integrationtools/wab.md) is currently unsupported on HCL Digital Experience 9.5 deployments to container platforms such as Kubernetes and Red Hat OpenShift, using the Operator-based deployment method.
     -   Beginning with HCL DX Container Update CF199, Web Application Bridge can be used in container deployments using the Helm deployment method.
 
 -   **Supported file system requirements**:
@@ -132,9 +132,9 @@ The following section describes the requirements to deploy the HCL Digital Exper
 
         With DX 9.5 Container Update CF171 and higher, WebSphere Application Server 9.0.5.2 is included and that IBM fix pack removed the IBM JSF portlet bridge. If you are using JSF portlets and leverage the JSF portlet bridge, proceed to the HCL DX 9.5 Container Update CF18 for the required JavaServer Faces Bridge support before moving to a container-based deployment.
 
-        The HCL JavaServer Faces Bridge is added to HCL Digital Experience offerings with Container Update CF18 and CF18 on-premises platform CF update. For more information please see [What's New in Container Update CF18](../../whatsnew/cf18/new_cf18.md). -->
-
-        <!-- !!! note
+        The HCL JavaServer Faces Bridge is added to HCL Digital Experience offerings with Container Update CF18 and CF18 on-premises platform CF update. For more information please see [What's New in Container Update CF18](../../whatsnew/cf18/new_cf18.md). 
+ 
+        !!! note
             For information about the limitations related to JSF 2.2 support, see [Limitations when running HCL DX Portlet Bridge on WebSphere Application Server 9.0](../../design/dev-portlet/dx_bridge_for_jsf_onwas9x.md#section_ig1_5hx_3qb). -->
 
 ??? info "Related information:"

@@ -1,28 +1,28 @@
 # HCL Digital Experience 9.5 for Express Detailed System Requirements
 
 ## Applies to
-This document provides minimum system requirements for version [9.5] release of [HCL Digital Experience for Express 9.5]. Higher maintenance levels, such as fix packs and service packs, may be supported as they become available and will be updated in this document, and some may be made available through HCL channels For detailed system requirements for other [HCL Digital Experience] releases, see: [System Requirements | HCL Digital Experience]. Detailed system requirements are the complete lists of hardware requirements, supported operating systems, prerequisites and optional supported software, with component-level details and operating system restrictions.
+This document provides minimum system requirements for version [9.5] release of [HCL Digital Experience for Express 9.5]. Higher maintenance levels, such as fix packs and service packs, may be supported as they become available and will be updated in this document, and some may be made available through HCL channels For detailed system requirements for other [HCL Digital Experience] releases, see: [System Requirements](https://help.hcltechsw.com/digital-experience/9.5/overview/inst_req.html){:target="_blank"}. Detailed system requirements are the complete lists of hardware requirements, supported operating systems, prerequisites and optional supported software, with component-level details and operating system restrictions.
 
 ## System Requirements
-Operating Systems
-Hypervisors
-Prerequisites
-Supported Software
-DX Kubernetes Support Matrix
-Collaboration
-Databases
-Development Tools
-JDBC Drivers
-LDAP Server
-Product Specific or Mixed Content
-Security Management
-Web Browsers
-Web Servers
-WebDAV Client
-Hardware
-Packaging List
-Glossary
-Disclaimer
+- [Operating Systems](#operating-systems)
+- [Hypervisors](#hypervisors)
+- [Prerequisites](#prerequisites)
+- [Supported Software](#supported-software)
+- [DX Kubernetes Support Matrix](#dx-kubernetes-support-matrix)
+- [Collaboration](#collaboration---summary)
+- [Databases](#database---summary)
+- [Development Tools](#development-tools---summary)
+- [JDBC Drivers](#jdbc-drivers---summary)
+- [LDAP Server](#ldap-servers---summary)
+- [Product Specific or Mixed Content](#product-specific-or-mixed-content---summary)
+- [Security Management](#security-management---summary)
+- [Web Browsers](#web-browsers---summary)
+- [Web Servers](#web-servers---summary-non-container-platforms)
+- [WebDAV Client](#webdav-client---summary)
+- [Hardware](#hardware)
+- [Packaging List](#packaging-list)
+- [Glossary](#glossary)
+- [Disclaimer](#disclaimers)
 
 ### Operating Systems
 The operating systems section specifies the operating systems that HCL Digital Experience for Portal Express 9.5 supports, and is organized by the operating system family. Operating system families include Linux and Windows.
@@ -72,158 +72,26 @@ Windows 10 Pro|Base*|Base and later maintenance|x86-64|64-Exploit, 64-Tolerate|9
 |Windows Server 2022|Base|Base and later maintenance|x86-64|64-Exploit, 64-Tolerate|9.5 CF199|Full|
 
 *Support for developer platform only
-Go to top
 
 ### Hypervisors
 The Hypervisors section specifies the hypervisors that HCL Portal Express 9.5 supports.
-Linux Summary
-Hypervisor	Product Minimum	Components	Deployment Units	Supported Guest Operating System
 
-IBM PR/SM any version
-9.5
-Full
-Server
- 	•	SUSE Linux Enterprise Server (SLES) 11 IBM zSystems
+#### Linux Summary
+|Hypervisor|Product Minimum|Components|Deployment Units|Supported Guest Operating System|
+|---------|---------|---------|---------|---------|
+|IBM PR/SM any version|9.5|Full|Server|- SUSE Linux Enterprise Server (SLES) 11 IBM zSystems|
+|IBM PowerVM Hypervisor (LPAR, DPAR, Micro-Partition) any supported version|9.5|Full|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
+|KVM in SUSE Linux Enterprise Server (SLES) 11 and later|9.5|Full|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
+|Red Hat KVM as delivered with Red Hat Enterprise Linux (RHEL) and its RHEV equivalent 7.0|9.5|Full|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian|<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
+|VMware ESXi 5.0|9.5|Full|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
+|VMware ESXi 5.5 and later|9.5|Full|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
+|VMware ESXi 6.0 and later|9.5|Full|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
+|VMware ESXi 6.1 and later|9.5|Full|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- 	Red Hat Enterprise Linux (RHEL) Server 7 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
+|VMware ESXi 6.5 and later|9.5|Full|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
+|z/VM 6.1 and later|9.5|Full|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
+|z/VM 6.2 and later|9.5|Full|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
+|z/VM 6.3 and later|9.5|Full|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
 
-IBM PowerVM Hypervisor (LPAR, DPAR, Micro-Partition) any supported version
-9.5
-Full
-Server
- 	All supported operating systems:
-•	SUSE Linux Enterprise Server (SLES) 11 IBM z Systems
-•	Red Hat Enterprise Linux (RHEL) Server 7 x86-64
-•	SUSE Linux Enterprise Server (SLES) 12 IBM z Systems
-•	Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems
-•	Ubuntu 16.04 LTS x86-64
-•	Ubuntu 16.04 LTS POWER System - Little Endian
-•	Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian
-
-
-KVM in SUSE Linux Enterprise Server (SLES) 11 and later
-9.5
-Full
-Server	All supported operating systems:
-•	SUSE Linux Enterprise Server (SLES) 11 IBM z Systems
-•	Red Hat Enterprise Linux (RHEL) Server 7 x86-64
-•	SUSE Linux Enterprise Server (SLES) 12 IBM z Systems
-•	Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems
-•	Ubuntu 16.04 LTS x86-64
-•	Ubuntu 16.04 LTS POWER System - Little Endian
-•	Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian
-
-
-Red Hat KVM as delivered with Red Hat Enterprise Linux (RHEL) and its RHEV equivalent 7.0
-9.5
-Full
-Server	All supported operating systems:
-•	SUSE Linux Enterprise Server (SLES) 11 IBM z Systems
-•	Red Hat Enterprise Linux (RHEL) Server 7 x86-64
-•	SUSE Linux Enterprise Server (SLES) 12 IBM z Systems
-•	Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems
-•	Ubuntu 16.04 LTS x86-64
-•	Ubuntu 16.04 LTS POWER System - Little Endian
-•	Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian
-
-
-VMware ESXi 5.0
-9.5
-Full
-Server	All supported operating systems:
-•	SUSE Linux Enterprise Server (SLES) 11 IBM z Systems
-•	Red Hat Enterprise Linux (RHEL) Server 7 x86-64
-•	SUSE Linux Enterprise Server (SLES) 12 IBM z Systems
-•	Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems
-•	Ubuntu 16.04 LTS x86-64
-•	Ubuntu 16.04 LTS POWER System - Little Endian
-•	Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian
-
-
-VMware ESXi 5.5 and later
-9.5
-Full
-Server	All supported operating systems:
-•	SUSE Linux Enterprise Server (SLES) 11 IBM z Systems
-•	Red Hat Enterprise Linux (RHEL) Server 7 x86-64
-•	SUSE Linux Enterprise Server (SLES) 12 IBM z Systems
-•	Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems
-•	Ubuntu 16.04 LTS x86-64
-•	Ubuntu 16.04 LTS POWER System - Little Endian
-•	Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian
-
-
-VMware ESXi 6.0 and later
-9.5
-Full
-Server	All supported operating systems:
-•	SUSE Linux Enterprise Server (SLES) 11 IBM z Systems
-•	Red Hat Enterprise Linux (RHEL) Server 7 x86-64
-•	SUSE Linux Enterprise Server (SLES) 12 IBM z Systems
-•	Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems
-•	Ubuntu 16.04 LTS x86-64
-•	Ubuntu 16.04 LTS POWER System - Little Endian
-•	Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian
-
-
-VMware ESXi 6.1 and later
-9.5
-Full
-Server	All supported operating systems:
-•	SUSE Linux Enterprise Server (SLES) 11 IBM z Systems
-•	Red Hat Enterprise Linux (RHEL) Server 7 x86-64
-•	SUSE Linux Enterprise Server (SLES) 12 IBM z Systems
-•	Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems
-•	Ubuntu 16.04 LTS x86-64
-•	Ubuntu 16.04 LTS POWER System - Little Endian
-•	Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian
-
-VMware ESXi 6.5 and later
-9.5
-Full
-Server	All supported operating systems:
-•	SUSE Linux Enterprise Server (SLES) 11 IBM z Systems
-•	Red Hat Enterprise Linux (RHEL) Server 7 x86-64
-•	SUSE Linux Enterprise Server (SLES) 12 IBM z Systems
-•	Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems
-•	Ubuntu 16.04 LTS x86-64
-•	Ubuntu 16.04 LTS POWER System - Little Endian
-•	Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian
-
-z/VM 6.1 and later
-9.5
-Full
-Server	All supported operating systems:
-•	SUSE Linux Enterprise Server (SLES) 11 IBM z Systems
-•	Red Hat Enterprise Linux (RHEL) Server 7 x86-64
-•	SUSE Linux Enterprise Server (SLES) 12 IBM z Systems
-•	Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems
-•	Ubuntu 16.04 LTS x86-64
-•	Ubuntu 16.04 LTS POWER System - Little Endian
-•	Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian
-
-z/VM 6.2 and later
-9.5
-Full
-Server	All supported operating systems:
-•	SUSE Linux Enterprise Server (SLES) 11 IBM z Systems
-•	Red Hat Enterprise Linux (RHEL) Server 7 x86-64
-•	SUSE Linux Enterprise Server (SLES) 12 IBM z Systems
-•	Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems
-•	Ubuntu 16.04 LTS x86-64
-•	Ubuntu 16.04 LTS POWER System - Little Endian
-•	Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian
-
-z/VM 6.3 and later
-9.5
-Full
-Server	All supported operating systems:
-•	SUSE Linux Enterprise Server (SLES) 11 IBM z Systems
-•	Red Hat Enterprise Linux (RHEL) Server 7 x86-64
-•	SUSE Linux Enterprise Server (SLES) 12 IBM z Systems
-•	Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems
-•	Ubuntu 16.04 LTS x86-64
-•	Ubuntu 16.04 LTS POWER System - Little Endian
-•	Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian
-Go to top
 Windows Summary
 Hypervisor	Product Minimum	Components	Deployment Units	Supported Guest Operating System
 
