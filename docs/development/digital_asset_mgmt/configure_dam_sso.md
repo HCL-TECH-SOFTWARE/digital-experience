@@ -32,57 +32,57 @@ To configure single sign-on between HCL Digital Experience staging and productio
 
 HCL Digital Experience 9.5 staging services:
 
--   HCL Digital Experience container core services:
+    -   HCL Digital Experience container core services:
 
-    ```
-    https://dx-deployment-service-comm-stage-comm-stage.apps.hcl-dxdev.hcl-dx-dev.net/wps/portal
-    ```
+        ```
+        https://dx-deployment-service-comm-stage-comm-stage.apps.hcl-dxdev.hcl-dx-dev.net/wps/portal
+        ```
 
--   IBM WebSphere Application Server:
+    -   IBM WebSphere Application Server:
 
-    ```
-    https://dx-deployment-service-was-home-comm-stage.apps.hcl-dxdev.hcl-dx-dev.net/ibm/console/logon.jsp
-    ```
+        ```
+        https://dx-deployment-service-was-home-comm-stage.apps.hcl-dxdev.hcl-dx-dev.net/ibm/console/logon.jsp
+        ```
 
 
 HCL Digital Experience 9.5 target production services:
 
--   HCL Digital Experience core services:
+    -   HCL Digital Experience core services:
 
-    ```
-    https://dx-deployment-service-comm-target-comm-target.apps.hcl-dxdev.hcl-dx-dev.net/wps/portal
-    ```
+        ```
+        https://dx-deployment-service-comm-target-comm-target.apps.hcl-dxdev.hcl-dx-dev.net/wps/portal
+        ```
 
--   IBM WebSphere Application Server:
+    -   IBM WebSphere Application Server:
 
-    ```
-    https://dx-deployment-service-was-home-comm-target.apps.hcl-dxdev.hcl-dx-dev.net/ibm/console/logon.jsp
-    ```
+        ```
+        https://dx-deployment-service-was-home-comm-target.apps.hcl-dxdev.hcl-dx-dev.net/ibm/console/logon.jsp
+        ```
 
 
 1.  In the HCL Digital Experience 9.5 container staging server, access the WebSphere Application Server console to generate an LTPA token and define a domain. See the following:
     -   Generate the LTPA.
 
-        ![](../images/dam_sso_01.png "Global security > Single sign-on (SSO) screen")
+        ![Global security > Single sign-on (SSO) screen](../../images/dam_sso_01.png)
 
     -   Set the domain.
 
-        ![](../images/dam_sso_02.png "Enter a domain name")
+        ![Enter a domain name](../../images/dam_sso_02.png)
 
     -   Export the LTPA token.
 
-        ![](../images/dam_sso_03.png "Export the LTPA key")
+        ![Export the LTPA key](../../images/dam_sso_03.png)
 
 2.  Use a command line interface to copy the LTPA key file from the staging server to the production server.
-3.  Use a command line interface to access the copy of the LTPA file stored on the staging server \(from the previous step\). Copy that file to the production server. home/dx\_user/ltpa\_stage.key
+3.  Use a command line interface to access the copy of the LTPA file stored on the staging server \(from the previous step\). Copy that file to the production server. **home/dx\_user/ltpa\_stage.key**
 4.  Open the WebSphere Application Server console on the target HCL Digital Experience 9.5 container deployment.
 5.  Using the WebSphere Application Server console on the target staging HCL Digital Experience 9.5 container deployment server, import the LTPA key, as in the following:
 
-    ![](../images/dam_sso_04.png "Import the LTPA key")
+    ![Import the LTPA key](../../images/dam_sso_04.png)
 
 6.  On the target production HCL Digital Experience 9.5 container server, set the domain.
 
-    ![](../images/dam_sso_05.png "Set the domain")
+    ![Set the domain](../../images/dam_sso_05.png)
 
 7.  Once the steps are completed, stop and start both the source and the target HCL Digital Experience 9.5 container servers.
 
@@ -96,5 +96,5 @@ HCL Digital Experience 9.5 target production services:
 
 HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).
 
-**Parent topic:**[HCL Digital Asset Management](../digital_asset_mgmt/digital_asset_mgmt_overview.md)
-
+<!-- ???Info Related Information
+   - [Digital Experience on containerized platforms](containerization/deployment.md) -->

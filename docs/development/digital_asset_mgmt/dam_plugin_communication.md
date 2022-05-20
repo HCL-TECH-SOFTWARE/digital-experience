@@ -105,5 +105,4 @@ See this page for the [Callback-API Specification](https://opensource.hcltechsw.
 }
 ```
 
-**Parent topic:**[Using DAM extensibility](../containerization/dam_extensibility.md)
 
