@@ -12,7 +12,8 @@ Similar to rendition and thumbnail actions such as crop and resize, the Image pr
 
 1.  The first change is in the Plugin configuration, which specifies the methods and URL to be invoked for metadata generation.
 
-    **Note:** The action name needs to be `metadata` and cannot contain any custom names.
+    !!! note
+        The action name needs to be `metadata` and cannot contain any custom names.
 
     ```
     
@@ -32,7 +33,8 @@ Similar to rendition and thumbnail actions such as crop and resize, the Image pr
 
 2.  The second change is to add metadata to the new stack configuration `SupplementalStack` in rendition extensibility configuration.
 
-    **Note:** The operation name needs to be `metadata` and cannot contain any custom names.
+    !!! note 
+        The operation name needs to be `metadata` and cannot contain any custom names.
 
     ```
     
@@ -72,70 +74,68 @@ Similar to rendition and thumbnail actions such as crop and resize, the Image pr
     }
     ```
 
-    Example:
+    !!! example
 
-    ```
-    
-    {
-      'image/jpeg': {
-        rendition: [
-          {
-            name: 'Original',
-            transformationStack: [],
-            thumbnailStack: [],
-            supplementalStack: [
-              {
-                plugin: 'image-processor',
-                operation: {
-                  metadata: {},
+      ```
+      
+      {
+        'image/jpeg': {
+          rendition: [
+            {
+              name: 'Original',
+              transformationStack: [],
+              thumbnailStack: [],
+              supplementalStack: [
+                {
+                  plugin: 'image-processor',
+                  operation: {
+                    metadata: {},
+                  },
                 },
-              },
-            ],
-          },
-          {
-            name: 'Desktop',
-            transformationStack: [],
-            thumbnailStack: [],
-            supplementalStack: [
-              {
-                plugin: 'image-processor',
-                operation: {
-                  metadata: {},
+              ],
+            },
+            {
+              name: 'Desktop',
+              transformationStack: [],
+              thumbnailStack: [],
+              supplementalStack: [
+                {
+                  plugin: 'image-processor',
+                  operation: {
+                    metadata: {},
+                  },
                 },
-              },
-            ],
-          },
-          {
-            name: 'Tablet',
-            transformationStack: [],
-            thumbnailStack: [],
-            supplementalStack: [
-              {
-                plugin: 'image-processor',
-                operation: {
-                  metadata: {},
+              ],
+            },
+            {
+              name: 'Tablet',
+              transformationStack: [],
+              thumbnailStack: [],
+              supplementalStack: [
+                {
+                  plugin: 'image-processor',
+                  operation: {
+                    metadata: {},
+                  },
                 },
-              },
-            ],
-          },
-          {
-            name: 'Smartphone',
-            transformationStack: [],
-            thumbnailStack: [],
-            supplementalStack: [
-              {
-                plugin: 'image-processor',
-                operation: {
-                  metadata: {},
+              ],
+            },
+            {
+              name: 'Smartphone',
+              transformationStack: [],
+              thumbnailStack: [],
+              supplementalStack: [
+                {
+                  plugin: 'image-processor',
+                  operation: {
+                    metadata: {},
+                  },
                 },
-              },
-            ],
-          },
-        ],
+              ],
+            },
+          ],
+        }
       }
-    }
-    ```
+      ```
 
-
-**Parent topic:**[Using DAM extensibility](../containerization/dam_extensibility.md)
 

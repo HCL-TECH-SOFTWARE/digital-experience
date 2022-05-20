@@ -1,41 +1,42 @@
 # Manage collections
 
-Learn more about creating, configuring, and deleting media asset collections using Digital Asset Management.
+Learn more about creating, configuring, and deleting media asset collections using Digital Asset Management \(DAM\).
 
 ## Prerequisite
 
-HCL Digital Asset Management should be installed and configured to HCL Digital Experience 9.5 Container Release Update CF181 and higher. See the [Install the HCL Digital Experience 9.5 Container components](../containerization/install_config_cc_dam.md) topic for instructions.
+HCL DAM should be installed and configured to HCL Digital Experience 9.5 Container Release Update CF181 and higher. See the [Install the HCL Digital Experience 9.5 Container components](../install_config_dam.md) topic for instructions.
 
 ## Browse and search media assets in a collection
 
-Follow these steps to work with Collections in HCL Digital Experience 9.5 Digital Asset Management.
+Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
-1.  From the HCL Digital Experience 9.5 Digital Asset Management interface, click **Collections**. The HCL Digital Experience 9.5 Digital Asset Management interface allows you to see previews of media assets for a specified collection. For example, a curated set of media assets are grouped in a collection named **Furniture Gallery** as shown below.
+1.  From the HCL Digital Experience 9.5 DAM user interface, click **Collections**. The HCL DAM user user interface allows you to see previews of media assets for a specified collection. For example, a curated set of media assets are grouped in a collection named **Furniture Gallery** as shown below.
 
-    ![](../images/dam_upload_media_collections.png "Digital Asset Management user interface")
+    ![Digital Asset Management user interface](../../../images/dam_upload_media_collections.png)
 
-    This Collections interface presents you with the following options:
+    Following options are displayed in Collections interface:
 
     -   **Create Collection** - Create a new collection or a new nested collection \(when used inside an existing collection\)
-    -   **View information** - opens the Information panel and shows Access Control
+    -   **View information** - Opens the Information panel and shows Access Control
 
-        ![](../images/dam_collections_interface_view_information.png "Information Panel")
+        ![Information Panel](../../../images/dam_collections_interface_view_information.png)
 
         -   **Information** - Allows you to update the Collection name and description.
         -   **Access Control** - Allows you to set who can access the media assets in the Collection.
     -   **Delete Collection** - Deletes the selected Collection.
-2.  Select the **Filter** option to filter media asset results by **Favorites**, by **Asset types**, or **Asset size**.
+2.  Select the **Filter** option to filter media asset results by **Favorites**, **Asset types**, or **Asset size**.
 
     -   **Favorites** - Filters media assets added to your favorites.
     -   **Asset types** - Filters media assets by type. You can further refine search results by selecting a specific file type.
     -   **Asset size** - Filters media assets by size.
-    ![](../images/dam_filter_by_asset_types_asset_size.png "Filter options")
+    ![Filter options](../../../images/dam_filter_by_asset_types_asset_size.png)
 
-    **Note:** Asset size filter is available in HCL DX CF192 and later.
+    !!! note 
+        Asset size filter is available in HCL DX CF192 and later.
 
 3.  On the top right, click the **Grid** or **List** icon \(**Open view options**\) to change how the media assets or collections are displayed:
 
-    ![](../images/dam_collections_open_view_as.png "Open view options")
+    ![Open view options](../../../images/dam_collections_open_view_as.png)
 
     -   **View as** - Lists options to view media assets or collections.
         -   **Grid** - Shows media assets in an equal-sized thumbnail view. This is the default display view.
@@ -48,34 +49,34 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 Digita
     -   **Order** - Lists options to sort order of media assets or collections depending on the selected **Sort by** option:
         -   **Date**
 
-            ![](../images/dam_grid_date_newer_to_older.png "Date > Newer to older")
+            ![Date > Newer to older](../../../images/dam_grid_date_newer_to_older.png)
 
             -   Order by file name by **Older to newer** date
             -   Order by file name by **Newer to older** date
         -   **Name**
 
-            ![](../images/dam_grid_name_z_to_a.png "Name > Z to A")
+            ![Name > Z to A](../../../images/dam_grid_name_z_to_a.png)
 
             -   Order by file name from **A-Z**
             -   Order by file name **Z-A**
         -   **Type**
 
-            ![](../images/dam_grid_type_descending.png "Type > Descending")
+            ![Type > Descending](../../../images/dam_grid_type_descending.png)
 
             -   **Ascending**
             -   **Descending**
         -   **Size**
 
-            ![](../images/dam_grid_size_larger_to_smaller.png "Size > Larger to smaller")
+            ![Size > Larger to smaller](../../../images/dam_grid_size_larger_to_smaller.png)
 
             -   **Smaller to larger**
             -   **Larger to smaller**
 
 ## Modify information metadata of a media asset collection
 
-1.  From the HCL Digital Experience 9.5 Digital Asset Management interface, hover over a collection and click the **Information** icon \(small i\).
+1.  From the HCL Digital Experience 9.5 DAM user interface, hover over a collection and click the **Information** icon \(small i\).
 
-    ![](../images/dam_collection_information.png "DAM Collection Information")
+    ![DAM Collection Information](../../../images/dam_collection_information.png)
 
 2.  On the **Information** panel, edit the **Collection name** and **Description** as applicable.
 3.  Click **Save** to save changes.
@@ -88,22 +89,22 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 Digita
 2.  Click **Access**.
 3.  Assign levels for other users to access media items stored within the collection by clicking **Add user**.
 
-    ![](../images/dam_access_panel.png "Access Control > Add user")
+    ![Access Control > Add user](../../../images/dam_access_panel.png)
 
 4.  When you click **Add User**, a pop-up displays options to add these user access levels for individuals and groups as defined by the user directory integrated to your Digital Experience platform. Select the appropriate member. In this example, click **Administrator**.
 
-    ![](../images/dam_access_control_assign_members.png "Access Control > Assign members")
+    ![Access Control > Assign members](../../../images/dam_access_control_assign_members.png)
 
 5.  Select the appropriate **Access rights**. For this example, click **All authenticated DX users**.
 
-    ![](../images/dam_access_control_assign_member_access_rights_all.png "Assign access rights > All")
+    ![Assign access rights > All](../../../images/dam_access_control_assign_member_access_rights_all.png)
 
 6.  Click **Add users and groups** to save changes.
 7.  Once added, you can specify additional users for the selected access right. Select the access right to add a member or groups. For this example, click **Add Administrator**.
 
-    ![](../images/dam_access_control_assign_member_access_rights_add_administrator.png "Add Administrator")
+    ![Add Administrator](../../../images/dam_access_control_assign_member_access_rights_add_administrator.png)
 
-    ![](../images/dam_access_control_assign_member_access_rights_select.png "Assign access rights > Select")
+    ![Assign access rights > Select](../../../images/dam_access_control_assign_member_access_rights_select.png)
 
 8.  Once done, click **Add users and groups** to save changes.
 
@@ -117,5 +118,4 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 Digita
 
 HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).
 
-**Parent topic:**[Common tasks](../digital_asset_mgmt/DAM_common_tasks.md)
 
