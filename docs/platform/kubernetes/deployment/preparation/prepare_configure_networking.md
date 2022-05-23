@@ -10,7 +10,7 @@ If you deploy both Core and all other applications inside OpenShift or Kubernete
 
 In a full deployment, the host for both the Core and the other applications are the same.
 
-It is recommended to configure the host before you run the deployment. This is only possible if you know the fully qualified domain name \(FQDN\) or the IP address that the HAProxy Ingress assigns in your deployment beforehand.
+It is recommended to configure the host before you run the deployment. This is only possible if you know the fully qualified domain name \(FQDN\) or the IP address that the HAProxy assigns in your deployment beforehand.
 
 If that is the case, define the host using the following syntax:
 
