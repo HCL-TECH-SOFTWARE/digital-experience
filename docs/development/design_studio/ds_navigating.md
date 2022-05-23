@@ -1,49 +1,52 @@
-# Install Design Studio \(Beta\)
+# Navigating Design Studio (Beta)
 
-This section provides the steps to install the HCL Digital Experience 9.5 component Design Studio \(Beta\), available for use with HCL DX 9.5 CF196 Kubernetes platform deployments only.
+## Access HCL Design Studio (Beta)
 
-**Notes:**
+The HCL Design Studio (Beta) can be accessed in three ways:
 
--   Design Studio \(Beta\) is not supported for production deployment.
--   Support for deployment to Red Hat OpenShift will be provided in a later DX 9.5 Container Update release.
+-   The Practitioner Studio home page;
+-   The Practitioner Studio side navigation; and
+-   DX Site menu
 
-## Pre-requisites
+Follow the steps below to access the HCL Digital Experience 9.5 Design Studio (Beta) from the Practitioner Studio:
 
--   See the [Deployment](../containerization/deployment.md) section for the latest DX 9.5 container file listings.
--   Review the list of [Requirements and Limitations](design_studio_overview.md) for Design Studio \(Beta\) with HCL DX 9.5 CF196
+1.  Log in to your HCL Digital Experience 9.5 platform. Administrator access is required.
 
-## Installing HCL Design Studio \(Beta\)
+2.  Access HCL Design Studio (Beta) via any of these options:
 
-There are three options available to install HCL Design Studio \(Beta\) to an HCL Digital Experience 9.5 deployment on supported Kubernetes platforms.
+    **Option 1:** From **Practitioner Studio > Sites**, click the Design Studio (Beta) tile, which is located below the Practitioner Studio applications:
 
-## Deploy with dxctl
+    ![HCL Digital Experience 9.5 Design Studio (Beta) in Practitioner Studio interface](../../images/Design%20Studio%20tile%20in%20HCL%20DX%20Practitioner%20Studio.png)
 
-The dxctl process can be used to install and enable the Design Studio \(Beta\) to a Container Update CF196 deployment. Refer to the [dxctl](../containerization/dxtools_dxctl.md) and specific [Kubernetes platform](../containerization/deployment.md) Help Center topics you will deploy to. \(Amazon EKS, Microsoft AKS, or Google GKE\) .
+    **Option 2:** Click to open the **Sites (Beta) > Practitioner Studio** side navigation menu item:
 
-When working with the dxctl deployment on your target Kubernetes platform, ensure that the property `sitemanager.enabled` is added in the deployment property file, and that it is set to true when deploying Container Update CF196. The configuration setting can also be enabled later on.
+    ![Access HCL Digital Experience 9.5 Design Studio (Beta) in Practitioner Studio navigation menu](../../images/Access%20Design%20Studio%20in%20Practitioner%20Studio%20navigation%20menu.png)
 
-## Deploy with Helm
+    **Option 3:** Click the **Home** icon on the top right as shown below to access HCL Design Studio (Beta) **Sites** application via the DX site menu:
 
-Deployment options using [Helm](../containerization/helm.md) are introduced in HCL DX 9.5 Container Update CF196, and is supported on the Google Kubernetes Engine \(GKE\) platform only. When [deploying to Google Kubernetes Engine](../containerization/helm_deployment.md), ensure the `designStudio` flag is set to true in the [Applications](../containerization/deploy_applications_using_helm.md) section of the values.yaml file used for deployment.
+    ![Access HCL Digital Experience 9.5 Design Studio (Beta) in DX Sites navigation bar](../../images/HCL%20Digital%20Experience%209.5%20Design%20Studio%20Beta%20in%20DX%20Sites%20navigation%20bar.png)
 
-See the following example:
+Options 1 and 2 brings you to the Design Studio (Beta) **Sites** overview, where you can view and manage your site and its pages.
 
-```
-# Controls which application is deployed and configured
-applications:
-  # Deploys Design Studio
-  designStudio: true
-```
+>**Note:** A demonstration site called Palace Hotel is available for use with Design Studio (Beta).
 
-**Disable Design Studio \(Beta\)**
+## The HCL Design Studio (Beta) **Sites** interface
 
-Design Studio \(Beta\) can also be disabled on your Kubernetes deployment when deployed using [dxctl](../containerization/dxtools_dxctl.md) or [Helm](../containerization/helm.md). To disable, set the designStudio flag to false and initiate a reconciliation via your deployment method \(dxctl or Helm\).
+The HCL Design Studio (Beta) Sites interface has the following components:
 
-## Deploy on HCL SoFy
+![HCL Design Studio (Beta) Sites interface](../../images//DX_Design_Studio_Sites_overview.png)
 
-A release of HCL Digital Experience Container Update CF196 is available on [HCL SoFy](https://www.hcltechsw.com/sofy) for use. Design Studio \(Beta\) is enabled with that deployment.
+-   **Apps side navigation panel** - Displays quick links to all DX Applications, Help Center, and Support.
+-   **Main header** - This component contains the **Create** button for HCL Design Studio (Beta) site, page, and site template actions.
+-   **Content collections columns** - This shows the site and page collections inside the HCL Design Studio (Beta) library in a cascading menu system. When you select a collection, sub-collections are displayed off to the right side when applicable.
+-   **Menu options** - A pop-up that displays applicable user actions for a selected site or page
+-   **Properties panel** - A pop-up that displays site or page information, and applicable user actions.
 
-**Note:** If using HCL DX 9.5 CF196 on HCL SoFy, it is not possible to disable Design Studio \(Beta\) component. Access the HCL Digital Solutions offerings from the [HCL Sofy Catalog](https://www.hcltechsw.com/sofy/catalog) to proceed.
+Content authors can also access view, editing and delete options of the selected site, page, or site template in this column. See [Create sites and pages with Design Studio \(Beta\)](create_dx_9_5_pages_design_studio.md) for more information.
 
-**Parent topic:**[Design Studio \(Beta\)](../design_studio/design_studio_overview.md)
+![Site menu options](../../images/dx_site_menu_options.png "Site menu options")
+
+![Page menu options](../../images/dx_page_menu_options.png "Page menu options")
+
+**Parent topic:** [Design Studio (Beta)](../design_studio/design_studio_overview.md)
 

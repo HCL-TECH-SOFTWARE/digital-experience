@@ -1,11 +1,13 @@
-title: Managing content 
+title: Author pages in Design Studio (Beta) 
 nav:
     - index.md
-    - create_site_page.md
-    - author_site_page.md
-    - content_lists.md
-    - reusable_blocks
-    - craft_responsive_layouts.md
-    - design_studio_development_APIs.md
-    - site_rendering.md
+    - Use Layout elements: create_site_page.md
+    - Use Content Containers: author_site_page.md
+    - Use Content Lists: content_lists.md
+    - Use Text elements: use_text_elements.md
+    - Use Image elements: craft_responsive_layouts.md
+    - Use Link elements: design_studio_development_APIs.md
+    - Use Navigator components: site_rendering.md
+    - Use Rich Text components: use_richtext_components.md
+    - Use Image components: use_image_components.md
     - ... 
