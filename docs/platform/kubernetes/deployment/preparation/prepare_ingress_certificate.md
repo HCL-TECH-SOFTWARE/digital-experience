@@ -4,7 +4,7 @@ To have the HAProxy allow forward requests to your applications, you must provid
 
 ## Generate self-signed certificate
 
-**It is recommended that you use a properly signed certificate for the HAProxy**. However, it is also possible to create and use a self-signed certificate, for example, for staging or testing environment.
+**It is recommended that you use a properly signed certificate for HAProxy**. However, it is also possible to create and use a self-signed certificate, for example, for staging or testing environment.
 
 Creation of that certificate can be achieved using the following commands for OpenSSL:
 
