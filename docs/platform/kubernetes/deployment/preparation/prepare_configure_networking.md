@@ -23,7 +23,7 @@ If that is the case, define the host using the following syntax:
    host: "your-dx-instance.whateverdomain.com"
   ```
 
-If you do not know the hostname beforehand, you can leave it blank and run an additional step later in the installation, that retrieves the assigned hostname from the HAProxy and configure all applications accordingly.
+If you do not know the hostname beforehand, you can leave it blank and run an additional step later in the installation, which would retrieve the assigned hostname from HAProxy and configure all applications accordingly.
 
 ## Configure Cross Origin Resource Sharing \(CORS\)
 
