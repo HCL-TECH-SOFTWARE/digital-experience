@@ -30,7 +30,7 @@ Depending on your deployment, your requirements for networking may differ from t
 ### [Configure internal network](optional_internal_networking.md)
 Add the platform-specific annotations for the ambassador service to deploy DX on the internal network \(network with no public access\).
 
-### [Configure ingress certificate](prepare_ingress_certificate.md)
+### [Configure HAProxy certificate](prepare_ingress_certificate.md)
 The HAProxy requires a SSL certificate to use (if ssl is enabled), this topic shows how to configure that for the HCL Digital Experience Kubernetes deployment.
 
 ## Optional

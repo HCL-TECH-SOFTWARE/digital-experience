@@ -53,13 +53,13 @@ Each deployed application follows a similar deployment structure, using a common
 
 DX 9.5 container applications are managed by a StatefulSet, which controls the creation and life cycle of all pods it is responsible for. These Pods use Persistent Volumes for storing their application data, ConfigMaps to adjust application configuration, and Secrets to obtain access credentials.
 
-In front of all Pods is a Service which manages routing the traffic to the Pods. This Service is also called by the Ingress to fulfill incoming requests from outside the Kubernetes or OpenShift cluster.
+In front of all Pods is a Service which manages routing the traffic to the Pods. This Service is also called by HAProxy to fulfill incoming requests from outside the Kubernetes or OpenShift cluster.
 
 **Stateless applications - Services Management**
 
 ![Stateless applications](../../../images/helm_chart_stateless_applications_services_management.png)
 
-**Ingress and routing**
+**HAProxy and routing**
 
 For accessing applications from the outside, we deploy an reverse proxy in form of an HAProxy. This reverse proxy routes the incoming requests to all application Services, which then distributes the requests to the corresponding Pods hosting the applications.
 

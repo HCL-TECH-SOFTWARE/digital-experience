@@ -1,6 +1,6 @@
 # HAProxy configuration
 
-By default, HAProxy is deployed with a `LoadBalancer` type service to handle the incoming traffic as well as the SSL offloading for HCL Digital Experience. In addition, the Helm deployment offers adjustability for HAProxy and its services to allow for more flexible deployment and use of custom `Ingress Controllers`.
+By default, HAProxy is deployed with a `LoadBalancer` type service to handle the incoming traffic as well as the SSL offloading for HCL Digital Experience. In addition, the Helm deployment offers adjustability for HAProxy and its services to allow for more flexible deployment and use of custom `HAProxy Controllers`.
 
 !!!note
     When migrating from Ambassador, the default configuration of HAProxy matches the default configuration of Ambassador as close as possible.
@@ -35,7 +35,7 @@ networking:
     serviceNodePort:
 ```
   
-This configuration is helpful for those who want to use a custom `Ingress Controller` to expose the service in a compatible way. Even then, HAProxy will still be active. The `Ingress Controller` will handle the incoming traffic and then route them to the HAProxy service.
+This configuration is helpful for those who want to use a custom `HAProxy Controller` to expose the service in a compatible way. Even then, HAProxy will still be active. The `HAProxy Controller` will handle the incoming traffic and then route them to the HAProxy service.
 
 ## Scaling
 

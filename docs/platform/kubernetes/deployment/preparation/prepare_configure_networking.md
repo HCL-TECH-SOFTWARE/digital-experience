@@ -82,7 +82,7 @@ networking:
 
 Please refer to the original values.yaml for all available applications that can be configured. See the [Planning your container deployment using Helm topic](../preparation/overview.md) for details.
 
-## Configure Ingress certificate
+## Configure HAProxy certificate
 
 To have the HAProxy allow forward requests to your applications, you must provide it with a TLS Certificate. This certificate is used for incoming/outgoing traffic from the outside of the Kubernetes or OpenShift cluster to your applications. HAProxy performs TLS offloading.
 

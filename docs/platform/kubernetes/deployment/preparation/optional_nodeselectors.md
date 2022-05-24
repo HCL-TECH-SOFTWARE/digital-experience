@@ -11,7 +11,7 @@ The following steps shows how to modify cluster nodes. As the examples here may 
 For this example, the following setup is assumed:
 
 -   The target cluster has multiple nodes.
--   A label purpose is added to a node called `k8s-node-4` and assigned the value `ingress`
+-   A label purpose is added to a node called `k8s-node-4` and assigned the value `haproxy`
 
 This can be done using the following commands:
 
@@ -35,7 +35,7 @@ The following label is added using the Kubernetes syntax \(and other configurati
 ```
 metadata:
   labels:
-    purpose: ingress
+    purpose: haproxy
 ```
 
 The node is now labeled with the desired target label:
