@@ -31,7 +31,7 @@ Depending on your deployment, your requirements for networking may differ from t
 Add the platform-specific annotations for the ambassador service to deploy DX on the internal network \(network with no public access\).
 
 ### [Configure HAProxy certificate](prepare_ingress_certificate.md)
-The HAProxy requires a SSL certificate to use (if ssl is enabled), this topic shows how to configure that for the HCL Digital Experience Kubernetes deployment.
+The HAProxy requires an SSL certificate to use (if ssl is enabled), this topic shows how to configure that for the HCL Digital Experience Kubernetes deployment.
 
 ## Optional
 These tasks may be relevant for you if you have specific requirements for the deployment.
@@ -63,4 +63,3 @@ This topic describes how you can expose logs that are written to files on its Pe
 This topic documents the configuration of labels and annotations for different DX resources.
 ### [Try experimental features](optional_experimental_features.md)
 This topic describes the incubator section in the Helm Charts.
-
