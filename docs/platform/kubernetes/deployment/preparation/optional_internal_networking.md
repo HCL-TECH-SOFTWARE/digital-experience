@@ -56,7 +56,7 @@ Follow the steps to update an existing deployment from an external network to an
         helm upgrade dx-deployment -n dxns . -f ./cloud-deploy-values.yaml
         ```
 
-3.  After the update is completed, enable haproxy and add annotations specific to your cloud provider in custom `values.yaml` file.
+3.  After the update is completed, enable HAProxy and add annotations specific to your cloud provider in custom `values.yaml` file.
 
     ```
    
@@ -112,5 +112,4 @@ Follow the steps to update an existing deployment from an external network to an
           ```
           helm upgrade dx-deployment -n external-lb . -f ./cloud-deploy-values.yaml
           ```
-
 
