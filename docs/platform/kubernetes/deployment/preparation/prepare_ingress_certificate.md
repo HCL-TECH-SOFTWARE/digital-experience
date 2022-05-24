@@ -38,7 +38,7 @@ kubectl create secret tls dx-tls-cert --cert=my-cert.pem --key=my-key.pem -n dig
 
 ## Configure secret in deployment
 
-You need to make sure that the reference to the secret is set up correctly in your `custom-values.yaml`. Otherwise your HAProxy is not able to answer HTTPS requests due to a missing certificate.
+You need to make sure that the reference to the secret is set up correctly in your `custom-values.yaml` file. Otherwise, HAProxy cannot answer HTTPS requests due to a missing certificate.
 
 You can set the name of the certificate used with the following syntax, the default value is `dx-tls-cert`:
 
