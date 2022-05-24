@@ -63,7 +63,7 @@ In front of all Pods is a Service which manages routing the traffic to the Pods.
 
 For accessing applications from the outside, we deploy a reverse proxy in the form of an HAProxy. This reverse proxy routes the incoming requests to all application Services, which then distributes the requests to the corresponding Pods hosting the applications.
 
-HAProxy uses it's configuration to decide which requests needs to be mapped to which application in the DX 9.5 deployment \(back-end\). When requests are initiated from outside the Kubernetes or OpenShift cluster, HAProxy tries to fulfill that request by using the configured routing. If it finds a matching endpoint, it forwards the request to the corresponding Service, which then forwards the same requests to a Pod that is ready to fulfill the request.
+HAProxy uses its configuration to decide which request needs to be mapped to which application in the DX 9.5 deployment \(back-end\). When requests are initiated from outside the Kubernetes or OpenShift cluster, HAProxy tries to fulfill those requests by using the configured routing. If it finds a matching endpoint, it forwards the request to the corresponding service, which then forwards the same requests to a Pod that is ready to fulfill the request.
 
 -   **[DX 9.5 Core Interactions with Kubernetes](../architecture/core_interactions_kubernetes.md)**  
 This section provides more detailed information about how the  Digital Experience 9.5 Core container interacts with Kubernetes. Understanding this information may assist in interpreting observed behavior or in troubleshooting your HCL DX 9.5 Container deployments in Helm.
