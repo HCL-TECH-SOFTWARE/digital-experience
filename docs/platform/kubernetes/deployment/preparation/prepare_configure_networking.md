@@ -84,7 +84,7 @@ Please refer to the original values.yaml for all available applications that c
 
 ## Configure HAProxy certificate
 
-To have the HAProxy allow forward requests to your applications, you must provide it with a TLS Certificate. This certificate is used for incoming/outgoing traffic from the outside of the Kubernetes or OpenShift cluster to your applications. HAProxy performs TLS offloading.
+For HAProxy to allow forward requests to your applications, you must provide it with a TLS Certificate. This certificate is used for incoming/outgoing traffic from the outside of the Kubernetes or OpenShift cluster to your applications. HAProxy performs TLS offloading.
 
 ## Generate self-signed certificate
 
