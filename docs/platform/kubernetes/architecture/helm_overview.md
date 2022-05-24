@@ -61,7 +61,7 @@ In front of all Pods is a Service which manages routing the traffic to the Pods.
 
 **HAProxy and routing**
 
-For accessing applications from the outside, we deploy an reverse proxy in form of an HAProxy. This reverse proxy routes the incoming requests to all application Services, which then distributes the requests to the corresponding Pods hosting the applications.
+For accessing applications from the outside, we deploy a reverse proxy in the form of an HAProxy. This reverse proxy routes the incoming requests to all application Services, which then distributes the requests to the corresponding Pods hosting the applications.
 
 HAProxy uses it's configuration to decide which requests needs to be mapped to which application in the DX 9.5 deployment \(back-end\). When requests are initiated from outside the Kubernetes or OpenShift cluster, HAProxy tries to fulfill that request by using the configured routing. If it finds a matching endpoint, it forwards the request to the corresponding Service, which then forwards the same requests to a Pod that is ready to fulfill the request.
 
@@ -81,4 +81,3 @@ This topic describes the components of the Digital Asset Management persistence.
 
 ??? info "Related information:"
     - [HCL DX dxctl process](../operator-based/dxtools_dxctl.md)
-
