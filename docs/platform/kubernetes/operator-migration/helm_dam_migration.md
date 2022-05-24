@@ -170,7 +170,7 @@ After saving the changes, the DAM pod restarts automatically. Please wait until 
             persistence: true
             remoteSearch: false
             ringApi: false
-            ambassador: false
+            haproxy: false
         ```
 
     -   Scale down persistence to a single node:

@@ -29,8 +29,7 @@ scaling:
     ringApi: 1
     persistenceConnectionPool: 1
     persistenceNode: 3
-    ambassadorIngress: 3
-    ambassadorRedis: 3
+    haproxy: 3
 ```
 
 !!! note
@@ -74,8 +73,7 @@ scaling:
     ringApi: 1
     persistenceConnectionPool: 1
     persistenceNode: 3
-    ambassadorIngress: 3
-    ambassadorRedis: 3
+    haproxy: 3
 ```
 
 The following is an example of a persistence cluster in a successful deployment.

@@ -24,8 +24,7 @@ scaling:
     digitalAssetManagement: 3
     imageProcessor: 5
     ringApi: 3
-    ambassadorIngress: 3
-    ambassadorRedis: 3
+    haproxy: 3
 
 ```
 

@@ -20,7 +20,6 @@ The HCL Digital Experience 9.5 Deployment Helm Chart \(Helm Chart name: `hcl-dx-
 
 ```
 hcl-dx-deployment/
-  crds/                 # Custom Resource definitions used for the Ambassador Ingress
   templates/            # The directory containing all Helm templates for e.g. Kubernetes resources
   value-samples/        # Contains sample value files for different types of deployments
   README.md             # README with information on Helm Chart usage and references to further documentation
@@ -54,21 +53,17 @@ Each deployed application follows a similar deployment structure, using a common
 
 DX 9.5 container applications are managed by a StatefulSet, which controls the creation and life cycle of all pods it is responsible for. These Pods use Persistent Volumes for storing their application data, ConfigMaps to adjust application configuration, and Secrets to obtain access credentials.
 
-In front of all Pods is a Service which manages routing the traffic to the Pods. This Service is also called by the Ingress to fulfill incoming requests from outside the Kubernetes or OpenShift cluster.
+In front of all Pods is a Service which manages routing the traffic to the Pods. This Service is also called by HAProxy to fulfill incoming requests from outside the Kubernetes or OpenShift cluster.
 
 **Stateless applications - Services Management**
 
 ![Stateless applications](../../../images/helm_chart_stateless_applications_services_management.png)
 
-**Ingress and routing**
+**HAProxy and routing**
 
-For accessing applications from the outside, we deploy an [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) in form of an [Ambassador.](https://www.getambassador.io/learn/kubernetes-ingress/) This Ingress routes the incoming requests to all application Services, which then distributes the requests to the corresponding Pods hosting the applications.
+For accessing applications from the outside, we deploy an reverse proxy in form of an HAProxy. This reverse proxy routes the incoming requests to all application Services, which then distributes the requests to the corresponding Pods hosting the applications.
 
-![Ingress and routing](../../../images/helm_chart_ingress_routing.png)
-
-Ambassador uses Mappings that are created by the DX 9.5 Helm deployment to decide which requests needs to be mapped to which application in the DX 9.5 deployment \(back-end\). When requests are initiated from outside the Kubernetes or OpenShift cluster, the Ambassador tries to fulfill that request by using the configured Mappings. If it finds a matching endpoint, it forwards the request to the corresponding Service, which then forwards the same requests to a Pod that is ready to fulfill the request.
-
-The Ambassador performs SSL termination and must be provided with a TLS secret inside Kubernetes that contains the SSL certificate used.
+HAProxy uses it's configuration to decide which requests needs to be mapped to which application in the DX 9.5 deployment \(back-end\). When requests are initiated from outside the Kubernetes or OpenShift cluster, HAProxy tries to fulfill that request by using the configured routing. If it finds a matching endpoint, it forwards the request to the corresponding Service, which then forwards the same requests to a Pod that is ready to fulfill the request.
 
 -   **[DX 9.5 Core Interactions with Kubernetes](../architecture/core_interactions_kubernetes.md)**  
 This section provides more detailed information about how the  Digital Experience 9.5 Core container interacts with Kubernetes. Understanding this information may assist in interpreting observed behavior or in troubleshooting your HCL DX 9.5 Container deployments in Helm.

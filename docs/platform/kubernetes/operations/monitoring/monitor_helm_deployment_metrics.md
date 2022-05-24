@@ -20,7 +20,6 @@ The following [Digital Experience 9.5 applications](../../architecture/applicati
 |Image Processor|3000|/probe/metrics|
 |Ring API|3000|/probe/metrics|
 |DAM Persistence|9187|/metrics|
-|Ambassador|8877|/metrics|
 |HAProxy|8404|/metrics|
 
 !!!important
@@ -82,7 +81,6 @@ You can directly download or import the following dashboards from the Grafana co
 |14151|[WebSphere Application Server PMI metrics dashboard](https://grafana.com/grafana/dashboards/14151)|Core, Remote Search|
 |11159|[NodeJS application dashboard](https://grafana.com/grafana/dashboards/11159)|Content Composer, Design Studio, Digital Asset Management, Image Processor, Experience API|
 |9628|[PostgreSQL database](https://grafana.com/grafana/dashboards/9628)|DAM Persistence|
-|10850|[Ambassador dashboard](https://grafana.com/grafana/dashboards/10850)|Ambassador|
 |12693|[HAProxy dashboard](https://grafana.com/grafana/dashboards/12693)|HAProxy|
 
 ## HCL Digital Experience custom dashboards

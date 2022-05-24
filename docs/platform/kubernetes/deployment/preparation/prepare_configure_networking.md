@@ -10,7 +10,7 @@ If you deploy both Core and all other applications inside OpenShift or Kubernete
 
 In a full deployment, the host for both the Core and the other applications are the same.
 
-It is recommended to configure the host before you run the deployment. This is only possible if you know the fully qualified domain name \(FQDN\) or the IP address that the Ambassador Ingress assigns in your deployment beforehand.
+It is recommended to configure the host before you run the deployment. This is only possible if you know the fully qualified domain name \(FQDN\) or the IP address that the HAProxy assigns in your deployment beforehand.
 
 If that is the case, define the host using the following syntax:
 
@@ -23,7 +23,7 @@ If that is the case, define the host using the following syntax:
    host: "your-dx-instance.whateverdomain.com"
   ```
 
-If you do not know the hostname beforehand, you can leave it blank and run an additional step later in the installation, that retrieves the assigned hostname from the Ambassador Ingress and configure all applications accordingly.
+If you do not know the hostname beforehand, you can leave it blank and run an additional step later in the installation, that retrieves the assigned hostname from the HAProxy and configure all applications accordingly.
 
 ## Configure Cross Origin Resource Sharing \(CORS\)
 
@@ -82,13 +82,13 @@ networking:
 
 Please refer to the original values.yaml for all available applications that can be configured. See the [Planning your container deployment using Helm topic](../preparation/overview.md) for details.
 
-## Configure Ingress certificate
+## Configure HAProxy certificate
 
-To have the Ambassador Ingress allow forward requests to your applications, you must provide it with a TLS Certificate. This certificate is used for incoming/outgoing traffic from the outside of the Kubernetes or OpenShift cluster to your applications. Ambassador performs TLS offloading.
+To have the HAProxy allow forward requests to your applications, you must provide it with a TLS Certificate. This certificate is used for incoming/outgoing traffic from the outside of the Kubernetes or OpenShift cluster to your applications. HAProxy performs TLS offloading.
 
 ## Generate self-signed certificate
 
-**It is recommended that you use a properly signed certificate for the Ambassador Ingress**. However, it is also possible to create and use a self-signed certificate, for example, for staging or testing environment.
+**It is recommended that you use a properly signed certificate for the HAProxy**. However, it is also possible to create and use a self-signed certificate, for example, for staging or testing environment.
 
 Creation of that certificate can be achieved using the following commands for OpenSSL:
 
@@ -106,7 +106,7 @@ This provides you with a key and cert file that can be used in the next step, cr
 
 **Create secret**
 
-To have your deployment and the Ambassador Ingress use the certificate, you must store it in the Kubernetes or OpenShift cluster as a secret.
+To have your deployment and the HAProxy use the certificate, you must store it in the Kubernetes or OpenShift cluster as a secret.
 
 The secret can be created using the following commands:
 
@@ -122,31 +122,16 @@ The secret can be created using the following commands:
 
 ## Configure secret in deployment
 
-You need to make sure that the reference to the secret is set up correctly in your `custom-values.yaml`. Otherwise your Ambassador Ingress is not able to answer HTTPS requests due to a missing certificate.
+You need to make sure that the reference to the secret is set up correctly in your `custom-values.yaml`. Otherwise your HAProxy is not able to answer HTTPS requests due to a missing certificate.
 
 You can set the name of the certificate used with the following syntax, the default value is `dx-tls-cert`:
 
 ```
    # Networking specific configuration
    networking:
-   # TLS Certificate secret used for Ambassador Ingress
+   # TLS Certificate secret used for haproxy
     tlsCertSecret: "dx-tls-cert"            
 ```
 
 !!! note
     Verify you have entered the correct name.
-
-## Configure minimum TLS version for Ingress
-
-From CF201 and onwards the default minimum TLS version for the Ambassador Ingress is set to `v1.2`. TLS v1.2 or higher is recommended to increase security. If support for older TLS versions is still required, then it can be adjusted via the `custom-values.yaml`.
-
-```
-# Networking specific configuration
-networking:
-  # Set the minimum acceptable TLS version for Amassador Ingress: v1.0, v1.1,
-  # v1.2, or v1.3. It defaults to v1.2
-  minTlsVersion: "v1.2"
-```
-
-Refer to **[Additional tasks](../preparation/overview.md)** for the next steps.
-

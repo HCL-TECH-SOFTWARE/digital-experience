@@ -276,12 +276,6 @@ Sub-commands, required: `deploy`, `update`, `collect`, or `destroy`.
 
     **`ingress.image string`**
 
-    -   Required, the ambassador image. Not used in OpenShift deployments.
-    **`ingress.tag string`**
-
-    -   Required, the ambassador tag. Not used in OpenShift deployments.
-    **`p string`**
-
     -   dxctl can be run from a properties file, `-p` namespace.properties, no default.
     **`verbose`**
 

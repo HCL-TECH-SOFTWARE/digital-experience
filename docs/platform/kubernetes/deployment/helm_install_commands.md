@@ -101,7 +101,7 @@ After a successful Helm deployment in a hybrid deployment, you can add a load ba
 
 ## \(Optional\) Automated host extraction
 
-As described in the [Configure networking](preparation/prepare_configure_networking.md) topic, there are instances wherein you do not know the resulting external IP or FQDN for your deployment and you left the host value empty. In that case, run a Helm upgrade command, and it automatically polls the Ambassador Ingress and extract the found IP or FQDN from there. The Helm Chart logic goes ahead and populates all application configuration with the correct settings.
+As described in the [Configure networking](preparation/prepare_configure_networking.md) topic, there are instances wherein you do not know the resulting external IP or FQDN for your deployment and you left the host value empty. In that case, run a Helm upgrade command, and it automatically polls HAProxy and extract the found IP or FQDN from there. The Helm Chart logic goes ahead and populates all application configuration with the correct settings.
 
 An example is provided below. You may use the following Helm upgrade command to trigger the automated host extraction:
 
