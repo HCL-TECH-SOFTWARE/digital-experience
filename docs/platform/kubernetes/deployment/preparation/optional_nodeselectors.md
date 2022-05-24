@@ -71,7 +71,7 @@ nodeSelector:
     purpose: ingress
 ```
 
-This configuration directs HAProxy to run nodes with the label purpose: `ingress`.
+This configuration directs HAProxy to run nodes with the label purpose: `haproxy `.
 
 Once install is completed, the pods are running on your desired node. For example `k8s-node-4`.
 
