@@ -86,9 +86,6 @@ NAME                                   READY   STATUS    RESTARTS   AGE     IP  
 dx-haproxy-769b86f6ff-knhgt         1/1     Running   0          2m12s   10.244.4.111   k8s-node-4   <none>           <none>
 dx-haproxy-769b86f6ff-qtqmv         1/1     Running   0          2m12s   10.244.4.110   k8s-node-4   <none>           <none>
 dx-haproxy-769b86f6ff-whmw6         1/1     Running   0          2m12s   10.244.4.112   k8s-node-4   <none>           <none>
-dx-haproxy-6cbbf58649-gtqwv   1/1     Running   0          2m12s   10.244.4.106   k8s-node-4   <none>           <none>
-dx-haproxy-6cbbf58649-j8v4d   1/1     Running   0          2m12s   10.244.4.107   k8s-node-4   <none>           <none>	
-dx-haproxy-6cbbf58649-qtgqp   1/1     Running   0          2m12s   10.244.4.109   k8s-node-4   <none>           <none>
 ```
 
 **OpenShift Client:**
