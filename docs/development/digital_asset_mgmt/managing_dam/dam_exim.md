@@ -10,6 +10,8 @@ Administrator users and authorized users with Administrator role privileges have
 
 If you choose to export DAM assets to a target that does not share the same LDAP settings, then access rights is not transferred.
 
+If you move from the container and specify a path, then assets will Export or Import to a location **store/folder_name/**.
+
 ## Limitations
 
 DAM EXIM may be used to take a backup of DAM assets from any environment. The same backup can be used in other environment.
@@ -81,7 +83,7 @@ The export command is used to export the assets of DAM in the file system at a u
     -ringAPIPort <value>
     ```
 
-    Use this attribute to specify the location of the file path to `export` \(default path is store/outputFiles/dam-export-assets/\):
+    Use this attribute to specify the location of the file path to `export` \(default path is store/outputFiles/dam-export-assets/\) or if user specify a path, then export to a location **store/folder_name/**:
 
     ```
     -exportPath <value>
@@ -124,7 +126,7 @@ The validate command is used to validate exported DAM assets file at the locatio
 
 -   **Commands Optional options**
 
-    Use this attribute to specify the location of the file path to *export* \(default path is store/outputFiles/dam-export-assets/\):
+    Use this attribute to specify the location of the file path to *export* \(default path is store/outputFiles/dam-export-assets/\) or if user specify a path, then export to a location **store/folder_name/**:
 
     ```
     -exportPath <value>
@@ -210,7 +212,7 @@ The import command is used to import the assets of a dam to the target environme
     -ringAPIPort <value> 
     ```
 
-    Use this attribute to specify the location of the file path to `import` \(default path is store/outputFiles/dam-export-assets/\):
+    Use this attribute to specify the location of the file path to `import` \(default path is store/outputFiles/dam-export-assets/\) or if user specify a path, then export to a location **store/folder_name/**:
 
     ```
     -exportPath <value>
