@@ -28,10 +28,10 @@ HCL Digital Experience requires Persistent Volumes to be present in order to hav
 Depending on your deployment, your requirements for networking may differ from the default. This topic shows you what needs to be configured to get HCL Digital Experience up and running inside your Kubernetes cluster and be accessible.
 
 ### [Configure internal network](optional_internal_networking.md)
-Add the platform-specific annotations for the HAProxy service to deploy DX on the internal network \(network with no public access\). 
+Add the platform-specific annotations for the ambassador service to deploy DX on the internal network \(network with no public access\).
 
 ### [Configure ingress certificate](prepare_ingress_certificate.md)
-The Ambassador Ingress requires a SSL certificate to use, this topic shows how to configure that for the HCL Digital Experience Kubernetes deployment.
+The HAProxy requires a SSL certificate to use (if ssl is enabled), this topic shows how to configure that for the HCL Digital Experience Kubernetes deployment.
 
 ## Optional
 These tasks may be relevant for you if you have specific requirements for the deployment.

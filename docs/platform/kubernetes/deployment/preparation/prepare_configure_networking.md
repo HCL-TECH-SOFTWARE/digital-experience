@@ -23,7 +23,7 @@ If that is the case, define the host using the following syntax:
    host: "your-dx-instance.whateverdomain.com"
   ```
 
-If you do not know the hostname beforehand, you can leave it blank and run an additional step later in the installation, that retrieves the assigned hostname from the HAProxy Ingress and configure all applications accordingly.
+If you do not know the hostname beforehand, you can leave it blank and run an additional step later in the installation, that retrieves the assigned hostname from the HAProxy and configure all applications accordingly.
 
 ## Configure Cross Origin Resource Sharing \(CORS\)
 
@@ -84,11 +84,11 @@ Please refer to the original values.yaml for all available applications that c
 
 ## Configure Ingress certificate
 
-To have the HAProxy Ingress allow forward requests to your applications, you must provide it with a TLS Certificate. This certificate is used for incoming/outgoing traffic from the outside of the Kubernetes or OpenShift cluster to your applications. HAProxy performs TLS offloading.
+To have the HAProxy allow forward requests to your applications, you must provide it with a TLS Certificate. This certificate is used for incoming/outgoing traffic from the outside of the Kubernetes or OpenShift cluster to your applications. HAProxy performs TLS offloading.
 
 ## Generate self-signed certificate
 
-**It is recommended that you use a properly signed certificate for the HAProxy Ingress**. However, it is also possible to create and use a self-signed certificate, for example, for staging or testing environment.
+**It is recommended that you use a properly signed certificate for the HAProxy**. However, it is also possible to create and use a self-signed certificate, for example, for staging or testing environment.
 
 Creation of that certificate can be achieved using the following commands for OpenSSL:
 
@@ -106,7 +106,7 @@ This provides you with a key and cert file that can be used in the next step, cr
 
 **Create secret**
 
-To have your deployment and the HAProxy Ingress use the certificate, you must store it in the Kubernetes or OpenShift cluster as a secret.
+To have your deployment and the HAProxy use the certificate, you must store it in the Kubernetes or OpenShift cluster as a secret.
 
 The secret can be created using the following commands:
 
@@ -122,7 +122,7 @@ The secret can be created using the following commands:
 
 ## Configure secret in deployment
 
-You need to make sure that the reference to the secret is set up correctly in your `custom-values.yaml`. Otherwise your HAProxy Ingress is not able to answer HTTPS requests due to a missing certificate.
+You need to make sure that the reference to the secret is set up correctly in your `custom-values.yaml`. Otherwise your HAProxy is not able to answer HTTPS requests due to a missing certificate.
 
 You can set the name of the certificate used with the following syntax, the default value is `dx-tls-cert`:
 
