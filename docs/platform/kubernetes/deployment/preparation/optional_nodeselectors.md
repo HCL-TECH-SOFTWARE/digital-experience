@@ -48,14 +48,14 @@ The node is now labeled with the desired target label:
     
     # Command output
     NAME         STATUS   ROLES    AGE    VERSION   LABELS
-    k8s-node-4   Ready    <none>   123d   v1.20.2   beta.kubernetes.io/arch=amd64,beta.kubernetes.io/os=linux,kubernetes.io/arch=amd64,kubernetes.io/hostname=k8s-node-4,kubernetes.io/os=linux,purpose=ingress
+    k8s-node-4   Ready    <none>   123d   v1.20.2   beta.kubernetes.io/arch=amd64,beta.kubernetes.io/os=linux,kubernetes.io/arch=amd64,kubernetes.io/hostname=k8s-node-4,kubernetes.io/os=linux,purpose=haproxy
     # Execute lookup via kubectl
     oc get node k8s-node-4 --show-labels
     
     # Command output
     NAME         STATUS   ROLES    AGE    VERSION   LABELS
     k8s-node-4   Ready    <none>   123d   v1.20.2   
-    beta.kubernetes.io/arch=amd64,beta.kubernetes.io/os=linux,kubernetes.io/arch=amd64,kubernetes.io/hostname=k8s-node-4,kubernetes.io/os=linux,purpose=ingress
+    beta.kubernetes.io/arch=amd64,beta.kubernetes.io/os=linux,kubernetes.io/arch=amd64,kubernetes.io/hostname=k8s-node-4,kubernetes.io/os=linux,purpose=haproxy
     ```
 
 
