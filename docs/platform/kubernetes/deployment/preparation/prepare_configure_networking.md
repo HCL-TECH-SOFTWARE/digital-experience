@@ -106,7 +106,7 @@ This provides you with a key and cert file that can be used in the next step, cr
 
 **Create secret**
 
-To have your deployment and the HAProxy use the certificate, you must store it in the Kubernetes or OpenShift cluster as a secret.
+To have your deployment and HAProxy to use the certificate, you must store it in the Kubernetes or OpenShift cluster as a secret.
 
 The secret can be created using the following commands:
 
