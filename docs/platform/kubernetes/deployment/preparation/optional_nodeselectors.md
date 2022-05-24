@@ -68,7 +68,7 @@ Example for HAProxy:
 ```
 nodeSelector:
   haproxy:
-    purpose: ingress
+    purpose: haproxy
 ```
 
 This configuration directs HAProxy to run nodes with the label purpose: `haproxy `.
