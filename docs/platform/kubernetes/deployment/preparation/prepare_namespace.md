@@ -1,4 +1,4 @@
-You need to create a namespace in your Kubernetes cluster that contains all the resources related to your HCL DX 9.5 Container deployment. It is recommended that this is created before deployment as you may need to add an ImagePullSecret or configure the TLS certificate for the HAProxy before deployment.
+You need to create a namespace in your Kubernetes cluster that contains all the resources related to your HCL DX 9.5 Container deployment. It is recommended that the namespace is created before the deployment because you may need to add an ImagePullSecret or configure the TLS certificate for HAProxy before deployment.
 
 Identify a name for your namespace and create it using the following syntax:
 
