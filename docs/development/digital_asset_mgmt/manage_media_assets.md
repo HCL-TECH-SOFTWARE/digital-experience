@@ -1,25 +1,25 @@
 # Manage media assets
 
-This section provides the steps on how to manage media assets and view configuration settings using HCL Digital Asset Management.
+This section provides the steps on how to manage media assets and view configuration settings using HCL Digital Asset Management \(DAM\).
 
 ## Prerequisite
 
-HCL Digital Asset Management CF181 or higher should be installed and configured to the HCL Digital Experience 9.5 Container Release update, following these instructions in the [Install the HCL Digital Experience 9.5 Container components](../containerization/install_config_cc_dam.md) topic.
+HCL Digital Asset Management CF181 or higher should be installed and configured to the HCL Digital Experience 9.5 Container Release update, following these instructions in the [Install the HCL Digital Experience 9.5 Container components](../digital_asset_mgmt/install_config_dam.md) topic.
 
 ## View supported file formats
 
-Follow these steps to view a list of file formats supported by HCL Digital Experience 9.5 Digital Asset Management.
+Follow these steps to view a list of file formats supported by HCL Digital Experience 9.5 DAM.
 
 1.  Log in to your HCL Digital Experience 9.5 platform and select **Digital Assets** from the Practitioner Studio navigator.
 
-    ![](../images/dam_upload_media_collections.png "Digital Asset Management user interface")
+    ![Digital Asset Management user interface](../../images/dam_upload_media_collections.png)
 
-    The HCL Digital Experience 9.5 Digital Asset Management can also be accessed from the Practitioner Studio **Digital Assets** tile.
+    The HCL Digital Experience 9.5 DAM can also be accessed from the Practitioner Studio **Digital Assets** tile.
 
-2.  From the HCL Digital Experience 9.5 Digital Asset Management user interface, select the gear icon \(for **Settings**\) located at the far top-right of the Digital Asset Management menu bar.
+2.  From the HCL Digital Experience 9.5 DAM user interface, select the gear icon \(for **Settings**\) located at the far top-right of the DAM menu bar.
 3.  **Settings** will display the **Supported file formats** section by default.
 
-    ![](../images/dam_settings_supported_file_formats.png "DAM > Settings > Files")
+    ![DAM > Settings > Files](../../images/dam_settings_supported_file_formats.png)
 
 
 The following are supported media asset file formats in HCL Digital Experience 9.5 Container Update Release CF183 and higher releases.
@@ -34,7 +34,8 @@ The following are supported media asset file formats in HCL Digital Experience 9
 |.tif|image/tiff|
 |.tiff|image/tiff|
 
-**Note:** You can set the maximum file size for the DAM asset uploads. For more information on configuring the file size, see the [DAM API](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeGroupController.updateById) topic.
+!!! note
+    You can set the maximum file size for the DAM asset uploads. For more information on configuring the file size, see the [DAM API](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeGroupController.updateById) topic.
 
 |File type|Extension|
 |---------|---------|
@@ -42,10 +43,10 @@ The following are supported media asset file formats in HCL Digital Experience 9
 |.mp4|video/mp4|
 |.webm|video/webm|
 
-**Note:**
+!!! notes
 
--   You can set the maximum file size for the DAM asset uploads. For more information on configuring the file size, see the [DAM API](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeGroupController.updateById) topic.
--   Videos are automatically synchronized once they are uploaded. Auto-synchronization is a background activity in HCL Digital Asset Management that happens when any video is uploaded and when Kaltura integration is configured and enabled.
+    -   You can set the maximum file size for the DAM asset uploads. For more information on configuring the file size, see the [DAM API](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeGroupController.updateById) topic.
+    -   Videos are automatically synchronized once they are uploaded. Auto-synchronization is a background activity in HCL Digital Asset Management that happens when any video is uploaded and when Kaltura integration is configured and enabled.
 
 |File type|Extension|
 |---------|---------|
@@ -80,38 +81,38 @@ Play uploaded videos in DAM using the DAM binary URL or the Kaltura Player \(if 
         ![](../images/dam_kaltura_player_for_synced.png "Playing a video using the Kaltura Player")
 
 
-**Note:** Videos being synced in progress displays a warning message and cannot be played yet.
+!!! note
+    Videos being synced in progress displays a warning message and cannot be played yet.
 
-![](../images/dam_warning_message_for_in_progress.png "Warning message for sync in progress")
+![Warning message for sync in progress](../../images/dam_warning_message_for_in_progress.png)
 
 For more information on the video synchronization statuses for uploaded videos, see [Upload rich media assets](upload_rich_media_assets.md#ul_zhl_vxq_qnb).
 
 ## Download a media asset source, version, or rendition
 
-Use the HCL Digital Experience 9.5 Digital Asset Management editor to download a media asset source, version, or rendition:
+Use the HCL Digital Experience 9.5 DAM editor to download a media asset source, version, or rendition:
 
-1.  From the HCL Digital Experience 9.5 Digital Asset Management interface, hover over a media asset to access and click the Overflow menu on the far right \(three vertical dots icon\), which is after **Add Favorites** \(star icon\). Then, select **Download**.
+1.  From the HCL Digital Experience 9.5 DAM user interface, click the Overflow menu on the far right \(three vertical dots icon\). Then, select **Download**.
 
-    ![](../images/dam_05_edit_media.png "Digital asset menu options")
+    ![Digital asset menu options](../../images/dam_05_edit_media.png)
 
-2.  A pop-up will appear for you to select your Download actions. You can rename downloaded media asset and choose to download **Source** or **Renditions**, or all asset types.
+2.  From the **Download** pop-up window, select your Download actions. You can rename downloaded media asset and choose to download **Source** or **Renditions**, or all asset types.
 
-    ![](../assets/Download_renditions_HCL_DAM.png "Download media asset and renditions")
+    ![Download media asset and renditions](../../images/Download_renditions_HCL_DAM.png)
 
 3.  Click **Download** to proceed.
 
 ## Deleting a media asset
 
-Use the HCL Digital Experience 9.5 Digital Asset Management editor to delete a media asset, including its renditions:
+Use the HCL Digital Experience 9.5 DAM editor to delete a media asset, including its renditions:
 
 1.  From the HCL Digital Experience 9.5 Digital Asset Management interface, hover over a media asset to access and click the Overflow menu on the far right \(three vertical dots icon\), which is after **Add Favorites** \(star icon\), as shown above. Then, select **Delete**.
-2.  A pop-up will appear for you to select your Delete action. If the selected media assets will not affect any references, click **Check for references and delete** to complete action.
+2.  From the **Delete** pop-up window, select your Delete action. If the selected media assets will not affect any references, click **Check for references and delete** to complete action.
 
-    ![](../assets/Check_for_references_and_delete_HCL_DAM.png "Check references and delete media asset")
+    ![Check references and delete media asset](../../images/Check_for_references_and_delete_HCL_DAM.png)
 
+???Info Related Information
+    -   **[DAM Assets Export and Import \(EXIM\)](../digital_asset_mgmt/dam_exim.md)**
+    [Digital Asset Management](../digital_asset_mgmt/index.md) \(DAM\) Assets Export and Import \(EXIM\) is a tool used for exporting the DAM assets from the source environment to the file system in a structured manner. It can also be used for importing DAM assets from the file system to the target environment.
 
--   **[DAM Assets Export and Import \(EXIM\)](../containerization/dam_exim.md)**  
-[Digital Asset Management](digital_asset_mgmt_overview.md) \(DAM\) Assets Export and Import \(EXIM\) is a tool used for exporting the DAM assets from the source environment to the file system in a structured manner. It can also be used for importing DAM assets from the file system to the target environment.
-
-**Parent topic:**[Common tasks](../digital_asset_mgmt/DAM_common_tasks.md)
 

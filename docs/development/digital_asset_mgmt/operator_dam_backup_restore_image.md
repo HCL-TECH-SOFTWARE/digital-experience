@@ -1,10 +1,11 @@
 # Back up and restore a DAM image
 
-This topic shows you how to backup and restore for Digital Asset Management persistence and binaries in an Operator-based deployment using `dxctl`.
+This topic shows you how to backup and restore for Digital Asset Management \(DAM\) persistence and binaries in an Operator-based deployment using `dxctl`.
 
 This procedure is not meant for moving DAM data to another deployment. The backup data is valid only on the deployment where the backup is performed.
 
-**Note:** The steps in this section are supported for HCL DX 9.5 Container Update CF195 or later deployments. Please contact HCL Support if you need to perform backup/restore for container deployments at earlier levels.
+!!! note 
+    The steps in this section are supported for HCL DX 9.5 Container Update CF195 or later deployments. Please contact HCL Support if you need to perform backup/restore for container deployments at earlier levels.
 
 -   **Back up your database**
 
@@ -14,11 +15,11 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         kubectl -n <namespace> get all
         ```
 
-        **Example:**
+        !!! example
 
-        ```
-        kubectl -n dxns get all
-        ```
+            ```
+            kubectl -n dxns get all
+            ```
 
     2.  Disable the persistence read-only pods by setting the following properties in the deployment properties file:
 
@@ -33,7 +34,8 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         dxctl --update -p deployment.properties
         ```
 
-        **Note:** Verify that there are no read-only pods in the deployment.
+        !!! note 
+            Verify that there are no read-only pods in the deployment.
 
     3.  Connect with the persistence pod \(read-write\). Open a shell in the running persistence pod:
 
@@ -41,11 +43,11 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         kubectl exec --stdin --tty pod/<pod-name> -n <namespace> -- /bin/bash 
         ```
 
-        **Example:**
+        !!! example
 
-        ```
-        kubectl exec --stdin --tty pod/dx-deployment-persistence-0 -n dxns -- /bin/bash
-        ```
+            ```
+            kubectl exec --stdin --tty pod/dx-deployment-persistence-0 -n dxns -- /bin/bash
+            ```
 
         1.  Dump the current database:
 
@@ -65,11 +67,11 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         kubectl cp <namespace>/<pod-name>:<source-file> <target-file>
         ```
 
-        **Example:**
+        !!! example
 
-        ```
-        kubectl cp dxns/dx-deployment-persistence-0:/tmp/dxmediadb.dmp /tmp/dxmediadb.dmp
-        ```
+            ```
+            kubectl cp dxns/dx-deployment-persistence-0:/tmp/dxmediadb.dmp /tmp/dxmediadb.dmp
+            ```
 
 
 -   **Back up your DAM binary**
@@ -80,11 +82,11 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         kubectl exec --stdin --tty pod/<pod-name> -n <namespace> -- /bin/bash
         ```
 
-        **Example:**
+        !!! example
 
-        ```
-        kubectl exec --stdin --tty pod/dx-deployment-dam-0 -n dxns -- /bin/bash
-        ```
+            ```
+            kubectl exec --stdin --tty pod/dx-deployment-dam-0 -n dxns -- /bin/bash
+            ```
 
     2.  Compress the DAM binaries located under /opt/app/upload directory:
 
@@ -106,11 +108,11 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         kubectl cp <namespace>/<pod-name>:<source-file> <target-file>
         ```
 
-        **Example:**
+        !!! example
 
-        ```
-        kubectl cp dxns/dx-deployment-dam-0:/opt/app/server-v1/backupml.tar.gz /tmp/backupml.tar.gz
-        ```
+            ```
+            kubectl cp dxns/dx-deployment-dam-0:/opt/app/server-v1/backupml.tar.gz /tmp/backupml.tar.gz
+            ```
 
 
 -   **Restore your DAM binary**
@@ -121,11 +123,11 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         kubectl cp <source-file> <namespace>/<pod-name>:<target-file>
         ```
 
-        **Example:**
+        !!! example
 
-        ```
-        kubectl cp /tmp/backupml.tar.gz dxns/dx-deployment-dam-0:/tmp/backupml.tar.gz
-        ```
+            ```
+            kubectl cp /tmp/backupml.tar.gz dxns/dx-deployment-dam-0:/tmp/backupml.tar.gz
+            ```
 
     2.  Connect to the DAM pod. Use the following command to open a shell in the running DAM pod:
 
@@ -133,11 +135,11 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         kubectl exec --stdin --tty pod/<pod-name> -n <namespace> -- /bin/bash
         ```
 
-        **Example:**
+        !!! example
 
-        ```
-        kubectl exec --stdin --tty pod/dx-deployment-dam-0 -n dxns -- /bin/bash
-        ```
+            ```
+            kubectl exec --stdin --tty pod/dx-deployment-dam-0 -n dxns -- /bin/bash
+            ```
 
     3.  Restore the DAM binaries:
 
@@ -161,11 +163,11 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         kubectl -n <namespace> get all
         ```
 
-        **Example:**
+        !!! example
 
-        ```
-        kubectl -n dxns get all
-        ```
+            ```
+            kubectl -n dxns get all
+            ```
 
     2.  Copy the database dump file to the persistence pod:
 
@@ -173,11 +175,11 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         kubectl cp <target-file> <namespace>/<pod-name>:<target-file>
         ```
 
-        **Example:**
+        !!! example
 
-        ```
-        kubectl cp dxmediadb.dmp dxns/dx-deployment-persistence-0:/tmp/dxmediadb.dmp
-        ```
+            ```
+            kubectl cp dxmediadb.dmp dxns/dx-deployment-persistence-0:/tmp/dxmediadb.dmp
+            ```
 
     3.  Connect to the persistence pod \(read-write\). Open a shell in the running persistence pod:
 
@@ -185,11 +187,11 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         kubectl exec --stdin --tty pod/<pod-name> -n <namespace> -- /bin/bash
         ```
 
-        **Example:**
+        !!! example
 
-        ```
-        kubectl exec --stdin --tty pod/dx-deployment-persistence-0 -n dxns -- /bin/bash
-        ```
+            ```
+            kubectl exec --stdin --tty pod/dx-deployment-persistence-0 -n dxns -- /bin/bash
+            ```
 
         1.  Run the following commands in order:
 
@@ -211,13 +213,13 @@ This procedure is not meant for moving DAM data to another deployment. The backu
                 dropdb dxmediadb
                 ```
 
-            **Note:** If you are getting the following error, run the two commands from this step again until it completes without the error occurring.
+            !!! note If you are getting the following error, run the two commands from this step again until it completes without the error occurring.
 
-            ```
-            ```
-            dropdb: database removal failed: ERROR:  database "dxmediadb" is being accessed by other users
-            ```    
-            ```
+                ```
+                ```
+                dropdb: database removal failed: ERROR:  database "dxmediadb" is being accessed by other users
+                ```    
+                ```
 
         2.  Create the database.
 
@@ -246,13 +248,13 @@ This procedure is not meant for moving DAM data to another deployment. The backu
 
 -   **Additional steps to restore your database**
 
-    1.  The DAM pods start working in a few minutes. If not, you may delete the DAM pod:
+    1.  The DAM pods starts working in a few minutes. If not, you may delete the DAM pod:
 
         ```
         kubectl delete pod <dam-pod-name> -n <namespace>
         ```
 
-        **Example:**
+        !!! example
 
         ```
         kubectl delete pod dx-deployment-dam-0 -n dxns
@@ -265,11 +267,11 @@ This procedure is not meant for moving DAM data to another deployment. The backu
             kubectl get pvc -n <name space>
             ```
 
-            **Example:**
+            !!! example
 
-            ```
-            kubectl get pvc -n dxns
-            ```
+                ```
+                kubectl get pvc -n dxns
+                ```
 
         2.  Delete the `PVC` for the read-only pods.
 
@@ -277,11 +279,11 @@ This procedure is not meant for moving DAM data to another deployment. The backu
             kubectl delete pvc <pvc-name-for-read-only-pod> -n <namespace>
             ```
 
-            **Example:**
+            !!! example
 
-            ```
-            kubectl delete pvc dam-persistence-dx-deployment-persistence-ro-0 -n dxns
-            ```
+                ```
+                kubectl delete pvc dam-persistence-dx-deployment-persistence-ro-0 -n dxns
+                ```
 
         3.  Enable the read-only pods. To enable the read-only pods, set `persist.force-read` to `true` in deployment properties file. You may also update the `persist.minreplicas:` with the value you configured earlier.
 
@@ -297,5 +299,4 @@ This procedure is not meant for moving DAM data to another deployment. The backu
             ```
 
 
-**Parent topic:**[Backup and recovery procedures Containerization](../containerization/operator_backup_and_recovery_procedures.md)
 

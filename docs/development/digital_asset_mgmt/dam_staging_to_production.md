@@ -29,7 +29,7 @@ Prerequisites:
 
     These settings will allow Digital Asset Management to communicate with the other HCL DX 9.5 deployment servers.
 
-    For more information about the deployment configuration map settings, refer to the [Install Experience API, Content Composer, and Digital Asset Management](install_config_cc_dam.md) topic.
+    For more information about the deployment configuration map settings, refer to the [Install Experience API, Content Composer, and Digital Asset Management](../digital_asset_mgmt/install_config_dam.md) topic.
 
 
 ## Publish Digital Asset Management assets from staging to production
@@ -42,14 +42,12 @@ Prerequisites:
     -   a. Go to **Administration** \> **Site Management** \> **Pages** \> **Content Root** \> **Practitioner Studio**.
     -   b. Find the Digital Asset page and select the Edit \(pencil\) icon to edit the page.
     -   c. Select the dropdown on the DAM ReactIntegration portlet and configure this portlet.
-    -   ![DAM ReactIntegration Portlet](../images/dam_reactintegration_portlet.png)
-
+        ![DAM ReactIntegration Portlet](../../images/dam_reactintegration_portlet.png)
     -   d. Add the Static UI URL: `https://TARGET_Hostname/dx/ui/media-library/static` to the DAM ReactIntegration portlet properties.
     -   e. Save this configuration.
     -   f. Follow the same configuration steps in the target Digital Experience 9.5 container server and place the URL in the target server \(see next step\). Configure the DAM ReactIntegration portlet on the target server using the same steps as outlined in A - E above.
     -   g. Ensure you apply the same static UI URL \(`https://TARGET_Hostname/dx/ui/media-library/static`\) as above when defining the portlet properties.
-    ![Share Digital Asset Management across multiple HCL DX environments](../images/share_dam_multiple.png "Share Digital Asset Management across multiple HCL DX
-                                    environments")
+      ![Share Digital Asset Management across multiple HCL DX environments](../../images/share_dam_multiple.png)
 
 
 ## Limitations
@@ -57,5 +55,4 @@ Prerequisites:
 -   Establishing single sign-on \(SSO\) across HCL Digital Experience 9.5 container deployments that shares Digital Asset Management services require that each deployment share the same user and group definitions across all participating environments.
 -   Ensure appropriate access controls are assigned to Digital Asset Management collections to prevent images used during development and authoring from showing in production rendering for end users.
 
-**Parent topic:**[Managing staging for DAM](../containerization/managing_dam_staging.md)
 

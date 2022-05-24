@@ -1,6 +1,6 @@
 # Using DAM staging
 
-This topic contains the commands that administrators can use to configure the staging of [Digital Asset Management](../digital_asset_mgmt/digital_asset_mgmt_overview.md) \(DAM\) content. This allows you to manage subscriber registration or configure periodic sync.
+This topic contains the commands that administrators can use to configure the staging of [Digital Asset Management](../digital_asset_mgmt/index.md) \(DAM\) content. This allows you to manage subscriber registration or configure periodic sync.
 
 ## DAM staging framework
 
@@ -10,11 +10,10 @@ The DAM staging framework allows you to stage your DAM content from an authoring
 -   Set the cycle length \(default: 2 minutes, maximum: 24 hours\) for periodic sync.
 -   Register a subscriber with a publisher.
 
-    **Note:** A subscriber must be registered with a publisher. Access rights from DAM staging assets are not transferred for subscribers that do not share the same Lightweight Directory Access Protocol \(LDAP\).
+    !!! note
+        A subscriber must be registered with a publisher. Access rights from DAM staging assets are not transferred for subscribers that do not share the same Lightweight Directory Access Protocol \(LDAP\).
 
-
-![Use separate Digital Asset Management and staging between HCL DX environments](../images/new_dam_staging_options.png "Using separate Digital Asset Management and staging between HCL DX
-                        environments")
+![Use separate Digital Asset Management and staging between HCL DX environments](../../images/new_dam_staging_options.png)
 
 ## Manage DAM staging
 
@@ -265,12 +264,12 @@ DAM staging is set up between DAM staging/authoring and DAM rendering.
 dam.host.overwrite.port=... dam.host.overwrite=...
 ```
 
-**For example:**
+!!! example:
 
-```
-dam.host.overwrite=myserver.com
-dam.host.overwrite.port=3000
-```
+    ```
+    dam.host.overwrite=myserver.com
+    dam.host.overwrite.port=3000
+    ```
 
 You must restart the DX Core JVM for changes to take effect.
 
@@ -278,7 +277,7 @@ You must restart the DX Core JVM for changes to take effect.
 
 If the properties are in place when using the REST API or WCM Admin UI or WCM API, the returned DAM references have the overwritten host name and port.
 
-For example, if a content item is moved from the staging environment to production, and production has the host overwrite set to `production.hcl.com`, then all DAM references are returned with `production.hcl.com`. For instance, production.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true even if we received the following from syndication: staging.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true.
+!!! example 
+    If a content item is moved from the staging environment to production, and production has the host overwrite set to `production.hcl.com`, then all DAM references are returned with `production.hcl.com`. For instance, production.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true even if we received the following from syndication: staging.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true.
 
-**Parent topic:**[Managing staging for DAM](../containerization/managing_dam_staging.md)
 

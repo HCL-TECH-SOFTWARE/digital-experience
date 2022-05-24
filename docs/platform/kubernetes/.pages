@@ -1,5 +1,6 @@
-title: Kubernetes Deployment 
+title: Kubernetes deployment
 nav:
+    - index.md
     - overview.md
     - docker.md
     - limitations_requirements.md

@@ -1,6 +1,6 @@
 nav:
     - intro_platforms.md
-    - sr_95express.md
+    - System requirements: sr_95express.md
     - getting_the_software95.md
     - kubernetes
     - docker

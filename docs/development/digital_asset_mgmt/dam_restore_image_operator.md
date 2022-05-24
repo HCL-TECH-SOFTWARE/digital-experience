@@ -16,5 +16,3 @@ See [Updating a deployment](../containerization/dxtools_dxctl.md#updating_deploy
     ```
 
 
-**Parent topic:**[Backup and recovery procedures Containerization](../containerization/operator_backup_and_recovery_procedures.md)
-

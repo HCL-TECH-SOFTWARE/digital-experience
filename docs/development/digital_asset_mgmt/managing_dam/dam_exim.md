@@ -1,6 +1,6 @@
 # DAM Assets Export and Import \(EXIM\)
 
-[Digital Asset Management](../digital_asset_mgmt/digital_asset_mgmt_overview.md) \(DAM\) Assets Export and Import \(EXIM\) is a tool used for exporting the DAM assets from the source environment to the file system in a structured manner. It can also be used for importing DAM assets from the file system to the target environment.
+[Digital Asset Management](../../digital_asset_mgmt/index.md) \(DAM\) Assets Export and Import \(EXIM\) is a tool used for exporting the DAM assets from the source environment to the file system in a structured manner. It can also be used for importing DAM assets from the file system to the target environment.
 
 ## User access and control capabilities for HCL DAM EXIM users
 
@@ -14,7 +14,7 @@ If you choose to export DAM assets to a target that does not share the same LDAP
 
 DAM EXIM may be used to take a backup of DAM assets from any environment. The same backup can be used in other environment.
 
-DAM EXIM cannot be used for continuous sync like DAM staging. You need to configure your [DAM staging](managing_dam_staging.md) if you want a continuous sync of DAM assets.
+DAM EXIM cannot be used for continuous sync like DAM staging. You need to configure your [DAM staging](../dam_staging.md) if you want a continuous sync of DAM assets.
 
 DAM Staging is a continuous sync process between environments. If you are using DAM staging, then it is not necessary to use DAM EXIM.
 
@@ -93,13 +93,14 @@ The export command is used to export the assets of DAM in the file system at a u
     -exportBinary <value>
     ```
 
-    **Note:** Optional parameters are `exportPath` and `exportBinary`.
+    !!! note 
+        Optional parameters are `exportPath` and `exportBinary`.
 
-    Example:
+    !!! example
 
-    ```
-    dxclient manage-dam-assets export-assets -dxProtocol https -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -exportPath <exportPath> -exportBinary <exportBinary>
-    ```
+        ```
+        dxclient manage-dam-assets export-assets -dxProtocol https -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -exportPath <exportPath> -exportBinary <exportBinary>
+        ```
 
 
 ## Validate exported DAM assets
@@ -135,13 +136,14 @@ The validate command is used to validate exported DAM assets file at the locatio
     -importBinary <value>
     ```
 
-    **Note:** Optional parameters are `exportPath` and `exportBinary`.
+    !!! note 
+        Optional parameters are `exportPath` and `exportBinary`.
 
-    Example:
+    !!! example
 
-    ```
-    dxclient manage-dam-assets validate-assets -exportPath <exportPath> -importBinary <importBinary>
-    ```
+        ```
+        dxclient manage-dam-assets validate-assets -exportPath <exportPath> -importBinary <importBinary>
+        ```
 
 
 ## Import DAM assets
@@ -220,14 +222,12 @@ The import command is used to import the assets of a dam to the target environme
     -importBinary <value>
     ```
 
-    **Note:** Optional parameters are `exportPath` and `exportBinary`.
+    !!! note 
+        Optional parameters are `exportPath` and `exportBinary`.
 
-    Example:
+    !!! example
 
-    ```
-    dxclient manage-dam-assets import-assets -dxProtocol https -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -exportPath <exportPath> -importBinary <importBinary>
-    ```
-
-
-**Parent topic:**[Manage media assets](../digital_asset_mgmt/manage_media_assets.md)
+        ```
+        dxclient manage-dam-assets import-assets -dxProtocol https -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -exportPath <exportPath> -importBinary <importBinary>
+        ```
 
