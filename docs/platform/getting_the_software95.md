@@ -50,10 +50,8 @@ The following is the installation path from an existing HCL Digital Experience 8
 
 1.  Download the HCL Digital Experience 9.5 container image files that contains the following:
     -   HCL Digital Experience Docker container; and
-    -   The Operator Docker container with a set of scripts to deploy the supported Kubernetes platforms.
 2.  Follow the [documentation here](../platform/docker/index.md) to deploy to Docker or supported Kubernetes platforms.
 3.  Stage the content to the new environment to move from an existing system to HCL Digital Experience on Docker or supported Kubernetes platforms.
 
 <!-- ???info "Related information:"
     -   [Experience API documentation](../design/api/openapi_overview.md) -->
-
