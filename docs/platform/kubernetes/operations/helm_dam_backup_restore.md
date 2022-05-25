@@ -77,7 +77,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
 
 3.   **DAM binary backup**
 
-    4.  Compress the DAM binaries located in the `/opt/app/upload` directory:
+    1.  Compress the DAM binaries located in the `/opt/app/upload` directory:
 
         ```
         kubectl -n <namespace> exec pod/<dam-pod-name> -- /bin/bash -c "tar -cvpzf /path/to/backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system --directory /opt/app/upload ."
@@ -88,7 +88,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
             kubectl -n dxns exec pod/dx-deployment-digital-asset-management-0 -- /bin/bash -c "tar -cvpzf /tmp/backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system --directory /opt/app/upload ."
             ```
 
-    5.  Download the compressed binaries to the local system.
+    2.  Download the compressed binaries to the local system.
 
         From a local system, you can now download the backup DAM binaries from the DAM pod:
 
@@ -153,7 +153,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
 3.   **Persistence restore**
 
 
-    3.  Determine the primary `persistence-node` using:
+    1.  Determine the primary `persistence-node` using:
 
         ```
         kubectl -n <namespace> exec pod/<release-name>-persistence-node-<running-node-index> -c persistence-node -- repmgr cluster show --compact --terse 2>/dev/null | grep "primary" | awk '{split($0,a,"|"); print a[2]}' | xargs
@@ -175,7 +175,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         ```
 
 
-    4.  Copy the database dump file to the primary `persistence-node` pod:
+    2.  Copy the database dump file to the primary `persistence-node` pod:
 
         ```
         kubectl cp -c persistence-node <target-file> <namespace>/<primary-node-name>:<target-file>
@@ -186,7 +186,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
             kubectl cp -c persistence-node dxmediadb.dmp dxns/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp
             ```
 
-    5.  Run the following commands in order:
+    3.  Run the following commands in order:
 
         1.  Set the database connection limit to 0 for `dxmediadb`:
 
