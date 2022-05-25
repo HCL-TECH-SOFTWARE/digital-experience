@@ -272,8 +272,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         kubectl delete pod <dam-pod-name> -n <namespace>
         ```
 
-        Example:
-
-        ```shell
-        kubectl delete pod dx-deployment-digital-asset-management-0 -n dxns
-        ```
+        !!! example
+            ```shell
+            kubectl delete pod dx-deployment-digital-asset-management-0 -n dxns
+            ```
