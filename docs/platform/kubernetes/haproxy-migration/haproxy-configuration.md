@@ -1,6 +1,6 @@
 # HAProxy configuration
 
-By default, HAProxy is deployed with a `LoadBalancer` type service to handle the incoming traffic as well as the SSL offloading for HCL Digital Experience. In addition, the Helm deployment offers adjustability for HAProxy and its services to allow for more flexible deployment and use of custom `Ingress Controllers`.
+By default, HAProxy is deployed with a `LoadBalancer` type service to handle the incoming traffic as well as the SSL offloading for HCL Digital Experience. In addition, the Helm deployment offers adjustability for HAProxy and its services to allow for more flexible deployment and use of custom `HAProxy Controllers`.
 
 !!!note
     When migrating from Ambassador, the default configuration of HAProxy matches the default configuration of Ambassador as close as possible.
@@ -35,30 +35,7 @@ networking:
     serviceNodePort:
 ```
   
-This configuration is helpful for those who want to use a custom `Ingress Controller` to expose the service in a compatible way. Even then, HAProxy will still be active. The `Ingress Controller` will handle the incoming traffic and then route them to the HAProxy service.
-
-## HAProxy with and without Ambassador
-
-In Container Update CF203, Ambassador is still included along with the new HAProxy service so that you can get familiar with the HAProxy service, use the following configuration options to test both the services side-by-side, and prepare to eventually disable Ambassador and migrate to the HAProxy service. Note that the Ambassador service will be removed in a future version.
-
-Both Ambassador and HAProxy can be enabled or disabled in the `applications` section of the Helm values. Depending on the combination of settings, HAProxy is deployed by itself or in a side-by-side mode with Ambassador. The side-by-side mode is mainly used for migration from Ambassador to HAProxy service. Refer to the [`Migrate from Ambassador to HAProxy`](./haproxy-migration.md) page for migration information.
-
-```yaml
-# Controls which application is deployed and configured
-applications:
-  # Deploys the Ambassador Ingress and Redis
-  ambassador: true
-  # Deploys HAProxy
-  haproxy: true
-```
-
-The matrix below shows the deployment options for combinations of HAProxy and Ambassador:
-
-|Deployment type|`ambassador`|`haproxy`| Result |
-|---------|-----------|-------------|--------|
-| fresh deployment (`helm install`)| *not available* | `true` (default) | HAProxy |
-| update of existing deployment (`helm upgrade`)| `true` (default) | `true` (default) | Ambassador and HAProxy (side-by-side mode) |
-| update of existing deployment (`helm upgrade`)| `false` | `true` (default) | HAProxy |
+This configuration is helpful for those who want to use a custom `HAProxy Controller` to expose the service in a compatible way. Even then, HAProxy will still be active. The `HAProxy Controller` will handle the incoming traffic and then route them to the HAProxy service.
 
 ## Scaling
 

@@ -31,10 +31,10 @@ applications:
   # Deploys the Ring API
   # Enabling either digitalAssetManagement or contentComposer will override this setting with: true
   ringApi: true
-  # Deploys the Ambassador Ingress and Redis
-  ambassador: true
   # Deploys the Runtime Controller
   runtimeController: true
+  # Deploy HAProxy
+  haproxy: true
 
 ```
 

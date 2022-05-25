@@ -136,7 +136,7 @@ configuration:
 
 ## Remote Search configuration
 
-You can configure whether the Remote Search configuration through the IBM WebSphere Application Server Solution Console is exposed as an additional port on the Ambassador Ingress or not. This defaults to true.
+You can configure whether the Remote Search configuration through the IBM WebSphere Application Server Solution Console is exposed as an additional port on HAProxy or not. This defaults to true.
 
 If set to true, you can access the Solution Console using:
 

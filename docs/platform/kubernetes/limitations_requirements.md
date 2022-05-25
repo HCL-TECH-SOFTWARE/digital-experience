@@ -63,8 +63,6 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
     |Open LDAP|openLdap|0.2|512MB|1|
     |Remote search|remoteSearch|0.25|768MB|1 \(Max 1 Pod\)|
     |Runtime Controller|runtimeController|0.1|256MB|1|
-    |Ambassador Ingress|ambassadorIngress|0.2|300MB|1|
-    |Ambassador Redis|ambassadorRedis|0.1|256MB|0|
     |Sidecar|sidecar|0.1|64MB|0|
     |HAProxy|haproxy|1|1024MB|1|
 
@@ -119,7 +117,6 @@ The following section describes the requirements to deploy the HCL Digital Exper
     |Image processor|1|2|2 GB|2 GB|1|
     |Remote search|1|3|1 GB|4 GB|1|
     |Operators|Shared - minimal|Shared - minimal|Shared - minimal|Shared - minimal|2|
-    |Ambassador|0.3|1|400 MB|600 MB|3|
     |Redis|0.3|1|400 MB|600 MB|3|
     |Postgres-RO|1|2|1 GB|3 GB|1|
 
