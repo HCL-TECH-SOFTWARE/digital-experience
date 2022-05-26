@@ -22,7 +22,7 @@ DAM Staging is a continuous sync process between environments. If you are using 
 
 ## Export DAM assets
 
-The export command is used to export the assets of DAM in the file system at a user-specific location or default location store/outputFiles/dam-export-assets/.
+The export command is used to export the DAM assets in the file system to default location **store/outputFiles/dam-export-assets/** or if user specify a path, then DAM assets will export to this location **store/folder_name/**.
 
 -   **Commands description**
 
@@ -107,7 +107,7 @@ The export command is used to export the assets of DAM in the file system at a u
 
 ## Validate exported DAM assets
 
-The validate command is used to validate exported DAM assets file at the location specified by the user or default location store/outputFiles/dam-export-assets/.
+The validate command is used to validate exported DAM assets file at the default location **store/outputFiles/dam-export-assets/** or if user specify a path, then validation of DAM assets will be done from this location **store/folder_name/**.
 
 -   **Commands description**
 
@@ -151,7 +151,7 @@ The validate command is used to validate exported DAM assets file at the locatio
 
 ## Import DAM assets
 
-The import command is used to import the assets of a dam to the target environment from the location specified by the user or default location store/outputFiles/dam-export-assets/.
+The import command is used to import the DAM assets to the target environment from the default location **store/outputFiles/dam-export-assets/** or if user specify a path, then DAM assets will import to this location **store/folder_name/**.
 
 -   **Commands description**
 
