@@ -126,6 +126,7 @@ The validate command is used to validate exported DAM assets file at the locatio
 
 -   **Commands Optional options**
 
+
     Use this attribute to specify a location **store/folder_name/** that is different from the default location to validate the DAM assets. The default location "export" is **store/outputFiles/dam-export-assets/**:
 
     ```
