@@ -222,7 +222,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
                 ```
 
             !!!note
-                If you are getting the following error, run the commands from this step again until it completes without the error occurring.
+                If you are getting the following error, run the commands from this step again until they are completed without errors.
 
                 ```shell
                 dropdb: database removal failed: ERROR:  database "dxmediadb" is being accessed by other users
