@@ -37,7 +37,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         kubectl -n <namespace> exec pod/<release-name>-persistence-node-<running-node-index> -c persistence-node -- repmgr cluster show --compact --terse 2>/dev/null | grep "primary" | awk '{split($0,a,"|"); print a[2]}' | xargs
         ```
 
-        For `<running-node-index>` select the index of any `persistence-node` that is in the `Running` state. In most cases, node `0` can be used.
+        For `<running-node-index>`, select the index of any `persistence-node` that is in the `Running` state. In most cases, node `0` can be used.
 
         !!! example
             ```shell
