@@ -31,7 +31,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
 
 2.   **Persistence backup**
 
-    1.  Determine the primary `persistence-node` using:
+    1.  Determine the primary `persistence-node` using the following command:
 
         ```
         kubectl -n <namespace> exec pod/<release-name>-persistence-node-<running-node-index> -c persistence-node -- repmgr cluster show --compact --terse 2>/dev/null | grep "primary" | awk '{split($0,a,"|"); print a[2]}' | xargs
