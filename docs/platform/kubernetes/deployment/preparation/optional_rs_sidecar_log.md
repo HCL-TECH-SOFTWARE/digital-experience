@@ -29,7 +29,7 @@ So in that case, the file pattern matching argument can be passed to identify th
 
     ```
         logging:
-          core:
+          remoteSearch:
             customLogSidecarContainers:
               - containerName: "trace"
                  logFilePath: "/var/profile/logs/server1/trace.*.log"
@@ -37,8 +37,22 @@ So in that case, the file pattern matching argument can be passed to identify th
 
     ```
         logging:
-          core:
+          remoteSearch:
             customLogSidecarContainers:
               - containerName: "trace"
                  logFilePath: "/var/profile/logs/*/trace.log"
+    ```
+
+    
+The custom sidecar container also works with a single log file as well. Just need to mention the absolute file path to the `logFilePath` and the script will expose the logs from that file only.
+
+!!!example "Example:"
+    The following example starts a new sidecar container and exposes the logs from a single file (mentioned with the absolute file path in the argument).
+
+    ```
+        logging:
+          remoteSearch:
+            customLogSidecarContainers:
+              - containerName: "trace"
+                 logFilePath: "/var/profile/logs/server1/trace.log"
     ```
