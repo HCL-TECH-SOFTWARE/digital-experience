@@ -39,14 +39,14 @@ Prerequisites:
 3.  The target server is a Digital Experience 9.5 container production server including the Digital Asset Management deployment.
 4.  On the source Digital Experience 9.5 container server, configure the Digital Asset Management DAM React Integration portlet:
 
-    -   a. Go to **Administration** \> **Site Management** \> **Pages** \> **Content Root** \> **Practitioner Studio**.
-    -   b. Find the Digital Asset page and select the Edit \(pencil\) icon to edit the page.
-    -   c. Select the dropdown on the DAM ReactIntegration portlet and configure this portlet.
+    1.   Go to **Administration** \> **Site Management** \> **Pages** \> **Content Root** \> **Practitioner Studio**.
+    2.   Find the Digital Asset page and select the Edit \(pencil\) icon to edit the page.
+    3.   Select the dropdown on the DAM ReactIntegration portlet and configure this portlet.
         ![DAM ReactIntegration Portlet](../../images/dam_reactintegration_portlet.png)
-    -   d. Add the Static UI URL: `https://TARGET_Hostname/dx/ui/media-library/static` to the DAM ReactIntegration portlet properties.
-    -   e. Save this configuration.
-    -   f. Follow the same configuration steps in the target Digital Experience 9.5 container server and place the URL in the target server \(see next step\). Configure the DAM ReactIntegration portlet on the target server using the same steps as outlined in A - E above.
-    -   g. Ensure you apply the same static UI URL \(`https://TARGET_Hostname/dx/ui/media-library/static`\) as above when defining the portlet properties.
+    4.   Add the Static UI URL: `https://TARGET_Hostname/dx/ui/media-library/static` to the DAM ReactIntegration portlet properties.
+    5.   Save this configuration.
+    6.   Follow the same configuration steps in the target Digital Experience 9.5 container server and place the URL in the target server \(see next step\). Configure the DAM ReactIntegration portlet on the target server using the same steps as outlined in A - E above.
+    7.   Ensure you apply the same static UI URL \(`https://TARGET_Hostname/dx/ui/media-library/static`\) as above when defining the portlet properties.
       ![Share Digital Asset Management across multiple HCL DX environments](../../images/share_dam_multiple.png)
 
 

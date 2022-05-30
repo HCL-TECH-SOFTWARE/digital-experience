@@ -84,6 +84,7 @@ Follow these steps to configure your Kaltura plugin:
     -   **Partner ID** - your Kaltura **Partner ID**
     -   **Administrator secret key** - your **Administrator Secret** key
     -   **Player ID** - your Kaltura **Player ID**
+
 5.  After updating your credentials, click **Update**.
 
 ## Enable the Kaltura plugin
@@ -101,6 +102,7 @@ Follow these steps to configure your Kaltura plugin:
     -   **Partner ID** - your Kaltura **Partner ID**
     -   **Administrator secret key** - your **Administrator Secret** key
     -   **Player ID** - your Kaltura **Player ID**
+    
 5.  Click **Enable**.
 
 ## Disable the Kaltura plugin

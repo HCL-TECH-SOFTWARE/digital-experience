@@ -2,7 +2,7 @@
 
 This section provides a high-level overview of the architecture and the steps to install, configure, and update the HCL Digital Experience 9.5 components: Experience API, Content Composer, and Digital Asset Management.
 
-**Video**: ![Install HCL Digital Experience components \(Experience API, Content Composer, and Digital Asset Management\) on Red Hat OpenShift](https://youtu.be/Hhop8M89SVA)
+**Video**: [Install HCL Digital Experience components \(Experience API, Content Composer, and Digital Asset Management\) on Red Hat OpenShift](https://youtu.be/Hhop8M89SVA)
 
 ## High-level architecture and topology
 
@@ -21,7 +21,7 @@ Deploying the HCL Digital Asset Management or Content Composer components is sup
 
 ## Installing the HCL Digital Experience 9.5 Container components
 
-Follow the steps to install your HCL Digital Experience 9.5 components \(Experience API, Content Composer, and Digital Asset Management\):
+Follow these steps to install your HCL Digital Experience 9.5 components \(Experience API, Content Composer, and Digital Asset Management\):
 
 **Asset Management components**
 
@@ -37,15 +37,16 @@ If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernet
     !!! Example
 
         ```
-        **hcl-dx-kubernetes-v95-CF181-other.zip:**
+        hcl-dx-kubernetes-v95-CF181-other.zip:
         ```
 
-    -   **HCL Experience API \(Docker image\)** - `hcl-dx-ringapi-image-v1.0.0_xxxxxxxx-xxxx.tar.gz`
-    -   **Postgres** - `hcl-dx-postgres-image-v1.0.0_xxxxxxxx-xxxx.tar.gz`
-    -   **HCL Digital Asset Management \(Operator\)** - `hcl-dx-medialibrary-operator-image-v95_CF181_xxxxxxxx-xxxx.tar.gz`
-    -   **HCL Digital Asset Management \(Image processor\)** - `hcl-dx-image-processor-image-v1.0.0_xxxxxxxx-xxxx.tar.gz`
-    -   **HCL Digital Asset Management \(Docker image\)** - `hcl-dx-digital-asset-manager-image-v1.0.0_xxxxxxxx-xxxx.tar.gz`
-    -   **HCL Content Composer \(Docker image\)** - `hcl-dx-content-composer-image-v1.0.0_xxxxxxxx-xxxx.tar.gz`
+        -   **HCL Experience API \(Docker image\)** - `hcl-dx-ringapi-image-v1.0.0_xxxxxxxx-xxxx.tar.gz`
+        -   **Postgres** - `hcl-dx-postgres-image-v1.0.0_xxxxxxxx-xxxx.tar.gz`
+        -   **HCL Digital Asset Management \(Operator\)** - `hcl-dx-medialibrary-operator-image-v95_CF181_xxxxxxxx-xxxx.tar.gz`
+        -   **HCL Digital Asset Management \(Image processor\)** - `hcl-dx-image-processor-image-v1.0.0_xxxxxxxx-xxxx.tar.gz`
+        -   **HCL Digital Asset Management \(Docker image\)** - `hcl-dx-digital-asset-manager-image-v1.0.0_xxxxxxxx-xxxx.tar.gz`
+        -   **HCL Content Composer \(Docker image\)** - `hcl-dx-content-composer-image-v1.0.0_xxxxxxxx-xxxx.tar.gz`
+
 3.  Extract the images to the local file system.
 4.  Open a terminal window and change to the root directory of the extracted package images.
 5.  Load the images into your Docker environment.
@@ -122,37 +123,37 @@ If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernet
     !!! note
         It is possible to deploy the services for the HCL Experience API and HCL Content Composer and/or Digital Asset Management by removing either the HCL Content Composer or HCL Digital Asset Management service lines from the YAML file.
 
-        ```
-        kind: ConfigMap
-        metadata:
-        name: dx-deployment
-        data:
-        dx.deploy.dam.persistence.tag: v1.0.0_20200622-1806
-        dx.deploy.dam.persistence.image: portal/persistence/postgres
-        dx.deploy.dam.volume: volume name
-        dx.deploy.dam.imgprocessor.tag:  v95_CF181_20200622-1550
-        dx.deploy.remotesearch.tag: v95_CF181_20200622-1550
-        dx.deploy.dam.imgprocessor.image: portal/image-processor
-        dx.deploy.dam.storageclass: dx-deploy-stg
-        dx.deploy.remotesearch.image: dxrs
-        dx.deploy.openldap.tag: v1.0.0-release_20200622_1592846796
-        dx.deploy.openldap.image: dx-openldap
-        dx.deploy.contentui.tag: v1.0.0_20200622-1709
-        dx.deploy.contentui.image: portal/content-ui
-        dx.deploy.remotesearch.enabled: 'true'
-        dx.deploy.dam.tag: v1.0.0_20200622-1718
-        dx.deploy.experienceapi.tag: v1.0.0_20200622-1719
-        dx.deploy.experienceapi.image: portal/api/ringapi
-        dx.deploy.dam.image: portal/media-library
-        dx.deploy.openldap.enabled: 'true'
-        dx.deploy.contentui.enabled: 'true'
-        dx.deploy.experienceapi.enabled: 'true'
-        dx.deploy.dam.enabled: 'true'
-        dx.deploy.dam.operator.tag: v95_CF181_20200622-1756
-        dx.deploy.dam.operator.image: hcl-medialibrary-operator
-        dx.deploy.remotesearch.volume.storageclass: gp2
-        
-        ```
+    ```
+    kind: ConfigMap
+    metadata:
+    name: dx-deployment
+    data:
+    dx.deploy.dam.persistence.tag: v1.0.0_20200622-1806
+    dx.deploy.dam.persistence.image: portal/persistence/postgres
+    dx.deploy.dam.volume: volume name
+    dx.deploy.dam.imgprocessor.tag:  v95_CF181_20200622-1550
+    dx.deploy.remotesearch.tag: v95_CF181_20200622-1550
+    dx.deploy.dam.imgprocessor.image: portal/image-processor
+    dx.deploy.dam.storageclass: dx-deploy-stg
+    dx.deploy.remotesearch.image: dxrs
+    dx.deploy.openldap.tag: v1.0.0-release_20200622_1592846796
+    dx.deploy.openldap.image: dx-openldap
+    dx.deploy.contentui.tag: v1.0.0_20200622-1709
+    dx.deploy.contentui.image: portal/content-ui
+    dx.deploy.remotesearch.enabled: 'true'
+    dx.deploy.dam.tag: v1.0.0_20200622-1718
+    dx.deploy.experienceapi.tag: v1.0.0_20200622-1719
+    dx.deploy.experienceapi.image: portal/api/ringapi
+    dx.deploy.dam.image: portal/media-library
+    dx.deploy.openldap.enabled: 'true'
+    dx.deploy.contentui.enabled: 'true'
+    dx.deploy.experienceapi.enabled: 'true'
+    dx.deploy.dam.enabled: 'true'
+    dx.deploy.dam.operator.tag: v95_CF181_20200622-1756
+    dx.deploy.dam.operator.image: hcl-medialibrary-operator
+    dx.deploy.remotesearch.volume.storageclass: gp2
+    
+    ```
 
     !!! notes
 
@@ -160,6 +161,7 @@ If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernet
             -   The `dx.deploy.contentui.enabled` and `dx.deploy.experienceapi.enabled` configurations tell the operator to deploy HCL Content Composer and HCL Experience API components. This defaults to using the same repository as the HCL Digital Experience 9.5 CF181 or higher container core deployment.
 
             -   Services `dx-deployment-service-content-ui` and `dx-deployment-service-ring-api`, and a route for each.
+            
         -   Administrators can override the repository by adding the following to the config map entries:
 
             ```
@@ -172,6 +174,7 @@ If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernet
             -   The Postgres datastore component uses `dx.deploy.dam.persistence`.
             -   The HCL Digital Asset Management library services use `dx.deploy.dam`.
             -   The Image processor uses `dx.deploy.dam.persistence`.
+
             To override the repository values for the components above, use `dx.deploy.COMPONENT.repository`
 
             The last two parameters in the example YAML file provide the storage class and volume \(must be **ReadWriteMany**\) for the HCL Digital Asset Management component. This is where the persistence layer maintains the datastore layer.
@@ -200,24 +203,25 @@ If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernet
             -   `dx.deploy.experienceapi.resources.cpulimit`, the default is 3.
             -   `dx.deploy.experienceapi.resources.memoryrequest`, the default is 2G.
             -   `dx.deploy.experienceapi.resources.memorylimit`, the default is 4G.
+
             Additional configuration options are currently not supported.
 
 12. Deploy the YAML \(`dx-deploy-config-map.yaml`\) by issuing the following command:
     -   Kubernetes command:
         -   ```
-kubectl apply -f dx-deploy-config-map.yaml -n your-namespace
-```
+            kubectl apply -f dx-deploy-config-map.yaml -n your-namespace
+            ```
 
     -   OpenShift command:
         -   ```
-oc project your-namespace
-```
+            oc project your-namespace
+            ```
 
-            followed by
+        followed by
 
         -   ```
-oc apply -f dx-deploy-config-map.yaml
-```
+            oc apply -f dx-deploy-config-map.yaml
+            ```
 
 13. Stop and restart the HCL Digital Experience 9.5 CF181 and higher container deployment.
 
@@ -238,7 +242,8 @@ oc apply -f dx-deploy-config-map.yaml
 
 15. Remove the `claimRef` from the PersistedVolume.
 
-    !!! note Instructions to re-use the Persistent Volume may also be viewed in the **[Deploy HCL Digital Experience 9.5 Container to Amazon EKS](kubernetes_eks.md) topic.**
+    !!! note 
+        Instructions to re-use the Persistent Volume may also be viewed in the **[Deploy HCL Digital Experience 9.5 Container to Amazon EKS](kubernetes_eks.md) topic.**
 
 16. Open the persistent volume in a visual editor \(vi\) using the Kubernetes or OpenShift command line client command:
 
@@ -256,11 +261,17 @@ oc apply -f dx-deploy-config-map.yaml
 
     ```
     claimRef:
+
     apiVersion: v1
+
     kind: PersistentVolumeClaim
+
     name: dx-deploy-pvc
+
     namespace: awseks-demo
+
     resourceVersion: "488931120"
+
     uid: ebd58361-0e2a-11ea-b02e-02f8fe687954
     ```
 
@@ -277,9 +288,11 @@ oc apply -f dx-deploy-config-map.yaml
     ./scripts/deployDx.sh NAMESPACE REPLICAS REPOSITORY IMAGENAME IMAGETAG VOLUMENAME STORAGECLASS DBTYPE INGRESSIMAGE INGRESSTAG
     ```
 
-    **Note:** You must restart the deployment with one \(1\) replica. Once it is fully started, you can safely scale it to `N` instances.
+    !!! note:
+        You must restart the deployment with one \(1\) replica. Once it is fully started, you can safely scale it to `N` instances.
 
-    **Reminder**: As outlined in this section, adding new components to a production deployment requires an outage and some setup time. It is advisable to plan carefully if you are currently running a Digital Experience container deployment in a supported Kubernetes environment.
+    !!! reminder: 
+        As outlined in this section, adding new components to a production deployment requires an outage and some setup time. It is advisable to plan carefully if you are currently running a Digital Experience container deployment in a supported Kubernetes environment.
 
 20. Access the HCL Content Composer and HCL Digital Asset Management components by navigating to **Practitioner Studio** \> **Web Content** \> **Content**, or **Practitioner Studio** \> **Digital Assets**.
 
@@ -308,8 +321,8 @@ oc apply -f dx-deploy-config-map.yaml
 
 If you are using a content delivery network \(CDN\) such as [Akamai](https://www.akamai.com/our-thinking/cdn/what-is-a-cdn), using `Vary: Origin` may prevent you from caching content. To bypass this limitation, your CDN configuration must strip the `Vary` header on the way in, to reinstate your ability to cache content. On the way out, you can append the `Origin` parameter to the `Vary` header when serving a response using **'Modify Outgoing Response Header'**.
 
--   **[Enable/disable Content Composer in Virtual Portals](../content_composer/configure_cc_virtual_portals.md)**  
-The use of Content Composer features in a Virtual Portal deployment pattern is supported for HCL Content Composer beginning with Container Update 9.5 CF192.
+<!-- -   **[Enable/disable Content Composer in Virtual Portals](../content_composer/configure_cc_virtual_portals.md)**  
+The use of Content Composer features in a Virtual Portal deployment pattern is supported for HCL Content Composer beginning with Container Update 9.5 CF192. -->
 
 <!-- ???Info Related Information:
     - [HCL Content Composer](../../content_composer/cont_comp_overview.md)

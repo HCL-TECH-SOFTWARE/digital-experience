@@ -76,66 +76,66 @@ Similar to rendition and thumbnail actions such as crop and resize, the Image pr
 
     !!! example
 
-      ```
-      
-      {
-        'image/jpeg': {
-          rendition: [
-            {
-              name: 'Original',
-              transformationStack: [],
-              thumbnailStack: [],
-              supplementalStack: [
-                {
-                  plugin: 'image-processor',
-                  operation: {
-                    metadata: {},
+        ```
+        
+        {
+          'image/jpeg': {
+            rendition: [
+              {
+                name: 'Original',
+                transformationStack: [],
+                thumbnailStack: [],
+                supplementalStack: [
+                  {
+                    plugin: 'image-processor',
+                    operation: {
+                      metadata: {},
+                    },
                   },
-                },
-              ],
-            },
-            {
-              name: 'Desktop',
-              transformationStack: [],
-              thumbnailStack: [],
-              supplementalStack: [
-                {
-                  plugin: 'image-processor',
-                  operation: {
-                    metadata: {},
+                ],
+              },
+              {
+                name: 'Desktop',
+                transformationStack: [],
+                thumbnailStack: [],
+                supplementalStack: [
+                  {
+                    plugin: 'image-processor',
+                    operation: {
+                      metadata: {},
+                    },
                   },
-                },
-              ],
-            },
-            {
-              name: 'Tablet',
-              transformationStack: [],
-              thumbnailStack: [],
-              supplementalStack: [
-                {
-                  plugin: 'image-processor',
-                  operation: {
-                    metadata: {},
+                ],
+              },
+              {
+                name: 'Tablet',
+                transformationStack: [],
+                thumbnailStack: [],
+                supplementalStack: [
+                  {
+                    plugin: 'image-processor',
+                    operation: {
+                      metadata: {},
+                    },
                   },
-                },
-              ],
-            },
-            {
-              name: 'Smartphone',
-              transformationStack: [],
-              thumbnailStack: [],
-              supplementalStack: [
-                {
-                  plugin: 'image-processor',
-                  operation: {
-                    metadata: {},
+                ],
+              },
+              {
+                name: 'Smartphone',
+                transformationStack: [],
+                thumbnailStack: [],
+                supplementalStack: [
+                  {
+                    plugin: 'image-processor',
+                    operation: {
+                      metadata: {},
+                    },
                   },
-                },
-              ],
-            },
-          ],
+                ],
+              },
+            ],
+          }
         }
-      }
-      ```
+        ```
 
 

@@ -10,27 +10,27 @@ Follow these steps to set a unique custom URL value for a media asset:
 2.  Hover over a media asset and click **Edit** \(pencil icon\).
 3.  Click **Information** and enter the expected text in the **Custom URL** field. A helper text shows a preview of the custom URL below the field.
 
-    !!!note 
-        Supported values for the **Custom URL** field.
+    !!! note 
+        Supported values for the **Custom URL** field:
 
-    -   Custom URL values are unique for a media asset and are associated to the latest version of any rendition.
-    -   They should not contain special characters except underscore \(“\_”\), hyphen \(“-”\), and forward slash \(“/”\).
-    -   They should not contain any white spaces.
-    -   They can be represented as a file path \(for example ../events/team-outing/images/image000\) for better categorization and classification of media assets.
-    -   Every rendition of a media asset can have a Custom URL value associated to it.
-    -   To access the media asset using custom URL:
-        -   ```
-GET `/dx/api/dam/custom/<customurlText>`
-```
+        -   Custom URL values are unique for a media asset and are associated to the latest version of any rendition.
+        -   They should not contain special characters except underscore \(“\_”\), hyphen \(“-”\), and forward slash \(“/”\).
+        -   They should not contain any white spaces.
+        -   They can be represented as a file path \(for example ../events/team-outing/images/image000\) for better categorization and classification of media assets.
+        -   Every rendition of a media asset can have a Custom URL value associated to it.
+        -   To access the media asset using custom URL:
+            -   ```
+                GET `/dx/api/dam/custom/<customurlText>`
+                ```
 
-    -   To add/update/delete custom URL value:
-        -   ```
-PUT `/collections/<collectionId>/items/<itemId>/renditions/<renditionId>`
-```
+        -   To add/update/delete custom URL value:
+            -   ```
+                PUT `/collections/<collectionId>/items/<itemId>/renditions/<renditionId>`
+                ```
 
-        -   ```
-PATCH `/collections/<collectionId>/items/<itemId>/renditions/<renditionId>`
-```
+            -   ```
+                PATCH `/collections/<collectionId>/items/<itemId>/renditions/<renditionId>`
+                ```
 
 4.  Click **Save**. A **Copy link** option appears on top of the **Custom URL** field. You can access the media asset using the custom URL after you click the **Copy link** option. A notification shows custom URL is copied successfully.
 
