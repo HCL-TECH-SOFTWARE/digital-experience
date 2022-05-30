@@ -21,6 +21,7 @@ Follow these steps to access HCL Digital Experience 9.5 DAM from the Practitione
 
             -   Videos uploaded to HCL DAM are automatically synchronized.
             -   Videos with the **SYNCED** status generates the thumbnail from Kaltura and displays the preview in HCL Digital Asset Management. Videos with other statuses will not have the preview thumbnail available.
+
             See the [Configure DAM - Kaltura integration](../configure_dam_kaltura.md) topic for details.
 
 2.  After selecting the rich media assets for upload, you are prompted to either add the selected assets to an existing collection or create a collection.
@@ -31,7 +32,7 @@ Follow these steps to access HCL Digital Experience 9.5 DAM from the Practitione
 4.  Click **Upload**.
 5.  The HCL DAM user interface shows an upload progress bar. When completed, it shows a success message. Click **View Details** to see information about the media asset uploaded, including file size and media type.
 
-    1[Upload completed with details viewed](../../../images/dam_interface_upload_success_view_details.png)
+    ![Upload completed with details viewed](../../../images/dam_interface_upload_success_view_details.png)
 
     !!! notes
 

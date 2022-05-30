@@ -29,6 +29,7 @@ Follow these steps to access renditions of a media asset using HCL Digital Exper
     -   Edit **Desktop**, **Smartphone** or **Tablet** rendition and creating a new version;
     -   Cascade changes \(editing, replacing\) of the original or source rendition to other applicable renditions;
     -   Display metadata information for renditions.
+
 4.  Click **Versions** icon in order to display all versions of a media asset, including older versions.
 
 ## Working with versions
@@ -84,17 +85,18 @@ You need to save original source rendition before getting cascade changes to oth
 
     ![Cascade changes to version restore](../../../images/Cascade_changes_to_version_restore_HCL_DAM.png)
 
-    6. Click **Apply** to apply changes.
+6. Click **Apply** to apply changes.
 
 
 ## View maximum number of versions
 
 The default maximum number of versions for a media asset is 30. At the moment, there is no way for HCL Digital Experience users to configure the maximum number of media asset versions. To view this:
 
-1.  From the HCL Digital Experience 9.5 Digital Asset Management user interface, select the gear icon \(for **Settings**\) located at the far top-right of the Digital Asset Management menu bar.
-2.  ![](../images/dam_upload_media_collections.png "Digital Asset Management user interface")
+1.  From the HCL Digital Experience 9.5 DAM user interface, select the gear icon \(for **Settings**\) located at the far top-right of the DAM menu bar.
 
-3.  After selecting the **Settings** icon, click the **Versions** tab to view the default maximum number of versions.
+    ![Digital Asset Management user interface](../../../images/dam_upload_media_collections.png)
+
+2.  After selecting the **Settings** icon, click the **Versions** tab to view the default maximum number of versions.
 
     ![Settings > Versions](../../../images/dam_settings_files_versions_plugins.png)
 

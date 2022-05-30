@@ -23,7 +23,8 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
         -   **Information** - Allows you to update the Collection name and description.
         -   **Access Control** - Allows you to set who can access the media assets in the Collection.
-    -   **Delete Collection** - Deletes the selected Collection.
+     -   **Delete Collection** - Deletes the selected Collection.
+
 2.  Select the **Filter** option to filter media asset results by **Favorites**, **Asset types**, or **Asset size**.
 
     -   **Favorites** - Filters media assets added to your favorites.
@@ -53,18 +54,21 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
             -   Order by file name by **Older to newer** date
             -   Order by file name by **Newer to older** date
+
         -   **Name**
 
             ![Name > Z to A](../../../images/dam_grid_name_z_to_a.png)
 
             -   Order by file name from **A-Z**
             -   Order by file name **Z-A**
+
         -   **Type**
 
             ![Type > Descending](../../../images/dam_grid_type_descending.png)
 
             -   **Ascending**
             -   **Descending**
+            
         -   **Size**
 
             ![Size > Larger to smaller](../../../images/dam_grid_size_larger_to_smaller.png)

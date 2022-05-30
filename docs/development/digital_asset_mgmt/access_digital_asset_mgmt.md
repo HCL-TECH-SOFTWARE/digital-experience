@@ -1,6 +1,6 @@
 # Access HCL Digital Asset Management
 
-This section provides the steps on how to access HCL Digital Asset Management \(DAM\) and use it as a central platform to store and include rich media assets. Using the HCL Digital Experience 9.5 Digital Asset Management features, users can upload, browse, and search for media files, edit images and metadata, and manage collections and media access,
+This section provides the steps on how to access HCL Digital Asset Management \(DAM\) and use it as a central platform to store and include rich media assets. Using the HCL Digital Experience 9.5 Digital Asset Management features, users can upload, browse, and search for media files, edit images and metadata, and manage collections and media access.
 
 ## Prerequisite
 
@@ -14,7 +14,7 @@ HCL DAM should be installed and configured to HCL Digital Experience 9.5 Contain
 
 ## Access HCL DAM from Practitioner Studio
 
-Follow the steps to access HCL Digital Experience 9.5 DAM from the Practitioner Studio:
+Follow these steps to access HCL Digital Experience 9.5 DAM from the Practitioner Studio:
 
 1.  In the HCL Digital Experience 9.5 Practitioner Studio interface, select **Digital Assets** from the navigator.
 

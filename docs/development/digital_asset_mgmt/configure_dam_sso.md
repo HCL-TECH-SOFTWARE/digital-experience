@@ -30,22 +30,22 @@ HCL Digital Experience can read and generate the Lightweight Third Party Authent
 
 To configure single sign-on between HCL Digital Experience staging and production environments to promote Digital Asset Management assets to the production server, complete the following steps:
 
-HCL Digital Experience 9.5 staging services:
+-   HCL Digital Experience 9.5 staging services:
 
     -   HCL Digital Experience container core services:
 
-        ```
-        https://dx-deployment-service-comm-stage-comm-stage.apps.hcl-dxdev.hcl-dx-dev.net/wps/portal
-        ```
+            ```
+            https://dx-deployment-service-comm-stage-comm-stage.apps.hcl-dxdev.hcl-dx-dev.net/wps/portal
+            ```
 
     -   IBM WebSphere Application Server:
 
-        ```
-        https://dx-deployment-service-was-home-comm-stage.apps.hcl-dxdev.hcl-dx-dev.net/ibm/console/logon.jsp
-        ```
+            ```
+            https://dx-deployment-service-was-home-comm-stage.apps.hcl-dxdev.hcl-dx-dev.net/ibm/console/logon.jsp
+            ```
 
 
-HCL Digital Experience 9.5 target production services:
+-   HCL Digital Experience 9.5 target production services:
 
     -   HCL Digital Experience core services:
 

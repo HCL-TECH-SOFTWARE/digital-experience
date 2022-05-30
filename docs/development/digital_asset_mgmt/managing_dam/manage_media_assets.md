@@ -53,12 +53,8 @@ The following are supported media asset file formats in HCL Digital Experience 9
 |---------|---------|
 |.pptx|application/vnd.openxmlformats-officedocument.presentationml.presentation|
 |.xls|application/vnd.ms-excel
-
- application/octet-stream
-
- application/x-msi
-
-|
+     |application/octet-stream
+     |application/x-msi|
 |.doc|application/msword|
 |.docx|application/vnd.openxmlformats-officedocument.wordprocessingml.document|
 |.xlsx|application/vnd.openxmlformats-officedocument.spreadsheetml.sheet|
@@ -111,9 +107,3 @@ Use the HCL Digital Experience 9.5 DAM editor to delete a media asset, including
 2.  A pop-up will appear for you to select your Delete action. If the selected media assets will not affect any references, click **Check for references and delete** to complete action.
 
     ![Check references and delete media asset](../../../images/Check_for_references_and_delete_HCL_DAM.png)
-
-
--   **[DAM Assets Export and Import \(EXIM\)](../../digital_asset_mgmt/managing_dam/dam_exim.md)**  
-[Digital Asset Management](../index.md) \(DAM\) Assets Export and Import \(EXIM\) is a tool used for exporting the DAM assets from the source environment to the file system in a structured manner. It can also be used for importing DAM assets from the file system to the target environment.
-
-
