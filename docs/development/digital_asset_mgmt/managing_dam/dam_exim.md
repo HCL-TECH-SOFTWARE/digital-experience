@@ -10,6 +10,8 @@ Administrator users and authorized users with Administrator role privileges have
 
 If you choose to export DAM assets to a target that does not share the same LDAP settings, then access rights is not transferred.
 
+If you specify a path and run the command from the container, then assets will export or import to this location store/folder_name/.
+
 ## Limitations
 
 DAM EXIM may be used to take a backup of DAM assets from any environment. The same backup can be used in other environment.
@@ -20,7 +22,7 @@ DAM Staging is a continuous sync process between environments. If you are using 
 
 ## Export DAM assets
 
-The export command is used to export the assets of DAM in the file system at a user-specific location or default location store/outputFiles/dam-export-assets/.
+The export command is used to export the DAM assets in the file system to default location **store/outputFiles/dam-export-assets/** or if user specify a path, then DAM assets will export to this location **store/folder_name/**.
 
 -   **Commands description**
 
@@ -81,7 +83,7 @@ The export command is used to export the assets of DAM in the file system at a u
     -ringAPIPort <value>
     ```
 
-    Use this attribute to specify the location of the file path to `export` \(default path is store/outputFiles/dam-export-assets/\):
+    Use this attribute to specify a location **store/folder_name/** that is different from the default location to export the DAM assets. The default location "export" is **store/outputFiles/dam-export-assets/**:
 
     ```
     -exportPath <value>
@@ -105,7 +107,7 @@ The export command is used to export the assets of DAM in the file system at a u
 
 ## Validate exported DAM assets
 
-The validate command is used to validate exported DAM assets file at the location specified by the user or default location store/outputFiles/dam-export-assets/.
+The validate command is used to validate exported DAM assets file at the default location **store/outputFiles/dam-export-assets/** or if user specify a path, then validation of DAM assets will be done from this location **store/folder_name/**.
 
 -   **Commands description**
 
@@ -124,7 +126,8 @@ The validate command is used to validate exported DAM assets file at the locatio
 
 -   **Commands Optional options**
 
-    Use this attribute to specify the location of the file path to *export* \(default path is store/outputFiles/dam-export-assets/\):
+
+    Use this attribute to specify a location **store/folder_name/** that is different from the default location to validate the DAM assets. The default location "export" is **store/outputFiles/dam-export-assets/**:
 
     ```
     -exportPath <value>
@@ -148,7 +151,7 @@ The validate command is used to validate exported DAM assets file at the locatio
 
 ## Import DAM assets
 
-The import command is used to import the assets of a dam to the target environment from the location specified by the user or default location store/outputFiles/dam-export-assets/.
+The import command is used to import the DAM assets to the target environment from the default location **store/outputFiles/dam-export-assets/** or if user specify a path, then DAM assets will import to this location **store/folder_name/**.
 
 -   **Commands description**
 
@@ -210,7 +213,7 @@ The import command is used to import the assets of a dam to the target environme
     -ringAPIPort <value> 
     ```
 
-    Use this attribute to specify the location of the file path to `import` \(default path is store/outputFiles/dam-export-assets/\):
+     Use this attribute to specify a location **store/folder_name/** that is different from the default location to import the DAM assets. The default location "import" is **store/outputFiles/dam-export-assets/**:
 
     ```
     -exportPath <value>
