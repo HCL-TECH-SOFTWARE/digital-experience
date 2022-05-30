@@ -16,11 +16,9 @@ Two sidecar containers are launched with Core:
 -   `system-err-log` - exposes the log file at /var/logs/WebSphere\_Portal/SystemErr.log.
 
 ## Configure custom sidecar containers
-The custom sidecar container will use the image named `logging-sidecar` to generate the container. This custom sidecar container has the ability to expose the logs from the rotating logs and filename pattern match functionality. The default logs (`system-out-log` & `system-err-log`) will also use the new image to generate the container so that logs also have the ability to find updated log files from rotating logs.
+The custom sidecar container will use the image named `logging-sidecar` to generate the container. This custom sidecar container has the ability to expose the logs from the rotating logs and filename pattern match functionality. The default logs (`system-out-log` & `system-err-log`) will also use this image to generate the container.
 
 This custom sidecar container has an additional feature for rotating logs. The custom sidecar container has a script that is capable to find the recently updated log file and stat fetching logs from that file. The additional advantage is that the script is also able to find a file from a pattern matching file name.
-
-If there is a case where multiple files were getting generated in rotating logs, in that case, all the log file has their unique name (i.e. verbosegc.20220521.001.123.log, verbosegc.20220521.002.123.log, verbosegc.20220521.001.345.log).
 
 So in that case, the file pattern matching argument can be passed to identify the file from that pattern matching. And for the rotating logs the file picking mechanism (recently added/updated file will be picked) working as it is among those files.
 
