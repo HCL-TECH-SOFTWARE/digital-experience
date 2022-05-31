@@ -52,9 +52,7 @@ The following are supported media asset file formats in HCL Digital Experience 9
 |File type|Extension|
 |---------|---------|
 |.pptx|application/vnd.openxmlformats-officedocument.presentationml.presentation|
-|.xls|application/vnd.ms-excel
-     |application/octet-stream
-     |application/x-msi|
+|.xls|application/vnd.ms-excel <br/> application/octet-stream <br/> application/x-msi|
 |.doc|application/msword|
 |.docx|application/vnd.openxmlformats-officedocument.wordprocessingml.document|
 |.xlsx|application/vnd.openxmlformats-officedocument.spreadsheetml.sheet|
