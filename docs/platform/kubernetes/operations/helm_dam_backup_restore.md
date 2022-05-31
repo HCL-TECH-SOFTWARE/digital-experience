@@ -6,10 +6,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
 
 ## Backup
 
-!!! important
-    Always execute the "Persistence backup" **before** the "DAM binary backup" to prevent inconsistencies.
-
-1.  Verify that `persistence-node` and `digital-asset-management` pods are up and in `Running` state:
+1. Verify that `core`, `persistence-node` and `digital-asset-management` pods are up and in `Running` state:
 
     ```
     kubectl -n <namespace> get pods
@@ -23,13 +20,38 @@ This procedure is not meant for moving DAM data to another deployment. The backu
     You may see more than one `persistence-node` pods running:
 
     ```
-    pod/dx-deployment-persistence-node-0                             2/2     Running   0          3h49m
-    pod/dx-deployment-persistence-node-1                             2/2     Running   0          3h48m
-    pod/dx-deployment-persistence-node-2                             2/2     Running   0          3h48m
-    pod/dx-deployment-digital-asset-management-0                     1/1     Running   0          3h48m
+    dx-deployment-core-0                                         3/3     Running   0          3h49m
+    dx-deployment-persistence-node-0                             2/2     Running   0          3h49m
+    dx-deployment-persistence-node-1                             2/2     Running   0          3h48m
+    dx-deployment-persistence-node-2                             2/2     Running   0          3h48m
+    dx-deployment-digital-asset-management-0                     1/1     Running   0          3h48m
     ```
 
-2.   **Persistence backup**
+2.   **Core references backup**
+
+    1.  Export DAM collection references from Core
+
+        ```
+        kubectl -n <namespace> exec pod/<release-name>-core-0 -c core -- /bin/bash -c "/opt/HCL/PortalServer/bin/xmlaccess.sh -user <wpsadmin-user> -password <wpsadmin-password> -url http://localhost:10039/wps/config -in /opt/HCL/PortalServer/doc/xml-samples/ExportAllDAMCollections.xml -out /path/to/export/to/damExport.xml"
+        ```
+
+        !!! example
+            ```shell
+            kubectl -n dxns exec pod/dx-deployment-core-0 -c core -- /bin/bash -c "/opt/HCL/PortalServer/bin/xmlaccess.sh -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config -in /opt/HCL/PortalServer/doc/xml-samples/ExportAllDAMCollections.xml -out /tmp/damExport.xml"
+            ```
+
+    2.  Download the collection dump to the local system:
+
+        ```
+        kubectl cp -c core <namespace>/<release-name>-core-0:/path/to/export/to/damExport.xml <target-file>
+        ```
+
+        !!! example
+            ```shell
+            kubectl cp -c core dxns/dx-deployment-core-0:/tmp/damExport.xml /tmp/damExport.xml
+            ```
+
+3.   **Persistence backup**
 
     1.  Determine the primary `persistence-node` using the following command:
 
@@ -75,9 +97,9 @@ This procedure is not meant for moving DAM data to another deployment. The backu
             ```
 
 
-3.   **DAM binary backup**
+4.   **DAM binary backup**
 
-    1.  Compress the DAM binaries located in the `/opt/app/upload` directory:
+    5.  Compress the DAM binaries located in the `/opt/app/upload` directory:
 
         ```
         kubectl -n <namespace> exec pod/<dam-pod-name> -- /bin/bash -c "tar -cvpzf /path/to/backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system --directory /opt/app/upload ."
@@ -88,7 +110,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
             kubectl -n dxns exec pod/dx-deployment-digital-asset-management-0 -- /bin/bash -c "tar -cvpzf /tmp/backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system --directory /opt/app/upload ."
             ```
 
-    2.  Download the compressed binaries to the local system.
+    6.  Download the compressed binaries to the local system.
 
         From a local system, you can now download the backup DAM binaries from the DAM pod:
 
@@ -103,10 +125,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
 
 ## Restore
 
-!!! important
-    Always execute the "DAM binary restore" **before** the "Persistence restore" to prevent inconsistencies.
-
-1.  Verify that `persistence-node` and `digital-asset-management` pods are up and in `Running` state:
+1.  Verify that `core`, `persistence-node` and `digital-asset-management` pods are up and in `Running` state:
 
     ```
     kubectl -n <namespace> get pods
@@ -120,15 +139,40 @@ This procedure is not meant for moving DAM data to another deployment. The backu
     You may see more than one `persistence-node` pods running:
 
     ```
-    pod/dx-deployment-persistence-node-0                             2/2     Running   0          3h49m
-    pod/dx-deployment-persistence-node-1                             2/2     Running   0          3h48m
-    pod/dx-deployment-persistence-node-2                             2/2     Running   0          3h48m
-    pod/dx-deployment-digital-asset-management-0                     1/1     Running   0          3h48m
+    dx-deployment-core-0                                         3/3     Running   0          3h49m
+    dx-deployment-persistence-node-0                             2/2     Running   0          3h49m
+    dx-deployment-persistence-node-1                             2/2     Running   0          3h48m
+    dx-deployment-persistence-node-2                             2/2     Running   0          3h48m
+    dx-deployment-digital-asset-management-0                     1/1     Running   0          3h48m
     ```
 
-2.   **DAM binary restore**
+2.   **Core references restore**
 
-    1.  Upload the backup binary to the DAM pod. You can now transfer the backup database to the remote DAM pod:
+    1.  Upload the collection dump to the core pod:
+
+        ```
+        kubectl cp -c core <source-file> <namespace>/<release-name>-core-0:/path/to/damExport.xml
+        ```
+
+        !!! example
+            ```shell
+            kubectl cp -c core /tmp/damExport.xml dxns/dx-deployment-core-0:/tmp/damExport.xml
+            ```
+
+    2.  Import DAM collection references to Core
+
+        ```
+        kubectl -n <namespace> exec pod/<release-name>-core-0 -c core -- /bin/bash -c "/opt/HCL/PortalServer/bin/xmlaccess.sh -user <wpsadmin-user> -password <wpsadmin-password> -url http://localhost:10039/wps/config -in /path/to/damExport.xml"
+        ```
+
+        !!! example
+            ```shell
+            kubectl -n dxns exec pod/dx-deployment-core-0 -c core -- /bin/bash -c "/opt/HCL/PortalServer/bin/xmlaccess.sh -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config -in /tmp/damExport.xml"
+            ```
+
+3.   **DAM binary restore**
+
+    3.  Upload the backup binary to the DAM pod. You can now transfer the backup database to the remote DAM pod:
 
         ```
         kubectl cp <source-file> <namespace>/<dam-pod-name>:<target-file>
@@ -139,7 +183,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
             kubectl cp /tmp/backupml.tar.gz dxns/dx-deployment-digital-asset-management-0:/tmp/backupml.tar.gz
             ```
 
-    2.  Restore the DAM binaries:
+    4.  Restore the DAM binaries:
         ```
         kubectl -n <namespace> exec pod/<dam-pod-name> -- /bin/bash -c "tar -cvpzf /path/to/backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system --directory /opt/app/upload ."
         ```
@@ -150,10 +194,10 @@ This procedure is not meant for moving DAM data to another deployment. The backu
             ```
 
 
-3.   **Persistence restore**
+4.   **Persistence restore**
 
 
-    1.  Determine the primary `persistence-node` using:
+    5.  Determine the primary `persistence-node` using:
 
         ```
         kubectl -n <namespace> exec pod/<release-name>-persistence-node-<running-node-index> -c persistence-node -- repmgr cluster show --compact --terse 2>/dev/null | grep "primary" | awk '{split($0,a,"|"); print a[2]}' | xargs
@@ -175,7 +219,7 @@ This procedure is not meant for moving DAM data to another deployment. The backu
         ```
 
 
-    2.  Copy the database dump file to the primary `persistence-node` pod:
+    6.  Copy the database dump file to the primary `persistence-node` pod:
 
         ```
         kubectl cp -c persistence-node <target-file> <namespace>/<primary-node-name>:<target-file>
@@ -183,10 +227,10 @@ This procedure is not meant for moving DAM data to another deployment. The backu
 
         !!! example
             ```shell
-            kubectl cp -c persistence-node dxmediadb.dmp dxns/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp
+            kubectl cp -c persistence-node /tmp/dxmediadb.dmp dxns/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp
             ```
 
-    3.  Run the following commands in order:
+    7.  Run the following commands in order:
 
         1.  Set the database connection limit to 0 for `dxmediadb`:
 
