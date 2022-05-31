@@ -77,9 +77,12 @@ Follow these steps to work with versions of an image using HCL Digital Experienc
 
 You need to save original source rendition before getting cascade changes to other renditions option. Here's how:
 
-1.  From the HCL Digital Experience 9.5 Digital Asset Management interface, hover over a media asset to access **Edit** options. Select the Edit \(pencil\) icon as shown above.
-2.  From the HCL Digital Asset Management editor interface on the left, select Source Rendition of the media asset.
-3.  On the right, click the **Versions**icon in order to display all versions of a media asset, including older versions.
+1.  From the HCL Digital Experience 9.5 DAM user interface, hover over a media asset to access **Edit** options. Select the Edit \(pencil\).
+
+    ![Edit media asset](../../../images/dam_edit_media.png)
+
+2.  From the HCL DAM editor interface on the left, select Source Rendition of the media asset.
+3.  On the right, click the **Versions** icon in order to display all versions of a media asset, including older versions.
 4.  Select a previous version of the asset you wish to restore, and select **Make current**.
 5.  To cascade the changes on version restore, tick **Apply changes to renditions**. You may choose all three renditions, or click "X" to remove the rendition you do not wish to cascade the change to.
 

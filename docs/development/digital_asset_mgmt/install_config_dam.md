@@ -158,6 +158,7 @@ If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernet
     !!! notes
 
         -   The deployment of HCL Content Composer and HCL Experience API components create:
+        
             -   The `dx.deploy.contentui.enabled` and `dx.deploy.experienceapi.enabled` configurations tell the operator to deploy HCL Content Composer and HCL Experience API components. This defaults to using the same repository as the HCL Digital Experience 9.5 CF181 or higher container core deployment.
 
             -   Services `dx-deployment-service-content-ui` and `dx-deployment-service-ring-api`, and a route for each.
