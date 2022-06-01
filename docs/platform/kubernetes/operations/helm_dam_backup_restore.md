@@ -29,7 +29,7 @@ dx-deployment-persistence-node-2                             2/2     Running   0
 dx-deployment-digital-asset-management-0                     1/1     Running   0          3h48m
 ```
 
-### Core references for DAM backup
+### Backup Core references for DAM 
 
 1.  **Export DAM collection references from Core:**
 
@@ -53,7 +53,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
         kubectl cp -c core dxns/dx-deployment-core-0:/tmp/damExport.xml /tmp/damExport.xml
         ```
 
-### Persistence backup
+### Backup Persistence
 
 1. **Determine the primary `persistence-node` using the following command:**
 
@@ -98,7 +98,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
         kubectl cp -c persistence-node dxns/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp /tmp/dxmediadb.dmp
         ```
 
-### DAM binary backup
+### Backup DAM binaries
 
 1.  **Compress the DAM binaries located in the `/opt/app/upload` directory:**
 
@@ -148,7 +148,7 @@ dx-deployment-persistence-node-2                             2/2     Running   0
 dx-deployment-digital-asset-management-0                     1/1     Running   0          3h48m
 ```
 
-### Core references for DAM restore
+### Restore Core references for DAM
 
 1.  **Upload the collection dump to the core pod:**
 
@@ -172,7 +172,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
         kubectl -n dxns exec pod/dx-deployment-core-0 -c core -- /bin/bash -c "/opt/HCL/PortalServer/bin/xmlaccess.sh -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config -in /tmp/damExport.xml"
         ```
 
-### DAM binary restore
+### Restore DAM binary
 
 1.  **Upload the backup binary to the DAM pod. You can now transfer the backup database to the remote DAM pod:**
 
@@ -196,7 +196,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
         kubectl -n dxns exec pod/dx-deployment-digital-asset-management-0 -- /bin/bash -c "tar -mpxf /tmp/backupml.tar.gz --directory /opt/app/upload"
         ```
 
-### Persistence restore
+### Restore Persistence
 
 1.  **Determine the primary `persistence-node` using:**
 
