@@ -30,4 +30,4 @@ Note that some services, such as Digital Asset Management, Design Studio, Experi
 
 ???+ Important "**Notices for HCL Digital Experience**"
 
-    This information was developed for products and services offered in the US. For more information, see [Notices](../overview/wpsnotices.md).
+    HCL legal notices is developed for products and services offered in the US. For more information, see [Notices](../overview/wpsnotices.md).
