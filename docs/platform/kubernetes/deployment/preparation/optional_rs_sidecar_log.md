@@ -16,7 +16,7 @@ Two sidecar containers are launched with Remote Search:
 -   `system-err-log` - exposes the log file at /var/profile/logs/server1/SystemErr.log.
 
 ## Configure custom sidecar containers
-The custom sidecar container will use the image named `logging-sidecar` to generate the container. This custom sidecar container has the ability to expose the logs from the rotating logs and filename pattern match functionality. The default logs (`system-out-log` & `system-err-log`) will also use this image to generate the container.
+The custom sidecar container will use the image named `logging-sidecar` to generate the container. This custom sidecar container has the ability to expose the logs from the rotating logs and filename pattern match functionality. The default logs (`system-out-log` and `system-err-log`) also use this image to generate the container.
 
 As an additional feature for the rotating logs,  the custom sidecar container has a script that is capable of finding the recently updated log file and fetching the logs from that file. The script can also find a file from a pattern matching file name.
 
