@@ -42,7 +42,7 @@ So in that case, the file pattern matching argument can be passed to identify th
     ```
 
     
-The custom sidecar container also works with a single log file as well. Just need to mention the absolute file path to the `logFilePath` and the script will expose the logs from that file only.
+The custom sidecar container works with a single log file as well. You need to specify the absolute file path in `logFilePath` for the script to expose the logs from that file.
 
 !!!example "Example:"
     The following example starts a new sidecar container and exposes the logs from a single file (mentioned with the absolute file path in the argument).
