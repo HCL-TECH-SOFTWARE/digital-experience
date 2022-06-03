@@ -18,7 +18,7 @@ Two sidecar containers are launched with Remote Search:
 ## Configure custom sidecar containers
 The custom sidecar container will use the image named `logging-sidecar` to generate the container. This custom sidecar container has the ability to expose the logs from the rotating logs and filename pattern match functionality. The default logs (`system-out-log` & `system-err-log`) will also use this image to generate the container.
 
-This custom sidecar container has an additional feature for rotating logs. The custom sidecar container has a script that is capable to find the recently updated log file and stat fetching logs from that file. The additional advantage is that the script is also able to find a file from a pattern matching file name.
+As an additional feature for the rotating logs,  the custom sidecar container has a script that is capable of finding the recently updated log file and fetching the logs from that file. The script can also find a file from a pattern matching file name.
 
 So in that case, the file pattern matching argument can be passed to identify the file from that pattern matching. And for the rotating logs the file picking mechanism (recently added/updated file will be picked) working as it is among those files.
 
