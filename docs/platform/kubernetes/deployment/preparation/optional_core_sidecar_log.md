@@ -20,7 +20,7 @@ The custom sidecar container will use the image named `logging-sidecar` to gener
 
 As an additional feature for the rotating logs,  the custom sidecar container has a script that is capable of finding the recently updated log file and fetching the logs from that file. The script can also find a file from a pattern matching file name.
 
-So in that case, the file pattern matching argument can be passed to identify the file from that pattern matching. And for the rotating logs the file picking mechanism (recently added/updated file will be picked) working as it is among those files.
+So, the file pattern matching argument can be passed to identify the file that matches the pattern. For the rotating logs, the file picking mechanism (recently added/updated file will be picked) works as it is among those files.
 
 !!!example "Example:"
     The following example starts a new sidecar container, and exposes the logs with the file pattern matching ability.
