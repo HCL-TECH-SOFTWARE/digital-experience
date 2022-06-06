@@ -23,7 +23,7 @@ As an additional feature for the rotating logs,  the custom sidecar container ha
 So in that case, the file pattern matching argument can be passed to identify the file from that pattern matching. And for the rotating logs the file picking mechanism (recently added/updated file will be picked) working as it is among those files.
 
 !!!example "Example:"
-    The following example starts a new sidecar container, and exposes the logs with file pattern matching ability.
+    The following example starts a new sidecar container, and exposes the logs with the file pattern matching ability.
 
     ```
         logging:
