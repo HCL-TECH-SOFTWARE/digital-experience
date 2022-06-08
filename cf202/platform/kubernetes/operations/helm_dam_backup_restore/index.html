@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.11">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.3">
     
     
       
@@ -20,11 +20,12 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8c5ef100.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4a0965b7.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.9647289d.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.cbb835fc.min.css">
         
+      
       
     
     
@@ -1768,9 +1769,122 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Back up and restore DAM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Back up and restore DAM
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#backup" class="md-nav__link">
+    Backup
+  </a>
+  
+    <nav class="md-nav" aria-label="Backup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-core-references-for-dam" class="md-nav__link">
+    Backup Core references for DAM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-persistence" class="md-nav__link">
+    Backup Persistence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-dam-binaries" class="md-nav__link">
+    Backup DAM binaries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restore" class="md-nav__link">
+    Restore
+  </a>
+  
+    <nav class="md-nav" aria-label="Restore">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites_1" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore-core-references-for-dam" class="md-nav__link">
+    Restore Core references for DAM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore-dam-binary" class="md-nav__link">
+    Restore DAM binary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore-persistence" class="md-nav__link">
+    Restore Persistence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-step-to-restore-your-database" class="md-nav__link">
+    Additional step to restore your database
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2223,6 +2337,103 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#backup" class="md-nav__link">
+    Backup
+  </a>
+  
+    <nav class="md-nav" aria-label="Backup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-core-references-for-dam" class="md-nav__link">
+    Backup Core references for DAM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-persistence" class="md-nav__link">
+    Backup Persistence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-dam-binaries" class="md-nav__link">
+    Backup DAM binaries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restore" class="md-nav__link">
+    Restore
+  </a>
+  
+    <nav class="md-nav" aria-label="Restore">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites_1" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore-core-references-for-dam" class="md-nav__link">
+    Restore Core references for DAM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore-dam-binary" class="md-nav__link">
+    Restore DAM binary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore-persistence" class="md-nav__link">
+    Restore Persistence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-step-to-restore-your-database" class="md-nav__link">
+    Additional step to restore your database
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2242,265 +2453,291 @@
 <h1 id="back-up-and-restore-dam">Back up and restore DAM</h1>
 <p>This topic shows you how to backup and restore for Digital Asset Management persistence and binaries in a Helm-based deployment.</p>
 <p>This procedure is not meant for moving DAM data to another deployment. The backup data is valid only on the deployment where the backup is performed.</p>
-<ul>
-<li>
-<p><strong>Back up your database</strong></p>
+<h2 id="backup">Backup</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>Verify that <code>core</code>, <code>persistence-node</code> and <code>digital-asset-management</code> pods are up and in <code>Running</code> state.</p>
+<div class="highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; get pods
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>kubectl -n dxns get pods
+</code></pre></div>
+</div>
+<p>You may see more than one <code>persistence-node</code> pods running:</p>
+<div class="highlight"><pre><span></span><code>dx-deployment-core-0                                         3/3     Running   0          3h49m
+dx-deployment-persistence-node-0                             2/2     Running   0          3h49m
+dx-deployment-persistence-node-1                             2/2     Running   0          3h48m
+dx-deployment-persistence-node-2                             2/2     Running   0          3h48m
+dx-deployment-digital-asset-management-0                     1/1     Running   0          3h48m
+</code></pre></div>
+<h3 id="backup-core-references-for-dam">Backup Core references for DAM</h3>
 <ol>
 <li>
-<p>Verify that persistence (read-write) and DAM pods are up and running:</p>
-<div class="highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; get all
+<p><strong>Export DAM collection references from Core:</strong></p>
+<div class="highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;release-name&gt;-core-0 -c core -- /bin/bash -c &quot;/opt/HCL/PortalServer/bin/xmlaccess.sh -user &lt;wpsadmin-user&gt; -password &lt;wpsadmin-password&gt; -url http://localhost:10039/wps/config -in /opt/HCL/PortalServer/doc/xml-samples/ExportAllDAMCollections.xml -out /path/to/export/to/damExport.xml&quot;
 </code></pre></div>
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>kubectl -n dxns get all
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-core-0 -c core -- /bin/bash -c <span class="s2">&quot;/opt/HCL/PortalServer/bin/xmlaccess.sh -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config -in /opt/HCL/PortalServer/doc/xml-samples/ExportAllDAMCollections.xml -out /tmp/damExport.xml&quot;</span>
 </code></pre></div>
-<p>You may see more than one persistence pods running:</p>
-<div class="highlight"><pre><span></span><code>pod/dx-deployment-persistence-node-0                             2/2     Running   0          3h49m
-pod/dx-deployment-persistence-node-1                             2/2     Running   0          3h48m
-pod/dx-deployment-persistence-node-2                             2/2     Running   0          3h48m
-</code></pre></div>
-<p>The number of these pods configured as stateful sets is listed at the end of the report. Take note of this number as you will need this for step 5.</p>
-<div class="highlight"><pre><span></span><code>NAME                                                      READY   AGE
-statefulset.apps/dx-deployment-core                       1/1     4h1m
-statefulset.apps/dx-deployment-digital-asset-management   1/1     4h1m
-statefulset.apps/dx-deployment-open-ldap                  1/1     4h1m
-statefulset.apps/dx-deployment-persistence-node           3/3     4h1m
-statefulset.apps/dx-deployment-remote-search              1/1     4h1m
-</code></pre></div>
-</li>
-<li>
-<p>Scale down the number persistence pods to 1.</p>
-<div class="highlight"><pre><span></span><code>kubectl scale statefulsets &lt;stateful-set-name&gt; -n &lt;namespace&gt; --replicas=1
-</code></pre></div>
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>kubectl scale statefulsets dx-deployment-persistence-node -d dxns --replicas=1
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Verify that only 1 persistence pod remains in the deployment.</p>
 </div>
 </li>
 <li>
-<p>Connect with the persistence pod (read-write). Open a shell in the running persistence pod:</p>
-<div class="highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/&lt;pod-name&gt; -n &lt;namespace&gt; -- /bin/bash 
+<p><strong>Download the collection dump to the local system:</strong></p>
+<div class="highlight"><pre><span></span><code>kubectl cp -c core &lt;namespace&gt;/&lt;release-name&gt;-core-0:/path/to/export/to/damExport.xml &lt;target-file&gt;
 </code></pre></div>
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/dx-deployment-persistence-node-0 -n dxns -- /bin/bash
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>kubectl cp -c core dxns/dx-deployment-core-0:/tmp/damExport.xml /tmp/damExport.xml
 </code></pre></div>
-<ol>
-<li>
-<p>Dump the current database:</p>
-<div class="highlight"><pre><span></span><code>pg_dump dxmediadb &gt; /tmp/dxmediadb.dmp
-</code></pre></div>
-</li>
-<li>
-<p>Close the shell in the persistence pod:</p>
-<div class="highlight"><pre><span></span><code>exit
-</code></pre></div>
+</div>
 </li>
 </ol>
-</li>
-<li>
-<p>Download the database dump to the local system:</p>
-<div class="highlight"><pre><span></span><code>kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:&lt;source-file&gt; &lt;target-file&gt;
-</code></pre></div>
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>kubectl cp dxns/dx-deployment-persistence:/tmp/dxmediadb.dmp /tmp/dxmediadb.dmp
-</code></pre></div>
-</li>
-<li>
-<p>Set the number of persistence pods back to the number you noted from step 1:</p>
-<div class="highlight"><pre><span></span><code>kubectl scale statefulsets &lt;stateful-set-name&gt; -n &lt;namespace&gt; --replicas=&lt;new-replicas&gt;
-</code></pre></div>
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>kubectl scale statefulsets dx-deployment-persistence-node -n dxns --replicas=3
-</code></pre></div>
-</li>
-</ol>
-</li>
-<li>
-<p><strong>Back up your DAM binary</strong></p>
+<h3 id="backup-persistence">Backup Persistence</h3>
 <ol>
 <li>
-<p>Connect to the DAM pod. Open a shell in the running DAM pod:</p>
-<div class="highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/&lt;pod-name&gt; -n &lt;namespace&gt; -- /bin/bash
+<p><strong>Determine the primary <code>persistence-node</code> using the following command:</strong></p>
+<div class="highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;release-name&gt;-persistence-node-&lt;running-node-index&gt; -c persistence-node -- repmgr cluster show --compact --terse 2&gt;/dev/null | grep &quot;primary&quot; | awk &#39;{split($0,a,&quot;|&quot;); print a[2]}&#39; | xargs
 </code></pre></div>
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/dx-deployment-dam-0 -n dxns -- /bin/bash
+<p>For <code>&lt;running-node-index&gt;</code>, select the index of any <code>persistence-node</code> that is in the <code>Running</code> state. In most cases, node <code>0</code> can be used.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-persistence-node-0 -c persistence-node -- repmgr cluster show --compact --terse <span class="m">2</span>&gt;/dev/null <span class="p">|</span> grep <span class="s2">&quot;primary&quot;</span> <span class="p">|</span> awk <span class="s1">&#39;{split($0,a,&quot;|&quot;); print a[2]}&#39;</span> <span class="p">|</span> xargs
 </code></pre></div>
-</li>
-<li>
-<p>Compress the DAM binaries located under /opt/app/upload directory:</p>
-<div class="highlight"><pre><span></span><code> tar -cvpzf backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system --directory /opt/app/upload .
-</code></pre></div>
-</li>
-<li>
-<p>Close the shell in the DAM pod:</p>
-<div class="highlight"><pre><span></span><code>exit
+</div>
+<p>This command returns the name of the primary <code>persistence-node</code>. Please use this node for the following steps when <code>&lt;primary-node-name&gt;</code> is referenced.</p>
+<p>Example output:</p>
+<div class="highlight"><pre><span></span><code>dx-deployment-persistence-node-0
 </code></pre></div>
 </li>
 <li>
-<p>Download the compressed binaries to the local system.</p>
+<p><strong>Dump the current database:</strong></p>
+<div class="highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;primary-node-name&gt; -c persistence-node -- /bin/bash -c &quot;pg_dump dxmediadb &gt; /path/to/export/to/dxmediadb.dmp&quot;
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-persistence-node-0 -c persistence-node -- /bin/bash -c <span class="s2">&quot;pg_dump dxmediadb &gt; /tmp/dxmediadb.dmp&quot;</span>
+</code></pre></div>
+</div>
+</li>
+<li>
+<p><strong>Download the database dump to the local system:</strong></p>
+<div class="highlight"><pre><span></span><code>kubectl cp -c persistence-node &lt;namespace&gt;/&lt;primary-node-name&gt;:/path/to/export/to/dxmediadb.dmp &lt;target-file&gt;
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>kubectl cp -c persistence-node dxns/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp /tmp/dxmediadb.dmp
+</code></pre></div>
+</div>
+</li>
+</ol>
+<h3 id="backup-dam-binaries">Backup DAM binaries</h3>
+<ol>
+<li>
+<p><strong>Compress the DAM binaries located in the <code>/opt/app/upload</code> directory:</strong></p>
+<div class="highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;dam-pod-name&gt; -- /bin/bash -c &quot;tar -cvpzf /path/to/backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system --directory /opt/app/upload .&quot;
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-digital-asset-management-0 -- /bin/bash -c <span class="s2">&quot;tar -cvpzf /tmp/backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system --directory /opt/app/upload .&quot;</span>
+</code></pre></div>
+</div>
+</li>
+<li>
+<p><strong>Download the compressed binaries to the local system.</strong></p>
 <p>From a local system, you can now download the backup DAM binaries from the DAM pod:</p>
-<div class="highlight"><pre><span></span><code>kubectl cp &lt;namespace&gt;/&lt;pod-name&gt;:&lt;source-file&gt; &lt;target-file&gt;
+<div class="highlight"><pre><span></span><code>kubectl cp &lt;namespace&gt;/&lt;dam-pod-name&gt;:&lt;source-file&gt; &lt;target-file&gt;
 </code></pre></div>
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>kubectl cp dxns/dx-deployment-dam-0:/opt/app/server-v1/backupml.tar.gz /tmp/backupml.tar.gz
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>kubectl cp dxns/dx-deployment-digital-asset-management-0:/tmp/backupml.tar.gz /tmp/backupml.tar.gz
 </code></pre></div>
+</div>
 </li>
 </ol>
-</li>
-<li>
-<p><strong>Restore your DAM binary</strong></p>
+<h2 id="restore">Restore</h2>
+<h3 id="prerequisites_1">Prerequisites</h3>
+<p>Verify that <code>core</code>, <code>persistence-node</code> and <code>digital-asset-management</code> pods are up and in <code>Running</code> state.</p>
+<div class="highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; get pods
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>kubectl -n dxns get pods
+</code></pre></div>
+</div>
+<p>You may see more than one <code>persistence-node</code> pods running:</p>
+<div class="highlight"><pre><span></span><code>dx-deployment-core-0                                         3/3     Running   0          3h49m
+dx-deployment-persistence-node-0                             2/2     Running   0          3h49m
+dx-deployment-persistence-node-1                             2/2     Running   0          3h48m
+dx-deployment-persistence-node-2                             2/2     Running   0          3h48m
+dx-deployment-digital-asset-management-0                     1/1     Running   0          3h48m
+</code></pre></div>
+<h3 id="restore-core-references-for-dam">Restore Core references for DAM</h3>
 <ol>
 <li>
-<p>Upload the backup binary to the DAM pod. You can now transfer the backup database to the remote DAM pod:</p>
-<div class="highlight"><pre><span></span><code>kubectl cp &lt;source-file&gt; &lt;namespace&gt;/&lt;pod-name&gt;:&lt;target-file&gt;
+<p><strong>Upload the collection dump to the core pod:</strong></p>
+<div class="highlight"><pre><span></span><code>kubectl cp -c core &lt;source-file&gt; &lt;namespace&gt;/&lt;release-name&gt;-core-0:/path/to/damExport.xml
 </code></pre></div>
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>kubectl cp /tmp/backupml.tar.gz dxns/dx-deployment-dam-0:/tmp/backupml.tar.gz
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>kubectl cp -c core /tmp/damExport.xml dxns/dx-deployment-core-0:/tmp/damExport.xml
 </code></pre></div>
-</li>
-<li>
-<p>Connect to the DAM pod. Open a shell in the running DAM pod:</p>
-<div class="highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/&lt;pod-name&gt; -n &lt;namespace&gt; -- /bin/bash
-</code></pre></div>
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/dx-deployment-dam-0 -n dxns -- /bin/bash
-</code></pre></div>
-</li>
-<li>
-<p>Restore the DAM binaries:</p>
-<div class="highlight"><pre><span></span><code>tar -mpxf /tmp/backupml.tar.gz --directory /opt/app/upload
-rm /backupml.tar.gz
-</code></pre></div>
-</li>
-<li>
-<p>Close the shell in the DAM pod:</p>
-<div class="highlight"><pre><span></span><code>exit
-</code></pre></div>
-</li>
-</ol>
-</li>
-<li>
-<p><strong>Restore your database</strong></p>
-<ol>
-<li>
-<p>Verify that persistence (read-write) and DAM pods are running:</p>
-<div class="highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; get all
-</code></pre></div>
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>kubectl -n dxns get all
-</code></pre></div>
-</li>
-<li>
-<p>Scale down the number persistence pods to 1.</p>
-<div class="highlight"><pre><span></span><code>kubectl scale statefulsets &lt;stateful-set-name&gt; -n &lt;namespace&gt; --replicas=1
-</code></pre></div>
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>kubectl scale statefulsets dx-deployment-persistence-node -d dxns --replicas=1
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Verify that only 1 persistence pod remains in the deployment.</p>
 </div>
 </li>
 <li>
-<p>Copy the database dump file to the persistence pod:</p>
-<div class="highlight"><pre><span></span><code>kubectl cp &lt;target-file&gt; &lt;namespace&gt;/&lt;pod-name&gt;:&lt;target-file&gt;
+<p><strong>Import DAM collection references to Core</strong></p>
+<div class="highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;release-name&gt;-core-0 -c core -- /bin/bash -c &quot;/opt/HCL/PortalServer/bin/xmlaccess.sh -user &lt;wpsadmin-user&gt; -password &lt;wpsadmin-password&gt; -url http://localhost:10039/wps/config -in /path/to/damExport.xml&quot;
 </code></pre></div>
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>kubectl cp dxmediadb.dmp dxns/dx-deployment-persistence:/tmp/dxmediadb.dmp
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-core-0 -c core -- /bin/bash -c <span class="s2">&quot;/opt/HCL/PortalServer/bin/xmlaccess.sh -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config -in /tmp/damExport.xml&quot;</span>
+</code></pre></div>
+</div>
+</li>
+</ol>
+<h3 id="restore-dam-binary">Restore DAM binary</h3>
+<ol>
+<li>
+<p><strong>Upload the backup binary to the DAM pod. You can now transfer the backup database to the remote DAM pod:</strong></p>
+<div class="highlight"><pre><span></span><code>kubectl cp &lt;source-file&gt; &lt;namespace&gt;/&lt;dam-pod-name&gt;:&lt;target-file&gt;
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>kubectl cp /tmp/backupml.tar.gz dxns/dx-deployment-digital-asset-management-0:/tmp/backupml.tar.gz
+</code></pre></div>
+</div>
+</li>
+<li>
+<p><strong>Restore the DAM binaries:</strong></p>
+<div class="highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;dam-pod-name&gt; -- /bin/bash -c &quot;tar -cvpzf /path/to/backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system --directory /opt/app/upload .&quot;
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-digital-asset-management-0 -- /bin/bash -c <span class="s2">&quot;tar -mpxf /tmp/backupml.tar.gz --directory /opt/app/upload&quot;</span>
+</code></pre></div>
+</div>
+</li>
+</ol>
+<h3 id="restore-persistence">Restore Persistence</h3>
+<ol>
+<li>
+<p><strong>Determine the primary <code>persistence-node</code> using:</strong></p>
+<div class="highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;release-name&gt;-persistence-node-&lt;running-node-index&gt; -c persistence-node -- repmgr cluster show --compact --terse 2&gt;/dev/null | grep &quot;primary&quot; | awk &#39;{split($0,a,&quot;|&quot;); print a[2]}&#39; | xargs
+</code></pre></div>
+<p>For <code>&lt;running-node-index&gt;</code> select the index of any <code>persistence-node</code> that is in the <code>Running</code> state. In most cases, node <code>0</code> can be used.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-persistence-node-0 -c persistence-node -- repmgr cluster show --compact --terse <span class="m">2</span>&gt;/dev/null <span class="p">|</span> grep <span class="s2">&quot;primary&quot;</span> <span class="p">|</span> awk <span class="s1">&#39;{split($0,a,&quot;|&quot;); print a[2]}&#39;</span> <span class="p">|</span> xargs
+</code></pre></div>
+</div>
+<p>This command returns the name of the primary <code>persistence-node</code>. Please use this node for the following steps when <code>&lt;primary-node-name&gt;</code> is referenced.</p>
+<p>Example output:</p>
+<div class="highlight"><pre><span></span><code>dx-deployment-persistence-node-0
 </code></pre></div>
 </li>
 <li>
-<p>Connect to the persistence pod (read-write). Open a shell in the running persistence pod:</p>
-<div class="highlight"><pre><span></span><code>kubectl exec --stdin --tty pod/&lt;pod-name&gt; -n &lt;namespace&gt; -- /bin/bash
+<p><strong>Copy the database dump file to the primary <code>persistence-node</code> pod:</strong></p>
+<div class="highlight"><pre><span></span><code>kubectl cp -c persistence-node &lt;target-file&gt; &lt;namespace&gt;/&lt;primary-node-name&gt;:&lt;target-file&gt;
 </code></pre></div>
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>kubectl -n dxns exec --stdin --tty pod/dx-deployment-persistence -d dxns -- /bin/bash
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>kubectl cp -c persistence-node /tmp/dxmediadb.dmp dxns/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp
 </code></pre></div>
-<ol>
+</div>
+</li>
 <li>
-<p>Run the following commands in order:</p>
+<p><strong>Run the following commands in order:</strong></p>
 <ol>
 <li>
 <p>Set the database connection limit to 0 for <code>dxmediadb</code>:</p>
-<div class="highlight"><pre><span></span><code>psql -c &quot;ALTER DATABASE dxmediadb CONNECTION LIMIT 0;&quot;
+<div class="highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;primary-node-name&gt; -c persistence-node -- psql -c &quot;ALTER DATABASE dxmediadb CONNECTION LIMIT 0;&quot;
 </code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-persistence-node-0 -c persistence-node -- psql -c <span class="s2">&quot;ALTER DATABASE dxmediadb CONNECTION LIMIT 0;&quot;</span>
+</code></pre></div>
+</div>
 </li>
 <li>
 <p>Terminate all the existing connections to the database, if any:</p>
-<div class="highlight"><pre><span></span><code>psql -c &quot;SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pg_stat_activity.datname = &#39;dxmediadb&#39; AND pid &lt;&gt; pg_backend_pid();&quot;
+<div class="highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;primary-node-name&gt; -c persistence-node -- psql -c &quot;SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pg_stat_activity.datname = &#39;dxmediadb&#39; AND pid &lt;&gt; pg_backend_pid();&quot;
 </code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-persistence-node-0 -c persistence-node -- psql -c <span class="s2">&quot;SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pg_stat_activity.datname = &#39;dxmediadb&#39; AND pid &lt;&gt; pg_backend_pid();&quot;</span>
+</code></pre></div>
+</div>
 </li>
 <li>
 <p>Drop the database <code>dxmediadb</code>:</p>
-<div class="highlight"><pre><span></span><code>dropdb dxmediadb
+<div class="highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;primary-node-name&gt; -c persistence-node -- dropdb dxmediadb
 </code></pre></div>
-</li>
-</ol>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-persistence-node-0 -c persistence-node -- dropdb dxmediadb
+</code></pre></div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you are getting the following error, run the two commands from this step again until it completes without the error occurring.</p>
+<p>If you are getting the following error, run the commands from this step again until they are completed without errors.</p>
+<div class="highlight"><pre><span></span><code>dropdb: database removal failed: ERROR:  database <span class="s2">&quot;dxmediadb&quot;</span> is being accessed by other users
+</code></pre></div>
 </div>
-<p><div class="highlight"><pre><span></span><code>```shell
-dropdb: database removal failed: ERROR:  database &quot;dxmediadb&quot; is being accessed by other users
-</code></pre></div>
-```</p>
 </li>
 <li>
-<p>Create the database.</p>
-<div class="highlight"><pre><span></span><code>createdb -O dxuser dxmediadb
+<p>Create the database:</p>
+<div class="highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;primary-node-name&gt; -c persistence-node -- /bin/bash -c &quot;createdb -O dxuser dxmediadb&quot;
 </code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-persistence-node-0 -c persistence-node -- /bin/bash -c <span class="s2">&quot;createdb -O dxuser dxmediadb&quot;</span>
+</code></pre></div>
+</div>
 </li>
 <li>
-<p>Restore the database.</p>
-<div class="highlight"><pre><span></span><code>psql dxmediadb &lt; dxmediadb.dmp
+<p>Restore the database:</p>
+<div class="highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;primary-node-name&gt; -c persistence-node -- /bin/bash -c &quot;psql dxmediadb &lt; /tmp/dxmediadb.dmp&quot;
 </code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-persistence-node-0 -c persistence-node -- /bin/bash -c <span class="s2">&quot;psql dxmediadb &lt; /tmp/dxmediadb.dmp&quot;</span>
+</code></pre></div>
+</div>
 </li>
 <li>
 <p>Restore the database connection limit:</p>
-<div class="highlight"><pre><span></span><code>psql -c &quot;ALTER DATABASE dxmediadb CONNECTION LIMIT 500;&quot;
+<div class="highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;primary-node-name&gt; -c persistence-node -- psql -c &quot;ALTER DATABASE dxmediadb CONNECTION LIMIT 500;&quot;
 </code></pre></div>
-</li>
-<li>
-<p>Close the shell in the persistence pod (read-write):</p>
-<div class="highlight"><pre><span></span><code>exit
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-persistence-node-0 -c persistence-node -- psql -c <span class="s2">&quot;ALTER DATABASE dxmediadb CONNECTION LIMIT 500;&quot;</span>
 </code></pre></div>
+</div>
 </li>
 </ol>
 </li>
-<li>
-<p>Set the number of persistence pods back to the number you noted from step 1 from Back up your database:</p>
-<div class="highlight"><pre><span></span><code>kubectl scale statefulsets &lt;stateful-set-name&gt; -n &lt;namespace&gt; --replicas=&lt;new-replicas&gt;
-</code></pre></div>
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>kubectl scale statefulsets dx-deployment-persistence-node -n dxns --replicas=3
-</code></pre></div>
-</li>
 </ol>
-</li>
-<li>
-<p><strong>Additional step to restore your database</strong></p>
+<h3 id="additional-step-to-restore-your-database">Additional step to restore your database</h3>
+<p>After the steps above are completed it can take some time for the Persistence connections pool as well as DAM to restart and get back to a <code>Running</code> state. If DAM does not recover on its own, use the following workaround:</p>
 <ol>
 <li>
-<p>The DAM pods start working in a few minutes. If not, you may delete the DAM pod:</p>
+<p><strong>Delete the DAM pod to restart it:</strong></p>
 <div class="highlight"><pre><span></span><code>kubectl delete pod &lt;dam-pod-name&gt; -n &lt;namespace&gt;
 </code></pre></div>
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code>kubectl delete pod dx-deployment-dam-0 -n dxns
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>kubectl delete pod dx-deployment-digital-asset-management-0 -n dxns
 </code></pre></div>
+</div>
 </li>
 </ol>
-</li>
-</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 25, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 8, 2022</span>
       
     
   </small>
@@ -2508,10 +2745,11 @@ dropdb: database removal failed: ERROR:  database &quot;dxmediadb&quot; is being
 
               
             </article>
+            
           </div>
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
             Back to top
           </a>
@@ -2520,7 +2758,8 @@ dropdb: database removal failed: ERROR:  database &quot;dxmediadb&quot; is being
       
         <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
         <a href="../../deployment/helm_uninstall/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Uninstall" rel="prev">
@@ -2592,10 +2831,10 @@ dropdb: database removal failed: ERROR:  database &quot;dxmediadb&quot; is being
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b028fd86.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.748e2769.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.f758a944.min.js"></script>
       
     
   </body>
