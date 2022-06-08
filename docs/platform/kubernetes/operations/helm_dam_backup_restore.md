@@ -4,317 +4,319 @@ This topic shows you how to backup and restore for Digital Asset Management pers
 
 This procedure is not meant for moving DAM data to another deployment. The backup data is valid only on the deployment where the backup is performed.
 
--   **Back up your database**
+## Backup
 
-    1.  Verify that persistence \(read-write\) and DAM pods are up and running:
+### Prerequisites
 
-        ```
-        kubectl -n <namespace> get all
-        ```
+Verify that `core`, `persistence-node` and `digital-asset-management` pods are up and in `Running` state.
 
-        **Example:**
+```
+kubectl -n <namespace> get pods
+```
 
-        ```
-        kubectl -n dxns get all
-        ```
+!!! example
+    ```shell
+    kubectl -n dxns get pods
+    ```
 
-        You may see more than one persistence pods running:
+You may see more than one `persistence-node` pods running:
 
-        ```
-        pod/dx-deployment-persistence-node-0                             2/2     Running   0          3h49m
-        pod/dx-deployment-persistence-node-1                             2/2     Running   0          3h48m
-        pod/dx-deployment-persistence-node-2                             2/2     Running   0          3h48m
-        ```
+```
+dx-deployment-core-0                                         3/3     Running   0          3h49m
+dx-deployment-persistence-node-0                             2/2     Running   0          3h49m
+dx-deployment-persistence-node-1                             2/2     Running   0          3h48m
+dx-deployment-persistence-node-2                             2/2     Running   0          3h48m
+dx-deployment-digital-asset-management-0                     1/1     Running   0          3h48m
+```
 
-        The number of these pods configured as stateful sets is listed at the end of the report. Take note of this number as you will need this for step 5.
+### Backup Core references for DAM 
 
-        ```
-        NAME                                                      READY   AGE
-        statefulset.apps/dx-deployment-core                       1/1     4h1m
-        statefulset.apps/dx-deployment-digital-asset-management   1/1     4h1m
-        statefulset.apps/dx-deployment-open-ldap                  1/1     4h1m
-        statefulset.apps/dx-deployment-persistence-node           3/3     4h1m
-        statefulset.apps/dx-deployment-remote-search              1/1     4h1m
-        ```
+1.  **Export DAM collection references from Core:**
 
-    2.  Scale down the number persistence pods to 1.
+    ```
+    kubectl -n <namespace> exec pod/<release-name>-core-0 -c core -- /bin/bash -c "/opt/HCL/PortalServer/bin/xmlaccess.sh -user <wpsadmin-user> -password <wpsadmin-password> -url http://localhost:10039/wps/config -in /opt/HCL/PortalServer/doc/xml-samples/ExportAllDAMCollections.xml -out /path/to/export/to/damExport.xml"
+    ```
 
-        ```
-        kubectl scale statefulsets <stateful-set-name> -n <namespace> --replicas=1
-        ```
-
-        **Example:**
-
-        ```
-        kubectl scale statefulsets dx-deployment-persistence-node -d dxns --replicas=1
+    !!! example
+        ```shell
+        kubectl -n dxns exec pod/dx-deployment-core-0 -c core -- /bin/bash -c "/opt/HCL/PortalServer/bin/xmlaccess.sh -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config -in /opt/HCL/PortalServer/doc/xml-samples/ExportAllDAMCollections.xml -out /tmp/damExport.xml"
         ```
 
-        !!! note
-            Verify that only 1 persistence pod remains in the deployment.
+2.  **Download the collection dump to the local system:**
 
-    3.  Connect with the persistence pod \(read-write\). Open a shell in the running persistence pod:
+    ```
+    kubectl cp -c core <namespace>/<release-name>-core-0:/path/to/export/to/damExport.xml <target-file>
+    ```
 
-        ```
-        kubectl exec --stdin --tty pod/<pod-name> -n <namespace> -- /bin/bash 
-        ```
-
-        **Example:**
-
-        ```
-        kubectl exec --stdin --tty pod/dx-deployment-persistence-node-0 -n dxns -- /bin/bash
+    !!! example
+        ```shell
+        kubectl cp -c core dxns/dx-deployment-core-0:/tmp/damExport.xml /tmp/damExport.xml
         ```
 
-        1.  Dump the current database:
+### Backup Persistence
 
+1. **Determine the primary `persistence-node` using the following command:**
+
+    ```
+    kubectl -n <namespace> exec pod/<release-name>-persistence-node-<running-node-index> -c persistence-node -- repmgr cluster show --compact --terse 2>/dev/null | grep "primary" | awk '{split($0,a,"|"); print a[2]}' | xargs
+    ```
+
+    For `<running-node-index>`, select the index of any `persistence-node` that is in the `Running` state. In most cases, node `0` can be used.
+
+    !!! example
+        ```shell
+        kubectl -n dxns exec pod/dx-deployment-persistence-node-0 -c persistence-node -- repmgr cluster show --compact --terse 2>/dev/null | grep "primary" | awk '{split($0,a,"|"); print a[2]}' | xargs
+        ```
+
+    This command returns the name of the primary `persistence-node`. Please use this node for the following steps when `<primary-node-name>` is referenced.
+
+    Example output:
+
+    ```
+    dx-deployment-persistence-node-0
+    ```
+
+2.  **Dump the current database:**
+
+    ```
+    kubectl -n <namespace> exec pod/<primary-node-name> -c persistence-node -- /bin/bash -c "pg_dump dxmediadb > /path/to/export/to/dxmediadb.dmp"
+    ```
+
+    !!! example
+        ```shell
+        kubectl -n dxns exec pod/dx-deployment-persistence-node-0 -c persistence-node -- /bin/bash -c "pg_dump dxmediadb > /tmp/dxmediadb.dmp"
+        ```
+
+3.  **Download the database dump to the local system:**
+
+    ```
+    kubectl cp -c persistence-node <namespace>/<primary-node-name>:/path/to/export/to/dxmediadb.dmp <target-file>
+    ```
+
+    !!! example
+        ```shell
+        kubectl cp -c persistence-node dxns/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp /tmp/dxmediadb.dmp
+        ```
+
+### Backup DAM binaries
+
+1.  **Compress the DAM binaries located in the `/opt/app/upload` directory:**
+
+    ```
+    kubectl -n <namespace> exec pod/<dam-pod-name> -- /bin/bash -c "tar -cvpzf /path/to/backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system --directory /opt/app/upload ."
+    ```
+
+    !!! example
+        ```shell
+        kubectl -n dxns exec pod/dx-deployment-digital-asset-management-0 -- /bin/bash -c "tar -cvpzf /tmp/backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system --directory /opt/app/upload ."
+        ```
+
+2.  **Download the compressed binaries to the local system.**
+
+    From a local system, you can now download the backup DAM binaries from the DAM pod:
+
+    ```
+    kubectl cp <namespace>/<dam-pod-name>:<source-file> <target-file>
+    ```
+
+    !!! example
+        ```shell
+        kubectl cp dxns/dx-deployment-digital-asset-management-0:/tmp/backupml.tar.gz /tmp/backupml.tar.gz
+        ```
+
+## Restore
+### Prerequisites
+
+Verify that `core`, `persistence-node` and `digital-asset-management` pods are up and in `Running` state.
+
+```
+kubectl -n <namespace> get pods
+```
+
+!!! example
+    ```shell
+    kubectl -n dxns get pods
+    ```
+
+You may see more than one `persistence-node` pods running:
+
+```
+dx-deployment-core-0                                         3/3     Running   0          3h49m
+dx-deployment-persistence-node-0                             2/2     Running   0          3h49m
+dx-deployment-persistence-node-1                             2/2     Running   0          3h48m
+dx-deployment-persistence-node-2                             2/2     Running   0          3h48m
+dx-deployment-digital-asset-management-0                     1/1     Running   0          3h48m
+```
+
+### Restore Core references for DAM
+
+1.  **Upload the collection dump to the core pod:**
+
+    ```
+    kubectl cp -c core <source-file> <namespace>/<release-name>-core-0:/path/to/damExport.xml
+    ```
+
+    !!! example
+        ```shell
+        kubectl cp -c core /tmp/damExport.xml dxns/dx-deployment-core-0:/tmp/damExport.xml
+        ```
+
+2.  **Import DAM collection references to Core**
+
+    ```
+    kubectl -n <namespace> exec pod/<release-name>-core-0 -c core -- /bin/bash -c "/opt/HCL/PortalServer/bin/xmlaccess.sh -user <wpsadmin-user> -password <wpsadmin-password> -url http://localhost:10039/wps/config -in /path/to/damExport.xml"
+    ```
+
+    !!! example
+        ```shell
+        kubectl -n dxns exec pod/dx-deployment-core-0 -c core -- /bin/bash -c "/opt/HCL/PortalServer/bin/xmlaccess.sh -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config -in /tmp/damExport.xml"
+        ```
+
+### Restore DAM binary
+
+1.  **Upload the backup binary to the DAM pod. You can now transfer the backup database to the remote DAM pod:**
+
+    ```
+    kubectl cp <source-file> <namespace>/<dam-pod-name>:<target-file>
+    ```
+
+    !!! example
+        ```shell
+        kubectl cp /tmp/backupml.tar.gz dxns/dx-deployment-digital-asset-management-0:/tmp/backupml.tar.gz
+        ```
+
+2.  **Restore the DAM binaries:**
+
+    ```
+    kubectl -n <namespace> exec pod/<dam-pod-name> -- /bin/bash -c "tar -cvpzf /path/to/backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system --directory /opt/app/upload ."
+    ```
+
+    !!! example
+        ```shell
+        kubectl -n dxns exec pod/dx-deployment-digital-asset-management-0 -- /bin/bash -c "tar -mpxf /tmp/backupml.tar.gz --directory /opt/app/upload"
+        ```
+
+### Restore Persistence
+
+1.  **Determine the primary `persistence-node` using:**
+
+    ```
+    kubectl -n <namespace> exec pod/<release-name>-persistence-node-<running-node-index> -c persistence-node -- repmgr cluster show --compact --terse 2>/dev/null | grep "primary" | awk '{split($0,a,"|"); print a[2]}' | xargs
+    ```
+
+    For `<running-node-index>` select the index of any `persistence-node` that is in the `Running` state. In most cases, node `0` can be used.
+
+    !!! example
+        ```shell
+        kubectl -n dxns exec pod/dx-deployment-persistence-node-0 -c persistence-node -- repmgr cluster show --compact --terse 2>/dev/null | grep "primary" | awk '{split($0,a,"|"); print a[2]}' | xargs
+        ```
+
+    This command returns the name of the primary `persistence-node`. Please use this node for the following steps when `<primary-node-name>` is referenced.
+
+    Example output:
+
+    ```
+    dx-deployment-persistence-node-0
+    ```
+
+2.  **Copy the database dump file to the primary `persistence-node` pod:**
+
+    ```
+    kubectl cp -c persistence-node <target-file> <namespace>/<primary-node-name>:<target-file>
+    ```
+
+    !!! example
+        ```shell
+        kubectl cp -c persistence-node /tmp/dxmediadb.dmp dxns/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp
+        ```
+
+3.  **Run the following commands in order:**
+
+    1.  Set the database connection limit to 0 for `dxmediadb`:
+
+        ```
+        kubectl -n <namespace> exec pod/<primary-node-name> -c persistence-node -- psql -c "ALTER DATABASE dxmediadb CONNECTION LIMIT 0;"
+        ```
+
+        !!! example
+            ```shell
+            kubectl -n dxns exec pod/dx-deployment-persistence-node-0 -c persistence-node -- psql -c "ALTER DATABASE dxmediadb CONNECTION LIMIT 0;"
             ```
-            pg_dump dxmediadb > /tmp/dxmediadb.dmp
+
+    2.  Terminate all the existing connections to the database, if any:
+
+        ```
+        kubectl -n <namespace> exec pod/<primary-node-name> -c persistence-node -- psql -c "SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pg_stat_activity.datname = 'dxmediadb' AND pid <> pg_backend_pid();"
+        ```
+
+        !!! example
+            ```shell
+            kubectl -n dxns exec pod/dx-deployment-persistence-node-0 -c persistence-node -- psql -c "SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pg_stat_activity.datname = 'dxmediadb' AND pid <> pg_backend_pid();"
             ```
 
-        2.  Close the shell in the persistence pod:
+    3.  Drop the database `dxmediadb`:
 
+        ```
+        kubectl -n <namespace> exec pod/<primary-node-name> -c persistence-node -- dropdb dxmediadb
+        ```
+
+        !!! example
+            ```shell
+            kubectl -n dxns exec pod/dx-deployment-persistence-node-0 -c persistence-node -- dropdb dxmediadb
             ```
-            exit
-            ```
-
-    4.  Download the database dump to the local system:
-
-        ```
-        kubectl cp <namespace>/<pod-name>:<source-file> <target-file>
-        ```
-
-        **Example:**
-
-        ```
-        kubectl cp dxns/dx-deployment-persistence:/tmp/dxmediadb.dmp /tmp/dxmediadb.dmp
-        ```
-
-    5.  Set the number of persistence pods back to the number you noted from step 1:
-
-        ```
-        kubectl scale statefulsets <stateful-set-name> -n <namespace> --replicas=<new-replicas>
-        ```
-
-        **Example:**
-
-        ```
-        kubectl scale statefulsets dx-deployment-persistence-node -n dxns --replicas=3
-        ```
-
-
--   **Back up your DAM binary**
-
-    1.  Connect to the DAM pod. Open a shell in the running DAM pod:
-
-        ```
-        kubectl exec --stdin --tty pod/<pod-name> -n <namespace> -- /bin/bash
-        ```
-
-        **Example:**
-
-        ```
-        kubectl exec --stdin --tty pod/dx-deployment-dam-0 -n dxns -- /bin/bash
-        ```
-
-    2.  Compress the DAM binaries located under /opt/app/upload directory:
-
-        ```
-         tar -cvpzf backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system --directory /opt/app/upload .
-        ```
-
-    3.  Close the shell in the DAM pod:
-
-        ```
-        exit
-        ```
-
-    4.  Download the compressed binaries to the local system.
-
-        From a local system, you can now download the backup DAM binaries from the DAM pod:
-
-        ```
-        kubectl cp <namespace>/<pod-name>:<source-file> <target-file>
-        ```
-
-        **Example:**
-
-        ```
-        kubectl cp dxns/dx-deployment-dam-0:/opt/app/server-v1/backupml.tar.gz /tmp/backupml.tar.gz
-        ```
-
-
--   **Restore your DAM binary**
-
-    1.  Upload the backup binary to the DAM pod. You can now transfer the backup database to the remote DAM pod:
-
-        ```
-        kubectl cp <source-file> <namespace>/<pod-name>:<target-file>
-        ```
-
-        **Example:**
-
-        ```
-        kubectl cp /tmp/backupml.tar.gz dxns/dx-deployment-dam-0:/tmp/backupml.tar.gz
-        ```
-
-    2.  Connect to the DAM pod. Open a shell in the running DAM pod:
-
-        ```
-        kubectl exec --stdin --tty pod/<pod-name> -n <namespace> -- /bin/bash
-        ```
-
-        **Example:**
-
-        ```
-        kubectl exec --stdin --tty pod/dx-deployment-dam-0 -n dxns -- /bin/bash
-        ```
-
-    3.  Restore the DAM binaries:
-
-        ```
-        tar -mpxf /tmp/backupml.tar.gz --directory /opt/app/upload
-        rm /backupml.tar.gz
-        ```
-
-    4.  Close the shell in the DAM pod:
-
-        ```
-        exit
-        ```
-
-
--   **Restore your database**
-
-    1.  Verify that persistence \(read-write\) and DAM pods are running:
-
-        ```
-        kubectl -n <namespace> get all
-        ```
-
-        **Example:**
-
-        ```
-        kubectl -n dxns get all
-        ```
-
-    2.  Scale down the number persistence pods to 1.
-
-        ```
-        kubectl scale statefulsets <stateful-set-name> -n <namespace> --replicas=1
-        ```
-
-        **Example:**
-
-        ```
-        kubectl scale statefulsets dx-deployment-persistence-node -d dxns --replicas=1
-        ```
 
         !!!note
-            Verify that only 1 persistence pod remains in the deployment.
+            If you are getting the following error, run the commands from this step again until they are completed without errors.
 
-    3.  Copy the database dump file to the persistence pod:
-
-        ```
-        kubectl cp <target-file> <namespace>/<pod-name>:<target-file>
-        ```
-
-        **Example:**
-
-        ```
-        kubectl cp dxmediadb.dmp dxns/dx-deployment-persistence:/tmp/dxmediadb.dmp
-        ```
-
-    4.  Connect to the persistence pod \(read-write\). Open a shell in the running persistence pod:
-
-        ```
-        kubectl exec --stdin --tty pod/<pod-name> -n <namespace> -- /bin/bash
-        ```
-
-        **Example:**
-
-        ```
-        kubectl -n dxns exec --stdin --tty pod/dx-deployment-persistence -d dxns -- /bin/bash
-        ```
-
-        1.  Run the following commands in order:
-
-            1.  Set the database connection limit to 0 for `dxmediadb`:
-
-                ```
-                psql -c "ALTER DATABASE dxmediadb CONNECTION LIMIT 0;"
-                ```
-
-            2.  Terminate all the existing connections to the database, if any:
-
-                ```
-                psql -c "SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pg_stat_activity.datname = 'dxmediadb' AND pid <> pg_backend_pid();"
-                ```
-
-            3.  Drop the database `dxmediadb`:
-
-                ```
-                dropdb dxmediadb
-                ```
-
-            !!!note
-                If you are getting the following error, run the two commands from this step again until it completes without the error occurring.
-
-            ```
             ```shell
             dropdb: database removal failed: ERROR:  database "dxmediadb" is being accessed by other users
             ```
-            ```
 
-        2.  Create the database.
-
-            ```
-            createdb -O dxuser dxmediadb
-            ```
-
-        3.  Restore the database.
-
-            ```
-            psql dxmediadb < dxmediadb.dmp
-            ```
-
-        4.  Restore the database connection limit:
-
-            ```
-            psql -c "ALTER DATABASE dxmediadb CONNECTION LIMIT 500;"
-            ```
-
-        5.  Close the shell in the persistence pod \(read-write\):
-
-            ```
-            exit
-            ```
-
-    5.  Set the number of persistence pods back to the number you noted from step 1 from Back up your database:
+    4.  Create the database:
 
         ```
-        kubectl scale statefulsets <stateful-set-name> -n <namespace> --replicas=<new-replicas>
+        kubectl -n <namespace> exec pod/<primary-node-name> -c persistence-node -- /bin/bash -c "createdb -O dxuser dxmediadb"
         ```
 
-        **Example:**
+        !!! example
+            ```shell
+            kubectl -n dxns exec pod/dx-deployment-persistence-node-0 -c persistence-node -- /bin/bash -c "createdb -O dxuser dxmediadb"
+            ```
+
+    5.  Restore the database:
 
         ```
-        kubectl scale statefulsets dx-deployment-persistence-node -n dxns --replicas=3
+        kubectl -n <namespace> exec pod/<primary-node-name> -c persistence-node -- /bin/bash -c "psql dxmediadb < /tmp/dxmediadb.dmp"
         ```
 
+        !!! example
+            ```shell
+            kubectl -n dxns exec pod/dx-deployment-persistence-node-0 -c persistence-node -- /bin/bash -c "psql dxmediadb < /tmp/dxmediadb.dmp"
+            ```
 
--   **Additional step to restore your database**
-
-    1.  The DAM pods start working in a few minutes. If not, you may delete the DAM pod:
-
-        ```
-        kubectl delete pod <dam-pod-name> -n <namespace>
-        ```
-
-        **Example:**
+    6.  Restore the database connection limit:
 
         ```
-        kubectl delete pod dx-deployment-dam-0 -n dxns
+        kubectl -n <namespace> exec pod/<primary-node-name> -c persistence-node -- psql -c "ALTER DATABASE dxmediadb CONNECTION LIMIT 500;"
         ```
 
+        !!! example
+            ```shell
+            kubectl -n dxns exec pod/dx-deployment-persistence-node-0 -c persistence-node -- psql -c "ALTER DATABASE dxmediadb CONNECTION LIMIT 500;"
+            ```
 
 
+### Additional step to restore your database
 
+After the steps above are completed it can take some time for the Persistence connections pool as well as DAM to restart and get back to a `Running` state. If DAM does not recover on its own, use the following workaround:
+
+1.  **Delete the DAM pod to restart it:**
+
+    ```
+    kubectl delete pod <dam-pod-name> -n <namespace>
+    ```
+
+    !!! example
+        ```shell
+        kubectl delete pod dx-deployment-digital-asset-management-0 -n dxns
+        ```
