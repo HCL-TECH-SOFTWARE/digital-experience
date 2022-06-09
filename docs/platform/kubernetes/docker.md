@@ -6,6 +6,103 @@ The HCL DX 9.5 container update releases may be obtained from your HCL Digital E
 
 Video: [How to upload HCL Digital Experience 9.5 CF container images to a private repository](https://youtu.be/XJONRdpgCuo)
 
+## HCL DX 9.5 CF204
+
+-   **Container Update CF204**
+
+    If deploying the HCL DX 9.5 CF204 release, the package name and images are as follows:
+
+    **HCL DX 9.5 CF204 DXClient files**:
+
+    -   ```
+        hcl-dxclient-image-v95_CF204_20220602-1806.zip
+       ```
+
+    -   ```
+        hcl-dxclient-v95_CF204_20220602-1805.zip
+        ```
+
+    **hcl-dx-kubernetes-v95-CF204.zip**:
+
+    -   ```
+        HCL DX notices V9.5 CF204.txt
+        ```
+
+    -   ```
+        hcl-dx-content-composer-image-v1.17.0_20220602-1750.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-core-image-v95_CF204_20220602-1751.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-deployment-v2.7.1_20220602-1755.tgz
+        ```
+
+    -   ```
+        hcl-dx-design-studio-image-v0.9.0_20220602-1755.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-digital-asset-manager-image-v1.16.0_20220602-1805.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-experience-api-sample-ui-v0.2.0.20220602-1755.zip
+        ```
+
+    -   ```
+        hcl-dx-haproxy-image-v1.0.0_20220602-1754.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-image-processor-image-v1.17.0_20220602-1751.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-logging-sidecar-image-v0.1.0_20220602-1750.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-openldap-image-v1.2.0_20220602-1750.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-persistence-connection-pool-image-v1.17.0_20220602-1802.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-persistence-image-v1.17.0_20220602-1803.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-persistence-metrics-exporter-image-v1.15.0_20220602-1802.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-persistence-node-image-v1.7_20220602-1800.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-redis-image-5.0.14.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-remote-search-image-v95_CF204_20220602-1751.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-ringapi-image-v1.17.0_20220602-1757.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-runtime-controller-image-v95_CF204_20220602-1750.tar.gz
+        ```
+
+    -    ```
+        hcl-dx-sidecar-image-v1.0.0_8.6-751.tar.gz
+        ```
 
 ## HCL DX 9.5 CF203
 
