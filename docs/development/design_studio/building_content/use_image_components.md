@@ -13,5 +13,5 @@ The following section outlines how to render a site built using HCL Design Studi
 -   **[Web Content Manager Open Standards REST APIs](../design_studio/design_studio_development_APIs.md)**  
 This topic provides access instructions for the Web Content Manager Open Standards based Digital Experience REST APIs \(Beta\). The API design for this version of the WCM DX REST API is intended to facilitate the creation of Web Content Manager, also Design Studio \(Beta\) assets.
 
-**Parent topic:**[Design Studio \(Beta\)](../design_studio/design_studio_overview.md)
+**Parent topic:** [Design Studio (Beta)](../design_studio/design_studio_overview.md)
 

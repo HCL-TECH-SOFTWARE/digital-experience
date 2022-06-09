@@ -21,7 +21,7 @@ Follow the steps to create a content list from your site using HCL Digital Exper
 
 1.  In the **Sites** overview, hover to the site you want to create a content list for until you can see the overflow menu button.
 
-    ![](../images/site_page_overflow_menu.png "Site overflow menu")
+    ![Site overflow menu](../../design_studio/images/site_page_overflow_menu.png)
 
 2.  Click the overflow menu button, and choose **Open page in editor**.
 3.  Click **Open add elements panel**.
@@ -30,10 +30,10 @@ Follow the steps to create a content list from your site using HCL Digital Exper
 6.  After selecting a content template, search for the location to use. You can select the desired location from the list shown. The locations shown on the list depends on the content template you selected from the previous step.
 7.  You can edit and use a custom name or keep the auto-generated name. Auto-generated names append numbers for names that already exist within a content list. The content list displays all the content items on the canvas as empty blocks.
 
-## How to present your feedback on HCL Design Studio \(Beta\)
+## How to present your feedback on HCL Design Studio (Beta)
 
 HCL Digital Experience welcomes your feedback and suggestions on Design Studio \(Beta\), and encourages you to present your input through cases and discussions with HCL Support DX leaders.
 
-
+**Parent topic:** [Design Studio (Beta)](../design_studio/design_studio_overview.md)
 
 

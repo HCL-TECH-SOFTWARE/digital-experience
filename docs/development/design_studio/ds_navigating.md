@@ -30,7 +30,7 @@ Options 1 and 2 brings you to the Design Studio (Beta) **Sites** overview, where
 
 >**Note:** A demonstration site called Palace Hotel is available for use with Design Studio (Beta).
 
-## The HCL Design Studio (Beta) **Sites** interface
+## The HCL Design Studio (Beta) Sites interface
 
 The HCL Design Studio (Beta) Sites interface has the following components:
 
