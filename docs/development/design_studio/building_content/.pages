@@ -2,7 +2,7 @@ title: Author pages in Design Studio (Beta)
 nav:
     - index.md
     - Use Layout elements: create_site_page.md
-    - Use Content Containers: author_site_page.md
+    - Use Content Containers: use_content_containers.md
     - Use Content Lists: content_lists.md
     - Use Text elements: use_text_elements.md
     - Use Image elements: craft_responsive_layouts.md

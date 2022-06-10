@@ -6,7 +6,8 @@ nav:
     - Creating sites and pages: creating_sites_and_pages.md
     - building_content
     - Update content items: update_content_items.md
-    - Style elements: style_elements.md
+    - Craft responsive layouts to pages: style_elements.md
     - Reuse blocks across pages: reuse_blocks_across_pages.md
     - Render Design Studio pages: render_ds_pages.md
+    - Web Content Manager Open Standards REST APIs: design_studio_development_APIs.md
     - ...

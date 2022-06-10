@@ -1,49 +1,54 @@
-# Install Design Studio \(Beta\)
+# Reuse blocks across pages
 
-This section provides the steps to install the HCL Digital Experience 9.5 component Design Studio \(Beta\), available for use with HCL DX 9.5 CF196 Kubernetes platform deployments only.
+Users to reuse a content item multiple times across different pages of their HCL Digital Experience sites. Reusable content items are called **reusable blocks**.
 
-**Notes:**
+As of HCL Digital Experience CF203 and higher releases, the only reusable content element is the Content Container. More content items will be introduced in future releases.
 
--   Design Studio \(Beta\) is not supported for production deployment.
--   Support for deployment to Red Hat OpenShift will be provided in a later DX 9.5 Container Update release.
+To access available reusable blocks, you need to be on the HCL Design Studio (Beta) Page editor and click the **Reusable blocks** icon as shown below:
 
-## Pre-requisites
+![Reusable blocks panel](../../images/Access_reusable_blocks.png) 
+![Reusable blocks](../../images/reusable_blocks_content_containers.png)
 
--   See the [Deployment](../containerization/deployment.md) section for the latest DX 9.5 container file listings.
--   Review the list of [Requirements and Limitations](design_studio_overview.md) for Design Studio \(Beta\) with HCL DX 9.5 CF196
+>**Note:** A reusable block is not made available or to be reused if it is already used in a page. For example, the three reusable blocks (`Designer-Amanda Smithsen`, `Profile - Woodburn Studio`, and `Designer Contact Me`) are not available for reuse in the said page as they are already in use:
 
-## Installing HCL Design Studio \(Beta\)
+![Unavailable Reusable Blocks](../../images/unavailable_reusable_blocks.png)
 
-There are three options available to install HCL Design Studio \(Beta\) to an HCL Digital Experience 9.5 deployment on supported Kubernetes platforms.
+## Create a new reusable block
 
-## Deploy with dxctl
+Content containers with WCM Content Items are automatically created as new reusable blocks, and are automatically added in the **Reusables** panel as soon as they are created, as shown below:
 
-The dxctl process can be used to install and enable the Design Studio \(Beta\) to a Container Update CF196 deployment. Refer to the [dxctl](../containerization/dxtools_dxctl.md) and specific [Kubernetes platform](../containerization/deployment.md) Help Center topics you will deploy to. \(Amazon EKS, Microsoft AKS, or Google GKE\) .
+![Reusable blocks panel](../../images/Choose_reusable_block.png)
 
-When working with the dxctl deployment on your target Kubernetes platform, ensure that the property `sitemanager.enabled` is added in the deployment property file, and that it is set to true when deploying Container Update CF196. The configuration setting can also be enabled later on.
+You can create a reusable block as if you are creating a new content container for your page.
 
-## Deploy with Helm
+1.  To create a new content container, follow the steps in [Update a content item](update_content_items.md).
+2.  Access the newly-created reusable block in Page editor view, then open the Reusable blocks panel as shown below:
 
-Deployment options using [Helm](../containerization/helm.md) are introduced in HCL DX 9.5 Container Update CF196, and is supported on the Google Kubernetes Engine \(GKE\) platform only. When [deploying to Google Kubernetes Engine](../containerization/helm_deployment.md), ensure the `designStudio` flag is set to true in the [Applications](../containerization/deploy_applications_using_helm.md) section of the values.yaml file used for deployment.
+    ![Access new Reusable Block](../../images/access_new_reusable_block.png)
 
-See the following example:
+## Edit an existing reusable block
 
-```
-# Controls which application is deployed and configured
-applications:
-  # Deploys Design Studio
-  designStudio: true
-```
+To edit an existing reusable block, follow the steps in [Update a content item](update_content_items.md).
 
-**Disable Design Studio \(Beta\)**
+>**Note:** Make sure the name of your reusable block is unique and identifiable for you to be able to quickly locate it from the list.
 
-Design Studio \(Beta\) can also be disabled on your Kubernetes deployment when deployed using [dxctl](../containerization/dxtools_dxctl.md) or [Helm](../containerization/helm.md). To disable, set the designStudio flag to false and initiate a reconciliation via your deployment method \(dxctl or Helm\).
+## Delete a reusable block
 
-## Deploy on HCL SoFy
+>**Notes:**<br> 
+>- Deleting a reusable block results in an error if the reusable block is being used in your current or other pages. Deleting a reusable block also results in an error if the reusable block has already been deleted by another authorized user. In this case the **Reusables** panel refreshes and updates the list of reusable blocks.
+<br>
+>- In previous versions (CF196 - CF202), once you delete a Content Container in Page Editor mode, the Content Container is also deleted in WCM. However, when a Content Container becomes a reusable block and you delete it from Page Editor mode, it will remain in WCM.
 
-A release of HCL Digital Experience Container Update CF196 is available on [HCL SoFy](https://www.hcltechsw.com/sofy) for use. Design Studio \(Beta\) is enabled with that deployment.
+1.  Open any page in Page Editor view.
+2.  Click the **Reusables** panel to display the list of reusable blocks.
+3.  Hover on the reusable block that you want to delete and click the delete icon.
 
-**Note:** If using HCL DX 9.5 CF196 on HCL SoFy, it is not possible to disable Design Studio \(Beta\) component. Access the HCL Digital Solutions offerings from the [HCL Sofy Catalog](https://www.hcltechsw.com/sofy/catalog) to proceed.
+    ![Hover and delete reusable block](../../images/hover_and_delete_reusable.png)
 
-**Parent topic:**[Design Studio \(Beta\)](../design_studio/design_studio_overview.md)
+4.  A confirmation modal appears. Click **Delete** to confirm deletion or **Cancel** to cancel deletion.
 
+    ![Delete reusable block](../../images/delete_cancel_reusable_block.png)
+
+5.  A message appears if the selected reusable block is successfully deleted.
+
+**Parent topic:** [Design Studio (Beta)](../design_studio/design_studio_overview.md)

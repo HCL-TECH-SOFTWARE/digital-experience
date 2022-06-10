@@ -1,49 +1,81 @@
-# Install Design Studio \(Beta\)
+# Update Content items
 
-This section provides the steps to install the HCL Digital Experience 9.5 component Design Studio \(Beta\), available for use with HCL DX 9.5 CF196 Kubernetes platform deployments only.
+This section provides the steps on how to update Content items in your HCL Digital Experience site using Design Studio (Beta).
 
-**Notes:**
+## Add a content item to a Design Studio (Beta) page
 
--   Design Studio \(Beta\) is not supported for production deployment.
--   Support for deployment to Red Hat OpenShift will be provided in a later DX 9.5 Container Update release.
+1.  Create a new page or open the page you wish to edit in Page editor.
+2.  Locate and click the plus icon to open the **Add Elements** panel, as shown below.
 
-## Pre-requisites
+    ![Add Elements panel](../../images/Add_page_elements_panel.png)
 
--   See the [Deployment](../containerization/deployment.md) section for the latest DX 9.5 container file listings.
--   Review the list of [Requirements and Limitations](design_studio_overview.md) for Design Studio \(Beta\) with HCL DX 9.5 CF196
+3.  Select and drag a content item from the **Add Elements** panel to the Editor field.
 
-## Installing HCL Design Studio \(Beta\)
+For CF196 and higher releases, the following content elements are available in the HCL Design Studio (Beta) Page editor:
 
-There are three options available to install HCL Design Studio \(Beta\) to an HCL Digital Experience 9.5 deployment on supported Kubernetes platforms.
+  -   **Layout**
+    -   Container
+    -   Section
+    -   Div block
+    -   Columns
+  -   **WCM**
+    -   Content container
+  -   **Basic**
+    -   Text
+    -   Link block (text or image)
+  -   **Media**
+    -   Image
+    
+  >**Important notes:**<br>
+  > -   When using content on a page made with the HCL Design Studio, the selected content item should have a workflow assigned to it and should be in Published state. Content that is in Draft state is not searchable for selection in the Design Studio (Beta).<br>
+  > -   We recommend that you do not move or update the workflow state of content items that are in use in site pages in Design Studio to Published state.
 
-## Deploy with dxctl
+## Edit a content item in a Design Studio (Beta) page
 
-The dxctl process can be used to install and enable the Design Studio \(Beta\) to a Container Update CF196 deployment. Refer to the [dxctl](../containerization/dxtools_dxctl.md) and specific [Kubernetes platform](../containerization/deployment.md) Help Center topics you will deploy to. \(Amazon EKS, Microsoft AKS, or Google GKE\) .
+When editing text elements or link block elements inline, they are automatically saved to the content items that are linked to them. Changes are automatically saved two (2) seconds after the user stops typing.
 
-When working with the dxctl deployment on your target Kubernetes platform, ensure that the property `sitemanager.enabled` is added in the deployment property file, and that it is set to true when deploying Container Update CF196. The configuration setting can also be enabled later on.
+1.  Open the page you wish to edit in Page editor.
+2.  On the canvas, select a content element to start inline editing and updating.
+    -   For text and link block elements, double-click to start inline editing.
+    -   Use the inline element menu of the element on the canvas, or the **Content elements** panel on the right side to perform element actions such as move element, copy element, or delete element.
 
-## Deploy with Helm
+        ![Inline editing element menu options](../../images/page_inline_editing_options.png)
 
-Deployment options using [Helm](../containerization/helm.md) are introduced in HCL DX 9.5 Container Update CF196, and is supported on the Google Kubernetes Engine \(GKE\) platform only. When [deploying to Google Kubernetes Engine](../containerization/helm_deployment.md), ensure the `designStudio` flag is set to true in the [Applications](../containerization/deploy_applications_using_helm.md) section of the values.yaml file used for deployment.
+3.  If the updates are valid, edits are saved without notification.
 
-See the following example:
+  >**Note:** If the updates are rejected, an error notification pops up to notify the user that the changes are rejected and the content item is reverted to the last valid value.
 
-```
-# Controls which application is deployed and configured
-applications:
-  # Deploys Design Studio
-  designStudio: true
-```
+## Replace an image in a Design Studio (Beta) page
 
-**Disable Design Studio \(Beta\)**
+>**Note:** When you use Design Studio (Beta), replacing an image sometimes does not reflect due to the images being cached for a long time. Starting with HCL DX 9.5 CF200, you can run the authoring tuning task with `-DAuthoringServer=true` to set the browser cache for WCM images to 10s to improve your authoring experience. See [Tune your environment](https://help.hcltechsw.com/digital-experience/9.5/install/tune_servers.html) for more information.
 
-Design Studio \(Beta\) can also be disabled on your Kubernetes deployment when deployed using [dxctl](../containerization/dxtools_dxctl.md) or [Helm](../containerization/helm.md). To disable, set the designStudio flag to false and initiate a reconciliation via your deployment method \(dxctl or Helm\).
+1.  Open the page you wish to edit in Page editor.
+2.  In the Page editor, select the image element that you want to replace.
+3.  Open the Settings panel as shown below.
 
-## Deploy on HCL SoFy
+    ![Open page settings panel](../../images/Page_settings_panel.png)
 
-A release of HCL Digital Experience Container Update CF196 is available on [HCL SoFy](https://www.hcltechsw.com/sofy) for use. Design Studio \(Beta\) is enabled with that deployment.
+4.  Click on **Replace Image**.
 
-**Note:** If using HCL DX 9.5 CF196 on HCL SoFy, it is not possible to disable Design Studio \(Beta\) component. Access the HCL Digital Solutions offerings from the [HCL Sofy Catalog](https://www.hcltechsw.com/sofy/catalog) to proceed.
+    ![Replace image](../../images/Replace_image.png)
 
-**Parent topic:**[Design Studio \(Beta\)](../design_studio/design_studio_overview.md)
+5.  On the Page Details page, scroll down to the **Elements** section and locate the image element to replace.
+6.  Click **Select or drag to replace** the selected image element with an image file from your local file system.
+
+    ![Select or drag to replace image](../../images/Select%20or%20drag%20to%20replace%20image.png)
+
+    Replace the current image as you would in [HCL Content Composer](https://help.hcltechsw.com/digital-experience/9.5/content_composer/manage_content_items.html#section_tdv_hcl_xnb).
+
+7.  Once done, click **Save** to save the image file as the new image element content, then go back the page editor by clicking on the arrow (**←**) on the top left.
+
+    Alternatively, you can also click **Save and Close**.
+
+Replacing the image element content can also be done using the HCL Experience APIs, HCL Content Composer, and WCM authoring tools.
+
+You can replace the image element content using the HCL Digital Asset Manager (DAM) if DAM is the image source.
+
+![Replace image element content using HCL DAM](../../images/replace_image_using_dam.png)
+![Replace image element content using HCL DAM](../../images/replace_image_using_dam_2.png)
+
+**Parent topic:** [Design Studio (Beta)](../design_studio/design_studio_overview.md)
 

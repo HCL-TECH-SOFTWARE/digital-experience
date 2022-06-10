@@ -66,7 +66,7 @@ In HCL Digital Experience 9.5 CF200, the option to delete a site on the **Sites*
 
 4.  A notification will appear once the site is deleted. If the deletion process fails, the notification will show the reason for the failure.
 
-## Create a new page from **Sites** overview
+## Create a new page from Sites overview
 Follow the steps to create a new page within your newly-created site using HCL Digital Experience 9.5 Design Studio (Beta).
 
 1.  From **Sites** overview, click the **Create** button, and then **Page**.
@@ -129,7 +129,7 @@ You can also pre-fill the location field when creating a new child or sibling pa
 
 There are four other ways to create a new child or sibling page using Design Studio (Beta).
 
-### Create a child or sibling page for any page via the **Pages** panel
+### Create a child or sibling page for any page via the Pages panel
   1.  On the Page editor interface of the page you currently opened, click the **Pages** (multiple pages) icon. This action pops out the **Pages** panel.
   
   2.  On the **Pages** panel, click the **Create a new blank page** icon, then choose either **Create sibling page** or **Create child page** as shown below.
@@ -162,7 +162,7 @@ There are four other ways to create a new child or sibling page using Design Stu
   
   6.  Click on **Create** to create your new child or sibling page.
 
-### Create a child or sibling page for any page displayed in the **Sites** overview
+### Create a child or sibling page for any page displayed in the Sites overview
   1.  On the **Sites** overview, hover your cursor on the right side of the selected page until the overflow menu shows.
   
   2.  Click the overflow menu, then choose either **Create sibling page** or **Create child page** as shown below.
@@ -173,7 +173,7 @@ There are four other ways to create a new child or sibling page using Design Stu
   
   4.  Click on **Create** to create your new child or sibling page, or **Create and Edit** to create your new child or sibling page and open it on the Page editor.
 
-### Create a child page for any site displayed in the **Sites** overview
+### Create a child page for any site displayed in the Sites overview
   1.  On the **Sites** overview, hover your cursor on the right side of a selected site until the overflow menu shows.
   
   2.  Click the overflow menu, then select **Create new page**.
@@ -189,7 +189,7 @@ The first page under a site is rendered as a home page by default. You can assig
 
 There are three ways to set a home page.
 
-### From **Sites Overview > Page** menu
+### From Sites Overview > Page menu
   1.  Navigate to the target page you want to set as the new home page.
   
   2.  Hover your pointer on the page, then click the overflow (3-dot) menu icon.
@@ -200,7 +200,7 @@ There are three ways to set a home page.
 
   4.  A dialog box appears. Click **Confirm** to set the page as the new home page and dismiss the dialog, or click **Cancel** to abort the action.
 
-### From the **Sites Overview > Page information** panel
+### From the Sites Overview > Page information panel
   1.  Navigate to the target page you want to set as the new home page.
   
   2.  Hover your pointer on the page, then click the overflow (3-dot) menu icon.
@@ -239,7 +239,7 @@ As of HCL Digital Experience 9.5 CF198 and higher deployments, users can only di
 
 There are two ways to update your page name:
 
-### From **Sites** overview
+### From Sites overview
   1.  See steps above on how to *Get information about a page*.
   
   2.  Once the information panel is visible, update the editable fields of the page information.
@@ -268,7 +268,7 @@ There are two ways to update your page name:
 ## Delete a page
 There are three ways to delete a page in the new Design Studio (Beta).
 
-### From **Sites** overview > Page** overflow menu
+### From Sites overview > Page overflow menu
   1.  On the Design Studio (Beta) **Sites** overview, select the site, then the page you want to delete.
   
   2.  Hover your pointer on the page, then click the overflow (3-dot) menu icon.
@@ -283,7 +283,7 @@ There are three ways to delete a page in the new Design Studio (Beta).
 
   5.  Click **Delete** to continue the cancellation, or **Cancel** to abort.
 
-### From the **Sites** overview > **Page information** panel
+### From the Sites overview > Page information panel
   1.  Access the page information panel as described in the *Get information about a page* section.
   
   2.  Click **Delete** to delete the selected page.
