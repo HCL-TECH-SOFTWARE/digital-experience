@@ -103,12 +103,12 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 1.  **Compress the DAM binaries located in the `/opt/app/upload` directory:**
 
     ```
-    kubectl -n <namespace> exec pod/<dam-pod-name> -- /bin/bash -c "tar -cvpzf /path/to/backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system --directory /opt/app/upload ."
+    kubectl -n <namespace> exec pod/<dam-pod-name> -- /bin/bash -c "tar -cvpzf /path/to/backupml.tar.gz --one-file-system --directory /opt/app/upload ."
     ```
 
     !!! example
         ```shell
-        kubectl -n dxns exec pod/dx-deployment-digital-asset-management-0 -- /bin/bash -c "tar -cvpzf /tmp/backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system --directory /opt/app/upload ."
+        kubectl -n dxns exec pod/dx-deployment-digital-asset-management-0 -- /bin/bash -c "tar -cvpzf /tmp/backupml.tar.gz --one-file-system --directory /opt/app/upload ."
         ```
 
 2.  **Download the compressed binaries to the local system.**
@@ -188,7 +188,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 2.  **Restore the DAM binaries:**
 
     ```
-    kubectl -n <namespace> exec pod/<dam-pod-name> -- /bin/bash -c "tar -cvpzf /path/to/backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system --directory /opt/app/upload ."
+    kubectl -n <namespace> exec pod/<dam-pod-name> -- /bin/bash -c "tar -mpxf /path/to/backupml.tar.gz --directory /opt/app/upload"
     ```
 
     !!! example
