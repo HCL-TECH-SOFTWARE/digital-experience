@@ -1,0 +1,28 @@
+# What's new in Container Update CF204
+
+The HCL Digital Experience 9.5 Container Update and CF204 release includes new Helm support for File patterns in sidecar logging, Proxy link for CW-Profile administration console, and Ambassador replacement with HA Proxy. The release also adds updates to DAM Export and Import configuration, deprecation of select Digital Asset Management APIs and replacement with Plugin extensibility settings, new Personalization API selection rules, Instructions to back up Document Conversion Services including use with Remote Search, new complementary DX training modules in the HCL Software Academy, and more.
+
+Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=9bd40c1f1bbf5cd0534c4159cc4bcbbd#CF17) and [HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases. Product software can be accessed from the [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release). Go to this [Step-by-step guide to downloading DX products and accessing Customer Support](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878&sys_kb_id=2cde06a31b885494c48197d58d4bcbe2) for more information.
+The following features and updates are available to customers installing HCL Digital Experience Container Update CF204 on [supported container platforms](../../platform/intro_platforms.md):
+
+## Deploy HCL DX 9.5 Container Update to container platforms using Helm
+Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to supported container platforms using Helm. Using a Helm Chart deployment can provide administrators more transparency and control in deployment operations. Beginning with Container Update CF203, Beginning with Container Update CF203, the Ambassador shipped as part of the DX Helm deployment is deprecated and a required process to migrate from the Ambassador to HA Proxy Service is provided.  Beginning in CF204, the HAProxy should be used in your DX deployments on Kubernetes. New Helm support for File patterns in sidecar logging, and Proxy link for CW-Profile administration console are provided.
+
+See the following Help Center topics [Migrate from Ambassador to HAProxy](../../platform/kubernetes/haproxy-migration/haproxy-introduction.md), [HCL DX 9.5 Kubernetes](../../platform/kubernetes/architecture/helm_overview.md) and [Configure Core sidecar logging](../../platform/kubernetes/deployment/preparation/optional_core_sidecar_log.md) for more information.
+
+## Personalization REST APIs
+Personalization Selection REST API rules add updates to Profiler and Selection Rules, and new Embedded Web Content Selection. [See the Help Center topic](https://help.hcltechsw.com/digital-experience/9.5/pzn/dev_pzn_rest_api_explorer.html) and [Personalization Rules APIs](https://help.hcltechsw.com/digital-experience/9.5/pzn/pzn_apis.html) for more information.
+
+## Deprecation of selected Digital Asset Management APIs
+Select Digital Asset Management APIs are deprecated as of CF204 and replaced by configuration of Plugin Extensibility defined to Config Map settings. See the following Help Center topics for more information:
+- HCL DX 9.5 Experience API - [Digital Asset Management API](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/)
+- HCL DX 8.5 – 9.5 [Deprecated Features and Services](https://help.hcltechsw.com/digital-experience/9.5/reference/newly_deprecated_features_and_themes.html?hl=deprecation)
+
+## Updates to Digital Asset Management Export Import (DAM EXIM) with DXClient
+Export path attributes are updated in CF 204. See the [DAM Assets Export and Import (EXIM)](https://help.hcltechsw.com/digital-experience/9.5/containerization/dam_exim.html) Help Center topic for more information.
+
+## Instructions to back up Document Conversion Services
+[Document Conversion Services](https://help.hcltechsw.com/digital-experience/9.5/admin-system/dcs_info.html) components in HCL Digital Experience software will be updated and replaced in 2022 in a subsequent HCL DX CF Update release. HCL Digital Experience will remove the third-party component providing these capabilities, supplied by Oracle, and replace with HCL supported functions. After that point, HCL Digital Experience v8.5, v9 and v9.5 Container Update and CF releases will include the newer HCL supported component. Instructions to back up Document Conversion Services including use with Remote Search are provided. Refer to the following [HCL Digital Experience support Knowledge Article](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0096908) for and Help Center topic [Creating a Backup of Document Conversion Services](https://help.hcltechsw.com/digital-experience/9.5/admin-system/dcs_backup.html) for additional information. 
+
+## Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
+The HCL Software Academy offers technical education for the HCL Software portfolio of products, organized by practitioner role. New **What’s New in the latest DX CF** release modules are available for Digital Experience business users, developers and administrators. See the [HCL Digital Experience section](https://academy.hcltechsw.com/#HCLDXLearningJourneys) of the HCL Software Academy and [What’s New for Digital Experience section](https://academy.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) for more information.

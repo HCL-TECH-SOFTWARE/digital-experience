@@ -3,7 +3,10 @@
 The HCL Digital Experience 9.5 Cumulative Fix and Container Update releases offer new features and software fixes for the HCL Digital Experience 9.5 container releases.
 
 !!! info "Update Strategy"
-    Beginning with release CF200, the DX kubernetes operators are not longer supported.
+    Beginning with release CF200, the DX Kubernetes [operator-based deployment](https://help.hcltechsw.com/digital-experience/9.5/containerization/deploy_container_platforms.html) is no longer supported.
+
+## [Container Update CF204 Overview](newcf204)
+The HCL Digital Experience 9.5 Container Update and CF204 release includes new Helm support for File patterns in sidecar logging, Proxy link for CW-Profile administration console, and Ambassador replacement with HA Proxy. The release also adds updates to DAM Export and Import configuration, deprecation of select Digital Asset Management APIs and replacement with Plugin extensibility settings, new Personalization API selection rules, Instructions to back up Document Conversion Services including use with Remote Search, new complementary DX training modules in the HCL Software Academy, and more.
 
 ## [CF203 Overview](newcf203.md)
 HCL Digital Experience 9.5 Container Update and CF203 release includes new Design Studio (Beta) Content list and container reuse features, Helm configuration of metrics enablement, deploy to internal network, and Ambassador to HA Proxy migration support. The release also adds support for DAM metadata configurations using Extensibility functions, Content Composer in Virtual Portal configuration, Personalization Visibility rules in anonymous use case sample and updates, support for Dynamic Properties, Profiler Rule and update, options to customize the DX Site Manager interface, Notice of deprecation and replacement of Document Conversion services notice, new complementary DX training modules in the HCL Software Academy, and more.
