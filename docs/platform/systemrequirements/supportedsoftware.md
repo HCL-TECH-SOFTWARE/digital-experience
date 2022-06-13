@@ -1,7 +1,7 @@
 # Software requirements
 The supported software section specifies the additional software that HCL Portal Express 9.5 supports.
 
-## Kubernetes Requirements
+## Kubernetes
 
 This section describes the requirements to deploy the HCL Digital Experience 9.5 images to container platforms and current limitations.
 
