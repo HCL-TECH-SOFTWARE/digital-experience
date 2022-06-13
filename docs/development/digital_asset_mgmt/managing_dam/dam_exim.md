@@ -1,4 +1,4 @@
-# DAM Assets Export and Import \(EXIM\)
+# DAM Assets Export and Import (EXIM)
 
 [Digital Asset Management](../../digital_asset_mgmt/index.md) \(DAM\) Assets Export and Import \(EXIM\) is a tool used for exporting the DAM assets from the source environment to the file system in a structured manner. It can also be used for importing DAM assets from the file system to the target environment.
 
