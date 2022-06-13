@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.3">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.4">
     
     
       
@@ -2668,11 +2668,11 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 <ol>
 <li>
 <p><strong>Compress the DAM binaries located in the <code>/opt/app/upload</code> directory:</strong></p>
-<div class="highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;dam-pod-name&gt; -- /bin/bash -c &quot;tar -cvpzf /path/to/backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system --directory /opt/app/upload .&quot;
+<div class="highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;dam-pod-name&gt; -- /bin/bash -c &quot;tar -cvpzf /path/to/backupml.tar.gz --one-file-system --directory /opt/app/upload .&quot;
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-digital-asset-management-0 -- /bin/bash -c <span class="s2">&quot;tar -cvpzf /tmp/backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system --directory /opt/app/upload .&quot;</span>
+<div class="highlight"><pre><span></span><code>kubectl -n dxns <span class="nb">exec</span> pod/dx-deployment-digital-asset-management-0 -- /bin/bash -c <span class="s2">&quot;tar -cvpzf /tmp/backupml.tar.gz --one-file-system --directory /opt/app/upload .&quot;</span>
 </code></pre></div>
 </div>
 </li>
@@ -2742,7 +2742,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
 </li>
 <li>
 <p><strong>Restore the DAM binaries:</strong></p>
-<div class="highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;dam-pod-name&gt; -- /bin/bash -c &quot;tar -cvpzf /path/to/backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system --directory /opt/app/upload .&quot;
+<div class="highlight"><pre><span></span><code>kubectl -n &lt;namespace&gt; exec pod/&lt;dam-pod-name&gt; -- /bin/bash -c &quot;tar -mpxf /path/to/backupml.tar.gz --directory /opt/app/upload&quot;
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
@@ -2870,7 +2870,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 8, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2022</span>
       
     
   </small>
@@ -2964,7 +2964,7 @@ dx-deployment-digital-asset-management-0                     1/1     Running   0
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b028fd86.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.f758a944.min.js"></script>
