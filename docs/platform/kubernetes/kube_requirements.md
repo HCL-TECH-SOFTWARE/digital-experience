@@ -1,4 +1,4 @@
-# Requirements and limitations
+# Requirements
 
 This section describes the requirements to deploy the HCL Digital Experience 9.5 images to container platforms and current limitations.
 
