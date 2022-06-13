@@ -2,8 +2,7 @@ title: Kubernetes deployment
 nav:
     - index.md
     - overview.md
-    - docker.md
-    - limitations_requirements.md
+    - docker.md 
     - c_kubesupportstatement.md
     - architecture
     - deployment
