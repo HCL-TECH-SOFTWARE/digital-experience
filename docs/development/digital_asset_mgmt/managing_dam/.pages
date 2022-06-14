@@ -4,6 +4,7 @@ nav:
     - upload_rich_media_assets.md
     - manage_media_assets.md
     - dam_exim.md
+    - adxmldam.md
     - manage_collections.md
     - Modify DAM assets:
         - dam_edit_image.md

@@ -33,13 +33,11 @@ To configure single sign-on between HCL Digital Experience staging and productio
 -   HCL Digital Experience 9.5 staging services:
 
     -   HCL Digital Experience container core services:
-
             ```
             https://dx-deployment-service-comm-stage-comm-stage.apps.hcl-dxdev.hcl-dx-dev.net/wps/portal
             ```
 
     -   IBM WebSphere Application Server:
-
             ```
             https://dx-deployment-service-was-home-comm-stage.apps.hcl-dxdev.hcl-dx-dev.net/ibm/console/logon.jsp
             ```
