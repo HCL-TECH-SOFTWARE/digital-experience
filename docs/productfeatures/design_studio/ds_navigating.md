@@ -48,5 +48,3 @@ Content authors can also access view, editing and delete options of the selected
 
 ![Page menu options](../../images/dx_page_menu_options.png "Page menu options")
 
-**Parent topic:** [Design Studio (Beta)](../design_studio/design_studio_overview.md)
-

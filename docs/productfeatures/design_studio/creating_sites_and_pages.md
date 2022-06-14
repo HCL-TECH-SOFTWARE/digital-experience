@@ -304,5 +304,3 @@ There are three ways to delete a page in the new Design Studio (Beta).
 ## How to present your feedback on HCL Design Studio (Beta)
 HCL Digital Experience welcomes your feedback and suggestions on Design Studio (Beta), and encourages you to present your input through cases and discussions with HCL Support DX leaders.
 
-**Parent topic:** [Design Studio (Beta)](../design_studio/design_studio_overview.md)
-

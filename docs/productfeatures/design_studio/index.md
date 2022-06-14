@@ -11,12 +11,12 @@ Design Studio enables content managers and designers to build and style their di
 Digital Experience 9.5 Container Update CF196 and later must be installed and operational, along with the Practitioner Studio and Content Composer components, to access and use Design Studio (Beta). **Design Studio (Beta) is not supported for production use**.
 
 > **Notes:**<br>
--   Reference the latest HCL DX 9.5 container release and update file listings in the [Docker image listing](../../platform/kubernetes/docker.md) topic.<br>
+-   Reference the latest HCL DX 9.5 container release and update file listings in the [Docker image listing](http://127.0.0.1:8000/platform/kubernetes/docker/?h=image+li) topic.<br>
 -   Design Studio is still in development for release at a later time. This Design Studio (Beta) release presents an opportunity for customers to gain hands-on-experience with the currently available features. HCL Digital Experience welcomes your feedback and suggestions on Design Studio (Beta), and encourages you to present your input through cases and discussions with [HCL Support](https://support.hcltechsw.com/csm?id=dx_support) DX leaders.
 
 The following Digital Experience 9.5 features and services are **not supported** with Design Studio (Beta):
 
--   Deployment in a [hybrid pattern](../containerization/hybrid_deployment.md).
+-   Deployment in a [hybrid pattern](https://help.hcltechsw.com/digital-experience/9.5/containerization/hybrid_deployment_operator.html).
 -   The deployment with [virtual portals](https://help.hcltechsw.com/digital-experience/9.5/admin-system/ad_vp.html).
 
 The following Digital Experience 9.5 features and services are **limited in access or use** with Design Studio (Beta):
@@ -40,5 +40,3 @@ The following Digital Experience 9.5 features and services are **limited in acce
 -   Direct integration of Digital Asset Management (DAM) features is not yet available. DAM assets can be utilized through the linked content.
 -   As of DX 9.5 CF196 and later releases, the Design Studio page editor and preview option do not show the renditions that exist for images. However, the actual page in the site will render these renditions.
 -   As of DX 9.5 CF202 and later releases, we have disabled selecting a device viewpoint and assigning a different stylesheet component to a site as its baseline stylesheet.
-
-**Parent topic:** [Design Studio \(Beta\)](../design_studio/design_studio_overview.md)

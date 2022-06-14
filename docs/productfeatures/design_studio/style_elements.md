@@ -72,7 +72,7 @@ However since the stylesheet is used as-is by the site and served during renderi
 
 In HCL Digital Experience 9.5 CF202, the option to download and upload a site's baseline stylesheet is introduced. This option allows users to update or replace the baseline stylesheet file of an HCL Digital Experience 9.5 website without leaving HCL Design Studio (Beta) Design Studio **Sites** overview.
 
-This option can also be accessed via the [WCM Authoring tool](../wcm/wcm_install_cfg.md).
+This option can also be accessed via the [WCM Authoring tool](https://help.hcltechsw.com/digital-experience/9.5/wcm/wcm_install_cfg.html).
 
 1.  On the **Sites** overview, hover and click the overflow menu of the selected site and select **Properties**.
 
@@ -84,7 +84,7 @@ This option can also be accessed via the [WCM Authoring tool](../wcm/wcm_install
 
     ![Download baseline stylesheet](../../images/Download_baseline_stylesheet.png)
 
-## Upload the baseline stylesheet of an HCL Design Studio (Beta\ site
+## Upload the baseline stylesheet of an HCL Design Studio (Beta) site
 
 > **Notes:**<br>
 > -   When uploading a file to your site's baseline stylesheet, it replaces the file that exists there. Currently, there is no way to revert back to or retrieve any replaced files.<br>
@@ -102,10 +102,7 @@ This option can also be accessed via the [WCM Authoring tool](../wcm/wcm_install
 
 4.  Select the baseline stylesheet (CSS) file to upload from your local file system.
 
-5.  Click on **Save** to save the new baseline stylesheet file.
+5.  Click **Save** to save the new baseline stylesheet file.
 
 ## How to present your feedback on HCL Design Studio (Beta)
 HCL Digital Experience welcomes your feedback and suggestions on Design Studio (Beta), and encourages you to present your input through cases and discussions with HCL Support DX leaders.
-
-**Parent topic:** [Design Studio (Beta)](../design_studio/design_studio_overview.md)
-
