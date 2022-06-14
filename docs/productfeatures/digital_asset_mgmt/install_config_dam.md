@@ -327,7 +327,7 @@ The use of Content Composer features in a Virtual Portal deployment pattern is s
 
 <!-- ???Info Related Information:
     - [HCL Content Composer](../../content_composer/cont_comp_overview.md)
-    - [HCL Digital Asset Management](../../development/digital_asset_mgmt/digital_asset_mgmt_overview.md) 
+    - [HCL Digital Asset Management](../../productfeatures/digital_asset_mgmt/digital_asset_mgmt_overview.md) 
     - [Configure Digital Asset Management in virtual portals](../../containerization/configure_digital_asset_management_in_virtual_portals.md)
     - [How to enable Practitioner Studio](practitioner_studio/enable_prac_studio.md)
     - [Docker image deployment](containerization/docker_image_deployment.md)
