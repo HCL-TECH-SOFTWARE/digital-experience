@@ -1,4 +1,4 @@
-# Content lists
+# Use content lists
 
 The following section details information and steps on how to use content lists across your HCL Digital Experience site.
 
@@ -15,13 +15,13 @@ You can control how items are displayed in the canvas using filtering and sortin
 
 ## Create a content list
 
-This section shows you how to create content lists on your site and its pages in HCL Design Studio \(Beta\).
+This section shows you how to create content lists on your site and its pages in HCL Design Studio (Beta).
 
-Follow the steps to create a content list from your site using HCL Digital Experience 9.5 Design Studio \(Beta\).
+Follow the steps to create a content list from your site using HCL Digital Experience 9.5 Design Studio (Beta).
 
 1.  In the **Sites** overview, hover to the site you want to create a content list for until you can see the overflow menu button.
 
-    ![Site overflow menu](../../design_studio/images/site_page_overflow_menu.png)
+    ![Site overflow menu](../../../images/site_page_overflow_menu.png)
 
 2.  Click the overflow menu button, and choose **Open page in editor**.
 3.  Click **Open add elements panel**.
@@ -33,7 +33,4 @@ Follow the steps to create a content list from your site using HCL Digital Exper
 ## How to present your feedback on HCL Design Studio (Beta)
 
 HCL Digital Experience welcomes your feedback and suggestions on Design Studio \(Beta\), and encourages you to present your input through cases and discussions with HCL Support DX leaders.
-
-**Parent topic:** [Design Studio (Beta)](../design_studio/design_studio_overview.md)
-
 

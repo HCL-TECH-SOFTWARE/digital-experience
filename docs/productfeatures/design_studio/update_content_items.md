@@ -77,5 +77,4 @@ You can replace the image element content using the HCL Digital Asset Manager (D
 ![Replace image element content using HCL DAM](../../images/replace_image_using_dam.png)
 ![Replace image element content using HCL DAM](../../images/replace_image_using_dam_2.png)
 
-**Parent topic:** [Design Studio (Beta)](../design_studio/design_studio_overview.md)
 

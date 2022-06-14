@@ -11,7 +11,7 @@ CSS rules with class selectors defined in the baseline stylesheet are also appli
 Follow the steps in renaming a content container:
 
 1.  On the **Sites** overview, select the site or page to open in the Page editor.
-2.  From the Page editor, click the plus (+) icon to open the **Add elements**panel.
+2.  From the Page editor, click the plus (+) icon to open the **Add elements** panel.
 3.  Drag the WCM content container to the canvas.
 
     ![Drag WCM content container](../../../images/drag_wcm_content_container_to_page.png)
@@ -32,6 +32,3 @@ Follow the steps in renaming a content container:
 ## How to present your feedback on HCL Design Studio (Beta)
 
 HCL Digital Experience welcomes your feedback and suggestions on Design Studio (Beta), and encourages you to present your input through cases and discussions with HCL Support DX leaders.
-
-**Parent topic:**[Common tasks \| HCL Design Studio \(Beta\)](../design_studio/design_studio_common_tasks.md)
-

@@ -1,13 +1,7 @@
 title: Author pages in Design Studio (Beta) 
 nav:
     - index.md
-    - Use Layout elements: create_site_page.md
-    - Use Content Containers: use_content_containers.md
-    - Use Content Lists: content_lists.md
-    - Use Text elements: use_text_elements.md
-    - Use Image elements: craft_responsive_layouts.md
-    - Use Link elements: design_studio_development_APIs.md
-    - Use Navigator components: site_rendering.md
-    - Use Rich Text components: use_richtext_components.md
-    - Use Image components: use_image_components.md
+    - Use content containers: use_content_containers.md
+    - Use content lists: content_lists.md
+    - Use text elements: use_text_elements.md
     - ... 

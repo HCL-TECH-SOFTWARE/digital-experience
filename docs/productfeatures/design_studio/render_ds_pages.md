@@ -19,7 +19,7 @@ The following are the URL conventions when rendering a site or page within the p
 
 The URL may also be retrieved as part of the `Content-sites` and `Content-pages` endpoints.
 
-Sample:
+**Sample**:
 
 ```
 "properties": {
@@ -79,7 +79,7 @@ This order provides flexibility and allows the user to override any class select
 
 There are four ways how to get the live page URL to open the rendered HCL Design Studio page.
 
-### From the selected page overflow menu in **Sites** overview
+### From the selected page overflow menu in Sites overview
   1.  In **Sites** overview, navigate to the page which you want to get the URL as shown above.
   
   2.  Hover and click the overflow (3-dot) menu button, and then click **Copy page link**.
@@ -94,7 +94,7 @@ There are four ways how to get the live page URL to open the rendered HCL Design
 
   4.  The URL is now copied to your system clipboard.
 
-### From the **Page Properties** panel
+### From the Page Properties panel
   1.  In **Sites** overview, navigate to the page which you want to get the URL as shown above.
     
   2.  Hover and click the overflow (3-dot) menu button of the selected page.
@@ -122,7 +122,7 @@ There are four ways how to get the live page URL to open the rendered HCL Design
 
   4.  The URL is now copied to your system clipboard.
 
-### From the **Page editor > Pages** panel
+### From the Page editor > Pages panel
   1.  On the page editor, move your cursor to the left and click the **Pages** icon to open the Pages panel.
   
   2.  Select the page, click the overflow (3-dot) menu button, and then click **Copy page link**, as shown below.
@@ -137,6 +137,3 @@ There are four ways how to get the live page URL to open the rendered HCL Design
 
 ## How to present your feedback on HCL Design Studio (Beta)
 HCL Digital Experience welcomes your feedback and suggestions on Design Studio (Beta), and encourages you to present your input through cases and discussions with HCL Support DX leaders.
-
-**Parent topic:** [Design Studio (Beta)](../design_studio/design_studio_overview.md)
-
