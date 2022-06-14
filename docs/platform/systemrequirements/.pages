@@ -1,12 +1,4 @@
 title: System requirements
 nav:
     - index.md
-    - operatingsystems.md
-    - hypervisors.md
-    - prerequisites.md
-    - Software: supportedsoftware.md
-    - Hardware: hardware.md
-    - productpackage.md
-    - glossary.md
-    - disclaimer.md
     - ...
