@@ -1,6 +1,7 @@
 title: Author pages in Design Studio (Beta) 
 nav:
     - index.md
+    - Craft layouts to pages: style_elements.md
     - Use content containers: use_content_containers.md
     - Use content lists: content_lists.md
     - Use text elements: use_text_elements.md
