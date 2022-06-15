@@ -50,7 +50,8 @@ At the moment, users can only edit the name of the site. Other site properties a
 ## Delete a site
 In HCL Digital Experience 9.5 CF200, the option to delete a site on the **Sites** overview is introduced.
 
->**Note:** Users cannot delete a site in HCL Digital Experience 9.5 CF199 and lower deployments.
+!!! note
+    Users cannot delete a site in HCL Digital Experience 9.5 CF199 and lower deployments.
 
 1.  In the **Sites** overview, hover to the site you want to delete until it shows the overflow menu icon.
 
@@ -60,11 +61,12 @@ In HCL Digital Experience 9.5 CF200, the option to delete a site on the **Sites*
 
 3.  A prompt will appear to confirm if you want to delete the site. Click **Delete** to proceed on deleting the site OR **Cancel** if you want to abort instead.
 
-    >**Important:** Once a site is deleted, you can no longer undo the action.
+4.  A notification will appear once the site is deleted. If the deletion process fails, the notification will show the reason for the failure.
+
+!!! important
+    Once a site is deleted, you can no longer undo the action.
 
     ![site deletion confirmation message](../../images/site_delete_confirmation_message.png)
-
-4.  A notification will appear once the site is deleted. If the deletion process fails, the notification will show the reason for the failure.
 
 ## Create a new page from Sites overview
 Follow the steps to create a new page within your newly-created site using HCL Digital Experience 9.5 Design Studio (Beta).
@@ -100,11 +102,13 @@ There are two ways to choose a location when creating a new page from **Sites** 
   3.  Click **Create** or **Create and edit** to create and save the new page in the selected site location.
 
 ### From auto-suggest list
+
+!!! note
+    There may be more than one page that matches the name of the target location. Use the address displayed below each option as a hint to differentiate the selected location from other matches.
+
   1.  Follow the steps indicated in Option 1 (Choosing location by navigation).
   
   2.  In the Location field, enter the location keyword and choose from the auto-suggest list that matches the target location.
-
-      >**Note:** There may be more than one page that matches the name of the target location. Use the address displayed below each option as a hint to differentiate the selected location from other matches.
 
       ![Enter new page location](../../images/enter_new_page_location.png)
 
@@ -284,7 +288,7 @@ There are three ways to delete a page in the new Design Studio (Beta).
   5.  Click **Delete** to continue the cancellation, or **Cancel** to abort.
 
 ### From the Sites overview > Page information panel
-  1.  Access the page information panel as described in the *Get information about a page* section.
+  1.  Access the page information panel as described in [Get information about a page](#get-information-about-a-page).
   
   2.  Click **Delete** to delete the selected page.
   

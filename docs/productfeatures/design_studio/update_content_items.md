@@ -26,9 +26,9 @@ For CF196 and higher releases, the following content elements are available in t
   -   **Media**
     -   Image
     
-  >**Important notes:**<br>
-  > -   When using content on a page made with the HCL Design Studio, the selected content item should have a workflow assigned to it and should be in Published state. Content that is in Draft state is not searchable for selection in the Design Studio (Beta).<br>
-  > -   We recommend that you do not move or update the workflow state of content items that are in use in site pages in Design Studio to Published state.
+!!! important
+    -   When using content on a page made with the HCL Design Studio, the selected content item should have a workflow assigned to it and should be in Published state. Content that is in Draft state is not searchable for selection in the Design Studio (Beta).
+    -   We recommend that you do not move or update the workflow state of content items that are in use in site pages in Design Studio to Published state.
 
 ## Edit a content item in a Design Studio (Beta) page
 
@@ -43,11 +43,13 @@ When editing text elements or link block elements inline, they are automatically
 
 3.  If the updates are valid, edits are saved without notification.
 
-  >**Note:** If the updates are rejected, an error notification pops up to notify the user that the changes are rejected and the content item is reverted to the last valid value.
+!!! note 
+    If the updates are rejected, an error notification pops up to notify the user that the changes are rejected and the content item is reverted to the last valid value.
 
 ## Replace an image in a Design Studio (Beta) page
 
->**Note:** When you use Design Studio (Beta), replacing an image sometimes does not reflect due to the images being cached for a long time. Starting with HCL DX 9.5 CF200, you can run the authoring tuning task with `-DAuthoringServer=true` to set the browser cache for WCM images to 10s to improve your authoring experience. See [Tune your environment](https://help.hcltechsw.com/digital-experience/9.5/install/tune_servers.html) for more information.
+!!! note
+When you use Design Studio (Beta), replacing an image sometimes does not reflect due to the images being cached for a long time. Starting with HCL DX 9.5 CF200, you can run the authoring tuning task with `-DAuthoringServer=true` to set the browser cache for WCM images to 10s to improve your authoring experience. See [Tune your environment](https://help.hcltechsw.com/digital-experience/9.5/install/tune_servers.html) for more information.
 
 1.  Open the page you wish to edit in Page editor.
 2.  In the Page editor, select the image element that you want to replace.
