@@ -1,5 +1,5 @@
 # Operating Systems
-The operating systems section specifies the operating systems that HCL Digital Experience for Portal Express 9.5 supports, and is organized by the operating system family. Operating system families include Linux and Windows.
+The operating systems section specifies the operating systems that HCL Portal Server, Enable, and Extend 9.5 supports, and is organized by the operating system family. Operating system families include AIX, Linux, and Windows.
 
 Component support: Full / Partial / None
 
