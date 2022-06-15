@@ -6,7 +6,7 @@ The supported software section specifies the additional software that HCL Digita
 This section describes the requirements to deploy the HCL Digital Experience 9.5 images to container platforms and current limitations.
 
 !!! warning "Discontinuation of Operator"
-    **Attention:** Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience \(DX\) [Operator-based deployments](../../platform/kubernetes/operator-based/deploy_container_platforms.md) and will provide support only for [Helm-based deployments](../../platform/kubernetes/architecture/helm_overview.md). There will be no further updates or code fixes provided for the Operator-based deployments. HCL requires all customers to migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based deployments](../../platform/kubernetes/operator-migration/operator_migration_preparation.md).
+    **Attention:** Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience \(DX\) [Operator-based deployments](../../../platform/kubernetes/operator-based/deploy_container_platforms.md) and will provide support only for [Helm-based deployments](../../../platform/kubernetes/architecture/helm_overview.md). There will be no further updates or code fixes provided for the Operator-based deployments. HCL requires all customers to migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based deployments](../../../platform/kubernetes/operator-migration/operator_migration_preparation.md).
 
 Consult the [HCL Digital Experience 9.5 Support Statements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03) on the HCL Digital Experience Support pages for the latest updates on supported platforms, components, and release levels.
 ### Requirements for supported file systems
@@ -98,6 +98,7 @@ This table provides information about the sample Kubernetes Platforms that are t
 
 
 Kubernetes Version Support Policy
+
 - The list of Kubernetes versions that are tested and supported by HCL are included in [Table 2](#table-2-tested-and-supported-kubernetes-versions-on-full-container-deployment).
 - From time-to-time, platform providers may release previews of upcoming Kubernetes versions. We will not provide support for those versions.
 - If you encounter any issue on an unsupported or untested Kubernetes version, you may be asked to install a supported level.
