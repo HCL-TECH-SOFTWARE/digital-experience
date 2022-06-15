@@ -11,7 +11,7 @@ The following steps shows how to modify cluster nodes. As the examples here may 
 For this example, the following setup is assumed:
 
 -   The target cluster has multiple nodes.
--   A label purpose is added to a node called `k8s-node-4` and assigned the value `ingress`
+-   A label purpose is added to a node called `k8s-node-4` and assigned the value `haproxy`
 
 This can be done using the following commands:
 
@@ -35,7 +35,7 @@ The following label is added using the Kubernetes syntax \(and other configurati
 ```
 metadata:
   labels:
-    purpose: ingress
+    purpose: haproxy
 ```
 
 The node is now labeled with the desired target label:
@@ -48,14 +48,14 @@ The node is now labeled with the desired target label:
     
     # Command output
     NAME         STATUS   ROLES    AGE    VERSION   LABELS
-    k8s-node-4   Ready    <none>   123d   v1.20.2   beta.kubernetes.io/arch=amd64,beta.kubernetes.io/os=linux,kubernetes.io/arch=amd64,kubernetes.io/hostname=k8s-node-4,kubernetes.io/os=linux,purpose=ingress
+    k8s-node-4   Ready    <none>   123d   v1.20.2   beta.kubernetes.io/arch=amd64,beta.kubernetes.io/os=linux,kubernetes.io/arch=amd64,kubernetes.io/hostname=k8s-node-4,kubernetes.io/os=linux,purpose=haproxy
     # Execute lookup via kubectl
     oc get node k8s-node-4 --show-labels
     
     # Command output
     NAME         STATUS   ROLES    AGE    VERSION   LABELS
     k8s-node-4   Ready    <none>   123d   v1.20.2   
-    beta.kubernetes.io/arch=amd64,beta.kubernetes.io/os=linux,kubernetes.io/arch=amd64,kubernetes.io/hostname=k8s-node-4,kubernetes.io/os=linux,purpose=ingress
+    beta.kubernetes.io/arch=amd64,beta.kubernetes.io/os=linux,kubernetes.io/arch=amd64,kubernetes.io/hostname=k8s-node-4,kubernetes.io/os=linux,purpose=haproxy
     ```
 
 
@@ -63,17 +63,15 @@ The node is now labeled with the desired target label:
 
 You can assign all pods \(deployed by the Helm Chart of HCL Digital Experience 9.5\) to specific nodes by using `NodeSelectors`. Modify your custom-values.yaml file to include the `NodeSelector`configuration. Make sure to use the proper indentation as YAML is indent-sensitive.
 
-Example for Ambassador:
+Example for HAProxy:
 
 ```
 nodeSelector:
-  ambassadorIngress:
-    purpose: ingress
-  ambassadorRedis:
-    purpose: ingress
+  haproxy:
+    purpose: haproxy
 ```
 
-This configuration directs the Ambassador Ingress and Ambassador Redis to run nodes with the label purpose: `ingress`.
+This configuration directs HAProxy to run nodes with the label purpose: `haproxy `.
 
 Once install is completed, the pods are running on your desired node. For example `k8s-node-4`.
 
@@ -85,12 +83,9 @@ kubectl get pods -o wide -n my-deployment
 
 # Command output
 NAME                                   READY   STATUS    RESTARTS   AGE     IP             NODE         NOMINATED NODE   READINESS GATES
-dx-ambassador-769b86f6ff-knhgt         1/1     Running   0          2m12s   10.244.4.111   k8s-node-4   <none>           <none>
-dx-ambassador-769b86f6ff-qtqmv         1/1     Running   0          2m12s   10.244.4.110   k8s-node-4   <none>           <none>
-dx-ambassador-769b86f6ff-whmw6         1/1     Running   0          2m12s   10.244.4.112   k8s-node-4   <none>           <none>
-dx-ambassador-redis-6cbbf58649-gtqwv   1/1     Running   0          2m12s   10.244.4.106   k8s-node-4   <none>           <none>
-dx-ambassador-redis-6cbbf58649-j8v4d   1/1     Running   0          2m12s   10.244.4.107   k8s-node-4   <none>           <none>	
-dx-ambassador-redis-6cbbf58649-qtgqp   1/1     Running   0          2m12s   10.244.4.109   k8s-node-4   <none>           <none>
+dx-haproxy-769b86f6ff-knhgt         1/1     Running   0          2m12s   10.244.4.111   k8s-node-4   <none>           <none>
+dx-haproxy-769b86f6ff-qtqmv         1/1     Running   0          2m12s   10.244.4.110   k8s-node-4   <none>           <none>
+dx-haproxy-769b86f6ff-whmw6         1/1     Running   0          2m12s   10.244.4.112   k8s-node-4   <none>           <none>
 ```
 
 **OpenShift Client:**
@@ -101,11 +96,8 @@ oc get pods -o wide -n my-deployment
 
 # Command output
 NAME                                   READY   STATUS    RESTARTS   AGE     IP             NODE         NOMINATED NODE
-dx-ambassador-769b86f6ff-knhgt         1/1     Running   0          2m12s   10.244.4.111   k8s-node-4   <none>
-dx-ambassador-769b86f6ff-qtqmv         1/1     Running   0          2m12s   10.244.4.110   k8s-node-4   <none>
-dx-ambassador-769b86f6ff-whmw6         1/1     Running   0          2m12s   10.244.4.112   k8s-node-4   <none>
-dx-ambassador-redis-6cbbf58649-gtqwv   1/1     Running   0          2m12s   10.244.4.106   k8s-node-4   <none>
-dx-ambassador-redis-6cbbf58649-j8v4d   1/1     Running   0          2m12s   10.244.4.107   k8s-node-4   <none>
-dx-ambassador-redis-6cbbf58649-qtgqp   1/1     Running   0          2m12s   10.244.4.109   k8s-node-4   <none>
+dx-haproxy-769b86f6ff-knhgt         1/1     Running   0          2m12s   10.244.4.111   k8s-node-4   <none>
+dx-haproxy-769b86f6ff-qtqmv         1/1     Running   0          2m12s   10.244.4.110   k8s-node-4   <none>
+dx-haproxy-769b86f6ff-whmw6         1/1     Running   0          2m12s   10.244.4.112   k8s-node-4   <none>
 
 ```

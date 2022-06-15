@@ -2,7 +2,7 @@
 
 This topic provides a list of all DX applications and resource definitions that configure the application runtime and are deployed to containers using Helm on OpenShift or Kubernetes platforms. As outlined in the overview, applications can also include ConfigMaps, Secrets, and Ingress.
 
-For more information about Helm applications, consult the [Helm documentation](https://helm.sh/docs/). Refer to the DX 9.5 Container component image listing in the DX 9.5 Docker [Image file listing](../docker.md) topic.
+For more information about Helm applications, consult the [Helm documentation](https://helm.sh/docs/){:target="_blank"}. Refer to the DX 9.5 Container component image listing in the DX 9.5 Docker [Image file listing](../docker.md) topic.
 
 Do note that each application defined only lists its next direct dependencies. Sub-dependencies are not explicitly listed.
 
@@ -12,7 +12,7 @@ Do note that each application defined only lists its next direct dependencies. S
 
 **Type:** Stateful
 
-HCL DX 9.5 CF196 and later Core contains the primary Portal and Web Content Manager HCL Digital Experience functionality. The standard deployment deploys at least one Pod of Core. If you have an existing on-premise installation of DX 9.5 Core, you can also use that one for your deployment using the Hybrid deployment pattern as described in the DX 9.5 [Hybrid deployment](https://help.hcltechsw.com/digital-experience/9.5/containerization/hybrid_deployment_operator.html)<!-- (../../hybrid/hybrid_deployment_operator.md) --> topic.
+HCL DX 9.5 CF196 and later Core contains the primary Portal and Web Content Manager HCL Digital Experience functionality. The standard deployment deploys at least one Pod of Core. If you have an existing on-premise installation of DX 9.5 Core, you can also use that one for your deployment using the Hybrid deployment pattern as described in the DX 9.5 [Hybrid deployment](https://help.hcltechsw.com/digital-experience/9.5/containerization/hybrid_deployment_operator.html){:target="_blank"}<!-- (../../hybrid/hybrid_deployment_operator.md) --> topic.
 
 !!! note
       Application of the hybrid deployment pattern is not yet supported with Helm in HCL DX 9.5 Container Update CF196, and will be added in a later update release.

@@ -32,9 +32,6 @@ The HCL Digital Experience 9.5 Container Update packages are provided in a compr
     HCL DX notices V9.5 CF196.txt                                                                
     # Notices file
 
-    dx-dx-ambassador-image-154.tar.gz
-    # Image for the Ambassador Ingress
-
     hcl-dx-cloud-operator-image-v95_CFXXX_XXXXXXXX-XXXX.tar.gz
     # Image for the Core Operator (not needed for Helm deployments)
 
@@ -64,9 +61,6 @@ The HCL Digital Experience 9.5 Container Update packages are provided in a compr
 
     hcl-dx-postgres-image-vX.X.X_XXXXXXXX-XXXX.tar.gz
     # Image for Digital Asset Management Persistence
-
-    hcl-dx-redis-image-X.X.X.tar.gz
-    # Image for Ambassador Ingress Redis
 
     hcl-dx-remote-search-image-v95_CFXXX_XXXXXXXX-XXXX.tar.gz
     # Image for Remote Search
@@ -235,8 +229,6 @@ images:
     persistence: "vX.X.X_XXXXXXXX-XXXX"
     remoteSearch: "v95_CFXXX_XXXXXXXX-XXXX"
     ringApi: "vX.X.X_XXXXXXXX-XXXX"
-    ambassadorIngress: "vX.X.X_XXXXXXXX-XXXX"
-    ambassadorRedis: "vX.X.X_XXXXXXXX-XXXX"
     runtimeController: "vX.X.X_XXXXXXXX-XXXX"
     # Image name for each application
     names:
@@ -249,8 +241,6 @@ images:
     persistence: "hcl/dx/postgres"
     remoteSearch: "hcl/dx/remote-search"
     ringApi: "hcl/dx/ringapi"
-    ambassadorIngress: "hcl/dx/ambassador"
-    ambassadorRedis: "hcl/dx/redis"
     runtimeController: "hcl/dx/runtime-controller"
 ```
 

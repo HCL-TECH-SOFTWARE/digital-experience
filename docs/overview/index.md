@@ -28,3 +28,6 @@ HCL DX can be deployed in a traditional IBM&reg;  WebSphere Application Server&r
 Note that some services, such as Digital Asset Management, Design Studio, Experience API, and Content Composer, are available only in the Kubernetes environment. 
 
 
+## Notices for HCL Digital Experience
+
+HCL legal notices is developed for products and services offered in the US. For more information, see [Notices](../overview/wpsnotices.md).
