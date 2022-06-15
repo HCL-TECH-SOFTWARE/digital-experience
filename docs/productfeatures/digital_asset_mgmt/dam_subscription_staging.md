@@ -4,7 +4,7 @@ This topic contains the commands that administrators can use to configure the st
 
 ## DAM staging framework
 
-The DAM staging framework allows you to stage your DAM content from an authoring environment \(source environment/publisher\) to multiple rendering environments \(target environment/subscriber\). Using [DXClient](dxclient.md), you can configure DAM staging to:
+The DAM staging framework allows you to stage your DAM content from an authoring environment \(source environment/publisher\) to multiple rendering environments \(target environment/subscriber\). Using [DXClient](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html), you can configure DAM staging to:
 
 -   Trigger a manual staging or use periodic staging processes.
 -   Set the cycle length \(default: 2 minutes, maximum: 24 hours\) for periodic sync.

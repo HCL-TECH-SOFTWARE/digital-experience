@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-# Author pages
-=======
 # Author pages in Design Studio (Beta)
->>>>>>> Stashed changes
 
 This section details how you can use content items on pages created and managed with HCL Design Studio (Beta). 
 
