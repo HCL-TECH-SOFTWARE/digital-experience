@@ -25,7 +25,7 @@ Follow these steps to install your HCL Digital Experience 9.5 components \(Exper
 
 **Asset Management components**
 
-If installing in conjunction with HCL Digital Experience 9.5 CF181 or higher, follow the instructions in the [Container Deployment](../../platform/kubernetes/index.md) topic. This page lists the latest HCL Digital Experience 9.5 CF181 or higher product images available and how to obtain and load the images into your Docker repository before continuing with these instructions.
+If installing in conjunction with HCL Digital Experience 9.5 CF181 or higher, follow the instructions in the [Container Deployment](https://help.hcltechsw.com/digital-experience/9.5/containerization/deployment.html) topic. This page lists the latest HCL Digital Experience 9.5 CF181 or higher product images available and how to obtain and load the images into your Docker repository before continuing with these instructions.
 
 If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernetes environment:
 
@@ -244,7 +244,7 @@ If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernet
 15. Remove the `claimRef` from the PersistedVolume.
 
     !!! note 
-        Instructions to re-use the Persistent Volume may also be viewed in the **[Deploy HCL Digital Experience 9.5 Container to Amazon EKS](../../platform/kubernetes/overview.md) topic.**
+        Instructions to re-use the Persistent Volume may also be viewed in the **[Deploy HCL Digital Experience 9.5 Container to Amazon EKS](https://help.hcltechsw.com/digital-experience/9.5/containerization/kubernetes_eks.html) topic.**
 
 16. Open the persistent volume in a visual editor \(vi\) using the Kubernetes or OpenShift command line client command:
 
