@@ -77,9 +77,29 @@ configuration:
       authoring: true
 ```
 
+### Expose IBM WebSphere Application Server Solution Console 
+Refer to the following code sample to configure the server and expose the port `10203`, which will be placed under `configuration.core.exposeConfigurationConsole`:
+
+```yaml
+# Application configuration
+configuration:
+  # Application specific configuration for Core
+  core:
+    # Defines if the configuration console for the IBM WebSphere Application Server of Core is exposed to the network
+    exposeConfigurationConsole: true
+```
+
+When `Admin Console` is enabled by setting its property to `true`, the IBM WebSphere Application Server Solution Console becomes available on port `10203`, as shown in the following example:
+
+```
+https://yourhost:10203/ibm/console/
+```
+
+Admin Console can be disabled by setting the property to `false`.
 ### Configuration Wizard configuration
 
-You can select whether the Config Wizard is started together with the Core application. This defaults to true.
+Although the Config Wizard is started together with the Core application by default, you can set the value to 'false' to change the default behavior
+If `configWizard` is set to `true`, then the Configuration Wizard, IBM WebSphere Application Server Solution Console, and DXConnect are also accessible on port `10203`.
 
 If you want to adjust this setting, you can use the following syntax in your file:
 
@@ -90,7 +110,8 @@ configuration:
   core:
     # Settings for tuning
     tuning:
-      # Configures if the server for configWizard and dxconnect is started
+        # Configures if the server for configWizard and dxconnect is started.
+      # If this is set to true, the WAS console for configWizard and dxconnect is also exposed on port 10203 at the path /ibm/console
       configWizard: true
 ```
 
@@ -115,7 +136,7 @@ configuration:
 
 ## Remote Search configuration
 
-You can configure whether the Remote Search configuration through the IBM WebSphere Application Server Solution Console is exposed as an additional port on the Ambassador Ingress or not. This defaults to true.
+You can configure whether the Remote Search configuration through the IBM WebSphere Application Server Solution Console is exposed as an additional port on HAProxy or not. This defaults to true.
 
 If set to true, you can access the Solution Console using:
 

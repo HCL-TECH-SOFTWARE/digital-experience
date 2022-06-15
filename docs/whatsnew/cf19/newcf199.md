@@ -30,7 +30,7 @@ See the [DXClient and DXConnect tooling supporting CICD release processes](https
 
 ## End of Support for HCL Digital Experience Deprecated Features
 
-The following list of HCL Digital Experience deprecated features will reach end of support beginning with Container update and CF200 release. Refer to the [Deprecated features and themes for HCL Digital Experience 9.5](../../reference/newly_deprecated_features_and_themes.md) topic in the Help Center.
+The following list of HCL Digital Experience deprecated features will reach end of support beginning with Container update and CF200 release. Refer to the [Deprecated features and themes for HCL Digital Experience 9.5](../deprecated_features.md) topic in the Help Center.
 
 ## New Experience APIs
 

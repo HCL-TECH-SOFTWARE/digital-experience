@@ -1,7 +1,7 @@
 # Overview
 
 !!!important
-    Ambassador is deprecated in CF203 and is replaced by HAProxy. Since Ambassador will be removed in the subsequent versions, you are expected to migrate to HAProxy in CF203 in preparation for the upcoming releases.
+    Ambassador is deprecated in CF203 and is replaced by HAProxy. Starting with CF204, Ambassador is completely removed.
 
 Up to version CF202, the deployment of HCL Digital Experience included an ingress controller "Ambassador" as part of the DX Kubernetes namespace. Ambassador required a set of [`CustomResourceDefinitions`](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/), which needed to be deployed as a cluster-wide Kubernetes resource.
 

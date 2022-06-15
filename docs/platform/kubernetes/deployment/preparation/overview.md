@@ -5,7 +5,7 @@ This includes preparing your cluster to have proper access to application contai
 
 !!!important "Read this first"
     * [Helm architecture](../../architecture/helm_overview.md) for an understanding of the capabilities, deployment structures, configuration and scaling options available for HCL DX 9.5 CF196 and later deployments.
-    * [Containerization requirements and limitations](../../limitations_requirements.md) for an understanding of the requirements, including capacity planning, and current limitations for an HCL Digital Experience 9.5 and later deployment using Helm.
+    * [Containerization requirements and limitations](../../../systemrequirements/9.5_all/supportedsoftware.md#kubernetes) for an understanding of the requirements, including capacity planning, and current limitations for an HCL Digital Experience 9.5 and later deployment using Helm.
 
 
 ## Mandatory tasks
@@ -28,10 +28,10 @@ HCL Digital Experience requires Persistent Volumes to be present in order to hav
 Depending on your deployment, your requirements for networking may differ from the default. This topic shows you what needs to be configured to get HCL Digital Experience up and running inside your Kubernetes cluster and be accessible.
 
 ### [Configure internal network](optional_internal_networking.md)
-Add the platform-specific annotations for the ambassador service to deploy DX on the internal network \(network with no public access\). 
+Add the platform-specific annotations for the ambassador service to deploy DX on the internal network \(network with no public access\).
 
-### [Configure ingress certificate](prepare_ingress_certificate.md)
-The Ambassador Ingress requires a SSL certificate to use, this topic shows how to configure that for the HCL Digital Experience Kubernetes deployment.
+### [Configure HAProxy certificate](prepare_ingress_certificate.md)
+The HAProxy requires an SSL certificate to use (if ssl is enabled), this topic shows how to configure that for the HCL Digital Experience Kubernetes deployment.
 
 ## Optional
 These tasks may be relevant for you if you have specific requirements for the deployment.
@@ -63,4 +63,3 @@ This topic describes how you can expose logs that are written to files on its Pe
 This topic documents the configuration of labels and annotations for different DX resources.
 ### [Try experimental features](optional_experimental_features.md)
 This topic describes the incubator section in the Helm Charts.
-
