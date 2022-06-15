@@ -5,7 +5,7 @@ This includes preparing your cluster to have proper access to application contai
 
 !!!important "Read this first"
     * [Helm architecture](../../architecture/helm_overview.md) for an understanding of the capabilities, deployment structures, configuration and scaling options available for HCL DX 9.5 CF196 and later deployments.
-    * [Containerization requirements and limitations](../../limitations_requirements.md) for an understanding of the requirements, including capacity planning, and current limitations for an HCL Digital Experience 9.5 and later deployment using Helm.
+    * [Containerization requirements and limitations](../../../systemrequirements/9.5_all/supportedsoftware.md#kubernetes) for an understanding of the requirements, including capacity planning, and current limitations for an HCL Digital Experience 9.5 and later deployment using Helm.
 
 
 ## Mandatory tasks

@@ -18,7 +18,7 @@ Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators
 !!!important
         Beginning with HCL DX Container Update CF200, use of the Operator \(dxctl\) method of container deployment is not supported. Customers should use Helm deployments and migrate existing Operator-based deployments to Helm.
 
-See the [HCL DX 9.5 Helm deployment](../../platform/kubernetes/overview.md) topic for more information. 
+See the [HCL DX 9.5 Helm deployment](../../platform/kubernetes/helm_overview.md) topic for more information. 
 
 ## Digital Asset Management
 

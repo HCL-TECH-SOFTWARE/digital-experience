@@ -1634,7 +1634,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 -   See the following sections for additional information:
     -   [Docker image deployment](../docker/docker_image_deployment.md)
-    -   [Requirements and limitations](../kubernetes/limitations_requirements.md)
+    -   [Requirements and limitations](../systemrequirements/9.5_all/supportedsoftware.md#kubernetes)
     -   [Customizing the container deployment](../kubernetes/operator-based/customizing_container_deployment.md)
     
 

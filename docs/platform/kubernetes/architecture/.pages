@@ -1,6 +1,6 @@
 title: Architecture 
 nav:
-    - helm_overview.md
+    - overview.md
     - application_architecture.md
     - core_interactions_kubernetes.md
     - persistent_volumes.md

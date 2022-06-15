@@ -17,7 +17,7 @@ There are three options available to install HCL Design Studio (Beta) to an HCL 
 
 ### Deploy with dxctl
 
-The dxctl process can be used to install and enable the Design Studio (Beta) to a Container Update CF196 deployment. Refer to the [dxctl](../../platform/kubernetes/operator-based/dxtools_dxctl.md) and specific [Kubernetes platform](../../platform/kubernetes/overview.md) Help Center topics you will deploy to. (Amazon EKS, Microsoft AKS, or Google GKE) .
+The dxctl process can be used to install and enable the Design Studio (Beta) to a Container Update CF196 deployment. Refer to the [dxctl](../../platform/kubernetes/operator-based/dxtools_dxctl.md) and specific [Kubernetes platform](../../platform/kubernetes/helm_overview.md) Help Center topics you will deploy to. (Amazon EKS, Microsoft AKS, or Google GKE) .
 
 When working with the dxctl deployment on your target Kubernetes platform, ensure that the property `sitemanager.enabled` is added in the deployment property file, and that it is set to true when deploying Container Update CF196. The configuration setting can also be enabled later on.
 

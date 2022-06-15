@@ -1,7 +1,7 @@
 title: Kubernetes deployment
 nav:
     - index.md
-    - overview.md
+    - helm_overview.md
     - docker.md 
     - c_kubesupportstatement.md
     - architecture
