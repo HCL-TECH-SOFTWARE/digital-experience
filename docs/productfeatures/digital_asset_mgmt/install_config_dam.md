@@ -12,9 +12,9 @@ This section provides a high-level overview of the architecture and the steps to
 
 ## Prerequisite
 
-DX Administrators can choose to install the DX Core containers and then proceed to install Content Composer and Digital Asset Management containers to the supported Kubernetes container platforms as outlined in the following steps. See the [Deployment](deployment.md) section for the latest DX 9.5 container file listings.
+DX Administrators can choose to install the DX Core containers and then proceed to install Content Composer and Digital Asset Management containers to the supported Kubernetes container platforms as outlined in the following steps. See the [Deployment](../../platform/kubernetes/deployment/helm_deployment.md) section for the latest DX 9.5 container file listings.
 
-Deploying the HCL Digital Asset Management or Content Composer components is supported on Kubernetes or OpenShift platforms and is not supported for deployment to Docker platforms. See the [System requirements](../overview/inst_req.md) section for more information.
+Deploying the HCL Digital Asset Management or Content Composer components is supported on Kubernetes or OpenShift platforms and is not supported for deployment to Docker platforms. See the [System requirements](https://help.hcltechsw.com/digital-experience/9.5/overview/inst_req.html) section for more information.
 
 !!! note  
     For initial deployments, it is recommended to install the HCL Digital Experience 9.5 components \(Experience API, Content Composer, and Digital Asset Management\) to a non-production \(test\) HCL Digital Experience 9.5 environment.
@@ -25,11 +25,11 @@ Follow these steps to install your HCL Digital Experience 9.5 components \(Exper
 
 **Asset Management components**
 
-If installing in conjunction with HCL Digital Experience 9.5 CF181 or higher, follow the instructions in the [Container Deployment](deployment.md) topic. This page lists the latest HCL Digital Experience 9.5 CF181 or higher product images available and how to obtain and load the images into your Docker repository before continuing with these instructions.
+If installing in conjunction with HCL Digital Experience 9.5 CF181 or higher, follow the instructions in the [Container Deployment](../../platform/kubernetes/index.md) topic. This page lists the latest HCL Digital Experience 9.5 CF181 or higher product images available and how to obtain and load the images into your Docker repository before continuing with these instructions.
 
 If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernetes environment:
 
-1.  Verify that you can access the HCL Digital Experience 9.5 CF181 or higher Practitioner Studio by logging in to your HCL Digital Experience 9.5 Practitioner Studio interface. See the [HCL Digital Experience 9.5 Practitioner Studio](../practitioner_studio/practitionerstudio_overview.md) topic for information.
+1.  Verify that you can access the HCL Digital Experience 9.5 CF181 or higher Practitioner Studio by logging in to your HCL Digital Experience 9.5 Practitioner Studio interface. See the [HCL Digital Experience 9.5 Practitioner Studio](https://help.hcltechsw.com/digital-experience/9.5/practitioner_studio/practitionerstudio_overview.html) topic for information.
 2.  Download and extract the HCL Digital Experience 9.5 components from your Digital Experience entitlements from the [HCL Software License Portal](https://www.hcltech.com/software/support/release) to the local file system.
 
     **Sample download package name**: `hcl-dx-kubernetes-v95-CF181-other.zip` or higher, depending on the DX 9.5 Container Update version you are installing.
@@ -184,7 +184,7 @@ If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernet
 
             A `dx.dam.config.cors` config map setting is auto-generated and provides the ability for Cross Origin Resource Sharing across Content Composer and Digital Asset Management resources.
 
-            In the Digital Experience 9.5 core deployment, the `dx.config.cors` setting is set in the DX configuration map. Reference the [Containerization Deployment](deployment.md) pages for additional details.
+            In the Digital Experience 9.5 core deployment, the `dx.config.cors` setting is set in the DX configuration map. Reference the [Containerization Deployment](../../platform/kubernetes/deployment/helm_deployment.md) pages for additional details.
 
             An additional self-provisioning volume is created for each of the HCL Digital Asset Management Persistence \(Postgres\) pods. The access mode of these self-provisioning persistent volumes must include `ReadWriteOnce`. If this volume is not present the images are lost and shows blank if/when the HCL Digital Asset Management library is restarted.
 
@@ -244,7 +244,7 @@ If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernet
 15. Remove the `claimRef` from the PersistedVolume.
 
     !!! note 
-        Instructions to re-use the Persistent Volume may also be viewed in the **[Deploy HCL Digital Experience 9.5 Container to Amazon EKS](kubernetes_eks.md) topic.**
+        Instructions to re-use the Persistent Volume may also be viewed in the **[Deploy HCL Digital Experience 9.5 Container to Amazon EKS](../../platform/kubernetes/overview.md) topic.**
 
 16. Open the persistent volume in a visual editor \(vi\) using the Kubernetes or OpenShift command line client command:
 

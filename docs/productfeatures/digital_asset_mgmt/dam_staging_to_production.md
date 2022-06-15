@@ -4,7 +4,7 @@ If you create an HCL Digital Experience 9.5 container staging server in Kubernet
 
 Prerequisites:
 
--   Configure single sign-on \(SSO\) between the HCL Digital Experience 9.5 deployments that shares the Digital Asset Management media assets. See [Configure SSO for Digital Asset Management](../digital_asset_mgmt/configure_dam_sso.html) topic.
+-   Configure single sign-on \(SSO\) between the HCL Digital Experience 9.5 deployments that shares the Digital Asset Management media assets. See [Configure SSO for Digital Asset Management](../digital_asset_mgmt/configure_dam_sso.md) topic.
 -   Ensure the [Cross Origin Resource Sharing \(CORS\)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) property is configured in the deployment config map, as follows:
 
     1.  The `dx.config.cors` property is added in the deployment config map, for example, `dx-deployment` with the target host:
