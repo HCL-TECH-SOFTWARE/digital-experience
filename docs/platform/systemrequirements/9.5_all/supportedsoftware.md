@@ -1,5 +1,5 @@
 # Software requirements
-The supported software section specifies the additional software that HCL Portal Express 9.5 supports.
+The supported software section specifies the additional software that HCL Digital Experience 9.5 supports.
 
 ## Kubernetes
 
@@ -98,7 +98,7 @@ This table provides information about the sample Kubernetes Platforms that are t
 
 
 Kubernetes Version Support Policy
-The list of Kubernetes versions that are tested and supported by HCL are included in [Table 2](#table-2-tested-and-supported-kubernetes-versions-on-full-container-deployment).
+- The list of Kubernetes versions that are tested and supported by HCL are included in [Table 2](#table-2-tested-and-supported-kubernetes-versions-on-full-container-deployment).
 - From time-to-time, platform providers may release previews of upcoming Kubernetes versions. We will not provide support for those versions.
 - If you encounter any issue on an unsupported or untested Kubernetes version, you may be asked to install a supported level.
 
@@ -109,6 +109,7 @@ Review your chosen Kubernetes platform and ensure that it supports the following
 
 |CF Level|Kubernetes versions|
 |--------------|-----------------|
+|CF204| Kubernetes 1.22<br/>Kubernetes 1.21<br/>Kubernetes 1.20<br/>Kubernetes 1.19<br/>|
 |CF203| Kubernetes 1.22 __*__ <br/>Kubernetes 1.21<br/>Kubernetes 1.20<br/>Kubernetes 1.19<br/>|
 |CF202| Kubernetes 1.21<br/>Kubernetes 1.20<br/>Kubernetes 1.19 <br/>|
 |CF201| Kubernetes 1.21<br/>Kubernetes 1.20<br/>Kubernetes 1.19 <br/>|
