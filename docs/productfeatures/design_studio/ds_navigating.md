@@ -28,7 +28,8 @@ Follow the steps below to access the HCL Digital Experience 9.5 Design Studio (B
 
 Options 1 and 2 brings you to the Design Studio (Beta) **Sites** overview, where you can view and manage your site and its pages.
 
->**Note:** A demonstration site called Palace Hotel is available for use with Design Studio (Beta).
+!!! note
+    A demonstration site called Palace Hotel is available for use with Design Studio (Beta).
 
 ## The HCL Design Studio (Beta) Sites interface
 

@@ -4,15 +4,16 @@ Design Studio (Beta) enables content managers and designers to build and style d
 
 Design Studio enables content managers and designers to build and style their digital site properties quickly. Design Studio presents a modern, intuitive, and role-based tool aggregating all needed functions to visually assemble, curate, design, and model pages, content, and applications in DX sites. Using Design Studio, content authors and site designers can quickly execute DX site projects and updates and speed time to market.
 
-> **Note:** Design Studio is provided for Beta evaluation with HCL Digital Experience 9.5 Container Update CF196 and later releases. It is not yet supported for use in production deployments.
+!!! note 
+        Design Studio is provided for Beta evaluation with HCL Digital Experience 9.5 Container Update CF196 and later releases. It is not yet supported for use in production deployments.
 
 ## Requirements and limitations
 
 Digital Experience 9.5 Container Update CF196 and later must be installed and operational, along with the Practitioner Studio and Content Composer components, to access and use Design Studio (Beta). **Design Studio (Beta) is not supported for production use**.
 
-> **Notes:**<br>
--   Reference the latest HCL DX 9.5 container release and update file listings in the [Docker image listing](http://127.0.0.1:8000/platform/kubernetes/docker/?h=image+li) topic.<br>
--   Design Studio is still in development for release at a later time. This Design Studio (Beta) release presents an opportunity for customers to gain hands-on-experience with the currently available features. HCL Digital Experience welcomes your feedback and suggestions on Design Studio (Beta), and encourages you to present your input through cases and discussions with [HCL Support](https://support.hcltechsw.com/csm?id=dx_support) DX leaders.
+!!! notes
+        -   Reference the latest HCL DX 9.5 container release and update file listings in the [Docker image listing](http://127.0.0.1:8000/platform/kubernetes/docker/?h=image+li) topic.
+        -   Design Studio is still in development for release at a later time. This Design Studio (Beta) release presents an opportunity for customers to gain hands-on-experience with the currently available features. HCL Digital Experience welcomes your feedback and suggestions on Design Studio (Beta), and encourages you to present your input through cases and discussions with [HCL Support](https://support.hcltechsw.com/csm?id=dx_support) DX leaders.
 
 The following Digital Experience 9.5 features and services are **not supported** with Design Studio (Beta):
 
