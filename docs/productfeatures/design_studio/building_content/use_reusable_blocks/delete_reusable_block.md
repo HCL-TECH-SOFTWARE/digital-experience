@@ -4,7 +4,7 @@ Learn how to delete a reusable block.
 
 !!! notes
     - Deleting a reusable block results in an error if the reusable block is being used in your current or other pages. Deleting a reusable block also results in an error if the reusable block has already been deleted by another authorized user. In this case, the **Reusables** panel refreshes and updates the list of reusable blocks.
-    - In previous releases (CF196 - CF201), once you delete a Content Container in Page Editor mode, the Content Container is also deleted in WCM. However, when a Content Container becomes a reusable block and you delete it from Page Editor mode, it will remain in WCM.
+    - In previous releases (CF196 - CF202), once you delete a Content Container in Page Editor mode, the Content Container is also deleted in WCM. However, when a Content Container becomes a reusable block and you delete it from Page Editor mode, it will remain in WCM.
 
 To delete a reusable block:
 

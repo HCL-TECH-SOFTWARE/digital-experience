@@ -4,11 +4,10 @@ The following section details information and steps on how to use reusable conte
 
 ## Overview
 
-Users to reuse a content item multiple times across different pages of their HCL Digital Experience sites. Reusable content items are called *reusable
+Users can reuse a content item multiple times across different pages of their HCL Digital Experience sites. Reusable content items are called *reusable
 blocks*.
 
-As of HCL Digital Experience CF203 and higher releases, the only reusable content element is the Content Container. More content items will be introduced in future
-releases.
+As of HCL Digital Experience CF203 and higher releases, the only reusable content element is the [Content Container](../use_content_containers.md). More content items will be introduced in future releases.
 
 To access available reusable blocks, you need to be on the HCL Design Studio (Beta) Page editor and click the *Reusable blocks* icon as shown below:</p>
 

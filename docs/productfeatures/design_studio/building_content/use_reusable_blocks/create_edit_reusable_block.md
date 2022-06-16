@@ -4,8 +4,7 @@ Learn how to create or edit a reusable block on your site and its pages in HCL D
 
 ## Create a new reusable block
 
-Content containers with WCM Content Items are automatically created as reusable blocks and are automatically added in the **Reusables** panel as
-shown below:
+Content containers with WCM Content Items are automatically created as **new** reusable blocks and are automatically added in the **Reusables** panel as soon as they are created, as shown below:
 
 ![Reusable blocks panel](../../../../images/Choose_reusable_block-3.png)
 

@@ -1,4 +1,4 @@
-title: Design Studio 
+title: Design Studio (Beta)
 nav:
     - index.md
     - Install Design Studio (Beta): ds_installing.md
@@ -6,7 +6,6 @@ nav:
     - Creating sites and pages: creating_sites_and_pages.md
     - building_content
     - Update content items: update_content_items.md
-    - Craft layouts to pages: style_elements.md
     - Render Design Studio pages: render_ds_pages.md
     - Web Content Manager Open Standards REST APIs: design_studio_development_APIs.md
     - ...
