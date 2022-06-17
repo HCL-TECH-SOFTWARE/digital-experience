@@ -1,4 +1,4 @@
-# Product packaging
+# Included Software
 HCL Portal Express 9.5 includes the following products.
 
 |Product name|Capability|Applicable Operating System Families|

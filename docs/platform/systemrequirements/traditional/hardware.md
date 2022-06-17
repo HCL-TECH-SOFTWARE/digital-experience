@@ -1,7 +1,7 @@
 # Hardware requirements
 HCL Portal Express requires the following hardware, organized by type of hardware, deployment units or components.
 
-## Installable software - AIX
+## AIX
 |Hardware|Deployment units|Requirement|Applicable operating systems|
 |---------|------|------|-----------|
 |Disk space|Server|Minimum 3 GB free disk space for installation of DX Portal<br>Minimum 2 GB free disk space for installation of WebSphere Application Server<br>Minimum 3 GB free disk space for installation of IBM Installation Manager and the Installation Manager shared directory<br>Minimum 8 GB total free disk space recommended for installation|All supported AIX operating systems|
@@ -10,7 +10,7 @@ HCL Portal Express requires the following hardware, organized by type of hardwar
 |Processor|Server|X86-64 IBM POWER Family of processors<br>System z Processors|All supported AIX operating systems|
 |-|Server|Minimum 2 CPUs for installation of Portal or WCM|All supported AIX operating systems|
 
-## Installable software - Linux
+## Linux
 |Hardware|Deployment units|Requirement|Applicable operating systems|
 |------------------|-----|------|-------------|
 |Disk Space|Server|Minimum 3 GB free disk space for installation of DX Portal<br/>Minimum 2 GB free disk space for installation of WebSphere Application Server<br/>Minimum 3 GB free disk space for installation of IBM Installation Manager and the Installation Manager shared directory<br/>Minimum 8 GB total free disk space recommended for installation|All supported Linux operating systems|
@@ -19,7 +19,7 @@ HCL Portal Express requires the following hardware, organized by type of hardwar
 |Processor|Server|X86-64 IBM POWER Family of processors<br/>System z Processors|All supported Linux operating systems|
 ||Server|Minimum 2 CPUs for installation of Portal or WCM|All supported Linux operating systems|
 
-## Installable software - Windows
+## Windows
 |Hardware|Deployment units|Requirement|Applicable operating systems|
 |------------------|-----|------|-------------|
 |Disk Space|Server|Minimum 3 GB free disk space for installation of DX Portal<br/>Minimum 2 GB free disk space for installation of WebSphere Application Server<br/>Minimum 3 GB free disk space for installation of IBM Installation Manager and the Installation Manager shared directory<br/>Minimum 8 GB total free disk space recommended for installation|All supported Windows operating systems|
@@ -27,16 +27,4 @@ HCL Portal Express requires the following hardware, organized by type of hardwar
 |Other Hardware|Server|Minimum 2 CPUs required for installations of DX Portal and HCL WCM|All supported Windows operating systems|
 |Processor|Server|X86-64 IBM POWER Family of processors<br/>System z Processors|All supported Windows operating systems|
 ||Server|Minimum 2 CPUs for installation of Portal or WCM|All supported Windows operating systems|
-
-## Installable software - Docker *
-
-!!! note
-
-    \* HCL Digital Experience 9.5 image deployments to Docker are supported for development, and not production operations.
-
-|Hardware|Deployment units|Requirement|Applicable operating systems|
-|------------------|-----|------|-------------|
-|Disk Space|Server|Minimum 40 GB for Volume size of HCL DX 9.5 and higher Docker image deployment|Docker 1.13 and higher|
-|Memory|Server|Physical memory requirements and recommendations for DX 9.5 and higher Docker image deployment<br/>7GB of RAM set as default, can be modified||
-|CPU|Server|2 CPUs requested for installations of DX 9.5 Docker image||
 
