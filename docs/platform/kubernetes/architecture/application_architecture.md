@@ -45,7 +45,7 @@ Content Composer<!-- [Content Composer](../../../design/content_composer/cont_co
 
 **Type:** Stateful
 
-Digital Asset Management<!-- [Digital Asset Management](../../../design/digital_asset_mgmt/digital_asset_mgmt_overview.md) --> requires the Ring API be deployed and operational to communicate with the DX Core, and Image Processor components to perform image manipulation, and Persistence to store its application data.
+Digital Asset Management requires the Ring API be deployed and operational to communicate with the DX Core, and Image Processor components to perform image manipulation, and Persistence to store its application data. See [Digital Asset Management](../../../productfeatures/digital_asset_mgmt/index.md)
 
 ![Digital Asset Management Application Definition](../../../images/Digital%20Asset%20Management%20Application%20Definition.png "Digital Asset Management Application definition")
 
