@@ -3,7 +3,6 @@ nav:
     - index.md
     - helm_overview.md
     - docker.md 
-    - c_kubesupportstatement.md
     - architecture
     - deployment
     - operations

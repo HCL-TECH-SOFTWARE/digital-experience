@@ -1,9 +1,9 @@
-# DX Kubernetes Support Matrix
+# Kubernetes Runtime
 
 View the latest Kubernetes versions and platforms tested and supported for specific HCL Digital Experience (DX) 9.5 Kubernetes deployments.
 
 !!! attention "Operator-based deployments are discontinued"
-    Beginning with HCL DX 9.5 CF200, HCL has discontinued [Operator-based deployments](https://help.hcltechsw.com/digital-experience/9.5/containerization/deploy_container_platforms.html) and will provide support only for [Helm-based deployments](../kubernetes/deployment/helm_deployment.md). There will be no further updates or code fixes provided for the Operator-based deployments. HCL requires all customers to migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based deployments](operator-migration/operator_migration_preparation.md).
+    Beginning with HCL DX 9.5 CF200, HCL has discontinued [Operator-based deployments](https://help.hcltechsw.com/digital-experience/9.5/containerization/deploy_container_platforms.html) and will provide support only for [Helm-based deployments](../kubernetes/deployment/helm_deployment.md). There will be no further updates or code fixes provided for the Operator-based deployments. HCL requires all customers to migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based deployments](../../kubernetes/operator-migration/operator_migration_preparation.md).
 
 HCL encourages customers to remain up-to-date on the latest HCL DX and Kubernetes releases, and be aware that HCL DX provides all fixes on the latest release. Customers may be asked to upgrade to the latest HCL DX release to assist with problem determination.
 
@@ -18,7 +18,7 @@ HCL tests DX against a range of Kubernetes platforms that is regularly reviewed 
 
 ### Table 1: Tested Kubernetes Platforms on Full Container Deployment
 
-This table provides information about the sample Kubernetes platforms that are tested with DX.
+This table lists the Kubernetes platforms that are tested with DX by HCL. This is provided for information only.
 
 |Kubernetes platforms on full deployments|Hybrid deployments (Kubernetes/on Premise)|
 |--------------|-----------------|
@@ -43,4 +43,5 @@ Review your chosen Kubernetes platform and ensure that it supports the following
 |CF202| Kubernetes 1.21<br/>Kubernetes 1.20<br/>Kubernetes 1.19 <br/>|
 
 !!! attention "__*__ CF203 limited support statement"
-    Starting with CF203, HCL DX supports Kubernetes 1.22 only for HAProxy-based deployments
+    In CF203, HCL DX supports Kubernetes 1.22 only for HAProxy-based deployments
+s
