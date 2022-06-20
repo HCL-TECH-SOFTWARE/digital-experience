@@ -3,9 +3,9 @@ nav:
     - index.md
     - Install Design Studio (Beta): ds_installing.md
     - Navigate Design Studio (Beta): ds_navigating.md
-    - Creating sites and pages: creating_sites_and_pages.md
+    - Create sites and pages: creating_sites_and_pages.md
     - building_content
     - Update content items: update_content_items.md
-    - Render Design Studio pages: render_ds_pages.md
+    - Render Design Studio (Beta) pages: render_ds_pages.md
     - Web Content Manager Open Standards REST APIs: design_studio_development_APIs.md
     - ...
