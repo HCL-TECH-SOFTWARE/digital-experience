@@ -1,5 +1,5 @@
 # Craft layouts to pages
-This section outlines how you can make the layout of your website pages.
+This section outlines how you can make the layout of your pages for your your HCL Digital Experience site.
 
 ## Styling elements
 Sites, pages and containers are each linked to a stylesheet component of their own, which are:
@@ -86,11 +86,11 @@ This option can also be accessed via the [WCM Authoring tool](https://help.hclte
 
 ## Upload the baseline stylesheet of an HCL Design Studio (Beta) site
 
-> **Notes:**<br>
-> -   When uploading a file to your site's baseline stylesheet, it replaces the file that exists there. Currently, there is no way to revert back to or retrieve any replaced files.<br>
-> -   Uploading an invalid or non-CSS file to the baseline stylesheet will make the page editor unusable.<br>
-> -   Uploading a valid CSS file that contains invalid values may also break the page editor.<br>
-> -   Back up your latest working baseline stylesheet by downloading it before replacing it by uploading another one to mitigiate the risk of breaking the page editor.
+!!! notes
+    -   When uploading a file to your site's baseline stylesheet, it replaces the file that exists there. Currently, there is no way to revert back to or retrieve any replaced files.
+    -   Uploading an invalid or non-CSS file to the baseline stylesheet will make the page editor unusable.
+    -   Uploading a valid CSS file that contains invalid values may also break the page editor.
+    -   Back up your latest working baseline stylesheet by downloading it before replacing it by uploading another one to mitigiate the risk of breaking the page editor.
 
 1.  On the **Sites** overview, hover and click the overflow menu of the selected site and select **Properties**.
 

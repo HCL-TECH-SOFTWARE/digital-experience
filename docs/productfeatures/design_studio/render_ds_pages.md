@@ -19,19 +19,19 @@ The following are the URL conventions when rendering a site or page within the p
 
 The URL may also be retrieved as part of the `Content-sites` and `Content-pages` endpoints.
 
-**Sample**:
-
-```
-"properties": {
+!!! sample
+    ```
+        "properties": {
                 "relativeUrlPath": "test2",
                 "renderURL": "/wps/wcm/connect/design+studio+demo/the+palace+hotel/test2"
                 }
-```
+    ```
 
 ## Authorization
 The out-of-the-box default site is not accessible for anonymous users. If you are granting anonymous user role access to the complete library, the default site can also be rendered anonymously.
 
-> **Note:** For HCL Digital Experience 9.5 CF197 and earlier releases, an authentication module has not been implemented. The default WCM login shows without authentication or if you do not have the sufficient user permissions.
+!!! note
+    For HCL Digital Experience 9.5 CF197 and earlier releases, an authentication module has not been implemented. The default WCM login shows without authentication or if you do not have the sufficient user permissions.
 
 ## Markup
 The rendered HTML contains a head section with the CSS references and a body with the content from the site and page and containers on the page.
@@ -57,7 +57,9 @@ During site rendering, the CSS will be added to the head section of the page in 
 This order provides flexibility and allows the user to override any class selector from the site baseline stylesheet through the HCL Design Studio \(Beta\) Page editor.
 
 ## Get the live URL of the rendered site
-> **Note:** Any changes to the site name will generate a new URL.
+
+!!! note
+    Any changes to the site name will generate a new URL.
 
 1.  From the **Sites** overview, navigate to the selected site.
 
@@ -75,7 +77,8 @@ This order provides flexibility and allows the user to override any class select
 
 
 ## Get the live page URL of the rendered site
-> **Note:** Any changes to the page will generate a new URL.
+!!! note
+    Any changes to the page will generate a new URL.
 
 There are four ways how to get the live page URL to open the rendered HCL Design Studio page.
 

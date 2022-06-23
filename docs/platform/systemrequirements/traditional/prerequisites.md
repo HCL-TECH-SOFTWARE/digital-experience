@@ -1,4 +1,5 @@
-# Prerequisites
+# Required Software
+
 The Prerequisites section specifies the capabilities that HCL Portal Extend 9.5 requires and the prerequisite products that can be used to fulfill those capabilities.
 
 ## WebSphere Application Server
@@ -13,7 +14,7 @@ The Prerequisites section specifies the capabilities that HCL Portal Extend 9.5 
 |----------|----------|----------|----------|----------|----------|----------|
 |IBM Installation Manager|1.8.5|1.8.5 and later maintenance|9.5|Full|WebSphere Application Server|No|
 
-## Java SDK - Summary
+## Java SDK
 HCL Digital Experience 9.5 requires JDK 7.0 or later for installation. 
 
 |Prerequisite|Version|Prerequisite minimum, and Supported versions|Product Minimum|Components|Operating system restrictions?|

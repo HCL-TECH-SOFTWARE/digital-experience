@@ -6,7 +6,7 @@ This topic describes how to configure DAM extensibility in the configuration fol
 
 Rendition and plug-in configurations are currently maintained as config maps. You can find these config maps \(`renditions-extensibility.json` and `plugin-extensibility.json`\) in the Helm configuration folder. You can deploy these into DAM through a Helm upgrade.
 
-Refer to the section [Planning your container deployment using Helm](https://help.hcltechsw.com/digital-experience/9.5/containerization/helm_planning_deployment.html) for more information on Helm support.
+Refer to the section [Planning your container deployment using Helm](../../platform/kubernetes/deployment/preparation/prepare_configuration.md) for more information on Helm support.
 
 Once configured, DAM gets the latest config maps to handle assets and their transformations.
 

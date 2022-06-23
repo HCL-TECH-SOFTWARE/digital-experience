@@ -7,7 +7,7 @@ This section outlines the supported container platforms for HCL Digital Experien
 
 !!!note "Notes:"
     -   Initial login credentials for the DX Docker image are: `wpsadmin/wpsadmin`.
-    -   Prior to deploying on Red Hat OpenShift or Kubernetes, it is recommended that administrators read the [Limitations/Requirements](limitations_requirements.md) section.
+    -   Prior to deploying on Red Hat OpenShift or Kubernetes, it is recommended that administrators read the [Limitations/Requirements](../../systemrequirements/9.5_all/supportedsoftware.md#kubernetes) section.
     -   Additional guidance about storage class and volume is available for HCL Digital Experience 9.5 container administrators. See the topic [Sample Storage Class and Volume for HCL Digital Experience 9.5 Container in Amazon EKS or Red Hat OpenShift](sample_storage_class_volume.md).
     
 -   **Video**:

@@ -41,7 +41,7 @@ Follow these steps to access HCL Digital Experience 9.5 DAM from the Practitione
             -   SYNC IN PROGRESS
             -   SYNC FAILED
             -   SYNCED
-            See the [Configure DAM - Kaltura integration](configure_dam_kaltura_integration.md) topic for details.
+            See the [Configure DAM - Kaltura integration](../configure_dam_kaltura.md) topic for details.
 
         -   The interface displays features that allows you to edit media asset metadata \(such as `Title` and `Description`\) and user access control \(Access\) of the new or existing collection the rich media asset is uploaded to. See the [Manage collections](manage_collections.md) topic for details.
 
