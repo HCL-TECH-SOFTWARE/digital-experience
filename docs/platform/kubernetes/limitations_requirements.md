@@ -95,20 +95,6 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
     |Redis|0.3|1|400 MB|600 MB|3|
     |Postgres-RO|1|2|1 GB|3 GB|1|
 
--   **Additional considerations in implementation**:
-    -   **ConfigEngine and ConfigWizard should only be used when there is a single instance**
-
-        When more than one instance is running, the ConfigEngine is disabled and the ConfigWizard route is removed. As an example, the Site Builder is calling the ConfigEngine in the background. But because multiple instances are running, an **Error 500** occurs because the ConfigEngine is disabled. AllConfigEngine.sh tasks should be run in configure mode with only one instance running.
-
-    -   **JavaServer Faces \(JSF\) portlet bridge**
-
-        With DX 9.5 Container Update CF171 and higher, WebSphere Application Server 9.0.5.2 is included and that IBM fix pack removed the IBM JSF portlet bridge. If you are using JSF portlets and leverage the JSF portlet bridge, proceed to the HCL DX 9.5 Container Update CF18 for the required JavaServer Faces Bridge support before moving to a container-based deployment.
-
-        The HCL JavaServer Faces Bridge is added to HCL Digital Experience offerings with Container Update CF18 and CF18 on-premises platform CF update. For more information please see [What's New in Container Update CF18](../../whatsnew/cf18/new_cf18.md).
-
-        <!-- !!! note
-            For information about the limitations related to JSF 2.2 support, see [Limitations when running HCL DX Portlet Bridge on WebSphere Application Server 9.0](../../design/dev-portlet/dx_bridge_for_jsf_onwas9x.md#section_ig1_5hx_3qb). -->
-
 ??? info "Related information:"
     - [Customizing the container for Operator-based deployments](operator-based/customizing_container_deployment.md)
     - [Deployment using dxtools](operator-based/dxtools_dxctl.md)
