@@ -15,14 +15,14 @@ Beginning with Container Update CF203, the Ambassador shipped as part of the DX 
 
 In CF203, Helm configuration settings for metrics are enabled by default, new guidance is added to deploy to an internal network, and guidance is provided explaining the process to migrate from the Ambassador to new HAProxy service.
 
-See the following Help Center topics [HCL DX 9.5 Kubernetes](../../platform/kubernetes/helm_overview.md), [Monitoring](../../platform/kubernetes/operations/monitoring/monitor_helm_deployment_metrics.md), [Deploying DX on internal network](../../platform/kubernetes/deployment/preparation/optional_internal_networking.md), and [Migrate from Ambassador to HAProxy](../../platform/kubernetes/haproxy-migration/haproxy-introduction.md) for more information. 
+See the following Help Center topics [HCL DX 9.5 Kubernetes](../../platform/kubernetes/overview.md), [Monitoring](../../platform/kubernetes/operations/monitoring/monitor_helm_deployment_metrics.md), [Deploying DX on internal network](../../platform/kubernetes/deployment/preparation/optional_internal_networking.md), and [Migrate from Ambassador to HAProxy](../../platform/kubernetes/haproxy-migration/haproxy-introduction.md) for more information. 
 
 !!!important
     In Container Update CF203, the migration from Ambassador to HAProxy must be completed as a required step, in preparation for the removal of Ambassador in the upcoming Container Update release. Refer to the following links for guidance on the migration.
 
 See the following Help Center topics for more information:
 
-- [HCL DX 9.5 Helm deployment](../../platform/kubernetes/architecture/overview.md)
+- [HCL DX 9.5 Helm deployment](../../platform/kubernetes/architecture/helm_overview.md)
 - [HAProxy overview](../../platform/kubernetes/haproxy-migration/haproxy-introduction.md)
 - [Migrate from Ambassador to HAProxy](../../platform/kubernetes/haproxy-migration/haproxy-migration.md)
 
