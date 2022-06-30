@@ -1,0 +1,46 @@
+name: Documentation Update Request
+description: Report an issue with or request an update to DX documentation
+title: "[Doc]: "
+labels: ["doc", "customer-issue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to give us your feedback on DX Documentation! Use this form to request an update or report an issue.
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: pages-concerned
+    attributes:
+      label: Page(s) impacted
+      description: Please tell us which page(s) are impacted by your feedback
+      placeholder: List of URLs
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What is the issue?
+      description: Tell us what you are seeing or what update you would like
+      placeholder: Tell us what you see!
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What type of DX deployment are you running?
+      options:
+        - Kubernetes deployment - Helm charts
+        - Kubernetes deployment - Operator
+        - Hybrid traditional/Kubernetes deployment
+        - Traditional WAS clustered deployment
+        - I'm not running DX
+    validations:
+      required: false
