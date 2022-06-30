@@ -10,7 +10,7 @@ Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators
 
 See the following Help Center topics for more information:
 
--   [HCL DX 9.5 Helm deployment](../../platform/kubernetes/architecture/overview.md)
+-   [HCL DX 9.5 Helm deployment](../../platform/kubernetes/architecture/helm_overview.md)
 -   [Configure PersistentVolumeClaims \(PVCs\)](../../platform/kubernetes/deployment/preparation/prepare_persistent_volume_claims.md)
 -   [Additional Helm Tasks](../../platform/kubernetes/deployment/preparation/overview.md)
 

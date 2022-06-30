@@ -13,7 +13,7 @@ Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators
 
 Also, Helm support for file patterns in sidecar logging and Proxy link for CW-Profile administration console is provided.
 
-See the following Help Center topics [Migrate from Ambassador to HAProxy](../../platform/kubernetes/haproxy-migration/haproxy-introduction.md), [HCL DX 9.5 Kubernetes](../../platform/kubernetes/architecture/overview.md) and [Configure Core sidecar logging](../../platform/kubernetes/deployment/preparation/optional_core_sidecar_log.md) for more information.
+See the following Help Center topics [Migrate from Ambassador to HAProxy](../../platform/kubernetes/haproxy-migration/haproxy-introduction.md), [HCL DX 9.5 Kubernetes](../../platform/kubernetes/architecture/helm_overview.md) and [Configure Core sidecar logging](../../platform/kubernetes/deployment/preparation/optional_core_sidecar_log.md) for more information.
 
 ## Personalization REST APIs
 Personalization Selection REST API rules add updates to Profiler and Selection Rules, and new Embedded Web Content Selection. See the [Personalization REST API explorer](https://help.hcltechsw.com/digital-experience/9.5/pzn/dev_pzn_rest_api_explorer.html){:target="_blank"} and [Personalization Rules APIs](https://help.hcltechsw.com/digital-experience/9.5/pzn/pzn_apis.html){:target="_blank"} topics for more information.
