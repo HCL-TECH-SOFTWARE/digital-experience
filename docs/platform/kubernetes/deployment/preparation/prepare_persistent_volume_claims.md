@@ -362,8 +362,8 @@ A HCL Digital Experience Kubernetes deployment requires a number of persistent v
 
 This feature allows you to configure additional Persistent Volume Claims (PVCs) for the Core stateful set and specify the directories at which they will be mounted in the main containers of all Core pods. 
 
-**Important note:**
-> Core pods will remain "Pending" until all the new claims have been satisfied. Please ensure that you have created the necessary Persistent Volumes in advance or have suitable provisioners in your Kubernetes cluster to create the volumes on demand.
+!!! important
+    Core pods will remain "Pending" until all the new claims have been satisfied. Please ensure that you have created the necessary Persistent Volumes in advance or have suitable provisioners in your Kubernetes cluster to create the volumes on demand.
 
 The following syntax can be used to configure additional Persistent Volume Claims (PVCs) in your `custom-values.yaml`:
 
@@ -399,7 +399,7 @@ volumes:
     customPVCs: []
 ```
 
-### Example:
+**Example**
 
 The following example creates a new PVC called `<deployment-name>-core-custom-test1` and mounts it in the main Core pod containers at `/opt/HCL/test1`. To be satisfied this claim requires a Persistent Volume with access mode `ReadWriteOnce`, storage class `manual` and at least 20Gb capacity. Since `volumeName` and `selector` are not specified, Kubernetes is free to choose any unbound volume that meets the above criteria.
 
