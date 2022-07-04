@@ -56,7 +56,7 @@ volumes:
 !!! important
     Make sure to properly define the PVC configuration in your custom-values.yaml file before running the deployment. This avoids issues when trying to get your deployment up and running.
 
--   ****StorageClassName****
+-   **`StorageClassName`**
 
     Depending on your Cluster configuration, you may have configured a specific `StorageClass` that should be used for your PVs and the PVCs of HCL Digital Experience.
 
@@ -72,14 +72,25 @@ volumes:
 
     Storage allows you to define the amount of space that is required by the PVC. Once defined, it only accepts PVs that have the same or more storage capacity as requested. If there are no PVs matching the definitions, the pods remain pending and do not start until a properly-sized PV is provided by the cluster.
 
+-   **`Selector`**
+
+    If you want your deployment to pick up specific PVs that you have created, the `selector` option can be used to match PVs by their labels.
+
+    A detailed description on how to use the `selector` can be found in the official [`Kubernetes` documentation](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#selector).
+
+    A PVC will only match with a PV satisfying the selector and all the other requirements such as type \(`RWO/RWX`, as defined by the deployment itself\), storage capacity, and `StorageClassName`.
+
+
 -   **`VolumeName`**
 
     If you want your deployment to pick up a specific PV that you have created, use of the `VolumeName` can define that instruction. Ensure that the PV you created has a unique name. Then, add that name as a configuration parameter for the PVC.
 
     The PVCs only matches with a PV of that name, matching the other requirements-like type \(`RWO/RWX`, as defined by the deployment itself\), storage capacity, and `StorageClassName`.
 
-    This allows you to properly prepare your PVs beforehand and ensure that the applications store their data where you want them to.
+    !!! important
+      As a single persistent Volume is assigned using the `volumeName`, this should only be used for `RWX` claims or for Pods that are only ever scaled to one replica. 
 
+      If a second `PersistentVolumeClaim` is created with the same `volumeName`, it can never be fulfilled as the names for Volumes are unique. Please refer to the `Selector` section to select specific `PersistentVolumes` for multiple claims.
 
 ## Sample PVC configurations
 
@@ -89,7 +100,7 @@ The following are some examples for configuration of the PersistentVolumeClaims 
 
 Leaving an empty `StorageClassName` causes Kubernetes or OpenShift to fall back to the `StorageClass` that has been configured as the default one in your cluster:
 
-```
+```yaml
 # Persistent Volume Setup
 volumes:
   # Persistent Volumes for Core
@@ -136,7 +147,7 @@ volumes:
 
 Setting the `StorageClassName` to `mycloudstorage` causes Kubernetes or OpenShift to create PVCs that only accepts PVs with the `StorageClass` `mycloudstorage`:
 
-```
+```yaml
 # Persistent Volume Setup
 volumes:
   # Persistent Volumes for Core
@@ -179,11 +190,72 @@ volumes:
 
 ```
 
+**Specific volumes using selectors and labels**
+
+In the custom-values.yaml file, set the selectors for a specific application. In this example, the `persistenceNode` is used.
+
+```yaml
+volumes:
+  # Persistent Volumes for Persistence Node
+  persistenceNode:
+    # Database PVC, one per persistence node
+    database:
+      # Optional label selector to further filter the set of volumes. Only the volumes whose labels match the selector can be bound to the claim.
+      selector:
+        matchLabels:
+          myVolumeLabel: persistence-node
+```
+
+By default, 3 replicas of `persistenceNode` are created. To make sure all `PersistenceVolumeClaims` are satisfied, we need to create at least 3 `PersistentVolumes` with matching labels.
+
+Each `PersistentVolume` should look similar to the following example:
+
+```yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: persistence-node-volume-0
+  labels:
+    myVolumeLabel: persistence-node
+spec:
+  capacity:
+    storage: 100Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Recycle
+  storageClassName: mycloudstorage
+```
+
+This will make sure that one of the `persistenceNode` Pods will pick up the Volume. To ensure an exact 1 to 1 match between Volume and Claim, refer to the ["Reserving a PersistentVolume"](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reserving-a-persistentvolume) documentation for Kubernetes to set a `claimRef` in the `PersistentVolume` in addition to the selectors.
+
+```yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: persistence-node-volume-0
+  labels:
+    myVolumeLabel: persistence-node
+spec:
+  capacity:
+    storage: 100Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Recycle
+  storageClassName: mycloudstorage
+  claimRef:
+    name: database-dx-deployment-persistence-node-0
+    namespace: myDXNamespace
+```
+
+This will ensure that only the `dx-deployment-persistence-node-0` Pod and none of the other replicas will use this `PersistentVolume`.
+
 **Specific volume names**
 
 Specifying a name ensures that Kubernetes or OpenShift only assigns PVs with the matching name to the PVCs created for the applications:
 
-```
+```yaml
 # Persistent Volume Setup
 volumes:
   # Persistent Volumes for Core
@@ -207,7 +279,7 @@ volumes:
 
 You may override the default sizes for PVCs by adjusting the storage requests:
 
-```
+```yaml
 # Persistent Volume Setup
 volumes:
   # Persistent Volumes for Core
@@ -238,7 +310,7 @@ It is recommended to have a separate `StorageClass` for HCL Digital Experience 9
 
 The following example shows a `StorageClass` with the name `dx-deploy-stg` that can be created in your cluster for that purpose:
 
-```
+```yaml
 kind: StorageClass 
 apiVersion: storage.k8s.io/v1 
 metadata: 
@@ -255,14 +327,14 @@ Applying this yaml on your Kubernetes or OpenShift cluster creates the `StorageC
 
 To leverage the `StorageClass` you created, you can use the following Persistent Volume example, which connects to an NFS Server of your choice to provide a PV:
 
-```
+```yaml
 kind: PersistentVolume 
 apiVersion: v1
 metadata:
   name: wp-profile-volume 
 spec: 
   capacity: 
-  storage: 100Gi    
+    storage: 100Gi
   nfs: 
     server: your_nfs_server.com 
     path: /exports/volume_name 
@@ -284,5 +356,62 @@ spec:
 
 Refer to **[Networking configuration](../../deployment/preparation/prepare_configure_networking.md)** for the next steps.
 
+## Configuring additional core persistent volumes
 
+A HCL Digital Experience Kubernetes deployment requires a number of persistent volumes as standard, such as for the Core profile and for digital asset storage. It is now also possible to connect additional persistent volumes to the Core stateful set and mount them in the main container of all Core pods. It is anticipated that this optional feature will be of use to customers running custom applications on DX that require additional persistent storage.
 
+This feature allows you to configure additional Persistent Volume Claims (PVCs) for the Core stateful set and specify the directories at which they will be mounted in the main containers of all Core pods. 
+
+!!! important
+    Core pods will remain "Pending" until all the new claims have been satisfied. Please ensure that you have created the necessary Persistent Volumes in advance or have suitable provisioners in your Kubernetes cluster to create the volumes on demand.
+
+The following syntax can be used to configure additional Persistent Volume Claims (PVCs) in your `custom-values.yaml`:
+
+```yaml
+volumes:
+  # Persistent Volumes for Core
+  core:
+    # List of optional additional Core PVCs for customer applications
+    # Each list element must include a unique "name", one or more "accessModes" 
+    # from the options ReadWriteOnce, ReadOnlyMany or ReadWriteMany, a "mountPath" specifying where in the 
+    # core container it should be mounted, a "storageClassName" and a size in "requests/storage".
+    # It may also optionally include a "selector" section to select specific PVs based on their labels.
+    # It may also optionally include a "volumeName" to select a specific PV.
+    # Example:
+    # customPVCs:
+    #   - name: "test1"
+    #     accessModes: 
+    #       - "ReadWriteMany"
+    #     mountPath: "/opt/HCL/test1"
+    #     storageClassName: "manual"
+    #     requests:
+    #       storage: "20Gi"
+    #     selector:
+    #       matchLabels:
+    #         label: test
+    #       matchExpressions:
+    #         - key: name
+    #           operator: In
+    #           values:
+    #             - test1
+    #             - test2
+    #     volumeName: "test-pv"
+    customPVCs: []
+```
+
+**Example**
+
+The following example creates a new PVC called `<deployment-name>-core-custom-test1` and mounts it in the main Core pod containers at `/opt/HCL/test1`. To be satisfied this claim requires a Persistent Volume with access mode `ReadWriteOnce`, storage class `manual` and at least 20Gb capacity. Since `volumeName` and `selector` are not specified, Kubernetes is free to choose any unbound volume that meets the above criteria.
+
+```yaml
+volumes:
+  core:
+    customPVCs:
+      - name: "test1"
+        accessModes:
+          - "ReadWriteOnce"
+        mountPath: "/opt/HCL/test1"
+        storageClassName: "manual"
+        requests:
+          storage: "20Gi"
+```
