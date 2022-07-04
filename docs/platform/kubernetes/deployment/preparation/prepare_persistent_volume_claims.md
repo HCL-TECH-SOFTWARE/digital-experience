@@ -78,7 +78,7 @@ volumes:
 
     A detailed description on how to use the `selector` can be found in the official [`Kubernetes` documentation](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#selector).
 
-    The PVCs only matches with a PV satisfying the selectors, matching the other requirements-like type \(`RWO/RWX`, as defined by the deployment itself\), storage capacity, and `StorageClassName`.
+    A PVC will only match with a PV satisfying the selector and all the other requirements such as type \(`RWO/RWX`, as defined by the deployment itself\), storage capacity, and `StorageClassName`.
 
 
 -   **`VolumeName`**
