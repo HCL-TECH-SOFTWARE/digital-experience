@@ -208,7 +208,7 @@ volumes:
 
 By default, 3 replicas of `persistenceNode` are created. To make sure all `PersistenceVolumeClaims` are satisfied, we need to create at least 3 `PersistentVolumes` with matching labels.
 
-Each of the `PersistentVolume` should look similar to the following example:
+Each `PersistentVolume` should look similar to the following example:
 
 ```yaml
 apiVersion: v1
