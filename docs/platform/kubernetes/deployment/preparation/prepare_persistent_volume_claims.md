@@ -356,5 +356,62 @@ spec:
 
 Refer to **[Networking configuration](../../deployment/preparation/prepare_configure_networking.md)** for the next steps.
 
+## Configuring additional core persistent volumes
 
+A HCL Digital Experience Kubernetes deployment requires a number of persistent volumes as standard, such as for the Core profile and for digital asset storage. It is now also possible to connect additional persistent volumes to the Core stateful set and mount them in the main container of all Core pods. It is anticipated that this optional feature will be of use to customers running custom applications on DX that require additional persistent storage.
 
+This feature allows you to configure additional Persistent Volume Claims (PVCs) for the Core stateful set and specify the directories at which they will be mounted in the main containers of all Core pods. 
+
+**Important note:**
+> Core pods will remain "Pending" until all the new claims have been satisfied. Please ensure that you have created the necessary Persistent Volumes in advance or have suitable provisioners in your Kubernetes cluster to create the volumes on demand.
+
+The following syntax can be used to configure additional Persistent Volume Claims (PVCs) in your `custom-values.yaml`:
+
+```yaml
+volumes:
+  # Persistent Volumes for Core
+  core:
+    # List of optional additional Core PVCs for customer applications
+    # Each list element must include a unique "name", one or more "accessModes" 
+    # from the options ReadWriteOnce, ReadOnlyMany or ReadWriteMany, a "mountPath" specifying where in the 
+    # core container it should be mounted, a "storageClassName" and a size in "requests/storage".
+    # It may also optionally include a "selector" section to select specific PVs based on their labels.
+    # It may also optionally include a "volumeName" to select a specific PV.
+    # Example:
+    # customPVCs:
+    #   - name: "test1"
+    #     accessModes: 
+    #       - "ReadWriteMany"
+    #     mountPath: "/opt/HCL/test1"
+    #     storageClassName: "manual"
+    #     requests:
+    #       storage: "20Gi"
+    #     selector:
+    #       matchLabels:
+    #         label: test
+    #       matchExpressions:
+    #         - key: name
+    #           operator: In
+    #           values:
+    #             - test1
+    #             - test2
+    #     volumeName: "test-pv"
+    customPVCs: []
+```
+
+### Example:
+
+The following example creates a new PVC called `<deployment-name>-core-custom-test1` and mounts it in the main Core pod containers at `/opt/HCL/test1`. To be satisfied this claim requires a Persistent Volume with access mode `ReadWriteOnce`, storage class `manual` and at least 20Gb capacity. Since `volumeName` and `selector` are not specified, Kubernetes is free to choose any unbound volume that meets the above criteria.
+
+```yaml
+volumes:
+  core:
+    customPVCs:
+      - name: "test1"
+        accessModes:
+          - "ReadWriteOnce"
+        mountPath: "/opt/HCL/test1"
+        storageClassName: "manual"
+        requests:
+          storage: "20Gi"
+```
