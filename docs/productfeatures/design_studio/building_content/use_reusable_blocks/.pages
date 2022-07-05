@@ -1,0 +1,5 @@
+title: Use reusable blocks 
+nav:
+    - index.md
+    - Reuse content list: content_list.md
+    - ... 
