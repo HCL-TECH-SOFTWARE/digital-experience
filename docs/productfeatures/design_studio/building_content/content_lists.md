@@ -4,14 +4,29 @@ The following section details information and steps on how to use content lists 
 
 ## Overview
 
-In HCL Digital Experience 9.5 CF203, content lists are available in the elements panel. A content list is a dynamic list of content items based on search criteria. It allows the author to generate a dynamic list of content based on the **Authoring Template**, **Location**, **Categories**, and **Keywords**. Content lists are a WCM element type. You can drag and drop a content list to the canvas.
+A content list is a dynamic list of content items based on search criteria. It allows the author to generate a dynamic list of content based on the **Authoring Template**, **Location**, **Categories**, and **Keywords**. Content lists are a WCM element type. You can drag and drop a content list to the canvas.
+
+As of HCL Digital Experience 9.5 CF204, content lists are available in both the **Elements** panel and the **Reusables** panel.
 
 You can control how items are displayed in the canvas using filtering and sorting:
 
--   **Sort** - changes the order of the content items displayed. You can sort by **Title**, **Name**, **Description**, **Publish Date**, **Creation Date**, **Expiry Date**,**General Date One**, **General Date Two**, **Last Modified Date**, and **None**. The default sort is **Title**.
--   **Display order** - changes the content items by ascending or descending order. The default display order is ascending.
--   **Display limit** - limits the number of items displayed on a page. The default is 8.
--   **Start at** - sets the page number where the list starts on. The default is 1.
+-   **Sort** - Changes the order of the content items displayed. You can sort by:
+    - **Title** (Default)
+    - **Name**
+    - **Description**
+    - **Publish Date**
+    - **Creation Date**
+    - **Expiry Date**
+    - **General Date One**
+    - **General Date Two**
+    - **Last Modified Date**, and 
+    - **None**
+-   **Display order** - Changes the content items by ascending or descending order. The default display order is ascending.
+-   **Display limit** - Limits the number of items displayed on a page. The default is 8.
+-   **Start at** - Sets the page number where the list starts on. The default is 1.
+-   **Categories** - A search criteria that can be used to find content items that have been profiled with categories. <br>[Content list by categories](../../../images/categories.png)
+-   **Keywords** - A search criteria that can be used to find content items that have been profiled with keywords. <br> [Content list by keywords](../../../images/keywords.png)
+-  **Header and Footer** - The checkboxes for header and footer is added but the functionality is not yet implemented. <br> [Content list by header and footer](../../../images/header-and-footer.png)
 
 ## Create a content list
 
@@ -32,5 +47,5 @@ Follow the steps to create a content list from your site using HCL Digital Exper
 
 ## How to present your feedback on HCL Design Studio (Beta)
 
-HCL Digital Experience welcomes your feedback and suggestions on Design Studio \(Beta\), and encourages you to present your input through cases and discussions with HCL Support DX leaders.
+HCL Digital Experience welcomes your feedback and suggestions on Design Studio (Beta), and encourages you to present your input through cases and discussions with HCL Support DX leaders.
 
