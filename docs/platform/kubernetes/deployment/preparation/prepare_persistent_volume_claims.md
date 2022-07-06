@@ -354,8 +354,6 @@ spec:
 
 ```
 
-Refer to **[Networking configuration](../../deployment/preparation/prepare_configure_networking.md)** for the next steps.
-
 ## Configuring additional core persistent volumes
 
 A HCL Digital Experience Kubernetes deployment requires a number of persistent volumes as standard, such as for the Core profile and for digital asset storage. It is now also possible to connect additional persistent volumes to the Core stateful set and mount them in the main container of all Core pods. It is anticipated that this optional feature will be of use to customers running custom applications on DX that require additional persistent storage.
