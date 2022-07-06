@@ -1,4 +1,5 @@
 # Load images
+
 This section presents how to load the DX 9.5 Container Update CF196 or later images into your container image repository, tag them to fit your repository structure, and push them to your repository, so that all Nodes in your Kubernetes or OpenShift cluster can deploy HCL Digital Experience 9.5 Pods.
 
 To use HCL Digital Experience 9.5 in your Kubernetes or OpenShift cluster, you have to make the container images available to all nodes of your cluster. Usually this is done by providing them through a container image repository.
@@ -9,7 +10,19 @@ It is assumed that you have a repository configured and running, and is technica
 
 In the following guidance, the docker CLI is used as a command reference. Tools like Podman may also be used, but are not described in this documentation. The procedure for the use of such tools are the same.
 
-## Extract HCL Digital Experience 9.5 package.
+!!!note
+    From CF205 on it is also possible to have your Kubernetes deployment pull images directly from the Harbor container registry. This requires all of your cluster nodes to be able to reach the Harbor container registry.  
+    This is very handy for quick deployments or if you do not have a local container image registry.
+    If you want to use the container images directly from Harbor, you can skip the following parts of loading the images.
+
+    Ensure that you have configured your deployment to authenticate to the Harbor container registry, as described in [Using ImagePullSecrets](./optional_imagepullsecrets.md)
+
+## Retrieving container images
+
+From CF205 on there are two ways to retrieve the container images for your deployment.  
+You can either download the HCL Digital Experience 9.5 package, unpack it locally and load the images into your container registry, or you can directly pull them from the Harbor container image registry provided by HCL.
+
+### From HCL Digital Experience 9.5 package
 
 The HCL Digital Experience 9.5 Container Update packages are provided in a compressed .zip file, that can easily be unzipped using a utility of your choice. Refer to the latest [HCL DX 9.5 Container Update Release CF196 and later file listings in the Docker deployment](../../docker.md) topic:
 
@@ -75,8 +88,6 @@ The HCL Digital Experience 9.5 Container Update packages are provided in a compr
     # Helm Charts
     ```
 
-## Load images locally
-
 To load the individual image files, you may use the following command:
 
 ```
@@ -116,6 +127,28 @@ hcl/dx/postgres                               v1.8.0_20210514-1708              
 hcl/dx/ringapi                                v1.8.0_20210514-1709                  505eebb52ebf   4 weeks ago     397MB
 ```
 
+### From Harbor container registry
+
+!!!note
+    This is only available from CF205 onwards. Previous releases need to use the packaged container images the way that is described in the previous section.
+
+To access the harbor container registry, you need to log in with docker. This can easily be done using the following command:
+
+```sh
+docker login hclcr.io
+# Enter your harbor username and CLI secret to login
+```
+
+You can obtain the CLI secret from harbor by navigating to your `User Profile` in Harbor. You can copy it from the field called `CLI secret`.
+
+After a successful login, you will see the message:
+
+```
+    Login Succeeded
+```
+
+You can now pull images from the Harbor container registry using docker.
+
 ## Re-tag images
 
 If you are using a Kubernetes cluster that is not configured to operate on your local machine, you may need to push the HCL Digital Experience 9.5 container images to a remote repository.
@@ -132,7 +165,7 @@ You may re-tag any image using the following command:
 # docker tag OLD_IMAGE_PATH:VERSION NEW_IMAGE_TAG:VERSION
 
 # Example command for DX Core:
-docker tag hcl/dx/core:v95_CF195_20210514-1708 my/test/repository/hcl/dx/core:v95_CF195_20210514-1708
+docker tag dx/core:v95_CF195_20210514-1708 my/test/repository/dx/core:v95_CF195_20210514-1708
 ```
 
 If you want to prefix all HCL Digital Experience 9.5 container images with your repository structure, you may use the following command:
@@ -144,7 +177,7 @@ export REMOTE_REPO_PREFIX="my/test/repository"
 
 # First we list all HCL Digital Experience 9.5 Images, then we remove the first line containing the header
 # Then we execute the docker tag command, prefixing each image with the $REMOTE_REPO_PREFIX
-docker images hcl/dx/* | tail -n +2 | awk -F ' ' '{system("docker tag " $1 ":" $2 " $REMOTE_REPO_PREFIX/" $1 ":" $2) }'
+docker images dx/* | tail -n +2 | awk -F ' ' '{system("docker tag " $1 ":" $2 " $REMOTE_REPO_PREFIX/" $1 ":" $2) }'
 ```
 
 The output may be verified by using the following command:
@@ -187,7 +220,7 @@ You may use the following command to push the container images to your repositor
 # Push the new tagged images
 # docker push NEW_IMAGE_TAG:VERSION
 # Example command for core:
-docker push my/test/repository/hcl/dx/core:v95_CF195_20210514-1708
+docker push my/test/repository/dx/core:v95_CF195_20210514-1708
 ```
 
 If you want to push all your locally processed images, you may use the following command:
@@ -199,7 +232,7 @@ export REMOTE_REPO_PREFIX="my/test/repository"
 
 # Push the images, first we filter for the ones necessary
 # Second we execute a docker push for each image
-docker images $REMOTE_REPO_PREFIX/hcl/dx/* | awk -F ' ' '{system("docker push " $1 ":" $2)}'
+docker images $REMOTE_REPO_PREFIX/dx/* | awk -F ' ' '{system("docker push " $1 ":" $2)}'
 ```
 
 After running this command, Docker goes ahead and pushes the images to your remote repository. After the push, the container images are now ready for use by your Kubernetes or OpenShift cluster.
@@ -212,6 +245,9 @@ The following syntax may be used to define the correct image configuration for y
 
 !!!note
     If deploying to a Hybrid<!-- [Hybrid](hybrid_deployment_helm.md) --> environment, with DX 9.5 Container Update CF198 or later, the Core needs to be set as false, since Core is already installed to an On-premise Server.
+
+!!!note
+    From CF205 onwards, the image configuration of the Helm Chart is pre-filled using the default image names and matching version tags for the respective version of DX. You might need to re-adjust these if you have renamed/re-tagged the images in your local container image repository.
 
 ```
 # Fill in the values fitting to your configuration
@@ -232,16 +268,16 @@ images:
     runtimeController: "vX.X.X_XXXXXXXX-XXXX"
     # Image name for each application
     names:
-    contentComposer: "hcl/dx/content-composer"
-    core: "hcl/dx/core"
-    designStudio: "hcl/dx/design-studio"
-    digitalAssetManagement: "hcl/dx/digital-asset-manager"
-    imageProcessor: "hcl/dx/image-processor"
-    openLdap: "hcl/dx/openldap"
-    persistence: "hcl/dx/postgres"
-    remoteSearch: "hcl/dx/remote-search"
-    ringApi: "hcl/dx/ringapi"
-    runtimeController: "hcl/dx/runtime-controller"
+    contentComposer: "dx/content-composer"
+    core: "dx/core"
+    designStudio: "dx/design-studio"
+    digitalAssetManagement: "dx/digital-asset-manager"
+    imageProcessor: "dx/image-processor"
+    openLdap: "dx/openldap"
+    persistence: "dx/postgres"
+    remoteSearch: "dx/remote-search"
+    ringApi: "dx/ringapi"
+    runtimeController: "dx/runtime-controller"
 ```
 
 ## Additional Tasks
