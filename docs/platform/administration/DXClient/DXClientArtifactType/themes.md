@@ -14,11 +14,12 @@ The `deploy-theme` command is used to deploy a theme \(EAR and WebDAV based\) fr
 
     WebDAV theme collection: The theme collection folder/zip is used to create or update the collection in WebDAV file store of the DX Server.
 
-    **Notes:** This command can execute below one or more tasks together:
+    !!! note
+        This command can execute below one or more tasks together:
 
-    1.  Theme Registration
-    2.  Theme EAR deployment
-    3.  WebDAV theme collection
+        1.  Theme Registration
+        2.  Theme EAR deployment
+        3.  WebDAV theme collection
 
 -   **Command**
 
@@ -87,7 +88,8 @@ The `deploy-theme` command is used to deploy a theme \(EAR and WebDAV based\) fr
     -xmlConfigPath <value>
     ```
 
-    **Note:** For theme registration, a backup of the complete DX configuration export \(not including users\) is taken and placed in `store/outputFiles/themes/backup/foldername` folder.
+    !!! note
+        For theme registration, a backup of the complete DX configuration export \(not including users\) is taken and placed in `store/outputFiles/themes/backup/foldername` folder.
 
 -   **Required options for Theme EAR deployment**
 
@@ -169,31 +171,33 @@ The `deploy-theme` command is used to deploy a theme \(EAR and WebDAV based\) fr
     -contenthandlerPath <value>
     ```
 
-    **Notes:**
+    !!! note
 
-    -   For new WebDAV theme collection, DXClient tool adds the provided collection \(folder/zip\) to the WebDAV file store.
-    -   For existing WebDAV theme collection, the existing theme collection is replaced by the provided theme collection during the update. To get the latest theme collection from the DX server, see [Exporting content from the filestore](../dev-theme/themeopt_move_expfilestore.md) and make modifications on the same folder to get it updated in the DX Server WebDAV file store.
-    -   For WebDAV theme collection update, a backup of the existing theme collection is taken and placed in `store/outputFiles/themes/backup/foldername` folder.
-    Log files from command execution can be found in the logs directory of the DXClient installation.
+        -   For new WebDAV theme collection, DXClient tool adds the provided collection \(folder/zip\) to the WebDAV file store.
+        -   For existing WebDAV theme collection, the existing theme collection is replaced by the provided theme collection during the update. To get the latest theme collection from the DX server, see [Exporting content from the filestore](../dev-theme/themeopt_move_expfilestore.md) and make modifications on the same folder to get it updated in the DX Server WebDAV file store.
+        -   For WebDAV theme collection update, a backup of the existing theme collection is taken and placed in `store/outputFiles/themes/backup/foldername` folder.
+        Log files from command execution can be found in the logs directory of the DXClient installation.
 
-    **Example:**
+    !!! example
 
-    ```
-    dxclient deploy-theme -dxProtocol <http/https> -hostname <host-name> -dxPort <dxPort> -xmlConfigPath <xmlConfigPath> -dxUsername <dxUsername> -dxPassword <dxPassword> -dxSoapPort <dxSoapPort> -hostname <hostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -xmlFile <xml-file-with-path> -applicationFile <application-file-with-path> -applicationName <application name> -themeName <theme-name> -themePath <theme-path> -dxProfileName <Profile name of the DX core server> 
-    ```
+        ```
+        dxclient deploy-theme -dxProtocol <http/https> -hostname <host-name> -dxPort <dxPort> -xmlConfigPath <xmlConfigPath> -dxUsername <dxUsername> -dxPassword <dxPassword> -dxSoapPort <dxSoapPort> -hostname <hostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -xmlFile <xml-file-with-path> -applicationFile <application-file-with-path> -applicationName <application name> -themeName <theme-name> -themePath <theme-path> -dxProfileName <Profile name of the DX core server> 
+        ```
 
 
 ## Undeploy theme
 
 The undeploy-theme command can be used to undeploy a theme, including the EAR application and WebDAV files, and it also unregisters the registered theme from the target DX server.
 
-**Note:** If enableBackup is set to true, then undeploy-theme takes a backup of the deployed EAR theme, WebDAV theme collection, and completes DX configuration export \(without users\) and place it in the backup folder. When the user is downloading EAR, WeDAV, and XML to backup, we must separate it by the folder names `store/outputFiles/themes/backup/foldername`.
+!!! note
+    If enableBackup is set to true, then undeploy-theme takes a backup of the deployed EAR theme, WebDAV theme collection, and completes DX configuration export \(without users\) and place it in the backup folder. When the user is downloading EAR, WeDAV, and XML to backup, we must separate it by the folder names `store/outputFiles/themes/backup/foldername`.
 
 The backup of EAR is placed in `store/outputFiles/themes/backup/application`.
 
 Users can restore the theme by using the backup files.
 
-**Note:** Pages might lose the applied theme references in the restored themes.
+!!! note 
+    Pages might lose the applied theme references in the restored themes.
 
 -   **Command description**
 
@@ -267,7 +271,8 @@ Users can restore the theme by using the backup files.
     -enableBackup <value>
     ```
 
-    **Note:** User can set the enableBackup parameter as true to take backup before undeploying theme. The value is set to false by default.
+    !!! note 
+        User can set the enableBackup parameter as true to take backup before undeploying theme. The value is set to false by default.
 
     The options passed through command line override the default values.
 
@@ -348,18 +353,18 @@ Users can restore the theme by using the backup files.
     ```
 
 
-**Example:**
+!!! example
 
-```
-dxclient undeploy-theme -dxProtocol <http/https> -hostname <host-name> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -dxSoapPort <dxSoapPort> -hostname <hostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -xmlFile <xml-file-with-path> -applicationName <application name> -themeName <theme-name> -enableBackup <enable-backup> -dxProfileName <Profile name of the DX core server profile> 
-```
+    ```
+    dxclient undeploy-theme -dxProtocol <http/https> -hostname <host-name> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -dxSoapPort <dxSoapPort> -hostname <hostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -xmlFile <xml-file-with-path> -applicationName <application name> -themeName <theme-name> -enableBackup <enable-backup> -dxProfileName <Profile name of the DX core server profile> 
+    ```
 
-**Note:** The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
-
-**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
-
-**Related information**  
+!!! note
+    The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
 
 
-[DXClient](../containerization/dxclient.md)
+<!-- ???Info "Related information:"
+
+
+[DXClient](../containerization/dxclient.md) -->
 

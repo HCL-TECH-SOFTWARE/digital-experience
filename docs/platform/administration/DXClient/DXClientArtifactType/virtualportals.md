@@ -161,7 +161,8 @@ This topic describes the commands that are used in managing the virtual portal a
         -vpContext <value>
         ```
 
-        **Note:** Create virtual portal task creates an empty virtual portal in the DX server.
+        !!! note 
+            Create virtual portal task creates an empty virtual portal in the DX server.
 
         **Example usage:**
 
@@ -327,18 +328,20 @@ This topic describes the commands that are used in managing the virtual portal a
         -xmlFile <value>
         ```
 
-        **Limitation:** Currently, exporting virtual portal feature supports only `vpContext` and does not support `vpHostname`. Support for Virtual portal with hostname might be added in the future release.
+        !!! limitation
+            Currently, exporting virtual portal feature supports only `vpContext` and does not support `vpHostname`. Support for Virtual portal with hostname might be added in the future release.
 
-        **Example:**
+        !!! example
 
-        ```
-        dxclient manage-virtual-portal export -hostname <hostname> -dxProtocol <dxProtocol> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -vpTitle <vpTitle> -vpContext <vpContext> -xmlFile <xml-file-with-path>
-        ```
+            ```
+            dxclient manage-virtual-portal export -hostname <hostname> -dxProtocol <dxProtocol> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -vpTitle <vpTitle> -vpContext <vpContext> -xmlFile <xml-file-with-path>
+            ```
 
     Log files from running the command can be found in the logs directory of the DXClient installation.
 
 
-**Note:** The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
+!!! note
+    The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
 
-**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
+
 

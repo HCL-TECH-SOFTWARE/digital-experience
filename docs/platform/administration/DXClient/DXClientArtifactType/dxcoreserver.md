@@ -4,7 +4,8 @@ This topic provides information about restarting the DX Core server and on creat
 
 ## Restart DX Core server
 
-**Important:** Running the restart-dx-core command in the Kubernetes-based deployments might not restart all pods as expected, but this limitation will be addressed in the future releases. For now, if you want to restart all pods, use the Kubernetes interfaces such as `kubectl`.
+!!! important 
+    Running the restart-dx-core command in the Kubernetes-based deployments might not restart all pods as expected, but this limitation will be addressed in the future releases. For now, if you want to restart all pods, use the Kubernetes interfaces such as `kubectl`.
 
 The restart-dx-core command is used to restart the DX Core server.
 
@@ -86,7 +87,7 @@ The restart-dx-core command is used to restart the DX Core server.
     -requestId <Unique ID of a previously triggered restart request>
     ```
 
--   **Example:**
+!!! example
 
     ```
     dxclient restart-dx-core -dxUsername <dxUsername> -dxPassword <dxPassword> -hostname <hostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxProfileName <Profile name of the DX core server>
@@ -173,17 +174,18 @@ The restart-dx-core command is used to restart the DX Core server.
     -targetDxProfileName <Profile name of the DX core server>
     ```
 
-    **Note:**
+    !!! note
 
     -   The target server details are needed only when the user needs to generate the summary of the configurations of both source and target servers.
--   **Example:**
+
+!!! example:
 
     ```
     dxclient dx-core-configuration-reports summary-report -hostname <hostname> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxConnectPort <dxConnectPort> -targetHostname <targetHostname> -targetDxConnectUsername <targetDxConnectUsername> -targetDxConnectPassword <targetDxConnectPassword> -targetDxConnectPort <targetDxConnectPort>
     ```
 
 
-**Note:** The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
+!!! note 
+    The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
 
-**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
 

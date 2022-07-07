@@ -259,12 +259,11 @@ This topic describes the commands that are used to create, update, delete, and r
         ```
 
 
-**Note:** The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
+!!! note 
+    The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
 
-**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
-
-**Related information**  
+<!-- ???Info "Related information:" 
 
 
-[DXClient](../containerization/dxclient.md)
+[DXClient](../containerization/dxclient.md) -->
 

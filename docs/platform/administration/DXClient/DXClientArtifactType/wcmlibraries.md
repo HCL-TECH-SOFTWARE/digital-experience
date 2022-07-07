@@ -2,7 +2,8 @@
 
 This section provides information about how to export and import WCM libraries using DXClient.
 
-**Note:** WCM export and import supports the WCM JCR nodes format.
+!!! note 
+    WCM export and import supports the WCM JCR nodes format.
 
 ## Export WCM libraries
 
@@ -104,9 +105,11 @@ The `wcm-library-export` command is used to export the WCM libraries from the so
 
 The `wcm-library-import` command is used to import the WCM libraries from the source server to the target server.
 
-**Limitation:** Ensure that the WCM import.zip file size is not more than 256MB. This limitation will be addressed in the future release.
+!!! limitation
+    Ensure that the WCM import.zip file size is not more than 256MB. This limitation will be addressed in the future release.
 
-**Important:** In the Kubernetes environment, timeout will happen after 60 seconds.
+!!! important 
+    In the Kubernetes environment, timeout will happen after 60 seconds.
 
 -   **Command description**
 
@@ -178,14 +181,12 @@ The `wcm-library-import` command is used to import the WCM libraries from the so
 
     Log files from running the command can be found in the logs directory of the DXClient installation.
 
--   **Example:**
+!!! example
 
     ```
     dxclient wcm-library-import -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword>  -hostname <dxConnectHostname> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxWASUsername <dxWASUsername> -dxProfileName <dxProfileName> -libFilePath <libFilePath> 
     ```
 
 
-**Note:** The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
-
-**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
-
+!!! note 
+    The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.

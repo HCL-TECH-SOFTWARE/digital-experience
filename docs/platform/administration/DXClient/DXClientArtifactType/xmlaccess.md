@@ -72,13 +72,12 @@ Command options passed through the command line overrides values set in the conf
 
 Log files from command execution can be found in the logs directory of the DXClient installation.
 
-**Example:**
+!!! example
 
-```
-dxclient xmlaccess -xmlFile <xml-file-with-path>
-```
+    ```
+    dxclient xmlaccess -xmlFile <xml-file-with-path>
+    ```
 
-**Note:** The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
-
-**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
+!!! note 
+    The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
 

@@ -40,9 +40,7 @@ This topic describes how to install the DXClient tool in a pipeline, by providin
 
 ![Sample pipeline for the DXClient node package file](../assets/dxclient-sample-pipeline-using-node-zip-file2.png)![Sample pipeline for the DXClient node package file](../assets/dxclient-sample-pipeline-using-node-zip-file3.png)
 
-**Parent topic:**[Deploy DX components using HCL DXClient and DXConnect](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)
-
-**Related information**  
+<!-- ???Info "Related information:"
 
 
 [How to translate WCM library content using export and import WCM with DXClient](../wcm/wcm_mls_export_import.md)
@@ -51,5 +49,5 @@ This topic describes how to install the DXClient tool in a pipeline, by providin
 
 [Sample Pipelines for the DXClient node package file](../containerization/sample_pipelines_node_dxclient.md)
 
-[Sample Pipelines for use with HCL DXClient and Automation servers](../containerization/sample_pipelines_for_use_with_dx_client_and_automation_servers.md)
+[Sample Pipelines for use with HCL DXClient and Automation servers](../containerization/sample_pipelines_for_use_with_dx_client_and_automation_servers.md) -->
 

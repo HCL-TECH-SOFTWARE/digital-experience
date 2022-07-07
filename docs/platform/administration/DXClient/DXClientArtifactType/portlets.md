@@ -6,7 +6,8 @@ This topic provides information about the deployment and undeployment of portlet
 
 The `deploy-portlet` command is used to deploy one or more new or updated portlets from a source client or server environment to target HCL DX 9.5 CF19 or later server using a provided input XMLAccess file and deployable Portlet WAR file.
 
-**Note:** The synchronization mode of all nodes in a clustered DX environment must be consistently set for a newly deployed portlet to be automatically started; otherwise redeployment or a manual start is required.
+!!! note
+    The synchronization mode of all nodes in a clustered DX environment must be consistently set for a newly deployed portlet to be automatically started; otherwise redeployment or a manual start is required.
 
 **Required files**
 
@@ -108,7 +109,8 @@ Log files from command execution can be found in the logs directory of the DXCli
 
 The `undeploy-portlet` command is used to undeploy the portlets in the target DX servers.
 
-**Note:** Undeploy-portlet command takes a backup of the XML file of the deployed portlet application and application \(EAR\) if user has given enableBackup as true. By default, enableBackup is set to true and placed in the `store/outputFiles/portlets/backup/undeploy-portlet/`. In case, if the undeployed portlet is required again, then the user can restore the portlet WAR file from the downloaded portlet application EAR file along with the exported deployable portlet application XML file.
+!!! note
+    Undeploy-portlet command takes a backup of the XML file of the deployed portlet application and application \(EAR\) if user has given enableBackup as true. By default, enableBackup is set to true and placed in the `store/outputFiles/portlets/backup/undeploy-portlet/`. In case, if the undeployed portlet is required again, then the user can restore the portlet WAR file from the downloaded portlet application EAR file along with the exported deployable portlet application XML file.
 
 -   **Command description**
 
@@ -235,11 +237,11 @@ The `undeploy-portlet` command is used to undeploy the portlets in the target DX
 
 The values that are passed through the command line override the default values.
 
-**Example:**
+!!! example
 
-```
-dxclient undeploy-portlet -dxProtocol <dxProtocol> -hostname <host-name> -dxPort <dxPort> -xmlConfigPath <xmlConfigPath> -dxUsername <dxUsername> -dxPassword <dxPassword> -xmlFile <xml-file-with-path> 
-```
+    ```
+    dxclient undeploy-portlet -dxProtocol <dxProtocol> -hostname <host-name> -dxPort <dxPort> -xmlConfigPath <xmlConfigPath> -dxUsername <dxUsername> -dxPassword <dxPassword> -xmlFile <xml-file-with-path> 
+    ```
 
 **Example usage when enableBackup is set to true:**
 
@@ -247,12 +249,12 @@ dxclient undeploy-portlet -dxProtocol <dxProtocol> -hostname <host-name> -dxPort
 dxclient undeploy-portlet -dxProtocol <dxProtocol> -hostname <host-name> -dxPort <dxPort> -xmlConfigPath <xmlConfigPath> -dxUsername <dxUsername> -dxPassword <dxPassword> -xmlFile <xml-file-with-path> -enableBackup true -dxSoapPort <dxSoapPort> -hostname <hostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxProfileName <Profile name of the DX core server profile>
 ```
 
-**Note:** The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
-
-**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
-
-**Related information**  
+!!! note
+    The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
 
 
-[DXClient](../containerization/dxclient.md)
+<!-- ???Info "Related information:"
+
+
+[DXClient](../containerization/dxclient.md) -->
 
