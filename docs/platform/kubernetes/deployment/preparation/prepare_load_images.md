@@ -13,9 +13,9 @@ In the following guidance, the docker CLI is used as a command reference. Tools 
 !!!note
     From CF205 on it is also possible to have your Kubernetes deployment pull images directly from the Harbor container registry. This requires all of your cluster nodes to be able to reach the Harbor container registry.  
     This is very handy for quick deployments or if you do not have a local container image registry.
-    If you want to use the container images directly from Harbor, you can skip the following parts of loading the images.
+    If you want to use the container images directly from Harbor, you do not need to retrieve, re-tag and push the images manually.
 
-    Ensure that you have configured your deployment to authenticate to the Harbor container registry, as described in [Using ImagePullSecrets](./optional_imagepullsecrets.md)
+    Ensure that you have configured your deployment to authenticate to the Harbor container registry, as described in [Using ImagePullSecrets](./optional_imagepullsecrets.md) and that the repository is configured to [HCL Harbor](#)
 
 ## Retrieving container images
 
@@ -90,7 +90,7 @@ The HCL Digital Experience 9.5 Container Update packages are provided in a compr
 
 To load the individual image files, you may use the following command:
 
-```
+```sh
 # Command to load container image into local repository
 # docker load < image-file-name.tar.gz
 docker load < hcl-dx-core-image-v95_CFXXX_XXXXXXXX-XXXX.tar.gz
@@ -98,7 +98,7 @@ docker load < hcl-dx-core-image-v95_CFXXX_XXXXXXXX-XXXX.tar.gz
 
 If you want to load all DX 9.5 CFxxx image files via one command, you may use the following command:
 
-```
+```sh
 # Command to load all images at once
 # Since HCL Digital Experience images are all containing the word "images", 
 # we can filter for fitting tar.gz files
@@ -109,7 +109,7 @@ This loads all images to your local repository, ready for further usage.
 
 You may verify if the loading is successful with the following command:
 
-```
+```sh
 # List all images
 docker images
 
@@ -143,7 +143,7 @@ You can obtain the CLI secret from harbor by navigating to your `User Profile` i
 
 After a successful login, you will see the message:
 
-```
+```text
     Login Succeeded
 ```
 
@@ -160,7 +160,7 @@ To do so, you need to re-tag the images to point to your remote repository.
 
 You may re-tag any image using the following command:
 
-```
+```sh
 # Re-tag an existing loaded image
 # docker tag OLD_IMAGE_PATH:VERSION NEW_IMAGE_TAG:VERSION
 
@@ -170,7 +170,7 @@ docker tag dx/core:v95_CF195_20210514-1708 my/test/repository/dx/core:v95_CF195_
 
 If you want to prefix all HCL Digital Experience 9.5 container images with your repository structure, you may use the following command:
 
-```
+```sh
 # Command to prefix all HCL Digital Experience container images
 # export the prefix for the repository structure, without tailing slash
 export REMOTE_REPO_PREFIX="my/test/repository"
@@ -182,7 +182,7 @@ docker images dx/* | tail -n +2 | awk -F ' ' '{system("docker tag " $1 ":" $2 " 
 
 The output may be verified by using the following command:
 
-```
+```sh
 # List all images
 docker images
 
@@ -216,7 +216,7 @@ my/test/repository/hcl/dx/ringapi                             v1.8.0_20210514-17
 
 You may use the following command to push the container images to your repository:
 
-```
+```sh
 # Push the new tagged images
 # docker push NEW_IMAGE_TAG:VERSION
 # Example command for core:
@@ -225,7 +225,7 @@ docker push my/test/repository/dx/core:v95_CF195_20210514-1708
 
 If you want to push all your locally processed images, you may use the following command:
 
-```
+```sh
 # Command to push all HCL Digital Experience images to a remote repository
 # export the prefix for the repository structure, without tailing slash
 export REMOTE_REPO_PREFIX="my/test/repository"
@@ -247,9 +247,20 @@ The following syntax may be used to define the correct image configuration for y
     If deploying to a Hybrid<!-- [Hybrid](hybrid_deployment_helm.md) --> environment, with DX 9.5 Container Update CF198 or later, the Core needs to be set as false, since Core is already installed to an On-premise Server.
 
 !!!note
-    From CF205 onwards, the image configuration of the Helm Chart is pre-filled using the default image names and matching version tags for the respective version of DX. You might need to re-adjust these if you have renamed/re-tagged the images in your local container image repository.
+    From CF205 onwards, the image name and tag configuration of the Helm Chart is pre-filled using the default image names and matching version tags for the respective version of DX. You might need to re-adjust these if you have renamed/re-tagged the images in your local container image repository.
 
-```
+    If you want to use the HCL Harbor container registry, ensure to configure your target repository accordingly and have the [ImagePullSecret](./optional_imagepullsecrets.md) configured:
+
+    ```yaml
+    images:
+      # Configure the HCL Harbor registry repository
+      repository: "hclcr.io"
+      # Use the image pull secret configured before
+      imagePullSecrets:
+        - name: "dx-harbor"
+    ```
+
+```yaml
 # Fill in the values fitting to your configuration
 # Ensure to use the correct image version tags
 images:
@@ -282,7 +293,7 @@ images:
 
 ## Additional Tasks
 
-If your remote repository requires access credentials, it is necessary to configure an `ImagePullSecret` to allow your cluster nodes to have proper access to the HCL DX 9.5 container images.
+If your remote repository requires access credentials, it is necessary to configure an `ImagePullSecret` to allow your cluster nodes to have proper access to the HCL DX 9.5 container images. This is also required if you want to use the HCL Harbor container registry directly.
 
 Please refer to [Using ImagePullSecrets](optional_imagepullsecrets.md) topic for instructions on how to configure this.
 

@@ -11,7 +11,7 @@ In addition, reference your Cloud Provider documentation on how to create `Image
 
 In order for the HCL Digital Experience 9.5 deployment to leverage `ImagePullSecrets` you need to adjust your `custom-values.yaml` file to include the following syntax:
 
-```
+```yaml
 images:
  imagePullSecrets:
  - name: regcred         
@@ -21,7 +21,7 @@ The name `regcred` can be different, depending on how you have created your `Ima
 
 It is assume that you have moved the HCL Digital Experience 9.5 images to your registry; make sure it is also configured properly in your `custom-values.yaml`:
 
-```
+```yaml
 images:
   repository: "your-repo:port"                
 ```
@@ -48,11 +48,11 @@ You can obtain the CLI secret from harbor by navigating to your `User Profile` i
 
 After executing this command you should receive the following message:
 
-```
+```text
 secret/dx-harbor created
 ```
 
-Inside your `custom-values.yaml` you can now adjust the ImagePullSecret to the secret that was just created.
+Inside your `custom-values.yaml` you can now adjust the ImagePullSecret to the secret that was just created and point to the HCL Harbor container registry.
 
 ```yaml
 # Image related configuration

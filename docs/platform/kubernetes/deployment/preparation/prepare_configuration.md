@@ -3,6 +3,9 @@ Create a configuration file that fits the needs of your target HCL DX 9.5 Contai
 !!!warning
     Modification to any files \(chart.yaml, templates, crds\) in hcl-dx-deployment-vX.X.X\_XXXXXXXX-XXXX.tar.gz, except custom-values.yaml or values.yaml, is not supported.
 
+!!!note
+    From CF205 on you can directly retrieve the Helm Chart via the HCL Harbor Helm repository. If you wish to do so, please follow the instructions in [Configure Harbor Helm Repository](./optional_configure_harbor_helm_repo) to pull the Helm Chart before you continue.
+
 -   **The configuration flow**
 
 Helm provides multiple ways to define values that can be processed to run an installation. Processing involves a three-step approach, that is ordered sequentially within a hierarchy.
