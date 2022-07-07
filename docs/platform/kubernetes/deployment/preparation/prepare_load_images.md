@@ -139,7 +139,7 @@ docker login hclcr.io
 # Enter your harbor username and CLI secret to login
 ```
 
-You can obtain the CLI secret from harbor by navigating to your `User Profile` in Harbor. You can copy it from the field called `CLI secret`.
+You can obtain the CLI secret from harbor by navigating to your `User Profile` in [HCL Harbor](https://hclcr.io). You can copy it from the field called `CLI secret`.
 
 After a successful login, you will see the message:
 

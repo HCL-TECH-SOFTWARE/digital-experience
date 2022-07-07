@@ -13,6 +13,8 @@ helm repo add \
 hcl-dx https://hclcr.io/chartrepo/dx
 ```
 
+You can obtain the CLI secret from harbor by navigating to your `User Profile` in [HCL Harbor](https://hclcr.io). You can copy it from the field called `CLI secret`.
+
 After adding the repository to Helm, you should see the following message:
 
 ```text

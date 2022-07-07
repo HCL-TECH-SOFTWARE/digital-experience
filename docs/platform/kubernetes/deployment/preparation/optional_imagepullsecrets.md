@@ -44,7 +44,7 @@ kubectl create secret -n <YOUR-NAMESPACE> docker-registry dx-harbor --docker-ser
 --docker-password='<YOUR_HARBOR_CLI_SECRET>'
 ```
 
-You can obtain the CLI secret from harbor by navigating to your `User Profile` in Harbor. You can copy it from the field called `CLI secret`.
+You can obtain the CLI secret from harbor by navigating to your `User Profile` in [HCL Harbor](https://hclcr.io). You can copy it from the field called `CLI secret`.
 
 After executing this command you should receive the following message:
 
