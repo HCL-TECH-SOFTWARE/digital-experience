@@ -1,289 +1,15 @@
 <!-- Custom HTML site displayed as the Home chapter -->
 
 {% extends "main.html" %}
+
 {% block tabs %}
 {{ super() }}
-<style>
-    .md-main {
-        flex-grow: 0
-    }
-
-    .md-main__inner {
-        display: flex;
-        height: 100%;
-    }
-
-    .md-tabs__link {
-        opacity: 1;
-    }
-
-    .md-tabs__link--active {
-        border-bottom: 2px solid #FFF;
-    }
-
-    [dir=ltr] .md-header__title {
-        margin-left: 0rem;
-    }
-
-    [dir=rtl] .md-header__title {
-        margin-right: 0rem;
-    }
-
-    .tx-container {
-        padding-top: 0rem;
-        background: linear-gradient(to bottom, var(--md-primary-fg-color), hsla(292, 33%, 41%) 99%, #fff 99%);
-    }
-
-    .tx-hero {
-        margin: 32px 2.8rem;
-        color: var(--md-primary-bg-color);
-        justify-content: left;
-    }
-
-    .tx-hero h1 {
-        margin-bottom: 1rem;
-        color: currentColor;
-        font-weight: 700
-    }
-
-    .tx-hero__content {
-        padding-bottom: 1rem;
-        margin: auto;
-    }
-
-    .tx-hero__image {
-        width: 28rem;
-        height: 17rem;
-        order: 1;
-    }
-
-    .tx-hero .md-button {
-        margin-top: .5rem;
-        margin-right: .5rem;
-        color: var(--md-primary-bg-color)
-    }
-
-    .tx-hero .md-button--primary {
-        background-color: var(--md-primary-bg-color);
-        color: hsla(280deg, 37%, 48%, 1);
-        border-color: var(--md-primary-bg-color)
-    }
-
-    .tx-hero .md-button:focus,
-    .tx-hero .md-button:hover {
-        background-color: var(--md-accent-fg-color);
-        color: var(--md-default-bg-color);
-        border-color: var(--md-accent-fg-color)
-    }
-
-    .feature-item h2 svg {
-        height: 32px;
-        float: left;
-        margin-right: 10px;
-        transform: translateY(10%);
-    }
-
-    .top-hr {
-        margin-top: 0.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .feature-item {
-        font-weight: 300;
-        box-sizing: auto;
-        padding: 0px 5px 20px 5px;
-        word-break: break-word;
-        margin: 0px 10px 0px 10px;
-    }
-
-    .feature-item h2 {
-        font-weight: 600;
-        font-size: 24px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        line-height: normal;
-        margin-top: 20px;
-        padding-bottom: 10px;
-        font-family: inherit;
-    }
-
-    .feature-item p {
-        font-size: 16px;
-        line-height: 1.8em;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        display: block;
-    }
-
-    .feature-item ul {
-        font-size: 14px;
-        line-height: 1.4em;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        display: block;
-        list-style-type: none;
-        padding-left: 0;
-    }
-
-    .feature-item a {
-        font-weight: 400;
-        text-decoration: underline;
-    }
-
-    @media screen and (max-width:30em) {
-        .tx-hero h1 {
-            font-size: 1.2rem
-        }
-
-        .tx-hero {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 32px 0.8rem;
-        }
-    }
-
-    @media screen and (min-width:60em) {
-        .md-sidebar--secondary {
-            display: none
-        }
-
-        .tx-hero {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 32px 0.8rem;
-        }
-
-        .tx-hero__content {
-            max-width: 22rem;
-            margin-top: 0.0rem;
-            margin-bottom: 3.5rem;
-            margin-left: 2.0rem;
-            margin-right: 10.0rem;
-            align-items: center;
-        }
-    }
-
-    @media screen and (min-width:76.25em) {
-        .md-sidebar--primary {
-            display: none
-        }
-
-        .top-hr {
-            width: 100%;
-            display: flex;
-            max-width: 61rem;
-            margin-right: auto;
-            margin-left: auto;
-            padding: 0 .2rem;
-        }
-
-        .bottom-hr {
-            margin-top: 10px;
-            width: 100%;
-            display: flex;
-            max-width: 61rem;
-            margin-right: auto;
-            margin-left: auto;
-            padding: 0 .2rem;
-        }
-
-        .feature-item {
-            flex: 1;
-            min-width: 0;
-            padding: 0px 10px 10px 10px;
-        }
-
-        .feature-item:hover {
-            background-color: #526cfe47;
-            border-radius: 3px;
-        }
-    }
-
-    .hr {
-        border-bottom: 1px solid #eee;
-        width: 100%;
-        margin: 20px 0;
-    }
-
-    .text-center {
-        text-align: center;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 15px;
-        font-family: 'Roboto', sans-serif;
-        font-size: 23px;
-        font-weight: 300;
-        padding-bottom: 10px;
-    }
-
-    .logos {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-flow: row wrap;
-        margin: 0 auto;
-    }
-
-    .logos img {
-        flex: 1 1 auto;
-        padding: 25px;
-        max-height: 130px;
-        vertical-align: middle;
-    }
-
-    .hr-logos {
-        margin-top: 0;
-        margin-bottom: 30px;
-    }
-
-    .md-footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%
-    }
-
-    .md-footer-meta__inner {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-top: 1.0rem;
-    }
-
-    .md-footer-social {
-        padding-top: 20px;
-    }
-
-    .md-footer-copyright {
-        font-size: .64rem;
-        margin: auto .6rem;
-        padding: .4rem 0;
-
-        color: var {
-            --md-footer-fg-color--lighter
-        }
-    }
-
-    .infobox-icon {
-        width:
-    }
-</style>
+<link rel="stylesheet" href="assets/stylesheets/homepage-styles.css">
 
 <!-- Main site Entry button descriptions -->
-<section class="tx-container">
+<section class="dx-hero-container">
     <div class="md-grid md-typeset">
         <div class="tx-hero">
-            <div class="tx-hero__image">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/tahzS7y-L8c"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                <!-- <img src="assets/undraw_homepage.png" draggable="false"> -->
-            </div>
             <div class="tx-hero__content">
                 <h1>HCL Digital Experience</h1>
                 <p>HCL DX delivers built-in core features and functions that your teams need to deliver sites and to
@@ -304,78 +30,169 @@
     </div>
 </section>
 
-<!-- Main site box descriptions -->
-<div class="top-hr">
-    <div class="feature-item">
-        <h2>
-            <span class="infobox-icon">
-                {% include ".icons/fontawesome/regular/life-ring.svg" %}
-            </span>
-            DX Help Center
-        </h2>
-        <p>The "legacy" DX Help Center, which contains documentation for all topics not covered in this site.</p>
-        <p> <a href="https://help.hcltechsw.com/digital-experience/9.5/welcome/wp95_welcome.html" class="md-button">
-                Go there
+<section class="section-designedforyou">
+    <div class="md-grid md-typeset">
+        <div class="">
+            <div class="">
+                <h1>Designed for YOU</h1>
+                <p>HCL Digital Experience (DX) is the trusted solution for an enterprise's digital experience at the intersection of processes, content, and applications.</p>
+                <p> HCL DX is architected to build more than just websites. It is built Cloud Native to serve your customers, employees, and partners and to deliver the functionality and stability that they need and expect.</p>
+                <p> Customize HCL DX to meet the needs of your organization, users, and user groups. Adapt the look and feel of your sites to fit the standards of your organization and customize page content for users and groups in accordance with business rules and user profiles. 
+                    Users, such as business partners, customers, or employees, can further customize their own views of the sites, as permitted. They can add applications to pages and arrange them as they want. By aggregating portlets in one place and giving users the power to customize their own desktops, HCL DX gives users a means for doing business efficiently and with high satisfaction.</p>
+                   
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-roles">
+    <div class="section-heading">
+        <h1>Personalized Documentation</h1>
+    </div>
+    <div class="top-hr">
+        <div class="feature-item">
+            <div class="persona-header">
+                <div class="persona-practitioner"></div>
+                <h2>
+                    For practitioners
+                </h2>
+            </div>
+            <p>Managing content and maintain web and mobile digital experiences using powerful tools that can blend applications and content together, in a targeted way according to end users.</p>
+            <p>Tools for practitioners include content management, asset management, site building via Design Studio and Site Manager, personalization management and more..</p>
+            <p><a href="platform/kubernetes/overview/" class="md-button">
+                Read Product Features
             </a>
-        </p>
+            </p>
 
-    </div>
-    <div class="feature-item">
-        <h2>
-            <span class="infobox-icon">
-                {% include ".icons/fontawesome/regular/lightbulb.svg" %}
-            </span>
-            DX Support
-        </h2>
-        <p>DX Support landing page, which hosts the knowledge base and contains the support contact and software access details.
-            <br>
-        </p>
-        <p><a href="https://support.hcltechsw.com/csm?id=csm_index" class="md-button">Access support here</a>
-        </p>
+        </div>
 
-    </div>
-    <div class="feature-item">
-        <h2>
-            <span class="infobox-icon">
-                {% include ".icons/fontawesome/regular/star.svg" %}
-            </span>
-            Software Academy
-        </h2>
-        <p>Learning materials from the Academy team.</p>
-        <p> <a href="https://academy.hcltechsw.com" class="md-button">
-                Start learning
+        <div class="feature-item">
+            <div class="persona-header">
+                <div class="persona-developer"></div>
+                <h2>
+                    For Developers
+                </h2>
+            </div>
+            <p>Customize your digital experience using a wide range of APIs and tools. Use REST and Java APIs to access the many capabilities DX provides. Make use of Script Applications to produce JavaScript-based applications. Java Portlets written to the JSR168 or JSR286 specification can be deployed too.</p>
+            <p>Deploy and manage applications using the DXClient tool, and manage servers.</p>
+            <p><a href="platform/kubernetes/overview/" class="md-button">
+                Read Developers
             </a>
-        </p>
+            </p>
+
+        </div>
+
+        <div class="feature-item">
+            <div class="persona-header">
+                <div class="persona-administrator"></div>
+                <h2>
+                    For Administrators
+                </h2>
+            </div>
+
+            <p>Customize your digital experience using a wide range of APIs and tools. Use REST and Java APIs to access the many capabilities DX provides. Make use of Script Applications to produce JavaScript-based applications. Java Portlets written to the JSR168 or JSR286 specification can be deployed too.</p>
+            <p>Deploy and manage applications using the DXClient tool, and manage servers.</p>
+
+            <p><a href="platform/kubernetes/overview/" class="md-button">
+                Read Administrators
+            </a>
+            </p>
+
+        </div>
 
     </div>
-    <div class="feature-item">
-        <h2>
-            <span class="infobox-icon">
-                {% include ".icons/fontawesome/regular/paper-plane.svg" %}
-            </span>
-            Step-by-step guides
-        </h2>
-        <p>How-to guides and examples on how to accomplish important tasks.</p>
-        <p>
-        <ul>
-            <li><a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878"
-                    class="md-button">Downloading DX and Accessing Support</a></li>
-            <li><a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0079596"
-                    class="md-button">Installing Portal 9.5</a></li>
-            <li><a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0091344"
-                    class="md-button">How to Deploy DX 9.5 on Azure AKS?</a></li>
-            <li><a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094558"
-                    class="md-button">Replacing Portal's LDAP</a></li>
-        </ul>
-        </p>
+</section>
+
+<section class="section-academy">
+    <div class="md-grid md-typeset">
+        <div class="tx-hero">
+            <div class="tx-hero__content">
+                <h1>HCL Digital Experience</h1>
+                <p>HCL DX delivers built-in core features and functions that your teams need to deliver sites and to
+                    seamlessly blend content, applications, and processes.
+                </p>
+                <p>This site helps HCL DX users to learn how to use the product. It is our next-gen help experience, and
+                    we'd love to hear your feedback about it. The range of topics covered is small to start, but will
+                    grow rapidly.</p>
+                <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | striptags }}"
+                    class="md-button md-button--primary">
+                    What's New?
+                </a>
+                <a href="platform/kubernetes/overview/" class="md-button">
+                    Deploy DX
+                </a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="section-links">
+    <div class="top-hr">
+        <div class="feature-item">
+            <h2>
+                DX Help Center
+            </h2>
+            <p>The "legacy" DX Help Center, which contains documentation for all topics not covered in this site.</p>
+            <p> <a href="https://help.hcltechsw.com/digital-experience/9.5/welcome/wp95_welcome.html" class="md-button">
+                    Go there
+                </a>
+            </p>
+
+        </div>
+        <div class="feature-item">
+            <h2>
+                DX Support
+            </h2>
+            <p>DX Support landing page, which hosts the knowledge base and contains the support contact and software access details.
+                <br>
+            </p>
+            <p><a href="https://support.hcltechsw.com/csm?id=csm_index" class="md-button">Access support here</a>
+            </p>
+
+        </div>
+        <div class="feature-item">
+            <h2>
+                Software Academy
+            </h2>
+            <p>Learning materials from the Academy team.</p>
+            <p> <a href="https://academy.hcltechsw.com" class="md-button">
+                    Start learning
+                </a>
+            </p>
+
+        </div>
+        <div class="feature-item">
+            <h2>
+                Step-by-step guides
+            </h2>
+            <p>How-to guides and examples on how to accomplish important tasks.</p>
+            <p>
+            <ul>
+                <li><a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878"
+                        class="md-button">Downloading DX and Accessing Support</a></li>
+                <li><a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0079596"
+                        class="md-button">Installing Portal 9.5</a></li>
+                <li><a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0091344"
+                        class="md-button">How to Deploy DX 9.5 on Azure AKS?</a></li>
+                <li><a href="https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0094558"
+                        class="md-button">Replacing Portal's LDAP</a></li>
+            </ul>
+            </p>
+
+        </div>
 
     </div>
 
-</div>
+</section>
 
 
 {% endblock %}
-{% block content %}{% endblock %}
+{% block content %}
+{% endblock %}
+
+
+
 
 {% block footer %}
 
