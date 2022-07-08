@@ -86,10 +86,10 @@
 /* Hero section styles */
 .dx-hero-container {
     padding-top: 0rem;
-    background: url(../images/dx-doc-hero-banner.png) no-repeat center;
+    background: url(../images/dx-doc-hero-banner.png) no-repeat;
     background-position: left bottom;
     background-size: cover;
-    height: 450px;
+    height: 20rem;
 }
 
 .dx-hero__content {
