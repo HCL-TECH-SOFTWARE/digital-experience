@@ -1,35 +1,64 @@
+/* General Styles */
+/* General flexbox styles */
 
-.dx-hero-container {
-    padding-top: 0rem;
-    background: url(../images/dx-doc-hero-banner.png) no-repeat center;
-    background-position: left bottom;
-    background-size: cover;
-    height: 500px;
-}
-
-.tx-hero {
-    margin: 32px 2.8rem;
+.section-flexbox-row {
     color: var(--md-primary-bg-color);
-    justify-content: left;
-}
-
-.tx-hero h1 {
+    display: flex;
+    flex-direction: row;
+    margin: 32px 0.8rem;
+    width: 100%;
+    max-width: 61rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0.5rem;
     margin-bottom: 1rem;
-    color: currentColor;
-    font-weight: 700
+    padding: 1rem;
 }
 
-.tx-hero__content {
-    padding-bottom: 1rem;
-    margin: auto;
+.align-top {
+    align-items: top;
 }
 
-.tx-hero__image {
-    width: 28rem;
-    height: 17rem;
-    order: 1;
+.align-center {
+    align-items: center;
 }
 
+.space-around {
+    justify-content: space-around;
+}
+
+.flex-start {
+    justify-content: flex-start;
+}
+
+
+/* Hide main Mkdocs content section */
+.md-main {
+    display: none
+}
+
+/* General Text Stypes */
+.section-heading {
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 500;
+}
+
+.black {
+    color: black;
+}
+
+.white {
+    color: white;
+}
+
+.body-text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+/* Button Styles */
 .md-button {
     margin-top: .5rem;
     margin-right: .5rem;
@@ -49,21 +78,44 @@
     border-color: var(--md-accent-fg-color)
 }
 
-.feature-item h2 svg {
-    height: 32px;
-    float: left;
-    margin-right: 10px;
-    transform: translateY(10%);
+
+
+/* Section by section styles */
+
+
+/* Hero section styles */
+.dx-hero-container {
+    padding-top: 0rem;
+    background: url(../images/dx-doc-hero-banner.png) no-repeat center;
+    background-position: left bottom;
+    background-size: cover;
+    height: 450px;
 }
 
-.top-hr {
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
+.dx-hero__content {
+    width: 40%;
 }
 
-.section {
+.dx-hero__content h3 {
+    color: white;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 700;
 
 }
+.dx-hero__content h1 {
+    color: white;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 500;
+
+}
+
+.dx-hero__content {
+    width: 40%;
+}
+
+/* Designed For You Styles */
 
 .section-designedforyou {
     color: black;
@@ -72,34 +124,54 @@
     background-size: cover;
     height: 680px;
 }
-.section-roles {
+
+
+.dfu-hero {
+    color: var(--md-primary-bg-color);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    margin: 32px 0.8rem;
+}
+
+
+.dx-dfu__image {
+    width: 414px;
+}
+
+.dx-dfu__image img {
+    width: 414px;
+    height: 258px;
+}
+
+.dx-dfu__content {
+    width: 50%;
+    margin-left: 5rem
+}
+
+
+/* Persona Styles */
+
+.section-personas {
     background-color: #F2F2F2;
     color: black;
     height: 880px;
 }
-.section-academy {
-    background-color: black;
-    color: white;
-    background: url(../images/dx-teams-abstract-dots-black.jpeg);
-    background-position: left center;
-    background-size: cover;
-    height: 422px;
-}
 
-.section-links {
-    background-color: #212121;
-    color: white;
-}
-
-.feature-item {
+.persona-item {
     font-weight: 300;
     box-sizing: auto;
+    width: 33%;
     padding: 0px 5px 20px 5px;
     word-break: break-word;
     margin: 0px 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.feature-item h2 {
+.persona-item h2 {
     font-weight: 600;
     font-size: 24px;
     white-space: nowrap;
@@ -111,7 +183,7 @@
     font-family: inherit;
 }
 
-.feature-item p {
+.persona-item p {
     font-size: 16px;
     line-height: 1.8em;
     text-rendering: optimizeLegibility;
@@ -119,20 +191,7 @@
     display: block;
 }
 
-.feature-item ul {
-    font-size: 14px;
-    line-height: 1.4em;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    display: block;
-    list-style-type: none;
-    padding-left: 0;
-}
 
-.feature-item a {
-    font-weight: 400;
-    text-decoration: underline;
-}
 
 
 .persona-header {
@@ -184,10 +243,64 @@
     flex-grow: 0;
 }
 
-/* Hide main content section */
-.md-main {
-    display: none
+/* Academy Section Styles */
+
+.section-academy {
+    background-color: black;
+    color: white;
+    background: url(../images/dx-teams-abstract-dots-black.jpeg);
+    background-position: left center;
+    background-size: cover;
+    height: 422px;
+    display: flex;
+    align-items: center;
 }
+
+.academy-hero__image {
+    width: 495px;
+}
+
+.academy-hero__image img {
+    width: 495px;
+    height: 326px;
+}
+
+.dx-academy-logo img {
+    width: 189px;
+    height: 30px;
+}
+
+.academy-hero__content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+
+/* Link section styles */
+.section-links {
+    background-color: #212121;
+    color: white;
+}
+
+.link-item {
+    font-weight: 300;
+    width: 25%;
+    padding: 0px 5px 20px 5px;
+    word-break: break-word;
+    margin: 0px 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.link-item a {
+    font-weight: 400;
+    text-decoration: underline;lass="body-text white
+    color: white;
+}
+
 
 
 @media screen and (max-width:30em) {
@@ -198,9 +311,51 @@
     .tx-hero {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         margin: 32px 0.8rem;
     }
+
+    .dx-hero__content {
+        width: 100%;
+    }
+
+    .dx-dfu__image {
+        display: none;
+    }
+
+    .section-flexbox-row {
+        color: var(--md-primary-bg-color);
+        display: flex;
+        flex-direction: column;
+        margin: 32px 0.8rem;
+    }
+
+    .align-top {
+        justify-content: flex-start;
+    }
+    
+    .align-center {
+        justify-content: space-around;
+
+    }
+    
+    .space-around {
+        align-items: center;
+
+    }
+    
+    .flex-start {
+        align-items: top;    
+    }
+}
+
+
+@media screen and (max-width:60em) and (min-width:30em) {
+
+    .dx-hero__content {
+        width: 80%;
+    }
+
 }
 
 @media screen and (min-width:60em) {
@@ -208,7 +363,7 @@
     .tx-hero {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         margin: 32px 0.8rem;
     }
 
@@ -219,39 +374,6 @@
         margin-left: 2.0rem;
         margin-right: 10.0rem;
         align-items: center;
-    }
-}
-
-@media screen and (min-width:76.25em) {
-
-    .top-hr {
-        width: 100%;
-        display: flex;
-        max-width: 61rem;
-        margin-right: auto;
-        margin-left: auto;
-        padding: 0 .2rem;
-    }
-
-    .bottom-hr {
-        margin-top: 10px;
-        width: 100%;
-        display: flex;
-        max-width: 61rem;
-        margin-right: auto;
-        margin-left: auto;
-        padding: 0 .2rem;
-    }
-
-    .feature-item {
-        flex: 1;
-        min-width: 0;
-        padding: 0px 10px 10px 10px;
-    }
-
-    .feature-item:hover {
-        background-color: #526cfe47;
-        border-radius: 3px;
     }
 }
 
