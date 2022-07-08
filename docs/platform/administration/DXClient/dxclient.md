@@ -139,7 +139,7 @@ Common command arguments can be pre-configured inside the `config.json` file ava
 See video: [Getting Started with DXClient on Red Hat OpenShift using HCL Digital Experience Container Update CF194](https://www.youtube.com/watch?v=OphJ8-WcLxY)
 
 !!! note: 
-    DXClient node package is deprecated in the HCL Digital Experience Container CF196 release. It might be removed in the future releases. You are encouraged to use the [DXClient Docker package](#dxclient_docker) from CF Container release CF196 and later.
+    You are encouraged to use the DXClient Docker image package from CF196 onwards for easier installation.
 
 1.  Complete the following steps to install the DXClient tool in your local development workstation or automation server.
 
