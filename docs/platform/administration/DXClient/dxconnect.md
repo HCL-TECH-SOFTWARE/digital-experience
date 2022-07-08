@@ -41,24 +41,22 @@ To re-install DXConnect use the command below:
 
 ```
 
-**Notes:**
+!!! note
 
-1.  In Standalone and Cluster setups, the `ConfigEngine` task should be run under the `wp_profile` to have DXConnect installed in the correct location, and a restart of the `cw_profile` server may be required.
+    1.  In Standalone and Cluster setups, the `ConfigEngine` task should be run under the `wp_profile` to have DXConnect installed in the correct location, and a restart of the `cw_profile` server may be required.
 
     To verify it is installed on a given HCL DX Server 9.5 with CF19 or later, navigate to the **Configuration Wizard** Admin console and then under **Enterprise Applications**. The `dxconnect` application will appear on the console as shown in the example below. For more information on accessing and working with the Configuration Wizard, refer to [Accessing the Configuration Wizard](../config/cw_run.html) topics.
 
-    ![](../assets/HCL_DXConnect_installation.png)
+    ![DXConnect installation](../assets/HCL_DXConnect_installation.png)
 
-2.  In Red Hat OpenShift, the route for DXConnect is available under the name dx-deployment-service-dxconnect. For the other supported platforms, there is only one route path as usual.
+    2.  In Red Hat OpenShift, the route for DXConnect is available under the name dx-deployment-service-dxconnect. For the other supported platforms, there is only one route path as usual.
 
 ## Accessing the ConfigWizard admin console in a container environment
 
 You can access the ConfigWizard admin console in a container environment from your local system. For more information, refer to [Accessing the ConfigWizard admin console in a container environment](helm_access_configwizard.md).
 
-**Parent topic:**[Deploy DX components using HCL DXClient and DXConnect](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)
 
-**Related information**  
+<!-- ???Info "Related information:"  
 
-
-[DXClient](../containerization/dxclient.md)
+[DXClient](../containerization/dxclient.md) -->
 

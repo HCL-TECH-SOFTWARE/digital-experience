@@ -27,7 +27,8 @@ There are two separate command for handling bulk translations, `export` and `imp
 
 -   All the default command options in this section are configured inside the - dist/src/configuration/config.json file of the tool. The options passed through command line overrides these default values.
 
-**Note:** Only the `ShortTextComponent` element type has an explicit maximum data length set at 250 characters. The `**import**` command validates the length of the data for this element type before importing. Errors due to custom configuration of limits are caught by the `**import**` and `**export**` during the cycle and are reported in an error log.
+!!! note
+    Only the `ShortTextComponent` element type has an explicit maximum data length set at 250 characters. The `**import**` command validates the length of the data for this element type before importing. Errors due to custom configuration of limits are caught by the `**import**` and `**export**` during the cycle and are reported in an error log.
 
 ## Export command
 
@@ -139,9 +140,8 @@ MLS Import
 
 ![](../images/wcm_mls_exim_import_pipeline.png "DXClient MLS import pipeline sample")
 
-**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
 
-**Related information**  
+<!-- ???Info "Related information:"
 
 
 [Deploy DX components using HCL DXClient and DXConnect](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)
@@ -156,5 +156,5 @@ MLS Import
 
 [Sample Pipelines for the DXClient Docker image file](../containerization/sample_pipelines_docker_dxclient.md)
 
-[Sample Pipelines for the DXClient node package file](../containerization/sample_pipelines_node_dxclient.md)
+[Sample Pipelines for the DXClient node package file](../containerization/sample_pipelines_node_dxclient.md) -->
 

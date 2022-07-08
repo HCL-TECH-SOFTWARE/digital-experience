@@ -94,19 +94,19 @@ This topic describes the commands that are used to create or update credential v
     -vaultDescription <value>
     ```
 
--   **Example:**
+!!! example
 
     ```
     dxclient create-credential-vault -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword>  -xmlConfigPath <xmlConfigPath> -credentialSlotName <credentialSlotName> -vaultUsername <vaultUsername> -vaultPassword <vaultPassword>
     ```
 
 
-**Note:** The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
-
-**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
-
-**Related information**  
+!!! note 
+    The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
 
 
-[DXClient](../containerization/dxclient.md)
+<!-- ???Info "Related information:" 
+
+
+[DXClient](../containerization/dxclient.md) -->
 

@@ -1,17 +1,17 @@
 nav:
-    - credentialvaultslot.md
-    - damschemas.md
-    - deployapplication.md
-    - dxcoreserver.md
-    - personalization.md
-    - portlets.md
-    - resourceenvironments.md
+    - portlets.md 
     - scriptapplications.md
-    - sharedlibrary.md
-    - syndicatorsandsubscribers.md
-    - themes.md
-    - virtualportals.md
-    - wcm_mls_export_import.md
-    - wcmlibraries.md
     - xmlaccess.md
+    - themes.md 
+    - deployapplication.md
+    - dxcoreserver.md 
+    - wcmlibraries.md 
+    - wcm_mls_export_import.md
+    - syndicatorsandsubscribers.md
+    - credentialvaultslot.md
+    - sharedlibrary.md
+    - damschemas.md
+    - personalization.md
+    - resourceenvironments.md
+    - virtualportals.md
     - ...

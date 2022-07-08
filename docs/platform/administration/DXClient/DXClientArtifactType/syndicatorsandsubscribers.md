@@ -74,7 +74,7 @@ The manage-syndicator command is used to enable or disable the syndicator using 
 
     The options that are passed through the command line override the default values.
 
--   **Example:**
+!!! example
 
     ```
     dxclient manage-syndicator -dxProtocol <dxProtocol> -hostname <host-name> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -contenthandlerPath <contenthandlerPath> -UUID <UUID> -enable <enable>
@@ -159,7 +159,8 @@ The manage-syndicator get-syndication-report command is used to fetch the failed
     dxclient manage-syndicator get-syndication-report -dxProtocol <dxProtocol> -hostname <host-name> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -contenthandlerPath <contenthandlerPath>  
     ```
 
-    **Note:** If UUID of a syndicator is specified, then the command provides the report for only the particular syndicator that is present in the target DX Server; otherwise, it provides the failure report for all syndicators.
+    !!! note 
+        If UUID of a syndicator is specified, then the command provides the report for only the particular syndicator that is present in the target DX Server; otherwise, it provides the failure report for all syndicators.
 
 
 ## Managing subscribers
@@ -234,7 +235,7 @@ The manage-subscriber command is used to enable or disable the subscriber using 
 
     The options passed through command line overrides the default values.
 
--   **Example:**
+!!! example
 
     ```
     dxclient manage-subscriber -dxProtocol <dxProtocol> -hostname <host-name> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -contenthandlerPath <contenthandlerPath> -UUID <UUID> -enable <enable>
@@ -379,7 +380,7 @@ The `create-syndication-relation` command is used to create the syndication rela
 
     Log files from command execution can be found in the logs directory of the DXClient installation.
 
--   **Example:**
+!!! example
 
     ```
     dxclient create-syndication-relation -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -contenthandlerPath <contenthandlerPath> -dxUsername <dxUsername> 
@@ -389,12 +390,11 @@ The `create-syndication-relation` command is used to create the syndication rela
     ```
 
 
-**Note:** The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
+!!! note 
+    The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
 
-**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
-
-**Related information**  
+<!-- ???Info "Related information:"
 
 
-[How to manage syndicators and subscribers](https://help.hcltechsw.com/digital-experience/8.5/panel_help/wcm_syndication.html)
+[How to manage syndicators and subscribers](https://help.hcltechsw.com/digital-experience/8.5/panel_help/wcm_syndication.html) -->
 

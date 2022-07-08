@@ -64,17 +64,18 @@ This topic contains the commands that the administrators can use to export and i
     -targetWorkspace <value>
     ```
 
-    **Note:** The `targetPath` and `targetWorkspace` parameters are optional. If the user does not pass the respective parameters, then the default values are taken.
+    !!! note
+        The `targetPath` and `targetWorkspace` parameters are optional. If the user does not pass the respective parameters, then the default values are taken.
 
-    Use this attribute to specify the path to the context root on the DX server \(for example, /wps\):
+         Use this attribute to specify the path to the context root on the DX server \(for example, /wps\):
 
-    ```
-    -dxContextRoot <value>
-    ```
+        ```
+        -dxContextRoot <value>
+        ```
 
-    Log files from command execution can be found in the logs directory of the DXClient installation.
+        Log files from command execution can be found in the logs directory of the DXClient installation.
 
--   **Example:**
+!!! example
 
     ```
     dxclient pzn-export -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword>
@@ -179,25 +180,25 @@ This topic contains the commands that the administrators can use to export and i
     -dxContextRoot <value>
     ```
 
-    **Notes:**
+    !!! note
 
-    -   For Kubernetes environments, `dxProtocol` should be `http`, `hostname` should be localhost, `dxPort` should be 10039 as DXConnect doesn't support https due to SSL Handshake challenges at this time.
-    -   The `dxProtocol`, `hostname`, `dxPort`, `targetWorkspace`, and `targetPath` parameters are optional. If the user does not pass the respective parameters, then the default values are taken.
-    Log files from command execution can be found in the logs directory of the DXClient installation.
+        -   For Kubernetes environments, `dxProtocol` should be `http`, `hostname` should be localhost, `dxPort` should be 10039 as DXConnect doesn't support https due to SSL Handshake challenges at this time.
+        -   The `dxProtocol`, `hostname`, `dxPort`, `targetWorkspace`, and `targetPath` parameters are optional. If the user does not pass the respective parameters, then the default values are taken.
+        Log files from command execution can be found in the logs directory of the DXClient installation.
 
--   **Example:**
+!!! example
 
     ```
     dxclient pzn-import -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -hostname <dxConnectHostname> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxConnectPort <dxConnectPort> -rulesFilePath <rulesFilePath>
     ```
 
 
-**Note:** The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
-
-**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
-
-**Related information**  
+!!! note
+    The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
 
 
-[DXClient](../containerization/dxclient.md)
+<!-- ???Info "Related information:" 
+
+
+[DXClient](../containerization/dxclient.md) -->
 

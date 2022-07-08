@@ -78,7 +78,7 @@ The list-dam-schemas command is used to list all the DAM schemas.
     -ringAPIVersion <value>
     ```
 
--   **Example:**
+!!! example
 
     ```
     dxclient list-dam-schemas -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -ringAPIVersion <ringAPIVersion> -damAPIVersion <damAPIVersion>
@@ -169,16 +169,18 @@ Use the delete-dam-schema command to delete the inactive DAM schema.
     -schemaVersion <value>
     ```
 
-    **Note:** In case the user does not enter the `schemaVersion`, user is prompted with a list of inactive schemas to choose from.
+    !!! note 
+        In case the user does not enter the `schemaVersion`, user is prompted with a list of inactive schemas to choose from.
 
--   **Example:**
+-   !!! example
 
-    ```
-    dxclient delete-dam-schema -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -ringAPIVersion <ringAPIVersion> -damAPIVersion <damAPIVersion> -schemaVersion <schemaVersion>
-    ```
+        ```
+        dxclient delete-dam-schema -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -ringAPIVersion <ringAPIVersion> -damAPIVersion <damAPIVersion> -schemaVersion <schemaVersion>
+        ```
 
 
-**Note:** The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
+!!! note 
+    The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
 
-**Parent topic:**[DAM artifacts](../containerization/dam_artifacts.md)
+
 
