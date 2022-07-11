@@ -5,7 +5,6 @@
     color: var(--md-primary-bg-color);
     display: flex;
     flex-direction: row;
-    margin: 32px 0.8rem;
     width: 100%;
     max-width: 61rem;
     margin-right: auto;
@@ -13,6 +12,7 @@
     margin-top: 0.5rem;
     margin-bottom: 1rem;
     padding: 1rem;
+    flex-wrap: wrap;
 }
 
 .align-top {
@@ -31,6 +31,11 @@
     justify-content: flex-start;
 }
 
+.flex-break {
+    flex-basis: 100%;
+    height: 0;
+}
+
 
 /* Hide main Mkdocs content section */
 .md-main {
@@ -42,6 +47,9 @@
     font-size: 32px;
     line-height: 48px;
     font-weight: 500;
+    margin-right: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .black {
@@ -94,6 +102,7 @@
 
 .dx-hero__content {
     width: 40%;
+    min-width: 520px;
 }
 
 .dx-hero__content h3 {
@@ -122,7 +131,7 @@
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../images/dx-teams-abstract-dots.jpeg);
     background-position: left bottom;
     background-size: cover;
-    height: 680px;
+    height: 30rem;
 }
 
 
@@ -132,7 +141,7 @@
     justify-content: space-around;
     flex-direction: row;
     align-items: center;
-    margin: 32px 0.8rem;
+    margin: 1.5rem 0.8rem;
 }
 
 
@@ -156,13 +165,13 @@
 .section-personas {
     background-color: #F2F2F2;
     color: black;
-    height: 880px;
+    height: 50rem;
 }
 
 .persona-item {
     font-weight: 300;
     box-sizing: auto;
-    width: 33%;
+    width: 30%;
     padding: 0px 5px 20px 5px;
     word-break: break-word;
     margin: 0px 10px 0px 10px;
@@ -286,7 +295,7 @@
 
 .link-item {
     font-weight: 300;
-    width: 25%;
+    width: 23%;
     padding: 0px 5px 20px 5px;
     word-break: break-word;
     margin: 0px 10px 0px 10px;
@@ -297,31 +306,13 @@
 
 .link-item a {
     font-weight: 400;
-    text-decoration: underline;lass="body-text white
+    text-decoration: underline;
     color: white;
 }
 
 
 
 @media screen and (max-width:30em) {
-    .tx-hero h1 {
-        font-size: 1.2rem
-    }
-
-    .tx-hero {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        margin: 32px 0.8rem;
-    }
-
-    .dx-hero__content {
-        width: 100%;
-    }
-
-    .dx-dfu__image {
-        display: none;
-    }
 
     .section-flexbox-row {
         color: var(--md-primary-bg-color);
@@ -347,33 +338,101 @@
     .flex-start {
         align-items: top;    
     }
+
+    .dx-hero-container {
+        height: auto;
+    }
+
+    .dx-hero__content {
+        width: 100%;
+        min-width: 200px
+    }
+
+    .section-designedforyou {
+        height: auto
+    }
+
+    .dx-dfu__image {
+        display: none
+    }
+
+    .dx-dfu__content {
+        width: 100%;
+        margin-left: 0
+    }
+
+    .academy-hero__content {
+        width: 100%;
+    }
+
+    .academy-hero__image {
+        display: none;
+    }
+
+    .section-personas {
+        height: auto;
+    }
+    
+    .section-academy {
+        height: auto;
+    }
+
+    .persona-item {
+        width: 100%
+    }
+
+    .link-item {
+        width: 100%
+    }
 }
 
 
 @media screen and (max-width:60em) and (min-width:30em) {
 
+    .dx-hero-container {
+        height: auto;
+    }
+
     .dx-hero__content {
-        width: 80%;
+        width: 100%;
+    }
+
+    .section-designedforyou {
+        height: auto
+    }
+
+    .dx-dfu__image {
+        display: none
+    }
+
+    .dx-dfu__content {
+        width: 100%;
+        margin-left: 0
+    }
+
+    .academy-hero__content {
+        width: 100%;
+    }
+
+    .academy-hero__image {
+        display: none;
+    }
+
+    .section-personas {
+        height: auto;
+    }
+    
+    .section-academy {
+        height: auto;
     }
 
 }
 
 @media screen and (min-width:60em) {
 
-    .tx-hero {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        margin: 32px 0.8rem;
-    }
 
-    .tx-hero__content {
-        max-width: 22rem;
-        margin-top: 0.0rem;
-        margin-bottom: 3.5rem;
-        margin-left: 2.0rem;
-        margin-right: 10.0rem;
-        align-items: center;
-    }
+
+
+    
 }
 
