@@ -1,0 +1,211 @@
+# Configuration of Kaltura 
+
+This section provides the steps on how the DAM extensibility allows the Kaltura plugin to follow the framework to provide interaction between DAM and actual Kaltura services.
+
+## Architecture
+
+![Kaltura Plugin](../)
+![Kaltura plugin 2](../)
+
+## Kaltura configuration via DAM Extensibility
+
+Following kaltura configuration changes are required to configure through DAM extensibility
+
+**Kaltura Plugin configuration**
+Under kaltura plugin configuration by default the enable flag will be set as false, the end user can enable kaltura-plugin by setting the enable flag to true.
+
+```
+{
+  "kaltura-plugin": {
+    "url": "http://localhost:8081/dx/api/kaltura/v1/plugin",
+    "callBackHost": "http://localhost:3000",
+    "authKey": "kalturaPluginSecretAuthKey",
+    "playerid": "KalturaPluginPlayerId",
+    "dataUrlPattern": "https://cdnapisec.kaltura.com/p/{PARTNERID}/sp/{PARTNERID}00/playManifest/entryId/{ENTRYID}/format/url/protocol/https",
+    "playerLibraryUrlPattern": "https://cdnapisec.kaltura.com/p/{PARTNERID}/sp/{PARTNERID}00/embedIframeJs/uiconf_id/{PLAYERID}/partner_id/{PARTNERID}",
+    "enable": false,
+    "actions": {
+      "upload": {
+        "params": {},
+        "url": "/upload"
+      },
+      "status": {
+        "params": {},
+        "url": "/status"
+      },
+      "resize": {
+        "params": {},
+        "url": "/resize"
+      },
+      "delete": {
+        "params": {},
+        "url": "/delete"
+      }
+    }
+  }
+}
+```
+
+**Kaltura Plugin Server Configurations**
+
+- Config Map
+```
+{
+  "thumbnailUrlPattern":string,
+  "partnerId":string
+}
+```
+!!! example
+    ```
+    {
+      "thumbnailUrlPattern": "https://cfvod.kaltura.com/p/{PARTNERID}/sp/{PARTNERID}00/thumbnail/entry_id/{ENTRYID}/width/{WIDTH}/height/{HEIGHT}/type/3",
+      "partnerId": "1234"
+    }
+    ```
+
+- Video Configuration in DAM
+```
+{
+   "video/mp4":{
+      "rendition":[
+         {
+            "name":"Original",
+            "transformationStack":[
+                {
+                  "plugin":"kaltura-plugin",
+                  "operation":{
+                     "upload":{
+                       "mediaId":'',
+                     }
+                  }
+               }
+            ],
+            "thumbnailStack":[
+               {  
+                  "plugin":"kaltura-plugin",
+                  "operation":{
+                     "resize":{
+                        "height":192,
+                        "width":192,
+                         "entryId":'',
+                     }
+                  }
+               }
+            ],
+            "supplementalStack":[
+               {
+                  "plugin":"kaltura-plugin",
+                  "operation":{
+                     "status":{
+                       "entryId":'',
+                     }
+                  }
+               }
+            ]
+         }
+      ]
+   },
+   "video/ogg":{
+      "rendition":[
+         {
+            "name":"Original",
+            "transformationStack":[
+               {
+                  "plugin":"kaltura-plugin",
+                  "operation":{
+                     "upload":{
+                       "mediaId":'',
+                     }
+                  }
+               }
+            ],
+            "thumbnailStack":[
+               {
+                  "plugin":"kaltura-plugin",
+                  "operation":{
+                     "resize":{
+                        "height":192,
+                        "width":192,
+                        "entryId":'',
+                     }
+                  }
+               }
+            ],
+            "supplementalStack":[
+               {
+                  "plugin":"kaltura-plugin",
+                  "operation":{
+                     "status":{
+                       "entryId":'',
+                     }
+                  }
+               }
+            ]
+         }
+      ]
+   },
+   "video/webm":{
+      "rendition":[
+         {
+            "name":"Original",
+            "transformationStack":[
+               {
+                  "plugin":"kaltura-plugin",
+                  "operation":{
+                     "upload":{
+                       "mediaId":'',
+                     }
+                  }
+               }
+            ],
+            "thumbnailStack":[
+               {
+                  "plugin":"kaltura-plugin",
+                  "operation":{
+                     "resize":{
+                        "height":192,
+                        "width":192,
+                        "entryId":'',
+                     }
+                  }
+               }
+            ],
+            "supplementalStack":[
+               {
+                  "plugin":"kaltura-plugin",
+                  "operation":{
+                     "status":{
+                       "entryId":'',
+                     }
+                  }
+               }
+            ]
+         }
+      ]
+   }
+}
+```
+
+## How is the configuration setup for Kaltura Plugin
+
+The kaltura plugin configurations are currently maintained as config maps. i.e. user can find kaltura-plugin.json in the configuration folder under HELM Package and can be deployed into DAM by doing a HELM upgrade.
+
+```
+configuration:
+      # Configuration for Kaltura Plugin
+        # File path for the kaltura plugin config JSON file
+        kalturaPluginConfigFile: "configurations/kaltura-plugin.json"
+```
+
+### Plugin security Configuration
+In DAM-Extensibility plugins comes with security enabled. So i.e. the API requests are authenticated with the security key which is transmitted and validated in every calls both plugin and callback calls, and the user can write this in the same config file under security configuration and give the value to authenticationKey param. And then this value is passed for plugin configuration key attribute so that DAM sends this with each request to authenticate.
+
+```
+   # Security related configuration, e.g. default credentials default
+    # Security configuration for dam-kaltura-plugin
+    damKalturaPlugin:
+      # Authentication key for Plugin API
+      authKey: "kalturaPluginSecretAuthKey"
+      # Authentication key for Kaltura external service
+      secretKey: "cnVtYWFhYm9zZS1oY2wK"
+```
