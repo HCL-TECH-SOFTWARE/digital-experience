@@ -11,6 +11,5 @@ nav:
         - dam_plugin_communication.md
         - configure_dam_extensibility.md
         - configure_dam_Metadata_configuration.md
-	- image_tagging.md
     - managing_dam
     # - ...
