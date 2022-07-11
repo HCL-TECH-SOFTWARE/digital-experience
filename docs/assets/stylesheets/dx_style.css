@@ -11,6 +11,9 @@
     box-shadow: none;
 }
 
+.md-header[data-md-state=shadow] {
+    box-shadow: none;
+}
 
 .md-tabs__link--active {
     border-bottom: 2px solid #FFF;

@@ -36,6 +36,10 @@
     height: 0;
 }
 
+.nowrap {
+    flex-wrap: nowrap;
+}
+
 
 /* Hide main Mkdocs content section */
 .md-main {
@@ -165,7 +169,7 @@
 .section-personas {
     background-color: #F2F2F2;
     color: black;
-    height: 50rem;
+    height: auto;
 }
 
 .persona-item {
