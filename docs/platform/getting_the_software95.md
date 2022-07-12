@@ -42,7 +42,7 @@ The path from an existing HCL Digital Experience 8.5 or 9.0 system to HCL Digita
 Afterwards, users start the IBM Installation Manager, then configure the 9.5 repository, and add 9.5. Users who are using HCL Portal Enable, HCL Portal Extend, or HCL Web Content Manager need to add both the HCL Portal 9.5 Server and the applicable edition via IBM Installation Manager.
 
 -   Documentation resource: [Fixlist of fixes included in CF17](../whatsnew/new_cf17.md)
--   Documentation resource: [Combined Cumulative fix strategy for 9.5](../overview/ccf_strategy95.md)
+-   Documentation resource: [Combined Cumulative fix strategy for 9.5](https://help.hcltechsw.com/digital-experience/9.5/dd/getting_the_software95.html){:target="_blank"}
 
 ## Deployment of HCL Digital Experience to Docker and supported Kubernetes platforms
 

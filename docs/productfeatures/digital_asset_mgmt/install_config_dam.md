@@ -2,7 +2,7 @@
 
 This section provides a high-level overview of the architecture and the steps to install, configure, and update the HCL Digital Experience 9.5 components: Experience API, Content Composer, and Digital Asset Management.
 
-**Video**: [Install HCL Digital Experience components \(Experience API, Content Composer, and Digital Asset Management\) on Red Hat OpenShift](https://youtu.be/Hhop8M89SVA)
+**Video**: [Install HCL Digital Experience components \(Experience API, Content Composer, and Digital Asset Management\) on Red Hat OpenShift](https://youtu.be/Hhop8M89SVA){:target="_blank"}
 
 ## High-level architecture and topology
 
@@ -14,7 +14,7 @@ This section provides a high-level overview of the architecture and the steps to
 
 DX Administrators can choose to install the DX Core containers and then proceed to install Content Composer and Digital Asset Management containers to the supported Kubernetes container platforms as outlined in the following steps. See the [Deployment](../../platform/kubernetes/deployment/helm_deployment.md) section for the latest DX 9.5 container file listings.
 
-Deploying the HCL Digital Asset Management or Content Composer components is supported on Kubernetes or OpenShift platforms and is not supported for deployment to Docker platforms. See the [System requirements](https://help.hcltechsw.com/digital-experience/9.5/overview/inst_req.html) section for more information.
+Deploying the HCL Digital Asset Management or Content Composer components is supported on Kubernetes or OpenShift platforms and is not supported for deployment to Docker platforms. See the [System requirements](https://help.hcltechsw.com/digital-experience/9.5/overview/inst_req.html){:target="_blank"} section for more information.
 
 !!! note  
     For initial deployments, it is recommended to install the HCL Digital Experience 9.5 components \(Experience API, Content Composer, and Digital Asset Management\) to a non-production \(test\) HCL Digital Experience 9.5 environment.
@@ -25,12 +25,12 @@ Follow these steps to install your HCL Digital Experience 9.5 components \(Exper
 
 **Asset Management components**
 
-If installing in conjunction with HCL Digital Experience 9.5 CF181 or higher, follow the instructions in the [Container Deployment](https://help.hcltechsw.com/digital-experience/9.5/containerization/deployment.html) topic. This page lists the latest HCL Digital Experience 9.5 CF181 or higher product images available and how to obtain and load the images into your Docker repository before continuing with these instructions.
+If installing in conjunction with HCL Digital Experience 9.5 CF181 or higher, follow the instructions in the [Container Deployment](../../platform/kubernetes/deployment/helm_deployment.md) topic. This page lists the latest HCL Digital Experience 9.5 CF181 or higher product images available and how to obtain and load the images into your Docker repository before continuing with these instructions.
 
 If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernetes environment:
 
-1.  Verify that you can access the HCL Digital Experience 9.5 CF181 or higher Practitioner Studio by logging in to your HCL Digital Experience 9.5 Practitioner Studio interface. See the [HCL Digital Experience 9.5 Practitioner Studio](https://help.hcltechsw.com/digital-experience/9.5/practitioner_studio/practitionerstudio_overview.html) topic for information.
-2.  Download and extract the HCL Digital Experience 9.5 components from your Digital Experience entitlements from the [HCL Software License Portal](https://www.hcltech.com/software/support/release) to the local file system.
+1.  Verify that you can access the HCL Digital Experience 9.5 CF181 or higher Practitioner Studio by logging in to your HCL Digital Experience 9.5 Practitioner Studio interface. See the [HCL Digital Experience 9.5 Practitioner Studio](https://help.hcltechsw.com/digital-experience/9.5/practitioner_studio/practitionerstudio_overview.html){:target="_blank"} topic for information.
+2.  Download and extract the HCL Digital Experience 9.5 components from your Digital Experience entitlements from the [HCL Software License Portal](https://www.hcltech.com/software/support/release){:target="_blank"} to the local file system.
 
     **Sample download package name**: `hcl-dx-kubernetes-v95-CF181-other.zip` or higher, depending on the DX 9.5 Container Update version you are installing.
 
@@ -320,7 +320,7 @@ If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernet
 
 ## \(Optional\) Configure Digital Asset Management with a CDN
 
-If you are using a content delivery network \(CDN\) such as [Akamai](https://www.akamai.com/our-thinking/cdn/what-is-a-cdn), using `Vary: Origin` may prevent you from caching content. To bypass this limitation, your CDN configuration must strip the `Vary` header on the way in, to reinstate your ability to cache content. On the way out, you can append the `Origin` parameter to the `Vary` header when serving a response using **'Modify Outgoing Response Header'**.
+If you are using a content delivery network \(CDN\) such as [Akamai](https://www.akamai.com/our-thinking/cdn/what-is-a-cdn){:target="_blank"}, using `Vary: Origin` may prevent you from caching content. To bypass this limitation, your CDN configuration must strip the `Vary` header on the way in, to reinstate your ability to cache content. On the way out, you can append the `Origin` parameter to the `Vary` header when serving a response using **'Modify Outgoing Response Header'**.
 
 <!-- -   **[Enable/disable Content Composer in Virtual Portals](../content_composer/configure_cc_virtual_portals.md)**  
 The use of Content Composer features in a Virtual Portal deployment pattern is supported for HCL Content Composer beginning with Container Update 9.5 CF192. -->

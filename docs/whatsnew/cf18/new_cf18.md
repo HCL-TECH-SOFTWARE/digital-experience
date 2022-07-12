@@ -2,8 +2,6 @@
 
 This HCL Digital Experience 9.5 Container Update release includes new WCM REST APIs, updated Tech Preview releases of Content Composer and Digital Asset Management, Rich Text Editor and Java Server Faces bridge updates, and more.
 
-<!-- Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939#CF18) for the list of software fixes, including CF18. See [What's New in CF18 for HCL Digital Experience](../overview/new_cf18.md) for a list of updates in this release. Product software can be accessed from the [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release). Go to this [Step-by-step guide to downloading DX products and accessing Customer Support](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878) for more information. -->
-
 ## JavaServer Faces \(JSF\) Bridge
 
 With the HCL Digital Experience CF18 Container and CF update, an updated JSF Portlet Bridge is introduced and installed in the HCL Digital Experience software. Customers installing HCL Digital Experience 8.5, 9, or 9.5 CF18 or Container Update release CF18, and using an IBM WebSphere Application Server Network Deployment version later than 8.5.5.17 or 9.0.5.2 can utilize the new JSF Portlet Bridge. See [JavaServer Faces implementation](https://help.hcltechsw.com/digital-experience/9.5/migrate/mig_post_jsf.html){:target="_blank"} for more information.
