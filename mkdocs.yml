@@ -24,6 +24,7 @@ theme:
     text: Roboto
     code: Roboto Mono
   favicon: assets/favicon.png
+  extra_css: 
 
   # Static files
   static_templates:
@@ -56,8 +57,7 @@ edit_uri: edit/main/docs
 
 # Customization
 extra_css:
-  - stylesheets/dx_style.css
-  # - sofy.css
+  - assets/stylesheets/dx_style.css
 
 plugins:
   - awesome-pages
