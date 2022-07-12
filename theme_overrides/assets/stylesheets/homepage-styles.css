@@ -135,7 +135,8 @@
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../images/dx-teams-abstract-dots.jpeg);
     background-position: left bottom;
     background-size: cover;
-    height: 30rem;
+    height: auto;
+    min-height: 20rem;
 }
 
 
@@ -322,7 +323,6 @@
         color: var(--md-primary-bg-color);
         display: flex;
         flex-direction: column;
-        margin: 32px 0.8rem;
     }
 
     .align-top {
@@ -391,7 +391,8 @@
 }
 
 
-@media screen and (max-width:60em) and (min-width:30em) {
+@media only screen and (max-width:64em) and (min-width:30em),
+        only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 
     .dx-hero-container {
         height: auto;
@@ -430,13 +431,5 @@
         height: auto;
     }
 
-}
-
-@media screen and (min-width:60em) {
-
-
-
-
-    
 }
 
