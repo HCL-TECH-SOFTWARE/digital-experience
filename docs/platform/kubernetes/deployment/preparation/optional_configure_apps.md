@@ -127,9 +127,9 @@ Please refer below table for combination of the flag setting and it's result.
 |false|true||
 |false|false||
 
-Default configuration is should be like below:
+By default, both parameters are set to true as in the example below:
 
-```
+```yaml
 # Application configuration
 configuration:
   # Application specific configuration for Core
