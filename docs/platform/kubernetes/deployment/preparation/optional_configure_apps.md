@@ -16,7 +16,7 @@ Currently, the configuration capability is quite limited. For more complex confi
 
 You can use the following syntax in your custom-values.yaml file to adjust LDAP settings:
 
-```
+```yaml
 # Application configuration
 configuration:
   # Application specific configuration for Core
@@ -66,7 +66,7 @@ As default, this defaults to true. The deployment is configured as an authoring 
 
 If you want to adjust this to deploy a rendering environment, you can use the following syntax in your custom-values.yaml file:
 
-```
+```yaml
 # Application configuration
 configuration:
   # Application specific configuration for Core
@@ -103,7 +103,7 @@ If `configWizard` is set to `true`, then the Configuration Wizard, IBM WebSphere
 
 If you want to adjust this setting, you can use the following syntax in your file:
 
-```
+```yaml
 # Application configuration
 configuration:
   # Application specific configuration for Core
@@ -146,7 +146,7 @@ If you choose to deploy the OpenLDAP container in your deployment, you can chang
 
 Use the following syntax in your custom-values.yaml file to adjust the configuration:
 
-```
+```yaml
 # Application configuration
 configuration:
   # Application specific configuration for Open LDAP
@@ -171,7 +171,7 @@ https://yourhost:9043/ibm/console
 
 Use the following syntax in your custom-values.yaml file:
 
-```
+```yaml
 # Application configuration
 configuration:
   # Application specific configuration for Remote Search
