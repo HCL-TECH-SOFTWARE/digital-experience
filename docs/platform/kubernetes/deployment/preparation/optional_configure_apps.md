@@ -16,7 +16,7 @@ Currently, the configuration capability is quite limited. For more complex confi
 
 You can use the following syntax in your custom-values.yaml file to adjust LDAP settings:
 
-```
+```yaml
 # Application configuration
 configuration:
   # Application specific configuration for Core
@@ -66,7 +66,7 @@ As default, this defaults to true. The deployment is configured as an authoring 
 
 If you want to adjust this to deploy a rendering environment, you can use the following syntax in your custom-values.yaml file:
 
-```
+```yaml
 # Application configuration
 configuration:
   # Application specific configuration for Core
@@ -103,7 +103,7 @@ If `configWizard` is set to `true`, then the Configuration Wizard, IBM WebSphere
 
 If you want to adjust this setting, you can use the following syntax in your file:
 
-```
+```yaml
 # Application configuration
 configuration:
   # Application specific configuration for Core
@@ -115,13 +115,42 @@ configuration:
       configWizard: true
 ```
 
+### Tika and Stellent Configuration
+
+Beginning with HCL Digital Experience release 205, [Oracle Stellent Document Conversion Services](https://help.hcltechsw.com/digital-experience/9.5/admin-system/dcs_info.html) used by [HCL Digital Experience Search](https://help.hcltechsw.com/digital-experience/9.5/wcm/wcm_dev_search.html) and [HCL Digital Experience RemoteSearch](https://help.hcltechsw.com/digital-experience/9.5/admin-system/srcusgrmtsrchsrv.html) is not distributed or supported by HCL. Oracle functionality is replaced by Apache Tika. For Additional details on DCS services available in CF205 and later, see [this technote](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0096908).
+
+!!!important
+    Do not change the default configuration if you do not have a backup of Stellent files in your environment. For instructions on how to backup the Stellent files in a version prior to CF205, please refer to [this documentation page](!!!TODO!!!).
+
+    The settings in this section are only applied during an upgrade from one CF version to another. To run the configuration manually at any other time, please follow [the instructions documented here](!!!TODO!!!).
+
+|configureTika|disableStellentDCS|Result|
+|---------|-----------|-------------|
+|true|true|Apache Tika will be used for DX Search indexing. Oracle Stellent will not be used for DX Document Conversion Services.|
+|true|false|Apache Tika will be used for DX Search indexing. Oracle Stellent will be used for DX Document Conversion Services.|
+|false|true|Oracle Stellent will be used for DX Search indexing, not be used for DX Document Conversion Services.|
+|false|false|Oracle Stellent will be used for DX Search indexing and for DX Document Conversion Services.|
+
+By default, both parameters are set to true as in the example below:
+
+```yaml
+# Application configuration
+configuration:
+  # Application specific configuration for Core
+  core:
+    # Settings for enabling/disabling Tika
+    configureTika: true 
+    # Settings for enabling/disabling Stellent
+    disableStellentDCS: true
+```
+
 ## OpenLDAP configuration
 
 If you choose to deploy the OpenLDAP container in your deployment, you can change country, organization and suffix, that may be configured in OpenLDAP for use.
 
 Use the following syntax in your custom-values.yaml file to adjust the configuration:
 
-```
+```yaml
 # Application configuration
 configuration:
   # Application specific configuration for Open LDAP
@@ -146,7 +175,7 @@ https://yourhost:9043/ibm/console
 
 Use the following syntax in your custom-values.yaml file:
 
-```
+```yaml
 # Application configuration
 configuration:
   # Application specific configuration for Remote Search
