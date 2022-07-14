@@ -11,14 +11,14 @@
       
       
       
-        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/cf204/platform/kubernetes/helm_overview/">
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/cf204/platform/kubernetes/overview/">
       
       <link rel="icon" href="../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
     
     
       
-        <title>Containers Overview - HCL Digital Experience Help Center</title>
+        <title>Overview - HCL Digital Experience Help Center</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#containers-overview" class="md-skip">
+        <a href="#overview" class="md-skip">
           Skip to content
         </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Containers Overview
+              Overview
             
           </span>
         </div>
@@ -1620,61 +1620,9 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Containers Overview
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
-        Containers Overview
+        Overview
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#helm-chart-contents" class="md-nav__link">
-    Helm Chart contents
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#helm-deployment-flow" class="md-nav__link">
-    Helm deployment flow
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deployment-structure" class="md-nav__link">
-    Deployment structure
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -1757,8 +1705,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../architecture/overview/" class="md-nav__link">
-        Overview
+      <a href="../architecture/helm_overview/" class="md-nav__link">
+        Containers Overview
       </a>
     </li>
   
@@ -3763,42 +3711,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#helm-chart-contents" class="md-nav__link">
-    Helm Chart contents
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#helm-deployment-flow" class="md-nav__link">
-    Helm deployment flow
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deployment-structure" class="md-nav__link">
-    Deployment structure
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -3809,78 +3721,25 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/edit/main/docs/platform/kubernetes/helm_overview.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/edit/main/docs/platform/kubernetes/overview.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="containers-overview">Containers Overview</h1>
-<p>This topic provides administrators with a high-level overview and important pre-requisite guidance to prepare your container environments for later deployments of the HCL Digital Experience 9.5 Kubernetes and OpenShift deployment capabilities using Helm.</p>
-<p>Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to <a href="../deployment/helm_deployment.md">supported container platforms</a> using Helm Charts. Using a Helm Chart deployment provides administrators a larger degree of transparency in the deployment operations than the operator-based deployment also available using the HCL DX dxctl process. <!--[see *Related information* section for related topic links]--></p>
-<h2 id="overview">Overview</h2>
-<p>Helm is a software package manager that simplifies deployment of applications and services to Red Hat OpenShift and Kubernetes container platforms.</p>
-<p>Helm is a tool for managing Kubernetes applications and deployments. It allows for packaging all required resource definitions into a single package, called a Helm Chart. The Helm Charts provide a convenient way to define application deployments with a predefined set of configurable items. Furthermore, Helm Charts are written using declarative definitions, applying <code>yaml</code> structures and go templates. This approach provides administrators with transparency about the operations the Helm Chart is performing during the DX 9.5 container deployment.</p>
-<p>In addition to foundation packaging and installation capabilities, Helm can also be used to modify and upgrade existing deployments, if the Helm Charts are built to support this. Configuration changes and application upgrades can both be managed using Helm.</p>
-<p>For more information about Helm, please reference documentation available on Helm topics for Red Hat <a href="https://docs.openshift.com/container-platform/4.7/cli_reference/helm_cli/getting-started-with-helm-on-openshift-container-platform.html">Red Hat OpenShift</a> and <a href="https://helm.sh/">Kubernetes</a> container platforms.</p>
-<h2 id="helm-chart-contents">Helm Chart contents</h2>
-<p>The HCL Digital Experience 9.5 Deployment Helm Chart (Helm Chart name: <code>hcl-dx-deployment</code>) follows the standard Helm structures and guidelines.</p>
-<div class="highlight"><pre><span></span><code>hcl-dx-deployment/
-  templates/            # The directory containing all Helm templates for e.g. Kubernetes resources
-  value-samples/        # Contains sample value files for different types of deployments
-  README.md             # README with information on Helm Chart usage and references to further documentation
-  values.yaml           # Default chart configuration values
-  values.schema.json    # Defines the validation schema for values.yaml 
-  Chart.yaml            # The Chart yaml file containing chart specific information
-</code></pre></div>
-<ul>
-<li><strong>templates</strong>: The templates directory contains all resource definitions, for example, Services and Pods.</li>
-<li><strong>values.yaml</strong>: The values.yaml contains all default values for a deployment. It is possible to customize the deployment overwriting the default values of the values.yaml.</li>
-<li><strong>values.schema.json</strong>: To validate the values entered for a deployment, the values.schema.json provides configuration whenever an install or upgrade is performed with Helm.</li>
-</ul>
-<h2 id="helm-deployment-flow">Helm deployment flow</h2>
-<p><img alt="Helm deployment flow" src="../../../images/helm_chart_deployment_flow.png" /></p>
-<p>As outlined in the flow chart, when performing an install (or upgrade), the Helm Chart reads the values.yaml (and any overridden values, either provided through Helm CLI parameters or additional values files) and perform a schema validation check. After the schema check is successfully performed, Helm runs the templating engine to create the Kubernetes resource definitions out of the templates inside the Helm Charts.</p>
-<p>As a last step, Helm accesses the Kubernetes or OpenShift Cluster and create the resulting Kubernetes resources in the desired namespace.</p>
-<h2 id="deployment-structure">Deployment structure</h2>
-<p><strong>Basics per application structure</strong></p>
-<p>Each deployed application follows a similar deployment structure, using a common set of OpenShift or Kubernetes resources that follow naming conventions. Some of the DX 9.5 applications may have a different setup based on their special requirements, for example, the Digital Asset Management component, and its persistence definitions.</p>
-<p><strong>Stateful applications - Definition</strong></p>
-<p><img alt="Stateful applications" src="../../../images/helm_chart_stateful_applications_definition.png" /></p>
-<p>DX 9.5 container applications are managed by a StatefulSet, which controls the creation and life cycle of all pods it is responsible for. These Pods use Persistent Volumes for storing their application data, ConfigMaps to adjust application configuration, and Secrets to obtain access credentials.</p>
-<p>In front of all Pods is a Service which manages routing the traffic to the Pods. This Service is also called by HAProxy to fulfill incoming requests from outside the Kubernetes or OpenShift cluster.</p>
-<p><strong>Stateless applications - Services Management</strong></p>
-<p><img alt="Stateless applications" src="../../../images/helm_chart_stateless_applications_services_management.png" /></p>
-<p><strong>HAProxy and routing</strong></p>
-<p>For accessing applications from the outside, we deploy a reverse proxy in the form of an HAProxy. This reverse proxy routes the incoming requests to all application Services, which then distributes the requests to the corresponding Pods hosting the applications.</p>
-<p>HAProxy uses its configuration to decide which request needs to be mapped to which application in the DX 9.5 deployment (back-end). When requests are initiated from outside the Kubernetes or OpenShift cluster, HAProxy tries to fulfill those requests by using the configured routing. If it finds a matching endpoint, it forwards the request to the corresponding service, which then forwards the same requests to a Pod that is ready to fulfill the request.</p>
-<ul>
-<li><strong><a href="../architecture/core_interactions_kubernetes.md">DX 9.5 Core Interactions with Kubernetes</a></strong><br />
-This section provides more detailed information about how the  Digital Experience 9.5 Core container interacts with Kubernetes. Understanding this information may assist in interpreting observed behavior or in troubleshooting your HCL DX 9.5 Container deployments in Helm.</li>
-<li><strong><a href="../deployment/helm_deployment.md">Deploying DX 9.5 applications to container platforms using Helm</a></strong><br />
-This topic provides a list of all DX applications and resource definitions that configure the application runtime and are deployed to containers using Helm on OpenShift or Kubernetes platforms. As outlined in the overview, applications can also include ConfigMaps, Secrets, and Ingress.</li>
-<li><strong><a href="../architecture/persistent_volumes.md">PersistentVolumes and related operations considerations</a></strong><br />
-This topic provides details covering the PersistentVolumes (PVs) and related operations considerations in storing data for DX 9.5 stateful applications.</li>
-<li><strong><a href="../deployment/preparation/overview.md">Configuring DX 9.5 deployments to container platforms using Helm</a></strong><br />
-This topic covers details the configuration structure in the HCL Digital Experience 9.5 OpenShift and Kubernetes deployment with Helm.</li>
-<li><strong><a href="../architecture/container_scaling.md">Scaling DX 9.5 container deployments using Helm</a></strong><br />
-This topic provides information to apply container scaling capabilities, and how scaling resources are handled within the HCL DX 9.5 deployment using Helm. Refer to <code>HorizontalPodAutoscaler</code> details in <a href="https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/">Kubernetes</a> and <a href="https://docs.openshift.com/container-platform/4.7/nodes/pods/nodes-pods-autoscaling.html">Red Hat OpenShift documentation</a> for more information on these services.</li>
-<li><strong><a href="../architecture/dam_persistence_architecture.md">Digital Asset Management persistence architecture</a></strong><br />
-This topic describes the components of the Digital Asset Management persistence. The updated DAM persistence feature is available from HCL Digital Experience 9.5 Container Update CF198 and later.</li>
-</ul>
-<details class="info">
-<summary>Related information:</summary>
-<ul>
-<li><a href="../operator-based/dxtools_dxctl.md">HCL DX dxctl process</a></li>
-</ul>
-</details>
+<h1 id="overview">Overview</h1>
+<p>Learn more about the containerization architecture, including the supported container platforms in deploying HCL Digital Experience images for your environment.</p>
+<p>HCL introduced full support for containerization in Digital Experience (DX) 9.5. HCL Digital Experience users can deploy HCL Digital Experience images in Docker, Red Hat OpenShift 4.1 and higher, also Amazon Elastic Kubernetes Service (EKS), Microsoft Azure Kubernetes Service (AKS) and Google Kubernetes Engine (GKE) for test, development, staging, and production environments.</p>
+<p>Whether developing, testing, or running a full production environment, use of Docker images and containers are preferred for the ease of deploying applications, including the latest version of HCL Digital Experience. Deploy in a fraction of the time than what it takes in the traditional deployment models.</p>
+<p><img alt="Containerization Architecture Overview" src="../haproxy-migration/_img/haproxy-optional-ingress-architecture.png" /></p>
+<p>Please see the <a href="../../systemrequirements/9.5_all/supportedsoftware.md#kubernetes">Containerization Limitations/Requirements</a> and <a href="../deployment/helm_deployment/">Deployment</a> sections of the documentation before you begin.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 30, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 14, 2022</span>
       
     
   </small>
@@ -3977,7 +3836,7 @@ This topic describes the components of the Digital Asset Management persistence.
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.0238f547.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
     
   </body>
