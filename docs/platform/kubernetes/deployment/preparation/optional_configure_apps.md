@@ -121,6 +121,9 @@ To make `Tika` enable/disable, the value needs to set accordingly, same way for 
 |configureTika|disableStellentDCS|Result|
 |---------|-----------|-------------|
 |true|true|Apache Tika will be used for DX Search indexing. Oracle Stellent will not be used for DX Document Conversion Services.|
+|true|false|Apache Tika will be used for DX Search indexing. Oracle Stellent will not be used for DX Document Conversion Services.|
+|false|true|Oracle Stellent will be used for DX Search indexing, not be used for DX Document Conversion Services.|
+|false|false|Oracle Stellent will be used for DX Search indexing and for DX Document Conversion Services.|
 
 By default, both parameters are set to true as in the example below:
 
@@ -134,6 +137,9 @@ configuration:
     # Settings for enabling/disabling Stellent
     disableStellentDCS: true
 ```
+
+!!!important
+    Do not change the default configuration if you do not have a backup of Stellent files in your environment.
 
 ## OpenLDAP configuration
 
