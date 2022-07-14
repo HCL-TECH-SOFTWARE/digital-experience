@@ -120,7 +120,7 @@ To make `Tika` enable/disable, the value needs to set accordingly, same way for 
 
 Default configuration is should be like below:
 
-```
+```yaml
 # Application configuration
 configuration:
   # Application specific configuration for Core
