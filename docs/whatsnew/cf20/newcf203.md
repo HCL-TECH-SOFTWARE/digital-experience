@@ -15,14 +15,14 @@ Beginning with Container Update CF203, the Ambassador shipped as part of the DX 
 
 In CF203, Helm configuration settings for metrics are enabled by default, new guidance is added to deploy to an internal network, and guidance is provided explaining the process to migrate from the Ambassador to new HAProxy service.
 
-See the following Help Center topics [HCL DX 9.5 Kubernetes](../../platform/kubernetes/helm_overview.md), [Monitoring](../../platform/kubernetes/operations/monitoring/monitor_helm_deployment_metrics.md), [Deploying DX on internal network](../../platform/kubernetes/deployment/preparation/optional_internal_networking.md), and [Migrate from Ambassador to HAProxy](../../platform/kubernetes/haproxy-migration/haproxy-introduction.md) for more information. 
+See the following Help Center topics [HCL DX 9.5 Kubernetes](../../platform/kubernetes/overview.md), [Monitoring](../../platform/kubernetes/operations/monitoring/monitor_helm_deployment_metrics.md), [Deploying DX on internal network](../../platform/kubernetes/deployment/preparation/optional_internal_networking.md), and [Migrate from Ambassador to HAProxy](../../platform/kubernetes/haproxy-migration/haproxy-introduction.md) for more information. 
 
 !!!important
     In Container Update CF203, the migration from Ambassador to HAProxy must be completed as a required step, in preparation for the removal of Ambassador in the upcoming Container Update release. Refer to the following links for guidance on the migration.
 
 See the following Help Center topics for more information:
 
-- [HCL DX 9.5 Helm deployment](../../platform/kubernetes/architecture/overview.md)
+- [HCL DX 9.5 Helm deployment](../../platform/kubernetes/architecture/helm_overview.md)
 - [HAProxy overview](../../platform/kubernetes/haproxy-migration/haproxy-introduction.md)
 - [Migrate from Ambassador to HAProxy](../../platform/kubernetes/haproxy-migration/haproxy-migration.md)
 
@@ -55,13 +55,15 @@ Guidance and examples are added to customize the Site Manager interface to suppo
 - HCL DX 8.5 and 9.0: [Customizing the Site Manager User Interface](https://help.hcltechsw.com/digital-experience/8.5/admin-system/Customize_Site_Manager_User_Interface.html){:target="_blank"}
 
 ## Notice of deprecation and replacement of Document Conversion Services
-Document Conversion Services components in HCL Digital Experience software will be updated and replaced in HCL DX CF205 Update release. HCL Digital Experience will remove the DCS component supplied by Oracle, and replace with HCL supported functions. After that point, HCL Digital Experience v8.5, v9 and v9.5 Container Update and CF releases will include the newer HCL supported component.
-See the [Replacement of DCS component](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0096908) knowledge article for additional information.
+Document Conversion Services components in the HCL Digital Experience software will be updated and replaced in the HCL DX CF205 release. HCL Digital Experience will remove the DCS component supplied by Oracle, and replace it with HCL supported functions. After that point, HCL Digital Experience v8.5, v9.0, and v9.5 Container Update and CF releases will include the newer HCL supported component.
+For more information, see the [Replacement of DCS component](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0096908) knowledge article.
 
-!!! Important "Replacement of HCL Digital Experience v8.5, v9 and v9.5 base installers and Removal of CFs prior to CF205 due to Oracle DCS deprecation"
+!!! Important "Replacement of HCL Digital Experience v8.5, v9.0, and v9.5 base installers and Removal of CFs prior to CF205 due to Oracle DCS deprecation"
     
-    On August 20, 2022, [HCL Software License & Delivery Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344) (Flexnet) and repositories [managed by Immix Group for Federal customers](https://support.hcltechsw.com/csm?id=federal) will remove all CFs prior to CF205 ([CF01 – CF204](https://help.hcltechsw.com/digital-experience/9.5/overview/soft_fixes95.html)). HCL will also replace the HCL Digital Experience v[8.5](https://help.hcltechsw.com/digital-experience/8.5/welcome/wp_welcome.html), v[9](https://help.hcltechsw.com/digital-experience/9.0/welcome/wp9_welcome.html) and v[9.5](https://help.hcltechsw.com/digital-experience/9.5/welcome/wp95_welcome.html) base installer that contains the Oracle supplied Document Conversion Services component. The HCL Software License & Delivery Portal  delivery repositories will contain only the latest HCL Digital Experience v8.5, v9 and v9.5 base and Container Update and CF version which will contain the HCL supplied Document Conversion Services component.                                   
-    NOTE: CFs versions prior to CF205 of HCL Digital Experience 8.5, 9 and 9.5 base and Container Update and CF releases will not be available for download after August 20, 2022.
+    On August 20, 2022, [HCL Software License & Delivery Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344) (Flexnet) and repositories [managed by Immix Group for Federal customers](https://support.hcltechsw.com/csm?id=federal) will remove all CFs prior to CF205 ([CF01 – CF204](https://help.hcltechsw.com/digital-experience/9.5/overview/soft_fixes95.html)). HCL will also replace the HCL Digital Experience v[8.5](https://help.hcltechsw.com/digital-experience/8.5/welcome/wp_welcome.html), v[9.0](https://help.hcltechsw.com/digital-experience/9.0/welcome/wp9_welcome.html), and v[9.5](https://help.hcltechsw.com/digital-experience/9.5/welcome/wp95_welcome.html) base installers that contain the Oracle supplied Document Conversion Services component. The HCL Software License & Delivery Portal  repositories will contain only the latest HCL Digital Experience v8.5, v9.0, and v9.5 base installers and Container Update and CF versions, which will contain the HCL supplied Document Conversion Services component.
+
+    !!! attention 
+        CFs versions prior to CF205 of the HCL Digital Experience 8.5, 9.0, and 9.5 base installers and Container Update and CF releases will not be available for download after August 20, 2022.
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
 The HCL Software Academy offers technical education for the HCL Software portfolio of products, organized by practitioner role. New “What’s New in the latest DX CF release’ modules are available for Digital Experience business users, developers and administrators. See the HCL Digital Experience section of the HCL Software Academy and What’s New for Digital Experience section for more information.

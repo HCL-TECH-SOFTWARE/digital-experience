@@ -14,7 +14,7 @@ Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators
 
 See the following Help Center topics for more information:
 
--   [Containerization overview](../../platform/kubernetes/helm_overview.md)
+-   [Containerization overview](../../platform/kubernetes/overview.md)
 -   [Containerization Requirements and Limitations](../../platform/systemrequirements/9.5_all/supportedsoftware.md#kubernetes)
 -   [Additional Helm Tasks](../../platform/kubernetes/deployment/preparation/overview.md)
 -   [Monitor the HCL Digital Experience Container Deployment using Metrics](../../platform/kubernetes/operations/monitoring/basic_monitor_helm_deployment.md)
