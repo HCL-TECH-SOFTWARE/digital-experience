@@ -115,8 +115,14 @@ configuration:
       configWizard: true
 ```
 
-### Tika & Stellent Configuration
-To make `Tika` enable/disable, the value needs to set accordingly, same way for `Stellent`. By default both the value should be `true`, that means, by default `Tika` configuration is enable and `Stellent` is disable.
+### Tika and Stellent Configuration
+
+Beginning with HCL Digital Experience release 205, [Oracle Stellent Document Conversion Services](https://help.hcltechsw.com/digital-experience/9.5/admin-system/dcs_info.html) used by [HCL Digital Experience Search](https://help.hcltechsw.com/digital-experience/9.5/wcm/wcm_dev_search.html) and [HCL Digital Experience RemoteSearch](https://help.hcltechsw.com/digital-experience/9.5/admin-system/srcusgrmtsrchsrv.html) is not distributed or supported by HCL. Oracle functionality is replaced by Apache Tika. For Additional details on DCS services available in CF205 and later, see [this technote](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0096908).
+
+!!!important
+    Do not change the default configuration if you do not have a backup of Stellent files in your environment. For instructions on how to backup the Stellent files in a version prior to CF205, please refer to [this documentation page](!!!TODO!!!).
+
+    The settings in this section are only applied during an upgrade from one CF version to another. To run the configuration manually at any other time, please follow [the instructions documented here](!!!TODO!!!).
 
 |configureTika|disableStellentDCS|Result|
 |---------|-----------|-------------|
@@ -137,9 +143,6 @@ configuration:
     # Settings for enabling/disabling Stellent
     disableStellentDCS: true
 ```
-
-!!!important
-    Do not change the default configuration if you do not have a backup of Stellent files in your environment.
 
 ## OpenLDAP configuration
 
