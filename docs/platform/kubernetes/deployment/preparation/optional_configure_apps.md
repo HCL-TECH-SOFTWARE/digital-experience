@@ -118,14 +118,9 @@ configuration:
 ### Tika & Stellent Configuration
 To make `Tika` enable/disable, the value needs to set accordingly, same way for `Stellent`. By default both the value should be `true`, that means, by default `Tika` configuration is enable and `Stellent` is disable.
 
-Please refer below table for combination of the flag setting and it's result.
-
 |configureTika|disableStellentDCS|Result|
 |---------|-----------|-------------|
-|true|true||
-|true|false||
-|false|true||
-|false|false||
+|true|true|Apache Tika will be used for DX Search indexing. Oracle Stellent will not be used for DX Document Conversion Services.|
 
 By default, both parameters are set to true as in the example below:
 
