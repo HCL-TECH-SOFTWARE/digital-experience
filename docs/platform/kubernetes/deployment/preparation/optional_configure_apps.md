@@ -118,7 +118,7 @@ configuration:
 ### Tika & Stellent Configuration
 To make `Tika` enable/disable, the value needs to set accordingly, same way for `Stellent`. By default both the value should be `true`, that means, by default `Tika` configuration is enable and `Stellent` is disable (make a note on the variable name, it's `disableStellentDCS`, so you can enable `Stellent` by making the flag to `false` and to keep it disable, keep the value to `true`).
 
-Default configuration is should be like below:
+By default, both parameters are set to true as in the example below:
 
 ```yaml
 # Application configuration
