@@ -4,8 +4,9 @@ This section provides the steps on how the DAM extensibility allows the Kaltura 
 
 ## Architecture
 
-![Kaltura Plugin](../)
-![Kaltura plugin 2](../)
+![Kaltura plugin 2](../../images/Kaltura_configuration_Kaltura-Plugin-Design.png)
+![Kaltura Plugin](../../images/kaltura_configuration_Kaltura-Plugin.png)
+
 
 ## Kaltura configuration via DAM Extensibility
 
