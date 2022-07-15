@@ -1,7 +1,6 @@
 nav:
     - deploy_dx_components_using_hcl_dx_client_and_dx_connect.md
     - dxclient.md
-    - dxclientartifacts.md
     - DXClientArtifactType
     - troubleshooting_dxclient.md
     - dxconnect.md
