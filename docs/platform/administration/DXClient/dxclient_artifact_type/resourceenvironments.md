@@ -220,7 +220,7 @@ This topic describes the commands that are used to create, update, delete, and r
     -filePath <value>
     ```
 
--   **Example:**
+- !!! example
 
     -   For creating property:
 
@@ -263,7 +263,6 @@ This topic describes the commands that are used to create, update, delete, and r
     The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
 
 <!-- ???Info "Related information:" 
-
 
 [DXClient](../containerization/dxclient.md) -->
 

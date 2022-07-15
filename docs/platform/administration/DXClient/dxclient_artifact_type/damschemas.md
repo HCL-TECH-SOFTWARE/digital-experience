@@ -1,6 +1,6 @@
 # DAM schemas
 
-This topic contains the commands that administrators can use to get a list of all DAM schemas or delete inactive [Digital Asset Management](../digital_asset_mgmt/digital_asset_mgmt_overview.md) \(DAM\) schemas from persistence.
+This topic contains the commands that administrators can use to get a list of all DAM schemas or delete inactive [Digital Asset Management](../../../../productfeatures/digital_asset_mgmt/index.md) \(DAM\) schemas from persistence.
 
 ## Listing DAM schemas
 
@@ -172,11 +172,11 @@ Use the delete-dam-schema command to delete the inactive DAM schema.
     !!! note 
         In case the user does not enter the `schemaVersion`, user is prompted with a list of inactive schemas to choose from.
 
--   !!! example
+!!! example
 
-        ```
-        dxclient delete-dam-schema -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -ringAPIVersion <ringAPIVersion> -damAPIVersion <damAPIVersion> -schemaVersion <schemaVersion>
-        ```
+    ```
+    dxclient delete-dam-schema -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -ringAPIVersion <ringAPIVersion> -damAPIVersion <damAPIVersion> -schemaVersion <schemaVersion>
+    ```
 
 
 !!! note 
