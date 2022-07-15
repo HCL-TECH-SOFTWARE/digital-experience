@@ -131,7 +131,7 @@ Beginning with HCL Digital Experience release 205, [Oracle Stellent Document Con
 |false|true|Oracle Stellent will be used for DX Search indexing, not be used for DX Document Conversion Services.|
 |false|false|Oracle Stellent will be used for DX Search indexing and for DX Document Conversion Services.|
 
-By default, both parameters are set to true as in the example below:
+By default, both parameters are set to `true` as given in the following example:
 
 ```yaml
 # Application configuration
