@@ -1,6 +1,6 @@
 # Managing Web Content Syndicators and Subscribers using DXClient
 
-The section provides information about using the DXClient process to automate the management of Web Content Manager Syndicators, Subscribers, and get-syndication reports. For more information on the process and settings of the Web Content Manager Syndicators and Subscribers, see [How to manage syndicators and subscribers](../panel_help/wcm_syndication.md).
+The section provides information about using the DXClient process to automate the management of Web Content Manager Syndicators, Subscribers, and get-syndication reports. For more information on the process and settings of the Web Content Manager Syndicators and Subscribers, see [How to manage syndicators and subscribers](https://help.hcltechsw.com/digital-experience/9.5/panel_help/wcm_syndication.html).
 
 ## Managing syndicators
 

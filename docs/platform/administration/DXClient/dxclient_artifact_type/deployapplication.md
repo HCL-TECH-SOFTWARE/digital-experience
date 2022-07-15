@@ -138,7 +138,6 @@ The deploy-application command is used to deploy the EAR file into the WebSphere
     dxclient deploy-application -dxProtocol <http/https> -hostname <host-name> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -dxSoapPort <dxSoapPort> -hostname <hostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -applicationFile <application-file-with-path> -applicationName <application name> -dxProfileName <Profile name of the DX core server>
     ```
 
-
 !!! note 
     The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
 

@@ -36,12 +36,11 @@ This topic describes how to install the DXClient tool in a pipeline, by providin
 |WCM\_SITE\_AREA|SiteArea of the Script Application content|Required for deploy script application|
 |CONTENT\_NAME|Name of the Script Application instance to be created or updated|Required for deploy script application|
 
-![Sample pipeline for the DXClient node package file](../assets/dxclient-sample-pipeline-using-node-zip-file1.png)
-
-![Sample pipeline for the DXClient node package file](../assets/dxclient-sample-pipeline-using-node-zip-file2.png)![Sample pipeline for the DXClient node package file](../assets/dxclient-sample-pipeline-using-node-zip-file3.png)
+![Sample pipeline for the DXClient node package file](../../../images/dxclient-sample-pipeline-using-node-zip-file1.png)
+![Sample pipeline for the DXClient node package file](../../../images/dxclient-sample-pipeline-using-node-zip-file2.png)
+![Sample pipeline for the DXClient node package file](../../../images/dxclient-sample-pipeline-using-node-zip-file3.png)
 
 <!-- ???Info "Related information:"
-
 
 [How to translate WCM library content using export and import WCM with DXClient](../wcm/wcm_mls_export_import.md)
 

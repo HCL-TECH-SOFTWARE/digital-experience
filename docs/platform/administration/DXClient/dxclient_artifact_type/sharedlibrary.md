@@ -105,17 +105,17 @@ The shared-library command uses two sub-commands upload and delete to manage fil
     !!! note 
         For upload, the folder or zip file should contain only jars files that are to be uploaded to the default shared library location:
 
--   !!! example
+!!! example
 
-        Use this attribute to specify the path to a jar/zip file or folder containing jars in it:
+    Use this attribute to specify the path to a jar/zip file or folder containing jars in it:
 
-        ```
-        dxclient shared-library upload -dxUsername <dxUsername> -dxPassword <dxPassword> -hostname <dxConnectHostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxProfileName <Profile name of the DX Server> -libFilePath <path to jar/zip/Folder> 
-        ```
+    ```
+    dxclient shared-library upload -dxUsername <dxUsername> -dxPassword <dxPassword> -hostname <dxConnectHostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxProfileName <Profile name of the DX Server> -libFilePath <path to jar/zip/Folder> 
+    ```
 
-        ```
-        dxclient shared-library delete -dxUsername <dxUsername> -dxPassword <dxPassword> -hostname <dxConnectHostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxProfileName <Profile name of the DX Server> -libFileNames <file names> -libFilePath <value>
-        ```
+     ```
+    dxclient shared-library delete -dxUsername <dxUsername> -dxPassword <dxPassword> -hostname <dxConnectHostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxProfileName <Profile name of the DX Server> -libFileNames <file names> -libFilePath <value>
+    ```
 
 
 !!! note 

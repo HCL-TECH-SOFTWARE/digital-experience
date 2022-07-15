@@ -120,7 +120,7 @@ MLS Export
 |WCM\_LIBRARY\_ID|WCM library ID to export the contents of the library|Exports the available content from this library ID|
 |EXPORT\_PATH|The path to export the WCM contents of a library|The path where the content is exported|
 
-![](../images/wcm_mls_exim_export_pipeline.png "DXClient MLS export pipeline sample")
+![DXClient MLS export pipeline sample](../../../../images/wcm_mls_exim_export_pipeline.png)
 
 MLS Import
 
@@ -138,7 +138,7 @@ MLS Import
 |CONTENT\_HANDLER\_PATH|Alternate path for the portal context root or the content handler servlet|Default path: /wps/mycontenthandler/|
 |IMPORT\_FILE\_NAME|File name to import the translated content into DX|Imports the content from this file|
 
-![](../images/wcm_mls_exim_import_pipeline.png "DXClient MLS import pipeline sample")
+![DXClient MLS import pipeline sample](../../../../images/wcm_mls_exim_import_pipeline.png)
 
 
 <!-- ???Info "Related information:"

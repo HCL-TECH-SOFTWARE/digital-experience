@@ -1,6 +1,6 @@
 # DXConnect
 
-DXConnect is a servlet-based internal application deployed on top of IBM WebSphere Application Server in the HCL DX 9.5 CF19 and later releases, under the [Configuration Wizard profile - `cw_profile`](../config/cw_overview.html). DXConnect enables the DXClient tool to connect over an HTTP or HTTPS connection from a client development machine or remote server to a source or target HCL DX 9.5 server to execute certain tasks requested via DXClient commands. This topic covers the DXConnect installation and configuration instructions.
+DXConnect is a servlet-based internal application deployed on top of IBM WebSphere Application Server in the HCL DX 9.5 CF19 and later releases, under the [Configuration Wizard profile - `cw_profile`](https://help.hcltechsw.com/digital-experience/9.5/config/cw_overview.html). DXConnect enables the DXClient tool to connect over an HTTP or HTTPS connection from a client development machine or remote server to a source or target HCL DX 9.5 server to execute certain tasks requested via DXClient commands. This topic covers the DXConnect installation and configuration instructions.
 
 ## Authentication
 
@@ -45,15 +45,15 @@ To re-install DXConnect use the command below:
 
     1.  In Standalone and Cluster setups, the `ConfigEngine` task should be run under the `wp_profile` to have DXConnect installed in the correct location, and a restart of the `cw_profile` server may be required.
 
-    To verify it is installed on a given HCL DX Server 9.5 with CF19 or later, navigate to the **Configuration Wizard** Admin console and then under **Enterprise Applications**. The `dxconnect` application will appear on the console as shown in the example below. For more information on accessing and working with the Configuration Wizard, refer to [Accessing the Configuration Wizard](../config/cw_run.html) topics.
+    To verify it is installed on a given HCL DX Server 9.5 with CF19 or later, navigate to the **Configuration Wizard** Admin console and then under **Enterprise Applications**. The `dxconnect` application will appear on the console as shown in the example below. For more information on accessing and working with the Configuration Wizard, refer to [Accessing the Configuration Wizard](https://help.hcltechsw.com/digital-experience/9.5/config/cw_run.html) topics.
 
-    ![DXConnect installation](../assets/HCL_DXConnect_installation.png)
+    ![DXConnect installation](../../../images/HCL_DXConnect_installation.png)
 
     2.  In Red Hat OpenShift, the route for DXConnect is available under the name dx-deployment-service-dxconnect. For the other supported platforms, there is only one route path as usual.
 
 ## Accessing the ConfigWizard admin console in a container environment
 
-You can access the ConfigWizard admin console in a container environment from your local system. For more information, refer to [Accessing the ConfigWizard admin console in a container environment](helm_access_configwizard.md).
+You can access the ConfigWizard admin console in a container environment from your local system. For more information, refer to [Accessing the ConfigWizard admin console in a container environment](https://help.hcltechsw.com/digital-experience/9.5/containerization/helm_access_configwizard.html).
 
 
 <!-- ???Info "Related information:"  

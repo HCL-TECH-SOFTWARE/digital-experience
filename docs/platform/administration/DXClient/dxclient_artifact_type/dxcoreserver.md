@@ -178,7 +178,7 @@ The restart-dx-core command is used to restart the DX Core server.
 
     -   The target server details are needed only when the user needs to generate the summary of the configurations of both source and target servers.
 
-!!! example:
+!!! example
 
     ```
     dxclient dx-core-configuration-reports summary-report -hostname <hostname> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxConnectPort <dxConnectPort> -targetHostname <targetHostname> -targetDxConnectUsername <targetDxConnectUsername> -targetDxConnectPassword <targetDxConnectPassword> -targetDxConnectPort <targetDxConnectPort>

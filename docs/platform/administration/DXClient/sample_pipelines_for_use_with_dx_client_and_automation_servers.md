@@ -3,10 +3,9 @@
 A CI/CD pipeline can help automate processes in the development and test cycle, including deploying code to test and production environments. HCL DX 9.5 provides sample pipelines for use with the DXClient tooling to demonstrate how the deployment of portlets, Script Applications, Themes, DX Application, export and import of WCM libraries, etc., can be automated.
 
 !!! note 
-The sample pipelines referred in this topic are supported only until the HCL Digital Experience Container update version CF195. We recommend that you refer to the following sample pipelines for releases CF196 and later.
-
-    -   [Sample Pipelines for the DXClient Docker image file](sample_pipelines_docker_dxclient.md)
-    -   [Sample Pipelines for the DXClient node package file](sample_pipelines_node_dxclient.md)
+    The sample pipelines referred in this topic are supported only until the HCL Digital Experience Container update version CF195. We recommend that you refer to the following sample pipelines for releases CF196 and later.
+    - [Sample Pipelines for the DXClient Docker image file](../DXClient/sample_pipelines_docker_dxclient.md)
+    - [Sample Pipelines for the DXClient node package file](../DXClient/sample_pipelines_node_dxclient.md)
 
 ## Sample Pipeline details
 
@@ -34,7 +33,7 @@ This sample shows how to install the DXClient tool in a pipeline and then deploy
 |`DXCONNECT_PORT`|Port to connect to DXConnect servlet|Port for the DX Configuration Wizard profile|
 |`DXCONNECT_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name / password credentials needed to access DX server Configuration Wizard profile|
 
-![Install DXClient tool and deploy portlet](../assets/pipeline_deploy_portlet_sample.png)
+![Install DXClient tool and deploy portlet](../../../images/pipeline_deploy_portlet_sample.png)
 
 ## Deploy script application
 
@@ -55,7 +54,7 @@ This sample shows how to install the DXClient tool in a pipeline and then deploy
 |``WCMSITEAREA``|SiteArea of the Script Application content| |
 |``CONTENTNAME``|Name of the Script Application instance to be created or updated| |
 
-![Pipeline DXClient deploy script application sample](../assets/pipeline_deploy_script_app_sample.png)
+![Pipeline DXClient deploy script application sample](../../../images/pipeline_deploy_script_app_sample.png)
 
 ## Restore script application
 
@@ -74,7 +73,7 @@ This sample shows how to install the DXClient tool in a pipeline and then restor
 |`VERSION_NAME`|Version name of script application|Name of the version that should store the script application|
 |`RESTORE_AS_PUBLISHED`|Selected version to restore or draft|Restore as a draft or replace the published version|
 
-![Pipeline DXClient deploy script application sample](../assets/pipeline_deploy_script_restore_sample.png)
+![Pipeline DXClient deploy script application sample](../../../images/pipeline_deploy_script_restore_sample.png)
 
 ## Deploy DX application
 
@@ -99,7 +98,7 @@ This sample shows how to install the DXClient tool in a pipeline and then deploy
 |`DX_SOAP_PORT`|Soap Port number of the DX server|Required for EAR deployment|
 |`DX_PROFILE_PATH`|Profile path of the DX server|Required for EAR deployment|
 
-![Pipeline DXClient deploy application sample](../assets/pipeline_deploy_application_sample.png)
+![Pipeline DXClient deploy application sample](../../../images/pipeline_deploy_application_sample.png)
 
 ## Restart DX Core server
 
@@ -116,7 +115,7 @@ This sample shows how to restart the DX Core server using the DXClient tool in a
 |`DXCONNECT_PORT`|Port to connect to DXConnect servlet|Port for the DX Configuration Wizard profile. Default to 10202|
 |`DX_PROFILE_PATH`|Profile path of the DX Core server|Required for restarting the DX Core server|
 
-![Pipeline DXClient Restart DX Core Server sample](../assets/pipeline_dxclient_restart_dxcore_server_DONOTDELETE.png)
+![Pipeline DXClient Restart DX Core Server sample](../../../images/pipeline_dxclient_restart_dxcore_server_DONOTDELETE.png)
 
 ## Manage syndication
 
@@ -136,7 +135,7 @@ This sample shows how to install the DXClient tool in a pipeline and then enable
 |`UUID_FOR_SYNDICATION`|UUID of the syndicator/subscriber instance| |
 |`ENABLE`|Use true or false to enable or disable the syndicator/subscriber| |
 
-![Pipeline DXClient manage syndication](../assets/pipeline_dxclient_deploy_manage_syndication_sample.png)
+![Pipeline DXClient manage syndication](../../../images/pipeline_dxclient_deploy_manage_syndication_sample.png)
 
 ## Deploy theme
 
@@ -166,7 +165,7 @@ This sample shows how to install the DXClient tool in a pipeline and then deploy
 |`THEME_PATH`|WebDAV theme zip file|Required for WebDAV deployment|
 |`CONTENT_HANDLER_PATH`|Alternate path for the portal context root or the content handler servlet|Default to /wps/mycontenthandler/|
 
-![Pipeline DXClient deploy script application sample](../assets/pipeline_deploy_theme_sample.png)
+![Pipeline DXClient deploy script application sample](../../../images/pipeline_deploy_theme_sample.png)
 
 <!-- ???Info "Related information:"
 

@@ -164,11 +164,11 @@ This topic describes the commands that are used in managing the virtual portal a
         !!! note 
             Create virtual portal task creates an empty virtual portal in the DX server.
 
-        **Example usage:**
+        !!! example usage
 
-        ```
-         dxclient manage-virtual-portal create -hostname <dxConnectHostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxProfileName <Profile name of the DX Server> -dxUsername <dxUsername> -dxPassword <dxPassword> -dxWASUsername < Username of the DX WAS server> -dxWASPassword <Password of the DX WAS server> -vpTitle <virtual-portal-Title> -vpRealm <virtual-portal-realm>  -vpAdminGroup <virtual-portal-adminGroup> -vpHostname <virtual-portal-hostname> -vpContext<virtual-portal-context>
-        ```
+            ```
+            dxclient manage-virtual-portal create -hostname <dxConnectHostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxProfileName <Profile name of the DX Server> -dxUsername <dxUsername> -dxPassword <dxPassword> -dxWASUsername < Username of the DX WAS server> -dxWASPassword <Password of the DX WAS server> -vpTitle <virtual-portal-Title> -vpRealm <virtual-portal-realm>  -vpAdminGroup <virtual-portal-adminGroup> -vpHostname <virtual-portal-hostname> -vpContext<virtual-portal-context>
+            ```
 
     -   **`manage-virtual-portal list` command**
 
@@ -220,11 +220,11 @@ This topic describes the commands that are used in managing the virtual portal a
         -dxWASPassword <value>
         ```
 
-        **Example usage:**
+        !!! example usage
 
-        ```
-        dxclient manage-virtual-portal list -hostname <dxConnectHostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxProfileName <profile-name-of-the-DX-server> -dxUsername <dxUsername> -dxPassword <dxPassword> -dxWASUsername <username-of-the-DX-WAS-server> -dxWASPassword <password-of-the-DX-WAS-server> 
-        ```
+            ```
+            dxclient manage-virtual-portal list -hostname <dxConnectHostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxProfileName <profile-name-of-the-DX-server> -dxUsername <dxUsername> -dxPassword <dxPassword> -dxWASUsername <username-of-the-DX-WAS-server> -dxWASPassword <password-of-the-DX-WAS-server> 
+            ```
 
     -   **`manage-virtual-portal import` command:**
 
@@ -270,13 +270,14 @@ This topic describes the commands that are used in managing the virtual portal a
         -vpContext <value>
         ```
 
-        **Limitation:** Currently, import virtual portal feature supports only `vpContext` and does not support `vpHostname`. Support for Virtual portal with host name might be added in the future release.
+        !!! limitation
+            Currently, import virtual portal feature supports only `vpContext` and does not support `vpHostname`. Support for Virtual portal with host name might be added in the future release.
 
-        **Example Usage:**
+        !!! example usage
 
-        ```
-        dxclient manage-virtual-portal import -dxProtocol <http/https> -hostname <host-name> -dxPort <dxPort> -xmlConfigPath <xmlConfigPath> -dxUsername <dxUsername> -dxPassword <dxPassword>  -xmlFile <xml-file-with-path> -vpContext <virtual-portal-context>
-        ```
+            ```
+            dxclient manage-virtual-portal import -dxProtocol <http/https> -hostname <host-name> -dxPort <dxPort> -xmlConfigPath <xmlConfigPath> -dxUsername <dxUsername> -dxPassword <dxPassword>  -xmlFile <xml-file-with-path> -vpContext <virtual-portal-context>
+            ```
 
     -   **`manage-virtual-portal export` command:**
 
