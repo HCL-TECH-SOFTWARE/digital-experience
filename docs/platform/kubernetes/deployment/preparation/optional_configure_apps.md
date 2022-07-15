@@ -120,7 +120,7 @@ configuration:
 Beginning with HCL Digital Experience release 205, [Oracle Stellent Document Conversion Services](https://help.hcltechsw.com/digital-experience/9.5/admin-system/dcs_info.html), which is used by [HCL Digital Experience Search](https://help.hcltechsw.com/digital-experience/9.5/wcm/wcm_dev_search.html) and [HCL Digital Experience RemoteSearch](https://help.hcltechsw.com/digital-experience/9.5/admin-system/srcusgrmtsrchsrv.html) is not distributed or supported by HCL. Oracle functionality is replaced by Apache Tika. For additional information on DCS services available in CF205 and later, see the [Replacement of Document Conversion Services component](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0096908) knowledge article.
 
 !!!important
-    Do not change the default configuration if you do not have a backup of Stellent files in your environment. For instructions on how to backup the Stellent files in a version prior to CF205, please refer to [this documentation page](!!!TODO!!!).
+    Do not change the default configuration if you do not have a backup of the Stellent files in your environment. For instructions on how to backup the Stellent files in a version prior to CF205, please refer to [Creating a backup of DCS files](https://help.hcltechsw.com/digital-experience/9.5/admin-system/dcs_backup.html).
 
     The settings in this section are only applied during an upgrade from one CF version to another. To run the configuration manually at any other time, please follow [the instructions documented here](!!!TODO!!!).
 
