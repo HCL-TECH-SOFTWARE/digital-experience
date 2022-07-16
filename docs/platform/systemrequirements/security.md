@@ -1,8 +1,8 @@
 # Security
 
-The supported software section specifies the additional software that HCL Digital Experience 9.5 supports.
+The supported software section specifies the additional software that HCL Digital Experience 9.5 requires.
 
-## LDAP Servers 
+## LDAP servers 
 All LDAP Servers that support the LDAP V3 Specification are supported.
 
 |Supported Software|Version|Supported software minimum|Product minimum|Components|Operating System Restrictions?|

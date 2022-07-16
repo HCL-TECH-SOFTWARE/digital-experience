@@ -1,6 +1,6 @@
 # Unsupported features
 
-!!! warning
+!!! important
     Unsupported features and themes must be removed prior to migration. 
 
 ## Recentlty unsupported features

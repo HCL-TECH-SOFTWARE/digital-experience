@@ -1,56 +1,57 @@
 # Software requirements
-The supported software section specifies the additional software that HCL Portal Express 9.5 supports.
+The supported software section specifies the additional software that HCL Portal Express 9.5 requires.
 
 ## Kubernetes
 
 This section describes the requirements to deploy the HCL Digital Experience 9.5 images to container platforms and current limitations.
 
-!!! warning "Discontinuation of Operator"
-    **Attention:** Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience \(DX\) [Operator-based deployments](../../platform/kubernetes/operator-based/deploy_container_platforms.md) and will provide support only for [Helm-based deployments](../../platform/kubernetes/architecture/helm_overview.md). There will be no further updates or code fixes provided for the Operator-based deployments. HCL requires all customers to migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based deployments](../../platform/kubernetes/operator-migration/operator_migration_preparation.md).
+!!! important "Discontinuation of Operator"
+    **Attention:** Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience (DX) [Operator-based deployments](../../platform/kubernetes/operator-based/deploy_container_platforms.md) and provides support only for [Helm-based deployments](../../platform/kubernetes/architecture/helm_overview.md). HCL plans no further updates or code fixes provided for the Operator-based deployments. All customers must migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based deployments](../../platform/kubernetes/operator-migration/operator_migration_preparation.md).
 
 Consult the [HCL Digital Experience 9.5 Support Statements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03) on the HCL Digital Experience Support pages for the latest updates on supported platforms, components, and release levels.
 ### Requirements for supported file systems
 
 This section describes the requirements for supported file systems.
 
--   DX requires two \(2\) `ReadWriteMany` volumes:
+-   DX requires two (2) `ReadWriteMany` volumes:
     -   One volume for Core.
     -   One volume for Digital Asset Management.
 -   All the other pods require `ReadWriteOnce` volumes.
--   DX is input-output \(I/O\) intensive and requires a high-performance file system for optimization.
+-   DX is input/output (I/O) intensive and requires a high-performance file system for optimization.
 -   A `persistence-node` relies on PostgreSQL which requires the use of hard links. Storage systems \(like Azure Files\) that do not support the use of hard links cannot be used. For more information, see the [Microsoft documentation for features not supported by the Azure File service](https://docs.microsoft.com/en-us/rest/api/storageservices/features-not-supported-by-the-azure-file-service).
--   All DX applications require the use of symbolic links and soft links. Storage systems must support the use of symbolic links and soft links. If you are using Azure Files, you must enable `mountOptions` of the StorageClass using `mfsymlinks`. For more information, see the [Microsoft documentation on troubleshooting Azure Files on Linux \(SMB\)](https://docs.microsoft.com/en-us/azure/storage/files/storage-troubleshoot-linux-file-connection-problems#cannot-create-symbolic-links---ln-failed-to-create-symbolic-link-t-operation-not-supported).
--   You can configure volume sizes individually per volume and these are dependent of the respective usage. For more information, see the following Help Center topics:
+-   All DX applications require the use of symbolic links and soft links. Storage systems must support the use of symbolic links and soft links. If you use Azure Files, enable `mountOptions` of the StorageClass using `mfsymlinks`. For more information, see the [Microsoft documentation on troubleshooting Azure Files on Linux \(SMB\)](https://docs.microsoft.com/en-us/azure/storage/files/storage-troubleshoot-linux-file-connection-problems#cannot-create-symbolic-links---ln-failed-to-create-symbolic-link-t-operation-not-supported).
+-   You can configure volume sizes individually by volume, and these volume sizes are depend on the respective usage. For more information, see the following Help Center topics:
     -   [Configuring PVCs in a Helm deployment](deployment/preparation/prepare_persistent_volume_claims.md)
     -   Customizing the container for Operator-based deployments <!-- [see *Related information* section for related topic links] -->
+
 ### Requirements for Helm-based deployments
 
-This section describes requirements and current limitations for HCL Digital Experience 9.5 Container Update CF200 and later deployments using Helm.
+This section describes requirements and current limitations for HCL Digital Experience 9.5 Container Update CF200 and later deployments that use Helm.
 
-HCL DX 9.5 CF200 and later is architected to run on any Certified Kubernetes platform \([https://www.cncf.io/certification/software-conformance](https://www.cncf.io/certification/software-conformance)\), provided that,
+HCL DX 9.5 CF200 and later is designed to run on any Certified Kubernetes platform ([https://www.cncf.io/certification/software-conformance](https://www.cncf.io/certification/software-conformance)), provided the following are true:
 
--   the Kubernetes platform is hosted on x86\_64 hardware
--   the Kubernetes platform is officially supported by Helm \([https://helm.sh/docs/topics/kubernetes\_distros/](https://helm.sh/docs/topics/kubernetes_distros/)\).
+-   The Kubernetes platform is hosted on x86_64 hardware.
+-   The Kubernetes platform is officially supported by Helm ([https://helm.sh/docs/topics/kubernetes\_distros/](https://helm.sh/docs/topics/kubernetes_distros/)).
 
-For the list of Kubernetes versions that are tested and supported by HCL, refer to the [HCL DX supported hardware and software statements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=ba230c701b983c50f37655352a4bcb29) page.
+For the list of Kubernetes versions that are tested and supported by HCL, see the [HCL DX supported hardware and software statements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=ba230c701b983c50f37655352a4bcb29) page.
 
-Even though the platforms might be Certified Kubernetes platforms, you might find the environments varying slightly based on the vendors. HCL Support will make a reasonable effort to assist the customer in problem resolution in scenarios where the Kubernetes version is still under support by the vendor. If there are any unresolved issues, HCL Support will provide alternative implementation recommendations or open Feature Requests for the problem scenario.
+Even though the platforms may be Certified Kubernetes platforms, you might find the environments varying slightly by vendors. We recommend that you contact HCL Support regarding what help you need in scenarios where the vendor still supports the Kubernetes version in use. If you have any unresolved issues, HCL Support may provide alternative implementation paths or open Feature Requests for the problem scenario.
 
-Internally, HCL tests DX against a range of Kubernetes platforms that is regularly reviewed and updated. We do not test with every single platform vendor, but aim to cover a representative sample of popular Kubernetes implementations. See the [HCL DX supported hardware and software statements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=ba230c701b983c50f37655352a4bcb29) on the HCL Support Knowledge Base for additional details.
+Internally, HCL tests DX against a range of Kubernetes platforms that is regularly reviewed and updated. HCL does not test with every single platform vendor, but aims to cover a representative sample of popular Kubernetes implementations. See the [HCL DX supported hardware and software statements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=ba230c701b983c50f37655352a4bcb29) on the HCL Support Knowledge Base for additional details.
 
-To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms using Helm, the following are required:
+To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms by using Helm, the following resources required:
 
 -   **Helm installation**:
 
-    Download and install Helm to your target environment. HCL DX 9.5 CF200 and later container deployment is tested and is supported with Helm v3. For more information regarding the supported Helm version for individual Kubernetes versions, refer [Helm documentation](https://helm.sh/).
+    Download and install Helm to your target environment. HCL DX 9.5 CF200 and later container deployments are tested and is supported with Helm v3. For more information regarding the supported Helm version for individual Kubernetes versions, refer [Helm documentation](https://helm.sh/).
 
 -   **Migration**:
 
     For information about migrating from Operator-based to Helm-based deployments, see [Migrating from Operator-based to Helm-based deployments](operator-migration/operator_migration_preparation.md).
 
--   **Container platform capacity resource requirements**:
+-   **Resource requirements for container platform capacity**:
 
-    The following table outlines the default minimum capacity of container resources requested by the HCL DX 9.5 Container Components in the Helm-based deployments, as well as the number of Pods required of each component.
+    The following table outlines the default minimum capacity of container resources that the HCL DX 9.5 Container Components in the Helm-based deployments requires, and the number of required Pods for each component.
 
     |Component|Resource name|Pod Minimum CPU|Pod Minimum Memory|No. of Pods Minimum|
     |---------|-------------|---------------|------------------|-------------------|
@@ -70,40 +71,40 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
     |HAProxy|haproxy|1|1024MB|1|
 
 
-### DX Kubernetes Support Matrix
-View the latest Kubernetes versions and platforms tested and supported for specific HCL Digital Experience 9.5 Container Update deployments.
+### DX Kubernetes support matrix
+View the latest Kubernetes versions and platforms that HCL tested and supports for specific HCL Digital Experience 9.5 Container Update deployments.
 
-!!! attention
+!!! important
 
-    Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience (DX) [Operator-based deployments](https://help.hcltechsw.com/digital-experience/9.5/containerization/deploy_container_platforms.html){:target="_blank"} and will provide support only for [Helm-based deployments](../platform/kubernetes/index.md). There will be no further updates or code fixes provided for the Operator-based deployments. HCL requires all customers to migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based](../platform/kubernetes/operator-migration/operator_migration_preparation.md) deployments.
+    Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience (DX) [Operator-based deployments](https://help.hcltechsw.com/digital-experience/9.5/containerization/deploy_container_platforms.html){:target="_blank"} and provides support only for [Helm-based deployments](../platform/kubernetes/index.md). HCL will release no further updates or code fixes provided for the Operator-based deployments. All customers must migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based](../platform/kubernetes/operator-migration/operator_migration_preparation.md) deployments.
 
-HCL encourages customers to remain up-to-date on the latest DX and Kubernetes releases. As a result, DX will provide all fixes on the latest release. Customers may be asked to upgrade to the latest DX release to assist with problem determination.
+HCL encourages customers to remain up-to-date on the latest DX and Kubernetes releases. As a result, HCL is making all available DX fixes on the latest release. Customers may be asked to upgrade to the latest DX release to assist with problem determination.
 
-#### Kubernetes Platform Support Policy
+#### Kubernetes platform support policy
 
-HCL DX 9.5 CF200 and later is architected to run on any Certified Kubernetes platform (https://www.cncf.io/certification/software-conformance), provided that,
+HCL DX 9.5 CF200 and later is designed to run on any Certified Kubernetes platform (https://www.cncf.io/certification/software-conformance), provided the following statements are true:
 
-- the Kubernetes platform is hosted on x86_64 hardware
-- the Kubernetes platform is officially supported by Helm (https://helm.sh/docs/topics/kubernetes_distros/).
+- The Kubernetes platform is hosted on x86_64 hardware.
+- The Kubernetes platform is officially supported by Helm (https://helm.sh/docs/topics/kubernetes_distros/).
 
-Internally, HCL tests DX against a range of Kubernetes platforms that is regularly reviewed and updated, with the intent of staying up-to-date as possible. We do not test with every single platform vendor, but aim to cover a representative sample of popular Kubernetes implementations. See [Table 1](#table-1-tested-kubernetes-platforms-on-full-container-deployment) for the list of Kubernetes Platforms that HCL has tested with.
+Internally, HCL tests DX against a range of Kubernetes platforms that are regularly reviewed and updated, with the intent of staying as up-to-date as possible. HCL does not test with every single platform vendor, but aims to cover a representative sample of popular Kubernetes implementations. See [Table 1](#table-1-tested-kubernetes-platforms-on-full-container-deployment) for the list of Kubernetes Platforms that HCL has tested with.
 
 ##### Table 1: Tested Kubernetes Platforms on Full Container Deployment
 
-This table provides information about the sample Kubernetes Platforms that are tested with DX.
+This table provides information about the sample Kubernetes platforms that are tested with DX.
 
 |Kubernetes platforms on full deployments|Hybrid deployments (Kubernetes/on Premise)|
 |--------------|-----------------|
 |- Amazon EKS<br/>- Google GKE<br/>- Microsoft Azure AKS<br/>- Red Hat OpenShift|- Amazon EKS / AWS EC2<br/>- Red Hat OpenShift on AWS / AWS EC2|
 
 
-Kubernetes Version Support Policy
-The list of Kubernetes versions that are tested and supported by HCL are included in [Table 2](#table-2-tested-and-supported-kubernetes-versions-on-full-container-deployment).
-- From time-to-time, platform providers may release previews of upcoming Kubernetes versions. We will not provide support for those versions.
+#### Kubernetes version support policy
+[Table 2](#table-2-tested-and-supported-kubernetes-versions-on-full-container-deployment) lists the Kubernetes versions that HCL tested and supports.
+- From time-to-time, platform providers may release previews of upcoming Kubernetes versions. HCL does not provide support for those versions.
 - If you encounter any issue on an unsupported or untested Kubernetes version, you may be asked to install a supported level.
 
 ##### Table 2: Tested and Supported Kubernetes Versions on Full Container Deployment
-This table provides information about the Kubernetes versions that are tested and supported in HCL DX CF releases.
+This table provides information about the Kubernetes versions that HCL tested and supports in HCL DX CF releases.
 
 Review your chosen Kubernetes platform and ensure that it supports the following Kubernetes versions:
 
@@ -114,10 +115,10 @@ Review your chosen Kubernetes platform and ensure that it supports the following
 |CF202| Kubernetes 1.21<br/>Kubernetes 1.20<br/>Kubernetes 1.19 <br/>|
 |CF201| Kubernetes 1.21<br/>Kubernetes 1.20<br/>Kubernetes 1.19 <br/>|
 
-!!! attention "__*__ CF203 limited support statement"
+!!! important "__*__ CF203 limited support statement"
     Starting with CF203, HCL DX supports Kubernetes 1.22 only for HAProxy-based deployments, and not for deployments that are still running HCL DX's Ambassador.
 
-## Application Servers
+## Application servers
 
 |Prerequisite|Version|Supported software versions|Product Minimum|Components|Operating system restrictions?|
 |----------|----------|----------|----------|----------|----------|
@@ -155,15 +156,15 @@ Review your chosen Kubernetes platform and ensure that it supports the following
 |Oracle Database 19c|19c|19c and later maintenance|9.5|Full|No|
 |Oracle on Amazon Relational Database Service|12.2.0.1.0|12.2.0.1.0 and later maintenance|9.5|Full|No|
 
-\* Apache Derby is not supported in a product environment.
-\* DB2: Includes support for DB2 pureScale component.
+\* Apache Derby is not supported in a production environment.
+\* DB2: Includes support for the DB2 pureScale component.
 
-## Development Tools 
+## Development tools 
 |Supported Software|Version|Supported software minimum|Product minimum|Components|Operating System Restrictions?|
 |-----------|-----|------------------|-----|------|-------------|
 |Rational Application Developer for WebSphere|9.7|9.7 and later maintenance|9.5|Full|No|
 
-## JDBC Drivers 
+## JDBC drivers 
 |Supported Software|Version|Supported software minimum|Product minimum|Components|Operating System Restrictions?|
 |-----------|-----|------------------|-----|------|-------------|
 |IBM Application Connectivity for DB2 for z/OS Feature|All Versions|Newer levels are not currently supported|9.5|Full|No|
@@ -174,24 +175,24 @@ Review your chosen Kubernetes platform and ensure that it supports the following
 ||6.2|6.2 and later maintenance|9.5|Full|No|
 |Oracle JDBC Driver 12.c|12.2**|12.2 and later maintenance|9.5|Full|No|
 
-* JDBC drivers are shipped as DB2 for z/OS APARs. You can check for the appropriate APAR/PTF numbers in the DB2 for z/OS Infocenter, 'Programming for DB2 > Programming for Java > Supported drivers for JDBC and SQLJ'. Obtain the PTFs from DB2 on z/OS support or IBMLINK. Version 3.58 and later are supported.
+* JDBC drivers are shipped as DB2 for z/OS APARs. You can check for the appropriate APAR/PTF numbers in the DB2 for z/OS Infocenter (**Programming for DB2 > Programming for Java > Supported drivers for JDBC and SQLJ**). Obtain the PTFs from DB2 on z/OS support or IBMLINK. Version 3.58 and later are supported.
 * Requires APAR PK93123 for DB2 on z/OS V9.1. You can obtain the fix from DB2 on z/OS support or IBMLINK.
 ** Oracle JDBC Driver Thin (type 4) Oracle JDBC Driver Thick, TAF (type 2) - Supported on Linux operating systems only.
 
-## LDAP Servers 
+## LDAP servers 
 All LDAP Servers that support the LDAP V3 Specification are supported.
 
 |Supported Software|Version|Supported software minimum|Product minimum|Components|Operating System Restrictions?|
 |-----------|-----|------------------|-----|------|-------------|
 |IBM Security Directory Suite|8.0.1|8.0.1 and later maintenance|9.5|Full|No|
 
-## Product Specific or Mixed Content 
+## Product-specific or mixed content 
 |Supported Software|Version|Supported software minimum|Product minimum|Components|Operating System Restrictions?|
 |-----------|-----|------------------|-----|------|-------------|
 |Dojo Toolkit|1.9|1.9|9.5|Full|No|
 |IBM License Metric Tool|9.2|9.2 and later maintenance|9.5|Full|No|
 
-## Security Management 
+## Security management 
 |Supported Software|Version|Supported software minimum|Product minimum|Components|Operating System Restrictions?|
 |-----------|-----|------------------|-----|------|-------------|
 |CA Siteminder|12.0*|12.0 and later maintenance|9.5|Full|No|
@@ -202,7 +203,7 @@ All LDAP Servers that support the LDAP V3 Specification are supported.
 * For AIX customers, AIX 7.1 or higher is required. Please note this product does not support JDK 8.
 * Please note IBM Security Access Manager for Web 7.0 does not support JDK 8.
 
-## Web Browsers 
+## Web browsers 
 |Supported Software|Supported software minimum and later|Product minimum|Components|Operating System Restrictions?|
 |-----------|-----|------------------|-----|------|
 |Android default browser|Newer levels are tested|9.5|Full|No|
@@ -214,7 +215,7 @@ All LDAP Servers that support the LDAP V3 Specification are supported.
 |Mozilla Firefox|Newer levels are tested|9.5|Full|No|
 |Mozilla Firefox ESR|Newer levels are tested|9.5|Full|No|
 
-## Web Servers (Non-Container Platforms)
+## Web servers (non-container platforms)
 |Supported Software|Version|Supported software minimum, and later|Product minimum|Components|Operating System Restrictions?|
 |-----------|-----|------------------|-----|------|-------------|
 |Apache Server|2.4|2.4|9.5|Full|No|
@@ -224,9 +225,9 @@ All LDAP Servers that support the LDAP V3 Specification are supported.
 ||9.0.5|9.0.5 and later maintenance|9.5|Full|No|
 |Microsoft Internet Information Services|10.0|10.0 and later maintenance|9.5|Full|No|
 
-* IBM HTTP Server 8.5.5 is only supported with HCL Digital Experience Server V8.5.5.x.
+* IBM HTTP Server 8.5.5 is supported only with HCL Digital Experience Server V8.5.5.x.
 
-## WebDAV Client 
+## WebDAV client 
 |Supported Software|Version|Supported software minimum|Product minimum|Components|Operating System Restrictions?|
 |-----------|-----|------------------|-----|------|-------------|
 |JSCAPE AnyClient|6.0|6.0 and later maintenance|9.5|Full|No|

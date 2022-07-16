@@ -1,5 +1,3 @@
-## Databases
-
 |Supported Software|Version|Supported software minimum|Product minimum|Components|Operating System Restrictions?|
 |-----------|-----|------------------|-----|------|-------------|
 |Apache Derby|10.11* and future fix packs|10.11*<br/>Newer levels are not currently supported|9.5|Full|No|
@@ -21,5 +19,5 @@
 |Oracle Database 19c|19c|19c and later maintenance|9.5|Full|No|
 |Oracle on Amazon Relational Database Service|12.2.0.1.0|12.2.0.1.0 and later maintenance|9.5|Full|No|
 
-\* Apache Derby is not supported in a product environment.
+\* Apache Derby is not supported in a product environment.<br>
 \* DB2: Includes support for DB2 pureScale component.

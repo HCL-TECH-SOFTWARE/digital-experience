@@ -1,8 +1,8 @@
 # Container image list
 
-This section presents the latest HCL DX 9.5 Container images available.
+This section presents the latest available HCL Digital Experience (DX) 9.5 Container images available.
 
-The HCL DX 9.5 container update releases may be obtained from your HCL Digital Experience entitlements in the [HCL Software License Portal](https://www.hcltech.com/software/support/release), in the **HCL\_Portal\_8.5\_9.0\_9.5\_CFs** download package entry, and the **HCL\_DX\_9.5\_Container\_Updates** download package entry for HCL Digital Experience Cloud Native 9.5 entitlements.
+You can obtain the HCL DX 9.5 container update releases may be obtained from your HCL Digital Experience entitlements in the [HCL Software License Portal](https://www.hcltech.com/software/support/release), in the **HCL\_Portal\_8.5\_9.0\_9.5\_CFs** download package entry, and the **HCL\_DX\_9.5\_Container\_Updates** download package entry for HCL Digital Experience Cloud Native 9.5 entitlements.
 
 Video: [How to upload HCL Digital Experience 9.5 CF container images to a private repository](https://youtu.be/XJONRdpgCuo)
 
@@ -10,7 +10,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 -   **Container Update CF204**
 
-    If deploying the HCL DX 9.5 CF204 release, the package name and images are as follows:
+    If you are deploying the HCL DX 9.5 CF204 release, the package name and images are as follows:
 
     **HCL DX 9.5 CF204 DXClient files**:
 
@@ -108,7 +108,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 -   **Container Update CF203**
 
-    If deploying the HCL DX 9.5 CF203 release, the package name and images are as follows:
+    If you are deploying the HCL DX 9.5 CF203 release, the package name and images are as follows:
 
     **HCL DX 9.5 CF203 DXClient files**:
 
@@ -206,7 +206,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 -   **Container Update CF202**
 
-    If deploying the HCL DX 9.5 CF202 release, the package name and images are as follows:
+    If you are deploying the HCL DX 9.5 CF202 release, the package name and images are as follows:
 
     **HCL DX 9.5 CF201 DXClient files**:
 
@@ -300,7 +300,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 -   **Container Update CF201**
 
-    If deploying the HCL DX 9.5 CF201 release, the package name and images are as follows:
+    If you are deploying the HCL DX 9.5 CF201 release, the package name and images are as follows:
 
     **HCL DX 9.5 CF201 DXClient files**:
 
@@ -395,7 +395,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 -   **Container Update CF200**
 
-    If deploying the HCL DX 9.5 CF200 release, the package name and images are as follows:
+    If you are deploying the HCL DX 9.5 CF200 release, the package name and images are as follows:
 
     **HCL DX 9.5 CF200 DXClient files**:
 
@@ -407,11 +407,11 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
         hcl-dxclient-v95_CF200_20211213-1459.zip
         ```
 
-    **HCL DX 9.5 CF\_200-hcl-dx-kubernetes-v95-CF200.zip**
+    **HCL DX 9.5 CF 200-hcl-dx-kubernetes-v95-CF200.zip**
 
     !!! important
     
-        With the Operator-based deployment being removed starting in HCL DX Container Update 9.5 CF200, you will find some changes in the list of files and their names in CF199 and later releases. For more information, see [List of image files and changes from CF198 and later](#simpletable_cst_4lf_yrb).
+        Starting with HCL DX Container Update 9.5 CF200, HCL removed the Operator-based deployment. Because of this change, you will find some changes in the list of files and their names in CF199 and later releases. For more information, see [List of image files and changes from CF198 and later](#simpletable_cst_4lf_yrb).
 
     -   ```
         hCL DX notices V9.5 CF200.txt
@@ -494,7 +494,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 -   **Container Update CF199**
 
-    If deploying the HCL DX 9.5 CF199 release, the package name and images are as follows:
+    If you are deploying the HCL DX 9.5 CF199 release, the package name and images are as follows:
 
     **HCL DX 9.5 CF199 DXClient files**:
 
@@ -598,7 +598,10 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 !!! important
 
-     With the Operator-based deployment being deprecated in CF198 and planned to be removed in HCL DX Container Update 9.5 CF200, you will find some changes in the list of files and their names in CF199 and later releases.
+     HCL deprecated Operator-based deployment in CF198 and plans to remove in HCL DX Container Update 9.5 CF200. You can find some changes in the list of files and their names in CF199 and later releases.
+
+!!! note
+    The new image files and the change in file names are highlighted in the table below.
 
 |Component|Image name|CF198|CF199|
 |---------|----------|-----|-----|
@@ -628,7 +631,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 -   **CF198**
 
-    If deploying HCL DX 9.5 CF198 release, the package name and images are as follows:
+    If you are deploying HCL DX 9.5 CF198 release, the package name and images are as follows:
 
     **HCL DX 9.5 CF198 DXClient files**:
 
@@ -727,7 +730,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 -   **CF197**
 
-    If deploying HCL DX 9.5 CF197 release, the package name and images are as follows:
+    If you are deploying HCL DX 9.5 CF197 release, the package name and images are as follows:
 
     **HCL DX 9.5 CF197 Client - hcl-dx-client-v95-CF197.zip**:
 
@@ -816,7 +819,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 -   **CF196**
 
-    If deploying HCL DX 9.5 CF196 release, the package name and images are as follows:
+    If you are deploying HCL DX 9.5 CF196 release, the package name and images are as follows:
 
     **HCL DX 9.5 CF196 Client - hcl-dx-client-v95-CF196.zip**:
 
@@ -905,7 +908,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 -   **CF195**
 
-    If deploying HCL DX 9.5 CF195 release, the package name and images are as follows:
+    If you are deploying HCL DX 9.5 CF195 release, the package name and images are as follows:
 
     **HCL DX 9.5 CF195 Client - hcl-dx-client-v95-CF195.zip**:
 
@@ -986,9 +989,9 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
     !!! important
 
-        Please consult the HCL DX Support Knowledge Base article, [Manual Steps to Apply the Digital Experience 9.5 Container Deployment Core Certificate Update](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0089699), to apply the certificate update to your HCL DX 9.5 container deployment.
+        Consult the HCL DX Support Knowledge Base article, [Manual Steps to Apply the Digital Experience 9.5 Container Deployment Core Certificate Update](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0089699), to apply the certificate update to your HCL DX 9.5 container deployment.
 
-    If deploying HCL DX 9.5 CF194 release, the package name and images are as follows:
+    If you are deploying HCL DX 9.5 CF194 release, the package name and images are as follows:
 
     **HCL DX 9.5 CF194 Client - hcl-dx-client-v95-CF194.zip**:
 
@@ -1057,7 +1060,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 -   **CF193**
 
-    If deploying HCL DX 9.5 CF193 release, the package name and images are as follows:
+    If you are deploying HCL DX 9.5 CF193 release, the package name and images are as follows:
 
     **HCL DX 9.5 CF193 Client - hcl-dx-client-v95-CF193.zip**:
 
@@ -1136,7 +1139,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 -   **CF192**
 
-    If deploying HCL DX 9.5 CF192 release, the package name and images are as follows:
+    If you are deploying HCL DX 9.5 CF192 release, the package name and images are as follows:
 
     **hcl-dx-kubernetes-v95-CF192.zip**:
 
@@ -1209,7 +1212,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 -   **CF191**
 
-    If deploying HCL DX 9.5 CF191 release, the package name and images are as follows:
+    If you are deploying HCL DX 9.5 CF191 release, the package name and images are as follows:
 
     **hcl-dx-kubernetes-v95-CF191.zip** file:
 
@@ -1279,13 +1282,13 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
     !!! note
 
-        HCL DX 9.5 CF191 images are available and may be installed. HCL DX 9.5 CF191 is supported for new deployments only. DX administrators should not upgrade DX 9.5 container deployments to this release.
+        You can obtain and install HCL DX 9.5 CF191 images. HCL DX 9.5 CF191 is supported for new deployments only. DX administrators should not upgrade DX 9.5 container deployments to this release.
 
 ## HCL DX 9.5 CF19
 
 -   **CF19**
 
-    If deploying HCL DX 9.5 CF19 release, the package name and images are as follows:
+    If you are deploying HCL DX 9.5 CF19 release, the package name and images are as follows:
 
     **hcl-dx-kubernetes-v95-CF19.zip file**:
 
@@ -1358,7 +1361,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 -   **HCL DX 9.5 Container Update CF184**
 
-    If deploying HCL DX 9.5 CF184 release, the package name and images are as follows:
+    If you are deploying HCL DX 9.5 CF184 release, the package name and images are as follows:
 
     **hcl-dx-kubernetes-v95-CF184.zip files**:
 
@@ -1421,7 +1424,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 -   **HCL DX 9.5 Container Update CF183**
 
-    If deploying HCL DX 9.5 CF183 release, the image and package names are as follows:
+    If you are deploying HCL DX 9.5 CF183 release, the image and package names are as follows:
 
     **CF183-core.zip files**:
 
@@ -1490,7 +1493,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 -   **CF182**
 
-    If deploying **HCL DX 9.5 CF182** release, the image and package names are as follows:
+    If you are deploying HCL DX 9.5 CF182 release, the image and package names are as follows:
 
     **hcl-dx-kubernetes-v95-CF182-core.zip**:
 
@@ -1556,7 +1559,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 -   **CF181**
 
-    If deploying HCL DX 9.5 CF181 and later container update release, the image and package names add HCL DX 9.5 Content Composer and Digital Asset Management components and supporting services images, as well as Remote Search and OpenLDAP images. See the following list of images presented within the **HCL DX 9.5 Container Update CF181** package: 
+    If you are deploying HCL DX 9.5 CF181 and later container update release, the image and package names add HCL DX 9.5 Content Composer and Digital Asset Management components and supporting services images, and Remote Search and OpenLDAP images. See the following list of images presented within the **HCL DX 9.5 Container Update CF181** package: 
 
     **hcl-dx-kubernetes-v95-CF181-core.zip**:
 
@@ -1610,7 +1613,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 -   **CF18**
 
-    If deploying HCL DX 9.5 CF18 and later container update release, the image and package names included for this are:
+    If you are deploying HCL DX 9.5 CF18 or later container update release, the image and package names included for this are as follows:
 
     -   ```
         hcl-dx-kubernetes-v95-CF18.zip

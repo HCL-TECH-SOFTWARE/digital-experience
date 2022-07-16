@@ -1,8 +1,8 @@
-# Other Software
+# Other software
 
-The supported software section specifies the additional software that HCL Digital Experience 9.5 supports.
+The supported software section specifies the additional software that HCL Digital Experience 9.5 requires.
 
-## Application Servers
+## Application servers
 
 |Prerequisite|Version|Supported software versions|Product Minimum|Components|Operating system restrictions?|
 |----------|----------|----------|----------|----------|----------|
@@ -18,25 +18,25 @@ The supported software section specifies the additional software that HCL Digita
 |HCL Sametime Communicate|9.0|9.0 and later maintenance|9.5|Full|No|
 |HCL Sametime Complete|9.0|9.0 and later maintenance|9.5|Full|No|
 
-## Development Tools 
+## Development tools 
 |Supported Software|Version|Supported software minimum|Product minimum|Components|Operating System Restrictions?|
 |-----------|-----|------------------|-----|------|-------------|
 |Rational Application Developer for WebSphere|9.7|9.7 and later maintenance|9.5|Full|No|
 
-## LDAP Servers 
+## LDAP servers 
 All LDAP Servers that support the LDAP V3 Specification are supported.
 
 |Supported Software|Version|Supported software minimum|Product minimum|Components|Operating System Restrictions?|
 |-----------|-----|------------------|-----|------|-------------|
 |IBM Security Directory Suite|8.0.1|8.0.1 and later maintenance|9.5|Full|No|
 
-## Product Specific or Mixed Content 
+## Product-specific or mixed-content 
 |Supported Software|Version|Supported software minimum|Product minimum|Components|Operating System Restrictions?|
 |-----------|-----|------------------|-----|------|-------------|
 |Dojo Toolkit|1.9|1.9|9.5|Full|No|
 |IBM License Metric Tool|9.2|9.2 and later maintenance|9.5|Full|No|
 
-## Web Browsers 
+## Web browsers 
 |Supported Software|Supported software minimum and later|Product minimum|Components|Operating System Restrictions?|
 |-----------|-----|------------------|-----|------|
 |Android default browser|Newer levels are tested|9.5|Full|No|
@@ -48,7 +48,7 @@ All LDAP Servers that support the LDAP V3 Specification are supported.
 |Mozilla Firefox|Newer levels are tested|9.5|Full|No|
 |Mozilla Firefox ESR|Newer levels are tested|9.5|Full|No|
 
-## Web Servers (Non-Container Platforms)
+## Web servers (non-container platforms)
 |Supported Software|Version|Supported software minimum, and later|Product minimum|Components|Operating System Restrictions?|
 |-----------|-----|------------------|-----|------|-------------|
 |Apache Server|2.4|2.4|9.5|Full|No|
@@ -58,9 +58,9 @@ All LDAP Servers that support the LDAP V3 Specification are supported.
 ||9.0.5|9.0.5 and later maintenance|9.5|Full|No|
 |Microsoft Internet Information Services|10.0|10.0 and later maintenance|9.5|Full|No|
 
-* IBM HTTP Server 8.5.5 is only supported with HCL Digital Experience Server V8.5.5.x.
+__*__ IBM HTTP Server 8.5.5 is only supported with HCL Digital Experience Server V8.5.5.x.
 
-## WebDAV Client 
+## WebDAV client 
 |Supported Software|Version|Supported software minimum|Product minimum|Components|Operating System Restrictions?|
 |-----------|-----|------------------|-----|------|-------------|
 |JSCAPE AnyClient|6.0|6.0 and later maintenance|9.5|Full|No|

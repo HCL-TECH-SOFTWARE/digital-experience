@@ -1,6 +1,6 @@
-# Other Software
+# Other software
 
-The supported software section specifies the additional software that HCL Digital Experience 9.5 supports.
+The supported software section specifies the additional software that HCL Digital Experience 9.5 requires.
 
 ## Collaboration
 |Prerequisite|Version|Supported software versions|Product Minimum|Components|Operating system restrictions?|
@@ -12,18 +12,18 @@ The supported software section specifies the additional software that HCL Digita
 |HCL Sametime Communicate|9.0|9.0 and later maintenance|9.5|Full|No|
 |HCL Sametime Complete|9.0|9.0 and later maintenance|9.5|Full|No|
 
-## Development Tools 
+## Development tools 
 |Supported Software|Version|Supported software minimum|Product minimum|Components|Operating System Restrictions?|
 |-----------|-----|------------------|-----|------|-------------|
 |Rational Application Developer for WebSphere|9.7|9.7 and later maintenance|9.5|Full|No|
 
-## Product Specific or Mixed Content 
+## Product-specific or mixed content 
 |Supported Software|Version|Supported software minimum|Product minimum|Components|Operating System Restrictions?|
 |-----------|-----|------------------|-----|------|-------------|
 |Dojo Toolkit|1.9|1.9|9.5|Full|No|
 |IBM License Metric Tool|9.2|9.2 and later maintenance|9.5|Full|No|
 
-## Web Browsers 
+## Web browsers 
 |Supported Software|Supported software minimum and later|Product minimum|Components|Operating System Restrictions?|
 |-----------|-----|------------------|-----|------|
 |Android default browser|Newer levels are tested|9.5|Full|No|
@@ -35,7 +35,7 @@ The supported software section specifies the additional software that HCL Digita
 |Mozilla Firefox|Newer levels are tested|9.5|Full|No|
 |Mozilla Firefox ESR|Newer levels are tested|9.5|Full|No|
 
-## WebDAV Client 
+## WebDAV client 
 |Supported Software|Version|Supported software minimum|Product minimum|Components|Operating System Restrictions?|
 |-----------|-----|------------------|-----|------|-------------|
 |JSCAPE AnyClient|6.0|6.0 and later maintenance|9.5|Full|No|
