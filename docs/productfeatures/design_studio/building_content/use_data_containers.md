@@ -37,7 +37,7 @@ Follow the steps to create an API configuration in HCL Content Composer.
 
 ## Create a data container
 
-This section shows you how to create a data container on your site and its pages in HCL Design Studio (Beta).
+This section describes how to create a data container on your site and its pages in HCL Design Studio (Beta).
 
 Follow the steps to create a data container from your site using HCL Digital Experience 9.5 Design Studio (Beta).
 
