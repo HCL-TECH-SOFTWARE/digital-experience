@@ -57,7 +57,7 @@ Follow the steps to create a data container from your site using HCL Digital Exp
 8. In the text field properties, select which element from the configured API should be rendered.
     ![Select API element](../../../images/page_editor_select_api_result.png)
 
-!!! note
+!!! important
     Data container does not provide editing capabilities for the content provided by the 3rd party. The data container rendering is limited to **Text** elements. Other elements are not supported.
 
 ## How to present your feedback on HCL Design Studio (Beta)
