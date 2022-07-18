@@ -18,7 +18,7 @@ API configurations are stored as **content items**. A content item can be create
 
 Follow the steps to create an API configuration in HCL Content Composer.
 
-1. In the **HCL Content Composer Dashboard** click the **Create** button and choose **Content**.
+1. In the **HCL Content Composer Dashboard**, click the **Create** button and choose **Content**.
     ![HCL Content Composer Dashboard](../../../images/content_composer_dashboard.png)
 2. Provide a **Name, Display Title and Description**.
 3. Select the Content Template **DX API Configuration** from the library **Design Studio Demo**
