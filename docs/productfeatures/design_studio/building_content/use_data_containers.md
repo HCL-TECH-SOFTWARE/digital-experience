@@ -21,7 +21,7 @@ Follow the steps to create an API configuration in HCL Content Composer.
 1. In the **HCL Content Composer Dashboard**, click the **Create** button and choose **Content**.
     ![HCL Content Composer Dashboard](../../../images/content_composer_dashboard.png)
 2. Provide a **Name, Display Title and Description**.
-3. Select the Content Template **DX API Configuration** from the library **Design Studio Demo**
+3. Select the **DX API Configuration** Content Template from the **Design Studio Demo** library.
 4. Select a Site Area where the configuration should be stored.
 5. Enter the **Target Endpoint URL** of the API.
 6. Select the HTTP Method (verb) which should be used to connect to the Target Endpoint URL.
