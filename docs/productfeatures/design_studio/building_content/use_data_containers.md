@@ -29,7 +29,7 @@ Follow the steps to create an API configuration in HCL Content Composer.
 7. Provide an optional JSONPath Property Mapping.
     - By default, the Data Container provides a direct mapping of root properties from a JSON structure to the selection dialog in the page editor. Any tree structure needs to be transformed with an optional mapping instruction. The mapping is a JSON representation in the format `{"key": {"mapping": "JSONPath", "type": "text"}}`. For an in-depth description, refer to the [JSONPath documentation](https://goessner.net/articles/JsonPath/index.html#e2).
 8. Provide an optional JSON representation of additional request headers.
-    - To connect to your HCL Volt MX Foundry API you can leverage the App Key and App Secret as a base64 encoded Authorization
+    - To connect to your HCL Volt MX Foundry API, you can leverage the App Key and App Secret as a base64 encoded Authorization.
 9. Provide an optional JSON body payload.
 10. Click **save**.
     ![HCL Content Composer Dashboard](../../../images/data_container_api_configuration.png)
