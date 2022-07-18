@@ -31,7 +31,7 @@ Follow the steps to create an API configuration in HCL Content Composer.
 8. Provide an optional JSON representation of additional request headers.
     - To connect to your HCL Volt MX Foundry API, you can leverage the App Key and App Secret as a base64 encoded Authorization.
 9. Provide an optional JSON body payload.
-10. Click **save**.
+10. Click **Save**.
     ![HCL Content Composer Dashboard](../../../images/data_container_api_configuration.png)
 
 
