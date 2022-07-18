@@ -45,7 +45,7 @@ Follow the steps to create a data container from your site using HCL Digital Exp
 
     ![Site overflow menu](../../../images/site_page_overflow_menu.png)
 
-2.  Click the overflow menu button, and choose **Open page in editor**.
+2.  Click the Overflow menu button, and choose **Open page in editor**.
 3.  Click **Open add elements panel**.
 4.  Under **Data**, drag and drop **Data Container** onto the page.
     ![Drag Data Container](../../../images/page_editor_drag_datacontainer.png)
