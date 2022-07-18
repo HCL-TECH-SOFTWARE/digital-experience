@@ -49,16 +49,16 @@ Follow the steps to create a data container from your site using HCL Digital Exp
 3.  Click **Open add elements panel**.
 4.  Under **Data**, drag and drop **Data Container** onto the page.
     ![Drag Data Container](../../../images/page_editor_drag_datacontainer.png)
-5.  In the data container properties, search for the name of the content to use. You can select the desired content item from the list shown. This list is limited to content items with matching the Content Template **DX API Configuration**
+5.  In the Data container properties, search for the name of the content to use. You can select the desired content item from the displayed list. The list is limited to the content items that matches the **DX API Configuration** Content Template.
     ![Select API configuration](../../../images/page_editor_select_api_configuration.png)
-6.  You can edit and use a custom name or keep the auto-generated name. Auto-generated names append numbers for names that already exist within a data container.
+6.  You can edit and use a custom name or keep the auto-generated name. The auto-generated names are appended with numbers if the names already exist within a data container.
 7. Under **Basic**, drag and drop **Text** onto the data container.
     ![Drag Text field](../../../images/page_editor_drag_textfield_datacontainer.png)
 8. In the text field properties, select which element from the configured API should be rendered.
     ![Select API element](../../../images/page_editor_select_api_result.png)
 
 !!! important
-    Data container does not provide editing capabilities for the content provided by the 3rd party. The data container rendering is limited to **Text** elements. Other elements are not supported.
+    Data container does not provide editing capabilities for the content that are provided by third-party. The data container rendering is limited to only the **Text** elements. Other elements are not supported.
 
 ## How to present your feedback on HCL Design Studio (Beta)
 
