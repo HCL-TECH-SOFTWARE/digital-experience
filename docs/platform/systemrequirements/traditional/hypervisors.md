@@ -1,5 +1,5 @@
 # Hypervisors
-The Hypervisors section specifies the hypervisors that HCL Digital Experience 9.5 (Portal Extend, Express, Enable, WCM) supports.
+The Hypervisors section specifies the hypervisors that HCL Digital Experience 9.5 (Portal Extend, Express, Enable, and Web Content Manager) supports.
 
 ## AIX family
 |Hypervisor|Product minimum|Components|Deployment Units|Supported Guest Operating System|
@@ -9,7 +9,7 @@ The Hypervisors section specifies the hypervisors that HCL Digital Experience 9.
 |WPAR: Product installed in System Workload Partition AIX 6.1|9.5|Full|Server|-	AIX 7.1 POWER System \– Big Endian<br>-	AIX 7.2 POWER System \– Big Endian|
 
 
-## Linux Summary
+## Linux samily
 |Hypervisor|Product Minimum|Components|Deployment Units|Supported Guest Operating System|
 |---------|-----|-----|-----|----------------------------------|
 |IBM PR/SM any version|9.5|Full|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM zSystems<br>- Red Hat Enterprise Linux (RHEL) Server 7 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
@@ -26,7 +26,7 @@ The Hypervisors section specifies the hypervisors that HCL Digital Experience 9.
 |z/VM 6.2 and later|9.5|Full|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 and 8 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
 |z/VM 6.3 and later|9.5|Full|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 and 8 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
 
-## Windows Summary
+## Windows summary
 
 |Hypervisor|Product Minimum|Components|Deployment Units|Supported Guest Operating System|
 |----------|-----|-----|-----|----------------------------------------|
