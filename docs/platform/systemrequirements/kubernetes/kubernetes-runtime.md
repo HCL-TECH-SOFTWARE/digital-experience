@@ -1,4 +1,4 @@
-# Kubernetes Runtime
+# Kubernetes runtime
 
 View the latest Kubernetes versions and platforms tested and supported for specific HCL Digital Experience (DX) 9.5 Kubernetes deployments.
 
@@ -9,26 +9,26 @@ HCL encourages customers to remain up-to-date on the latest HCL DX and Kubernete
 
 ## Kubernetes platform support policy
 
-HCL DX 9.5 CF200 and later is architected to run on any Certified Kubernetes platform \([https://www.cncf.io/certification/software-conformance](https://www.cncf.io/certification/software-conformance)\), provided that,
+HCL DX 9.5 CF200 and later is designed to run on any Certified Kubernetes platform ([https://www.cncf.io/certification/software-conformance](https://www.cncf.io/certification/software-conformance)), provided that the following statements are true:
 
-* the Kubernetes platform is hosted on x86-64 hardware
-* the Kubernetes platform is officially supported by Helm \([https://helm.sh/docs/topics/kubernetes\_distros/](https://helm.sh/docs/topics/kubernetes_distros/)\).
+* The Kubernetes platform is hosted on x86-64 hardware.
+* The Kubernetes platform is officially supported by Helm ([https://helm.sh/docs/topics/kubernetes\_distros/](https://helm.sh/docs/topics/kubernetes_distros/)).
 
-HCL tests DX against a range of Kubernetes platforms that is regularly reviewed and updated, with the intent of staying up-to-date as possible. We do not test with every single platform vendor with every single Kubernetes version, but aim to cover a representative sample of popular Kubernetes implementations. See [Table 1](#table-1-tested-kubernetes-platforms-on-full-container-deployment) for the list of Kubernetes Platforms that HCL tested with.
+HCL tests DX against a range of Kubernetes platforms that are regularly reviewed and updated, with the intent of staying as up-to-date as possible. HCL does not test with every single platform vendor with every single Kubernetes version, but aim to cover a representative sample of popular Kubernetes implementations. See [Table 1](#table-1-tested-kubernetes-platforms-on-full-container-deployment) for the list of Kubernetes platforms that HCL tested with.
 
-### Table 1: Tested Kubernetes Platforms on Full Container Deployment
+### Table 1: Tested Kubernetes platforms on full container deployment
 
-This table lists the Kubernetes platforms that are tested with DX by HCL. This is provided for information only.
+This table lists the Kubernetes platforms that HCL tested and supports. This is provided for information only.
 
 |Kubernetes platforms on full deployments|Hybrid deployments (Kubernetes/on Premise)|
 |--------------|-----------------|
 |- Amazon EKS<br/>- Google GKE<br/>- Microsoft Azure AKS<br/>- Red Hat OpenShift|- Amazon EKS / AWS EC2<br/>- Red Hat OpenShift on AWS / AWS EC2|
 
-## Kubernetes Version Support Policy
+## Kubernetes version support policy
 
-The list of Kubernetes versions that are supported by HCL are included in [Table 2](#table-2-tested-and-supported-kubernetes-versions-on-full-container-deployment).
+[Table 2](#table-2-tested-and-supported-kubernetes-versions-on-full-container-deployment) lists the Kubernetes versions that HCL tested and suppports in HCL DX CF releases.
 
-* Platform providers may release previews of upcoming Kubernetes versions, however, HCL DX does not provide support for those versions.
+* Platform providers may release previews of upcoming Kubernetes versions, however, HCL does not provide support for those versions.
 * If you encounter any issue on an unsupported or untested Kubernetes version, you may be asked to install a supported level.
 
 ### Table 2: Tested and supported Kubernetes versions
@@ -44,4 +44,3 @@ Review your chosen Kubernetes platform and ensure that it supports the following
 
 !!! attention "__*__ CF203 limited support statement"
     In CF203, HCL DX supports Kubernetes 1.22 only for HAProxy-based deployments
-s

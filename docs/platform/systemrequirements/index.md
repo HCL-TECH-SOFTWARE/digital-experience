@@ -1,8 +1,10 @@
-# System Requirements
+# HCL Digital Experience 9.5 System Requirements
 
-This document provides minimum system requirements for version 9.5 of HCL Digital Experience. Higher maintenance levels, such as fix packs and service packs, may be supported as they become available and will be updated in this document, and some may be made available through HCL channels.
+Your environment must meet minimum system requirements for 9.5 and later releases of HCL Digital Experience. Higher maintenance levels, such as fix packs and service packs, may be supported as they become available. You can find updates in this document, and some may be made available through HCL channels.
 
-Detailed system requirements are the complete lists of hardware requirements, supported operating systems, prerequisites and optional supported software, with component-level details and operating system restrictions.
+For detailed system requirements of other HCL Digital Experience offerings, see [System Requirements](https://help.hcltechsw.com/digital-experience/9.5/overview/inst_req.html).
+
+Detailed system requirements represent the complete lists of hardware requirements, supported operating systems, prerequisites, and optional supported software, with component-level details and operating system restrictions.
 
 - Kubernetes
     - [Kubernetes Runtime](kubernetes/index.md)

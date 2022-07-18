@@ -1,6 +1,10 @@
 # Operating Systems
 
-The operating systems section specifies the operating systems that HCL Portal Server, Enable, and Extend 9.5 supports, and is organized by the operating system family. Operating system families include AIX, Linux, and Windows.
+HCL Portal Server, Enable, and Extend 9.5 support the operating systems that follow.  
+
+Th following list is organized by the operating system family. Operating system families include AIX, Linux, and Windows.
+
+The following descriptors indicate component support within the listed operating systems.
 
 Component support: Full / Partial / None
 
@@ -35,7 +39,7 @@ Component support: Full / Partial / None
 
 !!! note
 
-	As of Cumulative Fix 09 – Windows Server 2008 is no longer supported. The operating system went out of mainstream support in January 2015.
+	As of Cumulative Fix 09 – BigFix no longer supports Windows Server 2008. The operating system went out of mainstream support in January 2015.
 
 |OS|OS|Minimum	OS|Supported Versions|Hardware|Bitness|Product Minimum|Components|
 |---------|---------|---------|---------|---------|---------|---------|---------|
@@ -55,5 +59,5 @@ Windows 10 Pro|Base*|Base and later maintenance releases|x86-64|64-Exploit, 64-T
 |Windows Server 2019 Essential Edition|Base|Base and later maintenance releases|x86-64|64-Exploit, 64-Tolerate|9.5|Full|
 |Windows Server 2022|Base|Base and later maintenance releases|x86-64|64-Exploit, 64-Tolerate|9.5 CF199|Full|
 
-\*Support for developer platform only
+\*BigFix supports the developer platform only.
 
