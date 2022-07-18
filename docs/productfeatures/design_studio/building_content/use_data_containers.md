@@ -14,7 +14,7 @@ API configurations are stored as **content items**. A content item can be create
     Refer to the [HCL Content Composer](https://help.hcltechsw.com/digital-experience/9.5/content_composer/cont_comp_overview.html) documentation for a detailed description on how to create content with **Content Composer**.
 
 !!! note
-    This example uses an API from [HCL Volt MX Foundry](https://opensource.hcltechsw.com/volt-mx-docs/). Please consult the [HCL Volt MX User Guide](https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/Introduction.html), for an in depth description on how to create an **integration service**.
+    This example uses an API from [HCL Volt MX Foundry](https://opensource.hcltechsw.com/volt-mx-docs/). Refer to the [HCL Volt MX User Guide](https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/Introduction.html) topic for a detailed description on how to create an **integration service**.
 
 Follow the steps to create an API configuration in HCL Content Composer.
 
