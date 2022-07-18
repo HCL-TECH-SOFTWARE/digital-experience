@@ -41,7 +41,7 @@ This section describes how to create a data container on your site and its pages
 
 Follow the steps to create a data container from your site using HCL Digital Experience 9.5 Design Studio (Beta).
 
-1.  In the **Sites** overview, hover to the site you want to create a data container for until you can see the overflow menu button.
+1.  In the **Sites** overview, hover over the site where you want to create a data container until you see the overflow menu button.
 
     ![Site overflow menu](../../../images/site_page_overflow_menu.png)
 
