@@ -1,6 +1,6 @@
 nav:
     - index.md
-    - getting_the_software95.md
+    - software_download
     - systemrequirements
     - kubernetes
     - docker
