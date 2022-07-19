@@ -7,7 +7,13 @@ The following section details information and steps on how to use reusable conte
 Users can reuse a content item multiple times across different pages of their HCL Digital Experience sites. Reusable content items are called *reusable
 blocks*.
 
-As of HCL Digital Experience CF203 and higher releases, the only reusable content element is the [Content Container](../use_content_containers.md). More content items will be introduced in future releases.
+As of HCL Digital Experience CF205 and higher releases, the following reusable blocks made available are:
+
+-   [Content Container](../building_content/use_content_containers.md)
+-   [Content list](../building_content/content_lists.md) 
+-   [Data containers](../building_content/use_data_containers.md)
+
+More content items will be introduced in future releases.
 
 To access available reusable blocks, you need to be on the HCL Design Studio (Beta) Page editor and click the *Reusable blocks* icon as shown below:</p>
 
@@ -40,10 +46,25 @@ To edit an existing reusable block, follow the steps in [Edit a content item in 
 !!! note
     Make sure the name of your reusable block is unique and identifiable for you to be able to quickly locate it from the list.
 
+## Use a reusable block
+To use a reusable block:
+
+1.  Open any page in Page Editor view.
+
+2.  Click the **Reusables** panel to display the list of reusable blocks.
+
+3.  Drag and drop the selected content list block to the Page Editor canvas.
+
+[Reuse content list from Reusables panel](../../../../images/reuse-content-list.png)
+
+!!! note
+    The reusable block is disabled if it is already added in the page the user is currently on. <br>[Content list block disabled in Reusables panel](../../../../images/disabled-content-list-reusable.png)
+
 ## Delete a reusable block
 
 !!! notes
-    - Deleting a reusable block results in an error if the reusable block is being used in your current or other pages. Deleting a reusable block also results in an error if the reusable block has already been deleted by another authorized user. In this case, the **Reusables** panel refreshes and updates the list of reusable blocks.
+    - Deleting a reusable block results in an error if the reusable block is being used in your current or other pages. 
+    - Deleting a reusable block also results in an error if the reusable block has already been deleted by another authorized user. In this case, the **Reusables** panel refreshes and updates the list of reusable blocks.
     - In previous releases (CF196 - CF202), once you delete a Content Container in Page Editor mode, the Content Container is also deleted in WCM. However, when a Content Container becomes a reusable block and you delete it from Page Editor mode, it will remain in WCM.
 
 To delete a reusable block:
