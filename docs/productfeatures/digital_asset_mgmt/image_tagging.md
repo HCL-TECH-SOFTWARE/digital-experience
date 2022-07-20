@@ -146,3 +146,4 @@ Body
 3.	Even if the initial image is restored, keywords of both images will be visible.
 
 For additional information about the Google Vision API and image resource processing, reference the ![Google Vision documentation](https://cloud.google.com/vision/docs/data-usage). 
+
