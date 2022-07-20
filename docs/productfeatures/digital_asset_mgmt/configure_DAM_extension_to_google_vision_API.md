@@ -5,4 +5,4 @@ Beginning with HCL Digital Experience 9.5 Container Update CF205, using a custom
 **Pre-requisites:**
 
 1. An entitlement to ![Google Vision API](https://cloud.google.com/vision/docs/detect-labels-image-api). 
-2. Configuration of the Digital Asset Management extension capability to integration Google Vision API image tagging detailed in the following sections.
+2. Configuration of the Digital Asset Management extension capability to integrate with the Google Vision API image tagging is described in the following sections.
