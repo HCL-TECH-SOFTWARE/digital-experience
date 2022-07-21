@@ -187,6 +187,12 @@ Under kaltura plugin configuration by default the enable flag will be set as fal
 }
 ```
 
+### Kaltura Synchronisation time interval configuration in DAM
+
+We are using wait status in case of video synchronization. There will be 3 retries. each retry has same timeout of 2 minutes. Once all retries are finished the operation will go to FAILED status.
+
+OPERATION_WAIT_INTERVAL is used as environment variable with default value of 2 minutes and the user can increase this value if needed. example: "OPERATION_WAIT_INTTERVAL: 120000".
+
 ## How is the configuration setup for Kaltura Plugin
 
 The kaltura plugin configurations are currently maintained as config maps. i.e. user can find kaltura-plugin.json in the configuration folder under HELM Package and can be deployed into DAM by doing a HELM upgrade.
