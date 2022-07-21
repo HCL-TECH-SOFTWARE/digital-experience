@@ -2,16 +2,16 @@
 
 The HCL Digital Experience 9.5 Container Update and CF205 release includes the following new features and updates:
 
-•	Enhanced configurable log support for HA Proxy
-•	Option for entitled customers to download HCL DX 9.5 Docker images from HCL Harbor 
-•	Design Studio (Beta) Content list item and Data container extensions
-•	Personalization API binding rules
-•	Digital Asset Management extension plugin to Google Vision API service 
-•	Updated Digital Asset Management Kaltura Video extension Plugin support. 
-•	Removal and replacement of Document Conversion Services 
-•	HCL Web Experience Factory V8.5.1 (available in the DX 8.5 offerings)
-•	End of Support is announced for the Digital Experience Pattern v8.5 offerings
-•	New complementary DX training modules in the HCL Software Academy, and more.
+-	Enhanced configurable log support for HA Proxy
+-	Option for entitled customers to download HCL DX 9.5 Docker images from HCL Harbor 
+-	Design Studio (Beta) Content list item and Data container extensions
+-	Personalization API binding rules
+-	Digital Asset Management extension plugin to Google Vision API service 
+-	Updated Digital Asset Management Kaltura Video extension Plugin support. 
+-	Removal and replacement of Document Conversion Services 
+-	HCL Web Experience Factory V8.5.1 (available in the DX 8.5 offerings)
+-	End of Support is announced for the Digital Experience Pattern v8.5 offerings
+-	New complementary DX training modules in the HCL Software Academy, and more.
 
 Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=9bd40c1f1bbf5cd0534c4159cc4bcbbd#CF17){:target="_blank"} and [HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){:target="_blank"} for the list of software fixes, including Container Update releases. 
 
