@@ -6,6 +6,108 @@ You can obtain the HCL DX 9.5 container update releases may be obtained from you
 
 Video: [How to upload HCL Digital Experience 9.5 CF container images to a private repository](https://youtu.be/XJONRdpgCuo)
 
+## HCL DX 9.5 CF205
+
+-   **Container Update CF205**
+
+    If you are deploying the HCL DX 9.5 CF205 release, the package name and images are as follows:
+
+    **HCL DX 9.5 CF205 DXClient files**:
+
+    -   ```
+        hcl-dxclient-image-v95_CF205_20220720-1706.zip
+       ```
+
+    -   ```
+        hcl-dxclient-v95_CF205_20220720-1706.zip
+        ```
+
+    **hcl-dx-kubernetes-v95-CF205.zip**:
+
+    -   ```
+        HCL DX notices V9.5 CF205.txt
+        ```
+
+    -   ```
+        hcl-dx-content-composer-image-v1.18.0_20220720-1628.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-core-image-v95_CF205_20220720-1646.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-dam-plugin-kaltura-image-v0.1.0_20220720-0113.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-deployment-v2.8.5_20220721-1742.tgz
+        ```
+
+    -   ```
+        hcl-dx-design-studio-image-v0.11.0_20220720-1659.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-digital-asset-manager-image-v1.17.0_20220720-1656.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-experience-api-sample-ui-v0.2.0.20220720-1650.zip
+        ```
+    
+    -   ```
+        hcl-dx-google-vision-image-v0.1.0_20220720-0243.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-haproxy-image-v1.1.0_20220720-1636.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-image-processor-image-v1.18.0_20220720-1653.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-logging-sidecar-image-v1.0.0_20220720-1631.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-openldap-image-v1.2.0_20220720-1630.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-persistence-connection-pool-image-v1.18.0_20220720-1654.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-persistence-image-v1.18.0_20220720-1654.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-persistence-metrics-exporter-image-v1.16.0_20220720-1658.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-persistence-node-image-v1.8_20220720-1704.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-remote-search-image-v95_CF205_20220720-1646.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-ringapi-image-v1.18.0_20220720-1700.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-runtime-controller-image-v95_CF205_20220720-1634.tar.gz
+        ```
+
+    -    ```
+        hcl-dx-sidecar-image-v1.0.0_8.6-751.tar.gz
+        ```
+
 ## HCL DX 9.5 CF204
 
 -   **Container Update CF204**
