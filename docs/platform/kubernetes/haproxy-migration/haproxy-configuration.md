@@ -17,6 +17,8 @@ The networking parameters used to configure the HAProxy services are located in 
 |`serviceType`|Defines the Kubernetes [`ServiceType`](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types) of the HAProxy service. Supported ServiceType includes `LoadBalancer`, `ClusterIP` and `NodePort` |`LoadBalancer`|
 |`servicePort`|This value is used to select the port exposed by the HAProxy service. Defaults to port `443` if `ssl` is set to `true`, otherwise, port `80` is used. |`null`|
 |`serviceNodePort`|This value is used to select the node port exposed by the HAProxy service. Defaults to a port selected by Kubernetes if no value is set. |`null`|
+|`strictTransportSecurity.enabled`|This value is used for HTTP Strict Transport Security (HSTS) to determine if it should be `enabled` |`true`|
+|`strictTransportSecurity.maxAge`|This value is used to set for how long the browser should remember the HSTS rule |`31536000`|
 
 !!!note
     If `ssl` is set to `true`, HAProxy will use the certificate that is supplied as a secret in `networking.tlsCertSecret`.
@@ -33,6 +35,10 @@ networking:
     servicePort:
     # Only applies for the "NodePort" serviceType. Configuration to set the NodePort exposed by the HAProxy service. If this is not set, a port is automatically selected by Kubernetes
     serviceNodePort:
+    # HTTP Strict Transport Security(HSTS)
+    strictTransportSecurity:
+      enabled: true
+      maxAge: 31536000
 ```
   
 This configuration is helpful for those who want to use a custom `HAProxy Controller` to expose the service in a compatible way. Even then, HAProxy will still be active. The `HAProxy Controller` will handle the incoming traffic and then route them to the HAProxy service.
