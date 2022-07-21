@@ -216,3 +216,22 @@ In DAM-Extensibility plugins comes with security enabled. So i.e. the API reques
       # Authentication key for Kaltura external service
       secretKey: "cnVtYWFhYm9zZS1oY2wK"
 ```
+
+### List of deprecated Plugin API's
+
+The following DAM API's are deprecated and no longer in use -
+
+- PUT: /plugins/{plugin_id} <br/>
+
+- PATCH: /plugins/{plugin_id} <br/>
+
+- GET: /plugins/{plugin_id} <br/>
+
+- DELETE: /plugins/{plugin_id} <br/>
+
+- POST: /plugins <br/>
+
+- GET: /plugins<br/>
+
+!!! note
+    Please take a note of all Kaltura Plugin configuration details before upgrading.
