@@ -195,7 +195,7 @@ OPERATION_WAIT_INTERVAL is used as environment variable with default value of 2 
 
 ## How is the configuration setup for Kaltura Plugin
 
-The kaltura plugin configurations are currently maintained as config maps. i.e. user can find kaltura-plugin.json in the configuration folder under HELM Package and can be deployed into DAM by doing a HELM upgrade.
+The Kaltura plugin configurations are currently maintained as config maps. The user can find the kaltura-plugin.json file in the configuration folder under the HELM Package and can be deployed into DAM through the HELM based deployment.
 
 ```
 configuration:
@@ -205,7 +205,7 @@ configuration:
 ```
 
 ### Plugin security Configuration
-In DAM-Extensibility plugins comes with security enabled. So i.e. the API requests are authenticated with the security key which is transmitted and validated in every calls both plugin and callback calls, and the user can write this in the same config file under security configuration and give the value to authenticationKey param. And then this value is passed for plugin configuration key attribute so that DAM sends this with each request to authenticate.
+In DAM Extensibility, plugins come with security enabled. So, the API requests are authenticated with the security key, which is transmitted and validated in every call, both for plugin and callback calls, and the user can write this in the same config file under security configuration and give the value to the authenticationKey parameter. This value is then passed for plugin configuration key attribute, so that DAM sends this with each request to authenticate.
 
 ```
    # Security related configuration, e.g. default credentials default
