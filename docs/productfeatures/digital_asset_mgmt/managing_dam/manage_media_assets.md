@@ -34,7 +34,7 @@ The following are supported media asset file formats in HCL Digital Experience 9
 |.jpeg|image/jpeg|
 |.tif|image/tiff|
 |.tiff|image/tiff|
-|.webp|image/.webp|
+|.webp|image/webp|
 
 !!! note 
     You can set the maximum file size for the DAM asset uploads. For more information on configuring the file size, see the [DAM API](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeGroupController.updateById) topic.
