@@ -23,7 +23,7 @@ Follow these steps to view a list of file formats supported by HCL Digital Exper
     ![DAM > Settings > Files](../../../images/dam_settings_supported_file_formats.png)
 
 
-The following are supported media asset file formats in HCL Digital Experience 9.5 Container. From CF205 onwards *WebP* file type exptension is supported.
+The following are supported media asset file formats in HCL Digital Experience 9.5 Container. From CF205 onwards, *WebP* file type extension is also supported.
 
 |File type|Extension|
 |---------|---------|
