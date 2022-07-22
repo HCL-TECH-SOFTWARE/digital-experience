@@ -1,12 +1,12 @@
 # Download and deploy through HCL Harbor repository
 
-Beginning with HCL Digital Experience V9.5 Container Update 205 the [Docker images](../platform/kubernetes/docker.md) for deployment to Kubernetes environments can be optionally accessed via Helm charts in the [HCL Harbor repository](https://hclcr.io/account/sign-in?redirect_url=/harbor/projects){:target="_blank"}. Customers with credentials to access entitled software in the HCL Software Licensing Portal may apply those credentials to optionally access the Docker components of Digital Experience v9.5 Container Update CF205 or later releases. For more information, see Access and Deploy DX 9.5 Docker components from HCL Harbor (add hyperlink to new page) for more information. 
+Beginning with HCL Digital Experience 9.5 Container Update CF205, the [Docker images](../platform/kubernetes/docker.md) for deployment to Kubernetes environments can be optionally accessed via Helm charts in the [HCL Harbor repository](https://hclcr.io/account/sign-in?redirect_url=/harbor/projects){:target="_blank"}. Customers with credentials to access entitled software in the HCL Software Licensing Portal may apply those credentials to optionally access the Docker components of Digital Experience v9.5 Container Update CF205 or later releases. 
 
 !!! note
 
     The Harbor repository structure does not support storage and access of binary zip files.  Specifically, all Docker images except for the DX Client and Ring API sample zip files may be accessed via the HCL Harbor repository. 
     
-Harbor is an open-source Container Image and Helm Chart registry.  It can be accessed through use of CLI tools, such as Docker and HELM using a CLI Secret. For more information about Harbor capabilities reference the Harbor documentation at https://goharbor.io
+Harbor is an open-source Container Image and Helm Chart registry.  It can be accessed through use of CLI tools, such as Docker and HELM using a CLI Secret. For more information about Harbor capabilities reference the Harbor documentation at [https://goharbor.io](https://goharbor.io){:target="_blank"}.
 
 Follow the procedures below to optionally access and deploy HCL DX 9.5 Container Update CF205 or later release components from the HCL Harbor repository. 
 
@@ -25,7 +25,7 @@ helm repo add \
 hcl-dx https://hclcr.io/chartrepo/dx
 ```
 
-You can obtain the CLI secret from [HCL Harbor](https://hclcr.io/) after you are authenticated by navigating to your `User Profile` in HCL Harbor. You can copy it from the field called `CLI secret`. 
+To obtain the `CLI secret`, you must log in to [HCL Harbor](https://hclcr.io/) using your authorized user credentials, navigate to your `User Profile` in HCL Harbor, and then copy it from the field called `CLI secret`.
 
 After adding the repository to your Helm deployment, you should see the following message:
 
