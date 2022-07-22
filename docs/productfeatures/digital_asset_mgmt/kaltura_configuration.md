@@ -217,9 +217,9 @@ In DAM-Extensibility plugins comes with security enabled. So i.e. the API reques
       secretKey: "cnVtYWFhYm9zZS1oY2wK"
 ```
 
-### List of deprecated Plugin API's
+### List of deprecated Plugin APIs
 
-The following DAM API's are deprecated and no longer in use -
+The following DAM APIs are deprecated and no longer in use:-
 
 - PUT: /plugins/{plugin_id} <br/>
 
