@@ -24,9 +24,9 @@ You can control how items are displayed in the canvas using filtering and sortin
 -   **Display order** - Changes the content items by ascending or descending order. The default display order is ascending.
 -   **Display limit** - Limits the number of items displayed on a page. The default is 8.
 -   **Start at** - Sets the page number where the list starts on. The default is 1.
--   **Categories** - A search criteria that can be used to find content items that have been profiled with categories. <br>[Content list by categories](../../../images/categories.png)
--   **Keywords** - A search criteria that can be used to find content items that have been profiled with keywords. <br> [Content list by keywords](../../../images/keywords.png)
--  **Header and Footer** - The checkboxes for header and footer is added but the functionality is not yet implemented. <br> [Content list by header and footer](../../../images/header-and-footer.png)
+-   **Categories** - A search criteria that can be used to find content items that have been profiled with categories. <br>![Content list by categories](../../../images/categories.png)
+-   **Keywords** - A search criteria that can be used to find content items that have been profiled with keywords. <br> ![Content list by keywords](../../../images/keywords.png)
+-  **Header and Footer** - The checkboxes for header and footer is added but the functionality is not yet implemented. <br> ![Content list by header and footer](../../../images/header-and-footer.png)
 
 ## Create a content list
 
