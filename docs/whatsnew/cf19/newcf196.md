@@ -9,7 +9,7 @@ You can access product software at [HCL Software Licensing Portal](https://www.
 You can access the latest software requirements and updates that support HCL Digital Experience solutions from the HCL Support pages topic: [HCL Digital Experience V9.5, V9.0, and V8.5 detailed system requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03).
 
 !!!note
-        For new capabilities that are available for HCL DX on-premise deployments, see [What's new in the CF196](new_noncf196.md) topic.
+        For new capabilities that are available for HCL DX on-premise deployments, see [What's new in the CF196](https://help.hcltechsw.com/digital-experience/9.5/overview/new_noncf196.html) topic.
 
 ## Design Studio \(Beta\)
 
@@ -42,13 +42,13 @@ See the [How to export and import WCM library content using DXClient](https://he
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and automate processes in the development and delivery process. Updates include a new DXClient Docker image, and new release artifact types supporting shared libraries, obtain failed syndication reports are provided in Container Update CF196.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html){:target="_blank"}<!-- (../containerization/dxclient.md) --> topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../platform/administration/DXClient/dxclient.md) topic for more information.
 
 ## HCL Digital Experience 9.5 Container Platform Support Matrix
 
 View the latest Kubernetes and OpenShift platforms tested and supported for specific HCL Digital Experience 9.5 Container Update deployments.
 
-See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../platform/kubernetes/c_kubesupportstatement.md) topic for more information.
+See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../platform/systemrequirements/9.5_express/supportedsoftware.md) topic for more information.
 
 ## New HCL Digital Experience ‘How To’ Videos
 

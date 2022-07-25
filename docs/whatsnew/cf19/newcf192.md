@@ -24,7 +24,7 @@ See the [Logging and tracing for Containers and new services Help Center](https:
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform,and automate processes in the development and delivery process. New release artifact types supporting Script Application Undeploy and Restore, and Deploy Theme.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html){:target="_blank"}<!-- (../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md) --> topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../platform/administration/DXClient/dxclient.md) topic for more information.
 
 ## New Content Composer Features
 
@@ -36,7 +36,7 @@ See the [HCL Content Composer](https://help.hcltechsw.com/digital-experience/9.5
 
 New Digital Asset Management Features are added with HCL Digital Experience Container Update CF192, including enhanced crop functionality, Kaltura video player support, thumbnail preview support, asset size filter, Renditions and Versioning support, and more.
 
-See the [HCL Digital Asset Management Help Center](https://help.hcltechsw.com/digital-experience/9.5/digital_asset_mgmt/digital_asset_mgmt_overview.html){:target="_blank"}<!-- (../digital_asset_mgmt/digital_asset_mgmt_overview.md) --> topic for additional information.
+See the [HCL Digital Asset Management Help Center](../../productfeatures/digital_asset_mgmt/index.md) topic for additional information.
 
 ## HCL Digital Experience 9.5 Integration with HCL Unica Discover
 

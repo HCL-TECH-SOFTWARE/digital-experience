@@ -39,7 +39,7 @@ See the [Design Studio \(Beta\)](https://help.hcltechsw.com/digital-experience/
 
 Beginning with HCL Digital Experience 9.5 Container Update CF202, HCL Digital Experience Cloud Native 9.5 is available as a new offering option for customers to deploy the cloud-native Digital Experience 9.5 components and services on the Kubernetes container environments. HCL Digital Experience Cloud Native 9.5 is available with cloud-friendly subscription pricing.
 
-See the *Digital Experience Cloud Native 9.5 details* in the [Digital Experience Overview](../../platform/intro_platforms.md) Help Center topic.
+See the *Digital Experience Cloud Native 9.5 details* in the [Digital Experience Overview](../../platform/kubernetes/overview.md) Help Center topic.
 
 ## Digital Experience REST API Explorers
 
@@ -57,7 +57,7 @@ See the [Digital Experience Remote Model REST API Explorer](https://help.hcltech
 
 The HCL Digital Experience DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and to automate processes in the development and delivery process. Updates include ability to Export and Import DAM assets from source to a File system and Import from File system to target DX 9.5 deployment, and DXConnect parameter updates.
 
-See the [Deploy DX components using HCL DXClient and DXConnect](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html){:target="_blank"}<!-- (../containerization/dxclient.md)--> Help Center topic for more information.
+See the [Deploy DX components using HCL DXClient and DXConnect](../../platform/administration/DXClient/dxclient.md) Help Center topic for more information.
 
 ## Personalization REST APIs
 

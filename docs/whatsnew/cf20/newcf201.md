@@ -17,7 +17,7 @@ Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators
 See the following Help Center topics for more information:
 
 -   [Containerization overview](../../platform/kubernetes/overview.md)
--   [Containerization Requirements and Limitations](../../platform/systemrequirements/9.5_all/supportedsoftware.md#kubernetes)
+-   [Containerization Requirements and Limitations](../../platform/systemrequirements/9.5_express/supportedsoftware.md)
 -   [Additional Helm Tasks](../../platform/kubernetes/deployment/preparation/overview.md)
 -   [Monitor the HCL Digital Experience Container Deployment using Metrics](../../platform/kubernetes/operations/monitoring/basic_monitor_helm_deployment.md)
 
@@ -37,7 +37,7 @@ See the Script Application Improvements topic for more information: [HCL Digital
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and to automate processes in the development and delivery process. Updates include ability to view and manipulate custom Resource Environment Provider \(REP\) settings, with examples.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html){:target="_blank"}<!-- (../containerization/dxclient.md) --> topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../platform/administration/DXClient/dxclient.md) topic for more information.
 
 ## New Personalization REST APIs
 
