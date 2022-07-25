@@ -195,7 +195,7 @@ OPERATION_WAIT_INTERVAL is used as environment variable with default value of 2 
 
 ## How is the configuration setup for Kaltura Plugin
 
-The Kaltura plugin configurations are currently maintained as config maps. The user can find the kaltura-plugin.json file in the configuration folder under the Helm Package and can be deployed into DAM through the Helm-based deployment.
+The Kaltura plugin configurations are currently maintained as config maps. The user can find the kaltura-plugin.json file in the configuration folder under the Helm Package and can be deployed into DAM through the HELM upgrade.
 
 ```
 configuration:
