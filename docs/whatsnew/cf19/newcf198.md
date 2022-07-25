@@ -15,7 +15,7 @@ Design Studio enables content managers and designers to build and style their di
 !!!note
     Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF198, and includes a sample DX site.  It is not yet supported for use in production deployments.
 
-See the [Design Studio \(Beta\)](https://help.hcltechsw.com/digital-experience/9.5/design_studio/design_studio_overview.html){:target="_blank"}<!-- (../design_studio/design_studio_overview.md) --> topic for more information. 
+See the [Design Studio \(Beta\)](../../productfeatures/design_studio/index.md)<!-- (../design_studio/design_studio_overview.md) --> topic for more information. 
 
 ## Deploy HCL DX CF198 to container platforms using Helm
 
@@ -27,7 +27,7 @@ See the [HCL DX 9.5 Helm deployment](../../platform/kubernetes/operator-migrati
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and automate processes in the development and delivery process. Updates delivered in CF198 include process definitions to automate select IBM WebSphere Application Server settings during deployment, generate import and export lists of virtual portals, and import and export personalization rules.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html){:target="_blank"}<!-- (../containerization/dxclient.md) --> topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../platform/administration/DXClient/dxclient.md)<!-- (../containerization/dxclient.md) --> topic for more information.
 
 ## New HCL Digital Experience Site Manager Custom Layout Editor
 
@@ -51,14 +51,14 @@ See the [CF release versioning and update path](https://help.hcltechsw.com/digi
 
 Take advantage of new step-by-step guidance for HCL Digital Experience practitioners presented in articles and videos from the following HCL Digital Experience Help Center topics:
 
--   [Video: Creating an HCL Digital Experience 9.5 CF196 cluster](https://help.hcltechsw.com/digital-experience/9.5/install/rm_cluster_parent.html)<!-- (../install/rm_cluster_parent.md) -->{:target="_blank"}
--   [Step-by-step guide: How to deploy HCL DX Container update CF197 and later to Microsoft Azure Kubernetes Service](../../platform/kubernetes/deployment/helm_install_commands.md)
+-   Video: [Creating an HCL Digital Experience 9.5 CF196 cluster](https://help.hcltechsw.com/digital-experience/9.5/install/rm_cluster_parent.html)<!-- (../install/rm_cluster_parent.md) -->
+-   Step-by-step guide: [How to deploy HCL DX Container update CF197 and later to Microsoft Azure Kubernetes Service](../../platform/kubernetes/deployment/helm_install_commands.md)
 
 ## HCL Digital Experience 9.5 Container Platform Support Matrix
 
 View the latest Kubernetes and OpenShift platforms tested and supported for specific HCL Digital Experience 9.5 Container Update deployments.
 
-See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../platform/kubernetes/c_kubesupportstatement.md) topic for more information.
+See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../platform/systemrequirements/9.5_express/supportedsoftware.md) topic for more information.
 
 <!-- ???info "Related information:"
     - [Design Studio \(Beta\)](../design_studio/design_studio_overview.md)

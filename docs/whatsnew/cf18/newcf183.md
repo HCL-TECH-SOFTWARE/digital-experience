@@ -34,7 +34,7 @@ Take advantage of new step by step guidance for HCL Digital Experience practitio
 -   [Virtual portals](https://help.hcltechsw.com/digital-experience/9.5/admin-system/ad_vp.html){:target="_blank"}<!-- (../admin-system/ad_vp.md) -->
 -   [Backup and restore](https://help.hcltechsw.com/digital-experience/9.5/admin-system/i_wadm_c_bkup_restr_winlinux.html){:target="_blank"}<!-- (../admin-system/i_wadm_c_bkup_restr_winlinux.md) -->
 -   [Configuration Wizard](https://help.hcltechsw.com/digital-experience/9.5/config/cw_overview.html){:target="_blank"}<!-- (../config/cw_overview.md) -->
--   [Combined Cumulative Fix Install](https://help.hcltechsw.com/digital-experience/9.5/overview/ccf_strategy85.html){:target="_blank"}<!-- (ccf_strategy85.md) -->
+-   [Combined Cumulative Fix Install](https://help.hcltechsw.com/digital-experience/8.5/overview/ccf_strategy85.html){:target="_blank"}<!-- (ccf_strategy85.md) -->
 -   [Rich text editor toolbar configuration options](https://help.hcltechsw.com/digital-experience/9.5/wcm/wcm_config_ephox_custom.html){:target="_blank"}<!-- (../wcm/wcm_config_ephox_custom.md) -->
 -   [Data collection and symptom analysis](https://help.hcltechsw.com/digital-experience/9.5/trouble/tbl_apdt_over.html){:target="_blank"}<!-- (../trouble/tbl_apdt_over.md) -->
 

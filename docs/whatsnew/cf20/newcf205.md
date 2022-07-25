@@ -33,7 +33,12 @@ Reusable elements for use with Content lists are added to Design Studio (Beta). 
 
 
 ## Personalization REST APIs
-Personalization Selection REST API rules add new Binding rules to add capabilities for developers and marketers to fine-tune delivery of personalized content to the end users. For more information, see [Personalization Binding rule](https://help.hcltechsw.com/digital-experience/9.5/pzn/pzn_binding_rule.html){:target="_blank"} and [Personalization Embedded WCM Select Action rule](https://help.hcltechsw.com/digital-experience/9.5/pzn/pzn_embedded_select_action_rule.html){:target="_blank"} topics for more information.
+Personalization Selection REST API rules add new Binding rules and Embedded WCM select action rule to add capabilities for developers and marketers to fine-tune delivery of personalized content to the end users. For more information, see below topics for more information.
+- [Personalization Embedded WCM Select Action rule](https://help.hcltechsw.com/digital-experience/9.5/pzn/pzn_embedded_select_action_rule.html){:target="_blank"}
+- Binding rules: [Personalization rules REST API content details](https://help.hcltechsw.com/digital-experience/9.5/pzn/rules_api_contents_details.html)
+- [Personalization APIs](https://help.hcltechsw.com/digital-experience/9.5/pzn/pzn_apis.html)
+- [Personalization REST API explorer](https://help.hcltechsw.com/digital-experience/9.5/pzn/dev_pzn_rest_api_explorer.html)
+- [Application object](https://help.hcltechsw.com/digital-experience/9.5/pzn/pzn_application_object.html)
 
 ## Notice of deprecation and replacement of Document Conversion Services
 Document Conversion Services components in the HCL Digital Experience software will be updated and replaced in the HCL DX CF205 release. HCL Digital Experience will remove the DCS component supplied by Oracle, and replace it with HCL supported functions. After that point, HCL Digital Experience v8.5, v9.0, and v9.5 Container Update and CF releases will include the newer HCL supported component. For more information, see the [Replacement of DCS component](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0096908) knowledge article.

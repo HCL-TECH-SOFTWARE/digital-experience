@@ -27,13 +27,13 @@ See the [HCL DX 9.5 Helm deployment](../../platform/kubernetes/operator-migrati
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and automate processes in the development and delivery process. Updates include new release artifact types supporting, Obtain failed Syndication reports for single or multiple items, and delete Digital Asset Management inactive schema from Persistence are provided in CF197.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html){:target="_blank"}<!-- (../containerization/dxclient.md) --> topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../platform/administration/DXClient/dxclient.md) topic for more information.
 
 ## HCL Digital Experience 9.5 Container Platform Support Matrix
 
 View the latest Kubernetes and OpenShift platforms tested and supported for specific HCL Digital Experience 9.5 Container Update deployments.
 
-See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../platform/kubernetes/c_kubesupportstatement.md) topic for more information.
+See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../platform/systemrequirements/9.5_express/supportedsoftware.md) topic for more information.
 
 ## New HCL Digital Experience ‘How To’ Videos
 
