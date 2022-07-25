@@ -195,7 +195,7 @@ OPERATION_WAIT_INTERVAL is used as environment variable with default value of 2 
 
 ## How is the configuration setup for Kaltura Plugin
 
-The kaltura plugin configurations are currently maintained as config maps. i.e. user can find kaltura-plugin.json in the configuration folder under HELM Package and can be deployed into DAM by doing a HELM upgrade.
+The Kaltura plugin configurations are currently maintained as config maps. The user can find the kaltura-plugin.json file in the configuration folder under the Helm Package and can be deployed into DAM through the Helm-based deployment.
 
 ```
 configuration:
@@ -205,7 +205,7 @@ configuration:
 ```
 
 ### Plugin security Configuration
-In DAM-Extensibility plugins comes with security enabled. So i.e. the API requests are authenticated with the security key which is transmitted and validated in every calls both plugin and callback calls, and the user can write this in the same config file under security configuration and give the value to authenticationKey param. And then this value is passed for plugin configuration key attribute so that DAM sends this with each request to authenticate.
+In DAM Extensibility, plugins come with the security enabled. So, the API requests are authenticated with the security key, which is transmitted and validated in every call, both for plugin and callback calls, and the user can write this in the same config file under security configuration and give the value to the authenticationKey parameter. This value is then passed for plugin configuration key attribute, so that DAM sends this with each request to authenticate.
 
 ```
    # Security related configuration, e.g. default credentials default
@@ -216,3 +216,22 @@ In DAM-Extensibility plugins comes with security enabled. So i.e. the API reques
       # Authentication key for Kaltura external service
       secretKey: "cnVtYWFhYm9zZS1oY2wK"
 ```
+
+### List of deprecated Plugin APIs
+
+The following DAM APIs are deprecated and no longer in use:-
+
+- PUT: /plugins/{plugin_id} <br/>
+
+- PATCH: /plugins/{plugin_id} <br/>
+
+- GET: /plugins/{plugin_id} <br/>
+
+- DELETE: /plugins/{plugin_id} <br/>
+
+- POST: /plugins <br/>
+
+- GET: /plugins<br/>
+
+!!! note
+    Please take a note of all Kaltura Plugin configuration details before upgrading.
