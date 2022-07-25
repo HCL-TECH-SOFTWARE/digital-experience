@@ -39,7 +39,7 @@ You may also follow the same steps when getting the UUID for a page.
 
     ![Copy page UUID](../../images/copy_page_UUID_properties.png)
 
-## How to present your feedback on HCL Design Studio (Beta)
+## HCL Digital Experience Solution Feedback
 
-HCL Digital Experience welcomes your feedback and suggestions on Design Studio (Beta), and encourages you to present your input through cases and discussions with HCL Support DX leaders.
+HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).
 

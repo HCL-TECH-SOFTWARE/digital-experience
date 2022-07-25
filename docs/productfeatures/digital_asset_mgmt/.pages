@@ -5,7 +5,7 @@ nav:
     - access_digital_asset_mgmt.md
     - Configure single sign-on (SSO): configure_dam_sso.md
     - configure_dam_kaltura.md
-    - staging_dam
+    - Sharing and staging DAM assets: staging_dam
     - DAM extensibility: 
         - dam_extensibility.md
         - dam_plugin_communication.md

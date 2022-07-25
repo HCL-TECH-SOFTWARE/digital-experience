@@ -12,7 +12,6 @@ Follow these steps to view a list of file formats supported by HCL Digital Exper
 
 1.  Log in to your HCL Digital Experience 9.5 platform and select **Digital Assets** from the Practitioner Studio navigator.
 
-    ![](../images/dam_upload_media_collections.png "")
     ![Digital Asset Management user interface](../../../images/dam_upload_media_collections.png)
 
     The HCL Digital Experience 9.5 DAM can also be accessed from the Practitioner Studio **Digital Assets** tile.
@@ -37,7 +36,7 @@ The following are supported media asset file formats in HCL Digital Experience 9
 |.webp|image/webp|
 
 !!! note 
-    You can set the maximum file size for the DAM asset uploads. For more information on configuring the file size, see the [DAM API](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeGroupController.updateById) topic.
+    You can set the maximum file size for the DAM asset uploads. For more information on configuring the file size, refer to the [MediaTypeGroupController.updateById](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeGroupController.updateById) API documentation topic.
 
 |File type|Extension|
 |---------|---------|
@@ -47,7 +46,7 @@ The following are supported media asset file formats in HCL Digital Experience 9
 
 !!! notes
 
-    -   You can set the maximum file size for the DAM asset uploads. For more information on configuring the file size, see the [DAM API](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeGroupController.updateById) topic.
+    -   You can set the maximum file size for the DAM asset uploads. For more information on configuring the file size, refer to the [MediaTypeGroupController.updateById](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeGroupController.updateById) API documentation topic.
     -   Videos are automatically synchronized once they are uploaded. Auto-synchronization is a background activity in HCL Digital Asset Management that happens when any video is uploaded and when Kaltura integration is configured and enabled.
 
 |File type|Extension|
@@ -75,7 +74,6 @@ Play uploaded videos in DAM using the DAM binary URL or the Kaltura Player \(if 
     -   The Kaltura plugin is configured and enabled.
 
         ![Playing a video using the Kaltura Player](../../../images/dam_kaltura_player_for_synced.png)
-
 
 !!! note 
     Videos being synced in progress displays a warning message and cannot be played yet.
@@ -106,3 +104,7 @@ Use the HCL Digital Experience 9.5 DAM editor to delete a media asset, including
 2.  A pop-up will appear for you to select your Delete action. If the selected media assets will not affect any references, click **Check for references and delete** to complete action.
 
     ![Check references and delete media asset](../../../images/Check_for_references_and_delete_HCL_DAM.png)
+
+## HCL Digital Experience Solution Feedback
+
+HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).

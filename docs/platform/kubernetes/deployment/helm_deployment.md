@@ -11,7 +11,7 @@ Learn to deploy HCL Digital Experience 9.5 CF196 and later release containers to
 
 Refer video:
 
--   [Deploy HCL DX 9.5 Container using Helm](https://www.youtube.com/watch?v=pFKpMImqOQE){:target="_blank"}.
+-   [Deploy HCL DX 9.5 Container using Helm](https://www.youtube.com/watch?v=pFKpMImqOQE){:target="_blank"}
 -   [Update HCL DX 9.5 Container to a later version using Helm](https://www.youtube.com/watch?v=TwZuNOeWdT4){:target="_blank"}
 
 ## About this task

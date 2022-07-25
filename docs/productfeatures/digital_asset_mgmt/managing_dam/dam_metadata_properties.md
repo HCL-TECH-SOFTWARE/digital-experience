@@ -36,4 +36,6 @@ Beginning with HCL Digital Experience 9.5 Container Update CF205, using a custom
 1. An entitlement to [Google Vision API](https://cloud.google.com/vision/docs/detect-labels-image-api). 
 2. Configuration of the Digital Asset Management extension capability to integration Google Vision image tagging. Reference this Help Center topic [Configure DAM extension to Google Vision API for more details](../configure_DAM_extension_to_google_vision_API.md).
 
+## HCL Digital Experience Solution Feedback
 
+HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).
