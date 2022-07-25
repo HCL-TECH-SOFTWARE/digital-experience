@@ -53,9 +53,9 @@ configuration:
 
 Refer to the following Help Center documentation for more information about LDAP and Configuration Wizard configuration:
 
--   [Configuration Wizard](https://help.hcltechsw.com/digital-experience/9.5/config/cw_overview.html)<!--  (../config/cw_overview.md) -->
--   [Enable federated security](https://help.hcltechsw.com/digital-experience/9.5/config/cw_ldap.html)<!-- (../config/cw_ldap.md) -->
--   [Troubleshooting: Enable federated security option](https://help.hcltechsw.com/digital-experience/9.5/trouble/cw_ldap.html)<!-- (../trouble/cw_ldap.md) -->
+-   [Configuration Wizard](https://help.hcltechsw.com/digital-experience/9.5/config/cw_overview.html){:target="_blank"}<!--  (../config/cw_overview.md) -->
+-   [Enable federated security](https://help.hcltechsw.com/digital-experience/9.5/config/cw_ldap.html){:target="_blank"}<!-- (../config/cw_ldap.md) -->
+-   [Troubleshooting: Enable federated security option](https://help.hcltechsw.com/digital-experience/9.5/trouble/cw_ldap.html){:target="_blank"}<!-- (../trouble/cw_ldap.md) -->
 
 
 ### Authoring/Rendering configuration
@@ -115,24 +115,24 @@ configuration:
       configWizard: true
 ```
 
-### Tika and Stellent Configuration
+### Replacing Oracle Document Conversion Services with Apache Tika
 
-Beginning with HCL Digital Experience release 205, [Oracle Stellent Document Conversion Services](https://help.hcltechsw.com/digital-experience/9.5/admin-system/dcs_info.html), which is used by [HCL Digital Experience Search](https://help.hcltechsw.com/digital-experience/9.5/wcm/wcm_dev_search.html) and [HCL Digital Experience RemoteSearch](https://help.hcltechsw.com/digital-experience/9.5/admin-system/srcusgrmtsrchsrv.html) is not distributed or supported by HCL. Oracle functionality is replaced by Apache Tika. For additional information on DCS services available in CF205 and later, see the [Replacement of Document Conversion Services component](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0096908) knowledge article.
+Beginning with HCL Digital Experience release 205, [Oracle Document Conversion Services](https://help.hcltechsw.com/digital-experience/9.5/admin-system/dcs_info.html){:target="_blank"}, which is used by [HCL Digital Experience Search](https://help.hcltechsw.com/digital-experience/9.5/wcm/wcm_dev_search.html){:target="_blank"} and [HCL Digital Experience RemoteSearch](https://help.hcltechsw.com/digital-experience/9.5/admin-system/srcusgrmtsrchsrv.html){:target="_blank"} is not distributed or supported by HCL. Oracle functionality is replaced by [Apache Tika](https://tika.apache.org/){:target="_blank"}, which is included in the HCL DX CF205 and later offering. For additional information on DCS services available in CF205 and later, see the [Replacement of Document Conversion Services component](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0096908){:target="_blank"} knowledge article.
 
 !!!important
-    Do not change the default configuration if you do not have a backup of the Stellent files in your environment. For instructions on how to backup the Stellent files in a version prior to CF205, please refer to [Creating a backup of DCS files](https://help.hcltechsw.com/digital-experience/9.5/admin-system/dcs_backup.html).
+    Do not change the default configuration if you do not have a backup of the Oracle DCS files in your environment. For instructions on how to backup the DCS files in a version prior to CF205, please refer to [Creating a backup of DCS files](https://help.hcltechsw.com/digital-experience/9.5/admin-system/dcs_backup.html){:target="_blank"}.
 
     The settings in this section are only applied during an upgrade from one CF version to another. To run the configuration manually at any other time, please follow the following instructions to manually configure the deployment:
 
-    - [Configure Tika](https://help.hcltechsw.com/digital-experience/9.5/admin-system/enable_3rdparty_tika.html)
-    - [Configure Stellent](https://help.hcltechsw.com/digital-experience/9.5/admin-system/disable_3rdparty_dcs.html)
+    - [Configure Tika](https://help.hcltechsw.com/digital-experience/9.5/admin-system/enable_3rdparty_tika.html){:target="_blank"}
+    - [Configure Oracle DCS](https://help.hcltechsw.com/digital-experience/9.5/admin-system/disable_3rdparty_dcs.html){:target="_blank"}
 
 |configureTika|disableStellentDCS|Result|
 |---------|-----------|-------------|
-|true|true|Apache Tika will be used for DX Search indexing. Oracle Stellent will not be used for DX Document Conversion Services.|
-|true|false|Apache Tika will be used for DX Search indexing. Oracle Stellent will be used for DX Document Conversion Services.|
-|false|true|Oracle Stellent will be used for DX Search indexing, not be used for DX Document Conversion Services.|
-|false|false|Oracle Stellent will be used for DX Search indexing and for DX Document Conversion Services.|
+|true|true|Apache Tika will be used for DX Search indexing. Oracle DCS will not be used for DX Document Conversion Services.|
+|true|false|Apache Tika will be used for DX Search indexing. Oracle DCS will be used for DX Document Conversion Services.|
+|false|true|Oracle DCS will be used for DX Search indexing, but will not be used for DX Document Conversion Services.|
+|false|false|Oracle DCS will be used for DX Search indexing and for DX Document Conversion Services.|
 
 By default, both parameters are set to `true` as given in the following example:
 
