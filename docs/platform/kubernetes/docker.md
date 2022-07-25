@@ -41,7 +41,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
         ```
 
     -   ```
-        hcl-dx-deployment-v2.8.5_20220721-1742.tgz
+        hcl-dx-deployment-v2.8.5_20220721-2117.tgz
         ```
 
     -   ```
