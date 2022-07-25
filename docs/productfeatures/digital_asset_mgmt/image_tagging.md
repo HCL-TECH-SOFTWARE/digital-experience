@@ -24,7 +24,6 @@ Following configuration changes are required for generating image keywords by Go
     # API key for Google vision
     apiKey: ""
 ```
-
 2. Under plugin configuration, enable google-vision by setting the enable flag to true.
 
 ```
@@ -43,7 +42,6 @@ Following configuration changes are required for generating image keywords by Go
    }
 }
 ```
-
 3. In case, if keywords are to be not generated or added to a specific mime type, modify supplemental stack in rendition-extensibility.json for the specific mime type.
 
 ```
