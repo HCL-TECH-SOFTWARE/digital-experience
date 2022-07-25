@@ -9,7 +9,7 @@ This section provides the steps to install the HCL Digital Experience 9.5 compon
 ## Pre-requisites
 
 -   See [Container image list](../../platform/kubernetes/docker.md) section for the latest DX 9.5 container file listings.
--   Review the list of [Requirements and Limitations](design_studio_overview.md) for Design Studio (Beta) with HCL DX 9.5 CF196
+-   Review the list of [Requirements and Limitations](index.md#requirements-and-limitations) for Design Studio (Beta) with HCL DX 9.5 CF196
 
 ## Installing HCL Design Studio (Beta)
 
@@ -23,7 +23,7 @@ When working with the dxctl deployment on your target Kubernetes platform, ensur
 
 ### Deploy with Helm
 
-Deployment options using [Helm](../../platform/kubernetes/deployment/helm_deployment.md) are introduced in HCL DX 9.5 Container Update CF196, and is supported on the Google Kubernetes Engine \(GKE\) platform only. When [deploying to Google Kubernetes Engine](https://help.hcltechsw.com/digital-experience/9.5/containerization/google_gke.html), ensure the `designStudio` flag is set to true in the [Applications](../../platform/kubernetes/architecture/application_architecture.md) section of the values.yaml file used for deployment.
+Deployment options using [Helm](../../platform/kubernetes/deployment/helm_deployment.md) are introduced in HCL DX 9.5 Container Update CF196, and is supported on the Google Kubernetes Engine \(GKE\) platform only. When [deploying to Google Kubernetes Engine](https://help.hcltechsw.com/digital-experience/9.5/containerization/google_gke.html), ensure the `designStudio` flag is set to true in the [Applications](../../platform/kubernetes/architecture/application_architecture.md) section of the `values.yaml` file used for deployment.
 
 !!! example
     ```

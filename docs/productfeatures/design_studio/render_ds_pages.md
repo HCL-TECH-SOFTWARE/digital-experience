@@ -2,7 +2,7 @@
 The following outlines how to render a site built using HCL Design Studio (Beta).
 
 ## Prerequisite
-Design Studio (Beta) is available for evaluation use and may not be used in production. It may be installed and configured to HCL Digital Experience 9.5 container release update CF196 or higher. See instructions to install Design Studio (Beta) in this Help Center topic: [Install Design Studio (Beta)](ds_installing.md).
+Design Studio (Beta) is available for evaluation use and may not be used in production. It may be installed and configured to HCL Digital Experience 9.5 container release update CF196 or higher. See instructions to install Design Studio (Beta) in [Install Design Studio (Beta)](ds_installing.md).
 
 Design Studio (Beta) is accessible from the Practitioner Studio interface, after image configuration to your HCL Digital Experience 9.5 CF196 or higher deployment.
 

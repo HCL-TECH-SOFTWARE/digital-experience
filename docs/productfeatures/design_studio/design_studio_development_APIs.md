@@ -9,7 +9,7 @@ The API design for version 2.0 of the WCM DX REST API is intended to leverage th
 !!! note
     The Web Content Manager Open Standards DX Beta code changes are possible until finalized and delivered in a later HCL DX 9.5 release for production use.
 
-After installing HCL Digital Experience 9.5 CF196 or higher release, the Open Standards REST API may be accessed at /dx/api/wcm/v2/explorer.
+After installing HCL Digital Experience 9.5 CF196 or higher release, the Open Standards REST API may be accessed at `/dx/api/wcm/v2/explorer`.
 
 ## Get the UUID of a selected site or a page
 
