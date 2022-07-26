@@ -4,7 +4,7 @@
 
 ## User access and control capabilities for HCL DAM EXIM users
 
-DAM \(EXIM\) is exposed via [DXClient](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html).
+DAM \(EXIM\) is exposed via [DXClient](../../../platform/administration/DXClient/dxclient.md).
 
 Administrator users and authorized users with Administrator role privileges have access and control capabilities to DAM EXIM.
 
@@ -16,7 +16,7 @@ If you specify a path and run the command from the container, then assets will e
 
 DAM EXIM may be used to take a backup of DAM assets from any environment. The same backup can be used in other environment.
 
-DAM EXIM cannot be used for continuous sync like DAM staging. You need to configure your [DAM staging](../dam_staging.md) if you want a continuous sync of DAM assets.
+DAM EXIM cannot be used for continuous sync like DAM staging. Refer to [Sharing and staging DAM assets](../staging_dam/index.md) for more information on how to configure a continuous sync of DAM assets.
 
 DAM Staging is a continuous sync process between environments. If you are using DAM staging, then it is not necessary to use DAM EXIM.
 
@@ -234,3 +234,6 @@ The import command is used to import the DAM assets to the target environment fr
         dxclient manage-dam-assets import-assets -dxProtocol https -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -exportPath <exportPath> -importBinary <importBinary>
         ```
 
+## HCL Digital Experience Solution Feedback
+
+HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).

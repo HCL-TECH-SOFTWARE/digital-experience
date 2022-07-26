@@ -13,7 +13,7 @@ Design Studio enables content managers and designers to build and style their di
 Digital Experience 9.5 Container Update CF196 and later must be installed and operational, along with the Practitioner Studio and Content Composer components, to access and use Design Studio (Beta). **Design Studio (Beta) is not supported for production use**.
 
 !!! note
-        Refer to the latest HCL DX 9.5 container release and update file listings in the [Docker image listing](http://127.0.0.1:8000/platform/kubernetes/docker/?h=image+li) topic.
+        Refer to the latest HCL DX 9.5 container release and update file listings in the [Docker image listing](../../platform/kubernetes/docker.md) topic.
 
 The following Digital Experience 9.5 features and services are **not supported** with Design Studio (Beta):
 

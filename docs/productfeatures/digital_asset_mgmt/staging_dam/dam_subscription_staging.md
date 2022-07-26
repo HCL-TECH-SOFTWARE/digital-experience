@@ -4,7 +4,7 @@ This topic contains the commands that administrators can use to configure the st
 
 ## DAM staging framework
 
-The DAM staging framework allows you to stage your DAM content from an authoring environment \(source environment/publisher\) to multiple rendering environments \(target environment/subscriber\). Using [DXClient](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html){:target="_blank"}, you can configure DAM staging to:
+The DAM staging framework allows you to stage your DAM content from an authoring environment \(source environment/publisher\) to multiple rendering environments \(target environment/subscriber\). Using [DXClient](../../../platform/administration/DXClient/dxclient.md), you can configure DAM staging to:
 
 -   Trigger a manual staging or use periodic staging processes.
 -   Set the cycle length \(default: 2 minutes, maximum: 24 hours\) for periodic sync.
@@ -278,6 +278,15 @@ You must restart the DX Core JVM for changes to take effect.
 If the properties are in place when using the REST API or WCM Admin UI or WCM API, the returned DAM references have the overwritten host name and port.
 
 !!! example 
-    If a content item is moved from the staging environment to production, and production has the host overwrite set to `production.hcl.com`, then all DAM references are returned with `production.hcl.com`. For instance, production.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true even if we received the following from syndication: staging.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true.
+    If a content item is moved from the staging environment to production, and production has the host overwrite set to `production.hcl.com`, then all DAM references are returned with `production.hcl.com`. <br>For instance, 
+    ```
+    production.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true
+    ```
+    even if we received the following from syndication: 
+    ```
+    staging.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true
+    ```
 
+## HCL Digital Experience Solution Feedback
 
+HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).
