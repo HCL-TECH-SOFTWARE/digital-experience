@@ -71,5 +71,8 @@ Effective on June 30, 2022, HCL announces the withdrawal of support for the Digi
 ## Ring API query parameters
 Refer to this [Limitations table](https://help.hcltechsw.com/digital-experience/9.5/open_api/api_explorers.html) to learn the query parameters enforced for Ring API.
 
+## Delete pages and their contents
+Beginning with CF205, a new feature is added, which allows you to delete a page and its contents along with the content that is referenced by the WCM rendering portlets on the page. For more information, see [Delete pages and their contents](https://help.hcltechsw.com/digital-experience/9.5/admin-system/delete_page_and_contents.html)){:target="_blank"}. 
+
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
 The HCL Software Academy offers technical education for the HCL Software portfolio of products, organized by practitioner role. New **What’s New in the latest DX CF** release modules are available for Digital Experience business users, developers and administrators. See the [HCL Digital Experience section](https://academy.hcltechsw.com/#HCLDXLearningJourneys){:target="_blank"} of the HCL Software Academy and [What’s New for Digital Experience section](https://academy.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){:target="_blank"} for more information.
