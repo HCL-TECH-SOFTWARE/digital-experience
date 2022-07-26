@@ -35,13 +35,17 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
     -   ```
         hcl-dx-core-image-v95_CF205_20220720-1646.tar.gz
         ```
-
+    
     -   ```
-        hcl-dx-dam-plugin-kaltura-image-v0.1.0_20220720-0113.tar.gz
+        hcl-dx-dam-plugin-google-vision-image-v0.1.0_20220720-1629.tar.gz
         ```
 
     -   ```
-        hcl-dx-deployment-v2.8.5_20220721-2117.tgz
+        hcl-dx-dam-plugin-kaltura-image-v0.1.0_20220720-1629.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-deployment-v2.8.5_20220726-1512.tgz
         ```
 
     -   ```
@@ -49,7 +53,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
         ```
 
     -   ```
-        hcl-dx-digital-asset-manager-image-v1.17.0_20220720-1656.tar.gz
+        hcl-dx-digital-asset-manager-image-v1.17.0_20220726-1322.tar.gz
         ```
 
     -   ```
