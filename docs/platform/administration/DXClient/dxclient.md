@@ -6,7 +6,7 @@ DXClient is a tool that helps developers and administrators manage tasks, such a
     DXClient version is mostly forward and backward compatible with the DX CF versions, however, in some cases it might not work as expected if the CF versions are different. Hence, ensure that the CF versions of both DXClient and DX Core are the same in your installation.
 !!! note
     DXClient is enabled in supported Kubernetes platforms from HCL Digital Experience 9.5 CF192 and later releases:
-    -   DXClient is available as a Docker image from HCL DX 9.5 CF196 and later releases, See the [Installation section](#dxclient_docker) for more details.
+    -   DXClient is available as a Docker image from HCL DX 9.5 CF196 and later releases, See the *Installation section* below for more details.
     -   DXClient also exists as [Node.js](https://nodejs.org/en/)-based CLI tool and requires Node.js to be installed as a prerequisite. However, this is deprecated in the HCL Digital Experience Container CF196 release.
 
 ## DXConnect
@@ -241,8 +241,8 @@ Once installed, commands can be executed using the DXClient tool to perform CI /
     Refer to the list of features that were released in the following HCL DX 9.5 Container releases:
 
     -   HCL DX 9.5 CF201 release:
-        -   An optional parameter `requestId` added to [Deploy theme](../DXClient/DXClientArtifactType/themes.md), [Deploy application](../DXClient/DXClientArtifactType/deployapplication.md), [Restart DX Core server](../DXClient/DXClientArtifactType/dxcoreserver.md), and [Manage virtual portals](../DXClient/DXClientArtifactType/virtualportals.md).
-        -   Retrieve feature added to the [Resource environment provider](../DXClient/DXClientArtifactType/resourceenvironments.md).
+        -   An optional parameter `requestId` added to [Deploy theme](../../administration/DXClient/dxclient_artifact_type/themes.md), [Deploy application](../../administration/DXClient/DXClientArtifactType/deployapplication.md), [Restart DX Core server](../../administration/DXClient/DXClientArtifactType/dxcoreserver.md), and [Manage virtual portals](../../administration/DXClient/DXClientArtifactType/virtualportals.md).
+        -   Retrieve feature added to the [Resource environment provider](../../administration/DXClient/DXClientArtifactType/resourceenvironments.md).
         -   [Accessing ConfigWizard in container environment](https://help.hcltechsw.com/digital-experience/9.5/containerization/helm_access_configwizard.html)
         -   Note that a few parameters are deprecated and replaced with new parameters in the DX Core configuration reports. For information, see [DX Core server configuration report](../DXClient/DXClientArtifactType/dxcoreserver.md)
     -   HCL DX 9.5 CF200 release:
@@ -251,39 +251,39 @@ Once installed, commands can be executed using the DXClient tool to perform CI /
     -   HCL DX 9.5 CF199 release:
         -   [DAM Staging](../../../productfeatures/digital_asset_mgmt/staging_dam/dam_subscription_staging.md)
         -   [Create credential vault slot](https://help.hcltechsw.com/digital-experience/9.5/containerization/credentialvaultslot.html)
-        -   [Create syndication relation](../DXClient/DXClientArtifactType/syndicatorsandsubscribers.md)
-        -   [Export and import multiple resource environment providers](../DXClient/DXClientArtifactType/resourceenvironments.md)
-        -   [Specify the context root for exporting and importing personalization rules](../DXClient/DXClientArtifactType/personalization.md)
+        -   [Create syndication relation](../../administration/DXClient/DXClientArtifactType/syndicatorsandsubscribers.md)
+        -   [Export and import multiple resource environment providers](../../administration/DXClient/DXClientArtifactType/resourceenvironments.md)
+        -   [Specify the context root for exporting and importing personalization rules](../../administration/DXClient/DXClientArtifactType/personalization.md)
     -   HCL DX 9.5 CF198 release:
-        -   [List DAM schemas](../DXClient/DXClientArtifactType/damschemas.md)
-        -   [Personalization export and import rules](../DXClient/DXClientArtifactType/personalization.md)
-        -   [Resource environment provider](../DXClient/DXClientArtifactType/resourceenvironments.md)
-        -   [Manage virtual portals](../DXClient/DXClientArtifactType/virtualportals.md)
+        -   [List DAM schemas](../../administration/DXClient/DXClientArtifactType/damschemas.md)
+        -   [Personalization export and import rules](../../administration/DXClient/DXClientArtifactType/personalization.md)
+        -   [Resource environment provider](../../administration/DXClient/DXClientArtifactType/resourceenvironments.md)
+        -   [Manage virtual portals](../../administration/DXClient/DXClientArtifactType/virtualportals.md)
     -   HCL DX 9.5 CF197 release:
-        -   [Undeploy portlets](../DXClient/DXClientArtifactType/portlets.md)
-        -   [Deploy and undeploy themes](../DXClient/DXClientArtifactType/themes.md)
-        -   [Deploy application](../DXClient/DXClientArtifactType/deployapplication.md)
-        -   [manage get-syndication report](../DXClient/DXClientArtifactType/syndicatorsandsubscribers.md)
-        -   [Restart Core](../DXClient/DXClientArtifactType/dxcoreserver.md)
-        -   [Delete DAM schema](../DXClient/DXClientArtifactType/damschemas.md)
+        -   [Undeploy portlets](../../administration/DXClient/DXClientArtifactType/portlets.md)
+        -   [Deploy and undeploy themes](../../administration/DXClient/DXClientArtifactType/themes.md)
+        -   [Deploy application](../../administration/DXClient/DXClientArtifactType/deployapplication.md)
+        -   [manage get-syndication report](../../administration/DXClient/DXClientArtifactType/syndicatorsandsubscribers.md)
+        -   [Restart Core](../../administration/DXClient/DXClientArtifactType/dxcoreserver.md)
+        -   [Delete DAM schema](../../administration/DXClient/DXClientArtifactType/damschemas.md)
     -   HCL DX 9.5 CF196 release:
-        -   [Shared library](../DXClient/DXClientArtifactType/sharedlibrary.md)
+        -   [Shared library](../../administration/DXClient/DXClientArtifactType/sharedlibrary.md)
     -   HCL DX 9.5 CF195 release:
-        -   [Undeploy theme](../DXClient/DXClientArtifactType/themes.md)
+        -   [Undeploy theme](../../administration/DXClient/DXClientArtifactType/themes.md)
         -   [MLS export and import of WCM library](https://help.hcltechsw.com/digital-experience/9.5/wcm/wcm_mls_export_import.html)
     -   HCL DX 9.5 CF193 release:
-        -   [Restart DX Core server](../DXClient/DXClientArtifactType/dxcoreserver.md)
-        -   [Deploy Application](../DXClient/DXClientArtifactType/deployapplication.md)
-        -   [Managing syndicators](../DXClient/DXClientArtifactType/syndicatorsandsubscribers.md)
-        -   [Managing subscribers](../DXClient/DXClientArtifactType/syndicatorsandsubscribers.md)
+        -   [Restart DX Core server](../../administration/DXClient/DXClientArtifactType/dxcoreserver.md)
+        -   [Deploy Application](../../administration/DXClient/DXClientArtifactType/deployapplication.md)
+        -   [Managing syndicators](../../administration/DXClient/DXClientArtifactType/syndicatorsandsubscribers.md)
+        -   [Managing subscribers](../../administration/DXClient/DXClientArtifactType/syndicatorsandsubscribers.md)
     -   HCL DX 9.5 CF192 release:
-        -   [Undeploy script applications](../DXClient/DXClientArtifactType/scriptapplications.md)
-        -   [Deploy theme](../DXClient/DXClientArtifactType/themes.md) \(EAR and WebDAV based\)
+        -   [Undeploy script applications](../../administration/DXClient/DXClientArtifactType/scriptapplications.md)
+        -   [Deploy theme](../../administration/DXClient/DXClientArtifactType/themes.md) \(EAR and WebDAV based\)
     -   HCL DX 9.5 CF19 release:
-        -   [Deploy Portlets](../DXClient/DXClientArtifactType/portlets.md) or [Undeploy portlets](../DXClient/DXClientArtifactType/portlets.md)
-        -   [Deploy script applications](../DXClient/DXClientArtifactType/scriptapplications.md)
-        -   [XML Access](../DXClient/DXClientArtifactType/xmlaccess.md)
-        -   [Restore Script Application](../DXClient/DXClientArtifactType/scriptapplications.md)
+        -   [Deploy Portlets](../../administration/DXClient/DXClientArtifactType/portlets.md) or [Undeploy portlets](../DXClient/DXClientArtifactType/portlets.md)
+        -   [Deploy script applications](../../administration/DXClient/DXClientArtifactType/scriptapplications.md)
+        -   [XML Access](../../administration/DXClient/DXClientArtifactType/xmlaccess.md)
+        -   [Restore Script Application](../../administration/DXClient/DXClientArtifactType/scriptapplications.md)
 
 ## DXClient commands
 

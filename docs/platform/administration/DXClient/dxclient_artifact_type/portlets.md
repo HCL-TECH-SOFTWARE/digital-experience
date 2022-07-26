@@ -18,7 +18,7 @@ The `deploy-portlet` command is used to deploy one or more new or updated portle
 
 -   **Portlet Application web archive file**
 
-    This web archive .war file should contain the necessary portlet artifacts for deployment, as per the JSR 286 portlet standard. Refer to [Importing WAR files](../admin-system/adxmlref_import_war.md)
+    This web archive .war file should contain the necessary portlet artifacts for deployment, as per the JSR 286 portlet standard. Refer to [Importing WAR files](https://help.hcltechsw.com/digital-experience/9.5/admin-system/adxmlref_import_war.html).
 
 
 **Command**
