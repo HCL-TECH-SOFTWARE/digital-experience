@@ -8,7 +8,7 @@ The `deploy-scriptapplication` command is used with the DXClient tool to push or
 
 **Required Files**:
 
-The script application push command in the DXClient tool requires a Script Application zip file or an extracted folder of the same \(identified by the `prebuiltZip` or `contentRoot` attributes respectively\). For more information on Script Applications, refer to the [Script Application](../script-portlet/build_apps.html) topics in the HCL DX Help Center.
+The script application push command in the DXClient tool requires a Script Application zip file or an extracted folder of the same \(identified by the `prebuiltZip` or `contentRoot` attributes respectively\). For more information on Script Applications, refer to the [Build applications with the Script Application](https://help.hcltechsw.com/digital-experience/9.5/script-portlet/build_apps.html) topics in the HCL DX Help Center.
 
 **Command**
 
@@ -435,10 +435,11 @@ dxclient restore-scriptapplication -wcmContentID <wcm-content-id> -versionName <
 
 **Note:** The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
 
-**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
+<!--- ???Info "**Parent topic:"
+**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
 
 **Related information**  
 
 
-[DXClient](../containerization/dxclient.md)
+[DXClient](../containerization/dxclient.md) --->
 
