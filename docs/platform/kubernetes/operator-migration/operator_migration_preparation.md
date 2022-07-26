@@ -9,7 +9,7 @@ This section outlines the needed steps to configure your new Helm-based deployme
 
 !!!important
 
-    -   Ensure that you go through the requirements in the [HCL DX 9.5 limitations and requirements](../../systemrequirements/9.5_all/supportedsoftware.md#kubernetes) topic.
+    -   Ensure that you go through the requirements in the [HCL DX 9.5 limitations and requirements](../../systemrequirements/9.5_express/supportedsoftware.md) topic.
     -   Ensure that you have followed the preparation process in [Planning your container deployment using Helm](../../kubernetes/deployment/preparation/overview.md), and that you have already created your custom-values.yaml.
     -   As with any migration activity, we recommend that you make backups of the data of your current environment before proceeding. See [Backup and recovery procedures](../operator-migration/operator_backup_and_recovery_procedures.md) for more information.
     -   In case of any errors after migration, you can fall back to your previous Operator-based environment. See [Migration to restore Core and DAM Operator deployment](../operator-migration/helm_fallback_migration_Operator_deployment.md) for more information.
