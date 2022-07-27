@@ -7,7 +7,7 @@ Learn to deploy HCL Digital Experience 9.5 CF196 and later release containers to
 
 !!! note
     
-    HCL DX V9.5 V200 and later is designed to run on any Certified Kubernetes platform with some conditions, documented in [Container platform support matrix](../../kubernetes/c_kubesupportstatement.md)
+    HCL DX V9.5 V200 and later is designed to run on any Certified Kubernetes platform with some conditions, documented in [Container platform support matrix](../../systemrequirements/9.5_express/supportedsoftware.md)
 
 Refer video:
 
