@@ -1,6 +1,13 @@
 # What's new in CF199
 
 This HCL Digital Experience 9.5 Container Update and CF199 release includes new releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management, Experience API, Design Studio \(Beta\), new Helm deployment operations for container deployments, updated CICD release process artifacts, “How To” videos, and more.
+
+This site describes new features in each release. Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=9bd40c1f1bbf5cd0534c4159cc4bcbbd#CF17){:target="_blank"} and [HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){:target="_blank"} for the list of software fixes, including Container Update releases. 
+
+You can access product software at [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release){:target="_blank"}. See [Step-by-step guide to downloading DX products and accessing Customer Support](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878&sys_kb_id=2cde06a31b885494c48197d58d4bcbe2){:target="_blank"} for more information.
+
+You can access the latest software requirements and updates that support HCL Digital Experience solutions from the HCL Support pages topic: [HCL Digital Experience V9.5, V9.0, and V8.5 detailed system requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03).
+
 ## Design Studio \(Beta\)
 
 Design Studio enables content managers and designers to build and style their digital site properties quickly. Available for use with DX 9.5 container-based deployments, Design Studio presents a modern, intuitive, and role-based tool aggregating all needed functions to visually assemble, curate, design, and model pages, content, and applications in DX sites. New features available with the Container Update CF199 release include the ability to select Web Content Manager library assets when creating sites, UI globalization, support for alternate and no context root when defining sites, and more.
@@ -8,7 +15,7 @@ Design Studio enables content managers and designers to build and style their di
 !!!note
     Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF196, and includes a sample DX site.  It is not yet supported for use in production deployments.
 
-See the [Design Studio \(Beta\)](https://help.hcltechsw.com/digital-experience/9.5/design_studio/design_studio_overview.html){:target="_blank"}<!-- (../design_studio/design_studio_overview.md) --> topic for more information. 
+See the [Design Studio \(Beta\)](../../productfeatures/design_studio/index.md) topic for more information. 
 
 ## Migrate from HCL DX 9.5 Operator to Helm Deployments
 
@@ -20,13 +27,13 @@ See the [HCL DX 9.5 Helm deployment](../../platform/kubernetes/operator-migrati
 
 New Digital Asset Management \(DAM\) staging support enables administrators to stage and synchronize DAM assets from an authoring environment \(source environment/publisher\) to multiple rendering environments \(target environment/subscriber\), using DXClient.
 
-See the [DAM staging](https://help.hcltechsw.com/digital-experience/9.5/containerization/dam_subscription_staging.html){:target="_blank"}<!-- (../containerization/dam_subscription_staging.md) --> topic for more information.
+See the [DAM staging](../../productfeatures/digital_asset_mgmt/staging_dam/dam_subscription_staging.md) topic for more information.
 
 ## New HCL Digital Experience 9.5 Release Artifacts supporting CICD release processes
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and to automate processes in the development and delivery process. Updates include process definitions to automate Export and Import of select IBM WebSphere Application Server Resource Provider settings during deployment, and to create Syndication relationships and credential vault settings.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html){:target="_blank"}<!-- (../containerization/dxclient.md) --> topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../platform/administration/DXClient/dxclient.md) topic for more information.
 
 ## End of Support for HCL Digital Experience Deprecated Features
 
@@ -47,7 +54,7 @@ Beginning with HCL Digital Experience CF and Container Update CF199, additional 
 Take advantage of new step-by-step guidance for HCL Digital Experience practitioners presented in articles and videos from the following HCL Digital Experience Help Center topics:
 
 -   Video: [Deploy HCL DX 9.5 Container Update using Helm](../../platform/kubernetes/deployment/helm_deployment.md)
--   Video: [Experience API V2 Web Content Manager REST APIs](https://help.hcltechsw.com/digital-experience/9.5/open_api/openapi_overview.html){:target="_blank"}
+-   Video: [Experience API V2 Web Content Manager REST APIs](https://help.hcltechsw.com/digital-experience/9.5/open_api/openapi_overview.html)
 
 <!-- ???info "Related information:"
     - [HCL Experience API](../open_api/openapi_overview.md)

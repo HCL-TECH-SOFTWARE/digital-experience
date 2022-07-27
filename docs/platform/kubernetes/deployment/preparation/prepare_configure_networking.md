@@ -97,7 +97,7 @@ Creation of that certificate can be achieved using the following commands for Op
    openssl genrsa -out my-key.pem 2048
                       
    # Creation of a certificate signed by the private key created before
-   openssl req -x509 -key my-key.pem -out my-cert.pem -days 365 -subj '/CN=my-cert              
+   openssl req -x509 -key my-key.pem -out my-cert.pem -days 365 -subj '/CN=my-cert'
 ```
 
 This provides you with a key and cert file that can be used in the next step, creation of the certificate to your deployment.
