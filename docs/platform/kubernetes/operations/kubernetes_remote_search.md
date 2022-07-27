@@ -199,7 +199,7 @@ Remote Search Routes \(example results\):
 
 Access the Remote Search Admin Console via the external IP address of your DX 9.5 Container deployment:
 
-Example: [https://35.xxx.174.3:9043/ibm/console](https://35.xxx.174.3:9043/ibm/console)
+Example: `https://35.xxx.174.3:9043/ibm/console`
 
 
 
