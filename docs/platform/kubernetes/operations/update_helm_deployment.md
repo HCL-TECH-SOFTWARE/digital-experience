@@ -2,7 +2,7 @@
 
 This section describes how to update the configuration of an HCL Digital Experience 9.5 CF196 or later deployment to Kubernetes or OpenShift installed using Helm.
 
-This section assumes that you prepared your cluster and your custom-values.yaml file, using guidance provided in the [Planning your HCL DX 9.5 container deployment using Helm](helm_planning_deployment.md) topic, and then installed your deployment using the instructions in the [Install](helm_install_commands.md) topic.
+This section assumes that you prepared your cluster and your custom-values.yaml file, using guidance provided in the [Planning your HCL DX 9.5 container deployment using Helm](helm_planning_deployment.md) topic, and then installed your deployment using the instructions in the [Install](../deployment/helm_install_commands.md) topic.
 
 -   **Overview of Helm Configuration Updates**
 
