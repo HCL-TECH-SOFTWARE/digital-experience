@@ -4,5 +4,4 @@ nav:
     - systemrequirements
     - kubernetes
     - docker
-    - administration
     - ...
