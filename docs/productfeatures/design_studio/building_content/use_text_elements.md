@@ -23,3 +23,6 @@ To set the HTML tags for your text elements:
 
 4.  Select from the drop down menu the new HTML tag you wish to apply on the selected text element. Changes are automatically saved.
 
+## HCL Digital Experience Solution Feedback
+
+HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).

@@ -43,7 +43,7 @@ The HCL Design Studio (Beta) Sites interface has the following components:
 -   **Menu options** - A pop-up that displays applicable user actions for a selected site or page
 -   **Properties panel** - A pop-up that displays site or page information, and applicable user actions.
 
-Content authors can also access view, editing and delete options of the selected site, page, or site template in this column. See [Create sites and pages with Design Studio \(Beta\)](create_dx_9_5_pages_design_studio.md) for more information.
+Content authors can also access view, editing and delete options of the selected site, page, or site template in this column. See [Create sites and pages with Design Studio \(Beta\)](creating_sites_and_pages.md) for more information.
 
 ![Site menu options](../../images/dx_site_menu_options.png "Site menu options")
 

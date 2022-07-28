@@ -6,8 +6,8 @@ This section provides the steps on how to access HCL Digital Asset Management \(
 
 HCL DAM should be installed and configured to HCL Digital Experience 9.5 Container Release Update CF181 and later.
 
--   For Operator-based deployments, see the [Install the HCL Digital Experience 9.5 Container components](https://help.hcltechsw.com/digital-experience/9.5/containerization/install_config_cc_dam.html) topic for instructions on container components.
--   For Helm-based deployments, see the [Deploying DX 9.5 applications to container platforms using Helm](../containerization/deploy_applications_using_helm.md) [Deploying DX 9.5 applications to container platforms using Helm](../../platform/kubernetes/architecture/application_architecture.md) topic for instructions on deploying applications
+-   For Operator-based deployments, see the [Install the HCL Digital Experience 9.5 Container components](install_config_dam.md) topic for instructions on container components.
+-   For Helm-based deployments, see the [Deploying DX 9.5 applications to container platforms using Helm](../../platform/kubernetes/architecture/application_architecture.md) topic for instructions on deploying applications
 
 !!! note 
     If you are using a content delivery network \(CDN\) such as [Akamai](https://www.akamai.com/our-thinking/cdn/what-is-a-cdn), using `Vary: Origin` may prevent you from caching content. To bypass this limitation, your CDN configuration must strip the `Vary` header on the way in, to reinstate your ability to cache content. On the way out, you can append the `Origin` parameter to the `Vary` header when serving a response using **'Modify Outgoing Response Header'**.

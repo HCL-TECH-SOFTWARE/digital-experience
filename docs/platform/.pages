@@ -1,7 +1,7 @@
 nav:
-    - intro_platforms.md
+    - index.md
+    - software_download
     - systemrequirements
-    - getting_the_software95.md
     - kubernetes
     - docker
     - ...

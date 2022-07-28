@@ -1,5 +1,6 @@
 #Project Information
 site_name: HCL Digital Experience Help Center
+site_url: https://opensource.hcltechsw.com/digital-experience/
 site_description: >-
   A next-gen documentation site for HCL Digital Experience.
 
@@ -23,6 +24,7 @@ theme:
     text: Roboto
     code: Roboto Mono
   favicon: assets/favicon.png
+  extra_css: 
 
   # Static files
   static_templates:
@@ -55,8 +57,7 @@ edit_uri: edit/main/docs
 
 # Customization
 extra_css:
-  - stylesheets/dx_style.css
-  # - sofy.css
+  - assets/stylesheets/dx_style.css
 
 plugins:
   - awesome-pages

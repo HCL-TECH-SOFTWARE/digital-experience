@@ -177,6 +177,7 @@ The log output for a DX deployment is set to a non-verbose configuration by defa
 |Remote Search|\*=info|
 |Ring API|api:server-v1:\*=info|
 |Runtime Controller|controller:.\*=INFO,controller:com.hcl.dx.\*=INFO|
+|HAProxy|haproxy:=info|
 
 All applications send their log output directly to `stdout` and `stderr` of the corresponding container that they are running in. Besides that, the following applications also write their log output into a file that is available in the file system of the containers:
 

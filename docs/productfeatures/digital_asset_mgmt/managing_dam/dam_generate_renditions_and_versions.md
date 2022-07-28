@@ -14,7 +14,7 @@ Follow these steps to access renditions of a media asset using HCL Digital Exper
 
 1.  From the HCL Digital Experience 9.5 Digital Asset Management interface, hover over a media asset to access **Edit** options. Select the Edit \(pencil\) icon.
 
-    ![](../images/dam_edit_media.png "")
+    ![](../../../images/dam_edit_media.png)
     ![Edit media asset](../../../images/dam_edit_media.png)
 
 2.  From the HCL DAM editor user interface, click any of the **Desktop**, **Smartphone** or **Tablet** icons on the left side menu to view the renditions of the selected media asset.

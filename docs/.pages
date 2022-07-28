@@ -1,9 +1,5 @@
 nav:
     - index.md
-    - overview
     - whatsnew
     - platform
     - productfeatures
-    # - reference
-#    - DX Traditional: dxtraditional
-#    - Designing with DX: allnewfeatures

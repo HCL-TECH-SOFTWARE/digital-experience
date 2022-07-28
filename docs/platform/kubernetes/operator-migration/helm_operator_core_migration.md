@@ -113,7 +113,7 @@ If you want to enable the Operator-based deployment Core pod again, set the valu
 
 !!!important 
 
-        - Ensure to note the [requirements and limitations here](helm_extract_operator_properties.md#prereq_lxy_5rt_hrb).
+        - Ensure to note the [requirements and limitations here](../../systemrequirements/9.5_express/supportedsoftware.md).
         - For the new Helm deployment, you must use a different Kubernetes namespace from the one used in the Operator-based deployment.
 
 ### Ensure correct state
