@@ -88,7 +88,7 @@ For HAProxy to allow forward requests to your applications, you must provide it 
 
 ## Configure HAProxy networking
 
-By default, HAProxy is deployed with a `LoadBalancer` type service to handle the incoming traffic as well as the SSL offloading for HCL Digital Experience. In addition, the Helm deployment offers adjustability for HAProxy and its services to allow for more flexible deployment and use of custom `Ingress Controllers`.
+HAProxy is deployed with a `LoadBalancer` type service to handle the incoming traffic as well as the SSL offloading for HCL Digital Experience. In addition, the Helm deployment offers adjustability for HAProxy and its services to allow for more flexible deployment and use of custom `Ingress Controllers`.
 
 |Parameter|Description| Type | Default value|
 |---------|-----------|-------------|------|
