@@ -2,812 +2,817 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/docker/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/docker/docker_compose/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/docker/docker_image_deployment/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/docker/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/overview/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/architecture/application_architecture/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/architecture/configure_deployment/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/architecture/container_scaling/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/architecture/core_interactions_kubernetes/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/architecture/dam_persistence_architecture/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/architecture/helm_overview/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/architecture/persistent_volumes/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/deployment/helm_deployment/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/deployment/helm_install_commands/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/deployment/helm_uninstall/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/deployment/preparation/optional_configure_apps/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/deployment/preparation/optional_configure_credentials/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/deployment/preparation/optional_configure_harbor_helm_repo/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/deployment/preparation/optional_configure_scaling/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/deployment/preparation/optional_core_sidecar_log/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/deployment/preparation/optional_disable_apps/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/deployment/preparation/optional_experimental_features/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/deployment/preparation/optional_imagepullsecrets/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/deployment/preparation/optional_internal_networking/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/deployment/preparation/optional_labels_annotations/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/deployment/preparation/optional_nodeselectors/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/deployment/preparation/optional_rs_sidecar_log/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/deployment/preparation/overview/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/deployment/preparation/prepare_configuration/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/deployment/preparation/prepare_configure_networking/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/deployment/preparation/prepare_ingress_certificate/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/deployment/preparation/prepare_load_images/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/deployment/preparation/prepare_namespace/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/deployment/preparation/prepare_persistent_volume_claims/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/deployment/preparation/probes_configuration/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/haproxy-migration/haproxy-configuration/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/haproxy-migration/haproxy-introduction/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/haproxy-migration/haproxy-migration/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/haproxy-migration/haproxy-remove-ambassador/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/operations/helm_dam_backup_restore/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/operations/kubernetes_remote_search/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/operations/run_core_config_engine/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/operations/update_helm_deployment/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/operations/monitoring/basic_monitor_helm_deployment/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/operations/monitoring/monitor_helm_deployment_metrics/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/operations/troubleshooting/configure_access_helm_logs/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/operations/troubleshooting/helm_troubleshooting/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/operator-based/customizing_container_deployment/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/operator-based/deploy_container_platforms/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/operator-based/dxtools_dxctl/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/operator-migration/helm_dam_migration/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/operator-migration/helm_dam_migration_newDB/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/operator-migration/helm_fallback_migration_Operator_deployment/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/operator-migration/helm_operator_core_migration/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/operator-migration/operator_backup_and_recovery_procedures/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/kubernetes/operator-migration/operator_migration_preparation/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/software_download/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/software_download/dx_from_harbor/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/software_download/getting_the_software95/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/disclaimer/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/glossary/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/includedsoftware/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/othersoftware/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/security/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/9.5_express/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/9.5_express/disclaimer/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/9.5_express/glossary/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/9.5_express/hardware/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/9.5_express/hypervisors/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/9.5_express/operatingsystems/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/9.5_express/prerequisites/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/9.5_express/productpackage/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/9.5_express/supportedsoftware/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/docker/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/kubernetes/databases/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/kubernetes/kubernetes-runtime/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/kubernetes/limitations_requirements/</loc>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/traditional/databases/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/traditional/hardware/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/traditional/hypervisors/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/traditional/operatingsystems/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/traditional/othersoftware/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/platform/systemrequirements/traditional/prerequisites/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/design_studio/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/design_studio/creating_sites_and_pages/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/design_studio/design_studio_development_APIs/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/design_studio/ds_installing/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/design_studio/ds_navigating/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/design_studio/render_ds_pages/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/design_studio/update_content_items/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/design_studio/building_content/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/design_studio/building_content/style_elements/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/design_studio/building_content/use_content_containers/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/design_studio/building_content/use_content_lists/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/design_studio/building_content/use_data_containers/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/design_studio/building_content/use_reusable_blocks/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/design_studio/building_content/use_text_elements/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/access_digital_asset_mgmt/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/configure_DAM_extension_to_google_vision_API/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/configure_dam_Metadata_configuration/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/configure_dam_extensibility/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/configure_dam_kaltura/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/configure_dam_sso/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/dam_extensibility/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/dam_plugin_communication/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/dam_restore_image_operator/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/image_tagging/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/install_config_dam/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/kaltura_configuration/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/operator_dam_backup_restore_image/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/managing_dam/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/managing_dam/adxmldam/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/managing_dam/dam_edit_image/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/managing_dam/dam_exim/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/managing_dam/dam_generate_renditions_and_versions/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/managing_dam/dam_metadata_properties/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/managing_dam/dam_set_unique_custom_URL_media_asset/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/managing_dam/manage_collections/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/managing_dam/manage_media_assets/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/managing_dam/modify_media_assets/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/managing_dam/upload_rich_media_assets/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/staging_dam/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/staging_dam/dam_staging_to_production/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/staging_dam/dam_subscription_staging/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/combined_cumulative_fix_strategy/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/deprecated_features/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/unsupported_features/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf17/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf17/new_cf17/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf17/new_cf171/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf17/new_cf172/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf17/new_cf173/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf18/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf18/new_cf18/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf18/new_cf181/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf18/newcf182/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf18/newcf183/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf18/newcf184/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf19/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf19/newcf19/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf19/newcf191/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf19/newcf192/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf19/newcf193/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf19/newcf194/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf19/newcf195/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf19/newcf196/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf19/newcf197/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf19/newcf198/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf19/newcf199/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf20/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf20/newcf200/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf20/newcf201/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf20/newcf202/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf20/newcf203/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf20/newcf204/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensource.hcltechsw.com/digital-experience/cf205/whatsnew/cf20/newcf205/</loc>
-         <lastmod>2022-07-28</lastmod>
+         <lastmod>2022-07-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
