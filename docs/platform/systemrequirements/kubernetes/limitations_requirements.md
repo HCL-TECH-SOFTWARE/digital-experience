@@ -69,14 +69,14 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
     |HAProxy|haproxy|1|1024MB|1|
 
 
--   **Supported file system requirements**:
+<!-- -   **Supported file system requirements**:
 
     -   Requires an `**AccessMode**` of `**ReadWriteMany**`.
     -   Requires a minimum of **40 GB**, with the default request set to **100 GB**.
         !!! note
             HCL Digital Experience is input-output \(I/O\) intensive and requires a high performing file system for optimization.
-
-
+ -->
+<!-- 
 -   **Container platform capacity requirements**:
 
     The following table outlines the minimum and maximum capacity requested and managed by HCL DX 9.5 Container Components:
@@ -93,10 +93,6 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
     |Operators|Shared - minimal|Shared - minimal|Shared - minimal|Shared - minimal|2|
     |Ambassador|0.3|1|400 MB|600 MB|3|
     |Redis|0.3|1|400 MB|600 MB|3|
-    |Postgres-RO|1|2|1 GB|3 GB|1|
+    |Postgres-RO|1|2|1 GB|3 GB|1| -->
 
-??? info "Related information:"
-    - [Customizing the container for Operator-based deployments](operator-based/customizing_container_deployment.md)
-    - [Deployment using dxtools](operator-based/dxtools_dxctl.md)
-    <!-- - [Web Application Bridge](../../design/integrationtools/wab.md)-->
-    <!-- - [Limitations when running HCL DX Portlet Bridge on WebSphere Application Server 9.0](../../design/dev-portlet/dx_bridge_for_jsf_onwas9x.md) -->
+    
