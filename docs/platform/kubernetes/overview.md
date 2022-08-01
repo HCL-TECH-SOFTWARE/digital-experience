@@ -8,4 +8,4 @@ Whether developing, testing, or running a full production environment, use of Do
 
 ![Containerization Architecture Overview](../kubernetes/haproxy-migration/_img/haproxy-optional-ingress-architecture.png)
 
-Please see the [Containerization Limitations/Requirements](../systemrequirements/kubernetes/kubernetes-runtime.md) and [Deployment](../kubernetes/deployment/helm_deployment.md) sections of the documentation before you begin.
+Please see the [Containerization Limitations/Requirements](../systemrequirements/9.5_express/supportedsoftware.md) and [Deployment](../kubernetes/deployment/helm_deployment.md) sections of the documentation before you begin.

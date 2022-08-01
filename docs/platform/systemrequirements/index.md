@@ -7,14 +7,14 @@ For detailed system requirements of other HCL Digital Experience offerings, see 
 Detailed system requirements represent the complete lists of hardware requirements, supported operating systems, prerequisites, and optional supported software, with component-level details and operating system restrictions.
 
 - Kubernetes
-    - [Kubernetes Runtime](kubernetes/index.md)
+    - [Kubernetes Runtime](kubernetes/kubernetes-runtime.md)
     - [Databases](kubernetes/databases.md)
 - Traditional Deployments
     - [Operating systems](traditional/operatingsystems.md)
     - [Hypervisors](traditional/hypervisors.md)
     - [Prerequisites](traditional/prerequisites.md)
     - [Databases](traditional/databases.md)
-    - [Other Software](traditional/supportedsoftware.md)
+    - [Other Software](../systemrequirements/traditional/supportedsoftware.md)
     - [Hardware](traditional/hardware.md)
 - Docker
     - [Docker](docker/index.md)

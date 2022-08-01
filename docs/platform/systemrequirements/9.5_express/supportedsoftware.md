@@ -6,7 +6,7 @@ The supported software section specifies the additional software that HCL Portal
 This section describes the requirements to deploy the HCL Digital Experience 9.5 images to container platforms and current limitations.
 
 !!! important "Discontinuation of Operator"
-    **Attention:** Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience (DX) [Operator-based deployments](../../platform/kubernetes/operator-based/deploy_container_platforms.md) and provides support only for [Helm-based deployments](../../platform/kubernetes/architecture/helm_overview.md). HCL plans no further updates or code fixes provided for the Operator-based deployments. All customers must migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based deployments](../../platform/kubernetes/operator-migration/operator_migration_preparation.md).
+    **Attention:** Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience (DX) [Operator-based deployments](../../../platform/kubernetes/operator-based/deploy_container_platforms.md) and provides support only for [Helm-based deployments](../../../platform/kubernetes/architecture/helm_overview.md). HCL plans no further updates or code fixes provided for the Operator-based deployments. All customers must migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based deployments](../../../platform/kubernetes/operator-migration/operator_migration_preparation.md).
 
 Consult the [HCL Digital Experience 9.5 Support Statements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03) on the HCL Digital Experience Support pages for the latest updates on supported platforms, components, and release levels.
 ### Requirements for supported file systems
@@ -21,7 +21,7 @@ This section describes the requirements for supported file systems.
 -   A `persistence-node` relies on PostgreSQL which requires the use of hard links. Storage systems \(like Azure Files\) that do not support the use of hard links cannot be used. For more information, see the [Microsoft documentation for features not supported by the Azure File service](https://docs.microsoft.com/en-us/rest/api/storageservices/features-not-supported-by-the-azure-file-service).
 -   All DX applications require the use of symbolic links and soft links. Storage systems must support the use of symbolic links and soft links. If you use Azure Files, enable `mountOptions` of the StorageClass using `mfsymlinks`. For more information, see the [Microsoft documentation on troubleshooting Azure Files on Linux \(SMB\)](https://docs.microsoft.com/en-us/azure/storage/files/storage-troubleshoot-linux-file-connection-problems#cannot-create-symbolic-links---ln-failed-to-create-symbolic-link-t-operation-not-supported).
 -   You can configure volume sizes individually by volume, and these volume sizes are depend on the respective usage. For more information, see the following Help Center topics:
-    -   [Configuring PVCs in a Helm deployment](deployment/preparation/prepare_persistent_volume_claims.md)
+    -   [Configuring PVCs in a Helm deployment](../../../platform/kubernetes/deployment/preparation/prepare_persistent_volume_claims.md)
     -   Customizing the container for Operator-based deployments <!-- [see *Related information* section for related topic links] -->
 
 ### Requirements for Helm-based deployments
@@ -47,7 +47,7 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 
 -   **Migration**:
 
-    For information about migrating from Operator-based to Helm-based deployments, see [Migrating from Operator-based to Helm-based deployments](operator-migration/operator_migration_preparation.md).
+    For information about migrating from Operator-based to Helm-based deployments, see [Migrating from Operator-based to Helm-based deployments](../../../platform/kubernetes/operator-migration/operator_migration_preparation.md).
 
 -   **Resource requirements for container platform capacity**:
 
@@ -76,7 +76,7 @@ View the latest Kubernetes versions and platforms that HCL tested and supports f
 
 !!! important
 
-    Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience (DX) [Operator-based deployments](https://help.hcltechsw.com/digital-experience/9.5/containerization/deploy_container_platforms.html){:target="_blank"} and provides support only for [Helm-based deployments](../platform/kubernetes/index.md). HCL will release no further updates or code fixes provided for the Operator-based deployments. All customers must migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based](../platform/kubernetes/operator-migration/operator_migration_preparation.md) deployments.
+    Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience (DX) [Operator-based deployments](https://help.hcltechsw.com/digital-experience/9.5/containerization/deploy_container_platforms.html){:target="_blank"} and provides support only for [Helm-based deployments](../../../platform/kubernetes/index.md). HCL will release no further updates or code fixes provided for the Operator-based deployments. All customers must migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based](../../../platform/kubernetes/operator-migration/operator_migration_preparation.md) deployments.
 
 HCL encourages customers to remain up-to-date on the latest DX and Kubernetes releases. As a result, HCL is making all available DX fixes on the latest release. Customers may be asked to upgrade to the latest DX release to assist with problem determination.
 
@@ -177,7 +177,7 @@ Review your chosen Kubernetes platform and ensure that it supports the following
 
 * JDBC drivers are shipped as DB2 for z/OS APARs. You can check for the appropriate APAR/PTF numbers in the DB2 for z/OS Infocenter (**Programming for DB2 > Programming for Java > Supported drivers for JDBC and SQLJ**). Obtain the PTFs from DB2 on z/OS support or IBMLINK. Version 3.58 and later are supported.
 * Requires APAR PK93123 for DB2 on z/OS V9.1. You can obtain the fix from DB2 on z/OS support or IBMLINK.
-** Oracle JDBC Driver Thin (type 4) Oracle JDBC Driver Thick, TAF (type 2) - Supported on Linux operating systems only.
+* Oracle JDBC Driver Thin (type 4) Oracle JDBC Driver Thick, TAF (type 2) - Supported on Linux operating systems only.
 
 ## LDAP servers 
 All LDAP Servers that support the LDAP V3 Specification are supported.

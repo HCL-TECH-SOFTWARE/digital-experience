@@ -12,7 +12,7 @@ You can access the latest software requirements and updates that support HCL Dig
 
 Beginning with the HCL Digital Experience 9.5 Container Update CF193 release, enablement is provided to present friendly URLs with locale specific definitions when multi-lingual page versions are requested. This enablement can also improve SEO results when users search for language-specific DX page topics.
 
-See the [Enabling presentation of locales in friendly URLs](https://help.hcltechsw.com/digital-experience/9.5/admin-system/enabling_presentation_of_locales_in_friendly_urls.html){:target="_blank"}<!-- (../admin-system/enabling_presentation_of_locales_in_friendly_urls.md) --> topic for more information.
+See the [Enabling presentation of locales in friendly URLs](https://help.hcltechsw.com/digital-experience/8.5/admin-system/enabling_presentation_of_locales_in_friendly_urls.html){:target="_blank"}<!-- (../admin-system/enabling_presentation_of_locales_in_friendly_urls.md) --> topic for more information.
 
 ## Theme Editor Portlet
 
@@ -42,7 +42,7 @@ See the [How to switch the languages in the Digital Experience theme](https://he
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and automate processes in the development and delivery process. New release artifact types supporting Deploy DX Core, Manage Syndicator, and Manage Subscriber tasks are provided in Container Update CF193.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html){:target="_blank"}<!-- (../containerization/dxclient.md) --> topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../platform/administration/DXClient/dxclient.md) topic for more information.
 
 ## New Digital Experience REST APIs
 
@@ -54,7 +54,7 @@ New and updated HCL DX APIs are introduced with the HCL DX CF193 Container Updat
 
 View the latest Kubernetes and OpenShift platforms tested and supported for specific HCL Digital Experience 9.5 Container Update deployments.
 
-See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../platform/kubernetes/c_kubesupportstatement.md) topic for more information.
+See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../platform/systemrequirements/9.5_express/supportedsoftware.md) topic for more information.
 
 ## New HCL Digital Experience ‘How To’ Videos
 

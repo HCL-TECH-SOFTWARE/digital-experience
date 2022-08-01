@@ -1,5 +1,9 @@
 .md-banner{
-    background-color: black;
+    background: black;
+}
+
+.md-banner--warning {
+    background: var(--md-typeset-mark-color) !important
 }
 
 .md-tabs{

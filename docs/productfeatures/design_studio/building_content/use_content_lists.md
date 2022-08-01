@@ -24,9 +24,9 @@ You can control how items are displayed in the canvas using filtering and sortin
 -   **Display order** - Changes the content items by ascending or descending order. The default display order is ascending.
 -   **Display limit** - Limits the number of items displayed on a page. The default is 8.
 -   **Start at** - Sets the page number where the list starts on. The default is 1.
--   **Categories** - A search criteria that can be used to find content items that have been profiled with categories. <br>[Content list by categories](../../../images/categories.png)
--   **Keywords** - A search criteria that can be used to find content items that have been profiled with keywords. <br> [Content list by keywords](../../../images/keywords.png)
--  **Header and Footer** - The checkboxes for header and footer is added but the functionality is not yet implemented. <br> [Content list by header and footer](../../../images/header-and-footer.png)
+-   **Categories** - A search criteria that can be used to find content items that have been profiled with categories. <br>![Content list by categories](../../../images/categories.png)
+-   **Keywords** - A search criteria that can be used to find content items that have been profiled with keywords. <br> ![Content list by keywords](../../../images/keywords.png)
+-  **Header and Footer** - The checkboxes for header and footer is added but the functionality is not yet implemented. <br> ![Content list by header and footer](../../../images/header-and-footer.png)
 
 ## Create a content list
 
@@ -45,7 +45,7 @@ Follow the steps to create a content list from your site using HCL Digital Exper
 6.  After selecting a content template, search for the location to use. You can select the desired location from the list shown. The locations shown on the list depends on the content template you selected from the previous step.
 7.  You can edit and use a custom name or keep the auto-generated name. Auto-generated names append numbers for names that already exist within a content list. The content list displays all the content items on the canvas as empty blocks.
 
-## How to present your feedback on HCL Design Studio (Beta)
+## HCL Digital Experience Solution Feedback
 
-HCL Digital Experience welcomes your feedback and suggestions on Design Studio (Beta), and encourages you to present your input through cases and discussions with HCL Support DX leaders.
+HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).
 

@@ -37,7 +37,7 @@ Since there are many values that can be configured in the HCL Digital Experience
 
 HCL DX 9.5 Helm Chart provides a default values.yaml, which contains all possible configuration parameters.
 
-To access this file, you may use the following command when you have the HCL DX 9.5 CF196 or later [Helm Chart tar.gz](docker.md) file on hand:
+To access this file, you may use the following command when you have the HCL DX 9.5 CF196 or later [Helm Chart tar.gz](../../../docker/index.md) file on hand:
 
 ```
 # Command to extract values.ymal from Helm Chart

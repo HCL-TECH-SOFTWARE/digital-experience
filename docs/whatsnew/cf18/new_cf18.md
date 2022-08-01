@@ -34,7 +34,7 @@ Content Composer delivers simplified processes for creating and managing Digital
 
 ## Digital Asset Management – Tech Preview for HCL Digital Experience 9.5 CF173 or later
 
-Digital Asset Management delivers a central platform to store and include rich media assets in Digital Experience site content to present engaging, consistently branded experiences across digital channels. Users can access a Tech Preview of the Digital Asset Management features in HCL Digital Experience 9.5 Container Update CF173 and higher releases. See [HCL Digital Experience 9.5 Digital Asset Management – Tech Preview](https://help.hcltechsw.com/digital-experience/9.5/digital_asset_mgmt/digital_asset_mgmt_overview.html){:target="_blank"} for details.
+Digital Asset Management delivers a central platform to store and include rich media assets in Digital Experience site content to present engaging, consistently branded experiences across digital channels. Users can access a Tech Preview of the Digital Asset Management features in HCL Digital Experience 9.5 Container Update CF173 and higher releases. See [HCL Digital Experience 9.5 Digital Asset Management – Tech Preview](../../productfeatures/digital_asset_mgmt/index.md) for details.
 
 ## Updated HCL Digital Experience 9.5 platform support statements
 

@@ -32,7 +32,7 @@ After a successful deployment, Helm responds with the following message:
 
 ## Hybrid deployment configuration
 
-If you are installing in a [Hybrid deployment](https://help.hcltechsw.com/digital-experience/9.5/containerization/hybrid_deployment_helm.html)<!-- (../../hybrid/hybrid_deployment_helm.md) --> pattern, after successfully running the Helm deployment, you need to configure services in DX Core to be aware of the `external host name` of your hybrid DX environment. To complete these steps, log on to the DX Core Server and run the following Config Engine tasks to enable other DX applications.
+If you are installing in a Hybrid deployment<!-- [Hybrid deployment](https://help.hcltechsw.com/digital-experience/9.5/containerization/hybrid_deployment_helm.html)(../../hybrid/hybrid_deployment_helm.md) --> pattern, after successfully running the Helm deployment, you need to configure services in DX Core to be aware of the `external host name` of your hybrid DX environment. To complete these steps, log on to the DX Core Server and run the following Config Engine tasks to enable other DX applications.
 
 In the following examples, replace <host-url\> with your corresponding external host name.
 

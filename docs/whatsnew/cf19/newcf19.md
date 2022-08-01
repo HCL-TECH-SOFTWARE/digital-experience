@@ -45,13 +45,13 @@ HCL Digital Experience CF19 and higher includes a DXClient toolset, and DX Conne
 !!!note
     The DXClient tool is not supported for use with HCL DX 9.5 deployments in Red Hat OpenShift or supported Kubernetes platforms. Use of the DXClient tool with those platforms will be available in future HCL DX 9.5 update releases.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html){:target="_blank"}<!-- (../../9.5/containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md) --> topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../platform/administration/DXClient/dxclient.md) topic for more information.
 
 ## Digital Asset Management and Kaltura Integration
 
 Learn how to configure Kaltura Video Content Management System integration to accelerate HCL Digital Asset Management rich media integration to HCL Digital Experience site pages and content.
 
-See the [Configure DAM - Kaltura integration](https://corp.kaltura.com/video-content-management-system/){:target="_blank"} topic for more information.
+See the [Configure DAM - Kaltura integration](../../productfeatures/digital_asset_mgmt/configure_dam_kaltura.md) topic for more information.
 
 ## New Digital Experience REST APIs
 

@@ -2,7 +2,7 @@
 The following provides steps on how to browse your site and its pages, create new ones, and update or delete metadata using HCL Design Studio (Beta).
 
 ## Prerequisite
-Design Studio (Beta) is available for evaluation use and may not be used in production. It may be installed and configured to HCL Digital Experience 9.5 container release update CF196 or higher. See instructions to install Design Studio (Beta) in this Help Center topic: [Install Design Studio (Beta)](design_studio_installing.md).
+Design Studio (Beta) is available for evaluation use and may not be used in production. It may be installed and configured to HCL Digital Experience 9.5 container release update CF196 or higher. See instructions to install Design Studio (Beta) in this Help Center topic: [Install Design Studio (Beta)](ds_installing.md).
 
 Design Studio (Beta) is accessible from the Practitioner Studio interface, after image configuration to your HCL Digital Experience 9.5 CF196 or higher deployments.
 
@@ -288,7 +288,7 @@ There are three ways to delete a page in the new Design Studio (Beta).
   5.  Click **Delete** to continue the cancellation, or **Cancel** to abort.
 
 ### From the Sites overview > Page information panel
-  1.  Access the page information panel as described in [Get information about a page](#get-information-about-a-page).
+  1.  Access the page information panel as described in [Get information about a page](creating_sites_and_pages.md#get-information-about-a-page).
   
   2.  Click **Delete** to delete the selected page.
   
@@ -305,6 +305,7 @@ There are three ways to delete a page in the new Design Studio (Beta).
 
       ![Delete page in Page editor](../../images/delete_page_from_page_editor.png)
 
-## How to present your feedback on HCL Design Studio (Beta)
-HCL Digital Experience welcomes your feedback and suggestions on Design Studio (Beta), and encourages you to present your input through cases and discussions with HCL Support DX leaders.
+## HCL Digital Experience Solution Feedback
+
+HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).
 
