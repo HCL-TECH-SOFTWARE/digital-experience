@@ -1,0 +1,8 @@
+title: Web Content Integrator
+nav:
+    - index.md
+    - Installation: installation
+    - Configuration: configuration
+    - Usage: usage
+    - Limitations: limitations
+

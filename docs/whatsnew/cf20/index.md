@@ -5,20 +5,6 @@ The HCL Digital Experience 9.5 Cumulative Fix and Container Update releases offe
 !!! info "Update Strategy"
     Beginning with release CF200, the DX Kubernetes [operator-based deployment](https://help.hcltechsw.com/digital-experience/9.5/containerization/deploy_container_platforms.html) is no longer supported.
 
-## [Container Update CF205 Overview](newcf205)
-The HCL Digital Experience 9.5 Container Update and CF205 release includes the following new features and updates:
--	Enhanced configurable log support for HA Proxy
--	Option for entitled customers to download HCL DX 9.5 Docker images from HCL Harbor 
--	Design Studio (Beta) Content list item and Data container extensions
--	Personalization API binding rules
--	Digital Asset Management extension plugin to Google Vision API service 
--	Updated Digital Asset Management Kaltura Video extension Plugin support. 
--	Removal and replacement of Document Conversion Services 
--	HCL Web Experience Factory V8.5.1 (available in the DX 8.5 offerings)
--	End of Support is announced for the Digital Experience Pattern v8.5 offerings
--	New complementary DX training modules in the HCL Software Academy, and more.
-
-
 ## [Container Update CF204 Overview](newcf204)
 The HCL Digital Experience 9.5 Container Update and CF204 release includes new Helm support for File patterns in sidecar logging, Proxy link for CW-Profile administration console, and Ambassador replacement with HA Proxy. The release also adds updates to DAM Export and Import configuration, deprecation of select Digital Asset Management APIs and replacement with Plugin extensibility settings, new Personalization API selection rules, Instructions to back up Document Conversion Services including use with Remote Search, new complementary DX training modules in the HCL Software Academy, and more.
 

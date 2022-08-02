@@ -2,14 +2,12 @@
 
 This HCL Digital Experience 9.5 Container Update release includes new releases of HCL Digital Experience 9.5 core Portal and Web Content Manager, Content Composer, Digital Asset Management, and Experience API images, and a beta preview release of Design Studio. New and updated feature references are detailed here.
 
-This site describes new features in each release. Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=9bd40c1f1bbf5cd0534c4159cc4bcbbd#CF17){:target="_blank"} and [HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){:target="_blank"} for the list of software fixes, including Container Update releases. 
+<!-- Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=9bd40c1f1bbf5cd0534c4159cc4bcbbd#CF17) and [HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases. Product software can be accessed from the [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release). Go to this [Step-by-step guide to downloading DX products and accessing Customer Support](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878&sys_kb_id=2cde06a31b885494c48197d58d4bcbe2) for more information.
 
-You can access product software at [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release){:target="_blank"}. See [Step-by-step guide to downloading DX products and accessing Customer Support](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878&sys_kb_id=2cde06a31b885494c48197d58d4bcbe2){:target="_blank"} for more information.
-
-You can access the latest software requirements and updates that support HCL Digital Experience solutions from the HCL Support pages topic: [HCL Digital Experience V9.5, V9.0, and V8.5 detailed system requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03).
+The latest Software Requirements and Updates supporting HCL Digital Experience solutions may be accessed from the HCL Support pages, [HCL Digital Experience V9.5, V9.0, and V8.5 detailed system requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03) topic. -->
 
 !!!note
-        For new capabilities that are available for HCL DX on-premise deployments, see [What's new in the CF196](https://help.hcltechsw.com/digital-experience/9.5/overview/new_noncf196.html) topic.
+        For new capabilities that are available for HCL DX on-premise deployments, see [What's new in the CF196](new_noncf196.md) topic.
 
 ## Design Studio \(Beta\)
 
@@ -24,13 +22,13 @@ See the [Design Studio \(Beta\)](https://help.hcltechsw.com/digital-experience/9
 
 Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to supported container platforms using Helm. Using a Helm Chart deployment can provide administrators a larger degree of transparency and control in deployment operations, and is available for use with the Google Kubernetes Engine \(GKE\) platform with Container Update CF196.
 
-See the [HCL DX 9.5 Helm deployment](../../platform/kubernetes/operator-migration/operator_migration_preparation.md) topic for more information.
+See the [HCL DX 9.5 Helm deployment](../../deployment/kubernetes/operator-migration/operator_migration_preparation.md) topic for more information.
 
 ## Deploy HCL DX 9.5 using Docker Compose
 
 Beginning with HCL DX 9.5 Container Update CF196, administrators and developers can deploy HCL DX 9.5 using Docker Compose, for non-production use. Docker Compose scripts for HCL DX 9.5, installation, and configuration instructions for non-production use are available in the [HCL Software Github](https://github.com/HCL-TECH-SOFTWARE){:target="_blank"} page.
 
-See the [Docker image deployment using Docker Compose](../../platform/docker/docker_image_deployment.md) topic for more information.
+See the [Docker image deployment using Docker Compose](../../deployment/docker/docker_image_deployment.md) topic for more information.
 
 ## Web Content Manager Multilingual Solution Enhancements
 
@@ -42,13 +40,13 @@ See the [How to export and import WCM library content using DXClient](https://he
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and automate processes in the development and delivery process. Updates include a new DXClient Docker image, and new release artifact types supporting shared libraries, obtain failed syndication reports are provided in Container Update CF196.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](../../platform/administration/DXClient/dxclient.md) topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html){:target="_blank"}<!-- (../containerization/dxclient.md) --> topic for more information.
 
 ## HCL Digital Experience 9.5 Container Platform Support Matrix
 
 View the latest Kubernetes and OpenShift platforms tested and supported for specific HCL Digital Experience 9.5 Container Update deployments.
 
-See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../platform/systemrequirements/9.5_express/supportedsoftware.md) topic for more information.
+See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../deployment/kubernetes/c_kubesupportstatement.md) topic for more information.
 
 ## New HCL Digital Experience ‘How To’ Videos
 

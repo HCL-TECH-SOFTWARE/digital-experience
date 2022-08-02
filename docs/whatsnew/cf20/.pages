@@ -1,4 +1,5 @@
 title: CF200 and later
 order: desc
 nav:
+    - index.md
     - ...

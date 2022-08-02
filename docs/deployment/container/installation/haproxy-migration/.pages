@@ -1,0 +1,6 @@
+title: Ambassador to HAProxy migration
+nav:
+    - haproxy-introduction.md
+    - haproxy-configuration.md
+    - haproxy-migration.md
+    - haproxy-remove-ambassador.md

@@ -2,11 +2,9 @@
 
 This HCL Digital Experience 9.5 Container Update release includes updated production releases of Digital Experience 9.5 core Portal and Web Content Manager, Content Composer, Digital Asset Management, and Experience API images. New additions include additional guidance to deploy to Google Kubernetes Engine \(GKE\), Hybrid deployment support, Progressive Web Application delivery, Google Analytics integration, Mobile Preview, DXClient and DXConnect tooling supporting CICD release processes, Kaltura video support, new Web Content Manager REST APIs, new HCL Digital Experience ‘How To’ videos, and more.
 
-This site describes new features in each release. Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=9bd40c1f1bbf5cd0534c4159cc4bcbbd#CF17){:target="_blank"} and [HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){:target="_blank"} for the list of software fixes, including Container Update releases. 
+<!-- Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=9bd40c1f1bbf5cd0534c4159cc4bcbbd#CF17) for the list of software fixes, including Container Update releases. Product software can be accessed from the  HCL Software Licensing Portal. Go to this [Step-by-step guide to downloading DX products and accessing Customer Support](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878&sys_kb_id=2cde06a31b885494c48197d58d4bcbe2) for more information.
 
-You can access product software at [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release){:target="_blank"}. See [Step-by-step guide to downloading DX products and accessing Customer Support](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878&sys_kb_id=2cde06a31b885494c48197d58d4bcbe2){:target="_blank"} for more information.
-
-You can access the latest software requirements and updates that support HCL Digital Experience solutions from the HCL Support pages topic: [HCL Digital Experience V9.5, V9.0, and V8.5 detailed system requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03).
+The latest Software Requirements and Updates supporting HCL Digital Experience solutions may be accessed from the HCL Support pages, [HCL Digital Experience V9.5, V9.0, and V8.5 detailed system requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03) topic. -->
 
 ## Deploy HCL Digital Experience 9.5 Container to Google Kubernetes Engine \(GKE\)
 
@@ -45,13 +43,13 @@ HCL Digital Experience CF19 and higher includes a DXClient toolset, and DX Conne
 !!!note
     The DXClient tool is not supported for use with HCL DX 9.5 deployments in Red Hat OpenShift or supported Kubernetes platforms. Use of the DXClient tool with those platforms will be available in future HCL DX 9.5 update releases.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](../../platform/administration/DXClient/dxclient.md) topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html){:target="_blank"}<!-- (../../9.5/containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md) --> topic for more information.
 
 ## Digital Asset Management and Kaltura Integration
 
 Learn how to configure Kaltura Video Content Management System integration to accelerate HCL Digital Asset Management rich media integration to HCL Digital Experience site pages and content.
 
-See the [Configure DAM - Kaltura integration](../../productfeatures/digital_asset_mgmt/configure_dam_kaltura.md) topic for more information.
+See the [Configure DAM - Kaltura integration](https://corp.kaltura.com/video-content-management-system/){:target="_blank"} topic for more information.
 
 ## New Digital Experience REST APIs
 

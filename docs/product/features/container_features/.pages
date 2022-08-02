@@ -1,0 +1,11 @@
+title: Container Only Features
+nav:
+    - index.md
+    - Content Composer: content_composer
+    - Digital Asset Management: digital_asset_mgmt
+    - Design Studio: design_studio
+    # - Web Content Manager: wcm
+    # - Setting up a website: site
+    # - Developing themes and skins: dev-theme
+    # - Content Template Catalog: ctc
+

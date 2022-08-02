@@ -1,0 +1,8 @@
+nav:
+    - operatingsystems.md
+    - hardware.md
+    - hypervisors.md
+    - prerequisites.md
+    - databases.md
+    - othersoftware.md
+    - ...

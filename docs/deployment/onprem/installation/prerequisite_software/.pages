@@ -1,0 +1,19 @@
+title: Prerequisite Softwares
+nav:
+    - index.md
+    - Database:
+        - inst_db2.md
+        - oracle_inst.md
+        - sql2005_custom_tablespaces.md
+        - db2z_inst.md
+        - db2i_inst.md
+    - User Registry:
+        - prep_adam.md
+        - prep_dom.md
+        - prep_ids.md
+        - prep_msad.md
+        - prep_novell.md
+        - prep_secway.md
+        - prep_sun.md
+    - prep_ihs.md
+    - ...

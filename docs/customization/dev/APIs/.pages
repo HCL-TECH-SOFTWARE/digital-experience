@@ -1,0 +1,13 @@
+title: APIs
+nav:
+    - url_generation
+    - Model SPI: model_spi
+    - Controller SPI: controller_spi
+    - portal_access_control_interfaces
+    - WCM API: wcm_api
+    - REST search services: search-rest-api
+    - tagging_and_rating
+    - wcm_rest
+    - open_api
+
+

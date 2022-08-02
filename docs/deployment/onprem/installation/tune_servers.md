@@ -1,0 +1,37 @@
+# Tune your environment
+
+HCL Digital Experience is not tuned for a production environment by default. Complete the steps in the Performance Tuning Guide to optimize performance.
+
+Tuning your environment involves tuning and configuring the various systems and components. Click and download the **Tuning Guides** from the links mentioned in the **Related Information** section.
+
+The first tuning guide **[HCL DX Performance Tuning Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074411)**, provides general concepts and detailed configuration instructions. Instructions are also included for the following areas:
+
+-   Configuring the application server and the resources that are defined for that application server
+-   Determining the cloning strategy for expanding or extending the environment
+-   Tuning the database and database server
+-   Tuning the directory server and its database
+-   Tuning the web server
+-   Tuning the operating system and network
+-   Tuning the HCL Portal services
+
+1.  Use the performance tuning tool to tune the portal server.
+
+2.  Read the tuning guide for assistance with tuning other servers in your environment.
+
+
+-   **[Portal server performance tuning tool](../install/wp_tune_tool.md)**  
+Run the performance tuning tool on a new deployment to tune the servers that are based on performance recommendations.
+-   **[Optimizing Portal Access Control](../install/wp_pac_tool.md)**  
+If you notice HCL Web Content Manager performance issues with a large amount of resources and suspect an issue with access control, check your libraries for explicit role assignments. With explicit role assignments, you might see something like resource 1 is a parent of resource 2 and both have the same role assignments. If you find explicit duplicated role assignments, run the Portal Access Control Optimizer task to eliminate the redundant mappings and take advantage of inheritance.
+
+**Parent topic:**[Configuring](../config/configuring_parent2.md)
+
+**Related information**  
+
+
+[HCL DX Performance Tuning Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074411)
+
+[Performance Tuning Guide for Anonymous Page Access Caching](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0075095)
+
+[Performance Testing and Analysis Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0075607)
+
