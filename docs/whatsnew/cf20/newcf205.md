@@ -9,7 +9,7 @@ The HCL Digital Experience 9.5 Container Update and CF205 release includes the f
 -	Digital Asset Management extension plugin to Google Vision API service 
 -	Updated Digital Asset Management Kaltura Video extension plugin support. 
 -	Removal and replacement of Document Conversion Services 
-<!---	HCL Web Experience Factory V8.5.1 (available in the DX 8.5 offerings)-->
+-	HCL Web Experience Factory V8.5.1 (available in the DX 8.5 offerings)
 -	End of Support is announced for the Digital Experience Pattern v8.5 offerings
 -   The Ring API strictly enforces the case on query parameters
 -	New complementary DX training modules in the HCL Software Academy, and more.
@@ -62,8 +62,8 @@ Beginning with HCL Digital Experience 9.5 Container Update CF205, using a custom
 ## Updated Digital Asset Management Kaltura Video extension Plugin support
 The Digital Asset Management plugin extension method available to integrate the [Kaltura Video Content Management](https://corp.kaltura.com/video-content-management-system/){:target="_blank"} platform assets is updated. For more information, see [Configure DAM - Kaltura Integration](../../productfeatures/digital_asset_mgmt/configure_dam_kaltura.md), and [DAM Extensibility Configure of Kaltura](../../productfeatures/digital_asset_mgmt/kaltura_configuration.md) topics.
 
-<!--## HCL Web Experience Factory V8.5.1
-Along with the release of HCL Digital Experience CF205, HCL has released an updated version of HCL Web Experience Factory, version 8.5.1. This release includes support for Java 1.8 and Eclipse 4.2.2. For additional information, see [HCL Web Experience Factory](https://help.hcltechsw.com/digital-experience/9.5/overview/web_experience_factory.html){:target="_blank"}.-->
+## HCL Web Experience Factory V8.5.1
+Along with the release of HCL Digital Experience CF205, HCL has released an updated version of HCL Web Experience Factory, version 8.5.1. This release includes support for Java 1.8 and Eclipse 4.2.2. For additional information, see [HCL Web Experience Factory](https://help.hcltechsw.com/digital-experience/9.5/overview/web_experience_factory.html){:target="_blank"}.
 
 ## End of Support is announced for the Digital Experience Pattern v8.5 offerings
 Effective on June 30, 2022, HCL announces the withdrawal of support for the Digital Experience Patterns for HCL Portal Server and Web Content Manager v8.5. For more information including recommended Digital Experience replacement offerings, see the [HCL Digital Experience Patterns for Web Content Manager and Portal v8.5](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0099137){:target="_blank"} and [HCL Digital Experience deprecated features and themes for HCL Digital Experience 8.5 and 9.0](../../whatsnew/deprecated_features.md).
@@ -71,7 +71,7 @@ Effective on June 30, 2022, HCL announces the withdrawal of support for the Digi
 ## Ring API query parameters
 Refer to this [Limitations table](https://help.hcltechsw.com/digital-experience/9.5/open_api/api_explorers.html) to learn the query parameters enforced for Ring API.
 
-## Delete pages and their contents
+## Site Manager - Delete pages and their contents
 Beginning with CF205, a new feature is added, which allows you to delete a page and its contents along with the content that is referenced by the WCM rendering portlets on the page. For more information, see [Delete pages and their contents](https://help.hcltechsw.com/digital-experience/9.5/admin-system/delete_page_and_contents.html){:target="_blank"}. 
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
