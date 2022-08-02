@@ -111,7 +111,7 @@ networking:
     ssl: true
     # Configuration to set the service type for the HAProxy service. Supported values are "ClusterIP", "LoadBalancer", and "NodePort"
     serviceType: "LoadBalancer"
-    # Configuration to set the port exposed by the HAProxy Service. If this is not set, port 80 is used if SSL offloading is disabled and port 443 if SSL offloading is enabled.
+    # Configuration to set the port exposed by the HAProxy Service. If the port is not set, then port 80 is used if SSL offloading is disabled, and port 443 if SSL offloading is enabled.
     servicePort:
     # Only applies for the "NodePort" serviceType. Configuration to set the NodePort exposed by the HAProxy service. If this is not set, a port is automatically selected by Kubernetes
     serviceNodePort:
