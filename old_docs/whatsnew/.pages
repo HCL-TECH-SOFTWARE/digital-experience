@@ -1,7 +1,0 @@
-title: What's New
-order: desc
-nav:
-    - ...
-    - deprecated_features.md
-    - unsupported_features.md
-    - combined_cumulative_fix_strategy.md
