@@ -2,9 +2,11 @@
 
 This HCL Digital Experience 9.5 Container Update and CF201 release includes updated releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management, Experience API, and Design Studio \(Beta\) components. The release also includes updated CICD release process artifacts, new DX Personalization REST APIs, Updated Helm deployment and logging capacity, LDAP, and environment configuration guidance, also metrics and visualization samples, Script Application updates, new React profile for the DX 8.5 sample Theme, extensibility plugin and sample for Digital Asset Management, and more. 
 
-<!-- Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=9bd40c1f1bbf5cd0534c4159cc4bcbbd#CF17) and [HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases. Product software can be accessed from the [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release). Go to this [Step-by-step guide to downloading DX products and accessing Customer Support](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878&sys_kb_id=2cde06a31b885494c48197d58d4bcbe2) for more information.
+This site describes new features in each release. Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=9bd40c1f1bbf5cd0534c4159cc4bcbbd#CF17){:target="_blank"} and [HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){:target="_blank"} for the list of software fixes, including Container Update releases. 
 
-The latest Software Requirements and Updates supporting HCL Digital Experience solutions may be accessed from the HCL Support pages, [HCL Digital Experience V9.5, V9.0, and V8.5 detailed system requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03) topic. -->
+You can access product software at [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release){:target="_blank"}. See [Step-by-step guide to downloading DX products and accessing Customer Support](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878&sys_kb_id=2cde06a31b885494c48197d58d4bcbe2){:target="_blank"} for more information.
+
+You can access the latest software requirements and updates that support HCL Digital Experience solutions from the HCL Support pages topic: [HCL Digital Experience V9.5, V9.0, and V8.5 detailed system requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03).
 
 The following features and updates are available to customers installing HCL Digital Experience on supported on-premises and container platforms, effective with HCL Digital Experience CF201:
 
@@ -14,10 +16,10 @@ Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators
 
 See the following Help Center topics for more information:
 
--   [Containerization overview](../../deployment/kubernetes/overview.md)
--   [Containerization Requirements and Limitations](../../deployment/systemrequirements/9.5_all/supportedsoftware.md#kubernetes)
--   [Additional Helm Tasks](../../deployment/kubernetes/deployment/preparation/overview.md)
--   [Monitor the HCL Digital Experience Container Deployment using Metrics](../../deployment/kubernetes/operations/monitoring/basic_monitor_helm_deployment.md)
+-   [Containerization overview](../../platform/kubernetes/overview.md)
+-   [Containerization Requirements and Limitations](../../platform/systemrequirements/9.5_express/supportedsoftware.md)
+-   [Additional Helm Tasks](../../platform/kubernetes/deployment/preparation/overview.md)
+-   [Monitor the HCL Digital Experience Container Deployment using Metrics](../../platform/kubernetes/operations/monitoring/basic_monitor_helm_deployment.md)
 
 ## Digital Asset Management
 
@@ -35,7 +37,7 @@ See the Script Application Improvements topic for more information: [HCL Digital
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and to automate processes in the development and delivery process. Updates include ability to view and manipulate custom Resource Environment Provider \(REP\) settings, with examples.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html){:target="_blank"}<!-- (../containerization/dxclient.md) --> topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../platform/administration/DXClient/dxclient.md) topic for more information.
 
 ## New Personalization REST APIs
 

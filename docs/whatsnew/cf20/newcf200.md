@@ -1,6 +1,12 @@
 # What's new in CF200
 
-This HCL Digital Experience 9.5 Container Update and CF200 release includes updated releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management, Experience API, Design Studio \(Beta\), new Helm deployment operations for container deployments and migration from Operator deployments, updated CICD release process artifacts, new DX API and Explorer services for Personalization, Search and User and Groups REST APIs, new Digital Experience 9.5 Demo Packs on HCL Sofy, new ‘How To’ videos, and more. 
+This HCL Digital Experience 9.5 Container Update and CF200 release includes updated releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management, Experience API, Design Studio \(Beta\), new Helm deployment operations for container deployments and migration from Operator deployments, updated CICD release process artifacts, new DX API and Explorer services for Personalization, Search and User and Groups REST APIs, new Digital Experience 9.5 Demo Packs on HCL Sofy, new ‘How To’ videos, and more.
+
+This site describes new features in each release. Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=9bd40c1f1bbf5cd0534c4159cc4bcbbd#CF17){:target="_blank"} and [HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){:target="_blank"} for the list of software fixes, including Container Update releases. 
+
+You can access product software at [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release){:target="_blank"}. See [Step-by-step guide to downloading DX products and accessing Customer Support](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878&sys_kb_id=2cde06a31b885494c48197d58d4bcbe2){:target="_blank"} for more information.
+
+You can access the latest software requirements and updates that support HCL Digital Experience solutions from the HCL Support pages topic: [HCL Digital Experience V9.5, V9.0, and V8.5 detailed system requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03). 
 
 ## Design Studio \(Beta\)
 
@@ -18,7 +24,7 @@ Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators
 !!!important
         Beginning with HCL DX Container Update CF200, use of the Operator \(dxctl\) method of container deployment is not supported. Customers should use Helm deployments and migrate existing Operator-based deployments to Helm.
 
-See the [HCL DX 9.5 Helm deployment](../../deployment/kubernetes/overview.md) topic for more information. 
+See the [HCL DX 9.5 Helm deployment](../../platform/kubernetes/overview.md) topic for more information. 
 
 ## Digital Asset Management
 
@@ -26,13 +32,13 @@ New Digital Asset Management \(DAM\) staging support enables administrators to s
 
 See the [DAM staging](https://help.hcltechsw.com/digital-experience/9.5/containerization/dam_subscription_staging.html){:target="_blank"}<!-- (../containerization/dam_subscription_staging.md) --> Help Center topic for more information.
 
-Support to migrate from the old to new Digital Asset Management database in the Helm-based deployments. See the [Migrate to new DAM DB in Helm-based deployments](../../deployment/kubernetes/operator-migration/helm_dam_migration_newDB.md) Help Center topic for more information.
+Support to migrate from the old to new Digital Asset Management database in the Helm-based deployments. See the [Migrate to new DAM DB in Helm-based deployments](../../platform/kubernetes/operator-migration/helm_dam_migration_newDB.md) Help Center topic for more information.
 
 ## Enhancements to DXClient
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and to automate processes in the development and delivery process. Updates include process definitions to automate Export or Import of Web Content Manager libraries from source server to target server location, also ability to generate differential reports for DX Server configurations.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html){:target="_blank"}<!-- (../containerization/dxclient.md) --> topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../platform/administration/DXClient/dxclient.md) topic for more information.
 
 ## New User and Groups REST API Explorer
 
@@ -54,7 +60,7 @@ The Digital Experience Search REST API provides developers programmatic access t
 
 Take advantage of step-by-step guidance for HCL Digital Experience practitioners presented in articles and videos included in HCL Digital Experience Help Center topics.
 
-**New**: Learn how to manage and monitor HCL DX 9.5 Container Deployment Liveliness and Readiness probes. See the Help Center topic: [Operations using Helm](../../deployment/kubernetes/operations/update_helm_deployment.md).
+**New**: Learn how to manage and monitor HCL DX 9.5 Container Deployment Liveliness and Readiness probes. See the Help Center topic: [Operations using Helm](../../platform/kubernetes/operations/update_helm_deployment.md).
 
 ## End of Support for HCL Digital Experience Deprecated Features
 

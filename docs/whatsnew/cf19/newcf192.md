@@ -2,9 +2,11 @@
 
 This HCL Digital Experience 9.5 Container Update release includes new releases of Digital Experience 9.5 core Portal and Web Content Manager, Content Composer, Digital Asset Management, and Experience API images.
 
-<!-- Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=9bd40c1f1bbf5cd0534c4159cc4bcbbd#CF17) for the list of software fixes, including Container Update releases. Product software can be accessed from the [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release). Go to this [Step-by-step guide to downloading DX products and accessing Customer Support](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878&sys_kb_id=2cde06a31b885494c48197d58d4bcbe2) for more information.
+This site describes new features in each release. Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=9bd40c1f1bbf5cd0534c4159cc4bcbbd#CF17){:target="_blank"} and [HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){:target="_blank"} for the list of software fixes, including Container Update releases. 
 
-The latest Software Requirements and Updates supporting HCL Digital Experience solutions may be accessed from the HCL Support pages, [HCL Digital Experience V9.5, V9.0, and V8.5 detailed system requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03) topic. -->
+You can access product software at [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release){:target="_blank"}. See [Step-by-step guide to downloading DX products and accessing Customer Support](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878&sys_kb_id=2cde06a31b885494c48197d58d4bcbe2){:target="_blank"} for more information.
+
+You can access the latest software requirements and updates that support HCL Digital Experience solutions from the HCL Support pages topic: [HCL Digital Experience V9.5, V9.0, and V8.5 detailed system requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03).
 
 ## HCL Digital Experience 9.5 Docker and Container Initialization Performance
 
@@ -22,7 +24,7 @@ See the [Logging and tracing for Containers and new services Help Center](https:
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform,and automate processes in the development and delivery process. New release artifact types supporting Script Application Undeploy and Restore, and Deploy Theme.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html){:target="_blank"}<!-- (../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md) --> topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../platform/administration/DXClient/dxclient.md) topic for more information.
 
 ## New Content Composer Features
 
@@ -34,7 +36,7 @@ See the [HCL Content Composer](https://help.hcltechsw.com/digital-experience/9.5
 
 New Digital Asset Management Features are added with HCL Digital Experience Container Update CF192, including enhanced crop functionality, Kaltura video player support, thumbnail preview support, asset size filter, Renditions and Versioning support, and more.
 
-See the [HCL Digital Asset Management Help Center](https://help.hcltechsw.com/digital-experience/9.5/digital_asset_mgmt/digital_asset_mgmt_overview.html){:target="_blank"}<!-- (../digital_asset_mgmt/digital_asset_mgmt_overview.md) --> topic for additional information.
+See the [HCL Digital Asset Management Help Center](../../productfeatures/digital_asset_mgmt/index.md) topic for additional information.
 
 ## HCL Digital Experience 9.5 Integration with HCL Unica Discover
 
@@ -63,7 +65,7 @@ New HCL DX APIs are introduced with the HCL DX CF192 Container Update release:
 
 Take advantage of new step-by-step guidance for HCL Digital Experience practitioners presented in new videos and webinars. See the following HCL Digital Experience Help Center topics:
 
--   [HCL Digital Experience 9.5 Container Deployment](../../deployment/kubernetes/deployment/helm_deployment.md)
+-   [HCL Digital Experience 9.5 Container Deployment](../../platform/kubernetes/deployment/helm_deployment.md)
 -   [Using the dxctl tool to deploy Digital Experience 9.5 on Red Hat OpenShift](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxtools_dxctl.html){:target="_blank"}<!-- (../containerization/dxtools_dxctl.md) -->
 -   [Create a WAR-based theme copy on HCL Digital Experience 9.5](https://help.hcltechsw.com/digital-experience/9.5/dev-theme/themeopt_themedev_manual_warbased.html){:target="_blank"}<!-- (../dev-theme/themeopt_themedev_manual_warbased.md) -->
 

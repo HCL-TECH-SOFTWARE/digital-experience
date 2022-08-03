@@ -1,0 +1,18 @@
+title: Digital Asset Management 
+nav:
+    - index.md
+    - install_config_dam.md
+    - access_digital_asset_mgmt.md
+    - Configure single sign-on (SSO): configure_dam_sso.md
+    - configure_dam_kaltura.md
+    - Sharing and staging DAM assets: staging_dam
+    - DAM extensibility: 
+        - dam_extensibility.md
+        - dam_plugin_communication.md
+        - configure_dam_extensibility.md
+        - configure_dam_Metadata_configuration.md
+        - configure_DAM_extension_to_google_vision_API.md
+        - image_tagging.md
+        - kaltura_configuration.md
+    - managing_dam
+    # - ...
