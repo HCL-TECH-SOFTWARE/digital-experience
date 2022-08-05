@@ -12,9 +12,9 @@ Detailed system requirements represent the complete lists of hardware requiremen
 - Traditional Deployments
     - [Operating systems](traditional/operatingsystems.md)
     - [Hypervisors](traditional/hypervisors.md)
-    - [Prerequisites](traditional/prerequisites.md)
+    - [Required Software](traditional/prerequisites.md)
     - [Databases](traditional/databases.md)
-    - [Other Software](../systemrequirements/traditional/supportedsoftware.md)
+    - [Other Software](traditional/othersoftware.md)
     - [Hardware](traditional/hardware.md)
 - Docker
     - [Docker](docker/index.md)
