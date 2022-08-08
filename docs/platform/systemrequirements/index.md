@@ -12,7 +12,7 @@ Detailed system requirements represent the complete lists of hardware requiremen
 - Traditional Deployments
     - [Operating systems](traditional/operatingsystems.md)
     - [Hypervisors](traditional/hypervisors.md)
-    - [Required Software](traditional/prerequisites.md)
+    - [Prequisites](traditional/prerequisites.md)
     - [Databases](traditional/databases.md)
     - [Other Software](traditional/othersoftware.md)
     - [Hardware](traditional/hardware.md)
