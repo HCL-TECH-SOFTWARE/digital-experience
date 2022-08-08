@@ -4,6 +4,5 @@ nav:
     - kubernetes_remote_search.md
     - helm_dam_backup_restore.md
     - Operator based configuration: operator-based
-    - troubleshooting
 
   

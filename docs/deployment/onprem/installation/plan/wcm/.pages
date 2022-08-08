@@ -1,8 +1,0 @@
-title: WCM Environments
-nav:
-    - index.md
-    - wcm_system_overview.md
-    - wcm_cms_server_authoring.md
-    - wcm_cms_server_uat.md
-    - wcm_cms_server_delivery.md
-    - ...

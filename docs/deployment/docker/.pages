@@ -1,6 +1,5 @@
 title: Development Platform
 nav:
-    - index.md
-    - docker_image_deployment.md
-    - docker_compose.md
-    - ...
+    - Installation: installation
+    - Configuration: configuration
+    - Limitations: limitations

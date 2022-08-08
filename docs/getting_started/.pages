@@ -4,3 +4,6 @@ nav:
     - architecture_overview
     - getting_the_software95.md
     - systemrequirements
+    - planning_deployment
+    - inst_req_supt.md
+    - wpsnotices.md

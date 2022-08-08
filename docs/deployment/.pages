@@ -3,4 +3,4 @@ nav:
     - Container Deployment: container
     - Onpremise Deployment: onprem
     - Hybrid deployment: hybrid
-    - Development Environment: docker
+    - Development Deployment: docker

@@ -1,6 +1,9 @@
 title: Installation
 nav:
     - index.md
+    - install_prereq_software
+    - installing_dx
     - cf_install
+    - install_addons
     - migrate
     - uninstall
