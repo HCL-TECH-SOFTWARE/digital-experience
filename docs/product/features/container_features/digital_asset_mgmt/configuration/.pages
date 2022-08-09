@@ -1,0 +1,8 @@
+nav:
+    - index.md
+    - Configure single sign-on (SSO) for Digital Asset Management (DAM): configure_dam_sso.md
+    - Kaltura Integration: configure_dam_kaltura.md
+    - DAM sharing and staging : staging_dam
+    - DAM Extensibility: dam_extensibility
+    - dam_restore_image_operator.md
+    - operator_dam_backup_restore_image.md

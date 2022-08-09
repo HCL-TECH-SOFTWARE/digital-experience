@@ -1,0 +1,5 @@
+title: Development Platform
+nav:
+    - Installation: installation
+    - Configuration: configuration
+    - Limitations: limitations

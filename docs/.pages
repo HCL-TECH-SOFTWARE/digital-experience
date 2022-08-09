@@ -1,5 +1,12 @@
 nav:
     - index.md
+    - Getting Started: getting_started
     - whatsnew
-    - platform
-    - productfeatures
+    - Deployment: deployment
+    - Product: product
+    #- customization
+    #- administration
+    - resources
+    # - reference
+#    - DX Traditional: dxtraditional
+#    - Designing with DX: allnewfeatures

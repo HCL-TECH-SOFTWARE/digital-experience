@@ -1,0 +1,6 @@
+nav:
+    - index.md
+    - Container Deployment: container
+    - Onpremise Deployment: onprem
+    - Hybrid deployment: hybrid
+    - Development Deployment: docker
