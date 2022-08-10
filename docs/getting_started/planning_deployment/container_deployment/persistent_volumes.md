@@ -53,4 +53,4 @@ Remote Search requires 1 persistent volume for storing the profile \(called `prs
 
 Remote Search is limited to only one Pod, therefore, requires one PV for that Pod.
 
-Refer to **[Networking configuration](../deployment/preparation/prepare_configure_networking.md)** for next steps.
+Refer to **[PersistentVolumeClaims](../deployment/preparation/prepare_persistent_volume_claims.md)** on how to set up the `PersistentVolumes` and `PersistentVolumeClaims`.

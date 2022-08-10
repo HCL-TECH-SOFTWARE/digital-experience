@@ -5,7 +5,7 @@ This includes preparing your cluster to have proper access to application contai
 
 !!!important "Read this first"
     * [Helm architecture](../../architecture/helm_overview.md) for an understanding of the capabilities, deployment structures, configuration and scaling options available for HCL DX 9.5 CF196 and later deployments.
-    * [Containerization requirements and limitations](../../../systemrequirements/9.5_all/supportedsoftware.md#kubernetes) for an understanding of the requirements, including capacity planning, and current limitations for an HCL Digital Experience 9.5 and later deployment using Helm.
+    * [Containerization requirements and limitations](../../../systemrequirements/9.5_express/supportedsoftware.md) for an understanding of the requirements, including capacity planning, and current limitations for an HCL Digital Experience 9.5 and later deployment using Helm.
 
 
 ## Mandatory tasks
@@ -36,8 +36,11 @@ The HAProxy requires an SSL certificate to use (if ssl is enabled), this topic s
 ## Optional
 These tasks may be relevant for you if you have specific requirements for the deployment.
 
+### [Configure Harbor Helm Repository](optional_configure_harbor_helm_repo.md)
+If you want to directly use the HCL Harbor Helm repository instead of a downloaded variant, you will need to add and authenticate the HCL Harbor Helm repository in your Helm installation.
+
 ### [Using ImagePullSecrets](optional_imagepullsecrets.md)
-In your deployment it might be necessary to access a container image registry that requires credentials to pull images from. This topic explains to you how you configure the DX deployment to work under such conditions.
+In your deployment it might be necessary to access a container image registry that requires credentials to pull images from. This topic explains to you how you configure the DX deployment to work under such conditions. This is also required when you want to pull container images directly from the HCL Harbor container registry, without using your private container registry.
 
 ### [Using NodeSelectors](optional_nodeselectors.md)
 You may want to have certain applications of the HCL Digital Experience Kubernetes deployment to be running on certain Nodes inside your cluster. This topic will explain how to achieve that for each application.

@@ -86,6 +86,44 @@ Please refer to the original values.yaml for all available applications that c
 
 For HAProxy to allow forward requests to your applications, you must provide it with a TLS Certificate. This certificate is used for incoming/outgoing traffic from the outside of the Kubernetes or OpenShift cluster to your applications. HAProxy performs TLS offloading.
 
+## Configure HAProxy networking
+
+HAProxy is deployed with a `LoadBalancer` type service to handle the incoming traffic as well as the SSL offloading for HCL Digital Experience. In addition, the Helm deployment offers adjustability for HAProxy and its services to allow for more flexible deployment and use of custom `Ingress Controllers`.
+
+|Parameter|Description| Type | Default value|
+|---------|-----------|-------------|------|
+|`ssl` { width="20%" }  |Enable or disable SSL offloading in HAProxy. Depending on this setting, HAProxy handles either `HTTP` or `HTTPS` traffic. { width="40%" } | Boolean { width="20%" }| `true` { width="20%" }|
+|`serviceType`|Defines the Kubernetes [`ServiceType`](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types) of the HAProxy service. Supported ServiceType includes `LoadBalancer`, `ClusterIP` and `NodePort` | `LoadBalancer` \| `ClusterIP` \| `NodePort` |`LoadBalancer`|
+|`servicePort`|This value is used to select the port exposed by the HAProxy service. Defaults to port `443` if `ssl` is set to `true`, otherwise, port `80` is used. | Number |`null`|
+|`serviceNodePort`|This value is used to select the node port exposed by the HAProxy service. Defaults to a port selected by Kubernetes if no value is set. | Number |`null`|
+|`strictTransportSecurity.enabled`|This value is used for HTTP Strict Transport Security (HSTS) to determine if it should be `enabled` | Boolean |`true`|
+|`strictTransportSecurity.maxAge`|This value is used to set for how long the browser should remember the HSTS rule | Number |`31536000`|
+|`customDamAssetPath`| Optional custom path definition to access the DAM resources. This will add a rewrite to HAProxy and make the assets accessible at the custom path. If no path is set, the rewrite is disabled. <br/><br/> Example: `/assets` will make the assets accessible at `/assets/{collection name/id}/{asset name/id}`.<br/> The following query parameters can be used with the custom path: <br/><br/> `binary`: true/false - retrieves the asset file as a binary if true or the metadata if false <br/> `rendition`: "Original"/"Desktop"/"Tablet"/"Smartphone"/"{custom rendition}" - retrieves the specified rendition of the asset <br/> `version`: (Version number or id) - retrieves the specified version of the asset | String |`""`|
+
+!!!note
+    If `ssl` is set to `true`, HAProxy will use the certificate that is supplied as a secret in `networking.tlsCertSecret`.
+
+```yaml
+networking:
+  # Networking configurations specific to HAProxy
+  haproxy:
+    # Configuration to enable/disable ssl offloading in HAProxy
+    ssl: true
+    # Configuration to set the service type for the HAProxy service. Supported values are "ClusterIP", "LoadBalancer", and "NodePort"
+    serviceType: "LoadBalancer"
+    # Configuration to set the port exposed by the HAProxy Service. If the port is not set, then port 80 is used if SSL offloading is disabled, and port 443 if SSL offloading is enabled.
+    servicePort:
+    # Only applies for the "NodePort" serviceType. Configuration to set the NodePort exposed by the HAProxy service. If this is not set, a port is automatically selected by Kubernetes
+    serviceNodePort:
+    # HTTP Strict Transport Security(HSTS)
+    strictTransportSecurity:
+      enabled: true
+      maxAge: 31536000
+    customDamAssetPath: ""
+```
+  
+This configuration is helpful for those who want to use a custom `Ingress Controller` to expose the service in a compatible way. Even then, HAProxy will still be active. The `Ingress Controller` will handle the incoming traffic and then route them to the HAProxy service.
+
 ## Generate self-signed certificate
 
 **It is recommended that you use a properly signed certificate for HAProxy**. However, it is also possible to create and use a self-signed certificate, for example, for staging or testing environment.
@@ -97,7 +135,7 @@ Creation of that certificate can be achieved using the following commands for Op
    openssl genrsa -out my-key.pem 2048
                       
    # Creation of a certificate signed by the private key created before
-   openssl req -x509 -key my-key.pem -out my-cert.pem -days 365 -subj '/CN=my-cert              
+   openssl req -x509 -key my-key.pem -out my-cert.pem -days 365 -subj '/CN=my-cert'
 ```
 
 This provides you with a key and cert file that can be used in the next step, creation of the certificate to your deployment.
