@@ -2,14 +2,19 @@ title: Product Features
 nav:
     - index.md
     - container_features
-    - connections
+    - dcs
+    - portal_admin_tools
     - practitioner_studio
     - pzn
     - search
     - sitebuilder
+    - tagging_rating
+    - virtual_portal
     - wcm
     - wci
     - webdav
     - woodburn_studio
+    - wsrp
+
    
 

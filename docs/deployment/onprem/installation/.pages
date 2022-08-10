@@ -5,5 +5,4 @@ nav:
     - installing_dx
     - cf_install
     - install_addons
-    - migrate
     - uninstall
