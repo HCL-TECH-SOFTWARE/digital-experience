@@ -1,9 +1,8 @@
 title: Getting Started
 nav:
-    - index.md
     - architecture_overview
-    - getting_the_software95.md
-    - systemrequirements
     - planning_deployment
+    - systemrequirements
+    - getting_the_software95.md
     - inst_req_supt.md
     - wpsnotices.md
