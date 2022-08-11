@@ -9,7 +9,7 @@ The API design for version 2.0 of the WCM DX REST API is intended to leverage th
 !!! note
     The Web Content Manager Open Standards DX Beta code changes are possible until finalized and delivered in a later HCL DX 9.5 release for production use.
 
-After installing HCL Digital Experience 9.5 CF196 or higher release, the Open Standards REST API may be accessed at /dx/api/wcm/v2/explorer.
+After installing HCL Digital Experience 9.5 CF196 or higher release, the Open Standards REST API may be accessed at `/dx/api/wcm/v2/explorer`.
 
 ## Get the UUID of a selected site or a page
 
@@ -39,7 +39,7 @@ You may also follow the same steps when getting the UUID for a page.
 
     ![Copy page UUID](../../images/copy_page_UUID_properties.png)
 
-## How to present your feedback on HCL Design Studio (Beta)
+## HCL Digital Experience Solution Feedback
 
-HCL Digital Experience welcomes your feedback and suggestions on Design Studio (Beta), and encourages you to present your input through cases and discussions with HCL Support DX leaders.
+HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).
 
