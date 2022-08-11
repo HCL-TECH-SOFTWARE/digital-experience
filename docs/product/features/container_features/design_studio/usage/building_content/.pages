@@ -3,7 +3,8 @@ nav:
     - index.md
     - Craft layouts to pages: style_elements.md
     - Use content containers: use_content_containers.md
-    - Use content lists: content_lists.md
+    - Use content lists: use_content_lists.md
+    - Use data containers: use_data_containers.md
     - Use text elements: use_text_elements.md
-    - use_reusable_blocks
+    - Use reusable blocks: use_reusable_blocks.md
     - ... 
