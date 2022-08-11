@@ -1,0 +1,9 @@
+title: Web Application Bridge
+
+nav:
+    - index.md
+    - Installation: installation
+    - Configuration: configuration
+    - Usage: usage
+    - Limitations: limitations
+
