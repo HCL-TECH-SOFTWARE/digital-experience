@@ -13,4 +13,5 @@ nav:
     - optional_configure_scaling.md
     - optional_internal_networking.md
     - optional_configure_credentials.md
+    - optional_configure_harbor_helm_repo.md
     - ...
