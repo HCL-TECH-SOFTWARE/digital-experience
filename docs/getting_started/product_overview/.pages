@@ -1,0 +1,8 @@
+nav:
+    - index.md
+    - portal_capabilities.md
+    - cms_capabilities.md
+    - dam_capabilities.md
+    - pzn_capabilities.md
+    - experience_api.md
+    - hcl_leap.md
