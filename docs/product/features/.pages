@@ -7,6 +7,7 @@ nav:
     - practitioner_studio
     - pzn
     - search
+    - security
     - sitebuilder
     - tagging_rating
     - virtual_portal
@@ -15,6 +16,7 @@ nav:
     - webdav
     - woodburn_studio
     - wsrp
+    - ...
 
    
 
