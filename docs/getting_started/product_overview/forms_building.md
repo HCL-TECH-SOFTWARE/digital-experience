@@ -1,6 +1,14 @@
 # Form Application Builder
 
-HCL Leap is an agile, easy-to-use tool that allows business users control over creating and deploying customer engagement applications and forms and transforming processes to be more efficient.
+HCL DX provides the HCL LEAP product to allows business users to create and deploy customer engagement applications and forms. Customers have used HCL LEAP to build applications like Issue and resolution tracking, Customer change requests, Supply chain certification, Healthcare tracking, Business requests, Customer acquisition and Employee onboarding.
+
+## Forms Builder
+
+## Integrated Workflow
+
+
+
+ and transforming processes to be more efficient.
 It allows you to easily create sophisticated web applications for data collection and process automation. Transform your business processes and be more efficient.
 
 Build custom web application in minutes!
@@ -30,10 +38,4 @@ Then manage the access control and configure the workflow and deploy to your sit
 * Extensible - Apps can be quickly customized using standard web development skills. Styles can be modified through CSS, functions added as HTML fragments and JavaScript can be used with the software’s comprehensive API and events.
 
 ## Example applications
-* Issue and resolution tracking - Move from email o a system where you can effectively capture and track resolution
-* Customer change requests - Provide customers with an efficient self-service approach for requesting changes
-* Supply chain certification - Improve quality with consistent supplier monitoring and inspection
-* Healthcare tracking - Deliver improved care with information collected on the progress of your patients 
-* Business requests - Eliminate manual processes by providing employees with an automated way to get what they need
-* Customer acquisition - Enroll prospective customers in programs and coordinate the follow up 
-* Employee onboarding - Efficiently bring new talent into the team to help your business deliver
+

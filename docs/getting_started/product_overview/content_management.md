@@ -2,6 +2,20 @@
 
 HCL DX provides a fully featured, multi-platform web content management solution. Easily manage your growing volume of digital content that is required to run your business and support critical decisions.
 
+## Separated Template and Design
+
+## Headless Content Access
+
+## Standalone and Inline Content Editors
+
+## Data as Content
+
+
+lows business users of all skill levels to create and publish content, and enables rapid development of sites through reusable, out of the box components and templates. Using Web Content Manager, business users and content authors can create and update content independent of the channel and how it is rendered. Web Content Manager improves customer experiences through dynamic content delivery and a high level of personalization to the web user.
+
+Using the enhanced Version 8.5 in-line editing services and performance, site designers can easily create and update content on the web page or from within the authoring environment. This is done by simply clicking on the field to update, and including the insertion of images and links to make rich content authoring quick and easy. The authoring portlet
+is another interface that can be used by content authors, site administrators and site developers. From the authoring portlet, content authors use forms, called authoring templates, to add and update content to the website.
+
 Teamwork makes the dream work - increase collaboration in the content review process - within workflows and across teams - at any stage.
 
 Allow business users to create content templates and content easily. Here is an example of a content template where you can drag & drop and configure any element as part of content.

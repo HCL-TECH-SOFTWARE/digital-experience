@@ -1,5 +1,13 @@
 # Personalization
 
+HCL DX has a lightweight built-in personalization engine and can integrate with enterprise solutions such as HCL Unica.
+
+## Rules Definition
+
+## Using Rules in DX
+
+as
+
 Targeted content provides you with a way to deliver multiple pieces of content to different audiences. Targeted content matches the best content with the most appropriate group by using segments. Segments help you split your audience into meaningful groups with different interests or characteristics.
 A targeted spot displays different content to different segments. You can create a target spot by defining con- tent that is targeted to specific segments:
 

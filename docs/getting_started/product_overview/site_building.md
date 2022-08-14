@@ -1,6 +1,9 @@
 # Site Building
 
-Build custom applications faster with 2000+ APIs. Choose how to integrate your data, processes, and services into your DX, giving you the freedom to pick the solutions that meet your custom requirements.
-To use and control the content and behavior of DX externally, you may use the Open API – compliant set of REST services enables developers to deliver modern experiences leveraging the latest front-end JavaScript frameworks (Angular, React, Vue). It comes with explorers that allow your developers to get up to speed easily and fast. Here is a view on the swagger documentation of a small part of our 2000+ APIs.
+HCL DX enables you to combine [applications](application_integration), [content](content_management) and [assets](asset_management) into websites. You can leverage [personalization](personalization) and [role based access control](role_based_access) to ensure that your users received an experience that is tailored to their needs and to your organization's security policies.
 
-![Experience API](assets/experience_api.jpg)
+## Site Building and Editing
+
+## Branding and Customization
+
+## Mobile Access

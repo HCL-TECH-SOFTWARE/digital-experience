@@ -1,4 +1,16 @@
-# Appliation Integration
+# Application Integration
+
+HCL DX provides multiple ways for application developers to integrate application content into the digital experiences created with the product. In addition, our rich [forms building](forms_building) capabilities enable non-technical users to create rich data capture applications.
+
+## Build with Modern Frameworks
+
+## Protect your Existing Investment
+
+### Portlets
+
+### Existing Web Applications
+
+## Digital Data Connector
 
 HCL DX is an enterprise web portal that helps customers deliver faster response to the demands for HCL Digital Experience solutions by giving users a single point of access to the applications, services, information, and social connections they need.
 Choose how to integrate your data, processes, and services into your DX, giving you the freedom to pick the solutions that meet your custom requirements.
