@@ -36,6 +36,11 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - attr_list
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 # Copyright
 copyright: Copyright &copy; 2022, HCL Technologies Limited
@@ -62,6 +67,7 @@ extra_css:
 plugins:
   - awesome-pages
   - search
+  - tags
   #- mike:
   #    canonical_version: latest
   - git-revision-date-localized:
