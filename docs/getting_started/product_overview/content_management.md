@@ -1,31 +1,37 @@
+---
+tags:
+    - Content Management
+    - Web Content
+hide: tags
+---
+
 # Content Management
 
 HCL DX provides a fully featured, multi-platform web content management solution. Easily manage your growing volume of digital content that is required to run your business and support critical decisions.
 
 ## Separated Template and Design
 
+HCL DX separates the content from the presentation layer. Content authors enter information in authoring templates. The authoring template is then associated with a presentation template. The presentation template defines how the content is rendered and presented to the site visitor. As a result, you can rapidly change the look and feel of your content without editing the same elements repeatedly.
+
+Here is an example of a content template where you can drag & drop and configure any element as part of content.
+![Overview - CMS](assets/overview-cms.png)
+
 ## Headless Content Access
+
+Content can be accessed headlessly, using the [WCM REST APIs](api_access). This enables content stored in HCL DX to be integrated to applications created outside the platform, for example a mobile application built using HCL MX, a commerce site built using HCL Commerce or a standalone React application.
 
 ## Standalone and Inline Content Editors
 
-## Data as Content
+Content can be edited either standalone or inline with a website hosted by HCL DX.
 
-
-lows business users of all skill levels to create and publish content, and enables rapid development of sites through reusable, out of the box components and templates. Using Web Content Manager, business users and content authors can create and update content independent of the channel and how it is rendered. Web Content Manager improves customer experiences through dynamic content delivery and a high level of personalization to the web user.
-
-Using the enhanced Version 8.5 in-line editing services and performance, site designers can easily create and update content on the web page or from within the authoring environment. This is done by simply clicking on the field to update, and including the insertion of images and links to make rich content authoring quick and easy. The authoring portlet
-is another interface that can be used by content authors, site administrators and site developers. From the authoring portlet, content authors use forms, called authoring templates, to add and update content to the website.
-
-Teamwork makes the dream work - increase collaboration in the content review process - within workflows and across teams - at any stage.
-
-Allow business users to create content templates and content easily. Here is an example of a content template where you can drag & drop and configure any element as part of content.
-![Overview - CMS](assets/overview-cms.png)
-
-And content generated using this template. This maybe headless content or content used in DXM managed sites. You may include it in a workflow, versioning it, compare versions and restore any, and much more. It is integrated out of the box with HCL Commerce and Unica.
+If you are primarily thinking about your content outside of a specific presentation, then you can use our content authoring tools to create and manage individual content items. That content editor is shown below:
 
 ![Overview - Content Editor](assets/overview-content-editor.png)
 
-In DXM managed sites, you may use What You See Is What You Get (WYSIWYG) editing.
-It allows you to create, localize, and organize geo-specific content — and establish engaging international experiences — with out-of-the-box tools.
- 
-![Overview - Locale](assets/overview-content-locale.jpg)
+On the other hand, many people create content in the context of a specific website. In that case, HCL DX provides inline editing capabilities that are integrated to the websites built on the platform. This enables content authors to browse to the relevant page in [site manager](site_building) and edit the content in context of the page where it is displayed.
+
+These two modes of content editing are not mutually exclusive. Since a single item of content may be presented in multiple different ways, changes made to the source are reflected wherever it is presented.
+
+## External Data and Content
+
+You can use Web Content Integrator, [WCM REST services](api_access), [Digital Data Connector](application_integration), specialized portlets and other mechanisms to retrieve and render content from sources outside HCL DX. Every time a form is created with [HCL LEAP](forms_building), an API is generated that enables you to access its logic and data.

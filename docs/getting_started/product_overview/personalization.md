@@ -1,34 +1,29 @@
+---
+tags:
+    - Personalization
+hide: tags
+---
+
 # Personalization
 
 HCL DX has a lightweight built-in personalization engine and can integrate with enterprise solutions such as HCL Unica.
 
 ## Rules Definition
 
+The inbuilt personalization engine allows the development of simple personalization rules. These can be used within a variety of locations in DX.
+
+Rules are built by categorizing individuals (usually the current site visitor) according to their user properties, and linking that to actions that select relevant content (amongst other possibilities). For example a simple content selection rule may be combined with a user's profile to ensure that only content relevant to that user's interests is displayed.
+
+Personalization also has the capability to organize rules into Campaigns, which are a means of organizing and implementing sets of personalization behavior. This means that the behavior of the personalization engine can be changed over time, rules can be activated or deactivated, or user profiler can be updated.
+
+It is possible to have multiple campaigns active simultaneously. When this happens, the priority settings of the active campaigns dictate which campaign's rule mapping will be used. The campaign with the highest priority 'wins' and its rule mappings are used. In the event that multiple active campaigns have the same priority setting, the rule mapping used for a given content spot is determined randomly according to the relative split ratios.
+
+Personalization in HCL DX is managed via a point-and-click interface to enable the management of personalization rules and other artifacts. A [REST API](api_access) is also provided.
+
 ## Using Rules in DX
 
-as
+Personalization rules may be used in a number of ways within HCL DX. Most commonly they are used to:
 
-Targeted content provides you with a way to deliver multiple pieces of content to different audiences. Targeted content matches the best content with the most appropriate group by using segments. Segments help you split your audience into meaningful groups with different interests or characteristics.
-A targeted spot displays different content to different segments. You can create a target spot by defining con- tent that is targeted to specific segments:
-
-* Add content items to your content spot in a web content viewer.
-* Add segments to each content item to display your content to the correct audience. Segments help you
-define your target audience. For example, you can define the audience by users, device class, or other attributes.
-You can create managed segments in your content library. Creating managed segments in your content library has the following benefits:
-* Scoping. Because your library is scoped to a virtual portal, only users on that virtual portal see the con- tent from that library.
-* Workflow project support. You can use content from the library to create project drafts.
-* Syndication support. There is no need to follow the Personalization Publish process.
-
-
-## Personalization of content
-
-Targeted content applies Personalization concepts to a new user interface where you create Personalization rules as you work to target content to selected segments. Personalization allows a portal or website to choose which content must appear for a particular user. The HCL Portal Personalization component selects content for users based on information in their profiles and on business rules. Using Portal Personalization, business experts can classify site visitors into segments and target relevant content to each segment. For example, a site that is using Personalization might show different news articles to managers than to regular employees or different information to valued customers.
-You can define content through a number of applications, including HCL Web Content Manager. Personaliza- tion automatically detects the content definition from these applications. Definitions of database or LDAP con- tent types can also be made through a Personalization wizard.
-After you define the content type, attributes of the content are shown to the rule author. The rule author can use these attributes to make conditions that define if and when certain content is displayed, or even if certain actions like database updates and triggered emails occur. To create new Personalization rules, go to Applica- tions > Personalization > Business Rules.
-
-## Benefits of Personalization
-
-* The Personalization component selects content for users that are based on information in their profiles and on business logic. With Personalization facilities, subject matter experts can select content that is suited to the needs and interests of each site visitor. These web-based tools help companies quickly and easily use content that is created by business and subject matter experts.
-* Personalization classifies site visitors into segments and then targets relevant content to each segment. Business experts create the rules for classifying users and selecting content, by using web-based tools.
-* Personalization also includes a recommendation engine that provides collaborative filtering capabilities. Collaborative filtering uses statistical techniques to identify groups of users with similar interests or be- haviors. Inferences can be made about what a particular user might be interested in, based on the in- terests of the other members of the group.
-* Campaign management tools are also included with Personalization. Campaigns are sets of business rules that work together to accomplish a business objective. For example, a Human Resources manag- er might want to run a campaign to encourage employees to enroll in a stock purchase plan or sign up for some other new benefit that is now available to employees. The Human Resources manager would define a set of rules that are shown to accomplish this business objective. Campaigns have start and stop dates and times and can be email and web-page based. Several campaigns can run simultane- ously and can be prioritized.
+* Control which pages or applications will be visible to a given user
+* Control which content the user sees
+* Create a dynamic list of content that can be used in a website or via an API

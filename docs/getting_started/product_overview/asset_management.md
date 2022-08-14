@@ -1,34 +1,36 @@
-# Digital Asset Management
+---
+tags:
+    - DAM
+    - Asset Management
+    - Digital Asset Management
+hide: tags
+---
+
+# Digital Asset Management (DAM)
 
 HCL DX provides integrated digital asset management services, targeted at managing web ready digital assets such as images or videos for use in content and sites built with HCL DX.
 
-HCL Digital Asset Management is a key part of HCL Web Content Manager. It is and asset management that allows you to easily manage images, videos and files across multiple experiences includes versioning, bulk load and migration, and new integrations. 
-You may create and manage collections with dedicated access control.
-
 ## Content Organization and Access
 
-## Rendition Generation
-
-## Editing and Tagging
-
-## Extensibility
-
-
-
-
-
-![DAM - Collections](assets/dam-collection.png)
-
-And inside each collection, share any digital asset, like images, videos and files. 
-
+Assets are organized into collections, and access can be controlled to the top-level set of collections. Within a collection, sub-collections can be created so you can keep your content well organized. Each collection can store images, videos and other files.
 
 ![DAM - Collections View](assets/dam-collection-view.png)
 
- 
-For images, special renditions, e.g. for Desktop, Smartphone and Mobile, are generated automatically and customers may configure how this is done and extend it. You may use auto-tagging capabilities to find each image more easily. 
- 
+## Rendition Generation
+
+For images stored in the DAM, renditions are automatically generated for desktop, smartphone and mobile form factors. The sizes generated can be customized and additional renditions configured (see below). Individual images can be cropped from within the DAM, without needing to round-trip with any image editing software.
+
 ![DAM - Image Editor](assets/dam-image-editor.png)
 
+## Integrations
 
-Videos may be configured to upload, synchronize, generate thumbnail and delete with external video management solutions.
-The Digital Asset Management is integrated out of the box with HCL Commerce and Unica.
+Out of the box, the DAM provides 2 integrations.
+
+* Video file management can be delegated to [Kaltura video content management system](https://corp.kaltura.com/video-content-management-system/). When this is configured, videos are synchronized with Kaltura and can be delivered via that service. This enables you to deliver adaptive video within your web experiences
+* Image assets can be automatically tagged using [Google Vision](https://cloud.google.com/vision/docs/detect-labels-image-api). This enables you to enrich the meta-data available for images stored in the DAM.
+
+Both can be customized or replaced with customers' own preferred solutions if desired.
+
+## Extensibility
+
+The DAM supports user-defined custom renditions and transformations for images. This feature can be used to integrate with third-party plug-ins for custom asset processing. For example this could be used to resize, crop, rotate, or other custom operations, and many more, while supporting default and custom renditions.
