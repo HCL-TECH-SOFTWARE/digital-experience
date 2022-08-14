@@ -1,4 +1,4 @@
-# HCL DX Digital Asset Manager
+# Digital Asset Management
 
 HCL Digital Asset Management is a key part of HCL Web Content Manager. It is and asset management that allows you to easily manage images, videos and files across multiple experiences includes versioning, bulk load and migration, and new integrations. 
 You may create and manage collections with dedicated access control.

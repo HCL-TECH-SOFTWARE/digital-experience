@@ -1,11 +1,27 @@
 # HCL Digital Experience Overview
 
-The platform to blend content, applications, and business processes for delivering the best experience every time. HCL Digital Experience Manager empowers you to create, manage and deliver engaging omnichannel HCL Digital Experiences to virtually all audiences with responsive content, targeted offers, seamlessly integrated applications, and consistent branding across channels (web, mobile, and hybrid mobile/web applications, and more).
+## What Does HCL DX Do?
 
-It provides you the flexibility to scale when you need to with the deployment model (private cloud, public cloud, on prem, etc.) and platform that works best for your business now, and the future. With its Cloud Native support, using Docker provides an open standard for packaging and distributing containerized applications – allowing installation, and subsequent updates and upgrades to be done in minutes – not hours or days. And with Kubernetes support, it enables the platform to be updated, scaled and self-healed automatically, dramatically reducing TCO.
+HCL DX is the fastest way for practitioners, developers, and IT to deliver trusted digital experiences at the intersection of content, applications and processes.
 
-HCL DX is the unifying platform that allows Freedom Mortgage to deliver personalized solutions across the business, from intranet to consumer experiences. DXM is a proven platform – purpose built and trusted by enterprises worldwide – for the demanding needs of an organization’s business-critical digital experiences, when organizations need a platform that is secure, always available, and can scale to meet the needs of the business. By “business-critical” we mean any digital experience that must always be available, secure and perform to the scale of the business.
+It is trusted by governments and companies around the world to deliver mission-critical experiences for their customers, citizens, suppliers and partners. Via HCL DX their teams are empowered to create and manage experiences such as customer self-service sites, citizen portals, city and state websites, contact center applications, B2B network sites, supplier and distributor portals and much more. In combination with [HCL Commerce](https://www.hcltechsw.com/commerce), HCL DX can also be used to provide B2B and B2C commerce experiences.
 
-Our clients trust HCL DX for a variety of business-critical experiences — Prudential for online insurance customer self-service, the State of Ohio for citizen services for a population of over 11M people (that recently handled a 3000% increase in traffic due to questions about Covid-19), and Caterpillar for worldwide dealer inventory support for capital intensive heavy equipment.
+These solutions integrate web content with applications and business processes, to support diverse user populations. HCL DX provides features to enable the composition of these experiences and to manage who sees what. It is built on a robust architecture that can scale to cope with high demand. [Learn more about HCL DX architecture here](../architecture_overview).
 
-HCL DXM makes it faster and easier than ever to deploy business critical digital experiences. New capabilities including hybrid cloud deployment alternatives, intuitive content management and creation tools and faster application deployment. It is designed to scale, be flexible, support authentication for security and personalization, and ease the integration of multiple and varied applications.
+## Who is HCL DX For?
+
+HCL DX is aimed at teams of people responsible for delivering digital experiences for their organizations. These teams work together to produce and manage the complex digital experiences of the kinds outlined above. Many HCL DX customers are in regulated industries such as government, banking, financial services, insurance and healthcare.
+
+The product provides features for **content managers** to create and manage web content, for **developers** to integrate data and services from corporate applications, for **business users** to set up personalization rules, create forms, and more. HCL DX also provides features for the **whole team** to manage approvals, versioning and publication of the digital experience to production.
+
+## What are the Key Features of HCL DX?
+
+This section provides a high level overview of HCL DX key features. More in-depth documentation is also available in the [product section](../../product) of this site.
+
+* [**Application integration**](application_integration) and [**API Access**](api_access), enabling you to build a digital experience that integrates functionality from multiple back-end systems at once.
+* [**Content management**](content_management) and [**asset management**](asset_management) enabling you to manage the web content and digital assets you need to serve your end users.
+* [**Site building**](site_building) to enable you to combine applications with content into the customized and personalized experience your organization demands, combined with [**Role Based Access Control**](role-based-access-control) to tailor what your users see.
+* [**Personalization**](personalization) to enable you to tailor the digital experience to serve diverse user populations from a single platform.
+* [**Forms building**](forms_building) to enable non-technical users to quickly build data capture applications.
+
+You can read more about the platform's architecture and technical capabilities in the [architecture overview section](../architecture_overview).

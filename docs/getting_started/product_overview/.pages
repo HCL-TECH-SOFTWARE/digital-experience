@@ -1,8 +1,11 @@
 nav:
     - index.md
-    - portal_capabilities.md
-    - cms_capabilities.md
-    - dam_capabilities.md
-    - pzn_capabilities.md
-    - experience_api.md
-    - hcl_leap.md
+    - site_building.md
+    - application_integration.md
+    - content_management.md
+    - asset_management.md
+    - forms_building.md
+    - personalization.md
+    - role_based_access.md
+    - api_access.md
+    - ...

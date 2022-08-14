@@ -1,4 +1,4 @@
-# DX Portal Capabilities
+# Appliation Integration
 
 HCL DX is an enterprise web portal that helps customers deliver faster response to the demands for HCL Digital Experience solutions by giving users a single point of access to the applications, services, information, and social connections they need.
 Choose how to integrate your data, processes, and services into your DX, giving you the freedom to pick the solutions that meet your custom requirements.

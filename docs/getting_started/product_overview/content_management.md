@@ -1,6 +1,6 @@
-# DX Content Management
+# Content Management
 
-HCL Web Content Manager is a fully featured, multi-platform enterprise content management solution. Easily manage your growing volume of digital content that is required to run your business and support critical decisions.
+HCL DX provides a fully featured, multi-platform web content management solution. Easily manage your growing volume of digital content that is required to run your business and support critical decisions.
 
 Teamwork makes the dream work - increase collaboration in the content review process - within workflows and across teams - at any stage.
 
