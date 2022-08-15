@@ -105,7 +105,7 @@ The following sections describe how the administrators can create and manage bac
 
             ![Example 2](../../../images/backup_restore_dam_media2.png "Example 2:")
 
-            See the [Backup and restore DAM image](../digital_asset_mgmt/dam_backup_restore_image.html) topic for more information.
+            See the [Backup and restore DAM image](https://help.hcltechsw.com/digital-experience/9.5/digital_asset_mgmt/operator_dam_backup_restore_image.html) <!-- (operator_backup_and_recovery_procedures.md#ol_zp1_w1f_ppb) --> topic for more information.
 
         Alternatively, the [Kubernetes documentation](https://kubernetes.io/docs/home/) pages present additional options to backup and clone persistent volumes.
 

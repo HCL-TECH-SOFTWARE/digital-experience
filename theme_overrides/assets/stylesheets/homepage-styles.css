@@ -41,11 +41,6 @@
 }
 
 
-/* Hide main Mkdocs content section */
-.md-main {
-    display: none
-}
-
 /* General Text Stypes */
 .section-heading {
     font-size: 32px;
