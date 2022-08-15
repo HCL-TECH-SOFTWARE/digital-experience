@@ -1,7 +1,0 @@
-nav:
-    - index.md
-    - software_download
-    - systemrequirements
-    - kubernetes
-    - docker
-    - ...

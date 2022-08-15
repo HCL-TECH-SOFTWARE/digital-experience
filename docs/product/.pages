@@ -1,5 +1,6 @@
-title: Product
+title: Product Features
 nav:
     - index.md
-    - Product Features: features
+    - container_features
+    - ...
     - Troubleshooting: troubleshooting
