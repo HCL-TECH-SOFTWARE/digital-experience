@@ -1,4 +1,4 @@
-# Digital Experience on Onpremise platforms
+# Digital Experience on On premise platforms
 
 Learn how to deploy HCL Digital Experience as a non-containerized application and optimize web content and applications to deliver differentiated, personalized experiences for your customers.
 

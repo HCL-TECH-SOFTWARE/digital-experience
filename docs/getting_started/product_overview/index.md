@@ -20,7 +20,7 @@ To enable the use cases and users mentioned above, HCL DX provides the key featu
 
 * [**Application integration**](application_integration) and [**API Access**](api_access), enabling you to build a digital experience that integrates functionality from multiple back-end systems at once.
 * [**Content management**](content_management) and [**asset management**](asset_management) enable you to manage the web content and digital assets you need to serve your end users.
-* [**Site building**](site_building) to enable you to combine applications with content into the customized and personalized experience your organization demands, combined with [**Role Based Access Control**](role-based-access-control) to tailor what your users see.
+* [**Site building**](site_building) to enable you to combine applications with content into the customized and personalized experience your organization demands, combined with [**Role Based Access Control**](role_based_access.md) to tailor what your users see.
 * [**Personalization**](personalization) to enable you to tailor the digital experience to serve diverse user populations from a single platform.
 * [**Forms building**](forms_building) to enable non-technical users to quickly build data capture applications.
 
