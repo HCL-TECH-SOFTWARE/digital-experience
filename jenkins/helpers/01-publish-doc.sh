@@ -22,7 +22,7 @@ chmod -R 600 /root/.ssh/id_rsa
 ssh-keyscan git.cwp.pnp-hcl.com >> /root/.ssh/known_hosts
 
 # Perform clone of target repository
-git clone git@git.cwp.pnp-hcl.com:CWPdoc/dx-mkdocs.git
+git clone --depth 1 git@git.cwp.pnp-hcl.com:CWPdoc/dx-mkdocs.git
 
 # Perform GH pages deploy
 cd dx-mkdocs
