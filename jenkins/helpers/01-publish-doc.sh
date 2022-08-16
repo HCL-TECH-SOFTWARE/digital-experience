@@ -22,10 +22,12 @@ chmod -R 600 /root/.ssh/id_rsa
 ssh-keyscan git.cwp.pnp-hcl.com >> /root/.ssh/known_hosts
 
 # Perform clone of target repository
-git clone --depth 1 git@git.cwp.pnp-hcl.com:CWPdoc/dx-mkdocs.git
+git clone --depth 1 --branch gh-pages git@git.cwp.pnp-hcl.com:CWPdoc/dx-mkdocs.git 
+cd dx-mkdocs
+git fetch origin main
+git switch -c main FETCH_HEAD
 
 # Perform GH pages deploy
-cd dx-mkdocs
 git config --global user.name hcl-digital-experience
 git config --global user.email notarealemail@hcl.dx
 mike set-default latest
