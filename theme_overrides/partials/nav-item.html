@@ -23,18 +23,14 @@
 
 {% macro render(nav_item, path, level) %}
 
-{# Print out render inputs for debug
-  {{ nav_item }}
-  {{ path }}
-  {{ level }}
-#}
-
   {# 3 Determine class according to state #}
   {% set class = "md-nav__item" %}
   {% if nav_item.active %}
     {% set class = class ~ " md-nav__item--active" %}
   {% endif %}
   
+  {# We render children only if they exist AND if we are below top level nav #}
+
   {# 4 Main navigation item with nested items #}
   {% if nav_item.children and (nav_item.active or level > 1 ) %}
 
@@ -78,12 +74,38 @@
         {% endfor %}
       {% endif %}
 
-      {# 9 Render toggle to expand nested items #}      
+      {# 9 Render item if it is not an index page #}      
       {% if not indexes %}
-        <label class="md-nav__link" for="{{ path }}">
-          {{ nav_item.title }}
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+
+        {# Does the first child of the item have a URL?#}
+        {% if nav_item.children[0].url %}
+          <div class="md-nav__link md-nav__link--index">
+            <a href="{{ nav_item.children[0].url | url }}">
+              {{ nav_item.title }}
+            </a>
+            <label for="{{ path }}">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          </div>
+
+          {# Does the first grandchild of the item have a URL?#}
+        {% elif nav_item.children[0].children[0].url %}
+          <div class="md-nav__link md-nav__link--index">
+            <a href="{{ nav_item.children[0].children[0].url | url }}">
+              {{ nav_item.title }}
+            </a>
+            <label for="{{ path }}">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          </div>
+          {# Give up and render something that doesn't work#}
+        {% else %}
+          <label class="md-nav__link" for="{{ path }}">
+            {{ nav_item.title }} **
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        {% endif %}
+
 
       {# 10 Render link to index page + toggle #}    
       {% else %}
@@ -101,33 +123,32 @@
         </div>
       {% endif %}
 
-      {# 12 Render nested navigation only if the area is the one selected#}
+      {# 12 Render nested navigation #}
       {% if nav_item.active %}
-        <nav
-          class="md-nav md-nested-nav"
-          aria-label="{{ nav_item.title }}"
-          data-md-level="{{ level }}"
-        >
-          <label class="md-nav__title" for="{{ path }}">
-            <span class="md-nav__icon md-icon"></span>
-            {{ nav_item.title }}
-          </label>
+      <nav
+        class="md-nav md-nested-nav"
+        aria-label="{{ nav_item.title }}"
+        data-md-level="{{ level }}"
+      >
+        <label class="md-nav__title" for="{{ path }}">
+          <span class="md-nav__icon md-icon"></span>
+          {{ nav_item.title }}
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
 
-          <ul class="md-nav__list" data-md-scrollfix>
-
-            {# 13 Render nested item list #}
-            {% for nav_item in nav_item.children %}
-              {% if not indexes or nav_item != indexes | first %}
-                {{ render(nav_item, path ~ "_" ~ loop.index, level + 1) }}
-              {% endif %}
-            {% endfor %}
-          </ul>
-        </nav>
+          {# 13 Render nested item list #}
+          {% for nav_item in nav_item.children %}
+            {% if not indexes or nav_item != indexes | first %}
+              {{ render(nav_item, path ~ "_" ~ loop.index, level + 1) }}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
       {% endif %}
     </li>
 
+  
   {% elif nav_item == page %}
-
     {# 14 Currently active page #}
     <li class="{{ class }}"> 
       {% set toc = page.toc %}
