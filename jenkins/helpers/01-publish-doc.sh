@@ -23,6 +23,7 @@ ssh-keyscan git.cwp.pnp-hcl.com >> /root/.ssh/known_hosts
 
 # Perform clone of target repository
 git clone --depth 1 git@git.cwp.pnp-hcl.com:CWPdoc/dx-mkdocs.git
+git fetch --depth 1 origin gh-pages
 
 # Perform GH pages deploy
 cd dx-mkdocs
