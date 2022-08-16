@@ -77,10 +77,26 @@
       {# 9 Render item if it is not an index page #}      
       {% if not indexes %}
 
-        {# Does the first child of the item have a URL?#}
-        {% if nav_item.children[0].url %}
+        {# For everything below top level, recurse and find the first page with a URL #}
+        {% if level > 1 %}
+
+          {% set ns = namespace(found=false) %}
+          {% set ns = namespace(nav_item_child_url="") %}
+
+          {% for nav_item_child in nav_item.children recursive %}
+
+            {% if nav_item_child.url and not ns.found %}
+              {% set ns.nav_item_child_url = nav_item_child.url %}
+              {% set ns.found = true %}
+            {% endif %}
+            {% if nav_item_child.children %}
+              {{ loop(nav_item_child.children) }}
+            {%- endif %}
+
+          {% endfor %}
+
           <div class="md-nav__link md-nav__link--index">
-            <a href="{{ nav_item.children[0].url | url }}">
+            <a href="{{ ns.nav_item_child_url | url }}">
               {{ nav_item.title }}
             </a>
             <label for="{{ path }}">
@@ -88,22 +104,6 @@
             </label>
           </div>
 
-          {# Does the first grandchild of the item have a URL?#}
-        {% elif nav_item.children[0].children[0].url %}
-          <div class="md-nav__link md-nav__link--index">
-            <a href="{{ nav_item.children[0].children[0].url | url }}">
-              {{ nav_item.title }}
-            </a>
-            <label for="{{ path }}">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          </div>
-          {# Give up and render something that doesn't work#}
-        {% else %}
-          <label class="md-nav__link" for="{{ path }}">
-            {{ nav_item.title }} **
-            <span class="md-nav__icon md-icon"></span>
-          </label>
         {% endif %}
 
 
@@ -190,6 +190,12 @@
 
   {% else %}
     {# 19 Main navigation item #}
+
+    <!-- Main navigation item -->
+    <!--   {{ nav_item }}
+            {{ nav_item.url }}
+            {{ path }}
+            {{ level }} -->
     <li class="{{ class }}">
       <a href="{{ nav_item.url | url }}" class="md-nav__link">
         {{ nav_item.title }}
