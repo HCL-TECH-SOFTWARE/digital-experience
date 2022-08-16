@@ -2,8 +2,8 @@ title: Getting Started
 nav:
     - product_overview
     - architecture_overview
-    - software_download
-    - systemrequirements
     - planning_deployment
+    - systemrequirements
+    - software_download
     - inst_req_supt.md
     - wpsnotices.md
