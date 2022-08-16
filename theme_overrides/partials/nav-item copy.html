@@ -1,5 +1,5 @@
 <!--
-  Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to
@@ -46,8 +46,9 @@
       {% set checked = "checked" if nav_item.active %}
       {% if "navigation.expand" in features and not checked %}
         <input
-          class="md-nav__toggle md-toggle md-toggle--indeterminate"
+          class="md-nav__toggle md-toggle"
           data-md-toggle="{{ path }}"
+          data-md-state="indeterminate"
           type="checkbox"
           id="{{ path }}"
           checked
@@ -62,40 +63,11 @@
         />
       {% endif %}
 
-      <!-- Determine all nested items that are index pages -->
-      {% set indexes = [] %}
-      {% if "navigation.indexes" in features %}
-        {% for nav_item in nav_item.children %}
-          {% if nav_item.is_index and not index is defined %}
-            {% set _ = indexes.append(nav_item) %}
-          {% endif %}
-        {% endfor %}
-      {% endif %}
-
-      <!-- Render toggle to expand nested items -->
-      {% if not indexes %}
-        <label class="md-nav__link" for="{{ path }}">
-          {{ nav_item.title }}
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-
-      <!-- Render link to index page + toggle -->
-      {% else %}
-        {% set index = indexes | first %}
-        {% set class = "md-nav__link--active" if index == page %}
-        <div class="md-nav__link md-nav__link--index {{ class }}">
-          <a href="{{ index.url | url }}">{{ nav_item.title }}</a>
-
-          <!-- Only render toggle if there's at least one more page -->
-          {% if nav_item.children | length > 1 %}
-            <label for="{{ path }}">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          {% endif %}
-        </div>
-      {% endif %}
-
-      <!-- Render nested navigation -->
+      <!-- Expand active pages -->
+      <label class="md-nav__link" for="{{ path }}">
+        {{ nav_item.title }}
+        <span class="md-nav__icon md-icon"></span>
+      </label>
       <nav
         class="md-nav"
         aria-label="{{ nav_item.title }}"
@@ -109,9 +81,7 @@
 
           <!-- Render nested item list -->
           {% for nav_item in nav_item.children %}
-            {% if not indexes or nav_item != indexes | first %}
-              {{ render(nav_item, path ~ "_" ~ loop.index, level + 1) }}
-            {% endif %}
+            {{ render(nav_item, path ~ "_" ~ loop.index, level + 1) }}
           {% endfor %}
         </ul>
       </nav>
@@ -157,8 +127,26 @@
     </li>
 
   <!-- Main navigation item -->
+  {% elif nav_item.children %}
+    {% set title = title | d(nav_item.title) %}
+    {% set nav_item = nav_item.children | first %}
+
+    <!-- Recurse, if the first item has further nested items -->
+    {% if nav_item.children %}
+      {% include "partials/nav-item.html" %}
+
+    <!-- Render item -->
+    {% else %}
+      <li class="{{ class }}">
+      <a href="{{ nav_item.url | url }}" class="md-nav__link">
+        {{ title }}
+      </a>
+    </li>
+    {% endif %}
+
+  <!-- Main navigation item -->
   {% else %}
-    <li class="{{ class }}">
+    <li class="{{ class }}">      
       <a href="{{ nav_item.url | url }}" class="md-nav__link">
         {{ nav_item.title }}
       </a>
