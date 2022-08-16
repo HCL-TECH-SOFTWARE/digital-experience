@@ -25,6 +25,9 @@ ssh-keyscan git.cwp.pnp-hcl.com >> /root/.ssh/known_hosts
 git clone --depth 1 git@git.cwp.pnp-hcl.com:CWPdoc/dx-mkdocs.git
 cd dx-mkdocs
 git fetch --depth 1 origin gh-pages
+git checkout gh-pages
+git pull
+git checkout main
 
 # Perform GH pages deploy
 git config --global user.name hcl-digital-experience
