@@ -191,16 +191,30 @@
   {% else %}
     {# 19 Main navigation item #}
 
-    <!-- Main navigation item -->
-    <!--   {{ nav_item }}
-            {{ nav_item.url }}
-            {{ path }}
-            {{ level }} -->
-    <li class="{{ class }}">
-      <a href="{{ nav_item.url | url }}" class="md-nav__link">
-        {{ nav_item.title }}
-      </a>
-    </li>
+    {# In the original logic, this was for items that had no children, and therefore for whom the URL was going to be present.
+      In the new logic, the blocks above are ONLY called if either the items (have children and are level >1), else if they're just a page.
+      This section to render the main nav needs to have some logic to deal with being a section not a page.
+      #}
+
+    {% if not nav_item.children %}
+      <li class="{{ class }}">
+        <a href="{{ nav_item.url | url }}" class="md-nav__link">
+          {{ nav_item.title }}
+        </a>
+      </li>
+    {% elif not nav_item.children[0].children %}
+      <li class="{{ class }}">
+        <a href="{{ nav_item.children[0].url | url }}" class="md-nav__link">
+          {{ nav_item.title }}
+        </a>
+      </li>
+    {% elif not nav_item.children[0].children[0].children %}
+      <li class="{{ class }}">
+        <a href="{{ nav_item.children[0].children[0].url | url }}" class="md-nav__link">
+          {{ nav_item.title }}
+        </a>
+      </li>
+    {% endif %}
   {% endif %}
 
 {% endmacro %}
