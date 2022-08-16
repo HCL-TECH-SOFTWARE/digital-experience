@@ -35,8 +35,6 @@
     {% set class = class ~ " md-nav__item--active" %}
   {% endif %}
   
-  {# We render children only if they exist AND if we are below top level nav #}
-
   {# 4 Main navigation item with nested items #}
   {% if nav_item.children and (nav_item.active or level > 1 ) %}
 
@@ -103,7 +101,7 @@
         </div>
       {% endif %}
 
-      {# 12 Render nested navigation #}
+      {# 12 Render nested navigation only if the area is the one selected#}
       {% if nav_item.active %}
         <nav
           class="md-nav md-nested-nav"
