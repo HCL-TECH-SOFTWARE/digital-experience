@@ -6,5 +6,4 @@ There are special considerations to be made when running HCL Portal in a virtual
 
 For virtualized test and development environments, you can overcommit the physical resources of the machine. For production environments, ensure that there is sufficient physical CPU and memory to service each virtual machine. A good rule for memory requirement is to double the HCL Portal instance's maximum heap size and use that as the virtual machine memory configuration. Memory paging, both within the virtual machine and in the hypervisor should be strictly avoided as that can lead to performance degradation.
 
-**Parent topic:**[Planning to install HCL Digital Experience](../plan/plan_installation.md)
 

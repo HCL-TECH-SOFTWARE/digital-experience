@@ -2,7 +2,7 @@
 
 This topic provides details covering the PersistentVolumes \(PVs\) and related operations considerations in storing data for DX 9.5 stateful applications.
 
-Digital Experience 9.5 container-based stateful applications \(DX 9.5 Core, Digital Asset Management, and Persistence\) require PersistentVolumes \(PVs\) to store their data. Refer to the [Deploy DX 9.5 applications to container platforms using Helm](../architecture/application_architecture.md) topic for a description of the DX 9.5 Applications details.
+Digital Experience 9.5 container-based stateful applications \(DX 9.5 Core, Digital Asset Management, and Persistence\) require PersistentVolumes \(PVs\) to store their data. Refer to the [Deploy DX 9.5 applications to container platforms using Helm](application_architecture.md) topic for a description of the DX 9.5 Applications details.
 
 As Kubernetes and OpenShift Pods do not have their own persistent file storage, the use of PVs is a must. For more information on PVs, consult the [Kubernetes documentation](https://kubernetes.io/docs/concepts/storage/persistent-volumes/).
 
@@ -53,4 +53,4 @@ Remote Search requires 1 persistent volume for storing the profile \(called `prs
 
 Remote Search is limited to only one Pod, therefore, requires one PV for that Pod.
 
-Refer to **[PersistentVolumeClaims](../deployment/preparation/prepare_persistent_volume_claims.md)** on how to set up the `PersistentVolumes` and `PersistentVolumeClaims`.
+Refer to **[PersistentVolumeClaims](../../../deployment/container/installation/helm_deployment/preparation/prepare_persistent_volume_claims.md)** on how to set up the `PersistentVolumes` and `PersistentVolumeClaims`.

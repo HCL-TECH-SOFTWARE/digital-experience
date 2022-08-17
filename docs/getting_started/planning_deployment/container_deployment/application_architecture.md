@@ -2,7 +2,7 @@
 
 This topic provides a list of all DX applications and resource definitions that configure the application runtime and are deployed to containers using Helm on OpenShift or Kubernetes platforms. As outlined in the overview, applications can also include ConfigMaps, Secrets, and Ingress.
 
-For more information about Helm applications, consult the [Helm documentation](https://helm.sh/docs/){:target="_blank"}. Refer to the DX 9.5 Container component image listing in the DX 9.5 Docker [Image file listing](../docker.md) topic.
+For more information about Helm applications, consult the [Helm documentation](https://helm.sh/docs/){:target="_blank"}. Refer to the DX 9.5 Container component image listing in the DX 9.5 Docker [Image file listing](../../../deployment/container/installation/image_list.md) topic.
 
 Do note that each application defined only lists its next direct dependencies. Sub-dependencies are not explicitly listed.
 
@@ -45,7 +45,7 @@ Content Composer<!-- [Content Composer](../../../design/content_composer/cont_co
 
 **Type:** Stateful
 
-Digital Asset Management requires the Ring API be deployed and operational to communicate with the DX Core, and Image Processor components to perform image manipulation, and Persistence to store its application data. See [Digital Asset Management](../../../productfeatures/digital_asset_mgmt/index.md)
+Digital Asset Management requires the Ring API be deployed and operational to communicate with the DX Core, and Image Processor components to perform image manipulation, and Persistence to store its application data. See [Digital Asset Management](../../../product3/digital_asset_mgmt/index.md)
 
 ![Digital Asset Management Application Definition](../../../images/Digital%20Asset%20Management%20Application%20Definition.png "Digital Asset Management Application definition")
 
