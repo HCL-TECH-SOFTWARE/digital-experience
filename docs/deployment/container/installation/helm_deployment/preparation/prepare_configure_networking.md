@@ -175,7 +175,7 @@ You can set the name of the certificate used with the following syntax, the defa
     Verify you have entered the correct name.
 
 ### OpenShift Passthrough
-Helm charts have an "openShiftPassthrough" value to create a "Route" resource which only passes through the main HAProxy port (443 most of the time). Instead of having such flavour specific configuration in helm charts, such setups are documented and point to the flavour specific documentation and will be deprecated.
+Helm charts have an `openShiftPassthrough` value to create a `Route` resource, which only passes through the main HAProxy port (443 most of the time). Instead of having such a flavor-specific configuration in Helm charts, such setups are documented and point to the flavor-specific documentation and will be deprecated.
 
 The default value set for "openShiftPassthrough" is `auto` i.e it detects openshift deployments automatically. Even though it is not manually enabled it will be active by default. To prevent this it needs to be manually disabled. This can be done by setting "openShiftPassthrough" to `false`
 
