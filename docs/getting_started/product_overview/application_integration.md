@@ -11,14 +11,14 @@ hide: tags
 
 # Application Integration
 
-HCL DX provides multiple ways for application developers to integrate application content into the digital experiences created with the product. In addition, our rich [forms building](forms_building) capabilities enable non-technical users to create rich data capture applications.
+HCL DX provides multiple ways for application developers to integrate application content into the digital experiences created with the product. In addition, our rich [forms building](forms_building.md) capabilities enable non-technical users to create rich data capture applications.
 
 ## Build with Modern Frameworks
 
 !!! tip "New development recommendation"
     For most new applications, we recommend customers consider Script Applications first.
 
-HCL DX enables developers to build applications for the platform using commonly available front-end development skills. The **Script Application** enables applications built with most front-end frameworks to be integrated to [sites built with HCL DX](site_building), including placing applications built with different frameworks on the same page. Script Applications can also be rendered alongside traditional java Portlets.
+HCL DX enables developers to build applications for the platform using commonly available front-end development skills. The **Script Application** enables applications built with most front-end frameworks to be integrated to [sites built with HCL DX](site_building.md), including placing applications built with different frameworks on the same page. Script Applications can also be rendered alongside traditional java Portlets.
 
 Script Applications include access to various HCL DX frameworks and APIs for content targeting, access to user login information or access to shared render parameters, Portlet preferences, and live text. Script Applications also work with HCL DX's modular theme to optimize download size.
 
@@ -38,7 +38,7 @@ Web Application Bridge provides organizations with flexibility to integrate exis
 
 ## Digital Data Connector
 
-HCL DX provides Digital Data Connector (DDC), a framework to integrate live data from external data sources on your pages via [Web Content Manager](content_management) presentation components. DDC can be used to integrate product data from HCL Commerce or enterprise social network information from HCL Connections.
+HCL DX provides Digital Data Connector (DDC), a framework to integrate live data from external data sources on your pages via [Web Content Manager](content_management.md) presentation components. DDC can be used to integrate product data from HCL Commerce or enterprise social network information from HCL Connections.
 
 The power of Digital Data Connector is that you can use all the HCL DX content management facilities for managing your external data visualizations. This includes content syndication, version handling, workflow, and targeting. Since the presentation is managed via content management, changes to data display can be easily managed without needing development skills, and controlled via the content management workflows.
 

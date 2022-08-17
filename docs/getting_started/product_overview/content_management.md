@@ -18,7 +18,7 @@ Here is an example of a content template where you can drag & drop and configure
 
 ## Headless Content Access
 
-Content can be accessed headlessly, using the [WCM REST APIs](api_access). This enables content stored in HCL DX to be integrated to applications created outside the platform, for example a mobile application built using HCL MX, a commerce site built using HCL Commerce or a standalone React application.
+Content can be accessed headlessly, using the [WCM REST APIs](api_access.md). This enables content stored in HCL DX to be integrated to applications created outside the platform, for example a mobile application built using HCL MX, a commerce site built using HCL Commerce or a standalone React application.
 
 ## Standalone and Inline Content Editors
 
@@ -28,10 +28,10 @@ If you are primarily thinking about your content outside of a specific presentat
 
 ![Overview - Content Editor](assets/overview-content-editor.png)
 
-On the other hand, many people create content in the context of a specific website. In that case, HCL DX provides inline editing capabilities that are integrated to the websites built on the platform. This enables content authors to browse to the relevant page in [site manager](site_building) and edit the content in context of the page where it is displayed.
+On the other hand, many people create content in the context of a specific website. In that case, HCL DX provides inline editing capabilities that are integrated to the websites built on the platform. This enables content authors to browse to the relevant page in [site manager](site_building.md) and edit the content in context of the page where it is displayed.
 
 These two modes of content editing are not mutually exclusive. Since a single item of content may be presented in multiple different ways, changes made to the source are reflected wherever it is presented.
 
 ## External Data and Content
 
-You can use Web Content Integrator, [WCM REST services](api_access), [Digital Data Connector](application_integration), specialized portlets and other mechanisms to retrieve and render content from sources outside HCL DX. Every time a form is created with [HCL LEAP](forms_building), an API is generated that enables you to access its logic and data.
+You can use Web Content Integrator, [WCM REST services](api_access.md), [Digital Data Connector](application_integration.md), specialized portlets and other mechanisms to retrieve and render content from sources outside HCL DX. Every time a form is created with [HCL LEAP](forms_building.md), an API is generated that enables you to access its logic and data.

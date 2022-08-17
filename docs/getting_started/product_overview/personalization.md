@@ -18,7 +18,7 @@ Personalization also has the capability to organize rules into Campaigns, which 
 
 It is possible to have multiple campaigns active simultaneously. When this happens, the priority settings of the active campaigns dictate which campaign's rule mapping will be used. The campaign with the highest priority 'wins' and its rule mappings are used. In the event that multiple active campaigns have the same priority setting, the rule mapping used for a given content spot is determined randomly according to the relative split ratios.
 
-Personalization in HCL DX is managed via a point-and-click interface to enable the management of personalization rules and other artifacts. A [REST API](api_access) is also provided.
+Personalization in HCL DX is managed via a point-and-click interface to enable the management of personalization rules and other artifacts. A [REST API](api_access.md) is also provided.
 
 ## Using Rules in DX
 
