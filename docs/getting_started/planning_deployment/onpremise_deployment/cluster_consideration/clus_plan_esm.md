@@ -17,7 +17,8 @@ The following considerations apply to all external security managers:
 -   If you are using an external Web server, additional configuration is required before running any task to configure an external security manager with a HCL Portal cluster. Edit the wkplc\_comp.properties file on each node, and ensure that the values for the wp.ac.impl.JunctionHost and wp.ac.impl.JunctionPort properties are set to the backend server host name and port number you are using for your Web server.
 -   Ensure that the WebSEAL Trust Association Interceptor \(TAI\) parameters, found in the wkplc\_comp.properties file, are the same on each node in the cluster. If you run a configuration task that overwrites the WebSEAL junction, the WebSphere® Application Server TAI properties are not automatically updated. Therefore, you must manually ensure that all nodes are using the same parameters. To manually ensure the nodes are the same, use the Deployment Manager WebSphere Integrated Solutions Console and go to **Security** \> **Global security** \> **Web and SIP Security** \> **Trust Association** \> **Interceptors** \> **com.ibm.sec.authn.tai.TAMETai** \> **Custom properties**.
 
-    **Note:** If you are still using the deprecated Trust Association Interceptors \(TAIs\) implementation, go to **Security** \> **Global security** \> **Web and SIP Security** \> **Trust Association** \> **Interceptors** \> **com.ibm.ws.security.web.TAMTrustAssociationInterceptorPlus** \> **Custom properties**.
+    !!! note 
+        If you are still using the deprecated Trust Association Interceptors \(TAIs\) implementation, go to **Security** \> **Global security** \> **Web and SIP Security** \> **Trust Association** \> **Interceptors** \> **com.ibm.ws.security.web.TAMTrustAssociationInterceptorPlus** \> **Custom properties**.
 
 -   Enter the file location specified by the wp.ac.impl.PDPermPath parameter in the wkplc\_comp.properties file. This property indicates the location of the Security Access Manager AMJRTE properties file \(PdPerm.properties\). In a cluster composed of nodes with different operating systems, the location of the PdPerm.properties file might differ, depending on the node.
 
@@ -32,5 +33,4 @@ The following considerations apply to all external security managers:
 
 Ensure that you have installed and validated the eTrust SiteMinder binaries on each node in the cluster. If you are only using eTrust SiteMinder for authentication, install and validate the Application Server Agent. If you are using eTrust SiteMinder for authentication and authorization, both the Application Server Agent and the SDK must be installed and validated.
 
-**Parent topic:**[Cluster considerations](../plan/plan_clus_ovr.md)
 
