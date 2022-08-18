@@ -1,6 +1,5 @@
 title: Portlet Development
 nav:
-    - Installation: installation
     - Configuration: configuration
     - Usage: usage
     - Limitations: limitations

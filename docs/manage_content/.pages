@@ -1,5 +1,10 @@
-title: Manage Content
+title: Managing Content
 nav:
-    - managing_content
-    - managing_dx_apps
+    - index.md
+    - wcm
+    - content_composer
+    - digital_assets
+    - dcs
+    - wci
+    - renditions
     - ...
