@@ -4,6 +4,6 @@ nav:
     - whatsnew
     - Deployment: deployment
     - building_sites
-    - managing
-    - integrating
+    - managing_content
+    - developing_apps
     - resources
