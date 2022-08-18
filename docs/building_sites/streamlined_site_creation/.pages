@@ -1,7 +1,7 @@
-title: Streamlined Site Creation
+title: Building Sites
 nav:
-    - Installation: installation
+    - index.md
     - Configuration: configuration
     - Usage: usage
-    - Limitations: limitations
+
 
