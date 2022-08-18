@@ -24,13 +24,11 @@ After a failover occurs, the request is redirected to another cluster member by 
 
 **Note:** Any portlets or applications that use POST data are affected by this behavior.
 
-## Failover for the **Authoring** Portlet
+## Failover for the Authoring Portlet
 
 You can configure distributed session support in WebSphere Application Server, either for persistent sessions or memory-to-memory session replication. Configure the `Custom tuning parameters` setting to determine what session attributes are replicated and how often the replication takes place. You can select a tuning level from "Very high" to optimize for performance to "Low" to optimize for failover. In order for session information to be preserved after failover, set the custom-tuning level so that all session attributes are written.
 
 If the write frequency is set as "Time-based" with a frequency of 10 seconds, changes within 10 seconds of the failover are lost. If the write frequency is set as "End of the servlet service", the **Authoring** portlet session remains intact after failover.
 
 During a failover condition or session timeout, an HCL Web Content Manager user might return to the initial screen of the **Authoring** portlet. Uncommitted data is lost, including values for new content items or edits to an existing item. There is, however, no loss of service and the user can continue to work.
-
-**Parent topic:**[Cluster considerations](../plan/plan_clus_ovr.md)
 

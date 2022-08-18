@@ -14,8 +14,10 @@ It is also possible to deploy multiple portal clusters to improve availability, 
 
 It is recommended that you review the cluster guidelines and limitations topics for more information about what is involved in setting up a cluster.
 
-**Restriction:** The serverName is hardcoded to HCL Portal. The serverName cannot be changed in a stand-alone environment. If you do change it, the ConfigEngine scripts do not work. For a clustered environment, see [Virtual Member Manager integration](plan_vmm_int.html) for options on replacing the HCL Portal JVM.
+**Restriction:** The serverName is hardcoded to HCL Portal. The serverName cannot be changed in a stand-alone environment. If you do change it, the ConfigEngine scripts do not work. For a clustered environment, see [Virtual Member Manager integration](../user_registry_consideration/plan_vmm_int.md) for options on replacing the HCL Portal JVM.
 
+
+<!--- 
 -   **[Guidelines for setting up a cluster](../plan/cluster_guidelines.md)**  
 When you set up a HCL Portal cluster, you must consider any planning that is required for the WebSphere Application Server nodes.
 -   **[Limitations for setting up a cluster](../plan/cluster_limitations.md)**  
@@ -35,7 +37,6 @@ Multiple clusters are sets of servers that are managed together within a single 
 -   **[Dynamic clusters](../plan/plan_xdclus.md)**  
 You can create a dynamic cluster to run HCL Portal.
 -   **[Cluster maintenance](../plan/clus_maint.md)**  
-Maintaining HCL Portal in a cluster typically means applying corrective services \(fix packs and interim fixes\) or updating the software release level on each node in the cluster.
+Maintaining HCL Portal in a cluster typically means applying corrective services \(fix packs and interim fixes\) or updating the software release level on each node in the cluster. --->
 
-**Parent topic:**[Planning to install HCL Digital Experience](../plan/plan_installation.md)
 

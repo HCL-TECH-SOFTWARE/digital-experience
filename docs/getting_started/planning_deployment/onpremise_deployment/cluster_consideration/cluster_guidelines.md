@@ -20,7 +20,8 @@ Implement cluster environments according to the following guidelines:
 -   The deployment manager node must be installed separately before the cells and clusters can be configured.
 -   WebSphere Application Server provides database session persistence and memory-to-memory replication as techniques for HTTP session failover in a clustered environment. Review the following information to determine whether you want to use one of these techniques in your cluster:
 
-    **Warning:** The memory-to-memory session application can lead to low memory conditions if failures cause replication to fail. This condition can occur because the local and backup sessions are stored in the JVM memory. Therefore, failures with replicating the session data can prevent freeing the memory that is allocated for the backup session.
+    !!! warning
+        The memory-to-memory session application can lead to low memory conditions if failures cause replication to fail. This condition can occur because the local and backup sessions are stored in the JVM memory. Therefore, failures with replicating the session data can prevent freeing the memory that is allocated for the backup session.
 
     -   AIX Linux Solaris Windows: [Task overview: Managing HTTP sessions](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.nd.doc/ae/tprs_sep1.html)
     -   IBM i: [Task overview: Managing HTTP sessions](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.nd.iseries.doc/ae/tprs_sep1.html)
@@ -30,5 +31,4 @@ Implement cluster environments according to the following guidelines:
 -   If you add a node to a cell or change a node's configuration after it is federated to the deployment manager, synchronize the node's configuration.
 -   If you are planning to configure an external security manager for authentication or authorization, install and configure the HCL Portal cluster first. Verify that the cluster is working properly before you configure the external security manager.
 
-**Parent topic:**[Cluster considerations](../plan/plan_clus_ovr.md)
 
