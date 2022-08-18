@@ -1,4 +1,6 @@
+title: Integrate Applications
 nav:
+    - portlets_development
     - integration
     - ddc
     - development_tools

@@ -1,9 +1,9 @@
 nav:
     - index.md
-    - Getting Started: getting_started
+    - getting_started
     - whatsnew
-    - Deployment: deployment
-    - building_sites
-    - managing
-    - integrating
+    - deployment
+    - build_sites
+    - manage_content
+    - integrate_apps
     - resources
