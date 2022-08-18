@@ -12,7 +12,7 @@ This topic describes the components of the Digital Asset Management persistence.
 
 In case of PostgreSQL master server failure, the `repmgr` service switches the server role from master to standby.
 
-The `persistence-node` configurations are available in the Helm Chart [values.yaml](../deployment/preparation/overview.md) file as `persistenceNode`.
+The `persistence-node` configurations are available in the Helm Chart [values.yaml](../../../deployment/container/installation/helm_deployment/preparation/overview.md) file as `persistenceNode`.
 
 The administrator can configure number of `persistence-node` under `scaling` configuration.
 
@@ -58,7 +58,7 @@ The service provides:
 -   Connection pooling
 -   Load balancing
 
-For better performance, administrator can scale the `persistence-connection-pool` to more than one pod. The `persistence-connection-pool` configurations are available in Helm Chart [values.yaml](../deployment/preparation/overview.md) file as `persistenceConnectionPool`.
+For better performance, administrator can scale the `persistence-connection-pool` to more than one pod. The `persistence-connection-pool` configurations are available in Helm Chart [values.yaml](../../../deployment/container/installation/helm_deployment/preparation/overview.md) file as `persistenceConnectionPool`.
 
 ```
 # Scaling settings for deployed applications

@@ -45,5 +45,3 @@ Maintaining a HCL Portal installation with multiple profiles involves applying m
 
 If multiple portal profiles with a set of product binary files are part of a cluster, all profiles that share the binary files must belong to the cluster. This approach provides consistency when you apply maintenance at the cluster boundary.
 
-**Parent topic:**[Planning to install HCL Digital Experience](../plan/plan_installation.md)
-
