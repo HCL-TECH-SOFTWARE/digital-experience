@@ -1,6 +1,10 @@
-# Download and install from the Software licensing portal
+---
+title: Software Licensing Portal
+---
 
-The new and existing users need to register at the HCL Software License Portal and download their entitled HCL Digital Experience package\(s\).
+# Download and Install from the Software Licensing Portal
+
+New and existing users need to register at the HCL Software License Portal and download their entitled HCL Digital Experience package(s).
 
 ## Getting the software
 

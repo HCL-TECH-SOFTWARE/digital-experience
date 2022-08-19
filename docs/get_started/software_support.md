@@ -1,9 +1,5 @@
 # Support Statement
 
-This support statement proposes a revision to the definition of supported and unsupported about the various products of which HCL Digital Experience depends on for proper operation.
-
-## Introduction
-
 HCL Digital Experience requires the use of several collateral products for its normal operations. In particular, it requires WebSphere® Application Server, a database, a repository for user information \(typically an LDAP\), and other products depending on specific customer requirements.
 
 During the testing of a new release, Development generally tests HCL Digital Experience with a prescribed list of these collateral products. These products are designated as “Supported Products” in the documented hardware and software requirements for that release.
