@@ -1,8 +1,8 @@
-# Notices 
+# Notices
 
 Licensed Materials - Property of HCL Limited.
 
-© Copyright HCL Technologies Limited 2001, 2020
+© Copyright HCL Technologies Limited
 
 This information was developed for products and services offered in the US.
 

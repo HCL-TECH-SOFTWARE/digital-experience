@@ -1,5 +1,5 @@
+title: Architecture Overview
 nav:
-    - Container Deployment: container_deployment
-    - On-Premises Deployment: onpremises_deployment
-    - Hybrid Deployment: hybrid_deployment
-    - Development Deployment: docker
+    - index.md
+    - Kubernetes Deployment: kubernetes_deployment
+    - Traditional Deployment: traditional_deployment

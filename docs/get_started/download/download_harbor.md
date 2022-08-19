@@ -1,4 +1,8 @@
-# Download and deploy through HCL Harbor repository
+---
+title: Harbor Container Registry
+---
+
+# Download and Deploy From HCL Harbor Repository
 
 Beginning with HCL Digital Experience 9.5 Container Update CF205, the [Docker images](../kubernetes/docker.md) for deployment to Kubernetes environments can be accessed via Helm charts in the [HCL Harbor repository](https://hclcr.io/account/sign-in?redirect_url=/harbor/projects){:target="_blank"}. Customers with credentials to access entitled software in the HCL Software Licensing Portal may apply those credentials to access the Docker components of Digital Experience v9.5 Container Update CF205 or later releases. 
 
