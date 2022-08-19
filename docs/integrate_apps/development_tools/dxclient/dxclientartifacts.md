@@ -1,45 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="dxclientartifacts" xml:lang="en-us">
-    <title>DXClient Artifact Types | HCL Digital Experience</title>
-    <titlealts>
-        <navtitle>DXClient Artifact Types </navtitle>
-    </titlealts>
-    <abstract>
-        <shortdesc>This section provides information about the artifact types that are currently
-            supported by the DXClient tool. </shortdesc>
-        <note id="note_d3s_xg1_nqb" type="other" othertype="Limitations">
-            <ul>
-                <li>If deploying CICD artifacts using DXClient to the Red Hat OpenShift environment,
-                    you might receive failure messages while you run the
-                        <cmdname>deploy-theme</cmdname>, <cmdname>deploy-application</cmdname>, or
-                        <cmdname>restart-dx-core</cmdname> commands. This might happen because of a
-                    connection getting closed due to timeout before the response is ready. In such
-                    situations, before re-triggering the request, we advise you to check your target
-                    server to verify if the application has been deployed or the server is up, as
-                    the request was already triggered from the client-side.</li>
-            </ul>
-        </note>
-        <note type="other" othertype="Notes">The following list shows some of the deprecated
-            parameters and the new parameters that replace them in CF201 and later releases. It is
-            recommended that you start using the new parameters below because the old parameters
-            might be removed in later releases:<ul id="ul_zzp_ltz_msb">
-                <li><codeph>-dxConnectHostname</codeph> replaced by
-                        <codeph>-hostname</codeph><note>The attribute
-                            <codeph>-dxConnectHostname</codeph> is deprecated in CF202 and later
-                        releases. It is recommended that you start using the replacement parameter
-                            <codeph>-hostname</codeph> starting from CF202 wherever
-                        necessary.</note></li>
-                <li><codeph>-targetServerHostname</codeph> replaced by
-                        <codeph>-targetHostname</codeph></li>
-                <li><codeph>-targetServerPort -></codeph> replaced by
-                        <codeph>-targetDxConnectPort</codeph></li>
-                <li><codeph>-targetServerUsername</codeph> replaced by
-                        <codeph>-targetDxConnectUsername</codeph></li>
-                <li><codeph>-targetServerPassword</codeph> replaced by
-                        <codeph>-targetDxConnectPassword</codeph></li>
-                <li><codeph>-targetServerProfileName</codeph> replaced by
-                        <codeph>-targetDxProfileName</codeph></li>
-            </ul></note>
-    </abstract>
-</topic>
+# DXClient Artifact Types
+
+This section provides information about the artifact types that are currently supported by the DXClient tool.
+
+**Limitations:**
+
+-   If deploying CICD artifacts using DXClient to the Red Hat OpenShift environment, you might receive failure messages while you run the deploy-theme, deploy-application, or restart-dx-core commands. This might happen because of a connection getting closed due to timeout before the response is ready. In such situations, before re-triggering the request, we advise you to check your target server to verify if the application has been deployed or the server is up, as the request was already triggered from the client-side.
+
+!!! note
+    The following list shows some of the deprecated parameters and the new parameters that replace them in CF201 and later releases. It is recommended that you start using the new parameters below because the old parameters might be removed in later releases:
+
+-   `-dxConnectHostname` replaced by `-hostname`
+
+    !!! note
+        The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
+
+-   `-targetServerHostname` replaced by `-targetHostname`
+-   `-targetServerPort ->` replaced by `-targetDxConnectPort`
+-   `-targetServerUsername` replaced by `-targetDxConnectUsername`
+-   `-targetServerPassword` replaced by `-targetDxConnectPassword`
+-   `-targetServerProfileName` replaced by `-targetDxProfileName`
+
+
+<!--- ???Info "Related information:"
+
+[How to translate WCM library content using export and import WCM with DXClient](../wcm/wcm_mls_export_import.md)
+
+[DXClient](../containerization/dxclient.md)
+
+[Sample Pipelines for use with HCL DXClient and Automation servers](../containerization/sample_pipelines_for_use_with_dx_client_and_automation_servers.md)
+
+[How to manage syndicators and subscribers](https://help.hcltechsw.com/digital-experience/digital-experience/8.5/panel_help/wcm_syndication.html) --->
+
