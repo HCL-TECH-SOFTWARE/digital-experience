@@ -35,9 +35,10 @@ It is important to understand that a cell's configuration has the notion of scop
     A resource that is defined at a cluster scope is visible to all cluster members, or server instances, in this cluster. However, it is not visible to any other servers in the same nodes.
 
 
-![The diagram depicts the concept of scope. ](../images/clusm_singlecell.jpg)
+![The diagram depicts the concept of scope. ](../../../../../images/clusm_singlecell.jpg)
 
-**Note:** Resources that are defined within a circle, can be seen by all other resources and scopes that are defined within that circle.
+!!! note 
+    Resources that are defined within a circle, can be seen by all other resources and scopes that are defined within that circle.
 
 Within this concept of scope, an important point is that all enterprise applications are cell-scoped. In other words, there can be only one enterprise application with a given name in the cell. If multiple servers and clusters, or multiple clusters require the use of that enterprise application, they must share it.
 
@@ -66,8 +67,7 @@ To summarize at a high level, supporting multiple clusters in the same cell invo
     When multiple clusters need access to a common Process Server, centralize the server within its own cluster. Use HCL Portal with the client installation of the Process Server to allow remote access to the central process server cluster.
 
 
--   **[Database sharing between multiple clusters](../plan/clusm_dbshare.md)**  
+-   **[Database sharing between multiple clusters](clusm_dbshare.md)**  
 You might want to support multiple identically configured HCL Portal installations in the same cell for ease of maintenance or failover.
 
-**Parent topic:**[Cluster considerations](../plan/plan_clus_ovr.md)
 

@@ -49,10 +49,9 @@ The following table identifies the minimum privileges that are needed to correct
 |Create views|No|No|No|No|No|No|
 |Drop views|No|No|No|Yes|No|No|
 
-**Parent topic:**[Database considerations](../plan/db_considerations.md)
 
-**Related information**  
+<!--- ???Info**Related information**  
 
 
-[Database transfer: Granting privileges to database users for DB2 for i](../config/unix_db2i_priv_dbusers_common.md)
+[Database transfer: Granting privileges to database users for DB2 for i](../config/unix_db2i_priv_dbusers_common.md) --->
 

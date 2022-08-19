@@ -10,9 +10,7 @@ The design shows a Greenwheels theme, a banner, and a dynamic list page componen
 
 The existing Landing Page template creates two pages, a landing page and a hidden Content page and uses the Portal 8.5 theme. You can use this roadmap to learn how to use the existing Landing Page template as the foundation for your Greenwheels Landing Page template. Once you create the new template, you can learn how to associate a workflow to your template, and how to apply the Greenwheels theme to any pages created from the template.
 
-**Parent topic:**[Setting up the site for the content author](../install/rm_create_site.md)
-
-# Creating your page template, assigning a workflow, and assigning your Greenwheels theme to your template.
+## Creating your page template, assigning a workflow, and assigning your Greenwheels theme to your template.
 
 1.  From the **Site** menu, click **Home** to go to the default site.
 
@@ -42,9 +40,11 @@ The existing Landing Page template creates two pages, a landing page and a hidde
 
 11. Add a workflow to your page template.
 
-    **Tip:** You can set a workflow only on items that are in a draft state. Because of this behavior, you must create the template as a draft in the context of a project. By working in a project, you can also verify the workflow to make sure that the stages behave as expected.
+    !!! tip 
+        You can set a workflow only on items that are in a draft state. Because of this behavior, you must create the template as a draft in the context of a project. By working in a project, you can also verify the workflow to make sure that the stages behave as expected.
 
-12. Click on your Greenwheel Landing Page template in Site Manager and click the context menu icon ![Screen capture of the context menu](../images/toolbar_context_menu.jpg). Click **Open Page Settings**.
+12. Click on your Greenwheel Landing Page template in Site Manager and click the context menu icon.
+ ![Screen capture of the context menu](../../../../../../images/toolbar_context_menu.jpg). Click **Open Page Settings**.
 
 13. Click **Edit Page Properties**.
 

@@ -6,9 +6,8 @@ This roadmap highlights how to create the custom theme of the design from an HTM
 
 You are a developer on the technical team that is tasked with implementing the HTML prototype. You are responsible only for creating a custom theme and replacing the default logo with your company logo. Other developers are responsible for developing other pieces of the design. Learn the basics of creating and changing the theme logo to reflect your business.
 
-**Parent topic:**[Setting up the site for the content author](../install/rm_create_site.md)
 
-# Creating your custom theme
+## Creating your custom theme
 
 1.  Click the **Applications menu** icon. Then, click **Theme Development**.
 
@@ -30,13 +29,13 @@ You are a developer on the technical team that is tasked with implementing the H
 
 Your custom Simple Theme is now ready for the content author to use to customize site and page templates.
 
-# Changing the theme logo
+## Changing the theme logo
 
 Ensure that you created a custom theme for Greenwheels that uses the Simple Theme template. To learn how to create the custom theme, go to the Roadmaps section and find *Roadmap: Creating a custom Simple Theme*.
 
 1.  Create the directory ThemeLogo.
 
-2.  Use a [WebDAV client](../admin-system/webdav.md) to download the Greenwheels theme.
+2.  Use a [WebDAV client](../../../../../../integrate_apps/development_tools/webdav/webdav.md) to download the Greenwheels theme.
 
 3.  Open the directory ThemeLogo.
 
@@ -54,7 +53,7 @@ Ensure that you created a custom theme for Greenwheels that uses the Simple Them
 
 8.  Save the file.
 
-9.  Use a [WebDAV client](../admin-system/webdav.md) to upload the changes files of your theme.
+9.  Use a [WebDAV client](../../../../../../integrate_apps/development_tools/webdav/webdav.md) to upload the changes files of your theme.
 
 
 The default theme logo is replaced by the Greenwheels logo.

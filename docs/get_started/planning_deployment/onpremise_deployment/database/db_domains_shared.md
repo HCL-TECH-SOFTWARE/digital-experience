@@ -10,9 +10,7 @@ The following table lists the supported database domains, whether a domain is sh
 
 |Database domain|Sharable|Notes|
 |---------------|--------|-----|
-|Release|no|In an environment that consists of multiple lines of production, one copy of the release data exists per cluster.Considered the domain as release data and promote to production lines individually.
-
-|
+|Release|no|In an environment that consists of multiple lines of production, one copy of the release data exists per cluster.Considered the domain as release data and promote to production lines individually.|
 |Customization|yes|In an environment that consists of multiple lines of production, customization data is kept in a database that is shared across the lines of production. Therefore, the data is automatically in synchronization across the lines of production.|
 |Community|yes| |
 |JCR|no|Considered the domain as release data and promote to production lines individually.|
@@ -63,12 +61,10 @@ This configuration defines a cache lifetime of 900 seconds. You can choose anoth
 
 The VMM database feature makes it much simpler to use multiple repositories, since this capability is achieved through configuration, rather than development, with the use of the new VMM. In essence, with this feature you can map entries from multiple individual user repositories into a single virtual repository. The federated repository consists of a single named realm, which is a set of independent user repositories. Each repository might be an entire external repository or in the case of LDAP, a subtree within that repository. The root of each repository is mapped to a base entry within the federated repository, which is a starting point within the hierarchical namespace of the virtual realm. The Virtual Member Manager \(VMM\) databases for a full repository and for the property extension can be shared between lines of production. If the VMM databases are out of service, HCL Portal does not function.
 
-**Parent topic:**[Database considerations](../plan/db_considerations.md)
-
-**Related information**  
+<!--- ???info**Related information**  
 
 
 [Cache Manager Service](../admin-system/srvcfgref_cach_mgr.md)
 
-[HCL Digital Experience Performance Tuning Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074411)
+[HCL Digital Experience Performance Tuning Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074411) --->
 
