@@ -14,5 +14,4 @@ The Web Content Integrator is a solution for integrating externally managed Web 
 
 This is useful when you need to continue to use externally managed Web content in a site delivered using Web Content Manager.
 
-**Parent topic:**[Creating your website](../install/rm_4site.md)
 

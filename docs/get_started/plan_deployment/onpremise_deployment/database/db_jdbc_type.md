@@ -10,14 +10,12 @@ When you use a JDBC type 4 connection, you do not need DB2 Connect. Instead, the
 
 Depending on your database software, there might be more required configuration steps for using type 2 drivers. Review the installing database software topics.
 
-**Parent topic:**[Database considerations](../plan/db_considerations.md)
-
-**Related information**  
+<!--- **Related information**  
 
 
 [Installing and preparing Oracle or Oracle RAC](../config/oracle_inst.md)
 
 [Installing and preparing DB2 for z/OS](../config/db2z_inst.md)
 
-[Installing and preparing DB2](../config/inst_db2.md)
+[Installing and preparing DB2](../config/inst_db2.md) --->
 

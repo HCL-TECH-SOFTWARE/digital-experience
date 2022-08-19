@@ -20,7 +20,7 @@ Roles are always associated with a specific resource. Resources can be moved bac
 
 The decision to use an external security manager must be made with the understanding that the external security manager software's ACL semantics override HCL Digital Experience semantics. For example, if you use Security Access Manager to grant anonymous membership on a role for an externally controlled portlet, you must set the ACL for that portlet to include the Security Access Manager unauthenticated user group.
 
-**Note:** If you use Security Access Manager for authorization, you must also use it for authentication. Using Security Access Manager to perform only authorization is not supported.
+!!! note
+    If you use Security Access Manager for authorization, you must also use it for authentication. Using Security Access Manager to perform only authorization is not supported.
 
-**Parent topic:**[Planning for external security managers](../plan/plan_extsecman.md)
 

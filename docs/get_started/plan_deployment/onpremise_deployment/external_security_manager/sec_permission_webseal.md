@@ -11,7 +11,7 @@ Starting with HCL Portal version 8.0, the supported junction types between the f
 
 Prior releases supported the use of traditional non-transparent WebSEAL junctions, but this configuration is no longer supported by HCL Portal 8.0 and later. With the proliferation of HCL Digital Experience URLs, the virtual host junction is now the most efficient way to make an HCL Digital Experience server work behind a WebSEAL proxy. All discussions around encryption, Trust Association Interceptor \(TAI\) versus LTPA and other setup options continue to be applicable. The difference is the overall junction type, which determines how the junction is visible to the users.
 
-A traditional non-transparent junction has a token in the URL that corresponds to the junction in WebSEAL. For example, the URL might be http://webseal.hostname.yourco.com/junction1/wps/myportal. A transparent junction uses an existing token in the URL to identify the junction; for example, it uses the /wps token in /wps/myportal. The problem with both of these methods is that HCL Digital Experience has many URLs and not all of them start with /wps. They are also difficult to configure to use a consistent prefix.
+A traditional non-transparent junction has a token in the URL that corresponds to the junction in WebSEAL. For example, the URL might be **http://webseal.hostname.yourco.com/junction1/wps/myportal**. A transparent junction uses an existing token in the URL to identify the junction; for example, it uses the **/wps** token in **/wps/myportal**. The problem with both of these methods is that HCL Digital Experience has many URLs and not all of them start with **/wps**. They are also difficult to configure to use a consistent prefix.
 
 Virtual host junctions use a virtual host name to identify the junction. To identify the junction, the host name might be junction1.webseal.hostname.yourco.com. This junction is only an example; you can use any host name that fits within your domain. The junction is then defined in WebSEAL to use the incoming host name, instead of a URL token, to identify the junction and the corresponding back-end servers.
 
@@ -19,7 +19,8 @@ In the configuration that is described here, the WebSEAL component of Security A
 
 To properly secure the WebSphere Application Server and HCL Digital Experience system against an attack, the TAI must still authenticate the WebSEAL server. So that only requests that are legitimately presented through that WebSEAL server are accepted. There are different ways to configure this authentication between WebSEAL and the TAI in WebSphere Application Server. You can choose between the different ways to configure depending on how much effort and performance you want to put into securing your network. The decisions that you make determines how you set up the junctions between the WebSEAL server and HCL Portal.
 
-**Note:** By default, the XML configuration interface cannot access HCL Digital Experience through a WebSEAL junction. To enable the XML configuration interface to access HCL Digital Experience through a WebSEAL junction, use Security Access Manager to define the configuration URL \(`/wps/config`\) within the junction as unprotected. Use the WebSEAL documentation for specific instructions about defining separate URLs within the junction and assigning separate ACLs to these URLs. After the configuration URL is defined as unprotected, only HCL Portal enforces access control to this URL. Other resources that are protected within the WebSEAL junction \(for example, the wps/myportal URL\) are still protected by WebSEAL.
+!!! note 
+    By default, the XML configuration interface cannot access HCL Digital Experience through a WebSEAL junction. To enable the XML configuration interface to access HCL Digital Experience through a WebSEAL junction, use Security Access Manager to define the configuration URL \(`/wps/config`\) within the junction as unprotected. Use the WebSEAL documentation for specific instructions about defining separate URLs within the junction and assigning separate ACLs to these URLs. After the configuration URL is defined as unprotected, only HCL Portal enforces access control to this URL. Other resources that are protected within the WebSEAL junction \(for example, the wps/myportal URL\) are still protected by WebSEAL.
 
 ## Nonencrypted junction using Basic Authentication
 
@@ -39,10 +40,8 @@ If you choose not to use client-side certificates to identify the WebSEAL server
 
 To set up the junction to use the Basic Authentication header to identify the WebSEAL server, use the `-b supply` option on the junction creation command. This option causes WebSEAL to build the BA header by using the user's user ID \(which is ignored by the TAI, in favor of the `iv-user` header\) and the password that is configured into WebSEAL from the `webseald-instance.conf` file, on the `basicauth-dummy-passwd` property. The password in the `webseald-instance.conf` file must match the password for the ID that is specified on the `com.ibm.websphere.security.webseal.loginid` property of the TAI startup parameters in the WebSphere Integrated Solutions Console. For example, if you specify `com.ibm.websphere.security.webseal.loginid=mistered` on the TAI startup parameters, and the password for `mistered` is `wilbur`, then you must specify `wilbur` on the `basicauth-dummy-passwd` property in `webseald-instance.conf` on the WebSEAL server.
 
-**Parent topic:**[Planning for external security managers](../plan/plan_extsecman.md)
 
-**Related information**  
+<!--- **Related information**  
 
-
-[WebSEAL Administration Guide](https://www.ibm.com/docs/en/SSPREK_7.0.0/com.ibm.isam.doc_80/ameb_webseal_admin_pdf.pdf)
+[WebSEAL Administration Guide](https://www.ibm.com/docs/en/SSPREK_7.0.0/com.ibm.isam.doc_80/ameb_webseal_admin_pdf.pdf) --->
 
