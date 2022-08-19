@@ -26,6 +26,7 @@ Transfer data to another supported database before you use the portal extensivel
 
 Use the wizard to either create scripts that you or your database administrator can use to create databases, create database user IDs, and configure database user ID privileges. The wizard collects information about your database management system, the database topology you want, the user IDs you require, and more. Then, it generated custom scripts and instructions.
 
+<!---
 -   **[Database users](../plan/dbusers_common.md)**  
 Become familiar with the privileges required for each user type to work with the database domains of HCL Portal and the commands for creating database configuration users and granting privileges.
 -   **[Database topologies](../plan/db_topology.md)**  
@@ -42,5 +43,5 @@ To maximize data availability, you can distribute portal data across multiple da
 **Related information**  
 
 
-[Prerequisite software for installing Content Template 4.4](../ctc/ctc_inst_prereq8.md)
+[Prerequisite software for installing Content Template 4.4](../ctc/ctc_inst_prereq8.md)  --->
 

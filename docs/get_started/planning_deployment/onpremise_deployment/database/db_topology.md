@@ -10,7 +10,7 @@ For proof-of-concept, demonstrations, and development environments, you can use 
 
 In the topology diagram, all of the portal database domains are stored in one database, wpsdb.
 
-![Topology diagram depicts a portal server with a local wpsdb database and a detail view of the wpsdb instance.](../images/db_topology_local.jpg)
+![Topology diagram depicts a portal server with a local wpsdb database and a detail view of the wpsdb instance.](../../../../images/db_topology_local.jpg)
 
 ## Remote database
 
@@ -20,7 +20,7 @@ When multiple lines of production are involved and each line of production is im
 
 The topology diagram is similar to the local database topology. The main difference is that the database is on a different server than the portal.
 
-![Topology diagram depicts a portal server with a remote database server and a wpsdb database. It also includes a detail view of the wpsdb instance.](../images/db_topology_remote.jpg)
+![Topology diagram depicts a portal server with a remote database server and a wpsdb database. It also includes a detail view of the wpsdb instance.](../../../../images/db_topology_remote.jpg)
 
 ## High capacity and availability
 
@@ -28,7 +28,5 @@ For high capacity load balancing, use one or multiple remote databases. When you
 
 The topology diagram shows a remote database server with four databases. The JCR and release portal database domains have unique databases. They cannot be shared. Also, the release portal database domain cannot be taken offline. Another database contains the customization and community portal database domains. Finally, another database to contain the feedback and likeminds portal database domains.
 
-![Database topology for a remote database server with multiple database instances.](../images/db_topology_remote_high1.jpg)
-
-**Parent topic:**[Database considerations](../plan/db_considerations.md)
+![Database topology for a remote database server with multiple database instances.](../../../../images/db_topology_remote_high1.jpg)
 
