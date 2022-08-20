@@ -1,5 +1,6 @@
 title: Integrate Applications
 nav:
+    - index.md
     - portlets_development
     - integration
     - ddc

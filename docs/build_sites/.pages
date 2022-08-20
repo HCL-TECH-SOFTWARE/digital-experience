@@ -1,4 +1,5 @@
 title: Build Sites
 nav:
+    - index.md
     - ...
     - Troubleshooting: troubleshooting
