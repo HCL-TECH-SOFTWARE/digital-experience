@@ -1,4 +1,4 @@
-# HCL Web Content Manager
+# Manage Content
 
 HCL Web Content Manager accelerates the creation, maintenance, and delivery of content across intranet, extranet, Internet, and portal sites.
 
