@@ -173,3 +173,36 @@ You can set the name of the certificate used with the following syntax, the defa
 
 !!! note
     Verify you have entered the correct name.
+
+### OpenShift Passthrough
+Helm charts have an `openShiftPassthrough` value to create a `Route` resource, which only passes through the main HAProxy port (443 most of the time). Instead of having such a flavor-specific configuration in Helm charts, such setups are documented and point to the flavor-specific documentation and will be deprecated.
+
+The default value set for "openShiftPassthrough" is `auto` i.e it detects openshift deployments automatically. Even though it is not manually enabled it will be active by default. To prevent this it needs to be manually disabled. This can be done by setting "openShiftPassthrough" to `false`
+
+!!! note
+    The "openShiftPassthrough" value is deprecated and if "openShiftPassthrough" is to be used a new route resource must be created manually 
+
+#### Create the route resource manually
+If you want to deploy openshift manually using Routes, youll need to create a yaml file like below and any changes required can be made in that. To apply those change the the openshift cluster you can run `kubectl apply` and specify its namespace and location.
+This conversation was marked as resolved by kevin-hendel
+Click [here](https://docs.openshift.com/container-platform/latest/networking/routes/route-configuration.html) for more details on Openshift Route Configuration
+
+```yaml
+apiVersion: "route.openshift.io/v1"
+kind: "Route"
+metadata:
+  name: "<helm-deployment-name>-passthrough"
+spec:
+  port:
+    targetPort: "haproxy"
+  tls:
+    insecureEdgeTerminationPolicy: "Redirect"
+    termination: "passthrough"
+  to:
+    kind: "Service"
+    name: "<helm-deployment-name>-haproxy"
+    weight: 100
+  wildcardPolicy: "None"
+```
+
+`<helm-deployment-name>` must be replaced with the name of the deployed Helm release.

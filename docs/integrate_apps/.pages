@@ -1,9 +1,12 @@
 title: Integrate Applications
 nav:
     - index.md
-    - portlets_development
     - integration
-    - ddc
+    - managing_apps
     - development_tools
+    - ddc
+    - portlets_development
+    - apis
     - paa
+    - security
     - ...

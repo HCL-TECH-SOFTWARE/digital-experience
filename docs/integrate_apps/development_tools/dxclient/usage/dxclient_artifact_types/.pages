@@ -1,6 +1,5 @@
 nav:
     - credentialvaultslot.md
-    - damschemas.md
     - deployapplication.md
     - dxcoreserver.md
     - personalization.md

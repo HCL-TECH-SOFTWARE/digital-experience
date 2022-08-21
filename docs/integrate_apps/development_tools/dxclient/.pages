@@ -1,11 +1,3 @@
 nav:
-    - deploy_dx_components_using_hcl_dx_client_and_dx_connect.md
-    - dxclient.md
-    - dxclientartifacts.md
-    - DXClientArtifactType
-    - dxconnect.md
-    - sample_pipelines_docker_dxclient.md
-    - sample_pipelines_for_use_with_dx_client_and_automation_servers.md
-    - sample_pipelines_node_dxclient.md
-    - troubleshooting_dxclient.md
+    - index.md
     - ...
