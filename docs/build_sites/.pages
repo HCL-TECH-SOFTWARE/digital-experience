@@ -1,4 +1,17 @@
 title: Build Sites
 nav:
+    - create_sites
+    - themes_skins
+    - practitioner_studio
+    - site_toolbar_and_site_manager
+    - sitebuilder
+    - woodburn_studio
+    - mobile
+    - virtual_portal
+    - search
+    - tagging_rating
+    - site_analytics
+    - social_rendering
+    - syndicated_feed_portlet
     - ...
-    - Troubleshooting: troubleshooting
+
