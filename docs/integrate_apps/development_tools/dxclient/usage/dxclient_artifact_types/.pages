@@ -1,4 +1,5 @@
 nav:
+    - index.md
     - credentialvaultslot.md
     - damschemas.md
     - deployapplication.md
