@@ -1,4 +1,4 @@
-# IBM Web Content Integrator
+# Web Content Integrator
 
 The Web Content Integrator is a solution for integrating externally managed web content with HCL Portal. By using standard content syndication feed technologies based on RSS 2.0, the Web Content Integrator provides a loosely coupled mechanism for transferring published content and metadata to the portal after they are approved in the source system. When the content and metadata are transferred to the portal, it is possible to use the built-in content management features of Web Content Manager to secure, personalize, and display the content to users.
 
