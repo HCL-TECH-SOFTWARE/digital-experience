@@ -1,5 +1,6 @@
 title: Renditions
 nav:
+    - index.md
     - Installation: installation
     - Usage: usage
 
