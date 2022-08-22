@@ -27,5 +27,4 @@ You can set the side navigation template for a specific page.
 6.  You can now navigate to the page and it is now rendered as a side navigation.
 
 
-**Parent topic:**[Side navigation](../dev-theme/themeopt_cust_nav_side.md)
 

@@ -11,5 +11,4 @@ You can pre-render a complete HCL Web Content Manager site into HTML and save it
 -   **[Rendering modes for web content](../wcm/wcm_rendering_modes.md)**  
 Different presentation templates are created to render web content in different modes to display content in different contexts, such as a web content viewer portlet, or mobile devices.
 
-**Parent topic:**[Setting up a website](../site/site_setup.md)
 

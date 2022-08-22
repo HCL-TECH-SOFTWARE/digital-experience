@@ -11,5 +11,4 @@ The solution that HCL Digital Experience offers is based on a server-side HTTP p
 -   **[The programming model for using the AJAX proxy](../dev-portlet/ajax_proxy_prgrmdl.md)**  
 View information on using the proxy when programming portlets.
 
-**Parent topic:**[Outbound HTTP connection](../dev-portlet/outbound_http.md)
 

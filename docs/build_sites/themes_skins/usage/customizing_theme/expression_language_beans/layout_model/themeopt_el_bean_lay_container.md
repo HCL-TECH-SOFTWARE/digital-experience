@@ -67,5 +67,4 @@ Attributes:
     Returns: [Title](themeopt_el_bean_title.md) associated with the current layout container object.
 
 
-**Parent topic:**[LayoutModel](../dev-theme/themeopt_el_bean_lay_model.md)
 

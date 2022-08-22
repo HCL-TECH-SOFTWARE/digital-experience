@@ -2,7 +2,6 @@
 
 You can choose to remove individual outbound HTTP connection policies or you can remove all policies from a configuration profile.
 
-**Parent topic:**[Sample administration tasks](../dev-portlet/outbhttp_cfg_smpl_adm_tasks.md)
 
 # Removing a single outbound HTTP connection policy
 

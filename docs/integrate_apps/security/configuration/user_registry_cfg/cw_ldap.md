@@ -14,7 +14,6 @@ Two types of validation are performed when you select to validate settings inclu
 
 Enabling validation is recommended because it can prevent a possible failure by validating your entries in the wizard before you run the configuration. The LDAP settings including the **Repository ID**, **Host name**, **Port**, **Bind DN**, **Bind password**, **Base DN**, **Administrator group DN**, **Administrator DN**, and **Administrator password** are all validated before the wizard creates your instructions to run the configuration. Review the following worksheet section to see which fields are required based on your selections in the wizard.
 
-**Parent topic:**[User registry](../config/config_user_registry.md)
 
 **Related information**  
 

@@ -398,5 +398,4 @@ For more information about system support requirements, see [System requirements
 -   **[Setting up single sign-on with MobileFirst](../integrate/wl_sso.md)**  
 You can set up single sign-on with MobileFirst so users can share a session between an HCL Portal and MobileFirst server.
 
-**Parent topic:**[Module framework for IBM MobileFirst](../integrate/wl_module_fw.md)
 

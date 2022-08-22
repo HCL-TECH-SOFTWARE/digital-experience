@@ -6,5 +6,3 @@ The Clickstream Engine tracks the pages that users have looked at. After analyzi
 
 **Parent topic:**[The LikeMinds Recommendation Engines](../pzn/pzn_likeminds_recommendation_engines_3.md)
 
-**Parent topic:**[The LikeMinds Recommendation Engines](../pzn/pzn_likeminds_recommendation_engines_3.md)
-

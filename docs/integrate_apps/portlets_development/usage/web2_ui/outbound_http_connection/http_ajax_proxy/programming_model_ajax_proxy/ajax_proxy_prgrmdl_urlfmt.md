@@ -35,5 +35,4 @@ Proxy URL: http://myportal.com:10040/wps/ibmsoftwarenews/swnews.nsf/swnewsrss?op
 
 ```
 
-**Parent topic:**[The programming model for using the AJAX proxy](../dev-portlet/ajax_proxy_prgrmdl.md)
 

@@ -9,5 +9,4 @@ This section provides the steps on how to edit a content template using HCL Cont
 -   **[Delete a content template \| HCL Content Composer](../usage/delete_a_content_template)**  
 This section provides the steps on how to delete a content template using HCL Content Composer.
 
-**Parent topic:**[Common tasks \| HCL Content Composer](../content_composer/Content_Comp_common_tasks.md)
 

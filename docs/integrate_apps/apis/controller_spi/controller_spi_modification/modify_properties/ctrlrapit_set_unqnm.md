@@ -31,5 +31,4 @@ modifiableObjectID.setUniqueName("MyUniqueName");
 
 ```
 
-**Parent topic:**[Modifying properties](../dev/ctrlrapit_mdfy_props.md)
 

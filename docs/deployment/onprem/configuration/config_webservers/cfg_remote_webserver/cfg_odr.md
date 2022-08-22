@@ -27,5 +27,4 @@ Configure the communication between HCL Portal and your OnDemand Router \(ODR\).
 8.  Restart your ODR server.
 
 
-**Parent topic:**[Configuring a remote web server](../config/cfg_webserver.md)
 

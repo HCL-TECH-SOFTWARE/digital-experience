@@ -25,5 +25,4 @@ HCL Portal supports the following methods for login and authentication:
     **Restriction:** This URL is intended only for a single-user login. It is not intended for multiple consecutive user log ins. It is also not intended to replace the Login portlet.
 
 
-**Parent topic:**[Security and authentication considerations](../plan/plan_secauth.md)
 

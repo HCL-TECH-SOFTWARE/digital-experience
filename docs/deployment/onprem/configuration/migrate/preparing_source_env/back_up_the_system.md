@@ -8,7 +8,6 @@ Before you start the migration, make a fresh backup of your environment. At a mi
 -   Directory structures of the source environment
 -   Security configurations
 
-**Parent topic:**[Preparing your source environment](../migrate/mig_t_premig_tasks.md)
 
 **Related information**  
 

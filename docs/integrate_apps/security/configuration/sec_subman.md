@@ -78,7 +78,5 @@ Default: false
 
 |
 
-**Parent topic:**[Users and groups](../admin-system/adusrgrp.md)
-
 **Parent topic:**[Registration/Edit my profile](../practitioner_studio/edit_my_profile.md)
 

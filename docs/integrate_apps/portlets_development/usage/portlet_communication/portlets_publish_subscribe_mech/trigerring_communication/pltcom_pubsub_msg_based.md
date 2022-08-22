@@ -13,7 +13,6 @@ You can use dynamic menus for communication between portlets.
 -   **[Runtime behavior](../dev-portlet/pltcom_event_brkr.md)**  
 The portal event broker subsystem provides support for inter-portlet communication with active notifications using portlet events or the cooperative programming model.
 
-**Parent topic:**[Standard portlets publish and subscribe mechanisms](../dev-portlet/pltcom_pubsub_model.md)
 
 **Related information**  
 

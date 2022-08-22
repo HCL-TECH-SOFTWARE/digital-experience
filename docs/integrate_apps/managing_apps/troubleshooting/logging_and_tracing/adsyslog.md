@@ -150,7 +150,6 @@ The current value is TRANSACTION_REPEATABLE_READ.
 
 ```
 
-**Parent topic:**[Logging and tracing](../trouble/pd_intr_logs.md)
 
 **Related information**  
 

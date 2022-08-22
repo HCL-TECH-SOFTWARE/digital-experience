@@ -69,5 +69,4 @@ Customize your theme with these definitions.
     The container element for the footer of the theme.
 
 
-**Parent topic:**[Updating your custom style](../dev-theme/themeopt_cust_styleupdate.md)
 

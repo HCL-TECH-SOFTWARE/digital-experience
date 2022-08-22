@@ -29,7 +29,6 @@ Click ![Back](../images/cw_backicon.jpg) and ![Next](../images/cw_forwardicon.jp
     **Note:** The wizard user interface might not be available in all languages. If the language is not currently supported, you might see the English version. For details on the supported languages for all of the HCL Digital Experience user interfaces, see [Supported languages](../reference/supportedlanguages.md).
 
 
-**Parent topic:**[Configuration Wizard](../config/cw_overview.md)
 
 **Related information**  
 

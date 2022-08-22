@@ -78,5 +78,3 @@ If running in an environment that supports it, the Feedback component uses the W
 
 **Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
 
-**Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
-

@@ -13,7 +13,6 @@ Learn how to enable Tag Cloud portlet support on your portal page. You can enabl
 -   **[Using the portal Tag Cloud with lists of social objects](../social/soc_rendr_tag_cloud_w_socl_list.md)**  
 To get the most benefit from social rendering together with tagging, you can put the HCL Portal Tag Cloud portlet on pages that contain social lists. This way your site visitors can reduce the contents of social lists by selecting individual tags from the tag cloud. The list of social objects is then restricted to content items that are tagged with the tag or tags that the user selected.
 
-**Parent topic:**[Social rendering](../social/soc_rendr_ovu.md)
 
 **Related information**  
 

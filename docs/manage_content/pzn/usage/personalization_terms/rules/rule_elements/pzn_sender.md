@@ -4,5 +4,3 @@ SENDER must be a valid email address, list of email addresses \(comma separated\
 
 **Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
 
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
-

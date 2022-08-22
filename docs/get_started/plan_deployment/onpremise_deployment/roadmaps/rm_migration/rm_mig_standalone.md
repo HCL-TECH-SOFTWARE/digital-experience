@@ -59,7 +59,6 @@ Migration is not complete until you review the Next steps section in the product
 
 After you complete the tasks in the Next steps section of the product documentation, migration is complete.
 
-**Parent topic:**[Roadmaps for migration](../install/rm_migration.md)
 
 **Related information**  
 

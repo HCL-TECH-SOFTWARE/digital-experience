@@ -19,5 +19,4 @@ A theme consists of three types of resources:
 
 When you create a new theme, the system duplicates the static resources and the theme definition. The new theme still connects to the dynamic resources WAR file of the template. You can use the dynamic content spots from the template, or you can create and add your own custom dynamic content spots. The dynamic content spots of the Simple Theme were designed for reusability. Learn more about [Dynamic content spots](themeopt_themedev_dynamic_content_spots.md#).
 
-**Parent topic:**[Getting started with Themes](../dev-theme/themeopt_themedev_getting_started.md)
 

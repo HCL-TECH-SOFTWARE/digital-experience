@@ -31,7 +31,6 @@ You configure specific tag widget instances by setting the JavaScript parameters
 -   **[Rating widget parameter reference](../admin-system/tag_rate_parm_ref_inl_rate_lite.md)**  
 You configure rating widget instances by setting the JavaScript parameters listed here.
 
-**Parent topic:**[Configuration reference for tagging and rating](../admin-system/tag_rate_adm_ref.md)
 
 **Related information**  
 

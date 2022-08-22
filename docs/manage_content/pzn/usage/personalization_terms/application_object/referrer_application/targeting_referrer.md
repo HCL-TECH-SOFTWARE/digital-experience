@@ -19,5 +19,3 @@ Learn how to create the Referrer application object by using a visibility rule f
 
 **Parent topic:**[Application object](../pzn/pzn_application_object.md)
 
-**Parent topic:**[Application object](../pzn/pzn_application_object.md)
-

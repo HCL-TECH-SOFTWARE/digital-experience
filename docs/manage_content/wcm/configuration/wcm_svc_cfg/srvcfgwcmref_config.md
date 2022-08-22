@@ -202,5 +202,4 @@ The HCL Web Content Manager configuration service \(WCM WCMConfigService\) defin
     Default value: false
 
 
-**Parent topic:**[Web Content Manager service configuration](../admin-system/srvcfgwcmref.md)
 

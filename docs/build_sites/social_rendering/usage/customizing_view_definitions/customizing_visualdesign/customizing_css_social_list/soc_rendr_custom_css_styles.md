@@ -17,7 +17,6 @@ To define its visual appearance, the default markup for social lists uses severa
 -   **[Using media queries to target mobile devices](../social/soc_rendr_media_qs_4_mobile.md)**  
 The default social list CSS styles use CSS3 media queries to target specific mobile devices and implement responsive web design. Learn more about media queries.
 
-**Parent topic:**[Customizing the visual design of your view definitions](../social/soc_rendr_cust_socl_list_visual_design.md)
 
 **Related information**  
 

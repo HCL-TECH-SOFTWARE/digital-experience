@@ -15,7 +15,6 @@ When you create a template for a community page, you can configure the template 
 -   **[Creating associations to existing communities during page instantiation](../admin-system/commpages_create_mapping_exist.md)**  
 When you create a template for a community page, you can configure the template to associate the page created from the template with an existing community. In this case, the community is not modified in any way.
 
-**Parent topic:**[Managing community pages](../admin-system/commpages_main.md)
 
 **Related information**  
 

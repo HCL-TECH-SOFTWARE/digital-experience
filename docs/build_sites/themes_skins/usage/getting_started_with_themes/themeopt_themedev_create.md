@@ -28,5 +28,4 @@ com.ibm.portal.isTemplate = true
 
 **Note:** Newly created themes are WebDAV-based. By default, they are connected to the WAR file of the template that you select, and you can reuse the dynamic content spots that are included in the template. If you want to create your own dynamic content spot, create your own WAR file with a module that defines the dynamic content spot ID. Then, you can reference that module within your profile and use that dynamic content spot ID.
 
-**Parent topic:**[Getting started with Themes](../dev-theme/themeopt_themedev_getting_started.md)
 

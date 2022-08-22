@@ -28,7 +28,5 @@ There are two ways to preview content items in a portal:
         A separate browser window opens to show the content item on its associated web content page.
 
 
-**Parent topic:**[Customizing web content delivery](../wcm/wcm_delivery_custom.md)
-
 **Parent topic:**[Web content](../practitioner_studio/web_content.md)
 

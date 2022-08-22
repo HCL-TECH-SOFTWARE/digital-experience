@@ -81,5 +81,4 @@ Attributes:
     Returns: String containing the current local in XML format. For example, `en-us`.
 
 
-**Parent topic:**[Common beans](../dev-theme/themeopt_el_bean_common.md)
 

@@ -112,5 +112,4 @@ The available methods are:
 -   `launchInsertLinkDialog(/* String */ linkText, /* String */ linkHref, /* String */ linkTarget, /* String */ linkDescription, /* String */ linkAttributes)`
 -   `launchInsertTagDialog(/* boolean */ includeConsumableTags){`
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 

@@ -21,5 +21,3 @@ Use the accumulator utility if you are using the Item Affinity Engine. This util
 
 **Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
 
-**Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
-

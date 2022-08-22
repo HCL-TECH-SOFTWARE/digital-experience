@@ -29,7 +29,6 @@ When an item reaches the **Localize** or **Regionalize** workflow stage:
 
 **Note:** If the base item is renamed or moved, then all localized drafts and regionalized drafts are moved or renamed
 
-**Parent topic:**[Extensions for multilingual sites Multilingual Solution](../wcm/wcm_mls_extensions.md)
 
 **Related information**  
 

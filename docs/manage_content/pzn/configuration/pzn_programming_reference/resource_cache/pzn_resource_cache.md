@@ -36,8 +36,6 @@ In Combined Cumulative Fix 10 and later, an automatic cache entry clearing featu
 
 **Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
 
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
-
 **Related information**  
 
 

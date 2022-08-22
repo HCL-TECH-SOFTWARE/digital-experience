@@ -84,5 +84,4 @@ The procedure is repeated for each portal database domain: release, community cu
     ```
 
 
-**Parent topic:**[Manual Steps: Database Transfer option in the Configuration Wizard](../eua-workflows/kc-db-parent.md)
 

@@ -75,5 +75,4 @@ Verify that VMM is configured correctly and resolve issues if it is not.
 -   **[Troubleshooting the VMM configuration](../connect/r_connections_portlets_vmm_troubleshooting.md)**  
 Verify that VMM is configured correctly and resolve issues if it is not.
 
-**Parent topic:**[Integrating community membership with Portal security](../connect/c_connections_portlets_vmm_over.md)
 

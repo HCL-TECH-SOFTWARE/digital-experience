@@ -21,5 +21,3 @@ Following is an example that demonstrates implementation of rating logging by in
 
 **Parent topic:**[Rating beans](../pzn/pzn_rating_beans.md)
 
-**Parent topic:**[Rating beans](../pzn/pzn_rating_beans.md)
-

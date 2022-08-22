@@ -11,5 +11,4 @@ An option selection element is used to present a list of predefined options that
 -   **[User selection element](../wcm/wcm_dev_elements_user-selection.md)**  
 A user selection element stores a selection of users or groups.
 
-**Parent topic:**[Elements](../wcm/wcm_build.md)
 

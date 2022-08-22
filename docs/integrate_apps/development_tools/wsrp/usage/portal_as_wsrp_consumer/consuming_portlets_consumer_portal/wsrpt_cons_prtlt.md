@@ -20,7 +20,6 @@ To consume portlets from a Producer portal, you use the Manage Web Modules portl
 -   **[Using the XML configuration interface to consume portlets from a Producer portal](../admin-system/wsrpt_cons_consrv_xml.md)**  
 You can use the XML configuration interface \(XMLAccess\) to consume portlets from a Producer portal.
 
-**Parent topic:**[Using your portal as a WSRP Consumer](../admin-system/wsrpt_cons_use.md)
 
 **Previous topic:**[Working with Producer definitions](../admin-system/wsrpt_cons_creat_prod.md)
 

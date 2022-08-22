@@ -29,13 +29,11 @@ Before you begin this procedure, ensure you have created the simple content rule
 
 You can now edit the JSP file to contain dynamic code.
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Create a simple content rule](../pzn/pzn_demo_create_simple_content_rule.md)
 
 **Next topic:**[Enhance the Personalized Portlet](../pzn/pzn_demo_enhance_personalized_portlet.md)
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Create a simple content rule](../pzn/pzn_demo_create_simple_content_rule.md)
 

@@ -28,5 +28,3 @@ Learn how to configure the sifter during heavy database.
 
 **Parent topic:**[Configuring the sifter for mentor selection](../pzn/pzn_configure_sifter_mentor_selection.md)
 
-**Parent topic:**[Configuring the sifter for mentor selection](../pzn/pzn_configure_sifter_mentor_selection.md)
-

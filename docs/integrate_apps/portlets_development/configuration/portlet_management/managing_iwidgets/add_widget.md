@@ -18,7 +18,6 @@ Run the portal configuration task register-iwidget-definition to register indivi
 -   **[Task refresh-iwidget-definitions](../dev-portlet/csa2r_cfgtsk_rfrshwdgtdef.md)**  
 Use this configuration task to refresh iWidget definitions in the portal. This task affects all iWidget definitions that are referenced through absolute HTTP or HTTPS URLs in addition to iWidget definitions that are referenced through WebDAV URIs.
 
-**Parent topic:**[Managing portlets, portlet applications, and iWidgets](../admin-system/adpltadmwork.md)
 
 **Related information**  
 

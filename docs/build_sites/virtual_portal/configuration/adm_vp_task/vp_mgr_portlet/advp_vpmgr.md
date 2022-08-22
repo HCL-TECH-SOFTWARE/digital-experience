@@ -7,5 +7,4 @@ When you use the Virtual Portal Manager portlet to create a virtual portal, the 
 -   **[Using the Virtual Portal Manager administration portlet](../admin-system/advp_vpmgr_use.md)**  
 After you complete a regular portal installation, the portal is ready and enabled for implementing virtual portals. For improved manageability of virtual portals, HCL Digital Experience provides a portlet for administering virtual portals. It is named Virtual Portal Manager. It enables the creation of extra virtual portals as you need. You can also use it to list, modify, or delete virtual portals in your portal.
 
-**Parent topic:**[Virtual portals](../admin-system/ad_vp.md)
 

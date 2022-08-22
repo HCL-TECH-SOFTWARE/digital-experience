@@ -33,5 +33,4 @@ The Modify Site URLs for Search Engine Optimization option in the Configuration 
     -   The JSP path includes two parts, which are separated by a semi-colon. The first part is the context path to the HCL Web Content Manager extensions web application and then the second part is the path to the JSP. Update the path to the web application.
     -   For example, the other path might be: /wcmextension;/jsp/html/general/UpdateItem.jsp. If you changed the context root to mynewcontext, change the old path to /mynewcontext/wcmextension;/jsp/html/general/UpdateItem.jsp.
 
-**Parent topic:**[Manual Steps: Modify Site URLs for Search Engine Optimization](../config/cw_shorten_url_seo_manual.md)
 

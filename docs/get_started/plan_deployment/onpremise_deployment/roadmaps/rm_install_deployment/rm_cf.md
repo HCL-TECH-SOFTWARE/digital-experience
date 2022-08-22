@@ -10,7 +10,6 @@ Use this roadmap to learn more about the following information:
 -   How to apply the latest combined cumulative fix
 -   How to configure and enable new Combined Cumulative Fix features
 
-**Parent topic:**[Roadmaps to deploy your HCL Digital Experience system](../install/deployment_patterns.md)
 
 # Who should use this roadmap
 

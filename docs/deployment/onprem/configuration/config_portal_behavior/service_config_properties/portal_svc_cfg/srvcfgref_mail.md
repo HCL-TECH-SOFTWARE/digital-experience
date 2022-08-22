@@ -13,5 +13,4 @@ In the WebSphere® Integrated Solutions Console, the portal Mail Service is list
     Use this property to specify the JNDI name of the mail session that is to be used. The default is mail/PortalMailService .
 
 
-**Parent topic:**[Portal service configuration](../admin-system/srvcfgref.md)
 

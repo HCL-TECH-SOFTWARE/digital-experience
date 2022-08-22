@@ -237,5 +237,4 @@ The form specifies the following behavior:
 -   To delete the resource, you do not need to send XML data to the data sink. Therefore, the form does not specify the parameters `ddc.uri.template` or `ddc.profile.in` or any of the `ddc.itemattribute` parameters.
 -   To delete the blog post comment, you need to send an HTTP delete request to the blog post edit link. To do so, set the `ddc.method` parameter to the value `delete`. To extract the blog post edit link from the current DDC list-rendering context, use the tag `[AttributeResource attributeName="rawCommentsEditLink"]`.
 
-**Parent topic:**[The generic XML Digital Data Connector data sink](../social/plrf_use_gen_xml_ddc_datasink.md)
 

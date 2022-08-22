@@ -30,5 +30,4 @@ type="update">
 </request>
 ```
 
-**Parent topic:**[How to validate friendly URLs for web content](../wcm/validate_friendly_urls.md)
 

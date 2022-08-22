@@ -15,7 +15,6 @@ If you create a custom authoring template, make sure that it contains all the el
 4.  You can also change the default for the existing elements or modify the authoring template user interface for those elements.
 
 
-**Parent topic:**[Customizing view definitions for portal site visitors](../social/soc_rendr_shape_socl_list.md)
 
 **Related information**  
 

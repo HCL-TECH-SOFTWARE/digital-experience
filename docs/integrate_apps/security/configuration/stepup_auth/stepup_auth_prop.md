@@ -114,5 +114,4 @@ Log on to WebSphere® Integrated Solutions Console and then go to **Resources** 
     Type: java.lang.String
 
 
-**Parent topic:**[Enabling step-up authentication and the Remember me cookie](../security/cfg_auth.md)
 

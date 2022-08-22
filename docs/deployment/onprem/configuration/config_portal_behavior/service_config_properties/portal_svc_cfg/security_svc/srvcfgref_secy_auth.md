@@ -82,7 +82,6 @@ Use the following properties to define the custom filters in the various authent
     **Pre-requisite:** You must add the value `com.ibm.wps.auth.impl.ValidateRedirectLoginFilter` to either the `login.explicit.filterchain` or the `login.implicit.filterchain` properties for this property to become effective.
 
 
-**Parent topic:**[Portal Security Services](../admin-system/srvcfgref_secy.md)
 
 **Related information**  
 

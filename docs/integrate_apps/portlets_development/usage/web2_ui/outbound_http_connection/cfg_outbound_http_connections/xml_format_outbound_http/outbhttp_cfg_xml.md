@@ -48,5 +48,4 @@ An outbound connection configuration script file needs to conform to the followi
 -   **[Description of the outbound HTTP connection configuration script](../dev-portlet/outbhttp_cfg_descript.md)**  
 The configuration settings of an outbound HTTP connection configuration script are described here.
 
-**Parent topic:**[Configuring outbound HTTP connections](../dev-portlet/outbhttp_cfg_oh_conns.md)
 

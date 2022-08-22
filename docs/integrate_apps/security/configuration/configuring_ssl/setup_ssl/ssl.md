@@ -191,7 +191,6 @@ If you plan to use a Security Access Manager WebSEAL TAI with an SSL junction, c
 -   **[Updating files in wps.ear](../security/ssl_update_web.md)**  
 This section shows how to use wsadmin commands to update web.xml and web\_merged.xml for wps.ear.
 
-**Parent topic:**[Configuring SSL](../security/ssl_intro.md)
 
 **Next topic:**[Configuring SSL only for the login process](../security/config_ssl_login.md)
 

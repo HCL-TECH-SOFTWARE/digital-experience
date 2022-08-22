@@ -51,5 +51,4 @@ As a result of the filter, the Script Application is removed from the navigator 
 
 ![](../images/Fix_filtering_FinalResult.png)
 
-**Parent topic:**[The Woodburn Studio demo site](../woodburn_studio/woodburn_studio.md)
 

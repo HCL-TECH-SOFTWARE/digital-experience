@@ -40,5 +40,4 @@ A common use case for changing the JSESSIONID cookie name results from cookie na
         For both properties, replace the variable cookiename by the new name of the JSESSIONID cookie.
 
 
-**Parent topic:**[Configuring portal behavior](../admin-system/adptlcfg.md)
 

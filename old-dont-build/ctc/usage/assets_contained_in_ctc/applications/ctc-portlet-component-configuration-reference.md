@@ -12,5 +12,4 @@ Use this portlet to reference existing page component configuration content, suc
 6.  Reference the resulting content item on a details page by using the Page Component Reference portlet.
 7.  Delete the original portlet from the index page.
 
-**Parent topic:**[Applications](../ctc/ctc-portlet-types-ctc.md)
 

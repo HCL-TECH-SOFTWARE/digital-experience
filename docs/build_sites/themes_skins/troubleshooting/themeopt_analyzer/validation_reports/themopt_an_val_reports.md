@@ -93,5 +93,3 @@ Security list configuration is not set.
 
 **Parent topic:**[Theme Optimization Analyzer](../dev-theme/themeopt_an_analyzer.md)
 
-**Parent topic:**[Theme Optimization Analyzer](../dev-theme/themeopt_an_analyzer.md)
-

@@ -71,5 +71,4 @@ You must remove the installed content and resources of a Portal Application Arch
     4.  Save your changes.
 
 
-**Parent topic:**[Install and uninstall add-ons using the Solution Installer](../install/inst_si_addons.md)
 

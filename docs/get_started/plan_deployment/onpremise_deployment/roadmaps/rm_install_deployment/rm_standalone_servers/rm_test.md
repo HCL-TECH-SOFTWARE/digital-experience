@@ -4,7 +4,6 @@ A stand-alone server topology is ideal for a test or small production environmen
 
 **Remember:** Ensure that you configure the web server plug-in after you transfer your database.
 
-**Parent topic:**[HCL Digital Experience roadmaps for stand-alone servers](../install/rm_standalone_parent.md)
 
 # Who should use this roadmap
 

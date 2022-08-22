@@ -15,7 +15,6 @@ You can use the XML configuration interface to export a Producer definition. You
 -   **[Creating a Producer definition and consuming a portlet by a single XML script](../admin-system/wsrpt_cons_singl_xml.md)**  
 You can use a single XML script to create a Producer definition and then consume portlets from that same Producer.
 
-**Parent topic:**[Working with Producer definitions](../admin-system/wsrpt_cons_creat_prod.md)
 
 **Related information**  
 

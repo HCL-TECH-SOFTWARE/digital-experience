@@ -47,7 +47,6 @@ You can use them in combination with `ItemAttribute`, `AssociatedItemAttribute`,
     For more information, read *Creating and deploying custom attribute value processor plug-ins*.
 
 
-**Parent topic:**[Syntax for BasicJSONSelection based list-rendering profiles](../social/plrf_lr_syntax4xpath_profl_json.md)
 
 **Related information**  
 

@@ -15,5 +15,4 @@ In many cases, the number of languages or regions you require for a site is fixe
 -   **[Advanced options Multilingual Solution](../wcm/wcm_mls_advanced.md)**  
 There are more points of extensibility where you can enhance the multilingual solution to suit your specific requirements.
 
-**Parent topic:**[HCL Web Content Manager Multilingual Solution](../wcm/wcm_mls.md)
 

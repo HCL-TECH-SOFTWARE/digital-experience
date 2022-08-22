@@ -19,5 +19,4 @@ Block components store reusable blocks of text, tags, and code.
 -   **Social Tools - Edit Mode**
 -   **Topic Details**
 
-**Parent topic:**[Content Template Components](../ctc/ctc-assets-components.md)
 

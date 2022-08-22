@@ -12,5 +12,3 @@ Update your module dependencies, either remove the referenced module or make the
 
 **Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
-

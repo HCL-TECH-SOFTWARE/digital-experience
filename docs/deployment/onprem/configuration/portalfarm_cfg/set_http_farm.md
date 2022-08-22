@@ -44,5 +44,4 @@ Complete the following steps to set up the HTTP server plug-in on the portal far
 5.  Stop and restart all the HCL Portal servers on the portal farm; see "Starting and stopping servers, deployment managers, and node agents" for information.
 
 
-**Parent topic:**[Setting up and maintaining a portal farm](../install/portal_farm.md)
 

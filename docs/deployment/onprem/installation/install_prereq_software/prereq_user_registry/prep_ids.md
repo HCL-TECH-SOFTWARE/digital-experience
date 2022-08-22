@@ -48,5 +48,4 @@ If you plan to use a IBM Directory Server as an LDAP user registry, you must ins
     7.  Complete the instructions that are provided with your directory server to import the LDIF file.
 
 
-**Parent topic:**[Preparing the user registry software](../config/prereq_user_reg.md)
 

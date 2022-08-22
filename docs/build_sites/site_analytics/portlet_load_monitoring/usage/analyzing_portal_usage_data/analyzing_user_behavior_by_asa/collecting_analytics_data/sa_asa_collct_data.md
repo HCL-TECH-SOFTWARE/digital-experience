@@ -13,5 +13,4 @@ The Tab menu - Page Builder Page Builder portal theme provided with HCL Digital 
 -   **[Configuring an aggregator at run time](../admin-system/sa_asa_cfg_aggr_runt.md)**  
 If you want to configure the behavior of an aggregator at run time, you can pass additional meta data values to the aggregator.
 
-**Parent topic:**[Analyzing user behavior by Active Site Analytics](../admin-system/sa_asa_work.md)
 

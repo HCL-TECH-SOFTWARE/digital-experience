@@ -106,5 +106,4 @@ Import the base release and remaining portal artifacts on the target. This proce
     2.  Then, start the server with the `/opt/IBM/WebSphere/wp_profile/bin/startServer.sh HCL Portal and HCL Web Content Manager` command.
 
 
-**Parent topic:**[Manual staging to production process](../deploy/mans2p_intro.md)
 

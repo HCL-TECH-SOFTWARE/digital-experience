@@ -16,7 +16,6 @@ You can migrate to HCL Digital Experience Version 8.5 from either Version 7.0 or
 
 For Version 8.5, data, applications, databases, property files, security settings, and configuration are migrated using the Configuration Wizard. Use the roadmaps for cluster and stand-alone migrations to guide you through planning, preparing your source environment, setting up your target environment, migrating data, and post-migration steps. For a high-level overview of this process, see the *Roadmaps for migration*.
 
-**Parent topic:**[Migrating](../migrate/migration.md)
 
 **Related information**  
 

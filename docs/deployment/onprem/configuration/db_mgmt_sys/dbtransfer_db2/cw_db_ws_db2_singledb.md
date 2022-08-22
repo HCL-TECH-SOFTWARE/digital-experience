@@ -33,5 +33,4 @@ Database collation is an optional condition available to you.
 
 | |
 
-**Parent topic:**[DB2: Database transfer](../config/cw_db_transfer-db2.md)
 

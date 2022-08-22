@@ -11,5 +11,4 @@ You can use the Web Content Manager REST service to create, read, update, and de
 -   **[How to use REST with custom workflow actions](../wcm/wcm_rest_crud_workflow_actions_custom.md)**  
 You can use the Web Content Manager REST service to create, read, update, and delete custom workflow actions.
 
-**Parent topic:**[How to manage web content items by using REST](../wcm/wcm_rest_crud.md)
 

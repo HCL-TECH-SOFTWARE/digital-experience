@@ -13,7 +13,6 @@ Configure the results that display when a content author searches for a portlet 
 -   **[Implementing drag and drop site areas](../admin-system/epc_wcm_dnd_siteareas.md)**  
 By default, only web content items can be drag and dropped from the toolbar. You can use a keyword to implement the same behavior with site areas.
 
-**Parent topic:**[Preparing the site toolbar](../dev-theme/themeopt_themeshelf.md)
 
 **Related information**  
 

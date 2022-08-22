@@ -69,5 +69,4 @@ Additionally, you can define the following optional modifiers when you use the c
 |`-projectContext value`|`projectContext`|The context of the portal project that manages the publication of changes to the Script Application content.|
 |`-virtualPortalContext value`|`virtualPortalContext`|The context of the virtual portal that contains the Script Application instance that you want to create or update.|
 
-**Parent topic:**[Script Application command line application overview](../script-portlet/cmd_line_push_ovr.md)
 

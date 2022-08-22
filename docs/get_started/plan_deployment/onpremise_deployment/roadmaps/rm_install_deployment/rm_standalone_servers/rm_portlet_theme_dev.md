@@ -2,7 +2,6 @@
 
 This HCL Digital Experience roadmap is ideal for running a portlet and theme development server, which is used to develop and test portlets and themes.
 
-**Parent topic:**[HCL Digital Experience roadmaps for stand-alone servers](../install/rm_standalone_parent.md)
 
 # Who should use this roadmap
 

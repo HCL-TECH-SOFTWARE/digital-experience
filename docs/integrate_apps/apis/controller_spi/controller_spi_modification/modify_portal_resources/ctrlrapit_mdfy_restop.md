@@ -18,5 +18,4 @@ To move existing nodes or insert new nodes, use the `insert()` method of the con
 -   **[Deleting Nodes](../dev/ctrlrapit_del_nodes.md)**  
 To delete nodes, use the `delete()` method of the controller.
 
-**Parent topic:**[Making modifications by using the Controller SPI](../dev/ctrlrapit_mdfy.md)
 

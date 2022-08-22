@@ -12,7 +12,6 @@ Each potential step in the configuration is included. Because the steps vary dep
 [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/config/cells/CellName/wim/config/wimconfig.xml
 ```
 
-**Parent topic:**[Troubleshooting the Configuration Wizard](../trouble/cw_troubleshooting.md)
 
 **Related information**  
 

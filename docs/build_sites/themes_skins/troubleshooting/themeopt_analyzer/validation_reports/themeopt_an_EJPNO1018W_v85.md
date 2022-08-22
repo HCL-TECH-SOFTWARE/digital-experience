@@ -12,5 +12,3 @@ Either update the list of allowed skins to include an active skin or set one of 
 
 **Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
-

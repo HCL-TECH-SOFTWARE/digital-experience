@@ -17,7 +17,6 @@ Portal scripts create hidden pages that can clutter the page topology, making it
 -   **[Enable new functions in migrated themes](../dev-theme/themeopt_migrate_deploy80.md)**  
 When you migrate your themes, migration moves your existing themes to the new server. Migration does not upgrade themes from an earlier version to use new functions that are introduced in more recent versions of the product.
 
-**Parent topic:**[Migration: Next steps](../migrate/mig_nextsteps.md)
 
 **Related information**  
 

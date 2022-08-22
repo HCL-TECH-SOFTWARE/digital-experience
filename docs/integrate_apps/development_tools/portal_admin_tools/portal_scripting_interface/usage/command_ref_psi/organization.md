@@ -92,7 +92,6 @@ $Layout select the root
 $Layout adopt node\_ID
 ```
 
-**Parent topic:**[Command reference for the Portal Scripting Interface](../admin-system/adpsicrf.md)
 
 **Related information**  
 

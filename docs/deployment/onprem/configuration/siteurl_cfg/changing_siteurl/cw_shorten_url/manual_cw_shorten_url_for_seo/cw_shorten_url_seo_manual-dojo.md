@@ -9,5 +9,4 @@ The Modify Site URLs for Search Engine Optimization option in the Configuration 
     The default Dojo context root in HCL Portal is /wps/portal\_dojo. After you run the modify-servlet-path and modify-servlet-path-portlets tasks, the Dojo context root is changed to include the new value in the WpsContextRoot parameter as the prefix. For instance, if the new WpsContextRoot value is myco, then the new Dojo context root becomes /myco/portal\_dojo. If your theme includes hardcoded references to "/wps/portal\_dojo", update those references to the new context root. If you migrated a custom theme, you might find that it has references to /portal\_dojo without the /wps prefix. Look for these references in both the WAR file and in the WebDAV storage for your theme.
 
 
-**Parent topic:**[Manual Steps: Modify Site URLs for Search Engine Optimization](../config/cw_shorten_url_seo_manual.md)
 

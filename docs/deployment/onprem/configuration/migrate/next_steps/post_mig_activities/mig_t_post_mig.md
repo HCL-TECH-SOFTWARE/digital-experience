@@ -17,7 +17,6 @@ There are different post-migration tasks that are required depending on the type
 -   **[Add-ons, features, and third-party integration tasks](../migrate/mig_post_ptl_int_addon.md)**  
 Complete the post-migration tasks that are required based on the way you use your HCL Digital Experience environment.
 
-**Parent topic:**[Migration: Next steps](../migrate/mig_nextsteps.md)
 
 **Related information**  
 

@@ -177,5 +177,4 @@ Example feed item:
     -   The image source is replaced with a component tag that points to the newly created image.
     -   The image source is managed by Web Content Manager and is updated as the image component is updated.
 
-**Parent topic:**[IBM Web Content Integrator](../wci/wci_intro.md)
 

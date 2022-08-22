@@ -24,5 +24,3 @@ Repeat this process for the LikeMinds data source. Change the name of the refere
 
 **Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
 
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
-

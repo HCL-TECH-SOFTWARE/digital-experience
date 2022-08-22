@@ -19,7 +19,6 @@ The differences between private and public tags and ratings are described in the
     -   Users can only delete public tags that they have applied themselves. Users with a Manager role have more rights. For more information see the topic about *Security for tagging and rating*.
     -   Public tags are also community tags.
 
-**Parent topic:**[How tagging and rating works in the portal](../admin-system/tag_rate_adm_gen.md)
 
 **Related information**  
 

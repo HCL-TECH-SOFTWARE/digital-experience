@@ -42,5 +42,4 @@ Example:
 </ibmwcm:element>
 ```
 
-**Parent topic:**[RSS Namespace Extension for web content](../wci/wci_ff_nse.md)
 

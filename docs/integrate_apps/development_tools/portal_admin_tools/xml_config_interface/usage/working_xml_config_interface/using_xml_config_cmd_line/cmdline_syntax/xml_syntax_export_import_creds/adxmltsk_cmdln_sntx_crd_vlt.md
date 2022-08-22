@@ -69,7 +69,6 @@ xmlaccess.sh -user wpsadmin -password your_password -url https://portalhost:1003
 -   **[Adding export.userDN and export.enforceSSL to the WebSphere Application Server configuration](../admin-system/adxmltsk_cmdln_sntx_crdvlt_prerq.md)**  
 Before running the XMLAccess command to export or import credential vault data, you need to add two properties to the WebSphere Application Server configuration.
 
-**Parent topic:**[Command line syntax of the XML configuration interface](../admin-system/adxmltsk_cmdln_syntax.md)
 
 **Related information**  
 

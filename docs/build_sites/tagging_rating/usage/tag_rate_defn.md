@@ -39,7 +39,6 @@ Tagging and rating are common and effective collaboration techniques that suppor
     A user can apply the same rating to multiple resources. A resource is anything that can be uniquely identified and addressed in a portal. For example, this can be a portal page, or portlet, or an item for sale in an internet shop.
 
 
-**Parent topic:**[Tagging and rating](../admin-system/tag_rate_mngadmin.md)
 
 **Related information**  
 

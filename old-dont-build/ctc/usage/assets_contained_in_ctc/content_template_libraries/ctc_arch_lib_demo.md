@@ -6,5 +6,4 @@ To find out more about how the demonstration site is constructed, open Library E
 
 The content of the Content library is not translated. If you want to support multiple locales, see [How to apply the multilingual solution to Content Template sites](ctc_deploy_locale.md).
 
-**Parent topic:**[Content Template libraries](../ctc/ctc_arch_lib.md)
 

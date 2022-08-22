@@ -479,5 +479,4 @@ The existing search query API is extended and two new parameters are added. See 
     ```
 
 
-**Parent topic:**[REST Query service for web content](../wcm/wcm_rest_query.md)
 

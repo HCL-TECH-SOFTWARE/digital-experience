@@ -30,5 +30,4 @@ To update an existing ear file:
 7.  Keep selecting **Next** until the end when you select **Finish**.
 8.  The screen that is titled 'updating' is shown. Select **Save to Master Configuration** and then click **save**.
 
-**Parent topic:**[How to create custom plug-ins](../wcm/wcm_dev_plugins.md)
 

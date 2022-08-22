@@ -57,5 +57,3 @@ The rule can then be triggered via *Invoke \(POST\) the Personalization ID rule*
 
 **Parent topic:**[Personalization rules APIs](../pzn/dev_pzn_rules_api.md)
 
-**Parent topic:**[Personalization rules APIs](../pzn/dev_pzn_rules_api.md)
-

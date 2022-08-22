@@ -9,7 +9,6 @@ Cooperative portlets represent an HCL Portal-specific API for publish/subscribe 
 -   **[Interoperability between JSR 286 portlet events and JSR 168 cooperative portlets](../dev-portlet/pltcom_interop.md)**  
 By concept, cooperative portlets are similar to JSR 286 portlet events. Both concepts describe publish/subscribe communication patterns that are based on typed information that is published and received by portlets and propagated via communication links.
 
-**Parent topic:**[Standard portlets publish and subscribe mechanisms](../dev-portlet/pltcom_pubsub_model.md)
 
 **Related information**  
 

@@ -24,7 +24,6 @@ The portal provides a tag cloud for aggregating tags for multiple resources. Use
 -   **[Browsing tags](../admin-system/tag_rate_browse_tags.md)**  
 Besides tagging content and viewing tags users can browse tags. This can be useful for finding related or similar content.
 
-**Parent topic:**[Tagging and rating](../admin-system/tag_rate_mngadmin.md)
 
 **Related information**  
 

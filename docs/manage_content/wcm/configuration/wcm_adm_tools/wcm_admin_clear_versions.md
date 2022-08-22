@@ -72,7 +72,6 @@ There are two methods available when the tool is run on a virtual portal:
     ```
 
 
-**Parent topic:**[Web content administration tools](../wcm/wcm_maintain.md)
 
 **Related information**  
 

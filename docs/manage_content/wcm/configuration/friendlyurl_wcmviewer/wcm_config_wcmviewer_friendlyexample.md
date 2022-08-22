@@ -196,7 +196,6 @@ The HTTP status code of the response is set to the default value \(404\) because
 
 |
 
-**Parent topic:**[Friendly URLs and Web Content Viewers](../wcm/wcm_config_wcmviewer_friendlyurl.md)
 
 **Related information**  
 

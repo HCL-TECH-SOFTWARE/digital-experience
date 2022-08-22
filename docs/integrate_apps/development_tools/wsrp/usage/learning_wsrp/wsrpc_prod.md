@@ -8,5 +8,4 @@ A WSRP Producer provides one or more portlets through WSRP services for invocati
 
 To allow communication between the Producer portal and the Consumer portal, the Producer provides a set of web service interfaces to the Consumers. These interfaces are defined by the WSRP standard. The Producer can make some or all of these interfaces available to the Consumers as appropriate. The Producer provides a description for the WSRP service interfaces and WSRP services in a service description document. The format of the service description document is defined in the Web Services Description Language \(WSDL\) standard. This WSDL service description also provides general technical information, for example, the endpoint addresses of the WSRP services.
 
-**Parent topic:**[Learning about WSRP](../admin-system/wsrpc_learn.md)
 

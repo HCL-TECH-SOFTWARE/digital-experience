@@ -37,13 +37,11 @@ Ensure you have properly followed the steps in [Create the user profiler rule](p
 
 You can now change your content spot mapping.
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Create the user profiler rule](../pzn/pzn_demo_create_user_profiler_rule.md)
 
 **Next topic:**[Change content spot rule mapping](../pzn/pzn_demo_change_content_spot_rule_mapping.md)
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Create the user profiler rule](../pzn/pzn_demo_create_user_profiler_rule.md)
 

@@ -9,5 +9,4 @@ In a farm of uniquely installed HCL Digital Experience instances, each instance 
 -   **[Administering shared configuration farm installations](../install/admin_farm_shared.md)**  
 In a shared configuration farm installation, there is one HCL Digital Experience installation whose file system serves as the configuration for the entire farm. This farm is referred to here as the Farm Master. This shared configuration means that every farm instance shares the exact same databases and IBM WebSphere Application Server configuration profile. If you are using a shared file system, this installation should have write access to the file system, while all other farm instances that share this file system should have read-only access. All administrative actions can only be performed against the Farm Master.
 
-**Parent topic:**[Setting up and maintaining a portal farm](../install/portal_farm.md)
 

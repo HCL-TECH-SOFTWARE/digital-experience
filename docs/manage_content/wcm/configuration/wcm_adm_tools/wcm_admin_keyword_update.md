@@ -59,5 +59,4 @@ When you run this tool on a virtual portal, you must add either -DVirtualPortalH
 
 To prevent your session from timing out before the tool finishes, you can append the option -DsessionTimeOut=timeOut to the command. This parameter sets the number of seconds in which the tool must complete before its session will timeout. The default session timeout is 14,440 seconds, which is 4 hours. For large repositories, increase this setting. For example: -DsessionTimeOut=36000, which is 10 hours.
 
-**Parent topic:**[Web content administration tools](../wcm/wcm_maintain.md)
 

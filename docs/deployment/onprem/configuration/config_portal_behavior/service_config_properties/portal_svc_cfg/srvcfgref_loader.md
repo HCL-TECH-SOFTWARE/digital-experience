@@ -13,5 +13,4 @@ In cases where additional or alternative commands are required, the following co
     Use this property to specify the package prefix or prefixes in which commands are searched.
 
 
-**Parent topic:**[Portal service configuration](../admin-system/srvcfgref.md)
 

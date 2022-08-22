@@ -6,5 +6,4 @@ In the context of the Unified Task List portlet, single sign-on enables communic
 
 See the WebSphere Application Server documentation for details on how to configure single sign-on and LTPA between the two servers.
 
-**Parent topic:**[Configuring the Unified Task List portlet](../integrate/utl_configuring_utl_portlet.md)
 

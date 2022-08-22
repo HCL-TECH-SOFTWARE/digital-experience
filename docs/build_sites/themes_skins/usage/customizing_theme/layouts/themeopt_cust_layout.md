@@ -9,7 +9,6 @@ You can add your own custom layout to the theme that can be selected on the site
 -   **[Default layouts](../dev-theme/themeopt_cust_layoutdefault.md)**  
 The Simple Theme and the HCL Portal 8.5 theme ship with predefined layouts that can be used as a basis for creating custom layouts.
 
-**Parent topic:**[Customizing the theme](../dev-theme/themeopt_cust.md)
 
 **Related information**  
 

@@ -78,5 +78,4 @@ With WebDAV, you can create and maintain presentation templates to define the la
 -   **[Managing metadata and access control settings for authoring templates with WebDAV](../wcm/wcm_webdav_authtemp.md)**  
 With WebDAV, you can change the metadata information for an authoring portlet or update the template's access control settings.
 
-**Parent topic:**[Developing and managing content](../site/site_dev_man.md)
 

@@ -16,5 +16,4 @@ Click **Select Users** to select users and groups.
 
 **Note:** Virtual users cannot be selected in a user selection element.
 
-**Parent topic:**[Selection elements](../wcm/wcm_dev_elements_types_selection.md)
 

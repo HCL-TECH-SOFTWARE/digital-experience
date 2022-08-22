@@ -23,5 +23,4 @@ In most cases, actions are run when an item enters a stage. For example, you add
 
 In addition to the workflow stages that make up a workflow, workflow stages are also used as part of rejecting an item. When an item is rejected, a reject stage can be triggered that runs predefined actions. When the actions are run, the item is returned to the first stage of the workflow.
 
-**Parent topic:**[Workflow stages and actions](../wcm/wcm_dev_workflows_overview.md)
 

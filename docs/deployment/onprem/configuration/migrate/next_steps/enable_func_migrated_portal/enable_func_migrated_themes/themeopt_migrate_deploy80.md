@@ -19,5 +19,4 @@ You can easily add the modularized site toolbar of HCL Digital Experience 8.5 to
 -   **[Updating your theme to use simple context menus](../migrate/mig_t_enable_simplemenus.md)**  
 The theme context menu framework that is provided with the module wp\_theme\_menus in Portal 8.0 and earlier versions is relabeled and improved in HCL Digital Experience 8.5. The new Simple Menu Framework is compatible with all previous versions of the wp\_theme\_menus.
 
-**Parent topic:**[Enabling new functionality in a migrated portal](../migrate/mig_t_enable_new.md)
 

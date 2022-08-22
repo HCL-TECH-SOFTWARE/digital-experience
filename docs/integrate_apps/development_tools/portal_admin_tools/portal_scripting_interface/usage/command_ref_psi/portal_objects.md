@@ -30,5 +30,4 @@ foreach child [$Content search all] {
 
 The scripting component tries to generate a common name for the portal objects. The common name is based on a global unique name, an object name, or a title that is assigned to the object. The common name never contains white space, special characters, or characters outside of the US-ASCII range. Hence, even a terminal window that does not support national character sets can display the common name. If suitable input data is available, the generated common name might provide an indication of what an object represents.
 
-**Parent topic:**[Command reference for the Portal Scripting Interface](../admin-system/adpsicrf.md)
 

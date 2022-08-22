@@ -23,5 +23,3 @@ The default maximum number of pages you can create for a new site or section is 
 
 **Parent topic:**[Deploying Site Builder](../sitebuilder/sitebuilder_access.md)
 
-**Parent topic:**[Deploying Site Builder](../sitebuilder/sitebuilder_access.md)
-

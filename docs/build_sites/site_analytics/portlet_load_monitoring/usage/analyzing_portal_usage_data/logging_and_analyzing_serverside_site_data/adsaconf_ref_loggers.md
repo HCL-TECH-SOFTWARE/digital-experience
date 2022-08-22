@@ -13,5 +13,4 @@ The following table lists and describes available loggers.
 |SiteAnalyzerApplicationActionLogger.isLogging|HTTP requests that include the URLs:/ApplicationAction/\*|
 |SiteAnalyzerJSRPortletLogger.isLogging|web content viewer|
 
-**Parent topic:**[Logging and analyzing server side site data](../admin-system/adsaconf.md)
 

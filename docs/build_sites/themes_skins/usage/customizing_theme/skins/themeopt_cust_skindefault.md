@@ -29,7 +29,6 @@ Figure 3. Standard Skin.
     The NoSkin skin does not show the title bar or any decorations around the portlet. This skin is used if you do not need to show the skin actions.
 
 
-**Parent topic:**[Skins](../dev-theme/themeopt_cust_scopeskin.md)
 
 **Related information**  
 

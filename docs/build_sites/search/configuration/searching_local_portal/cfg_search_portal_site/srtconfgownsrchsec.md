@@ -30,7 +30,6 @@ Set up your own customized search collection for searching a secured portal site
     4.  Instead of creating a new search collection and content source for the portal site search you can also use the collection and content source of the default portal site search setup. In this case, replace the completed user ID and password in the Edit Content Source Configuration panel with the one that you want to use.
     5.  For details about how to create a search collection and a content source, see the topics *Creating and configuring search collections* and *Managing the content sources of a search collection*, and the *Manage Search* portlet help.
 
-**Parent topic:**[Configuring search on a secured portal site](../admin-system/srtcnfgsrchscrprtlsite.md)
 
 **Related information**  
 

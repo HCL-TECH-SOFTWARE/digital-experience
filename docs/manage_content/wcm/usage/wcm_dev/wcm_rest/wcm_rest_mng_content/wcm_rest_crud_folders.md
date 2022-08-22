@@ -198,5 +198,4 @@ HTTP/1.1 DELETE /wps/mycontenthandler/wcmrest/Folder/5def4f6f-0dd9-49ca-b954-706
 HTTP/1.1 200 OK
 ```
 
-**Parent topic:**[How to manage web content items by using REST](../wcm/wcm_rest_crud.md)
 

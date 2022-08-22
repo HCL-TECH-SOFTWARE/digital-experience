@@ -67,5 +67,4 @@ Change to the directory `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profil
 1.  If you manually stop applications, for example by using the WebSphere® Integrated Solutions Console or the wsadmin user ID, and they are then accessed by users, the applications are automatically started again.
 2.  When you use the activation task activate-portlets to activate all portlets, it starts all portlets, including the portlets that are set for lazy load.
 
-**Parent topic:**[Using portal light mode](../admin-system/portal_light_mode.md)
 

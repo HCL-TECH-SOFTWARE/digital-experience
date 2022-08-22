@@ -25,5 +25,3 @@ When the import completes successfully, the imported Site Builder template appea
 
 **Parent topic:**[Exporting a Site Builder template to a file](../sitebuilder/sitebuilder_temp_dist_man.md)
 
-**Parent topic:**[Exporting a Site Builder template to a file](../sitebuilder/sitebuilder_temp_dist_man.md)
-

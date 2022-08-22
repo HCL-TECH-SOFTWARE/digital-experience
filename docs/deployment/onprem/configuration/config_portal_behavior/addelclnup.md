@@ -11,7 +11,6 @@ You can configure the deletion cleanup to happen either immediately when you del
 -   **[Configuring your own delayed deletion schedule by using the XML configuration interface](../admin-system/addelclnup_cfgxml.md)**  
 You can use the HCL Digital Experience XML configuration interface to configure the delayed deletion schedule according to your requirements. You can define a daily, weekly, or monthly schedule. You can also use the XML configuration interface to run individual cleanup tasks at arbitrary intervals.
 
-**Parent topic:**[Configuring portal behavior](../admin-system/adptlcfg.md)
 
 **Related information**  
 

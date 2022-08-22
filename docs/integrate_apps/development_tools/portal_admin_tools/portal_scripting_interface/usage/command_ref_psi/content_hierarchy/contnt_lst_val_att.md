@@ -50,7 +50,6 @@ $Content drop markup wml
 $Content list allowedportlets
 ```
 
-**Parent topic:**[Content hierarchy accessed through Content bean](../admin-system/contnt_hierarchy.md)
 
 **Related information**  
 

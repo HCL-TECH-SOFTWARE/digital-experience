@@ -29,7 +29,6 @@ To update a federated repository, do the following:
 5.  Restart the WebSphere\_Portal server.
 
 
-**Parent topic:**[Creating and updating federated repositories](../security/setup_mgmt_cur_fed.md)
 
 **Related information**  
 

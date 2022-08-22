@@ -73,5 +73,3 @@ Find solutions to problems when you use Site Builder in the latest version of HC
 
 **Parent topic:**[Site Builder](../sitebuilder/sitebuilder_intro.md)
 
-**Parent topic:**[Site Builder](../sitebuilder/sitebuilder_intro.md)
-

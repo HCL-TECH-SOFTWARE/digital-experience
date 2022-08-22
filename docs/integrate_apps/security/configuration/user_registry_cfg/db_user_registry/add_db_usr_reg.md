@@ -7,5 +7,4 @@ Add a database user registry to the default federated repository in a clustered 
 -   **[Adding a database user registry in a stand-alone environment](../config/add_db_usr_reg_stdal.md)**  
 Add a database user registry to the default federated repository in a stand-alone environment. You must repeat the steps for each additional database user registry that you plan to add. In a stand-alone server environment, you can complete the following task when the servers are either stopped or stared.
 
-**Parent topic:**[User registry](../config/config_user_registry.md)
 

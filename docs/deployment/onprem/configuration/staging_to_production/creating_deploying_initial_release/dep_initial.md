@@ -11,5 +11,4 @@ After you create and prepare your initial staging and production servers, you mu
 4.  [Deploying the initial release in a multiple cluster](../deploy/dep_deploy_clus.md)  
 If you are using a multiple cluster in single cell topology, you must run the empty-portal task before you deploy the initial release and before you deploy the PAA file. Use the -DemptyPortalDuringDeployPAA=false parameter during the deployment.
 
-**Parent topic:**[Staging to production](../deploy/dep_intr.md)
 

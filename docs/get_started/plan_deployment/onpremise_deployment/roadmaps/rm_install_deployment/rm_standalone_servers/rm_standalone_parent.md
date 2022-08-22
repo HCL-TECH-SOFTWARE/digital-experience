@@ -9,7 +9,6 @@ This HCL Digital Experience roadmap is ideal for running a portlet and theme dev
 -   **[Roadmap: Test or small production environment](../install/rm_test.md)**  
 A stand-alone server topology is ideal for a test or small production environment. In this roadmap, the web server, database, and user registry software are distributed to different physical servers.
 
-**Parent topic:**[Roadmaps for installation and deployment](../install/rm_installation.md)
 
 **Related information**  
 

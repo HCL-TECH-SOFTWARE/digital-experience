@@ -149,7 +149,6 @@ Where the Portal role name Administrator@VIRTUAL\_EXTERNAL\_ACCESS\_CONTROL is s
 
 **Note:** The `EACappname`, `EACserverName`, and `EACcellName` must all be specified, or none of them appears in the Security Access Manager object space entries.
 
-**Parent topic:**[Configuring Security Access Manager](../security/tam.md)
 
 **Related information**  
 

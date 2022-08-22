@@ -9,5 +9,4 @@ Use URIs to identify, access, and display HCL Connections content and profiles i
 -   **[Configuring navigation between portlets](../connect/t_connections_portlets_poc_config.md)**  
 Use URIs to identify, access, and display HCL Connections content and profiles in a portlet.
 
-**Parent topic:**[Addressing HCL Connections content from a portlet](../connect/c_connections_portlets_poc_ovr.md)
 

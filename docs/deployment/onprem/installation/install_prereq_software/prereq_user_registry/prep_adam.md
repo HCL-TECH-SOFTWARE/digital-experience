@@ -17,5 +17,4 @@ To use Active Directory-Lightweight-Directory-Services as an LDAP user registry,
     3.  Activate the new user with the Windows administrative tools. Set the msDS-UserAccountDisabled attribute to false.
 
 
-**Parent topic:**[Preparing the user registry software](../config/prereq_user_reg.md)
 

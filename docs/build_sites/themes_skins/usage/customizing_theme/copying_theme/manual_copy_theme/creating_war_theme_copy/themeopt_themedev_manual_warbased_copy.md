@@ -44,5 +44,4 @@ Make sure that Eclipse, IBM® Rational® Application Developer, or Rational Team
     ```
 
 
-**Parent topic:**[Creating a WAR-based theme copy](../dev-theme/themeopt_themedev_manual_warbased.md)
 

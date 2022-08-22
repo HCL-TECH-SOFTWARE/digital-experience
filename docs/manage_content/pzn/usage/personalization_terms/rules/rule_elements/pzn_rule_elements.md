@@ -77,5 +77,3 @@ Value is the placeholder for the result of an evaluation. This value can be one 
 
 **Parent topic:**[Rules](../pzn/pzn_rules.md)
 
-**Parent topic:**[Rules](../pzn/pzn_rules.md)
-

@@ -99,5 +99,4 @@ These items are created when you generate a new author-ready content template:
 
     -   Documentation resource: [Moving a content item](../panel_help/wcm_dev_content_linking_moving.md)
 
-**Parent topic:**[Preparing for content authors](../site/site_prep_toolbar.md)
 

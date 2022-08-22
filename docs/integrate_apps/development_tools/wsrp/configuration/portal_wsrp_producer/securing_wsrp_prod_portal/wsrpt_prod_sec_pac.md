@@ -13,7 +13,6 @@ To enable Portal Access Control for the Producer portal again, set the portal co
     -   If you use security, assign access rights to the actual Consumer portal users. Get the user information from the Consumer.
     -   If you do not use security, assign access rights to the anonymous user.
 
-**Parent topic:**[Securing a WSRP Producer portal](../admin-system/wsrpt_prod_prep_sec.md)
 
 **Related information**  
 

@@ -34,5 +34,4 @@ When web content items are deleted, they are not removed from the server to give
 
 You can also review for website for content that is no longer relevant and delete and purge these items from your system.
 
-**Parent topic:**[Web content administration tools](../wcm/wcm_maintain.md)
 

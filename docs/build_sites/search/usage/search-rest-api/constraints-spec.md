@@ -68,7 +68,6 @@ A range constraint allows only results in a specific range of field values. Valu
 
 |
 
-**Parent topic:**[Search REST API specification](../search-rest-api/search.md)
 
 **Related information**  
 

@@ -26,5 +26,4 @@ $Content nlsset title en_GB "Visualisation"
 $Content nlsset description en_GB "A page for..."
 ```
 
-**Parent topic:**[Content hierarchy accessed through Content bean](../admin-system/contnt_hierarchy.md)
 

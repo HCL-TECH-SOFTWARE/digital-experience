@@ -58,5 +58,4 @@ Example 2: To obtain a feed of the layout node with the object id `'_7_0830M4HTF
 
 ```
 
-**Parent topic:**[Syntax for addressing portal resources](../dev/rest_feed_obt.md)
 

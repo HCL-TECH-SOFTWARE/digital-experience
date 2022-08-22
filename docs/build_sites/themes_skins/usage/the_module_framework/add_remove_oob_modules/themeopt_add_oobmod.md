@@ -18,7 +18,6 @@ Read the topics on profiles and modules *Working with profiles* and *Writing mod
 -   **[Adding or removing a capability from a portlet](../dev-theme/themeopt_add_cap_portlet.md)**  
 To add or remove a capability from a portlet, update the portlet.xml for the portlet, or update the portlet preferences sections for the portlet definition or portlet entity with XML access.
 
-**Parent topic:**[The module framework](../dev-theme/themeopt_module.md)
 
 **Related information**  
 

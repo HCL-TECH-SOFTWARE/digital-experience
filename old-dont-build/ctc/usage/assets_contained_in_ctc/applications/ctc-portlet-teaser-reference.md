@@ -37,5 +37,4 @@ The default stylesheet that is used by this portlet is **contentBlock**. To cust
 
 CSS files are stored in this WebDAV folder: dav://server:port/wps/mycontenthandler/dav/fs-type1/themes/Portal8.5/CTC/css.
 
-**Parent topic:**[Applications](../ctc/ctc-portlet-types-ctc.md)
 

@@ -7,5 +7,4 @@ To update your Portal Application Archive \(PAA\) file, you must create a differ
 2.  [Deploying the differential release](../deploy/dep_deploy_diff.md)  
 After you create the differential release PAA file, you can install and deploy your differential release to the production servers. If you have a cluster, install and deploy on the primary and secondary nodes of the cluster.
 
-**Parent topic:**[Staging to production](../deploy/dep_intr.md)
 

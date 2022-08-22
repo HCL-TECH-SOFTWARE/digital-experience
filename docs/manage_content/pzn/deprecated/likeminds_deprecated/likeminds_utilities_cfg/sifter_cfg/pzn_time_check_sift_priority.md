@@ -12,5 +12,3 @@ To specify the interval in seconds for the `sifter` to check the sift priority v
 
 **Parent topic:**[Configuring the sifter for mentor selection](../pzn/pzn_configure_sifter_mentor_selection.md)
 
-**Parent topic:**[Configuring the sifter for mentor selection](../pzn/pzn_configure_sifter_mentor_selection.md)
-

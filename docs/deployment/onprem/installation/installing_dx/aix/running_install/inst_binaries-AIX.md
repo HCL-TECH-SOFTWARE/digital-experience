@@ -9,5 +9,4 @@ Use the IBM Installation Manager to install HCL Digital Experience to an existin
 -   **[Installing HCL Digital Experience in AIX system using a response file](../install/inst_silent-AIX.md)**  
  Use either a sample response file or a response file that you created to install HCL Digital Experience on to an existing IBM WebSphere Application Server.
 
-**Parent topic:**[AIX system - HCL Digital Experience installation](../install/installingwp95-AIX.md)
 

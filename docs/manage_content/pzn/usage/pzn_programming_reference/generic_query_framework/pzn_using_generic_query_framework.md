@@ -46,5 +46,4 @@ The developer can take one of the following approaches to convert this query obj
     where q is a query object, and MySelectQueryCallback is the custom builder callback that takes myParameter as parameter.
 
 
-**Parent topic:**[Generic query framework](../pzn/pzn_generic_query_framework.md)
 

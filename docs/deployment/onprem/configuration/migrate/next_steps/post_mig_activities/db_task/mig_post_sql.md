@@ -7,5 +7,4 @@ Ensure that the database is not in use.
 1.  Run the command: ALTER DATABASE database\_name SET READ\_COMMITTED\_SNAPSHOT ON;.
 
 
-**Parent topic:**[Database tasks](../migrate/mig_post_dbtasks.md)
 

@@ -15,5 +15,4 @@ When packaging, deploying, and compiling cooperative portlets, refer to these co
 -   **[WSDL reference for cooperative portlets](../dev-portlet/wpsc2awsdl.md)**  
 WSDL is often used in the context of web services, in order to define interfaces implemented by a web service. The elements in the WSDL used by click-to-action are described, along with extensions to the <binding\> element and the WSDL Extensions schema.
 
-**Parent topic:**[Define portlet communication capabilities](../dev-portlet/def_portlet_comm_cap.md)
 

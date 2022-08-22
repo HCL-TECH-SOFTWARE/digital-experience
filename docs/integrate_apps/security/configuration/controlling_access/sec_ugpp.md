@@ -40,8 +40,6 @@ To access the User and Group Permissions portlet and find instructions for manag
 4.  Click the portlet menu icon and select **Help** to access instructions for managing the access rights that users and user groups have for resources.
 
 
-**Parent topic:**[Controlling access](../admin-system/control_access.md)
-
 **Parent topic:**[Portal administration](../practitioner_studio/administration.md)
 
 **Related information**  

@@ -26,7 +26,6 @@ In addition to the basic OpenID authentication option, you can give users, who a
 -   **[Disabling transient users and OpenID authentication \| HCL Digital Experience](../security/disable_trans_openid.md)**  
 After using the transient users and OpenID authentication, you might decide you want to stop using the function. You can permanently or temporarily disable the transient users function or the full OpenID authentication function.
 
-**Parent topic:**[Securing](../security/securing_wp.md)
 
 **Related information**  
 

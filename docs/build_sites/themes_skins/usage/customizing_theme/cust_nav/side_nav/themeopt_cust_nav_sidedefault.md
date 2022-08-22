@@ -15,5 +15,4 @@ You can set the side navigation template as the theme default by changing the re
 
 After renaming the template to theme.html, it will now be used as the default template.  Inside the theme.html file are links to the localized templates, which are named theme\_sidenav\_locale.html.  There is no need to rename these templates, but if you want to make the template naming uniform, you can change the link elements as well as the localized template file names.
 
-**Parent topic:**[Side navigation](../dev-theme/themeopt_cust_nav_side.md)
 

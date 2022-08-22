@@ -11,5 +11,4 @@ You can grant editor and reviewer access to the Script Application Library to ad
 4.  Click **Edit role** for the **Editor** and **Reviewer** roles and set the appropriate members of these roles based on who can perform those roles. These members have access in addition to the default `wpsadmins` group.
 
 
-**Parent topic:**[Editor and reviewer Access to the Script Application Library and Script Applications Site Area](../script-portlet/acc_lib_site_area.md)
 

@@ -42,7 +42,6 @@ You can write your own filters and apply your own locale fallback logic. HCL Dig
     If you use servlet delivery instead of portlet delivery, then you must edit `web.xml` under the directory location `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/config/cells/node-name/applications/PA_WCM_Authoring_UI.ear/deployments/PA_WCM_Authoring_UI/ilwwcm-authoring.war/WEB-INF/`.
 
 
-**Parent topic:**[Language support](../admin-system/adintern.md)
 
 **Related information**  
 

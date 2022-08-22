@@ -69,5 +69,4 @@ You can use the Live Object configuration service to configure the behavior of t
         The C2A handler is not loaded and click-to-action does not work, even if C2A nodes are on the page.
 
 
-**Parent topic:**[Portal service configuration](../admin-system/srvcfgref.md)
 

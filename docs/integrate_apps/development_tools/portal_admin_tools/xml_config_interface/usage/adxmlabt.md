@@ -304,7 +304,6 @@ portal
 
 Depending on the content of an XML request, these resources can be created, modified, deleted or exported. An XML request can contain any number of such resource definitions. It can therefore create hundreds of new resources in one step or modify only a single configuration setting of one existing resource.
 
-**Parent topic:**[The XML configuration interface](../admin-system/admxmlai.md)
 
 **Related information**  
 

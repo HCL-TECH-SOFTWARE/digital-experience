@@ -12,5 +12,4 @@ The default value is true.
 
 For more details see the topic about the *Portlet Container Service*. For details about setting the property see the topic about *Setting service configuration properties*.
 
-**Parent topic:**[Configuring portlet filtering](../admin-system/adpltflt.md)
 

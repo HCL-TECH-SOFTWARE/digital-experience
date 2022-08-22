@@ -32,7 +32,6 @@ You can create more list and details view definitions as extensions within the D
 -   **[Social object resolution](../social/soc_rendr_soc_obj_resltn.md)**  
 When a portal user clicks a link to an object, the portal takes the user to the details view of that object. This process is called social object resolution. For example, a user might click a specific forum topic that is listed in the Community Forum Topics list. In this case, the social object resolution takes the user to a portal page that provides a details view of the forum topic that the user clicked. You can influence the result of the resolution that the user views by setting various parameters. These parameters are described here.
 
-**Parent topic:**[Working with lists of social objects](../social/soc_rendr_tsk_socl_list.md)
 
 **Related information**  
 

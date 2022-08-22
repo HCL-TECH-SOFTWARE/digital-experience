@@ -25,5 +25,4 @@ Here is an overview of the configuration and administration tasks and parameters
     -   Manually reenable a portlet that Portlet load monitoring has blocked
     -   Manually block a portlet that is being monitored by Portlet load monitoring from responding to requests.
 
-**Parent topic:**[Portlet load monitoring for HCL Portal](../dev-portlet/plmc.md)
 

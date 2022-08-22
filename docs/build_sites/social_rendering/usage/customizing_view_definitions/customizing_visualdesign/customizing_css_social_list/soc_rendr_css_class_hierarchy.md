@@ -46,5 +46,4 @@ Columns with the `wpthemeThin` CSS rule assigned to them are even smaller than c
 
 ```
 
-**Parent topic:**[Customizing the CSS styles of social lists](../social/soc_rendr_custom_css_styles.md)
 

@@ -11,5 +11,4 @@ If you deploy a PAA file to more than one Virtual Portal, some components are no
 -   Open the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/paa/paaName/components.properties file. Set the components that you want to deploy to true. Then, run the deploy-paa task.
 -   Run the deploy-paa task with the -DforceDeploy=true option. This parameter tells the Solution Installer to ignore the components.properties file.
 
-**Parent topic:**[Create a Portal Application Archive \(PAA\) file](../config/si_paa_spec.md)
 

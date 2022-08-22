@@ -153,5 +153,4 @@ You can see more definitions for List Presentation components in the CTC Design 
     List presentation with index breadcrumb as the header and promotional slideshow result design. The footer has slideshow navigation and caption.
 
 
-**Parent topic:**[Content Template Components](../ctc/ctc-assets-components.md)
 

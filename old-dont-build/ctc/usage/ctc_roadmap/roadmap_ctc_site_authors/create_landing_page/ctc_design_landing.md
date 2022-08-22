@@ -30,5 +30,4 @@ List portlets automatically pull content from all areas under the landing page. 
 -   **[Adding a cross-linked list to a page](../ctc/ctc_design_qs_crosslinks.md)**  
 As your site grows, adding cross-linked lists that link to pages at the same level or in separate areas might become necessary. For example, to list News articles on an Executive Communications page, add a list to the Executive Communications page and then configure it to retrieve content from the News area.
 
-**Parent topic:**[A roadmap for Content Template Catalog site authors](../ctc/ctc_gs_authors.md)
 

@@ -14,7 +14,6 @@ A TAI is not necessary if the third-party authentication proxy provides native W
 
 TAIs that allow other custom authentication services to interact with WebSphere Application Server can be written. If you use a different security configuration, you must provide and implement a TAI to communicate with the authentication proxy.
 
-**Parent topic:**[Planning for external security managers](../plan/plan_extsecman.md)
 
 **Related information**  
 

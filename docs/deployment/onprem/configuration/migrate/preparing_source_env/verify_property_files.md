@@ -11,5 +11,4 @@ Ensure that the existing portal environment is at the appropriate service level 
     -   Windows™: ConfigEngine.bat validate-database-connection
     -   z/OS®: ./ConfigEngine.sh validate-database-connection
 
-**Parent topic:**[Preparing your source environment](../migrate/mig_t_premig_tasks.md)
 

@@ -10,5 +10,4 @@ You can run various syndication functions by using the web content API.
 
 See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
 
-**Parent topic:**[The HCL Web Content Manager API](../wcm/wcm_dev_api.md)
 

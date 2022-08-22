@@ -269,7 +269,6 @@ It declares the following attribute names:
     This attribute specifies the type information for the URI of this social object. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
 
-**Parent topic:**[Digital Data Connector profiles for social rendering](../social/soc_rendr_lst_rndr_prfls.md)
 
 **Related information**  
 

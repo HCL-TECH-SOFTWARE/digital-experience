@@ -16,13 +16,11 @@ Content spots can be accessed in the workspace through the Personalization autho
 
 Use of content spots is optional. The com.ibm.websphere.personalization.ContentSpot class can be used to directly execute a rule by the rule name.
 
-**Parent topic:**[Personalization terms](../pzn/pzn_concepts.md)
 
 **Previous topic:**[Rules](../pzn/pzn_rules.md)
 
 **Next topic:**[Rule spot mappings](../pzn/pzn_mappings.md)
 
-**Parent topic:**[Personalization terms](../pzn/pzn_concepts.md)
 
 **Previous topic:**[Rules](../pzn/pzn_rules.md)
 

@@ -93,7 +93,6 @@ For example, you can set up the following configurations:
         -   Assign virtual portal administrators contributor access to the JCR content root node to enable them to create new libraries and view, edit, and delete libraries that they created.
     -   You can also assign virtual portal administrators access to libraries they did not create by editing the access settings of individual libraries.
 
-**Parent topic:**[Planning for virtual portals](../admin-system/advppln.md)
 
 **Related information**  
 

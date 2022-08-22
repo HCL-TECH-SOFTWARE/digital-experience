@@ -32,7 +32,6 @@ The following diagram shows how the "Component in Context" HTML component and th
 3.  The list presentation component might refer to the Page Component to retrieve information like the List Title and the CSS Styling.
 
 
-**Parent topic:**[Page component configuration items](../ctc/ctc_arch_prestemp_compconfig.md)
 
 **Related information**  
 

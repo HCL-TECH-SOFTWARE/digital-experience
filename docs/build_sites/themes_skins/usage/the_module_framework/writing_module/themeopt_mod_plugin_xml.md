@@ -312,7 +312,6 @@ Simple modules for the resource aggregator framework are provided in the WebDAV 
 -   **[Dynamically extending an existing menu item from a module](../rwd/rwd_add_menu_module.md)**  
 You can use a module to add menu items to a menu where the menu item displays only on certain pages.
 
-**Parent topic:**[The module framework](../dev-theme/themeopt_module.md)
 
 **Related information**  
 

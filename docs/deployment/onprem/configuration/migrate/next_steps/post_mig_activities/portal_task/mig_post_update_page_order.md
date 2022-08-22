@@ -13,7 +13,6 @@ You can adjust the page order of your pages using the Portal Administration menu
     **Note:** If you are rearranging the tree structure of your pages, then you can use the **Mark** icon to mark the page, and then move it.
 
 
-**Parent topic:**[Portal tasks](../migrate/mig_post_portaltasks.md)
 
 **Related information**  
 

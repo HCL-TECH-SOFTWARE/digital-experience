@@ -17,5 +17,4 @@ The Configuration Wizard is installed by default when you install HCL Digital Ex
     -   Windows: ConfigEngine.bat remove-wizard-war-standalone
     -   z/OS: ./ConfigEngine.sh remove-wizard-war
 
-**Parent topic:**[Configuration Wizard](../config/cw_overview.md)
 

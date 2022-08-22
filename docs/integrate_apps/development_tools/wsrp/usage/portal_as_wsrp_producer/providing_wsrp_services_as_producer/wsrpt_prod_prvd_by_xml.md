@@ -58,7 +58,6 @@ To provide or withdraw the portlet by using the XML configuration interface, spe
     ```
 
 
-**Parent topic:**[Providing WSRP services as a Producer](../admin-system/wsrpt_prod_prvd_ws.md)
 
 **Related information**  
 

@@ -4,5 +4,4 @@ When you create your own layout.html files, it is important to apply one semanti
 
 When you apply one of each type, it is also important to apply the properly matching ones. For example, it is important to use either `wpthemeCol3of12`, `wpthemeCol4of12` or `wpthemeCol2of5` with `wpthemeNarrow`. Never add one of the other mismatching ones, such as `wpthemeCol9of12` with `wpthemeNarrow`.
 
-**Parent topic:**[Relative width CSS classes for theme layouts](../rwd/rwd_relwidth_css.md)
 

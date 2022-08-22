@@ -13,7 +13,6 @@ In an Idle Standbya clustered deployment, adhere to these guidelines:
 3.  When you restore HCL Portal databases and file systems, make sure to restore the Deployment Manager configuration at the same time that the primary node and secondary node file systems are restored. Then, complete a node synchronization of both nodes by using the Deployment Manager WebSphere Integrated Solutions Console. This step ensures that the configuration is identical on both nodes and is consistent with the restored databases.
 
 
-**Parent topic:**[Backup and restore](../admin-system/i_wadm_c_bkup_restr_winlinux.md)
 
 **Related information**  
 

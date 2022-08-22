@@ -114,5 +114,4 @@ The following is an example of a microformat representation for a portlet window
 
 ```
 
-**Parent topic:**[Creating a static page](../dev/spa_define_page.md)
 

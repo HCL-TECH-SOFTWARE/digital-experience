@@ -55,7 +55,6 @@ The map must be initialized before the lookup from the map is done. Therefore, m
 
 If the runtime equivalent of `__SPNS__spHelper.getElementURL` is not found, then ensure that you pushed or imported the application with the `data-scriptportlet-generate-url-map="true"` attribute set correctly in the `<html>` element on the primary application page.
 
-**Parent topic:**[Build applications with the Script Application](../script-portlet/build_apps.md)
 
 **Related information**  
 

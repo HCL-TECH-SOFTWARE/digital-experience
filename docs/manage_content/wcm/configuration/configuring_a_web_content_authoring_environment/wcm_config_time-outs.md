@@ -23,5 +23,4 @@ Increasing the `total transaction lifetime timeout` setting might not always be 
 |
 |Downloadable files|Another alternative to creating web content with large amounts of HTML or rich text is to provide information on your website in the form of downloadable files. These files can be stored as file resource elements.|
 
-**Parent topic:**[Configuring a web content authoring environment](../wcm/wcm_install_cfgauthoring.md)
 

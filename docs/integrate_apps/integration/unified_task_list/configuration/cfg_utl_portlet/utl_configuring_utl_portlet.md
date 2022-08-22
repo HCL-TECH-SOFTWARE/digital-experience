@@ -7,5 +7,4 @@ You can configure the Unified Task List portlet to retrieve tasks and forms from
 -   **[Configuring Unified Task List portlet at run time](../integrate/utl_configuring_unified_task_list_at_runtime.md)**  
 You can customize the Unified Task List portlet at run time as a HCL Portal administrator. Customizing at run time involves accessing the deployed Unified Task List to configure the portlet settings.
 
-**Parent topic:**[Integrating business processes](../integrate/utl_unified_task_list_porlet.md)
 

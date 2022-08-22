@@ -35,7 +35,6 @@ In an example configuration, you might have two HCL Digital Experience environme
 -   **[Sample XML configuration files](../admin-system/admxmsmp.md)**  
 Sample files are provided for your reference to help illustrate how to use XML configuration for different portal configuration purposes.
 
-**Parent topic:**[The XML configuration interface](../admin-system/admxmlai.md)
 
 **Related information**  
 

@@ -8,5 +8,4 @@ Joint approval is used in cases where approval from multiple users is required b
 -   If a group is specified as an approver, only one user per group is required to approve the document.
 -   If that user is a member of more than one Group that has Approve access, then all the groups are considered to have approved the document.
 
-**Parent topic:**[Workflow stages and actions](../wcm/wcm_dev_workflows_overview.md)
 

@@ -78,5 +78,4 @@ When this setting is syndicated to all environments, all clusters in your enviro
 
 **Note:** These settings are also documented in the **Global Settings Reference** component that is stored in the **Social Configuration** library.
 
-**Parent topic:**[Social network configuration](../wcm/wcm_sm_config_doc.md)
 

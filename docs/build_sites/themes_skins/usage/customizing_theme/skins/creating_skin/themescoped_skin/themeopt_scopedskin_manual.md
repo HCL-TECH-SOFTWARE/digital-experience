@@ -35,5 +35,4 @@ You can define the skin and assign it to a theme by using **Manage properties** 
 2.  Import the XMLAccess skin definition by using the command line or the Import XML portlet.
 
 
-**Parent topic:**[Create a theme-scoped skin](../dev-theme/themeopt_create_themescoped_skin.md)
 

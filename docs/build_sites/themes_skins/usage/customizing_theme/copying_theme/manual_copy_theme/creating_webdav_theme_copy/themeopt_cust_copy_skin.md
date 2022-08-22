@@ -13,5 +13,4 @@ You need to make a unique copy of the static resources for your skin.
 5.  Save your files on your local disk.
 
 
-**Parent topic:**[Creating a WebDAV-based theme copy](../dev-theme/themeopt_themedev_manual_webdav.md)
 

@@ -15,7 +15,6 @@ You can set up a staging server with a Portal 8.0.0.1 and WebSphere Application 
 5.  When you complete the migration of the stand-alone staging server, you can build it into a cluster if needed.
 
 
-**Parent topic:**[Migrating from Portal 8.0.0.1 on WebSphere Application Server 8.5.5.2](../migrate/mig_plan_was855.md)
 
 **Related information**  
 

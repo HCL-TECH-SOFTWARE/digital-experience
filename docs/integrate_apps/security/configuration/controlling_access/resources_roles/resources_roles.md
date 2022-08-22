@@ -13,5 +13,4 @@ Learn about sensitive operations for resources and the roles that are required t
 -   **[Initial Access Control Settings](../admin-system/init_acc_cntl_set.md)**  
 The administrative user who installs HCL Digital Experience has a default set of access rights.
 
-**Parent topic:**[Controlling access](../admin-system/control_access.md)
 

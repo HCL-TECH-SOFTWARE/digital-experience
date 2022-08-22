@@ -30,7 +30,6 @@ When you use a Web server to work with WebDAV, complete the following steps:
 -   **[HCL Digital Experience File Sync](../dxsync/DXSync.md)**  
 Digital Experience File Sync can be used to synchronize any WebDAV-based HCL Portal theme with your local workstation. Learn more how to use DX File Sync.
 
-**Parent topic:**[Using WebDAV with HCL Portal](../admin-system/webdav.md)
 
 **Related information**  
 

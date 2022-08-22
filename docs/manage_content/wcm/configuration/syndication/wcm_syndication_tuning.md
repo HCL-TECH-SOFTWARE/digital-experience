@@ -50,5 +50,4 @@ To create segment groups within an authoring environment and then syndicate them
 
 To use segment groups without syndication, create a new library specifically for any segment groups that do not need to be syndicated. The new library is not added to any existing syndication pairs.
 
-**Parent topic:**[Syndication](../wcm/wcm_administering.md)
 

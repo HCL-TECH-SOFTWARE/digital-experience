@@ -12,5 +12,3 @@ movie_click.engine.saturn.tune.predictable.min_xactions_cutoff = 2
 
 **Parent topic:**[User predictability](../pzn/pzn_user_predictability.md)
 
-**Parent topic:**[User predictability](../pzn/pzn_user_predictability.md)
-

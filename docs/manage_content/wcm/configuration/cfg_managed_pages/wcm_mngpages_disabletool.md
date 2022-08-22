@@ -36,7 +36,6 @@ The site toolbar function is not typically needed on a delivery server, and disa
             For more information about prefixes, placeholders, and the order in which properties are evaluated, see *Virtual Portal Configuration Service*
 
 
-**Parent topic:**[Preparing the site toolbar](../dev-theme/themeopt_themeshelf.md)
 
 **Related information**  
 

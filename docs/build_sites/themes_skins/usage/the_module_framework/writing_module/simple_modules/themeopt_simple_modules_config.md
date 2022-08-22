@@ -85,5 +85,4 @@ The following section provides a complete list of supported files within the con
         This optional directory scopes the resources by device class. You can use one individual device class, but it has no equation support for the directory or the files in it. You can scope the contribution to a particular device class when the incoming request is recognized as a device class name. This contribution can include JavaScript, HTML, or CSS. See the previous sections for more information.
 
 
-**Parent topic:**[Simple modules](../dev-theme/themeopt_simple_modules.md)
 

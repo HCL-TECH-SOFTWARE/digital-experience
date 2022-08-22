@@ -35,5 +35,4 @@ Disables active content filtering for all feeds.
 6.  Click **OK** to save your changes.
 
 
-**Parent topic:**[Syndicated Feed Portlet for HCL Digital Experience](../admin-system/ic_syndfeed_features.md)
 

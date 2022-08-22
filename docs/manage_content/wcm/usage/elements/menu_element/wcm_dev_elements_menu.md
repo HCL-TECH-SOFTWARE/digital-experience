@@ -54,5 +54,4 @@ While a page navigation element is a convenient way of displaying and browsing a
 
 The three menus might then be referenced within three different cells of a table row in a presentation template.
 
-**Parent topic:**[Links and navigation](../wcm/wcm_dev_elements_types_links.md)
 

@@ -334,5 +334,4 @@ HCL Digital Experience has a feature that allows you to view documents as HTML f
 |Wordstar for Windows|1.0|
 |XyWrite|Through III+|
 
-**Parent topic:**[Document Conversion Services](../admin-system/dcs_info.md)
 

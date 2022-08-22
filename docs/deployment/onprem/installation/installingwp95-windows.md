@@ -19,5 +19,4 @@ This topic outlines the post-requisite steps after running the HCL Digital Exper
 -   **[Upgrading the SDK](../install/sdk_upgrade-windows.md)**  
 Change your version of the SDK Java Technology Edition using the applicable HCL Digital Experience Combined fix pack.
 
-**Parent topic:**[Installing the HCL Digital Experience software](../install/inst_web_experience.md)
 

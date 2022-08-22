@@ -696,7 +696,6 @@ These examples demonstrate a typical command sequence to create a page within a 
     ```
 
 
-**Parent topic:**[Administering managed pages](../wcm/wcm_mngpages_advadmin.md)
 
 **Related information**  
 

@@ -913,7 +913,6 @@ Module capabilities enable the use of modules in the theme.
 -   **[Dojo classes provided by the Dojo modules](../dev-theme/themeopt_oob_dojoclass.md)**  
 A list of Dojo classes that are provided by each version 1.9 Dojo meta-module.
 
-**Parent topic:**[The module framework](../dev-theme/themeopt_module.md)
 
 **Related information**  
 

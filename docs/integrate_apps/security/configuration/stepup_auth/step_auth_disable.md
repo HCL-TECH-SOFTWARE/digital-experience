@@ -36,5 +36,4 @@ You can disable the step-up authentication feature or the Remember me cookie to 
 9.  Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
 
 
-**Parent topic:**[Enabling step-up authentication and the Remember me cookie](../security/cfg_auth.md)
 

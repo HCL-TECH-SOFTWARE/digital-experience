@@ -76,7 +76,6 @@ Various installation and configuration tasks require you to start and stop IBM W
 |
 
 
-**Parent topic:**[Administering](../admin-system/administering_parent.md)
 
 **Related information**  
 

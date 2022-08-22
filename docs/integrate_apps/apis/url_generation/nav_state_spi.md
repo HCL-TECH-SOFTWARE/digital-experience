@@ -30,7 +30,6 @@ The Accessor SPI provides typed access to the state document model. It allows th
 -   **[URL generation services](../dev/url_gen_serv.md)**  
 Learn about the services that are used to create URLs in the navigational state SPI.
 
-**Parent topic:**[URL generation in HCL Portal](../dev/url_gen_main.md)
 
 **Related information**  
 

@@ -45,5 +45,4 @@ To change the configuration for an item, Select the item so that the item detail
     4.  Enter the descriptions and click **OK**.
 
 
-**Parent topic:**[Customizing the Page Component palette](../admin-system/epc_custom_add_site_toolbar.md)
 

@@ -107,5 +107,4 @@ When you create a social network configuration document for LinkedIn:
                 ```
 
 
-**Parent topic:**[Creating a social network configuration document](../wcm/wcm_sm_config_doc_creating.md)
 

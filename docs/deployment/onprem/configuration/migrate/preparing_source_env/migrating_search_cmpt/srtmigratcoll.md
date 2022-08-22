@@ -104,5 +104,4 @@ Search collections require manual migration; use the **Import or Export Collecti
     **Note:** When you import search collection data into a collection, most of the configuration data such as content sources, schedulers, filters, and language settings are also imported. If you configured such settings when you created the collection, they are overwritten by the imported settings.
 
 
-**Parent topic:**[Migrating search components](../migrate/mig_t_search.md)
 

@@ -16,7 +16,6 @@ The following example shows how you use the portal XML configuration interface t
 
 ```
 
-**Parent topic:**[Using the XML configuration interface to work with Producer definitions](../admin-system/wsrpt_cons_wrkprd_xml.md)
 
 **Related information**  
 

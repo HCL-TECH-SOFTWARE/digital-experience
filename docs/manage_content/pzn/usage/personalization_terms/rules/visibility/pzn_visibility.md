@@ -13,5 +13,3 @@ View an example of a visibility rule, Show Page that shows the specified page or
 
 **Parent topic:**[Rules](../pzn/pzn_rules.md)
 
-**Parent topic:**[Rules](../pzn/pzn_rules.md)
-

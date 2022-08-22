@@ -9,5 +9,4 @@ Portal requests data from the HCL Connections server through the HCL Connections
 -   **[Configuring task to retrieve tags](../collab/i_coll_t_enable_lctags_task.md)**  
 When you integrate HCL Connections with your portal server, the portal uses a task to retrieve tags and related resources from the various HCL Connections features \(such as activities, blogs, bookmarks, communities, files, forums, profiles, and wikis\). Then, the portal integrates the tags in the portal tag cloud. You can schedule the task to retrieve the tags to run periodically.
 
-**Parent topic:**[Configuring HCL Connections features](../collab/i_coll_t_enable_lcparent.md)
 

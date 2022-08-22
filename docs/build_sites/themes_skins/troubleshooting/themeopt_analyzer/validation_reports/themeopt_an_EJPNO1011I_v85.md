@@ -12,8 +12,6 @@ Open the WebSphere Integrated Solutions Console. **Open Resources** \> **Resourc
 
 **Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
-
 **Related information**  
 
 

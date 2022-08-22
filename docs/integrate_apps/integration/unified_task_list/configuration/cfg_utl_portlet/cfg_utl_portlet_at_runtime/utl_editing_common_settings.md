@@ -31,5 +31,4 @@ Edit common settings from the Unified Task List portlet.
 4.  Click **Save** and **Back** to return to the main portlet page.
 
 
-**Parent topic:**[Configuring Unified Task List portlet at run time](../integrate/utl_configuring_unified_task_list_at_runtime.md)
 

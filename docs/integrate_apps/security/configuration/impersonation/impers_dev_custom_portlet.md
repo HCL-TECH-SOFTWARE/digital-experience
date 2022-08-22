@@ -51,5 +51,4 @@ You can enter the information for the user you want to impersonate in the `strin
 
 **Note:** The impersonation feature becomes active with the next request.
 
-**Parent topic:**[Administering user impersonation](../admin-system/impers_user.md)
 

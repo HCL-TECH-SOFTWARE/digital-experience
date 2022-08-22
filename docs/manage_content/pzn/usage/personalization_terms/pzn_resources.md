@@ -29,11 +29,9 @@ For more details, refer to the Javadoc API documentation for Personalization API
 
 While resources, resource instances, and resource collections are easily mapped to familiar database concepts, it is important to note that the actual content store they refer to does not have to be a database table. It can be a file system, an LDAP repository, an XML store, or virtually any content store accessible by Java.
 
-**Parent topic:**[Personalization terms](../pzn/pzn_concepts.md)
 
 **Next topic:**[User resources](../pzn/pzn_user_resources.md)
 
-**Parent topic:**[Personalization terms](../pzn/pzn_concepts.md)
 
 **Next topic:**[User resources](../pzn/pzn_user_resources.md)
 

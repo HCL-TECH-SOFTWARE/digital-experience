@@ -212,7 +212,6 @@ The following list contains all portal components that are not handled by the in
     These artifacts are included by default in your initial or differential release PAA. A vanity URL is a portal artifact that is stored with the portal page that it targets. Vanity URLs are managed and stored in the Web Content Manager Portal Site library. Therefore, if you want to stage your portal to production, it is not enough to stage the portal pages by using the portal XML configuration interface \(XMLAccess\). You must transfer data on both the portal and the Web Content Manager side.
 
 
-**Parent topic:**[Overview of staging to production](../deploy/dep_ovr_concepts.md)
 
 **Related information**  
 

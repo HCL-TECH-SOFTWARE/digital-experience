@@ -38,7 +38,6 @@ The Controller SPI allows you to modify portal resources and the topology of you
 -   **[Modifying properties](../dev/ctrlrapit_mdfy_props.md)**  
 The Controller SPI enables the modification of properties resources.
 
-**Parent topic:**[Controller SPI](../dev/ctrlrapic_ovu.md)
 
 **Related information**  
 

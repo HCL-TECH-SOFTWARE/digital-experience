@@ -9,5 +9,4 @@ HCL Digital Experience has two types of pages, Standard Portal Pages and Static 
 -   **[Relative width CSS classes for theme layouts](../rwd/rwd_relwidth_css.md)**  
 To assist with making the elements of a page responsive to various widths, relative width CSS classes have been added to the theme layouts. These classes are marker classes only. There are no styles that are defined for these classes by default. They are there on the containers, rows and columns, of the layouts so that you can define your own styles that are associated with the classes as needed to make your page elements responsive to various widths.
 
-**Parent topic:**[Developing themes and skins](../dev-theme/themeopt_themes.md)
 

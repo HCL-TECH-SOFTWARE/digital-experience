@@ -13,5 +13,4 @@ On all of the Content Template Catalog templates, this portlet is placed in the 
 3.  Click **Create** \> **Applications** and search for metadata.
 4.  Drag the **Metadata and Analytics** portlet to the page and save the page.
 
-**Parent topic:**[Applications](../ctc/ctc-portlet-types-ctc.md)
 

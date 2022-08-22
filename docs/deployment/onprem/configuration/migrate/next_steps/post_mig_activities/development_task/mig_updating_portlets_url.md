@@ -54,7 +54,6 @@ Perform the following steps in the newly migrated environment.
 14. Restart the portal.
 
 
-**Parent topic:**[Development tasks](../migrate/mig_post_devtasks.md)
 
 **Related information**  
 

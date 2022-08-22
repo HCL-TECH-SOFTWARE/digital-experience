@@ -32,7 +32,6 @@ The following XML sample shows how you use the XML configuration interface to re
 </request>
 ```
 
-**Parent topic:**[Supporting a new language](../admin-system/adsuplang_new.md)
 
 **Related information**  
 

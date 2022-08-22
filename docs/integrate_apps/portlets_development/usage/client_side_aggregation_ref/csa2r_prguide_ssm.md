@@ -33,5 +33,4 @@ Furthermore, some of the predefined events that the iWidget specification specif
     -   Send events to and receive events from other iWidgets.
     -   Share render parameters with other iWidgets on the same page by using shared item sets.
 
-**Parent topic:**[Client-side aggregation reference](../dev-portlet/csa2r.md)
 

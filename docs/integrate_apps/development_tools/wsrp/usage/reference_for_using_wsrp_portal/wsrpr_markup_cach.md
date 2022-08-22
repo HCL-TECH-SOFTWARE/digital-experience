@@ -35,5 +35,4 @@ Alternatively, you can set these parameters for all remote portlets on the Consu
 
 If you set a parameter both as a preference of a remote portlet and in the WP Configuration Service, the value that is defined in the preference of the remote portlet takes precedence.
 
-**Parent topic:**[Reference for using WSRP with the portal](../admin-system/wsrpr_ref.md)
 

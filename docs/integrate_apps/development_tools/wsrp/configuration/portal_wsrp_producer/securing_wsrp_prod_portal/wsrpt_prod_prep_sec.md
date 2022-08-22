@@ -7,7 +7,6 @@ You can configure security for the WSRP Producer portal and the provided portlet
 -   **[Configuring Portal Access Control for a WSRP Producer portal](../admin-system/wsrpt_prod_sec_pac.md)**  
 If you configure security for WSRP services, you must also configure Portal Access Control for the Producer.
 
-**Parent topic:**[Using your portal as a WSRP Producer](../admin-system/wsrpt_prod_use.md)
 
 **Previous topic:**[How to access the Producer WSDL](../admin-system/wsrpr_prod_wsdl.md)
 

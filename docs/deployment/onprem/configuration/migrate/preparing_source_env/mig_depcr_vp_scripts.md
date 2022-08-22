@@ -13,5 +13,4 @@ You might also find references to installer/wp.config/config/work which is no lo
 
 There might be other references to resources that do not exist in this new release of HCL Portal. Make sure that you update all those references as needed.
 
-**Parent topic:**[Preparing your source environment](../migrate/mig_t_premig_tasks.md)
 

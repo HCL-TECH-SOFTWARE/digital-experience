@@ -29,5 +29,4 @@ The resulting traces of Virtual Member Manager are written to:
 -   IBM® i: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/logs/HCL Portal and HCL Web Content Manager/trace.log
 -   z/OS®: The resulting traces of Virtual Member Manager are written to the output location you specified as ras\_trace\_outputLocation in the WebSphere Integrated Solutions Console. For more information, refer to [Setting trace controls](https://help.hcltechsw.com/digital-experience/8.5/trouble/adsyslog.html#adsyslog__tra_log).
 
-**Parent topic:**[Logging and tracing](../trouble/pd_intr_logs.md)
 

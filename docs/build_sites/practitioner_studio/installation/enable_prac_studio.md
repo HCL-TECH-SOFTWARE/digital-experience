@@ -43,7 +43,6 @@ Follow the steps to enable your site to be seen in SiteMap:
 4.  Create a new parameter com.ibm.portal.Hidden with value false.
 5.  Save, then test.
 
-**Parent topic:**[Working with Practitioner Studio](../practitioner_studio/working_prac_studio.md)
 
 **Related information**  
 

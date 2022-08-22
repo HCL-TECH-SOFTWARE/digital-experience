@@ -8,7 +8,6 @@ To change the order of common names modify the following three configuration pro
 -   puma.commonname.parts: This property defines the amount of dynamic parts in the common name.
 -   puma.commonname.X: This property defines the user attribute for dynamic part X. X must be between 0 and puma.commonname.parts-1.
 
-**Parent topic:**[Users and groups](../admin-system/adusrgrp.md)
 
 **Related information**  
 

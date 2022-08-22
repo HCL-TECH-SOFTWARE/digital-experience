@@ -31,5 +31,4 @@ Complete the following steps to prepare the system for multiple profile support:
 
 After you complete the initial profile template generation with your required configuration, you must make further customization changes only to the wp\_profile directory that is intended to be included in all additional Portal profiles. This approach allows the portal profile template configuration to be immediately updated after you apply maintenance because it already contains the required configuration to be saved with the Portal profile templates.
 
-**Parent topic:**[Supporting multiple profiles](../install/sup_mult_prof.md)
 

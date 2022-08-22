@@ -30,5 +30,4 @@ if (modifiable instanceof ModifiableLocalized) {
 }
 ```
 
-**Parent topic:**[Modifying properties](../dev/ctrlrapit_mdfy_props.md)
 

@@ -6,7 +6,6 @@ This roadmap describes how to create the dynamic list page component of the desi
 
 You are a developer on the technical team that is tasked with creating home and landing page templates for content authors to use on the site. You are responsible only for creating page components and design templates. Other developers are responsible for developing other pieces of the design. Learn the basics of developing the dynamic list page component.
 
-**Parent topic:**[Creating HTML page components](../install/rm_create_site_dev_pcomponents.md)
 
 # Creating your dynamic list page component
 

@@ -2,7 +2,6 @@
 
 Displays a list of the most recent items of any type in your website. This is similar to the General Latest portlet, but the results are displayed in a grid design.
 
-**Parent topic:**[Lists](../ctc/ctc-portlet-types-lists.md)
 
 # Usage
 

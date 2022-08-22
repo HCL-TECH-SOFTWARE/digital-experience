@@ -60,5 +60,4 @@ URLs that address generic resources such as, but not limited to, files, icons, a
 
 Resource URLs can also be created using the URL generation Services that are offered along with the Navigational State SPI. See [URL generation services](url_gen_serv.md) for additional information.
 
-**Parent topic:**[URL generation by using the Navigational State SPI](../dev/nav_state_spi.md)
 

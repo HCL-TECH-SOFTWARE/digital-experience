@@ -30,7 +30,6 @@ If your stand-alone environment meets both of the preceding conditions, complete
 5.  Log out of the WebSphere Integrated Solutions Console.
 6.  Restart the WebSphere\_Portal server.
 
-**Parent topic:**[Configuring SSL](../security/ssl_intro.md)
 
 **Previous topic:**[Setting up Client Certificate Authentication](../security/certauth.md)
 

@@ -132,5 +132,4 @@ The availability of the **Presentation Override** and **Default Content** fields
 |`RENDER_FIRST_CHILD_CONTENT`|No.|No.|
 |`RENDER_FIRST_CHILD`|No.|No.|
 
-**Parent topic:**[How to use REST with site area templates](../wcm/wcm_rest_crud_site_temp.md)
 

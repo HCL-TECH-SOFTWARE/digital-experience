@@ -24,5 +24,4 @@ Follow these steps to install a new version of Content Template. By upgrading, y
 -   **[Post upgrade steps](../ctc/ctc-upgrade-post.md)**  
 After you install the most recent version of Content Template Catalog, you will need to complete some additional steps to complete the upgrade.
 
-**Parent topic:**[Content Template Catalog 4.4](../ctc/ctc_intro.md)
 

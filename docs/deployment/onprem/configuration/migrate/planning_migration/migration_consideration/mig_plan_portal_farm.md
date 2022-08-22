@@ -25,7 +25,6 @@ The Portal farm migration consists of disabling farm mode and running the stand-
         -   IBM i: ConfigEngine.sh enable-farm-mode -DsystemTemp=/var/log/was\_tmp -DWasPassword=password
         -   Windows: ConfigEngine.bat enable-farm-mode -DsystemTemp=C:\\temp\\was\_tmp -DWasPassword=password
 
-**Parent topic:**[Migration considerations](../plan/mig_plan_high_availability.md)
 
 **Related information**  
 

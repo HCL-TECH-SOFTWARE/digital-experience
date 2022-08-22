@@ -34,7 +34,6 @@ In this case, when the page is created, a community is created in HCL Connection
         You can specify one of the following values: public, restricted, moderated.
 
 
-**Parent topic:**[Creating community associations during page template instantiation](../admin-system/commpages_create_mapping_template.md)
 
 **Related information**  
 

@@ -185,5 +185,4 @@ The existing MobileFirst® extension EAR is installed under the \\PortalServer\\
 
 The MobileFirst meta modules, such as `wp_worklight_ext`, now load and use the resources for your new version of MobileFirst.
 
-**Parent topic:**[Integrating with IBM MobileFirst](../integrate/wl_integrt.md)
 

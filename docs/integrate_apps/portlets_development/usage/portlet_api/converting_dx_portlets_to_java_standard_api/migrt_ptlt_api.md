@@ -110,7 +110,6 @@ converter=com.ibm.wps.pe.task.DefaultConverter
 
 ```
 
-**Parent topic:**[Converting HCL Digital Experience portlets \(AIX, Linux, Windows\) to the Java Standard API](../dev-portlet/jsrmig.md)
 
 **Related information**  
 

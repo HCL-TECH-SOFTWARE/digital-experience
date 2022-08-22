@@ -19,7 +19,6 @@ Specify the following properties for data cache options:
     Determines whether to cache data by default or not. Possible values are `true` or `false`.
 
 
-**Parent topic:**[Caching options](../wcm/wcm_config_delivery_caching.md)
 
 **Related information**  
 

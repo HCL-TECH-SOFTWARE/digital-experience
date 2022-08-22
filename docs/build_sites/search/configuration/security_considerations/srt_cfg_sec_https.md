@@ -37,5 +37,4 @@ If you do not want to provide HTTPs security for your portal search seedlist, yo
 
 For your updates to take effect, restart your portal server.
 
-**Parent topic:**[Security considerations](../admin-system/srcscrcnsd.md)
 

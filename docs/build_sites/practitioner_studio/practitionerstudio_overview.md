@@ -33,5 +33,4 @@ Use the Portal administration portlets that are provided with HCL Digital Experi
 -   **[Registration/Edit my profile](../practitioner_studio/edit_my_profile.md)**  
 Managing Registration/Edit my Profile is one of the available Administrator-related features in the Practitioner Studio interface.
 
-**Parent topic:**[HCL Digital Experience 9.5 Product Documentation](../welcome/wp95_welcome.md)
 

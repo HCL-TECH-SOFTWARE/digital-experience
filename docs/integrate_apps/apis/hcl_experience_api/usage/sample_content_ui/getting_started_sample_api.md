@@ -49,5 +49,4 @@ Follow the steps to get started with Sample Content UI application:
 7.  Open a new browser, copy-paste and enter your base URL. Log in by entering your HCL Portal credentials.
 8.  To know more about the design and code workflow, please refer to the documentation files inside the ui/docs/design folder.
 
-**Parent topic:**[Sample Content UI \| HCL Experience API](../open_api/sample_api_overview.md)
 

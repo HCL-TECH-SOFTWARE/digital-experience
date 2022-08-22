@@ -30,5 +30,4 @@ This example shows how to create a new site by using the Empty Content Site Temp
 3.  Add CTC portlets to the blank home page to display content and lists that would be most useful for your viewers.
 
 
-**Parent topic:**[A roadmap for Content Template Catalog site authors](../ctc/ctc_gs_authors.md)
 

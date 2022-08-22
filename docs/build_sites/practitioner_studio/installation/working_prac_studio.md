@@ -13,5 +13,4 @@ Learn how to show Practitioner Studio and Woodburn Studio themes, and Administra
 -   **[How to disable Practitioner Studio](../practitioner_studio/disable_prac_studio.md)**  
 This section outlines how to disable Practitioner Studio and Woodburn Studio in both base Portal and virtual portal environments.
 
-**Parent topic:**[Practitioner Studio](../practitioner_studio/practitionerstudio_overview.md)
 

@@ -33,7 +33,6 @@ The HCL Connections integration assets use a common infrastructure that is calle
 -   **[Configuring single sign-on \(SSO\) for browser-based access to HCL Connections in SmartCloud for Social Business](../dev-portlet/config_sso_browser_access_sc4sb.md)**  
 Single sign-on \(SSO\) for browser-based access to HCL Connections in SmartCloud for Social Business is enabled by using Service Provider Initiated Authentication Flow. You can enable SSO for all links, including external URLs, custom markup, search results, and social portlets.
 
-**Parent topic:**[Configuring Portal to work with HCL Connections in SmartCloud for Social Business](../dev-portlet/integrate_portal_sc4sb.md)
 
 **Related information**  
 

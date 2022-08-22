@@ -70,7 +70,6 @@ The site toolbar provides access to editing features for managed pages, includin
 -   **[Disabling the language switcher](../wcm/wcm_mngpages_disable_lang_switch.md)**  
 The language switcher allows you to switch from any of the supported languages. This feature is available only for authenticated portal users.
 
-**Parent topic:**[Preparing for content authors](../site/site_prep_toolbar.md)
 
 **Related information**  
 

@@ -12,5 +12,4 @@ When an item reaches the pending expire state the following things happen:
 -   If all published localized copies of the current item are in the pending expire state, then the current item and its copies are moved to the next workflow stage and a notification are sent to the relevant locale owners.
 -   The expiry extension is only applied to individual workflows, not project workflows.
 
-**Parent topic:**[Extensions for multilingual sites Multilingual Solution](../wcm/wcm_mls_extensions.md)
 

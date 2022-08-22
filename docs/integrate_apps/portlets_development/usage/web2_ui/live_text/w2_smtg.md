@@ -29,5 +29,4 @@ You can use both live text elements and cooperative portlet wires to exchange da
 -   **[Comparison of the new features with click-to-action in HCL Digital Experience portlets](../dev-portlet/w2_smtg_ref_compr.md)**  
 The user experience of live text elements based click-to-action is similar to that of the click-to-action JSP tags that are available for IBM portlets.
 
-**Parent topic:**[Web 2.0 user interface features](../dev-portlet/w2_ovu.md)
 

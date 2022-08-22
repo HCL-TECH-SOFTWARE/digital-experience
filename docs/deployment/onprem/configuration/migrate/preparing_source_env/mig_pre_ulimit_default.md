@@ -6,7 +6,5 @@ The default open file descriptor limit for the Unix user profile that is used to
 
 If you run the migration commands manually, set the open file descriptor to 200000 prior to running the WASPreUpgrade.sh and WASPostUpgrade.sh commands.
 
-**Parent topic:**[Preparing your source environment](../migrate/mig_t_premig_tasks.md)
-
 **Parent topic:**[Setting up the target environment](../migrate/setting_up_the_target_environment.md)
 

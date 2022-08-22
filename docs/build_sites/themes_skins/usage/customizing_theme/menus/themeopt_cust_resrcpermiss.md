@@ -32,5 +32,4 @@ The following screen shot shows the modified **Actions** menu. The link in the m
 
 ![Link to the Assign Page Permissions portlet in the Actions menu.](../images/themeopt_resrc_permiss.jpg)
 
-**Parent topic:**[Menus](../dev-theme/themeopt_menu.md)
 

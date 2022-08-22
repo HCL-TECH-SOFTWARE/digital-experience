@@ -126,5 +126,4 @@ When you click **Edit this skin** or expand the Skins menu and click on an avail
         **Note:** You must manually create the static content for the new skin. Learn more about how to [Create a theme-scoped skin](themeopt_cust_skintheme.md#).
 
 
-**Parent topic:**[Getting started with Themes](../dev-theme/themeopt_themedev_getting_started.md)
 

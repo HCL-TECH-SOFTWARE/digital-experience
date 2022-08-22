@@ -92,5 +92,4 @@ Some dynamic content spots can take parameters. These parameters are added to th
 -   **[Adding a status bar to the Simple Theme](../dev-theme/themeopt_themedev_statusbar_2.md)**  
 The status bar is an optional feature that displays system messages.
 
-**Parent topic:**[Understanding the Simple Theme](../dev-theme/themeopt_themedev_simpletheme.md)
 

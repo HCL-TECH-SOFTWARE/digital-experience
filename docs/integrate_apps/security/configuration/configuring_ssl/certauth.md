@@ -145,7 +145,6 @@ Complete the following steps to configure HCL Digital Experience for SSL client 
     5.  After selecting and confirming the correct client certificate, you are redirected to the protected area served with HTTPS.
 
 
-**Parent topic:**[Configuring SSL](../security/ssl_intro.md)
 
 **Previous topic:**[Configuring SSL only for the login process](../security/config_ssl_login.md)
 

@@ -11,7 +11,6 @@ A message displays that indicates whether the export process was successful. If 
 
 You can now use the theme PAA file to install your theme on different servers.
 
-**Parent topic:**[Theme PAA files](../dev-theme/themeopt_themedev_exportedpaa.md)
 
 **Related information**  
 

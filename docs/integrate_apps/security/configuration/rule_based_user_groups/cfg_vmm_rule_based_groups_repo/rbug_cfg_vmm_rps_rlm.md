@@ -86,7 +86,6 @@ Run the wp-create-cur, wp-create-cur-custom-property, and wp-update-group-reposi
     5.  In a clustered environment, restart the Deployment Manager and nodeagents. Then, restart the Portal Servers.
 
 
-**Parent topic:**[Configuring the VMM rule-based groups repository](../admin-system/rbug_cfg_vmm_repos.md)
 
 **Related information**  
 

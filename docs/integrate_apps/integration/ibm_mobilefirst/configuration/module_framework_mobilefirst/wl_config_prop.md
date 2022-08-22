@@ -71,5 +71,4 @@ The wp\_worklight module requires a wl\_config module that is defined in [Portal
 5.  Inject the JavaScript code that you created onto your page from your theme. You can add the code that you just created to one of your existing dynamic content spot .jsps or create a new dynamic content spot. Or, you can add the JavaScript to an HTML file in an existing or new module.
 
 
-**Parent topic:**[Module framework for IBM MobileFirst](../integrate/wl_module_fw.md)
 

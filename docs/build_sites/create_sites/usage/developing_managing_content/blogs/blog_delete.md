@@ -17,5 +17,4 @@ To delete an individual blog, open the project that contains the blog library in
 6.  Go to the library you want to delete and click **Delete library** and **OK**.
 
 
-**Parent topic:**[Blogs](../admin-system/blog_work.md)
 

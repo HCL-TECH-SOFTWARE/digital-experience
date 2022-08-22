@@ -27,5 +27,4 @@ When you access a portlet in HCL Digital Experience, the portal appends an ancho
 -   **[Managing iWidgets in your portal](../admin-system/add_widget.md)**  
 You can add iWidgets to your HCL Digital Experience.
 
-**Parent topic:**[Administering](../admin-system/administering_parent.md)
 

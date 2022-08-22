@@ -12,5 +12,4 @@ Wrappers are defined for the following objects:
 
 A transcoding filter for markups, for example, from HTML to WML needs to use all of these wrappers to emulate the HTML environment that an HTML portlet assumes.
 
-**Parent topic:**[Configuring portlet filtering](../admin-system/adpltflt.md)
 

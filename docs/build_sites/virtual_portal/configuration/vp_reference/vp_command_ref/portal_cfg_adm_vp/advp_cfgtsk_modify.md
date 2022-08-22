@@ -72,7 +72,6 @@ You pass the parameters in the parameter list for each configuration task as app
     ./ConfigEngine.sh modify-virtual-portal -DPortalAdminPwd=password -DWasPassword=password
 
 
-**Parent topic:**[Portal configuration tasks for administering virtual portals](../admin-system/advp_cfgtsk.md)
 
 **Related information**  
 

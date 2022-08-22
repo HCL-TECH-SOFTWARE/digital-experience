@@ -11,5 +11,4 @@ The preview options determine how content can be previewed. Preview options are 
 
 **Note:** When you use a web content viewer to preview content, ensure that the web content viewer is configured to receive links from **Other portlets and this portlet**.
 
-**Parent topic:**[Authoring portlet settings](../panel_help/wcm_config_authoringportlet.md)
 

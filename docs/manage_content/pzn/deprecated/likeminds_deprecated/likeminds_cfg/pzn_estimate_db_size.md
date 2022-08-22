@@ -139,5 +139,3 @@ In your size estimate, remember to include space for transaction logging and rol
 
 **Parent topic:**[Configuring LikeMinds](../pzn/pzn_configure_likemind_servers.md)
 
-**Parent topic:**[Configuring LikeMinds](../pzn/pzn_configure_likemind_servers.md)
-

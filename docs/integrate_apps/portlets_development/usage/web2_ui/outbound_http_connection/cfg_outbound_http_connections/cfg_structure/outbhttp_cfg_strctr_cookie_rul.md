@@ -61,7 +61,6 @@ A Cookie Rule contains the following settings:
     The custom transformation handler can modify the name, value, domain, and path of the cookie that is assigned with the custom transformation handler. For more information, read *Using custom cookie transformation handlers*.
 
 
-**Parent topic:**[Configuration structure](../dev-portlet/outbhttp_cfg_structure.md)
 
 **Related information**  
 

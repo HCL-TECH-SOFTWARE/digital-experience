@@ -8,5 +8,4 @@ When a Web module is updated, WebSphere® Application Server removes the existin
 
 New parameters that are introduced by the updated Web module are always added to the Web module.
 
-**Parent topic:**[Managing portlets, portlet applications, and iWidgets](../admin-system/adpltadmwork.md)
 

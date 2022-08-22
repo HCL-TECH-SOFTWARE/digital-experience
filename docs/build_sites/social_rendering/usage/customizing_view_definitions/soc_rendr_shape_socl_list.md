@@ -19,7 +19,6 @@ Social rendering provides you a set of view definitions that you can use to add 
 -   **[Implementing interactions with social objects](../wcm/wcm_dev_impl_intrax_soc_objects.md)**  
 Site designers can implement design components that support interactions between the user and the social data. For example, a user can post a new reply to a forum topic or delete a previous reply.
 
-**Parent topic:**[Social rendering](../social/soc_rendr_ovu.md)
 
 **Related information**  
 

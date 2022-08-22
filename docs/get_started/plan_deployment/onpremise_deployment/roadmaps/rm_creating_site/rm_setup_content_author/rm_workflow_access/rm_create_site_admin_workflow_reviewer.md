@@ -2,7 +2,6 @@
 
 Content reviewers do not need to create or edit content. Set up access for content reviewers in your workflow.
 
-**Parent topic:**[Controlling content flow with workflows](../install/rm_create_site_admin_workflow.md)
 
 # Background information for the administrator: Identify the goals of content reviewers
 

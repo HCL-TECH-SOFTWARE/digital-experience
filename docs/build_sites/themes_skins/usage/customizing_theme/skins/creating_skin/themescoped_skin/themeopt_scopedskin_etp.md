@@ -15,5 +15,4 @@ You can define the skin and assign it to a theme by using **Manage properties** 
 5.  Click **Done**.
 
 
-**Parent topic:**[Create a theme-scoped skin](../dev-theme/themeopt_create_themescoped_skin.md)
 

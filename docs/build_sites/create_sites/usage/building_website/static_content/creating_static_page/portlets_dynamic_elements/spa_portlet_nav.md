@@ -47,7 +47,6 @@ The following example shows the quick link navigation:
 </div>
 ```
 
-**Parent topic:**[Portlets for adding dynamic elements to static pages](../dev/spa_portlets.md)
 
 **Related information**  
 

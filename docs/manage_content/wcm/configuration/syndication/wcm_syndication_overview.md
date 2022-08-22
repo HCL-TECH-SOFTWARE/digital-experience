@@ -165,7 +165,6 @@ Although syndication can be used to keep data current between libraries on diffe
     Because library access control settings are not syndicated, you must manually set access permissions on the subscriber's library when you syndicate for the first time. If the library does not exist on the subscriber, it is created during syndication. By default, no access control settings are specified on the new library, so you must set them manually before users can access content in the new library. The settings on the subscriber library do not have to match those on the syndicator library. This allows you to specify different levels of access for users and groups on the subscriber.
 
 
-**Parent topic:**[Syndication](../wcm/wcm_administering.md)
 
 **Related information**  
 

@@ -37,7 +37,6 @@ Example 2 - Setting the `BookmarkableFlag` for a content page:
     ((ModifiableBookmarkableFlag) modifiable).setBookmarkableFlag(true);
 ```
 
-**Parent topic:**[Modifying properties](../dev/ctrlrapit_mdfy_props.md)
 
 **Related information**  
 

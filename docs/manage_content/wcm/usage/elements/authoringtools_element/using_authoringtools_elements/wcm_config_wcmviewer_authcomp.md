@@ -54,7 +54,6 @@ To redirect users to another page for authoring tasks, specify a value of `url` 
 
 **Note:** You can open the portal page in a separate browser window by adding `target="_blank"` to the HTML anchor tag in the design.
 
-**Parent topic:**[How to use authoring tools components in a Web Content Viewer \| HCL Web Content Manager](../wcm/wcm_config_wcmviewer_workauthcomp.md)
 
 **Related information**  
 

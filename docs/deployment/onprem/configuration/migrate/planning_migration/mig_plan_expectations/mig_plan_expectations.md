@@ -13,7 +13,6 @@ In HCL Digital Experience 8.5, the update of the HCL Portal and HCL Web Content 
 -   **[Page order](../migrate/mig_expect_pages.md)**  
 If the page order was altered for HCL pages in the Applications, Administration, or Hidden Pages areas on your source environment, then the page order might not be correct on the target environment after migration.
 
-**Parent topic:**[Planning for migration](../plan/mig_plan.md)
 
 **Related information**  
 

@@ -111,7 +111,6 @@ The following parameters are optional for the tag widget. They correspond to sim
     If you do not specify a value, the parameter defaults to `COMMUNITY_PERSONAL_PUBLIC`.
 
 
-**Parent topic:**[Parameter reference for the tag and rating widgets](../admin-system/tag_rate_parm_ref.md)
 
 **Related information**  
 

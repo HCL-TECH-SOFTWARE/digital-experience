@@ -28,7 +28,6 @@ The aggregator patterns and samples section provides common aggregator patterns 
 -   **[How to identify and resolve problems with your aggregator](../admin-system/sa_asa_aggr_trbl.md)**  
 If your custom aggregator is not working correctly, perform the checks listed here.
 
-**Parent topic:**[Collecting analytics data](../admin-system/sa_asa_collct_data.md)
 
 **Related information**  
 

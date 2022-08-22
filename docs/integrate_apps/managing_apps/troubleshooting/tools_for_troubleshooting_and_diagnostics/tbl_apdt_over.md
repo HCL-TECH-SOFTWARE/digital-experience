@@ -64,7 +64,6 @@ There is one method to collect data and analyze symptoms for problem determinati
 
 
 
-**Parent topic:**[Troubleshooting and diagnostics tools](../trouble/pd_tools.md)
 
 **Related information**  
 

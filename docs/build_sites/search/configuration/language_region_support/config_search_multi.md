@@ -31,5 +31,4 @@ By default, the Search Center uses the preferred language of the user to analyze
     6.  Click **OK** to activate the changes.
 
 
-**Parent topic:**[Configuring the Search Center portlet](../admin-system/srtcfgsrchcntrprlt.md)
 

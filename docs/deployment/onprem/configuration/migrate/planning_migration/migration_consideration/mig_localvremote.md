@@ -31,5 +31,4 @@ In this scenario, you do not need to worry about resource conflicts as much as w
 
 You also need to keep in mind that you must be able to move files between the source and the target environments. There are procedures that create files on the source HCL Portal environment that might need to be updated and placed in the new HCL Digital Experience installation. So, once again, operating system security planning plays an important role in remote migrations.
 
-**Parent topic:**[Migration considerations](../plan/mig_plan_high_availability.md)
 

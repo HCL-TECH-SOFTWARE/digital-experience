@@ -46,7 +46,6 @@ You can configure these portlet preferences for a portlet either by setting them
     For example: If you want to specify 3 seconds as the average response time allowed for a portlet, set the portlet preference `com.ibm.wps.pe.plm.average.time.processing` to `3000` \(milliseconds\) for this portlet.
 
 
-**Parent topic:**[Portlet load monitoring for HCL Portal](../dev-portlet/plmc.md)
 
 **Related information**  
 

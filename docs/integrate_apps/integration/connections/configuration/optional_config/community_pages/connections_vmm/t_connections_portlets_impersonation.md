@@ -19,5 +19,4 @@ Access another user's system with the impersonation feature as though you are th
 6.  Perform a similar test for each node.
 
 
-**Parent topic:**[Integrating community membership with Portal security](../connect/c_connections_portlets_vmm_over.md)
 

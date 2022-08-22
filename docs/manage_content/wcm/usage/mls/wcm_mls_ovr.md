@@ -28,5 +28,4 @@ A multilingual site consists of content that is localized to support multiple au
     -   This type of site includes content that is written in multiple languages, but stored in a single site.
     -   Content is grouped by category, not language.
 
-**Parent topic:**[HCL Web Content Manager Multilingual Solution](../wcm/wcm_mls.md)
 

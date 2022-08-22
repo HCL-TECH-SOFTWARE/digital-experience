@@ -102,7 +102,6 @@ Learn about some hints and tips for administrators who work with tagging and rat
     Angled brackets \(`<` and `>`\) are not allowed within tag names. Therefore, no matter how you customize the regular expression, angled brackets are not accepted.
 
 
-**Parent topic:**[Hints and tips for tagging and rating](../admin-system/tag_rate_ref_hintip.md)
 
 **Related information**  
 

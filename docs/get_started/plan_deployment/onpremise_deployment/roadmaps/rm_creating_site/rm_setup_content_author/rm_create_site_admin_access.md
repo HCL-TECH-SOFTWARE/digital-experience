@@ -2,7 +2,6 @@
 
 Administrators must understand the roles and goals of content authors to grant the appropriate permissions. Learn how to create users, create content author and reviewer groups, and grant access to resources and libraries.
 
-**Parent topic:**[Setting up the site for the content author](../install/rm_create_site.md)
 
 ## Background information for the administrator: Identify the goals of the content authors
 

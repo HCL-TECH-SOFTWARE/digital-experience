@@ -13,5 +13,4 @@ Use the following steps to enable crawling on a selected portal site.
 3.  Enter the URL of the portal site that you want to make available for search by your users.
 
 
-**Parent topic:**[Searching and crawling Portal and other sites](../admin-system/srcportals.md)
 

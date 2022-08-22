@@ -39,5 +39,4 @@ The following settings and options are available for customizing social list vie
     This field is an optional input field. The default value is `10`. This setting is hidden by default. To make it show, click **Show hidden fields** at the beginning or end of the screen. Use this setting to specify the maximum number of replies that you want to show in the initial rendering of the forum topic details. The forum topic details appearance component supports a **View more replies** link that shows all replies that have been loaded.
 
 
-**Parent topic:**[Customizing view definitions for portal site visitors](../social/soc_rendr_shape_socl_list.md)
 

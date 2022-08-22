@@ -10,5 +10,3 @@ The resource engine constructs a generic query object and passes it to domain de
 
 **Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
 
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
-

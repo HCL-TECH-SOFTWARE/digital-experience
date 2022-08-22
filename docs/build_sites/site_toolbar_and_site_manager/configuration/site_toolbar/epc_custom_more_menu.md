@@ -38,7 +38,6 @@ You can disable the **More** menu in the virtual portal configuration service.
         If you defined the property `global.wp_toolbar_moremenu.enabled` listed earlier, it acts as a fallback setting for virtual portals that do not have the **More** menu property set. For more information about prefixes, placeholders, and the order in which properties are evaluated, read *Virtual Portal Configuration Service*.
 
 
-**Parent topic:**[Preparing the site toolbar](../dev-theme/themeopt_themeshelf.md)
 
 **Related information**  
 

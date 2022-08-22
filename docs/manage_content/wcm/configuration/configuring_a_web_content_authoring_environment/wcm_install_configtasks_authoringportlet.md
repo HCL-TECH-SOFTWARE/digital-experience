@@ -33,7 +33,6 @@ If your site contains content in different languages, then a separate Web Conten
 
 **Note:** If a user changes their locale, any currently opened Web Content Manager dialogs will be closed. A user also must start a new session before it is displayed using the new locale. It is best practice to have the client's correct locale set before using Web Content Manager.
 
-**Parent topic:**[Configuring a web content authoring environment](../wcm/wcm_install_cfgauthoring.md)
 
 **Related information**  
 

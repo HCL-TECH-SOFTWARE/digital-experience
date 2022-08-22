@@ -27,5 +27,4 @@ You can change between the immediate and delayed deletion of portal pages by con
 
 By its default schedule configuration, the cleanup service runs weekly, on Saturdays at 8 pm.
 
-**Parent topic:**[Delayed cleanup of deleted portal pages](../admin-system/addelclnup.md)
 

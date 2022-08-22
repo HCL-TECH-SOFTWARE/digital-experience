@@ -8,5 +8,3 @@ When you create a profile within a profiler, type an arbitrary, but descriptive 
 
 **Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
 
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
-

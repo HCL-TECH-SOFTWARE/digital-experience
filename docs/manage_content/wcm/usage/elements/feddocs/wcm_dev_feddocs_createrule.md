@@ -44,7 +44,6 @@ Before you create a rule to access federated documents information, ensure that 
 
 You can now use this rule in a personalization component to render the selection result of this rule in web content.
 
-**Parent topic:**[Personalizing federated documents](../wcm/wcm_dev_feddocs.md)
 
 **Related information**  
 

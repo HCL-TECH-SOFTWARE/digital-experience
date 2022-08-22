@@ -203,5 +203,4 @@ Examples:
 <ibmwcm:templateMap authoring="AT Announcement" presentation="PT Announcement" />
 ```
 
-**Parent topic:**[RSS Namespace Extension for web content](../wci/wci_ff_nse.md)
 

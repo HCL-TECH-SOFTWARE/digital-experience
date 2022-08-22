@@ -39,5 +39,4 @@ Prepare the operating system to ensure a successful HCL Digital Experience insta
     2.  Edit the Windows registry and create the following key: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting\LocalDumps`.
     3.  Create a new `DWORD` and name it DumpType. Set the value to 2 \(Decimal\) then exit.
 
-**Parent topic:**[Windows system - HCL Digital Experience installation](../install/installingwp95-windows.md)
 

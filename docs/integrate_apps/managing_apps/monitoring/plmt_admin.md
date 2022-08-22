@@ -7,5 +7,4 @@ You can set portlet preferences to influence in which cases Portlet load monitor
 -   **[Administering portlets for Portlet load monitoring](../dev-portlet/plmt_adm_portlets.md)**  
 You can administer the portlets that Portlet load monitoring monitors. You can check which portlets Portlet load monitoring monitors, and you can manually block or activate these portlets. For example, you can reenable a portlet after Portlet load monitoring blocked it.
 
-**Parent topic:**[Portlet load monitoring for HCL Portal](../dev-portlet/plmc.md)
 

@@ -135,7 +135,6 @@ The new filter for the explicit login is now available. Users who are defined in
 -   **[Enhanced Cross Origin Resource Sharing Configuration](../admin-system/enhanced_cross_origin_resource_sharing_configuration.md)**  
 Enhanced Cross Origin Resource Sharing Configuration adds new options for HCL Digital  Experience administrators to set configuration for CORS using a WP configuration service in  the IBM WebSphere Application Server resource environment provider. This new configuration  option is supported with HCL DX 9.5 Container Update CF195 and higher, and HCL DX CF196 and  higher for customers deploying to on premises platforms.
 
-**Parent topic:**[Configuring portal behavior](../admin-system/adptlcfg.md)
 
 **Related information**  
 

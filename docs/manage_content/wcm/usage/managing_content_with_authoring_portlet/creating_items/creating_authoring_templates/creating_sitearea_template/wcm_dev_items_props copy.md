@@ -25,5 +25,4 @@ Specify properties for the current item, including the location of the item and 
     2.  Select one or more users or groups in the **Search results** column and click **Add** to move them to the **Selected names** column.
 
 
-**Parent topic:**[Creating a search component](wcm_dev_search_form_results.md)
 

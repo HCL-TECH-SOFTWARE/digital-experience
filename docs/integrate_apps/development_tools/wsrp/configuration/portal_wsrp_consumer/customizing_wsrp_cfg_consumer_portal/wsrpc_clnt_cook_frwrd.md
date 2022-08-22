@@ -55,7 +55,6 @@ Example properties that contain cookie forwarding rules are as follows:
 
 **Note:** The WSRP Consumer does not send cookies when it requests the WSDL service description documents from a Producer.
 
-**Parent topic:**[Customizing the WSRP configuration of your Consumer portal](../admin-system/wsrpt_cons_cust.md)
 
 **Related information**  
 

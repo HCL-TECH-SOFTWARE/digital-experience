@@ -15,5 +15,3 @@ Learn more about the Device application object through an example.
 
 **Parent topic:**[Device application object](../contarget/targeting_device_overview.md)
 
-**Parent topic:**[Device application object](../contarget/targeting_device_overview.md)
-

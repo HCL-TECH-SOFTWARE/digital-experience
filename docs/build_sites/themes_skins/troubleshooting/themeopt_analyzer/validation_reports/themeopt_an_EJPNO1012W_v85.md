@@ -16,8 +16,6 @@ Create a theme metadata with the key com.ibm.portal.layout.template.ref. XMLAcce
 
 **Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
-
 **Related information**  
 
 

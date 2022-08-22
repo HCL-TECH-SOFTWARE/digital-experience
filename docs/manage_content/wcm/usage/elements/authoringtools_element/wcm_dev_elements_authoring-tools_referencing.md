@@ -19,5 +19,4 @@ When you reference an authoring tool component in a menu, navigator, or personal
 [Component name="authoringtoolname" compute="always" ]
 ```
 
-**Parent topic:**[Creating an authoring tools element](../panel_help/wcm_dev_elements_authoring-tools_using.md)
 

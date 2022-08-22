@@ -27,5 +27,4 @@ You must configure the full profiling parameter on the page on which you deploye
 10. Click **OK** to save your changes to the page properties.
 
 
-**Parent topic:**[Client side aggregation \(CSA\) rendering in the Syndicated Feed Portlet](../admin-system/ic_syndfeed_csr.md)
 

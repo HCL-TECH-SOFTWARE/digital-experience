@@ -50,5 +50,4 @@ The following list shows the properties of the portal WP Navigator Service:
     This property specifies the value that is set for the `cache-control` HTTP header field when the portal generates a response in request for private pages. This header field controls the behavior of all caching mechanisms along the request-response chain. The default for this property is `no-cache` .
 
 
-**Parent topic:**[Caching](../security/tune_cache.md)
 

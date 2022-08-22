@@ -29,5 +29,4 @@ For more detailed steps about how to manage search services refer to the Manage 
 
 If you want to create a search service for remote Portal Search, refer to *Configuring a remote search service*.
 
-**Parent topic:**[Administering Portal Search](../admin-system/srtadmsrch.md)
 

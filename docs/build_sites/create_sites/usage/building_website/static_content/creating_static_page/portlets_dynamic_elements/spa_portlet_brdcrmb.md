@@ -20,7 +20,6 @@ The following example produces a breadcrumb trail navigation for the current pag
 </div>
 ```
 
-**Parent topic:**[Portlets for adding dynamic elements to static pages](../dev/spa_portlets.md)
 
 **Related information**  
 

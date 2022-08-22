@@ -33,5 +33,4 @@ To grant users or groups access to an item:
     -   Owners
     -   Creator
 
-**Parent topic:**[Creating a search component](wcm_dev_search_form_results.md)
 

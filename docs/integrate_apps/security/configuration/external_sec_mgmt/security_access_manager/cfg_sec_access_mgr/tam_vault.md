@@ -104,7 +104,6 @@ ConfigEngine.bat validate-pdadmin-connection -DWasPassword=password
 6.  Use the WebSphere Application Server encoding mechanism to mask the passwords in the accessmanagervault.properties file and the Security Access Manager administrative password in the pdpw property.
 
 
-**Parent topic:**[Configuring Security Access Manager](../security/tam.md)
 
 **Related information**  
 

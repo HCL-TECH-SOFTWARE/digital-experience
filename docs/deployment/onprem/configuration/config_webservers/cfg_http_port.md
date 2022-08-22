@@ -36,5 +36,4 @@ If you want to access HCL Portal with a host name and port different from your w
 10. In a clustered environment, resynchronize the nodes and restart the cluster.
 
 
-**Parent topic:**[Web servers](../config/config_webservers.md)
 

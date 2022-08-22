@@ -6,5 +6,4 @@ Click the **Administration menu** icon. Then, click **Portlet Management** \> **
 
 For details about how to work with the portlet, refer to the portlet help.
 
-**Parent topic:**[Providing WSRP services as a Producer](../admin-system/wsrpt_prod_prvd_ws.md)
 

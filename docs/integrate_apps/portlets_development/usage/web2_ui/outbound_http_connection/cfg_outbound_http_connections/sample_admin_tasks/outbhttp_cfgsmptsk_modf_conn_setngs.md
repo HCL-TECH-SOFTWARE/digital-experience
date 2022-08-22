@@ -113,5 +113,4 @@ To modify the settings of an existing outbound HTTP connection policy, follow th
         where `THE\_APPLICATION\_SCOPE` is the name of the application scope.
 
 
-**Parent topic:**[Sample administration tasks](../dev-portlet/outbhttp_cfg_smpl_adm_tasks.md)
 

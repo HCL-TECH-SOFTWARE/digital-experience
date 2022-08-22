@@ -88,7 +88,6 @@ The HEAD folder contains files that are served as head contribution through the 
 -   **[Config contribution](../dev-theme/themeopt_simple_modules_config.md)**  
 The CONFIG folder contains files that are served as config contribution through the resource aggregator framework. Those resources are usually before the closing body tag.
 
-**Parent topic:**[Writing modules](../dev-theme/themeopt_mod_plugin_xml.md)
 
 **Related information**  
 

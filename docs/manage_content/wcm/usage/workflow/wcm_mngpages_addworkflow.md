@@ -43,7 +43,6 @@ To use a custom workflow with a published page, you must create a page template 
 
 After you complete this task, you can select the new page template when you create a page in a project, and the custom workflow is automatically used.
 
-**Parent topic:**[Workflow and change management](../wcm/wcm_cms_change.md)
 
 **Related information**  
 

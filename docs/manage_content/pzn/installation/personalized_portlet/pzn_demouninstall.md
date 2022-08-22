@@ -19,11 +19,9 @@ The sample demo, database, and users will be removed.
 
 **Note:** The database connection to the included Apache Derby database may stay open and prevent removal of the database directory. Restart HCL Digital Experience and run `ConfigEngine.bat/sh remove-pzndemo-database -DPortalAdminPwd=password -DWasPassword=password` if this is a problem. The directory PznDemo in the root of the Portal Personalization Workspace may need to be removed manually.
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Personalized List portlet](../pzn/pzn_demo_list_portlet.md)
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Personalized List portlet](../pzn/pzn_demo_list_portlet.md)
 

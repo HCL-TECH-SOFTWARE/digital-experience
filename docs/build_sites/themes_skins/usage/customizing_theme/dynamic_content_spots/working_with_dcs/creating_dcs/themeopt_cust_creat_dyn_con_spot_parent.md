@@ -7,5 +7,4 @@ In most situations, use the modularized approach to define dynamic content spots
 -   **[Creating a dynamic content spot with resource environment providers](../dev-theme/themeopt_cust_createdyncont.md)**  
 You can create a custom dynamic content spot to include in a theme template.
 
-**Parent topic:**[Working with dynamic content spots](../dev-portlet/csa2r_dyn_cntnt_spot.md)
 

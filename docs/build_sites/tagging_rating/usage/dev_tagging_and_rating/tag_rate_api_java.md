@@ -17,7 +17,6 @@ The following controllers are available for working with resources, tags and rat
     Use this controller to control resources that are tagged or rated or both. For example, specify a category to which a resource belongs.
 
 
-**Parent topic:**[Extending tagging and rating by using service APIs](../admin-system/tag_rate_dev.md)
 
 **Related information**  
 

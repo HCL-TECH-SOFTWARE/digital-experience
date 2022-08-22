@@ -26,5 +26,4 @@ During this procedure, modify the following property in the WP\_ConnectionsInteg
 6.  Save the property changes.
 
 
-**Parent topic:**[Configuring community pages](../admin-system/commpages_config.md)
 

@@ -20,5 +20,4 @@ To remove the Site Builder application from the HCL Digital Experience Portal se
 -   **[Restoring the original Site Builder Template library](../sitebuilder/sitebuilder_lib_restore.md)**  
 Restoring the Site Builder Template library to its original state deletes all changes that are made to templates after Site Builder was installed.
 
-**Parent topic:**[Site Builder](../sitebuilder/sitebuilder_intro.md)
 

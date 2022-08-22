@@ -2,7 +2,6 @@
 
 This roadmap outlines the HCL Digital Experience deployment on Docker and supported Kubernetes platforms such as, Red Hat OpenShift, Amazon Elastic Kubernetes Service \(EKS\), and Microsoft Azure Kubernetes Service \(AKS\).
 
-**Parent topic:**[HCL Digital Experience roadmap for container-based deployment](../install/rm_container_parent.md)
 
 **Related information**  
 

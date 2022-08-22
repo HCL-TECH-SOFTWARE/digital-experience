@@ -209,7 +209,6 @@ The portal defines container run time options, which can be used by portlets tha
     ```
 
 
-**Parent topic:**[Portlet development reference](../dev-portlet/wpsdevref.md)
 
 **Related information**  
 

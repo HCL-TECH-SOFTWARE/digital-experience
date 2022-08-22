@@ -55,5 +55,4 @@ Example:
      -DVirtualPortalContext=virtual\_portal\_context\_url 
 ```
 
-**Parent topic:**[Manage pages portlets](../admin-system/mp_manage_pages.md)
 

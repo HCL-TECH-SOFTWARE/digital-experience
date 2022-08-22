@@ -12,5 +12,3 @@ Remove the listed module from the profile unless there is a reason to keep it.
 
 **Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
-

@@ -174,5 +174,4 @@ Example - Navigation Model feed for the Navigation Model root node
 
 ```
 
-**Parent topic:**[Feeds for REST services](../dev/rest_feed.md)
 

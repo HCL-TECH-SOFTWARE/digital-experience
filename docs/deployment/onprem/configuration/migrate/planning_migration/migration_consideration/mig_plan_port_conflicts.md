@@ -6,5 +6,4 @@ If you are completing a local migration, you might encounter a port conflict due
 
 You might also encounter a port conflict with the configuration wizard server. If this occurs, update the Configuration Wizard ports in the serverindex.xml located in cw\_profile/config/cells/cellnamenodes/nodename.
 
-**Parent topic:**[Migration considerations](../plan/mig_plan_high_availability.md)
 

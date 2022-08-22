@@ -23,5 +23,3 @@ If the Site Builder template or page templates exist on the target virtual porta
 
 **Parent topic:**[Exporting Site Builder templates to other servers](../sitebuilder/sitebuilder_temp_dist.md)
 
-**Parent topic:**[Exporting Site Builder templates to other servers](../sitebuilder/sitebuilder_temp_dist.md)
-

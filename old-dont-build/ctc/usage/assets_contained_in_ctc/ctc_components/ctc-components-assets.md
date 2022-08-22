@@ -15,5 +15,4 @@ Asset components are reusable files and code that are used to deliver advanced f
     An HTML component containing tags that are used to render the CTC video player. Reference this in component designs that require a video to be displayed.
 
 
-**Parent topic:**[Content Template Components](../ctc/ctc-assets-components.md)
 

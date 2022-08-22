@@ -25,5 +25,4 @@ This portlet is used to display some teaser rich text on a page by referring to 
 -   **[CTC Content](../ctc/ctc-portlet-ctc-content.md)**  
 This portlet is used as a prototype configuration for copying CTC content.
 
-**Parent topic:**[Assets contained in the Content Template](../ctc/ctc-assets.md)
 

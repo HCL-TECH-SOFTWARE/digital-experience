@@ -1460,5 +1460,3 @@ The Personalization rules REST APIs can be triggered anonymously.
 
 **Parent topic:**[Personalization REST API explorer](../pzn/dev_pzn_rest_api_explorer.md)
 
-**Parent topic:**[Personalization REST API explorer](../pzn/dev_pzn_rest_api_explorer.md)
-

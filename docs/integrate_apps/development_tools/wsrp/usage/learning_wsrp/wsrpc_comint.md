@@ -13,7 +13,6 @@ When the Consumer has this information, the administrator of the Consumer portal
 
 Depending on the overall WSRP setup, the Consumer might in turn provide information to the Producer. For example, if the Producer portal has security configured, the Consumer can send user IDs of Consumer portal users to the Producer. The Producer can then give these users access to the provided portlets. The Consumer portal users can then work with the portlets that the Consumer portal consumes from the Producer.
 
-**Parent topic:**[Learning about WSRP](../admin-system/wsrpc_learn.md)
 
 **Related information**  
 

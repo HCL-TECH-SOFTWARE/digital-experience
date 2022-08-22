@@ -108,5 +108,4 @@ You can also use the console mode to generate a response file. Go to [Installing
 20. If you plan to install on a different server, copy the response file to the response file directory on that server. Open the response file, make any necessary changes to the repository location. Search for value= and make any necessary changes for the new server.
 
 
-**Parent topic:**[Installing HCL Digital Experience in AIX system using a response file](../install/inst_silent-AIX.md)
 

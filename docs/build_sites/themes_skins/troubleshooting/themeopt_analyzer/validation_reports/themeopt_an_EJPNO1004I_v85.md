@@ -12,5 +12,3 @@ Update your profile and remove the duplicate entries of the module.
 
 **Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
-

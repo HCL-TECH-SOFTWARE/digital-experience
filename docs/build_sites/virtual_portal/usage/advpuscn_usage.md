@@ -60,7 +60,6 @@ Based on these business requirements, you can select one or more of the followin
 
 You need to set up the configuration required for such a scenario carefully. As an alternative for this scenario, you can consider using separate portal installations rather than virtual portals. This can be the easier solution especially if you provide service for a small number of large tenants.
 
-**Parent topic:**[Deciding about virtual portals](../admin-system/advpuscn.md)
 
 **Related information**  
 

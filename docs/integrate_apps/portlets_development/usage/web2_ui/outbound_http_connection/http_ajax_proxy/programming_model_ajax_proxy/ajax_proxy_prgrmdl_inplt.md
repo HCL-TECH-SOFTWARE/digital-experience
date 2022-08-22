@@ -55,7 +55,6 @@ If you want the proxy to be able to access resources that require authentication
 
 Registering the proxy servlet in the Web deployment descriptor of a portlet does not imply that the portlet is based on an application specific configuration. If no `proxy-config.xml` file is provided with the portlet, the proxy servlet uses the global proxy configuration instead. The only constraint that you need to consider is that for each servlet mapping, a corresponding context path mapping must exist in the proxy configuration. This can be either in the global or in the application specific configuration. For details on how to configure the AJAX proxy refer to the section about AJAX proxy configuration.
 
-**Parent topic:**[The programming model for using the AJAX proxy](../dev-portlet/ajax_proxy_prgrmdl.md)
 
 **Related information**  
 

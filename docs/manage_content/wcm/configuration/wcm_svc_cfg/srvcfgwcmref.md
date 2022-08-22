@@ -13,5 +13,4 @@ The HCL Web Content Manager pre-rendering service \(WCM PrerenderService\) defin
 -   **[Web Content Manager search service](../admin-system/srvcfgwcmref_search.md)**  
 The HCL Web Content Manager search service \(WCM SearchService\) defines settings that control how web content is crawled and indexed for searching.
 
-**Parent topic:**[Setting service configuration properties](../admin-system/adsetcfg.md)
 

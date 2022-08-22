@@ -19,5 +19,4 @@ By default, when unauthenticated users attempt to access the `myportal` page, th
 -   **[Managing access control with external security managers](../security/man_acc_ext.md)**  
 HCL Digital Experience externalizes roles and uses access control to control role membership. From the perspective of the external security manager, these externalized roles contain only one permission: membership in the role. HCL Portal always determines the permissions associated with each role.
 
-**Parent topic:**[Securing](../security/securing_wp.md)
 

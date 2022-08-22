@@ -9,7 +9,6 @@ After you create a theme style, use this procedure to apply a customized look an
 -   **[Applying alternate styles](../dev-theme/themeopt_cust_altstyle.md)**  
 You can apply alternate styles to your portal pages using the HCL Portal 8.5 theme that you can apply to your portal pages.
 
-**Parent topic:**[Customizing the theme](../dev-theme/themeopt_cust.md)
 
 **Related information**  
 

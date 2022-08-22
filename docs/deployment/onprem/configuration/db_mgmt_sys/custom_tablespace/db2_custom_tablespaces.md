@@ -44,5 +44,4 @@ To configure custom table space assignments:
     -   IBM® i: ConfigEngine.sh database-transfer -DuseCustomTablespaceMapping=true
     -   z/OS®: ./ConfigEngine.sh database-transfer -DuseCustomTablespaceMapping=true
 
-**Parent topic:**[Assigning custom table spaces](../config/custom_table_spaces.md)
 

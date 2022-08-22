@@ -13,5 +13,4 @@ Task provider instances are services that access back-end systems to retrieve ta
 -   **[Task handler](../integrate/utl_task_handler.md)**  
  Task handlers define what the Unified Task List portlet does when users select a task to advance a workflow. The task handlers determine how the Unified Task List portlet connects to the tasks that the users must complete.
 
-**Parent topic:**[Integrating business processes](../integrate/utl_unified_task_list_porlet.md)
 

@@ -21,5 +21,4 @@ The remote REST service for PUMA is implemented as a servlet that runs as a sepa
 -   **[Lookup facility in the portal](../dev/uprof_rest_wp_lookup.md)**  
 For both convenience and alignment to other portal REST services, the portal remote REST service for PUMA offers a lookup facility. This lookup facility is done by plugging a provider into a reusable lookup facility in the portal. This function makes it possible for you to retrieve particular URLs of the service by specifying an absolute URI as a parameter to the so-called lookup servlet addressed by `/wps/poc`.
 
-**Parent topic:**[Remote REST service for PUMA](../dev/uprof_rest.md)
 

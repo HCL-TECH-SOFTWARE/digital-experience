@@ -37,5 +37,4 @@ Follow the steps to map the community pages to a community based on what HCL Dig
 
 **Note:** If the portal administrator configures a portlet with a new connections server URL for a community page, the changes take effect only after the community page is configured with a valid community ID for the new connections server. The community ID is configured by editing the portal page parameters settings to include the new community ID.
 
-**Parent topic:**[Community Pages](../connect/c_connections_portlets_comm_pages_ovr.md)
 

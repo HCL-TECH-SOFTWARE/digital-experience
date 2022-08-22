@@ -21,7 +21,6 @@ To use WebDAV for HCL Portal, you must first set up your WebDAV clients.
 -   **[Task webdav-deploy-zip-file](../admin-system/csa2r_cfgtsk_webdavdplzip.md)**  
 Use this configuration task to manage theme artifacts and to deploy iWidgets. This task uploads archive or compressed files to portal WebDAV folders.
 
-**Parent topic:**[Administering](../admin-system/administering_parent.md)
 
 **Related information**  
 

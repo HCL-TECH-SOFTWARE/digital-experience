@@ -70,5 +70,3 @@ Step E: The rules engine returns the result of the rule execution to the content
 
 **Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
 
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
-

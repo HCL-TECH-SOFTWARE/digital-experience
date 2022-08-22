@@ -275,5 +275,4 @@ For example:
     ![](../images/Customize%20site%20manager_Authoring_wcm_203.png)
 
 
-**Parent topic:**[Preparing the site toolbar](../dev-theme/themeopt_themeshelf.md)
 

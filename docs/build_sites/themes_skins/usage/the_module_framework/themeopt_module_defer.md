@@ -19,5 +19,4 @@ Because deferred modules are loaded distinctly after a page load, the types of r
 
 Do not use portal render request-dependent attributes because those attributes are not available in all cases. For example, when used in deferred mode, the render context is not available.
 
-**Parent topic:**[The module framework](../dev-theme/themeopt_module.md)
 

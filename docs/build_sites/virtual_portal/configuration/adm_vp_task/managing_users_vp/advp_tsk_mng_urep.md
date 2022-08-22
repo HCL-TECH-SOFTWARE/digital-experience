@@ -6,5 +6,4 @@ When you enable security on a portal installation, by default you have Federated
 
 As an alternative choice, the portal also supports the stand-alone WebSphere® Application Server Lightweight Directory Access Protocol \(LDAP\) user registry. You enable the user registry by using the configuration task wp-modify-ldap-security. In this case, you can use only the default realm.
 
-**Parent topic:**[Managing the users of virtual portals](../admin-system/advp_tsk_mng_usr.md)
 

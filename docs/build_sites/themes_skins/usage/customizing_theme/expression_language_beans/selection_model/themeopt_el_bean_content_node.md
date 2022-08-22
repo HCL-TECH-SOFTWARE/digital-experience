@@ -245,5 +245,4 @@ Attributes:
     Returns: [UrlGenerationPage](themeopt_el_bean_url_gen_page.md); the URL object pointing to this page
 
 
-**Parent topic:**[NavigationNode](../dev-theme/themeopt_el_bean_nav_node.md)
 

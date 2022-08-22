@@ -94,5 +94,4 @@ You can configure the following properties for the HTTP Basic Authentication Tru
         -   `/myprefix*mysuffix` will match every URL that starts with `/myprefix` and ends with `mysuffix`.
         -   `Fun\* Ag\\ent` will only match a user agent hat has `Fun* Ag\ent` as product name.
 
-**Parent topic:**[Enabling HTTP Basic Authentication for simple clients](../security/tait_nbl_hba4sc.md)
 

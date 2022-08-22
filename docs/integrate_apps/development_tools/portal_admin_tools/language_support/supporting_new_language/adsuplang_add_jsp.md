@@ -19,5 +19,4 @@ The following is an example of the order in which directories are searched, wher
 
 This search order means that if the user language is not supported, the portal will choose the file in the locale independent location, which in the example is the English file.
 
-**Parent topic:**[Supporting a new language](../admin-system/adsuplang_new.md)
 

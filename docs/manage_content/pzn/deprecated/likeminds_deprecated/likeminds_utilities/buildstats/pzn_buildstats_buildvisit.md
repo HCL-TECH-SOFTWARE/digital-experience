@@ -19,5 +19,3 @@ For transactional data, `buildstats` writes to these fields in Lps\_User\_Trx:
 
 **Parent topic:**[Using the LikeMinds utilities](../pzn/pzn_using_likeminds_utilities.md)
 
-**Parent topic:**[Using the LikeMinds utilities](../pzn/pzn_using_likeminds_utilities.md)
-

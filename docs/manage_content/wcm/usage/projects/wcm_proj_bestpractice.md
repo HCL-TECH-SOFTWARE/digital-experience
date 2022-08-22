@@ -18,5 +18,4 @@ When multiple projects are used for the same site, similar unique names might be
 
 To prevent these situations, avoid introducing new unique names with multiple projects at the same time. Instead, when using multiple projects at the same time, ensure that you use different unique names within each project.
 
-**Parent topic:**[Projects](../wcm/wcm_proj_overview.md)
 

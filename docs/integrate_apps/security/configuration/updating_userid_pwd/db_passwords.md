@@ -60,7 +60,6 @@ Results:
 
 WebSphere Application Server and HCL Digital Experience were updated to use your new database passwords. Verify that the HCL Digital Experience application server is running by opening the following URL in a browser: http://hostname.example.com:10039/wps/portal, where hostname.example.com is the fully qualified host name of the server where Portal is running and 10039 is the default transport port that is created by WebSphere® Application Server. The port number might be different for your environment.http://hostname.example.com:10039/wps/portal, where hostname.example.com is the fully qualified host name of the server where Portal is running and 10039 is the default transport port that is created by HCL Digital Experience application server. The port number might be different for your environment.http://hostname.example.com:10039/wps/portal, where hostname.example.com is the fully qualified host name of the server where Portal is running and 10039 is the default transport port that is created by HCL Digital Experience application server. The port number might be different for your environment.Lotus Quickr.
 
-**Parent topic:**[Updating user ID and passwords](../security/sec_pswds.md)
 
 **Related information**  
 

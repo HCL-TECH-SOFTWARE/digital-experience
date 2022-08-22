@@ -54,5 +54,4 @@ If you have a complete and functional uninstallation program, you can uninstall 
 10. After uninstalling HCL Digital Experience and WebSphere Application Server, you can also delete the Installation Manager. Run the ./uninstall command from the ibm/InstallationManager/uninstall directory.
 
 
-**Parent topic:**[Linux: Preparing to uninstall](../install/prep_uninst-Linux.md)
 

@@ -23,5 +23,4 @@ When creating new filters, it is recommended that you know before hand which fil
 10. Open the filter configuration page of the Unified Task List portlet and add the new filters as they were entered in the English version of the resource bundle. The **Name** field must match the value of the resource key and the **Resource key** field must match the key used for the property in the resource bundle.
 
 
-**Parent topic:**[Configuring Unified Task List portlet at run time](../integrate/utl_configuring_unified_task_list_at_runtime.md)
 

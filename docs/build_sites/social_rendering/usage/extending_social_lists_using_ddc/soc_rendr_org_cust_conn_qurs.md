@@ -24,7 +24,6 @@ For example, a list definition content item for the query that was defined in *D
 -   The `sourceref` component reference points to the query HTML component. For a description of that component, read *Dynamic HCL Connections source URL construction*.
 -   The design component reference points to an appearance component that generates the list of community member markup. The markup is generated based on the attributes that are defined in the `ibm.portal.sr.communities.members` list-rendering profile.
 
-**Parent topic:**[Extending social lists by using the digital data connector](../social/soc_rendr_xtnd_sl_by_plrf.md)
 
 **Related information**  
 

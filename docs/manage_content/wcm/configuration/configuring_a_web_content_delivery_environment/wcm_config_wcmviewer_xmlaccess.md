@@ -113,7 +113,6 @@ or
 
 **Important:** When configuring an item by its path, you cannot build the path from the **Display title** fields of the items in the path. You must use the **Name** fields of the items when specifying the path.
 
-**Parent topic:**[Configuring a web content delivery environment](../wcm/wcm_install_cfgdelivery.md)
 
 **Related information**  
 

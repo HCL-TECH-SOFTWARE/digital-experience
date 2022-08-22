@@ -20,5 +20,4 @@ When you use the wizard and provide information about the database for your envi
     |**DB2 for IBM i driver class name**|com.ibm.db2.jdbc.app.DB2Driver|
 
 
-**Parent topic:**[Installing and preparing the database software](../config/prereq_db_software.md)
 

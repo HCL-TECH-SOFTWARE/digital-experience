@@ -54,5 +54,4 @@ JCR-based content includes content that is created with Web Content Manager or P
     8.  Manually create a JCR collection called JCRCollection1; refer to Setting up JCR Search Collection for information.
 
 
-**Parent topic:**[Configuring search in a portal farm](../install/config_search_farm.md)
 

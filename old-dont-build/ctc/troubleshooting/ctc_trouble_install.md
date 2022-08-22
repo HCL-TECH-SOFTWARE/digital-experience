@@ -57,5 +57,4 @@ These are some solutions to problems with installing Content Template.
     -   Update the page templates as described in the portal migration documentation. For instructions, see [Updating page templates](../migrate/mig_t_update_templates.md).
     -   You can alternately run the installation script again with `UPGRADE_CTC_3=true` in ctc.properties. This moves the page templates into the hidden pages location.
 
-**Parent topic:**[Troubleshooting Content Template sites](../ctc/ctc_trouble_overview.md)
 

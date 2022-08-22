@@ -91,5 +91,4 @@ Ensure your DB2® server is already installed and running.
     Example of the script is not available for Windows.
 
 
-**Parent topic:**[Manual Steps: Database Transfer option in the Configuration Wizard](../eua-workflows/kc-db-parent.md)
 

@@ -43,7 +43,6 @@ Portal Search starts a new crawl on the portal site search collection.
 1.  On a multilingual portal site, you can create multiple collections in different languages. For details, see the topic about Crawling a multilingual portal site.
 2.  When you start the crawl for the first time, a warning message might display. You can ignore this message. For more information, see the topic about Hints and tips for Portal Search crawls.
 
-**Parent topic:**[Searching and crawling Portal and other sites](../admin-system/srcportals.md)
 
 **Related information**  
 

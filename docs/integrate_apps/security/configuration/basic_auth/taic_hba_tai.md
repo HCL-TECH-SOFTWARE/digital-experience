@@ -11,7 +11,6 @@ If the HTTP Basic Authentication TAI is enabled, it decides on every incoming re
 
 If the TAI decides to authenticate the request and that request contains an authorization header that contains a user ID and password, the TAI tries to log on with that credential. If no user ID and password is provided, the TAI will challenge the client according to RFC 2617.
 
-**Parent topic:**[Enabling HTTP Basic Authentication for simple clients](../security/tait_nbl_hba4sc.md)
 
 **Related information**  
 

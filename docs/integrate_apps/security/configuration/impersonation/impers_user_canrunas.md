@@ -32,5 +32,4 @@ Users with administrator access in HCL Portal can assign the Can Run As User rol
 4.  Verify that the user now has **User** and **Can Run As User** access.
 
 
-**Parent topic:**[Administering user impersonation](../admin-system/impers_user.md)
 

@@ -6,5 +6,3 @@ When `buildstats` runs, it updates the score field to the average rating for tha
 
 **Parent topic:**[User predictability \| LikeMinds engine](../pzn/pzn_user_predictablity_main.md)
 
-**Parent topic:**[User predictability \| LikeMinds engine](../pzn/pzn_user_predictablity_main.md)
-

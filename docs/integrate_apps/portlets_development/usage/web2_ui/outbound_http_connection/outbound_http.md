@@ -56,7 +56,6 @@ To extend the functions of an outbound connection, portal administrators can imp
 -   **[Migration](../dev-portlet/outbound_http_migrate.md)**  
 HCL Portal Version 8.5 provides a migration process for the change from the Ajax proxy of previous portal versions to the new outbound HTTP connection.
 
-**Parent topic:**[Web 2.0 user interface features](../dev-portlet/w2_ovu.md)
 
 **Related information**  
 

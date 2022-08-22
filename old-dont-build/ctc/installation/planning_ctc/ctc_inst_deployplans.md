@@ -9,5 +9,4 @@ Before you install Content Template Catalog 4.4, ensure that you have installed 
 -   **[Scoped assets for virtual portals](../ctc/ctc_inst_deployplans_virtual.md)**  
 The installation contains assets that are not scoped to a virtual portal and assets that are.
 
-**Parent topic:**[Content Template Catalog 4.4](../ctc/ctc_intro.md)
 

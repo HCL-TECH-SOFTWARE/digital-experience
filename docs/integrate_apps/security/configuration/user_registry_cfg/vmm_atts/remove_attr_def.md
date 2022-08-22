@@ -97,7 +97,6 @@ Use caution when you do these steps.
     7.  Stop and restart the WebSphere\_Portal server.
 
 
-**Parent topic:**[Adding more attributes to VMM](../install/manage_atts.md)
 
 **Previous topic:**[Mapping attributes](../install/map_attributes.md)
 

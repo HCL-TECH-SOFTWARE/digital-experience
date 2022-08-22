@@ -37,5 +37,4 @@ To enable circular logging for an offline DB2® database backup, follow these st
 12. Restart DB2 to enable the changes.
 
 
-**Parent topic:**[Enabling logging](../admin-system/i_wadm_t_bkup_log_winlinux.md)
 

@@ -27,7 +27,6 @@ If a portlet has been added to a category by adding it to a page that has been p
 -   **[Modifying and deleting Applications palette categories](../admin-system/epc_mod_del_categories.md)**  
 You can easily modify or delete Applications palette categories.
 
-**Parent topic:**[Preparing the site toolbar](../dev-theme/themeopt_themeshelf.md)
 
 **Related information**  
 

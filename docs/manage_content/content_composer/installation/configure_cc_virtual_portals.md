@@ -112,5 +112,4 @@ To grant access to all authenticated portal users:
     ```
 
 
-**Parent topic:**[Install the HCL Digital Experience 9.5 components](../containerization/install_config_cc_dam.md)
 

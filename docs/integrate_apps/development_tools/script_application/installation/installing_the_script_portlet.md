@@ -51,7 +51,6 @@ When you install Combined Cumulative Fix 09 or a later cumulative fix on your HC
     If you want to roll back the cumulative fix installation for any reason, the uninstall process removes the Script Application Editor, Importer, and Runtime extensions. They remain inoperable until you install a cumulative fix that includes the Script Application or you reinstall the earlier version 1.3 of the Script Portlet PAA. Existing instances and the library are not uninstalled.
 
 
-**Parent topic:**[The Script Application](../script-portlet/script_portlet.md)
 
 **Related information**  
 

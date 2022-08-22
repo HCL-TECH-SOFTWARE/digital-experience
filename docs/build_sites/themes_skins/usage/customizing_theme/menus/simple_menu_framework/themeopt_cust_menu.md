@@ -11,7 +11,6 @@ Whether the menu items are visible is controlled in a layered way by client-side
 -   **[Menu styles](../dev-theme/themeopt_cust_menustyling.md)**  
 You can vary the appearance of the items in menus that are delivered through the JSON menu framework.
 
-**Parent topic:**[Menus](../dev-theme/themeopt_menu.md)
 
 **Related information**  
 

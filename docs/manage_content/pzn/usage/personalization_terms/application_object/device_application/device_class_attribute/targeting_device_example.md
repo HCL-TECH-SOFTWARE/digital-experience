@@ -36,5 +36,3 @@ The segments in this saved profiler rule appear in the Add Segment view when you
 
 **Parent topic:**[Device class attribute](../contarget/targeting_device.md)
 
-**Parent topic:**[Device class attribute](../contarget/targeting_device.md)
-

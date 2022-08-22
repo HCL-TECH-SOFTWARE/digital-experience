@@ -48,7 +48,6 @@ Address the virtual portal by the URL context or the host name that you specifie
 
     -   Deploying portlet applications into a virtual portal by using the XML configuration interface: If you deploy a portlet, that portlet is available to all virtual portals in the portal installation, unless you restrict this deployment by using Portal Access Control. If that portlet was already deployed in other virtual portals, errors can occur during the execution of the XML request.
 
-**Parent topic:**[Virtual portals command reference](../admin-system/advpref_cmd.md)
 
 **Related information**  
 

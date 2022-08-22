@@ -14,7 +14,6 @@ Syndication allows your business users to define the content of your Portal Site
 
 Syndication can be set up between main or virtual portals on different systems or on the same portal system. Because the syndicated pages refer to portlets with the ID of the portlets, an initial staging needs to take place before syndication can be used.
 
-**Parent topic:**[Overview of staging to production](../deploy/dep_ovr_concepts.md)
 
 **Related information**  
 

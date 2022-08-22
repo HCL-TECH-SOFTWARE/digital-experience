@@ -18,5 +18,4 @@ In addition to the list of principals, two flags control the implicit distributi
 
 Although the flags can be manipulated for each action set, they are ignored for security administrators and administrators. For these two action sets, inheritance and propagation are never blocked.
 
-**Parent topic:**[Portal Access Control](../admin-system/ptl_acc_con.md)
 

@@ -23,5 +23,4 @@ Proceed as follows:
 3.  Restart the HCL Portal servers.
 
 
-**Parent topic:**[Administering Portal Search](../admin-system/srtadmsrch.md)
 

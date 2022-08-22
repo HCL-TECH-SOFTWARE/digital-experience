@@ -10,5 +10,4 @@ The new "embed" mode for inline editing is used throughout the CTC demo site, pa
 
 Predefined groups and users can be installed with Content Template 4.1.2 and 4.1.3. The groups are designed to demonstrate how different user types can interact with the Content Template Catalog. Each group contains sample users. You can add your own users to the predefined groups to give real users the same access as the example users. See [Groups and users](ctc_groups_users.md) for further information.
 
-**Parent topic:**[Content Template overview](../ctc/ctc_overview.md)
 

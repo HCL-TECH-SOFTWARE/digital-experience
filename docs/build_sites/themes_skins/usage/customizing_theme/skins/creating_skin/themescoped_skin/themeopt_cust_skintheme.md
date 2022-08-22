@@ -21,5 +21,4 @@ You can begin to create a custom skin that is scoped to a specific theme by crea
 6.  Copy the new folder to the skins folder under your custom theme, dav:fs-type1/themes/custom\_theme/skins.
 
 
-**Parent topic:**[Create a theme-scoped skin](../dev-theme/themeopt_create_themescoped_skin.md)
 

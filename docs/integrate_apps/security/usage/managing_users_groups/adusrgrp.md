@@ -31,7 +31,6 @@ In HCL Portal, the Registration/Edit My Profile and Login portlets reside on spe
 -   **[Removing users and groups](../admin-system/adxmltsk_del_usrs_grps.md)**  
 Depending on circumstances, you might want to remove users or groups from your HCL Digital Experience that are no longer used or required. You can use the XML configuration interface \(XML Access\) to list such users and groups. You can also remove only some selected users and groups, and keep others for further use.
 
-**Parent topic:**[Administering](../admin-system/administering_parent.md)
 
 **Related information**  
 

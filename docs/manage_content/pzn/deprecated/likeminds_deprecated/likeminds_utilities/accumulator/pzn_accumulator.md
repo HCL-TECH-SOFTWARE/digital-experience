@@ -6,5 +6,3 @@ Similar to the `sifter` for the other LikeMinds engines, the `accumulator` runs 
 
 **Parent topic:**[Using the LikeMinds utilities](../pzn/pzn_using_likeminds_utilities.md)
 
-**Parent topic:**[Using the LikeMinds utilities](../pzn/pzn_using_likeminds_utilities.md)
-

@@ -71,5 +71,4 @@ The names of element labels in different items must be the same if an element re
 |Features|Heading|Text|
 |News|Heading|Text|
 
-**Parent topic:**[Creating reusable assets](../site/site_assets.md)
 

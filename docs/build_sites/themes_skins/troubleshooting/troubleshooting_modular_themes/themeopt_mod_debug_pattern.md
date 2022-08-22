@@ -84,7 +84,6 @@ Use a pattern to determine an issue within your custom modules. This pattern min
     ```
 
 
-**Parent topic:**[Troubleshooting modular themes](../dev-theme/themeopt_mod_debug_ovr.md)
 
 **Related information**  
 

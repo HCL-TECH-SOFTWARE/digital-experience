@@ -8,5 +8,4 @@ Pages and page templates are always scoped. The CTC application and HCL Digital 
 
 If managed pages are enabled, Content Template libraries are scoped to virtual portals. If managed pages are not enabled, then Content Template libraries are not scoped to virtual portals.
 
-**Parent topic:**[Planning to use Content Template](../ctc/ctc_inst_deployplans.md)
 

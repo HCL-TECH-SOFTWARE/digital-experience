@@ -14,5 +14,4 @@ You can use component reference elements in two ways:
 
 To create a component reference element, you can either add a component reference element to an authoring template, site area or content item, or create a component reference component.
 
-**Parent topic:**[Selection elements](../wcm/wcm_dev_elements_types_selection.md)
 

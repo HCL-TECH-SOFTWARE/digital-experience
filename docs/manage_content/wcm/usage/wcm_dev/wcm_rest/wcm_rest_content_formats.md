@@ -518,7 +518,6 @@ When you use REST with components or elements, use these content formats. These 
     ```
 
 
-**Parent topic:**[REST service for Web Content Manager](../wcm/wcm_rest.md)
 
 **Related information**  
 

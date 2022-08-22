@@ -20,5 +20,4 @@ Custom connection filters for outbound HTTP connections are defined at a policy 
 
 The `<filter-chain>` section contains a list of class names that denote the factory class for custom HTTP connection filters. The outbound connection service loads and runs the filters in the order in which they appear in the configuration.
 
-**Parent topic:**[Custom outbound service filters](../dev-portlet/outbhttp_cust_srvc_filtrs.md)
 

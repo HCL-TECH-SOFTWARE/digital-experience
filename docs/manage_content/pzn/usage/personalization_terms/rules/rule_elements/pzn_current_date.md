@@ -6,5 +6,3 @@ The **current Date** resource contains several attributes you can use for compar
 
 **Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
 
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
-

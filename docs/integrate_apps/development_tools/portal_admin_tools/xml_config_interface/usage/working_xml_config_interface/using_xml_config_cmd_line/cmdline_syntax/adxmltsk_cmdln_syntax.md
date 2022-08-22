@@ -9,5 +9,4 @@ You can also use the XML command line client with SSL over a secure HTTPS connec
 -   **[XML Syntax for exporting and importing credential vault data](../admin-system/adxmltsk_cmdln_sntx_crd_vlt.md)**  
 When you use the XML command line for credential export or import, the command syntax is slightly different than for normal command-line use.
 
-**Parent topic:**[Using the XML configuration command line client](../admin-system/adxmltsk_cmdln.md)
 

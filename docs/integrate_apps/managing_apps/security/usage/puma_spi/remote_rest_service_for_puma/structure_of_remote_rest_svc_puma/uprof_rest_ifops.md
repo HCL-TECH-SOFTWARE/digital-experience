@@ -189,5 +189,4 @@ The following list shows and describes all the possible URI path operations, tog
         This URI path operation deletes the membership list for the user or group; this means that it removes the user or group from all groups. This URI path operation has no query parameter.
 
 
-**Parent topic:**[Structure of the remote REST service for PUMA](../dev/uprof_rest_gen.md)
 

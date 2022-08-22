@@ -65,5 +65,4 @@ Or possibly separated by line of business within a single environment:
 
 **Note:** An important consideration in this scenario is that the application binaries are shared between environments. If you update either WebSphere Application Server or HCL Digital Experience code levels, you must do so across all profiles simultaneously. This should be taken into consideration depending on your business processing and deliverables schedules.
 
-**Parent topic:**[Supporting multiple profiles](../install/sup_mult_prof.md)
 

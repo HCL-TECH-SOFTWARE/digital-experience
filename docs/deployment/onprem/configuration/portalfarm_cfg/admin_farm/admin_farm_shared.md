@@ -17,5 +17,4 @@ To restart an application, you can either access the WebSphere Integrated Soluti
 
 If the administrative action is extensive, updating several WebSphere Application Server and HCL Portal assets at once, you may want to follow the instructions under the Maintaining a portal farm section, which walks through an update procedure involving a second filesystem and database, ensuring that the updates are isolated from the original configuration and each server can be switched to the updated configuration, tested, and returned to production traffic without affecting other farm instances in any way. This option has the added benefit of providing a fallback configuration if the changes do not work as expected.
 
-**Parent topic:**[Administering a portal farm](../install/admin_farm.md)
 

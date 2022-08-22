@@ -173,5 +173,4 @@ The installation creates a dedicated administrative user and corresponding admin
 
     -   Portal Site library: Content resource type
 
-**Parent topic:**[Resources, roles, access rights, and initial access control settings](../admin-system/resources_roles.md)
 

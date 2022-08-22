@@ -9,7 +9,6 @@ For extracting the individual pieces of metadata of social objects contained in 
 -   **[Digital Data Connector profiles for social rendering](../social/soc_rendr_lst_rndr_prfls.md)**  
 Starting with Version 8.5, HCL Digital Experience includes a set of Digital Data Connector \(DDC\) for HCL Portal profiles. You can use them with the social rendering DDC plug-in that is identified by the extension ID ibm.portal.ddc.sr.
 
-**Parent topic:**[Customizing the visual design of your view definitions](../social/soc_rendr_cust_socl_list_visual_design.md)
 
 **Related information**  
 

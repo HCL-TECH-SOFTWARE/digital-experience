@@ -27,7 +27,6 @@ Rule-based user groups are implemented as a custom repository adapter for Virtua
 -   **[Configuring the rule-based user groups adapter](../admin-system/rbug_instl.md)**  
 To install rule-based user groups on your HCL Portal, you must set up a database, and configure VMM rule based groups.
 
-**Parent topic:**[Users and groups](../admin-system/adusrgrp.md)
 
 **Related information**  
 

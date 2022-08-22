@@ -100,7 +100,6 @@ foreach page [$Content search pages] {
 portal_logout
 ```
 
-**Parent topic:**[Command reference for the Portal Scripting Interface](../admin-system/adpsicrf.md)
 
 **Related information**  
 

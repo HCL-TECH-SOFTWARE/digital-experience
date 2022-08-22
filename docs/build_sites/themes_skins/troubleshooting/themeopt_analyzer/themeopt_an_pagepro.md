@@ -22,5 +22,3 @@ The page explorer provides specialized view of your website pages to shows theme
 
 **Parent topic:**[Theme Optimization Analyzer](../dev-theme/themeopt_an_analyzer.md)
 
-**Parent topic:**[Theme Optimization Analyzer](../dev-theme/themeopt_an_analyzer.md)
-

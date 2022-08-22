@@ -59,5 +59,4 @@ Run the `run-wcm-admin-task-delete-libraries` task from the `[wp\_profile\_root]
 
 **Note:** When you run this task on a virtual portal, you must add either `-DVirtualPortalHostName`=name or `-DVirtualPortalContext=context` to the command.
 
-**Parent topic:**[Web content administration tools](../wcm/wcm_maintain.md)
 

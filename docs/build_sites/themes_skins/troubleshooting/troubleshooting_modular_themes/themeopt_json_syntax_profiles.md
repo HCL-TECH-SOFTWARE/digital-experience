@@ -12,7 +12,6 @@ EJPNK0060W: The attribute "version" in module test_analyzer_module_invalidsyntax
 
 All syntax warnings are also included in the Theme Optimization Analyzer Validation Report.
 
-**Parent topic:**[Troubleshooting modular themes](../dev-theme/themeopt_mod_debug_ovr.md)
 
 **Related information**  
 

@@ -13,7 +13,6 @@ Each message code consists of a product identifier, component identifier, a uniq
 -   **[HCL Web Content Manager Support Tools](../trouble/wcm_support_tools.md)**  
 Use the HCL Web Content Manager \(WCM\) Support Tools portlet to investigate and analyze information related to the WCM Java Content Repository \(JCR\) nodes.
 
-**Parent topic:**[HCL Digital Experience 9.5 Product Documentation](../welcome/wp95_welcome.md)
 
 **Related information**  
 

@@ -12,5 +12,3 @@ The second step in the mentor selection process is to assign mentors from the me
 
 **Parent topic:**[How the mentor selection process works](../pzn/pzn_mentor_selection_process.md)
 
-**Parent topic:**[How the mentor selection process works](../pzn/pzn_mentor_selection_process.md)
-

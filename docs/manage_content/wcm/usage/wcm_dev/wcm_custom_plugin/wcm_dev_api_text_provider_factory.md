@@ -60,5 +60,4 @@ If you create a new plug-in application with the same names and IDs as an existi
 
 When sorting is applied to a set of items, the item title is used to sort the items, not the title specified in the text provider factory.
 
-**Parent topic:**[How to create custom plug-ins](../wcm/wcm_dev_plugins.md)
 

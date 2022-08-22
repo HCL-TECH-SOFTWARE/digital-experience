@@ -11,5 +11,4 @@ If you changed the context root on the **Configuration for HCL Portal: Profile c
 -   **[Changing the site URL after an installation](../config/cfg_intr_seo.md)**  
 After you install HCL Digital Experience, you can change the portal site URL to create a shorter or more human-readable URL. Use the new option in the Configuration Wizard to remove or change the context root and default home \(/wps/portal\) values in your site URL. You can also select an option to remove or add navigational state information from your site URL.
 
-**Parent topic:**[HCL Portal](../config/config_portal.md)
 

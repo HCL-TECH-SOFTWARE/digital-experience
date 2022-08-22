@@ -155,5 +155,4 @@ The following information describes virtual resources. The resources listed migh
 -   **[Role blocks for resources](../admin-system/sec_blockroles.md)**  
 Role blocks prevent inheritance and propagation through the resource hierarchy. This topic describes role blocks and provides examples of how role blocks affect resources.
 
-**Parent topic:**[Resources, roles, access rights, and initial access control settings](../admin-system/resources_roles.md)
 

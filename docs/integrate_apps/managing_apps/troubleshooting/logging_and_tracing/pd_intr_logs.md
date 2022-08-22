@@ -51,7 +51,6 @@ The following table outlines the tracing options that are used to capture loggin
 -   **[Logging and tracing client side rendering](../dev-portlet/csa2t_trbl.md)**  
 Learn the how to enable client side logging and tracing of your HCL Digital Experience pages.
 
-**Parent topic:**[Troubleshooting](../trouble/troubleshooting.md)
 
 **Related information**  
 

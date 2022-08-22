@@ -20,5 +20,3 @@ Rules support nested method calls. For example, a resource interface implementat
 
 **Parent topic:**[Using the Personalization APIs](../pzn/pzn_using_apis.md)
 
-**Parent topic:**[Using the Personalization APIs](../pzn/pzn_using_apis.md)
-

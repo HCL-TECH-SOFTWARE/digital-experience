@@ -82,7 +82,6 @@ If you make the web content available on your delivery portal by using syndicati
 
 **Note:** In the version 8.5 user interface, the JSR 286 Web Content Viewer portlet has been renamed to Web Content Viewer.
 
-**Parent topic:**[Web Content Manager](../wcm/wcm_migration_post_update.md)
 
 **Related information**  
 

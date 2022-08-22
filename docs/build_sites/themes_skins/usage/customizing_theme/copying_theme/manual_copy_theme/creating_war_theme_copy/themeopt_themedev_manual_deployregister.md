@@ -127,5 +127,4 @@ Your theme is now available for use on your portal. To verify, create a page, ed
 
 **Note:** Your custom theme includes ready-to-use modules that are shared across themes and intentionally remain uncopied in the Theme Modules web application. The Theme Modules web application and the web application for your theme must remain started for your theme to operate.
 
-**Parent topic:**[Creating a WAR-based theme copy](../dev-theme/themeopt_themedev_manual_warbased.md)
 

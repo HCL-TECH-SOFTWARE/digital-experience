@@ -19,5 +19,4 @@ To set the theme template on a page, you must use the XML configuration interfac
 4.  Import the page using XMLAccess or the Import XML portlet.
 
 
-**Parent topic:**[Theme templates \(theme.html\)](../dev-portlet/csa2_dgn_theme_html.md)
 

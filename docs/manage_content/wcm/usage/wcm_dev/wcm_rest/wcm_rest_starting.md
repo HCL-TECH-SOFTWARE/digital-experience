@@ -68,5 +68,4 @@ The same access control checks also apply to the HCL Digital Experience Version 
 
 |
 
-**Parent topic:**[REST service for Web Content Manager](../wcm/wcm_rest.md)
 

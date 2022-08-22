@@ -57,5 +57,4 @@ The initial federated repositories setup might not include the advanced set up f
 -   **[Configuring HCL Portal to use dynamic groups](../install/ldap_dyngrp.md)**  
 By default, HCL Digital Experience is enabled for static groups. However, the Virtual Member Manager \(VMM\) allows users to be members of either static or dynamic groups. Static groups have a persistent binding between a group and its members. Dynamic groups have a search query that is defined to retrieve the members of a group.
 
-**Parent topic:**[User registry](../config/config_user_registry.md)
 

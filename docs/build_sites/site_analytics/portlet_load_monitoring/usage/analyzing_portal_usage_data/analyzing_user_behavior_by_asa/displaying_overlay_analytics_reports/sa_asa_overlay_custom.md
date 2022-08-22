@@ -130,7 +130,6 @@ The following examples for customizing overlay reports show how the override pre
     Result: As the request parameter has the highest precedence, overlay reports will show sessions and page views with weekly interval granularity for four weeks, starting backwards from yesterday. Reports on all other pages will show as specified by the default configuration.
 
 
-**Parent topic:**[Displaying overlay analytics reports](../admin-system/sa_asa_overlay_stats.md)
 
 **Previous topic:**[Viewing overlay analytics statistics](../admin-system/sa_asa_ovrly_stats_ui.md)
 

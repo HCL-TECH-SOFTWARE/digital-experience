@@ -69,5 +69,4 @@ Templates are created using a wizard that guides you through a set of properties
     If the parent page does not allow inheritance, the access control settings are used. If inheritance is allowed, the access control settings are in addition to the inherited settings.
 
 
-**Parent topic:**[Site development with Site Builder](../panel_help/sitebuilder_using.md)
 

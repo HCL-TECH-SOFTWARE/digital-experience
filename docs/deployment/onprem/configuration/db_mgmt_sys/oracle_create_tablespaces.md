@@ -28,5 +28,4 @@ If you configured your database with Automatic Storage Management, you might nee
 2.  Ensure the database is registered with the Oracle listener. Use the tnsnames.ora file to describe this database and recycle the listener.
 
 
-**Parent topic:**[Database Management Systems](../config/config_dbms.md)
 

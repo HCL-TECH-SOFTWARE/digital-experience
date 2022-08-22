@@ -15,5 +15,4 @@ How you remove and restore a server from production traffic depends on the load 
 5.  Restore the server back to the production traffic.
 
 
-**Parent topic:**[Administering a portal farm](../install/admin_farm.md)
 

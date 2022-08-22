@@ -172,5 +172,4 @@ The following example shows how the URL-encoded representation of the custom bus
 Firefox/2.0.0.18" "JSESSIONID=0000JwIm04xm7btVLwzCj9Qo-uj:-1"
 ```
 
-**Parent topic:**[Logging and analyzing server side site data](../admin-system/adsaconf.md)
 

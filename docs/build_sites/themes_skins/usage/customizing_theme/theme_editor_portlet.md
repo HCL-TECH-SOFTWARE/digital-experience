@@ -45,5 +45,4 @@ If the user saves the file, the added markup will display in the theme when the 
 -   If the user chooses to edit an uncompressed file \(CSS or JavaScript\), the HCL DX server must be in development mode \(i.e. Remote debugging must be turned on in the Theme Analyzer portlet\) in order for the changes to display. 
 -   If the Theme Editor portlet already resides on the system and CF196 is applied and then rolled back, the portlet will need to be reinstalled.
 
-**Parent topic:**[Customizing the theme](../dev-theme/themeopt_cust.md)
 

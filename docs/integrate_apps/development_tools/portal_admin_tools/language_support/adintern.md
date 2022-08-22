@@ -25,7 +25,6 @@ You can manage the language fallback behavior of HCL Digital Experience by a bui
 -   **[Using the language switcher](../admin-system/lang_switch.md)**  
 You can use the language switcher to switch from any of the supported languages. This feature is available only for authenticated portal users.
 
-**Parent topic:**[Administering](../admin-system/administering_parent.md)
 
 **Related information**  
 

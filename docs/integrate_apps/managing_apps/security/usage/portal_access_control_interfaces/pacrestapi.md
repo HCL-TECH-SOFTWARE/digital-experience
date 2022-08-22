@@ -495,5 +495,4 @@ The following is the result of the `GET` method:
 </atom:entry>
 ```
 
-**Parent topic:**[Portal Access Control interfaces](../dev/wppacintfce.md)
 

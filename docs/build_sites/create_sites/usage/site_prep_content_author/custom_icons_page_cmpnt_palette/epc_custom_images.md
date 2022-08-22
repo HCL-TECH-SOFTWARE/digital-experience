@@ -50,5 +50,4 @@ You can create custom images for items in the Page Components palette and Web co
 -   **[Creating custom icons by adding an image element](../admin-system/epc_custom_images_element_img.md)**  
 You can create custom images for items in the Page Components palette and Web content authoring interface by deploying the image file directly into the item in the Page Components palette or Web content authoring interface as an element.
 
-**Parent topic:**[Preparing for content authors](../site/site_prep_toolbar.md)
 

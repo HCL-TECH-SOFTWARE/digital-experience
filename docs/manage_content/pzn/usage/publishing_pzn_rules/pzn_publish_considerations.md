@@ -35,11 +35,9 @@ So, the classes must be accessible to both the rule editor and the personalized 
 
 You handle updates and additions to the resource collection classes just as you would handle updates to any application binary or JSP. These classes are not affected by Personalization publishing. The definition of the resource collection which Personalization uses to associate a resource collection with its classes is stored in the Content Manager repository. Initially represented by the .hrf file, this definition is published along with the rules and campaigns.
 
-**Parent topic:**[Publishing personalization rules](../pzn/pzn_depub.md)
 
 **Next topic:**[Publishing personalization rules](../pzn/pzn_publishing_objects.md)
 
-**Parent topic:**[Publishing personalization rules](../pzn/pzn_depub.md)
 
 **Next topic:**[Publishing personalization rules](../pzn/pzn_publishing_objects.md)
 

@@ -70,7 +70,6 @@ The tag support profile provides access to a list of tags that is associated wit
 -   **[OpenSearch support profile](../social/soc_rendr_prfls_opensearch_support.md)**  
 The OpenSearch support profile provides access to information that is defined in the OpenSearch specification. The OpenSearch specification is commonly used in the Atom feed format.
 
-**Parent topic:**[Customizing the markup generation](../social/soc_rendr_cust_markup_genrtn.md)
 
 **Related information**  
 

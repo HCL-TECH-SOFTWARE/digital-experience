@@ -22,7 +22,6 @@ If you no longer require the use of the credential vault adapter that you create
 -   **[Disabling user provisioning](../security/usr_prov_dis.md)**  
 After you enable and use the user provisioning feature within IBM Security Access Manager, you can disable the feature.
 
-**Parent topic:**[External security managers](../security/sec_ext_man.md)
 
 **Related information**  
 

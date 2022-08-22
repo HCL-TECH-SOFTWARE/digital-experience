@@ -36,5 +36,4 @@ You can also display your cache settings in a browser by using the following URL
 http://hostname:port/wps/wcm/connect?MOD=ExportCacheSettings&processLibraries=false
 ```
 
-**Parent topic:**[Web content administration tools](../wcm/wcm_maintain.md)
 

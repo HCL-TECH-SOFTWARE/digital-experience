@@ -21,5 +21,4 @@ When you enable portal light mode, a portlet application is not started by a use
 -   **[Automatically enable and disable applications via portal light mode](../admin-system/portal_light_nbl_apps.md)**  
 The `enable-portal-light-startup-performance`configuration task will set Auto Start to `No` for all applications defined in the file <wp\_profile\_root\>\\PortalServer\\config\\StartupPerformance\\wp.base\_TargetMapInclList.properties to stop them from being auto started during Portal server startup, as long as the same application is not listed in the wp.base\_TargetMapExcList.properties file.
 
-**Parent topic:**[Configuring portal behavior](../admin-system/adptlcfg.md)
 

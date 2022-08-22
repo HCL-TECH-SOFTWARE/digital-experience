@@ -73,7 +73,6 @@ In the sample XML script, replace the following variables with your actual Corem
     Replace this by your authentication key used by Coremetrics®. This allows URL queries to the Coremetrics® system.
 
 
-**Parent topic:**[Displaying overlay analytics reports](../admin-system/sa_asa_overlay_stats.md)
 
 **Previous topic:**[Configuring security for overlay analytics reports](../admin-system/sa_asa_overlay_stats_sec.md)
 

@@ -9,5 +9,4 @@ The CTC Process library contains workflow. To match your organization's change m
     -   Publish Workflow Stage
         -   Publish action
 
-**Parent topic:**[Assets contained in the Content Template](../ctc/ctc-assets.md)
 

@@ -54,7 +54,6 @@ Do not edit the HCL Digital Experience 8.5 theme CSS style sheets directly, beca
 -   **[Style definitions](../dev-theme/themeopt_cust_styledef.md)**  
 Customize your theme with these definitions.
 
-**Parent topic:**[Styles](../dev-theme/themeopt_cust_styles.md)
 
 **Related information**  
 

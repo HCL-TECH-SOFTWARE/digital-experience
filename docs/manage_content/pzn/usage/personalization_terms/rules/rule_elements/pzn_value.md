@@ -16,5 +16,3 @@ In addition to predefined resource properties, you can enter properties of a res
 
 **Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
 
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
-

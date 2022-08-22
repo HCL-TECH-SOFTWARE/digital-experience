@@ -100,7 +100,6 @@ In addition to these attributes, the common profile also provides access to the 
     This list property specifies the link to this feed.
 
 
-**Parent topic:**[Digital Data Connector profiles for social rendering](../social/soc_rendr_lst_rndr_prfls.md)
 
 **Related information**  
 

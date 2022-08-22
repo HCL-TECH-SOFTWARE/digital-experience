@@ -98,5 +98,4 @@ Once the code and deployment changes have been made for using the property broke
 
 If you are using your own development environment, make sure to add the wp.propertybroker.standard.api.jar file to your class path for standard portlets. These JAR files can be found in the `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/base/wp.propertybroker.standard.api/shared/app` directory.
 
-**Parent topic:**[JSR 168 HCL extension for cooperative portlets](../dev-portlet/pltcom_ptlt_coop.md)
 

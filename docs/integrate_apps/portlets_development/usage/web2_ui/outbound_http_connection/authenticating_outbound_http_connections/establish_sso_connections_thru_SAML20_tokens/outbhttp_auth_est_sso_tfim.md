@@ -13,7 +13,6 @@ Learn about how to create a policy rule for the SSO connection. Creating a polic
 -   **[Adding the Java Authentication and Authorization Service \(JAAS\) login module to the Tivoli Federated Identity Manager \(TFIM\) server](../dev-portlet/add_jaas.md)**  
 The Java Authentication and Authorization Service \(JAAS\) login module is available as a plug-in. This plug-in sets the email address of the logged in user within the security context so that the email address can be used within Tivoli Federated Identity Manager.
 
-**Parent topic:**[Configuration settings for SAML authenticated connections](../dev-portlet/config_settings_saml_auth_connections.md)
 
 **Related information**  
 

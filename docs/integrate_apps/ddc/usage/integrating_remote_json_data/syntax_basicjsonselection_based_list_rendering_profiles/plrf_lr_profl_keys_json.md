@@ -107,7 +107,6 @@ The following list shows the set of list-rendering profile entry keys that are a
     Use this key to define a derived profile. A derived profile includes the item attribute and the list property declarations of other list-rendering profiles by referencing these profiles. For more information, read *Creating list-rendering profiles*.
 
 
-**Parent topic:**[Syntax for BasicJSONSelection based list-rendering profiles](../social/plrf_lr_syntax4xpath_profl_json.md)
 
 **Related information**  
 

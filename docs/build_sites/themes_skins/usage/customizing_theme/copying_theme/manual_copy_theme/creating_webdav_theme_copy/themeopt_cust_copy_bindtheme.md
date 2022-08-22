@@ -88,5 +88,4 @@ To bind your theme by using XMLAccess in the Portal Administration pages, click 
 8.  Edit the output3.xml file to verify that the result works, and then delete the input.xml, output.xml, output2.xml, and output3.xml files.
 
 
-**Parent topic:**[Creating a WebDAV-based theme copy](../dev-theme/themeopt_themedev_manual_webdav.md)
 

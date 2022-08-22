@@ -13,7 +13,6 @@ You can use the XML configuration interface to delete orphaned data from your HC
     The portal removes all resources that you retained in the XML file during the previous step.
 
 
-**Parent topic:**[Using the XML configuration command line client](../admin-system/adxmltsk_cmdln.md)
 
 **Related information**  
 

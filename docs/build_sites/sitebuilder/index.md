@@ -29,7 +29,5 @@ Site Builder uses a set of wizards to guide HCL Digital Experience users in crea
 -   **[Troubleshooting issues with Site Builder](../sitebuilder/sitebuilder_issues.md)**  
 Find solutions to problems when you use Site Builder in the latest version of HCL Digital Experience.
 
-**Parent topic:**[Building the website](../site/site_build_parent.md)
-
 **Parent topic:**[Site templates](../practitioner_studio/site_templates.md)
 

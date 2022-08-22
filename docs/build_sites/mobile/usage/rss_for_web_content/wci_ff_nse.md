@@ -23,5 +23,4 @@ The security control element is used to set access controls on the item that is 
 -   **[Association control element](../wci/wci_ff_nse_association.md)**  
 The association element is used to create an association between two or more separate content items. It is used to support some content item relationships that are not native to Web Content Manager but that are found in some other web content management systems. One example would be a technical journal article that needs to include some data from one or more author biography content items.
 
-**Parent topic:**[IBM Web Content Integrator](../wci/wci_intro.md)
 

@@ -238,5 +238,4 @@ DELETE /wps/mycontenthandler/wcmrest/SiteArea/18001a8c-2117-45d2-be1c-baea28a417
 HTTP/1.0 200 OK
 ```
 
-**Parent topic:**[How to manage web content items by using REST](../wcm/wcm_rest_crud.md)
 

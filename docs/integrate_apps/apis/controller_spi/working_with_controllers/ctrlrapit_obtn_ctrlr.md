@@ -46,7 +46,6 @@ final LayoutModelController lmController = cmController.getLayoutModelController
 
 ```
 
-**Parent topic:**[Working with controllers](../dev/ctrlrapit_wrk.md)
 
 **Related information**  
 

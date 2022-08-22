@@ -23,13 +23,11 @@ Attribute based administration rules can be assigned manually via HCL Digital Ex
 -   **[Changing the error condition behavior](../pzn/pzn_error_behavior.md)**  
 Update the PersonalizationService.properties file to override an error condition behavior globally.
 
-**Parent topic:**[Personalization terms](../pzn/pzn_concepts.md)
 
 **Previous topic:**[Content resources](../pzn/pzn_content_resources.md)
 
 **Next topic:**[Rules](../pzn/pzn_rules.md)
 
-**Parent topic:**[Personalization terms](../pzn/pzn_concepts.md)
 
 **Previous topic:**[Content resources](../pzn/pzn_content_resources.md)
 

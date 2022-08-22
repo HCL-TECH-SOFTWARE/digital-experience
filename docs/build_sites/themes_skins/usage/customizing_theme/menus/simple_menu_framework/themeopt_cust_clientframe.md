@@ -208,7 +208,6 @@ The following is an example of `badgeData`.
 }
 ```
 
-**Parent topic:**[Simple menu framework](../dev-theme/themeopt_cust_menu.md)
 
 **Related information**  
 

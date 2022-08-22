@@ -9,5 +9,4 @@ The default Dojo context root in HCL Digital Experience is /WpsContextRoot/porta
 -   **[Enabling and upgrading JavaServer Faces portlet applications](../migrate/mig_post_dev_jsf.md)**  
 You can enable or upgrade portlet projects that use JavaServer Faces 1.x to JavaServer Faces 2.0 Facelet-based portlet projects. Refer to the Rational® Application Developer for WebSphere® Software documentation for instructions on enabling and upgrading JavaServer Faces portlet applications.
 
-**Parent topic:**[Post-migration activities](../migrate/mig_t_post_mig.md)
 

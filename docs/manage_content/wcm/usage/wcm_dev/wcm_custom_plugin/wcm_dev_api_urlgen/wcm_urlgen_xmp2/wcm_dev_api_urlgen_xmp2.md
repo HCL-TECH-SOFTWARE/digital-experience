@@ -31,7 +31,6 @@ This sample filter generates the friendly URL.
 -   **[Example 2: plugin.xml file](../wcm/wcm_dev_api_urlgen_xmp2_plugin.md)**  
 You can use this sample plugin.xml file to register the sample filter.
 
-**Parent topic:**[Creating a content URL generation filter class](../wcm/wcm_dev_api_urlgen.md)
 
 **Related information**  
 

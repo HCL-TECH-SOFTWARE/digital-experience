@@ -82,5 +82,4 @@ If you want the portal to wait and retry connecting to the underlying user repos
     Use this property to specify how long the service startup waits until it retries to connect to the user repository. This value is specified in seconds. The default is `60` seconds.
 
 
-**Parent topic:**[Portal Access Control Services](../admin-system/srvcfgref_secy_pac.md)
 

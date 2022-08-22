@@ -56,7 +56,6 @@ Usually, the profiles and contributions are determined once, when the portal ser
 
 To see the changes to profiles and contributions immediately, the `resourceaggregation.development.mode` property to true within the WP ConfigService resource environment provider.
 
-**Parent topic:**[Managing theme capabilities](../dev-theme/themeopt_admin_themes.md)
 
 **Related information**  
 

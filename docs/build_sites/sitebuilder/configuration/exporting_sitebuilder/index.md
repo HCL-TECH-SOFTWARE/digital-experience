@@ -22,5 +22,3 @@ With direct access to a virtual portal setup on HCL Digital Experience, exportin
 
 **Parent topic:**[Site Builder](../sitebuilder/sitebuilder_intro.md)
 
-**Parent topic:**[Site Builder](../sitebuilder/sitebuilder_intro.md)
-

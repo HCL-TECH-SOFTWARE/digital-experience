@@ -6,7 +6,6 @@ If you plan on migrating a customized, modularized Version 8.0 theme, review the
 
 After you migrate your data, you can choose to enable the Version 8.5 toolbar, and remove the Version 8.0 toolbar on your modularized Version 8.0 theme. See the "Enabling new functionality" section of the documentation to enable the new toolbar or remove the older toolbar.
 
-**Parent topic:**[Development considerations](../migrate/mig_plan_devconsiderations.md)
 
 **Related information**  
 

@@ -23,7 +23,6 @@ When you use tagging and rating with web content, the web content viewer provide
 -   **[Installing the multilingual extensions](../wcm/wcm_mls_install.md)**  
 The multilingual solution consists of a set of extensions to Web Content Manager that can be used to manage the authoring, workflow, and configuration of your multilingual system.
 
-**Parent topic:**[Configuring](../config/configuring_parent2.md)
 
 **Related information**  
 

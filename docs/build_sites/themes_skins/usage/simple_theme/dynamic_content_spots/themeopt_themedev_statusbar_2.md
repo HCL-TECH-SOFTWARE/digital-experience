@@ -108,5 +108,4 @@ The status bar displays error, warning, and informational messages at the beginn
 
 The status bar is now added to your Simple Theme.
 
-**Parent topic:**[Dynamic content spots](../dev-theme/themeopt_themedev_dynamic_content_spots.md)
 

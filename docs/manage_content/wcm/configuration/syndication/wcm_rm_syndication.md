@@ -58,5 +58,4 @@ You can run various syndication functions by using the web content API.
 
 Custom plug-ins that run extra functions when a syndication event is started can be developed for both syndicators and subscribers.
 
-**Parent topic:**[Administering](../admin-system/administering_parent.md)
 

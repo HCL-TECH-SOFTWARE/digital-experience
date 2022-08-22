@@ -7,5 +7,4 @@ The Portal Access Control \(PAC\) System Programming Interface \(SPI\) lets you 
 -   **[Portal Access Control REST API](../dev/pacrestapi.md)**  
 You can remotely access and modify access control information for resources through the HTTP protocol with the Portal Access Control REST API.
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 

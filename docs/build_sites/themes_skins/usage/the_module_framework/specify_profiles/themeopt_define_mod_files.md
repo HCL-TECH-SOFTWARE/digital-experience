@@ -17,5 +17,4 @@ You can change which sets of modules are used to render a page quickly through t
 -   **[Changing the theme default profile](../dev-theme/themeopt_cust_changepro_default.md)**  
 You can change the profile for the theme or a specific page to define the modules loaded.
 
-**Parent topic:**[The module framework](../dev-theme/themeopt_module.md)
 

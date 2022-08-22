@@ -24,5 +24,4 @@ The entry point for a theme is either Default.jsp or Plain.jsp, both of these fi
 -   sideNavigation.jsp: Provides the side navigation controls for the page.
 -   status.jsp: Template for error, warning, and information messages.
 
-**Parent topic:**[Understanding the Portal 8.5 modularized theme](../dev-theme/themeopt_defaultparts.md)
 

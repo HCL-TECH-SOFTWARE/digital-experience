@@ -75,7 +75,6 @@ A list-rendering profile describes the transformation between a specific XML doc
     Use this attribute to clear the bean list cache. If you set this attribute to the value `always`, the cache is always cleared before the new list-rendering context is set up. To achieve a conditional clearing action, you can set the attribute to a different value. In this case, the cache is cleared only if a portlet session attribute or a request attribute with the specified value is available in the current execution context.
 
 
-**Parent topic:**[Integrating remote XML data](../social/plrf_intgrt_rmt_xml.md)
 
 **Related information**  
 

@@ -40,5 +40,4 @@ puts "$pname"
 }
 ```
 
-**Parent topic:**[Portlet repository](../admin-system/ptlt_rep.md)
 

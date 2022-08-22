@@ -10,5 +10,3 @@ movie_pref.engine.titan.predictable.min_ratings_cutoff = 3
 
 **Parent topic:**[User predictability \| LikeMinds engine](../pzn/pzn_user_predictablity_main.md)
 
-**Parent topic:**[User predictability \| LikeMinds engine](../pzn/pzn_user_predictablity_main.md)
-

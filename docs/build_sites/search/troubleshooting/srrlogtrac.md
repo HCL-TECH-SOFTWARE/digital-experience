@@ -33,7 +33,6 @@ Portal Search has the following trace strings:
 
 If you have set up Portal Search in a remote configuration on a WebSphere® Application Server server, the log messages are filtered and printed out according to the WebSphere Application Server logging and tracing configuration. In this case refer to the WebSphere Application Server Help Center.
 
-**Parent topic:**[HCL Digital Experience Portal Search](../admin-system/admsrch.md)
 
 **Related information**  
 

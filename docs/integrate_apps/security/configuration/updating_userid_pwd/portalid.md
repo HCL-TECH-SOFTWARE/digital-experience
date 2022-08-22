@@ -59,7 +59,6 @@ Complete the following steps to replace the HCL Digital Experience administrator
 -   If you set the default portal administrator user ID to be used as the crawler user ID for Portal Search, you need to adapt that crawler user ID accordingly. For more information, read [Managing the content sources of a search collection](../admin-system/srtmngcontsrc.md#).
 -   If you have HCL Digital Experience Version 8.5 with CF08 or an earlier version and you have the Script Portlet V 1.3 PAA from the catalog installed, make sure that the security constraints of the Script Portlet reflect the new portal administrator group. If they do not match, update them manually to match the new portal administration group. For information about how to do so, read the section about the *Security overview for Script Portlet V 1.3* in the Script Portlet V 1.3 documentation.
 
-**Parent topic:**[Updating user ID and passwords](../security/sec_pswds.md)
 
 **Related information**  
 

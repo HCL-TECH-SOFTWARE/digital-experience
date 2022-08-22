@@ -6,5 +6,4 @@ The generic search syntax is documented in Search. The Layout bean supports the 
 -   control
 -   all or any
 
-**Parent topic:**[Component hierarchy \| Portal scripting interface](../admin-system/compnt_hrchy.md)
 

@@ -9,5 +9,4 @@ As the portal cannot distinguish one anonymous user from another, there are some
 -   Anonymous users cannot view their personal tags, and they cannot delete tags or ratings.
 -   Anonymous users cannot tag or rate a page with the Search and Tag Center profile deployed on it.
 
-**Parent topic:**[How tagging and rating works in the portal](../admin-system/tag_rate_adm_gen.md)
 

@@ -39,7 +39,6 @@ traceConfig: ["com.ibm.mm.iwidget.*", "com.ibm.portal.*", "com.ibm.portal.wps.*"
 
 By alternative, you can also achieve the same result by using scripting tools that WebSphere Application Server provides. For more information, refer to the WebSphere Application Server Help Center under topic *configuring custom properties for resource environment providers by using wsadmin scripting*.
 
-**Parent topic:**[Logging and tracing client side rendering](../dev-portlet/csa2t_trbl.md)
 
 **Related information**  
 

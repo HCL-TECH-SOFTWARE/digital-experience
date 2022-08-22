@@ -23,7 +23,6 @@ If you upgrade your Portal from a previous version to HCL Digital Experience 8.5
 -   For application-specific proxy configurations: The web module that contains the proxy-config.xml is deployed.
 -   One of the portal configuration tasks `create-outbound-http-connection-config` or `update-outbound-http-connection-config` is started.
 
-**Parent topic:**[Enabling new functionality in a migrated portal](../migrate/mig_t_enable_new.md)
 
 **Related information**  
 

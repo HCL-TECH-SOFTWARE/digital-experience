@@ -16,5 +16,3 @@ AgeGenderProfiler is
 
 **Parent topic:**[Profilers](../pzn/pzn_profilers.md)
 
-**Parent topic:**[Profilers](../pzn/pzn_profilers.md)
-

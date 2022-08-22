@@ -430,7 +430,6 @@ public class LocaleDependantSelectionFilter implements ContentPageResolutionFilt
     ```
 
 
-**Parent topic:**[How to create custom plug-ins](../wcm/wcm_dev_plugins.md)
 
 **Related information**  
 

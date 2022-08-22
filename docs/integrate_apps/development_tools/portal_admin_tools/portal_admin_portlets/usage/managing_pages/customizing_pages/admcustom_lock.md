@@ -6,5 +6,4 @@ In order to modify the locks for a certain page, a user must have Editor role on
 
 Be aware of the effect that locks and access permissions can have on pages that inherit content from a shared page. To lock or unlock content on a page:
 
-**Parent topic:**[Customizing pages](../admin-system/admcustom.md)
 

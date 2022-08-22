@@ -15,5 +15,4 @@ Before you activate the `SiteAnalyzerJSRPortletLogger` logger, you must ensure t
 5.  Save your changes, and restart the portal.
 
 
-**Parent topic:**[Setting up site analysis for the Web Content Viewer](../wcm/wcm_config_wcmviewer_sitean.md)
 

@@ -30,5 +30,3 @@ If you export a Site Builder template file, use the Solution Installer to make t
 
 **Parent topic:**[Exporting Site Builder templates to other servers](../sitebuilder/sitebuilder_temp_dist.md)
 
-**Parent topic:**[Exporting Site Builder templates to other servers](../sitebuilder/sitebuilder_temp_dist.md)
-

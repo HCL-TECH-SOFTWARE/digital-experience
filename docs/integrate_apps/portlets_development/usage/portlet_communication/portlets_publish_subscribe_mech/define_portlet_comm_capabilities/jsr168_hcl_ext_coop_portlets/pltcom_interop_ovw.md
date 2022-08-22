@@ -12,5 +12,4 @@ For more detailed information about the cooperative portlet programming model re
 
 When you write cooperative portlets, you need to observe some special guidelines for packaging and deployment descriptors. In the case of standard portlets, the function of the wrapper is provided through a portlet filter, and no extra run time code has to be included in the portlet WAR file.
 
-**Parent topic:**[JSR 168 HCL extension for cooperative portlets](../dev-portlet/pltcom_ptlt_coop.md)
 

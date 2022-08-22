@@ -35,5 +35,3 @@ String toString( )
 
 **Parent topic:**[LogEvent class](../pzn/pzn_logevent_class.md)
 
-**Parent topic:**[LogEvent class](../pzn/pzn_logevent_class.md)
-

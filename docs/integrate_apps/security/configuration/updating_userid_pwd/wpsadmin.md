@@ -39,7 +39,6 @@ Perform the following steps to change the administrator password:
 
 Additionally, you should also change the password in the wkplc.properties file, located in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
 
-**Parent topic:**[Updating user ID and passwords](../security/sec_pswds.md)
 
 **Related information**  
 

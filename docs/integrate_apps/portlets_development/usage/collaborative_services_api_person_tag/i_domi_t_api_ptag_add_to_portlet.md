@@ -116,7 +116,6 @@ Hello example
 <h2>Hello,<pa:person value="wpsadmin@cntserv_exmp.com" valueType="EMAIL" /> !</h2>
 ```
 
-**Parent topic:**[Collaborative Services API and the person tag](../collab/i_coll_r_cs_api.md)
 
 **Related information**  
 

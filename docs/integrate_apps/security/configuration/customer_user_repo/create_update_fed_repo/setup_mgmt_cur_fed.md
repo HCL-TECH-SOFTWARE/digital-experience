@@ -7,5 +7,4 @@ Add your custom repository to the default federated repositories. You must imple
 -   **[Updating federated repositories](../security/upd_cur_fed.md)**  
 You can update the environment parameters you defined when you created the federated repository. You should run the task to update your custom repository if you any environment settings have changed such as the base DN. You can also run the update task if you want to change any settings you specified when you created the repository. For example, run the update task if you want to change support for paging, sorting, and transactions.
 
-**Parent topic:**[Setting up custom user repositories](../security/setup_cur.md)
 

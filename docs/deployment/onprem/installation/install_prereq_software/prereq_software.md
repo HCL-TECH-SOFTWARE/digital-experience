@@ -12,7 +12,6 @@ Before you install and deploy HCL Digital Experience, make sure your user regist
 -   **[Preparing a remote web server](../install/prep_ihs.md)**  
 Install and configure the web server plug-in. The IBM WebSphere Application Server provides the plug-in. Configure the web server to communicate with HCL Digital Experience.
 
-**Parent topic:**[Installing HCL Digital Experience](../install/installing_parent2.md)
 
 **Previous topic:**[Migrating to IBM WAS 9.0.5](../was/ug_instwas95.md)
 

@@ -23,5 +23,4 @@ Proceed as follows:
 6.  Restart the portal server.
 
 
-**Parent topic:**[XML Syntax for exporting and importing credential vault data](../admin-system/adxmltsk_cmdln_sntx_crd_vlt.md)
 

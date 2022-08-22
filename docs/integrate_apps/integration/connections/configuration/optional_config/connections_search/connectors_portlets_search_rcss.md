@@ -58,7 +58,6 @@ includeField=wikiLabel&includeField=pageLabel&includeField=community\_id&highlig
 
 The RCSS component does not use the keystore that is managed by WebSphere® Application Server. If you try to set the `RestServiceSecureProtocol` property to https and the `RestServiceSecurePort` property to the SSL port for the HCL Connections server when you configure the RCSS search service, you cannot to retrieve the search scopes from HCL Connections and thus cannot complete the search configuration. You see SSL handshake errors in the HCL Portal `SystemOut` logs even though you imported the HCL Connections SSL certificate into the WebSphere Application Server SSL certificate truststore.
 
-**Parent topic:**[Configuring search integration](../connect/connections_portlets_search_overview.md)
 
 **Related information**  
 

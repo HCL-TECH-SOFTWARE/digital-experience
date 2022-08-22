@@ -19,7 +19,6 @@ Click the **Administration menu** icon. Then, click **Portal User Interface** \>
 2.  Deleting a theme or skin does not remove the `/theme` or `/skin` directory from the server.
 3.  Some of the theme and skin titles might not appear correctly if your language preference uses DBCS characters. Correct the display of these titles, change the character set used by your language preference for HTML markup to `UTF-8`.
 
-**Parent topic:**[Customizing pages](../admin-system/admcustom.md)
 
 **Related information**  
 

@@ -35,7 +35,6 @@ To configure and create the seedlist crawler:
     If you have defined a crawler schedule under the **Schedulers** tab, the crawler will start at the next possible time that you specified.
 
 
-**Parent topic:**[Searching and crawling Portal and other sites](../admin-system/srcportals.md)
 
 **Related information**  
 

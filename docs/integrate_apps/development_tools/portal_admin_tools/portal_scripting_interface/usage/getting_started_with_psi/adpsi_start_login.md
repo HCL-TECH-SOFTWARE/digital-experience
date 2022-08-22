@@ -18,5 +18,4 @@ wsadmin> **Portal.login\(your\_userid, your\_password\)**wsadmin>
 
 You can now administer the portal instance in a similar way as by using the Portal Administration user interface. The following examples show how you can work with pages.
 
-**Parent topic:**[Getting started with the Portal Scripting Interface](../admin-system/adpsi_start.md)
 

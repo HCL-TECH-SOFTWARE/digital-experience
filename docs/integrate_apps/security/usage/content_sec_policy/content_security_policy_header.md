@@ -66,5 +66,4 @@ The source list accepts four keywords:
     ```
 
 
-**Parent topic:**[Content Security Policy](../security/content_security_policy.md)
 

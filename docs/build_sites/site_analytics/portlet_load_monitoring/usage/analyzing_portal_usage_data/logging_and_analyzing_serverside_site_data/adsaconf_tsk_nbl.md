@@ -67,7 +67,6 @@ For details, see *Setting service configuration properties*.
 5.  Restart HCL Digital Experience.
 
 
-**Parent topic:**[Logging and analyzing server side site data](../admin-system/adsaconf.md)
 
 **Related information**  
 

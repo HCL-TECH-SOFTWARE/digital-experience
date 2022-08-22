@@ -6,5 +6,4 @@ Before Content Template version 4.1, it was recommended that an extra site area 
 
 **Note:** If you have not updated the CTC Demo site, you must apply the **Folder** authoring template to the top-level site area of the CTC Demo Library.
 
-**Parent topic:**[Post upgrade steps](../ctc/ctc-upgrade-post.md)
 

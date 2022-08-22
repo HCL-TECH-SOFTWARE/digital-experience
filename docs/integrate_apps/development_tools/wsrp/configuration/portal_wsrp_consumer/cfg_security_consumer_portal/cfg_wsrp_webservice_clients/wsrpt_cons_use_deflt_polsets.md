@@ -74,7 +74,6 @@ To use the WSRP policy sets and client policy set bindings for service configura
 3.  After you have completed this configuration, restart your portal.
 
 
-**Parent topic:**[Configuring WSRP web service clients](../admin-system/wsrpt_cons_cfg_wsrvc_clnt.md)
 
 **Previous topic:**[Communicating with Producer portals with different web service configurations](../admin-system/wsrpt_cons_cfg_wsrvc_clnt_xtra.md)
 

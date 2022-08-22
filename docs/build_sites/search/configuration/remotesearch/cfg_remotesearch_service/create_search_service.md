@@ -43,7 +43,6 @@ For more detailed information about the search service configuration parameters 
 
 Manually create new search collections for JCR search and Portal search.
 
-**Parent topic:**[Configuring a remote search service](../admin-system/srtcfgrmtsrchsrv.md)
 
 **Next topic:**[Creating new search collections](../admin-system/create_search_coll.md)
 

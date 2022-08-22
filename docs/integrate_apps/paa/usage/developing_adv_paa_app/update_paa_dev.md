@@ -28,5 +28,4 @@ In a similar fashion, the rollback of the update with the remove-paa-update task
 
 Tasks with the updateSiFeaturePack and rollbackSIFeaturePack suffix are run only when the PAA file is registered as an update during the install-paa-update task. If the installation is on a fresh system, only the applySIFeaturePack and removeSIFeaturePack extension points are run.
 
-**Parent topic:**[Developing advanced PAA file applications](../config/dev_sol_app_adv.md)
 

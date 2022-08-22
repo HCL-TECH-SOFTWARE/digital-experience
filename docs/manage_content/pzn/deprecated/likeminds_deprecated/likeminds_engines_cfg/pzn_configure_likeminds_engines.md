@@ -23,5 +23,3 @@ For every cross-selling transaction in the user's shopping history, the Item Aff
 
 **Parent topic:**[Configuring LikeMinds](../pzn/pzn_configure_likemind_servers.md)
 
-**Parent topic:**[Configuring LikeMinds](../pzn/pzn_configure_likemind_servers.md)
-

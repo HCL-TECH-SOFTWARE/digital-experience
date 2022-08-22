@@ -12,5 +12,4 @@ If the previous properties are not set to the specified values, your portal serv
 
 To enable the validation of friendly URLs for web content, set the friendly.pathinfo.validation.enabled property to `true` in the WP Configuration Service Resource Environment Provider. For more information about the friendly.pathinfo.validation.enabled property and the properties that are required to support friendly URLs, see [How to validate friendly URLs for web content](validate_friendly_urls.md) and [Configuration Service](../admin-system/srvcfgref_config.md) for more information.
 
-**Parent topic:**[How to validate friendly URLs for web content](../wcm/validate_friendly_urls.md)
 

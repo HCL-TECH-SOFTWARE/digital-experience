@@ -73,7 +73,6 @@ To add the theme module to your theme, you register the theme module by using th
         ```
 
 
-**Parent topic:**[Administering social lists](../social/soc_rendr_adm_socl_list.md)
 
 **Related information**  
 

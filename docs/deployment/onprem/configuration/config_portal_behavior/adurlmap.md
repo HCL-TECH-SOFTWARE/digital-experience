@@ -11,7 +11,6 @@ Depending on your requirements, you can use vanity URLs, or friendly URLs:
 
 You can create both vanity URLs and friendly URLs for the same portal page.
 
-**Parent topic:**[Configuring portal behavior](../admin-system/adptlcfg.md)
 
 **Related information**  
 

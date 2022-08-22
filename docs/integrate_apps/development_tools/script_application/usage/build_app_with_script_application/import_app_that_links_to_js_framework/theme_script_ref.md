@@ -35,5 +35,4 @@ When you export an application, the original script reference is re-enabled so t
 -   **[Third-party JavaScript libraries](../script-portlet/js_libraries.md)**  
  You can easily use third-party JavaScript libraries from a Script Application.
 
-**Parent topic:**[Build applications with the Script Application](../script-portlet/build_apps.md)
 

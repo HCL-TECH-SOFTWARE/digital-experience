@@ -38,5 +38,4 @@ In addition to the column and grid layouts available with the Portal theme, a fe
 -   **[Navigation changes in the Portal 8.5 theme](../ctc/ctc_arch_theme_nav8.md)**  
 Content Template Catalog 4.4 running on HCL Digital Experience 8.5 uses a fixed two-level navigation system.
 
-**Parent topic:**[Content Template Catalog themes and styles](../ctc/ctc_arch_css.md)
 

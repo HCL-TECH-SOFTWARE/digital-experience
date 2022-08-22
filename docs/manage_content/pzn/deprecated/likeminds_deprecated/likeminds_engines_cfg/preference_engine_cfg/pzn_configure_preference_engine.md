@@ -37,5 +37,3 @@ This section contains the following information regarding user predictability.
 
 **Parent topic:**[Configuring the LikeMinds engines](../pzn/pzn_configure_likeminds_engines.md)
 
-**Parent topic:**[Configuring the LikeMinds engines](../pzn/pzn_configure_likeminds_engines.md)
-

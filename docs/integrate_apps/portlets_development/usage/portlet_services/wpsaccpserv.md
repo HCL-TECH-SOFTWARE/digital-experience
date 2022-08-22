@@ -59,5 +59,4 @@ For more information, please refer to the following Help Center topics:
 -   Documentation resource: [Portlet services](wpsptservice.md)
 -   Documentation resource: [Creating your own portlet service](wpsbsservice.md)
 
-**Parent topic:**[Portlet services](../dev-portlet/wpsptservice.md)
 

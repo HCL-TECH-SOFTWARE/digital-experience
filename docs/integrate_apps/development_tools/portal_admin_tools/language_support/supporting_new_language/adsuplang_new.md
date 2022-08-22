@@ -17,7 +17,6 @@ All fields of the People Finder portlet must have associated language strings th
 -   **[XML samples for creating or removing language definitions](../admin-system/adxmlsmp_lang.md)**  
 You can modify these XML samples and use them to create or remove language definitions from your portal.
 
-**Parent topic:**[Language support](../admin-system/adintern.md)
 
 **Related information**  
 

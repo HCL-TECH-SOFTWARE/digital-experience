@@ -28,5 +28,4 @@ The following built-in metadata setting for custom connection filter is defined.
 </filter-chain>
 ```
 
-**Parent topic:**[Custom outbound service filters](../dev-portlet/outbhttp_cust_srvc_filtrs.md)
 

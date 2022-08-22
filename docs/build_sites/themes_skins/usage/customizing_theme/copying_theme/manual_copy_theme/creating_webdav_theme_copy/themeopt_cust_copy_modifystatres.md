@@ -79,7 +79,6 @@ Dynamic content spots are defined through a module called `wp_dynamicContentSpot
 
 **Note:** You do not need to modify the theme.html file in the customTheme folder. That file is not used other than to redirect to the appropriate locale file in the nls folder. You need to modify it only if you add or remove locales.
 
-**Parent topic:**[Creating a WebDAV-based theme copy](../dev-theme/themeopt_themedev_manual_webdav.md)
 
 **Related information**  
 

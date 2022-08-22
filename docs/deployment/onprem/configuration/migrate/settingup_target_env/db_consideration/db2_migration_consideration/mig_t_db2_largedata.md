@@ -21,5 +21,4 @@ These values are suggested starting points and were used successfully in HCL tes
     **Note:** While the migration is in progress, it might be necessary to collect detailed statistics to continue to allow the database optimizer to select efficient access plans.
 
 
-**Parent topic:**[DB2 database migration considerations](../migrate/mig_pre_db2.md)
 

@@ -31,7 +31,6 @@ To deploy social rendering in a virtual portal, use the configuration task deplo
     **Note:** The sample that is given here uses only the VirtualPortalContext parameter to identify the virtual portal by its context. Virtual portals with a unique host name assigned can be identified by using the VirtualPortalHostName parameter.
 
 
-**Parent topic:**[Administering social lists](../social/soc_rendr_adm_socl_list.md)
 
 **Related information**  
 

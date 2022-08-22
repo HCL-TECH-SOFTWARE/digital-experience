@@ -10,5 +10,3 @@ To set the number of threads to use for sifting users in `lpsconfig`:
 
 **Parent topic:**[Configuring the sifter for mentor selection](../pzn/pzn_configure_sifter_mentor_selection.md)
 
-**Parent topic:**[Configuring the sifter for mentor selection](../pzn/pzn_configure_sifter_mentor_selection.md)
-

@@ -23,7 +23,6 @@ The benefit to creating new categories for the Page Component palette by using t
 8.  Click **OK**.
 
 
-**Parent topic:**[Customizing the Page Component palette](../admin-system/epc_custom_add_site_toolbar.md)
 
 **Related information**  
 

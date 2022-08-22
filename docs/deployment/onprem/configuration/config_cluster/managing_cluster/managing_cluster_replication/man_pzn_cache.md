@@ -27,5 +27,4 @@ Enable the Personalization cache replication if you want to propagate invalidati
 8.  Sync all nodes in the cluster and then restart the Portal server on each node.
 
 
-**Parent topic:**[Managing replication in your cluster](../admin-system/manage_replication.md)
 

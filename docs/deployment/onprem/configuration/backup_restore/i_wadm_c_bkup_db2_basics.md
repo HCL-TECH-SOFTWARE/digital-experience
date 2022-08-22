@@ -38,5 +38,4 @@ Next, consider the data storage requirements and the resources and utilities tha
     -   The Backup Wizard provides a simple, step-by-step user interface for configuring backup options, selecting a storage location for backup data files, and scheduling the backup.
     -   The Task Center is an administrative component that allows you to create and schedule scripted functions.
 
-**Parent topic:**[Backup and restore](../admin-system/i_wadm_c_bkup_restr_winlinux.md)
 

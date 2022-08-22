@@ -18,5 +18,3 @@ This completed profiler is used within a binding as a means of determining wheth
 
 **Parent topic:**[Profilers](../pzn/pzn_profilers.md)
 
-**Parent topic:**[Profilers](../pzn/pzn_profilers.md)
-

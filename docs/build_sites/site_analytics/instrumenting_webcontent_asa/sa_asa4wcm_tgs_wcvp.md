@@ -19,5 +19,4 @@ The viewer supports the following microformat tags:
 
 After you set the preference, the viewer automatically inserts the microformat tags into each piece of content that it renders.
 
-**Parent topic:**[Instrumenting web content for Active Site Analytics](../admin-system/sa_asa4wcm.md)
 

@@ -114,7 +114,6 @@ To create your own styles, proceed by the following steps:
 
 After you complete this procedure, you can use your own custom styles for your social lists.
 
-**Parent topic:**[Customizing the CSS styles of social lists](../social/soc_rendr_custom_css_styles.md)
 
 **Related information**  
 

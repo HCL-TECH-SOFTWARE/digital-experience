@@ -43,5 +43,4 @@ To specify the values, you must add custom properties. Each property includes a 
         Value: true or false. When set to true, the user can change the authentication method for the server in the user interface. When set to false, the user interface does not display the field to change the authentication method. The default value is true.
 
 
-**Parent topic:**[Integrating HCL Connections files](../collab/i_coll_t_enable_lcfiles.md)
 

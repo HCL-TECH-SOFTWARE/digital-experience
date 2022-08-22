@@ -36,7 +36,6 @@ The web content fallback page is displayed when a viewer is configured with a li
 -   The web content viewer cannot determine which page to use to display the linked content item.
 -   The web content viewer identifies the page associated with the content item, but the user does not have sufficient privileges to view that page.
 
-**Parent topic:**[Customizing web content delivery](../wcm/wcm_delivery_custom.md)
 
 **Related information**  
 

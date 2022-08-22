@@ -6,5 +6,4 @@ When you create virtual portals, the portal creates parallel root content nodes 
 
 You can apply the specific look and feel of each virtual portal to both the \(unauthenticated\) Welcome page and the authenticated pages of the virtual portal. This means that each virtual portal can have its own look and feel even before the user logs in to the portal. Users can switch between the unauthenticated pages of different virtual portals by simply entering the different URL to get to the other portal. You can also provide specific login, and self-enrollment pages for each virtual portal. Once users log out, they are redirected to the specific unauthenticated page of the virtual portal that they had accessed.
 
-**Parent topic:**[Shaping the user experience](../admin-system/advppln_shape_ux.md)
 

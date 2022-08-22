@@ -29,5 +29,4 @@ If the portal area has a higher step-up authentication, users are asked to provi
 9.  Click the **Save** link in the Messages box to save the changes to the master configuration.
 
 
-**Parent topic:**[Enabling step-up authentication and the Remember me cookie](../security/cfg_auth.md)
 

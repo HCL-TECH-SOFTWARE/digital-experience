@@ -20,7 +20,6 @@ You can use Active Site Analytics to show graphical statistics reports about ind
 -   **[Analytics tags and site promotions](../admin-system/sa_asa_anal_tags_site_prom.md)**  
 To obtain further analytics information from your portal, you can use analytics tags for your portal resources. You can also use analytics tags for site promotions.
 
-**Parent topic:**[Analyzing portal usage data](../admin-system/sa.md)
 
 **Related information**  
 

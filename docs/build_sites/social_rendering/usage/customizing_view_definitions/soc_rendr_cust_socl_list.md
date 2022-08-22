@@ -143,7 +143,6 @@ The following settings and options are available for customizing social list vie
     You can use this field to control the social object resolution behavior for links that users click in this list. For more detailed information, read *Social Object Resolution*.
 
 
-**Parent topic:**[Customizing view definitions for portal site visitors](../social/soc_rendr_shape_socl_list.md)
 
 **Related information**  
 

@@ -14,5 +14,4 @@ You can choose between two ways of deploying your custom list-rendering profiles
 
 List-rendering profiles are cached by the DDC framework. After deploying a list-rendering profile, you must make the framework aware of changes to the list-rendering profile. To do so, either restart the portal or render the HCL Web Content Manager tag `[Plugin:ListRenderingContext action="reloadProfiles"]`.
 
-**Parent topic:**[Working with list-rendering profiles](../social/plrf_work_lr_profiles.md)
 

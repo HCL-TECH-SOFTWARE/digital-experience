@@ -20,7 +20,6 @@ Page-based access control affects only the access control enforcement that is tr
     -   Administrator @ CONTENT\_MAPPINGS
     -   Editor @ wcm\_page, where wcm\_page represents the web content page for which you want to enable page-based access.
 
-**Parent topic:**[Customizing web content delivery](../wcm/wcm_delivery_custom.md)
 
 **Related information**  
 

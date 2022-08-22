@@ -21,7 +21,6 @@ You can import a static content page from an archive or compressed file by using
 -   **[Importing a static page from an installed template](../admin-system/spa_xml_impt_tmplt.md)**  
 You can import a static content page from an installed layout template by using the XML configuration interface.
 
-**Parent topic:**[Including static content pages in your portal](../admin-system/spa_include_page.md)
 
 **Related information**  
 

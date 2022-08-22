@@ -8,5 +8,3 @@ Current Action Count and Current Action Name allows you to base a profiler or ru
 
 **Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
 
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
-

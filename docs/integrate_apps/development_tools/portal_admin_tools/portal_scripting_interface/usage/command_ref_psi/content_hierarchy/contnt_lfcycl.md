@@ -126,7 +126,6 @@ Jacl example:
 $Content delete ID
 ```
 
-**Parent topic:**[Content hierarchy accessed through Content bean](../admin-system/contnt_hierarchy.md)
 
 **Related information**  
 

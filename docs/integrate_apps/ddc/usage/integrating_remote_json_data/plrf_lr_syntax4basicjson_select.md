@@ -54,5 +54,4 @@ Here is a sample JSON object:
 }
 ```
 
-**Parent topic:**[Integrating remote JSON data](../social/plrf_intgrt_rmt_json.md)
 

@@ -13,7 +13,6 @@ A junction acts as a single point of access into a web application network.
 -   **[Security Access Manager Permissions](../security/sec_tam_permission.md)**  
 In many installations, WebSEAL is behind Portal between the portlets and the back-end servers they access.
 
-**Parent topic:**[External security managers](../security/sec_ext_man.md)
 
 **Related information**  
 

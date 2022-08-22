@@ -51,7 +51,6 @@ Complete the following steps to reuse group information:
 5.  Restart the HCL Portal server.
 
 
-**Parent topic:**[Users and groups](../admin-system/adusrgrp.md)
 
 **Related information**  
 

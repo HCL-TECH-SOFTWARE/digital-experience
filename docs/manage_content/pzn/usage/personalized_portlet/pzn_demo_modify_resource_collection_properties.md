@@ -17,13 +17,11 @@ Before you begin this procedure, ensure that you have inserted the dynamic table
 
 You can now create a user profiler rule.
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Insert dynamic table HTML/JSP code](../pzn/pzn_demo_insert_dynamic_table_code.md)
 
 **Next topic:**[Create the user profiler rule](../pzn/pzn_demo_create_user_profiler_rule.md)
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Insert dynamic table HTML/JSP code](../pzn/pzn_demo_insert_dynamic_table_code.md)
 

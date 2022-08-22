@@ -223,5 +223,4 @@ Content-type: text/html
 
 ```
 
-**Parent topic:**[How to manage web content items by using REST](../wcm/wcm_rest_crud.md)
 

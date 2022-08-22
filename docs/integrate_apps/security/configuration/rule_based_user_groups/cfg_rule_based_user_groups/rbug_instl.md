@@ -9,5 +9,4 @@ The rule-based user groups adapter uses a Java data source to communicate with t
 -   **[Configuring the VMM rule-based groups repository](../admin-system/rbug_cfg_vmm_repos.md)**  
 To enable the VMM rule-based groups repository adapter, modify several VMM configuration files.
 
-**Parent topic:**[Rule-based user groups](../admin-system/rbug.md)
 

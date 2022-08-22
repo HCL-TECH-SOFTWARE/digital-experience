@@ -9,5 +9,4 @@ You must install the Content Template Catalog page templates and libraries on ea
 -   **[Upgrading Content Template Catalog on virtual portals with no base portal](../ctc/ctc-install-upgrade-virtual-nobase.md)**  
 You must install the Content Template Catalog page templates and libraries on each virtual portal to enable users to create sites.
 
-**Parent topic:**[Upgrade and Migration of Content Template](../ctc/ctc_migr_overview.md)
 

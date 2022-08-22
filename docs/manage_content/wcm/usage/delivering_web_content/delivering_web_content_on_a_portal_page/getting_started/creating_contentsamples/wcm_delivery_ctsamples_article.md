@@ -38,7 +38,6 @@ When you create a page that is based on the Articles template, several things ha
 
 **Note:** The Articles page template is a managed page that stores its associated web content in the Portal Site library. If you disable managed pages, the content that is associated with this template is no longer copied during page instantiation. In addition, the corresponding preferences of the Articles viewer and List of Articles viewer are not adjusted.
 
-**Parent topic:**[Creating content with sample web content template items](../wcm/wcm_delivery_ctsamples_main.md)
 
 **Related information**  
 

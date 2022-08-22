@@ -4,5 +4,4 @@ It is recommended that Site Builder is used to start creating a CTC site. Site B
 
 **Tip:** Site Builder eliminates the first few steps of creating a site from scratch. Instead, you use a wizard to create a site area, a content library, and a home page automatically. Depending on the site template design, the wizard also creates extra pages and links them to the home page. You can make some page modifications in Site Builder. For other modifications, you return to HCL Web Content Manager to finish setting up the site.
 
-**Parent topic:**[A roadmap for Content Template Catalog site authors](../ctc/ctc_gs_authors.md)
 

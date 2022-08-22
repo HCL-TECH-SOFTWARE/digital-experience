@@ -12,8 +12,6 @@ Update your theme metadata with the key to a supported schema.
 
 **Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
-
 **Related information**  
 
 

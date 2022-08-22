@@ -17,5 +17,4 @@ If you changed your realm and no longer require the base entry for that realm, y
 -   **[Deleting the repository](../security/delete_repository.md)**  
 If you no longer require the use of a repository within your federated repository, you can delete it from your configuration.
 
-**Parent topic:**[User registry](../config/config_user_registry.md)
 

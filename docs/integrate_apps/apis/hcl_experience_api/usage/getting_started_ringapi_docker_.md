@@ -85,5 +85,4 @@ If you wish to use the dxrest \(in addition to mydxrest\) for the REST APIs, you
 
 ![](../images/open_api_resources_permission.png)
 
-**Parent topic:**[HCL Experience API](../open_api/openapi_overview.md)
 

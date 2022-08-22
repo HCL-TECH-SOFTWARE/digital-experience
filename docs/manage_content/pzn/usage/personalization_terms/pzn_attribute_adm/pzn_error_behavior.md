@@ -21,5 +21,3 @@ For example, if no user object is found and rulesEngine.throwObjectNotFoundExcep
 
 **Parent topic:**[Attribute Based Administration](../pzn/pzn_attadm.md)
 
-**Parent topic:**[Attribute Based Administration](../pzn/pzn_attadm.md)
-

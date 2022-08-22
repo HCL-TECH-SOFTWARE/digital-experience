@@ -165,5 +165,4 @@ Make sure to perform the steps for the global portal proxy entry point as descri
     where XML\_file is the file path to the XML file.
 
 
-**Parent topic:**[Deploying the HCL Connections Portlets for HCL Connections Cloud](../connect/c_connections_portlets_deploying_portlets_cc.md)
 

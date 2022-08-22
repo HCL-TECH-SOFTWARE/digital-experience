@@ -29,7 +29,6 @@ Sometimes a URL needs to include query parameters or POST forms data that isn’
 -   **[Establish OAuth 2.0 authenticated connections](../dev-portlet/Oauth2.0_auth_connections.md)**  
 The Outbound HTTP Connection services support the connection of remote sites, such as Twitter, Dropbox, or Facebook, which are protected with a OAuth 2.0 authentication protocol. This section describes ways to configure Outbound HTTP connections to access resources which are protected.
 
-**Parent topic:**[Outbound HTTP connection](../dev-portlet/outbound_http.md)
 
 **Related information**  
 

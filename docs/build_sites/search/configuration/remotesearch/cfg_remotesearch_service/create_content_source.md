@@ -63,7 +63,6 @@ Create the new search collection for the remote search service. For detailed ins
     10. Start the crawler to verify that the content source is working.
 
 
-**Parent topic:**[Configuring a remote search service](../admin-system/srtcfgrmtsrchsrv.md)
 
 **Previous topic:**[Creating new search collections](../admin-system/create_search_coll.md)
 

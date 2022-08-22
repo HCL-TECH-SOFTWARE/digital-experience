@@ -4,7 +4,6 @@ Server farms offer a simple way to build and maintain a highly scalable, highly 
 
 **Remember:** Ensure that you configure the web server plug-in after you transfer your database.
 
-**Parent topic:**[HCL Digital Experience roadmaps for advanced configurations](../install/rm_adv_parent.md)
 
 # Who should use this roadmap
 

@@ -6,5 +6,4 @@ If you disable the support for relative URLs, the resource proxy accepts only re
 
 To switch off the support for relative URLs, access the WebSphere® Integrated Solutions Console and set the following property in the WP Configuration Service: wsrp.resourceproxy.support.relative = false. Restart the portal or the cluster for the changes to take effect.
 
-**Parent topic:**[Customizing the WSRP resource proxy](../admin-system/wsrpt_cons_res_proxy.md)
 

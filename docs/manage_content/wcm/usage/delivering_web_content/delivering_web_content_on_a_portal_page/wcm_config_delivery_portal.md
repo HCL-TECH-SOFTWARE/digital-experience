@@ -21,5 +21,4 @@ You can undertake advanced administration for web content artifacts, such as web
 -   **[Web Content Viewer best practices and limitations](../wcm/wcm_config_delivery_portlet_bestpractice.md)**  
 View some best practices and limitations for using Web Content Viewers.
 
-**Parent topic:**[Delivering web content](../wcm/wcm_cms_delivery_system.md)
 

@@ -218,5 +218,4 @@ When exporting and importing multiple web content libraries with a single comman
     -   Export: ConfigEngine.sh export-library-copy -DLibraryPath=/opt/wcm\_export/webcontent.zip -DLibraryName="Web Content;Samples" -DWasPassword=mypassword -DPortalAdminPwd=mypassword
     -   Import: ConfigEngine.sh import-library-copy -DLibraryPath=/opt/wcm\_import/webcontent.zip -DLibraryName="Web Content Copy;Samples Copy" -DLibraryExportName="Web Content;Samples" -DLibraryTitle="Web Content Copy Title;Samples Copy Title" -DLibraryBaseLocale=en -DWasPassword=mypassword -DPortalAdminPwd=mypassword
 
-**Parent topic:**[Exporting and importing web content libraries](../wcm/wcm_config_wcmlibrary_export_main.md)
 

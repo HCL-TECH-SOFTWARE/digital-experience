@@ -22,5 +22,3 @@ The LikeMinds server ignores ratings which are neither in the specified range of
 
 **Parent topic:**[Specifying recommendation behavior](../pzn/pzn_specify_recommendation_behavior.md)
 
-**Parent topic:**[Specifying recommendation behavior](../pzn/pzn_specify_recommendation_behavior.md)
-

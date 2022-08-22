@@ -13,7 +13,6 @@ To write into the HTML head section of your JSR 286 portlet, for example, to cha
 -   **[Setting portlet caching values for a JSR 286 portlet](../dev-portlet/jsr2phase_caching.md)**  
 You can dynamically modify portlet caching parameters for a JSR 286 portlet during the render phase.
 
-**Parent topic:**[Standard portlet API](../dev-portlet/jsrapi.md)
 
 **Related information**  
 

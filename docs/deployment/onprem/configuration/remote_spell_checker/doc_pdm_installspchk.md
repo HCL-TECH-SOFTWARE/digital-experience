@@ -27,5 +27,4 @@ You must also have the most recent version of IBM® WebSphere® Application Serv
 4.  Restart the remote server.
 
 
-**Parent topic:**[Setting up a remote spell checker](../config/doc_pap_spellchk.md)
 

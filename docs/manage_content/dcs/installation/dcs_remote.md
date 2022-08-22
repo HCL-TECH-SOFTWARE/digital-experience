@@ -145,5 +145,4 @@ Local document conversion is supported on z/OS®. You do not have to run Documen
     4.  Restart HCL Portal.
 
 
-**Parent topic:**[Document Conversion Services](../admin-system/dcs_info.md)
 

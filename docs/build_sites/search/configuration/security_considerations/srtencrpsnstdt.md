@@ -46,7 +46,6 @@ For example, consider the case of content sources in the form of secured portal 
 5.  Delete the copied file searchsecret.xml that contains your encryption key.
 
 
-**Parent topic:**[Security considerations](../admin-system/srcscrcnsd.md)
 
 **Related information**  
 

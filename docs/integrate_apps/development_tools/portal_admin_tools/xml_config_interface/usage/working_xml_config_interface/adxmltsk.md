@@ -47,7 +47,6 @@ To help troubleshooting an HCL Portal issue, you might be asked by HCL Software 
 -   **[Using XML Access to export and import Digital Asset Management assets](../admin-system/adxmldam.md)**  
  Using XML Access with HCL DX CF19 and higher, to manage staging scenarios, administrators can import, export, and control Digital Asset Management access control data.
 
-**Parent topic:**[The XML configuration interface](../admin-system/admxmlai.md)
 
 **Related information**  
 

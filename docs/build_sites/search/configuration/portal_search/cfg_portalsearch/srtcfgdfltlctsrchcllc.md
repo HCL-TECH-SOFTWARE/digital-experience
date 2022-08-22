@@ -50,5 +50,4 @@ To configure a different default search collection location, proceed by the foll
         -   Linux
         -   Solaris
 
-**Parent topic:**[Administering Portal Search](../admin-system/srtadmsrch.md)
 

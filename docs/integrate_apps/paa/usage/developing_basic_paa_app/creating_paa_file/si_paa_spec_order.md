@@ -20,5 +20,4 @@ Starting with version 8.5, the dependencies can be automatically created between
 
 For the removal of the resources from the portal with the remove-paa task, the order that the Solution Installer uses is the reverse of what is found in the order.properties file.
 
-**Parent topic:**[Create a Portal Application Archive \(PAA\) file](../config/si_paa_spec.md)
 

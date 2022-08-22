@@ -29,5 +29,3 @@ The Preference Engine reads the value from the score field in the Lps\_Item\_Dat
 
 **Parent topic:**[Configuring the Preference engine](../pzn/pzn_configure_preference_engine.md)
 
-**Parent topic:**[Configuring the Preference engine](../pzn/pzn_configure_preference_engine.md)
-

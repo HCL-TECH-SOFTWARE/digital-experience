@@ -116,7 +116,6 @@ Example: Deleting analytics tags
 
 ```
 
-**Parent topic:**[Analytics tags and site promotions](../admin-system/sa_asa_anal_tags_site_prom.md)
 
 **Related information**  
 

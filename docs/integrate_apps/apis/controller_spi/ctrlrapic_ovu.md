@@ -84,7 +84,6 @@ Modifiable interfaces and Controller interfaces provide methods for confirming m
 -   **[Hints and tips for using the Controller SPI](../dev/ctrlrapic_hint.md)**  
 These are some hints and tips for using the Controller SPI.
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 
 **Related information**  
 

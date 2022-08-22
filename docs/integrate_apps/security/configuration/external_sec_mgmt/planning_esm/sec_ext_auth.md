@@ -22,5 +22,4 @@ The decision to use an external security manager must be made with the understan
 
 **Note:** If you use Security Access Manager for authorization, you must also use it for authentication. Using Security Access Manager to perform only authorization is not supported.
 
-**Parent topic:**[Planning for external security managers](../plan/plan_extsecman.md)
 

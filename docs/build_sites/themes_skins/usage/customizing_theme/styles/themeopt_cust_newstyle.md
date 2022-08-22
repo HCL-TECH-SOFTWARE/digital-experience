@@ -43,7 +43,6 @@ These steps add a new style to the Styles tab of the site toolbar.
     The display name shows in the site toolbar. Make the path relative to the folder in WebDAV. The JSON object in the file styles.json contains two attributes that are used for globalizing the style display strings localizationPackageName and localizationBundleName. These objects are used by the dojo.i18n file to provide localized strings by creating bundles with dojo.i18n.getLocalization\("localizationPackageName", "localizationBundleName"\). If you choose to globalize the display name of your new style, add a key to the bundle and replace the label value in the JSON with the key name. The site toolbar automatically looks up the display name in the bundle using the key.
 
 
-**Parent topic:**[Styles](../dev-theme/themeopt_cust_styles.md)
 
 **Related information**  
 

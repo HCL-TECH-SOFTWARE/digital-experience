@@ -55,5 +55,4 @@ The following examples can help explain the history manager functionality. For a
     A user visits portal pages in the following order: P1, P2, P3, P1, P4. When the user navigates to page P4, the history manager removes the navigational state of page P2 and the states of all portlets on that page.
 
 
-**Parent topic:**[Configuring history expiration limits](../admin-system/historylimit_cfg.md)
 

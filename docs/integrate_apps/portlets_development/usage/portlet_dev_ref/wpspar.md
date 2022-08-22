@@ -78,5 +78,4 @@ These guidelines are based on the JSP coding guidelines for standard portlets.
 -   Do not exceed a length of 24 symbols for the phone numbers that are used as references in the `<a>` tag.
 -   Do not use URLs that are longer than 200 bytes.
 
-**Parent topic:**[Portlet development reference](../dev-portlet/wpsdevref.md)
 

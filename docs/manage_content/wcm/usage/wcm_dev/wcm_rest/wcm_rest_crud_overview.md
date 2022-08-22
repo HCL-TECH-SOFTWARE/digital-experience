@@ -113,5 +113,4 @@ This code is an example in `application/atom+xml` format:
    </entry>
 ```
 
-**Parent topic:**[REST service for Web Content Manager](../wcm/wcm_rest.md)
 

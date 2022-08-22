@@ -53,5 +53,4 @@ You can use the REST service to attach images to some item types. This is equiva
 -   **[Generic reading by using REST services for Web Content Manager](../wcm/wcm_rest_crud_read.md)**  
 Although not all item types are handled by the REST service, all item types can be read in a generic fashion by using the REST service.
 
-**Parent topic:**[REST service for Web Content Manager](../wcm/wcm_rest.md)
 

@@ -106,5 +106,4 @@ If you enable step-up authentication only, you receive the following authenticat
             Set the Authentication Level to Authenticated if you want anonymous and identified users to log in to view the page or portlet.
 
 
-**Parent topic:**[Enabling step-up authentication and the Remember me cookie](../security/cfg_auth.md)
 

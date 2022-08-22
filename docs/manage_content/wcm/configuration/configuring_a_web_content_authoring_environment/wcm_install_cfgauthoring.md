@@ -21,7 +21,6 @@ Before you can add links to files and documents that are stored in remote conten
 -   **[Setting up support for federated documents](../wcm/wcm_dev_feddocs_setup.md)**  
 Before you can access metadata from federated documents, you need to configure access to the remote servers that contain the documents and specify information about the feeds or service documents that are used to retrieve the documents. You can also tune the cache settings that are used with the federated documents feature.
 
-**Parent topic:**[HCL Web Content Manager](../wcm/wcm_install_cfg.md)
 
 **Related information**  
 

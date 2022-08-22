@@ -9,5 +9,4 @@ This API allows for the permanent removal of deleted content items.
 -   **[How to use REST with Web Content Manager to Restore Deleted Content Items](../wcm/wcm_rest_crud_purge_restore_deleted.md)**  
 This new API allows you to restore a previous version of a content item. It can also be used to restore deleted items that have not been purged.
 
-**Parent topic:**[REST service for Web Content Manager](../wcm/wcm_rest.md)
 

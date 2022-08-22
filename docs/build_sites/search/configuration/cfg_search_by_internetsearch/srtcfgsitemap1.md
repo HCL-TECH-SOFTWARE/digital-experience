@@ -71,5 +71,4 @@ The Search Sitemap portlet generates a list of all public pages of the portal. Y
 
 Search on your portal by external search engines requires more configuration. For more information, see *Search by external search services* and *Client identification for search of the portal by external search engines*.
 
-**Parent topic:**[Configuring your portal site for search by internet search engines](../admin-system/srccfgextsrch.md)
 

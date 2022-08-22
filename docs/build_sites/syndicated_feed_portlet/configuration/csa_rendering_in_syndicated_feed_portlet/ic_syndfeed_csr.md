@@ -25,5 +25,4 @@ You must configure the full profiling parameter on the page on which you deploye
 -   **[Configuring the security role mapping for the Syndicated Feed Portlet](../admin-system/ic_syndfeed_secy_role_map.md)**  
 You must configure the security role mapping for the Syndicated Feed Portlet.
 
-**Parent topic:**[Syndicated Feed Portlet for HCL Digital Experience](../admin-system/ic_syndfeed_features.md)
 

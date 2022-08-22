@@ -8,5 +8,4 @@ Another aspect of performance tuning is setting up portlet caching. Portlets are
 
 To apply caching across many pages at once, export the pages and add caching parameters to the exported XML, and re-import. You may end up repeating this process a few times as you fine-tune the caching to achieved desired performance levels.
 
-**Parent topic:**[How to deploy sites built with Content Template](../ctc/ctc_deploy_overview.md)
 

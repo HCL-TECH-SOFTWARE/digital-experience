@@ -53,5 +53,4 @@ The following content is an example of a custom loader markup:
 </script>
 ```
 
-**Parent topic:**[Improving page loading performance with asynchronous web content rendering](../wcm/wcm_config_asynch_wcm_rendr.md)
 

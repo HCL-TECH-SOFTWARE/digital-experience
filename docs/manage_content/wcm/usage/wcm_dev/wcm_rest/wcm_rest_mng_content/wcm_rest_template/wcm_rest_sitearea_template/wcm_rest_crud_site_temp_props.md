@@ -73,5 +73,4 @@ Content-type: application/vnd.ibm.wcm+xml
 
 ```
 
-**Parent topic:**[How to use REST with site area templates](../wcm/wcm_rest_crud_site_temp.md)
 

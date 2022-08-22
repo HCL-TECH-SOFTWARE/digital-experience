@@ -12,7 +12,6 @@ Consider the following information when using the Syndicated Feed Portlet:
 -   Initially, you can view portlet feeds in the View mode based on the settings configured by the Administrator. If you modify the settings, they take precedence over the subsequent settings that the Administrator configures.
 -   If you encounter problems viewing feeds that use international character sets, refer to the technote "Viewing feeds using international character sets in the Syndicated Feed Portlet for HCL Digital Experience" for more information.
 
-**Parent topic:**[Syndicated Feed Portlet for HCL Digital Experience](../admin-system/ic_syndfeed_features.md)
 
 **Related information**  
 

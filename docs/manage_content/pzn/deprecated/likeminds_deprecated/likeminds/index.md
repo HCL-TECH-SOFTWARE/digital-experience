@@ -62,13 +62,11 @@ Learn about the four utilities LikeMinds uses to update the database, buildvisit
 -   **[Filtering LikeMinds recommendations](../pzn/pzn_filter_likeminds_recommendations.md)**  
 When LikeMinds makes recommendations, it can make the recommendations based on all items in your resource collection, or it can limit the predictions to only items that have certain characteristics.
 
-**Parent topic:**[Digital Experience Personalization](../pzn/pzn_overview.md)
 
 **Previous topic:**[The Portal User resource collection](../pzn/pzn_usr_rescoll.md)
 
 **Next topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
 
-**Parent topic:**[Digital Experience Personalization](../pzn/pzn_overview.md)
 
 **Previous topic:**[The Portal User resource collection](../pzn/pzn_usr_rescoll.md)
 

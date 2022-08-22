@@ -40,7 +40,6 @@ You can also create your own custom style to use with your custom theme defined 
 -   **[Changing the logo action](../dev-theme/themeopt_change_logo_action.md)**  
  You can change the default action of a logo to take users to different pages in your portal.
 
-**Parent topic:**[Customizing the theme](../dev-theme/themeopt_cust.md)
 
 **Related information**  
 

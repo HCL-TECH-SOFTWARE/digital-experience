@@ -14,7 +14,6 @@ However, the underlying technologies are different, and the functional possibili
 |Whether multiple targets are allowed|Only a single target is available for one user action.|Source data can be distributed to multiple targets with a single click.|
 |Whether portlet wiring is supported|No wiring support is available.|Users can automate actions by pressing **Ctrl** and clicking on a menu item.|
 
-**Parent topic:**[Live text for click-to-action](../dev-portlet/w2_smtg.md)
 
 **Related information**  
 

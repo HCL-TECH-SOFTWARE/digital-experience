@@ -57,7 +57,6 @@ Complete the configuration of the federated documents feature to communicate wit
     If you disabled automatic reloading, restart the portal server.
 
 
-**Parent topic:**[Integrating HCL Connections files](../collab/i_coll_t_enable_lcfiles.md)
 
 **Related information**  
 

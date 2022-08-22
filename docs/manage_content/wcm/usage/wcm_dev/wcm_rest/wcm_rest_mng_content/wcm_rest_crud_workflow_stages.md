@@ -277,5 +277,4 @@ HTTP/1.1 DELETE /wps/mycontenthandler/wcmrest/WorkflowStage/b9c05b29-66ac-48fa-9
 HTTP/1.1 200 OK
 ```
 
-**Parent topic:**[How to manage web content items by using REST](../wcm/wcm_rest_crud.md)
 

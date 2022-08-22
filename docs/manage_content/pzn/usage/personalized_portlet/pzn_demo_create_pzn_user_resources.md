@@ -49,13 +49,11 @@ You can now see the new JAVA classes in your project:
 
 You can now finish coding the portlet JSP file.
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Create the Personalization content resource classes and content spot](../pzn/pzn_demo_create_pzn_content_resources.md)
 
 **Next topic:**[Coding the portlet JSP](../pzn/pzn_demo_finish_coding_portlet_jsp.md)
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Create the Personalization content resource classes and content spot](../pzn/pzn_demo_create_pzn_content_resources.md)
 

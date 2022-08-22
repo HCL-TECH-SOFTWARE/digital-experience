@@ -39,7 +39,6 @@ Content Template installs with theme-oriented styles and content-oriented styles
 
     -   print.css
 
-**Parent topic:**[Content Template Catalog themes and styles](../ctc/ctc_arch_css.md)
 
 **Related information**  
 

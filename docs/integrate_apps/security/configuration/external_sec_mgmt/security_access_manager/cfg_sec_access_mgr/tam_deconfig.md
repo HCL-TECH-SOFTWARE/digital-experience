@@ -77,5 +77,4 @@ Complete the following steps to remove Security Access Manager from the HCL Digi
 9.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
 
 
-**Parent topic:**[Configuring Security Access Manager](../security/tam.md)
 

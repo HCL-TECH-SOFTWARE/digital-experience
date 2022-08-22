@@ -36,5 +36,4 @@ Complete the following steps to add the cookie.ignore.regex parameter to the por
 10. Restart the WebSphere\_Portal server.
 
 
-**Parent topic:**[Caching](../security/tune_cache.md)
 

@@ -9,7 +9,6 @@ For search collections provided by Portal Search you can configure the search sc
 
 You can configure additional scopes. For more information about search scopes and how to configure them refer to Managing search scopes and custom links.
 
-**Parent topic:**[Configuring the Search Center portlet](../admin-system/srtcfgsrchcntrprlt.md)
 
 **Related information**  
 

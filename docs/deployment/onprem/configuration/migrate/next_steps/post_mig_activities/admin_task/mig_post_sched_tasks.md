@@ -18,5 +18,4 @@ If you performed a remote migration, then you must update the table prefix and j
 3.  Restart the Portal server so that the default scheduled tasks that are required for operation are created.
 
 
-**Parent topic:**[Administrative tasks](../migrate/mig_post_admintasks.md)
 

@@ -31,5 +31,4 @@ samples_files.ItemAttribute.lastModified=.
 samples_files.ItemAttribute.type=.
 ```
 
-**Parent topic:**[Integrating remote XML data](../social/plrf_intgrt_rmt_xml.md)
 

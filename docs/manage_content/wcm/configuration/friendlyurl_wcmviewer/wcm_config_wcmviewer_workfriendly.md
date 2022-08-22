@@ -110,7 +110,6 @@ http://host\_name:port\_number/context\_root/portal/page\_id/path\_to\_content/[
 -   Friendly URLs for web content are URL-encoded. When using friendly URLs for web content, special characters that show in any segment of the URL must be URL-encoded. For example, a space character in the URL would be replaced by its URL-encoded equivalent: `%20`. Some web browsers perform automatic decoding of the URL. In this case, you might see unencoded characters in the URL, but the portal always works with an encoded version of the URL.
 -   The segments of a friendly URL for web content are not localized for multiple languages. The `path\_to\_content` portion of a friendly URL for web content is composed of the unlocalized names of web content folders, site areas, and content items. For example, if you name these items with English terms, the friendly URL for web content is constructed of these English terms, even if the portal language is not English.
 
-**Parent topic:**[Friendly URLs and Web Content Viewers](../wcm/wcm_config_wcmviewer_friendlyurl.md)
 
 **Related information**  
 

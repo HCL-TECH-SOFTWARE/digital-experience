@@ -11,7 +11,6 @@ You can schedule scope synchronization to be run at specific times by defining t
 -   **[Synchronizing scopes manually](../wcm/wcm_tagrate_syncscope_manual.md)**  
 If automatic synchronization is not enabled for the scopes that are used for web content, or if you want to run synchronization outside of a scheduled synchronization period, you can manually start the synchronization process.
 
-**Parent topic:**[Managing tagging and rating for web content](../wcm/wcm_tagrate_main.md)
 
 **Related information**  
 

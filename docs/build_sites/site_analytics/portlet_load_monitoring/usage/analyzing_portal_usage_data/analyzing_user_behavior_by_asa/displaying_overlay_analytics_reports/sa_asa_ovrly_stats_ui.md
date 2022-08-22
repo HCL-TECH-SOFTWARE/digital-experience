@@ -15,7 +15,6 @@ To disable overlay statistics, the user opens the page actions menu again and cl
 -   Depending on the height of the portlet window on the portal page, the overlay window can display different graphics. For smaller portlet windows the graphic is smaller than for larger portlet windows.
 -   The option to view overlay reports is not available for pages that are currently being updated with new content. For the option to become available, save the page or draft of the page.
 
-**Parent topic:**[Displaying overlay analytics reports](../admin-system/sa_asa_overlay_stats.md)
 
 **Previous topic:**[Configuring the theme for overlay reports](../admin-system/sa_asa_overlay_cfg_theme.md)
 

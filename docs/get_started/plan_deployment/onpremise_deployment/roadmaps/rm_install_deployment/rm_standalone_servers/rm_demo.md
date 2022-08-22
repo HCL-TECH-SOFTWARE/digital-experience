@@ -2,7 +2,6 @@
 
 Ideal for running product, feature, and application demos. After installation, you have an Apache Derby database and a default file-based repository.
 
-**Parent topic:**[HCL Digital Experience roadmaps for stand-alone servers](../install/rm_standalone_parent.md)
 
 # Who should use this roadmap
 

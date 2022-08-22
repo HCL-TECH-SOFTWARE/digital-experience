@@ -12,5 +12,4 @@ The Modify Site URLs for Search Engine Optimization option in the Configuration 
     6.  Open the portal administration menu. Click **Portal Content** **\>** **Subscribers**.
     7.  Click the edit icon of the subscriber that you want to edit. Update the URL with the new context root information.
 
-**Parent topic:**[Manual Steps: Modify Site URLs for Search Engine Optimization](../config/cw_shorten_url_seo_manual.md)
 

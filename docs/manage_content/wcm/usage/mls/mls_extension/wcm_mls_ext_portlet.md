@@ -52,7 +52,6 @@ To enable this extension:
         -   Select a content item from one of the localized libraries as the content context.
         -   Set "**Broadcast links to**" to "**This Page**".
 
-**Parent topic:**[Extensions for multilingual sites Multilingual Solution](../wcm/wcm_mls_extensions.md)
 
 **Related information**  
 

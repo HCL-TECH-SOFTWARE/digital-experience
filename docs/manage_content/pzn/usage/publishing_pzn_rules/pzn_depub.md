@@ -25,13 +25,11 @@ HCL Digital Experience Personalization uses the built-in SSL capabilities of Web
 10. [Monitoring the status of publishing](../pzn/pzn_publish_status.md)  
 After you start a job to publish a personalization rule, you can monitor the status to make sure the publish completes successfully.
 
-**Parent topic:**[Digital Experience Personalization](../pzn/pzn_overview.md)
 
 **Previous topic:**[The Personalization interface](../pzn/pzn_portlets.md)
 
 **Next topic:**[The Web Content resource collection](../pzn/pzn_wcm_rescoll.md)
 
-**Parent topic:**[Digital Experience Personalization](../pzn/pzn_overview.md)
 
 **Previous topic:**[The Personalization interface](../pzn/pzn_portlets.md)
 

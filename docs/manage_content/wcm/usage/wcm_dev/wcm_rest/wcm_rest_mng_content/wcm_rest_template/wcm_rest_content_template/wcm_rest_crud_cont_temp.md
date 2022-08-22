@@ -213,5 +213,4 @@ You can update and read the default properties of content items that are created
 -   **[How to create or update an Option Selection Element](../wcm/wcm_rest_create_update_option_selection_element.md)**  
 You can create or update an Option Selection Element in a Content Template.
 
-**Parent topic:**[How to use REST with authoring templates](../wcm/wcm_rest_crud_templates.md)
 

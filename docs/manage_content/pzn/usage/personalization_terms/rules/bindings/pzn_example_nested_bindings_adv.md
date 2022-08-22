@@ -26,5 +26,3 @@ When User Location is
 
 **Parent topic:**[Bindings](../pzn/pzn_bindings.md)
 
-**Parent topic:**[Bindings](../pzn/pzn_bindings.md)
-

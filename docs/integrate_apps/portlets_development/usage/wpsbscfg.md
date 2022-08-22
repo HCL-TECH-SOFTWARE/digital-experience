@@ -313,5 +313,4 @@ HCL DX includes an administrative portlet for installing, uninstalling, and upda
     ```
 
 
-**Parent topic:**[Developing portlets](../dev-portlet/wpsdev.md)
 

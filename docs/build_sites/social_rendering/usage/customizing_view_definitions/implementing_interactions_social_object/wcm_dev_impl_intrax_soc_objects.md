@@ -15,7 +15,6 @@ When you run a createReply action, the forums data sink uses a number of extra f
 -   **[Deleting a reply](../wcm/wcm_dev_intract_delete_reply.md)**  
 When you run a deleteReply action, the forums data sink uses a number of extra form fields.
 
-**Parent topic:**[Customizing view definitions for portal site visitors](../social/soc_rendr_shape_socl_list.md)
 
 **Related information**  
 

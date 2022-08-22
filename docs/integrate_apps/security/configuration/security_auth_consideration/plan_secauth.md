@@ -15,7 +15,6 @@ The Credential Vault is a service that stores credentials that allow portlets to
 -   **[Caching considerations](../plan/cache_consid.md)**  
 Information that is protected by access control and is therefore restricted to a limited set of people needs special consideration when served from an access control agnostic cache. These considerations especially apply to server side caches but you also need to consider local browser caches.
 
-**Parent topic:**[Securing](../security/securing_wp.md)
 
 **Related information**  
 

@@ -96,5 +96,4 @@ For more information about these modules, their prerequisites or runtime activat
 -   **[Enabling JSON store module](../integrate/wl_enabel_json.md)**  
 JSONStore features add the ability to store JSON documents in IBM MobileFirst applications.
 
-**Parent topic:**[Module framework for IBM MobileFirst](../integrate/wl_module_fw.md)
 

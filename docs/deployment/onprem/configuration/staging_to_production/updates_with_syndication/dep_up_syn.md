@@ -23,7 +23,6 @@ If managed pages are enabled and you are using syndication as part of the stagin
 
 The ExportManagedPagesRelease.xml file or a Portal Application Archive \(PAA\) file is available for exporting all artifacts except pages and wires. For details on using this file, see *Staging artifacts that are not transferred by syndication* or *Creating a differential release*.
 
-**Parent topic:**[Updates with syndication](../deploy/dep_up_syn_main.md)
 
 **Related information**  
 

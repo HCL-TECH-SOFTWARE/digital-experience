@@ -15,5 +15,4 @@ Create the data directory, `data`, and the index directory, `index`, on your dat
     `&dbpath/$\{jcr.DbName\}/index/``&dbpath/jcr.DbName/index/`
 
 
-**Parent topic:**[Manual Steps: Database Transfer option in the Configuration Wizard](../eua-workflows/kc-db-parent.md)
 

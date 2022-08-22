@@ -192,5 +192,4 @@ To restore a previous content version, you use a PUT request in the following fo
     ```
 
 
-**Parent topic:**[How to manage web content items by using REST](../wcm/wcm_rest_crud.md)
 

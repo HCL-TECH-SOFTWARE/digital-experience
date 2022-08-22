@@ -101,5 +101,4 @@ Attributes:
     Returns: [Title](themeopt_el_bean_title.md) object for the language node; it is never null. You can use the value of the title object to retrieve the title in current locale.
 
 
-**Parent topic:**[wp.languageList](../dev-theme/themeopt_el_bean_lang_list.md)
 

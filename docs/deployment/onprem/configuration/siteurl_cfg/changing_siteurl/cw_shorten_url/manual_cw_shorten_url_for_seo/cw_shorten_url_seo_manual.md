@@ -19,5 +19,4 @@ The Modify Site URLs for Search Engine Optimization option in the Configuration 
 -   **[Manual Step: Redeploying the HCL Web Application Bridge to a virtual host](../config/cw_shorten_url_seo_manual-wab.md)**  
 The Modify Site URLs for Search Engine Optimization option in the Configuration Wizard includes manual steps. For reference only, you can see the details of the manual steps in this section of the product documentation.
 
-**Parent topic:**[Configuration Wizard instructions: Modify site URLs for search engine optimization](../config/cw_shorten_url_seo.md)
 

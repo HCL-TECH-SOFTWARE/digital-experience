@@ -97,5 +97,4 @@ search-types, search-criteria, create-types
 
 ```
 
-**Parent topic:**[Getting started with the Portal Scripting Interface](../admin-system/adpsi_start.md)
 

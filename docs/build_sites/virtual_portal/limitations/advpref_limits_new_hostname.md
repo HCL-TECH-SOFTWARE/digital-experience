@@ -8,7 +8,6 @@ If you want to use a new host name for an existing virtual portal, you must dele
 4.  Create a new empty virtual portal by using the configuration task create-virtual-portal. Use the context of the deleted virtual portal, and specify the new host name as required.
 5.  Import the contents to the new virtual portal by using the XML configuration interface.
 
-**Parent topic:**[Known limitations for virtual portals](../admin-system/advpref_limits.md)
 
 **Related information**  
 

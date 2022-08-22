@@ -32,7 +32,6 @@ For more details refer to the help topic about the *Tag cloud*.
 
 The tag cloud portlet has several configuration options. You can configure each individual tag cloud portlet instance separately by using its **Edit shared settings** menu. For details see the topic about *Configuring the tag cloud*.
 
-**Parent topic:**[The tagging and rating user interface](../admin-system/tag_rate_ui.md)
 
 **Related information**  
 

@@ -9,7 +9,6 @@ If you want to use a new host name for an existing virtual portal, you must dele
 -   **[Change of theme for virtual portal might not take effect](../admin-system/advpref_limits_chg_theme.md)**  
 If you change the theme for a virtual portal by editing the virtual portal in the Virtual Portals portlet, this change affects only the root page of the virtual portal.
 
-**Parent topic:**[Virtual portals reference](../admin-system/advpref.md)
 
 **Related information**  
 

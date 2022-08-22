@@ -25,5 +25,4 @@ To work with the **Web Service Configuration** portlet, click the **Administrati
 
 For details about how to work with the portlet refer to the portlet help.
 
-**Parent topic:**[Working with Producer definitions](../admin-system/wsrpt_cons_creat_prod.md)
 

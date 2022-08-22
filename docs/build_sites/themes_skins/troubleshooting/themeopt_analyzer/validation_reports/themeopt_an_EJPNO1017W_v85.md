@@ -12,5 +12,3 @@ Update your skin to active or change the default skin for the theme to an active
 
 **Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
-

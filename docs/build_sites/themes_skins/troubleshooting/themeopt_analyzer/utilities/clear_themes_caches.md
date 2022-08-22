@@ -52,5 +52,3 @@ The Theme Cache Invalidation API is available with HCL DX CF192 and higher relea
 
 **Parent topic:**[Utilities for theme issues](../dev-theme/themeopt_an_util.md)
 
-**Parent topic:**[Utilities for theme issues](../dev-theme/themeopt_an_util.md)
-

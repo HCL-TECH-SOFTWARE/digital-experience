@@ -11,7 +11,6 @@ After upgrading to an interim fix, you can use the IBM Installation Manager func
 -   **[Using the Installation Manager to roll back fixes](../install/iim_roll.md)**  
 After you upgrade to a fix pack or a cumulative fix, you can use the IBM® Installation Manager function to roll back to the original installation.
 
-**Parent topic:**[HCL Portal](../config/config_portal.md)
 
 **Related information**  
 

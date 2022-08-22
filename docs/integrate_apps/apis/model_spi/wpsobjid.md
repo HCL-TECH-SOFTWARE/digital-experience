@@ -44,5 +44,4 @@ For this example, the following packages are required at a minimum for the impor
 -   `javax.naming.Name`
 -   `com.ibm.portal.ObjectID`
 
-**Parent topic:**[Model SPI overview](../dev/dgn_modelovw.md)
 

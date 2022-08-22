@@ -21,8 +21,6 @@ The additional information passed by rule logging events and certain bean loggin
 
 **Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
 
-**Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
-
 **Related information**  
 
 

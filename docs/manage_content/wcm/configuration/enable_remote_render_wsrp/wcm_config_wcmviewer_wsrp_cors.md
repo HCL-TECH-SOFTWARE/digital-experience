@@ -23,7 +23,6 @@ If you experience issues when you use the **Edit shared settings** or **Configur
     **Note:** If you choose this option, make sure that you fully understand the implications of disabling the CORS support. With disabled CORS support, the portal accepts all cross-origin requests that it rejects if the CORS support is enabled.
 
 
-**Parent topic:**[Enabling remote rendering with WSRP and the Web Content Viewer](../wcm/wcm_config_wcmviewer_wsrp.md)
 
 **Related information**  
 

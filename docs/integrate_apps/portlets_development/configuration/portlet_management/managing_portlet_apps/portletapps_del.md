@@ -8,5 +8,4 @@ After selecting an object for deletion, the system waits until all outstanding r
 
 For instructions about the tasks and detailed steps for deleting Web modules, portlet applications, or portlets refer to the **Manage Applications** or **Manage Portlets** helps.
 
-**Parent topic:**[Managing portlets, portlet applications, and iWidgets](../admin-system/adpltadmwork.md)
 

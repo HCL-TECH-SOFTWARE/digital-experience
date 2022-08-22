@@ -27,7 +27,6 @@ Retrieve the certificate for the HCL Connections server. Then, import the SSL ce
 4.  Import the saved certificate to the portal server.
 
 
-**Parent topic:**[HCL Connections](../config/ibmconnections.md)
 
 **Related information**  
 

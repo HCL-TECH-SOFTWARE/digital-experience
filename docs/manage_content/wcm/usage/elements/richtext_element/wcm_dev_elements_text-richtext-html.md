@@ -64,7 +64,6 @@ The following tag formats are invalid:
 
 |
 
-**Parent topic:**[How to store text and HTML](../wcm/wcm_dev_elements_types_text.md)
 
 **Related information**  
 

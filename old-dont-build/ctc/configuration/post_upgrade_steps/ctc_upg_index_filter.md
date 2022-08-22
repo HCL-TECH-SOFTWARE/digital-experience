@@ -19,5 +19,4 @@ To use the new Setup Index Filter component, follow these steps:
 7.  Click **OK**.
 
 
-**Parent topic:**[Post upgrade steps](../ctc/ctc-upgrade-post.md)
 

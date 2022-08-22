@@ -42,7 +42,6 @@ Customers should be aware of the following limitations and best coding practices
     -   `import com.ibm.faces20.portlet.util.BridgeConfigUtils;`
     -   `import com.ibm.faces20.portlet.FaceletPortletViewHandler;`
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 
 **Related information**  
 

@@ -39,5 +39,4 @@ There are two different ways by which metadata values are evaluated:
     If an error in the metadata value prevents the page from being rendered, you can still change or remove the value by using other administrative ways to access the portal. For example, this can be WebDAV, the XML configuration interface, or the Portal Scripting Interface.
 
 
-**Parent topic:**[Collecting analytics data](../admin-system/sa_asa_collct_data.md)
 

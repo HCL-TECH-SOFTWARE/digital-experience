@@ -11,13 +11,11 @@ We need a few more things in this portlet to make it interesting:
 -   A more complex binding rule
 -   A dynamic HTML table, to display any number of special offers
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Create a content spot](../pzn/pzn_demo_create_content_spot.md)
 
 **Next topic:**[Insert dynamic table HTML/JSP code](../pzn/pzn_demo_insert_dynamic_table_code.md)
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Create a content spot](../pzn/pzn_demo_create_content_spot.md)
 

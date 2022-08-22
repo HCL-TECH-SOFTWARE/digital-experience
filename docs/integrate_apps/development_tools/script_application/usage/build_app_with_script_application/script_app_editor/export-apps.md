@@ -11,5 +11,4 @@ When you export a script-based application, the editor creates a compressed arch
 3.  Click **File** \> **Export**.
 
 
-**Parent topic:**[Script Application Editor](../script-portlet/script_portlet_editor.md)
 

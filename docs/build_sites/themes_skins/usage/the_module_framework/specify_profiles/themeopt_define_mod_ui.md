@@ -13,7 +13,6 @@ You can change which sets of modules are used to render a page quickly through t
 5.  Select from the visible profiles and click **Save**.
 
 
-**Parent topic:**[Specify profiles](../dev-theme/themeopt_define_mod_files.md)
 
 **Related information**  
 

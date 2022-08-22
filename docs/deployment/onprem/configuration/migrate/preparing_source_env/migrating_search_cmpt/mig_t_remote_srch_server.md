@@ -9,5 +9,4 @@ If the source portal environment uses a remote search server, update the remote 
 2.  On the migrated portal, re-create the search collections for use with the updated remote search server.
 
 
-**Parent topic:**[Migrating search components](../migrate/mig_t_search.md)
 

@@ -6,5 +6,4 @@ When these portlets are instantiated, a copy of the page component configuration
 
 **Note:** Because they need to be copied into a sub site area, these portlets can be used only on Landing and Index pages. They cannot be dropped onto details pages as the content cannot be created. You can, however, use a page component configuration reference portlet to display a portlet on any page.
 
-**Parent topic:**[Content Template Catalog Applications and Page Components \| CTC for HCL Digital Experience](../ctc/ctc_arch_portpal.md)
 

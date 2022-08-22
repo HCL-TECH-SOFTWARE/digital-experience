@@ -25,7 +25,6 @@ The following example procedure creates a simple credential with user ID and pas
 
 You created a credential with user ID and password in the Credential Vault.
 
-**Parent topic:**[Authenticating outbound HTTP connections](../dev-portlet/outbhttp_authntct.md)
 
 **Related information**  
 

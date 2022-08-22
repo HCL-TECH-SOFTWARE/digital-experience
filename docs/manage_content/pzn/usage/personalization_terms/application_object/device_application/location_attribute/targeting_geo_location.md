@@ -28,5 +28,3 @@ Key concepts for determining the location of a device:
 
 **Parent topic:**[Location attributes](../contarget/targeting_geo.md)
 
-**Parent topic:**[Location attributes](../contarget/targeting_geo.md)
-

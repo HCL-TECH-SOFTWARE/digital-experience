@@ -34,5 +34,4 @@ Otherwise, complete the following steps to manually configure HCL Portal to use 
 9.  Stop and restart the appropriate servers to propagate the changes. For instructions, read [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
 
 
-**Parent topic:**[Advanced group configurations](../security/adv_sec_ov.md)
 

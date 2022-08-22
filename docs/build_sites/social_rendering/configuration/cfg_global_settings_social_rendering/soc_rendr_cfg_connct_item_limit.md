@@ -25,7 +25,6 @@ To configure this maximum value, proceed by the following steps:
 
 **Note:** A page editor can override this default value for an individual social list by editing the social list definition and setting the value in the field Maximum Results. For more information, see *Customizing social list definitions by using inline editing*.
 
-**Parent topic:**[Configuring global settings for social rendering](../social/soc_rendr_cfg_global.md)
 
 **Related information**  
 

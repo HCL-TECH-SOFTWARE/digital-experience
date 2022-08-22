@@ -11,5 +11,4 @@ If you migrated from Portal Version 7.0 to HCL Digital Experience 8.5 with a CF0
     **Note:** Do not delete the **PZN** entry for PZN mapping on the list.
 
 
-**Parent topic:**[Portal tasks](../migrate/mig_post_portaltasks.md)
 

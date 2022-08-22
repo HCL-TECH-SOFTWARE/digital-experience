@@ -37,7 +37,6 @@ For example, you might use a naming convention to select the proper presentation
 -   With Content as a Service, you cannot produce binary web content. For example, you cannot respond with the MIME type `image/jpg`. If you want to retrieve binary web content, such as images, from a web content library, include the URL to the web content in the Content as a Service response. The client can then use the URL to make a second request to load the binary web content.
 
 
-**Parent topic:**[Content as a Service pages](../wcm/cntnt_serv_pgs.md)
 
 **Related information**  
 

@@ -27,5 +27,4 @@ This extension is used as part of setting up a new locale by copying an existing
 -   **[Uninstalling the multilingual solution extensions Multilingual Solution](../wcm/wcm_mls_uninstall.md)**  
 The following steps are required to uninstall the multilingual solution extensions. These must be run on every server on non-clustered systems, or on the primary cluster node.
 
-**Parent topic:**[HCL Web Content Manager Multilingual Solution](../wcm/wcm_mls.md)
 

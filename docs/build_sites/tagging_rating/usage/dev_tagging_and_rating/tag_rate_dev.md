@@ -13,5 +13,4 @@ The Java API that the portal provides for tagging and rating follows the pattern
 -   **[The REST API](../admin-system/tag_rate_api_rest.md)**  
 The REST API provides various possibilities to work with tagging and rating.
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 

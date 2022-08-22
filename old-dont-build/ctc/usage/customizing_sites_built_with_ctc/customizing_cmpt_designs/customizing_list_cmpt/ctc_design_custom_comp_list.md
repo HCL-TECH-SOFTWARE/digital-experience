@@ -10,5 +10,4 @@ Consider these best practices when customizing list components:
 -   **[Customizing headers, footers, and result designs for lists \| CTC for HCL Digital Experience](../ctc/ctc_design_custom_comp_result.md)**  
 The List Presentation component combines definitions for headers, footers, and result designs in one reusable component. Copying a similar List Presentation component is the easiest way to create your own List Presentation component. Store your List Presentation component in a custom library for use in List, Slideshow, and Carousel items.
 
-**Parent topic:**[Customizing component designs](../ctc/ctc_design_custom_comp.md)
 

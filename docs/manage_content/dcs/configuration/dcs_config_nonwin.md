@@ -35,5 +35,4 @@ Configure the Document Conversion Services to complete document conversions in a
     ```
 
 
-**Parent topic:**[Configure Document Conversion Services](../admin-system/dcs_prereq.md)
 

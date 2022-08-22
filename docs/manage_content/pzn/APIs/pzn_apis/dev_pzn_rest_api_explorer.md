@@ -39,5 +39,3 @@ The Personalization folder REST APIs provide access to personalization folder ca
 
 **Parent topic:**[Personalization APIs](../pzn/pzn_apis.md)
 
-**Parent topic:**[Personalization APIs](../pzn/pzn_apis.md)
-

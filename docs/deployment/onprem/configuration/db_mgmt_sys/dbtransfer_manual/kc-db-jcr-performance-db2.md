@@ -15,5 +15,4 @@ Run the following commands for your JCR domain. You might also want to run the f
     `Start SQL*Plus and log in to the jcr.DbName database as the jcr.DbUser user SQL> execute dbms_stats.gather_schema_stats(ownname=> 'jcr.DbUser', cascade=> TRUE); SQL > commit; Exit sqlplus`
 
 
-**Parent topic:**[Manual Steps: Database Transfer option in the Configuration Wizard](../eua-workflows/kc-db-parent.md)
 

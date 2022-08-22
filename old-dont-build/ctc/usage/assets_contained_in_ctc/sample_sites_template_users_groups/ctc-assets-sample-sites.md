@@ -15,5 +15,4 @@ This template creates a site with a home page with Content Template theme extens
 -   **[Groups and users](../ctc/ctc_groups_users.md)**  
 A set of predefined groups and users are included with Content Template. The groups are designed to demonstrate how different user types can interact with Content Template. Each group contains sample users. You can add your own users to the predefined groups to give real users the same access as the example users.
 
-**Parent topic:**[Assets contained in the Content Template](../ctc/ctc-assets.md)
 

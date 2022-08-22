@@ -31,7 +31,5 @@ You specify the sort key by setting the page parameter ibm.portal.pageTemplate.s
     ```
 
 
-**Parent topic:**[Customizing page creation and page editing options](../admin-system/epc_custom_page_tab.md)
-
 **Parent topic:**[Portal administration](../practitioner_studio/administration.md)
 

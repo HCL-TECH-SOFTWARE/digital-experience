@@ -134,5 +134,4 @@ proc portal_logout { } {
 
 ```
 
-**Parent topic:**[Portal authentication](../admin-system/ptl_auth.md)
 

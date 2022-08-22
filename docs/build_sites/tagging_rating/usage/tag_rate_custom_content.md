@@ -6,7 +6,6 @@ Starting with HCL Portal Version 8.5, you can enable your own custom content for
 
 **Note:** Tagging or rating for your own custom content works only with the dialog widgets, but not with the inline widgets of earlier portal versions.
 
-**Parent topic:**[Tagging and rating](../admin-system/tag_rate_mngadmin.md)
 
 **Related information**  
 

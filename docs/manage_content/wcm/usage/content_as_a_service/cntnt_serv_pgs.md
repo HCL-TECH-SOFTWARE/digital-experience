@@ -15,7 +15,6 @@ To remove Content as a Service feature in HCL Portal, you must disable it by usi
 -   **[Access Content as a Service](../wcm/access_cntnt_serv.md)**  
 To access your Content as a Service pages, you can write links to your content that specifies the CaaS page as target.
 
-**Parent topic:**[Building the website](../site/site_build_parent.md)
 
 **Related information**  
 

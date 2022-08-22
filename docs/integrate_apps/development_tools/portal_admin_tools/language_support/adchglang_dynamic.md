@@ -47,7 +47,6 @@ The banner area can be defined in different files, depending on the different th
     An alternative is to edit \(open and save\) Default.jsp, which has the same effect as the touch command. After updating theme JSPs, you must restart HCL Digital Experience unless JSP reloading is enabled.
 
 
-**Parent topic:**[Language support](../admin-system/adintern.md)
 
 **Related information**  
 

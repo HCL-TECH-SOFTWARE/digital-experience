@@ -95,7 +95,6 @@ When you create your own layout.html files, it is important to apply one semanti
 -   **[Creating portlets and page elements](../rwd/rwd_relwidth_elements.md)**  
 When you create portlets and the page elements within them, you can now define your own style overrides as needed. Use these relative width CSS classes to make your page elements responsive to various widths.
 
-**Parent topic:**[Responsive Web Design](../rwd/rwd_intro.md)
 
 **Related information**  
 

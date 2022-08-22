@@ -12,5 +12,3 @@ Update your skin metadata with the key to a proper URI.
 
 **Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
-

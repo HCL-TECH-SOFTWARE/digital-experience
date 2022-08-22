@@ -13,5 +13,4 @@ After you set the property, restart the portal or the cluster for your changes t
 
 For details about creating a credential vault slot and about how to set configuration properties refer to the following links:
 
-**Parent topic:**[Customizing the WSRP resource proxy](../admin-system/wsrpt_cons_res_proxy.md)
 

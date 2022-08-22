@@ -17,7 +17,6 @@ Add ibm.portal.toolbar.NewContent as a keyword to either a site area or content 
 6.  Save and close the dialog.
 
 
-**Parent topic:**[Customizing the Page Component palette](../admin-system/epc_custom_add_site_toolbar.md)
 
 **Related information**  
 

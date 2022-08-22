@@ -11,5 +11,4 @@ The migrated 7.0.0.2 theme is not enabled with the drag metadata. Therefore, you
 -   **[Reinstalling the PortalTheme](../migrate/mig_post_portaltheme_70.md)**  
 If you migrate from Version 7.0 to Version 8.5, when you apply the latest Combined Cumulative Fix during post-migration, the PortalTheme from earlier Portal versions is removed. If your system requires this theme, then you can manually reinstall it.
 
-**Parent topic:**[Post-migration activities](../migrate/mig_t_post_mig.md)
 

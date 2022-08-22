@@ -130,5 +130,4 @@ The following section provides detailed descriptions of the <portal-core/\> JSP 
     Stores a base URL which can be used instead of full, newly-coded URLs on each occurrence of a URL in the markup. This enables shorter URLs and can improve the page serving performance. This tag should occur only in the header section of the markup - it is not allowed to occur outside of the header section. Theme JSPs are responsible for the header section, using `Head.jsp` by default.
 
 
-**Parent topic:**[Tags used by the portal JSPs](../dev-portlet/dgn_ptltld.md)
 

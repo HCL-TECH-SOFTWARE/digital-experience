@@ -13,5 +13,4 @@ When you migrate your HCL Digital Experience to Version 8.5, here are some consi
 -   **[Library export and import and migration](../migrate/mig_content_options_export.md)**  
 Web content libraries can be exported from one system and imported onto another. This tool can be used as part of a migration, but there are some limitations to the use of this tool.
 
-**Parent topic:**[Migration considerations](../plan/mig_plan_high_availability.md)
 

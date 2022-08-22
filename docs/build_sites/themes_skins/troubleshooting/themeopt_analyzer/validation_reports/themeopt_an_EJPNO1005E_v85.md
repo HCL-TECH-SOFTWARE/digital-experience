@@ -12,5 +12,3 @@ Update your module prerequisites to resolve the circular dependency. The erroneo
 
 **Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
-

@@ -63,7 +63,6 @@ Under IBM i, Portal Search collections might fail to collect documents.
 -   **[Users cannot see portal site search results in their preferred language](../admin-system/srrhinttips_no_lang.md)**  
 If the preferred language of the crawler user ID does not match the language of the search collection, users might not see search results in their language.
 
-**Parent topic:**[HCL Digital Experience Portal Search](../admin-system/admsrch.md)
 
 **Related information**  
 

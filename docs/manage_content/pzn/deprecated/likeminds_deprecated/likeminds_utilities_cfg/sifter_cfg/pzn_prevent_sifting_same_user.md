@@ -16,5 +16,3 @@ You can specify any field in the Lps\_User\_Data table for this parameter. For e
 
 **Parent topic:**[Configuring the sifter for mentor selection](../pzn/pzn_configure_sifter_mentor_selection.md)
 
-**Parent topic:**[Configuring the sifter for mentor selection](../pzn/pzn_configure_sifter_mentor_selection.md)
-

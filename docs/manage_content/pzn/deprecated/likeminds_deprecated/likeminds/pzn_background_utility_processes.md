@@ -11,5 +11,3 @@ The following utilities support the background processes operating on the databa
 
 **Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
 
-**Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
-

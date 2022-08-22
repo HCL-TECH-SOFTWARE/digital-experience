@@ -45,5 +45,3 @@ View some additional information related to Action beans and associated methods.
 
 **Parent topic:**[Logging beans](../pzn/pzn_logging_beans.md)
 
-**Parent topic:**[Logging beans](../pzn/pzn_logging_beans.md)
-

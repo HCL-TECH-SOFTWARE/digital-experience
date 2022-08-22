@@ -29,5 +29,3 @@ A customized feedback listener is a subclassed FeedbackListener object that is r
 
 **Parent topic:**[Listeners and persistence](../pzn/pzn_log_listeners.md)
 
-**Parent topic:**[Listeners and persistence](../pzn/pzn_log_listeners.md)
-

@@ -11,5 +11,4 @@ HCL Digital Experience supports special purpose techniques for data exchange.
     As portlets are Web components inside an HTML page, you can use any client side techniques to read, write or exchange data within the markup that your portlet provides. This includes sharing data via the page document object model \(DOM\) or use of client side JavaScript code or libraries.
 
 
-**Parent topic:**[Portlet communication](../dev-portlet/pltcom_ptlt_com.md)
 

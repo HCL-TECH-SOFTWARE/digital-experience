@@ -23,5 +23,4 @@ After you upgrade your product offering, you can remove the upgraded product off
 
 Now that you removed the HCL Portal Enable package, you cannot access the HCL Web Content Manager Authoring feature.
 
-**Parent topic:**[Upgrading your existing product offering](../install/inst_upsell.md)
 

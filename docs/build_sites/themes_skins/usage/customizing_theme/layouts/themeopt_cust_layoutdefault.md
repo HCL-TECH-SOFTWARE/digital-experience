@@ -68,5 +68,4 @@ The Portal 8.5 theme includes the following layouts:
     This layout has one column at the beginning of the page with three unequal sized columns underneath.
 
 
-**Parent topic:**[Layouts](../dev-theme/themeopt_cust_layout.md)
 

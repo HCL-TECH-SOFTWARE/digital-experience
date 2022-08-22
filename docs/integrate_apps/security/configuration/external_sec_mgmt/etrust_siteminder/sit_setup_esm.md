@@ -118,5 +118,4 @@ Complete the following steps to configure eTrust SiteMinder for authorization:
 12. Add users and groups to the eTrust SiteMinder policies corresponding to the appropriate roles.
 
 
-**Parent topic:**[Configuring eTrust SiteMinder](../security/cfg_siteminder.md)
 

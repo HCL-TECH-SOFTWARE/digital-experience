@@ -16,5 +16,3 @@ Although you can make counts of any data type, the tally must be compared agains
 
 **Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
 
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
-

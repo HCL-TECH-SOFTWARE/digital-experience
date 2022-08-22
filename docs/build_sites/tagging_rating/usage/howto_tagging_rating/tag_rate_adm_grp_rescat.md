@@ -30,7 +30,6 @@ These resources must be registered with the tagging and rating engine. The porta
     For example, if you want to aggregate a tag cloud that shows all tags for promotion articles, you could aggregate tags for resources that have been associated with the category promotion, in the previous example action books and action DVDs. For details about how to scope tag clouds for certain type schemas refer to the topic about Configuring the tag cloud.
 
 
-**Parent topic:**[How tagging and rating works in the portal](../admin-system/tag_rate_adm_gen.md)
 
 **Related information**  
 

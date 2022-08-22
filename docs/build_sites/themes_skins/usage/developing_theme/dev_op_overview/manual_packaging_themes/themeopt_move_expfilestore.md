@@ -69,7 +69,6 @@ Use a WebDav Client to connect to the filestore using the following url:
 
 Browse to the folder you need and copy the files to your local drive.
 
-**Parent topic:**[Manually packaging themes for deployment](../dev-theme/themeopt_move_repackstatic.md)
 
 **Related information**  
 

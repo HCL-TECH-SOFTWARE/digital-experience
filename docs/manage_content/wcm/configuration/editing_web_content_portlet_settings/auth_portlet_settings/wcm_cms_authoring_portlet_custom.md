@@ -33,5 +33,4 @@ You successfully configured the libraries for the Web Content Authoring portlet.
 -   **[Authoring portlet settings](../panel_help/wcm_config_authoringportlet.md)**  
 An authoring portlet is used to create and manage web content. You can edit the settings of an authoring portlet from within the Preferences section of the authoring portlet.
 
-**Parent topic:**[Preparing for content authors](../site/site_prep_toolbar.md)
 

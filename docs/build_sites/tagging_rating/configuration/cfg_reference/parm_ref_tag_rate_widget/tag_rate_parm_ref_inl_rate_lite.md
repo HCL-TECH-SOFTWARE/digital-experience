@@ -104,7 +104,6 @@ The following parameters are optional for the rating widget. They correspond to 
     Use this parameter to specify the type of the resource for which the rating widget is called. This parameter is mandatory only for portal resources such as pages or portlets. Valid values are `NAVIGATION_NODE` or `CONTENT_NODE`.
 
 
-**Parent topic:**[Parameter reference for the tag and rating widgets](../admin-system/tag_rate_parm_ref.md)
 
 **Related information**  
 

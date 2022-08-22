@@ -20,5 +20,4 @@ You can configure your system to automatically run the member fixer tool when sy
 -   **[Member fixer task frequently asked questions](../wcm/wcm_admin_member-fixer_examples.md)**  
 Some frequently asked question about how to use the web content member fixer task.
 
-**Parent topic:**[Web content administration tools](../wcm/wcm_maintain.md)
 

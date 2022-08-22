@@ -21,5 +21,3 @@ Review default recommendations for user predictability.
 
 **Parent topic:**[Configuring the Clickstream Engine](../pzn/pzn_configure_clickstream_engine.md)
 
-**Parent topic:**[Configuring the Clickstream Engine](../pzn/pzn_configure_clickstream_engine.md)
-

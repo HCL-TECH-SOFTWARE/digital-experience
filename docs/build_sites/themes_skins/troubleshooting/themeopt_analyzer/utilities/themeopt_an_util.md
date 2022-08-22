@@ -62,8 +62,6 @@ The Theme Optimization Analyzer portlet which is part of the Portal administrati
 
 **Parent topic:**[Theme Optimization Analyzer](../dev-theme/themeopt_an_analyzer.md)
 
-**Parent topic:**[Theme Optimization Analyzer](../dev-theme/themeopt_an_analyzer.md)
-
 **Related information**  
 
 

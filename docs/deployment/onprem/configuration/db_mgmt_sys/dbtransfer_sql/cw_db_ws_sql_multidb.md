@@ -126,5 +126,4 @@ The following table lists the typical fields that display when you select the co
 
 | |
 
-**Parent topic:**[SQL: Database transfer](../config/cw_db_transfer-mssql_2005.md)
 

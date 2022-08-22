@@ -9,5 +9,4 @@ This section provides the steps on how to use Content Composer to author content
 -   **[Author and manage content templates | HCL Content Composer](../usage/author_and_manage_content_templates/)**  
 This section provides the steps on how to use Content Composer to author content templates. Using the HCL Digital Experience 9.5 Content Composer features, content authors can quickly create and edit content templates.
 
-**Parent topic:**[HCL Content Composer](../content_composer/)
 

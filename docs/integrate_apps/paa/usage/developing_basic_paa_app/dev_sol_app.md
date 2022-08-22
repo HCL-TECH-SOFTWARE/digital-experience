@@ -11,7 +11,6 @@ The deployment and removal of a Portal Application Archive \(PAA\) file might de
 -   **[Create a Portal Application Archive \(PAA\) file](../config/si_paa_spec.md)**  
 Use the Portal Application Archive \(PAA\) file format to install applications with the Solution Installer. The PAA file is a customized compressed file that contains an application. This application is installed on HCL Digital Experience with the ConfigEngine.
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 
 **Related information**  
 

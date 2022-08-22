@@ -57,5 +57,4 @@ Applications in your HCL Portal and the related user activities can require outb
 -   **[Live text for click-to-action](../dev-portlet/w2_smtg.md)**  
 HCL Digital Experience supports a live text API for user controlled data transfer between components. With live text, a component on a page can declare sources and targets for data transfer. For example, this can be a portlet or a navigation element. When the user clicks on a source element, the portal displays a menu listing targets that match the selected source. When a menu item is selected, the portal invokes the corresponding target passing it the source data. This process is called Click-to-Action \(C2A\).
 
-**Parent topic:**[Developing portlets](../dev-portlet/wpsdev.md)
 

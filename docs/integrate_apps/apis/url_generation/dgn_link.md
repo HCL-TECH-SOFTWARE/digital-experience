@@ -187,5 +187,4 @@ Quick Links are used to access major areas of the site. Quick Links are accessib
 7.  Complete the URL and any additional information for the Quick Link you want to add.
 8.  Select **OK**.
 
-**Parent topic:**[URL generation in HCL Portal](../dev/url_gen_main.md)
 

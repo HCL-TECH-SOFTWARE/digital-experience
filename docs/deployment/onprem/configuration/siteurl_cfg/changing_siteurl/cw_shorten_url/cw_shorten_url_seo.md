@@ -7,7 +7,6 @@ You can use the Configuration Wizard to shorten site URLs when you set up a stan
 -   **[Manual Steps: Modify Site URLs for Search Engine Optimization](../config/cw_shorten_url_seo_manual.md)**  
 The Modify Site URLs for Search Engine Optimization option in the Configuration Wizard includes manual steps. For reference only, you can see the details of the manual steps in this section of the product documentation. The Configuration Wizard provides you custom instructions. Depending on your selections, you might not see all of the manual steps in this section in the instructions created for you in the Configuration Wizard.
 
-**Parent topic:**[Changing the site URL after an installation](../config/cfg_intr_seo.md)
 
 **Related information**  
 

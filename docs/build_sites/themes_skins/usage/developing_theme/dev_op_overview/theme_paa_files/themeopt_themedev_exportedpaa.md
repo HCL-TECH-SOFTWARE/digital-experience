@@ -13,5 +13,4 @@ After you export a theme as a PAA file, you can install it on a different server
 -   **[Uninstalling theme PAA files](../dev-theme/themeopt_themedev_uninstall.md)**  
 You can uninstall theme PAA files that you no longer want to use.
 
-**Parent topic:**[Development and operations overview](../dev-theme/themeopt_move_devopaspect.md)
 

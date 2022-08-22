@@ -17,5 +17,4 @@ Only published and expired web content items are exported. The following data is
 
 The library export and import tool is slower than the data migration tool because the library export and import tool creates copies of each item from the web content library. Data migration updates items in the database itself.
 
-**Parent topic:**[Migrating from Web Content Manager version 7.0 or 8.0](../migrate/mig_content_from_7-0.md)
 

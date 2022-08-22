@@ -42,5 +42,3 @@ To log additional application data associated with the action, add key/value pai
 
 **Parent topic:**[Action beans](../pzn/pzn_action_beans.md)
 
-**Parent topic:**[Action beans](../pzn/pzn_action_beans.md)
-

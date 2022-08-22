@@ -64,7 +64,6 @@ HCL Digital Experience is now managed the same as a stand-alone server in terms 
 -   **[Setting up a virtual portal in a portal farm](../install/vp_portal_farm.md)**  
 If you plan on creating and using virtual portals within a portal farm, there are additional steps that are recommended to have a successful virtual portal within a portal farm environment. The basic problem if this procedure is not followed is that the virtual portal artifacts have different object ID's in each Portal farm member, which can cause problems if the initial HTTP requests prior to establishing a session end up getting routed to different Portal farm members. By following this procedure, we ensure that all Portal farm members can service these initial HTTP requests.
 
-**Parent topic:**[Choosing the type of portal farm to create](../install/choose_portal_farm.md)
 
 **Related information**  
 

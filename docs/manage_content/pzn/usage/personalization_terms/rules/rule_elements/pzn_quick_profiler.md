@@ -6,5 +6,3 @@ When you select the profile link within a binding and choose the quick profiler 
 
 **Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
 
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
-

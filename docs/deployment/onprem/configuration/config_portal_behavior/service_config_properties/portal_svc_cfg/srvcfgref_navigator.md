@@ -54,5 +54,4 @@ The following list gives properties that influence remote caching:
     This property specifies the value that is set for the `cache-control` HTTP header field when the portal generates a response in request for private pages. This header field controls the behavior of all caching mechanisms along the request-response chain. The default for this property is `no-cache` .
 
 
-**Parent topic:**[Portal service configuration](../admin-system/srvcfgref.md)
 

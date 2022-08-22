@@ -51,7 +51,6 @@ You can configure the Person card to display the business card fields for a sele
 -   **[Logging for Collaborative Services](../collab/i_domi_t_api_logging.md)**  
 The Lotus Collaborative Services APIs use the WebSphere JRas facility for logging error information to the WebSphere Integrated Solutions Console or to log files.
 
-**Parent topic:**[Developing portlets](../dev-portlet/wpsdev.md)
 
 **Related information**  
 

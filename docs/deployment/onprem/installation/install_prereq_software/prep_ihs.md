@@ -61,7 +61,6 @@ Install and configure the web server plug-in. The IBM WebSphere Application Serv
 11. If you want to use the short version of vanity URLs, add a rewrite rule to your web server. For more information, read *Providing short vanity URLs* in our product base documentation [here](../welcome/wp_welcome.html).
 
 
-**Parent topic:**[Installing the prerequisite software](../install/prereq_software.md)
 
 **Related information**  
 

@@ -27,5 +27,3 @@ In general terms, you use the Item Affinity Engine as follows:
 
 **Parent topic:**[Configuring the LikeMinds engines](../pzn/pzn_configure_likeminds_engines.md)
 
-**Parent topic:**[Configuring the LikeMinds engines](../pzn/pzn_configure_likeminds_engines.md)
-

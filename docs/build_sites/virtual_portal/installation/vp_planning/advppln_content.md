@@ -31,7 +31,6 @@ If you want to change the content of virtual portals, it can be done by one of t
 
 If you use the configuration task create-virtual-portal to create a virtual portal, the new virtual portal that you create is empty. You must create the content for the virtual portal. For example, you can do this by using the XML configuration interface. For more information, see *The XML configuration interface*.
 
-**Parent topic:**[Planning for virtual portals](../admin-system/advppln.md)
 
 **Related information**  
 

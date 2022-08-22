@@ -4,7 +4,6 @@ The clean-outbound-http-connection-config configuration task clears the complete
 
 The syntax of the configuration task differs, depending on whether you want to clear the settings for the global configuration or for an application-scoped configuration. If you specify no application scope reference, the task deletes the global outbound HTTP connections profile. Otherwise, the task deletes the application-scoped profile that you identify by the `scoperef` parameter. The configuration task deletes all settings from that specified profile.
 
-**Parent topic:**[Configuring outbound HTTP connections by using configuration tasks](../dev-portlet/outbhttp_cfg_tasks.md)
 
 # Clearing the global outbound HTTP connection profile
 

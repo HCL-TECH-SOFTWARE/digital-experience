@@ -7,5 +7,4 @@ Use the Theme Manager portlet to create new themes from templates, edit existing
 -   **[Theme Optimization Analyzer](../dev-theme/themeopt_an_analyzer.md)**  
 Use the Theme Optimization Analyzer to view, but not edit, all parts of the theme optimization framework inside of HCL Digital Experience.
 
-**Parent topic:**[Practitioner Studio](../practitioner_studio/practitionerstudio_overview.md)
 

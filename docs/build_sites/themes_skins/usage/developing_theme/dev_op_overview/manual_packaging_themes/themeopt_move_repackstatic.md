@@ -28,7 +28,6 @@ Test the new custom EAR file on your test server to verify that it deploys succe
 -   **[Exporting content from the filestore](../dev-theme/themeopt_move_expfilestore.md)**  
 You must export content from the filestore to create your custom theme. There are different options available to export files from the portal file store.
 
-**Parent topic:**[Development and operations overview](../dev-theme/themeopt_move_devopaspect.md)
 
 **Related information**  
 

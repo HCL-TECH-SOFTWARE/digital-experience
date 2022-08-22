@@ -65,5 +65,4 @@ You can adapt the following example and use it to import a static page. This exa
 </request>
 ```
 
-**Parent topic:**[Exporting and importing static pages](../admin-system/spa_xml.md)
 

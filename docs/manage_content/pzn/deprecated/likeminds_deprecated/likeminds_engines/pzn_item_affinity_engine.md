@@ -10,5 +10,3 @@ Unlike the other engines, Item Affinity Engine recommendations are based on Mark
 
 **Parent topic:**[The LikeMinds Recommendation Engines](../pzn/pzn_likeminds_recommendation_engines_3.md)
 
-**Parent topic:**[The LikeMinds Recommendation Engines](../pzn/pzn_likeminds_recommendation_engines_3.md)
-

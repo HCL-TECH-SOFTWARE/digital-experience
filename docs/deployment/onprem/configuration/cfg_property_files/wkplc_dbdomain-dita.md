@@ -1,6 +1,5 @@
 # Properties file: wkplc\_dbdomain.properties
 
-**Parent topic:**[Reference: Configuration properties](../properties/properties.md)
 
 ## Release Database Properties
 

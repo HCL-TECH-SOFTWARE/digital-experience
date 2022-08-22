@@ -12,7 +12,6 @@ In general, the web server must be configured to accept inbound SSL traffic. The
 
 **Note:** This procedure might be slightly different if a front-end security proxy server such as Security Access Manager WebSEAL is used. In that case, the front-end security server handles the client SSL connections. The web server receives connections from the front-end security proxy server. Mutually authenticated SSL can be configured in the web server and the front-end security proxy server if needed. It is highly dependent on the security requirements of each deployment.
 
-**Parent topic:**[Security and authentication considerations](../plan/plan_secauth.md)
 
 **Related information**  
 

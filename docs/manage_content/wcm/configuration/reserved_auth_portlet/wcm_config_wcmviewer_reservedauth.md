@@ -42,7 +42,6 @@ If any of these problems occur, verify that the conditions for proper operation 
 -   **[Configuring the reserved authoring portlet](../wcm/wcm_config_wcmviewer_reservedcfg.md)**  
 The reserved authoring portlet is essential to the proper operation of web content pages and the web content viewer, so it is important that the configuration of the reserved authoring portlet is similar to the configuration of other instances of the authoring portlet.
 
-**Parent topic:**[HCL Web Content Manager](../wcm/wcm_install_cfg.md)
 
 **Related information**  
 

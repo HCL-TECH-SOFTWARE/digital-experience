@@ -17,5 +17,4 @@ Contextual linking is used in systems where content from one site is shared acro
 -   **[Custom caching](../wcm/wcm_dev_caching.md)**  
 You can overrule the default caching parameters of a site by using "cache" and "expire" parameters in URLs and HCL Web Content Manager tags.
 
-**Parent topic:**[Building the website](../site/site_build_parent.md)
 

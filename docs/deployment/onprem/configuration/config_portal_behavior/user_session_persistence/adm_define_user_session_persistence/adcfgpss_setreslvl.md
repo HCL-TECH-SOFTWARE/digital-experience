@@ -36,5 +36,4 @@ The following table gives an overview of the settings and their effect on the us
 |Render parameters|Not applicable|Not restored|Not restored|Restored|Not restored|
 |Pages|The last active page before the user logged out|Not restored|Not restored|Restored|Not restored|
 
-**Parent topic:**[How administrators define persistent session options](../admin-system/adcfgpss_adm_define.md)
 

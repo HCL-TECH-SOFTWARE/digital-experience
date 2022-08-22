@@ -17,5 +17,4 @@ In a stand-alone server environment, you can complete the following task when th
 4.  Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
 
 
-**Parent topic:**[Deleting your user registry configurations](../security/delete_ureg.md)
 

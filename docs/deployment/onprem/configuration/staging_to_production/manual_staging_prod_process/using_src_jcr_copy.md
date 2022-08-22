@@ -29,5 +29,4 @@ Use the copied JCR database for the target production environment. This process 
     This task takes a few minutes to complete.
 
 
-**Parent topic:**[Manual staging to production process](../deploy/mans2p_intro.md)
 

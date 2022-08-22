@@ -6,5 +6,3 @@ When a content spot's rule retrieves content, a RuleEvent object is constructed 
 
 **Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
 
-**Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
-

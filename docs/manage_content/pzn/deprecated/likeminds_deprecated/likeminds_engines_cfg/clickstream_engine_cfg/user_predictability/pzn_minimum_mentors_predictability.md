@@ -14,5 +14,3 @@ If the user is not predictable, the engine will examine another group of `<eng_i
 
 **Parent topic:**[User predictability](../pzn/pzn_user_predictability.md)
 
-**Parent topic:**[User predictability](../pzn/pzn_user_predictability.md)
-

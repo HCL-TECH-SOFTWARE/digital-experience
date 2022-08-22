@@ -29,7 +29,6 @@ A policy rule contains the following settings:
     To add an outbound HTTP connection that provides custom function, you can add a chain of custom URL connection filters. The outbound HTTP connection service provides a filter API. Programmers can use this API to write filters that are called whenever an outbound HTTP connection is opened. For more information, read *Using programmatic extensions for outbound HTTP connections*.
 
 
-**Parent topic:**[Configuration structure](../dev-portlet/outbhttp_cfg_structure.md)
 
 **Related information**  
 

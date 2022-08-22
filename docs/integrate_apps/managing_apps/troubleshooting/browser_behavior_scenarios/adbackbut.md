@@ -9,5 +9,4 @@ The following restrictions apply to backward navigability of portal pages.
 -   **[Configuring history expiration limits](../admin-system/historylimit_cfg.md)**  
 You can configure how far back the HCL Portal tracks the history of the navigational state of pages. This allows you to control the balance between the performance of your portal and the retrievability of previously visited pages for users.
 
-**Parent topic:**[Administering](../admin-system/administering_parent.md)
 

@@ -40,5 +40,4 @@ Search Collections use a seedlist framework to crawl and index all of the HCL Co
 -   **[Setting the Search Scope](../connect/connections_portlets_set_search_scope.md)**  
 Define search scopes for the content from HCL Connections that is returned from a search in HCL Digital Experience applications.
 
-**Parent topic:**[Optional and recommended configuration](../connect/c_connections_portlets_optional_config.md)
 

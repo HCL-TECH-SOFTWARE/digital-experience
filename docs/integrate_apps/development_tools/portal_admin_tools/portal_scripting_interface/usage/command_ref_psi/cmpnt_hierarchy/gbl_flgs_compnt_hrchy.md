@@ -41,5 +41,4 @@ The following global flags are supported. The bean help documents alternative an
 
 A page is not shown in the navigation if the active flag is false. You can deactivate the pages while they are modified to prevent user from seeing an inconsistent view of the page. The bookmarkable flag is not writable.
 
-**Parent topic:**[Component hierarchy \| Portal scripting interface](../admin-system/compnt_hrchy.md)
 

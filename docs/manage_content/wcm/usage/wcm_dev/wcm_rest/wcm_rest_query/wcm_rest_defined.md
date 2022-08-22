@@ -220,5 +220,4 @@ http://host:port/wps/mycontenthandler/wcmrest/query-name?name=hello+world
 200 OK
 ```
 
-**Parent topic:**[REST Query service for web content](../wcm/wcm_rest_query.md)
 

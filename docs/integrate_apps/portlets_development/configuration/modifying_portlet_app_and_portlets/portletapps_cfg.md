@@ -6,5 +6,4 @@ The original configuration is determined by settings in the `portlet.xml` deploy
 
 For instructions about the tasks and detailed steps for changing configuration values refer to the **Manage Applications** or **Manage Portlets** helps.
 
-**Parent topic:**[Modifying portlet apps and portlets](../admin-system/portlets_apps_modes.md)
 

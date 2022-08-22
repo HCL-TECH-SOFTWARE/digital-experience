@@ -62,5 +62,4 @@ Every time that you request the top-level domain the locale of the current user,
 
 While this extension is designed for servlet-rendering, it can be used with portlet-rendering to render different locales from different servers.
 
-**Parent topic:**[Extensions for multilingual sites Multilingual Solution](../wcm/wcm_mls_extensions.md)
 

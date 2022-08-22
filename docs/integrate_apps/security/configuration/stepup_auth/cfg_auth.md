@@ -19,5 +19,4 @@ After you enable step-up authentication, you might want to adjust the settings t
 -   **[Remember me properties](../security/remme_prop.md)**  
 After you enable the Remember me cookie, you might need to adjust the settings to fit your business needs. You can use the WebSphere Integrated Solutions Console to create new properties, if necessary, or update existing properties.
 
-**Parent topic:**[Enabling step-up authentication and/or the Remember me cookie](../security/cfg_sec_intro.md)
 

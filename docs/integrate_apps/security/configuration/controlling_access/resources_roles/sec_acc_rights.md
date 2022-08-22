@@ -596,7 +596,6 @@ On the WSRP producer side, you can set the configuration property wsrp.security.
 
 When you use identity propagation, the user who is authenticated on the client portal needs to have the required role assignments. If no identity propagation is configured, but SSL client certificate authentication is enabled, then the ID of the certificate needs to have the required role assignments. If no authentication method is used, then the request is treated as if it comes from the Anonymous Portal Users. In the latter case, the required roles need to be assigned to the Anonymous Portal User. This assignment implies allowing unauthenticated access to the corresponding resources for all users who can access the producer portal.
 
-**Parent topic:**[Resources, roles, access rights, and initial access control settings](../admin-system/resources_roles.md)
 
 **Related information**  
 

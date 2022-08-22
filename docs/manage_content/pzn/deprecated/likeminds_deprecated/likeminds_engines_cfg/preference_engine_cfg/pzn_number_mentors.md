@@ -12,5 +12,3 @@ If you do not set this parameter, then the Preference Engine uses the value set 
 
 **Parent topic:**[Configuring the Preference engine](../pzn/pzn_configure_preference_engine.md)
 
-**Parent topic:**[Configuring the Preference engine](../pzn/pzn_configure_preference_engine.md)
-

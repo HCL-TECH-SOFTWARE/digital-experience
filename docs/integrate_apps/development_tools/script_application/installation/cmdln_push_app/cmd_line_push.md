@@ -31,7 +31,6 @@ Verify that you have Java 1.6 or newer installed. Verify that the JAVA\_HOME env
 5.  Add the extracted folder to the system path so that you can run sp push from any application folder. If you add the folder to the system path, you do not need the argument that specifies the application root folder.
 
 
-**Parent topic:**[Script Application command line application overview](../script-portlet/cmd_line_push_ovr.md)
 
 **Related information**  
 

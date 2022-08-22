@@ -46,5 +46,4 @@ Only the files that are specified in this procedure need to be copied. Your them
     ```
 
 
-**Parent topic:**[Creating a WAR-based theme copy](../dev-theme/themeopt_themedev_manual_warbased.md)
 

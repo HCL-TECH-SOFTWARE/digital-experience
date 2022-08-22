@@ -266,7 +266,6 @@ The urlModeOverride parameter is used to override the default URL context when l
     Add this to a URL to generate an absolute URL of an item instead of the relative URL.
 
 
-**Parent topic:**[Tags](../wcm/wcm_build_tags.md)
 
 **Related information**  
 

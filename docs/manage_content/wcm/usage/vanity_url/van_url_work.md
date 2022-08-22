@@ -60,7 +60,6 @@ An example process flow of a business user who works with a vanity URL is as fol
     When a user accesses this URL, the HTTP server rewrites this URL to the longer URL, and then redirects the user as described before.
 
 
-**Parent topic:**[Vanity URLs](../wcm/vanity_urls.md)
 
 **Related information**  
 

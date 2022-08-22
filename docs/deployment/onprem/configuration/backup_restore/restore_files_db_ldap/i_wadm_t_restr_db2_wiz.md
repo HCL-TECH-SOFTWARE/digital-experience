@@ -59,5 +59,4 @@ To replace an existing WPSDB database with the backup copy using the DB2® Resto
 19. Restart all servers.
 
 
-**Parent topic:**[Restoring files, databases, and the LDAP server\(s\)](../admin-system/i_wadm_t_restr_winlinux.md)
 

@@ -24,5 +24,4 @@ Pre-rendering can be configured to run automatically, or you can manually pre-re
 -   **[How to access the pre-rendered site](../wcm/wcm_config_delivery_pre-rendered_accessing.md)**  
 Pre-rendered sites are accessed either through HCL Web Content Manager, or through a web server.
 
-**Parent topic:**[Delivering web content](../wcm/wcm_cms_delivery_system.md)
 

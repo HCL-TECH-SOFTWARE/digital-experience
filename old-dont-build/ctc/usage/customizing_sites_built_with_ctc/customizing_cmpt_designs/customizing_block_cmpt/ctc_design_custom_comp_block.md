@@ -11,5 +11,4 @@ Consider these best practices when customizing block components:
 -   **[Customizing headers and footers for block components](../ctc/ctc_design_custom_comp_hdr.md)**  
 You can create new headers or footers for your component configurations. These can then be selected in a Block item.
 
-**Parent topic:**[Customizing component designs](../ctc/ctc_design_custom_comp.md)
 

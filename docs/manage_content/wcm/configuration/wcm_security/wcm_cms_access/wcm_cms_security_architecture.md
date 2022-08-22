@@ -144,7 +144,6 @@ The permissions set for item type do not automatically give you access to indivi
 
 You can also assign specific access to individual groups or users on each item.
 
-**Parent topic:**[Users, Groups and Roles](../wcm/wcm_cms_access.md)
 
 **Related information**  
 

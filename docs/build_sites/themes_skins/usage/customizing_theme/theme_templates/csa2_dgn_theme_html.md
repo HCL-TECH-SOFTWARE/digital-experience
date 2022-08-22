@@ -118,5 +118,4 @@ You can set a theme template to be used on a page and it automatically sets the 
 -   **[Renaming Theme Templates](../rwd/rwd_renamethemetemp.md)**  
 You can rename the default filename of the theme template from theme.html. In the ready-to-use theme renaming the theme.html file is used to provide a different theme view for the administrative pages.
 
-**Parent topic:**[Customizing the theme](../dev-theme/themeopt_cust.md)
 

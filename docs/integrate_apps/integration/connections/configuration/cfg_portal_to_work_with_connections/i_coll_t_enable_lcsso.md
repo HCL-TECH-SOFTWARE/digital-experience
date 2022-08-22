@@ -11,7 +11,6 @@ You can configure single sign-on using IBM® WebSphere® Application Server or b
 3.  Enable single sign-on on the HCL Connections server.
 
 
-**Parent topic:**[Configuring Portal to work with HCL Connections](../config/cfg_ptl_with_conn.md)
 
 **Related information**  
 

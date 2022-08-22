@@ -76,7 +76,6 @@ true: Filters files other than json files when creating WebDav contribution and 
 false: Does not filter any files in the WebDav contribution and profile directories.
 ```
 
-**Parent topic:**[Configuring the portal theme and modules](../dev-theme/themeopt_cust_config.md)
 
 **Related information**  
 

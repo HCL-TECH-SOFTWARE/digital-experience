@@ -47,7 +47,6 @@ View the properties for the rating widget.
         If you do not specify a value, the rating description is not displayed at all.
 
 
-**Parent topic:**[CP Configuration Service for tagging and rating](../admin-system/srvcfg_cpcfg4tr.md)
 
 **Related information**  
 

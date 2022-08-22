@@ -24,5 +24,4 @@ With the search seedlist 1.0 support, custom metadata fields that are specified 
 -   **[Seedlist 1.0 REST service API](../wcm/wcm_dev_search_seedrestapi.md)**  
 The HCL Web Content Manager API for retrieving application content through a seedlist is based on the REST architecture style. To obtain seedlist content, third-party crawlers or administrator applications need to construct and send only HTTP requests to the application servlet.
 
-**Parent topic:**[Crawling web content with search seedlists](../wcm/wcm_dev_search_seedbase.md)
 

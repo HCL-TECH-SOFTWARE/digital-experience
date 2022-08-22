@@ -50,7 +50,6 @@ You can also determine the maximum lifetime of the cookie that holds the languag
 
 For more detailed information, read *State Manager Service*
 
-**Parent topic:**[Language support](../admin-system/adintern.md)
 
 **Related information**  
 

@@ -24,7 +24,6 @@ To delete integrated remote portlets, use the Manage Web Modules portlet.
 -   **[Creating a Producer definition and consuming a portlet by a single XML script](../admin-system/wsrpt_cons_singl_xml.md)**  
 You can use a single XML script to create a Producer definition and then consume portlets from that same Producer.
 
-**Parent topic:**[Consuming portlets in a Consumer portal](../admin-system/wsrpt_cons_prtlt.md)
 
 **Related information**  
 

@@ -37,5 +37,3 @@ View an example of a profiler that uses arithmetic operations.
 
 **Parent topic:**[Rules](../pzn/pzn_rules.md)
 
-**Parent topic:**[Rules](../pzn/pzn_rules.md)
-

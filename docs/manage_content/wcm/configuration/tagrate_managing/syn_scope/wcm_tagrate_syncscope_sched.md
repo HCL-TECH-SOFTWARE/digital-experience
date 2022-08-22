@@ -63,7 +63,6 @@ You can schedule scope synchronization to be run at specific times by defining t
     8.  Restart the portal.
 
 
-**Parent topic:**[Synchronizing scopes for web content](../wcm/wcm_tagrate_syncscope.md)
 
 **Related information**  
 

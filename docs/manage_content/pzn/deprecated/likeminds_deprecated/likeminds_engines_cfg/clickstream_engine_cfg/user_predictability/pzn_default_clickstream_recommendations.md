@@ -8,5 +8,3 @@ Run the `buildstats` utility on a regular basis. By default, the installer sets 
 
 **Parent topic:**[User predictability](../pzn/pzn_user_predictability.md)
 
-**Parent topic:**[User predictability](../pzn/pzn_user_predictability.md)
-

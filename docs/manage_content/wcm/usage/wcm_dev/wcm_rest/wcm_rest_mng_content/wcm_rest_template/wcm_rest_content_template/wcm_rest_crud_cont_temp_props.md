@@ -142,5 +142,4 @@ Content-type: application/vnd.ibm.wcm+xml
     Valid values for `contentLink`: SINGLE, MULTIPLE, NONE.
 
 
-**Parent topic:**[How to use REST with content templates](../wcm/wcm_rest_crud_cont_temp.md)
 

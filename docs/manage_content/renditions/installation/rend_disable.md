@@ -13,5 +13,4 @@ Renditions are enabled by default. If you want to disable them, you must run a C
 3.  Restart the HCL Portal server.
 
 
-**Parent topic:**[Renditions](../renditions/rend_ovr.md)
 

@@ -9,7 +9,6 @@ Internet search engines usually take care of language support in terms of langua
 -   **[Region support and multi-regional sites](../admin-system/srr_regio_spprt.md)**  
 Global companies might choose to publish content, and offer products or services specifically for certain regions. While today a language can be detected, there is no technical solution available to detect a region.
 
-**Parent topic:**[Search](../wcm/wcm_dev_search.md)
 
 **Previous topic:**[Configuring Search Center to search for web content](../wcm/wcm_dev_search_searchcenter.md)
 

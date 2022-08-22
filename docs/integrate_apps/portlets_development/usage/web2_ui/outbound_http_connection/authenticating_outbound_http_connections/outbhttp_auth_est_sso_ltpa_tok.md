@@ -27,7 +27,6 @@ The settings in the following example code snippet enable an SSO outbound connec
 -   The value of `hpaa.slotid` specifies the slot ID of the credential vault. For instructions about how to provide the user credentials of the remote connection, read *Providing user credentials for authenticated connections*. The slot ID identifies the Credential Vault slot for the user subject for which the LTPA tokens are used.
 -   The metadata setting `forward-credentials-from-vault` specifies that the credentials of the SSO authentication are gathered from the Credential Vault.
 
-**Parent topic:**[Authenticating outbound HTTP connections](../dev-portlet/outbhttp_authntct.md)
 
 **Related information**  
 

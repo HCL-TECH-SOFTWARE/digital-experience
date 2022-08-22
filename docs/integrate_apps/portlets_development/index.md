@@ -51,7 +51,6 @@ HCL Portal defines a set of portal-specific public render parameters, which can 
 -   **[Sample portlets](../dev-portlet/jsrsamp.md)**  
 Learn about the sample portlets included with HCL Digital Experience and view the steps to import these samples into IBM Rational Application Developer.
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 
 **Related information**  
 

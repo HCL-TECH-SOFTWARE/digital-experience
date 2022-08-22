@@ -58,5 +58,4 @@ Parameters that are set this way will always be visible in the included servlet 
 
 If the portlet being rendered is an HCL DX portlet, namespaced parameters still override non-namespaced parameters.
 
-**Parent topic:**[Portlet development reference](../dev-portlet/wpsdevref.md)
 

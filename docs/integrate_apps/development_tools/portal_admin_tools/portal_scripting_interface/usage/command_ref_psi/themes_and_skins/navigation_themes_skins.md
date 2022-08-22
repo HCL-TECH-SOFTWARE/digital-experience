@@ -14,5 +14,4 @@ Jacl example:
 $Look deselect
 ```
 
-**Parent topic:**[Themes and Skins](../admin-system/themes_skins.md)
 

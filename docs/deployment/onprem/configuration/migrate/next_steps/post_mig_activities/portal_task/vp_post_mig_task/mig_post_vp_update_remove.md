@@ -156,5 +156,4 @@ For example, if you migrate a Virtual Portal that contains a Document Libraries 
     Make sure to remove the web-app sequence that includes the opening `<web-app...>` and the closing `</web-app>` tags, and everything in between. Also, remove the components that reference the portlets. It includes the opening `<component ...>` and the closing `</component>` tags, and everything in between. The `object ids`, `portletrefs`, `sharerefs`, and other references in the example might vary in your installation.
 
 
-**Parent topic:**[Virtual Portal tasks](../migrate/virt_portal_post_mig.md)
 

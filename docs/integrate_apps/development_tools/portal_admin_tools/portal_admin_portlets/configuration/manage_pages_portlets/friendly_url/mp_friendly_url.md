@@ -35,7 +35,6 @@ You can configure a friendly URL by using the portal toolbar or the Manage Pages
 
 To make up the full HCL Portal URL, the portal appends a suffix to that friendly URL. This suffix represents the current state of the page and its components. Some scenarios require short and fully human readable URLs that omit the state information. For information about how to configure short stateless URLs see *Using friendly URLs without state information*.
 
-**Parent topic:**[Manage pages portlets](../admin-system/mp_manage_pages.md)
 
 **Related information**  
 

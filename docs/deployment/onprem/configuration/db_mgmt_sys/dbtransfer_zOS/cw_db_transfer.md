@@ -335,7 +335,6 @@ If you are setting up a cluster environment, you can use the Create a Deployment
 -   **[DB2 for z/OS worksheet: Transfer your database](../config/cw_db_ws_db2z.md)**  
 This worksheet highlights the fields and properties that you see in the Configuration Wizard when you use the database transfer option.
 
-**Parent topic:**[Database Management Systems](../config/config_dbms.md)
 
 **Related information**  
 

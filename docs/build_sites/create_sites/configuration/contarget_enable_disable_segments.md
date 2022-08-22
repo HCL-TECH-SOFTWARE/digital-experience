@@ -13,5 +13,4 @@ By default, both segments and managed segments are enabled in the Add Segments v
 3.  Restart the Portal server\(s\) to apply your changes.
 
 
-**Parent topic:**[Preparing for content authors](../site/site_prep_toolbar.md)
 

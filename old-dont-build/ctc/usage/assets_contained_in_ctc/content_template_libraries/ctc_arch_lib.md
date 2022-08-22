@@ -25,5 +25,4 @@ The CTC Design library contains all the design assets of CTC: authoring template
 -   **[CTC Process library](../ctc/ctc_arch_lib_proc.md)**  
 The CTC Process library contains categories and workflows. To match your organization's profiling and change management strategies, you must modify and add categories and workflows.
 
-**Parent topic:**[Assets contained in the Content Template](../ctc/ctc-assets.md)
 

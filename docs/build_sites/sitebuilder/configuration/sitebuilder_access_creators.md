@@ -101,5 +101,3 @@ Assign all website creators the Contributor role for the Site Builder Template l
 
 **Parent topic:**[Deploying Site Builder](../sitebuilder/sitebuilder_access.md)
 
-**Parent topic:**[Deploying Site Builder](../sitebuilder/sitebuilder_access.md)
-

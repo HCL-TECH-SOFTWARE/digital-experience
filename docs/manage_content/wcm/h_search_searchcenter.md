@@ -214,7 +214,6 @@ To refine your search, you can select one or multiple facets.
 
 To return and view a less restricted search result list, click the link **Remove selection** or the square box icon next to the appropriate facet. To clear **all** facet restrictions and return to the full search result list, click **Clear selections**.
 
-**Parent topic:**[Search](../wcm/wcm_dev_search.md)
 
 **Previous topic:**[Searching pages](../admin-system/mp_search_pages.md)
 

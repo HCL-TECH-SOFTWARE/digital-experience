@@ -19,5 +19,4 @@ The following steps describe how to obtain the Identity Provider target URL to d
 
 The federation flow starts automatically after you log in to the IIS-provided web interface of the ADFS server.
 
-**Parent topic:**[Configuration settings for Active Directory Federation Services \(ADFS\)](../dev-portlet/outbhttp_auth_est_sso_adfs.md)
 

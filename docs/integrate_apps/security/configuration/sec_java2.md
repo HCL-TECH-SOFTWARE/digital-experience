@@ -25,7 +25,6 @@ Portlets that are installed on HCL Digital Experience after installation can bri
 
 **Note:** The application server searches for was.policy files in the enterprise application archive rather than the Web application archive comprising a portlet. Therefore, the portal server copies was.policy from the appname.war/META-INF directory to the generated appname.ear/META-INF directory during deployment of a portlet WAR file.
 
-**Parent topic:**[Securing](../security/securing_wp.md)
 
 **Related information**  
 

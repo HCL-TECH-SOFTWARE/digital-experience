@@ -41,5 +41,3 @@ The following tables describe what each key represents:
 
 **Parent topic:**[Feedback database schema](../pzn/pzn_feedback_db_schema.md)
 
-**Parent topic:**[Feedback database schema](../pzn/pzn_feedback_db_schema.md)
-

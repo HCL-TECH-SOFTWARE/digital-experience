@@ -14,13 +14,11 @@ Splits can be changed for each rule spot mapping.
 
 Rule spot mappings can be duplicated and moved from one campaign to another. The start and end date of the rule spot mapping may both be modified if they fall outside the range of dates for the campaign to which the spot mapping is moved. Multiple mappings can be added to the same spot within a campaign.
 
-**Parent topic:**[Personalization terms](../pzn/pzn_concepts.md)
 
 **Previous topic:**[Content spots](../pzn/pzn_content_spots.md)
 
 **Next topic:**[Campaigns](../pzn/pzn_campaigns.md)
 
-**Parent topic:**[Personalization terms](../pzn/pzn_concepts.md)
 
 **Previous topic:**[Content spots](../pzn/pzn_content_spots.md)
 

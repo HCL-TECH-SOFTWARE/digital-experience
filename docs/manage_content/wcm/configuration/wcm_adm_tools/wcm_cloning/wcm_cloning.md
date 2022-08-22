@@ -14,5 +14,4 @@ You must prepare your source and target systems before a web content repository 
 -   **[Cloning data](../wcm/wcm_cloning_live.md)**  
 These procedures describe how to clone web content data from one system to another.
 
-**Parent topic:**[Web content administration tools](../wcm/wcm_maintain.md)
 

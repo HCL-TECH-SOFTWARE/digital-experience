@@ -9,7 +9,6 @@ You can use Oracle or Oracle RAC as the database software to configure it to wor
 -   **[Installing and preparing SQL Server](../config/sql2005_inst.md)**  
 Use this information to install and configure SQL Server for use with your HCL Digital Experience system.
 
-**Parent topic:**[Installing the prerequisite software](../install/prereq_software.md)
 
 **Related information**  
 

@@ -13,7 +13,6 @@ You can change the auto-loading of portlet capabilities with WebDAV.
 -   **[Changing the auto-loading of portlet capabilities with XMLAccess](../dev-theme/themeopt_chng_auto_load_cap_xmlaccess.md)**  
 You can change the auto-loading of portlet capabilities with XMLAccess.
 
-**Parent topic:**[The module framework](../dev-theme/themeopt_module.md)
 
 **Related information**  
 

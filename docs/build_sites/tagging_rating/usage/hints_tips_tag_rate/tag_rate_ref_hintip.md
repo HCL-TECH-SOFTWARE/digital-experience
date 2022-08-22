@@ -7,7 +7,6 @@ Learn about some hints and tips for administrators who work with tagging and rat
 -   **[Hints and tips for portal users](../admin-system/tag_rate_ref_hintip_4users.md)**  
 Learn about some hints and tips for portal users who work with tagging and rating.
 
-**Parent topic:**[Tagging and rating](../admin-system/tag_rate_mngadmin.md)
 
 **Related information**  
 

@@ -19,5 +19,4 @@ The configuration process has changed. Use the Configuration Wizard to set up yo
 -   **[Upgrading the SDK](../install/sdk_upgrade-linux.md)**  
 Change your version of the SDK Java Technology Edition using the applicable HCL Digital Experience Combined fix pack.
 
-**Parent topic:**[Installing the HCL Digital Experience software](../install/inst_web_experience.md)
 

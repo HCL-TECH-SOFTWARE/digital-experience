@@ -27,5 +27,4 @@ When you deploy a new application to a cluster, you may need to add the applicat
 5.  Click **Propagate Plug-in** to propagate the Plugin\_cfg.xml file to the web server.
 
 
-**Parent topic:**[First-time installation of Content Template](../ctc/ctc_inst_overview.md)
 

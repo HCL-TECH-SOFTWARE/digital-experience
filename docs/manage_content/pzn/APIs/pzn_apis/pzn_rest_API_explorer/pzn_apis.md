@@ -38,11 +38,9 @@ The Personalization REST API explorer allows developers using the Digital Experi
 -   **[Personalization REST API explorer](../pzn/dev_pzn_rest_api_explorer.md)**  
 The Personalization REST API explorer allows developers using the Digital Experience Personalization REST APIs to explore and test these APIs. The following topic presents the Personalization REST APIs available and how developers can use them working with the Personalization REST API explorer.
 
-**Parent topic:**[Digital Experience Personalization](../pzn/pzn_overview.md)
 
 **Previous topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
 
-**Parent topic:**[Digital Experience Personalization](../pzn/pzn_overview.md)
 
 **Previous topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
 

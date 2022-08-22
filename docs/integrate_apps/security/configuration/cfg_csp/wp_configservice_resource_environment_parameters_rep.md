@@ -100,5 +100,4 @@ There are two separators which can be used with the `csp-replace-string` paramet
     ```
 
 
-**Parent topic:**[Configuring Content Security Policy](../security/configuring_content_security_policy.md)
 

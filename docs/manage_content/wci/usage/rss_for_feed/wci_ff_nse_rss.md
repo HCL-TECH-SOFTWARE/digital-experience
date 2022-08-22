@@ -20,5 +20,4 @@ The following element must be a direct child of the feed's channel element since
 -   **[Item-level Elements](../wci/wci_ff_nse_rss_item.md)**  
 The following elements are applied at the item level since they contain information that is specific to each individual feed entry. These elements are only used in the output feed. They have no meaning in the context of an input feed.
 
-**Parent topic:**[IBM Web Content Integrator](../wci/wci_intro.md)
 

@@ -25,5 +25,4 @@ The portal transfers the user attributes and the registration handle to the Prod
 
 The user attributes are sent to the Producer with every markup or action request, that is every time when a user interacts with a remote portlet of that Producer.
 
-**Parent topic:**[Using the XML configuration interface to work with Producer definitions](../admin-system/wsrpt_cons_wrkprd_xml.md)
 

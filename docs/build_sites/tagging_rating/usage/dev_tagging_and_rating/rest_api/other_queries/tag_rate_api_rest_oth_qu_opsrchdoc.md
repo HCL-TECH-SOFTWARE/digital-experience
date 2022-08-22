@@ -30,7 +30,6 @@ Optionally, you can specify the following query parameter:
     Use this query parameter to pass a URL for an icon that browsers can render to visualize the OpenSearch description document. For details about the characteristics of the icon refer to the JavaDoc of the interface `com.ibm.portal.resolver.opensearch.DefaultOpenSearchContentHandler.startImage(int, int, String)` . Note that the icon must be 16 pixels by 16 pixels.
 
 
-**Parent topic:**[Other queries](../admin-system/tag_rate_api_rest_oth_queries.md)
 
 **Related information**  
 

@@ -53,7 +53,6 @@ Use the following command to create profile with the name profile\_new\_deferred
 ./ConfigEngine.sh create-profile-based-on-template -DThemeUniqueName=ibm.portal.85Theme -DTemplateProfileFilePath=/opt/WebSphere/profile_new_template.json -DTargetProfileFileName=profile_new_deferred.json -DTemplateModuleListProfileFileName=profile_deferred.json -DOverwriteProfile=true
 ```
 
-**Parent topic:**[The module framework](../dev-theme/themeopt_module.md)
 
 **Related information**  
 

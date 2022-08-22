@@ -48,7 +48,6 @@ Remove the URL generation filter if you previously installed it. For information
 
 You can configure themes to display only short URLs without state information. You can configure pages that use that theme to display friendly URLs.
 
-**Parent topic:**[Benefits and limitations of removing navigational state information](../config/cw_navstate.md)
 
 **Related information**  
 

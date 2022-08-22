@@ -23,5 +23,4 @@ To enable client side rendering for the Syndicated Feed Portlet:
     **Note:** You do not need to restart the portal server after you specify the configuration parameters.
 
 
-**Parent topic:**[Client side aggregation \(CSA\) rendering in the Syndicated Feed Portlet](../admin-system/ic_syndfeed_csr.md)
 

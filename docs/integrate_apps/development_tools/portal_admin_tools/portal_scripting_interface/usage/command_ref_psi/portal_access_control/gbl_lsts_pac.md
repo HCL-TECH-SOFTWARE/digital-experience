@@ -23,5 +23,4 @@ Admin SecurityAdmin Delegator Manager Editor PrivilegedUser User
 
 ```
 
-**Parent topic:**[Portal Access Control](../admin-system/ptl_acc_con.md)
 

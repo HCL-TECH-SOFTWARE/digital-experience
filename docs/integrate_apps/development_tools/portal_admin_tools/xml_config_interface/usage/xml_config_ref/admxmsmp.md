@@ -74,7 +74,6 @@ Some of the XML samples are listed in the following. This list is not complete. 
     You can use this sample file to perform an export that includes all orphaned data. You do this to prepare for deleting the orphaned data. Note that this sample uses the request type `export-orphaned-data`.
 
 
-**Parent topic:**[XML configuration reference](../admin-system/adxmlref.md)
 
 **Related information**  
 

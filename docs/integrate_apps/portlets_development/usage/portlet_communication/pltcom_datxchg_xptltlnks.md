@@ -30,7 +30,6 @@ If the pure render parameter approach is not applicable, generating URLs and tra
 -   So far, the URLs being generated modify navigational state information only and do not carry any action semantic, which is necessary to modify the persistent backend state. PortletTargetAccessorController is available from the PortletAccessorFactory and enables the targeting of a specific portlet's processAction method. PortletTargetAccessorController triggers a processAction on the specific target portlet that the generated URL points to.
 -   Standard portlets provide powerful publish and subscribe mechanisms for exchanging information through an action phase invoked between portlets. During the invocation, portlets can exchange complex data and trigger portlet activity such as updates to back-end systems.
 
-**Parent topic:**[Portlet communication](../dev-portlet/pltcom_ptlt_com.md)
 
 **Related information**  
 

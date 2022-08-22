@@ -7,5 +7,4 @@ Add an HCL Portal cluster to an existing cluster.
 -   **[HCL Digital Experience roadmap: Portal farm](../install/rm_production_farm.md)**  
 Server farms offer a simple way to build and maintain a highly scalable, highly available server environment.
 
-**Parent topic:**[Roadmaps for installation and deployment](../install/rm_installation.md)
 

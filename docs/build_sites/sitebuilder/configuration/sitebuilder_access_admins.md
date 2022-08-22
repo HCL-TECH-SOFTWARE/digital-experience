@@ -135,5 +135,3 @@ HCL Digital Experience administrators can use Site Builder to create sites or ad
 
 **Parent topic:**[Deploying Site Builder](../sitebuilder/sitebuilder_access.md)
 
-**Parent topic:**[Deploying Site Builder](../sitebuilder/sitebuilder_access.md)
-

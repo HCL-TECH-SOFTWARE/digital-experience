@@ -45,5 +45,3 @@ Learn how to specify time interval for checking sift priority.
 
 **Parent topic:**[Configuring LikeMinds utilities](../pzn/pzn_config_background_utilities.md)
 
-**Parent topic:**[Configuring LikeMinds utilities](../pzn/pzn_config_background_utilities.md)
-

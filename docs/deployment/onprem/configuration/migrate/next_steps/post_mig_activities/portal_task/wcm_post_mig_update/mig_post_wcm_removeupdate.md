@@ -18,5 +18,4 @@ If the hostname or context root of your migrated server is different to the orig
 -   Edit the Subscriber URL of any syndicators that are syndicating to the migrated server. See [Cross version syndication](mig_content_options_cross-version.md) for details on what versions of HCL Portal support cross version syndication.
 -   Edit the Syndicator URL of any subscribers that are subscribing to the migrated server. See [Cross version syndication](mig_content_options_cross-version.md) for details on what versions of HCL Portal support cross version syndication.
 
-**Parent topic:**[Web Content Manager](../wcm/wcm_migration_post_update.md)
 

@@ -23,7 +23,6 @@ Optional: To prevent data loss on DB2, modify the JCR schema to support high ava
 -   **[Connecting to existing database domains](../config/connect_domains.md)**  
 View the steps to share a database domain between two separate HCL Digital Experience instances \(instance1 and instance2\), where instance2 is connected to an instance1 database domain.
 
-**Parent topic:**[Configuring](../config/configuring_parent2.md)
 
 **Related information**  
 

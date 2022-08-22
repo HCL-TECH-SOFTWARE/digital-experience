@@ -11,7 +11,6 @@ The draft page ribbon makes it easier for users to see if a page has pending cha
 2.  To add and remove ready-to-use modules to your theme, see [Adding or removing a module from a profile](themeopt_add_oobmod.md).
 
 
-**Parent topic:**[Customizing the theme](../dev-theme/themeopt_cust.md)
 
 **Related information**  
 

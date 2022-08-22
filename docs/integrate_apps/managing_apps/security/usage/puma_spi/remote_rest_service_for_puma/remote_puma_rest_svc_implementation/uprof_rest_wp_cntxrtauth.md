@@ -6,5 +6,4 @@ The starting weight of the application has to be higher than the starting weight
 
 Using the Portal context path as a prefix for the context root is a necessary prerequisite with regards to the default authentication method that is configured for the servlet, which reuses the application specific form based authentication mechanism implemented in the portal. This way, a request that needs authentication is redirected to the appropriate portal login page. After successful authentication, the portal login again redirects to the previous URL. As this requires a specific handling of the redirect on the client side, it is recommended that clients make sure that a security context exists already before calling operations that involve protected URLs. This is usually the case when running in a portal session context. Alternatively, you can configure the servlet for different authentication methods by changing the `web.xml` descriptor appropriately, for example, for basic or SSL client certificate authentication.
 
-**Parent topic:**[How the portal implements the remote PUMA REST service](../dev/uprof_rest_wpspec.md)
 

@@ -7,7 +7,6 @@ To support Search in a portal farm, you must install and configure a remote sear
 -   **[Configuring JCR search in a portal farm](../install/farm_install_search.md)**  
 JCR-based content includes content that is created with Web Content Manager or Personalization.
 
-**Parent topic:**[Search](../wcm/wcm_dev_search.md)
 
 **Previous topic:**[Configuring search in a cluster](../config/config_search_clus.md)
 

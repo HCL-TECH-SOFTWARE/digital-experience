@@ -23,7 +23,6 @@ Use virtualized environments to meet your business needs like production server 
 -   **[Multiple profile support](../plan/plan_multiple_profile.md)**  
 Multiple profiles give you the ability to have multiple, independently configured portal instances that run from the same installation.
 
-**Parent topic:**[Installing HCL Digital Experience](../install/installing_parent2.md)
 
 **Next topic:**[Roadmaps to deploy your HCL Digital Experience system](../install/deployment_patterns.md)
 

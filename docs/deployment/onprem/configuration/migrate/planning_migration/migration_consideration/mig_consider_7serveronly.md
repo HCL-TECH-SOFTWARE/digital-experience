@@ -20,7 +20,6 @@ Manually run the two following ConfigEngine tasks from the [wp\_profile\_root](.
     **Note:** If you encounter any problems when you run the upgrade-profile task and you need to restart the task with -Dwp.migration.framework.resume=parameter, then ensure that you continue to use the -Dprevious.family.WPFamilyName=server parameter.
 
 
-**Parent topic:**[Migration considerations](../plan/mig_plan_high_availability.md)
 
 **Related information**  
 

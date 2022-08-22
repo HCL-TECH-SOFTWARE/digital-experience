@@ -22,5 +22,4 @@ This section outlines how to disable Practitioner Studio and Woodburn Studio in 
     -   Linux: `./ConfigEngine.sh **disable-v95-UI-features-virtual-portal** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> **-DVirtualPortalContext=**`
     -   Windows: `ConfigEngine.bat **disable-v95-UI-features-virtual-portal** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> **-DVirtualPortalContext=**`
 
-**Parent topic:**[Working with Practitioner Studio](../practitioner_studio/working_prac_studio.md)
 

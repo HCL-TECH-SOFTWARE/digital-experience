@@ -141,5 +141,4 @@ The data processed by the remote REST service for PUMA is described by an XML sc
 
 ```
 
-**Parent topic:**[Structure of the remote REST service for PUMA](../dev/uprof_rest_gen.md)
 

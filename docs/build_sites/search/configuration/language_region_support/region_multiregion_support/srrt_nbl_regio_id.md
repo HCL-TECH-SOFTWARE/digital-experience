@@ -23,5 +23,4 @@ You can configure top-level domain names with country codes and subdomains with 
     For more information, about friendly URLs see the topics about friendly URLs.
 
 
-**Parent topic:**[Region support and multi-regional sites](../admin-system/srr_regio_spprt.md)
 

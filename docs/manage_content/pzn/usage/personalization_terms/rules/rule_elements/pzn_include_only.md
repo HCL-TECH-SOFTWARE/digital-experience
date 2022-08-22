@@ -6,5 +6,3 @@ You can select action or binding rule to be used as the **Include Only** cause. 
 
 **Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
 
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
-

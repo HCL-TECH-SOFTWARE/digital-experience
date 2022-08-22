@@ -131,7 +131,6 @@ After you create and prepare your initial staging and production servers, you mu
 8.  Restart the server.
 
 
-**Parent topic:**[Creating and deploying the initial release](../deploy/dep_initial.md)
 
 **Previous topic:**[Preparing the servers for initial staging](../deploy/dep_prep.md)
 

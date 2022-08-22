@@ -28,5 +28,4 @@ You use the "expires" parameter in HCL Web Content Manager tags and URLs to spec
 -   **[Caching HCL Web Content Manager elements](../wcm/wcm_dev_caching_components.md)**  
 You can apply caching to elements by using "connect" tags to reference elements within presentation templates instead of the component or element tag.
 
-**Parent topic:**[Tags](../wcm/wcm_build_tags.md)
 

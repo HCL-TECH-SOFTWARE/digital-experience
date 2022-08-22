@@ -4,5 +4,4 @@ To modify the presentation template of a Content Template Catalog content type, 
 
 Copy Content Template presentation templates into your design library and modify them. Use them in template mappings in your sites or map them directly to your own authoring templates. Do not modify the original presentation templates because they are overwritten when you install Content Template updates.
 
-**Parent topic:**[Customizing sites built with Content Template](../ctc/ctc_design_custom.md)
 

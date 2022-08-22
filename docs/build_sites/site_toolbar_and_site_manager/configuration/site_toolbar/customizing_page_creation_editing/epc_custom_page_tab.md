@@ -17,5 +17,4 @@ You can add new styles or layouts to the site toolbar with a JSON file. Sometime
 -   **[Displaying hidden pages in Site Manager](../admin-system/toolbar_sm_disply_hidden.md)**  
  You can use metadata to control the display of hidden pages in the tree view of site manger. Your settings determine if users have the option to display or hide hidden pages or to always view hidden pages in Site Manager. Hidden pages never display in your site navigation.
 
-**Parent topic:**[Preparing the site toolbar](../dev-theme/themeopt_themeshelf.md)
 

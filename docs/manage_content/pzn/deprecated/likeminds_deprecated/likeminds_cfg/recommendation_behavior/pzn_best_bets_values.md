@@ -18,5 +18,3 @@ db.applic.param.BestBets.list.cutoff = 50
 
 **Parent topic:**[Specifying recommendation behavior](../pzn/pzn_specify_recommendation_behavior.md)
 
-**Parent topic:**[Specifying recommendation behavior](../pzn/pzn_specify_recommendation_behavior.md)
-

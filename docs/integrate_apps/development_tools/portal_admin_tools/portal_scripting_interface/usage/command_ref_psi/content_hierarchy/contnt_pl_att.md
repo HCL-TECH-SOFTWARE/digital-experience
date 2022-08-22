@@ -72,7 +72,6 @@ Valid attributes are filename and displayoption.
      Jacl: $Content set 6\_CGAH47L00G2N802TJFV58Q3000 displayoption iframe html
 
 
-**Parent topic:**[Content hierarchy accessed through Content bean](../admin-system/contnt_hierarchy.md)
 
 **Related information**  
 

@@ -46,5 +46,4 @@ lmController.insert(control, parentContainer, nextContainer);
 -   **[Placing a portlet on a page](../dev/ctrlrapit_plcprtltonpg.md)**  
 To put a portlet on a page, use the `insert()` method of the controller.
 
-**Parent topic:**[Modifying portal resources and topologies](../dev/ctrlrapit_mdfy_restop.md)
 

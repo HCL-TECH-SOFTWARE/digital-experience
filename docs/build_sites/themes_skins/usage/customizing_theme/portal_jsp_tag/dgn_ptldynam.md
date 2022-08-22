@@ -29,5 +29,4 @@ The following section provides detailed descriptions of the <portal-dynamicui/\>
     Through the use of scripting variables, notifies the user whenever a new, unclaimed task has been assigned. This tag should be used only within theme JSPs.
 
 
-**Parent topic:**[Tags used by the portal JSPs](../dev-portlet/dgn_ptltld.md)
 

@@ -13,5 +13,4 @@ Custom Digital Data Connector \(DDC\) for HCL Portal plug-ins that do not delega
 -   **[The Atom list-rendering profile](../social/plrf_atom_lr_profl.md)**  
 Digital Data Connector \(DDC\) for HCL Portal provides a list-rendering profile that is ready to use for access to feeds that comply with the Atom syndication format standard.
 
-**Parent topic:**[Digital Data Connector \(DDC\) for HCL Portal](../social/plrf_ovu.md)
 

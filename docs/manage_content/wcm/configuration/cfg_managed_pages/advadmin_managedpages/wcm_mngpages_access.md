@@ -124,5 +124,4 @@ To enable business users to create draft pages, complete the following steps:
 
 Users with Contributor access to the published version of a page can create child pages under that page. When in edit mode on the parent page, contributors can use the site toolbar to create a child page.
 
-**Parent topic:**[Administering managed pages](../wcm/wcm_mngpages_advadmin.md)
 

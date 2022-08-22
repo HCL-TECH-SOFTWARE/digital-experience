@@ -34,5 +34,4 @@ A component that is named **Styles: Your Page Component** is generated under thi
 
 Other components specific to a particular page component are also stored under this folder.
 
-**Parent topic:**[Page components](../wcm/wcm_dev_page_components.md)
 

@@ -16,5 +16,3 @@ If you set <`mentor_set_name>.pause_sifting_at`, use the following setting to wa
 
 **Parent topic:**[How the mentor selection process works](../pzn/pzn_mentor_selection_process.md)
 
-**Parent topic:**[How the mentor selection process works](../pzn/pzn_mentor_selection_process.md)
-

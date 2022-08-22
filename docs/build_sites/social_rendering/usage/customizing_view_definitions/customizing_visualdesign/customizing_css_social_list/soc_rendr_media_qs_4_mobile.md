@@ -42,5 +42,4 @@ The media queries in this sample work as follows:
 
 For displays that are 321 to 480 pixels wide, only the first query applies. For screens that are 320 pixels wide or narrower, both queries apply.
 
-**Parent topic:**[Customizing the CSS styles of social lists](../social/soc_rendr_custom_css_styles.md)
 

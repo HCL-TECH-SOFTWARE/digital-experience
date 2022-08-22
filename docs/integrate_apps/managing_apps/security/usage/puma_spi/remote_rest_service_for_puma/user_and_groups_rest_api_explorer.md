@@ -47,5 +47,4 @@ http://localhost:10039/dx/api/users/v1/explorer/
     See the [Remote REST service for PUMA](uprof_rest.md) Help Center topic for details on the body, headers, query parameters, response body, and other information.
 
 
-**Parent topic:**[Remote REST service for PUMA](../dev/uprof_rest.md)
 

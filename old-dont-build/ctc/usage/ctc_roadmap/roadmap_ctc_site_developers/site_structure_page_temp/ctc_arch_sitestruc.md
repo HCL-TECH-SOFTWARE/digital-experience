@@ -7,5 +7,4 @@ Content Template has page templates that can be used to create landing pages, in
 -   **[Microsites created from page templates](../ctc/ctc_arch_sitestruc_instant.md)**  
 When a Content Template Catalog page template is instantiated, a partial site, called a microsite, is copied into your site at the same time.
 
-**Parent topic:**[A Content Template Catalog roadmap for site developers](../ctc/ctc_gs_site_devs.md)
 

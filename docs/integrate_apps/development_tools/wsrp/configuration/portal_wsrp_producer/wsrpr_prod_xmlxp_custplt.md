@@ -22,7 +22,6 @@ Here is an example XML script for exporting all customized WSRP portlet instance
 
 ```
 
-**Parent topic:**[Using your portal as a WSRP Producer](../admin-system/wsrpt_prod_use.md)
 
 **Previous topic:**[Providing WSRP services as a Producer](../admin-system/wsrpt_prod_prvd_ws.md)
 

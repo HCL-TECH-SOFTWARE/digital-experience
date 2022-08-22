@@ -19,5 +19,4 @@ The `HTML – Analytics` component is located in the Web Content Templates libra
     ```
 
 
-**Parent topic:**[Instrumenting web content for Active Site Analytics](../admin-system/sa_asa4wcm.md)
 

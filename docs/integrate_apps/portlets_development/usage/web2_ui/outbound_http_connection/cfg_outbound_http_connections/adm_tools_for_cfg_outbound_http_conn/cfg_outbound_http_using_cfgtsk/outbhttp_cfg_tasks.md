@@ -25,7 +25,6 @@ This configuration task deletes configuration settings for an outbound HTTP conn
 -   **[How to clear outbound HTTP connection configuration profiles](../dev-portlet/outbhttp_cfg_tsk_clear.md)**  
 The clean-outbound-http-connection-config configuration task clears the complete configuration profile for an outbound HTTP connection. It deletes all settings of an outbound HTTP connection profile. The delete-outbound-http-connection-config configuration task deletes only those configuration settings that are listed in the specified XML document.
 
-**Parent topic:**[Administration tools for configuring outbound HTTP connections](../dev-portlet/outbhttp_cfg_tools.md)
 
 **Related information**  
 

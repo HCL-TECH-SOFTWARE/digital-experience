@@ -15,7 +15,6 @@ Use the Configuration Wizard to upgrade the node profiles for a cluster environm
 -   **[Cluster Step 3: Upgrade node profiles](../config/cw_migrate_cluster_3.md)**  
 Use the Configuration Wizard to upgrade the nodes profiles for a cluster environment. Use the following information to get familiar with the information you must provide in the wizard and the configuration procedure that it generates.
 
-**Parent topic:**[Migrating](../migrate/migration.md)
 
 **Related information**  
 

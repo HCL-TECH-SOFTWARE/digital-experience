@@ -18,5 +18,4 @@ To create an image element, you can either add an image element to an authoring 
 
 You can configure which mime types are valid for an image element by editing the `imageresourcecmpnt.allowedmimetypes` setting. See [Web content authoring options](wcm_config_prop_authoring.md) for further information.
 
-**Parent topic:**[How to store files and images](../wcm/wcm_dev_elements_types_files.md)
 

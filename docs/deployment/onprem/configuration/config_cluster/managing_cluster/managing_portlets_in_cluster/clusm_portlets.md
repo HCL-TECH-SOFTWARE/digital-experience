@@ -8,5 +8,4 @@ If the portlet was deployed during initial installation, then the object ID migh
 
 **Note:** When you deploy and activate portlets, while you are logged in to HCL Portal, you must log out and log back in to see the updated status for the portlets.
 
-**Parent topic:**[Managing portlets in your cluster](../admin-system/manage_portlets.md)
 

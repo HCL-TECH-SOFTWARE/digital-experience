@@ -17,5 +17,4 @@ Configure the communication between HCL Portal and your Oracle iPlanet web serve
 -   **[Configuring your OnDemand Router](../config/cfg_odr.md)**  
 Configure the communication between HCL Portal and your OnDemand Router \(ODR\).
 
-**Parent topic:**[Web servers](../config/config_webservers.md)
 

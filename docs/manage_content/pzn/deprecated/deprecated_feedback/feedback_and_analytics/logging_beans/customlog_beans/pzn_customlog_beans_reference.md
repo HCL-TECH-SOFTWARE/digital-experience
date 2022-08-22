@@ -26,5 +26,3 @@ CustomLog beans should be instantiated as session beans; however, they do not ma
 
 **Parent topic:**[CustomLog beans](../pzn/pzn_customlog_beans.md)
 
-**Parent topic:**[CustomLog beans](../pzn/pzn_customlog_beans.md)
-

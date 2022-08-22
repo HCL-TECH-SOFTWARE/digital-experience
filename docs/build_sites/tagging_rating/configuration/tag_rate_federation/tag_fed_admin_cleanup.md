@@ -20,7 +20,6 @@ The following example XML script triggerDeleteTask.xml shows how you schedule th
 -   As this example does not explicitly define a schedule, the task is performed immediately.
 -   You can also select and specify the HCL Connections features for which you want the cleanup to be run. For details about selecting features see the topic about Importing federated tags and resources.
 
-**Parent topic:**[Administering tag federation](../admin-system/tag_fed_admin.md)
 
 **Related information**  
 

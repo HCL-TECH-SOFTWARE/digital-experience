@@ -36,8 +36,6 @@ You can extend your WSRP Producer or WSRP Consumer portal by handlers that compl
 -   **[Reference for using WSRP with the portal](../admin-system/wsrpr_ref.md)**  
 Reference information about using WSRP with the portal includes WSRP markup caching and Known limitations.
 
-**Parent topic:**[Administering](../admin-system/administering_parent.md)
-
 **Parent topic:**[Portal administration](../practitioner_studio/administration.md)
 
 **Related information**  

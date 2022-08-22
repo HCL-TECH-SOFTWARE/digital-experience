@@ -41,5 +41,4 @@ The table lists each file, describes the file content, and recommends when to ch
 
 To set tracing for the migration plug-in com.ibm.wp.was.plugin.jar file, which you use to migrate the Deployment Manager and nodes, specify com.ibm.wp.migration.\*=all.
 
-**Parent topic:**[Logging and tracing](../trouble/pd_intr_logs.md)
 

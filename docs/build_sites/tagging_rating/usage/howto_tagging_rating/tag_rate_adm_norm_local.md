@@ -21,7 +21,6 @@ You can control the normalization behavior by various configuration parameters. 
     **Note:** The type-ahead feature works only with the dialog tag widget of the default tagging user interface of portal versions earlier than V 8.5. With HCL Portal V 8.5, the tag and rating widgets of earlier portal versions are deprecated.
 
 
-**Parent topic:**[How tagging and rating works in the portal](../admin-system/tag_rate_adm_gen.md)
 
 **Related information**  
 

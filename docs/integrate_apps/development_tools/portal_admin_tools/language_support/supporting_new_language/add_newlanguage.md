@@ -21,7 +21,6 @@ The Web Content Viewer portlet supports the same set of default languages as HCL
 7.  Click **OK**.
 
 
-**Parent topic:**[Supporting a new language](../admin-system/adsuplang_new.md)
 
 **Related information**  
 

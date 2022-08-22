@@ -1460,5 +1460,4 @@ Use the following commands to roll back all profiles. These steps must be repeat
 7.  If you brought down the entire cluster to perform the rollback \(not maintaining 24 x 7 on a single cluster\), and the automatic plug-in generation and propagation are disabled on your web server Plug-in properties, you will need to manually generate and/or propagate the `plugin-cfg.xml` file to the web servers.
 8.  Clear the browser cache.
 
-**Parent topic:**[Combined Cumulative Fix \(CF\) Installation](../overview/ccf_strategy95.md)
 

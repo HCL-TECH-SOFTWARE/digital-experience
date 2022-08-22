@@ -78,5 +78,3 @@ Choose the appropriate task to remove the application:
 
 **Parent topic:**[MovieSite Sample](../pzn/pzn_moviesite_sample.md)
 
-**Parent topic:**[MovieSite Sample](../pzn/pzn_moviesite_sample.md)
-

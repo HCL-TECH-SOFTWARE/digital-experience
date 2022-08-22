@@ -6,7 +6,6 @@ Starting with HCL Portal Version 8.5, you can use tagging or rating for static p
 
 **Note:** Tagging or rating for static pages works only with the dialog widgets, but not with the inline widgets of earlier portal versions.
 
-**Parent topic:**[Tagging and rating](../admin-system/tag_rate_mngadmin.md)
 
 **Related information**  
 

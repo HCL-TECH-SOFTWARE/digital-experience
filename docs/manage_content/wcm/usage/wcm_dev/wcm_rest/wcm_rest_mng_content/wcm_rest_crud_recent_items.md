@@ -114,5 +114,4 @@ If `_ascending` or `_descending` are not specified, the results as displayed in 
 
 |
 
-**Parent topic:**[How to manage web content items by using REST](../wcm/wcm_rest_crud.md)
 

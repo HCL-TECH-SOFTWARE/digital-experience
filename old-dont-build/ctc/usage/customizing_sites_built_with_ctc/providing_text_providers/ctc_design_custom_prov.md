@@ -9,5 +9,4 @@ The CTC Text Provider is located within the CTC Enterprise Application Repositor
 -   **[Adding languages](../ctc/ctc_design_custom_prov_lang.md)**  
 Languages can be added by copying the CTCBundle.properties file and renaming the copy in the format CTCBundle\_Language Code.properties. For example, a Chinese translation is stored in a file that is called CTCBundle\_zh.properties in the same location as the original file.
 
-**Parent topic:**[Customizing sites built with Content Template](../ctc/ctc_design_custom.md)
 

@@ -28,5 +28,3 @@ When creating a Recommend Content rule, you specify one of three recommendation 
 
 **Parent topic:**[Rules](../pzn/pzn_rules.md)
 
-**Parent topic:**[Rules](../pzn/pzn_rules.md)
-

@@ -27,5 +27,4 @@ In any case, the lookup process first tries to find the resource by its object I
 
 **Note:** If an objectid attribute is specified in the XML input, but the corresponding resource cannot be found by that object ID but only by another attribute, and if that object ID is used in other parts of the XML script as a reference, those references are mapped to the actual object ID for the resource that was found. In this case the objectid attribute behaves like a symbolic object ID as described earlier.
 
-**Parent topic:**[Object IDs in XML scripts](../admin-system/adxmlref_objct_ids.md)
 

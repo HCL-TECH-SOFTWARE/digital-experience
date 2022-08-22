@@ -17,7 +17,6 @@ The process of assigning a device class to one of the supported clients in HCL P
 6.  [Device class equations](../dev-theme/themeopt_devclass_equat.md)  
 Device class equations are expressions that involve a mixture of device class operands and Boolean logic operators.
 
-**Parent topic:**[Developing themes and skins](../dev-theme/themeopt_themes.md)
 
 **Related information**  
 

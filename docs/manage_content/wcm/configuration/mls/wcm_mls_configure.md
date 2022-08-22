@@ -155,7 +155,6 @@ After you install the multilingual extensions, you then must configure your syst
     **Note:** The multilingual solution must be installed on both the syndicator and subscriber before syndication can be enabled.
 
 
-**Parent topic:**[Multilingual deployment, installation, and configuration Multilingual Solution](../wcm/wcm_mls_install_ovr.md)
 
 **Related information**  
 

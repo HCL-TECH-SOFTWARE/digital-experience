@@ -58,5 +58,3 @@ If the call to the action log method specifies a `resourceId` and the `collectio
 
 **Parent topic:**[Action beans](../pzn/pzn_action_beans.md)
 
-**Parent topic:**[Action beans](../pzn/pzn_action_beans.md)
-

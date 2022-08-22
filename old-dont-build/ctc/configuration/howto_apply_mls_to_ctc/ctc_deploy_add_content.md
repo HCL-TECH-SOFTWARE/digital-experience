@@ -26,5 +26,4 @@ For more information on how to apply the multilingual context processor and how 
 -   [Portlet Render-time navigation extensions](../wcm/wcm_mls_ext_portlet.md)
 -   [Web content associations](../wcm/wcm_delivery_contentmap_about.md)
 
-**Parent topic:**[How to apply the multilingual solution to Content Template sites](../ctc/ctc_deploy_locale.md)
 

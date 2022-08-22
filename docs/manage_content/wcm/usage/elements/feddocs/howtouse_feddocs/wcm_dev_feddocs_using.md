@@ -20,5 +20,4 @@ When you render document metadata information retrieved with a federated documen
 -   **[AttributeResource values for federated documents](../wcm/wcm_dev_feddocs_attsdoc.md)**  
 The AttributeResource tag is used as a placeholder to display attributes from a federated documents selection rule within a personalization element design. It cannot be used in a presentation template or other element types.
 
-**Parent topic:**[Personalizing federated documents](../wcm/wcm_dev_feddocs.md)
 

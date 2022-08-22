@@ -92,7 +92,6 @@ Description of response elements:
 </ibmsc:facets>
 ```
 
-**Parent topic:**[Search REST API specification](../search-rest-api/search.md)
 
 **Related information**  
 

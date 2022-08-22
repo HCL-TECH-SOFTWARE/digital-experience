@@ -35,5 +35,4 @@ Perform the following steps to manually update the blog and wiki templates after
         -   **Previous stage**
     4.  Click **Save and read** to verify your changes.
 
-**Parent topic:**[Enabling new functionality in a migrated portal](../migrate/mig_t_enable_new.md)
 

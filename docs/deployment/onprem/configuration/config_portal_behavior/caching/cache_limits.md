@@ -14,5 +14,4 @@ When tuning your environment to improve performance, review the limitations to e
 
 **Note:** With the previous settings, it is possible to generate an HTTP response header like Cache-Control: max-age=-1, which indicates an unlimited cache expiration when a page is rendered. This is beyond the HTTP 1.1 specification but if a proxy cache does not support an unlimited cache expiration, HCL Portal supports it. If the cache infrastructure does not properly work with this response header, set the remote.cache.expiration value in the WP NavigatorService to a large value. To set an unlimited cache expiration is not possible if the cache infrastructure does not support it.
 
-**Parent topic:**[Caching](../security/tune_cache.md)
 

@@ -29,5 +29,3 @@ The new geolocation theme module adds JavaScript to every portal page to check t
 
 **Parent topic:**[Location attributes](../contarget/targeting_geo.md)
 
-**Parent topic:**[Location attributes](../contarget/targeting_geo.md)
-

@@ -59,7 +59,6 @@ The PdPerm.properties file configures the Access Manager Java Run Time Environme
         **Note:** This file is in the directory path you specified for the wp.ac.impl.PDKeyPath parameter.
 
 
-**Parent topic:**[Configuring Security Access Manager](../security/tam.md)
 
 **Related information**  
 

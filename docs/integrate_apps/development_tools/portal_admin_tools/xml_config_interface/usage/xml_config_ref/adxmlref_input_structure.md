@@ -59,7 +59,6 @@ This request exports the entire configuration of the portal. You can look at the
 
 Additional to the `export` and `update` request types, a third request type `export-orphaned-data` is available for the special scenario of preparing the deletion of orphaned data.
 
-**Parent topic:**[XML configuration reference](../admin-system/adxmlref.md)
 
 **Related information**  
 

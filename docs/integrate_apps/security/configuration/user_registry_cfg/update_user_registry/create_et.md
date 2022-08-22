@@ -64,5 +64,4 @@ In a stand-alone server environment, you can complete the following task when th
 15. Stop and restart the appropriate servers to propagate the changes.
 
 
-**Parent topic:**[Updating your user registry](../security/update_ureg.md)
 

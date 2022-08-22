@@ -43,5 +43,4 @@ mvc:res:/hello.jsp,smartphone+ios@res:/hello_smartphone_ios.jsp,(smartphone/tabl
 
 In this example, you can use `res:/hello.jsp` as the default URI, `res:/hello_smartphone_ios.jsp` as the URI for iOS smartphones, and `res:/hello_mobile_android.jsp` as the URI for Android smartphones and tablets.
 
-**Parent topic:**[Enable new functions in migrated themes](../dev-theme/themeopt_migrate_deploy80.md)
 

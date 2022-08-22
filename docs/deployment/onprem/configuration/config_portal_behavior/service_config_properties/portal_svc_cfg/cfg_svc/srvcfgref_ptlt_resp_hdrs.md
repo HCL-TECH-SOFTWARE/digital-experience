@@ -42,5 +42,4 @@ The following list shows the header fields of the HTTP 1.1 \(RFC 2616\) specific
     HTTP header fields, which include general-header \(section 4.5\), request-header \(section 5.3\), response-header \(section 6.2\), and entity-header \(section 7.1\) fields, follow the same generic format as that given in Section 3.1 of RFC 822 \[9\]. Each header field consists of a name followed by a colon \( **:** \) and the field value. Field names are **case-insensitive**.
 
 
-**Parent topic:**[Configuration Service](../admin-system/srvcfgref_config.md)
 

@@ -37,7 +37,6 @@ The navigation on mobile devices is rendered by the mobileNavigation.jsp file. T
 }
 ```
 
-**Parent topic:**[Responsive Web Design](../rwd/rwd_intro.md)
 
 **Related information**  
 

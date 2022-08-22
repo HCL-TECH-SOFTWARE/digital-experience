@@ -287,7 +287,5 @@ The following changes were made to the Woodburn Studio theme to implement the bu
 
 For additional information on PWA custom install options, see the following link from the Web.dev site: [How to provide your own in-app install experience](https://web.dev/customize-install/)
 
-**Parent topic:**[Mobile](../overview/mobile.md)
-
 **Parent topic:**[Developing websites](../install/developing_websites.md)
 

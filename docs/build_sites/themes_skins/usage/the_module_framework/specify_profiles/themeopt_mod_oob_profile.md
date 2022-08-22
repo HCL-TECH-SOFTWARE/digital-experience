@@ -35,7 +35,6 @@ Portal includes profiles that contain modules that change how your portal site i
     Web Dock was removed in Combined Cumulative Fix 03. It is not required because the Web Dock capability is automatically downloaded on demand if you set up the Resource Aggregation for portlet feature in your theme. Then, you must add the module to an existing profile.
 
 
-**Parent topic:**[Specify profiles](../dev-theme/themeopt_define_mod_files.md)
 
 **Related information**  
 

@@ -27,5 +27,4 @@ To check which version of Content Template you have, go to [PortalServer\_root](
 
 The version directory contains the version numbers of all Portal components.
 
-**Parent topic:**[Content Template overview](../ctc/ctc_overview.md)
 

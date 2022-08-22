@@ -84,7 +84,6 @@ Example: Deleting all terms from the blacklist filter:
 
 This sample snippet deletes all terms from the blacklist.
 
-**Parent topic:**[How tagging and rating works in the portal](../admin-system/tag_rate_adm_gen.md)
 
 **Related information**  
 

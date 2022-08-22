@@ -13,5 +13,4 @@ Keep these things in mind when you are creating pages:
 -   The new site area name is the same as the friendly URL name that you enter for the page. This site area name is displayed in the breadcrumbs and in sitemaps. Therefore it is recommended that your page names and site area names should be kept the same so that the breadcrumb displays correctly. For example, if you rename, move or delete a page, you should rename, move, or delete the associated site area.
 
 
-**Parent topic:**[A roadmap for Content Template Catalog site authors](../ctc/ctc_gs_authors.md)
 

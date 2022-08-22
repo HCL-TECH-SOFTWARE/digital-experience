@@ -35,7 +35,6 @@ You can use the following of data types with the PUMA REST API:
 
 **Note:** The Puma REST API converts the preceding data type names to conform with the XML Schema Definition \(XSD\) language.
 
-**Parent topic:**[Structure of the remote REST service for PUMA](../dev/uprof_rest_gen.md)
 
 **Related information**  
 

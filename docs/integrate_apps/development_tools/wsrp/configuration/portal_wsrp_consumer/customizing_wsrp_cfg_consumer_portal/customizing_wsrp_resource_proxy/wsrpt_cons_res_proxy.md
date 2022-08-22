@@ -24,7 +24,6 @@ You can customize the WSRP resource proxy for HTTP basic authentication.
 -   **[Customizing the WSRP resource proxy HTTP header forwarding behavior](../admin-system/wsrpt_cons_cust_resproxy_frwrd.md)**  
 By default, the WSRP resource proxy forwards all HTTP headers from the client request except for the host header and cookie headers. You can define further headers that you do not want to be forwarded.
 
-**Parent topic:**[Customizing the WSRP configuration of your Consumer portal](../admin-system/wsrpt_cons_cust.md)
 
 **Related information**  
 

@@ -7,5 +7,4 @@ The source control for Content Template Catalog contains all the code artifacts 
 -   To export pages, page templates and portlets, XMLAccess was used.
 -   With everything checked into source control, a build script was then run regularly to build a PAA file that can be used to deploy Content Template on a test server.
 
-**Parent topic:**[Development processes](../ctc/ctc_deploy_dev.md)
 

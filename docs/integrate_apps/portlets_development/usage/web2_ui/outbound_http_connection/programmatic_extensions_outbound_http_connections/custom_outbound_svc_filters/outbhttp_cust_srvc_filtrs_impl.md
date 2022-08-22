@@ -97,5 +97,4 @@ public class MyCustomFilter implements OutboundServiceFilter {
 
 Make sure that the filter class can be loaded at run time. For example, place the class file in the /WEB-INF/lib directory of the web module that contains the code that establishes the outbound HTTP connection.
 
-**Parent topic:**[Custom outbound service filters](../dev-portlet/outbhttp_cust_srvc_filtrs.md)
 

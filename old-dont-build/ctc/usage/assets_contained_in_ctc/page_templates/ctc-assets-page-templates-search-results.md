@@ -38,7 +38,6 @@ There are 2 JSPs located at [wp\_profile\_root](../reference/wpsdirstr.md)/insta
     Overrides the default search component in the theme and redirect to the CTC search page if one exists.
 
 
-**Parent topic:**[Page Templates](../ctc/ctc-assets-page-templates.md)
 
 **Related information**  
 

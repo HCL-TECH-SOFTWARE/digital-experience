@@ -43,7 +43,6 @@ When you export portal resources, you can specify the asterisk \(\*\) as a wildc
 
 The ExportAllPortlets.xml example shows the use of the asterisk character \(\*\) as a wildcard to export all resources of a given type. This example exports all the web modules that were installed in the portal and their contained portlets.
 
-**Parent topic:**[Transferring portal configuration data by using the XML configuration interface](../admin-system/adxmltsk_use.md)
 
 **Related information**  
 

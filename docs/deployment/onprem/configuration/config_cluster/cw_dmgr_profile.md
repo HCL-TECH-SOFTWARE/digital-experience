@@ -6,7 +6,6 @@ When you set up a cluster, you must create a deployment manager profile. Use the
 
 The **Create a Deployment Manager** is a sub step in the **Set Up a Cluster** configuration.
 
-**Parent topic:**[Setting up a cluster](../config/config_cluster.md)
 
 **Related information**  
 

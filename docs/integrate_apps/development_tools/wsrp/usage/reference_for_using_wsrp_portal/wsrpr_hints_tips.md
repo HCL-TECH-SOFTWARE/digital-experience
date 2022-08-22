@@ -69,5 +69,4 @@ The PUMA SPI does not allow use with remote portlets.
 
 The Tag Cloud and Tag Center portlets, including the Result List portlet, do not support WSRP. Therefore, a Producer portal cannot provide these portlets as remote web services, or for a Consumer portal to consume them so that its users can use them.
 
-**Parent topic:**[Reference for using WSRP with the portal](../admin-system/wsrpr_ref.md)
 

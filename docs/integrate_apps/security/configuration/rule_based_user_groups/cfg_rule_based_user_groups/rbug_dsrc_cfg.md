@@ -8,7 +8,6 @@ Create the data source and, if you have a portal cluster environment, map it to 
 
 Before you continue with the next configuration step, run the **Test connection** operation in the WebSphere® Integrated Solutions Console and make sure that it runs successfully. Configure the rule-based user groups adapter later with the JNDI name of the data source. See the related links section for information.
 
-**Parent topic:**[Configuring the rule-based user groups adapter](../admin-system/rbug_instl.md)
 
 **Related information**  
 

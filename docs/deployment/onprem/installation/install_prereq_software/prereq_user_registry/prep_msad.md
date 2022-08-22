@@ -45,5 +45,4 @@ If you plan to use Active Directory as an LDAP user registry, you must install a
         **Note:** When these requirements are complete, all domain controllers request a certificate and support LDAP over SSL with port 636.
 
 
-**Parent topic:**[Preparing the user registry software](../config/prereq_user_reg.md)
 

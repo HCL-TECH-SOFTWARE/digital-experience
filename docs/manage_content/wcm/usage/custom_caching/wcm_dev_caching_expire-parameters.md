@@ -99,7 +99,6 @@ By design only seconds, hours, days, or months can be specified. Minutes are not
 
 When an item is updated, either directly or as a result of syndication, no cache is updated. The rendered item is not updated until each configured cache is expired. It is important to choose cache timeout parameters that compliment your syndication strategy.
 
-**Parent topic:**[Custom caching](../wcm/wcm_dev_caching.md)
 
 **Related information**  
 

@@ -44,7 +44,6 @@ By default, HCL Portal URLs include navigational state information. You can remo
 -   **[ConfigEngine validation targets](../config/cfg_validation_targets.md)**  
 Some configurations can cause conflicts between Portal resources or with other web modules deployed into the WebSphere Application Server. You can check for conflicts by using ConfigEngine validation targets.
 
-**Parent topic:**[Changing your site URL](../config/cfg_inst_overview.md)
 
 **Related information**  
 

@@ -34,5 +34,3 @@ When a user logs on and navigates through your Web site, LikeMinds follows these
 
 **Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
 
-**Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
-

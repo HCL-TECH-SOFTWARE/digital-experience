@@ -50,5 +50,4 @@ You can also use this method to disable caching. In this example the property CO
 </connect>
 ```
 
-**Parent topic:**[Custom caching](../wcm/wcm_dev_caching.md)
 

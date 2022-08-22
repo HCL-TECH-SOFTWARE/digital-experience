@@ -23,5 +23,3 @@ View an example that demonstrates advanced nested bindings.
 
 **Parent topic:**[Rules](../pzn/pzn_rules.md)
 
-**Parent topic:**[Rules](../pzn/pzn_rules.md)
-

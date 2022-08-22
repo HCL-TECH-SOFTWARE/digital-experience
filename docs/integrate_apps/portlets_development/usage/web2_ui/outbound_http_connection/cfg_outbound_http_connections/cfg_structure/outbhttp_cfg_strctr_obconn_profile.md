@@ -31,5 +31,4 @@ An outbound connection profile item contains the application scope reference set
         3.  Locate the context-root tag.
         4.  Take the value of this tag as scope reference value.
 
-**Parent topic:**[Configuration structure](../dev-portlet/outbhttp_cfg_structure.md)
 

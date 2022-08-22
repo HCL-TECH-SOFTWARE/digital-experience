@@ -8,5 +8,4 @@ The Consumer part of the WSRP implementation in the portal enables the portal to
 
 A WSRP Consumer integrates selected portlets into the Consumer portal as remote portlets. The Consumer portal requests and receives the markup from the remote WSRP service at the Producer portal and presents it to its users. This way, the Consumer portal can consume one or more remote portlets through the WSRP services.
 
-**Parent topic:**[Learning about WSRP](../admin-system/wsrpc_learn.md)
 

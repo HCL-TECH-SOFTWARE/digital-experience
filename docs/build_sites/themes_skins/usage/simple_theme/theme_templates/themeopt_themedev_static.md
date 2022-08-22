@@ -14,5 +14,4 @@ You can add content that is in WebDAV relative to theme.html with a relative URL
 
 You can use relative URLs to reference static content in the WebDAV file store in the /common-resources/ folder. If the relative path does not successfully resolve to a file that is within the theme folder, the portal uses the folder /common-resources/ as a default location to locate the resource. By using the folder /common-resources/ as a default location, the theme can reference common resources and still override a file in that folder with a resource of the same name in the theme folder. This method is useful when you are sharing resources between multiple themes.
 
-**Parent topic:**[Theme templates](../dev-theme/themeopt_themedev_theme_templates.md)
 

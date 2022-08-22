@@ -92,5 +92,4 @@ It is equivalent to the functionality in the user interface:
     ```
 
 
-**Parent topic:**[How to Use REST to Work with Deleted Content Items](../wcm/wcm_rest_crud_purge_delete.md)
 

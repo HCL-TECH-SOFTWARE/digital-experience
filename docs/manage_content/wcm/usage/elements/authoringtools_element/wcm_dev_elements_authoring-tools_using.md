@@ -11,5 +11,4 @@ When rendering authoring tool components in the Web Content Viewer, you must acc
 -   **[How to reference an authoring tool](../panel_help/wcm_dev_elements_authoring-tools_referencing.md)**  
 An authoring tool component can be referenced within presentation templates, menu component designs, navigator component designs, and personalization component designs. When added to menus, navigators, or personalization component designs, the edit and delete functions are applied to each displayed item.
 
-**Parent topic:**[Web content inline editing strategies](../wcm/wcm_cms_in-line_system.md)
 

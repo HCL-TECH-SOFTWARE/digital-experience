@@ -33,5 +33,4 @@ If your Virtual Portal is defined by using an optional host name, specify the ho
 
 `xmlaccess -user Portal_admin_user -password Portal_admin_password -url http://MyVirtualPortalHost.com:10039/wps/config -in Export.xml -out result_MyHost.xml`
 
-**Parent topic:**[Working with the XML configuration interface](../admin-system/adxmltsk.md)
 

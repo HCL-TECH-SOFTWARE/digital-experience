@@ -7,7 +7,6 @@ HCL Digital Experience has administration portlets that assist you with managing
 -   **[Working with administration portlets](../admin-system/adworkadmplt.md)**  
 Working with the portal administration portlets allows you to customize the administration portlet and its features, such as, defining the number of rows to display in a table.
 
-**Parent topic:**[Portal administration tools](../admin-system/admtools.md)
 
 **Related information**  
 

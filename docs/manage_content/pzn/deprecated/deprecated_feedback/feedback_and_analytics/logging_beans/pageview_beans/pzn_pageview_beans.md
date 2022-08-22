@@ -15,5 +15,3 @@ Learn about the com.ibm.wcp.analysis.beans.PageView bean log method and instanti
 
 **Parent topic:**[Logging beans](../pzn/pzn_logging_beans.md)
 
-**Parent topic:**[Logging beans](../pzn/pzn_logging_beans.md)
-

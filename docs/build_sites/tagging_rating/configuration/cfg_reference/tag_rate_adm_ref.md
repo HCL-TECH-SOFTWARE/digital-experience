@@ -11,7 +11,6 @@ In a portal installation, the tag and rating widgets are available for specific 
 -   **[Enabling and disabling the Dojo tagging and rating options for additional profiles](../admin-system/tag_rate_nbldsbl_dojo_options.md)**  
 In a portal installation,the Dojo tagging and rating menu options for portal pages and portlets are available for a specific portal profile. You can enable these options for other profiles by adding them to the profile.
 
-**Parent topic:**[Tagging and rating](../admin-system/tag_rate_mngadmin.md)
 
 **Related information**  
 

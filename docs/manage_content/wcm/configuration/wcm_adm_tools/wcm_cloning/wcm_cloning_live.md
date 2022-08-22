@@ -59,7 +59,6 @@ When you finish cloning your web content data:
 -   Validate access control settings for both rendering and authoring are set as expected, and working correctly for a selection of users.
 -   Validate updates are being syndication into and from the target environment as expected.
 
-**Parent topic:**[How to clone a web content repository](../wcm/wcm_cloning.md)
 
 **Related information**  
 

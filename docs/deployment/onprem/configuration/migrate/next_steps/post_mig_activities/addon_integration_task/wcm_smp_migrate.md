@@ -49,5 +49,4 @@ The Social Media Publisher for Web Content Manager is an extension to Web Conten
 6.  Repeat these steps on every server and cluster node.
 
 
-**Parent topic:**[Add-ons, features, and third-party integration tasks](../migrate/mig_post_ptl_int_addon.md)
 

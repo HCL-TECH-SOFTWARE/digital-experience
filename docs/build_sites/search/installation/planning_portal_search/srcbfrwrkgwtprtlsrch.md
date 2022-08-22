@@ -15,7 +15,6 @@ To prevent errors during crawls and ensure easy viewing of documents for users y
 -   **[Security considerations](../admin-system/srcscrcnsd.md)**  
 Learn about the security aspects that you need to consider with regards to content search in HCL Digital Experience Version 8.5.
 
-**Parent topic:**[Search](../wcm/wcm_dev_search.md)
 
 **Previous topic:**[Searching for tagged content](../admin-system/tag_rate_search.md)
 

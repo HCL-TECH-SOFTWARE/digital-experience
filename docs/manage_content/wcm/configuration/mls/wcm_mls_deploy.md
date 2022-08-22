@@ -31,5 +31,4 @@ If your site requires a link to go to the home page of each locale instead of it
 
 The links to your other localized domains need to be hard-coded because these links cannot be automatically generated.
 
-**Parent topic:**[Multilingual deployment, installation, and configuration Multilingual Solution](../wcm/wcm_mls_install_ovr.md)
 

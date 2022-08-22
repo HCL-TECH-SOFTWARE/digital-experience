@@ -16,5 +16,4 @@ You can add static content to the file theme.html in three ways: directly, from 
 -   **[Adding server-side dynamic content to theme.html](../dev-theme/themeopt_themedev_dynamic.md)**  
 You can identify dynamic content spots in theme.html so that the server-side theme parser pulls in dynamic content to fill them. Dynamic content changes for every user, page, or other server state, so you cannot define it statically in the theme file. Instead, it is inserted into the response at run time.
 
-**Parent topic:**[Understanding the Simple Theme](../dev-theme/themeopt_themedev_simpletheme.md)
 

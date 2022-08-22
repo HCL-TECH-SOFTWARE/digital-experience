@@ -27,5 +27,4 @@ Web Content Manager requires a user to run various system tasks such as initiali
 5.  Restart the portal for the new settings to take effect.
 
 
-**Parent topic:**[Further configuration options](../wcm/wcm_config.md)
 

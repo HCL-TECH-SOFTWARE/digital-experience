@@ -12,5 +12,3 @@ Update your profile to point to the correct module instead or remove the missing
 
 **Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
-

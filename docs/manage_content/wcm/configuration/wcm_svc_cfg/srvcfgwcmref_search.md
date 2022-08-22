@@ -87,5 +87,4 @@ The HCL Web Content Manager search service \(WCM SearchService\) defines setting
     Default value: `200`
 
 
-**Parent topic:**[Web Content Manager service configuration](../admin-system/srvcfgwcmref.md)
 

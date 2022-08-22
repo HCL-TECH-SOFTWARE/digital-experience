@@ -76,5 +76,4 @@ If you customize search on your portal site, you might find useful information u
 
 If your portal site is multilingual and your users use different languages to search your portal, see the topic about Crawling a multilingual portal site.
 
-**Parent topic:**[Searching your local portal](../admin-system/srclocportal.md)
 

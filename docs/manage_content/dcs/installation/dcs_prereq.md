@@ -27,5 +27,4 @@ Configure the Document Conversion Services to perform document conversions on IB
 -   **[Configuring images for Document Conversion Services](../admin-system/dcs_config_images.md)**  
 Configure the Document Conversion Services to view images in an operating system other than Windows.
 
-**Parent topic:**[Document Conversion Services](../admin-system/dcs_info.md)
 

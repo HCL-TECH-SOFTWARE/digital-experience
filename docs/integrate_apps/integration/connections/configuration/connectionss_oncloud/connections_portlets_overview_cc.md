@@ -26,5 +26,4 @@ There are some limits and restrictions for using the HCL Connections Cloud portl
 -   **[Deploying the HCL Connections Portlets for HCL Connections Cloud](../connect/c_connections_portlets_deploying_portlets_cc.md)**  
 Deploy the HCL Connections to bring social business to your portal applications.
 
-**Parent topic:**[Configure HCL Portal to work with HCL Connections](../connect/c_connections_overview.md)
 

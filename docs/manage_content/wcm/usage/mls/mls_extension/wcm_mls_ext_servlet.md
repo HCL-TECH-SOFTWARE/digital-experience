@@ -11,5 +11,4 @@ To add localized rendering links to content items, reference the JSP component t
 -   A link is created for each matching localized content item that is displayed in the language of the current user.
 -   While this extension does work for both servlet-rendering and portlet-rendering, in portlet-rendering it add links only for content displayed in the current portlet.
 
-**Parent topic:**[Extensions for multilingual sites Multilingual Solution](../wcm/wcm_mls_extensions.md)
 

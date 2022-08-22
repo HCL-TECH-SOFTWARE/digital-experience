@@ -51,5 +51,3 @@ HTML_4_0
 
 **Parent topic:**[Device class attribute](../contarget/targeting_device.md)
 
-**Parent topic:**[Device class attribute](../contarget/targeting_device.md)
-

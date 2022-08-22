@@ -173,7 +173,6 @@ The first server where HCL Digital Experience is installed is the basis for the 
     2.  Restart the server.
 
 
-**Parent topic:**[Setting up farm instances with a shared configuration](../install/set_portal_farm_shared.md)
 
 **Related information**  
 

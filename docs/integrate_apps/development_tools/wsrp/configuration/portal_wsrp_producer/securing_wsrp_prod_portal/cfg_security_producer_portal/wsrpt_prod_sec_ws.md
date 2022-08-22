@@ -30,5 +30,4 @@ You can provide security for your WSRP Producer by using HTTP-cookie-based singl
 -   **[Securing the WSRP Producer by WS-Security](../admin-system/wsrpt_prod_sec_ws_wss.md)**  
 You can configure Web Services Security according to the WS-Security standard for your WSRP Producer and the provided web services.
 
-**Parent topic:**[Securing a WSRP Producer portal](../admin-system/wsrpt_prod_prep_sec.md)
 

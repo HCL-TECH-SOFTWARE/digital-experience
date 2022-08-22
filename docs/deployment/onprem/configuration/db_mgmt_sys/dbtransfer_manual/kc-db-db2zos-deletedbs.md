@@ -57,5 +57,4 @@ Manual steps from the Configuration Wizard are included in HCL Digital Experienc
     ```
 
 
-**Parent topic:**[Manual Steps: Database Transfer option in the Configuration Wizard](../eua-workflows/kc-db-parent.md)
 

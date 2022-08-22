@@ -9,7 +9,6 @@ You can upgrade IBM® HTTP Server \(IHS\) from a previous version in two ways:
 
 For information about migrating applications, read more about the Application Migration Toolkit at [HCL Software Support](https://support.hcltechsw.com/csm).
 
-**Parent topic:**[Administrative tasks](../migrate/mig_post_admintasks.md)
 
 # Installing the new version of IBM HTTP Server in a new directory
 

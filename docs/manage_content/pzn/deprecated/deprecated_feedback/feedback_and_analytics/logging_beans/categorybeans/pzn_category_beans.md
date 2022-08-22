@@ -39,5 +39,3 @@ Learn about the various method signatures of Category beans.
 
 **Parent topic:**[Logging beans](../pzn/pzn_logging_beans.md)
 
-**Parent topic:**[Logging beans](../pzn/pzn_logging_beans.md)
-

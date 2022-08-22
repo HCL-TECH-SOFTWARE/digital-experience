@@ -156,7 +156,6 @@ Facebook and Google users can authenticate with the HCL Portal server instance w
     13. Stop and restart the WebSphere\_Portal server.
 
 
-**Parent topic:**[Integrating with OpenID authentication](../security/use_openid.md)
 
 **Related information**  
 

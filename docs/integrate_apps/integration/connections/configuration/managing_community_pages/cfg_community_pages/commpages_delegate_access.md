@@ -33,7 +33,6 @@ After this feature is enabled, you see a **Restrict view access to this page to 
 
 The **Restrict view access to this page to community members** check box is available on the Page Association window.
 
-**Parent topic:**[Configuring community pages](../admin-system/commpages_config.md)
 
 **Related information**  
 

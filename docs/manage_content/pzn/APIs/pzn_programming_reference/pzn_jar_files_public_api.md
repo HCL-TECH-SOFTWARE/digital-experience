@@ -13,5 +13,3 @@ If you are compiling your application outside of Rational Application Developer 
 
 **Parent topic:**[Using the Personalization APIs](../pzn/pzn_using_apis.md)
 
-**Parent topic:**[Using the Personalization APIs](../pzn/pzn_using_apis.md)
-

@@ -25,5 +25,4 @@ The Search and Tag Center profile is a hidden profile. Therefore, you must set t
     3.  Save your changes.
 
 
-**Parent topic:**[Virtual Portal tasks](../migrate/virt_portal_post_mig.md)
 

@@ -9,5 +9,4 @@ Use the IBM Installation Manager to install HCL Digital Experience to an existin
 -   **[Installing HCL Digital Experience in Linux using a response file](../install/inst_silent-linux.md)**  
 You can install IBM WebSphere Application Server from a response file. You can create a response file with the graphical user interface.
 
-**Parent topic:**[Preparing your Linux system for installation](../install/installingwp95-linux.md)
 

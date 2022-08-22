@@ -15,5 +15,4 @@ Because a farm is a series of independent server instances and not a cluster, sp
 -   **[Maintaining a portal farm](../install/maintain_portal_farm.md)**  
 Maintenance can be considered any change to the system, such as the deployment of application updates, platform configuration changes, or the application of corrective service. The mechanism used to apply maintenance to a farm depends on the type of farm deployed: unique installations or shared configuration.
 
-**Parent topic:**[HCL Portal](../config/config_portal.md)
 

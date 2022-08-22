@@ -9,5 +9,4 @@ The directory path of a search collection is determined by what you typed in the
 3.  Select the collection from the **Search Collections** box.
 4.  The collection location is shown in the list under **Search collection status information**.
 
-**Parent topic:**[Hints and tips for using Portal Search](../admin-system/srrhinttips.md)
 

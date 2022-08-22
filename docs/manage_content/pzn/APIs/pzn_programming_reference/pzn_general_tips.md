@@ -13,5 +13,3 @@ View some general tips related to resource classloading when using the Personali
 
 **Parent topic:**[Using the Personalization APIs](../pzn/pzn_using_apis.md)
 
-**Parent topic:**[Using the Personalization APIs](../pzn/pzn_using_apis.md)
-

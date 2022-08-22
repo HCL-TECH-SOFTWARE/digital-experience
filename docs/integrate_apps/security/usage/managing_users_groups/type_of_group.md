@@ -37,7 +37,6 @@ The following list provides a summary of available options for using groups in H
     Disadvantage: Only supported by HCL Portal. Other WebSphere Application Server based products cannot use these groups. Groups are accessible outside of the HCL Portal server.
 
 
-**Parent topic:**[Users and groups](../admin-system/adusrgrp.md)
 
 **Related information**  
 

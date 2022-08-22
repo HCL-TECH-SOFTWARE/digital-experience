@@ -9,5 +9,4 @@ You can add a message module that displays system messages, such as error, warni
 
 You can change the appearance of the message module by changing the CSS, which is in /modules/st\_notice/head/ in WebDAV.
 
-**Parent topic:**[Understanding the Simple Theme](../dev-theme/themeopt_themedev_simpletheme.md)
 

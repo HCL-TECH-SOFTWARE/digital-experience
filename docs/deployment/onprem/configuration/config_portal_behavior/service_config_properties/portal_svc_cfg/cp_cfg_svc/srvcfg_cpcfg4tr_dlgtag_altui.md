@@ -67,7 +67,6 @@ View the properties for the tag widget.
         With this value, the widget shows a public render parameter with the tag name.
 
 
-**Parent topic:**[CP Configuration Service for tagging and rating](../admin-system/srvcfg_cpcfg4tr.md)
 
 **Related information**  
 

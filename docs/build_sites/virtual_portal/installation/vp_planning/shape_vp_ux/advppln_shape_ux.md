@@ -7,7 +7,6 @@ You can provide human readable URLs for your users to access their virtual porta
 -   **[Individual themes and skins for each virtual portal](../admin-system/advppln_shpux_thmskn.md)**  
 If you expose multiple virtual portals on a single portal installation, you can give each virtual portal its own look and feel for the user experience.
 
-**Parent topic:**[Planning for virtual portals](../admin-system/advppln.md)
 
 **Related information**  
 

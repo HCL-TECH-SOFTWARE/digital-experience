@@ -46,7 +46,6 @@ You can also select and specify which HCL Connections features you want a task t
 
 To retrieve changes in the HCL Connections tag cloud, you need to run the FederationTaskHandler script.
 
-**Parent topic:**[Administering tag federation](../admin-system/tag_fed_admin.md)
 
 **Related information**  
 

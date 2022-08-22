@@ -14,5 +14,4 @@ The rendering flow is as follows:
 8.  The DDC plug-in passes the resulting bean list object back to the list appearance component.
 9.  The Web Content Manager rendering engine produces the markup for the data that is contained in the bean list. Web Content Manager design components can access the individual attributes of the items in the bean list by using the `[AttributeResource]` tag.
 
-**Parent topic:**[Digital Data Connector \(DDC\) for HCL Portal](../social/plrf_ovu.md)
 

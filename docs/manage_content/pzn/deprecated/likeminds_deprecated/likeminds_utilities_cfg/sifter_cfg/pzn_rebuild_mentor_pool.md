@@ -43,5 +43,3 @@ If you are running multiple instances of the `sifter`, use the following procedu
 
 **Parent topic:**[Configuring the sifter for mentor selection](../pzn/pzn_configure_sifter_mentor_selection.md)
 
-**Parent topic:**[Configuring the sifter for mentor selection](../pzn/pzn_configure_sifter_mentor_selection.md)
-

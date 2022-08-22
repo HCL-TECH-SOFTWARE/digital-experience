@@ -20,5 +20,4 @@ You can set these parameters specifically for a remote portlet. To do so, set th
 
 If you set a parameter both as a preference of a remote portlet and in the WP Configuration Service, the value that is defined in the preference of the remote portlet takes precedence.
 
-**Parent topic:**[Customizing the WSRP configuration of your Consumer portal](../admin-system/wsrpt_cons_cust.md)
 

@@ -23,5 +23,4 @@ To replace an existing WPSDB database with the backup copy using the RESTORE DAT
     For example, use the following roll-forward command when the last backup completed at 1:23 AM:ROLLFORWARD DATABASE WPSDB TO 2007-06-25-01.23.00.000000 USING LOCAL TIME AND COMPLETE
 
 
-**Parent topic:**[Restoring files, databases, and the LDAP server\(s\)](../admin-system/i_wadm_t_restr_winlinux.md)
 

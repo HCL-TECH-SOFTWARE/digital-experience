@@ -30,5 +30,4 @@ The meanings of the settings are as follows:
 -   The metadata setting `forward-credentials-from-vault` specifies that the credentials of the basic authentication are gathered from the Credential Vault.
 -   You can use the parameter `hpaa.piid` to specify the portlet instance ID for which the credential slot is defined. This parameter is optional.
 
-**Parent topic:**[Authenticating outbound HTTP connections](../dev-portlet/outbhttp_authntct.md)
 

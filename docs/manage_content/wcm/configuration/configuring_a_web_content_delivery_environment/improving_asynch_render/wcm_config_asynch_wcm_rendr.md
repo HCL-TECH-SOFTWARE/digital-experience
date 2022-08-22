@@ -24,5 +24,4 @@ Separating the page delivery from the web content delivery can increase the page
 -   **[Asynchronous web content rendering and caching](../wcm/wcm_config_asynch_rendr_cache.md)**  
 The Web Content Viewer portlet supports setting specific portlet fragment caching configuration values. This caching also works with asynchronous web content rendering. However, the respective content for the fragment cache is different.
 
-**Parent topic:**[Customizing web content delivery](../wcm/wcm_delivery_custom.md)
 

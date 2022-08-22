@@ -27,7 +27,6 @@ It is best to start with a single extra locale, and then add others \(if require
 2.  Link the new locale site to the same pages as your base locale. Modify each portal page to add an additional association to the equivalent areas in the new locale site.
 
 
-**Parent topic:**[How to apply the multilingual solution to Content Template sites](../ctc/ctc_deploy_locale.md)
 
 **Related information**  
 

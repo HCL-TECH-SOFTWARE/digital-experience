@@ -16,5 +16,4 @@ When you add a blog to a page, a copy of the Blog Solo v70 library is created us
 
 When you add a blog library to a page, a copy of the Blog v70 library is created using the name that you provided when adding the blog library to a page. The copy of the Blog v70 library is used to store posts and comments when new pages are added to the blog library.
 
-**Parent topic:**[Blogs](../admin-system/blog_work.md)
 

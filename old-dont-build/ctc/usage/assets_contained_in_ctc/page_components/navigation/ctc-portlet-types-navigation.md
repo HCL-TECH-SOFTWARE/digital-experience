@@ -78,5 +78,4 @@ This portlet displays a navigator that displays a site map of your site.
 -   **[Footer Sitemap](../ctc/ctc-portlet-footer-sitemap.md)**  
 This portlet displays a navigator that displays a site map of your site.
 
-**Parent topic:**[Page components](../ctc/ctc-portlet-types.md)
 

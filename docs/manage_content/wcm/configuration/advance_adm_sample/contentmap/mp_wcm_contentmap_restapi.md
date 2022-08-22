@@ -179,7 +179,6 @@ This request deletes either all content associations for a specific web content 
 </atom:feed>
 ```
 
-**Parent topic:**[Content associations reference](../admin-system/mp_wcm_contentmap.md)
 
 **Related information**  
 

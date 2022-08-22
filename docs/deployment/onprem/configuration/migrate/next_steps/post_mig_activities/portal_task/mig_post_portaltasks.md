@@ -27,5 +27,4 @@ In a new HCL Digital Experience 8.5 installation, vanity URL support is enabled.
 -   **[Enabling impersonation](../migrate/mig_post_impersonation.md)**  
 If you migrate to HCL Digital Experience 8.5 and upgrade to fix pack level CF01-CF03, impersonation might not be enabled. If you plan to use the impersonation feature, which allows a selected user to preview and test new pages or portlets to help identify any potential issues, then you might need to enable this feature.
 
-**Parent topic:**[Post-migration activities](../migrate/mig_t_post_mig.md)
 

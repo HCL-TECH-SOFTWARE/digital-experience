@@ -21,7 +21,6 @@ You can have multiple web dock applications that point to different hosts on the
 -   **[Troubleshooting the Web Application Bridge](../admin-system/trouble_wab.md)**  
 The troubleshooting information is useful for planning and implementing your Web Application Bridge integration \(WAB\).
 
-**Parent topic:**[Integrating](../admin-system/integrating_parent.md)
 
 **Related information**  
 

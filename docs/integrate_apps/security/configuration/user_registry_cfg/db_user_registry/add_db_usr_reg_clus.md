@@ -186,7 +186,6 @@ db2 "CREATE DB dbname using codeset UTF-8 territory us PAGESIZE 8192"
 
 If you created your clustered environment, including the additional nodes, and then completed the steps in this task, you must now run the `update-jcr-admin` task on the secondary node. See the related links section for instructions.
 
-**Parent topic:**[Adding a database user registry](../config/add_db_usr_reg.md)
 
 **Related information**  
 

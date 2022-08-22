@@ -15,5 +15,4 @@ You can change configuration settings of the outbound HTTP connection by using t
 5.  [Creating and deleting configuration settings of the outbound HTTP connection](../dev-portlet/outbhttp_cfg_mcspi_crtdelcfgsets.md)  
 The controller object also provides methods for creating or deleting configuration settings.
 
-**Parent topic:**[Administration tools for configuring outbound HTTP connections](../dev-portlet/outbhttp_cfg_tools.md)
 

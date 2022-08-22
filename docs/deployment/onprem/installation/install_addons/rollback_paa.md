@@ -38,5 +38,4 @@ The remove-paa-update command uninstalls the updates to your HCL Digital Experie
     4.  Save your changes.
 
 
-**Parent topic:**[Managing your existing Portal Application Archive \(PAA\) file](../config/uproll_paa.md)
 

@@ -13,5 +13,4 @@ The following operating systems are supported by DCS.
 |Windows™|server 2008, server 2008 R2, Server 2012, 7, 8|
 |HP-UX 11iv3|IA64|
 
-**Parent topic:**[Document Conversion Services](../admin-system/dcs_info.md)
 

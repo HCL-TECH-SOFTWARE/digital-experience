@@ -15,5 +15,3 @@ Logging occurs when a rule or logging bean is present in JSP or servlet a user v
 
 **Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
 
-**Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
-

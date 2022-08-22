@@ -15,5 +15,4 @@ Learn more about using [WebDAV client](../admin-system/webdav.md) to edit theme 
 
 Your custom favicon appears with the page name in browser tabs and bookmarks for all pages that use the theme that you updated.
 
-**Parent topic:**[Understanding the Simple Theme](../dev-theme/themeopt_themedev_simpletheme.md)
 

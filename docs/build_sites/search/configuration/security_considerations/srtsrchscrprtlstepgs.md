@@ -9,7 +9,6 @@ If you want to set up your own search collection for searching your portal site,
 1.  HCL Web Content Manager documents can be searched by portal users, as they are secured by Portal Access Control. Users can search documents to which they have the required access permissions on sites where search is enabled. For details about content security, refer to *User roles and access*. For information about configuring Portal Search on Web Content Manager, refer to *Indexing web content*.
 2.  Set the preferred language of the portal site crawler user ID to match the language of the portal site search collection that it crawls. If you set the language after you started a crawl, you must reset the portal site collection. Refer to *Creating or resetting the portal site collection*.
 
-**Parent topic:**[Security considerations](../admin-system/srcscrcnsd.md)
 
 **Related information**  
 

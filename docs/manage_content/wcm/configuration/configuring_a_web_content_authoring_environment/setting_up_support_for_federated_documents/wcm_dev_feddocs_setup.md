@@ -14,5 +14,4 @@ Configure the federated documents feature to specify information about the sourc
 -   **[Cache tuning for federated documents](../wcm/wcm_dev_feddocs_cache.md)**  
 The federated documents feature uses the document list cache, the document data cache, and the feed type cache to manage information about the list of documents, the document data, and the types of feeds a server provides.
 
-**Parent topic:**[Configuring a web content authoring environment](../wcm/wcm_install_cfgauthoring.md)
 

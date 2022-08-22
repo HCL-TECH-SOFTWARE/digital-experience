@@ -42,5 +42,4 @@ By default, HCL Digital Experience URLs include navigational state information. 
 -   **[CF04 and earlier: Using friendly URLs without state information](../admin-system/mp_fsu_prevcf.md)**  
 By default, HCL DX Portal URLs include navigational state information. If you configure pages for friendly URLs, the portal appends the state information to the friendly URLs. Some scenarios require short and fully human readable URLs that omit the state information. For such scenarios, you can configure friendly URLs so that the portal does not show that state information.
 
-**Parent topic:**[Changing the site URL after an installation](../config/cfg_intr_seo.md)
 

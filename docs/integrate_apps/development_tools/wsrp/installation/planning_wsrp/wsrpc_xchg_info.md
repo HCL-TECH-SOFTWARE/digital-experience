@@ -59,7 +59,6 @@ The service clients support all WSRP service interfaces: Service Description, Ma
 
 **Note:** The configuration of the WSRP service clients is managed outside HCL Portal. The portal WSRP Consumer supports all service client configurations that are configured in WebSphere Application Server. This support includes message level security, transport level security, and other quality of service configuration. However, the service client configuration of the WSRP Consumer must be compatible with the web service configuration of the WSRP Producer. Example: If the service providers of the Producer portal are configured for WS-Security, the service references of the Consumer portal must also be configured for WS-Security. Otherwise, the WSRP communication fails.
 
-**Parent topic:**[Planning for WSRP](../admin-system/wsrpc_plan.md)
 
 **Related information**  
 

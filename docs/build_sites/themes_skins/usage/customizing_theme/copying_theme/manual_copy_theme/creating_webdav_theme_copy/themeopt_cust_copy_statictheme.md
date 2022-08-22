@@ -32,7 +32,6 @@ You need to make a unique copy of the Portal 8.5 theme static resources before y
     **Tip:** With some WebDAV clients, you might get the following error: `You need permission to perform this action`. In this case, you must explicitly create the root folder of the new theme with the WebDAV client first. The metadata folder and the metadata.properties file get created automatically with default content. You can now open the newly created folder and copy the contents of your local folder into the remote folder thus replacing the generated metadata.
 
 
-**Parent topic:**[Creating a WebDAV-based theme copy](../dev-theme/themeopt_themedev_manual_webdav.md)
 
 **Related information**  
 

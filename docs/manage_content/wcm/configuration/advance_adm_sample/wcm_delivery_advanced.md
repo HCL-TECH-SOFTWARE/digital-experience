@@ -9,5 +9,4 @@ Content associations are used to associate web content pages with your web conte
 -   **[Dynamic web content page selection](../admin-system/mp_wcm_dynamicpage.md)**  
 The web content viewer provides a link broadcasting feature that dynamically determines the best web content page to use when rendering the linked content item. To perform this page selection, the viewer uses the content associations on the web content page.
 
-**Parent topic:**[Delivering web content on a portal page](../wcm/wcm_config_delivery_portal.md)
 

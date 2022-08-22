@@ -16,7 +16,6 @@ For example, if you want to hide the third column of a three column layout on a 
 }
 ```
 
-**Parent topic:**[Responsive Web Design](../rwd/rwd_intro.md)
 
 **Related information**  
 

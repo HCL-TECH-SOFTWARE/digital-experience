@@ -16,7 +16,6 @@ In a default portal installation the `wpsadmins` group has the `USER` role. Ther
     Can view overlay reports on all resources, for example pages or portlets where at least the USER role is given.
 
 
-**Parent topic:**[Displaying overlay analytics reports](../admin-system/sa_asa_overlay_stats.md)
 
 **Previous topic:**[Configuring overlay reports](../admin-system/sa_asa_overlay_config.md)
 

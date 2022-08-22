@@ -7,7 +7,6 @@ When you create the virtual portal by using the Virtual Portal Manager portlet, 
 -   **[Preconfiguring the sub-administrators for virtual portals](../admin-system/advp_precfg_subadm.md)**  
 You can configure the roles and access rights that are assigned to sub-administrators on portlets of a virtual portal globally and before you create a virtual portal. The following steps must be completed on your initial portal installation.
 
-**Parent topic:**[Working with the Virtual Portal Manager portlet](../admin-system/advp_vpmgr.md)
 
 **Related information**  
 

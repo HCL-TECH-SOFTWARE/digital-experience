@@ -11,7 +11,6 @@ The HTTP Basic Authentication Trust Association Interceptor has several configur
 -   **[HTTP Basic Authentication Trust Association Interceptor in combination with external authentication servers](../plan/taic_comb_ext.md)**  
 When you use the HTTP Basic Authentication Trust Association Interceptor \(TAI\) with external authentication servers, you can configure the TAI to work for a specific set of requests.
 
-**Parent topic:**[Securing](../security/securing_wp.md)
 
 **Related information**  
 

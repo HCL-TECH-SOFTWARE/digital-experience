@@ -104,5 +104,4 @@ The example defines two new service references: `service/wsrp/AlternativeWSRPSer
 
 As the administrator of the Consumer portal, you can assign a service reference to a Producer port of a Producer definition. Use the `service-ref-id` as the identifier for selecting that service reference. If a service reference name of a new service reference does not contain the prefix `service/wsrp/`, the WSRP Consumer cannot find the service reference. When you assign a service reference to a Producer port, the Web Services Configuration portlet shows the list of all defined service references. The list shows only the service reference IDs of the service reference without the common prefix `service/wsrp`.
 
-**Parent topic:**[Creating and deploying custom service references](../admin-system/wsrpt_cons_crt_cust_wsrvc_refs.md)
 

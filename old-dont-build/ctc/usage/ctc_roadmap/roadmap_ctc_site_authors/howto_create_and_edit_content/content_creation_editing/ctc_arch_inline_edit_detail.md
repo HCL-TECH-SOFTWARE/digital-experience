@@ -6,5 +6,4 @@ The following image shows a details page in edit mode.
 
 ![This picture shows a details page in edit mode.](../images/InlineEditDetail_small.jpg)
 
-**Parent topic:**[Content creation and editing](../ctc/ctc_arch_inline_edit.md)
 

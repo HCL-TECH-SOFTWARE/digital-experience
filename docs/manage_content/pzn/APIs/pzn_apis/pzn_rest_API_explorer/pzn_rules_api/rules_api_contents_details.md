@@ -620,5 +620,3 @@ Possible example for `conditions` having `Web Content` select type:
 
 **Parent topic:**[Personalization rules APIs](../pzn/dev_pzn_rules_api.md)
 
-**Parent topic:**[Personalization rules APIs](../pzn/dev_pzn_rules_api.md)
-

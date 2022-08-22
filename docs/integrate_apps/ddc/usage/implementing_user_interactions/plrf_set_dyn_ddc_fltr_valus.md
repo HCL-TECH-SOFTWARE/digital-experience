@@ -26,5 +26,4 @@ After the user submits this form, the DDC filter public render parameter is upda
 
 DDC plug-ins can evaluate the active filter parameter value by using the `com.ibm.portal.wcm.plr.ListRenderState` interface that is defined by the public Digital Data Connector API.
 
-**Parent topic:**[Implementing user interactions](../social/plrf_impl_user_interactns.md)
 

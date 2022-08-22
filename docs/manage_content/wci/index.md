@@ -24,5 +24,4 @@ View some example feeds that illustrate how to represent the various item types 
 -   **[RSS Namespace Extension for the Feed Service](../wci/wci_ff_nse_rss.md)**  
 The RSS namespace extension is used to exchange control information between the feed producer and consumer applications.
 
-**Parent topic:**[Developing and managing content](../site/site_dev_man.md)
 

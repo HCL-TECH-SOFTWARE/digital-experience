@@ -9,7 +9,6 @@ HCL Portal comprises a framework of configuration services to accommodate the di
 -   **[Web Content Manager service configuration](../admin-system/srvcfgwcmref.md)**  
 Configuration services for HCL Web Content Manager contain settings for the general operation of the web content system, including settings for messaging, pre-rendering, and searching.
 
-**Parent topic:**[Configuring portal behavior](../admin-system/adptlcfg.md)
 
 **Related information**  
 

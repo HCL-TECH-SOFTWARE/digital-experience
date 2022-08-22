@@ -21,13 +21,11 @@ The Public Render Parameter is an application object that provides read and writ
 -   **[Shared Data application object](../contarget/targeting_shared_data.md)**  
 The Shared Data application object is used in rules to share complex data between web applications and HCL Digital Experience in a user's session.
 
-**Parent topic:**[Personalization terms](../pzn/pzn_concepts.md)
 
 **Previous topic:**[Campaigns](../pzn/pzn_campaigns.md)
 
 **Next topic:**[Request Context](../pzn/pzn_request_context.md)
 
-**Parent topic:**[Personalization terms](../pzn/pzn_concepts.md)
 
 **Previous topic:**[Campaigns](../pzn/pzn_campaigns.md)
 

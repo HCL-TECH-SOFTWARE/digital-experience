@@ -9,5 +9,4 @@ You use the short text, text, rich text, and HTML elements to store blocks of te
 -   **[Number element](../wcm/wcm_dev_elements_number.md)**  
 You can store a numerical value in a number element.
 
-**Parent topic:**[Elements](../wcm/wcm_build.md)
 

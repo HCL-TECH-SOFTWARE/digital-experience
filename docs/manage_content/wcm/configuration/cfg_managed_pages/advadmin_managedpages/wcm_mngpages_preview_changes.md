@@ -37,5 +37,4 @@ If you do not want to offer the preview option in your authoring system, you can
 -   **[Disabling the More menu](../wcm/wcm_moremenu_disable.md)**  
 If you do not want to offer the More menu and the information mode toggle in your authoring system, you can disable it globally or for individual virtual portals. If you disable the More menu, the portal no longer shows the preview context menu in the action bar of the site toolbar.
 
-**Parent topic:**[Developing and managing content](../site/site_dev_man.md)
 

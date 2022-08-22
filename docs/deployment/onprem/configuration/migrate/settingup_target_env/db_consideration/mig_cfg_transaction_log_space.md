@@ -61,5 +61,4 @@ Steps \#9 - \#16 are for calculating the space that is required to migrate hiera
 
 The estimated amount of database transaction log file space necessary in bytes is the greater of the two values that are determined in steps \#8 and \#16.
 
-**Parent topic:**[Database considerations](../migrate/mig_pre_db.md)
 

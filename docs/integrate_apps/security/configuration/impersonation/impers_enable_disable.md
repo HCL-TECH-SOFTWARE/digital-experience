@@ -41,7 +41,6 @@ By default, user impersonation is enabled, but you can manually disable or enabl
 2.  Stop and restart the HCL Portal server.
 
 
-**Parent topic:**[Administering user impersonation](../admin-system/impers_user.md)
 
 **Related information**  
 

@@ -23,5 +23,4 @@ You can generate a JavaScript based URL map from local application file system p
 -   **[JavaScript API for spHelper](../script-portlet/cmd_line_api.md)**  
 This API reference can help you customize an instance of your Script Application further.
 
-**Parent topic:**[The Script Application](../script-portlet/script_portlet.md)
 

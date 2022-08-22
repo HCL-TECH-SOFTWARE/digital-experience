@@ -63,5 +63,4 @@ To create a backup of a specific outbound HTTP connection profile, use the proce
         The output file `/tmp/the_scoped_configuration.xml` contains an XML export of the application-scoped configuration profile.
 
 
-**Parent topic:**[Sample administration tasks](../dev-portlet/outbhttp_cfg_smpl_adm_tasks.md)
 

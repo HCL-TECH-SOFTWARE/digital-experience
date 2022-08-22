@@ -358,7 +358,6 @@ The benefit of this change is that the environment-specific login procedure is r
     ```
 
 
-**Parent topic:**[Portal Scripting Interface](../admin-system/ad_psi.md)
 
 **Related information**  
 

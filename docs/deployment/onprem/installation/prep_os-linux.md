@@ -31,5 +31,4 @@ Prepare the operating system to ensure a successful HCL Digital Experience insta
     For example, the non-root users must have at least 770 permissions.
 
 
-**Parent topic:**[Preparing your Linux system for installation](../install/installingwp95-linux.md)
 

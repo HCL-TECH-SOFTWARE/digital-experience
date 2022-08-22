@@ -67,7 +67,6 @@ This sample also includes specification of user attributes.
 
 To use this sample with a HCL Portal Producer portal, set registration-required="false" and remove the parameter tags. This modification is necessary because the HCL Portal Producer does not support registration.
 
-**Parent topic:**[Using the XML configuration interface to create a Producer definition](../admin-system/wsrpt_cons_crtprd_xml.md)
 
 **Related information**  
 

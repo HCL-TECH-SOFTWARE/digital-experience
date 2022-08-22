@@ -22,5 +22,4 @@ The starting point frame is also used to generate the thumbnail of the video. Th
 
 The interactive cue point preview player in the content authoring form uses HTML 5 Media Fragment Identifiers for setting the start and end points of the video in the preview frame. Internet Explorer version 11 and earlier does not support these identifiers.
 
-**Parent topic:**[Developing and managing content](../site/site_dev_man.md)
 

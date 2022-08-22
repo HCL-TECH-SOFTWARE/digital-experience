@@ -13,5 +13,4 @@ When an item reaches the delete workflow stage the following things happen:
 -   If the base locale copy of the current item exists in the delete workflow stage, then all available draft and published localized copies are removed and a notification sent to relevant localized library owners, regardless of the workflow stage the localized copies are in.
 -   The delete extension is only applied to individual workflows, not project workflows.
 
-**Parent topic:**[Extensions for multilingual sites Multilingual Solution](../wcm/wcm_mls_extensions.md)
 

@@ -47,7 +47,6 @@ Some ConfigEngine extension points are required when you install an application 
 |Templates|add-templates-applySIFeaturePack|Installs template|
 |Templates|delete-templates-applySIFeaturePack|Removes templates|
 
-**Parent topic:**[Developing advanced PAA file applications](../config/dev_sol_app_adv.md)
 
 **Related information**  
 

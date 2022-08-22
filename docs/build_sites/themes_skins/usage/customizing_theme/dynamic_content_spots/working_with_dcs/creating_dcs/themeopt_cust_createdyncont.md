@@ -47,7 +47,6 @@ You can pass parameters to a JSP page that is rendering the dynamic content. If 
 <link rel="dynamic-content" href="dyn-cs:id:<your mappping ID\>+'?text=dynatext'">
 ```
 
-**Parent topic:**[Creating dynamic content spots](../dev-theme/themeopt_cust_creat_dyn_con_spot_parent.md)
 
 **Related information**  
 

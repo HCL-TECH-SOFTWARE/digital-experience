@@ -26,5 +26,3 @@ You can also log multiple values. For example:
 
 **Parent topic:**[CustomLog beans](../pzn/pzn_customlog_beans.md)
 
-**Parent topic:**[CustomLog beans](../pzn/pzn_customlog_beans.md)
-

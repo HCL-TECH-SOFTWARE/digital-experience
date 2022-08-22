@@ -18,7 +18,6 @@ if (pvar.getType() == VariableType.Endpoint) {
 }
 ```
 
-**Parent topic:**[Configuring outbound HTTP connections by using the Model Controller SPI](../dev-portlet/outbhttp_cfg_mcspi.md)
 
 **Previous topic:**[Obtaining the Controller SPI](../dev-portlet/outbhttp_cfg_mcspi_obtstrlrspi.md)
 

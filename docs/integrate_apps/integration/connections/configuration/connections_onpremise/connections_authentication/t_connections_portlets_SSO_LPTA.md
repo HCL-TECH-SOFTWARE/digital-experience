@@ -49,5 +49,4 @@ To allow SSO between HCL Connections and HCL Portal, complete the following step
 4.  Restart all the nodes.
 
 
-**Parent topic:**[Configuring authentication](../connect/c_connections_portlets_SSO_config.md)
 

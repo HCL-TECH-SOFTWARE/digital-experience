@@ -55,5 +55,4 @@ It is best practice to disable social media actions on all servers except your r
 
 See [Global configuration settings](wcm_sm_config_doc_global.md) for further details.
 
-**Parent topic:**[Social Media Publisher](../wcm/wcm_sm.md)
 

@@ -16,5 +16,4 @@ xmlaccess -user user\_ID -password password
 
 You need to run the XML script with a user ID that is allowed to access the RACF keyring profile. This is usually an administrative user ID. Therefore you can leave the variable user empty.
 
-**Parent topic:**[XML syntax elements for using a secure connection with SSL](../admin-system/adxmltsk_cmdln_sntx_ssl_elements.md)
 

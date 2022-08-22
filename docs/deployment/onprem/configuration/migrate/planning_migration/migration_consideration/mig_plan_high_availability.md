@@ -25,5 +25,4 @@ These are the migration options available when migrating from Web Content Manage
 -   **[Port conflicts](../migrate/mig_plan_port_conflicts.md#)**  
 During migration, it is possible that a port conflict might occur when starting up the target environment deployment manager, node agents, or HCL Digital Experience servers.
 
-**Parent topic:**[Planning for migration](../plan/mig_plan.md)
 

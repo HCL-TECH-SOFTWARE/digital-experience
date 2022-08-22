@@ -11,5 +11,4 @@ A `BasicJSONSelection` defines the syntax that you can use to access data in a J
 -   **[Syntax for BasicJSONSelection based list-rendering profiles](../social/plrf_lr_syntax4xpath_profl_json.md)**  
 A list-rendering profile that is based on `BasicJSONSelection` contains a set of name-value pairs called entries. This set of entries defines the set of available list properties and item attributes that are available for transforming external data into bean lists.
 
-**Parent topic:**[Digital Data Connector \(DDC\) for HCL Portal](../social/plrf_ovu.md)
 

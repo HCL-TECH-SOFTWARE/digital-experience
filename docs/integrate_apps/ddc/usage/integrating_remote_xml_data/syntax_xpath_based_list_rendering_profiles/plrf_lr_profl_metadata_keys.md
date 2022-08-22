@@ -105,7 +105,6 @@ You can use them in combination with `ItemAttribute`, `AssociatedItemAttribute`,
     For more information, read *Creating and deploying custom attribute value processor plug-ins*.
 
 
-**Parent topic:**[Syntax for XPath based list-rendering profiles](../social/plrf_lr_syntax4xpath_profl.md)
 
 **Related information**  
 

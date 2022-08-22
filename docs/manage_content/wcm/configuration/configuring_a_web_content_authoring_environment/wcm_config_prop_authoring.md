@@ -259,7 +259,6 @@ To enable the creation of content items without using a content template when yo
 
 Content items that are created by using this option have no content template accessible by the user. This option is useful when there is a need for content to store data, such as configuration parameters, but not be rendered in a website.
 
-**Parent topic:**[Configuring a web content authoring environment](../wcm/wcm_install_cfgauthoring.md)
 
 **Related information**  
 

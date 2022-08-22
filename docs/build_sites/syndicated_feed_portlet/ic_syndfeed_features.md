@@ -48,5 +48,4 @@ You can configure the Syndicated Feed portlet to forward HTTP cookies with outbo
 -   **[Client side aggregation \(CSA\) rendering in the Syndicated Feed Portlet](../admin-system/ic_syndfeed_csr.md)**  
 The Syndicated Feed Portlet can be configured to operate in the client side aggregation \(CSA\) rendering mode. Client side rendering ensures an improved user experience through faster response time. When you enable client side rendering in the portlet, the portal does not re-render the whole page but only the aspects of the portlet that change.
 
-**Parent topic:**[Setting up a website](../site/site_setup.md)
 

@@ -37,5 +37,4 @@ The installation program verifies the operating system and its prerequisites, av
 -   **[Creating a response file for installing HCL Digital Experience in Windows](../install/inst_response-windows.md)**  
 Use IBM Installation Manager to record a response file based on your environment, and also to automate your installation on multiple servers.
 
-**Parent topic:**[Running the HCL Digital Experience installer in Windows](../install/inst_binaries-windows.md)
 

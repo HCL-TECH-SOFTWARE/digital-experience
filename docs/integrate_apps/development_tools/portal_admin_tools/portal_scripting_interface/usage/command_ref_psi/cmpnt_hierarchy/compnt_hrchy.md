@@ -27,7 +27,6 @@ A composition hierarchy has several global flags. The global flags are similar t
 -   **[Lifecycle - Component hierarchy](../admin-system/lifecycle_compnt_hrchy.md)**  
 The create command creates a new component. You must select the parent container for the new component. The first argument is a keyword that indicates whether a container or control is created. Alternative, shorter keywords are documented in the bean help.
 
-**Parent topic:**[Command reference for the Portal Scripting Interface](../admin-system/adpsicrf.md)
 
 **Related information**  
 

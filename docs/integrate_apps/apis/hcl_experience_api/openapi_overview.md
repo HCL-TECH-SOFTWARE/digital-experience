@@ -55,7 +55,6 @@ To give users more insight on how to use Experience API, the following samples a
 -   **[Sample Content UI \| HCL Experience API](../open_api/sample_api_overview.md)**  
 Learn how to use the Sample Content UI application for HCL Experience API.
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 
 **Related information**  
 

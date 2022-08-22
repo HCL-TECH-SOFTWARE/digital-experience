@@ -70,5 +70,4 @@ The following list shows valid values for property class:
 -   bucket.transformationapplication.class =com.ibm.wps.datastore.TransformationApplicationDescriptorHome
 -   bucket.transformation.class =com.ibm.wps.datastore.TransformationDescriptorHome
 
-**Parent topic:**[Portal service configuration](../admin-system/srvcfgref.md)
 

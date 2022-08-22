@@ -23,13 +23,11 @@ Before you begin this procedure, ensure you have imported the resource collectio
 
 You can now create a content spot for your rule.
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Import Personalization Workspace resource collections](../pzn/pzn_demo_import_resource_collections.md)
 
 **Next topic:**[Create a content spot](../pzn/pzn_demo_create_content_spot.md)
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Import Personalization Workspace resource collections](../pzn/pzn_demo_import_resource_collections.md)
 

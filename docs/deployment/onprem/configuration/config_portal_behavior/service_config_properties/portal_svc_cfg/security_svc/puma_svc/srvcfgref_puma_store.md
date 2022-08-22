@@ -66,5 +66,4 @@ The following properties configure only the Portal User Management, but not the 
     The user attribute for dynamic part `*X*`. `*X*` must be between `0` and `puma.commonname.parts -1`. The default is `puma.commonname.0 = givenname` and `puma.commonname.1 = sn`.
 
 
-**Parent topic:**[Puma Store and Validation Services](../admin-system/srvcfgref_puma.md)
 

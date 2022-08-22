@@ -24,7 +24,6 @@ Run the performance tuning tool on a new deployment to tune the servers that are
 -   **[Optimizing Portal Access Control](../install/wp_pac_tool.md)**  
 If you notice HCL Web Content Manager performance issues with a large amount of resources and suspect an issue with access control, check your libraries for explicit role assignments. With explicit role assignments, you might see something like resource 1 is a parent of resource 2 and both have the same role assignments. If you find explicit duplicated role assignments, run the Portal Access Control Optimizer task to eliminate the redundant mappings and take advantage of inheritance.
 
-**Parent topic:**[Configuring](../config/configuring_parent2.md)
 
 **Related information**  
 

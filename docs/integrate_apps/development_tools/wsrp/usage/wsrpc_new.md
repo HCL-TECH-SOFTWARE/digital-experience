@@ -14,5 +14,4 @@ The WSRP Consumer provides multiple new configuration parameters for defining tw
 
 You can now configure the WSRP Consumer to invalidate the remote session when a user explicitly logs out of the Consumer portal.
 
-**Parent topic:**[WSRP services](../admin-system/wsrpc.md)
 

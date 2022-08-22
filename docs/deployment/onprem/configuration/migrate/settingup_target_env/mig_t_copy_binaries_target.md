@@ -15,5 +15,4 @@ Complete this task if the deployment manager is not sharing application binary f
     Failure to copy the migration plug-in files to the deployment manager can result in the following error when you try to upgrade the ConfigEngine tool:com.ibm.websphere.management.exception.InvalidConfigDataTypeException: ADMG0007E: The configuration data type CellCompRegistryCollection is not valid.
 
 
-**Parent topic:**[Setting up the target environment](../migrate/setting_up_the_target_environment.md)
 

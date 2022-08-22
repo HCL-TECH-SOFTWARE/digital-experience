@@ -37,5 +37,4 @@ Complete the following steps to set the properties of the HTTP Basic Authenticat
 15. Restart the WebSphere Application Server.
 
 
-**Parent topic:**[Enabling HTTP Basic Authentication for simple clients](../security/tait_nbl_hba4sc.md)
 

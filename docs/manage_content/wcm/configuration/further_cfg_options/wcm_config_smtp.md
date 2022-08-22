@@ -45,7 +45,6 @@ To use the email workflow action, you must configure Web Content Manager to use 
 6.  Restart the portal for the new settings to take effect.
 
 
-**Parent topic:**[Further configuration options](../wcm/wcm_config.md)
 
 **Related information**  
 

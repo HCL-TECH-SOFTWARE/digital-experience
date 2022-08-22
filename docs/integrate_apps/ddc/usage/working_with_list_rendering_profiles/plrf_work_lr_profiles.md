@@ -9,5 +9,4 @@ When you create a list-rendering profile, you can either create a completely new
 -   **[Deploying list-rendering profiles](../social/plrf_dply_lr_profiles.md)**  
 You can choose between two ways of deploying your custom list-rendering profiles.
 
-**Parent topic:**[Digital Data Connector \(DDC\) for HCL Portal](../social/plrf_ovu.md)
 

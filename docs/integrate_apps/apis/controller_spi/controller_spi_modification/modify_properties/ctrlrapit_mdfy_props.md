@@ -30,5 +30,4 @@ The Controller SPI enables the setting of themes on modifiable instances that im
 -   **[Setting URLs](../dev/ctrlrapit_set_url.md)**  
 You can set URLs to point to external content \(`ExternalContentURL`\) or to internal content, that is to nodes in the portal \(`InternalContentURL`\).
 
-**Parent topic:**[Making modifications by using the Controller SPI](../dev/ctrlrapit_mdfy.md)
 

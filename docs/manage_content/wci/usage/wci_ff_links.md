@@ -285,5 +285,4 @@ If enabled:
     For example, For example, <img src="http://<host\_name\>/program/path?param1=hello&param2=a.jpg"....\> and <img src="http://<host\_name\>/program/path?param1=world&param2=b.jpg" ...\> both creates or updates the same image component named "program.path".
 
 
-**Parent topic:**[IBM Web Content Integrator](../wci/wci_intro.md)
 

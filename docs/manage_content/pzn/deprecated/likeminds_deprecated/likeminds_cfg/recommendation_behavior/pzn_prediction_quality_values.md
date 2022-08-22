@@ -34,5 +34,3 @@ db.applic.param.BestBets.Power = 1.0
 
 **Parent topic:**[Specifying recommendation behavior](../pzn/pzn_specify_recommendation_behavior.md)
 
-**Parent topic:**[Specifying recommendation behavior](../pzn/pzn_specify_recommendation_behavior.md)
-

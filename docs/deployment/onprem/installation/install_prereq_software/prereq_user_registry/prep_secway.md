@@ -50,5 +50,4 @@ If you plan to use a SecureWay Security Server as an LDAP user registry, you mus
     8.  Complete the instructions that are provided with your directory server to import the LDIF file.
 
 
-**Parent topic:**[Preparing the user registry software](../config/prereq_user_reg.md)
 

@@ -15,5 +15,4 @@ HCL Portal allows you to configure the cache scope and the cache expiry time of 
     **Note:** When caching JSR portlets, the cache scope is only for proxy server caching policies and requires the use of an edge server cache. Local display caching policies are not affected by this setting. The cache expiration setting is used for both local and remote caching policies.
 
 
-**Parent topic:**[Caching](../security/tune_cache.md)
 

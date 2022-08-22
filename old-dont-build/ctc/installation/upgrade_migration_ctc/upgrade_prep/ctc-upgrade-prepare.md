@@ -11,5 +11,4 @@ You can add the WasPassword and PortalAdminPwd passwords to the wkplc.properties
 -   **[Upgraded and deprecated Content Template assets](../ctc/ctc_migr_assets.md)**  
 When you install Content Template Catalog 4.4 on an existing Content Template 3 or 3.1 solution, existing assets are either upgraded or deprecated. You should test every part of your site after upgrading to make sure that there are no unexpected changes.
 
-**Parent topic:**[Upgrade and Migration of Content Template](../ctc/ctc_migr_overview.md)
 

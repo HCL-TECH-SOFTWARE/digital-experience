@@ -17,5 +17,4 @@ Cookie rules define handling rules for cookies that you use in the context of an
 -   **[Policy variables](../dev-portlet/outbhttp_cfg_strctr_policy_variable.md)**  
 You can use policy variables to resolve tokens of the form \{$Variable\_name\} that can appear in the URL pattern setting of a proxy rule or in metadata.
 
-**Parent topic:**[Configuring outbound HTTP connections](../dev-portlet/outbhttp_cfg_oh_conns.md)
 

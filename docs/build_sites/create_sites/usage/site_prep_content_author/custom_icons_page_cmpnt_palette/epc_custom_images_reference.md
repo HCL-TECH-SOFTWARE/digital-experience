@@ -52,5 +52,4 @@ You can create custom images for items in the Page Components palette and Web co
 19. Clear your browser cache and refresh the page for the changes to take effect.
 
 
-**Parent topic:**[Creating custom icons for the Page Components palette and Web content authoring interface \| HCL Web Content Manager](../admin-system/epc_custom_images.md)
 

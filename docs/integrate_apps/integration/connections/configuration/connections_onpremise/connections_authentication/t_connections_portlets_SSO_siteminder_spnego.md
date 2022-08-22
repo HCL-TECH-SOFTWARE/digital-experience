@@ -64,5 +64,4 @@ Configure HCL Connections portlets to use single sign-on with Computer Associate
     For example, ping ldap.spengo.com and iisserver.spnego.com to make sure that you have a connection.
 
 
-**Parent topic:**[Configuring authentication](../connect/c_connections_portlets_SSO_config.md)
 

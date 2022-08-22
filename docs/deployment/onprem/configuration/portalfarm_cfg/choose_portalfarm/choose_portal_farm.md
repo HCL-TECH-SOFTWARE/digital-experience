@@ -9,5 +9,4 @@ You maintain only one installation for all members of a farm in a shared configu
 -   **[Setting up farm instances as unique installations](../install/set_portal_farm.md)**  
 Choose this option if you want all portal farm instances to be unique installations. You have more control over the server-specific configuration because they are unique from server to server. For example, you can easily apply and test changes or application updates to one server on the farm at a time. The disadvantage to this option is that all administrative actions must be repeated on every server in the farm.
 
-**Parent topic:**[Setting up and maintaining a portal farm](../install/portal_farm.md)
 

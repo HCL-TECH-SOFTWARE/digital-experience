@@ -33,5 +33,4 @@ Perform the following steps to remove eTrust SiteMinder from the HCL Digital Exp
 5.  If necessary, uninstall any Computer Associates components.
 
 
-**Parent topic:**[Configuring eTrust SiteMinder](../security/cfg_siteminder.md)
 

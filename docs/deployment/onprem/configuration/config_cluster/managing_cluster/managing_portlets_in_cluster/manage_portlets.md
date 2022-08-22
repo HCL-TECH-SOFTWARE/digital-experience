@@ -47,7 +47,6 @@ You can use the Deployment Manager or the XML configuration interface to update 
 -   **[Applying updates to custom applications](../admin-system/clusm_app_upd.md)**  
 For customer-written portlet applications that are predeployed as standard EARs and then configured within each cluster using XMLAccess, use the same update procedure as used for portlet applications provided with HCL Digital Experience.
 
-**Parent topic:**[Managing your cluster](../admin-system/manage_clus.md)
 
 **Related information**  
 

@@ -11,5 +11,4 @@ The Mobile Experience includes:
 
 The Mobile Experience is available on your HCL Digital Experience package.
 
-**Parent topic:**[Mobile](../overview/mobile.md)
 

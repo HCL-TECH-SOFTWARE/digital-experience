@@ -9,5 +9,4 @@ To set HTTP header information in your JSR 286 portlet, use the setProperty and 
     When setting headers in the render lifecycle phase, portlets should set the header in the render headers part or simply override the GenericPortlet.doHeaders method to make sure the server's response headers have not already been committed. Note, however, that the delivery of HTTP headers to the client cannot be guaranteed, because other portlets on a page might override it or the setting of some header attributes might be against the portal's policy.
 
 
-**Parent topic:**[Using two-phase rendering with JSR 286 portlets](../dev-portlet/jsr2phase_overview.md)
 

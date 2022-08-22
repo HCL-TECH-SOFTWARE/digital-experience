@@ -55,7 +55,6 @@ HCL Digital Experience is installed.
 5.  Restart the HCL Portal server.
 
 
-**Parent topic:**[HCL Portal](../config/config_portal.md)
 
 **Related information**  
 

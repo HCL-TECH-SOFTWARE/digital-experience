@@ -9,7 +9,6 @@ Public render parameters allow JSR 286 portlets to share navigational state info
 -   Public render parameters can also be shared with remote portlets by using the WSRP V 2.0 protocol.
 -   Information about render parameters is normally encoded into the URL. Therefore their names and values should be as short as possible in order to not exceed the URL length restrictions set by your browser.
 
-**Parent topic:**[Portlet communication](../dev-portlet/pltcom_ptlt_com.md)
 
 **Related information**  
 

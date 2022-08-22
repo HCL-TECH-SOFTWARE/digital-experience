@@ -28,5 +28,4 @@ To specify the details of proxy server, proceed as follows:
     **Note:** You do not need to restart the portal server after you specify the configuration parameters. The updated configuration becomes effective without restart.
 
 
-**Parent topic:**[Syndicated Feed Portlet for HCL Digital Experience](../admin-system/ic_syndfeed_features.md)
 

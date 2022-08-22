@@ -21,7 +21,6 @@ Depending on your choices on the options, the filter rules result in the followi
 
 For more details about filter rules and how to apply them refer to the **Manage Search** portlet and its help.
 
-**Parent topic:**[Managing the content sources of a search collection](../admin-system/srtmngcontsrc.md)
 
 **Related information**  
 

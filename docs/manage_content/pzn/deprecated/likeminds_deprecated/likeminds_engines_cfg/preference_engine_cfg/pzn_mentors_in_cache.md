@@ -10,5 +10,3 @@ movie_pref.db.engine.tune.max_cached_mentors = 600
 
 **Parent topic:**[Configuring the Preference engine](../pzn/pzn_configure_preference_engine.md)
 
-**Parent topic:**[Configuring the Preference engine](../pzn/pzn_configure_preference_engine.md)
-

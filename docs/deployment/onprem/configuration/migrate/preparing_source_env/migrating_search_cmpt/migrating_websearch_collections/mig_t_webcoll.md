@@ -5,7 +5,6 @@ You migrate web search collections to HCL Digital Experience 8.5 by exporting ea
 -   **[Exporting search web collections](../migrate/mig_t_export_webcoll.md)**  
 Use the Manage Search portlet to export search web collections from a source portal. Before you export a collection, make sure that the user who is running the portal application process has write access to the target directory location.
 
-**Parent topic:**[Migrating search components](../migrate/mig_t_search.md)
 
 **Related information**  
 

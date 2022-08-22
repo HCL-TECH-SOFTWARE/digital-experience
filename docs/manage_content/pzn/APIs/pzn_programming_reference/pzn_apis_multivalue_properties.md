@@ -20,5 +20,3 @@ The interface com.ibm.websphere.personalization.resources.IMultiValueUtils is a 
 
 **Parent topic:**[Using the Personalization APIs](../pzn/pzn_using_apis.md)
 
-**Parent topic:**[Using the Personalization APIs](../pzn/pzn_using_apis.md)
-

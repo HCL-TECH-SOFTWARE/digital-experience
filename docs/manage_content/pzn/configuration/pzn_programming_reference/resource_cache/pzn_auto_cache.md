@@ -24,8 +24,6 @@ When the automatic cache entry clearing feature is enabled, content authors can 
 
 **Parent topic:**[Resource cache](../pzn/pzn_resource_cache.md)
 
-**Parent topic:**[Resource cache](../pzn/pzn_resource_cache.md)
-
 **Related information**  
 
 

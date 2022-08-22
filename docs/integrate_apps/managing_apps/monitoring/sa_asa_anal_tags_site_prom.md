@@ -11,5 +11,4 @@ Security for analytics tags allows you to administer which users can view, creat
 -   **[Using the XML configuration interface to administer analytics tags](../admin-system/sa_asa_anal_xml.md)**  
 You can use the XML configuration interface to manage analytics tags and site promotions in the portal.
 
-**Parent topic:**[Analyzing user behavior by Active Site Analytics](../admin-system/sa_asa_work.md)
 

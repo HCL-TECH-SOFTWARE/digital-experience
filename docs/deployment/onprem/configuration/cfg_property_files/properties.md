@@ -13,7 +13,6 @@ During the configuration process, you can enter passwords and user IDs in the pr
 -   **[Properties file: wkplc\_comp.properties](../properties/wkplc_comp-dita.md)**  
 
 
-**Parent topic:**[Configuring](../config/configuring_parent2.md)
 
 **Related information**  
 

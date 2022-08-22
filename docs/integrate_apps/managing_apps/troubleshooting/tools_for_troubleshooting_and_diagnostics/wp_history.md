@@ -48,7 +48,6 @@ You can also generate a report in HTML format by executing the `genHistoryReport
 -   Windows: `genHistoryReport.bat`
 -   z/OS: `./genHistoryReport.sh`
 
-**Parent topic:**[Troubleshooting and diagnostics tools](../trouble/pd_tools.md)
 
 **Related information**  
 

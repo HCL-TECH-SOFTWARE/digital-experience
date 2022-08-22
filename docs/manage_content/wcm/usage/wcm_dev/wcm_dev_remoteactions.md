@@ -431,5 +431,4 @@ To edit a content item and create a draft on the edit and set the history log co
 -   Tag: `[plugin:RemoteAction action="edit" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1" createDraft="true" comment="comment"]`
 -   Url: `http://<host>/wps/myportal/wcmAuthoring?wcmAuthoringAction=edit&docid=com.ibm.workplace.wcm.api.WCM_Content/ID1&createDraft=true&comment=comment`
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 

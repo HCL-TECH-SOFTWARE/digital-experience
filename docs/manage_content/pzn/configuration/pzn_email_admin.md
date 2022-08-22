@@ -17,8 +17,6 @@ Before your run time server can send personalized email:
 
 **Parent topic:**[Rules](../pzn/pzn_rules.md)
 
-**Parent topic:**[Rules](../pzn/pzn_rules.md)
-
 **Related information**  
 
 

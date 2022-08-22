@@ -17,5 +17,4 @@ The portal supports the following methods for portlet communication based on sha
     **Note:** Information about render parameters is normally encoded into the URL. Therefore their names and values should be as short as possible in order to not exceed the URL length restrictions that many browsers have.
 
 
-**Parent topic:**[Portlet communication](../dev-portlet/pltcom_ptlt_com.md)
 

@@ -7,5 +7,4 @@ To support Portal Search in a cluster, you must install and configure a remote s
 2.  Configure the remote search service. For more information on configuring the remote search service, see *Configuring a remote search service* in the related links section.
 
 
-**Parent topic:**[Configuring search in a cluster](../config/config_search_clus.md)
 

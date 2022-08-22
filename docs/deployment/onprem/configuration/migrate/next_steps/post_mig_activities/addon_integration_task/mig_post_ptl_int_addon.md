@@ -29,5 +29,4 @@ The mashup integration feature was removed in Portal Version 8.0 and is not incl
 -   **[Navigation with consecutive labels is dynamic](../dev-theme/themeopt_upgrade_secnav_labels.md)**  
 The secondary navigation is dynamic, and shows only two levels of navigation at a time. When a page on the last level of navigation is selected, only that level of navigation is displayed. It is possible to select a page where both the parent level of navigation and the grandparent level of navigation are both labels. In this case, the sibling navigation for the parent level is not accessible.
 
-**Parent topic:**[Post-migration activities](../migrate/mig_t_post_mig.md)
 

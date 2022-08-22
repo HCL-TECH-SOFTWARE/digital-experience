@@ -17,7 +17,6 @@ The reserved authoring portlet is essential to the proper operation of web conte
 6.  Save your changes.
 
 
-**Parent topic:**[Reserved authoring portlet](../wcm/wcm_config_wcmviewer_reservedauth.md)
 
 **Related information**  
 

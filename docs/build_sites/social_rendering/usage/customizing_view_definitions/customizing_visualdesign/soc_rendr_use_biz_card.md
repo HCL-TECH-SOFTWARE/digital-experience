@@ -35,7 +35,6 @@ For more information, read *Integrating the business card and online status in a
 -   If you integrate an HCL Connections server that runs in the Smart Cloud for Social Business, support for the business card is currently not available. The Business Card HTML component that is contained in the Social Lists 1.0 library does not generate the business card microformat in this case. You can check whether you integrate an HCL Connections server that runs in the Smart Cloud for social business in your own design components. To do so, use the `[Plugin:ConnectionsContext type="config" key="server.config"]`. For details, read *Configuring global settings for social rendering*.
 -   If you want to use the business card on a HCL Portal page, the page editor must add the `portal.livetext.hcard` theme capability to the page. To achieve this, the page editor can add the `wp_liveobject_framework` theme module to the current page profile. For more information, read *The module framework*in the HCL Portal product documentation.
 
-**Parent topic:**[Customizing the visual design of your view definitions](../social/soc_rendr_cust_socl_list_visual_design.md)
 
 **Related information**  
 

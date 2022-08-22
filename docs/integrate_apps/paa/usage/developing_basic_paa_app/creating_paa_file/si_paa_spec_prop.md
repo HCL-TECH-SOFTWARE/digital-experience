@@ -18,5 +18,4 @@ Property files that contain developer-provided settings must be at the component
 
 When you decide on property names, take great care. A limitation of Ant means that when a property is created in a run of the scripts, it cannot be overwritten. Therefore, if you install multiple components that have a setting with the same name but different values, the first one to be created is used throughout the installation. It can cause unexpected results. Employ a pattern for naming the properties to ensure that property names across components do not clash. For example, a property name might have the name of the component to which it relates, prefixed to the name to ensure uniqueness.
 
-**Parent topic:**[Create a Portal Application Archive \(PAA\) file](../config/si_paa_spec.md)
 

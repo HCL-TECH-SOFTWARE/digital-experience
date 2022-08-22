@@ -32,5 +32,4 @@ For more information about these three parameters and their meaning, refer to th
 
 As an alternative, you can define a portlet preference before you deploy the portlet. In this case add the portlet preference to the `portlet.xml` deployment descriptor of your WAR file.
 
-**Parent topic:**[Administering Portlet load monitoring](../dev-portlet/plmt_admin.md)
 

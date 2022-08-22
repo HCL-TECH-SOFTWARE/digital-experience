@@ -24,5 +24,4 @@ The following table lists the required fields that display when you select the d
 |**Runtime password**|This field corresponds to the dbdomain.DbRuntimeDbRuntimePassword properties in the wkplc\_dbtype.properties file.| |
 |**Oracle Database library**|oracle.DbLibrary| | |
 
-**Parent topic:**[Oracle: Database transfer](../config/cw_db_transfer-oracle.md)
 

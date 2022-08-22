@@ -11,7 +11,6 @@ You can use the XML configuration interface to export and import HCL Digital Exp
 -   **[XML configuration reference](../admin-system/adxmlref.md)**  
 Learn more about XML input structure, XML tags for portal resources, attributes for special purposes such as locale data, object IDs, and more. Also find information about action attributes that determine the type of processing that the XML configuration reference applies to the portal resource. There are syntax restrictions that you need to consider as well as information about how to determine the object IDs for portal resources.
 
-**Parent topic:**[Portal administration tools](../admin-system/admtools.md)
 
 **Related information**  
 

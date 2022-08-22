@@ -52,5 +52,4 @@ Use the following default URLs to access HCL Portal, the WebSphere® Integrated 
 
 If you had any processes from other software in the default port range when the installation started, you might have different port numbers than the defaults.
 
-**Parent topic:**[Windows system - HCL Digital Experience installation](../install/installingwp95-windows.md)
 

@@ -43,13 +43,11 @@ Ensure that you have properly followed the steps in [Coding the portlet JSP](pzn
 
 You can now import the Personalization workspace resource collections.
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Coding the portlet JSP](../pzn/pzn_demo_finish_coding_portlet_jsp.md)
 
 **Next topic:**[Import Personalization Workspace resource collections](../pzn/pzn_demo_import_resource_collections.md)
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Coding the portlet JSP](../pzn/pzn_demo_finish_coding_portlet_jsp.md)
 

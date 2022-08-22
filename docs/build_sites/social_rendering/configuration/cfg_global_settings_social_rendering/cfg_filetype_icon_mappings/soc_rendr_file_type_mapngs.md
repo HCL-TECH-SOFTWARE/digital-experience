@@ -62,5 +62,4 @@ The following types and services have no default mappings:
 -   visualization
 -   wordProcessingDocs
 
-**Parent topic:**[Configuring file type icon mappings](../social/soc_rendr_cfg_filetype_map.md)
 

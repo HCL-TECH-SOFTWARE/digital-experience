@@ -18,5 +18,4 @@ Run the configure-wp-connections-integration task to configure the integration b
 
 Log in to the WebSphere® Integrated Solutions Console. Verify that the task parameter values were added to the resource enterprise providers. Go to **Resources** \> **Resource Environment** \> **** \> **Resource environment providers** \> **WP ConnectionsIntegrationService** \> **Custom properties**. Then, go to **Resources** \> **Resource Environment** \> **** \> **Resource environment providers** \> **WP PumaStoreService** \> **Custom properties**.
 
-**Parent topic:**[Configuring Portal to work with HCL Connections](../config/cfg_ptl_with_conn.md)
 

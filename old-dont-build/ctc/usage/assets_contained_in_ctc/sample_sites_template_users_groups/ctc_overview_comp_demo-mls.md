@@ -43,5 +43,4 @@ These new search collections are referred to by the search components that are i
 
 The search results index list in the localized CTC Demo sites refer to the search component for each language. For example, **CTC Demo ZH** \> **Content** \> **CTC Demo** \> **Home** \> **Search Results** \> **Page Components** \> **Index List** refers to the search component Search Results List ZH.
 
-**Parent topic:**[Sample sites, site templates, groups, and users](../ctc/ctc-assets-sample-sites.md)
 

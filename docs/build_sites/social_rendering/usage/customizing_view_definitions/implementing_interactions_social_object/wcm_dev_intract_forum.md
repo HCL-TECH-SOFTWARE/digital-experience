@@ -20,7 +20,6 @@ Depending on the action, the data sink requires extra form data.
 
 **Note:** The update operation for individual replies that Forum Topic Details appearance component supports is implemented as a post to *The generic XML Digital Data Connector data sink*.
 
-**Parent topic:**[Implementing interactions with social objects](../wcm/wcm_dev_impl_intrax_soc_objects.md)
 
 **Related information**  
 

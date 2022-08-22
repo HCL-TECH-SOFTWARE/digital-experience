@@ -18,5 +18,4 @@ To configure remote session invalidation, set the following configuration proper
 
 You set this property in the portal WP Configuration Service by using the WebSphere® Integrated Solutions Console. For details about portal service configuration properties and how to set them, read Portal service configuration and Setting service configuration properties.
 
-**Parent topic:**[Customizing the WSRP configuration of your Consumer portal](../admin-system/wsrpt_cons_cust.md)
 

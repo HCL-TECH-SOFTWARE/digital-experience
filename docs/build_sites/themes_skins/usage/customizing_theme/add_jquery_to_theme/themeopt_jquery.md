@@ -77,7 +77,6 @@ Now the jQuery core and your plug-ins are ready and available for use. To learn 
 -   **[Defining tooltips with PowerTip](../dev-theme/themeopt_jquery_power.md)**  
 Once your PowerTip module is active, you can add one or more tooltips to your pages through a dynamic content spot, or a config markup type subcontribution in a module.
 
-**Parent topic:**[Customizing the theme](../dev-theme/themeopt_cust.md)
 
 **Related information**  
 

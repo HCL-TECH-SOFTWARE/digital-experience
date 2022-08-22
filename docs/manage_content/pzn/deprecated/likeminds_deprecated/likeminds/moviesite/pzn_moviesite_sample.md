@@ -38,5 +38,3 @@ Movie Site demonstrates the LikeMinds Recommendation Engine, guiding you through
 
 **Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
 
-**Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
-

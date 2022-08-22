@@ -26,5 +26,4 @@ To disable run: `ConfigEngine.sh|bat disable-wcm-spa-script-app-properties`
 
 A new **Deferred with React** theme profile was added that includes React v16 which can be used on pages contain React script applications.
 
-**Parent topic:**[Build applications with the Script Application](../script-portlet/build_apps.md)
 

@@ -29,7 +29,6 @@ HCL Digital Experience 9.5 provides new features for administrators, developers,
 -   **[HCL Digital Experience Cloud Native 9.5](../overview/dx_cloud_native.md)**  
 HCL Digital Experience Cloud Native is a powerful digital experience platform optimized for deployment to Kubernetes container environments.
 
-**Parent topic:**[HCL Digital Experience 9.5 Product Documentation](../welcome/wp95_welcome.md)
 
 **Related information**  
 

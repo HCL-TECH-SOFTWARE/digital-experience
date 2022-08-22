@@ -57,5 +57,4 @@ New profiles are enabled with the upgraded offering. Existing profiles are only 
 -   **[Removing the Enable product offering](../install/inst_down.md)**  
 After you upgrade your product offering, you can remove the upgraded product offering and return to your original product offering.
 
-**Parent topic:**[HCL Portal](../config/config_portal.md)
 

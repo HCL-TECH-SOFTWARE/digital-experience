@@ -25,5 +25,4 @@ final Markup markup = ...
 ((ModifiableInternalContentURL) modifiable).setTarget(identifiable, markup);
 ```
 
-**Parent topic:**[Setting URLs](../dev/ctrlrapit_set_url.md)
 

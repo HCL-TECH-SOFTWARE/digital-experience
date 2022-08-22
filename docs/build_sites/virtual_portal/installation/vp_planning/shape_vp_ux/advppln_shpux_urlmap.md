@@ -35,7 +35,6 @@ For more information, see *URL mappings*.
     ```
 
 
-**Parent topic:**[Shaping the user experience](../admin-system/advppln_shape_ux.md)
 
 **Related information**  
 

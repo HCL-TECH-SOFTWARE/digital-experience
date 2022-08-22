@@ -26,5 +26,4 @@ To use Session Security Integration, you must enable it on both HCL Digital Expe
 11. Save your changes.
 
 
-**Parent topic:**[Securing](../security/securing_wp.md)
 

@@ -43,7 +43,6 @@ In most case, the returned list from getCombinedURI contains one URI. In a few c
 
 **Note:** You must use this API with application-specific resources only. Shared, non-application-specific resources must be defined as modules or capabilities and specified as the portlet module dependencies, using the capability portlet preferences. It optimizes performance. It ensures multiple portlets on a page do not load the same resources. And it controls the order of resources that are loaded, because shared resources must load before application-specific resources.
 
-**Parent topic:**[The module framework](../dev-theme/themeopt_module.md)
 
 **Related information**  
 

@@ -56,5 +56,4 @@ This example constructs a portal URL to a URI in a specific project:
 
 If your application uses the Representational State Transfer \(REST\) architecture, you can use the remote APIs provided with the portal to construct project-specific URLs.
 
-**Parent topic:**[Administering managed pages](../wcm/wcm_mngpages_advadmin.md)
 

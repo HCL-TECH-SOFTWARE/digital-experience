@@ -25,7 +25,6 @@ You can specify the following properties:
     -   If set to `false`, only exact matches to the text entered in the advanced search field are searched for.
     -   If the property is not specified, this setting defaults to the `false` behavior.
 
-**Parent topic:**[Configuring a web content authoring environment](../wcm/wcm_install_cfgauthoring.md)
 
 **Related information**  
 

@@ -27,5 +27,4 @@ You should become familiar with your social media of choice and be aware of limi
 -   throttle limits
 -   maximum posts per timeframe
 
-**Parent topic:**[Social Media Publisher](../wcm/wcm_sm.md)
 

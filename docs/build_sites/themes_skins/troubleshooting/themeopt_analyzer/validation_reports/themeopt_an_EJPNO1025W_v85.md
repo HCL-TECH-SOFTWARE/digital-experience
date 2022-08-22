@@ -12,5 +12,3 @@ Update your skin metadata with the key ''\{0\}'' to point to the fs-type1 WebDAV
 
 **Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
-

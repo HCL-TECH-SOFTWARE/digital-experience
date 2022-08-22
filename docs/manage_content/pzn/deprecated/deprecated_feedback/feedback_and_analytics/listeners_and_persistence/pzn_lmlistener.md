@@ -8,5 +8,3 @@ An instance of the LMListener is active after LikeMinds configuration tasks are 
 
 **Parent topic:**[Listeners and persistence](../pzn/pzn_log_listeners.md)
 
-**Parent topic:**[Listeners and persistence](../pzn/pzn_log_listeners.md)
-

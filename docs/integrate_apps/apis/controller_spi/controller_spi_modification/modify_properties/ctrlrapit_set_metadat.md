@@ -35,5 +35,4 @@ if (modifiable instanceof ModifiableMetaDataProvider) {
 }
 ```
 
-**Parent topic:**[Modifying properties](../dev/ctrlrapit_mdfy_props.md)
 

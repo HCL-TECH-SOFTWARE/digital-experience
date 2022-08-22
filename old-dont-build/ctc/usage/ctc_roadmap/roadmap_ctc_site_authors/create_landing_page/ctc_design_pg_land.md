@@ -49,5 +49,4 @@ The key to making many of the pre-configured portlets work on landing pages is t
     All of the pre-configured portlets have been set up with page component configurations that can be placed in any part of the page. The styles used adjust to the column they are placed in.
 
 
-**Parent topic:**[Creating a landing page using CTC](../ctc/ctc_design_landing.md)
 

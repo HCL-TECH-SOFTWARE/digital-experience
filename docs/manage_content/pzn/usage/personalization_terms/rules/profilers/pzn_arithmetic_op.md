@@ -18,5 +18,3 @@ To build an operation, select a combination of **Resource.Attribute** and other 
 
 **Parent topic:**[Profilers](../pzn/pzn_profilers.md)
 
-**Parent topic:**[Profilers](../pzn/pzn_profilers.md)
-

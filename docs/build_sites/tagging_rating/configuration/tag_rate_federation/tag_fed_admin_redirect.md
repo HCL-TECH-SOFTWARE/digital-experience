@@ -14,7 +14,6 @@ To redirect to the HCL Connections server, use the following value pattern: `con
 
 This setting is used in the next run of the FederationTaskHandler that retrieves HCL Connections tags and tagged resources. After that a redirect to the external HCL Connections website is possible.
 
-**Parent topic:**[Administering tag federation](../admin-system/tag_fed_admin.md)
 
 **Related information**  
 

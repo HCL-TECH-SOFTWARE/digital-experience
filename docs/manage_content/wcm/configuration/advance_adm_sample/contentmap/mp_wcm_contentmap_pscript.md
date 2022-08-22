@@ -184,7 +184,6 @@ For the second content association, the association scope is removed by specifyi
     ```
 
 
-**Parent topic:**[Content associations reference](../admin-system/mp_wcm_contentmap.md)
 
 **Related information**  
 

@@ -22,5 +22,4 @@ This dynamic content spot maps to the following URI through the system module fo
 
 The wp\_status\_bar module contains the JavaScript resources necessary to display the messages. The markup renders when the module is active.
 
-**Parent topic:**[Working with dynamic content spots](../dev-portlet/csa2r_dyn_cntnt_spot.md)
 

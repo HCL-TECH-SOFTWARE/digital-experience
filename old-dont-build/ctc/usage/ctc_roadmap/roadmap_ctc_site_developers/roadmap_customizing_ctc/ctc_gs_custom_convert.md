@@ -10,7 +10,6 @@ To convert a custom site to a template:
 
 ![This diagram shows the process of converting a page to a template.](../images/ctc_gs_custom_convert_template.jpg)
 
-**Parent topic:**[A roadmap for customizing Content Template](../ctc/ctc_gs_custom.md)
 
 **Previous topic:**[How to change the design](../ctc/ctc_gs_custom_design.md)
 

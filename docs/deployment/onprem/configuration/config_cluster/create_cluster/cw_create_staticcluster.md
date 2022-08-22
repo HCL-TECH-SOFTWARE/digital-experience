@@ -49,7 +49,6 @@ If you selected a value other than the default, it is listed as a condition on t
         cluster-node-config-cluster-setup
 
 
-**Parent topic:**[Create a cluster](../config/cw_create_cluster.md)
 
 **Related information**  
 

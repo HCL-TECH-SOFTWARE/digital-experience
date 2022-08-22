@@ -47,5 +47,3 @@ On one side of the evaluation, the possible choices are the profiles that are de
 
 **Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
 
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
-

@@ -51,5 +51,4 @@ webContentService.getRepository().endWorkspace();
 
 **Note:** You use the `setCurrentDocumentLibrary` method to make calls library-specific. If not specified, the default library that has been configured in the WCM WCMConfigService service is used.
 
-**Parent topic:**[The HCL Web Content Manager API](../wcm/wcm_dev_api.md)
 

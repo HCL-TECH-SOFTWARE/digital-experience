@@ -13,5 +13,4 @@ View the steps required to configure HCL Digital Experience for SSL client certi
 4.  [Cryptographic hardware for SSL acceleration](../security/sec_pw_crypt.md)  
 If your portal environment makes extensive use of SSL, you might choose to use cryptographic hardware to offload encryption and improve performance. HCL Portal tolerates interfacing through WebSphere® Application Server with cryptographic hardware for SSL acceleration. However, the tasks that are involved in setting up and configuring cryptographic hardware are specific to web servers or WebSphere® Application Server and do not necessarily involve configuring HCL Portal.
 
-**Parent topic:**[Securing](../security/securing_wp.md)
 

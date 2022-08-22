@@ -7,7 +7,6 @@ Both social rendering and the DDC framework use the same caches to cache bean li
 -   **[Digital Data Connector caches](../social/plrf_caches.md)**  
 The Digital Data Connector \(DDC\) for HCL Portal framework provides the caches that are listed here.
 
-**Parent topic:**[Digital Data Connector \(DDC\) for HCL Portal](../social/plrf_ovu.md)
 
 **Related information**  
 

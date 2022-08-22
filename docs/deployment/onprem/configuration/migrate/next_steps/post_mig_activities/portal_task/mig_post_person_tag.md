@@ -31,7 +31,6 @@ You might find errors that are captured in the systemOut.log file if the migrate
 6.  Delete this page.
 
 
-**Parent topic:**[Portal tasks](../migrate/mig_post_portaltasks.md)
 
 **Related information**  
 

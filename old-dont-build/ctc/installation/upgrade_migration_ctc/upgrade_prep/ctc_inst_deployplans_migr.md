@@ -54,7 +54,6 @@ Designs that have been copied from the CTC Design Library and customized may req
 
     -   Index Filter Form
 
-**Parent topic:**[Upgrade preparation](../ctc/ctc-upgrade-prepare.md)
 
 **Related information**  
 

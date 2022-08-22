@@ -59,5 +59,4 @@ The following list describes creation contexts that you can create by using the 
     Use this creation context to define the parent ID, and optionally, the domain for the portlet entity that you want to create. This applies to the resource type `PortletEntity` on the `PortletModelController`.
 
 
-**Parent topic:**[Creating resources](../dev/ctrlrapit_crt_rsrc.md)
 

@@ -69,5 +69,4 @@ Use the POC Servlet with the POC URI to access content as follows: POC URI:http:
 
 POC URI to address a forum topic: http://server:port/wps/poc?uri=connections:forums/atom/topic?topicUuid=da99c49f-d2d0-47d9-9f18-1f32cf9e108c&type=topic&service=forums&commID=9425353dfea-484c-1234-1f2f7d51e517&forumUuid=6864a28b-dfea-484c-9fd8-1f2f7d51e517
 
-**Parent topic:**[Addressing HCL Connections content from a portlet](../connect/c_connections_portlets_poc_ovr.md)
 

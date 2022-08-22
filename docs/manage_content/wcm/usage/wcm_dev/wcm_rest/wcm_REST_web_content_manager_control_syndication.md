@@ -230,5 +230,4 @@ Note that on a Virtual Portal, the “!ut/p/digest” portion of the DX URL must
 
 So, in the example URLs above, the "!ut/p/digest!...." portion of the DX URL is NOT included. This implies that this URL is issued in the "main" or primary VP of the DX Portal. A 302 redirect will take place and the "!ut/p/digest!" will be inserted in the final URL. This portion of the URL can also be used for the VP URL request.
 
-**Parent topic:**[REST service for Web Content Manager](../wcm/wcm_rest.md)
 

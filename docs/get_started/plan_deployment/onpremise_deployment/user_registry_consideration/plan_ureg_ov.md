@@ -40,5 +40,4 @@ After you use your federated repository, you might need to manage your user regi
 |Updating the federated database user registry|Choose this option to update certain parameters such as the data source name, database URL, and database type to fix issues with your database user registry.|
 |Create a realm|Choose this option to create a realm, which is a group of users from one or more user registries that form a coherent group within HCL Portal. Realms allow flexible user management with various configuration options. A realm must be mapped to a Virtual Portal to allow the defined users to log in to the Virtual Portal. In a federated repository, you can create multiple realms.|
 
-**Parent topic:**[User registry considerations](../plan/plan_ureg.md)
 

@@ -17,5 +17,4 @@ Attributes:
     Returns: String value of the metadata; it can be null if not found.
 
 
-**Parent topic:**[Common beans](../dev-theme/themeopt_el_bean_common.md)
 

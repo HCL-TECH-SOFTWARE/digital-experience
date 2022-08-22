@@ -11,5 +11,4 @@ With the Portal Scripting Interface, you can create scripts to automate the mana
 -   **[REST API and content associations](../admin-system/mp_wcm_contentmap_restapi.md)**  
 If you are creating or extending an application and want to manage content associations with that application, you can use portal remote APIs. These APIs retrieve a list of content associations and then create, update, or delete associations.
 
-**Parent topic:**[Advanced administrative examples](../wcm/wcm_delivery_advanced.md)
 

@@ -150,7 +150,6 @@ The resource tag includes attributes that are specific for the property: propert
 8.  Stop and restart the appropriate servers to propagate the changes.
 
 
-**Parent topic:**[Adding more attributes to VMM](../install/manage_atts.md)
 
 **Previous topic:**[Querying the defined attributes](../install/man_attributes.md)
 

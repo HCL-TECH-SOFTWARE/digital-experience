@@ -8,5 +8,3 @@ For jsps within a WAR, the current session object is the HTTP session.
 
 **Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
 
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
-

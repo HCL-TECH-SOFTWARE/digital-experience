@@ -60,5 +60,4 @@ You must prepare your system before you uninstall your HCL Digital Experience en
 -   **[AIX: Uninstalling HCL Digital Experience](../install/uninst_portal-AIX.md)**  
 If you have a complete and functional uninstallation program, you can uninstall HCL Digital Experience only or both HCL Digital Experience and IBM WebSphere Application Server.
 
-**Parent topic:**[Uninstalling the Digital Experience software](../install/uninstall.md)
 

@@ -96,5 +96,4 @@ You can map your web application bridge to allow anonymous users to log on and a
     6.  Copy the profile that you created to the /profiles directory.
     7.  Invalidate the resource aggregator cache to integrate your changes. Click the **Administration menu** icon in the toolbar. Then, click **Theme Analyzer** \> **Utilities** \> **Control Center** \> **Invalidate cache**. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](../dev-theme/themeopt_an_util.md#).
 
-**Parent topic:**[Integrating with web applications](../admin-system/wab.md)
 

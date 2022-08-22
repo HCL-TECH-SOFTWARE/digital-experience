@@ -45,5 +45,4 @@ The Social Media Publisher is used to post status updates about your content to 
 
 -   Publishing content directly to a Facebook page requires a Secured Page tab URL to be provided. This means that your server must be SSL enabled.
 
-**Parent topic:**[Social Media Publisher](../wcm/wcm_sm.md)
 

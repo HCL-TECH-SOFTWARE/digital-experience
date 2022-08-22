@@ -16,5 +16,4 @@ Complete the following steps to delete a profile.
 3.  Delete the profile directory because it contains files that the manageprofiles command cannot delete, such as extraneous log files.
 
 
-**Parent topic:**[Supporting multiple profiles](../install/sup_mult_prof.md)
 

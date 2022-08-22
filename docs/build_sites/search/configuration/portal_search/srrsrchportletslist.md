@@ -70,7 +70,6 @@ For more details about the Search Center portlet, refer to the following informa
 -   For more information about how to work with the Search Center, refer to the portlet help.
 -   For hints about using the Search Center for remote search on web sites with different languages, refer to Hints and tips for using Portal Search.
 
-**Parent topic:**[HCL Digital Experience Portal Search](../admin-system/admsrch.md)
 
 **Related information**  
 

@@ -13,5 +13,4 @@ Manual steps from the Configuration Wizard are included in HCL Digital Experienc
 4.  Use the SQL SELECT query that is created after you run the CHECK DATA commands to confirm that all of the CHECK PENDING states are resolved.
 
 
-**Parent topic:**[Manual Steps: Database Transfer option in the Configuration Wizard](../eua-workflows/kc-db-parent.md)
 

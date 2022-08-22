@@ -81,5 +81,4 @@ Replace occurrences of your\* in italics with the actual names of your items.
 5.  Restart your portal server.
 
 
-**Parent topic:**[Configuring the portal theme and modules](../dev-theme/themeopt_cust_config.md)
 

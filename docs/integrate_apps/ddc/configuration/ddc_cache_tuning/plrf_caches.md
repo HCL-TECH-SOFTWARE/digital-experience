@@ -27,7 +27,6 @@ Both social rendering and the DDC framework use the following caches to cache be
 
 You configure the caches through the WP Cache Manager Service resource environment provider in the WebSphere® Integrated Solutions Console. For more information, read the *Portal service configuration* and *Setting service configuration properties*.
 
-**Parent topic:**[Digital Data Connector cache tuning](../social/plrf_cach_tune.md)
 
 **Related information**  
 

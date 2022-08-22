@@ -28,11 +28,9 @@ Use this topic to understand how to define a personalized list of new articles f
 6.  For each rule executed, Personalization retrieves the user's profile and evaluates the rule to select the content which meets the conditions of the rule. The rules engine will invoke the resource engine as necessary to retrieve content pieces.
 7.  The content is returned to the web page, and displays for the user.
 
-**Parent topic:**[Digital Experience Personalization](../pzn/pzn_overview.md)
 
 **Next topic:**[Personalization terms](../pzn/pzn_concepts.md)
 
-**Parent topic:**[Digital Experience Personalization](../pzn/pzn_overview.md)
 
 **Next topic:**[Personalization terms](../pzn/pzn_concepts.md)
 

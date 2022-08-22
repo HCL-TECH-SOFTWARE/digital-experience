@@ -72,5 +72,4 @@ $Portlet droppref $piid  MYKEY
 
 Dependent on the standard that the portlet complies with, there are differences in the handling of portlet preferences. You can set multiple preference values on a preference key with standard portlets, while IBM portlets support only single values on each portlet preference key.
 
-**Parent topic:**[Portlet repository](../admin-system/ptlt_rep.md)
 

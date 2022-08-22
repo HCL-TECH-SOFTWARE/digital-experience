@@ -27,5 +27,4 @@ You can increase levels of navigation by adding a fourth level of navigation.
 4.  If you are in development mode, restart the web application for your theme. Otherwise, restart the portal server.
 
 
-**Parent topic:**[Customizing navigation](../dev-theme/themeopt_cust_nav.md)
 

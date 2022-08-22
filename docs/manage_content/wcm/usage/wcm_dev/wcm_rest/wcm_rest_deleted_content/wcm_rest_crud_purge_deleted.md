@@ -66,5 +66,4 @@ This API allows for the permanent removal of deleted content items.
     ```
 
 
-**Parent topic:**[How to Use REST to Work with Deleted Content Items](../wcm/wcm_rest_crud_purge_delete.md)
 

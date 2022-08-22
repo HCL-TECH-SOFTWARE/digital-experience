@@ -21,5 +21,4 @@ To update a Script Application instance that was added to a portal page from the
 5.  For use with an unsecured development server, you can add an entry for `portalPassword` to avoid being prompted each time that you push an update. Do not store a password for any secure server, because the configuration file is stored as clear text on the file system.
 
 
-**Parent topic:**[Build applications with the Script Application](../script-portlet/build_apps.md)
 

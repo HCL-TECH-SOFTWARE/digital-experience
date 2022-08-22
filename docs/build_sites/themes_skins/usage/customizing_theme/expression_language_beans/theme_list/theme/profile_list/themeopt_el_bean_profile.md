@@ -75,5 +75,4 @@ Attributes:
     Returns: The URI of this profile as a string.
 
 
-**Parent topic:**[ProfileList](../dev-theme/themeopt_el_bean_profilelist.md)
 

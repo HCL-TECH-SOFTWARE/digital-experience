@@ -15,5 +15,4 @@ After the service or collection is defined, you can optionally define search sco
     This view enables you to mix and match various services and content sources and to define the granularity of the search scope.
 
 
-**Parent topic:**[Configuring search integration](../connect/connections_portlets_search_overview.md)
 

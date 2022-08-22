@@ -41,5 +41,4 @@ Attributes:
     Returns: objectID; it can be null if the string is invalid or the object is not found.
 
 
-**Parent topic:**[Expression language beans for accessing programming models](../dev-theme/themeopt_el_bean.md)
 

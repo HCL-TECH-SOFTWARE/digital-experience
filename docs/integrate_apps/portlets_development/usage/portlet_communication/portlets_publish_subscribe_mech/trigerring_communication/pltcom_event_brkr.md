@@ -12,7 +12,6 @@ How messages are distributed between portlets is determined by portlet wires tha
 
 The wiring step is separate from portlet development and deployment. This allows independent development of source and target portlets, as long as both portlets use common data types and semantics for information exchange. Portlets can operate stand-alone, and, as partner portlets for the communication are added by editing pages, they can exchange information and react in a coordinated manner, and thereby improve the user experience. Conversely, as portlets are removed, the remaining portlets still work correctly.
 
-**Parent topic:**[Triggering communication](../dev-portlet/pltcom_pubsub_msg_based.md)
 
 ## Action/event and render phases
 

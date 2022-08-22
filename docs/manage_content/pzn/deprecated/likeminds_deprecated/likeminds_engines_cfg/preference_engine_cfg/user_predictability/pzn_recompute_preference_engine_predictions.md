@@ -14,5 +14,3 @@ Use this setting with caution, as selecting mentors is a relatively expensive op
 
 **Parent topic:**[User predictability \| LikeMinds engine](../pzn/pzn_user_predictablity_main.md)
 
-**Parent topic:**[User predictability \| LikeMinds engine](../pzn/pzn_user_predictablity_main.md)
-

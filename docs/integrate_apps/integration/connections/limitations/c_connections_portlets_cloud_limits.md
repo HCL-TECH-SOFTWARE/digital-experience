@@ -15,5 +15,4 @@ The following are known limitations and restrictions when using the portlets in 
 -   Users must be logged int to access portlet content. External visitors \(guests\) are not supported.
 -   The Activity Stream portlet is not supported on the Connections Cloud.
 
-**Parent topic:**[Configure HCL Connections on Cloud](../connect/connections_portlets_overview_cc.md)
 

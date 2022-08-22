@@ -23,5 +23,4 @@ Use the WP8.5\_iim.remotesearch installation package to install remote search se
     -   Additional installation and configuration of remote DCS is no longer required with HCL Portal Version 8.5.
     -   Installing remote search service by using Installation Manager will create a new WebSphere Application Server profile for remote search service.
 
-**Parent topic:**[Remote search service](../admin-system/srcusgrmtsrchsrv.md)
 

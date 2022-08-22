@@ -49,5 +49,4 @@ Images that are used in slideshows need to be updated to take advantage of the w
 
 ![Example slideshow image widths](../images/slideshow_widths.jpg)
 
-**Parent topic:**[Upgrade preparation](../ctc/ctc-upgrade-prepare.md)
 

@@ -116,7 +116,6 @@ For virtual portals examples of entry URLs to all portal pages are as follows:
 
 For details about virtual portals and how to create them by host name or URL context refer to the topic about Multiple virtual portals and its subtopics.
 
-**Parent topic:**[Using WebDAV to manage pages and static content](../admin-system/webdav_static.md)
 
 **Related information**  
 

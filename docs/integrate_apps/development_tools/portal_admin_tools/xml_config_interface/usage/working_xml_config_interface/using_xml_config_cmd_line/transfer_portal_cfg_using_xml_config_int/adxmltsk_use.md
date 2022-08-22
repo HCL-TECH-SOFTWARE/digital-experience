@@ -42,7 +42,6 @@ For transferring complete portal configurations, HCL Digital Experience provides
 -   **[Exporting and transferring parts of a portal configuration](../admin-system/adxmltsk_xfer_partl_cfg.md)**  
 You can also export partial configurations.
 
-**Parent topic:**[Using the XML configuration command line client](../admin-system/adxmltsk_cmdln.md)
 
 **Related information**  
 

@@ -179,5 +179,4 @@ Set up a password grant flow to resources that are protected by the Liberty OAut
     -   The variables portal\_user and portal\_pwd are for the portal credentials that you want to use.
     -   The variable `www.myremotesite.com:9443` is for the host name and port of the liberty server.
 
-**Parent topic:**[Configure OAuth 2.0 for Password Credentials Grant flows](../dev-portlet/Oauth2.0_password_credentials.md)
 

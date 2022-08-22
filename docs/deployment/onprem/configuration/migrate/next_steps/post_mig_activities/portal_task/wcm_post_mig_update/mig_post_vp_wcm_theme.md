@@ -40,5 +40,4 @@ Before using Web Content Manager in virtual portals that are created after migra
     7.  Click **OK**.
 
 
-**Parent topic:**[Web Content Manager](../wcm/wcm_migration_post_update.md)
 

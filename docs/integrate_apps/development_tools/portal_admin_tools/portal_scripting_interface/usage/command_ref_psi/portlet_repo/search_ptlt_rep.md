@@ -41,5 +41,4 @@ $Portlet find portlet nameis "NewsPortlet" select
 
 ```
 
-**Parent topic:**[Portlet repository](../admin-system/ptlt_rep.md)
 

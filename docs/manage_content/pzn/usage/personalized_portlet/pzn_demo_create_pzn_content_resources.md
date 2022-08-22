@@ -57,13 +57,11 @@ You can now see the new JAVA classes in your project:
 
 You can now see the new JAVA classes in your project, and create the Personalization user resource classes and content spot.
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Create the JSP file in Rational Application Developer](../pzn/pzn_demo_create_jsp_rad.md)
 
 **Next topic:**[Creating the Personalization user resource classes and content spot](../pzn/pzn_demo_create_pzn_user_resources.md)
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Create the JSP file in Rational Application Developer](../pzn/pzn_demo_create_jsp_rad.md)
 

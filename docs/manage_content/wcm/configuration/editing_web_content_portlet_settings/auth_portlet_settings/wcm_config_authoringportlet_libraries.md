@@ -38,5 +38,4 @@ You can select libraries specifically for the "insert links" and "insert images"
 
 If you syndicate or import a library, it is not automatically added to the list of configured libraries for an authoring portlet on the target server. You must add the syndicated or imported library to each authoring portlet on each server.
 
-**Parent topic:**[Authoring portlet settings](../panel_help/wcm_config_authoringportlet.md)
 

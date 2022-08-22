@@ -6,7 +6,6 @@ If you are using standard portal pages, you must convert your pages to static pa
 
 For more information about preparing and optimizing your applications and themes for migration, read the planning section of the product documentation. Also, see the following related links for information about developing themes and skins, troubleshooting modular themes, working with layouts, and converting standard portal pages to static pages by using the HCL Digital Experience Page Migration Tool.
 
-**Parent topic:**[What to expect after you complete migration](../migrate/mig_plan_expectations.md)
 
 **Related information**  
 

@@ -9,5 +9,4 @@ To address this case, the portal remote REST service for PUMA allows you to spec
 
 The virtual portal information is represented by two additional path elements `/vp/virtul\_portal\_url\_mapping` that follow the URL path element `/um` or, respectively, the `/um/secure` path element. When no particular virtual portal is specified, the implementation uses the default virtual portal. For example, if the portal installation defines a virtual portal with the URL mapping `sales` for the user realm SalesPersons, the URL `/wps/um/secure/vp/sales/users/profiles` returns the references to all user profiles in the SalesPersons user realm.
 
-**Parent topic:**[How the portal implements the remote PUMA REST service](../dev/uprof_rest_wpspec.md)
 

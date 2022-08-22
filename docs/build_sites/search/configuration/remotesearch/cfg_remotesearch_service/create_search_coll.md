@@ -43,7 +43,6 @@ Before you can begin using remote search service, you must create two new search
 
 Manually create new content sources for the Portal search collection.
 
-**Parent topic:**[Configuring a remote search service](../admin-system/srtcfgrmtsrchsrv.md)
 
 **Previous topic:**[Creating a new search service](../admin-system/create_search_service.md)
 

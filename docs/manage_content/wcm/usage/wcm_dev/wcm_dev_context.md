@@ -39,5 +39,4 @@ The `WCMPageContextService` provides the following two methods:
 
 Both methods return the document ID of the current context or default content. If necessary, you can use method `getPathById` of the HCL Web Content Manager workspace to transform the ID to the corresponding content path. For more information, read the API documentation.
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 

@@ -9,5 +9,4 @@ This section provides the steps on how to manage content items using the HCL Con
 -   **[Delete a content item | HCL Content Composer](../usage/delete_content_items)**  
 This section provides the steps on how to delete a content item using the HCL Content Composer.
 
-**Parent topic:**[Common tasks | HCL Content Composer](../content_composer/configuration/)
 

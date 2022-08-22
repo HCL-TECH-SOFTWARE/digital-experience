@@ -21,5 +21,4 @@ $Content urlget ID markup
 $Content urlget node\_ID wml
 ```
 
-**Parent topic:**[Content hierarchy accessed through Content bean](../admin-system/contnt_hierarchy.md)
 

@@ -129,7 +129,6 @@ The `spHelper` provides the functions and variables that are related to a specif
         `{Promise}` A promise that resolves to `{preferenceData: Object}` on success and `{error: Error}` on error. The `preferenceData` is the same data that was passed into this function. The errorText is a string that contains the information about the Error. For example, the error "ERR0001:Preference data is not available in this context" results when the code is run in the preview view or the dependency on the `'wp_client_ext'` is missing.
 
 
-**Parent topic:**[Build applications with the Script Application](../script-portlet/build_apps.md)
 
 **Related information**  
 

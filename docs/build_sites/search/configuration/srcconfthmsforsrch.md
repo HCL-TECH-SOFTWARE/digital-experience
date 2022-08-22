@@ -9,7 +9,6 @@ The code for including the search box in a theme is located in the file [PortalS
 -   Copy the contents of the file into your custom theme files.
 -   Copy the file into your theme and include it directly.
 
-**Parent topic:**[Search](../wcm/wcm_dev_search.md)
 
 **Previous topic:**[Enabling anonymous users to search public pages of your portal](../admin-system/srtusgsrchbrwanonpgs.md)
 

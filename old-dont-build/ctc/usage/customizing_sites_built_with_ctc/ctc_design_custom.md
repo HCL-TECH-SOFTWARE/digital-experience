@@ -33,5 +33,4 @@ The pages support printing through a print stylesheet that removes extraneous th
 -   **[Tagging and rating for Content Template](../ctc/ctc_arch_tagging.md)**  
 The HCL Digital Experience tagging and rating services are included in many of the Content Template Catalog templates. The services have only been modified with some style overrides to make them fit properly within the Content Template design.
 
-**Parent topic:**[Content Template Catalog 4.4](../ctc/ctc_intro.md)
 

@@ -4,7 +4,6 @@ This configuration task deletes configuration settings for an outbound HTTP conn
 
 The task deletes the outbound HTTP connection configuration settings as specified in an XML document. You specify the settings that you want to delete in the XML document. The task tries to remove all items that are defined in the XML document. If an item contains dependent data that is not explicitly listed in this document, then the configuration setting is not deleted. The syntax of the configuration task differs, depending on whether you want to delete the settings for the global configuration or for an application-scoped configuration.
 
-**Parent topic:**[Configuring outbound HTTP connections by using configuration tasks](../dev-portlet/outbhttp_cfg_tasks.md)
 
 # Deleting global outbound HTTP connection settings
 

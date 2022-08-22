@@ -15,5 +15,4 @@ Modify the dynamic resource references so that you can link to the static resour
 -   **[Deploying and registering your theme](../dev-theme/themeopt_themedev_manual_deployregister.md)**  
 After you copy your static and dynamic theme resources and modify your dynamic resource references, you are ready to deploy and register your theme on the server.
 
-**Parent topic:**[Manually creating a copy of your theme](../dev-theme/themeopt_cust_copytheme.md)
 

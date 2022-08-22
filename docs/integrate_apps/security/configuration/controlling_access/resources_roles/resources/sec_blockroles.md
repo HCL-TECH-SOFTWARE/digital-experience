@@ -52,5 +52,4 @@ All roles, including Administrator and Security Administrator, are automatically
 
 For example, HCL Portal controls access to the Market News page. IBM® Security Access Manager controls access to the USA Market News page. This scenario is one in which an externalized resource, the USA Market News page, has an internal parent resource, the Market News page. In this scenario, the USA Market News Page, the child, does not inherit roles from the Market News Page, the parent. For this reason, if a user named Mary has the Editor role on the Market News Page \(Editor@Market News Page\), she does not automatically get the Editor role on the USA Market News page \(Editor@USA Market News Page\).
 
-**Parent topic:**[Resources](../security/sec_resources.md)
 

@@ -25,5 +25,3 @@ In the previous example, the category bean logs the news category by querying th
 
 **Parent topic:**[Category beans](../pzn/pzn_category_beans.md)
 
-**Parent topic:**[Category beans](../pzn/pzn_category_beans.md)
-

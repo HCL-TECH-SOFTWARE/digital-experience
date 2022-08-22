@@ -160,5 +160,4 @@ window['ga-disable-GA_MEASUREMENT_ID']  = true
 
 See [Disable Google Analytics measurement](https://developers.google.com/analytics/devguides/collection/gtagjs/user-opt-out) for additional information.
 
-**Parent topic:**[Analyzing digital site activity](../install/analyzing_digital_site_activity.md)
 

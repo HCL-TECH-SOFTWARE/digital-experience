@@ -93,13 +93,11 @@ Before you begin this procedure, ensure that you created a content spot.
 
 You can now modify the resource collection properties for Pzn\_Offers\_User.
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Enhance the Personalized Portlet](../pzn/pzn_demo_enhance_personalized_portlet.md)
 
 **Next topic:**[Modify resource collection properties](../pzn/pzn_demo_modify_resource_collection_properties.md)
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Enhance the Personalized Portlet](../pzn/pzn_demo_enhance_personalized_portlet.md)
 

@@ -35,7 +35,6 @@ Here is an example XML definition for importing a predeployed portlet applicatio
 
 ```
 
-**Parent topic:**[Managing portlets in your cluster](../admin-system/manage_portlets.md)
 
 **Related information**  
 

@@ -152,5 +152,4 @@ Depending on the conditions that you select, values that you enter for some typi
 
 | |
 
-**Parent topic:**[DB2 z/OS: Database transfer](../config/cw_db_transfer.md)
 

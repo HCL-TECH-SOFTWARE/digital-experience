@@ -11,5 +11,4 @@ Perform these steps to view the members of a user group:
     All members of the group are listed.
 
 
-**Parent topic:**[Users and groups](../admin-system/adusrgrp.md)
 

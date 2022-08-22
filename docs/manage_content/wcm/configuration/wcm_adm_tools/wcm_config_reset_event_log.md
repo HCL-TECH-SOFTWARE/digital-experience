@@ -41,7 +41,6 @@ You must reset the web content event log under these circumstances:
     **Note:** When you run this task on a virtual portal, you must add either `-DVirtualPortalHostName`=name or `-DVirtualPortalContext=virtual\_portal\_context` to the command.
 
 
-**Parent topic:**[Web content administration tools](../wcm/wcm_maintain.md)
 
 **Related information**  
 

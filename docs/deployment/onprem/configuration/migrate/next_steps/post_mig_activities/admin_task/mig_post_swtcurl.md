@@ -27,5 +27,4 @@ If you migrated from Version 8.0.0.1, the default portal behavior was to log you
 12. If you are using a stand-alone environment, restart the server. If you are using a cluster environment, synchronize the nodes, and then restart the servers.
 
 
-**Parent topic:**[Administrative tasks](../migrate/mig_post_admintasks.md)
 

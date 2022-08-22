@@ -15,5 +15,3 @@ You can use the following configuration parameters to control, or at least balan
 
 **Parent topic:**[Configuring the Preference engine](../pzn/pzn_configure_preference_engine.md)
 
-**Parent topic:**[Configuring the Preference engine](../pzn/pzn_configure_preference_engine.md)
-

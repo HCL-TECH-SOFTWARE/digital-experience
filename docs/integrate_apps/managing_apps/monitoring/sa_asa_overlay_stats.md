@@ -77,7 +77,6 @@ Users with the appropriate access rights can use Active Site Analytics to view g
 6.  [Customizing overlay reports](../admin-system/sa_asa_overlay_custom.md)  
 You can customize your own overlay reports by setting specific parameters as required. Learn about the parameters and the levels at which you can specify them.
 
-**Parent topic:**[Analyzing user behavior by Active Site Analytics](../admin-system/sa_asa_work.md)
 
 **Related information**  
 

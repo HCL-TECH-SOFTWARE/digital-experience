@@ -6,5 +6,3 @@ To generate recommendations for items that no mentors have rated, the Preference
 
 **Parent topic:**[Configuring the Preference engine](../pzn/pzn_configure_preference_engine.md)
 
-**Parent topic:**[Configuring the Preference engine](../pzn/pzn_configure_preference_engine.md)
-

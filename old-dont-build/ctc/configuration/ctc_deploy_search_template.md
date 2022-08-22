@@ -28,7 +28,5 @@ For websites that allow anonymous users to view the site, you need to configure 
 13. Return to the DefaultSearchCollection resource and click **Apply**.
 
 
-**Parent topic:**[First-time installation of Content Template](../ctc/ctc_inst_overview.md)
-
 **Parent topic:**[Post upgrade steps](../ctc/ctc-upgrade-post.md)
 

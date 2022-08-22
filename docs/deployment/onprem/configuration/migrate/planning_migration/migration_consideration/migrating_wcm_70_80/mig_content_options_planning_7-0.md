@@ -31,5 +31,4 @@ In addition to continuous content updates, many organizations plan to restructur
 
 Recent items and favorites are not preserved during migration. Lists of favorite items will need to be recreated post-migration. Users should make note of any favorite items prior to migration.
 
-**Parent topic:**[Migrating from Web Content Manager version 7.0 or 8.0](../migrate/mig_content_from_7-0.md)
 

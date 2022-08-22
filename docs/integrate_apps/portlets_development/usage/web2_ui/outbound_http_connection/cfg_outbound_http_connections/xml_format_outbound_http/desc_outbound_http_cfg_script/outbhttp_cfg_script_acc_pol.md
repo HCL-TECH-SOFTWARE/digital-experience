@@ -79,5 +79,4 @@ A `policy` setting can have the subsettings that are shown in the following list
     ```
 
 
-**Parent topic:**[Description of the outbound HTTP connection configuration script](../dev-portlet/outbhttp_cfg_descript.md)
 

@@ -55,7 +55,6 @@ Learn about vanity URLs, how they work, and how you work with them.
 -   **[Administering vanity URLs](../wcm/van_url_admin_ref.md)**  
 HCL Digital Experience provides some configuration tasks. You can use these tasks to administer vanity URL support. You can also configure your IBM HTTP Server so that you can use short vanity URLs.
 
-**Parent topic:**[Setting up a website](../site/site_setup.md)
 
 **Related information**  
 

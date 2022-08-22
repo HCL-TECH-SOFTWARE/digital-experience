@@ -26,7 +26,6 @@ For information about the XML syntax elements for a secure HTTPS connection see 
 |
 |-out|The name of the result file that contains the XML output. This file gives a result status and thereby indicates whether the XML request was performed successfully, or what errors might have occurred. In the case of an XML export, this file contains the exported configuration. You can later use this file to re-import the exported configuration.|
 
-**Parent topic:**[Basic XML command line syntax](../admin-system/adxmltsk_cmdln_basic_syntax.md)
 
 **Related information**  
 

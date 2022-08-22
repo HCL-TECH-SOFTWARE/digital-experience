@@ -32,7 +32,6 @@ When you add the sample content, the following artifacts are created:
 3.  The sample web content template items include tagging and rating components. These components are functionally available from the web content libraries that are provided with the blogs and wikis feature of the portal. If you intend to use tagging and rating with the templating sample content, you must ensure that the blogs and wikis libraries are installed. For details on installing these libraries, see *Blogs and wikis* in the migration section of the documentation.
 
 
-**Parent topic:**[Add-ons, features, and third-party integration tasks](../migrate/mig_post_ptl_int_addon.md)
 
 **Related information**  
 

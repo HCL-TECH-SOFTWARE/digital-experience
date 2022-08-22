@@ -21,7 +21,6 @@ HCL Web Content Manager includes sample content such as web content template pag
 -   **[Enabling inline editing for content items](../wcm/wcm_dev_inline_tags.md)**  
 You can enable inline editing for content item fields in your site design.
 
-**Parent topic:**[Web content inline editing strategies](../wcm/wcm_cms_in-line_system.md)
 
 **Related information**  
 

@@ -6,5 +6,3 @@ The LogManager queues log events as they are received. In order to protect liste
 
 **Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
 
-**Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
-

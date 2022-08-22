@@ -55,5 +55,4 @@ The Solution Installer uses the following two methods to check for dependencies:
     When you install a PAA file, the Solution Installer reads the assembly name and version from the assembly level sdd.xml file. The Solution Installer then looks for the matching information in the blacklist.txt file. If the Solution Installer finds a match in the blacklist.txt file, the PAA file is not installed.
 
 
-**Parent topic:**[Developing basic PAA file applications](../config/dev_sol_app.md)
 

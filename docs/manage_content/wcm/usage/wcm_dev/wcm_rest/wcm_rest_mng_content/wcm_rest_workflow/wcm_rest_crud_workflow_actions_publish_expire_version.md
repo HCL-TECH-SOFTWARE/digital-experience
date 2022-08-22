@@ -260,5 +260,4 @@ HTTP/1.1 DELETE /wps/mycontenthandler/wcmrest/PublishAction/7b40f5b6-bf52-4b9e-8
 HTTP/1.1 200 OK
 ```
 
-**Parent topic:**[How to use REST with workflow actions](../wcm/wcm_rest_crud_workflow_actions.md)
 

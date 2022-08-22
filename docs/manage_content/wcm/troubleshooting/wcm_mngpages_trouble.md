@@ -51,7 +51,6 @@ To do the resynchronization, run the `create-page-nodes` configuration task, as 
 
 **Important:** This task also removes any draft pages that are not found in the Portal Site library.
 
-**Parent topic:**[Pages](../site/pages_overview.md)
 
 **Related information**  
 

@@ -93,7 +93,6 @@ Vietnamese is used as an example language in the following steps.
 8.  Restart your portal to pick up the new language and module contribution.
 
 
-**Parent topic:**[Adding resource bundles for a new language](../admin-system/adsuplang_add_rsrc_bndl.md)
 
 **Related information**  
 

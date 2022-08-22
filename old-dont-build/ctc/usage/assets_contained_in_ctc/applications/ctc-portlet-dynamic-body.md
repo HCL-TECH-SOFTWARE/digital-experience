@@ -13,5 +13,4 @@ This portlet is used to display the title, summary, and body of the current cont
 3.  Click **Create** \> **Applications** and search for dynamic.
 4.  Drag the **Dynamic Body** portlet to the page and save the page.
 
-**Parent topic:**[Applications](../ctc/ctc-portlet-types-ctc.md)
 

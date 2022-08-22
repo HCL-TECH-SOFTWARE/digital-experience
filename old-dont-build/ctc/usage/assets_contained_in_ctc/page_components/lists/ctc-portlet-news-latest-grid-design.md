@@ -2,7 +2,6 @@
 
 Displays a list of the most recent news items, based on content items that are created by using the News content template.
 
-**Parent topic:**[Lists](../ctc/ctc-portlet-types-lists.md)
 
 # Usage
 

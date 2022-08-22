@@ -31,5 +31,4 @@ This example is in application/atom+xml format:
 </entry>
 ```
 
-**Parent topic:**[How to manage web content items by using REST](../wcm/wcm_rest_crud.md)
 

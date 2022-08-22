@@ -18,7 +18,6 @@ The Search and Tag Center profile is a hidden profile. Therefore, you must set t
     2.  Set the resourceaggregation.profile parameter to profiles/profile\_search\_tag.json.
 
 
-**Parent topic:**[Portal tasks](../migrate/mig_post_portaltasks.md)
 
 **Related information**  
 

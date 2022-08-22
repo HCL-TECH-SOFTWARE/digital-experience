@@ -9,7 +9,6 @@ The following cross-references are used in this glossary:
 
 [A](#initialA) [B](#initialB) [C](#initialC) [D](#initialD) [E](#initialE) [F](#initialF) [G](#initialG) [H](#initialH) [I](#initialI) [J](#initialJ) [L](#initialL)[M](#initialM)[N](#initialN)[O](#initialO)[P](#initialP)[R](#initialR)[S](#initialS)[T](#initialT)[U](#initialU)[V](#initialV)[W](#initialW)
 
-**Parent topic:**[HCL Digital Experience 9.5 Product Documentation](../welcome/wp95_welcome.md)
 
 # A
 

@@ -23,5 +23,3 @@ The Item Affinity Engine generates recommendations based on any transactional hi
 
 **Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
 
-**Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
-

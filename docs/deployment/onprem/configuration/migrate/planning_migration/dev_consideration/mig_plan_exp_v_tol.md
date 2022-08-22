@@ -13,7 +13,6 @@ The goal of the migration process is to carry over the portal site and all of it
     The enhancement of the source environment portal site to take advantage of the new functionality that is made available in the new version of HCL Digital Experience. There are many new features inVersion 8.5 and since the goal is to replicate the original site during migration, none of the features are enabled by default during the migration process. They will need to be enabled by following the instructions in the "Enabling new features" section of the product documentation.
 
 
-**Parent topic:**[Development considerations](../migrate/mig_plan_devconsiderations.md)
 
 **Related information**  
 

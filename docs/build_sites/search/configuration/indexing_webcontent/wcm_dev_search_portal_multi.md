@@ -12,7 +12,6 @@ For example, if you work in French and Italian languages in your Web Content Man
 
 For more information about searching multilingual sites, go to Crawling a multilingual portal site in the related links.
 
-**Parent topic:**[Indexing web content](../wcm/wcm_dev_search_portal.md)
 
 **Related information**  
 

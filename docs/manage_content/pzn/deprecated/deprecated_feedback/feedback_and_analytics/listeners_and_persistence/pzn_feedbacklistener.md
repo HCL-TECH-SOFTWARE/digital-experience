@@ -8,8 +8,6 @@ An instance of the FeedbackListener is active on all run-time servers whenever l
 
 **Parent topic:**[Listeners and persistence](../pzn/pzn_log_listeners.md)
 
-**Parent topic:**[Listeners and persistence](../pzn/pzn_log_listeners.md)
-
 **Related information**  
 
 

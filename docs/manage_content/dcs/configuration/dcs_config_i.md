@@ -23,5 +23,4 @@ Configure the Document Conversion Services to perform document conversions on IB
 9.  Restart WebSphere Application Server.
 
 
-**Parent topic:**[Configure Document Conversion Services](../admin-system/dcs_prereq.md)
 

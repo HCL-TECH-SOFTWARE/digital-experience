@@ -38,5 +38,4 @@ sites
     **Deleting site areas:** To delete site areas delete the corresponding folder. Parent site areas containing site areas or content items cannot be deleted until you have also first deleted the child items. To delete child content items before deleting a site area, you must use the authoring portlet rather than WebDAV.
 
 
-**Parent topic:**[WebDAV](../wcm/wcm_webdav_overview.md)
 

@@ -17,5 +17,3 @@ The RuleInfo class is a wrapper class for a rule name and campaign name tuple.
 
 **Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
 
-**Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
-

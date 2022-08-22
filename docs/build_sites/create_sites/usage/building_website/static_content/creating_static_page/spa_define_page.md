@@ -64,5 +64,4 @@ You can provide navigation for your static pages by using either the portal them
 -   **[Portlets for adding dynamic elements to static pages](../dev/spa_portlets.md)**  
 If you want to add dynamic elements such as portal navigation to your static pages, you can use portlets that the portal provides.
 
-**Parent topic:**[Static content](../site/site_static_content.md)
 

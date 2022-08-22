@@ -18,7 +18,6 @@ There are other considerations to keep in mind around the user IDs and passwords
 
 For the z/OS operating system, the new version of HCL Portal \(target\) must be on the same server as the earlier version \(source\). Migration to a different \(remote\) server is not supported.
 
-**Parent topic:**[Setting up the target environment](../migrate/setting_up_the_target_environment.md)
 
 **Related information**  
 

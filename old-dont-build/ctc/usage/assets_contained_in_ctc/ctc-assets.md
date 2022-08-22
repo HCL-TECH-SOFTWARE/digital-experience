@@ -29,5 +29,4 @@ These plug-ins are used with Content Template.
 -   **[Content Template Catalog themes and styles](../ctc/ctc_arch_css.md)**  
 The main styles that are used in Content Template Catalog are used for themes, portlet content, and printed documents. Modify the theme and layout styles to change the layout of Content Template designs. Modify the general content styles and component styles to change the design of individual components.
 
-**Parent topic:**[Content Template Catalog 4.4](../ctc/ctc_intro.md)
 

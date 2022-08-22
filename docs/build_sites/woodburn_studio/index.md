@@ -33,5 +33,4 @@ This document helps to filter navigator component results and use the Woodburn S
 -   **[Update of Woodburn pages optional](../woodburn_studio/update_pages_optional.md)**  
 
 
-**Parent topic:**[HCL Digital Experience 9.5 Product Documentation](../welcome/wp95_welcome.md)
 

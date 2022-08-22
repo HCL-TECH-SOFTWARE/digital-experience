@@ -48,5 +48,4 @@ There are multiple ways in which authoring templates can be set up in a multilin
 
 To preview content to see how it will look in a specific locale or language, including the appropriate encoding, preview the content from within the appropriate library.
 
-**Parent topic:**[How to use the HCL Web Content Manager Multilingual Solution](../wcm/wcm_mls_using.md)
 

@@ -113,7 +113,6 @@ The following list shows the set of list-rendering profile entry keys that are a
     Use this key to define a derived profile. A derived profile includes the item attribute, list property declarations, and XML namespace mappings of other list-rendering profiles by referencing these profiles. For more information, read *Creating list-rendering profiles*.
 
 
-**Parent topic:**[Syntax for XPath based list-rendering profiles](../social/plrf_lr_syntax4xpath_profl.md)
 
 **Related information**  
 

@@ -21,7 +21,6 @@ Updates occurring on the remote content management system might not immediately 
 
 The user-specific document list cache is explicitly invalidated each time the user logs in, so that the most current list of available document identifiers is available upon login.
 
-**Parent topic:**[Setting up support for federated documents](../wcm/wcm_dev_feddocs_setup.md)
 
 **Related information**  
 

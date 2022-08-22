@@ -49,5 +49,3 @@ Choose the appropriate option to create, set up, and enable logging of the Feedb
 
 **Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
 
-**Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
-

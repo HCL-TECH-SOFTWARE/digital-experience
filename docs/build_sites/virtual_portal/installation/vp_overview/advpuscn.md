@@ -9,7 +9,6 @@ Besides virtual portals, another possible configuration may be an alternative fo
 -   **[Usage scenarios for virtual portals](../admin-system/advpuscn_usage.md)**  
 Learn about three typical usage scenarios for virtual portals.
 
-**Parent topic:**[Virtual portals](../admin-system/ad_vp.md)
 
 **Related information**  
 

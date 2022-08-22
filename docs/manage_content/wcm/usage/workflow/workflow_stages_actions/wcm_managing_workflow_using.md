@@ -23,5 +23,4 @@ If an item is participating in a workflow, the creator is given manager access t
 |
 |**Administrator**|If you are assigned the administrator role to a library, you automatically inherit all administration access down to the item-level. It cannot be turned off.|If you are assigned the administrator role to a library, you automatically inherit all administration access down to the item-level. It cannot be turned off.|
 
-**Parent topic:**[Workflow stages and actions](../wcm/wcm_dev_workflows_overview.md)
 

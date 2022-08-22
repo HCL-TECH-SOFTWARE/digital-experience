@@ -371,5 +371,3 @@ The following tables are included in the Feedback schema, however, the tables ar
 
 **Parent topic:**[Feedback database schema](../pzn/pzn_feedback_db_schema.md)
 
-**Parent topic:**[Feedback database schema](../pzn/pzn_feedback_db_schema.md)
-

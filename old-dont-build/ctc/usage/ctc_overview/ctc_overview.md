@@ -25,5 +25,4 @@ New features for Content Template Catalog 4.1 include additional page templates,
 -   **[New features in Content Template 4.0](../ctc/ctc_whatsnew.md)**  
 New features for Content Template Catalog 4 take advantage of enhancements in HCL Digital Experience version 8.0.0.1 and also integrate with Site Builder.
 
-**Parent topic:**[Content Template Catalog 4.4](../ctc/ctc_intro.md)
 

@@ -38,5 +38,4 @@ These steps add the new layout to the site toolbar.
 4.  Reload the page to view the layouts in the **Page** \> **Layout** tab of the site toolbar.
 
 
-**Parent topic:**[Layouts](../dev-theme/themeopt_cust_layout.md)
 

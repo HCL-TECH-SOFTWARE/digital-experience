@@ -45,5 +45,4 @@ The ReleaseBuilder command file is in the wp\_profile\_root/PortalServer/bin dir
         Use this option to help you debug any errors that occur.
 
 
-**Parent topic:**[Updates using ReleaseBuilder](../deploy/dep_up_rb.md)
 

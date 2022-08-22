@@ -6,7 +6,6 @@ A wire connects a JSR 286 publishing event or an output property of a cooperativ
 
 Creating wires is a part of page administration and requires appropriate access permissions. It is separated from the portlet development or deployment process, so that the portlet developer does not need to know the actual structure of inter-portlet communication. Communicating portlets can be developed independent of each other, as long as they agree on the same data type and semantics for data exchange. Wires between portlets are usually created by using the portlet wiring tool. It is available as a tab in the Edit Page user interface.
 
-**Parent topic:**[Communication with persistent wires](../dev-portlet/pltcom_pubsub_perstwire.md)
 
 ## Creating wires
 

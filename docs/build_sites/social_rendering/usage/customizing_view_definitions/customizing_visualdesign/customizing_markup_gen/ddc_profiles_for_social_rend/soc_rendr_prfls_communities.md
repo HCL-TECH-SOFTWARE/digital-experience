@@ -374,7 +374,6 @@ In addition to these attributes, the community members profile also provides acc
     If the list that represents a search result is truncated, this list property returns the string `true`. Otherwise, it returns `false`.
 
 
-**Parent topic:**[Digital Data Connector profiles for social rendering](../social/soc_rendr_lst_rndr_prfls.md)
 
 **Related information**  
 

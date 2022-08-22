@@ -97,7 +97,6 @@ To delete the orphaned data, proceed by the following steps. For each step, use 
 
 You removed all orphaned data from your portal database.
 
-**Parent topic:**[Configuring portal behavior](../admin-system/adptlcfg.md)
 
 **Related information**  
 

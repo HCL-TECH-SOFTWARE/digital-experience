@@ -17,5 +17,4 @@ You will use HTML to define the layout of a presentation template in the same wa
 -   **[Page style](../wcm/wcm_dev_pres-temp_examples_style.md)**  
 You use HTML to define the default properties of a presentation template in the same way you use HTML to define the default properties of a web page.
 
-**Parent topic:**[Creating reusable assets](../site/site_assets.md)
 

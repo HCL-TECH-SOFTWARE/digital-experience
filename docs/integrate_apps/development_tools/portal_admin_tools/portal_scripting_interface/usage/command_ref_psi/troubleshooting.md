@@ -9,5 +9,4 @@ The following solutions help solve the troubleshooting issues.
 -   No method that is named "xxx" is found - typographical error or capitalization in method name, check bean help
 -   No method that is named "xxx" with y arguments is found - wrong syntax, check bean help
 
-**Parent topic:**[Command reference for the Portal Scripting Interface](../admin-system/adpsicrf.md)
 

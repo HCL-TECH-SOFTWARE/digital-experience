@@ -7,5 +7,4 @@ Scoping is typically used to filter the tag cloud or ratings overview according 
 -   **[Synchronizing scopes for web content](../wcm/wcm_tagrate_syncscope.md)**  
 When users are tagging or rating web content, the web content viewer provides the tagging or rating information to the portal, where it is stored. If information in the web content system changes, this change can cause the tagging and rating information that is stored in the portal to be out of sync. This issue can happen, for example, if content items are moved or category information changes. To ensure that the tagging and rating information is current, synchronize the scopes that are used for web content. You can set up automatic synchronization according to different conditions or run a manual synchronization as needed.
 
-**Parent topic:**[HCL Web Content Manager](../wcm/wcm_install_cfg.md)
 

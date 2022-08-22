@@ -88,7 +88,6 @@ Use the same method call to remove the currently mapped presentation template fr
 authoringTemplate.getItemProperties().removeRenderMode("YAML");
 ```
 
-**Parent topic:**[Delivering web content](../wcm/wcm_cms_delivery_system.md)
 
 **Related information**  
 

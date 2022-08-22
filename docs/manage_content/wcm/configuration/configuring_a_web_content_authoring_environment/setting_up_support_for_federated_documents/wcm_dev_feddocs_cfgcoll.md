@@ -43,7 +43,6 @@ Because the federated documents feature uses the AJAX proxy component to access 
 8.  Save your changes, and restart the portal server.
 
 
-**Parent topic:**[Setting up support for federated documents](../wcm/wcm_dev_feddocs_setup.md)
 
 **Related information**  
 

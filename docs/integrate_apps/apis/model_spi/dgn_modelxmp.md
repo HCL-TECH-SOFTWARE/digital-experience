@@ -165,5 +165,4 @@ private void printLayoutNode(final PrintWriter writer, final LayoutModel model,
 
 ```
 
-**Parent topic:**[Model SPI overview](../dev/dgn_modelovw.md)
 

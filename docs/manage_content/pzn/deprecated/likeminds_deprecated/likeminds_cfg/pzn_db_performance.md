@@ -11,5 +11,3 @@ How you configure your database during installation has a significant impact on 
 
 **Parent topic:**[Configuring LikeMinds](../pzn/pzn_configure_likemind_servers.md)
 
-**Parent topic:**[Configuring LikeMinds](../pzn/pzn_configure_likemind_servers.md)
-

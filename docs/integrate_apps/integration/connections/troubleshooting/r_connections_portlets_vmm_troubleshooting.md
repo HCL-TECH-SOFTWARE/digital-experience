@@ -80,5 +80,3 @@ If the Virtual Member Manager is not working, for example, if community groups a
 
 **Parent topic:**[Configuring the HCL Connections repository for VMM](../connect/t_connections_portlets_VMM_repository_config.md)
 
-**Parent topic:**[Configuring the HCL Connections repository for VMM](../connect/t_connections_portlets_VMM_repository_config.md)
-

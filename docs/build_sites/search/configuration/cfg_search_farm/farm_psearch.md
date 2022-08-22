@@ -26,5 +26,4 @@ To support Search in a portal farm, you must install and configure a remote sear
 1.  You must configure the default location for search collections to a directory on the remote server that has write access.
 2.  The portal site default search collection is created the first time when an administrator selects the Manage Search portlet. If this occurred before you configure the remote search portlet, the default portal site search collection is only available on the primary farm instance. However, it is not available on the remote server. In this case, you must re-create the portal site collection to make it available for search on all instances of the farm.
 
-**Parent topic:**[Configuring search in a portal farm](../install/config_search_farm.md)
 

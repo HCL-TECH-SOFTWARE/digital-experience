@@ -89,8 +89,6 @@ To remove the Site Builder application from the HCL Digital Experience Portal se
     6.  Click **Delete** on the Delete Documents page.
 
 
-**Parent topic:**[Deploying Site Builder](../sitebuilder/sitebuilder_access.md)
-
 **Parent topic:**[Installing and removing Site Builder](../sitebuilder/sitebuilder_inst_overview.md)
 
 **Related information**  

@@ -41,7 +41,6 @@ In the Search Collections panel you can select the following option icons and do
     -   **Refresh** the list of content sources and the status that is shown for this collection.
     -   **Work with the content sources of the collection**.
 
-**Parent topic:**[Setting up search collections](../admin-system/srcmgsrcont.md)
 
 **Related information**  
 

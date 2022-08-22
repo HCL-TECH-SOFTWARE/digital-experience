@@ -22,5 +22,4 @@ When you delete a page that was created using a CTC page template, the content a
 
 Sections, topics, and offerings cannot be deleted from within a CTC site, since they constitute site areas rather than single pieces of content. They can be deleted by going to **Applications** \> **Content** \> **Web Content Management** and deleting the corresponding site area.
 
-**Parent topic:**[Content Template overview](../ctc/ctc_overview.md)
 

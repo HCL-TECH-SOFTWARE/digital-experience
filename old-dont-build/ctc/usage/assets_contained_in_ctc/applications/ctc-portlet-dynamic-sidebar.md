@@ -15,5 +15,4 @@ The Dynamic Sidebar portlet has a context processor that is associated with it t
 3.  Click **Create** \> **Applications** and search for dynamic.
 4.  Drag the **Dynamic Sidebar** portlet to the page and save the page.
 
-**Parent topic:**[Applications](../ctc/ctc-portlet-types-ctc.md)
 

@@ -47,7 +47,6 @@ You can build custom queries for social data by constructing corresponding query
     For more information, read *Setting the list-rendering context*.
 
 
-**Parent topic:**[Extending social lists by using the digital data connector](../social/soc_rendr_xtnd_sl_by_plrf.md)
 
 **Related information**  
 

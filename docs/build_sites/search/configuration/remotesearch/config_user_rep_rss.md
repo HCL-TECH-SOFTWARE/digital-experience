@@ -8,5 +8,4 @@ Follow the WebSphere® Application Server product documentation *Configuring Lig
 
 After configuring user repositories on the remote search server, you must enable single-sign on \(SSO\) between HCL Portal and the remote search server. For details about how to do this step, refer to *Creating a single-sign on domain between HCL Portal and the remote search service*.
 
-**Parent topic:**[Remote search service](../admin-system/srcusgrmtsrchsrv.md)
 

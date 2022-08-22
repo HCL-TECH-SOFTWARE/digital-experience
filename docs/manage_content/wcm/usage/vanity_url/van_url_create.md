@@ -19,7 +19,6 @@ To create, update, and delete a vanity URL for a specific page, the user must ha
     3.  To complete the creation of the vanity URL, follow the guidance that is given by the user interface.
 
 
-**Parent topic:**[Vanity URLs](../wcm/vanity_urls.md)
 
 **Related information**  
 

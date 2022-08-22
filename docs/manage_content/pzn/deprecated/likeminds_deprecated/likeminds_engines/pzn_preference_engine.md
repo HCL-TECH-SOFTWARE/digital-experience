@@ -14,5 +14,3 @@ The shipped with the LikeMinds Recommendation Engine presents a typical implemen
 
 **Parent topic:**[The LikeMinds Recommendation Engines](../pzn/pzn_likeminds_recommendation_engines_3.md)
 
-**Parent topic:**[The LikeMinds Recommendation Engines](../pzn/pzn_likeminds_recommendation_engines_3.md)
-

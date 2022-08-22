@@ -24,5 +24,3 @@ To specify whether the buildvisit utility should repeat an item in the visit lis
 
 **Parent topic:**[Configuring the LikeMinds engines](../pzn/pzn_configure_likeminds_engines.md)
 
-**Parent topic:**[Configuring the LikeMinds engines](../pzn/pzn_configure_likeminds_engines.md)
-

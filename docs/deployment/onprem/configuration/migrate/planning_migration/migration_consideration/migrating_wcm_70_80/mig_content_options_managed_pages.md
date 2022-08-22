@@ -17,5 +17,4 @@ The Portal Site Library stores page-related web content items. The Portal Site L
 
 When managed pages are disabled, web content is shared between all virtual portals. However, when managed pages are enabled, each virtual portal has its own unique and isolated workspace for web content. Before the migrated web content can be accessed from a virtual portal with managed pages, it must be syndicated from the base portal. Syndication between virtual portals is no different from syndication between stand-alone servers.
 
-**Parent topic:**[Migrating from Web Content Manager version 7.0 or 8.0](../migrate/mig_content_from_7-0.md)
 

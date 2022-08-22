@@ -63,8 +63,6 @@ When you migrate to 8.5, HCL Digital Experience automatically migrates the follo
 
 **Note:** You cannot upgrade the source portal with a fix pack after migration if you intend to remigrate the JCR. For example, if your source portal is Version 7.0.0.1 and you migrate it to 8.5, you cannot then upgrade the source portal to Version 7.0.0.2 and remigrate the JCR. This path is not supported.
 
-**Parent topic:**[HCL Digital Experience 9.5 Product Documentation](../welcome/wp95_welcome.md)
-
 **Parent topic:**[Planning for migration](../plan/mig_plan.md)
 
 **Related information**  

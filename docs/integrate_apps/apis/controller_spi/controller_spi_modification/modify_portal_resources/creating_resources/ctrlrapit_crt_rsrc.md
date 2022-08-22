@@ -73,5 +73,4 @@ final ModifiableContentPage modifiableContentPage = (ModifiableContentPage)
 -   **[Obtaining creation contexts](../dev/ctrlrapit_crt_cntxt.md)**  
 You need a creation context to define immutable properties of a resource that you create. You can use the creation context builder factory to generate multiple such creation contexts without having to implement those interfaces directly.
 
-**Parent topic:**[Modifying portal resources and topologies](../dev/ctrlrapit_mdfy_restop.md)
 

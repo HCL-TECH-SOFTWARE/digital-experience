@@ -38,5 +38,4 @@ Tool components are used to create tools that can be added to web pages for user
 -   [page navigation component](wcm_dev_elements_page-navigation.md)
 -   [search component](../admin-system/search_compnt_hrchy.md)
 
-**Parent topic:**[Creating reusable assets](../site/site_assets.md)
 

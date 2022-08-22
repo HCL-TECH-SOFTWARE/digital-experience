@@ -66,5 +66,4 @@ The IBM Installation Manager is used to install installation packages such as HC
     After you complete all necessary steps, verify that your installation was successful.
 
 
-**Parent topic:**[AIX system - HCL Digital Experience installation](../install/installingwp95-AIX.md)
 

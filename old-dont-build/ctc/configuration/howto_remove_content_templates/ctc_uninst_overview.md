@@ -13,7 +13,6 @@ Uninstallation does not delete the Content Template Catalog libraries automatica
 -   **[Deleting pages and page templates created when using Content Template Catalog](../ctc/ctc_uninst_pages.md)**  
 The uninstall process deletes the page templates, portlets, and demo pages added by Content Template Catalog, but does not delete any pages and page templates you created yourself.
 
-**Parent topic:**[Content Template Catalog 4.4](../ctc/ctc_intro.md)
 
 **Related information**  
 

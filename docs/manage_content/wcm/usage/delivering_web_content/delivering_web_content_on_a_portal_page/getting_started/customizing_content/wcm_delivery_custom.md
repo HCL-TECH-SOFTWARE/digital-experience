@@ -23,5 +23,4 @@ Search engine optimization \(SEO\) focuses on improving the visibility of a page
 -   **[Improving page loading performance with asynchronous web content rendering](../wcm/wcm_config_asynch_wcm_rendr.md)**  
 You can increase page loading performance by separating portal page content delivery from web content rendering. To do so, you use the asynchronous web content rendering feature. If you enable asynchronous web content rendering, the portal serves the page immediately, but only with placeholder content. The Web Content Viewer then dynamically inserts the configured content into the portal page after the content has been completely rendered.
 
-**Parent topic:**[Delivering web content on a portal page](../wcm/wcm_config_delivery_portal.md)
 

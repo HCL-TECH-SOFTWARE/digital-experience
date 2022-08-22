@@ -25,7 +25,6 @@ Periodically run an automated backup procedure for the HCL Portal file system, d
 -   **[Restoring files, databases, and the LDAP server\(s\)](../admin-system/i_wadm_t_restr_winlinux.md)**  
 When necessary, restore the HCL Digital Experience file system, databases, and LDAP server or servers that you backed up.
 
-**Parent topic:**[Digital Experience on non-containerized platforms](../containerization/dx_non_container.md)
 
 **Related information**  
 

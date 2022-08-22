@@ -25,5 +25,4 @@ If you use an LDAP user registry, you must adapt the LDAP bind user ID.
 -   **[Changing database passwords that are used by HCL Portal](../config/db_passwords.md)**  
 If database passwords are modified or expired, you must specify the new passwords on the IBM WebSphere Application Server and on the IBM DB2 Universal Database Enterprise Server Edition server so that HCL Portal can access them.
 
-**Parent topic:**[Securing](../security/securing_wp.md)
 

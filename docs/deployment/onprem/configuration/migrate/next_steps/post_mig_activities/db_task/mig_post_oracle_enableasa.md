@@ -21,7 +21,6 @@ To ensure that you enabled the "Auto Space Advisor" task, you can check whether 
 SQL> select status from dba_autotask_client where client_name = 'auto space advisor';
 ```
 
-**Parent topic:**[Database tasks](../migrate/mig_post_dbtasks.md)
 
 **Related information**  
 

@@ -80,7 +80,6 @@ View the general properties for tagging and rating.
     Use this property to specify the maximum value that a rating can have. The default is `5`.
 
 
-**Parent topic:**[CP Configuration Service for tagging and rating](../admin-system/srvcfg_cpcfg4tr.md)
 
 **Related information**  
 

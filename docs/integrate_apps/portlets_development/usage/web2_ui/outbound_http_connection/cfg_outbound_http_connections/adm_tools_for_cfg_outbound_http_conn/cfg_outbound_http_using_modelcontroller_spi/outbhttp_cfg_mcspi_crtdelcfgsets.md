@@ -25,7 +25,6 @@ ctrl.delete(rule);
 ctrl.commit(); // Apply the changes.
 ```
 
-**Parent topic:**[Configuring outbound HTTP connections by using the Model Controller SPI](../dev-portlet/outbhttp_cfg_mcspi.md)
 
 **Previous topic:**[Modifying configuration settings of the outbound HTTP connection](../dev-portlet/outbhttp_cfg_mcspi_modfcfgsets.md)
 

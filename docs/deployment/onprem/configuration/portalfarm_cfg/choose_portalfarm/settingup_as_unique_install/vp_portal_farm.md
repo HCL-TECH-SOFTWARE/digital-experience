@@ -34,5 +34,4 @@ Perform the following steps to set up a virtual portal in a portal farm:
     |IBM i|xmlaccess.sh -in virtualportal\_output.xml -user wpsadmin -password wpsadminpwd -url http://hostname:port/wps/config/virtualportalContext -out Output.xml|
 
 
-**Parent topic:**[Setting up farm instances as unique installations](../install/set_portal_farm.md)
 

@@ -37,5 +37,4 @@ The information in these files is basic instruction. Before you change your syst
         ./rollbackCF.sh -DWasPassword=password -DPortalAdminPwd=password
 
 
-**Parent topic:**[Managing your HCL Portal environment](../install/iim_manage_wp.md)
 

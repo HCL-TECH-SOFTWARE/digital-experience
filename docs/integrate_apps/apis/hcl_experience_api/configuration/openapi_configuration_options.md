@@ -24,5 +24,4 @@ Nevertheless, the following configuration parameters always have to be changed:
 -   `PORTAL_HOST`, `PORTAL_PORT` should be changed to HCL Digital Experience hostname and port number.
 -   If the HCL Experience API is accessed from a web application \(e.g. Sample Content UI application\), `CORS_ORIGIN` should point to the URL where the web application is accessible.
 
-**Parent topic:**[HCL Experience API](../open_api/openapi_overview.md)
 

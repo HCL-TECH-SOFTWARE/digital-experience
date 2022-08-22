@@ -28,5 +28,4 @@ This page includes the following portlets:
     -   The content that is displayed in the list is formatted by using this list presentation: CTC Design/List Presentation Components/Landing Carousel List Design without Summary \(6 Results per page\)
     -   The CSS class of contentCarousel alternate is applied to the container DIV.
 
-**Parent topic:**[Page Templates](../ctc/ctc-assets-page-templates.md)
 

@@ -13,5 +13,4 @@ A copy of the production content libraries would be installed in test environmen
 -   **[Multilingual design content](../ctc/ctc_deploy_dev_mls.md)**  
 To support multiple languages for the users of your website, it is necessary to use the Multilingual Solution. This solution requires separate CTC Content libraries for each language in your site.
 
-**Parent topic:**[How to deploy sites built with Content Template](../ctc/ctc_deploy_overview.md)
 

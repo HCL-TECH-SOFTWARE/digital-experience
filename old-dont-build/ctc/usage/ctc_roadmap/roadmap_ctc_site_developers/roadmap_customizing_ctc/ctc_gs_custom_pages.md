@@ -4,7 +4,6 @@ Start by creating pages that display the type of content you want to add to your
 
 ![This diagram shows an overview of the process of creating pages and then turning them into page templates.](../images/ctc_gs_custom_new_pages.jpg)
 
-**Parent topic:**[A roadmap for customizing Content Template](../ctc/ctc_gs_custom.md)
 
 **Next topic:**[Creating new Web templates](../ctc/ctc_gs_custom_templates.md)
 

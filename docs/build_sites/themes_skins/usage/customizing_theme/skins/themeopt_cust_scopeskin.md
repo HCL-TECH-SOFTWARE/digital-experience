@@ -9,7 +9,6 @@ You can create global or theme-based skins to customize a theme. A successful ap
 -   **[Default skins](../dev-theme/themeopt_cust_skindefault.md)**  
 The default theme includes these skins that can be used as a basis for creating custom skins: Hidden, Standard, and NoSkin.
 
-**Parent topic:**[Customizing the theme](../dev-theme/themeopt_cust.md)
 
 **Related information**  
 

@@ -2,7 +2,6 @@
 
 Displays a set of featured upcoming events in a slideshow. By default, any items that are created by using the Event content template are displayed in this portlet.
 
-**Parent topic:**[Slideshows](../ctc/ctc-portlet-types-slideshows.md)
 
 # Usage
 

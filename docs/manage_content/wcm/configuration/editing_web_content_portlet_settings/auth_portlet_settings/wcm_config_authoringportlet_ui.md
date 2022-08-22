@@ -65,5 +65,4 @@ You use the User Interface Options section to define the user interface options 
         This mode displays both lists of items plus a navigational tree as you browse a library.
 
 
-**Parent topic:**[Authoring portlet settings](../panel_help/wcm_config_authoringportlet.md)
 

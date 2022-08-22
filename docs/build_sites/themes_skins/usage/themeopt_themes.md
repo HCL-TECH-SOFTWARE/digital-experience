@@ -23,7 +23,6 @@ Responsive Web Design provides content parity between mobile devices and desktop
 -   **[Directory structure](../reference/wpsdirstr.md)**  
 The topic shows the naming conventions that are used to denote the location of files on the servers and the types of resources you can find in those directories.
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 
 **Related information**  
 

@@ -38,5 +38,4 @@ As in the external case, you can enforce a permissions refresh by performing a l
 
 **Note:** Under z/OS®, modify the CacheManagerService.properties file. Then open a UNIX System Services \(USS\) command prompt or a Telnet client, and run the ./ConfigEngine.sh update-properties -DWasPassword=password task, from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory, to make the changes effective.
 
-**Parent topic:**[Controlling access](../admin-system/control_access.md)
 

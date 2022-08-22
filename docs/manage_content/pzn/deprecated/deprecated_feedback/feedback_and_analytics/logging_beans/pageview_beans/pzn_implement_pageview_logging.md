@@ -15,5 +15,3 @@ Following is an example of implementing PageView logging:
 
 **Parent topic:**[PageView beans](../pzn/pzn_pageview_beans.md)
 
-**Parent topic:**[PageView beans](../pzn/pzn_pageview_beans.md)
-

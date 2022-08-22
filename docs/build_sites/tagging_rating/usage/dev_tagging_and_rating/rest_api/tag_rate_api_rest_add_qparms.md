@@ -187,7 +187,6 @@ tm:name:tag\_name&locale=de&locale=en
 
 This returns a feed that contains all tags that match the name `tag\_name` in the locale `de` or `en`.
 
-**Parent topic:**[The REST API](../admin-system/tag_rate_api_rest.md)
 
 **Related information**  
 

@@ -28,7 +28,6 @@ Before you decide on a portal installation with multiple virtual portals, you ne
     If all your virtual portals can use the same user population, you can configure federated security with a single realm. This realm can contain users and groups from one or more repositories.
 
 
-**Parent topic:**[Deciding about virtual portals](../admin-system/advpuscn.md)
 
 **Related information**  
 

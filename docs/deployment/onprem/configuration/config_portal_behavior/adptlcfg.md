@@ -45,7 +45,6 @@ You use the SLCheckerTool to delete orphaned data in the database.
 -   **[Setting service configuration properties](../admin-system/adsetcfg.md)**  
 HCL Digital Experience comprises a framework of services to accommodate the different scenarios that portals need to address. Services are available for both HCL Portal and HCL Web Content Manager. You can configure some of these services.
 
-**Parent topic:**[HCL Portal](../config/config_portal.md)
 
 **Related information**  
 

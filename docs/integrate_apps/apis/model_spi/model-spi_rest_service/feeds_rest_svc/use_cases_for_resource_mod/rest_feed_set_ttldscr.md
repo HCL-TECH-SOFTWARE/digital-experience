@@ -61,5 +61,4 @@ Example - Feed to modify titles and description for a content node
 
 ```
 
-**Parent topic:**[Use cases for modifying resources](../dev/rest_feed_mod_resrc.md)
 

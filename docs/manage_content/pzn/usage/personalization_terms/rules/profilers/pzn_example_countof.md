@@ -21,5 +21,3 @@ Green when number of items matching (Shopper.shoppingCart.color is green) is gre
 
 **Parent topic:**[Profilers](../pzn/pzn_profilers.md)
 
-**Parent topic:**[Profilers](../pzn/pzn_profilers.md)
-

@@ -6,5 +6,3 @@ The `sifter` must be running whenever the LikeMinds server is running. However, 
 
 **Parent topic:**[Using the LikeMinds utilities](../pzn/pzn_using_likeminds_utilities.md)
 
-**Parent topic:**[Using the LikeMinds utilities](../pzn/pzn_using_likeminds_utilities.md)
-

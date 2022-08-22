@@ -22,5 +22,4 @@ You can specify custom icons for content items that are displayed in the web con
 8.  The preview image is used instead of the standard content item icon within the web content authoring interface and within the Site Manager.
 
 
-**Parent topic:**[Creating custom icons for the Page Components palette and Web content authoring interface \| HCL Web Content Manager](../admin-system/epc_custom_images.md)
 

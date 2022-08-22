@@ -47,5 +47,4 @@ You can run the Configuration Wizard silently if you have multiple deployments o
     -   If you resume the silent installation after an error, the task runs the failed step.
     -   If you resume after you complete a manual step, the task runs the next step in the sequence.
 
-**Parent topic:**[Configuration Wizard](../config/cw_overview.md)
 

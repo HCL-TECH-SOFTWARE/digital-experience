@@ -8,5 +8,4 @@ When you copy a portlet application, give the copy a new name. The portlet data 
 
 Only portlets in the copied portlet application are in the new portlet application. For instance, if the copied portlet application contains four portlets and the original contains five portlets, only the four portlets are copied to the new portlet application.
 
-**Parent topic:**[Managing portlets, portlet applications, and iWidgets](../admin-system/adpltadmwork.md)
 

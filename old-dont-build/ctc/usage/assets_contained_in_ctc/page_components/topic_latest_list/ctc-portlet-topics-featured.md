@@ -2,7 +2,6 @@
 
 Displays a set of featured topics in a slideshow. By default, any items that are created by using the Topic content template are displayed in this portlet.
 
-**Parent topic:**[Slideshows](../ctc/ctc-portlet-types-slideshows.md)
 
 # Usage
 

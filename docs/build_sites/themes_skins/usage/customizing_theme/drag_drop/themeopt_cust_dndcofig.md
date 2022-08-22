@@ -31,5 +31,4 @@ A theme developer can customize the drop zones either by editing the default\_ed
 
 Firefox currently does not support automatic scrolling during a drag-and-drop operation. There are plug-ins available to add this support to Firefox.
 
-**Parent topic:**[Drag-and-drop](../dev-theme/themeopt_cust_dnd.md)
 

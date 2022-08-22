@@ -40,7 +40,6 @@ Learn how to enable Tag Cloud portlet support on your portal page. You can enabl
     4.  Save your changes and restart your portal server.
 
 
-**Parent topic:**[Working with lists of social objects](../social/soc_rendr_tsk_socl_list.md)
 
 **Related information**  
 

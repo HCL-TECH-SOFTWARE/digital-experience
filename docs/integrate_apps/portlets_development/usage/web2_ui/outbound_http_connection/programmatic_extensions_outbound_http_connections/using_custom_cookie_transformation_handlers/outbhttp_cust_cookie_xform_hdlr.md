@@ -14,7 +14,6 @@ Application developers can implement a custom cookie transformation filter.
 -   **[Registering a custom cookie transformation filter](../dev-portlet/outbhttp_reg_cust_cookie_xform_fltr.md)**  
 For a custom cookie transformation filter to take effect, you must register it.
 
-**Parent topic:**[Using programmatic extensions for outbound HTTP connections](../dev-portlet/outbhttp_progr_xtns.md)
 
 **Related information**  
 

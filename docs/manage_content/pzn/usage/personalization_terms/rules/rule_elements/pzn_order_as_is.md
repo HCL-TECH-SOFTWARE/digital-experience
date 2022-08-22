@@ -6,5 +6,3 @@ By clicking the order as is link, you can also choose **order randomly** or **or
 
 **Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
 
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
-

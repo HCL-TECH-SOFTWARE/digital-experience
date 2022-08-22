@@ -253,7 +253,6 @@ This is some text to add to the component.
 
 ```
 
-**Parent topic:**[How to manage web content items by using REST](../wcm/wcm_rest_crud.md)
 
 **Related information**  
 

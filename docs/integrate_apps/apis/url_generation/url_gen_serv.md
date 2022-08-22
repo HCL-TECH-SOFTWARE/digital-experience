@@ -261,5 +261,4 @@ You can change the host name of absolute URLs for security reasons. For example,
     Use this header for setting the port of every generated absolute URL to the value of this request header.
 
 
-**Parent topic:**[URL generation by using the Navigational State SPI](../dev/nav_state_spi.md)
 

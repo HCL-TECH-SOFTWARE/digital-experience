@@ -34,5 +34,4 @@ Run the ConfigEngine batch or script file with the import-libs-to-vp parameter t
 
 **Note:** This task imports libraries for both Site Builder and the Script Application. If you have already run this task to import your Script Application libraries, you won't have to run this task again for Site Builder.
 
-**Parent topic:**[Deploying Site Builder](../sitebuilder/sitebuilder_access.md)
 

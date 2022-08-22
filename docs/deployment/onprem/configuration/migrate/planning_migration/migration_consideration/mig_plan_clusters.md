@@ -18,7 +18,6 @@ Complete the following steps on the primary node of Cluster A:
     Where authDomainList is set to a list of domains that use unique database user ID and passwords and those domain properties are set correctly in the wkplc\_comp.properties file, including user ID and password.
 
 
-**Parent topic:**[Migration considerations](../plan/mig_plan_high_availability.md)
 
 **Related information**  
 

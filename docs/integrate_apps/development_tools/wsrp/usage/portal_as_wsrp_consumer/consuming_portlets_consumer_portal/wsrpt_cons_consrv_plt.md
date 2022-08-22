@@ -8,5 +8,4 @@ For details about how to work with the portlet refer to the portlet help.
 
 For the relevant topics of the portlet help refer to the following links:
 
-**Parent topic:**[Consuming portlets in a Consumer portal](../admin-system/wsrpt_cons_prtlt.md)
 

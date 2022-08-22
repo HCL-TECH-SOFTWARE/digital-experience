@@ -20,5 +20,4 @@ However, if your application must connect to only a few external systems, for ex
 
 **Note:** The current servlet-based implementation of the proxy requires a corresponding servlet mapping for each defined `mapping` setting. You define the servlet mapping in the file web.xml. The servlet mapping maps all requests that address the specified context path to the proxy servlet. If you apply this rule to the previous examples, there must be a servlet mapping for either of the context paths "/ibmproducts" or "/proxy" that references the proxy servlet.
 
-**Parent topic:**[Description of the outbound HTTP connection configuration script](../dev-portlet/outbhttp_cfg_descript.md)
 

@@ -96,7 +96,6 @@ For examples of the different ways that you can use linking with Web Content Vie
 
 To display web content on a portal that does not include Web Content Manager, you can use the Web Content Viewer and the WSRP support in the portal. The Web Content Viewer can then retrieve and display content from a web content system on a different server.
 
-**Parent topic:**[Getting started with delivering web content on a portal page](../wcm/wcm_delivery_getstarted.md)
 
 **Related information**  
 

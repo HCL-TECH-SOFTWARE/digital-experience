@@ -321,5 +321,4 @@ HTTP/1.1 DELETE /wps/mycontenthandler/wcmrest/CustomWorkflowAction/abc4c24a-3540
 HTTP/1.1 200 OK
 ```
 
-**Parent topic:**[How to use REST with workflow actions](../wcm/wcm_rest_crud_workflow_actions.md)
 

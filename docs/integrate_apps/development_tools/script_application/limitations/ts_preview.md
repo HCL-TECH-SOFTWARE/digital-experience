@@ -73,7 +73,6 @@ Learn about limitations to the Script Application. The following solutions can h
     To resolve this issue, run the portal configuration engine task that imports the Web Content Manager libraries that CF09 installs to virtual portals that you create after you installed CF09. For more information, read *Installing the Script Application*.
 
 
-**Parent topic:**[The Script Application](../script-portlet/script_portlet.md)
 
 **Related information**  
 

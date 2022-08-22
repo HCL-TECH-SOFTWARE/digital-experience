@@ -48,5 +48,4 @@ http://localhost:10039/dx/api/remotemodel/v1/explorer/
     See the [Remote Model SPI REST Service](rest.md) Help Center topic for details on the body, headers, query parameters, response body, and other information.
 
 
-**Parent topic:**[Model SPI overview](../dev/dgn_modelovw.md)
 

@@ -68,7 +68,6 @@ A private page can be accessed only by its owner. Privileged Users \(users assig
 
 Users with role assignments on the resources `Page` or `URL Mapping` get the implicit permission to go to those resources. These users can go through all parent resources of those resources. Users see only the title of those resources. The corresponding resource content remains inaccessible unless those users have further role assignments that grant them normal access to those resources.
 
-**Parent topic:**[Resources, roles, access rights, and initial access control settings](../admin-system/resources_roles.md)
 
 **Related information**  
 

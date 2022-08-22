@@ -51,5 +51,4 @@ If entitlements for resources that are externalized on the source system are sta
 
 These errors can be resolved by manually updating the configuration file to have all resources that are managed internally. If role mappings for externalized resources are contained in the configuration file, entitlements are synchronized between the two systems.
 
-**Parent topic:**[Staging to production](../deploy/dep_intr.md)
 

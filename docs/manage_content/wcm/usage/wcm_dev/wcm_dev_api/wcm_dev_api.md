@@ -39,5 +39,4 @@ You can run various syndication functions by using the web content API.
 -   **[Web Content Manager Multilingual Solution API](../wcm/wcm_mls_api.md)**  
 This set of APIs allow you to retrieve information about the configured Multilingual Solution \(MLS\) libraries and also to retrieve the translated content items for a given default language content ID \(for example, from English content find translated French and Spanish strings\).
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 

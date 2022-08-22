@@ -21,5 +21,4 @@ The following high-level steps provide guidance for using the IBM Installation M
 3.  While on the **Features** screen, make sure that **Create a new Portal Server Profile** is not selected.
 4.  Proceed with the remaining instructions to complete the binary installation.
 
-**Parent topic:**[Setting up the target environment](../migrate/setting_up_the_target_environment.md)
 

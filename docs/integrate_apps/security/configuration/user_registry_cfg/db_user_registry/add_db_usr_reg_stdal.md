@@ -139,7 +139,6 @@ db2 "CREATE DB dbname using codeset UTF-8 territory us PAGESIZE 8192"
     -   IBM i: Run the `ConfigEngine.sh wp-query-repository -DWasPassword=password` task from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
     -   Windows: Run the `ConfigEngine.bat wp-query-repository -DWasPassword=password` task, from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory.
 
-**Parent topic:**[Adding a database user registry](../config/add_db_usr_reg.md)
 
 **Related information**  
 

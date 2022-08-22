@@ -28,5 +28,4 @@ The following code sample shows how you can retrieve and read the portlet prefer
 
 For the full description of the JavaScript interfaces refer to the public API documentation.
 
-**Parent topic:**[The client side portlet programming model](../dev-portlet/w2_clntprgmdl.md)
 

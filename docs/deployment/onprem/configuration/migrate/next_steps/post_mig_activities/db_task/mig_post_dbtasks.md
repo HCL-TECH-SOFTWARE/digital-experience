@@ -9,5 +9,4 @@ With the Version 8.5 release, a number of the settings have been changed to be m
 -   **[Oracle: Enabling the auto space advisor background task](../migrate/mig_post_oracle_enableasa.md)**  
 If you use an Oracle database, you must complete a post-migration task to enable the Oracle background task called "Auto Space Advisor" after your run the upgrade-profile task during migration using the Configuration Wizard.
 
-**Parent topic:**[Post-migration activities](../migrate/mig_t_post_mig.md)
 

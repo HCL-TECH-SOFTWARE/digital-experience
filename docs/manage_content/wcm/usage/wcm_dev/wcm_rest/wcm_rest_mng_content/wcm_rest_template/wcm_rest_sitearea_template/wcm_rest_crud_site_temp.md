@@ -214,5 +214,4 @@ You can update and read default site area values for site areas that are created
 -   **[How to set default properties for site area templates by using REST](../wcm/wcm_rest_crud_site_temp_props.md)**  
 You can update and read the default properties of site areas that are created by using a site area template.
 
-**Parent topic:**[How to use REST with authoring templates](../wcm/wcm_rest_crud_templates.md)
 

@@ -50,5 +50,4 @@ The following is an example of a microformat representation for a portlet contai
 
 ```
 
-**Parent topic:**[Creating a static page](../dev/spa_define_page.md)
 

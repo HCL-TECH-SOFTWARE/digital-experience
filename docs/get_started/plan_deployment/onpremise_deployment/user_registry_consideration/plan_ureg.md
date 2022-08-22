@@ -33,7 +33,6 @@ A realm is a collection of users or groups from one or more branches of your rep
 -   **[Property extension](../plan/plan_ladb.md)**  
 Use property extension to store extra user attributes into a database store without touching your backend user registry.
 
-**Parent topic:**[Planning to install HCL Digital Experience](../plan/plan_installation.md)
 
 **Related information**  
 

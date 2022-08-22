@@ -297,7 +297,6 @@ WebDAV file store supports the following HTTP methods:
     This method is used to move or rename resources or folders, that is WebDAV collections.
 
 
-**Parent topic:**[Using WebDAV with HCL Portal](../admin-system/webdav.md)
 
 **Related information**  
 

@@ -23,5 +23,4 @@ Searching for users or groups is a time consuming task. A search may time out or
 -   **[LDAP search filter expressions](../admin-system/rbug_ldapfltrxprns.md)**  
 The rules for rule-based user groups are based on the LDAP search filter syntax.
 
-**Parent topic:**[Configuring](../config/configuring_parent2.md)
 

@@ -23,5 +23,4 @@ The templating sample content that is provided with HCL Digital Experience is de
 4.  In the **Library Selection** section, add the `Template Page Content 3.0` and `Web Content Templates 3.0` libraries to the list of selected libraries.
 
 
-**Parent topic:**[Creating content with sample web content template items](../wcm/wcm_delivery_ctsamples_main.md)
 

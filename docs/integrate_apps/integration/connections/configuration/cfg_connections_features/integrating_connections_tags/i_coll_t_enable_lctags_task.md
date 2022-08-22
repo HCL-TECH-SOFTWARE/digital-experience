@@ -19,7 +19,6 @@ You can schedule the FederationTaskHandler to periodically retrieve \(import\) H
 
 During the import of the tags if you exceed the number of available connections, increase the value for the configuration parameter max-connections-per-host for the corresponding policy in the Ajax Proxy configuration file proxy-config.xml.
 
-**Parent topic:**[Integrating HCL Connections tags](../collab/i_coll_t_enable_lctags.md)
 
 **Related information**  
 

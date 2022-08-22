@@ -13,5 +13,4 @@ If you use the Portlet API Remote Web Content Viewer portlet in your source envi
 -   **[Converting a Portal API Web Content Viewer to the JSR 286 API](../migrate/migrt_ptlt_api_wcm.md)**  
 As installed by default, the Web Content Viewer is based on the JSR 286 API. If you have a Web Content Viewer that is based on the older HCL APIs, you can convert the viewer to the JSR 286 API. Use the convert-wcm-rendering-portlet task to convert the Portal API Web Content Viewer settings and instances to the JSR 286 Web Content Viewer portlet.
 
-**Parent topic:**[Portal tasks](../migrate/mig_post_portaltasks.md)
 

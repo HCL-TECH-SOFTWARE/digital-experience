@@ -182,7 +182,6 @@ If there have been changes to users and groups that are within the specified rea
     ./ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Drealm=MyRealm -Dlibrary="MyLibrary" -Dfix=true -DnoRealmDn=true
 
 
-**Parent topic:**[The web content member fixer task](../wcm/wcm_admin_member-fixer_overview.md)
 
 **Related information**  
 

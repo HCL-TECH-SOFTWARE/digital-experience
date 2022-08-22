@@ -21,7 +21,6 @@ EJPFD0097E: No theme was found to render the page. Navigate to Administration an
 5.  Click **Set as default portal skin**.
 
 
-**Parent topic:**[Theme tasks](../migrate/mig_post_themetasks.md)
 
 **Related information**  
 

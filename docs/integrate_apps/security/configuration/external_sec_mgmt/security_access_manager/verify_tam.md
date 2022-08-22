@@ -43,5 +43,4 @@ Perform the following steps to verify that Security Access Manager is working pr
     -   You must be a member of the `wpsadmins` group.
     -   The `wpsadmins` group must appear in the `VIRTUAL/EXTERNAL_ACCESS_CONTROL_1` ACL.
 
-**Parent topic:**[Security Access Manager](../security/conf_tam.md)
 

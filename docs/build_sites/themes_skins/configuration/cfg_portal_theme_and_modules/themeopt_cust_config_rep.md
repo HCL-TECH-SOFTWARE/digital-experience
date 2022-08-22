@@ -34,5 +34,4 @@ Resource environment providers use the following properties and values.
     The path to the loading image relative to the theme base URI. The default value is css/images/loading.gif.
 
 
-**Parent topic:**[Configuring the portal theme and modules](../dev-theme/themeopt_cust_config.md)
 

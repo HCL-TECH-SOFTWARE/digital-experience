@@ -19,5 +19,3 @@ Learn about the various method signatures of Rating beans.
 
 **Parent topic:**[Logging beans](../pzn/pzn_logging_beans.md)
 
-**Parent topic:**[Logging beans](../pzn/pzn_logging_beans.md)
-

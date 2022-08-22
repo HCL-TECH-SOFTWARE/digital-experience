@@ -31,5 +31,4 @@ You disable the More menu in the virtual portal configuration service.
 
         4.  Restart the Portal server to apply your changes. If you defined the property `global.wp_toolbar_moremenu.enabled` listed earlier, it acts as a fallback setting for virtual portals that do not have the More menu property set. For more information about prefixes, placeholders, and the order in which properties are evaluated, read [Virtual Portal Configuration Service](../admin-system/srvcfg_virtual_portal.md).
 
-**Parent topic:**[Previewing as another user](../wcm/wcm_mngpages_preview_changes.md)
 

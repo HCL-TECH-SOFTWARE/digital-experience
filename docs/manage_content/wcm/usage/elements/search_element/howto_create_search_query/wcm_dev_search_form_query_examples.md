@@ -136,5 +136,4 @@ action='<PathCmpnt type="servlet" />
 
 The query parameters can also be set in the request attributes on the server. For instance, a search component that is displayed after the following tag is used: `[Plugin:RequestAttribute key="search_query" value="shoes" compute="once"]` displays search results for shoes.
 
-**Parent topic:**[How to use a search element](../panel_help/wcm_dev_search_form.md)
 

@@ -24,8 +24,6 @@ Use this configuration task to refresh the page layout for all pages assigned a 
 -   **[Customizing pages](../admin-system/admcustom.md)**  
 The page customizer contains portlets for editing the layout, content, and appearance of pages. It also provides the Wires portlet, which allows users to set up connections between cooperative portlets on a page, and the Locks portlet, which allows users to lock and unlock containers and container content. You can configure the settings for these portlets to show a certain set of functions, restricting basic users from performing more advanced tasks.
 
-**Parent topic:**[Administering](../admin-system/administering_parent.md)
-
 **Parent topic:**[Portal administration](../practitioner_studio/administration.md)
 
 **Related information**  

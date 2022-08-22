@@ -11,5 +11,4 @@ The portal remote REST service for PUMA allows requests to the following operati
 
 For all other operations, the implementation performs permission checks by using the corresponding Portal Access Control \(PAC\) settings for users and groups.
 
-**Parent topic:**[How the portal implements the remote PUMA REST service](../dev/uprof_rest_wpspec.md)
 

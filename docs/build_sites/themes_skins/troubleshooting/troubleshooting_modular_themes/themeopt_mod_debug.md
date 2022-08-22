@@ -19,5 +19,4 @@ To activate debug mode, you can use the Theme Analyzer, or manually enable the f
 
 When a user sets a cookie that is named com.ibm.portal.resourceaggregator.client.debug.mode to true, debug versions of module contributions are loaded if they are defined. Modules are loaded without using separate links and script tags. All resources are downloaded as a combined unit in that case.
 
-**Parent topic:**[Troubleshooting modular themes](../dev-theme/themeopt_mod_debug_ovr.md)
 

@@ -11,5 +11,4 @@ A virtual portal shares several resources with the main portal installation, esp
 -   **[Staging to production list](../deploy/dep_stage_check.md)**  
 The items in the production list can be included in the staging to production Portal Application Archive \(PAA\) file. However, if you are not using the staging to production PAA file, use this list to determine the tools that are required to move your artifacts from the staging server to the production server. You can also use this list to determine what tool to use for the items not included in the staging to production PAA file.
 
-**Parent topic:**[Staging to production](../deploy/dep_intr.md)
 

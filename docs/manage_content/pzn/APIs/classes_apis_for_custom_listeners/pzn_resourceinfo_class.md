@@ -61,5 +61,3 @@ public int hashCode( )
 
 **Parent topic:**[Classes and APIs for writing custom listeners](../pzn/pzn_classes_apis_custom_listeners.md)
 
-**Parent topic:**[Classes and APIs for writing custom listeners](../pzn/pzn_classes_apis_custom_listeners.md)
-

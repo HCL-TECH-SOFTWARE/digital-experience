@@ -17,5 +17,3 @@ View the CustomLog bean method signatures.
 
 **Parent topic:**[Logging beans](../pzn/pzn_logging_beans.md)
 
-**Parent topic:**[Logging beans](../pzn/pzn_logging_beans.md)
-

@@ -31,7 +31,6 @@ The following list gives a summary of the guidelines:
 
 For code samples see *Aggregator patterns and samples.*
 
-**Parent topic:**[Writing an aggregator for Active Site Analytics](../admin-system/sa_asa_cust_script.md)
 
 **Related information**  
 

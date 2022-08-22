@@ -25,5 +25,4 @@ To enable the easy usage of portlet filters, HCL Portal provides a predefined se
 -   **[Request flow of portlet filters](../admin-system/adpltfltr_rqust_flow.md)**  
 On server startup, all portlet filters that are registered in the PortletFilterService are initialized and are made available for filter registration. After that, the portlet filters go through a sequence of processing steps.
 
-**Parent topic:**[Configuring portal behavior](../admin-system/adptlcfg.md)
 

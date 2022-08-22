@@ -12,5 +12,3 @@ Update the WebDAV directory name and remove all spaces. Update the theme metadat
 
 **Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
-

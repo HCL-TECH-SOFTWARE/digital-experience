@@ -10,5 +10,4 @@ Gather current statistics on all tables that are found in the JCR domain. If you
 
 Run the statistics on all the columns in all tables and indexes. Gather at least a minimum level of sampling and distribution. Refer to your database documentation for details on updating statistics.
 
-**Parent topic:**[DB2 database migration considerations](../migrate/mig_pre_db2.md)
 

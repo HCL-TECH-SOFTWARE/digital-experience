@@ -41,7 +41,6 @@ To add or remove a module, update the profile that is used to render a page for 
 -   **[ConfigEngine tasks for creating a new profile based on a template and an existing profile in the system](../dev-theme/themeopt_configengine_profile.md)**  
 You can extend the theme module framework with a new ConfigEngine task.
 
-**Parent topic:**[Developing themes and skins](../dev-theme/themeopt_themes.md)
 
 **Related information**  
 

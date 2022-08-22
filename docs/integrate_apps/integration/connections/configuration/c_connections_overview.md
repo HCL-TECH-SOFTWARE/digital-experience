@@ -23,7 +23,5 @@ Configure the common Directory Services to work with your security configuration
 -   **[Configuring the Ajax proxy to allow FileNet requests](../connect/t_connections_portlest_proxy_Filenet.md)**  
 Configure the Ajax proxy so that direct requests that the CCM portlet makes to the FileNet server are allowed to pass through the proxy server.
 
-**Parent topic:**[HCL Connections](../config/ibmconnections.md)
-
 **Parent topic:**[Integrating](../admin-system/integrating_parent.md)
 

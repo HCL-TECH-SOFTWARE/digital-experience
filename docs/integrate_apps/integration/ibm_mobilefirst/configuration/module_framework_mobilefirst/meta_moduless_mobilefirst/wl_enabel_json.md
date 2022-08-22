@@ -11,5 +11,4 @@ JSONStore is a lightweight, document-oriented storage system that is included as
 3.  Edit the page profile and add the module `wp_mobilefirst_jsonstore` to the profile and save it.
 
 
-**Parent topic:**[Meta-Modules for IBM MobileFirst integration](../integrate/wl_int_metamodules.md)
 

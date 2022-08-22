@@ -48,5 +48,4 @@ The content menu opens when a user hovers over a portlet containing HCL Web Cont
 5.  Add the new content menu to the custom theme profile. Open the theme profile and add `wp_skin_cam` to the `deferredModuleIDs` section.
 
 
-**Parent topic:**[Menus](../dev-theme/themeopt_menu.md)
 

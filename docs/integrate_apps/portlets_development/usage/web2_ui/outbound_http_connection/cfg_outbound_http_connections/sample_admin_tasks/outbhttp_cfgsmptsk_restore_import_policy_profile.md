@@ -71,5 +71,4 @@ The following procedure assumes that the configuration that you want to restore 
 
     -   where `THE_APPLICATION_SCOPE` is the name of the application scope.
 
-**Parent topic:**[Sample administration tasks](../dev-portlet/outbhttp_cfg_smpl_adm_tasks.md)
 

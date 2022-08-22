@@ -6,5 +6,4 @@ The benefit of setting up a basic stand-alone server for validating the custom a
 
 This tactic can also be applied to any new custom applications or themes that are developed for Version 8.5. Rather than waiting for the HCL Portal 8.5 server migration to complete, you can begin development of the new applications and themes on a stand-alone server while the migration is taking place.
 
-**Parent topic:**[Development considerations](../migrate/mig_plan_devconsiderations.md)
 

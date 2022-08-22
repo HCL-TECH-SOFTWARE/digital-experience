@@ -274,5 +274,4 @@ Grant the users and groups access with the following script:
 </request>
 ```
 
-**Parent topic:**[Getting started with Themes](../dev-theme/themeopt_themedev_getting_started.md)
 

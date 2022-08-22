@@ -53,5 +53,4 @@ The HCL Web Content Manager messaging service \(WCM MessagingService\) defines s
     A clear text or encoded password for secure topic connections. The password can be encoded using the PropFilePasswordEncoder task.
 
 
-**Parent topic:**[Web Content Manager service configuration](../admin-system/srvcfgwcmref.md)
 

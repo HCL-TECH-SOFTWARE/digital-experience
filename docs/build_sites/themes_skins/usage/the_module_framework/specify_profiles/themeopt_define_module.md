@@ -38,7 +38,6 @@ The profile files must be valid JSON files. The following sample shows the prope
 }
 ```
 
-**Parent topic:**[Specify profiles](../dev-theme/themeopt_define_mod_files.md)
 
 **Related information**  
 

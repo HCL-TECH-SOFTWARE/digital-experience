@@ -22,5 +22,4 @@ var <%=namespace%>htmlController = new HTMLEditorController( "<%=namespace%>" );
 
 ```
 
-**Parent topic:**[The client side portlet programming model](../dev-portlet/w2_clntprgmdl.md)
 

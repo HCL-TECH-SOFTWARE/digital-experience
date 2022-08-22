@@ -9,5 +9,4 @@ When creating a page template, you can require that a community association is c
 -   **[Community associations and APIs](../admin-system/commpages_access_apis.md)**  
 Although community associations are typically managed through the portal user interface, you might want to access the associations programmatically.
 
-**Parent topic:**[Administering](../admin-system/administering_parent.md)
 

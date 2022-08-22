@@ -10,7 +10,6 @@ Another advantage of the type-ahead feature is that it reduces tag space litteri
 
 The type-ahead feature starts suggesting tags after a user types three characters in a type-ahead enabled input field, for example in the tag widget.
 
-**Parent topic:**[How tagging and rating works in the portal](../admin-system/tag_rate_adm_gen.md)
 
 **Related information**  
 

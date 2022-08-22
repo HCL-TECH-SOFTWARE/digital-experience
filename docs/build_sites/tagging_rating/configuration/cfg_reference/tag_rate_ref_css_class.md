@@ -144,5 +144,4 @@ The following example shows how you can modify link appearance within all the av
 }
 ```
 
-**Parent topic:**[Configuration reference for tagging and rating](../admin-system/tag_rate_adm_ref.md)
 

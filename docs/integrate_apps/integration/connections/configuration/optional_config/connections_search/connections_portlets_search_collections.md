@@ -43,5 +43,4 @@ To configure a search collection, you specify one content source for each HCL Co
         **Note:** You can either select to run the crawler on the complete set or on individual service
 
 
-**Parent topic:**[Configuring search integration](../connect/connections_portlets_search_overview.md)
 

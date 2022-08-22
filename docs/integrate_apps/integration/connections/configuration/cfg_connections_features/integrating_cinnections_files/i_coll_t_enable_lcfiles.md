@@ -11,5 +11,4 @@ Configuring integration with files is similar to configuring other federated doc
 -   **[Configure federated documents feature for files](../collab/i_coll_t_enable_lcfiles_feddocs.md)**  
 Complete the configuration of the federated documents feature to communicate with HCL Connections.
 
-**Parent topic:**[Configuring HCL Connections features](../collab/i_coll_t_enable_lcparent.md)
 

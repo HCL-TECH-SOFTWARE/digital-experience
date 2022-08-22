@@ -27,5 +27,3 @@ Site Builder regularly polls to check the status of running tasks that are displ
 
 **Parent topic:**[Site Builder](../sitebuilder/sitebuilder_intro.md)
 
-**Parent topic:**[Site Builder](../sitebuilder/sitebuilder_intro.md)
-

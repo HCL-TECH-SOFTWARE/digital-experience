@@ -677,5 +677,3 @@ The DELETE Personalization Folder ID REST API is used to delete a selected Perso
 
 **Parent topic:**[Personalization REST API explorer](../pzn/dev_pzn_rest_api_explorer.md)
 
-**Parent topic:**[Personalization REST API explorer](../pzn/dev_pzn_rest_api_explorer.md)
-

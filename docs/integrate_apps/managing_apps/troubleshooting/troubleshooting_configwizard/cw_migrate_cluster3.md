@@ -4,7 +4,6 @@ If you encounter a failure while upgrading the node profiles for a cluster envir
 
 Each potential step in the upgrade node profiles option is included. Since the steps vary, depending on your selections, the steps are not numbered. Find the step that failed to learn more about correcting and recovering from the failure.
 
-**Parent topic:**[Troubleshooting the Configuration Wizard](../trouble/cw_troubleshooting.md)
 
 **Related information**  
 

@@ -44,7 +44,6 @@ Index paths are used to refer to components in the component hierarchy. They are
 
 -   **...**
 
-**Parent topic:**[Command reference for the Portal Scripting Interface](../admin-system/adpsicrf.md)
 
 **Related information**  
 

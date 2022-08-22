@@ -81,7 +81,6 @@ When you transfer the content association for a page to the Portal Site library,
     -   IBM i: ConfigEngine.sh internalize-content-mappings -DPortalPage=example.page -DIncludeDescendants=true -DSynchronous=true -DPortalAdminPwd=password -DWasPassword=password
     -   z/OS: ./ConfigEngine.sh internalize-content-mappings -DPortalPage=example.page -DIncludeDescendants=true -DSynchronous=true -DPortalAdminPwd=password -DWasPassword=password
 
-**Parent topic:**[Configuring managed pages](../wcm/wcm_config_mngpages.md)
 
 **Related information**  
 

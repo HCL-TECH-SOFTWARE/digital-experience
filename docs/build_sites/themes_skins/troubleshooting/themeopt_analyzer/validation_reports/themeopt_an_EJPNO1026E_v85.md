@@ -12,5 +12,3 @@ Verify that the context-root setting of theme ''\{0\}'' matches the context root
 
 **Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
-

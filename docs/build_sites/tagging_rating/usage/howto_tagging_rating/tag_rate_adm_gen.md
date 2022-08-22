@@ -15,7 +15,6 @@ The tag widget from earlier HCL Portal versions provided a type-ahead feature. W
 -   **[Filtering content for tagging](../admin-system/tag_rate_adm_filtr_cont.md)**  
 You can use filtering mechanisms to control which terms users can use and which terms they cannot use as tags. The portal provides both a blacklist and a whitelist filter.
 
-**Parent topic:**[Tagging and rating](../admin-system/tag_rate_mngadmin.md)
 
 **Related information**  
 

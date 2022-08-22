@@ -128,7 +128,6 @@ You can reduce your levels of navigation to two levels.
 -   **[Side navigation](../dev-theme/themeopt_cust_nav_side.md)**  
 The Portal 8.5 theme includes a side navigation template that can be applied to render pages at the secondary level in a list with the main content. By default, this template is applied to the Administration section of your portal.
 
-**Parent topic:**[Customizing the theme](../dev-theme/themeopt_cust.md)
 
 **Related information**  
 

@@ -32,5 +32,4 @@ During migration, the HCL Digital Experience 8.5 theme is deployed. However, onl
     -   IBM i: ConfigEngine.sh list-all-virtual-portals
     -   z/OS: ./ConfigEngine.sh list-all-virtual-portals
 
-**Parent topic:**[Virtual Portal tasks](../migrate/virt_portal_post_mig.md)
 

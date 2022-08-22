@@ -12,5 +12,3 @@ Use the following setting to specify the number of mentors to be assigned to eac
 
 **Parent topic:**[User predictability \| LikeMinds engine](../pzn/pzn_user_predictablity_main.md)
 
-**Parent topic:**[User predictability \| LikeMinds engine](../pzn/pzn_user_predictablity_main.md)
-

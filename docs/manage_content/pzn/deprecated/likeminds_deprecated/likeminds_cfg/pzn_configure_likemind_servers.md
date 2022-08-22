@@ -47,5 +47,3 @@ You can configure several parameters that affect the way the LikeMinds server ge
 
 **Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
 
-**Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
-

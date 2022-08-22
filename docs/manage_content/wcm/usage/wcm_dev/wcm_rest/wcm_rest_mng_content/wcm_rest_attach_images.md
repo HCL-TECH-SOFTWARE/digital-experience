@@ -64,5 +64,4 @@ Content-Type: text/html
 200 OK
 ```
 
-**Parent topic:**[How to manage web content items by using REST](../wcm/wcm_rest_crud.md)
 

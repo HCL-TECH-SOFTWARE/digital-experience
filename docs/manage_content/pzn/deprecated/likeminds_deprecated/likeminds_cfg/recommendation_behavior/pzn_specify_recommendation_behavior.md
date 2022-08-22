@@ -30,5 +30,3 @@ The LikeMinds server generates recommendation vectors that include all recommend
 
 **Parent topic:**[Configuring LikeMinds](../pzn/pzn_configure_likemind_servers.md)
 
-**Parent topic:**[Configuring LikeMinds](../pzn/pzn_configure_likemind_servers.md)
-

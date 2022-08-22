@@ -48,5 +48,4 @@ The actual time a published item appears on a website, or the time an expired it
 -   how long it takes to syndicate updates to the delivery server
 -   how long it takes for the current cache to expire
 
-**Parent topic:**[Workflow and change management](../wcm/wcm_cms_change.md)
 

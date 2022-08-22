@@ -15,5 +15,4 @@ The HCL Digital Experience installation removes the Simple and Protected GSS-API
 6.  Click **OK** and then click the **Save** link to save changes to the master configuration.
 
 
-**Parent topic:**[Enabling and configuring single sign-on for HTTP requests using SPNEGO](../config/cfg_spntaiweb.md)
 

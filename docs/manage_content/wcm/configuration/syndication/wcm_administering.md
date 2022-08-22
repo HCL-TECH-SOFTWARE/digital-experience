@@ -13,7 +13,6 @@ If you encounter issues when syndicating, there are some common methods availabl
 -   **[Creating a syndication relationship from the command line](../wcm/wcm_syndication_settingup_cmdline.md)**  
 You can set up syndication relationships by using the Administration Portlets or the command line. To set up a syndication relationship from the command line, use the XML configuration interface \(XML access\) and the ConfigEngine command to configure the subscriber.
 
-**Parent topic:**[Configuring](../config/configuring_parent2.md)
 
 **Related information**  
 

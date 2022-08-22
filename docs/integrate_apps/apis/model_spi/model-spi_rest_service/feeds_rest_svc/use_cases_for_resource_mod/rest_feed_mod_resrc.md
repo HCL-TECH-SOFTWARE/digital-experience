@@ -28,5 +28,4 @@ Portal Model REST services allow you to put portlets on pages.
 -   **[Deleting resources](../dev/rest_feed_del_resrc.md)**  
 Portal Model REST services allow you to delete resources.
 
-**Parent topic:**[Feeds for REST services](../dev/rest_feed.md)
 

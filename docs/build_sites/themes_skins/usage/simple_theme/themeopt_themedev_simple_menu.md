@@ -38,5 +38,4 @@ You can create menu content based on the content of a JSON file. The Simple Them
 
 Learn more about the [Simple menu framework](themeopt_cust_menu.md#). Note that not all information at this link applies to the Simple Theme.
 
-**Parent topic:**[Understanding the Simple Theme](../dev-theme/themeopt_themedev_simpletheme.md)
 

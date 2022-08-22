@@ -12,5 +12,3 @@ Update the configuration for your theme by prefixing the context root with a for
 
 **Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
-

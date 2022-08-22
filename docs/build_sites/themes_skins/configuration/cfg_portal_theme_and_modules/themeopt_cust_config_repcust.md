@@ -63,5 +63,4 @@ Replace occurrences in italics with the actual names of your items.
 12. Restart the portal server.
 
 
-**Parent topic:**[Configuring the portal theme and modules](../dev-theme/themeopt_cust_config.md)
 

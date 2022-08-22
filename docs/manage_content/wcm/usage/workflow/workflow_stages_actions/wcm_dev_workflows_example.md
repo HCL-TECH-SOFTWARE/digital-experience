@@ -46,5 +46,4 @@ If the **Scheduled Moved** Action used a **General Date** prior to the **Expire 
 
 Users do not require access to a workflow's actions or stages to participate in a workflow. Actions are performed using system access and are not determined by the access of the user who approved/rejected the item.
 
-**Parent topic:**[Workflow stages and actions](../wcm/wcm_dev_workflows_overview.md)
 

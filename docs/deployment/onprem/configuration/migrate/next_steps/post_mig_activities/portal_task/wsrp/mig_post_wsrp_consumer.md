@@ -17,7 +17,6 @@ After you complete the migration of your data, perform the following tasks if yo
 -   Configure the JVM setting for retrieving multiple transport headers from a JAX-WS web service response, as described in description of APAR PM91361. See *PM91361: MULTIPLE SET-COOKIE VALUES FROM AN HTTP TRANSPORT HEADER IN A JAX-WS WEB SERVICE RESPONSE ARE NOT RETRIEVED CORRECTLY*.
 
 
-**Parent topic:**[WSRP](../migrate/mig_post_wsrp.md)
 
 **Related information**  
 

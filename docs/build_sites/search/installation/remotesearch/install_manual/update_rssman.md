@@ -55,5 +55,4 @@ Apply the Combined Cumulative Fix on the portal server. For more information abo
 4.  Restart the WebSphere Application Server.
 
 
-**Parent topic:**[Installing remote search service by using manual steps](../admin-system/installrssman.md)
 

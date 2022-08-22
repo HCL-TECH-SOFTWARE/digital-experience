@@ -42,5 +42,4 @@ Addressing a resource includes specifying the model to which the resource is ass
 -   **[Additional query parameters](../dev/rest_addl_prms.md)**  
 In order to specify the extent and the contents of the requested feed, you may use additional query parameters. All additional query parameters are optional.
 
-**Parent topic:**[Feeds for REST services](../dev/rest_feed.md)
 

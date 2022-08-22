@@ -135,5 +135,4 @@ library1,library2,library3
 |Format|ATOM|Defines the output format : ATOM / HTML/ XML.|
 |Timestamp|No default.|Indicates the content provider timestamp from a previous crawling session. The timestamp represents for the content provider some snapshot of the content and allows the crawler to get only the content changes on the next crawling. This parameter is used for incremental crawling.|
 
-**Parent topic:**[The search seedlist 1.0 format](../wcm/wcm_dev_search_searchseed.md)
 

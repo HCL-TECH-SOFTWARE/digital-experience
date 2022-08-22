@@ -11,5 +11,4 @@ The command line `sp-push` utility, when you push a Script Application that is n
 4.  Specify the appropriate users or groups of users who can perform the **Edit** and **Reviewer** roles for this default Script Applications area.
 
 
-**Parent topic:**[Editor and reviewer Access to the Script Application Library and Script Applications Site Area](../script-portlet/acc_lib_site_area.md)
 

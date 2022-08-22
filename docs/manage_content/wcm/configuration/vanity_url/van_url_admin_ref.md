@@ -18,7 +18,6 @@ Vanity URLs are stored as part of the page in the JCR database in the portal pag
 -   **[Setting an error URI for undefined vanity URLs](../wcm/van_url_cfgtsk_set_error_uri.md)**  
 You can configure how the portal behaves if a user tries to access an undefined vanity URL.
 
-**Parent topic:**[Vanity URLs](../wcm/vanity_urls.md)
 
 **Related information**  
 

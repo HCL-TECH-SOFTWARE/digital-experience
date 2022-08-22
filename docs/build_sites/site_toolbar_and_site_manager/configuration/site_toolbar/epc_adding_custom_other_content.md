@@ -32,5 +32,4 @@ Use the following public render parameter if you want your toolbar portlet to di
 
 If you want your toolbar tab to display a list of items that can be dragged to the portal page that is currently displayed in the main view area, you need to make these items draggable according to the Drag and Drop model of HTML 5. For more information, see *Customize drag and drop*.
 
-**Parent topic:**[Preparing the site toolbar](../dev-theme/themeopt_themeshelf.md)
 

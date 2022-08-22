@@ -77,7 +77,6 @@ From time to time items fail to syndicate. You use the failed items view to revi
     -   The Important Items tab can also be used to narrow down which items are the most crucial to fix.
 4.  After you identified and fixed the issues, you can click **Retry** to initiate syndication for individual items, or use the **Retry All** in the Important Items tab to try to syndicate all failed items. You can also choose to update or rebuild a syndication relationship.
 
-**Parent topic:**[Syndication](../wcm/wcm_administering.md)
 
 **Related information**  
 

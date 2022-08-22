@@ -41,5 +41,4 @@ Content Template includes these new features.
     The Content Template Design Translations plug-in frees you from having to localize any of the strings in the CTC Design library that are used throughout the Content Template Catalog templates. This plug-in can also be reused to bring in translations to your custom designs.
 
 
-**Parent topic:**[Content Template overview](../ctc/ctc_overview.md)
 

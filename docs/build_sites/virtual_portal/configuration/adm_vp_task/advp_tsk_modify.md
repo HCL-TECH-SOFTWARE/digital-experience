@@ -12,7 +12,6 @@ You can use the Virtual Portal Manager portlet to change the following settings 
 
 -   The theme of the virtual portal.
 
-**Parent topic:**[Tasks for administering virtual portals](../admin-system/advptsk.md)
 
 **Related information**  
 

@@ -12,5 +12,3 @@ Update your plug-in definitions by using unique plug-in IDs for each plug-in to 
 
 **Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
-

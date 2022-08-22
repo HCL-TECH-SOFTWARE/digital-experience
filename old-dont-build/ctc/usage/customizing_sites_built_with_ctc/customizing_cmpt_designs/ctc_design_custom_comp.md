@@ -7,5 +7,4 @@ If a new query is required, you can write a new menu, rule, or navigator.
 -   **[Customizing block components](../ctc/ctc_design_custom_comp_block.md)**  
 When new components are required for the page that are not lists, use the Block pattern instead.
 
-**Parent topic:**[Customizing sites built with Content Template](../ctc/ctc_design_custom.md)
 

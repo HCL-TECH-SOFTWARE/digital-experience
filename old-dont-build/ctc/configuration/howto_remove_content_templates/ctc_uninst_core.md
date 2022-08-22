@@ -55,5 +55,4 @@ Removing Content Template Catalog core components and assembly is part of the un
 6.  Restart HCL Portal.
 
 
-**Parent topic:**[How to remove Content Template](../ctc/ctc_uninst_overview.md)
 

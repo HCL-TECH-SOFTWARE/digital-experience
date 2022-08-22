@@ -5,7 +5,6 @@ You can administer the theme module framework. This includes deploying resources
 -   **[Deploying themes with cacheable resources](../dev-theme/themeopt_mod_adminmod.md)**  
 Data sources are used in a portal to serve content. Some resources are cached and other resources can define cache settings and pass them to a data source. In a production environment, use caching. When debugging themes, disable caching.
 
-**Parent topic:**[Administering](../admin-system/administering_parent.md)
 
 **Related information**  
 

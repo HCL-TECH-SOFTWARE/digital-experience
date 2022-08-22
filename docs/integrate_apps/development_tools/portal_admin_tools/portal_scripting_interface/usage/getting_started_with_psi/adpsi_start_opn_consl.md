@@ -30,5 +30,4 @@ To start the Portal Scripting Interface from a console window, use the procedure
 3.  You can now enter Portal Scripting commands as required. You can also use all the available WebSphere Application Server `wsadmin` commands.
 
 
-**Parent topic:**[Getting started with the Portal Scripting Interface](../admin-system/adpsi_start.md)
 

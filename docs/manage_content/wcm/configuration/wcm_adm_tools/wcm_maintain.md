@@ -33,7 +33,6 @@ Use the delete libraries tool to delete multiple libraries, even when references
 -   **[How to clone a web content repository](../wcm/wcm_cloning.md)**  
 Syndicating items from one server to another, either after migration or to roll out a new server, can take a long time. Your database backup and restore features can be used to clone data from one repository to another, making your system ready for syndication to be used from then on for incremental updates.
 
-**Parent topic:**[Administering](../admin-system/administering_parent.md)
 
 **Related information**  
 

@@ -13,5 +13,3 @@ You can use location attributes to tailor the content that displays.
 
 **Parent topic:**[Application object](../pzn/pzn_application_object.md)
 
-**Parent topic:**[Application object](../pzn/pzn_application_object.md)
-

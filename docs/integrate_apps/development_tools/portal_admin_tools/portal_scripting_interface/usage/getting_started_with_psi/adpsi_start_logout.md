@@ -12,5 +12,4 @@ wsadmin> exit
 
 To find out more about the Portal Scripting Interface commands and usage refer to the other topics about the Portal Scripting Interface.
 
-**Parent topic:**[Getting started with the Portal Scripting Interface](../admin-system/adpsi_start.md)
 

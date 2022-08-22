@@ -31,7 +31,6 @@ The Remote Web Content Viewer portlet that is based on the Portlet API was remov
     |Does not include HCL Web Content Manager|Does not include the HCL Web Content Manager|Option 1: Remote web content rendering with JSR 286 Web Content Viewer via WSRP|
 
 
-**Parent topic:**[Web Content Manager](../wcm/wcm_migration_post_update.md)
 
 # Option 1: Remote web content rendering with JSR 286 Web Content Viewer via WSRP
 

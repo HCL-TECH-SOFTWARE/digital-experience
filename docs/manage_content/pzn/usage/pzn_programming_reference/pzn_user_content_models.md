@@ -21,5 +21,3 @@ After this analysis is completed, focus on the user, content and other data for 
 
 **Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
 
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
-

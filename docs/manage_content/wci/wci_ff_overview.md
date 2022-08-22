@@ -100,5 +100,4 @@ The following sub-elements are either required or used by the Web Content Integr
     According to the RSS 2.0 specification this element contains the author's e-mail address. The specification only allows a single <author\> element per item. Generally this will be the author of the content item in the source content management system. The Web Content Integrator will attempt to resolve the e-mail address into the common name of a portal user and then store the name of that user in the author field the Web Content Manager item. If this element is not present in the feed, or if the e-mail address cannot be resolved, then the name of the system user will stored in the author field of the Web Content Manager item instead.
 
 
-**Parent topic:**[IBM Web Content Integrator](../wci/wci_intro.md)
 

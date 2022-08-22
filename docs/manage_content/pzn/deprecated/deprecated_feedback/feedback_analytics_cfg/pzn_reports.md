@@ -4,8 +4,6 @@ Once data has been logged to the Feedback database schema, it is possible to use
 
 **Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
 
-**Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
-
 **Related information**  
 
 

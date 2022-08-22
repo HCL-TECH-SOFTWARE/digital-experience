@@ -64,7 +64,6 @@ Here is an example of an HTML form for sending data to the Web Content Viewer po
 
 Replace the variable `$DATA_SINK_URI` by the appropriate value for your environment.
 
-**Parent topic:**[Sending data to the Web Content Viewer portlet](../social/plrf_sendata2wcv.md)
 
 **Related information**  
 

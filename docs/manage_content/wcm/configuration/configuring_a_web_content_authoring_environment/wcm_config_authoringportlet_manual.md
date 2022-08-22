@@ -27,5 +27,4 @@ You can add any of the following optional configuration parameters:
 
 **Note:** All users need to log off and login before any configuration changes appear in the authoring portlet.
 
-**Parent topic:**[Configuring a web content authoring environment](../wcm/wcm_install_cfgauthoring.md)
 

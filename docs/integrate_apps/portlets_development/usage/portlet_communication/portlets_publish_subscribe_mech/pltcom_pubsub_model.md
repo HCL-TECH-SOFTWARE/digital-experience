@@ -7,7 +7,6 @@ Standard portlets provide powerful publish and subscribe mechanisms for exchangi
 -   **[Triggering communication](../dev-portlet/pltcom_pubsub_msg_based.md)**  
 These communication methods are based on directed communication links that pass information from a source portlet to a target portlet.
 
-**Parent topic:**[Portlet communication](../dev-portlet/pltcom_ptlt_com.md)
 
 **Related information**  
 

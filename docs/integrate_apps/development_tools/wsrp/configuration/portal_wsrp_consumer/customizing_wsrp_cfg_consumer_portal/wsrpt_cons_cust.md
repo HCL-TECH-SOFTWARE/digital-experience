@@ -17,7 +17,6 @@ A client can send cookies to the WSRP Consumer as part of an HTTP request. You c
 -   **[Configuring remote session invalidation](../admin-system/wsrpt_config_rem_sessn_invalid.md)**  
 You can configure the WSRP Consumer to invalidate the remote session when a user explicitly logs out of the Consumer portal. If you enable remote session invalidation and a user logs out of the Consumer portal, the Consumer sends a releaseSessions WSRP request to all the Producers with which the user interacted. The Producers portals can then invalidate these sessions.
 
-**Parent topic:**[Using your portal as a WSRP Consumer](../admin-system/wsrpt_cons_use.md)
 
 **Previous topic:**[Consuming portlets in a Consumer portal](../admin-system/wsrpt_cons_prtlt.md)
 

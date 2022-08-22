@@ -39,5 +39,4 @@ Complete the following steps to secure LTPA keys on a production environment:
     8.  Click **Save** to save the changes to the master configuration.
 
 
-**Parent topic:**[Securing](../security/securing_wp.md)
 

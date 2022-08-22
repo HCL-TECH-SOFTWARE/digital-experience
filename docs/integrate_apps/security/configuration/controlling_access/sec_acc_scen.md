@@ -60,5 +60,4 @@ For example, to allow Mary to assign the Sales group to the role Privileged User
 
 **Note:** To administer access control through the administrative portlets, Mary must have role assignments that allow her to view the User Group Permissions or the Resource Permissions portlets and the pages that contain these portlets. To administer access control through the XML configuration interface, Mary must have a role assignment that allows her to access the XMLAccess virtual resource.
 
-**Parent topic:**[Controlling access](../admin-system/control_access.md)
 

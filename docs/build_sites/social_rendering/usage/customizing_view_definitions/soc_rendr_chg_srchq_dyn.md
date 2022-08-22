@@ -127,5 +127,4 @@ You can use the following request attributes:
     Use this request attribute to dynamically set the tags that you want to use for filtering the list. To specify more than one tag as a filter, use blanks or commas as separator characters between the tags. This request attribute overrides the Filter by Tags setting of your list view definition.
 
 
-**Parent topic:**[Customizing view definitions for portal site visitors](../social/soc_rendr_shape_socl_list.md)
 

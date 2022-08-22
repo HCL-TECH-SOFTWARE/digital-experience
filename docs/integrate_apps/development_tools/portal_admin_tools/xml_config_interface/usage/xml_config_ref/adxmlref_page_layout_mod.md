@@ -8,5 +8,4 @@ In particular, this means that if you update a page layout in ID generating mode
 
 If you want to update specific components in the page but do not want to delete the existing page layout, you can turn off this special processing by specifying the attribute preserve-old-layout="true" for the content node.
 
-**Parent topic:**[XML configuration reference](../admin-system/adxmlref.md)
 

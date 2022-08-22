@@ -475,5 +475,4 @@ This page will contain the known issues for the HCL Portal 9.5 Combined Cumulati
 
 -   Solution: These messages do not indicate a problem. To prevent a configuration error, you are prevented from changing your feature selections when performing an update. If you want to add or drop a portal, you must select the Modify function of Installation Manager instead.
 
-**Parent topic:**[Combined Cumulative Fix \(CF\) Installation](../overview/ccf_strategy95.md)
 

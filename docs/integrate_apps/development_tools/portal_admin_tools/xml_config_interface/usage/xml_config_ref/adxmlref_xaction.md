@@ -25,5 +25,4 @@ Transactionality applies only to changes in the portal database. The following a
 
 An example of what this means is as follows: When you deploy a WAR file in an XML script that uses transaction-level="request" and an error occurs later in the execution of the XML script, the transaction is canceled, so the entries for the portlet are removed from the portal database. However, the corresponding enterprise application has already been deployed into WebSphere Application Server and is not removed. This will not further affect the operation of the portal; you can simply deploy the portlet again later. You will just have an unused enterprise application in WebSphere Application Server. Remove it manually.
 
-**Parent topic:**[XML configuration reference](../admin-system/adxmlref.md)
 

@@ -124,5 +124,4 @@ The following setting is for debug purposes only. Enable it only when instructed
     This setting is for debug purposes only. Enable it only when instructed to do so by support personnel.
 
 
-**Parent topic:**[Portal service configuration](../admin-system/srvcfgref.md)
 

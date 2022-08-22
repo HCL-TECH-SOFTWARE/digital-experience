@@ -47,13 +47,11 @@ Personalization rules querying on short text run faster than those querying on t
 
 **Note:** All attributes which store a reference to a person are stored as distinguished names. This format will match against the value of the Distinguish Name attribute on the Portal User resource collection. For instance, to select all documents authored by the user viewing the portlet, you would write, "Author is current Portal Users.Distinguished Name."
 
-**Parent topic:**[Digital Experience Personalization](../pzn/pzn_overview.md)
 
 **Previous topic:**[Publishing personalization rules](../pzn/pzn_depub.md)
 
 **Next topic:**[The Portal User resource collection](../pzn/pzn_usr_rescoll.md)
 
-**Parent topic:**[Digital Experience Personalization](../pzn/pzn_overview.md)
 
 **Previous topic:**[Publishing personalization rules](../pzn/pzn_depub.md)
 

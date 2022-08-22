@@ -38,7 +38,6 @@ You can add vertical cluster members to your dynamic cluster. The members share 
 -   **[Deleting vertical cluster members](../install/delete_vert_clus.md)**  
 When necessary, you can delete members from your static or dynamic cluster.
 
-**Parent topic:**[Configuring](../config/configuring_parent2.md)
 
 **Related information**  
 

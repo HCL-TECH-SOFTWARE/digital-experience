@@ -28,5 +28,4 @@ These components store reusable tags, text, and code that are used in the footer
     Footer with slideshow navigation, caption area, and script to start the slideshow.
 
 
-**Parent topic:**[Content Template Components](../ctc/ctc-assets-components.md)
 

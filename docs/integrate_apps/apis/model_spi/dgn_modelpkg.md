@@ -141,5 +141,4 @@ The WireModel represents the interconnections between JSR 168 cooperative portle
     -   Between a JSR 168 cooperative portlet with an output property and a JSR 168 cooperative portlet with a target action defined.
     -   Between a JSR 286 portlet that defines a publishing event and a JSR 286 portlet that defines a processing event.
 
-**Parent topic:**[Model SPI overview](../dev/dgn_modelovw.md)
 

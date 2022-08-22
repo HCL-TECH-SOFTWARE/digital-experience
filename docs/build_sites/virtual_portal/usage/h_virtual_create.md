@@ -71,7 +71,6 @@ To create a new virtual portal, perform the following steps:
     You can view the URL of the JCR collection in the virtual portal administration portlet. The URL looks as follows: `http://host_name:port_number/seedlist/server?Action=GetDocuments&Format=ATOM&Locale=en_US&Range=100&Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&Start=0&SeedlistId=**wsid**@ootb_crawler**wsid**`where `wsid` is the actual workspace ID of the virtual portal. The workspace ID is the identifier of the workspace in which the content item is created, stored and maintained. For example, if the workspace ID of the virtual portal is 10, then the URL looks as follows:`http://host_name:port_number/seedlist/server?Action=GetDocuments&Format=ATOM&Locale=en_US&Range=100&Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&Start=0&SeedlistId=**10**@ootb_crawler**10**`
 
 
-**Parent topic:**[Managing virtual portals](h_main_virtual.md)
 
 **References:**  
 

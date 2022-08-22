@@ -57,5 +57,4 @@ Portal administration portlets that list portal resources, such as pages, portle
 
     -   us\*r
 
-**Parent topic:**[Portal administration portlets](../admin-system/adpltadm.md)
 

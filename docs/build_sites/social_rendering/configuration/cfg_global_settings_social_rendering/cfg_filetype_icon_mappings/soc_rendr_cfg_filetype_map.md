@@ -22,7 +22,6 @@ For your reference, the following topic lists the default file type mappings.
 -   **[File type mappings reference](../social/soc_rendr_file_type_mapngs.md)**  
 The social lists show specific icons for the different file and service types in the result lists. You can modify the file type mappings that are used for displaying these icons. For your reference, these mappings are listed here.
 
-**Parent topic:**[Configuring global settings for social rendering](../social/soc_rendr_cfg_global.md)
 
 **Related information**  
 

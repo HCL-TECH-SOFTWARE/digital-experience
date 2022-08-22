@@ -9,5 +9,4 @@ Use the IBM Installation Manager to install HCL Digital Experience to an existin
 -   **[Installing HCL Digital Experience in Windows using a response file](../install/inst_silent-windows.md)**  
  Use either a sample response file or a response file that you created to install HCL Portal on to an existing IBM WebSphere Application Server.
 
-**Parent topic:**[Windows system - HCL Digital Experience installation](../install/installingwp95-windows.md)
 

@@ -61,5 +61,4 @@ The site has a home page and several other microsites with one or more pages. Ma
 
 **Note:** A backup copy of the Internet site template is located under the CTC installation directory: ..\\ctc.install\\build\\install\\shippingTemplatesBackup\\
 
-**Parent topic:**[Sample sites, site templates, groups, and users](../ctc/ctc-assets-sample-sites.md)
 

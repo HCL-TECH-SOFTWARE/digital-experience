@@ -520,5 +520,4 @@ HTTP/1.1 200 OK
 </entry>
 ```
 
-**Parent topic:**[How to manage web content items by using REST](../wcm/wcm_rest_crud.md)
 

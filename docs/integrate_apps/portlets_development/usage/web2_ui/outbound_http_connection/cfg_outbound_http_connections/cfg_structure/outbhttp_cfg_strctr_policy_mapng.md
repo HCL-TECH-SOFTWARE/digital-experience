@@ -29,7 +29,6 @@ An outbound connection profile contains at least one policy mapping item. This i
 -   The policy rules that are defined at the Policy Mapping with the context path /mycontext.
 -   The policy rules that are defined at the default policy mapping.
 
-**Parent topic:**[Configuration structure](../dev-portlet/outbhttp_cfg_structure.md)
 
 **Related information**  
 

@@ -87,5 +87,3 @@ When the log method of a logging bean is called, the feedback facility generates
 
 **Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
 
-**Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
-

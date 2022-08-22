@@ -27,5 +27,3 @@ Depending on the type of recommendation you want to extract, the specific engine
 
 **Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
 
-**Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
-

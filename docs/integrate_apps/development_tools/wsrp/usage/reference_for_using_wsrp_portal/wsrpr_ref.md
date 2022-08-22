@@ -15,5 +15,4 @@ Here are some hints and tips for using WSRP with HCL Digital Experience.
 -   **[Troubleshooting WSRP](../admin-system/wsrpr_trbl.md)**  
 You can troubleshoot WSRP by using different methods such as logging and tracing, debugging, and monitoring.
 
-**Parent topic:**[WSRP services](../admin-system/wsrpc.md)
 

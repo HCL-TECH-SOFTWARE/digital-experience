@@ -17,5 +17,4 @@ When you copy an existing theme, the system defines a system name for the copied
 
 After you enter a system name that is unique and includes only valid characters, click **Copy** to begin copying the selected theme.
 
-**Parent topic:**[Copying your theme](../dev-theme/themeopt_copy.md)
 

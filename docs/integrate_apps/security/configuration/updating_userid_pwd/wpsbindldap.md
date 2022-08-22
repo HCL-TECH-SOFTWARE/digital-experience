@@ -49,7 +49,6 @@ Perform the following steps to change the WebSphere® Application Server adminis
     8.  Click **OK**, save your changes, and then restart the server.
 
 
-**Parent topic:**[Updating user ID and passwords](../security/sec_pswds.md)
 
 **Related information**  
 

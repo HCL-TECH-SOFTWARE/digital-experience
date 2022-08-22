@@ -71,7 +71,6 @@ The initial and differential release PAA file contains all the pertinent items t
         **Restriction:** Do not use this parameter in place of syndicating the libraries from the target environment.
 
 
-**Parent topic:**[Creating and deploying the initial release](../deploy/dep_initial.md)
 
 **Next topic:**[Preparing the servers for initial staging](../deploy/dep_prep.md)
 

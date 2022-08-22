@@ -105,5 +105,4 @@ The following pre-defined groups can be assigned roles in a library.
 |**Users and User Groups**|Select this group to assign a role to all users and groups.|
 |**All Portal User Groups**|Select this group to assign a role to all groups.|
 
-**Parent topic:**[Users, Groups and Roles](../wcm/wcm_cms_access.md)
 

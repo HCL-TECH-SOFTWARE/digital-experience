@@ -49,7 +49,6 @@ If the portal server is securely protected with SSL, then the remote spell check
 -   SSL configuration repertoire's truststore
 -   The cacerts file in the /AppServer/java/jre/lib/security directory on the remote server
 
-**Parent topic:**[Setting up a remote spell checker](../config/doc_pap_spellchk.md)
 
 **Related information**  
 

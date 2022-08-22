@@ -55,7 +55,6 @@ model.getCookieRuleLocator(rule).collectAllMatching(
 PolicyVariable pvar = model.getPolicyVariableLocator(globalProfile).findByName("the.policy.var");
 ```
 
-**Parent topic:**[Configuring outbound HTTP connections by using the Model Controller SPI](../dev-portlet/outbhttp_cfg_mcspi.md)
 
 **Previous topic:**[Obtaining the Model SPI](../dev-portlet/outbhttp_cfg_mcspi_obtmapi.md)
 

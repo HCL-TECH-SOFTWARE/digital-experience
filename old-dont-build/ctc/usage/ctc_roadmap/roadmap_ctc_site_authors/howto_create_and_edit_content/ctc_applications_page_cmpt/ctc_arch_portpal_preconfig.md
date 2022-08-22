@@ -14,5 +14,4 @@ Using the page component configuration Reference portlet is also a way to reuse 
 
 Page components can always be created manually for any page – either by creating a page component configuration or copying an existing one. You can then use a page component configuration Reference portlet to display it on any page.
 
-**Parent topic:**[Content Template Catalog Applications and Page Components \| CTC for HCL Digital Experience](../ctc/ctc_arch_portpal.md)
 

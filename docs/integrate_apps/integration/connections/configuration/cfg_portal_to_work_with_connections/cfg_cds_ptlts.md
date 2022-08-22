@@ -9,5 +9,4 @@ To configure the common Directory Services to work with your security configurat
     [Configuring common directory services for your security configuration](https://help.hcltechsw.com/digital-experience/8.5/connect/t_connections_portlets_common_directory.html)
 
 
-**Parent topic:**[Configuring Portal to work with HCL Connections](../config/cfg_ptl_with_conn.md)
 

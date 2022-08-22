@@ -7,7 +7,6 @@ Set up access for content authors that want to create landing pages from a new p
 -   **[Reviewer access per workflow stage](../install/rm_create_site_admin_workflow_reviewer.md)**  
 Content reviewers do not need to create or edit content. Set up access for content reviewers in your workflow.
 
-**Parent topic:**[Setting up the site for the content author](../install/rm_create_site.md)
 
 # Who should use this roadmap
 

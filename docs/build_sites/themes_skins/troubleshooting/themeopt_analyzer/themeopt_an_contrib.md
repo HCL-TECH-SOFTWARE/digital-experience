@@ -94,5 +94,3 @@ For every combined request that the theme optimization framework produces, you c
 
 **Parent topic:**[Theme Optimization Analyzer](../dev-theme/themeopt_an_analyzer.md)
 
-**Parent topic:**[Theme Optimization Analyzer](../dev-theme/themeopt_an_analyzer.md)
-

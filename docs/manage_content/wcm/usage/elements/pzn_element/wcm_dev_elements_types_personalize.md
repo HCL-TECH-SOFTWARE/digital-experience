@@ -13,5 +13,4 @@ You use category selection trees to allow users to personalize menus.
 -   **[Using a user name element](../panel_help/wcm_dev_elements_username.md)**  
 A user name element displays the name of the current user in a presentation template, component design, or element design. You can use a user name element only by creating a user name component. You cannot add a user name element to authoring templates, site areas, or content items.
 
-**Parent topic:**[Elements](../wcm/wcm_build.md)
 

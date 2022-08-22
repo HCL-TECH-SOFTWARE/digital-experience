@@ -38,5 +38,3 @@ Rating beans should be instantiated as session beans; however, they do not maint
 
 **Parent topic:**[Rating beans](../pzn/pzn_rating_beans.md)
 
-**Parent topic:**[Rating beans](../pzn/pzn_rating_beans.md)
-

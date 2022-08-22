@@ -63,7 +63,6 @@ The following new properties are integrated in [CF16 and later](https://www.ibm.
     This value defines the maximum number of rows that the Seedlist Cleanup Utility will attempt to delete from the `ICMSTJCRTSSEEDLISTPENDING` table in a single SQL call.
 
 
-**Parent topic:**[Search service configuration parameters](../admin-system/srrcfgsrvc.md)
 
 **Related information**  
 

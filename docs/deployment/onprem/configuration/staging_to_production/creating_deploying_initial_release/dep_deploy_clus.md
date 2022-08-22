@@ -113,7 +113,6 @@ If you have a single cell with a cluster A and a cluster B, use the following st
         ```
 
 
-**Parent topic:**[Creating and deploying the initial release](../deploy/dep_initial.md)
 
 **Previous topic:**[Deploying the initial release](../deploy/dep_deploy.md)
 

@@ -11,7 +11,6 @@ With a WebDAV-based theme, static theme content is deployed through WebDAV. Use 
 -   **[Creating a WAR-based theme copy](../dev-theme/themeopt_themedev_manual_warbased.md)**  
 With a WAR-based theme, you deploy both static and dynamic content as an EAR file. You can easily deploy your theme to your Portal server when your static and dynamic contents are contained in a single EAR file. Use this option when your theme is ready for production.
 
-**Parent topic:**[Copying your theme](../dev-theme/themeopt_copy.md)
 
 **Related information**  
 

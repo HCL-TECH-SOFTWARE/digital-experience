@@ -62,5 +62,4 @@ Getting started with the client-side programming Model requires a few updates to
     ```
 
 
-**Parent topic:**[The client side portlet programming model](../dev-portlet/w2_clntprgmdl.md)
 

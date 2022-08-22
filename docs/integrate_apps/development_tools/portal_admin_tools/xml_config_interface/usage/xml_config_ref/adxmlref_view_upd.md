@@ -6,5 +6,4 @@ Most portal data is cached on a per-user basis, therefore many modifications bec
 
 In general, the effect of an XML update is the same as if the update was made using administration portlets using a new browser and login session.
 
-**Parent topic:**[XML configuration reference](../admin-system/adxmlref.md)
 

@@ -39,5 +39,3 @@ The segments in this saved profiler rule appear in the Add Segment view when you
 
 **Parent topic:**[Location attributes](../contarget/targeting_geo.md)
 
-**Parent topic:**[Location attributes](../contarget/targeting_geo.md)
-

@@ -64,7 +64,6 @@ The syntax for these configuration tasks is as follows:
     ./ConfigEngine.sh disable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
 
 
-**Parent topic:**[Administering vanity URLs](../wcm/van_url_admin_ref.md)
 
 **Related information**  
 

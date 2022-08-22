@@ -115,7 +115,6 @@ For more details about these tasks refer to the following sections:
 -   **[Injecting custom aggregators](../admin-system/sa_asa_injct_custaggrg.md)**  
 By implementing a new theme extension point, you can apply different approaches to Active Site Analytics.
 
-**Parent topic:**[Collecting analytics data](../admin-system/sa_asa_collct_data.md)
 
 **Related information**  
 

@@ -13,5 +13,4 @@ To use these predefined public render parameters in your portlet, declare each o
 -   **[To use predefined public render parameters in your portlet](../dev-portlet/use_predef_pubrenparam_inportlet.md)**  
 Creating portlet URLs based on these predefined public render parameters is not different from creating any other portlet URL. The typical use case is to create a portlet render URL that addresses one or multiple predefined public render parameters.
 
-**Parent topic:**[Developing portlets](../dev-portlet/wpsdev.md)
 

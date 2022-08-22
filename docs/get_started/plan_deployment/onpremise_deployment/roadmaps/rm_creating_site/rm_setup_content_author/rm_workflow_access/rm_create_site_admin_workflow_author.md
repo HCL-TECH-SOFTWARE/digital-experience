@@ -2,7 +2,6 @@
 
 Set up access for content authors that want to create landing pages from a new page template. The page template is based on a wire frame design.
 
-**Parent topic:**[Controlling content flow with workflows](../install/rm_create_site_admin_workflow.md)
 
 # Background information for the administrator: Identify the goals of the content authors
 

@@ -33,7 +33,6 @@ ${JAVA}
 -   **[XML syntax elements for using a secure connection with SSL](../admin-system/adxmltsk_cmdln_sntx_ssl_elements.md)**  
 This topic lists the syntax elements for using the XML command line client with SSL over a secure HTTPS connection.
 
-**Parent topic:**[Command line syntax of the XML configuration interface](../admin-system/adxmltsk_cmdln_syntax.md)
 
 **Related information**  
 

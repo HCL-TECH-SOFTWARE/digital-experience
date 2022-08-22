@@ -42,7 +42,6 @@ The default locations of these directories are:
 -   IBM i - Installation location: /QIBM/ProdData/InstallationManager
 -   IBM i - Agent data location: /QIBM/UserData/InstallationManager
 
-**Parent topic:**[Backing up files, databases, and the LDAP server\(s\)](../admin-system/i_wadm_t_bkup_winlinux.md)
 
 **Previous topic:**[Backing up the database](../admin-system/i_wadm_t_bkup_db2_winlinux.md)
 

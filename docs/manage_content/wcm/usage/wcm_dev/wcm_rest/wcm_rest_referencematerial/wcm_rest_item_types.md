@@ -55,5 +55,4 @@ These item types are supported by the Web Content Manager REST service.
 |Workflow Stage|Item Specific|
 |Workflow|Item Specific|
 
-**Parent topic:**[Reference material for the Web Content Manager REST service](../wcm/wcm_rest_ref.md)
 
