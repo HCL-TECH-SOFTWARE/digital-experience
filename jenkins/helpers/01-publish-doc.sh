@@ -13,7 +13,7 @@
 microdnf install -y --nodocs git python3
 
 # Install mkdocs
-pip3 install mkdocs-material==8.4.0 mike mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin mkdocs-minify-plugin
+pip3 install mkdocs-material mike mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin mkdocs-minify-plugin
 
 # Chmod private key for Git Access
 chmod -R 600 /root/.ssh/id_rsa
