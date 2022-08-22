@@ -19,5 +19,4 @@ Following is an example that demonstrates implementation of rating logging by in
 
 **Note:** Web applications implementing preference logging must provide a user interface \(UI\) to enable preference setting. Once retrieved from the UI, the preference settings can be logged with the Rating bean.
 
-**Parent topic:**[Rating beans](../pzn/pzn_rating_beans.md)
 

@@ -17,5 +17,4 @@ Learn how to create the Referrer application object by using a visibility rule f
 -   **[Create a visibility rule that uses referral attributes](../contarget/targeting_referrer_example.md)**  
 Learn how to create the Referrer application object by using a visibility rule for your HCL Digital Experience portal website.
 
-**Parent topic:**[Application object](../pzn/pzn_application_object.md)
 

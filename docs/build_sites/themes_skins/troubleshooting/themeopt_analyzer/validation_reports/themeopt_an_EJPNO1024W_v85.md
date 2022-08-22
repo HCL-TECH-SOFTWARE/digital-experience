@@ -10,5 +10,4 @@ The theme metadata key ''\{1\}'', which is used when rendering the theme, is set
 
 Update your theme metadata with the key ''\{0\}'' to point to the fs-type1 WebDAV entry point. For example: ''\{1\}''.
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 

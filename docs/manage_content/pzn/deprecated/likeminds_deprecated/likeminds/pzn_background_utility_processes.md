@@ -9,5 +9,4 @@ The following utilities support the background processes operating on the databa
 -   `buildvisit`: This utility, which the Preference engine uses, runs daily to construct lists of items to be presented to users for rating. If your applications do not use the Preference engine, `buildvisit` is not necessary.
 -   `accumulator`: For the Item Affinity engine, the `accumulator` \(listed as `lpsIAA` in the `util` directory\) accumulates the number of times every possible item-to-item combination occurs and writes its findings to an output table specified by the item affinity set. An item affinity set defines the type of data required to build an item-to-item combination.
 
-**Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
 

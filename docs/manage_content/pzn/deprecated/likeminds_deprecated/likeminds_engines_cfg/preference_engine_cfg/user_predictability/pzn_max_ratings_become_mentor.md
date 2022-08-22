@@ -28,5 +28,4 @@ Use the following guidelines for setting `<mentor_set_name>.max_mentor_ratings:`
 
 **Note:** For more information on how the `sifter` makes use of `<mentor_set_name>.max_mentor_ratings`, see [Maximum number of mentors assigned to each user](pzn_max_mentors_per_user.md).
 
-**Parent topic:**[User predictability \| LikeMinds engine](../pzn/pzn_user_predictablity_main.md)
 

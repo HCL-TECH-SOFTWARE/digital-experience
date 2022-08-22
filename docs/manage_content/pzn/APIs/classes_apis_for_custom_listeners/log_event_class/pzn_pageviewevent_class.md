@@ -23,5 +23,4 @@ public String toString( )
 
 |Returns a String representation of this event.|
 
-**Parent topic:**[LogEvent class](../pzn/pzn_logevent_class.md)
 

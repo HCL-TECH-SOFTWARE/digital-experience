@@ -6,5 +6,4 @@ Current Action Count and Current Action Name allows you to base a profiler or ru
 
 **Current action name** inspects the names of the actions logged.
 
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
 

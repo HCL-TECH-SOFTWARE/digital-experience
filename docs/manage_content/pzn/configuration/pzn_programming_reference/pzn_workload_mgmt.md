@@ -8,5 +8,4 @@ IBM WebSphere® Application Server dynamic caching is used to cache resource ins
 
 **Note:** Care must be taken when using Personalization and the dynamic cache of JSPs, servlets, or portlets. When using the dynamic cache to cache JSPs or servlets, the cache key must take into account all the inputs into any rules on that page. If rules on the page use an employee department attribute of a user resource, the cache key must be configured to contain this employee department attribute.
 
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
 

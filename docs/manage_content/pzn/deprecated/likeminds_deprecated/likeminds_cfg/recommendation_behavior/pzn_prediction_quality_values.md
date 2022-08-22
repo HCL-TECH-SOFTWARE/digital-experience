@@ -32,5 +32,4 @@ db.applic.param.BestBets.Power = 1.0
 
 **Note:** You can use these parameters for all of the Recommendation engines except for the Item Affinity Engine.
 
-**Parent topic:**[Specifying recommendation behavior](../pzn/pzn_specify_recommendation_behavior.md)
 

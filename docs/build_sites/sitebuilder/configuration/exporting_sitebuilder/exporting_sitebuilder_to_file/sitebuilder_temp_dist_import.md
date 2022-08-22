@@ -23,5 +23,4 @@ Follow these steps to import an exported Site Builder template file that is on a
 
 When the import completes successfully, the imported Site Builder template appears on the list of available Site Builder templates.
 
-**Parent topic:**[Exporting a Site Builder template to a file](../sitebuilder/sitebuilder_temp_dist_man.md)
 

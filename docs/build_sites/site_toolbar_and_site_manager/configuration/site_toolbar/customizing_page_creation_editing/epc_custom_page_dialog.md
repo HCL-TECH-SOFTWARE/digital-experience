@@ -31,5 +31,4 @@ You specify the sort key by setting the page parameter ibm.portal.pageTemplate.s
     ```
 
 
-**Parent topic:**[Portal administration](../practitioner_studio/administration.md)
 

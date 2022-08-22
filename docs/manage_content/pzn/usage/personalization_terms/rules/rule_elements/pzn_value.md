@@ -14,5 +14,4 @@ Resources may be created using mapped values instead of actual values specified 
 
 In addition to predefined resource properties, you can enter properties of a resource that are not in the list. If you know the resource to handle dynamically, specify the name of the property. If the resource manages properties dynamically, the values are retrieved when the rule is evaluated.
 
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
 

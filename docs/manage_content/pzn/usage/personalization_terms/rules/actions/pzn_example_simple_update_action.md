@@ -14,5 +14,4 @@ Update
   	     current Portal Users.Title set to current Session.title 
 ```
 
-**Parent topic:**[Actions](../pzn/pzn_actions.md)
 

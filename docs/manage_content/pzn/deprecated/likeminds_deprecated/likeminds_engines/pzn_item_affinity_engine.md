@@ -8,5 +8,4 @@ The Item Affinity engine lets you track more than mere purchases measured at che
 
 Unlike the other engines, Item Affinity Engine recommendations are based on Market Basket Analysis statistics, not collaborative filtering. Market Basket Analysis enables content affinity predictions even when cold-start situations obscure the relevance of collaborative filtering. The Item Affinity Engine can be used to provide improved automated recommendations, such as cross-sells, even for first time visitors to the Web site.
 
-**Parent topic:**[The LikeMinds Recommendation Engines](../pzn/pzn_likeminds_recommendation_engines_3.md)
 

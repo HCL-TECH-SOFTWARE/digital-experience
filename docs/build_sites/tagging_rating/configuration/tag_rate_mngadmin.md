@@ -49,7 +49,6 @@ You can use the XML configuration interface to manage tagging and rating in the 
 -   **[Hints and tips for tagging and rating](../admin-system/tag_rate_ref_hintip.md)**  
 Learn about some hints and tips that apply to tagging and rating. Some hints and tips might help developers and portal administrators, others might help portal users.
 
-**Parent topic:**[Portal administration](../practitioner_studio/administration.md)
 
 **Related information**  
 

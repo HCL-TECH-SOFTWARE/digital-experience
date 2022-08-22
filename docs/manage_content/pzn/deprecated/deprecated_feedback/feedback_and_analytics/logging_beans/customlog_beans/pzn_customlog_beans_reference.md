@@ -24,5 +24,4 @@ The log methods generate a CustomLogEvent with the request and custom data. The 
 
 CustomLog beans should be instantiated as session beans; however, they do not maintain any session data.
 
-**Parent topic:**[CustomLog beans](../pzn/pzn_customlog_beans.md)
 

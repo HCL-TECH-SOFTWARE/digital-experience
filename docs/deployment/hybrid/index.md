@@ -31,5 +31,4 @@ The HCL Digital Experience 9.5 Hybrid deployment reference architecture and topi
 
     -   **Step 3: Proceed to configuration instructions** listed in this Help Center topic: [Helm Deployment Configuration](helm_install_commands.md).
 
-**Parent topic:**[Digital Experience on containerized platforms](../containerization/deployment.md)
 

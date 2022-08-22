@@ -25,5 +25,4 @@ To implement the geolocation interface, you must provide methods to resolve coor
 -   **[Create a segment using State attribute](../contarget/targeting_geo_example.md)**  
 Learn more about the Device application object through an example that uses a location attribute \(state\).
 
-**Parent topic:**[Device application object](../contarget/targeting_device_overview.md)
 

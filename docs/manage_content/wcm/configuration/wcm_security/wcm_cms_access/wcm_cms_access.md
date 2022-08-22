@@ -9,7 +9,6 @@ Different users will have different access to items and functions in your system
 -   **[Security architecture](../wcm/wcm_cms_security_architecture.md)**  
 The security architecture describes what groups are required for your site and what access is required for different groups to the authoring portlet and rendered website.
 
-**Parent topic:**[Portal administration](../practitioner_studio/administration.md)
 
 **Related information**  
 

@@ -25,5 +25,4 @@ Depending on the type of recommendation you want to extract, the specific engine
 
 ![LikeMinds Recommendation Engine architecture](../images/lpsparts.jpg)
 
-**Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
 

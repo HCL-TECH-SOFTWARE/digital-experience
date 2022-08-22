@@ -28,5 +28,4 @@ The following portlet preferences can be specified for Site Manager:
 -   **[Customizing the Create Content view](../admin-system/epc_custom_create_content.md)**  
 The Create Content view, which is accessed by clicking context menu in Site Manager, is used by a content author to add web content items to a page.
 
-**Parent topic:**[Portal administration](../practitioner_studio/administration.md)
 

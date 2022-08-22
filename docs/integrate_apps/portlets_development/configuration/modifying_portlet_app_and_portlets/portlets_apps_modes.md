@@ -17,5 +17,4 @@ Many portlet applications and portlets have associated configuration parameters 
 -   **[Switching from HCL Digital Experience 9.5 Practitioner Studio to the HCL Digital Experience 8.5 and 9.0 Login interface](../admin-system/portletapps_changelogin.md)**  
 With the HCL Digital Experience 9.5, a new login user interface is presented. HCL Digital Experience Administrators can switch back to the HCL Digital Experience 8.5 and 9.0 user interface by configuring the portlet.
 
-**Parent topic:**[Portal administration](../practitioner_studio/administration.md)
 

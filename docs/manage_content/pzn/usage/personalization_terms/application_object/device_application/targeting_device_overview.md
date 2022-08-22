@@ -11,5 +11,4 @@ Site content can display differently for a smartphone, desktop, or other device 
 -   **[Location attributes](../contarget/targeting_geo.md)**  
 You can use location attributes to tailor the content that displays.
 
-**Parent topic:**[Application object](../pzn/pzn_application_object.md)
 

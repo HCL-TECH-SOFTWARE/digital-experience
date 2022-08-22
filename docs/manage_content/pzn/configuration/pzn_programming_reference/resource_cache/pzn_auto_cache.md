@@ -22,7 +22,6 @@ When the automatic cache entry clearing feature is enabled, content authors can 
 3.  Restart your server to apply your changes. In a clustered environment, restart all cluster nodes.
 
 
-**Parent topic:**[Resource cache](../pzn/pzn_resource_cache.md)
 
 **Related information**  
 

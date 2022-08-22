@@ -22,5 +22,4 @@ Check Browser is
   	    Otherwise unsupported
 ```
 
-**Parent topic:**[Profilers](../pzn/pzn_profilers.md)
 

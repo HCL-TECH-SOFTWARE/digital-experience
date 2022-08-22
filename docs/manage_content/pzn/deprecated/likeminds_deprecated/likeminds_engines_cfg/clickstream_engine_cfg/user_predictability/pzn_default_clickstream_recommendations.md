@@ -6,5 +6,4 @@ The Clickstream Engine uses transaction data stored with a special user to gener
 
 Run the `buildstats` utility on a regular basis. By default, the installer sets `buildstats` to run once a day. Some applications use their own business logic to assign the score to items. If you want to override the score field value to use your application's scoring instead, run `buildstats` using the `-noscore` argument.
 
-**Parent topic:**[User predictability](../pzn/pzn_user_predictability.md)
 

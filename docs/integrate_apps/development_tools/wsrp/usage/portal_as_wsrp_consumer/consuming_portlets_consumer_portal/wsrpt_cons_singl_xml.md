@@ -38,7 +38,6 @@ The following XML sample shows how you use the XML configuration interface to in
 
 ```
 
-**Parent topic:**[Using the XML configuration interface to consume portlets from a Producer portal](../admin-system/wsrpt_cons_consrv_xml.md)
 
 **Related information**  
 

@@ -10,5 +10,4 @@ Theme ''\{0\}'' is configured with context-root ''\{1\}''. An application with t
 
 Verify that the context-root setting of theme ''\{0\}'' matches the context root defined for the theme application and that the application is started.
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 

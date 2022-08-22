@@ -10,5 +10,4 @@ A missing module dependency has been detected in a module which defines a prereq
 
 Update your module dependencies, either remove the referenced module or make the missing module available.
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 

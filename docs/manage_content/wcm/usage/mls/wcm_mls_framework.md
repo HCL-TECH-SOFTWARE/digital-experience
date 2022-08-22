@@ -31,5 +31,4 @@ The key elements of this framework are:
     Presentation templates can be different across locales by having different mappings in each locale.
 
 
-**Parent topic:**[How to use the HCL Web Content Manager Multilingual Solution](../wcm/wcm_mls_using.md)
 

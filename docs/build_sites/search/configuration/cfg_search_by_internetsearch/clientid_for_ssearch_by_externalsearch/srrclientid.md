@@ -39,5 +39,4 @@ To add search engines by using the administration portlet Manage Clients, follow
 -   **[Adding search engines by using the XML configuration interface](../admin-system/srrclientid_xml.md)**  
 To add search engines by using the XML configuration interface, you import them by an XML script file. To make sure that the search mechanism works correctly, you need to add the capability HTML\_SEARCH.
 
-**Parent topic:**[Portal administration](../practitioner_studio/administration.md)
 

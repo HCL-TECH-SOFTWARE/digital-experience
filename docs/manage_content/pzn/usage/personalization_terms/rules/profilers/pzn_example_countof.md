@@ -19,5 +19,4 @@ Red when number of items matching (Shopper.shoppingCart.color is red) is greater
 Green when number of items matching (Shopper.shoppingCart.color is green) is greater than 5
 ```
 
-**Parent topic:**[Profilers](../pzn/pzn_profilers.md)
 

@@ -21,5 +21,4 @@ The Clickstream Engine tracks clickstream \(or rating\) behavior and generates r
 -   **[Item Affinity Engine \| LikeMinds for HCL Digital Experience](../pzn/pzn_item_affinity_engine.md)**  
 The Item Affinity Engine generates recommendations based on any transactional history available.
 
-**Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
 

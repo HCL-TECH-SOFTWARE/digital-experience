@@ -11,7 +11,6 @@ Disable support for managed pages by running the disable-managed-pages configura
 -   **[Transferring content associations to the Portal Site library](../wcm/wcm_config_mngpages_transfer.md)**  
 When you enable manage pages, any web content pages that you have are converted to managed pages and added to the Portal Site library. However, the content that is associated with the web content pages remains in the original libraries. You can transfer this associated content to the Portal Site library with the internalize-content-mappings task.
 
-**Parent topic:**[HCL Web Content Manager](../wcm/wcm_install_cfg.md)
 
 **Related information**  
 

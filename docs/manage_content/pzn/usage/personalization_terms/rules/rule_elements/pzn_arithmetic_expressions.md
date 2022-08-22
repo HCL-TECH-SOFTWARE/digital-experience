@@ -8,5 +8,4 @@ An example use of an arithmetic expression is a profiler that profiles Web site 
 
 Arithmetic expressions are calculated according to traditional order of operations \(multiplication and division are calculated before addition and subtraction. For example, 3+2\*2–1/2 evaluates to 6.5\). It is not possible to group expressions using parentheses.
 
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
 

@@ -34,5 +34,4 @@ In this example, you are creating two segments by using a profiler rule: Smartph
 
 The segments in this saved profiler rule appear in the Add Segment view when you create targeting rules. You can add these segments to content in a targeting rule or use these segments in other types of rules.
 
-**Parent topic:**[Device class attribute](../contarget/targeting_device.md)
 

@@ -17,5 +17,4 @@ To implement rating logging, insert a Rating bean into your JSP.
 -   **[Rating beans reference](../pzn/pzn_rating_beans_reference.md)**  
 Learn about the various method signatures of Rating beans.
 
-**Parent topic:**[Logging beans](../pzn/pzn_logging_beans.md)
 

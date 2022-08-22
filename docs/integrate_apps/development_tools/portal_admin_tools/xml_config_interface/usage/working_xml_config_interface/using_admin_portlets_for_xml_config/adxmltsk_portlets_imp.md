@@ -13,7 +13,6 @@ To import an XML configuration file by using the Import XML portlet, proceed as 
 4.  When the import is complete, the portlet shows a success message.
 
 
-**Parent topic:**[Portal administration](../practitioner_studio/administration.md)
 
 **Related information**  
 

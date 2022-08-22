@@ -12,5 +12,4 @@ movie_pref.engine.titan.predictable.loop_check_cutoff = 12
 
 If the user is not predictable, the engine will examine another group of `<eng_instance_name>.engine.titan.predictable.loop_check_cutoff` mentors, and then check to see whether the user is predictable. It will continue until it finds that the user is predictable or it runs out of mentors.
 
-**Parent topic:**[User predictability](../pzn/pzn_user_predictability.md)
 

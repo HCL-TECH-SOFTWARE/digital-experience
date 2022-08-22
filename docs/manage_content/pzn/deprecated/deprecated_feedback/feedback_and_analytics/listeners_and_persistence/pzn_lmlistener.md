@@ -6,5 +6,4 @@ The LMListener only processes ActionEvent and RatingEvent data. These events res
 
 An instance of the LMListener is active after LikeMinds configuration tasks are run.
 
-**Parent topic:**[Listeners and persistence](../pzn/pzn_log_listeners.md)
 

@@ -28,5 +28,4 @@ You can use the Import Template action in Site Builder to make the Site Builder 
 -   **[Importing a Site Builder template from a file by using Solution Installer](../sitebuilder/sitebuilder_temp_dist_import_solution.md)**  
 If you export a Site Builder template file, use the Solution Installer to make the template available to HCL Portal administrators and website creators.
 
-**Parent topic:**[Exporting Site Builder templates to other servers](../sitebuilder/sitebuilder_temp_dist.md)
 

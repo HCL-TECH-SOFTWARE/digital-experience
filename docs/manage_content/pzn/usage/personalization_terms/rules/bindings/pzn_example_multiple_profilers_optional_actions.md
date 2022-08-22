@@ -30,5 +30,4 @@ When UserClearance is
   	     show 10 items
 ```
 
-**Parent topic:**[Bindings](../pzn/pzn_bindings.md)
 

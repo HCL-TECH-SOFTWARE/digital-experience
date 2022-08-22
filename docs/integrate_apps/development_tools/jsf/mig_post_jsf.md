@@ -57,7 +57,6 @@ Prior to HCL taking ownership of the Portlet Bridge IBM claimed support for JSF 
 
 HCL remains committed to providing ongoing support for customers running portlets for many years to come as this is a key capability of the DX product. While HCL is investigating what is required to complete the JSF 2.2 bridge, we do not anticipate a solution being available in the short-term. HCL will update this statement as soon as we have determined a solution for the portlet bridge JSF 2.2 implementation.
 
-**Parent topic:**[Add-ons, features, and third-party integration tasks](../migrate/mig_post_ptl_int_addon.md)
 
 **Related information**  
 

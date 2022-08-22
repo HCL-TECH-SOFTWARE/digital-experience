@@ -144,5 +144,4 @@ Use the search bar to search the tree view and the details view for various info
 
 Enter a term into the search field in the toolbar and press Enter or click the **Find** icon. The found item is then highlighted for a short time with a yellow background. Pressing Enter again or clicking **Find** icon again will find the next item. If no item is found, either a pop-up dialog opens to instruct you to start the search from the beginning or the background of the search field is marked in red.
 
-**Parent topic:**[Theme Optimization Analyzer](../dev-theme/themeopt_an_analyzer.md)
 

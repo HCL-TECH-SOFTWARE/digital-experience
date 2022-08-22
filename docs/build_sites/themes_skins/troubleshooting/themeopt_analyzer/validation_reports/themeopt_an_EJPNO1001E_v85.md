@@ -10,5 +10,4 @@ Theme metadata with a key you're using for your theme indicates that there are s
 
 Update the WebDAV directory name and remove all spaces. Update the theme metadata with the key to match the modified WebDAV directory name.
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 

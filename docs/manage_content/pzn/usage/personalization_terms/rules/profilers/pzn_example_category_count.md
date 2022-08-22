@@ -24,5 +24,4 @@ ArticlePreference is
   	         current Category Count.Articles.Sports is greater than current Category Count.Articles.Movies
 ```
 
-**Parent topic:**[Profilers](../pzn/pzn_profilers.md)
 

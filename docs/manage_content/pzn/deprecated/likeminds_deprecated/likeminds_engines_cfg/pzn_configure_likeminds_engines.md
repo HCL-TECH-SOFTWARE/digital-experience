@@ -21,5 +21,4 @@ Learn how to configure the Clickstream Engine.
 -   **[Configuring the Item Affinity Engine](../pzn/pzn_configure_item_affinity_engine.md)**  
 For every cross-selling transaction in the user's shopping history, the Item Affinity Engine derives its calculations from the following statistics.
 
-**Parent topic:**[Configuring LikeMinds](../pzn/pzn_configure_likemind_servers.md)
 

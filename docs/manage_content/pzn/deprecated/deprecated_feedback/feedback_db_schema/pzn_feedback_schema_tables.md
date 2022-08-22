@@ -369,5 +369,4 @@ The following tables are included in the Feedback schema, however, the tables ar
 -   ServerNodes
 -   Web\_Nodes
 
-**Parent topic:**[Feedback database schema](../pzn/pzn_feedback_db_schema.md)
 

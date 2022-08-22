@@ -36,5 +36,4 @@ View an example of an update action that is part of a Web site that allows visit
 -   **[Example: Simple email action](../pzn/pzn_example_simple_email_action.md)**  
 This email action rule example is typical of one that might be used after a website visitor submits a form indicating interest in an item or service.
 
-**Parent topic:**[Rules](../pzn/pzn_rules.md)
 

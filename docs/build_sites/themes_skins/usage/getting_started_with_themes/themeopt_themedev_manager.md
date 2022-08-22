@@ -56,5 +56,4 @@ When you search for existing themes, the search results display in the Theme Man
     **Note:** Themes that are necessary for system stability cannot be deleted.
 
 
-**Parent topic:**[Themes](../practitioner_studio/themes.md)
 

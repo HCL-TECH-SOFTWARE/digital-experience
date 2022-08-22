@@ -15,7 +15,6 @@ The email action rule can be attached to a content spot that, when triggered by 
   	Body URI /email/mortgage-rates.jsp
 ```
 
-**Parent topic:**[Actions](../pzn/pzn_actions.md)
 
 **Related information**  
 

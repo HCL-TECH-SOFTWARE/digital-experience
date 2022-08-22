@@ -10,5 +10,4 @@ An invalid URI was detected in your skin. The value of this metadata key cannot 
 
 Update your skin metadata with the key to a proper URI.
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 

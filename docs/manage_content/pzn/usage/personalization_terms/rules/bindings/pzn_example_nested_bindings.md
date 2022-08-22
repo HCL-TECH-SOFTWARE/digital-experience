@@ -37,5 +37,4 @@ Get Top Products:
   	     order as is
 ```
 
-**Parent topic:**[Bindings](../pzn/pzn_bindings.md)
 

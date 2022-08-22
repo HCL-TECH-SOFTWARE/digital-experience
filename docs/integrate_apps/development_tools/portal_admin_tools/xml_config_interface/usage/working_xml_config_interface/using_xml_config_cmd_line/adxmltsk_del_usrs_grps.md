@@ -36,7 +36,6 @@ To remove users and groups from your portal, proceed as follows:
 
 After you delete these entries by using the modified XML script, all customization is lost for the deleted users and groups.
 
-**Parent topic:**[Users and groups](../admin-system/adusrgrp.md)
 
 **Related information**  
 

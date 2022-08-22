@@ -9,5 +9,4 @@ How you configure your database during installation has a significant impact on 
 -   **sifter configuration**: You can configure the `sifter` to accommodate heavy loads or busy sites. Be aware that the `sifter` has heavy memory usage.
 -   **accumulator configuration:** As with the `sifter`, the `accumulator` has heavy memory usage, so you should schedule it to run during off-peak hours.
 
-**Parent topic:**[Configuring LikeMinds](../pzn/pzn_configure_likemind_servers.md)
 

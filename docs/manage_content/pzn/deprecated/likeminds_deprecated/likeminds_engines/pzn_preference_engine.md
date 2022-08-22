@@ -12,5 +12,4 @@ The shipped with the LikeMinds Recommendation Engine presents a typical implemen
 
 -   A user can ask for a recommendation about the best bet, which is provided by a LikeMinds rule. This corresponds to asking which movie a user would like the most among all available movies.
 
-**Parent topic:**[The LikeMinds Recommendation Engines](../pzn/pzn_likeminds_recommendation_engines_3.md)
 

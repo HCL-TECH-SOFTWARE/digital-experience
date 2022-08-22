@@ -45,5 +45,4 @@ If you choose to evaluate a profiler instead of a resource attribute in the Spec
 
 On one side of the evaluation, the possible choices are the profiles that are defined within that profiler. You may select one or more profiles for the result of the evaluation.
 
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
 

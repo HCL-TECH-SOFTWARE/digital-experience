@@ -64,5 +64,4 @@ In this example, create a visibility rule that uses your order history as the pa
 |
 
 
-**Parent topic:**[Shared Data application object](../contarget/targeting_shared_data.md)
 

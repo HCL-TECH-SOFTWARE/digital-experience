@@ -14,7 +14,6 @@ Create a theme metadata with the key com.ibm.portal.layout.template.ref. XMLAcce
 <div class="themeOptAnalyzerFixedText"><parameter name="com.ibm.portal.layout.template.href" type="string" update="set"><br/><![CDATA[[{0}]]><br/></parameter></div>
 ```
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 
 **Related information**  
 

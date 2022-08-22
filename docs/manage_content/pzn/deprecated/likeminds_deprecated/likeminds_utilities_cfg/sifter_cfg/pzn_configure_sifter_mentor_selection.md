@@ -43,5 +43,4 @@ The Lps\_User\_Data sift\_pri field values must be greater than 0 in order for t
 -   **[Time interval for checking sift priority](../pzn/pzn_time_check_sift_priority.md)**  
 Learn how to specify time interval for checking sift priority.
 
-**Parent topic:**[Configuring LikeMinds utilities](../pzn/pzn_config_background_utilities.md)
 

@@ -24,5 +24,4 @@ When User Location is
   	     order as is
 ```
 
-**Parent topic:**[Bindings](../pzn/pzn_bindings.md)
 

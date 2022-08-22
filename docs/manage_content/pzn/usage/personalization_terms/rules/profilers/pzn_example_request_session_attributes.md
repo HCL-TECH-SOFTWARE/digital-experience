@@ -18,5 +18,4 @@ User News is
   	         current Request.ProcessNews is UnreadAll 
 ```
 
-**Parent topic:**[Profilers](../pzn/pzn_profilers.md)
 

@@ -21,5 +21,4 @@ when current Request Attributes.user is equal to rob
 
 All data types are supported.
 
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
 

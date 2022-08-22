@@ -75,5 +75,4 @@ Learn about the SET TO action and alternatives to SET TO.
 -   **[value rule element](../pzn/pzn_value.md)**  
 Value is the placeholder for the result of an evaluation. This value can be one you enter, the value of another resource attribute, or an arithmetic expression.
 
-**Parent topic:**[Rules](../pzn/pzn_rules.md)
 

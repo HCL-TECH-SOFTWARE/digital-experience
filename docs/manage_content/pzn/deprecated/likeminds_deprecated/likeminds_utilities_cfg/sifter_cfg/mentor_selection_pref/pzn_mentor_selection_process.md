@@ -26,5 +26,4 @@ Learn how to specify how many users to sift during a single batch.
 -   **[Pausing the sifter during heavy database](../pzn/pzn_pause_sifter_heavy_db.md)**  
 Learn how to configure the sifter during heavy database.
 
-**Parent topic:**[Configuring the sifter for mentor selection](../pzn/pzn_configure_sifter_mentor_selection.md)
 

@@ -14,7 +14,6 @@ See the Resource Permissions portlet help for detailed instructions on setting r
 
 Access the Resource Permissions portlet from the administration menu. Click the **Administration menu** icon. Then, click **Access** \> **Resource Permissions**. From there, you select the resource type that you want to work with, an example is Pages. An **Assign Access** icon is available for each page listed.
 
-**Parent topic:**[Portal administration](../practitioner_studio/administration.md)
 
 **Related information**  
 

@@ -18,5 +18,4 @@ sifter -config MovieSift -conf <lps config file>
 
 that `sifter` will use the`MovieSift.<mentor_set_name>. reload_mentor_pool_at = 0 3 * * * setting`.
 
-**Parent topic:**[Configuring the sifter for mentor selection](../pzn/pzn_configure_sifter_mentor_selection.md)
 

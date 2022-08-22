@@ -14,5 +14,4 @@ You can specify any field in the Lps\_User\_Data table for this parameter. For e
 <mentor_set_name>.constraint = user_id > 100000 and age > 25
 ```
 
-**Parent topic:**[Configuring the sifter for mentor selection](../pzn/pzn_configure_sifter_mentor_selection.md)
 

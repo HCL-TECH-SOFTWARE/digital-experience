@@ -224,5 +224,4 @@ The RatingEvent class is used to access the data logged with a Rating bean.
 -   **[PageViewEvent class](../pzn/pzn_pageviewevent_class.md)**  
 The PageViewEvent class is used to access data logged by a PageView bean.
 
-**Parent topic:**[Classes and APIs for writing custom listeners](../pzn/pzn_classes_apis_custom_listeners.md)
 

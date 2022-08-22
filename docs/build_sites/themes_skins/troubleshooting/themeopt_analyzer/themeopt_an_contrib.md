@@ -92,5 +92,4 @@ Enter a term into the search field in the toolbar and press Enter or click the *
 
 For every combined request that the theme optimization framework produces, you can see the overall ability to cache that request and how those caches are calculated. You can select a cache group or resources and examine it.
 
-**Parent topic:**[Theme Optimization Analyzer](../dev-theme/themeopt_an_analyzer.md)
 

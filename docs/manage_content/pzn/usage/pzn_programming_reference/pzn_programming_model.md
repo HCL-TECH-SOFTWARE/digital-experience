@@ -23,5 +23,4 @@ The model expands three Web team roles:
     This team member is the Web content expert and/or server administrator. The administrator knows what content already exists, where it is stored, the people who provide the content, how often the content is updated and other details. This person understands how to categorize content and helps the business users organize and target content for categories of users.
 
 
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
 

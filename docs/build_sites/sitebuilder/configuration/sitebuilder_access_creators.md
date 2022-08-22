@@ -99,5 +99,4 @@ Assign all website creators the Contributor role for the Site Builder Template l
     7.  Click **OK**.
 
 
-**Parent topic:**[Deploying Site Builder](../sitebuilder/sitebuilder_access.md)
 

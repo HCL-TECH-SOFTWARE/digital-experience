@@ -10,5 +10,4 @@ movie_pref.db.engine.tune.num_mentors = 60
 
 If you do not set this parameter, then the Preference Engine uses the value set for `<mentor_set>.max_mentors = <number>`.
 
-**Parent topic:**[Configuring the Preference engine](../pzn/pzn_configure_preference_engine.md)
 

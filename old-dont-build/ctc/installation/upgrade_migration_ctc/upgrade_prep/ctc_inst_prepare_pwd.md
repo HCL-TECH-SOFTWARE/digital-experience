@@ -9,5 +9,4 @@ You can add the WasPassword and PortalAdminPwd passwords to the wkplc.properties
 3.  Save and close the file.
 
 
-**Parent topic:**[Upgrade preparation](../ctc/ctc-upgrade-prepare.md)
 

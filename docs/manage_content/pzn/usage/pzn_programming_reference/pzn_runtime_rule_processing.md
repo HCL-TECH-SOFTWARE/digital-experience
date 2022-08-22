@@ -68,5 +68,4 @@ Step D: The rules engine processes the rule to obtain the results of the rules e
 
 Step E: The rules engine returns the result of the rule execution to the content spot bean. The result can be a list of valid content from which a user can make a selection, a string, a Boolean value, or no results. The JSP scriptlet or servlet uses the rule result to derive specific web content for use in the generated web page. The web server forwards the page to the client.
 
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
 

@@ -14,5 +14,4 @@ Count of (shoppingCart.item.color is red) is greater than 5
 
 Although you can make counts of any data type, the tally must be compared against a value or resource attribute that has a data type of number, decimal number, or integer.
 
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
 

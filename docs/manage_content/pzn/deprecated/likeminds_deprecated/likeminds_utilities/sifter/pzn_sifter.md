@@ -4,5 +4,4 @@ The sifter, which is used for all the Recommendation engines except for Item Aff
 
 The `sifter` must be running whenever the LikeMinds server is running. However, you can install the `sifter` across multiple machines to distribute load.
 
-**Parent topic:**[Using the LikeMinds utilities](../pzn/pzn_using_likeminds_utilities.md)
 

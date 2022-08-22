@@ -16,7 +16,6 @@ Creating the portal site search collection can fail due to a file path length re
 1.  Change the default directory location for the portal site search collection to a shorter path. The complete path and file name must not exceed a length of 118 characters. For information, go to *Configuring the default location for search collections*.
 2.  Re-create the portal site search collection. For information, go to *Resetting the default search collection*.
 
-**Parent topic:**[HCL Digital Experience Portal Search](../admin-system/admsrch.md)
 
 **Related information**  
 

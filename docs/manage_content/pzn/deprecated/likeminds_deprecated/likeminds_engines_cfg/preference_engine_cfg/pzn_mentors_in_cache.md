@@ -8,5 +8,4 @@ If a user requests recommendations before the sifter has found mentors for that 
 movie_pref.db.engine.tune.max_cached_mentors = 600
 ```
 
-**Parent topic:**[Configuring the Preference engine](../pzn/pzn_configure_preference_engine.md)
 

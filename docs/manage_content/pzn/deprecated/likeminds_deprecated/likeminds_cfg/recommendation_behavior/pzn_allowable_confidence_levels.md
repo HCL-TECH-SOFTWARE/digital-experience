@@ -9,5 +9,4 @@ db.applic.param.lowestconfidence = 1
 db.applic.param.numberconfidencelevels = 4
 ```
 
-**Parent topic:**[Specifying recommendation behavior](../pzn/pzn_specify_recommendation_behavior.md)
 

@@ -6,5 +6,4 @@ The Preference Engine can use an "average user," whose ratings are the average o
 
 However, remember that this feature can be costly in system resources. To disable it, set it to `true`. \(The default setting is `true`.\)
 
-**Parent topic:**[Configuring the Preference engine](../pzn/pzn_configure_preference_engine.md)
 

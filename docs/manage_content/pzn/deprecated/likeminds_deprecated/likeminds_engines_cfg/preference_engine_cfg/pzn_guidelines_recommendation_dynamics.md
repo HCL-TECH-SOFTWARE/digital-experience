@@ -13,5 +13,4 @@ You can use the following configuration parameters to control, or at least balan
     -   `<mentor_set_name>.mentor.pool.size`
     -   `<mentor_set_name>.max_mentors`
 
-**Parent topic:**[Configuring the Preference engine](../pzn/pzn_configure_preference_engine.md)
 

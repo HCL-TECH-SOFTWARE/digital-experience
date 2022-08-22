@@ -22,5 +22,4 @@ The buildvisit background utility computes a ratability value for each item in t
 -   **[Repeated items in visit list](../pzn/pzn_repeated_items_visit_list.md)**  
 To specify whether the buildvisit utility should repeat an item in the visit list to be shown to a user, set db.visitlist.ratability.duplication\_threshold. Items with ratability values greater than this threshold may be repeated.
 
-**Parent topic:**[Configuring the LikeMinds engines](../pzn/pzn_configure_likeminds_engines.md)
 

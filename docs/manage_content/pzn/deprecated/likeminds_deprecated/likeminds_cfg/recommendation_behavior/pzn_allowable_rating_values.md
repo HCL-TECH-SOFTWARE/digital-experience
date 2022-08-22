@@ -20,5 +20,4 @@ The LikeMinds server ignores ratings which are neither in the specified range of
 
 **Note:** You can use these parameters for all of the Recommendation engines except for the Item Affinity Engine.
 
-**Parent topic:**[Specifying recommendation behavior](../pzn/pzn_specify_recommendation_behavior.md)
 

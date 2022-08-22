@@ -42,7 +42,6 @@ In some cases, it may be useful to call into a content spot without having acces
 
 **Next topic:**[Query framework](../pzn/pzn_query_framework.md)
 
-**Parent topic:**[Personalization terms](../pzn/pzn_concepts.md)
 
 **Previous topic:**[Application object](../pzn/pzn_application_object.md)
 

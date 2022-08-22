@@ -17,5 +17,4 @@ You can specify the following categories of sifter-specific configuration parame
 -   Recomputing \(rebuilding\) the mentor pool
 -   Pausing the `sifter` during heavy database access
 
-**Parent topic:**[Configuring the sifter for mentor selection](../pzn/pzn_configure_sifter_mentor_selection.md)
 

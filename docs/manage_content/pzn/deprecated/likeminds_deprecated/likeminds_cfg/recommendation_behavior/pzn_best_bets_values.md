@@ -16,5 +16,4 @@ Set `db.applic.param.BestBets.list.cutoff` to the maximum percentage of the tota
 db.applic.param.BestBets.list.cutoff = 50
 ```
 
-**Parent topic:**[Specifying recommendation behavior](../pzn/pzn_specify_recommendation_behavior.md)
 

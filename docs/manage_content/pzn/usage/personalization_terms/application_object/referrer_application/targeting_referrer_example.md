@@ -62,5 +62,4 @@ This rule prevents other types of information, such as beach or mountain vacatio
 |
 
 
-**Parent topic:**[Referrer application object](../contarget/targeting_referrer.md)
 

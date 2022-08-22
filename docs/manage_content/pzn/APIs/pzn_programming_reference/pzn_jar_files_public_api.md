@@ -11,5 +11,4 @@ If you are compiling your application outside of Rational Application Developer 
 -   pznruntime.jar
 -   pznwpsruntime.jar
 
-**Parent topic:**[Using the Personalization APIs](../pzn/pzn_using_apis.md)
 

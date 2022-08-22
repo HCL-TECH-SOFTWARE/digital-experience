@@ -66,5 +66,4 @@ When you do specify actual values, you can enter either the value itself \(such 
 
 |
 
-**Parent topic:**[Configuring LikeMinds](../pzn/pzn_configure_likemind_servers.md)
 

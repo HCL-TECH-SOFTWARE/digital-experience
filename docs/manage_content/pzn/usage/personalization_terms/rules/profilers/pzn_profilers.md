@@ -35,5 +35,4 @@ Learn how to construct a profiler in HCL Digital Experience using request attrib
 -   **[Example: Arithmetic operation](../pzn/pzn_arithmetic_op.md)**  
 View an example of a profiler that uses arithmetic operations.
 
-**Parent topic:**[Rules](../pzn/pzn_rules.md)
 

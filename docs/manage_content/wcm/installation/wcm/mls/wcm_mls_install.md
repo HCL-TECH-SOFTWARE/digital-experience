@@ -65,7 +65,6 @@ The multilingual solution consists of a set of extensions to Web Content Manager
 7.  Repeat these steps on every server and cluster node.
 
 
-**Parent topic:**[Extensions for multilingual sites Multilingual Solution](../wcm/wcm_mls_extensions.md)
 
 **Related information**  
 

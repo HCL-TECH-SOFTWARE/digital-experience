@@ -15,7 +15,6 @@ Before your run time server can send personalized email:
     3.  Restart the server on which the email rules execute for the changes to take effect.
 -   Additional configuration is available through the PersonalizationService.properties file. Using this file, you configure how often Personalization checks for rule events that run scheduled or repeating emails. You can specify what port an email rule will try to connect to when retrieving the bodyuri of the rule. You can also configure the mail session being used.
 
-**Parent topic:**[Rules](../pzn/pzn_rules.md)
 
 **Related information**  
 

@@ -24,5 +24,4 @@ You can create a new custom unique name for a portal resource or update an exist
 5.  Return to the resource type list by clicking **Select type**.
 
 
-**Parent topic:**[Portal administration](../practitioner_studio/administration.md)
 

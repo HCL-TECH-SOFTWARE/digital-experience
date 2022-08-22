@@ -10,5 +10,4 @@ A module you are using is referenced in the module list of your profile but does
 
 Update your profile to point to the correct module instead or remove the missing module reference.
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 

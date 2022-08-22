@@ -19,5 +19,4 @@ The buildstats utility updates database statistics. You can use buildstats for a
 -   **[Accumulator \| LikeMinds utilities](../pzn/pzn_accumulator.md)**  
 Use the accumulator utility if you are using the Item Affinity Engine. This utility accumulates the number of times every possible item-to-item combination occurs.
 
-**Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
 

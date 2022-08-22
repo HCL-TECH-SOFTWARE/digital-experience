@@ -16,5 +16,4 @@ This completed profiler is used within a binding as a means of determining wheth
   	    Otherwise Regular
 ```
 
-**Parent topic:**[Profilers](../pzn/pzn_profilers.md)
 

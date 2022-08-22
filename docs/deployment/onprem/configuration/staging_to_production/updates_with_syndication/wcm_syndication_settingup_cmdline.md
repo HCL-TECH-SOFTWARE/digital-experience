@@ -188,5 +188,4 @@ Project templates are not syndicated.
 |
 
 
-**Parent topic:**[Updates with syndication](../deploy/dep_up_syn_main.md)
 

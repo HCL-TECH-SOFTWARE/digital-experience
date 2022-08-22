@@ -15,5 +15,4 @@ The ResourceInfo class is a wrapper class for a resource id and collection name 
 -   **[RuleInfo class](../pzn/pzn_ruleinfo_class.md)**  
 The RuleInfo class is a wrapper class for a rule name and campaign name tuple.
 
-**Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
 

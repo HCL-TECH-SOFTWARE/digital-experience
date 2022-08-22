@@ -21,5 +21,4 @@ When creating a binding, it is possible to use a binding in any of the `do actio
 -   **[Example: Nested bindings \(advanced\)](../pzn/pzn_example_nested_bindings_adv.md)**  
 View an example that demonstrates advanced nested bindings.
 
-**Parent topic:**[Rules](../pzn/pzn_rules.md)
 

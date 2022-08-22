@@ -91,5 +91,4 @@ Theme context root not found.
 -   **[EJPNO1027W error](../dev-theme/themeopt_an_EJPNO1027W_v85.md)**  
 Security list configuration is not set.
 
-**Parent topic:**[Theme Optimization Analyzer](../dev-theme/themeopt_an_analyzer.md)
 

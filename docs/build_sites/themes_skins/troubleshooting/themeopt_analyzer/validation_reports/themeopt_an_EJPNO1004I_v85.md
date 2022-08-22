@@ -10,5 +10,4 @@ A module you are using is referenced multiple times in the module list of anothe
 
 Update your profile and remove the duplicate entries of the module.
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 

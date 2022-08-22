@@ -43,5 +43,4 @@ To implement action logging, insert an Action bean into your JSP. To log additio
 -   **[Action beans reference](../pzn/pzn_action_beans_reference.md)**  
 View some additional information related to Action beans and associated methods.
 
-**Parent topic:**[Logging beans](../pzn/pzn_logging_beans.md)
 

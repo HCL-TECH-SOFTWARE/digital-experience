@@ -10,5 +10,4 @@ Your theme is configured incorrectly. The context root is missing a leading forw
 
 Update the configuration for your theme by prefixing the context root with a forward slash.
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 

@@ -11,5 +11,4 @@ View an example of a visibility rule, Show Page that shows the specified page or
 -   **[Example: Show page or portlet](../pzn/pzn_example_visibility.md)**  
 View an example of a visibility rule, Show Page that shows the specified page or portlet only during the specified time period, and only to users in the Midwest. For all other dates and users, the page or portlet is hidden.
 
-**Parent topic:**[Rules](../pzn/pzn_rules.md)
 

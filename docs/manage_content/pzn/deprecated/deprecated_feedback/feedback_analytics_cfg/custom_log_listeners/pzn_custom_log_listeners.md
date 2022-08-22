@@ -27,5 +27,4 @@ A custom listener class is a class that implements the LogListener interface. Vi
 -   **[Customized feedback listeners](../pzn/pzn_customized_feedback_listeners.md)**  
 A customized feedback listener is a subclassed FeedbackListener object that is registered with the feedback LogManager. View the steps to implement a custom feedback listener.
 
-**Parent topic:**[Listeners and persistence](../pzn/pzn_log_listeners.md)
 

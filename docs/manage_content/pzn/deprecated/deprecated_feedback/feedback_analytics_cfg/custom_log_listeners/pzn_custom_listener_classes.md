@@ -39,5 +39,4 @@ public class SimpleCustomListener extends LogAdapter
 
 ```
 
-**Parent topic:**[Custom log listeners](../pzn/pzn_custom_log_listeners.md)
 

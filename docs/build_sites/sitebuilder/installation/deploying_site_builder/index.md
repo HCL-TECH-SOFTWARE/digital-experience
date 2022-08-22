@@ -25,5 +25,4 @@ Creating new sites or sections in HCL Digital Experience with Site Builder can t
 -   **[Configuring application polling](../sitebuilder/sitebuilder_config_polling.md)**  
 Site Builder regularly polls to check the status of running tasks that are displayed on the Site Builder home page.
 
-**Parent topic:**[Site Builder](../sitebuilder/sitebuilder_intro.md)
 

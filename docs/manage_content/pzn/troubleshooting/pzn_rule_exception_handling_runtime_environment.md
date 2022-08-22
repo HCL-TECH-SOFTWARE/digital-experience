@@ -75,5 +75,4 @@ When an exception occurs, if the code can continue, it will do so while logging 
 
 To trace the runtime classes, enable trace for `com.ibm.websphere.personalization.*=all`. To trace the authoring portlet classes, enable trace for `com.ibm.wps.caf.*=all`.
 
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
 

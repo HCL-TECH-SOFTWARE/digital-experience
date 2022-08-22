@@ -34,7 +34,6 @@ In Combined Cumulative Fix 10 and later, an automatic cache entry clearing featu
 -   **[Automatically clearing your cache entry](../pzn/pzn_auto_cache.md)**  
 In Combined Cumulative Fix 10 and later, an automatic cache entry clearing feature is enabled by default to automatically clear cache entries that are affected by a content change.
 
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
 
 **Related information**  
 

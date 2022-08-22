@@ -10,7 +10,6 @@ The referenced profile in the theme is missing and cannot be accessed.
 
 Update your theme metadata with the key 'resourceaggregation.profile' to point to a valid profile file.
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 
 **Related information**  
 

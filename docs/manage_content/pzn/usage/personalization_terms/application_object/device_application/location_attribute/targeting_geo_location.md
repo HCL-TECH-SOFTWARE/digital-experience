@@ -26,5 +26,4 @@ Key concepts for determining the location of a device:
 3.  Restart the HCL Portal server.
 
 
-**Parent topic:**[Location attributes](../contarget/targeting_geo.md)
 

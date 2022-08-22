@@ -78,5 +78,4 @@ If the Virtual Member Manager is not working, for example, if community groups a
 5.  Make sure that the HCL Connections server can resolve the Portal server's host name. It can be resolved either by DNS setting \(under LAN properties\) or by adding an entry in the host file on the HCL Connections server. The host file is typically at C:\\Windows\\System32\\drivers\\.
 6.  Delete the Portal SSL certificate that is imported on the HCL Connections server earlier and import a new one.
 
-**Parent topic:**[Configuring the HCL Connections repository for VMM](../connect/t_connections_portlets_VMM_repository_config.md)
 

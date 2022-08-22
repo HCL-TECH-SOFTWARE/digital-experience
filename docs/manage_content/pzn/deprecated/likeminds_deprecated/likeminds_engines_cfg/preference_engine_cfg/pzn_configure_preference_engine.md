@@ -35,5 +35,4 @@ Learn how to enable and disable the archtypes in your LikeMinds Preference engin
 -   **[User predictability \| LikeMinds engine](../pzn/pzn_user_predictablity_main.md)**  
 This section contains the following information regarding user predictability.
 
-**Parent topic:**[Configuring the LikeMinds engines](../pzn/pzn_configure_likeminds_engines.md)
 

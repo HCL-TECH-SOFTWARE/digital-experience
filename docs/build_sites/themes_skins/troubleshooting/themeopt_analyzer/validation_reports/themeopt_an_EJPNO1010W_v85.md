@@ -10,5 +10,4 @@ An incorrect URI was detected in a skin you are using. This URI is using the WAR
 
 Update your skin metadata with the correct key.
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 

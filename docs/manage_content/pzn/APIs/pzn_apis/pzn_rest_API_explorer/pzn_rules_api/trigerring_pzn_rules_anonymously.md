@@ -55,5 +55,4 @@ The rule can then be triggered via *Invoke \(POST\) the Personalization ID rule*
     ![Anonymous PZN executuon](../images/anonymous-pzn-execution.png)
 
 
-**Parent topic:**[Personalization rules APIs](../pzn/dev_pzn_rules_api.md)
 

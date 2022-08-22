@@ -27,5 +27,4 @@ Learn how to configure your LikeMinds Preference engine to recompute user predic
 -   **[Default Preference Engine recommendations](../pzn/pzn_default_preference_engine.md)**  
 The Preference Engine reads the value from the score field in the Lps\_Item\_Data table to determine which items are popular. Hence, a higher score means that the item is more popular.
 
-**Parent topic:**[Configuring the Preference engine](../pzn/pzn_configure_preference_engine.md)
 

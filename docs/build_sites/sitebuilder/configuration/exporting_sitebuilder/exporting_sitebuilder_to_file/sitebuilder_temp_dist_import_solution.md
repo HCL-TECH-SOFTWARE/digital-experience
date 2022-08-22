@@ -48,5 +48,4 @@ Further information on using the Solution Installer can be found here: [Installi
 
     -   site\_template is the name of the component inside the application.
 
-**Parent topic:**[Exporting a Site Builder template to a file](../sitebuilder/sitebuilder_temp_dist_man.md)
 

@@ -50,5 +50,4 @@ The Theme Cache Invalidation API is available with HCL DX CF192 and higher relea
     **Note:** Cache replication ensures that the caches are cleared on other nodes in a cluster. This API only needs to be executed on one node of the cluster.
 
 
-**Parent topic:**[Utilities for theme issues](../dev-theme/themeopt_an_util.md)
 

@@ -37,5 +37,4 @@ To implement category logging, insert a Category bean into your JSP.
 -   **[Category beans reference](../pzn/pzn_category_beans_reference.md)**  
 Learn about the various method signatures of Category beans.
 
-**Parent topic:**[Logging beans](../pzn/pzn_logging_beans.md)
 

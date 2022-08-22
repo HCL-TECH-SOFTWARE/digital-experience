@@ -301,7 +301,6 @@ If you are using a content delivery network \(CDN\) such as [Akamai](https://www
 -   **[Enable/disable Content Composer in Virtual Portals](../content_composer/configure_cc_virtual_portals.md)**  
 The use of Content Composer features in a Virtual Portal deployment pattern is supported for HCL Content Composer beginning with Container Update 9.5 CF192.
 
-**Parent topic:**[HCL Content Composer](../content_composer/cont_comp_overview.md)
 
 **Related information**  
 

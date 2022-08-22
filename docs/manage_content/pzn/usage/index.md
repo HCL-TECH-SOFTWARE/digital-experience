@@ -105,5 +105,4 @@ HCL Digital Experience provides the programming model, processes, and APIs for t
 22. [Personalization APIs](../pzn/pzn_apis.md)  
 
 
-**Parent topic:**[Personalization](../practitioner_studio/personalization.md)
 

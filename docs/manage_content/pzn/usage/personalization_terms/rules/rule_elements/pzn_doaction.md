@@ -14,5 +14,4 @@ Within a binding, you can couple actions with profilers so certain tasks are per
 
 **Note:** Exclude takes precedence over Always.
 
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
 

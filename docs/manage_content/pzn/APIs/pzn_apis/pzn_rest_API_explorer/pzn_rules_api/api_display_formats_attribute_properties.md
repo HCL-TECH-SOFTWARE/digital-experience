@@ -905,5 +905,4 @@ The sample condition with `Matching Items` with different operators:
     ```
 
 
-**Parent topic:**[Personalization rules APIs](../pzn/dev_pzn_rules_api.md)
 

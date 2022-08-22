@@ -11,5 +11,4 @@ This section contains the following information regarding user predictability.
 -   **[User predictability](../pzn/pzn_user_predictability.md)**  
 This section contains the following information regarding user predictability.
 
-**Parent topic:**[Configuring the LikeMinds engines](../pzn/pzn_configure_likeminds_engines.md)
 
