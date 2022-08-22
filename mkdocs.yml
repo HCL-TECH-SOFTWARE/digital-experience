@@ -43,7 +43,9 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
 # Copyright
-copyright: Copyright &copy; 2022, HCL Technologies Limited
+copyright: >-
+  Copyright &copy; 2022, HCL Technologies Limited - 
+  <a href="#__consent">Change cookie settings</a>
 
 extra:
   social:
@@ -54,6 +56,16 @@ extra:
   analytics:
     provider: google
     property: UA-169645537-2
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    actions:
+      - accept
+      - manage
 
 # Repository
 repo_url: https://github.com/HCL-TECH-SOFTWARE/digital-experience
