@@ -2,6 +2,6 @@ title: Deploy DX
 nav:
     - index.md
     - Container Deployment: container
-    - Onpremise Deployment: onprem
-    - Hybrid deployment: hybrid
+    - Traditional Deployment: traditional
+    - Hybrid Deployment: hybrid
     - Development Deployment: docker
