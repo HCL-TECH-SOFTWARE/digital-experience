@@ -10,14 +10,15 @@
 # ********************************************************************
 
 # Install dependencies
-microdnf install -y --nodocs git zlib-devel make gcc
+microdnf install -y --nodocs git zlib-devel make gcc openssl-devel bzip2-devel libffi-devel zlib-devel
 
 # Build python
-wget https://www.python.org/ftp/python/3.10.5/Python-3.10.5.tgz 
+mkdir -p /opt/python
+cd /opt/python
+wget https://www.python.org/ftp/python/3.10.5/Python-3.10.5.tgz
 tar xzf Python-3.10.5.tgz 
 chmod -R u+rxw Python-3.10.5
 cd Python-3.10.5
-ls -lah
 chmod +x ./configure
 ./configure --with-system-ffi --with-computed-gotos --enable-loadable-sqlite-extensions 
 make -j 2
