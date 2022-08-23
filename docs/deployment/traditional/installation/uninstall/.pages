@@ -1,0 +1,6 @@
+nav:
+    - index.md
+    - remove_node.md
+    - AIX - Uninstall HCL Digital Experience: aix_uninstall
+    - Linux - Uninstall HCL Digital Experience: linux_uninstall
+    - Windows - Uninstall HCL Digital Experience: windows_uninstall

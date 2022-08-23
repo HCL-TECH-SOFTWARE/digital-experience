@@ -1,0 +1,8 @@
+nav:
+    - index.md
+    - ccf_95_standalone.md
+    - ccf_95_cluster.md
+    - ccf_95_farm.md
+    - ccf_95_remote_search.md
+    - ccf_95_health_checker.md
+    - ccf_95_known_issues.md

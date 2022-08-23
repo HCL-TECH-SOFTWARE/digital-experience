@@ -1,0 +1,7 @@
+nav:
+    - index.md
+    - inst_cw_addons.md
+    - Install and uninstall add-ons using Solution Installer: install_uninstall_using_solution_installer
+    - migrate_paa_content.md
+    - Manage your existing Portal Application Archive file: manage_paa
+    - Solutions Installer run time configuration: solution_installer_runtime_cfg
