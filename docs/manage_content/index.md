@@ -1,6 +1,6 @@
 # Manage Content
 
-HCL Web Content Manager accelerates the creation, maintenance, and delivery of content across intranet, extranet, Internet, and portal sites.
+HCL DX provides web content management capabilities to accelerates the creation, maintenance, and delivery of content across intranet, extranet, Internet, and portal sites.
 
 HCL Web Content Manager is a comprehensive solution for creating, managing, and delivering content on your website.
 
