@@ -13,12 +13,14 @@ As of HCL Digital Experience CF204, the following types of rules or artifacts ar
     -   Profiler Rules \(updated with CF204\)
     -   Selection Rules \(updated with CF204\)
     -   [Embedded WCM Selection Rules](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/#tag/Component) \(new with 204\)
+    -   Binding Rules (new with CF205)
 -   [Folders](https://opensource.hcltechsw.com/experience-api-documentation/pzn-api/#tag/Folders)
 -   [Dynamic Properties](https://opensource.hcltechsw.com/experience-api-documentation/pzn-api/#tag/Dynamic-Properties)
 
 All of the `GET`, `GET all`, `UPDATE`, `CREATE` and `DELETE` operations are enabled via the APIs.
 
-**Note:** APIs are in beta stage at this time - changes are possible until finalized.
+!!! note 
+    APIs are in beta stage at this time - changes are possible until finalized.
 
 With HCL Digital Experience CF204, the PZN Java API was extended to return the evaluated page when using a custom application object.
 
@@ -32,15 +34,3 @@ Example:
      */
     public String getEvaluatedPage();
 ```
-
--   **[Personalization REST API explorer](../pzn/dev_pzn_rest_api_explorer.md)**  
-The Personalization REST API explorer allows developers using the Digital Experience Personalization REST APIs to explore and test these APIs. The following topic presents the Personalization REST APIs available and how developers can use them working with the Personalization REST API explorer.
--   **[Personalization REST API explorer](../pzn/dev_pzn_rest_api_explorer.md)**  
-The Personalization REST API explorer allows developers using the Digital Experience Personalization REST APIs to explore and test these APIs. The following topic presents the Personalization REST APIs available and how developers can use them working with the Personalization REST API explorer.
-
-
-**Previous topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
-
-
-**Previous topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
-
