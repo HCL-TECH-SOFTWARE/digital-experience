@@ -2,9 +2,9 @@
 title: Harbor Container Registry
 ---
 
-# Download and Deploy From HCL Harbor Repository
+# Download and Deploy from HCL Harbor Repository
 
-Beginning with HCL Digital Experience 9.5 Container Update CF205, the [Docker images](../kubernetes/docker.md) for deployment to Kubernetes environments can be accessed via Helm charts in the [HCL Harbor repository](https://hclcr.io/account/sign-in?redirect_url=/harbor/projects){:target="_blank"}. Customers with credentials to access entitled software in the HCL Software Licensing Portal may apply those credentials to access the Docker components of Digital Experience v9.5 Container Update CF205 or later releases. 
+Beginning with HCL Digital Experience 9.5 Container Update CF205, the [Docker images](../system_requirements/docker/index.md) for deployment to Kubernetes environments can be accessed via Helm charts in the [HCL Harbor repository](https://hclcr.io/account/sign-in?redirect_url=/harbor/projects){:target="_blank"}. Customers with credentials to access entitled software in the HCL Software Licensing Portal may apply those credentials to access the Docker components of Digital Experience v9.5 Container Update CF205 or later releases. 
 
 !!! note
 
@@ -39,7 +39,8 @@ After adding the repository to your Helm deployment, you should see the followin
 
 ### Listing available Helm Chart versions
 
-To verify that your Helm configuration works to connect and to see which [HCL DX 9.5 Container Update CF application versions](../platform/kubernetes/docker.md) are available from the HCL Harbor repository, you can use the following command:
+To verify that your Helm configuration works to connect and to see which [HCL DX 9.5 Container Update CF application versions](../)
+(../platform/kubernetes/docker.md) are available from the HCL Harbor repository, you can use the following command:
 
 ```
 # Using helm search to find available versions, the DX helm charts are named hcl-dx-deployment
@@ -59,7 +60,7 @@ You can see which chart version correlates to which HCL Digital Experience 9.5 C
 Your Helm configuration is now capable of using HCL DX 9.5 Helm Charts directly from the HCL Harbor Helm Repository.
 
 !!! note
-    Applying the method to pull DX 9.5 Container Update images directly from the HCL Harbor container registry requires every cluster node to be able to access the HCL Harbor container registry. To leverage this feature, you will have to configure an `ImagePullSecret` with your HCL Harbor credentials. For instructions, see [Configure deployment to use the HCL Harbor container registry](../platform/kubernetes/deployment/preparation/optional_imagepullsecrets.md#configure-deployment-to-use-the-hcl-harbor-container-registry).
+    Applying the method to pull DX 9.5 Container Update images directly from the HCL Harbor container registry requires every cluster node to be able to access the HCL Harbor container registry. To leverage this feature, you will have to configure an `ImagePullSecret` with your HCL Harbor credentials. For instructions, see [Configure deployment to use the HCL Harbor container registry](../system_requirements/docker/index.md).
 
 ### Pulling Helm Chart for deployment
 
@@ -84,7 +85,7 @@ ls -lah
 
 You have now downloaded your DX 9.5 Container Update Helm Chart from the HCL Harbor repository and can continue with your deployment. 
 
-After the Helm charts are downloaded, the next step is [Re-tagging images](../platform/kubernetes/deployment/preparation/prepare_load_images.md#re-tag-images).
+After the Helm charts are downloaded, the next step is [Re-tagging images](../../deployment/container/installation/helm_deployment/preparation/prepare_load_images.md#re-tag-images).
 
 ???+ info "**Related information:**"
-    -   [Deploying container platforms using Helm](../platform/kubernetes/deployment/helm_deployment.md)
+    -   [Deploying container platforms using Helm](../../deployment/container/installation/helm_deployment/helm_deployment.md)
