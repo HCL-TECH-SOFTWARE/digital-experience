@@ -11,5 +11,4 @@ The Unified Task List portlet shows tasks in a table. The task information prese
 4.  Select **Save**.
 
 
-**Parent topic:**[Configuring Unified Task List portlet at run time](../integrate/utl_configuring_unified_task_list_at_runtime.md)
 

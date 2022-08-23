@@ -11,7 +11,6 @@ When a user clicks an HCL Connections resource in the result list portlet, this 
 -   **[Specifying an icon for a federated resource](../admin-system/tag_fed_admin_spec_icon.md)**  
 When federated resources are displayed in the Tag Results portlet, you can have them preceded by a icon.
 
-**Parent topic:**[Federating tags](../admin-system/tag_rate_federation.md)
 
 **Related information**  
 

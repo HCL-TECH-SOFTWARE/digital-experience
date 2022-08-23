@@ -36,7 +36,6 @@ A web content page always restricts the sharing scope for public rendering param
         An example of this type of predefined viewer is the Rich Text viewer that is available from the **Web Content** category of the **Content** tab.
 
 
-**Parent topic:**[Displaying content with Web Content Viewers](../wcm/wcm_deploy_wcmviewer.md)
 
 **Related information**  
 

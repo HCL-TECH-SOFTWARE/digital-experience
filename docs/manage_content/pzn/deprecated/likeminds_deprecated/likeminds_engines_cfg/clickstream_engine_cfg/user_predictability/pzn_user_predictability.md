@@ -19,7 +19,4 @@ Learn how to set the percentage change allowed in a user's transactions before t
 -   **[Default Clickstream Engine recommendations](../pzn/pzn_default_clickstream_recommendations.md)**  
 Review default recommendations for user predictability.
 
-**Parent topic:**[Configuring the Clickstream Engine](../pzn/pzn_configure_clickstream_engine.md)
-
-**Parent topic:**[Configuring the Clickstream Engine](../pzn/pzn_configure_clickstream_engine.md)
 

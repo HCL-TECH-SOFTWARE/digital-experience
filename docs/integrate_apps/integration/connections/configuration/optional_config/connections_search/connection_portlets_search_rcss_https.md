@@ -17,5 +17,4 @@ If you are using the HTTPS security protocol with RCSS, you must import a certif
 5.  Exit from iKeyman and restart the Portal server.
 
 
-**Parent topic:**[Configuring search integration](../connect/connections_portlets_search_overview.md)
 

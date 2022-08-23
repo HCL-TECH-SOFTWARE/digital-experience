@@ -2,7 +2,6 @@
 
 Displays a set of featured news items in a slideshow. By default, any items created by using the News content template is displayed in this portlet.
 
-**Parent topic:**[Slideshows](../ctc/ctc-portlet-types-slideshows.md)
 
 # Usage
 

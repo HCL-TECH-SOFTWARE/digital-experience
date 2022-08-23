@@ -23,5 +23,4 @@ Create a dynamic content spot mapping to customize the theme for Top, Primary, a
 4.  If you are in development mode, restart the application for your theme. Otherwise, restart the portal server.
 
 
-**Parent topic:**[Customizing navigation](../dev-theme/themeopt_cust_nav.md)
 

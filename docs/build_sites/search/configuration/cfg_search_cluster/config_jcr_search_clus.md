@@ -53,5 +53,4 @@ Set up remote search service on the primary node of the cluster. For more inform
     8.  Manually create a JCR search collection called JCRCollection1. For more information about creating the JCR search collection, see *Setting up a JCR search collection* in the related links.
 
 
-**Parent topic:**[Configuring search in a cluster](../config/config_search_clus.md)
 

@@ -17,5 +17,4 @@ The **Use available authentication data when an unprotected URI is accessed** se
 6.  If you are using a stand-alone environment, restart the server. If you are using a cluster environment, synchronize the nodes, and then restart the servers.
 
 
-**Parent topic:**[Administrative tasks](../migrate/mig_post_admintasks.md)
 

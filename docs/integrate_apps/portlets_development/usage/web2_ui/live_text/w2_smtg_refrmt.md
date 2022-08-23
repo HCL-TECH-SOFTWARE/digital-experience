@@ -97,5 +97,4 @@ Target tag example for a client-side handler:
 </FORM>
 ```
 
-**Parent topic:**[Live text for click-to-action](../dev-portlet/w2_smtg.md)
 

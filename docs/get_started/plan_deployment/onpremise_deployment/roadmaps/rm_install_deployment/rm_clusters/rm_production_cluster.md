@@ -8,7 +8,6 @@ Before HCL Digital Experience 8.5, you were required to install and configure We
 
 **Remember:** Ensure that you configure the web server plug-in after you transfer your database.
 
-**Parent topic:**[Roadmaps for clusters](../install/rm_cluster_parent.md)
 
 # Who should use this roadmap
 

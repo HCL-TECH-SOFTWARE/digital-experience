@@ -25,7 +25,6 @@ You must have blogs and wikis enabled before proceeding. Go to [Migration: Blogs
 
 You and your portal site visitors can now use the new enhanced tag and rating widgets.
 
-**Parent topic:**[Enabling new functionality in a migrated portal](../migrate/mig_t_enable_new.md)
 
 **Related information**  
 

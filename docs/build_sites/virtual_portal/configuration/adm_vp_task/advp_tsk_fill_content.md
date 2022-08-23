@@ -6,7 +6,6 @@ This default content is determined by the default XML script file for initializi
 
 For more information, see the *Virtual portals command reference*. For more information, about the XML configuration interface and how to use it, see the *XML configuration interface*.
 
-**Parent topic:**[Tasks for administering virtual portals](../admin-system/advptsk.md)
 
 **Related information**  
 

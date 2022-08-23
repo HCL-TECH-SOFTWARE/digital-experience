@@ -114,5 +114,4 @@ To change these components, you must use the authoring portlet.
     **Updating components:** To update an existing component, you can replace the corresponding file in the WebDAV tree with a new file that has the same name. For example you can place `myCoolPic.jpg` into the image components folder that already contains `myCoolPic.jpg`, and the component is automatically updated with the new file's content. If you place a file with a different name, a new component with that name is created.
 
 
-**Parent topic:**[WebDAV](../wcm/wcm_webdav_overview.md)
 

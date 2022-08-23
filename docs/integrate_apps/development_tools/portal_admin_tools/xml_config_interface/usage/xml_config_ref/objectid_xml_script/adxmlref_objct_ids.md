@@ -66,7 +66,6 @@ In some cases, you might need to use object ID attributes to express references 
 -   **[Lookup of portal resources](../admin-system/adxmlref_lookup.md)**  
 XML elements with locate, export, update and delete actions need to refer to existing resources in the portal. Those resources must be identified by specific attributes.
 
-**Parent topic:**[XML configuration reference](../admin-system/adxmlref.md)
 
 **Related information**  
 

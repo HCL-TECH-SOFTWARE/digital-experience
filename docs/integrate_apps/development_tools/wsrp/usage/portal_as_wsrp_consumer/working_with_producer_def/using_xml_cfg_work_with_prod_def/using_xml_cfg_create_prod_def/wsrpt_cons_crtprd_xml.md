@@ -57,5 +57,4 @@ The following attributes are listed for the sake of completeness only. Do not ch
 -   **[XML samples for creating Producer definitions](../admin-system/wsrpr_cons_crtprd_samp1.md)**  
 You can modify use these XML samples and use them to create Producer definitions,
 
-**Parent topic:**[Using the XML configuration interface to work with Producer definitions](../admin-system/wsrpt_cons_wrkprd_xml.md)
 

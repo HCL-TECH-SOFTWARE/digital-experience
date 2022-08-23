@@ -60,5 +60,4 @@ A carousel uses a configuration document based on the **Carousel** authoring tem
 -   **[Special Features Carousel](../ctc/ctc-portlet-special-features-carousel.md)**  
 Displays a set of items in a carousel. By default, any items that are profiled with the special feature category are displayed in the carousel.
 
-**Parent topic:**[Page components](../ctc/ctc-portlet-types.md)
 

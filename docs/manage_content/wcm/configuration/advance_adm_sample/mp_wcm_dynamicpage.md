@@ -25,7 +25,6 @@ The default filter plug-ins perform the following tests to determine a web conte
     -   If no page can be identified by the content associations, the web content fallback page is used to render the content item.
     -   If no fallback page is configured or if the user does not have view rights on the fallback page, the Web Content Manager servlet renders the item.
 
-**Parent topic:**[Advanced administrative examples](../wcm/wcm_delivery_advanced.md)
 
 **Related information**  
 

@@ -101,5 +101,4 @@ You can now use the dynamic portlet window title customization option with all S
 
 For more information, see *Tip: Changing a portlet title at run time in WebSphere® Portal V6*.
 
-**Parent topic:**[Syndicated Feed Portlet for HCL Digital Experience](../admin-system/ic_syndfeed_features.md)
 

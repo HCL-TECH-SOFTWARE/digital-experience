@@ -21,5 +21,4 @@ View information about configuring virtual portals, hints and tips, and known li
 
 -   You cannot create custom URLs in one virtual portal that address portal resource in another virtual portal. The reason is that both object IDs and unique names relate to resources of the local virtual portal.
 
-**Parent topic:**[Virtual portals reference](../admin-system/advpref.md)
 

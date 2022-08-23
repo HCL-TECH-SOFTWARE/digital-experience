@@ -112,7 +112,6 @@ List<User> result = pageIter.getPage(null, 5);
 -   **[Remote REST service for PUMA](../dev/uprof_rest.md)**  
 The remote PUMA SPI gives you access to user profiles through REST services. It provides a remote interface for user and group management for the configured Portal user repository. It is based on the REST \(REpresentational State Transfer\) architecture model.
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 
 **Related information**  
 

@@ -36,5 +36,4 @@ In a typical example scenario, you can work in two stages:
 -   **[Configuring the Suggested Links view](../admin-system/srtrecommendedlinks.md)**  
 Customize the display of search results to show users the preferred or recommended results and associated links.
 
-**Parent topic:**[Customizing the Search Center](../admin-system/srtcentercustomze.md)
 

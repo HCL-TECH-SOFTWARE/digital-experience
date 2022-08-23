@@ -109,7 +109,6 @@ For more information, see *Modules and dynamic content spots*.
     You can change the profile for the theme or a specific page to define the modules that are loaded. For more information, see *Changing the theme profile*.
 
 
-**Parent topic:**[Creating dynamic content spots](../dev-theme/themeopt_cust_creat_dyn_con_spot_parent.md)
 
 **Related information**  
 

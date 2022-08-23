@@ -13,5 +13,4 @@ For the following message code EJPIC0001E:
 
 During the last session, you clicked Start Configuration and the configuration was running automatically. To return to the automatic process, click Resume Configuration. Otherwise, click Cancel to run each remaining step manually.
 
-**Parent topic:**[Troubleshooting](../trouble/troubleshooting.md)
 

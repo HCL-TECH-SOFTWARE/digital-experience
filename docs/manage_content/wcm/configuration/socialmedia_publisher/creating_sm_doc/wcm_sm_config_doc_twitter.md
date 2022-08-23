@@ -59,5 +59,4 @@ When you create a social network configuration document for Twitter:
     **Note:** If your posts are exceeding the 140 character limit for Twitter posts, you can adjust length of the title by reducing the length option in the format parameter as shown in this example. Long category names, or a large number of categories, can also lead to exceeding the 140 character limit.
 
 
-**Parent topic:**[Creating a social network configuration document](../wcm/wcm_sm_config_doc_creating.md)
 

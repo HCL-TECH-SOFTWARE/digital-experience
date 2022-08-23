@@ -27,5 +27,4 @@ After you create and use the realm in the default federated repository, you migh
 -   **[Configuring a property extension database](../install/lookaside_db.md)**  
 A property extension database stores attributes that the LDAP directory does not or cannot store, but that you want to include in your portal user registry. This situation often occurs when you are using an LDAP directory that does not allow schema extensions for new attributes to support portal applications. When you configure a property extension database, you effectively extend the user registry to make new attributes available as part of your portal user profile. However, it is preferable to store all user attributes in the main user registry. Complete this task only if you cannot add attributes to your LDAP directory.
 
-**Parent topic:**[User registry](../config/config_user_registry.md)
 

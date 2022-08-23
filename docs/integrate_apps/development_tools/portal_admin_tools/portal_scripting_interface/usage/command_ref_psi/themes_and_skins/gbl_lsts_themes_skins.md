@@ -25,5 +25,4 @@ $Look listall themes
 Admin WebSphere Engineering Science Finance Corporate
 ```
 
-**Parent topic:**[Themes and Skins](../admin-system/themes_skins.md)
 

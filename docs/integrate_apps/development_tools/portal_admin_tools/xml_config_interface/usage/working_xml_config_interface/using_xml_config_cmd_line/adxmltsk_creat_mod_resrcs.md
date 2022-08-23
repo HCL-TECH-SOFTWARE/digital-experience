@@ -42,7 +42,6 @@ The MovePage.xml example shows you how to move a page to another node.
 
 **Note:** The actual move of the page is done by the last two lines in the sample file.
 
-**Parent topic:**[Using the XML configuration command line client](../admin-system/adxmltsk_cmdln.md)
 
 **Related information**  
 

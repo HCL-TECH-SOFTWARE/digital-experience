@@ -40,5 +40,4 @@ The authoring tools available to users on a web page are determined by:
 -   You grant "user" access to users who also have access to the authoring server and who are using the authoring tool.
 -   In most cases, users who have access to the published site would not be granted access to an authoring tool as the tool is used as an authoring tool on an authoring server, not a published site.
 
-**Parent topic:**[Creating an authoring tools element](../panel_help/wcm_dev_elements_authoring-tools_using.md)
 

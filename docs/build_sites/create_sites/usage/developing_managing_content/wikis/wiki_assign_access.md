@@ -15,5 +15,4 @@ For an example of assigning access to users, refer to the following instructions
 4.  Click **Add** to assign users or groups to the Editor role. Search for the users or groups that belong to this role.
 
 
-**Parent topic:**[Wikis](../admin-system/wiki_work.md)
 

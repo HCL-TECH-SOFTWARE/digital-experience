@@ -24,5 +24,4 @@ In a default portal installation the group wpsadmins has the role EDITOR. There 
 
 **Note:** In a default portal installation only the group wpsadmins has the MANAGER role on ANALYTICS\_TAGS.
 
-**Parent topic:**[Analytics tags and site promotions](../admin-system/sa_asa_anal_tags_site_prom.md)
 

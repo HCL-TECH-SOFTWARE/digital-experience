@@ -1458,7 +1458,4 @@ The following topic provides additional details about the conditions and respons
 -   **[Triggering Personalization rules anonymously](../pzn/trigerring_pzn_rules_anonymously.md)**  
 The Personalization rules REST APIs can be triggered anonymously.
 
-**Parent topic:**[Personalization REST API explorer](../pzn/dev_pzn_rest_api_explorer.md)
-
-**Parent topic:**[Personalization REST API explorer](../pzn/dev_pzn_rest_api_explorer.md)
 

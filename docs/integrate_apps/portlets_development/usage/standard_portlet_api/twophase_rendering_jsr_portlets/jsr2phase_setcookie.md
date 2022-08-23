@@ -21,5 +21,4 @@ Although cookies can be set like any other HTTP header, the portlet API provides
     ```
 
 
-**Parent topic:**[Using two-phase rendering with JSR 286 portlets](../dev-portlet/jsr2phase_overview.md)
 

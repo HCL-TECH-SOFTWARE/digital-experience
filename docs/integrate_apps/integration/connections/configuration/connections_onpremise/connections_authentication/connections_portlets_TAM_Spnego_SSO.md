@@ -174,5 +174,4 @@ Configuring HCL Connections and HCL Portal to share a single deployment manager 
         -   app\_root is the root path to the HCL Connections applications, including /activities, /blogs, /cognos, /communities, /dogear, /files, /forums, /homepage, /news, /metrics,/mobile, /moderation, /profiles,/search, and /wikis.
         -   lc3-default-acl is the access control list \(ACL\) that you defined. For example: `acl attach /WebSEAL/tam.example.com-default/activities example-default-acl`. In this case, the command is `acl attach /WebSEAL/tam.example.com-default/PORTAL_VHOST_JCT example-default-acl`.
 
-**Parent topic:**[Configuring authentication](../connect/c_connections_portlets_SSO_config.md)
 

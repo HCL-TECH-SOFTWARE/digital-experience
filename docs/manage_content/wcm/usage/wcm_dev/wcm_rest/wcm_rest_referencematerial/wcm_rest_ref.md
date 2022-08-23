@@ -13,5 +13,4 @@ The following media types are supported by the Web Content Manager REST service.
 -   **[REST Item Types](../wcm/wcm_rest_item_types.md)**  
 These item types are supported by the Web Content Manager REST service.
 
-**Parent topic:**[REST service for Web Content Manager](../wcm/wcm_rest.md)
 

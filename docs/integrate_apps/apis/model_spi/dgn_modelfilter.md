@@ -34,7 +34,6 @@ There are two ways you can filter the content model:
 2.  Save your changes, and restart the server.
 
 
-**Parent topic:**[Model SPI overview](../dev/dgn_modelovw.md)
 
 **Related information**  
 

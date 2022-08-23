@@ -28,5 +28,4 @@ modifiableLayoutMetrics.setValue(LayoutMetrics.ORIENTATION, Orientation.HORIZONT
 -   If a new root container is inserted into a topology that is not empty, the new root container is set to the opposite orientation of the existing root container. For example, if the existing root container had horizontal orientation, the new root container will have vertical orientation.
 -   If a container is inserted as the child of an existing parent container, the child container is set to the opposite orientation of the parent container.
 
-**Parent topic:**[Modifying properties](../dev/ctrlrapit_mdfy_props.md)
 

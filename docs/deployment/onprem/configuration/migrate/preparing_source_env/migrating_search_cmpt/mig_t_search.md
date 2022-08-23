@@ -11,5 +11,4 @@ If the source portal environment uses a remote search server, update the remote 
 -   **[Removing JCR search collections](../migrate/mig_remove_jcr_collection.md)**  
 In your source environment, there are JCR search collections that are prefixed with JCRCollection. Although search collections are covered in a separate section, JCRCollection prefixed collections must be handled differently.
 
-**Parent topic:**[Preparing your source environment](../migrate/mig_t_premig_tasks.md)
 

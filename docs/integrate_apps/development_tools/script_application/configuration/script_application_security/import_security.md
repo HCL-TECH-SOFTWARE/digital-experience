@@ -22,5 +22,4 @@ The import feature applies content filtering to ignore files of unsupported type
 
 You can override the configuration for some of these constraints. For more information, read *Setting custom configuration properties for the Script Application*.
 
-**Parent topic:**[Script Application security overview](../script-portlet/security.md)
 

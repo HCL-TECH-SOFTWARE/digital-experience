@@ -77,5 +77,4 @@ Attributes:
     Returns: Boolean; true if the page is private, false if it is not.
 
 
-**Parent topic:**[wp.ac - Access control](../dev-theme/themeopt_el_bean_ac_rt.md)
 

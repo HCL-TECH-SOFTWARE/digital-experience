@@ -7,7 +7,6 @@ You can convert your DX portlets that use the [Struts Portlet Framework](wpsstru
 -   **[Converting HCL Digital Experience portlets \(z/OS\)](../dev-portlet/jsrmig_zos.md)**  
 You can convert your basic HCL Digital Experience portlets to the standard portlet API.
 
-**Parent topic:**[Developing portlets](../dev-portlet/wpsdev.md)
 
 **Related information**  
 

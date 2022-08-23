@@ -8,7 +8,6 @@ You are a developer on the technical team that is tasked with creating home and 
 
 ![HTML prototype of the home page with two promotional text page components highlighted. Content authors customize the promotional text page component after they add it to a page. So the same promotional text page component can be added multiple times to show different text - even on the same page!](../images/promotional.jpg)
 
-**Parent topic:**[Creating HTML page components](../install/rm_create_site_dev_pcomponents.md)
 
 # Creating your promotional text page component
 

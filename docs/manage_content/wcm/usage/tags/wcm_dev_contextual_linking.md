@@ -17,5 +17,4 @@ It can be used only if context=current or context=autofill.
 
 When contextual path linking is used, a compatible link is searched for using the same relative path. If no link is found, the original link is used.
 
-**Parent topic:**[Tags](../wcm/wcm_build_tags.md)
 

@@ -29,5 +29,4 @@ When a page is created from the template, the site structure that is required in
 
 After you create the template page, the new template is displayed in the list of available templates when you create a page.
 
-**Parent topic:**[Customizing web content delivery](../wcm/wcm_delivery_custom.md)
 

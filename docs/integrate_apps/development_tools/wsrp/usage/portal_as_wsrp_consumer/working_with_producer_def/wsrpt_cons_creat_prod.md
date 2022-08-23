@@ -37,7 +37,6 @@ If you work online, you can use the Web Service Configuration portlet to create 
 -   **[Using the XML configuration interface to work with Producer definitions](../admin-system/wsrpt_cons_wrkprd_xml.md)**  
 You can use the XML configuration interface to work with Producer definitions in different ways.
 
-**Parent topic:**[Using your portal as a WSRP Consumer](../admin-system/wsrpt_cons_use.md)
 
 **Previous topic:**[Information that the Consumer exchanges with the Producer](../admin-system/wsrpc_cons_get_info.md)
 

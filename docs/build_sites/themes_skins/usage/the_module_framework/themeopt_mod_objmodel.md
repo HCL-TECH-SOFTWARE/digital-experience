@@ -29,5 +29,4 @@ Modules can declare dependencies on prerequisite modules. Additionally, they can
 
 Portlets can declare a dependency on capabilities in a way that automatically downloads all resources of a module. You do not need to add this module to the profile, but you must set this behavior in your theme.
 
-**Parent topic:**[The module framework](../dev-theme/themeopt_module.md)
 

@@ -47,5 +47,4 @@ The web content now renders asynchronously. Until the web content is available, 
 -   If the request fails on the server side inside the `serveResource` method, an HTTP error code is displayed in the placeholder area with a corresponding HCL Web Content Manager error message.
 -   Issues in the web browser such as missing libraries or theme profiles are displayed in a similar way to indicate the problem.
 
-**Parent topic:**[Improving page loading performance with asynchronous web content rendering](../wcm/wcm_config_asynch_wcm_rendr.md)
 

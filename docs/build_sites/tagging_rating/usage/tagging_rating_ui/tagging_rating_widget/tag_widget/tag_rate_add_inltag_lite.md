@@ -55,5 +55,4 @@ To include a tag widget in a portal page, a portlet or other portal content, ins
 
 These parameters are mandatory. For information about the optional parameters, read the *Tag widget parameter reference*.
 
-**Parent topic:**[The tag widget](../admin-system/tag_rate_inline_tag_wdgt_lite.md)
 

@@ -50,5 +50,4 @@ Use the wp\_security\_federated.properties helper file that is in the [wp\_profi
     7.  Click **OK**.
 
 
-**Parent topic:**[Administrative tasks](../migrate/mig_post_admintasks.md)
 

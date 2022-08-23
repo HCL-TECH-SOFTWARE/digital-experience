@@ -8,7 +8,6 @@ The social rendering DDC plug-in delegates the data loading and XML transformati
 
 The social rendering DDC plug-in supports the `source` list-rendering context attribute. You can use this attribute to directly specify the source URL that serves the HCL Connections XML data. To dynamically construct those source URLs, you can use the `[Plugin:ConnectionsContext]` and `[Plugin:URLParam]` tags. For more detailed information, read *Dynamic HCL Connections source URL construction*.
 
-**Parent topic:**[Extending social lists by using the digital data connector](../social/soc_rendr_xtnd_sl_by_plrf.md)
 
 **Related information**  
 

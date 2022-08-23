@@ -39,5 +39,4 @@ This page includes the following portlets:
     -   This list is pre-configured with a context override of: Your Library/Your Site Path/Your Page Name
     -   The CSS class of contentBlock is applied to the container DIV.
 
-**Parent topic:**[Page Templates](../ctc/ctc-assets-page-templates.md)
 

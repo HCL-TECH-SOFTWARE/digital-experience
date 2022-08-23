@@ -74,7 +74,6 @@ You can test the SSL login by using the following unprotected URL: http://portal
 
 **Note:** Confirm that the login was encrypted by monitoring the packets through a network utility such as Ethereal or by reviewing the source code of the login form when accessed through an unprotected HTTP URL. The login form must have an action URL that is secured, for example `<form method="post" action="https://....">`. Set your browser to warn you when you change between secure and insecure modes to see the behavior on the client-side.
 
-**Parent topic:**[Configuring SSL](../security/ssl_intro.md)
 
 **Previous topic:**[Setting up SSL](../security/ssl.md)
 

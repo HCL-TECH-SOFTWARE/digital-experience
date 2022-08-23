@@ -39,5 +39,4 @@ Three column layout with missing information about moving the portlets:
 
 The same principle applies to other layer scenarios in similar ways. Movement information of elements from the original page is deleted; whereas, actions on the layer of the derived page; for example adding portlets, rows, or columns; may persist after reassigning permissions as previously described.
 
-**Parent topic:**[Pages and page types: derived and hidden pages](../admin-system/mp_page_types.md)
 

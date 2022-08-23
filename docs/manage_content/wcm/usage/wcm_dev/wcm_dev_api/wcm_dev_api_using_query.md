@@ -58,5 +58,4 @@ Here is an example of how to use create a query with 'AND' and 'OR' conditions b
            
 ```
 
-**Parent topic:**[The HCL Web Content Manager API](../wcm/wcm_dev_api.md)
 

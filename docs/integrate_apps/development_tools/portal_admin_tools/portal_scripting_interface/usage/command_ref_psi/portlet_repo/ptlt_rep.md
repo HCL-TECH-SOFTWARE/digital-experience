@@ -32,5 +32,4 @@ Portlet nodes can own metadata, which are name-value pairs of data that is assoc
 -   **[Portlet preferences in portlet bean](../admin-system/ptlt_prf_pltlt_rep.md)**  
 It is possible to get and set preferences to portlet instances. Because Portlet beans specify a static portlet only, and not a portlet instance that is found on a page, portlet instances are identified by two ID values: The ID of the portlet that specifies the portlet, and the ID of the portlet entity piid that anchors an instance of the portlet in a page.
 
-**Parent topic:**[Command reference for the Portal Scripting Interface](../admin-system/adpsicrf.md)
 

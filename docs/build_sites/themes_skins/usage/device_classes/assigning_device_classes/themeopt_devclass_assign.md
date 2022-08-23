@@ -7,7 +7,6 @@ You can manually assign a device class to a client.
 -   **[XML sample for assigning a device class](../dev-theme/themeopt_devclass_xmlsample.md)**  
 This example creates a client that matches devices that send iPhone in the user agent. The device class smartphone and iOS are assigned to the client.
 
-**Parent topic:**[Device classes](../dev-theme/themeopt_devclass.md)
 
 **Previous topic:**[Creating and deleting device classes](../dev-theme/themeopt_devclass_working.md)
 

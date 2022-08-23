@@ -114,13 +114,11 @@ The Personalized List portlet provides a ready-to-use portlet for displaying per
 36. [Uninstall Personalization sample and database](../pzn/pzn_demouninstall.md)  
 View the steps to uninstall Personalization sample demo, database, and users.
 
-**Parent topic:**[Digital Experience Personalization](../pzn/pzn_overview.md)
 
 **Previous topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
 
 **Next topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
 
-**Parent topic:**[Digital Experience Personalization](../pzn/pzn_overview.md)
 
 **Previous topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
 

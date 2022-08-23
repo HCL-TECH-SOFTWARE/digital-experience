@@ -79,7 +79,6 @@ When you use the wizard and provide information about the database for your envi
 
 \(Optional\) After you transfer your data to DB2, run a configuration task to enable support for high availability recovery \(HADR\) and rollforward recovery.
 
-**Parent topic:**[Installing the database software](../config/prereq_db_software.md)
 
 **Related information**  
 

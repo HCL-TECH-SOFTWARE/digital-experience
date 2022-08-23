@@ -74,7 +74,6 @@ You can use the modularized framework for dynamic content spots to override spot
 -   **[Dynamic content spot debugging](../dev-theme/themeopt_dyn_cnt_spt_debugging.md)**  
 Dynamic Content Spots add dynamic markup into static themes or skins. Sometimes, it is difficult to discern which parts of the page were contributed from which dynamic content spots.
 
-**Parent topic:**[Dynamic content spots](../dev-theme/themeopt_cust_jsp.md)
 
 **Related information**  
 

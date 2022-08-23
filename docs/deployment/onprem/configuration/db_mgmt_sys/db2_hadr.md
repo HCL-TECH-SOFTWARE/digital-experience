@@ -244,7 +244,6 @@ Before you enable the HADR, use the **Database Transfer** option in the Configur
     7.  Validate the connection by testing it for each data source.
 
 
-**Parent topic:**[Database Management Systems](../config/config_dbms.md)
 
 **Related information**  
 

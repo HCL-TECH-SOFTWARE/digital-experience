@@ -7,5 +7,4 @@ Defined queries are stored queries that can be run and updated as required.
 -   **[Query parameters](../wcm/wcm_rest_adhoc.md)**  
 The following parameters can be used with queries.
 
-**Parent topic:**[REST service for Web Content Manager](../wcm/wcm_rest.md)
 

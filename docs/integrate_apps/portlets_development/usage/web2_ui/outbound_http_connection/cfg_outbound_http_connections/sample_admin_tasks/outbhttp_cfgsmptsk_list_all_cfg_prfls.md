@@ -34,5 +34,4 @@ To create a file that contains all profiles that are registered at the outbound 
     ```
 
 
-**Parent topic:**[Sample administration tasks](../dev-portlet/outbhttp_cfg_smpl_adm_tasks.md)
 

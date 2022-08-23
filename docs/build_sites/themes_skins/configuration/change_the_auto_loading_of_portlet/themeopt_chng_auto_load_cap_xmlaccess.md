@@ -29,5 +29,4 @@ You can change the auto-loading of portlet capabilities with XMLAccess.
 4.  Restart HCL Portal.
 
 
-**Parent topic:**[Change the auto-loading of portlet capabilities](../dev-theme/themeopt_chng_auto_load_cap.md)
 

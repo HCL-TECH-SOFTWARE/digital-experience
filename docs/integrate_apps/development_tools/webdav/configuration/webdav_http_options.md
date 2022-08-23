@@ -41,7 +41,6 @@ To enable this WAR file, adapt the application.xml files of the deployed Enterpr
 
 **Note:** Depending on how your web server is set up, this change might cause all requests to be routed to the web server plug-in. In this case refer to your web server documentation for information about how to route only OPTIONS requests to the plug-in.
 
-**Parent topic:**[Using WebDAV with HCL Portal](../admin-system/webdav.md)
 
 **Related information**  
 

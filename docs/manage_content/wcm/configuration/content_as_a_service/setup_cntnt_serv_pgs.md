@@ -28,5 +28,4 @@ The setup for Content as a Service pages comprises both resources that are share
 5.  Restart your portal server.
 
 
-**Parent topic:**[Content as a Service pages](../wcm/cntnt_serv_pgs.md)
 

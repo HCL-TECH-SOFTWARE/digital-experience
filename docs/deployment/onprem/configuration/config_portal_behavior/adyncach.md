@@ -9,5 +9,4 @@ For information about how to enable and configure dynamic fragment cache, go to 
 -   Windows™: [Configuring portlet fragment caching](http://pic.dhe.ibm.com/infocenter/wasinfo/v8r5/topic/com.ibm.websphere.nd.doc/ae/tdyn_portletcaching.html)
 -   z/OS®: [Configuring portlet fragment caching](http://pic.dhe.ibm.com/infocenter/wasinfo/v8r5/topic/com.ibm.websphere.zseries.doc/ae/tdyn_portletcaching.html)
 
-**Parent topic:**[Configuring portal behavior](../admin-system/adptlcfg.md)
 

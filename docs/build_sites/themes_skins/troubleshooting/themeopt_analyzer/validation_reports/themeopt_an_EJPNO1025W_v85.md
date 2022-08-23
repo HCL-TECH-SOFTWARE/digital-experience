@@ -10,7 +10,4 @@ The skin metadata key ''\{1\}'', which is used when rendering the skin, is set t
 
 Update your skin metadata with the key ''\{0\}'' to point to the fs-type1 WebDAV entry point. For example: dav:fs-type1/themes/custom theme/skins/custom skin/.
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
-
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 

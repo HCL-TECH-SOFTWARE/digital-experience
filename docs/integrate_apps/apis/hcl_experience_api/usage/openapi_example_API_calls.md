@@ -108,5 +108,4 @@ See example result:
         ![Experience API get roles script with authorization](../assets/ExperienceAPI_get_roles_with_auth.png)
 
 
-**Parent topic:**[HCL Experience API](../open_api/openapi_overview.md)
 

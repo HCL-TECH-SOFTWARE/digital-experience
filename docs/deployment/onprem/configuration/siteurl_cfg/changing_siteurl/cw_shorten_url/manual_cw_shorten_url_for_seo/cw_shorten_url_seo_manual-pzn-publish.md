@@ -11,5 +11,4 @@ The Modify Site URLs for Search Engine Optimization option in the Configuration 
     3.  Select **Edit**, and update the URL in the Publish Servlet URL field to reflect the new context root information.
     4.  Click **Save** to store your updates.
 
-**Parent topic:**[Manual Steps: Modify Site URLs for Search Engine Optimization](../config/cw_shorten_url_seo_manual.md)
 

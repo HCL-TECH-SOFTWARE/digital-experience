@@ -12,7 +12,4 @@ Use the following simple guidelines when tuning the sifter:
 -   Distribute the sifter onto a separate server from the LikeMinds Recommendation Engine.
 -   Run multiple sifter processes distributed across multiple machines for greater scalability.
 
-**Parent topic:**[Configuring the sifter for mentor selection](../pzn/pzn_configure_sifter_mentor_selection.md)
-
-**Parent topic:**[Configuring the sifter for mentor selection](../pzn/pzn_configure_sifter_mentor_selection.md)
 

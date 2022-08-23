@@ -29,5 +29,4 @@ You must configure the security role mapping for the Syndicated Feed Portlet.
 13. Click **Apply** and **OK** to save your changes.
 
 
-**Parent topic:**[Client side aggregation \(CSA\) rendering in the Syndicated Feed Portlet](../admin-system/ic_syndfeed_csr.md)
 

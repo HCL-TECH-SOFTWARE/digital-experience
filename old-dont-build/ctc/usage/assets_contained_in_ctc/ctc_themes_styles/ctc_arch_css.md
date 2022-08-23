@@ -19,5 +19,4 @@ These styles are applied to the different types of data that is rendered in Cont
 -   **[Page Component styles](../ctc/ctc_arch_css_component.md)**  
 The page component styles are applied to the various types of page components that are used in Content Template Catalog. The styles are always applied to a container DIV. Subselectors are used to specify the internal formatting of the page component.
 
-**Parent topic:**[Assets contained in the Content Template](../ctc/ctc-assets.md)
 

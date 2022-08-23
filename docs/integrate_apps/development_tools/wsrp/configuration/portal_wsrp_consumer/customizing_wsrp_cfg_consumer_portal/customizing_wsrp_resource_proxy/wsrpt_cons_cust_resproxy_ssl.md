@@ -11,5 +11,4 @@ By default, the global SSL configuration as defined in the HTTP Client Service p
 2.  Restart the portal or the cluster for the new setting to become active.
 
 
-**Parent topic:**[Customizing the WSRP resource proxy](../admin-system/wsrpt_cons_res_proxy.md)
 

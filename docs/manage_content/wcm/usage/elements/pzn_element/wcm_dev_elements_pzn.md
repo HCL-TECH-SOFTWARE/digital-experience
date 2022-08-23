@@ -28,5 +28,4 @@ If you delete a Personalization Rule or content Spot that is referenced in a Per
 
 Web content caching can sometimes be used with Personalization components but depends on the conditions set in the personalization rule, or the resources that are used to determine the rule results. Cache testing is required to determine whether the content returned by your personalization component can be cached by using web content caching.
 
-**Parent topic:**[Personalized content](../wcm/wcm_dev_elements_types_personalize.md)
 

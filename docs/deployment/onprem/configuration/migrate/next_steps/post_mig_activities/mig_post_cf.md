@@ -47,5 +47,4 @@ This task is a required if you are on CF07 or earlier. After you migrate using t
 4.  **Cluster only:** Complete each step on every node in the cluster.
 
 
-**Parent topic:**[Post-migration activities](../migrate/mig_t_post_mig.md)
 

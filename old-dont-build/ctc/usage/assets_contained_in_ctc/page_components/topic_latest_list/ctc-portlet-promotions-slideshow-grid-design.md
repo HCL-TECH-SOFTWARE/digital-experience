@@ -2,7 +2,6 @@
 
 Displays a set of slides and text in the form of a slideshow. It is designed to work with content created by using the Promotion content template. This is similar to the Promotions Slideshow, but this portlet displays a grid of slideshows.
 
-**Parent topic:**[Slideshows](../ctc/ctc-portlet-types-slideshows.md)
 
 # Usage
 

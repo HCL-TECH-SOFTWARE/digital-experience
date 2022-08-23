@@ -34,5 +34,4 @@ http://localhost:10039/dx/api/search/v1/explorer/
 
 See the Digital Experience REST API Explorer for details on the body, headers, query parameters, response body, and other information available for use.
 
-**Parent topic:**[Search REST API specification](../search-rest-api/search.md)
 

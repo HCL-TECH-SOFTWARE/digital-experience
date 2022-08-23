@@ -188,7 +188,6 @@ where webservername is the web server definition name you defined previously whe
 |
 
 
-**Parent topic:**[HCL Portal](../config/config_portal.md)
 
 **Related information**  
 

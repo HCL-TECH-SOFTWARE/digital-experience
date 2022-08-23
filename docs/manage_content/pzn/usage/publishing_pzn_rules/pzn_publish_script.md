@@ -59,13 +59,11 @@ Publishing through the command line is a two-step process. First, you export the
 
 After a publish is started, you see status messages in the command console.
 
-**Parent topic:**[Publishing personalization rules](../pzn/pzn_depub.md)
 
 **Previous topic:**[Publishing personalization rules](../pzn/pzn_publishing_objects.md)
 
 **Next topic:**[Publishing personalization rules over SSL](../pzn/pzn_publish_secure.md)
 
-**Parent topic:**[Publishing personalization rules](../pzn/pzn_depub.md)
 
 **Previous topic:**[Publishing personalization rules](../pzn/pzn_publishing_objects.md)
 

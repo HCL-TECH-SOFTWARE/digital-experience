@@ -39,7 +39,6 @@ The search element is used to define the design that is used to display search r
         Enter text to display if no results are returned.
 
 
-**Parent topic:**[Creating a search component](wcm_dev_elements_search_using.md)
 
 **References:**  
 

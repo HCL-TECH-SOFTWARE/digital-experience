@@ -118,5 +118,4 @@ Examples:
 <ibmwcm:additionalViewer>jsmith</ibmwcm:additionalViewer>
 ```
 
-**Parent topic:**[RSS Namespace Extension for web content](../wci/wci_ff_nse.md)
 

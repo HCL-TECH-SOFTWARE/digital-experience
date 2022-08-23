@@ -15,5 +15,4 @@ Import the base release and remaining portal artifacts on the target. This proce
 -   **[Validating the environment](../deploy/vldt_envrnmt.md)**  
 Validate the portal artifacts on the target \(production\) environment and set up the syndication relationship. This process is a manual validation of the environment. An automated multiple user test on both environments helps find any incomplete configuration steps.
 
-**Parent topic:**[Staging to production](../deploy/dep_intr.md)
 

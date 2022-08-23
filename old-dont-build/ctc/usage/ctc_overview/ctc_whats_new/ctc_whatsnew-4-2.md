@@ -40,5 +40,4 @@ In previous versions, Content Template Catalog required managed pages to be enab
 
 The tagging and rating widgets and now more lightweight, and are now included in the **CTC Content** profile. There is no separate **CTC Content with Tagging and Rating** profile.
 
-**Parent topic:**[Content Template overview](../ctc/ctc_overview.md)
 

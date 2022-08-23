@@ -45,5 +45,4 @@ You can set the theme template by using WebDAV or managed pages. After your cust
 4.  Click **Add** to set the new metadata for the page.
 5.  Click **Save**.
 
-**Parent topic:**[Theme templates \(theme.html\)](../dev-portlet/csa2_dgn_theme_html.md)
 

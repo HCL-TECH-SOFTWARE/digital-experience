@@ -21,5 +21,4 @@ Configure the Virtual Member manager to integrate information from HCL Connectio
 -   **[Mapping a community page to a community](../connect/t_connections_portlets_comm_pages_map.md)**  
 Map a community page to an HCL Connections community so the portlets can interact with community content.
 
-**Parent topic:**[Optional and recommended configuration](../connect/c_connections_portlets_optional_config.md)
 

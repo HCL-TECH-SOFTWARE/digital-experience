@@ -97,7 +97,6 @@ You can click **Rename** from the notification and provide a unique name.
 
 ![](../images/dialog_rename_field.png "Rename asset dialog")
 
-**Parent topic:**[HCL Experience API](../open_api/openapi_overview.md)
 
 **Related information**  
 

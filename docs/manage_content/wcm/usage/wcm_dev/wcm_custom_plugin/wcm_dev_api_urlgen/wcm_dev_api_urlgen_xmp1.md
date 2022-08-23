@@ -89,5 +89,4 @@ public class RewriteUrlGenerationFilter implements ContentUrlGenerationFilter {
 </plugin>
 ```
 
-**Parent topic:**[Creating a content URL generation filter class](../wcm/wcm_dev_api_urlgen.md)
 

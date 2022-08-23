@@ -69,7 +69,6 @@ Decentralized authoring creates the risk of conflicting updates between authorin
 
 Access to each decentralized authoring environment is controlled with a combination of authoring portlet access controls and item security settings. For example, only users that require access to the local authoring environment would be granted access to the local authoring portlet. Users would be given "Read" access to all items, but only "Edit" access to items they are required to update.
 
-**Parent topic:**[HCL Web Content Manager \(WCM\) environments](../wcm/wcm_deploy.md)
 
 **Related information**  
 

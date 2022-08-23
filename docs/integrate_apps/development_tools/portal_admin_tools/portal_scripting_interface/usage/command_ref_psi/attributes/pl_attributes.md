@@ -57,5 +57,4 @@ The following are standard attribute names available for all objects. Names for 
 |uniquename|The unique name of the object if it is assigned.|
 |commonname|The common name of the object, if it is generated.|
 
-**Parent topic:**[Portal Scripting Interface Attributes](../admin-system/attributes.md)
 

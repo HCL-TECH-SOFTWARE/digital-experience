@@ -52,7 +52,6 @@ You must create a custom user registry adapter before you create your repository
     5.  Restart the WebSphere\_Portal server.
 
 
-**Parent topic:**[Creating and updating federated repositories](../security/setup_mgmt_cur_fed.md)
 
 **Related information**  
 

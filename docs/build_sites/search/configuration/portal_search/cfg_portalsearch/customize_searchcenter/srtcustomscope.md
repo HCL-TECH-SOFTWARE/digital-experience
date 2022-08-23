@@ -71,7 +71,6 @@ You can readd the All Sources scope only if this scope does not exist in the cur
 
 7.  Click **Save** to save the new property.
 
-**Parent topic:**[Customizing the Search Center](../admin-system/srtcentercustomze.md)
 
 **Related information**  
 

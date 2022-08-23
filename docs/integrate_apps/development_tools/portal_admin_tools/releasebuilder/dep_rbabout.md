@@ -18,7 +18,6 @@ Massively parallel portal configuration tasks, for example hundreds of administr
 -   Unlike the XML configuration interface, ReleaseBuilder does not interact with the portal server runtime. You should run ReleaseBuilder on a separate, standalone machine. This system can be the staging system or a completely separate system where HCL Portal is installed.
 -   To maximize use of system resources, HCL Portal should not be running when executing ReleaseBuilder.
 
-**Parent topic:**[Updates using ReleaseBuilder](../deploy/dep_up_rb.md)
 
 **Related information**  
 

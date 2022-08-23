@@ -18,5 +18,4 @@ If the wsadmin client trace is needed, you can append the following line to the 
     `com.ibm.ws.scripting.traceString=com.ibm.*=all=enabled:com.ibm.ws.scripting.MetaInfoCache=off`
 
 
-**Parent topic:**[Preparing your source environment](../migrate/mig_t_premig_tasks.md)
 

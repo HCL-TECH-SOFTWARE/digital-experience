@@ -6,7 +6,6 @@ During the installation process, the IBM Installation Manager creates the HCL Po
 
 On the Configuration Wizard home page, click **More Options** to find **Create an HCL Portal Profile**.
 
-**Parent topic:**[HCL Portal](../config/config_portal.md)
 
 **Related information**  
 

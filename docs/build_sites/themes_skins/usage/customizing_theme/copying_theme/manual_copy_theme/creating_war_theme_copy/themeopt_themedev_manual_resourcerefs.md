@@ -73,5 +73,4 @@ Dynamic content spots are defined through a module called wp\_dynamicContentSpot
 7.  Save your changes.
 
 
-**Parent topic:**[Creating a WAR-based theme copy](../dev-theme/themeopt_themedev_manual_warbased.md)
 

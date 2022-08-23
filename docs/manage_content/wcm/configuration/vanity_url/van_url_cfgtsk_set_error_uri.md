@@ -60,5 +60,4 @@ The configuration task for configuring an error URI for vanity URLs is `set-vani
     The error URI specified in this example redirects the user to the portal home page.
 
 
-**Parent topic:**[Administering vanity URLs](../wcm/van_url_admin_ref.md)
 

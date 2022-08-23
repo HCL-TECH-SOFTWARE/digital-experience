@@ -15,7 +15,6 @@ Some ConfigEngine extension points are required when you install an application 
 -   **[Tasks and extension points for custom code](../config/ant_tasks_paa.md)**  
 You can use the following tasks and extension points when you create custom code to work with the ConfigEngine framework.
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 
 **Related information**  
 

@@ -33,7 +33,6 @@ Configure authentication for either basic authentication or LTPA forwarding.
 5.  Restart the HCL Portal server.
 
 
-**Parent topic:**[Integrating HCL Connections tags](../collab/i_coll_t_enable_lctags.md)
 
 **Related information**  
 

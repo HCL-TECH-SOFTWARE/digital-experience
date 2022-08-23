@@ -62,7 +62,6 @@ Complete the following steps to change the login and logout pages:
     3.  Restart the WebSphere\_Portal server on the standalone server or on each cluster member.
 
 
-**Parent topic:**[External security managers](../security/sec_ext_man.md)
 
 **Related information**  
 

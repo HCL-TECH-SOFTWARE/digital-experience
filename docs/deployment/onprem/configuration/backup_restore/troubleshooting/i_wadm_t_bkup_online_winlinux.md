@@ -49,5 +49,4 @@ To enable archive logging for an online DB2® database backup, follow these step
 16. To enable the changes, restart the DB2 instance for the HCL Portal server that you are backing up.
 
 
-**Parent topic:**[Enabling logging](../admin-system/i_wadm_t_bkup_log_winlinux.md)
 

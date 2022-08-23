@@ -6,7 +6,6 @@ Use the Configuration Wizard to remove a portal profile.
 
 On the Configuration Wizard home page, click **More Options** to find **Remove an HCL Portal Profile**.
 
-**Parent topic:**[HCL Portal](../config/config_portal.md)
 
 **Related information**  
 

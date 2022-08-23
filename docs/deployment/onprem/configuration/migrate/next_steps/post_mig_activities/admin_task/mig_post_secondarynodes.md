@@ -31,7 +31,6 @@ Complete the following steps on the secondary node:
     **Note:** For the **Install profile templates** manual step, you must copy the profileTemplates.zip from the stand-alone server that you installed and ran the enable-profiles task on, not from the primary node.
 
 
-**Parent topic:**[Administrative tasks](../migrate/mig_post_admintasks.md)
 
 **Related information**  
 

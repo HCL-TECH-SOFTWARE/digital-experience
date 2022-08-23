@@ -257,5 +257,4 @@ db2 "UPDATE DB CFG FOR dbname using AUTO_MAINT off"
 16. Stop and restart the appropriate servers to propagate the changes.
 
 
-**Parent topic:**[Updating your user registry](../security/update_ureg.md)
 

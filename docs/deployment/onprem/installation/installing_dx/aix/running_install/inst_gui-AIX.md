@@ -98,5 +98,4 @@ After a successful installation, the summary displays. Choose the **Portal First
 
 This message is part of the installation process and is not repeated after the installation is complete. Therefore, the message can be ignored.
 
-**Parent topic:**[Running the HCL Digital Experience installer in AIX](../install/inst_binaries-AIX.md)
 

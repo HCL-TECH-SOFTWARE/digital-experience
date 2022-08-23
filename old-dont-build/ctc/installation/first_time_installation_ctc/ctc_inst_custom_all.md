@@ -62,5 +62,4 @@ Follow these steps to install specific applications on a base portal or a stand-
 8.  Follow the steps in this topic to complete installation: [Completing a Content Template installation on a web server](ctc_inst_clusdeploy.md)
 
 
-**Parent topic:**[First-time installation of Content Template](../ctc/ctc_inst_overview.md)
 

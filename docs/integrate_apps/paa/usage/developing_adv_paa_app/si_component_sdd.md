@@ -192,5 +192,4 @@ The `<requirements>` element can contain one or more `<requirement>` elements, e
 
 Not all extension points allow for a component dependency to be set. The extension points that are called as part of the deploy-apps-applySIFeaturePack, such as install-content-xmlaccess, apply the `<requirements>` element to the deploy-apps-applySIFeaturePack extension point. Read *ConfigEngine extension points for the Solution Installer* for the full list of extension points that are supported by the Solution Installer and whether they can handle component dependencies.
 
-**Parent topic:**[Developing advanced PAA file applications](../config/dev_sol_app_adv.md)
 

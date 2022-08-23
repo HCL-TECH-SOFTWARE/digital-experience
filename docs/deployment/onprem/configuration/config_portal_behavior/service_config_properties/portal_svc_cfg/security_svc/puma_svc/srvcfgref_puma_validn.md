@@ -96,5 +96,4 @@ Unlike the properties that are listed earlier, the properties for password valid
 
 
 
-**Parent topic:**[Puma Store and Validation Services](../admin-system/srvcfgref_puma.md)
 

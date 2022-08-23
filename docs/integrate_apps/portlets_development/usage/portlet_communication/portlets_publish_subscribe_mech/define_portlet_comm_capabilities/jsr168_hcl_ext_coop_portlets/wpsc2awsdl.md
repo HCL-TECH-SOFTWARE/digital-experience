@@ -352,5 +352,4 @@ The following is the schema for the extensibility elements introduced for the po
 
 ```
 
-**Parent topic:**[JSR 168 HCL extension for cooperative portlets](../dev-portlet/pltcom_ptlt_coop.md)
 

@@ -27,13 +27,11 @@ After developing personalization rules, you publish the rules.
     ![screenshot of personalization navigator](../images/pzn_screen_navigator.jpg "")
 
 
-**Parent topic:**[Publishing personalization rules](../pzn/pzn_depub.md)
 
 **Previous topic:**[Publishing considerations](../pzn/pzn_publish_considerations.md)
 
 **Next topic:**[Publishing and deleting personalization rules using a script](../pzn/pzn_publish_script.md)
 
-**Parent topic:**[Publishing personalization rules](../pzn/pzn_depub.md)
 
 **Previous topic:**[Publishing considerations](../pzn/pzn_publish_considerations.md)
 

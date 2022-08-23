@@ -31,5 +31,4 @@ A content URL generation filter is used to customize the URLs that are generated
 -   **[Deploying custom plug-in applications](../wcm/wcm_dev_class_register.md)**  
 You must deploy your custom plug-in applications on your server before they can be used in your web content system.
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 

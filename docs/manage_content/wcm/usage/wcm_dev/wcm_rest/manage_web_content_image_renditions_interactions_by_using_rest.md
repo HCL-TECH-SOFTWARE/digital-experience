@@ -531,5 +531,4 @@ ZhvWak//fhbpw5vhF6+eW27/B97nTf9r189kAAAAAElFTkSuQmCC
 
 To create an image and its renditions, the same patterns as shown in the above examples can be used to supply images as renditions if they exist in the Digital Asset Management or Web Content Manager libraries.
 
-**Parent topic:**[REST service for Web Content Manager](../wcm/wcm_rest.md)
 

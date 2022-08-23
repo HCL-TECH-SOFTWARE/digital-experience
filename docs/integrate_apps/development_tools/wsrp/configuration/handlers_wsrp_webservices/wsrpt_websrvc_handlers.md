@@ -15,5 +15,4 @@ Learn how to configure and use a handler on a WSRP Producer portal.
 -   **[WSRP Consumer portal](../admin-system/wsrpt_websrvc_handlers_cons.md)**  
 Learn how to configure and use a handler on a WSRP Consumer portal.
 
-**Parent topic:**[WSRP services](../admin-system/wsrpc.md)
 

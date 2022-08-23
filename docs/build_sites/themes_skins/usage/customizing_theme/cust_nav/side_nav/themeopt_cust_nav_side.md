@@ -36,7 +36,6 @@ You can set the side navigation template as the theme default by changing the re
 -   **[Customizing side navigation](../dev-theme/themeopt_cust_nav_sidecust.md)**  
 You can customize your side navigation by scoping styles specifically to the side navigation template or changing the width of the side navigation area or main content area.
 
-**Parent topic:**[Customizing navigation](../dev-theme/themeopt_cust_nav.md)
 
 **Related information**  
 

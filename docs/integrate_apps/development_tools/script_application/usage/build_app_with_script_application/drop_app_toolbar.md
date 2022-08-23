@@ -21,7 +21,6 @@ The content toolbar can display the applications that were saved there with the 
 5.  Select an application and add it to your portal page.
 
 
-**Parent topic:**[Build applications with the Script Application](../script-portlet/build_apps.md)
 
 **Related information**  
 

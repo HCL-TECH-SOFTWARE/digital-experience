@@ -9,5 +9,4 @@ The look bean supports the default search criteria, and the following keywords f
 
 Since the sets of themes and skins are distinct, there is no option to search for both type of nodes at the same time.
 
-**Parent topic:**[Themes and Skins](../admin-system/themes_skins.md)
 

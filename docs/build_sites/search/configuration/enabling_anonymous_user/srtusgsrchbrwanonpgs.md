@@ -42,7 +42,6 @@ Proceed as follows:
 -   **[Placing the Search Center on a public portal page](../admin-system/srt_sc_public.md)**  
 Depending on your environment, you might want to place the Search Center portlet on a public page of your HCL Digital Experience and have the search box in the portal theme take users who do a search to that public Search Center.
 
-**Parent topic:**[Search](../wcm/wcm_dev_search.md)
 
 **Previous topic:**[Configuring your portal site for search by internet search engines](../admin-system/srccfgextsrch.md)
 

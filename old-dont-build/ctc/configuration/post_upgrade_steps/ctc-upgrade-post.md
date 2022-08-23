@@ -17,5 +17,4 @@ A new Setup Index Filter component is available that supersedes the old Index Fi
 -   **[Enabling anonymous search](../ctc/ctc_deploy_search_template.md)**  
 For websites that allow anonymous users to view the site, you need to configure search to allow anonymous users to search your site.
 
-**Parent topic:**[Upgrade and Migration of Content Template](../ctc/ctc_migr_overview.md)
 

@@ -15,5 +15,4 @@ The authentication modes are specified by the use.admin.user property in Deploym
 
 The main difference between the two methods is that the single ID method uses a preset ID regardless of who you log in as while the multiple ID method uses the ID you logged in with but you cannot deploy a portlet unless your ID is added to the WebSphere Application Server Console Group with Administrator access rights.
 
-**Parent topic:**[Managing portlets in your cluster](../admin-system/manage_portlets.md)
 

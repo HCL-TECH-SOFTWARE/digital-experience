@@ -17,5 +17,4 @@ The Global Settings portlet does not work in portal cluster configurations.
 4.  Click **Save**.
 
 
-**Parent topic:**[Configuring portal behavior](../admin-system/adptlcfg.md)
 

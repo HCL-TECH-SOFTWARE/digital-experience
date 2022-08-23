@@ -37,7 +37,6 @@ To improve performance, you can tune the caches for the Digital Data Connector \
 -   **[Hints and tips for Digital Data Connector](../social/plrf_hint_tip.md)**  
 Learn about things that are useful to know when you work with the social rendering integration with Digital Data Connector \(DDC\) for HCL Portal.
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 
 **Related information**  
 

@@ -15,5 +15,4 @@ HCL Portal Version 8.5 supports the following two types of list-rendering profil
 -   An XPath centric type of profile. It uses XPath statements to define the data transformation. This data transformation contains the aspects of dividing the XML document and the extraction of item attributes and list properties as listed before.
 -   A custom type of profile. It does not define a data transformation, but registers only the set of supported item attributes that are shown in the **Insert a tag** dialog. When you use a custom type profile, the corresponding bean list provider must provide the respective values for the attribute names that you want the custom profile to support.
 
-**Parent topic:**[Working with list-rendering profiles](../social/plrf_work_lr_profiles.md)
 

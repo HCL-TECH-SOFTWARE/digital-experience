@@ -49,7 +49,6 @@ WEB_MODULE/Tracing.war/1_0_3K@User
 
 ```
 
-**Parent topic:**[External security managers](../security/sec_ext_man.md)
 
 **Related information**  
 

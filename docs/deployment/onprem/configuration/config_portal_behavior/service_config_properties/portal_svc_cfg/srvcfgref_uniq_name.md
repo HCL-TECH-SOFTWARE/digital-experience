@@ -50,5 +50,4 @@ The available mappings are defined as follows:
 
 Examples of where these unique names are used are: Theme links for New Page, Edit Page, and Assign Permissions.
 
-**Parent topic:**[Portal service configuration](../admin-system/srvcfgref.md)
 

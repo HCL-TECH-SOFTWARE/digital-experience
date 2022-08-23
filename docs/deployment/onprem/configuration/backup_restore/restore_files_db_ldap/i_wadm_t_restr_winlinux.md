@@ -40,7 +40,6 @@ Use the RESTORE DATABASE command of IBM DB2 Universal Database Enterprise Server
 -   **[Using the DB2 Restore wizard](../admin-system/i_wadm_t_restr_db2_wiz.md)**  
 Use the Restore wizard of IBM DB2 Universal Database Enterprise Server Edition as an alternative to the DB2 RESTORE DATABASE command to restore the databases that you backed up.
 
-**Parent topic:**[Backup and restore](../admin-system/i_wadm_c_bkup_restr_winlinux.md)
 
 **Related information**  
 

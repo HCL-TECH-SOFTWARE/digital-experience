@@ -212,7 +212,6 @@ You can pre-render sites either manually, or to a schedule, or at intervals. The
     -   `connect.moduleconfig.cacher.task.interval.recurrence`
     -   `connect.businesslogic.module`
 
-**Parent topic:**[Configuring a web content delivery environment](../wcm/wcm_install_cfgdelivery.md)
 
 **Related information**  
 

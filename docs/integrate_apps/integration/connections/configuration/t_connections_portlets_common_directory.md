@@ -36,5 +36,4 @@ Follow these steps to configure common Directory Services for the HCL Connection
 4.  Restart the Portal server after you update directory.services.xml or restart all of the servers for a clustered deployment.
 
 
-**Parent topic:**[Configure HCL Portal to work with HCL Connections](../connect/c_connections_overview.md)
 

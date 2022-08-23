@@ -30,5 +30,4 @@ These attributes are also available:
 
 All attributes are read-only, there is no set command. The resourceroot attribute typically is the name of the WAR file of the web module.
 
-**Parent topic:**[Portlet repository](../admin-system/ptlt_rep.md)
 

@@ -17,7 +17,6 @@ The WSRP standard defines the interfaces and the protocol for communication betw
 -   **[Abbreviations](../admin-system/wsrpc_abbrv.md)**  
 These topics about WSRP and the portal use some abbreviations.
 
-**Parent topic:**[WSRP services](../admin-system/wsrpc.md)
 
 **Related information**  
 

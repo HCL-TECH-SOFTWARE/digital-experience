@@ -116,5 +116,4 @@ The following list gives the navigational state parameters. Use them to set the 
 
 You can add new parameters by prefixing the key with `dyn:`, for example: `dyn:com.ibm.mashups.someKey = someValue`. The new name-value pair must be of type string. Restart the server after you add the new parameter.
 
-**Parent topic:**[Portal service configuration](../admin-system/srvcfgref.md)
 

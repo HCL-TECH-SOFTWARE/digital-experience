@@ -55,5 +55,4 @@ When building a hierarchy of taxonomies and categories, it is important to consi
 
 |
 
-**Parent topic:**[Building the website](../site/site_build_parent.md)
 

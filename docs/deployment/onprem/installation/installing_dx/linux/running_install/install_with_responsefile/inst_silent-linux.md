@@ -43,5 +43,4 @@ Before you access WebSphere Application Server, configure the software license a
 -   **[Creating a response file for installing HCL Digital Experience in Linux](../install/inst_response-linux.md)**  
 Use IBM Installation Manager to record a response file based on your environment, and also to automate your installation on multiple servers.
 
-**Parent topic:**[Running the HCL Digital Experience installer in Linux](../install/inst_binaries-linux.md)
 

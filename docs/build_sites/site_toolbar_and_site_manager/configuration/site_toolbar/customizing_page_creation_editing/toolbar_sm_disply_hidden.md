@@ -19,5 +19,4 @@ For other pages in your site with com.ibm.portal.Hidden set to true, you can als
 5.  Click **Save**.
 
 
-**Parent topic:**[Customizing page creation and page editing options](../admin-system/epc_custom_page_tab.md)
 

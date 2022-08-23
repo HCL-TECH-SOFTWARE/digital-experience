@@ -13,5 +13,4 @@ You can modify the properties of a theme and its available skins in the Manage T
 -   **[Creating a theme](../dev-theme/themeopt_themedev_create.md)**  
 You can quickly create a new theme that is based on a template when you click the Create Theme icon.
 
-**Parent topic:**[Developing themes and skins](../dev-theme/themeopt_themes.md)
 

@@ -70,7 +70,6 @@ As an owner of an HCL Connections community, you can define the set of widgets t
 -   **[Extending social lists by using the digital data connector](../social/soc_rendr_xtnd_sl_by_plrf.md)**  
 The social rendering feature in HCL Digital Experience 8.5 is implemented as an Digital Data Connector \(DDC\) for HCL Portal plug-in.
 
-**Parent topic:**[Setting up a website](../site/site_setup.md)
 
 **Related information**  
 

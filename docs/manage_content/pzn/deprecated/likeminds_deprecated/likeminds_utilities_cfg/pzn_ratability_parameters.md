@@ -66,7 +66,4 @@ To specify apow, set `db.ratability.age.power` \(default is 0.5\):
 db.ratability.age.power= 0.5
 ```
 
-**Parent topic:**[Configuring LikeMinds utilities](../pzn/pzn_config_background_utilities.md)
-
-**Parent topic:**[Configuring LikeMinds utilities](../pzn/pzn_config_background_utilities.md)
 

@@ -24,5 +24,4 @@ A separate document is available that describes the process of installing HCL Di
 
 **Important:** While the upgrade process is taking place, some portlets might become temporarily unavailable because of updates to the shared database, which are incompatible with the previous version of the portlet. This process can introduce functional limitations to the 24x7 availability.
 
-**Parent topic:**[Cluster considerations](../plan/plan_clus_ovr.md)
 

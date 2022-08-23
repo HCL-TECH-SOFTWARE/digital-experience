@@ -34,5 +34,4 @@ The Internet Information Services \(IIS\) server as a part of the ADFS configura
     ```
 
 
-**Parent topic:**[Configuration settings for Active Directory Federation Services \(ADFS\)](../dev-portlet/outbhttp_auth_est_sso_adfs.md)
 

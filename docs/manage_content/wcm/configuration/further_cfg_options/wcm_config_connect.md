@@ -29,7 +29,6 @@ Enable connect tags to reference web content components and apply customized cac
 4.  Restart the server or cluster.
 
 
-**Parent topic:**[Further configuration options](../wcm/wcm_config.md)
 
 **Related information**  
 

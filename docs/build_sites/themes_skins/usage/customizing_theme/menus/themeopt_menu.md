@@ -9,5 +9,4 @@ You can add a link to the resource permissions portlet to see or modify role typ
 -   **[Updating the content menu to open on click instead of on hover](../dev-theme/themeopt_update_con_menu_open.md)**  
 The content menu opens when a user hovers over a portlet containing HCL Web Content Manager items. In Combined Cumulative Fix 05, you can set the content menu to open when a user clicks an icon in the portlet skin instead.
 
-**Parent topic:**[Customizing the theme](../dev-theme/themeopt_cust.md)
 

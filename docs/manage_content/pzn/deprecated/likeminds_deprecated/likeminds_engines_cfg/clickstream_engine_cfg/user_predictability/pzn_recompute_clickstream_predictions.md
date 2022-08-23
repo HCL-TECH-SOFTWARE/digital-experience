@@ -12,7 +12,4 @@ Ordinarily, the LikeMinds server generates predictions based on a user's mentors
 
 Use this setting with caution, as selecting mentors is a relatively expensive operation: a low percentage setting can lead to excessive CPU load with little or no gain in prediction quality. A higher setting will improve performance, but predictions may be less accurate.
 
-**Parent topic:**[User predictability](../pzn/pzn_user_predictability.md)
-
-**Parent topic:**[User predictability](../pzn/pzn_user_predictability.md)
 

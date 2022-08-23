@@ -224,7 +224,6 @@ For example, if the current page has the friendly path /home/mypage and contains
 -   If the href attribute of an anchor link contains a URL that starts with /, then the rewriting logic resolves the URL as a friendly path. If no page for this path exists, the system assumes a link to another application on the same server and leaves the value of the href attribute untouched.
 -   If the href attribute of an anchor link starts with ?, then the remainder is considered query parameters and no rewriting occurs.
 
-**Parent topic:**[Creating a static page](../dev/spa_define_page.md)
 
 **Related information**  
 

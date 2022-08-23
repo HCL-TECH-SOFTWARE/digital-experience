@@ -15,7 +15,6 @@ You can modify a virtual portal by using either the Virtual Portal Manager portl
 -   **[Deleting a virtual portal](../admin-system/advp_tsk_delete.md)**  
 You can delete a virtual portal by using the Virtual Portal Manager portlet.
 
-**Parent topic:**[Administering virtual portals](../admin-system/advp_adm.md)
 
 **Related information**  
 

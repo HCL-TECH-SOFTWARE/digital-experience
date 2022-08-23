@@ -84,7 +84,6 @@ To use the WSRP policy sets and provider policy set bindings for service configu
 3.  After you have completed this configuration, restart your portal.
 
 
-**Parent topic:**[Configuring security on the Producer portal](../admin-system/wsrpt_prod_sec_ws.md)
 
 **Related information**  
 

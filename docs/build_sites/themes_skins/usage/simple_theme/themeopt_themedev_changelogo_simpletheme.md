@@ -29,5 +29,4 @@ Ensure that you created a custom theme for Greenwheels that uses the Simple Them
 
 The default logo is replaced by your custom logo.
 
-**Parent topic:**[Understanding the Simple Theme](../dev-theme/themeopt_themedev_simpletheme.md)
 

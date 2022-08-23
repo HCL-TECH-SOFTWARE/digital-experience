@@ -108,7 +108,6 @@ Observe the following restrictions when you use Dojo with the portal:
 -   Only one instance of Dojo can be loaded in a page.
 -   Do not rely on making your own updates to the bundled Dojo package. HCL Digital Experience support is likely to update individual files over time, and might even replace the entire package.
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 
 **Related information**  
 

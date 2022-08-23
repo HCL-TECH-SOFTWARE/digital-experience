@@ -31,5 +31,4 @@ Code Sample:
 </portlet-app>
 ```
 
-**Parent topic:**[Predefined public render parameters](../dev-portlet/predef_pub_ren_param.md)
 

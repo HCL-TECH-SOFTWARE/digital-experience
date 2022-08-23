@@ -11,5 +11,4 @@ When you migrate your themes, be aware of the following considerations:
 -   Migration moves your existing themes to the new server. Migration does not upgrade themes from an earlier version to use new functionality that is introduced in more recent versions of the product.
 -   You can update an existing Portal 7.0.0.2 theme to use Dojo 1.7, OneUI 3.0 and the status bar. An updated Portal 7.0.0.2 theme can use all of the new version 8 modularization features.
 
-**Parent topic:**[Enable new functions in migrated themes](../dev-theme/themeopt_migrate_deploy80.md)
 

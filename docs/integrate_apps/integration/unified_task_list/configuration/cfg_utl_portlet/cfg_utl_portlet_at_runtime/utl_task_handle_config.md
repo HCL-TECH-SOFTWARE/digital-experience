@@ -29,5 +29,4 @@ To enable task-handling configuration data to be retrieved for a task provider i
 13. Repeat 2-12 for each Business Process in the Designer.
 
 
-**Parent topic:**[Configuring Unified Task List portlet at run time](../integrate/utl_configuring_unified_task_list_at_runtime.md)
 

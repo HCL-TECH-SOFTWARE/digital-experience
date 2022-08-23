@@ -2,7 +2,6 @@
 
 In this roadmap, the web server, database, and user registry software are distributed to different physical servers.
 
-**Parent topic:**[Roadmaps for installation and deployment](../install/rm_installation.md)
 
 # Who should use this roadmap
 

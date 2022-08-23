@@ -20,5 +20,4 @@ This restriction makes details pages a little more difficult to deal with than l
     -   Manually – create these items directly, store them in a Components or Teasers area, and then reference them using the page component configuration or Teaser Reference portlets.
     -   Through portlet instantiation – by adding the component or teaser first to a landing or index page and then referencing the resulting page component configuration or teaser by using a page component configuration portlet or Teaser Reference.
 
-**Parent topic:**[Creating index and details pages](../ctc/ctc_design_qs_idx.md)
 

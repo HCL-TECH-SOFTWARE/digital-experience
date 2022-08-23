@@ -6,5 +6,4 @@ The configuration of all portlets deployed in a cell are stored in a common data
 
 Before you start or modify the configuration of the stand-alone node, restore the WebSphere® Application Server file system and the HCL Portal databases using backups taken prior to federation. Reconnect to a database that represents the portlet and page configuration of the node before it was added to the cell. Do not reconnect to the default database.
 
-**Parent topic:**[Uninstalling the Digital Experience software](../install/uninstall.md)
 

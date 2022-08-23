@@ -35,5 +35,4 @@ To create a shared authoring environment for both sets of users you would create
 
 |
 
-**Parent topic:**[Authoring portlet](../site/site_auth_portlet.md)
 

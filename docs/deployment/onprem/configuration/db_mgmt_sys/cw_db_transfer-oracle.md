@@ -337,5 +337,4 @@ This worksheet highlights the fields and properties that you see in the Configur
 -   **[Oracle worksheet: Transfer to multiple databases](../config/cw_db_ws_oracle_multidb.md)**  
 When you use the database transfer option, you can use the condition to create multiple databases in the Configuration Wizard. This condition is selected by default. This worksheet highlights the fields and properties that you see in the Configuration Wizard when you use the multiple databases condition.
 
-**Parent topic:**[Database Management Systems](../config/config_dbms.md)
 

@@ -61,5 +61,4 @@ Attributes:
     Returns: [Title](themeopt_el_bean_title.md) object for the current control; it is never null. You can use the value of the title object to retrieve the title in current locale.
 
 
-**Parent topic:**[LayoutModel](../dev-theme/themeopt_el_bean_lay_model.md)
 

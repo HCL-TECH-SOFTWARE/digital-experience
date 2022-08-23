@@ -15,5 +15,4 @@ To illustrate how page templates, web content viewers, and content associations 
 -   **[Link examples for Web Content Viewers](../wcm/wcm_config_delivery_portlet_linking.md)**  
 Web Content Viewers can broadcast and receive links to communicate with other viewers. Depending on the link settings that you use with the viewers, the behavior of the viewers can be different. These examples demonstrate how different broadcast and receive settings can affect what a viewer renders.
 
-**Parent topic:**[Delivering web content on a portal page](../wcm/wcm_config_delivery_portal.md)
 

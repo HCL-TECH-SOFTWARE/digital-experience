@@ -47,5 +47,4 @@ The default items are best displayed by using a web content viewer portlet:
 5.  Edit the page layout of the new page and add a **Web Content Viewer** portlet to the page.
 6.  The content item that is named **Sample Article** is displayed on the page.
 
-**Parent topic:**[Content libraries](../site/site_libraries.md)
 

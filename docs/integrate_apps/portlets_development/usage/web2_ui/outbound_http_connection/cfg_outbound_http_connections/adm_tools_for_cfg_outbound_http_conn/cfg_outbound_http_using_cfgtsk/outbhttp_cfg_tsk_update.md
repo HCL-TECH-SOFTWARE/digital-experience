@@ -8,7 +8,6 @@ The syntax of the configuration task differs, depending on whether you want to u
 
 To update an outbound HTTP connection configuration, you use the configuration tasks `read-outbound-http-connection-config` and `update-outbound-http-connection-config`.
 
-**Parent topic:**[Configuring outbound HTTP connections by using configuration tasks](../dev-portlet/outbhttp_cfg_tasks.md)
 
 **Related information**  
 

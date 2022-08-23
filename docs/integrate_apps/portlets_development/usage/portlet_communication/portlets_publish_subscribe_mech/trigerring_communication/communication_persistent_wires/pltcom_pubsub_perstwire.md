@@ -18,5 +18,4 @@ Note that you can create communication links in both directions between JSR 286 
 -   **[Portlet wires](../dev-portlet/pltcom_wires.md)**  
 Portlet Wires are used to direct the information flow between portlets that communicate using JSR 286 Portlet events or the WebSphere Portal Cooperative portlets API.
 
-**Parent topic:**[Triggering communication](../dev-portlet/pltcom_pubsub_msg_based.md)
 

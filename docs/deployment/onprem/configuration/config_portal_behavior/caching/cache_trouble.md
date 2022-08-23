@@ -6,5 +6,4 @@ You can also check the following item:
 
 -   Ensure that the cache settings for all portlets on the page are consistent with the cache settings for the page. For example, if one portlet on a page is set to only be cached in a private browser cache, then the entire page can only be cached in a private browser cache, and performance is not optimal.
 
-**Parent topic:**[Caching](../security/tune_cache.md)
 

@@ -1067,5 +1067,4 @@ JSON:
 
 ```
 
-**Parent topic:**[How to use REST with authoring templates](../wcm/wcm_rest_crud_templates.md)
 

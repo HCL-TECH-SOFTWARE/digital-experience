@@ -17,5 +17,4 @@ If you created additional HCL Digital Experience profiles with HCL Portal, the p
 -   **[Deleting a profile](../install/del_prof.md)**  
 If your business needs change, you can delete a profile from the profiles that you created.
 
-**Parent topic:**[Installing the HCL Digital Experience software](../install/inst_web_experience.md)
 

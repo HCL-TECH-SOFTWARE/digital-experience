@@ -46,7 +46,6 @@ HCL Portal sites should use the encoding that is set up in the administration po
 
 If implementing a multilingual site, it is worth considering what font to use. There are a few font faces in windows that are installed automatically and can show multilingual characters. One of the best font faces is Tahoma. It is easy to read and contains all the Unicode characters.
 
-**Parent topic:**[How to use the HCL Web Content Manager Multilingual Solution](../wcm/wcm_mls_using.md)
 
 **Related information**  
 

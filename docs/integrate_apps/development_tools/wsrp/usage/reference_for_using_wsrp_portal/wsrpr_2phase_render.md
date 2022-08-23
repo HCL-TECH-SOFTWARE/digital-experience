@@ -23,7 +23,6 @@ To configure WSRP two phase rendering, configure the following configuration par
     **Note:** Enabling this parameter automatically disables WSRP markup caching.
 
 
-**Parent topic:**[Reference for using WSRP with the portal](../admin-system/wsrpr_ref.md)
 
 **Related information**  
 

@@ -20,7 +20,4 @@ Before you can create an email action or promotion within the Personalization wo
 
 For more information about configuring email activities, see *configuring email activity accounts*.
 
-**Parent topic:**[Rules](../pzn/pzn_rules.md)
-
-**Parent topic:**[Rules](../pzn/pzn_rules.md)
 

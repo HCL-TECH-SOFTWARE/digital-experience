@@ -203,5 +203,4 @@ An outbound connection configuration script file needs to conform to the followi
 
 ```
 
-**Parent topic:**[XML format for outbound HTTP connection configuration settings](../dev-portlet/outbhttp_cfg_xml.md)
 

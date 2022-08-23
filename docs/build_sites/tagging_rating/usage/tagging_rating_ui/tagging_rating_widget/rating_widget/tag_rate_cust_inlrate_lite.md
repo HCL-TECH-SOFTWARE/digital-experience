@@ -61,7 +61,6 @@ Some of the components are mandatory. Do not remove them.
     This component contains all the components that are shown earlier in this list.
 
 
-**Parent topic:**[The rating widget](../admin-system/tag_rate_inline_rate_wdgt_lite.md)
 
 **Related information**  
 

@@ -19,5 +19,4 @@ You can invalidate the cache using the Theme Analyzer to update the profile or m
 7.  Restart the HCL Portal server.
 
 
-**Parent topic:**[Troubleshooting modular themes](../dev-theme/themeopt_mod_debug_ovr.md)
 

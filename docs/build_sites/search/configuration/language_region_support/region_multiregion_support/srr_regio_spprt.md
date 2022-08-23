@@ -11,5 +11,4 @@ If top-level domain names are used, no further action is required to allow regio
 -   **[Enabling region identification in HCL Portal](../admin-system/srrt_nbl_regio_id.md)**  
 You can use geographic targeting tools to associate a URL pattern with a specific region. However not all URL patterns are typically supported.
 
-**Parent topic:**[Language and region support in Portal Search](../admin-system/srr_lng_regio_spprt.md)
 

@@ -118,5 +118,4 @@ Change these values according to your configuration.
     where XML\_file is the file path to the XML file.
 
 
-**Parent topic:**[Configuration settings for Tivoli Federated Identity Manager \(TFIM\)](../dev-portlet/outbhttp_auth_est_sso_tfim.md)
 

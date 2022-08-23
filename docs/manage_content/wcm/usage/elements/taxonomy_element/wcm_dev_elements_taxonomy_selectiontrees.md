@@ -142,7 +142,6 @@ The "selectedCategories" and "visibleCategories" parameters have multiple values
 
 This URL could be used on a page in the form of a button to allow users to update their user categories. For example, You could create a button that would add the category "News" to a user's selected categories list.
 
-**Parent topic:**[Personalized content](../wcm/wcm_dev_elements_types_personalize.md)
 
 **Related information**  
 

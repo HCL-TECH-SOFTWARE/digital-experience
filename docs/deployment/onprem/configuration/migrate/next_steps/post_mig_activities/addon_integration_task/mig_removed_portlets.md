@@ -10,7 +10,6 @@ Choose one of the following methods to correct any references to unsupported por
 
 See the *What's new* section for details on what changed and what features are deprecated in this release.
 
-**Parent topic:**[Add-ons, features, and third-party integration tasks](../migrate/mig_post_ptl_int_addon.md)
 
 **Related information**  
 

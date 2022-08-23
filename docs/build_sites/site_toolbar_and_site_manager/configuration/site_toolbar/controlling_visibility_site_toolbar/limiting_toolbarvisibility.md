@@ -28,5 +28,4 @@ You can limit the visibility of the toolbar, Site Manager, and action bar to adm
 11. Click **Done**.
 
 
-**Parent topic:**[Controlling the visibility of the site toolbar and toolbar tabs](../admin-system/cntrl_vsblty_ste_tlbr.md)
 

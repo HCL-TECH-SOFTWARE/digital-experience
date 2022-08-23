@@ -10,9 +10,6 @@ An unsupported URI schema was detected in your theme. The theme metadata key is 
 
 Update your theme metadata with the key to a supported schema.
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
-
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 
 **Related information**  
 

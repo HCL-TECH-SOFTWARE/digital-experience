@@ -138,5 +138,4 @@ Before you access WebSphere Application Server, configure the software license a
 
 After you upgrade to CF08 or higher, you can upgrade your SDK to version 7.1. Go to *Upgrading the SDK* for information.
 
-**Parent topic:**[Running the HCL Digital Experience installer in AIX](../install/inst_binaries-AIX.md)
 

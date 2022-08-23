@@ -19,5 +19,4 @@ You must bind your theme to the context root of the web application for your the
 -   **[Making your custom skin the default skin](../dev-theme/themeopt_cust_copy_setskin.md)**  
 Add your custom skin to the skins list to set it as the default skin for your theme. If it is the only custom skin, it is automatically set as the default skin for your theme.
 
-**Parent topic:**[Manually creating a copy of your theme](../dev-theme/themeopt_cust_copytheme.md)
 

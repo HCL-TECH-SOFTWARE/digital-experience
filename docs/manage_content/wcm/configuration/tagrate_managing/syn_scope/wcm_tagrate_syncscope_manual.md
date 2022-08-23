@@ -22,7 +22,6 @@ If automatic synchronization is not enabled for the scopes that are used for web
         ```
 
 
-**Parent topic:**[Synchronizing scopes for web content](../wcm/wcm_tagrate_syncscope.md)
 
 **Related information**  
 

@@ -37,5 +37,4 @@ You can create a dynamic cluster to run HCL Portal.
 -   **[Cluster maintenance](../plan/clus_maint.md)**  
 Maintaining HCL Portal in a cluster typically means applying corrective services \(fix packs and interim fixes\) or updating the software release level on each node in the cluster.
 
-**Parent topic:**[Planning to install HCL Digital Experience](../plan/plan_installation.md)
 

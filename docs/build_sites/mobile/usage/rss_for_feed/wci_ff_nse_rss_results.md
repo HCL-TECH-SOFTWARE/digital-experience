@@ -19,5 +19,4 @@ Each entry in the output feed has the following general format:
 </item>
 ```
 
-**Parent topic:**[RSS Namespace Extension for the Feed Service](../wci/wci_ff_nse_rss.md)
 

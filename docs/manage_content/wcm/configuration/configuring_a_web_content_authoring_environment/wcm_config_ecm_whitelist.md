@@ -34,7 +34,6 @@ Access to remote server www.example.com has not been granted.
 Please contact your system administrator.
 ```
 
-**Parent topic:**[Configuring a web content authoring environment](../wcm/wcm_install_cfgauthoring.md)
 
 **Related information**  
 

@@ -27,5 +27,4 @@ if (modifiable instanceof ThemeSetter) {
 }
 ```
 
-**Parent topic:**[Modifying properties](../dev/ctrlrapit_mdfy_props.md)
 

@@ -19,5 +19,4 @@ Configure single sign-on for the HCL Connections Cloud portlets.
 -   **[Installation options \(Cloud\)](../connect/r_connections_portlets_install_options_cc.md)**  
 These options allow you to customize your installation.
 
-**Parent topic:**[Configure HCL Connections on Cloud](../connect/connections_portlets_overview_cc.md)
 

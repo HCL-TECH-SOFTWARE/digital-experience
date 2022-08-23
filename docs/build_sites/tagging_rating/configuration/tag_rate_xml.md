@@ -243,7 +243,6 @@ To move tags and ratings between portals, for example for staging purposes, proc
 3.  Use the provided XML sample script to export all tags and ratings from the source portal.
 4.  Import the result file from the previous export step to the target portal.
 
-**Parent topic:**[Tagging and rating](../admin-system/tag_rate_mngadmin.md)
 
 **Related information**  
 

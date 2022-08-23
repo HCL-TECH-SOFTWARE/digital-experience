@@ -33,7 +33,6 @@ The instructions for deploying the HCL Connections portlets include a procedure 
 2.  Configure the HCL Connections server type by setting the custom property server.type in the WP HCL Connections Integration Service resource environment provider in the WebSphere Integrated Solutions Console. For detailed steps on how to set the server.type property, see *Configuring the HCL Connections server type* in the related links.
 
 
-**Parent topic:**[Configuring Portal to work with HCL Connections in SmartCloud for Social Business](../dev-portlet/integrate_portal_sc4sb.md)
 
 **Related information**  
 

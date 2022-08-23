@@ -393,5 +393,4 @@ Choose one method that is available for your system. Follow the detailed steps f
 5.  Select **Roll back** and follow the prompts to roll back HCL Portal Remote Search.
 6.  If you are running an external web server, restart it now.
 
-**Parent topic:**[Combined Cumulative Fix \(CF\) Installation](../overview/ccf_strategy95.md)
 

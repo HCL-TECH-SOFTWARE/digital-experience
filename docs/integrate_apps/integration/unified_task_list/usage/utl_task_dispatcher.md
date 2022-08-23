@@ -4,5 +4,4 @@ The task dispatcher acts as a link between the Unified Task List portlet and the
 
 You can configure the Unified Task List portlet to use a cached task dispatcher if you do not want to access the back-end systems each time an action occurs in the user interface. The cached task dispatcher uses dynamic caching in WebSphere® Application Server to store and retrieve tasks.
 
-**Parent topic:**[Overview of the Unified Task List portlet](../integrate/ovw_utl.md)
 

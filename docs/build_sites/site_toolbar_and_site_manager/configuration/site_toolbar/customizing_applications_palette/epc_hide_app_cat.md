@@ -71,5 +71,4 @@ servletref="ZV_00000000000000AGU4RF6L0000" uniquename="wps.p.Sample">
 </request>
 ```
 
-**Parent topic:**[Customizing the Applications palette](../admin-system/epc_app_categories.md)
 

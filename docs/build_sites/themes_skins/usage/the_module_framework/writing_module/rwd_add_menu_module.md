@@ -101,7 +101,6 @@ There are three changes that are needed to add menu items with a module.
     ```
 
 
-**Parent topic:**[Writing modules](../dev-theme/themeopt_mod_plugin_xml.md)
 
 **Related information**  
 

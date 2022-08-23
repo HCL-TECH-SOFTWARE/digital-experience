@@ -86,7 +86,6 @@ To add the External Search Results portlet to the **HCL Digital Experience Produ
     Searches by users are now done by the modified search configuration.
 
 
-**Parent topic:**[Customizing the Search Center](../admin-system/srtcentercustomze.md)
 
 **Related information**  
 

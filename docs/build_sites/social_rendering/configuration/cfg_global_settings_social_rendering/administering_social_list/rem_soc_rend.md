@@ -33,7 +33,6 @@ The difference between the deprecated Social Lists 1.0 library and the Social li
     -   Windows: ConfigEngine.bat remove-social-rendering-config -DPortalAdminPwd=password -DWasPassword=password
     -   z/OS: ./ConfigEngine.sh remove-social-rendering-config -DPortalAdminPwd=password -DWasPassword=password
 
-**Parent topic:**[Administering social lists](../social/soc_rendr_adm_socl_list.md)
 
 **Related information**  
 

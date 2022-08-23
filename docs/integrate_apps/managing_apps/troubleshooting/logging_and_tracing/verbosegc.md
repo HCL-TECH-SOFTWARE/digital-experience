@@ -12,5 +12,4 @@ The default HCL Digital Experience installation redirects the verbosegc output t
 
 For more information about configuring the JVM through WebSphere® Application Server, see the IBM® WebSphere Application Server information centers at www.ibm.com/software/webservers/appserv/was/library.
 
-**Parent topic:**[Logging and tracing](../trouble/pd_intr_logs.md)
 

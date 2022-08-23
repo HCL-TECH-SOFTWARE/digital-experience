@@ -41,7 +41,6 @@ You can open this dialog from the resource that you want to associate with an an
         The portal removes the tag mapping from the resource.
 
 
-**Parent topic:**[Analytics tags](../admin-system/sa_asa_anal_tags.md)
 
 **Related information**  
 

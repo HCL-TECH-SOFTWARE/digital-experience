@@ -604,5 +604,4 @@ This API works similarly as the other APIs described on this page.
     ```
 
 
-**Parent topic:**[How to manage web content items by using REST](../wcm/wcm_rest_crud.md)
 

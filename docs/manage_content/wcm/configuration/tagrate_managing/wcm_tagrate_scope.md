@@ -8,7 +8,6 @@ You can configure the advanced settings of the web content viewer to limit resul
 -   The authoring template that is used to generate the content item or site area that is being displayed.
 -   The categories that are used to profile the content item that is being displayed. In this way, you can manage scopes from within your web content system by defining taxonomies for your content items.
 
-**Parent topic:**[Managing tagging and rating for web content](../wcm/wcm_tagrate_main.md)
 
 **Related information**  
 

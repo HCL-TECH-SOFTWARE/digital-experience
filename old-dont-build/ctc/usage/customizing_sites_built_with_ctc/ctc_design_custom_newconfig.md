@@ -13,5 +13,4 @@ You can copy one of the existing authoring templates as a start to creating your
     For example, you might create an image gallery. The Slideshow and Carousel components provide good examples for working with widgets. Both of these expect the supplied result design to write markup or data in a form that the widget uses. A script in the footer then bootstraps the widget code into the page, and does any necessary setup – such as passing in the data and setting configuration parameters. The configuration of the widget is represented to the user as a series of fields with predefined selection values where appropriate.
 
 
-**Parent topic:**[Customizing sites built with Content Template](../ctc/ctc_design_custom.md)
 

@@ -7,7 +7,6 @@ After you complete the migration of your data, perform the following task if you
     **Note:** HCL Digital Experience does not provide a default option for the configuration of web service security that uses signed user name tokens anymore. If you have used this security configuration on earlier versions of HCL Digital Experience, see *Security for WSRP services* for available security options for WSRP.
 
 
-**Parent topic:**[WSRP](../migrate/mig_post_wsrp.md)
 
 **Related information**  
 

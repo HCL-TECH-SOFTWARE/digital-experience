@@ -17,5 +17,4 @@ Use your own library to store the authoring template. Do not store it in the CTC
 6.  Save the new content creation toolbar.
 
 
-**Parent topic:**[Creating new content types](../ctc/ctc_design_custom_newcont.md)
 

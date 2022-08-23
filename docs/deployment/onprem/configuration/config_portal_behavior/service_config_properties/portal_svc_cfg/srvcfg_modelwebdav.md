@@ -19,5 +19,4 @@ The WP Model WebDAV configuration service provides parameters that the portal us
     This parameter specifies the context root for the creation of skin folders.
 
 
-**Parent topic:**[Portal service configuration](../admin-system/srvcfgref.md)
 

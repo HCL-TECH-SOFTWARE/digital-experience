@@ -207,7 +207,6 @@ You can choose to hide selected buttons on content item forms when you create an
 
 Using profiling to personalize a site is different from using security to limit what items a user can access. In a profile-based personalized site, although a user might not be able to access all the pages by using personalized menus, they might still be able to access other pages by using navigators, or by searching for content. In a secured site, a user can only view items that they are granted access to.
 
-**Parent topic:**[Users, Groups and Roles](../wcm/wcm_cms_access.md)
 
 **Related information**  
 

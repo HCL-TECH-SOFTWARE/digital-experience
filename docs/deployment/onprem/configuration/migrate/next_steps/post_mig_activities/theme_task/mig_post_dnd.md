@@ -50,5 +50,4 @@ Choose one of the following options to enable the drag feature in your migrated 
     4.  Import the saved file.
 
 
-**Parent topic:**[Theme tasks](../migrate/mig_post_themetasks.md)
 

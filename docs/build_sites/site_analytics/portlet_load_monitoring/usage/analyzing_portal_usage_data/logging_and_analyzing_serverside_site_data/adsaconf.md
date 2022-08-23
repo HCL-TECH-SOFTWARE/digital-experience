@@ -23,5 +23,4 @@ Learn more details about how to read the site analysis log.
 -   **[Logging custom details of business events for site analysis](../admin-system/adsa_work_std_cust.md)**  
 From a business point of view, you might want to log custom details of business events.
 
-**Parent topic:**[Analyzing portal usage data](../admin-system/sa.md)
 

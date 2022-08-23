@@ -14,5 +14,4 @@ The properties for adding different extension suffixes are the wp.si.configInsta
 -   **[Running the Solution Installer without an internet connection](../config/run_si_noconnect.md)**  
 You can run the Solution Installer from a server that does not have an internet connection.
 
-**Parent topic:**[Installing add-ons](../config/int_sol_installer.md)
 

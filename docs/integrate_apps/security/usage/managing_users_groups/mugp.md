@@ -7,5 +7,4 @@ The Manage Users and Groups portlet allows you to view, create, and delete users
 2.  Click the **Administration menu** icon. Then, click **Access** \> **Users and Groups**.
 
 
-**Parent topic:**[Users and groups](../admin-system/adusrgrp.md)
 

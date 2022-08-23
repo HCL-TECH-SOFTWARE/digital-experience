@@ -25,7 +25,6 @@ Remove the UX Screen Flow Manager \(UXFM\) dialog definitions before uninstallin
     -   Windows™: xmlaccess.bat -user userID -password password -url http://local\_host:local\_port/wps/config -in RemoveSampleCode.xml -out delete.xml
     -   z/OS®: ./xmlaccess.sh -user userID -password password -url http://local\_host:local\_port/wps/config -in RemoveSampleCode.xml -out delete.xml
 
-**Parent topic:**[Prepare UX Screen Flow Manager](../migrate/mig_pre_uxfm.md)
 
 **Previous topic:**[Exporting UXFM dialog definitions](../migrate/mig_pre_uxfm_exportdialog.md)
 

@@ -166,5 +166,4 @@ HTTP/1.1 DELETE /wps/mycontenthandler/wcmrest/Taxonomy/7b40f5b6-bf52-4b9e-8062-b
 HTTP/1.1 200 OK
 ```
 
-**Parent topic:**[How to manage web content items by using REST](../wcm/wcm_rest_crud.md)
 

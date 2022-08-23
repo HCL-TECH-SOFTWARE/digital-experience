@@ -39,7 +39,6 @@ com.ibm.portal.theme.template.ref
 
 |
 
-**Parent topic:**[Configuring the portal theme and modules](../dev-theme/themeopt_cust_config.md)
 
 **Related information**  
 

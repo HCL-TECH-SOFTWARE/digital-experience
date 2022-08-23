@@ -26,7 +26,6 @@ To convert the case to lowercase, set this parameter to lower.
 
 **Note:** The Member fixer, when run automatically via Syndication, preserves the dates of the updated items.
 
-**Parent topic:**[The web content member fixer task](../wcm/wcm_admin_member-fixer_overview.md)
 
 **Related information**  
 

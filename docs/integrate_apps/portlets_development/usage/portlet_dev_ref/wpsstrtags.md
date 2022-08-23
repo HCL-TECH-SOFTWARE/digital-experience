@@ -435,5 +435,4 @@ The following tags are used by portlets within the Struts Application Framework.
     Renders a <wml/\> element. In the HCL Portal environment, the element is not rendered.
 
 
-**Parent topic:**[Portlet development reference](../dev-portlet/wpsdevref.md)
 

@@ -117,5 +117,4 @@ The following parameters can be used to display data in a search result design u
 |`separator=" "`|Enter text or code to be used to separate multiple search results. For example: `separator=" - "`|
 |`format=" "`|The format of date parameters can be set using this parameter. See the [Javadoc HTML documentation](../dev/reference_docs.html) for SimpleDateFormat in the Java SDK for details.|
 
-**Parent topic:**[How to use a search element](../panel_help/wcm_dev_search_form.md)
 

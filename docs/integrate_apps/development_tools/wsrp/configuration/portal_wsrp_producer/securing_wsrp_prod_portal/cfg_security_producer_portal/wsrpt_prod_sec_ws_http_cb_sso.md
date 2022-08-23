@@ -17,7 +17,6 @@ For using HTTP-cookie-based single sign-on, the WSRP Producer must not be config
     For using HTTP-cookie-based single sign-on, the WSRP Consumer must be configured to forward single sign-on cookies to the WSRP Producer. For more information, read *Securing the WSRP Consumer by HTTP-cookie-based single sign-on*.
 
 
-**Parent topic:**[Configuring security on the Producer portal](../admin-system/wsrpt_prod_sec_ws.md)
 
 **Related information**  
 

@@ -9,5 +9,4 @@ You can integrate tags from HCL Connections into the HCL Digital Experience tag 
 -   **[Integrating HCL Connections files](../collab/i_coll_t_enable_lcfiles.md)**  
  To integrate files with your portal, register the Content Management Interoperability Services \(CMIS\) entry points with the WP FederatedDocumentsService resource environment provider. After this configuration is complete, content authors insert links to documents hosted on the HCL Connections server. Using personalization, authors can also render inventories of folders that are hosted in files.
 
-**Parent topic:**[HCL Connections](../config/ibmconnections.md)
 

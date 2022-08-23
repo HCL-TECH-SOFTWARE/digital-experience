@@ -29,5 +29,4 @@ You can export applications to edit the scripts by using your portal interface.
 -   **[CSS best practices](../script-portlet/css_best_practices.md)**  
 If your code uses a map, or another element that has no fixed height, you must give it an explicit height, such as `400px vs 50%`.
 
-**Parent topic:**[Build applications with the Script Application](../script-portlet/build_apps.md)
 

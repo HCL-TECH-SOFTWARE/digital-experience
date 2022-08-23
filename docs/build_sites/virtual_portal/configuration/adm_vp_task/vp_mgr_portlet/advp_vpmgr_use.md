@@ -78,7 +78,6 @@ After you complete a regular portal installation, the portal is ready and enable
     **Note:** This does not delete the unscoped resources from the initial portal installation or extra URL mappings that administrators created.
 
 
-**Parent topic:**[Working with the Virtual Portal Manager portlet](../admin-system/advp_vpmgr.md)
 
 **Related information**  
 

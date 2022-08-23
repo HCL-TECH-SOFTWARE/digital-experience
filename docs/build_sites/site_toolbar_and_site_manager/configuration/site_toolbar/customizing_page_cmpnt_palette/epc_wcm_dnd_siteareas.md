@@ -19,5 +19,4 @@ After you have enabled profiling for site areas, you are ready to make a site ar
 
 Content authors can then drag and drop the site area from the Page Components view in the toolbar to create a copy of the site area and its children.
 
-**Parent topic:**[Customizing the Page Component palette](../admin-system/epc_custom_add_site_toolbar.md)
 

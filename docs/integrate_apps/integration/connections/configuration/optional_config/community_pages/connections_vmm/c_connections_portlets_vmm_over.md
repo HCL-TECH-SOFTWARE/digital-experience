@@ -79,5 +79,4 @@ Configure the HCL Connections repository for the Virtual Member manager \(VMM\) 
 -   **[Verifying impersonation configuration](../connect/t_connections_portlets_impersonation.md)**  
  You can access another user's system with the impersonation feature as though you are that user so that you can test user access. Impersonation is configured as part of the installation process. Use this procedure to confirm that it is working as expected.
 
-**Parent topic:**[Community Pages](../connect/c_connections_portlets_comm_pages_ovr.md)
 

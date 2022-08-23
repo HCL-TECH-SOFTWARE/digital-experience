@@ -25,7 +25,6 @@ You can configure how the tag names are displayed in terms of normalization. To 
 
 Example: If the search term is `web`, then the response to tos:searchsuggestion&term=web contains the search suggestions `WebSphere`, `Website`, and `WebBrowser`. The notation in JSON is as follows in the mime type application/json: `["Web",["WebSphere", "Website", "WebBrowser"]]` . This is the format proposed by OpenSearch Suggestions extension Version 1.1 draft 1.
 
-**Parent topic:**[Other queries](../admin-system/tag_rate_api_rest_oth_queries.md)
 
 **Related information**  
 

@@ -51,7 +51,6 @@ Controls have the following extra attributes:
 
 These attributes are not writable.
 
-**Parent topic:**[Component hierarchy \| Portal scripting interface](../admin-system/compnt_hrchy.md)
 
 **Related information**  
 

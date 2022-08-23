@@ -12,7 +12,6 @@ Custom outbound service filters provide a plug point for application developers.
 -   **[Using custom cookie transformation handlers](../dev-portlet/outbhttp_cust_cookie_xform_hdlr.md)**  
 You can use custom cookie transformation handlers to allow custom program extensions to get programmatic control over the outbound HTTP connection.
 
-**Parent topic:**[Outbound HTTP connection](../dev-portlet/outbound_http.md)
 
 **Related information**  
 

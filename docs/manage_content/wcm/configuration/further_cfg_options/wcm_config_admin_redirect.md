@@ -19,5 +19,4 @@ The Web Content Manager login page is used by default when an unauthenticated us
 5.  Restart the portal for the new settings to take effect.
 
 
-**Parent topic:**[Further configuration options](../wcm/wcm_config.md)
 

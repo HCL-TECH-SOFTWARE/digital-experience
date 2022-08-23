@@ -28,5 +28,4 @@ Before testing social media integration in the Content Template templates or cus
     If you have a Facebook app, your appid is in the url. Now you can track who likes your content in the Facebook app.
 
 
-**Parent topic:**[Customizing sites built with Content Template](../ctc/ctc_design_custom.md)
 

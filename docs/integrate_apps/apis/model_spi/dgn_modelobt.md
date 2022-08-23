@@ -65,7 +65,6 @@ The different ways to obtain Portal models are as follows:
 1.  WSRP portlets must not use the Model SPI.
 2.  Model access is only possible after the portal has initialized the request appropriately. Access is possible inside of code that is started through the portal servlet. Models cannot be accessed in servlet filters.
 
-**Parent topic:**[Model SPI overview](../dev/dgn_modelovw.md)
 
 **Related information**  
 

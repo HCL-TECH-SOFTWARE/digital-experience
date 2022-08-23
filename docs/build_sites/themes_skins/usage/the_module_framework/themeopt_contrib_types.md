@@ -74,7 +74,6 @@ The only allowed subcontribution is JSON. For more information, see *Menu framew
 
 The only allowed subcontribution is `xslt`. You can use `xslt` to gather `xslt` resources along the module hierarchy.
 
-**Parent topic:**[The module framework](../dev-theme/themeopt_module.md)
 
 **Related information**  
 

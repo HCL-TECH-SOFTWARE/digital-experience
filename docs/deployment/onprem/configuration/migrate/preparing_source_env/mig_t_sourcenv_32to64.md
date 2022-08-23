@@ -18,5 +18,4 @@ Choose one of the following methods to resolve this issue:
     4.  Copy the Java folder from your source that is in Source AppServer root/java to the Java folder in the remote migration package.
     5.  Continue with the rest of the migration process in the Configuration Wizard.
 
-**Parent topic:**[Preparing your source environment](../migrate/mig_t_premig_tasks.md)
 

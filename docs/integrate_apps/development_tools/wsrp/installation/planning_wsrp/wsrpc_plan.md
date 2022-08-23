@@ -21,5 +21,4 @@ HCL Portal supports two security mechanisms for WSRP.
 -   **[How you work with WSRP in your portal](../admin-system/wsrpc_howuse_wp.md)**  
 To work with WSRP in your portal, you perform different administrative tasks. Some of these tasks depend on whether you use your portal as a Producer or Consumer portal.
 
-**Parent topic:**[WSRP services](../admin-system/wsrpc.md)
 

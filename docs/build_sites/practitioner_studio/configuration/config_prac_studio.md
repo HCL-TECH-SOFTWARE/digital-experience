@@ -20,5 +20,4 @@ Note that this does not create the two Woodburn Studio libraries in the virtual 
 
 -   Virtual portals that were created by modifying the Virtual Portal Manager portlet configuration can not use the **disable-v95-UI-features-virtual-portal** task to disable the features. These will require a manual cleanup of the artifacts.
 
-**Parent topic:**[Working with Practitioner Studio](../practitioner_studio/working_prac_studio.md)
 

@@ -15,5 +15,4 @@ Create a JavaScript object for your theme on the client side. Theme metadata pro
 -   **[Configuration settings for capability filters](../dev-theme/themeopt_mod_capfilter_settings.md)**  
 Set the following properties in the Wp ConfigService Resource Environment Provider to enable or disable the various capability filters.
 
-**Parent topic:**[Customizing the theme](../dev-theme/themeopt_cust.md)
 

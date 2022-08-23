@@ -32,7 +32,6 @@ With two locales set up, you can test the end-to-end multilingual solution.
 -   **[Localized site search](../ctc/ctc_deploy_locale_search.md)**  
 To search localized sites using the Search Results page template, you must create different search collections for each language. If you installed the CTC Demo site with the option CTC\_MLS set to true, then the search components are already set up for the localized versions of the Arabic, Spanish, German, and Chinese CTC Demo sites. However, the search collections for these languages still have to be created.
 
-**Parent topic:**[Content Template Catalog 4.4](../ctc/ctc_intro.md)
 
 **Related information**  
 

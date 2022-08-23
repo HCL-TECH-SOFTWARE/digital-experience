@@ -11,5 +11,4 @@ HCL Portal provides several configuration services for Portal Access Control.
 -   **[Puma Store and Validation Services](../admin-system/srvcfgref_puma.md)**  
 The following topics list and describe the configuration services for Portal User Management \(PUMA\): these are the Puma Store Service and the Puma Validation Service.
 
-**Parent topic:**[Portal service configuration](../admin-system/srvcfgref.md)
 

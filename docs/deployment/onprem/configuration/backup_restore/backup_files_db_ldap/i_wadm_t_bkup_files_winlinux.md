@@ -24,7 +24,6 @@ Prerequisites
 7.  Back up additional custom files outside of the PortalServer, profile, or AppServer directories; such as SSL certificates or shared libraries; that your HCL Portal server might use.
 
 
-**Parent topic:**[Backing up files, databases, and the LDAP server\(s\)](../admin-system/i_wadm_t_bkup_winlinux.md)
 
 **Previous topic:**[Completing prerequisites for backup](../admin-system/i_wadm_t_bkup_prereq_winlinux.md)
 

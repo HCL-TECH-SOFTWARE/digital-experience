@@ -11,7 +11,6 @@ When you create a virtual portal by using the Virtual Portal Manager portlet, yo
 -   **[Users of a virtual portal and their access roles and permissions](../admin-system/advppln_roles_user.md)**  
 When you create a virtual portal, you need to be aware of the implications listed here.
 
-**Parent topic:**[Planning for virtual portals](../admin-system/advppln.md)
 
 **Related information**  
 

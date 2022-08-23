@@ -60,7 +60,6 @@ You can define the following properties for each Vault Adapter Implementation Ty
     **Note:** If you set this property to `true`, the `manageresources` property is ignored. If you omit this property, it will default to `true` .
 
 
-**Parent topic:**[Portal Security Services](../admin-system/srvcfgref_secy.md)
 
 **Related information**  
 

@@ -19,7 +19,6 @@ Optional manual step: Redeploy the HCL Web Application Bridge to a virtual host.
     -   Enter the domain name. For example, if the portal host is portal.domain.hcl.com and the virtual host alias is wab.domain.hcl.com then the domain value is domain.hcl.com.
     -   Enter the virtual host alias to the DNS server to make sure that the virtual host alias is reachable from the your workstation. The virtual host alias must be accessible from all the workstations from where the portal server is accessed.
 
-**Parent topic:**[Manual Steps: Modify Site URLs for Search Engine Optimization](../config/cw_shorten_url_seo_manual.md)
 
 **Related information**  
 

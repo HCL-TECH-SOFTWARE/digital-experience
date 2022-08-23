@@ -30,7 +30,6 @@ Alternatively, you can use the following JSP code to iterate over the page metad
 
 **Note:** The result of `urlFindInTheme` is cached. To clear the cache, restart the portal. Redeploying the theme is not sufficient to trigger a reevaluation of `urlFindInTheme`.
 
-**Parent topic:**[Instrumenting a theme for Active Site Analytics](../admin-system/sa_asa_use_theme.md)
 
 **Related information**  
 

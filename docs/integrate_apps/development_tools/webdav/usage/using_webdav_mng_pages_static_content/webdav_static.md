@@ -69,5 +69,4 @@ For details about virtual portals and how to create them by host name or URL con
 -   **[Connecting to WebDAV to work with portal pages and static content](../admin-system/webdav_url.md)**  
 To connect to WebDav to work with portal pages and static content, you enter the WebDAV entry URL.
 
-**Parent topic:**[Static content](../site/site_static_content.md)
 

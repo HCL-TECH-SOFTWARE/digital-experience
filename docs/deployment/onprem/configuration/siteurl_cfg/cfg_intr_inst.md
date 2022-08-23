@@ -132,7 +132,6 @@ where webservername is the web server definition name you defined previously whe
 |
 
 
-**Parent topic:**[Changing your site URL](../config/cfg_inst_overview.md)
 
 **Related information**  
 

@@ -10,13 +10,11 @@ When a campaign is active in the run-time environment, the rule mappings take pr
 
 It is possible to have multiple campaigns active simultaneously. When this happens, the priority settings of the active campaigns dictate which campaign's rule mapping will be used. The campaign with the highest priority 'wins' and its rule mappings are used. In the event that multiple active campaigns have the same priority setting, the rule mapping used for a given content spot is determined randomly according to the relative split ratios.
 
-**Parent topic:**[Personalization terms](../pzn/pzn_concepts.md)
 
 **Previous topic:**[Rule spot mappings](../pzn/pzn_mappings.md)
 
 **Next topic:**[Application object](../pzn/pzn_application_object.md)
 
-**Parent topic:**[Personalization terms](../pzn/pzn_concepts.md)
 
 **Previous topic:**[Rule spot mappings](../pzn/pzn_mappings.md)
 

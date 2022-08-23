@@ -27,5 +27,4 @@ $Portal setvp employees
 $Portal login
 ```
 
-**Parent topic:**[Portal authentication](../admin-system/ptl_auth.md)
 

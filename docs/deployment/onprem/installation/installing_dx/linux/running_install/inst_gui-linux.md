@@ -107,5 +107,4 @@ This message is part of the installation process and is not repeated after the i
 
 After you upgrade to CF08 or higher, you can upgrade your SDK to version 7.1. Go to *Upgrading the SDK* for information.
 
-**Parent topic:**[Running the HCL Digital Experience installer in Linux](../install/inst_binaries-linux.md)
 

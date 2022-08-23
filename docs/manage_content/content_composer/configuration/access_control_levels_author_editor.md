@@ -22,5 +22,4 @@ The following table presents access control levels and capabilities supported fo
 |Mark Up Editor|No|No|No|No|No|No|No|
 |Owner|No|Yes|Yes|Yes|Yes|Yes, if created|No|
 
-**Parent topic:**[Configure access \| HCL Content Composer](../content_composer/configure_access.md)
 

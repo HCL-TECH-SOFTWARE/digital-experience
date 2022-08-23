@@ -28,7 +28,6 @@ If the operations described previously fail for some reason, the remote REST ser
 -   **[Data types for attributes](../dev/uprof_rest_datyps.md)**  
 Data types for attributes belong to a subset of the XML Schema data type specification.
 
-**Parent topic:**[Remote REST service for PUMA](../dev/uprof_rest.md)
 
 **Related information**  
 

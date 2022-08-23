@@ -93,5 +93,4 @@ Welcome Fred to the web site of Mary
 
 If you don't want a localized item to appear in the list of localized items in the web content authoring interface, add a text element with the name of isShownInAuthoringUI. Then, type the word false in the text element field. You can still reference this localized item in a plugin-in tag even though it is now hidden from the list of localized items in the web content authoring interface.
 
-**Parent topic:**[Building the website](../site/site_build_parent.md)
 

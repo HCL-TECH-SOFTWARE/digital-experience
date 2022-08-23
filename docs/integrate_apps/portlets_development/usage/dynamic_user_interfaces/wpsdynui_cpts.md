@@ -65,7 +65,6 @@ The scope of a shared portlet or shared page instance is restricted to a dynamic
 -   **[Overview: Developing a dynamic UI configuration](../dev-portlet/wpsdynui_tskovw.md)**  
 Get an overview of the main tasks involved in creating a dynamic UI configuration.
 
-**Parent topic:**[Developing portlets](../dev-portlet/wpsdev.md)
 
 **Related information**  
 

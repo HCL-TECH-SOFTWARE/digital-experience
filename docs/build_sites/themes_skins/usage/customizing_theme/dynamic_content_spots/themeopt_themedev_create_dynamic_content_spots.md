@@ -30,7 +30,6 @@ After you create a new theme, you can customize it by creating your own dynamic 
     `<a rel="dynamic-content" href="dyn-cs:id:myID"></a>`
 
 
-**Parent topic:**[Dynamic content spots](../dev-theme/themeopt_cust_jsp.md)
 
 **Related information**  
 

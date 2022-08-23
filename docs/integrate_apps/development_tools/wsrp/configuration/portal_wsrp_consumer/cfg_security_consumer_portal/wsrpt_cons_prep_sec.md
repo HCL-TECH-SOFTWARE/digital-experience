@@ -32,7 +32,6 @@ You might want to set up a specific and complex service configuration. In this c
 -   **[Enabling Portal Access Control for a WSRP Consumer portal](../admin-system/wsrpt_cons_sec_pac.md)**  
 You can configure Portal Access Control for the remote portlets that you consume on your Consumer portal.
 
-**Parent topic:**[Information that the Consumer exchanges with the Producer](../admin-system/wsrpc_cons_get_info.md)
 
 **Related information**  
 

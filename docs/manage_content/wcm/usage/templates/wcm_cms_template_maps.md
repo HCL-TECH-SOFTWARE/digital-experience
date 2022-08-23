@@ -52,5 +52,4 @@ When referencing elements in a presentation, it is important to note the followi
 
 Although the template author can identify a number of elements that can be displayed on the item form, whether the elements are displayed depends on the presentation template that is used with the authoring template to render the content form. A presentation template might not include every element that is defined in an authoring template, but in order for an element or element type to be available to a presentation template, the element must be included in the authoring template that is used to create the content.
 
-**Parent topic:**[Creating reusable assets](../site/site_assets.md)
 

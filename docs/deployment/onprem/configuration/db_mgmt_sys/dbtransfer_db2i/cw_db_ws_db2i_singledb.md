@@ -22,5 +22,4 @@ The following table lists the typical fields that display when you select the da
 |**IBM for DB2i connection type**|db2\_iseries.DbDriverType| | |
 |**IBM for DB2i library**|db2\_iseries.DbLibrary| | |
 
-**Parent topic:**[IBM DB2: Database transfer](../config/cw_db_transfer-db2i.md)
 

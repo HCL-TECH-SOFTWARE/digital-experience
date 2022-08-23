@@ -1,6 +1,5 @@
 # Properties file: wkplc.properties
 
-**Parent topic:**[Reference: Configuration properties](../properties/properties.md)
 
 ## About the properties file
 

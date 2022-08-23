@@ -107,7 +107,6 @@ After you create a static or dynamic cluster, you can create an additional horiz
         start-portal-server
 
 
-**Parent topic:**[Setting up a cluster](../config/config_cluster.md)
 
 **Related information**  
 

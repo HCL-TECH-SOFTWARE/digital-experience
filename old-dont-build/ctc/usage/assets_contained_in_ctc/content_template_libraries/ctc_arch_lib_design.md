@@ -19,5 +19,4 @@ Do not modify the assets in this library directly because they are overwritten i
 
 All of the content of the design library is translated, so that the design content can be used in any locale.
 
-**Parent topic:**[Content Template libraries](../ctc/ctc_arch_lib.md)
 

@@ -43,5 +43,4 @@ How to optimize your system for best performance of the multilingual solution.
 4.  Disable workflow actions on subscribers to reduce load and reduce the number of versions that are created for each item. See [Disabling Workflow Actions](wcm_config_disable_actions.md) for further information.
 
 
-**Parent topic:**[Extensions for multilingual sites Multilingual Solution](../wcm/wcm_mls_extensions.md)
 

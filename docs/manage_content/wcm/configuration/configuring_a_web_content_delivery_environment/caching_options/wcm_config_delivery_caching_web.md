@@ -99,5 +99,4 @@ Examples:
 -   contentcacheexpires="REL 300S"
 -   contentcacheexpires="ABS Mon, 06 Nov 2000 09:00:00 GMT"
 
-**Parent topic:**[Caching options](../wcm/wcm_config_delivery_caching.md)
 

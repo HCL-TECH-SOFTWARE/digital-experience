@@ -71,5 +71,4 @@ Here is an example of how to use these attribute values in a design:
 </li>
 ```
 
-**Parent topic:**[How to use a federated documents rule in a personalization component \| HCL Web Content Manager](../wcm/wcm_dev_feddocs_using.md)
 

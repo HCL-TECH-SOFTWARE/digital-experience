@@ -16,7 +16,6 @@ If the error occurs after some resources have actually been processed, the best 
 
 To make error recovery easier, use scripts that can be run again partially or completely without the possibility of duplicating resources. To do that, specify an object ID or another identifying attribute on every resource in the script and use only `update` actions. This way resources are simply overwritten with the same configuration if they have already been created. For more information about how to specify attributes, see the topic about *Mandatory and optional attributes*.
 
-**Parent topic:**[XML configuration reference](../admin-system/adxmlref.md)
 
 **Related information**  
 

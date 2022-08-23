@@ -9,5 +9,4 @@ The portal installation has the JCR search collection created by default. It is 
 -   If neither of the preceding options succeed in creating the JCR search collection, manually re-create the JCR search collection. Refer to *Setting up a JCR search collection* to view these steps.
 
 
-**Parent topic:**[Setting up a JCR search collection](../admin-system/srtcfg_jcr_colls.md)
 

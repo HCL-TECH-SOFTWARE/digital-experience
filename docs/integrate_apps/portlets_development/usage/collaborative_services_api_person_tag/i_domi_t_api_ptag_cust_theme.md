@@ -50,5 +50,4 @@ You can use the theme to add items to the Person card's More actions menu in any
 7.  To verify that the new action was added, open a portlet that supports people awareness \(for example, the People Finder\) and then view the Person card for a selected user. Verify that the option you added \(for example **Test Action**\) is available from the **More actions** menu and that it works as expected.
 
 
-**Parent topic:**[Collaborative Services API and the person tag](../collab/i_coll_r_cs_api.md)
 

@@ -40,5 +40,4 @@ WebSphere® Application Server provides a detection feature that attempts to loc
         Defaults to 100 false alarms. This is the number of false alarms that can occur before automatically increasing the threshold by 50%.
 
 
-**Parent topic:**[Social Media Publisher](../wcm/wcm_sm.md)
 

@@ -61,7 +61,6 @@ Go to [Updates with syndication](dep_up_syn_main.md) for information about manag
 
 If your staging server has a different LDAP than the production, go to *Member fixer with syndication* and *Maintaining web content* for information.
 
-**Parent topic:**[Overview of staging to production](../deploy/dep_ovr_concepts.md)
 
 **Related information**  
 

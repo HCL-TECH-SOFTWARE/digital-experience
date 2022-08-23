@@ -6,9 +6,6 @@ The FeedbackListener processes all log event types. Each page request \(JSP invo
 
 An instance of the FeedbackListener is active on all run-time servers whenever logging is enabled.
 
-**Parent topic:**[Listeners and persistence](../pzn/pzn_log_listeners.md)
-
-**Parent topic:**[Listeners and persistence](../pzn/pzn_log_listeners.md)
 
 **Related information**  
 

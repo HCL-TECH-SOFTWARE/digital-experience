@@ -55,7 +55,6 @@ MVC architecture for use in JSPs for loading dynamic spots that are based on cli
 
 Portal-if tag has a device class attribute that allows checking the client for a device equation.
 
-**Parent topic:**[Device classes](../dev-theme/themeopt_devclass.md)
 
 **Previous topic:**[Assigning device classes](../dev-theme/themeopt_devclass_assign.md)
 

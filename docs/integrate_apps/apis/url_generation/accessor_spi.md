@@ -87,5 +87,4 @@ The Navigational State SPI offers the following accessor factories, each coverin
     **Note:** The EngineActionAccessorFactory does not offer a read-only accessor because the portal manages the engine actions.
 
 
-**Parent topic:**[URL generation by using the Navigational State SPI](../dev/nav_state_spi.md)
 

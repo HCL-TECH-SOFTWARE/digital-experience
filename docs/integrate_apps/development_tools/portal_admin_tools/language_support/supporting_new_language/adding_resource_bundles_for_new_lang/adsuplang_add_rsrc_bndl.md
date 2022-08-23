@@ -61,7 +61,6 @@ All languages that are defined for HCL Digital Experience need to have resource 
 -   **[Resource bundles to support a Portal based custom theme](../admin-system/adsuplang_add_rsrc_bndl_cstm.md)**  
 You can add supported locale to the system. You must provide resource bundles for the new language to the Portal based custom theme to enable them.
 
-**Parent topic:**[Supporting a new language](../admin-system/adsuplang_new.md)
 
 **Related information**  
 

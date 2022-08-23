@@ -41,7 +41,6 @@ You can add modules to your profile to use HCL Sametime with the HCL Portal Vers
 -   **[Tags used by the portal JSPs](../dev-portlet/dgn_ptltld.md)**  
 Learn about the most commonly used tags in the portal JSPs. Use these tags to modify the appearance and layout of the portal page.
 
-**Parent topic:**[Developing themes and skins](../dev-theme/themeopt_themes.md)
 
 **Related information**  
 

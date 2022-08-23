@@ -7,7 +7,6 @@ The facade servlet is provided with the wps.ear enterprise application in the `H
 1.  To change the context root for the WSRP Producer, run the `modify-servlet-path` configuration task, as described in *Changing the portal URI*.
 
 
-**Parent topic:**[Using your portal as a WSRP Producer](../admin-system/wsrpt_prod_use.md)
 
 **Previous topic:**[Exporting customized WSRP portlet instances by using the XML configuration interface](../admin-system/wsrpr_prod_xmlxp_custplt.md)
 

@@ -11,7 +11,6 @@ Depending on the configuration defined by the administrator, the user can choose
 -   **[How administrators define persistent session options](../admin-system/adcfgpss_adm_define.md)**  
 As an administrator, you can configure the persistent session behavior.
 
-**Parent topic:**[Configuring portal behavior](../admin-system/adptlcfg.md)
 
 **Related information**  
 

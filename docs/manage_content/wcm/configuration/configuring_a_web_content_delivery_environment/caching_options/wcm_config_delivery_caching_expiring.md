@@ -12,7 +12,6 @@ Beyond these examples, a different expiry schedule would be used. If your web pa
 
 The expiration parameter in a workflow is not related to the `Expires` parameter in HCL Web Content Manager caching. A page that is set to expire at midnight as part of a workflow will only do so if it has not already been saved in a cache. The page remains in the cache until expired by the Web Content Manager application regardless of the `Expires` setting in a workflow.
 
-**Parent topic:**[Caching options](../wcm/wcm_config_delivery_caching.md)
 
 **Related information**  
 

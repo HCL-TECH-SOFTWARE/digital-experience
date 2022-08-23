@@ -41,5 +41,4 @@ $Content find label uniquename ibm.portal.Administration select
 $Content search composition
 ```
 
-**Parent topic:**[Content hierarchy accessed through Content bean](../admin-system/contnt_hierarchy.md)
 

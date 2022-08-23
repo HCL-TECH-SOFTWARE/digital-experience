@@ -34,5 +34,4 @@ Complete the following steps to maintain additional HCL Portal profiles.
 6.  After you update each profile, verify the change. Then start any stopped servers and, if applicable, the node agent, and then return user traffic to the application server instances.
 
 
-**Parent topic:**[Supporting multiple profiles](../install/sup_mult_prof.md)
 

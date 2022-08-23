@@ -17,5 +17,4 @@ If the Automatically add social information element setting on a social network 
 
 To apply the element to all existing content that uses a specific authoring template, open the authoring template in read mode and click **Apply Authoring Template**, ensuring that the **Add new elements** option is selected.
 
-**Parent topic:**[Social network configuration](../wcm/wcm_sm_config_doc.md)
 

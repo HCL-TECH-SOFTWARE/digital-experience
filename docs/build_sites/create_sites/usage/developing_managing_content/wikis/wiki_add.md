@@ -27,7 +27,6 @@ After you publish the site, click **New Page** to add content or click **Edit** 
 
 **Note:** Tagged web content that is displayed in the web content viewer is only available when there is a single instance of this portlet on the page. When you click a tag result, the Tag Center broadcasts the information on what content displays in the viewer with a public render parameter. If you have multiple instances of web content that is displayed in the web content viewer, then these instances display the content that you tagged rather than display the original content of these instances.
 
-**Parent topic:**[Wikis](../admin-system/wiki_work.md)
 
 **Related information**  
 

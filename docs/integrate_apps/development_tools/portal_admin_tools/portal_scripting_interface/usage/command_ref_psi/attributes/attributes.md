@@ -13,5 +13,4 @@ List valued attributes can have multiple values. They are queried by using the l
 -   **[Locale-specific attributes \| Portal Scripting Interface](../admin-system/lcl_spcf_att.md)**  
 Locale-specific attributes have different values for different languages and countries. They can be queried by using the nlsget command, where nls stands for National Language Support.
 
-**Parent topic:**[Command reference for the Portal Scripting Interface](../admin-system/adpsicrf.md)
 

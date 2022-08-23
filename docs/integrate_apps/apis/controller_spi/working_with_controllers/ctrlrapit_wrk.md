@@ -26,5 +26,4 @@ To modify, create, or delete portal resources by using the Controller SPI, you f
 -   **[Committing and persisting your modifications](../dev/ctrlrapit_comit.md)**  
 To persist the modifications that you applied to the controller, you commit the controller.
 
-**Parent topic:**[Controller SPI](../dev/ctrlrapic_ovu.md)
 

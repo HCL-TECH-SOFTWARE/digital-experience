@@ -18,5 +18,4 @@ http://www.ibm.com/xmlns/prod/websphere/portal/v6.1/livetext#hcard.email.interne
 
 If the specified field is not available for a given source, then the target action is not displayed in the person menu.
 
-**Parent topic:**[Live text for click-to-action](../dev-portlet/w2_smtg.md)
 

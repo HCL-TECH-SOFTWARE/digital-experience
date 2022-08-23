@@ -32,7 +32,4 @@ When a user logs on and navigates through your Web site, LikeMinds follows these
     -   **Preference and Clickstream engines**: LikeMinds looks up that user's mentors, and calculates recommendations.
     -   **Item Affinity engine**: LikeMinds calculates the most likely item-content pairs based on accumulated item transaction history.
 
-**Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
-
-**Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
 

@@ -29,5 +29,4 @@ The IBM Installation Manager is used to install installation packages such as HC
     **Note:** If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Supported languages](../reference/supportedlanguages.html) in the HCL Digital Experience 8.5 documentation.
 
 
-**Parent topic:**[Windows system - HCL Digital Experience installation](../install/installingwp95-windows.md)
 

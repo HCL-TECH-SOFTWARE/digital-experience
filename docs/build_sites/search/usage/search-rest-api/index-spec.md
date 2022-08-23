@@ -36,5 +36,4 @@ Response is Atom formatted list of possible values that can be passed to the Sea
 	</atom:feed>
 ```
 
-**Parent topic:**[Search REST API specification](../search-rest-api/search.md)
 

@@ -50,5 +50,4 @@ Use the following default URLs to access HCL Digital Experience, the WebSphere®
 
 If you had any processes from other software in the default port range when the installation started, you might have different port numbers than the defaults.
 
-**Parent topic:**[AIX system - HCL Digital Experience installation](../install/installingwp95-AIX.md)
 

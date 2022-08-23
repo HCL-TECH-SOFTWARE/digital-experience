@@ -201,7 +201,6 @@ public class DateValidationPlugin implements ItemValidationPlugin
 -   **[CTC Design Translations plug-in](../ctc/ctc_arch_plugins_trans.md)**  
 Use the CTC Design Translations plug-in to reference translations that are stored in the plug-in and also in other resource bundles. It is useful for translating designs that are reused in multilingual sites. It also provides localized translations for the Content Template Catalog designs.
 
-**Parent topic:**[Assets contained in the Content Template](../ctc/ctc-assets.md)
 
 **Related information**  
 

@@ -14,5 +14,4 @@ The history manager allows you to control for how many visited pages navigationa
 -   **[History expiration limit for render parameters](../admin-system/historylimit_scn.md)**  
 You can configure the portal so that it discards the render parameters for pages that the user has not visited recently within the same session. The purpose of this setting is to limit the URL length. This might be of benefit for the performance of your portal. The portal discards the navigational state of the portlet application of standard API portlets on pages that are too far back in the history.
 
-**Parent topic:**[Browser behavior and scenarios](../admin-system/adbackbut.md)
 

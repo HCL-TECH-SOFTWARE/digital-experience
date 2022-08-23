@@ -17,7 +17,4 @@ For transactional data, `buildstats` writes to these fields in Lps\_User\_Trx:
 -   value: Data value that is associated with the transaction.
 -   adj\_count: Adjusted count of transactions. If a new activity is recorded in the transaction table, this value increases. It might diminish over time.
 
-**Parent topic:**[Using the LikeMinds utilities](../pzn/pzn_using_likeminds_utilities.md)
-
-**Parent topic:**[Using the LikeMinds utilities](../pzn/pzn_using_likeminds_utilities.md)
 

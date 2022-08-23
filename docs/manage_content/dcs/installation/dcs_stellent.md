@@ -29,5 +29,4 @@ On platforms that support local document conversion, document conversion service
 
 IBM i: You can choose to run the X Server on the portal server or a remote server. You can also use a frame-buffer device or XVFB to emulate X Windows servers on a headless server. The conversion filters are installed with HCL Portal. There is no need for configuration. However, you can configure the export.cfg file, located under the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/config directory, if you want to fine tune conversion properties such as graphics size and resolution.
 
-**Parent topic:**[Document Conversion Services](../admin-system/dcs_info.md)
 

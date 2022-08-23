@@ -117,5 +117,4 @@ In this example, the plug-in tag `ifEqual` has been deprecated and replaced with
 
 These commands replace the 'value1' and 'value2' parameters with 'text1' and 'text2' parameters, and then change the tag name to `Equals`.
 
-**Parent topic:**[Web content administration tools](../wcm/wcm_maintain.md)
 

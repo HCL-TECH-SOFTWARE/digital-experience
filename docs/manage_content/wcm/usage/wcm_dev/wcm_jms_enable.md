@@ -56,5 +56,4 @@ The messages are sent with no expiration time and need to be consumed, otherwise
 
 For information about the default implementation of the WebSphere Application Server JMS implementation and choices of message providers, read [Types of messaging providers](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/cmj_jmsp.html).
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 

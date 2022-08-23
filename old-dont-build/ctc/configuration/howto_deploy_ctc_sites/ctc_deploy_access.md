@@ -8,5 +8,4 @@ The Content Template Catalog libraries have built-in access control, but you can
 
 Refer to the product documentation for more information.
 
-**Parent topic:**[How to deploy sites built with Content Template](../ctc/ctc_deploy_overview.md)
 

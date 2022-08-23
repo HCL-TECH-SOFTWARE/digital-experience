@@ -92,5 +92,4 @@ This example allows the XML configuration interface to send a client certificate
 -   **[For z/OS: Using a RACF keyring instead of an HFS keystore file](../admin-system/adxmltsk_cmdln_sntx_zos_racf.md)**  
 Under HCL Digital Experience or z/OS, keys and certificates are usually stored in a RACF keyring. The default WASKeyring is not in the format jks as for other operating systems, but in the format JCERACFKS. If the XML client detects that a keyring is used instead of an HFS keystore, it will use JCERACFKS as the default store type.
 
-**Parent topic:**[XML Syntax for using a secure connection with SSL](../admin-system/adxmltsk_cmdln_sntx_ssl.md)
 

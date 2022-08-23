@@ -11,5 +11,4 @@ Understand the syntax for creating a custom URI to access a piece of content.
 -   **[Custom URI syntax](../connect/r_connections_portlets_poc_syntax.md)**  
 Understand the syntax for creating a custom URI to access a piece of content.
 
-**Parent topic:**[Configure HCL Portal to work with HCL Connections](../connect/c_connections_overview.md)
 

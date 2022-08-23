@@ -102,7 +102,6 @@ By default, the rating widget is available for Web Content Manager article templ
 -   **[Customizing the rating widget](../admin-system/tag_rate_cust_inlrate_lite.md)**  
 The user interface of the rating widget consists of Web Content Manager HTML components. You can customize the rating widgets by modifying one or more of these components. For example, you can change the order of the user interface elements, or you can remove a field that you do not want to show in the user interface. The components are listed here.
 
-**Parent topic:**[The tag and rating widgets](../admin-system/tag_rate_ui_alt.md)
 
 **Related information**  
 

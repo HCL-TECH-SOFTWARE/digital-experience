@@ -39,5 +39,4 @@ For content types where it is common to attribute content to an author, the foll
 -   Attribution Option is a selection field that defaults to using the Authors field, but can be set to Enter Name or No Attribution.
 -   The Attribute To field is used to enter a name for the Enter Name attribution option.
 
-**Parent topic:**[Content types](../ctc/ctc_arch_contypes.md)
 

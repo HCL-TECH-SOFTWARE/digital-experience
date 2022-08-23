@@ -9,7 +9,6 @@ You can integrate the business card and online status in a list of social object
 -   **[Customizing the CSS styles of social lists](../social/soc_rendr_custom_css_styles.md)**  
 The lists of social objects rely on the availability of several CSS class definitions in the wp\_social\_rendering\_85 theme module.
 
-**Parent topic:**[Customizing view definitions for portal site visitors](../social/soc_rendr_shape_socl_list.md)
 
 **Related information**  
 

@@ -15,5 +15,4 @@ The structure of a page with annotated portlets is shown here: ![Structure of a 
 -   **[Supported aggregator tags](../admin-system/sa_asa_aggr_tags.md)**  
 The portal supports the aggregator tags listed in the following for Active Site Analytics.
 
-**Parent topic:**[Collecting analytics data](../admin-system/sa_asa_collct_data.md)
 

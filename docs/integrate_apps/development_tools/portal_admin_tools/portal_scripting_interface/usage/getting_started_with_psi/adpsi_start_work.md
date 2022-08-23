@@ -129,5 +129,4 @@ The following exercise shows you some steps how to work with portal resources, s
     This adds the Information portlet to the page and places it in a horizontal container.
 
 
-**Parent topic:**[Getting started with the Portal Scripting Interface](../admin-system/adpsi_start.md)
 

@@ -56,5 +56,4 @@ All presentation templates for a library are listed under the `presentationTempl
     ```
 
 
-**Parent topic:**[WebDAV](../wcm/wcm_webdav_overview.md)
 

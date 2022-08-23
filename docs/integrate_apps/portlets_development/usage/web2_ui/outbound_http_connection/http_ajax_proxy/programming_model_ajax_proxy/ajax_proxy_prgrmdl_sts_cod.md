@@ -29,5 +29,4 @@ The proxy returns its response with one of the following status codes:
     This code indicates that the authentication was successful.
 
 
-**Parent topic:**[The programming model for using the AJAX proxy](../dev-portlet/ajax_proxy_prgrmdl.md)
 

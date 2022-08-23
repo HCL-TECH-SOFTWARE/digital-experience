@@ -198,7 +198,6 @@ To add a policy to the outbound HTTP connection configuration, follow the proced
     The policy was now added to the configuration. It is ready to use.
 
 
-**Parent topic:**[Sample administration tasks](../dev-portlet/outbhttp_cfg_smpl_adm_tasks.md)
 
 **Related information**  
 

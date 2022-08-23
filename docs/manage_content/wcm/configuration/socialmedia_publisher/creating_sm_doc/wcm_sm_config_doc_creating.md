@@ -64,5 +64,4 @@ Complete these configuration parameters to set up a social network connection fo
 -   **[Defining social network settings for Twitter](../wcm/wcm_sm_config_doc_twitter.md)**  
 Complete these configuration parameters to set up a social network connection for Twitter.
 
-**Parent topic:**[Social network configuration](../wcm/wcm_sm_config_doc.md)
 

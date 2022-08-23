@@ -11,5 +11,4 @@ Learn about the validation and customization of friendly URLs for web content, i
 -   **[Friendly URL for web content example](../wcm/wcm_config_wcmviewer_friendlyexample.md)**  
 This example demonstrates how friendly URLs for web content work with multiple web content viewers on a single portal page. The example describes the portal page structure referenced by the friendly URLs and explains the underlying structure of the content in an HCL Web Content Manager site framework.
 
-**Parent topic:**[Customizing web content delivery](../wcm/wcm_delivery_custom.md)
 

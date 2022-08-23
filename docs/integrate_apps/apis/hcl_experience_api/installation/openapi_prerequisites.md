@@ -11,5 +11,4 @@ Users need to meet the following prerequisites first before installing HCL Exper
 -   Download and install [Docker](https://docs.docker.com/install/);
 -   Make sure your HCL Digital Experience 9.5 instance is up and running, either in Docker or supported Kubernetes platforms.
 
-**Parent topic:**[HCL Experience API](../open_api/openapi_overview.md)
 

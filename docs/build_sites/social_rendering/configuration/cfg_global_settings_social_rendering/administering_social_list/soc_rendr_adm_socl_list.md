@@ -15,7 +15,6 @@ After you enable social rendering, your HCL Digital Experience acts as a client 
 -   **[Removing the previous version of social rendering](../social/rem_soc_rend.md)**  
 You can remove the Social Lists 1.0 library and its configuration to remove it from the toolbar after you deploy the Social Lists 1.1 Library. Once you have removed the library, remove the drag and drop configuration with a separate command.
 
-**Parent topic:**[Social rendering](../social/soc_rendr_ovu.md)
 
 **Related information**  
 

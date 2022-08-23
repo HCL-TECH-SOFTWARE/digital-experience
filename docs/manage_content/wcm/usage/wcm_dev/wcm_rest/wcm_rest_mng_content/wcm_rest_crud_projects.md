@@ -273,5 +273,4 @@ Accept-Type: application/atom+xml
 
 Withdrawing approval does not change the state of the project, which remains in review.
 
-**Parent topic:**[How to manage web content items by using REST](../wcm/wcm_rest_crud.md)
 

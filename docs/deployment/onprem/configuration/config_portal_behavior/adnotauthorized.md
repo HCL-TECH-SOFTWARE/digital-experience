@@ -21,5 +21,4 @@ Specify how you want the portal to display portlets that a user is not authorize
 
 If you have a portal cluster configuration, use the WebSphere® Integrated Solutions Console to set the property `portlets.unauthorized.visible` in the portal Configuration Service.
 
-**Parent topic:**[Configuring portal behavior](../admin-system/adptlcfg.md)
 

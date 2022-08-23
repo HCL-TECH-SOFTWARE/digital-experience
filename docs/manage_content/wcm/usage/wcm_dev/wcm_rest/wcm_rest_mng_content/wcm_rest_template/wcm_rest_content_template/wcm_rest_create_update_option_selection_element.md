@@ -142,5 +142,4 @@ You can create or update an Option Selection Element in a Content Template.
     ```
 
 
-**Parent topic:**[How to use REST with content templates](../wcm/wcm_rest_crud_cont_temp.md)
 

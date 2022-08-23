@@ -19,5 +19,4 @@ The previous topics describe the general part of the remote REST service for PUM
 -   **[DX User and Groups REST API explorer](../dev/user_and_groups_rest_api_explorer.md)**  
  The DX User and Groups REST API explorer can be used by developers creating solutions for HCL DX 9.5 on premises and container deployments to explore and test the PUMA APIs.
 
-**Parent topic:**[User and group management](../dev/wpspuma.md)
 

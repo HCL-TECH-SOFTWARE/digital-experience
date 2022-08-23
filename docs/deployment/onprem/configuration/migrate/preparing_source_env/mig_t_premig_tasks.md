@@ -39,5 +39,4 @@ For Unix-based platforms, the default open file descriptor must be set to 200000
 -   **[Disabling wsadmin client debug](../migrate/mig_dsable_wsadmin_clnt_dbg.md)**  
 If you use either IBM® WebSphere® Application Server Version 8.5.5.4 or WebSphere® Application Server Version 8.5.5.5, disable the wsadmin client trace to avoid a failure.
 
-**Parent topic:**[Migrating](../migrate/migration.md)
 

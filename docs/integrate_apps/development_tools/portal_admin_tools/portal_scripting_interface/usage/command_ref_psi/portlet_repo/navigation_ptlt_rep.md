@@ -21,7 +21,6 @@ $Portlet select the webmodule
 
 ```
 
-**Parent topic:**[Portlet repository](../admin-system/ptlt_rep.md)
 
 **Related information**  
 

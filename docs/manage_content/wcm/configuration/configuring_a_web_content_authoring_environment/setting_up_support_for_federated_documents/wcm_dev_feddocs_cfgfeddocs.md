@@ -126,7 +126,6 @@ In addition to enabling or disabling credential vault slots for authentication, 
     5.  Edit the **User** role, and add the **All Authenticated Portal Users** group to the role.
 
 
-**Parent topic:**[Setting up support for federated documents](../wcm/wcm_dev_feddocs_setup.md)
 
 **Related information**  
 

@@ -45,5 +45,4 @@ com.ibm.portal.cors.domain.1.entry=http://test2.hcl.com 
     Headers to expose.
 
 
-**Parent topic:**[Configuring authentication filters](../admin-system/adauthflt.md)
 

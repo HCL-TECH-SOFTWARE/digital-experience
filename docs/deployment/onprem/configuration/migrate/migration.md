@@ -15,5 +15,4 @@ For Version 8.5, data, applications, databases, property files, security setting
 -   **[Migration: Next steps](../migrate/mig_nextsteps.md)**  
 To complete migration, you must first perform several post-migration steps that depend on how Portal is being used. After completing the post-migration steps, review the Enabling new functionality section to take advantage of the new tools available in HCL Digital Experience 8.5. Enabling new functionality should not be started until all post-migration steps have been completed.
 
-**Parent topic:**[Digital Experience on non-containerized platforms](../containerization/dx_non_container.md)
 

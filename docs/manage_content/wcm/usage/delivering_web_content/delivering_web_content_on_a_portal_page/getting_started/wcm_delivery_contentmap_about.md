@@ -45,7 +45,6 @@ If the parent page of the new page has both a system content association with th
 
 Set page parameters on your web content page templates by using **Page Properties** \> **Advanced** in the Manage Pages portlet or by using **Page** \> **General** \> **Edit Page Properties** \> **Advanced** in the site toolbar.
 
-**Parent topic:**[Getting started with delivering web content on a portal page](../wcm/wcm_delivery_getstarted.md)
 
 **Related information**  
 

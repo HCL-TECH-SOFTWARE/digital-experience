@@ -23,5 +23,4 @@ HCL DX 9.5 CF192 and higher releases now include a new OOB pre-processing filter
 
 ![Content Security Policy Implementation flow](../images/csp-implementation-flow-2.png)
 
-**Parent topic:**[Content Security Policy](../security/content_security_policy.md)
 

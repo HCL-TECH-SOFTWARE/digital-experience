@@ -15,5 +15,4 @@ To create a backup of a specific outbound HTTP connection profile, use the proce
 -   **[Importing a configuration profile from a file](../dev-portlet/outbhttp_cfgsmptsk_restore_import_policy_profile.md)**  
 To restore all policies and settings for a given application scoped profile, use the import procedure given here. For example, you can use this procedure to restore a specific connection profile configuration that you backed up previously.
 
-**Parent topic:**[Configuring outbound HTTP connections](../dev-portlet/outbhttp_cfg_oh_conns.md)
 

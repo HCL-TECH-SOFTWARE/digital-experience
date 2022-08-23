@@ -11,5 +11,4 @@ You can create, view, and update content sources to customize your search collec
 -   **[Exporting and importing search collections](../admin-system/srtexpimp.md)**  
 View the steps to export search collections from a source portal and import them into a target portal.
 
-**Parent topic:**[Administering Portal Search](../admin-system/srtadmsrch.md)
 

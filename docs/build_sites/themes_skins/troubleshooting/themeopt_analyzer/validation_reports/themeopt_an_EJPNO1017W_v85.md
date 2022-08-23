@@ -10,7 +10,4 @@ The default skin for your theme is set to inactive. This may result in portlets 
 
 Update your skin to active or change the default skin for the theme to an active skin from the allowed-skin list.
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
-
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 

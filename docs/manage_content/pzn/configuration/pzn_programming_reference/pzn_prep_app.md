@@ -22,7 +22,4 @@ If you are using IBM® Rational® Application Developer to add resource referenc
 
 Repeat this process for the LikeMinds data source. Change the name of the reference to jdbc/lmdbDS. All other settings remain the same.
 
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
-
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
 

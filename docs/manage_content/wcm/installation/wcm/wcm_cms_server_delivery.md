@@ -34,7 +34,6 @@ In a remote portlet delivery environment, content is syndicated from the authori
 
 ![Remote portlet delivery environment](../images/wcm_remote_rendering.jpg)
 
-**Parent topic:**[HCL Web Content Manager \(WCM\) environments](../wcm/wcm_deploy.md)
 
 **Related information**  
 

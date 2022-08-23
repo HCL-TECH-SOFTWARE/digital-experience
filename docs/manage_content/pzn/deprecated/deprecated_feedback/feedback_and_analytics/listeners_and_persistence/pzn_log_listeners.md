@@ -85,7 +85,4 @@ The LMListener routes data of interest to the LikeMinds database layer.
 -   **[Custom log listeners](../pzn/pzn_custom_log_listeners.md)**  
 When the log method of a logging bean is called, the feedback facility generates a log event. A log event is also generated when a rule is executed. Log listeners process these log events and either store the event data or perform custom processing with these events.
 
-**Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
-
-**Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
 

@@ -17,5 +17,4 @@ Configure Portal Search to crawl and index a remote, public portal site.
 -   **[Crawling an external site using a seedlist provider](../admin-system/srtseedlistcreate.md)**  
 The seedlist crawler is a special HTTP crawler that can be used to crawl external sites which publish their content using the seedlist format. The seedlist format is an ATOM/XML-based format specifically for publishing application content, including all its metadata. The format supports publishing only updated content between crawling sessions for more effective crawling. You can configure the seedlist crawler with general parameters, filters and schedulers, then run the crawler.
 
-**Parent topic:**[Administering Portal Search](../admin-system/srtadmsrch.md)
 

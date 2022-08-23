@@ -163,7 +163,6 @@ The following example shows a typical metadata setting:
 </proxy-rules>
 ```
 
-**Parent topic:**[Description of the outbound HTTP connection configuration script](../dev-portlet/outbhttp_cfg_descript.md)
 
 **Related information**  
 

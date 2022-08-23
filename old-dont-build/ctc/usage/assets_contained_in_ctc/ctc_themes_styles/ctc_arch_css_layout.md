@@ -20,5 +20,4 @@ The following classes are included for backwards compatibility with earlier vers
 -   `contentMain split121Main` – main column in 1/2/1 ratio split
 -   `contentMain split121Right` – sidebar column in 1/2/1 ratio split
 
-**Parent topic:**[Content Template Catalog themes and styles](../ctc/ctc_arch_css.md)
 

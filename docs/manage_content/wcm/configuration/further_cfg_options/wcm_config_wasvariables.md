@@ -58,5 +58,4 @@ Example: `[AppServer\_root](../reference/wpsdirstr.md#was_root)/installed_apps/c
 
 |
 
-**Parent topic:**[Further configuration options](../wcm/wcm_config.md)
 

@@ -120,5 +120,4 @@ To retrieve a list of authors or owners, Use the Property tag.
 
 To display the site path to a personalized Web Content Manager element, use a placeholder tag.
 
-**Parent topic:**[Personalized content](../wcm/wcm_dev_elements_types_personalize.md)
 

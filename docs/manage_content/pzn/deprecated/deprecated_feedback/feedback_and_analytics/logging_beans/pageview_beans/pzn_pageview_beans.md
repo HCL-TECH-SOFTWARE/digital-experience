@@ -13,7 +13,4 @@ To implement Web usage logging, insert a PageView bean in your JSP.
 -   **[PageView beans reference](../pzn/pzn_pageview_beans_reference.md)**  
 Learn about the com.ibm.wcp.analysis.beans.PageView bean log method and instantiation of PageView beans.
 
-**Parent topic:**[Logging beans](../pzn/pzn_logging_beans.md)
-
-**Parent topic:**[Logging beans](../pzn/pzn_logging_beans.md)
 

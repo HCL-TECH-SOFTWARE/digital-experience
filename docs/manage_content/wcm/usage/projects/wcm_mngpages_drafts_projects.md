@@ -26,5 +26,4 @@ Changes to page draft elements result in either a new draft or an update to an e
 -   The web content mappings of the current page.
 -   The Vanity URLs of the current page.
 
-**Parent topic:**[Projects](../wcm/wcm_proj_overview.md)
 

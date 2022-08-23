@@ -6,5 +6,4 @@ A standard content association maps a web content page or web content viewer to 
 
 The `system` flag is a private, read-only flag. You can use the public API or the REST API to query a content association to determine whether it is a system content association or standard content association. You cannot use these interfaces to modify the `system` flag. To modify `system` data, use the XML configuration interface \(XML Access\).
 
-**Parent topic:**[Pages](../site/pages_overview.md)
 

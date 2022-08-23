@@ -341,7 +341,6 @@ The Navigational State API is used to read and modify the Navigational State doc
 -   **[Creating custom links to portlets and pages](../dev-portlet/dgn_link.md)**  
 URLs encode navigational state information about HCL Portal \(for example, the user's currently selected page\) and about the portlets on a page \(for example, the window state of the portlet\) in a serialized form. Encoding navigational state information in the URL is used by the portal server to support use of the browser's back button.
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 
 **Related information**  
 

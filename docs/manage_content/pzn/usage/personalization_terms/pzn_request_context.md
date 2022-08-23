@@ -37,19 +37,14 @@ In the previous section, the jsp:useBean tag constructs the yourco.goldpromo.Ban
 
 In some cases, it may be useful to call into a content spot without having access to an HttpServletRequest or PortletRequest. The interface com.ibm.websphere.personalization.PznRequestObjectInterface can be used in these situations. A implementation of this class called com.ibm.websphere.personalization.PznRequestObjectImplementor is provided for convenience.
 
-**Parent topic:**[Personalization terms](../pzn/pzn_concepts.md)
 
 **Previous topic:**[Application object](../pzn/pzn_application_object.md)
 
 **Next topic:**[Query framework](../pzn/pzn_query_framework.md)
 
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
-
-**Parent topic:**[Personalization terms](../pzn/pzn_concepts.md)
 
 **Previous topic:**[Application object](../pzn/pzn_application_object.md)
 
 **Next topic:**[Query framework](../pzn/pzn_query_framework.md)
 
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
 

@@ -6,7 +6,6 @@ To update an outbound HTTP connection configuration, you first create the XML do
 
 The syntax of the configuration task differs, depending on whether you want to read the settings for a global configuration or for an application-scoped configuration.
 
-**Parent topic:**[Configuring outbound HTTP connections by using configuration tasks](../dev-portlet/outbhttp_cfg_tasks.md)
 
 **Related information**  
 

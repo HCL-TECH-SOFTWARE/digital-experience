@@ -23,5 +23,4 @@ You can get access to the Active Site Analytics Mediator SPI by using the follow
         Use this function to notify all registered listeners about DOM changes. If you know the specific DOM area that has changed, you can pass in the corresponding DOM nodes. This function is typically called by the portal framework to notify the registered aggregators about DOM changes. It can also be used by AJAX applications that partially update the DOM. If no specific DOM nodes are provided, the aggregator may assume that the notification refers to the portal page. If DOM nodes are provided, the notification refers to portal page elements. In addition to the `DOMNode` array you can optionally provide a callback function.
 
 
-**Parent topic:**[Writing an aggregator for Active Site Analytics](../admin-system/sa_asa_cust_script.md)
 

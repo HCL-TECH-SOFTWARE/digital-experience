@@ -15,5 +15,4 @@ You can dynamically modify portlet caching parameters for a JSR 286 portlet duri
     ```
 
 
-**Parent topic:**[Using two-phase rendering with JSR 286 portlets](../dev-portlet/jsr2phase_overview.md)
 

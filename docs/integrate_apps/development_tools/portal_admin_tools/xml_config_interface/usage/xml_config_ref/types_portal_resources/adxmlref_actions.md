@@ -19,7 +19,6 @@ Example: the following XML snippet sets the portlet named "MySpecialPortlet" to 
 
 ```
 
-**Parent topic:**[Types of portal resources](../admin-system/adxmlref_resrc_types.md)
 
 **Related information**  
 

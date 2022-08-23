@@ -10,7 +10,6 @@ Before you back up the HCL Digital Experience installation, decide which utility
     If you choose to use an online backup, make sure that the techniques and tools used for file system and database backup support the capturing of online backups where open files and database changes can be encountered during the backup procedure.
 
 
-**Parent topic:**[Backing up files, databases, and the LDAP server\(s\)](../admin-system/i_wadm_t_bkup_winlinux.md)
 
 **Next topic:**[Backing up the HCL Portal file system](../admin-system/i_wadm_t_bkup_files_winlinux.md)
 

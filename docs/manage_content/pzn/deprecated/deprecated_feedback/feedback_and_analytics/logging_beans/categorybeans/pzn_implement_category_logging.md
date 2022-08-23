@@ -23,7 +23,4 @@ You can also pass an object to a JSP and implicitly log the content category. Fo
 
 In the previous example, the category bean logs the news category by querying the `LoggableResource` interface to get the category.
 
-**Parent topic:**[Category beans](../pzn/pzn_category_beans.md)
-
-**Parent topic:**[Category beans](../pzn/pzn_category_beans.md)
 

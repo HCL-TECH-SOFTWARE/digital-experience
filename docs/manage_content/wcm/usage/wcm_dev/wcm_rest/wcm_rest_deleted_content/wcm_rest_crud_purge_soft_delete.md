@@ -99,5 +99,4 @@ This new API lets you find any deleted items inside a given virtual Portal. Dele
         ```
 
 
-**Parent topic:**[How to Use REST to Work with Deleted Content Items](../wcm/wcm_rest_crud_purge_delete.md)
 

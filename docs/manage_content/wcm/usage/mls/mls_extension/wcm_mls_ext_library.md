@@ -15,7 +15,6 @@ To use the extension:
 -   Use the [Edit-time navigation creation extension](wcm_mls_ext_nav.md) to manually copy each of your content items in the **Portal Site** library to your localized libraries. This action automatically duplicates the page path as site areas in the destination library.
 -   Write some Web Content Manager API code to manually copy the **Portal Site** library by traversing the page hierarchy and creating site areas in the destination library with the same name as the page, then copying the content items by using the Web Content Manager API `Workspace.copy` method.
 
-**Parent topic:**[Extensions for multilingual sites Multilingual Solution](../wcm/wcm_mls_extensions.md)
 
 **Related information**  
 

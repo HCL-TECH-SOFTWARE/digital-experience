@@ -19,7 +19,6 @@ Testing environments can be as simple or as complex as a test environment used t
 -   **[Web content delivery environments](../wcm/wcm_cms_server_delivery.md)**  
 If you have a HCL Web Content Manager only license, you can deliver your website without using HCL Digital Experience features.
 
-**Parent topic:**[Planning to install HCL Digital Experience](../plan/plan_installation.md)
 
 **Related information**  
 

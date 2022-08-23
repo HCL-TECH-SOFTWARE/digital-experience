@@ -24,5 +24,4 @@ If the class is needed, the jar <AppServer\>/lib/jacl.jar should be copied to:
 
 <AppServer\>/<javaversion\>/jre/lib/ext/
 
-**Parent topic:**[Configuring Security Access Manager](../security/tam.md)
 

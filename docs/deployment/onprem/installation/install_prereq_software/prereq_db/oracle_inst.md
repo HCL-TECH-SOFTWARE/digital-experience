@@ -58,7 +58,6 @@ When you use the wizard, you provide information about the database for your env
 
 You cannot use the **Database Transfer** option in the Configuration Wizard to assign custom table spaces on your database server. You can perform manual steps to assign custom table spaces. Go to [Assigning custom table spaces](custom_table_spaces.md) for more information.
 
-**Parent topic:**[Installing the database software](../config/prereq_db_software.md)
 
 **Related information**  
 

@@ -10,5 +10,4 @@ An outline of the process of publishing a project.
 -   If any items fail to validate or publish, the project state is "Publish Failed".
 -   If all items in the project are successfully published, the project state is "Published".
 
-**Parent topic:**[Projects](../wcm/wcm_proj_overview.md)
 

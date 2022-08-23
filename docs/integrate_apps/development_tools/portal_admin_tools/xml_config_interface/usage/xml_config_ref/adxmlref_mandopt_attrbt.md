@@ -22,7 +22,6 @@ and
 
 The first fragment only modifies the active attribute of the page and leaves its skin setting unchanged; the second fragment additionally resets the skin to the undefined value \(whatever the previous skin setting was\), so that the page will always display in the portal default skin.
 
-**Parent topic:**[XML configuration reference](../admin-system/adxmlref.md)
 
 **Related information**  
 

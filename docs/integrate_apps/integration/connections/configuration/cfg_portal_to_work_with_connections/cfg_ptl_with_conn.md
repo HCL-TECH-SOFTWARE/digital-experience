@@ -13,5 +13,4 @@ Configure authentication to enable access to the portlets.
 -   **[Configuring the HCL Connections integration](../collab/collab_cfg_connect.md)**  
 Run the configure-wp-connections-integration task to configure the integration between HCL Connections and HCL Digital Experience.
 
-**Parent topic:**[HCL Connections](../config/ibmconnections.md)
 

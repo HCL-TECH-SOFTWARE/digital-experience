@@ -11,5 +11,4 @@ The repository of HCL Portal consists of many tables and indices that are create
 -   **[DB2 for z/OS: Assigning custom table spaces](../config/db2z_custom_tablespaces.md)**  
 The repository of HCL Portal consists of many tables and indices that are created in default table spaces. When using an existing set of table spaces for the objects of the repository, specify this when executing the database transfer to the target database system.
 
-**Parent topic:**[Database Management Systems](../config/config_dbms.md)
 

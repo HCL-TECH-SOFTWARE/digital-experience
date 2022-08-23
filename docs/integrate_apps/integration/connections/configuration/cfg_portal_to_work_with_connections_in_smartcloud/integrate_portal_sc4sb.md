@@ -9,5 +9,4 @@ Learn about the requirements that must be fulfilled in order to successfully int
 -   **[Configuring a connection between HCL Portal and HCL Connections in SmartCloud for Social Business](../dev-portlet/config_calls_sc4sb.md)**  
 Learn how to configure the HCL Connections integration assets to complete calls to HCL Connections in SmartCloud for Social Business.
 
-**Parent topic:**[HCL Connections](../config/ibmconnections.md)
 

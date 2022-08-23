@@ -38,5 +38,4 @@ Copying the JCR database can take several minutes, depending on the amount of co
 11. List the databases with the following DB2 command: `db2 list database directory`. The new database is shown.
 
 
-**Parent topic:**[Manual staging to production process](../deploy/mans2p_intro.md)
 

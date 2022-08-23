@@ -11,7 +11,6 @@ Refer to the appropriate product documentation for information about how to back
 -   For IBM Domino®, refer to the Directory Services topics in the Domino Administrator Help.
 -   For other LDAP servers, refer to that server documentation for instructions.
 
-**Parent topic:**[Backing up files, databases, and the LDAP server\(s\)](../admin-system/i_wadm_t_bkup_winlinux.md)
 
 **Previous topic:**[Backing up the HCL Portal file system](../admin-system/i_wadm_t_bkup_files_winlinux.md)
 

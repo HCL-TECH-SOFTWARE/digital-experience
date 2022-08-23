@@ -31,7 +31,4 @@ Browser Capability currently supports these attributes:
     Returns the first digit of the browser version. For instance, 6.0, 6.1 and 6.1.1 are all returned as 6.
 
 
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
-
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
 

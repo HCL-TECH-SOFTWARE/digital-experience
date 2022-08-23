@@ -43,5 +43,4 @@ finance.de.title = Finanzseite
 
 You can also load property files in the scripting format by using the XML configuration interface. To complete this step, specify the locale as part of the prefix in a localedata tag.
 
-**Parent topic:**[Command reference for the Portal Scripting Interface](../admin-system/adpsicrf.md)
 

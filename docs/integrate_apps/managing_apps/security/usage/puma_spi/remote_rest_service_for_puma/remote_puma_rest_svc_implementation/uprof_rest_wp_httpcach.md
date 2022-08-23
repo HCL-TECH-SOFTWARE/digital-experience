@@ -6,5 +6,4 @@ The expiration time is defined by the `max-age` directive in the same header and
 
 To altogether prevent any caching of PUMA REST responses, set `wp.user.restservice.block.all.caching = true`. So configured, the PUMA REST service will include `'Cache-Control: no-store'` headers on responses.
 
-**Parent topic:**[How the portal implements the remote PUMA REST service](../dev/uprof_rest_wpspec.md)
 

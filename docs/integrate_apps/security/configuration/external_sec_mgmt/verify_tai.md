@@ -11,5 +11,4 @@ Complete the following steps to verify that the Trust Association Interceptors a
 2.  Authenticate through the external security managers. After you log in, you should be directed to the secure and personalized `myportal` page. If you are directed to the login page or the public page, there is a problem with the TAI configuration. If you are using the Security Access Manager TAI \(**com.ibm.sec.authn.tai.TAMETai** or **com.ibm.ws.security.web.TAMTrustAssociationInterceptorPlus**\) that HCL Portal set up, ensure that the Security Access Manager authorization server is up and running.
 
 
-**Parent topic:**[External security managers](../security/sec_ext_man.md)
 

@@ -2,7 +2,6 @@
 
 You can change the profile for the theme or a specific page to define the modules loaded.
 
-**Parent topic:**[Specify profiles](../dev-theme/themeopt_define_mod_files.md)
 
 ## WebDAV
 

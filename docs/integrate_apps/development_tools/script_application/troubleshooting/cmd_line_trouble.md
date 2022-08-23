@@ -31,5 +31,4 @@ Use this information to resolve issues that are related to installing and using 
     This error message is printed for various reasons, all of which indicate that the push failed. The log file that is named sp-cmdln.log contains a trace of the tool's actions and any errors or Java exceptions that were encountered. The log is written to the current working directory \(or the directory that is given by the `-root` option\). Review the content of the log to determine why the push failed. Common problems are related to incorrectly specified command line option values, networking problems while you try to push the content, and incorrect authentication credentials.
 
 
-**Parent topic:**[Script Application command line application overview](../script-portlet/cmd_line_push_ovr.md)
 

@@ -36,7 +36,4 @@ Movie Site demonstrates the LikeMinds Recommendation Engine, guiding you through
 -   **[Exploring Movie Site](../pzn/pzn_explore_moviesite.md)**  
 Movie Site demonstrates the LikeMinds Recommendation Engine, guiding you through a Personalization scenario that is based on factual data from a site on the internet. The website uses a personalization solution to analyze visitor behavior and to recommend individualized content information and services while the visitor is actively engaged on the site.
 
-**Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
-
-**Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
 

@@ -15,5 +15,4 @@ The syntax for searching is similar to the generic tree search described in Sear
 -   **[Global lists - Themes and Skins](../admin-system/gbl_lsts_themes_skins.md)**  
 For ease of use, two global lists hold the common name of all themes and skins. You can access the global lists with the listall command, which expects the list name as an argument. The following list names are supported. See the bean help for alternative list names.
 
-**Parent topic:**[Command reference for the Portal Scripting Interface](../admin-system/adpsicrf.md)
 

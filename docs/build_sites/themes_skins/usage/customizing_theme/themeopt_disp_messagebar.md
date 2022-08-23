@@ -52,5 +52,4 @@ All ready-to-use theme profiles include the status\_bar module, which provides a
     ```
 
 
-**Parent topic:**[Customizing the theme](../dev-theme/themeopt_cust.md)
 

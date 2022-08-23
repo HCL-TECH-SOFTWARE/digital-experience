@@ -9,5 +9,4 @@ You can use the Web Content Manager REST service to create, read, update, and de
 -   **[How to use REST to retrieve the settings of the elements for content templates](../wcm/wcm_rest_elem_set_cont_temp.md)**  
 The Enhanced Web Content Manager Content Template API available with HCL Digital Experience 9.5 CF172 and CF18 higher releases adds the ability to retrieve the configuration of the elements, for example, if an element is required or not. This option is also available to HCL Digital Experience 8.5 and 9.0 CF18 users.
 
-**Parent topic:**[How to manage web content items by using REST](../wcm/wcm_rest_crud.md)
 

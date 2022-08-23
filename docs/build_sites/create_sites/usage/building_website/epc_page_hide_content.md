@@ -63,5 +63,4 @@ In the portal theme, hide content by putting it into a special container in the 
     3.  Click **Save Draft** to save the page.
 
 
-**Parent topic:**[Building the website](../site/site_build_parent.md)
 

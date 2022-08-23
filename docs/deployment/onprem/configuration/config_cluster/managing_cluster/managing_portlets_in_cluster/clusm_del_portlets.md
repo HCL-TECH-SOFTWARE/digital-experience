@@ -13,5 +13,4 @@ You can use the XMLAccess task to delete a portlet common across clusters. If th
 5.  Click **Uninstall**.
 
 
-**Parent topic:**[Managing portlets in your cluster](../admin-system/manage_portlets.md)
 

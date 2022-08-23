@@ -7,5 +7,4 @@ After you complete the migration of your data, perform the following task if you
 -   **[Updating a WSRP Consumer](../migrate/mig_post_wsrp_consumer.md)**  
 After you complete the migration of your data, perform the following tasks if you use HCL Digital Experience as a WSRP Consumer.
 
-**Parent topic:**[Portal tasks](../migrate/mig_post_portaltasks.md)
 

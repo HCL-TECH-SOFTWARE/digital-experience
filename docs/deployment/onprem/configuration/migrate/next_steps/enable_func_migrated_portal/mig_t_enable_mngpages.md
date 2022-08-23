@@ -150,7 +150,6 @@ Each virtual portal has its own Portal Site library.
 
 After you migrate from Version 7.0 or Version 8.0, vanity URLs are not available. After you enable managed pages, you can enable vanity URL support. If you migrated from Version 7.0 or 8.0, go to [Enabling vanity URL support](../wcm/van_url_cfgtsk_enable_vus.md).
 
-**Parent topic:**[Enabling new functionality in a migrated portal](../migrate/mig_t_enable_new.md)
 
 **Related information**  
 

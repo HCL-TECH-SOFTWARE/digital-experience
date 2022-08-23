@@ -1,6 +1,5 @@
 # Properties file: wkplc\_comp.properties
 
-**Parent topic:**[Reference: Configuration properties](../properties/properties.md)
 
 ## HCL Portal URLs
 

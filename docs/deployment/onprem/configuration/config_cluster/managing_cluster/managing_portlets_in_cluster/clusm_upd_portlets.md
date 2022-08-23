@@ -11,5 +11,4 @@ You can use the Deployment Manager or the XML configuration interface to update 
 4.  Select the enterprise application to update and click **Update**.
 
 
-**Parent topic:**[Managing portlets in your cluster](../admin-system/manage_portlets.md)
 

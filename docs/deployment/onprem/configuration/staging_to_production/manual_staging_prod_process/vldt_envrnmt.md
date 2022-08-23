@@ -19,5 +19,4 @@ Validate the portal artifacts on the target \(production\) environment and set u
 
 Now that the production environment is staged, portal syndication feature must be used to update content in web content libraries. If managed pages is enabled, syndication also ensures that all required page artifacts are transferred along with the content.
 
-**Parent topic:**[Manual staging to production process](../deploy/mans2p_intro.md)
 

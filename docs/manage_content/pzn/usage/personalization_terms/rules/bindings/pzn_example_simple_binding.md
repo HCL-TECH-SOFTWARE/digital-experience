@@ -18,7 +18,4 @@ When Customer Type is
   	     order as is
 ```
 
-**Parent topic:**[Bindings](../pzn/pzn_bindings.md)
-
-**Parent topic:**[Bindings](../pzn/pzn_bindings.md)
 

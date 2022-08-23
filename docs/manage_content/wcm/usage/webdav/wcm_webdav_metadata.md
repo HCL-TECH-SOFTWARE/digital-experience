@@ -99,7 +99,6 @@ Here is a sample `access-control-user.xml` file for an item's user-defined acces
 </access-control>
 ```
 
-**Parent topic:**[WebDAV](../wcm/wcm_webdav_overview.md)
 
 **Related information**  
 

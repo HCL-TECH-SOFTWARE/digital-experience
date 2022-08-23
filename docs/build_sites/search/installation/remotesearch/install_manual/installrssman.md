@@ -203,5 +203,4 @@ You can install remote search service by using manual steps instead of the IBM I
 -   **[Updating remote search service by using manual steps](../admin-system/update_rssman.md)**  
 If you originally installed the remote service by using manual steps, then you must use manual steps to upgrade it after you apply the Combined Cumulative Fix on the portal server.
 
-**Parent topic:**[Remote search service](../admin-system/srcusgrmtsrchsrv.md)
 

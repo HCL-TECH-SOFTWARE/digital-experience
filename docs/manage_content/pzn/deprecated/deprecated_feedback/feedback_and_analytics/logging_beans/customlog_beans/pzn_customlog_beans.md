@@ -15,7 +15,4 @@ To implement custom logging, insert a CustomLog bean into your JSP.
 -   **[CustomLog beans reference](../pzn/pzn_customlog_beans_reference.md)**  
 View the CustomLog bean method signatures.
 
-**Parent topic:**[Logging beans](../pzn/pzn_logging_beans.md)
-
-**Parent topic:**[Logging beans](../pzn/pzn_logging_beans.md)
 

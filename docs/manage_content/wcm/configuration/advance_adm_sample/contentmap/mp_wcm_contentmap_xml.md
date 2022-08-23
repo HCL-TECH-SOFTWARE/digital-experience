@@ -48,7 +48,6 @@ The following example updates a web content page to delete any defined content a
 </content-node>
 ```
 
-**Parent topic:**[Content associations reference](../admin-system/mp_wcm_contentmap.md)
 
 **Related information**  
 

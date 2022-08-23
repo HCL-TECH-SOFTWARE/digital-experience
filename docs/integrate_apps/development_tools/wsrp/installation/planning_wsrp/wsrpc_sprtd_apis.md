@@ -26,5 +26,4 @@ You can use the WSRP implementation in HCL Portal 8.5 to do the following with y
 
 **Note:** Currently, the WSRP Producer implementation in the portal does not support the Registration interface of the WSRP specification. This interface is optional. However, the Consumer portal can handle Producers that support WSRP registration interfaces.
 
-**Parent topic:**[Planning for WSRP](../admin-system/wsrpc_plan.md)
 

@@ -52,5 +52,4 @@ Ensure that your Portal profile is created before you upgrade the SDK.
     **Note:** You cannot roll back to a version of HCL Digital Experience earlier than fix pack 11 while you use SDK Java Technology Edition version 8. Support for SDK Java Technology Edition version 8 does not exist in earlier releases of Portal. If you want to roll back to an earlier CF level, use the commands that are shown in steps [6](#enable) and [7](#new_ver) to switch back to SDK version 7.0 or 7.1 before you roll back.
 
 
-**Parent topic:**[Preparing your Linux system for installation](../install/installingwp95-linux.md)
 

@@ -269,5 +269,4 @@ The following information lists the resources that contribute to the overall rem
         No
 
 
-**Parent topic:**[Caching](../security/tune_cache.md)
 

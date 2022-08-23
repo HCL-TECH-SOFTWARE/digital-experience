@@ -20,5 +20,4 @@ Example:
 <ibmfs:etag>ABC0012</ibmfs:etag>
 ```
 
-**Parent topic:**[RSS Namespace Extension for the Feed Service](../wci/wci_ff_nse_rss.md)
 

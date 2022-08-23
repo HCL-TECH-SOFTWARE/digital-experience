@@ -50,5 +50,4 @@ The site has a home page and several other microsites with one or more pages. Ma
     The **Registration** page uses the FAQ template.
 
 
-**Parent topic:**[Sample sites, site templates, groups, and users](../ctc/ctc-assets-sample-sites.md)
 

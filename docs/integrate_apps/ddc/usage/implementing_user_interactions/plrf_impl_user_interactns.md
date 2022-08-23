@@ -9,7 +9,6 @@ You can use HCL Web Content Manager presentation components to create user inter
 -   **[Setting dynamic Digital Data Connector filter values](../social/plrf_set_dyn_ddc_fltr_valus.md)**  
 Digital Data Connector \(DDC\) for HCL Portal defines a dedicated public render parameter that can be used by DDC plug-ins for filtering lists.
 
-**Parent topic:**[Digital Data Connector \(DDC\) for HCL Portal](../social/plrf_ovu.md)
 
 **Related information**  
 

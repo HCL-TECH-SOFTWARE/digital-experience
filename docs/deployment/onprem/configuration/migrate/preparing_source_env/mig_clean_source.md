@@ -8,5 +8,4 @@ Delete or move the following files from your profile folder:
 -   ConfigEngine log files in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/log directory.
 -   Any application .ear files that are not installed; typically saved older versions.
 
-**Parent topic:**[Preparing your source environment](../migrate/mig_t_premig_tasks.md)
 

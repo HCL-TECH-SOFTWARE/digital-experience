@@ -44,5 +44,4 @@ Review the following information to manage replication:
 -   **[Managing Personalization cache replication in your cluster](../admin-system/man_pzn_cache.md)**  
 Enable the Personalization cache replication if you want to propagate invalidation in the Personalization caches to the other nodes in the cluster.
 
-**Parent topic:**[Managing your cluster](../admin-system/manage_clus.md)
 

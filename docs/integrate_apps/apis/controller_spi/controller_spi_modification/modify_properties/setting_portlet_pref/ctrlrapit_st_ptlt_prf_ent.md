@@ -28,5 +28,4 @@ final ModifiablePortletPreferences preferences = ((ModifiablePortletEntity)
 preferences.setStringValue("name", "value");
 ```
 
-**Parent topic:**[Setting portlet preferences](../dev/ctrlrapit_set_ptlt_prf.md)
 

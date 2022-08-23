@@ -43,7 +43,6 @@ For a WSRP Producer, security configuration is optional. A WSRP Consumer must us
 
 For more detailed information about Portal Access Control, read the sections about *Configuring Portal Access Control for a WSRP Producer portal* and *Managing Access Control*.
 
-**Parent topic:**[Planning for WSRP](../admin-system/wsrpc_plan.md)
 
 **Related information**  
 

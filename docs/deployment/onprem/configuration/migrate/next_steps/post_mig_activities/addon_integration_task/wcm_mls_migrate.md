@@ -65,5 +65,4 @@ When you migrate the multilingual solution, you need to merge your configuration
 6.  Repeat these steps on every server and cluster node.
 
 
-**Parent topic:**[Add-ons, features, and third-party integration tasks](../migrate/mig_post_ptl_int_addon.md)
 

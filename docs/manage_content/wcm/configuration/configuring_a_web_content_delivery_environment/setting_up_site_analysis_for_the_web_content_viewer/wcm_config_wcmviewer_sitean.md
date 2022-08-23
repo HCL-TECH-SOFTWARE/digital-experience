@@ -7,7 +7,6 @@ To take advantage of the site analysis logging available for the Web Content Vie
 -   **[Site analysis example for the Web Content Viewer](../wcm/wcm_config_wcmviewer_saxmp.md)**  
 The site analysis log uses the NCSA Combined log format, which is a combination of NCSA Common log format and three extra fields: the referrer field, the user\_agent field, and the cookie field. This example describes typical site analysis logging information for the Web Content Viewer.
 
-**Parent topic:**[Configuring a web content delivery environment](../wcm/wcm_install_cfgdelivery.md)
 
 **Related information**  
 

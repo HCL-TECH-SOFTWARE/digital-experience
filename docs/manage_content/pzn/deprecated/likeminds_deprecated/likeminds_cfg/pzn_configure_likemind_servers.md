@@ -45,7 +45,4 @@ View some guidelines for performance optimization in your LikeMinds database.
 -   **[Specifying recommendation behavior](../pzn/pzn_specify_recommendation_behavior.md)**  
 You can configure several parameters that affect the way the LikeMinds server generates recommendations.
 
-**Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
-
-**Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
 

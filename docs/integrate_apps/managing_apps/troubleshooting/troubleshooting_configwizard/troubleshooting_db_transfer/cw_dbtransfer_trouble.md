@@ -13,7 +13,6 @@ If you encounter a failure during the configuration process, determine whether y
 -   **[Oracle: Troubleshooting Database Transfer](../trouble/cw_dbtransfer_oracle.md)**  
 If you encounter a failure during the configuration process, determine whether you can run the step again, skip the step, or if you must clean up the step. For some failed steps, learn how to correct the issue and recover from the failure.
 
-**Parent topic:**[Troubleshooting the Configuration Wizard](../trouble/cw_troubleshooting.md)
 
 **Related information**  
 

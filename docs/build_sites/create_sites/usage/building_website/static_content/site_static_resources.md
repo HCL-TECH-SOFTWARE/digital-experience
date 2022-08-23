@@ -56,5 +56,4 @@ In addition to the HTML file that describes the page, static pages can contain r
     **Note:** Child pages do not have to have a special syntax to enable this sharing mechanism. The child pages contain a relative URL as if the resource were contained in the page itself.
 
 
-**Parent topic:**[Static content](site_static_content.md)
 

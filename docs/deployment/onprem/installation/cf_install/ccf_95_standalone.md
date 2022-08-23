@@ -780,5 +780,4 @@ Use the following commands to roll back all profiles. These steps must be repeat
 8.  If you have set up a remote search server or document conversion server for use with HCL Portal Version 8.5, then whenever you roll back a cumulative fix to the portal server, you should also roll back the corresponding cumulative fix to the remote server.
 9.  Clear the browser cache.
 
-**Parent topic:**[Combined Cumulative Fix \(CF\) Installation](../overview/ccf_strategy95.md)
 

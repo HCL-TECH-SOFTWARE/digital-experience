@@ -18,7 +18,4 @@ The interface com.ibm.websphere.personalization.resources.IMultiValueUtils is a 
 |populateJoinedProperty\(IMVResource theResource, String propertyName, RequestContext context\)|Retrieves the value for all single value properties and calls the addMultiValuePropertyValue method of `IMVResource`. This method does not return output.|
 |syncJoinedProperty\(IMVResource theResource, String propertyName, List values, RequestContext context\)|Populates the multivalue property into the resource repository.|
 
-**Parent topic:**[Using the Personalization APIs](../pzn/pzn_using_apis.md)
-
-**Parent topic:**[Using the Personalization APIs](../pzn/pzn_using_apis.md)
 

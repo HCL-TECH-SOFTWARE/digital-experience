@@ -75,5 +75,4 @@ If a module is already downloaded as part of the profile, the system does not do
     Contains all resources from modules that are gathered from portlet capabilities that contribute Markup. This request is skipped if there is no Markup contribution from any module.
 
 
-**Parent topic:**[The module framework](../dev-theme/themeopt_module.md)
 

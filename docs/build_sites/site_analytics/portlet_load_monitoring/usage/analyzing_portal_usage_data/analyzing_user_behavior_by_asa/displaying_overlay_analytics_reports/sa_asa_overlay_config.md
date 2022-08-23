@@ -52,7 +52,6 @@ To allow connections with the report provider, you need to configure the AJAX Pr
 
 **Note:** Additional to the limit set by the AJAX proxy, Coremetrics also enforces a limit on the number of concurrent connections from the same host. When that limit is reached, the portal displays message EJQGB0000E instead of the overlay report. In this case the user can refresh the portal page until the error message disappears; the successful analytics results are cached in the browser.
 
-**Parent topic:**[Displaying overlay analytics reports](../admin-system/sa_asa_overlay_stats.md)
 
 **Next topic:**[Configuring security for overlay analytics reports](../admin-system/sa_asa_overlay_stats_sec.md)
 

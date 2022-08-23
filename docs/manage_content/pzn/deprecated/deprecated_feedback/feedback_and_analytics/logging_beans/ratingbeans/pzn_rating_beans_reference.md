@@ -36,7 +36,4 @@ The log methods generate a RatingEvent object with the request and rating data. 
 
 Rating beans should be instantiated as session beans; however, they do not maintain rating information for the current session.
 
-**Parent topic:**[Rating beans](../pzn/pzn_rating_beans.md)
-
-**Parent topic:**[Rating beans](../pzn/pzn_rating_beans.md)
 

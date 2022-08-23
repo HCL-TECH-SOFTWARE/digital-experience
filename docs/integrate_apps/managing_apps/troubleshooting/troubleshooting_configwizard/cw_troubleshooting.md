@@ -62,7 +62,6 @@ If you encounter a failure during the migration of the node profiles for a clust
 -   **[Troubleshooting: Upgrade node profiles for a cluster environment](../trouble/cw_migrate_cluster3.md)**  
 If you encounter a failure while upgrading the node profiles for a cluster environment, learn how to correct the issue and recover from the failure.
 
-**Parent topic:**[Troubleshooting](../trouble/troubleshooting.md)
 
 **Related information**  
 

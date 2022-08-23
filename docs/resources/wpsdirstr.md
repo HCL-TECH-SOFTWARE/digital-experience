@@ -262,9 +262,6 @@ The following information shows the default WebSphere Application Server install
     C:\\Program Files\\HCL\\WebSphere\\PortalExpress\\AppServer
 
 
-**Parent topic:**[Developing themes and skins](../dev-theme/themeopt_themes.md)
-
-**Parent topic:**[Reference](../reference/reference.md)
 
 **Related information**  
 

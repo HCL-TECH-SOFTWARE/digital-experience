@@ -36,7 +36,6 @@ If you migrated from Portal 7.0 to HCL Digital Experience 8.5, then you must run
 2.  Verify that the web content library Social Lists 1.1 was created. Click the **Administration menu** icon. Then, click **Portal Content** \> **Web Content Libraries**.
 
 
-**Parent topic:**[Add-ons, features, and third-party integration tasks](../migrate/mig_post_ptl_int_addon.md)
 
 **Related information**  
 

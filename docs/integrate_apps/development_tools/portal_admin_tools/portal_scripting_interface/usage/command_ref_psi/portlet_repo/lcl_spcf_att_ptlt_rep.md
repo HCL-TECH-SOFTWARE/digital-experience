@@ -9,5 +9,4 @@ Portlets and portlet applications have the following locale-specific attributes.
 
 Only the nlsget command is available for locale-specific attributes.
 
-**Parent topic:**[Portlet repository](../admin-system/ptlt_rep.md)
 

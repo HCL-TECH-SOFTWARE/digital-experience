@@ -90,5 +90,4 @@ For example, to format the links in a menu by using a stylesheet class called "`
 <a href="<placeholder tag="href" />" class="wcm"><placeholder tag="name" /></a>
 ```
 
-**Parent topic:**[How to store files and images](../wcm/wcm_dev_elements_types_files.md)
 

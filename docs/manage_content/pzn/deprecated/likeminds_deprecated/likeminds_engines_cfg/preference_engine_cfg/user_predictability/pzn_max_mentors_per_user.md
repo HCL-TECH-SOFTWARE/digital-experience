@@ -10,7 +10,4 @@ Use the following setting to specify the number of mentors to be assigned to eac
 
 **Note:** Use a value between 50-100. See [Maximum ratings a user needs before becoming a mentor](pzn_max_ratings_become_mentor.md) for guidelines on setting `<mentor_set_name>.max_mentors`
 
-**Parent topic:**[User predictability \| LikeMinds engine](../pzn/pzn_user_predictablity_main.md)
-
-**Parent topic:**[User predictability \| LikeMinds engine](../pzn/pzn_user_predictablity_main.md)
 

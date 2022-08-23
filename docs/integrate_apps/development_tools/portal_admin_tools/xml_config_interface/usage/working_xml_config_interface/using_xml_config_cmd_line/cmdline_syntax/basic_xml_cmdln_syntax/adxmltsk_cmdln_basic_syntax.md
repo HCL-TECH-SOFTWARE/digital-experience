@@ -51,5 +51,4 @@ Example for accessing a virtual portal by its host name:
 -   **[Syntax elements for the XML configuration interface command line](../admin-system/adxmltsk_cmdln_sntx_elements.md)**  
 This topic lists the syntax elements for using the XML configuration interface command line client over an HTTP connection.
 
-**Parent topic:**[Command line syntax of the XML configuration interface](../admin-system/adxmltsk_cmdln_syntax.md)
 

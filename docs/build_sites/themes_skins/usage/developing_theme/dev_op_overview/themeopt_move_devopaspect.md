@@ -95,7 +95,6 @@ Using the Theme Development tools, you can quickly copy, create, and modify them
 -   **[Manually packaging themes for deployment](../dev-theme/themeopt_move_repackstatic.md)**  
 You must repackage the static content as a WAR file or as an EAR file containing the WAR file when it is not possible to exchange the static content with the Operations Team as a separate compressed file.
 
-**Parent topic:**[Developing themes for a production portal](../dev-theme/themeopt_stagetoprod.md)
 
 **Related information**  
 

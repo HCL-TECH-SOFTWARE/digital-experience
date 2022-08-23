@@ -14,7 +14,6 @@ You configure the custom properties in the Resource Environment Provider for the
 
 **Note:** The icons are part of the portal installation. For theHCL Connections features, the custom properties for the icons exist without a predefined path. Unless no icon URL is defined, the icons are loaded directly from HCL Portal.
 
-**Parent topic:**[Administering tag federation](../admin-system/tag_fed_admin.md)
 
 **Related information**  
 

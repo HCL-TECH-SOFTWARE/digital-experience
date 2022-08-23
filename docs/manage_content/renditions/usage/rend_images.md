@@ -21,5 +21,4 @@ If you do not specify the rendition attribute, the main image renders.
 
 If you do not specify the rendition attribute, `rendition="auto"` is the default.
 
-**Parent topic:**[Renditions](../renditions/rend_ovr.md)
 

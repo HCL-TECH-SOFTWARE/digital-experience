@@ -15,5 +15,4 @@ To create a file resource element, you can either add a file resource element to
 
 If you configure an authoring template to be a resource template, the content items that are created by using that authoring template are known as resource content items. Like a file resource component, files that are stored within a resource content item can be directly rendered in a web page. The difference between using a resource content item instead of a file resource component is that a resource content item can be listed in navigational components such as menus and navigators.
 
-**Parent topic:**[How to store files and images](../wcm/wcm_dev_elements_types_files.md)
 

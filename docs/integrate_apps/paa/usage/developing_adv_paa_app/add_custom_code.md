@@ -64,5 +64,4 @@ For example: action-create-ear-applySIFeaturePack-components/componentN.
 
 **Tip:** Use the full path of the component as the component name.
 
-**Parent topic:**[Developing advanced PAA file applications](../config/dev_sol_app_adv.md)
 

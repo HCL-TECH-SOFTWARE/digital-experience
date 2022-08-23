@@ -179,7 +179,4 @@ There are other portlets not accessible from Administration that is also useful 
     -   The list of shareable pages that are displayed by the **Properties** portlet is limited to those pages that the user can go to. As a result, a user might not be able to create explicitly derived pages from some shareable pages.
     -   A user must have at least Editor privileges on a page to be able to edit the properties on that page. Privileged users are not able to edit a page's properties or edit personalization rules because Personalization rules are part of a page's properties.
 
-**Parent topic:**[Portal administration portlets](../admin-system/adpltadm.md)
-
-**Parent topic:**[Portal administration](../practitioner_studio/administration.md)
 

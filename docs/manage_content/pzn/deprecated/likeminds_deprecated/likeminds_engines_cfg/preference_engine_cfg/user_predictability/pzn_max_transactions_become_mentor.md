@@ -26,7 +26,4 @@ Use the following guidelines for setting `<mentor_set_name>.max_mentor_transacti
 |5000–10,000|<= 1500|
 |10,000+|<= 1500|
 
-**Parent topic:**[User predictability \| LikeMinds engine](../pzn/pzn_user_predictablity_main.md)
-
-**Parent topic:**[User predictability \| LikeMinds engine](../pzn/pzn_user_predictablity_main.md)
 

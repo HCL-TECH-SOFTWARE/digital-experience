@@ -88,7 +88,6 @@ If you implement a complex layout template that requires its own JavaScript hand
 
 You can add portlets and iWidgets directly to the layout template definition by using the portlet microformat for static pages, or the iWidget definition specification. You can add portlets or iWidgets inside or outside of containers. The template is applied to the page as a copy. Therefore, every page that uses the template has a new instance of the portlet or iWidget.
 
-**Parent topic:**[Layouts](../dev-theme/themeopt_cust_layout.md)
 
 **Related information**  
 

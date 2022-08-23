@@ -113,7 +113,6 @@ ${WasUserHome}/PortalServer/jcr/config/registerCollationUDFTemplate.sql
 20. To apply your settings, stop and restart HCL Portal.
 
 
-**Parent topic:**[Manual Steps: Database Transfer option in the Configuration Wizard](../eua-workflows/kc-db-parent.md)
 
 **Related information**  
 

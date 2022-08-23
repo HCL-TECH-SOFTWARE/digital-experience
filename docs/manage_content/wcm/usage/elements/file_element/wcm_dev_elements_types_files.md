@@ -13,5 +13,4 @@ You use a JSP element to store a path to a JSP. When rendered within a presentat
 -   **[How to use stylesheets in items](../wcm/wcm_dev_style-sheets.md)**  
 Stylesheets can be used to format the design of HCL Web Content Manager pages in the same way as normal web pages.
 
-**Parent topic:**[Elements](../wcm/wcm_build.md)
 

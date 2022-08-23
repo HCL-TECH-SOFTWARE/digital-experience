@@ -51,7 +51,6 @@ Sample file CreatePageFromTemplate.xml
 </request>
 ```
 
-**Parent topic:**[Exporting and importing static pages](../admin-system/spa_xml.md)
 
 **Related information**  
 

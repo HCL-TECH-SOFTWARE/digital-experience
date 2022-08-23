@@ -262,7 +262,6 @@ The following MLS APIs are available \(as of HCL Digital Experience 9.5 Containe
     ```
 
 
-**Parent topic:**[The HCL Web Content Manager API](../wcm/wcm_dev_api.md)
 
 **Related information**  
 

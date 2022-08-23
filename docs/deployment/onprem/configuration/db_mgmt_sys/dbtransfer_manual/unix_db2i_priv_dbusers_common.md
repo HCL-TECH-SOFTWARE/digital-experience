@@ -67,7 +67,6 @@ Refer to the following locations of the SQL script templates to learn more about
 |Feedback|`[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/pzn/prereq.pzn/config/templates/setupdb/db2_iseries/feedback/createRuntimeRoleForDifferentSchema.sql`|
 |Likeminds|`[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/pzn/prereq.pzn/config/templates/setupdb/db2_iseries/likeminds/createRuntimeRoleForDifferentSchema.sql`|
 
-**Parent topic:**[Manual Steps: Database Transfer option in the Configuration Wizard](../eua-workflows/kc-db-parent.md)
 
 **Related information**  
 

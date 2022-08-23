@@ -21,5 +21,4 @@ The Unified Task List portlet shows tasks in a table. The task information prese
 -   **[Configuring dynamic user interface](../integrate/utl_configuring_dynamic_user_interface.md)**  
 Create a dynamic page and register it using the ConfigEngine.
 
-**Parent topic:**[Configuring the Unified Task List portlet](../integrate/utl_configuring_utl_portlet.md)
 

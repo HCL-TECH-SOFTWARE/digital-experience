@@ -23,5 +23,4 @@ where the tagging and rating tag is made up by a combination of the `name` and `
 -   **[Working with analytics tags](../admin-system/sa_asa_anal_tags_work.md)**  
 To work with analytics tags, the portal provides a dialog. You can create new analytics tag mappings and view and delete existing ones.
 
-**Parent topic:**[Analytics tags and site promotions](../admin-system/sa_asa_anal_tags_site_prom.md)
 

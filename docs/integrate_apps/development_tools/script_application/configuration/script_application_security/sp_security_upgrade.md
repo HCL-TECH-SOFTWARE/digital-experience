@@ -51,7 +51,6 @@ If a user cannot work with the Script Application as expected, make sure that th
     Make sure to also grant the user or group Editor and Reviewer access to the Web Content Manager library and site area where that Script Application instance is stored. For example, for a Script Application that is stored in the default Script Application Library or Script Application site area, the developer needs Edit and Review access to that library and site area. For a Script Application stored with the page in the Portal Site library, the developer needs Edit and Review access to that page in the Portal Site library.
 
 
-**Parent topic:**[Script Application security overview](../script-portlet/security.md)
 
 **Related information**  
 

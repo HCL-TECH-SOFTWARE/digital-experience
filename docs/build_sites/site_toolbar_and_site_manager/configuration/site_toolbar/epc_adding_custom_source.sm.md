@@ -135,5 +135,4 @@ If you do not set the height parameter, but only the minHeight and maxHeight par
 
 If the values of the configuration parameters `ibm.portal.toolbar.minHeight` and `ibm.portal.toolbar.maxHeight` are equivalent, the toolbar framework enforces this height, regardless of the size of the tab content that is being loaded.
 
-**Parent topic:**[Preparing the site toolbar](../dev-theme/themeopt_themeshelf.md)
 

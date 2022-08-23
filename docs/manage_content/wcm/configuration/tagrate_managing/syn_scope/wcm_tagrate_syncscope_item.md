@@ -23,7 +23,6 @@ To automatically run scope synchronization whenever an item changes in the web c
 7.  Restart the portal.
 
 
-**Parent topic:**[Synchronizing scopes for web content](../wcm/wcm_tagrate_syncscope.md)
 
 **Related information**  
 

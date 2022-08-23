@@ -23,7 +23,6 @@ Before you started migration, you disabled automatic synchronization to prevent 
 10. Select all nodes that previously had automatic synchronization disabled, and click **Restart**.
 
 
-**Parent topic:**[Administrative tasks](../migrate/mig_post_admintasks.md)
 
 **Related information**  
 

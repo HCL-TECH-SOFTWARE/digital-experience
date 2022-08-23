@@ -78,7 +78,6 @@ You must do these steps for each virtual portal in your system.
 -   **[Indexing web content in a multilingual environment](../wcm/wcm_dev_search_portal_multi.md)**  
 Learn about the best practices for indexing web content if you are working with a multilingual Web Content Manager site.
 
-**Parent topic:**[Search](../wcm/wcm_dev_search.md)
 
 **Previous topic:**[Planning and preparing for Portal Search](../admin-system/srcbfrwrkgwtprtlsrch.md)
 

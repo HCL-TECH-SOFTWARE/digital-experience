@@ -2,7 +2,6 @@
 
 Displays a set of featured upcoming events in a list. By default, any items that are created by using the Event content template are displayed in this portlet. This is similar to the Events Upcoming portlet, except no heading is displayed.
 
-**Parent topic:**[Lists](../ctc/ctc-portlet-types-lists.md)
 
 # Usage
 

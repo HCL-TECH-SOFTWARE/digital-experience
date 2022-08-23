@@ -2,7 +2,6 @@
 
 Displays a set of featured recent events in a list. By default, any items created using the Event content template will be displayed in this portlet. This is similar to the Events Recent portlet, but no heading is displayed.
 
-**Parent topic:**[Lists](../ctc/ctc-portlet-types-lists.md)
 
 # Usage
 

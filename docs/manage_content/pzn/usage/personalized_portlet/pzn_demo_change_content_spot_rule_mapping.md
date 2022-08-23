@@ -25,13 +25,11 @@ Congratulations! You have finished building a Personalized portlet.
 
 The next topic, *Personalized list portlet*, shows how to use this portlet instead of coding the Rational Application Developer portlet.
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Create additional advanced rules](../pzn/pzn_demo_create_additional_advanced_rules.md)
 
 **Next topic:**[Personalized List portlet](../pzn/pzn_demo_list_portlet.md)
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Create additional advanced rules](../pzn/pzn_demo_create_additional_advanced_rules.md)
 

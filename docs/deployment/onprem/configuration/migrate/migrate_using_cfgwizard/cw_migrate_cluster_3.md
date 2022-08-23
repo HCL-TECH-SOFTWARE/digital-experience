@@ -8,7 +8,6 @@ Select **Migrate to a New Version**, and choose the **Migrate a Cluster Step 3: 
 
 **Note:** This option is not available for IBM® z/OS®.
 
-**Parent topic:**[Migrate data using the configuration wizard](../migrate/mig_85_wizard.md)
 
 **Related information**  
 

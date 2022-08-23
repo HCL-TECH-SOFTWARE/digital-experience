@@ -13,5 +13,4 @@ You can run the Solution Installer from a server that does not have an internet 
 4.  Save your changes.
 
 
-**Parent topic:**[Solution Installer run time configuration](../config/si_run_cfg.md)
 

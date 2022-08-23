@@ -41,5 +41,4 @@ Access and deploy the Sample Script Application as a standards-compliant Script 
 -   **[Script Application limitations and troubleshooting](../script-portlet/ts_preview.md)**  
 Learn about limitations to the Script Application. The following solutions can help you solve troubleshooting issues.
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 

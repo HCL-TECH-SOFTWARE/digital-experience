@@ -45,7 +45,6 @@ If you change the database administrator password, complete the steps in [Changi
 9.  Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
 
 
-**Parent topic:**[Updating your user registry](../security/update_ureg.md)
 
 **Related information**  
 

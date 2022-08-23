@@ -4,7 +4,6 @@ A user name element displays the name of the current user in a presentation temp
 
 To create a user name component, open the applications menu and go to **Content** \> **Web Content Management** and then click **New** \> **Component** \> **User Name**.
 
-**Parent topic:**[Personalized content](../wcm/wcm_dev_elements_types_personalize.md)
 
 **Related information**  
 

@@ -28,5 +28,4 @@ If the user specifies that they want to be remembered and does not clear their b
 
 The automatic redirect to the local Tivoli Federated Identity Manager server and back to HCL Connections in SmartCloud for Social Business occurs because the portal server and the local Tivoli Federated Identity Manager server are in a single sign-on domain. Therefore, the Tivoli Federated Identity Manager server knows the user and can directly initiate a redirect back to the HCL Connections in SmartCloud for Social Business page without any user interaction.
 
-**Parent topic:**[Establishing single sign-on \(SSO\) between the portal installation and HCL Connections in SmartCloud for Social Business](../dev-portlet/est_sso_portal_sc4sb.md)
 

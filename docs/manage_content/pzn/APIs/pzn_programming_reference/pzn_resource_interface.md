@@ -18,7 +18,4 @@ Given an implementation of fixed properties, dynamic properties are optional. Th
 
 Rules support nested method calls. For example, a resource interface implementation could define a `user` object with a fixed property `employer` for which there is a fixed property `name`.
 
-**Parent topic:**[Using the Personalization APIs](../pzn/pzn_using_apis.md)
-
-**Parent topic:**[Using the Personalization APIs](../pzn/pzn_using_apis.md)
 

@@ -25,5 +25,4 @@ In this example, the portlet filter SampleFilter is defined as follows:
 
 The information in lines 6 and 7 is used to call the filter only for the specified methods to improve the performance. The possible methods for the filter are the following: login, beginPage, service, endPage, doTitle, ActionEvent, MessageEvent, and WindowEvent. If you want the filter to be called for every method, you do not need to define any method in the properties file.
 
-**Parent topic:**[Configuring portlet filtering](../admin-system/adpltflt.md)
 

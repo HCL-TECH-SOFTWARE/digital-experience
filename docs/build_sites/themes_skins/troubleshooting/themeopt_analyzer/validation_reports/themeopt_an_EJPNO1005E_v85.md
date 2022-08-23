@@ -10,7 +10,4 @@ A module dependency chain has been detected in a module you are using that conta
 
 Update your module prerequisites to resolve the circular dependency. The erroneous module hierarchy is named in this section.
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
-
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 

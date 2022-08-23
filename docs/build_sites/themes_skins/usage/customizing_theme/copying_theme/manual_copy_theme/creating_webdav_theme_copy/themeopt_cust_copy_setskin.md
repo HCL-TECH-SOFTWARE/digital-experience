@@ -19,5 +19,4 @@ Your theme is now available for use on your portal. To verify, create a page, ed
 
 **Note:** Your custom theme uses ready-use modules, which are shared across themes and intentionally remain uncopied in the Theme Modules web application. For your theme to operate the Theme Modules web application must remain started in addition to the web application for your theme.
 
-**Parent topic:**[Creating a WebDAV-based theme copy](../dev-theme/themeopt_themedev_manual_webdav.md)
 

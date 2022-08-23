@@ -79,5 +79,4 @@ To do this, you need to create your custom search center page, place a copy of t
 
 When your portal users do a search by using the search box in the theme, they are now directed to the Search Center on your public portal page.
 
-**Parent topic:**[Enabling anonymous users to search public pages of your portal](../admin-system/srtusgsrchbrwanonpgs.md)
 

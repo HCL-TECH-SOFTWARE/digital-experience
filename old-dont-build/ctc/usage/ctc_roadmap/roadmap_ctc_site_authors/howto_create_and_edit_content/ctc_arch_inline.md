@@ -21,5 +21,4 @@ Examples follow for content creation and editing on index pages, details pages, 
 -   **[Content Template Catalog Applications and Page Components \| CTC for HCL Digital Experience](../ctc/ctc_arch_portpal.md)**  
 When you install Content Template Catalog, the toolbar is enhanced with a new tab under "Applications" called "CTC Portlets", and new page components under the "Content" tab called "Teasers", "Lists", "Slideshows", "Carousels" and "Navigation". These portlets are pre-configured for use on Content Template Catalog pages. Click a portlet title to see a description of what that portlet does.
 
-**Parent topic:**[A roadmap for Content Template Catalog site authors](../ctc/ctc_gs_authors.md)
 

@@ -28,5 +28,4 @@ cmController.commit();
 
 ```
 
-**Parent topic:**[Modifying portal resources and topologies](../dev/ctrlrapit_mdfy_restop.md)
 

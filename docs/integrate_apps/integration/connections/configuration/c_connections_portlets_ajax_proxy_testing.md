@@ -39,5 +39,4 @@ In a non-SSO environment:
 -   If you receive a 403 error in response, then the proxy is not properly configured.
 -   If you receive a 500 or any other response code, the proxy was properly configured but something else is not working.
 
-**Parent topic:**[Configure HCL Portal to work with HCL Connections](../connect/c_connections_overview.md)
 

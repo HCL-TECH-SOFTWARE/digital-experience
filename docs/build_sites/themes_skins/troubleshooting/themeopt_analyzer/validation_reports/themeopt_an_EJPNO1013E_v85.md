@@ -14,9 +14,6 @@ The parameters are set in the web.xml file of the web module that contains the s
 <div class="themeOptAnalyzerFixedText"><web-app><br/>...<br/><context-param><br/>&nbsp;&nbsp;<param-name><br/>&nbsp;&nbsp;&nbsp;&nbsp;com.ibm.portal.whitelist<br/>&nbsp;&nbsp;</param-name><br/>&nbsp;&nbsp;<param-value>.*</param-value><br/></context-param><br/>....<br/></web-app></div>
 ```
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
-
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 
 **Related information**  
 

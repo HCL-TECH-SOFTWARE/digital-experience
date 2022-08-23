@@ -99,7 +99,6 @@ Map the attributes between HCL Digital Experience and your LDAP user registries.
     4.  Stop and restart all necessary servers to propagate your changes.
 
 
-**Parent topic:**[Adding more attributes to VMM](../install/manage_atts.md)
 
 **Previous topic:**[Adding attributes](../install/add_attributes.md)
 

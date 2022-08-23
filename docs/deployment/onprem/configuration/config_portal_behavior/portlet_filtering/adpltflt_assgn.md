@@ -29,5 +29,4 @@ You cannot use multiple filters that can transcode from one markup to another in
 
 You can also declare the filter chain or parts of the filter chain on a global level for all portlets written against the HCL Portlet API. To achieve this, you can edit or add a property `FilterChain` containing a comma-separated list of filters in the `PortletFilterService.properties` file, just like in the example given previously \(`FilterChain = MyTranscodingFilter, MyAdStripper`\). This global filter chain is merged with the one defined on a per-portlet basis, while the global ones are applied before the local ones.
 
-**Parent topic:**[Configuring portlet filtering](../admin-system/adpltflt.md)
 

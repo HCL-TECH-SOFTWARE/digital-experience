@@ -8,5 +8,4 @@ You can assign custom workflow actions to run when a project enters a specific s
 -   automatically reject a project if it is in review for a certain period.
 -   automatically delete a project when it is successfully published.
 
-**Parent topic:**[Projects](../wcm/wcm_proj_overview.md)
 

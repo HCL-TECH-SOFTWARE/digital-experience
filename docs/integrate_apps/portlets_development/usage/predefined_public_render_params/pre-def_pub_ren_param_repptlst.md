@@ -74,5 +74,4 @@ This parameter can be used to create portlet URLs to open / close the toolbar, r
 
 |
 
-**Parent topic:**[Predefined public render parameters](../dev-portlet/predef_pub_ren_param.md)
 

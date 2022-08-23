@@ -114,5 +114,4 @@ There are two attributes for the `<containedPackage>` element. The ID must equal
 
 The final element is the `<serverVersionDependency>` element. This element informs the Solution Installer of the HCL Portal versions on which the content can be installed. Not all the attributes that are shown are required. Go to the *Checking server dependency* section for more details.
 
-**Parent topic:**[The sdd.xml file](../config/si_paa_spec_sdd.md)
 

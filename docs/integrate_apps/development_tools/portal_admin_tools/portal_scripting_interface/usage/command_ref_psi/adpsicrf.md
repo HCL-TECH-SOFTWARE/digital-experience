@@ -118,7 +118,6 @@ You can provide locale-specific attributes for a set of locales in a Java proper
 -   **[Index paths \| Portal scripting interface](../admin-system/index_paths.md)**  
 Index paths are used to refer to components in the component hierarchy. They are based on the index or position of a component in the surrounding container. An index path is a multidimensional index of a component, where the number of dimensions is equal to the depth of the component in the tree. Index paths are absolute or relative, depending on whether there is a leading slash. Absolute paths start with a leading slash and are resolved from the root component. Relative paths start with a number and are resolved from the selected component. Trailing slashes are irrelevant.
 
-**Parent topic:**[Portal Scripting Interface](../admin-system/ad_psi.md)
 
 **Related information**  
 

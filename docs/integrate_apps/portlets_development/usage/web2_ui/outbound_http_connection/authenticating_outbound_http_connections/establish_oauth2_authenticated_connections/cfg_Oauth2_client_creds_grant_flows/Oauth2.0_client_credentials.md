@@ -144,5 +144,4 @@ For an example of using the Client Credentials flow for accessing twitter resour
 -   **[Setting up OAuth 2.0 for Twitter by using the Client Credentials Grant flow](../dev-portlet/Oauth2.0_twitter_client_credentials.md)**  
 Set up a client credential grant flow to configure OAuth 2.0 access to Twitter resources.
 
-**Parent topic:**[Establish OAuth 2.0 authenticated connections](../dev-portlet/Oauth2.0_auth_connections.md)
 

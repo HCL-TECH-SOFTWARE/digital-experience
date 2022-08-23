@@ -19,7 +19,6 @@ To make search for tag names by users easier, search suggestions provide suggest
 -   **[Querying for the OpenSearch description document](../admin-system/tag_rate_api_rest_oth_qu_opsrchdoc.md)**  
 You can query for the OpenSearch description document.
 
-**Parent topic:**[The REST API](../admin-system/tag_rate_api_rest.md)
 
 **Related information**  
 

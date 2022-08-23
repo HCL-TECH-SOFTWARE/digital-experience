@@ -461,5 +461,4 @@ The following information describes trace loggers for particular situations and 
     ```
 
 
-**Parent topic:**[Logging and tracing](../trouble/pd_intr_logs.md)
 

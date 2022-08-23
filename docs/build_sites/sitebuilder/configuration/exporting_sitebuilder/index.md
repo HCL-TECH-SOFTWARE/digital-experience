@@ -20,7 +20,4 @@ With direct access to a virtual portal setup on HCL Digital Experience, exportin
 -   **[Exporting a Site Builder template to a file](../sitebuilder/sitebuilder_temp_dist_man.md)**  
  HCL Digital Experience users can export a Site Builder site or section template to a file and import it to the target server later.
 
-**Parent topic:**[Site Builder](../sitebuilder/sitebuilder_intro.md)
-
-**Parent topic:**[Site Builder](../sitebuilder/sitebuilder_intro.md)
 

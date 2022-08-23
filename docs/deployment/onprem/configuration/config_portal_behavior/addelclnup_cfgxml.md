@@ -26,7 +26,6 @@ You can use the HCL Digital Experience XML configuration interface to configure 
 2.  If you delete a page with an object ID and then re-create it with XML configuration interface, you might receive an error message. The message indicates that the operation was canceled because it would cause a duplicate key value.
 3.  When you run the cleanup task, the XML configuration interface schedules only the task to be run in WebSphere Application Server and returns. It does not mean that WebSphere Application Server runs the task immediately. To determine when a task started and ended, check the SystemOut.log log file for the messages EJPDE0005I and EJPDE0006I. These messages confirm that the cleanup task successfully completed. After you confirm, you can run the XML script for re-creating a page with the same object ID as it had before the deletion.
 
-**Parent topic:**[Delayed cleanup of deleted portal pages](../admin-system/addelclnup.md)
 
 **Related information**  
 

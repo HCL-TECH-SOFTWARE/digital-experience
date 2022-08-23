@@ -35,5 +35,4 @@ Developers used this process to create the original Content Template Catalog tem
 
 You now have a template that you can instantiate into your own sites.
 
-**Parent topic:**[Customizing sites built with Content Template](../ctc/ctc_design_custom.md)
 

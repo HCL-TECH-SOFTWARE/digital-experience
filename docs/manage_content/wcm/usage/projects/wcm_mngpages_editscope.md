@@ -16,7 +16,6 @@ To make the page changes available on the published site, you must submit the pa
 
 However, you can change the assigned workflow in the user interface to include more review and approval stages on the project level in Web Content Manager. After the draft changes in the project are approved and published, the updated pages are visible to all users. For details on using a custom workflow, see *Adding workflow to managed pages.*
 
-**Parent topic:**[Projects](../wcm/wcm_proj_overview.md)
 
 **Related information**  
 

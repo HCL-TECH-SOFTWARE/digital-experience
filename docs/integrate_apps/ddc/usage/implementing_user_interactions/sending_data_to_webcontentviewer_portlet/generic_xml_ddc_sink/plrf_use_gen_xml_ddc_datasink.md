@@ -13,7 +13,6 @@ The generic XML Digital Data Connector \(DDC\) for HCL Portal data sink supports
 -   **[The generic XML data sink result object](../social/plrf_use_gen_xml_ddc_datasink_rsltobjct.md)**  
 The Digital Data Connector \(DDC\) for HCL Portal data sink returns a JSON string. The JSON string contains the result information for the outbound interaction call that was performed.
 
-**Parent topic:**[Sending data to the Web Content Viewer portlet](../social/plrf_sendata2wcv.md)
 
 **Related information**  
 

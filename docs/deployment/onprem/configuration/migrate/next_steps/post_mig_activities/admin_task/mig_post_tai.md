@@ -22,7 +22,6 @@ If TAI was disabled before you began migration, and you had to enable it in orde
 10. Restart the server for a stand-alone environment, and restart all servers for a cluster environment.
 
 
-**Parent topic:**[Administrative tasks](../migrate/mig_post_admintasks.md)
 
 **Related information**  
 

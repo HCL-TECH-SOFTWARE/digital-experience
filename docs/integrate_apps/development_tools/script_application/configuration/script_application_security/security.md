@@ -40,7 +40,6 @@ There are constraints on the size and content of uploaded archives to add a laye
 -   **[Setting custom configuration properties for the Script Application](../script-portlet/import_export_config.md)**  
 When the Script Application imports or exports an application, it uses specific properties as the parameters for the import or export. You can override these properties. For example, you can change the file types and sizes that can be uploaded and the number of files that a compressed file for upload can contain.
 
-**Parent topic:**[The Script Application](../script-portlet/script_portlet.md)
 
 **Related information**  
 

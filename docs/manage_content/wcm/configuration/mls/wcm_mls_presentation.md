@@ -112,5 +112,4 @@ If you have common design components that you want to reference localized text i
 2.  Create a content source for each site.
 3.  Create a search component for each locale library selecting the relevant search collection, or use the Search and Browse portlet.
 
-**Parent topic:**[Multilingual deployment, installation, and configuration Multilingual Solution](../wcm/wcm_mls_install_ovr.md)
 

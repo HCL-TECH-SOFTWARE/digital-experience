@@ -176,5 +176,4 @@ Use the following properties to configure the connection between HCL Portal and 
     ```
 
 
-**Parent topic:**[Portal Access Control Services](../admin-system/srvcfgref_secy_pac.md)
 

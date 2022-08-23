@@ -11,7 +11,6 @@ You can set up single sign-on with MobileFirst so users can share a session betw
 -   **[Meta-Modules for IBM MobileFirst integration](../integrate/wl_int_metamodules.md)**  
 MobileFirst provides a set of ready-to-use modules.
 
-**Parent topic:**[Integrating with IBM MobileFirst](../integrate/wl_integrt.md)
 
 **Related information**  
 

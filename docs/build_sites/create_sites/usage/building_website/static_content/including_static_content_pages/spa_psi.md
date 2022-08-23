@@ -102,7 +102,6 @@ Example:
 $Content delete 6_CGAH47L00G2N802TJFV58Q3000
 ```
 
-**Parent topic:**[Including static content pages in your portal](../admin-system/spa_include_page.md)
 
 **Related information**  
 

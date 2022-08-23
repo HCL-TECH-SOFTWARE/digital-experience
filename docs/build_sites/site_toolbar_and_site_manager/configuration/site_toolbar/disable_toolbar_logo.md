@@ -39,7 +39,6 @@ The capabilities of the site toolbar are tightly connected with its theme, the t
 
 If you defined the property `global.wp_toolbar_logo.enabled`, it acts as a fallback setting for virtual portals that do not have the toolbar logo property set. For more information about prefixes, placeholders, and the order in which properties are evaluated, go to *Virtual Portal Configuration Service*.
 
-**Parent topic:**[Preparing the site toolbar](../dev-theme/themeopt_themeshelf.md)
 
 **Related information**  
 

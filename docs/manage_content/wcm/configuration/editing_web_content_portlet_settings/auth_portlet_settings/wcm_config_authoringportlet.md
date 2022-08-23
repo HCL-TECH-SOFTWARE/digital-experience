@@ -15,5 +15,4 @@ You use the User Interface Options section to define the user interface options 
 -   **[Editor options](../panel_help/wcm_config_authoringportlet_richtext.md)**  
 You can configure HCL Web Content Manager to use different editors for rich text and HTML fields.
 
-**Parent topic:**[Customizing the Web Content Authoring portlet](../wcm/wcm_cms_authoring_portlet_custom.md)
 

@@ -25,7 +25,6 @@ Architecture:
 
 -   Your target environment must be on the same system architecture than your source environment for migration. Migrating to a different architecture is not supported.
 
-**Parent topic:**[Planning for migration](../plan/mig_plan.md)
 
 **Related information**  
 

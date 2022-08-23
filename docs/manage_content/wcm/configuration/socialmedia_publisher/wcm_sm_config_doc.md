@@ -9,5 +9,4 @@ Although the Social Media Publisher uses social network configuration documents 
 -   **[Adding the social information table to an authoring template \| HCL Web Content Manager](../wcm/wcm_sm_add_sit.md)**  
 If the Automatically add social information element setting on a social network configuration document is disabled, you must manually add the social information element to any authoring template you want to use the social media publisher on.
 
-**Parent topic:**[Social Media Publisher](../wcm/wcm_sm.md)
 

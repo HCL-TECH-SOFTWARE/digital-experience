@@ -6,7 +6,6 @@ You can configure handlers for the WSRP Consumer in the web.xml file of the wps.
 
 Starting with CF05, you can register handlers that implement the SOAPHandler interface as an extension of a WSRP extension point. In this case, you do not need to modify the web.xml file of the portal application. For details, read the information in a later section.
 
-**Parent topic:**[Using handlers for WSRP web services](../admin-system/wsrpt_websrvc_handlers.md)
 
 # Using a handler on a WSRP Consumer portal
 

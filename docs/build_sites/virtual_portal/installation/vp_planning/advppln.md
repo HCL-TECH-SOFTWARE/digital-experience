@@ -17,7 +17,6 @@ The content of a newly created virtual portal can vary, depending on the method 
 -   **[Shaping the user experience](../admin-system/advppln_shape_ux.md)**  
 You can improve the user experience that users have with your virtual portals by using human readable URLs, or by using custom themes and skins for your virtual portals.
 
-**Parent topic:**[Virtual portals](../admin-system/ad_vp.md)
 
 **Related information**  
 

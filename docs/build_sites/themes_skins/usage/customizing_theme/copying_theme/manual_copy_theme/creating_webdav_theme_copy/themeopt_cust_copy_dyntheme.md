@@ -78,7 +78,6 @@ You need to make a unique copy of the dynamic resources for your theme. Make sur
 |
 
 
-**Parent topic:**[Creating a WebDAV-based theme copy](../dev-theme/themeopt_themedev_manual_webdav.md)
 
 **Related information**  
 

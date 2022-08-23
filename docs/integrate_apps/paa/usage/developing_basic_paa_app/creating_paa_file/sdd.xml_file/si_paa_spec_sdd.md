@@ -21,5 +21,4 @@ When you create a Portal Application Archive \(PAA\) file, it might be necessary
 -   **[Component level sdd.xml file overview](../config/si_paa_spec_comp.md)**  
 For most installation scenarios, generation of the component level sdd.xml file is automated. However, there are still occasions where it might be necessary to create it manually. The component level sdd.xml file contains the information on how to install the artifacts of the component. It lists the extension points that need to be processed. The extension points ensure that the resources can be installed and configured on the server. Ant tasks complete the deployment and configuration work.
 
-**Parent topic:**[Create a Portal Application Archive \(PAA\) file](../config/si_paa_spec.md)
 

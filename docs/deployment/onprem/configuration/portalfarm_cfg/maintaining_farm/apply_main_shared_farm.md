@@ -22,5 +22,4 @@ You might have a business requirement to have only a minimal downtime for your e
 
 As the Farm Workers are reused, the two lines of production setup require an additional Farm Master and more space on the shared file system.
 
-**Parent topic:**[Maintaining a portal farm](../install/maintain_portal_farm.md)
 

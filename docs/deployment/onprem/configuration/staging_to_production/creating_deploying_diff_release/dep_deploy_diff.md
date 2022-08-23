@@ -161,7 +161,6 @@ After you create the differential release PAA file, you can install and deploy y
 7.  Restart the server.
 
 
-**Parent topic:**[Creating and deploying a differential release](../deploy/dep_differential.md)
 
 **Previous topic:**[Creating the differential release](../deploy/dep_diff.md)
 

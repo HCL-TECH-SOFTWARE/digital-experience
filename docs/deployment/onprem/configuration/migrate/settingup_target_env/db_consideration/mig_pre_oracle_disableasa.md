@@ -25,7 +25,6 @@ SQL> select status from dba_autotask_client where client_name = 'auto space advi
 
 When you complete migrating your data using the Configuration Wizard, complete the post-migration step to enable the "Auto Space Advisor" Oracle background task.
 
-**Parent topic:**[Database considerations](../migrate/mig_pre_db.md)
 
 **Related information**  
 

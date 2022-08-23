@@ -121,7 +121,6 @@ You can run the Configuration Wizard silently if you have multiple deployments o
 -   **[Installing or uninstalling the Configuration Wizard](../config/install_cfg_wizd.md)**  
 The Configuration Wizard is installed by default when you install HCL Digital Experience. As an alternative to using the default installation, you can install the Configuration Wizard on another server that already has IBM WebSphere Application Server installed.
 
-**Parent topic:**[Configuring](../config/configuring_parent2.md)
 
 **Related information**  
 

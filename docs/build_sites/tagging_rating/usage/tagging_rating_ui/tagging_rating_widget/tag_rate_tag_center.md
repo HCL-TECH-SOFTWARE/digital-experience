@@ -53,5 +53,4 @@ Users can sort the results by resource type, date, resource title, and rating.
 
 When users are on the Tag Center page, they can select additional tags from the cloud to narrow down their result list. Users can clear tags, either by clicking them in the cloud or by clearing them from the Tag Result List portlet.
 
-**Parent topic:**[The tagging and rating user interface](../admin-system/tag_rate_ui.md)
 

@@ -137,7 +137,6 @@ In a stand-alone server environment, you can complete this task when the servers
     5.  Stop and restart all necessary servers to propagate your changes.
 
 
-**Parent topic:**[User registry](../config/config_user_registry.md)
 
 **Related information**  
 

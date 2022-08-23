@@ -13,5 +13,4 @@ Syndication is used to transport data from one instance of HCL Web Content Manag
 -   **[Web content feed management](../panel_help/wci_feed_manage.md)**  
 To access a feed you created on your source server, you must create a feed configuration.
 
-**Parent topic:**[Practitioner Studio](../practitioner_studio/practitionerstudio_overview.md)
 

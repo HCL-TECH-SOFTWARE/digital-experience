@@ -41,5 +41,4 @@ Instead of manually creating links between the different viewers, you can use dy
 |**Navigator**|Dynamically select a web content page|None|
 |**Content on web content page**|This page|Other Web Content Viewers and this viewer|
 
-**Parent topic:**[Getting started with delivering web content on a portal page](../wcm/wcm_delivery_getstarted.md)
 

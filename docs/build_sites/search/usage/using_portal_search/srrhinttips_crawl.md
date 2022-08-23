@@ -69,7 +69,6 @@ To define a crawler user ID, select the **Security** tab, and update the user ID
 
 If you modify a content source that belongs to a search scope, update the scope manually to make sure that it still covers that content source. If you changed the name of the content source, edit the scope and make sure that the content source is still listed there. If not, you must add it again.
 
-**Parent topic:**[Hints and tips for using Portal Search](../admin-system/srrhinttips.md)
 
 **Related information**  
 

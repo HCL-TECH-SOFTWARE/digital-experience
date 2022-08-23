@@ -15,5 +15,4 @@ Running this task sets renditions.enabled=true as a global property for all virt
 3.  Restart the HCL Portal server.
 
 
-**Parent topic:**[Renditions](../renditions/rend_ovr.md)
 

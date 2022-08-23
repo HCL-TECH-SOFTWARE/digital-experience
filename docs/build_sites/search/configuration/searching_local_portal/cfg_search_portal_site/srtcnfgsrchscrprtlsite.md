@@ -15,5 +15,4 @@ By modifying some of the settings, you can use the default search collection to 
 -   **[Customizing your search collection for secured portal pages](../admin-system/srtconfgownsrchsec.md)**  
 Set up your own customized search collection for searching a secured portal site.
 
-**Parent topic:**[Searching your local portal](../admin-system/srclocportal.md)
 

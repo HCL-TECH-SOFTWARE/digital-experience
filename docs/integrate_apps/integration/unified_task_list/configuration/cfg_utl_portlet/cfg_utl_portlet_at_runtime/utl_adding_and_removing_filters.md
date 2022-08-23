@@ -48,5 +48,4 @@ Filters provide specialized views for tasks. You can separate tasks according to
 3.  Select the filter that you want to remove then select **Remove**.
 4.  Select **Apply** to save the **Filters** configuration.
 
-**Parent topic:**[Configuring Unified Task List portlet at run time](../integrate/utl_configuring_unified_task_list_at_runtime.md)
 

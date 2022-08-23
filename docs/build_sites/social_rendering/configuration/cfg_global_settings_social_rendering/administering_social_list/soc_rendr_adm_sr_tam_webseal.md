@@ -23,7 +23,6 @@ If you do not configure your portal as described here, the social rendering port
 
 You can now use the social rendering portlets.
 
-**Parent topic:**[Administering social lists](../social/soc_rendr_adm_socl_list.md)
 
 **Related information**  
 

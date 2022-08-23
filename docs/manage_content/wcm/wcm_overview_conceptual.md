@@ -71,5 +71,4 @@ When you are developing a website by using Web Content Manager and HCL Portal, y
 
 When a web page is rendered, Web Content Manager takes all these individual item types and combines them to build a complete web page.
 
-**Parent topic:**[Web content](../overview/content.md)
 

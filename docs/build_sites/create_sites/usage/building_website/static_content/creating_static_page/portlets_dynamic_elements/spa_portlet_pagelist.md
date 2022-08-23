@@ -19,7 +19,6 @@ You can embed the SPA Resource Addressability portlet into a static page by usin
     All other parameters are taken as parameters for the POC \(Piece Of Content\) DataSource that produces the ATOM feed.
 
 
-**Parent topic:**[Portlets for adding dynamic elements to static pages](../dev/spa_portlets.md)
 
 **Related information**  
 

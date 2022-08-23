@@ -12,5 +12,4 @@ Content Template does not include an integrated use of the Tag Center. Like Sear
 
 For the tagging and rating widgets to work, the Web Resources v70 library needs to be present in the virtual portal, since this library contains the default formatting components referenced by the \[Plugin:tags\] and \[Plugin:ratings\] WCM rendering plugin tags. Therefore, the Web Resources v70 library needs to be syndicated into the virtual portal in order to use tagging and rating in the virtual portal.
 
-**Parent topic:**[Customizing sites built with Content Template](../ctc/ctc_design_custom.md)
 

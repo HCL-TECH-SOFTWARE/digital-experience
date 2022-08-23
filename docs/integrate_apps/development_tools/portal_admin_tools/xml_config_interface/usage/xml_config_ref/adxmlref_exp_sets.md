@@ -28,5 +28,4 @@ The XML configuration interface provides two additional features that allow you 
 
 The XML configuration interface offers no other "query" features, that allow you to export resources based on specific criteria. The only other possibility to export a selected subset of resources is to specify all the resources individually with their object IDs or other identifying attributes in your XML input.
 
-**Parent topic:**[XML configuration reference](../admin-system/adxmlref.md)
 

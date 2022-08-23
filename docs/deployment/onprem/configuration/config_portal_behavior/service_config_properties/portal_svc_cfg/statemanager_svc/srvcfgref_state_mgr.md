@@ -98,7 +98,6 @@ The portal State Manager Service holds the following properties:
 -   **[URL normalization for search of portal pages by external search engines](../admin-system/srvcfgref_url_normlz.md)**  
 You can configure the normalization of the URL of your portal. URL normalization is required to enable external search engines to crawl the content of your portal.
 
-**Parent topic:**[Portal service configuration](../admin-system/srvcfgref.md)
 
 **Related information**  
 

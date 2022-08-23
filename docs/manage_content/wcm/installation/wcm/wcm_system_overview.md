@@ -42,7 +42,6 @@ There are three main types of web content systems:
     -   a HCL Portal server or cluster where content is delivered by either a local or remote web content viewer portlet. Web content viewer portlets are used to deliver websites that contain dynamic web content alongside other portlets or applications.
     -   A combination of the previous three.
 
-**Parent topic:**[HCL Web Content Manager \(WCM\) environments](../wcm/wcm_deploy.md)
 
 **Related information**  
 

@@ -65,13 +65,11 @@ Use the Rational Application Developer Project Explorer to work with the pers\_o
 
 You finished the basic coding of the personalized portlet. You can now export the WAR file from Rational Application Developer and install the portlet in HCL Portal.
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Creating the Personalization user resource classes and content spot](../pzn/pzn_demo_create_pzn_user_resources.md)
 
 **Next topic:**[Export the WAR file and install the portlet](../pzn/pzn_demo_export_war_install_portlet.md)
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Creating the Personalization user resource classes and content spot](../pzn/pzn_demo_create_pzn_user_resources.md)
 

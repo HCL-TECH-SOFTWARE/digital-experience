@@ -12,5 +12,4 @@ There are two element design options available: one is rendered when the logged 
 
 You can use a taxonomy element only by creating a taxonomy component. You cannot add a taxonomy element to authoring templates, site areas, or content items.
 
-**Parent topic:**[Personalized content](../wcm/wcm_dev_elements_types_personalize.md)
 

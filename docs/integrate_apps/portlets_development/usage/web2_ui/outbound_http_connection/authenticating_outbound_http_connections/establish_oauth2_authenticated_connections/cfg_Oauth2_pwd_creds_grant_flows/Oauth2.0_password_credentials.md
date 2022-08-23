@@ -170,5 +170,4 @@ For an example of a sample configuration that uses the Password Grant flow, see 
 -   **[Setting up OAuth 2.0 for Liberty authentication providers by using the Password Grant flow](../dev-portlet/Oauth2.0_libertyauth_password_grant.md)**  
 Set up a password grant flow to resources that are protected by the Liberty OAuth 2.0 authorization server by using the password grant flow.
 
-**Parent topic:**[Establish OAuth 2.0 authenticated connections](../dev-portlet/Oauth2.0_auth_connections.md)
 

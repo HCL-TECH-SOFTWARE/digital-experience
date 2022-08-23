@@ -51,5 +51,4 @@ To configure the portlets through a system slot:
 
 **Note:** The settings on the personalize mode of the portlets overrides the settings in configuration mode. To enable the personalize mode in the portlets, the Portal administrator must do step 1 and enable basic authentication.
 
-**Parent topic:**[Configuring authentication](../connect/c_connections_portlets_SSO_config.md)
 

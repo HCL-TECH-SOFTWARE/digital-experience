@@ -98,5 +98,4 @@ The following media types are supported by the Web Content Manager REST service.
 |Workflow Stage|Workflow Action|application/vnd.ibm.wcm+xml|GET, PUT|
 |Workflow|Workflow|application/vnd.ibm.wcm+xml|GET, PUT|
 
-**Parent topic:**[Reference material for the Web Content Manager REST service](../wcm/wcm_rest_ref.md)
 

@@ -30,7 +30,6 @@ As a portal administrator, you can define if users can resume their last session
 -   **[Setting the session resume level for users](../admin-system/adcfgpss_setreslvl.md)**  
 The session resume level specifies which navigational state information is resumed \(if any\) when the respective user logs in again. As a portal administrator you can configure the session resume level.
 
-**Parent topic:**[Configuring user session persistence](../admin-system/adcfgpss.md)
 
 **Related information**  
 

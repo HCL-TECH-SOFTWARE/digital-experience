@@ -229,7 +229,6 @@ In the following examples, use the following syntax.
 
     -   runtimeActivation
 
-**Parent topic:**[Writing modules](../dev-theme/themeopt_mod_plugin_xml.md)
 
 **Related information**  
 

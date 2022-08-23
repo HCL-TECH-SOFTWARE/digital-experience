@@ -63,5 +63,4 @@ You can configure and customize certain aspects that are related to navigation b
 -   Page names for stand-alone pages
 -   Default page to display when a target page is not available
 
-**Parent topic:**[Configuring portlets to address content](../connect/c_connections_portlets_config_POC.md)
 

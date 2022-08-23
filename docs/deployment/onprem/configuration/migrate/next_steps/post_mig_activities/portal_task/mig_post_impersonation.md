@@ -61,5 +61,4 @@ Perform the following steps to enable the impersonation feature:
     The users with the **Can Run As User** role can now impersonate another user.
 
 
-**Parent topic:**[Portal tasks](../migrate/mig_post_portaltasks.md)
 

@@ -19,7 +19,6 @@ For improved manageability of virtual portals, HCL Digital Experience provides a
 -   **[Virtual portals reference](../admin-system/advpref.md)**  
 The virtual portals reference provides information about using commands for configuring virtual portals, usage hints and tips, and known limitations.
 
-**Parent topic:**[Administering](../admin-system/administering_parent.md)
 
 **Related information**  
 

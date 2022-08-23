@@ -13,5 +13,4 @@ When you delete a wiki post, it is removed from the site, but remains in the del
 4.  Select the appropriate wiki page and click **Purge**. Click **OK**.
 
 
-**Parent topic:**[Wikis](../admin-system/wiki_work.md)
 

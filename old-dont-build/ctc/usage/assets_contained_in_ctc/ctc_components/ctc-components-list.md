@@ -37,5 +37,4 @@ These are a set of menus, navigators, and personalization components. These retr
 -   **Upcoming Featured Items by Start Date**
 -   **Upcoming Meetings by Start Date**
 
-**Parent topic:**[Content Template Components](../ctc/ctc-assets-components.md)
 

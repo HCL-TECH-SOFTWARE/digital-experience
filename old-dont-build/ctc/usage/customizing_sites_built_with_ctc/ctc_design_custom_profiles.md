@@ -77,5 +77,4 @@ To allow site designers to create pages by using the Content Template page templ
             ```
 
 
-**Parent topic:**[Customizing sites built with Content Template](../ctc/ctc_design_custom.md)
 

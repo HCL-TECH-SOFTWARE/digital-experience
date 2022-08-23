@@ -127,5 +127,4 @@ The `SCU` element example notifies the Solution Installer about the task you wan
 
 To provide an implementation task for an extension point, read [Installation tasks](si_paa_spec_inst.md) for information.
 
-**Parent topic:**[The sdd.xml file](../config/si_paa_spec_sdd.md)
 

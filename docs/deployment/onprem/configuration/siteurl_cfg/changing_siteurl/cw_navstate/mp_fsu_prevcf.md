@@ -156,5 +156,4 @@ The configuration applies to all pages that use that theme and that are configur
 
 The portal now no longer displays the state information with the URLs.
 
-**Parent topic:**[Benefits and limitations of removing navigational state information](../config/cw_navstate.md)
 

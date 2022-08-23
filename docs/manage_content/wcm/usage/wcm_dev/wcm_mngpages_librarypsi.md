@@ -102,7 +102,6 @@ Retrieve library details with the details method. This method returns the follow
     ```
 
 
-**Parent topic:**[Administering managed pages](../wcm/wcm_mngpages_advadmin.md)
 
 **Related information**  
 

@@ -39,5 +39,4 @@ When you use this XML script to transfer the configuration data between these tw
         This procedure exports all pages which are not private, along with the information that is required to put the portlets on the pages. However, you must either deploy the portlet applications on the target portal prior to running the XML import, or you must modify the XML script to deploy the portlets in the same run.
 
 
-**Parent topic:**[XML configuration reference](../admin-system/adxmlref.md)
 

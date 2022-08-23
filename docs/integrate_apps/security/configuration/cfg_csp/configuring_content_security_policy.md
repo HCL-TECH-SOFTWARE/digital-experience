@@ -9,5 +9,4 @@ The out-of-the-box \(OOB\) Content Security Policy \(CSP\) resource environment 
 -   **[Page Metadata to configure Content Security Policy](../security/page_metadata.md)**  
 The following page metadata will be introduced to configure CSP on a per-page basis.
 
-**Parent topic:**[Content Security Policy](../security/content_security_policy.md)
 

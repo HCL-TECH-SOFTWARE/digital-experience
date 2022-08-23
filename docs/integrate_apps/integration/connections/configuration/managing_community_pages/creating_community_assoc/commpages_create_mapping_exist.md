@@ -29,7 +29,6 @@ When you create a template for a community page, you can configure the template 
         However, if you want to ensure that a community is created in this case, set the ibm.portal.instantiation.community.create.new parameter with a value of true. If the parent page has no community association, a new community is created with the same characteristics as described in *Creating communities during community page instantiation.*
 
 
-**Parent topic:**[Creating community associations during page template instantiation](../admin-system/commpages_create_mapping_template.md)
 
 **Related information**  
 

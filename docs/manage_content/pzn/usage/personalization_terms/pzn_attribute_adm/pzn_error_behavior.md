@@ -19,7 +19,4 @@ For example, if no user object is found and rulesEngine.throwObjectNotFoundExcep
 5.  Set the value of this property to true to throw an exception if the object is not found.
 
 
-**Parent topic:**[Attribute Based Administration](../pzn/pzn_attadm.md)
-
-**Parent topic:**[Attribute Based Administration](../pzn/pzn_attadm.md)
 

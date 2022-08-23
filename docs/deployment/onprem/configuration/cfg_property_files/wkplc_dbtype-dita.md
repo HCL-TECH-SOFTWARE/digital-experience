@@ -1,6 +1,5 @@
 # Properties file: wkplc\_dbtype.properties
 
-**Parent topic:**[Reference: Configuration properties](../properties/properties.md)
 
 ## Database safe mode properties
 

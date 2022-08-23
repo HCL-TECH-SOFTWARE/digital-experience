@@ -33,5 +33,4 @@ For performance reasons, the system administrator can limit the number of pages 
 
 The page limit setting is a Site Builder portlet parameter called **SiteTemplateSiteMapMaxSize**.
 
-**Parent topic:**[Creating Sites And Adding Sections](sitebuilder_using_creating_sites.md)
 

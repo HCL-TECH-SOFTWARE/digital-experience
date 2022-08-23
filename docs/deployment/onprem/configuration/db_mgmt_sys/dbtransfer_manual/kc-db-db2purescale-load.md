@@ -21,5 +21,4 @@ For multithreaded Java applications, set enableSysplexWLB to true in the connect
 6.  Click **OK**.
 
 
-**Parent topic:**[Manual Steps: Database Transfer option in the Configuration Wizard](../eua-workflows/kc-db-parent.md)
 

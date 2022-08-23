@@ -23,5 +23,4 @@ To remove Content as a Service feature in HCL Portal, you must disable it by usi
 3.  Restart your portal server.
 
 
-**Parent topic:**[Content as a Service pages](../wcm/cntnt_serv_pgs.md)
 

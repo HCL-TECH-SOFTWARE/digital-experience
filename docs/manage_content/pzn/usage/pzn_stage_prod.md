@@ -57,7 +57,6 @@ Choose one of the following methods to move rules:
 -   If the rules are referenced by Personalization components, ensure the Personalization components are published and syndicated in Web Content Manager.
 -   If the rules are referenced in pages or portlets, move the page and portlet definitions with XML Access or Release Builder. This is related to attribute based administration.
 
-**Parent topic:**[Reference](../reference/reference.md)
 
 **Related information**  
 

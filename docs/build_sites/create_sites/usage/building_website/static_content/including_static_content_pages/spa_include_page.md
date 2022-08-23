@@ -13,5 +13,4 @@ You can import a static content page from an installed layout template by using 
 -   **[Scripting for static pages](../admin-system/spa_psi.md)**  
 You can work with static portal pages by using the Portal Scripting Interface, which enables you to use administration function through the Jacl scripting language. Get familiar with the scripting commands for working with static pages.
 
-**Parent topic:**[Static content](../site/site_static_content.md)
 

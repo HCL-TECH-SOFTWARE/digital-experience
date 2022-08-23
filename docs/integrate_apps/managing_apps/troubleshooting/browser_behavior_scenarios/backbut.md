@@ -167,7 +167,6 @@ Example scenario: View history limit influences only the navigational state of t
 5.  The user navigates through four more page views and looks at more products.
 6.  The user clicks the browser Back button four times to navigate backward to where the user placed the item in the shopping cart. The portal displays page X in its default state and not in the state in which it was when the user navigated to the next page. The reason is that the page view is back in the history by 4 navigational steps already and thereby exceeds the configuration setting of 3 views. However, the product that the user wants to purchase is not removed from the shopping cart as that information is part of the session state of the application.
 
-**Parent topic:**[Browser behavior and scenarios](../admin-system/adbackbut.md)
 
 **Related information**  
 

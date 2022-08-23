@@ -13,7 +13,4 @@ Logging occurs when a rule or logging bean is present in JSP or servlet a user v
 -   Events are dispatched from the queue to all registered listeners.
 -   Listeners in turn persist and process the data contained in the logging event.
 
-**Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
-
-**Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
 

@@ -65,5 +65,4 @@ Go to your page that has your jQuery profile applied, move the mouse over the he
 
 If things do not work correctly, you can troubleshoot your modules. Click the **Administration menu** icon. Then, click **Portal Analysis** \> **Theme Analyzer**. Then, click **Examine Modules by Profiles**. Expand your theme in the tree and select your jQuery profile, such as **jQuery Deferred**, in the tree and examine the profile. Double-click your jQuery profile in the tree. Expand the Modules folder in the tree and select one-by-one your various jQuery modules, **jquery**, **jquery\_powertip**, and **theme\_powertips**. For each, examine the details to see if everything looks correct \(in particular the prereqs and the contributions\). If you spot and fix a problem, be sure to invalidate the cache after so the Portal server picks up the change.
 
-**Parent topic:**[Adding jQuery to a theme](../dev-theme/themeopt_jquery.md)
 

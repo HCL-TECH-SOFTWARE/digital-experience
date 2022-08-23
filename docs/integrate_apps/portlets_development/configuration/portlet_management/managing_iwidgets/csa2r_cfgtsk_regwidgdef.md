@@ -166,7 +166,6 @@ This extracts your light weight iWidget package represented by the file /tmp/Som
      -DPortalAdminPwd=wpsadmin -DWasPassword=wpsadmin
 ```
 
-**Parent topic:**[Managing iWidgets in your portal](../admin-system/add_widget.md)
 
 **Related information**  
 

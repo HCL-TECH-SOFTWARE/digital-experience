@@ -75,7 +75,6 @@ The following list shows the tasks for which you can assign extra access permiss
     If you fail to syndicate these libraries, the portal shows an error when you add the sample content to a page.
 
 
-**Parent topic:**[Virtual portal roles and their capabilities](../admin-system/advppln_roles.md)
 
 **Related information**  
 

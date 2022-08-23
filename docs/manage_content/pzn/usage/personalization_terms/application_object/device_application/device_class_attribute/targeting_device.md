@@ -13,7 +13,4 @@ When you target content to a segment based on device classes, ensure that the de
 -   **[Create a segment by device class](../contarget/targeting_device_example.md)**  
 Learn more about the Device application object through an example.
 
-**Parent topic:**[Device application object](../contarget/targeting_device_overview.md)
-
-**Parent topic:**[Device application object](../contarget/targeting_device_overview.md)
 

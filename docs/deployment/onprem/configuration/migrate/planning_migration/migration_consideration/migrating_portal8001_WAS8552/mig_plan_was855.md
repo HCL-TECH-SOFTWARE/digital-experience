@@ -18,7 +18,6 @@ Choose this option if you want to use staging to production techniques to migrat
 -   **[Performing a manual in-place migration](../migrate/mig_plan_was_manual.md)**  
 If you proceed with this method of migration for Portal Version 8.0.0.1 on WebSphere Application Server Version 8.5.5.2, be aware that you cannot use the WebSphere remote migration tool because the WebSphere version of the source and target environments are the same. This migration is an in-place migration, and the source environment will no longer be available after the migration is complete.
 
-**Parent topic:**[Migration considerations](../plan/mig_plan_high_availability.md)
 
 **Related information**  
 

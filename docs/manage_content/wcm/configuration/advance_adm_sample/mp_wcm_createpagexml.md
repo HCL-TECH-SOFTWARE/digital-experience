@@ -70,7 +70,6 @@ As with other portal pages, you can create a web content page with the XML confi
     -   IBM® i: ConfigEngine.sh action-migrate-content-mappings -DWasPassword=password -DPortalAdminPwd=password
     -   z/OS®: ./ConfigEngine.sh action-migrate-content-mappings -DWasPassword=password -DPortalAdminPwd=password
 
-**Parent topic:**[Advanced administrative examples](../wcm/wcm_delivery_advanced.md)
 
 **Related information**  
 

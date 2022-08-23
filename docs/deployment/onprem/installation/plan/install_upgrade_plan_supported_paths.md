@@ -10,5 +10,4 @@ Installation and upgrade is supported between equivalent HCL Digital Experience 
 
 **Note for customers running on Portal 9.0 on WAS 8.5/9.0 and Java SDK 7.0:** Install HCL Digital Experience 9.5 using the following installation path.
 
-**Parent topic:**[HCL Digital Experience 9.5 Product Documentation](../welcome/wp95_welcome.md)
 

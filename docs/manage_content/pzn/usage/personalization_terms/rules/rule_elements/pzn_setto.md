@@ -15,7 +15,4 @@ Alternatives to set to include:
 -   remove
 -   remove all
 
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
-
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
 

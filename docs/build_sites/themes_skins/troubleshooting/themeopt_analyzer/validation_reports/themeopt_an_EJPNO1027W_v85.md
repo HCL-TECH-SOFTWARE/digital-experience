@@ -59,7 +59,4 @@ Set a whitelist and a blacklist. You can set the lists in two ways.
 |
 
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
-
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 

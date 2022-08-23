@@ -27,9 +27,6 @@ By default, portlet applications and portlets are set to an active state after i
 
 After the installation is complete, a message appears at the start of the page that indicates a successful installation. If there are any problems during the process, an error message appears in the Manage Web Modules page. Click the **View Details** link to examine the error log.
 
-**Parent topic:**[Managing portlets, portlet applications, and iWidgets](../admin-system/adpltadmwork.md)
-
-**Parent topic:**[Portal administration](../practitioner_studio/administration.md)
 
 **Related information**  
 

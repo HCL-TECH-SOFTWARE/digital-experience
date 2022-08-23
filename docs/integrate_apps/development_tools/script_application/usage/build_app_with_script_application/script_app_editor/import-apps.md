@@ -64,5 +64,4 @@ The import tool replaces relative image and file references in the .html, .css, 
 
 Do not import JQuery Core directly with an application .zip artifact. Instead, load it by the portal page. JQuery Core that is imported directly into the Script Application with inline JavaScript is not supported in the Script Application.
 
-**Parent topic:**[Script Application Editor](../script-portlet/script_portlet_editor.md)
 

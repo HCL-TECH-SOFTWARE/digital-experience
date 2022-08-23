@@ -66,7 +66,6 @@ To be able to use such short vanity URLs, you must use a web server. For details
     The user interface for managing vanity URLs has a preview link. By default, this link goes directly to the vanity servlet, and the portal shows the full vanity URL, for example `http://hostname/wps/vanityurl/shoe-sale`. You can configure the preview link to point to the HTTP server instead, which shows the short version of the vanity URL. To configure the preview link target, you use the portal configuration task `enable-vanityurl-httpserver-preview`. For more information, see *Configuring the vanity URL preview link*.
 
 
-**Parent topic:**[Administering vanity URLs](../wcm/van_url_admin_ref.md)
 
 **Related information**  
 

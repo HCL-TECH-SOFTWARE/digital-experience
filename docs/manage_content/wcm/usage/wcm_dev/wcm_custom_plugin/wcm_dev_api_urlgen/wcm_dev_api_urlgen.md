@@ -98,5 +98,4 @@ This example demonstrates a content URL generation filter that appends a prefix 
 -   **[Example 2: Generate a friendly URL for web content](../wcm/wcm_dev_api_urlgen_xmp2.md)**  
 This example demonstrates a content URL generation filter that generates a friendly URL for web content.
 
-**Parent topic:**[How to create custom plug-ins](../wcm/wcm_dev_plugins.md)
 

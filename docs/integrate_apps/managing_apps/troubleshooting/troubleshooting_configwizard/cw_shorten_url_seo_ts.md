@@ -140,5 +140,4 @@ Each potential step in the configuration is included. Because the steps vary dep
 |Skip the step|You can skip this step if you are not using a personalization publishing server.|
 |Clean up step|None required.|
 
-**Parent topic:**[Troubleshooting the Configuration Wizard](../trouble/cw_troubleshooting.md)
 

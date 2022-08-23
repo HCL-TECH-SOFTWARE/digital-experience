@@ -43,5 +43,4 @@ The metadata setting SSO\_SAML20\_IDP enables the policy for SSO authentication 
     Where XML\_file is the file path to the XML file.
 
 
-**Parent topic:**[Configuration settings for Active Directory Federation Services \(ADFS\)](../dev-portlet/outbhttp_auth_est_sso_adfs.md)
 

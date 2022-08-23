@@ -13,7 +13,6 @@ You can control how many nested child pages that are affected by community assoc
 -   **[Configuring the number of retrieved communities](../admin-system/commpages_picker_size.md)**  
 You can define how many communities are retrieved from the HCL Connections server when searching for communities in the Page Associations window.
 
-**Parent topic:**[HCL Connections](../config/ibmconnections.md)
 
 **Related information**  
 

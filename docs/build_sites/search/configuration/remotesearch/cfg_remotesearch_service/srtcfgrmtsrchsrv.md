@@ -52,7 +52,6 @@ Before you can begin using remote search service, you must create two new search
 3.  [Creating a new content source](../admin-system/create_content_source.md)  
 Before you can begin using remote search service, you must create three new content sources, one for the Web Content Manager, one for your portal site, and one for JCR search.
 
-**Parent topic:**[Remote search service](../admin-system/srcusgrmtsrchsrv.md)
 
 **Related information**  
 

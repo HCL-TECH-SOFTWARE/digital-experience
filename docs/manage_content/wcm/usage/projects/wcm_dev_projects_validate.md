@@ -11,5 +11,4 @@ An outline of the validation process.
 -   Only one validation per project can be initiated or running at any one time.
 -   A project publish action cancels any project validation for that project that is in progress because validation is part of publishing a project.
 
-**Parent topic:**[Projects](../wcm/wcm_proj_overview.md)
 

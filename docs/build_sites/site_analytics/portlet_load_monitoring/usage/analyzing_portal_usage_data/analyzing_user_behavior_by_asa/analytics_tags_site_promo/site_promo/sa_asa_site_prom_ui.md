@@ -39,7 +39,6 @@ You can open this dialog from the resource that you want to associate with a sit
         The portal removes the site promotion mapping from the resource.
 
 
-**Parent topic:**[Site promotions](../admin-system/sa_asa_site_prom.md)
 
 **Related information**  
 

@@ -72,7 +72,6 @@ You can set the following additional properties for non-shared caches. \(Setting
 
 For information on the available caches, refer to the *HCL Digital Experience Performance Tuning Guide*.
 
-**Parent topic:**[Portal service configuration](../admin-system/srvcfgref.md)
 
 **Related information**  
 

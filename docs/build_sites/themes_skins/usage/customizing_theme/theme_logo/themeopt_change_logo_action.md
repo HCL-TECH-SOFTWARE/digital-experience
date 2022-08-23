@@ -67,5 +67,4 @@ The default logo action takes users to your portal home page. The logo can compl
     ```
 
 
-**Parent topic:**[Changing the theme logo](../dev-theme/themeopt_change_theme_logo.md)
 

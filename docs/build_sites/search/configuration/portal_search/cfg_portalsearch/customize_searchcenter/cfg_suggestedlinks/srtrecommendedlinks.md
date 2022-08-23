@@ -21,5 +21,4 @@ To configure the Suggested Links view, proceed as follows:
     Users can now use the Suggested Links portlet.
 
 
-**Parent topic:**[Adding and configuring suggested links](../admin-system/srt_add_sugg_links.md)
 

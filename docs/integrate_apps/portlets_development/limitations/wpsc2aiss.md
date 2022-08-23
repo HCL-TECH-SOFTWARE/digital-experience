@@ -26,5 +26,4 @@ The following known issues and restrictions exist with portlet communication.
 -   Cooperative Java Server Faces \(JSF\) portlets that you developed by using older versions of Rational Application Developer Version 6 can contain code that does not work with HCL Digital Experience Version 8.5. If this occurs, replace the file `jsf-portlet.jar` in the failing WAR file with the version in the latest fix pack level.
 -   Cooperative portlet action declarations with multiple input parameters configured in the WSDL file are not supported.
 
-**Parent topic:**[Portlet communication](../dev-portlet/pltcom_ptlt_com.md)
 

@@ -11,7 +11,4 @@ Show page or portlet when
   	  Otherwise hide 
 ```
 
-**Parent topic:**[Visibility Rules](../pzn/pzn_visibility.md)
-
-**Parent topic:**[Visibility Rules](../pzn/pzn_visibility.md)
 

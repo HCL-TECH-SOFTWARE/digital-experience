@@ -15,7 +15,6 @@ You can configure each individual Tag Cloud portlet instance separately. Use the
 
 These options are added to the ones that are described in *Configuring the Tag Cloud*.
 
-**Parent topic:**[Using the portal Tag Cloud with lists of social objects](../social/soc_rendr_tag_cloud_w_socl_list.md)
 
 **Related information**  
 

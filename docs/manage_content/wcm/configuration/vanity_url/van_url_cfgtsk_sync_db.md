@@ -67,7 +67,6 @@ For example, if the JCR database on the Web Content Manager side is restored, bu
     ```
 
 
-**Parent topic:**[Administering vanity URLs](../wcm/van_url_admin_ref.md)
 
 **Related information**  
 

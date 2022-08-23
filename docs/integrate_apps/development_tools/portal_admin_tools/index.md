@@ -136,7 +136,6 @@ Use the XML configuration interface \(XML Access\) for exchanging portal configu
 -   **[Portal Scripting Interface](../admin-system/ad_psi.md)**  
 You can use the Portal Scripting Interface to configure your portal by running scripts from a command line.
 
-**Parent topic:**[Administering](../admin-system/administering_parent.md)
 
 **Related information**  
 

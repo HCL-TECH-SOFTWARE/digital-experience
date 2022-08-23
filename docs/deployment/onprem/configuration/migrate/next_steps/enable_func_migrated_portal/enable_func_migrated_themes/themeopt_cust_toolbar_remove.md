@@ -45,7 +45,6 @@ All of the theme modules providing functions for editing and managing the site, 
 8.  In the system directory, keep layouts.json and styles.json. Remove all other files.
 
 
-**Parent topic:**[Enable new functions in migrated themes](../dev-theme/themeopt_migrate_deploy80.md)
 
 **Related information**  
 

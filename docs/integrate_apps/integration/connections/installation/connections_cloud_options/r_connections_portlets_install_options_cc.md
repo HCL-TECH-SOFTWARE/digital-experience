@@ -39,5 +39,4 @@ These options allow you to customize your installation.
 |-DICsearchContextRoot|search|
 |-DICfilesContextRoot|files.|
 
-**Parent topic:**[Deploying the HCL Connections Portlets for HCL Connections Cloud](../connect/c_connections_portlets_deploying_portlets_cc.md)
 

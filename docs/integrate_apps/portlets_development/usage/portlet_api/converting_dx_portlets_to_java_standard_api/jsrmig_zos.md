@@ -84,5 +84,4 @@ Follow these steps:
 
 8.  Save your conversion updates.
 
-**Parent topic:**[Portlet API](../dev-portlet/wpspapi.md)
 

@@ -17,5 +17,4 @@ You must restart the Portal server after you run the install-toolbar task.
 
 For more information about using the 8.5 toolbar, see the site toolbar documentation.
 
-**Parent topic:**[Virtual Portal tasks](../migrate/virt_portal_post_mig.md)
 

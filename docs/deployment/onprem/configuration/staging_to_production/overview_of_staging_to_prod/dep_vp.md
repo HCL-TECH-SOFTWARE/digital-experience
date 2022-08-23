@@ -18,7 +18,6 @@ This sequence results in a server with only VP2 content.
 
 **Note:** Before you run the build-initial-release-paa, and you have created realms to define the user populations, you must create a super realm. In addition to the realms that you create to define the user populations of the individual virtual portals, you must create a super realm. This super realm spans all other realms and contains all the users of those other realms. It is also known as the default realm. To log in to a virtual portal, the virtual portal administrator and all users must be a member of the realm for that virtual portal. To allow a user access to more than one virtual portal, that user, and the Virtual Member Manager node to which the user belongs in the hierarchy of the user directory, must be a member of all the realms associated with these virtual portals. This applies to a super administrator who is responsible for all virtual portals within an entire Portal installation. To administer the virtual portals, the master administrator must be a member of the realms of these virtual portals.
 
-**Parent topic:**[Overview of staging to production](../deploy/dep_ovr_concepts.md)
 
 **Related information**  
 

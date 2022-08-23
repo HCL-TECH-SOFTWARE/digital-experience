@@ -14,5 +14,4 @@ The page component styles are applied to the various types of page components th
 -   contentCarousel – carousel with next and previous navigation
 -   contentDetail – basic outline for a detailed content page
 
-**Parent topic:**[Content Template Catalog themes and styles](../ctc/ctc_arch_css.md)
 

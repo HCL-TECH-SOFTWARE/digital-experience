@@ -72,5 +72,4 @@ This will create sessions when you do not want them. Instead, determine whether 
 
 ```
 
-**Parent topic:**[Portlet development reference](../dev-portlet/wpsdevref.md)
 

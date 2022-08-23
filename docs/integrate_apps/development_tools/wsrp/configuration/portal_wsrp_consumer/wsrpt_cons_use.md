@@ -11,5 +11,4 @@ After you create a Producer definition, you can proceed to consume the portlets 
 4.  [Customizing the WSRP configuration of your Consumer portal](../admin-system/wsrpt_cons_cust.md)  
 You can customize some aspects of you WSRP Consumer portal.
 
-**Parent topic:**[WSRP services](../admin-system/wsrpc.md)
 

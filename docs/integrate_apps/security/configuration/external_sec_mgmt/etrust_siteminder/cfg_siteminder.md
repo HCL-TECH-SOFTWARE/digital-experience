@@ -46,5 +46,4 @@ You can configure Computer Associates eTrust SiteMinder to perform authorization
 -   **[Removing eTrust SiteMinder](../security/sit_deconfig.md)**  
 After you have installed and used Computer Associates eTrust SiteMinder, you may find that you no longer require its use. You can then remove it from the HCL Digital Experience environment and restore authentication capabilities to IBM WebSphere Application Server and authorization capabilities to HCL Digital Experience.
 
-**Parent topic:**[External security managers](../security/sec_ext_man.md)
 

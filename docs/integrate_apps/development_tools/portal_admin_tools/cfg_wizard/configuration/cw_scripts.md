@@ -51,7 +51,6 @@ The Configuration Wizard creates multiple files to help you complete your config
 13. Click **Start Configuration** to run your configuration.
 
 
-**Parent topic:**[Configuration Wizard](../config/cw_overview.md)
 
 **Related information**  
 

@@ -27,5 +27,4 @@ Follow these steps to create a cross-linked list and configure a context overrid
     When the page refreshes, the list is now focused on a specific site area and the title of the list is also linked to that area.
 
 
-**Parent topic:**[Creating a landing page using CTC](../ctc/ctc_design_landing.md)
 

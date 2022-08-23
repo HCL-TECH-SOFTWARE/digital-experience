@@ -9,5 +9,4 @@ The ExportManagedPagesRelease.xml file provides an example that you can use with
 -   **[Creating a syndication relationship from the command line](../wcm/wcm_syndication_settingup_cmdline.md)**  
 You can set up syndication relationships by using the Administration Portlets or the command line. To set up a syndication relationship from the command line, use the XML configuration interface \(XML access\) and the ConfigEngine command to configure the subscriber.
 
-**Parent topic:**[Staging to production](../deploy/dep_intr.md)
 

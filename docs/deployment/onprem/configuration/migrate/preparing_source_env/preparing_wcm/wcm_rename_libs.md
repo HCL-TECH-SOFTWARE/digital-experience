@@ -11,5 +11,4 @@ If the name of a web content library is the same as the URL context of a virtual
 4.  Enter a new name for the library that is distinct from the URL context of the virtual portal.
 
 
-**Parent topic:**[Preparing Web Content Manager content](../migrate/wcm_specific_steps.md)
 

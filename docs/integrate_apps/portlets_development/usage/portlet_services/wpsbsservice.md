@@ -188,5 +188,4 @@ To register this portlet service, add the following property names and values to
 
 Using the WebSphere Integrated Solutions Console, you can find the bootstrap port of your portal server in the "End Points" section of the settings for the server "HCL Portal and HCL Web Content Manager".
 
-**Parent topic:**[Portlet services](../dev-portlet/wpsptservice.md)
 

@@ -93,5 +93,4 @@ The name of the HTTPs proxy port:
 com.ibm.wps.pe.pc.legacy.service.ContentAccessServiceImpl.proxy.https.port = 443
 ```
 
-**Parent topic:**[Portal service configuration](../admin-system/srvcfgref.md)
 

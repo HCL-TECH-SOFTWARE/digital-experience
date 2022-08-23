@@ -22,5 +22,4 @@ Configure the communication between HCL Portal and your HCL Domino web server.
 6.  If you want to use the short version of vanity URLs, add a rewrite rule to your web server. For more information, read *Providing short vanity URLs*.
 
 
-**Parent topic:**[Configuring a remote web server](../config/cfg_webserver.md)
 

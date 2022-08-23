@@ -13,5 +13,4 @@ You can also add render parameter tags and portlet preferences to your applicati
 -   **[Render parameter tags](../script-portlet/render_param_tags.md)**  
 To retrieve the value of a shared render parameter, use the \[Plugin:RenderParam\] tag.
 
-**Parent topic:**[Build applications with the Script Application](../script-portlet/build_apps.md)
 

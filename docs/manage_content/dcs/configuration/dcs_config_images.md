@@ -53,7 +53,6 @@ The following steps do not apply to IBM® i. For information about viewing image
 13. Open a web browser and try viewing the file that contains the images.
 
 
-**Parent topic:**[Configure Document Conversion Services](../admin-system/dcs_prereq.md)
 
 ## Starting the X server by using Exceed or X virtual frame buffer \(Xvfb\)
 

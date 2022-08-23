@@ -4,7 +4,6 @@ By default, portlet applications and portlets are set to an active state after i
 
 You can toggle portlet application or portlet states to active or inactive by using the portal XML configuration interface.
 
-**Parent topic:**[Managing portlets, portlet applications, and iWidgets](../admin-system/adpltadmwork.md)
 
 **Related information**  
 

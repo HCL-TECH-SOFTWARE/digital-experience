@@ -39,5 +39,4 @@ For standard portlets, the property broker provides additional APIs to give deve
 
 The following package define the programmatic APIs provided by the property broker: com.ibm.portal.propertybroker.service.PropertyBrokerService \(this is an interface\).
 
-**Parent topic:**[JSR 168 HCL extension for cooperative portlets](../dev-portlet/pltcom_ptlt_coop.md)
 

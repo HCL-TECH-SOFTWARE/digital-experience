@@ -20,7 +20,6 @@ If you experience issues when you configure the consumed Web Content Viewer port
 -   As the Enabler component implements the override for Dojo XMLHttpRequests, check whether your portal really requires that component. If you find that you do not need any Enabler functions on your web content delivery portal, you can change your theme and theme modules to prevent the mm\_enabler theme module from being loaded. For more information, read *The module framework*.
 -   Configure the WSRP resource proxy of the WSRP Consumer to prevent it from forwarding the `com.ibm.lotus.openajax.virtualhost` and `com.ibm.lotus.openajax.virtualport` HTTP headers that are set by the Enabler component. If the headers are not present in the Dojo XMLHttpRequests, the WSRP resource proxy addresses the remote web content portal correctly. For more information, read *Customizing the WSRP resource proxy HTTP header forwarding behavior*.
 
-**Parent topic:**[Enabling remote rendering with WSRP and the Web Content Viewer](../wcm/wcm_config_wcmviewer_wsrp.md)
 
 **Related information**  
 

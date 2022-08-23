@@ -46,5 +46,4 @@ The reason one only wants one POD of the DX deployment active is due to the fact
 
 Note that during this process, this single HCL DX POD node can remain in the active load balance if one is running a single Kubernetes cluster.
 
-**Parent topic:**[Digital Experience Application deployment](../containerization/ci_cd.md)
 

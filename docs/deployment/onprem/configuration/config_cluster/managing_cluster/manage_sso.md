@@ -19,7 +19,6 @@ Complete the following steps to manage your Single Sign-on settings:
 7.  Restart all servers in the cell, including the node agents and the deployment manager.
 
 
-**Parent topic:**[Managing your cluster](../admin-system/manage_clus.md)
 
 **Related information**  
 

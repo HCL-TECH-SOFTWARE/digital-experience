@@ -44,5 +44,4 @@ If you plan to use a spell checker, you must install it remotely.
 -   **[Configuring access to a remote spell checker](../config/doc_pdm_remotespchk.md)**  
 Configure access to run spell checker on a remote server.
 
-**Parent topic:**[Configuring](../config/configuring_parent2.md)
 

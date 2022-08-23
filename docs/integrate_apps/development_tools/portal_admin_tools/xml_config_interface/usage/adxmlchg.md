@@ -68,7 +68,6 @@ The following XML resource is no longer supported in portal 8.5:
 
 The managed pages feature enables you to edit portal resources, such as pages, in the scope of a project. By working in a project, you can create, update, and approve pages in a draft state, without affecting the live server. You can specify a project scope for actions performed with the XML configuration interface command by including the object ID of the project in the URL. See *XML configuration interface and managed pages* for details.
 
-**Parent topic:**[The XML configuration interface](../admin-system/admxmlai.md)
 
 **Related information**  
 

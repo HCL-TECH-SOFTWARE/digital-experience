@@ -71,7 +71,6 @@ The result of the conflict check is part of the ConfigEngine output. It might lo
 
 In this example, a conflict was found between a friendly name and virtual portal mapping.
 
-**Parent topic:**[Changing the site URL after an installation](../config/cfg_intr_seo.md)
 
 **Related information**  
 

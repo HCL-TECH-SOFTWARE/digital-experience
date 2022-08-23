@@ -37,9 +37,6 @@ Use the validation portlet to verify that your theme contains no errors. The val
 -   **[Utilities for theme issues](../dev-theme/themeopt_an_util.md)**  
 If you need help with a theme issue, you can export your system data. Support personnel can then import and view your data as a simulated system to troubleshoot problems.
 
-**Parent topic:**[The module framework](../dev-theme/themeopt_module.md)
-
-**Parent topic:**[Themes](../practitioner_studio/themes.md)
 
 **Related information**  
 

@@ -616,5 +616,4 @@ mycontenthandler/!ut/p/digest!PQo5Yhy68oeppWcEz2sddA/wcmrest/Content/b7b8b3fb-8f
 
 ```
 
-**Parent topic:**[REST service for Web Content Manager](../wcm/wcm_rest.md)
 

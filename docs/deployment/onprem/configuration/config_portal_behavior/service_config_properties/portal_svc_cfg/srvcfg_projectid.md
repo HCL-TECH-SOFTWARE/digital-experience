@@ -17,5 +17,4 @@ ProjectIdentificationService piService = (ProjectIdentificationService)
 ObjectID projectID = piService.getProjectID();
 ```
 
-**Parent topic:**[Portal service configuration](../admin-system/srvcfgref.md)
 

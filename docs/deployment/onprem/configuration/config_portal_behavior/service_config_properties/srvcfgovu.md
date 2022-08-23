@@ -74,5 +74,4 @@ The following table lists the configuration services:
 
 There is a number of other Web Content Manager configuration services. The Web Content Manager properties files are located in the `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/wcm/shared/app/config/wcmservices` directory.
 
-**Parent topic:**[Setting service configuration properties](../admin-system/adsetcfg.md)
 

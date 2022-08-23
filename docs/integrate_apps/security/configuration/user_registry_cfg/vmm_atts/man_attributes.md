@@ -14,7 +14,6 @@ After you install HCL Digital Experience and configure your LDAP user registries
     **Note:** This task does not validate the existence of attributes in the LDAP schema.
 
 
-**Parent topic:**[Adding more attributes to VMM](../install/manage_atts.md)
 
 **Next topic:**[Adding attributes](../install/add_attributes.md)
 

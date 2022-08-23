@@ -17,5 +17,4 @@ Perform the following steps to remove the credential vault adapter:
     **Clustered environments:** Perform this step on all portal nodes.
 
 
-**Parent topic:**[Security Access Manager](../security/conf_tam.md)
 

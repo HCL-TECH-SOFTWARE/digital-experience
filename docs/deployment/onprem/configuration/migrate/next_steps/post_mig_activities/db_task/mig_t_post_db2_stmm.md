@@ -40,7 +40,6 @@ With the Version 8.5 release, a number of the settings have been changed to be m
     -   ALTER BUFFERPOOL ICMLSMAINBP32 SIZE automatic;
     -   ALTER BUFFERPOOL CMBMAIN4 SIZE automatic;
 
-**Parent topic:**[Database tasks](../migrate/mig_post_dbtasks.md)
 
 **Related information**  
 

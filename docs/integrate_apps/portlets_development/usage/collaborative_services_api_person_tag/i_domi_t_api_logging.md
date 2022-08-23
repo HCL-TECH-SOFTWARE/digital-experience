@@ -18,5 +18,4 @@ The trace file can be found in the following location:
 -   Windows™: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\logs\\HCL Portal and HCL Web Content Manager\\trace.log
 -   z/OS®: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/logs/HCL Portal and HCL Web Content Manager/trace.log
 
-**Parent topic:**[Collaborative Services API and the person tag](../collab/i_coll_r_cs_api.md)
 

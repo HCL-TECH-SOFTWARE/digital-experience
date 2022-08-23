@@ -26,7 +26,6 @@ The goal of the migration process is to ensure that the target environment works
 -   **[What to expect after you complete migration](../migrate/mig_plan_expectations.md)**  
 During the migration process, your portal applications, portlets, and databases are updated to the HCL Digital Experience 8.5 versions. However, not all of the new HCL Digital Experience 8.5 functionality and features are enabled by default. The following sections provide information on how various components are handled during migration, and what you can expect after the migration is complete.
 
-**Parent topic:**[Migrating](../migrate/migration.md)
 
 **Related information**  
 

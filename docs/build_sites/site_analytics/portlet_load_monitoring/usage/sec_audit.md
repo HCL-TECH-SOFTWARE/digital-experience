@@ -30,7 +30,6 @@ You can use the auditing function on the following events:
 
 To activate and configure the auditing function, modify the auditing service settings in the Auditing Service by following the steps that are provided in the Setting service configuration properties file.
 
-**Parent topic:**[Monitoring](../admin-system/monitoring_parent.md)
 
 **Related information**  
 

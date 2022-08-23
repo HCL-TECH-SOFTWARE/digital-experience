@@ -19,7 +19,4 @@ After this analysis is completed, focus on the user, content and other data for 
     After you implement the user and content data stores, you must enable the Personalization runtime environment to access the data stores. This task involves creating implementations of the Personalization APIs for accessing resources in the customer data store. You can either implement the `ResourceManager3` and `ResourceDomain3` interfaces manually or you can use the wizards provided with Rational Application Developer to generate resources for SQL Server databases or LDAP repositories. There are also implementations of the Portal user as a Personalization resource and a resource collection implementation for accessing the DB2 Content Manager.
 
 
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
-
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
 

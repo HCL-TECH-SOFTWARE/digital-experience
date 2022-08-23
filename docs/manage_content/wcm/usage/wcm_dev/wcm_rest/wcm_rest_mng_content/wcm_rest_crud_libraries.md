@@ -195,5 +195,4 @@ HTTP 202 Accepted
 Content-Location: /wps/mycontenthandler/wcmrest/Library/fd18e3a0-b96b-4a66-9bcc-f3d142c7837e/wcmTask:com.ibm.workplace.wcm.services.task.DeleteTask:ced02fae-abc7-4ff4-af4d-c08804b32811/delete-status
 ```
 
-**Parent topic:**[How to manage web content items by using REST](../wcm/wcm_rest_crud.md)
 

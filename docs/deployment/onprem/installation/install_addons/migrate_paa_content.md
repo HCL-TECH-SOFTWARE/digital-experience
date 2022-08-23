@@ -4,7 +4,4 @@ If you installed a Portal Application Archive \(PAA\) file on a previous version
 
 Migration is supported from Portal Version 7.0 to HCL Digital Experience 8.5 and from Version 8.0 to HCL Digital Experience 8.5.
 
-**Parent topic:**[Installing add-ons](../config/int_sol_installer.md)
-
-**Parent topic:**[Add-ons, features, and third-party integration tasks](../migrate/mig_post_ptl_int_addon.md)
 

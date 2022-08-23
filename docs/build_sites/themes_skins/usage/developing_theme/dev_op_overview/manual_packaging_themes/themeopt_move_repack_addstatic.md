@@ -109,7 +109,6 @@ After you create a theme, you can begin to customize it by adding static content
     ```
 
 
-**Parent topic:**[Manually packaging themes for deployment](../dev-theme/themeopt_move_repackstatic.md)
 
 **Related information**  
 

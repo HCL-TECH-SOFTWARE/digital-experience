@@ -39,7 +39,6 @@ If you choose not to use client-side certificates to identify the WebSEAL server
 
 To set up the junction to use the Basic Authentication header to identify the WebSEAL server, use the `-b supply` option on the junction creation command. This option causes WebSEAL to build the BA header by using the user's user ID \(which is ignored by the TAI, in favor of the `iv-user` header\) and the password that is configured into WebSEAL from the `webseald-instance.conf` file, on the `basicauth-dummy-passwd` property. The password in the `webseald-instance.conf` file must match the password for the ID that is specified on the `com.ibm.websphere.security.webseal.loginid` property of the TAI startup parameters in the WebSphere Integrated Solutions Console. For example, if you specify `com.ibm.websphere.security.webseal.loginid=mistered` on the TAI startup parameters, and the password for `mistered` is `wilbur`, then you must specify `wilbur` on the `basicauth-dummy-passwd` property in `webseald-instance.conf` on the WebSEAL server.
 
-**Parent topic:**[Planning for external security managers](../plan/plan_extsecman.md)
 
 **Related information**  
 

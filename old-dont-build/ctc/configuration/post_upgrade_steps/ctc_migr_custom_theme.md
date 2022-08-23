@@ -24,5 +24,4 @@ A new "ctc" module now references all the dependencies for Content Template. You
 -   ctc\_content\_devices
 -   ctc\_content\_script
 
-**Parent topic:**[Post upgrade steps](../ctc/ctc-upgrade-post.md)
 

@@ -67,7 +67,6 @@ You can add new styles or layouts to the site toolbar with a JSON file. Sometime
         1.  Select the **Page** tab.
         2.  Then, select the **Style** or **Layout** tab.
 
-**Parent topic:**[Customizing page creation and page editing options](../admin-system/epc_custom_page_tab.md)
 
 **Related information**  
 

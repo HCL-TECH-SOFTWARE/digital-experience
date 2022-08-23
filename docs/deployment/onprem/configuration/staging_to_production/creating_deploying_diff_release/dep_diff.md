@@ -61,7 +61,6 @@ To update your Portal Application Archive \(PAA\) file, you must create a differ
 
 Deploy your differential release on the production servers.
 
-**Parent topic:**[Creating and deploying a differential release](../deploy/dep_differential.md)
 
 **Next topic:**[Deploying the differential release](../deploy/dep_deploy_diff.md)
 

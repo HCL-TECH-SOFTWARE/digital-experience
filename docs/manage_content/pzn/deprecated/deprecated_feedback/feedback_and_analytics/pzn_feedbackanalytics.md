@@ -53,13 +53,11 @@ Once data has been logged to the Feedback database schema, it is possible to use
 -   **[Feedback database schema](../pzn/pzn_feedback_db_schema.md)**  
 The Feedback schema, within the Feedback database, stores data about your Web site visitors' actions. This schema is closely aligned with the Tivoli Site Analyzer schema.
 
-**Parent topic:**[Digital Experience Personalization](../pzn/pzn_overview.md)
 
 **Previous topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
 
 **Next topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
-**Parent topic:**[Digital Experience Personalization](../pzn/pzn_overview.md)
 
 **Previous topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
 

@@ -75,5 +75,4 @@ The following procedure deletes all changes that are made to the Site Template L
 21. Click **Apply** and **Done**.
 
 
-**Parent topic:**[Installing and removing Site Builder](../sitebuilder/sitebuilder_inst_overview.md)
 

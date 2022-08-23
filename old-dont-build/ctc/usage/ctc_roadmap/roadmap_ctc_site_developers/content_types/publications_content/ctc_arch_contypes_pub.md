@@ -13,5 +13,4 @@ This content type is to be used for publishing important downloadable material.
 -   **[Link content type](../ctc/ctc_arch_contypes_link.md)**  
 This content type is for publishing important links to internal or external sites.
 
-**Parent topic:**[Content types](../ctc/ctc_arch_contypes.md)
 

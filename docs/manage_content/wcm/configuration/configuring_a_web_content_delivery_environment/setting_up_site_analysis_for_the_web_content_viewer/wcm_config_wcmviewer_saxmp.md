@@ -113,7 +113,6 @@ The name and value of a cookie that was sent to the client browser as part of th
 
 |
 
-**Parent topic:**[Setting up site analysis for the Web Content Viewer](../wcm/wcm_config_wcmviewer_sitean.md)
 
 **Related information**  
 

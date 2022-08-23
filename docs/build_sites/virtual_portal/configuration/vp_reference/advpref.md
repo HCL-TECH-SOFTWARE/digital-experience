@@ -9,5 +9,4 @@ View information about configuring virtual portals, hints and tips, and known li
 -   **[Known limitations for virtual portals](../admin-system/advpref_limits.md)**  
 The following sections describe known limitations of virtual portals.
 
-**Parent topic:**[Virtual portals](../admin-system/ad_vp.md)
 

@@ -36,7 +36,6 @@ Specific activities take place in each environment.
     Deliver live website.
 
 
-**Parent topic:**[HCL Web Content Manager \(WCM\) environments](../wcm/wcm_deploy.md)
 
 **Related information**  
 

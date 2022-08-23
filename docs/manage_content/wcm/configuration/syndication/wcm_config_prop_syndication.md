@@ -50,7 +50,6 @@ For example, to enable SSL for syndication where the server is configured to pro
 
 If self-signed certificates are used, extra steps may be necessary to ensure the certificates that are exchanged are trusted on both servers. See the "SSL Configurations" topic in the WebSphere Application Server documentation.
 
-**Parent topic:**[Syndication](../wcm/wcm_administering.md)
 
 **Related information**  
 

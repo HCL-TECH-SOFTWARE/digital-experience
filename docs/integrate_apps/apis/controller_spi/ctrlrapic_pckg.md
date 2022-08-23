@@ -21,5 +21,4 @@ These packages are as follows:
 
 **Note:** A controller interface usually resides in the same package as its corresponding read-only Model SPI interface.
 
-**Parent topic:**[Controller SPI](../dev/ctrlrapic_ovu.md)
 

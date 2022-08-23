@@ -26,5 +26,4 @@ There are certain prerequisites that need to be followed before Sample Content U
 -   **[Getting started with Sample Content UI \| HCL Experience API](../open_api/getting_started_sample_api.md)**  
 Learn how to get started with the Sample Content UI application on HCL Digital Experience 9.5.
 
-**Parent topic:**[HCL Experience API](../open_api/openapi_overview.md)
 

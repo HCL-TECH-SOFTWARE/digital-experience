@@ -28,7 +28,4 @@ The "quality" value refers to the degree a user will like an item. The LikeMinds
 -   **[Best Bets values](../pzn/pzn_best_bets_values.md)**  
 The LikeMinds server generates recommendation vectors that include all recommendations for a given user in order from best quality to the least. You can configure the number of items to be returned as Best Bets and the maximum percentage of the total recommendation vector to include in the Best Bets list.
 
-**Parent topic:**[Configuring LikeMinds](../pzn/pzn_configure_likemind_servers.md)
-
-**Parent topic:**[Configuring LikeMinds](../pzn/pzn_configure_likemind_servers.md)
 

@@ -8,7 +8,4 @@ The generic query framework enables resource collection developers to convert a 
 -   **[Using the Generic Query Framework](../pzn/pzn_using_generic_query_framework.md)**  
 The resource engine constructs a generic query object and passes it to domain developers through the ResourceDomain3 interface method findResourceByQuery\(\). Get an overview of how this query object can be converted into a meaningful domain query string.
 
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
-
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
 

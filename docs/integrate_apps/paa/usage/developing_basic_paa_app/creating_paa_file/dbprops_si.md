@@ -132,5 +132,4 @@ The Solution Installer uses the following database properties:
     The interval in seconds before a physical connection is discarded. Default value is 1800.
 
 
-**Parent topic:**[Create a Portal Application Archive \(PAA\) file](../config/si_paa_spec.md)
 

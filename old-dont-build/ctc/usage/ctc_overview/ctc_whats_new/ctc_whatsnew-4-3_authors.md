@@ -34,5 +34,4 @@ The Content Template page templates can now be used to create pages that are not
 
 The documentation to help site authors get started with Content Template has been consolidated into the new [A roadmap for Content Template Catalog site authors](ctc_gs_authors.md) section.
 
-**Parent topic:**[Content Template overview](../ctc/ctc_overview.md)
 

@@ -6,7 +6,6 @@ For example, one group, GlobalMarketing, might contain another group, USMarketin
 
 **Note:** If you do not plan to use nested groups for access control inheritance, set accessControlDataManagement.enableNestedGroups to false in the **Access Control Data Management** service, nestedGroupLookup.disabled to true in the **WCM WCMConfigService** service, and rulesEngine.user.nestedGroupLookup to false in the PersonalizationService.properties file to improve performance. These settings limit the Portal Access Control membership lookup to one group level in the hierarchy. A user is granted access rights only by explicit role mappings or role mappings to the groups of which that user is a direct member. For information, go to *Setting service configuration properties*.
 
-**Parent topic:**[Users and groups](../admin-system/adusrgrp.md)
 
 **Related information**  
 

@@ -35,13 +35,11 @@ Ensure you have the basic system requirements listed in the Prerequisites for th
 
 The sample demo and database configuration is complete. You can now begin coding a basic personalized portlet.
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Prerequisites for the Personalization portlet exercise](../pzn/pzn_demoprereq.md)
 
 **Next topic:**[Create the JSP file in Rational Application Developer](../pzn/pzn_demo_create_jsp_rad.md)
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Prerequisites for the Personalization portlet exercise](../pzn/pzn_demoprereq.md)
 

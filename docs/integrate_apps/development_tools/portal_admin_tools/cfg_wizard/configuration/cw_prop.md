@@ -15,5 +15,4 @@ The following actions are supported:
     To enable tracing, add the printDebug parameter to the display.properties file. Set the value to true.
 
 
-**Parent topic:**[Configuration Wizard](../config/cw_overview.md)
 

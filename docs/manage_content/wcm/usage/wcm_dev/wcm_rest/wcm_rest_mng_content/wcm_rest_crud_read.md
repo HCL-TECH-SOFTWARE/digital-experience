@@ -92,5 +92,4 @@ Explanation of parameters
 -   wcm - browserCacheMaxAge: The configured timeout value in Web Content Manager for static resources, in seconds. Default value is 600 seconds.
 -   wcm - picker-url-content: The URL to launch the Content Picker \(selection interface\).
 
-**Parent topic:**[How to manage web content items by using REST](../wcm/wcm_rest_crud.md)
 

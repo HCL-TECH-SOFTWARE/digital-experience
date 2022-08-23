@@ -17,5 +17,4 @@ All filters have the following stages:
     The filter is taken out of service and the `doFilter` method will not be called again. This way, system resources can be given back to the portal.
 
 
-**Parent topic:**[Configuring portlet filtering](../admin-system/adpltflt.md)
 

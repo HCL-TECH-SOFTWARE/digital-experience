@@ -23,5 +23,4 @@ After you enable the validation of friendly URLs for web content, you can choose
 -   **[How to prevent friendly URL redirects for invalid friendly URLs for web content](../wcm/prevent_friendly_url_redirects.md)**  
 If the validation of friendly URLs for web content is enabled and the path information of an incoming friendly URL is not valid, portal responds with the HTTP status code as defined by the portal Configuration Service property and page parameter friendly.pathinfo.validation.errorCode. However, depending on the configuration, portal does not always send the configured HTTP status code. Portal can identify conditions that require a different HTTP status code.
 
-**Parent topic:**[Friendly URLs and Web Content Viewers](../wcm/wcm_config_wcmviewer_friendlyurl.md)
 

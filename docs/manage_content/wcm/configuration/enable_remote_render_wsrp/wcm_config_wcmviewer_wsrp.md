@@ -40,7 +40,6 @@ Cross-origin resource sharing \(CORS\) describes a mechanism for supporting requ
 -   **[OpenAjax security and remote web content rendering with WSRP and the Web Content Viewer](../wcm/wcm_config_wcmviewer_wsrp_open_ajax.md)**  
 The Enabler from the Mashups 3.0.0.1 component that is included in HCL Digital Experience as a theme module implements some features that are specified by the OpenAjax Alliance. One of them is a generic override for Dojo XMLHttpRequests.
 
-**Parent topic:**[Delivering web content on a portal page](../wcm/wcm_config_delivery_portal.md)
 
 **Related information**  
 

@@ -18,5 +18,4 @@ In this case the logs will provide the following or similar information:
 
 **Solution:** In order for portal collections to work on a IBM® i system, set the system variable USER.REGION.
 
-**Parent topic:**[Hints and tips for using Portal Search](../admin-system/srrhinttips.md)
 

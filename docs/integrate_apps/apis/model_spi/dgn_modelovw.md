@@ -115,7 +115,6 @@ The Remote Model SPI gives you access to portal models through REST services. It
 -   **[Digital Experience Remote Model API REST explorer](../dev/remote_model_rest_api.md)**  
 The Digital Experience Remote Model REST API explorer can be used by developers creating solutions for HCL DX 9.5 on premises and container deployments to explore and test the Remote Model APIs.
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 
 **Related information**  
 

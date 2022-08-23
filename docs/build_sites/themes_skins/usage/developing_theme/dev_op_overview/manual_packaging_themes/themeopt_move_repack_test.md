@@ -8,5 +8,4 @@ Deploy the EAR file, run the XML Access scripts to register the theme and skins.
 
 Restart your portal server and test the new custom ear file on your test server to verify that it deploys successfully.
 
-**Parent topic:**[Manually packaging themes for deployment](../dev-theme/themeopt_move_repackstatic.md)
 

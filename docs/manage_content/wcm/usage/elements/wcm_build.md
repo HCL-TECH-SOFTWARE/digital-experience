@@ -21,7 +21,6 @@ There are some special considerations to keep in mind when you use URLCmpnt and 
 -   **[Personalizing federated documents](../wcm/wcm_dev_feddocs.md)**  
 Portal Personalization provides the federated documents feature to retrieve metadata about documents that are stored in external content management systems or document repositories. Examples of these systems include HCL Content Manager, IBM FileNet Content Manager, and Microsoft Sharepoint. You can use a personalization component in HCL Web Content Manager to display metadata from federated documents and to create links to download or open the documents.
 
-**Parent topic:**[Building the website](../site/site_build_parent.md)
 
 **Related information**  
 

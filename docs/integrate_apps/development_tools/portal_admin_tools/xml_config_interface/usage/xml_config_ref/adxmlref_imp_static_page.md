@@ -19,5 +19,4 @@ The following example imports static page content from the file index1.zip:
 
 The referenced archive or compressed files must be accessible to the portal when the XML request is processed. For details about the administration of static pages with the XML configuration interface refer to the topics about *Using the XML configuration interface to work with static pages*.
 
-**Parent topic:**[XML configuration reference](../admin-system/adxmlref.md)
 

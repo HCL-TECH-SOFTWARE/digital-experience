@@ -34,5 +34,4 @@ The layouts in Content Template 4.4 have been updated so that the layout section
     Use the format fs-type1/themes/YOUR\_PORTAL\_85\_THEME/CTC/layout-templates where YOUR\_PORTAL\_85\_THEME is a theme based on the Portal 8.5 theme. Defaults to fs-type1/themes/Portal8.5/CTC/layout-templates.
 
 
-**Parent topic:**[Post upgrade steps](../ctc/ctc-upgrade-post.md)
 

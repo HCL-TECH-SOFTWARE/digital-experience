@@ -54,7 +54,6 @@ When you define or modify a rule base user group, the rule-based user groups ada
     If an invalid attribute name is contained in a rule, the group membership determination for rule-based user groups does not work and logs an error. Existing rules might break if your attribute configuration in the system changes, for example, when an attribute is removed or renamed.
 
 
-**Parent topic:**[User registry](../config/config_user_registry.md)
 
 **Related information**  
 

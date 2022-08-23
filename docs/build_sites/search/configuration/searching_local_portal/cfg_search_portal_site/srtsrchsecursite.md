@@ -42,5 +42,4 @@ In order for you to use Portal Search for searching your portal site, HCL Portal
 1.  When you crawl a portal site, be aware that a Portal Search crawl can use extended memory and time, depending on your Portal Search environment and configuration. For details, see the topic about Hints and tips for Portal Search crawls.
 2.  If a user tried to use the Search Center by entering a search string in the portal search box in the theme and clicking search before an administrator enabled the portal site search collection, the user must log out of the portal and log back in again to be able to search the portal search collection. This action includes the administrator who enabled the portal search collection.
 
-**Parent topic:**[Configuring search on a secured portal site](../admin-system/srtcnfgsrchscrprtlsite.md)
 

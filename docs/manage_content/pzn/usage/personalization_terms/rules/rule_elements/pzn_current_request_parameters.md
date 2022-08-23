@@ -20,7 +20,4 @@ when current Request.user is rob
 
 Only data types Text and List are supported.
 
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
-
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
 

@@ -96,5 +96,4 @@ The out-of-the-box \(OOB\) Content Security Policy \(CSP\) resource environment 
 
 4.  Restart the server.
 
-**Parent topic:**[Configuring Content Security Policy](../security/configuring_content_security_policy.md)
 

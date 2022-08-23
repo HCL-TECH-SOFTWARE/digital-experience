@@ -25,9 +25,6 @@ HCL Portal also supports the storage and retrieval of credentials from other vau
 -   Windows™
 -   z/OS®
 
-**Parent topic:**[Security and authentication considerations](../plan/plan_secauth.md)
-
-**Parent topic:**[Portal administration](../practitioner_studio/administration.md)
 
 **Related information**  
 

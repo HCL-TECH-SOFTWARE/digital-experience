@@ -27,5 +27,4 @@ If not all search results are returned, and you are using an LDAP server as the 
 
 **Important:** If your user repository contains more users or groups than the value configured in maxSearchResults, a complete export of users and groups with XML access is not possible.
 
-**Parent topic:**[User registry](../config/config_user_registry.md)
 

@@ -37,7 +37,6 @@ Complete the following steps to delete passwords and other security-sensitive in
     **Note:** Before running additional tasks, check the output for any error messages and, if instructed, correct any items before rerunning the task.
 
 
-**Parent topic:**[Securing](../security/securing_wp.md)
 
 **Related information**  
 

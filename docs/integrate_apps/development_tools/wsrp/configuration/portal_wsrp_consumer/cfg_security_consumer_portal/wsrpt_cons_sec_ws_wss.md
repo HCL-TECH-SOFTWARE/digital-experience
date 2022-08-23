@@ -49,7 +49,6 @@ The WSRP Consumer provides a token of the selected type in the WS-Security heade
 
 The token types correspond to the default WSRP policy sets and provider policy bindings that are available for the configuration of Producers. The tokens are also compatible to a corresponding HCL Portal Version 7 or 8 Producer security configuration.
 
-**Parent topic:**[Configuring security on the Consumer portal](../admin-system/wsrpt_cons_prep_sec.md)
 
 **Related information**  
 

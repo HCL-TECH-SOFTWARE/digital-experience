@@ -126,5 +126,4 @@ Before you install the application, review the included readme file for extra in
     4.  Save your changes.
 
 
-**Parent topic:**[Install and uninstall add-ons using the Solution Installer](../install/inst_si_addons.md)
 

@@ -18,5 +18,4 @@ Embedding a toolbar into a theme with a dynamic content spot provides an optimiz
 -   **[Embedding the HCL Portal 8.5 site toolbar dynamically without a dynamic content spot](../dev-theme/themeopt_cust_toolbar_dynamic_embedding.md)**  
 Embedding a toolbar into a theme dynamically integrates the toolbar without editing the theme HTML template.
 
-**Parent topic:**[Enable new functions in migrated themes](../dev-theme/themeopt_migrate_deploy80.md)
 

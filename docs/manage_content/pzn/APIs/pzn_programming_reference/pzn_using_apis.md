@@ -19,7 +19,4 @@ Use the com.ibm.websphere.personalization.resources.IMVResource interface to ena
 -   **[General tips](../pzn/pzn_general_tips.md)**  
 View some general tips related to resource classloading when using the Personalization API.
 
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
-
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
 

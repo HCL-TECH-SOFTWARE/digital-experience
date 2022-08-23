@@ -20,7 +20,6 @@ Installing includes preparing your operating system, installing HCL Portal and H
 -   **[Windows system - HCL Digital Experience installation](../install/installingwp95-windows.md)**  
 Installing includes preparing your operating system, installing HCL Portal and HCL Web Content Manager, and completing the deployment configuration.
 
-**Parent topic:**[Installing HCL Digital Experience](../install/installing_parent2.md)
 
 **Previous topic:**[Installing the prerequisite software](../install/prereq_software.md)
 

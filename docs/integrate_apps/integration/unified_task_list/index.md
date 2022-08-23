@@ -17,5 +17,4 @@ You can configure specific process servers to run tasks in the Unified Task List
 -   **[Configuring the Unified Task List portlet with Forms Experience Builder](../integrate/utl_configuring_unified_task_list_with_forms_experience_builder.md)**  
 This task provider retrieves tasks from Forms Experience Builder and surfaces them in the Unified Task List portlet.
 
-**Parent topic:**[Integrating](../admin-system/integrating_parent.md)
 

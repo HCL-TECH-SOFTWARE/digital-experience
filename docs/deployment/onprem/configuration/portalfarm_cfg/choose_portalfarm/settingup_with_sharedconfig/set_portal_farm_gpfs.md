@@ -37,7 +37,6 @@ Use the following steps as a guide if you are using GPFS as your shared file sys
     -   mmchfs /dev/gpfs1nsd -F 250000
     -   mmchfs /dev/gpfs3nsd -F 250000
 
-**Parent topic:**[Setting up farm instances with a shared configuration](../install/set_portal_farm_shared.md)
 
 **Related information**  
 

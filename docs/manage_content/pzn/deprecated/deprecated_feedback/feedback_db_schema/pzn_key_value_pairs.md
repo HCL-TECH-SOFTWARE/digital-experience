@@ -39,7 +39,4 @@ The following tables describe what each key represents:
 |wcpRatingResId|The resource \(if any\) that is associated with the rating|
 |wcpRatingCollection|The name of the resource collection associated with the resource|
 
-**Parent topic:**[Feedback database schema](../pzn/pzn_feedback_db_schema.md)
-
-**Parent topic:**[Feedback database schema](../pzn/pzn_feedback_db_schema.md)
 

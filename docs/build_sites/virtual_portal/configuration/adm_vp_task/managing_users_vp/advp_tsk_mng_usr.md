@@ -7,7 +7,6 @@ For the user repository for your virtual portals, you have a choice of using eit
 -   **[Administering the users for virtual portals](../admin-system/advp_tsk_adm_usr.md)**  
 As the master administrator of the portal installation you assign administrative users for the virtual portals. These virtual portal sub-administrators can manage the access rights of the user population of the virtual portal for which they are responsible.
 
-**Parent topic:**[Tasks for administering virtual portals](../admin-system/advptsk.md)
 
 **Related information**  
 

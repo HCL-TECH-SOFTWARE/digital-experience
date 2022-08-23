@@ -23,7 +23,6 @@ HCL Digital Experience supports delegated access control administration.
 -   **[Access Control Caching](../admin-system/acc_control_cache.md)**  
 Access Control internally uses several caches to improve the access control decision times. You can improve access control performance for special scenarios by setting the lifetime and size properties of these caches in the Cache Manager Service. In most cases, HCL Digital Experience will run smoothly with the default cache settings. However, if you have a large number of resources or a large number of customized resources, you may want to adjust cache settings and conduct some tests to find the best performance trade-offs.
 
-**Parent topic:**[Securing](../security/securing_wp.md)
 
 **Related information**  
 

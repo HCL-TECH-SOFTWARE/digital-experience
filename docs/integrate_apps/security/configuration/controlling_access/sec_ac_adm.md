@@ -25,7 +25,6 @@ HCL Portal only protects resources and services. WebSphere® Application Server 
 
 The `Administrator@Portal` and `Security Administrator@Portal` roles contain a special permission that is not available to any other role. This permission allows the Administrator or Security Administrator to make arbitrary changes to the access control configuration of all resources. The Administrator and Security Administrator can create and delete roles, role assignments, and role blocks. If the configuration allows an external security manager such as IBM Security Access Manager to manage role assignments, additional privileges need to be set to allow arbitrary changes to the access control configuration. To change the access control configuration for resources that are externally managed, you must have the `Administrator@External Access Control` or the `Security Administrator@External Access Control` role.
 
-**Parent topic:**[Controlling access](../admin-system/control_access.md)
 
 **Related information**  
 

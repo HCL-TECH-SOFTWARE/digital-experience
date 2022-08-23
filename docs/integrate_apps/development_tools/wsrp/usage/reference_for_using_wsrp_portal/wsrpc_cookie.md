@@ -21,7 +21,6 @@ The following list gives an overview of the supported use cases of the WSRP Cons
     A client can send cookies to the WSRP Consumer. You can customize the Consumer to forward these cookies to the WSRP Producer or to other resources that the WSRP Consumer serves as a proxy. By default, the Consumer does not forward any cookies that the client sends to the WSRP Consumer.
 
 
-**Parent topic:**[Reference for using WSRP with the portal](../admin-system/wsrpr_ref.md)
 
 **Related information**  
 

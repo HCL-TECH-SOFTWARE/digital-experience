@@ -81,7 +81,6 @@ You can exclude pages from being managed in Web Content Manager. You can prevent
 
 **Note:** There is no indication in the user interface whether a page is managed in Web Content Manager or not. Therefore, excluding parts of a site can lead to an inconsistent portal user experience for portal site visitors.
 
-**Parent topic:**[Administering managed pages](../wcm/wcm_mngpages_advadmin.md)
 
 **Related information**  
 

@@ -49,7 +49,6 @@ View&PortletState= Normal HTTP/1.1"
 |`"Firefox/2.0 (compatible; MSIE 5.5; Windows NT 4.0)"`|**user\_agent** The type of Web browser used by the client.|
 |`"JSESSIONID=OXDFAPVR4SXYZOIHSLVGA2Y"`|**cookies** The name and value of a cookie that was sent to the client browser. If multiple cookies were sent, the list is delimited by the semicolon character.|
 
-**Parent topic:**[Logging and analyzing server side site data](../admin-system/adsaconf.md)
 
 **Related information**  
 

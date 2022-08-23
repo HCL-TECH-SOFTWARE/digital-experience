@@ -21,5 +21,4 @@ Follow these steps to configure search integration.
 3.  If you are installing in a clustered environment, resynchronize the nodes.
 
 
-**Parent topic:**[Configuring search integration](../connect/connections_portlets_search_overview.md)
 

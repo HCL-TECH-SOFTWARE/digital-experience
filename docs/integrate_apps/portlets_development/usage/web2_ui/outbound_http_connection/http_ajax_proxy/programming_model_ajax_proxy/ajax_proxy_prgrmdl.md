@@ -16,5 +16,4 @@ The AJAX proxy responds to requests by defined status codes. Possible errors tha
 -   **[Using the AJAX proxy in portlets](../dev-portlet/ajax_proxy_prgrmdl_inplt.md)**  
 Here is how you use the AJAX proxy in portlets.
 
-**Parent topic:**[HTTP proxy for Ajax applications, also known as Ajax Proxy](../dev-portlet/outbhttp_httproxy_4_ajax_apps.md)
 

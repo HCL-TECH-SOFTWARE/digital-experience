@@ -60,7 +60,6 @@ The identity of the objects that are configured in the XML script is expressed b
 
 When setting up the target system in such scenarios, you should use only the XML configuration interface to copy resources from the source system. If you deploy portlets on the target system during the portal installation or if you deploy them using the administration portlets, they will not have the same object IDs as on the source system, so you can run into problems when you later copy other resources that reference them.
 
-**Parent topic:**[Object IDs in XML scripts](../admin-system/adxmlref_objct_ids.md)
 
 **Related information**  
 

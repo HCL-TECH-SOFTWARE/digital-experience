@@ -16,5 +16,4 @@ By default HCL Portal is configured to be accessed through the internal HTTP por
 -   **[Web server usage on DX containers](../containerization/container_webserver_usage.md)**  
 HCL Digital Experience containers support receiving and responding to requests from external web servers, which forward cookies \(such as JSESSIONID, LtpaToken2, or any other required cookies\) for a configuration.
 
-**Parent topic:**[Configuring](../config/configuring_parent2.md)
 

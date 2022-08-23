@@ -100,5 +100,4 @@ There may be occasions when working with HCL Software Support in which they may 
 
 Once an access code is received, for example, for write\_all, and enabled, a message like `Write Access Enabled: write_all` is presented, if the code is valid and accepted. HCL Software Support will provide more information on the specific task required from to work to resolution of your support requirement.
 
-**Parent topic:**[Troubleshooting](../trouble/troubleshooting.md)
 

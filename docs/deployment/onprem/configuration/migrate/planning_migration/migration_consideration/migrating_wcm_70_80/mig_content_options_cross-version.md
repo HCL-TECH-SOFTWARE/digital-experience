@@ -25,5 +25,4 @@ The upgrade can proceed in two ways: syndicator first or subscriber first. It mi
 -   When you syndicate from a newer level to an older level, it is possible to use features on the syndicator that are not available on the subscriber. You should avoid using these features since it might result in syndication errors. If a failure is encountered because of a new feature, the change must be reverted on the syndicator and then syndication of the affected items resume. New features can be tried before the subscriber is upgraded, by saving content with the new features in a library that is not syndicated to an older software level.
 -   When a library is syndicated to another release level, that library must not be syndicated back to any server that it was already syndicated from. Disable any reverse syndicator pairs before you attempt a fix-pack upgrade.
 
-**Parent topic:**[Migrating from Web Content Manager version 7.0 or 8.0](../migrate/mig_content_from_7-0.md)
 

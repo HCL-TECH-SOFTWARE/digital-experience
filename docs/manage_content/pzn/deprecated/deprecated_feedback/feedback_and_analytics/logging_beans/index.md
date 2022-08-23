@@ -31,7 +31,4 @@ CustomLog beans give you the flexibility to log data that does not easily map to
 -   **[PageView beans](../pzn/pzn_pageview_beans.md)**  
 You use PageView beans to log HTTP request data for JSPs \(JavaServer pages\).
 
-**Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
-
-**Parent topic:**[Feedback and analytics](../pzn/pzn_feedbackanalytics.md)
 

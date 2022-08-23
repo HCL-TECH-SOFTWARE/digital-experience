@@ -31,7 +31,6 @@ To keep the earlier portal environment in production and reduce the amount of do
 -   **[Database considerations](../migrate/mig_pre_db.md)**  
 Depending on the type of database that you use, there might be extra considerations or tasks to complete before and after you migrate your data. Review the information that is tailored for your database type to ensure the migration process completes successfully.
 
-**Parent topic:**[Migrating](../migrate/migration.md)
 
 **Related information**  
 

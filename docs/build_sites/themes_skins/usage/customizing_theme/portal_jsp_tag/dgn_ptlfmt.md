@@ -233,5 +233,4 @@ The following section provides detailed descriptions of the <portal-fmt/\> JSP t
     If the user is logged in, this tag returns one of the specified user attributes. value can be any user attribute that is defined to Member Manager.
 
 
-**Parent topic:**[Tags used by the portal JSPs](../dev-portlet/dgn_ptltld.md)
 

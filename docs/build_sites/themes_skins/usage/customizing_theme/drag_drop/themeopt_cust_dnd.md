@@ -9,5 +9,4 @@ In edit mode, portal renders drop targets for all positions where a portlet can 
 -   **[Custom drag sources and drop targets](../dev-theme/themeopt_cust_dndcreate.md)**  
 Drag sources and drop targets must be created according to the HTML 5 specification. In HTML 5, the DataTransfer object is used to exchange data from source to target.
 
-**Parent topic:**[Customizing the theme](../dev-theme/themeopt_cust.md)
 

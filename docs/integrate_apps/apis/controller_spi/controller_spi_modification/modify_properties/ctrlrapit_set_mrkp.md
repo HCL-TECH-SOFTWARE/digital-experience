@@ -39,7 +39,4 @@ Markup markup = markupList.getByName("html");
 
 For more detail about the markup list in the first line of the example and how to obtain it refer to [Obtain a model from the portal](dgn_modelobt.md).
 
-**Parent topic:**[Modifying properties](../dev/ctrlrapit_mdfy_props.md)
-
-**Parent topic:**[Portal administration](../practitioner_studio/administration.md)
 

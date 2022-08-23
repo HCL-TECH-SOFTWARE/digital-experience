@@ -58,7 +58,6 @@ The following list shows and describes the main building blocks of the Digital D
     1.  First, it writes the `[Plugin:ListRenderingContext]` to establish the list-rendering context.
     2.  Then, it renders the component reference to the list appearance component.
 
-**Parent topic:**[Digital Data Connector \(DDC\) for HCL Portal](../social/plrf_ovu.md)
 
 **Related information**  
 

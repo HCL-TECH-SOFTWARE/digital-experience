@@ -72,5 +72,4 @@ You can add a message module that displays system messages, such as error, warni
 -   **[Globalization](../dev-theme/themeopt_themedev_globalization.md)**  
 By default, the WebDAV files in the Simple Theme template are English only, but you can add other locales to your custom theme.
 
-**Parent topic:**[Developing themes and skins](../dev-theme/themeopt_themes.md)
 

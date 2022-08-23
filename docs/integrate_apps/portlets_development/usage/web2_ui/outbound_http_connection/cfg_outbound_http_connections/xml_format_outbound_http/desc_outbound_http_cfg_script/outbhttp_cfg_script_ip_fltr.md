@@ -29,5 +29,4 @@ The following example makes the policies in the `/myproxy` mapping accessible on
 </policy-rules>
 ```
 
-**Parent topic:**[Description of the outbound HTTP connection configuration script](../dev-portlet/outbhttp_cfg_descript.md)
 

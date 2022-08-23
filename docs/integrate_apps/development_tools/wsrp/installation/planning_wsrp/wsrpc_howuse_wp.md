@@ -30,5 +30,4 @@ When Consumers work with WSRP, they perform the following tasks:
     3.  Creating and configuring one or more Producer definitions for the Producer portals from whom you want to consume WSRP services. To work with Producer definitions, use the portal administration portlet **Web Service Configuration**. You can also use the XML configuration interface.
     4.  Consuming WSRP services, that is integrating and using the WSRP services in your portal as remote portlets. To consume WSRP services, use the portal administration portlet **Manage Web Modules**. You can also use the XML configuration interface.
 
-**Parent topic:**[Planning for WSRP](../admin-system/wsrpc_plan.md)
 

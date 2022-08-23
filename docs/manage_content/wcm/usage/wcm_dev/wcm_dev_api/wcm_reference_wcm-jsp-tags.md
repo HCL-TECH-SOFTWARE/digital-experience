@@ -202,5 +202,4 @@ Rendering plug-ins can be referenced within JSP code by using a plug-in tag:
 
 For more information, see [Creating a plug-in tag](../panel_help/wcm_dev_referencing_plugin.md).
 
-**Parent topic:**[The HCL Web Content Manager API](../wcm/wcm_dev_api.md)
 

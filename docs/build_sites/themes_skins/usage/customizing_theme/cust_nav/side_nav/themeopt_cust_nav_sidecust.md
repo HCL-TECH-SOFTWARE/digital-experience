@@ -55,5 +55,4 @@ The ready-to-use layout templates have specific side navigation styles applied. 
 .wpthemeSplitView #layoutContainers .layoutRow .layoutColumn .component-control { width: 850px; }
 ```
 
-**Parent topic:**[Side navigation](../dev-theme/themeopt_cust_nav_side.md)
 

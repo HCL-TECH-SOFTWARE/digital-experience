@@ -32,5 +32,4 @@ The following excerpt from the wkplc.properties file provides some examples of u
     Default: no default
 
 
-**Parent topic:**[Preparing your source environment](../migrate/mig_t_premig_tasks.md)
 

@@ -27,7 +27,6 @@ Export and save your dialog definitions before you migrate to Version 8.5.
 3.  Back up the file that contains the exported dialog definitions to a secure location. You can import your dialog definitions after you migrate to V8.5.
 
 
-**Parent topic:**[Prepare UX Screen Flow Manager](../migrate/mig_pre_uxfm.md)
 
 **Next topic:**[Removing UXFM dialog definitions](../migrate/mig_pre_uxfm_remove.md)
 

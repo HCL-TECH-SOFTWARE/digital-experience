@@ -143,5 +143,4 @@ When you create a social network configuration document for Facebook:
     **Note:** Page notes are deprecated by Facebook.
 
 
-**Parent topic:**[Creating a social network configuration document](../wcm/wcm_sm_config_doc_creating.md)
 

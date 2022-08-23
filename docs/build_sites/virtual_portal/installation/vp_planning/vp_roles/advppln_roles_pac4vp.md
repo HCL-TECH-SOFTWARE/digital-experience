@@ -15,7 +15,6 @@ The inheritance concept of Portal Access Control allows this setup. The combinat
 
 This way, each virtual portal represents a certain sub area of the main portal and can be managed individually.
 
-**Parent topic:**[Virtual portal roles and their capabilities](../admin-system/advppln_roles.md)
 
 **Related information**  
 

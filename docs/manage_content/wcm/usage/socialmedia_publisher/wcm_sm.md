@@ -32,5 +32,4 @@ The following procedures to uninstall the Social Media Publisher must be run on 
 -   **[Known issues with the Social Media Publisher](../wcm/wcm_sm_technotes.md)**  
 These are the current known issues with the Social Media Publisher and their solutions.
 
-**Parent topic:**[Setting up marketing campaigns](../site/site_market.md)
 

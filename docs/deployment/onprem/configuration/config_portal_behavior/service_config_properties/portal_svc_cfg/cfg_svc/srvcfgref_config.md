@@ -516,7 +516,6 @@ In the WebSphere® Integrated Solutions Console, the portal Configuration Servic
 -   **[Portlet Response headers](../admin-system/srvcfgref_ptlt_resp_hdrs.md)**  
 The portlet response headers are part of the portal Configuration Service.
 
-**Parent topic:**[Portal service configuration](../admin-system/srvcfgref.md)
 
 **Related information**  
 

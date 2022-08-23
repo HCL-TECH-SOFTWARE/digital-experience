@@ -21,5 +21,4 @@ Complete the following steps on your source HCL Portal profile.
 
 When migration is complete, you can install the 8.5 version of the PAA file.
 
-**Parent topic:**[Preparing your source environment](../migrate/mig_t_premig_tasks.md)
 

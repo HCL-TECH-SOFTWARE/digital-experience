@@ -35,13 +35,11 @@ View the prerequisites for creating an email action or promotion within the Pers
 -   **[Email administration](../pzn/pzn_email_admin.md)**  
 View the steps you need to complete before your run time server can send personalized email.
 
-**Parent topic:**[Personalization terms](../pzn/pzn_concepts.md)
 
 **Previous topic:**[Attribute Based Administration](../pzn/pzn_attadm.md)
 
 **Next topic:**[Content spots](../pzn/pzn_content_spots.md)
 
-**Parent topic:**[Personalization terms](../pzn/pzn_concepts.md)
 
 **Previous topic:**[Attribute Based Administration](../pzn/pzn_attadm.md)
 

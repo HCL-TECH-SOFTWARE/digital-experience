@@ -29,7 +29,6 @@ Storing authenticated pages in a shared cache introduces security holes. If a ma
 -   **[Troubleshooting the cache](../security/cache_trouble.md)**  
 In general, you should monitor the cache hit rate on the proxy server and adjust the cache size appropriately. If the hit rate is not what you expected, increase the cache size.
 
-**Parent topic:**[Configuring portal behavior](../admin-system/adptlcfg.md)
 
 **Related information**  
 

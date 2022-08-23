@@ -11,7 +11,6 @@ As an administrator you can promote specific pages, documents, or other pieces o
 -   **[Customizing the All Sources scope](../admin-system/srtcustomscope.md)**  
 Delete or replace the All Sources default scope.
 
-**Parent topic:**[Administering Portal Search](../admin-system/srtadmsrch.md)
 
 **Related information**  
 

@@ -10,5 +10,4 @@ Each content item that you create is the equivalent to a web page in a tradition
 
 The look and feel of a content item when displayed in a website depends on what authoring template was used to create the content item, and what presentation template is used to display the content. The presentation template that is used depends on the current context of the content item, and which template mapping applies to the current context of the content item.
 
-**Parent topic:**[Creating reusable assets](../site/site_assets.md)
 

@@ -11,5 +11,4 @@ Consider these best practices when customizing layouts:
 
 Refer to the HCL Digital Experience documentation for details on creating and modifying layouts.
 
-**Parent topic:**[Customizing sites built with Content Template](../ctc/ctc_design_custom.md)
 

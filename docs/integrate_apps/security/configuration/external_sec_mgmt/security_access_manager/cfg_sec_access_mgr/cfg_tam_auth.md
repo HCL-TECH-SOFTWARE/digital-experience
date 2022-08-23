@@ -250,7 +250,6 @@ ConfigEngine.bat enable-tam-tai -DWasPassword=password
 13. Some functions of HCL Digital Experience require the use of the PUT, and DELETE HTTP method. By default, WebSEAL does not allow these requests. You must either allow this method at the applicable WebSEAL ACL and web server, or change the HTTP methods in the x-method-override configuration in the WebSEAL config file webseald-instance.conf.
 
 
-**Parent topic:**[Configuring Security Access Manager](../security/tam.md)
 
 **Related information**  
 

@@ -76,7 +76,4 @@ Choose the appropriate task to remove the application:
 
 **Note:** Check the output for any error messages before you proceed with the next task. If any of the configuration tasks fail, verify the values in the wkplc.properties, wkplc\_dbdomain.properties, and wkplc\_dbtype.properties files.
 
-**Parent topic:**[MovieSite Sample](../pzn/pzn_moviesite_sample.md)
-
-**Parent topic:**[MovieSite Sample](../pzn/pzn_moviesite_sample.md)
 

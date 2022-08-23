@@ -47,7 +47,6 @@ Creating the portal site search collection can fail due to a file path length re
 -   **[Portal Search trace and log files](../admin-system/srrlogtrac.md)**  
 Portal Search provides logging and tracing so that you can get additional information for resolving possible problems.
 
-**Parent topic:**[Search](../wcm/wcm_dev_search.md)
 
 **Next topic:**[Searching pages](../admin-system/mp_search_pages.md)
 

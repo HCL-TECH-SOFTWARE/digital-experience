@@ -15,5 +15,4 @@ Use the following list as a starting point.
     -   Will HCL Digital Experience security implementation be any different?
     -   File system. Will the files be placed in a different directory structure? Will those files require special permissions to run?
 
-**Parent topic:**[Planning for migration](../plan/mig_plan.md)
 

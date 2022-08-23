@@ -31,5 +31,4 @@ Both HCL Digital Experience instances must be installed and operational.
 5.  Restart instance2.
 
 
-**Parent topic:**[Database Management Systems](../config/config_dbms.md)
 

@@ -7,7 +7,6 @@ To support Portal Search in a cluster, you must install and configure a remote s
 -   **[Configuring JCR search in a cluster](../config/config_jcr_search_clus.md)**  
 To enable search in a cluster for content that is stored in the JCR database, you must configure each server in the cluster to access a directory. JCR-based content includes content that is created with Web Content Manager or Personalization.
 
-**Parent topic:**[Search](../wcm/wcm_dev_search.md)
 
 **Previous topic:**[Remote search service](../admin-system/srcusgrmtsrchsrv.md)
 

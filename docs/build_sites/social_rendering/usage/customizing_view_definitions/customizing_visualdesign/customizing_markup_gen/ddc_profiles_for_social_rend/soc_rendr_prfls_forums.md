@@ -747,7 +747,6 @@ The forums topic and reply attachments profile provides access to HCL Connection
     This attribute indicates the time of the last update of this attachment. To display the date in the format of your choice, you can use all date format options that Web Content Manager provides.
 
 
-**Parent topic:**[Digital Data Connector profiles for social rendering](../social/soc_rendr_lst_rndr_prfls.md)
 
 **Related information**  
 

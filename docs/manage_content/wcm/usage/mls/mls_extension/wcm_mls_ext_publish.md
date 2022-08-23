@@ -15,5 +15,4 @@ When an item enters a publish workflow stage the following things happen:
 -   If any draft localized copies of the current item are not in the pending publish state, then nothing happens.
 -   If all draft localized copies of the current item are in the pending publish state, then the current item and its copies are moved to the next workflow stage and a notification sent to relevant locale owners.
 
-**Parent topic:**[Extensions for multilingual sites Multilingual Solution](../wcm/wcm_mls_extensions.md)
 

@@ -24,5 +24,4 @@ You can create a custom skin that is scoped to a specific theme when you copy an
 -   **[Add static resources to a skin](../dev-theme/themeopt_cust_skinstatic.md)**  
 You can add images, URLs, and other static resources to your skin.
 
-**Parent topic:**[Skins](../dev-theme/themeopt_cust_scopeskin.md)
 

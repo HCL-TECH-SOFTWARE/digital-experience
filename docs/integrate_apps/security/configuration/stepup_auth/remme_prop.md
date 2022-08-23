@@ -129,5 +129,4 @@ To access these properties, log in to WebSphere® Integrated Solutions Console a
     Type: java.lang.String
 
 
-**Parent topic:**[Enabling step-up authentication and the Remember me cookie](../security/cfg_auth.md)
 

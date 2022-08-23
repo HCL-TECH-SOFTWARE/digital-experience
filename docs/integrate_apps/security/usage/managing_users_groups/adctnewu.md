@@ -41,7 +41,6 @@ The portlets that are used in this task are Users and Groups
 8.  Click **OK**.
 
 
-**Parent topic:**[Users and groups](../admin-system/adusrgrp.md)
 
 **Related information**  
 

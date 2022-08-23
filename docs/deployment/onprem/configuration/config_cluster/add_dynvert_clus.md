@@ -123,7 +123,6 @@ You can add vertical cluster members to your dynamic cluster. The members share 
 10. Stop and start the web server.
 
 
-**Parent topic:**[Setting up a cluster](../config/config_cluster.md)
 
 **Related information**  
 

@@ -13,7 +13,6 @@ You can add other query parameters, for example for related tags.
 -   **[Using the Rest API to add, update, and delete tags and ratings](../admin-system/tag_rate_api_rest_cud_tr.md)**  
 You can create, update, and delete tags and ratings by using the REST API.
 
-**Parent topic:**[Extending tagging and rating by using service APIs](../admin-system/tag_rate_dev.md)
 
 **Related information**  
 

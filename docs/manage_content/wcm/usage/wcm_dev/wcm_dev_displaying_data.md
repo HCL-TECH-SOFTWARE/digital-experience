@@ -14,5 +14,4 @@ Content from external websites and HCL Web Content Manager can be displayed toge
 
 This function is only available when you display content in HCL Portal. These portlets are not accessible from the Web Content Manager servlet, though standard Java API or tag libraries can be used with a JSP element to achieve the same result.
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 

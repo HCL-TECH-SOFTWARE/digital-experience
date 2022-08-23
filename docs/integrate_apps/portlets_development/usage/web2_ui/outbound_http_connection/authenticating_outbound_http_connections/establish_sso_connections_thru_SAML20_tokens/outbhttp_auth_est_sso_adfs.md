@@ -13,7 +13,6 @@ Certain metadata settings such as the ADFS cookies, the Identity Provider URL, a
 -   **[Defining policy rules for the remote connection \(ADFS\)](../dev-portlet/outbhttp_auth_est_sso_adfs_rules.md)**  
 Learn about how to create a policy rule for the SSO connection. Creating a policy rule is required to use the SSO connection for the Identity Provider that you registered.
 
-**Parent topic:**[Configuration settings for SAML authenticated connections](../dev-portlet/config_settings_saml_auth_connections.md)
 
 **Related information**  
 

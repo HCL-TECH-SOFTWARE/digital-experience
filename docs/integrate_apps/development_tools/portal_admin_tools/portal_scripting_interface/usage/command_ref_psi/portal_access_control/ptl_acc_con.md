@@ -24,5 +24,4 @@ Use the list command to access the list of principals for an action set.
 -   **[Permission blocks - Portal Access Control](../admin-system/perm_blks_pac.md)**  
 Use the show command to access the flags that control distribution of permissions. The first argument is the name of the action set, and the second is the name of the flag to obtain. The optional keyword numeric indicates whether the flag value must be returned as a human readable string, or as a numeric value suitable for programmatic evaluation. Since the string value is subject to translation into different locales, only the numeric value can reliably be used in conditional statements. The numeric value 0 indicates a block, while 1 stands for allowed distribution. The following names are supported for the two flags. Alternative names are documented in the help for the PacList bean.
 
-**Parent topic:**[Command reference for the Portal Scripting Interface](../admin-system/adpsicrf.md)
 

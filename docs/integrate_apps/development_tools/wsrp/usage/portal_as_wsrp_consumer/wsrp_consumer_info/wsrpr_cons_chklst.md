@@ -46,5 +46,4 @@ Use this list to check whether you have obtained and provided all required infor
         If the Producer portal has message authentication configured, the Producer must grant the users of the Consumer portal access permission to the provided portlets.
 
 
-**Parent topic:**[Information that the Consumer exchanges with the Producer](../admin-system/wsrpc_cons_get_info.md)
 

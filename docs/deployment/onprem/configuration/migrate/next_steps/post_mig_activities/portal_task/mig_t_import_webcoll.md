@@ -53,7 +53,6 @@ Complete the following steps on the target portal, using the Manage Search portl
     Any inconsistencies between the exported document count and the imported document count should be resolved the next time the cleanup daemon runs.
 
 
-**Parent topic:**[Portal tasks](../migrate/mig_post_portaltasks.md)
 
 **Related information**  
 

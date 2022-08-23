@@ -28,5 +28,4 @@ Inline item creation with an authoring tool component works best when:
 
 This ensures that the user is taken to an inline edit ready content item when they create a new item by using the inline authoring tool.
 
-**Parent topic:**[Creating an authoring tools element](../panel_help/wcm_dev_elements_authoring-tools_using.md)
 

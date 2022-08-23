@@ -54,5 +54,4 @@ All other services are available only within a community scope.
     HCL Connections business card in HCL Portal is not supported by SmartCloud for Social Business.
 
 
-**Parent topic:**[Configuring Portal to work with HCL Connections in SmartCloud for Social Business](../dev-portlet/integrate_portal_sc4sb.md)
 

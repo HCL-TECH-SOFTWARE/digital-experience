@@ -13,5 +13,4 @@ In Version 8.5, only specific customizations are allowed for the HCL Digital Exp
 -   **[JavaServer Faces implementation](../migrate/mig_post_jsf.md)**  
 The default JavaServer Faces \(JSF\) implementation has changed starting in WebSphere Application Server 8.
 
-**Parent topic:**[Planning for migration](../plan/mig_plan.md)
 

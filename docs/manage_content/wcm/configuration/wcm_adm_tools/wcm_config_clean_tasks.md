@@ -63,5 +63,4 @@ This task deletes all published projects that have been idle since a set number 
     This property defines when the task will run after a server is restarted. Valid offsets are d for days, h for hours, m for minutes, and s for seconds. For example, to start this task twenty minutes after a server is restarted, you set a value of 20m. This setting cannot be scoped to a virtual portal.
 
 
-**Parent topic:**[Web content administration tools](../wcm/wcm_maintain.md)
 

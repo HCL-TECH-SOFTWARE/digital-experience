@@ -48,5 +48,4 @@ An outbound HTTP connection is activated by setting the metadata SSO\_SAML\_20\_
 -   **[Configuration settings for SAML authenticated connections](../dev-portlet/config_settings_saml_auth_connections.md)**  
 To enable a connection policy for SAML-based authentication, the following settings must be defined in the metadata section of the policy, the policy mapping, or the default mapping.
 
-**Parent topic:**[Authenticating outbound HTTP connections](../dev-portlet/outbhttp_authntct.md)
 

@@ -45,7 +45,6 @@ After you set this configuration, the Tag Cloud portlet communicates with those 
 -   **[Configuring the portal Tag Cloud for social rendering](../social/soc_rendr_cfg_tag_cloud.md)**  
 If you include the HCL Portal Tag Cloud portlet on your social pages, you need to configure it to work with social lists.
 
-**Parent topic:**[Working with lists of social objects](../social/soc_rendr_tsk_socl_list.md)
 
 **Related information**  
 

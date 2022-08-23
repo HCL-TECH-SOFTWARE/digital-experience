@@ -37,5 +37,4 @@ You use the Section page templates to create a hierarchy of section items. The s
 
 You can also use the Topics page template to create a flat list of content items. There is also a Standalone Topic page template to create a single piece of content.
 
-**Parent topic:**[Site structure and page templates](../ctc/ctc_arch_sitestruc.md)
 

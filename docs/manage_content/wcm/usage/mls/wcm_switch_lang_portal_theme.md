@@ -19,5 +19,4 @@ To showcase our ongoing efforts in enhancing Multilingual support, we have now a
 
 **Note:** This feature is available for both authenticated and non-authenticated Digital Experience users.
 
-**Parent topic:**[Multilingual deployment, installation, and configuration Multilingual Solution](../wcm/wcm_mls_install_ovr.md)
 

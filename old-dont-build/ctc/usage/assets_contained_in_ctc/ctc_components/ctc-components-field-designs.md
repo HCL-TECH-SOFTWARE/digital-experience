@@ -191,5 +191,4 @@ These design components are used to format different component types.
     If a video is uploaded to the current content, render a video tag in edit mode. Support for older browsers by fallback to object and embed tags.
 
 
-**Parent topic:**[Content Template Components](../ctc/ctc-assets-components.md)
 

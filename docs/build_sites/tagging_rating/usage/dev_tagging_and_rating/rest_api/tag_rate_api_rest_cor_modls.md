@@ -110,7 +110,6 @@ To correlate the tag space model with other models, use the following parameters
     This returns a feed that contains all rating spaces for resources registered in category `category_1` or `category_2`.
 
 
-**Parent topic:**[The REST API](../admin-system/tag_rate_api_rest.md)
 
 **Related information**  
 

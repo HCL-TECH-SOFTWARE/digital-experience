@@ -147,7 +147,6 @@ Localized versions: fs-type1:\\themes\\Portal8.5\\nls
 -   theme.html: Defines the markup that is identical for all the pages to which this theme is applied.
 -   theme\_sidenav.html: Defines a theme layout that uses a side navigation.
 
-**Parent topic:**[Understanding the Portal 8.5 modularized theme](../dev-theme/themeopt_defaultparts.md)
 
 **Related information**  
 

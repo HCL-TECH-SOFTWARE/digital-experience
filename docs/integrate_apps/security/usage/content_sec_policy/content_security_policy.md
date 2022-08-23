@@ -42,5 +42,4 @@ The following covers the basics of implementing Content Security Policy \(CSP\) 
 -   **[Configuring Content Security Policy](../security/configuring_content_security_policy.md)**  
 To enable Content Security Policy on HCL Digital Experience, you need to configure your web server to return the Content-Security-Policy header.
 
-**Parent topic:**[Securing](../security/securing_wp.md)
 

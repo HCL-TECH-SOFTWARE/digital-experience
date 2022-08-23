@@ -100,5 +100,4 @@ To organize your authoring templates, presentation templates, and components, yo
 -   .
 -   wcm.comps.user.selection
 
-**Parent topic:**[WebDAV](../wcm/wcm_webdav_overview.md)
 

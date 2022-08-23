@@ -46,5 +46,4 @@ You can configure HCL Web Content Manager to use different editors for rich text
 
 A dynamic context path value can be defined by adding a token to the context path that corresponds to a key and value pair to the Web Content Manager configuration service environment provider. When this key is used as the token in the jsp value field, it is replaced dynamically at render time. For example: mycustomkey;myfile, where mycustomkey is a constant within the Web Content Manager configuration service.
 
-**Parent topic:**[Authoring portlet settings](../panel_help/wcm_config_authoringportlet.md)
 

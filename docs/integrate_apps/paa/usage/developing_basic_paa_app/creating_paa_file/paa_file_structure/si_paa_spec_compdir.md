@@ -205,5 +205,4 @@ Using the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/paa-sample
     ```
 
 
-**Parent topic:**[PAA file structure overview](../config/si_paa_spec_ov.md)
 

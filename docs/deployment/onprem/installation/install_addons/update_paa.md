@@ -95,5 +95,4 @@ After you run the install-paa-update command, you must deploy the changes to you
     4.  Save your changes.
 
 
-**Parent topic:**[Managing your existing Portal Application Archive \(PAA\) file](../config/uproll_paa.md)
 

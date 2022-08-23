@@ -17,5 +17,4 @@ There are two types of caching:
     This type of caching provides a much smaller performance improvement. The cache is typically located in each user's Web browser. This type of caching can be used for all content, including content that is personalized. If the computer is shared among multiple users, a user may see personalized content from other users if served from the browser cache. To prevent this from happening, do not enable private caching, even for personalize content.
 
 
-**Parent topic:**[Caching](../security/tune_cache.md)
 

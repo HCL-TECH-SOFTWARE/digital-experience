@@ -32,7 +32,6 @@ The HTML – Analytics component is a sample HTML component that you can use to 
 -   **[Enabling default microformat support in Web Content Viewers](../admin-system/sa_asa4wcm_tgs_wcvp.md)**  
 Web Content Viewers provide support for Active Site Analytics microformats by default. You can use this support to inject microformats into your content design or presentation templates.
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 
 **Related information**  
 

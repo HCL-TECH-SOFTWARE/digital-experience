@@ -13,7 +13,6 @@ Portal system administrators can administer the outbound HTTP connection configu
 -   **[Sample administration tasks](../dev-portlet/outbhttp_cfg_smpl_adm_tasks.md)**  
 Here you find some procedures for running administration tasks on the outbound HTTP connection settings. These tasks use the portal configuration engine interface.
 
-**Parent topic:**[Outbound HTTP connection](../dev-portlet/outbound_http.md)
 
 **Related information**  
 

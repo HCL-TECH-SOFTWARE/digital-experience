@@ -179,5 +179,4 @@ Similar to the GET, the PUT sets/adds library component references for file or i
 
 For the creation scenario, the same pattern can be used to supply library component references.
 
-**Parent topic:**[REST service for Web Content Manager](../wcm/wcm_rest.md)
 

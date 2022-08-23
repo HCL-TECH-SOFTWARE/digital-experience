@@ -4,7 +4,6 @@ Portlet load monitoring provides an API for accessing the monitoring data. You c
 
 **Note:** This API can change for future portal versions. If you use this API, you may have to modify your code in future portal versions in order to adapt to API changes.
 
-**Parent topic:**[Portlet load monitoring for HCL Portal](../dev-portlet/plmc.md)
 
 ## Portlet load metrics interface
 

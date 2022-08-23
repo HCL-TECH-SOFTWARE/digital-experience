@@ -73,5 +73,4 @@ To render a complete list of information with a table, you can use a design like
 </table>
 ```
 
-**Parent topic:**[How to use a federated documents rule in a personalization component \| HCL Web Content Manager](../wcm/wcm_dev_feddocs_using.md)
 

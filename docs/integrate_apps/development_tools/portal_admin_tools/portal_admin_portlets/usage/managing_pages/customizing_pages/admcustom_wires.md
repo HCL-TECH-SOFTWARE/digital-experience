@@ -12,5 +12,4 @@ The wiring tool allows wires to be created in situations which are not handled b
 
 In order to view the tool itself, users must possess at least "User" role permissions on the page and the portlet. Further access checks are performed before allowing the user to view, create, or delete wires between portlets. The user must possess at least "User" role permissions on a page and the wired portlets on it to be able to view wires for the page. Users may also be able to create or delete personal wires, which affect their view of the page, or create or delete public wires, which affect all users' view of the page. Users must possess at least "Privileged User" role permissions on the page and "User" permissions on the portlets to be able to create or delete personal wires, while at least "Editor" role permissions are required on the page and "User" permissions on the portlets to be able to create or delete public wires.
 
-**Parent topic:**[Customizing pages](../admin-system/admcustom.md)
 

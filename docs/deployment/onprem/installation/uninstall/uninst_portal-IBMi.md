@@ -52,5 +52,4 @@ If you have a complete and functional uninstallation program, you can uninstall 
 9.  After uninstalling Digital Experience and WebSphere Application Server, you can also delete the Installation Manager. Run the ./uninstallc command from the qibm/userdata/InstallationManager/uninstall directory.
 
 
-**Parent topic:**[IBM i: Preparing to uninstall](../install/prep_uninst-IBMi.md)
 

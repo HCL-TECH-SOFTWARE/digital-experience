@@ -21,7 +21,6 @@ Users with administrator access in HCL Portal can assign the Can Run As User rol
 -   **[Impersonating an unauthenticated user](../admin-system/impers_user_unauth.md)**  
 Users with administrator access in HCL Portal can impersonate an unauthenticated user.
 
-**Parent topic:**[Users and groups](../admin-system/adusrgrp.md)
 
 **Related information**  
 

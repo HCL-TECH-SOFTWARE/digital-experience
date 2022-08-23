@@ -27,13 +27,11 @@ Ensure you have properly followed the steps in [Export the WAR file and install 
 
 You can now create a simple content rule.
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Export the WAR file and install the portlet](../pzn/pzn_demo_export_war_install_portlet.md)
 
 **Next topic:**[Create a simple content rule](../pzn/pzn_demo_create_simple_content_rule.md)
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Export the WAR file and install the portlet](../pzn/pzn_demo_export_war_install_portlet.md)
 

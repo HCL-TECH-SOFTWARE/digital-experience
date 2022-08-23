@@ -165,7 +165,6 @@ Follow these steps to export and import a web content library. The server that t
 
 -   If you receive 500 errors on ext2 and ext3 versions of Linux, you exceeded the number of children that a parent folder can hold. You cannot store more than 32768 children under one folder on ext2 and ext3 versions of Linux. Move some content items out of the affected site area to another site area so that none of your site areas contain more than 32768 children under one folder and then try exporting again. You can move the content items back to the correct site areas when you import the library.
 
-**Parent topic:**[Exporting and importing web content libraries](../wcm/wcm_config_wcmlibrary_export_main.md)
 
 **Related information**  
 

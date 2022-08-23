@@ -36,5 +36,4 @@ If you plan to do a manual migration, review the following considerations first:
 -   You lose customization and personalization during a manual migration:
     -   No process exists to preserve and bring this information to a new environment.
 
-**Parent topic:**[Migration considerations](../plan/mig_plan_high_availability.md)
 

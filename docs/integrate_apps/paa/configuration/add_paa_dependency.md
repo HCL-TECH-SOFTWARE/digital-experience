@@ -88,5 +88,4 @@ The Solution Installer uses the following rules to determine whether a PAA file 
     -   The PAA dependency is deployed. The higherVersion attribute is set and the value is greater than the current version of PAA dependency.
     -   The PAA dependency is deployed. The versions attribute is set and the current version of PAA dependency matches any one of the values.
 
-**Parent topic:**[Developing basic PAA file applications](../config/dev_sol_app.md)
 

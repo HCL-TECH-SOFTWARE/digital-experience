@@ -58,5 +58,4 @@ The IBM Installation Manager is used to install installation packages such as HC
     **Note:** Skip this step if you already have an existing installation.
 
 
-**Parent topic:**[Preparing your Linux system for installation](../install/installingwp95-linux.md)
 

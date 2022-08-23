@@ -15,7 +15,6 @@ This task provider retrieves tasks from Forms Experience Builder and surfaces th
 6.  Add a wire to link the Forms Experience Builder portlet and the Unified Task List portlet. For more information on adding wires, see *Adding a wire* in the related links.
 
 
-**Parent topic:**[Integrating business processes](../integrate/utl_unified_task_list_porlet.md)
 
 **Related information**  
 

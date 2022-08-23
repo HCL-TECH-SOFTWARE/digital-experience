@@ -13,5 +13,4 @@ User and group names must comply with both the database management system softwa
 3.  Create the `${dbdomain}``dbdomain` database runtime group. Use `${${dbdomain}.DbRuntimeRoleName}``dbdomain.DbConfigRoleName` as the group name on your operating system.
 
 
-**Parent topic:**[Manual Steps: Database Transfer option in the Configuration Wizard](../eua-workflows/kc-db-parent.md)
 

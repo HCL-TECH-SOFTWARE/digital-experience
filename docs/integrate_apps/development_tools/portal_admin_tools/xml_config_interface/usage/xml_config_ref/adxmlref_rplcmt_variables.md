@@ -30,5 +30,4 @@ The following table shows the available variables and provides examples of the r
 |`$user_install_root$`|/opt/WebSphere/wp\_profile|
 |`$wp_profile_root$`|/opt/WebSphere/wp\_profile|
 
-**Parent topic:**[XML configuration reference](../admin-system/adxmlref.md)
 

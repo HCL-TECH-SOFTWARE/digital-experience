@@ -17,5 +17,4 @@ The settings in the following example code snippet enable an SSO outbound connec
 -   The policy attribute `basic-auth-support` enables the authentication filter.
 -   The value of the metadata parameter `hpaa.authtype` specifies the authentication type as SSO authentication by using SPNEGO tokens.
 
-**Parent topic:**[Authenticating outbound HTTP connections](../dev-portlet/outbhttp_authntct.md)
 

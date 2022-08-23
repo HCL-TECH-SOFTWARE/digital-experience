@@ -79,5 +79,4 @@ If you are providing device provisioning, you must install a MobileFirst server 
 
 The Application Center Ear is an optional application that provides an application store environment. If you are using it to manage applications on devices as an MDM solution, you need a MobileFirst server to run the MobileFirst EAR and the Application Center EAR.
 
-**Parent topic:**[Integrating with IBM MobileFirst](../integrate/wl_integrt.md)
 

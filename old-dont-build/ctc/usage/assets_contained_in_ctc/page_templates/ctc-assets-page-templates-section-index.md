@@ -51,5 +51,4 @@ This page includes the following portlets:
     -   The CSS class of contentBlock is applied to the container DIV.
 -   A Dynamic Sidebar portlet. The context for this portlet is inherited from the parent page. This displays the content that is linked to by the "Sidebar" element on the section content.
 
-**Parent topic:**[Page Templates](../ctc/ctc-assets-page-templates.md)
 

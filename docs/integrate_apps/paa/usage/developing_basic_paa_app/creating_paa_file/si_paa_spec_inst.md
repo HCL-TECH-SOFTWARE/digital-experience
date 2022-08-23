@@ -20,5 +20,4 @@ In earlier versions of the Solution Installer, it was necessary to add an `SCU` 
 
 Developers can also implement extra configuration extension points that are not directly related to deploying resources in the PAA file. An example is a task to create a resource environment custom property. Read the [Developing advanced PAA file applications](dev_sol_app_adv.md) for information. Tasks to implement these extension points can also be added to an XML file in the config/includes directory. When they follow the naming scheme pattern, they are registered in the component level sdd.xml file with the `SCU` elements and automatically run at run time. In this way, the Solution Installer can handle both auto-generated and developer-provided code.
 
-**Parent topic:**[Create a Portal Application Archive \(PAA\) file](../config/si_paa_spec.md)
 

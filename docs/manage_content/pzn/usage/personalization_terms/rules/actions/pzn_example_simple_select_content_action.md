@@ -14,7 +14,4 @@ Select NewsArticle
   	     order as is
 ```
 
-**Parent topic:**[Actions](../pzn/pzn_actions.md)
-
-**Parent topic:**[Actions](../pzn/pzn_actions.md)
 

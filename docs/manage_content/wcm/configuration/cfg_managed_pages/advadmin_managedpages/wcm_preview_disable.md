@@ -32,7 +32,6 @@ You disable the preview option in the virtual portal configuration service.
         If you defined the property `global.wp_toolbar_sitepreview.enabled` listed earlier, it acts as a fallback setting for virtual portals that do not have the preview option set. For more information about prefixes, placeholders, and the order in which properties are evaluated, read *Virtual Portal Configuration Service*.
 
 
-**Parent topic:**[Previewing as another user](../wcm/wcm_mngpages_preview_changes.md)
 
 **Related information**  
 

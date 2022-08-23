@@ -17,7 +17,6 @@ OutboundConnectionModel model = home.getOutboundConnectionModelProvider().
 
 The code that calls the SPI must run in the context of the portal server.
 
-**Parent topic:**[Configuring outbound HTTP connections by using the Model Controller SPI](../dev-portlet/outbhttp_cfg_mcspi.md)
 
 **Next topic:**[Obtaining the Controller SPI](../dev-portlet/outbhttp_cfg_mcspi_obtstrlrspi.md)
 

@@ -47,7 +47,6 @@ http://host\_name:port\_number/wps/wcm/connect/library\_name/site\_area\_name/co
 
 -   To pre-render individual content items, the site area that is specified in the URL must either be a site area set in connect.moduleconfig.cacher.task.siteareas in the **WCM WCMConfigService** service, or you must have previously manually pre-rendered the site area using "SRV=cacheSite" so that the site area already exists in the location you pre-render to.
 
-**Parent topic:**[Pre-rendered delivery](../wcm/wcm_config_delivery_pre-rendered.md)
 
 **Related information**  
 

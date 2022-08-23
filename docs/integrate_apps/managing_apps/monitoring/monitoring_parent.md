@@ -9,5 +9,4 @@ You can collect data about the usage of your portal and analyze them.
 -   **[Auditing](../admin-system/sec_audit.md)**  
 HCL Digital Experience includes an auditing function that allows users to log certain events and their originators in to a separate log file. This file can then be used to track administrative activities.
 
-**Parent topic:**[HCL Digital Experience 9.5 Product Documentation](../welcome/wp95_welcome.md)
 

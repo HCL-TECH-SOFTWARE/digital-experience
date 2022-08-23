@@ -11,5 +11,4 @@ The configuration of a custom outbound connection filter definition includes a m
 -   **[Built-in configuration settings for custom outbound connection filters](../dev-portlet/outbhttp_cust_srvc_filtrs_cfg_sets_blt_in.md)**  
 The following built-in metadata setting for custom connection filter is defined.
 
-**Parent topic:**[Using programmatic extensions for outbound HTTP connections](../dev-portlet/outbhttp_progr_xtns.md)
 

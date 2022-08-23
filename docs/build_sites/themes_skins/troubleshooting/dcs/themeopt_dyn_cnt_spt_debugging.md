@@ -22,5 +22,4 @@ When you enable the visualization feature for dynamic content spots, that settin
 
 Dynamic content spot debugging, development mode, reports, and client tracing do not persist across a cluster or a server restart either.
 
-**Parent topic:**[Working with dynamic content spots](../dev-portlet/csa2r_dyn_cntnt_spot.md)
 

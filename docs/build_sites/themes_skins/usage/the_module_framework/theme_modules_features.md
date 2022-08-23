@@ -111,7 +111,6 @@ Theme modules contribute resources, such as JavaScript, CSS and HTML, to a theme
 |wp\_portlet\_css|Styles for HCL Administrative portlets.|
 |getting\_started\_module|Adds the default simple module.|
 
-**Parent topic:**[The module framework](../dev-theme/themeopt_module.md)
 
 **Related information**  
 

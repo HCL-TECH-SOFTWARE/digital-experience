@@ -60,9 +60,6 @@ The Theme Optimization Analyzer portlet which is part of the Portal administrati
 -   **[How to Clear the Theme Caches](../wcm/clear_themes_caches.md)**  
 The Theme Optimization Analyzer portlet which is part of the Portal administration gives users the ability to clear theme related caches.
 
-**Parent topic:**[Theme Optimization Analyzer](../dev-theme/themeopt_an_analyzer.md)
-
-**Parent topic:**[Theme Optimization Analyzer](../dev-theme/themeopt_an_analyzer.md)
 
 **Related information**  
 

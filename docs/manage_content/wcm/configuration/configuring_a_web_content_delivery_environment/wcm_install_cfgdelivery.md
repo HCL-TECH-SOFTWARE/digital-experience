@@ -11,5 +11,4 @@ Both HCL Web Content Manager generated web pages and content from external data 
 -   **[Pre-rendering options](../wcm/wcm_config_delivery_pre-rendered_enable.md)**  
 You can enable pre-rendering so that content can be viewed either through an HCL Web Content Manager application or as a stand-alone site that is accessed through a web server.
 
-**Parent topic:**[HCL Web Content Manager](../wcm/wcm_install_cfg.md)
 

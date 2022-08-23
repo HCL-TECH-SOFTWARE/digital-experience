@@ -40,5 +40,4 @@ Attributes:
     Returns: String; the value of the client profile's attribute name. Can be null.
 
 
-**Parent topic:**[Expression language beans for accessing programming models](../dev-theme/themeopt_el_bean.md)
 

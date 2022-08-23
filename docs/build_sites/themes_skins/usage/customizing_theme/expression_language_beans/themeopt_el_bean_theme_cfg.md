@@ -26,5 +26,4 @@ Attributes:
     Returns: String, the property value. It can be null.
 
 
-**Parent topic:**[Expression language beans for accessing programming models](../dev-theme/themeopt_el_bean.md)
 

@@ -41,5 +41,4 @@ Mary needs the authority to delete Hans from the Editor@Market News Page role. H
 -   Mary is at least Editor@Marketing News Page, since Hans will be deleted from the Editor role type.
 -   Mary has a Delegator@Marketing Group role. Mary cannot delete arbitrary users or groups from the Editor@Market News Page role. She can delete only those users and groups for which she has a Delegator role. Because Hans is a member of the Marketing group, Mary has a Delegator role for Hans.
 
-**Parent topic:**[Controlling access](../admin-system/control_access.md)
 

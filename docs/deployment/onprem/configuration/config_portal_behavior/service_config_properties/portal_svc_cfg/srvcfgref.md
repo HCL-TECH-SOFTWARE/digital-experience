@@ -54,7 +54,6 @@ The portal State Manager Service is the access point for managing the navigation
 -   **[Virtual Portal Configuration Service](../admin-system/srvcfg_virtual_portal.md)**  
 The Virtual Portal configuration service \(WP VirtualPortalConfigService\) enables you to specify properties for the default virtual portal and for specific virtual portals. Refer to the Property names section for details about the portal settings this configuration supports.
 
-**Parent topic:**[Setting service configuration properties](../admin-system/adsetcfg.md)
 
 **Related information**  
 

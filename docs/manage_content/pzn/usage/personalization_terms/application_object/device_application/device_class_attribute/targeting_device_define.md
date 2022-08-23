@@ -49,7 +49,4 @@ HTML_4_0
 |Create client definitions, and add to existing device classes.|You can also create client definitions through an XML file that contains the device information. For more information, see the *Device classes* topics in the *Developing Themes and Skins* section for more information and examples.|
 |Create custom class definitions, and add client information to your class definitions.|Class definitions might also be created through an XML file that contains the class information. After you create your device class, you must add appropriate clients by using XML. You might need to create a custom theme for this class. For more information, see the *Device classes* topics in the *Developing Themes and Skins* section for more information and examples.|
 
-**Parent topic:**[Device class attribute](../contarget/targeting_device.md)
-
-**Parent topic:**[Device class attribute](../contarget/targeting_device.md)
 

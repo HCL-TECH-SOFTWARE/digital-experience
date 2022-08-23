@@ -14,5 +14,4 @@ For example, a site area with the name "News" would be referenced in the bundle 
 
 If you change the value "News" to "My News" and save the archive, users editing and modifying content see the title "My News" when they author content.
 
-**Parent topic:**[Providing text providers](../ctc/ctc_design_custom_prov.md)
 

@@ -13,7 +13,6 @@ Multiple clusters and portal farms are advanced configurations.
 -   **[HCL Digital Experience roadmap: Web content servers](../install/rm_web_content_dev.md)**  
 In this roadmap, the web server, database, and user registry software are distributed to different physical servers.
 
-**Parent topic:**[Roadmaps to deploy your HCL Digital Experience system](../install/deployment_patterns.md)
 
 **Related information**  
 

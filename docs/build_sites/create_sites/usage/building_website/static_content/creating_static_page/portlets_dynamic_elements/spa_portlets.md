@@ -26,5 +26,4 @@ The Breadcrumb Trail portlet allows you to add the navigation path to your stati
 -   **[The SPA Resource Addressability portlet](../dev/spa_portlet_pagelist.md)**  
 The SPA Resource Addressability portlet allows you to add a dynamically computed list of links to portal resources to a static page. This list is produced dynamically via a POCURI \(Piece Of Content URI\).
 
-**Parent topic:**[Creating a static page](../dev/spa_define_page.md)
 

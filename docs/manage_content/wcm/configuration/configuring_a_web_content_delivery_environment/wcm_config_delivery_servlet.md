@@ -91,5 +91,4 @@ Like any other URL request that is made to a Web Content Manager Server, Custom 
     In this example, the content being retrieved by this URL is saved in the Basic Site Cache, and expired after 9000 seconds \(two and half hours\).
 
 
-**Parent topic:**[Delivering web content](../wcm/wcm_cms_delivery_system.md)
 

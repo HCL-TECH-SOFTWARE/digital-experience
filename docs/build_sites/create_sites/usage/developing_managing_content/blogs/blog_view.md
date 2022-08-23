@@ -33,5 +33,4 @@ You can view the blogs that are created in a specific library and you can view t
 
 After you view posts, you can add comments to share your thoughts. To add a comment, click **Add a Comment**.
 
-**Parent topic:**[Blogs](../admin-system/blog_work.md)
 

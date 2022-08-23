@@ -69,7 +69,6 @@ You can use these parameters to customize the build-initial-release-paa task whe
     Add this parameter if you are staging a large set of data. For example, add this string to your command: -javaoption -Xmx2048M. Depending on your system and the amount of data, the -Xmx value might be higher. Use 2048 Mb as a starting value.
 
 
-**Parent topic:**[Staging to production](../deploy/dep_intr.md)
 
 **Related information**  
 

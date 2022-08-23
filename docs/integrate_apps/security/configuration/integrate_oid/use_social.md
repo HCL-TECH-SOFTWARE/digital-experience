@@ -340,7 +340,6 @@ Users can always register and log in with HCL Portal credentials. With the enabl
 
 New users can register a new HCL Portal profile with a valid identity provider specified in **labeledURI**. Existing users can update their profile with a valid identity provider specified in **labeledURI**. To support the profile update, a writable user repository must exist. They can then log on to HCL Portal with the alternative login field. They are redirected to the identity provider login page.
 
-**Parent topic:**[Integrating with OpenID authentication](../security/use_openid.md)
 
 **Related information**  
 

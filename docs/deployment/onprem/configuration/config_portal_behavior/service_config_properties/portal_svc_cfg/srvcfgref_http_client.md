@@ -42,5 +42,4 @@ In the WebSphere® Integrated Solutions Console, the portal HTTP Client Service 
     Use this property to specify a particular host for which no proxy connection is used, even if a proxy is configured. You can set this property multiple times. Specify one setting for each host that is excluded from proxy connections.
 
 
-**Parent topic:**[Portal service configuration](../admin-system/srvcfgref.md)
 

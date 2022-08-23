@@ -6,5 +6,4 @@ IBM® WebSphere® Application Server can have multiple TAIs registered for authe
 
 Normal configuration of an external authentication server protects the HTML-based entry points into the portal, for example, /wps/myportal. When the authentication server handles the initial request, shared tokens known to the authentication server are exchanged and used for subsequent requests through the authentication server. Similarly, when the request makes it to the Portal Java™ virtual machine, the TAIs handle the initial authentication trust request. Then, they generate an LtpaToken or LtpaToken2 shared token for subsequent requests, including REST or XML-based requests.
 
-**Parent topic:**[Enabling HTTP Basic Authentication for simple clients](../security/tait_nbl_hba4sc.md)
 

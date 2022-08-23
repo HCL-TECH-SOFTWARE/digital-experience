@@ -21,5 +21,4 @@ The information in these files are basic instructions. Before making any changes
 5.  Review the summary information, and then run the process to uninstall the interim fix.
 
 
-**Parent topic:**[Managing your HCL Portal environment](../install/iim_manage_wp.md)
 

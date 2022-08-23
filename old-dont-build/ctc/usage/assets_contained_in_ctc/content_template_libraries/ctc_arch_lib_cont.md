@@ -6,5 +6,4 @@ If you use Content Template Catalog to build a site rather than as a site manage
 
 The content of the Content library is not translated. If you want to support multiple locales, see [How to apply the multilingual solution to Content Template sites](ctc_deploy_locale.md).
 
-**Parent topic:**[Content Template libraries](../ctc/ctc_arch_lib.md)
 

@@ -11,5 +11,4 @@ You can influence the LTPA token forwarding behavior. To do so, proceed as follo
 2.  Restart the portal or the cluster for the new setting to become active.
 
 
-**Parent topic:**[Customizing the WSRP resource proxy](../admin-system/wsrpt_cons_res_proxy.md)
 

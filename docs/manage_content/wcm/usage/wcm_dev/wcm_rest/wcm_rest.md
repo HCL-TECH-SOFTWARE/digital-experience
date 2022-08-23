@@ -27,7 +27,6 @@ This API allows you to find any page that has a WCM Rendering or Script portlet 
 -   **[Reference material for the Web Content Manager REST service](../wcm/wcm_rest_ref.md)**  
 Reference material for REST response codes, links, media types, and attachments.
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 
 **Related information**  
 

@@ -7,5 +7,4 @@ The portal Puma Store Service contains the configuration properties for the Port
 -   **[Puma Validation Service](../admin-system/srvcfgref_puma_validn.md)**  
 The portal PUMA Validation Service contains the configuration properties for the validation component of PUMA.
 
-**Parent topic:**[Portal Security Services](../admin-system/srvcfgref_secy.md)
 

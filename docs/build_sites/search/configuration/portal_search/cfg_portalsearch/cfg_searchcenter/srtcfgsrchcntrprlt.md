@@ -15,5 +15,4 @@ The Search Center provides scopes for users to select different sources for the 
 -   **[Configuring search by metadata for the Search Center portlet](../admin-system/srtcfg_sc_metadata.md)**  
 You can configure the Search Center so that users can refine their search by metadata.
 
-**Parent topic:**[Administering Portal Search](../admin-system/srtadmsrch.md)
 

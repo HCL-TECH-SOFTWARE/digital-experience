@@ -17,5 +17,4 @@ The sample content and demo site included with Content Template Catalog contain 
 -   **[Enabling anonymous search](../ctc/ctc_deploy_search_template.md)**  
 For websites that allow anonymous users to view the site, you need to configure search to allow anonymous users to search your site.
 
-**Parent topic:**[Content Template Catalog 4.4](../ctc/ctc_intro.md)
 

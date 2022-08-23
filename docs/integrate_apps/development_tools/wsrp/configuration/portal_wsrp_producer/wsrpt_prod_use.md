@@ -15,5 +15,4 @@ If consumed portlets are customized on the Consumers portal, then the Producer c
 6.  [Changing the WSRP Producer context root](../admin-system/wsrpt_chg_prod_uri.md)  
 The context root for the WSRP Producer references the context root for the WSRP Producer facade servlet. This context root is the entry point for all WSRP protocol traffic, and you can change the context root as required to support your environment. This customization is optional.
 
-**Parent topic:**[WSRP services](../admin-system/wsrpc.md)
 

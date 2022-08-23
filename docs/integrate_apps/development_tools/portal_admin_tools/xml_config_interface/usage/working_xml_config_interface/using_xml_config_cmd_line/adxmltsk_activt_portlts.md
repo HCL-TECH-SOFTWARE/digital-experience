@@ -4,5 +4,4 @@ You can change the states of portlets, portlet applications, and web application
 
 The ActivatePortlet.xml example shows you how to complete this step.
 
-**Parent topic:**[Using the XML configuration command line client](../admin-system/adxmltsk_cmdln.md)
 

@@ -22,5 +22,4 @@ This page includes the following portlets:
     -   The content that is displayed in the list is formatted by using this list presentation: CTC Design / List Presentation Components / Automatic Landing Navigation List Design with Content
     -   The CSS class of contentFeature is applied to the container DIV.
 
-**Parent topic:**[Page Templates](../ctc/ctc-assets-page-templates.md)
 

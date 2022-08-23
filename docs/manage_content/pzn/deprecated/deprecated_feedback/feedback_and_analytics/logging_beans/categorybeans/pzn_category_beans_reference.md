@@ -50,7 +50,4 @@ public int      getCategoryCount( HttpServletRequest request,
 
 ```
 
-**Parent topic:**[Category beans](../pzn/pzn_category_beans.md)
-
-**Parent topic:**[Category beans](../pzn/pzn_category_beans.md)
 

@@ -10,9 +10,6 @@ An unsupported URI schema was detected in a skin you are using. The skin metadat
 
 Update your skin metadata with the key the tool suggests to a supported schema.
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
-
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 
 **Related information**  
 

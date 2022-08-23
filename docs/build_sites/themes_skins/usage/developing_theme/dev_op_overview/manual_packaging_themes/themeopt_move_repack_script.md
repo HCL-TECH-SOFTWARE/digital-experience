@@ -23,7 +23,6 @@ You must adapt the scripts that register the custom theme and skins that were mo
     ```
 
 
-**Parent topic:**[Manually packaging themes for deployment](../dev-theme/themeopt_move_repackstatic.md)
 
 **Related information**  
 

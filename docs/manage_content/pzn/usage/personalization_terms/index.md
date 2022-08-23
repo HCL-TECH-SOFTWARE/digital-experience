@@ -47,13 +47,11 @@ The Request Context is the interface used to access various attributes for rules
 22. [Query framework](../pzn/pzn_query_framework.md)  
 The query framework is an object representation of a query.
 
-**Parent topic:**[Digital Experience Personalization](../pzn/pzn_overview.md)
 
 **Previous topic:**[How a site is personalized](../pzn/pzn_how_site_personalized.md)
 
 **Next topic:**[The Personalization interface](../pzn/pzn_portlets.md)
 
-**Parent topic:**[Digital Experience Personalization](../pzn/pzn_overview.md)
 
 **Previous topic:**[How a site is personalized](../pzn/pzn_how_site_personalized.md)
 

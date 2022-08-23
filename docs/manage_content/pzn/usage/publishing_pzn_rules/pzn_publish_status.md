@@ -13,11 +13,9 @@ All publish jobs that are currently running or have been completed are displayed
     If you click this icon, you can no longer view the status of that job.
 
 
-**Parent topic:**[Publishing personalization rules](../pzn/pzn_depub.md)
 
 **Previous topic:**[Publishing personalization rules over SSL](../pzn/pzn_publish_secure.md)
 
-**Parent topic:**[Publishing personalization rules](../pzn/pzn_depub.md)
 
 **Previous topic:**[Publishing personalization rules over SSL](../pzn/pzn_publish_secure.md)
 

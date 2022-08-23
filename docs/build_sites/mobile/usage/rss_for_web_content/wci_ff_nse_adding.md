@@ -35,5 +35,4 @@ For example:
 
 The namespace label "ibmwcm" can be changed if the label specified in the namespace declaration matches the label that is used on the extended elements in the feed.
 
-**Parent topic:**[RSS Namespace Extension for web content](../wci/wci_ff_nse.md)
 

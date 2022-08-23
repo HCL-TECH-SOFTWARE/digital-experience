@@ -64,5 +64,4 @@ Run the following tasks to build .ear and .war files:
     ```
 
 
-**Parent topic:**[Portlet development reference](../dev-portlet/wpsdevref.md)
 

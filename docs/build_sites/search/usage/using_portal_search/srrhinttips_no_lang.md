@@ -6,7 +6,6 @@ Therefore, set the preferred language of the portal site crawler user ID to matc
 
 If your portal site is multilingual and your users use different languages to search HCL Portal, set the portal site collections up as described under the topic about Crawling a multilingual portal site.
 
-**Parent topic:**[Hints and tips for using Portal Search](../admin-system/srrhinttips.md)
 
 **Related information**  
 

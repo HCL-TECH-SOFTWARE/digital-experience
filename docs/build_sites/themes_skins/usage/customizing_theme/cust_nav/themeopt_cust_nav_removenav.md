@@ -9,5 +9,4 @@ You can reduce your levels of navigation to two levels.
     ```
 
 
-**Parent topic:**[Customizing navigation](../dev-theme/themeopt_cust_nav.md)
 

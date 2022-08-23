@@ -108,5 +108,4 @@ $PacList revoke actionset name name
 $PacList revoke actionset special keyword
 ```
 
-**Parent topic:**[Portal Access Control](../admin-system/ptl_acc_con.md)
 

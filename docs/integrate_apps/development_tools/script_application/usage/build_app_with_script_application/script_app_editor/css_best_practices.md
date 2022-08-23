@@ -18,5 +18,4 @@ Use `100%` as the value width so that the page and layout can manage the width t
 
 If the script uses styles with absolute positions, such as `position: absolute;`, consider choosing relative positions instead, such as `position: relative;`. Otherwise, the item is likely to be positioned outside of the application space.
 
-**Parent topic:**[Script Application Editor](../script-portlet/script_portlet_editor.md)
 

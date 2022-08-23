@@ -25,5 +25,4 @@ A page navigation element can combine both shuttle and paging controls, as in th
 
 You can only use a page navigation element by creating a page navigation component. You cannot add a page navigation element to authoring templates, site areas, or content items.
 
-**Parent topic:**[Elements](../wcm/wcm_build.md)
 

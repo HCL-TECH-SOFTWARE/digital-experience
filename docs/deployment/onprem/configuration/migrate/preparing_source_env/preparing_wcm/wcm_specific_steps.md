@@ -9,5 +9,4 @@ If the name of a web content library is the same as the URL context of a virtual
 -   **[Preventing items from being expired during migration](../migrate/mig_content_options_further.md)**  
 By default, items with no expiration date defined are automatically expired. Change this setting to prevent automatic expiration from occurring.
 
-**Parent topic:**[Preparing your source environment](../migrate/mig_t_premig_tasks.md)
 

@@ -17,5 +17,4 @@ For more information about applying the Woodburn pages optional parameter, refer
 -   [Cumulative fix instructions: Cluster](../overview/ccf_95_cluster.md#)
 -   [Cumulative fix instructions: Farm](../overview/ccf_95_farm.md#)
 
-**Parent topic:**[The Woodburn Studio demo site](../woodburn_studio/woodburn_studio.md)
 

@@ -39,5 +39,4 @@ The Modify Site URLs for Search Engine Optimization option in the Configuration 
     3.  Regenerate the web server plug-in in WebSphere Application Server. If you are using a remote web server, copy the generated plugin-cfg.xml file to the remote server. Note: Do not complete these steps if you are changing only the WSRP Producer context home value.
     4.  Restart the web server.
 
-**Parent topic:**[Manual Steps: Modify Site URLs for Search Engine Optimization](../config/cw_shorten_url_seo_manual.md)
 

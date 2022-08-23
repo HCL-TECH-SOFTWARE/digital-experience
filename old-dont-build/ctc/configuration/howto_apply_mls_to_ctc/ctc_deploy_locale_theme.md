@@ -13,5 +13,4 @@ The theme for a multilingual site typically contains locale switching navigation
     This ensures that the navigation elements, such as the site breadcrumbs and section navigation, are set up correctly for multiple languages.
 
 
-**Parent topic:**[How to apply the multilingual solution to Content Template sites](../ctc/ctc_deploy_locale.md)
 

@@ -54,5 +54,4 @@ The following example shows the usage of a dynamic policy variable. The policy t
 </proxy-rules>
 ```
 
-**Parent topic:**[Description of the outbound HTTP connection configuration script](../dev-portlet/outbhttp_cfg_descript.md)
 

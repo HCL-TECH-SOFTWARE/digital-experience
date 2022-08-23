@@ -7,5 +7,4 @@ To propagate your changes, manually copy the following properties files to each 
 -   [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/config/config/services/PersonalizationService.properties
 -   [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/config/config/services/FeedbackService.properties
 
-**Parent topic:**[Managing your cluster](../admin-system/manage_clus.md)
 

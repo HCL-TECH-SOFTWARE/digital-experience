@@ -16,7 +16,6 @@ The set of CMIS service documents includes service documents that define the fol
     For an HCL Connections server with the URL www.example.com:9444 and that uses the default context root, the CMIS service document location is https://www.example.com:9444/files/basic/cmis/my/servicedoc.
 
 
-**Parent topic:**[Integrating HCL Connections files](../collab/i_coll_t_enable_lcfiles.md)
 
 **Related information**  
 

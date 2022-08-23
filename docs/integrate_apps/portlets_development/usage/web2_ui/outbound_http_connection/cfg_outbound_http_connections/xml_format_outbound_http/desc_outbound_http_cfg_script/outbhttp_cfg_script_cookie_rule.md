@@ -77,5 +77,4 @@ The following example shows a cookie rule that contains a cookie rule for LTPA t
 </proxy-rules>
 ```
 
-**Parent topic:**[Description of the outbound HTTP connection configuration script](../dev-portlet/outbhttp_cfg_descript.md)
 

@@ -33,5 +33,4 @@ lmController.insert(control, container, sibling);
 cmController.commit();
 ```
 
-**Parent topic:**[Moving or Inserting Nodes](../dev/ctrlrapit_mvnsrt_nodes.md)
 

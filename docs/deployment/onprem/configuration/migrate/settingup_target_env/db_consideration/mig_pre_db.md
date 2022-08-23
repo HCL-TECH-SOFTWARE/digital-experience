@@ -9,5 +9,4 @@ To prevent deadlocks during migration, you must complete a task to disable the O
 -   **[DB2 database migration considerations](../migrate/mig_pre_db2.md)**  
 Database migration is one of the most time consuming portions of the migration process. If you are migrating from DB2®, review the following topics to improve the speed of the database migration process.
 
-**Parent topic:**[Setting up the target environment](../migrate/setting_up_the_target_environment.md)
 

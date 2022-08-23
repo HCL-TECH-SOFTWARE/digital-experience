@@ -7,5 +7,4 @@ After you migrate to HCL Digital Experience 8.5, you need to complete extra task
 -   **[Enabling new functionality in a migrated portal](../migrate/mig_t_enable_new.md)**  
 The migration process collects configuration data and applications from an earlier installed version of HCL Digital Experience and merges them into the newer installed version so that the new environment is identical to the earlier environment. Taking advantage of new functionality that was not available in the earlier portal requires additional attention after migration is complete.
 
-**Parent topic:**[Migrating](../migrate/migration.md)
 

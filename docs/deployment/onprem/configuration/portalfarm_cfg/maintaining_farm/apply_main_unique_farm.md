@@ -6,5 +6,4 @@ To apply maintenance in such a farm configuration requires application of the ch
 
 Since each farm instance has its own release database and JCR content repository, all that needs to be done is to remove a server from the work load management, so that it does not receive any more user requests, allowing the individual farm instance to be updated, tested, then returned to workload management. In this way, each farm member can be independently updated and tested, or done in batches. Therefore, multiple farms are not required to achieve continuous availability, as long as a portion of the farm can handle production traffic during the maintenance application process.
 
-**Parent topic:**[Maintaining a portal farm](../install/maintain_portal_farm.md)
 

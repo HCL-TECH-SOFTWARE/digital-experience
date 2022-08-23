@@ -33,5 +33,4 @@ You can change elements of the Click for Person Card option and the appearance o
 8.  Call the Person card and verify your changes.
 
 
-**Parent topic:**[Collaborative Services API and the person tag](../collab/i_coll_r_cs_api.md)
 

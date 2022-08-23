@@ -54,7 +54,4 @@ public boolean equals( RuleInfo ruleInfo )
 
 |Returns true if and only if \(1\) the objects are the same or \(2\) if the rule names are equal and the campaign names are equal.|
 
-**Parent topic:**[Classes and APIs for writing custom listeners](../pzn/pzn_classes_apis_custom_listeners.md)
-
-**Parent topic:**[Classes and APIs for writing custom listeners](../pzn/pzn_classes_apis_custom_listeners.md)
 

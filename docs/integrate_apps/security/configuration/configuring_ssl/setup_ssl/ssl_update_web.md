@@ -71,5 +71,4 @@ Whenever changes are made to the SSL configuration, you must update the web.xml 
 12. Sync the nodes, if clustered.
 
 
-**Parent topic:**[Setting up SSL](../security/ssl.md)
 

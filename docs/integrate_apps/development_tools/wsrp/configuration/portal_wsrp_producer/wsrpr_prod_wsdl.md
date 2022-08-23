@@ -85,7 +85,6 @@ To control the default output for the WSDL document, you set the following param
     Use this property to specify the HTTP**S** port that is used for the endpoint addresses in the WSRP service WSDL document of the Producer.
 
 
-**Parent topic:**[Using your portal as a WSRP Producer](../admin-system/wsrpt_prod_use.md)
 
 **Next topic:**[Securing a WSRP Producer portal](../admin-system/wsrpt_prod_prep_sec.md)
 

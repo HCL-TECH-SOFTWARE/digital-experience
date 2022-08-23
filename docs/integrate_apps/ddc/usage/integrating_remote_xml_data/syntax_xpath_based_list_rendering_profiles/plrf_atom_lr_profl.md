@@ -100,7 +100,6 @@ The Atom list-rendering profile declares the following attributes:
     The date when the feed entry was last updated.
 
 
-**Parent topic:**[Integrating remote XML data](../social/plrf_intgrt_rmt_xml.md)
 
 **Related information**  
 

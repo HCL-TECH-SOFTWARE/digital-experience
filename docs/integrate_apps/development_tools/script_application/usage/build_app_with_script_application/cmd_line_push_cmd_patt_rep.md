@@ -38,5 +38,4 @@ When the application is rendered, the Script Application Namespace plug-in repla
 
 When you export the application to a compressed file, the Script Application Namespace plug-in markup replaces the `__SPNS__` token again so the application can be tested outside of the HCL Portal environment.
 
-**Parent topic:**[Build applications with the Script Application](../script-portlet/build_apps.md)
 

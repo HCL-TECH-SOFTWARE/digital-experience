@@ -53,13 +53,11 @@ All types of rules can be accessed programmatically within a Java application. F
 -   **[Rule Exception Handling in the run-time environment](../pzn/pzn_rule_exception_handling_runtime_environment.md)**  
 The default method of error or exception handling within the Personalization run-time environment is for the engine to print out a trace error to the application server's stdout log. Using an exception handling utility, it is possible to specify the type of output \(error message or stacktrace\), the output log file to use \(stdout or stderr\), and whether the exception should be rethrown to the JSP. The additional exception handling capabilities can be set on a per-request basis or globally.
 
-**Parent topic:**[Digital Experience Personalization](../pzn/pzn_overview.md)
 
 **Previous topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Next topic:**[Personalization APIs](../pzn/pzn_apis.md)
 
-**Parent topic:**[Digital Experience Personalization](../pzn/pzn_overview.md)
 
 **Previous topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 

@@ -21,7 +21,6 @@ You can enable inline editing in the design in two ways:
 
 **Note to developers:** When you create a custom theme, you must include a reference to the wcm\_inplaceEdit module to enable in-place editing in the custom theme.
 
-**Parent topic:**[Inline editing](../wcm/wcm_dev_inline.md)
 
 **Related information**  
 

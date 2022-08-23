@@ -39,7 +39,6 @@ If the Producer requires registration by the Consumer portal, the Producer must 
 -   **[Producer checklist for exchanging information with a Consumer](../admin-system/wsrpr_prod_chklst.md)**  
 Use this list to check whether you provided and obtained all required information that you must exchange with the Consumer.
 
-**Parent topic:**[Using your portal as a WSRP Producer](../admin-system/wsrpt_prod_use.md)
 
 **Previous topic:**[Securing a WSRP Producer portal](../admin-system/wsrpt_prod_prep_sec.md)
 

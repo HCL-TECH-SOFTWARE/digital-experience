@@ -83,7 +83,6 @@ To modify the components, navigate to **Applications** \> **Content** \> **WCM A
     This component contains all the components shown earlier in this list.
 
 
-**Parent topic:**[The tag widget](../admin-system/tag_rate_inline_tag_wdgt_lite.md)
 
 **Related information**  
 

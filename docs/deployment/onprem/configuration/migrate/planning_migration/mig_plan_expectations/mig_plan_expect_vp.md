@@ -22,7 +22,6 @@ Add the portal administrator to a virtual portal realm:
     -   IBM® i: ConfigEngine.sh wp-add-realm-baseentry -DWasPassword=password
     -   Windows™: ConfigEngine.bat wp-add-realm-baseentry -DWasPassword=password
 
-**Parent topic:**[What to expect after you complete migration](../migrate/mig_plan_expectations.md)
 
 **Related information**  
 

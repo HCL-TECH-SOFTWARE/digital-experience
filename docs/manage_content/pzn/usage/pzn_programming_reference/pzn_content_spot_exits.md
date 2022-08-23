@@ -75,7 +75,4 @@ Example Usage Scenario
 7.  `aRuleExit.getFilteredResults()` is invoked; the rule exit modifies results as required, then returns the updated set
 8.  The updated results are stored
 
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
-
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
 

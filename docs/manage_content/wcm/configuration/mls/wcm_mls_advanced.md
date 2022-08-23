@@ -97,5 +97,4 @@ Modify the default email notifications to provide your own wording.
 7.  Translate your message and update the localized versions of the properties files.
 8.  Restart the server.
 
-**Parent topic:**[How to use the HCL Web Content Manager Multilingual Solution](../wcm/wcm_mls_using.md)
 

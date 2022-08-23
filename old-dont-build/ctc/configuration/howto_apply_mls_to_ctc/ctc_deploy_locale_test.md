@@ -15,5 +15,4 @@ You might need to modify and test a few times to ensure that the locales are wor
 
 If you have more locales to create, add them one at a time, repeating the process for rolling out and testing each one.
 
-**Parent topic:**[How to apply the multilingual solution to Content Template sites](../ctc/ctc_deploy_locale.md)
 

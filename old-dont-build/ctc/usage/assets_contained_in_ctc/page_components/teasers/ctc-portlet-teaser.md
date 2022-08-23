@@ -33,5 +33,4 @@ The default stylesheet that is used by this portlet is **contentLanding**. To cu
 
 CSS files are stored in this WebDAV folder: dav://server:port/wps/mycontenthandler/dav/fs-type1/themes/Portal8.5/CTC/css.
 
-**Parent topic:**[Teasers](../ctc/ctc-portlet-types-teasers.md)
 

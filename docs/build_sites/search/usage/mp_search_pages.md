@@ -33,7 +33,6 @@ Follow these instructions to search for an item.
     -   **Last modified**: Select this option to search by items that have been modified on or since a specific date. The input is expected in YYYY MM DD format.
     -   **All available**: Select this option to return a listing of all items. No input is required.
 
-**Parent topic:**[Search](../wcm/wcm_dev_search.md)
 
 **Previous topic:**[HCL Digital Experience Portal Search](../admin-system/admsrch.md)
 

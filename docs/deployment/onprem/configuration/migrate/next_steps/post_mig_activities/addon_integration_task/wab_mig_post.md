@@ -29,7 +29,4 @@ After you migrated to the latest version of HCL Digital Experience and successfu
 11. Create the **Web Dock Application**. All the Web Dock portlets in HCL Portal 8001 need to be created again as described in the previous steps and placed again on the pages.
 
 
-**Parent topic:**[Add-ons, features, and third-party integration tasks](../migrate/mig_post_ptl_int_addon.md)
-
-**Parent topic:**[Portal administration](../practitioner_studio/administration.md)
 

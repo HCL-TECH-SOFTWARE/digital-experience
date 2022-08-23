@@ -19,5 +19,4 @@ Disable workflow action on servers that do not require workflows to be processed
 4.  Restart the server or cluster.
 
 
-**Parent topic:**[Further configuration options](../wcm/wcm_config.md)
 

@@ -15,7 +15,6 @@ To add the appropriate certificates, you must have Administrator access to your 
 3.  Restart the HCL Portal server.
 
 
-**Parent topic:**[Syndicated Feed Portlet for HCL Digital Experience](../admin-system/ic_syndfeed_features.md)
 
 **Related information**  
 

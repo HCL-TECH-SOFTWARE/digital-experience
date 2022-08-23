@@ -105,5 +105,4 @@ You can also set up your own URL normalization. You can implement a URL normaliz
     ```
 
 
-**Parent topic:**[State Manager Service](../admin-system/srvcfgref_state_mgr.md)
 

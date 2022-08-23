@@ -184,7 +184,6 @@ HCL Portal provides several sample aggregators. They are in the `[PortalServer\_
     This aggregator is a generic aggregator. It collects all the analytics data and sends it to the URL `http://example.org` by using a tracking image. The collected data is appended to the image URL as a query string. The names of the URL parameters correspond with the microformat names as defined in *Supported aggregator tags*.
 
 
-**Parent topic:**[Writing an aggregator for Active Site Analytics](../admin-system/sa_asa_cust_script.md)
 
 **Related information**  
 

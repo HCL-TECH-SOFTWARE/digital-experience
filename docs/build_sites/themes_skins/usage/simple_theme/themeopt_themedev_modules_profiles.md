@@ -62,5 +62,4 @@ You can also define modules in the .json files in the fs-type1/themes/themename/
     This module loads the simple menu framework. It is defined in theme.json.
 
 
-**Parent topic:**[Understanding the Simple Theme](../dev-theme/themeopt_themedev_simpletheme.md)
 

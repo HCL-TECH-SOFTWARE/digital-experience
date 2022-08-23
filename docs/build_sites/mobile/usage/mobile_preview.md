@@ -132,7 +132,4 @@ The following examples demonstrate use of the Mobile Preview simulator to view d
 ![](../assets/using_mobile_preview_simulator.png "Using the Mobile Preview simulator to view Woodburn Studio
                                 demonstration site display on mobile devices")
 
-**Parent topic:**[Mobile](../overview/mobile.md)
-
-**Parent topic:**[Developing websites](../install/developing_websites.md)
 

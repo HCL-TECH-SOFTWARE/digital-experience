@@ -42,5 +42,4 @@ To keep content and components synchronized between locales, a special workflow 
 -   To delete an item, you need to push the item to the final workflow stage. In most systems, only an administrator has access to do this. When processing documents in this stage, if the base item is detected, or no base item exists, then all draft, published and expired localized copies are removed and a notification sent to all localized content owners to inform them of the deletion.
 -   If a localized item is detected and the base item is in another stage, then a deletion request notification is sent to the localized content owners to inform them that various localized copies are ready to be deleted.
 
-**Parent topic:**[How to use the HCL Web Content Manager Multilingual Solution](../wcm/wcm_mls_using.md)
 

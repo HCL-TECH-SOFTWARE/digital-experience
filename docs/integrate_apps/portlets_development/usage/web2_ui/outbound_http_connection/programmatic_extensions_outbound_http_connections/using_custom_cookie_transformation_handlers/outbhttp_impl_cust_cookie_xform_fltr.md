@@ -85,5 +85,4 @@ public class SampleCookieTransformer implements CookieTransformer (
 
 A custom cookie transformation handler is an extension of the outbound HTTP connection service. Therefore, the extension handler code must be accessible by the class loader of the WebSphere® Application Server on which HCL Portal runs. See the topic Extending [HCL Portal class path](../dev/ext_wp_classpath.md) for where to place your compiled custom code on the Portal filesystem.
 
-**Parent topic:**[Using custom cookie transformation handlers](../dev-portlet/outbhttp_cust_cookie_xform_hdlr.md)
 

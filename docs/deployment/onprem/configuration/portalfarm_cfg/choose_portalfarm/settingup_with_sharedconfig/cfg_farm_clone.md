@@ -74,5 +74,4 @@ The following steps use rsync as a cloning technique example:
     ```
 
 
-**Parent topic:**[Setting up farm instances with a shared configuration](../install/set_portal_farm_shared.md)
 

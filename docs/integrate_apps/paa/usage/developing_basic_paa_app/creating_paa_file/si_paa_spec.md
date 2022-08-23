@@ -27,5 +27,4 @@ Some Portal Application Archive \(PAA\) files require access to an external data
 -   **[Virtual portals in the PAA file](../config/si_paa_spec_vp.md)**  
 There are many situations where a user might want to install the applications that are contained in a Portal Application Archive \(PAA\) file directly to a virtual portal.
 
-**Parent topic:**[Developing basic PAA file applications](../config/dev_sol_app.md)
 

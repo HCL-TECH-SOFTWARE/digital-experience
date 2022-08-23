@@ -16,5 +16,4 @@ When you create an item, you can specify the location of the item.
     -   This field is no longer displayed when the new item is saved for the first time.
     -   When saved, you need to use the "move" function to change the location of an item.
 
-**Parent topic:**[Creating a search component](wcm_dev_search_form_results.md)
 

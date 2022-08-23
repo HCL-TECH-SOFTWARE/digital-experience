@@ -45,7 +45,6 @@ As a portal administrator, you assign an aggregator to a page by editing the pag
 
 **Note:** Children pages inherit the script that is set on the parent page. If you want to use a different aggregator on a child page, follow the same procedure that is previously addressed for the child page to make the appropriate assignment. If you want to block inheriting the aggregator setting from the parent page, follow the same procedure, but leave the value empty. As a result, the page has no aggregator that is assigned anymore and all children of the page inherit the new setting.
 
-**Parent topic:**[Collecting analytics data](../admin-system/sa_asa_collct_data.md)
 
 **Related information**  
 

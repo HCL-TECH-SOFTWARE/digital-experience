@@ -53,5 +53,4 @@ An error occurred setting the WCM context:
 
 JSP files that are stored in the PA\_WCM\_Authoring\_UI application are not reloaded, even if they are updated. You must restart the server, or put the JSP in a separate web application that is configured to reload JSP files, in order for changes you make to the JSP to be displayed.
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 

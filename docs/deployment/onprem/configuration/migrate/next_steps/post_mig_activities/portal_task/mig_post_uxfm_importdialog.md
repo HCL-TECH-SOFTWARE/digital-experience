@@ -25,7 +25,6 @@ If you migrated from Version 8.0.0.1 with the UX Screen Flow Manager \(UXFM\) en
     -   Windows™: xmlaccess.bat -user userID -password password -url url -in ImportSampleCode.xml -in ImportSampleCode.xml -in import.xml
     -   z/OS®: ./xmlaccess.sh -user userID -password password -url url -in ImportSampleCode.xml -in import.xml
 
-**Parent topic:**[Portal tasks](../migrate/mig_post_portaltasks.md)
 
 **Related information**  
 

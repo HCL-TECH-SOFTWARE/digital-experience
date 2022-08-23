@@ -19,5 +19,4 @@ The standard process of adding HCL Portal server nodes to a cluster is to set up
 -   **[Reviewing and updating scheduled tasks](../migrate/mig_post_sched_tasks.md)**  
 After you complete the migration by using the Configuration Wizard, review your scheduled tasks to verify that the tasks are still valid for your current environment.
 
-**Parent topic:**[Post-migration activities](../migrate/mig_t_post_mig.md)
 

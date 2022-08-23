@@ -32,7 +32,6 @@ The following example deletes the device class with the unique name `wps.devicec
 </request>
 ```
 
-**Parent topic:**[Device classes](../dev-theme/themeopt_devclass.md)
 
 **Previous topic:**[mvc:URI scheme](../rwd/rwd_mvcuri_scheme.md)
 

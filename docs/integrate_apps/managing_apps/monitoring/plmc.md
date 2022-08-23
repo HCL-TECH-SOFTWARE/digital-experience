@@ -19,5 +19,4 @@ Portlet load monitoring allows you to log events. For example, this can help you
 -   **[API for accessing Portlet load monitoring data](../dev-portlet/plmr_api.md)**  
 Portlet load monitoring provides an API for accessing the monitoring data. You can use this API to write custom code to access that data.
 
-**Parent topic:**[Monitoring](../admin-system/monitoring_parent.md)
 

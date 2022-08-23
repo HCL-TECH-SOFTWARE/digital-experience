@@ -97,7 +97,6 @@ $Content select the root
 $Content select the parent
 ```
 
-**Parent topic:**[Command reference for the Portal Scripting Interface](../admin-system/adpsicrf.md)
 
 **Related information**  
 

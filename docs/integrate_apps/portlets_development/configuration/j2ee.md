@@ -39,7 +39,6 @@ The following table shows the differences between WAR and EAR deployment:
 |WebSphere Application Server policy for portlet applications|The policy is stored in the WAR file and promoted to the EAR file by the portal during WAR deployment.|The policy is stored in the EAR file.|
 |Portlet administration|You administer WAR files by using the XML configuration interface and the administration portlets.|You can register EAR files only by using an XML script with predeployed mode. You can remove EAR files by using either the administration portlet or an XML script.|
 
-**Parent topic:**[Managing portlets, portlet applications, and iWidgets](../admin-system/adpltadmwork.md)
 
 **Related information**  
 

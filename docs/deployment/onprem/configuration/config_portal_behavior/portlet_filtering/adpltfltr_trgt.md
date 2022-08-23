@@ -24,5 +24,4 @@ The following calls to the portlet are **not** available to the filter:
 -   Destroy
 -   DestroyConcrete
 
-**Parent topic:**[Configuring portlet filtering](../admin-system/adpltflt.md)
 

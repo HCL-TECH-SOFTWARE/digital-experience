@@ -60,5 +60,4 @@ If no matching content items are found, and you have edit access to the content 
 
 **Note:** When performing copy or link operations against an item within the Portal Site library, any pages on the path to the item being copied will be copied as site areas in the destination library.
 
-**Parent topic:**[Extensions for multilingual sites Multilingual Solution](../wcm/wcm_mls_extensions.md)
 

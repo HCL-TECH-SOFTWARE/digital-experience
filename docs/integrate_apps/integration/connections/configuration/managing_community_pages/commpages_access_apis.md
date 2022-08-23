@@ -11,7 +11,6 @@ For example, a portlet on a specific page might need to communicate with a commu
 
 The content mapping service provides general access to associations of portal resources with other types of resources. Associations to resources of different types are grouped together and separated from one another by scopes. Community associations are managed in the `ibm.connections` scope.
 
-**Parent topic:**[Managing community pages](../admin-system/commpages_main.md)
 
 **Related information**  
 

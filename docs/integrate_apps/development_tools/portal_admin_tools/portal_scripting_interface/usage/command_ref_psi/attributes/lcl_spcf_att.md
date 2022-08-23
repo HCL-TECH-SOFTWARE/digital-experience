@@ -80,7 +80,6 @@ $Content nlsimport ID file\_name prefix
 
 To delete all locale-specific attributes before a set of values is imported, empty the list valued attribute locales as described in *List valued attributes*.
 
-**Parent topic:**[Portal Scripting Interface Attributes](../admin-system/attributes.md)
 
 **Related information**  
 

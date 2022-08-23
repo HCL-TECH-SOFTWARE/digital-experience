@@ -37,7 +37,4 @@ The Personalization rules REST APIs provide access to personalization rules capa
 -   **[Personalization folder APIs](../pzn/dev_pzn_folders_api.md)**  
 The Personalization folder REST APIs provide access to personalization folder capabilities using REST services.
 
-**Parent topic:**[Personalization APIs](../pzn/pzn_apis.md)
-
-**Parent topic:**[Personalization APIs](../pzn/pzn_apis.md)
 

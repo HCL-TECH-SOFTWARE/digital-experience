@@ -22,5 +22,4 @@ Configure an outbound HTTP connection that follows the Client Grant flow.
 -   **[Configure OAuth 2.0 using stored access tokens](../dev-portlet/Oauth2.0_stored_access_tokens.md)**  
 Some OAuth 2.0 authentication providers allow clients such as Dropbox to set a static access token. Configure an outbound HTTP connection that follows the Client Grant flow. OAuth 2.0 for an outbound HTTP connection is activated by setting the metadata SSO\_OAUTH2\_IDP at the connection policy or policy mapping. The value of this metadata setting is a symbolic name for the Identity provider that establishes the connection. This name is used as a prefix for another set of metadata that define the settings of the Identity provider as the following example illustrates.
 
-**Parent topic:**[Authenticating outbound HTTP connections](../dev-portlet/outbhttp_authntct.md)
 

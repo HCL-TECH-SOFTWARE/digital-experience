@@ -122,7 +122,6 @@ To set up a JCR search collection manually, proceed as follows:
 -   **[Re-creating a JCR search collection after it was deleted](../admin-system/recreate_jcr_sc.md)**  
 The portal installation has the JCR search collection created by default. It is named JCRCollection1. If this collection is removed or does not exist for other reasons, you can re-create the JCR search collection.
 
-**Parent topic:**[Setting up search collections](../admin-system/srcmgsrcont.md)
 
 **Related information**  
 

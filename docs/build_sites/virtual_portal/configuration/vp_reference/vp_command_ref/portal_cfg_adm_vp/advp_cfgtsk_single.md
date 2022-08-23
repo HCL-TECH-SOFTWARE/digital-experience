@@ -35,5 +35,4 @@ Here is an example for creating two virtual portals:
     -   For Linux™: `ConfigEngine.sh create-virtual-portal -DvirtualPortalList=vp1,vp2`
     -   For Windows™: `ConfigEngine.bat create-virtual-portal -DvirtualPortalList=vp1,vp2`
 
-**Parent topic:**[Portal configuration tasks for administering virtual portals](../admin-system/advp_cfgtsk.md)
 

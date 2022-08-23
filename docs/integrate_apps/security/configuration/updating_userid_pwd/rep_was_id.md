@@ -21,7 +21,6 @@ Complete the following steps to replace the WebSphere® Application Server admin
 
 If you use an external security manager such as Security Access Manager, you must manually remove the old administrator user ID from the external security manager.
 
-**Parent topic:**[Updating user ID and passwords](../security/sec_pswds.md)
 
 **Related information**  
 

@@ -356,5 +356,4 @@ For more information about system support requirements, see [System requirements
 21. Install the MobileFirst application to your MobileFirst server. Open the MobileFirst console at http://server:port/worklight/console and upload the MobileFirst application by adding it to the **Deploy application or adapter** field. Your MobileFirst application file can be found in your Eclipse workspace in the bin folder. The MobileFirst application file has the .wlapp extension.
 
 
-**Parent topic:**[Setting up single sign-on with MobileFirst 7.0](../integrate/wl_sso_cf07.md)
 

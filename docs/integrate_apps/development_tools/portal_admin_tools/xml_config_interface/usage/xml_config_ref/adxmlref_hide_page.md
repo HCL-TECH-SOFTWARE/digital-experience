@@ -15,7 +15,6 @@ You do this by setting the hidden flag for the page parameter for the content-no
 
 ```
 
-**Parent topic:**[XML configuration reference](../admin-system/adxmlref.md)
 
 **Related information**  
 

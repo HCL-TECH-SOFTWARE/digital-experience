@@ -9,7 +9,6 @@ Roadmaps provide a high-level overview of complex tasks such as migrating a stan
 -   **[Roadmap: Migrating a clustered environment](../migrate/rm_mig_cluster.md)**  
 Roadmaps provide a high-level overview of complex tasks such as migrating a clustered environment to a new version of HCL Digital Experience.
 
-**Parent topic:**[Roadmaps to deploy your HCL Digital Experience system](../install/deployment_patterns.md)
 
 **Related information**  
 

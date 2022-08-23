@@ -37,5 +37,4 @@ The following steps are required to uninstall the multilingual solution extensio
 7.  Restart the Portal Server.
 
 
-**Parent topic:**[Extensions for multilingual sites Multilingual Solution](../wcm/wcm_mls_extensions.md)
 

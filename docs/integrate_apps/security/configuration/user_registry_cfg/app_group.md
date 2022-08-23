@@ -50,5 +50,4 @@ Perform the following steps to enable application groups:
 2.  Stop and restart the HCL Portal server.
 
 
-**Parent topic:**[User registry](../config/config_user_registry.md)
 

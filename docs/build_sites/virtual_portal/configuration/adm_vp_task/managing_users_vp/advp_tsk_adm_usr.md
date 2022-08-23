@@ -14,5 +14,4 @@ If you want to change these default access rights for the users, you can do one 
 -   To configure the scope of access rights for users before creating a virtual portal, configure your realms and user groups accordingly.
 -   To change the access rights of users of a virtual portal after creating a virtual portal, use the Portal Access Control portlets in that virtual portal. You can have the sub-administrators of the virtual portal perform this task.
 
-**Parent topic:**[Managing the users of virtual portals](../admin-system/advp_tsk_mng_usr.md)
 

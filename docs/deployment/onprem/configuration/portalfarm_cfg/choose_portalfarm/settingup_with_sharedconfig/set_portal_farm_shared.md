@@ -66,5 +66,4 @@ When you choose the option to install the Farm with a shared file system, provid
 -   **[Disabling farm mode](../install/disable_farm.md)**  
 After setting up your farm using a shared configuration, you may need to disable the farm mode, which will allow you to return the original HCL Digital Experience instance that manages the shared file system to a regular, stand-alone server instance. You can then make system updates, for example change the systemTemp value, and then run the enable-farm-mode task to re-enable the farm or you can use the instance for a different purpose.
 
-**Parent topic:**[Choosing the type of portal farm to create](../install/choose_portal_farm.md)
 

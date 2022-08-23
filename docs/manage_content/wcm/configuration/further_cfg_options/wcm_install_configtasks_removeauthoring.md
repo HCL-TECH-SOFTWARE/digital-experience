@@ -18,5 +18,4 @@ To remove the Authoring portlet:
     -   Windows™: ConfigEngine.bat remove-wcm-authoring -DWasPassword=password
     -   z/OS®: ./ConfigEngine.sh remove-wcm-authoring -DWasPassword=password
 
-**Parent topic:**[Further configuration options](../wcm/wcm_config.md)
 

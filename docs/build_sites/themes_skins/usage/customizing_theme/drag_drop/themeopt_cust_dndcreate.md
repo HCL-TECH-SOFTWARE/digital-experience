@@ -120,5 +120,4 @@ In the previous example, the parameter object must have the following elements:
     Function to start when dragover is called with the same parameters as dragenter. \(optional\)
 
 
-**Parent topic:**[Drag-and-drop](../dev-theme/themeopt_cust_dnd.md)
 

@@ -60,7 +60,4 @@ public class ParmCookieListener extends FeedbackListener
 
 ```
 
-**Parent topic:**[Custom log listeners](../pzn/pzn_custom_log_listeners.md)
-
-**Parent topic:**[Custom log listeners](../pzn/pzn_custom_log_listeners.md)
 

@@ -15,5 +15,4 @@ Static theme resources include the theme.html file, layout templates, skins, Jav
 5.  Use a WebDAV client to download all of the static theme resources to your local hard drive and watch all files for changes.
 
 
-**Parent topic:**[Customizing the theme](../dev-theme/themeopt_cust.md)
 

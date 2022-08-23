@@ -11,7 +11,4 @@ View some general tips related to resource classloading when using the Personali
 -   Ensure the global uniqueness of the class names by using package names.
 -   In a cluster of application servers, be sure to copy your content spot and resource classes to each application server in the cluster.
 
-**Parent topic:**[Using the Personalization APIs](../pzn/pzn_using_apis.md)
-
-**Parent topic:**[Using the Personalization APIs](../pzn/pzn_using_apis.md)
 

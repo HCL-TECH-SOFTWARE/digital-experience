@@ -110,7 +110,6 @@ You pass the parameters in the parameter list for each configuration task as app
 -   **[Adding the Site Builder and Script Application libraries](../admin-system/advp_create_add_libs.md)**  
 If you add virtual portals to your portal installation after you install CF09 or a later cumulative fix and you use Site Builder or the Script Application, you need to add the appropriate library or libraries to each new virtual portal.
 
-**Parent topic:**[Portal configuration tasks for administering virtual portals](../admin-system/advp_cfgtsk.md)
 
 **Related information**  
 

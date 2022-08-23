@@ -65,7 +65,6 @@ If vanity URL support is not enabled and a user tries to access a vanity URL, th
 
 **Remember:** After you run the enable-vanityurl-support or disable-vanityurl-support task, restart the server. Go to [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md) for specific instructions.
 
-**Parent topic:**[Portal tasks](../migrate/mig_post_portaltasks.md)
 
 **Related information**  
 

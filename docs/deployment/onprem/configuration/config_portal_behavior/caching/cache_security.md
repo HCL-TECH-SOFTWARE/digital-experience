@@ -6,5 +6,4 @@ By default, HCL Portal does not permit shared caching for authenticated pages. Y
 
 **Note:** In some rare circumstances, it might be useful to store authenticated pages in a shared cache. For example, if all authenticated users receive identical content, then storing authenticated pages in a shared cache might be acceptable.
 
-**Parent topic:**[Caching](../security/tune_cache.md)
 

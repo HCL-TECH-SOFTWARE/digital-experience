@@ -65,5 +65,4 @@ To do this, proceed as follows in the newly migrated environment:
 
 Your site analytics tags are now ready for you to work.
 
-**Parent topic:**[Add-ons, features, and third-party integration tasks](../migrate/mig_post_ptl_int_addon.md)
 

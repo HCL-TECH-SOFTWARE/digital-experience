@@ -12,5 +12,4 @@ The remote-cache-scope and remote-cache-expiration of a rendered page view is ca
 -   Cache scope and expiry time of the theme
 -   Global values as defined in the Navigator Service in the WebSphere® Integrated Solutions Console.
 
-**Parent topic:**[Caching](../security/tune_cache.md)
 

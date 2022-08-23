@@ -50,5 +50,4 @@ The default list of these applications whose initialization is deferred until fi
 1.  If you have portal light mode that is enabled and you stop an application manually, for example by using the WebSphere Integrated Solutions Console or the wsadmin command-line interface, and a user then accesses that application, that applications are restarted.
 2.  If you have portal light mode enabled and you use the activation task `ConfigEngine.sh\|bat activate-portlets` to activate all portlets, all portlets are indeed started, even if they are set for lazy load.
 
-**Parent topic:**[Using portal light mode](../admin-system/portal_light_mode.md)
 

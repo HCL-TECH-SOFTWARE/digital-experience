@@ -30,7 +30,6 @@ All authoring templates for a library are listed under the `authoringTemplates` 
 2.  To change the metadata for an authoring template, edit the `meta-data.xml` file for the authoring template.
 
 
-**Parent topic:**[WebDAV](../wcm/wcm_webdav_overview.md)
 
 **Related information**  
 

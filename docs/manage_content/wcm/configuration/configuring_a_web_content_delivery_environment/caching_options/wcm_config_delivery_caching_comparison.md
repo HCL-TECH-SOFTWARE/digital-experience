@@ -49,5 +49,4 @@ These options are similar. You might need to test both strategies before you whi
 
 |
 
-**Parent topic:**[Caching options](../wcm/wcm_config_delivery_caching.md)
 

@@ -37,5 +37,4 @@ After you redirect the traffic, configure the TCPMon tool to listen on the port 
 
 To run the TCPMonitor tool, follow the instructions that are given in the WebSphere Application Server Help Center under *Tracing SOAP messages with tcpmon*.
 
-**Parent topic:**[Reference for using WSRP with the portal](../admin-system/wsrpr_ref.md)
 

@@ -77,7 +77,6 @@ The following list shows the tasks for which you can assign extra access permiss
 
 The configuration task `create-virtual-portal` does not assign roles to the sub administrators of the virtual portal. In this case, you assign the required roles manually by using the portal access administration portlets or by using the portal XML configuration interface. For more information about the XML configuration interface and how to use it see, *The XML configuration interface*.
 
-**Parent topic:**[Tasks for administering virtual portals](../admin-system/advptsk.md)
 
 **Related information**  
 

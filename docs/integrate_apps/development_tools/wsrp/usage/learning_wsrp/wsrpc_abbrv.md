@@ -31,5 +31,4 @@ These topics about WSRP and the portal use some abbreviations.
     Web Services Description Language
 
 
-**Parent topic:**[Learning about WSRP](../admin-system/wsrpc_learn.md)
 

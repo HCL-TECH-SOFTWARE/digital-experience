@@ -46,5 +46,4 @@ When you upload new resources on WebDAV, the theme cache is cleared automaticall
 18. Check your CustomTheme EAR file in the table of enterprise applications and click **Start**.
 
 
-**Parent topic:**[Creating a WebDAV-based theme copy](../dev-theme/themeopt_themedev_manual_webdav.md)
 

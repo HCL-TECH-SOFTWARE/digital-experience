@@ -278,5 +278,4 @@ The following examples demonstrate the different ways of specifying portlet pref
     ```
 
 
-**Parent topic:**[Customizing web content delivery](../wcm/wcm_delivery_custom.md)
 

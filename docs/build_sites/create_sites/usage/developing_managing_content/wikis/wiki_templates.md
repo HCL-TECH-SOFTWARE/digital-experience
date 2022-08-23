@@ -12,5 +12,4 @@ The Web Resources v70 library provides the authoring and presentation templates 
 
 When you add a wiki to a page, a copy of the Wiki v70 library is created using the name that you provided when adding the wiki to a page. The copy of the wiki v70 library is used to store wiki page content when new pages are added to this wiki.
 
-**Parent topic:**[Wikis](../admin-system/wiki_work.md)
 

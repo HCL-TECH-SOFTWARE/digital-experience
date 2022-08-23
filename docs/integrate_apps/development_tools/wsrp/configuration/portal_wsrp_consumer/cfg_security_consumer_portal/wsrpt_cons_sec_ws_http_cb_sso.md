@@ -26,7 +26,6 @@ The following example properties contain cookie forwarding rules for using HTTP-
     With this setting, the WSRP Consumer forwards the LTPA v2 cookie that it received from the clients to all Producers and resources on hosts in the domains `domain1.com` and `domain2.com`
 
 
-**Parent topic:**[Configuring security on the Consumer portal](../admin-system/wsrpt_cons_prep_sec.md)
 
 **Related information**  
 

@@ -19,7 +19,6 @@ Other resource types are not scoped. They are shared among all virtual portals o
     -   Authoring portlet: Select **Web Content Authoring** when you are adding the portlet.
     -   Web Content Viewer portlet: Select **Web Content Viewer** when you are adding the portlet.
 
-**Parent topic:**[Administering virtual portals](../admin-system/advp_adm.md)
 
 **Related information**  
 

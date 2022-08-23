@@ -25,7 +25,6 @@ Use your selected roadmap and the Configuration Wizard to complete a new environ
     Use the Configuration Wizard in conjunction with your selected roadmap.
 
 
-**Parent topic:**[Configuring](../config/configuring_parent2.md)
 
 **Related information**  
 

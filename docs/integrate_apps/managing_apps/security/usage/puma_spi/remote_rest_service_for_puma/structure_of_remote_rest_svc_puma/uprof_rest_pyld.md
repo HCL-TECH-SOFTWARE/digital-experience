@@ -107,7 +107,6 @@ The following listing shows an example of a group membership list XML representa
 
 ```
 
-**Parent topic:**[Structure of the remote REST service for PUMA](../dev/uprof_rest_gen.md)
 
 **Related information**  
 

@@ -42,5 +42,4 @@ Fields and options in the manage Clients portlet help:
 
 For a more detailed description of the fields and options, refer to the Manage Clients portlet help.
 
-**Parent topic:**[Client identification for external search engines](../admin-system/srrclientid.md)
 

@@ -11,5 +11,4 @@ Client side log statements are written to the JavaScript console of your browser
 -   **[Enabling module tracing](../dev-portlet/csa2t_trble_tracemod.md)**  
 Enable tracing to debug your module information to improve performance through trace string or with cookies.
 
-**Parent topic:**[Logging and tracing](../trouble/pd_intr_logs.md)
 

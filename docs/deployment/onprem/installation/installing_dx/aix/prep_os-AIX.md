@@ -60,5 +60,4 @@ Prepare the operating system to ensure a successful HCL Digital Experience insta
 8.  Ensure that the DB2® settings are not defined within the root user environment where the installation program runs. DB2 cannot be included within the PATH, the DB2INSTANCE variable cannot be set, and the root user is not required to run the `db2profile` command. The HCL Digital Experience package installs a copy of DB2 for its own use and definitions within the root environment for other DB2 installations can interfere with that process.
 
 
-**Parent topic:**[AIX system - HCL Digital Experience installation](../install/installingwp95-AIX.md)
 

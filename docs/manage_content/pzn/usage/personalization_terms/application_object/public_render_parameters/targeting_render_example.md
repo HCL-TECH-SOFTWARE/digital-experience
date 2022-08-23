@@ -60,7 +60,4 @@ In this example, create a visibility rule that uses your travel destination as t
 |
 
 
-**Parent topic:**[Public Render Parameters](../contarget/targeting_render.md)
-
-**Parent topic:**[Public Render Parameters](../contarget/targeting_render.md)
 

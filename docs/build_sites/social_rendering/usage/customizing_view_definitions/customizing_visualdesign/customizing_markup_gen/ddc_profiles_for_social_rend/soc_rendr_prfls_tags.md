@@ -13,5 +13,4 @@ The tags profile declares the following attribute names:
     This attribute specifies how often this tag was assigned.
 
 
-**Parent topic:**[Digital Data Connector profiles for social rendering](../social/soc_rendr_lst_rndr_prfls.md)
 

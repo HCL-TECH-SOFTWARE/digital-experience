@@ -309,5 +309,4 @@ public class FriendlyUrlGenerationFilterFactory implements ContentUrlGenerationF
 }
 ```
 
-**Parent topic:**[Example 2: Generate a friendly URL for web content](../wcm/wcm_dev_api_urlgen_xmp2.md)
 

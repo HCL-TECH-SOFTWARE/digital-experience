@@ -70,5 +70,4 @@ Refreshing an iWidget definition in this context means, reloading the iWidget de
 
 You can schedule the task `refresh-iwidget-definitions` by using the following task: `com.ibm.portal.services.RefreshIWidgetDefinitionsTask`. See *XML configuration reference* for instructions.
 
-**Parent topic:**[Managing iWidgets in your portal](../admin-system/add_widget.md)
 

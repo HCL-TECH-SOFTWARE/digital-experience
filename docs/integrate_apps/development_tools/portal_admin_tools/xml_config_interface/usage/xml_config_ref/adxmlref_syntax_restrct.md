@@ -38,5 +38,4 @@ Note that configuration data elements are processed only if their parent has an 
 
 All specified actions are processed in the textual order in which they are specified in the XML input \(document order\). If there are any interdependencies between the actions, the user or program providing the XML input is responsible for ordering the elements correctly.
 
-**Parent topic:**[XML configuration reference](../admin-system/adxmlref.md)
 

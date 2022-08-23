@@ -211,5 +211,4 @@ Review the following questions to help you integrate and troubleshoot your Web A
     The Web Application Bridge stores the authentication cookies that are received from the backend application in session. Perform authentication with the backend server only once per session. You do not need to authenticate for every request. After the user logs in to the backend server with single sign-on through WAB, the authentication remains active for the entire session. Even if the single sign-on settings in the policy change for the backend application, the user is still authenticated until the user logs out of portal. Therefore, if you change the policy, make sure that you log out of portal and then log back on to completely change the policy settings.
 
 
-**Parent topic:**[Integrating with web applications](../admin-system/wab.md)
 

@@ -17,5 +17,4 @@ Complete the following steps to determine what mappings exist for a particular a
     The resulting table shows all servers and clusters to which the application web modules are mapped.
 
 
-**Parent topic:**[Managing your cluster](../admin-system/manage_clus.md)
 

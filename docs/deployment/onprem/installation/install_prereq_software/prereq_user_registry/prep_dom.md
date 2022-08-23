@@ -121,7 +121,6 @@ If you plan to use a Domino Directory as an LDAP user registry, you must install
     5.  Click **OK**.
 
 
-**Parent topic:**[Preparing the user registry software](../config/prereq_user_reg.md)
 
 **Related information**  
 

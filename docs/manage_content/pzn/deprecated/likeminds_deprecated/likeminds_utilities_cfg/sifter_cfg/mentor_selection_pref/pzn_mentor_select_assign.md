@@ -10,7 +10,4 @@ For this purpose, the first step the `sifter` uses in mentor assignment is to pe
 
 The second step in the mentor selection process is to assign mentors from the mentor pool to be mentors for specific users. The challenge is to create a fair balance between the similarity and the coverage of users being considered as mentors. You can configure the `sifter` to emphasize similarity, coverage, or to automatically determine which dynamic to emphasize for each user in the final assignment of mentors to users.
 
-**Parent topic:**[How the mentor selection process works](../pzn/pzn_mentor_selection_process.md)
-
-**Parent topic:**[How the mentor selection process works](../pzn/pzn_mentor_selection_process.md)
 

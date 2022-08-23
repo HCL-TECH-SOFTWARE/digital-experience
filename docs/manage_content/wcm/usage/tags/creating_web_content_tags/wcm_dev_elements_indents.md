@@ -38,7 +38,6 @@ For example:
 [indentcmpnt offset="0" repeat="&amp;nbsp;&amp;nbsp;"]
 ```
 
-**Parent topic:**[Tags](../wcm/wcm_build_tags.md)
 
 **Related information**  
 

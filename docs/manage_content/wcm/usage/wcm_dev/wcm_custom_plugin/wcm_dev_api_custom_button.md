@@ -52,7 +52,6 @@ If you create a new plug-in application with the same names and IDs as an existi
 -   The fully qualified class name plus path of all classes within the application.
 -   The file path of any files within the application.
 
-**Parent topic:**[How to create custom plug-ins](../wcm/wcm_dev_plugins.md)
 
 **Related information**  
 

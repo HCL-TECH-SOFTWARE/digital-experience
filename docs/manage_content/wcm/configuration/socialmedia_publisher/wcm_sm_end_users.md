@@ -21,5 +21,4 @@ To enable this feature:
 
 3.  Enable the tracking of user's social activity within the Social Media Publisher by setting the global settings `Facebook.endUser.statistics.enabled` and `Twitter.endUser.statistics.enabled` to true. See [Global configuration settings](wcm_sm_config_doc_global.md) for details.
 
-**Parent topic:**[Social Media Publisher](../wcm/wcm_sm.md)
 

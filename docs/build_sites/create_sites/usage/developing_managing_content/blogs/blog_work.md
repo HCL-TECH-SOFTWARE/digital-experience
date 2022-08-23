@@ -17,5 +17,4 @@ You can view the blogs that are created in a specific library and you can view t
 -   **[Deleting blogs or blog libraries](../admin-system/blog_delete.md)**  
 If you are the owner of a blog site, you have Manager access and can delete any blog, pages, comments, or posts on that site.
 
-**Parent topic:**[Developing and managing content](../site/site_dev_man.md)
 

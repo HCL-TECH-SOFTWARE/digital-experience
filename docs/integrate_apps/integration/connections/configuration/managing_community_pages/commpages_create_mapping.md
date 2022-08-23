@@ -86,7 +86,6 @@ You can create, view, modify, or delete community associations on a page with th
     ```
 
 
-**Parent topic:**[Managing community pages](../admin-system/commpages_main.md)
 
 **Related information**  
 

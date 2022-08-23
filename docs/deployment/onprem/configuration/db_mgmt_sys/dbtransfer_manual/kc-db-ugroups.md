@@ -21,5 +21,4 @@ The procedure is repeated for each portal database domain: release, community cu
 6.  Assign `${${dbdomain}.DbUser}``dbdomain.DbUser` to the `${${dbdomain}.DbConfigRoleName}` `dbdomain.DbConfigRoleName` .
 
 
-**Parent topic:**[Manual Steps: Database Transfer option in the Configuration Wizard](../eua-workflows/kc-db-parent.md)
 

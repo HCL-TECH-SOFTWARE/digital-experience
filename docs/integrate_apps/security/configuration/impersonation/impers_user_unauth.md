@@ -23,5 +23,4 @@ Users with administrator access in HCL Portal can impersonate an unauthenticated
 
 The users with the Can Run As User role can now impersonate another user.
 
-**Parent topic:**[Administering user impersonation](../admin-system/impers_user.md)
 

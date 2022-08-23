@@ -12,7 +12,4 @@ The log method creates a new `PageViewEvent` with the request. The `PageViewEven
 
 PageView beans should be instantiated as session beans; however, they will not maintain any session data.
 
-**Parent topic:**[PageView beans](../pzn/pzn_pageview_beans.md)
-
-**Parent topic:**[PageView beans](../pzn/pzn_pageview_beans.md)
 

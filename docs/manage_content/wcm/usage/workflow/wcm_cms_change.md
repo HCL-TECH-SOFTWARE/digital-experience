@@ -9,5 +9,4 @@ You use workflows to control the access to, verification and eventual approval o
 -   **[Adding workflow to managed pages](../wcm/wcm_mngpages_addworkflow.md)**  
 The default workflow that is used for published pages has only a draft and approved state. However, if the default workflow is not sufficient, you can define custom workflows and use them with published pages.
 
-**Parent topic:**[Developing and managing content](../site/site_dev_man.md)
 

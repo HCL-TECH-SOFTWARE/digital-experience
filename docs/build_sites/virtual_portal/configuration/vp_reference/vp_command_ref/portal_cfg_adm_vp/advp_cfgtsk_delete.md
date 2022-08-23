@@ -50,7 +50,6 @@ You pass the parameters in the parameter list for each configuration task as app
     ./ConfigEngine.sh delete-virtual-portal -DPortalAdminPwd=password -DWasPassword=password -DVirtualPortalObjectId=objectID\_of\_virtual\_portal\_to\_delete
 
 
-**Parent topic:**[Portal configuration tasks for administering virtual portals](../admin-system/advp_cfgtsk.md)
 
 **Related information**  
 

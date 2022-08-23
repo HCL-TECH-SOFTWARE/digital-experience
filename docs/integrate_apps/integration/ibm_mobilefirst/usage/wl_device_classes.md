@@ -26,7 +26,6 @@ if (com_ibm_device_class.indexOf("ios") !== -1 && com_ibm_device_class.indexOf("
 }
 ```
 
-**Parent topic:**[Integrating with IBM MobileFirst](../integrate/wl_integrt.md)
 
 **Related information**  
 

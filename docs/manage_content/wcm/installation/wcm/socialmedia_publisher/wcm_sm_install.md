@@ -125,5 +125,4 @@ Follow these steps to install the Social Media Publisher on your authoring serve
     Use the WebSphere Integrated Solutions Console to add this setting to the **WCM WCMConfigService** service. `LOCAL_PORTAL_PORT` is the local WebSphere Application Server port for HCL Portal. The default port is 10039.
 
 
-**Parent topic:**[Social Media Publisher](../wcm/wcm_sm.md)
 

@@ -33,13 +33,11 @@ In some environments even SSL publishing may not be secure enough. The pznload c
 
 If a Personalization server is configured to use a nonstandard HTTPS port or context root, or if you see messages such as EJPVP20002E: The local publish service was not available when publishing from the authoring environment, the local publish servlet URL might be incorrect.
 
-**Parent topic:**[Publishing personalization rules](../pzn/pzn_depub.md)
 
 **Previous topic:**[Publishing and deleting personalization rules using a script](../pzn/pzn_publish_script.md)
 
 **Next topic:**[Monitoring the status of publishing](../pzn/pzn_publish_status.md)
 
-**Parent topic:**[Publishing personalization rules](../pzn/pzn_depub.md)
 
 **Previous topic:**[Publishing and deleting personalization rules using a script](../pzn/pzn_publish_script.md)
 

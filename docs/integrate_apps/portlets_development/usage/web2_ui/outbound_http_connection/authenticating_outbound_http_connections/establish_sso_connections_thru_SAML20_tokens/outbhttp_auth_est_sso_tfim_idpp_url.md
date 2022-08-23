@@ -42,5 +42,4 @@ The following steps describe how to obtain the Identity Provider login URL and t
 11. Click **Cancel**.
 
 
-**Parent topic:**[Configuration settings for Tivoli Federated Identity Manager \(TFIM\)](../dev-portlet/outbhttp_auth_est_sso_tfim.md)
 

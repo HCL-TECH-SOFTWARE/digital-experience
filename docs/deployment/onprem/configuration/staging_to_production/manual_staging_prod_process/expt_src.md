@@ -17,5 +17,4 @@ Export the portal artifacts on the source environment, with XMLAccess and sample
 7.  Copy over the /tmp/baseExport.xml from the source to the target.
 
 
-**Parent topic:**[Manual staging to production process](../deploy/mans2p_intro.md)
 

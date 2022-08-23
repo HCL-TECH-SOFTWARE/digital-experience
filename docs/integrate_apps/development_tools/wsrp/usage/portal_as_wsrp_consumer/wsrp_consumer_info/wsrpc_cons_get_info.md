@@ -82,7 +82,6 @@ Use this list to check whether you have obtained and provided all required infor
 -   **[Configuring security on the Consumer portal](../admin-system/wsrpt_cons_prep_sec.md)**  
 You can configure security for the WSRP Consumer. If you enable security, the WSRP Consumer sends a security token as part of the WSRP request message to the WSRP producer. The security token represents the identity of the user who is logged in to the Consumer Portal. The WSRP Producer uses the security token to process the WSRP requests under the user identity that is represented by the security token.
 
-**Parent topic:**[Using your portal as a WSRP Consumer](../admin-system/wsrpt_cons_use.md)
 
 **Next topic:**[Working with Producer definitions](../admin-system/wsrpt_cons_creat_prod.md)
 

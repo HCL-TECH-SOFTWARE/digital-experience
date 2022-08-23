@@ -25,5 +25,4 @@ The following example outputs the footer:
 <a rel="dynamic-content" href="dyn-cs:id:st_footer"></a>
 ```
 
-**Parent topic:**[Theme templates](../dev-theme/themeopt_themedev_theme_templates.md)
 

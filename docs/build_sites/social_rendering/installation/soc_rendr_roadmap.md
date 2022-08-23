@@ -18,7 +18,6 @@ To go the advanced path of working with social lists, proceed as follows:
 6.  To customize your social rendering view definitions and appearance components, read *Customizing social lists for portal site visitors*. These tasks are done by a website designer.
 7.  To enable your page editors to create your own social lists, read *Creating custom authoring templates for social lists*. This work task is done by a website designer.
 
-**Parent topic:**[Social rendering](../social/soc_rendr_ovu.md)
 
 **Related information**  
 

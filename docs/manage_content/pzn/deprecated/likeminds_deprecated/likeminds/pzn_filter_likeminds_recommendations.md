@@ -45,7 +45,4 @@ context.setRequestAttribute("LMFilter", "LMFilter.color");
 context.setRequestAttribute("LMFilter.color", "blue");
 ```
 
-**Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
-
-**Parent topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
 

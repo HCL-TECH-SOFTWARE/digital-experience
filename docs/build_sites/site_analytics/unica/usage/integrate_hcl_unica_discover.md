@@ -33,5 +33,4 @@ HCL Unica Discover can track both authenticated or unauthenticated pages. By def
 -   **[Installing the Unica Discover module for Digital Experience integration](../install/installing_the_unica_discover_module.md)**  
  Learn how to install the Unica Discover module for HCL Digital Experience integration.
 
-**Parent topic:**[Analyzing digital site activity](../install/analyzing_digital_site_activity.md)
 

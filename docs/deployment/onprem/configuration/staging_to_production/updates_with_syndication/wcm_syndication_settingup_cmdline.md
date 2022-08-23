@@ -188,7 +188,4 @@ Project templates are not syndicated.
 |
 
 
-**Parent topic:**[Syndication](../wcm/wcm_administering.md)
-
-**Parent topic:**[Updates with syndication](../deploy/dep_up_syn_main.md)
 

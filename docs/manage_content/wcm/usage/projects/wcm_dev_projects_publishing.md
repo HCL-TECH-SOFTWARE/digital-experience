@@ -21,5 +21,4 @@ When the project is published, you can continue to review the status and version
 
 **Note:** You and other users can update the same items in multiple projects. Messages are displayed when you move an item to the publish state to warn you when this event occurs.
 
-**Parent topic:**[Projects](../wcm/wcm_proj_overview.md)
 

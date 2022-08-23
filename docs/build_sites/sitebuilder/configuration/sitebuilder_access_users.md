@@ -41,5 +41,4 @@ Allow all authenticated users or specific users to see the Site Builder page and
 17. Click **Apply** and **Done**.
 
 
-**Parent topic:**[Deploying Site Builder](../sitebuilder/sitebuilder_access.md)
 

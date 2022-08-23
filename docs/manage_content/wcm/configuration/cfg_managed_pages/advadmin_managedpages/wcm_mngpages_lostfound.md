@@ -9,5 +9,4 @@ The following causes are typical reasons that a page might be stored in the lost
 
 The lost-found site area is a read-only location. Although you cannot edit items in the lost-found site area, you can view the items and copy content that you want to save.
 
-**Parent topic:**[Administering managed pages](../wcm/wcm_mngpages_advadmin.md)
 

@@ -22,7 +22,6 @@ try {
 
 ```
 
-**Parent topic:**[Working with controllers](../dev/ctrlrapit_wrk.md)
 
 **Related information**  
 

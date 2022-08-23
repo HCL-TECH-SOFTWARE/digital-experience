@@ -19,7 +19,6 @@ To balance processing power, you can run document conversion services on a remot
 -   **[Files conversion supported by DCS](../admin-system/dcs_view_html.md)**  
 View a list of file types that are supported by DCS for conversion.
 
-**Parent topic:**[Configuring](../config/configuring_parent2.md)
 
 **Related information**  
 

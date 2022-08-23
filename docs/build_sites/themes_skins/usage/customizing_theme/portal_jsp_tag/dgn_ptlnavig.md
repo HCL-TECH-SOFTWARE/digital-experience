@@ -458,5 +458,4 @@ The following section provides detailed descriptions of the `<portal-navigation/
     ```
 
 
-**Parent topic:**[Tags used by the portal JSPs](../dev-portlet/dgn_ptltld.md)
 

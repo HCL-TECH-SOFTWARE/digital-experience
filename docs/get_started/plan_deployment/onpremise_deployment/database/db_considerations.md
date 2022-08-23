@@ -38,7 +38,6 @@ The Configuration Wizard uses JDBC type 4 drivers by default. You can change the
 -   **[Shared database domains](../plan/db_domains_shared.md)**  
 To maximize data availability, you can distribute portal data across multiple databases and for some domains, share data between multiple lines of production.
 
-**Parent topic:**[Planning to install HCL Digital Experience](../plan/plan_installation.md)
 
 **Related information**  
 

@@ -70,5 +70,4 @@ The following list describes the values of these required elements.
 
 Learn more about [Working with layout templates](themeopt_cust_layouttemp.md#). Note that not all information at this link applies to the Simple Theme.
 
-**Parent topic:**[Understanding the Simple Theme](../dev-theme/themeopt_themedev_simpletheme.md)
 

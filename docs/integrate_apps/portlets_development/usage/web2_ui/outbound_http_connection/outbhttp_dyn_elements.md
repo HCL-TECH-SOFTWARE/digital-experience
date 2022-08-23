@@ -60,5 +60,4 @@ The following example activates the first rule and deactivates the second rule:
 http://localhost/wps/theproxy/http/the_remote_server.com/main.html?active_a=true&active_b=false
 ```
 
-**Parent topic:**[Outbound HTTP connection](../dev-portlet/outbound_http.md)
 

@@ -24,7 +24,6 @@ If you already use only the JSR 286 version, then you do not need to plan for an
         This file represents the JSR 286 Web Content Viewer portlet and its portlet clones. A conversion of this portlet is not required for the migration.
 
 
-**Parent topic:**[Migrating from Web Content Manager version 7.0 or 8.0](../migrate/mig_content_from_7-0.md)
 
 **Related information**  
 

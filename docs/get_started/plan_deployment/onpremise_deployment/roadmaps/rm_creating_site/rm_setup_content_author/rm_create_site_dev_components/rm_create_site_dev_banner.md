@@ -8,7 +8,6 @@ You are a developer on the technical team that is tasked with creating home and 
 
 ![HTML prototype of the home page with the banner page component highlighted. Content authors customize the image and text in the banner page component after they add it to a page, so the same banner page component can be used in all of the pages of a website.](../images/banner.jpg)
 
-**Parent topic:**[Creating HTML page components](../install/rm_create_site_dev_pcomponents.md)
 
 # Creating your banner page component
 

@@ -8,7 +8,6 @@ Single sign-on for the client realm is established using the IBM® WebSphere® A
 
 Single sign-on uses only the authentication portion of Java Authentication and Authorization Services \(JAAS\). HCL Digital Experience builds a JAAS Subject for each logged on user. The Subject consists of Principals and Credentials. A Principal is a piece of data, such as the user ID or the distinguished name that gives the Subject's identity. A Credential is a piece of data, such as a password or a CORBA Credential that can be used to authenticate a subject. The Subject carries around the Principals and Credentials that the portlet can use directly or through the credential service.
 
-**Parent topic:**[Security and authentication considerations](../plan/plan_secauth.md)
 
 **Related information**  
 

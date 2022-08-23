@@ -6,13 +6,11 @@ The content is displayed when a user requests a JSP or servlet that dynamically 
 
 Content resources can be file content or structured content.
 
-**Parent topic:**[Personalization terms](../pzn/pzn_concepts.md)
 
 **Previous topic:**[User resources](../pzn/pzn_user_resources.md)
 
 **Next topic:**[Attribute Based Administration](../pzn/pzn_attadm.md)
 
-**Parent topic:**[Personalization terms](../pzn/pzn_concepts.md)
 
 **Previous topic:**[User resources](../pzn/pzn_user_resources.md)
 

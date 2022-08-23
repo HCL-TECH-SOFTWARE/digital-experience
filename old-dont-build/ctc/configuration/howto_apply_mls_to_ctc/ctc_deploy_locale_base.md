@@ -13,5 +13,4 @@ The first step to creating a multilingual site is to create a "skeleton" site in
 
 You now have a site with which to proceed with the rest of the process.
 
-**Parent topic:**[How to apply the multilingual solution to Content Template sites](../ctc/ctc_deploy_locale.md)
 

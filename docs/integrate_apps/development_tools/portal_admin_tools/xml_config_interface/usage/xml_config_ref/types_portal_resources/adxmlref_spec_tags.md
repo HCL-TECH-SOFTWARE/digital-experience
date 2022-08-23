@@ -125,7 +125,6 @@ The following two attributes have been added for the portletinstance tag. Use th
 
 You can find additional information on the meaning and possible values for configuration elements and attributes in the schema annotations.
 
-**Parent topic:**[Types of portal resources](../admin-system/adxmlref_resrc_types.md)
 
 **Related information**  
 

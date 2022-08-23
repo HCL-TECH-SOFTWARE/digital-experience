@@ -45,5 +45,4 @@ The workload that is imposed by each additional language can be considered equiv
             Specifies the delay in milliseconds between processing each item. Defaults to 5000 milliseconds.
 
 
-**Parent topic:**[Multilingual deployment, installation, and configuration Multilingual Solution](../wcm/wcm_mls_install_ovr.md)
 

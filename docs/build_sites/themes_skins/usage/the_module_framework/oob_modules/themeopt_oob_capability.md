@@ -34,7 +34,6 @@ This table lists explicitly defined capabilities. Implicit capabilities are not 
 
 For extra modules and capabilities, see Content Template Catalog theme extensions and Customizing the CSS styles of social lists.
 
-**Parent topic:**[Modules that are provided with the modularized theme](../dev-theme/themeopt_oob.md)
 
 **Related information**  
 

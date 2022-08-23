@@ -129,5 +129,4 @@ Find solutions to problems that involve styles, lists, and other components.
             ```
 
 
-**Parent topic:**[Troubleshooting Content Template sites](../ctc/ctc_trouble_overview.md)
 

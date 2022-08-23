@@ -33,5 +33,4 @@ This section shows the DX REST API explorers available for use with deployments 
 
 |
 
-**Parent topic:**[HCL Experience API](../open_api/openapi_overview.md)
 

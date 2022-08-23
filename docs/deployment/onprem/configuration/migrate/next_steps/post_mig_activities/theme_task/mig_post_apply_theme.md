@@ -24,7 +24,6 @@ You can also create a page with the Portal 8.5 theme by using the XML configurat
 
 When you create a new page and apply the Portal 8.5 theme, the new inline customization features are immediately available for use. Use the inline toolbar to create pages.
 
-**Parent topic:**[Theme tasks](../migrate/mig_post_themetasks.md)
 
 **Related information**  
 

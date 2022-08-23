@@ -26,7 +26,4 @@ When creating a Recommend Content rule, you specify one of three recommendation 
 -   Before using Recommend Content rules, check with your system administrator to see which LikeMinds engines are configured and running on the production run-time server.
 -   To preview results, the production LikeMinds database must contain data, including items, users, and transactions \(ratings or actions\). The problem of initial data priming is commonly called coldstart.
 
-**Parent topic:**[Rules](../pzn/pzn_rules.md)
-
-**Parent topic:**[Rules](../pzn/pzn_rules.md)
 

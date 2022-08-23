@@ -26,5 +26,4 @@ With the client-side programming model, you can handle portlet mode and window s
 -   **[JavaScript namespacing - observing good practice](../dev-portlet/w2_clntprgmd_jsnsp.md)**  
 The client side context of Web programming requires good namespacing.
 
-**Parent topic:**[Web 2.0 user interface features](../dev-portlet/w2_ovu.md)
 

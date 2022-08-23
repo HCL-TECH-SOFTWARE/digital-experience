@@ -37,7 +37,6 @@ $Layout index 0 select
 
 ```
 
-**Parent topic:**[Component hierarchy \| Portal scripting interface](../admin-system/compnt_hrchy.md)
 
 **Related information**  
 

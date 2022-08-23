@@ -54,5 +54,4 @@ In a stand-alone server environment, you can complete the following task when th
 14. Stop and restart the appropriate servers to propagate the changes.
 
 
-**Parent topic:**[Deleting your user registry configurations](../security/delete_ureg.md)
 

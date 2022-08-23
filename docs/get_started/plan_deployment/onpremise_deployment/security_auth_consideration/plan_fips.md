@@ -22,7 +22,6 @@ There are some restrictions in the level of support that HCL Digital Experience 
 -   You can use FIPS-certified JSSE providers if your servers and clients are using WebSphere Application Server.
 -   If you are trying to enable FIPS processing mode with GSKit bundled with ITDS, see Technote 1578181.
 
-**Parent topic:**[Security and authentication considerations](../plan/plan_secauth.md)
 
 **Related information**  
 

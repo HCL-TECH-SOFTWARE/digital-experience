@@ -19,7 +19,4 @@ Use the sample file ExportFromServlet.xml as a reference for coding other Person
 
 ```
 
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
-
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
 

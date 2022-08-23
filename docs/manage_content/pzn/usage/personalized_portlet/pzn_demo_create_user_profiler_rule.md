@@ -31,13 +31,11 @@ In the Personalization Editor, follow these steps:
 
 You can now create some additional advanced rules for your personalized portlet.
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Modify resource collection properties](../pzn/pzn_demo_modify_resource_collection_properties.md)
 
 **Next topic:**[Create additional advanced rules](../pzn/pzn_demo_create_additional_advanced_rules.md)
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Modify resource collection properties](../pzn/pzn_demo_modify_resource_collection_properties.md)
 

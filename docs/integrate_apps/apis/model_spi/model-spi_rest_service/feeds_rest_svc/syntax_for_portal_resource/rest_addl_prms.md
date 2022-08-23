@@ -126,5 +126,4 @@ You can use the parameter mdname multiple times in the same URL.
 
 ```
 
-**Parent topic:**[Syntax for addressing portal resources](../dev/rest_feed_obt.md)
 

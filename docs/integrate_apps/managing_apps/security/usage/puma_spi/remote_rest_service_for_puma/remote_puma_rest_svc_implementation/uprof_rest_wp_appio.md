@@ -209,7 +209,6 @@ For the operations of the PUMA SPI REST Service interface that use one of the me
 -   Successful POST operations to feeds return a response with status code `201 Created`, the `Location` header set to the URI of the new resource, and a representation of the `atom:entry` element that has been created. This is only the case for operations `/um/users/profiles` and `/um/groups/profiles`
 -   Successful PUT or DELETE operations return a status code of `200 OK`.
 
-**Parent topic:**[How the portal implements the remote PUMA REST service](../dev/uprof_rest_wpspec.md)
 
 **Related information**  
 

@@ -4,7 +4,6 @@ Social data that is rendered on your portal pages by using the social rendering 
 
 Social rendering uses the caching infrastructure of the Digital Data Connector \(DDC\) for HCL Portal. For more information, read *Digital Data Connector cache tuning*.
 
-**Parent topic:**[Administering social lists](../social/soc_rendr_adm_socl_list.md)
 
 **Related information**  
 

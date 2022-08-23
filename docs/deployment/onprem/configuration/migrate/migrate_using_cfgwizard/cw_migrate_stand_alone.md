@@ -6,7 +6,6 @@ Use the Configuration Wizard to migrate a stand-alone server environment. Use th
 
 Select **Migrate to a New Version**, and choose the **Migrate a Stand-alone Server** option.
 
-**Parent topic:**[Migrate data using the configuration wizard](../migrate/mig_85_wizard.md)
 
 **Related information**  
 

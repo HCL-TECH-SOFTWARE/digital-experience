@@ -46,7 +46,6 @@ Depending on circumstances, you might want to remove users or groups from your H
 -   **[Preparing the deletion of orphaned resources](../admin-system/adxmltsk_del_orphan_res.md)**  
 You can use the XML configuration interface to delete orphaned data from your HCL Digital Experience.
 
-**Parent topic:**[Working with the XML configuration interface](../admin-system/adxmltsk.md)
 
 **Related information**  
 

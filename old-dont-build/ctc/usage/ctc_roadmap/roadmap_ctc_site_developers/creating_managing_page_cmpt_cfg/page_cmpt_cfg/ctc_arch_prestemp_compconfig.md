@@ -36,5 +36,4 @@ The Component in Context HTML component uses the InContext tag to set up a conte
 -   **[The role of the Context Override field](../ctc/ctc_arch_prestemp_contexttover.md)**  
 Setting a context override is the key to getting many of the components to select content throughout the site. Overrides also allow reuse of these components \(for example, by avoiding the hardcoding of site areas into menus and rules\).
 
-**Parent topic:**[Creating and managing page component configurations](../ctc/ctc_design_comp_config.md)
 

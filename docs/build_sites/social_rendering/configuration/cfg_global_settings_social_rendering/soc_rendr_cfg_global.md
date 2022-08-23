@@ -23,7 +23,6 @@ You can include one or many attributes of social objects in the design component
 -   **[Configuring file type icon mappings](../social/soc_rendr_cfg_filetype_map.md)**  
 Social rendering provides two types of list appearance components for result lists: simple and comprehensive. Both list appearances components show file type-specific icons when they render list entries that refer to individual files. In this case, the file type is determined based on the file extensions of the individual files. You can configure the set of file types that you want to use in the WP Connections Integration Service resource environment provider. In the context of social lists, a file type is defined by a file type name and a list of file extensions. This list defines the mapping between individual files and your file types. In your social list appearance components, you can then access the file type name for a specific file by using the Web Content Manager \[AttributeResource attributeName="fileType"\] tag. That tag is defined in the Digital Data Connector \(DDC\) for HCL Portal profile. You can then use the file type name to render the appropriate image, for example, by assigning a corresponding CSS class.
 
-**Parent topic:**[Social rendering](../social/soc_rendr_ovu.md)
 
 **Related information**  
 

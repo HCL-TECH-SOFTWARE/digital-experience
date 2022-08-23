@@ -7,7 +7,6 @@ After you create a new theme, you can customize it by creating your own dynamic 
 -   **[Working with dynamic content spots](../dev-portlet/csa2r_dyn_cntnt_spot.md)**  
 You can add dynamic content to your custom theme by using either client-side or server-side logic.
 
-**Parent topic:**[Customizing the theme](../dev-theme/themeopt_cust.md)
 
 **Related information**  
 

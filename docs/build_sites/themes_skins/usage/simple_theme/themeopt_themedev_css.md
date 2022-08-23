@@ -53,5 +53,4 @@ The following CSS files are included in the Simple Theme template:
     Classes that support the context menu framework.
 
 
-**Parent topic:**[Understanding the Simple Theme](../dev-theme/themeopt_themedev_simpletheme.md)
 

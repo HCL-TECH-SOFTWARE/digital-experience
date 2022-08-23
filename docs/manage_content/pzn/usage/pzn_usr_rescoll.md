@@ -47,13 +47,11 @@ modifyTimestamp,ibm-middleName,ibm-timeZone,initials,jpegPhoto,WCM\:USERDATA,gro
 
 The Portal User collection can only be used in rules running within a HCL Portal installation. The system will not prevent you from publishing rules using this collection to a Personalization Server installed outside of HCL Portal, but the rules will not function in this environment since Virtual Member Manager is not available. When HCL Portal is installed, the security context of the logged in user must have access \(through Portal resource permissions\) to the user information being accessed through the collection.
 
-**Parent topic:**[Digital Experience Personalization](../pzn/pzn_overview.md)
 
 **Previous topic:**[The Web Content resource collection](../pzn/pzn_wcm_rescoll.md)
 
 **Next topic:**[LikeMinds Recommendations](../pzn/pzn_intro_likeminds.md)
 
-**Parent topic:**[Digital Experience Personalization](../pzn/pzn_overview.md)
 
 **Previous topic:**[The Web Content resource collection](../pzn/pzn_wcm_rescoll.md)
 

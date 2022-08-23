@@ -56,7 +56,4 @@ Actions can be logged with or without respect to a specific resource. For exampl
 
 If the call to the action log method specifies a `resourceId` and the `collectionName` is `null`, the name of a `ResourceCollection` is inferred. The `ResourceCollection` used will be any one containing a `resource` with the specified `resourceId`. The determination of the `ResourceCollection` used in this scenario is non-deterministic. Note that these variants are suitable for user implementations supporting one and only one `ResourceCollection` per `resource` class. If an implementation utilizes multiple `ResourceCollections` for the same `resource` class, the `collectionName` should be specified.
 
-**Parent topic:**[Action beans](../pzn/pzn_action_beans.md)
-
-**Parent topic:**[Action beans](../pzn/pzn_action_beans.md)
 

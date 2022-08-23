@@ -11,5 +11,4 @@ This release of Content Template Catalog includes a video element that is used t
 -   Use a cross-browser solution for the video play \(for example, a Flash video player\). You might also need to use a transcoding service to support mobile devices or slow connections.
 -   Use a video-hosting service and use the hosting service’s embedded video player in your content.
 
-**Parent topic:**[Post content](../ctc/ctc_arch_contypes_post.md)
 

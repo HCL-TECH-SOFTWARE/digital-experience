@@ -9,7 +9,6 @@ HCL has tested an installation with 300 virtual portals and a total of more than
 -   A large number of virtual portals can have an overall performance impact on administrative activities.
 -   Setting up and administering a large number of virtual portals by using the portal administration user interface can be time consuming.
 
-**Parent topic:**[Known limitations for virtual portals](../admin-system/advpref_limits.md)
 
 **Related information**  
 

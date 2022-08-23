@@ -71,7 +71,6 @@ The following list shows the set of list-rendering profile entry keys that are a
 -   **[XPath list-rendering profile metadata keys](../social/plrf_lr_profl_metadata_keys.md)**  
 Some item attribute and list property declarations support metadata that can be associated by using corresponding metadata keys.
 
-**Parent topic:**[Integrating remote XML data](../social/plrf_intgrt_rmt_xml.md)
 
 **Related information**  
 

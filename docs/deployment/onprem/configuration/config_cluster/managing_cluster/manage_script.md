@@ -44,5 +44,4 @@ The Portal Scripting Interface enables the creation of administrative tasks that
 |
 
 
-**Parent topic:**[Managing your cluster](../admin-system/manage_clus.md)
 

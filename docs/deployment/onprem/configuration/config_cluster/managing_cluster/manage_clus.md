@@ -19,7 +19,6 @@ If you configured the nodes in your cluster to use single sign-on \(SSO\), you c
 -   **[Updating Personalization properties in a cluster](../admin-system/clus_pznprop.md)**  
 HCL Digital Experience provides two property files that you can modify to customize the Portal Personalization feature. These files are not managed by the deployment manager, so if you make any changes to these files on a node in the cluster, those changes are not transferred to other nodes when you perform a synchronization of the cluster members.
 
-**Parent topic:**[Administering](../admin-system/administering_parent.md)
 
 **Related information**  
 

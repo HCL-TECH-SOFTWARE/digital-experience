@@ -23,5 +23,4 @@ This example creates a client that matches devices that send iPhone in the user 
 
 **Note:** The ordinal attribute on the client definition sets the priority of the client during the matching process. Only one client is chosen and the device classes on that client are made available.
 
-**Parent topic:**[Assigning device classes](../dev-theme/themeopt_devclass_assign.md)
 

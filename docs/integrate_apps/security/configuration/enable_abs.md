@@ -21,5 +21,4 @@ Attribute based security for HCL Web Content Manager content is an access filter
 9.  Restart the HCL Portal server.
 
 
-**Parent topic:**[Securing](../security/securing_wp.md)
 

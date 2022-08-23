@@ -15,7 +15,6 @@ If you plan to use a SecureWay Security Server as an LDAP user registry, you mus
 -   **[Preparing an Oracle Directory Server](../install/prep_sun.md)**  
 If you plan to use an Oracle Directory Server as an LDAP user registry, you must install and set up the server so that it communicates with HCL Digital Experience.
 
-**Parent topic:**[Installing the prerequisite software](../install/prereq_software.md)
 
 **Related information**  
 

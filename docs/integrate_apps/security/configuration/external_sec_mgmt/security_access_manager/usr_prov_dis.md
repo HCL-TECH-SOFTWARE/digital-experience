@@ -17,5 +17,4 @@ Perform the following steps to disable user provisioning within Security Access 
 2.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
 
 
-**Parent topic:**[Security Access Manager](../security/conf_tam.md)
 

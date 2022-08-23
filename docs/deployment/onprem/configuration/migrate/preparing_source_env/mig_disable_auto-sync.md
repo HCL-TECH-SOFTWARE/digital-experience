@@ -49,7 +49,6 @@ The target environment initially uses the same ports as the source environment. 
     You will update the ports for the target environment in a step that is detailed in Migrate a Cluster Step 3: Upgrade node profiles. After you update the ports, the source deployment manager and node agents can be started.
 
 
-**Parent topic:**[Preparing your source environment](../migrate/mig_t_premig_tasks.md)
 
 **Related information**  
 

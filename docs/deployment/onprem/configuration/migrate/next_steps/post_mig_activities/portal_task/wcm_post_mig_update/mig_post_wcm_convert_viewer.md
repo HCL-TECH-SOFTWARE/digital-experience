@@ -29,5 +29,4 @@ The Web Content Viewer portlet that is based on the Portlet API was removed from
 4.  After you replace all instances of the Portlet API Web Content Viewer portlet and of its portlet clones, uninstall the ilwwcm-localrendering-portlet.war web module.
 
 
-**Parent topic:**[Web Content Manager](../wcm/wcm_migration_post_update.md)
 

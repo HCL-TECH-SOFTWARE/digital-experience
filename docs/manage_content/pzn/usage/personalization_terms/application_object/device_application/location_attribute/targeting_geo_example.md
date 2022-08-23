@@ -37,7 +37,4 @@ In this example, you are creating two segments by using a profiler rule: North C
 
 The segments in this saved profiler rule appear in the Add Segment view when you create targeting rules. You can add these segments to content in a targeting rule or use these segments in other types of rules.
 
-**Parent topic:**[Location attributes](../contarget/targeting_geo.md)
-
-**Parent topic:**[Location attributes](../contarget/targeting_geo.md)
 

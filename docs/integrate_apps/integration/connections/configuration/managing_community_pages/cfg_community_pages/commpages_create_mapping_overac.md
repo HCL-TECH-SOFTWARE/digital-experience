@@ -19,5 +19,4 @@ The Restrict view access to this page to community members setting on a communit
         The **Restrict view access to this page to community members** setting is disabled for all pages that are created from this template.
 
 
-**Parent topic:**[Configuring community pages](../admin-system/commpages_config.md)
 

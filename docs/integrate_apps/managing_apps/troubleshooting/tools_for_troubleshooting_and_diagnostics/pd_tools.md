@@ -9,5 +9,4 @@ There is one method to collect data and analyze symptoms for problem determinati
 -   **[Portal version and history information](../reference/wp_history.md)**  
 You can use the HCL Digital Experience version and history information tools to gather information about your portal installation.
 
-**Parent topic:**[Troubleshooting](../trouble/troubleshooting.md)
 

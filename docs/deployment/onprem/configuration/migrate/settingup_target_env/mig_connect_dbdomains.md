@@ -34,7 +34,6 @@ Review the following list before you begin.
     **Note:** If the source portal uses the default Apache Derby database, the migration tools automatically copy the database for you. However, if you modified or customized the default Derby database, you must copy the entire Derby directory to a new directory on your target server. Then, update all database properties of your target environment to point to the copy of the Derby database. Ensure that derby.DBLibrary is set to use the derby.jar of the target WebSphere® Application Server as the JDBC driver class and includes the directory location of the file. Enter the parameter as `derby.DBLibrary=Target\_WAS\_ROOT\\derby\\lib\\derby.jar`.
 
 
-**Parent topic:**[Setting up the target environment](../migrate/setting_up_the_target_environment.md)
 
 **Related information**  
 

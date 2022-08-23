@@ -39,7 +39,6 @@ HCL Digital Experience and IBM® WebSphere® Application Server use some account
 -   **[Content Security Policy](../security/content_security_policy.md)**  
 The Content-Security-Policy header is used by modern browsers to enhance security of HCL Digital Experience site documents or webpages by allowing HCL Digital Experience administrators or developers declare which dynamic resources are allowed to load.
 
-**Parent topic:**[HCL Digital Experience 9.5 Product Documentation](../welcome/wp95_welcome.md)
 
 **Related information**  
 

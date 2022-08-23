@@ -44,5 +44,4 @@ This portlet is used to display some rich text on a page.
 -   **[Video Teaser](../ctc/ctc-portlet-video-teaser.md)**  
 This portlet is used to display a video.
 
-**Parent topic:**[Page components](../ctc/ctc-portlet-types.md)
 

@@ -59,7 +59,4 @@ public int hashCode( )
 
 |Returns a hash code enabling objects of this type to be used as hash keys.|
 
-**Parent topic:**[Classes and APIs for writing custom listeners](../pzn/pzn_classes_apis_custom_listeners.md)
-
-**Parent topic:**[Classes and APIs for writing custom listeners](../pzn/pzn_classes_apis_custom_listeners.md)
 

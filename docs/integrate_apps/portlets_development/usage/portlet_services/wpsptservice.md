@@ -21,5 +21,4 @@ Using an example, learn how a standard portlet can retrieve and use a sample por
 -   **[Creating your own portlet service](../dev-portlet/wpsbsservice.md)**  
 Write a portlet service by defining the interface, writing the service implementation, making the service accessible, and registering the service.
 
-**Parent topic:**[Developing portlets](../dev-portlet/wpsdev.md)
 

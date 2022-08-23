@@ -13,7 +13,6 @@ Create a selection rule that selects metadata of documents that are contained in
 -   **[How to use a federated documents rule in a personalization component \| HCL Web Content Manager](../wcm/wcm_dev_feddocs_using.md)**  
 To access the information from a federated documents rule in your web content system, create a personalization component, associate it with the rule, and specify the design for displaying document information that is retrieved by the rule.
 
-**Parent topic:**[Elements](../wcm/wcm_build.md)
 
 **Related information**  
 

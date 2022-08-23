@@ -30,5 +30,4 @@ The authoring template will no longer be able to be selected when creating conte
     -   Ensure that a Workflow is assigned for each authoring template that is visible in Site Manager, or specify that the authoring template does not require a workflow.
     -   If an authoring template has required fields, then select the **Allow templated items to be saved in the first draft stage even if the item fails field validation** option on the workflow. You need to create the content in a project and then enter values for required fields in the draft content before approving it for the next workflow stage.
 
-**Parent topic:**[Customizing the Create Content view](../admin-system/epc_custom_create_content.md)
 

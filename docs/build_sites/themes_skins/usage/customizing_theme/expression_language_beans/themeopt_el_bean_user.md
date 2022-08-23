@@ -37,5 +37,4 @@ Attributes:
     Returns: The object ID of the user.
 
 
-**Parent topic:**[Expression language beans for accessing programming models](../dev-theme/themeopt_el_bean.md)
 

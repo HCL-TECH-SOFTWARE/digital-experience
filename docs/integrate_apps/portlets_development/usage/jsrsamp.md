@@ -32,5 +32,4 @@ You can get some sample portlets from the portlet catalog. The samples described
     10. Click **Finish**.
     11. Check the contents of the new portlet project for errors.
 
-**Parent topic:**[Developing portlets](../dev-portlet/wpsdev.md)
 

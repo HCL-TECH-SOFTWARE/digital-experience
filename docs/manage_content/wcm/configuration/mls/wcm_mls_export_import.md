@@ -139,7 +139,6 @@ MLS Import
 
 ![](../images/wcm_mls_exim_import_pipeline.png "DXClient MLS import pipeline sample")
 
-**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
 
 **Related information**  
 

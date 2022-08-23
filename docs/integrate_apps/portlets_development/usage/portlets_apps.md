@@ -8,5 +8,4 @@ Portlet applications are created implicitly when a WAR file is deployed. The por
 
 You can add portlets to a running system at any time. After installation, the new portlets are immediately available to administrative users. They can assign the appropriate user roles to the appropriate groups and users so that they can access and use the portlets. Once available, the portlets can be selected for display on the portal pages of users and can be edited as appropriate. Identification information of WAR files is stored in a database for easy deployment in complex server environments with multiple portal servers. By allowing all files associated with a portlet to be packed into a single file, distribution and deployment of new portlets is made easier. Portlets can be distributed in WAR file format through websites and other means.
 
-**Parent topic:**[Managing portlets, portlet applications, and iWidgets](../admin-system/adpltadmwork.md)
 

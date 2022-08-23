@@ -11,5 +11,4 @@ Portal scripts create hidden pages that can clutter the page topology, making it
     -   Windows™: ConfigEngine.bat move-portal-hidden-pages -DWasPassword=was\_password -DPortalAdminPwd=portal\_password
     -   z/OS®: ./ConfigEngine.sh move-portal-hidden-pages -DWasPassword=was\_password -DPortalAdminPwd=portal\_password
 
-**Parent topic:**[Enabling new functionality in a migrated portal](../migrate/mig_t_enable_new.md)
 

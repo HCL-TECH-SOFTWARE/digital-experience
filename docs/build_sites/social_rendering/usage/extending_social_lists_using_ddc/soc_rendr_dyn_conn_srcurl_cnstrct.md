@@ -16,7 +16,6 @@ Example: To dynamically construct the query URL that serves the information abou
    compute="always"]
 ```
 
-**Parent topic:**[Extending social lists by using the digital data connector](../social/soc_rendr_xtnd_sl_by_plrf.md)
 
 **Related information**  
 

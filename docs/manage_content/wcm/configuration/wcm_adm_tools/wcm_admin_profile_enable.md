@@ -68,5 +68,4 @@ Use the profile enablement tool to enable or disable the profile feature on web 
 4.  After you enable profiling for an item type, ensure that profiling is also enabled for newly created items in the WCM WCMConfigService service. See the **Enabling profiling** section of the [Web content authoring options](wcm_config_prop_authoring.md) topic.
 
 
-**Parent topic:**[Web content administration tools](../wcm/wcm_maintain.md)
 

@@ -8,7 +8,6 @@ The `wp_oob_sample_styles` theme module includes a single CSS file that is named
 
 **Stylesheet note:** The `Rich Text` presentation template that is used as the default presentation for Rich Text content items uses CSS styles that render differently depending on the layout container that contains the Rich Text web content viewer. Different classification CSS classes are assigned to these layout containers. As a result, the font sizes of headings and body elements are reduced when a rich text item is moved from the center column into a more narrow side column.
 
-**Parent topic:**[Creating content with sample web content template items](../wcm/wcm_delivery_ctsamples_main.md)
 
 **Related information**  
 

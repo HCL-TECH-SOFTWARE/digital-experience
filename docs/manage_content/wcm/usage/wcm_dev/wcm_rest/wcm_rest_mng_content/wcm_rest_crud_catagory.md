@@ -170,5 +170,4 @@ HTTP/1.1 DELETE /wps/mycontenthandler/wcmrest/Category/525900ec-0ae0-40f7-9edd-4
 HTTP/1.1 200 OK
 ```
 
-**Parent topic:**[How to manage web content items by using REST](../wcm/wcm_rest_crud.md)
 

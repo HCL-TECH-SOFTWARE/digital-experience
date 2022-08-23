@@ -32,7 +32,6 @@ Portal ConfigEngine task that deletes a virtual portal.
 -   **[Using a single configuration task to administer multiple virtual portals](../admin-system/advp_cfgtsk_single.md)**  
 You can administer multiple virtual portals by running a single configuration command. The following configuration tasks support working with multiple virtual portals: create-virtual-portal, delete-virtual-portal, and modify-virtual-portal. Use the -DvirtualPortalList parameter with task to create, delete, or modify multiple virtual portals at the same time.
 
-**Parent topic:**[Virtual portals command reference](../admin-system/advpref_cmd.md)
 
 **Related information**  
 

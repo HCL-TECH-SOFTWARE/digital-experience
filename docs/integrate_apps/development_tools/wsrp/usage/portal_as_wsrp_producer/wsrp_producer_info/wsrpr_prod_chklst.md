@@ -38,5 +38,4 @@ Use this list to check whether you provided and obtained all required informatio
         If the Producer portal has security configured, the Producer needs this information to give the users of the Consumer portal access permission to the provided WSRP services.
 
 
-**Parent topic:**[Information that the Producer exchanges with the Consumer](../admin-system/wsrpc_prod_prep_info.md)
 

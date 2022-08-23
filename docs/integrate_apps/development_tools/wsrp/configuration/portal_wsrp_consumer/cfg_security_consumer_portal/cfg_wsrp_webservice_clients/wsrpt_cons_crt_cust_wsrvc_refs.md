@@ -30,7 +30,6 @@ The service clients and service references are defined in the web.xml deployment
 -   **[Adding service references to the wps.war web application](../admin-system/wsrpt_cons_add_srvcrefs2webapp.md)**  
 The WSRP service clients and service references are defined in the web.xml deployment descriptor of the wps.war web application. That web application that is contained in the portal enterprise application archive wps.ear. To add service references, you modify the web.xml deployment descriptor.
 
-**Parent topic:**[Configuring WSRP web service clients](../admin-system/wsrpt_cons_cfg_wsrvc_clnt.md)
 
 **Previous topic:**[Using the WSRP policy sets and client policy set bindings](../admin-system/wsrpt_cons_use_deflt_polsets.md)
 

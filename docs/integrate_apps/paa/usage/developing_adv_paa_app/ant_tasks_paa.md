@@ -1768,5 +1768,4 @@ The following markup tags are supported.
     The com.ibm.wplc.deploy.tasks.EarRemove class implements this task.
 
 
-**Parent topic:**[Developing advanced PAA file applications](../config/dev_sol_app_adv.md)
 

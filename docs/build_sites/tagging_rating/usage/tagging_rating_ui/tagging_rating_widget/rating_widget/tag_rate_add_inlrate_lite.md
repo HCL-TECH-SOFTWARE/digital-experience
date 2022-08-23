@@ -71,7 +71,6 @@ Specify the appropriate values for the parameters:
 
 These parameters are mandatory. For information about the optional parameters, read the *Rating widget parameter reference*.
 
-**Parent topic:**[The rating widget](../admin-system/tag_rate_inline_rate_wdgt_lite.md)
 
 **Related information**  
 

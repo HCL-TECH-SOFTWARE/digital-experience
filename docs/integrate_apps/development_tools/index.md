@@ -11,5 +11,4 @@ This toolkit includes two main areas of functionality:
 
 Access the Web Developer Toolkit for HCL Digital Experience and additional information on the HCL Digital Experience GitHub repository here: [https://github.com/hcl-dx/WebDevToolkitForDx](https://github.com/hcl-dx/WebDevToolkitForDx).
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 

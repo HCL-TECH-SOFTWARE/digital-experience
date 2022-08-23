@@ -57,5 +57,4 @@ You can configure Security Access Manager for authentication, authorization, and
 -   **[Removing Security Access Manager](../security/tam_deconfig.md)**  
 After you install and use IBM Security Access Manager, you might find that you no longer require its use. You can then remove it from the HCL Digital Experience environment and restore authentication capabilities to IBM WebSphere Application Server and authorization capabilities to HCL Digital Experience.
 
-**Parent topic:**[Security Access Manager](../security/conf_tam.md)
 

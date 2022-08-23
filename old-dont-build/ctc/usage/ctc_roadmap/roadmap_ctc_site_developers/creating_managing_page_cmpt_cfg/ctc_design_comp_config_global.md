@@ -6,5 +6,4 @@ The recommended approach for these page component configurations is to create a 
 
 Because these page components are used throughout the site, you may also want to lock down the access level that is required to modify them; putting them in their own site area makes this easier to implement.
 
-**Parent topic:**[Creating and managing page component configurations](../ctc/ctc_design_comp_config.md)
 

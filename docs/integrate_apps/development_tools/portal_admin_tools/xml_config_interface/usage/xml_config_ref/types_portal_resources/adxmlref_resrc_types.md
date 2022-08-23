@@ -379,7 +379,6 @@ Additional to the tags that represent portal resources as listed in the precedin
 -   **[Actions on portal resources](../admin-system/adxmlref_actions.md)**  
 All XML elements that represent portal resources have a required action attribute. The action attribute of XML elements determines what type of processing is applied to the portal resources.
 
-**Parent topic:**[XML configuration reference](../admin-system/adxmlref.md)
 
 **Related information**  
 

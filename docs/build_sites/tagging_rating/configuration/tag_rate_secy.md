@@ -42,7 +42,6 @@ In a default portal installation, the group All Authenticated Portal Users has t
 -   In a default portal installation, the group All authenticated users has CONTRIBUTOR and privileged USER access to tags and rating under virtual resources. If you want to test what an authenticated user with the default role assignments in the portal can do with tags and ratings, remove these permissions first.
 -   In a default portal installation, anonymous users have no role assigned. For anonymous users to create and delete personal public tags and ratings, assign them the CONTRIBUTOR role.
 
-**Parent topic:**[Tagging and rating](../admin-system/tag_rate_mngadmin.md)
 
 **Related information**  
 

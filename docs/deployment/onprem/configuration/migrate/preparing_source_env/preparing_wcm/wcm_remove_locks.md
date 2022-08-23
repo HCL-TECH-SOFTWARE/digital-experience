@@ -11,5 +11,4 @@ Before migrating, it is recommended that locks are removed on Web content items.
 4.  Select all items, and then click **Unlock**.
 
 
-**Parent topic:**[Preparing Web Content Manager content](../migrate/wcm_specific_steps.md)
 

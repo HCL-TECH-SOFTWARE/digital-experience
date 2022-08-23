@@ -136,5 +136,4 @@ catch (Exception e)
 
 In order to run a Work object, it is necessary to do a JNDI lookup to obtain the default HCL Portal Server Work Manager instance. Once this is done, the `DeleteWork` class can be instantiated. To run `DeleteWork` on a separate thread, call `startWork()` on the `WorkManager` passing in the `DeleteWork` instance. For example, `wm.startWork(workItem);` The `System.out` log can be checked to see when `DeleteWork` finishes.
 
-**Parent topic:**[The HCL Web Content Manager API](../wcm/wcm_dev_api.md)
 

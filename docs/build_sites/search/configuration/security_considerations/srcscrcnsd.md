@@ -11,5 +11,4 @@ When you create a new content source using the Manage Search portlet, some secur
 -   **[Configuring web server security](../admin-system/srt_cfg_sec_https.md)**  
 For security reasons, the portal search seedlist by default redirects to HTTPs. Therefore, you need to configure your web server for HTTPs.
 
-**Parent topic:**[Planning and preparing for Portal Search](../admin-system/srcbfrwrkgwtprtlsrch.md)
 

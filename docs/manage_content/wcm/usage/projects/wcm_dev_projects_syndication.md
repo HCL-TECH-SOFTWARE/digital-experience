@@ -47,5 +47,4 @@ This behavior can be changed by using the configuration property wcm.publishProj
 -   Project templates are not syndicated.
 -   Workflows set to immediately publish drafts are not supported by projects.
 
-**Parent topic:**[Projects](../wcm/wcm_proj_overview.md)
 

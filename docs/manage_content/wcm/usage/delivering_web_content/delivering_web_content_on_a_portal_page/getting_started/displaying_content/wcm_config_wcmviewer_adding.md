@@ -17,5 +17,4 @@ Add a Web Content Viewer Portlet to a page with the site toolbar.
 6.  You can modify settings for the Web Content Viewer, such as a content association or portlet title.
 
 
-**Parent topic:**[Displaying content with Web Content Viewers](../wcm/wcm_deploy_wcmviewer.md)
 

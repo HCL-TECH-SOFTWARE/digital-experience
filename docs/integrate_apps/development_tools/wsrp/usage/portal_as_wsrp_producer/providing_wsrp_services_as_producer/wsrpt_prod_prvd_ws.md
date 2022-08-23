@@ -19,7 +19,6 @@ To provide portlets through WSRP, you use the Manage Portlets portlet. You can a
 -   **[Using the XML configuration interface to provide or withdraw a portlet](../admin-system/wsrpt_prod_prvd_by_xml.md)**  
 A WSRP Producer can provide or withdraw portlets by using the XML configuration interface.
 
-**Parent topic:**[Using your portal as a WSRP Producer](../admin-system/wsrpt_prod_use.md)
 
 **Previous topic:**[Information that the Producer exchanges with the Consumer](../admin-system/wsrpc_prod_prep_info.md)
 

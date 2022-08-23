@@ -61,7 +61,6 @@ HTTP\_STATUS\_MESSAGE\_404=The requested content does not exist. Please verify t
 |404|The page that is specified in the requested URL.|Web content is rendered according to the private Web Content Manager context of the Web Content Viewer portlet or /Web Content/Home/Missing Content.|N/A|N/A|N/A|/Web Content/Home/Missing Content|
 |410|The page with the unique name missing.content displays.|Web content is rendered according to the private Web Content Manager context of the Web Content Viewer portlet or /Web Content/Home/Missing Content.|410|N/A|`nm:oid:missing.content`|/Web Content/Home/Missing Content|
 
-**Parent topic:**[How to validate friendly URLs for web content](../wcm/validate_friendly_urls.md)
 
 **Related information**  
 

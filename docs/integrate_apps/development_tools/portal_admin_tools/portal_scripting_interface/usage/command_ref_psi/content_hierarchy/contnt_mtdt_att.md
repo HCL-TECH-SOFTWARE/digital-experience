@@ -64,5 +64,4 @@ foreach pname [$Content list parm] {
 $Content drop parm "MyUserData" 
 ```
 
-**Parent topic:**[Content hierarchy accessed through Content bean](../admin-system/contnt_hierarchy.md)
 

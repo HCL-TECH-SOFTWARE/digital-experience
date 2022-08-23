@@ -15,7 +15,6 @@ You can use the XML configuration interface \(XML Access\) to manipulate managed
 -   **[Lost-found site area](../wcm/wcm_mngpages_lostfound.md)**  
 When Web Content Manager cannot determine the proper location of a page item in the Portal Site library, the page item is stored in the lost-found site area. This site area ensures that you can recover pages and any content that is stored beneath the pages when a problem occurs.
 
-**Parent topic:**[Administering](../admin-system/administering_parent.md)
 
 **Related information**  
 

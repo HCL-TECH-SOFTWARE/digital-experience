@@ -15,7 +15,6 @@ The following topics provide specific information about the implementation of th
 -   **[Using two-phase rendering with JSR 286 portlets](../dev-portlet/jsr2phase_overview.md)**  
 For portlets conforming to JSR 286, HCL Digital Experience includes support for two-phase rendering, which allows portlets to set cookies and the HTTP headers and to change the portal page title dynamically.
 
-**Parent topic:**[Developing portlets](../dev-portlet/wpsdev.md)
 
 **Related information**  
 

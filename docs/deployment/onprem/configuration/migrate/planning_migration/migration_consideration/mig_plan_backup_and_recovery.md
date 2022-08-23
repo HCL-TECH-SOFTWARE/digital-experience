@@ -14,7 +14,6 @@ When you create a backup and recovery plan, consider these general questions:
 
 **Attention:** Backing up and recovering an HCL Digital Experience installation includes the WebSphere Application Server runtime environment and all applications that are deployed on HCL Portal. However, if applications use remote information sources outside of the HCL Portal databases and the LDAP directory, you need to consider these remote sources. Develop backup and recovery procedures for these remote sources as part of your comprehensive strategy.
 
-**Parent topic:**[Migration considerations](../plan/mig_plan_high_availability.md)
 
 **Related information**  
 

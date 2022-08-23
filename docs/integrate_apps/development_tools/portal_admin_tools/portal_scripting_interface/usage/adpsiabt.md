@@ -36,5 +36,4 @@ The Jython syntax can be derived from the JACL syntax in a generic way as follow
 -   **JACL**:   `$Object method arg1 arg2`     Example: `$Portal login myuserid mypassword`
 -   **Jython**:  `Object.method(arg1, arg2)`   Example: `Portal.login('myuserid', 'mypassword')`
 
-**Parent topic:**[Portal Scripting Interface](../admin-system/ad_psi.md)
 

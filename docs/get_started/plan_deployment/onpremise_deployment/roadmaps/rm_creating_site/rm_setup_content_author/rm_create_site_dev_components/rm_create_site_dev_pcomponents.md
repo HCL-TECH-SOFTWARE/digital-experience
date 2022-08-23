@@ -17,5 +17,4 @@ This roadmap describes how to create the teaser page component of the design fro
 -   **[Creating the dynamic list page](../install/rm_create_site_dev_dynamiclist.md)**  
 This roadmap describes how to create the dynamic list page component of the design from an HTML component. The dynamic list page component is used on the Home, Product, and Events page.
 
-**Parent topic:**[Setting up the site for the content author](../install/rm_create_site.md)
 

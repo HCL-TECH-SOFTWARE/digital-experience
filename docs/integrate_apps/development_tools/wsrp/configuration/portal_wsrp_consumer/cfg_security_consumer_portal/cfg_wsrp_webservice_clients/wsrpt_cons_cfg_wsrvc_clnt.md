@@ -30,7 +30,6 @@ HCL Portal provides a set of default WSRP policy sets and client policy set bind
 3.  [Creating and deploying custom service references](../admin-system/wsrpt_cons_crt_cust_wsrvc_refs.md)  
 In your WSRP Consumer portal, you can deploy extra service references for the WSRP service clients.
 
-**Parent topic:**[Configuring security on the Consumer portal](../admin-system/wsrpt_cons_prep_sec.md)
 
 **Related information**  
 

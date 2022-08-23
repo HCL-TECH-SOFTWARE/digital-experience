@@ -54,5 +54,4 @@ Install and configure HCL Digital Experience before you configure the IBM Licens
 5.  Verify that the itlm.product file exists in the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/version directory.
 
 
-**Parent topic:**[HCL Portal](../config/config_portal.md)
 

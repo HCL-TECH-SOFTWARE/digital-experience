@@ -32,5 +32,4 @@ You can change the way that a web page looks for any device with responsive web 
 -   **[Upgrading MobileFirst](../integrate/wl_ugrade.md)**  
 You can create an EAR file, and copy MobileFirst resources into that EAR to keep up to date with the newest MobileFirst release.
 
-**Parent topic:**[Integrating](../admin-system/integrating_parent.md)
 

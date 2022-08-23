@@ -24,7 +24,6 @@ You can create extra custom site areas so that your content can be stored in sep
 -   **[Troubleshooting the Script Application command line tool](../script-portlet/cmd_line_trouble.md)**  
 Use this information to resolve issues that are related to installing and using the command line tool.
 
-**Parent topic:**[The Script Application](../script-portlet/script_portlet.md)
 
 **Related information**  
 

@@ -70,5 +70,4 @@ Example 2: Putting a layout container on a page:
 
 ```
 
-**Parent topic:**[Use cases for modifying resources](../dev/rest_feed_mod_resrc.md)
 

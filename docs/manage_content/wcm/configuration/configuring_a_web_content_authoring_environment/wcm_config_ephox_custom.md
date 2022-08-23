@@ -135,5 +135,4 @@ For example, if the URL for accessing DX in your cloud environment is https://dx
 
 -   Documentation resource: [Newly unsupported features and themes for HCL Digital Experience 8.5 and 9.0](../reference/newly_unsupported_features.md)
 
-**Parent topic:**[Configuring a web content authoring environment](../wcm/wcm_install_cfgauthoring.md)
 

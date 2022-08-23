@@ -6,5 +6,4 @@ The PAA package developer must organize the documentation directory per the rela
 
 **Note:** The documentation directory is the only recommended place for documentation that is related to the application. There is no provision within the PAA format to provide documentation at the component level.
 
-**Parent topic:**[PAA file structure overview](../config/si_paa_spec_ov.md)
 

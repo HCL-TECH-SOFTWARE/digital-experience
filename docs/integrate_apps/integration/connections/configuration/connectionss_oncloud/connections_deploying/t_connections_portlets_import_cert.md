@@ -36,5 +36,4 @@ In order for HCL Portal to communicate with HCL Connections over Secure Sockets 
 9.  Click **Save**.
 
 
-**Parent topic:**[Deploying the HCL Connections Portlets for HCL Connections Cloud](../connect/c_connections_portlets_deploying_portlets_cc.md)
 

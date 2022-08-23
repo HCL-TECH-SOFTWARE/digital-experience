@@ -120,7 +120,6 @@ You can add vertical cluster members to share the workload demands of your clust
     3.  Stop and start the web server.
 
 
-**Parent topic:**[Setting up a cluster](../config/config_cluster.md)
 
 **Related information**  
 

@@ -9,5 +9,4 @@ In the Page Builder theme the login link points to a protected URL to the home p
 3.  Change `ibm.portal.Home``wps.content.root` to the unique name of the page to which you want your users to be directed after logging in.
 
 
-**Parent topic:**[Configuring portal behavior](../admin-system/adptlcfg.md)
 

@@ -25,7 +25,6 @@ If a JSON file is not formatted correctly it cannot be processed by the server, 
 -   **[Syntax in modules and profile definitions](../dev-theme/themeopt_json_syntax_profiles.md)**  
 If your theme is not behaving as it should, it could be because there are syntax problems within the module or profile files.
 
-**Parent topic:**[The module framework](../dev-theme/themeopt_module.md)
 
 **Related information**  
 

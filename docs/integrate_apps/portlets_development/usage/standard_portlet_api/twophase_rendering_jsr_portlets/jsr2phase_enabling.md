@@ -17,5 +17,4 @@ By default, two-phase rendering is turned off. To enable two-phase rendering for
     ```
 
 
-**Parent topic:**[Using two-phase rendering with JSR 286 portlets](../dev-portlet/jsr2phase_overview.md)
 

@@ -11,7 +11,6 @@ Learn more about the different modes that you can use with the Portal Scripting 
 -   **[Command reference for the Portal Scripting Interface](../admin-system/adpsicrf.md)**  
 The HCL Digital Experience Scripting Interface component provides a scripting interface for the administration functions.
 
-**Parent topic:**[Portal administration tools](../admin-system/admtools.md)
 
 **Related information**  
 

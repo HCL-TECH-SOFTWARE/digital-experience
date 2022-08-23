@@ -33,7 +33,6 @@ By default, you can specify any host name in a URL used to retrieve content. How
     -   Property name: `connect.connector.httpconnector.hosts.host\_name.defaultcache`, where `host\_name` is the fully qualified host name of the server for which you want to grant access. For example: `connect.connector.httpconnector.hosts.www.example.com.defaultcacheexpires`
     -   Value: `true` or `false`
 
-**Parent topic:**[Further configuration options](../wcm/wcm_config.md)
 
 **Related information**  
 

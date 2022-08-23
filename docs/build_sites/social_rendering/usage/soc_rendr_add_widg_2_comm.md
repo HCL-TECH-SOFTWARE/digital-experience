@@ -52,5 +52,4 @@ The drag-and-drop configurations for the community-focused list view definitions
 
 **Note:** The portlet preferences that are described here are ignored on non-community pages, that is on pages that are not associated to a specific community.
 
-**Parent topic:**[Social rendering](../social/soc_rendr_ovu.md)
 

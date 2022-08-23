@@ -32,7 +32,6 @@ Browser bookmarks to pages from HCL Portal Version 7.0 do not work for 8.5. User
 
 Server side bookmarks of the HCL Portal Favorites portlet are migrated automatically as you migrate to HCL Portal 8.5.
 
-**Parent topic:**[Browser behavior and scenarios](../admin-system/adbackbut.md)
 
 **Related information**  
 

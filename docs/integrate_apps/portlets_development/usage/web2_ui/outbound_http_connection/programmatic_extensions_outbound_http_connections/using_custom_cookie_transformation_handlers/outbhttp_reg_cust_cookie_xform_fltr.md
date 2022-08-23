@@ -16,5 +16,4 @@ You define custom cookie transformation handlers at a cookie rule. The following
 
 The `transformation` section contains a class name that specifies the factory class for custom cookie transformation filters.
 
-**Parent topic:**[Using custom cookie transformation handlers](../dev-portlet/outbhttp_cust_cookie_xform_hdlr.md)
 

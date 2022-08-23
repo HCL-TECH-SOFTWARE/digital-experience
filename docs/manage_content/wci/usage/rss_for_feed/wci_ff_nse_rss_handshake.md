@@ -65,5 +65,4 @@ Ideally, if no changes have occurred since the last time the consumer requested 
 
 The consumer will always send a request containing the Etag label of the last transaction feed it successfully received. In this case the producer application will be responsible for re-sending any entries that might have been missed due to a communication failure between the servers.
 
-**Parent topic:**[RSS Namespace Extension for the Feed Service](../wci/wci_ff_nse_rss.md)
 

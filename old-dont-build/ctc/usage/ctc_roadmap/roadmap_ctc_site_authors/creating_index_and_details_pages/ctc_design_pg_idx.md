@@ -35,5 +35,4 @@ When you are done, the page contains portlets that show content from this area, 
     All of the same options that are discussed for landing pages regarding teasers, navigation, lists, slideshows, and so on apply to index pages too. This is how you create cross-referencing and shortcuts across the site and drive users through to particular site areas with teasers.
 
 
-**Parent topic:**[Creating index and details pages](../ctc/ctc_design_qs_idx.md)
 

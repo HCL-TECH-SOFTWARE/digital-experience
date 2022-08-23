@@ -17,7 +17,6 @@ To dynamically construct HCL Connections query URLs, you can use the \[Plugin:Co
 -   **[Organizing your custom HCL Connections queries](../social/soc_rendr_org_cust_conn_qurs.md)**  
 For the different query URLs that you want to use, you can create multiple dynamic or static HCL Connections query URL components. For convenient use of these query URL components, you can create a generic authoring template for all list definitions that you want to build from those queries.
 
-**Parent topic:**[Social rendering](../social/soc_rendr_ovu.md)
 
 **Related information**  
 

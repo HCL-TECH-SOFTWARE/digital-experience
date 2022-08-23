@@ -21,7 +21,6 @@ If you customized your blogs and wiki, you will lose your customizations and you
 
 Enabling blogs and wikis by running the configure-blog task also enables tag and rating widgets. Go to [Enabling the new tag and rating widgets after a portal upgrade](mig_post_tagandrate.md#) to verify and finish enabling tag and rating widgets.
 
-**Parent topic:**[Portal tasks](../migrate/mig_post_portaltasks.md)
 
 **Related information**  
 

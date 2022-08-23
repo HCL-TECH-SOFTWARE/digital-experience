@@ -17,7 +17,6 @@ Place all documents and ID-related artifacts for the application in the document
 -   **[Components directory](../config/si_paa_spec_compdir.md)**  
 The components directory and its sub-directories in the PAA file archive are where all deployable artifacts must be stored. If you examine the content of the components directory in the PortalServer\_root/doc/paa-samples/Sample1.paa file, you see one component, sample1. There is always at least one component that is contained in a PAA file. However, there is no limit on the number of extra components that you can include.
 
-**Parent topic:**[Create a Portal Application Archive \(PAA\) file](../config/si_paa_spec.md)
 
 **Related information**  
 

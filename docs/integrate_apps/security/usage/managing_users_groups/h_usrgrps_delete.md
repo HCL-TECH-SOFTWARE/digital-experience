@@ -15,5 +15,4 @@ You can delete a user or user group from HCL Portal.
     **Note:** Deleting a user group from the portal does not delete the members of the group.
 
 
-**Parent topic:**[Users and groups](../admin-system/adusrgrp.md)
 

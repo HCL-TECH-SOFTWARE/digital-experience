@@ -10,5 +10,4 @@ The prerequisites for the Sample Content UI application in the HCL Experience AP
 -   Make sure your HCL Digital Experience 9.5 instance is up and running.
 -   Make sure your HCL Experience API Docker image is up and running.
 
-**Parent topic:**[Sample Content UI \| HCL Experience API](../open_api/sample_api_overview.md)
 

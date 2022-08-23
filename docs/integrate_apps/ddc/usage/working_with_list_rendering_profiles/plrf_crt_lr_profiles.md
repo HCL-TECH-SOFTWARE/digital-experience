@@ -17,7 +17,6 @@ When you model your derived profile from an existing profile, you reference the 
     **Note:** If your `yourCo.Atom` and `yourCo.Base` define the same attribute, the definition in the `yourCo.Atom` profile overrides the definition that is given in the `yourCo.Base` profile.
 
 
-**Parent topic:**[Working with list-rendering profiles](../social/plrf_work_lr_profiles.md)
 
 **Related information**  
 

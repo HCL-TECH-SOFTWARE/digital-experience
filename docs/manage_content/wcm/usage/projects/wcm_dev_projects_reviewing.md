@@ -11,5 +11,4 @@ When a project is in the review state:
 -   Approvers can decline a project by clicking **Reject Project**. The project is returned to the active state.
 -   If joint approval is specified, approvers can withdraw an approval while the project is still in review by clicking **Withdraw Approval**. The users's approval is withdrawn, but the project remains in a state of review.
 
-**Parent topic:**[Projects](../wcm/wcm_proj_overview.md)
 

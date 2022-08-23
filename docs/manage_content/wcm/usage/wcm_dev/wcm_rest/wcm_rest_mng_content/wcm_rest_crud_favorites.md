@@ -144,5 +144,4 @@ For example:
 wcmrest:item/65a46943-ed1c-4f5d-b497-03c18886ca8e
 ```
 
-**Parent topic:**[How to manage web content items by using REST](../wcm/wcm_rest_crud.md)
 

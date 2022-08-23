@@ -39,5 +39,4 @@ If you do so, you are redirected to the corresponding REST service URL. For GET 
 
 If you need the service description of several REST Service URLs, you can set the `uri` parameter multiple times by using different URIs. In this case, the lookup servlet aggregates the descriptions into one ATOM feed.
 
-**Parent topic:**[How the portal implements the remote PUMA REST service](../dev/uprof_rest_wpspec.md)
 

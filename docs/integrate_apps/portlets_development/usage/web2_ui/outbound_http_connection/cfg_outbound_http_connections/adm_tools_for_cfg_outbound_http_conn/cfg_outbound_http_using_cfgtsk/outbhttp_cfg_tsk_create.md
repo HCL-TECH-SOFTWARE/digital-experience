@@ -4,7 +4,6 @@ This configuration task creates an outbound HTTP connection configuration profil
 
 The configuration task creates the specified configuration settings if they do not exist. In contrast to the configuration task update-outbound-http-connection-config, this task leaves existing configuration settings unchanged. The syntax of the configuration task differs, depending on whether you want to create the settings for a global configuration or for an application-scoped configuration.
 
-**Parent topic:**[Configuring outbound HTTP connections by using configuration tasks](../dev-portlet/outbhttp_cfg_tasks.md)
 
 **Related information**  
 

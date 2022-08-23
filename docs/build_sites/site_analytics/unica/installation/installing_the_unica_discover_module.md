@@ -103,5 +103,4 @@ See the [HCL Unica Discover Help Center](https://help.hcltechsw.com/UnicaDiscove
 
 ![Review Digital Experience session replay from Unica Discover](../images/Review%20Digital%20Experience%20session%20replay%20from%20Unica%20Discover%20DX-updated.png "Review Digital Experience session replay from Unica Discover")
 
-**Parent topic:**[Integrate HCL Unica Discover with HCL Digital Experience](../install/integrate_hcl_unica_discover.md)
 

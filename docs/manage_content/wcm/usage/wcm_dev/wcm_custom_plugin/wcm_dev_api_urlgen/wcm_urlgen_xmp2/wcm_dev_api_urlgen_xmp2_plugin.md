@@ -15,5 +15,4 @@ You can use this sample plugin.xml file to register the sample filter.
 </plugin>
 ```
 
-**Parent topic:**[Example 2: Generate a friendly URL for web content](../wcm/wcm_dev_api_urlgen_xmp2.md)
 

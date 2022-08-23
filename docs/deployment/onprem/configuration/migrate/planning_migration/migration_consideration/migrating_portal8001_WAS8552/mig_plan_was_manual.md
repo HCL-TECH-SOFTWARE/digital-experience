@@ -65,7 +65,6 @@ If you are performing an in-place update of a cluster, the deployment manager sh
 17. Start your configuration with the **Upgrade the ConfigEngine** step.
 
 
-**Parent topic:**[Migrating from Portal 8.0.0.1 on WebSphere Application Server 8.5.5.2](../migrate/mig_plan_was855.md)
 
 **Related information**  
 

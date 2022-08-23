@@ -25,7 +25,6 @@ The preceding diagram includes the following components:
     -   *Repository SPI \(System programming interfaces for virtual member manager adapters\)*
     -   *Sample custom adapters for federated repositories examples*
 
-**Parent topic:**[User registry considerations](../plan/plan_ureg.md)
 
 **Related information**  
 

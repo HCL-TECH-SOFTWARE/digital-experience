@@ -25,7 +25,6 @@ The Portlet Wiring Tool allows you to configure connections, or wires, between c
 -   **[Themes and skins](../admin-system/admcustom_skins.md)**  
 A theme determines the global appearance of a page. The purpose of this is to ensure visual consistency. Themes affect the navigational structure, the banner, the colors and fonts, the available portlet skins, and other visual elements of a page. A skin determines the frame that is displayed around a portlet.
 
-**Parent topic:**[Manage pages portlets](../admin-system/mp_manage_pages.md)
 
 **Related information**  
 

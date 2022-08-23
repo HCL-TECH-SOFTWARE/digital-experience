@@ -21,7 +21,6 @@ For details about how to perform these tasks refer to the Supported Markups port
 
 To help the user's browser to render content correctly, the used character set is written to the HTTP header of the response stream. The default encoding is UTF-8. If it set to another encoding, you can force the default encoding by setting the JVM parameter as follows default.client.encoding=UTF-8.
 
-**Parent topic:**[Language support](../admin-system/adintern.md)
 
 **Related information**  
 

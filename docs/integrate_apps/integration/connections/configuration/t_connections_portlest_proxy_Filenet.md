@@ -49,5 +49,4 @@ The CCM portlet makes direct requests to the FileNet server, which might be embe
     ```
 
 
-**Parent topic:**[Configure HCL Portal to work with HCL Connections](../connect/c_connections_overview.md)
 

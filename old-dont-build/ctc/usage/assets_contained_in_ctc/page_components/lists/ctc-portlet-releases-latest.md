@@ -2,7 +2,6 @@
 
 Displays a list of the most recent Press Releases, based on content items that are created by using the Press Release content template.
 
-**Parent topic:**[Lists](../ctc/ctc-portlet-types-lists.md)
 
 # Usage
 

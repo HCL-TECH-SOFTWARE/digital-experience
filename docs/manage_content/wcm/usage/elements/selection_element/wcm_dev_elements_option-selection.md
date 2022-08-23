@@ -16,5 +16,4 @@ A simple use-case for using option selection elements is when you want to enable
 
 Option selection elements can also be used to allow content creators to select different options that can then be used as parameters in some custom code such as a custom workflow or a JSP component.
 
-**Parent topic:**[Selection elements](../wcm/wcm_dev_elements_types_selection.md)
 

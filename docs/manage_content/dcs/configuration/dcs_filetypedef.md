@@ -165,5 +165,4 @@ For AIX, HP-UX, and IBM i, refer to the prerequisites as described in [Configuri
 
 For IBM i, refer to the prerequisites as described in [Configuring images for Document Conversion Services](dcs_config_images.md).
 
-**Parent topic:**[Document Conversion Services](../admin-system/dcs_info.md)
 

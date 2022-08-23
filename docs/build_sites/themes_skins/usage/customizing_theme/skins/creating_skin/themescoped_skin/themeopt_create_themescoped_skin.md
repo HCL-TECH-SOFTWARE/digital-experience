@@ -11,5 +11,4 @@ When you create new skin resources, you can define them so that you can assign t
 -   **[Defining the skin and assigning it to a theme manually](../dev-theme/themeopt_scopedskin_manual.md)**  
 When you create new skin resources, you can define them so that you can assign them to a theme.
 
-**Parent topic:**[Creating skins](../dev-theme/themeopt_cust_skincreate.md)
 

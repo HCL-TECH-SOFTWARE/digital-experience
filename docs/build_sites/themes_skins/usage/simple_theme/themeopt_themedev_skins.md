@@ -27,5 +27,4 @@ Your new skin is now deployed and ready to use.
 
 Learn more about [Skins](themeopt_cust_scopeskin.md#). Note that not all information at this link applies to the Simple Theme.
 
-**Parent topic:**[Understanding the Simple Theme](../dev-theme/themeopt_themedev_simpletheme.md)
 

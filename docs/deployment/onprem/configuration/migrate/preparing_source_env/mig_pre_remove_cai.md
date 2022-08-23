@@ -22,7 +22,6 @@ Composite applications are no longer supported. If you have a composite applicat
 5.  Run the resource cleaner to ensure that no other pages exist in the database: [Scheduling the delayed cleanup of portal pages](../admin-system/adxmltsk_sked_delclnup.md).
 
 
-**Parent topic:**[Preparing your source environment](../migrate/mig_t_premig_tasks.md)
 
 **Related information**  
 

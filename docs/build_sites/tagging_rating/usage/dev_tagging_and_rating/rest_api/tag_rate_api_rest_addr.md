@@ -280,7 +280,6 @@ Unlike the rating model, the rating space model does not contain information abo
     This returns a feed that represents the empty set of rating spaces. You can add individual rating spaces to this feed by adding additional query parameters.
 
 
-**Parent topic:**[The REST API](../admin-system/tag_rate_api_rest.md)
 
 **Related information**  
 

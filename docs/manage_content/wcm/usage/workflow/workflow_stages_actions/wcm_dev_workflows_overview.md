@@ -24,5 +24,4 @@ Joint approval is used in cases where approval from multiple users is required b
 -   **[Workflow example](../wcm/wcm_dev_workflows_example.md)**  
 This example describes the steps that are required to create a four stage Workflow.
 
-**Parent topic:**[Workflow and change management](../wcm/wcm_cms_change.md)
 

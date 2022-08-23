@@ -13,5 +13,4 @@ Provides access to the description of certain objects such as Navigation, Conten
 -   **[UrlGeneration](../dev-theme/themeopt_el_bean_url_gen.md)**  
 Creates a portal URL you can control with attributes.
 
-**Parent topic:**[Expression language beans for accessing programming models](../dev-theme/themeopt_el_bean.md)
 

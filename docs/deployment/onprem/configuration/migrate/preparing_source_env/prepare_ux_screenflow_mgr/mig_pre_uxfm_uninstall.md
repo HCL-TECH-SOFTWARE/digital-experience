@@ -19,7 +19,6 @@ You must remove the dialog definitions before you uninstall UXFM. If you do not 
     -   Windows: ConfigEngine.bat uninstall-pcm
     -   z/OS: ./ConfigEngine.sh uninstall-pcm
 
-**Parent topic:**[Prepare UX Screen Flow Manager](../migrate/mig_pre_uxfm.md)
 
 **Previous topic:**[Removing UXFM dialog definitions](../migrate/mig_pre_uxfm_remove.md)
 

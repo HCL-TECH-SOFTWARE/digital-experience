@@ -58,7 +58,6 @@ $Content drop node\_ID locale en_US
 $Content empty node\_ID locale
 ```
 
-**Parent topic:**[Portal Scripting Interface Attributes](../admin-system/attributes.md)
 
 **Related information**  
 

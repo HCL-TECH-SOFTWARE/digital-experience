@@ -22,7 +22,6 @@ If you edit the Script Application Configuration Properties component directly i
 4.  If you upgrade your portal to another version or with a Combined Cumulative Fix, check to see whether any items you overrode were changed by default. Change the text component and save the component.
 
 
-**Parent topic:**[Script Application security overview](../script-portlet/security.md)
 
 **Related information**  
 

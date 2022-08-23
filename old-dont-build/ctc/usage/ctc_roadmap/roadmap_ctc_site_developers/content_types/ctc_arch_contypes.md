@@ -34,5 +34,4 @@ Publications content, such as general Topics and FAQs, is published and maintain
 -   **[Profiles content](../ctc/ctc_arch_contypes_profile.md)**  
 Profiles content, such as Biographies, is about people or things. The lifecycle for this content depends on the movement of people, the purchasing and release of buildings, and other similar factors that are related to what is being profiled.
 
-**Parent topic:**[A Content Template Catalog roadmap for site developers](../ctc/ctc_gs_site_devs.md)
 

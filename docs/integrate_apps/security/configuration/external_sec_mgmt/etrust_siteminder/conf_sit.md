@@ -77,5 +77,4 @@ Complete the following steps to configure eTrust SiteMinder for authentication a
 
 Depending on your configuration, the XML configuration interface might not be able to access HCL Portal through eTrust SiteMinder. To allow the XML configuration interface access, use eTrust SiteMinder to define the configuration URL \(/wps/config\) as unprotected. Refer to the eTrust SiteMinder documentation for specific instructions.
 
-**Parent topic:**[Configuring eTrust SiteMinder](../security/cfg_siteminder.md)
 

@@ -14,5 +14,4 @@ For information about the security of site promotions, refer to the topic about 
 -   **[Working with site promotions](../admin-system/sa_asa_site_prom_ui.md)**  
 To work with site promotions, the portal provides a dialog. You can create new site promotion mappings and view and delete existing ones.
 
-**Parent topic:**[Analytics tags and site promotions](../admin-system/sa_asa_anal_tags_site_prom.md)
 

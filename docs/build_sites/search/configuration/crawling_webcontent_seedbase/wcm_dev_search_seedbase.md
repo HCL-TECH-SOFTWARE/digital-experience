@@ -9,7 +9,6 @@ Search seedlist 1.0 can make access control information available in a way that 
 -   **[The search seedlist 1.0 format](../wcm/wcm_dev_search_searchseed.md)**  
 Portal Search is configured to support the HCL Web Content Manager search seedlist 1.0 format by default.
 
-**Parent topic:**[Search](../wcm/wcm_dev_search.md)
 
 **Previous topic:**[Language and region support in Portal Search](../admin-system/srr_lng_regio_spprt.md)
 

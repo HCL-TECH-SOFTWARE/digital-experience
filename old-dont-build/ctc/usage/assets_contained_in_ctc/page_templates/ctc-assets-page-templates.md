@@ -61,5 +61,4 @@ Use this page template to create a stand-alone topic in your website based on th
 -   **[Topics Page Template](../ctc/ctc-assets-page-templates-topics-index.md)**  
 Use this page template to create a parent page for items that use the Topic content template.
 
-**Parent topic:**[Assets contained in the Content Template](../ctc/ctc-assets.md)
 

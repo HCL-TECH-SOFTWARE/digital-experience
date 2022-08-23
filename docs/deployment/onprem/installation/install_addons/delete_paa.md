@@ -20,5 +20,4 @@ After you run the uninstall-paa task and removing the assembly from the ConfigEn
     -   Windows™: ConfigEngine.bat delete-paa -DassemblyList=assembly\_list -DWasPassword=password -DPortalAdminPwd=password
     -   z/OS®: ./ConfigEngine.sh delete-paa -DassemblyList=assembly\_list -DWasPassword=password -DPortalAdminPwd=password
 
-**Parent topic:**[Install and uninstall add-ons using the Solution Installer](../install/inst_si_addons.md)
 

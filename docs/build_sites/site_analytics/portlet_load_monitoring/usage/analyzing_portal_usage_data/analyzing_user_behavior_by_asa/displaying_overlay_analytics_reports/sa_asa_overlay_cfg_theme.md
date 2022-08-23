@@ -46,7 +46,6 @@ The theme module menu entries are displayed only if the theme module `wp_analyti
 
 If you have a custom modular theme, you can use the same approach to integrate the overlay features into a different menu.
 
-**Parent topic:**[Displaying overlay analytics reports](../admin-system/sa_asa_overlay_stats.md)
 
 **Previous topic:**[Configuring a Credential Vault for overlay reports](../admin-system/sa_asa_overlay_cfg_crd_vlt.md)
 

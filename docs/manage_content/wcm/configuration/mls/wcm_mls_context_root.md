@@ -65,5 +65,4 @@ The default context root for the multilingual solution application is /wps. With
     ```
 
 
-**Parent topic:**[Multilingual deployment, installation, and configuration Multilingual Solution](../wcm/wcm_mls_install_ovr.md)
 

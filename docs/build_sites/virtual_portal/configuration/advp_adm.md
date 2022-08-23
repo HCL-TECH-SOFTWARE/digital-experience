@@ -40,9 +40,6 @@ When you create a virtual portal by using the Virtual Portal Manager portlet, th
 -   **[Tasks for administering virtual portals](../admin-system/advptsk.md)**  
 Administering virtual portals and their content comprises the tasks described in the following topics.
 
-**Parent topic:**[Virtual portals](../admin-system/ad_vp.md)
-
-**Parent topic:**[Portal administration](../practitioner_studio/administration.md)
 
 **Related information**  
 

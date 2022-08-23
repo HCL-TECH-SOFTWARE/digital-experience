@@ -11,7 +11,6 @@ Users can use the tag widget to view, apply, and update tags that were applied t
 -   **[The rating widget](../admin-system/tag_rate_inline_rate_wdgt_lite.md)**  
 Users can use the rating widget to view, apply, and update ratings that were applied to a resource.
 
-**Parent topic:**[The tagging and rating user interface](../admin-system/tag_rate_ui.md)
 
 **Related information**  
 

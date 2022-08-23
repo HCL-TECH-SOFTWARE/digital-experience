@@ -82,5 +82,4 @@ The promotions slideshow portlet uses a context override that points to the loca
 
 -   **your-library/your-site/Home/Promotions**
 
-**Parent topic:**[Slideshows](../ctc/ctc-portlet-types-slideshows.md)
 

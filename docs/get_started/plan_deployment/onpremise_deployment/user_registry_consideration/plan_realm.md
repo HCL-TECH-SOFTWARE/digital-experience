@@ -15,7 +15,6 @@ You can create a realm that combines users from your various user registries; fo
 -   If HCL® Domino® is one of your user registries in a multiple registry configuration and shares a realm with another user registry, ensure that the groups are stored in a hierarchical format in the Domino Directory as opposed to the default flat-naming structure. For example, the flat-naming convention is cn=groupName and the hierarchical format is cn=groupName,o=root.
 -   The user must exist in a user registry and not within the property extension configuration; otherwise, the user cannot be a member of the realm.
 
-**Parent topic:**[User registry considerations](../plan/plan_ureg.md)
 
 **Related information**  
 

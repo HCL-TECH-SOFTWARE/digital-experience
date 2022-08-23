@@ -28,7 +28,6 @@ In addition to the repository configuration, you must define the rule attribute 
 3.  Restart the portal server for the VMM configuration changes to become effective. In a portal cluster environment, synchronize the changes and restart the complete cluster, including deployment manager and node agents.
 
 
-**Parent topic:**[Configuring the VMM rule-based groups repository](../admin-system/rbug_cfg_vmm_repos.md)
 
 **Related information**  
 

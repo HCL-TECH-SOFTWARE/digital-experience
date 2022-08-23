@@ -39,5 +39,4 @@ Before you access WebSphere Application Server, configure the software license a
 -   **[Creating a response file for installing HCL Digital Experience in AIX](../install/inst_response-AIX.md)**  
 Use IBM Installation Manager to record a response file based on your environment, and also to automate your installation on multiple servers.
 
-**Parent topic:**[Running the HCL Digital Experience installer in AIX](../install/inst_binaries-AIX.md)
 

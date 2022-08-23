@@ -23,5 +23,4 @@ Each workflow stage contains default actions, but you can also create custom wor
 -   **[Best practices for projects](../wcm/wcm_proj_bestpractice.md)**  
 Use these tips and guidelines to develop and publish projects more effectively.
 
-**Parent topic:**[Developing and managing content](../site/site_dev_man.md)
 

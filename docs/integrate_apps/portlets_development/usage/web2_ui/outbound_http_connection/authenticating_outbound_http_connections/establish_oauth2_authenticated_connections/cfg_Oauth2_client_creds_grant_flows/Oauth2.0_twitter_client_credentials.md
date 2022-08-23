@@ -168,5 +168,4 @@ Set up a client credential grant flow to configure OAuth 2.0 access to Twitter r
     -   The variable `dx_host.com` is for the host name and port number of the Portal Server.
     -   The variable `portal_user` and `portal_pwd` are for the portal credentials that you want to use.
 
-**Parent topic:**[Configure OAuth 2.0 for Client Credentials Grant flows](../dev-portlet/Oauth2.0_client_credentials.md)
 

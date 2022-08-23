@@ -40,7 +40,6 @@ If the connections resolver finds no candidate page or candidate page that conta
 
 If the connections resolver does not find the default page, the final fallback is either to redirect the user to a defined portal error page or to take the user to the details view in the HCL Connections user interface. An administrator can control this behavior by running the portal configuration tasks `disable-poc-redirect-to-connections` or `enable-poc-redirect-to-connections`. For more details about the social object resolution, read *HCL Connections Portlets for HCL Portal: HCL Connections Portlets for HCL Portal*.
 
-**Parent topic:**[Concept of the lists of social objects provided with the social rendering feature](../social/soc_rendr_undrstd.md)
 
 **Related information**  
 

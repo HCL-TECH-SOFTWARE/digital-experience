@@ -52,7 +52,6 @@ The social rendering feature provides you with a set of predefined view definiti
     For a list and descriptions of the available options, see *Customizing social list definitions by using inline editing*.
 
 
-**Parent topic:**[Working with lists of social objects](../social/soc_rendr_tsk_socl_list.md)
 
 **Related information**  
 

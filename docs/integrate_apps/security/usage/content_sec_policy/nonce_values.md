@@ -25,5 +25,4 @@ String nonce=CSPService.getInstance().getNonce();
 
 The implementation supports generation of 128-bit and random nonce values. For more information, refer [W3C specifications- Content Security Policy Level 3](https://w3c.github.io/webappsec-csp/#security-nonces).
 
-**Parent topic:**[Content Security Policy](../security/content_security_policy.md)
 

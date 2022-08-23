@@ -59,5 +59,4 @@ $Content help search-criteria
 
 ```
 
-**Parent topic:**[Command reference for the Portal Scripting Interface](../admin-system/adpsicrf.md)
 

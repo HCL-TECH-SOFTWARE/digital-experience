@@ -42,5 +42,4 @@ Run the ConfigEngine.bat disable-develop-mode-startup-performance -DWasPassword=
 -   If the development settings are not adequate for a special development situation.
 -   When you cannot re-create a problem on the development server.
 
-**Parent topic:**[Changing to a developer mode environment](../install/chg_dev_mode.md)
 

@@ -37,5 +37,4 @@ Cascading stylesheets can be used to control the style of components. For exampl
 
 **Note:** Where possible, use one cascading stylesheet for an entire site. A link to the stylesheet can be used, rather than embedding the stylesheet.
 
-**Parent topic:**[Presentation templates](../wcm/wcm_cms_presentation_templates.md)
 

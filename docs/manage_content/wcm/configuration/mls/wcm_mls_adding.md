@@ -23,5 +23,4 @@ When the initial translation is complete, you can run user acceptance tests befo
 
 You can temporarily disable the automated syncing of this new site while it is going through its initial translation and testing phases.
 
-**Parent topic:**[How to use the HCL Web Content Manager Multilingual Solution](../wcm/wcm_mls_using.md)
 

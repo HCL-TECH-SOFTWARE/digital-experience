@@ -45,7 +45,6 @@ You can see the properties in the following example.
 }
 ```
 
-**Parent topic:**[Writing modules](../dev-theme/themeopt_mod_plugin_xml.md)
 
 **Related information**  
 

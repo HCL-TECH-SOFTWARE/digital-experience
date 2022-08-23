@@ -23,7 +23,6 @@ If you upgrade your HCL Portal from a previous version to Version 8.5, the outbo
 -   For application-specific proxy configurations: The web module that contains the proxy-config.xml is deployed.
 -   One of the portal configuration tasks `create-outbound-http-connection-config` or `update-outbound-http-connection-config` is started.
 
-**Parent topic:**[Outbound HTTP connection](../dev-portlet/outbound_http.md)
 
 **Related information**  
 

@@ -29,5 +29,4 @@ The following list gives the error codes that the remote REST service for PUMA c
     The format specified in the mime-type URI parameter or accept headers is not supported.
 
 
-**Parent topic:**[Structure of the remote REST service for PUMA](../dev/uprof_rest_gen.md)
 

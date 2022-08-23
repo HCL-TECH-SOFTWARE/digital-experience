@@ -27,7 +27,6 @@ To administer Portal Search by using the WebSphere Integrated Solutions Console,
 8.  Restart the portal.
 
 
-**Parent topic:**[Administering Portal Search](../admin-system/srtadmsrch.md)
 
 **Related information**  
 

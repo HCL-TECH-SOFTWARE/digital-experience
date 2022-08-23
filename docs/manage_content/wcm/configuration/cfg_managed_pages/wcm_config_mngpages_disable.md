@@ -53,5 +53,4 @@ Disabling managed pages has the following effects:
 2.  Restart the portal server.
 
 
-**Parent topic:**[Configuring managed pages](../wcm/wcm_config_mngpages.md)
 

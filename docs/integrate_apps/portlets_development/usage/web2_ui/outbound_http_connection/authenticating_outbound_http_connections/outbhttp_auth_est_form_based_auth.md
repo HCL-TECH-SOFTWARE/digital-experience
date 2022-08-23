@@ -72,5 +72,4 @@ Set the following metadata parameters as required:
     Use this parameter to specify the names of the session cookies that are received from the remote server as part of Set-Cookie headers when the form is submitted and the authentication is successful. In the previous example, the specified cookies are sessioncookie1 and sessioncookie2.
 
 
-**Parent topic:**[Authenticating outbound HTTP connections](../dev-portlet/outbhttp_authntct.md)
 

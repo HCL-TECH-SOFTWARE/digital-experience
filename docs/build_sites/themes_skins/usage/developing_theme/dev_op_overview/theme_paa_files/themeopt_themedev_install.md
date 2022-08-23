@@ -29,5 +29,4 @@ You can install theme PAA files by using the Configuration Wizard or by using th
 
 The exported theme is now installed in the location that you specified.
 
-**Parent topic:**[Theme PAA files](../dev-theme/themeopt_themedev_exportedpaa.md)
 

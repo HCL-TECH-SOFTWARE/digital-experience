@@ -29,13 +29,11 @@ This portlet is where users edit element content or information. Selecting a new
 
 The Personalized List portlet allows a user to display personalized content without having to build a custom JSP portlet. Each portlet can display a list of resources and show details for each returned resource. Groups of related resources may be categorized for easy viewing. When a more detailed view of a piece of content is required, a custom detail JSP may be specified. Different instances of the portlet may be used across HCL Portal to quickly and easily deploy customized information to users.
 
-**Parent topic:**[Digital Experience Personalization](../pzn/pzn_overview.md)
 
 **Previous topic:**[Personalization terms](../pzn/pzn_concepts.md)
 
 **Next topic:**[Publishing personalization rules](../pzn/pzn_depub.md)
 
-**Parent topic:**[Digital Experience Personalization](../pzn/pzn_overview.md)
 
 **Previous topic:**[Personalization terms](../pzn/pzn_concepts.md)
 

@@ -8,13 +8,11 @@ Although users are unique, personalizing Web content does not often require crea
 
 **Note:** The Portal User Collection resource collection included with Personalization cannot currently be used to select lists of users in select content rules. The resource collection may be used to profile the user in a profiler rule. This applies to both the user resource collection which is installed with Personalization as well as any custom resource collections created with the manager class com.ibm.websphere.personalization.resources.wps.UserManager.
 
-**Parent topic:**[Personalization terms](../pzn/pzn_concepts.md)
 
 **Previous topic:**[Resources, resource instances, and resource collections](../pzn/pzn_resources.md)
 
 **Next topic:**[Content resources](../pzn/pzn_content_resources.md)
 
-**Parent topic:**[Personalization terms](../pzn/pzn_concepts.md)
 
 **Previous topic:**[Resources, resource instances, and resource collections](../pzn/pzn_resources.md)
 

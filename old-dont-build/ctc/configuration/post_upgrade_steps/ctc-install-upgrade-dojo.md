@@ -6,5 +6,4 @@ Content Template 4.4 requires Dojo 1.9. When you upgrade to Content Template 4.4
 -   If you have written custom additions that use Dojo, these must be upgraded to use Dojo 1.9.
 -   If you are using a custom theme, this theme must be upgraded to include Dojo 1.9. or you must change your site to use a theme that includes Dojo 1.9.
 
-**Parent topic:**[Post upgrade steps](../ctc/ctc-upgrade-post.md)
 

@@ -51,7 +51,6 @@ If a JSON presentation component is associated to that content, you can request 
 http://example.com/wps/mypoc?urile=wcm:path:/Web+Content/News/News1&page=ibm.portal.caas.page&mime-type=application/json
 ```
 
-**Parent topic:**[Content as a Service pages](../wcm/cntnt_serv_pgs.md)
 
 **Related information**  
 

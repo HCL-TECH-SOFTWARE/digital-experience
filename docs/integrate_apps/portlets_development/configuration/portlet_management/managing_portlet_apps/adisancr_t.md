@@ -6,5 +6,4 @@ The use of the anchors depends on the configuration of your device, for example 
 
 If you want to enable the anchors again, restore the FRAGMENT\_IDENTIFIER capability. Use the same portlet to add it back to the appropriate clients.
 
-**Parent topic:**[Managing portlets, portlet applications, and iWidgets](../admin-system/adpltadmwork.md)
 

@@ -25,7 +25,4 @@ In general terms, you use the Item Affinity Engine as follows:
     You should configure the `accumulator` to run at times of low database usage, since it can make heavy use of system resources.
 
 
-**Parent topic:**[Configuring the LikeMinds engines](../pzn/pzn_configure_likeminds_engines.md)
-
-**Parent topic:**[Configuring the LikeMinds engines](../pzn/pzn_configure_likeminds_engines.md)
 

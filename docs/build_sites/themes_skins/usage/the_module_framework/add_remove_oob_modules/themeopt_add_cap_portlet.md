@@ -33,7 +33,6 @@ Read the topics on Module dependencies in portlets and writing modules.
 4.  Redeploy the portlet with the Portal Administrator portlet. Click the **Administration menu** icon. Then, click **Portlet Management** \> **Web Modules**.Install or update your portlet there.
 
 
-**Parent topic:**[Adding or removing a module from a profile](../dev-theme/themeopt_add_oobmod.md)
 
 **Related information**  
 

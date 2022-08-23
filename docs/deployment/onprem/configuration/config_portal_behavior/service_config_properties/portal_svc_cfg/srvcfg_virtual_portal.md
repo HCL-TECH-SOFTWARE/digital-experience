@@ -76,7 +76,6 @@ The portal evaluates properties for virtual portals in the following order and r
 2.  If no specific property is defined for a virtual portal, the portal checks for a property defined by the global keyword. The value of the property is returned.
 3.  If no global property is defined, the value null is returned.
 
-**Parent topic:**[Portal service configuration](../admin-system/srvcfgref.md)
 
 **Related information**  
 

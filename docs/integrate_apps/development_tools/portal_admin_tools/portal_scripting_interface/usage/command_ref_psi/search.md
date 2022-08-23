@@ -95,7 +95,4 @@ Jacl example:
 $Content find any uniquename "ibm.portal.Portlets" select
 ```
 
-**Parent topic:**[Command reference for the Portal Scripting Interface](../admin-system/adpsicrf.md)
-
-**Parent topic:**[Portal administration](../practitioner_studio/administration.md)
 

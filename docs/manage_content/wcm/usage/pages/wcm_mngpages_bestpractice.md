@@ -46,5 +46,4 @@ Example:
 
 When you need to associate extra metadata to a portal page, create a separate content item that stores the metadata and that can be referenced by using the portal page metadata. Since the portal page content template is not exposed as public API it is not advised to add elements to the portal page content item itself.
 
-**Parent topic:**[Pages](../site/pages_overview.md)
 

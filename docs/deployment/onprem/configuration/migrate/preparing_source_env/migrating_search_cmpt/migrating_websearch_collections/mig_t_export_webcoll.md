@@ -31,7 +31,6 @@ Use the Manage Search portlet to export search web collections from a source por
 6.  Click **Export**.
 
 
-**Parent topic:**[Migrating web search collections](../migrate/mig_t_webcoll.md)
 
 **Related information**  
 

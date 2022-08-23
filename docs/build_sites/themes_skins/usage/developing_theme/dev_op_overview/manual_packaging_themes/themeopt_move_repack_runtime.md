@@ -35,7 +35,6 @@ You must adapt the list of required runtime configuration changes for your theme
 
 You can define the secure locations of layout templates by using this setting. If portal receives a request to create or update a page that contains a layout link, and that link is matching this regular expression, the markup editor role is not enforced on that layout. Include only locations in the regular expression that are under Access Control enforcement. For example, the layout templates and theme folders can be changed only by users that have the Theme Manager role. References to war files are also usable, as the war file deployment is secured by Java Platform, Enterprise Edition rights.
 
-**Parent topic:**[Manually packaging themes for deployment](../dev-theme/themeopt_move_repackstatic.md)
 
 **Related information**  
 

@@ -13,7 +13,6 @@ You can completely disable the site toolbar along with the toolbar tabs for the 
 -   **[Limiting toolbar, Site Manager, and action bar visibility to administrators only](../admin-system/limiting_toolbarvisibility.md)**  
 You can limit the visibility of the toolbar, Site Manager, and action bar to administrators only. You can also limit the visibility of the toolbar and Site Manager to administrators only without affecting the visibility of the action bar.
 
-**Parent topic:**[Preparing the site toolbar](../dev-theme/themeopt_themeshelf.md)
 
 **Related information**  
 

@@ -4,7 +4,6 @@ In HCL Digital Experience 8.5, the update of the HCL Portal and HCL Web Content 
 
 For more information about administering HCL Digital Experience, read the *Administering* section of the product documentation.
 
-**Parent topic:**[What to expect after you complete migration](../migrate/mig_plan_expectations.md)
 
 **Related information**  
 

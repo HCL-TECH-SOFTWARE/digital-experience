@@ -44,5 +44,4 @@ This task does not take any parameters.
     ./ConfigEngine.sh list-all-virtual-portals -DPortalAdminPwd=password -DWasPassword=password
 
 
-**Parent topic:**[Portal configuration tasks for administering virtual portals](../admin-system/advp_cfgtsk.md)
 

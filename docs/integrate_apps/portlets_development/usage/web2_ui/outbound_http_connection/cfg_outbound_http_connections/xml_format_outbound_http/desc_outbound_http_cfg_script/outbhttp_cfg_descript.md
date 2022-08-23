@@ -40,7 +40,6 @@ You can add general proxy configuration parameters to the file proxy-config.xml 
 -   **[Cookie rule](../dev-portlet/outbhttp_cfg_script_cookie_rule.md)**  
 You can use cookie rules to determine how you want the cookie to be handled.
 
-**Parent topic:**[XML format for outbound HTTP connection configuration settings](../dev-portlet/outbhttp_cfg_xml.md)
 
 **Related information**  
 

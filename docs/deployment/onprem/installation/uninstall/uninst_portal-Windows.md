@@ -52,5 +52,4 @@ If you have a complete and functional uninstallation program, you can uninstall 
 9.  After uninstalling HCL Digital Experience and WebSphere Application Server, you can also delete the Installation Manager. Run the uninstall.bat command from the ibm\\InstallationManager\\uninstall directory.
 
 
-**Parent topic:**[Windows: Preparing to uninstall](../install/prep_uninst-Windows.md)
 

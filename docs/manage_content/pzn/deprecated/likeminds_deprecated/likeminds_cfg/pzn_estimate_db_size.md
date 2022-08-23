@@ -137,7 +137,4 @@ The following table gives typical numbers of rows, row sizes, and index sizes fo
 
 In your size estimate, remember to include space for transaction logging and rollback areas. Because the LikeMinds server commits frequently, the rollback area need not be especially large relative to the database. Allow space equal to the size of the database for transaction logs, since the LikeMinds server performs frequent updates.
 
-**Parent topic:**[Configuring LikeMinds](../pzn/pzn_configure_likemind_servers.md)
-
-**Parent topic:**[Configuring LikeMinds](../pzn/pzn_configure_likemind_servers.md)
 

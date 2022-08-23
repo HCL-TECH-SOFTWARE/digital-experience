@@ -97,5 +97,4 @@ Finally, you provide the configuration. In the example scenario, you want to use
 </policy>
 ```
 
-**Parent topic:**[Custom outbound service filters](../dev-portlet/outbhttp_cust_srvc_filtrs.md)
 

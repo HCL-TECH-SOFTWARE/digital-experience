@@ -26,5 +26,4 @@ You can also deploy community pages, which are portal pages that are associated 
 -   **[Configuring authentication](../connect/c_connections_portlets_SSO_config.md)**  
 Set up single sign-on integration between HCL Connections and HCL Portal with third-party security products, or configure basic authentication to enable access to the portlets.
 
-**Parent topic:**[Configure HCL Portal to work with HCL Connections](../connect/c_connections_overview.md)
 

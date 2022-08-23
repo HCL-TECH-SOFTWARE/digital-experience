@@ -20,5 +20,4 @@ This virtual user group models the set of all known users. After successfully lo
 
 This virtual user group contains all non-virtual user groups.
 
-**Parent topic:**[Users and groups](../admin-system/adusrgrp.md)
 

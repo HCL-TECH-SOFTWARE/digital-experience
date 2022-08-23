@@ -18,7 +18,6 @@ Choose from the two options when you are migrating multiple environments, and re
     Each tier is migrated independently. This option might require more time, but it ensures that all settings are migrated to the new environment.
 
 
-**Parent topic:**[Migration considerations](../plan/mig_plan_high_availability.md)
 
 **Related information**  
 

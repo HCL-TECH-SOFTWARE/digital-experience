@@ -40,7 +40,6 @@ When a web page is rendered by Web Content Manager, some tags might be rewritten
 -   Only advanced caching can be used with a local Web Content Viewer.
 -   Tagged web content that is displayed in the Web Content Viewer is only available when there is a single instance of the portlet on the page. When you click a tag result, the Tag Center broadcasts the information about what content to display by using a public render parameter. If you are displaying multiple instances of content in the viewer, the instances show the content that you tagged rather than their original content.
 
-**Parent topic:**[Delivering web content on a portal page](../wcm/wcm_config_delivery_portal.md)
 
 **Related information**  
 

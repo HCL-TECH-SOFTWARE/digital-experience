@@ -52,7 +52,6 @@ To help you better understand what these components are doing, here is a more de
     The Image viewer content item consists of a name, which is not rendered by default, and a reference to an image. The default presentation template that is used to render images \(`Web Content Templates 3.0/Image`\) includes an authoring tools component. The component enables users to modify the image reference with inline editing. The authoring tools component is hidden automatically when the page is not in edit mode.
 
 
-**Parent topic:**[Creating content with sample web content template items](../wcm/wcm_delivery_ctsamples_main.md)
 
 **Related information**  
 

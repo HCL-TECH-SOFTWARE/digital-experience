@@ -10,7 +10,4 @@ An invalid URI was detected in your theme. The value of this metadata key cannot
 
 Update your theme metadata with the incorrect key to a proper URI.
 
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
-
-**Parent topic:**[Validation reports](../dev-theme/themopt_an_val_reports.md)
 

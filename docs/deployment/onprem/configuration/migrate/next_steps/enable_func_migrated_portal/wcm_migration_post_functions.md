@@ -117,7 +117,6 @@ To enable the **Insert Link to Remote Content** function after migration, ensure
 
 To enable the folder selection wizard in Personalization, ensure that the `wp_federated_documents_picker` theme module is available to the page that contains the Personalization Editor.
 
-**Parent topic:**[Enabling new functionality in a migrated portal](../migrate/mig_t_enable_new.md)
 
 **Related information**  
 

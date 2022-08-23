@@ -15,5 +15,4 @@ Renditions are enabled by default. If you want to disable them, you must run a C
 -   **[Enabling renditions](../renditions/rend_enable.md)**  
 Renditions are enabled by default. If you disable them, you must run a ConfigEngine task to enable them.
 
-**Parent topic:**[Developing and managing content](../site/site_dev_man.md)
 

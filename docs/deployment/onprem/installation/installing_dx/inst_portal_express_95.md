@@ -54,5 +54,4 @@ To address a failed installation:
 3.  Run through the steps above to remove the License Check application and avoid any subsequent server startup failures.
 4.  Reset system clock back to current date.
 
-**Parent topic:**[Installing the HCL Digital Experience software](../install/inst_web_experience.md)
 

@@ -21,5 +21,4 @@ To retrieve the value of a shared render parameter, use the \[Plugin:RenderParam
     \[Plugin:RenderParam defaultValue="defaultValue" type="public" key="\{http://publicrenderparams/\}stockName"\] returns the value of public render parameter stockName.
 
 
-**Parent topic:**[Script Application Editor actions menu overview](../script-portlet/actions_menu.md)
 

@@ -28,5 +28,4 @@ Example:
 <ibmwcm:authoringTemplate>TmpltLib/News</ibmwcm:authoringTemplate>
 ```
 
-**Parent topic:**[RSS Namespace Extension for web content](../wci/wci_ff_nse.md)
 

@@ -8,7 +8,6 @@ You are a developer on the technical team that is tasked with creating home and 
 
 ![HTML prototype of the home page with two teaser page components highlighted.](../images/teaser.jpg)
 
-**Parent topic:**[Creating HTML page components](../install/rm_create_site_dev_pcomponents.md)
 
 # Creating your teaser page component
 

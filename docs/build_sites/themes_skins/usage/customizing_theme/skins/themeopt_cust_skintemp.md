@@ -97,7 +97,6 @@ Client-side content spots are replaced at page load time or at run time through 
     -   var skinNode: `runtimeSkinModel.find(controlId)`.
     -   var skinConstants: `com.ibm.mashups.enabler.runtime.skin.Constants`.
 
-**Parent topic:**[Skins](../dev-theme/themeopt_cust_scopeskin.md)
 
 **Related information**  
 

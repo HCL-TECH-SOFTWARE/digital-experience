@@ -49,7 +49,6 @@ These instructions are for the HCL Digital Experience Combined Cumulative Fix He
 -   **[Combined CF Known Issues](../overview/ccf_95_known_issues.md)**  
 Learn what are the known issues in the HCL Digital Experience Combined Cumulative Fixes.
 
-**Parent topic:**[Digital Experience on non-containerized platforms](../containerization/dx_non_container.md)
 
 **Related information**  
 

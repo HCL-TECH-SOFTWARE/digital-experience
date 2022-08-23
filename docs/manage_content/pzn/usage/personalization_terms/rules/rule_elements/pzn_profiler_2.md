@@ -6,7 +6,4 @@ Selecting **Profiler** within a profile allows you to identify other profilers \
 
 You may also select quick profiler and specify a simple evaluation in-line instead of using a separate profiler.
 
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
-
-**Parent topic:**[Rule elements](../pzn/pzn_rule_elements.md)
 

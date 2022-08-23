@@ -38,5 +38,4 @@ You can run this tool safely on any system that you plan to update. It is design
 
 After the command completes, you will find an output report in the `ConfigEngine/log` directory named `HealthCheck-.log`. A new report with a new timestamp will be generated every time you run the tool. If the tool found any conditions that would interfere with a successful update, they will be described in the report. You should remediate these problems and re-run the tool until you get a clean report before applying the cumulative fix.
 
-**Parent topic:**[Combined Cumulative Fix \(CF\) Installation](../overview/ccf_strategy95.md)
 

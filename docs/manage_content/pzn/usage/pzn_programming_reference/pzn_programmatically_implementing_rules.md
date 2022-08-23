@@ -42,7 +42,4 @@ To programmatically start a rule, follow these steps:
     -   Update actions and email actions are mapped to empty content spots.
         1.  `trigger()` - runs the rule
 
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
-
-**Parent topic:**[Personalization programming reference](../pzn/pzn_programming_reference.md)
 

@@ -13,7 +13,6 @@ HCL Digital Experience implements a logging function for your usage data. The po
 -   **[Analyzing user behavior by Active Site Analytics](../admin-system/sa_asa_work.md)**  
 You can collect data about user behavior in your portal and send that data to a service for analysis. For this purpose the portal provides Active Site Analytics \(ASA\).
 
-**Parent topic:**[Monitoring](../admin-system/monitoring_parent.md)
 
 **Related information**  
 

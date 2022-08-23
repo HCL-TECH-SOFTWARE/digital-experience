@@ -171,7 +171,6 @@ If you completed a binary installation, this is your first step.
 |Skip the step|Do not skip this step, if you are running the configuration again.|
 |Clean up step|Check for failures in the systemout and systemerror logs for starting or stopping the portal server.|
 
-**Parent topic:**[Troubleshooting the Configuration Wizard](../trouble/cw_troubleshooting.md)
 
 **Related information**  
 

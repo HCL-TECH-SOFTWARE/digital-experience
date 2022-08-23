@@ -6,5 +6,4 @@ As a development option, HCL Digital Experience File Sync pulls the theme files 
 
 Access the HCL Digital Experience File Sync asset and File Sync Wiki on the HCL Github repository here: [https://github.com/hcl-dx/dxsync](https://github.com/hcl-dx/dxsync).
 
-**Parent topic:**[Working with WebDAV clients](../admin-system/webdav_client.md)
 

@@ -7,7 +7,6 @@ Programmers can create, read, update, or delete settings of the outbound HTTP co
 -   **[Configuring outbound HTTP connections by using the Model Controller SPI](../dev-portlet/outbhttp_cfg_mcspi.md)**  
 To query and administer the outbound HTTP connection, you can also use the model controller SPI.
 
-**Parent topic:**[Configuring outbound HTTP connections](../dev-portlet/outbhttp_cfg_oh_conns.md)
 
 **Related information**  
 

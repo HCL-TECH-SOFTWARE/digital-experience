@@ -85,7 +85,6 @@ The automated migration of the HCL Portal profile requires that the Trust Associ
     12. Currently, if you have a clustered environment without automatic synchronization, you need to resynchronize the node agents.
 
 
-**Parent topic:**[Preparing your source environment](../migrate/mig_t_premig_tasks.md)
 
 **Related information**  
 

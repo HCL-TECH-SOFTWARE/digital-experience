@@ -119,5 +119,4 @@ Instructions to manually back up DCS files supporting remote search if using a *
         ```
 
 
-**Parent topic:**[Document Conversion Services](../admin-system/dcs_info.md)
 

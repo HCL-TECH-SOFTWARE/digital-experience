@@ -29,7 +29,6 @@ Perform the following steps to enable the eTrust SiteMinder TAI and create a new
 
 Depending on your configuration, the XML configuration interface might not be able to access HCL Digital Experience through eTrust SiteMinder. To allow the XML configuration interface access, use eTrust SiteMinder to define the configuration URL \(/wps/config\) as unprotected. Refer to the eTrust SiteMinder documentation for specific instructions.
 
-**Parent topic:**[Configuring eTrust SiteMinder](../security/cfg_siteminder.md)
 
 **Related information**  
 

@@ -17,5 +17,4 @@ Choose one of the following options to enable combining of sibling local script 
 -   To enable resource combining for one application only, add a `data-scriptportlet-combine-urls="true"` directive attribute on the `<html>` element of the main page before you push or import the application to the server.
 -   To enable resource combining for all pushed and imported applications, you can set the Script Application configuration property `scriptportlet.import.combine.urls=true` to `true`. For details about how to do this, read *Setting custom configuration properties for the Script Application*.
 
-**Parent topic:**[Build applications with the Script Application](../script-portlet/build_apps.md)
 

@@ -9,5 +9,4 @@ You can use ReleaseBuilder to compare the XML configuration files that describe 
 -   **[ReleaseBuilder command syntax](../deploy/dep_releasebuilder_cmd.md)**  
 The ReleaseBuilder command file is in the wp\_profile\_root/PortalServer/bin directory and has the following syntax.
 
-**Parent topic:**[Reference](../reference/reference.md)
 

@@ -10,5 +10,4 @@ For example, if you are able to modify the title of the page titled **My page**,
 -   Upon completion of each task, you will be returned to Manage Pages.
 -   To access pages that are nested under others, click the Page title.
 
-**Parent topic:**[Manage pages portlets](../admin-system/mp_manage_pages.md)
 

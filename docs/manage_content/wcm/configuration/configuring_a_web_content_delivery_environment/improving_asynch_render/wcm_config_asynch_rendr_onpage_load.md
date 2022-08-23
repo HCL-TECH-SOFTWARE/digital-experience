@@ -9,5 +9,4 @@ In some scenarios, custom JavaScript code needs to run after the asynchronously 
 
 To uniquely identify the asynchronous item, use the portlet namespace for the key. Custom theme profiles need to add a `moduleID` dependency to the new asynchronous web content rendering theme module. In a default HCL Portal V 8.5 CF06 installation, the asynchronous rendering theme module is included in the Basic Content and Basic Content with Dojo profiles.
 
-**Parent topic:**[Improving page loading performance with asynchronous web content rendering](../wcm/wcm_config_asynch_wcm_rendr.md)
 

@@ -45,5 +45,4 @@ Use a [WebDAV client](../admin-system/webdav.md) to synchronize all of your stat
 
 Documentation resource: [Editing static theme resources and connecting with WebDAV](themeopt_themedev_editing_static_resources.md#)
 
-**Parent topic:**[Developing themes and skins](../dev-theme/themeopt_themes.md)
 

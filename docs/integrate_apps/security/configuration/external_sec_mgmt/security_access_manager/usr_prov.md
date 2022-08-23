@@ -78,7 +78,6 @@ ConfigEngine.bat validate-pdadmin-connection -DWasPassword=password
 4.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
 
 
-**Parent topic:**[Security Access Manager](../security/conf_tam.md)
 
 **Related information**  
 

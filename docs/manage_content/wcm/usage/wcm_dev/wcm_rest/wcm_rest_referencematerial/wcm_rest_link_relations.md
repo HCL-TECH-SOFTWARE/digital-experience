@@ -275,5 +275,4 @@ These definitions provide information on how different requests can be linked.
     ```
 
 
-**Parent topic:**[Reference material for the Web Content Manager REST service](../wcm/wcm_rest_ref.md)
 

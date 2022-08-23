@@ -48,5 +48,4 @@ Before starting:
 
 **Note:** All SSL certificates for Twitter, Facebook and Linkedin are removed when the uninstall script is run.
 
-**Parent topic:**[Social Media Publisher](../wcm/wcm_sm.md)
 

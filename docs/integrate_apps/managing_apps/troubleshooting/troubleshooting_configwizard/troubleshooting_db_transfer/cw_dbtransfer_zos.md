@@ -194,7 +194,6 @@ If you need to update values in the wizard, you must create new scripts in the w
 |Skip the step|If you already started the portal server, you can skip this step.|
 |Clean up step|None required|
 
-**Parent topic:**[Troubleshooting: Database Transfer](../trouble/cw_dbtransfer_trouble.md)
 
 **Related information**  
 

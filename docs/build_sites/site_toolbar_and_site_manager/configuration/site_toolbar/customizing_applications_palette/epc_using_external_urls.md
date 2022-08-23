@@ -21,5 +21,4 @@ To assign portlets to these categories, you must point the external URL to a fee
 7.  Verify that the category and portlet entities appear on the Applications palette.
 
 
-**Parent topic:**[Customizing the Applications palette](../admin-system/epc_app_categories.md)
 

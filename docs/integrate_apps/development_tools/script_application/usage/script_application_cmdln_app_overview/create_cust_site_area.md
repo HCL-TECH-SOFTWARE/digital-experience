@@ -19,5 +19,4 @@ You do not need to create or enable the default Script Application Library and S
 
 If your new custom site area appears in the content toolbar and you can add applications from that site area to portal pages, but the title of the portlet shows Web Content Viewer in Edit mode, then the drag configuration step did not complete successfully. To resolve the issue, complete step [3](create_cust_site_area.md#step_3) again.
 
-**Parent topic:**[Script Application command line application overview](../script-portlet/cmd_line_push_ovr.md)
 

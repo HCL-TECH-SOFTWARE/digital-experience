@@ -25,5 +25,4 @@ You can uninstall theme PAA files by using the Configuration Wizard or by using 
 
 The theme PAA file is no longer installed on the server.
 
-**Parent topic:**[Theme PAA files](../dev-theme/themeopt_themedev_exportedpaa.md)
 

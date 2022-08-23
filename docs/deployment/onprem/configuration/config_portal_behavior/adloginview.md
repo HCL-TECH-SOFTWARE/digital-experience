@@ -25,9 +25,6 @@ Use the Global Settings portlet to specify the page that a user sees when the us
 
 If you have a portal cluster configuration, use the WebSphere® Integrated Solutions Console to set the properties `persistent.session.level` and `persistent.session.option` in the portal configuration service. For more information, refer to the topics about *Configuring user session persistence*, *Portal configuration services, and* *Setting service configuration properties*.
 
-**Parent topic:**[Configuring portal behavior](../admin-system/adptlcfg.md)
-
-**Parent topic:**[Portal administration](../practitioner_studio/administration.md)
 
 **Related information**  
 

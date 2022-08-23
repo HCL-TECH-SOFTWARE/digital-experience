@@ -17,5 +17,4 @@ If your custom aggregator is not working correctly, perform the checks listed he
 
 Remember that aggregators are regular JavaScript files. Consequently, you can also use all JavaScript debugging tools and browser developer tools for debugging an aggregator.
 
-**Parent topic:**[Writing an aggregator for Active Site Analytics](../admin-system/sa_asa_cust_script.md)
 

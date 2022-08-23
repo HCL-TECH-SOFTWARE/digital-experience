@@ -14,5 +14,4 @@ Perform the following steps to disable the farm mode:
     -   UNIX™Linux™: ./ConfigEngine.sh disable-farm-mode -DWasPassword=password, from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory
     -   IBM® i: ConfigEngine.sh disable-farm-mode -DWasPassword=password, from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory
 
-**Parent topic:**[Setting up farm instances with a shared configuration](../install/set_portal_farm_shared.md)
 

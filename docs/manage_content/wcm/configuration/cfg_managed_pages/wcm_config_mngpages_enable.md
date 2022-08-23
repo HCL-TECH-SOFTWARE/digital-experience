@@ -136,7 +136,6 @@ Each virtual portal has its own Portal Site library.
     For example, they have user access.
 
 
-**Parent topic:**[Configuring managed pages](../wcm/wcm_config_mngpages.md)
 
 **Related information**  
 

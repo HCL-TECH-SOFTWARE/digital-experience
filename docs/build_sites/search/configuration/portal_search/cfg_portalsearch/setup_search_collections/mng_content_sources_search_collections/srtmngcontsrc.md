@@ -47,7 +47,6 @@ Click **Delete** to remove a content source from the search collection. The docu
 -   **[Applying filter rules](../admin-system/srrfiltr.md)**  
 Portal Search provides a facility for applying filter rules to the crawler process. The crawler filters control the crawler progress and the type of documents that are indexed and cataloged.
 
-**Parent topic:**[Setting up search collections](../admin-system/srcmgsrcont.md)
 
 **Related information**  
 

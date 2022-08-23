@@ -4,7 +4,6 @@ When you open the site toolbar, Site Manager automatically opens in the primary 
 
 Specify page parameters by using either the Manage Pages portlet or by using the XML configuration interface.
 
-**Parent topic:**[Preparing the site toolbar](../dev-theme/themeopt_themeshelf.md)
 
 ## Edit page parameters by using the Manage Pages portlet
 

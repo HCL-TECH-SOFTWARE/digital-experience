@@ -59,5 +59,4 @@ By default, virtual portals do not contain the Articles template page. To use th
 
 After you complete these steps, the Articles template page is ready for you to use in the virtual portal.
 
-**Parent topic:**[Creating content with sample web content template items](../wcm/wcm_delivery_ctsamples_main.md)
 

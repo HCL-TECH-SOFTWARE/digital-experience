@@ -27,7 +27,6 @@ Typically, only the master administrator should have the access permissions for 
 
 For more information about Portal Access Control, go to *Controlling access*. For more information about virtual portal security, go to *Portal Access Control with virtual portals*.
 
-**Parent topic:**[Virtual portal roles and their capabilities](../admin-system/advppln_roles.md)
 
 **Related information**  
 

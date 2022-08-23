@@ -29,5 +29,4 @@ Each page component is constructed from a common pattern of design, configuratio
 -   **[Troubleshooting page components](../wcm/wcm_dev_page_components_tips.md)**  
 Tips and tricks to help you troubleshoot any issues with your customized page components.
 
-**Parent topic:**[Preparing for content authors](../site/site_prep_toolbar.md)
 

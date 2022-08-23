@@ -21,5 +21,4 @@ With the search seedlist 1.0 support, custom metadata fields that are specified 
 7.  Restart the portal.
 
 
-**Parent topic:**[The search seedlist 1.0 format](../wcm/wcm_dev_search_searchseed.md)
 

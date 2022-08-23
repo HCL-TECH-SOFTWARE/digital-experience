@@ -38,5 +38,4 @@ Specify identification information for the current item, including the name and 
         Translated text can also be stored in specialized content items. These appear amongst the list of text providers and are selected in the same way. For more information see the topic named **How to store translated text in a content item** in the Knowledge Center.
 
 
-**Parent topic:**[Creating a search component](wcm_dev_search_form_results.md)
 

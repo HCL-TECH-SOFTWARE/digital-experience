@@ -21,5 +21,4 @@ Web Content Manager requires a user to run various system tasks such as initiali
 -   **[Changing the login or redirect page used for servlet rendering](../wcm/wcm_config_admin_redirect.md)**  
 When an unauthenticated user accesses secured content using servlet rendering, the user is redirected to the Web Content Manager login page by default.
 
-**Parent topic:**[HCL Web Content Manager](../wcm/wcm_install_cfg.md)
 

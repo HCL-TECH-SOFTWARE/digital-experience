@@ -21,7 +21,6 @@ The Search Sitemap portlet generates a navigable list of all public pages of the
 -   **[Client identification for external search engines](../admin-system/srrclientid.md)**  
 For the portal to recognize external search engines, HCL Digital Experience provides a client that covers several popular search engines.
 
-**Parent topic:**[Search](../wcm/wcm_dev_search.md)
 
 **Previous topic:**[Searching your local portal](../admin-system/srclocportal.md)
 

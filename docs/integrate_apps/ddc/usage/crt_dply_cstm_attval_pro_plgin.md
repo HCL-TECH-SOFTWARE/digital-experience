@@ -13,7 +13,6 @@ The actual attribute value processor implementations must implement the `com.ibm
 
 All three interfaces are defined in the public Digital Data Connector SPI. For more information about these interfaces, see *The developer HCL Portal SPI documentation.*
 
-**Parent topic:**[Digital Data Connector \(DDC\) for HCL Portal](../social/plrf_ovu.md)
 
 **Related information**  
 

@@ -20,7 +20,6 @@ Map the attributes between HCL Digital Experience and your LDAP user registries.
 4.  [Removing attributes](../install/remove_attr_def.md)  
 The Virtual Member Manager \(VMM\) has a limitation. There is no task to update an attribute.
 
-**Parent topic:**[User registry](../config/config_user_registry.md)
 
 **Related information**  
 

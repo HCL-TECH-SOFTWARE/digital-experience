@@ -6,5 +6,4 @@ When you migrate search collections, you usually export and delete them from the
 
 For JCRCollection prefixed collections, the process is simpler. You do not need to export, migrate, and import later. Instead, you must delete the JCRCollection prefixed search collections from your source environment before you start with the migration. Migration automatically re-creates the JCR search collection as part of the post-migration activities.
 
-**Parent topic:**[Migrating search components](../migrate/mig_t_search.md)
 

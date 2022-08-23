@@ -57,7 +57,6 @@ The <portal-logic/\> tags are used to provide tags for conditional logic.
 -   **[<portal-navigation/\> tags](../dev-portlet/dgn_ptlnavig.md)**  
 The <portal-navigation/\> tags are used to implement navigation tasks such as generating URLs and traversing the portal navigation model.
 
-**Parent topic:**[Customizing the theme](../dev-theme/themeopt_cust.md)
 
 **Related information**  
 

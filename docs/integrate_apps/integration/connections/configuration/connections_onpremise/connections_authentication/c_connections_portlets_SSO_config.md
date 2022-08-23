@@ -37,5 +37,4 @@ When you configure HCL Connections portlets to use single sign-on, you might nee
 -   **[Enabling basic authentication](../connect/c_connections_portlets_basic_auth.md)**  
 Configure basic authentication for the HCL Connections portlets. Use basic authentication if you are not using single sign-on for authentication.
 
-**Parent topic:**[Configure HCL Connections on-premise](../connect/connections_portlets_overview.md)
 

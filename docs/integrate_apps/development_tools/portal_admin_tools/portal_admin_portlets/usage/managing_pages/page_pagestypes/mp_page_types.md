@@ -23,7 +23,6 @@ John, the superadministrator, creates a page Home and titles it Home. Brandy, a 
 -   **[Behavior of derived pages in combination with locks and changing access permissions](../admin-system/mp_derived_page_behavior.md)**  
 Using and altering locks in conjunction with access permissions on the parent pages may result in changes on derived pages depending on the complexity of the derivation structure. The following scenario describes the behavior of derived pages.
 
-**Parent topic:**[Manage pages portlets](../admin-system/mp_manage_pages.md)
 
 **Related information**  
 

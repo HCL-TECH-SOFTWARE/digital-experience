@@ -27,5 +27,4 @@ The following CFO7 feature updates are used by Content Template 4.4:
 -   Time-based content in the **CTC Demo** site is refreshed so that it displays on the **CTC Demo** site home page. You can refresh the year that is used in time-based content by running a ConfigEngine task. See [Troubleshooting components](ctc_trouble_comp.md) for further information.
 -   The **CTC Demo** site URLs now contain dashes instead of spaces to make the **CTC Demo** site content URLs clearer.
 
-**Parent topic:**[Content Template overview](../ctc/ctc_overview.md)
 

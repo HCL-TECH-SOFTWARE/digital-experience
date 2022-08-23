@@ -107,5 +107,4 @@ To delete a Page Component, and all the content displayed in a site created usin
 4.  Then delete all the presentation templates associated with the page component.
 5.  Then delete component folder associated with the page component.
 
-**Parent topic:**[Page components](../wcm/wcm_dev_page_components.md)
 

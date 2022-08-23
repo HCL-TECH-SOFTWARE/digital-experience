@@ -8,5 +8,4 @@ This is easily implemented by creating the components on a landing page that cov
 
 If there are page component configurations on the child pages that you no longer want to use, because they are getting replaced by the shared page components, then note down the names and locations of each of these page component configurations and remove them using the HCL Web Content Manager authoring portlet.
 
-**Parent topic:**[Creating and managing page component configurations](../ctc/ctc_design_comp_config.md)
 

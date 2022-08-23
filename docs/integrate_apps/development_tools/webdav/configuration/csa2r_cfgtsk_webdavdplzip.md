@@ -98,5 +98,4 @@ If the WebDAV folder referenced by the target URI does not exist yet, the task c
         ```
 
 
-**Parent topic:**[Using WebDAV with HCL Portal](../admin-system/webdav.md)
 

@@ -8,5 +8,4 @@ To resolve this problem and allow a higher number of files to be handled, raise 
      ulimit -n 4096
 ```
 
-**Parent topic:**[Hints and tips for using Portal Search](../admin-system/srrhinttips.md)
 

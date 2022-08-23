@@ -12,7 +12,6 @@ You can configure an authoring portlet to use a launch page of your own design i
 
 Remote actions are used in the query string of a URL to trigger actions from the Web Content Manager application. You can use remote actions to add standard Web Content Manager functions to a custom user interface.
 
-**Parent topic:**[Authoring portlet](../site/site_auth_portlet.md)
 
 **Related information**  
 

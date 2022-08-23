@@ -12,5 +12,4 @@ When you create a content item by using a content authoring template that is map
 -   If you have view access to social configuration documents, you use the **View configuration** action to display the configuration document for a social network.
 -   Click **Delete** to delete a post from the social network altogether.
 
-**Parent topic:**[Social Media Publisher](../wcm/wcm_sm.md)
 

@@ -23,5 +23,4 @@ The basic case for sharing a page component configuration is across an index and
 -   **[Using global page components](../ctc/ctc_design_comp_config_global.md)**  
 Sometimes there will be page component configurations that are general enough that you can use them across the entire website. For example, a sitemap footer is usually the same across all pages.
 
-**Parent topic:**[A Content Template Catalog roadmap for site developers](../ctc/ctc_gs_site_devs.md)
 

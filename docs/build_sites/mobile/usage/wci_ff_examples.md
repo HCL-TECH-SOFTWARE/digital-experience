@@ -207,5 +207,4 @@ The long anticipated Release 2.0 of our flagship product became available earlie
 </rss>
 ```
 
-**Parent topic:**[IBM Web Content Integrator](../wci/wci_intro.md)
 

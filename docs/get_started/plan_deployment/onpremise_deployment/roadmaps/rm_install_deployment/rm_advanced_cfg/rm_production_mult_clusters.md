@@ -6,7 +6,6 @@ Read [Planning for multiple clusters](../plan/clusm_main.md) before you start to
 
 **Remember:** Ensure that you configure the web server plug-in after you transfer your database.
 
-**Parent topic:**[HCL Digital Experience roadmaps for advanced configurations](../install/rm_adv_parent.md)
 
 # Who should use this roadmap
 

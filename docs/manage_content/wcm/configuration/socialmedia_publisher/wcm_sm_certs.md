@@ -78,5 +78,4 @@ To install the certificates for Facebook, LinkedIn and Twitter, run the followin
 
 SSL port 443 is the default SSL port for these certificates.
 
-**Parent topic:**[Social Media Publisher](../wcm/wcm_sm.md)
 

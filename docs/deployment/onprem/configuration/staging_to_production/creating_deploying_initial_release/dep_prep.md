@@ -25,7 +25,6 @@ You must set up your production servers before you move content from the staging
 4.  If you have a clustered environment, turn off automatic node synchronization on all secondary nodes.
 
 
-**Parent topic:**[Creating and deploying the initial release](../deploy/dep_initial.md)
 
 **Previous topic:**[Creating the initial release](../deploy/dep_cir.md)
 

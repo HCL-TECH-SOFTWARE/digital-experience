@@ -21,5 +21,4 @@ The Modify Site URLs for Search Engine Optimization option in the Configuration 
     6.  Select the member name that you want to stop and then click **Stop**.
     7.  Select the member name that you want to start and then click **Start**.
 
-**Parent topic:**[Manual Steps: Modify Site URLs for Search Engine Optimization](../config/cw_shorten_url_seo_manual.md)
 

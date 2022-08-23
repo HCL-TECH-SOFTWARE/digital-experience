@@ -80,5 +80,4 @@ The following property specifies the **database domain tracking daemon** setting
 
 For further information about data sources and their configuration, see the WebSphere Application Server documentation.
 
-**Parent topic:**[Portal service configuration](../admin-system/srvcfgref.md)
 

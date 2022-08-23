@@ -14,5 +14,4 @@ These are examples of search queries you can create by using an HTML element.
 -   **[Search result examples](../panel_help/wcm_dev_search_form_results_examples.md)**  
 These are examples of how to design your search results.
 
-**Parent topic:**[Elements](../wcm/wcm_build.md)
 

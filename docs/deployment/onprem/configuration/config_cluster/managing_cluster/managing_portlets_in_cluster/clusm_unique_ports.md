@@ -25,5 +25,4 @@ Here is an example of an XML definition for deploying a portlet without specifyi
 
 ```
 
-**Parent topic:**[Managing portlets in your cluster](../admin-system/manage_portlets.md)
 

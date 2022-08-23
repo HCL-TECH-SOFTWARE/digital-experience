@@ -76,5 +76,4 @@ When you create a social network configuration document for HCL Connections:
                 ```
 
 
-**Parent topic:**[Creating a social network configuration document](../wcm/wcm_sm_config_doc_creating.md)
 

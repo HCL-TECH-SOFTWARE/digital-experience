@@ -675,7 +675,4 @@ The DELETE Personalization Folder ID REST API is used to delete a selected Perso
 -   `"lastModifier"` - Filed to indicate that details of the user who is last modified the folder.
 -   `"parentId"` - Field to indicate to find the difference between the location of the folder.
 
-**Parent topic:**[Personalization REST API explorer](../pzn/dev_pzn_rest_api_explorer.md)
-
-**Parent topic:**[Personalization REST API explorer](../pzn/dev_pzn_rest_api_explorer.md)
 

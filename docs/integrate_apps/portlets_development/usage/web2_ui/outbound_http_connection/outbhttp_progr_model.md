@@ -171,7 +171,6 @@ if (status >= 400) {
 }
 ```
 
-**Parent topic:**[Outbound HTTP connection](../dev-portlet/outbound_http.md)
 
 **Related information**  
 

@@ -20,5 +20,4 @@ Rapidly deploy websites or add new sections to existing sites from predefined si
 -   **[Content seeding](../panel_help/sitebuilder_using_content_seeding.md)**  
 Content seeding allows the user to create a page from a page template by using their own custom content that works along side or completely replace the default content of a page template.
 
-**Parent topic:**[Site Builder](../sitebuilder/sitebuilder_intro.md)
 

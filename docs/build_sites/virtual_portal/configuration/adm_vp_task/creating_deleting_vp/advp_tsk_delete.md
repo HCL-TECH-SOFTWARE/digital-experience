@@ -73,5 +73,4 @@ If a virtual portal was deleted already without prior cleanup of resources in sh
 2.  Re-create the virtual portal that was deleted by using the identical URL mapping.
 3.  Follow the instructions to delete a virtual portal, including cleanup of resources in shareable database domains. This cleanup was described in the preceding section about Preparing for the deletion of virtual portals.
 
-**Parent topic:**[Tasks for administering virtual portals](../admin-system/advptsk.md)
 

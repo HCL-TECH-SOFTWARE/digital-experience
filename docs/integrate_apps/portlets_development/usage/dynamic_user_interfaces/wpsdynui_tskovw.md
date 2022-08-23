@@ -282,5 +282,4 @@ The following describes a general overview of the main tasks involved in creatin
     When the dynamic UI configuration is ready to be promoted to a production level server, create the XMLAccess scripts that contain the necessary page and portlet definitions. You can use the Manage Pages portlet to export the page configuration to XMLAccess, including any wires or unique names used by the configuration.
 
 
-**Parent topic:**[Dynamic user interfaces](../dev-portlet/wpsdynui_cpts.md)
 

@@ -266,7 +266,6 @@ The following parameters are reserved for internal use only. Do not change their
 -   **[JCR search service configuration parameters](../admin-system/jcr_srrcfgsrvc.md)**  
 The following search service configuration parameters can be modified to enable and configure searching for content that is stored in the JCR database. These JCR search service configuration parameters can be modified by accessing the JCR ConfigService PortalContent resource environment provider.
 
-**Parent topic:**[Administering Portal Search](../admin-system/srtadmsrch.md)
 
 **Related information**  
 

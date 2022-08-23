@@ -10,5 +10,4 @@ For more information, read the following topics:
 -   *The module framework*
 -   *Adding jQuery to a theme*
 
-**Parent topic:**[Import applications that include links to JavaScript frameworks](../script-portlet/theme_script_ref.md)
 

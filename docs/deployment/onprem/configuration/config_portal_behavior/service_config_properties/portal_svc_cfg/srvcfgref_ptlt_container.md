@@ -9,5 +9,4 @@ In the WebSphere® Integrated Solutions Console, the portal Portlet Container Se
     This property determines whether or not portlet filtering is used.
 
 
-**Parent topic:**[Portal service configuration](../admin-system/srvcfgref.md)
 

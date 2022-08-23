@@ -17,7 +17,6 @@ View the properties for the tag widget.
 -   **[Properties for the rating widget](../admin-system/srvcfg_cpcfg4tr_dlgrate_altui.md)**  
 View the properties for the rating widget.
 
-**Parent topic:**[Portal service configuration](../admin-system/srvcfgref.md)
 
 **Related information**  
 

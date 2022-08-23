@@ -86,5 +86,4 @@ com.ibm.workplace.wcm.api.WCM_Content/Connections Announcement/f6f60a00498c0d759
 </ibmfs:documentId>
 ```
 
-**Parent topic:**[RSS Namespace Extension for the Feed Service](../wci/wci_ff_nse_rss.md)
 

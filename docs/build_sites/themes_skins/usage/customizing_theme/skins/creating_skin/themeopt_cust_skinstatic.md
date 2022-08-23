@@ -31,5 +31,4 @@ When you create a file for the skin on the /fs-type1/ entry point, there is a li
             <img src="http://server\_name:port\_number/wps/mycontenthandler/dav/skinlist/myskin/images/logo.png"/\>
 
 
-**Parent topic:**[Creating skins](../dev-theme/themeopt_cust_skincreate.md)
 

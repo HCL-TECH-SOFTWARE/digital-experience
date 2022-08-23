@@ -17,5 +17,4 @@ Run this task to move the Personalization page to the application level. If you 
     **Virtual Portal parameter:** Add the -DVirtualPortalContext=vp \_context\_root parameter to the move-pzn-page task.
 
 
-**Parent topic:**[Virtual Portal tasks](../migrate/virt_portal_post_mig.md)
 

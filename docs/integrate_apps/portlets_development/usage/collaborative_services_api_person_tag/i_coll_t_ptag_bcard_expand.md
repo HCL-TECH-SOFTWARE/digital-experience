@@ -29,5 +29,4 @@ You can configure the Person card to display the business card fields for a sele
 8.  Restart the portal server.
 
 
-**Parent topic:**[Collaborative Services API and the person tag](../collab/i_coll_r_cs_api.md)
 

@@ -45,5 +45,4 @@ Before you delete any cluster members, ensure that the member is stopped. Also, 
     7.  Select the node from the list and click **Full Resynchronize**.
 
 
-**Parent topic:**[Setting up a cluster](../config/config_cluster.md)
 

@@ -43,7 +43,6 @@ If you created a blog or blog library for another page and now want to use it ag
 
 **Note:** Tagged web content that is displayed in the web content viewer is only available when there is a single instance of this portlet on the page. When you click a tag result, the Tag Center broadcasts the information on what content displays in the viewer with a public render parameter. If you have multiple instances of web content that is displayed in the web content viewer, then these instances display the content that you tagged rather than display the original content of these instances.
 
-**Parent topic:**[Blogs](../admin-system/blog_work.md)
 
 **Related information**  
 

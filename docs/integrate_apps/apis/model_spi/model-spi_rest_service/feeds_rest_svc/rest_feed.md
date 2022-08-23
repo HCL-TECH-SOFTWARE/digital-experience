@@ -58,5 +58,4 @@ The following sections show sample feeds for the different models.
 -   **[Use cases for modifying resources](../dev/rest_feed_mod_resrc.md)**  
 Portal Model REST services allow you to create new resources, modify, move and delete existing resources. View some common use cases of resource modifications.
 
-**Parent topic:**[Remote Model SPI REST service](../dev/rest.md)
 

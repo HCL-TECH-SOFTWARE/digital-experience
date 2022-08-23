@@ -8,5 +8,4 @@ Depending on the type of browser you are using, you can still experience informa
 
 The [HCL Digital Experience Performance Tuning Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074411) provides information about caches for HCL Portal and HCL Web Content Manager. After you have setup your environment, review the tuning guide to learn more about stand-alone and cluster tuning, and then read about both HCL Portal and HCL Web Content Manager caches.
 
-**Parent topic:**[Security and authentication considerations](../plan/plan_secauth.md)
 

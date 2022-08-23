@@ -17,5 +17,4 @@ You can change the auto-loading of portlet capabilities with WebDAV.
 4.  Copy the local copy of the metadata.properties file back into the folder for your theme in the themelist folder.
 
 
-**Parent topic:**[Change the auto-loading of portlet capabilities](../dev-theme/themeopt_chng_auto_load_cap.md)
 

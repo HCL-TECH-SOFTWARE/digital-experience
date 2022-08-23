@@ -4,7 +4,6 @@ Displays a list that is configured by using a wizard to set up a custom list.
 
 The list builder is an example of how to create a specialized content authoring interface by using inline editing and the Web Content Manager REST API. It uses ItemRepository.js that is part of a JavaScript API for sending requests to the Web Content Manager REST API that is contained in the inplace edit WAR on the server. This WAR is deployed at WebSphere Install Root/wp\_profile/installedApps/node/wcm.ear/wcm-inplaceEdit.war/.
 
-**Parent topic:**[Lists](../ctc/ctc-portlet-types-lists.md)
 
 # Usage
 

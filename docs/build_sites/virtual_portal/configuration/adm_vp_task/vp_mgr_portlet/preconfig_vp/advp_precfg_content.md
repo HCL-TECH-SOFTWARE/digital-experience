@@ -65,7 +65,6 @@ Depending on the functionality that you want to make available, more content is 
 6.  Click **OK** twice to save your changes.
 
 
-**Parent topic:**[Preconfiguring virtual portals](../admin-system/advp_precfg.md)
 
 **Related information**  
 

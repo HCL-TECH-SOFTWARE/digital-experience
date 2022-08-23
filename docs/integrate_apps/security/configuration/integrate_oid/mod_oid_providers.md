@@ -21,7 +21,6 @@ You can change the list of identity providers that your users can access. You ca
 5.  Restart the WebSphere\_Portal server.
 
 
-**Parent topic:**[Integrating with OpenID authentication](../security/use_openid.md)
 
 **Related information**  
 

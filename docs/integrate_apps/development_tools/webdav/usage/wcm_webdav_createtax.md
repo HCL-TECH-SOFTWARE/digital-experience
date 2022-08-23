@@ -43,5 +43,4 @@ taxonomies
     **Deleting taxonomies and categories:** To delete taxonomies or categories delete the corresponding folder. Taxonomies or categories that contain categories cannot be deleted until you have also first deleted the child items. Also if a category is still being referenced by another item, it cannot be deleted until you have first removed the corresponding references by using the authoring portlet.
 
 
-**Parent topic:**[WebDAV](../wcm/wcm_webdav_overview.md)
 

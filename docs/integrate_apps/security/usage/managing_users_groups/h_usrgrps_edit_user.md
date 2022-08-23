@@ -11,5 +11,4 @@ Edit user information such as password, User ID, first name, last name, email ad
 4.  Click **OK** to save your changes, or **Cancel** to exit without saving your changes.
 
 
-**Parent topic:**[Users and groups](../admin-system/adusrgrp.md)
 

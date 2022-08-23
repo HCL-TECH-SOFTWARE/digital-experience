@@ -27,5 +27,4 @@ There are several options to add the general code that is not part of an EAR or 
 3.  If you are creating a custom Trust Association Interceptor \(TAI\) or a custom Java Authentication and Authorization Service \(JAAS\) module, place a copy of your jar file\(s\) in the <wp\_profile\>/classes directory, for example, /opt/HCL/wp\_profile/classes/MyCustomTAI.jar.
 
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 

@@ -40,5 +40,4 @@ There are three different types of Producers. The Producer type influences how y
         The Consumer provides no registration properties during creation because the Producer personnel already received this information during the registration by outside communication.
 
 
-**Parent topic:**[Working with Producer definitions](../admin-system/wsrpt_cons_creat_prod.md)
 

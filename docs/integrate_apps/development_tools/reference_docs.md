@@ -19,7 +19,6 @@ Go to [JavaScript API for spHelper](../script-portlet/cmd_line_api.html) for doc
 |HCL Portal and Web Content Manager API|Includes Javadoc packages for both HCL Portal and Web Content Manager.|[Link](javadoc/vrm/850/api_docs/overview-summary.html)|[Archive](javadoc/vrm/850/api_docs.zip)|
 |HCL Portal and Web Content Manager SPI|Includes Javadoc packages for advanced development for both HCL Portal and Web Content Manager.|[Link](javadoc/vrm/850/spi_docs/overview-summary.html)|[Archive](javadoc/vrm/850/spi_docs.zip)|
 
-**Parent topic:**[Developing](../dev/developing_parent.md)
 
 **Related information**  
 

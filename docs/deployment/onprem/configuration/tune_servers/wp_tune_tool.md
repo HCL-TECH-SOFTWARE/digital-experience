@@ -45,7 +45,6 @@ Use the following syntax to run the tune-initial-portal-performance task on vert
 -   Linux™ :./ConfigEngine.sh tune-initial-portal-performance -DServerName=vertical\_cluster\_servername -DWasPassword=password -DPortalAdminPwd=password -DTuningPropertiesDirectory=local\_dir\_path
 -   Windows: ConfigEngine.bat tune-initial-portal-performance -DServerName=vertical\_cluster\_servername -DWasPassword=password -DPortalAdminPwd=password -DTuningPropertiesDirectory=local\_dir\_path
 
-**Parent topic:**[Tune your environment](../install/tune_servers.md)
 
 **Related information**  
 

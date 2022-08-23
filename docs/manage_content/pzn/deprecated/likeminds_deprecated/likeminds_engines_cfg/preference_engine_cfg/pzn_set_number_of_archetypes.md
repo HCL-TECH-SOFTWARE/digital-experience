@@ -10,7 +10,4 @@ For example:
 movie_pref.db.engine.tune.max_archetype_list_use = 150000
 ```
 
-**Parent topic:**[Configuring the Preference engine](../pzn/pzn_configure_preference_engine.md)
-
-**Parent topic:**[Configuring the Preference engine](../pzn/pzn_configure_preference_engine.md)
 

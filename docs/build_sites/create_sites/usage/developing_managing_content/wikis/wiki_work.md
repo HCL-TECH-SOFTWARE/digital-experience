@@ -15,5 +15,4 @@ If you are the owner of a wiki site, you have Manager access and can delete any 
 -   **[Purging deleted wiki pages](../admin-system/wiki_delete_page.md)**  
 When you delete a wiki post, it is removed from the site, but remains in the delete view in HCL Web Content Manager. Users with Administrator access to libraries can purge these deleted wiki pages, which optimizes performance of the wiki library. Purging the deleted wiki pages removes all occurrences, including all versions. You cannot restore deleted items after you purge them.
 
-**Parent topic:**[Developing and managing content](../site/site_dev_man.md)
 

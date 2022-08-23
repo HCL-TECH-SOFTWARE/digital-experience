@@ -53,13 +53,11 @@ The intended use of the Personalized List portlet is to display personalized lis
 23. Test this portlet, logging in as each pzndemo user having a different profile. You must get the same content results that you saw previously by using your own custom-built portlet, Pers\_Offers, except you do not have to code a portlet or a JSP file.
 
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Change content spot rule mapping](../pzn/pzn_demo_change_content_spot_rule_mapping.md)
 
 **Next topic:**[Uninstall Personalization sample and database](../pzn/pzn_demouninstall.md)
 
-**Parent topic:**[Developing a personalized portlet](../pzn/pzn_demooverview.md)
 
 **Previous topic:**[Change content spot rule mapping](../pzn/pzn_demo_change_content_spot_rule_mapping.md)
 

@@ -34,5 +34,4 @@ Here is an example XML script, with the `HTML_SEARCH` capability highlighted:
 
 ```
 
-**Parent topic:**[Client identification for external search engines](../admin-system/srrclientid.md)
 

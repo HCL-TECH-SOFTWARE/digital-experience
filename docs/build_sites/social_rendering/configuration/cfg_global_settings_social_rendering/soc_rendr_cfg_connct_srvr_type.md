@@ -32,7 +32,6 @@ To configure the HCL Connections server type, you set a custom property named `s
 8.  Restart your portal server for the changes to take effect.
 
 
-**Parent topic:**[Configuring global settings for social rendering](../social/soc_rendr_cfg_global.md)
 
 **Related information**  
 

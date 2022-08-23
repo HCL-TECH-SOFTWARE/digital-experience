@@ -20,5 +20,4 @@ You can do an XML export of a page or an entire page hierarchy by using the Mana
 7.  On the Download complete screen, click **Open** to view the newly saved XML configuration file. Check the content of the file and make sure that it does not contain a `<failure>` tag. If you do not want to view the XML file, close the extra window that is open for viewing the file.
 
 
-**Parent topic:**[Using administrative portlets for XML configuration](../admin-system/adxmltsk_portlets.md)
 

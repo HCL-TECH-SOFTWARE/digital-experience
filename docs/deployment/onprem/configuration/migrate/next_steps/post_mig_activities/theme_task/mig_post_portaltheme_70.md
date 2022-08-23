@@ -13,5 +13,4 @@ In Version 8.0, the PortalTheme was removed. Complete the following procedure on
 2.  Restart your portal server.
 
 
-**Parent topic:**[Theme tasks](../migrate/mig_post_themetasks.md)
 

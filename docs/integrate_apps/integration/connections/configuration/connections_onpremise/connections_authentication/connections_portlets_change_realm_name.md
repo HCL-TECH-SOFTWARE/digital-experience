@@ -47,5 +47,4 @@ When you configure HCL Connections portlets to use single sign-on, you might nee
         **Note:** The task is intended to run against a running server. If the server is stopped, add the-Dskip.ldap.validation=true parameter to the task to skip the validation.
 
 
-**Parent topic:**[Configuring authentication](../connect/c_connections_portlets_SSO_config.md)
 

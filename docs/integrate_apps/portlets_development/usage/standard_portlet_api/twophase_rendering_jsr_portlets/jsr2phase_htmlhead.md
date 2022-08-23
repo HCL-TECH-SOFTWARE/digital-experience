@@ -54,5 +54,4 @@ This generates a properly closed script tag in the header as follows:
    <script src="/sample.js" type="text/javascript"> </script>
 ```
 
-**Parent topic:**[Using two-phase rendering with JSR 286 portlets](../dev-portlet/jsr2phase_overview.md)
 

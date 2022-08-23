@@ -7,5 +7,4 @@ Statistics are information that is collected about the contents of the database 
 -   **[Preparing DB2 for large data sets migration](../migrate/mig_t_db2_largedata.md)**  
 If you use DB2 and have a large amount of content in the JCR repository \(for example, Web Content Manager data\), prepare the DB2 for migration. You must update several settings that are related to performance.
 
-**Parent topic:**[Database considerations](../migrate/mig_pre_db.md)
 

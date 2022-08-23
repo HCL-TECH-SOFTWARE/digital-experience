@@ -15,5 +15,4 @@ The Portal Scripting Interface provides more commands and variants of commands t
 -   **[Logging out of the portal](../admin-system/adpsi_start_logout.md)**  
 After you complete working with the Portal Scripting Interface, you log out and exit the interactive scripting console.
 
-**Parent topic:**[Portal Scripting Interface](../admin-system/ad_psi.md)
 

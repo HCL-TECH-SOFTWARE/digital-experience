@@ -957,5 +957,4 @@ A list of Dojo classes that are provided by each version 1.9 Dojo meta-module.
     dojox.widget.standby
 
 
-**Parent topic:**[Modules that are provided with the modularized theme](../dev-theme/themeopt_oob.md)
 

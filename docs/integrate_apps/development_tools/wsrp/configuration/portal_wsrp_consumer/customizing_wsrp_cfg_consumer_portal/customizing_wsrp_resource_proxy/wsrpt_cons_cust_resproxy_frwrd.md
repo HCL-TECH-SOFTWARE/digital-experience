@@ -4,7 +4,6 @@ By default, the WSRP resource proxy forwards all HTTP headers from the client re
 
 To do so, set the following property in the Configuration Service: wsrp.resourceproxy.no.header.forwarding = comma-separated list of header names. Use this property to specify the list of HTTP headers that are not forwarded from the client request in addition to the host header and cookie headers. The host header and cookie headers are never forwarded independent of how this property is set. The default behavior is that WSRP forwards all headers except for the host header and cookie headers. After you set this property, restart the portal or the cluster for the change to take effect.
 
-**Parent topic:**[Customizing the WSRP resource proxy](../admin-system/wsrpt_cons_res_proxy.md)
 
 **Related information**  
 

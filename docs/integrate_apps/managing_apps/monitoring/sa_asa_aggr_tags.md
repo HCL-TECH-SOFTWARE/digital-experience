@@ -99,7 +99,6 @@ The portal supports the aggregator tags listed in the following for Active Site 
     Tag the search scope label as asa.search.scope.label and add it to the markup of the Search Center portlet.
 
 
-**Parent topic:**[How Active Site Analytics data is represented in the portal](../admin-system/sa_asa_data.md)
 
 **Related information**  
 

@@ -30,7 +30,6 @@ Content nodes can own metadata, which are name-value pairs of data that is assoc
 -   **[Lifecycle \| Content bean content hierarchy](../admin-system/contnt_lfcycl.md)**  
 The create command creates a new content node. The derive command creates a new content node for a page that is derived from another page. The delete command removes a content node.
 
-**Parent topic:**[Command reference for the Portal Scripting Interface](../admin-system/adpsicrf.md)
 
 **Related information**  
 

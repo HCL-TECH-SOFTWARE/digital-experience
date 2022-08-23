@@ -62,5 +62,4 @@ AccessControlGlobalRuntimeModel globalModel = home.getAccessControlGlobalRuntime
 isAllowed = globalModel.hasPermission(bob, permission); 
 ```
 
-**Parent topic:**[Portal Access Control interfaces](../dev/wppacintfce.md)
 

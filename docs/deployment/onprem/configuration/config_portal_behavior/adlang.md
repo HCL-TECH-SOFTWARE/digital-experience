@@ -13,7 +13,6 @@ Specify the default language in which the portal appears with the Global Setting
 
 For a list of the languages that are supported by the portal, see *Language support*.
 
-**Parent topic:**[Configuring portal behavior](../admin-system/adptlcfg.md)
 
 **Related information**  
 

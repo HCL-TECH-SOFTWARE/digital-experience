@@ -10,5 +10,4 @@ In previous versions of Portal and HCL Digital Experience, the MashupMaker\_Inte
     -   IBM® i: `./ConfigEngine.sh action-create-ear-wp.mmi.deploy`
     -   Windows™: `ConfigEngine.bat action-create-ear-wp.mmi.deploy`
 
-**Parent topic:**[Add-ons, features, and third-party integration tasks](../migrate/mig_post_ptl_int_addon.md)
 

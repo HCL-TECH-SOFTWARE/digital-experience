@@ -25,7 +25,6 @@ You can configure the Person card to display longer than the default number of m
 8.  Restart the portal server.
 
 
-**Parent topic:**[Collaborative Services API and the person tag](../collab/i_coll_r_cs_api.md)
 
 **Related information**  
 

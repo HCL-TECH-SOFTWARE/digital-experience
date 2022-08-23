@@ -4,7 +4,6 @@ HCL Digital Experience provides an application extension registry which is equiv
 
 The application extension registry uses the Eclipse plug-in descriptor format and APIs as the standard extensibility mechanism for WebSphere applications. For more information about the application extension registry, see *Application extension registry* in the *IBM® WebSphere® Application Server Help Center* and *Notes on the Eclipse Plug-in Architecture*.
 
-**Parent topic:**[Portlet development reference](../dev-portlet/wpsdevref.md)
 
 **Related information**  
 

@@ -28,7 +28,6 @@ To configure the tags transmission limit, proceed by the following steps:
 
 For more information, see the topic about *Using the portal Tag Cloud with social lists*.
 
-**Parent topic:**[Configuring global settings for social rendering](../social/soc_rendr_cfg_global.md)
 
 **Related information**  
 

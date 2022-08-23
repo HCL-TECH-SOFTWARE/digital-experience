@@ -31,5 +31,4 @@ The JSON object makes the following data available:
     This member contains a JSON object with the name-value pairs that represent the HTTP response header field names and values that you specified by using `ddc.resultheaders` parameters for the processed operation. The HTTP response header values refer to the response of the remote REST service.
 
 
-**Parent topic:**[The generic XML Digital Data Connector data sink](../social/plrf_use_gen_xml_ddc_datasink.md)
 

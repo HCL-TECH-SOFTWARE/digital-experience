@@ -54,7 +54,6 @@ View information on setting up search collections for search by users. This also
 -   **[Searching and crawling Portal and other sites](../admin-system/srcportals.md)**  
 You can configure your local Portal site and crawl remote Portal sites so that they are searchable by users. Run crawlers against other external websites to make them searchable by local portal users.
 
-**Parent topic:**[HCL Digital Experience Portal Search](../admin-system/admsrch.md)
 
 **Related information**  
 

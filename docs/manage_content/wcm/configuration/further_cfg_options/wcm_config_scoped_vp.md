@@ -51,7 +51,6 @@ To add a setting just for the base portal, add "`.base`" to the end of the param
 
 For example, if you use the default setting `deployment.subscriberOnly=true`, you can add another setting that is named `deployment.subscriberOnly.base=false` that is applied to the base portal only. All the virtual portals use the default value of `deployment.subscriberOnly=true`.
 
-**Parent topic:**[Further configuration options](../wcm/wcm_config.md)
 
 **Related information**  
 

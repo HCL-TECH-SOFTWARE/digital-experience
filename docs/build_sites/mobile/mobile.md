@@ -11,5 +11,4 @@ Use the Mobile Preview simulator to view the presentation of Digital Experience 
 -   **[Development tools](../overview/development_tools.md)**  
  Both the [Web Experience Factory](https://support.hcltechsw.com/csm?id=kb_search&spa=1&language=en,ja&query=web%20experience%20factory) and [IBM Rational Application Developer](https://www.ibm.com/products/rad-for-websphere-software) include functionality to help you develop Multichannel Digital Experience solutions.
 
-**Parent topic:**[Product capabilities](../overview/intr_ovr.md)
 

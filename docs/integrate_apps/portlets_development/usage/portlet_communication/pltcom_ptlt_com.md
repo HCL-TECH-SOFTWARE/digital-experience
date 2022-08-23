@@ -17,7 +17,6 @@ HCL Digital Experience supports special purpose techniques for data exchange.
 -   **[Shared portlet sessions](../dev-portlet/pltcom_shrd_ptlts.md)**  
 The following communication methods are based on shared state between multiple portlets. This means that two or more portlets read and write to the same data.
 
-**Parent topic:**[Developing portlets](../dev-portlet/wpsdev.md)
 
 **Related information**  
 

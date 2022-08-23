@@ -37,5 +37,4 @@ Example scenario: Configuring a limit to the history of viewed pages
 8.  The user selects portal page A. Portlet A1 displays page 1 of the document because this is the default state for this portlet. The previous state has been discarded because it is back in the view history by 3 pages already, and thereby exceeds the configuration setting of only 2 pages.
 9.  The user selects page C. Portlet C1 still displays page 4 as before as it is within the configured history value of two stored pages.
 
-**Parent topic:**[Configuring history expiration limits](../admin-system/historylimit_cfg.md)
 

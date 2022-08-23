@@ -16,7 +16,6 @@ This setting defines a regular expression that is used by the server to invalida
 
 In the WP ConfigService Resource Environment Provider, modify the `resourceaggregation.cache-refresh.skipPluginRegEx` property. By default, the property is set to `ˆ(com\.ibm|wp\.|wcm\.|jquery).*`.
 
-**Parent topic:**[Configuring the portal theme and modules](../dev-theme/themeopt_cust_config.md)
 
 **Related information**  
 

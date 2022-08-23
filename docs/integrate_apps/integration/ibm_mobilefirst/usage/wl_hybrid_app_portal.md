@@ -37,5 +37,4 @@ To test an iPhone and iPad hybrid application, you must use a Mac with Xcode ins
     3.  To test a Windows Phone hybrid application, you must have Windows 8 with Windows Phone 8 SDK installed. Right-click your native Windows Phone application folder, which is project\_name\\apps\\app\_name\\windowsphone8, and select **Run As** \> **Visual Studio Project**. Then, in Visual Studio, select your emulator and run the application.
 
 
-**Parent topic:**[Integrating with IBM MobileFirst](../integrate/wl_integrt.md)
 

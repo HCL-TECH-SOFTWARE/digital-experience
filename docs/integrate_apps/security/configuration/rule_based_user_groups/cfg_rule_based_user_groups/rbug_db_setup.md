@@ -71,5 +71,4 @@ The rule-based user groups feature stores the definitions of the rule-based user
     Oracle does not support auto-increment or identity feature directly as part of the ID column definition. You must create a sequence and a trigger. For easy submission of the statement, make sure to add the final slash character \(`/`\). You can submit the statement by pressing the Enter key.
 
 
-**Parent topic:**[Configuring the rule-based user groups adapter](../admin-system/rbug_instl.md)
 

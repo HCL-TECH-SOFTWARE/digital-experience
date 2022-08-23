@@ -91,7 +91,6 @@ If your web server is used for both a HCL Portal server and accessing the pre-re
     When viewing a pre-rendered site through a web server, any dynamic elements such as menus and navigators are displayed as rendered by the configured CacherModule user, not by the user that is accessing the site. This means personalization cannot be used.
 
 
-**Parent topic:**[Pre-rendered delivery](../wcm/wcm_config_delivery_pre-rendered.md)
 
 **Related information**  
 

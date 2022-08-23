@@ -56,5 +56,4 @@ You can add support for languages that read from right to left.
     ```
 
 
-**Parent topic:**[Globalization](../dev-theme/themeopt_themedev_globalization.md)
 

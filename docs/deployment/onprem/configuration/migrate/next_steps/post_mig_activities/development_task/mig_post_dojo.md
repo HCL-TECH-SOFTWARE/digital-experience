@@ -11,7 +11,6 @@ See the following procedure for an example of how to search for these references
 2.  Enter the following command: WebSphere Portal Install Directory\> grep -Hr "\\"/portal\_dojo".
 
 
-**Parent topic:**[Development tasks](../migrate/mig_post_devtasks.md)
 
 **Related information**  
 

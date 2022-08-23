@@ -37,5 +37,4 @@ Refer to the following example:
    }
 ```
 
-**Parent topic:**[The client side portlet programming model](../dev-portlet/w2_clntprgmdl.md)
 

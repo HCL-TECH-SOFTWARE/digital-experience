@@ -54,5 +54,4 @@ Complete the following steps to remove this enhancement:
 7.  Click **OK**.
 8.  Restart the WebSphere\_Portal server.
 
-**Parent topic:**[Integrating with web applications](../admin-system/wab.md)
 

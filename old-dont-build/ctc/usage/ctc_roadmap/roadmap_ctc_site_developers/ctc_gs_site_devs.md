@@ -15,5 +15,4 @@ Content Template Catalog Index and Details page templates are associated with se
 -   **[A roadmap for customizing Content Template](../ctc/ctc_gs_custom.md)**  
 A quick guide to customizing your Content Template site.
 
-**Parent topic:**[Roadmaps for Content Template Catalog](../ctc/ctc_gs.md)
 

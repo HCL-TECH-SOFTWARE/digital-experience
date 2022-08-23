@@ -136,7 +136,6 @@ Once a trace string is added or removed in the Tracing portlet, the Digital Expe
 
 **Important:** WebSphere Application Server consolidates the trace strings list by removing strings that are logically contained within others. For example, if you have a string `x.y.z.*=all` in the list, it disappears when you add `x.y.*=all`
 
-**Parent topic:**[Logging and tracing](../trouble/pd_intr_logs.md)
 
 **Related information**  
 

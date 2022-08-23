@@ -13,5 +13,4 @@ Perform the following steps to apply updates to custom applications:
 4.  Repeat this procedure for other clusters sharing this application.
 
 
-**Parent topic:**[Managing portlets in your cluster](../admin-system/manage_portlets.md)
 

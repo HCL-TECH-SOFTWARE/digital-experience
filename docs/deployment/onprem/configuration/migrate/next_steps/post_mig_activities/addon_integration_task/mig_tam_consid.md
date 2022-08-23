@@ -73,7 +73,6 @@ The HCL Digital Experience migration process cannot change the junction definiti
     server task instance\_name -webseal-host\_name delete junction\_point
 
 
-**Parent topic:**[Add-ons, features, and third-party integration tasks](../migrate/mig_post_ptl_int_addon.md)
 
 **Related information**  
 

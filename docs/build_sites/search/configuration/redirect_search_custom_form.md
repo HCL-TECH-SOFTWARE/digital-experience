@@ -37,7 +37,6 @@ If you placed the Search Center on a different page, for example, a public page,
 
 For more information, see *Placing the Search Center on a public portal page*.
 
-**Parent topic:**[Search](../wcm/wcm_dev_search.md)
 
 **Previous topic:**[Configuring your custom portal themes to include the search box](../admin-system/srcconfthmsforsrch.md)
 

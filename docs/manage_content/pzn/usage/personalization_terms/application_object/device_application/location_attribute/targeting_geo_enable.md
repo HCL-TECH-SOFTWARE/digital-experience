@@ -27,7 +27,4 @@ The new geolocation theme module adds JavaScript to every portal page to check t
 3.  Use the Theme Opt Analyzer portlet to invalidate the cache. Click the **Administration menu** icon. Then, click **Portal Analysis** \> **Theme Analyzer**. Then, click **Utilities** \> **Control Center** \> **Invalidate cache**. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](../dev-theme/themeopt_an_util.md#). You do not need to restart the server.
 
 
-**Parent topic:**[Location attributes](../contarget/targeting_geo.md)
-
-**Parent topic:**[Location attributes](../contarget/targeting_geo.md)
 

@@ -11,7 +11,4 @@ For example, to assign a rule with the UUID `7ce9d5004ee31f41b0d3b944c9f7965c` t
 
 `<parameter name="com.ibm.portal.navigation.rule" type="string" update="set"><![CDATA[7ce9d5004ee31f41b0d3b944c9f7965c]]</parameter>`
 
-**Parent topic:**[Attribute Based Administration](../pzn/pzn_attadm.md)
-
-**Parent topic:**[Attribute Based Administration](../pzn/pzn_attadm.md)
 

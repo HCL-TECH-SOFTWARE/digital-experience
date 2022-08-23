@@ -14,7 +14,6 @@ View the steps to set up search on a multilingual portal for users with differen
 -   **[Configuring search on a secured portal site](../admin-system/srtcnfgsrchscrprtlsite.md)**  
 Crawling and searching secured portal sites might require some additional configuration.
 
-**Parent topic:**[Search](../wcm/wcm_dev_search.md)
 
 **Previous topic:**[Crawling web content with search seedlists](../wcm/wcm_dev_search_seedbase.md)
 

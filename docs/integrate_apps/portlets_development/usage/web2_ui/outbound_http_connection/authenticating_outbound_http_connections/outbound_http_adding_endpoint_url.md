@@ -169,5 +169,4 @@ This parameter modifies the path of the remote URL. The metadata value contains 
 
 ```
 
-**Parent topic:**[Authenticating outbound HTTP connections](../dev-portlet/outbhttp_authntct.md)
 

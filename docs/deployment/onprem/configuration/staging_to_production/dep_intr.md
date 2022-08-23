@@ -23,7 +23,6 @@ Staging to production where external security managers \(ESM\) are used is compl
 -   **[Manual staging to production process](../deploy/mans2p_intro.md)**  
  HCL Digital Experience provides two solutions through staging to production; manual and automated. For more information about the automated solution, see Staging to production. The following sections guide you through the manual solution for a stand-alone server. Two stand-alone servers are used to represent a development and production environment, which corresponds to the host name used in the examples.
 
-**Parent topic:**[HCL Digital Experience 9.5 Product Documentation](../welcome/wp95_welcome.md)
 
 **Related information**  
 

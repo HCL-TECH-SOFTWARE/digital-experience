@@ -12,7 +12,6 @@ You can do an XML export of a page or an entire page hierarchy by using the Mana
 -   **[Importing pages or page hierarchies by using the XML Import portlet](../admin-system/adxmltsk_portlets_imp.md)**  
 You can import an XML configuration file to your HCL Digital Experience portal site by using the XML Import portlet.
 
-**Parent topic:**[Working with the XML configuration interface](../admin-system/adxmltsk.md)
 
 **Related information**  
 

@@ -81,7 +81,6 @@ A list-rendering profile describes the transformation between a specific JSON do
     Consequently if you do not specify a profile in your list rendering context, you must specify `BasicJSONSelection` expressions in order to access data in the list designs for you Digital Data Connector. You do so by using the `[AttributeResource attributeName="<basic-json-selection>"]` tag.
 
 
-**Parent topic:**[Integrating remote JSON data](../social/plrf_intgrt_rmt_json.md)
 
 **Related information**  
 

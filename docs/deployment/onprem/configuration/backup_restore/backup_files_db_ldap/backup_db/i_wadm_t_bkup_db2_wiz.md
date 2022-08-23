@@ -51,5 +51,4 @@ To perform a full offline backup of the WPSDB database, follow these steps:
 
 DB2 displays a message confirming that the backup task has completed successfully or that the task encountered and logged problems that need to be fixed.
 
-**Parent topic:**[Backing up the database](../admin-system/i_wadm_t_bkup_db2_winlinux.md)
 

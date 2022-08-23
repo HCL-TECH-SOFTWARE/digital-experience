@@ -15,7 +15,6 @@ Complete the following steps to modify your environment using the Installation M
 4.  Review the summary information and then run the process to add or remove the profile.
 
 
-**Parent topic:**[Managing your HCL Portal environment](../install/iim_manage_wp.md)
 
 **Related information**  
 

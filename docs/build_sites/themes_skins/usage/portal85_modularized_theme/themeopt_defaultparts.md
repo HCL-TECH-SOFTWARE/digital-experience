@@ -20,7 +20,6 @@ Static resources include the markup that is defined by .html, .css, and .js file
 -   **[Dynamic content \(jsp\) resources](../dev-theme/themeopt_defaultparts_jsp.md)**  
 Dynamic content includes resources that are defined by jsp files that are used by the theme.
 
-**Parent topic:**[Developing themes and skins](../dev-theme/themeopt_themes.md)
 
 **Related information**  
 

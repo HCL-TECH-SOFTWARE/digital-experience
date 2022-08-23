@@ -9,5 +9,4 @@ The portal External Access Control Service is responsible for collecting authori
 -   **[Auditing Service](../admin-system/srvcfgref_audit.md)**  
 With the Auditing Service, you can log a set of events in to a separate audit log file. All events are organized in groups. For example, the logging events User Created and User Deleted are grouped and must be turned on or off together.
 
-**Parent topic:**[Portal Security Services](../admin-system/srvcfgref_secy.md)
 

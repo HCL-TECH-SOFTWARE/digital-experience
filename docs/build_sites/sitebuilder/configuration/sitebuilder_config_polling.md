@@ -32,7 +32,4 @@ To change the default polling settings:
 6.  Click **OK**.
 
 
-**Parent topic:**[Deploying Site Builder](../sitebuilder/sitebuilder_access.md)
-
-**Parent topic:**[Deploying Site Builder](../sitebuilder/sitebuilder_access.md)
 

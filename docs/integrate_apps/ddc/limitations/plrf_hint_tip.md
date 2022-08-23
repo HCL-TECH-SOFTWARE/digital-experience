@@ -15,5 +15,4 @@ Learn about things that are useful to know when you work with the social renderi
     The Digital Data Connector infrastructure does not support remote rendering through WSRP \(Web Services for Remote Portlets\). This means that lists rendered through the DDC cannot be provided as remote portlets.
 
 
-**Parent topic:**[Digital Data Connector \(DDC\) for HCL Portal](../social/plrf_ovu.md)
 

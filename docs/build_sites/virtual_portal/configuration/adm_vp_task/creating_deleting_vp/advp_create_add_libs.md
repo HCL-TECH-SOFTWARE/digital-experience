@@ -37,7 +37,4 @@ Use the following syntax:
     ./ConfigEngine.sh import-libs-to-vp -DVirtualPortalContext=virtual\_portal\_context\_url
 
 
-**Parent topic:**[Creating a virtual portal](../admin-system/advp_tsk_create_vp.md)
-
-**Parent topic:**[Task: create-virtual-portal](../admin-system/advp_cfgtsk_create.md)
 

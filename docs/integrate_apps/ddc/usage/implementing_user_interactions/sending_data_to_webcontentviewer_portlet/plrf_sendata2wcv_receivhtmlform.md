@@ -11,7 +11,6 @@ The URL generated for the action parameter of the HTTP form controls whether the
 
 You can then access the session attribute and the render parameter in your web content by using the session attribute rendering plug-in and the render parameter rendering plug-in, respectively. For example, if the data source of a data sink returns JSON data, you can process the data further by using JavaScript that is contained in your web content.
 
-**Parent topic:**[Sending data to the Web Content Viewer portlet](../social/plrf_sendata2wcv.md)
 
 **Related information**  
 

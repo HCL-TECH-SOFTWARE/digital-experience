@@ -21,7 +21,6 @@ This task provider retrieves tasks from IBM Business Process Manager and surface
 9.  Claim a Business Process Manager task and then select it to start the process instance in the Coach portlet.
 
 
-**Parent topic:**[Configuring Unified Task List portlet with process servers](../integrate/utl_configuring_unified_task_list_process_servers.md)
 
 **Related information**  
 

@@ -45,5 +45,4 @@ When a text provider is enabled on an item, identity controls work this way:
 
 **Note:** The language code that is required for the localized tags must be an IETF BCP47 compliant language code.
 
-**Parent topic:**[How to manage web content items by using REST](../wcm/wcm_rest_crud.md)
 

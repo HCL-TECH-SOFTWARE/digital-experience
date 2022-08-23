@@ -61,5 +61,4 @@ $PacList unblock User inheritance
 
 ```
 
-**Parent topic:**[Portal Access Control](../admin-system/ptl_acc_con.md)
 

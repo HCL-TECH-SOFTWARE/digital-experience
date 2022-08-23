@@ -19,7 +19,6 @@ The multilingual solution is used to author, manage, and publish multilingual co
 -   **[Extensions for multilingual sites Multilingual Solution](../wcm/wcm_mls_extensions.md)**  
 The multilingual solution uses a set of extensions that can be used with existing features to author, manage, and publish your multilingual websites.
 
-**Parent topic:**[Setting up a website](../site/site_setup.md)
 
 **Related information**  
 

@@ -12,5 +12,4 @@ By default, items with no expiration date defined are automatically expired. Cha
 
 When you click **OK**, a message box appears that prompts you either to save your changes directly to your master configuration or to review your changes before you save them. Click **Save** to save your changes directly or **Review** to review them before saving.
 
-**Parent topic:**[Preparing Web Content Manager content](../migrate/wcm_specific_steps.md)
 
