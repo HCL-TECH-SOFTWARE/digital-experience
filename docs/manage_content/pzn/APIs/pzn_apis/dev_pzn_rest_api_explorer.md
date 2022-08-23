@@ -10,11 +10,11 @@ After installing HCL DX 9.5 CF or Container Update CF200 or later, access the Pe
 http or https://host:port/dx/api/pzn/v1/explorer/
 ```
 
-**Example:**
+!!! example
 
-```
-https://localhost:10039/dx/api/pzn/v1/explorer/
-```
+    ```
+    https://localhost:10039/dx/api/pzn/v1/explorer/
+    ```
 
 For the Embedded WCM Selection Rules, use the following path and path format:
 
@@ -22,19 +22,14 @@ For the Embedded WCM Selection Rules, use the following path and path format:
 http or https://host:port/dx/api/wcm/v2/explorer/
 ```
 
-**Example:**
+!!! example
 
-```
-https://localhost:10039/dx/api/wcm/v2/explorer/
-```
+    ```
+    https://localhost:10039/dx/api/wcm/v2/explorer/
+    ```
 
--   **[Personalization rules APIs](../pzn/dev_pzn_rules_api.md)**  
-The Personalization rules REST APIs provide access to personalization rules capabilities using REST services.
--   **[Personalization folder APIs](../pzn/dev_pzn_folders_api.md)**  
-The Personalization folder REST APIs provide access to personalization folder capabilities using REST services.
--   **[Personalization rules APIs](../pzn/dev_pzn_rules_api.md)**  
-The Personalization rules REST APIs provide access to personalization rules capabilities using REST services.
--   **[Personalization folder APIs](../pzn/dev_pzn_folders_api.md)**  
-The Personalization folder REST APIs provide access to personalization folder capabilities using REST services.
+## Limitation
 
+The detailed function of the above mentioned API for accessing Personalization Rules is documented [Personalization Rules](../pzn_apis/pzn_rest_API_explorer/pzn_apis.md)
 
+PZN endpoint to manage the personalization rules (/rules) does not support the creation of Embedded WCM Select Action rule yet. So use the WCM API to create the initial embedded PZN rule and then edit it with the PZN API.
