@@ -16,6 +16,8 @@ microdnf install -y --nodocs git zlib-devel make gcc
 wget https://www.python.org/ftp/python/3.10.5/Python-3.10.5.tgz 
 tar xzf Python-3.10.5.tgz 
 cd Python-3.10.5
+ls -lah
+chmod +x ./configure
 ./configure --with-system-ffi --with-computed-gotos --enable-loadable-sqlite-extensions 
 make -j 2
 make install
