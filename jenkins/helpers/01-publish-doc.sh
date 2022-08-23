@@ -15,6 +15,7 @@ microdnf install -y --nodocs git zlib-devel make gcc
 # Build python
 wget https://www.python.org/ftp/python/3.10.5/Python-3.10.5.tgz 
 tar xzf Python-3.10.5.tgz 
+chmod -R u+rxw Python-3.10.5
 cd Python-3.10.5
 ls -lah
 chmod +x ./configure
