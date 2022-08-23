@@ -10,7 +10,17 @@
 # ********************************************************************
 
 # Install dependencies
-microdnf install -y --nodocs git python3
+microdnf install -y --nodocs git zlib-devel make gcc
+
+# Build python
+wget https://www.python.org/ftp/python/3.10.5/Python-3.10.5.tgz 
+tar xzf Python-3.10.5.tgz 
+cd Python-3.10.5
+./configure --with-system-ffi --with-computed-gotos --enable-loadable-sqlite-extensions 
+make -j 2
+make install
+
+cd ~
 
 # Install mkdocs
 pip3 install mkdocs-material mike mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin mkdocs-minify-plugin
