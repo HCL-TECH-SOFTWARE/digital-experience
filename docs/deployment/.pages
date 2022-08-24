@@ -1,7 +1,5 @@
 title: Deploy DX
 nav:
     - index.md
-    - container
-    - traditional
-    - hybrid
-    - docker
+    - Install: install
+    - Manage: manage

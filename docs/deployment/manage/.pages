@@ -1,0 +1,28 @@
+nav:
+    - index.md
+    - Configure Kubernetes Deployment: container_configuration
+    - stopstart.md
+    - itlm.md
+    - config_standalone
+    - config_cluster
+    - portalfarm_cfg
+    - security
+    - tune_servers
+    - siteurl_cfg
+    - config_portal_behavior
+    - manage_portal_using_iim
+    - config_webservers
+    - db_mgmt_sys
+    - profile
+    - cfg_property_files
+    - backup_restore
+    - change_dev_mode_env
+    - staging_to_production
+    - migrate
+    - cfg_history_expiration_limits
+    - multiple_profiles
+    - remote_spell_checker
+    - upsell
+    - monitoring
+    - troubleshooting
+    - ...
