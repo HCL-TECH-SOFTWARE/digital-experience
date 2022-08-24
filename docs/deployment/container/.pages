@@ -1,7 +1,6 @@
-title: Container Platform
+title: Kubernetes Deployment
 nav:
     - index.md
     - Installation: installation
     - Configuration: configuration
-    # - Usage: usage
     - Limitations: limitations
