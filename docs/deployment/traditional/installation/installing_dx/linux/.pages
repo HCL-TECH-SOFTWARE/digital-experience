@@ -1,0 +1,7 @@
+nav:
+    - index.md
+    - prep_os-linux.md
+    - inst_iim-linux.md
+    - Run the installation program in Linux: running_install
+    - inst_next_steps-linux.md
+    - sdk_upgrade-linux.md
