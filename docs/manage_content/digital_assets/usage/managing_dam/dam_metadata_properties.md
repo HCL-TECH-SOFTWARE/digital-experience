@@ -38,7 +38,7 @@ Beginning with HCL Digital Experience 9.5 Container Update CF205, using a custom
 
 ## Keyword details
 
-Keyword details feature showcase data on both user-added and plugin-generated keywords. This feature gets enabled when there are plugin-generated keywords.
+Keyword details feature showcases data on both user-added and plugin-generated keywords. This feature gets enabled when there are plugin-generated keywords.
 
 ### Steps to view keyword details
 
