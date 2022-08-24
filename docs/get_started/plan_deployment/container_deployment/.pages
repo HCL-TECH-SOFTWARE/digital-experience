@@ -1,6 +1,8 @@
 nav:
+    - index.md
+    - limitations_requirements.md
+    - rm_container
     - application_architecture.md
-    - helm_overview.md
     - dam_persistence_architecture.md
     - persistent_volumes.md
     

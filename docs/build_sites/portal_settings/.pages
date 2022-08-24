@@ -1,0 +1,9 @@
+title: Portal Settings
+nav:
+    - index.md
+    - manage_client_devices
+    - manage_custom_unique_names
+    - manage_global_setting
+    - manage_markup_language
+    - h_main_import_xml.md
+

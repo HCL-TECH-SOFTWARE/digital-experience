@@ -1,5 +1,5 @@
 nav:
-    - overview.md
+    - index.md
     - prepare_namespace.md
     - prepare_configuration.md
     - prepare_load_images.md
