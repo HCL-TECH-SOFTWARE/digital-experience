@@ -1,7 +1,4 @@
-Title: Hybrid Platform
+Title: Hybrid Deployment
 nav:
     - index.md
-    - Installation: installation
-    - Configuration: configuration
-   # - Usage: usage
-    - Limitations: limitations
+

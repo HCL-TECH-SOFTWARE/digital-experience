@@ -1,7 +1,6 @@
 title: Portal Scripting Interface
 nav:
-    - Installation: installation
-    - Configuration: configuration
+    - index.md
     - Usage: usage
-    - Limitations: limitations
+
 

@@ -1,7 +1,6 @@
 title: XML Configuration Interface
 nav:
-    - Installation: installation
-    - Configuration: configuration
+    - index.md
     - Usage: usage
-    - Limitations: limitations
+
 
