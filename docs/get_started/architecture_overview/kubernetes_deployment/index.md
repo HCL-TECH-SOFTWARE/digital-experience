@@ -2,10 +2,10 @@
 
 Learn more about the containerization architecture, including the supported container platforms in deploying HCL Digital Experience images for your environment.
 
-HCL introduced full support for containerization in Digital Experience \(DX\) 9.5. HCL Digital Experience users can deploy HCL Digital Experience images in Docker, Red Hat OpenShift 4.1 and higher, also Amazon Elastic Kubernetes Service \(EKS\), Microsoft Azure Kubernetes Service \(AKS\) and Google Kubernetes Engine \(GKE\) for test, development, staging, and production environments.
+HCL introduced full support for containerization in Digital Experience \(DX\) 9.5. HCL Digital Experience users can deploy HCL Digital Experience images in Docker, Red Hat OpenShift 4.1 and higher, also Amazon Elastic Kubernetes Service \(EKS\), Microsoft Azure Kubernetes Service \(AKS\), and Google Kubernetes Engine \(GKE\) for test, development, staging, and production environments.
 
-Whether developing, testing, or running a full production environment, use of Docker images and containers are preferred for the ease of deploying applications, including the latest version of HCL Digital Experience. Deploy in a fraction of the time than what it takes in the traditional deployment models.
+Whether developing, testing, or running a full production environment, the use of Docker images and containers are preferred for the ease of deploying applications, including the latest version of HCL Digital Experience. Deploy in a fraction of the time than what it takes in the traditional deployment models.
 
-![Containerization Architecture Overview](../container_deployment/haproxy-optional-ingress-architecture.png)
+![Containerization Architecture Overview](../../../images/haproxy-optional-ingress-architecture.png)
 
-Please see the [Containerization Limitations/Requirements](../../systemrequirements/kubernetes/kubernetes-runtime.md) and [Deployment](../../../deployment/container/installation/helm_deployment/helm_deployment.md) sections of the documentation before you begin.
+HCL DX 9.5 CF200 and later is architected to run on any Certified Kubernetes platform (https://www.cncf.io/certification/software-conformance), provided that the Kubernetes platform is hosted on x86_64 hardware and the Kubernetes platform is officially supported by Helm (https://helm.sh/docs/topics/kubernetes_distros/).
