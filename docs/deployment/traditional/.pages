@@ -1,8 +1,7 @@
-title: Onpremise Platform
+title: Traditional Platform
 nav:
     - index.md
     - Installation: installation
     - Configuration: configuration
-    # - Usage: usage
     - Limitations: limitations
     - ...
