@@ -1,8 +1,8 @@
 title: Practitioner Studio
 nav:
-    - practitionerstudio_overview.md
+    - index.md
     - installation
     - configuration
     - usage
-    - Limitations: limitations
+
 

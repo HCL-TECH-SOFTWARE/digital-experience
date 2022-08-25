@@ -1,6 +1,6 @@
 # Introduction to tagging and rating
 
-Tagging and rating are features that support collaboration and interaction between users when using Web content.
+Tagging and rating feature supports collaboration and interaction between users when using Web content.
 
 Rather than relying on dedicated authors to be responsible for adding content, knowledge-sharing communities of users now collectively contribute to Web content. These systems grow quickly and are not as coordinated as they were when teams of dedicated authors were responsible for planning and creating content. For this reason, new methods of organizing and structuring content are required.
 

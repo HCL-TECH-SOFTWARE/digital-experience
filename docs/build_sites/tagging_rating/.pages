@@ -1,5 +1,6 @@
 title: Tagging and Rating
 nav:
+    - index.md
     - Configuration: configuration
     - Usage: usage
 
