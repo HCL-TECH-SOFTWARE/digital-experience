@@ -184,7 +184,7 @@ The default value set for "openShiftPassthrough" is `auto` i.e it detects opensh
 
 #### Create the route resource manually
 If you want to deploy openshift manually using Routes, youll need to create a yaml file like below and any changes required can be made in that. To apply those change the the openshift cluster you can run `kubectl apply` and specify its namespace and location.
-Click [here](https://docs.openshift.com/container-platform/latest/networking/routes/route-configuration.html) for more details on Openshift Route Configuration
+For more information, refer to the [OpenShift Route Configuration](https://docs.openshift.com/container-platform/latest/networking/routes/route-configuration.html) documentation.
 
 ```yaml
 apiVersion: "route.openshift.io/v1"
