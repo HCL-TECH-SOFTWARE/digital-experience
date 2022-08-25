@@ -38,6 +38,12 @@ The configuration tasks might require you to write security-sensitive informatio
 HCL Digital Experience and IBM® WebSphere® Application Server use some accounts from the registry \(for example, the LDAP server\) including administrative and bind IDs for authenticated access to databases and LDAP severs respectively, as well as the HCL Portal and WebSphere® Application Server administrative IDs. Often this means that the account passwords are stored in the HCL Portal and WebSphere® Application Server bootstraps configuration files, which allows the authentication process to work.
 -   **[Content Security Policy](../security/content_security_policy.md)**  
 The Content-Security-Policy header is used by modern browsers to enhance security of HCL Digital Experience site documents or webpages by allowing HCL Digital Experience administrators or developers declare which dynamic resources are allowed to load.
+-   **[Users and groups](../security/adusrgrp.md)**  
+HCL Digital Experience offers you centralized administration of users and user groups, allowing you to better define users and manage user access rights. Users can register and manage their own account information, or an administrator can provision and manage users. Group memberships can be used to give the required permissions to access an object or perform a request.
+-   **[Access](../security/access)**  
+Control who has access to the site.
+-   **[User registry](../security/user_registry)**  
+User information is stored in your user registry. You can enable LDAP referrals, configure HCL Digital Experience to use dynamic groups, update your user registry, or delete your user registry configurations.
 
 
 **Related information**  

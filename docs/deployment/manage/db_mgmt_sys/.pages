@@ -1,0 +1,15 @@
+Title: Database Management Systems
+nav:
+    - index.md
+    - DB2 Database transfer: dbtransfer_db2
+    - IBM DB2 Database transfer: dbtransfer_db2i
+    - DB2 z/OS Database transfer: dbtransfer_zOS
+    - SQL Database transfer: dbtransfer_sql
+    - Oracle Database transfer: dbtransfer_oracle
+    - Manual Steps Database Transfer option in the Configuration Wizard: dbtransfer_manual
+    - oracle_create_tablespaces.md
+    - Assigning custom table spaces: custom_tablespace
+    - db2_hadr.md
+    - connect_domains.md
+
+  

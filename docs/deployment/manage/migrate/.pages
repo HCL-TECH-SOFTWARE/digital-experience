@@ -1,0 +1,9 @@
+Title: Migrating
+nav:
+    - index.md
+    - mig_over.md
+    - Planning for migration: planning_migration
+    - Preparing your source environment: preparing_source_env
+    - Setting up the target environment: settingup_target_env
+    - Migrate data using the configuration wizard: migrate_using_cfgwizard
+    - Migration Next steps: next_steps

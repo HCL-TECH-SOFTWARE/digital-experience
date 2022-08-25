@@ -1,0 +1,7 @@
+title: Administering user impersonation
+nav:
+    - index.md
+    - impers_enable_disable.md
+    - impers_dev_custom_portlet.md
+    - impers_user_canrunas.md
+    - impers_user_unauth.md

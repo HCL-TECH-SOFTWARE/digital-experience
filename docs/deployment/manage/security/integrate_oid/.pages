@@ -1,0 +1,7 @@
+title: Integrating with OpenID authentication
+nav:
+    - index.md
+    - use_social.md
+    - mod_oid_providers.md
+    - openid_trans_users.md
+    - disable_trans_openid.md

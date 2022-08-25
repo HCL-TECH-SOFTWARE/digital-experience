@@ -1,0 +1,6 @@
+title: Browser behavior and scenarios
+nav:
+    - index.md
+    - backbut.md
+    - backbut_limit.md
+    - Configuring history expiration limits: cfg_history_expiration_limits

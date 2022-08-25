@@ -1,0 +1,13 @@
+Title: Migration considerations
+nav:
+    - index.md
+    - mig_plan_backup_and_recovery.md
+    - mig_localvremote.md
+    - mig_consider_avm.md
+    - mig_plan_portal_farm.md
+    - mig_multiple_envs.md
+    - mig_plan_clusters.md
+    - Migrating from Portal 8.0.0.1 on WebSphere Application Server 8.5.5.2: migrating_portal8001_WAS8552
+    - mig_consider_7serveronly.md
+    - Migrating from Web Content Manager version 7.0 or 8.0: migrating_wcm_70_80
+    - mig_plan_port_conflicts.md

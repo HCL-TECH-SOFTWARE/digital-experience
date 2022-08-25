@@ -1,0 +1,7 @@
+Title: Backup and restore
+nav:
+    - index.md
+    - i_wadm_t_bkup_hi_avail.md
+    - i_wadm_c_bkup_db2_basics.md
+    - Backup files, databases, and the LDAP server: backup_files_db_ldap
+    - Restoring files, databases, and the LDAP server: restore_files_db_ldap

@@ -1,0 +1,10 @@
+title: External security managers
+nav:
+    - index.md
+    - Planning for external security managers: planning_esm
+    - Re-enabling the SPNEGO TAI: enable_spnego
+    - Security Access Manager: security_access_manager
+    - Configuring eTrust SiteMinder: etrust_siteminder
+    - verify_tai.md
+    - sec_chg_login.md
+    - man_acc_ext.md
