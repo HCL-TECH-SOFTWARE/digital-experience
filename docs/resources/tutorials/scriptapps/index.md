@@ -9,11 +9,11 @@ For DX pages with multiple Script Applications, it is recommended to deploy thei
 
 ## How-to
 
-### 01 - [Deploy a React App to DX as a ScriptApp](../scriptapps/01-basic_deployments.md)
+### 01 - [Deploy a React App to DX as a ScriptApp]( ../scriptapps/01_basic_deployments.md)
 
-### 02 - [Deploy JavaScript libraries/dependencies as a DX Module](../scriptapps/02-dependencies_as_module.md)
+### 02 - [Deploy JavaScript libraries/dependencies as a DX Module](../scriptapps/02_dependencies_as_module.md)
 
-### 03 - [Deploy DX ScriptApps Without its Dependencies](../scriptapps/03-apps_excluding_dependencies.md)
+### 03 - [Deploy DX ScriptApps Without its Dependencies](../scriptapps/03_apps_excluding_dependencies.md)
 
 ### 04 - [Deploy multiple DX ScriptApps with shared dependencies](../scriptapps/04_apps_sharing_dependencies.md)
 
