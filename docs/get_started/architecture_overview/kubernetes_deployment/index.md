@@ -8,4 +8,4 @@ Whether developing, testing, or running a full production environment, the use o
 
 ![Containerization Architecture Overview](../../../images/haproxy-optional-ingress-architecture.png)
 
-HCL DX 9.5 CF200 and later is architected to run on any Certified Kubernetes platform (https://www.cncf.io/certification/software-conformance), provided that the Kubernetes platform is hosted on x86_64 hardware and the Kubernetes platform is officially supported by Helm (https://helm.sh/docs/topics/kubernetes_distros/).
+HCL DX 9.5 CF200 and later is designed to run on any [Certified Kubernetes platform](https://www.cncf.io/certification/software-conformance), provided that the Kubernetes platform is hosted on x86_64 hardware and the Kubernetes platform is officially supported by [Helm](https://helm.sh/docs/topics/kubernetes_distros/).
