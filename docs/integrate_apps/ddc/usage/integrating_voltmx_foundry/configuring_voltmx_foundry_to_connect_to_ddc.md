@@ -125,8 +125,7 @@ You can use this sample outbound policy as a base:
 </proxy-rules>
 ```
 
-2. Then you must copy the file into your Digital Experience container. 
-`docker cp {path to your policy}/demo_volt_mx_foundry_service_policy.xml {core container}:/tmp/demo_volt_mx_foundry_service_policy.xml`
+2. Then you copy the file inside your HCL Digital Experience instance.
 
 3. And deploy the policy using the **Config Engine**: `./ConfigEngine.sh update-outbound-http-connection-config -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin -DConfigFileName=/tmp/demo_volt_mx_foundry_service_policy.xml`
 
