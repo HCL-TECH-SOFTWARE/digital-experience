@@ -6,7 +6,7 @@ The supported software section specifies the additional software that HCL Portal
 This section describes the requirements to deploy the HCL Digital Experience 9.5 images to container platforms and current limitations.
 
 !!! warning "Discontinuation of Operator"
-    **Attention:** Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience \(DX\) [Operator-based deployments](../../deployment/kubernetes/operator-based/deploy_container_platforms.md) and will provide support only for [Helm-based deployments](../../deployment/kubernetes/architecture/helm_overview.md). There will be no further updates or code fixes provided for the Operator-based deployments. HCL requires all customers to migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based deployments](../../deployment/kubernetes/operator-migration/operator_migration_preparation.md).
+    Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience \(DX\) [Operator-based deployments](../../../deployment/manage/container_configuration/operator-based/deploy_container_platforms.md) and will provide support only for [Helm-based deployments](../../plan_deployment/container_deployment/index.md). There will be no further updates or code fixes provided for the Operator-based deployments. HCL requires all customers to migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see [Migrating from Operator-based to Helm-based deployments](../../../deployment/install/container/operator-migration/operator_migration_preparation.md).
 
 Consult the [HCL Digital Experience 9.5 Support Statements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03) on the HCL Digital Experience Support pages for the latest updates on supported platforms, components, and release levels.
 ### Requirements for supported file systems
@@ -156,6 +156,7 @@ Review your chosen Kubernetes platform and ensure that it supports the following
 |Oracle on Amazon Relational Database Service|12.2.0.1.0|12.2.0.1.0 and later maintenance|9.5|Full|No|
 
 \* Apache Derby is not supported in a product environment.
+
 \* DB2: Includes support for DB2 pureScale component.
 
 ## Development Tools 
@@ -175,8 +176,10 @@ Review your chosen Kubernetes platform and ensure that it supports the following
 |Oracle JDBC Driver 12.c|12.2**|12.2 and later maintenance|9.5|Full|No|
 
 * JDBC drivers are shipped as DB2 for z/OS APARs. You can check for the appropriate APAR/PTF numbers in the DB2 for z/OS Infocenter, 'Programming for DB2 > Programming for Java > Supported drivers for JDBC and SQLJ'. Obtain the PTFs from DB2 on z/OS support or IBMLINK. Version 3.58 and later are supported.
+
 * Requires APAR PK93123 for DB2 on z/OS V9.1. You can obtain the fix from DB2 on z/OS support or IBMLINK.
-** Oracle JDBC Driver Thin (type 4) Oracle JDBC Driver Thick, TAF (type 2) - Supported on Linux operating systems only.
+
+* Oracle JDBC Driver Thin (type 4) Oracle JDBC Driver Thick, TAF (type 2) - Supported on Linux operating systems only.
 
 ## LDAP Servers 
 All LDAP Servers that support the LDAP V3 Specification are supported.

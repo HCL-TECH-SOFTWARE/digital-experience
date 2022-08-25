@@ -10,19 +10,19 @@ HCL may not offer the products, services, or features discussed in this document
 
 HCL may have patents or pending patent applications covering subject matter described in this document. The furnishing of this document does not grant you any license to these patents. You can send license inquiries, in writing, to:
 
-*HCL  
+HCL  
              330 Potrero Ave.  
              Sunnyvale, CA 94085  
              USA  
-             **Attention:** Office of the General Counsel
+             Attention: Office of the General Counsel
 
 For license inquiries regarding double-byte character set \(DBCS\) information, contact the HCL Intellectual Property Department in your country or send inquiries, in writing, to:
 
-*HCL  
+HCL  
              330 Potrero Ave.  
              Sunnyvale, CA 94085  
              USA  
-             **Attention:** Office of the General Counsel
+             Attention: Office of the General Counsel
 
 HCL TECHNOLOGIES LTD. PROVIDES THIS PUBLICATION "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. Some jurisdictions do not allow disclaimer of express or implied warranties in certain transactions, therefore, this statement may not apply to you.
 
@@ -34,7 +34,7 @@ HCL may use or distribute any of the information you provide in any way it belie
 
 Licensees of this program who wish to have information about it for the purpose of enabling: \(i\) the exchange of information between independently created programs and other programs \(including this one\) and \(ii\) the mutual use of the information which has been exchanged, should contact:
 
-*HCL  
+HCL  
              330 Potrero Ave.  
              Sunnyvale, CA 94085  
              USA  
@@ -62,7 +62,7 @@ HCL Technologies Ltd. and HCL Technologies Ltd. logo, hcltechsw.com and hcl.com 
 
 Adobe, the Adobe logo, PostScript, and the PostScript logo are either registered trademarks or trademarks or trademarks of Adobe Systems Incorporated in the United States, and/or other countries.
 
-Intel, Intel logo, Intel Inside, Intel Inside logo, Intel Centrino, Intel Centrino logo, Celeron, Intel Xeon, Inetl SpeedStep, Itanium, and Pentium are trademarks or registered trademarks of Intel Corporation or its subsidiaries in the United States and other countries.
+Intel, Intel logo, Intel Inside, Intel Inside logo, Intel Centrino, Intel Centrino logo, Celeron, Intel Xeon, Intel SpeedStep, Itanium, and Pentium are trademarks or registered trademarks of Intel Corporation or its subsidiaries in the United States and other countries.
 
 Linux is a registered trademark of Linus Torvalds in the United States, other countries, or both.
 

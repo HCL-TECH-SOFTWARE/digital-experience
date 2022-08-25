@@ -2,7 +2,7 @@
 
 !!! note
 
-    \* HCL Digital Experience 9.5 image deployments to Docker are supported for development, and not production operations.
+    HCL Digital Experience 9.5 image deployments to Docker are supported for development, and not production operations.
 
 |Hardware|Deployment units|Requirement|Applicable operating systems|
 |------------------|-----|------|-------------|
