@@ -1,5 +1,5 @@
 # How to Deploy JavaScript Libraries/Dependencies as a DX Module
-This guide will provide a streamlined build process that will automate the creation of the EAR file of DX modules and provide a capability to upload it to the DX Websphere Application Server (WebSphere).
+This guide provides a streamlined build process that will automate the creation of the EAR file of DX modules and provides the capability to upload it to the DX Websphere Application Server (WebSphere).
 
 Please make sure to read the [Important Configuration Items to Note](#important-configuration-items-to-note) section.
 
@@ -9,16 +9,18 @@ This Gradle Project includes the following areas of functionality:
 - Packaging of the WAR file into an Enterprise Application Archive (EAR) file
 - Deployment of the DX Module (EAR file) to WebSphere via DXClient
 
-# PreRequisites
+## PreRequisites
+
 ### Java Runtime Engine
 - Java Runtime Engine with a Long Term Support (LTS) version is needed to be able to run the embedded Gradle wrapper in this project. Java version 17 is recommended.
 ### Optional: DXClient
 - An option is available for the built DX Module (EAR file) to be uploaded to WebSphere via DXClient. You may read the documentation for DXClient [here](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html). If you have replaced the default context root of your DX installation, you should update the [config.json](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html) file of your DXClient accordingly.
-    ```
+
+ ```
     "dxContextRoot":"/wps",
     "contenthandlerPath": "/wps/mycontenthandler",
     "xmlConfigPath": "/wps/config",
-    ```
+```
 
 ## How To Create a Gradle Project for a DX Module
 DX Modules are artifacts that may include bundled Javascript and Styling (CSS, SCSS) files that DX can then inject into the HTML header of the DX Pages. Frontend modules are aggregated by DX and then cached by browsers by default and will deliver performance improvements to the loading sequence of DX pages.

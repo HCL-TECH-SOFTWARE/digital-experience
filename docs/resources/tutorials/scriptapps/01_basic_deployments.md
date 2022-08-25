@@ -1,22 +1,24 @@
-# How To Deploy a React App to DX as a ScriptApp
+# Deploy a React App to DX as a Script Application
 
 ## Overview
 
-This guide will describe the steps on how to deploy a built React app into DX to become a ScriptApp.
+This guide describes the steps on how to deploy a built React app into DX to become a ScriptApp.
 
-NOTE: Migration to [Webpack](https://webpack.js.org/)  is optional and is only done as preparation for advanced deployments. The sample WebPack config included is intended for quick deployments that combines all dependencies along with actual apps files.
+!!! note
+    Migration to [Webpack](https://webpack.js.org/) is optional and is only done as a preparation for advanced deployments. The sample WebPack configuration that is included is intended for quick deployments, which combines all dependencies along with actual application files.
 
-For optimal loading of multiple DX ScriptApps in a single page, custom Webpack bundling is needed please see: [How To Deploy Multiple DX ScriptApps with Shared Dependencies](./04AppsSharingDependencies.md).
+For optimal loading of multiple DX ScriptApps in a single page, custom Webpack bundling is needed. For more information, see [How To Deploy Multiple DX ScriptApps with Shared Dependencies](./04AppsSharingDependencies.md).
 
 ## PreRequisites
-1. Follow the online guide on how to install HCL DXClient [DX9.5](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html). Please note that the DX and/or DXClient link provided here may be superseded, you may use a newer version if available.  If you have replaced the default context root of your DX installation, you should update the [config.json](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html) file of your DXClient accordingly.
+
+1. Follow the online guide on how to install HCL DXClient [DXClient 9.5](../../../integrate_apps/development_tools/dxclient/index.md). Please note that the DX and/or DXClient link provided here may be superseded, you may use a newer version if available.  If you have replaced the default context root of your DX installation, you must update the [config.json](../../../integrate_apps/development_tools/dxclient/installation/dxclient.md#dxclient-installation-configuration) file of your DXClient accordingly.
     ```
     "dxContextRoot":"/wps",
     "contenthandlerPath": "/wps/mycontenthandler",
     "xmlConfigPath": "/wps/config",
     ```
 
-3. Add the 'Script Application Library' to the list of visible libraries in your DX Library Explorer. Follow the series of links via the Web Content menu: Preferences -> Edit Shared Settings. Don't forget to click on the OK button.  
+3. Add the 'Script Application Library' to the list of visible libraries in your DX Library Explorer. Follow the series of links via the Web Content menu: Preferences -> Edit Shared Settings. Make sure that you click the OK button.  
    ![](images/01/01WebContentEditSharedSettings.png)
    ![](images/01/02LibrarySelection.png)
    ![](images/01/03ScriptApplicationLibrary.png)
@@ -31,7 +33,7 @@ For optimal loading of multiple DX ScriptApps in a single page, custom Webpack b
    ![](images/01/06ModuleIDs.png)
 
 ## How To Bundle and Deploy React Applications to DX
-1. Update your project's package.json file to add the dxclient parameters as config. Double-check and update the config values as needed. Also, add the deploy-dx-app lines as-is among the scripts. The variables in the scripts will automatically pick up the values from environment variables and config. 
+1. Update the `package.json` project file to configure the dxclient parameters. Double-check and update the configuration values as needed. Also, add the deploy-dx-app lines as-is among the scripts. The variables in the scripts will automatically pick up the values from environment variables and config. 
     ```
     {
         ...
@@ -106,10 +108,10 @@ For optimal loading of multiple DX ScriptApps in a single page, custom Webpack b
 7. Add the ScriptApp (matching the wcmContentName in the package.json config) into the target DX test page. ([link to detailed steps](#how-to-add-a-deployed-dx-scriptapp-into-a-dx-page))
 
 ## How to Prepare a DX Page for DX ScriptApps
-1. If you have an existing target page for the ScriptApp skip to step #3. Otherwise, you may create a sibling or child page under Woodburn Studio site to have a temporary test page:
+1. If you have an existing target page for the ScriptApp, then skip to step #3. Otherwise, you may create a sibling or child page under the Woodburn Studio site to have a temporary test page:
    ![](images/01/07CreateSiblingPage.png)
 
-2. Enter a Page Title and choose Basic(Portal 8.5 Theme) then click the Create Page button:
+2. Enter a Page Title and choose Basic (Portal 8.5 Theme), then click the Create Page button:
    ![](images/01/08CreatePage.png)
 
 3. Right-click the menu button at the right of the target page.

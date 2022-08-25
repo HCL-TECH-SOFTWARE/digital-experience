@@ -1,23 +1,23 @@
-# DX ScriptApps How-To Guides
+# Script Applications - How-To Guides
 
 ## Overview
-The following guides will describe the steps on how to bundle, deploy DX ScriptApps.
+The following guides describe the steps on how to bundle and deploy DX Script Applications.
 
-For DX pages that will only have a single ScriptApp, an option is available to deploy the built application as a whole with the usual inclusion of its dependencies.
+For DX pages with a single Script Application, there is an option to deploy the built application as a whole including its dependencies.
 
-For DX pages that will have multiple ScriptApps, it is recommended to deploy their common libraries/dependencies as one DX module and then  exclude them in each of the application's packaging and deployment.
+For DX pages with multiple Script Applications, it is recommended to deploy their common libraries/dependencies as one DX module and then  exclude them from the packaging and deployment of each application.
 
-## Guides
+## How-to
 
-### 01 - [How To Deploy a React App to DX as a ScriptApp](01BasicDeployments)
+### 01 - [Deploy a React App to DX as a ScriptApp](../scriptapps/01-basic_deployments.md)
 
-### 02 - [How To Deploy JavaScript Libraries/Dependencies as a DX Module](02DependenciesAsModule)
+### 02 - [Deploy JavaScript libraries/dependencies as a DX Module](../scriptapps/02-dependencies_as_module.md)
 
-### 03 - [How To Deploy DX ScriptApps Without Its Dependencies](03AppsExcludingDependencies)
+### 03 - [Deploy DX ScriptApps Without its Dependencies](../scriptapps/03-apps_excluding_dependencies.md)
 
-### 04 - [How To Deploy Multiple DX ScriptApps with Shared Dependencies](04AppsSharingDependencies)
+### 04 - [Deploy multiple DX ScriptApps with shared dependencies](../scriptapps/04_apps_sharing_dependencies.md)
 
-### 05 - [How To Deploy Multiple DX ScriptApps with Different Dependency Versions](05AppsWithDiffDepVersions)
+### 05 - [Deploy multiple DX ScriptApps with different dependency versions](../scriptapps/05_apps_with_diff_deploy_versions.md)
 
-### 06 - [How To Make Multiple DX ScriptApps Use Shared Components From Themes](06ThemeComponentInApp)
+### 06 - [Make multiple DX ScriptApps use shared components from themes](../scriptapps/06_theme_component_in_app.md)
 
