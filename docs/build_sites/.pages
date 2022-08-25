@@ -5,6 +5,7 @@ nav:
     - themes_skins
     - practitioner_studio
     - site_toolbar_and_site_manager
+    - portal_settings
     - sitebuilder
     - woodburn_studio
     - mobile
@@ -13,6 +14,5 @@ nav:
     - tagging_rating
     - site_analytics
     - social_rendering
-    - syndicated_feed_portlet
     - ...
 
