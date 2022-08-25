@@ -43,5 +43,5 @@ Windows 10 Pro|Base*|Base and later maintenance|x86-64|64-Exploit, 64-Tolerate|9
 |Windows Server 2019 Essential Edition|Base|Base and later maintenance|x86-64|64-Exploit, 64-Tolerate|9.5|Full|
 |Windows Server 2022|Base|Base and later maintenance|x86-64|64-Exploit, 64-Tolerate|9.5 CF199|Full|
 
-\*Support for developer platform only
+\*Support for developer platform only.
 

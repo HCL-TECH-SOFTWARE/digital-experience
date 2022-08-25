@@ -6,7 +6,8 @@ During the testing of a new release, Development generally tests HCL Digital Exp
 
 Because the list of “Supported Products” cannot reasonably describe all possible configurations that a customer might need to use, some customers voiced concerns about the level of support that is provided for configurations that are not designated as “Supported”. This document is intended to provide clarification of the level of support that can be expected for the current release with various combinations of dependent products.
 
-**Note:** Although the statements in this document reflect the general level of support that can be expected for HCL Digital Experience, the terms and conditions of any specific support offering, license or other Agreement you might have with HCL will determine the actual delivered support for the product. Nothing herein shall be construed as supplementing, modifying or superseding the terms of your HCL license agreement for HCL Digital Experience or any other agreement you might have with HCL, nor shall it create any obligation for HCL to deliver a level of support other than might be set forth in such Agreements.
+!!! note 
+    Although the statements in this document reflect the general level of support that can be expected for HCL Digital Experience, the terms and conditions of any specific support offering, license or other Agreement you might have with HCL will determine the actual delivered support for the product. Nothing herein shall be construed as supplementing, modifying or superseding the terms of your HCL license agreement for HCL Digital Experience or any other agreement you might have with HCL, nor shall it create any obligation for HCL to deliver a level of support other than might be set forth in such Agreements.
 
 ## Categories of Support
 
@@ -40,7 +41,8 @@ There are three categories of support for collateral products to HCL Digital Exp
 
     WebSphere® Application Server has a similar support statement, which can be found on the web.
 
-    **Note:** WebSphere® Application Server uses specially customized builds of the IBM Java SDKs on certain platforms. Updates to these builds must be obtained from WebSphere® Application Server support.
+    !!! note 
+        WebSphere® Application Server uses specially customized builds of the IBM Java SDKs on certain platforms. Updates to these builds must be obtained from WebSphere® Application Server support.
 
     HCL Portal can be sensitive to changes in the underlying WebSphere® Application Server. Upgrading to a new fix pack level of the application server is well tolerated and encouraged \(such as from WebSphere® Application Server version 8.5.5.2 to 9.0.x\) as long as all required fixes for WebSphere® Application Server are available as integrated into that fix pack or by applying an interim fix specifically for that maintenance level. However, upgrading from one version of WebSphere® Application Server to the next is problematic if not done within the context of a migration of versions and must never be attempted with an “in-place” system.
 
@@ -64,7 +66,7 @@ LDAP support spans two categories:
 
 ## Support for External Security Managers \(ESM\)
 
-ESM support spans two \(2\) categories:
+ESM support spans two categories:
 
 -   **Fully tested and supported ESM software:**
 

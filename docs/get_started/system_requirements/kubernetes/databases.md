@@ -22,4 +22,5 @@
 |Oracle on Amazon Relational Database Service|12.2.0.1.0|12.2.0.1.0 and later maintenance|9.5|Full|No|
 
 \* Apache Derby is not supported in a product environment.
+
 \* DB2: Includes support for DB2 pureScale component.
