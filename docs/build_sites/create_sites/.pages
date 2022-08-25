@@ -1,7 +1,8 @@
 title: Setting Up Sites
 nav:
     - index.md
-    - Configuration: configuration
     - Usage: usage
+    - Configuration: configuration
+
 
 
