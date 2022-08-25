@@ -22,18 +22,20 @@ Follow the steps below to use the new integration service with Volt MX Foundry c
 
     ![](../../../../assets/Volt_MX_Foundry_Create_Integration.png "Create new API from Integration Service")
 
-4.  Configure the service definition. Add a **Name**, then select **Service Type** and Add **Base URL**. Then click **Save & Add Operation**
+4.  Configure the service definition. Enter a **Name**, then select **JSON** as the **Service Type** and enter the **Base URL**. Then click **Save & Add Operation**
 
     ![](../../../../assets/Volt_MX_Foundry_Service_Definitions.png "Fill up the Service Definition")
 
 
-4.  Add an **Operation** for the service that we created. Add **Name**, then under **Operation Security Level**, select **Anonymous App Users** or **Public** since it's the only option right now that is supported in DDC and last, you can modiy the **target URL** if the URL needs modification (see sample below).  Then in the **Advance** section, click **Front End API**. Under **Resource Method** select the **GET** since it's the only method supported in DDC. 
+5.  Add an **Operation** for the service that we created. First is enter a **Name**, then under **Operation Security Level**, select **Anonymous App Users** or **Public** since it's the only option right now that is supported in DDC, and last, you can modify the **Target URL** if the URL needs modification. If you include a parameter in the Target URL, you must define it in the **Request Input**, as shown in the example below. Then in the **Advance** section, click **Front End API**. Under **Resource Method**, select **GET** since it's the only method supported in DDC. 
 
     ![](../../../../assets/Volt_MX_Foundry_Add_Operation.png "Add Operation for the Service")
 
-5. Adding **Response Output**. Click the **Response Output** tab, then click **Add Parameter**. After clicking, a row will appear on the table. Add the **Name**, then the **Path** or the JSON Path. The path is based on the response of the target URL you define in Service Definition. Let's try the service by clicking **Save And Fetch Response** and if everything is okay, then click **Save Operation**.
+6. Adding **Response Output**. Click the **Response Output** tab, then click **Add Parameter**. After clicking, a row will appear on the table. Add the **Name**, then the **Path** or the JSON Path. The path is based on the response of the target URL you define in Service Definition. Let's try the service by clicking **Save And Fetch Response** and if everything is okay, then click **Save Operation**.
 
     ![](../../../../assets/Volt_MX_Foundry_Response_Output_And_Testing.png "Add JSON Path and Testing the Service")
+
+Note: You do not need to map all the responses in the  **Response Output** and only map what you need. Make the response output flat as possible, as shown in the sample above.
 
 ## Publish and Test integration service with Volt MX Foundry
 
@@ -105,7 +107,7 @@ You can use this sample outbound policy as a base:
          <method>GET</method>
       </actions>    
         
-      <!-- Step 3. Add the credential vault slot that we have created. The vault slot name is also the vault slot id hpaa.id you will need to put in the policy. -->
+      <!-- Step 3. Add the credential vault slot that we have created. The vault slot name is also the vault slot id hpaa.slotid you will need to put in the policy. -->
       
       <meta-data>
          <name>hpaa.authtype</name>
@@ -127,3 +129,5 @@ You can use this sample outbound policy as a base:
 `docker cp {path to your policy}/demo_volt_mx_foundry_service_policy.xml {core container}:/tmp/demo_volt_mx_foundry_service_policy.xml`
 
 3. And deploy the policy using the **Config Engine**: `./ConfigEngine.sh update-outbound-http-connection-config -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin -DConfigFileName=/tmp/demo_volt_mx_foundry_service_policy.xml`
+
+Note: For additional resources regarding please reading this topic [Outbound HTTP connection](../../../portlets_development/usage/web2_ui/outbound_http_connection/outbound_http.md)
