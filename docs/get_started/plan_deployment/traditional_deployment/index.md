@@ -4,6 +4,7 @@ Before you install HCL Digital Experience in a production environment, assess yo
 
 **Restriction:** The serverName is hardcoded to the HCL Portal. The serverName cannot be changed in a stand-alone environment. If you do change it, the ConfigEngine scripts do not work. For a clustered environment, see [Roadmaps for clusters](../traditional_deployment/roadmaps/rm_install_deployment/rm_clusters/rm_cluster_parent.md) for more information.
 
+<!--- 
 -   **[System requirements](../../systemrequirements/index.md)**  
 Before installing HCL Digital Experience, you must review the system requirements to ensure that you have the supported versions of prerequisite and co-requisite software and hardware.
 -   **[HCL Digital Experience Support Statement](../../inst_req_supt.md)**  
@@ -24,8 +25,6 @@ Multiple portal servers can be clustered with IBM WebSphere Application Server N
 Use virtualized environments to meet your business needs like production server consolidation, centralized management, or dynamic test environments.
 -   **[Multiple profile support](plan_multiple_profile.md)**  
 Multiple profiles give you the ability to have multiple, independently configured portal instances that run from the same installation.
-
-<!--- **Parent topic:**[Installing HCL Digital Experience](../install/installing_parent2.md)
 
 **Next topic:**[Roadmaps to deploy your HCL Digital Experience system](../install/deployment_patterns.md)
 

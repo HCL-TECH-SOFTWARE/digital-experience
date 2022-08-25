@@ -5,7 +5,7 @@ Understanding character limitations for user IDs and passwords is important beca
 When a person signs up as a user or when an administrator enrolls a user, they must complete the user information form. On this form, do not enter characters that might not be supported. Regardless of what characters you are able to enter on the user information form, user ID and passwords are limited to the valid characters described here. You can specify other characters in the given name and surname fields. If your company policy is more restrictive, you can provide that information to your users in the enrollment form help or as inline help directly on the form.
 
 !!! important
-    HCL Digital Exprerience cannot create user IDs or passwords that contain spaces, although it fully supports any existing user IDs and passwords or those IDs created in the user repository that contain spaces.
+    HCL Digital Experience cannot create user IDs or passwords that contain spaces, although it fully supports any existing user IDs and passwords or those IDs created in the user repository that contain spaces.
 
 The character limitations provided here apply to the HCL Digital Experience administrator, IBM WebSphere Application Server administrator, database administrator, LDAP server administrator, and user IDs. Database and LDAP servers can have more restrictive limitations than provided here. Therefore, check the database and LDAP server product documentation for restrictions. Failure to correctly define user IDs and passwords during the installation process can result in installation failure. In addition, your company might have more restrictive user ID and password requirements that you must also follow.
 
