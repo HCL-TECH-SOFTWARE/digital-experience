@@ -1,6 +1,6 @@
 # Search
 
-You use Digital Experience Portal Search to search for text that is displayed in websites that are created by HCL Web Content Manager and additional web sources integrated to your Digital Experience platform.
+Use the Digital Experience Portal Search feature to search for text that is displayed in websites that are created by HCL Web Content Manager and additional web sources integrated to your Digital Experience platform.
 
 1.  [HCL Digital Experience Portal Search](../admin-system/admsrch.md)  
 Use HCL Digital Experience Portal Search to facilitate indexing content sources and searching for information. You can administer search services, search collections, and search scopes, as well as enhance the search experience of your portal site with the portal search portlets. Refer to the topics below for additional information.

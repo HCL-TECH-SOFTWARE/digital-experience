@@ -1,8 +1,9 @@
 title: Search
 nav:
-    - wcm_dev_search.md
+    - index.md
     - installation
     - configuration
     - usage
     - limitations
+    - troubleshooting
 

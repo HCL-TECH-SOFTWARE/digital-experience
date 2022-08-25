@@ -1,7 +1,8 @@
-title: Site Toolbar and Site Manager
+title: Site Manager
 nav:
+    - index.md
     - Installation: installation
     - Configuration: configuration
     - Usage: usage
-    - Limitations: limitations
+
 
