@@ -95,6 +95,7 @@ You can use this sample outbound policy as a base:
    xsi:noNamespaceSchemaLocation="http://www.ibm.com/xmlns/prod/sw/http/outbound/proxy-config/2.0">  
 
    <variables>
+        <!-- Note: The '.url' at the end of the name is not required but good practice to follow.-->
       <dynamic-policy name="demo-volt-mx-foundry-service.url">
         <!-- Step 1. Add the URL pattern. Use the base URL of your service. You can view it in the Developer Portal > API > your App > View. You should see a Swagger UI Page -->
         <value>https://hcl-dx-dev.hclvoltmx.net/services/account/*</value>
