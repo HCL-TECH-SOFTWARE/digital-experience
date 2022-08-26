@@ -1,0 +1,6 @@
+Title: Connector plug-ins
+nav:
+    - index.md
+    - soc_rendr_conn_context_plgn.md
+    - plrf_tune_markup_chache.md
+    - The list-rendering context: list_rendering_context

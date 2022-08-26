@@ -1,0 +1,7 @@
+Title: Authoring portlet settings
+nav:
+    - index.md
+    - wcm_config_authoringportlet_libraries.md
+    - wcm_config_authoringportlet_previewing.md
+    - wcm_config_authoringportlet_ui.md
+    - wcm_config_authoringportlet_richtext.md
