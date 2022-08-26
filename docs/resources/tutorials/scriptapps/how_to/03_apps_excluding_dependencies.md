@@ -257,6 +257,7 @@ This guide will detail the steps on how to deploy DX ScriptApps bundled without 
            ]
        },
        plugins: [
+           // remove copying of sp-config.json if you're not using DX WebDevToolkit
            new CopyPlugin({
                patterns: [
                    './src/sp-config.json',
@@ -320,7 +321,23 @@ This guide will detail the steps on how to deploy DX ScriptApps bundled without 
           ...
        ],
     ```
-9. Add if not yet included in the project, a tsconfig.json file.
+9. Deployments via DXClient is recommended and is sufficient. In case that you want to add the use of [DX WebDevToolkit](https://github.com/HCL-TECH-SOFTWARE/WebDevToolkitForDx) in your development cycle, you'll need to add a sp-config.json file.
+   - src/sp-config.json
+   ```
+   {
+     "wcmContentName": "EducSampleScriptApp"
+   }
+   ```
+   - If you want to skip using the DX WebDevToolkit, please remove the following in the webpack.dx-scriptapp.js file.
+   ```        
+              // remove copying of sp-config.json if you're not using DX WebDevToolkit
+              new CopyPlugin({
+                  patterns: [
+                      './src/sp-config.json',
+                  ]
+              }),
+   ```
+10. Add if not yet included in the project, a tsconfig.json file.
     ```
    {
       "compilerOptions": {
@@ -335,18 +352,18 @@ This guide will detail the steps on how to deploy DX ScriptApps bundled without 
       }
    }
     ```
-10. Test the app locally.
+11. Test the app locally.
      ```
        cd <app-folder>
        npm start
      ```
-11. Build the ScriptApp using the following commands:
+12. Build the ScriptApp using the following commands:
      ```
        cd <app-folder>
        npm run build
      ```
-12. Execute the npm script dx-deploy-app, pre-set with the DX admin username and password.
-```
+13. Execute the npm script dx-deploy-app, pre-set with the DX admin username and password.
+   ```
    dxUsername=<username> dxPassword=<password> npm run dx-deploy-app 
        > sample-app@1.0.0 dx-deploy-app
        > dxclient deploy-scriptapplication push -dxUsername $dxUsername -dxPassword $dxPassword -wcmContentName "$npm_package_config_dxclient_wcmContentName" -wcmSiteArea "$npm_package_config_dxclient_wcmSiteArea" -mainHtmlFile $npm_package_config_dxclient_mainHtmlFile -contentRoot "$npm_package_config_dxclient_contentRoot" -dxProtocol $npm_package_config_dxclient_protocol -hostname $npm_package_config_dxclient_hostname -dxPort $npm_package_config_dxclient_port
@@ -371,10 +388,10 @@ This guide will detail the steps on how to deploy DX ScriptApps bundled without 
        2022-08-19 22:57:39 : Content push was successful.
        2022-08-19 22:57:39 : End content push to Portal.
        2022-08-19 22:57:39 : Body content: {"results":{"status":"success","importedFiles":{"file":[{"filename":"HTML/index.html"},{"filename":"JavaScript/main.bfc69d9380a37f7c3db2.bundle.js"}]},"skippedFiles":"","message":"The file that you selected was imported successfully.","contentId":"8ce2958e-86b0-4700-b6f1-ef7542c10f86"}}. 
-```
-11. If there's a deployment error, check the DXClient logs in the &lt;app-folder&gt;/store/logs/logger.log file.
-12. Prepare your target DX page that will host the ScriptApp. ([Guide](#how-to-prepare-a-dx-page-for-dx-scriptapps))
-13. Add the ScriptApp (matching the wcmContentName in the package.json config) into the target DX page. ([Guide](#how-to-add-a-deployed-dx-scriptapp-into-a-dx-page))
+   ```
+14. If there's a deployment error, check the DXClient logs in the &lt;app-folder&gt;/store/logs/logger.log file.
+15. Prepare your target DX page that will host the ScriptApp. ([Guide](#how-to-prepare-a-dx-page-for-dx-scriptapps))
+16. Add the ScriptApp (matching the wcmContentName in the package.json config) into the target DX page. ([Guide](#how-to-add-a-deployed-dx-scriptapp-into-a-dx-page))
 
 ## How to Prepare a DX Page for DX ScriptApps
 1. If you have an existing target page for the ScriptApp skip to step #3. Otherwise, you may create a sibling or child page under Woodburn Studio site to have a temporary test page:
