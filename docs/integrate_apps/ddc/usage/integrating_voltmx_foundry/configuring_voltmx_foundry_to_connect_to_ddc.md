@@ -27,7 +27,7 @@ Follow the steps below to use the new integration service with Volt MX Foundry c
     ![](../../../../assets/Volt_MX_Foundry_Service_Definitions.png "Fill up the Service Definition")
 
 
-5.  Add an **Operation** for the service that we created. First is enter a **Name**, then under **Operation Security Level**, select **Anonymous App Users** or **Public** since it's the only option right now that is supported in DDC, and last, you can modify the **Target URL** if the URL needs modification. If you include a parameter in the Target URL, you must define it in the **Request Input**, as shown in the example below. Then in the **Advance** section, click **Front End API**. Under **Resource Method**, select **GET** since it's the only method supported in DDC. 
+5.  Add an **Operation** for the service that we created. First is enter a **Name**, then under **Operation Security Level**, select **Anonymous App Users** or **Public** since it's the only option right now that is supported in DDC, and last, you can modify the **Target URL** if the URL needs modification. If you include a parameter in the Target URL, you must define it in the **Request Input**, as shown in the example below. Then in the **Advance** section, click **Front End API**. Under **Resource Method**, select **GET** since it's the only method currently supported by the DDC generic JSON plugin.
 
     ![](../../../../assets/Volt_MX_Foundry_Add_Operation.png "Add Operation for the Service")
 
@@ -43,7 +43,7 @@ Note: You do not need to map all the responses in the  **Response Output** and o
 
     ![](../../../../assets/Volt_MX_Foundry_Publish.png "Publishing the Integration Service")
 
-2. Once the App is published, we can now test the API endpoint by using **Developer Portals**. Click **Developer Portals** the sidenav then click the on link where your environment is located. This will open a new tab in your browser.
+2. Once the App is published, we can now test the API endpoint by using **Developer Portals**. Click on **Developer Portals** in the sidenav then click the on link where your environment is located. This will open a new tab in your browser.
 
     ![](../../../../assets/Volt_MX_Foundry_Developer_Portals.png "Accesing the Developer Portals")
 
@@ -51,7 +51,7 @@ Note: You do not need to map all the responses in the  **Response Output** and o
 
     ![](../../../../assets/Volt_MX_Foundry_View_The_Endpoint.png "Viewing the Endpoint we have created")
 
-4. Test the endpoint we created. Before we test the endpoint we created, we must Authorize the call since we chose **Anonymous App Users** during the creation of the operation. Click the **Authorize** button and put in the username field the **App Key** and in the password field the **App Secret**. Both values can be swagger page. On the swagger page, we will see the service that we created and click the dropdown beside it, then click the **Try Out** button. Once all the fields are filled up, you can now excute the API. There should be a response when everything is set up properly.
+4. Test the endpoint we created. Before we test the endpoint we created, we must Authorize the call since we chose **Anonymous App Users** during the creation of the operation. Click the **Authorize** button and put in the username field the **App Key** and in the password field the **App Secret**. Both values can be found on the swagger page. On the swagger page, we will see the service that we created, then click the dropdown beside it, then click the **Try Out** button. Once all the fields are filled up, you can now execute the API. There should be a response when everything is set up properly.
 
     ![](../../../../assets/Volt_MX_Foundry_Executing_API.png "Executing the API")
 
@@ -59,13 +59,13 @@ Note: If you created your Operation **Public** in Operation Security Level you d
 
 ## Creating Credential Vault Slot for the Volt MX Foundry Endpoint
 
-If we chose **Anonymous App Users** for Operation Security Level we need to somehow store the **App Key** and **App Secret** in Digital Experience. We can achieve this by using the Credential Vault. Below are the steps we need to take.
+If we chose **Anonymous App Users** for Operation Security Level we need to store the **App Key** and **App Secret** in Digital Experience. We can achieve this by using the Credential Vault. Below are the steps we need to take.
 
-1. We first need to get the values for **App Key** and **App Secret**. We can get those values in Volt MX Foundry by going to **Apps**, then App that we have created, then clicking the **Publish** tab, and then clicking the **App Key** icon. A dialog box should appear.
+1. We first need to get the values for **App Key** and **App Secret**. We can get those values in Volt MX Foundry by going to **Apps**, then selecting the App that we have created, then clicking the **Publish** tab, and then clicking the **App Key** icon. A dialog box should appear.
 
     ![](../../../../assets/Volt_MX_Foundry_Access_Key_And_Secret.png "Getting the App Key and the App Secret")
 
-2. After the dialog appears we can now see the App Key and App Secret of our created App. We can copy its value by hovering over the App Key and App Secret Value, and after hovering, we should see a **Copy** button. Click the Copy button.
+2. After the dialog appears, we can now see the App Key and App Secret of our created App. We can copy its value by hovering over the App Key and App Secret Value, and after hovering, we should see a **Copy** button. Click the Copy button.
 
     ![](../../../../assets/Volt_MX_Foundry_Key_And_Secret_View.png "Viewing and Copying the App Key and the App Secret")
 
@@ -73,12 +73,12 @@ If we chose **Anonymous App Users** for Operation Security Level we need to some
 
     ![](../../../../assets/DX_Practitioner_Studio_Admin.png "Practitioner Studio")
 
-4. On the administration, click **Security** then **Crendential Vault**. The Credential Vault management portlet is shown. 
+4. On the Administration page, click **Security** then **Credential Vault**. The Credential Vault management portlet is shown. 
 
     ![](../../../../assets/Credential_Vault.png "Credential Vault Portlet")
 
 
-5. Select **Add a Vault slot**. The window for creating a vault slot is shown. Add a **Vault slot name**. This will be the slot ID thus this must be unique  and select the slot and **Vault Segment** to where it belongs. And then set the Vault slot as **Shared**, and set the user ID as the **App Key** and password as the  **App Secret**. Then the click **OK** button to save the changes. There should be a message that the vault slot was created successfully.
+5. Select **Add a Vault slot**. The window for creating a vault slot is shown. Add a **Vault slot name**. This will be the slot ID thus this must be unique, then select the **Vault Resource**  and **Vault Segment** to where it belongs. And then set the Vault slot as **Shared**, and set the user ID as the **App Key** and password as the  **App Secret**. Then the click **OK** button to save the changes. There should be a message that the vault slot was created successfully.
 
     ![](../../../../assets/Credential_Vault_Fill_Up.png "Creating Credential Vault Slot")
 
