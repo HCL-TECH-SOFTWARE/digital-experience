@@ -1,4 +1,4 @@
-# Deploy a React App to DX as a Script Application
+# Deploy a React App as a Script Application
 
 ## Overview
 

@@ -1,4 +1,4 @@
-# How To Deploy DX ScriptApps Without Its Dependencies
+# Deploy DX ScriptApps without its dependencies
 
 ## Overview
 This guide will detail the steps on how to deploy DX ScriptApps bundled without its dependencies. [Webpack](https://webpack.js.org/) is used to package the React Script App.

@@ -1,4 +1,4 @@
-# How To Deploy Multiple DX ScriptApps with Different Dependency Versions
+# Deploy multiple DX ScriptApps with different dependency versions
 
 # General Information
 The steps needed to bundle and deploy different versions of the same dependency (i.e: React v16 and v18) will be discussed in this guide. Each version will be bundled in their own submodule and then merged and deployed into a single DX Module.

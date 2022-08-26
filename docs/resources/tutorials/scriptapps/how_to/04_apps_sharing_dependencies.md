@@ -1,4 +1,4 @@
-# How To Deploy Multiple DX ScriptApps with Shared Dependencies
+# Deploy multiple DX ScriptApps with shared dependencies
 
 # General Information
 The steps needed to make DX ScriptApps use and share dependencies are detailed in this guide. The dependencies are going to be bundled in a DX Module and will then be linked for use in a DX Page. The ScriptApps will then be bundled and deployed without its dependencies, will reference and reuse the dependencies in the DX Module.

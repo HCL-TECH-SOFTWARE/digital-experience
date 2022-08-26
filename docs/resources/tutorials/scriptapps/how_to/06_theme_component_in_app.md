@@ -1,4 +1,4 @@
-# How To Make Multiple DX ScriptApps Use Shared Components From Themes
+# Make multiple DX ScriptApps use shared components from themes
 # General Information
 The steps needed to make DX ScriptApps use and share custom or 3rd-party components defined in DX Themes are detailed in this guide. The components are going to be bundled in a DX Module and will then be linked for use in a DX Theme.
 

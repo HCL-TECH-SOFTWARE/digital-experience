@@ -1,23 +1,5 @@
-# Script Applications - How-To Guides
+# Script Applications
 
-## Overview
-The following guides describe the steps on how to bundle and deploy DX Script Applications.
+The Script Application enables script developers to create portlets for HCL Digital Experience with HTML, JavaScript, and CSS. It is designed for front-end developers to make porting applications to HCL Digital Experience portals easy. 
 
-For DX pages with a single Script Application, there is an option to deploy the built application as a whole including its dependencies.
-
-For DX pages with multiple Script Applications, it is recommended to deploy their common libraries/dependencies as one DX module and then  exclude them from the packaging and deployment of each application.
-
-## How-to
-
-### 01 - [Deploy a React App to DX as a ScriptApp]( ../scriptapps/01_basic_deployments.md)
-
-### 02 - [Deploy JavaScript libraries/dependencies as a DX Module](../scriptapps/02_dependencies_as_module.md)
-
-### 03 - [Deploy DX ScriptApps Without its Dependencies](../scriptapps/03_apps_excluding_dependencies.md)
-
-### 04 - [Deploy multiple DX ScriptApps with shared dependencies](../scriptapps/04_apps_sharing_dependencies.md)
-
-### 05 - [Deploy multiple DX ScriptApps with different dependency versions](../scriptapps/05_apps_with_diff_deploy_versions.md)
-
-### 06 - [Make multiple DX ScriptApps use shared components from themes](../scriptapps/06_theme_component_in_app.md)
-
+This tutorial guides you with some specific tasks to help you create and deploy robust DX script applications. Follow the guides to build and deploy DX pages with single and multiple ScriptApps; to automate the creation of JS libraries as a DX module; to deploy DX ScriptApps without its  dependencies, with shared dependencies, and with different version of dependencies; and to make DX ScriptApps use shared components from themes.

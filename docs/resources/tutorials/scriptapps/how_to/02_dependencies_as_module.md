@@ -1,4 +1,4 @@
-# How to Deploy JavaScript Libraries/Dependencies as a DX Module
+# Deploy JavaScript Libraries/Dependencies as a DX Module
 This guide provides a streamlined build process that will automate the creation of the EAR file of DX modules and provides the capability to upload it to the DX Websphere Application Server (WebSphere).
 
 Please make sure to read the [Important Configuration Items to Note](#important-configuration-items-to-note) section.
