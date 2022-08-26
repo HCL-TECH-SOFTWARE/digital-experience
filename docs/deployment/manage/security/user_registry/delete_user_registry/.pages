@@ -1,0 +1,9 @@
+title: Deleting your user registry configurations
+nav:
+    - index.md
+    - del_ldap_entitytype.md
+    - delete_be.md
+    - delete_ldap_gm.md
+    - delete_realm.md
+    - delete_realm_be.md
+    - delete_repository.md

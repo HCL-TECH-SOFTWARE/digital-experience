@@ -1,0 +1,7 @@
+title: Adding more attributes to VMM
+nav:
+    - index.md
+    - man_attributes.md
+    - add_attributes.md
+    - map_attributes.md
+    - remove_attr_def.md

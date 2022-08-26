@@ -3,26 +3,26 @@ nav:
     - Configure Kubernetes Deployment: container_configuration
     - stopstart.md
     - itlm.md
-    - config_standalone
-    - config_cluster
-    - portalfarm_cfg
+    - config_standalone.md
+    - Setting up a cluster: config_cluster
+    - Setting up and maintaining a portal farm: portalfarm_cfg
     - security
-    - tune_servers
-    - siteurl_cfg
-    - config_portal_behavior
-    - manage_portal_using_iim
-    - config_webservers
-    - db_mgmt_sys
+    - Tune your environment: tune_servers
+    - port_chg.md
+    - Changing your site URL: siteurl_cfg
+    - Configuring portal behavior: config_portal_behavior
+    - Managing your HCL Portal environment: manage_portal_using_iim
+    - Web server: config_webservers
+    - Database Management Systems: db_mgmt_sys
     - profile
-    - cfg_property_files
-    - backup_restore
-    - change_dev_mode_env
-    - staging_to_production
-    - migrate
-    - cfg_history_expiration_limits
-    - multiple_profiles
-    - remote_spell_checker
-    - upsell
+    - Configuration properties: cfg_property_files
+    - Backup and restore: backup_restore
+    - Changing to a developer mode environment: change_dev_mode_env
+    - Staging to production: staging_to_production
+    - Migrating: migrate
+    - Supporting multiple profiles: multiple_profiles
+    - Setting up a remote spell checker: remote_spell_checker
+    - Upgrading your existing product offering: upsell
     - monitoring
     - troubleshooting
     - ...

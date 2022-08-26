@@ -1,0 +1,8 @@
+Title: Development considerations
+nav:
+    - index.md
+    - mig_pre_deprecated.md
+    - mig_plan_exp_v_tol.md
+    - mig_plan_prepare_apps_themes.md
+    - mig_plan_toolbar_customize.md
+    - mig_post_jsf.md

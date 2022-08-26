@@ -1,0 +1,6 @@
+title: Configuring the rule-based user groups adapter
+nav:
+    - index.md
+    - rbug_db_setup.md
+    - rbug_dsrc_cfg.md
+    - Configuring the VMM rule-based groups repository: cfg_vmm_rule_based_groups_repo

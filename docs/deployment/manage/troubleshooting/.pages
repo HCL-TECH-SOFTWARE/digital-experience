@@ -1,0 +1,9 @@
+title: Troubleshooting
+nav:
+    - index.md
+    - Troubleshooting and diagnostics tools: tools_for_troubleshooting_and_diagnostics
+    - Logging and tracing: logging_and_tracing
+    - Troubleshooting the Configuration Wizard: troubleshooting_configwizard
+    - message_codes.md
+    - wcm_support_tools.md
+    - Browser behavior and scenarios: browser_behavior_scenarios

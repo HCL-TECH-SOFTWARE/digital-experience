@@ -1,0 +1,10 @@
+Title: Managing portlets in your cluster
+nav:
+    - index.md
+    - clusm_portlets.md
+    - clusm_common_ports.md
+    - deploy_secure.md
+    - clusm_del_portlets.md
+    - clusm_unique_ports.md
+    - clusm_upd_portlets.md
+    - clusm_app_upd.md

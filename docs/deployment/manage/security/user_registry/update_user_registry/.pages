@@ -1,0 +1,14 @@
+title: Updating your user registry
+nav:
+    - index.md
+    - contextpool.md
+    - create_et.md
+    - mod_fed_sec.md
+    - restore_vmm.md
+    - ud_et.md
+    - update_be.md
+    - update_db_ureg.md
+    - update_gm.md
+    - update_ldap_ureg.md
+    - update_realm.md
+    - lookaside_db.md

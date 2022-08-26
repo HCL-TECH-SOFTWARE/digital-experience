@@ -1,0 +1,8 @@
+Title: Migrating from Web Content Manager version 7.0 or 8.0
+nav:
+    - index.md
+    - mig_content_options_planning_7-0.md
+    - mig_pre_wcm_portlets.md
+    - mig_content_options_cross-version.md
+    - mig_content_options_managed_pages.md
+    - mig_content_options_export.md
