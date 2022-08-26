@@ -1,6 +1,5 @@
 # How-To Guides
 
-## Overview
 The following guides describe the steps on how to bundle and deploy DX Script Applications.
 
 For DX pages with a single Script Application, there is an option to deploy the built application as a whole including its dependencies.
