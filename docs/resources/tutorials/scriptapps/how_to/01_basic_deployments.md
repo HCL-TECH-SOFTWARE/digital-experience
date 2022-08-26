@@ -19,18 +19,18 @@ For optimal loading of multiple DX ScriptApps in a single page, custom Webpack b
     ```
 
 3. Add the 'Script Application Library' to the list of visible libraries in your DX Library Explorer. Follow the series of links via the Web Content menu: Preferences -> Edit Shared Settings. Make sure that you click the OK button.  
-   ![](images/01/01WebContentEditSharedSettings.png)
-   ![](images/01/02LibrarySelection.png)
-   ![](images/01/03ScriptApplicationLibrary.png)
+   ![](../how_to/images/01/01WebContentEditSharedSettings.png)
+   ![](../how_to/images/01/02LibrarySelection.png)
+   ![](../how_to/images/01/03ScriptApplicationLibrary.png)
 
 4. Make sure that the following modules are included in the target theme profile for the DX pages that will contain the ScriptApp:
    1. "wp_react_16_10_2",
    2. "wp_react_dom_16_10_2",
    3. "wp_react_router_dom_512"
 
-   ![](images/01/04Themes.png)
-   ![](images/01/05EditTheme.png)
-   ![](images/01/06ModuleIDs.png)
+   ![](../how_to/images/01/04Themes.png)
+   ![](../how_to/images/01/05EditTheme.png)
+   ![](../how_to/images/01/06ModuleIDs.png)
 
 ## How To Bundle and Deploy React Applications to DX
 1. Update the `package.json` project file to configure the dxclient parameters. Double-check and update the configuration values as needed. Also, add the deploy-dx-app lines as-is among the scripts. The variables in the scripts will automatically pick up the values from environment variables and config. 
@@ -109,35 +109,35 @@ For optimal loading of multiple DX ScriptApps in a single page, custom Webpack b
 
 ## How to Prepare a DX Page for DX ScriptApps
 1. If you have an existing target page for the ScriptApp, then skip to step #3. Otherwise, you may create a sibling or child page under the Woodburn Studio site to have a temporary test page:
-   ![](images/01/07CreateSiblingPage.png)
+   ![](../how_to/images/01/07CreateSiblingPage.png)
 
 2. Enter a Page Title and choose Basic (Portal 8.5 Theme), then click the Create Page button:
-   ![](images/01/08CreatePage.png)
+   ![](../how_to/images/01/08CreatePage.png)
 
 3. Right-click the menu button at the right of the target page.
    Choose Open Page Settings.
    Edit the Page Properties by clicking the pen button:
-   ![](images/01/09OpenPageSetting.png)    
-   ![](images/01/10EditPageProperties.png)
+   ![](../how_to/images/01/09OpenPageSetting.png)    
+   ![](../how_to/images/01/10EditPageProperties.png)
 
 4. Edit the theme settings in the Advanced tab, Theme(Portal 8.5) and Profile(Deferred with React) then click Save button:
-   ![](images/01/11ThemeSettings.png)
+   ![](../how_to/images/01/11ThemeSettings.png)
 
 ## How To Add a Deployed DX ScriptApp into a DX Page
 1. Click the [+] Add page components and applications icon near the upper left-most side:
-   ![](images/01/12AddPageComponents.png)
+   ![](../how_to/images/01/12AddPageComponents.png)
 
 2. Click the Script Application icon:
-   ![](images/01/13ClickScriptApp.png)
+   ![](../how_to/images/01/13ClickScriptApp.png)
 
 3. Check if the script is loaded successfully:
-   ![](images/01/14EducSampleScriptApp.png)
+   ![](../how_to/images/01/14EducSampleScriptApp.png)
 
 4. Click the Add this content to the page button:
-   ![](images/01/15AddContent.png)
+   ![](../how_to/images/01/15AddContent.png)
 
 5. Click the page name and check if the script is rendered correctly.
-   ![](images/01/16LoadTestPage.png)
+   ![](../how_to/images/01/16LoadTestPage.png)
 6. Turn-off edit mode and check the page.
 
 ## Optional: How To Migrate Apps to use Webpack and Deploy as DX ScriptApp
