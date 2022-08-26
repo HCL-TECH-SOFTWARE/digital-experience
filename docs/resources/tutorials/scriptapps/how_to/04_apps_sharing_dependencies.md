@@ -18,7 +18,7 @@ The included sample codes combine NPM, Gradle and Webpack configuration to achie
 ### Java Runtime Engine
 - Java Runtime Engine with a Long Term Support (LTS) version is needed to be able to run the embedded Gradle wrapper in this project. Java version 17 is recommended.
 ### HCL DXClient
-- HCL DXClient is required for deployments. Follow the online guide on how to install HCL DXClient [DX9.5](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html). Please note that the DX and/or DXClient link provided here may be superseded, you may use a newer version if available. If you have replaced the default context root of your DX installation, you should update the [config.json]() file of your DXClient accordingly.
+- HCL DXClient is required for deployments. Follow the online guide on how to install [HCL DXClient](../../../../integrate_apps/development_tools/dxclient/index.md). Please note that the DX and/or DXClient link provided here may be superseded, you may use a newer version if available. If you have replaced the default context root of your DX installation, you should update the [config.json](../../../../integrate_apps/development_tools/dxclient/index.md#dxclient-installation-configuration) file of your DXClient accordingly.
     ```
     "dxContextRoot":"/wps",
     "contenthandlerPath": "/wps/mycontenthandler",
@@ -49,7 +49,7 @@ DX Modules are artifacts that may include bundled Javascript and Styling (CSS, S
       - gradle/wrapper/gradle-wrapper.properties
       - gradlew
       - gradlew.bat
-   - OR [install gradle](https://gradle.org/install/) and run [gradle wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:adding_wrapper).
+   - OR [install gradle](https://gradle.org/install/){:target="_blank"} and run [gradle wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:adding_wrapper){:target="_blank"}.
 2. Create a gradle.properties file and set the node and npm version required. Set nodeInstall to false if the existing executables of the current environment is preferred. The gradle project included in this guide is going to be capable of downloading and using its own set of node and npm executables for the build process.
     ```
     nodeInstall=true

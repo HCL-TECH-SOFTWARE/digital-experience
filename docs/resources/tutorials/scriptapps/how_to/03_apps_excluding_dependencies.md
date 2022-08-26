@@ -1,16 +1,16 @@
 # Deploy DX ScriptApps without its dependencies
 
 ## Overview
-This guide will detail the steps on how to deploy DX ScriptApps bundled without its dependencies. [Webpack](https://webpack.js.org/) is used to package the React Script App.
+This guide will detail the steps on how to deploy DX ScriptApps bundled without its dependencies. [Webpack](https://webpack.js.org/){:target="_blank"} is used to package the React Script App.
 
 ## PreRequisites
-1. Follow the online guide on how to install HCL DXClient [DX9.5](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html). Please note that the DX and/or DXClient link provided here may be superseded, you may use a newer version if available.  If you have replaced the default context root of your DX installation, you should update the [config.json](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html) file of your DXClient accordingly.
+1. Follow the online guide on how to install [HCL DXClient](../../../../integrate_apps/development_tools/dxclient/index.md). Please note that the DX and/or DXClient link provided here may be superseded, you may use a newer version if available.  If you have replaced the default context root of your DX installation, you should update the [config.json](../../../../integrate_apps/development_tools/dxclient/index.md#dxclient-installation-configuration) file of your DXClient accordingly.
     ```
     "dxContextRoot":"/wps",
     "contenthandlerPath": "/wps/mycontenthandler",
     "xmlConfigPath": "/wps/config",
     ```
-2. The full deployment of the sample DX Module described in the guide [How To Deploy JavaScript Libraries/Dependencies as a DX Module](./02DependenciesAsModule.md) must be first completed. The generated DLL Manifest(i.e: dx-dll-manifest.json) in the DX Module folder is going to be referenced in this guide's instructions.
+2. The full deployment of the sample DX Module described in the guide [How To Deploy JavaScript Libraries/Dependencies as a DX Module](02_dependencies_as_module.md) must be first completed. The generated DLL Manifest(i.e: dx-dll-manifest.json) in the DX Module folder is going to be referenced in this guide's instructions.
 
 3. Add the 'Script Application Library' to the list of visible libraries in your DX Library Explorer. Follow the series of links via the Web Content menu: Preferences -> Edit Shared Settings. Don't forget to click on the OK button.  
    ![](images/03/01WebContentEditSharedSettings.png)

@@ -11,7 +11,7 @@ For optimal loading of multiple DX ScriptApps in a single page, custom Webpack b
 
 ## PreRequisites
 
-1. Follow the online guide on how to install HCL DXClient [DXClient 9.5](../../../integrate_apps/development_tools/dxclient/index.md). Please note that the DX and/or DXClient link provided here may be superseded, you may use a newer version if available.  If you have replaced the default context root of your DX installation, you must update the [config.json](../../../integrate_apps/development_tools/dxclient/installation/dxclient.md#dxclient-installation-configuration) file of your DXClient accordingly.
+1. Follow the online guide on how to install [HCL DXClient](../../../../integrate_apps/development_tools/dxclient/index.md). Please note that the DX and/or DXClient link provided here may be superseded, you may use a newer version if available.  If you have replaced the default context root of your DX installation, you must update the [config.json](../../../../integrate_apps/development_tools/dxclient/index.md#dxclient-installation-configuration) file of your DXClient accordingly.
     ```
     "dxContextRoot":"/wps",
     "contenthandlerPath": "/wps/mycontenthandler",
