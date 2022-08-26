@@ -7,7 +7,7 @@ This guide describes the steps on how to deploy a built React app into DX to bec
 !!! note
     Migration to [Webpack](https://webpack.js.org/) is optional and is only done as a preparation for advanced deployments. The sample WebPack configuration that is included is intended for quick deployments, which combines all dependencies along with actual application files.
 
-For optimal loading of multiple DX ScriptApps in a single page, custom Webpack bundling is needed. For more information, see [How To Deploy Multiple DX ScriptApps with Shared Dependencies](./04AppsSharingDependencies.md).
+For optimal loading of multiple DX ScriptApps in a single page, custom Webpack bundling is needed. For more information, see [How To Deploy Multiple DX ScriptApps with Shared Dependencies](./04_apps_sharing_dependencies.md).
 
 ## PreRequisites
 
@@ -270,6 +270,7 @@ Here are the steps on how to migrate React applications to use [Webpack](https:/
            ]
        },
        plugins: [
+           // remove copying of sp-config.json if you're not using DX WebDevToolkit
            new CopyPlugin({
                patterns: [
                    './src/sp-config.json',
@@ -346,19 +347,35 @@ Here are the steps on how to migrate React applications to use [Webpack](https:/
         ...
     }
     ```
-3. Test your React App in local browser:
+5. Deployments via DXClient is recommended and is sufficient. In case that you want to add the use of [DX WebDevToolkit](https://github.com/HCL-TECH-SOFTWARE/WebDevToolkitForDx) in your development cycle, you'll need to add a sp-config.json file.
+   - src/sp-config.json
+   ```
+   {
+     "wcmContentName": "EducSampleScriptApp01"
+   }
+   ```
+   - If you want to skip using the DX WebDevToolkit, please remove the following in the webpack.dx-scriptapp.js file.
+   ```       
+              // remove copying of sp-config.json if you're not using DX WebDevToolkit
+              new CopyPlugin({
+                  patterns: [
+                      './src/sp-config.json',
+                  ]
+              }),
+   ```
+6. Test your React App in local browser:
     ```
         cd <app-folder>
         npm install
         npm start
     ```
-4. Build your application as-usual:
+7. Build your application as-usual:
     ```
         cd <app-folder>
         npm install
         npm run build
     ```
-5. Execute the npm script dx-deploy-app, pre-set with the DX admin username and password.
+8. Execute the npm script dx-deploy-app, pre-set with the DX admin username and password.
 
         dxUsername=<username> dxPassword=<password> npm run dx-deploy-app 
             > sample-app@0.1.0 dx-deploy-app
@@ -381,6 +398,6 @@ Here are the steps on how to migrate React applications to use [Webpack](https:/
             2022-08-08 21:13:39 : End content push to Portal.
             2022-08-08 21:13:39 : Body content: {"results":{"status":"success","importedFiles":{"file":[{"filename":"HTML/index.html"},{"filename":"JavaScript/main.269f6c0111b67c725c63.bundle.js"},{"filename":"JavaScript/131.d190506afae2cd09f1fd.bundle.js"},{"filename":"CSS/main.9a71fbc56a658baede15.css"}]},"skippedFiles":"","message":"The file that you selected was imported successfully.","contentId":"6fa0b659-7b18-499d-a8de-090a0e9f8987"}}.     
 
-6. Check the DXClient logs in store/logs/logger.log file within your workspace.
-7. Prepare your target DX page that will host the ScriptApp. ([link to detailed steps](#how-to-prepare-a-dx-page-for-dx-scriptapps))
-8. Add the ScriptApp (matching the wcmContentName in the package.json config) into the target DX test page. ([link to detailed steps](#how-to-add-a-deployed-dx-scriptapp-into-a-dx-page)) 
+9. Check the DXClient logs in store/logs/logger.log file within your workspace.
+10. Prepare your target DX page that will host the ScriptApp. ([link to detailed steps](#how-to-prepare-a-dx-page-for-dx-scriptapps))
+11. Add the ScriptApp (matching the wcmContentName in the package.json config) into the target DX test page. ([link to detailed steps](#how-to-add-a-deployed-dx-scriptapp-into-a-dx-page)) 
