@@ -130,4 +130,4 @@ You can use this sample outbound policy as a base:
 
 3. And deploy the policy using the **Config Engine**: `./ConfigEngine.sh update-outbound-http-connection-config -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin -DConfigFileName=/tmp/demo_volt_mx_foundry_service_policy.xml`
 
-Note: For additional resources regarding please reading this topic [Outbound HTTP connection](../../../portlets_development/usage/web2_ui/outbound_http_connection/outbound_http.md)
+Note: For additional resources regarding this topic, please read [Outbound HTTP connection](../../../portlets_development/usage/web2_ui/outbound_http_connection/outbound_http.md)
