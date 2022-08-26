@@ -4,7 +4,7 @@ This guide provides a streamlined build process that will automate the creation 
 Please make sure to read the [Important Configuration Items to Note](#important-configuration-items-to-note) section.
 
 This Gradle Project includes the following areas of functionality:
-- [Webpack](https://webpack.js.org/) build script to package JavaScript libraries into a Web Archive (WAR) file
+- [Webpack](https://webpack.js.org/){:target="_blank"} build script to package JavaScript libraries into a Web Archive (WAR) file
 - Replacement of names and labels in WebSphere deployment descriptors. 
 - Packaging of the WAR file into an Enterprise Application Archive (EAR) file
 - Deployment of the DX Module (EAR file) to WebSphere via DXClient
@@ -14,7 +14,7 @@ This Gradle Project includes the following areas of functionality:
 ### Java Runtime Engine
 - Java Runtime Engine with a Long Term Support (LTS) version is needed to be able to run the embedded Gradle wrapper in this project. Java version 17 is recommended.
 ### Optional: DXClient
-- An option is available for the built DX Module (EAR file) to be uploaded to WebSphere via DXClient. You may read the documentation for DXClient [here](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html). If you have replaced the default context root of your DX installation, you should update the [config.json](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html) file of your DXClient accordingly.
+- An option is available for the built DX Module (EAR file) to be uploaded to WebSphere via DXClient. You may read the documentation for [DXClient](../../../../integrate_apps/development_tools/dxclient/index.md). If you have replaced the default context root of your DX installation, you should update the [config.json](../../../../integrate_apps/development_tools/dxclient/index.md#dxclient-installation-configuration) file of your DXClient accordingly.
 
  ```
     "dxContextRoot":"/wps",
@@ -31,7 +31,7 @@ DX Modules are artifacts that may include bundled Javascript and Styling (CSS, S
       - gradle/wrapper/gradle-wrapper.properties
       - gradlew
       - gradlew.bat
-   - OR [install gradle](https://gradle.org/install/) and run [gradle wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:adding_wrapper).
+   - OR [install gradle](https://gradle.org/install/){:target="_blank"} and run [gradle wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:adding_wrapper){:target="_blank"}.
 2. Create a gradle.properties file and set the node and npm version required. Set nodeInstall to false if the existing executables of the current environment is preferred. The gradle project included in this guide is going to be capable of downloading and using its own set of node and npm executables for the build process.
     ```
     nodeInstall=true

@@ -1,3 +1,6 @@
+title: DXClient
 nav:
     - index.md
-    - ...
+    - dxconnect.md
+    - usage
+    - troubleshooting
