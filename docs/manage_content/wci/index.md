@@ -23,5 +23,6 @@ The Web Content Integrator has an image-processing feature, which allows images 
 View some example feeds that illustrate how to represent the various item types within a feed.
 -   **[RSS Namespace Extension for the Feed Service](../wci/wci_ff_nse_rss.md)**  
 The RSS namespace extension is used to exchange control information between the feed producer and consumer applications.
-
+-   **[Web content feed management](../wci/webcontentfeed_mgmt)**  
+To access a feed you created on your source server, you must create a feed configuration.
 

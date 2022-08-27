@@ -6,7 +6,7 @@ Users can access the HCL DAM features in HCL Digital Experience 9.5 Container Up
 
 Follow these steps to install, configure, and use the HCL Digital Experience 9.5 DAM features.
 
--   **[Install the HCL Digital Asset Management components](../digital_asset_mgmt/installation/)**  
+-   **[Install HCL Digital Asset Management components](../digital_asset_mgmt/installation/)**  
 This section provides a high-level overview of the architecture and the steps to install, enable and update the HCL Digital Asset Management.
 -   **[Configure HCL Digital Asset Management](../digital_asset_mgmt/configuration/)**  
 This section provides steps on how to configure HCL Digital Asset Management for specific use.

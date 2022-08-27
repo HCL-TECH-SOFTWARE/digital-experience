@@ -1,0 +1,6 @@
+Title: Personalization REST API explorer
+nav:
+    - index.md
+    - Personalization rules APIs: pzn_rules_api
+    - dev_pzn_folders_api.md
+

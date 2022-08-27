@@ -1,0 +1,9 @@
+Title: Personalization rules APIs
+nav:
+    - index.md
+    - rules_api_contents_details.md
+    - pzn_embedded_select_action_rule.md
+    - api_display_formats_attribute_properties.md
+    - trigerring_pzn_rules_anonymously.md
+
+

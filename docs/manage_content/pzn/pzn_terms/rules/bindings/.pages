@@ -1,0 +1,7 @@
+Title: Bindings
+nav:
+    - index.md 
+    - pzn_example_simple_binding.md
+    - pzn_example_multiple_profilers_optional_actions.md
+    - pzn_example_nested_bindings.md
+    - pzn_example_nested_bindings_adv.md
