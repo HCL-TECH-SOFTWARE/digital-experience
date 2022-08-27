@@ -36,7 +36,7 @@ There are two choices to configure this volume:
     It is highly recommended that the storage class used have a Reclaim Policy of **RETAIN!!** This is not enforced and not an issue if the volumes are managed correctly:
 
 -   When a user is done with their volume, they can delete the Persistent Volume Claim \(PVC\) objects from the API that allows reclamation of the resource. The Reclaim policy for a `PersistentVolume` tells the cluster what to do with the volume \* after it has been released of its claim.
--   Exercise caution when using the DELETE policy.\*
+-   Exercise caution when using the DELETE policy.
 
 See the following sections for additional information:
 
