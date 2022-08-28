@@ -1066,6 +1066,7 @@ This section will describe the steps on how to configure a React app to utilize 
                  "@babel/preset-react": "^7.18.6",
                  "babel-loader": "^8.2.5",
                  "clean-webpack-plugin": "^4.0.0",
+                 "copy-webpack-plugin": "^10.2.4",
                  "css-loader": "^6.7.1",
                  "css-minimizer-webpack-plugin": "^4.0.0",
                  "html-loader": "^4.1.0",
@@ -1085,14 +1086,14 @@ This section will describe the steps on how to configure a React app to utilize 
     ```
 2. Before using the NPM commands in the succeeding steps, set the PATH environment variable to prioritize the npm executable downloaded by the gradle npm plugin of the DX Module. This is necessary to be consistent with the one used during the DX Module build.
     ```
-    cd src/main/<app-folder>
-    export PATH=../.gradle/npm/npm-v8.15.0/bin/:$PATH
+    cd <app-folder>
+    export PATH=../DxModule/.gradle/npm/npm-v8.15.0/bin/:$PATH
     which npm
     npm -v
     ```
 3. Execute the npm install command.
      ```
-     cd src/main/<app-folder>
+     cd <app-folder>
      npm install
      ```
 4. Find all the React Apps' JS and TS files (i.e: index.jsx, App.jsx, etc.), divert all imports of the libraries that are bundled in the DX Module (i.e: React, ReactDOM) to use the dxmodules alias set in package.json.
@@ -1293,9 +1294,10 @@ This section will describe the steps on how to configure a React app to utilize 
             ]
         },
         plugins: [
+            // remove copying of sp-config.json if you're not using DX WebDevToolkit
             new CopyPlugin({
                 patterns: [
-                    './src/sp-config.json',
+                    './sp-config.json',
                 ]
             }),
             new webpack.IgnorePlugin({
@@ -1358,7 +1360,30 @@ This section will describe the steps on how to configure a React app to utilize 
            ]
        },
     ```
-9. Add if not yet included in the project, a tsconfig.json file to each of the ScriptApps.
+9. Deployments via DXClient is recommended and is sufficient. In case that you want to add the use of [DX WebDevToolkit](https://github.com/HCL-TECH-SOFTWARE/WebDevToolkitForDx) in your development cycle, you'll need to add a sp-config.json file.
+   - SampleAppReact16/sp-config.json
+   ```
+   {
+     "wcmContentName": "SampleAppReact16"
+   }
+   ```
+   - SampleAppReact18/sp-config.json
+   ```
+   {
+     "wcmContentName": "SampleAppReact18"
+   }
+   ```
+   - If you want to skip using the DX WebDevToolkit, please remove the following in the webpack.dx-scriptapp.js file.
+   - SampleAppReact16/webpack.dx-scriptapp.jsn and SampleAppReact16/webpack.dx-scriptapp.js
+   ``` 
+              // remove copying of sp-config.json if you're not using DX WebDevToolkit
+              new CopyPlugin({
+                  patterns: [
+                      './src/sp-config.json',
+                  ]
+              }),
+   ```
+10. Add if not yet included in the project, a tsconfig.json file to each of the ScriptApps.
     - SampleAppReact16/tsconfig.json and SampleAppReact18/tsconfig.json)
    ```
     {
@@ -1373,7 +1398,7 @@ This section will describe the steps on how to configure a React app to utilize 
          "esModuleInterop": true
        }
     }
-     ```
+   ```
 11. Test the app locally.
      ```
      cd <sample-app>
@@ -1385,7 +1410,7 @@ This section will describe the steps on how to configure a React app to utilize 
      npm run build
      ```
 13. Execute the npm script dx-deploy-app, pre-set with the DX admin username and password.
-```
+   ```
    dxUsername=<username> dxPassword=<password> npm run dx-deploy-app 
         > sample-react-app-16@1.0.0 dx-deploy-app
         > dxclient deploy-scriptapplication push -dxUsername $dxUsername -dxPassword $dxPassword -wcmContentName "$npm_package_config_dxclient_wcmContentName" -wcmSiteArea "$npm_package_config_dxclient_wcmSiteArea" -mainHtmlFile $npm_package_config_dxclient_mainHtmlFile -contentRoot "$npm_package_config_dxclient_contentRoot" -dxProtocol $npm_package_config_dxclient_protocol -hostname $npm_package_config_dxclient_hostname -dxPort $npm_package_config_dxclient_port
@@ -1404,7 +1429,7 @@ This section will describe the steps on how to configure a React app to utilize 
         2022-08-23 02:02:45 : Content push was successful.
         2022-08-23 02:02:45 : End content push to Portal.
         2022-08-23 02:02:45 : Body content: {"results":{"status":"success","importedFiles":{"file":[{"filename":"HTML/index.html"},{"filename":"JavaScript/main.7503b890e564833940c0.bundle.js"}]},"skippedFiles":"","message":"The file that you selected was imported successfully.","contentId":"d44b10fe-1a36-435a-9f74-e3e26be71273"}}.
-```
-11. If there's a deployment error, check the DXClient logs in the &lt;app-folder&gt;/store/logs/logger.log file.
-12. Prepare your target DX page that will host the ScriptApp. ([Guide](#how-to-prepare-a-dx-page-for-dx-scriptapps))
-13. Add the ScriptApp (matching the wcmContentName in the package.json config) into the target DX page. ([Guide](#how-to-add-a-deployed-dx-scriptapp-into-a-dx-page))
+   ```
+14. If there's a deployment error, check the DXClient logs in the &lt;app-folder&gt;/store/logs/logger.log file.
+15. Prepare your target DX page that will host the ScriptApp. ([Guide](#how-to-prepare-a-dx-page-for-dx-scriptapps))
+16. Add the ScriptApp (matching the wcmContentName in the package.json config) into the target DX page. ([Guide](#how-to-add-a-deployed-dx-scriptapp-into-a-dx-page))

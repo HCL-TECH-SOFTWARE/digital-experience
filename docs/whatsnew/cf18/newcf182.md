@@ -10,7 +10,7 @@ You can access the latest software requirements and updates that support HCL Dig
 
 ## Deploy HCL DX 9.5 Container updates with minimal operations downtime
 
-This topic provides guidance to update artifacts in HCL Digital Experience 9.5 container deployments while minimizing operations downtime, and notes how processes and tools to support these efforts differ across Kubernetes container-based and non-Kubernetes HCL Digital Experience platform deployments. See [Deploying HCL DX 9.5 Container artifact updates with minimal operations downtime](https://help.hcltechsw.com/digital-experience/9.5/containerization/deploy_container_artifact_updates.html){:target="_blank"}<!-- (../containerization/deploy_container_artifact_updates.md) --> for details.
+This topic provides guidance to update artifacts in HCL Digital Experience 9.5 container deployments while minimizing operations downtime, and notes how processes and tools to support these efforts differ across Kubernetes container-based and non-Kubernetes HCL Digital Experience platform deployments. See [Deploying HCL DX 9.5 Container artifact updates with minimal operations downtime](../../deployment/manage/container_configuration/deploy_container_artifact_updates.md) for details.
 
 ## Optional Digital Asset Management Storage Configuration Settings
 

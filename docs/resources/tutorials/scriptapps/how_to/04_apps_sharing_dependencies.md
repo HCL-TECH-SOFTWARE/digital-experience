@@ -679,7 +679,7 @@ DX Modules are artifacts that may include bundled Javascript and Styling (CSS, S
 
 # Important Configuration Items to Note
 1. Take note of the location of the generated DLL manifest as configured in the DllPlugin section of src/main/WebAppDxModule/webpack.dxmodules.js The location and content of the manifest are critical as it is required to optimize and correctly build the dependent DX ScriptApps.
-```
+   ```
     entry: {
         dxmodules: './modules-index.js'
     },
@@ -700,9 +700,9 @@ DX Modules are artifacts that may include bundled Javascript and Styling (CSS, S
             filename: "[name].bundle.css",
         })
     ],
-```
+   ```
 2. You may need to take note of the generated library name (with the added fullhash) and the exported component aliases in the generated DLL manifest src/main/WebAppDxModule/dx-dll-manifest.json. Please keep in mind that even _minor edits in the DX module_ will result to a modified fullhash in the library name that _will then require the dependent DX ScriptApps to be rebuilt and redeployed_. It is recommended to keep the fullhash suffix in the webpack library name config mentioned in previous step.
-```
+   ```
     {
       "name": "dxmodules_95f93ddf879a86d4093f",
       "content": {
@@ -725,9 +725,9 @@ DX Modules are artifacts that may include bundled Javascript and Styling (CSS, S
         "SmartWebComponents"
       ]
     }
-```
+   ```
 3. Any change in the aliases in both the entry config or in the output filenames in webpack.dxmodules.js, will require corresponding changes to DX Module's deployment descriptor file src/main/config/war/WEB-INF/plugin.xml. The Javascript and styling files in the output folder src/main/WebAppDXModule/dist-dx-module must correspond to the files listed in the  deployment descriptor. All @@auto-replaced-with-rootProject.name@@ tokens are dynamically replaced by the rootProject.name value set in settings.gradle.
-```
+   ```
     ...
     <module id="@@auto-replaced-with-rootProject.name@@">
         <contribution type="head">
@@ -744,7 +744,7 @@ DX Modules are artifacts that may include bundled Javascript and Styling (CSS, S
         </contribution>
     </module>
     ...
-```
+   ```
 
 # How To Verify A Successful Deployment and Link a DX Module to a DX Theme
 1. To verify, login to the WebSphere console. Under the *Applications* tab, then the *Application Types* and then lastly in the *Business-level applications*, you can search for your application name in the table in the right-hand side. Make sure that the status of the module is started.
@@ -853,6 +853,7 @@ This section will describe the steps on how to bundle and deploy a React app to 
                  "@babel/preset-react": "^7.18.6",
                  "babel-loader": "^8.2.5",
                  "clean-webpack-plugin": "^4.0.0",
+                 "copy-webpack-plugin": "^10.2.4",
                  "css-loader": "^6.7.1",
                  "css-minimizer-webpack-plugin": "^4.0.0",
                  "html-loader": "^4.1.0",
@@ -873,7 +874,7 @@ This section will describe the steps on how to bundle and deploy a React app to 
 3. Before using the NPM commands in the succeeding steps, set the PATH environment variable to prioritize the npm executable downloaded by the gradle npm plugin of the DX Module. This is necessary to be consistent with the one used during the DX Module build.
     ```
     cd src/main/<app-folder>
-    export PATH=../.gradle/npm/npm-v8.15.0/bin/:$PATH
+    export PATH=../WebAppDxModule/.gradle/npm/npm-v8.15.0/bin/:$PATH
     which npm
     npm -v
     ```
@@ -1063,6 +1064,7 @@ This section will describe the steps on how to bundle and deploy a React app to 
             ]
         },
         plugins: [
+            // remove copying of sp-config.json if you're not using DX WebDevToolkit
             new CopyPlugin({
                 patterns: [
                     './src/sp-config.json',
@@ -1128,6 +1130,29 @@ This section will describe the steps on how to bundle and deploy a React app to 
           ...
        ],
     ```
+9. Deployments via DXClient is recommended and is sufficient. In case that you want to add the use of [DX WebDevToolkit](https://github.com/HCL-TECH-SOFTWARE/WebDevToolkitForDx) in your development cycle, you'll need to add a sp-config.json file.
+   - src/main/WebAppScriptApp01/src/sp-config.json
+   ```
+   {
+     "wcmContentName": "EducSampleScriptApp4A"
+   }
+   ```
+   - src/main/WebAppScriptApp02/src/sp-config.json
+   ```
+   {
+     "wcmContentName": "EducSampleScriptApp4B"
+   }
+   ```
+   - If you want to skip using the DX WebDevToolkit, please remove the following in the webpack.dx-scriptapp.js file.
+   - src/main/WebAppScriptApp01/webpack.dx-scriptapp.jsn and src/main/WebAppScriptApp02/webpack.dx-scriptapp.js
+   ```
+              // remove copying of sp-config.json if you're not using DX WebDevToolkit
+              new CopyPlugin({
+                  patterns: [
+                      './src/sp-config.json',
+                  ]
+              }),
+   ```
 10. Add if not yet included in the project, a tsconfig.json file to each of the ScriptApps (i.e: src/main/WebAppScriptApp01/tsconfig.json, src/main/WebAppScriptApp02/tsconfig.json).
      ```
     {
@@ -1143,17 +1168,17 @@ This section will describe the steps on how to bundle and deploy a React app to 
        }
     }
      ```
-12. Test the app locally.
+11. Test the app locally.
      ```
      cd src/main/<sample-app>
      npm start
      ```
-13. Install dependencies and build the ScriptApp using the following commands:
+12. Install dependencies and build the ScriptApp using the following commands:
      ```
      cd src/main/<sample-app>
      npm run build
      ```
-14. Execute the npm script dx-deploy-app, pre-set with the DX admin username and password.
+13. Execute the npm script dx-deploy-app, pre-set with the DX admin username and password.
 ```
    dxUsername=<username> dxPassword=<password> npm run dx-deploy-app 
           > educ-sample-tabs-component@1.0.0 dx-deploy-app
@@ -1181,6 +1206,6 @@ This section will describe the steps on how to bundle and deploy a React app to 
           2022-08-15 15:57:20 : End content push to Portal.
           2022-08-15 15:57:20 : Body content: {"results":{"status":"success","importedFiles":{"file":[{"filename":"HTML/index.html"},{"filename":"JavaScript/main.ce2c561935021a18d7f2.bundle.js"},{"filename":"Other/6cba51a855ac42711282.json"}]},"skippedFiles":"","message":"The file that you selected was imported successfully.","contentId":"1c704266-d465-4b93-8808-3c8019963cef"}}.     
 ```
-11. If there's a deployment error, check the DXClient logs in the src/main/&lt;app-folder&gt;/store/logs/logger.log file.
-12. Prepare your target DX page that will host the ScriptApp. ([Guide](#how-to-prepare-a-dx-page-for-dx-scriptapps))
-13. Add the ScriptApp (matching the wcmContentName in the package.json config) into the target DX page. ([Guide](#how-to-add-a-deployed-dx-scriptapp-into-a-dx-page))
+14. If there's a deployment error, check the DXClient logs in the src/main/&lt;app-folder&gt;/store/logs/logger.log file.
+15. Prepare your target DX page that will host the ScriptApp. ([Guide](#how-to-prepare-a-dx-page-for-dx-scriptapps))
+16. Add the ScriptApp (matching the wcmContentName in the package.json config) into the target DX page. ([Guide](#how-to-add-a-deployed-dx-scriptapp-into-a-dx-page))
