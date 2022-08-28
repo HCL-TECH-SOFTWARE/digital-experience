@@ -1,0 +1,5 @@
+Title: Device application object
+nav:
+    - index.md 
+    - Device class attribute: device_class_attribute
+    - Location attributes: location_attribute

@@ -7,7 +7,7 @@ Users can access the Content Composer features in HCL Digital Experience 9.5 Con
 Follow the instructions below to install, configure, and use the HCL Content Composer.
 
 
--   **[Install the HCL Content Composer components](../content_composer/installation/)**  
+-   **[Install HCL Content Composer components](../content_composer/installation/)**  
 This section provides a high-level overview of the architecture and the steps to install, enable and update the HCL Content Composer.
 -   **[Configure HCL Content Composer](../content_composer/configuration/configure_access/)**  
 This section provides steps on how to configure HCL Content Composer for specific use.

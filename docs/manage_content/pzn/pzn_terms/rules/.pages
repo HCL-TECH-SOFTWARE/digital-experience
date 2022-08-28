@@ -1,0 +1,11 @@
+Title: Rules
+nav:
+    - index.md 
+    - Actions: actions
+    - Profilers: profilers
+    - Bindings: bindings
+    - pzn_recommend_content.md
+    - Visibility Rules: visibility
+    - Rule elements: rule_elements
+    - pzn_email.md
+    - pzn_email_admin.md

@@ -1,8 +1,7 @@
 title: Content Composer
 nav:
-   # - cont_comp_overview.md
     - index.md
-    - Installation: installation
-    - Configuration: configuration
-    - Usage: usage
-    - Limitations: limitations
+    - Install HCL Content Composer components: installation
+    - Configure HCL Content Composer: configuration
+    - Usage of HCL Content Composer: usage
+    - Limitations | HCL Content Composer: limitations

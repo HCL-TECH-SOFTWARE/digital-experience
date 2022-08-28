@@ -1,0 +1,13 @@
+Title: Configuring a web content authoring environment
+nav:
+    - index.md
+    - wcm_install_configtasks_authoringportlet.md
+    - wcm_config_authoringportlet_manual.md
+    - wcm_config_prop_authoring.md
+    - wcm_config_ephox_custom.md
+    - wcm_config_advanced_search.md
+    - wcm_config_importbuffer.md
+    - wcm_config_time-outs.md
+    - wcm_config_ecm_whitelist.md
+    - Setting up support for federated documents: fed_docs_setup
+

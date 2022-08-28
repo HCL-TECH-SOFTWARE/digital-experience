@@ -1,0 +1,7 @@
+Title: Creating content items
+nav:
+    - index.md
+    - wcm_dev_items_props_content.md
+    - wcm_dev_profiling_items.md
+    - wcm_dev_workflow_items.md
+    - wcm_dev_content_location.md

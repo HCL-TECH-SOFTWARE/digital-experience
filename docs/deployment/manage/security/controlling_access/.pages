@@ -4,7 +4,7 @@ nav:
     - sec_ac_adm.md
     - Resources, roles, access rights, and initial access control settings: resources_roles
     - sec_acc_scen.md
-    - wcm_security.md
+    - Web Content Manager access control: wcm_security
     - sec_ugpp.md
     - sec_rpp.md
     - d_acc_cntl_admin.md

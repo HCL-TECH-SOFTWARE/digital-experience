@@ -1,19 +1,31 @@
-# Web Content Manager
+# HCL Web Content Manager
 
-HCL Web Content Manager accelerates the creation, maintenance, and delivery of content across intranet, extranet, Internet, and portal sites.
+Set up a content server by installing HCL Web Content Manager in various deployments to provide robust and flexible environments for web content development and delivery. After you install the content server, more configuration steps must be completed according to the role that the server plays in your web content environment.
 
-HCL Web Content Manager is a comprehensive solution for creating, managing, and delivering content on your website.
+Configuration for HCL Web Content Manager is managed through services that are defined as resource environment providers in IBM® WebSphere® Application Server. For each service, you can edit existing properties and add new properties through the WebSphere Integrated Solutions Console.
 
-Follow the instructions below to install, configure, and use the HCL Web Content Manager.
+-   **[Configuring a web content authoring environment](../wcm/wcm_install_cfgauthoring.md)**  
+Set up the authoring environment by installing the authoring portlet and enabling other features that are required to support the authoring environment.
+-   **[How to configure a web content staging environment](../wcm/wcm_config_prop_staging.md)**  
+Configure the staging environment to emulate the web content delivery environment and allow for testing before deployment.
+-   **[Configuring a web content delivery environment](../wcm/wcm_install_cfgdelivery.md)**  
+Set up your delivery environment by installing web content viewers and enabling any other required features.
+-   **[Reserved authoring portlet](../wcm/wcm_config_wcmviewer_reservedauth.md)**  
+When you use the web content viewer or web content pages, some scenarios involve web content authoring tasks that are accomplished with authoring tools components. Authoring tasks are run through a special instance of the authoring portlet that is reserved specifically for these tasks and is installed on page that is hidden from the page navigation available to typical users.
+-   **[Further configuration options](../wcm/wcm_config.md)**  
+These configuration options are available to address installation requirements for other deployment scenarios.
+-   **[Configuring managed pages](../wcm/wcm_config_mngpages.md)**  
+When you create a new installation of HCL Digital Experience 8.5, managed pages are enabled by default. However, you can also manually disable and enable the feature as needed.
+-   **[Managing tagging and rating for web content](../wcm/wcm_tagrate_main.md)**  
+When you use tagging and rating with web content, the web content viewer provides extra scope options for the filtering of tagging and rating results. Because changes in the web content system can affect the accuracy of the tagging and rating information that is used by the portal, it is important to keep the scope information up to date by synchronizing the scopes regularly.
+-   **[Overview of a multilingual site](../wcm/wcm_mls_ovr.html)**  
+
+-   **[Installing the multilingual extensions](../wcm/wcm_mls_install.md)**  
+The multilingual solution consists of a set of extensions to Web Content Manager that can be used to manage the authoring, workflow, and configuration of your multilingual system.
 
 
--   **[Install the HCL Web Content Manager](../wcm/installation/)**  
-This section provides a high-level overview of the architecture and the steps to install, enable and update the HCL Web Content Manager.
--   **[Configure HCL Web Content Manager](../wcm/configuration/configure_access/)**  
-This section provides steps on how to configure HCL Web Content Manager for specific use.
--   **[Usage of HCL Web Content Manager](../wcm/usage/)**  
-Access, author, and manage content and content templates using HCL Web Content Manager. Users can also manage workflow approvals of content and content templates using HCL Web Content Manager.
--   **[Limitations | HCL Web Content Manager](../wcm/limitations/)**  
-List of limitations that currently exist in HCL Web Content Manager.
+**Related information**  
 
+
+[Setting service configuration properties](../admin-system/adsetcfg.md)
 

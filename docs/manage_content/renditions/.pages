@@ -1,7 +1,7 @@
 title: Renditions
 nav:
     - index.md
-    - Installation: installation
-    - Usage: usage
-
-
+    - rend_images.md
+    - rend_disable.md
+    - rend_enable.md
+    - rend_cue_points.md
