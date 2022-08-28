@@ -4,6 +4,6 @@ nav:
     - installation
     - configuration
     - usage
-    - apis
+    - apis: APIs
     - Limitations: limitations
 

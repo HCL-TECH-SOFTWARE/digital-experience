@@ -1,4 +1,4 @@
-# Configuring Volt MX Foundry to connect to Digital Experience DDC
+# Configuring Volt MX Foundry to connect to Digital Experience Digital Data Connector
 
 This section provides the steps on how to configure Volt MX Foundry to be able to connect via DX DDC.
 
@@ -35,7 +35,8 @@ Follow the steps below to use the new integration service with Volt MX Foundry c
 
     ![](../../../../assets/Volt_MX_Foundry_Response_Output_And_Testing.png "Add JSON Path and Testing the Service")
 
-Note: You do not need to map all the responses in the  **Response Output** and only map what you need. Make the response output flat as possible, as shown in the sample above.
+!!!note
+    You do not need to map all the responses in the  **Response Output** and only map what you need. Make the response output flat as possible, as shown in the sample above.
 
 ## Publish and Test integration service with Volt MX Foundry
 
@@ -55,7 +56,8 @@ Note: You do not need to map all the responses in the  **Response Output** and o
 
     ![](../../../../assets/Volt_MX_Foundry_Executing_API.png "Executing the API")
 
-Note: If you created your Operation **Public** in Operation Security Level you dont need any authorization.
+!!!note
+    If you created your Operation **Public** in Operation Security Level you dont need any authorization.
 
 ## Creating Credential Vault Slot for the Volt MX Foundry Endpoint
 
@@ -128,6 +130,59 @@ You can use this sample outbound policy as a base:
 
 2. Then you copy the file inside your HCL Digital Experience instance.
 
-3. And deploy the policy using the **Config Engine**: `./ConfigEngine.sh update-outbound-http-connection-config -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin -DConfigFileName=/tmp/demo_volt_mx_foundry_service_policy.xml`
+3. And deploy the policy using the **Config Engine**: `./ConfigEngine.sh update-outbound-http-connection-config -DWasPassword=password -DPortalAdminPwd=password -DConfigFileName=/tmp/demo_volt_mx_foundry_service_policy.xml`
 
-Note: For additional resources regarding this topic, please read [Outbound HTTP connection](../../../portlets_development/usage/web2_ui/outbound_http_connection/outbound_http.md)
+!!!note
+    For additional resources regarding this topic, please read [Outbound HTTP connection](../../../portlets_development/usage/web2_ui/outbound_http_connection/outbound_http.md)
+
+## Adding HTTP Outbound Proxy and Signer Certificate
+
+This allows WCM to trust the external data source and send HTTP requests to it.
+
+Steps to add the target URL and Certificate are as follows:
+
+1. Login to the WAS console.
+ 
+    ![](../../../../assets/WAS_Console_Login_Screen.png "Log in to WAS Console")
+
+2. Click **Resources** from side navigation. Then, click **Resource Environment**, then **Resource environment providers**.
+
+    ![](../../../../assets/WAS_Resource-Environment_Screen.png "Select Resource environment providers")
+
+3. From the resources, find and go inside `WP ConfigService` and click on `Custom Properties`. Add **New** .
+
+    ![](../../../../assets/WAS_Console_WPConfig_Service.png "Wp Config Service and Custom Properties")
+
+4. Add your unique policy by entering name-value pair like in the sample below.
+
+    | Name                                                                | Value                                                         | Type              |
+    | --------------------------------------------------------------------| --------------------------------------------------------------| ------------------|
+    | wp.proxy.config.urlreplacement.digital_data_connector_policy.ddcDemo| https://hcl-dx-dev.hclvoltmx.net/services/account/*           | String            |
+
+    ![](../../../../assets/WAS_Adding_Unique_Profile.png "WAS Unique Profile configuration")
+
+5. Review and save the changes in master configuration.
+
+    ![](../../../../assets/WAS_Save_In_Master_Configuration.png "Save changes in master configuration")
+
+**if the external data source URI uses https, proceed below:**
+
+1. Go back to the sidenav, click on `Security` Then, click `SSL certificate and key management` then `Key stores and certificates`
+
+    ![](../../../../assets/WAS_Adding_Security_Certificate.png "Key stores and certificates")
+
+2. Click on `NodeDefaultTrustStore`.
+
+    ![](../../../../assets/WAS_Default_Trust.png "Default trust store for dockerNode")
+
+3. Click on `Signer certificates` and add your external URI's certificate by clicking on `Retrieve from port`.
+
+    ![](../../../../assets/WAS_Retrieve_From_Port.png "Manages signer certificates in key stores.")
+
+4. Enter the host, alias and port 443 and click on `Retrieve signer information`.
+
+    ![](../../../../assets/WAS_Retrieve_Signer_Information.png "Makes a test connection to a Secure Sockets Layer (SSL) port and retrieves the signer from the server during the handshake.")
+
+5. Review and save the changes in master configuration.
+
+    ![](../../../../assets/WAS_Save_In_Master_Configuration.png "Save in master configuration")
