@@ -21,19 +21,19 @@ See the [Design Studio \(Beta\)](../../productfeatures/design_studio/index.md)�
 
 Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to supported container platforms using Helm. Using a Helm Chart deployment can provide administrators more transparency and control in deployment operations. Beginning with Container Update CF199, support for migration from Operator-based \(dxctl\) to Helm-based deployments is provided.
 
-See the [HCL DX 9.5 Helm deployment](../../platform/kubernetes/operator-migration/operator_migration_preparation.md) topic for more information.
+See the [HCL DX 9.5 Helm deployment](../../deployment/install/container/operator-migration/operator_migration_preparation.md) topic for more information.
 
 ## Digital Asset Management Staging
 
 New Digital Asset Management \(DAM\) staging support enables administrators to stage and synchronize DAM assets from an authoring environment \(source environment/publisher\) to multiple rendering environments \(target environment/subscriber\), using DXClient.
 
-See the [DAM staging](../../productfeatures/digital_asset_mgmt/staging_dam/dam_subscription_staging.md) topic for more information.
+See the [DAM staging](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md) topic for more information.
 
 ## New HCL Digital Experience 9.5 Release Artifacts supporting CICD release processes
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and to automate processes in the development and delivery process. Updates include process definitions to automate Export and Import of select IBM WebSphere Application Server Resource Provider settings during deployment, and to create Syndication relationships and credential vault settings.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](../../platform/administration/DXClient/dxclient.md) topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../integrate_apps/development_tools/dxclient/index.md) topic for more information.
 
 ## End of Support for HCL Digital Experience Deprecated Features
 
@@ -43,11 +43,11 @@ The following list of HCL Digital Experience deprecated features will reach end 
 
 New HCL Experience APIs are available for creating, updating and deleting Design Studio \(Beta\) sites, pages, and containers. New Web Content Manager REST V2 APIs are available for creating content templates, categories, and more.
 
-See the [HCL Experience API](https://help.hcltechsw.com/digital-experience/9.5/open_api/openapi_overview.html){:target="_blank"}<!-- (../open_api/openapi_overview.md) --> topic for more information.
+See the [HCL Experience API](../../integrate_apps/apis/hcl_experience_api/openapi_overview.md) topic for more information.
 
 ## New REST APIs to Configure Remote Search
 
-Beginning with HCL Digital Experience CF and Container Update CF199, additional REST services enable administrators and developers to programatically configure remote search in on-premises and container-based Digital Experience deployments. See the [Digital Experience Remote Model REST API Explorer](https://help.hcltechsw.com/digital-experience/9.5/dev/remote_model_rest_api.html){:target="_blank"}<!-- (../design/api/remote_model_rest_api.md) --> topic for more information.
+Beginning with HCL Digital Experience CF and Container Update CF199, additional REST services enable administrators and developers to programatically configure remote search in on-premises and container-based Digital Experience deployments. See the [Digital Experience Remote Model REST API Explorer](../../integrate_apps/apis/model_spi/remote_model_rest_api.md) topic for more information.
 
 ## New HCL Digital Experience ‘How To’ Videos
 
