@@ -26,10 +26,10 @@ pipeline {
                     // The SSH Key is passed into the container for git checkout
                     // The script 01-publish-doc.sh is called and performs all steps
                     sh """
-                        docker run -d --name doc-builder quintana-docker.artifactory.cwp.pnp-hcl.com/dxubi:v1.0.0_8.5-204 /bin/bash -c "mkdir /build && mkdir /root/.ssh && tail -f /dev/null"
-                        docker cp ${SSH_KEY} doc-builder:/root/.ssh/id_rsa
-                        docker cp ${WORKSPACE}/jenkins/helpers/* doc-builder:/build
-                        docker exec doc-builder /bin/bash /build/02-pr-checks.sh -p main
+                        docker run -d --name doc-pr-check quintana-docker.artifactory.cwp.pnp-hcl.com/dxubi:v1.0.0_8.5-204 /bin/bash -c "mkdir /build && mkdir /root/.ssh && tail -f /dev/null"
+                        docker cp ${SSH_KEY} doc-pr-check:/root/.ssh/id_rsa
+                        docker cp ${WORKSPACE}/jenkins/helpers/* doc-pr-check:/build
+                        docker exec doc-pr-check /bin/bash /build/02-pr-checks.sh -p main
                     """
                 }
             }
@@ -39,8 +39,8 @@ pipeline {
     post {
         cleanup {
             sh """
-                docker stop doc-builder || true
-                docker rm doc-builder || true
+                docker stop doc-pr-check || true
+                docker rm doc-pr-check || true
             """
             dxWorkspaceDirectoriesCleanup()
         }
