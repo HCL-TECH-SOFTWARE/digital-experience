@@ -24,33 +24,33 @@ Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators
 !!!important
         Beginning with HCL DX Container Update CF200, use of the Operator \(dxctl\) method of container deployment is not supported. Customers should use Helm deployments and migrate existing Operator-based deployments to Helm.
 
-See the [HCL DX 9.5 Helm deployment](../../platform/kubernetes/overview.md) topic for more information. 
+See the [HCL DX 9.5 Helm deployment](../../get_started/architecture_overview/kubernetes_deployment/index.md) topic for more information. 
 
 ## Digital Asset Management
 
 New Digital Asset Management \(DAM\) staging support enables administrators to stage and synchronize DAM assets from an authoring environment \(source environment/publisher\) to multiple rendering environments \(target environment/subscriber\), using DXClient.
 
-See the [DAM staging](https://help.hcltechsw.com/digital-experience/9.5/containerization/dam_subscription_staging.html){:target="_blank"}<!-- (../containerization/dam_subscription_staging.md) --> Help Center topic for more information.
+See the [DAM staging](../../manage_content/digital_assets/usage/staging_dam/dam_subscription_staging.md) Help Center topic for more information.
 
-Support to migrate from the old to new Digital Asset Management database in the Helm-based deployments. See the [Migrate to new DAM DB in Helm-based deployments](../../platform/kubernetes/operator-migration/helm_dam_migration_newDB.md) Help Center topic for more information.
+Support to migrate from the old to new Digital Asset Management database in the Helm-based deployments. See the [Migrate to new DAM DB in Helm-based deployments](../../deployment/install/container/operator-migration/helm_dam_migration_newDB.md) Help Center topic for more information.
 
 ## Enhancements to DXClient
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and to automate processes in the development and delivery process. Updates include process definitions to automate Export or Import of Web Content Manager libraries from source server to target server location, also ability to generate differential reports for DX Server configurations.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](../../platform/administration/DXClient/dxclient.md) topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../integrate_apps/development_tools/dxclient/index.md) topic for more information.
 
 ## New User and Groups REST API Explorer
 
-The remote PUMA SPI gives you access to user profiles through REST services. It provides a remote interface for user and group management for the configured HCL DX user repository. Beginning with HCL DX 9.5 Container Update and CF 199, a new API explorer is available that allows developers using the Portal User Interface APIs to explore and test these APIs. See the Help Center topic [Remote REST service for PUMA](https://help.hcltechsw.com/digital-experience/9.5/dev/uprof_rest.html){:target="_blank"}<!-- (../dev/uprof_rest.md) --> for additional information.
+The remote PUMA SPI gives you access to user profiles through REST services. It provides a remote interface for user and group management for the configured HCL DX user repository. Beginning with HCL DX 9.5 Container Update and CF 199, a new API explorer is available that allows developers using the Portal User Interface APIs to explore and test these APIs. See the Help Center topic [Remote REST service for PUMA](../../integrate_apps/apis/puma_spi/remote_rest_service_for_puma/uprof_rest.md) for additional information.
 
 ## New Personalization REST APIs and Explorer
 
-Beginning with HCL DX 9.5 Container Update and CF200, a new API explorer is available that allows developers using the new Digital Experience Personalization REST APIs to explore and test these APIs. See the [Digital Experience Personalization](https://help.hcltechsw.com/digital-experience/9.5/pzn/pzn_overview.html){:target="_blank"}<!-- (../pzn/pzn_overview.md) --> Help Center topic for more information.
+Beginning with HCL DX 9.5 Container Update and CF200, a new API explorer is available that allows developers using the new Digital Experience Personalization REST APIs to explore and test these APIs. See the [Digital Experience Personalization](../../get_started/product_overview/personalization.md) Help Center topic for more information.
 
 ## New Search REST APIs Explorer
 
-The Digital Experience Search REST API provides developers programmatic access to search indexed Digital Experience content and web pages. Beginning with Container and CF Update CF200, a new Digital Experience Search REST API Explorer allows developers to explore and test the Digital Experience Search REST APIs. See the [HCL Digital Experience Search REST API Specification](https://help.hcltechsw.com/digital-experience/9.5/search-rest-api/search.html){:target="_blank"}<!-- (../search-rest-api/search.md) --> Help Center topic for more information.
+The Digital Experience Search REST API provides developers programmatic access to search indexed Digital Experience content and web pages. Beginning with Container and CF Update CF200, a new Digital Experience Search REST API Explorer allows developers to explore and test the Digital Experience Search REST APIs. See the [HCL Digital Experience Search REST API Specification](../../build_sites/search/usage/search-rest-api/search.md) Help Center topic for more information.
 
 ## Access and Deploy HCL Digital Experience 9.5 on HCL Sofy
 
@@ -60,11 +60,11 @@ The Digital Experience Search REST API provides developers programmatic access t
 
 Take advantage of step-by-step guidance for HCL Digital Experience practitioners presented in articles and videos included in HCL Digital Experience Help Center topics.
 
-**New**: Learn how to manage and monitor HCL DX 9.5 Container Deployment Liveliness and Readiness probes. See the Help Center topic: [Operations using Helm](../../platform/kubernetes/operations/update_helm_deployment.md).
+**New**: Learn how to manage and monitor HCL DX 9.5 Container Deployment Liveliness and Readiness probes. See the Help Center topic: [Operations using Helm](../../deployment/install/container/helm_deployment/update_helm_deployment.md).
 
 ## End of Support for HCL Digital Experience Deprecated Features
 
-The following list of HCL Digital Experience deprecated features will reach end of support beginning with HCL Digital Experience Container update and CF 200. Reference the Help Center topic [Deprecated features and themes for HCL Digital Experience 9.5](https://help.hcltechsw.com/digital-experience/9.5/reference/newly_deprecated_features_and_themes.html){:target="_blank"}<!-- (../reference/newly_deprecated_features_and_themes.md) -->.
+The following list of HCL Digital Experience deprecated features will reach end of support beginning with HCL Digital Experience Container update and CF 200. Reference the Help Center topic [Deprecated features and themes for HCL Digital Experience 9.5](../deprecated_features.md).
 
 <!-- ???info "Related information:"
     - [DAM staging](../containerization/dam_subscription_staging.md)

@@ -21,20 +21,20 @@ Beginning with Container Update CF203, the Ambassador shipped as part of the DX 
 
 In CF203, Helm configuration settings for metrics are enabled by default, new guidance is added to deploy to an internal network, and guidance is provided explaining the process to migrate from the Ambassador to new HAProxy service.
 
-See the following Help Center topics [HCL DX 9.5 Kubernetes](../../platform/kubernetes/overview.md), [Monitoring](../../platform/kubernetes/operations/monitoring/monitor_helm_deployment_metrics.md), [Deploying DX on internal network](../../platform/kubernetes/deployment/preparation/optional_internal_networking.md), and [Migrate from Ambassador to HAProxy](../../platform/kubernetes/haproxy-migration/haproxy-introduction.md) for more information. 
+See the following Help Center topics [HCL DX 9.5 Kubernetes](../../get_started/architecture_overview/kubernetes_deployment/index.md), [Monitoring](../../deployment/manage/container_configuration/monitoring/monitor_helm_deployment_metrics.md), [Deploying DX on internal network](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_internal_networking.md), and [Migrate from Ambassador to HAProxy](../../deployment/install/container/haproxy-migration/haproxy-introduction.md) for more information. 
 
 !!!important
     In Container Update CF203, the migration from Ambassador to HAProxy must be completed as a required step, in preparation for the removal of Ambassador in the upcoming Container Update release. Refer to the following links for guidance on the migration.
 
 See the following Help Center topics for more information:
 
-- [HCL DX 9.5 Helm deployment](../../platform/kubernetes/architecture/helm_overview.md)
-- [HAProxy overview](../../platform/kubernetes/haproxy-migration/haproxy-introduction.md)
-- [Migrate from Ambassador to HAProxy](../../platform/kubernetes/haproxy-migration/haproxy-migration.md)
+- [HCL DX 9.5 Helm deployment](../../get_started/architecture_overview/kubernetes_deployment/index.md)
+- [HAProxy overview](../../deployment/install/container/haproxy-migration/haproxy-introduction.md)
+- [Migrate from Ambassador to HAProxy](../../deployment/install/container/haproxy-migration/haproxy-migration.md)
 
 ## Digital Asset Management 
 Digital Asset Management (DAM) Extensibility adds capability to support user-defined custom renditions and configure transformations for assets. Updates add options to configure metadata generation specifically for MIME types and their renditions.
-See the [Metadata configuration through DAM Extensibility](https://help.hcltechsw.com/digital-experience/9.5/containerization/configure_dam_Metadata_configuration.html){:target="_blank"}<!-- (../containerization/configure_dam_Metadata_configuration.md)--> Help Center topic for more information.
+See the [Metadata configuration through DAM Extensibility](../../manage_content/digital_assets/configuration/dam_extensibility/configure_dam_Metadata_configuration.md) Help Center topic for more information.
 
 ## Design Studio (Beta)
 
