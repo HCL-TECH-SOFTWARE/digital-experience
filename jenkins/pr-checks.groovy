@@ -15,11 +15,22 @@
 
 pipeline {
     agent {
-        label 'build_docu'
+        label 'doc_pr_check'
     }
 
+    stage("Prepare settings") {
+            steps {
+                script {
+
+                // For manual testing we assign a default variable, will be automatically assigned during PR runs
+                    if (!env.ghprbActualCommit) {
+                        env.ghprbActualCommit = 'main'
+                    }
+                }
+            }
+
     stages {
-        stage("Publish doc") {
+        stage("Build Doc") {
             steps {
                 withCredentials([sshUserPrivateKey(credentialsId: "jenkins-git", keyFileVariable: 'SSH_KEY')]) {
                     // We run a dedicated docker container which will perform all python and mkdocs actions
@@ -29,7 +40,7 @@ pipeline {
                         docker run -d --name doc-pr-check quintana-docker.artifactory.cwp.pnp-hcl.com/dxubi:v1.0.0_8.5-204 /bin/bash -c "mkdir /build && mkdir /root/.ssh && tail -f /dev/null"
                         docker cp ${SSH_KEY} doc-pr-check:/root/.ssh/id_rsa
                         docker cp ${WORKSPACE}/jenkins/helpers/02-pr-checks.sh doc-pr-check:/build
-                        docker exec doc-pr-check /bin/bash /build/02-pr-checks.sh -p main
+                        docker exec doc-pr-check /bin/bash /build/02-pr-checks.sh -p ${ghprbActualCommit}
                     """
                 }
             }
