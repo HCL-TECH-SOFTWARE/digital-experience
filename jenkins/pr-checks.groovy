@@ -29,7 +29,7 @@ pipeline {
                         docker run -d --name doc-builder quintana-docker.artifactory.cwp.pnp-hcl.com/dxubi:v1.0.0_8.5-204 /bin/bash -c "mkdir /build && mkdir /root/.ssh && tail -f /dev/null"
                         docker cp ${SSH_KEY} doc-builder:/root/.ssh/id_rsa
                         docker cp ${WORKSPACE}/jenkins/helpers/* doc-builder:/build
-                        docker exec doc-builder /bin/bash /build/01-publish-doc.sh
+                        docker exec doc-builder /bin/bash /build/02-pr-checks.sh -p main
                     """
                 }
             }

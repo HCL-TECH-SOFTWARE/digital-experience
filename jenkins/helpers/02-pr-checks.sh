@@ -9,6 +9,17 @@
 # * Use, duplication or disclosure restricted by GSA ADP Schedule    *
 # ********************************************************************
 
+# Read arguments
+
+while getopts p: flag
+do
+    case "${flag}" in
+        p) pipeline=${OPTARG};;
+    esac
+done
+
+echo "Pipeline: $pipeline"; 
+
 # Install dependencies
 microdnf install -y --nodocs git zlib-devel make gcc openssl-devel bzip2-devel libffi-devel zlib-devel
 
@@ -38,8 +49,8 @@ ssh-keyscan git.cwp.pnp-hcl.com >> /root/.ssh/known_hosts
 # Perform clone of target repository
 git clone --depth 1 --branch gh-pages git@git.cwp.pnp-hcl.com:CWPdoc/dx-mkdocs.git 
 cd dx-mkdocs
-git fetch origin main
-git switch -c main FETCH_HEAD
+git fetch origin $pipeline
+git switch -c $pipeline FETCH_HEAD
 
-# Perform mkdocs build
+# Build the site
 mkdocs build
