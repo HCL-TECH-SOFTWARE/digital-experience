@@ -18,7 +18,9 @@ pipeline {
         label 'doc_pr_check'
     }
 
-    stage("Prepare settings") {
+
+    stages {
+        stage("Prepare settings") {
             steps {
                 script {
 
@@ -28,8 +30,8 @@ pipeline {
                     }
                 }
             }
+        }
 
-    stages {
         stage("Build Doc") {
             steps {
                 withCredentials([sshUserPrivateKey(credentialsId: "jenkins-git", keyFileVariable: 'SSH_KEY')]) {
