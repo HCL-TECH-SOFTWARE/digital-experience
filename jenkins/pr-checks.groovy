@@ -15,7 +15,7 @@
 
 pipeline {
     agent {
-        label 'doc_pr_check'
+        label 'build_docu'
     }
 
 
