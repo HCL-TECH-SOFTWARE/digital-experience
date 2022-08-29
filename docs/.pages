@@ -5,5 +5,5 @@ nav:
     - deployment
     - build_sites
     - manage_content
-    - extension_options
+    - extend_dx
     - resources
