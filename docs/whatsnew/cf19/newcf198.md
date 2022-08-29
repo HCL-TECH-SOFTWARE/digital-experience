@@ -21,7 +21,7 @@ See the [Design Studio \(Beta\)](../../productfeatures/design_studio/index.md)<
 
 Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to supported container platforms using Helm. Using a Helm Chart deployment can provide administrators more transparency and control in deployment operations. Support for hybrid deployments is provided, enabling to update from HCL DX 9.5 CF197 to CF198 in the Red Hat OpenShift, Microsoft Azure Elastic Kubernetes Service \(AKS\) and Amazon Elastic Kubernetes Service \(EKS\) platforms.
 
-See the [HCL DX 9.5 Helm deployment]((../../deployment/install/container/operator-migration/operator_migration_preparation.md) topic for more information.
+See the [HCL DX 9.5 Helm deployment](../../deployment/install/container/operator-migration/operator_migration_preparation.md) topic for more information.
 
 ## New HCL Digital Experience 9.5 Release Artifacts supporting CICD release processes
 
