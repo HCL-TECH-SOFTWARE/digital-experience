@@ -20,7 +20,7 @@ The multilingual solution is used to author, manage, and publish multilingual co
 The multilingual solution uses a set of extensions that can be used with existing features to author, manage, and publish your multilingual websites.
 
 
-**Related information**  
+<!--- **Related information**  
 
 
 [Content libraries](../site/site_libraries.md)
@@ -29,5 +29,5 @@ The multilingual solution uses a set of extensions that can be used with existin
 
 [Web Content Manager Multilingual Solution API](../wcm/wcm_mls_api.md)
 
-[How to apply the multilingual solution to Content Template sites](../ctc/ctc_deploy_locale.md)
+[How to apply the multilingual solution to Content Template sites](../ctc/ctc_deploy_locale.md) --->
 
