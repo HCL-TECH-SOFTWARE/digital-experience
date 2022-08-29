@@ -24,11 +24,11 @@ pipeline {
                 withCredentials([sshUserPrivateKey(credentialsId: "jenkins-git", keyFileVariable: 'SSH_KEY')]) {
                     // We run a dedicated docker container which will perform all python and mkdocs actions
                     // The SSH Key is passed into the container for git checkout
-                    // The script 01-publish-doc.sh is called and performs all steps
+                    // The script 02-pr-checks.sh is called and performs all steps
                     sh """
                         docker run -d --name doc-pr-check quintana-docker.artifactory.cwp.pnp-hcl.com/dxubi:v1.0.0_8.5-204 /bin/bash -c "mkdir /build && mkdir /root/.ssh && tail -f /dev/null"
                         docker cp ${SSH_KEY} doc-pr-check:/root/.ssh/id_rsa
-                        docker cp ${WORKSPACE}/jenkins/helpers/* doc-pr-check:/build
+                        docker cp ${WORKSPACE}/jenkins/helpers/02-pr-checks.sh doc-pr-check:/build
                         docker exec doc-pr-check /bin/bash /build/02-pr-checks.sh -p main
                     """
                 }
