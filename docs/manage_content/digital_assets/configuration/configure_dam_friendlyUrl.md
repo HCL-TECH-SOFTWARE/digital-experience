@@ -1,6 +1,6 @@
 # Configure Friendly URLs for Digital Asset Management
 
-Optional custom path definition to access the DAM resources using friendly URLs. This will create a new context route as defined in `friendlyUrlContextRoot`. By default, if no value is set for `friendlyUrlContextRoot`, this feature is disabled.
+Optional custom path definition to access the DAM resources using friendly URLs. A new context route is created based on the value defined in `friendlyUrlContextRoot`. By default, this feature is disabled with no value set for `friendlyUrlContextRoot`.
 
 ```yaml
 configuration:
