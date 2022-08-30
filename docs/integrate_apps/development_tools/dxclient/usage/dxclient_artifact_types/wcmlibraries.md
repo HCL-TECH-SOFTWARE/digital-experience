@@ -109,7 +109,7 @@ The `wcm-library-import` command is used to import the WCM libraries from the so
     Ensure that the size of the `zip/tar.gz` file of WCM import is not more than 256MB. This limitation will be addressed in the future release.
 
 !!! note
-    CF206 onwards we are supporting the zip/tag.gz to export and import WCM libraries.
+    CF206 onwards, we are supporting the `zip/tag.gz` file formats to export and import WCM libraries.
 
 !!! important 
     In the Kubernetes environment, timeout will happen after 60 seconds.
