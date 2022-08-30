@@ -1,9 +1,4 @@
----
-id: site_setup
-title: Setting up a website
----
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
+# Setting up a website
 
 
 Setting up a website includes, creating pages, adding navigation, setting up search, and adding content to the site. Themes are used to customize the portal's look-and-feel. Out-of-the-box templates and the site wizard can help you set up your portal site faster. You can add wikis and blogs to your site and let users tag and rate content on your site.
@@ -30,8 +25,6 @@ HCL Digital Experience page editors can use social rendering to feature social d
 Use these tools and features to setup marketing campaigns for your website.
 -   **[HCL Web Content Manager Multilingual Solution](../wcm/wcm_mls.md)**  
 The Web Content Manager Multilingual Solution is a set of tools that are used to manage translated versions of localized and regionalized websites.
--   **[Syndicated Feed Portlet for HCL](../admin-system/ic_syndfeed_features.md)**  
-The Syndicated Feed Portlet for HCL Digital Experience offers enhanced feed subscription and presentation capabilities.
 
 **Table of Contents:**  
 

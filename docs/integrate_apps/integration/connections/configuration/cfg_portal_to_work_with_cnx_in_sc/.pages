@@ -1,0 +1,6 @@
+title: Configuring Portal to work with HCL Connections in SmartCloud for Social Business
+nav:
+    - index.md
+    - known_limitations_sc4sb.md
+    - Establishing SSO between the portal installation and HCL Connections in SmartCloud for Social Business: establishing_sso
+    - config_calls_sc4sb.md

@@ -1,4 +1,4 @@
-# Manage site settings.
+# Manage site settings
 
 -   **[Managing global settings](h_main_global_settings.md)**  
 Define the settings for your portal server. These settings include the default portal language, the first page displayed when a user logs in, the option to set a URL for the Find feature, and what will be displayed when a user is not authorized to view a portlet.

@@ -1,9 +1,12 @@
 title: Site Builder
 nav:
     - index.md
-    - installation
-    - configuration
-    - usage
-    - limitations
-    - troubleshooting
-
+    - Deploying Site Builder: deploying_site_builder
+    - Exporting Site Builder templates to other servers: export_sitebuilder_temp
+    - sitebuilder_issues.md
+    - sitebuilder_overview.md
+    - Installing and removing Site Builder: install_site_builder
+    - Deploying Site Builder: deploy_site_builder
+    - Site development with Site Builder: site_dev_with_sitebuilder
+    - Exporting Site Builder templates to other servers: export_sitebuilder_temp
+    - sitebuilder_issues.md

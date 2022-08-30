@@ -1,0 +1,7 @@
+title: Static content
+nav:
+    - index.md
+    - Creating a static page: creating_static_page
+    - site_static_resources.md
+    - site_dynamic_metadata.md
+    - Including static content pages in your portal: including_static_content_pages

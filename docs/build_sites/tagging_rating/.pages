@@ -1,7 +1,17 @@
-title: Tagging and Rating
+title: Tagging and rating
 nav:
     - index.md
-    - Configuration: configuration
-    - Usage: usage
+    - tag_rate_defn.md
+    - tag_rate_whatsnew.md
+    - How tagging and rating works in the portal: howto_tagging_rating
+    - The tagging and rating user interface: tagging_rating_ui
+    - tag_rate_spa.md
+    - tag_rate_custom_content.md
+    - Federating tags: tag_rate_federation
+    - Configuration reference for tagging and rating: cfg_reference
+    - tag_rate_secy.md
+    - tag_rate_xml.md
+    - Hints and tips for tagging and rating: hints_tips_tag_rate
+    - Extending tagging and rating by using service APIs: dev_tagging_and_rating
 
 

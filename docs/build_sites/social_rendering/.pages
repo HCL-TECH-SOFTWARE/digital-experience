@@ -1,8 +1,12 @@
 title: Social Rendering
 nav:
     - index.md
-    - Installation: installation
-    - Configuration: configuration
-    - Usage: usage
+    - soc_rendr_roadmap.md
+    - Working with lists of social objects: working_with_social_objects
+    - Configuring global settings for social rendering: cfg_global_settings_social_rendering
+    - Administering social lists: administering_social_list
+    - Customizing view definitions for portal site visitors: customizing_view_definitions
+    - soc_rendr_add_widg_2_comm.md
+    - Extending social lists by using the digital data connector: extending_social_lists_using_ddc
 
 
