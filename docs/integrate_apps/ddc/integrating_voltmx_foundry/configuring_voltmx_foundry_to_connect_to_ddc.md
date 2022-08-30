@@ -80,13 +80,18 @@ If you chose **Anonymous App Users** for Operation Security Level, you need to s
     ![](../../../../assets/Credential_Vault.png "Credential Vault Portlet")
 
 
-5. Select **Add a Vault slot**. The window for creating a vault slot is shown. Add a **Vault slot name**. This will be the slot ID thus this must be unique, then select the **Vault Resource**  and **Vault Segment** to where it belongs. And then set the Vault slot as **Shared**, and set the user ID as the **App Key** and password as the  **App Secret**. Then the click **OK** button to save the changes. There should be a message that the vault slot was created successfully.
+5. Select **Add a Vault slot**. The window for creating a vault slot is shown. 
+    a. Add a **Vault slot name**. This becomes the slot identifier \(slot ID\), hence provide a unique name. 
+    b. Select the **Vault Resource**  and **Vault Segment**. 
+    c. Set the Vault slot as **Shared**.
+    d. Set the user ID as the **App Key** and password as the  **App Secret**. 
+    e.  Click **OK** button to save the changes. There should be a message that the vault slot was created successfully.
 
     ![](../../../../assets/Credential_Vault_Fill_Up.png "Creating Credential Vault Slot")
 
 ## Creating Outbound Connection Policy
 
-Since we already have the Credential Vault Slot, we can now configure an outbound connection policy.
+Since we already have the Credential Vault slot, we can now configure an outbound connection policy.
 
 1. Create an xml file on your local machine and modify it according to your needs. For more information, please visit this link [Adding an outbound connection policy](../../../portlets_development/usage/web2_ui/outbound_http_connection/cfg_outbound_http_connections/sample_admin_tasks/outbhttp_cfgsmptsk_add_ob_conn_plcy.md)
 
