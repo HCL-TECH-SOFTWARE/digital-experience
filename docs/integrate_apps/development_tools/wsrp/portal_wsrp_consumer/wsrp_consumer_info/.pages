@@ -1,0 +1,4 @@
+title: Information that the Consumer exchanges with the Producer
+nav:
+    - index.md
+    - wsrpr_cons_chklst.md    - Configuring security on the Consumer portal: cfg_security_consumer_portal

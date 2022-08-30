@@ -1,0 +1,14 @@
+title: Managing themes and skins
+nav:
+    - index.md
+    - h_theme_skin_what_are_themes_and_skins.md
+    - h_theme_skin_add_theme.md
+    - h_theme_skin_edit_theme.md
+    - h_theme_skin_delete_theme.md
+    - h_theme_skin_set_default_theme.md
+    - h_theme_skin_add_skin.md
+    - h_theme_skin_delete_skin.md
+    - h_theme_skin_set_default_skin.md
+    - h_theme_skin_use_custom_themes.md
+    - h_theme_skin_fields.md
+

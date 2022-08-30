@@ -1,6 +1,9 @@
 title: APIs
 nav:
     - index.md
-    - ...
-
-
+    - HCL Experience API: hcl_experience_api
+    - Controller SPI: controller_spi
+    - Model SPI overview: model_spi
+    - Portal Access Control interfaces: portal_access_control_interfaces
+    - User and Group Management: puma_spi
+    - URL generation in HCL Portal: url_generation

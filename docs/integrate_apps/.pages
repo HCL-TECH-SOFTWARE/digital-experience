@@ -1,10 +1,10 @@
-title: Integrate Applications
+title: Extend DX
 nav:
     - index.md
-    - integration
-    - development_tools
-    - ddc
-    - portlets_development
+    - Integrating applications: integration
+    - Development tools: development_tools
+    - Digital Data Connector: ddc
+    - Developing portlets: portlets_development
     - apis
-    - screenflow
-    - paa
+    - Screen Flow Manager: screenflow
+    - Developing Portal Application Archive: paa

@@ -1,7 +1,11 @@
-title: Web Service for Remote Portlet
+title: WSRP services
 nav:
-    - Installation: installation
-    - Configuration: configuration
-    - Usage: usage
-    - Limitations: limitations
+    - index.md
+    - wsrpc_new.md
+    - Learning about WSRP: learning_wsrp
+    - Planning for WSRP: planning_wsrp
+    - Using your portal as a WSRP Producer: portal_wsrp_producer
+    - Using your portal as a WSRP Consumer: portal_wsrp_consumer
+    - Using handlers for WSRP web services: handlers_wsrp_webservices
+    - Reference for using WSRP with the portal: reference_for_using_wsrp_portal
 

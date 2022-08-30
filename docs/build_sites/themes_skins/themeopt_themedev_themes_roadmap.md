@@ -1,8 +1,4 @@
----
-id: themeopt_themedev_themes_roadmap
-title: Roadmap - Creating and customizing themes \| HCL Digital Experience
----
-import useBaseUrl from '@docusaurus/useBaseUrl';
+# Roadmap - Creating and customizing themes \| HCL Digital Experience
 
 
 

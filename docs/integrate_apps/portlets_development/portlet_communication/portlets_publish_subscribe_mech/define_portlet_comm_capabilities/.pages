@@ -1,0 +1,6 @@
+title: Define portlet communication capabilities
+nav:
+    - index.md
+    - pltcom_events.md
+    - JSR 168 HCL extension for cooperative portlets: jsr168_hcl_ext_coop_portlets
+    - pltcom_interop.md

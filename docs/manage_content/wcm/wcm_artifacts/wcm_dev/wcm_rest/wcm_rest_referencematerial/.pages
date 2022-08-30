@@ -1,0 +1,6 @@
+title: Reference material for the Web Content Manager REST service
+nav:
+    - index.md
+    - wcm_rest_response_codes.md    - wcm_rest_link_relations.md    - wcm_rest_media_types.md    - wcm_rest_item_types.md
+
+

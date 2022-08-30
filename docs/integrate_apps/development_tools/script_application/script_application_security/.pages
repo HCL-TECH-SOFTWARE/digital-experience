@@ -1,0 +1,7 @@
+title: Script Application security overview
+nav:
+    - index.md
+    - sp_security_upgrade.md
+    - Editor and reviewer Access to the Script Application Library and Script Applications Site Area: access_to_script_app_lib_sitearea
+    - import_security.md
+    - import_export_config.md

@@ -1,0 +1,6 @@
+title: Triggering communication
+nav:
+    - index.md
+    - Communication with persistent wires: communication_persistent_wires
+    - pltcom_pubsub_dyn_menu.md
+    - pltcom_event_brkr.md

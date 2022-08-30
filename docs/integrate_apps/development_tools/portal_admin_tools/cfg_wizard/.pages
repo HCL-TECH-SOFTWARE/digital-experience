@@ -1,7 +1,5 @@
 title: Configuration Wizard
 nav:
-    - Installation: installation
-    - Configuration: configuration
-    - Usage: usage
-
-
+    - index.md
+    - configuration
+    - usage

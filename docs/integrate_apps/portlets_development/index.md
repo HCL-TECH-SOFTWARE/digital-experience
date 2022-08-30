@@ -30,8 +30,6 @@ To create a simple portlet, you must write the portlet code, compile Java source
 The Java Portlet Specification addresses the requirements of aggregation, personalization, presentation, and security for portlets running in a portal environment.
 -   **[Portlet services](../dev-portlet/wpsptservice.md)**  
 Portlet services are used to provide common functionality to portlets. Each portlet service has its own service-specific interface for the functionality that it offers.
--   **[Struts Portlet Framework](../dev-portlet/wpsstruts.md)**  
-Struts are no longer supported in HCL Digital Experience
 -   **[Web 2.0 user interface features](../dev-portlet/w2_ovu.md)**  
 Learn about portal features that pertain to the Web 2.0 generation type of Web user interface.
 -   **[Client-side aggregation reference](../dev-portlet/csa2r.md)**  

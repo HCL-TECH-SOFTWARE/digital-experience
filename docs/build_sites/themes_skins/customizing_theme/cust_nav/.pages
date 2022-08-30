@@ -1,0 +1,7 @@
+title: Customizing navigation
+nav:
+    - index.md
+    - themeopt_cust_nav_custnavspot.md
+    - themeopt_cust_nav_addnav.md
+    - themeopt_cust_nav_removenav.md
+    - Side navigation: side_nav

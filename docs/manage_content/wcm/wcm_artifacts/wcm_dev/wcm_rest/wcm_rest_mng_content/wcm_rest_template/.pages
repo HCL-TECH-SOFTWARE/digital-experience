@@ -1,0 +1,5 @@
+title: How to use REST with authoring templates
+nav:
+    - index.md
+    - wcm_rest_elem_set_cont_temp.md    - wcm_rest_sitearea_template    - wcm_rest_content_template
+

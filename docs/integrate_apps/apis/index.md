@@ -62,3 +62,9 @@ Developers can enhance and extend the tagging and rating features of the portal.
 
 **[REST service for Web Content Manager](../wcm/wcm_rest.md)**  
 Application developers can use Representational State Transfer \(REST\) services to work with Web Content Manager. The REST service for Web Content Manager provides authoring access to content items and elements. The service follows the Atom Publication Protocol, and Atom feeds, and entries are accessible in XML \(application/atom+xml\) and JSON \(application/json\) format.
+
+**[API for accessing Portlet load monitoring data](../build_sites/site_analytics/portled_load_monitoring/plmr_api.md)**  
+Portlet load monitoring provides an API for accessing the monitoring data. You can use this API to write custom code to access that data.
+
+**[Personalization APIs](../manage_content/pzn/pzn_apis/index.md)**  
+Portlet load monitoring provides an API for accessing the monitoring data. You can use this API to write custom code to access that data.

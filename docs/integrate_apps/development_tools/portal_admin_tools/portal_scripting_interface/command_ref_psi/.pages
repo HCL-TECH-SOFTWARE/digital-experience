@@ -1,0 +1,19 @@
+title: Command reference for the Portal Scripting Interface
+nav:
+    - index.md
+    - scrpt_beans.md
+    - portal_objects.md
+    - tree_nav.md
+    - search.md
+    - Portal Scripting Interface Attributes: attributes
+    - organization.md
+    - Content hierarchy accessed through Content bean: content_hierarchy
+    - Component hierarchy: cmpnt_hierarchy
+    - Portlet repository: portlet_repo
+    - Themes and Skins: themes_and_skins
+    - Portal Access Control: portal_access_control
+    - Portal authentication: portal_auth
+    - examples.md
+    - troubleshooting.md
+    - prop_file.md
+    - index_paths.md

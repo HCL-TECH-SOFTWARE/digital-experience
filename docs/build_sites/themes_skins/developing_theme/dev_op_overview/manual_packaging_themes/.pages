@@ -1,0 +1,8 @@
+title: Manually packaging themes for deployment
+nav:
+    - index.md
+    - themeopt_move_repack_addstatic.md
+    - themeopt_move_repack_script.md
+    - themeopt_move_repack_runtime.md
+    - themeopt_move_repack_test.md
+    - themeopt_move_expfilestore.md
