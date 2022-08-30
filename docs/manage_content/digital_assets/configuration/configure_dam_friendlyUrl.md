@@ -16,7 +16,7 @@ configuration:
     friendlyUrlContextRoot: "/assets"
 ```
 
-When the context root is set as `/assets` it will make the  Digital Asset Management assets accessible at `/assets/{collection name/unique id}/{asset name/unique id}`.
+When the context root is set as `/assets`, it will make the  DAM assets accessible at `/assets/{collection name/unique id}/{asset name/unique id}`.
 
 The following optional query parameters can be used with the friendly URLs:
 
