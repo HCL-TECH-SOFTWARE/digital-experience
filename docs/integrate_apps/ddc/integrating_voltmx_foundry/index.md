@@ -59,6 +59,8 @@ This section describes how to define the set of attributes available in the bean
 
     ![](../../../../assets/WAS_Save_In_Master_Configuration.png "Save all the changes in master configuration")
 
+7. Restart WAS server.
+
 ## WCM presentation components
 
 You may create your components under a new library with default items such as site area and workflow. Once the library is ready (new or existing), you will have to create WCM artifacts under 4 folders: Content, Components, Authoring Templates and Presentation Templates.
