@@ -1,12 +1,10 @@
 # Pages
 
-
-
 A page is an organization element that contains portlets. Since version 8.0, pages are stored in the Portal Site web content library and managed by HCL Web Content Manager. Pages are stored as content in the library. By managing portal pages from within Web Content Manager, you can apply features like workflow, version control, and syndication to portal pages.
 
 In the example wireframe, the home page portion is highlighted. The page contains five portlets. Most of the portlets render content by using the Web Content Viewer portlet. The Member Login portlet is providing access to the LDAP user registry for member authentication.
 
-![Wireframe diagram of a website with the page portion highlighted.](../images/wireframe_page.jpg "Wireframe with a page highlighted. ")
+![Wireframe diagram of a website with the page portion highlighted.](../../../../images/wireframe_page.jpg)
 
 ## Pages and navigation
 
@@ -78,12 +76,15 @@ By default, the display name of the portal page site area is based on the title 
 
 The operations that you can do on the portal page site areas in the authoring portlet are restricted. You can set Web Content Manager properties in the authoring portlet, and you can also move portal pages through the authoring portlet. But you cannot change the name, title, or description of Portal pages. For changing the title or description, you must use the portal user interface.
 
-**Note:** If you delete a portal page, the portal page site area is deleted from the web content library. If the portal page site area contains any other site areas or content items, they are also deleted.
+!!! note
+    If you delete a portal page, the portal page site area is deleted from the web content library. If the portal page site area contains any other site areas or content items, they are also deleted.
 
 ## Pages and portal page site areas
 
 The portal page site area is a special site area. In addition, to the usual Web Content Manager data site area pages contain an XML document that represents the portal page in the portal release domain database. This XML document is updated whenever a new version of the page is created or during a JCR import.
 
+
+<!--- 
 -   **[System content associations](../wcm/wcm_mngpages_sysmapping.md)**  
 System content associations are used to associate a portal page with its corresponding artifacts in HCL Web Content Manager. A system content association is an extension of the standard content association.
 -   **[Best practices for pages](../wcm/wcm_mngpages_bestpractice.md)**  
@@ -91,5 +92,5 @@ Use these tips and guidelines to develop and deploy pages more effectively.
 -   **[Troubleshooting pages](../wcm/wcm_mngpages_trouble.md)**  
 When you work with pages, you might encounter problems that are related to projects, access rights, or other issues.
 -   **[Known issues for pages](../wcm/wcm_mngpages_limits.md)**  
-You can review known issues for pages.
+You can review known issues for pages. --->
 

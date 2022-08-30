@@ -1,7 +1,5 @@
 # Social Content
 
-
-
 Integrating social content into your digital experiences adds to the rich user experience. Capabilities such as community pages and HCL Connections portlets make that integration possible.
 
 Integrate HCL Connections into your site using community pages and HCL Connections Portlets.
