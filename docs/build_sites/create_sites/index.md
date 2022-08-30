@@ -3,19 +3,20 @@
 
 Setting up a website includes, creating pages, adding navigation, setting up search, and adding content to the site. Themes are used to customize the portal's look-and-feel. Out-of-the-box templates and the site wizard can help you set up your portal site faster. You can add wikis and blogs to your site and let users tag and rate content on your site.
 
--   **[Website building blocks](site_overview.md)**  
+<!--- 
+-   **[Website building blocks](../create_sites/website_building_blocks/index.md)**  
 Unless you are familiar with the HCL Digital Experience and HCL Web Content Manager website model, review the building blocks. Building blocks are the different parts that make up the website framework, such as pages, navigation, themes, content, content libraries, and more.
--   **[Creating reusable assets](site_assets.md)**  
+-   **[Creating reusable assets](../create_sites/create_reusable_assets/index.md)**  
 Use reusable assets to store or generate content that is used in more than one place in your website.
--   **[Building the website](site_build_parent.md)**  
+-   **[Building the website](../create_sites/building_website/index.md)**  
 Building a website includes creating libraries, pages, and web content. You also create links and navigation to your content, and assign access to different types of users, such as editors and viewers.
--   **[Authoring tools](site_auth_tools.md)**  
+-   **[Authoring tools](../create_sites/authoring_tools/index.md)**  
 There are multiple ways to create and manage content including using the site toolbar, inline editing, and the authoring portlet.
--   **[Preparing for content authors](site_prep_toolbar.md)**  
+-   **[Preparing for content authors](../create_sites/site_prep_content_author/index.md)**  
 Before content authors can create content you must prepare your site to be ready for content creation, including preparing the site toolbar, enabling inline editing, and creating templates.
--   **[Developing and managing content](site_dev_man.md)**  
+-   **[Developing and managing content](../create_sites/developing_managing_content/index.md)**  
 Use these tools and processes to develop and manage your website.
--   **[Delivering web content](../wcm/wcm_cms_delivery_system.md)**  
+-   **[Delivering web content](../create_sites/)**  
  The type of delivery method you use to deliver web content to your viewers depend on the type of content that is being delivered, and the type of viewers your website is intended for.
 -   **[Vanity URLs](../wcm/vanity_urls.md)**  
 You can associate vanity URLs with portal pages and labels. Vanity URLs are short URLs that people can easily remember. They are shorter than full HCL Portal URLs. They are sometimes also called marketing URLs. You can publish vanity URLs for marketing campaigns through different channels, such as email or print. This way, you can use vanity URLs to direct customers to a specific portal page or content item. Interested site visitors who want to view your campaign can then remember or copy the short vanity URL and type it into the browser address field.
@@ -24,8 +25,7 @@ HCL Digital Experience page editors can use social rendering to feature social d
 -   **[Setting up marketing campaigns](site_market.md)**  
 Use these tools and features to setup marketing campaigns for your website.
 -   **[HCL Web Content Manager Multilingual Solution](../wcm/wcm_mls.md)**  
-The Web Content Manager Multilingual Solution is a set of tools that are used to manage translated versions of localized and regionalized websites.
+The Web Content Manager Multilingual Solution is a set of tools that are used to manage translated versions of localized and regionalized websites. --->
 
-**Table of Contents:**  
 
 
