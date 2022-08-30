@@ -98,7 +98,6 @@ HAProxy is deployed with a `LoadBalancer` type service to handle the incoming tr
 |`serviceNodePort`|This value is used to select the node port exposed by the HAProxy service. Defaults to a port selected by Kubernetes if no value is set. | Number |`null`|
 |`strictTransportSecurity.enabled`|This value is used for HTTP Strict Transport Security (HSTS) to determine if it should be `enabled` | Boolean |`true`|
 |`strictTransportSecurity.maxAge`|This value is used to set for how long the browser should remember the HSTS rule | Number |`31536000`|
-|`customDamAssetPath`| Optional custom path definition to access the DAM resources. This will add a rewrite to HAProxy and make the assets accessible at the custom path. If no path is set, the rewrite is disabled. <br/><br/> Example: `/assets` will make the assets accessible at `/assets/{collection name/id}/{asset name/id}`.<br/> The following query parameters can be used with the custom path: <br/><br/> `binary`: true/false - retrieves the asset file as a binary if true or the metadata if false <br/> `rendition`: "Original"/"Desktop"/"Tablet"/"Smartphone"/"{custom rendition}" - retrieves the specified rendition of the asset <br/> `version`: (Version number or id) - retrieves the specified version of the asset | String |`""`|
 
 !!!note
     If `ssl` is set to `true`, HAProxy will use the certificate that is supplied as a secret in `networking.tlsCertSecret`.
@@ -119,7 +118,6 @@ networking:
     strictTransportSecurity:
       enabled: true
       maxAge: 31536000
-    customDamAssetPath: ""
 ```
   
 This configuration is helpful for those who want to use a custom `Ingress Controller` to expose the service in a compatible way. Even then, HAProxy will still be active. The `Ingress Controller` will handle the incoming traffic and then route them to the HAProxy service.
