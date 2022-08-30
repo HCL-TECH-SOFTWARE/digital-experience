@@ -59,6 +59,6 @@ To prevent this automatic publishing, you can complete the following steps:
 
 ## Syndication and versioning
 
--   The versioning feature of Web Content Manager also applies to pages and is used to run different tasks with page versions. Versioning tasks include saving, deleting, and restoring versions. The Page Properties window lists the versions of the page on the **Advanced** tab. However, if you create a page and syndicate the page for the first time, the version information is empty when you view the page properties on the delivery server. After subsequent syndication operations, the version information is listed.
+The versioning feature of Web Content Manager also applies to pages and is used to run different tasks with page versions. Versioning tasks include saving, deleting, and restoring versions. The Page Properties window lists the versions of the page on the **Advanced** tab. However, if you create a page and syndicate the page for the first time, the version information is empty when you view the page properties on the delivery server. After subsequent syndication operations, the version information is listed.
 
 

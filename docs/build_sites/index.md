@@ -14,7 +14,7 @@ You can create themes using modules to contribute to separate areas of pages to 
 Practitioner Studio is a newly designed user experience for HCL Digital Experience. Please see the following pages to understand how the new navigation is organized.
 
 
-## [Site Manager](../build_sites/site_toolbar_and_site_manager/index.md)
+## [Site Manager](../build_sites/portal_settings/index.md)
 Site toolbar and site manager provide quick access to common content author tools as well as a complete view of your site's navigation. Without leaving the context of your website, content authors can create and modify pages and content items, create vanity URLs for promotions, and much more.
 
 ## [Site Builder](../build_sites/sitebuilder/index.md)

@@ -2,15 +2,13 @@
 id: site_portlets
 title: Portlets
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
-
+<!--- import useBaseUrl from '@docusaurus/useBaseUrl'; --->
 
 Portlets are small applications that are independently developed, deployed, managed, and displayed. After the portlet is deployed, you can use it multiple times on different pages.
 
 Almost everything on a page is rendered through a portlet. The portlet can provide access to enterprise data, content that is stored in HCL Web Content Manager, and external content from third-party sources. In the following image, there are five portlets on the page, but only one is highlighted. The highlighted Member Login Portlet is providing access to the enterprise LDAP user registry to enable members to authenticate.
 
-![Wireframe with one portlet highlighted. There are five portlets on the page.](../images/wireframe_portlet.jpg "Wireframe of a website with portlet highlighted")
+![Wireframe with one portlet highlighted. There are five portlets on the page.](../../../images/wireframe_portlet.jpg)
 
 ## Application palette
 

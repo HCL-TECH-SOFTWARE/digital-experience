@@ -1,42 +1,42 @@
 # Configuring Volt MX Foundry to connect to Digital Experience Digital Data Connector
 
-This section provides the steps on how to configure Volt MX Foundry to be able to connect via DX DDC.
+This section provides the steps on how to configure Volt MX Foundry to connect via DX DDC.
 
 ## Prerequisite
 
-You must have access to the Volt MX Foundry Console via Volt MX Cloud or On-Premise instance. You may consult this link for the [cloud service](https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/Accessing_VoltMX_MBaaS_Portal.html) and [on-premise service](https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/How_to_access_VoltMX_Foundry_Portal_on-Prem.html). In this sample, we will use the cloud service that Volt MX offers.
+You must have access to the Volt MX Foundry Console via Volt MX Cloud or On-Premise instance. For more information, refer to the [Volt MX  cloud service](https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/Accessing_VoltMX_MBaaS_Portal.html) and [Volt MX on-premise service](https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/How_to_access_VoltMX_Foundry_Portal_on-Prem.html) documentation. In this sample, we will use the cloud service that Volt MX offers.
 
 ## Create new integration service with Volt MX Foundry
 
-Follow the steps below to use the new integration service with Volt MX Foundry cloud service:
+Perform the following steps to use the new integration service with Volt MX Foundry cloud service:
 
-1.  Go to [https://manage.hclvoltmx.com](https://manage.hclvoltmx.com) to access paid cloud resources, or  [https://manage.demo-hclvoltmx.com](https://manage.demo-hclvoltmx.com) to access your trial environment.
+1.  Go to [https://manage.hclvoltmx.com](https://manage.hclvoltmx.com) to access paid cloud resources or [https://manage.demo-hclvoltmx.com](https://manage.demo-hclvoltmx.com) to access your trial environment.
 
     ![](../../../../assets/Volt_MX_Foundry_Login_Screen.png "Log in to Volt MX Foundry Cloud Service")
 
-2.  Select **Apps** sidenav. Then, click **Add New**.
+2.  Click the **Apps** icon, and then click **Add New**.
 
     ![](../../../../assets/Volt_MX_Foundry_Add_New_Apps.png "Create new app from Volt Foundry Portal")
 
-3.  Create a new API endpoint via the **Integration Service**. Then, click **Integration**, then **Configure New**.
+3.  Create a new API endpoint via **Integration Service**. Click **Integration**, and then click **Configure New**.
 
     ![](../../../../assets/Volt_MX_Foundry_Create_Integration.png "Create new API from Integration Service")
 
-4.  Configure the service definition. Enter a **Name**, then select **JSON** as the **Service Type** and enter the **Base URL**. Then click **Save & Add Operation**
+4.  Configure the service definition. Enter a **Name**, then select **JSON** as the **Service Type**, and enter the **Base URL**. Click **Save & Add Operation**.
 
     ![](../../../../assets/Volt_MX_Foundry_Service_Definitions.png "Fill up the Service Definition")
 
 
-5.  Add an **Operation** for the service that we created. First is enter a **Name**, then under **Operation Security Level**, select **Anonymous App Users** or **Public** since it's the only option right now that is supported in DDC, and last, you can modify the **Target URL** if the URL needs modification. If you include a parameter in the Target URL, you must define it in the **Request Input**, as shown in the example below. Then in the **Advance** section, click **Front End API**. Under **Resource Method**, select **GET** since it's the only method currently supported by the DDC generic JSON plugin.
+5.  Add an **Operation** for the service that we created. First, enter a **Name**, then under **Operation Security Level**, select **Anonymous App Users** or **Public** since it is the only option right now that is supported in DDC. You can modify the **Target URL** if the URL needs modification. If you include a parameter in the Target URL, you must define it in the **Request Input**, as shown in the example below. Then in the **Advance** section, click **Front End API**. Under **Resource Method**, select **GET** since it's the only method currently supported by the DDC generic JSON plugin.
 
     ![](../../../../assets/Volt_MX_Foundry_Add_Operation.png "Add Operation for the Service")
 
-6. Adding **Response Output**. Click the **Response Output** tab, then click **Add Parameter**. After clicking, a row will appear on the table. Add the **Name**, then the **Path** or the JSON Path. The path is based on the response of the target URL you define in Service Definition. Let's try the service by clicking **Save And Fetch Response** and if everything is okay, then click **Save Operation**.
+6. Adding **Response Output**. Click the **Response Output** tab, then click **Add Parameter**. After clicking, a row will appear on the table. Add the **Name**, then the **Path** or the JSON Path. The path is based on the response of the target URL you define in Service Definition. Try the service by clicking **Save And Fetch Response**. If everything looks fine, then click **Save Operation**.
 
     ![](../../../../assets/Volt_MX_Foundry_Response_Output_And_Testing.png "Add JSON Path and Testing the Service")
 
 !!!note
-    You do not need to map all the responses in the  **Response Output** and only map what you need. Make the response output flat as possible, as shown in the sample above.
+    You do not need to map all the responses in the  **Response Output** and can only map what you need. Make the response output flat as possible, as shown in the sample above.
 
 ## Publish and Test integration service with Volt MX Foundry
 
@@ -44,15 +44,15 @@ Follow the steps below to use the new integration service with Volt MX Foundry c
 
     ![](../../../../assets/Volt_MX_Foundry_Publish.png "Publishing the Integration Service")
 
-2. Once the App is published, we can now test the API endpoint by using **Developer Portals**. Click on **Developer Portals** in the sidenav then click the on link where your environment is located. This will open a new tab in your browser.
+2. Once the App is published, you can now test the API endpoint by using **Developer Portals**. Click **Developer Portals** icon on the left side, then click on the link where your environment is located. This will open a new tab in your browser.
 
     ![](../../../../assets/Volt_MX_Foundry_Developer_Portals.png "Accesing the Developer Portals")
 
-3. View the endpoint we created. On the Developer Portals, click **API**, then under the App you created, there is a dropdown button. Click the **View** link on the integration service you have created. This will redirect you to the Swagger UI Page where you can try your Endpoint.
+3. View the endpoint we created. On the Developer Portals, click **API**, then under the App you created, there is a dropdown button. Click the **View** link on the integration service you have created. This will redirect you to the Swagger UI page where you can try your Endpoint.
 
     ![](../../../../assets/Volt_MX_Foundry_View_The_Endpoint.png "Viewing the Endpoint we have created")
 
-4. Test the endpoint we created. Before we test the endpoint we created, we must Authorize the call since we chose **Anonymous App Users** during the creation of the operation. Click the **Authorize** button and put in the username field the **App Key** and in the password field the **App Secret**. Both values can be found on the swagger page. On the swagger page, we will see the service that we created, then click the dropdown beside it, then click the **Try Out** button. Once all the fields are filled up, you can now execute the API. There should be a response when everything is set up properly.
+4. Test the endpoint that you created. Before testing the endpoint, you must authorize the call since you chose **Anonymous App Users** during the creation of the operation. Click the **Authorize** button and put in the username field the **App Key** and in the password field the **App Secret**. Both values can be found on the Swagger page. On the Swagger page, you will see the service that you created, then click the dropdown beside it, then click the **Try Out** button. Once all the fields are filled up, you can now execute the API. There should be a response when everything is set up properly.
 
     ![](../../../../assets/Volt_MX_Foundry_Executing_API.png "Executing the API")
 
@@ -61,7 +61,7 @@ Follow the steps below to use the new integration service with Volt MX Foundry c
 
 ## Creating Credential Vault Slot for the Volt MX Foundry Endpoint
 
-If we chose **Anonymous App Users** for Operation Security Level we need to store the **App Key** and **App Secret** in Digital Experience. We can achieve this by using the Credential Vault. Below are the steps we need to take.
+If you chose **Anonymous App Users** for Operation Security Level, you need to store the **App Key** and **App Secret** in Digital Experience. You can achieve this by using the Credential Vault. Perform the following steps:
 
 1. We first need to get the values for **App Key** and **App Secret**. We can get those values in Volt MX Foundry by going to **Apps**, then selecting the App that we have created, then clicking the **Publish** tab, and then clicking the **App Key** icon. A dialog box should appear.
 
@@ -80,13 +80,18 @@ If we chose **Anonymous App Users** for Operation Security Level we need to stor
     ![](../../../../assets/Credential_Vault.png "Credential Vault Portlet")
 
 
-5. Select **Add a Vault slot**. The window for creating a vault slot is shown. Add a **Vault slot name**. This will be the slot ID thus this must be unique, then select the **Vault Resource**  and **Vault Segment** to where it belongs. And then set the Vault slot as **Shared**, and set the user ID as the **App Key** and password as the  **App Secret**. Then the click **OK** button to save the changes. There should be a message that the vault slot was created successfully.
+5. Select **Add a Vault slot**. The window for creating a vault slot is shown. 
+    a. Add a **Vault slot name**. This becomes the slot identifier \(slot ID\), hence provide a unique name. 
+    b. Select the **Vault Resource**  and **Vault Segment**. 
+    c. Set the Vault slot as **Shared**.
+    d. Set the user ID as the **App Key** and password as the  **App Secret**. 
+    e.  Click **OK** button to save the changes. There should be a message that the vault slot was created successfully.
 
     ![](../../../../assets/Credential_Vault_Fill_Up.png "Creating Credential Vault Slot")
 
 ## Creating Outbound Connection Policy
 
-Since we already have the Credential Vault Slot, we can now configure an outbound connection policy.
+Since we already have the Credential Vault slot, we can now configure an outbound connection policy.
 
 1. Create an xml file on your local machine and modify it according to your needs. For more information, please visit this link [Adding an outbound connection policy](../../../portlets_development/usage/web2_ui/outbound_http_connection/cfg_outbound_http_connections/sample_admin_tasks/outbhttp_cfgsmptsk_add_ob_conn_plcy.md)
 
@@ -165,24 +170,24 @@ Steps to add the target URL and Certificate are as follows:
 
     ![](../../../../assets/WAS_Save_In_Master_Configuration.png "Save changes in master configuration")
 
-**if the external data source URI uses https, proceed below:**
+**if the external data source URI uses https, perform the following steps:**
 
-1. Go back to the sidenav, click on `Security` Then, click `SSL certificate and key management` then `Key stores and certificates`
+1. Go back to the side navigation, and click `Security`. Then, click `SSL certificate and key management` then `Key stores and certificates`
 
     ![](../../../../assets/WAS_Adding_Security_Certificate.png "Key stores and certificates")
 
-2. Click on `NodeDefaultTrustStore`.
+2. Click `NodeDefaultTrustStore`.
 
     ![](../../../../assets/WAS_Default_Trust.png "Default trust store for dockerNode")
 
-3. Click on `Signer certificates` and add your external URI's certificate by clicking on `Retrieve from port`.
+3. Click `Signer certificates` and add your external URI certificate by clicking on `Retrieve from port`.
 
     ![](../../../../assets/WAS_Retrieve_From_Port.png "Manages signer certificates in key stores.")
 
-4. Enter the host, alias and port 443 and click on `Retrieve signer information`.
+4. Enter the host, alias, and port 443, and click `Retrieve signer information`.
 
     ![](../../../../assets/WAS_Retrieve_Signer_Information.png "Makes a test connection to a Secure Sockets Layer (SSL) port and retrieves the signer from the server during the handshake.")
 
-5. Review and save the changes in master configuration.
+5. Review and save the changes in the master configuration.
 
     ![](../../../../assets/WAS_Save_In_Master_Configuration.png "Save in master configuration")
