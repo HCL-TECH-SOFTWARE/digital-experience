@@ -24,9 +24,9 @@ Identify a name for your namespace and create it using the following syntax:
     metadata:
         name: my-namespace
         annotations:
-        openshift.io/sa.scc.mcs: "s0:c24,c4"
-        openshift.io/sa.scc.supplemental-groups: "1001/10000"
-        openshift.io/sa.scc.uid-range: "1000/10000"
+            openshift.io/sa.scc.mcs: "s0:c24,c4"
+            openshift.io/sa.scc.supplemental-groups: "1001/10000"
+            openshift.io/sa.scc.uid-range: "1000/10000"
     ```
 
     **OpenShift client**
