@@ -21,7 +21,6 @@ Use the CTC Design Translations plug-in to reference translations that are store
     ```
 
 
-**Parent topic:**[Plug-ins for Content Template](../ctc/ctc_arch_plugins_auth_branch_copy.md)
 
 **Related information**  
 

@@ -43,5 +43,4 @@ Updates to address Content Template 4.0 defects plus performance improvements ha
 
 Documentation for the assets shipped with Content Template has been added, including detailed documentation for each page template and portlet used by Content Template.
 
-**Parent topic:**[Content Template overview](../ctc/ctc_overview.md)
 

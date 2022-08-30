@@ -1,0 +1,6 @@
+title: Exporting Site Builder templates to other servers
+nav:
+    - index.md
+    - sitebuilder_temp_dist_man.md
+    - sitebuilder_temp_dist_vp.md
+    - Exporting a Site Builder template to a file: exporting_sitebuilder_to_file

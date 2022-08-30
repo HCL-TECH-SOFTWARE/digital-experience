@@ -33,5 +33,4 @@ You should read the Web Content Manager Multilingual Solution documentation befo
 
 Now that Multilingual Solution is installed, Content Template contains multilingual forms and you have what you need to create a multilingual site.
 
-**Parent topic:**[How to apply the multilingual solution to Content Template sites](../ctc/ctc_deploy_locale.md)
 

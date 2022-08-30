@@ -100,5 +100,4 @@ Find solutions to problems that involve navigation and content on pages.
     This issue can happen in Content Template when a placeholder tag is used to render links. A URLCmpnt tag must be used instead.
 
 
-**Parent topic:**[Troubleshooting Content Template sites](../ctc/ctc_trouble_overview.md)
 

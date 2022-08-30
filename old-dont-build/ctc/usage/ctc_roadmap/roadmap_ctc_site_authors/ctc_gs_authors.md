@@ -15,5 +15,4 @@ All of the Content Template Catalog page templates specify the page parameter ib
 -   **[How to create and edit content](../ctc/ctc_arch_inline.md)**  
 The Content Template Catalog templates have three types of inline content editing built into them. The Content Template theme extensions modify the inline page editing experience too.
 
-**Parent topic:**[Roadmaps for Content Template Catalog](../ctc/ctc_gs.md)
 

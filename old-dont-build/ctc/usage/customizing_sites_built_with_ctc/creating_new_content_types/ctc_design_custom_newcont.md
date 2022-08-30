@@ -9,5 +9,4 @@ Presentation templates determine the structure of each web page in your site and
 -   **[Creating a page template](../ctc/ctc_design_custom_newcont_page.md)**  
 If you need to create new components because you need to work with different data or different queries, you will probably want to create page templates for displaying the new content types along with existing content types.
 
-**Parent topic:**[Customizing sites built with Content Template](../ctc/ctc_design_custom.md)
 

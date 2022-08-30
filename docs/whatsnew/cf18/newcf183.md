@@ -8,35 +8,35 @@ You can access product software at [HCL Software Licensing Portal](https://www.
 
 You can access the latest software requirements and updates that support HCL Digital Experience solutions from the HCL Support pages topic: [HCL Digital Experience V9.5, V9.0, and V8.5 detailed system requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03).
 
-## **Deploy HCL DX 9.5 Container CF182 or higher to Microsoft Azure Kubernetes Service \(AKS\)**
+## Deploy HCL DX 9.5 Container CF182 or higher to Microsoft Azure Kubernetes Service \(AKS\)
 
-Learn how to deploy HCL Digital Experience \(DX\) 9.5 CF182 and higher container releases along with Ambassador to Kubernetes, as verified in Microsoft Azure Kubernetes Service \(AKS\). See the HCL Digital Experience 9.5 [Deployment](https://help.hcltechsw.com/digital-experience/9.5/containerization/deployment.html){:target="_blank"}<!-- (../containerization/deployment.md) --> and [Deploy HCL Digital Experience 9.5 Container to Microsoft Azure Kubernetes Service \(AKS\)](https://help.hcltechsw.com/digital-experience/9.5/containerization/azure_aks.html){:target="_blank"}<!-- (../containerization/azure_aks.md) --> topics for more information.
+Learn how to deploy HCL Digital Experience \(DX\) 9.5 CF182 and higher container releases along with Ambassador to Kubernetes, as verified in Microsoft Azure Kubernetes Service \(AKS\). See the HCL Digital Experience 9.5 [Deployment](../../get_started/architecture_overview/kubernetes_deployment/index.md) and [Deploy HCL Digital Experience 9.5 Container to Microsoft Azure Kubernetes Service \(AKS\)](https://help.hcltechsw.com/digital-experience/9.5/containerization/azure_aks.html){:target="_blank"}<!-- (../containerization/azure_aks.md) --> topics for more information.
 
 ## Web Content Manager Lock/Unlock API
 
-The Web Content Manager Lock/Unlock API lets you lock and unlock WCM content components, authoring templates, and item. It can also extend the WCM Query API. See the [**Web Content Manager Lock/Unlock AP**I](https://help.hcltechsw.com/digital-experience/9.5/wcm/wcm_REST_web_content_manager_lock_unlock_api.html){:target="_blank"}<!-- (../wcm/wcm_REST_web_content_manager_lock_unlock_api.md) --> topic for more information.
+The Web Content Manager Lock/Unlock API lets you lock and unlock WCM content components, authoring templates, and item. It can also extend the WCM Query API. See the [Web Content Manager Lock/Unlock API](../../manage_content/wcm/usage/wcm_dev/wcm_rest/wcm_REST_web_content_manager_lock_unlock_api.md) topic for more information.
 
 ## Content Template Create/Update Option Element Selection API
 
-The Web Content Manager Create/Update Option Element Selection API lets you create or update an Option Selection Element in a Content Template. See the [**Create or update an Option Selection Element**](https://help.hcltechsw.com/digital-experience/9.5/wcm/wcm_rest_create_update_option_selection_element.html){:target="_blank"}<!-- (../wcm/wcm_rest_create_update_option_selection_element.md) --> topic for more information.
+The Web Content Manager Create/Update Option Element Selection API lets you create or update an Option Selection Element in a Content Template. See the [Create or update an Option Selection Element](../../manage_content/wcm/usage/wcm_dev/wcm_rest/wcm_rest_mng_content/wcm_rest_template/wcm_rest_content_template/wcm_rest_create_update_option_selection_element.md) topic for more information.
 
 ## Search Component Results Display examples
 
-A search element defines the layout of a form that is used to display search results. See the [Search Component Results Display](https://help.hcltechsw.com/digital-experience/9.5/panel_help/wcm_dev_search_form_results_examples.html){:target="_blank"}<!-- (../panel_help/wcm_dev_search_form_results_examples.md) --> topic for examples of how to design your search results.
+A search element defines the layout of a form that is used to display search results. See the [Search Component Results Display](../../manage_content/wcm/usage/elements/search_element/howto_display_search_results/wcm_dev_search_form_results_examples.md) topic for examples of how to design your search results.
 
 ## New HCL Digital Experience ‘How To’ Videos
 
 Take advantage of new step by step guidance for HCL Digital Experience practitioners presented in several new videos. See the following HCL Digital Experience Help Center topics:
 
--   [Remote Search Service](https://help.hcltechsw.com/digital-experience/9.5/admin-system/srcusgrmtsrchsrv.html){:target="_blank"}<!-- (../admin-system/srcusgrmtsrchsrv.md) -->
+-   [Remote Search Service](../../build_sites/search/installation/remotesearch/srcusgrmtsrchsrv.md)
 -   [Transfer HCL Digital Experience 9.5 Container default database to IBM DB2](https://help.hcltechsw.com/digital-experience/9.5/containerization/cw_containerdbtransfer_ibm_db2.html){:target="_blank"}<!-- (../containerization/cw_containerdbtransfer_ibm_db2.md) -->
--   [Create a web content library](https://help.hcltechsw.com/digital-experience/9.5/wcm/wcm_library_default_items.html){:target="_blank"}<!-- (../wcm/wcm_library_default_items.md) -->
--   [Virtual portals](https://help.hcltechsw.com/digital-experience/9.5/admin-system/ad_vp.html){:target="_blank"}<!-- (../admin-system/ad_vp.md) -->
--   [Backup and restore](https://help.hcltechsw.com/digital-experience/9.5/admin-system/i_wadm_c_bkup_restr_winlinux.html){:target="_blank"}<!-- (../admin-system/i_wadm_c_bkup_restr_winlinux.md) -->
--   [Configuration Wizard](https://help.hcltechsw.com/digital-experience/9.5/config/cw_overview.html){:target="_blank"}<!-- (../config/cw_overview.md) -->
--   [Combined Cumulative Fix Install](https://help.hcltechsw.com/digital-experience/8.5/overview/ccf_strategy85.html){:target="_blank"}<!-- (ccf_strategy85.md) -->
--   [Rich text editor toolbar configuration options](https://help.hcltechsw.com/digital-experience/9.5/wcm/wcm_config_ephox_custom.html){:target="_blank"}<!-- (../wcm/wcm_config_ephox_custom.md) -->
--   [Data collection and symptom analysis](https://help.hcltechsw.com/digital-experience/9.5/trouble/tbl_apdt_over.html){:target="_blank"}<!-- (../trouble/tbl_apdt_over.md) -->
+-   [Create a web content library](../../manage_content/wcm/usage/content/wcm_library_default_items.md)
+-   [Virtual portals](../../build_sites/virtual_portal/index.md)
+-   [Backup and restore](../../deployment/manage/backup_restore/index.md)
+-   [Configuration Wizard](../../integrate_apps/development_tools/portal_admin_tools/cfg_wizard/cw_overview.md)
+-   [Combined Cumulative Fix Install](../combined_cumulative_fix_strategy.md)
+-   [Rich text editor toolbar configuration options](../../manage_content/wcm/configuration/configuring_a_web_content_authoring_environment/wcm_config_ephox_custom.md)
+-   [Data collection and symptom analysis](../../deployment/manage/troubleshooting/tools_for_troubleshooting_and_diagnostics/tbl_apdt_over.md)
 
 
 <!-- ???info "Related information:"

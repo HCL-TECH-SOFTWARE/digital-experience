@@ -11,5 +11,4 @@ You need to manually delete the following libraries:
 
 Refer to the Multilingual Solution documentation for instructions on how to uninstall the Multilingual Solution itself.
 
-**Parent topic:**[How to remove Content Template](../ctc/ctc_uninst_overview.md)
 

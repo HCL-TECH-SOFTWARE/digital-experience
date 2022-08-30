@@ -10,7 +10,6 @@ To change the design elements of your site:
 
 ![](../images/ctc_gs_custom_design.jpg)
 
-**Parent topic:**[A roadmap for customizing Content Template](../ctc/ctc_gs_custom.md)
 
 **Previous topic:**[How to create new content types](../ctc/ctc_gs_custom_content.md)
 

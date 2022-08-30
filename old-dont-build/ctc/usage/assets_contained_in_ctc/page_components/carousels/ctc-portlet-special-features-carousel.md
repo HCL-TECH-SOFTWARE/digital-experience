@@ -2,7 +2,6 @@
 
 Displays a set of items in a carousel. By default, any items that are profiled with the special feature category are displayed in the carousel.
 
-**Parent topic:**[Carousels](../ctc/ctc-portlet-types-carousels.md)
 
 # Usage
 

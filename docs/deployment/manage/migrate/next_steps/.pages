@@ -1,0 +1,5 @@
+Title: Migration Next steps
+nav:
+    - index.md
+    - Post-migration activities: post_mig_activities
+    - Enabling new functionality in a migrated portal: enable_func_migrated_portal

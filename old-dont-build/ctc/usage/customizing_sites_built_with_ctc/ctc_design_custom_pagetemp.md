@@ -6,5 +6,4 @@ Note that if the portlets reference content inside the scope of the microsite, t
 
 **Important:** Back up modified page templates before upgrading or installing a Content Template maintenance release. Do so by exporting the modified page templates before installation and importing them back after installation.
 
-**Parent topic:**[Customizing sites built with Content Template](../ctc/ctc_design_custom.md)
 

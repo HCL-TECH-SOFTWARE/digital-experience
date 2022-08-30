@@ -35,5 +35,4 @@ The list presentation itself is built by using separate designs for a header, re
 
 ![](../images/ctc_gs_list_presentation_deconstruct.jpg)
 
-**Parent topic:**[A Content Template Catalog roadmap for site developers](../ctc/ctc_gs_site_devs.md)
 

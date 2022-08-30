@@ -46,5 +46,4 @@ Find solutions to problems that involve content and configuration of portlets.
     For "body" portlets that are meant to show the full details of a content item, this setting should be set to "Other portlets and this portlet," otherwise the content of the portlet will not change when the user navigates to a link. Open the "Shared settings" for the portlet, expand the Advanced settings section, and set "Receive links from" to "Other portlets and this portlet."
 
 
-**Parent topic:**[Troubleshooting Content Template sites](../ctc/ctc_trouble_overview.md)
 

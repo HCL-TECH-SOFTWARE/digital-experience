@@ -128,5 +128,4 @@ These store reusable designs for different component types.
 -   **Mobile Slideshow Design for Promotions**
 -   **Slideshow Design for Promotions**
 
-**Parent topic:**[Content Template Components](../ctc/ctc-assets-components.md)
 

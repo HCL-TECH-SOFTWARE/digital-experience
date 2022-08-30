@@ -12,5 +12,4 @@ The page structure and the site structure link together. Each landing and index 
 
 As you instantiate pages from Content Template page templates, you build a Web Content Manager site by starting with the main page. The site contains all of the appropriate structures, page component configurations, and sample content you need to create a working site. The site that you build then accommodates the addition of content and more components by using the Content Template applications and Content types or creating them manually.
 
-**Parent topic:**[Site structure and page templates](../ctc/ctc_arch_sitestruc.md)
 

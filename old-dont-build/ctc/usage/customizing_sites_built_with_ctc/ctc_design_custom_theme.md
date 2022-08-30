@@ -13,5 +13,4 @@ All of these changes can be done by modifying the default.html file. Add appropr
 
 **Note:** The Simple Theme is a custom theme that is not supported with Content Template 4.4.
 
-**Parent topic:**[Customizing sites built with Content Template](../ctc/ctc_design_custom.md)
 

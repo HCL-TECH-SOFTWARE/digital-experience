@@ -1,0 +1,19 @@
+Title: Preparing your source environment
+nav:
+    - index.md
+    - mig_clean_source.md
+    - mig_inst_fixpacks_wp7.md
+    - verify_property_files.md
+    - back_up_the_system.md
+    - mig_disable_auto-sync.md
+    - mig_pre_src_tai.md
+    - Preparing Web Content Manager content: preparing_wcm
+    - Migrating search components: migrating_search_cmpt
+    - mig_t_sourcenv_32to64.md
+    - Prepare UX Screen Flow Manager: prepare_ux_screenflow_mgr
+    - mig_pre_commerce_integration.md
+    - mig_pre_remove_cai.md
+    - mig_depcr_vp_scripts.md
+    - mig_plan_security.md
+    - mig_pre_ulimit_default.md
+    - mig_dsable_wsadmin_clnt_dbg.md

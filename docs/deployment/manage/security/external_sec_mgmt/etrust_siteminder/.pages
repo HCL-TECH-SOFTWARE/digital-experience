@@ -1,0 +1,7 @@
+title: Configuring eTrust SiteMinder
+nav:
+    - index.md
+    - conf_sit.md
+    - sit_setup_auth.md
+    - sit_setup_esm.md
+    - sit_deconfig.md

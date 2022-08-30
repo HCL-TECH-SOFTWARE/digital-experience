@@ -19,5 +19,4 @@ This template is unique in being used in the following page templates:
     The Sections index template is used for creating hierarchical topic structures, in which sections group related topics.
 
 
-**Parent topic:**[Publications content](../ctc/ctc_arch_contypes_pub.md)
 

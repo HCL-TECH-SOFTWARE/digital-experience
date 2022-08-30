@@ -19,5 +19,4 @@ The easiest way to create extra pre-configured Application or Content is to copy
         A portlet parameter called "ctc.palette" determines which portlets appear in the CTC palette tabs. If this parameter exists, the portlet appears in the "All CTC Portlets" palette.
 
 
-**Parent topic:**[Customizing sites built with Content Template](../ctc/ctc_design_custom.md)
 

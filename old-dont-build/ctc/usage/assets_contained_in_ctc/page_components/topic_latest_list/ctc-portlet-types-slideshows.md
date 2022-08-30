@@ -94,5 +94,4 @@ Displays a set of featured topics in a slideshow. By default, any items that are
 -   **[Topics Featured Slideshow with Overflow](../ctc/ctc-portlet-topics-featured-overflow.md)**  
 Displays a set of featured topics in a slideshow. By default, any items created by using the Topic content template is displayed in this portlet. Additional items are displayed in a list following the slideshow.
 
-**Parent topic:**[Page components](../ctc/ctc-portlet-types.md)
 

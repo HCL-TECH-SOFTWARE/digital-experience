@@ -2,7 +2,6 @@
 
 This portlet is used to display a link to the main subareas of a site in the body of the page. It is similar to the Landing Navigation portlet, but the links are displayed in a grid design.
 
-**Parent topic:**[Navigation](../ctc/ctc-portlet-types-navigation.md)
 
 # Usage
 

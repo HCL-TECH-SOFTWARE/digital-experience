@@ -68,5 +68,4 @@ For support on desktop and mobile devices, videos can be encoded in the differen
 </video>
 ```
 
-**Parent topic:**[Teasers](../ctc/ctc-portlet-types-teasers.md)
 

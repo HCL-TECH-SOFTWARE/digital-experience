@@ -7,5 +7,4 @@ These styles cover the header and footer that are installed with the Content Tem
 -   `layoutContainers` – the area on the page that contains portlets
 -   `wpthemeFooter`
 
-**Parent topic:**[Content Template Catalog themes and styles](../ctc/ctc_arch_css.md)
 

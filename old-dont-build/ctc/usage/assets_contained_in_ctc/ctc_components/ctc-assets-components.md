@@ -33,5 +33,4 @@ You can add the List Presentation component to any page created from the List, S
 -   **[Navigation Components](../ctc/ctc-components-navigation.md)**  
 These components are used to add navigation to your site.
 
-**Parent topic:**[Assets contained in the Content Template](../ctc/ctc-assets.md)
 

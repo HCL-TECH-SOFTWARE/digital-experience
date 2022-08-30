@@ -13,5 +13,4 @@ Common language codes include:
 
 A more comprehensive list of language codes can be obtained by searching for Java™ language codes in your browser.
 
-**Parent topic:**[Providing text providers](../ctc/ctc_design_custom_prov.md)
 

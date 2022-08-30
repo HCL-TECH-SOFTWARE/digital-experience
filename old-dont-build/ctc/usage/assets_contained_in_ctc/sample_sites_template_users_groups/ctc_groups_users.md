@@ -25,5 +25,4 @@ These groups and users are not configured to be installed by default. You must c
 
 If you install these after an initial installation of Content Template, you must manually set permissions for each user and group.
 
-**Parent topic:**[Sample sites, site templates, groups, and users](../ctc/ctc-assets-sample-sites.md)
 

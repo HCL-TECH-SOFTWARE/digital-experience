@@ -11,5 +11,4 @@ Alerts are typically used on intranets. Use them to post important information t
 -   **[Communication content template](../ctc/ctc_arch_contypes_comm.md)**  
 The Communication content template is used for internal communications, such as executive communications and postings from a particular organizational unit. You can add a shared communications area that is used by a number of executives or units, or more typically, you can create a communications area for each.
 
-**Parent topic:**[Content types](../ctc/ctc_arch_contypes.md)
 

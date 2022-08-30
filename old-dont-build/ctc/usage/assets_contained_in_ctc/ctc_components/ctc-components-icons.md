@@ -20,5 +20,4 @@ These image components store icons that are used by the Content Template.
 -   Sharkfin Right-Arrow
 -   Video
 
-**Parent topic:**[Content Template Components](../ctc/ctc-assets-components.md)
 

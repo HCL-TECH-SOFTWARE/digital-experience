@@ -15,5 +15,4 @@ Modify the CSS styles that are used for layout and presentation of content and p
 5.  [Convert custom sites to templates](../ctc/ctc_gs_custom_convert.md)  
 To convert a custom site into a template, move content into the template library, make pages available as templates, and make component available for reuse.
 
-**Parent topic:**[A Content Template Catalog roadmap for site developers](../ctc/ctc_gs_site_devs.md)
 

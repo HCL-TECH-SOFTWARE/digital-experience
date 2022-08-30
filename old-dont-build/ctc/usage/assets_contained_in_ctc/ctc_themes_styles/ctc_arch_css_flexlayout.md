@@ -26,5 +26,4 @@ The second example shows a promotional slideshow in a main container with a rest
 
 ![This picture shows a slideshow with a restricted width.](../images/PromoSlideshowSmall_small.jpg)
 
-**Parent topic:**[Content Template Catalog themes and styles](../ctc/ctc_arch_css.md)
 

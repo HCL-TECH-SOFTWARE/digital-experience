@@ -27,7 +27,6 @@ Use the tips in this section to troubleshoot a site that is built with Content T
 -   **[How to remove Content Template](../ctc/ctc_uninst_overview.md)**  
 The procedure for removing Content Template Catalog varies depending on which components you installed, if you installed it on virtual portals, and if you added your own pages or templates.
 
-**Parent topic:**[Digital Experience on non-containerized platforms](../containerization/dx_non_container.md)
 
 **Related information**  
 

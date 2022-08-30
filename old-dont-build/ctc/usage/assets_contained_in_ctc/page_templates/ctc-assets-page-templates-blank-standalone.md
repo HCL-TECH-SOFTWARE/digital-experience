@@ -6,5 +6,4 @@ When a new page is created using this page template, no portlets are added to th
 
 You can then add Content Template portlets to the blank page.
 
-**Parent topic:**[Page Templates](../ctc/ctc-assets-page-templates.md)
 

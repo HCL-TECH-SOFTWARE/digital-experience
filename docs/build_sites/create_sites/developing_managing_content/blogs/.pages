@@ -1,0 +1,9 @@
+title: Blogs
+nav:
+    - index.md
+    - blog_templates.md
+    - blog_add.md
+    - blog_add_existing.md
+    - blog_assign_access.md
+    - blog_view.md
+    - blog_delete.md

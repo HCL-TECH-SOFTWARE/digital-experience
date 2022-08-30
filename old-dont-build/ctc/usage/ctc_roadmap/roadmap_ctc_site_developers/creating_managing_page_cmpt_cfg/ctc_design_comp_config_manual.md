@@ -17,5 +17,4 @@ You can create page component configurations by copying them from page templates
 
 You must place all new page components into the appropriate area of your site. They should be placed in the "Page Components" area of a landing, index, or details page. Alternatively, you could place the page components in a global Page Components folder if you want to share the configuration across the whole site.
 
-**Parent topic:**[Creating and managing page component configurations](../ctc/ctc_design_comp_config.md)
 

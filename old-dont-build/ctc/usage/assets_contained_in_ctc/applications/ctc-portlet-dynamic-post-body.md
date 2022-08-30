@@ -15,5 +15,4 @@ The Dynamic Post-Body portlet has a context processor that is associated with it
 3.  Click **Create** \> **Applications** and search for dynamic.
 4.  Drag the **Dynamic Post-Body** portlet to the page and save the page.
 
-**Parent topic:**[Applications](../ctc/ctc-portlet-types-ctc.md)
 

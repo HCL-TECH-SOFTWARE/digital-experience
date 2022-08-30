@@ -6,5 +6,4 @@ The following example shows a toolbar on a promotional slideshow:
 
 ![This picture shows the edit control bar as it appears when a user rolls over the image in a slideshow.](../images/InlineEditPromo_small.jpg)
 
-**Parent topic:**[Content creation and editing](../ctc/ctc_arch_inline_edit.md)
 

@@ -1,0 +1,6 @@
+title: Site development with Site Builder
+nav:
+    - index.md
+    - sitebuilder_using_templates.md
+    - Creating sites and adding sections: creating_sites_using_sitebuilder
+    - Selecting libraries in Site Builder: selecting_libraries

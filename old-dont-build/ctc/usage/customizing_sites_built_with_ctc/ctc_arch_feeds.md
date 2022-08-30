@@ -6,5 +6,4 @@ Each feed is represented by a content item with the authoring template Content F
 
 You can create multiple Content Feeds in a single area, for example, to represent categorized views on a data set. You can also aggregate all feeds under a landing page into a single list or across the entire site. To aggregate feeds, you retrieve all Content Feed items across an area of the site and then present the results as a list of feeds.
 
-**Parent topic:**[Customizing sites built with Content Template](../ctc/ctc_design_custom.md)
 

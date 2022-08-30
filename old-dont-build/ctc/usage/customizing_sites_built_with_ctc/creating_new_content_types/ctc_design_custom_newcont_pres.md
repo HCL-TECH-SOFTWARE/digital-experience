@@ -13,5 +13,4 @@ Use your own library to store the presentation template. Do not store it in the 
 4.  Go back to your authoring template, and select this presentation template as the default presentation.
 
 
-**Parent topic:**[Creating new content types](../ctc/ctc_design_custom_newcont.md)
 

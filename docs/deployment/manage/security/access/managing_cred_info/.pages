@@ -1,0 +1,8 @@
+title: Managing credential information
+nav:
+    - index.md
+    - h_cred_add_vault.md
+    - h_cred_manage_vault.md
+    - h_cred_add_slot.md
+    - h_cred_manage_slot.md
+    - h_cred_fields.md

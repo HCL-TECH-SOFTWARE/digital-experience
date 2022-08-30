@@ -55,5 +55,4 @@ The CTC Process library contains categories. To match your organization's profil
         -   Ribbon
         -   Sidebar
 
-**Parent topic:**[Assets contained in the Content Template](../ctc/ctc-assets.md)
 

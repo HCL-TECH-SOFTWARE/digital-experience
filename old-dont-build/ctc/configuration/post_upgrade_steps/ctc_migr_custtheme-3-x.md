@@ -97,5 +97,4 @@ The Content Template layouts have been updated in Content Template 4.4 to be con
 -   If there are portlets that have been hidden due to the layout change, choose "Add All To Page".
 -   Move the portlets into the correct position in the layout.
 
-**Parent topic:**[Post upgrade steps](../ctc/ctc-upgrade-post.md)
 

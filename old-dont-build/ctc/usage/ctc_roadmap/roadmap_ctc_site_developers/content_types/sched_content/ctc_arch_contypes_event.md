@@ -6,5 +6,4 @@ Events have the standard set of contact fields, and also fields for uploading an
 
 Like News, this template has the "featured" option fields, allowing an event to be included in feature lists and special feature lists.
 
-**Parent topic:**[Scheduling content](../ctc/ctc_arch_contypes_sched.md)
 

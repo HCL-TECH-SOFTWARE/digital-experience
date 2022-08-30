@@ -29,5 +29,4 @@ For some content types, the list portlet is already pre-configured and displays 
 
 The generic portlet retrieves content beneath this landing page that was created with the specified template. The library and template name must be an exact match for this action to work.
 
-**Parent topic:**[Creating a landing page using CTC](../ctc/ctc_design_landing.md)
 

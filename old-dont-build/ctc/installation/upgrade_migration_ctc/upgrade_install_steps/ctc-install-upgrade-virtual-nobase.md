@@ -58,5 +58,4 @@ Follow these steps to distribute a shared version of templates and libraries to 
 7.  When the server restarts, open a web browser and navigate to the Portal Administration page to check that Content Template installed successfully. If you installed the demo content, you see a new set of pages at the page root, and a set of Content Template libraries in the list of Web Content Libraries.
 
 
-**Parent topic:**[Upgrade installation steps](../ctc/ctc-upgrade-steps.md)
 

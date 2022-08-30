@@ -2,7 +2,6 @@
 
 Displays a list of the most recent topics, based on content items created by using the Topics content template.
 
-**Parent topic:**[Lists](../ctc/ctc-portlet-types-lists.md)
 
 # Usage
 

@@ -9,5 +9,4 @@ Use the Biography content template for posting information about people.
 -   **[Facility content template](../ctc/ctc_arch_contypes_fac.md)**  
 This template is for posting information about a facility of some kind, such as a building, location, or an asset.
 
-**Parent topic:**[Content types](../ctc/ctc_arch_contypes.md)
 

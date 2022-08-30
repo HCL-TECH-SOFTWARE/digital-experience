@@ -36,5 +36,4 @@ The site area that stores the page component configuration content has been rena
 
 The documentation to help site developers get started with Content Template has been consolidated into the new [A Content Template Catalog roadmap for site developers](ctc_gs_site_devs.md) section.
 
-**Parent topic:**[Content Template overview](../ctc/ctc_overview.md)
 

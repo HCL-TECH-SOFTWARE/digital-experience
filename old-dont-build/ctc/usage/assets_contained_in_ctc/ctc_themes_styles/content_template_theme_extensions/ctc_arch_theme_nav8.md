@@ -16,5 +16,4 @@ The navigation looks like this for an area with multiple levels of children:
 
 When a user rolls over a parent link, children links are displayed for users to click.
 
-**Parent topic:**[Content Template theme extensions](../ctc/ctc_arch_theme.md)
 

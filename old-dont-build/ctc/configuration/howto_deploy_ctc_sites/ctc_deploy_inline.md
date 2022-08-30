@@ -8,5 +8,4 @@ To see how inline editing works, open the Content Template demonstration site. M
 
 To edit the content or change its formatting or style, you can click **Edit**. If you need to edit values for other fields that are used in this content item, click **Open Edit Form**. Non-displaying fields are collected in one section in the Edit form to reduce clutter on the form. When you click **Non-displaying fields: Displayed**, you reveal all the images that are used elsewhere on the site to represent this page. You also see hidden fields that users never see.
 
-**Parent topic:**[How to deploy sites built with Content Template](../ctc/ctc_deploy_overview.md)
 

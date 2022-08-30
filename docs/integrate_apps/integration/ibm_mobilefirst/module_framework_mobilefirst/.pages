@@ -1,0 +1,8 @@
+title: Module framework for IBM MobileFirst
+nav:
+    - index.md
+    - wl_config_prop.md
+    - Setting up single sign-on with MobileFirst 7.0: settingup_sso_mobilefirst70
+    - Meta-Modules for IBM MobileFirst integration: meta_moduless_mobilefirst
+
+

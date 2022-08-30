@@ -116,5 +116,4 @@ Each Content Template portlet has its own configuration document based on one of
     Template for configuring a video.
 
 
-**Parent topic:**[Assets contained in the Content Template](../ctc/ctc-assets.md)
 

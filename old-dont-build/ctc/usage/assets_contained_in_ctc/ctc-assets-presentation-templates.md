@@ -87,5 +87,4 @@ The markup structure of each presentation template has an overall container with
 
 -   **Video Template**
 
-**Parent topic:**[Assets contained in the Content Template](../ctc/ctc-assets.md)
 

@@ -13,7 +13,6 @@ To search localized sites using the Search Results page template, you must creat
 5.  Change the search results index list to reference the new search component. For example, for the CTC Demo site, the item to update is in under **Home** \> **Search Results** \> **Page Components** \> **Index List**.
 
 
-**Parent topic:**[How to apply the multilingual solution to Content Template sites](../ctc/ctc_deploy_locale.md)
 
 **Related information**  
 

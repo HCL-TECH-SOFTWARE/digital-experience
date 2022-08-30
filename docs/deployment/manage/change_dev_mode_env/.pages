@@ -1,0 +1,6 @@
+Title: Changing to a developer mode environment
+nav:
+    - index.md
+    - cfg_dev_mode-AIX.md
+    - cfg_dev_mode-Linux.md
+    - cfg_dev_mode-Windows.md

@@ -11,5 +11,4 @@ You can access the Page Templates label in the administration interface in eithe
 
 When you create a web content page template, you define the layout, style, and contents of any web content page that is created from the template. Web content page templates have all the same flexibility and customization features as a standard portal page or portal page template. You can perform common tasks like adding content with portlets, changing the style of the page, or changing the layout of objects on the page. By using viewers with other portlets in a web content page template, you can create pages that support a wide range of user goals. Likewise, you can rely on only viewers and create a website that is primarily composed of information in your web content system.
 
-**Parent topic:**[Creating new content types](../ctc/ctc_design_custom_newcont.md)
 

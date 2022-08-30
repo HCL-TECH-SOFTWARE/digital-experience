@@ -17,5 +17,4 @@ All of the templates in Content Template Catalog set the workflow for items to a
 -   **[Development processes](../ctc/ctc_deploy_dev.md)**  
 In addition to being a package of ready-to-use templates, Content Template Catalog also embodies a new pattern for site development that is based around page templates and microsites.
 
-**Parent topic:**[Content Template Catalog 4.4](../ctc/ctc_intro.md)
 

@@ -1,0 +1,9 @@
+title: Creating a static page
+nav:
+    - index.md
+    - spa_html_xmpl.md
+    - spa_plt_mcrfrmt.md
+    - spa_contnr_mcrfrmt.md
+    - spa_compnt_mcrfrmt.md
+    - spa_nav_mcrfrmt.md
+    - Portlets for adding dynamic elements to static pages: portlets_dynamic_elements

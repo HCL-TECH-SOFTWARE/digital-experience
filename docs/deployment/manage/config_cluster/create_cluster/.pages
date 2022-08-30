@@ -1,0 +1,5 @@
+Title: Create a cluster
+nav:
+    - index.md
+    - cw_create_staticcluster.md
+    - cw_create_dynamiccluster.md

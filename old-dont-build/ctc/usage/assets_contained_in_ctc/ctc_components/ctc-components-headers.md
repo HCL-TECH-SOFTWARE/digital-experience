@@ -9,5 +9,4 @@ These components store reusable tags, text, and code that are used in the header
 -   **Landing List Title**
 -   **Search Results**
 
-**Parent topic:**[Content Template Components](../ctc/ctc-assets-components.md)
 

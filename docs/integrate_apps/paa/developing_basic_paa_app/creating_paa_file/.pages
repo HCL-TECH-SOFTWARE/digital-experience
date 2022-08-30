@@ -1,0 +1,11 @@
+title: Create a Portal Application Archive (PAA) file
+nav:
+    - index.md
+    - PAA file structure overview: paa_file_structure
+    - si_paa_spec_inst.md
+    - si_paa_spec_order.md
+    - The sdd.xml file: sdd.xml_file
+    - si_paa_spec_prop.md
+    - dbprops_si.md
+    - si_paa_spec_vp.md
+

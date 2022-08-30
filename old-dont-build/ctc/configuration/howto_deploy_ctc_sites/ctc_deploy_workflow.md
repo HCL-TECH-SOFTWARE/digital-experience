@@ -13,5 +13,4 @@ All of the templates in Content Template Catalog set the workflow for items to a
 
 Refer to the product documentation for more information.
 
-**Parent topic:**[How to deploy sites built with Content Template](../ctc/ctc_deploy_overview.md)
 

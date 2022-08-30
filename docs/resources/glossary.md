@@ -7,9 +7,8 @@ The following cross-references are used in this glossary:
 1.  See refers the reader from a term to a preferred synonym, or from an acronym or abbreviation to the defined full form.
 2.  See also refers the reader to a related or contrasting term.
 
-[A](#initialA) [B](#initialB) [C](#initialC) [D](#initialD) [E](#initialE) [F](#initialF) [G](#initialG) [H](#initialH) [I](#initialI) [J](#initialJ) [L](#initialL)[M](#initialM)[N](#initialN)[O](#initialO)[P](#initialP)[R](#initialR)[S](#initialS)[T](#initialT)[U](#initialU)[V](#initialV)[W](#initialW)
+[A](#a) [B](#b) [C](#c) [D](#d) [E](#e) [F](#f) [G](#g) [H](#h) [I](#i) [J](#j) [L](#l) [M](#m) [N](#n) [O](#o) [P](#p) [R](#r) [S](#s) [T](#t) [U](#u) [V](#v) [W](#w)
 
-**Parent topic:**[HCL Digital Experience 9.5 Product Documentation](../welcome/wp95_welcome.md)
 
 # A
 

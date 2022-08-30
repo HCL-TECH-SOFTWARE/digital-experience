@@ -12,5 +12,4 @@ The template contains the following types of fields:
 
 The Job Openings Index only shows Open and Closed jobs. Jobs marked as Filled or Withdrawn do not appear in the list. Some workflow should be associated with jobs to ensure that a job does not stay in the list indefinitely. For example, job openings should eventually be either moved to a Filled or Withdrawn state.
 
-**Parent topic:**[Profiles content](../ctc/ctc_arch_contypes_profile.md)
 

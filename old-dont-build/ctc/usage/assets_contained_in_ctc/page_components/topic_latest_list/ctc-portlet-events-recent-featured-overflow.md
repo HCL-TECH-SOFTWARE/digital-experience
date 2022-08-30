@@ -2,7 +2,6 @@
 
 Displays a set of featured recent events in a slideshow. By default, any items that are created by using the Event content template are displayed in this portlet. This is similar to the Events Recent portlet, but displays extra items following the slideshow.
 
-**Parent topic:**[Slideshows](../ctc/ctc-portlet-types-slideshows.md)
 
 # Usage
 

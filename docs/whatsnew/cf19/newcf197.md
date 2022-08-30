@@ -21,23 +21,23 @@ See the [Design Studio \(Beta\)](https://help.hcltechsw.com/digital-experience/
 
 Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to supported container platforms using Helm. Using a Helm Chart deployment can provide administrators a larger degree of transparency and control in deployment operations. Support for new HCL DX 9.5 CF197 deployments to Red Hat OpenShift, Microsoft Azure Elastic Kubernetes Service \(AKS\) and Amazon Elastic Kubernetes Service \(EKS\),and ability to update from HCL DX 9.5 version CF196 to CF197 is supported with the Google Kubernetes Engine \(GKE\) platform.
 
-See the [HCL DX 9.5 Helm deployment](../../platform/kubernetes/operator-migration/operator_migration_preparation.md) topic for more information.
+See the [HCL DX 9.5 Helm deployment](../../deployment/install/container/helm_deployment/preparation/index.md) topic for more information.
 
 ## New HCL Digital Experience 9.5 Release Artifacts supporting CICD release processes
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and automate processes in the development and delivery process. Updates include new release artifact types supporting, Obtain failed Syndication reports for single or multiple items, and delete Digital Asset Management inactive schema from Persistence are provided in CF197.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](../../platform/administration/DXClient/dxclient.md) topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../integrate_apps/development_tools/dxclient/index.md) topic for more information.
 
 ## HCL Digital Experience 9.5 Container Platform Support Matrix
 
 View the latest Kubernetes and OpenShift platforms tested and supported for specific HCL Digital Experience 9.5 Container Update deployments.
 
-See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../platform/systemrequirements/9.5_express/supportedsoftware.md) topic for more information.
+See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../get_started/system_requirements/9.5_express/supportedsoftware.md) topic for more information.
 
 ## New HCL Digital Experience ‘How To’ Videos
 
 Take advantage of new step-by-step guidance for HCL Digital Experience practitioners presented in new videos and webinars. See the following HCL Digital Experience Help Center topics:
 
 -   [Updating the HCL DX 9.5 Portal & IBM WebSphere Application Server Administrator Secrets in OpenShift and Kubernetes](https://help.hcltechsw.com/digital-experience/9.5/containerization/update_dx_core_kubernetes_container_deployment.html){:target="_blank"}
--   [Use Docker Compose to install HCL DX 9.5 with Cloud Components for Developer Use](../../platform/docker/docker_compose.md)
+-   [Use Docker Compose to install HCL DX 9.5 with Cloud Components for Developer Use](../../deployment/install/docker/docker_compose.md)

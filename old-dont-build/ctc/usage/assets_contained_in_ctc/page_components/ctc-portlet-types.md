@@ -13,5 +13,4 @@ A carousel can be added to your page from the Create Content Carousels view when
 -   **[Navigation](../ctc/ctc-portlet-types-navigation.md)**  
 These navigation portlets can be added to your page from the Create Content Navigation view when in Edit mode.
 
-**Parent topic:**[Assets contained in the Content Template](../ctc/ctc-assets.md)
 

@@ -106,5 +106,4 @@ Displays a list of the most recent Press Releases, based on content items that a
 -   **[Topics Latest List](../ctc/ctc-portlet-topics-latest.md)**  
 Displays a list of the most recent topics, based on content items created by using the Topics content template.
 
-**Parent topic:**[Page components](../ctc/ctc-portlet-types.md)
 

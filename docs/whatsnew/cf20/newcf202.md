@@ -16,15 +16,15 @@ Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators
 
 See the following Help Center topics for more information:
 
--   [HCL DX 9.5 Helm deployment](../../platform/kubernetes/architecture/helm_overview.md)
--   [Configure PersistentVolumeClaims \(PVCs\)](../../platform/kubernetes/deployment/preparation/prepare_persistent_volume_claims.md)
--   [Additional Helm Tasks](../../platform/kubernetes/deployment/preparation/overview.md)
+-   [HCL DX 9.5 Helm deployment](../../get_started/plan_deployment/container_deployment/index.md)
+-   [Configure PersistentVolumeClaims \(PVCs\)](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_persistent_volume_claims.md)
+-   [Additional Helm Tasks](../../deployment/install/container/helm_deployment/preparation/index.md)
 
 ## Digital Asset Management
 
 New Digital Asset Management \(DAM\) capability enables developers and release managers to use the DXClient capability to Export and Import DAM assets from source to a File system and Import from File system to target DX 9.5 deployment. Enhancements are also available for content authors to fix the duplicate DAM asset names in a particular collection, and there are new DAM APIs that allow you to access the assets by versions, name, and as reflected in the friendly URLs.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html){:target="_blank"}<!-- (../containerization/dxclient.md)--> and [Digital Asset Management Help Center](https://help.hcltechsw.com/digital-experience/9.5/digital_asset_mgmt/digital_asset_mgmt_overview.html){:target="_blank"}<!-- (../design/digital_asset_mgmt/digital_asset_mgmt_overview.md) --> topics for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../integrate_apps/development_tools/dxclient/index.md) and [Digital Asset Management Help Center](../../manage_content/digital_assets/index.md) topics for more information.
 
 ## Design Studio \(Beta\)
 
@@ -39,31 +39,31 @@ See the [Design Studio \(Beta\)](https://help.hcltechsw.com/digital-experience/
 
 Beginning with HCL Digital Experience 9.5 Container Update CF202, HCL Digital Experience Cloud Native 9.5 is available as a new offering option for customers to deploy the cloud-native Digital Experience 9.5 components and services on the Kubernetes container environments. HCL Digital Experience Cloud Native 9.5 is available with cloud-friendly subscription pricing.
 
-See the *Digital Experience Cloud Native 9.5 details* in the [Digital Experience Overview](../../platform/kubernetes/overview.md) Help Center topic.
+See the *Digital Experience Cloud Native 9.5 details* in the [Digital Experience Overview](../../get_started/architecture_overview/kubernetes_deployment/index.md) Help Center topic.
 
 ## Digital Experience REST API Explorers
 
 Developers can accelerate development tasks using a set of Explorers provided for REST APIs available for use with HCL Digital Experience deployments to on premises platforms, and HCL Digital Experience 9.5 deployments to supported Kubernetes Container platforms. Developers can also initiate and test transactions or other capabilities using the DX REST API explorers.
 
-See the [Digital Experience REST API Explorers](https://help.hcltechsw.com/digital-experience/9.5/dev/api_explorers.html){:target="_blank"}<!-- (../design/api/api_explorers.md) --> Help Center topic for more information.
+See the [Digital Experience REST API Explorers](../../integrate_apps/apis/hcl_experience_api/usage/api_explorers.md) Help Center topic for more information.
 
 ## Digital Experience Remote Model REST API Explorer
 
 The Digital Experience Remote Model REST API Explorer can be used by developers creating solutions for HCL DX on premises and HCL DX 9.5 container deployments to explore and test the Remote Model APIs.
 
-See the [Digital Experience Remote Model REST API Explorer](https://help.hcltechsw.com/digital-experience/9.5/dev/remote_model_rest_api.html){:target="_blank"}<!-- (../design/api/remote_model_rest_api.md) --> Help Center topic for more information.
+See the [Digital Experience Remote Model REST API Explorer](../../integrate_apps/apis/model_spi/remote_model_rest_api.md) Help Center topic for more information.
 
 ## Enhancements to DXClient
 
 The HCL Digital Experience DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and to automate processes in the development and delivery process. Updates include ability to Export and Import DAM assets from source to a File system and Import from File system to target DX 9.5 deployment, and DXConnect parameter updates.
 
-See the [Deploy DX components using HCL DXClient and DXConnect](../../platform/administration/DXClient/dxclient.md) Help Center topic for more information.
+See the [Deploy DX components using HCL DXClient and DXConnect](../../integrate_apps/development_tools/dxclient/index.md) Help Center topic for more information.
 
 ## Personalization REST APIs
 
 Personalization REST APIs supporting Personalization Folder Update and Delete operations are available with HCL Digital Experience Container Update and CF202.
 
-See the Help Center topics [Personalization Folder APIs](https://help.hcltechsw.com/digital-experience/9.5/pzn/dev_pzn_folders_api.html){:target="_blank"}<!-- (../design/api/dev_pzn_folders_api.md) --> and [Personalization Rules APIs](https://help.hcltechsw.com/digital-experience/9.5/pzn/dev_pzn_rules_api.html){:target="_blank"}<!-- (../design/api/dev_pzn_rules_api.md) --> for more information.
+See the Help Center topics [Personalization Folder APIs](../../manage_content/pzn/pzn_apis/pzn_rest_API_explorer/dev_pzn_folders_api.md) and [Personalization Rules APIs](https://help.hcltechsw.com/digital-experience/9.5/pzn/dev_pzn_rules_api.html){:target="_blank"}<!-- (../design/api/dev_pzn_rules_api.md) --> for more information.
 
 ## Track User sessions in Digital Experience Deployments using Google Analytics
 

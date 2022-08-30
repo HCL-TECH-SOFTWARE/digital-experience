@@ -31,5 +31,4 @@ Overrides for different layout areas, and in individual component styles, allow 
 -   `rating` – style overrides for the rating widget
 -   `tagging` – style overrides for the tagging widget
 
-**Parent topic:**[Content Template Catalog themes and styles](../ctc/ctc_arch_css.md)
 

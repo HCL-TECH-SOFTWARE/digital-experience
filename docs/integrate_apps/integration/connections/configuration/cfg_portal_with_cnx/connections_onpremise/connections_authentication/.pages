@@ -1,0 +1,10 @@
+title: Configuring authentication
+nav:
+    - index.md
+    - t_connections_portlets_SSO_LPTA.md
+    - connections_portlets_TAM_Spnego_SSO.md
+    - connections_portlets_TAM_SSO.md
+    - t_connections_portlets_SSO_siteminder_spnego.md
+    - connections_portlets_spnego_SSO.md
+    - connections_portlets_change_realm_name.md
+    - c_connections_portlets_basic_auth.md

@@ -72,5 +72,4 @@ This page includes the following portlets:
     -   The content that is displayed in the slideshow is formatted by using this list presentation: CTC Design/List Presentation Components/Feature Slideshow List Design for Offerings, with Overflow
     -   The CSS class of contentSlideshow is applied to the container DIV.
 
-**Parent topic:**[Page Templates](../ctc/ctc-assets-page-templates.md)
 

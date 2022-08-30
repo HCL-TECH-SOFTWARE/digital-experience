@@ -8,5 +8,4 @@ In addition, the content of the design items is also translated. Here, the CTC D
 
 When you use the Multilingual Solution to translate your site content, both the site content and site design content are presented in the correct language to your site visitors.
 
-**Parent topic:**[Development processes](../ctc/ctc_deploy_dev.md)
 

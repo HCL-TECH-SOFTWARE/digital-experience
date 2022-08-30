@@ -18,7 +18,6 @@ Consider these best practices when defining headers, footers, and result designs
     -   The plug-ins that are provided with Content Template are useful in result designs. You can use them to change content, such as hiding and showing information based on its availability and rendering different markup for the first and last item or specific item numbers.
     -   Results designs can get complex. Test them carefully to ensure they work in all scenarios.
 
-**Parent topic:**[Customizing list components](../ctc/ctc_design_custom_comp_list.md)
 
 **Related information**  
 

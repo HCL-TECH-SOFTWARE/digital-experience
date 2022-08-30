@@ -63,5 +63,4 @@ The Contact Us submission configurations can also be accessed from the Contact U
 
 The page presents the user with a contact form allowing fields to be entered for the message subject, from email address \(the address of the user sending the message\), the body of the message, and the category of the message.
 
-**Parent topic:**[Page Templates](../ctc/ctc-assets-page-templates.md)
 

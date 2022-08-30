@@ -15,5 +15,4 @@ This page includes the following portlets:
     This list is pre-configured with a context override of: Your Library/Your Site Path/Your Page Name
 
 
-**Parent topic:**[Page Templates](../ctc/ctc-assets-page-templates.md)
 

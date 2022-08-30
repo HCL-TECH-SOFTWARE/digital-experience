@@ -4,5 +4,4 @@ Use the Meetings content template for creating meeting announcements and for rec
 
 Meetings have fields for start and end dates \(times\), location, contact details, and fields for recording attendance and minutes.
 
-**Parent topic:**[Scheduling content](../ctc/ctc_arch_contypes_sched.md)
 

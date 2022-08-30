@@ -34,5 +34,4 @@ After you create an index page from a template, add some sample content and set 
 -   **[Modifying details pages](../ctc/ctc_design_pg_detail.md)**  
 When a user clicks a content item link, the appropriate details page is located and the portlets retrieve information from this item.
 
-**Parent topic:**[A roadmap for Content Template Catalog site authors](../ctc/ctc_gs_authors.md)
 

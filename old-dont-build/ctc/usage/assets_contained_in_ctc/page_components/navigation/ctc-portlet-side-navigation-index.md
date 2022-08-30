@@ -2,7 +2,6 @@
 
 This portlet displays a navigator that displays a site map of your site.
 
-**Parent topic:**[Navigation](../ctc/ctc-portlet-types-navigation.md)
 
 # Usage
 

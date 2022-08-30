@@ -31,5 +31,4 @@ Content Template is built by using the following parts:
 
 ![A diagram describing the relationship with page structure and libraries.](../images/ctc_gs_pages_and_content_details.jpg)
 
-**Parent topic:**[A Content Template Catalog roadmap for site developers](../ctc/ctc_gs_site_devs.md)
 

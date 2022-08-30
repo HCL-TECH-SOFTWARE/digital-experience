@@ -14,5 +14,4 @@ Compare the preceding example to the same page with the print layout applied.
 
 ![This picture shows a page that is optimized for printing. Only content that is critical for printing is shown.](../images/PrintAfter_small.jpg)
 
-**Parent topic:**[Customizing sites built with Content Template](../ctc/ctc_design_custom.md)
 

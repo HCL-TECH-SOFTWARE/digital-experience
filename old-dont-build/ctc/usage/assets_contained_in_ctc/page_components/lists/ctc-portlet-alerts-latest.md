@@ -2,7 +2,6 @@
 
 Displays a list of the most recent alerts, based on content items created by using the Alert content template.
 
-**Parent topic:**[Lists](../ctc/ctc-portlet-types-lists.md)
 
 # Usage
 

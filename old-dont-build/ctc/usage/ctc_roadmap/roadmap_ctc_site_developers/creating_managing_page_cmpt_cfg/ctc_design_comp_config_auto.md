@@ -6,5 +6,4 @@ The page component configuration is created in the current area, in the local "C
 
 When the same portlet is used multiple times on the same page, the name is modified with an increasing suffix to prevent name clashes. You might want to modify the name and title of the page component configurations to make the individual instances more easily identified. In the slideshow and carousel components, the name cannot have spaces. Note that the title appears in the portlet toolbar in edit mode.
 
-**Parent topic:**[Creating and managing page component configurations](../ctc/ctc_design_comp_config.md)
 

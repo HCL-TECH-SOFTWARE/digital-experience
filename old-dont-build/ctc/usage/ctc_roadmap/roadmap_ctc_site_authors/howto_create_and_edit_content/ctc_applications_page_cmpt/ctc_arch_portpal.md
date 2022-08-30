@@ -9,5 +9,4 @@ All of the teasers, lists, slideshows, carousels, and navigation portlets copy a
 -   **[Strategies for using the pre-configured portlets](../ctc/ctc_arch_portpal_preconfig.md)**  
 Pre-configured portlets, such as applications and page components, are used to complete the blank page templates, or to replace portlets on the other Content Template page templates.
 
-**Parent topic:**[How to create and edit content](../ctc/ctc_arch_inline.md)
 

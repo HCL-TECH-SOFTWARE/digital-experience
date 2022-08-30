@@ -1,6 +1,0 @@
-nav:
-    - index.md
-    - core_interactions_kubernetes.md
-    - container_scaling.md
-    - run_core_config_engine.md
-    - monitoring

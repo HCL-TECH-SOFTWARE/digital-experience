@@ -14,7 +14,6 @@ Before you install Content Template Catalog 4.4, ensure that you have installed 
 -   Ensure you also read the [HCL Portal V8.5 and V8.0 detailed system requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514).
 -   The Apache Derby database that is available for immediate use after you install the portal is not supported for use with CTC. See [Database Considerations](../plan/db_considerations.md)[Database Considerations](../plan/db_considerations.md) for further information.
 
-**Parent topic:**[Planning to use Content Template](../ctc/ctc_inst_deployplans.md)
 
 **Related information**  
 

@@ -2,7 +2,6 @@
 
 Displays a list of the most recent content items created by using the Meeting content template.
 
-**Parent topic:**[Lists](../ctc/ctc-portlet-types-lists.md)
 
 # Usage
 

@@ -49,7 +49,6 @@ Further information is found in the JSP files themselves. Some of the JSPs in th
 
 **Note:** Any customization of JSP files should be made by copying the JSP to a new Web application and referencing these JSP files from your content. Otherwise, the changes will have to be reapplied whenever CTC is upgraded.
 
-**Parent topic:**[Assets contained in the Content Template](../ctc/ctc-assets.md)
 
 **Related information**  
 

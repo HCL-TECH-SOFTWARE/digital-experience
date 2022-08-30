@@ -1,0 +1,7 @@
+Title: Migrating search components
+nav:
+    - index.md
+    - srtmigratcoll.md
+    - Migrating web search collections: migrating_websearch_collections
+    - mig_t_remote_srch_server.md
+    - mig_remove_jcr_collection.md

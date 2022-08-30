@@ -31,5 +31,4 @@ These components are used to support inline editing. These are added to other co
 -   **Toolbar for List Items**
 -   **Toolbar for Teasers**
 
-**Parent topic:**[Content Template Components](../ctc/ctc-assets-components.md)
 

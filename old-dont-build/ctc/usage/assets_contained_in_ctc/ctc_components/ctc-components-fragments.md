@@ -134,5 +134,4 @@ These components are reused in other component designs.
 -   **Tweet Button**
 -   **Upcoming Index Filter**
 
-**Parent topic:**[Content Template Components](../ctc/ctc-assets-components.md)
 

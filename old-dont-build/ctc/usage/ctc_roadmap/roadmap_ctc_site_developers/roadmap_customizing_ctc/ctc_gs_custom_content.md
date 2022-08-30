@@ -11,7 +11,6 @@ To create a new content type:
 
 ![This diagram describes the process of creating a new content type.](../images/ctc_gs_custom_component_types.jpg)
 
-**Parent topic:**[A roadmap for customizing Content Template](../ctc/ctc_gs_custom.md)
 
 **Previous topic:**[Creating new Web templates](../ctc/ctc_gs_custom_templates.md)
 

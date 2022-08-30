@@ -15,5 +15,4 @@ Follow these steps for lists on each landing page on your site.
     When the page refreshes, the list focuses on a specific site area and the list title also links to that area.
 
 
-**Parent topic:**[Creating a landing page using CTC](../ctc/ctc_design_landing.md)
 

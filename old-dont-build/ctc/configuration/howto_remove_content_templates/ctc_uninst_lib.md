@@ -13,5 +13,4 @@ Delete the Content Template Libraries manually in the following order:
 
 **Note:** These libraries must be deleted from both the base portal, and from any related virtual portals.
 
-**Parent topic:**[How to remove Content Template](../ctc/ctc_uninst_overview.md)
 

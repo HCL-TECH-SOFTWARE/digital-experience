@@ -18,7 +18,6 @@ If there are any default content items that are associated with the templates or
 
 ![This diagram describes how you need to update content items and apply templates.](../images/ctc_gs_custom_apply_changes.jpg)
 
-**Parent topic:**[A roadmap for customizing Content Template](../ctc/ctc_gs_custom.md)
 
 **Previous topic:**[Start by creating pages](../ctc/ctc_gs_custom_pages.md)
 

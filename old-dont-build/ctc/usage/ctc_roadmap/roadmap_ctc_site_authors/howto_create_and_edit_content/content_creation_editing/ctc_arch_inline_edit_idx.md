@@ -12,5 +12,4 @@ The following example shows a toolbar for an entry in the index, as seen in view
 
 ![This picture shows the Open Edit Form command as it appears when a user points to an index entry on the page.](../images/InlineEditIndex_small.jpg)
 
-**Parent topic:**[Content creation and editing](../ctc/ctc_arch_inline_edit.md)
 

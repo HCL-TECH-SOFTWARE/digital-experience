@@ -8,5 +8,4 @@ The components that you select in a page component configuration require a conte
 -   When cross-referencing to other site areas.
 -   To scope a list to a specific area if it is retrieving content too broadly.
 
-**Parent topic:**[Page component configuration items](../ctc/ctc_arch_prestemp_compconfig.md)
 

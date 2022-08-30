@@ -1,0 +1,15 @@
+title: Digital Data Connector profiles for social rendering
+nav:
+    - index.md
+    - soc_rendr_prfls_blogs.md
+    - soc_rendr_prfls_communities.md
+    - soc_rendr_prfls_forums.md
+    - soc_rendr_prfls_profiles.md
+    - soc_rendr_prfls_social_objects.md
+    - soc_rendr_prfls_tags.md
+    - soc_rendr_prfls_wikis.md
+    - soc_rendr_prfls_common.md
+    - soc_rendr_prfls_modifier_support.md
+    - soc_rendr_prfls_tag_support.md
+    - soc_rendr_prfls_opensearch_support.md
+

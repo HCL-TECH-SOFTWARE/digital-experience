@@ -111,5 +111,4 @@ Follow these steps to remove unresolved names by running the Member Fixer task a
         ```
 
 
-**Parent topic:**[First-time installation of Content Template](../ctc/ctc_inst_overview.md)
 

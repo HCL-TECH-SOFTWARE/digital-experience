@@ -59,5 +59,4 @@ Follow these instructions to edit the components.properties file to flag the CTC
     -   http://server:port/wps/config/VirtualPortalContext
     -   http://VirtualPortalHostName:port/wps/config/
 
-**Parent topic:**[How to remove Content Template](../ctc/ctc_uninst_overview.md)
 

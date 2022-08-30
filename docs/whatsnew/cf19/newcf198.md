@@ -21,13 +21,13 @@ See the [Design Studio \(Beta\)](../../productfeatures/design_studio/index.md)<
 
 Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to supported container platforms using Helm. Using a Helm Chart deployment can provide administrators more transparency and control in deployment operations. Support for hybrid deployments is provided, enabling to update from HCL DX 9.5 CF197 to CF198 in the Red Hat OpenShift, Microsoft Azure Elastic Kubernetes Service \(AKS\) and Amazon Elastic Kubernetes Service \(EKS\) platforms.
 
-See the [HCL DX 9.5 Helm deployment](../../platform/kubernetes/operator-migration/operator_migration_preparation.md) topic for more information.
+See the [HCL DX 9.5 Helm deployment](../../deployment/install/container/operator-migration/operator_migration_preparation.md) topic for more information.
 
 ## New HCL Digital Experience 9.5 Release Artifacts supporting CICD release processes
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and automate processes in the development and delivery process. Updates delivered in CF198 include process definitions to automate select IBM WebSphere Application Server settings during deployment, generate import and export lists of virtual portals, and import and export personalization rules.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](../../platform/administration/DXClient/dxclient.md)<!-- (../containerization/dxclient.md) --> topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../integrate_apps/development_tools/dxclient/index.md) topic for more information.
 
 ## New HCL Digital Experience Site Manager Custom Layout Editor
 
@@ -39,26 +39,26 @@ See the [Using the Digital Experience Custom Layout Editor](https://help.hcltec
 
 New HCL Experience Web Content Manager REST APIs are available for new menu component update, collection responses conversion utilities, the ability to use the page editor to edit elements inline and update metadata, set locations for sites, set HTML tags for text elements, and more.
 
-See the [HCL Experience API](https://help.hcltechsw.com/digital-experience/9.5/open_api/openapi_overview.html){:target="_blank"}<!-- (../open_api/openapi_overview.md) --> topic for more information
+See the [HCL Experience API](../../integrate_apps/apis/hcl_experience_api/openapi_overview.md) topic for more information
 
 ## Rationalized CF release versioning
 
 Beginning with HCL Digital Experience CF196, single versioning is used for both container and on-premise Combined Cumulative Fixes \(CFs\). This means that fixes for both deployments are included into one CF deliverable. And although the versioning is the same, CFs are packaged separately for on-premises and container deployments.
 
-See the [CF release versioning and update path](https://help.hcltechsw.com/digital-experience/9.5/install/rm_cf.html#cd__cf_release_versioning_update){:target="_blank"}<!-- (../install/rm_cf.md#cf_release_versioning_update) --> topic for more information.
+See the [CF release versioning and update path](../../get_started/plan_deployment/traditional_deployment/roadmaps/rm_install_deployment/rm_cf.md) topic for more information.
 
 ## New HCL Digital Experience ‘How To’ Videos
 
 Take advantage of new step-by-step guidance for HCL Digital Experience practitioners presented in articles and videos from the following HCL Digital Experience Help Center topics:
 
--   Video: [Creating an HCL Digital Experience 9.5 CF196 cluster](https://help.hcltechsw.com/digital-experience/9.5/install/rm_cluster_parent.html)<!-- (../install/rm_cluster_parent.md) -->
--   Step-by-step guide: [How to deploy HCL DX Container update CF197 and later to Microsoft Azure Kubernetes Service](../../platform/kubernetes/deployment/helm_install_commands.md)
+-   Video: [Creating an HCL Digital Experience 9.5 CF196 cluster](../../get_started/plan_deployment/traditional_deployment/roadmaps/rm_install_deployment/rm_clusters/rm_cluster_parent.md)
+-   Step-by-step guide: [How to deploy HCL DX Container update CF197 and later to Microsoft Azure Kubernetes Service](../../deployment/install/container/helm_deployment/helm_install_commands.md)
 
 ## HCL Digital Experience 9.5 Container Platform Support Matrix
 
 View the latest Kubernetes and OpenShift platforms tested and supported for specific HCL Digital Experience 9.5 Container Update deployments.
 
-See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../platform/systemrequirements/9.5_express/supportedsoftware.md) topic for more information.
+See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../get_started/system_requirements/9.5_express/supportedsoftware.md) topic for more information.
 
 <!-- ???info "Related information:"
     - [Design Studio \(Beta\)](../design_studio/design_studio_overview.md)

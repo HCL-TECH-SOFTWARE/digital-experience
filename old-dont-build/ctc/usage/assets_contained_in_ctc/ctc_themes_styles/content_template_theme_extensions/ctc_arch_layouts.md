@@ -40,5 +40,4 @@ The CTC layouts are responsive. This means that on tablet and mobile devices the
 
 You can create other layouts with different grids by copying these layouts and adding the additional styles to the theme stylesheet.
 
-**Parent topic:**[Content Template theme extensions](../ctc/ctc_arch_theme.md)
 
