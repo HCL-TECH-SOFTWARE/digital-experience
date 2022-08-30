@@ -1,8 +1,4 @@
----
-id: h_main_clients
-title: Managing client devices
----
-import useBaseUrl from '@docusaurus/useBaseUrl';
+# Managing client devices
 
 
 

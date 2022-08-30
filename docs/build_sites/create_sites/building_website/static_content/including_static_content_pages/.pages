@@ -1,0 +1,5 @@
+title: Including static content pages in your portal
+nav:
+    - index.md
+    - Exporting and importing static pages: export_import_static_page
+    - spa_psi.md

@@ -1,8 +1,4 @@
----
-id: h_main_markups
-title: Managing markup languages
----
-import useBaseUrl from '@docusaurus/useBaseUrl';
+# Managing markup languages
 
 
 

@@ -1,5 +1,6 @@
 title: Mobile
 nav:
     - index.md
-    - Usage: usage
-
+    - mobile_themes_and_enabled_portlets.md
+    - progressive_web_applications.md
+    - mobile_preview.md

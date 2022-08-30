@@ -1,0 +1,13 @@
+title: Web Application Bridge
+nav:
+    - index.md
+    - h_wab_first.md
+    - h_wab_provider.md
+    - h_wab_policy.md
+    - h_wab_connection.md
+    - h_wab_response.md
+    - h_wab_auth.md
+    - h_wab_dock.md
+    - h_wab_ipc.md
+    - h_wab_plugins.md
+    - h_wab_unconfig.md

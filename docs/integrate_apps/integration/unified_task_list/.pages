@@ -1,7 +1,8 @@
 title: Unified Task List
 nav:
     - index.md
-    - Configuration: configuration
-    - Usage: usage
-
+    - Overview of the Unified Task List portlet: utl_overview
+    - Configuring the Unified Task List portlet: cfg_utl_portlet
+    - Configuring Unified Task List portlet with process servers: cfg_utl_portlet_with_process_server
+    - utl_configuring_unified_task_list_with_forms_experience_builder.md
 

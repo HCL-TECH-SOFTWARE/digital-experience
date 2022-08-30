@@ -1,0 +1,8 @@
+title: Administering tag federation
+nav:
+    - index.md
+    - tag_fed_admin_import.md
+    - tag_fed_admin_cleanup.md
+    - tag_fed_admin_redirect.md
+    - tag_fed_admin_spec_icon.md
+

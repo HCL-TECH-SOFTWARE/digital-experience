@@ -1,6 +1,14 @@
 title: Digital Data Connector for HCL Portal
 nav:
-    - Configuration: configuration
-    - Usage: usage
-    - Limitations: limitations
-
+    - index.md
+    - plrf_tech_concepts.md
+    - plrf_render_flow.md
+    - Connecting to HCL VoltMX Foundry through Digital Data Connector (DDC): integrating_voltmx_foundry
+    - Implementing user interactions: implementing_user_interactions
+    - Working with list-rendering profiles: working_with_list_rendering_profiles
+    - Integrating remote XML data: integrating_remote_xml_data
+    - Integrating remote JSON data: integrating_remote_json_data
+    - plrf_crt_dply_cust_beanlst_prvdr.md
+    - crt_dply_cstm_attval_pro_plgin.md
+    - Digital Data Connector cache tuning: ddc_cache_tuning
+    - plrf_hint_tip.md

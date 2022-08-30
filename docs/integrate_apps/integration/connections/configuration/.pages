@@ -1,0 +1,9 @@
+title: HCL Connections
+nav:
+    - index.md
+    - Configure HCL Portal to work with HCL Connections: cfg_portal_with_cnx
+    - i_coll_t_enable_lctrust.md
+    - Configuring HCL Connections features: cfg_connections_features
+    - Configuring community pages: cfg_community_pages
+    - Managing community pages: managing_community_pages
+    - Configuring Portal to work with HCL Connections in SmartCloud for Social Business: cfg_portal_to_work_with_cnx_in_sc
