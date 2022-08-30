@@ -15,7 +15,7 @@ This section describes how to define the set of attributes available in the bean
     
     ![](../../../../assets/Volt_MX_Sample_Endpoint.png "VOLTMX Sample API Endpoint.")
 
-### Steps to create the profile are as follows:
+### Steps to create the list rendering profile are as follows:
 
 1. Log in to the WAS console.
  
