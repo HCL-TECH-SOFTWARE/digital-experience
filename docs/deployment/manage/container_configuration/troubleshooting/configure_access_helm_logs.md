@@ -187,7 +187,7 @@ All applications send their log output directly to `stdout` and `stderr` of the 
 |Remote Search|/opt/HCL/AppServer/profiles/prs\_profile/logs/server1|
 |Persistence Node|/var/lib/pgsql/11/data/log and /var/lib/pgsql/11/data/dx/repmgr/log|
 
-!!!note
+!!! note
     The Core and Remote Search have the following default settings for their log output files and that needs to be considered when sizing their persistent volumes:
 
 |Output file|Size per file|Files kept|
