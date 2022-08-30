@@ -24,6 +24,6 @@ The following optional query parameters can be used with the friendly URLs:
 - `rendition`: `Original`/`Desktop`/`Tablet`/`Smartphone`/`{custom rendition}` - retrieves the specified rendition of the asset 
 - `version`: (Version number or id) - retrieves the specified version of the asset
 
-This will form URLs in the following form:
+The URLs will be formed as follows:
 
 `/assets/{collection name/unique id}/{asset name/unique id}?binary={true/false}&rendition={rendition type}&version={version id}`
