@@ -1,10 +1,10 @@
-# Connecting to HCL VoltMX Foundry through Digital Data Connector (DDC)
+# Connecting to HCL Volt MX Foundry through Digital Data Connector (DDC)
 
-This section provides the steps on using DDC for HCL Portal framework to integrate data from HCL VoltMX Foundry (integrated external data sources) on your portal pages by using HCL Web Content Manager presentation components.
+This section provides the steps on using DDC for HCL Portal framework to integrate data from HCL Volt MX Foundry (integrated external data sources) on your portal pages by using HCL Web Content Manager presentation components.
 
 ## Prerequisite
 
-Ensure that the your Volt MX Foundry application is configured correctly accroding to [this guide](./configuring_voltmx_foundry_to_connect_to_ddc.md).
+Ensure that the your Volt MX Foundry application is configured correctly according to [this guide](./configuring_voltmx_foundry_to_connect_to_ddc.md).
 ## Create a mapping for the DDC plug-in for the List-rendering profile
 This section describes how to define the set of attributes available in the beans that are contained in bean lists that a DDC plug-in generates in List-rendering profile.
 
@@ -52,10 +52,10 @@ Steps to create the profile are as follows:
         Instead of using the generic DDC json plugin you can create and deploy your [own DDC plugin](https://help.hcltechsw.com/digital-experience/9.5/social/plrf_crt_dply_cust_beanlst_prvdr.html) best suited for your business needs. 
 
     !!!note
-        `{profile}.ItemAttribute.id` is always required but it could point to any attribute from the external data source. In the sample above, the HCL Volt MX account API used is having an id for every account. So we're using the id attribute in the id. 
-        If your API does not provide any unique field you might want to use the function `{profile}.ComputedItemAttribute.{any}`.
+        `{profile}.ItemAttribute.id` is always required but it could point to any attribute from the external data source. In the sample above, the HCL Volt MX account API used is having an ID for every account. So you're using the ID attribute in the ID. 
+        If your API does not provide any unique field, you might want to use the function `{profile}.ComputedItemAttribute.{any}`.
 
-6. Review and save the changes in master configuration.
+6. Review and save the changes in the master configuration.
 
     ![](../../../../assets/WAS_Save_In_Master_Configuration.png "Save all the changes in master configuration")
 
@@ -123,9 +123,9 @@ This is a convenient way to ensure the List Rendering Profile custom properties 
 
 ### Create a Presentation Template
 
-This is where we are setting the context of the DDC content.
+Set the context of the DDC content.
 
-Steps to create Presentation Template are as follows-
+Steps to create Presentation Template are as follows:
 
 1. Create a new presentation template with suggested name `Volt MX data presentation template` and under presentation template options, add the following:
     ```
@@ -135,19 +135,19 @@ Steps to create Presentation Template are as follows-
 
     ![](../../../../assets/WCM_Presentation_Template.png "Create Presentation Template.")
  
-    - Under `attribute`, we are defining the data `source` endpoint. The content field we have set in this example is `sourceuri` where we saved the **endpoint** in the content item.
-    - `profile` refers to the List-Rendering Profile we saved earlier in the WAS console. The content field we have set in this example is also `profile` which we will save in the content item with value `ddcDemo.profile.json`.
-    - `extension-id` refers to the DDC plugin id. The content field we have set in this example is `provider` which we will save in the content item with value `ibm.portal.ddc.json`.
+    - Under `attribute`, define the data `source` endpoint. The content field set in this example is `sourceuri`, where you saved the **endpoint** in the content item.
+    - `profile` refers to the List-Rendering Profile which was saved earlier in the WAS console. The content field that is set in this example is also `profile`, which is saved in the content item with the `ddcDemo.profile.json` value.
+    - `extension-id` refers to the DDC plugin ID. The content field set in this example is `provider`, which is saved in the content item with value `ibm.portal.ddc.json`.
 2. Save and close.
 
 ###  Create a Content Template
-Under Authoring Templates, we will create a Content Template.
+Under Authoring Templates, create a Content Template.
 
 1. Click on `New` button. Then, click `Authoring Template`, then `Content Template` component
 
     ![](../../../../assets/WCM_Create_HTML_Component.png "Add Content Template.")
  
-2. Add `Name`, `Display title` and `Description` with suggested name `Volt MX Content Template`. Then select the presentation template we created earlier as default presentation template `Volt MX data presentation template`.
+2. Add `Name`, `Display title` and `Description` with suggested name `Volt MX Content Template`. Then select the presentation template that was created earlier as the default presentation template `Volt MX data presentation template`.
 
     ![](../../../../assets/WCM_Create_Content_Template.png "Create Content Template and select it's attribute.")
 
@@ -171,11 +171,11 @@ Under Authoring Templates, we will create a Content Template.
 
 ### Create a Content item.
 
-1. Under your libraries click on `Content`. Then click on `Articles` and create a new **Content** from the Content Template we created earlier `Volt MX Content Template`.
+1. Under your libraries, click `Content`, then click `Articles`, and create a new **Content** from the Content Template that you created earlier.
 
     ![](../../../../assets/WCM_Create_Main_Content.png "Create Main Content.")
 
-2. Add `Name`, `Display title` and `Description` with suggested name `Volt MX Main Content` and in the content fields / elements, input the following:
+2. Add `Name`, `Display title`, and `Description` with suggested name `Volt MX Main Content`, and in the content fields / elements, provide the following inputs:
 
     | Content field title            | Value                                                        |
     | ------------------------------ | ------------------------------------------                   |
@@ -190,11 +190,11 @@ Under Authoring Templates, we will create a Content Template.
 
 ## Use in Portal Page
 
-Now we can use all the WCM artefacts we created in a portal page.
+Now you can use all the WCM artefacts that you created on a portal page.
 
 1. Under `Administration` > `Site Management` > `Manage Pages`, create a new page under `Content Root` (e.g. `Volt MX DDC` page).
 
-2. Go to the page `Volt MX DDC` and enable `Edit mode`.
+2. Go to the page `Volt MX DDC`, and enable `Edit mode`.
 
     ![](../../../../assets/WCM_Enable_Edit_Mode.png "Enable Edit mode.")
 
@@ -210,10 +210,10 @@ Now we can use all the WCM artefacts we created in a portal page.
 
     ![](../../../../assets/WCM_Edit_Shared_Setting.png "Select Edit Shared Settings.")
 
-6. Under Content, change the mapped content to the Content Item we created above.
+6. Under Content, change the mapped content to the Content Item you created above.
 
     ![](../../../../assets/WCM_Set_Page_Content.png "Select Edit Shared Settings.")
 
-7. Click `OK`and the following output page will be displayed.
+7. Click `OK`, and the following output page will be displayed.
 
     ![](../../../../assets/WCM_Output_Page.png "Result output.")
