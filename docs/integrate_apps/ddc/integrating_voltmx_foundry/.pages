@@ -1,4 +1,4 @@
-title: Connecting to HCL VoltMX Foundry through Digital Data Connector (DDC)
+title: HCL VoltMX Foundry via Digital Data Connector
 nav:
     - index.md
-    - configuring_voltmx_foundry_to_connect_to_ddc.md
+    - Configuring VoltMX: configuring_voltmx_foundry_to_connect_to_ddc.md
