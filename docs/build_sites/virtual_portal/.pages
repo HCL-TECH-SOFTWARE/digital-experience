@@ -1,8 +1,9 @@
 title: Virtual Portal
 nav:
     - index.md
-    - Installation: installation
-    - Configuration: configuration
-    - Usage: usage
-    - Limitations: limitations
-
+    - Deciding about virtual portals: vp_overview
+    - Planning for virtual portals: vp_planning
+    - wcm_mngpages_virtualportal.md
+    - Administering virtual portals: adm_vp_task
+    - Working with the Virtual Portal Manager portlet: vp_mgr_portlet
+    - Virtual portals reference: vp_reference

@@ -1,6 +1,6 @@
-title: Portal Application Archive
+title: Developing Portal Application Archive
 nav:
-    - Configuration: configuration
-    - Usage: usage
-
+    - index.md
+    - Developing Basic PAA applications: developing_basic_paa_app
+    - Developing advanced PAA file applications: developing_adv_paa_app
 

@@ -1,0 +1,6 @@
+title: Deploying the HCL Connections Portlets for HCL Connections Cloud
+nav:
+    - index.md
+    - t_connections_portlets_import_cert.md
+    - t_connections_portlets_cloud_sso_config.md
+    - r_connections_portlets_install_options_cc.md

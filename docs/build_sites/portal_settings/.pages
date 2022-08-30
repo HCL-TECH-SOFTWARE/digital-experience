@@ -1,9 +1,9 @@
-title: Portal Settings
+title: Manage site settings
 nav:
     - index.md
-    - manage_client_devices
-    - manage_custom_unique_names
-    - manage_global_setting
-    - manage_markup_language
+    - Managing global settings: manage_global_setting
+    - Managing custom unique names: manage_custom_unique_names
+    - Managing markup languages: manage_markup_language
+    - Managing client devices: manage_client_devices
     - h_main_import_xml.md
 

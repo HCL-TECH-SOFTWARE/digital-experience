@@ -1,6 +1,7 @@
 title: Integrating Applications
 nav:
-    - connections
-    - ibm_mobilefirst
-    - unified_task_list
-    - wab
+    - index.md
+    - Configure HCL Portal to work with HCL Connections: connections
+    - Integrating with IBM MobileFirst: ibm_mobilefirst
+    - Integrating business processes: unified_task_list
+    - Integrating with web applications: wab

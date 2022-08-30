@@ -16,6 +16,8 @@ Virtual portals are created and managed through the portal administration interf
 View information to help you scope your HCL Portal to have multiple virtual portals.
 -   **[Working with the Virtual Portal Manager portlet](../admin-system/advp_vpmgr.md)**  
 For improved manageability of virtual portals, HCL Digital Experience provides an administration portlet. It is named Virtual Portal Manager. It allows you to create virtual portals on demand. You can also use it to preconfigure and administer virtual portals.
+-   **[Managing Virtual Portals](../admin-system/h_main_virtual.md)**  
+The Manage Virtual Portals portlet enables you to deploy additional portals on an existing infrastructure. With virtual portals, you can use a single portal installation to deploy multiple portals with different URLs, anonymous pages, user groups, and themes and skins.
 -   **[Virtual portals reference](../admin-system/advpref.md)**  
 The virtual portals reference provides information about using commands for configuring virtual portals, usage hints and tips, and known limitations.
 

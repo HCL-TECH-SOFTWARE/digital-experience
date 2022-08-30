@@ -1,7 +1,6 @@
 Title: Monitoring
 nav:
     - index.md
-    - Portlet load monitoring for HCL Portal: portlet_load_monitoring
     - Analyzing portal usage data: analyze_portal_usage
     - sec_audit.md
   

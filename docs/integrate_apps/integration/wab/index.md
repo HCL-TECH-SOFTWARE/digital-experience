@@ -14,6 +14,8 @@ Configure the Web Dock portlet to always allow dynamic size. This setting allows
 
 **Note:** Mobile devices might not show scroll bars for any overflow content. Instead, the swipe feature of the mobile is enabled.
 
+-   **[Web Application Bridge](../admin-system/wab_alogin.md)**  
+The Web Application Bridge uses reverse proxy technology to integrate web-based content providers, such as the Microsoft SharePoint server, with HCL Digital Experience.
 -   **[Configuring the Web Application Bridge for anonymous login](../admin-system/wab_alogin.md)**  
 You can map your web application bridge to allow anonymous users to log on and access information.
 -   **[Configuring multiple web dock applications on a page](../admin-system/wab_multi.md)**  
