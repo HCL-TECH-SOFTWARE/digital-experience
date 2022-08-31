@@ -4,3 +4,4 @@ nav:
     - build_and_deploy_dx_modules.md
     - manual_ear_upload.md
     - build_and_deploy_scriptapps.md
+    - build_and_deploy_all.md
