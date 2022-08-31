@@ -18,7 +18,8 @@ Referential integrity applies for links to portal pages. You cannot delete a por
 
 When users click a link, the link is resolved according to the system content mapping for the portal page item in the Portal Site library. Based on the system content mapping, the appropriate portal page is displayed.
 
-**Important:** You cannot change system content mappings through typical operations with the user interface. However, it is possible to change system content mappings through programmatic interfaces, like the XML configuration interface \(xmlaccess command\), or other low-level database operations. If a system content mapping is changed or corrupted through such a method, the link can no longer be resolved.
+!!! important
+    You cannot change system content mappings through typical operations with the user interface. However, it is possible to change system content mappings through programmatic interfaces, like the XML configuration interface \(xmlaccess command\), or other low-level database operations. If a system content mapping is changed or corrupted through such a method, the link can no longer be resolved.
 
 ## Use unique friendly URLs with pages
 
@@ -28,7 +29,8 @@ When you create pages, it is not possible to programmatically enforce uniqueness
 
 Because pages are stored in the Portal Site library in Web Content Manager, each page has corresponding objects in the JCR database. You must be aware of this relation when you create, update, or delete pages with the XML configuration interface. If xmlaccess processing is interrupted, it can result in a mismatch between the page state and database state.
 
-**WARNING:** If you redeploy your site daily, your JCR size increases because of page versions. Periodically clean up your versions to reduce the JCR size. Go to [Clearing version history](wcm_admin_clear_versions.md) for information.
+!!! warning 
+    If you redeploy your site daily, your JCR size increases because of page versions. Periodically clean up your versions to reduce the JCR size. Go to [Clearing version history](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcm_admin_clear_versions.md) for information.
 
 To ensure that page and database information for a page remain synchronized, use the `transaction-level` attribute of the `request` element in the XML file. For more information about using the `transaction-level` attribute, go to *XML configuration reference.*
 

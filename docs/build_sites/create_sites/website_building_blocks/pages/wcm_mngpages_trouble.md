@@ -49,13 +49,13 @@ You can resynchronize the Portal Site library based on the current portal page s
 
 To do the resynchronization, run the `create-page-nodes` configuration task, as described in *Enabling managed pages*.
 
-**Important:** This task also removes any draft pages that are not found in the Portal Site library.
+!!! important 
+    This task also removes any draft pages that are not found in the Portal Site library.
 
 
 **Related information**  
 
+[Enabling vanity URL support](../../../../manage_content/wcm/wcm_content_delivery/vanity_url/adm_vanity_url/van_url_cfgtsk_enable_vus.md)
 
-[Enabling vanity URL support](../wcm/van_url_cfgtsk_enable_vus.md)
-
-[Synchronizing the vanity URL database](../wcm/van_url_cfgtsk_sync_db.md)
+[Synchronizing the vanity URL database](../../../../manage_content/wcm/wcm_content_delivery/vanity_url/adm_vanity_url/van_url_cfgtsk_sync_db.md)
 

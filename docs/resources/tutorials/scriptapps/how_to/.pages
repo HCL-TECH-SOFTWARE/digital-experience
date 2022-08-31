@@ -1,4 +1,4 @@
-title: How to
+title: How-To Guides
 nav:
     - index.md
     - 01_basic_deployments.md
@@ -7,5 +7,3 @@ nav:
     - 04_apps_sharing_dependencies.md
     - 05_apps_with_diff_deploy_versions.md
     - 06_theme_component_in_app.md
-    
-
