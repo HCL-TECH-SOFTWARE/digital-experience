@@ -45,5 +45,5 @@
 5. Prepare your target DX page that will host the Script Application. Follow this [guide](../post-deployment/prepare_dx_page.md).
 
 6. Add the Script Application into the target DX page. Follow this [guide](../post-deployment/add_scriptapp_to_page.md).
-    - EducSampleScriptApp4A (from wcmContentName in <ScriptApp01>/package.json)
-    - EducSampleScriptApp4B (from wcmContentName in <ScriptApp02>/package.json)
+    - Sample: EducSampleScriptApp4A (from wcmContentName in <ScriptApp01>/package.json)
+    - Sample: EducSampleScriptApp4B (from wcmContentName in <ScriptApp02>/package.json)

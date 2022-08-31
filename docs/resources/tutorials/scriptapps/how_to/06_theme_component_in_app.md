@@ -15,7 +15,7 @@
 
 ## How to Bundle Dependencies as DX Modules
 !!!tip "Bundle Dependencies as DX Modules"
-    Follow the detailed steps [here](../common-setup/optimized-scriptapps/dependencies_as_module.md).
+    Follow the common steps [here](../common-setup/optimized-scriptapps/dependencies_as_module.md) then apply the project specific settings listed [here](#project-specific-settings-dx-module).
 
     Quick Notes:
 
@@ -27,6 +27,39 @@
 ## Important Things to Note
 !!!note "Important Things To Note"
     Check the information [here](../common-setup/post-deployment/important_things_to_note.md).
+
+## Project Specific Settings (DX-Module)
+Full configuration steps are listed [here](../common-setup/optimized-scriptapps/dependencies_as_module.md)(common steps). You'll also need to apply the specific steps below:
+
+1. Update the module-index.js file to each of the submodule. Enumerate the Javascript libraries and components via import and export commands in the file. Provide descriptive aliases for the group of libraries and components that will be included.
+    - DxModule/SubModule01/module-index.js
+    ```
+    /* Import and Export Main Libraries
+     */
+    import React from 'react';
+    import ReactDOM from 'react-dom/client';
+    export const ReactV18 = {
+        React,
+        ReactDOM,
+    }
+    
+    /* Import and Export 3rd-Party Libraries
+     */
+    import { Table } from 'smart-webcomponents-react/table';
+    import { Tabs, TabItem, TabItemsGroup } from 'smart-webcomponents-react/tabs';
+    
+    export const SmartWebComponents = {
+        Table, Tabs, TabItem, TabItemsGroup
+    }
+    
+    /* Export custom components that will come from the submodule
+     */
+    export * as CommonData from './common/data/data';
+    
+    /* Export index file for the styles (added here to be able to share the filename of JS bundle's alias in Webpack entry config).
+     */
+    export * from './styles-index.css'    
+    ```
 
 ## How To Build and Deploy DX Modules
 !!!tip "Build and Deploy DX Modules"
@@ -42,13 +75,13 @@
 
 ## How To Bundle and Deploy a Script Application Without Its Dependencies
 !!!tip "Script Applications Sharing Dependencies"
-    For each of your script applications, follow the detailed steps [here](../common-setup/optimized-scriptapps/sharing_dependencies.md).
+    For each of your script applications, follow the common steps [here](../common-setup/optimized-scriptapps/sharing_dependencies.md).
 
     Quick Notes:
 
     - Set a unique wcmContentName (i.e: EducSampleScriptApp) setting in `package.json`.
     - Make sure the contentRoot setting in `package.json` matches the build or distribution folder.
-
+    
 ## How To Build and Deploy Script Applications
 !!!tip "Build and Deploy Script Applications"
     Follow the steps [here](../common-setup/build-and-deploy/build_and_deploy_scriptapps.md).
