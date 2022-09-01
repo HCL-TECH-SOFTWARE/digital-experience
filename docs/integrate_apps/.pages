@@ -4,6 +4,7 @@ nav:
     - integration
     - development_tools
     - ddc
+    - script_application
     - portlets_development
     - apis
     - screenflow

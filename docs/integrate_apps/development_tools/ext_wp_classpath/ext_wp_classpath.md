@@ -1,4 +1,4 @@
-# Extending HCL Portal class path
+# Extending DX's class path
 
 There are several options to add the general code that is not part of an EAR or WAR files.
 
