@@ -1,13 +1,16 @@
 # Hypervisors
 The Hypervisors section specifies the hypervisors that HCL Digital Experience 9.5 (Portal Extend, Express, Enable, WCM) supports.
 
-## AIX family
+## AIX Summary
 |Hypervisor|Product minimum|Components|Deployment Units|Supported Guest Operating System|
 |---------|-----|-----|-----|----------------------------------|
 |Application Workload Partition (WPAR) AIX 7.1|9.5|Full|Server|	-	AIX 7.1 POWER System \- Big Endian<br>-	AIX 7.2 POWER System \- Big Endian|
 |IBM PowerVM Hypervisor (LPAR, DPAR, Micro-Partition) any supported version|9.5|Full|Server|-	AIX 7.1 POWER System \– Big Endian<Br>-	AIX 7.2 POWER System \- Big Endian|
 |WPAR: Product installed in System Workload Partition AIX 6.1|9.5|Full|Server|-	AIX 7.1 POWER System \– Big Endian<br>-	AIX 7.2 POWER System \– Big Endian|
 
+!!! important "AIX support"
+
+	Portal Express offering does not support AIX.
 
 ## Linux Summary
 |Hypervisor|Product Minimum|Components|Deployment Units|Supported Guest Operating System|

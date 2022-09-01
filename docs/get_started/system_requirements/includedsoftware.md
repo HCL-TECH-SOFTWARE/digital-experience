@@ -1,9 +1,2 @@
 # Included Software
-HCL Portal Express 9.5 includes the following products.
-
-|Product name|Capability|Applicable Operating System Families|
-|------------------|-----|------|
-|DB2 Advanced Workgroup Server Edition 11.1.0|Databases|Linux, Windows|
-|DB2 Standard Edition 11.5|Databases|Linux, Windows|
-|WebSphere Application Server Network Deployment 9.0.5|Application Servers|Linux, Windows|
-
+Co-packaged software is identified in HCL Digital Experience 9.5 Download documents available in your entitlements on the [HCL Software License Portal](https://www.hcltech.com/software/support/release).

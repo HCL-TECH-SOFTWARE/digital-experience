@@ -4,6 +4,7 @@ nav:
     - Integrating applications: integration
     - Development tools: development_tools
     - Digital Data Connector: ddc
+    - Script application: script_application
     - Developing portlets: portlets_development
     - apis
     - Screen Flow Manager: screenflow

@@ -3,9 +3,6 @@ nav:
     - index.md
     - Installation: installation
     - Configure HCL Portal to work with HCL Connections: configuration
-    - Limitations: limitations
-    - Usage: usage
-    - Troubleshooting: troubleshooting
-
+    - HCL Connection portliest: cnx_portlets
    
 
