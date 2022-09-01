@@ -2,7 +2,7 @@
 id: h_rperm_create_role_block
 title: Creating a role block
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

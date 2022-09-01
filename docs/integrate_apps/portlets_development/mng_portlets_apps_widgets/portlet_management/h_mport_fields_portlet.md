@@ -2,7 +2,7 @@
 id: h_mport_fields_portlet
 title: Fields for the Manage Portlets portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

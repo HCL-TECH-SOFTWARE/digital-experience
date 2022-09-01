@@ -2,7 +2,7 @@
 id: pznConfigPersonalizedListPortlet
 title: Configuring Personalized List portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

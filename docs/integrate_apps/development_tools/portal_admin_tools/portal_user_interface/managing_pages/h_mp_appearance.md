@@ -2,7 +2,7 @@
 id: h_mp_appearance
 title: Changing portlet appearance
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

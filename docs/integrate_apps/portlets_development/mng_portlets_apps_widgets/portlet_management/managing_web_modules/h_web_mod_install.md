@@ -2,7 +2,7 @@
 id: h_web_mod_install
 title: Installing a Web module
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

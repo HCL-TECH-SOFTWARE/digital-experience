@@ -2,7 +2,7 @@
 id: h_theme_skin_edit_theme
 title: Editing a theme
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

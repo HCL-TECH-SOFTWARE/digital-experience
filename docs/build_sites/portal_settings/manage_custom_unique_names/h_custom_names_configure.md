@@ -2,7 +2,7 @@
 id: h_custom_names_configure
 title: Configuring the Manage Custom Unique Names portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

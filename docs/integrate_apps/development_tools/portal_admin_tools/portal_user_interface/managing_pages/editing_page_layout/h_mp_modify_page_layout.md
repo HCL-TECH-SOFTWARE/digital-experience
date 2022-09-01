@@ -2,7 +2,7 @@
 id: h_mp_modify_page_layout
 title: Modifying page layout
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

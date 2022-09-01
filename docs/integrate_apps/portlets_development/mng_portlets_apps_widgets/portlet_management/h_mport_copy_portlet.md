@@ -2,7 +2,7 @@
 id: h_mport_copy_portlet
 title: Copying a portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

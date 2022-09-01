@@ -2,7 +2,7 @@
 id: wcm_dev_elements_number_add_template
 title: Adding a number element to a template
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: h_custom_names_fields
 title: Field descriptions for the Manage Custom Unique Names portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

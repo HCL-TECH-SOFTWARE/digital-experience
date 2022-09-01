@@ -2,7 +2,7 @@
 id: h_papp_modify_portlet_app_parms
 title: Modifying portlet application settings
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

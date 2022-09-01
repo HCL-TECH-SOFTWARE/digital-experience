@@ -2,7 +2,7 @@
 id: wcm_dev_elements_fileresource_adding
 title: Adding a file resource element to an item
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

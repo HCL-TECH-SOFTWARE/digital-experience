@@ -2,7 +2,7 @@
 id: h_wserv_icons
 title: Icon descriptions for the Web Service Configuration portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

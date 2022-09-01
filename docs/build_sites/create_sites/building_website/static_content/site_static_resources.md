@@ -2,7 +2,7 @@
 id: site_static_resources
 title: Static resources
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

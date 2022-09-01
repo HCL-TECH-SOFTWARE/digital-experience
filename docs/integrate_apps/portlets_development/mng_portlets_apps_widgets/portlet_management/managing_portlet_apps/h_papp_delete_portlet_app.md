@@ -2,7 +2,7 @@
 id: h_papp_delete_portlet_app
 title: Deleting a portlet application
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

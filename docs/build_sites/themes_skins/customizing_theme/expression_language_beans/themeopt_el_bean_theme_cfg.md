@@ -2,7 +2,7 @@
 id: themeopt_el_bean_theme_cfg
 title: wp.themeConfig \| HCL Digital Experience
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

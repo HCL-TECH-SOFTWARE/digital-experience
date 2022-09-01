@@ -2,7 +2,7 @@
 id: h_wserv_delete_producer
 title: Deleting a Producer definition
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

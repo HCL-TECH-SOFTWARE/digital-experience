@@ -2,7 +2,7 @@
 id: h_theme_skin_fields
 title: Field descriptions for the Themes and Skins portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

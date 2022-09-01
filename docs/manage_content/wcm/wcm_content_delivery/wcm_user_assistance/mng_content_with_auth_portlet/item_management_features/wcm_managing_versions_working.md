@@ -2,7 +2,7 @@
 id: wcm_managing_versions_working
 title: Restoring an item
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

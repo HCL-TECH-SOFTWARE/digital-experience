@@ -2,7 +2,7 @@
 id: wcm_dev_content_linking_removing
 title: How to remove content item links from site areas
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

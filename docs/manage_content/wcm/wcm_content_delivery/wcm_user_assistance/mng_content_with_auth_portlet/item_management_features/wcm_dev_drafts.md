@@ -2,7 +2,7 @@
 id: wcm_dev_drafts
 title: How to work with draft items
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

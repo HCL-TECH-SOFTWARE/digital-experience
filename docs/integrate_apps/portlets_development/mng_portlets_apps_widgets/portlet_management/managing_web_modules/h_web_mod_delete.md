@@ -2,7 +2,7 @@
 id: h_web_mod_delete
 title: Deleting a Web module
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

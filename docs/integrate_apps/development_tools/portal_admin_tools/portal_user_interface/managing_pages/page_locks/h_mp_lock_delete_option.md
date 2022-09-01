@@ -2,7 +2,7 @@
 id: h_mp_lock_delete_option
 title: Setting the delete option
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

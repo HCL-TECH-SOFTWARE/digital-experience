@@ -2,7 +2,7 @@
 id: h_custom_names_create
 title: Creating or editing a custom unique name
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

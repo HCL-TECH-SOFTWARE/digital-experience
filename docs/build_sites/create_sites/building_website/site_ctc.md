@@ -2,7 +2,7 @@
 id: site_ctc
 title: Content Template
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

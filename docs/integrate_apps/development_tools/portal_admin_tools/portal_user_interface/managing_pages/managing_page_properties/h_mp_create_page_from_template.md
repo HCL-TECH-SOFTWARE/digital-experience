@@ -2,7 +2,7 @@
 id: h_mp_create_page_from_template
 title: Creating pages from a template using the Manage Pages portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

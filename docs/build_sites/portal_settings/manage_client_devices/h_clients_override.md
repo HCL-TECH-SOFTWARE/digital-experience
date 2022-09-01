@@ -2,7 +2,7 @@
 id: h_clients_override
 title: Overriding the default HTML client
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

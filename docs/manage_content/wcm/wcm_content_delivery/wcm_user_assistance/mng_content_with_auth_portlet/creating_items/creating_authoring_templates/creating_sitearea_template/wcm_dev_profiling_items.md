@@ -2,7 +2,7 @@
 id: wcm_dev_profiling_items
 title: Entering profile information
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

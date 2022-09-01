@@ -2,7 +2,7 @@
 id: h_cred_fields
 title: Field descriptions for the Credential Vault portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

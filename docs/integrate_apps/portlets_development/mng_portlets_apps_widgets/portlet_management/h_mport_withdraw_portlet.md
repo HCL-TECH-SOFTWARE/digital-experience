@@ -2,7 +2,7 @@
 id: h_mport_withdraw_portlet
 title: Withdrawing a portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

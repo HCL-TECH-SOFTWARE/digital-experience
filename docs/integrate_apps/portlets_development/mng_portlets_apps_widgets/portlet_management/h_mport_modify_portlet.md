@@ -2,7 +2,7 @@
 id: h_mport_modify_portlet
 title: Modifying portlet settings
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

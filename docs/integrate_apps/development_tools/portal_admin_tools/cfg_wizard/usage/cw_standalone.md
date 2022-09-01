@@ -2,7 +2,7 @@
 id: cw_standalone
 title: Set up a stand-alone server
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

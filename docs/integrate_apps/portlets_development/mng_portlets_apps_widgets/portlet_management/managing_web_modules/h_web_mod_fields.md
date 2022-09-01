@@ -2,7 +2,7 @@
 id: h_web_mod_fields
 title: Field descriptions for the Manage Web Modules portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

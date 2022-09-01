@@ -2,7 +2,7 @@
 id: h_markups_activate
 title: Activating or deactivating a markup
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

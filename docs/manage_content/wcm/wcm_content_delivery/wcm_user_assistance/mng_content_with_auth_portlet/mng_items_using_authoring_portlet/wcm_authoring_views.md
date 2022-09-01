@@ -2,7 +2,7 @@
 id: wcm_authoring_views
 title: Authoring portlet navigation options
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

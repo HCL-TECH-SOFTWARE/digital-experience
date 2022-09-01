@@ -2,7 +2,7 @@
 id: h_rperm_modify_owners
 title: Modifying resource owners
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: site_create_libs
 title: Creating libraries
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

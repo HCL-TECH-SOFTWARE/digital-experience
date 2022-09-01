@@ -2,7 +2,7 @@
 id: h_clients_display_info
 title: Displaying client information
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

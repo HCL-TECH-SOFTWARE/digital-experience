@@ -2,7 +2,7 @@
 id: wcm_dev_renderplugins_remote
 title: Remote action plug-in
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

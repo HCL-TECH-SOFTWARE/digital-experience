@@ -2,7 +2,7 @@
 id: wcm_dev_elements_text_add_template
 title: Adding a text element to a template
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

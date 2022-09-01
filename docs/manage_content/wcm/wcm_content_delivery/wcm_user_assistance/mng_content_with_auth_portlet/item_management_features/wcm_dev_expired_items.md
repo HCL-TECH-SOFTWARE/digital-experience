@@ -2,7 +2,7 @@
 id: wcm_dev_expired_items
 title: How to manage expired items
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

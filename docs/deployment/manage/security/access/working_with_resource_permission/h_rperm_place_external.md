@@ -2,7 +2,7 @@
 id: h_rperm_place_external
 title: Placing a resource under external control
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

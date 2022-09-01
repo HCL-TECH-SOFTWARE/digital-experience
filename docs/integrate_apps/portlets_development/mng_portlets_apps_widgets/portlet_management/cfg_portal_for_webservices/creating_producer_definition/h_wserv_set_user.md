@@ -2,7 +2,7 @@
 id: h_wserv_set_user
 title: Setting user attributes to be passed to a web service Producer
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

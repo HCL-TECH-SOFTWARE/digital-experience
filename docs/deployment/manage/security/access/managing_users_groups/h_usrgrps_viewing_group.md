@@ -2,7 +2,7 @@
 id: h_usrgrps_viewing_group
 title: Viewing group assignments for a user or group
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

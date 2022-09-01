@@ -2,7 +2,7 @@
 id: toolbar_friendlyurl
 title: Friendly URL name
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

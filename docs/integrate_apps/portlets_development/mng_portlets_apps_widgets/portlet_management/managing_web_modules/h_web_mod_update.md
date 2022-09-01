@@ -2,7 +2,7 @@
 id: h_web_mod_update
 title: Updating a Web module
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

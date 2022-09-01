@@ -2,7 +2,7 @@
 id: site_dynamic_metadata
 title: Dynamic page metadata
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

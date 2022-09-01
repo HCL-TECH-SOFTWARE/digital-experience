@@ -2,7 +2,7 @@
 id: h_papp_view_portlet_app
 title: Viewing a list of portlets for a portlet application
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

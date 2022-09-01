@@ -2,7 +2,7 @@
 id: h_theme_skin_delete_skin
 title: Deleting a skin
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

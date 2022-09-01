@@ -2,7 +2,7 @@
 id: wcm_favourites
 title: Favorite items or locations
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

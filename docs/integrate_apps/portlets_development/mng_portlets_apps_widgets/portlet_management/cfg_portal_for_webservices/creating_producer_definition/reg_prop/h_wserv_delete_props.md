@@ -2,7 +2,7 @@
 id: h_wserv_delete_props
 title: Deleting a registration property
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: h_rperm_change_authlevel
 title: Changing the authentication level
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

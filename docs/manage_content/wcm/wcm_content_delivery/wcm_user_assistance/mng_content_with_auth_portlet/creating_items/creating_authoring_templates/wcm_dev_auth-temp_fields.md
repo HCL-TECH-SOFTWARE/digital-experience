@@ -2,7 +2,7 @@
 id: wcm_dev_auth-temp_fields
 title: Defining display settings of fields and elements
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

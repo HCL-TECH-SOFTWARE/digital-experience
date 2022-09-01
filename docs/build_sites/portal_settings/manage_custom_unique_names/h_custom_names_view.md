@@ -2,7 +2,7 @@
 id: h_custom_names_view
 title: Viewing portal resources and custom unique names in the table
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

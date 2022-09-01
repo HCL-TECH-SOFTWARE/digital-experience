@@ -2,7 +2,7 @@
 id: wcm_dev_elements_placeholder
 title: Creating a placeholder tag
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

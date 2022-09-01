@@ -2,7 +2,7 @@
 id: h_wires_del
 title: Deleting a wire
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: wcm_dev_elements_authoring-tools_examples
 title: How to define authoring tools
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

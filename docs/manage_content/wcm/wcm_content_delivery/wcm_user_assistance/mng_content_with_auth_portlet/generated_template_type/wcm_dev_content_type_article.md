@@ -2,7 +2,7 @@
 id: wcm_dev_content_type_article
 title: Article template type
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

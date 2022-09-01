@@ -2,7 +2,7 @@
 id: pznCreateRuleMapping
 title: Creating and editing a rule mapping
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

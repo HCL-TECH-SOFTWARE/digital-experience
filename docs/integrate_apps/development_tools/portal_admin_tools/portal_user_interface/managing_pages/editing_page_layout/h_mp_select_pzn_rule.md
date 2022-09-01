@@ -2,7 +2,7 @@
 id: h_mp_select_pzn_rule
 title: Selecting a personalization rule
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

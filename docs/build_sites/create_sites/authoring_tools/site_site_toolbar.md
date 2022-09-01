@@ -2,7 +2,7 @@
 id: site_site_toolbar
 title: Site toolbar and site manager
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

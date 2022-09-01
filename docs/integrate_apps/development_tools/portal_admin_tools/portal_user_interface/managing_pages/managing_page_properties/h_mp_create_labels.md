@@ -2,7 +2,7 @@
 id: h_mp_create_labels
 title: Creating a label
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

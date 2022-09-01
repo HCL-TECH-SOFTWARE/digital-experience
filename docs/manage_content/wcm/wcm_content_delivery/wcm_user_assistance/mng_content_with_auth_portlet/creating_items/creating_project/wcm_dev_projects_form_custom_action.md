@@ -2,7 +2,7 @@
 id: wcm_dev_projects_form_custom_action
 title: Applying custom actions to a project
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: wcm_dev_search_form_query_filtering
 title: Filtering search results
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: h_mp_delete_pages
 title: Deleting pages, labels, and URLs
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

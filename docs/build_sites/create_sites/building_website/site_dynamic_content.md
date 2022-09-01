@@ -2,7 +2,7 @@
 id: site_dynamic_content
 title: Dynamic content
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

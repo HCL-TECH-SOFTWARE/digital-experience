@@ -2,7 +2,7 @@
 id: h_mp_lock_content
 title: Locking and unlocking content
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: h_ug_perms_settings
 title: Configuring the User and Group Permissions portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

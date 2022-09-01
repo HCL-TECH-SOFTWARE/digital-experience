@@ -2,7 +2,7 @@
 id: h_web_mod_view_portlet
 title: Viewing portlet applications for a Web module
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

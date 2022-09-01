@@ -2,7 +2,7 @@
 id: wcm_dev_custom_jsp
 title: Customizing elements with JSP
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: h_markups_delete
 title: Deleting a markup
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

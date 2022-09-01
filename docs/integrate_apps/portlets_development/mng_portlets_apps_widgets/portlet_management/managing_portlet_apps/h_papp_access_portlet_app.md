@@ -2,7 +2,7 @@
 id: h_papp_access_portlet_app
 title: Assigning permissions to a portlet application
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

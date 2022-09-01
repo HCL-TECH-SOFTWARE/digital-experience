@@ -2,7 +2,7 @@
 id: site_jslib
 title: JavaScript libraries
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

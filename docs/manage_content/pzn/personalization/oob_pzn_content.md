@@ -2,7 +2,7 @@
 id: oob_pzn_content
 title: Content that you personalize
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

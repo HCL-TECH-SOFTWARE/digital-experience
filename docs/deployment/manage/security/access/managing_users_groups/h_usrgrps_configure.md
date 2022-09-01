@@ -2,7 +2,7 @@
 id: h_usrgrps_configure
 title: Configuring the Users and Groups portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

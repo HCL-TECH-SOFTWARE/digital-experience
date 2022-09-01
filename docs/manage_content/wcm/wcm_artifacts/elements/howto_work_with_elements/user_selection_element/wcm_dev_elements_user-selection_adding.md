@@ -2,7 +2,7 @@
 id: wcm_dev_elements_user-selection_adding
 title: Adding a user selection element to an item
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: h_web_mod_consume
 title: Consuming a remote portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

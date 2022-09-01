@@ -2,7 +2,7 @@
 id: wcm_dev_elements_short-text_props
 title: Enter some text in the short text element
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: wcm_dev_content_linking_linking
 title: How to link or copy content items to site areas
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

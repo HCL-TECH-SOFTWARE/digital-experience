@@ -2,7 +2,7 @@
 id: wcm_dev_workflows_creating_action_move_props
 title: Defining scheduled move action properties
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

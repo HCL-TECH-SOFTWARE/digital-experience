@@ -2,7 +2,7 @@
 id: add_nw_cstm_lnk
 title: Adding a custom link
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

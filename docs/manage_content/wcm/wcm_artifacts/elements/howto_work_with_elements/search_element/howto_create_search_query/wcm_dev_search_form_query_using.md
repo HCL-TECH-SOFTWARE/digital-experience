@@ -2,7 +2,7 @@
 id: wcm_dev_search_form_query_using
 title: How to use a search query form
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

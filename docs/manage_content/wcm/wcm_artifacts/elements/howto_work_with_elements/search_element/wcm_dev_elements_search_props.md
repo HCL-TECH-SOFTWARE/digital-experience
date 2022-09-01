@@ -2,7 +2,7 @@
 id: wcm_dev_elements_search_props
 title: Creating a search results design
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: sitebuilder_learn_lib_cont_temp
 title: Content libraries for site templates
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

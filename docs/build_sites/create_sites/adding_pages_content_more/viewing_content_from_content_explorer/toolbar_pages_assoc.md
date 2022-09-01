@@ -2,7 +2,7 @@
 id: toolbar_pages_assoc
 title: Associated content on your page
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

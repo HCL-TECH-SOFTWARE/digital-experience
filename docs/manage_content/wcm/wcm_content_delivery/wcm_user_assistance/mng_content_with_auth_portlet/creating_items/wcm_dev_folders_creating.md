@@ -2,7 +2,7 @@
 id: wcm_dev_folders_creating
 title: Creating a folder
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

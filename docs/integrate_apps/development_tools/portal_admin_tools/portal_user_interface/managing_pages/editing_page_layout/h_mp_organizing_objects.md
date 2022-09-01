@@ -2,7 +2,7 @@
 id: h_mp_organizing_objects
 title: Organizing objects
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

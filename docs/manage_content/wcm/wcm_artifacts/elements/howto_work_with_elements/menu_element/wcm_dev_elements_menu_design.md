@@ -2,7 +2,7 @@
 id: wcm_dev_elements_menu_design
 title: Menu element design examples
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

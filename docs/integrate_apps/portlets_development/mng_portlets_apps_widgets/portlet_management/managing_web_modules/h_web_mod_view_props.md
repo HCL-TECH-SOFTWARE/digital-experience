@@ -2,7 +2,7 @@
 id: h_web_mod_view_props
 title: Viewing properties of a Web module
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

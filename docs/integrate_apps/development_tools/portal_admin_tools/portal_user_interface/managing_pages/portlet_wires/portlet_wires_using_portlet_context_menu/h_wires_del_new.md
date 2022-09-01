@@ -2,7 +2,7 @@
 id: h_wires_del_new
 title: Deleting a wire using the context menu
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

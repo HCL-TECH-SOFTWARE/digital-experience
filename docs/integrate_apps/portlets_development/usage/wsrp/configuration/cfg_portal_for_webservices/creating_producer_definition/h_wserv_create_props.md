@@ -2,7 +2,7 @@
 id: h_wserv_create_props
 title: Creating a registration property
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: toolbar_vanityurls
 title: Vanity URLs
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

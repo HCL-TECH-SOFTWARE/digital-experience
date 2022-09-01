@@ -2,7 +2,7 @@
 id: sitebuilder_learn_lib_cont_user
 title: Content libraries for sites created with Site Builder
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

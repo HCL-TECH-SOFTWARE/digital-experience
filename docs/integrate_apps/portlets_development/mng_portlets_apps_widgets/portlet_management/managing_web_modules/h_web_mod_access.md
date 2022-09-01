@@ -2,7 +2,7 @@
 id: h_web_mod_access
 title: Assigning access to a Web module
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

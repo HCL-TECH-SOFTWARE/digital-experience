@@ -2,7 +2,7 @@
 id: wcm_authoring_accessing
 title: How to access the authoring portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

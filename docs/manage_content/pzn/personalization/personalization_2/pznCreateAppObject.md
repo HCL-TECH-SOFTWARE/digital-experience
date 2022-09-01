@@ -2,7 +2,7 @@
 id: pznCreateAppObject
 title: Creating and editing application objects
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

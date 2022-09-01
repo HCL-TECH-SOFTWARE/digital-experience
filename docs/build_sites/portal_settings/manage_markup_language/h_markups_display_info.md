@@ -2,7 +2,7 @@
 id: h_markups_display_info
 title: Displaying information about a markup
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: h_mport_configure_manage_portlets
 title: Configuring the Manage Portlets portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

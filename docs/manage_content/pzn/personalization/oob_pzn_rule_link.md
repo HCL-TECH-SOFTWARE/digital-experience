@@ -2,7 +2,7 @@
 id: oob_pzn_rule_link
 title: Link the rule to a content spot on your site
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

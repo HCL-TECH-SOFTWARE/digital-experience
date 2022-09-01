@@ -2,7 +2,7 @@
 id: toolbar_add_app
 title: Adding applications to your page
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

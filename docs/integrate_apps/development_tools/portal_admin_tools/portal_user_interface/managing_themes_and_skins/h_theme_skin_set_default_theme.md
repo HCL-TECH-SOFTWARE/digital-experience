@@ -2,7 +2,7 @@
 id: h_theme_skin_set_default_theme
 title: Setting the default theme
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

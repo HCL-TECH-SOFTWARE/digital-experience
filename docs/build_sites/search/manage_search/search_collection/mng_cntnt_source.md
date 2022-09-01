@@ -2,7 +2,7 @@
 id: mng_cntnt_source
 title: Manage the content sources of a search collection
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

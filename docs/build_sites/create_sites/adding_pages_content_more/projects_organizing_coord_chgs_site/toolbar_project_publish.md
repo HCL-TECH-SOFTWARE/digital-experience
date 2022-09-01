@@ -2,7 +2,7 @@
 id: toolbar_project_publish
 title: Sending content for publishing approval in your project
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

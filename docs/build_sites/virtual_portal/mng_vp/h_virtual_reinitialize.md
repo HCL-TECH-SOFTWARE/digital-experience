@@ -2,7 +2,7 @@
 id: h_virtual_reinitialize
 title: Re-initializing a virtual portal
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

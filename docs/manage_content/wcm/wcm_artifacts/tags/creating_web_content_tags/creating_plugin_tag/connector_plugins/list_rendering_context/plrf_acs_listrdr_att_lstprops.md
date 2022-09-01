@@ -2,7 +2,7 @@
 id: plrf_acs_listrdr_att_lstprops
 title: Accessing list-rendering attributes and list properties
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

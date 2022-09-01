@@ -2,7 +2,7 @@
 id: h_wserv_edit_producer
 title: Editing a Producer definition
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

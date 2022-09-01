@@ -2,7 +2,7 @@
 id: h_web_mod_configure
 title: Configuring the Manage Web Modules portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

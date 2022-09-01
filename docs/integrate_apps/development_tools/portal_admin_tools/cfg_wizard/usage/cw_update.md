@@ -2,7 +2,7 @@
 id: cw_update
 title: Migrate to a New Version
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 
