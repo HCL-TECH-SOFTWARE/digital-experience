@@ -19,11 +19,12 @@ To make a Progressive Web Application installable \(as noted in the [Introductio
     -   `start_url`
     -   display \(must be either `fullscreen`, `standalone`, or `minimal-ui`\)
 
-        **Note:** `prefer_related_applications` must not be present, or be false.
+        !!! note
+            `prefer_related_applications` must not be present, or be false.
 
 3.  Register a service worker with a functional fetch handler.
 
-Once an application meets the above criteria, the browser will display a button that will allow the application to be installed. See the PWA install option example shown below using the [Woodburn Studio Demo Site](../woodburn_studio/woodburn_studio.html).
+Once an application meets the above criteria, the browser will display a button that will allow the application to be installed. See the PWA install option example shown below using the [Woodburn Studio Demo Site](../woodburn_studio/index.md).
 
 ![](../assets/woodburn_studio_demo_site.png "Woodburn Studio Demo Site")
 

@@ -2,9 +2,11 @@
 
 Use the Mobile Preview simulator to view the presentation of Digital Experience site page components on select mobile devices.
 
-**Note:** The Mobile Preview simulator is provided with HCL Digital Experience CF19 release as a sample and is not yet supported for production use. The support policy for this HCL DX component will be updated at a future CF update release.
+!!! note
+    The Mobile Preview simulator is provided with HCL Digital Experience CF19 release as a sample and is not yet supported for production use. The support policy for this HCL DX component will be updated at a future CF update release.
 
-**Note:** To enable user switching in the Mobile Preview, you must enable [Mobile Browser Simulator UserAgent Switcher](https://chrome.google.com/webstore/detail/mobile-browser-simulator/dcljefehlpjmoefgoohaobehbenocmkg) extension in Chrome.
+!!! note
+    To enable user switching in the Mobile Preview, you must enable [Mobile Browser Simulator UserAgent Switcher](https://chrome.google.com/webstore/detail/mobile-browser-simulator/dcljefehlpjmoefgoohaobehbenocmkg) extension in Chrome.
 
 ## Mobile Preview Simulator Installation and Usage
 
@@ -12,7 +14,7 @@ This section provides information on the usage of the Mobile Preview Simulator i
 
 ## Installation
 
-The Mobile Preview Simulator is enabled by default in HCL Digital Experience 9.5 CF19 and later releases and deployed along with the [Practitioner Studio](../practitioner_studio/practitionerstudio_overview.html) and [Woodburn Studio demo site](../woodburn_studio/woodburn_studio.html).
+The Mobile Preview Simulator is enabled by default in HCL Digital Experience 9.5 CF19 and later releases and deployed along with the [Practitioner Studio](../practitioner_studio/index.md) and [Woodburn Studio demo site](../woodburn_studio/index.md).
 
 Access the Mobile Preview Simulator
 
@@ -22,8 +24,7 @@ After verifying access to Practitioner Studio, the Mobile Preview Simulator can 
 
 The Mobile Preview image and action appears at the top right, just below the Woodburn Studio site menu as shown in the following figure.
 
-![The Mobile Preview image and action appear on the top right, just below the Woodburn Studio site menu shown in this figure.](../assets/MobilePreview%20icon%20logged%20in%20users%20edit%20mode.png "Authenticated users can view the Mobile Preview simulator icon in Edit
-                        mode for use (Example)")
+![The Mobile Preview image and action appear on the top right, just below the Woodburn Studio site menu shown in this figure.](../../images/MobilePreview%20icon%20logged%20in%20users%20edit%20mode.png)
 
 Append the following query to the URL to set the HCL Digital Experience page to display initially:
 
@@ -31,7 +32,7 @@ Append the following query to the URL to set the HCL Digital Experience page to 
 
 For example, this URL example shows a specific page URL request to present using the Mobile Preview Simulator:
 
-/wps/mobilepreview/MobileBrowserSimulator/index.html?webpage=<URL-to-page\>
+`/wps/mobilepreview/MobileBrowserSimulator/index.html?webpage=<URL-to-page\>`
 
 ## Usage
 
@@ -41,7 +42,7 @@ Option 1: Add an icon to a content or page template to launch the Mobile Preview
 
 An icon can be used in a DX Content or Page template to launch the Mobile Preview simulator:
 
-1.  **Create a new Content Item** \(reference the [Create Content Items](../panel_help/wcm_dev_content_creating.md) topic for additional information\) for use with the designated Authoring Template or Page Template, that renders the following HTML:
+1.  **Create a new Content Item** \(reference the [Create Content Items](../../manage_content/wcm/wcm_content_delivery/wcm_user_assistance/mng_content_with_auth_portlet/creating_items/creating_content_items/index.md) topic for additional information\) for use with the designated Authoring Template or Page Template, that renders the following HTML:
 
     ```
     [IfEditMode]
@@ -97,7 +98,8 @@ An icon can be used in a DX Content or Page template to launch the Mobile Previe
 
 Option 2: Reference the Mobile Preview simulator for launch in an HCL DX theme
 
-**Note:** Option 2 requires the content item created in Option 1 as shown previously.
+!!! note
+    Option 2 requires the content item created in Option 1 as shown previously.
 
 1.  As shown in the following example, the Mobile Preview simulator can be referenced for launch in a Simple Theme, using the `st_wcm_content` Dynamic Content spot:
 
@@ -129,7 +131,6 @@ In Woodburn Studio demonstration site delivered in HCL DX 9.5 CF19 and later rel
 
 The following examples demonstrate use of the Mobile Preview simulator to view display of the Woodburn Studio demonstration site on mobile device displays.
 
-![](../assets/using_mobile_preview_simulator.png "Using the Mobile Preview simulator to view Woodburn Studio
-                                demonstration site display on mobile devices")
+![Using the Mobile Preview simulator to view Woodburn Studio demonstration site display on mobile devices](../../images/using_mobile_preview_simulator.png)
 
 

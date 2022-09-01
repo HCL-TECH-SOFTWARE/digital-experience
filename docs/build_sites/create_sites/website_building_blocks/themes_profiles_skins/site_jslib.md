@@ -2,10 +2,6 @@
 id: site_jslib
 title: JavaScript libraries
 ---
-
-
-
-
 HCL includes JavaScript libraries to support various features.
 
 ## Dojo

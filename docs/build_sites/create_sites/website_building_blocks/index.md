@@ -2,7 +2,6 @@
 id: site_overview
 title: Website building blocks
 ---
-<!--  -->
 
 Unless you are familiar with the HCL Digital Experience and HCL Web Content Manager website model, review the building blocks. Building blocks are the different parts that make up the website framework, such as pages, navigation, themes, content, content libraries, and more.
 

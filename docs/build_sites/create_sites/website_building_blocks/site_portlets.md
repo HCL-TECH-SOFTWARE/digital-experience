@@ -2,7 +2,6 @@
 id: site_portlets
 title: Portlets
 ---
-<!---  --->
 
 Portlets are small applications that are independently developed, deployed, managed, and displayed. After the portlet is deployed, you can use it multiple times on different pages.
 
