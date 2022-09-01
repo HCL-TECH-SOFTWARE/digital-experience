@@ -11,7 +11,7 @@ For more information, please have a look at the detailed system requirements for
 
 ![Containerization Architecture Overview](../../images/haproxy-optional-ingress-architecture.png)
 
-In both deployment options there is one component at the center of things, which is called DX Core.
+There is one component called DX Core that is common for both deployment options. DX Core contains all functionalities, which were originally available for traditional deployments, that are now applicable for both traditional and container-based deployments.
 Container-based deployments add additional capabilities to DX that are only available as containers.
 
 Whether developing, testing, or running a full production environment, the use of container-based deployments are preferred for the ease of deploying applications, including the latest version of HCL Digital Experience. Deploy in a fraction of the time than what it takes in the traditional deployment models.
