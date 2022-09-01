@@ -1,4 +1,4 @@
-# HCL UX Screen Flow Manager
+# Screen Flow Manager
 
 The HCL UX Screen Flow Manager helps operators, developers, and dialog modelers develop fine-granular, small split portlets. Learn to configure the sequence, transitions, and workflow of a set of screens.
 

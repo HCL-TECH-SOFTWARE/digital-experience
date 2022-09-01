@@ -2,6 +2,10 @@
     background: black;
 }
 
+.md-grid {
+    max-width: 70rem;
+}
+
 .md-banner--warning {
     background: var(--md-typeset-mark-color) !important;
 }
