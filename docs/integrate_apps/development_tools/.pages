@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-title: Development tools
-nav:
-    - index.md
-    - ...
-=======
 title: Development Tools
 nav:
     - DX Client: dxclient
@@ -14,6 +8,3 @@ nav:
     - Web Developer Toolkit: web_developer_toolkit
     - Extending DX's classpath: ext_wp_classpath
     - Reference documents: reference_docs
-
-
->>>>>>> main
