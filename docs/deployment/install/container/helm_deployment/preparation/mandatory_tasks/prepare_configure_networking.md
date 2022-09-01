@@ -10,7 +10,7 @@ If you deploy both Core and all other applications inside OpenShift or Kubernete
 
 In a full deployment, the host for both the Core and the other applications are the same.
 
-It is recommended to configure the host before you run the deployment. This is only possible if you know the fully qualified domain name \(FQDN\) or the IP address that the HAProxy assigns in your deployment beforehand.
+It is recommended to configure the host before you run the deployment. This is only possible if you know the fully qualified domain name (FQDN) or the IP address that the HAProxy assigns in your deployment beforehand.
 
 If that is the case, define the host using the following syntax:
 
@@ -25,7 +25,7 @@ If that is the case, define the host using the following syntax:
 
 If you do not know the hostname beforehand, you can leave it blank and run an additional step later in the installation, which would retrieve the assigned hostname from HAProxy and configure all applications accordingly.
 
-## Configure Cross Origin Resource Sharing \(CORS\)
+## Configure Cross Origin Resource Sharing (CORS)
 
 The HCL Digital Experience 9.5 Helm Chart allows you to configure CORS configuration for all the `addon` to Core applications such as Digital Asset Management or Ring API. This allows you to access the APIs provided by those applications in other applications with ease.
 
@@ -46,7 +46,7 @@ Refer to the HCL DX 9.5 `values.yaml` detail for all possible applications that 
 
 **Configuring Hybrid Host**
 
-In a [Hybrid](../helm_deployment.md) deployment, the host for the on-premise DX Core will be added in the core configuration section and the other applications host will be placed under the add-on section. See the following example:
+In a [Hybrid](/docs/get_started/plan_deployment/hybrid_deployment/index.md) deployment, the host for the on-premise DX Core will be added in the core configuration section and the other applications host will be placed under the add-on section. See the following example:
 
 ```
 networking:
@@ -80,7 +80,7 @@ networking:
       ssl: "true"
 ```
 
-Please refer to the original values.yaml for all available applications that can be configured. See the [Planning your container deployment using Helm topic](../preparation/overview.md) for details.
+Please refer to the original values.yaml for all available applications that can be configured. See the [Planning your container deployment using Helm](/docs/deployment/install/container/helm_deployment/overview.md) topic for details.
 
 ## Configure HAProxy certificate
 
@@ -147,7 +147,7 @@ To have your deployment and HAProxy to use the certificate, you must store it in
 The secret can be created using the following commands:
 
 !!! note
-    The secret name can be chosen by you and must be referenced in the next configuration step \(the following example uses `dx-tls-cert`\). The namespace is the Kubernetes namespace where you want to deploy HCL Digital Experience 9.5 to \(the example uses `digital-experience`\).
+    The secret name can be chosen by you and must be referenced in the next configuration step (the following example uses `dx-tls-cert`). The namespace is the Kubernetes namespace where you want to deploy HCL Digital Experience 9.5 to (the example uses `digital-experience`).
 
 ```
    # Create secret with the name "dx-tls-cert"
@@ -175,13 +175,13 @@ You can set the name of the certificate used with the following syntax, the defa
 ### OpenShift Passthrough
 Helm charts have an `openShiftPassthrough` value to create a `Route` resource, which only passes through the main HAProxy port (443 most of the time). Instead of having such a flavor-specific configuration in Helm charts, such setups are documented and point to the flavor-specific documentation and will be deprecated.
 
-The default value set for "openShiftPassthrough" is `auto` i.e it detects openshift deployments automatically. Even though it is not manually enabled it will be active by default. To prevent this it needs to be manually disabled. This can be done by setting "openShiftPassthrough" to `false`
+The default value set for "openShiftPassthrough" is `auto` i.e it detects Openshift deployments automatically. Even though it is not manually enabled it will be active by default. To prevent this it needs to be manually disabled. This can be done by setting "openShiftPassthrough" to `false`
 
 !!! note
     The "openShiftPassthrough" value is deprecated and if "openShiftPassthrough" is to be used a new route resource must be created manually 
 
 #### Create the route resource manually
-If you want to deploy openshift manually using Routes, youll need to create a yaml file like below and any changes required can be made in that. To apply those change the the openshift cluster you can run `kubectl apply` and specify its namespace and location.
+If you want to deploy Openshift manually using Routes, you need to create a .yaml file like below and any changes required can be made in that. To apply those change the the Openshift cluster you can run `kubectl apply` and specify its namespace and location.
 For more information, refer to the [OpenShift Route Configuration](https://docs.openshift.com/container-platform/latest/networking/routes/route-configuration.html) documentation.
 
 ```yaml

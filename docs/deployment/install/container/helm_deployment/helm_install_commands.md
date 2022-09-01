@@ -5,7 +5,7 @@ The following are install commands that are used to deploy or uninstall HCL Digi
 ## Install command
 
 !!!important
-    Modification to any files \(chart.yaml, templates, crds\) in hcl-dx-deployment-vX.X.X\_XXXXXXXX-XXXX.tar.gz, except custom-values.yaml or values.yaml, is not supported.
+    Modification to any files (chart.yaml, templates, crds) in hcl-dx-deployment-vX.X.X\_XXXXXXXX-XXXX.tar.gz, except custom-values.yaml or values.yaml, is not supported.
 
 To run the installation of your prepared configurations using Helm, use the following command:
 
@@ -67,7 +67,7 @@ During the configuration process, you might need the following URLs to access di
 
 Use the following default URLs to access HCL Digital Experience \(Portal and WCM\), the WebSphere® Integrated Solutions Console, and the Configuration Wizard:
 
--   **HCL Digital Experience \(Portal and WCM\)**
+-   **HCL Digital Experience (Portal and WCM)**
 
     https://yourserver/wps/portal
 
@@ -84,7 +84,7 @@ Use the following default URLs to access HCL Digital Experience \(Portal and WCM
     https://yourserver/hcl/wizard
 
 
-## \(Optional\) External DNS configuration
+## (Optional) External DNS configuration
 
 After a successful Helm deployment in a hybrid deployment, you can add a load balancer or an external IP to the DNS registry.
 
@@ -96,12 +96,12 @@ After a successful Helm deployment in a hybrid deployment, you can add a load ba
 
 -   For Amazon EKS, you must add the external IP to route53.
 
-    ![Sample configuration for Amazon EKS](../../../images/helm_dns_eks_host_override_route.png)
+    ![Sample configuration for Amazon EKS](../helm_deployment/_img/helm_dns_eks_host_override_route.png)
 
 
-## \(Optional\) Automated host extraction
+## (Optional) Automated host extraction
 
-As described in the [Configure networking](preparation/prepare_configure_networking.md) topic, there are instances wherein you do not know the resulting external IP or FQDN for your deployment and the host value is empty. In that case, run a Helm upgrade command, and it automatically polls HAProxy and extracts the IP or FQDN values. The Helm Chart logic then populates all application configurations with the correct settings.
+As described in the [Configure networking](../helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md) topic, there are instances wherein you do not know the resulting external IP or FQDN for your deployment and the host value is empty. In that case, run a Helm upgrade command, and it automatically polls HAProxy and extracts the IP or FQDN values. The Helm Chart logic then populates all application configurations with the correct settings.
 
 An example is provided below. You may use the following Helm upgrade command to trigger the automated host extraction:
 
