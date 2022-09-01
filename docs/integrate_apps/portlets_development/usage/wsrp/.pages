@@ -1,8 +1,4 @@
-<<<<<<< HEAD:docs/integrate_apps/development_tools/wsrp/.pages
-title: WSRP services
-=======
 title: Web Services for Remote Portlets (WSRP)
->>>>>>> main:docs/integrate_apps/portlets_development/usage/wsrp/.pages
 nav:
     - index.md
     - wsrpc_new.md
