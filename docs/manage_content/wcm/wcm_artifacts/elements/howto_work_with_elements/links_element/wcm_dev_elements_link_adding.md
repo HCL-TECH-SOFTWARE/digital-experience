@@ -2,7 +2,7 @@
 id: wcm_dev_elements_link_adding
 title: Adding a link element to an item
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

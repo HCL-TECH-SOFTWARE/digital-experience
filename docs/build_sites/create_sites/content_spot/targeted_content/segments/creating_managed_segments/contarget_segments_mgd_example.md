@@ -2,7 +2,7 @@
 id: contarget_segments_mgd_example
 title: Example - Creating managed segments
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

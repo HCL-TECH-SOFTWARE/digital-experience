@@ -2,7 +2,7 @@
 id: wcm_dev_elements_user-selection_creating
 title: Creating a user selection component
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

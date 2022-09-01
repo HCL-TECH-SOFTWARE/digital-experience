@@ -2,7 +2,7 @@
 id: wcm_dev_elements_style-sheet_props
 title: Selecting a style sheet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

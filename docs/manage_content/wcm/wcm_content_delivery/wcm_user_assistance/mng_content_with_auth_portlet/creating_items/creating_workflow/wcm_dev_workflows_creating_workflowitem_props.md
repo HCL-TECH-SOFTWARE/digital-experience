@@ -2,7 +2,7 @@
 id: wcm_dev_workflows_creating_workflowitem_props
 title: Defining the workflow
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

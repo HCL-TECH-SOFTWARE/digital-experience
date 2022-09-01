@@ -2,7 +2,7 @@
 id: wcm_dev_content_location
 title: Specifying the location of a content item
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

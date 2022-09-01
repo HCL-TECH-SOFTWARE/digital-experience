@@ -2,7 +2,7 @@
 id: wcm_dev_item-details_path
 title: Creating a path component tag
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

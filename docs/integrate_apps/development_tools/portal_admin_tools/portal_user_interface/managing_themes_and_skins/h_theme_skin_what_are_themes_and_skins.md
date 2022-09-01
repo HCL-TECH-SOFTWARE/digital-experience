@@ -2,7 +2,7 @@
 id: h_theme_skin_what_are_themes_and_skins
 title: What are themes and skins?
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

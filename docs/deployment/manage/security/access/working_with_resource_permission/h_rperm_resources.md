@@ -2,7 +2,7 @@
 id: h_rperm_resources
 title: What are the different ways to access the Resource Permissions portlet?
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

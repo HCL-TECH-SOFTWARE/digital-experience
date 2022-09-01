@@ -2,7 +2,7 @@
 id: h_usrgrps_fields
 title: Field descriptions for the Users and Groups portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: crt_nw_srch_scp
 title: Creating a search scope
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: h_cred_manage_vault
 title: Managing a vault segment
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

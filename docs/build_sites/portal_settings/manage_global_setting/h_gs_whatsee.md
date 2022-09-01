@@ -2,7 +2,7 @@
 id: h_gs_whatsee
 title: Specifying what users see initially when they log in to the portal
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

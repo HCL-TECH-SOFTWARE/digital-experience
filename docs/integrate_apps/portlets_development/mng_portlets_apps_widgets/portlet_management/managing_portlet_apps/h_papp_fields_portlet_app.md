@@ -2,7 +2,7 @@
 id: h_papp_fields_portlet_app
 title: Field descriptions for the Manage Applications portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

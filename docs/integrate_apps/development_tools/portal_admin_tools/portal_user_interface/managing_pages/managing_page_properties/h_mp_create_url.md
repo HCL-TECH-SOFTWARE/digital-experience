@@ -2,7 +2,7 @@
 id: h_mp_create_url
 title: Creating a URL
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

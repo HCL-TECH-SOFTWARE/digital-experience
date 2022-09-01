@@ -2,7 +2,7 @@
 id: wcm_dev_published_items
 title: How to manage published items
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

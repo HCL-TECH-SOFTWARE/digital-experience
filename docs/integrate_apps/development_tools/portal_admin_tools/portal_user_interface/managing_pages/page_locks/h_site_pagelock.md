@@ -2,7 +2,7 @@
 id: h_site_pagelock
 title: Locking and unlocking static page content
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

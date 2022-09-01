@@ -2,7 +2,7 @@
 id: wcm_security_items_batch-edit
 title: Batch-editing access controls
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

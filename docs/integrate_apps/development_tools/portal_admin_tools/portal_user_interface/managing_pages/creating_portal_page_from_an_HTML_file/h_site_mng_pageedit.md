@@ -2,7 +2,7 @@
 id: h_site_mng_pageedit
 title: Updating a static page
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

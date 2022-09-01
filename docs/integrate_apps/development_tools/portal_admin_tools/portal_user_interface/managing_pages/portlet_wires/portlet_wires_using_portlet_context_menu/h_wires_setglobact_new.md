@@ -2,7 +2,7 @@
 id: h_wires_setglobact_new
 title: Defining global targets using the context menu
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

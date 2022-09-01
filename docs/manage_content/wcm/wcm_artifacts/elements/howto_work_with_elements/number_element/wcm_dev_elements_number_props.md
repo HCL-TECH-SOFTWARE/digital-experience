@@ -2,7 +2,7 @@
 id: wcm_dev_elements_number_props
 title: Defining a number
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

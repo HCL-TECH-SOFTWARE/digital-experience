@@ -2,7 +2,7 @@
 id: wcm_dev_folders
 title: Web content folders
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

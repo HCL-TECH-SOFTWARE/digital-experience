@@ -2,7 +2,7 @@
 id: wcm_dev_elements_navigator_creating
 title: Creating a navigator component
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

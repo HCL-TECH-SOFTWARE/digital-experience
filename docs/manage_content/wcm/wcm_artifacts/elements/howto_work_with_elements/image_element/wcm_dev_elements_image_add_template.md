@@ -2,7 +2,7 @@
 id: wcm_dev_elements_image_add_template
 title: Adding an image element to a template
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

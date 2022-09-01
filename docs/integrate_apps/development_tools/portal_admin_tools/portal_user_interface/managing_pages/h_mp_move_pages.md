@@ -2,7 +2,7 @@
 id: h_mp_move_pages
 title: Moving pages and labels
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

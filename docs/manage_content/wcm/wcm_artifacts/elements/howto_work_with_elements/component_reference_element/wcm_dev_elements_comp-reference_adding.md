@@ -2,7 +2,7 @@
 id: wcm_dev_elements_comp-reference_adding
 title: Adding a component reference element to an item
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

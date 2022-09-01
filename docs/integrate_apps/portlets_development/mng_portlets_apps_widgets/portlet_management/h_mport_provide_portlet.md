@@ -2,7 +2,7 @@
 id: h_mport_provide_portlet
 title: Providing a portlet through WSRP
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

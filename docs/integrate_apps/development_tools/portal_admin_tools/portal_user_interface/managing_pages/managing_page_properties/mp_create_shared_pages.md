@@ -2,7 +2,7 @@
 id: mp_create_shared_pages
 title: Creating shared pages
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

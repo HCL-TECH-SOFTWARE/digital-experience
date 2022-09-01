@@ -2,7 +2,7 @@
 id: h_papp_make_copy_portlet_app
 title: Making a copy of a portlet application
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

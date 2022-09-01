@@ -2,7 +2,7 @@
 id: h_wserv_about
 title: About Web Service Configuration
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

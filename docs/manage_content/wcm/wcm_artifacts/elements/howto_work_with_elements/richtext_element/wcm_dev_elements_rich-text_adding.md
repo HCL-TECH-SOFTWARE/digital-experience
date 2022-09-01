@@ -2,7 +2,7 @@
 id: wcm_dev_elements_rich-text_adding
 title: Adding a rich text element to an item
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

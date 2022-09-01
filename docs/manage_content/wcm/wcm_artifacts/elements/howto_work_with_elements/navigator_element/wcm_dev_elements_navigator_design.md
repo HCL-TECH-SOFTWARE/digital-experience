@@ -2,7 +2,7 @@
 id: wcm_dev_elements_navigator_design
 title: Navigator formatting examples
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

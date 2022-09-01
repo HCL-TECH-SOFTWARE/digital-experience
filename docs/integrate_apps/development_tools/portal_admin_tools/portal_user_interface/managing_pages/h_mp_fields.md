@@ -2,7 +2,7 @@
 id: h_mp_fields
 title: Field descriptions for the Manage Pages portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

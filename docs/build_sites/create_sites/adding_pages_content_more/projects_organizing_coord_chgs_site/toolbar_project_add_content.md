@@ -2,7 +2,7 @@
 id: toolbar_project_add_content
 title: Adding site updates to your project
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

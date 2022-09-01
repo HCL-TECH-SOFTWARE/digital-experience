@@ -2,7 +2,7 @@
 id: wcm_config_wcmviewer_hprofile
 title: Profiling settings
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

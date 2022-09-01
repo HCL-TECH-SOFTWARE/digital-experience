@@ -2,7 +2,7 @@
 id: wcm_dev_items_moving
 title: Moving other items between libraries
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

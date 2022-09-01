@@ -2,7 +2,7 @@
 id: wcm_config_wcmviewer_hdefaults
 title: Setting default values
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

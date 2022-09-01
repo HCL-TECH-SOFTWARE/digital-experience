@@ -2,7 +2,7 @@
 id: h_clients_set_order
 title: Setting the order of the client in the registry
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

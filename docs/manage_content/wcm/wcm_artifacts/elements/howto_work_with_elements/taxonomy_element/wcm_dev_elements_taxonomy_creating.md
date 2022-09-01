@@ -2,7 +2,7 @@
 id: wcm_dev_elements_taxonomy_creating
 title: Creating a taxonomy component
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: wcm_dev_auth-temp_reapply
 title: Reapplying an updated authoring template
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

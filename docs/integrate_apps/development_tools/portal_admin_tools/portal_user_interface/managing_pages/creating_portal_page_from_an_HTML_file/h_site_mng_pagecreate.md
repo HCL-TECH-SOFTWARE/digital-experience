@@ -2,7 +2,7 @@
 id: h_site_mng_pagecreate
 title: Creating a static page
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

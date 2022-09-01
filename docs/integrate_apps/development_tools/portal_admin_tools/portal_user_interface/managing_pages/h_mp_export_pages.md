@@ -2,7 +2,7 @@
 id: h_mp_export_pages
 title: Exporting pages and labels
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

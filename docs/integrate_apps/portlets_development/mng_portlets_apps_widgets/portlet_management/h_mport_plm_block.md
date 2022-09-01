@@ -2,7 +2,7 @@
 id: h_mport_plm_block
 title: Blocking or unblocking requests to a portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

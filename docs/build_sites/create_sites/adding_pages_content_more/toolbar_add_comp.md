@@ -2,7 +2,7 @@
 id: toolbar_add_comp
 title: Adding reusable page components to your page
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

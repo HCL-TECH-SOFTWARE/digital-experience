@@ -2,7 +2,7 @@
 id: h_wires_use
 title: Working with portlet wires
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

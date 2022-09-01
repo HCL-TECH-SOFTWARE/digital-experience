@@ -2,7 +2,7 @@
 id: pznCreateResourceCollection
 title: Creating and editing resource collections
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

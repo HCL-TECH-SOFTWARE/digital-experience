@@ -2,7 +2,7 @@
 id: h_usrgrps_remove_member
 title: Removing members from a group
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

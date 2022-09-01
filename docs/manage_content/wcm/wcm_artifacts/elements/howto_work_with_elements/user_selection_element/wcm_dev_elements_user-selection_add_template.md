@@ -2,7 +2,7 @@
 id: wcm_dev_elements_user-selection_add_template
 title: Adding a user selection element to a template
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

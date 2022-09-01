@@ -2,7 +2,7 @@
 id: h_rperm_place_internal
 title: Placing a resource back under internal control
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

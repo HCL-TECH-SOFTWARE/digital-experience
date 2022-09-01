@@ -2,7 +2,7 @@
 id: h_clients_new
 title: Creating a new client
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

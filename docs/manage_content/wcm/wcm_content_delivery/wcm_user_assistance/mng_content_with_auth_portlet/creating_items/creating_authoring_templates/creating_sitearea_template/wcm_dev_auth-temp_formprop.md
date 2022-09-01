@@ -2,7 +2,7 @@
 id: wcm_dev_auth-temp_formprop
 title: Defining form properties
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

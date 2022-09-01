@@ -2,7 +2,7 @@
 id: pznCreateRule
 title: Creating a rule
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

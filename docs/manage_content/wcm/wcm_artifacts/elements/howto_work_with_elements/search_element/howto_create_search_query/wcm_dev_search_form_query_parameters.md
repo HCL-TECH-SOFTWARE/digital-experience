@@ -2,7 +2,7 @@
 id: wcm_dev_search_form_query_parameters
 title: Search parameters
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

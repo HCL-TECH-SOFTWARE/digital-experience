@@ -2,7 +2,7 @@
 id: wcm_dev_items_id
 title: Entering identification information
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

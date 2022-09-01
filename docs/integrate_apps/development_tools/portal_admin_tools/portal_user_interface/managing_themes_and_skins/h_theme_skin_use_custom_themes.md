@@ -2,7 +2,7 @@
 id: h_theme_skin_use_custom_themes
 title: Custom themes for administrative portlets
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

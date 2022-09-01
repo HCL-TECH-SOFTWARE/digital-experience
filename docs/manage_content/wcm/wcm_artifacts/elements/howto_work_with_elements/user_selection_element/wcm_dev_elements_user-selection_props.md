@@ -2,7 +2,7 @@
 id: wcm_dev_elements_user-selection_props
 title: Select users
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

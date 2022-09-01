@@ -2,7 +2,7 @@
 id: h_mport_delete_portlet
 title: Deleting a portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

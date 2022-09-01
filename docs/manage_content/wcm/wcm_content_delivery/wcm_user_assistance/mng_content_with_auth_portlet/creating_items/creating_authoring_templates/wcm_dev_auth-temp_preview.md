@@ -2,7 +2,7 @@
 id: wcm_dev_auth-temp_preview
 title: Previewing an authoring template
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

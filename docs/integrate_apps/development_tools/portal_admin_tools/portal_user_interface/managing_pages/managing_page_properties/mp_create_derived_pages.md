@@ -2,7 +2,7 @@
 id: mp_create_derived_pages
 title: Creating derived pages
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

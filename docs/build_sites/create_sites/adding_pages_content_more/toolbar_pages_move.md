@@ -2,7 +2,7 @@
 id: toolbar_pages_move
 title: Moving, copying, and pasting pages and content items
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

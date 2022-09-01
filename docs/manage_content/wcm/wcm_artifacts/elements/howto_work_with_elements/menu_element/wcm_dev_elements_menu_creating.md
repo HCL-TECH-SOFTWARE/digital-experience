@@ -2,7 +2,7 @@
 id: wcm_dev_elements_menu_creating
 title: Creating a menu component
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

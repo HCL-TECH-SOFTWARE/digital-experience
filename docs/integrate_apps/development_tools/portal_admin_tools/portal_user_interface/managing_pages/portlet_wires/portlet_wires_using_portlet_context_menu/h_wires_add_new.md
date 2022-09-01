@@ -2,7 +2,7 @@
 id: h_wires_add_new
 title: Adding a wire from the portlet context menu
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: h_ug_resources
 title: Resources
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

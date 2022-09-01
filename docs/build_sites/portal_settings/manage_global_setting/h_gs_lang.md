@@ -2,7 +2,7 @@
 id: h_gs_lang
 title: Specifying the default portal language
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: h_gs_noview
 title: Specifying how to handle portlets that the user is not authorized to view
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

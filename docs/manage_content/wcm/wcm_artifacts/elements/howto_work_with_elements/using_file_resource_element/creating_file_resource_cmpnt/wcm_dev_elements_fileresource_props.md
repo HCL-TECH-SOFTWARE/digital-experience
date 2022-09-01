@@ -2,7 +2,7 @@
 id: wcm_dev_elements_fileresource_props
 title: Selecting a file resource
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

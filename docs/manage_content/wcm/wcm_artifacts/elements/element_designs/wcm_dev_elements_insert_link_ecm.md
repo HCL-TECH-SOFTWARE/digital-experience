@@ -2,7 +2,7 @@
 id: wcm_dev_elements_insert_link_ecm
 title: Inserting a link to remote content
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

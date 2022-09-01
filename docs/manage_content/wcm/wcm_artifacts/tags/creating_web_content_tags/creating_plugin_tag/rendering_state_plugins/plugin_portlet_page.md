@@ -2,7 +2,7 @@
 id: plugin_portlet_page
 title: The Page mode rendering plug-in
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

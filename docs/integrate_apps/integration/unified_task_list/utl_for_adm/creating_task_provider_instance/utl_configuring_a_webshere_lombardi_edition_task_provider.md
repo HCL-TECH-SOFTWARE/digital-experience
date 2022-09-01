@@ -2,7 +2,7 @@
 id: utl_configuring_a_webshere_lombardi_edition_task_provider
 title: Configuring a WebSphere Lombardi Edition task provider instance
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

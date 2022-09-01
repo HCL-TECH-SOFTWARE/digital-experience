@@ -2,7 +2,7 @@
 id: h_wserv_access
 title: Assigning access permission to users on a web service Producer definition
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

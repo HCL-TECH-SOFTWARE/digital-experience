@@ -2,7 +2,7 @@
 id: site_taxonomy
 title: Taxonomy
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

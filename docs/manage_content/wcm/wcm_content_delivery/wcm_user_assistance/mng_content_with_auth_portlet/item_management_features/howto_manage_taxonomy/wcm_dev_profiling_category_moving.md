@@ -2,7 +2,7 @@
 id: wcm_dev_profiling_category_moving
 title: Moving a category
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

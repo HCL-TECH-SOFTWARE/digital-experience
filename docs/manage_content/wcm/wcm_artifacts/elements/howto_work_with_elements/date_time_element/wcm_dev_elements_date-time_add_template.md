@@ -2,7 +2,7 @@
 id: wcm_dev_elements_date-time_add_template
 title: Adding a date and time element to a template
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: wcm_dev_profiling_users
 title: Editing user profiles
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

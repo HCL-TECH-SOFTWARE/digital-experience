@@ -2,7 +2,7 @@
 id: h_mp_order_pages
 title: Ordering pages, labels, and URLs
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

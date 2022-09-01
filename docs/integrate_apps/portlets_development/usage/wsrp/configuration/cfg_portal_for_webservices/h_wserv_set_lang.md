@@ -2,7 +2,7 @@
 id: h_wserv_set_lang
 title: Setting language-specific titles and descriptions for a Producer definition
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

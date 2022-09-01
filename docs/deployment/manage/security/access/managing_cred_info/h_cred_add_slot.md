@@ -2,7 +2,7 @@
 id: h_cred_add_slot
 title: Adding a vault slot
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

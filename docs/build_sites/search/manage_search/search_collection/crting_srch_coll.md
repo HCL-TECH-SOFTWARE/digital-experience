@@ -2,7 +2,7 @@
 id: crting_srch_coll
 title: Creating a search collection
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

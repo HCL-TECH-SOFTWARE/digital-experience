@@ -2,7 +2,7 @@
 id: site_search_forms
 title: Setting up search for site visitors
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

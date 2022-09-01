@@ -2,7 +2,7 @@
 id: wcm_dev_elements_html_adding
 title: Adding an HTML element to an item
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

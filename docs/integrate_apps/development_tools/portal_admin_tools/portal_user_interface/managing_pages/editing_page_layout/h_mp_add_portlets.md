@@ -2,7 +2,7 @@
 id: h_mp_add_portlets
 title: Adding a portlet to a page
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

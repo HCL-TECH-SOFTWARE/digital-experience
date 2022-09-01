@@ -2,7 +2,7 @@
 id: h_markups_create
 title: Creating a new markup
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: h_mp_access
 title: Assigning access to pages, labels, and URLs
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

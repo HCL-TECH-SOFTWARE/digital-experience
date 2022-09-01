@@ -2,7 +2,7 @@
 id: wcm_dev_elements_comp-reference_add_template
 title: Adding a component reference element to a template
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

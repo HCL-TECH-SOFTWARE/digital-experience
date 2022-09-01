@@ -2,7 +2,7 @@
 id: wcm_dev_sites_moving
 title: Moving a site area
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

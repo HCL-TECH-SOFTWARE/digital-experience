@@ -2,7 +2,7 @@
 id: wcm_dev_elements_short-text_adding
 title: Adding a short text element to an item
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

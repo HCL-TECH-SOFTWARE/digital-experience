@@ -2,7 +2,7 @@
 id: wcm_dev_projects_form_access_temp
 title: Template defined project access settings
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

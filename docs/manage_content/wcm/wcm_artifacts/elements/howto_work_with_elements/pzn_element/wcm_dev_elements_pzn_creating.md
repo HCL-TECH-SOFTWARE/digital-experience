@@ -2,7 +2,7 @@
 id: wcm_dev_elements_pzn_creating
 title: Creating a Personalization component
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

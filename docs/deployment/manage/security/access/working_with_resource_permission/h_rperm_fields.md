@@ -2,7 +2,7 @@
 id: h_rperm_fields
 title: Field descriptions for the Resource Permissions portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

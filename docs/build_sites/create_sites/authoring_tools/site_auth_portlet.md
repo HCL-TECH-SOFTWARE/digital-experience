@@ -2,7 +2,7 @@
 id: site_auth_portlet
 title: Authoring portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

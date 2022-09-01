@@ -2,7 +2,7 @@
 id: st_adv_prm_cntsrc
 title: Setting the advanced parameters for a content source
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

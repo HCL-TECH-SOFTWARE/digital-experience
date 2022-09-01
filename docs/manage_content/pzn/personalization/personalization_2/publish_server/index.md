@@ -2,7 +2,7 @@
 id: pznCreatePublishServer
 title: Creating a publish server
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

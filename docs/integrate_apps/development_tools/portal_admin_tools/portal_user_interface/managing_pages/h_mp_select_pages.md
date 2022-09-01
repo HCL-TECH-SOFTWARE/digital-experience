@@ -2,7 +2,7 @@
 id: h_mp_select_pages
 title: Selecting pages
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

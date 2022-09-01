@@ -2,7 +2,7 @@
 id: h_mp_set_up
 title: Configuring the Manage Pages portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

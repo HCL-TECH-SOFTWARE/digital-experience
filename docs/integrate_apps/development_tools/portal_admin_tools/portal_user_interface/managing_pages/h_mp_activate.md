@@ -2,7 +2,7 @@
 id: h_mp_activate
 title: Activating or deactivating a page, label, or URL
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

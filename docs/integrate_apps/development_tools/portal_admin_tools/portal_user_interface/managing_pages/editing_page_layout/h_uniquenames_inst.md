@@ -2,7 +2,7 @@
 id: h_uniquenames_inst
 title: Editing portlet unique names on a page
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

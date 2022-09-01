@@ -2,7 +2,7 @@
 id: plugin_logic
 title: Logic plug-ins
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

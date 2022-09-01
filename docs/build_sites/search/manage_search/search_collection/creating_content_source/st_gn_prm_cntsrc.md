@@ -2,7 +2,7 @@
 id: st_gn_prm_cntsrc
 title: Setting the general parameters for a content source
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

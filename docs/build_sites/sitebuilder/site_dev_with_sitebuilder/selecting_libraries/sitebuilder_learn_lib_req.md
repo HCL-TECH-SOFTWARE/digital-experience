@@ -2,7 +2,7 @@
 id: sitebuilder_learn_lib_req
 title: Required libraries in Site Builder
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

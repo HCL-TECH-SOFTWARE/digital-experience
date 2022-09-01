@@ -2,7 +2,7 @@
 id: sa_asa_anal_tags_sec
 title: Security for analytics tags and site promotions
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

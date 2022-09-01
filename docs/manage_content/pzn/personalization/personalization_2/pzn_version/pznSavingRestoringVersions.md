@@ -2,7 +2,7 @@
 id: pznSavingRestoringVersions
 title: Saving and restoring personalization versions
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

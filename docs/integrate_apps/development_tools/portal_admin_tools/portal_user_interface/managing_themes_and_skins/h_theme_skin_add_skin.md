@@ -2,7 +2,7 @@
 id: h_theme_skin_add_skin
 title: Creating your own custom skin
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

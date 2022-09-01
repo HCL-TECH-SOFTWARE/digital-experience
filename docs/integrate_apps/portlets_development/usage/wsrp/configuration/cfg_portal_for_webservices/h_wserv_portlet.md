@@ -2,7 +2,7 @@
 id: h_wserv_portlet
 title: Configuring the Web Service Configuration portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

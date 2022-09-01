@@ -2,7 +2,7 @@
 id: h_main_import_xml
 title: Importing an XML configuration file
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

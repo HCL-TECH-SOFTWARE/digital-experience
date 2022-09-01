@@ -2,7 +2,7 @@
 id: plugin_other
 title: Other plug-ins
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

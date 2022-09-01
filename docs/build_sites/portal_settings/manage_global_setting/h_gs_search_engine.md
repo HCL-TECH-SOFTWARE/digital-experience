@@ -2,7 +2,7 @@
 id: h_gs_search_engine
 title: Specifying the search engine that opens when users select Find
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 
