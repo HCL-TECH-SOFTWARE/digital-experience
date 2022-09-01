@@ -1,10 +1,11 @@
-# Preparing a IBM Directory Server
+# Prepare an IBM Directory Server
 
 If you plan to use a IBM Directory Server as an LDAP user registry, you must install and set up the server so that it communicates with HCL Digital Experience.
 
 1.  Install IBM® Directory Server. Refer to the [IBM Directory Server Installation and Configuration Guide](http://www-01.ibm.com/support/knowledgecenter/SSVJJU_6.3.0/com.ibm.IBMDS.doc/install.htm) for instructions.
 
-    **Restriction:** Users or groups must not contain a Turkish uppercase dotted I or lowercase dotted i in the distinguished name. It prevents correct retrieval of that user or group.
+    !!!note "Restriction"
+        Users or groups must not contain a Turkish uppercase dotted I or lowercase dotted i in the distinguished name. It prevents correct retrieval of that user or group.
 
 2.  Complete the following steps with the IBM Directory Server web administration tool to create the HCL Portal administrative user:
 
@@ -15,7 +16,7 @@ If you plan to use a IBM Directory Server as an LDAP user registry, you must ins
         3.  Type the **Base DN** name for the suffix; for example: dc=yourcompany,dc=com.
         4.  Click **Add**.
         5.  Click **OK** to save your changes.
-    2.  Open the appropriate LDIF file in the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/installer/wp.iim/ldif directory, with a text editor:
+    2.  Open the appropriate LDIF file in the PortalServer_root/installer/wp.iim/ldif directory, with a text editor:
 
         -   Use the PortalUsers.ldif file as a working example and adapt appropriately to work with your LDAP server.
         -   Use the ContentUsers.ldif file for the HCL Content Manager group and user ID if you configured HCL Content Manager.
@@ -31,7 +32,7 @@ If you plan to use a IBM Directory Server as an LDAP user registry, you must ins
 
 3.  Complete the following steps to create the HCL Portal administrative user:
 
-    1.  Open the appropriate LDIF file in the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/installer/wp.iim/ldif directory, with a text editor:
+    1.  Open the appropriate LDIF file in the PortalServer_root/installer/wp.iim/ldif directory, with a text editor:
 
         -   Use the PortalUsers.ldif file as a working example and adapt appropriately to work with your LDAP server.
         -   Use the ContentUsers.ldif file for the HCL Content Manager group and user ID if you configured HCL Content Manager.

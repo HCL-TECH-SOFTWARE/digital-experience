@@ -112,4 +112,4 @@ helm upgrade -n my-namespace -f path/to/your/custom-values.yaml your-release-nam
 
 ## Additional reference
 
-Step by Step Guide: [How to deploy HCL DX Container Update CF197 and higher to Microsoft Azure Kubernetes Service \(AKS\) using Helm](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0091344)
+Step-by-step guide: [How to deploy HCL DX Container Update CF197 and higher to Microsoft Azure Kubernetes Service (AKS) using Helm](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0091344)

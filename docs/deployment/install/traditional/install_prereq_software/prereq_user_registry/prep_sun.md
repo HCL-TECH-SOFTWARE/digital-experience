@@ -1,4 +1,4 @@
-# Preparing an Oracle Directory Server
+# Prepare an Oracle Directory Server
 
 If you plan to use an Oracle Directory Server as an LDAP user registry, you must install and set up the server so that it communicates with HCL Digital Experience.
 
@@ -13,7 +13,7 @@ If you plan to use an Oracle Directory Server as an LDAP user registry, you must
         3.  Type the **Base DN** name for the suffix; for example: dc=yourcompany,dc=com.
         4.  Click **Add**.
         5.  Click **OK** to save your changes.
-    2.  Open the appropriate LDIF file in the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/installer/wp.iim/ldif directory, with a text editor:
+    2.  Open the appropriate LDIF file in the PortalServer_root/installer/wp.iim/ldif directory, with a text editor:
 
         -   Use the PortalUsers.ldif file as a working example and adapt appropriately to work with your LDAP server.
         -   Use the ContentUsers.ldif file for the IBM® Content Manager group and user ID if you configured HCL Web Content Manager.
@@ -29,7 +29,7 @@ If you plan to use an Oracle Directory Server as an LDAP user registry, you must
 
 3.  Complete the following steps to create the HCL Portal administrative user:
 
-    1.  Open the appropriate LDIF file in the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/installer/wp.iim/ldif directory, with a text editor:
+    1.  Open the appropriate LDIF file in the PortalServer_root/installer/wp.iim/ldif directory, with a text editor:
 
         -   Use the PortalUsers.ldif file as a working example and adapt appropriately to work with your LDAP server.
         -   Use the ContentUsers.ldif file for the IBM Content Manager group and user ID if you configured HCL Web Content Manager.
