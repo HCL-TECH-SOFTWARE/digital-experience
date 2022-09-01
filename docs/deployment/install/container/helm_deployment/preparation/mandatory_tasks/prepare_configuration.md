@@ -1,10 +1,12 @@
+# Prepare configuration
+
 Create a configuration file that fits the needs of your target HCL DX 9.5 Container deployment. The configuration file is the heart of your deployment using Helm. It defines how HCL Digital Experience 9.5 is deployed to supported platforms, and how it behaves during runtime operations. This section explains how to create your own configuration file and how to leverage the existing `values.yaml` inside the Helm Chart. It also explains how to optionally overwrite settings in case the default set may not be sufficient.
 
 !!!warning
-    Modification to any files \(chart.yaml, templates, crds\) in hcl-dx-deployment-vX.X.X\_XXXXXXXX-XXXX.tar.gz, except custom-values.yaml or values.yaml, is not supported.
+    Modification to any files (chart.yaml, templates, crds) in hcl-dx-deployment-vX.X.X\_XXXXXXXX-XXXX.tar.gz, except custom-values.yaml or values.yaml, is not supported.
 
 !!!note
-    From CF205 on you can directly retrieve the Helm Chart via the HCL Harbor Helm repository. If you wish to do so, please follow the instructions in [Configure Harbor Helm Repository](../optional_configure_harbor_helm_repo) to pull the Helm Chart before you continue.
+    From CF205 on you can directly retrieve the Helm Chart via the HCL Harbor Helm repository. If you wish to do so, please follow the instructions in [Configure Harbor Helm Repository](../optional_tasks/optional_configure_harbor_helm_repo.md) to pull the Helm Chart before you continue.
 
 -   **The configuration flow**
 
@@ -37,7 +39,7 @@ Since there are many values that can be configured in the HCL Digital Experience
 
 HCL DX 9.5 Helm Chart provides a default values.yaml, which contains all possible configuration parameters.
 
-To access this file, you may use the following command when you have the HCL DX 9.5 CF196 or later [Helm Chart tar.gz](../../../docker/index.md) file on hand:
+To access this file, you may use the following command when you have the HCL DX 9.5 CF196 or later [Helm Chart tar.gz](../../../../../../get_started/plan_deployment/container_deployment/index.md#helm-chart-contents) file on hand:
 
 ```
 # Command to extract values.ymal from Helm Chart
