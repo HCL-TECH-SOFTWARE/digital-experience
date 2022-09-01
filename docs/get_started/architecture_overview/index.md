@@ -5,7 +5,7 @@ HCL Digital Experience is a solid and reliable platform that can help deliver th
 There are different options to deploy DX:
 **Traditional deployments**: DX is deployed on-premises in the WebSphere Application Server infrastructure.
 While traditional deployments still remain an option, a more modern option as been added recently:
-HCL introduced full support for **container-based deployments**. HCL DX can be deployed into Kubernetes infrastructures for test, development, staging, and production environments.
+**Container-based deployments**: HCL supports container-based deployments. HCL DX can be deployed into Kubernetes infrastructures to manage and maintain multiple environments such as testing, development, staging, and production.
 
 For more information, please have a look at the detailed system requirements for either [traditional deployments](../system_requirements/traditional/operatingsystems/) or [container-based deployments](../system_requirements/kubernetes/kubernetes-runtime/).
 
