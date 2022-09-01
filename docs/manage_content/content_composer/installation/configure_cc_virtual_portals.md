@@ -1,17 +1,18 @@
-# Enable/disable Content Composer in Virtual Portals
+# Enable or disable Content Composer in Virtual Portals
 
 The use of Content Composer features in a Virtual Portal deployment pattern is supported for HCL Content Composer beginning with Container Update 9.5 CF192.
 
-By default, this feature is not enabled on HCL Digital Experience 9.5. Get the [latest Docker image](../containerization/docker.md) before you proceed with the following steps.
+By default, this feature is not enabled on HCL Digital Experience 9.5. Get the [latest Docker image](../../../deployment/install/container/image_list.md) before you proceed with the following steps.
 
-**Note:** While there are also DX 8.5/9.0 CF17 images, the one you need to enable this HCL Content Composer feature is the 9.5 Docker image.
+!!! note
+     While there are also DX 8.5/9.0 CF17 images, the one you need to enable this HCL Content Composer feature is the 9.5 Docker image.
 
-You can only enable Content Composer features in a Virtual Portal deployment pattern when Practitioner Studio is available \(for HCL DX 9.5 and later releases\). Refer to the [Woodburn Studio](../woodburn_studio/woodburn_studio.md) and [Practitioner Studio](../practitioner_studio/practitionerstudio_overview.md) documentation topics on how to apply themes and create pages.
+You can only enable Content Composer features in a Virtual Portal deployment pattern when Practitioner Studio is available \(for HCL DX 9.5 and later releases\). Refer to the [Woodburn Studio](../../../build_sites/woodburn_studio/index.md) and [Practitioner Studio](../../../build_sites/practitioner_studio/index.md) documentation topics on how to apply themes and create pages.
 
 Follow these steps below to enable this support in your deployment:
 
-1.  [Create a Virtual Portal](../admin-system/advp_tsk_create_vp.md).
-2.  [Enable Practitioner Studio in the Virtual Portal](../practitioner_studio/enable_prac_studio.md).
+1.  [Create a Virtual Portal](../../../build_sites/virtual_portal/adm_vp_task/vp_adm_task/create_vp/index.md).
+2.  [Enable Practitioner Studio in the Virtual Portal](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
 3.  In the Virtual Portal, enable rendering of content supported by DX APIs, for example, via Content Composer interfaces.
 
 ## Enable and install content rendering in the base Portal
@@ -70,25 +71,27 @@ To remove and disable content rendering from the virtual Portal:
     ```
 
 2.  Follow these steps to disable content rendering:
+
     1.  Connect to your Docker container using the following command:
 
-```
-docker ps
-docker exec -it <id from docker ps> bash
-```
+        ```
+        docker ps
+        docker exec -it <id from docker ps> bash
+        ```
 
     2.  Run the following Config tasks:
 
-```
-/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh disable-headless-content -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
-```
+        ```
+        /opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh disable-headless-content -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
+        ```
 
 
 ## Grant access to all authenticated Portal users
 
 While setting permissions for other users can be done manually within the Resource Permissions portlet in Portal, there are also ConfigEngine tasks that can be used to grant `all authenticated portal users` access to the Content Composer page, portlet \(React Integration Portlet for Content\) and WCM REST service. These can be integrated into a CI/CD process if needed.
 
-**Note:** permissions to access libraries such as `Web Content` for instance, will still need to be set manually. In addition, the Editor role is the minimum level required for a user to utilize the WCM REST service, which is already included in these tasks.
+!!! note
+     Permissions to access libraries, for example, `Web Content`, will still need to be set manually. In addition, the Editor role is the minimum level required for a user to utilize the WCM REST service, which is already included in these tasks.
 
 To grant access to all authenticated portal users:
 
