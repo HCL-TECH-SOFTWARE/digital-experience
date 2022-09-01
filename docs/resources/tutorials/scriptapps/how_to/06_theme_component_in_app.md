@@ -7,7 +7,7 @@
 - Add 3rd-party components in DX Module that can be shared by the Script Applications.
 
 ### Where To Get The Sample Code
-!!!tip "Sample codes are available in [GitHub: Deploy Multiple Script Applications that Use Shared Components From Themes](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/06ThemeComponentInApp)."
+!!!tip "Sample codes are available in [GitHub: Deploy Multiple Script Applications that Use Shared Components From Themes](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/tree/main/06ThemeComponentInApp)."
 
 ## Pre-Requisites
 !!!tip "Pre-Requisites"

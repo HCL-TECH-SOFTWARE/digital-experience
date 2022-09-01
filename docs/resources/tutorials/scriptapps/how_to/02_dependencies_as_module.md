@@ -13,7 +13,7 @@ hide: tags
 - Creation of a Gradle project to simplify working with shared libraries in HCL Digital Experience (DX).
 
 ### Where To Get The Sample Code
-!!!tip "Sample codes are available in [GitHub: Deploy JavaScript Libraries/Dependencies as a DX Module](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/02DependenciesAsModule)."
+!!!tip "Sample codes are available in [GitHub: Deploy JavaScript Libraries/Dependencies as a DX Module](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/tree/main/02DependenciesAsModule)."
 
 ## Pre-Requisites
 !!!tip "Pre-Requisites."

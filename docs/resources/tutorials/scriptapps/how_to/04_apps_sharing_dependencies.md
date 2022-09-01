@@ -17,7 +17,7 @@ hide: tags
 - Combine DX Module and Script Applications Projects
 
 ### Where To Get The Sample Code
-!!!tip "Sample codes are available in [GitHub: Deploy Multiple DX ScriptApps with Shared Dependencies](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/04AppsWithSharedDependencies)."
+!!!tip "Sample codes are available in [GitHub: Deploy Multiple DX ScriptApps with Shared Dependencies](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/tree/main/04AppsWithSharedDependencies)."
 
 ## Pre-Requisites
 !!!tip "Pre-Requisites"

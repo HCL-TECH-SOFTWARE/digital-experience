@@ -15,7 +15,7 @@ hide: tags
 - Update bundling of new or existing NPM based projects to exclude dependencies and use the libraries in a DX Module.
 
 ### Where To Get The Sample Code
-!!!tip "Sample codes are available in [GitHub: Deploy DX ScriptApps Without Its Dependencies](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/03AppsExcludingDependencies)."
+!!!tip "Sample codes are available in [GitHub: Deploy DX ScriptApps Without Its Dependencies](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/tree/main/03AppsExcludingDependencies)."
 
 
 ## Pre-Requisites

@@ -15,7 +15,7 @@ hide: tags
    - Optional migration of the NPM project to use [Webpack](https://webpack.js.org/) bundler.
 
 ### Where To Get The Sample Code
-!!!tip "Sample codes are available in [GitHub: Deploy a React App to DX as a ScriptApp](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/01WebpackWithDependencies)." 
+!!!tip "Sample codes are available in [GitHub: Deploy a React App to DX as a ScriptApp](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/tree/main/01WebpackWithDependencies)." 
 
 !!! note
     For optimal loading of multiple Script Applications in a single page, custom Webpack bundling is needed. For more information, see [Deploy Multiple Script Applications with Shared Dependencies](04_apps_sharing_dependencies.md).
