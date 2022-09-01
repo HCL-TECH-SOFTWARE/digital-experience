@@ -1,6 +1,6 @@
 # Architecture Overview
 
-HCL Digital Experience is a rock-solid and reliable platform that can help deliver the vital services of your organization. It is designed for scaling and flexibility, supports authentication for security and personalization, and eases the integration of multiple and varied applications. Intelligence-agency-grade encryption and cross-system authentication keep your business-critical functions safe. Your teams can easily create, manage, and deliver powerful digital experiences that can be counted on, every day.
+HCL Digital Experience is a solid and reliable platform that can help deliver the vital services of your organization. It is designed to be scalable and flexible, supports authentication for security and personalization, and aids in easy integration with varied applications. Intelligence-agency-grade encryption and cross-system authentication keep your business-critical functions safe. Your teams can easily create, manage, and deliver powerful and reliable digital experiences everyday.
 
 There are multiple possibilities on how to deploy DX itself.
 In **traditional deployments**, DX is natively deployed on premises into WebSphere Application Server infrastructures.
