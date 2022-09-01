@@ -1,0 +1,9 @@
+title: Reference for using WSRP with the portal
+nav:
+    - index.md
+    - wsrpr_markup_cach.md
+    - wsrpc_cookie.md
+    - wsrpr_2phase_render.md
+    - wsrpr_handle_htgtp_headers.md
+    - wsrpr_hints_tips.md
+    - wsrpr_trbl.md
