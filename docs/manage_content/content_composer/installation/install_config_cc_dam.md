@@ -2,21 +2,22 @@
 
 This section provides a high-level overview of the architecture and the steps to install, configure, and update the HCL Digital Experience 9.5 components: Experience API, Content Composer, and Digital Asset Management.
 
-**Video**: [Install HCL Digital Experience components \(Experience API, Content Composer, and Digital Asset Management\) on Red Hat OpenShift](https://youtu.be/Hhop8M89SVA)
+**Video**: [Install HCL Digital Experience components \(Experience API, Content Composer, and Digital Asset Management\) on Red Hat OpenShift](https://youtu.be/Hhop8M89SVA){:target="_blank"}
 
 ## High-level architecture and topology
 
-![](../images/container_deploy_tp_cf_181.png "High-level architecture")
+![High-level architecture](../../../images/container_deploy_tp_cf_181.png)
 
-![](../images/cf_181_topology.png "Topology")
+![Topology](../../../images/cf_181_topology.png "Topology")
 
 ## Prerequisite
 
-DX Administrators can choose to install the DX Core containers then proceed to install Content Composer and Digital Asset Management containers to the supported Kubernetes container platforms as outlined in the following steps. See the [Deployment](deployment.md) section for the latest DX 9.5 container file listings.
+DX Administrators can choose to install the DX Core containers then proceed to install Content Composer and Digital Asset Management containers to the supported Kubernetes container platforms as outlined in the following steps. See the [Deployment image files](../../../deployment/install/container/image_list.md) section for the latest DX 9.5 container file listings.
 
-Deploying the HCL Digital Asset Management or Content Composer components is supported on Kubernetes or OpenShift platforms and is not supported for deployment to Docker platforms. See the [System requirements](../overview/inst_req.md) section for more information and the latest updates.
+Deploying the HCL Digital Asset Management or Content Composer components is supported on Kubernetes or OpenShift platforms and is not supported for deployment to Docker platforms. See the [System requirements](../../../get_started/system_requirements/kubernetes/kubernetes-runtime.md) section for more information and the latest updates.
 
-**Note:** For initial deployments, it is recommended to install the HCL Digital Experience 9.5 components \(Experience API, Content Composer, and Digital Asset Management\) to a non-production \(test\) HCL Digital Experience 9.5 environment.
+!!! note
+    For initial deployments, it is recommended to install the HCL Digital Experience 9.5 components \(Experience API, Content Composer, and Digital Asset Management\) to a non-production \(test\) HCL Digital Experience 9.5 environment.
 
 ## Installing the HCL Digital Experience 9.5 Container components
 
@@ -75,30 +76,36 @@ If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernet
     Docker load < hcl-dx-postgres-image-v1.0.0_xxxxxxxx-xxxx.tar.gz
     ```
 
-    **Note:** Either **`-i`** or **`<`** works for the load command. In case you encounter an error when using one, try running the command using the other.
+    !!! note
+        Either **`-i`** or **`<`** works for the load command. In case you encounter an error when using one, try running the command using the other.
 
 6.  Get the Docker images in your local Docker repository to your target Kubernetes system by tagging and pushing them appropriately. If you used `docker load` to get your images on the target environment, proceed to the next step.
 7.  Install the HCL Digital Experience 9.5 CF181 or higher Experience API, Content Composer, and Digital Asset Management components by using the following steps. Container Update CF182 or higher is required if deploying to Microsoft Azure Kubernetes Service \(AKS\).
 
-    **Notes:**
-
-    -   The config map name value used must be the same as the HCL Digital Experience 9.5 CF181 and higher deployment. By default, the config map deployment name value is dx-deployment.
-    -   The HCL Experience API must be installed to access and use the HCL Content Composer and the HCL Digital Asset Management features.
-    **Reminder**: If you are currently running an HCL Digital Experience 9.5 CF181 or higher Kubernetes deployment in production, adding new components requires an outage and setup time so plan it carefully.
+    !!! note "**Notes:**"
+        -   The config map name value used must be the same as the HCL Digital Experience 9.5 CF181 and higher deployment. By default, the config map deployment name value is dx-deployment.
+        -   The HCL Experience API must be installed to access and use the HCL Content Composer and the HCL Digital Asset Management features.
+        
+    !!! note "**Reminder:**"
+        If you are currently running an HCL Digital Experience 9.5 CF181 or higher Kubernetes deployment in production, adding new components requires an outage and setup time so plan it carefully.
 
     If you are creating the dx-deployment config map, you can use the following content \(adjusting the image tag values to match your environment\) to create a YAML file and use a command line client to create the config map which is used to deploy the HCL Experience API, HCL Content Composer, and HCL Digital Asset Management CF181 and later components.
 
-    **Note:** It is possible to deploy the services for the HCL Experience API and HCL Content Composer and/or Digital Asset Management, if either of those combinations is preferred, by removing either the HCL Content Composer or HCL Digital Asset Management service lines from the YAML file.
+    !!! note
+        It is possible to deploy the services for the HCL Experience API and HCL Content Composer and/or Digital Asset Management, if either of those combinations is preferred, by removing either the HCL Content Composer or HCL Digital Asset Management service lines from the YAML file.
 
 8.  Confirm your HCL Digital Experience 9.5 CF181 and higher container instance is up and running on Amazon EKS, Microsoft Azure \(CF182 or higher\), or Red Hat OpenShift platform.
 
-    **Note:** If you are adding components for HCL Content Composer, HCL Digital Asset Management, and HCL Experience API to an existing HCL Digital Experience 9.5 environment \(must be at level 9.5 CF181 or higher\) deployment, you must stop the deployment and restart it with one \(1\) replica.
+    !!! note
+        If you are adding components for HCL Content Composer, HCL Digital Asset Management, and HCL Experience API to an existing HCL Digital Experience 9.5 environment \(must be at level 9.5 CF181 or higher\) deployment, you must stop the deployment and restart it with one \(1\) replica.
 
-    **Reminder**: For an initial deployment, it is not advisable to deploy these components to a production HCL Digital Experience 9.5 deployment.
+    !!! note "**Reminder**"
+         For an initial deployment, it is not advisable to deploy these components to a production HCL Digital Experience 9.5 deployment.
 
 9.  Update the HCL Digital Experience 9.5 CF181 or higher container deployment configuration map to deploy the HCL Experience API, HCL Content Composer, and HCL Digital Asset Management CF181 and higher components.
 
-    **Note:** The config map name value used to support the CF181 or higher components must be the same as the HCL Digital Experience 9.5 CF181 and higher deployment. By default, the config map deployment name value is `dx-deployment`.
+    !!! note
+        The config map name value used to support the CF181 or higher components must be the same as the HCL Digital Experience 9.5 CF181 and higher deployment. By default, the config map deployment name value is `dx-deployment`.
 
 10. Create a YAML file with the following config map settings:
 
@@ -113,7 +120,8 @@ If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernet
 
 11. Use the following example YAML \(`dx-deploy-config-map.yaml`\) to deploy the HCL Experience API, HCL Content Composer, and HCL Digital Asset Management CF181 or higher components. If deploying HCL Content Composer and HCL Digital Asset Management CF181 components, replace their file names in the sample YAML file services lines used.
 
-    **Note:** It is possible to deploy the services for the HCL Experience API and HCL Content Composer and/or Digital Asset Management by removing either the HCL Content Composer or HCL Digital Asset Management service lines from the YAML file.
+    !!! note
+         It is possible to deploy the services for the HCL Experience API and HCL Content Composer and/or Digital Asset Management by removing either the HCL Content Composer or HCL Digital Asset Management service lines from the YAML file.
 
     ```
     kind: ConfigMap
@@ -147,24 +155,23 @@ If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernet
     
     ```
 
-    **Notes:**
+    !!! note "**Notes:**"
+        -   The deployment of HCL Content Composer and HCL Experience API components create:
+                -   The `dx.deploy.contentui.enabled` and `dx.deploy.experienceapi.enabled` configurations tell the operator to deploy HCL Content Composer and HCL Experience API components. This defaults to using the same repository as the HCL Digital Experience 9.5 CF181 or higher container core deployment.
 
-    -   The deployment of HCL Content Composer and HCL Experience API components create:
-        -   The `dx.deploy.contentui.enabled` and `dx.deploy.experienceapi.enabled` configurations tell the operator to deploy HCL Content Composer and HCL Experience API components. This defaults to using the same repository as the HCL Digital Experience 9.5 CF181 or higher container core deployment.
+                -   Services `dx-deployment-service-content-ui` and `dx-deployment-service-ring-api`, and a route for each.
+        -   Administrators can override the repository by adding the following to the config map entries:
 
-        -   Services `dx-deployment-service-content-ui` and `dx-deployment-service-ring-api`, and a route for each.
-    -   Administrators can override the repository by adding the following to the config map entries:
+            ```
+            dx.deploy.contentui.repository
+            ```
 
-        ```
-        dx.deploy.contentui.repository
-        ```
+        -   The `dx.deploy.dam.enabled` tells the operator to deploy the HCL Digital Asset Management component. Note that there are 4 required sets of image/tag parameters:
 
-    -   The `dx.deploy.dam.enabled` tells the operator to deploy the HCL Digital Asset Management component. Note that there are 4 required sets of image/tag parameters:
-
-        -   The HCL Digital Asset Management operator component uses `prefixdx.deploy.dam.operator`.
-        -   The Postgres datastore component uses `dx.deploy.dam.persistence`.
-        -   The HCL Digital Asset Management library services use `dx.deploy.dam`.
-        -   The Image processor uses `dx.deploy.dam.persistence`.
+            -   The HCL Digital Asset Management operator component uses `prefixdx.deploy.dam.operator`.
+            -   The Postgres datastore component uses `dx.deploy.dam.persistence`.
+            -   The HCL Digital Asset Management library services use `dx.deploy.dam`.
+            -   The Image processor uses `dx.deploy.dam.persistence`.
         To override the repository values for the components above, use `dx.deploy.COMPONENT.repository`
 
         The last two parameters in the example YAML file provide the storage class and volume \(must be **ReadWriteMany**\) for the HCL Digital Asset Management component. This is where the persistence layer maintains the datastore layer.
@@ -197,26 +204,28 @@ If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernet
 
 12. Deploy the YAML \(`dx-deploy-config-map.yaml`\) by issuing the following:
     -   Kubernetes command:
-        -   ```
-kubectl apply -f dx-deploy-config-map.yaml -n your-namespace
-```
+        ```
+        kubectl apply -f dx-deploy-config-map.yaml -n your-namespace
+        ```
 
     -   OpenShift command:
-        -   ```
-oc project your-namespace
-```
+        ```
+        oc project your-namespace
+        ```
 
-            followed by
+        followed by
 
-        -   ```
-oc apply -f dx-deploy-config-map.yaml
-```
+        ```
+        oc apply -f dx-deploy-config-map.yaml
+        ```
 
 13. Stop and restart the HCL Digital Experience 9.5 CF181 and higher container deployment.
 
-    **Note:** If you are adding components for HCL Content Composer, HCL Digital Asset Management, and HCL Experience API to an existing HCL Digital Experience 9.5 environment \(must be at level 9.5 CF181 or higher\) deployment, you must stop the deployment and restart it with one \(1\) replica. Once it is fully started, you can safely scale it to `N` instances.
+    !!! note
+        If you are adding components for HCL Content Composer, HCL Digital Asset Management, and HCL Experience API to an existing HCL Digital Experience 9.5 environment \(must be at level 9.5 CF181 or higher\) deployment, you must stop the deployment and restart it with one \(1\) replica. Once it is fully started, you can safely scale it to `N` instances.
 
-    **Reminder**: As outlined in this section, adding new components to a production deployment requires an outage and some setup time. It is advisable to plan carefully if you are currently running a Digital Experience container deployment in a supported Kubernetes environment.
+    !!! note "**Reminder**"
+         As outlined in this section, adding new components to a production deployment requires an outage and some setup time. It is advisable to plan carefully if you are currently running a Digital Experience container deployment in a supported Kubernetes environment.
 
 14. Change to the extracted hcl-dx-cloud-scripts directory.
 
@@ -224,11 +233,13 @@ oc apply -f dx-deploy-config-map.yaml
     ./scripts/removeDx.sh NAMESPACE
     ```
 
-    **Note:** This script removes resources from the existing deployment \(pods, statefulsets, etc\) but does not remove persisted data or existing configmaps.
+    !!! note 
+        This script removes resources from the existing deployment \(pods, statefulsets, etc\) but does not remove persisted data or existing configmaps.
 
 15. Remove the `claimRef` from the PersistedVolume.
 
-    **Note:** Instructions to re-use the Persistent Volume may also be viewed in the **[Deploy HCL Digital Experience 9.5 Container to Amazon EKS](kubernetes_eks.md) topic.**
+    !!! note
+        Instructions to re-use the Persistent Volume may also be viewed in the **[Deploy HCL Digital Experience 9.5 Container to Amazon EKS](kubernetes_eks.md) topic.**
 
 16. Open the persistent volume in a visual editor \(vi\) using the Kubernetes or OpenShift command line client command:
 
@@ -267,9 +278,11 @@ oc apply -f dx-deploy-config-map.yaml
     ./scripts/deployDx.sh NAMESPACE REPLICAS REPOSITORY IMAGENAME IMAGETAG VOLUMENAME STORAGECLASS DBTYPE INGRESSIMAGE INGRESSTAG
     ```
 
-    **Note:** You must restart the deployment with one \(1\) replica. Once it is fully started, you can safely scale it to `N` instances.
+    !!! note
+        You must restart the deployment with one \(1\) replica. Once it is fully started, you can safely scale it to `N` instances.
 
-    **Reminder**: As outlined in this section, adding new components to a production deployment requires an outage and some setup time. It is advisable to plan carefully if you are currently running a Digital Experience container deployment in a supported Kubernetes environment.
+    !!! note "**Reminder**:"
+        As outlined in this section, adding new components to a production deployment requires an outage and some setup time. It is advisable to plan carefully if you are currently running a Digital Experience container deployment in a supported Kubernetes environment.
 
 20. Access the HCL Content Composer and HCL Digital Asset Management components by navigating to **Practitioner Studio** \> **Web Content** \> **Content**, or **Practitioner Studio** \> **Digital Assets**.
 
@@ -296,24 +309,17 @@ oc apply -f dx-deploy-config-map.yaml
 
 ## \(Optional\) Configure Digital Asset Management with a CDN
 
-If you are using a content delivery network \(CDN\) such as [Akamai](https://www.akamai.com/our-thinking/cdn/what-is-a-cdn), using `Vary: Origin` may prevent you from caching content. To bypass this limitation, your CDN configuration must strip the `Vary` header on the way in, to reinstate your ability to cache content. On the way out, you can append the `Origin` parameter to the `Vary` header when serving a response using **'Modify Outgoing Response Header'**.
+If you are using a content delivery network \(CDN\) such as [Akamai](https://www.akamai.com/our-thinking/cdn/what-is-a-cdn){:target="_blank"}, using `Vary: Origin` may prevent you from caching content. To bypass this limitation, your CDN configuration must strip the `Vary` header on the way in, to reinstate your ability to cache content. On the way out, you can append the `Origin` parameter to the `Vary` header when serving a response using **'Modify Outgoing Response Header'**.
 
--   **[Enable/disable Content Composer in Virtual Portals](../content_composer/configure_cc_virtual_portals.md)**  
+-   **[Enable/disable Content Composer in Virtual Portals](/installation/configure_cc_virtual_portals.md)**  
 The use of Content Composer features in a Virtual Portal deployment pattern is supported for HCL Content Composer beginning with Container Update 9.5 CF192.
 
 
-**Related information**  
-
-
-[HCL Content Composer](../content_composer/cont_comp_overview.md)
-
-[HCL Digital Asset Management](../digital_asset_mgmt/digital_asset_mgmt_overview.md)
-
-[Configure Digital Asset Management in virtual portals](../containerization/configure_digital_asset_management_in_virtual_portals.md)
-
-[How to enable Practitioner Studio](../practitioner_studio/enable_prac_studio.md)
-
-[Docker image deployment](../containerization/docker_image_deployment.md)
-
-[Digital Asset Management persistence architecture](../containerization/dam_persistence_architecture.md)
+???+ info "**Related information:**"  
+    - [HCL Content Composer](/index.md)
+    - [HCL Digital Asset Management](../../digital_assets/index.md)
+    - [Configure Digital Asset Management in virtual portals](/installation/configure_cc_virtual_portals.md)
+    - [How to enable Practitioner Studio](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md)
+    - [Docker image deployment](../../../deployment/install/docker/docker_image_deployment.md)
+    - [Digital Asset Management persistence architecture](../../../get_started/plan_deployment/container_deployment/dam_persistence_architecture.md)
 
