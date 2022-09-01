@@ -5,6 +5,7 @@ Modern websites and browsers enable incredible new capabilities that can greatly
 The new modularized theme provides a flexible framework that:
 
 -   Minimizes download size by giving you the control to specify just the capabilities that are needed for a certain scenario or use case.
+
 -   Minimizes the number of requests by combining necessary resources.
 
 Previous themes required a monolithic design and that the same content was downloaded for every page. Theme optimization allows the theme to be highly adaptive to the content you are displaying on certain pages. For example, on pages where only simple content is displayed you can define a lightweight profile. A lightweight profile causes the system to download few static resources such as JavaScript™ and CSS files. However, on pages where more advanced scenarios are required you can choose to switch to a more powerful profile that causes more resources to download than on the other pages. This way you have only the capabilities you need on certain pages, but all other pages do not pay the penalty. As a result the overall system performance increases significantly.
@@ -15,28 +16,26 @@ By applying these concepts it is possible to turn on and off an arbitrary number
 
 The Portal 8.5 theme contains three types of files: JavaScript, dynamic content \(JSP files\) and static resources.
 
--   **[Static resources](../dev-theme/themeopt_defaultparts_static.md)**  
+-   **[Static resources](../../building_website/static_content/site_static_resources.md)**  
 Static resources include the markup that is defined by .html, .css, and .js files that are used by the theme. Some .json files are used to define menu options, module definitions, and module profiles.
--   **[Dynamic content \(jsp\) resources](../dev-theme/themeopt_defaultparts_jsp.md)**  
+-   **[Dynamic content \(jsp\) resources](../../../themes_skins/portal85_modularized_theme/themeopt_defaultparts_jsp.md)**  
 Dynamic content includes resources that are defined by jsp files that are used by the theme.
 
+<!---
+???+info "Related information:"  
 
-**Related information**  
+    - [Setting up Client Certificate Authentication](../security/certauth.md)
 
+    - [Changing the login and logout pages](../security/sec_chg_login.md)
 
-[Setting up Client Certificate Authentication](../security/certauth.md)
+    - [Importing a static page from an installed template](../admin-system/spa_xml_impt_tmplt.md)
 
-[Changing the login and logout pages](../security/sec_chg_login.md)
+    - [The module framework](../dev-theme/themeopt_module.md)
 
-[Importing a static page from an installed template](../admin-system/spa_xml_impt_tmplt.md)
+    - [Simple menu framework](../dev-theme/themeopt_cust_menu.md)
 
-[The module framework](../dev-theme/themeopt_module.md)
+    - [Modules that are provided with the modularized theme](../dev-theme/themeopt_oob.md)
 
-[Simple menu framework](../dev-theme/themeopt_cust_menu.md)
+    - [<portal-logic/\> tags](../dev-portlet/dgn_ptllogic.md)
 
-[Modules that are provided with the modularized theme](../dev-theme/themeopt_oob.md)
-
-[<portal-logic/\> tags](../dev-portlet/dgn_ptllogic.md)
-
-[Dynamically changing the language during the user session](../admin-system/adchglang_dynamic.md)
-
+    - [Dynamically changing the language during the user session](../admin-system/adchglang_dynamic.md) --->
