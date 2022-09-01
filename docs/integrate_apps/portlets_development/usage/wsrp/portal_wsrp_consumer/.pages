@@ -1,0 +1,7 @@
+title: Using your portal as a WSRP Consumer
+nav:
+    - index.md
+    - Information that the Consumer exchanges with the Producer: wsrp_consumer_info
+    - Working with Producer definitions: working_with_producer_def
+    - Consuming portlets in a Consumer portal: consuming_portlets_consumer_portal
+    - Customizing the WSRP configuration of your Consumer portal: customizing_wsrp_cfg_consumer_portal

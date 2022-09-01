@@ -2,7 +2,7 @@
 id: wcm_dev_sites_copying
 title: Copying a site area
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

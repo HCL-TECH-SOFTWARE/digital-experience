@@ -2,7 +2,7 @@
 id: h_ug_perms_view
 title: Viewing role assignments
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

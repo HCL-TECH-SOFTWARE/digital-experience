@@ -2,7 +2,7 @@
 id: sitebuilder_lib_hide
 title: Hiding libraries in Site Builder
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

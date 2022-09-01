@@ -2,7 +2,7 @@
 id: toolbar_sm_page_create
 title: Creating pages with page templates
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

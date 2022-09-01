@@ -2,7 +2,7 @@
 id: site_edit_mode
 title: Edit mode
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

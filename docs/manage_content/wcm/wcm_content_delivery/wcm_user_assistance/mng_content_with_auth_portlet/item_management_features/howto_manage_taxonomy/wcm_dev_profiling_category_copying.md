@@ -2,7 +2,7 @@
 id: wcm_dev_profiling_category_copying
 title: Copying a category
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

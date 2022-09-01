@@ -6,6 +6,7 @@ nav:
     - The module framework: the_module_framework
     - Understanding the Simple Theme: simple_theme
     - Understanding the Portal 8.5 modularized theme: portal85_modularized_theme
+    - Managing theme capabilities: manage_theme_capabilities
     - Customizing the theme: customizing_theme
     - Developing themes for a production portal: developing_theme
     - Device classes: device_classes

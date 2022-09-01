@@ -2,7 +2,7 @@
 id: pznCreateCampaign
 title: Creating and editing personalization campaigns
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

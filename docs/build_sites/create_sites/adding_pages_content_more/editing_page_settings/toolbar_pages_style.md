@@ -2,7 +2,7 @@
 id: toolbar_pages_style
 title: Changing page style
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

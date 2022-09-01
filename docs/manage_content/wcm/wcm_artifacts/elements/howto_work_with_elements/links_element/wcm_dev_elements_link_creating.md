@@ -2,7 +2,7 @@
 id: wcm_dev_elements_link_creating
 title: Creating a link component
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

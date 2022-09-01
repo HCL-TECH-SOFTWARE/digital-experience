@@ -2,7 +2,7 @@
 id: wcm_dev_referencing_components
 title: Creating a component tag
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

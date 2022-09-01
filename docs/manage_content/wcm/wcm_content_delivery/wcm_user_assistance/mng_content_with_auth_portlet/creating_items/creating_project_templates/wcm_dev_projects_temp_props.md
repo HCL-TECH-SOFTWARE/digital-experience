@@ -2,7 +2,7 @@
 id: wcm_dev_projects_temp_props
 title: Defining publish options for a project template
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

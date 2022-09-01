@@ -2,7 +2,7 @@
 id: site_wayfinding
 title: Creating links and navigation
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

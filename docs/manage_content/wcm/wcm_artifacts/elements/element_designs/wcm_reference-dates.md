@@ -2,7 +2,7 @@
 id: wcm_reference-dates
 title: Setting parameters to format dates
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

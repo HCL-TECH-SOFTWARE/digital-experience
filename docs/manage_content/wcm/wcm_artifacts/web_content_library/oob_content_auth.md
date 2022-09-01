@@ -2,7 +2,7 @@
 id: oob_content_auth
 title: Set up the authoring experience
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

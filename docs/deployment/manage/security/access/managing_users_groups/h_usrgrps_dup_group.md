@@ -2,7 +2,7 @@
 id: h_usrgrps_dup_group
 title: Duplicating group assignments
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

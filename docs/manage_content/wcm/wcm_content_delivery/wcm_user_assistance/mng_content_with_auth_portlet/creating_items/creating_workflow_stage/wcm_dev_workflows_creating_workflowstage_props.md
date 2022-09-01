@@ -2,7 +2,7 @@
 id: wcm_dev_workflows_creating_workflowstage_props
 title: Defining workflow stage properties
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

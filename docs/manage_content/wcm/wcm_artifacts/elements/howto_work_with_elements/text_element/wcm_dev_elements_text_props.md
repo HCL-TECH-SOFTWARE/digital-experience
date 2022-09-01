@@ -2,7 +2,7 @@
 id: wcm_dev_elements_text_props
 title: Entering text in the component
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

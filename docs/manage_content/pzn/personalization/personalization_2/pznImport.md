@@ -2,7 +2,7 @@
 id: pznImport
 title: Exporting and importing Personalization objects
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

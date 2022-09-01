@@ -2,7 +2,7 @@
 id: wcm_dev_workflows_creating_action_version
 title: Creating a version action
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: wcm_dev_elements_date-time_adding
 title: Adding a date and time element to an item
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

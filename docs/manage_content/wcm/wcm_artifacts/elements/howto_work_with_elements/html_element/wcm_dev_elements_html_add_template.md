@@ -2,7 +2,7 @@
 id: wcm_dev_elements_html_add_template
 title: Adding an HTML element to a template
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

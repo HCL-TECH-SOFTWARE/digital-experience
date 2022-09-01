@@ -2,7 +2,7 @@
 id: wcm_dev_elements_rich-text_creating
 title: Creating a rich text component
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

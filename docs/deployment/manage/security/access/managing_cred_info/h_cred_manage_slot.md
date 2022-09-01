@@ -2,7 +2,7 @@
 id: h_cred_manage_slot
 title: Managing system vault slots
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

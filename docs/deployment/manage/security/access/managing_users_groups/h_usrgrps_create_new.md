@@ -2,7 +2,7 @@
 id: h_usrgrps_create_new
 title: Creating a user or group
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -1,0 +1,18 @@
+Title: How to create custom plug-ins
+nav:
+    - index.md
+    - wcm_dev_api_custom_button.md
+    - wcm_dev_api_plugins.md
+    - wcm_dev_api_custom_workflow.md
+    - wcm_dev_api_text_provider.md
+    - wcm_dev_api_text_provider_factory.md
+    - wcm_dev_api_file_upload.md
+    - wcm_dev_api_custom_item_validation.md
+    - wcm_dev_plugin_sub.md
+    - wcm_dev_plugin_syn.md
+    - wcm_dev_api_context_processor.md
+    - wcm_dev_plugin_operation-check.md
+    - wcm_dev_api_page_resolution.md
+    - wcm_dev_api_urlgen
+    - wcm_dev_class_register.md
+    - wcm_dev_remoteactions.md

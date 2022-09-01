@@ -2,7 +2,7 @@
 id: oob_connections
 title: Integrating with HCL Connections
 ---
-<!-- import useBaseUrl from '@docusaurus/useBaseUrl'; -->
+<!--  -->
 
 Integrating with HCL Connections is a multiple step process. Review the high-level steps before you begin.
 

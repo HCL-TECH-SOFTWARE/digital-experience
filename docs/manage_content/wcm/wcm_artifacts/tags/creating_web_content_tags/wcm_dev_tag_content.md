@@ -2,7 +2,7 @@
 id: wcm_dev_tag_content
 title: Creating a Content tag
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

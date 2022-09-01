@@ -2,7 +2,7 @@
 id: wcm_dev_elements_jsp_creating
 title: Creating a JSP component
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

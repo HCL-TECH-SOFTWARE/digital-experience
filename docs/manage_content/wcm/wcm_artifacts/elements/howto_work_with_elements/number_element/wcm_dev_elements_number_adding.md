@@ -2,7 +2,7 @@
 id: wcm_dev_elements_number_adding
 title: Adding a number element to an item
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: wcm_tagrate_widgets_tag
 title: Adding a tagging widget to web content
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

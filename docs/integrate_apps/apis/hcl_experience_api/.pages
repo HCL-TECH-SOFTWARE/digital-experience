@@ -1,7 +1,11 @@
 title: HCL Experience API
 nav:
-    - Installation: installation
-    - Configuration: configuration
-    - Usage: usage
-    - Limitations: limitations
+    - index.md
+    - openapi_prerequisites.md
+    - openapi_configuration_options.md
+    - getting_started_ringapi_docker_.md
+    - api_explorers.md
+    - dam_friendly_urls.md
+    - openapi_example_API_calls.md
+    - Sample Content UI: sample_content_ui
 

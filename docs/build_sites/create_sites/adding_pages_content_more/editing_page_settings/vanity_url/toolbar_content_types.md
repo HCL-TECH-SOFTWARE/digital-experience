@@ -2,7 +2,7 @@
 id: toolbar_content_types
 title: Content types
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

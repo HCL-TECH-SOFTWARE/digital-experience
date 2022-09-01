@@ -2,7 +2,7 @@
 id: wcm_dev_elements_pzn_props
 title: Defining a Personalization rule
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

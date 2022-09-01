@@ -2,7 +2,7 @@
 id: wcm_dev_using_filter
 title: Filtering items displayed in an index
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

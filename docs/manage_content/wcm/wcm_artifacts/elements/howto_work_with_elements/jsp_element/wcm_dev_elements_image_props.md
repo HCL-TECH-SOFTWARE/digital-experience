@@ -2,7 +2,7 @@
 id: wcm_dev_elements_image_props
 title: Selecting an image
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

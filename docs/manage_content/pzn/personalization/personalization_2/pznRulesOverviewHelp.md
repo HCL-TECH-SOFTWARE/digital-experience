@@ -2,7 +2,7 @@
 id: pznRulesOverviewHelp
 title: Types of rules
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

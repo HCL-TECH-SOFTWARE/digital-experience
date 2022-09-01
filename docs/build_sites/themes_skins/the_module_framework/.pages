@@ -1,0 +1,18 @@
+title: The module framework
+nav:
+    - index.md
+    - themeopt_mod_objmodel.md
+    - themeopt_contrib_types.md
+    - themeopt_module_defer.md
+    - themeopt_reso_agg.md
+    - themeopt_mod_capfilters.md
+    - Change the auto-loading of portlet capabilities: change_the_auto_loading_of_portlet
+    - themeopt_renderflow.md
+    - Writing modules: writing_module
+    - Theme Optimization Analyzer: themeopt_analyzer
+    - Troubleshooting modular themes: troubleshooting_modular_themes
+    - Specify profiles: specify_profiles
+    - Modules that are provided with the modularized theme: oob_modules
+    - theme_modules_features.md
+    - Adding or removing a module from a profile: add_remove_oob_modules
+    - themeopt_configengine_profile.md

@@ -2,7 +2,7 @@
 id: contarget_segments
 title: Creating segments with personalization
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

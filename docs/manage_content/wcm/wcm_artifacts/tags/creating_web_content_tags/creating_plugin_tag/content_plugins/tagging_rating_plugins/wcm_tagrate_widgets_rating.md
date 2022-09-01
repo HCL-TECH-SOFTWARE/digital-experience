@@ -2,7 +2,7 @@
 id: wcm_tagrate_widgets_rating
 title: Adding a rating widget to web content
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

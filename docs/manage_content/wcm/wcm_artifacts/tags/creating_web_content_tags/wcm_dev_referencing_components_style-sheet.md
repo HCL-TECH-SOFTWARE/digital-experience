@@ -2,7 +2,7 @@
 id: wcm_dev_referencing_components_style-sheet
 title: Creating a style element tag
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

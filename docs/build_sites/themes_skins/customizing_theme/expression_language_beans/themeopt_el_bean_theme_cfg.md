@@ -1,4 +1,10 @@
-# wp.themeConfig
+---
+id: themeopt_el_bean_theme_cfg
+title: wp.themeConfig \| HCL Digital Experience
+---
+
+
+
 
 The wp.themeConfig encapsulates the theme configuration parameter lookup process.
 
@@ -26,4 +32,5 @@ Attributes:
     Returns: String, the property value. It can be null.
 
 
+**Parent topic:**[Expression language beans for accessing programming models](themeopt_el_bean.md)
 

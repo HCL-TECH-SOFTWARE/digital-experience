@@ -2,7 +2,7 @@
 id: h_clients_edit
 title: Editing a client
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

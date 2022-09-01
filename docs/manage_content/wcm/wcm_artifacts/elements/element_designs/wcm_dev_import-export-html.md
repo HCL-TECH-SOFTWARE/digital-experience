@@ -2,7 +2,7 @@
 id: wcm_dev_import-export-html
 title: Importing and exporting HTML
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

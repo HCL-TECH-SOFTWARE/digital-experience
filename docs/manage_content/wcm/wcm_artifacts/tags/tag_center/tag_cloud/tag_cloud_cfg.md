@@ -2,7 +2,7 @@
 id: tag_cloud_cfg
 title: Configuring the tag cloud
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

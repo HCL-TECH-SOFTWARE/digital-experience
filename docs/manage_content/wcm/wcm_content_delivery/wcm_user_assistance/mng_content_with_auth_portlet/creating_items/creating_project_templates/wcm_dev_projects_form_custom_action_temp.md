@@ -2,7 +2,7 @@
 id: wcm_dev_projects_form_custom_action_temp
 title: Applying custom actions to a project template
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

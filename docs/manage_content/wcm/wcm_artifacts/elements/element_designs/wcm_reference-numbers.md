@@ -2,7 +2,7 @@
 id: wcm_reference-numbers
 title: Note on formatting numbers
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

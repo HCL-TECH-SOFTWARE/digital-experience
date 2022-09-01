@@ -2,7 +2,7 @@
 id: wcm_dev_elements_html_creating
 title: Creating an HTML component
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

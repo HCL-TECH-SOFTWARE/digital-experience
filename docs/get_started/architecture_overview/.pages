@@ -1,5 +1,0 @@
-title: Architecture Overview
-nav:
-    - index.md
-    - Kubernetes Deployment: kubernetes_deployment
-    - Traditional Deployment: traditional_deployment

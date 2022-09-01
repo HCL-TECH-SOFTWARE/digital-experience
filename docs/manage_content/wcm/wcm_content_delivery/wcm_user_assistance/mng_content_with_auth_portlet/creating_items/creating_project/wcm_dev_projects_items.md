@@ -2,7 +2,7 @@
 id: wcm_dev_projects_items
 title: Manage items in a project
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

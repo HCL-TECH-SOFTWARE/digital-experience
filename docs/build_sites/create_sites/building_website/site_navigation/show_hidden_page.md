@@ -2,7 +2,7 @@
 id: show_hidden_page
 title: Hiding and displaying pages in the navigation
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

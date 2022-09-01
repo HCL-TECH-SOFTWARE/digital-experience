@@ -2,7 +2,7 @@
 id: oob_pzn_rule_create
 title: Creating a business rule
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

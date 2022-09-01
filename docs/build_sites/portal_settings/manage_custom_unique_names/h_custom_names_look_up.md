@@ -2,7 +2,7 @@
 id: h_custom_names_look_up
 title: Looking up the custom unique name for a resource
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: pznCreateContentSpotHelp
 title: Creating personalization content spots
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

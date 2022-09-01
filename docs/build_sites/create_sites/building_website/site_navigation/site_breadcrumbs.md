@@ -2,7 +2,7 @@
 id: site_breadcrumbs
 title: Adding page-level navigation
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

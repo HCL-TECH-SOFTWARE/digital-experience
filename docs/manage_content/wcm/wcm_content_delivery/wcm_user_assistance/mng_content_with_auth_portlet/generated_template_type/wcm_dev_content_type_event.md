@@ -2,7 +2,7 @@
 id: wcm_dev_content_type_event
 title: Event template type
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

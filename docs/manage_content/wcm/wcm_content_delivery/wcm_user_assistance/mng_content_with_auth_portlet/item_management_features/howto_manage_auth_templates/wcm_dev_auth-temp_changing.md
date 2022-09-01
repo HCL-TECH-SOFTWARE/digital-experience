@@ -2,7 +2,7 @@
 id: wcm_dev_auth-temp_changing
 title: Changing the authoring template for an item
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

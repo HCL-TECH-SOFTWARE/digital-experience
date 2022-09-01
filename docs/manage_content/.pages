@@ -1,11 +1,11 @@
 title: Manage Content
 nav:
     - index.md
-    - wcm
-    - content_composer
-    - digital_assets
-    - dcs
-    - pzn
-    - renditions
-    - wci
+    - Web Content Manager: wcm
+    - Content Composer: content_composer
+    - Digital Asset Management : digital_assets
+    - Document Conversion Services: dcs
+    - Personalization: pzn
+    - Renditions: renditions
+    - Web Content Integrator: wci
     - ...

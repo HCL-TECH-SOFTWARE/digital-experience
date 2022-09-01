@@ -5,7 +5,7 @@ In this section of the documentation the various options to integrate existing a
 
 [Integrating Applications](): Techniques and features to bring in existing applications to your DX site.
 
-[Development Tools](): HCL Digital Experience includes development assets such as the Script Application, DX Sync tool and more.
+[Development Tools](): HCL Digital Experience includes development assets such as DX client and more.
 
 [Digital Data Connector](): You can use the Digital Data Connector (DDC) for HCL Portal framework to integrate data from external data sources on your portal pages by using HCL Web Content Manager presentation components.
 

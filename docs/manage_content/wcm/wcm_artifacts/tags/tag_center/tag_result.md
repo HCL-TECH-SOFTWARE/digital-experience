@@ -2,7 +2,7 @@
 id: tag_result
 title: Tag results list
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: wcm_dev_elements_fileresource_add_template
 title: Adding a file resource element to a template
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: wcm_dev_items_props_content
 title: Entering content item properties
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: oob_content_accesslib
 title: Set up access to libraries
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

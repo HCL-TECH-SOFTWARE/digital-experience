@@ -2,7 +2,7 @@
 id: wcm_dev_items_copying
 title: Copying other items to a different library
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

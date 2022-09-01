@@ -2,7 +2,7 @@
 id: wcm_dev_elements_navigator_display
 title: Defining navigator element display options
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

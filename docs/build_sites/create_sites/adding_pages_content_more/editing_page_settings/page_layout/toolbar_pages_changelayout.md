@@ -2,7 +2,7 @@
 id: toolbar_pages_changelayout
 title: Changing page layout
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

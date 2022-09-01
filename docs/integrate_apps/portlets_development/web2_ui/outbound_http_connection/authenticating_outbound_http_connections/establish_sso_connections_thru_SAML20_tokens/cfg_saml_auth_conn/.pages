@@ -1,0 +1,5 @@
+title: Configuration settings for SAML authenticated connections
+nav:
+    - index.md
+    - Configuration settings for Tivoli Federated Identity Manager (TFIM): cfg_settings_tfim
+    - Configuration settings for Active Directory Federation Services (ADFS): cfg_settings_adfs

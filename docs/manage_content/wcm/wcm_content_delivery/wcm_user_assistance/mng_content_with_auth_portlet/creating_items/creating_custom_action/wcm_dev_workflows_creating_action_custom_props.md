@@ -2,7 +2,7 @@
 id: wcm_dev_workflows_creating_action_custom_props
 title: Defining custom action properties
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

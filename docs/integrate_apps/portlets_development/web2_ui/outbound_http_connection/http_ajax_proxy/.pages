@@ -1,0 +1,4 @@
+title: HTTP proxy for Ajax applications
+nav:
+    - index.md
+    - The programming model for using the AJAX proxy: programming_model_ajax_proxy

@@ -2,7 +2,7 @@
 id: content_targeted_create
 title: Adding targeted content to a spot
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

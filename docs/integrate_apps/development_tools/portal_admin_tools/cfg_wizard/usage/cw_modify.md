@@ -2,7 +2,7 @@
 id: cw_modify
 title: Add on new capability
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: toolbar_content_create
 title: Creating content with content templates
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

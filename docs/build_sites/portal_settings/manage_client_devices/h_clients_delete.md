@@ -2,7 +2,7 @@
 id: h_clients_delete
 title: Deleting a client
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

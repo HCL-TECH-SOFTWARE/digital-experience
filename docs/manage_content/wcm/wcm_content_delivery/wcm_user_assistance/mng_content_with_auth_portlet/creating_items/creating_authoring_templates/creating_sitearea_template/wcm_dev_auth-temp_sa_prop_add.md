@@ -2,7 +2,7 @@
 id: wcm_dev_auth-temp_sa_prop_add
 title: Setting default site area properties
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

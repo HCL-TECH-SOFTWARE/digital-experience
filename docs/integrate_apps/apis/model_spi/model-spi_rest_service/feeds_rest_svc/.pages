@@ -1,0 +1,6 @@
+title: Feeds for REST services
+nav:
+    - index.md
+    - Syntax for addressing portal resources: syntax_for_portal_resource
+    - rest_feed_elements.md
+    - Use cases for modifying resources: use_cases_for_resource_mod

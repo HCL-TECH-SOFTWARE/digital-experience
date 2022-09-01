@@ -2,7 +2,7 @@
 id: plugin_page
 title: Page plug-ins
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

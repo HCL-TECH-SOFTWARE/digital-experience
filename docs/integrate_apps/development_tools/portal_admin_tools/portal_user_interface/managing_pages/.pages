@@ -1,0 +1,20 @@
+title: Managing pages
+nav:
+    - index.md
+    - h_search_admin_portlets.md
+    - h_mp_set_up.md
+    - h_mp_select_pages.md
+    - h_mp_order_pages.md
+    - h_mp_activate.md
+    - Managing page properties: managing_page_properties
+    - Creating a portal page from an HTML file : creating_portal_page_from_an_HTML_file
+    - Editing page layout: editing_page_layout
+    - h_mp_appearance.md
+    - Manage pages portlets: manage_pages_portlets
+    - Using Page Locks: page_locks
+    - Using portlet wires: portlet_wires
+    - h_mp_export_pages.md
+    - h_mp_move_pages.md
+    - h_mp_access.md
+    - h_mp_delete_pages.md
+    - h_mp_fields.md

@@ -2,7 +2,7 @@
 id: cw_cluster
 title: Set up a cluster
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

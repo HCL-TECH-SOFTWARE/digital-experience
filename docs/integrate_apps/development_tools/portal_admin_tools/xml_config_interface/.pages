@@ -1,6 +1,9 @@
-title: XML Configuration Interface
+title: XML configuration interface
 nav:
     - index.md
-    - Usage: usage
+    - adxmlabt.md
+    - adxmlchg.md
+    - Working with the XML configuration interface: working_xml_config_interface
+    - XML configuration reference: xml_config_ref
 
 
