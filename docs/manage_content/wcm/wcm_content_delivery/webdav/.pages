@@ -8,3 +8,4 @@ nav:
     - wcm_webdav_createcomp.md
     - wcm_webdav_prestemp.md
     - wcm_webdav_authtemp.md
+    - Using WebDAV with HCL Portal: administer_webdav

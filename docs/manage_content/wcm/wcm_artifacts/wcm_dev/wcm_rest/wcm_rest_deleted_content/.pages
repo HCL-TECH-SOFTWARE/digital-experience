@@ -1,0 +1,8 @@
+title: How to Use REST to Work with Deleted Content Items
+nav:
+    - index.md
+    - wcm_rest_crud_purge_soft_delete.md
+    - wcm_rest_crud_purge_deleted.md
+    - wcm_rest_crud_purge_restore_deleted.md
+
+

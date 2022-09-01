@@ -1,0 +1,8 @@
+title: Structure of the remote REST service for PUMA
+nav:
+    - index.md
+    - uprof_rest_ifops.md
+    - uprof_rest_pyld.md
+    - uprof_rest_xmlschm.md
+    - uprof_rest_errcod.md
+    - uprof_rest_datyps.md

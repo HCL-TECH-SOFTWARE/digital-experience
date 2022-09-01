@@ -1,7 +1,7 @@
 title: Digital Asset Management 
 nav:
     - index.md
-    - Install HCL Digital Asset Management components: installation
-    - Configure HCL Digital Asset Management: configuration
-    - Usage of HCL Digital Asset Management: usage
-    - Limitations | HCL Digital Asset Management: limitations
+    - Installation: installation
+    - Configuration: configuration
+    - Usage: usage
+    - Limitations: limitations

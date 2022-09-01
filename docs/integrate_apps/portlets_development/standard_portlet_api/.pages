@@ -1,0 +1,4 @@
+title: Standard portlet API
+nav:
+    - index.md
+    - Using two-phase rendering with JSR 286 portlets: twophase_rendering_jsr_portlets

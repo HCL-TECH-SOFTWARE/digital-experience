@@ -1,0 +1,9 @@
+title: Configuration
+nav:
+    - index.md
+    - cw_run.md
+    - cw_scripts.md
+    - cw_prop.md
+    - cw_silent.md
+    - install_cfg_wizd.md
+

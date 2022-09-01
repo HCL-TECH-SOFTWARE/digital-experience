@@ -1,6 +1,9 @@
 title: Portal Scripting Interface
 nav:
     - index.md
-    - Usage: usage
+    - adpsiabt.md
+    - Getting started with the Portal Scripting Interface: getting_started_with_psi
+    - adpsitsk.md
+    - Command reference for the Portal Scripting Interface: command_ref_psi
 
 

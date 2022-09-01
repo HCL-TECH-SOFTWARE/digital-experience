@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+title: Development tools
+nav:
+    - index.md
+    - ...
+=======
 title: Development Tools
 nav:
     - DX Client: dxclient
@@ -10,3 +16,4 @@ nav:
     - Reference documents: reference_docs
 
 
+>>>>>>> main

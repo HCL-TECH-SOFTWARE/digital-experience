@@ -1,0 +1,6 @@
+title: Establish OAuth 2.0 authenticated connections
+nav:
+    - index.md
+    - Configure OAuth 2.0 for Password Credentials Grant flows: cfg_Oauth2_pwd_creds_grant_flows
+    - Configure OAuth 2.0 for Client Credentials Grant flows: cfg_Oauth2_client_creds_grant_flows
+    - Oauth2.0_stored_access_tokens.md

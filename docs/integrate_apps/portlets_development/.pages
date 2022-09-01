@@ -1,6 +1,17 @@
-title: Portlet Development
+title: Developing portlets
 nav:
-    - Configuration: configuration
-    - Usage: usage
-    - Limitations: limitations
+    - index.md
+    - wpsbpc.md
+    - wpsbscfg.md
+    - Standard portlet API: standard_portlet_api
+    - Portlet services: portlet_services
+    - Web 2.0 user interface features: web2_ui
+    - Client-side aggregation reference: client_side_aggregation_ref
+    - Portlet communication: portlet_communication
+    - Dynamic user interfaces: dynamic_user_interfaces
+    - Collaborative Services API and the person tag: collaborative_services_api_person_tag
+    - Portlet API: portlet_api
+    - Portlet development reference: portlet_dev_ref
+    - Predefined public render parameters: predefined_public_render_params
+    - jsrsamp.md
 
