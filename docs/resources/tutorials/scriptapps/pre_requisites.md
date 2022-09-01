@@ -22,10 +22,18 @@ Java Runtime Engine with a Long Term Support (LTS) version is needed to be able 
 ## Script Application Placeholder
 
 Add the 'Script Application Library' to the list of visible libraries in your DX Library Explorer. Follow the series of links via the Web Content menu: Preferences -> Edit Shared Settings. Don't forget to click on the OK button.  
-  ![](images/01WebContentEditSharedSettings.png)
-  ![](images/02LibrarySelection.png)
-  ![](images/03ScriptApplicationLibrary.png)
+  ![Web Content Edit Shared Settings](images/01WebContentEditSharedSettings.png)
+  ![Library Selection](images/02LibrarySelection.png)
+  ![Script Application Library](images/03ScriptApplicationLibrary.png)
 
+## Clone The Portal 8.5 Theme to form a Test Theme 
+Copy the Portal 8.5 theme.
+  ![Copy Theme](images/04CopyToTheme1.png)
+Assign a name for the theme.
+  ![Assign Name](images/04CopyToTheme2.png)
+  ![Status](images/04CopyToTheme3.png)
+Click the Done button.
+  ![Done Button](images/04CopyToTheme4.png)
 
 ## For Quick Build and Deploy, Use Out-Of-the-Box React Modules In your DX Theme 
 
