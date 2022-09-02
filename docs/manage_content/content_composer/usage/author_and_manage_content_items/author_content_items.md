@@ -29,11 +29,11 @@ Follow the steps below to create new content with the HCL Digital Experience 9.5
 
 5.  In **Select Location**, select the site location to present the content when completed and ready for publication. Using the same new content example, the **Web Content / Articles** location is selected.
 
-    ![Select location for new content](../assets/Select_location_new_content_HCL_Content_Composer.png)
+    ![Select location for new content](../../../../assets/Select_location_new_content_HCL_Content_Composer.png)
 
 6.  If adding an image file, select **Upload using file browser** or **HCL DAM** in the **Elements** section. Then, you can also drag and drop preferred image file from your local repository.
 
-    ![Upload image for Image Element using file browser or HCL](../../../../assets/Upload_image_file_browser_or_HCL_DAM.png")
+    ![Upload image for Image Element using file browser or HCL](../../../../assets/Upload_image_file_browser_or_HCL_DAM.png)
 
 7.  In the **Workflow** located on the right side of the interface, select the workflow to use by either typing in a specific keyword or by clicking the drop-down arrow and selecting **See All Workflows**. The type-ahead feature in the **Current Workflow** field assists content authors to find, identify and select the workflow of choice for the new content. In this example, the **Web Content Templates / Three Stage Workflow** is selected.
 
