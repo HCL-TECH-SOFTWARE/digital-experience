@@ -3,9 +3,6 @@ id: h_custom_names_fields
 title: Field descriptions for the Manage Custom Unique Names portlet
 ---
 
-
-
-
 Learn more about the fields that are provided with the Manage Custom Unique Names portlet.
 
 -   **Unique name:**

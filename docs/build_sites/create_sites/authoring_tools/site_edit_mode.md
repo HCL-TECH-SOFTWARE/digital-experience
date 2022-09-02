@@ -3,9 +3,6 @@ id: site_edit_mode
 title: Edit mode
 ---
 
-
-
-
 Edit mode is available from the site toolbar.
 
 ## Edit mode and administration pages

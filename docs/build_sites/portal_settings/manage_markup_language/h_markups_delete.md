@@ -3,9 +3,6 @@ id: h_markups_delete
 title: Deleting a markup
 ---
 
-
-
-
 You can remove markup languages that you are no longer using.
 
 To delete a markup:

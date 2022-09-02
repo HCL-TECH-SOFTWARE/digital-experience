@@ -3,9 +3,6 @@ id: h_custom_names_icons
 title: Icon descriptions for the Manage Custom Unique Names portlet
 ---
 
-
-
-
 Learn more about the icons that are provided with the Manage Custom Unique Names portlet
 
 -   **Edit icon**
