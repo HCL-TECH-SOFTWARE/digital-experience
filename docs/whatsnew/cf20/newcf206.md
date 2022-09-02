@@ -6,6 +6,8 @@ The following features and updates are available to customers installing HCL Dig
 -   Extension to Personalization Java APIs supporting page metadata operations with custom application objects
 -   Digital Asset Management view keywords details
 -   DX Experience API updates
+-   Sample Script Application integration and Theme modernization, plus How-to guides
+
 New complementary DX training modules in the HCL Software Academy, and more.
 
 ## Development sample integrating HCL Unica Campaign segments in DX Personalization Rules
@@ -23,6 +25,14 @@ Capability to display DAM asset Keyword details for user-added and plugin-genera
 ## Experience API Updates 
 
 New and updated open standards-based [Experience APIs](https://help.hcltechsw.com/digital-experience/9.5/open_api/openapi_overview.html) are available supporting Ring API query parameters, also new Web Content Manager Rich Text and Image component end points. Detailed API listings for the HCL Experience API, and updates, may be viewed at the [HCL Digital Experience GitHub repository](https://github.com/hcl-dx/experience-api-documentation).
+
+## Access the Sample React Script Application on the HCL Github repository
+
+You can now access and deploy the Sample React App as a standards-compliant Script Application in your HCL Digital Experience environment. It uses DX modular themes aggregator capability to provide React and ReactDOM. 
+
+Since the sample application is platform agnostic, the same code can be run as a portlet or mobile app, allowing reuse over multiple devices and platforms. [Access the application here](https://github.com/HCL-TECH-SOFTWARE/sample-react-script-application).
+
+For more information on how to deploy a Sample React App, refer to the following How-to guide: [Deploy a ReactJS App as a Script Application](https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/in-progress/guide_me/tutorials/scriptapps/how_to/01_basic_deployments/)
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
 
