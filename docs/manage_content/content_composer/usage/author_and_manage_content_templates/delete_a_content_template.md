@@ -1,4 +1,4 @@
-# Delete a content template \| HCL Content Composer
+# Delete Content Templates
 
 This section provides the steps on how to delete a content template using HCL Content Composer.
 

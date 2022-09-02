@@ -1,4 +1,4 @@
-# Manage content items \| HCL Content Composer
+# Manage Content Items
 
 This section provides the steps on how to manage content items using the HCL Content Composer.
 

@@ -1,4 +1,4 @@
-# Install the HCL Content Composer components
+# Install HCL Content Composer
 
 This section provides a high-level overview of the architecture and the steps to install, enable and update the HCL Content Composer.
 
