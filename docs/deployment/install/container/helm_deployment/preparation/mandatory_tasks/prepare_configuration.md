@@ -8,17 +8,17 @@ Create a configuration file that fits the needs of your target HCL DX 9.5 Contai
 !!!note
     From CF205 on you can directly retrieve the Helm Chart via the HCL Harbor Helm repository. If you wish to do so, please follow the instructions in [Configure Harbor Helm Repository](../optional_tasks/optional_configure_harbor_helm_repo.md) to pull the Helm Chart before you continue.
 
--   **The configuration flow**
+## The configuration flow
 
 Helm provides multiple ways to define values that can be processed to run an installation. Processing involves a three-step approach, that is ordered sequentially within a hierarchy.
 
--   **Helm Chart `values.yaml`**
+## Helm Chart `values.yaml`
 
 Every Helm Chart contains a `values.yaml` file. It defines all configurable parameters that a Helm Chart accepts and the default values that are used during an installation. If you do not provide any other configuration during an installation, Helm extracts all deployment information from the `values.yaml` file inside the Helm Chart.
 
 All parameters that were not overwritten using any other configuration methods return to their default values from the `values.yaml` file inside the Helm Chart.
 
--   **Custom value files**
+## Custom value files
 
 Helm provides you with a way to maintain your own custom values files. You can specify a custom values file you want to use when running an installation.
 
@@ -29,13 +29,13 @@ This custom values file only needs to contain the parameters that you want to ov
 
 Please be aware that the parameters you can configure using your custom values file need to exactly align with those provided by the Helm Charts own values.yaml. You cannot configure anything that is not exposed in the values.yaml definition.
 
--   **Override parameters**
+## Override parameters
 
 It is possible to define values using a --set parameter in the Helm CLI during the installation of a Helm Chart.
 
 Since there are many values that can be configured in the HCL Digital Experience deployment, we do not recommend this technique, since it makes installation commands very large and confusing.
 
--   **The default HCL DX 9.5 Container `values.yaml` file**
+## The default HCL DX 9.5 Container `values.yaml` file
 
 HCL DX 9.5 Helm Chart provides a default values.yaml, which contains all possible configuration parameters.
 
@@ -51,7 +51,7 @@ The file contains all configurable parameters and their default values. You may 
 !!! note
     Having a complete copy of the default `values.yaml` is not necessary and may bloat your configuration file with values that are already present in the DX Helm Chart.
 
--   **A custom configuration file**
+## A custom configuration file
 
 Helm allows you to provide a custom configuration file during the installation or upgrade process.
 

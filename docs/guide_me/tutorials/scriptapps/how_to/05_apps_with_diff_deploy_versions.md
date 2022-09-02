@@ -7,7 +7,7 @@
 - Leverage on submodules to isolate conflicting dependency groups (i.e: React v16 vs v18).
 
 ### Where To Get The Sample Code
-!!!tip "Sample codes are available in [GitHub: Deploy Multiple Script Applications with Different Dependency Versions](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/05AppsWithDiffDepVersions)."
+!!!tip "Sample codes are available in [GitHub: Deploy Multiple Script Applications with Different Dependency Versions](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/tree/main/05AppsWithDiffDepVersions)."
 
 ## Pre-Requisites
 !!!tip "Pre-Requisites"
