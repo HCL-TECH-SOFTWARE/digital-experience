@@ -1,4 +1,4 @@
-# Edit a content template \| HCL Content Composer
+# Edit Content Templates
 
 This section provides the steps on how to edit a content template using HCL Content Composer.
 

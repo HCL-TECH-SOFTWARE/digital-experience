@@ -1,4 +1,4 @@
-# Author a content item
+# Author Content Items
 
 This section provides the steps on how to author a web content item using HCL Content Composer.
 

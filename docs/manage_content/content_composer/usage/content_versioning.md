@@ -1,4 +1,4 @@
-# Content versioning \| HCL Content Composer
+# Content Versioning
 
 This section details how to manage versioning of content in HCL Content Composer.
 

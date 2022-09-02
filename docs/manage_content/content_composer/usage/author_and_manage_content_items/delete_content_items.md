@@ -1,4 +1,4 @@
-# Delete a content item \| HCL Content Composer
+# Delete Content Items
 
 This section provides the steps on how to delete a content item using the HCL Content Composer.
 
