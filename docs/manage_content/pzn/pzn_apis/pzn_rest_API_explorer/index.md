@@ -30,6 +30,13 @@ http or https://host:port/dx/api/wcm/v2/explorer/
 
 ## Limitation
 
-The detailed function of the above mentioned API for accessing Personalization Rules is documented [Personalization Rules](../pzn_apis/pzn_rest_API_explorer/pzn_apis.md)
+The detailed function of the above mentioned API for accessing Personalization Rules is documented [Personalization Rules](../pzn_rest_API_explorer/pzn_rules_api/index.md)
 
-PZN endpoint to manage the personalization rules (/rules) does not support the creation of Embedded WCM Select Action rule yet. So use the WCM API to create the initial embedded PZN rule and then edit it with the PZN API.
+-   With HCL Digital Experience 9.5 CF206, the PZN Java API was extended to return the evaluated page metadata when using a custom application object. The method signature is: <br> `Interface com.ibm.websphere.personalization.PznPortletRequestObjectInterface:` <br> For example: <br> 
+    ```
+    /* 
+     * Return the MetaData object of the evaluated page
+     */
+    public MetaData getEvaluatedPageMetaData();
+    ```
+-   PZN endpoint to manage the personalization rules (/rules) does not support the creation of Embedded WCM Select Action rule yet. So use the WCM API to create the initial embedded PZN rule and then edit it with the PZN API.
