@@ -11,7 +11,8 @@ All pages are stored in a Portal Site library. The Portal Site library is immedi
 
 The access control and syndication configuration is unique for each library that you create.
 
-**Note:** When you search through content libraries, you can search for items by their titles. However, if you sort items by title, the sorting option filters pages by the Unique name or Identifier of the page, and not by the title that you specified in the page settings.
+!!! note
+    When you search through content libraries, you can search for items by their titles. However, if you sort items by title, the sorting option filters pages by the Unique name or Identifier of the page, and not by the title that you specified in the page settings.
 
 ## New libraries and default items
 
@@ -19,7 +20,8 @@ When you create a new library, you can select to include default items. The defa
 
 To create a new library, Click the **Administration menu** icon. Then, click **Portal Content** \> **Web Content Libraries**.
 
-**Important:** When you create a web content library, ensure that the name of the library does not match the URL context of any virtual portals on the same server. If the name of a library and the URL context of a virtual portal have the same value, incorrect rendering behavior can result.
+!!! important
+    When you create a web content library, ensure that the name of the library does not match the URL context of any virtual portals on the same server. If the name of a library and the URL context of a virtual portal have the same value, incorrect rendering behavior can result.
 
 ## When to use the Portal Site library with web content
 
@@ -39,9 +41,10 @@ You can store web content in the HCL Digital Experience site library or in a sep
     -   The web content is associated with a page.
     -   The web content is not moved or deleted when a page is moved or deleted.
     -   Web content can be stored in separate libraries. This way, you can logically organize your content, and setup separate syndication scenarios.
-    **Note:** When you store web content in dedicated content libraries, maintain the site area hierarchy so that it exactly matches the page hierarchy. For example, when you create a new page, also create a site area at the same point in the hierarchy, and associate it with the new page that you created. Similarly, when you rename, move, or delete pages, update, and synchronize the associated site areas accordingly.
+    !!! note
+        When you store web content in dedicated content libraries, maintain the site area hierarchy so that it exactly matches the page hierarchy. For example, when you create a new page, also create a site area at the same point in the hierarchy, and associate it with the new page that you created. Similarly, when you rename, move, or delete pages, update, and synchronize the associated site areas accordingly.
 
-
+<!-- 
 -   **[Creating libraries](site_create_libs.md)**  
 Web content libraries are used to store your web content and managed pages. Syndication is used to keep libraries in synch between your different server environments.
 -   **[Web content library default items](../wcm/wcm_library_default_items.md)**  
@@ -49,8 +52,7 @@ When you create a web content library, you can choose to include a set of defaul
 -   **[Create a content library](../panel_help/oob_content_createlib.md)**  
 
 -   **[HCL Web Content Manager Multilingual Solution](../wcm/wcm_mls.md)**  
-The Web Content Manager Multilingual Solution is a set of tools that are used to manage translated versions of localized and regionalized websites.
+The Web Content Manager Multilingual Solution is a set of tools that are used to manage translated versions of localized and regionalized websites. -->
 
-**Table of Contents:**  
 
 

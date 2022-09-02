@@ -1,7 +1,5 @@
 # Static content
 
-
-
 Static content is part of every website. In a portal site, static content can be rendered as static page or it can be added to specific content areas on a page.
 
 To include, update, and administer your static content pages, you can use any of the portal administration tools, Manage Pages portlet, XML configuration interface, or the Portal Scripting Interface.
@@ -35,8 +33,10 @@ When you write the static page, you can include it in your portal by using the M
 
 **Decision point:** After you include a page in the portal, you cannot change the page from static content to standard portal layout or from standard portal layout to static content. If you want to change the page type after you create it, you need to delete the existing page and create a new page of the required type.
 
-**Note:** When a static page uses the default Portal 8.5 theme, Portal 8.0 theme, or Portal 7.0.0.2 theme, users can change the style of the page, but they cannot change the layout of the page or add content to it.
+!!! note
+    When a static page uses the default Portal 8.5 theme, Portal 8.0 theme, or Portal 7.0.0.2 theme, users can change the style of the page, but they cannot change the layout of the page or add content to it.
 
+<!--- 
 -   **[Creating a static page](../dev/spa_define_page.md)**  
 You can create a new portal page by starting with a static HTML file or an HTML fragment. If you revise the HTML, you can refresh the page to render the changes in the portal.
 -   **[Static resources](site_static_resources.md)**  
@@ -46,5 +46,5 @@ HTML defines some elements that refer to information that is managed as page met
 -   **[Including static content pages in your portal](../admin-system/spa_include_page.md)**  
 You can create a new portal page by starting with a static HTML file or an HTML fragment. If you revise the HTML, you can refresh the page to render the changes in the portal. To include, update, and administer your static content pages, you can use any of the portal administration tools, Manage Pages portlet, XML configuration interface, or the Portal Scripting Interface.
 -   **[Using WebDAV to manage pages and static content](../admin-system/webdav_static.md)**  
-WebDAV for HCL Digital Experience provides a simple and easy way to administer portal resources. Both administrators and users can use it.
+WebDAV for HCL Digital Experience provides a simple and easy way to administer portal resources. Both administrators and users can use it. --->
 

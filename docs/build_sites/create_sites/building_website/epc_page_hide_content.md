@@ -16,7 +16,8 @@ In the portal theme, hide content by putting it into a special container in the 
 
     3.  Click **Show hidden content container on pages**.
 
-    **Note:** The hidden container displays on the page, along with any content or applications that were hidden.
+    !!! note
+        The hidden container displays on the page, along with any content or applications that were hidden.
 
 2.  How to hide content.
 

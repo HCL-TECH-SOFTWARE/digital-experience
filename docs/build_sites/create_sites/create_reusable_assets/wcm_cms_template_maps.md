@@ -19,7 +19,6 @@ This can result in the following relationships:
 
     If you define a template mapping in a site area, this strategy ensures that all items based on the selected authoring template use the same presentation template in that site area. If a different template mapping is specified in any child site areas of the parent site area, then the template mapping that is defined in site area in the lowest part of the item path is used.
 
-
 ## Template mapping examples
 
 In these examples the following template mappings are used:

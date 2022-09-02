@@ -48,6 +48,6 @@ Follow the steps to enable your site to be seen in SiteMap:
 5.  Save, then test.
 
 
-???+ info **Related information:**  
+???+ info "Related information:"  
     - [Install the HCL Digital Experience 9.5 components](../../../manage_content/digital_assets/installation/install_config_dam.md)
 

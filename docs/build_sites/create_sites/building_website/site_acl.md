@@ -4,8 +4,6 @@ title: Setting up access
 ---
 
 
-
-
 Access controls allow you to assign access to who has the ability to view rendered constant and pages, and who has the ability to edit or administer content, pages, or features.
 
 Setting up access is covered in more detail in the Administering and Securing sections of the documentation, but there are some things to consider when setting up access for a website.

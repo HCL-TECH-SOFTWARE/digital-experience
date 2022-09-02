@@ -4,8 +4,6 @@ title: Adding page-level navigation
 ---
 
 
-
-
 The default portal theme automatically adds page-level navigation to your site based on the page hierarchy of your site.
 
 Page-level navigation is added to static pages using these portlets:
