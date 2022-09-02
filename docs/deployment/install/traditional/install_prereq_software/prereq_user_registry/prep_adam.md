@@ -1,4 +1,4 @@
-# Preparing an Active Directory-Lightweight-Directory-Services on Windows
+# Prepare an Active Directory-Lightweight-Directory-Services on Windows
 
 To use Active Directory-Lightweight-Directory-Services as an LDAP user registry, install and set up the server to communicate with your HCL Portal system.
 
@@ -10,7 +10,8 @@ To use Active Directory-Lightweight-Directory-Services as an LDAP user registry,
 
     1.  Create a user with the Windows administrative tools.
 
-        **Note:** There is a 20 character limitation for the user account name.
+        !!!note
+            There is a 20 character limitation for the user account name.
 
     2.  Set the password for the new user.
 
