@@ -4,7 +4,8 @@ This section outlines how to enable Practitioner Studio and Woodburn Studio in b
 
 ## Enabling Practitioner Studio and Woodburn Studio in base portal
 
-**Note:** It is not necessary to stop or restart Portal when running these configuration tasks. Please note that in order for you to deploy Practitioner Studio and Woodburn Studio to a virtual portal, you must first enable the 95 UI features in base Portal.
+!!! note 
+    It is not necessary to stop or restart Portal when running these configuration tasks. Please note that in order for you to deploy Practitioner Studio and Woodburn Studio to a virtual portal, you must first enable the 95 UI features in base Portal.
 
 1.  Open a command line.
 2.  Change to the wp\_profile-root/ConfigEngine directory.
@@ -13,7 +14,8 @@ This section outlines how to enable Practitioner Studio and Woodburn Studio in b
     -   AIX: `./ConfigEngine.sh **enable-v95-UI-features** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
     -   Linux: `./ConfigEngine.sh **enable-v95-UI-features** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
     -   Windows: `ConfigEngine.bat **enable-v95-UI-features** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>`
-    **Note:** Any actions taken when using the **Preview As User** feature in DAM and CC shows the site as the original user, not the one that you are using to preview.
+    !!! note 
+        Any actions taken when using the **Preview As User** feature in DAM and CC shows the site as the original user, not the one that you are using to preview.
 
 
 ## Enabling Practitioner Studio and Woodburn Studio in an existing virtual portal
@@ -25,11 +27,13 @@ This section outlines how to enable Practitioner Studio and Woodburn Studio in b
     -   AIX: `./ConfigEngine.sh **enable-v95-UI-features-virtual-portal** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> **-DVirtualPortalContext=**`
     -   Linux: `./ConfigEngine.sh **enable-v95-UI-features-virtual-portal** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> **-DVirtualPortalContext=**`
     -   Windows: `ConfigEngine.bat **enable-v95-UI-features-virtual-portal** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> **-DVirtualPortalContext=**`
-    **Notes:**
 
-    -   To configure the virtual Portal Manager so that Practitioner Studio is deployed for the newly created virtual portals, see [How to configure Practitioner Studio](../practitioner_studio/config_prac_studio.html).
-    -   To enable Practitioner Studio and Woodburn Studio on all available Virtual Portals, you can use the following parameter: `-DUpdateVPs=true`
-    -   If **-DVirtualPortalContext=** has a space in the context name, please add quotes around the name of the context.
+    !!! note
+        -   To configure the virtual Portal Manager so that Practitioner Studio is deployed for the newly created virtual portals, see [How to configure Practitioner Studio](../practitioner_studio/config_prac_studio.html).
+
+        -   To enable Practitioner Studio and Woodburn Studio on all available Virtual Portals, you can use the following parameter: `-DUpdateVPs=true`
+
+        -   If **-DVirtualPortalContext=** has a space in the context name, please add quotes around the name of the context.
 
 ## Enabling HCL DX site to be seen in SiteMap
 
@@ -44,8 +48,6 @@ Follow the steps to enable your site to be seen in SiteMap:
 5.  Save, then test.
 
 
-**Related information**  
-
-
-[Install the HCL Digital Experience 9.5 components](../containerization/install_config_cc_dam.md)
+???+ info **Related information:**  
+    - [Install the HCL Digital Experience 9.5 components](../../../manage_content/digital_assets/installation/install_config_dam.md)
 

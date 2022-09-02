@@ -3,9 +3,6 @@ id: h_markups_activate
 title: Activating or deactivating a markup
 ---
 
-
-
-
 You can manage which of the markup languages in your portal are activated.
 
 1.  Select the markup from the list in **Manage Markups**.

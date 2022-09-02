@@ -4,8 +4,6 @@ title: Viewing portal resources and custom unique names in the table
 ---
 
 
-
-
 **Manage Custom Unique Names** allows you to create, modify, and delete custom unique names for portal resources. Manage Custom Unique Names displays the portal resources and their custom unique names in tables. Each resource type has its own table which lists all resources of that type, and their custom unique names.
 
 The tables can have the following columns, depending on the portal resources to which you have access:

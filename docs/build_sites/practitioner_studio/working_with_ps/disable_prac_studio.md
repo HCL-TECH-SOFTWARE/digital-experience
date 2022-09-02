@@ -4,7 +4,8 @@ This section outlines how to disable Practitioner Studio and Woodburn Studio in 
 
 ## Disabling Practitioner Studio and Woodburn Studio on base portal
 
-**Note:** You need to disable Practitioner Studio and Woodburn Studio on your virtual portals before disabling on the base Portal.
+!!! note 
+    You need to disable Practitioner Studio and Woodburn Studio on your virtual portals before disabling on the base Portal.
 
 1.  Open a command line.
 2.  Change to the wp\_profile-root/ConfigEngine directory.

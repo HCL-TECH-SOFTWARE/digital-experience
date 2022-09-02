@@ -4,8 +4,6 @@ title: Looking up the custom unique name for a resource
 ---
 
 
-
-
 You can look up the custom name of a portal resource by looking at the table where the resource is located.
 
 To look up the unique name for a portal resource:
