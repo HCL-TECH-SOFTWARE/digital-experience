@@ -59,7 +59,7 @@ You can see which chart version correlates to which HCL Digital Experience 9.5 C
 Your Helm configuration is now capable of using HCL DX 9.5 Helm Charts directly from the HCL Harbor Helm Repository.
 
 !!! note
-    Applying the method to pull DX 9.5 Container Update images directly from the HCL Harbor container registry requires every cluster node to be able to access the HCL Harbor container registry. To leverage this feature, you will have to configure an `ImagePullSecret` with your HCL Harbor credentials. For instructions, see [Configure deployment to use the HCL Harbor container registry](../system_requirements/docker/index.md).
+    Applying the method to pull DX 9.5 Container Update images directly from the HCL Harbor container registry requires every cluster node to be able to access the HCL Harbor container registry. To leverage this feature, you will have to configure an `ImagePullSecret` with your HCL Harbor credentials. For instructions, see [Configure deployment to use the HCL Harbor container registry](/docs/deployment/install/container/helm_deployment/preparation/optional_tasks/optional_imagepullsecrets.md#configure-deployment-to-use-the-hcl-harbor-container-registry).
 
 ### Pulling Helm Chart for deployment
 
