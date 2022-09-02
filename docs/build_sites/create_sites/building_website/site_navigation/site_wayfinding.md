@@ -4,8 +4,6 @@ title: Creating links and navigation
 ---
 
 
-
-
 Use navigators and menus to create links to content, and display content-level navigation.
 
 -   **Navigators**

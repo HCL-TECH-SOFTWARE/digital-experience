@@ -16,12 +16,12 @@ By applying these concepts it is possible to turn on and off an arbitrary number
 
 The Portal 8.5 theme contains three types of files: JavaScript, dynamic content \(JSP files\) and static resources.
 
+<!-- 
 -   **[Static resources](../../building_website/static_content/site_static_resources.md)**  
 Static resources include the markup that is defined by .html, .css, and .js files that are used by the theme. Some .json files are used to define menu options, module definitions, and module profiles.
 -   **[Dynamic content \(jsp\) resources](../../../themes_skins/portal85_modularized_theme/themeopt_defaultparts_jsp.md)**  
 Dynamic content includes resources that are defined by jsp files that are used by the theme.
 
-<!---
 ???+info "Related information:"  
 
     - [Setting up Client Certificate Authentication](../security/certauth.md)

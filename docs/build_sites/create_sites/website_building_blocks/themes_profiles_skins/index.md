@@ -31,9 +31,9 @@ HCL includes JavaScript libraries to support various features. --->
 
 [Included profiles](../../../themes_skins/the_module_framework/specify_profiles/themeopt_mod_oob_profile.md)
 
-[Modules that are provided with the modularized theme](../../../themes_skins/the_module_framework/oob_modules/themeopt_oob.md)
+[Modules that are provided with the modularized theme](../../../themes_skins/the_module_framework/oob_modules/index.md)
 
 [Default skins](../../../themes_skins/customizing_theme/skins/themeopt_cust_skindefault.md)
 
-[Customizing the theme](../../../themes_skins/customizing_theme/themeopt_cust.md)
+[Customizing the theme](../../../themes_skins/customizing_theme/index.md)
 

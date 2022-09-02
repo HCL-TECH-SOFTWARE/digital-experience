@@ -12,7 +12,7 @@ You can also enter text and HTML tags directly into a presentation template. Thi
 
 This is an example of the HTML you might enter in a presentation template to set the layout of a presentation template.
 
-![Presentation template layout example showing the regions of the page including header, pre-body, body, post-body, left pane, right pane, and footer.](../images/WCM_6.jpg)
+![Presentation template layout example showing the regions of the page including header, pre-body, body, post-body, left pane, right pane, and footer.](../../../../images/WCM_6.jpg)
 
 ```
 <html>
@@ -37,8 +37,8 @@ Text and HCL Web Content Manager tags are then added to the different table cell
 
 Connect tags are advanced Web Content Manager tags that can be used to retrieve data from external sources and apply custom caching. **Process connect tags** must be selected in a presentation template form for connect tags to be processed.
 
+<!-- 
 **Related information**  
-
 
 [Inserting an image in an element](wcm_dev_elements_insert_image.md)
 
@@ -46,5 +46,5 @@ Connect tags are advanced Web Content Manager tags that can be used to retrieve 
 
 [Inserting element tags](wcm_dev_elements_insert_tags.md)
 
-[Creating web content tags](wcm_dev_referencing_tags.md)
+[Creating web content tags](wcm_dev_referencing_tags.md) -->
 
