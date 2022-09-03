@@ -1,6 +1,6 @@
 # Configure Harbor Helm Repository
 
-Beginning with HCL Digital Experience 9.5 Container Update CF205, the [Docker images](../../docker.md) for deployment to Kubernetes environments can be optionally accessed via Helm charts in the [HCL Harbor repository](https://hclcr.io/account/sign-in?redirect_url=/harbor/projects){:target="_blank"}. Customers with credentials to access entitled software in the HCL Software Licensing Portal may apply those credentials to optionally access the Docker components of Digital Experience v9.5 Container Update CF205 or later releases. 
+Beginning with HCL Digital Experience 9.5 Container Update CF205, the [Docker images](../../../../docker/index.md) for deployment to Kubernetes environments can be optionally accessed via Helm charts in the [HCL Harbor repository](https://hclcr.io/account/sign-in?redirect_url=/harbor/projects){:target="_blank"}. Customers with credentials to access entitled software in the HCL Software Licensing Portal may apply those credentials to optionally access the Docker components of Digital Experience v9.5 Container Update CF205 or later releases. 
 
 !!! note
 
@@ -69,6 +69,3 @@ ls -lah
 ```
 
 You have now downloaded your Helm Chart and can continue with your deployment.
-
-???+ info "**Related information**"
-    - [Download and deploy via the HCL Harbor repository](../../../software_download/dx_from_harbor.md)

@@ -34,7 +34,7 @@ From CF205 onwards, it is possible to pull images directly from the HCL Harbor c
 
 If you want to leverage this feature, you will have to configure an ImagePullSecret with your HCL Harbor credentials.
 
-To do so, use the following command targeting your the kubernetes namespace for your deployment:
+To do so, use the following command targeting your the Kubernetes namespace for your deployment:
 
 ```sh
 # E-Mail and username are your harbor login, the password is your harbor CLI secret

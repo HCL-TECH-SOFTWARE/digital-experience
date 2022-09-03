@@ -5,7 +5,7 @@ This section contains the procedure to deploy DX on the internal network.
 
 ## How to deploy DX on the internal network
 
-To deploy DX on the internal network \(with no public access\), we need to add the platform-specific annotations for the HAProxy service. Update your custom `values.yaml` file with the annotation specific to your cloud provider. Refer to the list of [annotations](https://kubernetes.io/docs/concepts/services-networking/service/#internal-load-balancer).
+To deploy DX on the internal network (with no public access), we need to add the platform-specific annotations for the HAProxy service. Update your custom `values.yaml` file with the annotation specific to your cloud provider. Refer to the list of [annotations](https://kubernetes.io/docs/concepts/services-networking/service/#internal-load-balancer).
 
 ```
 annotations:
@@ -32,7 +32,7 @@ Follow the steps to update an existing deployment from an external network to an
 
     Update to the network type results change in IP address and requires updates to your DNS services.
 
-1.  Disable haproxy in your custom `values.yaml` file and then do helm update.
+1.  Disable HAProxy in your custom `values.yaml` file and then do helm update.
 
     ??? example "Example:"
 

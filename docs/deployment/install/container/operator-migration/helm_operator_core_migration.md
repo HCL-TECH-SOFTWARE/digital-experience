@@ -4,7 +4,7 @@ This section shows the steps to migrate your Core profile. You can create a back
 
 ## Back up from an Operator-based deployment
 
-### Ensure that only one Core pod is running.
+### Ensure that only one Core pod is running
 
 Check how many pods are running with the following command:
 
@@ -12,7 +12,7 @@ Check how many pods are running with the following command:
 kubectl -n <namespace> get pods
 ```
 
-If more than one pod is running, scale down the Core pods so only one \(1\) pod is running. On the Operator deployment, adjust the `dxctl` property file:
+If more than one pod is running, scale down the Core pods so only one (1) pod is running. On the Operator deployment, adjust the `dxctl` property file:
 
 ```
 dx.maxreplicas:1
@@ -53,9 +53,9 @@ kubectl exec --stdin --tty pod/dx-deployment-0 -n dxns -- /bin/bash
             ```
 
         !!! note
-            While the server is stopped, the liveness probe returns a failure result to Kubernetes. Once the maximum allowed number of failures is reached, Kubernetes restarts the pod, closing any `kubectl exec` session and brings the Core pod back online. However, with the default liveness probe settings in `full-deployment.properties`, this process takes approximately two \(2\) hours to occur.
+            While the server is stopped, the liveness probe returns a failure result to Kubernetes. Once the maximum allowed number of failures is reached, Kubernetes restarts the pod, closing any `kubectl exec` session and brings the Core pod back online. However, with the default liveness probe settings in `full-deployment.properties`, this process takes approximately two (2) hours to occur.
 
-        If you need to adjust your liveness probe settings to allow time to perform the profile backup \(for instance, because you have reduced them considerably from the default in your deployment\), make the changes in your `full-deployment.properties` file, and then apply the changes using `dxctl` as described in Step 1.
+        If you need to adjust your liveness probe settings to allow time to perform the profile backup (for instance, because you have reduced them considerably from the default in your deployment), make the changes in your `full-deployment.properties` file, and then apply the changes using `dxctl` as described in Step 1.
 
     2.  **Compress the whole Core profile folder /opt/HCL/wp\_profile** by running the following command:
 
@@ -83,9 +83,9 @@ Download the backup Core profile from the Core pod to your local system** by run
     kubectl cp dxns/dx-deployment-0:opt/HCL/core_prof_95_CF199.tar.gz /tmp/core_prof_95_CF199.tar.gz 
     ```
 
-### \(Optional\) Make the old environment unavailable.
+### (Optional) Make the old environment unavailable
 
-Kubernetes eventually brings the Core pod back online by restarting it \(see the note on liveness probes in Step 2.a\). If you want to keep the Operator-based deployment unavailable to users after backing up the profile, you can do the following steps:
+Kubernetes eventually brings the Core pod back online by restarting it (see the note on liveness probes in Step 2.a). If you want to keep the Operator-based deployment unavailable to users after backing up the profile, you can do the following steps:
 
 -   **Adjust the `dxctl` property file**:
 
@@ -113,13 +113,13 @@ If you want to enable the Operator-based deployment Core pod again, set the valu
 
 !!!important 
 
-        - Ensure to note the [requirements and limitations here](../../systemrequirements/9.5_express/supportedsoftware.md).
+        - Ensure to note the [Containerization requirements and limitations](../../../../get_started/plan_deployment/container_deployment/limitations_requirements.md).
         - For the new Helm deployment, you must use a different Kubernetes namespace from the one used in the Operator-based deployment.
 
 ### Ensure correct state
 Ensure that the Helm-based deployment is in the correct state before restoring a backup.
 
--   **Ensure that you have extracted the Kubernetes DX configuration<!-- [extracted the Kubernetes DX configuration](helm_extract_operator_properties.md) --> from the Operator-based deployment to a valid custom-values.yaml file.**
+-   **Ensure that you have extracted the Kubernetes DX configuration from the Operator-based deployment to a valid custom-values.yaml file.**
 -   **Enable `migration` mode for `operatorToHelm`** by adding or updating the following value in custom-values.yaml:
 
     ```
@@ -225,10 +225,10 @@ kubectl exec --stdin --tty pod/dx-deployment-core-0 -n dxns-helm -- /bin/bash
         exit
         ```
 
-### Disable the migration mode and the deployment.
+### Disable the migration mode and the deployment
 
 !!!important
-    If Digital Asset Management was used in the Operator-based deployment, you must follow the [DAM migration instructions](helm_dam_migration.md) before disabling migration mode.
+    If Digital Asset Management was used in the Operator-based deployment, you must follow the migrations in the [Operator to Helm migration](../../container/operator-migration/operator_migration_preparation.md) topic section before disabling migration mode.
 
 1.  **Disable the `migration` mode** by updating the following value in custom-values.yaml
 
@@ -251,9 +251,9 @@ kubectl exec --stdin --tty pod/dx-deployment-core-0 -n dxns-helm -- /bin/bash
     helm upgrade -n dxns-helm --create-namespace -f custom-values.yaml dx-deployment hcl-dx-deployment
     ```
 
-### Reconfigure applications to use relative paths.
+### Reconfigure applications to use relative paths
 
-Coming from old Operator deployments, it can appear that the applications \(Digital Asset Management, Content Composer, and Design Studio\) are still configured to use absolute URLs for their rendering. If you use any of these applications, it is highly recommended that you reconfigure them to use relative paths.
+Coming from old Operator deployments, it can appear that the applications (Digital Asset Management, Content Composer, and Design Studio) are still configured to use absolute URLs for their rendering. If you use any of these applications, it is highly recommended that you reconfigure them to use relative paths.
 
 !!!important 
     Reconfigure relative paths for applications that are active in your deployment. Otherwise, the command will fail.
@@ -281,13 +281,13 @@ kubectl exec -n <NAMESPACE> dx-deployment-core-0 -- bash -c 'cd /opt/HCL/ConfigE
 ### Create Ingress Secret
 Create the secret with your TLS certificate for the Ambassador Ingress in your Helm-based deployment.
 
-To make your migrated Helm deployment accessible, you need to configure the TLS certificate that is used by the Ambassador Ingress. See [Use certificate](../deployment/preparation/prepare_configure_networking.md) for more information.
+To make your migrated Helm deployment accessible, you need to configure the TLS certificate that is used by the Ambassador Ingress. See [Use certificate](../../container/helm_deployment/preparation/mandatory_tasks/prepare_ingress_certificate.md#use-certificate) for more information.
 
-### \(Optional\) Update Secrets
+### (Optional) Update Secrets
 If you have changed the WAS/Portal Administrator user, update the corresponding secrets \(`dx-deployment-was` and `dx-deployment-wps`\) in the Helm-based deployment.
 
-### \(Optional\) Configure Remote Search.
+### (Optional) Configure Remote Search
 
 Skip this step if you have not used Remote Search in your Operator deployment, or if you have no plans to use Remote Search within your Helm-based deployment. Configure Remote Search and re-index your data again.
 
-See instructions on [how to configure Remote Search within a Kubernetes environment](../operations/kubernetes_remote_search.md).
+See instructions on [Configure Remote Search within a Kubernetes environment](../../../manage/container_configuration/kubernetes_remote_search.md).
