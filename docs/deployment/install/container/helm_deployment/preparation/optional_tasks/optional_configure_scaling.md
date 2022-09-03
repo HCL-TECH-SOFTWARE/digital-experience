@@ -2,10 +2,10 @@
 
 The HCL Digital Experience 9.5 Kubernetes deployment using Helm allows you to configure the pod count of each individual application.
 
-In addition, it is possible to configure the use of HorizontalPodAutoscalers that scales up and down the applications by adding or removing Pods based on the pod metrics. Refer to the [Scaling DX 9.5 container deployments using Helm](../../architecture/container_scaling.md) Help Center topic for detailed overview information.
+In addition, it is possible to configure the use of HorizontalPodAutoscalers that scales up and down the applications by adding or removing Pods based on the pod metrics. Refer to the [Scaling DX 9.5 container deployments using Helm](../../../../../manage/container_configuration/container_scaling.md) topic for detailed overview information.
 
 !!! note
-    You are not able to use more than one \(1\) Core Pod until you have performed a database transfer.
+    You are not able to use more than one (1) Core Pod until you have performed a database transfer.
 
 ## Configuring pod count
 
@@ -56,4 +56,3 @@ scaling:
 The example configures a `HorizontalPodAutoscaler` for Content Composer, that scales up to 3 pods maximum. It considers scaling when a CPU utilization of 75% or Memory utilization of 80% per pod is reached.
 
 Refer to the default values.yaml file for all configurable applications.
-mands](helm_install_commands.md)** for the next steps.

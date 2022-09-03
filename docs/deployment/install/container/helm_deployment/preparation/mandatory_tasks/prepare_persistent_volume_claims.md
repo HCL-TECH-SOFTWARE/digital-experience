@@ -2,7 +2,7 @@
 
 To run HCL Digital Experience 9.5 Container deployments in your Kubernetes or OpenShift cluster, you need to set up PersistentVolumes (PVs) on your cluster and configure the Helm Chart to create the appropriate PersistentVolumeClaims (PVCs).
 
-Before you proceed, review the [Persistent Volumes and related operations considerations](/docs/get_started/plan_deployment/container_deployment/persistent_volumes.md) topic in the DX Help Center.
+Before you proceed, review the [Persistent Volumes and related operations considerations](../../../../../../get_started/plan_deployment/container_deployment/persistent_volumes.md) topic in the DX Help Center.
 
 !!! note
     The provisioning of PersistentVolumes (PVs) may differ based on your cluster configuration and your cloud provider. Please reference the documentation of your cloud provider for additional information.
@@ -18,7 +18,7 @@ Before you proceed, review the [Persistent Volumes and related operations consid
 
     In the HCL Digital Experience 9.5 Kubernetes or OpenShift deployment using Helm, the only DX applications leveraging RWO PVs are Core and Persistence.
 
-    Information regarding how to calculate the number of required volumes for the DX Core and Persistence applications is presented in the [Persistent Volumes and related operations considerations](/docs/get_started/plan_deployment/container_deployment/persistent_volumes.md) topic in the DX Help Center.
+    Information regarding how to calculate the number of required volumes for the DX Core and Persistence applications is presented in the [Persistent Volumes and related operations considerations](../../../../../../get_started/plan_deployment/container_deployment/persistent_volumes.md) topic in the DX Help Center.
 
     Since Core requires RWO PVs per pod, it may be necessary to have auto-provisioning of such volumes configured in your cluster if you don't know the final maximum number of possible Core pods running at the same time. Each Core pod requires 2 RWO PVs.
 
@@ -30,7 +30,7 @@ Before you proceed, review the [Persistent Volumes and related operations consid
 
     In the HCL Digital Experience 9.5 Kubernetes and OpenShift deployment using Helm the only DX applications leveraging RWX PVs are Core and Digital Asset Management.
 
-    Since the PV can be shared between all Core pods, you need one \(1\) RWX PV for Core, regardless of the pod count. Since the PV can be shared between all Digital Asset Management pods, you need one \(1\) RWX PV for Digital Asset Management, regardless of the pod count.
+    Since the PV can be shared between all Core pods, you need one (1) RWX PV for Core, regardless of the pod count. Since the PV can be shared between all Digital Asset Management pods, you need one (1) RWX PV for Digital Asset Management, regardless of the pod count.
 
 
 ## Configuration parameters

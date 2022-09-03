@@ -38,4 +38,4 @@ applications:
 
 ```
 
-You can set applications that you do not want to be deployed to `false`. As noted in the [Applications overview - Deploy DX 9.5 to container platforms using Helm](../../architecture/application_architecture.md) Help Center topic, some DX applications are pre-requisites for others to be deployed. It can appear that you have disabled an application, but it still gets deployed. This is due to other applications requiring that one.
+You can set applications that you do not want to be deployed to `false`. As noted in the [Deploy DX 9.5 to container platforms using Helm](../../../overview.md) Help Center topic, some DX applications are pre-requisites for others to be deployed. It can appear that you have disabled an application, but it still gets deployed. This is due to other applications requiring that one.

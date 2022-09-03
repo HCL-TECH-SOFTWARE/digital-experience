@@ -186,8 +186,5 @@ Once the restore procedure is completed, you can disable the DAM DB migration mo
 
     Installation of HCL DX 95 CF200 done.
 
-    See [HCL Digital Experience product documentation website](https://help.hcltechsw.com/digital-experience/9.5/welcome/wp95_welcome.html), for further information.
-
-
-You might have to wait for a few minutes until all the persistence pods and DAM pods are back to the running state.
+You may have to wait for a few minutes until all the persistence pods and DAM pods are back to the running state.
 

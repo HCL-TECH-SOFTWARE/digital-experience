@@ -27,7 +27,7 @@ data:
 
 After saving the changes, the DAM pod restarts automatically. Please wait until the pod restarts before proceeding.
 
-2.  Verify that persistence \(read-write\) and DAM pods are up and running, and are in maintenance mode. Use the following command to see the current status of the pods:
+2.  Verify that persistence (read-write) and DAM pods are up and running, and are in maintenance mode. Use the following command to see the current status of the pods:
 
     ```
     kubectl -n <namespace> get pods
@@ -143,11 +143,11 @@ After saving the changes, the DAM pod restarts automatically. Please wait until 
 ## Restore your back up to the Helm-based deployment
 
 !!!important
-    -   Ensure to note the [requirements and limitations here](../../systemrequirements/9.5_express/supportedsoftware.md).
+    -   Ensure to note the [Requirements and limitations for Helm-based deployments](../../../../get_started/plan_deployment/container_deployment/limitations_requirements.md).
     -   For the new Helm deployment, you must use a different Kubernetes namespace from the one used in the Operator-based deployment.
 
 1.  Ensure that the Helm-based deployment is in the correct state before restoring a backup.
-    -   Ensure that you have [extracted the Kubernetes DX configuration]((https://help.hcltechsw.com/digital-experience/9.5/containerization/helm_extract_operator_properties.html)<!-- (helm_extract_operator_properties.md) --> from the Operator-based deployment to a valid custom-values.yaml file is done.
+    -   Ensure that you have extracted the Kubernetes DX configuration from the Operator-based deployment to a valid custom-values.yaml file.
     -   You must enable `migration` mode for `operatorToHelm` by adding or updating the following value in custom-values.yaml:
 
         ```
@@ -222,7 +222,7 @@ After saving the changes, the DAM pod restarts automatically. Please wait until 
         kubectl cp /tmp/dxmediadb.dmp dxns-helm/dx-deployment-persistence-node-0:/tmp/dxmediadb.dmp
         ```
 
-3.  Connect to the persistence \(read-write\) pod. Use the following command to open a shell in the running persistence pod:
+3.  Connect to the persistence (read-write) pod. Use the following command to open a shell in the running persistence pod:
 
     ```
     kubectl exec --stdin --tty pod/<pod-name> -n <namespace> -- /bin/bash

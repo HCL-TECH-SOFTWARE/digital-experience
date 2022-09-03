@@ -1,26 +1,26 @@
-# Backup and recovery procedures Containerization
+# Backup and recovery procedures containerization
 
 This section shows the deployment architecture and provides the instructions to create and manage backup and recovery of HCL Digital Experience components in containerized DX 9.5 environments.
 
-## Digital Experience 9.5 Container Deployment Architecture
+## Digital Experience 9.5 Container deployment architecture
 
 Learn about the HCL DX 9.5 Container deployment architecture to get a better understanding of the backup and recovery options.
 
 !!! note
-    This topology is also available in the [Install the HCL Digital Experience 9.5 components](https://help.hcltechsw.com/digital-experience/9.5/containerization/install_config_cc_dam.html)<!-- (../containerization/install_config_cc_dam.md) --> topic.
+    This topology is also available in the [Install the HCL Digital Experience 9.5 components](../../../../manage_content/digital_assets/installation/install_config_dam.md) topic.
 
-![](../../../images/cf_173_topology.png)
+![](../operator-migration/_img/cf_173_topology.png)
 
 ## Instructions to back up the Digital Experience 9.5 Container components
 
-The following sections describe how the administrators can create and manage backups and recovery of DX 9.5 Container components such as wp\_profile, persistence layer - database, and the media in Digital Asset Management.
+The following sections describe how the administrators can create and manage backups and recovery of DX 9.5 Container components such as `wp_profile`, persistence layer - database, and the media in Digital Asset Management.
 
 1.   **wp-profile backup**
 
-    1.  Backup the file systems in the Digital Experience 9.5 container profile \(**Persistent volume claim** `wp_profile`\). Refer to the [Backup and Restore](https://help.hcltechsw.com/digital-experience/9.5/admin-system/i_wadm_c_bkup_restr_winlinux.html)<!-- (../admin-system/i_wadm_c_bkup_restr_winlinux.md) --> topic and component backup guidance for more information.
+    1.  Backup the file systems in the Digital Experience 9.5 container profile (**Persistent volume claim** `wp_profile`). Refer to the [Backup and restore](../../../manage/backup_restore/index.md) topic and component backup guidance for more information.
 
         !!! note
-                    The HCL Digital Asset Management \(DAM\) component uploads folder and the DAM persistent mount for the primary instance dx-deployment-persistence-0 in the statefulset. <!-- [dx-deployment-persistence](https://console-openshift-console.apps.hcl-dxdev.hcl-dx-dev.net/k8s/ns/master-tests/statefulsets/dx-deployment-persistence). -->
+                    The HCL Digital Asset Management (DAM) component uploads folder and the DAM persistent mount for the primary instance dx-deployment-persistence-0 in the statefulset.
 
         To create a backup of the profile **Persistent volume claim** `wp_profile`, it is recommended that:
 
@@ -35,9 +35,9 @@ The following sections describe how the administrators can create and manage bac
             /stopServer.sh WebSphere_Portal -username <USERNAME> -password <PASSWORD>
             ```
 
-            ![Example](../../../images/backup_restore_stop_server_example.png)
+            ![Backup and restore stop server example](../operator-migration/_img/backup_restore_stop_server_example.png)
 
-        -   The entire /opt/HCL/wp\_profile directory is backed up.
+        -   The entire /opt/HCL/wp_profile directory is backed up.
         
             In the command line interface, run the following command to back up the Digital Experience 9.5 Persistent volume claim **wp\_profile**:
 
@@ -49,13 +49,13 @@ The following sections describe how the administrators can create and manage bac
             tar -cvpzf backup.tar.gz --exclude=/backup.tar.gz --one-file-system /opt/HCL/wp_profile/*
             ```
 
-        ![Example](../../../images/backup_restore_wp_profile2.png)
+        ![Backup and restore wp_profile example](../operator-migration/_img/backup_restore_wp_profile2.png)
 
         After the tar backup command is completed, it is recommended that a copy of the backup.tar.gz file is created and placed to alternate long term storage.
 
-    -   **Recover from wp\_profile pervasive volume backup**
+    -   **Recover from wp_profile pervasive volume backup**
 
-        You can extract the backup of the wp\_profile volume to recover any files you need to restore.
+        You can extract the backup of the wp_profile volume to recover any files you need to restore.
 
         If the version of the backup matches the current fixpack level, you can use the extracted files to populate the original pervasive volume.
 
@@ -73,7 +73,7 @@ The following sections describe how the administrators can create and manage bac
     pg_dump name_of_database > name_of_backup_file
     ```
 
-    ![Example](../../../images/backup_restore_persistence_db.png)
+    ![Backup and restore persistence database example](../operator-migration/_img/backup_restore_persistence_db.png)
 
     To back up the system components on a remote system:
 
@@ -83,13 +83,13 @@ The following sections describe how the administrators can create and manage bac
 
     After the backup command is completed, it is recommended that a copy of the resulting file is created and placed to an alternate long term storage.
 
-    See the [Backup and restore DAM image](https://help.hcltechsw.com/digital-experience/9.5/digital_asset_mgmt/operator_dam_backup_restore_image.html)<!-- (../digital_asset_mgmt/dam_backup_restore_image.html) --> topic for more information.
+    See [Backup and restore a DAM image](../../../../manage_content/digital_assets/configuration/operator_dam_backup_restore_image.md) for more information.
 
 3.   **Digital Asset Management media backup**
 
     Use the following commands to back up the Digital Asset Management media uploads volume:
 
-    1.  A command similar to the backup command outlined in [Step 1](https://help.hcltechsw.com/digital-experience/9.5/digital_asset_mgmt/operator_dam_backup_restore_image.html)<!-- (operator_backup_and_recovery_procedures.md#ol_zp1_w1f_ppb) --> to create a backup of wp\_profile can be used to back up the two /opt/app/upload and /etc/config Digital Asset Management mount points.
+    1.  A command similar to the backup command outlined in Step 1 of [Backup and restore a DAM image](../../../../manage_content/digital_assets/configuration/operator_dam_backup_restore_image.md) to create a backup of wp_profile can be used to back up the two `/opt/app/upload` and `/etc/config` Digital Asset Management mount points.
 
         -   Refer to the following examples:
 
@@ -97,15 +97,15 @@ The following sections describe how the administrators can create and manage bac
                tar -cvpzf backupml.tar.gz --exclude=/backupml.tar.gz --one-file-system /opt/app/upload
             ```
 
-            ![Example 1](../../../images/backup_restore_dam_media1.png)
+            ![Backup and restore DAM media example 1](../operator-migration/_img/backup_restore_dam_media1.png)
 
         -   ```
                tar -C/ -cvpzf backupmlcfg.tar.gz --exclude=/backupmlcfg.tar.gz --one-file-system etc/config/*
             ```
 
-            ![Example 2](../../../images/backup_restore_dam_media2.png "Example 2:")
+            ![Backup and restore DAM media example 2](../operator-migration/_img/backup_restore_dam_media2.png)
 
-            See the [Backup and restore DAM image](https://help.hcltechsw.com/digital-experience/9.5/digital_asset_mgmt/operator_dam_backup_restore_image.html) <!-- (operator_backup_and_recovery_procedures.md#ol_zp1_w1f_ppb) --> topic for more information.
+            See [Backup and restore a DAM image](../../../../manage_content/digital_assets/configuration/operator_dam_backup_restore_image.md) for more information.
 
         Alternatively, the [Kubernetes documentation](https://kubernetes.io/docs/home/) pages present additional options to backup and clone persistent volumes.
 
