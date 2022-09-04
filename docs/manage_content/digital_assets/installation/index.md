@@ -1,4 +1,4 @@
-# Install the HCL Digital Asset Management components
+# Install HCL Digital Asset Management
 
 This section provides a high-level overview of the architecture and the steps to install, enable and update the HCL Digital Asset Management.
 
