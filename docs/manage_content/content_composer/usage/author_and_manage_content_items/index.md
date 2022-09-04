@@ -1,4 +1,4 @@
-# Author and manage content items
+# Author and Manage Content Items
 
 This section provides the steps on how to use Content Composer to author content items. Using the HCL Digital Experience 9.5 Content Composer features, content authors can quickly create and edit content.
 

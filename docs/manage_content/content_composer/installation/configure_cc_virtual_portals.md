@@ -1,4 +1,4 @@
-# Enable or disable Content Composer in Virtual Portals
+# Enable or Disable Content Composer in Virtual Portals
 
 The use of Content Composer features in a Virtual Portal deployment pattern is supported for HCL Content Composer beginning with Container Update 9.5 CF192.
 
