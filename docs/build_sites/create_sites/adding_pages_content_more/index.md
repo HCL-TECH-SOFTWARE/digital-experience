@@ -1,22 +1,22 @@
 # Adding pages, content, and more
 
-
-
 As a content author, your goal is to visualize the best way to organize information on your site with pages and content. You might need to create a section in the site for a new product or you might want to change the arrangement of pages in the navigation based on customer feedback. Either way, you always start with a project and end with publishing your updates.
 
 -   **Create a project to organize drafts and for easy publishing**
 
     -   Projects organize your drafts in a centralized view and give you the flexibility of approving and publishing content in one step.
+    
     -   To get started, click the project menu to create a new project or access an existing project.
-    ![Screen capture of the project menu.](../images/toolbar_proj.JPG)
+
+    ![Screen capture of the project menu.](../../../images/toolbar_proj.JPG)
 
 
 -   **Create draft pages and content in your project. Use site manager to visualize how your new pages and content look in the site navigation.**
 
-    -   From site manager, you can see draft pages and content in the context of the site navigation. By default, content items are hidden from the site manager tree view. Click ![Screen capture of the Show content items in the tree view icon](../images/show_content.jpg) **Show content items in the tree view** to display content items in the site manager tree view.
-    -   To set up your site with new pages or content, open the site toolbar and site manager. Select an existing page or content item in site manager, and click the context menu icon ![Screen capture of the context menu](../images/toolbar_context_menu.jpg) to access the create options. The following image shows how to access the context menu for a page in site manager.
+    -   From site manager, you can see draft pages and content in the context of the site navigation. By default, content items are hidden from the site manager tree view. Click ![Screen capture of the Show content items in the tree view icon](../../../images/show_content.jpg) **Show content items in the tree view** to display content items in the site manager tree view.
+    -   To set up your site with new pages or content, open the site toolbar and site manager. Select an existing page or content item in site manager, and click the context menu icon ![Screen capture of the context menu](../../../images/toolbar_context_menu.jpg) to access the create options. The following image shows how to access the context menu for a page in site manager.
 
-        ![Screen capture of the site manager tree view and how to open the context menu for a page.](../images/sm_cm_nav.jpg)
+        ![Screen capture of the site manager tree view and how to open the context menu for a page.](../../../images/sm_cm_nav.jpg)
 
     -   All pages and content are created from templates in site manager for easy site setup. Page templates include page layout and can include content. Content templates include a default appearance and structure.
     -   Site manager includes extra features that content authors frequently use while setting up the site. These features include copying and pasting areas of your navigation as the starting point for new content, changing page layout, changing style, and more.
@@ -25,9 +25,9 @@ As a content author, your goal is to visualize the best way to organize informat
 
     All of your changes look great and you submit your edits for approval. After your drafts are approved, publish the project to update your site with your changes. To publish your project, open the project menu in the action bar. From the project menu, you can select **Publish** to publish your project immediately, or click **Open Overview** to view the contents of your project before you publish.
 
-    ![Screen capture of the open project menu, with the Publish option and Open Overview option highlighted.](../images/toolbar_publish.JPG)
+    ![Screen capture of the open project menu, with the Publish option and Open Overview option highlighted.](../../../images/toolbar_publish.JPG)
 
-
+<!---
 ## Next Steps
 
 -   Start with a tour of the site toolbar and site manager. Familiarize yourself with creating pages and content in the context of your site navigation in *Exploring site toolbar and site manager*.
@@ -50,5 +50,4 @@ Applications are reusable portlets that you can add to a page to show content it
 -   **[Moving, copying, and pasting pages and content items](toolbar_pages_move.md)**  
 You can move or copy a page or a content item to a different position in the page hierarchy. Child pages and content items move with the parent page. Associated content remains associated with the page, but does not move.
 -   **[Editing page settings](toolbar_page_settings.md)**  
-After you create a page, modify the page settings to change the page title, create a friendly URL name, and more. To access page settings for an existing page, click the page in site manager and click the context menu icon. Then, click **Open Page Settings.**
-
+After you create a page, modify the page settings to change the page title, create a friendly URL name, and more. To access page settings for an existing page, click the page in site manager and click the context menu icon. Then, click **Open Page Settings.** --->

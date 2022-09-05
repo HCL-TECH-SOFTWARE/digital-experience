@@ -51,7 +51,7 @@ You can add new styles or layouts to the site toolbar with a JSON file. Sometime
         </request>
         ```
 
-    2.  Copy the script to [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/bin.
+    2.  Copy the script to [PortalServer\_root](../../../../../guide_me/wpsdirstr.md)/bin.
 
     3.  Run the XML Access command: `xmlaccess -user user -password password -url localhost:port/wps/config -in AddCategories.xml -out AddCategoriesOutput`
 
