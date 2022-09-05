@@ -3,16 +3,14 @@ id: contarget_segments
 title: Creating segments with personalization
 ---
 
-
-
-
 Learn more about creating segments with personalization through an example.
 
-Before you create segments, ensure that your system administrator has set up the proper access control permissions. Go to the *Access permissions for Business Rules* table in [Access permissions](../admin-system/sec_acc_rights.md) for information.
+Before you create segments, ensure that your system administrator has set up the proper access control permissions. Go to the *Access permissions for Business Rules* table in [Access permissions](../../../../../deployment/manage/security/controlling_access/resources_roles/sec_acc_rights.md) for information.
 
 In this example, your goal is to create two segments: Smartphone User and Tablet User. Each segment views content through different devices.
 
-**Note:** If you do not see the segment that you are seeking after you click **Add Segment**, close Configure Spot and navigate to the Personalization page of the site to create a segment. In this area, segments are referred to as profiles in profiler rules.
+!!! note
+    If you do not see the segment that you are seeking after you click **Add Segment**, close Configure Spot and navigate to the Personalization page of the site to create a segment. In this area, segments are referred to as profiles in profiler rules.
 
 1.  Click **Applications** \> **Personalization** \> **Business Rules**.
 
@@ -34,10 +32,12 @@ In this example, your goal is to create two segments: Smartphone User and Tablet
     10. Define attributes and values for the Tablet User segment. Click **attribute**, and select **Device** \> **Device Class**. The attribute label changes to current Device.Device Class.
     11. Continue to use **is** as the comparison operator.
     12. Click **value**, and select **tablet** as the value for the condition.
+
 5.  Click **Save**.
 
 
 The segments in this saved profiler rule appear in the Add Segment view. You can add these segments to content in a targeting rule or use these segments in other types of rules.
 
-**Note:** If you do not want to see segments that are created with Personalization in the Add Segments view, your developer can disable the segments. Learn more about enabling and disabling segmentsat [Enabling and disabling segments in the Add Segments view](contarget_enable_disable_segments.md#).
+!!! note
+    If you do not want to see segments that are created with Personalization in the Add Segments view, your developer can disable the segments. Learn more about enabling and disabling segmentsat [Enabling and disabling segments in the Add Segments view](../../../site_prep_content_author/contarget_enable_disable_segments.md).
 

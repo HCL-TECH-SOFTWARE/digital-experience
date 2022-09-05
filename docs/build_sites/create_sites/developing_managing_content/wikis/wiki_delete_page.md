@@ -11,6 +11,3 @@ When you delete a wiki post, it is removed from the site, but remains in the del
 3.  Select **Item Views** \> **Deleted Items**.
 
 4.  Select the appropriate wiki page and click **Purge**. Click **OK**.
-
-
-

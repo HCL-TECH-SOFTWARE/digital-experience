@@ -2,6 +2,7 @@
 
 Use wikis to share community content on a variety of subjects pertinent to your intranet and extranet sites. Wikis typically combine text with graphics and links to other wikis and websites. You can monitor and manage your own wiki articles.
 
+<!-- 
 -   **[Learn about the template libraries used by wikis](../admin-system/wiki_templates.md)**  
 Wikis use the template libraries provided by HCL Web Content Manager. Wikis use the Web Resources v70 library and the Wiki v70 library. The page hierarchy that is provided for wikis is the common one defined by the Web Content Manager template libraries.
 -   **[Adding a wiki to a page](../admin-system/wiki_add.md)**  
@@ -13,6 +14,6 @@ If you are the administrator, you have Site Manager access and can assign Editor
 -   **[Deleting wikis](../admin-system/wiki_delete.md)**  
 If you are the owner of a wiki site, you have Manager access and can delete any wiki or wiki pages on that site.
 -   **[Purging deleted wiki pages](../admin-system/wiki_delete_page.md)**  
-When you delete a wiki post, it is removed from the site, but remains in the delete view in HCL Web Content Manager. Users with Administrator access to libraries can purge these deleted wiki pages, which optimizes performance of the wiki library. Purging the deleted wiki pages removes all occurrences, including all versions. You cannot restore deleted items after you purge them.
+When you delete a wiki post, it is removed from the site, but remains in the delete view in HCL Web Content Manager. Users with Administrator access to libraries can purge these deleted wiki pages, which optimizes performance of the wiki library. Purging the deleted wiki pages removes all occurrences, including all versions. You cannot restore deleted items after you purge them. -->
 
 

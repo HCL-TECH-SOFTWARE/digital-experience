@@ -18,4 +18,3 @@ Pages that use the default style have no custom style sheet applied. Default sty
 
 4.  Select the style. The selection takes effect immediately.
 
-

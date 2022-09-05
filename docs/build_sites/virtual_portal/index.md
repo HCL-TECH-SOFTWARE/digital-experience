@@ -6,6 +6,7 @@ Virtual portals can be of benefit if you want to serve multiple user groups by s
 
 **Video**: [HCL Digital Experience - How to create a Virtual Portal](https://www.youtube.com/watch?v=DCTHg8WEvkY&feature=youtu.be)
 
+<!---
 -   **[Deciding about virtual portals](../admin-system/advpuscn.md)**  
 Get an overview of possible business and usage scenarios for virtual portals. Decide whether your business scenario is suitable for virtual portals. Get some ideas and hints about what you need to consider when you plan for your virtual portals. This can help you determine whether your business can work with virtual portals, how many virtual portals it requires, and how, and for which purposes you will use them. Based on your decision, you can then plan how you implement and configure your virtual portals.
 -   **[Planning for virtual portals](../admin-system/advppln.md)**  
@@ -27,5 +28,5 @@ The virtual portals reference provides information about using commands for conf
 
 [Connecting to WebDAV to work with portal pages and static content](../admin-system/webdav_url.md)
 
-[Migration: Virtual portals](../migrate/mig_plan_expect_vp.md)
+[Migration: Virtual portals](../migrate/mig_plan_expect_vp.md) --->
 

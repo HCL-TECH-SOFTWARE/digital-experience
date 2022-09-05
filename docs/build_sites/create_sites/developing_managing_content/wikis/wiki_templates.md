@@ -2,7 +2,8 @@
 
 Wikis use the template libraries provided by HCL Web Content Manager. Wikis use the Web Resources v70 library and the Wiki v70 library. The page hierarchy that is provided for wikis is the common one defined by the Web Content Manager template libraries.
 
-**Note:** The Web Content Manager libraries described in this topic only work with the theme customizer used in the default theme. Customization to these libraries affects all wikis on the site.
+!!! note
+    The Web Content Manager libraries described in this topic only work with the theme customizer used in the default theme. Customization to these libraries affects all wikis on the site.
 
 ## Web Resources v70 library
 
