@@ -1,4 +1,4 @@
-# Setting titles and descriptions of resources
+# Setting Titles and Descriptions of Resources
 
 You can set titles and descriptions of resources with Portal Model REST services.
 

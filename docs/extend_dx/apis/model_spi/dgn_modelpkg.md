@@ -1,6 +1,6 @@
-# Sub packages of the Model SPI
+# Sub-packages of the Model SPI
 
-Sub packages provide information on installed resources, hold Identification interface, and define the navigational model and the content that is represented in the Portal. The sub packages also represent portlets and their configuration data in the portal and the interconnections between the portlets.
+Sub-packages provide information on installed resources, hold Identification interface, and define the navigational model and the content that is represented in the Portal. The sub packages also represent portlets and their configuration data in the portal and the interconnections between the portlets.
 
 The Model SPI includes the following sub packages.
 

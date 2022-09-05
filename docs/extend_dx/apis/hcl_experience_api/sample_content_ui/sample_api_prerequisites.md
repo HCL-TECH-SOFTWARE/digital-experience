@@ -1,4 +1,4 @@
-# Sample Content UI prerequisites \| HCL Experience API
+# Sample Content UI Prerequisites
 
 There are certain prerequisites that need to be followed before Sample Content UI application can be used.
 

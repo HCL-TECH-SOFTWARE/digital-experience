@@ -1,4 +1,4 @@
-# Syntax for addressing portal resources
+# Syntax for Addressing Portal Resources
 
 To obtain information about a portal resource or to modify a portal resource, you need to obtain a feed for this resource, or you send a request to a certain URL that can contain a feed. Find out how you can construct URLs to which you can send HTTP requests related to the REST service.
 

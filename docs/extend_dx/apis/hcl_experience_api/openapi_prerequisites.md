@@ -1,4 +1,4 @@
-# Prerequisites \| HCL Experience API
+# Prerequisites
 
 The HCL Experience API requires software prerequisites to successfully run. The build package also includes this information, along with the installation and configuration steps.
 

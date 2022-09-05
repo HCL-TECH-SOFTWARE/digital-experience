@@ -1,11 +1,11 @@
-title: Model SPI overview
+title: Model SPI Overview
 nav:
     - index.md
-    - dgn_modelpkg.md
-    - dgn_modelobt.md
-    - wpsobjid.md
-    - dgn_modelfilter.md
-    - dgn_modelxmp.md
-    - Remote Model SPI REST service: model-spi_rest_service
-    - remote_model_rest_api.md
+    - Sub-packages of Model SPI: dgn_modelpkg.md
+    - Obtain Model from Portal: dgn_modelobt.md
+    - Obtain the Object ID: wpsobjid.md
+    - Filter Content Model: dgn_modelfilter.md
+    - Model SPI Samples: dgn_modelxmp.md
+    - Remote Model SPI REST services: model-spi_rest_service
+    - Remote Model API REST services: remote_model_rest_api.md
 

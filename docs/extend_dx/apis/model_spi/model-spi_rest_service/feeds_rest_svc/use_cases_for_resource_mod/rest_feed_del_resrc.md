@@ -1,4 +1,4 @@
-# Deleting resources
+# Deleting Resources
 
 Portal Model REST services allow you to delete resources.
 

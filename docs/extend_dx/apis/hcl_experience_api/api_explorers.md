@@ -1,4 +1,4 @@
-# Digital Experience REST API explorers
+# Digital Experience REST API Explorers
 
 Developers can accelerate development tasks using the following explorers provided for REST APIs available for use with HCL Digital Experience deployments to on premises platforms, and HCL Digital Experience 9.5 deployments to supported Kubernetes container platforms. You can initiate and test transactions or other capabilities such as content delivery using the API explorers.
 

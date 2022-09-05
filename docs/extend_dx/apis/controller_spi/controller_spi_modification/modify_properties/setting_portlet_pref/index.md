@@ -1,4 +1,4 @@
-# Setting portlet preferences
+# Setting Portlet Preferences
 
 You can set the portlet preferences for portlet definitions and portlet entities.
 

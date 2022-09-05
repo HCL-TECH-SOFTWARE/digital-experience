@@ -1,4 +1,4 @@
-# Making modifications by using the Controller SPI
+# Making Modifications by Using the Controller SPI
 
 The Controller SPI allows you to modify portal resources, the topology of your portal, and properties.
 

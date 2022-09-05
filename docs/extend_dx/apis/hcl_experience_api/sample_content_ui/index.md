@@ -1,4 +1,4 @@
-# Sample Content UI \| HCL Experience API
+# Sample Content UI
 
 Learn how to use the Sample Content UI application for HCL Experience API.
 

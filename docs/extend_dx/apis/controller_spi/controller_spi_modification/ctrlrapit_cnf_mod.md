@@ -1,4 +1,4 @@
-# Confirming modifications
+# Confirming Modifications
 
 Modifiable interfaces and Controller interfaces provide methods for confirming modifications. You can use these confirm methods to check whether modifications might be prevented by portal internal constraints.
 
