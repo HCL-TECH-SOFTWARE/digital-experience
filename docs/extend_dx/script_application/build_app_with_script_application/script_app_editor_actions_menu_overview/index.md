@@ -10,7 +10,7 @@ You can reference elements within presentation templates and element designs by 
 
 You can also add render parameter tags and portlet preferences to your application. For more information, read *The portlet plug-in*. For more information about render parameter tags, read *Render parameter tags*.
 
--   **[Render parameter tags](../script-portlet/render_param_tags.md)**  
+-   **[Render parameter tags](./render_param_tags.md)**  
 To retrieve the value of a shared render parameter, use the \[Plugin:RenderParam\] tag.
 
 

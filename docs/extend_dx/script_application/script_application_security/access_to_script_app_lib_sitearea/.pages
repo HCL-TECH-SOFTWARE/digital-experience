@@ -1,4 +1,5 @@
-title: Editor and reviewer Access to the Script Application Library and Script Applications Site Area
+title: Editor Access to Script Applications
 nav:
     - index.md
-    - acc_lib.md    - acc_site_area.md
+    - acc_lib.md
+    - acc_site_area.md

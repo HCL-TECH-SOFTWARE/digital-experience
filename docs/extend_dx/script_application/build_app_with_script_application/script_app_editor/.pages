@@ -1,4 +1,6 @@
-title: Script Application Editor
+title: Browser-Based Editor
 nav:
     - index.md
-    - import-apps.md    - export-apps.md    - css_best_practices.md
+    - import-apps.md
+    - export-apps.md
+    - css_best_practices.md
