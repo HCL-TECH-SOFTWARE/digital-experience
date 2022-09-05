@@ -49,8 +49,10 @@ When you use the Manage Pages and Page Properties portlets to create your static
 
 To update a static page, you make the required changes in the HTML file, then you replace the portal page with the updated page by using the Manage Pages and Properties portlets or other portal administration tools. If the static page contains portlet containers that are defined by the portlet container microformat, you can use the portal Page Customizer to update static page layout .
 
-**Note:** When you use only characters that can be encoded in ASCII in the names of the compressed file and the directories and files within the compressed file, you can use a compressed tool of your choice to create the file package. If you use characters that are not ASCII encoded, for example special characters or DBCS, in the names of the compressed file and the directories and files within the compressed file, you must create the compressed file by using the JRE tool `jar.exe`.
+!!! note
+    When you use only characters that can be encoded in ASCII in the names of the compressed file and the directories and files within the compressed file, you can use a compressed tool of your choice to create the file package. If you use characters that are not ASCII encoded, for example special characters or DBCS, in the names of the compressed file and the directories and files within the compressed file, you must create the compressed file by using the JRE tool `jar.exe`.
 
+<!---
 -   **[Example HTML markup for defining a portal page](../dev/spa_html_xmpl.md)**  
 Use these code samples as examples of HTML markup to create a portal page.
 -   **[Class attributes for portlets on static pages](../dev/spa_plt_mcrfrmt.md)**  
@@ -62,6 +64,6 @@ To render a portlet container on a static page, you use a CSS file that makes us
 -   **[Navigation options for static pages](../dev/spa_nav_mcrfrmt.md)**  
 You can provide navigation for your static pages by using either the portal theme or by making use of the navigation microformat.
 -   **[Portlets for adding dynamic elements to static pages](../dev/spa_portlets.md)**  
-If you want to add dynamic elements such as portal navigation to your static pages, you can use portlets that the portal provides.
+If you want to add dynamic elements such as portal navigation to your static pages, you can use portlets that the portal provides. --->
 
 

@@ -4,8 +4,6 @@ title: Dynamic content
 ---
 
 
-
-
 Dynamic content is generated when a page is rendered and is based on a set of predefined criteria such as the current user, the metadata of the current page. It allows you to deliver content specifically customized for the current user, or to deliver content customized for a campaign or product in your organization.
 
 ## Dynamic web content
@@ -34,5 +32,6 @@ Targeted content provides you with a way to deliver multiple pieces of content t
 A targeted spot displays different content to different segments. You can create a target spot by defining content that is targeted to specific segments:
 
 -   Add content items to your content spot in a web content viewer.
+
 -   Add segments to each content item to display your content to the correct audience. Segments help you define your target audience. For example, you can define the audience by users, device class, or other attributes.
 

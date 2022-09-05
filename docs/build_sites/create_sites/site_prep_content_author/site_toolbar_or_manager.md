@@ -1,6 +1,5 @@
 # Adding content - Site Toolbar or Site Manager
 
-
 When adding content to a site in edit mode, a content author has the choice of using either the Site Toolbar or Site Manager. Site developers need to consider which option is best for their content authors.
 
 ## Adding web content by using Site Manager

@@ -103,8 +103,6 @@ $Content delete 6_CGAH47L00G2N802TJFV58Q3000
 ```
 
 
-**Related information**  
-
-
-[Work with the Portal Scripting Interface](../admin-system/adpsitsk.md)
+???+ info "Related information:"
+    - [Work with the Portal Scripting Interface](../../../../../integrate_apps/development_tools/portal_admin_tools/portal_scripting_interface/adpsitsk.md)
 

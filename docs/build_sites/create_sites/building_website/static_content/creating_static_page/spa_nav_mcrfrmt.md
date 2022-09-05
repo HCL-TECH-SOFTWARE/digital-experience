@@ -218,15 +218,14 @@ The inline navigation feature can be enabled by setting the page metadata spa.ex
 
 For example, if the current page has the friendly path /home/mypage and contains the following markup; `<a href="child">child_page</a>`, then this markup is rewritten to a portal URL that points to the page with the friendly name /home/mypage/child.
 
-**Notes:**
+!!! note
+  -   If the href attribute of an anchor link contains an absolute URL, no rewriting occurs and the link continues to point to the absolute URL.
 
--   If the href attribute of an anchor link contains an absolute URL, no rewriting occurs and the link continues to point to the absolute URL.
--   If the href attribute of an anchor link contains a URL that starts with /, then the rewriting logic resolves the URL as a friendly path. If no page for this path exists, the system assumes a link to another application on the same server and leaves the value of the href attribute untouched.
--   If the href attribute of an anchor link starts with ?, then the remainder is considered query parameters and no rewriting occurs.
+  -   If the href attribute of an anchor link contains a URL that starts with /, then the rewriting logic resolves the URL as a friendly path. If no page for this path exists, the system assumes a link to another application on the same server and leaves the value of the href attribute untouched.
 
-
-**Related information**  
+  -   If the href attribute of an anchor link starts with ?, then the remainder is considered query parameters and no rewriting occurs.
 
 
-[Using friendly URLs](../admin-system/mp_friendly_url.md)
+???+ info "Related information:"
+  - [Using friendly URLs](../../../../../integrate_apps/development_tools/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/mp_friendly_url.md)
 
