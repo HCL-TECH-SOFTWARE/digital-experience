@@ -1,6 +1,6 @@
 Title: Elements
 nav:
     - index.md
-    - How to work with elements: howto_work_with_elements
-    - Element designs: element_designs
-    - wcm_config_wcmviewer_urlgen.md
+    - Work with Elements: howto_work_with_elements
+    - Element Designs: element_designs
+    - URL Generation by Using PathCmpnt: wcm_config_wcmviewer_urlgen.md
