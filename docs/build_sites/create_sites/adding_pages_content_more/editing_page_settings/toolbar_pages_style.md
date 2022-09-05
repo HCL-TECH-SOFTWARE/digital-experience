@@ -4,8 +4,6 @@ title: Changing page style
 ---
 
 
-
-
 You can change the appearance of a page by selecting a style from the list of styles. Available styles are defined in the website theme. The site administrator selects the theme.
 
 Edit Mode must be on to change the page style.

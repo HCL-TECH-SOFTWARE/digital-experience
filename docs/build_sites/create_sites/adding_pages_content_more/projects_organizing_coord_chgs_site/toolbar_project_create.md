@@ -25,8 +25,7 @@ You select the Trip template to create your new project.
 
 Projects are about collaborating with others. You can start adding authors and other owners to this project. For others to contribute to the project, you must add authors to the project. Enter your project, and click **Manage Project**. Then, click the **Properties** tab to add authors and owners to this project. You can also set other project logistics from **Manage Project**. For example, you can change the project name, set up approval criteria, create custom actions, control access, see the project history, and more.
 
+<!---
 **Related information**  
-
-
-[HCL Digital Experience](../welcome/help_welcome.md)
+[HCL Digital Experience](../welcome/help_welcome.md) --->
 
