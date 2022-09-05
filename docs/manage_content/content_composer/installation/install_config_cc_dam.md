@@ -8,7 +8,7 @@ This section provides a high-level overview of the architecture and the steps to
 
 ![High-level architecture](../../../images/container_deploy_tp_cf_181.png)
 
-![Topology](../../../images/cf_181_topology.png "Topology")
+![Topology](../../../images/cf_181_topology.png)
 
 ## Prerequisite
 
@@ -311,15 +311,11 @@ If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernet
 
 If you are using a content delivery network \(CDN\) such as [Akamai](https://www.akamai.com/our-thinking/cdn/what-is-a-cdn){:target="_blank"}, using `Vary: Origin` may prevent you from caching content. To bypass this limitation, your CDN configuration must strip the `Vary` header on the way in, to reinstate your ability to cache content. On the way out, you can append the `Origin` parameter to the `Vary` header when serving a response using **'Modify Outgoing Response Header'**.
 
--   **[Enable/disable Content Composer in Virtual Portals](/installation/configure_cc_virtual_portals.md)**  
-The use of Content Composer features in a Virtual Portal deployment pattern is supported for HCL Content Composer beginning with Container Update 9.5 CF192.
 
 
 ???+ info "**Related information:**"  
-    - [HCL Content Composer](/index.md)
     - [HCL Digital Asset Management](../../digital_assets/index.md)
-    - [Configure Digital Asset Management in virtual portals](/installation/configure_cc_virtual_portals.md)
+    - [Configure Digital Asset Management in virtual portals](../installation/configure_cc_virtual_portals.md)
     - [How to enable Practitioner Studio](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md)
     - [Docker image deployment](../../../deployment/install/docker/docker_image_deployment.md)
     - [Digital Asset Management persistence architecture](../../../get_started/plan_deployment/container_deployment/dam_persistence_architecture.md)
-
