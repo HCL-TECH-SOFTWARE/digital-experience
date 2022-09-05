@@ -1,4 +1,4 @@
-# Working with controllers
+# Working with Controllers
 
 When you modify a portal resource with the Controller SPI, you go through a set of steps.
 

@@ -1,4 +1,4 @@
-# Getting started with Sample Content UI \| HCL Experience API
+# Getting started with Sample Content UI
 
 Learn how to get started with the Sample Content UI application on HCL Digital Experience 9.5.
 

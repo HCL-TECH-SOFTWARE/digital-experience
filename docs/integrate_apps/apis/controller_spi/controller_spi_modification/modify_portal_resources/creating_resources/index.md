@@ -1,4 +1,4 @@
-# Creating resources
+# Creating Resources
 
 You create resources by using methods of controllers. Each controller type enables the specific resources for its type of model.
 

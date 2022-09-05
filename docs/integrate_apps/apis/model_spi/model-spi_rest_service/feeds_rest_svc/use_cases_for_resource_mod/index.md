@@ -1,4 +1,4 @@
-# Use cases for modifying resources
+# Use Cases for Modifying Resources
 
 Portal Model REST services allow you to create new resources, modify, move and delete existing resources. View some common use cases of resource modifications.
 

@@ -47,12 +47,10 @@ Generating Portal URLs correctly is one of the most important tasks in programmi
 
 
 **[Portal v8.5 API Specifications](https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/api_docs/index.html)**
-
 Reference copy of the Portal Version 8.5.0. API, javadocs, and other specifications.
 
 
 **[Portal v8.5 SPI Specifications](https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/spi_docs/index.html)**
-
 Reference copy of the Portal Version 8.5.0. SPI, javadocs, and other specifications.
 
 

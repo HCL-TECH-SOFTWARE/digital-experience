@@ -1,5 +1,5 @@
 title: Sample Content UI
 nav:
     - index.md
-    - sample_api_prerequisites.md
-    - getting_started_sample_api.md
+    - Prerequisites: sample_api_prerequisites.md
+    - Getting Started: getting_started_sample_api.md

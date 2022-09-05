@@ -1,4 +1,4 @@
-# Example API calls \| HCL Experience API
+# Example API Calls
 
 To give users more insight on how to use Experience API, the following samples are provided.
 
@@ -21,7 +21,7 @@ To give users more insight on how to use Experience API, the following samples a
     6.  Copy the UUID value.
     Use the UUID obtained in the previous process and use it to access content and logout flow:
 
-    1.  Open HCL Experience API explorer using `http://<HOST>:<PORT>/dx/api/core/v1/explorer` \(e.g. http://127.0.0.1:3000/dx/api/core/v1/explorer\).
+    1.  Open HCL Experience API explorer using `http://<HOST>:<PORT>/dx/api/core/v1/explorer` \(e.g. 'http://127.0.0.1:3000/dx/api/core/v1/explorer`\).
     2.  Execute Login API endpoint `auth/login` by entering a valid username and password.
     3.  Once the login is successful, execute the following content ID endpoint to fetch content based on the content ID:
 

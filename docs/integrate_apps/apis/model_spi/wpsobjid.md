@@ -1,4 +1,4 @@
-# Obtaining the object ID for a page or portlet
+# Obtaining the Object ID for a Page or Portlet
 
 There are several use cases when a portlet needs to obtain the object ID used to uniquely identify a portlet or a page. For example, the object ID of a page definition is required for a portlet to start a dynamic instance of that page.
 

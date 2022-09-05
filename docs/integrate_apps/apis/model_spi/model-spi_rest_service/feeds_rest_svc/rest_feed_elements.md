@@ -1,4 +1,4 @@
-# Elements of a model feed
+# Elements of a Model Feed
 
 The following sections show sample feeds for the different models.
 

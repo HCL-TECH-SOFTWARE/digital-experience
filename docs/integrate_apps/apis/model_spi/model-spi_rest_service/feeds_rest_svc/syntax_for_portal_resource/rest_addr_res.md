@@ -1,4 +1,4 @@
-# Model schemas for addressing resources
+# Model Schemas for Addressing Resources
 
 Addressing a resource includes specifying the model to which the resource is associated. To do this, you specify a schema.
 

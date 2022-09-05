@@ -1,4 +1,4 @@
-# Configuration options \| HCL Experience API
+# Configuration Options
 
 The HCL Experience API comes with a set of default configurations. The build package also includes this information, along with the installation steps.
 

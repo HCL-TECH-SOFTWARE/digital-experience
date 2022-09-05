@@ -1,4 +1,4 @@
-# Digital Experience Remote Model API REST explorer
+# Digital Experience Remote Model API REST Explorer
 
 The Digital Experience Remote Model REST API explorer can be used by developers creating solutions for HCL DX 9.5 on premises and container deployments to explore and test the Remote Model APIs.
 

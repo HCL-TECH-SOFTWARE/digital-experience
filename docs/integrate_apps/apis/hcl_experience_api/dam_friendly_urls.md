@@ -1,4 +1,4 @@
-# DAM API for friendly URLs
+# DAM API for Friendly URLs
 
 This section describes the DAM API that allows you to create a friendly URL for an asset.
 

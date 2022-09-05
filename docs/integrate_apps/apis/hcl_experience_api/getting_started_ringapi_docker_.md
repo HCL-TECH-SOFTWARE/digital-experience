@@ -1,4 +1,4 @@
-# Getting started with HCL Experience API
+# Getting Started with HCL Experience API
 
 Follow these steps to get started with the HCL Experience API.
 

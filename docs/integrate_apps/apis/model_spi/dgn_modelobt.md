@@ -1,4 +1,4 @@
-# Obtain a model from the portal
+# Obtain a Model from the Portal
 
 Portal models can be obtained by using three different ways, depending on where the code that uses them is located.
 

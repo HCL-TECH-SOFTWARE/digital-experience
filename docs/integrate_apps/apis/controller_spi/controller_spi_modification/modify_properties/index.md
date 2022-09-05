@@ -1,4 +1,4 @@
-# Modifying properties
+# Modifying Properties
 
 The Controller SPI enables the modification of properties resources.
 

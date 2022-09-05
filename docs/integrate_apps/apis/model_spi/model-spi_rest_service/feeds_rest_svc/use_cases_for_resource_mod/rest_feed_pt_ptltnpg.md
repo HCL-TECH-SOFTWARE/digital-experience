@@ -1,4 +1,4 @@
-# Putting a portlet on a page
+# Putting a Portlet on a Page
 
 Portal Model REST services allow you to put portlets on pages.
 

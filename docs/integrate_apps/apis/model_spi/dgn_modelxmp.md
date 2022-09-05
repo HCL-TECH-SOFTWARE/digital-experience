@@ -1,4 +1,4 @@
-# Model SPI samples
+# Model SPI Samples
 
 The Model SPI can be used in portlets, themes, and skins. The models can be used with authenticated users and also with the anonymous user.
 

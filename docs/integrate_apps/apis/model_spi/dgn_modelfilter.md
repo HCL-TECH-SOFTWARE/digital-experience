@@ -1,4 +1,4 @@
-# Filtering the content model
+# Filtering the Content Models
 
 By applying filters to the content model, you can exclude parts of the page hierarchy from the content model. Filtering is performed based on request data and metadata assigned to the pages.
 
