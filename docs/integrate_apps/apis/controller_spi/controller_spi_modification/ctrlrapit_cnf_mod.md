@@ -21,6 +21,8 @@ if (result == true) {
 
 ```
 
-**Note:** There is no guarantee that a modification will indeed be successful after the related `confirmxxx` method returns `true`. This is due to the fact that the underlying data structure might have changed between the confirmation and the actual modification.
+!!!note
+
+    There is no guarantee that a modification will indeed be successful after the related `confirmxxx` method returns `true`. This is due to the fact that the underlying data structure might have changed between the confirmation and the actual modification.
 
 

@@ -12,7 +12,8 @@ You can set the titles and descriptions of a resource.
 
     For example, if you want to set a title, use the `setTitle` method.
 
-    **Note:** You cannot set a description in a particular locale without having a title that is set in that same locale.
+    !!! note
+        You cannot set a description in a particular locale without having a title that is set in that same locale.
 
 
 Modifying titles and descriptions:

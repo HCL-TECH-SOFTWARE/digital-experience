@@ -1,4 +1,4 @@
-# Hints and tips for using the Controller SPI
+# Hints and Tips for Using the Controller SPI
 
 These are some hints and tips for using the Controller SPI.
 

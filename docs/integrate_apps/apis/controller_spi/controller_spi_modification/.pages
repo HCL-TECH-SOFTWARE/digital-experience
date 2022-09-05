@@ -1,5 +1,6 @@
 title: Making modifications by using the Controller SPI
 nav:
     - index.md
-    - Modifying portal resources and topologies: modify_portal_resources
-    - Modifying properties: modify_properties
+    - Modify Portal Resources and Topologies: modify_portal_resources
+    - Modify Properties: modify_properties
+    - Confirm Modifications: ctrlrapit_cnf_mod.md

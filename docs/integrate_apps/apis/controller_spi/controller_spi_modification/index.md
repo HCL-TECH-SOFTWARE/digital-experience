@@ -33,16 +33,13 @@ try {
 
 For more details about this refer to [Committing and persisting your modifications](ctrlrapit_comit.md).
 
--   **[Modifying portal resources and topologies](../dev/ctrlrapit_mdfy_restop.md)**  
+-   **[Modifying portal resources and topologies](../controller_spi_modification/modify_portal_resources/index.md)**  
 The Controller SPI allows you to modify portal resources and the topology of your portal in different ways.
--   **[Modifying properties](../dev/ctrlrapit_mdfy_props.md)**  
+-   **[Modifying properties](../controller_spi_modification/modify_properties/index.md)**  
 The Controller SPI enables the modification of properties resources.
 
 
-**Related information**  
-
-
-[Obtaining a controller for working with resources](../dev/ctrlrapit_obtn_ctrlr.md)
-
-[Committing and persisting your modifications](../dev/ctrlrapit_comit.md)
+???info "**Related information:**"  
+    - [Obtaining a controller for working with resources](../working_with_controllers/index.md)
+    - [Committing and persisting your modifications](../working_with_controllers/ctrlrapit_comit.md)
 

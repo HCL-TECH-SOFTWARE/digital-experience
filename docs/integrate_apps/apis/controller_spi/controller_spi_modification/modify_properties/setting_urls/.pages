@@ -1,4 +1,5 @@
 title: Setting URLs
 nav:
     - index.md
-    - ctrlrapit_set_url_ext.md    - ctrlrapit_set_url_int.md
+    - External Content URLs: ctrlrapit_set_url_ext.md
+    - Internal Content URLs: ctrlrapit_set_url_int.md

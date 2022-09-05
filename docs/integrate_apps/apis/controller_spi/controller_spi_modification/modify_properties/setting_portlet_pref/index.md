@@ -2,9 +2,9 @@
 
 You can set the portlet preferences for portlet definitions and portlet entities.
 
--   **[Setting portlet preferences for portlet definitions](../dev/ctrlrapit_st_ptlt_prf_dfn.md)**  
+-   **[Setting portlet preferences for portlet definitions](ctrlrapit_st_ptlt_prf_dfn.md)**  
 You can set the portlet preferences for portlet definitions.
--   **[Setting portlet preferences for portlet entities](../dev/ctrlrapit_st_ptlt_prf_ent.md)**  
+-   **[Setting portlet preferences for portlet entities](ctrlrapit_st_ptlt_prf_ent.md)**  
 You can set the portlet preferences for portlet entities.
 
 

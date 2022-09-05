@@ -22,10 +22,11 @@ ModifiableLayoutMetrics modifiableLayoutMetrics = modifiable.getModifiableLayout
 modifiableLayoutMetrics.setValue(LayoutMetrics.ORIENTATION, Orientation.HORIZONTAL);
 ```
 
-**Note:** If you do not set the orientation of a container, it is automatically set when you insert the container into the topology of the controller by the following rules:
+!!! note "**Notes:**" 
 
--   If a new root container is inserted into an empty topology, horizontal orientation is used for the new root container.
--   If a new root container is inserted into a topology that is not empty, the new root container is set to the opposite orientation of the existing root container. For example, if the existing root container had horizontal orientation, the new root container will have vertical orientation.
--   If a container is inserted as the child of an existing parent container, the child container is set to the opposite orientation of the parent container.
+    If you do not set the orientation of a container, it is automatically set when you insert the container into the topology of the controller by the following rules:
+        -   If a new root container is inserted into an empty topology, horizontal orientation is used for the new root container.
+        -   If a new root container is inserted into a topology that is not empty, the new root container is set to the opposite orientation of the existing root container. For example, if the existing root container had horizontal orientation, the new root container will have vertical orientation.
+        -   If a container is inserted as the child of an existing parent container, the child container is set to the opposite orientation of the parent container.
 
 
