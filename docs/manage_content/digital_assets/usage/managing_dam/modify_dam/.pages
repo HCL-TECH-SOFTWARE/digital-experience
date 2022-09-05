@@ -1,4 +1,5 @@
 nav:
+        - index.md
         - dam_edit_image.md
         - dam_metadata_properties.md
         - dam_generate_renditions_and_versions.md

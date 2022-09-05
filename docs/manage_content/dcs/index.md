@@ -1,6 +1,6 @@
 # Document Conversion Services
 
-Document Conversion Services are used when you work with HCL Web Content Manager authoring, previewing, and search.
+Document Conversion Services (DCS) are used when you work with HCL Web Content Manager authoring, previewing, and search.
 
 Documents that are produced by many standard applications \(such as word processors or spreadsheet editors\) can be viewed as HTML pages with Document Conversion Services. Documents that are received as attachments to email can be viewed in the browser even if the application that created the document is not installed. Document Conversion Services also allows documents to be searched by content. Document pages can also be converted into an image format such as GIF, BMP, JPG, or PNG.
 

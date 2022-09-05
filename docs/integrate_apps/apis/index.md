@@ -68,3 +68,9 @@ Portlet load monitoring provides an API for accessing the monitoring data. You c
 
 **[Personalization APIs](../manage_content/pzn/pzn_apis/index.md)**  
 Portlet load monitoring provides an API for accessing the monitoring data. You can use this API to write custom code to access that data.
+
+**[Portal v8.5 API Specifications](https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/api_docs/index.html)**
+Reference copy of the Portal Version 8.5.0. API, javadocs, and other specifications.
+
+**[Portal v8.5 SPI Specifications](https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/spi_docs/index.html)**
+Reference copy of the Portal Version 8.5.0. SPI, javadocs, and other specifications.

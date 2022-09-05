@@ -1,4 +1,4 @@
-# Install the HCL Digital Experience 9.5 components
+# Install DAM components
 
 This section provides a high-level overview of the architecture and the steps to install, configure, and update the HCL Digital Experience 9.5 components: Experience API, Content Composer, and Digital Asset Management.
 
@@ -320,13 +320,9 @@ If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernet
 
 If you are using a content delivery network \(CDN\) such as [Akamai](https://www.akamai.com/our-thinking/cdn/what-is-a-cdn){:target="_blank"}, using `Vary: Origin` may prevent you from caching content. To bypass this limitation, your CDN configuration must strip the `Vary` header on the way in, to reinstate your ability to cache content. On the way out, you can append the `Origin` parameter to the `Vary` header when serving a response using **'Modify Outgoing Response Header'**.
 
-<!-- -   **[Enable/disable Content Composer in Virtual Portals](../content_composer/configure_cc_virtual_portals.md)**  
-The use of Content Composer features in a Virtual Portal deployment pattern is supported for HCL Content Composer beginning with Container Update 9.5 CF192. -->
+???+ info "**Related information:**"  
+    - [HCL Digital Asset Management](../../digital_assets/index.md)
+    - [How to enable Practitioner Studio](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md)
+    - [Docker image deployment](../../../deployment/install/docker/docker_image_deployment.md)
+    - [Digital Asset Management persistence architecture](../../../get_started/plan_deployment/container_deployment/dam_persistence_architecture.md)
 
-<!-- ???Info Related Information:
-    - [HCL Content Composer](../../content_composer/cont_comp_overview.md)
-    - [HCL Digital Asset Management](../../productfeatures/digital_asset_mgmt/digital_asset_mgmt_overview.md) 
-    - [Configure Digital Asset Management in virtual portals](../../containerization/configure_digital_asset_management_in_virtual_portals.md)
-    - [How to enable Practitioner Studio](practitioner_studio/enable_prac_studio.md)
-    - [Docker image deployment](containerization/docker_image_deployment.md)
-    - [Digital Asset Management persistence architecture](../../containerization/dam_persistence_architecture.md) -->
