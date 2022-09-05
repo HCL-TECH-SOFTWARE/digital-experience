@@ -14,5 +14,5 @@ As a page editor, you might want to access hidden pages by using the navigation.
 
 ???+ info "Related information:"
 
-    - [Marking pages as hidden under the content root](../../../../integrate_apps/development_tools/portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref_hide_page.md)
+    - [Marking pages as hidden under the content root](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref_hide_page.md)
 

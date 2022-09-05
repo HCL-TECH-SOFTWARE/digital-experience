@@ -227,5 +227,5 @@ For example, if the current page has the friendly path /home/mypage and contains
 
 
 ???+ info "Related information:"
-  - [Using friendly URLs](../../../../../integrate_apps/development_tools/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/mp_friendly_url.md)
+  - [Using friendly URLs](../../../../../extend_dx/development_tools/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/mp_friendly_url.md)
 

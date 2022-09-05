@@ -18,7 +18,7 @@ Digital Asset Management delivers a central platform to store and include rich m
 
 ## Experience API
 
-The HCL Experience API is a set of OpenAPI compliant REST APIs available for customers deploying HCL Digital Experience 9.5 containers on supported Kubernetes platforms. It supports the integration and management of HCL Digital Experience content and functionality to any digital channel using any front-end development framework. The HCL Experience API includes REST APIs that serve as a wrapper around previously published HCL Digital Experience HTTP based APIs. See [HCL Experience API](../../integrate_apps/apis/hcl_experience_api/openapi_overview.md) for details.
+The HCL Experience API is a set of OpenAPI compliant REST APIs available for customers deploying HCL Digital Experience 9.5 containers on supported Kubernetes platforms. It supports the integration and management of HCL Digital Experience content and functionality to any digital channel using any front-end development framework. The HCL Experience API includes REST APIs that serve as a wrapper around previously published HCL Digital Experience HTTP based APIs. See [HCL Experience API](../../extend_dx/apis/hcl_experience_api/openapi_overview.md) for details.
 
 ## OpenLDAP Container integration
 
@@ -50,6 +50,6 @@ The Digital Experience Core Configuration API allows developers to retrieve Digi
 
 ## Web Developer Toolkit
 
-The Web Developer toolkit for HCL Digital Experience provides the ability to sync themes, content and script portlets \(also known as Script Applications\). It is available on the HCL Digital Experience GitHub repository. See [Web Developer Toolkit](../../integrate_apps/development_tools/web_developer_toolkit.md) for details.
+The Web Developer toolkit for HCL Digital Experience provides the ability to sync themes, content and script portlets \(also known as Script Applications\). It is available on the HCL Digital Experience GitHub repository. See [Web Developer Toolkit](../../extend_dx/development_tools/web_developer_toolkit.md) for details.
 
 

@@ -24,7 +24,7 @@ See the [Logging and tracing for Containers and new services Help Center](../../
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform,and automate processes in the development and delivery process. New release artifact types supporting Script Application Undeploy and Restore, and Deploy Theme.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](../../integrate_apps/development_tools/dxclient/index.md) topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../extend_dx/development_tools/dxclient/index.md) topic for more information.
 
 ## New Content Composer Features
 
