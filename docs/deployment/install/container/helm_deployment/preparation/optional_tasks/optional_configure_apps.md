@@ -53,7 +53,7 @@ configuration:
 
 Refer to the following Help Center documentation for more information about LDAP and Configuration Wizard configuration:
 
--   [Configuration Wizard](../../../../../../integrate_apps/development_tools/portal_admin_tools/cfg_wizard/index.md)
+-   [Configuration Wizard](../../../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/index.md)
 -   [Enable federated security](../../../../../manage/security/user_registry/cw_ldap.md)
 -   [Troubleshooting: Enable federated security option](../../../../../manage/troubleshooting/troubleshooting_configwizard/cw_ldap.md)
 

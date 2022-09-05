@@ -1,6 +1,6 @@
 # Configuring the IBM License Metric Tool
 
-IBM License Metric Tool monitors license compliance. It recognizes and monitors what product offerings and their versions, releases, and fix packs are installed and used on the system. It measures the processor value units \(PVU\) available to and used by these assets. The tool ensures compliance with IBM® subcapacity licensing requirements and to demonstrate good IT governance. Information about installed software is collected from monitored computers by an agent that can be deployed on a range of operating systems. It is stored on a central server in a DB2® database and can be accessed through pre-configured reports that are available from a web user interface.
+IBM License Metric Tool monitors license compliance. It recognizes and monitors what product offerings and their versions, releases, and fix packs are installed and used on the system. It measures the processor value units (PVU) available to and used by these assets. The tool ensures compliance with IBM® sub-capacity licensing requirements and to demonstrate good IT governance. Information about installed software is collected from monitored computers by an agent that can be deployed on a range of operating systems. It is stored on a central server in a DB2® database and can be accessed through pre-configured reports that are available from a web user interface.
 
 Install and configure HCL Digital Experience before you configure the IBM License Metric Tool.
 
@@ -27,31 +27,32 @@ Install and configure HCL Digital Experience before you configure the IBM Licens
 
 3.  Follow the IBM License Metric Tool instructions that are provided with your customer agreement to complete the IBM License Metric Tool licensing configuration for HCL Portal and HCL Web Content Manager.
 
-4.  Ensure that the appropriate inventory signature file exists in the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/properties/version directory path. The file that is present depends on your license agreement and has a general format of IBM\_offering\_nameversion\_number.swtag.
+4.  Ensure that the appropriate inventory signature file exists in the PortalServer_root/properties/version directory path. The file that is present depends on your license agreement and has a general format of IBM_offering_nameversion_number.swtag.
+    !!!note "Tip"
+        Only one filename.swtag signature file can exist per product offering. Refer to the following table to determine the correct signature file. If you installed HCL Portal Server as a prerequisite for Enable, Extend, HCL Web Content Manager, or HCL Web Content Manager Standard Edition, only the .swtag for the advanced offering exists.
 
-    **Tip:** Only one filename.swtag signature file can exist per product offering. Refer to the following table to determine the correct signature file. If you installed HCL Portal Server as a prerequisite for Enable, Extend, HCL Web Content Manager, or HCL Web Content Manager Standard Edition, only the .swtag for the advanced offering exists.
-
-    **Note:** If the wrong file is found, the wrong offering might be installed. You must uninstall that offering and install the correct offering. If necessary, contact IBM Support for assistance with this process.
-
-    |Product offering / Component name|IBM Tivoli License Manager signature file|Signature file's directory path|
-    |---------------------------------|-----------------------------------------|-------------------------------|
-    |HCL Portal Extend Version 9.0|ibm.com\_IBM\_HCL Portal and HCL Web Content Manager\_Extend-9.0.0.swidtag|the UserData path of the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/swidtag directory|
-    |HCL Portal Enable Version 9.0|ibm.com\_IBM\_HCL Portal and HCL Web Content Manager\_Enable-9.0.0.swidtag|the UserData path of the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/swidtag directory|
-    |HCL Portal Server Version 9.0|ibm.com\_IBM\_HCL Portal and HCL Web Content Manager\_Server-9.0.0.swidtag|the UserData path of the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/swidtag directory|
-    |HCL Web Content Manager Version 9.0|ibm.com\_IBM\_Web\_Content\_Manager-9.0.0.swidtag|the UserData path of the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/swidtag directory|
-    |HCL Web Content Manager Standard Edition Version 9.0|ibm.com\_IBM\_Web\_Content\_Manager-9.0.0.swidtag|the UserData path of the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/swidtag directory|
-    |HCL PortalVersion 9.0|ibm.com\_IBM\_HCL Portal and HCL Web Content Manager\_Express-9.0.0.swidtag|the UserData path of the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/swidtag directory|
+    !!!note
+        If the wrong file is found, the wrong offering might be installed. You must uninstall that offering and install the correct offering. If necessary, contact IBM Support for assistance with this process.
 
     |Product offering / Component name|IBM Tivoli License Manager signature file|Signature file's directory path|
     |---------------------------------|-----------------------------------------|-------------------------------|
-    |HCL Portal Extend Version 8.5|IBM\_HCL Portal and HCL Web Content Manager\_Extend.8.5.0.swtag|the UserData path of the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/properties/version directory|
-    |HCL Portal Enable Version 8.5|IBM\_HCL Portal and HCL Web Content Manager\_Enable.8.5.0.swtag|the UserData path of the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/properties/version directory|
-    |HCL Portal Server Version 8.5|IBM\_HCL Portal and HCL Web Content Manager\_Server.8.5.0.swtag|the UserData path of the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/properties/version directory|
-    |HCL Web Content Manager Version 8.5|IBM\_Web\_Content\_Manager.8.5.0.swtag|the UserData path of the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/properties/version directory|
-    |HCL Web Content Manager Standard Edition Version 8.5|IBM\_Web\_Content\_Manager.8.5.0.swtag|the UserData path of the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/properties/version directory|
-    |HCL Portal Version 8.5|IBM\_HCL Portal and HCL Web Content Manager\_Express.8.5.0.swtag|the UserData path of the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/properties/version directory|
+    |HCL Portal Extend Version 9.0|ibm.com\_IBM\_HCL Portal and HCL Web Content Manager\_Extend-9.0.0.swidtag|the UserData path of the PortalServer_root/swidtag directory|
+    |HCL Portal Enable Version 9.0|ibm.com\_IBM\_HCL Portal and HCL Web Content Manager\_Enable-9.0.0.swidtag|the UserData path of the PortalServer_root/swidtag directory|
+    |HCL Portal Server Version 9.0|ibm.com\_IBM\_HCL Portal and HCL Web Content Manager\_Server-9.0.0.swidtag|the UserData path of the PortalServer_root/swidtag directory|
+    |HCL Web Content Manager Version 9.0|ibm.com\_IBM\_Web\_Content\_Manager-9.0.0.swidtag|the UserData path of the PortalServer_root/swidtag directory|
+    |HCL Web Content Manager Standard Edition Version 9.0|ibm.com\_IBM\_Web\_Content\_Manager-9.0.0.swidtag|the UserData path of the PortalServer_root/swidtag directory|
+    |HCL PortalVersion 9.0|ibm.com\_IBM\_HCL Portal and HCL Web Content Manager\_Express-9.0.0.swidtag|the UserData path of the PortalServer_root/swidtag directory|
 
-5.  Verify that the itlm.product file exists in the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/version directory.
+    |Product offering / Component name|IBM Tivoli License Manager signature file|Signature file's directory path|
+    |---------------------------------|-----------------------------------------|-------------------------------|
+    |HCL Portal Extend Version 8.5|IBM\_HCL Portal and HCL Web Content Manager\_Extend.8.5.0.swtag|the UserData path of the PortalServer_root/properties/version directory|
+    |HCL Portal Enable Version 8.5|IBM\_HCL Portal and HCL Web Content Manager\_Enable.8.5.0.swtag|the UserData path of the PortalServer_root/properties/version directory|
+    |HCL Portal Server Version 8.5|IBM\_HCL Portal and HCL Web Content Manager\_Server.8.5.0.swtag|the UserData path of the PortalServer_root/properties/version directory|
+    |HCL Web Content Manager Version 8.5|IBM\_Web\_Content\_Manager.8.5.0.swtag|the UserData path of the PortalServer_root/properties/version directory|
+    |HCL Web Content Manager Standard Edition Version 8.5|IBM\_Web\_Content\_Manager.8.5.0.swtag|the UserData path of the PortalServer_root/properties/version directory|
+    |HCL Portal Version 8.5|IBM\_HCL Portal and HCL Web Content Manager\_Express.8.5.0.swtag|the UserData path of the PortalServer_root/properties/version directory|
+
+5.  Verify that the `itlm.product` file exists in the PortalServer_root/version directory.
 
 
 
