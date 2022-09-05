@@ -21,7 +21,8 @@ To move existing nodes or insert new nodes, use the `insert()` method of the con
     -   A parent node and a sibling node. In this case, the resource is inserted as the child of the parent node in a position immediately before the sibling node.
     -   No location information at all. In this case, the resource is inserted as a new root.
 
-        **Note:** This insertion is not possible for all controllers. For example, you cannot insert a new root node into a `ContentModelController` that has a root node already.
+        !!!note
+             This insertion is not possible for all controllers. For example, you cannot insert a new root node into a `ContentModelController` that has a root node already.
 
 5.  Persist your modifications by using the `commit()` method of the controller.
 
@@ -42,8 +43,5 @@ lmController.insert(control, parentContainer, nextContainer);
 
 
 ```
-
--   **[Placing a portlet on a page](../dev/ctrlrapit_plcprtltonpg.md)**  
-To put a portlet on a page, use the `insert()` method of the controller.
 
 

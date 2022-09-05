@@ -9,7 +9,8 @@ The creation context builder factory can do both of the following:
     -   A layout control creation context contains two properties, portlet definition and portlet entity.
 -   Combine several creation contexts into one in order to define multiple immutable properties.
 
-**Note:** You can only combine creation contexts that have not already been combined by using the creation context builder.
+!!!note
+    You can only combine creation contexts that have not already been combined by using the creation context builder.
 
 Example 1 - Obtaining a simple creation context:
 
@@ -44,7 +45,8 @@ The following list describes creation contexts that you can create by using the 
 
     Use this creation context to define the derivation parent of a page that you want to create. This applies to the resource type `ContentPage` on the `ContentModelController`.
 
-    **Note:** This creation context derives from the `ContentPageCreationContext`.
+    !!!note
+        This creation context derives from the `ContentPageCreationContext`.
 
 -   **IdentifiableCreationContext**
 

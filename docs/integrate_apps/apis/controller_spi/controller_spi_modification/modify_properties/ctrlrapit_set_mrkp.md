@@ -8,7 +8,8 @@ For example, these can be the following:
 -   `ModifiableContentLabel`
 -   `ModifiableContentURL`
 
-**Note:** For content nodes, that is content pages, content labels, and content URLs, you need to set a supported markup. Otherwise they will not show in the read-only model.
+!!!note
+    For content nodes, that is content pages, content labels, and content URLs, you need to set a supported markup. Otherwise they will not show in the read-only model.
 
 To set the supported markups for a resource, proceed as follows:
 
@@ -37,6 +38,6 @@ Markup markup = markupList.getByName("html");
 
 ```
 
-For more detail about the markup list in the first line of the example and how to obtain it refer to [Obtain a model from the portal](dgn_modelobt.md).
+For more detail about the markup list in the first line of the example and how to obtain it refer to [Obtain a model from the portal](/model_spi/dgn_modelobt.md).
 
 

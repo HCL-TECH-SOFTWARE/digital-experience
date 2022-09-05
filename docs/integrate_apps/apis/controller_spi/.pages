@@ -1,10 +1,9 @@
 title: Controller SPI
 nav:
     - index.md
-    - ctrlrapic_pckg.md
-    - Working with controllers: working_with_controllers
-    - Making modifications by using the Controller SPI: controller_spi_modification
-    - ctrlrapit_cnf_mod.md
-    - ctrlrapic_hint.md
+    - Controller SPI Packages: ctrlrapic_pckg.md
+    - Working with Controllers: working_with_controllers
+    - Modifications Using Controller SPIs: controller_spi_modification
+    - Hints and Tips: ctrlrapic_hint.md
 
 

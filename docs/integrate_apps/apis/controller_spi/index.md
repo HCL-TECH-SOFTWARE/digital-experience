@@ -8,7 +8,8 @@ The interfaces of the programming model for portal resources that are published 
 
 The Controller SPI provides controllers for portal resources. You can use these controllers to modify portal resources that are exposed by particular models of the Model SPI. Controllers offer methods to modify the topology and properties of the model and of its nodes. They expose the same interfaces as the corresponding read-only model, and they instantly reflect modifications that you apply to the controller.
 
-**Note:** While the modifications come into effect immediately for the controller, they not reflected in the persistence layer until you commit the controller and the changes that you made by it.
+!!!note
+    While the modifications come into effect immediately for the controller, they not reflected in the persistence layer until you commit the controller and the changes that you made by it.
 
 The resources that are exposed by the controller can be modified through specific interfaces which match their read-only counterparts. For an example, refer to the following class list:
 
@@ -37,7 +38,8 @@ The Controller SPI provides the following controllers:
 
     This allows you to modify the content topology and the properties of content nodes such as pages, labels, and content URLs.
 
-    **Note:** If you modify the content topology, this might also change the navigation of your portal for your users.
+    !!!note
+        If you modify the content topology, this might also change the navigation of your portal for your users.
 
 -   **Layout Model Controller**
 
@@ -48,7 +50,8 @@ The Controller SPI provides the following controllers:
     This allows you to create, update and delete portlets.
 
 
-**Note:** At this time there is no controller for the following models:
+!!!note
+    At this time there is no controller for the following models:
 
 -   `NavigationModel`. This is by implication of the structure of the content model.
 -   `NavigationSelectionModel`. This is computed from the navigational state per request.
@@ -63,7 +66,8 @@ In particular, a controller offers methods to do all of the following:
 -   Obtain dependent controllers. This is optional. For example, a `ContentModelController` offers a method to obtain a `LayoutModelController`.
 -   Persist the modifications.
 
-**Note:** Before you use the Controller SPI, be sure to familiarize yourself with the read-only models. Refer to *Model SPI overview*.
+!!!note
+    Before you use the Controller SPI, be sure to familiarize yourself with the read-only models. Refer to *Model SPI overview*.
 
 ## Scope of the Controller SPI
 
@@ -73,26 +77,10 @@ A controller instance is based on a read-only model instance. Therefore it has t
 -   If the underlying model is scoped to a request, then so is the controller.
 -   If the underlying model is scoped to a virtual portal, then so is the controller.
 
--   **[Packages of the Controller SPI](../dev/ctrlrapic_pckg.md)**  
-The portal provides the SPI Controller in several separate packages.
--   **[Working with controllers](../dev/ctrlrapit_wrk.md)**  
-When you modify a portal resource with the Controller SPI, you go through a set of steps.
--   **[Making modifications by using the Controller SPI](../dev/ctrlrapit_mdfy.md)**  
-The Controller SPI allows you to modify portal resources, the topology of your portal, and properties.
--   **[Confirming modifications](../dev/ctrlrapit_cnf_mod.md)**  
-Modifiable interfaces and Controller interfaces provide methods for confirming modifications. You can use these confirm methods to check whether modifications might be prevented by portal internal constraints.
--   **[Hints and tips for using the Controller SPI](../dev/ctrlrapic_hint.md)**  
-These are some hints and tips for using the Controller SPI.
 
-
-**Related information**  
-
-
-[Model SPI overview](../dev/dgn_modelovw.md)
-
-[Administration tools for configuring outbound HTTP connections](../dev-portlet/outbhttp_cfg_tools.md)
-
-[Obtaining the Controller SPI](../dev-portlet/outbhttp_cfg_mcspi_obtstrlrspi.md)
-
-[The Java API](../admin-system/tag_rate_api_java.md)
+???+ info "**Related information:**"  
+    - [Model SPI overview](/model_spi/index.md)
+    <!-- - [Administration tools for configuring outbound HTTP connections](../dev-portlet/outbhttp_cfg_tools.md) -->
+    <!-- - [Obtaining the Controller SPI](../dev-portlet/outbhttp_cfg_mcspi_obtstrlrspi.md) -->
+    <!-- - [The Java API](../admin-system/tag_rate_api_java.md) -->
 

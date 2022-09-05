@@ -1,4 +1,4 @@
-# Modifying portal resources and topologies
+# Modifying Portal Resources and Topologies
 
 The Controller SPI allows you to modify portal resources and the topology of your portal in different ways.
 
@@ -11,11 +11,11 @@ You can make the following modifications:
 
 Depending on the resource that you create or modify, you can perform different types of modifications. For more detailed information about each of these refer to the following topics.
 
--   **[Creating resources](../dev/ctrlrapit_crt_rsrc.md)**  
+-   **[Creating resources](/controller_spi/controller_spi_modification/modify_portal_resources/creating_resources/)**  
 You create resources by using methods of controllers. Each controller type enables the specific resources for its type of model.
--   **[Moving or Inserting Nodes](../dev/ctrlrapit_mvnsrt_nodes.md)**  
+-   **[Moving or Inserting Nodes](/controller_spi/controller_spi_modification/modify_portal_resources/moving_inserting_nodes/index.md)**  
 To move existing nodes or insert new nodes, use the `insert()` method of the controller.
--   **[Deleting Nodes](../dev/ctrlrapit_del_nodes.md)**  
+-   **[Deleting Nodes](/controller_spi/controller_spi_modification/modify_portal_resources/ctrlrapit_del_nodes.md)**  
 To delete nodes, use the `delete()` method of the controller.
 
 

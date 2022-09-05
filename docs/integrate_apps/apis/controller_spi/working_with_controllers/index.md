@@ -17,13 +17,14 @@ For example, these steps can be as follows:
     This step saves and applies the modifications to your portal.
 
 
-**Note:** You can modify multiple resources with one controller before you commit the modifications.
+!!!note
+    You can modify multiple resources with one controller before you commit the modifications.
 
 For more detailed information about each of these steps refer to the following topics.
 
--   **[Obtaining a controller for working with resources](../dev/ctrlrapit_obtn_ctrlr.md)**  
+-   **[Obtaining a controller for working with resources](ctrlrapit_obtn_ctrlr.md)**  
 To modify, create, or delete portal resources by using the Controller SPI, you first need to create a controller.
--   **[Committing and persisting your modifications](../dev/ctrlrapit_comit.md)**  
+-   **[Committing and persisting your modifications](ctrlrapit_comit.md)**  
 To persist the modifications that you applied to the controller, you commit the controller.
 
 

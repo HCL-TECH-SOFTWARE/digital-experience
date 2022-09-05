@@ -13,10 +13,9 @@ You set flags for resources either on modifiable instances of those resources or
 |`DeletableFlag`|`LayoutNode`|`LayoutModelController`|
 |`ModifiableFlag`|`LayoutNode`|`LayoutModelController`|
 
-**Notes:**
-
-1.  `ContentNode` is the super class of `ContentPage, ContentLabel, ContentURL`, and `InternalContentURL`.
-2.  `LayoutNode` is the super class of `LayoutContainer` and `LayoutControl`.
+!!!note "**Notes:**"
+    1.  `ContentNode` is the super class of `ContentPage, ContentLabel, ContentURL`, and `InternalContentURL`.
+    2.  `LayoutNode` is the super class of `LayoutContainer` and `LayoutControl`.
 
 In case of layered resources, for example derived content pages, you set flags only on the layer on which you work. To set flags, use the appropriate method. For example, to set the `ActiveFlag`, use the `setActiveFlag` method on the `ModifiableContentNode` instance. For more details about how the flags are aggregated in derivation scenarios refer to the Model SPI documentation.
 
@@ -38,8 +37,6 @@ Example 2 - Setting the `BookmarkableFlag` for a content page:
 ```
 
 
-**Related information**  
-
-
-[Model SPI overview](../dev/dgn_modelovw.md)
+???+ info "**Related information**"  
+    - [Model SPI overview](../dev/dgn_modelovw.md)
 
