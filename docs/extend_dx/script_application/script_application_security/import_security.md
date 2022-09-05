@@ -1,4 +1,4 @@
-# Imported archive security
+# Imported Archive Security
 
 There are constraints on the size and content of uploaded archives to add a layer of security when you import archives.
 

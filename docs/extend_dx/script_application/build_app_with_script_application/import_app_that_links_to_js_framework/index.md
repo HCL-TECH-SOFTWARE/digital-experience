@@ -32,7 +32,7 @@ data-scriptportlet-theme-capability="jquery"></script> [/Plugin:Comment]
 
 When you export an application, the original script reference is re-enabled so that your application runs properly as a stand-alone application in a test environment.
 
--   **[Third-party JavaScript libraries](../script-portlet/js_libraries.md)**  
+-   **[Third-party JavaScript libraries](./js_libraries.md)**  
  You can easily use third-party JavaScript libraries from a Script Application.
 
 

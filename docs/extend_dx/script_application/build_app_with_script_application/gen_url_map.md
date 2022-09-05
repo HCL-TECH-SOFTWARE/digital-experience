@@ -1,3 +1,7 @@
+---
+title: Generating a URL Map
+---
+
 # Generating a URL Map from local application paths to runtime Web Content Manager URLs
 
 You can generate a JavaScript based URL map from local application file system paths to runtime Web Content Manager Library URL paths to application artifacts, when necessary. This feature is advanced and is disabled by default.
@@ -59,5 +63,5 @@ If the runtime equivalent of `__SPNS__spHelper.getElementURL` is not found, then
 **Related information**  
 
 
-[JavaScript API for spHelper](../script-portlet/cmd_line_api.md)
+[JavaScript API for spHelper](./cmd_line_api.md)
 
