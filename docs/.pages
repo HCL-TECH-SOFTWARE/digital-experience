@@ -5,5 +5,5 @@ nav:
     - deployment
     - build_sites
     - manage_content
-    - integrate_apps
+    - extend_dx
     - guide_me

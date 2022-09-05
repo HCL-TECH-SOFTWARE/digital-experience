@@ -38,11 +38,11 @@ Support to migrate from the old to new Digital Asset Management database in the 
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and to automate processes in the development and delivery process. Updates include process definitions to automate Export or Import of Web Content Manager libraries from source server to target server location, also ability to generate differential reports for DX Server configurations.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](../../integrate_apps/development_tools/dxclient/index.md) topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../extend_dx/development_tools/dxclient/index.md) topic for more information.
 
 ## New User and Groups REST API Explorer
 
-The remote PUMA SPI gives you access to user profiles through REST services. It provides a remote interface for user and group management for the configured HCL DX user repository. Beginning with HCL DX 9.5 Container Update and CF 199, a new API explorer is available that allows developers using the Portal User Interface APIs to explore and test these APIs. See the Help Center topic [Remote REST service for PUMA](../../integrate_apps/apis/puma_spi/remote_rest_service_for_puma/uprof_rest.md) for additional information.
+The remote PUMA SPI gives you access to user profiles through REST services. It provides a remote interface for user and group management for the configured HCL DX user repository. Beginning with HCL DX 9.5 Container Update and CF 199, a new API explorer is available that allows developers using the Portal User Interface APIs to explore and test these APIs. See the Help Center topic [Remote REST service for PUMA](../../extend_dx/apis/puma_spi/remote_rest_service_for_puma/uprof_rest.md) for additional information.
 
 ## New Personalization REST APIs and Explorer
 

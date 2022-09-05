@@ -10,9 +10,9 @@ You can access the latest software requirements and updates that support HCL Dig
 
 ## Web Content Manager Multilingual Solution Library Export and Import
 
-The HCL Web Content Manager Multilingual Solution is a set of tools used to manage translated versions Web Content Manager content for localized and regionalized websites. Beginning with the HCL Digital Experience 9.5 Container Update CF195 release, a new export and import capability allows you to support translation of the content of a library by exporting it into a format supported by a translation service and importing the translated content back into the content library using the [DXClient](../../integrate_apps/development_tools/dxclient/index.md) tool.
+The HCL Web Content Manager Multilingual Solution is a set of tools used to manage translated versions Web Content Manager content for localized and regionalized websites. Beginning with the HCL Digital Experience 9.5 Container Update CF195 release, a new export and import capability allows you to support translation of the content of a library by exporting it into a format supported by a translation service and importing the translated content back into the content library using the [DXClient](../../extend_dx/development_tools/dxclient/index.md) tool.
 
-See the [How to export and import WCM library content using DXClient](../../integrate_apps/development_tools/dxclient/usage/dxclient_artifact_types/wcm_mls_export_import.md) topic for more information.
+See the [How to export and import WCM library content using DXClient](../../extend_dx/development_tools/dxclient/usage/dxclient_artifact_types/wcm_mls_export_import.md) topic for more information.
 
 ## Web Content Manager Advanced Cache Options
 
@@ -30,7 +30,7 @@ See the [Enhanced Cross Origin Resource Sharing Configuration](../../deployment/
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and automate processes in the development and delivery process. New release artifact types supporting Undeploy Themes, and Export/Import Web Content Manager Library content are provided in Container Update CF195.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](../../integrate_apps/development_tools/dxclient/index.md) topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../extend_dx/development_tools/dxclient/index.md) topic for more information.
 
 ## Remote Search Configuration for HCL Digital Experience 9.5 deployments on Kubernetes platforms
 
@@ -54,7 +54,7 @@ See the [HCL Digital Experience 9.5 Container Platform Support Matrix Help Cente
 
 Take advantage of new step-by-step guidance for HCL Digital Experience practitioners presented in new videos and webinars. See the following HCL Digital Experience Help Center topics:
 
--   [Getting Started with DXClient on Red Hat OpenShift using HCL Digital Experience CF194](../../integrate_apps/development_tools/dxclient/index.md)
+-   [Getting Started with DXClient on Red Hat OpenShift using HCL Digital Experience CF194](../../extend_dx/development_tools/dxclient/index.md)
 -   [Understanding the Core Persistent Volumes in HCL Digital Experience Container Update CF194](../../deployment/manage/container_configuration/operator-based/sample_storage_class_volume.md)
 -   [Create a WebDAV Theme copy using HCL Digital Experience 9.5](../../build_sites/themes_skins/usage/customizing_theme/copying_theme/manual_copy_theme/creating_webdav_theme_copy/themeopt_themedev_manual_webdav.md)
 -   [Create and apply A/B personalized scenarios with HCL Digital Experience](../../get_started/product_overview/personalization.md)
