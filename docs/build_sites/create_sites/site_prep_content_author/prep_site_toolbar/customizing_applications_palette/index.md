@@ -16,8 +16,9 @@ The following categories are available for immediate use:
 -   Web Content
 -   Tools
 
-**Note:** Application Palette categories will only be displayed when allowing all portlets on a page underneath **Manage Page Properties** \> **Advanced** \> **Allow All Portlets**. If you allow only a subset of whitelisted portlets, the categories will be hidden and the whitelisted portlets will be displayed as the only category.
-
+!!! note 
+    Application Palette categories will only be displayed when allowing all portlets on a page underneath **Manage Page Properties** \> **Advanced** \> **Allow All Portlets**. If you allow only a subset of whitelisted portlets, the categories will be hidden and the whitelisted portlets will be displayed as the only category.
+<!---
 -   **[Creating new applications and categories for the site toolbar](../admin-system/epc_add_portlet_app_cat.md)**  
 You can add new categories to the site toolbar to organize your applications. After you deploy portal, you can customize the Create \> Applications user interface in the site toolbar. Add categories that reflect your business needs and website organization.
 -   **[Creating categories by using external URLs](../admin-system/epc_using_external_urls.md)**  
@@ -31,5 +32,5 @@ You can easily modify or delete Applications palette categories.
 **Related information**  
 
 
-[Site toolbar and Site Manager](../site/site_site_toolbar.md)
+[Site toolbar and Site Manager](../site/site_site_toolbar.md) --->
 

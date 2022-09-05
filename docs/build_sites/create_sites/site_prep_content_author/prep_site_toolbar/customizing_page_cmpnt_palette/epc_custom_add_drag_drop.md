@@ -7,7 +7,6 @@ When you drag an item from the Content palette to the page, the item is copied a
 To change the configuration for an item, Select the item so that the item details are shown. If you are in Advanced mode, open the **Configuration** tab. Select the configuration that you want to apply.
 
 
-
 1.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface** \> **Manage Pages**.
 
 2.  Select **Content Root** \> **Hidden Pages** \> **DnD Configuration**.
@@ -43,6 +42,4 @@ To change the configuration for an item, Select the item so that the item detail
     3.  Click **Edit** for the language you want to use.
 
     4.  Enter the descriptions and click **OK**.
-
-
 

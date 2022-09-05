@@ -52,6 +52,7 @@ The page parameters can either be set through the **Manage Pages** admin portlet
 
     -   ibm.portal.toolbar.width = 100%
     -   ibm.portal.toolbar.minWidth = 360px
+
     If you are using the XML configuration interface, you can set these parameters as follows:
 
     ```
@@ -66,6 +67,7 @@ The page parameters can either be set through the **Manage Pages** admin portlet
 
     -   ibm.portal.toolbar.width = 100%
     -   ibm.portal.toolbar.minWidth = 360px
+
     If you are using the XML configuration interface, you can set these parameters as follows:
 
     ```
@@ -80,6 +82,7 @@ The page parameters can either be set through the **Manage Pages** admin portlet
 
     -   ibm.portal.toolbar.width = 100%
     -   ibm.portal.toolbar.minWidth = 360px
+
     If you are using the XML configuration interface, you can set these parameters as follows:
 
     ```
@@ -94,6 +97,7 @@ The page parameters can either be set through the **Manage Pages** admin portlet
 
     -   ibm.portal.toolbar.height = 50%
     -   ibm.portal.toolbar.minHeight = 300px
+
     If you are using the XML configuration interface, you can set these parameters as follows:
 
     ```
@@ -108,6 +112,7 @@ The page parameters can either be set through the **Manage Pages** admin portlet
 
     -   ibm.portal.toolbar.height = 50%
     -   ibm.portal.toolbar.minHeight = 300px
+
     If you are using the XML configuration interface, you can set these parameters as follows:
 
     ```
@@ -122,6 +127,7 @@ The page parameters can either be set through the **Manage Pages** admin portlet
 
     -   ibm.portal.toolbar.height = 50%
     -   ibm.portal.toolbar.minHeight = 300px
+    
     If you are using the XML configuration interface, you can set these parameters as follows:
 
     ```
@@ -129,10 +135,9 @@ The page parameters can either be set through the **Manage Pages** admin portlet
     ```
 
 
-**Note:**
+!!! note
+    If you do not set the height parameter, but only the minHeight and maxHeight parameters, the toolbar framework resizes the outer toolbar frame to match the height of the rendered content if it is greater than the specified minimum height and less than the specified maximum height.
 
-If you do not set the height parameter, but only the minHeight and maxHeight parameters, the toolbar framework resizes the outer toolbar frame to match the height of the rendered content if it is greater than the specified minimum height and less than the specified maximum height.
-
-If the values of the configuration parameters `ibm.portal.toolbar.minHeight` and `ibm.portal.toolbar.maxHeight` are equivalent, the toolbar framework enforces this height, regardless of the size of the tab content that is being loaded.
+    If the values of the configuration parameters `ibm.portal.toolbar.minHeight` and `ibm.portal.toolbar.maxHeight` are equivalent, the toolbar framework enforces this height, regardless of the size of the tab content that is being loaded.
 
 

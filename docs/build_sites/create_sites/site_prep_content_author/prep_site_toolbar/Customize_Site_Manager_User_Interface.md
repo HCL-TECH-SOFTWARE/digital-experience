@@ -4,13 +4,13 @@ The site manager user interface can be customized by adding additional functiona
 
 ## Introduction
 
-As described in [Preparing the site toolbar](../dev-theme/themeopt_themeshelf.md), you can customize the Site Manager user interface to have additional functionality. A common request has been, to add an enhanced delete function that can delete the page and all referenced content.
+As described in [Preparing the site toolbar](../../../create_sites/site_prep_content_author/prep_site_toolbar/index.md), you can customize the Site Manager user interface to have additional functionality. A common request has been, to add an enhanced delete function that can delete the page and all referenced content.
 
 ## Add components dialog functionality
 
 To add component dialog functionality, create two pages \(Example: Customize Site Manager and Customize Site Manager with WCM\) in the **Manage Pages** section Content Root\>Hidden Pages\>Toolbar Content Root\>Add.
 
-![](../images/Customize%20site%20manager_manage%20pages.png)
+![](../../../../images/Customize%20site%20manager_manage%20pages.png)
 
 Make sure that the pages are according to the meta data for the toolbar to display.
 
@@ -125,15 +125,15 @@ More information on parameters, refer [Configuring the behavior of toolbar tabs]
 
 Now you can see that a tab "Customize Site Manager" and "Customize Site Manager with WCM" are added.
 
-![](../images/Customize%20site%20manager.png "Customize Site Manager")
+![Customize Site Manager](../../../../images/Customize%20site%20manager.png)
 
-![](../images/Customize%20site%20manager%20with%20WCM.png "Customize Site Manager with WCM")
+![Customize Site Manager with WCM](../../../../images/Customize%20site%20manager%20with%20WCM.png)
 
 ## Adding functionality to the main Toolbar side dialog
 
 Create two pages in the **Manage Pages** section Content Root\>Hidden Pages\>Toolbar Content Root \(see Toolbar Right and Left\).
 
-![](../images/Customize%20site%20manager_manage%20side%20dialog.png)
+![](../../../../images/Customize%20site%20manager_manage%20side%20dialog.png)
 
 Make sure that the pages are according to the meta data for the toolbar to display.
 
@@ -241,17 +241,18 @@ A full xmlaccess export of a sample page with WCM is as follows:
 
 When you click the first functionality, the dialog on the right shows a page with a portlet \(sample of a WCM portlet\). The WCM portlet uses the shared render parameter to find the currently selected page. Now one could trigger custom logic in the page, e.g. modify settings of the page.
 
-![](../images/Customize%20site%20manager_Authoring.png)
+![](../../../../images/Customize%20site%20manager_Authoring.png)
 
 The 2nd button uses the same logic to show a page horizontally.
 
-![](../images/Customize%20site%20manager_content%20manager.png)
+![](../../../../images/Customize%20site%20manager_content%20manager.png)
 
 More information on parameters, refer [Configuring the behavior of toolbar tabs](epc_adding_custom_source.sm.md).
 
 ## **Adding functionality to the page dialog**
 
-**Note:** This functionality is added with CF203.
+!!! note
+    This functionality is added with CF203.
 
 To add your own actions to the menu follow the steps:
 
@@ -264,15 +265,15 @@ For example:
 
 1.  Create two pages \(ToolbarWCM and Hello World\) in the **Manage Pages** section Content Root\>Hidden Pages\>Toolbar Content Root\>ToolbarButtons.
 
-    ![](../images/Customize%20site%20manager_manage%20pages_203.png)
+    ![](../../../../images/Customize%20site%20manager_manage%20pages_203.png)
 
 2.  The new functionality **ToolbarWCM** and **Hello World** are added to the custom menu items of the page dialog.
 
-![](../images/Customize%20site%20manager_Authoring_203.png "ToolbarWCM")
+![ToolbarWCM](../../../../images/Customize%20site%20manager_Authoring_203.png)
 
-    When you click on any new button, the respective page is displayed.
+When you click on any new button, the respective page is displayed.
 
-    ![](../images/Customize%20site%20manager_Authoring_wcm_203.png)
+![](../../../../images/Customize%20site%20manager_Authoring_wcm_203.png)
 
 
 

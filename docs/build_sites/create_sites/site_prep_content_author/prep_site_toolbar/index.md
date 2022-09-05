@@ -22,7 +22,8 @@ To extend the site toolbar with custom toolbar tabs, you can perform the followi
 
 You can influence the order of the toolbar tabs by setting ordinals on the toolbar content nodes. Use the theme that is set on the toolbar content root. To enable intercommunication with the main page, you must set the page parameter `ibm.portal.toolbar.isToolbarPage = true` for your custom toolbar content pages and content labels.
 
-**Note:** As this parameter is already set on the Toolbar Content Root parent node, the new page or label inherits it. Therefore, you cannot set it as a new parameter. You need to edit the existing parameter and overwrite the inherited value of `true` explicitly with the value `true`. Then, you can view the new page or label on the toolbar side navigation.
+!!! note
+    As this parameter is already set on the Toolbar Content Root parent node, the new page or label inherits it. Therefore, you cannot set it as a new parameter. You need to edit the existing parameter and overwrite the inherited value of `true` explicitly with the value `true`. Then, you can view the new page or label on the toolbar side navigation.
 
 To use the XML configuration interface for creating and managing your toolbar tabs, set this parameter as follows:
 
@@ -43,6 +44,7 @@ All of the drag-and-drop actions are based on the native HTML 5 drag-and-drop ca
 
 The Search controls that are displayed on some toolbar tabs, use the auto-completion capability of HTML 5. Internally it is based on the HTML 5 `<datalist>` tag. As a consequence, you might see different search result suggestions, depending on the browser that you use. Internet Explorer version 9 does not support the HTML 5 auto completion feature.
 
+<!---
 -   **[Configuring the behavior of toolbar tabs](../admin-system/epc_adding_custom_source.sm.md)**  
 You can use the following page parameters to configure the main properties of your toolbar tabs.
 -   **[Configuring display options in the primary and secondary toolbar frames](../dev-theme/themeopt_toolbar_frames.md)**  
@@ -68,11 +70,9 @@ You can control the visibility of the site toolbar and single toolbar tabs per v
 -   **[Removing the site toolbar on a production server](../wcm/wcm_mngpages_disabletool.md)**  
 The site toolbar provides access to editing features for managed pages, including adding and editing pages and web content. Although essential for an authoring server, it is recommended that you disable the site toolbar on a delivery server. You can disable the toolbar for an entire portal or for specific virtual portals.
 -   **[Disabling the language switcher](../wcm/wcm_mngpages_disable_lang_switch.md)**  
-The language switcher allows you to switch from any of the supported languages. This feature is available only for authenticated portal users.
+The language switcher allows you to switch from any of the supported languages. This feature is available only for authenticated portal users. --->
 
 
-**Related information**  
-
-
-[Enabler ContextMenu API](http://public.dhe.ibm.com/software/dw/lotus/mashups/javadoc30/API/api/com/ibm/mashups/builder/model/ContextMenu.html)
+???+ info "Related information:"
+    - [Enabler ContextMenu API](http://public.dhe.ibm.com/software/dw/lotus/mashups/javadoc30/API/api/com/ibm/mashups/builder/model/ContextMenu.html)
 

@@ -51,5 +51,3 @@ Specify page parameters by using either the Manage Pages portlet or by using the
     <parameter name="ibm.portal.toolbar.defaultTabURI.secondary" type="string"
     update="set">nm:oid:my\_page\_unique\_name</parameter>
     ```
-
-

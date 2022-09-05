@@ -21,5 +21,3 @@ You can specify custom icons for content items that are displayed in the web con
 
 8.  The preview image is used instead of the standard content item icon within the web content authoring interface and within the Site Manager.
 
-
-
