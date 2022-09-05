@@ -28,5 +28,3 @@ The site toolbar structure is based on labels and pages. Create a label to add a
 
 
 If your content authors do not see the portlet that you added, the site toolbar might be cached. The feed that displays all portlets is cached after the content author views it. If you deploy a portlet and the site toolbar is already cached, the newly deployed portlet is not visible until the cache expires, which is 1 hour. To see the portlet sooner, look up the portlet in the **Manage Portlets** administration portlet and then go back to the site toolbar.
-
-

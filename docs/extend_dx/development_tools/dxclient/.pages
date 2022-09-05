@@ -1,7 +1,6 @@
 title: Deploy DX components using HCL DXClient and DXConnect
 nav:
     - index.md
-    - dxclient.md
     - DXClient Artifact Types: dxclient_artifact_types
     - troubleshooting_dxclient.md
     - dxconnect.md

@@ -16,6 +16,7 @@ The site toolbar function is not typically needed on a delivery server, and disa
 
         1.  Click **Custom properties**.
         2.  Edit the global.toolbar.enabled property, and set the value to false.
+
         This setting disables the site toolbar for all virtual portals.
 
     -   To affect a specific virtual portal, complete the following steps:
@@ -37,10 +38,7 @@ The site toolbar function is not typically needed on a delivery server, and disa
 
 
 
-**Related information**  
-
-
-[Virtual Portal Configuration Service](../admin-system/srvcfg_virtual_portal.md)
-
-[Controlling the visibility of the site toolbar and toolbar tabs](../admin-system/cntrl_vsblty_ste_tlbr.md)
+???+ info "Related information:"
+    - [Virtual Portal Configuration Service](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/srvcfg_virtual_portal.md)
+    - [Controlling the visibility of the site toolbar and toolbar tabs](../prep_site_toolbar/controlling_visibility_site_toolbar/index.md)
 

@@ -7,8 +7,11 @@ You can limit the visibility of the toolbar, Site Manager, and action bar to adm
 2.  Select **Unique name contains** and search for one of the following unique names:
 
     -   To limit the visibility of the toolbar, Site Manager, and action bar, search for ibm.portal.Toolbar.
+
     -   To limit the visibility of the toolbar and Site Manager without altering the visibility of the action bar, search for ibm.portal.Toolbar.ContentRoot.
+    
     -   To limit the visibility of a specific toolbar tab, search for the unique name of the specific toolbar page.
+
 3.  Click the **Set Page Permission** icon for the page that you searched for.
 
 4.  From the Resource Permissions pane, click the **Edit Role** icon for the User role.
@@ -26,6 +29,4 @@ You can limit the visibility of the toolbar, Site Manager, and action bar to adm
 10. Click **OK**.
 
 11. Click **Done**.
-
-
 

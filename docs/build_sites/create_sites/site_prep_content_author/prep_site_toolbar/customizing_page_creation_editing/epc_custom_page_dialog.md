@@ -29,6 +29,3 @@ You specify the sort key by setting the page parameter ibm.portal.pageTemplate.s
     ```
     <parameter name="ibm.portal.pageTemplate.sortKey" type="string" update="set">A</parameter>
     ```
-
-
-

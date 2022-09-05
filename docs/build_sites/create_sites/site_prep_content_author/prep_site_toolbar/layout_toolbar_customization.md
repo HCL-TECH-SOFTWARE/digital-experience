@@ -54,5 +54,3 @@ If the metadata looks like this:
 ```
 
 Users in the "See1ColumnGroup" group will see the "1Column" layout and users in the "See2ColumnRightGroup" group will see the "2ColumnRight" layout. All other users won’t see either layout. Any layout or group that doesn’t have a matching layout or group will be ignored. Any number of layout/group pairs can be specified.
-
-

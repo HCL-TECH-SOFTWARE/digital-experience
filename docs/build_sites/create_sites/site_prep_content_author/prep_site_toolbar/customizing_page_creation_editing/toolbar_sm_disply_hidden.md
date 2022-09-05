@@ -16,6 +16,7 @@ For other pages in your site with com.ibm.portal.Hidden set to true, you can als
 
     -   To give users the option of showing and hiding hidden pages in Site Manager, you do not need to do anything. The com.ibm.portal.Hidden parameter is already set to true. This setting indicates that you have a hidden page that does not display in the site navigation. You can display the hidden page in Site Manager when you click the **Show hidden pages in the tree view** icon or hide the hidden page in site manager when you click the **Hide hidden pages in the tree view** icon.
     -   If you want the hidden page to always display in Site Manager, click **Add** and enter com.ibm.portal.Details in the field as a parameter with a value of true. Your hidden page will always display in Site Manager even when a user clicks the **Hide hidden pages in the tree view**.
+    
 5.  Click **Save**.
 
 

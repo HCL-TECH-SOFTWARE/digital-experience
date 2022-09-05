@@ -13,11 +13,7 @@ Introduced in Container Update CF201, you can disable the language switcher by s
     ```
     <parameter name=“disable.languageSwitcher“ type=“string“ update=“set“>true</parameter>
     ```
-
-
-
-**Related information**  
-
-
-[Using the language switcher](../admin-system/lang_switch.md)
+<!---
+???+ info "Related information:"
+[Using the language switcher](../admin-system/lang_switch.md) --->
 
