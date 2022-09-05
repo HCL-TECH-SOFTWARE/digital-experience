@@ -1,4 +1,4 @@
-# Configuring images for Document Conversion Services
+# Configure Images for Document Conversion Services
 
 Configure the Document Conversion Services to view images in an operating system other than Windows.
 
@@ -42,7 +42,8 @@ The following steps do not apply to IBM® i. For information about viewing image
 
     Which gives you the message `access control disabled, clients can connect from any host.`
 
-    **Note:** Changing directory is required because by entering the commands `xclock&` or `xhost+`, the error message `command not found` is displayed.
+    !!!note
+        Changing directory is required because by entering the commands `xclock&` or `xhost+`, the error message `command not found` is displayed.
 
 10. The Xclock menu comes up on the desktop of the workstation to which you are connected through X-Browser.
 
@@ -51,8 +52,6 @@ The following steps do not apply to IBM® i. For information about viewing image
 12. Restart the server.
 
 13. Open a web browser and try viewing the file that contains the images.
-
-
 
 ## Starting the X server by using Exceed or X virtual frame buffer \(Xvfb\)
 
