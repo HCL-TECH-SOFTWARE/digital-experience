@@ -8,9 +8,10 @@ When you use the Manage Pages and Page Properties portlets to create your static
 
 To update a static page, you make the required changes in the HTML file, then you replace the portal page with the updated page by using the Manage Pages and Properties portlets or other portal administration tools. You can use the portal Page Customizer to update static page layout if the static page contains portlet containers defined by the portlet container microformat.
 
+<!---
 -   **[Exporting and importing static pages](../admin-system/spa_xml.md)**  
 You can import a static content page from an installed layout template by using the XML configuration interface.
 -   **[Scripting for static pages](../admin-system/spa_psi.md)**  
-You can work with static portal pages by using the Portal Scripting Interface, which enables you to use administration function through the Jacl scripting language. Get familiar with the scripting commands for working with static pages.
+You can work with static portal pages by using the Portal Scripting Interface, which enables you to use administration function through the Jacl scripting language. Get familiar with the scripting commands for working with static pages. -->
 
 

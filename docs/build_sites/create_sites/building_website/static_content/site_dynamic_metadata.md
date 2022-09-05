@@ -3,9 +3,6 @@ id: site_dynamic_metadata
 title: Dynamic page metadata
 ---
 
-
-
-
 HTML defines some elements that refer to information that is managed as page metadata on portal pages. You can use the dynamic page metadata rewriting feature to place this information into the static HTML code automatically.
 
 The dynamic page metadata rewriting feature affects the HTML tags `<base>`, `<title>`, and `<meta>`. Enable the rewriting for each of these tags by modifying the following page metadata:

@@ -112,5 +112,3 @@ When the HTML source file is a fragment of HTML markup, and does not include the
 ```
 
 The values given for the name attributes must be unique in the scope of the page.
-
-

@@ -47,4 +47,3 @@ HTML defines some elements that refer to information that is managed as page met
 You can create a new portal page by starting with a static HTML file or an HTML fragment. If you revise the HTML, you can refresh the page to render the changes in the portal. To include, update, and administer your static content pages, you can use any of the portal administration tools, Manage Pages portlet, XML configuration interface, or the Portal Scripting Interface.
 -   **[Using WebDAV to manage pages and static content](../admin-system/webdav_static.md)**  
 WebDAV for HCL Digital Experience provides a simple and easy way to administer portal resources. Both administrators and users can use it. --->
-
