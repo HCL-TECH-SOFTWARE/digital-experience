@@ -3,12 +3,12 @@
 Various installation and configuration tasks require you to start and stop IBM WebSphere Application Server and the HCL Digital Experience application servers, deployment managers, and node agents.
 
 !!!note
-    Run the following command if you have a clustered environment or you renamed the HCL Portal server as `HCL Portal and HCL Web Content Manager`:<br> -   AIX, HP-UX, Linux, and Solaris: `./startServer.sh HCL Portal and HCL Web Content Manager`<br>-   Windows: `startServer.bat HCL Portal and HCL Web Content Manager`<br>-   IBM i: `startServer HCL Portal and HCL Web Content Manager`<br>-   z/OS: `./startServer.sh HCL Portal and HCL Web Content Manager`
+    Run the following command if you have a clustered environment or you renamed the HCL Portal server as `HCL Portal and HCL Web Content Manager`: <br> -   AIX, HP-UX, Linux, and Solaris: `./startServer.sh HCL Portal and HCL Web Content Manager` <br> -   Windows: `startServer.bat HCL Portal and HCL Web Content Manager` <br> -   IBM i: `startServer HCL Portal and HCL Web Content Manager` <br> -   z/OS: `./startServer.sh HCL Portal and HCL Web Content Manager`
 
 1.  Open a command prompt and change to the following directory:
     
     !!!note
-        In a clustered environment, use the `dmgr_profile_root` directory and not the `wp_profile_root` directory.
+        In a clustered environment, use the dmgr_profile_root directory and not the wp_profile_root directory.
     
     -   Windows™: wp_profile_root\bin
     -   AIX® HP-UX Linux™ Solaris: wp_profile_root/bin

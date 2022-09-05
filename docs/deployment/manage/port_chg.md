@@ -4,18 +4,14 @@ You can change the HCL Digital Experience ports values after installation if the
 
 HCL Digital Experience is installed.
 
-**Note:** The starting port parameter is required for a successful completion of the `modify-ports-by-startport` task. When you specify a start port, this port becomes the base for assigning port values. The code increments this value as each port is assigned, which means that the HCL Portal ports are assigned incrementally starting with the port defined with the `modify-ports-by-startport` task.
+!!!note
+    The starting port parameter is required for a successful completion of the `modify-ports-by-startport` task. When you specify a start port, this port becomes the base for assigning port values. The code increments this value as each port is assigned, which means that the HCL Portal ports are assigned incrementally starting with the port defined with the `modify-ports-by-startport` task.
 
 1.  Run the following task from the wp_profile_root/ConfigEngine directory to generate the `HCL Portal and HCL Web Content Manager_PortMatrix.txt` file:
+
     !!!note
+        The port file is in the wp_profile_root/ConfigEngine/log directory. It lists the HCL Digital Experience (HCL Portal and HCL Web Content Manager) ports for your installation. <br>-   AIX, HP-UX, Linux, and Solaris: `./ConfigEngine.sh list-server-ports-by-name -DServerName=HCL Portal and HCL Web Content Manager -DWasPassword=password` <br> -   Windows™: `ConfigEngine.bat list-server-ports-by-name -DServerName=HCL Portal and HCL Web Content Manager -DWasPassword=password` <br> -   IBM® i: `ConfigEngine.sh list-server-ports-by-name -DServerName=HCL Portal and HCL Web Content Manager -DWasPassword=password` <br> -   z/OS®: `./ConfigEngine.sh list-server-ports-by-name -DServerName=HCL Portal and HCL Web Content Manager -DWasPassword=password`
 
-
-    **Note:** The port file is in the wp_profile_root/ConfigEngine/log directory. It lists the HCL Digital Experience (HCL Portal and HCL Web Content Manager) ports for your installation.
-
-    -   AIX, HP-UX, Linux, and Solaris: `./ConfigEngine.sh list-server-ports-by-name -DServerName=HCL Portal and HCL Web Content Manager -DWasPassword=password`
-    -   Windows™: `ConfigEngine.bat list-server-ports-by-name -DServerName=HCL Portal and HCL Web Content Manager -DWasPassword=password`
-    -   IBM® i: `ConfigEngine.sh list-server-ports-by-name -DServerName=HCL Portal and HCL Web Content Manager -DWasPassword=password`
-    -   z/OS®: `./ConfigEngine.sh list-server-ports-by-name -DServerName=HCL Portal and HCL Web Content Manager -DWasPassword=password`
 2.  Stop the HCL Portal server.
 
 3.  Run the following command to change the starting port number:
@@ -24,6 +20,7 @@ HCL Digital Experience is installed.
     -   Windows: `ConfigEngine.bat modify-ports-by-startport -DWasPassword=password -DModifyPortsServer=HCL Portal and HCL Web Content Manager -DStartPort=starting port number`
     -   IBM i: `ConfigEngine.sh modify-ports-by-startport -DWasPassword=password -DModifyPortsServer=HCL Portal and HCL Web Content Manager -DStartPort=starting port number`
     -   z/OS: `./ConfigEngine.sh modify-ports-by-startport -DWasPassword=password -DModifyPortsServer=HCL Portal and HCL Web Content Manager -DStartPort=starting port number`
+
 4.  Run the following command to change ports by using the port file:
     !!!note
         Sample port files are available on the Setup disc. The following information is an example of a port file although the port values are different based on your environment:
@@ -55,10 +52,6 @@ HCL Digital Experience is installed.
 
 5.  Restart the HCL Portal server.
 
-
-
 **Related information**  
-
-
-[Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md)
+[Starting and stopping servers, deployment managers, and node agents](../manage/stopstart.md)
 
