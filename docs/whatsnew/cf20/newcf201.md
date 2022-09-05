@@ -31,13 +31,13 @@ See the [Using DAM Extensibility](../../manage_content/digital_assets/configura
 
 New features and updates available for the Script Application include a new configuration task for use to configure Web Content Manager properties used to run Single Page Applications \(SPAs\) that use React or Angular. Improvements are added to support uploads of minified content for use in production SPAs. An out-of-the-box React profile, “Deferred with React,” is added for use with the [Digital Experience 8.5 Theme](../../build_sites/themes_skins/usage/portal85_modularized_theme/themeopt_defaultparts.md).
 
-See the Script Application Improvements topic for more information: [HCL Digital Experience 9.5](../../integrate_apps/development_tools/script_application/usage/build_app_with_script_application/script_app_improvements.md).
+See the Script Application Improvements topic for more information: [HCL Digital Experience 9.5](../../extend_dx/development_tools/script_application/usage/build_app_with_script_application/script_app_improvements.md).
 
 ## Enhancements to DXClient
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and to automate processes in the development and delivery process. Updates include ability to view and manipulate custom Resource Environment Provider \(REP\) settings, with examples.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](../../integrate_apps/development_tools/dxclient/index.md) topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../extend_dx/development_tools/dxclient/index.md) topic for more information.
 
 ## New Personalization REST APIs
 

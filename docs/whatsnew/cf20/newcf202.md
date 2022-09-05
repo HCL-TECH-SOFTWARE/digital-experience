@@ -24,7 +24,7 @@ See the following Help Center topics for more information:
 
 New Digital Asset Management \(DAM\) capability enables developers and release managers to use the DXClient capability to Export and Import DAM assets from source to a File system and Import from File system to target DX 9.5 deployment. Enhancements are also available for content authors to fix the duplicate DAM asset names in a particular collection, and there are new DAM APIs that allow you to access the assets by versions, name, and as reflected in the friendly URLs.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](../../integrate_apps/development_tools/dxclient/index.md) and [Digital Asset Management Help Center](../../manage_content/digital_assets/index.md) topics for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../extend_dx/development_tools/dxclient/index.md) and [Digital Asset Management Help Center](../../manage_content/digital_assets/index.md) topics for more information.
 
 ## Design Studio \(Beta\)
 
@@ -45,19 +45,19 @@ See the *Digital Experience Cloud Native 9.5 details* in the [Digital Experience
 
 Developers can accelerate development tasks using a set of Explorers provided for REST APIs available for use with HCL Digital Experience deployments to on premises platforms, and HCL Digital Experience 9.5 deployments to supported Kubernetes Container platforms. Developers can also initiate and test transactions or other capabilities using the DX REST API explorers.
 
-See the [Digital Experience REST API Explorers](../../integrate_apps/apis/hcl_experience_api/usage/api_explorers.md) Help Center topic for more information.
+See the [Digital Experience REST API Explorers](../../extend_dx/apis/hcl_experience_api/usage/api_explorers.md) Help Center topic for more information.
 
 ## Digital Experience Remote Model REST API Explorer
 
 The Digital Experience Remote Model REST API Explorer can be used by developers creating solutions for HCL DX on premises and HCL DX 9.5 container deployments to explore and test the Remote Model APIs.
 
-See the [Digital Experience Remote Model REST API Explorer](../../integrate_apps/apis/model_spi/remote_model_rest_api.md) Help Center topic for more information.
+See the [Digital Experience Remote Model REST API Explorer](../../extend_dx/apis/model_spi/remote_model_rest_api.md) Help Center topic for more information.
 
 ## Enhancements to DXClient
 
 The HCL Digital Experience DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and to automate processes in the development and delivery process. Updates include ability to Export and Import DAM assets from source to a File system and Import from File system to target DX 9.5 deployment, and DXConnect parameter updates.
 
-See the [Deploy DX components using HCL DXClient and DXConnect](../../integrate_apps/development_tools/dxclient/index.md) Help Center topic for more information.
+See the [Deploy DX components using HCL DXClient and DXConnect](../../extend_dx/development_tools/dxclient/index.md) Help Center topic for more information.
 
 ## Personalization REST APIs
 

@@ -36,13 +36,13 @@ See the [Docker image deployment using Docker Compose](../../deployment/install/
 
 The [HCL Web Content Manager Multilingual Solution](../../manage_content/wcm/mls/index.md) is a set of tools used to manage translated versions Web Content Manager content for localized and regionalized websites. Beginning with the HCL Digital Experience 9.5 Container Update CF196 release, support is added to import and export multiple libraries to a format supported by a translation service, support a maximum field length, export changed contents from a library, and export to projects. A new option to switch the language in an HCL DX 9.5 mobile view is also available.
 
-See the [How to export and import WCM library content using DXClient](../../integrate_apps/development_tools/dxclient/usage/dxclient_artifact_types/wcm_mls_export_import.md) and [The Woodburn Studio demo site](../../build_sites/woodburn_studio/index.md) topics for more information.
+See the [How to export and import WCM library content using DXClient](../../extend_dx/development_tools/dxclient/usage/dxclient_artifact_types/wcm_mls_export_import.md) and [The Woodburn Studio demo site](../../build_sites/woodburn_studio/index.md) topics for more information.
 
 ## New HCL Digital Experience 9.5 Release Artifacts supporting CICD release processes
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and automate processes in the development and delivery process. Updates include a new DXClient Docker image, and new release artifact types supporting shared libraries, obtain failed syndication reports are provided in Container Update CF196.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](../../integrate_apps/development_tools/dxclient/index.md) topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../extend_dx/development_tools/dxclient/index.md) topic for more information.
 
 ## HCL Digital Experience 9.5 Container Platform Support Matrix
 
