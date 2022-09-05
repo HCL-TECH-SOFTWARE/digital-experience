@@ -1,4 +1,4 @@
-# Configuring a remote Document Conversion Service
+# Configuring a Remote Document Conversion Service
 
 To balance processing power, you can run document conversion services on a remote IBM WebSphere Application Server that supports document conversion services. Enabling the delegation of document conversion services to a remote server requires steps on both HCL Digital Experience and the remote server.
 
@@ -6,7 +6,8 @@ To balance processing power, you can run document conversion services on a remot
 -   Update the content-types.properties file to ensure that document conversions are configured for different file types. For instructions, read *Enabling Document Conversion Services*.
 -   Copy the RemoteDCS.zip file to your file system. Locate the RemoteDCS.zip file in your HCL Portal installation directory under `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)`/lwo/prereq.odc/RemoteSearchInstaller.
 
-    **Note:** Updated versions of RemoteDCS.zip might be available online. Check the *Recommended fixes and updates for WebSphere® Portal and Web Content Management* site.
+    !!!note
+        Updated versions of RemoteDCS.zip might be available online. Check the *Recommended fixes and updates for WebSphere® Portal and Web Content Management* site.
 
 
 Local document conversion is supported on z/OS®. You do not have to run Document Conversion Services remotely for z/OS. If required, install the following package on the remote server to improve graphics performance with your document conversions: X11R6.
@@ -15,7 +16,8 @@ Local document conversion is supported on z/OS®. You do not have to run Documen
 
 1.  Install WebSphere Application Server on the remote system.
 
-    **Restriction:** Stellent version 8.01 must support the remote system.
+    !!! restriction "**Restriction:**" 
+        Stellent version 8.01 must support the remote system.
 
 2.  Copy RemoteDCS.zip to the remote server and extract it in any directory with an appropriate archiving tool.
 
@@ -33,7 +35,8 @@ Local document conversion is supported on z/OS®. You do not have to run Documen
 
     5.  Leave all other values as default.
 
-        **Restriction:** The application name must be `dcs_war`. Do not change the default name.
+        !!!restriction "**Restriction:**"
+            The application name must be `dcs_war`. Do not change the default name.
 
     6.  Map the application to the appropriate servers and specify the installation options as required.
 
@@ -64,11 +67,11 @@ Local document conversion is supported on z/OS®. You do not have to run Documen
         -   Windows™: setupdcs.bat
     4.  When prompted, specify the WebSphere Application Server installation directory.
 
-        For example, [AppServer\_root](../reference/wpsdirstr.md#was_root).
+        For example, [AppServer\_root](../../guide_me/wpsdirstr.md#appserverroot).
 
     5.  When prompted for the profile, specify the directory where dcs.war is installed.
 
-        For example, [AppServer\_root](../reference/wpsdirstr.md#was_root)/profiles/profile\_name/installedApps/node\_name/dcs\_war.ear
+        For example, [AppServer\_root](../../guide_me/wpsdirstr.md#appserverroot)/profiles/profile\_name/installedApps/node\_name/dcs\_war.ear
 
     The configuration script copies all the files to the oiexport directory where you installed dcs.war; for example, `[AppServer\_root](../reference/wpsdirstr.md#was_root)`/profiles/profile\_name/installedApps/node\_name/dcs\_war.ear/dcs.war/WEB-INF/lib/oiexport
 
@@ -90,19 +93,19 @@ Local document conversion is supported on z/OS®. You do not have to run Documen
 
         -   **LD\_LIBRARY\_PATH**
 
-            [AppServer\_root](../reference/wpsdirstr.md#was_root)/profiles/profile\_name/installedApps/node\_name/dcs\_war.ear/dcs.war/WEB-INF/lib/oiexport
+            [AppServer\_root](../../guide_me/wpsdirstr.md#appserverroot)/profiles/profile\_name/installedApps/node\_name/dcs\_war.ear/dcs.war/WEB-INF/lib/oiexport
 
         -   **LIBPATH**
 
-            [AppServer\_root](../reference/wpsdirstr.md#was_root)/profiles/profile\_name/installedApps/node\_name/dcs\_war.ear/dcs.war/WEB-INF/lib/oiexport
+            [AppServer\_root](../../guide_me/wpsdirstr.md#appserverroot)/profiles/profile\_name/installedApps/node\_name/dcs\_war.ear/dcs.war/WEB-INF/lib/oiexport
 
         -   **PATH**
 
-            [AppServer\_root](../reference/wpsdirstr.md#was_root)/profiles/profile\_name/installedApps/node\_name/dcs\_war.ear/dcs.war/WEB-INF/lib/oiexport
+            [AppServer\_root](../../guide_me/wpsdirstr.md#appserverroot)/profiles/profile\_name/installedApps/node\_name/dcs\_war.ear/dcs.war/WEB-INF/lib/oiexport
 
         -   **SHLIB\_PATH**
 
-            [AppServer\_root](../reference/wpsdirstr.md#was_root)/profiles/profile\_name/installedApps/node\_name/dcs\_war.ear/dcs.war/WEB-INF/lib/oiexport
+            [AppServer\_root](../../guide_me/wpsdirstr.md#appserverroot)/profiles/profile\_name/installedApps/node\_name/dcs\_war.ear/dcs.war/WEB-INF/lib/oiexport
 
     7.  Save your changes.
 
@@ -112,24 +115,26 @@ Local document conversion is supported on z/OS®. You do not have to run Documen
 
 8.  Complete the following steps:
 
-    1.  Open wkplc.properties with any text editor from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+    1.  Open wkplc.properties with any text editor from the [wp\_profile\_root](../../guide_me/wpsdirstr.md#wpprofileroot)/ConfigEngine/properties directory.
 
     2.  Add the following property and value to wkplc.properties: DcsRemoteHost=URL of the remote host.
 
         Where URL of the remote host is the URL of the remote server to which you plan to delegate document conversion services. For example, DcsRemoteHost=http://server\_name:port\_number/dcs/dcs. The server\_name is the fully qualified host name of the remote DCS server. The port\_number is the port number of the default host where DCS is run. For example, the URL might be DcsRemoteHost=http://example.mycompany.com:9080/dcs/dcs.
 
-        **Important:** This property does not exist in the wkplc.properties file by default. You must add this property and specify a value before you proceed to the next step.
+        !!!important
+            This property does not exist in the wkplc.properties file by default. You must add this property and specify a value before you proceed to the next step.
 
     3.  Run the appropriate task to delegate some or all of the document conversion functions to the remote server.
 
         1.  Open a command prompt.
         2.  Change to the following directory:
-            -   AIX HP-UX Linux Solaris: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine
-            -   IBM i: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine
-            -   Windows: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine
+            -   AIX HP-UX Linux Solaris: [wp\_profile\_root](../../guide_me/wpsdirstr.md#wpprofileroot)/ConfigEngine
+            -   IBM i: [wp\_profile\_root](../../guide_me/wpsdirstr.md#wpprofileroot)/ConfigEngine
+            -   Windows: [wp\_profile\_root](../../guide_me/wpsdirstr.md#wpprofileroot)\\ConfigEngine
         3.  Run the following task:
 
-            **Note:** Run the following command on all nodes in a cluster, if applicable.
+            !!!note
+                Run the following command on all nodes in a cluster, if applicable.
 
             -   AIX HP-UX Linux Solaris: ./ConfigEngine.sh task\_name
             -   IBM i: ConfigEngine.sh task\_name

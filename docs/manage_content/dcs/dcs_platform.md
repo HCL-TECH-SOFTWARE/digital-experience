@@ -1,4 +1,4 @@
-# Supported operating systems for document conversion services
+# Supported Operating Systems for DCS
 
 Some operating systems support running the DCS locally while others do not. The following table lists the operating systems and versions that support running the document conversion services. On operating systems that do not support running the DCS locally, document conversion must be done on a remote IBM WebSphere Application Server that supports document conversion services.
 

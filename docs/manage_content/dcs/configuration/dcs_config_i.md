@@ -1,4 +1,4 @@
-# Configuring Document Conversion Services for IBM i
+# Configure Document Conversion Services for IBM i
 
 Configure the Document Conversion Services to perform document conversions on IBM i systems. You need to complete the following steps whenever you start the Portal server from a new terminal window.
 
