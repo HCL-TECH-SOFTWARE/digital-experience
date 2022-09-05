@@ -14,10 +14,7 @@ These custom unique names are easier to handle than the object IDs assigned by t
 -   When portlet developers link from their portlets to other portal resources, for example to pages or portlets
 -   When the security of a portal is managed by an external access control system.
 
-???+ Info:**Related information**  
-
-
-[Searching](../manage_custom_unique_names/h_search_admin_portlets.md)
-
-[Friendly URL for web content example](../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/customizing_content/friendlyurl_wcmviewer/index.md)
+???+ info "Related information:"
+    - [Searching](../manage_custom_unique_names/h_search_admin_portlets.md)
+    - [Friendly URL for web content example](../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/customizing_content/friendlyurl_wcmviewer/index.md)
 

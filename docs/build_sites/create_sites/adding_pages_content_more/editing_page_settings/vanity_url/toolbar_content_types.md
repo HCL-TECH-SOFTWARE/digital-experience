@@ -3,7 +3,6 @@ id: toolbar_content_types
 title: Content types
 ---
 
-
 When you create a vanity URL for a page, you can choose which web content site visitors see when they access the page by using the vanity URL.
 
 -   **Use default content**

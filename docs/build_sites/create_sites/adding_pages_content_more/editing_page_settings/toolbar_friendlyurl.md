@@ -22,4 +22,3 @@ http://www.host_name/wps/portal/products/appliances
 When the page renders, the URL resolves to `http://www.host_name/wps/portal/products/appliances/[!ut/p/encoded\_portal\_suffix]`
 
 Portal appends an encoded suffix to that friendly URL. The suffix represents the current state of the page and its components.
-
