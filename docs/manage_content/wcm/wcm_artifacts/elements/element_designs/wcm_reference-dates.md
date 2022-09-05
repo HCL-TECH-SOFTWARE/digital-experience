@@ -1,10 +1,7 @@
 ---
 id: wcm_reference-dates
-title: Setting parameters to format dates
+title: Set Parameters to Format Dates
 ---
-
-
-
 
 These parameters are used to set the format of dates.
 

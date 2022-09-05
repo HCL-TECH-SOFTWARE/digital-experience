@@ -1,4 +1,4 @@
-## Limitations
+# Limitations
 
 The following limitations exist in HCL Content Composer:
 

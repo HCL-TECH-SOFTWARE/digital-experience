@@ -1,9 +1,7 @@
 ---
 id: wcm_reference-numbers
-title: Note on formatting numbers
+title: Use Formatting Numbers
 ---
-
-
 
 
 The Java Number Format Pattern Syntax is used to set the format of numbers.

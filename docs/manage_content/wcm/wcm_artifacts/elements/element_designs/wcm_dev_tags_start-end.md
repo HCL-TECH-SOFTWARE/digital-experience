@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_tags_start-end
-title: How to use start and end attributes
+title: Start and End Attributes
 ---
 
 
