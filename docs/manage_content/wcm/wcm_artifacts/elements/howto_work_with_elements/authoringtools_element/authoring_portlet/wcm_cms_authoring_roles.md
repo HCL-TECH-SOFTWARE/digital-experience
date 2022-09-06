@@ -1,4 +1,4 @@
-# Authoring system access strategies
+# Authoring System Access Strategies
 
 The roles that you assign each library on your authoring system determines what views and features in an authoring portlet are accessible to your users.
 

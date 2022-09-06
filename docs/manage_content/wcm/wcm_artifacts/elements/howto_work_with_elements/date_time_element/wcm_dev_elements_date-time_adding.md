@@ -3,7 +3,7 @@ id: wcm_dev_elements_date-time_adding
 title: Adding a date and time element to an item
 ---
 
-
+# Adding a Date and Time Elements to an Item
 
 
 You add a date and time element to a site area or content item when you want the date and time element to be used for a specific site area or content item.
@@ -26,11 +26,12 @@ You add a date and time element to a site area or content item when you want the
 
 8.  Go to the date and time element you created:
 
-    1.  Click ![date](../images/date.jpg) to select a date.
+    1.  Click **Date** to select a date.
 
-    2.  Click ![time](../images/time.jpg) to enter a time. Only the integers "0123456789" can be used when times are entered.
+    2.  Click **Time** to enter a time. Only the integers "0123456789" can be used when times are entered.
 
-    **Note:** Only the integers "0123456789" can be used when times and dates are entered.
+    !!!note
+        Only the integers "0123456789" can be used when times and dates are entered.
 
 9.  Save the item form.
 

@@ -1,4 +1,4 @@
-# Custom portal pages for authoring
+# Custom Portal Pages for Authoring
 
 You can create a new HCL Digital Experience portal page to act as the home page of your authoring system.
 
@@ -24,15 +24,7 @@ To create a shared authoring environment for both sets of users you would create
 
 |Site designers page|Content creators page|Header|
 |-------------------|---------------------|------|
-|-   Includes an authoring portlet that is configured to use both the design and content libraries.
--   Only site designers can access this page.
-
-|-   Includes an authoring portlet that is configured to use only the content library.
--   Only content creators can access this page.
-
-|-   Includes a web content viewer portlet that is used to preview the website.
--   Both site designers and content creators can access this page.
-
-|
+|-   Includes an authoring portlet that is configured to use both the design and content libraries.<br>
+-   Only site designers can access this page.|-   Includes an authoring portlet that is configured to use only the content library. <br>-   Only content creators can access this page.|-   Includes a web content viewer portlet that is used to preview the website.<br>-   Both site designers and content creators can access this page.|
 
 

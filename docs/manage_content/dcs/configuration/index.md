@@ -20,11 +20,11 @@ Error: no output file was specified
 Error: No output id was specified
 ```
 
--   **[Configuring Document Conversion Services for systems other than Windows](/configuration/dcs_config_nonwin.md)**  
+-   **[Configuring Document Conversion Services for systems other than Windows](./dcs_config_nonwin.md)**  
 Configure the Document Conversion Services to complete document conversions in an operating system other than Windows. You must complete the following steps whenever you start the Portal server from a new terminal window.
--   **[Configuring Document Conversion Services for IBM i](/configuration/dcs_config_i.md)**  
+-   **[Configuring Document Conversion Services for IBM i](./dcs_config_i.md)**  
 Configure the Document Conversion Services to perform document conversions on IBM i systems. You need to complete the following steps whenever you start the Portal server from a new terminal window.
--   **[Configuring images for Document Conversion Services](/configuration/dcs_config_images.md)**  
+-   **[Configuring images for Document Conversion Services](./dcs_config_images.md)**  
 Configure the Document Conversion Services to view images in an operating system other than Windows.
 
 
