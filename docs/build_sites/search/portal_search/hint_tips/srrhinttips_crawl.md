@@ -70,12 +70,8 @@ To define a crawler user ID, select the **Security** tab, and update the user ID
 If you modify a content source that belongs to a search scope, update the scope manually to make sure that it still covers that content source. If you changed the name of the content source, edit the scope and make sure that the content source is still listed there. If not, you must add it again.
 
 
-**Related information**  
-
-
-[Importing and exporting search collections](../panel_help/import_export_srch_coll.md)
-
-[Exporting and importing search collections](../admin-system/srtexpimp.md)
-
-[Resetting the default search collection](../admin-system/srtcrtprtlstecllc.md)
+???+ info "Related information:"
+     - [Importing and exporting search collections](../../manage_search/search_collection/import_export_srch_coll.md)
+     - [Exporting and importing search collections](../administer_portal_search/setup_search_collections/srtexpimp.md)
+     - [Resetting the default search collection](../administer_portal_search/searching_crawling_portal_sites/srtcrtprtlstecllc.md)
 

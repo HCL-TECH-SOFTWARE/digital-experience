@@ -17,7 +17,7 @@ To create or edit a portal search service, proceed as follows:
 
 Set or edit the parameter values depending on your requirements and configuration.
 
-**Notes for configuring a search service:**
+## Configuring a search service:
 
 -   Unless otherwise stated, the values that you set for parameters of a portal search service apply to that search service and all its collections. They do not affect other search services of the portal or their search collections.
 -   Unless otherwise stated, changing the value of a parameter apply to both the existing search collections and newly created search collections. Some parameters affect only newly created search collections. These parameters cannot be updated for existing search collections.
