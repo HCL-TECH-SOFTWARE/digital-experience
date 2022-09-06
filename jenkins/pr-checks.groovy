@@ -41,8 +41,8 @@ pipeline {
                     sh """
                         docker run -d --name doc-pr-check quintana-docker.artifactory.cwp.pnp-hcl.com/dxubi:v1.0.0_8.5-204 /bin/bash -c "mkdir /build && mkdir /root/.ssh && tail -f /dev/null"
                         docker cp ${SSH_KEY} doc-pr-check:/root/.ssh/id_rsa
-                        docker cp ${WORKSPACE}/jenkins/helpers/02-pr-checks.sh doc-pr-check:/build
-                        docker exec doc-pr-check /bin/bash /build/02-pr-checks.sh -p ${ghprbActualCommit}
+                        docker cp ${WORKSPACE}/jenkins/helpers/01-publish-doc.sh doc-pr-check:/build
+                        docker exec doc-pr-check /bin/bash /build/01-publish-doc.sh --branch ${ghprbActualCommit}
                     """
                 }
             }

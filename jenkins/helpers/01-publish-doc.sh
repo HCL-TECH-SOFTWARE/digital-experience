@@ -9,6 +9,27 @@
 # * Use, duplication or disclosure restricted by GSA ADP Schedule    *
 # ********************************************************************
 
+# Set default values
+
+branch=${branch:-"main"}
+publish=${publish:-false}
+strict=${strict:-false}
+
+# Iterate over arguments
+
+while [ $# -gt 0 ]; do
+    if [[ $1 == "--"* ]]; then
+        v="${1/--/}"
+        declare "$v"="$2"
+        shift
+    fi
+    shift
+done
+
+echo "branch=${branch}"
+echo "publish=${publish}"
+echo "strict=${strict}"
+
 # Install dependencies
 microdnf install -y --nodocs git zlib-devel make gcc openssl-devel bzip2-devel libffi-devel zlib-devel
 
@@ -38,11 +59,28 @@ ssh-keyscan git.cwp.pnp-hcl.com >> /root/.ssh/known_hosts
 # Perform clone of target repository
 git clone --depth 1 --branch gh-pages git@git.cwp.pnp-hcl.com:CWPdoc/dx-mkdocs.git 
 cd dx-mkdocs
-git fetch origin main
-git switch -c main FETCH_HEAD
+git fetch origin $branch
+git switch -c $branch FETCH_HEAD
 
-# Perform GH pages deploy
-git config --global user.name hcl-digital-experience
-git config --global user.email notarealemail@hcl.dx
-mike set-default latest
-mike deploy -u in-progress latest --push
+
+# Select and call build command
+
+if [ "$publish" == true ]; then
+    echo "Perform GH pages deploy"
+    git config --global user.name hcl-digital-experience
+    git config --global user.email notarealemail@hcl.dx
+    mike set-default latest
+    mike deploy -u in-progress latest --push
+
+elif [ "$publish" == false ]; then
+
+    if [ "$strict" == true ]; then
+        echo "Perform STRICT PR check"
+        mkdocs build --strict
+    else
+        echo "Perform regular PR check"
+        mkdocs build
+    fi
+
+fi
+
