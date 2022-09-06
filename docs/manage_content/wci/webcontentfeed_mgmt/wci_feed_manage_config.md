@@ -1,4 +1,4 @@
-# Creating a feed configuration
+# Creating a Feed Configuration
 
 To manage your web content feeds, you need to create a feed configuration.
 
@@ -10,9 +10,9 @@ To manage your web content feeds, you need to create a feed configuration.
 
 4.  Type the URL to the feed.
 
-    **Note:** If the feed file name contains spaces, + is used to replace the space in the URL. For example, if the feed file is "content feed.xml" then the URL is entered as: http://server:port/wps/wcm/wci\_dev/content+feed.xml
-
-    **Note:** If the URL contains non-ascii characters, the non-ascii characters must be encoded. For example: http://server:port/wps/wcm/%E4%B8%AD%E6%96%87/%E7%BB%84%E4%BB%B6.xml
+    !!!note "**Notes**"
+        - If the feed file name contains spaces, + is used to replace the space in the URL. For example, if the feed file is "content feed.xml" then the URL is entered as: http://server:port/wps/wcm/wci\_dev/content+feed.xml
+        - If the URL contains non-ascii characters, the non-ascii characters must be encoded. For example: http://server:port/wps/wcm/%E4%B8%AD%E6%96%87/%E7%BB%84%E4%BB%B6.xml
 
 5.  Select an appropriate Credential Slot ID for the feed.
 
@@ -53,6 +53,4 @@ To manage your web content feeds, you need to create a feed configuration.
 
 11. Click either **Save** to save the configuration without consuming the feed, or **Save and Consume** to do both.
 
-
-**Parent topic:**[Web content feed management](../panel_help/wci_feed_manage.md)
 

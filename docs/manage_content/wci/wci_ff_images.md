@@ -1,4 +1,4 @@
-# Processing images
+# Processing Images
 
 The Web Content Integrator has an image-processing feature, which allows images that are referenced within HTML and rich text elements to be created as image components while processing a feed.
 
