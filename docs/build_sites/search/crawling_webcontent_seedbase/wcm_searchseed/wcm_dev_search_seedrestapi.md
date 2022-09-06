@@ -74,7 +74,8 @@ For the SeedlistId parameter, you can specify the value in the following formats
 
 -   **Retrieve a maximum of 100 items from all libraries**
 
-    **Note:** To use all libraries, leave `SeedlistId` value empty.
+    !!! note
+        To use all libraries, leave `SeedlistId` value empty.
 
     ```
     http://host\_name:port\_number/wps/seedlist/myserver?SeedlistId=&Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&Action=GetDocuments
@@ -88,7 +89,8 @@ For the SeedlistId parameter, you can specify the value in the following formats
 
 -   **Retrieve a maximum of 100 items from a cluster**
 
-    **Note:** When referencing a cluster, specify the request with the host name and port number of the HTTP server.
+    !!! note
+        When referencing a cluster, specify the request with the host name and port number of the HTTP server.
 
     ```
     http://http\_server:port\_number/wps/seedlist/myserver?SeedlistId=library/site\_area&Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&Action=GetDocuments
@@ -107,7 +109,8 @@ For the SeedlistId parameter, you can specify the value in the following formats
     ```
 
 
-**Important:** You can access the REST API for the Web Content Manager search seedlist 1.0 with a secured connection \(HTTPS\) or with an unsecured connection \(HTTP\). Depending on the method, ensure that you use the correct port. However, if you access this REST API with an unsecured connection, you are automatically redirected to a secured connection.
+!!! important
+    You can access the REST API for the Web Content Manager search seedlist 1.0 with a secured connection \(HTTPS\) or with an unsecured connection \(HTTP\). Depending on the method, ensure that you use the correct port. However, if you access this REST API with an unsecured connection, you are automatically redirected to a secured connection.
 
 |Parameter|Default Value|Description|
 |---------|-------------|-----------|
