@@ -28,14 +28,17 @@ Refreshing the data of a search collection updates that collection by renewed cr
 -   The number of documents is updated if a crawl is running or was completed.
 -   Icons such as **Search and Browse the Collection** icon can appear if a crawl was completed on a collection since the last refresh.
 
-    **Note:** The icons for some tasks are only available if the current user can do the specific task on the search collection.
+    !!! note
+        The icons for some tasks are only available if the current user can do the specific task on the search collection.
 
 -   The information is refreshed if another administrator updated search collections at the same time,
 
 To view the status of the search collection, click the collection name in the list of search collections. You can see the Content Sources in the search collection listed. You can also see the name and the search collection status information of the selected search collection. The status fields show data that changes over the lifetime of the search collection. If you have a faulty search collection in your portal, the portlet shows a link to that faulty collection.
 
-**Note:** If you delete the search collection before an upgrade to a higher version of HCL, make sure you export the search collection for later import before you delete it. For details, see *Migrating search collections*.
+!!! note
+    If you delete the search collection before an upgrade to a higher version of HCL, make sure you export the search collection for later import before you delete it. For details, see *Migrating search collections*.
 
+<!---
 -   **[Creating a search collection](crting_srch_coll.md)**  
 Create a search collection for your search service.
 -   **[Importing and exporting search collections](import_export_srch_coll.md)**  
@@ -43,5 +46,5 @@ You can export search collections from a source portal and import them into a ta
 -   **[Manage the content sources of a search collection](mng_cntnt_source.md)**  
 To work with the content sources of a search collection, click the collection name in the list of search collections. Manage Search lists the Content Sources and the Search collection status information of the selected search collection. A search collection can be configured to cover more than one content source. From the Content Sources window, you can refresh, view status, and configure schedulers and crawlers for a specific content source.
 -   **[Creating a content source](nw_cntnt_src.md)**  
-When you create a new content source for a search collection, that content source is crawled and the search collection is populated with documents from that content source. You can determine where the index crawls and what information it fetches.
+When you create a new content source for a search collection, that content source is crawled and the search collection is populated with documents from that content source. You can determine where the index crawls and what information it fetches. --->
 

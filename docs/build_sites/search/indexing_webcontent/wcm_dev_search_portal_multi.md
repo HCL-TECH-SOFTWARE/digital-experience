@@ -15,4 +15,3 @@ For more information about searching multilingual sites, go to Crawling a multil
 
 ???+ "Related information:" 
     - [Crawling a multilingual portal site](../searching_local_portal/srtmultiling.md)
-

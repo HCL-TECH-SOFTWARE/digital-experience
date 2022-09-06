@@ -90,4 +90,3 @@ Learn about the best practices for indexing web content if you are working with 
 
 
 [Searching on secured portal sites and pages and content management items](../admin-system/srtsrchscrprtlstepgs.md) -->
-

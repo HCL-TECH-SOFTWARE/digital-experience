@@ -14,4 +14,3 @@ Portal Search is configured to support the HCL Web Content Manager search seedli
 **Previous topic:**[Language and region support in Portal Search](../admin-system/srr_lng_regio_spprt.md)
 
 **Next topic:**[Searching your local portal](../admin-system/srclocportal.md) --->
-
