@@ -6,5 +6,5 @@ nav:
     - Use content lists: use_content_lists.md
     - Use data containers: use_data_containers.md
     - Use text elements: use_text_elements.md
-    - Use reusable blocks: use_reusable_blocks.md
+    - Use reusable blocks: use_reusable_blocks
     - ... 

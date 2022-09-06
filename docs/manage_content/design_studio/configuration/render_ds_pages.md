@@ -2,7 +2,7 @@
 The following outlines how to render a site built using HCL Design Studio (Beta).
 
 ## Prerequisite
-Design Studio (Beta) is available for evaluation use and may not be used in production. It may be installed and configured to HCL Digital Experience 9.5 container release update CF196 or higher. See instructions to install Design Studio (Beta) in [Install Design Studio (Beta)](ds_installing.md).
+Design Studio (Beta) is available for evaluation use and may not be used in production. It may be installed and configured to HCL Digital Experience 9.5 container release update CF196 or higher. See instructions to install Design Studio (Beta) in [Install Design Studio (Beta)](../installation/ds_installing.md).
 
 Design Studio (Beta) is accessible from the Practitioner Studio interface, after image configuration to your HCL Digital Experience 9.5 CF196 or higher deployment.
 
@@ -54,7 +54,7 @@ During site rendering, the CSS will be added to the head section of the page in 
 3.  Page Stylesheet
 4.  Container Stylesheets (in the same order they appear in the page)
 
-This order provides flexibility and allows the user to override any class selector from the site baseline stylesheet through the HCL Design Studio \(Beta\) Page editor.
+This order provides flexibility and allows the user to override any class selector from the site baseline stylesheet through the HCL Design Studio (Beta) Page editor.
 
 ## Get the live URL of the rendered site
 
@@ -65,11 +65,11 @@ This order provides flexibility and allows the user to override any class select
 
 2.  Hover and click the overflow (3-dot) menu button of the selected site, and click **Copy site link**.
 
-    ![Copy site link](../../images/Copy_site_link.png)
+    ![Copy site link](../configuration/_img/Copy_site_link.png)
 
 3.  A dialog appears where you can double-click and copy the site URL like you do in a typical text editor manually, as shown below.
 
-    ![Copy the site URL](../../images/Copy_site_url.png)
+    ![Copy the site URL](../configuration/_img/Copy_site_url.png)
 
     You may also click the **Copy** button to copy the URL and dismiss the dialog at the same time.
 
@@ -87,11 +87,11 @@ There are four ways how to get the live page URL to open the rendered HCL Design
   
   2.  Hover and click the overflow (3-dot) menu button, and then click **Copy page link**.
 
-      ![Copy page link from Sites Overview overflow menu](../../images/get_rendered_live_url.png)
+      ![Copy page link from Sites Overview overflow menu](../configuration/_img/get_rendered_live_url.png)
 
   3.  A dialog appears where you can double-click and copy the page URL like you do in a typical text editor manually, as shown below.
 
-      ![Copy live URL](../../images/copy_live_url.png)
+      ![Copy live URL](../configuration/_img/copy_live_url.png)
 
       You may also click the **Copy** button to copy the URL and dismiss the dialog at the same time.
 
@@ -104,7 +104,7 @@ There are four ways how to get the live page URL to open the rendered HCL Design
    
   3.  Click **More**, then **Copy page link**.
 
-      ![Copy page link from page properties panel](../../images/copy_page_link.png)
+      ![Copy page link from page properties panel](../configuration/_img/copy_page_link.png)
 
   4.  A dialog appears where you can double-click and copy the page URL like you do in a typical text editor manually.
 
@@ -117,7 +117,7 @@ There are four ways how to get the live page URL to open the rendered HCL Design
   
   2.  On the page editor, locate and click the **Open page link** icon, which is on the top toolbar.
 
-      ![Copy page link from the Page editor](../../images/copy_live_url_from_page_editor.png)
+      ![Copy page link from the Page editor](../configuration/_img/copy_live_url_from_page_editor.png)
 
   3.  A dialog appears where you can double-click and copy the URL like you do in a typical text editor manually.
 
@@ -130,7 +130,7 @@ There are four ways how to get the live page URL to open the rendered HCL Design
   
   2.  Select the page, click the overflow (3-dot) menu button, and then click **Copy page link**, as shown below.
 
-      ![Get live URL from Pages panel](../../images/copy_live_url_pages_panel.png)
+      ![Get live URL from Pages panel](../configuration/_img/copy_live_url_pages_panel.png)
 
   3.  A dialog appears where you can double-click and copy the URL like you do in a typical text editor manually.
 

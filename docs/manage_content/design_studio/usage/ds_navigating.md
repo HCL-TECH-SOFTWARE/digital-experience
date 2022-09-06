@@ -16,15 +16,15 @@ Follow the steps below to access the HCL Digital Experience 9.5 Design Studio (B
 
     **Option 1:** From **Practitioner Studio > Sites**, click the Design Studio (Beta) tile, which is located below the Practitioner Studio applications:
 
-    ![HCL Digital Experience 9.5 Design Studio (Beta) in Practitioner Studio interface](../../images/Design%20Studio%20tile%20in%20HCL%20DX%20Practitioner%20Studio.png)
+    ![HCL Digital Experience 9.5 Design Studio (Beta) in Practitioner Studio interface](../usage/_img/Design%20Studio%20tile%20in%20HCL%20DX%20Practitioner%20Studio.png)
 
     **Option 2:** Click to open the **Sites (Beta) > Practitioner Studio** side navigation menu item:
 
-    ![Access HCL Digital Experience 9.5 Design Studio (Beta) in Practitioner Studio navigation menu](../../images/Access%20Design%20Studio%20in%20Practitioner%20Studio%20navigation%20menu.png)
+    ![Access HCL Digital Experience 9.5 Design Studio (Beta) in Practitioner Studio navigation menu](../usage/_img/Access%20Design%20Studio%20in%20Practitioner%20Studio%20navigation%20menu.png)
 
     **Option 3:** Click the **Home** icon on the top right as shown below to access HCL Design Studio (Beta) **Sites** application via the DX site menu:
 
-    ![Access HCL Digital Experience 9.5 Design Studio (Beta) in DX Sites navigation bar](../../images/HCL%20Digital%20Experience%209.5%20Design%20Studio%20Beta%20in%20DX%20Sites%20navigation%20bar.png)
+    ![Access HCL Digital Experience 9.5 Design Studio (Beta) in DX Sites navigation bar](../usage/_img/HCL%20Digital%20Experience%209.5%20Design%20Studio%20Beta%20in%20DX%20Sites%20navigation%20bar.png)
 
 Options 1 and 2 brings you to the Design Studio (Beta) **Sites** overview, where you can view and manage your site and its pages.
 
@@ -35,7 +35,7 @@ Options 1 and 2 brings you to the Design Studio (Beta) **Sites** overview, where
 
 The HCL Design Studio (Beta) Sites interface has the following components:
 
-![HCL Design Studio (Beta) Sites interface](../../images//DX_Design_Studio_Sites_overview.png)
+![HCL Design Studio (Beta) Sites interface](../usage/_img/DX_Design_Studio_Sites_overview.png)
 
 -   **Apps side navigation panel** - Displays quick links to all DX Applications, Help Center, and Support.
 -   **Main header** - This component contains the **Create** button for HCL Design Studio (Beta) site, page, and site template actions.
@@ -43,9 +43,9 @@ The HCL Design Studio (Beta) Sites interface has the following components:
 -   **Menu options** - A pop-up that displays applicable user actions for a selected site or page
 -   **Properties panel** - A pop-up that displays site or page information, and applicable user actions.
 
-Content authors can also access view, editing and delete options of the selected site, page, or site template in this column. See [Create sites and pages with Design Studio \(Beta\)](creating_sites_and_pages.md) for more information.
+Content authors can also access view, editing and delete options of the selected site, page, or site template in this column. See [Create sites and pages with Design Studio (Beta)](creating_sites_and_pages.md) for more information.
 
-![Site menu options](../../images/dx_site_menu_options.png "Site menu options")
+![Site menu options](../usage/_img/dx_site_menu_options.png "Site menu options")
 
-![Page menu options](../../images/dx_page_menu_options.png "Page menu options")
+![Page menu options](../usage/_img/dx_page_menu_options.png "Page menu options")
 
