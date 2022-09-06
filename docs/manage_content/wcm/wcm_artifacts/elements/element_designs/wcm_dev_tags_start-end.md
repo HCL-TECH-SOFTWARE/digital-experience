@@ -3,8 +3,7 @@ id: wcm_dev_tags_start-end
 title: Start and End Attributes
 ---
 
-
-
+# Start and End Attributes
 
 The start and end attributes are used to wrap the data that is returned by an Web Content Manager tag within other tags, such as HTML. These attributes are not mandatory.
 
