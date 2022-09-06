@@ -1,7 +1,7 @@
 ---
 title: Create Authoring Tools
 ---
-# Creating an authoring tools component
+# Creating an Authoring Tools Component
 
 
 You can use an authoring tools element only by creating an authoring tools component. You cannot add an authoring tools element to authoring templates, site areas, or content items.

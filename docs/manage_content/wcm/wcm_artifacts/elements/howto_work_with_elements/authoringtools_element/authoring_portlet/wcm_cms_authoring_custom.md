@@ -1,4 +1,4 @@
-# Custom authoring interfaces
+# Custom Authoring Interfaces
 
 You can use the Web Content Manager API and remote action parameters to create customized authoring interfaces specifically for your content creators.
 
@@ -12,9 +12,6 @@ You can configure an authoring portlet to use a launch page of your own design i
 
 Remote actions are used in the query string of a URL to trigger actions from the Web Content Manager application. You can use remote actions to add standard Web Content Manager functions to a custom user interface.
 
-
-**Related information**  
-
-
-[Creating pages using the Manage Pages portlet](../panel_help/h_mp_create_pages.md)
+<!-- ???+ info "**Related information**"  
+    [Creating pages using the Manage Pages portlet](../panel_help/h_mp_create_pages.md) -->
 

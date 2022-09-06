@@ -34,7 +34,7 @@ Dynamic components are used to dynamically generate content based on the paramet
 
 Tool components are used to create tools that can be added to web pages for users to do tasks such as search, inline editing, and paging through pages of links.
 
--   [authoring tools component](../../../manage_content/wcm/wcm_artifacts/elements/howto_work_with_elements/authoringtools_element/newfolder/using_authoringtools_elements/wcm_config_wcmviewer_authcomp.md)
+-   [authoring tools component](../../../manage_content/wcm/wcm_artifacts/elements/howto_work_with_elements/authoringtools_element/using_authoringtools_elements/wcm_config_wcmviewer_authcomp.md)
 -   [page navigation component](../../../manage_content/wcm/wcm_artifacts/elements/howto_work_with_elements/page_nav_element/wcm_dev_elements_page-navigation.md)
 -   [search component](../../../extend_dx/development_tools/portal_admin_tools/portal_scripting_interface/command_ref_psi/cmpnt_hierarchy/search_compnt_hrchy.md)
 

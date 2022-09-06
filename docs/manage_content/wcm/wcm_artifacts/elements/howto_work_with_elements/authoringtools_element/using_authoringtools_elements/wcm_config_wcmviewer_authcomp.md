@@ -1,3 +1,7 @@
+---
+title: Configure Authoring Tools Components
+---
+
 # How to configure authoring tools components
 
 Authoring tools components that are rendered in a web content viewer allow you to create, read, edit, delete, approve, or reject content items directly in the web content viewer, instead of requiring you to browse to the HCL Web Content Manager authoring portlet to run the same action. The web content viewer either opens a window from the current page or redirects the user to another portal page that contains the authoring portlet.
@@ -33,7 +37,8 @@ The default value of the `format` attribute for a placeholder tag is `tag`, so t
 </a>
 ```
 
-**Note:** It is not possible to open the window in a separate browser window by adding `target="_blank"` to the HTML anchor tag in the design.
+!!!note
+  It is not possible to open the window in a separate browser window by adding `target="_blank"` to the HTML anchor tag in the design.
 
 ## Authoring tools components that open on another page
 
@@ -52,11 +57,10 @@ To redirect users to another page for authoring tasks, specify a value of `url` 
 </a>
 ```
 
-**Note:** You can open the portal page in a separate browser window by adding `target="_blank"` to the HTML anchor tag in the design.
+!!!note
+  You can open the portal page in a separate browser window by adding `target="_blank"` to the HTML anchor tag in the design.
 
 
-**Related information**  
-
-
-[Setting service configuration properties](../admin-system/adsetcfg.md)
+<!-- ???+ info "**Related information**"  
+  [Setting service configuration properties](../admin-system/adsetcfg.md) -->
 
