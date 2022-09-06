@@ -4,10 +4,12 @@ You can configure the search portlets for local operation, or you can configure 
 
 You can provide the remote search service as an EJB. Also, separate HCL Portal environments cannot use the same remote search server. Only multiple HCL Portal servers in the same cell can use the same remote search server.
 
-**Note:** SOAP support for remote search services was deprecated with HCL Digital Experience Version 8.0.
+!!! note
+    SOAP support for remote search services was deprecated with HCL Digital Experience Version 8.0.
 
 When you want to index and search portal sites, search results are filtered according to the user security credentials. This filtering occurs independently of whether security is enabled on the remote search server or not. However, if security is not enabled, an unauthorized user can connect to the remote server and obtain unfiltered search results. If you want to prevent this issue, you must use EJB and enable security on the remote server. For information about enabling security on the remote search server, read *Preparing security for remote search service in a single sign on domain*.
 
+<!--
 -   **[Preparing for remote search service](../admin-system/srtprrmtsrchsrv.md)**  
 Get an overview of how you prepare your portal system for remote search service. You can provide remote search service by either using EJB or SOAP.
 -   **[Installing remote search service by using IBM Installation Manager](../admin-system/installrssim.md)**  
@@ -25,15 +27,8 @@ If you plan to use search in a cluster, you must configure a remote search serve
 -   **[Configuring a remote search service](../admin-system/srtcfgrmtsrchsrv.md)**  
 Configure a remote search service for Portal Search.
 -   **[Configuring HTTP for the seedlist servlet](../admin-system/confighttpsservlet.md)**  
-Learn how to configure HTTP for the seedlist servlet. The seedlist servlet requires HTTPs by default. Therefore, when you access the servlet through HTTP, WebSphere Application Server redirects you to HTTPs.
+Learn how to configure HTTP for the seedlist servlet. The seedlist servlet requires HTTPs by default. Therefore, when you access the servlet through HTTP, WebSphere Application Server redirects you to HTTPs. --->
 
-
-**Previous topic:**[Redirecting search requests from a custom search form to the Search Center](../admin-system/redirect_search_custom_form.md)
-
-**Next topic:**[Configuring search in a cluster](../config/config_search_clus.md)
-
-**Related information**  
-
-
-[Search Services](../panel_help/srch_srvs.md)
+???+ info "Related information:"
+    - [Search Services](../manage_search/srch_srvs.md)
 
