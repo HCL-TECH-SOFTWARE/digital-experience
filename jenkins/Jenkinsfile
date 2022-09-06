@@ -18,20 +18,21 @@ pipeline {
         label 'build_docu'
     }
 
-    stage("Prepare settings") {
-        steps {
-            script {
-            
-            // Enable pipeline to accept Strict as a variable
-                if (!env.STRICT_BUILD) {
-                    env.BUILD_VERSION = "in-progress"
-                }
+    stages {
 
+        stage("Prepare settings") {
+            steps {
+                script {
+                
+                // Enable pipeline to accept Strict as a variable
+                    if (!env.STRICT_BUILD) {
+                        env.BUILD_VERSION = "in-progress"
+                    }
+
+                }
             }
         }
-    }
-
-    stages {
+        
         stage("Publish doc") {
             steps {
                 withCredentials([sshUserPrivateKey(credentialsId: "jenkins-git", keyFileVariable: 'SSH_KEY')]) {
