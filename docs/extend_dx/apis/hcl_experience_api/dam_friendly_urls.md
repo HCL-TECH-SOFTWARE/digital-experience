@@ -4,7 +4,7 @@ This section describes the DAM API that allows you to create a friendly URL for 
 
 **Important:**
 
--   To set friendly URLs, assets must always have a unique name in a [collection](../digital_asset_mgmt/manage_collections.md).
+-   To set friendly URLs, assets must always have a unique name in a [collection](../../../manage_content/digital_assets/usage/managing_dam/manage_collections.md).
 -   You cannot upload an asset with a file name that already exists in a collection; doing so returns an error message that says you must update the file name and try uploading again.
 -   For existing assets that have duplicate names in a collection, you must rename these assets so you can set friendly URLs.
 -   You can provide a unique name whenever you save the asset as new.
@@ -15,7 +15,7 @@ A friendly URL makes a web address easy-to-read by using words to describe the c
 
 In contrast, a `binaryUrl` you get from **Copy link** on the **Edit** page, consists of a string of characters representing the `collection_id`, `item_id`, and `rendition_id`.
 
-![](../images/copy_link_edit_page.png "Copy link from the Edit page")
+![](../../../images/copy_link_edit_page.png "Copy link from the Edit page")
 
 **Sample `binaryUrl`**:
 
@@ -25,7 +25,7 @@ In contrast, a `binaryUrl` you get from **Copy link** on the **Edit** page, cons
 
 Meanwhile, a `customUrl` provides the original rendition of an asset. The `customUrl` is not related to a friendly URL.
 
-![](../images/edit_information_tab_custom_url_field.png "Custom URL field from the Edit page")
+![](../../../images/edit_information_tab_custom_url_field.png "Custom URL field from the Edit page")
 
 **Sample `customUrl`**:
 
@@ -98,7 +98,7 @@ You can click **Rename** from the notification and provide a unique name.
 ![](../images/dialog_rename_field.png "Rename asset dialog")
 
 
-**Related information**  
+<!-- **Related information**  
 
 
 [Using friendly URLs](../admin-system/mp_friendly_url.md)
@@ -106,4 +106,4 @@ You can click **Rename** from the notification and provide a unique name.
 [HCL Digital Asset Management](../digital_asset_mgmt/digital_asset_mgmt_overview.md)
 
 [Manage collections](../digital_asset_mgmt/manage_collections.md)
-
+ -->

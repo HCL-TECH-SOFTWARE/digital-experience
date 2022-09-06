@@ -78,9 +78,9 @@ A controller instance is based on a read-only model instance. Therefore it has t
 -   If the underlying model is scoped to a virtual portal, then so is the controller.
 
 
-???+ info "**Related information:**"  
-    - [Model SPI overview](/model_spi/index.md)
-    <!-- - [Administration tools for configuring outbound HTTP connections](../dev-portlet/outbhttp_cfg_tools.md) -->
-    <!-- - [Obtaining the Controller SPI](../dev-portlet/outbhttp_cfg_mcspi_obtstrlrspi.md) -->
-    <!-- - [The Java API](../admin-system/tag_rate_api_java.md) -->
+<!-- ???+ info "**Related information:**"  
+    - [Model SPI overview](/model_spi/index.md) 
+- [Administration tools for configuring outbound HTTP connections](../dev-portlet/outbhttp_cfg_tools.md) 
+    - [Obtaining the Controller SPI](../dev-portlet/outbhttp_cfg_mcspi_obtstrlrspi.md)
+    - [The Java API](../admin-system/tag_rate_api_java.md) -->
 

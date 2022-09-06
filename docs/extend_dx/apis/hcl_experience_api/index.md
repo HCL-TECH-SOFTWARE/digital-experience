@@ -13,7 +13,8 @@ Benefits of using HCL Experience API include:
 -   OpenAPI compliance
 -   GraphQL enabled for some of the Experience APIs
 
-    **Note:** The use of GraphQL functions is available at a beta level and is not yet supported for production use.
+    !!!note
+        The use of GraphQL functions is available at a beta level and is not yet supported for production use.
 
 -   Simplified JSON payloads
 -   Enhanced API documentation
@@ -32,7 +33,8 @@ It is recommended that developers building solutions for HCL Digital Experience 
 
 The HCL Experience API is a component of the HCL Digital Experience offerings. HCL Digital Experience offering license and download packages are provided with HCL Digital Experience entitlements available to customers on the [HCL Software License Portal](https://www.hcltech.com/software/support/release).
 
-**Note:** Beginning with Container Update and CF196, additional Experience APIs are introduced, which support development of [Design Studio \(Beta\)](../design_studio/design_studio_overview.md) and [Web Content Manager](../site/site_setup.md) functions.
+!!!note
+    Beginning with Container Update and CF196, additional Experience APIs are introduced, which support development of [Design Studio \(Beta\)](../design_studio/design_studio_overview.md) and [Web Content Manager](../site/site_setup.md) functions.
 
 Video: [Using the Digital Experience V2 Web Content Manager APIs](https://www.youtube.com/watch?v=7N4yVJUjqOo&list=PLEjl4yzB6ckH2QJw886wkwqmSotdCLxdf&index=6).
 
@@ -56,8 +58,8 @@ To give users more insight on how to use Experience API, the following samples a
 Learn how to use the Sample Content UI application for HCL Experience API.
 
 
-**Related information**  
+<!-- **Related information**  
 
 
-[API explorers](../dev/api_explorers.md)
+[API explorers](../dev/api_explorers.md) -->
 
