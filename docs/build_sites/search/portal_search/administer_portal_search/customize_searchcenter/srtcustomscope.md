@@ -16,7 +16,8 @@ To change the default search scope from All Sources to a different scope, reorde
 2.  Click **Search Scopes**.
 3.  Move the scope that you want to be the default scope to the beginning of the scopes list by clicking the up-arrow icon next to the scope name. The first scope on the list becomes the default search scope.
 
-**Note:** Users must clear their browser cache for the new scope to be available and displayed in the correct position.
+!!! note
+    Users must clear their browser cache for the new scope to be available and displayed in the correct position.
 
 The All Sources scope is created by using a mechanism that is called out-of-the-box \(OOB\) scopes registration and it is stored as a property in the WebSphere® Integrated Solutions Console. Since the All Sources scope is added by using the OOB scopes registration mechanism, you must delete the All Sources scope by using both the WebSphere Integrated Solutions Console and the search administration interface:
 
@@ -67,13 +68,12 @@ You can readd the All Sources scope only if this scope does not exist in the cur
     
     ```
 
-    **Note:** You can change the name, description, and icon for the new scope. To create a scope in a language other than English, change the xml:lang attribute to the required locale, such as de for German.
+    !!! note
+        You can change the name, description, and icon for the new scope. To create a scope in a language other than English, change the xml:lang attribute to the required locale, such as de for German.
 
 7.  Click **Save** to save the new property.
 
 
-**Related information**  
-
-
-[Configuring search scopes for the Search Center portlet](../admin-system/srtcfg_sc_scopes.md)
+???+ info "Related information:"
+    - [Configuring search scopes for the Search Center portlet](../cfg_searchcenter/srtcfg_sc_scopes.md)
 
