@@ -4,7 +4,7 @@ Learn about creating a new search service for Portal Search.
 
 **Cluster note:** In a clustered environment, complete these steps on the primary node.
 
-For more detailed information about the search service configuration parameters refer to [Search service configuration parameters](srrcfgsrvc.md).
+For more detailed information about the search service configuration parameters refer to [Search service configuration parameters](../../portal_search/administer_portal_search/search_service_params/index.md).
 
 1.  Log in to your portal as an administrator.
 
@@ -14,7 +14,8 @@ For more detailed information about the search service configuration parameters 
 
 4.  Depending on whether you are using EJB or Web service via SOAP, type Remote PSE service EJB or Remote PSE service SOAP for the service name.
 
-    **Note:** Configuring for remote search service as a Web service via SOAP is not supported on Portal 8.5.
+    !!! note
+        Configuring for remote search service as a Web service via SOAP is not supported on Portal 8.5.
 
 5.  For the **Search service implementation** select **Portal Search Service Type**.
 
@@ -22,7 +23,7 @@ For more detailed information about the search service configuration parameters 
 
     1.  Edit the search service parameter `PSE_Type` and change its value to `ejb`.
 
-    2.  Modify the parameter `IIOP_URL`. Set its value to `iiop://your\_ejb\_search\_server.your.example\_domain.com:port`, where your\_ejb\_search\_server.your.example\_domain.com is the name of the remote search server and `port` is the port number that you obtained in the [step to determine the port for EJB](srtprrmtsrchsrv.md#dtrmn_ejb_port) under [Preparing for remote search service](srtprrmtsrchsrv.md). For example, this can be iiop://ejb\_server.your\_company.com:2809.
+    2.  Modify the parameter `IIOP_URL`. Set its value to `iiop://your\_ejb\_search\_server.your.example\_domain.com:port`, where your\_ejb\_search\_server.your.example\_domain.com is the name of the remote search server and `port` is the port number that you obtained in the [step to determine the port for EJB](../srtprrmtsrchsrv.md) under [Preparing for remote search service](../srtprrmtsrchsrv.md). For example, this can be iiop://ejb\_server.your\_company.com:2809.
 
     3.  Modify the parameter EJB. Set it to the following value: ejb/com/ibm/hrl/portlets/WsPse/WebScannerLiteEJBHome. This is the default JNDI name. If you have modified the EJB parameter to a JNDI name of your own choice, use that name instead.
 
@@ -42,7 +43,3 @@ For more detailed information about the search service configuration parameters 
 
 
 Manually create new search collections for JCR search and Portal search.
-
-
-**Next topic:**[Creating new search collections](../admin-system/create_search_coll.md)
-

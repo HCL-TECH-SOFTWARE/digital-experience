@@ -36,10 +36,7 @@ To configure and create the seedlist crawler:
 
 
 
-**Related information**  
-
-
-[Applying filter rules](../admin-system/srrfiltr.md)
-
-[Manage Search](../panel_help/h_search_managesearch.md)
+???+ info "Related information:"
+    - [Applying filter rules](../setup_search_collections/mng_content_sources_search_collections/srrfiltr.md)
+    - [Manage Search](../../../manage_search/h_search_managesearch.md)
 
