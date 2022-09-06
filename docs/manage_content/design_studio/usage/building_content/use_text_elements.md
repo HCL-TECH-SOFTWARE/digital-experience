@@ -15,11 +15,11 @@ To set the HTML tags for your text elements:
 
 2.  On the Page editor canvas, select an element and click the **Settings** icon to open the Page element settings menu of the selected element.
 
-    ![Select and edit page element](../../../images/select_edit_page_element_settings.png)
+    ![Select and edit page element](../building_content/_img/select_edit_page_element_settings.png)
 
 3.  Go to the **Display as** drop-down and click the arrow view the HTML tag selections. In the example below, the HTML tag for the `passive` text element is `paragraph`.
 
-    ![Select the HTML tag](../../../images/select_page_element_html_tag.png)
+    ![Select the HTML tag](../building_content/_img/select_page_element_html_tag.png)
 
 4.  Select from the drop down menu the new HTML tag you wish to apply on the selected text element. Changes are automatically saved.
 

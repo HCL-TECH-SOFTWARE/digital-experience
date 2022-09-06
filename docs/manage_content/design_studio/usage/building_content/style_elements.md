@@ -16,24 +16,24 @@ To style an element on the HCL Design Studio (Beta) Page editor:
 
 1.  Select the element on the Page editor canvas. In the example below, the text element labeled `Biography` is selected.
 
-    ![Select text element](../../../images/Select_the_text_element.png)
+    ![Select text element](../building_content/_img/Select_the_text_element.png)
 
 2.  Click the **Styles** icon and select **Typography** to open the text element's **Styles** panel.
 
-    ![Select Typography](../../../images/Select_text_Typography.png)
+    ![Select Typography](../building_content/_img/Select_text_Typography.png)
 
 3.  In the **Styles** panel, apply the changes. Using the same example, directly type and enter the font color keyword for hot pink (hex equivalent (<code>#ff69b4</code>) or RGB equivalent (<code>rgb(255,105,180)</code>). You can also toggle the color selector to select hot pink and click **Apply** to apply the changes.
 
-    ![Apply text style](../../../images/Apply_text_style.png)
+    ![Apply text style](../building_content/_img/Apply_text_style.png)
 
-    ![Apply text style color](../../../images/Apply_text_style_color.png)
+    ![Apply text style color](../building_content/_img/Apply_text_style_color.png)
 
 ## Using style selectors
 The HCL Design Studio (Beta) Page editor currently only supports using the element ID, classes, class combinations, and some states as selectors.
 
 The **Classes** section at the top of the styles panel is where we can tell the page editor which style rule we want to see and update.
 
-![Style classes](../../../images/Select_style_selectors.png)
+![Style classes](../building_content/_img/Select_style_selectors.png)
 
 In the Page editor, selectors shown and used by the **Styles** panel depend on which element is selected on the canvas. They have two (2) states: **active** and **inactive**.
 
@@ -72,17 +72,17 @@ However since the stylesheet is used as-is by the site and served during renderi
 
 In HCL Digital Experience 9.5 CF202, the option to download and upload a site's baseline stylesheet is introduced. This option allows users to update or replace the baseline stylesheet file of an HCL Digital Experience 9.5 website without leaving HCL Design Studio (Beta) Design Studio **Sites** overview.
 
-This option can also be accessed via the [WCM Authoring tool](https://help.hcltechsw.com/digital-experience/9.5/wcm/wcm_install_cfg.html).
+This option can also be accessed via the [WCM Authoring tools](../../../../build_sites/create_sites/authoring_tools/index.md).
 
 1.  On the **Sites** overview, hover and click the overflow menu of the selected site and select **Properties**.
 
-    ![Select Site Properties](../../../images/Select_Site_properties.png)
+    ![Select Site Properties](../building_content/_img/Select_Site_properties.png)
 
 2.  On the site **Properties** panel, navigate to the **Baseline stylesheet** section.
 
 3.  Click the drop-down arrow beside the default baseline stylesheet and select **Download**.
 
-    ![Download baseline stylesheet](../../../images/Download_baseline_stylesheet.png)
+    ![Download baseline stylesheet](../building_content/_img/Download_baseline_stylesheet.png)
 
 ## Upload the baseline stylesheet of an HCL Design Studio (Beta) site
 
@@ -90,7 +90,7 @@ This option can also be accessed via the [WCM Authoring tool](https://help.hclte
     -   When uploading a file to your site's baseline stylesheet, it replaces the file that exists there. Currently, there is no way to revert back to or retrieve any replaced files.
     -   Uploading an invalid or non-CSS file to the baseline stylesheet will make the page editor unusable.
     -   Uploading a valid CSS file that contains invalid values may also break the page editor.
-    -   Back up your latest working baseline stylesheet by downloading it before replacing it by uploading another one to mitigiate the risk of breaking the page editor.
+    -   Back up your latest working baseline stylesheet by downloading it before replacing it by uploading another one to mitigate the risk of breaking the page editor.
 
 1.  On the **Sites** overview, hover and click the overflow menu of the selected site and select **Properties**.
 
@@ -98,7 +98,7 @@ This option can also be accessed via the [WCM Authoring tool](https://help.hclte
 
 3.  Click the drop-down arrow beside the default baseline stylesheet and select **Upload**.
 
-    ![Upload baseline stylesheet](../../../images/Upload_baseline_stylesheet.png)
+    ![Upload baseline stylesheet](../building_content/_img/Upload_baseline_stylesheet.png)
 
 4.  Select the baseline stylesheet (CSS) file to upload from your local file system.
 

@@ -1,14 +1,18 @@
-## Limitations
+---
+title: Limitations
+---
+
+## Requirements and limitations
 
 Digital Experience 9.5 Container Update CF196 and later must be installed and operational, along with the Practitioner Studio and Content Composer components, to access and use Design Studio (Beta). **Design Studio (Beta) is not supported for production use**.
 
 !!! note
-        Refer to the latest HCL DX 9.5 container release and update file listings in the [Docker image listing](http://127.0.0.1:8000/deployment/kubernetes/docker/?h=image+li) topic.
+        Refer to the latest HCL DX 9.5 container release and update file listings in the [Container image list](../../../deployment/install/container/image_list.md) topic.
 
 The following Digital Experience 9.5 features and services are **not supported** with Design Studio (Beta):
 
--   Deployment in a [hybrid pattern](https://help.hcltechsw.com/digital-experience/9.5/containerization/hybrid_deployment_operator.html).
--   The deployment with [virtual portals](https://help.hcltechsw.com/digital-experience/9.5/admin-system/ad_vp.html).
+-   Deployment in a [hybrid pattern](../../../deployment/install/container/helm_deployment/helm_install_commands.md).
+-   The deployment with [virtual portals](../../../build_sites/virtual_portal/index.md).
 
 The following Digital Experience 9.5 features and services are **limited in access or use** with Design Studio (Beta):
 
