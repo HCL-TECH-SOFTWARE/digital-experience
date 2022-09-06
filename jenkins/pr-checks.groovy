@@ -26,7 +26,7 @@ pipeline {
 
                 // For manual testing we assign a default variable, will be automatically assigned during PR runs
                     if (!env.ghprbActualCommit) {
-                        env.ghprbActualCommit = 'pr-checks'
+                        env.ghprbActualCommit = 'main'
                     }
                 
                 // Enable pipeline to accept Strict as a variable
