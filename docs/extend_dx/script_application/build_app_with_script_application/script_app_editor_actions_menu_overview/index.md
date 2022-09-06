@@ -1,4 +1,4 @@
-# Script Application Editor actions menu overview
+# Actions Menu in the Script Application Editor
 
 You can insert tags, preferences, and parameters and export a Script Application with the Actions menu in the Script Application Editor.
 
