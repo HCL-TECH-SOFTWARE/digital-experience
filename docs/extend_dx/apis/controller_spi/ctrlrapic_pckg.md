@@ -19,6 +19,7 @@ These packages are as follows:
     -   Modifiable interfaces for portlet definitions, entities and preferences, for example `ModifiablePortletPreferences` and `ModifiablePortletEntity`.
     -   Portlet creation and cloning context interfaces.
 
-**Note:** A controller interface usually resides in the same package as its corresponding read-only Model SPI interface.
+!!!note
+    A controller interface usually resides in the same package as its corresponding read-only Model SPI interface.
 
 

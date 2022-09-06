@@ -4,7 +4,8 @@ To modify, create, or delete portal resources by using the Controller SPI, you f
 
 You do this by using a JNDI based lookup for the correct "home" interface, that is, the corresponding read-only interface.
 
-**Note:** The provider lookup for a controller home is possible from servlet level code and portlets.
+!!! note
+    The provider lookup for a controller home is possible from servlet level code and portlets.
 
 The following controllers are available via JNDI:
 
@@ -32,7 +33,8 @@ if (home != null) {
 
 ```
 
-**Note:** To obtain a `ContentModelController`, you must pass an existing content model to the `createContentModelController` method of the `ContentModelControllerProvider`.
+!!!note
+    To obtain a `ContentModelController`, you must pass an existing content model to the `createContentModelController` method of the `ContentModelControllerProvider`.
 
 Example 2 - Obtaining a layout model controller for a specific page:
 
@@ -47,10 +49,10 @@ final LayoutModelController lmController = cmController.getLayoutModelController
 ```
 
 
-**Related information**  
+<!-- **Related information**  
 
 
 [Obtain a model from the portal](../dev/dgn_modelobt.md)
 
-[Making modifications by using the Controller SPI](../dev/ctrlrapit_mdfy.md)
+[Making modifications by using the Controller SPI](../dev/ctrlrapit_mdfy.md) -->
 

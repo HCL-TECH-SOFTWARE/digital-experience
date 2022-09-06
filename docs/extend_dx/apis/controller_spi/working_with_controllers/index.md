@@ -10,7 +10,7 @@ For example, these steps can be as follows:
 
 3.  Apply your modifications as required to the modifiable instance Commit the controller to persist the modifications.
 
-4.  Optionally repeat steps [2](ctrlrapit_wrk.md#ctrlrapit_wrk_2) and [3](ctrlrapit_wrk.md#ctrlrapit_wrk_3) as required.
+4.  Optionally repeat steps 2 and 3 as required.
 
 5.  Commit the controller to persist the modifications.
 
