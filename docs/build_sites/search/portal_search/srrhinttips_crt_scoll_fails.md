@@ -14,13 +14,11 @@ Creating the portal site search collection can fail due to a file path length re
 **Solution:** Complete the following steps to resolve the issue:
 
 1.  Change the default directory location for the portal site search collection to a shorter path. The complete path and file name must not exceed a length of 118 characters. For information, go to *Configuring the default location for search collections*.
+
 2.  Re-create the portal site search collection. For information, go to *Resetting the default search collection*.
 
 
-**Related information**  
-
-
-[Creating and configuring search collections](../admin-system/srrcreatconfig.md)
-
-[Managing the content sources of a search collection](../admin-system/srtmngcontsrc.md)
+???+ info "Related information:"
+    - [Creating and configuring search collections](../portal_search/administer_portal_search/setup_search_collections/srrcreatconfig.md)
+    - [Managing the content sources of a search collection](../portal_search/administer_portal_search/setup_search_collections/mng_content_sources_search_collections/index.md)
 

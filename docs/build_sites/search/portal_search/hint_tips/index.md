@@ -32,7 +32,8 @@ If you delete a content source, then the documents that were collected from this
 
 When you delete a web content library, you must also delete the corresponding entries from the search collection. When a web content library is deleted and crawled, deleting the corresponding crawler deletes the entries from the search index. If you use one Web Content Manager content source, which automatically crawls all web content libraries, then delete and re-create the content source, or you can select **Regather documents from Content Source**. This step deletes all existing documents in the content source from previous crawls and then starts a full crawl on the content source. Documents that were indexed before, but no longer exist in the content source are removed from the collection.
 
-**Note:** If you plan on deleting web content libraries frequently, then it is suggested to define one content source per web content library. When that library is deleted, only the respective content source needs to be deleted as well.
+!!! note
+    If you plan on deleting web content libraries frequently, then it is suggested to define one content source per web content library. When that library is deleted, only the respective content source needs to be deleted as well.
 
 ## Portal Search portlets are not compatible with WSRP
 
@@ -46,6 +47,7 @@ The search administration portlet Manage Search lists the Default Portal Search 
 
 Search services and search collections are separate for individual virtual portals and are not shared between individual virtual portals. Set up separate search services and separate search collections for each individual virtual portal. These collections can be used to crawl and search the same set of documents.
 
+<!--
 -   **[Hints and tips for improving quality of Portal Search results](../admin-system/srrhinttips_improve_quality_search.md)**  
 There are three options available to improve the quality of search results and thus the overall search experience for your site visitors. The three options are using the Suggested Links portlet, changing the default query operator from Or to And, and applying boost factors to specific metadata fields.
 -   **[Hints and tips for Portal Search crawls](../admin-system/srrhinttips_crawl.md)**  
@@ -75,5 +77,5 @@ If the preferred language of the crawler user ID does not match the language of 
 
 [Dynamic user interfaces](../dev-portlet/wpsdynui_cpts.md)
 
-[Importing search web collections](../migrate/mig_t_import_webcoll.md)
+[Importing search web collections](../migrate/mig_t_import_webcoll.md) -->
 

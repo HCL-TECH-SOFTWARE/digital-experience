@@ -8,5 +8,3 @@ The directory path of a search collection is determined by what you typed in the
 2.  Click **Search Collections**.
 3.  Select the collection from the **Search Collections** box.
 4.  The collection location is shown in the list under **Search collection status information**.
-
-
