@@ -1,4 +1,4 @@
-# Example feeds
+# Example Feeds
 
 View some example feeds that illustrate how to represent the various item types within a feed.
 

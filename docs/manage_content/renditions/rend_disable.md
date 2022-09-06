@@ -1,8 +1,8 @@
-# Disabling renditions
+# Disable Renditions
 
 Renditions are enabled by default. If you want to disable them, you must run a ConfigEngine task.
 
-1.  Go to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+1.  Go to the [wp\_profile\_root](../../guide_me/wpsdirstr.md#wpprofileroot)/ConfigEngine directory.
 
 2.  Run the following command:
 
