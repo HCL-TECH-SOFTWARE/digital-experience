@@ -2,7 +2,8 @@
 
 You can administer and configure many details for Portal Search.
 
-**Note:** Before you start administering Portal Search, review the topic about Planning and Preparing for Portal Search.
+!!! note
+    Before you start administering Portal Search, review the topic about Planning and Preparing for Portal Search.
 
 **Manage Search** is the Portal Search administration portlet. It has three main sections:
 
@@ -34,7 +35,7 @@ Portal Search is pre-configured with a search service, a portal site search coll
 You can perform most of the configuration tasks for Portal Search by using the administration portlet **Manage Search**. By alternative, you can also administer Portal Search by using the WebSphere® Integrated Solutions Console and resource providers in XML format.
 
 All search collections are available by the **All Sources** selection option of the Search Center portlet.
-
+<!---
 -   **[Managing search services](../admin-system/srtmgsrchsrvc.md)**  
 Get an overview of how you manage the portal search services. This task includes creating a new search service or editing an existing search service.
 -   **[Search service configuration parameters](../admin-system/srrcfgsrvc.md)**  
@@ -52,17 +53,14 @@ You can administer Portal Search by using the WebSphere Integrated Solutions Con
 -   **[Setting up search collections](../admin-system/srcmgsrcont.md)**  
 View information on setting up search collections for search by users. This also includes creating content sources and managing search scopes and custom links.
 -   **[Searching and crawling Portal and other sites](../admin-system/srcportals.md)**  
-You can configure your local Portal site and crawl remote Portal sites so that they are searchable by users. Run crawlers against other external websites to make them searchable by local portal users.
+You can configure your local Portal site and crawl remote Portal sites so that they are searchable by users. Run crawlers against other external websites to make them searchable by local portal users.  --->
 
+???+ info Related information:"
+    - [Planning and preparing for Portal Search](../../planning_portal_search/index.md)
 
-**Related information**  
+    - [Exporting and importing search collections](../administer_portal_search/setup_search_collections/srtexpimp.md)
 
+    - [Using the view definitions provided with social rendering on your portal pages](../../../social_rendering/working_with_social_objects/soc_rendr_use_oob_socl_list.md)
 
-[Planning and preparing for Portal Search](../admin-system/srcbfrwrkgwtprtlsrch.md)
-
-[Exporting and importing search collections](../admin-system/srtexpimp.md)
-
-[Using the view definitions provided with social rendering on your portal pages](../social/soc_rendr_use_oob_socl_list.md)
-
-[Customizing social list definitions by using inline editing](../social/soc_rendr_cust_socl_list.md)
+    - [Customizing social list definitions by using inline editing](../../../social_rendering/customizing_view_definitions/soc_rendr_cust_socl_list.md)
 

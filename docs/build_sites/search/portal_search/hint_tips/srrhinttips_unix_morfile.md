@@ -7,5 +7,3 @@ To resolve this problem and allow a higher number of files to be handled, raise 
 ```
      ulimit -n 4096
 ```
-
-

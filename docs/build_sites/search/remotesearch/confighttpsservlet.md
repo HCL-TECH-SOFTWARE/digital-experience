@@ -48,5 +48,3 @@ Remove any local search collections that are defined in HCL Portal and create ne
 
 -   If your system is operating in a portal farm, continue on to *Configuring search in a portal farm*.
 -   If your system is operating in a clustered environment, continue on to *Configuring search in a cluster*.
-
-

@@ -20,7 +20,7 @@ To configure a remote search service for Portal Search, proceed as follows:
 
     1.  Edit the search service parameter `PSE_TYPE` and change its value to `ejb`.
 
-    2.  Modify the parameter `IIOP_URL`. Set its value to `iiop://your\_ejb\_search\_server.your.example\_domain.com:port`, where your\_ejb\_search\_server.your.example\_domain.com is the name of the remote search server and `port` is the port number that you obtained in the [step to determine the port for EJB](srtprrmtsrchsrv.md#dtrmn_ejb_port) under [Preparing for remote search service](srtprrmtsrchsrv.md). For example, this can be iiop://ejb\_server.your\_company.com:2809.
+    2.  Modify the parameter `IIOP_URL`. Set its value to `iiop://your\_ejb\_search\_server.your.example\_domain.com:port`, where your\_ejb\_search\_server.your.example\_domain.com is the name of the remote search server and `port` is the port number that you obtained in the [step to determine the port for EJB](../srtprrmtsrchsrv.md) under [Preparing for remote search service](../srtprrmtsrchsrv.md). For example, this can be iiop://ejb\_server.your\_company.com:2809.
 
     3.  Modify the parameter EJB. Set it to the following value: ejb/com/ibm/hrl/portlets/WsPse/WebScannerLiteEJBHome. This is the default JNDI name. If you modified the EJB parameter to a JNDI name of your own choice, use that name instead.
 
@@ -34,7 +34,8 @@ To configure a remote search service for Portal Search, proceed as follows:
 
 9.  Depending on, whether you are using EJB or web service through SOAP, type Remote PSE service EJB or Remote PSE service SOAP for the service name.
 
-    **Note:** Configuring for remote search service as a web service through SOAP is not supported on Portal 8.5.
+    !!! note
+        Configuring for remote search service as a web service through SOAP is not supported on Portal 8.5.
 
 10. Click **OK** to save the new search service.
 
@@ -43,18 +44,17 @@ To configure a remote search service for Portal Search, proceed as follows:
 11. Restart all servers in your configuration for your changes to take effect.
 
 
-For more information about the search service configuration parameters, see to [Search service configuration parameters](srrcfgsrvc.md).
+For more information about the search service configuration parameters, see to [Search service configuration parameters](../../portal_search/administer_portal_search/search_service_params/index.md).
 
+<!---
 1.  [Creating a new search service](../admin-system/create_search_service.md)  
 Learn about creating a new search service for Portal Search.
 2.  [Creating new search collections](../admin-system/create_search_coll.md)  
 Before you can begin using remote search service, you must create two new search collections, one for JCR search, and one for Portal search.
 3.  [Creating a new content source](../admin-system/create_content_source.md)  
-Before you can begin using remote search service, you must create three new content sources, one for the Web Content Manager, one for your portal site, and one for JCR search.
+Before you can begin using remote search service, you must create three new content sources, one for the Web Content Manager, one for your portal site, and one for JCR search. --->
 
 
-**Related information**  
-
-
-[Container Staging](../containerization/container_staging.md)
+???+ info "Related information:"
+    - [Container Staging](../../../../deployment/manage/container_configuration/container_staging.md)
 

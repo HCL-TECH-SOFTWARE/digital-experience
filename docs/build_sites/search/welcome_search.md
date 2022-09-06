@@ -36,8 +36,6 @@ Portal site administrators who are working with search also benefit from enhance
 -   Simplified setting up remote search service by using the new IBM Installation Manager.
 -   Administer portal search by using the Manager Search administration portlet.
 
-**Related information**  
-
-
-[Search Center](../panel_help/h_search_searchcenter.md)
+???+ info "Related information:"
+    - [Search Center](../search/search_center/index.md)
 

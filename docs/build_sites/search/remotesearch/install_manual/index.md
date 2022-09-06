@@ -6,7 +6,9 @@ You can install remote search service by using manual steps instead of the IBM I
 
     1.  Application security: If you use SOAP over a secure server, the SOAP service itself is not secure.
     2.  Java 2 security: If you use SOAP, you must disable Java 2 security.
-    **Note:** SOAP support for remote search services was deprecated with HCL Portal Version 8.0. EJB is still supported.
+
+    !!! note
+        SOAP support for remote search services was deprecated with HCL Portal Version 8.0. EJB is still supported.
 
 -   For EJB: If you use EJB, complete the following security administration tasks:
     1.  Prepare security for remote search service in a single sign-on domain \(SSO\).
@@ -25,6 +27,7 @@ You can install remote search service by using manual steps instead of the IBM I
 
     -   The files WebScannerSoap.ear and WebScannerEjbEar.ear are in the directory `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/prereq/prereq.webscanner/installableApps/`.
     -   The file PseLibs.zip is located in the directory `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/search/wp.search.libs/installableApps`.
+
 2.  Depending on the requirements of your environment, install one of the two following applications: WebScannerEJbEar.ear or WebScannerSoap.ear on a remote server.
 
     For example, the remote server can be server1. Proceed with the following steps:
@@ -174,7 +177,7 @@ You can install remote search service by using manual steps instead of the IBM I
 
         A message confirms that the application started successfully.
 
-10. This step is required only if you work with EJB on a secure server: [Setting the search user ID](srtsttusrid.md).
+10. This step is required only if you work with EJB on a secure server: [Setting the search user ID](../srtsttusrid.md).
 
 11. Restart the WebSphere Application Server.
 
@@ -199,8 +202,8 @@ You can install remote search service by using manual steps instead of the IBM I
 
     **Cluster note:** In a clustered environment, complete this step on the primary node only.
 
-
+<!--
 -   **[Updating remote search service by using manual steps](../admin-system/update_rssman.md)**  
-If you originally installed the remote service by using manual steps, then you must use manual steps to upgrade it after you apply the Combined Cumulative Fix on the portal server.
+If you originally installed the remote service by using manual steps, then you must use manual steps to upgrade it after you apply the Combined Cumulative Fix on the portal server. -->
 
 

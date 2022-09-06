@@ -2,7 +2,6 @@
 
 View information on setting up search collections for search by users. This also includes creating content sources and managing search scopes and custom links.
 
-<!--
 -   **[Creating and configuring search collections](../admin-system/srrcreatconfig.md)**  
 Get an overview of how you manage search collections and their content sources.
 -   **[Setting up a JCR search collection](../admin-system/srtcfg_jcr_colls.md)**  
@@ -10,6 +9,6 @@ A JCR search collection is a special purpose search collection that is used by H
 -   **[Managing the content sources of a search collection](../admin-system/srtmngcontsrc.md)**  
 You can create, view, and update content sources to customize your search collections.
 -   **[Exporting and importing search collections](../admin-system/srtexpimp.md)**  
-View the steps to export search collections from a source portal and import them into a target portal. -->
+
 
 
