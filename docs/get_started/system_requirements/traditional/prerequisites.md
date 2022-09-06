@@ -1,6 +1,6 @@
 # Required Software
 
-The Prerequisites section specifies the capabilities that HCL Portal Extend 9.5 requires and the prerequisite products that can be used to fulfill those capabilities.
+The Prerequisites section specifies the capabilities that HCL Digital Experience 9.5 requires and the prerequisite products that can be used to fulfill those capabilities.
 
 ## WebSphere Application Server
 |Prerequisite|Version|Prerequisite minimum, and Supported versions|Product Minimum|Components|Operating system restrictions?|

@@ -6,6 +6,8 @@ title: Software Licensing Portal
 
 New and existing users need to register at the HCL Software License Portal and download their entitled HCL Digital Experience package(s).
 
+Co-packaged software is identified in HCL Digital Experience 9.5 Download documents available in your entitlements on the [HCL Software License Portal](https://www.hcltech.com/software/support/release).
+
 ## Getting the software
 
 Product software can be accessed from the [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release){:target="_blank"}. For additional guidance, refer to the [Step-by-step guide on downloading HCL Digital Experience products](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878){:target="_blank"} and watch the video tutorial on [How to download HCL Digital Experience Software from the License Server](https://youtu.be/ze0ZhLlXwfU){:target="_blank"}.
