@@ -6,4 +6,3 @@ The language information need not be carried in the URLs itself, nor in language
 
 If the site is a multilingual site, then enable the web crawlers to get to the content in the various languages through links. Enabling language switching or selection based on either the cookie of a returning customer or using JavaScript to switch from one language to the other, will lock out web crawlers. Therefore in such a case the crawler picks up the content in the default language only. You can also check the webmaster recommendations published by the internet search providers for further details and suggestions.
 
-

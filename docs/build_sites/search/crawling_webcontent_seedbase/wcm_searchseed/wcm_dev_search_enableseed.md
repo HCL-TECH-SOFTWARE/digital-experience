@@ -23,4 +23,3 @@ If you want to use Portal Search to crawl your web content and use features like
         This is an optional step and is only required if you want to specify your own metadata.
 
 
-

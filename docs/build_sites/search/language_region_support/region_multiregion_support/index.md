@@ -8,7 +8,8 @@ As was described for language identification in the topic about language support
 
 If top-level domain names are used, no further action is required to allow region identification of that website. However, for more generic domain names such as `.com` or `.eu`, additional steps are required for enablement. In such cases you need to encode the region information in the URL, and pair it with tools provided by Internet search engines, such as Google Webmaster Tools for Geographic Targeting.
 
+<!---
 -   **[Enabling region identification in HCL Portal](../admin-system/srrt_nbl_regio_id.md)**  
-You can use geographic targeting tools to associate a URL pattern with a specific region. However not all URL patterns are typically supported.
+You can use geographic targeting tools to associate a URL pattern with a specific region. However not all URL patterns are typically supported. --->
 
 

@@ -21,4 +21,3 @@ With the search seedlist 1.0 support, custom metadata fields that are specified 
 7.  Restart the portal.
 
 
-
