@@ -1,4 +1,7 @@
-# The Authoring tools element
+---
+title: Authoring Tools Element
+---
+# Authoring Tools Element
 
 The authoring tool element is used to add authoring portlet functions to web pages.
 
