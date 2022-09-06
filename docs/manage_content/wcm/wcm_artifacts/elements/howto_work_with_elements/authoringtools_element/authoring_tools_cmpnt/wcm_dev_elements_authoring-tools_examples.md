@@ -1,9 +1,9 @@
 ---
 id: wcm_dev_elements_authoring-tools_examples
-title: How to define authoring tools
+title: Define Authoring Tools
 ---
 
-
+# How to Define Authoring Tools
 
 
 You can format the design of an authoring tool in different ways, including displaying authoring tools as text-based links, or image-based links.
