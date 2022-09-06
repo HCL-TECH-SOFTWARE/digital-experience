@@ -16,15 +16,17 @@ In order for you to use Portal Search for searching your portal site, HCL Portal
 
 5.  For the Portal Content Source, set the crawler user ID as described in the following procedure.
 
-    **Note:** It is of benefit to define a dedicated crawler user ID. The pre-configured default portal site search uses the default administrator user ID wpsadmin with the default password of that user ID for the crawler. If you changed the default administrator user ID during your portal installation, the crawler uses that default user ID. If you want the crawler to use the user ID wpsadmin and its default password, you can omit the following substeps and proceed with the next main step. If you changed the password for the wpsadmin or other administrative user ID, or if you changed the default administrator user ID to an ID other than wpsadmin, or if you want to use a separate user ID, proceed as follows:
+    !!! note
+        It is of benefit to define a dedicated crawler user ID. The pre-configured default portal site search uses the default administrator user ID wpsadmin with the default password of that user ID for the crawler. If you changed the default administrator user ID during your portal installation, the crawler uses that default user ID. If you want the crawler to use the user ID wpsadmin and its default password, you can omit the following substeps and proceed with the next main step. If you changed the password for the wpsadmin or other administrative user ID, or if you changed the default administrator user ID to an ID other than wpsadmin, or if you want to use a separate user ID, proceed as follows:
 
-    1.  For the Portal Content Source, click the **Edit** icon.
+        1.  For the Portal Content Source, click the **Edit** icon.
 
-    2.  Update the user ID and password as needed in the Security tab.
+        2.  Update the user ID and password as needed in the Security tab.
 
-    3.  Click **Save** to save your changes.
+        3.  Click **Save** to save your changes.
 
-    **Note:** Set the preferred language of the portal site crawler user ID to match the language of the portal site search collection that it crawls. If you already started a crawl on the portal site search collection, you must reset the portal site collection. For details, see the topic about Resetting the default search collection.
+    !!! note
+        Set the preferred language of the portal site crawler user ID to match the language of the portal site search collection that it crawls. If you already started a crawl on the portal site search collection, you must reset the portal site collection. For details, see the topic about Resetting the default search collection.
 
 6.  Click the **Start Collecting** icon to start the crawl.
 
@@ -37,9 +39,8 @@ In order for you to use Portal Search for searching your portal site, HCL Portal
     3.  You change the interval for scheduled crawls by editing the portal site content source, selecting the **Schedulers** tab, deleting the default scheduler, and defining a new one.
 
 
-**Notes:**
-
-1.  When you crawl a portal site, be aware that a Portal Search crawl can use extended memory and time, depending on your Portal Search environment and configuration. For details, see the topic about Hints and tips for Portal Search crawls.
-2.  If a user tried to use the Search Center by entering a search string in the portal search box in the theme and clicking search before an administrator enabled the portal site search collection, the user must log out of the portal and log back in again to be able to search the portal search collection. This action includes the administrator who enabled the portal search collection.
+!!! note
+    1.  When you crawl a portal site, be aware that a Portal Search crawl can use extended memory and time, depending on your Portal Search environment and configuration. For details, see the topic about Hints and tips for Portal Search crawls.
+    2.  If a user tried to use the Search Center by entering a search string in the portal search box in the theme and clicking search before an administrator enabled the portal site search collection, the user must log out of the portal and log back in again to be able to search the portal search collection. This action includes the administrator who enabled the portal search collection.
 
 

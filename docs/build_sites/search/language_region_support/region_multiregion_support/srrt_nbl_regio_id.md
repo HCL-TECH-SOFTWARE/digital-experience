@@ -24,4 +24,3 @@ You can configure top-level domain names with country codes and subdomains with 
     For more information, about friendly URLs see the topics about friendly URLs.
 
 
-
