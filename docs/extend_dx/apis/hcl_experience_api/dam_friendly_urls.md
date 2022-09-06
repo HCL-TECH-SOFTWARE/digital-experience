@@ -2,12 +2,11 @@
 
 This section describes the DAM API that allows you to create a friendly URL for an asset.
 
-**Important:**
-
--   To set friendly URLs, assets must always have a unique name in a [collection](../../../manage_content/digital_assets/usage/managing_dam/manage_collections.md).
--   You cannot upload an asset with a file name that already exists in a collection; doing so returns an error message that says you must update the file name and try uploading again.
--   For existing assets that have duplicate names in a collection, you must rename these assets so you can set friendly URLs.
--   You can provide a unique name whenever you save the asset as new.
+!!!important "**Important:**"
+    -   To set friendly URLs, assets must always have a unique name in a [collection](../../../manage_content/digital_assets/usage/managing_dam/manage_collections.md).
+    -   You cannot upload an asset with a file name that already exists in a collection; doing so returns an error message that says you must update the file name and try uploading again.
+    -   For existing assets that have duplicate names in a collection, you must rename these assets so you can set friendly URLs.
+    -   You can provide a unique name whenever you save the asset as new.
 
 ## What is a friendly URL?
 
@@ -99,8 +98,6 @@ You can click **Rename** from the notification and provide a unique name.
 
 
 <!-- **Related information**  
-
-
 [Using friendly URLs](../admin-system/mp_friendly_url.md)
 
 [HCL Digital Asset Management](../digital_asset_mgmt/digital_asset_mgmt_overview.md)

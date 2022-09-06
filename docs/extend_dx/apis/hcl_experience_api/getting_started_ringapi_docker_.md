@@ -4,8 +4,8 @@ Follow these steps to get started with the HCL Experience API.
 
 ## Getting Started
 
-1.  Download the HCL Experience API installation binaries. Log in to the [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release) to download the files from your HCL Digital Experience entitlements.
-2.  Refer to the [Image listing and Docker install](../containerization/docker.md) Help Center topic for the latest list of container images and their file names, available for download, for example \(`hcl-dx-kubernetes-v95-CF19.zip`\).
+1.  Download the HCL Experience API installation binaries. Log in to the [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release){:target="_blank"} to download the files from your HCL Digital Experience entitlements.
+2.  Refer to the [Image listing and Docker install](../../../deployment/install/container/image_list.md) Help Center topic for the latest list of container images and their file names, available for download, for example \(`hcl-dx-kubernetes-v95-CF19.zip`\).
 3.  Extract the HCL Experience API installation binaries and, within a terminal, navigate to the extracted folder.
 4.  Verify if the extracted folder contains the Experience API images, for example, `hcl-dx-ringapi-image-v1.4.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`, `hcl-dx-experience-api-sample-ui-v0.2.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`, and readme \(`README.md`\) files.
 

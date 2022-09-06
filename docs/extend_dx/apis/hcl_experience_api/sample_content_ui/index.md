@@ -16,10 +16,10 @@ The frameworks used in the Sample Content UI are:
 -   And Jest and Enzyme – that are test frameworks used to write the test cases for the application.
 
 The Sample UI page shows you the list of contents that corresponds to a search on the word 'Sample', and an option to create a new content:
-![](../../../../images/Dev_Sample_UI_Create.png)
+![](../assets/Dev_Sample_UI_Create.png)
 
 This shows how to create a new content:
-![](../../../..//images/Dev_Sample_UI_update.png)
+![](../assets/Dev_Sample_UI_update.png)
 
 -   **[Sample Content UI prerequisites \| HCL Experience API](../openapi_prerequisites.md)**  
 There are certain prerequisites that need to be followed before Sample Content UI application can be used.

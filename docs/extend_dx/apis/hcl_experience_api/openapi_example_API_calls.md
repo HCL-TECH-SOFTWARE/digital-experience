@@ -44,7 +44,7 @@ Open the HCL Experience API GraphQL URL: http://localhost:4000/dx/api/core/v1/gr
 
 See example result:
 
-![](../assets/ExperienceAPI_GraphQL_HCL_DX.png)
+![](./assets/ExperienceAPI_GraphQL_HCL_DX.png)
 
 -   ****
 
@@ -62,7 +62,7 @@ See example result:
                         }
         ```
 
-        ![Experience API login script](../assets/ExperienceAPI_login_script.png)
+        ![Experience API login script](./assets/ExperienceAPI_login_script.png)
 
     2.  **Get Roles script \(Without authentication\)**
 
@@ -77,7 +77,7 @@ See example result:
                       
         ```
 
-        ![Experience API get roles script without authorization](../assets/ExperienceAPI_get_roles_script.png)
+        ![Experience API get roles script without authorization](./assets/ExperienceAPI_get_roles_script.png)
 
     3.  **Get Roles script \(With authentication\)** - Refer to the screenshot below to retrieve the cookie and pass using the HCL Experience API.
 
@@ -105,7 +105,7 @@ See example result:
                           }
         ```
 
-        ![Experience API get roles script with authorization](../assets/ExperienceAPI_get_roles_with_auth.png)
+        ![Experience API get roles script with authorization](./assets/ExperienceAPI_get_roles_with_auth.png)
 
 
 
