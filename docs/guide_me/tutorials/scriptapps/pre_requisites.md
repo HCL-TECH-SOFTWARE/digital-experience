@@ -3,7 +3,7 @@
 
 ## HCL DXClient
 
-HCL DXClient is required for deployments. Follow the online guide on how to install [HCL DXClient](../../../../extend_dx/development_tools/dxclient/index.md). Please note that the DX and/or DXClient link provided here may be superseded, you may use a newer version if available. If you have replaced the default context root of your DX installation, you should update the [config.json](../../../../extend_dx/development_tools/dxclient/index.md#dxclient-installation-configuration) file of your DXClient accordingly.
+HCL DXClient is required for deployments. Follow the online guide on how to install [HCL DXClient](../../../extend_dx/development_tools/dxclient/index.md). Please note that the DX and/or DXClient link provided here may be superseded, you may use a newer version if available. If you have replaced the default context root of your DX installation, you should update the [config.json](../../../extend_dx/development_tools/dxclient/index.md#dxclient-installation-configuration) file of your DXClient accordingly.
 
    ```json
        "dxContextRoot": "/wps",
