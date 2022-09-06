@@ -18,6 +18,19 @@ pipeline {
         label 'build_docu'
     }
 
+    stage("Prepare settings") {
+        steps {
+            script {
+            
+            // Enable pipeline to accept Strict as a variable
+                if (!env.STRICT_BUILD) {
+                    env.BUILD_VERSION = "in-progress"
+                }
+
+            }
+        }
+    }
+
     stages {
         stage("Publish doc") {
             steps {
@@ -29,7 +42,7 @@ pipeline {
                         docker run -d --name doc-builder quintana-docker.artifactory.cwp.pnp-hcl.com/dxubi:v1.0.0_8.5-204 /bin/bash -c "mkdir /build && mkdir /root/.ssh && tail -f /dev/null"
                         docker cp ${SSH_KEY} doc-builder:/root/.ssh/id_rsa
                         docker cp ${WORKSPACE}/jenkins/helpers/01-publish-doc.sh doc-builder:/build
-                        docker exec doc-builder /bin/bash /build/01-publish-doc.sh --publish true
+                        docker exec doc-builder /bin/bash /build/01-publish-doc.sh --publish true --version ${BUILD_VERSION}
                     """
                 }
             }

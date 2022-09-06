@@ -14,6 +14,7 @@
 branch=${branch:-"main"}
 publish=${publish:-false}
 strict=${strict:-false}
+version=${version:-"in-progress"}
 
 # Iterate over arguments
 
@@ -29,6 +30,7 @@ done
 echo "branch=${branch}"
 echo "publish=${publish}"
 echo "strict=${strict}"
+echo "version=${version}"
 
 # Install dependencies
 microdnf install -y --nodocs git zlib-devel make gcc openssl-devel bzip2-devel libffi-devel zlib-devel
@@ -67,10 +69,16 @@ git switch -c $branch FETCH_HEAD
 
 if [ "$publish" == true ]; then
     echo "Perform GH pages deploy"
+
+    if [ "$version" == "in-progress"]; then
+        version="${version} latest"
+        echo "version=${version}"
+    fi
+
     git config --global user.name hcl-digital-experience
     git config --global user.email notarealemail@hcl.dx
     mike set-default latest
-    mike deploy -u in-progress latest --push
+    mike deploy -u $version --push
 
 elif [ "$publish" == false ]; then
 
@@ -83,4 +91,3 @@ elif [ "$publish" == false ]; then
     fi
 
 fi
-

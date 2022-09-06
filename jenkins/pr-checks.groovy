@@ -28,6 +28,12 @@ pipeline {
                     if (!env.ghprbActualCommit) {
                         env.ghprbActualCommit = 'pr-checks'
                     }
+                
+                // Enable pipeline to accept Strict as a variable
+                    if (!env.STRICT_BUILD) {
+                      env.STRICT_BUILD = "false"
+                    }
+
                 }
             }
         }
@@ -42,7 +48,7 @@ pipeline {
                         docker run -d --name doc-pr-check quintana-docker.artifactory.cwp.pnp-hcl.com/dxubi:v1.0.0_8.5-204 /bin/bash -c "mkdir /build && mkdir /root/.ssh && tail -f /dev/null"
                         docker cp ${SSH_KEY} doc-pr-check:/root/.ssh/id_rsa
                         docker cp ${WORKSPACE}/jenkins/helpers/01-publish-doc.sh doc-pr-check:/build
-                        docker exec doc-pr-check /bin/bash /build/01-publish-doc.sh --branch ${ghprbActualCommit}
+                        docker exec doc-pr-check /bin/bash /build/01-publish-doc.sh --branch ${ghprbActualCommit} --strict ${STRICT_BUILD}
                     """
                 }
             }
