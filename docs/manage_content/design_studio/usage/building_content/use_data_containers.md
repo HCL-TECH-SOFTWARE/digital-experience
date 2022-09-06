@@ -64,3 +64,10 @@ Follow the steps to create a data container from your site using HCL Digital Exp
 
 HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).
 
+## Troubleshooting
+
+To include trace logs with your findings for feedback reporting, please enable tracing and logging first. See the [Logging and tracing for containers and new services](../../../../deployment/manage/troubleshooting/logging_and_tracing/index.md) Help Center topic for additional information. In the WebSphere Application Server (WAS) Console, go to **Troubleshooting** > **Logging and tracing** > **Websphere Portal** > **Change log detail levels**.  Add the following trace strings under the **Runtime** tab to troubleshoot the data container:
+
+- com.hcl.workplace.wcm.restv2.DataRestHelper=all
+- com.aptrix.pluto.cmpnt.codec.ElementRestCmpntExtension=all
+
