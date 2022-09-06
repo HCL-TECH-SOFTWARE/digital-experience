@@ -66,7 +66,7 @@ HCL Digital Experience is interested in your experience and feedback working wit
 
 ## Troubleshooting
 
-To include trace logs with your findings for feedback reporting, please enable tracing and logging first. See the [Logging and tracing for containers and new services](../../../../deployment/manage/troubleshooting/logging_and_tracing/index.md) Help Center topic for additional information. In the WebSphere Application Server (WAS) Console, go to **Troubleshooting** > **Logging and tracing** > **Websphere Portal** > **Change log detail levels**. Under the tab **Runtime**, adding the following trace strings would be a good place to start to troubleshoot the data container:
+To include trace logs with your findings for feedback reporting, please enable tracing and logging first. See the [Logging and tracing for containers and new services](../../../../deployment/manage/troubleshooting/logging_and_tracing/index.md) Help Center topic for additional information. In the WebSphere Application Server (WAS) Console, go to **Troubleshooting** > **Logging and tracing** > **Websphere Portal** > **Change log detail levels**.  Add the following trace strings under the **Runtime** tab to troubleshoot the data container:
 
 - com.hcl.workplace.wcm.restv2.DataRestHelper=all
 - com.aptrix.pluto.cmpnt.codec.ElementRestCmpntExtension=all
