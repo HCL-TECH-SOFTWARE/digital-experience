@@ -1,4 +1,4 @@
-# Properties file: wkplc\_dbtype.properties
+# Properties file: wkplc_dbtype.properties
 
 
 ## Database safe mode properties
@@ -11,13 +11,13 @@
 
     -   **Valid values**
 
-        true
+        `true`
 
-        false
+        `false`
 
     -   **Default value**
 
-        false
+        `false`
 
     -   **Examples**
 
@@ -36,11 +36,11 @@ The following property value pairs are specific to the Apache Derby database. De
 
     -   **Default value**
 
-        org.apache.derby.jdbc.EmbeddedDriver
+        `org.apache.derby.jdbc.EmbeddedDriver`
 
     -   **Examples**
 
-        Apache Derby: : org.apache.derby.jdbc.EmbeddedDriver
+        Apache Derby: : `org.apache.derby.jdbc.EmbeddedDriver`
 
 -   **derby.DbLibrary**
 
@@ -66,7 +66,7 @@ The following property value pairs are specific to the Apache Derby database. De
 
     -   **Default value**
 
-        wpdbJDBC\_derby
+        `wpdbJDBC_derby`
 
     -   **Examples**
 
@@ -85,11 +85,11 @@ The following property value pairs are specific to IBM DB2 database.
 
     -   **Default value**
 
-        com.ibm.db2.jcc.DB2Driver
+        `com.ibm.db2.jcc.DB2Driver`
 
     -   **Examples**
 
-        IBM DB2: : com.ibm.db2.jcc.DB2Driver
+        IBM DB2: : `com.ibm.db2.jcc.DB2Driver`
 
 -   **db2.DbLibrary**
 
@@ -123,7 +123,7 @@ The following property value pairs are specific to IBM DB2 database.
 
     -   **Default value**
 
-        wpdbJDBC\_db2
+        `wpdbJDBC_db2`
 
     -   **Examples**
 
@@ -142,7 +142,7 @@ The following property value pairs are specific to Oracle Database.
 
     -   **Default value**
 
-        oracle.jdbc.OracleDriver
+        `oracle.jdbc.OracleDriver`
 
     -   **Examples**
 
@@ -180,7 +180,7 @@ The following property value pairs are specific to Oracle Database.
 
     -   **Default value**
 
-        wpdbJDBC\_oracle
+        `wpdbJDBC_oracle`
 
     -   **Examples**
 
@@ -199,11 +199,11 @@ The following value pairs are specific to Microsoft SQL Server and can be used w
 
     -   **Default value**
 
-        com.microsoft.sqlserver.jdbc.SQLServerDriver
+        `com.microsoft.sqlserver.jdbc.SQLServerDriver`
 
     -   **Examples**
 
-        Microsoft JDBC driver:: com.microsoft.sqlserver.jdbc.SQLServerDriver
+        Microsoft JDBC driver:: `com.microsoft.sqlserver.jdbc.SQLServerDriver`
 
 -   **sqlserver2005.DbLibrary**
 
@@ -237,7 +237,7 @@ The following value pairs are specific to Microsoft SQL Server and can be used w
 
     -   **Default value**
 
-        wpdbJDBC\_sqlserver2005
+        `wpdbJDBC_sqlserver2005`
 
     -   **Examples**
 
@@ -251,11 +251,11 @@ The following value pairs are specific to Microsoft SQL Server and can be used w
 
     -   **Default value**
 
-        com.microsoft.sqlserver.jdbc.SQLServerConnectionPoolDataSource
+        `com.microsoft.sqlserver.jdbc.SQLServerConnectionPoolDataSource`
 
     -   **Examples**
 
-        Microsoft JDBC driver:: com.microsoft.sqlserver.jdbc.SQLServerConnectionPoolDataSource
+        Microsoft JDBC driver:: `com.microsoft.sqlserver.jdbc.SQLServerConnectionPoolDataSource`
 
 
 ## IBM DB2 for z/OS properties
@@ -270,11 +270,11 @@ The following value pairs are specific to IBM DB2 for z/OS.
 
     -   **Default value**
 
-        com.ibm.db2.jcc.DB2Driver
+        `com.ibm.db2.jcc.DB2Driver`
 
     -   **Examples**
 
-        IBM DB2 for z/OS: : com.ibm.db2.jcc.DB2Driver
+        IBM DB2 for z/OS: : `com.ibm.db2.jcc.DB2Driver`
 
 -   **db2\_zos.DbLibrary**
 
@@ -312,7 +312,7 @@ The following value pairs are specific to IBM DB2 for z/OS.
 
     -   **Default value**
 
-        wpdbJDBC\_db2\_zos
+        `wpdbJDBC_db2_zos`
 
     -   **Examples**
 
@@ -326,11 +326,11 @@ The following value pairs are specific to IBM DB2 for z/OS.
 
     -   **Default value**
 
-        /usr/lpp/db2910\_jdbc/lib
+        `/usr/lpp/db2910_jdbc/lib`
 
     -   **Examples**
 
-        Native libraries: : /usr/lpp/db2910\_jdbc/lib
+        `Native libraries: : /usr/lpp/db2910_jdbc/lib`
 
 -   **db2\_zos.DbSqljProperties**
 
@@ -340,7 +340,7 @@ The following value pairs are specific to IBM DB2 for z/OS.
 
     -   **Default value**
 
-        /etc/DB2JccConfiguration.properties
+        `/etc/DB2JccConfiguration.properties`
 
     -   **Examples**
 
@@ -354,13 +354,13 @@ The following value pairs are specific to IBM DB2 for z/OS.
 
     -   **Valid values**
 
-        2
+        `2`
 
-        4
+        `4`
 
     -   **Default value**
 
-        2
+        `2`
 
     -   **Examples**
 
@@ -377,13 +377,13 @@ The following value pairs are specific to IBM DB2 for z/OS.
 
     -   **Default value**
 
-        com.ibm.as400.access.AS400JDBCDriver
+        `com.ibm.as400.access.AS400JDBCDriver`
 
     -   **Examples**
 
-        Type 4 driver:: com.ibm.as400.access.AS400JDBCDriver
+        Type 4 driver:: `com.ibm.as400.access.AS400JDBCDriver`
 
-        Type 2 driver:: com.ibm.db2.jdbc.app.DB2Driver
+        Type 2 driver:: `com.ibm.db2.jdbc.app.DB2Driver`
 
 -   **db2\_iseries.DbLibrary**
 
@@ -409,7 +409,7 @@ The following value pairs are specific to IBM DB2 for z/OS.
 
     -   **Default value**
 
-        wpdbJDBC\_db2\_iseries
+        `wpdbJDBC_db2_iseries`
 
     -   **Examples**
 
@@ -423,13 +423,13 @@ The following value pairs are specific to IBM DB2 for z/OS.
 
     -   **Valid values**
 
-        2
+        `2`
 
-        4
+        `4`
 
     -   **Default value**
 
-        4
+        `4`
 
     -   **Examples**
 

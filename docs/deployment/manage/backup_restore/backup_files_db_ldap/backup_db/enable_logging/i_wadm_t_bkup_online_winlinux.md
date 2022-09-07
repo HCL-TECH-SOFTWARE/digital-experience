@@ -2,15 +2,16 @@
 
 Enable archive logging if you are performing online backup of the database. Use the Configure Database Logging Wizard to specify the parameters that control archive logging.
 
-**Note:** This procedure refers to the WPSDB database, the default database name for the Release database domain.
+!!!note
+    This procedure refers to the WPSDB database, the default database name for the Release database domain.
 
 To enable archive logging for an online DB2® database backup, follow these steps:
 
-1.  Open the DB2 Control Center: Click **General Administration Tools** \> **Control Center**.
+1.  Open the DB2 Control Center: Click **General Administration Tools > Control Center**.
 
 2.  Select the WPSDB database from the navigation tree.
 
-3.  From the menu, choose **Selected** \> **Configure Database Logging**.
+3.  From the menu, choose **Selected > Configure Database Logging**.
 
 4.  In the Configure Database Logging Wizard, select **Archive Logging** for your logging type and click **Next**.
 
