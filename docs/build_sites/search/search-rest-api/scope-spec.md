@@ -43,4 +43,3 @@ Response is Atom formatted list of possible values that can be passed to the Sea
 	</atom:feed>
 ```
 
-

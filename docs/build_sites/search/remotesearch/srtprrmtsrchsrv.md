@@ -6,11 +6,14 @@ Get an overview of how you prepare your portal system for remote search service.
 
     1.  Application security: If you use SOAP over a secure server, the SOAP service itself is not secure.
     2.  Java 2 security: If you use SOAP, you must disable Java 2 security.
-    **Note:** SOAP support for remote search services was deprecated with HCL Digital Experience Version 8.0. EJB is still supported.
+    
+    !!! note
+        SOAP support for remote search services was deprecated with HCL Digital Experience Version 8.0. EJB is still supported.
 
 -   For EJB: If you use EJB, complete the following security administration tasks:
     1.  Prepare security for remote search service in a single sign-on domain \(SSO\).
     2.  Add the signer certification of the remote search service server into the portal search server. To do this addition, proceed by the following steps:
+
         1.  Access the WebSphere® Integrated Solutions Console of the portal search server.
         2.  Click **Security** \> **SSL certificate and key management** \> **Key stores and certificates** \> **NodeDefaultTrustStore** \> **Signer certificates** \> **Retrieve from port**.
 
@@ -25,6 +28,7 @@ Get an overview of how you prepare your portal system for remote search service.
 
     -   The files WebScannerSoap.ear and WebScannerEjbEar.ear are in the directory `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/search/prereq.webscanner/installableApps`
     -   The file PseLibs.zip is located under directory `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/search/wp.search.libs/installableApps`
+
 2.  Depending on the requirements of your environment, install one of the two applications WebScannerEJbEar.ear or WebScannerSoap.ear on a remote server. For example, this can be server1.
 
     Proceed by the following steps:
@@ -247,6 +251,6 @@ Get an overview of how you prepare your portal system for remote search service.
 
     **Cluster note:** In a clustered environment, complete this step on the primary node only.
 
-
+<!--
 **Parent topic:**[Remote search service](../admin-system/srcusgrmtsrchsrv.md)
-
+-->

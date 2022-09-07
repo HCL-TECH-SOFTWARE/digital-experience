@@ -8,7 +8,7 @@ To access the DX Search REST APIs Explorer, after installing HCL DX 9.5 CF or Co
 
 **Example**: [http://localhost:10039/dx/api/search/v1/explorer/](http://localhost:10039/dx/api/search/v1/explorer/)
 
-![](../images/DX_Search_Rest_API.png)
+![](../../../images/DX_Search_Rest_API.png)
 
 ## Using the Digital Experience Search REST API Explorer
 
