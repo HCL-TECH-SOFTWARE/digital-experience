@@ -9,7 +9,7 @@ This section provides the steps to install the HCL Digital Experience 9.5 compon
 ## Pre-requisites
 
 -   See [Container image list](../../../deployment/install/container/image_list.md) section for the latest DX 9.5 container file listings.
--   Review the list of [Requirements and Limitations](../index.md#requirements-and-limitations) for Design Studio (Beta) with HCL DX 9.5 CF196
+-   Review the list of [Requirements and Limitations](../limitations/limitations.md) for Design Studio (Beta) with HCL DX 9.5 CF196
 
 ## Installing HCL Design Studio (Beta)
 
