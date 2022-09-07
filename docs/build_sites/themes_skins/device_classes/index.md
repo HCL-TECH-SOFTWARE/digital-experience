@@ -2,7 +2,8 @@
 
 Device classes are used in HCL Digital Experience as an abstraction for common properties for the device of a client. For instance, tablet computers can be grouped into a device class tablets, since they share a form factor and possibly other traits such as touch interface, or additional hardware sensors.
 
-!!! note
+
+!!! note 
     The abstraction provided by device classes does not make the defining properties explicit, but is rather indirectly done by the assignment of device classes to clients.
 
 <!--

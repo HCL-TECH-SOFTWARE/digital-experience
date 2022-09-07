@@ -34,6 +34,7 @@ These are the device classes and Portal resources.
     A contribution in a theme module can define subcontributions for a specific device class. For more information, see [Defining theme modules](../the_module_framework/writing_module/themeopt_mod_register.md).
 
 
+
 <!--
 **Next topic:**[Additional information about device classes for developers](../dev-theme/themeopt_devclass_devlop.md) -->
 
