@@ -32,8 +32,8 @@ The following example deletes the device class with the unique name `wps.devicec
 </request>
 ```
 
-
+<!--
 **Previous topic:**[mvc:URI scheme](../rwd/rwd_mvcuri_scheme.md)
 
-**Next topic:**[Assigning device classes](../dev-theme/themeopt_devclass_assign.md)
+**Next topic:**[Assigning device classes](../dev-theme/themeopt_devclass_assign.md) -->
 

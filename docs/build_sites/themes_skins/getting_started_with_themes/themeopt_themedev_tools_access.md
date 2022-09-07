@@ -10,7 +10,7 @@ To create, delete, and edit themes, users must have access to three areas:
 
 To allow non-administrator users to update or modify existing files do the following steps.
 
-1.  Open a command prompt and change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+1.  Open a command prompt and change to the [wp\_profile\_root](../../../guide_me/wpsdirstr.md)/ConfigEngine directory.
 2.  Run the following ConfigEngine task.
     -   AIX® HP-UX Linux™ Solarisz/OS®:
     -   IBM® i: ConfigEngine.sh export-nodes -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin -Dquery="/filestore/fs-type1/themes" -Dwp.content.repository.output.dir="c:\\temp\\jcr"
