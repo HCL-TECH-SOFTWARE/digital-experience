@@ -2,6 +2,7 @@
 
 You can create themes using modules to contribute to separate areas of pages to provide flexibility, enhance the user experience, and maximize performance. To optimize themes on your website, use the theme optimization module framework. The framework separates feature-specific logic and capabilities from the theme code.
 
+<!---
 -   **[Roadmap: Creating and customizing themes](../dev-theme/themeopt_themedev_themes_roadmap.md)**  
 Theme creation and customization are easy when you use the Theme Manager and download your static theme files by using a WebDAV client. This roadmap provides an overview of the theme creation and customization process. Links to detailed instructions for each step are provided in the roadmap.
 -   **[Getting started with Themes](../dev-theme/themeopt_themedev_getting_started.md)**  
@@ -21,11 +22,9 @@ Device classes are used in HCL Digital Experience as an abstraction for common p
 -   **[Responsive Web Design](../rwd/rwd_intro.md)**  
 Responsive Web Design provides content parity between mobile devices and desktop channels, which enhances user experience and brand consistency. Seamless changes in screen size, from small to large, are now possible while the order of the content is maintained. Content maintenance is simplified by having one site that is represented by one set of assets.
 -   **[Directory structure](../reference/wpsdirstr.md)**  
-The topic shows the naming conventions that are used to denote the location of files on the servers and the types of resources you can find in those directories.
+The topic shows the naming conventions that are used to denote the location of files on the servers and the types of resources you can find in those directories. --->
 
 
-**Related information**  
-
-
-[Themes](../migrate/mig_plan_expect_themes.md)
+???+ info "Related information:"
+    - [Themes](../../deployment/manage/migrate/planning_migration/mig_plan_expectations/mig_plan_expect_themes.md)
 
