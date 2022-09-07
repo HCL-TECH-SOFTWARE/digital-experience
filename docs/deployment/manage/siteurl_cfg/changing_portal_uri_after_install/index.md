@@ -1,13 +1,12 @@
 # Changing the portal URI after an installation
 
-You can change the default portal Uniform Resource Identifier \(URI\) any time after you install HCL Digital Experience. Some applications have a fixed context root that cannot be changed.
+You can change the default portal Uniform Resource Identifier (URI) any time after you install HCL Digital Experience. Some applications have a fixed context root that cannot be changed.
 
-If you are on Combined Cumulative Fix 7 or earlier, go to [CF07 and earlier: Changing the portal URI after an installation](cfg_intr_CF07_earlier.md#).
+If you are on Combined Cumulative Fix 7 or earlier, go to [CF07 and earlier: Changing the portal URI after an installation](cfg_intr_CF07_earlier.md).
 
 HCL Digital Experience and Web Services for Remote Portlets are installed with a default URI. You can change this URI after installation to better suit the requirements of your organization.
 
-**Notes:**
-
+!!!note "Notes"
 -   To change the HCL Digital Experience URI: When you specify the context root, do not specify a value that is the same as a directory that exists in a portlet WAR directory. For example, you set the HCL Digital Experience context root to /images. There is a portlet with the directory structure /myPortlet.ear/myPortlet.war/images. This issue might cause a conflict if the portlet encodes URI references to resources in its own /images directory. In this situation, the portlet would be unable to display images. HCL Digital Experience looks for the image resources according to its own context root path instead of the directory path that is specified by the portlet WAR file.
 -   For changing the URI of a WSRP Producer portal: Changing the WSRP Producer context root does not require that you redeploy all portlets. Run the modify-servlet-path configuration task only.
 
@@ -17,53 +16,62 @@ HCL Digital Experience and Web Services for Remote Portlets are installed with a
     -   Update the configuration of the WSRP Consumers to use the new context root \(`/wps/wsrp`\).
 -   If you use HCL Web Content Manager Syndication, the Syndicators and Subscribers servers that refer to this Portal instance must be updated with the modified URI. Log on to the HCL Portal syndicating to this instance. Click the **Administration menu** icon. Then, click **Portal Content** \> **Syndicators**. Click the edit icon of the Syndicator you want to edit. Update the URL with the new context root information. Then, log on to the HCL Digital Experience subscribing to this instance. Click the **Administration menu** icon. Then, click **Portal Content** \> **Subscribers**. Click the edit icon of the subscriber you want to edit. Update the URL with the new context root information.
 
-**Cluster note:** If you modify the URI in a clustered environment, complete the steps that are described here on the primary node only, except where specified differently. Also, verify that AutoSynch is set to a frequency of 1 minute.
+!!!note "Cluster note"
+    If you modify the URI in a clustered environment, complete the steps that are described here on the primary node only, except where specified differently. Also, verify that AutoSynch is set to a frequency of 1 minute.
 
 1.  Complete the following steps to manually modify the HCL Digital Experience context root:
 
     1.  Stop the HCL Portal server.
 
-    2.  Locate the wkplc.properties and wkplc\_comp.properties files in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory and create backup copies before you change any values.
+    2.  Locate the wkplc.properties and wkplc\_comp.properties files in the wp_profile_root/ConfigEngine/properties directory and create backup copies before you change any values.
 
     3.  Use a text editor to open the wkplc.properties file and enter the appropriate value for your environment in the WpsContextRoot property.
 
-        **Note:** Leaving this value empty might cause system conflict. If you leave this value empty, validate this setting by using the Configuration Wizard or by following the steps that are described in [ConfigEngine validation targets](cfg_validation_targets.md#).
+        !!!note
+            Leaving this value empty might cause system conflict. If you leave this value empty, validate this setting by using the Configuration Wizard or by following the steps that are described in [ConfigEngine validation targets](../../siteurl_cfg/changing_siteurl/cfg_validation_targets.md).
 
     4.  Save and close the file.
 
-    5.  Use a text editor to open the wkplc\_comp.properties file and enter the appropriate value for your environment in the following properties:
+    5.  Use a text editor to open the wkplc_comp.properties file and enter the appropriate value for your environment in the following properties:
 
         -   WsrpContextRoot
         -   WpsPersonalizedHome
         -   WpsDefaultHome
-        **Attention:** Do not enter the same value for WpsPersonalizedHome and WpsDefaultHome.
+        
+        !!!attention
+            Do not enter the same value for WpsPersonalizedHome and WpsDefaultHome.
 
-        **Note:** Leaving these values empty might cause system conflict. If you leave these values empty, validate this setting by using the Configuration Wizard or by following the steps that are described in [ConfigEngine validation targets](cfg_validation_targets.md#).
+        !!!note
+            Leaving these values empty might cause system conflict. If you leave these values empty, validate this setting by using the Configuration Wizard or by following the steps that are described in ConfigEngine validation targets](../../siteurl_cfg/changing_siteurl/cfg_validation_targets.md).
 
     6.  Save and close the file.
 
     7.  Start the HCL Portal server in a stand-alone environment or the deployment manager and node agent in a clustered environment.
 
-    8.  Open a command prompt and change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+    8.  Open a command prompt and change to the wp_profile_root/ConfigEngine directory.
 
     9.  Complete the following steps to change the HCL Digital Experience URI:
 
         1.  To change the context root for the values that you entered in the WpsContextRoot, WsrpContextRoot, WpsPersonalizedHome, and or WpsDefaultHome properties, run the following task:
 
-            -   AIX® HP-UX Linux™ Solaris:./ConfigEngine.sh modify-servlet-path -DPortalAdminPwd=password -DWasPassword=password
-            -   Windows™: ConfigEngine.bat modify-servlet-path -DPortalAdminPwd=password -DWasPassword=password
-            -   IBM® i: ConfigEngine.sh modify-servlet-path -DPortalAdminPwd=password -DWasPassword=password
-            -   z/OS®:./ConfigEngine.sh modify-servlet-path -DPortalAdminPwd=password -DWasPassword=password
-            **Note:** Check the output for any error messages before you proceed with the next task. If any of the configuration tasks fail, verify the values in the wkplc.properties and wkplc\_comp.properties files.
+            -   AIX® HP-UX Linux™ Solaris: `./ConfigEngine.sh modify-servlet-path -DPortalAdminPwd=password -DWasPassword=password`
+            -   Windows™: `ConfigEngine.bat modify-servlet-path -DPortalAdminPwd=password -DWasPassword=password`
+            -   IBM® i: `ConfigEngine.sh modify-servlet-path -DPortalAdminPwd=password -DWasPassword=password`
+            -   z/OS®: `./ConfigEngine.sh modify-servlet-path -DPortalAdminPwd=password -DWasPassword=password`
+            
+            !!!note
+                Check the output for any error messages before you proceed with the next task. If any of the configuration tasks fail, verify the values in the wkplc.properties and wkplc_comp.properties files.
 
         2.  Restart the HCL Portal server.
     10. Run the following task to change the context root for the portlets:
 
-        -   AIX HP-UX Linux Solaris: ./ConfigEngine.sh modify-servlet-path-portlets -DPortalAdminPwd=password -DWasPassword=password
-        -   Windows: ConfigEngine.bat modify-servlet-path-portlets -DPortalAdminPwd=password -DWasPassword=password
-        -   IBM i: ConfigEngine.sh modify-servlet-path-portlets -DPortalAdminPwd=password -DWasPassword=password
-        -   z/OS: ./ConfigEngine.sh modify-servlet-path-portlets -DPortalAdminPwd=password -DWasPassword=password
-        **Note:** Check the output for any error messages before you proceed with the next task. If any of the configuration tasks fail, verify the values in the wkplc.properties and wkplc\_comp.properties files.
+        -   AIX HP-UX Linux Solaris:` ./ConfigEngine.sh modify-servlet-path-portlets -DPortalAdminPwd=password -DWasPassword=password`
+        -   Windows: `ConfigEngine.bat modify-servlet-path-portlets -DPortalAdminPwd=password -DWasPassword=password`
+        -   IBM i: `ConfigEngine.sh modify-servlet-path-portlets -DPortalAdminPwd=password -DWasPassword=password`
+        -   z/OS: `./ConfigEngine.sh modify-servlet-path-portlets -DPortalAdminPwd=password -DWasPassword=password`
+        
+        !!!note
+            Check the output for any error messages before you proceed with the next task. If any of the configuration tasks fail, verify the values in the wkplc.properties and wkplc\_comp.properties files.
 
 2.  If necessary, start the HCL Portal server in a stand-alone environment or the deployment manager and node agent in a clustered environment.
 
@@ -73,7 +81,7 @@ HCL Digital Experience and Web Services for Remote Portlets are installed with a
 
         |HCL Digital Experience environment|Steps|
         |----------------------------------|-----|
-        |Stand-alone configuration|Complete the following steps in a stand-alone configuration:        1.  Copy the following script from the plugin\_root/bin directory of the web server to the `wp\_profile\_root`[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/bin directory on your HCL Digital Experience server:
+        |Stand-alone configuration|Complete the following steps in a stand-alone configuration:        1.  Copy the following script from the plugin\_root/bin directory of the web server to the wp_profile_root/bin directory on your HCL Digital Experience server:
 
             -   AIX HP-UX Linux Solaris: ./configurewebservername.sh
             -   Windows: configurewebservername.bat
@@ -112,11 +120,12 @@ where webservername is the web server definition name you defined previously whe
 
 4.  Required if you use HCL Web Content Manager: Complete the following steps to manually change the JSP components in the Web Resources v70 Library:
 
-    **Cluster note:** In a clustered environment, complete these steps on the primary node only.
+    !!!note "Cluster note"
+        In a clustered environment, complete these steps on the primary node only.
 
     1.  Log on to HCL Digital Experience.
 
-    2.  Go to **Applications** \> **Content** \> **Web Content Authoring**.
+    2.  Go to **Applications > Content > Web Content Authoring**.
 
     3.  Under **Preferences**, select **Edit Shared Settings**.
 
@@ -124,7 +133,7 @@ where webservername is the web server definition name you defined previously whe
 
     5.  Click **OK**.
 
-    6.  Under **Item Views**, select **All Items** \> **All** \> **Components** \> **JSP**.
+    6.  Under **Item Views**, select **All Items > All > Components > JSP**.
 
     7.  Select every **JSP component** from the Web Resources v70 library and then click **Edit**.
 
@@ -138,15 +147,17 @@ where webservername is the web server definition name you defined previously whe
 
     The default Dojo context root in HCL Digital Experience is /wps/portal\_dojo. After you run the modify-servlet-path and modify-servlet-path-portlets tasks, the Dojo context root is changed to include the new value in the WpsContextRoot parameter as the prefix. For instance, if the new WpsContextRoot value is myco, then the new Dojo context root becomes /myco/portal\_dojo. If your theme includes hardcoded references to "/wps/portal\_dojo", update those references to the new context root. If you migrated a custom theme, you might find that it has references to /portal\_dojo without the /wps prefix. Look for these references in both the WAR file and in the WebDAV storage for your theme.
 
-    **Cluster note:** In a clustered environment, complete these steps on the primary node only.
+    !!!note "Cluster note"
+        In a clustered environment, complete these steps on the primary node only.
 
 6.  Complete the following steps to edit the context root for every search collection:
 
-    **Attention:** Edit the context root for each existing search collection.
+    !!!attention
+        Edit the context root for each existing search collection.
 
     1.  Log on to HCL Digital Experience as the administrator.
 
-    2.  To open the **Manage Search** portlet, click the **Administration menu** icon. Then, click **Search Administration** \> **Manage Search**.
+    2.  To open the **Manage Search** portlet, click the **Administration menu** icon. Then, click **Search Administration > Manage Search**.
 
     3.  Click **Search Collections**.
 
@@ -173,28 +184,22 @@ where webservername is the web server definition name you defined previously whe
     |Cluster type|Steps|
     |------------|-----|
     |Static clusterIdle standby|Complete the following steps if you have a static clusteran idle standby environment:    1.  Open the deployment manager WebSphere Integrated Solutions Console.
-    2.  Click **System Administration** \> **Nodes**, select the primary node from the list, and click **Full Resynchronize**.
-    3.  Click **Servers** \> **Clusters**.
+    2.  Click **System Administration > Nodes**, select the primary node from the list, and click **Full Resynchronize**.
+    3.  Click **Servers > Clusters**.
     4.  Select the cluster and click **Stop**.
     5.  After the cluster stops, restart it by selecting the cluster. Then, click **Start**.
 |
     |Dynamic cluster|Complete the following steps if you have a dynamic cluster:    1.  Open the deployment manager WebSphere Integrated Solutions Console.
-    2.  Click **System Administration** \> **Nodes**, select the primary node from the list, and click **Full Resynchronize**.
-    3.  Click **Servers** \> **Dynamic Clusters**.
+    2.  Click **System Administration > Nodes**, select the primary node from the list, and click **Full Resynchronize**.
+    3.  Click **Servers > Dynamic Clusters**.
     4.  Click the dynamic cluster that you want to stop and restart.
     5.  Click **Dynamic cluster members**.
     6.  Select the member name that you want to stop and then click **Stop**.
     7.  Select the member name that you want to start and then click **Start**.
 |
 
-
-
 **Related information**  
-
-
-[Accessing the Configuration Wizard](../config/cw_run.md)
-
-[Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md)
-
-[How to access the Producer WSDL](../admin-system/wsrpr_prod_wsdl.md)
+[Accessing the Configuration Wizard](../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/configuration/cw_run.md)<br>
+[Starting and stopping servers, deployment managers, and node agents](../../stopstart.md)<br>
+[How to access the Producer WSDL](../../../../extend_dx/development_tools/wsrp/portal_wsrp_producer/wsrpr_prod_wsdl.md)
 

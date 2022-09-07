@@ -1,6 +1,6 @@
 # Creating a syndication relationship from the command line
 
-You can set up syndication relationships by using the Administration Portlets or the command line. To set up a syndication relationship from the command line, use the XML configuration interface \(XML access\) and the ConfigEngine command to configure the subscriber.
+You can set up syndication relationships by using the Administration Portlets or the command line. To set up a syndication relationship from the command line, use the XML configuration interface (XML access) and the ConfigEngine command to configure the subscriber.
 
 Make sure that you have the appropriate configuration setup before you enable syndication.
 
@@ -30,11 +30,11 @@ Make sure that you have the appropriate configuration setup before you enable sy
     1.  In the WebSphere® Integrated Solutions Console, browse to the Java virtual machine settings.
         -   **Stand-alone server:**
 
-            **Servers** \> **Server Types** \> **WebSphere application servers** \> **HCL Digital Experience** \> **Java and Process Management** \> **Process definition** \> **Java Virtual Machine**
+            **Servers > Server Types > WebSphere application servers > HCL Digital Experience > Java and Process Management > Process definition > Java Virtual Machine**
 
         -   **Clustered server:**
 
-            **System administration** \> **Deployment manager** \> **Java and Process Management** \> **Process Definition** \> **Java Virtual Machine**
+            **System administration > Deployment manager > Java and Process Management > Process Definition > Java Virtual Machine**
 
     2.  Update the value in the **Maximum Heap Size** field. A value of at least 1024 MB is recommended.
     3.  Click **OK**, and then save your changes.
@@ -44,7 +44,7 @@ To set up syndication between web content libraries on two HCL Web Content Manag
 What can and cannot be syndicated:
 
 -   Changes to only the library name or description are syndicated. Changes to other library properties, such as user access to a library, are not syndicated. If you want the same settings on all your syndicated libraries, you must manually make the same changes to any subscriber libraries.
--   If content from one library \(Library A\) uses an item from another library \(Library B\), you must include both libraries in the syndicator. Including both libraries ensures that all items are syndicated successfully.
+-   If content from one library (Library A) uses an item from another library (Library B), you must include both libraries in the syndicator. Including both libraries ensures that all items are syndicated successfully.
 -   If you include only Library A in the syndicator, any items in Library A that reference items in Library B are not syndicated. Syndication errors are also generated.
 -   If you add a library to a syndicator after the initial syndication, you must click **Rebuild** to force the new library to be syndicated immediately.
 -   If you are creating a two-way syndication relationship, you must use a consistent syndication strategy. For example, if you syndicate "All items", then both syndication relationships must be syndicating "All items".

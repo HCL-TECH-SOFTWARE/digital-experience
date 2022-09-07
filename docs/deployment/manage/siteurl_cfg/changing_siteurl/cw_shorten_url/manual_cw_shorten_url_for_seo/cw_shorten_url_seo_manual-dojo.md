@@ -2,7 +2,8 @@
 
 The Modify Site URLs for Search Engine Optimization option in the Configuration Wizard includes manual steps. For reference only, you can see the details of the manual step for updating your themes to reference the correct Dojo context root.
 
-**Attention:** All steps for all database environments are included without consideration for your environment. Use the Configuration Wizard to generate custom instructions for your environment.
+!!!note
+    All steps for all database environments are included without consideration for your environment. Use the Configuration Wizard to generate custom instructions for your environment.
 
 1.  Optional manual step: If your custom themes use Dojo, update your themes to reference the correct Dojo context root.
 

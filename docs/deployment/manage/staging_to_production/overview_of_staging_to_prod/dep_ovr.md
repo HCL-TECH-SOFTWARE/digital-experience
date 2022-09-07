@@ -6,7 +6,7 @@ This overview provides information necessary to understand how to stage your por
 
 The content of a portal solution release is different for the initial staging process and the staging processes that modify the existing content. The following high-level image illustrates the staging to delivery process:
 
-![High-level diagram of the portal configuration management during the different stages to production.](../images/stage-to-production.jpg)
+![High-level diagram of the portal configuration management during the different stages to production.](../overview_of_staging_to_prod/_img/stage-to-production.jpeg)
 
 The following information describes the diagram annotation:
 
@@ -22,10 +22,10 @@ The following information describes the diagram annotation:
     -   Extensions
     -   Themes
     -   Applications
-3.  The export directory is where you store all source artifacts, including Web Content Manager artifacts. You can either compress this directory and import it to your other staging environments or build a Portal Application Archive \(PAA\) file.
+3.  The export directory is where you store all source artifacts, including Web Content Manager artifacts. You can either compress this directory and import it to your other staging environments or build a Portal Application Archive (PAA) file.
 4.  Use the rendering environment to test the rendering of the web content and portal development artifacts together. Developers might have access to this environment to test their code.
 5.  Use the preproduction environment to test everything on a cluster configuration that mirrors the live cluster. Only the administrators have access to this environment.
-6.  You can use the Content Authoring environment to test the syndication process before you move to the production environment. This environment is the first place where you can test the full content of your site. The full content includes the page structure and the web content. The authoring \(6\) and rendering \(5\) environments are also a good place to run more performance measurements. These measurements ensure that your production environment performs to your expectations. Some teams might also want to use the staging environment for training or demonstration purposes.
+6.  You can use the Content Authoring environment to test the syndication process before you move to the production environment. This environment is the first place where you can test the full content of your site. The full content includes the page structure and the web content. The authoring (6) and rendering (5) environments are also a good place to run more performance measurements. These measurements ensure that your production environment performs to your expectations. Some teams might also want to use the staging environment for training or demonstration purposes.
 7.  The production cluster environment is the live website cluster.
 8.  The authoring environment is where content developers and editors develop new content and content updates for the site.
 
@@ -42,7 +42,7 @@ When the initial release is deployed to the production system, users access the 
 -   The initial portal content in an XML file format that is created with the XMLAccess tool
 -   Personalization rules
 
-## The differential release \(making updates\)
+## The differential release (making updates)
 
 Updates to the portal solution can include creating, modifying, or deleting various artifacts. Artifacts can be pages, portlets, rules, and web content. While the new content can be deployed as a full release, this option would have the following drawbacks:
 
@@ -51,21 +51,18 @@ Updates to the portal solution can include creating, modifying, or deleting vari
 
 To avoid the drawbacks, a differential release can be defined, holding only the changes and not the complete release. A differential release is created by comparing two release exports. Then, you figure out the changes that are required to convert one system into the other one. Release Builder is the tool that helps with this task.
 
-**WARNING:** If you redeploy your site daily, your JCR size increases because of page versions. Periodically clean up your versions to reduce the JCR size. Go to [Clearing version history](../wcm/wcm_admin_clear_versions.md) for information.
+!!!important "Warning"
+    If you redeploy your site daily, your JCR size increases because of page versions. Periodically clean up your versions to reduce the JCR size. Go to [Clearing version history](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcm_admin_clear_versions.md) for information.
 
-Use the ReleaseBuilder to manage release configurations independent of user configurations. Release configuration data can be exported into an XMLAccess configuration file. During staging of follow-on releases, it is possible to stage differences between two releases. Use the XML configuration interface for these differences. Difference means differences between release configurations, including configuration entities that were removed, added, or changed in comparison to the previous release. Go to [Updates using ReleaseBuilder](dep_up_rb.md) for information.
+Use the ReleaseBuilder to manage release configurations independent of user configurations. Release configuration data can be exported into an XMLAccess configuration file. During staging of follow-on releases, it is possible to stage differences between two releases. Use the XML configuration interface for these differences. Difference means differences between release configurations, including configuration entities that were removed, added, or changed in comparison to the previous release. Go to [Updates using ReleaseBuilder](../../../../extend_dx/development_tools/portal_admin_tools/releasebuilder/index.md) for information.
 
 Web content updates are done with the Web Content Manager syndication feature. If managed pages are enabled, syndication also ensures that all required page artifacts are transferred along with the content.
 
-Go to [Updates with syndication](dep_up_syn_main.md) for information about managing updates across multiple lines of production.
+Go to [Updates with syndication](../../staging_to_production/updates_with_syndication/index.md) for information about managing updates across multiple lines of production.
 
 If your staging server has a different LDAP than the production, go to *Member fixer with syndication* and *Maintaining web content* for information.
 
-
 **Related information**  
-
-
-[Web content administration tools](../wcm/wcm_maintain.md)
-
-[Member fixer with syndication](../wcm/wcm_admin_member-fixer_synd.md)
+[Web content administration tools](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/index.md)<br>
+[Member fixer with syndication](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcm_member_fixer/wcm_admin_member-fixer_synd.md)
 
