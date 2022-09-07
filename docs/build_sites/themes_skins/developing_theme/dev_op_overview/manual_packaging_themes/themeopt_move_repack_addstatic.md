@@ -113,5 +113,5 @@ After you create a theme, you can begin to customize it by adding static content
 ???+ info "Related information:"
     - [EJPNO1013E error](../../../the_module_framework/themeopt_analyzer/validation_reports/themeopt_an_EJPNO1013E_v85.md)
     - [EJPNO1014I error](../../../the_module_framework/themeopt_analyzer/validation_reports/themeopt_an_EJPNO1014I_v85.md)
-    - [Exporting content from the filestore](../../../developing_theme/dev_op_overview/manual_packaging_themes/themeopt_move_expfilestore.md)
+
 

@@ -8,6 +8,8 @@ Enabling auto-loading makes the system simpler and easier to use. Users can add 
 
 When auto-loading is turned on for a theme, it is not common to turn it off later. If you do, many pages can report missing capability error messages until appropriate profiles are assigned to the pages.
 
+
+<!--
 -   **[Changing the auto-loading of portlet capabilities with WebDAV](../dev-theme/themeopt_chng_auto_load_cap_webdav.md)**  
 You can change the auto-loading of portlet capabilities with WebDAV.
 -   **[Changing the auto-loading of portlet capabilities with XMLAccess](../dev-theme/themeopt_chng_auto_load_cap_xmlaccess.md)**  
@@ -21,5 +23,5 @@ You can change the auto-loading of portlet capabilities with XMLAccess.
 
 [Module dependencies in portlets](../dev-theme/themeopt_mod_capfilters.md)
 
-[Configuration settings for capability filters](../dev-theme/themeopt_mod_capfilter_settings.md)
+[Configuration settings for capability filters](../dev-theme/themeopt_mod_capfilter_settings.md) --->
 

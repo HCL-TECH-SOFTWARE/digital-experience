@@ -12,7 +12,8 @@ Read the topics on profiles and modules *Working with profiles* and *Writing mod
 
 4.  Copy the profile that you created to the /profiles directory.
 
-5.  Invalidate the resource aggregator cache to integrate your changes. Click the **Administration menu** icon. Then, click **Portal Analysis** \> **Theme Analyzer**. Then, click **Utilities** \> **Control Center** \> **Invalidate cache**. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](themeopt_an_util.md#).
+5.  Invalidate the resource aggregator cache to integrate your changes. Click the **Administration menu** icon. Then, click **Portal Analysis** \> **Theme Analyzer**. Then, click **Utilities** \> **Control Center** \> **Invalidate cache**. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](../themeopt_analyzer/utilities/index.md).
+
 
 <!--
 -   **[Adding or removing a capability from a portlet](../dev-theme/themeopt_add_cap_portlet.md)**  

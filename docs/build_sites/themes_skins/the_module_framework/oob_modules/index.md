@@ -20,63 +20,21 @@ The plugin.xml file location varies and is documented in the module description.
 
 |Module|Description|
 |------|-----------|
-|wp\_theme\_portal\_85|The Portal 85 theme CSS.
-
-Location: dav:fs-type1:/themes/portal8.5/css
-
-|
-|wp\_theme\_edit|Adds the ability to go into page edit mode.
-
-Location: dav:fs-type1:/themes/portal8.5/js
-
-|
-|wp\_theme\_menus|The menu framework that was introduced in 7002.
-
-Location: dav:fs-type1:/themes/portal8.5/js
-
-|
-|wp\_portlet\_css|Earlier portlet CSS support.
-
-Location: dav:fs-type1:/common-resources/ibm/css/portal
-
-|
-|wp\_legacy\_layouts|Earlier 7.0 static page layout CSS.
-
-Location: dav:fs-type1:/common-resources/ibm/css/portal
-
-|
-|wp\_layout\_windowstates|Maximize or Minimize portlet support that is implemented as a server-side data source.
-
-|
-|wp\_portal|Supplies JavaScript global configuration objects for use by other features; URLs, locale information, and user information. Implemented as a server-side data source.
-
-|
-|wp\_liveobject\_framework|Live object framework provides the feature of adding a special handler to any class selector on a tag. For example, if you have a span tag and its class contains vCard, then this framework makes this markup live. Then, when you hover on the designated text, the following hover text is shown, **click here for person card**. When you click the hover text, it shows the person card. The person card feature is available out-of-box, along with other requirements. Developers can extend this framework and add their own handlers.
-
-Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/plugin.xml
-
-|
-|wp\_oob\_sample\_styles|Styles for default web content samples.
-
-Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/pzn.ext/wp.templating.wcm/shared/app/wp.wcm.templating.jar
-
-|
-|wp\_theme\_skin\_region|Provides accessibility supportLocation: dav:fs-type1:/themes/portal8.5/js
-
-|
-|wp\_theme\_high\_contrast|Provides accessibility support when you use high contrast.Location: dav:fs-type1:/themes/portal8.5/js
-
-|
+|wp\_theme\_portal\_85|The Portal 85 theme CSS. <br/> Location: dav:fs-type1:/themes/portal8.5/css|
+|wp\_theme\_edit|Adds the ability to go into page edit mode. <br/> Location: dav:fs-type1:/themes/portal8.5/js|
+|wp\_theme\_menus|The menu framework that was introduced in 7002. <br/> Location: dav:fs-type1:/themes/portal8.5/js|
+|wp\_portlet\_css|Earlier portlet CSS support. <br/> Location: dav:fs-type1:/common-resources/ibm/css/portal|
+|wp\_legacy\_layouts|Earlier 7.0 static page layout CSS. <br/> Location: dav:fs-type1:/common-resources/ibm/css/portal|
+|wp\_layout\_windowstates|Maximize or Minimize portlet support that is implemented as a server-side data source.|
+|wp\_portal|Supplies JavaScript global configuration objects for use by other features; URLs, locale information, and user information. Implemented as a server-side data source.|
+|wp\_liveobject\_framework|Live object framework provides the feature of adding a special handler to any class selector on a tag. For example, if you have a span tag and its class contains vCard, then this framework makes this markup live. Then, when you hover on the designated text, the following hover text is shown, **click here for person card**. When you click the hover text, it shows the person card. The person card feature is available out-of-box, along with other requirements. Developers can extend this framework and add their own handlers. <br/> Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/plugin.xml|
+|wp\_oob\_sample\_styles|Styles for default web content samples. <br/> Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/pzn.ext/wp.templating.wcm/shared/app/wp.wcm.templating.jar|
+|wp\_theme\_skin\_region|Provides accessibility supportLocation: dav:fs-type1:/themes/portal8.5/js|
+|wp\_theme\_high\_contrast|Provides accessibility support when you use high contrast.Location: dav:fs-type1:/themes/portal8.5/js|
 |wp\_custom\_page\_style|The view counterpart of the Edit toolbar shelf that sets the style for a specific page. This module reads the style for a page and makes sure that the corresponding CSS is loaded into the page.|
-|getting\_started\_module|The getting started module is a predefined module that you can use as starting place to quickly inject your own resources into the current theme. For more information, see *Simple modules*.Location: dav:fs-type1:/themes/Portal8.5/modules/getting\_started\_module
-
-|
-|wp\_liveobject\_framework\_core|Live Text Framework core part that provides parsing capability. It parses page for a class selector and returns the retrieved nodes to class handler.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/ui/wp.tagging.liveobject/semTagEar/Live\_Object\_Framework.ear/liveobjects.war/WEB-INF/plugin.xml
-
-|
-|wp\_openajaxhub|The key feature of OpenAjax Hub 2.0 is its publish/subscribe engine that includes a Managed Hub mechanism that allows a host application to isolate untrusted components into secure sandboxes. Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/openajaxhub.jar
-
-|
+|getting\_started\_module|The getting started module is a predefined module that you can use as starting place to quickly inject your own resources into the current theme. For more information, see *Simple modules*.Location: dav:fs-type1:/themes/Portal8.5/modules/getting\_started\_module|
+|wp\_liveobject\_framework\_core|Live Text Framework core part that provides parsing capability. It parses page for a class selector and returns the retrieved nodes to class handler.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/ui/wp.tagging.liveobject/semTagEar/Live\_Object\_Framework.ear/liveobjects.war/WEB-INF/plugin.xml|
+|wp\_openajaxhub|The key feature of OpenAjax Hub 2.0 is its publish/subscribe engine that includes a Managed Hub mechanism that allows a host application to isolate untrusted components into secure sandboxes. Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/openajaxhub.jar|
 
 ## Simple menus
 
@@ -84,21 +42,11 @@ These modules are used by the toolbar and theme menus. For more information, see
 
 |Module|Description|
 |------|-----------|
-|wp\_simple\_contextmenu\_main|Gathers all the modules that are required to make up the simple menus. Location: dav:fs-type1:/themes/Portal8.5/contributions/simple\_contextmenu.json
-
-|
-|wp\_simple\_contextmenu\_css|Provides CSS styling for the simple menus Location: dav:fs-type1/themes/Portal8.5/contributions/simple\_contextmenu.json
-
-|
-|wp\_simple\_contextmenu\_js|Provides support to display a simple pop-up menu. Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/simple\_contextmenu.jar
-
-|
-|wp\_simple\_contextmenu\_ext|Provides extensions that plug into the simple menu, such as badge support. Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/simple\_contextmenu.jar
-
-|
-|wp\_simple\_contextmenu\_templates|Provides templates that are used to render the simple menu. Location: dav:fs-type1/themes/Portal8.5/contributions/simple\_contextmenu.json
-
-|
+|wp\_simple\_contextmenu\_main|Gathers all the modules that are required to make up the simple menus. Location: dav:fs-type1:/themes/Portal8.5/contributions/simple\_contextmenu.json|
+|wp\_simple\_contextmenu\_css|Provides CSS styling for the simple menus Location: dav:fs-type1/themes/Portal8.5/contributions/simple\_contextmenu.json|
+|wp\_simple\_contextmenu\_js|Provides support to display a simple pop-up menu. Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/simple\_contextmenu.jar|
+|wp\_simple\_contextmenu\_ext|Provides extensions that plug into the simple menu, such as badge support. Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/simple\_contextmenu.jar|
+|wp\_simple\_contextmenu\_templates|Provides templates that are used to render the simple menu. Location: dav:fs-type1/themes/Portal8.5/contributions/simple\_contextmenu.json|
 
 ## Menus
 
@@ -106,27 +54,13 @@ These modules are used by theme menus in your Portal, such as in place edit. The
 
 |Module|Description|
 |------|-----------|
-|wp\_contextmenu\_main|Gathers all the modules that are required to make up the complete **Component Action** menu.Location: dav:fs-type1:/themes/Portal8.5/contributions/contextmenu.json
-
-|
-|wp\_contextmenu\_css|Provides CSS styling for the **Component Action** menu.Location: dav:fs-type1/themes/Portal8.5/contributions/contextmenu.json
-
-|
-|wp\_contextmenu\_js|Provides support to display an open action menu for page components, for example a portlet or content item.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/contextmenu.jar
-
-|
-|wp\_contextmenu\_templates|Provides templates that are used to render the **Component Action** menu in specific contexts, for example, a menu for a component or an inline edit menu.Location: dav:fs-type1/themes/Portal8.5/contributions/contextmenu.json
-
-|
-|wp\_contextmenu\_config\_lof|Provides the configuration for the Live Object Framework service to handle **Component Action** menu instances on a page.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/contextmenu.jar
-
-|
-|wp\_contextmenu\_live\_object|Provides Live Object Framework service to handle **Component Action** menu instances on a page.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/contextmenu.jar
-
-|
-|wp\_skin\_cam|Allows the Component Action Menu to be opened by clicking an icon in the portlet skin. Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/skincomponentactionmenu.jar
-
-|
+|wp\_contextmenu\_main|Gathers all the modules that are required to make up the complete **Component Action** menu.Location: dav:fs-type1:/themes/Portal8.5/contributions/contextmenu.json|
+|wp\_contextmenu\_css|Provides CSS styling for the **Component Action** menu.Location: dav:fs-type1/themes/Portal8.5/contributions/contextmenu.json|
+|wp\_contextmenu\_js|Provides support to display an open action menu for page components, for example a portlet or content item.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/contextmenu.jar|
+|wp\_contextmenu\_templates|Provides templates that are used to render the **Component Action** menu in specific contexts, for example, a menu for a component or an inline edit menu.Location: dav:fs-type1/themes/Portal8.5/contributions/contextmenu.json|
+|wp\_contextmenu\_config\_lof|Provides the configuration for the Live Object Framework service to handle **Component Action** menu instances on a page.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/contextmenu.jar|
+|wp\_contextmenu\_live\_object|Provides Live Object Framework service to handle **Component Action** menu instances on a page.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/contextmenu.jar|
+|wp\_skin\_cam|Allows the Component Action Menu to be opened by clicking an icon in the portlet skin. Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/skincomponentactionmenu.jar|
 
 ## Dynamic Content Spots
 
@@ -134,12 +68,8 @@ These modules provide mappings for dynamic content spots in the theme.
 
 |Module|Description|
 |------|-----------|
-|wp\_dynamicContentSpots\_85|Defines all dynamic content spots for the 8.5 theme. You can overlay any dynamic content spots through other modules.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.themes/default85/installedApps/DefaultTheme85.ear/DefaultTheme85.war/WEB-INF/plugin.xml
-
-|
-|wp\_dynamicContentSpots\_toolbar85|Defines all dynamic content spots for the 8.5 toolbar theme. You can overlay any dynamic content spot through other modules.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.themes/toolbar85/installedApps/ToolbarTheme85.ear/ToolbarTheme85.war/WEB-INF/plugin.xml
-
-|
+|wp\_dynamicContentSpots\_85|Defines all dynamic content spots for the 8.5 theme. You can overlay any dynamic content spots through other modules.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.themes/default85/installedApps/DefaultTheme85.ear/DefaultTheme85.war/WEB-INF/plugin.xml|
+|wp\_dynamicContentSpots\_toolbar85|Defines all dynamic content spots for the 8.5 toolbar theme. You can overlay any dynamic content spot through other modules.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.themes/toolbar85/installedApps/ToolbarTheme85.ear/ToolbarTheme85.war/WEB-INF/plugin.xml|
 
 ## Toolbar
 
@@ -147,182 +77,68 @@ These modules provide resources for the toolbar.
 
 |Module|Description|
 |------|-----------|
-|wp\_a11y|Accessibility utility functions APIs. Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/a11y.jar
-
-|
-|wp\_admin\_edit|Module providing theme artifacts that are related to the admin area.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/plugin.xml
-
-|
-|wp\_hiddencontent|Module defining CSS to show or hide the hidden content items in the hidden layout container.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/hiddencontent.jar
-
-|
-|wp\_movecontrols|This module provides a JavaScript API, which allows for moving layout controls from one layout container to another within a page layout.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/movecontrols.jar
-
-|
-|wp\_portlet\_applications|Support module for Applications portlets.Location: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/installedApps/cell/PA\_Applications.ear/wp.portlet.applic.war/WEB-INF/plugin.xml
-
-|
-|wp\_portlet\_changelayout|Support module for Change Layout portlet. This support module shows the orphaned portlets section.Location: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/installedApps/cell/PA\_Orphaned.ear/wp.portlet.change.war/WEB-INF/plugin.xml
-
-|
-|wp\_portlet\_newcontent|Support module for New Content portlet. Location: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/installedApps/cell/PA\_com.ibm.wps.portle.ear/wp.portlet.conten.war/WEB-INF/plugin.xml
-
-|
-|wp\_portlet\_newpage|Support module for New Page portlet. Location: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/installedApps/cell/PA\_New\_Page.ear/wp.portlet.newpag.war/WEB-INF/plugin.xml
-
-|
-|wp\_portlet\_overview|Support module for Overview portlet. Location: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/installedApps/cell/PA\_com.ibm.wps.portle.ear/wp.portlet.conten.war/WEB-INF/plugin.xml
-
-|
-|wp\_portlet\_projects|Support module for Project portlet. Location: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/installedApps/cell/PA\_com.ibm.wps.portle.ear/wp.portlet.conten.war/WEB-INF/plugin.xml
-
-|
-|wp\_portlet\_sitemap|Support module for Sitemap portlet. Location: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/installedApps/cell/PA\_com.ibm.wps.portle.ear/wp.portlet.conten.war/WEB-INF/plugin.xml
-
-|
-|wp\_portlet\_style|Support for mode styles portlet. Location: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/installedApps/cell/PA\_Styles.ear/wp.portlet.styles.war/WEB-INF/plugin.xml
-
-|
-|wp\_portlet\_vanityurl|Support for the Vanity URL portlet. Location: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/installedApps/cell/PA\_VanityUrl.ear/wp.portlet.vanity.war/WEB-INF/plugin.xml
-
-|
-|wp\_portlet\_wiring|Dependencies of the wiring portletLocation: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/installedApps/cell/PA\_Wiring.ear/wp.portlet.wiring.war/WEB-INF/plugin.xml
-
-|
-|wp\_portlet\_wiring\_resources|Resources that are provided by the portlet.Location: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/installedApps/cell/PA\_Wiring.ear/wp.portlet.wiring.war/WEB-INF/plugin.xml
-
-|
-|wp\_state\_page|Module that shows the page-specific public render parameters to the client and also provides JavaScript APIs that allow for reading and writing these parameters.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/state.jar!/plugin.xml
-
-|
-|wp\_state\_page\_modes|Module that annotates the HTML body element of the DOM with microformats that reflect the page modes that are currently active. The supported page modes are page edit mode, or microformat edit-mode, page information mode, or microformat info-mode," and page help mode or microformat "help-mode". Unlike portlet modes, multiple page modes can be active at the same time.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/state.jar!/plugin.xml
-
-|
-|wp\_theme\_utils|Module providing a set of JavaScript utility APIs, which can be used to work with the DOM of the different page parts, which are potentially running in different iframes.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/themeutils.jar
-
-|
-|wp\_toolbar85|Module providing a dynamic content spot that allows for embedding the main window of the site toolbar into a theme. The id for the dynamic content spot is `85toolbar`.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/toolbar.jar
-
-|
-|wp\_toolbar85\_dynamic|Module that displays the main control panel of the site toolbar without relying on a dynamic content spot.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/toolbar.jar
-
-|
-|wp\_toolbar\_actionbar|Module providing a dynamic content spot that renders the main action bar of the site toolbar in the 8.5 theme. The action bar provides access to the site toolbar navigation, project menu, and more menu and also allows for activating page edit mode and page information mode. The id for the dynamic content spot is `85toolbar_actionbar`.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/actionbar.jar
-
-|
-|wp\_toolbar\_changepagelayout|Module providing the Change Page Layout function for menus.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar
-
-|
-|wp\_toolbar\_common|Module providing common resources such as CSS styles, images, and JavaScript for the site toolbar. The resources are supposed to be used in the toolbar theme or by portlets that run in the site toolbar.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/common.jar
-
-|
-|wp\_toolbar\_common\_wcm|Module providing common WCM-related resources such as CSS styles, images, and JavaScript for the site toolbar. The resources are supposed to be used in the toolbar theme or by portlets that run in the site toolbar.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/common.jar
-
-|
-|wp\_toolbar\_contextmenu\_js|A theme module that defines a simple JavaScript API for creating menus and managing their lifecycle.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/contextmenu.jar
-
-|
-|wp\_toolbar\_controlactions|Module providing the resources that are common to all layout control and portlet-specific menu contributions.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar
-
-|
-|wp\_toolbar\_createpage|Module providing the "Create Page" function for menus.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar
-
-|
-|wp\_toolbar\_deletecontrol|Module providing the "Delete Control" function for portlet menus.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar
-
-|
-|wp\_toolbar\_deletepage|Module providing the Delete Page function for menus.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar
-
-|
-|wp\_toolbar\_editpageproperties|Module providing the "Edit Page Properties" function for menus.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar
-
-|
-|wp\_toolbar\_hiddencontent|Module providing the functions for showing and hiding the layout container that contains the portlets and content items that are currently hidden.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar
-
-|
-|wp\_toolbar\_hidecontrol|Module providing the functions for moving portlets or content items into the hidden layout container of the page.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar
-
-|
-|wp\_toolbar\_host|Meta module that groups all theme modules that are needed to make a page interoperable with the site toolbar. Add this module to the theme profile of your page if you want to edit the page by using the site toolbar. This module contains all contributions for both, view mode and edit mode. This module must be added to the non-deferred section of the theme profile.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/toolbar.jar
-
-|
-|wp\_toolbar\_host\_dynamic|Meta module that groups all theme modules that are needed to make a page interoperable with the site toolbar. Add this module to the theme profile of your page if you want to edit the page by using the site toolbar. This module contains all contributions for both, view mode and edit mode. This module must be added to the non-deferred section of the theme profile.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/toolbar.jar
-
-|
-|wp\_toolbar\_host\_dynamic\_view|Module that groups all theme modules that are needed to make a page interoperable with the site toolbar. Add this module to the theme profile of your page if you want to edit the page by using the site toolbar. This module contains all contributions that are needed for view mode. This module must be added to the non-deferred section of the theme profile.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/toolbar.jar
-
-|
-|wp\_toolbar\_host\_edit|Module that groups all theme modules that are needed to make a page interoperable with the site toolbar. Add this module to the theme profile of your page if you want to edit the page by using the site toolbar. This module contains all contributions that are needed for edit mode. This module can be added to the deferred section of the theme profile.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/toolbar.jar
-
-|
-|wp\_toolbar\_host\_view|Module that groups all theme modules that are needed to make a page interoperable with the site toolbar. Add this module to the theme profile of your page if you want to edit the page by using the site toolbar. This module contains all contributions that are needed for view mode. This module must be added to the non-deferred section of the theme profile.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/toolbar.jar
-
-|
-|wp\_toolbar\_logo|Module providing a dynamic content spot to embed the toolbar logo into a theme. The identifier of the dynamic content spot is `85toolbar_logo`.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/logo.jar
-
-|
-|wp\_toolbar\_menuactions|Module providing the resources that are common to all toolbar-specific menu contributions.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar
-
-|
-|wp\_toolbar\_moremenu|Module defining the more menu of the toolbar. This module provides a content spot to embed the more menu into a theme. The ID of the dynamic content spot is `85toolbar_moremenu`.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/moremenu.jar
-
-|
-|wp\_toolbar\_movecontrol|Module providing the Move Control functions for portlet menus.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar
-
-|
-|wp\_toolbar\_movepage|Module providing the Move Page function for menus.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar
-
-|
-|wp\_toolbar\_pageactions|Module providing the resources that are common to all page-specific menu contributions.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar
-
-|
-|wp\_toolbar\_projectmenu|Module for integrating the project menu into the toolbar. This module provides a content spot to embed the project menu into a theme. The ID of the dynamic content spot is `85toolbar_projectmenu`.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/projectmenu.jar
-
-|
-|wp\_toolbar\_sitepreview|Module providing the "Preview as User" and "Preview as Unauthenticated" functions for menus.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar
-
-|
-|wp\_toolbar\_sitepreview\_contentspot|Module providing the dynamic content spot to embed the site preview function into the theme. The ID of the dynamic content spot is `85toolbar_preview`.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/preview.jar
-
-|
-|wp\_toolbar\_tab|Meta module that groups all theme modules that are needed to add a page to the site toolbar. Add this module to the theme profile of your page if your page is to run in the site toolbar.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/toolbar.jar
-
-|
-|wp\_toolbar\_utils|Module providing toolbar utility functions for opening or closing the toolbar, engaging edit mode, or opening a toolbar tab.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/toolbar.jar
-
-|
-|wp\_toolbar\_validator|Module to validate the state of the toolbar tab frame. This module is needed for handling context switches, such as session timeouts, correctly.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/toolbar.jar
-
-|
-|wp\_toolbar\_viewframe\_validator|Module to validate the state of the view frame. This module is needed for handling context switches, such as session timeouts, correctly.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/toolbar.jar
-
-|
-|wp\_toolbar\_wiring|Module providing the functions for managing communication endpoints and portlet wires.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar
-
-|
-|wp\_photon\_iframe|XSLT transformation for iFrame transport.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/photon.jar
-
-|
-|wp\_photon\_promisor|A promiser implementation.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/photon.jar
-
-|
-|wp\_photon\_xslt|XML and XLST utility functionsLocation: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/photon.jar
-
-|
-|wp\_toolbar\_ghost|Module that groups all theme modules that are needed to make a page interoperable with the site toolbar without rendering it. This module must be added to the non-deferred section of the theme profile.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/toolbar.jar
-
-|
-|wp\_draft\_page\_ribbon|Adds Draft Page in text that appears along the sides of a page that has a draft in the current project.
-
- Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/draftribbon.jar
-
-|
+|wp\_a11y|Accessibility utility functions APIs. Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/a11y.jar|
+|wp\_admin\_edit|Module providing theme artifacts that are related to the admin area.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/plugin.xml|
+|wp\_hiddencontent|Module defining CSS to show or hide the hidden content items in the hidden layout container.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/hiddencontent.jar|
+|wp\_movecontrols|This module provides a JavaScript API, which allows for moving layout controls from one layout container to another within a page layout.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/movecontrols.jar|
+|wp\_portlet\_applications|Support module for Applications portlets.Location: [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)/installedApps/cell/PA\_Applications.ear/wp.portlet.applic.war/WEB-INF/plugin.xml|
+|wp\_portlet\_changelayout|Support module for Change Layout portlet. This support module shows the orphaned portlets section.Location: [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)/installedApps/cell/PA\_Orphaned.ear/wp.portlet.change.war/WEB-INF/plugin.xml|
+|wp\_portlet\_newcontent|Support module for New Content portlet. Location: [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)/installedApps/cell/PA\_com.ibm.wps.portle.ear/wp.portlet.conten.war/WEB-INF/plugin.xml|
+|wp\_portlet\_newpage|Support module for New Page portlet. Location: [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)/installedApps/cell/PA\_New\_Page.ear/wp.portlet.newpag.war/WEB-INF/plugin.xml|
+|wp\_portlet\_overview|Support module for Overview portlet. Location: [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)/installedApps/cell/PA\_com.ibm.wps.portle.ear/wp.portlet.conten.war/WEB-INF/plugin.xml|
+|wp\_portlet\_projects|Support module for Project portlet. Location: [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)/installedApps/cell/PA\_com.ibm.wps.portle.ear/wp.portlet.conten.war/WEB-INF/plugin.xml|
+|wp\_portlet\_sitemap|Support module for Sitemap portlet. Location: [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)/installedApps/cell/PA\_com.ibm.wps.portle.ear/wp.portlet.conten.war/WEB-INF/plugin.xml|
+|wp\_portlet\_style|Support for mode styles portlet. Location: [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)/installedApps/cell/PA\_Styles.ear/wp.portlet.styles.war/WEB-INF/plugin.xml|
+|wp\_portlet\_vanityurl|Support for the Vanity URL portlet. Location: [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)/installedApps/cell/PA\_VanityUrl.ear/wp.portlet.vanity.war/WEB-INF/plugin.xml|
+|wp\_portlet\_wiring|Dependencies of the wiring portletLocation: [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)/installedApps/cell/PA\_Wiring.ear/wp.portlet.wiring.war/WEB-INF/plugin.xml|
+|wp\_portlet\_wiring\_resources|Resources that are provided by the portlet.Location: [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)/installedApps/cell/PA\_Wiring.ear/wp.portlet.wiring.war/WEB-INF/plugin.xml|
+|wp\_state\_page|Module that shows the page-specific public render parameters to the client and also provides JavaScript APIs that allow for reading and writing these parameters.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/state.jar!/plugin.xml|
+|wp\_state\_page\_modes|Module that annotates the HTML body element of the DOM with microformats that reflect the page modes that are currently active. The supported page modes are page edit mode, or microformat edit-mode, page information mode, or microformat info-mode," and page help mode or microformat "help-mode". Unlike portlet modes, multiple page modes can be active at the same time.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/state.jar!/plugin.xml|
+|wp\_theme\_utils|Module providing a set of JavaScript utility APIs, which can be used to work with the DOM of the different page parts, which are potentially running in different iframes.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/themeutils.jar|
+|wp\_toolbar85|Module providing a dynamic content spot that allows for embedding the main window of the site toolbar into a theme. The id for the dynamic content spot is `85toolbar`.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/toolbar.jar|
+|wp\_toolbar85\_dynamic|Module that displays the main control panel of the site toolbar without relying on a dynamic content spot.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/toolbar.jar|
+|wp\_toolbar\_actionbar|Module providing a dynamic content spot that renders the main action bar of the site toolbar in the 8.5 theme. The action bar provides access to the site toolbar navigation, project menu, and more menu and also allows for activating page edit mode and page information mode. The id for the dynamic content spot is `85toolbar_actionbar`.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/actionbar.jar|
+|wp\_toolbar\_changepagelayout|Module providing the Change Page Layout function for menus.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar|
+|wp\_toolbar\_common|Module providing common resources such as CSS styles, images, and JavaScript for the site toolbar. The resources are supposed to be used in the toolbar theme or by portlets that run in the site toolbar.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/common.jar|
+|wp\_toolbar\_common\_wcm|Module providing common WCM-related resources such as CSS styles, images, and JavaScript for the site toolbar. The resources are supposed to be used in the toolbar theme or by portlets that run in the site toolbar.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/common.jar|
+|wp\_toolbar\_contextmenu\_js|A theme module that defines a simple JavaScript API for creating menus and managing their lifecycle.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/contextmenu.jar|
+|wp\_toolbar\_controlactions|Module providing the resources that are common to all layout control and portlet-specific menu contributions.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar|
+|wp\_toolbar\_createpage|Module providing the "Create Page" function for menus.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar|
+|wp\_toolbar\_deletecontrol|Module providing the "Delete Control" function for portlet menus.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar|
+|wp\_toolbar\_deletepage|Module providing the Delete Page function for menus.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar|
+|wp\_toolbar\_editpageproperties|Module providing the "Edit Page Properties" function for menus.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar|
+|wp\_toolbar\_hiddencontent|Module providing the functions for showing and hiding the layout container that contains the portlets and content items that are currently hidden.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar|
+|wp\_toolbar\_hidecontrol|Module providing the functions for moving portlets or content items into the hidden layout container of the page.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar|
+|wp\_toolbar\_host|Meta module that groups all theme modules that are needed to make a page interoperable with the site toolbar. Add this module to the theme profile of your page if you want to edit the page by using the site toolbar. This module contains all contributions for both, view mode and edit mode. This module must be added to the non-deferred section of the theme profile.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/toolbar.jar|
+|wp\_toolbar\_host\_dynamic|Meta module that groups all theme modules that are needed to make a page interoperable with the site toolbar. Add this module to the theme profile of your page if you want to edit the page by using the site toolbar. This module contains all contributions for both, view mode and edit mode. This module must be added to the non-deferred section of the theme profile.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/toolbar.jar|
+|wp\_toolbar\_host\_dynamic\_view|Module that groups all theme modules that are needed to make a page interoperable with the site toolbar. Add this module to the theme profile of your page if you want to edit the page by using the site toolbar. This module contains all contributions that are needed for view mode. This module must be added to the non-deferred section of the theme profile.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/toolbar.jar|
+|wp\_toolbar\_host\_edit|Module that groups all theme modules that are needed to make a page interoperable with the site toolbar. Add this module to the theme profile of your page if you want to edit the page by using the site toolbar. This module contains all contributions that are needed for edit mode. This module can be added to the deferred section of the theme profile.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/toolbar.jar|
+|wp\_toolbar\_host\_view|Module that groups all theme modules that are needed to make a page interoperable with the site toolbar. Add this module to the theme profile of your page if you want to edit the page by using the site toolbar. This module contains all contributions that are needed for view mode. This module must be added to the non-deferred section of the theme profile.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/toolbar.jar|
+|wp\_toolbar\_logo|Module providing a dynamic content spot to embed the toolbar logo into a theme. The identifier of the dynamic content spot is `85toolbar_logo`.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/logo.jar|
+|wp\_toolbar\_menuactions|Module providing the resources that are common to all toolbar-specific menu contributions.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar|
+|wp\_toolbar\_moremenu|Module defining the more menu of the toolbar. This module provides a content spot to embed the more menu into a theme. The ID of the dynamic content spot is `85toolbar_moremenu`.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/moremenu.jar|
+|wp\_toolbar\_movecontrol|Module providing the Move Control functions for portlet menus.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar|
+|wp\_toolbar\_movepage|Module providing the Move Page function for menus.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar|
+|wp\_toolbar\_pageactions|Module providing the resources that are common to all page-specific menu contributions.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar|
+|wp\_toolbar\_projectmenu|Module for integrating the project menu into the toolbar. This module provides a content spot to embed the project menu into a theme. The ID of the dynamic content spot is `85toolbar_projectmenu`.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/projectmenu.jar|
+|wp\_toolbar\_sitepreview|Module providing the "Preview as User" and "Preview as Unauthenticated" functions for menus.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar|
+|wp\_toolbar\_sitepreview\_contentspot|Module providing the dynamic content spot to embed the site preview function into the theme. The ID of the dynamic content spot is `85toolbar_preview`.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/preview.jar|
+|wp\_toolbar\_tab|Meta module that groups all theme modules that are needed to add a page to the site toolbar. Add this module to the theme profile of your page if your page is to run in the site toolbar.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/toolbar.jar|
+|wp\_toolbar\_utils|Module providing toolbar utility functions for opening or closing the toolbar, engaging edit mode, or opening a toolbar tab.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/toolbar.jar|
+|wp\_toolbar\_validator|Module to validate the state of the toolbar tab frame. This module is needed for handling context switches, such as session timeouts, correctly.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/toolbar.jar|
+|wp\_toolbar\_viewframe\_validator|Module to validate the state of the view frame. This module is needed for handling context switches, such as session timeouts, correctly.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/toolbar.jar|
+|wp\_toolbar\_wiring|Module providing the functions for managing communication endpoints and portlet wires.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/menuactions.jar|
+|wp\_photon\_iframe|XSLT transformation for iFrame transport.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/photon.jar|
+|wp\_photon\_promisor|A promiser implementation.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/photon.jar|
+|wp\_photon\_xslt|XML and XLST utility functionsLocation: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/photon.jar|
+|wp\_toolbar\_ghost|Module that groups all theme modules that are needed to make a page interoperable with the site toolbar without rendering it. This module must be added to the non-deferred section of the theme profile.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/toolbar/wp.toolbar.modules/webapp/installedApps/ToolbarModules.ear/ToolbarModules.war/WEB-INF/lib/toolbar.jar|
+|wp\_draft\_page\_ribbon|Adds Draft Page in text that appears along the sides of a page that has a draft in the current project. <br/> Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/draftribbon.jar|
 
 ## Drag-and-drop
 
 These modules provide the toolbar drag-and-drop function.
 
-Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/dnd.jar
+Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/dnd.jar
 
 |Module|Description|
 |------|-----------|
@@ -336,31 +152,25 @@ These modules provide Web Content Manager functions.
 
 |Module|Description|
 |------|-----------|
-|wcm\_config|Web Content Manager Config is a resource that is intended to be used by Web Content Manager theme modules.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/wcm/prereq.wcm/wcm/shared/app/ilwwcm-services-impl.jar
-
-|
-|wcm\_inplaceEdit|In-place editing enables users with edit access to a content item to edit fields of that item from within the web page itself instead of using the authoring portlet. This feature is available when you display content with a web content viewer portlet.Location: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/installedApps/cell/wcm.ear/wcm-inplaceEdit.war/WEB-INF/plugin.xml
-
-|
+|wcm\_config|Web Content Manager Config is a resource that is intended to be used by Web Content Manager theme modules.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/wcm/prereq.wcm/wcm/shared/app/ilwwcm-services-impl.jar|
+|wcm\_inplaceEdit|In-place editing enables users with edit access to a content item to edit fields of that item from within the web page itself instead of using the authoring portlet. This feature is available when you display content with a web content viewer portlet.Location: [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)/installedApps/cell/wcm.ear/wcm-inplaceEdit.war/WEB-INF/plugin.xml|
 
 ## Content Mapping
 
 Description: Provides content mapping support.
 
-[PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/contentmapping/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/contentmapping.jar
+[PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/contentmapping/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/contentmapping.jar
 
 |Module|Description|
 |------|-----------|
 |wp\_content\_mapping\_picker|Provides the Content Mapping Picker dialog that allows one to select a piece of content from Web Content Manager.|
-|wp\_content\_targeting\_cam|Provides resources that are required for the Content Targeting dialog that is started from the **Component Action** menu.Location: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/installedApps/cell/PA\_wp.pzn.ui.actions.ear/wp.pzn.ui.actions.war/WEB-INF/plugin.xml
-
-|
+|wp\_content\_targeting\_cam|Provides resources that are required for the Content Targeting dialog that is started from the **Component Action** menu. <br/> Location: [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)/installedApps/cell/PA\_wp.pzn.ui.actions.ear/wp.pzn.ui.actions.war/WEB-INF/plugin.xml|
 
 ## Federation
 
 Description: Provides federated document picker support.
 
-[PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/federation/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/federation.jar
+[PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/federation/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/federation.jar
 
 |Module|
 |------|
@@ -370,20 +180,18 @@ Description: Provides federated document picker support.
 
 These modules provide JavaScript code for the search box widget and provide a JSP to generate the search box markup that can be started as a dynamic content spot.
 
-The plugin.xml file location is [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/search.jar
+The plugin.xml file location is [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/search.jar
 
 |Module|Description|
 |------|-----------|
 |wp\_search|Search widget|
-|wp\_searchbar|Lightweight inline search bar that redirects to the search page to show results.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/search.jar
-
-|
+|wp\_searchbar|Lightweight inline search bar that redirects to the search page to show results.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/search.jar|
 
 ## Analytics
 
 These modules provide Analytics support.
 
-[PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/asa/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/asa.jar
+[PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/asa/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/asa.jar
 
 |Module|Description|
 |------|-----------|
@@ -398,7 +206,7 @@ These modules provide Analytics support.
 
 These modules provide resources for Personalization.
 
-Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/pzn/prereq.pzn/installedApps/Personalization\_Workspace.ear/pznauthorportlet.war/WEB-INF/plugin.xml
+Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/pzn/prereq.pzn/installedApps/Personalization\_Workspace.ear/pznauthorportlet.war/WEB-INF/plugin.xml
 
 |Module|Description|
 |------|-----------|
@@ -416,7 +224,7 @@ No prerequisites are required to use this theme module.
 
 These modules provide resources to the web dock application.
 
-Location: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)installedApps/cell/PA\_WebDockPortServlet.ear/WebDockPortlet.war/WEB-INF/plugin.xml
+Location: [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)installedApps/cell/PA\_WebDockPortServlet.ear/WebDockPortlet.war/WEB-INF/plugin.xml
 
 |Module|Description|
 |------|-----------|
@@ -463,7 +271,7 @@ Location for all wl\_\* modules:`[PortalServer\_root](../reference/wpsdirstr.md#
 
 These modules provide the code for integrating with HCL Sametime `stlinks` support and new proxy support.
 
-The plugin.xml file location is [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/sametime.jar
+The plugin.xml file location is [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/sametime.jar
 
 |Module|Description|
 |------|-----------|
@@ -474,7 +282,7 @@ The plugin.xml file location is [PortalServer\_root](../reference/wpsdirstr.md#p
 
 These modules provide the Web Application Integrator.
 
-Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/ic4\_wai.jar!/plugin.xml
+Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/ic4\_wai.jar!/plugin.xml
 
 |Module|Description|
 |------|-----------|
@@ -484,30 +292,22 @@ Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod
 
 These modules provide JavaScript utility code with no dependencies on the Dojo Toolkit in the i$ global namespace. These modules are useful for light-weight themes with no framework dependencies. The code includes type checks, configuration that merges, IO utilities, JSON parsing, DOM helpers, Promises, and eventing.
 
-The plugin.xml file location is [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/ibmc.jar
+The plugin.xml file location is [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/ibmc.jar
 
 |Module|Description|
 |------|-----------|
 |wp\_client\_main|Contains basic utilities.|
 |wp\_client\_ext|Contains advanced utilities like Promises, IO, DOM helpers, events, and the deferred module loading code.|
-|wp\_client\_dnd|Contains drag-and-drop capabilities. Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/ibmc.jar
-
-|
-|wp\_client\_logging|Contains logging capabilities for error, warning, and information messages.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/ibmc.jar
-
-|
-|wp\_client\_selector|Contains a JavaScript CSS selector engine. Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/ibmc.jar
-
-|
-|wp\_client\_tracing|Contains tracing capabilities.Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/ibmc.jar
-
-|
+|wp\_client\_dnd|Contains drag-and-drop capabilities. Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/ibmc.jar|
+|wp\_client\_logging|Contains logging capabilities for error, warning, and information messages.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/ibmc.jar|
+|wp\_client\_selector|Contains a JavaScript CSS selector engine. Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/ibmc.jar|
+|wp\_client\_tracing|Contains tracing capabilities.Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/ibmc.jar|
 
 ## Portal Client
 
 These modules provide utilities and base code for other modules, including Tagging and Rating.
 
-The plugin.xml file location is [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/portalclient.jar
+The plugin.xml file location is [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/portalclient.jar
 
 |Module|Description|
 |------|-----------|
@@ -526,7 +326,7 @@ The plugin.xml file location is [PortalServer\_root](../reference/wpsdirstr.md#p
 
 These modules provide the theme dialog function.
 
-Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/dialog.jar
+Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/dialog.jar
 
 |Module|Description|
 |------|-----------|
@@ -544,7 +344,7 @@ Meta-Module
 -   wp\_one\_ui
 -   wp\_one\_ui\_dijit
 
-The plugin.xml file location is [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/oneui.jar
+The plugin.xml file location is [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/oneui.jar
 
 |Module|Description|
 |------|-----------|
@@ -566,20 +366,21 @@ The meta module definitions are stored in the following files:
 
 -   **dojo19.json**
 
-    In [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/v1.9
+    In [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/v1.9
 
 -   **dojo17.json**
 
-    In [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/v1.7
+    In [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/v1.7
 
 -   **dojo16.json**
 
-    In [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/v1.6
+    In [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/v1.6
 
 
 To activate a version, copy the corresponding file into the WebDAV dav:fs-type1:/themes/portal8.5/contribution folder. Delete the previous file and restart the server.
 
-**Note:** You can have only one file in the folder at one time because the dojo16.json, dojo17.json, and dojo19.json files are not supported at the same time. Specific Dojo modules are listed in the Dojo 1.9, Dojo 1.7 and Dojo 1.6 sections. For a list of Dojo classes that are provided by each meta-module, see more information Dojo classes that are provided by the Dojo modules.
+!!! note
+    You can have only one file in the folder at one time because the dojo16.json, dojo17.json, and dojo19.json files are not supported at the same time. Specific Dojo modules are listed in the Dojo 1.9, Dojo 1.7 and Dojo 1.6 sections. For a list of Dojo classes that are provided by each meta-module, see more information Dojo classes that are provided by the Dojo modules.
 
 The following list shows the meta-modules.
 
@@ -636,7 +437,7 @@ The following list shows the meta-modules.
 
 ## Dojo 1.9 modules
 
-The plugin.xml file location is [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/v1.9
+The plugin.xml file location is [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/v1.9
 
 |Module|
 |------|
@@ -695,7 +496,7 @@ The plugin.xml file location is [PortalServer\_root](../reference/wpsdirstr.md#p
 
 ## Dojo 1.7 modules
 
-The plugin.xml file location is [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/v1.7
+The plugin.xml file location is [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/v1.7
 
 |Module|
 |------|
@@ -742,7 +543,7 @@ The plugin.xml file location is [PortalServer\_root](../reference/wpsdirstr.md#p
 
 ## Dojo 1.6 modules
 
-The plugin.xml file location is [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/v1.6
+The plugin.xml file location is [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/v1.6
 
 |Module|
 |------|
@@ -787,7 +588,7 @@ The plugin.xml file location is [PortalServer\_root](../reference/wpsdirstr.md#p
 
 These modules provide jQuery.
 
-Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.jquery/installedApps/wp.theme.jquery.ear/wp.theme.jquery.war/WEB-INF/plugin.xml
+Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.jquery/installedApps/wp.theme.jquery.ear/wp.theme.jquery.war/WEB-INF/plugin.xml
 
 |Module|Description|
 |------|-----------|
@@ -797,7 +598,7 @@ Location: [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod
 
 These modules provide support for the modularized Page Builder themes from 7.0.
 
-The plugin.xml file location is [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/ui/wp.mashup.cc.deploy/installedApps/MashupCommonComponent.ear/mm.builder.v3001.war/WEB-INF
+The plugin.xml file location is [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/ui/wp.mashup.cc.deploy/installedApps/MashupCommonComponent.ear/mm.builder.v3001.war/WEB-INF
 
 |Module|Description|
 |------|-----------|
@@ -816,22 +617,14 @@ The plugin.xml file location varies and is documented in the module description.
 
 |Module|Description|
 |------|-----------|
-|wp\_pagebuilder\_standard\_skin\_70|Earlier 7.0 standard skin
-
-Location: dav:fs-type1/skins/Standard/
-
-|
-|wp\_pagebuilder\_noskin\_skin\_70|Earlier 7.0 no skin
-
-Location: dav:fs-type1/skins/NoSkin/
-
-|
+|wp\_pagebuilder\_standard\_skin\_70|Earlier 7.0 standard skin. <br/> Location: dav:fs-type1/skins/Standard/|
+|wp\_pagebuilder\_noskin\_skin\_70|Earlier 7.0 no skin. <br/> Location: dav:fs-type1/skins/NoSkin/|
 
 ## Mashups Enabler
 
 Provides the modules for Enabler from the Mashups 3.0.0.1 release.
 
-The plugin.xml file location is [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/ui/wp.mashup.cc.deploy/installedApps/MashupCommonComponent.ear/mm.enabler.war.v3001.war/WEB-INF
+The plugin.xml file location is [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/ui/wp.mashup.cc.deploy/installedApps/MashupCommonComponent.ear/mm.enabler.war.v3001.war/WEB-INF
 
 |Module|Description|
 |------|-----------|
@@ -844,7 +637,7 @@ The plugin.xml file location is [PortalServer\_root](../reference/wpsdirstr.md#p
 
 Provides the modules for Builder from the Mashups 3.0.0.1 release.
 
-The plugin.xml file location is [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/ui/wp.mashup.cc.deploy/installedApps/MashupCommonComponent.ear/mm.builder.v3001.war/WEB-INF
+The plugin.xml file location is [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/ui/wp.mashup.cc.deploy/installedApps/MashupCommonComponent.ear/mm.builder.v3001.war/WEB-INF
 
 |Module|Description|
 |------|-----------|
@@ -857,7 +650,7 @@ The plugin.xml file location is [PortalServer\_root](../reference/wpsdirstr.md#p
 
 These modules provide user interface code.
 
-The plugin.xml file location is [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/ui/wp.mashup.cc.deploy/installedApps/MashupCommonComponent.ear/mm.builder.v3001.war/WEB-INF
+The plugin.xml file location is [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/ui/wp.mashup.cc.deploy/installedApps/MashupCommonComponent.ear/mm.builder.v3001.war/WEB-INF
 
 Page handling
 
@@ -883,7 +676,7 @@ Portlet handling
 
 These modules contain code for running Page Builder functions.
 
-The plugin.xml file location is [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/pagebuilder.jar
+The plugin.xml file location is [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/pagebuilder.jar
 
 |Module|Description|
 |------|-----------|
@@ -908,6 +701,7 @@ The plugin.xml file location is [PortalServer\_root](../reference/wpsdirstr.md#p
 |wp\_preview\_menu|A managed pages theme module for the Preview function that is seen in the **More** menu|
 |wp\_template\_select\_dialog|A dialog that is started from the **New Page** dialog. A user can pick a page template and base a newly created page on that template.|
 
+<!--
 -   **[Module capabilities](../dev-theme/themeopt_oob_capability.md)**  
 Module capabilities enable the use of modules in the theme.
 -   **[Dojo classes provided by the Dojo modules](../dev-theme/themeopt_oob_dojoclass.md)**  
@@ -927,5 +721,5 @@ A list of Dojo classes that are provided by each version 1.9 Dojo meta-module.
 
 [Customizing the CSS styles of social lists](../social/soc_rendr_custom_css_styles.md)
 
-[Understanding the Portal 8.5 modularized theme](../dev-theme/themeopt_defaultparts.md)
+[Understanding the Portal 8.5 modularized theme](../dev-theme/themeopt_defaultparts.md) -->
 
