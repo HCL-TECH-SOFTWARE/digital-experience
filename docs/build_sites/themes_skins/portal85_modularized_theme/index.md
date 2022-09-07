@@ -15,6 +15,7 @@ By applying these concepts it is possible to turn on and off an arbitrary number
 
 The Portal 8.5 theme contains three types of files: JavaScript, dynamic content \(JSP files\) and static resources.
 
+<!--
 -   **[Static resources](../dev-theme/themeopt_defaultparts_static.md)**  
 Static resources include the markup that is defined by .html, .css, and .js files that are used by the theme. Some .json files are used to define menu options, module definitions, and module profiles.
 -   **[Dynamic content \(jsp\) resources](../dev-theme/themeopt_defaultparts_jsp.md)**  
@@ -38,5 +39,5 @@ Dynamic content includes resources that are defined by jsp files that are used b
 
 [<portal-logic/\> tags](../dev-portlet/dgn_ptllogic.md)
 
-[Dynamically changing the language during the user session](../admin-system/adchglang_dynamic.md)
+[Dynamically changing the language during the user session](../admin-system/adchglang_dynamic.md) -->
 
