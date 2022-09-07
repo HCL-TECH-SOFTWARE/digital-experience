@@ -2,9 +2,9 @@
 
 You must repackage the static content as a WAR file or as an EAR file containing the WAR file when it is not possible to exchange the static content with the Operations Team as a separate compressed file.
 
-To package and export theme files using the Theme Manager, go to [Theme PAA files](themeopt_themedev_exportedpaa.md#).
+To package and export theme files using the Theme Manager, go to [Theme PAA files](../../../developing_theme/dev_op_overview/theme_paa_files/index.md).
 
-Create a custom theme before starting this process. To create a theme based on the Version 8.5 theme, go to [Create a copy of the theme](themeopt_cust_copytheme.md#).
+Create a custom theme before starting this process. To create a theme based on the Version 8.5 theme, go to [Create a copy of the theme](../../../customizing_theme/copying_theme/manual_copy_theme/index.md).
 
 You must create and collect the required code artifacts, the scripts to register the theme and skins, and the list of required runtime configuration changes. Create an EAR file that contains one WAR file containing the dynamic content of the theme and one WAR file containing the static content.
 
@@ -17,6 +17,7 @@ If you performed more changes, like deleting files or changing file names, then 
 
 Cache headers are not automatically set for static files served from a war file. External means, such as overwriting headers in the HTTP Server, must be used in this case. When you use this approach, complete the Base Portal Tuning - *Web Server tuning* chapter of the [HCL Digital Experience Performance Tuning Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074411) for optimal performance.
 
+<!--
 -   **[Adding static content to your custom theme](../dev-theme/themeopt_move_repack_addstatic.md)**  
 After you create a theme, you can begin to customize it by adding static content.
 -   **[Adapt the scripts that register the custom theme and skins](../dev-theme/themeopt_move_repack_script.md)**  
@@ -34,5 +35,5 @@ You must export content from the filestore to create your custom theme. There ar
 
 [Manually creating a copy of your theme](../dev-theme/themeopt_cust_copytheme.md)
 
-[Development and operations overview](../dev-theme/themeopt_move_devopaspect.md)
+[Development and operations overview](../dev-theme/themeopt_move_devopaspect.md) --->
 

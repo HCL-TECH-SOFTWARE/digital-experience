@@ -6,11 +6,12 @@ While you develop your Portal site, you can copy the Simple Theme by clicking **
 
 The exported theme contains only the theme definition and static resources. It does not include the WAR file that is connected to the theme template. Install the connected WAR file before you import the new theme so that the theme works correctly. In this example, the Simple Theme must be installed on the production server at the same context root as the development server before you import the PAA for the modified Simple Theme.
 
+<!--
 -   **[Exporting theme PAA files](../dev-theme/themeopt_themedev_export.md)**  
 You can export your themes as PAA files so that you can install them on other servers.
 -   **[Installing theme PAA files](../dev-theme/themeopt_themedev_install.md)**  
 After you export a theme as a PAA file, you can install it on a different server.
 -   **[Uninstalling theme PAA files](../dev-theme/themeopt_themedev_uninstall.md)**  
-You can uninstall theme PAA files that you no longer want to use.
+You can uninstall theme PAA files that you no longer want to use. -->
 
 

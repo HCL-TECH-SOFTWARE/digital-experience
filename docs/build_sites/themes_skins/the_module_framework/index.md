@@ -10,6 +10,7 @@ You can set dependencies on features in portlets and profiles. The features are 
 
 Modules are registered extensions that are then used by a module profile. Each module is enumerated by the modules unique identifiers. A module might require other modules to allow the automatic inclusion of necessary code that is required to make a particular feature work. For example, you can use of the Dojo Toolkit within a module. A module can use the Dojo Toolkit to build custom widgets. To separate the code for the module from the Dojo code, the module requires certain Dojo modules to ensure that the code is loaded in the correct sequence. This separation allows greater serviceability by decoupling the packaging of the code for each module.
 
+<!---
 -   **[Basic artifacts and their relation](../dev-theme/themeopt_mod_objmodel.md)**  
 The theme modularization framework foresees the following major artifacts and relations to one another.
 -   **[Contribution types](../dev-theme/themeopt_contrib_types.md)**  
@@ -57,3 +58,4 @@ You can extend the theme module framework with a new ConfigEngine task.
 
 [Understanding the Portal 8.5 modularized theme](../dev-theme/themeopt_defaultparts.md)
 
+--->
