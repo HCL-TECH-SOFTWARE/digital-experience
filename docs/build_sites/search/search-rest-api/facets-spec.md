@@ -74,7 +74,8 @@ Description of response elements:
 |ibmsc:facetValue/@label|A human-readable label for this facet value.|
 |ibmsc:facetValue/@weight|A number that indicates the relative weight of this facet value within the search results. This number might correlate to the actual number of search results that match this query, but that is not mandatory.|
 
-**Note:** When a facet value is selected by the user, the API provides the following ways to reflect that selection in the faceted search request:
+!!! note
+	When a facet value is selected by the user, the API provides the following ways to reflect that selection in the faceted search request:
 
 1.  To limit search results to the ones that match this facet value, use the constraint parameter. Combine the id of the facetValue element with the taxonomyId attribute of the facets element on the response to build the new service URL. This option can also be used to select two-facet values or more simultaneously. The category value must match the Id of the selected facet value.
 2.  To explore facets in a subcategory of the selected facet value if it exists, use the id of the facetValue element as the id attribute of the facet request parameter.
@@ -93,10 +94,6 @@ Description of response elements:
 ```
 
 
-**Related information**  
-
-
-[Search constraints REST API specification](../search-rest-api/constraints-spec.md)
-
-[Introducing JSON](https://www.json.org/json-en.html)
-
+???+ info "Related information:"
+	- [Search constraints REST API specification](../search-rest-api/constraints-spec.md)
+	- [Introducing JSON](https://www.json.org/json-en.html)
