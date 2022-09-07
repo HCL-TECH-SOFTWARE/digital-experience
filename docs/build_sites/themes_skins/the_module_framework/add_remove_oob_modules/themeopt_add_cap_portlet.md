@@ -35,5 +35,5 @@ Read the topics on Module dependencies in portlets and writing modules.
 
 
 ???+ info "Related information:"
-- [Module dependencies in portlets](../themeopt_mod_capfilters.md)
+    - [Module dependencies in portlets](../themeopt_mod_capfilters.md)
 

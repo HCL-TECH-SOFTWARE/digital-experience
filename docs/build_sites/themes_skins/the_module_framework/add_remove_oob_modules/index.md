@@ -22,7 +22,6 @@ To add or remove a capability from a portlet, update the portlet.xml for the por
 
 **Related information**  
 
-
 [Standard portal pages and mobile devices](../rwd/rwd_legacypages.md)
 
 [Resource bundles to support a Portal based custom theme](../admin-system/adsuplang_add_rsrc_bndl_cstm.md)
