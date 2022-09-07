@@ -8,6 +8,7 @@ Profiles define a set of modules to be loaded by the theme optimization framewor
 
 You can set dependencies on features in portlets and profiles. The features are automatically loaded onto the page in an aggregated way. Your profile does not need to contain more modules than are required by the theme. Modules that are only required by a certain portlet can be loaded by that portlet.
 
+<!---
 -   **[Included profiles](../dev-theme/themeopt_mod_oob_profile.md)**  
 Portal includes profiles that contain modules that change how your portal site is rendered.
 -   **[Specify profiles with metadata](../dev-theme/themeopt_define_module.md)**  
@@ -15,6 +16,6 @@ If you are an administrator, you can define which modules are used to render a p
 -   **[Specifying profiles with the user interface](../dev-theme/themeopt_define_mod_ui.md)**  
 You can change which sets of modules are used to render a page quickly through the user interface.
 -   **[Changing the theme default profile](../dev-theme/themeopt_cust_changepro_default.md)**  
-You can change the profile for the theme or a specific page to define the modules loaded.
+You can change the profile for the theme or a specific page to define the modules loaded. --->
 
 
