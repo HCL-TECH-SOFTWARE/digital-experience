@@ -55,6 +55,7 @@ You can use these view definitions and appearance components as starting points 
 
 To use social rendering, you need to set up your HCL Portal for integration with HCL Connections.
 
+<!--
 -   **[Roadmap: How to work with social rendering](../social/soc_rendr_roadmap.md)**  
 Before you can use social rendering in your HCL Digital Experience, you need to set up HCL Connections integration. After you do that, your users can start working with the default view definitions that social rendering provides. You might want to configure and customize the social data that is rendered on your portal pages for your site visitors. In this case, you can configure and administer social rendering as required for your portal. You can also customize the view definitions, or create your own custom appearance components.
 -   **[Working with lists of social objects](../social/soc_rendr_tsk_socl_list.md)**  
@@ -76,5 +77,5 @@ The social rendering feature in HCL Digital Experience 8.5 is implemented as an 
 
 [Digital Data Connector profiles for social rendering](../social/soc_rendr_lst_rndr_prfls.md)
 
-[Digital Data Connector \(DDC\) for HCL Portal](../social/plrf_ovu.md)
+[Digital Data Connector \(DDC\) for HCL Portal](../social/plrf_ovu.md) -->
 

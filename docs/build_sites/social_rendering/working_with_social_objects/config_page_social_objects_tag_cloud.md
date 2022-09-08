@@ -16,7 +16,8 @@ Learn how to enable Tag Cloud portlet support on your portal page. You can enabl
 
         For example, `profiles/profile_search_tag.json`.
 
-        **Note:** The search\_tag theme profile is a hidden profile, therefore it cannot be selected in the theme profile drop-down list. This profile needs to be set manually.
+        !!! note
+            The search\_tag theme profile is a hidden profile, therefore it cannot be selected in the theme profile drop-down list. This profile needs to be set manually.
 
     6.  Click **Add**.
 
@@ -41,10 +42,7 @@ Learn how to enable Tag Cloud portlet support on your portal page. You can enabl
 
 
 
-**Related information**  
-
-
-[Profile schema definition](../dev-theme/themeopt_mod_pro_def.md)
-
-[Using the portal Tag Cloud with lists of social objects](../social/soc_rendr_tag_cloud_w_socl_list.md)
+???+ info "Related information:"
+    - [Profile schema definition](../../themes_skins/the_module_framework/writing_module/themeopt_mod_pro_def.md)
+    - [Using the portal Tag Cloud with lists of social objects](../working_with_social_objects/using_portal_tagcloud_with_social_objects/index.md)
 

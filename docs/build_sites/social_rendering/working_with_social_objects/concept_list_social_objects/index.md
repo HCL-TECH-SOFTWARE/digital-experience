@@ -29,14 +29,12 @@ In contrast to social list view definitions, social rendering detail view defini
 
 You can create more list and details view definitions as extensions within the Digital Data Connector \(DDC\) for HCL Portal framework.
 
+<!--
 -   **[Social object resolution](../social/soc_rendr_soc_obj_resltn.md)**  
-When a portal user clicks a link to an object, the portal takes the user to the details view of that object. This process is called social object resolution. For example, a user might click a specific forum topic that is listed in the Community Forum Topics list. In this case, the social object resolution takes the user to a portal page that provides a details view of the forum topic that the user clicked. You can influence the result of the resolution that the user views by setting various parameters. These parameters are described here.
+When a portal user clicks a link to an object, the portal takes the user to the details view of that object. This process is called social object resolution. For example, a user might click a specific forum topic that is listed in the Community Forum Topics list. In this case, the social object resolution takes the user to a portal page that provides a details view of the forum topic that the user clicked. You can influence the result of the resolution that the user views by setting various parameters. These parameters are described here. -->
 
 
-**Related information**  
-
-
-[Digital Data Connector \(DDC\) for HCL Portal](../social/plrf_ovu.md)
-
-[Configuring globally how social object links are resolved](../social/soc_rendr_cfg_reslv_links.md)
+???+ info "Related information:"
+    - [Digital Data Connector \(DDC\) for HCL Portal](../../../../extend_dx/ddc/index.md)
+    - [Configuring globally how social object links are resolved](../../cfg_global_settings_social_rendering/soc_rendr_cfg_reslv_links.md)
 

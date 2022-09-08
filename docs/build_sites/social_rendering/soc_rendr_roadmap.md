@@ -18,10 +18,8 @@ To go the advanced path of working with social lists, proceed as follows:
 6.  To customize your social rendering view definitions and appearance components, read *Customizing social lists for portal site visitors*. These tasks are done by a website designer.
 7.  To enable your page editors to create your own social lists, read *Creating custom authoring templates for social lists*. This work task is done by a website designer.
 
-
+<!--
 **Related information**  
-
-
 [Integrating with HCL Connections](../collab/i_coll_t_enable_lc.md)
 
 [Roadmap: Integrating with HCL Connections](../integrate/roadmap_connections.md)
@@ -34,5 +32,5 @@ To go the advanced path of working with social lists, proceed as follows:
 
 [Customizing view definitions for portal site visitors](../social/soc_rendr_shape_socl_list.md)
 
-[Creating custom authoring templates for list definitions](../social/soc_rendr_create_cust_auth_templt.md)
+[Creating custom authoring templates for list definitions](../social/soc_rendr_create_cust_auth_templt.md) -->
 

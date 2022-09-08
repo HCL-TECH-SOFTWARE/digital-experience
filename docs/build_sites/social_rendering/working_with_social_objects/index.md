@@ -2,6 +2,7 @@
 
 You can design lists of social objects in different ways that are related to their content, visual design, and other characteristics. You can also use the HCL Digital Experience Tag Cloud portlet in combination with your lists of social objects, so that your site visitors can navigate social data based on tags. These tasks are usually done by page editors.
 
+<!--
 -   **[Concept of the lists of social objects provided with the social rendering feature](../social/soc_rendr_undrstd.md)**  
 The social rendering feature provides you with a set of predefined lists view definitions and a detail view definition for forum topic details.
 -   **[Using the view definitions provided with social rendering on your portal pages](../social/soc_rendr_use_oob_socl_list.md)**  
@@ -15,11 +16,9 @@ To get the most benefit from social rendering together with tagging, you can put
 
 
 **Related information**  
-
-
 [Roadmap: How to work with social rendering](../social/soc_rendr_roadmap.md)
 
 [Integrating with HCL Connections](../collab/i_coll_t_enable_lc.md)
 
-[Enabling remote rendering with WSRP and the Web Content Viewer](../wcm/wcm_config_wcmviewer_wsrp.md)
+[Enabling remote rendering with WSRP and the Web Content Viewer](../wcm/wcm_config_wcmviewer_wsrp.md) -->
 
