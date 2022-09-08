@@ -21,7 +21,7 @@ A property extension database stores attributes that the LDAP directory does not
 
     3.  Run the following task:
 
-        **Table 1: Stand-alone and cluster tasks to install the enterprise archive file**
+        **Table 1: Stand-alone and cluster tasks to install the enterprise archive file**<br>
         The wp-la-install-ear task installs the enterprise archive file.
 
         |Environment|Task|
@@ -37,7 +37,7 @@ A property extension database stores attributes that the LDAP directory does not
 
     **Consulting your database administrator:** A database administrator typically completes the task of setting up a new database. However, the following steps are provided for your reference in the event you create a stand-alone database for testing or demonstration purposes. Consult your database administrator if you plan to create a database for a production environment.
 
-    **Table 2. Steps for creating a database to use as a database user registry**
+    **Table 2. Steps for creating a database to use as a database user registry**<br>
     This table describes the steps by database type to create a database for your database user registry.
 
     |Database|Steps|
