@@ -51,7 +51,19 @@ A property extension database stores attributes that the LDAP directory does not
         -   Enter the `strsql` command to start the interactive sql session.
         -   Enter the `create schema database_name` command, where `database_name` is the name you want to use for the database.
 
-5.  Complete the following steps to define the DbDriver and DbLibrary parameter values:
+5.  Complete the following steps to create the IBM® DB2® for i database:
+
+    **Instructions for setting up databases**: Refer to the appropriate documentation for the type of database you want to set up.
+
+    **Consulting your database administrator**: A database administrator typically completes the task of setting up a new database. However, the following steps are provided for your reference in the event you create a stand-alone database for testing or demonstration purposes. Consult your database administrator before you proceed with the following steps if you plan to create a database for a production environment.
+
+    1. Log in to a remote IBM® i session.
+
+    2. Enter the `strsql` command to start the interactive sql session.
+
+    3. Enter the `create schema database_name` command, where `database_name` is the name you want to use for the database.
+
+6. Complete the following steps to define the DbDriver and DbLibrary parameter values:
 
     1.  Go to the wp_profile_root/ConfigEngine/properties directory.
 
@@ -62,15 +74,9 @@ A property extension database stores attributes that the LDAP directory does not
         -   db_type.DbDriver
         -   db_type.DbLibrary
 
-        When using DB2®: 
-        ```
-        db2.DbDriver=com.ibm.db2.jcc.DB2Driver
-        db2.DbLibrary=/opt/IBM/DB2/SQLLIB/java/db2jcc4.jar
-        ```
-
     4.  Save your changes.
 
-6.  Specify values for the data source parameters in the wp_add_LA.properties file:
+7.  Specify values for the data source parameters in the wp_add_LA.properties file:
 
     1.  Go to the wp_profile_root/ConfigEngine/config/helpers directory.
 
@@ -89,18 +95,6 @@ A property extension database stores attributes that the LDAP directory does not
         -   la.DbUser
         -   la.DbPassword
         -   la.DbSchema
-        
-        Configuration when using DB2®:
-        ```
-        la.JdbcProviderName=vmmdbJDBC
-        la.DbType=db2
-        la.DbUrl=jdbc:db2://myDatabaseServer:50000/VMMDB:returnAlias=0;
-        la.DbName=VMMDB
-        la.DataSourceName=vmladbDS
-        la.DbUser=db2admin
-        la.DbPassword=mypassword!
-        la.DbSchema=VMM
-        ```
 
         **SQL server:** If your property extension database is an SQL Server, `la.DbUser` and `la.DbSchema` must be the same value.
 
@@ -113,31 +107,19 @@ A property extension database stores attributes that the LDAP directory does not
 
     4.  Save your changes.
 
-7.  Change the value for the com.ibm.SOAP.requestTimeout parameter in the `wp_profile`. On a clustered environment, please change it in all profiles (Deployment Manager Profile and in all Nodes):
+8.  Change the value for the com.ibm.SOAP.requestTimeout parameter:
 
-    1.  Go to the wp_profile_root\properties directory.
+    1. Go to the wp_profile_root\properties directory.
 
-    2.  Open the soap.client.props with a text editor.
+    2. Open the soap.client.props with a text editor.
 
-    3.  Locate the com.ibm.SOAP.requestTimeout parameter.
+    3. Locate the com.ibm.SOAP.requestTimeout parameter.
 
-    4.  Ensure that the value is greater than 6000.
+    4. Ensure that the value is greater than `1000`.
 
-    5. Locate the com.ibm.SOAP.loginUserid parameter and enter the application server admin user name.
+    5. Save your changes.
 
-        `com.ibm.SOAP.loginUserid=wpadmin`
-
-    6. Locate the com.ibm.SOAP.loginPassword parameter and add the password for the administration user.
-
-        `com.ibm.SOAP.loginPassword=mypassword!`
-    
-    7. Locate the com.ibm.SOAP.loginSource parameter and set the value properties instead of prompt.
-
-        `com.ibm.SOAP.loginSource=properties`
-
-    8.  Save your changes.
-
-8.  Complete the following step in a clustered environment:
+9. Complete the following step in a clustered environment:
 
     1.  Open the wkplc.properties file.
 
@@ -155,21 +137,17 @@ A property extension database stores attributes that the LDAP directory does not
         -   IBM i: `ConfigEngine.sh wp-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=la -Ddb_type.DmgrDbLibrary=local path of the database jars on the Deployment Manager -DDmgrNodeName=dmgr_node_name -DparentProperties=full path to wp_profile_root/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
         -   Windows: `ConfigEngine.bat wp-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=la -Ddb_type.DmgrDbLibrary=local path of the database jars on the Deployment Manager -DDmgrNodeName=dmgr_node_name -DparentProperties=full path to wp_profile_root/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
         
-            !!!note
-                Set the db_type in db_type.DmgrDbLibrary to the type of database you are using, for example db2. The local full path of the database jars on the Deployment Manager is one of the following options:
+        !!!note
+            Set the db_type in db_type.DmgrDbLibrary to the type of database you are using, for example db2. The local full path of the database jars on the Deployment Manager is one of the following options:
 
-                    -   DB2 Type 2 driver: db2java.zip
-                    -   DB2 Type 4 driver: db2jcc4.jar:db2jcc_license_cu.jar
-                    -   DB2 Express® Type 2 driver: db2java.zip
-                    -   DB2 Express Type 4 driver: db2jcc4.jar:db2jcc_license_cu.jar
-                    -   DB2 for z/OS® Type 2 driver: db2java.zip
-                    -   DB2 for z/OS Type 4 driver: db2jcc4.jar:db2jcc_license_cisuz.jar
-                    -   Oracle: ojdbc14.jar
-                    -   SQL Server JDBC driver that is provided by Microsoft: sqljdbc4.jar
-
-                Command on Windows: <br>
-                `ConfigEngine.bat wp-prep-vmm-db-secured-environment -DWasPassword=wpadmin -DDbDomain=la -Ddb2.DmgrDbLibrary=C:/IBM/DB2/SQLLIB/java/db2jcc4.jar -DDmgrNodeName=dmgrNode01 -DparentProperties=C:/IBM/WebSphere/AppServer/profiles/wp_profile/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
-
+                -   DB2 Type 2 driver: db2java.zip
+                -   DB2 Type 4 driver: db2jcc4.jar:db2jcc_license_cu.jar
+                -   DB2 Express® Type 2 driver: db2java.zip
+                -   DB2 Express Type 4 driver: db2jcc4.jar:db2jcc_license_cu.jar
+                -   DB2 for z/OS® Type 2 driver: db2java.zip
+                -   DB2 for z/OS Type 4 driver: db2jcc4.jar:db2jcc_license_cisuz.jar
+                -   Oracle: ojdbc14.jar
+                -   SQL Server JDBC driver that is provided by Microsoft: sqljdbc4.jar
 
     7.  Run the following task on each node to create the variable that is used to access the VMM database JAR files. Include each node name as a comma-separated list in the command:
 
@@ -177,33 +155,11 @@ A property extension database stores attributes that the LDAP directory does not
         -   IBM i: `ConfigEngine.sh wp-node-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=la -DVmmNodeName=node_name,node_name,node_name -Ddb_type.NodeDbLibrary=local full path of the database jars -DparentProperties=full path to wp_profile_root/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
         -   Windows: `ConfigEngine.bat wp-node-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=la -DVmmNodeName=node_name,node_name,node_name -Ddb_type.NodeDbLibrary=local full path of the database jars -DparentProperties=full path to wp_profile_root/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
 
-            !!!note
-                VmmNodeName is a list of one or more HCL Portal nodes names in the cell which share database driver paths. Set the db_type in db_type.NodeDbLibrary to the type of database you are using, for example db2.
-
-                Command on AIX®HP-UXLinux™Solaris: <br> `ConfigEngine.sh wp-node-prep-vmm-db-secured-environment -DWasPassword=mypassword! -DDbDomain=la -DVmmNodeName=dmgrNode1,PortalNode1 -Ddb2.NodeDbLibrary=/opt/IBM/DB2/SQLLIB/java/db2jcc4.jar -DparentProperties=/opt/IBM/WebSphere/AppServer/profiles/wp_profile/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true` <br><br>
-                Command on Windows™: <br>
-                `ConfigEngine.bat wp-node-prep-vmm-db-secured-environment -DWasPassword=mypassword! -DDbDomain=la -DVmmNodeName=dmgrNode1,PortalNode1 -Ddb2.NodeDbLibrary=C:/IBM/DB2/SQLLIB/java/db2jcc4.jar -DparentProperties=C:/IBM/WebSphere/AppServer/profiles/wp_profile/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
+        !!!note
+            VmmNodeName is a list of one or more HCL Portal nodes names in the cell which share database driver paths. Set the db_type in db_type.NodeDbLibrary to the type of database you are using, for example db2.
 
     8.  Stop and restart all necessary servers to propagate your changes.
-
-9. Run the following task on each node to create the variable and sql-scripts that are used to access the VMM database JAR files.
-
-    -   AIX®HP-UXLinux™Solaris: `ConfigEngine.sh wp-update-vmm-sqlserver-files -DDbType=<db_type> -Ddbuser=<db_user> -Ddbschema=<schema_name> -Ddbname=<database_name> 
--DschemaLocation=<Full path to /WebSphere/AppServer/etc/wim/setup/lookaside> -Dfinal.schemaLocation=<Full path to /WebSphere/AppServer/profiles/wp_profile/ConfigEngine/config/work/was/wim/database>`
-    - IBM® i: `ConfigEngine.sh wp-update-vmm-sqlserver-files -DDbType=<db_type> -Ddbuser=<db_user> -Ddbschema=<schema_name> -Ddbname=<database_name> -DschemaLocation=<Full path to /WebSphere/AppServer/etc/wim/setup/lookaside> 
--Dfinal.schemaLocation=<Full path to /WebSphere/AppServer/profiles/wp_profile/ConfigEngine/config/work/was/wim/database>`
-    -   Windows™: ConfigEngine.bat wp-update-vmm-sqlserver-files -DDbType=<db_type> -Ddbuser=<db_user> -Ddbschema=<schema_name> -Ddbname=<database_name> -DschemaLocation=<Full path to /WebSphere/AppServer/etc/wim/setup/lookaside> 
--Dfinal.schemaLocation=<Full path to /WebSphere/AppServer/profiles/wp_profile/ConfigEngine/config/work/was/wim/database>
-
-    Command on AIX®HP-UXLinux™Solaris: `ConfigEngine.sh wp-update-vmm-sqlserver-files -DDbType=db2 -Ddbuser=db2admin -Ddbschema=VMM -Ddbname=VMMDB -DschemaLocation=/opt/IBM/WebSphere/AppServer/etc/wim/setup/lookaside 
--Dfinal.schemaLocation=/opt/IBM/WebSphere/AppServer/profiles/wp_profile/ConfigEngine/config/work/was/wim/database`
-
-    Command on Windows™: `ConfigEngine.bat wp-update-vmm-sqlserver-files -DDbType=db2 -Ddbuser=db2admin -Ddbschema=VMM -Ddbname=VMMDB -DschemaLocation=C:/IBM/WebSphere/AppServer/etc/wim/setup/lookaside 
--Dfinal.schemaLocation=C:/IBM/WebSphere/AppServer/profiles/wp_profile/ConfigEngine/config/work/was/wim/database`
-
-    !!!note
-        The `-DskipCleanup=true` command property can be used to check the result of the command which will be stored in directory: `<install_root>/WebSphere/AppServer/profiles/wp_profile/ConfigEngine/config/work/`
-
+    
 10. If you are configuring the property extension repository from a remote deployment manager, complete the following steps:
 
     If you are not on a remote deployment manager, continue to the next step.
