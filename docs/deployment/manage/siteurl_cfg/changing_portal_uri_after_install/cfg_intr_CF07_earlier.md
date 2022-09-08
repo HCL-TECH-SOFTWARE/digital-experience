@@ -1,13 +1,12 @@
 # CF07 and earlier: Changing the portal URI after an installation
 
-You can change the default portal Uniform Resource Identifier \(URI\) any time after you install HCL Digital Experience. Some applications have a fixed context root that cannot be changed.
+You can change the default portal Uniform Resource Identifier (URI) any time after you install HCL Digital Experience. Some applications have a fixed context root that cannot be changed.
 
-If you are on Combined Cumulative Fix 8, go to [Changing the portal URI after an installation](cfg_intr.md#).
+If you are on Combined Cumulative Fix 8, go to [Changing the portal URI after an installation](index.md).
 
 HCL Digital Experience and Web Services for Remote Portlets are installed with a default URI. You can change this URI after installation to better suit the requirements of your organization.
 
-**Notes:**
-
+!!!note "Notes"
 -   To change the HCL DX URI: When you specify the context root, do not specify a value that is the same as a directory that exists in a portlet WAR directory. For example, you set the HCL DX context root to /images. There is a portlet with the directory structure /myPortlet.ear/myPortlet.war/images. This issue might cause a conflict if the portlet encodes URI references to resources in its own /images directory. In this situation, the portlet would be unable to display images. HCL DX looks for the image resources according to its own context root path instead of the directory path that is specified by the portlet WAR file.
 -   For changing the URI of a WSRP Producer portal: Changing the WSRP Producer context root does not require that you redeploy all portlets. Run the modify-servlet-path configuration task only.
 
@@ -17,30 +16,33 @@ HCL Digital Experience and Web Services for Remote Portlets are installed with a
     -   Update the configuration of the WSRP Consumers to use the new context root \(`/wps/wsrp`\).
 -   If you use HCL Web Content Manager Syndication, the Syndicators and Subscribers servers that refer to this Portal instance must be updated with the modified URI. Log on to the HCL DX syndicating to this instance. Click the **Administration menu** icon. Then, click **Portal Content** \> **Syndicators**. Click the edit icon of the Syndicator you want to edit. Update the URL with the new context root information. Then, log on to the HCL DX subscribing to this instance. Click the **Administration menu** icon. Then, click **Portal Content** \> **Subscribers**. Click the edit icon of the subscriber you want to edit. Update the URL with the new context root information.
 
-**Cluster note:** If you modify the URI in a clustered environment, complete the steps that are described here on the primary node only, except where specified differently. Also, verify that AutoSynch is set to a frequency of 1 minute.
+!!!note "Cluster note"
+    If you modify the URI in a clustered environment, complete the steps that are described here on the primary node only, except where specified differently. Also, verify that AutoSynch is set to a frequency of 1 minute.
 
 1.  Complete the following steps to manually modify the HCL DX context root:
 
-    1.  Stop the WebSphere\_Portal server.
+    1.  Stop the WebSphere_Portal server.
 
-    2.  Locate the wkplc.properties and wkplc\_comp.properties files in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory and create backup copies before you change any values.
+    2.  Locate the wkplc.properties and wkplc_comp.properties files in the wp_profile_root/ConfigEngine/properties directory and create backup copies before you change any values.
 
     3.  Use a text editor to open the wkplc.properties file and enter the appropriate value for your environment in the WpsContextRoot property.
 
     4.  Save and close the file.
 
-    5.  Use a text editor to open the wkplc\_comp.properties file and enter the appropriate value for your environment in the following properties:
+    5.  Use a text editor to open the wkplc_comp.properties file and enter the appropriate value for your environment in the following properties:
 
         -   WsrpContextRoot
         -   WpsPersonalizedHome
         -   WpsDefaultHome
-        **Attention:** Do not enter the same value for WpsPersonalizedHome and WpsDefaultHome.
+        
+        !!!attention
+            Do not enter the same value for WpsPersonalizedHome and WpsDefaultHome.
 
     6.  Save and close the file.
 
-    7.  Start the WebSphere\_Portal server in a stand-alone environment or the deployment manager and node agent in a clustered environment.
+    7.  Start the WebSphere_Portal server in a stand-alone environment or the deployment manager and node agent in a clustered environment.
 
-    8.  Open a command prompt and change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+    8.  Open a command prompt and change to the wp_profile_root/ConfigEngine directory.
 
     9.  Complete the following steps to change the HCL DX URI:
 
@@ -50,22 +52,26 @@ HCL Digital Experience and Web Services for Remote Portlets are installed with a
             -   Windows™: ConfigEngine.bat modify-servlet-path -DPortalAdminPwd=password -DWasPassword=password
             -   IBM® i: ConfigEngine.sh modify-servlet-path -DPortalAdminPwd=password -DWasPassword=password
             -   z/OS®:./ConfigEngine.sh modify-servlet-path -DPortalAdminPwd=password -DWasPassword=password
-            **Note:** Check the output for any error messages before you proceed with the next task. If any of the configuration tasks fail, verify the values in the wkplc.properties and wkplc\_comp.properties files.
+            
+            !!!note
+                Check the output for any error messages before you proceed with the next task. If any of the configuration tasks fail, verify the values in the wkplc.properties and wkplc\_comp.properties files.
 
-        2.  Restart the WebSphere\_Portal server.
+        2.  Restart the WebSphere_Portal server.
     10. Run the following task to change the context root for the portlets:
 
-        -   AIX HP-UX Linux Solaris: ./ConfigEngine.sh modify-servlet-path-portlets -DPortalAdminPwd=password -DWasPassword=password
-        -   Windows: ConfigEngine.bat modify-servlet-path-portlets -DPortalAdminPwd=password -DWasPassword=password
-        -   IBM i: ConfigEngine.sh modify-servlet-path-portlets -DPortalAdminPwd=password -DWasPassword=password
-        -   z/OS: ./ConfigEngine.sh modify-servlet-path-portlets -DPortalAdminPwd=password -DWasPassword=password
-        **Note:** Check the output for any error messages before you proceed with the next task. If any of the configuration tasks fail, verify the values in the wkplc.properties and wkplc\_comp.properties files.
+        -   AIX HP-UX Linux Solaris: `./ConfigEngine.sh modify-servlet-path-portlets -DPortalAdminPwd=password -DWasPassword=password`
+        -   Windows: `ConfigEngine.bat modify-servlet-path-portlets -DPortalAdminPwd=password -DWasPassword=password`
+        -   IBM i: `ConfigEngine.sh modify-servlet-path-portlets -DPortalAdminPwd=password -DWasPassword=password`
+        -   z/OS: `./ConfigEngine.sh modify-servlet-path-portlets -DPortalAdminPwd=password -DWasPassword=password`
+        
+        !!!note
+            Check the output for any error messages before you proceed with the next task. If any of the configuration tasks fail, verify the values in the wkplc.properties and wkplc_comp.properties files.
 
 2.  Complete the following steps on the Deployment Manager server:
 
     1.  Log on to the Deployment Manager WebSphere® Integrated Solutions Console.
 
-    2.  Go to **Security** \> **Global security**.
+    2.  Go to **Security > Global security**.
 
     3.  Click **Trust association** in the Web and SIP security section.
 
@@ -77,6 +83,7 @@ HCL Digital Experience and Web Services for Remote Portlets are installed with a
 
         -   urlBlackList: /wpsmodified/myportalmodified\*
         -   urlWhiteList: /wpsmodified/mycontenthandler\*
+    
     7.  Click **Apply**.
 
     8.  Save all changes.
@@ -91,33 +98,33 @@ HCL Digital Experience and Web Services for Remote Portlets are installed with a
 
         |HCL DX environment|Steps|
         |------------------|-----|
-        |Stand-alone configuration|Complete the following steps in a stand-alone configuration:        1.  Copy the following script from the plugin\_root/bin directory of the web server to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/bin directory on your HCL DX server:
+        |Stand-alone configuration|Complete the following steps in a stand-alone configuration:        1.  Copy the following script from the plugin\_root/bin directory of the web server to the wp_profile_root/bin directory on your HCL DX server:
 
-            -   AIX HP-UX Linux Solaris: ./configurewebservername.sh
-            -   Windows: configurewebservername.bat
-            -   IBM i: configurewebservername.sh
-            -   z/OS: ./configurewebservername.sh
+            -   AIX HP-UX Linux Solaris: `./configurewebservername.sh`
+            -   Windows: `configurewebservername.bat`
+            -   IBM i: `configurewebservername.sh`
+            -   z/OS: `./configurewebservername.sh`
 where webservername is the web server definition name you defined previously when you configured the HTTP Server for HCL DX, for example: configurewebserver1.bat.
 
         2.  Run the following command, from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/bin directory:
-            -   AIX HP-UX Linux Solaris: ./configurewebservername.sh
-            -   Windows: configurewebservername.bat
-            -   IBM i: configurewebservername.sh
-            -   z/OS: ./configurewebservername.sh
+            -   AIX HP-UX Linux Solaris: `./configurewebservername.sh`
+            -   Windows: `configurewebservername.bat`
+            -   IBM i: `configurewebservername.sh`
+            -   z/OS: ./`configurewebservername.sh`
 |
         |Clustered configurationIdle standby configuration|Complete the following steps in a clustered configurationidle standby configuration:        1.  Copy the following script from the plugin\_root/bin directory of the web server to the dmgr\_profile/bin directory on your Deployment Manager server:
 
-            -   AIX HP-UX Linux Solaris : ./configurewebservername.sh
-            -   Windows: configurewebservername.bat
-            -   IBM i: configurewebservername.sh
-            -   z/OS: ./configurewebservername.sh
-where webservername is the web server definition name you defined previously when you configured the HTTP Server for HCL DX, for example: configurewebserver1.bat.
+            -   AIX HP-UX Linux Solaris : `./configurewebservername.sh`
+            -   Windows: `configurewebservername.bat`
+            -   IBM i: `configurewebservername.sh`
+            -   z/OS: `./configurewebservername.sh`
+where `webservername` is the web server definition name you defined previously when you configured the HTTP Server for HCL DX, for example: `configurewebserver1.bat`.
 
         2.  Run the following command on the Deployment Manager server:
-            -   AIX HP-UX Linux Solaris: ./configurewebservername.sh
-            -   Windows: configurewebservername.bat
-            -   IBM i: configurewebservername.sh
-            -   z/OS: ./configurewebservername.sh
+            -   AIX HP-UX Linux Solaris: ./co`nfigurewebservername.sh`
+            -   Windows: `configurewebservername.bat`
+            -   IBM i: `configurewebservername.sh`
+            -   z/OS: `./configurewebservername.sh`
 |
 
     2.  Regenerate the web server plug-in in WebSphere Application Server. If you are using a remote web server, copy the generated plugin-cfg.xml file to the remote server.

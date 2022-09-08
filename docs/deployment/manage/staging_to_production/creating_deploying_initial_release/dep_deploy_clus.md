@@ -111,8 +111,3 @@ If you have a single cell with a cluster A and a cluster B, use the following st
         ```
         ./ConfigEngine.sh deploy-paa -DappName=WebSpherePortal -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password -DemptyPortalDuringDeployPAA=false
         ```
-
-
-
-**Previous topic:**[Deploying the initial release](../deploy/dep_deploy.md)
-

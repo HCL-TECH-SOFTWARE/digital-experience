@@ -2,7 +2,7 @@
 
 After you create the differential release PAA file, you can install and deploy your differential release to the production servers. If you have a cluster, install and deploy on the primary and secondary nodes of the cluster.
 
-1.  Run the following command from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory of the production server to uninstall and delete any existing differential PAA files:
+1.  Run the following command from the wp_profile_root/ConfigEngine directory of the production server to uninstall and delete any existing differential PAA files:
 
     -   AIX® HP-UX Linux™ Solaris:
 
@@ -70,7 +70,7 @@ After you create the differential release PAA file, you can install and deploy y
         ./ConfigEngine.sh deploy-paa -DappName=WebSpherePortalUpdate -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password
         ```
 
-3.  Run the following command from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory of the production server to uninstall virtual portal updated PAA files:
+3.  Run the following command from the wp_profile_root/ConfigEngine directory of the production server to uninstall virtual portal updated PAA files:
 
     -   AIX HP-UX Linux Solaris:
 
@@ -138,38 +138,32 @@ After you create the differential release PAA file, you can install and deploy y
         ./ConfigEngine.sh deploy-paa -DappName=object\_idUpdated -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalParameter=value
         ```
 
-    **Tip:** Where VirtualPortalParameter is one of the following options:
+    !!!note "Tip"
+        Where VirtualPortalParameter is one of the following options:
 
-    -   **-DVirtualPortalHostName=myvirtualportal.mycompany.com**
+        -   **-DVirtualPortalHostName=myvirtualportal.mycompany.com**
 
         Use this parameter if you know the host name of the virtual portal.
 
-    -   **-DVirtualPortalContext=VirtualPortal1**
+        -   **-DVirtualPortalContext=VirtualPortal1**
 
         Use this parameter if you know the context root of the virtual portal.
 
-    If you are deploying multiple Virtual Portals, run list-all-virtual-portals on the source environment, to correctly associate the VirtualPortalParameter value with the same Virtual Portal. For more information, see *Portal configuration tasks for administering virtual portals*.
+        If you are deploying multiple Virtual Portals, run list-all-virtual-portals on the source environment, to correctly associate the VirtualPortalParameter value with the same Virtual Portal. For more information, see *Portal configuration tasks for administering virtual portals*.
 
-    **Note:** Run syndication for Web Content Manager differential content.
+    !!!note
+        Run syndication for Web Content Manager differential content.
 
 5.  If you have a clustered environment, enable automatic synchronization for the nodes and synchronize the nodes.
 
 6.  Complete this step if PAA files include shared libraries. If you included -DsharedAppResourcesRootDir and -DsharedExtResourcesRootDir when the differential and initial release was created, remove the shared library that was created during deployment of the initial release. For example, if you included the sample.jar file in the initial release PAA, and updated the sample.jar file in the differential release PAA, there is a class path conflict with this JAR file that is included in two locations. Find and remove the following JAR files from initial deployment:
 
-    -   [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/paa/WebSpherePortal/components/WebSpherePortal.shared/shared/ext/sample.jar
-    -   [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/paa/WebSpherePortal/components/WebSpherePortal.shared/shared/app/sample.jar
+    -   wp_profile_root/paa/WebSpherePortal/components/WebSpherePortal.shared/shared/ext/sample.jar
+    -   wp_profile_root/paa/WebSpherePortal/components/WebSpherePortal.shared/shared/app/sample.jar
+
 7.  Restart the server.
 
-
-
-**Previous topic:**[Creating the differential release](../deploy/dep_diff.md)
-
 **Related information**  
-
-
-[WSRP services](../admin-system/wsrpc.md)
-
-[Exporting and importing a web content library](../wcm/wcm_config_wcmlibrary_export.md)
-
-[Portal configuration tasks for administering virtual portals](../admin-system/advp_cfgtsk.md)
-
+[WSRP services](../../../../extend_dx/development_tools/wsrp/index.md)<br>
+[Exporting and importing a web content library](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcmlibrary_export/wcm_config_wcmlibrary_export.md)<br>
+[Portal configuration tasks for administering virtual portals](../../../../build_sites/virtual_portal/vp_reference/vp_command_ref/portal_cfg_adm_vp/index.md)

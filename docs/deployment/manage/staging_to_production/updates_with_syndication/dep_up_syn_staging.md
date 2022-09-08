@@ -44,10 +44,6 @@ The file is in the `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/
 
         ./xmlaccess.sh -in /Sample1/content/xmlaccess/install/staging-version1.xml -out /Sample1/content/xmlaccess/install/staging-version1-Output.xml -url "http://stagingserver.example.com:port/wps/config" -user wpsadmin\_user\_ID -password wpsadmin\_pwd
 
-
-
 **Related information**  
-
-
-[Syndication and staging](../deploy/dep_up_syn.md)
+[Syndication and staging](../../staging_to_production/updates_with_syndication/dep_up_syn.md)
 

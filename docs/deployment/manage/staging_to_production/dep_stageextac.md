@@ -2,13 +2,13 @@
 
 Staging to production where external security managers \(ESM\) are used is complex and needs special consideration. The following section discusses considerations of the impact of external security managers on the staging process. External security managers can be used to externalize authentication and authorization decisions from the portal. Externalization of authentication decisions to an external security manager has no impact on the staging to production functionality. Management of authorizations by an external security manager has an impact on the staging to production scenario. Using an external security manager for authorization decisions requires that the same external security manager is used to manage authentication to the portal.
 
-Use the security manager to manage entities that the centralized security manager controls. Managing those entities elsewhere violates the principles of centralized security control. This principle does not change in staging-to-production support. For staging-to-production, this principle leads to the inability to modify security definitions of a resource that is externalized. The following sections describe the direct implications in external security manager \(ESM\) scenarios for staging-to-production.
+Use the security manager to manage entities that the centralized security manager controls. Managing those entities elsewhere violates the principles of centralized security control. This principle does not change in staging-to-production support. For staging-to-production, this principle leads to the inability to modify security definitions of a resource that is externalized. The following sections describe the direct implications in external security manager (ESM) scenarios for staging-to-production.
 
 The XML configuration interface is used for configuration management in the staging-to-production support. The XML configuration interface covers configurations that are managed by the portal. The XML configuration interface configuration files contain a list of all role mappings for all internally managed resources. Using external security managers allows management of entitlements for selected resources outside of the portal.
 
 For HCL Portal, the XML configuration interface covers security definitions of externalized resources. You can provide a request parameter within an export request through this functionality for the XML configuration interface. This parameter causes the XML configuration interface to include role mappings of all resources in the output file. The exported file contains role mappings for internally managed resources and externally managed resources. This feature allows for the staging of role mapping of all resources that are not already externalized in the target system.
 
-The following support matrix illustrates staging support of entitlements in scenarios that involve external security managers \(ESM\). The source system refers to the system from which the configuration is exported \(typically the integration system\). The target system is the system into which the configuration is going to be imported \(for example, staging or production system\).
+The following support matrix illustrates staging support of entitlements in scenarios that involve external security managers (ESM). The source system refers to the system from which the configuration is exported (typically the integration system). The target system is the system into which the configuration is going to be imported (for example, staging or production system).
 
 | |no-ESM Target|ESM Target|
 |--|-------------|----------|
@@ -19,7 +19,7 @@ The following support matrix illustrates staging support of entitlements in scen
 |
 |ESM Source|Role mappings of internalized resources can be synchronized.
 
- Synchronization of role mappings of externalized resources results in errors during import. \(Manual configuration file updates \("change external to internal state"\) are required to prevent errors.\)
+ Synchronization of role mappings of externalized resources results in errors during import. (Manual configuration file updates ("change external to internal state") are required to prevent errors.)
 
 |Role mappings of internalized resources are fully synchronized.
 
