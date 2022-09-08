@@ -7,7 +7,7 @@ This section contains the procedure to deploy DX on the internal network.
 
 To deploy DX on the internal network (with no public access), we need to add the platform-specific annotations for the HAProxy service. Update your custom `values.yaml` file with the annotation specific to your cloud provider. Refer to the list of [annotations](https://kubernetes.io/docs/concepts/services-networking/service/#internal-load-balancer).
 
-```
+```yaml
 annotations:
   service: 
     # Annotations for haproxy service.
@@ -16,7 +16,7 @@ annotations:
 
 ??? example "Example for GKE:"
 
-    ```
+    ```yaml
     annotations:
       service: 
         # Annotations for haproxy service.
@@ -36,11 +36,9 @@ Follow the steps to update an existing deployment from an external network to an
 
     ??? example "Example:"
 
-        ```
+        ```yaml
           # Controls which application is deployed and configured
         applications:
-          --
-          --
           # Deploys haproxy
           haproxy: false
         ```
@@ -58,16 +56,11 @@ Follow the steps to update an existing deployment from an external network to an
 
 3.  After the update is completed, enable HAProxy and add annotations specific to your cloud provider in custom `values.yaml` file.
 
-    ```
-   
+    ```yaml
     # Controls which application is deployed and configured
     applications:
-      --
-      --
       # Deploys haproxy
       haproxy: true
-      --
-      --
     # Annotations for different DX Resources.
     # Type: Array of objects
     # Sample values for core:
@@ -91,7 +84,7 @@ Follow the steps to update an existing deployment from an external network to an
 4.  After updating `values.yaml` with annotations, run helm update command.
 
     ```
-    helm upgrade dx-deployment -n <your namespace> . -f ./<your customized `values.yaml` file>
+    helm upgrade dx-deployment -n <your namespace> . -f ./<your custom values file>
     ```
 
     ??? example "Example:"
@@ -105,7 +98,7 @@ Follow the steps to update an existing deployment from an external network to an
     Run the helm update command with the updated `values.yaml` file.
 
     ```
-    helm upgrade dx-deployment -n <your namespace> . -f ./<your customized `values.yaml` file>
+    helm upgrade dx-deployment -n <your namespace> . -f ./your custom values file>>
     ```
 
     ??? example "Example:" 

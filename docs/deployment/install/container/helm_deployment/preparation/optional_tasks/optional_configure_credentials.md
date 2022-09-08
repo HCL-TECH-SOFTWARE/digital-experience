@@ -5,7 +5,7 @@ HCL Digital Experience 9.5 uses several credentials in its deployment to manage 
 
 You can adjust the default credentials that HCL Digital Experience 9.5 is using by adding the following syntax to your custom-values.yaml file and changing the values you need:
 
-```
+```yaml
 # Security related configuration, e.g. default credentials
 security:
   # Security configuration for Core
