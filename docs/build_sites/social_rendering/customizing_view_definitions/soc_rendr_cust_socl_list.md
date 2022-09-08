@@ -4,7 +4,8 @@ You can customize your list view definitions by defining the following settings 
 
 To define these settings, you need the access permissions for editing the web content item that represents the view definition. You do not need edit access permissions to the **Web Content Viewer** portlet that shows the view definition.
 
-**Note:** The list view definitions that are provided with social rendering use the HCL Connections search service feed to retrieve the social objects displayed in the list. This has the following consequences:
+!!! note
+    The list view definitions that are provided with social rendering use the HCL Connections search service feed to retrieve the social objects displayed in the list. This has the following consequences:
 
 -   Only information that is available in the HCL Connections search feed can be displayed in the social lists.
 -   Updates to social objects in HCL Connections do not appear in the social lists provided with social rendering until the index of the HCL Connections search service was updated.
@@ -29,7 +30,8 @@ The following settings and options are available for customizing social list vie
 
     Use this setting to select the content sources that you want to include in the list of social objects. You can select multiple content sources. Each content source corresponds to a HCL Connections service. Social rendering supports the following HCL Connections services: activities, blogs, bookmarks, communities, files, libraries, forums, profiles, wikis, and events.
 
-    **Note:** Outside social rendering, some of the HCL Connections services serve multiple social objects. For example, the **Forums** service serves objects of type **Forum topic** and **Reply**. Social lists serve only the object types that are listed in the following table.
+    !!! note
+        Outside social rendering, some of the HCL Connections services serve multiple social objects. For example, the **Forums** service serves objects of type **Forum topic** and **Reply**. Social lists serve only the object types that are listed in the following table.
 
     |Content source|HCL Connections service|Content type that the content source serves in social lists|
     |--------------|-----------------------|-----------------------------------------------------------|
@@ -61,7 +63,8 @@ The following settings and options are available for customizing social list vie
 
     For more information, read the HCL Portal product documentation under the topic about *Managing community associations*.
 
-    **Note:** User profiles are not considered to be content of a community. Therefore, if you activate community filtering, the resulting lists do not contain any user profile entries.
+    !!! note
+        User profiles are not considered to be content of a community. Therefore, if you activate community filtering, the resulting lists do not contain any user profile entries.
 
 -   **Filter by Type of Access**
 
@@ -143,7 +146,7 @@ The following settings and options are available for customizing social list vie
     You can use this field to control the social object resolution behavior for links that users click in this list. For more detailed information, read *Social Object Resolution*.
 
 
-
+<!---
 **Related information**  
 
 
@@ -161,5 +164,5 @@ The following settings and options are available for customizing social list vie
 
 [Managing community associations](../admin-system/commpages_create_mapping.md)
 
-[Administering Portal Search](../admin-system/srtadmsrch.md)
+[Administering Portal Search](../admin-system/srtadmsrch.md) --->
 

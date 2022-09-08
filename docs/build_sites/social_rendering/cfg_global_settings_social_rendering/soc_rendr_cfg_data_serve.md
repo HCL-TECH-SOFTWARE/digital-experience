@@ -52,6 +52,7 @@ To globally configure the method by which social object data is served, proceed 
 
 
 
+<!---
 **Related information**  
 
 
@@ -71,5 +72,5 @@ To globally configure the method by which social object data is served, proceed 
 
 [Common profile](../social/soc_rendr_prfls_common.md)
 
-[Modifier support profile](../social/soc_rendr_prfls_modifier_support.md)
+[Modifier support profile](../social/soc_rendr_prfls_modifier_support.md) --->
 

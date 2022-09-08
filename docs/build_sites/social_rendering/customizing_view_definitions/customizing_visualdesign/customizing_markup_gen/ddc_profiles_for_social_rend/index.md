@@ -43,10 +43,12 @@ The Forum Topic Details view definition is uses the Forum Topics profile. For mo
 
 The profiles define the attribute names that you can use in your `[AttributeResource]` tags when you generate the HTML markup for your bean lists. You can either manually add the `AttributeResource` tags to the design component of a social list, or you can use the **Insert a Tag** user interface of HCL Web Content Manager. Example: If a profile defines an attribute that is named `title`, you can write out the title value of the items in your list by using the following tag: `[AttributeResource attributeName="title"]`.
 
-**Note:** When you integrate an HCL Connections server that runs in the Smart Cloud for Social Business, the following item attributes always return empty string values: `authorObjectID`, `memberObjectID`, and `modifierObjectID`.
+!!! note
+    When you integrate an HCL Connections server that runs in the Smart Cloud for Social Business, the following item attributes always return empty string values: `authorObjectID`, `memberObjectID`, and `modifierObjectID`.
 
 The profiles that HCL Portal includes are listed in the following topics.
 
+<!--
 -   **[Blog-related profiles](../social/soc_rendr_prfls_blogs.md)**  
 These profiles provide access to HCL Connections blog-related feed data for blogs, blogs details, blog posts, and blog post comments.
 -   **[Communities and community members profiles](../social/soc_rendr_prfls_communities.md)**  
@@ -88,5 +90,5 @@ The OpenSearch support profile provides access to information that is defined in
 
 [Implementing interactions with social objects](../wcm/wcm_dev_impl_intrax_soc_objects.md)
 
-[The social rendering Digital Data Connector plug-in](../social/soc_rendr_bean_lst_prvdr.md)
+[The social rendering Digital Data Connector plug-in](../social/soc_rendr_bean_lst_prvdr.md) -->
 

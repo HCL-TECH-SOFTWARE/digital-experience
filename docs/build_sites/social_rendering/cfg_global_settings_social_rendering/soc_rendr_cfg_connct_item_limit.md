@@ -23,15 +23,17 @@ To configure this maximum value, proceed by the following steps:
 
 **Performance note:** Setting this value to a high figure can affect the response time of the HCL Connections server.
 
-**Note:** A page editor can override this default value for an individual social list by editing the social list definition and setting the value in the field Maximum Results. For more information, see *Customizing social list definitions by using inline editing*.
+!!! note
+    A page editor can override this default value for an individual social list by editing the social list definition and setting the value in the field Maximum Results. For more information, see *Customizing social list definitions by using inline editing*.
 
+
+<!--
 
 **Related information**  
-
 
 [Cache Manager Service](../admin-system/srvcfgref_cach_mgr.md)
 
 [Customizing social list definitions by using inline editing](../social/soc_rendr_cust_socl_list.md)
 
-[Digital Data Connector caches](../social/plrf_caches.md)
+[Digital Data Connector caches](../social/plrf_caches.md) -->
 
