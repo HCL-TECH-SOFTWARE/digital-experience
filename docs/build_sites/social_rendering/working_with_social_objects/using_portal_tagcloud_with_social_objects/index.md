@@ -42,6 +42,7 @@ After you set this configuration, the Tag Cloud portlet communicates with those 
 -   The tag selection support for social list does not rely on tag federation between HCL Portal and HCL Connections to be enabled.
 -   The social lists do not support interactions with the **Tags** portlet that is provided as one of the HCL Connections portlets for HCL Portal.
 
+<!--
 -   **[Configuring the portal Tag Cloud for social rendering](../social/soc_rendr_cfg_tag_cloud.md)**  
 If you include the HCL Portal Tag Cloud portlet on your social pages, you need to configure it to work with social lists.
 
@@ -57,5 +58,5 @@ If you include the HCL Portal Tag Cloud portlet on your social pages, you need t
 
 [Configuring a page with lists of social objects for Tag Cloud support](../social/config_page_social_objects_tag_cloud.md)
 
-[Configuring the tags transmission limit](../social/soc_rendr_cfg_tag_limit.md)
+[Configuring the tags transmission limit](../social/soc_rendr_cfg_tag_limit.md) -->
 

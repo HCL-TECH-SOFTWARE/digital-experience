@@ -667,9 +667,6 @@ In addition to these attributes, the blog post comments profile also provides ac
     If the list that represents a search result is truncated, this list property returns the string `true`. Otherwise, it returns `false`.
 
 
-
-**Related information**  
-
-
-[Configuring globally how social object data is served](../social/soc_rendr_cfg_data_serve.md)
+???+ info "Related information:"
+    - [Configuring globally how social object data is served](../../../../cfg_global_settings_social_rendering/soc_rendr_cfg_data_serve.md)
 

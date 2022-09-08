@@ -109,14 +109,12 @@ To create your own styles, proceed by the following steps:
 
 12. If you use social rendering with your own theme, modify the profiles of your custom theme accordingly.
 
-13. Modify the CSS files that you copied to the new theme module in an earlier step as required. After you modified the CSS files, invalidate browser cache for your updates to take effect. To invalidate your cache, click **Theme Analyzer** \> **Utilities** \> **Control Center** \> **Invalidate Cache**. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](../dev-theme/themeopt_an_util.md#).
+13. Modify the CSS files that you copied to the new theme module in an earlier step as required. After you modified the CSS files, invalidate browser cache for your updates to take effect. To invalidate your cache, click **Theme Analyzer** \> **Utilities** \> **Control Center** \> **Invalidate Cache**. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](../../../../themes_skins/the_module_framework/themeopt_analyzer/utilities/index.md).
 
 
 After you complete this procedure, you can use your own custom styles for your social lists.
 
 
-**Related information**  
-
-
-[Defining theme modules](../dev-theme/themeopt_mod_register.md)
+???+ info "Related information:"
+   - [Defining theme modules](../../../../../guide_me/tutorials/scriptapps/common-setup/optimized-scriptapps/dependencies_as_module.md)
 
