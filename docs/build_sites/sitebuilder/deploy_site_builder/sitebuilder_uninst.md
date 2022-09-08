@@ -58,7 +58,7 @@ To remove the Site Builder application from the HCL Digital Experience Portal se
 
         ./ConfigEngine.sh uninstall-paa -DappName=wp.ctc.nswiz -DforceUninstall=true
 
-5.  Delete the wp.ctc.nswiz directory from the file system. It is located under the `[wp\_profile\_root](../reference/wpsdirstr.md)/paa` directory. You must have administrator access to delete files.
+5.  Delete the wp.ctc.nswiz directory from the file system. It is located under the `[wp\_profile\_root](../../../guide_me/wpsdirstr.md)/paa` directory. You must have administrator access to delete files.
 
 6.  If you want to keep your current Site Builder templates, then you can skip this step. If you want to start with a new version of Site Builder, then delete the Site Builder Template Library.
 
@@ -89,9 +89,7 @@ To remove the Site Builder application from the HCL Digital Experience Portal se
     6.  Click **Delete** on the Delete Documents page.
 
 
-
+<!--
 **Related information**  
-
-
-[How to remove Content Template](../ctc/ctc_uninst_overview.md)
+[How to remove Content Template](../ctc/ctc_uninst_overview.md) -->
 

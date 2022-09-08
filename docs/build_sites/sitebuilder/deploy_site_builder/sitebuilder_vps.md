@@ -32,6 +32,7 @@ Run the ConfigEngine batch or script file with the import-libs-to-vp parameter t
     `./ConfigEngine.sh import-libs-to-vp -DVirtualPortalContext=your\_vp`
 
 
-**Note:** This task imports libraries for both Site Builder and the Script Application. If you have already run this task to import your Script Application libraries, you won't have to run this task again for Site Builder.
+!!! note
+    This task imports libraries for both Site Builder and the Script Application. If you have already run this task to import your Script Application libraries, you won't have to run this task again for Site Builder.
 
 

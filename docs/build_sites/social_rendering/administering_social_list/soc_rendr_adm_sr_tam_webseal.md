@@ -24,8 +24,6 @@ If you do not configure your portal as described here, the social rendering port
 You can now use the social rendering portlets.
 
 
-**Related information**  
-
-
-[Security Access Manager](../security/conf_tam.md)
+???+ info "Related information:"
+    - [Security Access Manager](../../../deployment/manage/security/external_sec_mgmt/security_access_manager/index.md)
 

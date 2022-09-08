@@ -6,7 +6,8 @@ Before you can export a Site Builder template, the target virtual portal must ha
 
 If the Site Builder template or page templates exist on the target virtual portal, they are overwritten. If a required library included in the Site Builder template file exists on the target virtual portal, you cannot import the Site Builder template. Site Builder prevents custom libraries from being overwritten accidentally.
 
-**Note:** Do not import a Site Builder template that uses embedded page templates that are stored in the Portal Site library. Conflicts between duplicate page templates cause the imported Site Builder template to break on the destination server.
+!!! note
+    Do not import a Site Builder template that uses embedded page templates that are stored in the Portal Site library. Conflicts between duplicate page templates cause the imported Site Builder template to break on the destination server.
 
 1.  Open Site Builder.
 
@@ -20,8 +21,8 @@ If the Site Builder template or page templates exist on the target virtual porta
 
     Site Builder exports the Site Builder template and then imports it to the target virtual portal. The process can take a few minutes.
 
-
+<!--
 **Parent topic:**[Exporting Site Builder templates to other servers](../sitebuilder/sitebuilder_temp_dist.md)
 
-**Parent topic:**[Exporting Site Builder templates to other servers](../sitebuilder/sitebuilder_temp_dist.md)
+**Parent topic:**[Exporting Site Builder templates to other servers](../sitebuilder/sitebuilder_temp_dist.md) -->
 
