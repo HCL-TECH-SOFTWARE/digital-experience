@@ -43,7 +43,7 @@ Design Studio enables content managers and designers to build and style their di
 !!! note
     Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF203,and includes a sample DX site.  It is not yet supported for use in production deployments. 
 
-See the [Design Studio \(Beta\)](https://help.hcltechsw.com/digital-experience/9.5/design_studio/design_studio_overview.html){:target="_blank"}<!-- (../design_studio/design_studio_overview.md)--> Help Center topic for more information. 
+See the [Design Studio (Beta)](../design_studio/design_studio_overview.md) Help Center topic for more information. 
 
 ## Configure Content Composer to Virtual Portals 
 
@@ -59,15 +59,15 @@ See [Personalization Rules APIs](../../manage_content/pzn/pzn_apis/pzn_rest_API_
 Guidance and examples are added to customize the Site Manager interface to support specific site and content management requirements.  See the following Help Center topics for more information:
 - HCL DX 9.5: [Customizing the Site Manager User Interface](../../build_sites/site_toolbar_and_site_manager/configuration/site_toolbar/Customize_Site_Manager_User_Interface.md)
 
-- HCL DX 8.5 and 9.0: [Customizing the Site Manager User Interface](https://help.hcltechsw.com/digital-experience/8.5/admin-system/Customize_Site_Manager_User_Interface.html){:target="_blank"}
+- HCL DX 8.5 and 9.0: [Customizing the Site Manager User Interface](../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/Customize_Site_Manager_User_Interface.md)
 
 ## Notice of deprecation and replacement of Document Conversion Services
 Document Conversion Services components in HCL Digital Experience software will be updated and replaced in 2022 in a subsequent HCL DX CF Update release. HCL Digital Experience will remove the third-party component providing these capabilities, supplied by Oracle, and replace with HCL supported functions. After that point, HCL Digital Experience v8.5, v9 and v9.5 Container Update and CF releases will include the newer HCL supported component. 
 
-See the [Replacemt of DCS component](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0096908){:target="_blank"} knowledge article for additional information.
+See the [Replacement of DCS component](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0096908){:target="_blank"} knowledge article for additional information.
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
-The HCL Software Academy offers technical education for the HCL Software portfolio of products, organized by practitioner role. New “What’s New in the latest DX CF release’ modules are available for Digital Experience business users, developers and administrators. See the HCL Digital Experience section of the HCL Software Academy and What’s New for Digital Experience section for more information.
+The HCL Software Academy offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience section](https://academy.hcltechsw.com/#HCLDXLearningJourneys) of the HCL Software Academy and [What’s New for Digital Experience section](https://academy.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) for more information.
 
 
 
