@@ -16,13 +16,12 @@ Example: To dynamically construct the query URL that serves the information abou
    compute="always"]
 ```
 
-
+<!--
 **Related information**  
-
 
 [The social rendering Digital Data Connector plug-in](../social/soc_rendr_bean_lst_prvdr.md)
 
 [The HCL Connections context rendering plug-in](https://help.hcltechsw.com/digital-experience/8.5/panel_help/soc_rendr_conn_context_plgn.html)
 
-[Organizing your custom HCL Connections queries](../social/soc_rendr_org_cust_conn_qurs.md)
+[Organizing your custom HCL Connections queries](../social/soc_rendr_org_cust_conn_qurs.md) -->
 
