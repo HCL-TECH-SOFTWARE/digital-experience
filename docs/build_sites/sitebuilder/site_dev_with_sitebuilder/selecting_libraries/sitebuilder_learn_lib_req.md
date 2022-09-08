@@ -4,8 +4,6 @@ title: Required libraries in Site Builder
 ---
 
 
-
-
 Required libraries contain supporting assets that are referenced by page templates that are used in your site or section template.
 
 If you plan to export the template to another virtual portal, you must select libraries that contain supporting assets. You can add any content library that is available on the server if the library is not hidden by the administrator.

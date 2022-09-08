@@ -74,8 +74,6 @@ To add the theme module to your theme, you register the theme module by using th
 
 
 
-**Related information**  
-
-
-[Using social lists with your own custom theme](../social/soc_rendr_use_oob_socl_list_wcusthm.md)
+???+ info "Related information:"
+    - [Using social lists with your own custom theme](../working_with_social_objects/soc_rendr_use_oob_socl_list_wcusthm.md)
 

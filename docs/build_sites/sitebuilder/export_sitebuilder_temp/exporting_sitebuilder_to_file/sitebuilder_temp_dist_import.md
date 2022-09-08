@@ -4,7 +4,8 @@ You can use the Import Template action in Site Builder to make the Site Builder 
 
 Before you can import a Site Builder template, the target server must have HCL Digital Experience, HCL Web Content Manager, Content Template Catalog, and Site Builder \(page and library\) installed and visible.
 
-**Note:** Do not import a Site Builder template that uses embedded page templates that are stored in the Portal Site library. Conflicts between duplicate page templates cause the imported Site Builder template to break on the destination server.
+!!! note
+    Do not import a Site Builder template that uses embedded page templates that are stored in the Portal Site library. Conflicts between duplicate page templates cause the imported Site Builder template to break on the destination server.
 
 **Importing templates between different versions of Site Builder:** If you are exporting and importing templates between servers that use different versions of Site Builder, you must remove the installed templates from the import file before importing:
 

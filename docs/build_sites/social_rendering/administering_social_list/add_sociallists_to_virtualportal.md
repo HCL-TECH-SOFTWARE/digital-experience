@@ -28,12 +28,12 @@ To deploy social rendering in a virtual portal, use the configuration task deplo
     -   Linux: `./ConfigEngine.sh deploy-social-rendering -DPortalAdminPwd=password -DWasPassword=password -DVirtualPortalContext=vp1`
     -   Solaris: `./ConfigEngine.sh deploy-social-rendering -DPortalAdminPwd=password -DWasPassword=password -DVirtualPortalContext=vp1`
     -   Windows: `ConfigEngine.bat deploy-social-rendering -DPortalAdminPwd=password -DWasPassword=password -DVirtualPortalContext=vp1`
-    **Note:** The sample that is given here uses only the VirtualPortalContext parameter to identify the virtual portal by its context. Virtual portals with a unique host name assigned can be identified by using the VirtualPortalHostName parameter.
+
+    !!! note 
+        The sample that is given here uses only the VirtualPortalContext parameter to identify the virtual portal by its context. Virtual portals with a unique host name assigned can be identified by using the VirtualPortalHostName parameter.
 
 
 
-**Related information**  
-
-
-[Social Lists](../migrate/sociallistpost_mig.md)
+???+ info "Related information:"
+    - [Social Lists](../../../deployment/manage/migrate/next_steps/post_mig_activities/addon_integration_task/sociallistpost_mig.md)
 

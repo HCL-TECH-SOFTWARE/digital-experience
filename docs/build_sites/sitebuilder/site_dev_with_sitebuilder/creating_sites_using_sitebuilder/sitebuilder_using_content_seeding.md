@@ -25,4 +25,3 @@ When you use content seeding, you must consider whether your site template is cr
 
 If you change the content location of a site with content seeding, the page might not be created correctly and the links on the page might need to be updated to match the new structure. For this reason, it is not recommended that you update the content location if content seeding is being used.
 
-
