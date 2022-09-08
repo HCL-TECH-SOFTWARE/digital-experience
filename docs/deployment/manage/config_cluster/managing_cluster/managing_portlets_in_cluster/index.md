@@ -6,13 +6,14 @@ The deployed portlets must be activated before they can be used. Activation cann
 
 **Note:** Auto-synchronization of the web modules to each node in the cluster might not happen immediately, or at all. This auto-synchronization depends on how the administrator configured auto-synchronization in the deployment manager. So, HCL Portal cannot promise that the portlet was successfully synchronized to each node in the cluster and thus cannot automatically activate the portlet during deployment.
 
-1.  Deploy your portlets by using either the HCL Portal Administration page or the XML configuration interface utility \(xmlaccess command\).
+1.  Deploy your portlets by using either the HCL Portal Administration page or the XML configuration interface utility (`xmlaccess` command).
 
-2.  Change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+2.  Change to the wp_profile_root/ConfigEngine directory.
 
 3.  Run the following task to activate the deployed portlets and to synchronize the changes across all cluster members:
 
-    **Note:** If you run the activate-portlets task while you are logged in to HCL Portal, you must log out and log back in before you can see the updated status for the portlets.
+    !!!note
+        If you run the activate-portlets task while you are logged in to HCL Portal, you must log out and log back in before you can see the updated status for the portlets.
 
     |Operating system|Task|
     |----------------|----|
@@ -31,25 +32,5 @@ The deployed portlets must be activated before they can be used. Activation cann
 
 5.  Uninstall portlets in a clustered environment the same way as in a stand-alone environment. Uninstalling the portlet removes the portlet configuration from the databases and all cluster members share database. Therefore, the uninstalled portlet is unavailable to all other members automatically.
 
-
--   **[Multiple cluster portlet deployment](../admin-system/clusm_portlets.md)**  
-Although portlets are a type of enterprise application, portlet deployment is typically done through HCL Portal. If done directly to WebSphere Application Server, HCL Portal must be notified. HCL Portal maintains configuration information that is extracted from the portlet descriptor \(portlet.xml\) during portlet deployment.
--   **[Deploying portlets common across clusters](../admin-system/clusm_common_ports.md)**  
-You can deploy portlets as a standard EAR through the Deployment Manager and then notify each cluster. A predeployed application can only be updated by updating the EAR file in IBM WebSphere Application Server and subsequently updating the contained WAR file by using the XML configuration interface. Cross updates of a predeployed EAR file with a real WAR and vice versa are not possible. You can also install it as a standard portlet within one cluster, then map the underlying enterprise application to the other cluster and use the XML configuration interface to notify the other cluster members. For simplicity and ease of administration, common portlet applications should be administered as standard EARs first, so there is no need to remember which cluster owns the original deployment.
--   **[Changing the authentication mode for portlet deployment](../security/deploy_secure.md)**  
-HCL Digital Experience provides two user authentication modes that the Portlet Deployment Manager can use to authenticate with the IBM WebSphere Application Server administrative services when security is enabled.
--   **[Deleting portlets common across clusters](../admin-system/clusm_del_portlets.md)**  
-You can use the XMLAccess task to delete a portlet common across clusters. If the portlet was predeployed as a standard EAR, then each cluster must be first notified of the portlet removal before the EAR can be uninstalled. The administrator must use the XMLAccess application to import a <web-app\> definition similar to the ones used in the previous two sections, except the action is to delete the definition instead of update it.
--   **[Multiple clusters: deploying portlets unique to a cluster](../admin-system/clusm_unique_ports.md)**  
-You can deploy portlets that are unique to a multiple cluster environment using the Portal Administration User Interface or the XML Configuration Interface.
--   **[Updating portlets common across clusters](../admin-system/clusm_upd_portlets.md)**  
-You can use the Deployment Manager or the XML configuration interface to update portlets. If the portlet was predeployed as a standard EAR, then only the EAR needs to be updated through Deployment Manager and the results synchronized to every cluster to which this application is mapped. If a portlet configuration is being updated, for instance with new access control definitions or configuration parameter values, then the XML configuration interface must be used to update every cluster's configuration with this same information. In this case you would use an updated <web-app\> element.
--   **[Applying updates to custom applications](../admin-system/clusm_app_upd.md)**  
-For customer-written portlet applications that are predeployed as standard EARs and then configured within each cluster using XMLAccess, use the same update procedure as used for portlet applications provided with HCL Digital Experience.
-
-
 **Related information**  
-
-
-[How to install the authoring portlet](../wcm/wcm_install_configtasks_authoringportlet.md)
-
+[How to install the authoring portlet](../../../../../manage_content/wcm/wcm_content_delivery/cfg_webcontent_auth_env/wcm_install_configtasks_authoringportlet.md)

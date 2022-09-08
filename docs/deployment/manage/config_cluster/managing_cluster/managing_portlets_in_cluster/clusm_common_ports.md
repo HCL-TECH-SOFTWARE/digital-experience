@@ -4,9 +4,9 @@ You can deploy portlets as a standard EAR through the Deployment Manager and the
 
 Perform the following steps to deploy common portlets:
 
-1.  Install the EAR through Deployment Manager, using either the **Applications** \> **Install New Application** option within the WebSphere® Integrated Solutions Console, or the AdminApp install command within the `wsadmin` scripting client. This allows portlets to be combined with other EAR resources, such as web services, Enterprise Java Beans, or other web modules.
+1.  Install the EAR through Deployment Manager, using either the **Applications > Install New Application** option within the WebSphere® Integrated Solutions Console, or the AdminApp install command within the `wsadmin` scripting client. This allows portlets to be combined with other EAR resources, such as web services, Enterprise Java Beans, or other web modules.
 
-2.  Map the application to each cluster where it is to run, using either the MapModulesToServers option of the AdminApp install command within the `wsadmin` scripting client, or the **Map modules to servers** option under that application’s entry under **Applications** \> **Enterprise Applications**.
+2.  Map the application to each cluster where it is to run, using either the MapModulesToServers option of the AdminApp install command within the `wsadmin` scripting client, or the **Map modules to servers** option under that application’s entry under **Applications > Enterprise Applications**.
 
 3.  Synchronize the new application with each node in all clusters, and then start the application in each cluster. By default, synchronization will automatically occur with each node hosting servers and cluster members, or both, to which the enterprise application is mapped.
 
@@ -35,9 +35,5 @@ Here is an example XML definition for importing a predeployed portlet applicatio
 
 ```
 
-
 **Related information**  
-
-
-[The XML configuration interface](../admin-system/admxmlai.md)
-
+[The XML configuration interface](../../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
