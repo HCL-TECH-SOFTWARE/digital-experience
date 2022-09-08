@@ -7,16 +7,16 @@ The following features and updates are available to customers installing HCL Dig
 -   Digital Asset Management view keywords details
 -   DX Experience API updates
 -   Sample Script Application integration and Theme modernization, plus How-to guides
-
-New complementary DX training modules in the HCL Software Academy, and more.
+-   New complementary DX training modules in the HCL Software Academy, and more
+-   New HCL Digital Experience Help Center with enhanced search and improved content architecture
 
 ## Development sample integrating HCL Unica Campaign segments in DX Personalization Rules
 
 === "Containers"
-    Developers can access a new sample to integrate HCL Unica Campaign Segments in DX Personalization rules using REST APIs supporting targeted campaign management in HCL DX solutions. See [Help Center topic for more information](../../build_sites/site_analytics/unica/index.md).
+    Developers can access a new sample to integrate [HCL Unica Campaign Segments](https://help.hcltechsw.com/unica/Campaign/en/12.1.0/Campaign/Sessions/About_strategic_segments.html) in DX Personalization rules using REST APIs supporting targeted campaign management in HCL DX solutions. See [Sample for leveraging Unica segments in PZN rules](../../manage_content/pzn/pzn_apis/Sample_leveraging_Unica_segments_pzn_Rules.md).
 
 === "On-Premises" 
-    Developers can access a new sample to integrate HCL Unica Campaign Segments in DX Personalization rules using REST APIs supporting targeted campaign management in HCL DX solutions.  See [Help Center topic for more information](../../build_sites/site_analytics/unica/index.md).
+    Developers can access a new sample to integrate HCL Unica Campaign Segments in DX Personalization rules using REST APIs supporting targeted campaign management in HCL DX solutions. See [Sample for leveraging Unica segments in PZN rules](../../manage_content/pzn/pzn_apis/Sample_leveraging_Unica_segments_pzn_Rules.md).
 
 
 ## Extension to Personalization Java APIs supporting page metadata operations with custom application objects
