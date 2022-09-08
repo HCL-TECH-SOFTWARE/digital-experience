@@ -2,8 +2,6 @@
 id: h_custom_names_view
 title: Viewing portal resources and custom unique names in the table
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
 
 
 **Manage Custom Unique Names** allows you to create, modify, and delete custom unique names for portal resources. Manage Custom Unique Names displays the portal resources and their custom unique names in tables. Each resource type has its own table which lists all resources of that type, and their custom unique names.

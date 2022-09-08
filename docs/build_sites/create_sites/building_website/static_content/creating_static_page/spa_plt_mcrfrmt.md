@@ -37,7 +37,8 @@ Refer to the following list of class attributes for more information. An example
 
     This value of the `class` attribute lists the different portlet actions or operations that can be invoked in the portlet window.
 
-    **Note:** Such operations are not necessarily actions in the sense of HTTP. Instead, some actions are safe interactions, whereas others can be unsafe, as they modify the server. In the list of actions each interaction is either represented as a link to denote a safe interaction or as a `form` to denote an unsafe interaction.
+    !!! note
+        Such operations are not necessarily actions in the sense of HTTP. Instead, some actions are safe interactions, whereas others can be unsafe, as they modify the server. In the list of actions each interaction is either represented as a link to denote a safe interaction or as a `form` to denote an unsafe interaction.
 
 -   **portlet-action**
 
@@ -59,7 +60,8 @@ Refer to the following list of class attributes for more information. An example
 
     This is an optional class on the portlet window. It denotes that this portlet window can be dragged around on the screen by users. This attribute is only valid if the portlet window is part of a modifiable portlet container, and if the user has the rights to modify the page and the container is not locked. Refer to the Container Microformat to see how a drop target is represented and how the actual drag and drop operation can be performed.
 
-    **Note:** A drag and drop action is triggered from the client side, but is executed on the server.
+    !!! note
+        A drag and drop action is triggered from the client side, but is executed on the server.
 
 -   **xoxo**
 
@@ -114,12 +116,11 @@ The following is an example of a microformat representation for a portlet window
 ```
 
 
-**Related information**  
 
+???+ info "Related information:"
+   - [The Navigation portlet](../../static_content/creating_static_page/portlets_dynamic_elements/spa_portlet_nav.md)
 
-[The Navigation portlet](../dev/spa_portlet_nav.md)
+   - [The Breadcrumb Trail portlet](../../static_content/creating_static_page/portlets_dynamic_elements/spa_portlet_brdcrmb.md)
 
-[The Breadcrumb Trail portlet](../dev/spa_portlet_brdcrmb.md)
-
-[The SPA Resource Addressability portlet](../dev/spa_portlet_pagelist.md)
+   - [The SPA Resource Addressability portlet](../../static_content/creating_static_page/portlets_dynamic_elements/spa_portlet_pagelist.md)
 

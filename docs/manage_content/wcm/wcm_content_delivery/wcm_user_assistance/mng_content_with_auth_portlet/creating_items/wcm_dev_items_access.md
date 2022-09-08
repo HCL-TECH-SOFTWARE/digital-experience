@@ -2,7 +2,7 @@
 id: wcm_dev_items_access
 title: Granting users or groups access to an item
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

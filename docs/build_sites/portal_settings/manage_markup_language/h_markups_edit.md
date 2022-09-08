@@ -2,8 +2,6 @@
 id: h_markups_edit
 title: Editing a markup
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
 
 
 You can edit an existing markup type and its locale-specific settings.
@@ -14,7 +12,7 @@ You can edit an existing markup type and its locale-specific settings.
 
 2.  Make the desired edits to the following fields:
 
-    1.  **Markup name** Required. Indicate the name of the markup. Directories of this name also have to be created to support the aggregation of the portal for clients that support this markup.
+    1.  **Markup name:** Required. Indicate the name of the markup. Directories of this name also have to be created to support the aggregation of the portal for clients that support this markup.
 
         For example, to add the markup MathML, the following directories have to be created:
 
@@ -24,9 +22,9 @@ You can edit an existing markup type and its locale-specific settings.
         -   theme\_web\_module\_root\_path/screens/MathML
         For this reason, avoid characters in the markup name that might cause conflicts in file or path names, such as / , \\ , . , or & . The markup name also acts as default title for those languages where no locale-specific title has been set.
 
-    2.  **MIME type** Required. Enter the MIME type associated with this markup.
+    2.  **MIME type:** Required. Enter the MIME type associated with this markup.
 
-    3.  **Default character set** Indicate the character encoding that is to be used for this markup if it is not specified in the locale-specific settings.
+    3.  **Default character set:** Indicate the character encoding that is to be used for this markup if it is not specified in the locale-specific settings.
 
         If you leave this field empty, UTF-8 is used as the default character set.
 

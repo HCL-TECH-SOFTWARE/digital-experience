@@ -1,0 +1,8 @@
+title: Writing modules
+nav:
+    - index.md
+    - themeopt_mod_register.md
+    - themeopt_mod_global.md
+    - themeopt_mod_pro_def.md
+    - Simple modules: simple_modules
+    - rwd_add_menu_module.md

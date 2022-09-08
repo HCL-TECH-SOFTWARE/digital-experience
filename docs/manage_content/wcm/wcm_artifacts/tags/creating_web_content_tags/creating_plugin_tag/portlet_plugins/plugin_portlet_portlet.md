@@ -2,7 +2,7 @@
 id: plugin_portlet_portlet
 title: The portlet plug-in
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

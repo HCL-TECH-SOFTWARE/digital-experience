@@ -34,8 +34,6 @@ Portal Search has the following trace strings:
 If you have set up Portal Search in a remote configuration on a WebSphere® Application Server server, the log messages are filtered and printed out according to the WebSphere Application Server logging and tracing configuration. In this case refer to the WebSphere Application Server Help Center.
 
 
-**Related information**  
-
-
-[Logging and tracing](../trouble/pd_intr_logs.md)
+???+ info "Related information:"
+[Logging and tracing](../../../deployment/manage/troubleshooting/logging_and_tracing/index.md)
 

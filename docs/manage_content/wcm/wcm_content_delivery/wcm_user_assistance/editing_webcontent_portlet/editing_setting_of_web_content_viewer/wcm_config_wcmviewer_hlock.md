@@ -2,7 +2,7 @@
 id: wcm_config_wcmviewer_hlock
 title: Locking configuration settings
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

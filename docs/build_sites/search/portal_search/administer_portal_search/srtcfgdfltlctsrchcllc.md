@@ -30,18 +30,17 @@ To configure a different default search collection location, proceed by the foll
 
 5.  Click **OK** to save your updates. Manage Search returns to the Search Services panel.
 
-    **Note:**
-
-    1.  The directory location that you specify can be on a different hard disk drive or workstation.
-    2.  If you change the value for the DefaultCollectionsDirectory parameter, make sure that you do all of the following steps:
-        -   Specify a full directory path, for example, /root/our\_search\_collections.
-        -   On the specified hard disk drive, create the directory that you specify as the value for the DefaultCollectionsDirectory parameter.
-        -   Manage the write access to the directory to enable creation of search collections in that directory.
-    3.  The value that is set for this parameter is used only if during the creation of a new search collection you specify a relative directory for the location of the new search collection. If you specify a full directory for the location of the search collection, the collection is created in that directory. In this case, the value that is set for the default directory under the search service has no effect. Instead, it is overwritten by the full directory location that you specify for the search collection.
-    4.  The initial default directory is created during the installation. The process has write access to this default directory.
-    5.  The default site collection that is part of the installation is created under the default directory. Creation of the site collection is started when you navigate to the Manage Search portlet. If you created the site collection by navigating to the Manage Search portlet before you changed the default directory for the collection location, you might want to relocate the site collection to your new default directory. For details about how to do this step, see the topic about Resetting the default search collection.
-    6.  If you set up a remote search service, for example for a cluster, then this parameter is mandatory. You must configure the default location for search collections to a directory on the remote server that has write access.
-    7.  The file path length for search collections is limited to 118 characters. If this limit is exceeded, the collection cannot be created. In this case specify a shorter value for the parameter DefaultCollectionsDirectory. For details about this process, read *Creating the portal site search collection fails*.
+    !!! note
+        1.  The directory location that you specify can be on a different hard disk drive or workstation.
+        2.  If you change the value for the DefaultCollectionsDirectory parameter, make sure that you do all of the following steps:
+            -   Specify a full directory path, for example, /root/our\_search\_collections.
+            -   On the specified hard disk drive, create the directory that you specify as the value for the DefaultCollectionsDirectory parameter.
+            -   Manage the write access to the directory to enable creation of search collections in that directory.
+        3.  The value that is set for this parameter is used only if during the creation of a new search collection you specify a relative directory for the location of the new search collection. If you specify a full directory for the location of the search collection, the collection is created in that directory. In this case, the value that is set for the default directory under the search service has no effect. Instead, it is overwritten by the full directory location that you specify for the search collection.
+        4.  The initial default directory is created during the installation. The process has write access to this default directory.
+        5.  The default site collection that is part of the installation is created under the default directory. Creation of the site collection is started when you navigate to the Manage Search portlet. If you created the site collection by navigating to the Manage Search portlet before you changed the default directory for the collection location, you might want to relocate the site collection to your new default directory. For details about how to do this step, see the topic about Resetting the default search collection.
+        6.  If you set up a remote search service, for example for a cluster, then this parameter is mandatory. You must configure the default location for search collections to a directory on the remote server that has write access.
+        7.  The file path length for search collections is limited to 118 characters. If this limit is exceeded, the collection cannot be created. In this case specify a shorter value for the parameter DefaultCollectionsDirectory. For details about this process, read *Creating the portal site search collection fails*.
 
         This issue can occur particularly when the site collection is created under one of the following operating systems.
 
@@ -49,5 +48,4 @@ To configure a different default search collection location, proceed by the foll
         -   HP-UX
         -   Linux
         -   Solaris
-
 

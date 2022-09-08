@@ -1,9 +1,8 @@
 # Building the website
 
-
-
 Building a website includes creating libraries, pages, and web content. You also create links and navigation to your content, and assign access to different types of users, such as editors and viewers.
 
+<!-- 
 -   **[Site Builder](../sitebuilder/sitebuilder_intro.md)**  
 Site Builder is an application that you can use to create site templates or section templates for use with HCL Digital Experience.
 -   **[Content Template](site_ctc.md)**  
@@ -35,8 +34,6 @@ Dynamic content is generated when a page is rendered and is based on a set of pr
 -   **[Content as a Service pages](../wcm/cntnt_serv_pgs.md)**  
 Starting with version 8.5 CF05, HCL Digital Experience introduces the concept of Content as a Service pages. The Content as a Service pages can be used to render content that is managed by your HCL Web Content Manager in different data formats.
 -   **[URLs](site_urls.md)**  
-Portal URLs do not look like plain HTTP server URLs over a simple file system. Portal URLs have a complex structure and include a large compressed and encoded XML Navigation State document. The stream of random characters in a Portal URL is the Navigation State document. Full Portal function depends on correctly maintaining this Navigation State document during all the operations a user might do in Portal. Forcing Portal URLs to look like plain HTTP server URLs over a simple file system structure cripples the function of HCL Portal.
-
-**Table of Contents:**  
+Portal URLs do not look like plain HTTP server URLs over a simple file system. Portal URLs have a complex structure and include a large compressed and encoded XML Navigation State document. The stream of random characters in a Portal URL is the Navigation State document. Full Portal function depends on correctly maintaining this Navigation State document during all the operations a user might do in Portal. Forcing Portal URLs to look like plain HTTP server URLs over a simple file system structure cripples the function of HCL Portal. -->
 
 

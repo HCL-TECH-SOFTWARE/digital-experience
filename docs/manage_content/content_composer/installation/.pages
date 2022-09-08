@@ -1,4 +1,4 @@
 nav:
     - index.md
-    - install_config_cc_dam.md
-    - configure_cc_virtual_portals.md
+    - Install Content Composer: install_config_cc_dam.md
+    - Enable or Disable in Virtual Portals: configure_cc_virtual_portals.md

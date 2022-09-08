@@ -2,8 +2,6 @@
 id: site_wayfinding
 title: Creating links and navigation
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
 
 
 Use navigators and menus to create links to content, and display content-level navigation.

@@ -1,7 +1,6 @@
 # Page templates
 
 
-
 Content authors use the page templates to quickly create pages that are consistent with your site design. They do not have to waste time to configure settings that are probably consistent across your site, such as theme selection, page layout, and more.
 
 ## Available page templates
@@ -20,15 +19,16 @@ When you create a template you can include portlets and portlet preferences, pag
 
 Page templates are created in a specific area of the portal hierarchy, called Page Templates. Pages that you add to this area automatically appear as an available page template in the site toolbar in the **Create** \> **Page** area.
 
-**Note:** When you create a new page based on a page template, you might see the following error message: The page template could not be instantiated underneath the page PARENT\_PAGE since this page has no default content association to a site area outside of the Portal Site library or the current user does not have access to the mapped site area. To prevent this from happening, decide where to store the content that is copied from the template page to your new page:
+!!! note
+    When you create a new page based on a page template, you might see the following error message: The page template could not be instantiated underneath the page PARENT\_PAGE since this page has no default content association to a site area outside of the Portal Site library or the current user does not have access to the mapped site area. To prevent this from happening, decide where to store the content that is copied from the template page to your new page:
 
 -   If you want to store the content outside of the Portal Site library, create a default content association to a site area outside of the Portal Site library for the parent page of the new page.
 -   If you want to store the content in the Portal Site library, transfer the content for the template page to the Portal Site library first. For more information, go to *Transferring content associations to the Portal Site library*.
 
-**Related information**  
 
+???+ info "Related information:" 
 
-[Transferring content associations to the Portal Site library](../wcm/wcm_config_mngpages_transfer.md)
+    - [Transferring content associations to the Portal Site library](../../../manage_content/wcm/wcm_artifacts/managed_pages/cfg_managed_pages/wcm_config_mngpages_transfer.md)
 
-[Creating page templates](../panel_help/h_mp_create_page_templates.md)
+    - [Creating page templates](../../../extend_dx/development_tools/portal_admin_tools/portal_user_interface/managing_pages/managing_page_properties/h_mp_create_page_templates.md)
 

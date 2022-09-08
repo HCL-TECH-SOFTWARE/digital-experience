@@ -4,6 +4,7 @@
 
 Before content authors can create content you must prepare your site to be ready for content creation, including preparing the site toolbar, enabling inline editing, and creating templates.
 
+<!--
 -   **[Adding content: Site Toolbar or Site Manager](site_toolbar_or_manager.md)**  
 When adding content to a site in edit mode, a content author has the choice of using either the Site Toolbar or Site Manager. Site developers need to consider which option is best for their content authors.
 -   **[Generate author-ready templates](../wcm/wcm_dev_content_types.md)**  
@@ -21,5 +22,5 @@ You can configure site manager by setting portlet preferences for the site manag
 -   **[Creating project templates](site_project_temps.md)**  
 Projects help content authors group and manage changes across the website. As a site administrator, you can create templates for your authors to use.
 -   **[Customizing the Web Content Authoring portlet](../wcm/wcm_cms_authoring_portlet_custom.md)**  
-To customize each Web Content Authoring portlet for the people who use that portlet, you can edit the shared settings of each Web Content Authoring portlet on your authoring system.
+To customize each Web Content Authoring portlet for the people who use that portlet, you can edit the shared settings of each Web Content Authoring portlet on your authoring system. -->
 

@@ -16,6 +16,7 @@ Optionally, you can configure several additional aspects for search on your port
 -   You can configure client identification for the external search engines.
 -   You can configure the URL normalization. You do this by setting a property in the portal configuration service named portal WP State Manager Service in the WebSphere® Integrated Solutions Console.
 
+<!--
 -   **[Configuring the Search Sitemap portlet for search by external search engines](../admin-system/srtcfgsitemap1.md)**  
 The Search Sitemap portlet generates a navigable list of all public pages of the portal. You can configure the Search Sitemap portlet to determine the limit to the number of links that are displayed per page.
 -   **[Client identification for external search engines](../admin-system/srrclientid.md)**  
@@ -24,5 +25,5 @@ For the portal to recognize external search engines, HCL Digital Experience prov
 
 **Previous topic:**[Searching your local portal](../admin-system/srclocportal.md)
 
-**Next topic:**[Enabling anonymous users to search public pages of your portal](../admin-system/srtusgsrchbrwanonpgs.md)
+**Next topic:**[Enabling anonymous users to search public pages of your portal](../admin-system/srtusgsrchbrwanonpgs.md) -->
 

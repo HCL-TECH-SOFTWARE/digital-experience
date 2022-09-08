@@ -2,7 +2,7 @@
 id: wcm_dev_projects_form_approval_temp
 title: Defining project template approval settings
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

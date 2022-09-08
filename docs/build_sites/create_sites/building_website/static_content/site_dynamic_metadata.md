@@ -2,9 +2,6 @@
 id: site_dynamic_metadata
 title: Dynamic page metadata
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
-
 
 HTML defines some elements that refer to information that is managed as page metadata on portal pages. You can use the dynamic page metadata rewriting feature to place this information into the static HTML code automatically.
 

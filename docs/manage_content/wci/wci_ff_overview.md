@@ -1,4 +1,4 @@
-# Feed format overview
+# Feed Format Overview
 
 RSS 2.0 is a dialect of XML, and all RSS files must comply with the XML 1.0 specification as published by the World Wide Web Consortium \(W3C\). RSS feed files typically have file extensions of either .rss or .xml. The Web Content Integrator does not impose any file naming conventions on the feed producer.
 
@@ -36,7 +36,8 @@ Following the XML prolog, an RSS 2.0 file begins with a single <rss\> element. T
 	</rss>
 ```
 
-**Note:** If non-ascii data is used in a feed, then encoding="UTF-8" must be specified in the feed: `<?xml version="1.0" encoding="UTF-8"?>`
+!!!note
+	If non-ascii data is used in a feed, then encoding="UTF-8" must be specified in the feed: `<?xml version="1.0" encoding="UTF-8"?>`
 
 ## Channel-level Elements
 

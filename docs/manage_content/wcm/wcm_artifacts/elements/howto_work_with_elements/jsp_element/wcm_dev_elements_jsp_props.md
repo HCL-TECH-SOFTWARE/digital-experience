@@ -2,7 +2,7 @@
 id: wcm_dev_elements_jsp_props
 title: Selecting a JSP file
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -1,4 +1,5 @@
+title: Configuration
 nav:
-    - configure_access.md 
-    - providing_access_cc_nonad.md
-    - access_control_levels_author_editor.md
+    - index.md 
+    - Access to non-admin Users: providing_access_cc_nonad.md
+    - Access for Authors and Editors: access_control_levels_author_editor.md

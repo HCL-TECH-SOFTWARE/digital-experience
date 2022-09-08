@@ -2,7 +2,7 @@
 id: wcm_dev_pres-temp
 title: Creating a presentation template
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -1,0 +1,6 @@
+title: URL generation by using the Navigational State SPI
+nav:
+    - index.md
+    - obj_model.md
+    - accessor_spi.md
+    - url_gen_serv.md

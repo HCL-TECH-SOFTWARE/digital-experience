@@ -2,7 +2,7 @@
 id: h_rperm_delete_role_external
 title: Deleting roles for externalized resources
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -8,4 +8,4 @@ Whether developing, testing, or running a full production environment, use of Do
 
 ![Containerization Architecture Overview](../container/_img/ambassador-architecture.png)
 
-Please see the [Containerization Limitations/Requirements](../../../get_started/system_requirements/kubernetes/kubernetes-runtime.md) and [Deployment](../container/helm_deployment/overview.md) sections of the documentation before you begin.
+Please see the [Containerization requirements and limitations](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md) and [Deployment](../container/helm_deployment/overview.md) sections of the documentation before you begin.

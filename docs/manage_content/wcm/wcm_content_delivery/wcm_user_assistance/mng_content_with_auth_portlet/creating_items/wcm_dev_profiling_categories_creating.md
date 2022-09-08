@@ -2,7 +2,7 @@
 id: wcm_dev_profiling_categories_creating
 title: Creating a category
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

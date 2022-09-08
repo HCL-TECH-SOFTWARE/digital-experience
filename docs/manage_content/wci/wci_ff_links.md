@@ -1,4 +1,4 @@
-# How to handle embedded links
+# Embedded Links
 
 From time to time, the content that is being retrieved by the Web Content Integrator contains embedded links to images, files, and other content within the feed. You can use the link tag in your feed to represent embedded links so that they are converted into links to other Web Content Manager items that are created when the feed is processed.
 
@@ -279,7 +279,7 @@ If enabled:
 -   Only the content that is imported into HTML elements and components or Rich Text elements and components are processed.
 -   All image references matching the pattern "`<img src= ...`" are processed. Image references that are included within JavaScript code or CSS styles are not processed.
 -   The URLs specified in the "src" attributes of those image tags are converted to fully qualified URLs by using other information about the content item in the feed. Relative links must be relative to the URL in the <link\> element of the feed that follows the standard rules for relative links.
--   The image files are stored as shared image components. The access controls on the image component are set to match that of the content item, which references it. The name of the image component is based on the server-relative path to the image. For example, an image that is at http://<host\_name\>/resources/images/sm\_logo.gif is named resources.images.sm\_logo.gif.
+-   The image files are stored as shared image components. The access controls on the image component are set to match that of the content item, which references it. The name of the image component is based on the server-relative path to the image. For example, an image that is at http://<host\_name\>/guide_me/images/sm\_logo.gif is named resources.images.sm\_logo.gif.
 -   The URLs specified in the "src" attributes of the image tags must not contain a query string because everything after a question mark is ignored when the image component is created.
 
     For example, For example, <img src="http://<host\_name\>/program/path?param1=hello&param2=a.jpg"....\> and <img src="http://<host\_name\>/program/path?param1=world&param2=b.jpg" ...\> both creates or updates the same image component named "program.path".

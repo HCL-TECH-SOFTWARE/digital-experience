@@ -2,7 +2,7 @@
 id: wcm_dev_elements_short-text_add_template
 title: Adding a short text element to a template
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

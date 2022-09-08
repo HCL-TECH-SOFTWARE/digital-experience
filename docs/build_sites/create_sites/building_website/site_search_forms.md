@@ -2,9 +2,6 @@
 id: site_search_forms
 title: Setting up search for site visitors
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
-
 
 Learn about the initial considerations for setting up search for site visitors before you begin configuring and administering search on your website.
 

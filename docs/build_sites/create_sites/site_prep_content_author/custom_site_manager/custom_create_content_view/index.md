@@ -4,7 +4,7 @@ The Create Content view, which is accessed by clicking context menu in Site Mana
 
 You can customize what a content author has access to when using this tab.
 
+<!--
 -   **[Hiding authoring templates from the Site Manager](../admin-system/epc_wcm_hide_authoring_templates.md)**  
-By default, all authoring templates can be selected when creating new web content using the Create Content dialog from the Site Manager context menu. You can use a keyword to hide authoring templates from the Site Manager.
 
-
+By default, all authoring templates can be selected when creating new web content using the Create Content dialog from the Site Manager context menu. You can use a keyword to hide authoring templates from the Site Manager. -->

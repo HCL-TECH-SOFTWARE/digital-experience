@@ -38,7 +38,8 @@ For more information, see the following list of class attributes for portlet com
 
     This value of the `class` attribute lists the different portlet actions or operations that can be started in the portlet window.
 
-    **Note:** Such operations are not necessarily actions in the sense of HTTP. Instead, some actions are safe interactions, whereas others can be unsafe, as they modify the server. In the list of actions each interaction is either represented as a link to denote a safe interaction or as a `form` to denote an unsafe interaction.
+    !!! note
+      Such operations are not necessarily actions in the sense of HTTP. Instead, some actions are safe interactions, whereas others can be unsafe, as they modify the server. In the list of actions each interaction is either represented as a link to denote a safe interaction or as a `form` to denote an unsafe interaction.
 
 -   **portlet-action**
 
@@ -60,7 +61,8 @@ For more information, see the following list of class attributes for portlet com
 
     This value is an optional class on the portlet window. It denotes that this portlet window can be dragged around on the screen by users. This attribute is valid only if the portlet window is part of a modifiable portlet container, and if the user has the rights to modify the page and the container is not locked. Refer to the Container Microformat to see how a drop target is represented and how the actual drag and drop operation can be done.
 
-    **Note:** A drag and drop action is triggered from the client side, but is run on the server.
+    !!! note
+        A drag and drop action is triggered from the client side, but is run on the server.
 
 -   **xoxo**
 

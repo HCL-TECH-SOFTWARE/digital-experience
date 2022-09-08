@@ -9,6 +9,6 @@ A JCR search collection is a special purpose search collection that is used by H
 -   **[Managing the content sources of a search collection](../admin-system/srtmngcontsrc.md)**  
 You can create, view, and update content sources to customize your search collections.
 -   **[Exporting and importing search collections](../admin-system/srtexpimp.md)**  
-View the steps to export search collections from a source portal and import them into a target portal.
+
 
 

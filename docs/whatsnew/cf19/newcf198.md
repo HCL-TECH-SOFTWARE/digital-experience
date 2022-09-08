@@ -27,7 +27,7 @@ See the [HCL DX 9.5 Helm deployment](../../deployment/install/container/operato
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and automate processes in the development and delivery process. Updates delivered in CF198 include process definitions to automate select IBM WebSphere Application Server settings during deployment, generate import and export lists of virtual portals, and import and export personalization rules.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](../../integrate_apps/development_tools/dxclient/index.md) topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../extend_dx/development_tools/dxclient/index.md) topic for more information.
 
 ## New HCL Digital Experience Site Manager Custom Layout Editor
 
@@ -39,7 +39,7 @@ See the [Using the Digital Experience Custom Layout Editor](https://help.hcltec
 
 New HCL Experience Web Content Manager REST APIs are available for new menu component update, collection responses conversion utilities, the ability to use the page editor to edit elements inline and update metadata, set locations for sites, set HTML tags for text elements, and more.
 
-See the [HCL Experience API](../../integrate_apps/apis/hcl_experience_api/openapi_overview.md) topic for more information
+See the [HCL Experience API](../../extend_dx/apis/hcl_experience_api/openapi_overview.md) topic for more information
 
 ## Rationalized CF release versioning
 

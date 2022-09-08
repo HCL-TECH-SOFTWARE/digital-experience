@@ -8,7 +8,7 @@ To replace an existing WPSDB database with the backup copy using the DB2® Resto
 
 2.  Stop and start DB2 to make sure that there are no connections to the database.
 
-3.  In the DB2 Control Center, select **Tools** \> **Wizards** \> **Restore Wizard** from the list of available wizards to define and schedule the restoration of the database.
+3.  In the DB2 Control Center, select **Tools > Wizards > Restore Wizard** from the list of available wizards to define and schedule the restoration of the database.
 
 4.  Select the database instance DB2 and the database WPSDB to restore.
 

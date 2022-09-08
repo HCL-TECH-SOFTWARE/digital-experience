@@ -2,7 +2,7 @@
 id: wcm_dev_projects_creating
 title: Creating a project
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

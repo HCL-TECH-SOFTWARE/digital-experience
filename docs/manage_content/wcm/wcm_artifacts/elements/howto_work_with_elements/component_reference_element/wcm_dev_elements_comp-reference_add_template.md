@@ -1,10 +1,9 @@
 ---
 id: wcm_dev_elements_comp-reference_add_template
-title: Adding a component reference element to a template
+title: Adding a Component Reference Element to a Template
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
 
-
+# Adding a Component Reference Element to a Template
 
 You add a component reference element to an authoring template when you want the component reference to be used by a set of items that use the same authoring template.
 
@@ -26,7 +25,7 @@ You add a component reference element to an authoring template when you want the
 
 9.  Go to the component reference element you added and click **Select Component** to select a component, or do nothing if you want your content creators to select a component.
 
-10. Click ![properties](../images/propIcon.jpg) to open the display properties of the element. This tab is where you define how the element is displayed on the item form.
+10. Click the property icon to open the display properties of the element. This tab is where you define how the element is displayed on the item form.
 
     1.  To display the element as a required field select **Identify this as a required field**.
 

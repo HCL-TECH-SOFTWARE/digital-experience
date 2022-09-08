@@ -2,9 +2,6 @@
 id: site_ctc
 title: Content Template
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
-
 
 The Content Template \(CTC\) is a set of templates that accelerate the process of building a website. You should also install the Content Template with Site Builder so you can build sites based on Content Template components.
 
@@ -14,10 +11,10 @@ To get started, install Content Template on a development server and try customi
 
 The Content Template templates cover many basic content types and design elements. Using these templates you can build a basic site very quickly with little or no customization. For more complex sites, Content Template allows you to rapidly move past the initial build phase and proceed to delivering real value to your customer.
 
+<!-- 
 **Related information**  
-
 
 [Content Template Catalog](../ctc/ctc_intro.md)
 
-[Content Template Catalog 4.4](../ctc/ctc_intro.md)
+[Content Template Catalog 4.4](../ctc/ctc_intro.md) -->
 

@@ -2,9 +2,6 @@
 id: site_static_resources
 title: Static resources
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
-
 
 In addition to the HTML file that describes the page, static pages can contain resources such as images, scripts, and styles. Learn about the static resources that are available when you are using static pages.
 
@@ -49,11 +46,13 @@ In addition to the HTML file that describes the page, static pages can contain r
 
     -   If the attribute contains an absolute URL, the URL is rewritten to point to the Ajax proxy server.
     -   If the attribute contains a relative URL, the URL is rewritten to point to an access point that serves the resource out of the static page container for the page.
+
 -   **Resource sharing**
 
     Often, multiple static pages belong together in the form of an application. If so, multiple resources can be shared across the application. The mechanism that is used to rewrite resources searches across the parent page hierarchy, beginning with the current page. If a resource, for example, an image, cannot be found on one level, the fallback mechanism searches the next level. This mechanism enables the sharing of resources in a parent page that can be reused by child pages.
 
-    **Note:** Child pages do not have to have a special syntax to enable this sharing mechanism. The child pages contain a relative URL as if the resource were contained in the page itself.
+    !!! note
+        Child pages do not have to have a special syntax to enable this sharing mechanism. The child pages contain a relative URL as if the resource were contained in the page itself.
 
 
 

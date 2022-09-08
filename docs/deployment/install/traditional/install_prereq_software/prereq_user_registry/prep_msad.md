@@ -1,4 +1,4 @@
-# Preparing an Active Directory server
+# Prepare an Active Directory server
 
 If you plan to use Active Directory as an LDAP user registry, you must install and set up the server so that it can communicate with HCL Digital Experience.
 
@@ -8,7 +8,7 @@ If you plan to use Active Directory as an LDAP user registry, you must install a
 
     2.  Install the necessary Service Packs.
 
-    3.  Use the Windows Server documentation to install Internet Information Services \(IIS\). Use IIS to export server certificates. It must be installed before you install Certificate Services.
+    3.  Use the Windows Server documentation to install Internet Information Services (IIS). Use IIS to export server certificates. It must be installed before you install Certificate Services.
 
     4.  Use the Windows Server documentation to install Certificate Services if you plan on using Active Directory over SSL.
 
@@ -16,7 +16,8 @@ If you plan to use Active Directory as an LDAP user registry, you must install a
 
     1.  Create a user with the Windows™ administrative tools.
 
-        **Note:** There is a 20 character limitation for the user account name.
+        !!!note
+            There is a 20 character limitation for the user account name.
 
     2.  Set the password for the new user.
 
@@ -26,7 +27,7 @@ If you plan to use Active Directory as an LDAP user registry, you must install a
 
     1.  Install an Enterprise certificate authority on a Windows Domain Controller. It installs a certificate on a server or a third-party certificate on the Domain Controller.
 
-    2.  Click **Start** \> **All Programs** \> **Administrative Tools** \> **Active Directory Users and Computer**.
+    2.  Click **Start > All Programs > Administrative Tools > Active Directory Users and Computer**.
 
     3.  In the Active Directory Users and Computers window, right-click on your domain name and select **Properties**.
 
@@ -42,7 +43,7 @@ If you plan to use Active Directory as an LDAP user registry, you must install a
 
     9.  Use the wizard to add a policy for Domain Controllers.
 
-        **Note:** When these requirements are complete, all domain controllers request a certificate and support LDAP over SSL with port 636.
-
+        !!!note
+            When these requirements are complete, all domain controllers request a certificate and support LDAP over SSL with port 636.
 
 

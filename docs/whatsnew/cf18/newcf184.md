@@ -14,7 +14,7 @@ The Web Content Manager Syndication REST APIs let you control syndication proces
 
 ## Access the HCL Experience API in HCL DX GitHub
 
-The HCL Experience API is a set of OpenAPI-compliant REST APIs available for customers deploying HCL Digital Experience 9.5 containers on supported Kubernetes platforms. It supports the integration and management of HCL Digital Experience content and functionality to any digital channel using any front-end development framework. Developers may also now access this API published to the HCL DX GitHub repository. See the [Experience API](../../integrate_apps/apis/hcl_experience_api/openapi_overview.md) topic for more information.
+The HCL Experience API is a set of OpenAPI-compliant REST APIs available for customers deploying HCL Digital Experience 9.5 containers on supported Kubernetes platforms. It supports the integration and management of HCL Digital Experience content and functionality to any digital channel using any front-end development framework. Developers may also now access this API published to the HCL DX GitHub repository. See the [Experience API](../../extend_dx/apis/hcl_experience_api/openapi_overview.md) topic for more information.
 
 ## New HCL Digital Experience ‘How To’ Videos
 

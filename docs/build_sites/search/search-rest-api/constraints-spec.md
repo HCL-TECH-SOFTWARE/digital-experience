@@ -55,22 +55,9 @@ A range constraint allows only results in a specific range of field values. Valu
 |------------|--------------|
 |type|Always equals range for this type of constraint.|
 |id|The identifier of the indexed field.|
-|values|An array of range values. Each value consists of lower and upper boundaries. Each boundary can be inclusive or exclusive. One or more boundaries can be specified for each value. The allowed attributes are
-
--   ge for lower inclusive boundary.
-
--   g for lower exclusive boundary.
-
--   le for upper inclusive boundary.
-
--   l for upper exclusive boundary.
+|values|An array of range values. Each value consists of lower and upper boundaries. Each boundary can be inclusive or exclusive. One or more boundaries can be specified for each value. The allowed attributes are: <br/> -   ge for lower inclusive boundary. <br/> -   g for lower exclusive boundary. <br/> -   le for upper inclusive boundary. <br/> -   l for upper exclusive boundary.|
 
 
-|
-
-
-**Related information**  
-
-
-[Search facets REST API specification](../search-rest-api/facets-spec.md)
+???+ info "Related information:"
+    - [Search facets REST API specification](../search-rest-api/facets-spec.md)
 

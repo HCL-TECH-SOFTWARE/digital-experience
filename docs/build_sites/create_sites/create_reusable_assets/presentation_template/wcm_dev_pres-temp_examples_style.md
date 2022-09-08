@@ -21,7 +21,8 @@ vlink="#9999FF" alink="#FF33CC"leftmargin="5" topmargin="5">
 </html>
 ```
 
-**Note:** If the same page properties are used in more than one presentation template, they can be stored in a single text component that is itself referenced within the presentation template:
+!!! note
+    If the same page properties are used in more than one presentation template, they can be stored in a single text component that is itself referenced within the presentation template:
 
 ```
 <body <component name="TextComponentName"/>>
@@ -35,6 +36,7 @@ Default style properties cannot be set for components. The default page properti
 
 Cascading stylesheets can be used to control the style of components. For example, You might make the links in a menu a different color to the links in a navigator by using cascading stylesheets to determine the style of different components.
 
-**Note:** Where possible, use one cascading stylesheet for an entire site. A link to the stylesheet can be used, rather than embedding the stylesheet.
+!!! note
+    Where possible, use one cascading stylesheet for an entire site. A link to the stylesheet can be used, rather than embedding the stylesheet.
 
 

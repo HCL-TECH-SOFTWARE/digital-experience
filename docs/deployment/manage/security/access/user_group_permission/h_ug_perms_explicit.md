@@ -2,7 +2,7 @@
 id: h_ug_perms_explicit
 title: Assigning explicit roles to users and groups
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

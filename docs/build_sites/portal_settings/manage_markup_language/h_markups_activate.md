@@ -2,9 +2,6 @@
 id: h_markups_activate
 title: Activating or deactivating a markup
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
-
 
 You can manage which of the markup languages in your portal are activated.
 

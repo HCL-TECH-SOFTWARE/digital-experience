@@ -2,7 +2,7 @@
 id: wcm_dev_profiling_taxonomy_editing
 title: Changing the order within a taxonomy
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

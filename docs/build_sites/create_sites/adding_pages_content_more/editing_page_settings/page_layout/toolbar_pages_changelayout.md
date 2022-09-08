@@ -2,8 +2,6 @@
 id: toolbar_pages_changelayout
 title: Changing page layout
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
 
 
 You can select a different page layout from a list of predefined layouts.

@@ -2,7 +2,7 @@
 
 The following topics describe-s- the API calls to search HCL Digital Experience. You can search HCL Digital Experience web pages and content to find content that contains a specific text string in its title or content, or is tagged with a specific tag.
 
-Beginning with [HCL DX 9.5 Container Update and CF 200](../overview/new_cf_95.md), a new API explorer is available that allows developers using the Digital Experience Search REST APIs to explore and test these APIs. See the topic [Digital Experience Search REST API Explorer](search.md) below for details.
+Beginning with [HCL DX 9.5 Container Update and CF 200](../../../whatsnew/combined_cumulative_fix_strategy.md), a new API explorer is available that allows developers using the Digital Experience Search REST APIs to explore and test these APIs. See the topic [Digital Experience Search REST API Explorer](index.md) below for details.
 
 ## Context Paths
 
@@ -24,56 +24,9 @@ The request must be a standard HTTP GET or POST command.
 
 |Name|Description|Comments|
 |----|-----------|--------|
-|locale|-   Locale of request client
--   Any message that is returned is in the client locale
--   Available scopes and collections; titles and description are in the client locale
--   Sorting method might be effected by the locale
--   Any additional information in the search results that are locale aware, like description
-
-|Specifies the language to use to parse the search request. See *ISO-639* and *ISO-3166* for valid values, for example. en\_US. This parameter is optional. When specified, the appropriate dictionary for the specified language is used. **Note:** The dictionary for the language that is specified must be enabled for this parameter to work.
-
-|
-|query| |-   Text to search; returns a list of results with the specified text in the title, description, or content.
--   Encode the strings.
--   By default, spaces are treated as an OR operator.
-
- The following operators are supported:
-
--   **AND or &&**
-
-Searches for items that contain both words. For example: query=red%20AND%20test returns items that contain both the word red and test. AND is the default operator.
-
--   **NOT or !**
-
-Excludes the word that follows the operator from the search. For example: query=test%20NOT%20red returns items that contain the word test, but not the word red.
-
--   **OR**
-
-Searches for items that contain either of the words. For example: query=test%20OR%20red.
-
-To search for a phrase, enclose the phrase in quotation marks \(" "\).
-
--   **+**
-
-The plus sign indicates that the word must be present in the result. For example: query=+test%20red returns only items that contain the word test and many that also contain red, but none that contain only the word red.
-
--   **?**
-
-Use a question mark to match individual characters. For example: query=te%3Ft returns items that contain the words test, text, tent, and others that begin with te.
-
--   **-:**
-
-The dash prohibits the return of a word. This operator is similar to NOT. For example: query=test%20-red returns items that contain the word test, but not the wordred.
-
-
- **Note:** Wildcard searches are permitted, but wildcard only searches \(\*\) are not.
-
- For more information about supported operators, go to the *Search* topic.
-
-|
-|queryLang|Language of the query string|Specifies the language to use to parse the query parameter. See *ISO-639* and*ISO-3166* for valid values, for example, en\_US. This parameter is optional. When specified, the appropriate dictionary for the specified language is used. **Note:** The dictionary for the language that is specified must be enabled for this parameter to work.
-
-|
+|locale|-   Locale of request client <br/> -   Any message that is returned is in the client locale <br/> -   Available scopes and collections; titles and description are in the client locale <br/> -   Sorting method might be effected by the locale <br/> -   Any additional information in the search results that are locale aware, like description.|Specifies the language to use to parse the search request. See *ISO-639* and *ISO-3166* for valid values, for example. en\_US. This parameter is optional. When specified, the appropriate dictionary for the specified language is used. **Note:** The dictionary for the language that is specified must be enabled for this parameter to work.|
+|query| |-   Text to search; returns a list of results with the specified text in the title, description, or content. <br/> -   Encode the strings. <br/> -   By default, spaces are treated as an OR operator. <br/> The following operators are supported: <br/> -   **AND or &&** <br/> Searches for items that contain both words. For example: query=red%20AND%20test returns items that contain both the word red and test. AND is the default operator. <br/> -   **NOT or !** <br/> Excludes the word that follows the operator from the search. For example: query=test%20NOT%20red returns items that contain the word test, but not the word red. <br/> -   **OR** <br/> Searches for items that contain either of the words. For example: query=test%20OR%20red. <br/> To search for a phrase, enclose the phrase in quotation marks \(" "\). <br/>   **+** <br/> The plus sign indicates that the word must be present in the result. For example: query=+test%20red returns only items that contain the word test and many that also contain red, but none that contain only the word red. <br/>  **?** <br/> Use a question mark to match individual characters. For example: query=te%3Ft returns items that contain the words test, text, tent, and others that begin with te. <br/>  **-:** <br/> The dash prohibits the return of a word. This operator is similar to NOT. For example: query=test%20-red returns items that contain the word test, but not the word *red*. <br/> **Note:** Wildcard searches are permitted, but wildcard only searches \(\*\) are not. <br/> For more information about supported operators, go to the *Search* topic.|
+|queryLang|Language of the query string|Specifies the language to use to parse the query parameter. See *ISO-639* and*ISO-3166* for valid values, for example, en\_US. This parameter is optional. When specified, the appropriate dictionary for the specified language is used. <br/>  **Note:** The dictionary for the language that is specified must be enabled for this parameter to work.|
 |start|Offset to first result to return in results|Defines an offset from the first result in the set. This parameter is ignored if a page parameter is provided. The value starts from 0. The default is 0. If specified value is negative, the value is defaulted to 0; if the specified value is greater than the number of results, no results are returned.|
 |page|Page number|Specifies the page to be returned. The default value is 1, which returns the first page.|
 |pageSize|Number of results that are wanted for a single request|Specifies the number of entries to return per page. The minimum value is 0 \(negative values default to 0\). The default value is 10. The maximum value that you can specify is 150.|
@@ -205,6 +158,8 @@ The following content is returned by the server:
 	</atom:feed>
 ```
 
+
+<!---
 -   **[Search scopes REST API specification](../search-rest-api/scope-spec.md)**  
 The Scopes API returns the set of supported values that can be passed to the scope parameter of the HCL Digital Experience Search API.
 -   **[Search indexes REST API specification](../search-rest-api/index-spec.md)**  
@@ -214,13 +169,10 @@ Constraints are part of the Search API. They provide a structured method for adv
 -   **[Search facets REST API specification](../search-rest-api/facets-spec.md)**  
 The following document describes the facet parameter of the Search API and the corresponding response elements. The facet parameter allows obtaining the facets, which are relevant for the search query. The facets that are supported in Portal Search include Tag, Person, Date, Source, and for status updates only Trend.
 -   **[Digital Experience Search REST API Explorer](../search-rest-api/serach_API_Explore.md)**  
-The Digital Experience Search REST API provides developers programmatic access to search indexed Digital Experience content and web pages. The Digital Experience Search REST API Explorer allows developers to explore and test the Digital Experience Search REST APIs.
+The Digital Experience Search REST API provides developers programmatic access to search indexed Digital Experience content and web pages. The Digital Experience Search REST API Explorer allows developers to explore and test the Digital Experience Search REST APIs. --->
 
 
-**Related information**  
-
-
-[Search](../wcm/wcm_dev_search.md)
-
-[Paged Feeds](https://datatracker.ietf.org/doc/html/rfc5005#section-3)
+???+ info "Related information:"
+   - [Search](../index.md)
+   - [Paged Feeds](https://datatracker.ietf.org/doc/html/rfc5005#section-3)
 

@@ -2,7 +2,7 @@
 id: wcm_dev_elements_username_props
 title: Define component designs for different users
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

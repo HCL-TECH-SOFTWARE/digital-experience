@@ -1,10 +1,10 @@
-# Author a content template \| HCL Content Composer
+# Author Content Templates
 
 This section provides the steps on how to author a content template using HCL Content Composer.
 
 ## Prerequisite
 
-Content Composer should be installed and configured to HCL Digital Experience 9.5 container release update CF181 or higher. See instructions to install to supported container environments in the [Install HCL Digital Experience 9.5 Components](../containerization/install_config_cc_dam.html) topic.
+Content Composer should be installed and configured to HCL Digital Experience 9.5 container release update CF181 or higher. See instructions to install to supported container environments in the [Install HCL Digital Experience 9.5 Components](/installation/install_config_cc_dam.md) topic.
 
 Content Composer is accessible from the Practitioner Studio interface \(after image configuration to your HCL Digital Experience 9.5 CF181 and higher deployment\).
 
@@ -16,21 +16,21 @@ Follow these steps to create a new content template using Content Composer:
 
 1.  From the HCL Digital Experience 9.5 Content Composer interface, click the drop-down arrow of the **Create** button to select the **Create Content Template** option.
 
-    ![](../assets/Select_new_content_template_HCL_Content_Composer.png "Create Content Template")
+    ![](../../../../assets/Select_new_content_template_HCL_Content_Composer.png "Create Content Template")
 
 2.  Complete the fields on the **Content Template** tab, of which the content author will be directed to by default. Add a **Name**, **Display Title**, and \(optional\) **Description** for the new content template.
 
 
 
-    ![](../assets/Complete_content_template_details.HCL_Content_Composer.png)
+    ![](../../../../assets/Complete_content_template_details.HCL_Content_Composer.png)
 
 3.  In **Select Location**, select the site location to present the content template when completed and ready for publication.
 
-    ![](../assets/Select_content_template_location_HCL_Content_Composer.png "Setting the location of the Content Template")
+    ![](../../../../assets/Select_content_template_location_HCL_Content_Composer.png "Setting the location of the Content Template")
 
 4.  To add content elements to the content template for use, add an element of choice by either dragging any of the **Text**, **Media**, **Selection**, and **Include** element items from the **Elements** list displayed on the right or by clicking the plus \(+\) icon of the selected element as shown below:
 
-    ![](../assets/Add_Element_new_content_template_HCL_Content_Composer.png "Add content elements to the new Content Template")
+    ![](../../../../assets/Add_Element_new_content_template_HCL_Content_Composer.png "Add content elements to the new Content Template")
 
     **Note:** As per HCL Digital Experience 9.5 CF184, the HTML and JSP elements are not accessible via HCL Content Composer. However, you can add the two elements via Web Content Manager.
 
@@ -39,7 +39,7 @@ Follow these steps to create a new content template using Content Composer:
 
     **Note:** In the **Workflow** section on the right, ticking **Enable workflow for items created with this authoring template** will require content authors to select a workflow when selecting the newly created content template.
 
-    ![](../assets/Add_default_content_settings_new_content_template_HCL_Content_Composer.png "Add Default Content settings to the new Content Template")
+    ![](../../../../assets/Add_default_content_settings_new_content_template_HCL_Content_Composer.png "Add Default Content settings to the new Content Template")
 
 7.  Follow the steps on how to honor to configure a selected Element's Default Content to honor the properties in the Content Template.
 
@@ -53,17 +53,17 @@ Follow these steps to create a new content template using Content Composer:
 
     1.  From the **Default Content** tab, click **Properties** located on the upper part of the selected Element's default content as shown in the example below for the Text Element:
 
-        ![](../assets/HCL_Content_Composer_configure_default_content_properties.png)
+        ![](../../../../assets/HCL_Content_Composer_configure_default_content_properties.png)
 
     2.  Fill out the fields of the selected element's **Properties**, then click **Apply** to save changes.
 
-        ![](../assets/HCL_Content_Composer_honoring_properties.png)
+        ![](../../../../assets/HCL_Content_Composer_honoring_properties.png)
 
         **Note:** If you close the **Properties** modal window without saving the changes, a confirmation will prompt to discard all the changes. The same will also happen if you click anywhere outside the **Properties** modal window without saving the changes.
 
     3.  Fill out the selected element's default content. Make sure that you follow the field requirements as indicated below:
 
-        ![](../assets/HCL_Content_Composer_honoring_properties_fields.png)
+        ![](../../../../assets/HCL_Content_Composer_honoring_properties_fields.png)
 
         **General Guidelines when filling in properties for **Default Content****:
 
@@ -91,11 +91,11 @@ Follow the steps to create a new content template with auto-populated location f
 1.  From the HCL Digital Experience 9.5 Content Composer Dashboard, select a Content Library or a Content Folder.
 2.  Click **Create** then select **Content Template**.
 
-    ![](../assets/HCL_Content_Composer_create_new_content_template_auto_locate.png)
+    ![](../../../../assets/HCL_Content_Composer_create_new_content_template_auto_locate.png)
 
 3.  The location will auto-populate to the selected Content Library or Content Folder as shown below.
 
-    ![](../assets/HCL_Content_Template_auto_location_new_content.png)
+    ![](../../../../assets/HCL_Content_Template_auto_location_new_content.png)
 
 4.  Complete the fields on the **Content Template** tab, of which the content author will be directed to by default.
 5.  When done, select **Save** to save your settings and create your new content template, or **Save and Close** which will create your new content template with the saved settings and will redirect you to the new content template's location in the Content Composer dashboard.
@@ -107,7 +107,7 @@ Content users can view a light preview of uploaded content and more using HCL Co
 1.  Access the content item you wish to edit. In this example, the content item example above \(**Image**\) is obtained from **Web Content \> Content \> Articles** site area location. Select **Open Content**.
 2.  On the content item editor interface, select the **More** drop down as shown below and select **Overview**.
 
-    ![](../assets/Select_image_overview_HCL_Content_Composer.png "Select More drop down options")
+    ![](../../../../assets/Select_image_overview_HCL_Content_Composer.png "Select More drop down options")
 
 3.  The light preview of the selected content will be shown in a new window. It will display:
     -   Content title
@@ -125,7 +125,7 @@ The **Search Results** view allows users to perform content authoring actions.
 
     Ticking the checkbox \(beside **Title**\) for the content item presented in the **Search Results** will also enable context-specific **Edit** and **Delete** options for the content item to optionally proceed to the content item's details in **Edit mode**.
 
-    ![](../assets/Content_authoring_actions_in%20Search_Results_view.png "Search results view in Content Composer")
+    ![](../../../../assets/Content_authoring_actions_in%20Search_Results_view.png "Search results view in Content Composer")
 
 2.  Column item results can also be sorted by clicking **Title**, **Date Created** or **Date Modified**. The **Status** column shows whether the content item is *Published* or *Draft*. Search Result columns can also be resized for convenience. 
 
@@ -137,12 +137,11 @@ The **Dashboard** view allows users to perform content authoring actions.
 
     Ticking the checkbox \(beside the **Content Title**\) presented in the **Content Collections** column will also enable context-specific **Edit** and **Delete** options for the content item to optionally proceed to the content item's details in **Edit mode**.
 
-    ![](../assets/Delete_content_templates_from_Dashboard.png "Authoring actions on HCL Content Composer Dashboard
-                                        view")
+    ![Authoring actions on HCL Content Composer Dashboard view](../../../../assets/Delete_content_templates_from_Dashboard.png)
 
 
 ## HCL Digital Experience Solution Feedback
 
-HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).
+HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1){:target="_blank"}.
 
 

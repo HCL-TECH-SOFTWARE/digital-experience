@@ -1,4 +1,4 @@
-# URL generation by using PathCmpnt and URLCmpnt tags
+# URL generation by Using PathCmpnt and URLCmpnt tags
 
 There are some special considerations to keep in mind when you use URLCmpnt and PathCmpnt tags to create URLs to other web content items from within your content.
 

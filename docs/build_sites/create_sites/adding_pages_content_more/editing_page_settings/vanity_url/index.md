@@ -2,9 +2,6 @@
 id: toolbar_vanityurls
 title: Vanity URLs
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
-
 
 Create a vanity URL when you need a short page address that people can easily remember.
 
@@ -24,6 +21,7 @@ When you go to a vanity URL, this URL does not remain in the browser **URL addre
 
 Ideally the vanity URL is your-hostname.com/your-vanity-url. Your site administrator must set up HTTP server rewrite rules to ensure this behavior. Your authoring environment might be set up differently than the live server site. If you do not have an HTTP server for your authoring environment, then your vanity URL might look as follows: your-hostname.com/context-root/vanityurl/your-vanity-url. After you publish to the production server that has an HTTP server that is configured correctly, your vanity URL is your-hostname.com/your-vanity-url.
 
--   **[Content types](toolbar_content_types.md)**  
+<!---
+-   **[Content types](toolbar_content_types.md)**   --->
 
 

@@ -1,6 +1,5 @@
 # Configuring on DX Deployment
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.
+Run the following tasks after you install and deploy HCL Digital Experience. They address tasks that are typically run one time and have a global effect. Some configuration changes are made more frequently or do not have a global effect. These tasks are addressed in the Administering section.
 
-
-
+Review the [HCL Digital Experience Performance Tuning Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074411) to tune your stand-alone or clustered environment. Even if you have a clustered environment, review the Base Portal Tuning scenarios and the Tuning a cluster environment chapter. In addition, the tuning guide provides information about caches for HCL Digital Experience.

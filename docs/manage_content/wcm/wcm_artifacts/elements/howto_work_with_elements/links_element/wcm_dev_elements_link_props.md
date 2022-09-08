@@ -2,7 +2,7 @@
 id: wcm_dev_elements_link_props
 title: Selecting a link
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

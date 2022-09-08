@@ -2,7 +2,7 @@
 id: wcm_managing_workflows_remove
 title: Removing and adding workflows
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

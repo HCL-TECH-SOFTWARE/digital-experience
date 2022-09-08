@@ -2,7 +2,7 @@
 id: wcm_overview_accessibility
 title: Authoring portlet accessibility features
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

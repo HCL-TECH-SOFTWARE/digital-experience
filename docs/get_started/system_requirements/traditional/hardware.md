@@ -1,5 +1,5 @@
 # Hardware requirements
-HCL Portal Express requires the following hardware, organized by type of hardware, deployment units or components.
+HCL Digital Experience requires the following hardware, organized by type of hardware, deployment units or components.
 
 ## AIX
 |Hardware|Deployment units|Requirement|Applicable operating systems|
@@ -9,6 +9,10 @@ HCL Portal Express requires the following hardware, organized by type of hardwar
 |Other hardware|Server|Minimum 2 CPUs required for installations of DX Portal and HCL WCM|All supported AIX operating systems|
 |Processor|Server|X86-64 IBM POWER Family of processors<br>System z Processors|All supported AIX operating systems|
 |-|Server|Minimum 2 CPUs for installation of Portal or WCM|All supported AIX operating systems|
+
+!!! important "AIX support"
+
+	Portal Express offering does not support AIX.
 
 ## Linux
 |Hardware|Deployment units|Requirement|Applicable operating systems|

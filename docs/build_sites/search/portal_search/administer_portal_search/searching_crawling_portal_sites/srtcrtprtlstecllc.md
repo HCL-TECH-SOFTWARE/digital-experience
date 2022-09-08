@@ -38,15 +38,12 @@ If you created the portal site collection by navigating to the Manage Search por
 
 Portal Search starts a new crawl on the portal site search collection.
 
-**Notes:**
+!!! note
+    1.  On a multilingual portal site, you can create multiple collections in different languages. For details, see the topic about Crawling a multilingual portal site.
+    2.  When you start the crawl for the first time, a warning message might display. You can ignore this message. For more information, see the topic about Hints and tips for Portal Search crawls.
 
-1.  On a multilingual portal site, you can create multiple collections in different languages. For details, see the topic about Crawling a multilingual portal site.
-2.  When you start the crawl for the first time, a warning message might display. You can ignore this message. For more information, see the topic about Hints and tips for Portal Search crawls.
-
-
+<!--
 **Related information**  
-
-
 [Searching on secured portal sites and pages and content management items](../admin-system/srtsrchscrprtlstepgs.md)
 
 [Exporting and importing search collections](../admin-system/srtexpimp.md)
@@ -57,5 +54,5 @@ Portal Search starts a new crawl on the portal site search collection.
 
 [Manage Search](../panel_help/h_search_managesearch.md)
 
-[Users cannot see portal site search results in their preferred language](../admin-system/srrhinttips_no_lang.md)
+[Users cannot see portal site search results in their preferred language](../admin-system/srrhinttips_no_lang.md) -->
 

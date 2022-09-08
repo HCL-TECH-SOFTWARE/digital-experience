@@ -54,10 +54,9 @@ During indexing special characters are handled as follows:
     All other characters are removed from the strings in which they appear but do not separate words.
 
 
-**Notes:**
-
-1.  All characters that split words are discarded during indexing and searching.
-2.  The previous statements apply to **indexing**. However, in a **search query** all characters that can be part of the search syntax are treated in that capacity and not as part of the search query. These are the plus \( `+` \) and minus \( `-` \) signs, double quotation marks \( `&quot;` \), and the asterisk wild card character \( `*` \). If users want to include such characters in their search query, they must enclose them in double quotation marks. For example `"+hello"` searches for the string `+hello`; `"*Hello*"` searches for the string `*Hello*`.
-3.  The less than \( < \) and greater than \( \> \) symbols are special HTML characters that Search cannot handle.
+!!! note
+    1.  All characters that split words are discarded during indexing and searching.
+    2.  The previous statements apply to **indexing**. However, in a **search query** all characters that can be part of the search syntax are treated in that capacity and not as part of the search query. These are the plus \( `+` \) and minus \( `-` \) signs, double quotation marks \( `&quot;` \), and the asterisk wild card character \( `*` \). If users want to include such characters in their search query, they must enclose them in double quotation marks. For example `"+hello"` searches for the string `+hello`; `"*Hello*"` searches for the string `*Hello*`.
+    3.  The less than \( < \) and greater than \( \> \) symbols are special HTML characters that Search cannot handle.
 
 

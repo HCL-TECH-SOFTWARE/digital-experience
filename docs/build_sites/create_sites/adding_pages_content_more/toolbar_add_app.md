@@ -2,9 +2,6 @@
 id: toolbar_add_app
 title: Adding applications to your page
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
-
 
 Applications are reusable portlets that you can add to a page to show content items in different formats. Applications can also enable the completion of a task, such as viewing external search results or adding someone to your Sametime list. Applications display on the page where you add them and do not display in site manager nor in content explorer.
 
@@ -14,15 +11,15 @@ Like page components, some applications can be used to display pre-filled conten
 
 2.  Click a page in site manager to load it in the website view.
 
-3.  Click ![screen capture of the add page components and applications icon](../images/toolbar_sm_add_app_comp_icon.JPG) **Add page components and applications** in the site toolbar.
+3.  Click ![screen capture of the add page components and applications icon](../../../images/toolbar_sm_add_app_comp_icon.JPG) **Add page components and applications** in the site toolbar.
 
-4.  In the Applications pane, click the application that you want to add and then drag and drop the application onto the page in the website view. Or, hover over the application and click ![screen capture of the add this content to the page icon](../images/toolbar_app_comp.jpg) **Add this content to the page**.
+4.  In the Applications pane, click the application that you want to add and then drag and drop the application onto the page in the website view. Or, hover over the application and click ![screen capture of the add this content to the page icon](../../../images/toolbar_app_comp.jpg) **Add this content to the page**.
 
 
 Some applications contain content that cannot be modified, such as the About WebSphere Portal application. Other applications might require editing if your administrator did not configure pre-filled content, such as the Banner Ad application. Complete the following steps to view, edit, or delete the application:
 
 1.  In site manager, click the page where you added the application to load the page.
-2.  In the application title bar, click the content menu icon ![content menu](../images/content_menu2.jpg).
+2.  In the application title bar, click the content menu icon ![content menu](../../../images/content_menu2.jpg).
 
 The options that are available in the content menu vary depending on what type of application you are working with.
 

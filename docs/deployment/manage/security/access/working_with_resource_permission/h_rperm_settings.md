@@ -2,7 +2,7 @@
 id: h_rperm_settings
 title: Configuring the Resource Permissions portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

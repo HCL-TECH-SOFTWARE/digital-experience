@@ -1,4 +1,4 @@
-# Install the HCL Digital Experience 9.5 components
+# Install DAM components
 
 This section provides a high-level overview of the architecture and the steps to install, configure, and update the HCL Digital Experience 9.5 components: Experience API, Content Composer, and Digital Asset Management.
 
@@ -6,15 +6,15 @@ This section provides a high-level overview of the architecture and the steps to
 
 ## High-level architecture and topology
 
-![High-level architecture](../../images/container_deploy_tp_cf_181.png)
+![High-level architecture](../../../images/container_deploy_tp_cf_181.png)
 
-![Topology](../../images/cf_181_topology.png)
+![Topology](../../../images/cf_181_topology.png)
 
 ## Prerequisite
 
-DX Administrators can choose to install the DX Core containers and then proceed to install Content Composer and Digital Asset Management containers to the supported Kubernetes container platforms as outlined in the following steps. See the [Deployment](../../platform/kubernetes/deployment/helm_deployment.md) section for the latest DX 9.5 container file listings.
+DX Administrators can choose to install the DX Core containers and then proceed to install Content Composer and Digital Asset Management containers to the supported Kubernetes container platforms as outlined in the following steps. See the [Deployment](../../../deployment/install/container/helm_deployment/overview.md) section for the latest DX 9.5 container file listings.
 
-Deploying the HCL Digital Asset Management or Content Composer components is supported on Kubernetes or OpenShift platforms and is not supported for deployment to Docker platforms. See the [System requirements](../../platform/systemrequirements/index.md) section for more information.
+Deploying the HCL Digital Asset Management or Content Composer components is supported on Kubernetes or OpenShift platforms and is not supported for deployment to Docker platforms. See the [System requirements](../../../get_started/system_requirements/kubernetes/kubernetes-runtime.md) section for more information.
 
 !!! note  
     For initial deployments, it is recommended to install the HCL Digital Experience 9.5 components \(Experience API, Content Composer, and Digital Asset Management\) to a non-production \(test\) HCL Digital Experience 9.5 environment.
@@ -25,11 +25,11 @@ Follow these steps to install your HCL Digital Experience 9.5 components \(Exper
 
 **Asset Management components**
 
-If installing in conjunction with HCL Digital Experience 9.5 CF181 or higher, follow the instructions in the [Container Deployment](../../platform/kubernetes/deployment/helm_deployment.md) topic. This page lists the latest HCL Digital Experience 9.5 CF181 or higher product images available and how to obtain and load the images into your Docker repository before continuing with these instructions.
+If installing in conjunction with HCL Digital Experience 9.5 CF181 or higher, follow the instructions in the [Container Deployment](../../../deployment/install/container/helm_deployment/overview.md) topic. This page lists the latest HCL Digital Experience 9.5 CF181 or higher product images available and how to obtain and load the images into your Docker repository before continuing with these instructions.
 
 If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernetes environment:
 
-1.  Verify that you can access the HCL Digital Experience 9.5 CF181 or higher Practitioner Studio by logging in to your HCL Digital Experience 9.5 Practitioner Studio interface. See the [HCL Digital Experience 9.5 Practitioner Studio](https://help.hcltechsw.com/digital-experience/9.5/practitioner_studio/practitionerstudio_overview.html){:target="_blank"} topic for information.
+1.  Verify that you can access the HCL Digital Experience 9.5 CF181 or higher Practitioner Studio by logging in to your HCL Digital Experience 9.5 Practitioner Studio interface. See the [HCL Digital Experience 9.5 Practitioner Studio](../../../build_sites/practitioner_studio/index.md) topic for information.
 2.  Download and extract the HCL Digital Experience 9.5 components from your Digital Experience entitlements from the [HCL Software License Portal](https://www.hcltech.com/software/support/release){:target="_blank"} to the local file system.
 
     **Sample download package name**: `hcl-dx-kubernetes-v95-CF181-other.zip` or higher, depending on the DX 9.5 Container Update version you are installing.
@@ -320,13 +320,9 @@ If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernet
 
 If you are using a content delivery network \(CDN\) such as [Akamai](https://www.akamai.com/our-thinking/cdn/what-is-a-cdn){:target="_blank"}, using `Vary: Origin` may prevent you from caching content. To bypass this limitation, your CDN configuration must strip the `Vary` header on the way in, to reinstate your ability to cache content. On the way out, you can append the `Origin` parameter to the `Vary` header when serving a response using **'Modify Outgoing Response Header'**.
 
-<!-- -   **[Enable/disable Content Composer in Virtual Portals](../content_composer/configure_cc_virtual_portals.md)**  
-The use of Content Composer features in a Virtual Portal deployment pattern is supported for HCL Content Composer beginning with Container Update 9.5 CF192. -->
+???+ info "**Related information:**"  
+    - [HCL Digital Asset Management](../../digital_assets/index.md)
+    - [How to enable Practitioner Studio](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md)
+    - [Docker image deployment](../../../deployment/install/docker/docker_image_deployment.md)
+    - [Digital Asset Management persistence architecture](../../../get_started/plan_deployment/container_deployment/dam_persistence_architecture.md)
 
-<!-- ???Info Related Information:
-    - [HCL Content Composer](../../content_composer/cont_comp_overview.md)
-    - [HCL Digital Asset Management](../../productfeatures/digital_asset_mgmt/digital_asset_mgmt_overview.md) 
-    - [Configure Digital Asset Management in virtual portals](../../containerization/configure_digital_asset_management_in_virtual_portals.md)
-    - [How to enable Practitioner Studio](practitioner_studio/enable_prac_studio.md)
-    - [Docker image deployment](containerization/docker_image_deployment.md)
-    - [Digital Asset Management persistence architecture](../../containerization/dam_persistence_architecture.md) -->

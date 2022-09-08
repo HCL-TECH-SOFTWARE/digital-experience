@@ -1,41 +1,41 @@
 # PersistentVolumeClaims
 
-To run HCL Digital Experience 9.5 Container deployments in your Kubernetes or OpenShift cluster, you need to set up PersistentVolumes \(PVs\) on your cluster and configure the Helm Chart to create the appropriate PersistentVolumeClaims \(PVCs\).
+To run HCL Digital Experience 9.5 Container deployments in your Kubernetes or OpenShift cluster, you need to set up PersistentVolumes (PVs) on your cluster and configure the Helm Chart to create the appropriate PersistentVolumeClaims (PVCs).
 
-Before you proceed, review the [Persistent Volumes and related operations considerations](../../architecture/persistent_volumes.md) topic in the DX Help Center.
+Before you proceed, review the [Persistent Volumes and related operations considerations](../../../../../../get_started/plan_deployment/container_deployment/persistent_volumes.md) topic in the DX Help Center.
 
 !!! note
-    The provisioning of PersistentVolumes \(PVs\) may differ based on your cluster configuration and your cloud provider. Please reference the documentation of your cloud provider for additional information.
+    The provisioning of PersistentVolumes (PVs) may differ based on your cluster configuration and your cloud provider. Please reference the documentation of your cloud provider for additional information.
 
 ## Persistent Volume Types
 
 !!! important
-    Ensure that your PersistentVolumes \(PVs\) are created with the Reclaim Policy set to RETAIN. This allows for the reuse of PVs after a PersistentVolumeClaim \(PVC\) is deleted. This is important to keep data persisted, for example, between deployments or tests. Refrain from using the Reclaim Policy DELETE unless you have the experience in managing these operations successfully, to avoid unpredictable results. This is not recommended in production use, as deleting PVCs causes the Kubernetes or OpenShift cluster to delete the bound PV as well, thus, deleting all the data on it.
+    Ensure that your PersistentVolumes (PVs) are created with the Reclaim Policy set to RETAIN. This allows for the reuse of PVs after a PersistentVolumeClaim (PVC) is deleted. This is important to keep data persisted, for example, between deployments or tests. Refrain from using the Reclaim Policy DELETE unless you have the experience in managing these operations successfully, to avoid unpredictable results. This is not recommended in production use, as deleting PVCs causes the Kubernetes or OpenShift cluster to delete the bound PV as well, thus, deleting all the data on it.
 
--   **`ReadWriteOnce` \(RWO\)**
+-   **`ReadWriteOnce` (RWO)**
 
     `ReadWriteOnce` PVs allow only one pod per volume to perform reading and writing transactions. This means that the data on that PV cannot be shared with other pods and is linked to one pod at a time.
 
     In the HCL Digital Experience 9.5 Kubernetes or OpenShift deployment using Helm, the only DX applications leveraging RWO PVs are Core and Persistence.
 
-    Information regarding how to calculate the number of required volumes for the DX Core and Persistence applications is presented in the [Persistent Volumes and related operations considerations](../../architecture/persistent_volumes.md) topic in the DX Help Center.
+    Information regarding how to calculate the number of required volumes for the DX Core and Persistence applications is presented in the [Persistent Volumes and related operations considerations](../../../../../../get_started/plan_deployment/container_deployment/persistent_volumes.md) topic in the DX Help Center.
 
     Since Core requires RWO PVs per pod, it may be necessary to have auto-provisioning of such volumes configured in your cluster if you don't know the final maximum number of possible Core pods running at the same time. Each Core pod requires 2 RWO PVs.
 
     Since the number of pods for Persistence is limited by design, you need 2 RWO PVs for Persistence.
 
--   **`ReadWriteMany` \(RWX\)**
+-   **`ReadWriteMany` (RWX)**
 
     `ReadWriteMany` PVs support read and write operations by multiple pods. This means the data on that PV can be shared with other pods and can be linked to multiple pods at a time.
 
     In the HCL Digital Experience 9.5 Kubernetes and OpenShift deployment using Helm the only DX applications leveraging RWX PVs are Core and Digital Asset Management.
 
-    Since the PV can be shared between all Core pods, you need one \(1\) RWX PV for Core, regardless of the pod count. Since the PV can be shared between all Digital Asset Management pods, you need one \(1\) RWX PV for Digital Asset Management, regardless of the pod count.
+    Since the PV can be shared between all Core pods, you need one (1) RWX PV for Core, regardless of the pod count. Since the PV can be shared between all Digital Asset Management pods, you need one (1) RWX PV for Digital Asset Management, regardless of the pod count.
 
 
 ## Configuration parameters
 
-To access the PersistentVolumes \(PVs\) on your cluster, the HCL Digital Experience 9.5 Kubernetes or OpenShift deployment using Helm creates PersistentVolumeClaims \(PVCs\) that binds the PVs to the corresponding pods.
+To access the PersistentVolumes (PVs) on your cluster, the HCL Digital Experience 9.5 Kubernetes or OpenShift deployment using Helm creates PersistentVolumeClaims (PVCs) that binds the PVs to the corresponding pods.
 
 Each PVC that applications require allows you to configure the following parameters, as shown below. For a PVC of the Core application:
 
@@ -64,7 +64,7 @@ volumes:
 
     If you enter an empty `StorageClassName`, Kubernetes falls back to the default `StorageClass` configured in your Cluster. Refer to your cloud provider for additional information about your default StorageClass, since this depends on your Kubernetes or OpenShift environment.
 
-    Reference the original values.yaml file you have extracted as outlined in the [Prepare configuration](../preparation/prepare_configuration.md) topic for all configurable PVCs.
+    Reference the original values.yaml file you have extracted as outlined in the [Prepare configuration](../mandatory_tasks/prepare_configuration.md) topic for all configurable PVCs.
 
 -   **`Requests`**
 
@@ -78,7 +78,7 @@ volumes:
 
     A detailed description on how to use the `selector` can be found in the official [`Kubernetes` documentation](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#selector).
 
-    A PVC will only match with a PV satisfying the selector and all the other requirements such as type \(`RWO/RWX`, as defined by the deployment itself\), storage capacity, and `StorageClassName`.
+    A PVC will only match with a PV satisfying the selector and all the other requirements such as type (`RWO/RWX`, as defined by the deployment itself), storage capacity, and `StorageClassName`.
 
 
 -   **`VolumeName`**
@@ -94,7 +94,7 @@ volumes:
 
 ## Sample PVC configurations
 
-The following are some examples for configuration of the PersistentVolumeClaims \(PVCs\) using your custom-values.yaml:
+The following are some examples for configuration of the PersistentVolumeClaims (PVCs) using your custom-values.yaml:
 
 **Fallback to default `StorageClass` for all applications**
 

@@ -1,4 +1,4 @@
-# Configure single sign-on \(SSO\) for Digital Asset Management \(DAM\)
+# Configure Single Sign-On \(SSO\) for \(DAM\)
 
 This section provides the steps on how to configure SSO for Digital Asset Management.
 

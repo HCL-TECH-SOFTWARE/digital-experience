@@ -2,7 +2,7 @@
 id: h_virtual_create
 title: Creating a virtual portal
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

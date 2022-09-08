@@ -2,7 +2,7 @@
 id: wcm_dev_elements_image_creating
 title: Creating an image component
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

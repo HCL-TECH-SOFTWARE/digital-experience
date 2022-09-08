@@ -2,7 +2,7 @@
 id: uproll_paa
 title: Managing your existing Portal Application Archive \(PAA\) file
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

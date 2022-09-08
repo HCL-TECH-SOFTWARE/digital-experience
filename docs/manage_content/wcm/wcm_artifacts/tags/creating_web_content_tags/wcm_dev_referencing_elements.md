@@ -2,7 +2,7 @@
 id: wcm_dev_referencing_elements
 title: Creating an element tag
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,6 +2,7 @@
 
 Use the Portal administration portlets that are provided with HCL Digital Experience to do various day-to-day administration tasks.
 
+<!--- 
 -   **[Manage pages portlets](../admin-system/mp_manage_pages.md)**  
 Use Manage Pages to create, edit, activate, order, and delete pages and external web pages and labels.
 -   **[Administering virtual portals](../admin-system/advp_adm.md)**  
@@ -45,7 +46,5 @@ You can create a new custom unique name for a portal resource or update an exist
 -   **[Setting supported markups](../dev/ctrlrapit_set_mrkp.md)**  
 You can set supported markups on modifiable instances that implement the ModifiableMarkupCapable interface.
 -   **[Client identification for external search engines](../admin-system/srrclientid.md)**  
-For the portal to recognize external search engines, HCL Digital Experience provides a client that covers several popular search engines.
-
-**Parent topic:**[Practitioner Studio](../practitioner_studio/practitionerstudio_overview.md)
+For the portal to recognize external search engines, HCL Digital Experience provides a client that covers several popular search engines. --->
 

@@ -51,7 +51,7 @@ You can add new styles or layouts to the site toolbar with a JSON file. Sometime
         </request>
         ```
 
-    2.  Copy the script to [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/bin.
+    2.  Copy the script to [PortalServer\_root](../../../../../guide_me/wpsdirstr.md)/bin.
 
     3.  Run the XML Access command: `xmlaccess -user user -password password -url localhost:port/wps/config -in AddCategories.xml -out AddCategoriesOutput`
 
@@ -68,8 +68,6 @@ You can add new styles or layouts to the site toolbar with a JSON file. Sometime
         2.  Then, select the **Style** or **Layout** tab.
 
 
-**Related information**  
-
-
-[Creating a theme style](../dev-theme/themeopt_cust_newstyle.md)
+???+ info "Related information:"
+    - [Creating a theme style](../../../../themes_skins/customizing_theme/styles/themeopt_cust_newstyle.md)
 

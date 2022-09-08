@@ -2,7 +2,7 @@
 id: oob_pzn_publish
 title: Publish your rules to production
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

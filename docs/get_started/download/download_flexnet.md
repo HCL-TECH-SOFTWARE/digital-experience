@@ -6,6 +6,8 @@ title: Software Licensing Portal
 
 New and existing users need to register at the HCL Software License Portal and download their entitled HCL Digital Experience package(s).
 
+Co-packaged software is identified in HCL Digital Experience 9.5 Download documents available in your entitlements on the [HCL Software License Portal](https://www.hcltech.com/software/support/release).
+
 ## Getting the software
 
 Product software can be accessed from the [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release){:target="_blank"}. For additional guidance, refer to the [Step-by-step guide on downloading HCL Digital Experience products](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878){:target="_blank"} and watch the video tutorial on [How to download HCL Digital Experience Software from the License Server](https://youtu.be/ze0ZhLlXwfU){:target="_blank"}.
@@ -16,7 +18,7 @@ HCL Digital Experience software is available through several product offerings a
 
 HCL Digital Experience Cloud Native 9.5, Digital Experience Manager, HCL Portal, HCL Portal Express, HCL Web Content Manager, HCL Portal Enable, HCL Portal Extend, HCL Customer Experience Suite, HCL Employee Experience Suite, IBM WebSphere Application Server Network Deployment, IBM DB2 Universal Database Workgroup Server Edition, HCL Connections, and HCL Leap.
 
-Additional HCL Digital Experience product offering and license details may be found at the [HCL Software Product License site](https://www.hcltechsw.com/wps/portal/resources/license-agreements){:target="_blank"}.
+Additional HCL Digital Experience product offering and license details may be found at the [HCL Software Product License site](https://www.hcltechsw.com/wps/portal/guide_me/license-agreements){:target="_blank"}.
 
 ## Installation paths
 

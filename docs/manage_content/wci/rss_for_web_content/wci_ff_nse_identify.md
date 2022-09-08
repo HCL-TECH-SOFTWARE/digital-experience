@@ -1,4 +1,4 @@
-# Identity control elements
+# Identity Control Elements
 
 Most identification fields in Web Content Manager items map directly to core RSS elements; title maps to the name field, description maps to the description field, and author maps to the authors field. Other identification fields can be populated by using the following identity control elements.
 

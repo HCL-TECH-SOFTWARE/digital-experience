@@ -2,8 +2,6 @@
 id: site_breadcrumbs
 title: Adding page-level navigation
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
 
 
 The default portal theme automatically adds page-level navigation to your site based on the page hierarchy of your site.

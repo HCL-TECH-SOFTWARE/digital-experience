@@ -63,7 +63,8 @@ The Search Center portlet is installed as part of the default portal installatio
 
 Starting with Version 8 of HCL Portal the Search and Browse portlet provided with earlier portal versions is no longer available. The Search Center has been enhanced with advanced search options previously available in the Search and Browse portlet. Categorization and taxonomy are no longer available.
 
-**Note:** By default both the Search Center portlet and the Search box are available only to authenticated users, that is for users who have logged on with a user ID and password. Anonymous users, that is users who access the portal without logging in, cannot use the Search Center or the search box. For more information about how to use the search portlets on anonymous pages refer to Enabling anonymous users to search public pages of your portal.
+!!! note 
+    By default both the Search Center portlet and the Search box are available only to authenticated users, that is for users who have logged on with a user ID and password. Anonymous users, that is users who access the portal without logging in, cannot use the Search Center or the search box. For more information about how to use the search portlets on anonymous pages refer to Enabling anonymous users to search public pages of your portal.
 
 For more details about the Search Center portlet, refer to the following information:
 
@@ -71,8 +72,6 @@ For more details about the Search Center portlet, refer to the following informa
 -   For hints about using the Search Center for remote search on web sites with different languages, refer to Hints and tips for using Portal Search.
 
 
-**Related information**  
-
-
-[Planning and preparing for Portal Search](../admin-system/srcbfrwrkgwtprtlsrch.md)
+???+ info Related information:"
+    - [Planning and preparing for Portal Search](../planning_portal_search/index.md)
 

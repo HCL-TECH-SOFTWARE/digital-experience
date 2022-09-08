@@ -2,8 +2,6 @@
 id: h_custom_names_create
 title: Creating or editing a custom unique name
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
 
 
 You can create a new custom unique name for a portal resource or update an existing custom unique name.
@@ -14,7 +12,8 @@ Proceed by the following steps:
 
 2.  Select a resource. From the list of resources, click the **Edit** icon for the portal resource for which you want to assign or change the custom name. Manage Custom Unique Names displays the **Unique name:** entry field for specifying the unique name, together with the identifying information for the selected resource. For example, this can be the portlet title and the Unique Identifier used internally by the portal.
 
-    **Note:** To select a portlet instance as the resource, click **Pages**, navigate to the page containing the portlet instance, and click **Edit** by the portlet name.
+    !!! note
+        To select a portlet instance as the resource, click **Pages**, navigate to the page containing the portlet instance, and click **Edit** by the portlet name.
 
 3.  Type the unique name that you want to assign to the selected portal resource or update the name as required. This name must be unique within the portal. A unique name must not exceed 255 characters in length. If you want to remove the unique name from the resource, delete the name from the field.
 

@@ -1,3 +1,24 @@
-# Planning Development Env Deployment
+# Docker images for HCL Digital Experience 9.5
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.
+HCL Digital Experience 9.5 supports deployments on Docker and popular Kubernetes platforms. Learn more about the latest list of container images and supported deployment platforms.
+
+HCL Digital Experience 9.5 core and related component images are provided in your HCL Digital Experience entitlements in the [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release). For the latest list of container images and supported deployment platforms please consult the Docker containers [Deployment](../kubernetes/docker.md) topic pages in this section.
+
+## Overview
+
+Docker is a platform for developers and sysadmins to **develop, deploy, and run** applications with containers. Containerization is the use of Linux containers to deploy applications. While the use of containers to deploy applications is not new, containers are favored due to the ease of deploying applications like the latest version of HCL Digital Experience.
+
+The HCL Digital Experience containers are launched by running a runtime instance of an image. An image is an executable package that includes everything needed to run the HCL Digital Experience 9.5 application, including the code, a runtime, libraries, environment variables, and configuration files. Because it runs a discrete process, it does not take any more memory other than the executable image with state or user process.
+
+## Installation, Deployment and Migration Guidance
+
+1.  Proceed to the Deployment topic page and follow the installation steps outlined in the Docker or supported Kubernetes platform of choice.
+    -   Documentation resource: [Deployment](../docker/docker_image_deployment.md)
+2.  To migrate an existing on-premises platform Digital Experience deployment to a supported Kubernetes platform, access the Staging topic page in this section.
+    -   Documentation resource: [Staging](https://help.hcltechsw.com/digital-experience/9.5/containerization/container_staging.html)<!-- (../containerization/container_staging.md) -->
+3.  Once you have completed a Digital Experience 9.5 Container deployment, to update the DX 9.5 container images to the latest Container Update releases, follow steps outlined in the Container Maintenance Help Center topic in this section.
+    -   Documentation resource: [Maintenance](https://help.hcltechsw.com/digital-experience/9.5/containerization/maintenance.html)<!-- (../containerization/maintenance.md) -->
+
+<!-- ???info "Related information:"
+    - [Maintenance](../containerization/maintenance.md)
+    - [Staging](../containerization/container_staging.md) -->

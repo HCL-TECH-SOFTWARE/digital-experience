@@ -18,4 +18,3 @@ In this case the logs will provide the following or similar information:
 
 **Solution:** In order for portal collections to work on a IBM® i system, set the system variable USER.REGION.
 
-

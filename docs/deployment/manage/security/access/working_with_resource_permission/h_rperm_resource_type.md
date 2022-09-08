@@ -2,7 +2,7 @@
 id: h_rperm_resource_type
 title: Resource types
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -2,7 +2,7 @@
 id: wcm_dev_page_components_teaser_video
 title: Video page component type
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

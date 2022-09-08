@@ -2,9 +2,6 @@
 id: h_custom_names_configure
 title: Configuring the Manage Custom Unique Names portlet
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
-
 
 You can specify the number of resources that you want to be listed on the page, configure how the resources will appear to all users or to particular instances of the portlet, or make individual changes to the portlet, depending on the available options and the task that you want to perform.
 

@@ -2,7 +2,7 @@
 id: wcm_dev_workflows_creating_action_publish
 title: Creating a publish action
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

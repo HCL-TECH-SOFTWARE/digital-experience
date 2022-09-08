@@ -2,9 +2,6 @@
 id: h_clients_display_info
 title: Displaying client information
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
-
 
 You can display detailed information about all of the clients defined in HCL Portal.
 

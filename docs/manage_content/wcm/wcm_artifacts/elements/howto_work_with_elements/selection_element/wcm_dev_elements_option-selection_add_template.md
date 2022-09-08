@@ -2,7 +2,7 @@
 id: wcm_dev_elements_option-selection_add_template
 title: Using an option selection element
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

@@ -24,7 +24,7 @@ You can either download the HCL Digital Experience 9.5 package, unpack it locall
 
 ### From HCL Digital Experience 9.5 package
 
-The HCL Digital Experience 9.5 Container Update packages are provided in a compressed .zip file, that can easily be unzipped using a utility of your choice. Refer to the latest [HCL DX 9.5 Container Update Release CF196 and later file listings in the Docker deployment](../../docker.md) topic:
+The HCL Digital Experience 9.5 Container Update packages are provided in a compressed .zip file, that can easily be unzipped using a utility of your choice. Refer to the latest [Docker image deployment](../../../../docker/docker_image_deployment.md) topic:
 
 !!! note
 
@@ -249,7 +249,7 @@ The following syntax may be used to define the correct image configuration for y
 !!!note
     From CF205 onwards, the image name and tag configuration of the Helm Chart is pre-filled using the default image names and matching version tags for the respective version of DX. You might need to re-adjust these if you have renamed/re-tagged the images in your local container image repository.
 
-    If you want to use the HCL Harbor container registry, ensure to configure your target repository accordingly and have the [ImagePullSecret](./optional_imagepullsecrets.md) configured:
+    If you want to use the HCL Harbor container registry, ensure to configure your target repository accordingly and have the [ImagePullSecret](../optional_tasks/optional_imagepullsecrets.md) configured:
 
     ```yaml
     images:
@@ -295,7 +295,7 @@ images:
 
 If your remote repository requires access credentials, it is necessary to configure an `ImagePullSecret` to allow your cluster nodes to have proper access to the HCL DX 9.5 container images. This is also required if you want to use the HCL Harbor container registry directly.
 
-Please refer to [Using ImagePullSecrets](optional_imagepullsecrets.md) topic for instructions on how to configure this.
+Please refer to [Using ImagePullSecrets](../optional_tasks/optional_imagepullsecrets.md) topic for instructions on how to configure this.
 
 <!-- ???info "Related information:"
     - [Hybrid](hybrid_deployment_helm.md) -->

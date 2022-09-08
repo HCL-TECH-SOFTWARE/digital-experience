@@ -1,5 +1,5 @@
 nav:
     - index.md
-    - access_digital_asset_mgmt.md
-    - Managing DAM: managing_dam
-    - Staging DAM: staging_dam
+    - Access DAM: access_digital_asset_mgmt.md
+    - Manage DAM: managing_dam
+    - Stage or Share DAM: staging_dam

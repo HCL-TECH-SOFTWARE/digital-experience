@@ -26,7 +26,7 @@ The Web Content Manager Export DAM references API REST service can be used to re
 
 ## New Experience API samples
 
-Two new samples are provided for use with the HCL Digital Experience 9.5 Experience API, supporting Sample login and content update process flow, and Get roles with authentication functions. See the [Experience API Sample Calls](../../integrate_apps/apis/hcl_experience_api/usage/openapi_example_API_calls.md).
+Two new samples are provided for use with the HCL Digital Experience 9.5 Experience API, supporting Sample login and content update process flow, and Get roles with authentication functions. See the [Experience API Sample Calls](../../extend_dx/apis/hcl_experience_api/usage/openapi_example_API_calls.md).
 
 ## New HCL Content Composer – Tech Preview in HCL Digital Experience 9.5 CF173
 

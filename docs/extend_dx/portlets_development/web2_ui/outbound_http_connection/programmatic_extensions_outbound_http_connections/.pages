@@ -1,0 +1,5 @@
+title: Using programmatic extensions for outbound HTTP connections
+nav:
+    - index.md
+    - Custom outbound service filters: custom_outbound_svc_filters
+    - Using custom cookie transformation handlers: using_custom_cookie_transformation_handlers

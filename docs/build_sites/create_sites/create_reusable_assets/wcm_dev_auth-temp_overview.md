@@ -70,5 +70,3 @@ The names of element labels in different items must be the same if an element re
 |Personal|Heading|Rich Text|
 |Features|Heading|Text|
 |News|Heading|Text|
-
-

@@ -2,7 +2,7 @@
 id: sa_asa4wcm_plugin
 title: Using the analytics data rendering plug-in tag
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

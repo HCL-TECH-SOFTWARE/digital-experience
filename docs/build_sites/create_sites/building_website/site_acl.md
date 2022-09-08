@@ -2,8 +2,6 @@
 id: site_acl
 title: Setting up access
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
 
 
 Access controls allow you to assign access to who has the ability to view rendered constant and pages, and who has the ability to edit or administer content, pages, or features.

@@ -53,9 +53,9 @@ configuration:
 
 Refer to the following Help Center documentation for more information about LDAP and Configuration Wizard configuration:
 
--   [Configuration Wizard](https://help.hcltechsw.com/digital-experience/9.5/config/cw_overview.html){:target="_blank"}<!--  (../config/cw_overview.md) -->
--   [Enable federated security](https://help.hcltechsw.com/digital-experience/9.5/config/cw_ldap.html){:target="_blank"}<!-- (../config/cw_ldap.md) -->
--   [Troubleshooting: Enable federated security option](https://help.hcltechsw.com/digital-experience/9.5/trouble/cw_ldap.html){:target="_blank"}<!-- (../trouble/cw_ldap.md) -->
+-   [Configuration Wizard](../../../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/index.md)
+-   [Enable federated security](../../../../../manage/security/user_registry/cw_ldap.md)
+-   [Troubleshooting: Enable federated security option](../../../../../manage/troubleshooting/troubleshooting_configwizard/cw_ldap.md)
 
 
 ### Authoring/Rendering configuration
@@ -115,17 +115,17 @@ configuration:
       configWizard: true
 ```
 
-### Replacing Oracle Document Conversion Services with Apache Tika
+### Replacing Document Conversion Services with Apache Tika
 
-Beginning with HCL Digital Experience release 205, [Oracle Document Conversion Services](https://help.hcltechsw.com/digital-experience/9.5/admin-system/dcs_info.html){:target="_blank"}, which is used by [HCL Digital Experience Search](https://help.hcltechsw.com/digital-experience/9.5/wcm/wcm_dev_search.html){:target="_blank"} and [HCL Digital Experience RemoteSearch](https://help.hcltechsw.com/digital-experience/9.5/admin-system/srcusgrmtsrchsrv.html){:target="_blank"} is not distributed or supported by HCL. Oracle functionality is replaced by [Apache Tika](https://tika.apache.org/){:target="_blank"}, which is included in the HCL DX CF205 and later offering. For additional information on DCS services available in CF205 and later, see the [Replacement of Document Conversion Services component](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0096908){:target="_blank"} knowledge article.
+Beginning with HCL Digital Experience release 205,[Document Conversion Services](../../../../../../manage_content/dcs/index.md), which is used by [HCL Digital Experience Portal Search](../../../../../../build_sites/search/portal_search/index.md) and [HCL Digital Experience Remote Search](../../../../../manage/container_configuration/kubernetes_remote_search.md) is not distributed or supported by HCL. Oracle functionality is replaced by [Apache Tika](https://tika.apache.org/){:target="_blank"}, which is included in the HCL DX CF205 and later offering. For additional information on DCS services available in CF205 and later, see the [Replacement of Document Conversion Services component](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0096908){:target="_blank"} knowledge article.
 
 !!!important
-    Do not change the default configuration if you do not have a backup of the Oracle DCS files in your environment. For instructions on how to backup the DCS files in a version prior to CF205, please refer to [Creating a backup of DCS files](https://help.hcltechsw.com/digital-experience/9.5/admin-system/dcs_backup.html){:target="_blank"}.
+    Do not change the default configuration if you do not have a backup of the Oracle DCS files in your environment. For instructions on how to backup the DCS files in a version prior to CF205, please refer to [Creating a backup of DCS files](../../../../../../manage_content/dcs/dcs_backup.md){:target="_blank"}.
 
     The settings in this section are only applied during an upgrade from one CF version to another. To run the configuration manually at any other time, please follow the following instructions to manually configure the deployment:
 
-    - [Configure Tika](https://help.hcltechsw.com/digital-experience/9.5/admin-system/enable_3rdparty_tika.html){:target="_blank"}
-    - [Configure Oracle DCS](https://help.hcltechsw.com/digital-experience/9.5/admin-system/disable_3rdparty_dcs.html){:target="_blank"}
+    - [Replacing Document Conversion Services with Apache Tika](../../preparation/optional_tasks/optional_configure_apps.md#replacing-document-conversion-services-with-apache-tika)
+    - [Configure Oracle DCS](../../../../../../manage_content/dcs/configuration/index.md)
 
 |configureTika|disableStellentDCS|Result|
 |---------|-----------|-------------|

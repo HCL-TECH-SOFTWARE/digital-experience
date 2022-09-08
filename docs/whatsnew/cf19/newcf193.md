@@ -42,7 +42,7 @@ See the [How to switch the languages in the Digital Experience theme](https://he
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and automate processes in the development and delivery process. New release artifact types supporting Deploy DX Core, Manage Syndicator, and Manage Subscriber tasks are provided in Container Update CF193.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](../../integrate_apps/development_tools/dxclient/index.md) topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../extend_dx/development_tools/dxclient/index.md) topic for more information.
 
 ## New Digital Experience REST APIs
 

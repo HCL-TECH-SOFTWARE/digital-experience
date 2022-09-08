@@ -2,9 +2,6 @@
 id: h_clients_override
 title: Overriding the default HTML client
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
-
 
 You can remove the default HTML client and user agent string to prevent clients that support WML from not being recognized by the portal.
 

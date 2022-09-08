@@ -6,8 +6,6 @@ Perform the following steps to search:
 
 1.  Select the search type from the **Search by** menu.
 
-    **Notes:**
-
     1.  The search types that are available depend on the portlet and on the resource type that is listed. The following list shows all search types that can be available in any of the portal administration portlets. Individual portlets usually provide only a limited number of these search types.
     2.  Searches for users or user groups can be case-sensitive, depending on the attributes that are used.
     3.  Wildcard search by an asterisk \( \* \) is required for only some combinations of portal resources and search types. In general, the type of search implies whether an exact string must be entered. For example, for the search types xxx contains and xxx starts with, a wildcard is not usually required, however, for some combinations you can add an asterisk for wildcard search. Examples:
@@ -36,10 +34,12 @@ Perform the following steps to search:
     -   Select **All available** to return a listing of all items. No input is required.
     -   Select **All provided portlets** to list all portlets that your WSRP Producer portal provides for Consumer portals.
     -   Select **All remote portlets** to list all portlets that your WSRP Consumer portal consumes from Producer portals.
+
 2.  Enter the search parameters in the **Search** field.
 
 3.  Click **Search**.
 
+<!--- 
 
 **Related information**  
 
@@ -85,5 +85,5 @@ Perform the following steps to search:
 
 [Managing custom unique names](h_main_custom_names.md)
 
-[Managing virtual portals](h_main_virtual.md)
+[Managing virtual portals](h_main_virtual.md) --->
 

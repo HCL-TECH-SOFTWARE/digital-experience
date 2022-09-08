@@ -1,0 +1,7 @@
+title: Configuring outbound HTTP connections
+nav:
+    - index.md
+    - Configuration structure: cfg_structure
+    - XML format for outbound HTTP connection configuration settings: xml_format_outbound_http
+    - Administration tools for configuring outbound HTTP connections: adm_tools_for_cfg_outbound_http_conn
+    - Sample administration tasks: sample_admin_tasks

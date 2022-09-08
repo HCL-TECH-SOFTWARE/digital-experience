@@ -1,0 +1,7 @@
+title: Common beans
+nav:
+    - index.md
+    - themeopt_el_bean_title.md
+    - themeopt_el_bean_meta.md
+    - themeopt_el_bean_description.md
+    - UrlGeneration: url_generation

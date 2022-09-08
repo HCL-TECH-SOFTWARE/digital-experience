@@ -10,7 +10,7 @@ You must search the Microsoft download site for the vcredist\_x86.exe, vcredist\
 
 ## Exporter task
 
-Run the exporter task from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/config/oiexport/exporter directory to ensure that you installed all the libraries.
+Run the exporter task from the [wp\_profile\_root](../../../guide_me/wpsdirstr.md)/PortalServer/config/oiexport/exporter directory to ensure that you installed all the libraries.
 
 A successful task displays the following message:
 
@@ -20,11 +20,11 @@ Error: no output file was specified
 Error: No output id was specified
 ```
 
--   **[Configuring Document Conversion Services for systems other than Windows](../admin-system/dcs_config_nonwin.md)**  
+-   **[Configuring Document Conversion Services for systems other than Windows](./dcs_config_nonwin.md)**  
 Configure the Document Conversion Services to complete document conversions in an operating system other than Windows. You must complete the following steps whenever you start the Portal server from a new terminal window.
--   **[Configuring Document Conversion Services for IBM i](../admin-system/dcs_config_i.md)**  
+-   **[Configuring Document Conversion Services for IBM i](./dcs_config_i.md)**  
 Configure the Document Conversion Services to perform document conversions on IBM i systems. You need to complete the following steps whenever you start the Portal server from a new terminal window.
--   **[Configuring images for Document Conversion Services](../admin-system/dcs_config_images.md)**  
+-   **[Configuring images for Document Conversion Services](./dcs_config_images.md)**  
 Configure the Document Conversion Services to view images in an operating system other than Windows.
 
 

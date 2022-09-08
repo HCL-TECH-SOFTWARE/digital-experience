@@ -2,9 +2,6 @@
 id: toolbar_project_publish
 title: Sending content for publishing approval in your project
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
-
 
 You finished your content item. Now it is time to send your content for publishing approval. After the necessary people approve your content item, the status of your content item changes from draft to publishing pending status. Your content item does not actually get published until all content items in the project are approved. In addition, the content owner may have specified other publishing options the project must satisfy before content items in a project are published.
 

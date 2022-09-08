@@ -2,7 +2,7 @@
 id: wcm_dev_elements_jsp_add_template
 title: Adding a JSP element to a template
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

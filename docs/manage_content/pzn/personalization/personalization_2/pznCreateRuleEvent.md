@@ -2,7 +2,7 @@
 id: pznCreateRuleEvent
 title: Creating a rule event
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

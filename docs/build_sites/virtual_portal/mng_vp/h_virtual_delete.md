@@ -2,7 +2,7 @@
 id: h_virtual_delete
 title: Deleting a virtual portal
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

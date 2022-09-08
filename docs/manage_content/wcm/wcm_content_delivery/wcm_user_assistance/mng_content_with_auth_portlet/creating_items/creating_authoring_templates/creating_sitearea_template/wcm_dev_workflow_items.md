@@ -2,7 +2,7 @@
 id: wcm_dev_workflow_items
 title: Selecting a workflow
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

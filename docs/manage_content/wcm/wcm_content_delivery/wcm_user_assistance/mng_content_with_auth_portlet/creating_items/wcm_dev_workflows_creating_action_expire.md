@@ -2,7 +2,7 @@
 id: wcm_dev_workflows_creating_action_expire
 title: Creating an expire action
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

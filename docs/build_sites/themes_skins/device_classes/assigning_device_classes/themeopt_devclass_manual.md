@@ -8,7 +8,8 @@ In the Supported Clients administration section, add a specific capability on th
 
     You can add multiple device classes to a client, ensure that they are separated by a comma: `com.ibm.portal.devicesupport.deviceclass=smartphone,worklight,ios`.
 
-    **Note:** During the matching process between the client user agent and the client, only one client is chosen. If multiple clients match, the highest priority client is used. Only the device classes that are assigned to the highest priority client are available. The priority is set with the ordinal attribute on the client definition. The larger the value of the ordinal, the higher priority it has during the matching process. The lowest priority client has an ordinal set to zero.
+    !!! note 
+        During the matching process between the client user agent and the client, only one client is chosen. If multiple clients match, the highest priority client is used. Only the device classes that are assigned to the highest priority client are available. The priority is set with the ordinal attribute on the client definition. The larger the value of the ordinal, the higher priority it has during the matching process. The lowest priority client has an ordinal set to zero.
 
 
 

@@ -4,7 +4,8 @@ You can configure Site Manager by setting portlet preferences for the Site Manag
 
 Specify portlet preferences by using the Manage Portlets portlet. To access the portlet preferences for Site Manager, complete the following steps:
 
-**Note:** Some features are not visible to users assigned to the Anonymous user role and the All authenticated users role, such as the tree view in Site Manager. To use Site Manager features within the toolbar, you must assign the User role to the **All authenticated Users** group for the Site Manager portlet.
+!!! note
+    Some features are not visible to users assigned to the Anonymous user role and the All authenticated users role, such as the tree view in Site Manager. To use Site Manager features within the toolbar, you must assign the User role to the **All authenticated Users** group for the Site Manager portlet.
 
 1.  Click the **Administration menu** icon. Then, click **Portlet Management** \> **Portlets**.
 2.  Locate the Site Manager portlet in one of two ways:
@@ -25,7 +26,8 @@ The following portlet preferences can be specified for Site Manager:
     This preference hides specific top-level portal pages in the site switcher control of site manager. This preference is only effective for portal pages that are direct children of the Content Root. The value must list the unique names of these pages, separated by commas. The default value is `ibm.portal.page.Applications, ibm.portal.HiddenPages, ibm.portal.Administration, ibm.portal.Search, ibm.portal.Page Customizer, ibm.portal.sharedPages`.
 
 
--   **[Customizing the Create Content view](../admin-system/epc_custom_create_content.md)**  
+-   **[Customizing the Create Content view](../custom_site_manager/custom_create_content_view/index.md)**  
+
 The Create Content view, which is accessed by clicking context menu in Site Manager, is used by a content author to add web content items to a page.
 
 

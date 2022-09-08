@@ -1,4 +1,4 @@
-# Files conversion supported by DCS
+# File Types Supported for Conversion by DCS
 
 View a list of file types that are supported by DCS for conversion.
 

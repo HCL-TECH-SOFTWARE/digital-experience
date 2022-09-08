@@ -2,7 +2,7 @@
 id: h_rperm_create_role_external
 title: Creating roles for externalized resources
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

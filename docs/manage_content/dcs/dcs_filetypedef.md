@@ -1,18 +1,18 @@
-# Setting up file type definitions to enable Document Conversion Services
+# Setting Up File Type Definitions to Enable Document Conversion Services
 
 Set up file definition types to ensure that document conversions works for the Microsoft Office and OpenOffice file types.
 
-**Notice of Deprecation and Replacement of Document Conversion Services:**
+!!!important "**Notice of Deprecation and Replacement of Document Conversion Services:**"
 
-Document Conversion Services components in HCL Digital Experience software will be updated and replaced in the future HCL DX Container Update release in 2022. HCL Digital Experience will remove the third-party component, which is supplied by Oracle, that provides these capabilities and replace them with HCL supported functions. After that point, HCL Digital Experience v8.5, v9 and v9.5 Container Update and CF releases will include the newer HCL supported component. Refer to the following HCL Digital Experience support Knowledge Article: [Replacement of Document Conversion Services component in HCL Digital Experience software for additional information](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0096908).
+Document Conversion Services components in HCL Digital Experience software will be updated and replaced in the future HCL DX Container Update release in 2022. HCL Digital Experience will remove the third-party component, which is supplied by Oracle, that provides these capabilities and replace them with HCL supported functions. After that point, HCL Digital Experience v8.5, v9 and v9.5 Container Update and CF releases will include the newer HCL supported component. Refer to the following HCL Digital Experience support Knowledge Article: [Replacement of Document Conversion Services component in HCL Digital Experience software for additional information](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0096908){:target="_blank"}.
 
 1.  Locate the content-types.properties file in the following directory:
 
-    -   AIX®, HP-UX, Linux™, Solaris, Windows™: [AppServer\_root](../reference/wpsdirstr.md#was_root)/java/jre/lib
+    -   AIX®, HP-UX, Linux™, Solaris, Windows™: [AppServer\_root](../../guide_me/wpsdirstr.md#appserverroot)/java/jre/lib
     -   IBM® i:
         -   JDK 7: /QOpenSys/QIBM/ProdData/JavaVM/jdk70/64bit/jre/lib
         -   JDK 7.1: /QOpenSys/QIBM/ProdData/JavaVM/jdk71/64bit/jre/lib
-    -   z/OS®: [AppServer\_root](../reference/wpsdirstr.md#was_root)/java/lib
+    -   z/OS®: [AppServer\_root](../../guide_me/wpsdirstr.md#appserverroot)/java/lib
 2.  Update the content-types.properties file as follows.
 
     These extensions are case-sensitive.
@@ -139,12 +139,13 @@ A temporary directory is used for document conversion.
 -   Windows: c:\\temp
 -   AIX, HP-UX, Linux, Solaris: /tmp
 
-    **Note:** The default /tmp directory is in the root system. If it does not exist, it must be created.
+    !!!note
+        The default /tmp directory is in the root system. If it does not exist, it must be created.
 
 -   IBM i: /temp
 -   z/OS: /tmp
 
-To create a temporary directory other than the default, edit the convertors.xml file in [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/dcs. Add the property tempDir to the `<global>` tag as follows:
+To create a temporary directory other than the default, edit the convertors.xml file in [wp\_profile\_root](../../guide_me/wpsdirstr.md#wpprofileroot)/PortalServer/dcs. Add the property tempDir to the `<global>` tag as follows:
 
 ```
 <global>
@@ -159,10 +160,11 @@ To start the native application when you click the attachment, the following MIM
 
 For AIX, HP-UX, Linux, Solaris, you must start IBM Workplace Services Express® from the console or an X-Server-enabled client with the same privileges \(**xhost+**\) as the console.
 
-**Note:** Graphical conversions require access to an X Windows server. They require access to the **Xm**, **Xt**, and **X11** libraries. Also, the DISPLAY environment variable must be set to the account that Portal is running under. The DISPLAY must be valid at the point that Portal is started. Therefore, telnetting to a server and starting Portal from there does not work. You must start the portal from an X terminal.
+!!!note
+    Graphical conversions require access to an X Windows server. They require access to the **Xm**, **Xt**, and **X11** libraries. Also, the DISPLAY environment variable must be set to the account that Portal is running under. The DISPLAY must be valid at the point that Portal is started. Therefore, telnetting to a server and starting Portal from there does not work. You must start the portal from an X terminal.
 
-For AIX, HP-UX, and IBM i, refer to the prerequisites as described in [Configuring images for Document Conversion Services](dcs_config_images.md).
+For AIX, HP-UX, and IBM i, refer to the prerequisites as described in [Configuring images for Document Conversion Services](/configuration/dcs_config_images.md).
 
-For IBM i, refer to the prerequisites as described in [Configuring images for Document Conversion Services](dcs_config_images.md).
+For IBM i, refer to the prerequisites as described in [Configuring images for Document Conversion Services](/configuration/dcs_config_i.md).
 
 

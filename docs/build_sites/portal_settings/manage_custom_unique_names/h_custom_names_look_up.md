@@ -2,8 +2,6 @@
 id: h_custom_names_look_up
 title: Looking up the custom unique name for a resource
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
 
 
 You can look up the custom name of a portal resource by looking at the table where the resource is located.

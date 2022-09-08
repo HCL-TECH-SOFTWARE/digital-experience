@@ -1,4 +1,4 @@
-# Sharing or staging DAM assets
+# Sharing or Staging DAM Assets
 
 The DAM assets can be shared between systems or staged from authoring to other rendering environments. 
 

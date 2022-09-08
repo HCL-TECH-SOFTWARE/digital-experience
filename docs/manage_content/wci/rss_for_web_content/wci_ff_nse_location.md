@@ -182,16 +182,10 @@ The WCM APIs don't provide a mechanism to get a complete list of template mappin
 |Applies to item types|siteArea.|
 |Required for item types|None|
 |Allowable Values|This element does not take any values. The data is specified in the attributes.|
-|Required Attributes|-   **authoring**
-
-The value of this attribute must be a string that exactly matches the name of an existing authoring template.
-
--   **presentation**
-
-The value of this attribute must be a string that exactly matches the name of an existing presentation template.
-
-
-|
+|Required Attributes|-   **authoring**<br>
+The value of this attribute must be a string that exactly matches the name of an existing authoring template.<br>
+-   **presentation**<br>
+The value of this attribute must be a string that exactly matches the name of an existing presentation template.|
 |Optional Attributes|None|
 |Required sub-elements|None|
 |Optional sub-elements|None|

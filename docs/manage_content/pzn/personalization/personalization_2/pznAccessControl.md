@@ -2,7 +2,7 @@
 id: pznAccessControl
 title: Access control for personalization objects
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

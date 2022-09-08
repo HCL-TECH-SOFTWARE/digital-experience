@@ -2,7 +2,7 @@
 id: plrf_rendr_plugin_request_parm
 title: Request parameter plug-in
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

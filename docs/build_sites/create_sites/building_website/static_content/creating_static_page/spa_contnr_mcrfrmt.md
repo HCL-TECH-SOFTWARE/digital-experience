@@ -23,7 +23,8 @@ For the drag source, use the attribute from the portlet microformat when definin
 
     This is an optional class on the portlet window. It denotes that this portlet window can be dragged around on the screen by users. This attribute is only valid if the portlet window is part of a modifiable portlet container, and if the user has the rights to modify the page and the container is not locked. Refer to the Container Microformat to see how a drop target is represented and how the actual drag and drop operation can be performed.
 
-    **Note:** A drag and drop action is triggered from the client side, but is executed on the server.
+    !!! note 
+        A drag and drop action is triggered from the client side, but is executed on the server.
 
 
 ## Example of rendering a portlet container from HTML

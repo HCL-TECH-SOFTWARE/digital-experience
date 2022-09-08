@@ -20,8 +20,6 @@ You can embed the SPA Resource Addressability portlet into a static page by usin
 
 
 
-**Related information**  
-
-
-[Class attributes for portlets on static pages](../dev/spa_plt_mcrfrmt.md)
+???+ info "Related information:"
+    - [Class attributes for portlets on static pages](../../../static_content/creating_static_page/spa_plt_mcrfrmt.md)
 

@@ -1,4 +1,4 @@
-# Preparing a Domino Directory server
+# Prepare a Domino Directory server
 
 If you plan to use a Domino Directory as an LDAP user registry, you must install and set up the server so that it communicates with HCL Digital Experience.
 
@@ -10,9 +10,9 @@ If you plan to use a Domino Directory as an LDAP user registry, you must install
 
     3.  Click the **Download/View online** link for the HCL Domino Information Center.
 
-    4.  Click **Domino Administrator Help** \> **Installation** \> **Installing and setting up Domino servers** \> **Server installation** \> **Installing Domino** and complete this task.
+    4.  Click **Domino Administrator Help > Installation > Installing and setting up Domino servers > Server installation > Installing Domino** and complete this task.
 
-    5.  Click **Domino Administrator Help** \> **Installation** \> **Installing and setting up Domino servers** \> **The Domino server setup program** and complete this task.
+    5.  Click **Domino Administrator Help > Installation > Installing and setting up Domino servers > The Domino server setup program** and complete this task.
 
 2.  Complete the following steps to install the Domino Directory:
 
@@ -119,11 +119,4 @@ If you plan to use a Domino Directory as an LDAP user registry, you must install
         -   **UserCreator**
         -   **UserModifier**
     5.  Click **OK**.
-
-
-
-**Related information**  
-
-
-[Planning names for servers and users in a Domino site](../collab/i_domi_c_identities.md)
 

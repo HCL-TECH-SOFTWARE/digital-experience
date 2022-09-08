@@ -2,9 +2,6 @@
 id: h_markups_create
 title: Creating a new markup
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
-
 
 You can add a new markup type to your list of supported markups.
 
@@ -22,7 +19,7 @@ You can add a new markup type to your list of supported markups.
         -   theme\_web\_module\_root\_path/themes/MathML
         -   theme\_web\_module\_root\_path/skins/MathML
         -   theme\_web\_module\_root\_path/screens/MathML
-        For this reason, avoid characters in the markup name that might cause conflicts in file or path names, such as / , \\ , . , or & . The markup name also acts as default title for those languages where no locale-specific title has been set.
+        For this reason, avoid characters in the markup name that might cause conflicts in file or path names, such as *** / , \\ , . , or &***. The markup name also acts as default title for those languages where no locale-specific title has been set.
 
     2.  **MIME type** Required. Enter the MIME type associated with this markup.
 
@@ -32,6 +29,7 @@ You can add a new markup type to your list of supported markups.
 
 3.  To save your changes click **OK**. To exit without saving your changes, click **Cancel**.
 
-    **Note:** The markup is not supported by the portal until it is activated by selecting the language and clicking the **Activate/Deactivate selected markup** icon.
+    !!! note
+        The markup is not supported by the portal until it is activated by selecting the language and clicking the **Activate/Deactivate selected markup** icon.
 
 

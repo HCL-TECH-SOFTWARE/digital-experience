@@ -2,9 +2,6 @@
 id: h_gs_whatsee
 title: Specifying what users see initially when they log in to the portal
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
-
 
 You can choose for users to return to the default portal page or to return to the page of their last visit after logging in, or you can allow users to choose a view after logging in.
 

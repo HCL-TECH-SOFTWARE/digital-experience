@@ -2,7 +2,7 @@
 id: wcm_dev_elements_number_creating
 title: Creating a number component
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

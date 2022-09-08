@@ -17,10 +17,9 @@ Use the WP8.5\_iim.remotesearch installation package to install remote search se
 
 5.  Specify which user is able to access and use remote search service from the portal server by entering their user name and password.
 
-    **Notes:**
-
-    -   It is possible to manually install remote search service without using Installation Manager. For more information about how to perform the manual installation of remote search service, see [Installing remote search service by using manual steps](installrssman.md).
-    -   Additional installation and configuration of remote DCS is no longer required with HCL Portal Version 8.5.
-    -   Installing remote search service by using Installation Manager will create a new WebSphere Application Server profile for remote search service.
+    !!! note
+        -   It is possible to manually install remote search service without using Installation Manager. For more information about how to perform the manual installation of remote search service, see [Installing remote search service by using manual steps](../remotesearch/install_manual/index.md).
+        -   Additional installation and configuration of remote DCS is no longer required with HCL Portal Version 8.5.
+        -   Installing remote search service by using Installation Manager will create a new WebSphere Application Server profile for remote search service.
 
 

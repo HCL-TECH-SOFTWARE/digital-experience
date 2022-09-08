@@ -124,7 +124,7 @@ With auto-loading on, a deferred capability does not load until the page is in e
 
 The `deferredCapability` sequence-number is independent of the `capability` sequence-number. For example, both can start at 1. And, like `capability`, `deferredCapability.sequence-number.minValue` is optional.
 
-
+<!---
 **Related information**  
 
 
@@ -136,5 +136,5 @@ The `deferredCapability` sequence-number is independent of the `capability` sequ
 
 [Change the auto-loading of portlet capabilities](../dev-theme/themeopt_chng_auto_load_cap.md)
 
-[Adding or removing a capability from a portlet](../dev-theme/themeopt_add_cap_portlet.md)
+[Adding or removing a capability from a portlet](../dev-theme/themeopt_add_cap_portlet.md) --->
 

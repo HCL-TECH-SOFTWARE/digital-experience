@@ -2,6 +2,12 @@
 
 The supported software section specifies the additional software that HCL Digital Experience 9.5 supports.
 
+## Application Servers
+
+|Prerequisite|Version|Supported software versions|Product Minimum|Components|Operating system restrictions?|
+|----------|----------|----------|----------|----------|----------|
+|WebSphere eXtreme Scale|8.6|8.6 and later maintenance|9.5|Full|No|
+
 ## Collaboration
 |Prerequisite|Version|Supported software versions|Product Minimum|Components|Operating system restrictions?|
 |-----------|-----|------------------|-----|------|-------------|
@@ -16,6 +22,13 @@ The supported software section specifies the additional software that HCL Digita
 |Supported Software|Version|Supported software minimum|Product minimum|Components|Operating System Restrictions?|
 |-----------|-----|------------------|-----|------|-------------|
 |Rational Application Developer for WebSphere|9.7|9.7 and later maintenance|9.5|Full|No|
+
+## LDAP Servers 
+All LDAP Servers that support the LDAP V3 Specification are supported.
+
+|Supported Software|Version|Supported software minimum|Product minimum|Components|Operating System Restrictions?|
+|-----------|-----|------------------|-----|------|-------------|
+|IBM Security Directory Suite|8.0.1|8.0.1 and later maintenance|9.5|Full|No|
 
 ## Product Specific or Mixed Content 
 |Supported Software|Version|Supported software minimum|Product minimum|Components|Operating System Restrictions?|
@@ -34,6 +47,18 @@ The supported software section specifies the additional software that HCL Digita
 |Microsoft Internet Explorer|Newer levels are tested|9.5|Full|No|
 |Mozilla Firefox|Newer levels are tested|9.5|Full|No|
 |Mozilla Firefox ESR|Newer levels are tested|9.5|Full|No|
+
+## Web Servers (Non-Container Platforms)
+|Supported Software|Version|Supported software minimum, and later|Product minimum|Components|Operating System Restrictions?|
+|-----------|-----|------------------|-----|------|-------------|
+|Apache Server|2.4|2.4|9.5|Full|No|
+|HCL Domino|9.0|9.0 and later maintenance|9.5|Full|No|
+|IBM HTTP Server|8.5.5 *|8.5.5 and later maintenance|9.5|Full|No|
+||9.0|9.0 and later maintenance|9.5|Full|No|
+||9.0.5|9.0.5 and later maintenance|9.5|Full|No|
+|Microsoft Internet Information Services|10.0|10.0 and later maintenance|9.5|Full|No|
+
+* IBM HTTP Server 8.5.5 is only supported with HCL Digital Experience Server V8.5.5.x.
 
 ## WebDAV Client 
 |Supported Software|Version|Supported software minimum|Product minimum|Components|Operating System Restrictions?|

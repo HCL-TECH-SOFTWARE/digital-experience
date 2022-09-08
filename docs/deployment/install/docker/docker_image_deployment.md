@@ -4,7 +4,7 @@ This section describes the steps in deploying HCL Digital Experience 9.5 contain
 
 Follow these steps to deploy the HCL Digital Experience 9.5 and later CF container update releases in Docker.
 
-1.  Download the Docker image from your HCL Digital Experience entitlements in the [HCL Software License Portal](https://www.hcltech.com/software/support/release), in the **HCL\_Portal\_8.5\_9.0\_9.5\_CFs** download package entry. Refer to the [Docker image list](../kubernetes/docker.md) for the latest HCL DX 9.5 container update releases.
+1.  Download the Docker image from your HCL Digital Experience entitlements in the [HCL Software License Portal](https://www.hcltech.com/software/support/release), in the **HCL_Portal_8.5_9.0_9.5_CFs** download package entry. Refer to the [Container image list](../container/image_list.md) for the latest HCL DX 9.5 container update releases.
 
 2.  Open a terminal window and change to the root directory of the extracted package.
 
@@ -12,7 +12,7 @@ Follow these steps to deploy the HCL Digital Experience 9.5 and later CF contain
 
         docker load < hcl-dx-core-image-v95-xxxxxxxx-xxxx.tar.gz
     
-    ![Loading the container into your Docker repository](../../images/container_docker_deploy.png)
+    ![Loading the container into your Docker repository](../docker/_img/container_docker_deploy.png)
 
 4.  Run the HCL DX Docker container using either of the following commands:
 
@@ -65,8 +65,8 @@ Follow these steps to deploy the HCL Digital Experience 9.5 and later CF contain
     See the following sections for additional information:
 
     -   [How to upload HCL Digital Experience 9.5 CF container images to a private repository](https://youtu.be/XJONRdpgCuo)
-    -   [Container image list](../kubernetes/docker.md)
-    -   [Containerization Limitations/Requirements](../systemrequirements/9.5_all/supportedsoftware.md#kubernetes)
-    -   [Customizing the container deployment](../kubernetes/operator-based/customizing_container_deployment.md)
+    -   [Container image list](../container/image_list.md)
+    -   [Containerization requirements and limitations](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md)
+    -   [Customizing the container deployment](../../manage/container_configuration/operator-based/customizing_container_deployment.md)
 
 

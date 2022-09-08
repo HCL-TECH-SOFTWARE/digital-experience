@@ -2,7 +2,7 @@
 id: wcm_dev_elements_link_add_template
 title: Adding a link element to a template
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

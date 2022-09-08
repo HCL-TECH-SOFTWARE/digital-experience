@@ -2,9 +2,6 @@
 id: toolbar_friendlyurl
 title: Friendly URL name
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
-
 
 Associate friendly URL names with pages, labels, and content items in your website. Then, the URLs are constructed by using the friendly URLs names. As a result, your website has human readable URLs that are easy to remember.
 
@@ -25,4 +22,3 @@ http://www.host_name/wps/portal/products/appliances
 When the page renders, the URL resolves to `http://www.host_name/wps/portal/products/appliances/[!ut/p/encoded\_portal\_suffix]`
 
 Portal appends an encoded suffix to that friendly URL. The suffix represents the current state of the page and its components.
-

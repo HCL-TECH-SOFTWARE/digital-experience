@@ -2,6 +2,8 @@ Title: Themes
 nav:
     - index.md
     - site_jslib.md
+    - themeopt_defaultparts.md
+    - themeopt_themedev_themes_roadmap.md
 
 
 

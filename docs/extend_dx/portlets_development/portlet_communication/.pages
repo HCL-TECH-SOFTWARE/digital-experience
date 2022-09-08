@@ -1,0 +1,9 @@
+title: Portlet communication
+nav:
+    - index.md
+    - pltcom_pubrndrprm.md
+    - pltcom_datxchg_xptltlnks.md
+    - Standard portlets publish and subscribe mechanisms: portlets_publish_subscribe_mech
+    - wpsc2aiss.md
+    - pltcom_datxchg.md
+    - pltcom_shrd_ptlts.md

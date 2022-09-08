@@ -1,0 +1,6 @@
+title: Configuring WSRP web service clients
+nav:
+    - index.md
+    - wsrpt_cons_cfg_wsrvc_clnt_xtra.md
+    - wsrpt_cons_use_deflt_polsets.md
+    - Creating and deploying custom service references: deploy_custom_svc_ref

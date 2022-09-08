@@ -2,15 +2,16 @@
 
 Enable circular logging if you are performing offline backup of the database. Use the Configure Database Logging Wizard to specify the parameters that control circular logging.
 
-**Note:** This procedure refers to the WPSDB database, the default database name for the Release database domain.
+!!!note
+    This procedure refers to the WPSDB database, the default database name for the Release database domain.
 
 To enable circular logging for an offline DB2® database backup, follow these steps:
 
-1.  Open the DB2 Control Center: Click **General Administration Tools** \> **Control Center**.
+1.  Open the DB2 Control Center: Click **General Administration Tools > Control Center**.
 
 2.  Select the WPSDB database from the navigation tree.
 
-3.  From the menu, choose **Selected** \> **Configure Database Logging**.
+3.  From the menu, choose **Selected > Configure Database Logging**.
 
 4.  In the Configure Database Logging Wizard, select **Circular Logging** for your logging type and click **Next**.
 
@@ -32,7 +33,7 @@ To enable circular logging for an offline DB2® database backup, follow these st
 
     1.  Set the value of the TRACKMOD parameter to No.
 
-    2.  Set the LOG\_RETAIN parameter to No and click **OK**.
+    2.  Set the LOG_RETAIN parameter to No and click **OK**.
 
 12. Restart DB2 to enable the changes.
 

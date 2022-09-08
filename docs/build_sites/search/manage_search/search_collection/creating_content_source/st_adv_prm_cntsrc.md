@@ -2,8 +2,6 @@
 id: st_adv_prm_cntsrc
 title: Setting the advanced parameters for a content source
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
 
 
 Set the advanced parameters for the content source by completing the entry fields and making your selections in the Advanced Parameters tab.
@@ -18,7 +16,8 @@ The available fields and options depend on the type of content source that you s
 
     This parameter sets the default character set that the crawler uses if it cannot determine the character set of a document.
 
-    **Note:** The entry field for the **Default character encoding** contains the initial default value `windows-1252`, regardless of the setting for the Default Portal Language in **Administration menu** \> **Portal Settings** \> **Global Settings**. Enter the required default character encoding, depending on your portal language. Otherwise, documents might display incorrectly from **Browse Documents**.
+    !!! note
+        The entry field for the **Default character encoding** contains the initial default value `windows-1252`, regardless of the setting for the Default Portal Language in **Administration menu** \> **Portal Settings** \> **Global Settings**. Enter the required default character encoding, depending on your portal language. Otherwise, documents might display incorrectly from **Browse Documents**.
 
 -   **Always use default character encoding**
 

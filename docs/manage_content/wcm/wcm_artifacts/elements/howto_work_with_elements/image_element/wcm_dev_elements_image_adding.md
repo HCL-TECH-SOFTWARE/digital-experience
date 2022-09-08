@@ -2,7 +2,7 @@
 id: wcm_dev_elements_image_adding
 title: Adding an image element to an item
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

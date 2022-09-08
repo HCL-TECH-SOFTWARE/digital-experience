@@ -2,7 +2,7 @@
 id: wcm_dev_using_search
 title: Searching for items
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

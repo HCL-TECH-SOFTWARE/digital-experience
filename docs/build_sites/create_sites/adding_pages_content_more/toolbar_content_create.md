@@ -2,9 +2,6 @@
 id: toolbar_content_create
 title: Creating content with content templates
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
-
 
 From site manager, you can create content items based on templates and see your content items in the context of the site navigation. Content creation is similar to page creation; simply provide a content title, use the generated content URL, and specify a content template to create a content item.
 
@@ -18,11 +15,11 @@ Before you create your content, you select the **Family Vacations** project from
 
 1.  Turn on **Edit Mode** from the action bar. Site manager opens automatically.
 
-2.  To add a content item to an existing page, click the page in site manager and click the context menu icon ![Screen capture of the context menu](../images/toolbar_context_menu.jpg). From the context menu, click **Create Content...**.
+2.  To add a content item to an existing page, click the page in site manager and click the context menu icon ![Screen capture of the context menu](../../../images/toolbar_context_menu.jpg). From the context menu, click **Create Content...**.
 
     In this example, you click the context menu for Travel Articles. Your goal is to create an article content item named Cruises.
 
-    ![Screen capture of the Site Manager and the open context menu for Travel Articles. The Create Content... option is called out.](../images/create_content_templates.jpg)
+    ![Screen capture of the Site Manager and the open context menu for Travel Articles. The Create Content... option is called out.](../../../images/create_content_templates.jpg)
 
 3.  From the Create Content dialog, specify a title and content URL.
 
@@ -32,7 +29,8 @@ Before you create your content, you select the **Family Vacations** project from
 
     In this example, you click the **Article** template.
 
-    **Note:** Administrators must create content templates to enable content creation. If a content template is not available, your administrator needs to create or generate a content template.
+    !!! note
+        Administrators must create content templates to enable content creation. If a content template is not available, your administrator needs to create or generate a content template.
 
 5.  Click **Create Content**.
 
@@ -41,5 +39,5 @@ Results vary, depending upon the workflow that your administrator created and wh
 
 -   For instance, when you create a content item, it might be published and added to your website immediately after you click **Create Content**. If that is the case, the content item displays as a published item in the tree view in site manager.
 -   If you are working in the context of a project, the content item displays as a draft in the tree view in site manager. When the project is published, the content item displays as a published item in the tree view.
--   If the workflow specifies that a content item must be created in draft mode before it can be published, and you are not working in a project, the content item might not display in the tree view in site manager. If you cannot see your new content item in the tree view, click the context menu icon ![Screen capture of the context menu](../images/toolbar_context_menu.jpg) for the parent page where the content item was added. Then, click **Open Content Explorer...**. If you select the content item in the content explorer, you can validate and publish the draft content item, depending on the level of access your administrator gave to you as a content author.
+-   If the workflow specifies that a content item must be created in draft mode before it can be published, and you are not working in a project, the content item might not display in the tree view in site manager. If you cannot see your new content item in the tree view, click the context menu icon ![Screen capture of the context menu](../../../images/toolbar_context_menu.jpg) for the parent page where the content item was added. Then, click **Open Content Explorer...**. If you select the content item in the content explorer, you can validate and publish the draft content item, depending on the level of access your administrator gave to you as a content author.
 

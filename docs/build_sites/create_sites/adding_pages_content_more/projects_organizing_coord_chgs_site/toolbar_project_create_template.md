@@ -31,6 +31,7 @@ Project templates are the foundation of your projects. As the content owner, you
         -   Select **Date** to publish all items in your project on a specific date. All content items must be in a Publish Pending state before the project is published. If you decide later to publish earlier than the specified date, you can click **Publish** in the project to publish the project sooner.
         -   Select **Manual** to manually publish all the items in the project after you click **Publish**. All content items must be in a Publish Pending state to manually publish the project. The **Publish** button is not activated until all items in the project are in a pending state. Only users with editor access or higher can publish a project.
         -   Select **Automatic** to publish all items in the project as soon as the project reaches a Publish Pending state.
+
     -   **Approval**
 
         Projects are a great way to review and approve content. Use this area of **Manage Project** to add approvers to the project. You must also decide whether this project needs all approvers to approve the project before publishing or if you need a single approver.
@@ -58,19 +59,17 @@ Project templates are the foundation of your projects. As the content owner, you
 7.  Click **More** \> **Create Project Template**. The setup of this project is now saved as a template and uses your project name as the template name.
 
 
--   **Organize content for customer conferences with projects**
+    -   **Organize content for customer conferences with projects**
 
-    You are managing the promotion of new products that you plan to show at the next customer conference. To promote the products, you want a team of people who are working on articles about the new products and a different team to focus on promotions of these products. As the content owner, you decide to create the New Product project template and the Promotions template to establish the correct approvers for each template. You complete the following steps:
+        You are managing the promotion of new products that you plan to show at the next customer conference. To promote the products, you want a team of people who are working on articles about the new products and a different team to focus on promotions of these products. As the content owner, you decide to create the New Product project template and the Promotions template to establish the correct approvers for each template. You complete the following steps:
 
-    1.  To get started, you open the project menu on the action bar and click **New Project**.
-    2.  From the **Create a project from** menu, you select the **Default Project Template**.
-    3.  You enter New Product as the name of the project. You click **Create**.
-    4.  You click **Manage Project** \> **Approval** to add approvers. You add the engineering team as the approvers of content for projects based on this template.
-    5.  You save your changes and return to the Project Overview. You save this project as a template by clicking **More** \> **Create Project Template**.
-    6.  You then create the Promotions template. For this template, you add the marketing team as the approvers of content for projects based on this template.
+        1.  To get started, you open the project menu on the action bar and click **New Project**.
+        2.  From the **Create a project from** menu, you select the **Default Project Template**.
+        3.  You enter New Product as the name of the project. You click **Create**.
+        4.  You click **Manage Project** \> **Approval** to add approvers. You add the engineering team as the approvers of content for projects based on this template.
+        5.  You save your changes and return to the Project Overview. You save this project as a template by clicking **More** \> **Create Project Template**.
+        6.  You then create the Promotions template. For this template, you add the marketing team as the approvers of content for projects based on this template.
 
-**Related information**  
-
-
-[Creating project templates](../site/site_project_temps.md)
+???+ info "Related information:"
+    - [Creating project templates](../../site_prep_content_author/site_project_temps.md)
 

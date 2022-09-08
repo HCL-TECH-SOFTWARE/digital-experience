@@ -2,7 +2,7 @@
 id: wcm_dev_elements_menu_search
 title: Defining menu element search properties
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

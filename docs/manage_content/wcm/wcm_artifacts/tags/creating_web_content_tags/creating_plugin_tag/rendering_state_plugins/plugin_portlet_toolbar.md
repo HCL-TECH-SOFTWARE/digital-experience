@@ -2,7 +2,7 @@
 id: plugin_portlet_toolbar
 title: The Toolbar state rendering plug-in
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

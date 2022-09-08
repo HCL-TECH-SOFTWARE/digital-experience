@@ -2,7 +2,7 @@
 id: dam_wcm_select
 title: Selecting the digital asset source for image and file elements
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 

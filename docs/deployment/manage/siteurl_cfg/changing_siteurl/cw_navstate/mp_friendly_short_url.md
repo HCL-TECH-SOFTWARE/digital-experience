@@ -2,7 +2,7 @@
 
 The Configuration Wizard option for Modifying Site URLs for Search Engine Optimization makes it possible to remove navigational state information from your site URLs site wide. To enable friendly URLs without state information at the page level, you must complete extra steps after you use this option.
 
-Remove the URL generation filter if you previously installed it. For information, read [Example 2: Generate a friendly URL for web content](../wcm/wcm_dev_api_urlgen_xmp2.md).
+Remove the URL generation filter if you previously installed it. For information, read [Example 2: Generate a friendly URL for web content](../../../../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_custom_plugin/wcm_dev_api_urlgen/wcm_urlgen_xmp2/index.md).
 
 1.  Configure your site URLs with the option for Modifying Site URLs for Search Engine Optimization in the Configuration Wizard.
 
@@ -14,10 +14,10 @@ Remove the URL generation filter if you previously installed it. For information
 
     You can configure a friendly URL at the page level from the site toolbar or from Manage Pages administration portlet.
 
-    -   To define friendly URLs for your pages from Administration, go to [Using friendly URLs](mp_friendly_url.md).
+    -   To define friendly URLs for your pages from Administration, go to [Using friendly URLs](../../../../../extend_dx/development_tools/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/mp_friendly_url.md).
     -   To define friendly URLs for your pages from the site toolbar, use the following instructions:
-        1.  Turn on edit mode from the action bar. Site Manager opens automatically. If Site Manager does not open automatically, click the Site Manager icon ![Screen capture of the Site Manager icon](../images/toolbar_toolbar_open.jpg) to open it.
-        2.  In Site Manager, click the page for which you are defining a friendly URL name. Then, click the context menu icon ![](../images/toolbar_context_menu.jpg).
+        1.  Turn on edit mode from the action bar. Site Manager opens automatically. If Site Manager does not open automatically, click the Site Manager icon to open it.
+        2.  In Site Manager, click the page for which you are defining a friendly URL name. Then, click the context menu icon.
         3.  From the context menu, click **Open Page Settings**.
         4.  From the General tab, click **Edit** by Edit Page Properties.
         5.  In the **Friendly URL name** entry field, enter the name of the page as you want it to appear in the friendly URL.
@@ -48,15 +48,9 @@ Remove the URL generation filter if you previously installed it. For information
 
 You can configure themes to display only short URLs without state information. You can configure pages that use that theme to display friendly URLs.
 
-
 **Related information**  
-
-
-[About friendly URLs for web content](../wcm/wcm_config_wcmviewer_workfriendly.md)
-
-[Friendly URL for web content example](../wcm/wcm_config_wcmviewer_friendlyexample.md)
-
-[Example 2: Generate a friendly URL for web content](../wcm/wcm_dev_api_urlgen_xmp2.md)
-
-[Using friendly URLs](../admin-system/mp_friendly_url.md)
+[About friendly URLs for web content](../../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/customizing_content/friendlyurl_wcmviewer/wcm_config_wcmviewer_workfriendly.md)<br>
+[Friendly URL for web content example](../../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/customizing_content/friendlyurl_wcmviewer/wcm_config_wcmviewer_friendlyexample.md)<br>
+[Example 2: Generate a friendly URL for web content](../../../../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_custom_plugin/wcm_dev_api_urlgen/wcm_urlgen_xmp2/index.md)<br>
+[Using friendly URLs](../../../../../extend_dx/development_tools/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/mp_friendly_url.md)
 

@@ -2,7 +2,7 @@
 id: wcm_dev_workflows_creating_action_email_props
 title: Creating an email action
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 
 
