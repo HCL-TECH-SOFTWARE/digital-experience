@@ -7,7 +7,7 @@ Typically, a website designer does these customizing tasks.
 !!! note
     If you want to customize the web content that the sample web content library named Social Lists 1.0 provides, create a copy of that library and customize that copy.
 
-<!--
+<!---
 -   **[Customizing social list definitions by using inline editing](../social/soc_rendr_cust_socl_list.md)**  
 You can customize your list view definitions by defining the following settings in inline editing mode. List view definitions are represented by content items of the social list definition authoring template. This customization is normally done by a web designer or a page editor.
 -   **[Customizing forum topic details view definitions by using inline editing](../social/soc_rendr_cust_forum_topc_dvd.md)**  

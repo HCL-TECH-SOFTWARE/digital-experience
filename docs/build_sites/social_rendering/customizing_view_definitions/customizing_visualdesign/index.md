@@ -11,5 +11,6 @@ The lists of social objects rely on the availability of several CSS class defini
 
 
 ???+ info "Related information:"
-    - [Customizing social list definitions by using inline editing](../../customizing_view_definitions/soc_rendr_cust_socl_list.md)
+    - [Customizing social list definitions by using inline editing](../customizing_visualdesign/soc_rendr_use_biz_card.md)
+
 
