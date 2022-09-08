@@ -42,11 +42,11 @@ You need to make sure that the reference to the secret is set up correctly in yo
 
 You can set the name of the certificate used with the following syntax, the default value is `dx-tls-cert`:
 
-```
+```yaml
 # Networking specific configuration
 networking:
  # TLS Certificate secret used for HAProxy
- tlsCertSecret: "dx-tls-cert"            
+ tlsCertSecret: "dx-tls-cert"
 ```
 
 !!! note

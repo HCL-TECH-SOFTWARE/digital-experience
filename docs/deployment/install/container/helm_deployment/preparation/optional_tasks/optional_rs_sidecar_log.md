@@ -22,7 +22,7 @@ Use the following syntax to configure more sidecar containers for additional log
 !!!important
     You can only expose log files inside of the /var/profile/ directory.
 
-```
+```yaml
 logging:
   remoteSearch:
     # List of sidecar containers mapping a container name to a file path for a log file to be exposed
@@ -38,7 +38,7 @@ logging:
 
 The following example starts a new sidecar container, and exposes the logs in /var/profile/logs/server1/trace.log.
 
-    ```
+    ```yaml
     logging:
       remoteSearch:
         customLogSidecarContainers:

@@ -22,26 +22,26 @@ Use the following syntax to configure more sidecar containers for additional log
 !!!important
     You can only expose log files inside of the /var/logs/ directory.
 
-    ```
+    ```yaml
     logging:
-        # Core specific logging configuration
-        core:
-            # List of sidecar containers mapping a container name to a file path for a log file to be exposed
-            # Each element must consist of a `containerName` and a `logFilePath`
-            # Example:
-            # customLogSidecarContainers:
-            #   - containerName: "trace"
-            #     logFilePath: "/var/logs/WebSphere_Portal/trace.log"
-            customLogSidecarContainers: []
+      # Core specific logging configuration
+      core:
+        # List of sidecar containers mapping a container name to a file path for a log file to be exposed
+        # Each element must consist of a `containerName` and a `logFilePath`
+        # Example:
+        # customLogSidecarContainers:
+        #   - containerName: "trace"
+        #     logFilePath: "/var/logs/WebSphere_Portal/trace.log"
+        customLogSidecarContainers: []
     ```
 
 !!!example "Example:"
     The following example starts a new sidecar container, and exposes the logs in /var/logs/WebSphere\_Portal/trace.log.
 
-    ```
-        logging:
-          core:
-            customLogSidecarContainers:
-              - containerName: "trace"
-                 logFilePath: "/var/logs/WebSphere_Portal/trace.log"
+    ```yaml
+    logging:
+      core:
+        customLogSidecarContainers:
+          - containerName: "trace"
+            logFilePath: "/var/logs/WebSphere_Portal/trace.log"
     ```

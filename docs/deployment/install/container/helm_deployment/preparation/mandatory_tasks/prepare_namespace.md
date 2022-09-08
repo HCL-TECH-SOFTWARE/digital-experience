@@ -20,15 +20,15 @@ For OpenShift, you must create a namespace with specific settings.
 
 Use the following namespace definition and save it as namespace.yaml. You must replace `my-namespace` in the template with the name of the namespace you are using.
 
-```
+```yaml
 apiVersion: v1
 kind: Namespace
 metadata:
-    name: my-namespace
-    annotations:
-        openshift.io/sa.scc.mcs: "s0:c24,c4"
-        openshift.io/sa.scc.supplemental-groups: "1001/10000"
-        openshift.io/sa.scc.uid-range: "1000/10000"
+  name: my-namespace
+  annotations:
+    openshift.io/sa.scc.mcs: "s0:c24,c4"
+    openshift.io/sa.scc.supplemental-groups: "1001/10000"
+    openshift.io/sa.scc.uid-range: "1000/10000"
 ```
 
 **OpenShift client**
