@@ -281,12 +281,8 @@ Unlike the rating model, the rating space model does not contain information abo
 
 
 
-**Related information**  
-
-
-[Adding query parameters](../admin-system/tag_rate_api_rest_add_qparms.md)
-
-[Querying models in correlation to each other](../admin-system/tag_rate_api_rest_cor_modls.md)
-
-[Other queries](../admin-system/tag_rate_api_rest_oth_queries.md)
+???+ info "Related information:"
+  - [Adding query parameters](tag_rate_api_rest_add_qparms.md)
+  - [Querying models in correlation to each other](tag_rate_api_rest_cor_modls.md)
+  - [Other queries](../rest_api/other_queries/index.md)
 

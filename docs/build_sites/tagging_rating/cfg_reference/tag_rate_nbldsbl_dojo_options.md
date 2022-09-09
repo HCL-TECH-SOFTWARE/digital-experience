@@ -29,7 +29,7 @@ To enable the Dojo tagging and rating options for other profiles, proceed as fol
 
     5.  Log in to the portal server.
 
-    6.  Invalidate the cache with the Portal Theme Analyzer. Or, click **Administration** \> **Utilities** \> **Control Center** \> **Invalidate cache**. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](../dev-theme/themeopt_an_util.md#).
+    6.  Invalidate the cache with the Portal Theme Analyzer. Or, click **Administration** \> **Utilities** \> **Control Center** \> **Invalidate cache**. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](../../themes_skins/the_module_framework/themeopt_analyzer/utilities/index.md).
 
     This step applies the changes that you made to the profile on the server.
 
@@ -37,10 +37,7 @@ To enable the Dojo tagging and rating options for other profiles, proceed as fol
 You can now use the Dojo tagging and rating menu options with the modified profile. To disable the Dojo options for a profile, remove the module `wp_tagging_rating_menu` from the profile, and apply the modified profile on the server by the described procedure.
 
 
-**Related information**  
-
-
-[What is new in tagging and rating](../admin-system/tag_rate_whatsnew.md)
-
-[Tag and Search Center pages](../migrate/mig_post_tagsearchpages.md)
+???+ info "Related information:"
+    - [What is new in tagging and rating](../tag_rate_whatsnew.md)
+    - [Tag and Search Center pages](../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/mig_post_tagsearchpages.md)`
 

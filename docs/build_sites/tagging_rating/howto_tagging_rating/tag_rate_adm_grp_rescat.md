@@ -31,10 +31,7 @@ These resources must be registered with the tagging and rating engine. The porta
 
 
 
-**Related information**  
-
-
-[Adding query parameters](../admin-system/tag_rate_api_rest_add_qparms.md)
-
-[The portal tag cloud](../admin-system/tag_rate_tag_cloud.md)
+???+ info "Related information:"
+    - [Adding query parameters](../dev_tagging_and_rating/rest_api/tag_rate_api_rest_add_qparms.md)
+    - [The portal tag cloud](../tagging_rating_ui/tag_rate_tag_cloud.md)
 
