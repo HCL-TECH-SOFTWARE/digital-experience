@@ -17,6 +17,7 @@ These resources must be registered with the tagging and rating engine. The porta
     -   some other books under content/books/thriller:/isbn
     -   some DVDs under content/dvds/action:/some\_ID
     -   some other DVDs under content/dvds/romance:/some\_ID
+
     Categorization of resources becomes important when tags or ratings are aggregated. For example, tags are aggregated in tag clouds. For details refer to the topic about Configuring the tag cloud. For example if a user wants to aggregate a tag cloud that shows all tags that are associated with the action books as previously mentioned, you could aggregate tags for resources that have been registered under the type schema content/books/action. For details about how to scope tag clouds for certain type schemas refer to the topic about Configuring the tag cloud.
 
 -   **Resource categorization per category specification**
@@ -27,6 +28,7 @@ These resources must be registered with the tagging and rating engine. The porta
     -   some other books under content/books/thriller:/isbn and the category bestseller
     -   some DVDs under content/dvds/action:/some\_ID and the category promotion
     -   some other DVDs under content/dvds/romance:/some\_ID and the category bestseller
+    
     For example, if you want to aggregate a tag cloud that shows all tags for promotion articles, you could aggregate tags for resources that have been associated with the category promotion, in the previous example action books and action DVDs. For details about how to scope tag clouds for certain type schemas refer to the topic about Configuring the tag cloud.
 
 
