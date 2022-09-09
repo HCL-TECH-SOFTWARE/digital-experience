@@ -12,15 +12,12 @@ For more information about an HCL Connections feature see the topic about Federa
 
 You configure the custom properties in the Resource Environment Provider for the WP CP Configuration Service for tagging and rating in the WebSphere® Integrated Solutions Console.
 
-**Note:** The icons are part of the portal installation. For theHCL Connections features, the custom properties for the icons exist without a predefined path. Unless no icon URL is defined, the icons are loaded directly from HCL Portal.
+!!! note
+    The icons are part of the portal installation. For theHCL Connections features, the custom properties for the icons exist without a predefined path. Unless no icon URL is defined, the icons are loaded directly from HCL Portal.
 
 
-**Related information**  
-
-
-[CP Configuration Service for tagging and rating](../admin-system/srvcfg_cpcfg4tr.md)
-
-[Setting service configuration properties](../admin-system/adsetcfg.md)
-
-[Federating tags](../admin-system/tag_rate_federation.md)
+???+ info "Related information:"
+    - [CP Configuration Service for tagging and rating](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/index.md)
+    - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
+    - [Federating tags](../index.md)
 

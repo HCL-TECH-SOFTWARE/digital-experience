@@ -15,14 +15,11 @@ The following example XML script triggerDeleteTask.xml shows how you schedule th
 
 ```
 
-**Notes:**
-
--   As this example does not explicitly define a schedule, the task is performed immediately.
--   You can also select and specify the HCL Connections features for which you want the cleanup to be run. For details about selecting features see the topic about Importing federated tags and resources.
-
-
-**Related information**  
+!!! note
+    -   As this example does not explicitly define a schedule, the task is performed immediately.
+    -   You can also select and specify the HCL Connections features for which you want the cleanup to be run. For details about selecting features see the topic about Importing federated tags and resources.
 
 
-[Working with the XML configuration interface](../admin-system/adxmltsk.md)
+???+ info "Related information:"
+    - [Working with the XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
 
