@@ -13,6 +13,7 @@ Scoping works for some portal resources, but not for others:
 -   Other resources are common for all virtual portals in a portal installation. However, you can scope some of these resources:
     -   You can scope some resources by using portal administration and Portal Access Control.
     -   There are some portal resources that cannot be scoped at all.
+
 -   The user population can be scoped to one or more specific virtual portals.
 
 The differences in scoping portal resources are described in the following sections.
@@ -99,7 +100,7 @@ Example for a scoped unique name: Each virtual portal has its own separate login
 
 Example for a unique name that is not scoped: Portlet applications are not scoped but shared between all virtual portals. You can assign a unique name to the portlet application. You can reference that portlet application by that unique name throughout the portal installation with all virtual portals.
 
-
+<!--
 **Related information**  
 
 
@@ -109,5 +110,5 @@ Example for a unique name that is not scoped: Portlet applications are not scope
 
 [Usage scenarios for virtual portals](../admin-system/advpuscn_usage.md)
 
-[Administering virtual portals](../admin-system/advp_adm.md)
+[Administering virtual portals](../admin-system/advp_adm.md) -->
 

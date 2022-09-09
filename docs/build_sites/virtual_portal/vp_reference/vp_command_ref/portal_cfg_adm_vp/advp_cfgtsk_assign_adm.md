@@ -30,7 +30,8 @@ You pass the parameters in the parameter list for each configuration task as app
 -   Specifying the parameter and value that is preceded by -D on the command line.
 -   Defining them in the file wkplc.properties.
 
-    **Note:** The property file must be encoded in the ISO 8859-1 character encoding format.
+    !!! note
+        The property file must be encoded in the ISO 8859-1 character encoding format.
 
 
 -   **AIX®**

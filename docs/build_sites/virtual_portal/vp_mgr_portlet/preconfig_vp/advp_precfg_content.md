@@ -8,7 +8,8 @@ To find out which of these XML files is used for creating virtual portals in you
 
 Advanced master administrators can customize the default content for virtual portals as required by modifying or replacing the XML script that specifies the initial content for virtual portals.
 
-**Note:** When you modify or replace this XML script, plan ahead and apply special care. You can add or remove some content to enhance or reduce the functionality of a virtual portal to a certain extent. The following portal resources are mandatory content of a virtual portal and must be included in a customized XML initialization script for virtual portals:
+!!! note
+    When you modify or replace this XML script, plan ahead and apply special care. You can add or remove some content to enhance or reduce the functionality of a virtual portal to a certain extent. The following portal resources are mandatory content of a virtual portal and must be included in a customized XML initialization script for virtual portals:
 
 -   Content Root \(`wps.content.root`\)
 -   Login \(`wps.Login`\)
@@ -65,7 +66,7 @@ Depending on the functionality that you want to make available, more content is 
 6.  Click **OK** twice to save your changes.
 
 
-
+<!--
 **Related information**  
 
 
@@ -77,5 +78,5 @@ Depending on the functionality that you want to make available, more content is 
 
 [Filling a virtual portal with content](../admin-system/advp_tsk_fill_content.md)
 
-[Migration: Virtual portals](../migrate/mig_plan_expect_vp.md)
+[Migration: Virtual portals](../migrate/mig_plan_expect_vp.md) -->
 

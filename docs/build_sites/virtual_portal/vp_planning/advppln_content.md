@@ -18,12 +18,13 @@ If you want to change the content of virtual portals, it can be done by one of t
 
 -   To change the content globally and before creating a virtual portal, advanced master administrators can reconfigure the XML script that specifies the initial content for virtual portals. For details about how to do this see *Preconfiguring the default content for virtual portals.*
 
-    **Note:** When you modify or replace this XML script, plan ahead and apply special care. You can add or remove some content to enhance or reduce the functionality of a virtual portal to a certain extent. The following portal resources are mandatory content of a virtual portal and must be included in a customized XML initialization script for virtual portals:
+    !!! note
+        When you modify or replace this XML script, plan ahead and apply special care. You can add or remove some content to enhance or reduce the functionality of a virtual portal to a certain extent. The following portal resources are mandatory content of a virtual portal and must be included in a customized XML initialization script for virtual portals:
 
-    -   Content Root \(`wps.content.root`\)
-    -   Login \(`wps.Login`\)
-    -   Administration \(`ibm.portal.Administration`\).
-    Depending on the functionality that you want to make available, more content is required. For example, to allow templating. Include Application Root \(`wps.application.root`\) and Templates \(`ibm.portal.Templates`\).
+        -   Content Root \(`wps.content.root`\)
+        -   Login \(`wps.Login`\)
+        -   Administration \(`ibm.portal.Administration`\).
+        Depending on the functionality that you want to make available, more content is required. For example, to allow templating. Include Application Root \(`wps.application.root`\) and Templates \(`ibm.portal.Templates`\).
 
 -   To change the content specifically and after creating a virtual portal, use either of the following portal tools:
     -   Use the Manage Pages portlet of the virtual portal. The subadministrator of the virtual portal can do this change.
@@ -32,6 +33,7 @@ If you want to change the content of virtual portals, it can be done by one of t
 If you use the configuration task create-virtual-portal to create a virtual portal, the new virtual portal that you create is empty. You must create the content for the virtual portal. For example, you can do this by using the XML configuration interface. For more information, see *The XML configuration interface*.
 
 
+<!--
 **Related information**  
 
 
@@ -41,5 +43,5 @@ If you use the configuration task create-virtual-portal to create a virtual port
 
 [Preconfiguring the default content for virtual portals](../admin-system/advp_precfg_content.md)
 
-[The XML configuration interface](../admin-system/admxmlai.md)
+[The XML configuration interface](../admin-system/admxmlai.md) -->
 

@@ -20,14 +20,15 @@ You can configure the roles and access rights that are assigned to sub-administr
 
         The default role is EDITOR. You might need to take a note of the parameter and remove it, and then reenter the parameter with the updated value. You can enter the following values: Administrator, Security Administrator, Delegator, Manager, Privileged User, User.
 
-        **Note:** sub-administrators have the roles that you assign to them on all the portlets that are listed under the **portletListNeedAccess** parameter of the Virtual Portal Manager portlet \(see the previous step\).
+        !!! note
+            sub-administrators have the roles that you assign to them on all the portlets that are listed under the **portletListNeedAccess** parameter of the Virtual Portal Manager portlet \(see the previous step\).
 
 5.  Click **OK** to save your changes.
 
 6.  Assign the virtual portal sub-administrators administrator rights on the JCR root as required.
 
 
-
+<!--
 **Related information**  
 
 
@@ -35,5 +36,5 @@ You can configure the roles and access rights that are assigned to sub-administr
 
 [Sub-administrators of a virtual portal and their access roles and permissions](../admin-system/advppln_roles_subadm.md)
 
-[Filling a virtual portal with content](../admin-system/advp_tsk_fill_content.md)
+[Filling a virtual portal with content](../admin-system/advp_tsk_fill_content.md) -->
 
