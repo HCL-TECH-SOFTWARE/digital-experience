@@ -36,7 +36,7 @@ logging:
 
 !!!example "Example:"
 
-The following example starts a new sidecar container, and exposes the logs in /var/profile/logs/server1/trace.log.
+    The following example starts a new sidecar container, and exposes the logs in /var/profile/logs/server1/trace.log.
 
     ```yaml
     logging:
