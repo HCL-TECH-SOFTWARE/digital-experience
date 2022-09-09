@@ -16,9 +16,10 @@ You pass the parameters in the parameter list for each configuration task as app
 -   Specifying the parameter and value that is preceded by -D on the command line.
 -   Defining them in the file wkplc.properties.
 
-    **Note:** The property file must be encoded in the ISO 8859-1 character encoding format.
+    !!! note
+        The property file must be encoded in the ISO 8859-1 character encoding format.
 
-
+<!--
 -   **[Task: create-virtual-portal](../admin-system/advp_cfgtsk_create.md)**  
 Portal ConfigEngine task that creates a new virtual portal.
 -   **[Task: assign-virtual-portal-admin-group](../admin-system/advp_cfgtsk_assign_adm.md)**  
@@ -46,5 +47,5 @@ You can administer multiple virtual portals by running a single configuration co
 
 [Configuring](../config/configuring_parent2.md)
 
-[Creating a virtual portal](../admin-system/advp_tsk_create_vp.md)
+[Creating a virtual portal](../admin-system/advp_tsk_create_vp.md) -->
 

@@ -40,7 +40,8 @@ You pass the parameters in the parameter list for each configuration task as app
 -   Specifying the parameter and value that is preceded by -D on the command line.
 -   Defining them in the file wkplc.properties.
 
-    **Note:** The property file must be encoded in the ISO 8859-1 character encoding format.
+    !!! note
+        The property file must be encoded in the ISO 8859-1 character encoding format.
 
 
 -   **AIX®**
@@ -73,12 +74,8 @@ You pass the parameters in the parameter list for each configuration task as app
 
 
 
-**Related information**  
-
-
-[Modifying a virtual portal](../admin-system/advp_tsk_modify.md)
-
-[Command reference for the Portal Scripting Interface](../admin-system/adpsicrf.md)
-
-[Language support](../admin-system/adintern.md)
+???+ info "Related information:"
+    - [Modifying a virtual portal](../../../adm_vp_task/vp_adm_task/advp_tsk_modify.md)
+    - [Command reference for the Portal Scripting Interface](../../../../../extend_dx/development_tools/portal_admin_tools/portal_scripting_interface/command_ref_psi/index.md)
+    - [Language support](../../../../../extend_dx/development_tools/portal_admin_tools/language_support/index.md)
 

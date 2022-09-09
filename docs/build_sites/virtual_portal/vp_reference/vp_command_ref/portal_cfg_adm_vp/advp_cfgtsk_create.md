@@ -28,19 +28,18 @@ Use the create-virtual-portal task to create a new virtual portal. This task cre
 
         The host name of the virtual portal.
 
-        **Notes:**
-
-        -   This URL is used internally to access the virtual portal instance, even if you specify a context URL that is easy to use. Make sure that the host name that you specify here is accessible.
-        -   You cannot use the same virtual portal host name twice in the same portal installation. The host name must be unique for the portal installation. Host names must be valid host names that are either registered on your local DNS, or internally using the "hosts" file. Host names must be registered on your system before creating a virtual portal.
-        -   After you create the virtual portal, you cannot change the host name that you specify for the virtual portal. If you must use a different host name for a virtual portal, see the topic about *Using a new host name for an existing virtual portal*.
-        -   If you use web content libraries, do not specify a context URL for the new virtual portal that matches the name of a library on your server. If the name of a library and the URL context of a virtual portal have the same value, incorrect rendering of web content can result.
-        -   If you use a host name for creating the virtual portal, you need to update the global web server plug-in configuration in the WebSphere® Integrated Solutions Console and restart the web server. If you have more than one virtual portal, you need to do this only once. For more information about updating the global web server plug-in configuration, read *Creating or updating a global web server plug-in configuration file* in the IBM® WebSphere® Application Server product documentation.
-    **Notes:**
+        !!! note
+            -   This URL is used internally to access the virtual portal instance, even if you specify a context URL that is easy to use. Make sure that the host name that you specify here is accessible.
+            -   You cannot use the same virtual portal host name twice in the same portal installation. The host name must be unique for the portal installation. Host names must be valid host names that are either registered on your local DNS, or internally using the "hosts" file. Host names must be registered on your system before creating a virtual portal.
+            -   After you create the virtual portal, you cannot change the host name that you specify for the virtual portal. If you must use a different host name for a virtual portal, see the topic about *Using a new host name for an existing virtual portal*.
+            -   If you use web content libraries, do not specify a context URL for the new virtual portal that matches the name of a library on your server. If the name of a library and the URL context of a virtual portal have the same value, incorrect rendering of web content can result.
+            -   If you use a host name for creating the virtual portal, you need to update the global web server plug-in configuration in the WebSphere® Integrated Solutions Console and restart the web server. If you have more than one virtual portal, you need to do this only once. For more information about updating the global web server plug-in configuration, read *Creating or updating a global web server plug-in configuration file* in the IBM® WebSphere® Application Server product documentation.
 
     -   You must specify either a host name or a context.
     -   If you specify both a host name and a context, the host name takes precedence and the context is ignored.
     -   There are some strings that you cannot use as URL mappings for virtual portals, for example `vp`. These strings are reserved names and correspond with URL codec names. For a list of these reserved strings, see *Shaping the user experience*.
     -   Use only ASCII characters for the URL Context. For example, you cannot use a URL Context such as språk. If you use non-ASCII characters, the portal shows an error message such as the following EJPAH2009E: Invalid characters were found in a context name or label. Similarly, you cannot use escaped URL encoding either. For example, a URL Context such as spr%E5k.
+
 -   **VirtualPortalObjectId**
 
     The object ID that is used to reference the virtual portal. If you do not specify `VirtualPortalObjectId`, the portal generates a new virtual portal object ID.
@@ -75,7 +74,8 @@ You pass the parameters in the parameter list for each configuration task as app
 -   Specifying the parameter and value that is preceded by -D on the command line.
 -   Defining them in the file wkplc.properties.
 
-    **Note:** The property file must be encoded in the ISO 8859-1 character encoding format.
+    !!! note
+        The property file must be encoded in the ISO 8859-1 character encoding format.
 
 
 -   **AIX®**
@@ -106,7 +106,7 @@ You pass the parameters in the parameter list for each configuration task as app
 
     ./ConfigEngine.sh create-virtual-portal -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalTitle=MyVirtualPortalTitle -DVirtualPortalContext=virtual\_portal\_context\_url
 
-
+<!--
 -   **[Adding the Site Builder and Script Application libraries](../admin-system/advp_create_add_libs.md)**  
 If you add virtual portals to your portal installation after you install CF09 or a later cumulative fix and you use Site Builder or the Script Application, you need to add the appropriate library or libraries to each new virtual portal.
 
@@ -126,5 +126,5 @@ If you add virtual portals to your portal installation after you install CF09 or
 
 [Creating or updating a global web server plug-in configuration file](https://www.ibm.com/docs/en/was-nd/8.5.5?topic=icwspi-creating-updating-global-web-server-plug-in-configuration-file)
 
-[Using the XML configuration interface to work with virtual portals](../admin-system/advp_xml.md)
+[Using the XML configuration interface to work with virtual portals](../admin-system/advp_xml.md) -->
 

@@ -43,5 +43,3 @@ This task does not take any parameters.
 
     ./ConfigEngine.sh list-all-virtual-portals -DPortalAdminPwd=password -DWasPassword=password
 
-
-
