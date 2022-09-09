@@ -2,6 +2,7 @@
 
 A typical virtual portal scenario works with a master administrator and sub-administrators. Assigning access permissions to the users of virtual portals also requires special considerations.
 
+<!--
 -   **[The master administrator](../admin-system/advppln_roles_mastr_adm.md)**  
 A key role for the administration of virtual portals is the master administrator. This user ID is created during the initial installation of HCL Digital Experience with the role administrator on the portal \(admin@portal\). This administrator is also the master administrator of the initial portal installation and all virtual portals that are created. This master administrator is created with all necessary access permissions for administering tasks that are related to the initial portal and the virtual portals.
 -   **[Portal Access Control with virtual portals](../admin-system/advppln_roles_pac4vp.md)**  
@@ -9,13 +10,10 @@ You can scope some portal resources for your virtual portals by using portal adm
 -   **[Sub-administrators of a virtual portal and their access roles and permissions](../admin-system/advppln_roles_subadm.md)**  
 When you create a virtual portal by using the Virtual Portal Manager portlet, you select a user group of sub-administrators who are responsible for the administration of the new virtual portal.
 -   **[Users of a virtual portal and their access roles and permissions](../admin-system/advppln_roles_user.md)**  
-When you create a virtual portal, you need to be aware of the implications listed here.
+When you create a virtual portal, you need to be aware of the implications listed here. -->
 
 
-**Related information**  
-
-
-[Task: create-virtual-portal](../admin-system/advp_cfgtsk_create.md)
-
-[Filling a virtual portal with content](../admin-system/advp_tsk_fill_content.md)
+???+ info "Related information:"
+    - [Task: create-virtual-portal](../../vp_reference/vp_command_ref/portal_cfg_adm_vp/advp_cfgtsk_create.md)
+    - [Filling a virtual portal with content](../../adm_vp_task/vp_adm_task/advp_tsk_fill_content.md)
 
