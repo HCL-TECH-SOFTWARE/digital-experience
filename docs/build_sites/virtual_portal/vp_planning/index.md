@@ -6,6 +6,7 @@ HCL has tested an installation with 300 virtual portals successfully. The limiti
 
 HCL Portal provides two pre-configured virtual portals, one each for use as internet and intranet portals. For more information see the topic about *Scope of virtual portals*.
 
+<!--
 -   **[Separating and sharing resources between virtual portals](../admin-system/advppln_scope.md)**  
 Separation between virtual portals is achieved by scoping the portal resources of the virtual portals. Scoping means making portal resources available uniquely and separately to individual virtual portals and their users.
 -   **[Managing the user population for virtual portals](../admin-system/advppln_mgupop.md)**  
@@ -35,5 +36,5 @@ You can improve the user experience that users have with your virtual portals by
 
 [Administering virtual portals](../admin-system/advp_adm.md)
 
-[Creating a virtual portal](../admin-system/advp_tsk_create_vp.md)
+[Creating a virtual portal](../admin-system/advp_tsk_create_vp.md) -->
 

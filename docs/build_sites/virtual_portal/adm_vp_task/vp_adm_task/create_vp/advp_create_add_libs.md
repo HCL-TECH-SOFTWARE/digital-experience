@@ -4,7 +4,8 @@ If you add virtual portals to your portal installation after you install CF09 or
 
 To import these libraries, run the portal configuration engine task import-libs-to-vp.
 
-**Note:** This task imports libraries for both the Script Application and Site Builder. If you have already run this task to import the Site Builder library, you do not need to run this task again for your Script Application libraries.
+!!! note
+    This task imports libraries for both the Script Application and Site Builder. If you have already run this task to import the Site Builder library, you do not need to run this task again for your Script Application libraries.
 
 Use the following syntax:
 

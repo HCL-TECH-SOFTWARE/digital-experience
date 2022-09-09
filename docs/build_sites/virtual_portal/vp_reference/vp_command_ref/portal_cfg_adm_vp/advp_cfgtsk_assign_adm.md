@@ -30,7 +30,8 @@ You pass the parameters in the parameter list for each configuration task as app
 -   Specifying the parameter and value that is preceded by -D on the command line.
 -   Defining them in the file wkplc.properties.
 
-    **Note:** The property file must be encoded in the ISO 8859-1 character encoding format.
+    !!! note
+        The property file must be encoded in the ISO 8859-1 character encoding format.
 
 
 -   **AIX®**
@@ -62,6 +63,7 @@ You pass the parameters in the parameter list for each configuration task as app
     ./ConfigEngine.sh assign-virtual-portal-admin-group -DVirtualPortalAdminGroup=cn=vpadmins,o=defaultwimfilebasedrealm -DVirtualPortalContext=virtual\_portal\_context\_url -DPortalAdminPwd=password -DWasPassword=password
 
 
-**Note:** You can create a virtual portal and assign the administrator group in the same command. For example, you can specify it as: ./ConfigEngine.sh create-virtual-portal assign-virtual-portal-admin-group -DVirtualPortalAdminGroup=cn=vpadmins,o=defaultwimfilebasedrealm -DVirtualPortalContext=virtual\_portal\_context\_url -DVirtualPortalTitle=mynewvptitle -DPortalAdminPwd=password -DWasPassword=password
+!!! note
+    You can create a virtual portal and assign the administrator group in the same command. For example, you can specify it as: ./ConfigEngine.sh create-virtual-portal assign-virtual-portal-admin-group -DVirtualPortalAdminGroup=cn=vpadmins,o=defaultwimfilebasedrealm -DVirtualPortalContext=virtual\_portal\_context\_url -DVirtualPortalTitle=mynewvptitle -DPortalAdminPwd=password -DWasPassword=password
 
 

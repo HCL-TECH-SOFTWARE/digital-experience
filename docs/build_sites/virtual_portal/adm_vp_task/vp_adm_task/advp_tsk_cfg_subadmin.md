@@ -15,7 +15,8 @@ If you want to change the default access permissions for the sub-administrators,
 
 Depending on the usage of your virtual portals, you might have to give the sub administrators extra access permissions on specific resources.
 
-**Note:** Do not grant the sub administrators of virtual portals the access permissions to do any installation-related tasks, such as installation of portlets or themes. An unstable or malicious portlet that is installed in one virtual portal can destabilize the entire portal installation, as all virtual portals share Java virtual machine. Typically, only the master administrator of the portal installation can do installation-related tasks.
+!!! note
+Do not grant the sub administrators of virtual portals the access permissions to do any installation-related tasks, such as installation of portlets or themes. An unstable or malicious portlet that is installed in one virtual portal can destabilize the entire portal installation, as all virtual portals share Java virtual machine. Typically, only the master administrator of the portal installation can do installation-related tasks.
 
 The following list shows the tasks for which you can assign extra access permissions to sub-administrators of virtual portals. It also specifies whether an access permission is scoped to the virtual portal or if it is global to the entire portal installation, including all virtual portals. You can assign the permissions for these tasks to sub-administrators only by using use the master administrator user ID of your initial portal installation.
 
@@ -78,10 +79,7 @@ The following list shows the tasks for which you can assign extra access permiss
 The configuration task `create-virtual-portal` does not assign roles to the sub administrators of the virtual portal. In this case, you assign the required roles manually by using the portal access administration portlets or by using the portal XML configuration interface. For more information about the XML configuration interface and how to use it see, *The XML configuration interface*.
 
 
-**Related information**  
-
-
-[Filling a virtual portal with content](../admin-system/advp_tsk_fill_content.md)
-
-[Using the XML configuration interface to work with virtual portals](../admin-system/advp_xml.md)
+???+ info "Related information:"
+    - [Filling a virtual portal with content](../vp_adm_task/advp_tsk_fill_content.md)
+    - [Using the XML configuration interface to work with virtual portals](../../vp_reference/vp_command_ref/advp_xml.md)
 
