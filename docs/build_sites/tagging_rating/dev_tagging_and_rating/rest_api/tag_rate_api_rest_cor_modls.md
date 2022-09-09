@@ -11,7 +11,8 @@ Examples:
 -   To correlate tags with resources you start with the feed that represents an empty set of tags and add single tags based on the resources to which these tags have been assigned.
 -   To correlate ratings with resources, you start with the feed that represents an empty set of ratings and add single ratings based on the resources to which these ratings have been assigned.
 
-**Note:** You cannot correlate a model with itself. For example, the tag model query parameter `tm_param` is not supported for the tag model; equally, the rating model query parameter `rtm_param` is not supported the rating model, and so on. The only exception from this rule is to use the URI `tm:name:related`, which is listed under the topic about *Other queries*.
+!!! note
+    You cannot correlate a model with itself. For example, the tag model query parameter `tm_param` is not supported for the tag model; equally, the rating model query parameter `rtm_param` is not supported the rating model, and so on. The only exception from this rule is to use the URI `tm:name:related`, which is listed under the topic about *Other queries*.
 
 ## Correlating the resource model with other models
 
@@ -111,10 +112,7 @@ To correlate the tag space model with other models, use the following parameters
 
 
 
-**Related information**  
-
-
-[Basic addressing](../admin-system/tag_rate_api_rest_addr.md)
-
-[Adding query parameters](../admin-system/tag_rate_api_rest_add_qparms.md)
+???+ info "Related information:"
+    - [Basic addressing](../rest_api/tag_rate_api_rest_addr.md)
+    - [Adding query parameters](../rest_api/tag_rate_api_rest_add_qparms.md)
 

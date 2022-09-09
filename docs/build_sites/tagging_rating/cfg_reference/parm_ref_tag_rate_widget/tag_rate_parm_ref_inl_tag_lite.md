@@ -112,18 +112,11 @@ The following parameters are optional for the tag widget. They correspond to sim
 
 
 
-**Related information**  
-
-
-[Properties for the tag widget](../admin-system/srvcfg_cpcfg4tr_dlgtag_altui.md)
-
-[The tag and rating widgets](../admin-system/tag_rate_ui_alt.md)
-
-[The rating widget](../admin-system/tag_rate_inline_rate_wdgt_lite.md)
-
-[Customizing the tag widget](../admin-system/tag_rate_cust_inltag_lite.md)
-
-[Adding the rating widget to your portal content](../admin-system/tag_rate_add_inlrate_lite.md)
-
-[Customizing the rating widget](../admin-system/tag_rate_cust_inlrate_lite.md)
+???+ info "Related information:"
+    - [Properties for the tag widget](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/srvcfg_cpcfg4tr_dlgtag_altui.md)
+    - [The tag and rating widgets](../../tagging_rating_ui/tagging_rating_widget/index.md)
+    - [The rating widget](../../tagging_rating_ui/tagging_rating_widget/rating_widget/index.md)
+    - [Customizing the tag widget](../../tagging_rating_ui/tagging_rating_widget/tag_widget/tag_rate_cust_inltag_lite.md)
+    - [Adding the rating widget to your portal content](../../tagging_rating_ui/tagging_rating_widget/tag_widget/tag_rate_add_inltag_lite.md)
+    - [Customizing the rating widget](../../tagging_rating_ui/tagging_rating_widget/rating_widget/)
 

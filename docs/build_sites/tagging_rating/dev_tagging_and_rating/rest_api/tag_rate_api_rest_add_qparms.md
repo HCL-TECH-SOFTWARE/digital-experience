@@ -208,4 +208,3 @@ This returns a feed that contains all tags that match the name `tag\_name` in th
 [Type-ahead with the deprecated tag widget](../admin-system/tag_rate_api_rest_oth_qu_typahed.md)
 
 [Search suggestions for tag names](../admin-system/tag_rate_api_rest_oth_qu_opsrchsug.md)
-
