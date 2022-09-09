@@ -4,9 +4,9 @@ The Portal Scripting Interface enables the creation of administrative tasks that
 
 1.  Complete the following steps before you use the Portal Scripting Interface for the first time:
 
-    1.  Verify that the wp.wire.jar file is present in the [AppServer\_root](../reference/wpsdirstr.md#was_root)/lib directory on the deployment manager workstation.
+    1.  Verify that the wp.wire.jar file is present in the AppServer_root/lib directory on the deployment manager workstation.
 
-    2.  If the file is not present, copy the file from the [AppServer\_root](../reference/wpsdirstr.md#was_root)/lib directory on any HCL Portal node to the [AppServer\_root](../reference/wpsdirstr.md#was_root)/lib directory on the deployment manager workstation.
+    2.  If the file is not present, copy the file from the AppServer_root/lib directory on any HCL Portal node to the AppServer_root/lib directory on the deployment manager workstation.
 
     3.  Restart the deployment manager.
 
@@ -14,7 +14,7 @@ The Portal Scripting Interface enables the creation of administrative tasks that
 
     1.  Mount the SMP/E home directory of HCL Portal, read only, on your deployment manager node.
 
-    2.  Edit job EJPSSEWL with the SMP/E home directory of HCL Portal for \#EJPSMPH\# and with the WebSphere® Application Server home directory of the deployment manager node for \#ASWASH\#.
+    2.  Edit job EJPSSEWL with the SMP/E home directory of HCL Portal for #EJPSMPH# and with the WebSphere® Application Server home directory of the deployment manager node for #ASWASH#.
 
     3.  Submit the job on the deployment manager node.
 
@@ -28,20 +28,19 @@ The Portal Scripting Interface enables the creation of administrative tasks that
 
     -   ND SOAP Port is the WebSphere Application Server Network Deployment workstation's SOAP connector-address.
 
-        To find the SOAP port, on the WebSphere Integrated Solutions Console, click**System administration** \> **Deployment Manager** \> **Ports** \> **SOAP\_CONNECTOR\_ADDRESS**.
+        To find the SOAP port, on the WebSphere Integrated Solutions Console, click**System administration > Deployment Manager > Ports > SOAP_CONNECTOR_ADDRESS**.
 
         For example, if you are running wpscript on a workstation that is part of a cell that is managed by a deployment manager, the SOAP port might be 8881.
 
     -   user is the WebSphere Application Server administrative user name.
     -   password is the administrative user password.
+    
     |Operating system|Task|
     |----------------|----|
     |Windows™|wpscript.bat -port ND SOAP Port -user user -password password|
     |AIX®HP-UXLinux™Solaris|./wpscript.sh -port ND SOAP Port -user user -password password|
     |IBM® i|wpscript.sh -port ND SOAP Port -user user -password password|
-    |z/OS|./wpscript.sh -port ND SOAP Port -user user -password password**Note:** You must be logged in using the WebSphere administrative user ID.
-
-|
+    |z/OS|./wpscript.sh -port ND SOAP Port -user user -password password <br> **Note:** You must be logged in using the WebSphere administrative user ID.|
 
 
 
