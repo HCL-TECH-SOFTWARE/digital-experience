@@ -9,7 +9,7 @@ Beginning with HCL Digital Experience CF197 and later releases, the Helm deploym
 
 !!! note
     
-    HCL DX V9.5 V200 and later is designed to run on any Certified Kubernetes platform with some conditions, documented in [Container platform support matrix](../../systemrequirements/9.5_express/supportedsoftware.md)
+    HCL DX V9.5 V200 and later is designed to run on any Certified Kubernetes platform with some conditions, documented in [Container platform support matrix](../../../../get_started/system_requirements/kubernetes/kubernetes-runtime.md)
 
 Refer to the following videos for more information:
 

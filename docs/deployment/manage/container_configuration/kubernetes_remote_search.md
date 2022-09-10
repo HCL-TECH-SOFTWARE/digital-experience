@@ -153,38 +153,36 @@ To configure Remote Search to DX 9.5 container deployments to supported Kubernet
 
 Sample Yaml:
 
-```
-
-          apiVersion: v1
-          kind: Service
-          metadata:
-           labels:
-            app: dx-deployment-remotesearch
-            release: dx-deployment
-           name: dx-deployment-service-remotesearch-lb
-          spec:
-           ports:
-           - name: was-admin
-             port: 9060
-             protocol: TCP
-             targetPort: 9060
-          - name: was-admin-sec
-            port: 9043
-            protocol: TCP
-            targetPort: 9043
-          - name: boot-port
-            port: 2809
-            protocol: TCP
-            targetPort: 2809
-          - name: rs-port
-            port: 9403
-            protocol: TCP
-            targetPort: 9403
-          selector:
-            app: dx-deployment-remotesearch
-          sessionAffinity: None
-          type: LoadBalancer
-        
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+  app: dx-deployment-remotesearch
+  release: dx-deployment
+  name: dx-deployment-service-remotesearch-lb
+spec:
+  ports:
+  - name: was-admin
+    port: 9060
+    protocol: TCP
+    targetPort: 9060
+  - name: was-admin-sec
+    port: 9043
+    protocol: TCP
+    targetPort: 9043
+  - name: boot-port
+    port: 2809
+    protocol: TCP
+    targetPort: 2809
+  - name: rs-port
+    port: 9403
+    protocol: TCP
+    targetPort: 9403
+  selector:
+    app: dx-deployment-remotesearch
+  sessionAffinity: None
+  type: LoadBalancer
 ```
 
 Apply this configuration using the following example command:
