@@ -2,7 +2,8 @@
 
 View the properties for the rating widget.
 
-**Note:** The parameters listed here are specific to the inline rating widget that was introduced with HCL Portal Version 8.5. For information about the earlier widgets and their parameters, read the appropriate topics in the HCL Portal Version 8.0 product documentation.
+!!!note
+    The parameters listed here are specific to the inline rating widget that was introduced with HCL Portal Version 8.5. For information about the earlier widgets and their parameters, read the appropriate topics in the HCL Portal Version 8.0 product documentation.
 
 -   **com.ibm.wps.cp.rating.inline.customLabel  **
 
@@ -47,13 +48,7 @@ View the properties for the rating widget.
         If you do not specify a value, the rating description is not displayed at all.
 
 
-
 **Related information**  
-
-
-[General properties for tagging and rating](../admin-system/srvcfg_cpcfg4tr_genrl.md)
-
-[The rating widget](../admin-system/tag_rate_inline_rate_wdgt_lite.md)
-
-[Rating widget parameter reference](../admin-system/tag_rate_parm_ref_inl_rate_lite.md)
-
+[General properties for tagging and rating](../../../../config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/srvcfg_cpcfg4tr_genrl.md)<br>
+[Tag widget parameter reference](../../../../../../build_sites/tagging_rating/cfg_reference/parm_ref_tag_rate_widget/tag_rate_parm_ref_inl_tag_lite.md)<br>
+[The rating widget](../../../../../../build_sites/tagging_rating/tagging_rating_ui/tagging_rating_widget/rating_widget/index.md)

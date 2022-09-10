@@ -10,42 +10,19 @@ The CP Configuration Service provides the properties for tagging and rating.
 4.  After you modify properties of one of the portal configuration services in the WebSphere Integrated Solutions Console, restart the portal server for your updates to take effect.
 5.  The parameters listed here are specific to the inline tag and rating widgets that were introduced with HCL Portal Version 8.5. The dialog and inline widgets of earlier portal versions were deprecated with HCL Portal Version 8.5. For information about the earlier widgets and their parameters, read the appropriate topics in the HCL Portal Version 8.0 product documentation.
 
--   **[General properties for tagging and rating](../admin-system/srvcfg_cpcfg4tr_genrl.md)**  
-View the general properties for tagging and rating.
--   **[Properties for the tag widget](../admin-system/srvcfg_cpcfg4tr_dlgtag_altui.md)**  
-View the properties for the tag widget.
--   **[Properties for the rating widget](../admin-system/srvcfg_cpcfg4tr_dlgrate_altui.md)**  
-View the properties for the rating widget.
-
-
 **Related information**  
-
-
-[HCL Portal 8 Product Documentation](https://support.hcltech.com/csm?id;=kb_article&sysparm_article=KB0074915&sys_kb_id=2742800e1bda809083cb86e9cd4bcb4a)
-
-[Parameter reference for the tag and rating widgets](../admin-system/tag_rate_parm_ref.md)
-
-[Searching for tagged content](../admin-system/tag_rate_search.md)
-
-[Configuring task to retrieve tags](../collab/i_coll_t_enable_lctags_task.md)
-
-[Tagging and rating](../admin-system/tag_rate_mngadmin.md)
-
-[The tag and rating widgets](../admin-system/tag_rate_ui_alt.md)
-
-[How public and private tags and ratings work in the portal](../admin-system/tag_rate_adm_publc_privt.md)
-
-[Filtering content for tagging](../admin-system/tag_rate_adm_filtr_cont.md)
-
-[The tagging and rating user interface](../admin-system/tag_rate_ui.md)
-
-[Normalizing tags](../admin-system/tag_rate_adm_norm_local.md)
-
-[Redirecting to an HCL Connections site](../admin-system/tag_fed_admin_redirect.md)
-
-[Specifying an icon for a federated resource](../admin-system/tag_fed_admin_spec_icon.md)
-
-[Hints and tips for tagging and rating](../admin-system/tag_rate_ref_hintip.md)
-
-[Hints and tips for developers and portal administrators](../admin-system/tag_rate_ref_hintip_4admins.md)
+[HCL Portal 8 Product Documentation](https://support.hcltech.com/csm?id;=kb_article&sysparm_article=KB0074915&sys_kb_id=2742800e1bda809083cb86e9cd4bcb4a)<br>
+[Parameter reference for the tag and rating widgets](../../../../../../build_sites/tagging_rating/cfg_reference/parm_ref_tag_rate_widget/index.md)<br>
+[Searching for tagged content](../../../../../../build_sites/search/tag_rate_search.md)<br>
+[Configuring task to retrieve tags](../../../../../../extend_dx/integration/connections/configuration/cfg_connections_features/integrating_cnx_tags/i_coll_t_enable_lctags_task.md)<br>
+[Tagging and rating](../../../../../../build_sites/tagging_rating/index.md)<br>
+[The tag and rating widgets](../../../../../../build_sites/tagging_rating/tagging_rating_ui/tagging_rating_widget/index.md)<br>
+[How public and private tags and ratings work in the portal](../../../../../../build_sites/tagging_rating/howto_tagging_rating/tag_rate_adm_publc_privt.md)<br>
+[Filtering content for tagging](../../../../../../build_sites/tagging_rating/howto_tagging_rating/tag_rate_adm_filtr_cont.md)<br>
+[The tagging and rating user interface](../../../../../../build_sites/tagging_rating/tagging_rating_ui/index.md)<br>
+[Normalizing tags](../../../../../../build_sites/tagging_rating/howto_tagging_rating/tag_rate_adm_norm_local.md)<br>
+[Redirecting to an HCL Connections site](../../../../../../build_sites/tagging_rating/tag_rate_federation/fed_admin/tag_fed_admin_redirect.md)<br>
+[Specifying an icon for a federated resource](../../../../../../build_sites/tagging_rating/tag_rate_federation/fed_admin/tag_fed_admin_spec_icon.md)<br>
+[Hints and tips for tagging and rating](../../../../../../build_sites/tagging_rating/hints_tips_tag_rate/index.md)<br>
+[Hints and tips for developers and portal administrators](../../../../../../build_sites/tagging_rating/hints_tips_tag_rate/tag_rate_ref_hintip_4admins.md)
 

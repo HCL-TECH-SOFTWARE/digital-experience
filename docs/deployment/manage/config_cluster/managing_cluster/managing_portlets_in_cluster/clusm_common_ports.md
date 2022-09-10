@@ -12,7 +12,6 @@ Perform the following steps to deploy common portlets:
 
 4.  Use the XML configuration interface to import a portlet definition into each cluster using the predeployed attribute, where the `<url>` element of the `<web-app>` points to the binaries directory where the portlet application's WAR contents are contained. Choose only one cluster member in a cluster against which to run the XML configuration interface, and as a result all cluster members receive the update.
 
-
 Here is an example XML definition for importing a predeployed portlet application using the XML configuration interface:
 
 ```

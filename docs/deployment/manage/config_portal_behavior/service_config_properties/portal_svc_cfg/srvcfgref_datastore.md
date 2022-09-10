@@ -10,7 +10,8 @@ Under normal circumstances there should not be a need to modify any of the confi
 
     Determines whether deletion of portal pages is performed later by the scheduled cleanup service, or immediately after the user completes the deletion task. This affects the deletion of portal pages and all their dependent resources, such as components and portlet instances. The default is true, which means that deletion of portal pages is delayed and performed by the cleanup service.
 
-    **Note:** Even if this property is set to true and delayed cleanup, deleted pages are no longer visible to users immediately after deletion.
+    !!!note
+        Even if this property is set to true and delayed cleanup, deleted pages are no longer visible to users immediately after deletion.
 
     For details about this property and how to schedule the cleanup service, see the topic about Delayed cleanup of deleted portal pages.
 
@@ -18,12 +19,14 @@ Under normal circumstances there should not be a need to modify any of the confi
 
     The value for this property is equivalent to the MAC address of the server. It consists of a string of 12 hexadecimal figures.
 
-    **Note:** Do not change the value for this property.
+    !!!note
+        Do not change the value for this property.
 
 
 The following properties are domain specific properties. They are paired. The last three pairs are analog to the first pair. The possible valid values listed under the first property `xxx.datasource.dbms` of the first pair can also be specified for the first property of the following pairs.
 
-**Note:** Do not assign the same schema name twice for database domains that reside in the same database instance. For example, if the release database domain resides in a database named `DB1` and uses the schema `SCHEMA1`, no other domain in the same database instance can use that same schema name `SCHEMA1`. This restriction applies to domains that are in the same database instance only. Using the same schema name more than once in different database instances of the same database management system is no problem.
+!!!note
+    Do not assign the same schema name twice for database domains that reside in the same database instance. For example, if the release database domain resides in a database named `DB1` and uses the schema `SCHEMA1`, no other domain in the same database instance can use that same schema name `SCHEMA1`. This restriction applies to domains that are in the same database instance only. Using the same schema name more than once in different database instances of the same database management system is no problem.
 
 -   **rel.datasource.dbms = your\_DBMS**
 
