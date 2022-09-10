@@ -1,4 +1,4 @@
-# Configure networking
+# Configure Networking
 
 This section explains what must be configured from a networking perspective to get HCL Digital Experience 9.5 running in your Kubernetes or OpenShift cluster, and to provide accessibility to your deployment from outside the Cluster.
 
@@ -46,7 +46,7 @@ Refer to the HCL DX 9.5 `values.yaml` detail for all possible applications that 
 
 **Configuring Hybrid Host**
 
-In a [Hybrid](/docs/get_started/plan_deployment/hybrid_deployment/index.md) deployment, the host for the on-premise DX Core will be added in the core configuration section and the other applications host will be placed under the add-on section. See the following example:
+In a [Hybrid](../../../../../../get_started/plan_deployment/hybrid_deployment/index.md) deployment, the host for the on-premise DX Core will be added in the core configuration section and the other applications host will be placed under the add-on section. See the following example:
 
 ```yaml
 networking:
@@ -80,7 +80,7 @@ networking:
     ssl: "true"
 ```
 
-Please refer to the original values.yaml for all available applications that can be configured. See the [Planning your container deployment using Helm](/docs/deployment/install/container/helm_deployment/overview.md) topic for details.
+Please refer to the original values.yaml for all available applications that can be configured. See the [Planning your container deployment using Helm](/install/container/index.md) topic for details.
 
 ## Configure HAProxy certificate
 

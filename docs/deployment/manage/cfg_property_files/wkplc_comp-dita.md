@@ -1,4 +1,4 @@
-# Properties file: wkplc_comp.properties
+# Properties File: wkplc_comp.properties
 
 ## HCL Portal URLs
 

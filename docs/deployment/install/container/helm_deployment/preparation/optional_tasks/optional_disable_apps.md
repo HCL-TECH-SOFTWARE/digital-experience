@@ -1,4 +1,4 @@
-# Select DX applications to deploy
+# Select DX Applications to Deploy
 
 HCL Digital Experience 9.5 consists of multiple applications and services that can be deployed. Depending on your needs, it might not be necessary to have all applications deployed.
 

@@ -1,4 +1,4 @@
-# Properties file: wkplc_dbtype.properties
+# Properties File: wkplc_dbtype.properties
 
 
 ## Database safe mode properties

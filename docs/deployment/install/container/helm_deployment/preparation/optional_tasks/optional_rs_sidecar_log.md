@@ -1,4 +1,4 @@
-# Configure Remote Search sidecar logging
+# Configure Remote Search Sidecar Logging
 
 Beginning with HCL Digital Experience 9.5 [CF199](../../../../../../whatsnew/cf19/newcf199.md), Kubernetes deployment using Helm allows you to expose logs that are written to files on its PersistentVolumes (PVs) by the [DX Remote Search](../../../../../manage/container_configuration/kubernetes_remote_search.md) application. The deployment uses sidecar containers, which access the PersistentVolume as the Remote Search container, read the log files, and expose them as their standard output. You can access logs with commands like `kubectl logs -n <namespace> <pod-name> <sidecar-container-name>`, for example, `kubectl logs -n dxns dx-deployment-remote-search-0 system-err-log`.
 

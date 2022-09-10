@@ -1,4 +1,4 @@
-# Configure labels and annotations
+# Configure Labels and Annotations
 
 This section documents the configuration of labels and annotations for different DX resources.
 

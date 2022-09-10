@@ -1,4 +1,4 @@
-# Configure and access logs
+# Configure and Access Logs
 
 This topic shows you how to configure logging in Helm, as well as how to access Kubernetes container logs.
 

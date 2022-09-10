@@ -1,5 +1,5 @@
 
-# Configure to deploy on the internal network
+# Configure to Deploy on the Internal Network
 
 This section contains the procedure to deploy DX on the internal network.
 

@@ -1,4 +1,4 @@
-# Using the DB2 RESTORE DATABASE command
+# Using the DB2 RESTORE DATABASE Command
 
 Use the RESTORE DATABASE command of IBM DB2 Universal Database Enterprise Server Edition as an alternative to the DB2 Restore wizard to restore the databases that you backed up.
 

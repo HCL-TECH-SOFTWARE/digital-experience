@@ -1,4 +1,4 @@
-# Backing up the LDAP server(s)
+# Backing up the LDAP Servers
 
 If you have made system-wide changes and are using an LDAP user registry, back up your LDAP server.
 

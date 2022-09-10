@@ -1,4 +1,4 @@
-# Configure scaling
+# Configure Scaling
 
 The HCL Digital Experience 9.5 Kubernetes deployment using Helm allows you to configure the pod count of each individual application.
 

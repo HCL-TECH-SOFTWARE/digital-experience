@@ -1,4 +1,4 @@
-# Properties file: wkplc.properties
+# Properties File: wkplc.properties
 
 
 ## About the properties file

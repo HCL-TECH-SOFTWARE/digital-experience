@@ -1,4 +1,4 @@
-# Basic monitoring
+# Basic Monitoring
 
 This topic describes options for monitoring an HCL Digital Experience 9.5 Kubernetes deployments installed using Helm.
 

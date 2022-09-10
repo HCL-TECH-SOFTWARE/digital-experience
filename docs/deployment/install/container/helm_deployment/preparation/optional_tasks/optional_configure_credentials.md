@@ -1,4 +1,4 @@
-# Configure credentials
+# Configure Credentials
 HCL Digital Experience 9.5 uses several credentials in its deployment to manage access between applications and from outside the container deployment.
 
 ## Adjusting default credentials

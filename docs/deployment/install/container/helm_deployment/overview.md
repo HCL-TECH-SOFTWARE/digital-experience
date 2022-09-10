@@ -1,4 +1,4 @@
-# Deploying container platforms using Helm
+# Deploy Container Platforms Using Helm
 
 Learn to deploy HCL Digital Experience 9.5 CF196 and later release containers to Kubernetes using [Helm](../helm_deployment/overview.md) on the following as verified in [Google Kubernetes Engine (GKE)](https://console.cloud.google.com/marketplace/details/google-cloud-platform/container-engine){:target="_blank"}. 
 
@@ -9,7 +9,7 @@ Beginning with HCL Digital Experience CF197 and later releases, the Helm deploym
 
 !!! note
     
-    HCL DX V9.5 V200 and later is designed to run on any Certified Kubernetes platform with some conditions, documented in [Container platform support matrix](../../../../get_started/system_requirements/kubernetes/kubernetes-runtime.md)
+    HCL DX V9.5 V200 and later is designed to run on any Certified Kubernetes platform with some conditions, documented in [Container platform support matrix](../../../../get_started/system_requirements/kubernetes/kubernetes-runtime.md).
 
 Refer to the following videos for more information:
 

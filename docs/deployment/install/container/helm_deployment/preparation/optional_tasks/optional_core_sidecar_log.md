@@ -1,4 +1,4 @@
-# Configure Core sidecar logging
+# Configure Core Sidecar Logging
 
 Beginning with HCL Digital Experience 9.5 [CF199](../../../../../../whatsnew/cf19/newcf199.md), Kubernetes deployment using Helm allows you to expose logs that are written to files by the [DX Core application](../../../../../../get_started/plan_deployment/container_deployment/application_architecture.md). The deployment uses sidecar containers, which access the same logs volume as the Core, read the log files, and expose them as their standard output. You can access logs with commands like `kubectl logs -n <namespace> <pod-name> <sidecar-container-name>`, for example, `kubectl logs -n dxns dx-deployment-core-0 system-err-log`.
 

@@ -27,7 +27,7 @@ The following features and updates are available to customers installing HCL Dig
 === "On-Premises" 
     Developers can apply new extensions to the Personalization Java APIs that return the evaluated page metadata when using a custom application object. See [Personalization REST API Explorer](../../extend_dx/apis/hcl_experience_api/api_explorers.md). 
 
-Digital Asset Management view keywords details
+## Digital Asset Management view keywords details
 
 === "Containers"
 

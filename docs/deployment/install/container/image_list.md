@@ -2,9 +2,9 @@
 
 This section presents the latest available HCL Digital Experience (DX) 9.5 Container images available.
 
-You can obtain the HCL DX 9.5 container update releases may be obtained from your HCL Digital Experience entitlements in the [HCL Software License Portal](https://www.hcltech.com/software/support/release), in the **HCL\_Portal\_8.5\_9.0\_9.5\_CFs** download package entry, and the **HCL\_DX\_9.5\_Container\_Updates** download package entry for HCL Digital Experience Cloud Native 9.5 entitlements.
+You can obtain the HCL DX 9.5 container update releases may be obtained from your HCL Digital Experience entitlements in the [HCL Software License Portal](https://www.hcltech.com/software/support/release){:target="_blank"}, in the **HCL\_Portal\_8.5\_9.0\_9.5\_CFs** download package entry, and the **HCL\_DX\_9.5\_Container\_Updates** download package entry for HCL Digital Experience Cloud Native 9.5 entitlements.
 
-Video: [How to upload HCL Digital Experience 9.5 CF container images to a private repository](https://youtu.be/XJONRdpgCuo)
+Video: [How to upload HCL Digital Experience 9.5 CF container images to a private repository](https://youtu.be/XJONRdpgCuo){:target="_blank"}
 
 
 ## HCL DX 9.5 CF206
@@ -1838,8 +1838,8 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 -   See the following sections for additional information:
     -   [Docker image deployment](../docker/docker_image_deployment.md)
-    -   [Requirements and limitations](../../platform/systemrequirements/9.5_express/supportedsoftware.md)
-    -   [Customizing the container deployment](../kubernetes/operator-based/customizing_container_deployment.md)
+    -   [Requirements and limitations](../../../get_started/system_requirements/othersoftware.md)
+    -   [Customizing the container deployment](https://help.hcltechsw.com/digital-experience/9.5/containerization/customizing_container_deployment.html){:target="_blank"}
     
 
 
