@@ -4,11 +4,12 @@ IBM WebSphere Application Server provides a replication service. This service tr
 
 Review the following information to manage replication:
 
-**Note:** By default, the cluster scripts enable dynamic caching for each cluster member. The replication type is set to NOT SHARED.
+!!!note
+    By default, the cluster scripts enable dynamic caching for each cluster member. The replication type is set to NOT SHARED.
 
 -   **Dynamic caching**
 
-    Data replication service \(DRS\) is the internal WebSphere® Application Server component that replicates data among application servers. There are several types of data replication, and HCL Portal can use data replication for dynamic caching and for memory-to-memory replication of session data. Enabling data replication for dynamic caching in a cluster environment is necessary to maintain data integrity between multiple HCL Portal nodes in the cluster. Replication also helps improve performance by generating data once and then replicating it to other servers in the cluster.
+    Data replication service (DRS) is the internal WebSphere® Application Server component that replicates data among application servers. There are several types of data replication, and HCL Portal can use data replication for dynamic caching and for memory-to-memory replication of session data. Enabling data replication for dynamic caching in a cluster environment is necessary to maintain data integrity between multiple HCL Portal nodes in the cluster. Replication also helps improve performance by generating data once and then replicating it to other servers in the cluster.
 
     -   AIX® HP-UX Linux™ Solaris Windows™: [Dynamic cache service settings](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.nd.doc/ae/udyn_rcachesettings.html)
 
@@ -41,7 +42,7 @@ Review the following information to manage replication:
         -   For memory-to-memory information, read [Memory-to-memory replication](http://pic.dhe.ibm.com/infocenter/wasinfo/v8r5/topic/com.ibm.websphere.nd.doc/ae/cprs_memory2memory.html).
         -   For database session information, read [Configuring for database session persistence](http://pic.dhe.ibm.com/infocenter/wasinfo/v8r5/topic/com.ibm.websphere.nd.doc/ae/tprs_cnfp.html).
 
--   **[Managing Personalization cache replication in your cluster](../admin-system/man_pzn_cache.md)**  
+-   **[Managing Personalization cache replication in your cluster](../../../config_cluster/managing_cluster/managing_cluster_replication/man_pzn_cache.md)**  
 Enable the Personalization cache replication if you want to propagate invalidation in the Personalization caches to the other nodes in the cluster.
 
 

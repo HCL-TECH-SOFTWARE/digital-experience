@@ -8,7 +8,7 @@ The following list shows the properties of the portal WP Navigator Service:
 
     Use this property to specify whether an anonymous user always has a public session. This may be useful when a portlet requires a session for anonymous users. The default value is false. To enable public sessions for pages that anonymous users can view without logging in, set this property to true.
 
-    The setting of public.session influences the remote cache scope for public pages. If public.session is set to true, then the cache scope is set to non-shared \(private\). If public.session is set to false, then the cache scope is set to shared \(public\).
+    The setting of public.session influences the remote cache scope for public pages. If public.session is set to true, then the cache scope is set to non-shared (private). If public.session is set to false, then the cache scope is set to shared (public).
 
     **Note:** Setting public.session to true might reduce performance.
 

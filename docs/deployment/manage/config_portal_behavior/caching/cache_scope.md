@@ -8,7 +8,8 @@ There are two types of caching:
 
     This type of caching provides the biggest performance improvement. A proxy server caches content and serves requests for the content. This caching eases the load on the server because requests that are served by the proxy do not reach HCL Portal. If most requests are for customized content, this type of caching provides no performance improvement. The following default values exist for portlet definitions and themes if nothing is provided:
 
-    **Note:** This type of caching should be used only for pages that contain public content that is not personalized.
+    !!!note
+        This type of caching should be used only for pages that contain public content that is not personalized.
 
     -   Remote cache scope is `non-shared`
     -   Remote cache expiry is `0 seconds`

@@ -51,20 +51,17 @@ You can define the following properties for each Vault Adapter Implementation Ty
 
     Use this property to specify whether the Vault Adapter should create and delete resources. This property is optional.
 
-    **Note:** If you set this property to `true`, the adapter must have internal support to manage resources. If you omit this property, it will default to `false` .
+    !!!note
+        If you set this property to `true`, the adapter must have internal support to manage resources. If you omit this property, it will default to `false` .
 
 -   **readonly = \(true\)**
 
     Use this property to specify whether the underlying vault for this adapter should be considered read only. This property is optional.
 
-    **Note:** If you set this property to `true`, the `manageresources` property is ignored. If you omit this property, it will default to `true` .
-
-
+    !!!note
+        If you set this property to `true`, the `manageresources` property is ignored. If you omit this property, it will default to `true` .
 
 **Related information**  
-
-
-[Working with the XML configuration interface](../admin-system/adxmltsk.md)
-
-[XML Syntax for exporting and importing credential vault data](../admin-system/adxmltsk_cmdln_sntx_crd_vlt.md)
+[Working with the XML configuration interface](../../../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)<br>
+[XML Syntax for exporting and importing credential vault data](../../../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_xml_config_cmd_line/cmdline_syntax/xml_syntax_export_import_creds/index.md)
 
