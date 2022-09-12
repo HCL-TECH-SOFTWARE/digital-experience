@@ -1,0 +1,12 @@
+title: Configuring global settings for social rendering
+nav:
+    - index.md
+    - soc_rendr_cfg_connct_srvr_type.md
+    - soc_rendr_cfg_connct_item_limit.md
+    - soc_rendr_cfg_prtl_user_id_conversn.md
+    - soc_rendr_cfg_tag_limit.md
+    - soc_rendr_cfg_data_serve.md
+    - soc_rendr_cfg_reslv_links.md
+    - Configuring file type icon mappings: cfg_filetype_icon_mappings
+
+

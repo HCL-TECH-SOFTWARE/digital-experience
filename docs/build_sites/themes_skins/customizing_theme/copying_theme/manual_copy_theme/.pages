@@ -1,0 +1,5 @@
+title: Manually creating a copy of your theme
+nav:
+    - index.md
+    - Creating a WebDAV-based theme copy: creating_webdav_theme_copy
+    - Creating a WAR-based theme copy: creating_war_theme_copy

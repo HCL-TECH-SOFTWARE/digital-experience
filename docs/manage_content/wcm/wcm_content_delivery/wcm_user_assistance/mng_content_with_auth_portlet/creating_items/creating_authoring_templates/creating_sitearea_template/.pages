@@ -1,0 +1,8 @@
+Title: Creating a site area template
+nav:
+    - index.md
+    - wcm_dev_auth-temp_sa_prop.md
+    - wcm_dev_auth-temp_formprop.md
+    - wcm_dev_auth-temp_sa_prop_add.md
+    - wcm_dev_profiling_items.md
+    - wcm_dev_workflow_items.md

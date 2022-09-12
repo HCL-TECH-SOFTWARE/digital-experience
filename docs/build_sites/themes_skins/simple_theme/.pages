@@ -1,0 +1,14 @@
+title: Understanding the Simple Theme
+nav:
+    - index.md
+    - Theme templates: theme_templates
+    - Dynamic content spots: dynamic_content_spots
+    - themeopt_themedev_changelogo_simpletheme.md
+    - themeopt_themedev_favicon.md
+    - themeopt_themedev_css.md
+    - themeopt_themedev_modules_profiles.md
+    - themeopt_themedev_layouts.md
+    - themeopt_themedev_skins.md
+    - themeopt_themedev_simple_menu.md
+    - themeopt_themedev_status_bar.md
+    - Globalization: globalization

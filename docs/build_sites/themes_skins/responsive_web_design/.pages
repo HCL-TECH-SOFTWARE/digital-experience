@@ -1,0 +1,6 @@
+title: Responsive Web Design
+nav:
+    - index.md
+    - rwd_add_navphone.md
+    - rwd_legacypages.md
+    - Relative width CSS classes for theme layouts: relative_width_css_classes

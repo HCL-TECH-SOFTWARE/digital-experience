@@ -1,0 +1,7 @@
+nav:
+    - index.md
+    - prep_os-AIX.md
+    - inst_iim-AIX.md
+    - Run the installation program in AIX: running_install
+    - inst_next_steps-AIX.md
+    - sdk_upgrade-AIX.md

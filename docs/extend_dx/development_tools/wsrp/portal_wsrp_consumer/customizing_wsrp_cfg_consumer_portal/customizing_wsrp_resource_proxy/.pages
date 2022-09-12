@@ -1,0 +1,9 @@
+title: Customizing the WSRP resource proxy
+nav:
+    - index.md
+    - wsrpt_cons_cust_resproxy_ssl.md
+    - wsrpt_cons_cust_resproxy_ltpa.md
+    - wsrpt_cons_cust_resproxy_srv.md
+    - wsrpt_cons_cust_resproxy_dsbl.md
+    - wsrpt_cons_cust_resproxy_basauth.md
+    - wsrpt_cons_cust_resproxy_frwrd.md

@@ -1,0 +1,9 @@
+Title: Creating an Authoring Tools Element
+nav:
+    - index.md
+    - wcm_dev_elements_authoring-tools.md
+    - wcm_dev_elements_authoring-tools_inline.md
+    - Creating an authoring tools component: authoring_tools_cmpnt
+    - wcm_dev_elements_authoring-tools_referencing.md
+    - authoring_portlet
+    - using_authoringtools_elements

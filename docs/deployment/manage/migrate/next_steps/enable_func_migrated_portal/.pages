@@ -1,0 +1,10 @@
+Title: Enabling new functionality in a migrated portal
+nav:
+    - index.md
+    - wcm_migration_post_functions.md
+    - mig_t_enable_mngpages.md
+    - mig_enable_outboundhttp.md
+    - mig_t_blogwiki.md
+    - mig_post_tagandrate.md
+    - mig_t_move_hidden_pages.md
+    - enable_func_migrated_themes

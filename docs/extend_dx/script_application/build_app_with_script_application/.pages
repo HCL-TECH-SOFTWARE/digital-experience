@@ -1,0 +1,13 @@
+title: Build Script Applications
+nav:
+    - index.md
+    - script_app_editor
+    - script_app_improvements.md
+    - cmd_line_push_cmd_patt_rep.md
+    - import_app_that_links_to_js_framework
+    - script_app_editor_actions_menu_overview
+    - combine_js_files.md
+    - drop_app_toolbar.md
+    - cmd_line_push_cfg.md
+    - gen_url_map.md
+    - cmd_line_api.md

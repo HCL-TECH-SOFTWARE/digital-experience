@@ -1,0 +1,5 @@
+title: Optimized Script Applications
+nav:
+    - index.md
+    - dependencies_as_module.md
+    - sharing_dependencies.md

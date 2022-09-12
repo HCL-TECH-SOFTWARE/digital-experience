@@ -1,0 +1,6 @@
+title: How to use REST with workflow actions
+nav:
+    - index.md
+    - wcm_rest_crud_workflow_actions_publish_expire_version.md    - wcm_rest_crud_workflow_actions_scheduled.md    - wcm_rest_crud_workflow_actions_email.md    - wcm_rest_crud_workflow_actions_custom.md
+
+

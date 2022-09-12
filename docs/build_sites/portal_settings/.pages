@@ -1,0 +1,9 @@
+title: Manage site settings
+nav:
+    - index.md
+    - Managing global settings: manage_global_setting
+    - Managing custom unique names: manage_custom_unique_names
+    - Managing markup languages: manage_markup_language
+    - Managing client devices: manage_client_devices
+    - h_main_import_xml.md
+

@@ -1,0 +1,13 @@
+title: Logging and tracing
+nav:
+    - index.md
+    - inst_logs.md
+    - run_logs.md
+    - verbosegc.md
+    - was_logs.md
+    - cfg_wizd_logs.md
+    - wmm_logs.md
+    - adsyslog.md
+    - wcm_logs.md
+    - logging_tracing_containers_and_new_services.md
+    - Logging and tracing client side rendering: logging_and_tracing_clientside

@@ -1,0 +1,24 @@
+title: Search
+nav:
+    - index.md
+    - welcome_search.md
+    - HCL Digital Experience Portal Search: portal_search
+    - mp_search_pages.md
+    - Search Center: search_center
+    - tag_rate_search.md
+    - Planning and preparing for Portal Search: planning_portal_search
+    - Indexing web content: indexing_webcontent
+    - wcm_config_search.md
+    - wcm_dev_search_searchcenter.md
+    - Language and region support in Portal Search: language_region_support
+    - Crawling web content with search seedlists: crawling_webcontent_seedbase
+    - Searching your local portal: searching_local_portal
+    - Configuring your portal site for search by internet search engines: cfg_search_by_internetsearch
+    - Enabling anonymous users to search public pages of your portal: enabling_anonymous_user
+    - srcconfthmsforsrch.md
+    - redirect_search_custom_form.md
+    - Remote search service: remotesearch
+    - Configuring search in a cluster: cfg_search_cluster
+    - Configuring search in a portal farm: cfg_search_farm
+    - advp_tsk_cgf_srchcoll.md
+    - Search REST API specification: search-rest-api

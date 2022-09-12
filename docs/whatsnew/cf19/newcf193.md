@@ -18,7 +18,7 @@ See the [Enabling presentation of locales in friendly URLs](https://help.hcltech
 
 The Theme Editor portlet is a new addition to HCL Digital Experience Container Update CF193 and higher release capabilities. The portlet allows an administrator to edit static theme resources in WebDAV without the use of a WebDAV client or tool.
 
-See the [Theme Editor Portlet](https://help.hcltechsw.com/digital-experience/9.5/dev-theme/theme_editor_portlet.html){:target="_blank"}<!-- (../dev-theme/theme_editor_portlet.md) --> topic for more information.
+See the [Theme Editor Portlet](../../build_sites/themes_skins/usage/customizing_theme/theme_editor_portlet.md) topic for more information.
 
 ## HCL Digital Experience 9.5 Container Custom Context Root URL
 
@@ -42,27 +42,27 @@ See the [How to switch the languages in the Digital Experience theme](https://he
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and automate processes in the development and delivery process. New release artifact types supporting Deploy DX Core, Manage Syndicator, and Manage Subscriber tasks are provided in Container Update CF193.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](../../platform/administration/DXClient/dxclient.md) topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../extend_dx/development_tools/dxclient/index.md) topic for more information.
 
 ## New Digital Experience REST APIs
 
 New and updated HCL DX APIs are introduced with the HCL DX CF193 Container Update release:
 
--   [Web Content Manager Multilingual Solution APIs](https://help.hcltechsw.com/digital-experience/9.5/wcm/wcm_mls_api.html){:target="_blank"}<!-- (../wcm/wcm_mls_api.md) -->
+-   [Web Content Manager Multilingual Solution APIs](../../manage_content/wcm/wcm_dev/wcm_dev_api/wcm_mls_api.md)
 
 ## HCL Digital Experience 9.5 Container Platform Support Matrix
 
 View the latest Kubernetes and OpenShift platforms tested and supported for specific HCL Digital Experience 9.5 Container Update deployments.
 
-See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../platform/systemrequirements/9.5_express/supportedsoftware.md) topic for more information.
+See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../get_started/system_requirements/9.5_express/supportedsoftware.md) topic for more information.
 
 ## New HCL Digital Experience ‘How To’ Videos
 
 Take advantage of new step-by-step guidance for HCL Digital Experience practitioners presented in new videos and webinars. See the following HCL Digital Experience Help Center topics:
 
--   [Deploy HCL Digital Experience in Minutes using HCL Solution Factory](../../platform/kubernetes/deployment/helm_deployment.md)
+-   [Deploy HCL Digital Experience in Minutes using HCL Solution Factory](../../deployment/install/container/helm_deployment/overview.md)
 -   [Using the dxctl tool to Update Digital Experience 9.5 on Red Hat OpenShift](https://help.hcltechsw.com/digital-experience/9.5/containerization/update_dx_core_kubernetes_container_deployment.html){:target="_blank"}<!-- (../containerization/update_dx_core_kubernetes_container_deployment.md) -->
--   [How to Upload HCL Digital Experience 9.5 CF Container Images to a Private Repository](../../platform/kubernetes/docker.md)
+-   [How to Upload HCL Digital Experience 9.5 CF Container Images to a Private Repository](../../deployment/install/docker/index.md)
 
 <!-- ???info "Related information:"
     - [Enabling presentation of locales in friendly URLs](../admin-system/enabling_presentation_of_locales_in_friendly_urls.md)

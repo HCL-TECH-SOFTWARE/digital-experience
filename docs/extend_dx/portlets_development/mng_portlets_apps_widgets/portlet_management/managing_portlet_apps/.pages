@@ -1,0 +1,15 @@
+title: Portlet management
+nav:
+    - index.md
+    - Managing Web modules: managing_web_modules
+    - Managing portlet applications: managing_portlet_apps
+    - h_mport_test_portlet.md
+    - h_mport_provide_portlet.md
+    - h_mport_withdraw_portlet.md
+    - h_mport_copy_portlet.md
+    - h_mport_plm_block.md
+    - h_mport_modify_portlet.md
+    - h_mport_delete_portlet.md
+    - h_mport_access_portlets.md
+    - h_mport_configure_manage_portlets.md
+    - h_mport_fields_portlet.md

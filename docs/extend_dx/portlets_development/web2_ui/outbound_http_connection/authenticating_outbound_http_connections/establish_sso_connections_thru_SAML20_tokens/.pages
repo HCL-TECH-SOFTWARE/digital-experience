@@ -1,0 +1,4 @@
+title: Establishing SSO connections through SAML 2.0 tokens
+nav:
+    - index.md
+    - Configuration settings for SAML authenticated connections: cfg_saml_auth_conn

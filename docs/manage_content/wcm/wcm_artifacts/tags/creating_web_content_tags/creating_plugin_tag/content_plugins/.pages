@@ -1,0 +1,6 @@
+Title: Content plug-ins
+nav:
+    - index.md
+    - wcm_dev_renderplugins_remote.md
+    - sa_asa4wcm_plugin.md
+    - Tagging and rating plug-ins for web content: tagging_rating_plugins

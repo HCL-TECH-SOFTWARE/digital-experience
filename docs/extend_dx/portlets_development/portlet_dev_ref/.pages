@@ -1,0 +1,11 @@
+title: Portlet development reference
+nav:
+    - index.md
+    - wpspar.md
+    - build_ear_war.md
+    - wpsbsanonsess.md
+    - wpsptdesc.md
+    - jsrjsp.md
+    - wpsparms.md
+    - wpsstrtags.md
+    - extension.md

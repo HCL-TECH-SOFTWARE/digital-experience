@@ -1,0 +1,10 @@
+title: Managing DAM 
+nav:
+    - Upload Media Assets: upload_rich_media_assets.md
+    - Manage Media Assets: manage_media_assets.md
+    - Export or Import DAM: dam_exim.md
+    - XML Access to Import or Export DAM: adxmldam.md
+    - Manage Collections: manage_collections.md
+    - Modify Media Assets: modify_dam
+    
+   

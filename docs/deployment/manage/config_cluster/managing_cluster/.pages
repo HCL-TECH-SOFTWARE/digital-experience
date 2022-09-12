@@ -1,0 +1,9 @@
+Title: Managing your cluster
+nav:
+    - index.md
+    - clusm_app_share.md
+    - Managing portlets in your cluster: managing_portlets_in_cluster
+    - Managing replication in your cluster: managing_cluster_replication
+    - manage_script.md
+    - manage_sso.md
+    - clus_pznprop.md

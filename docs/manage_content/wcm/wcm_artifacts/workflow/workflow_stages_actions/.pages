@@ -1,0 +1,8 @@
+Title: Workflow stages and actions
+nav:
+    - index.md
+    - wcm_dev_workflows_stages.md
+    - wcm_dev_workflows_actions.md
+    - wcm_managing_workflow_using.md
+    - wcm_managing_workflow_joint-approval.md
+    - wcm_dev_workflows_example.md

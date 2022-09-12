@@ -1,0 +1,7 @@
+title: Access
+nav:
+    - index.md
+    - Managing users and groups: managing_users_groups
+    - Working with resource permissions: working_with_resource_permission
+    - Managing permissions for users and groups: user_group_permission
+    - Managing credential information: managing_cred_info

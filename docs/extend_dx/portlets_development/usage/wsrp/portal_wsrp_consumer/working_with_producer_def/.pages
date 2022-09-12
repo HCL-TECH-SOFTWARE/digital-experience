@@ -1,0 +1,6 @@
+title: Working with Producer definitions
+nav:
+    - index.md
+    - wsrpc_cons_diff_prod.md
+    - wsrpt_cons_crtprd_plt.md
+    - Using the XML configuration interface to work with Producer definitions: using_xml_cfg_work_with_prod_def

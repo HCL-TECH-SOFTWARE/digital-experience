@@ -1,0 +1,6 @@
+title: Developing basic PAA file applications
+nav:
+    - index.md
+    - dep_check_paa.md
+    - add_paa_dependency.md
+    - Create a Portal Application Archive (PAA) file: creating_paa_file

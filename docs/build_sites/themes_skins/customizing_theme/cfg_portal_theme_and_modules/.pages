@@ -1,0 +1,9 @@
+title: Configuring the portal theme and modules
+nav:
+    - index.md
+    - themeopt_cust_config_metadata.md
+    - themeopt_cust_config_rep.md
+    - themeopt_cust_config_repcust.md
+    - config_res_agg.md
+    - themeopt_cust_config_useprops.md
+    - themeopt_mod_capfilter_settings.md

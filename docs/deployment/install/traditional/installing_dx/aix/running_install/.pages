@@ -1,0 +1,5 @@
+nav:
+    - index.md
+    - inst_gui-AIX.md
+    - inst_console-AIX.md
+    - AIX - Install with response file: install_with_responsefile

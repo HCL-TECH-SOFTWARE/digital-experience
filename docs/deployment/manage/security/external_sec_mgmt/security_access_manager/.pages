@@ -1,0 +1,8 @@
+title: Security Access Manager
+nav:
+    - index.md
+    - Configuring Security Access Manager: cfg_sec_access_mgr
+    - usr_prov.md
+    - verify_tam.md
+    - remove_tam_vault.md
+    - usr_prov_dis.md

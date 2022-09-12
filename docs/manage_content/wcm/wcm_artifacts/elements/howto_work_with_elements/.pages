@@ -1,0 +1,26 @@
+Title: Work with Elements
+nav:
+    - index.md
+    - The Authoring tools element: authoringtools_element
+    - Creating a component reference element: component_reference_element
+    - Creating a date and time element: date_time_element
+    - File resource elements: using_file_resource_element
+    - HTML elements: html_element
+    - Image elements: image_element
+    - JSP element: jsp_element
+    - Link element: links_element
+    - List presentation uses: list_presentation
+    - Using menu element: menu_element
+    - Navigator element: navigator_element
+    - Using a number element: number_element
+    - Selection elements: selection_element
+    - Page navigation element: page_nav_element
+    - Personalization element: pzn_element
+    - Rich text element: richtext_element
+    - Search Element: search_element
+    - Short Text Element: short_text_element
+    - Style Sheet Element: stylesheet_element
+    - Taxonomy Element: taxonomy_element
+    - Text Element: text_element
+    - User Name Element: username_element
+    - User Selection Element: user_selection_element

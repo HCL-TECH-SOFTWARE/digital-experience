@@ -1,0 +1,11 @@
+title: Using the XML configuration command line client
+nav:
+    - index.md
+    - Command line syntax of the XML configuration interface: cmdline_syntax
+    - Transferring portal configuration data by using the XML configuration interface: transfer_portal_cfg_using_xml_config_int
+    - adxmltsk_creat_mod_resrcs.md
+    - adxmltsk_activt_portlts.md
+    - adxmltsk_sked_delclnup.md
+    - adxmltsk_reg_predepld_portlts.md
+    - adxmltsk_del_usrs_grps.md
+    - adxmltsk_del_orphan_res.md
