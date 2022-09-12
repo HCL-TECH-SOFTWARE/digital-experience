@@ -1,0 +1,5 @@
+title: Implementing interactions with social objects
+nav:
+    - index.md
+    - wcm_dev_intract_forum.md    - wcm_dev_intract_create_reply.md    - wcm_dev_intract_delete_reply.md
+

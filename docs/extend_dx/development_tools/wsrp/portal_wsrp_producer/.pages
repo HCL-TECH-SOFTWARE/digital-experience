@@ -1,0 +1,9 @@
+title: Using your portal as a WSRP Producer
+nav:
+    - index.md
+    - wsrpr_prod_wsdl.md
+    - Securing a WSRP Producer portal: securing_wsrp_prod_portal
+    - Information that the Producer exchanges with the Consumer: wsrp_producer_info
+    - Providing WSRP services as a Producer: providing_wsrp_services_as_producer
+    - wsrpr_prod_xmlxp_custplt.md
+    - wsrpt_chg_prod_uri.md

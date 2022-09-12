@@ -1,0 +1,5 @@
+Title: Delivering web content
+nav:
+    - index.md
+    - Delivering web content on a portal page: deliver_webcontent_on_portal
+    - wcm_config_delivery_servlet.md    - Pre-rendered delivery: pre-rendered_delivery    - wcm_rendering_modes.md

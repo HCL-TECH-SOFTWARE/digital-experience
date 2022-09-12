@@ -1,0 +1,7 @@
+title: Configuring SSL
+nav:
+    - index.md
+    - Setting up SSL: setup_ssl
+    - config_ssl_login.md
+    - certauth.md
+    - sec_pw_crypt.md

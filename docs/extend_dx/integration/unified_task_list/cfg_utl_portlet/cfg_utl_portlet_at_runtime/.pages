@@ -1,0 +1,12 @@
+title: Configuring Unified Task List portlet at run time
+nav:
+    - index.md
+    - utl_accessing_the_configuration_view.md
+    - utl_editing_common_settings.md
+    - utl_adding_and_removing_filters.md
+    - utl_localized_filters.md
+    - utl_task_handle_config.md
+    - utl_showing_and_hiding_table_columns.md
+    - utl_editing_shared_settings.md
+    - utl_changing_the_number_of_rows_in_the_task_list_table.md
+    - utl_configuring_dynamic_user_interface.md

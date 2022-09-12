@@ -1,0 +1,4 @@
+Title: Setting up farm instances with a shared configuration
+nav:
+    - index.md
+    - set_portal_farm_master.md    - cfg_farm_clone.md    - set_portal_farm_gpfs.md    - disable_farm.md

@@ -1,0 +1,5 @@
+Title: Administering a portal farm
+nav:
+    - index.md
+    - admin_farm_unique.md
+    - admin_farm_shared.md

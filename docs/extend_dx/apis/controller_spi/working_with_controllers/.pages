@@ -1,0 +1,5 @@
+title: Working with Controllers
+nav:
+    - index.md
+    - Controller for Working with Resources: ctrlrapit_obtn_ctrlr.md
+    - Committing and Persisting Modifications: ctrlrapit_comit.md

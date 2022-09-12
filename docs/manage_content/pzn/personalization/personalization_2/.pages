@@ -1,0 +1,18 @@
+Title: Personalization
+nav:
+    - index.md
+    - pznObjects.md
+    - pznRulesOverviewHelp.md
+    - pznRuleElements.md
+    - pznAccessControl.md
+    - pznCreateCampaign.md
+    - pznCreateContentSpotHelp.md
+    - pznCreateRule.md
+    - pznCreateRuleEvent.md
+    - pznCreateRuleMapping.md
+    - pznCreateResourceCollection.md
+    - pznCreateAppObject.md
+    - pznImport.md
+    - Versions: pzn_version
+    - Personalized list: personalized_list
+    - Creating a publish server: publish_server

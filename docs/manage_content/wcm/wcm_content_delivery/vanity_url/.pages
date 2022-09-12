@@ -1,0 +1,6 @@
+Title: Vanity URLs
+nav:
+    - index.md
+    - van_url_create.md
+    - van_url_work.md
+    - Administering vanity URLs: adm_vanity_url

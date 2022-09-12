@@ -1,0 +1,18 @@
+title: Preparing the site toolbar
+nav:
+    - index.md
+    - epc_adding_custom_source.sm.md
+    - themeopt_toolbar_frames.md
+    - disable_toolbar_logo.md
+    - epc_adding_custom_other_content.md
+    - epc_custom_more_menu.md
+    - Customizing the Page Component palette: customizing_page_cmpnt_palette
+    - Customizing the Applications palette: customizing_applications_palette
+    - Customizing page creation and page editing options: customizing_page_creation_editing
+    - layout_toolbar_customization.md
+    - Customize_Site_Manager_User_Interface.md
+    - Controlling the visibility of the site toolbar and toolbar tabs: controlling_visibility_site_toolbar
+    - wcm_mngpages_disabletool.md
+    - wcm_mngpages_disable_lang_switch.md
+
+

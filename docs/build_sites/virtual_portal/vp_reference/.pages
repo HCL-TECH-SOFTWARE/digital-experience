@@ -1,0 +1,5 @@
+title: Virtual portals reference
+nav:
+    - index.md
+    - Virtual portals command reference: vp_command_ref
+    - Known limitations for virtual portals: vp_limitations

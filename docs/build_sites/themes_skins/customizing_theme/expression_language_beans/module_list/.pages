@@ -1,0 +1,5 @@
+title: wp.moduleList
+nav:
+    - index.md
+    - themeopt_el_bean_module.md
+    - Module: current_module_list

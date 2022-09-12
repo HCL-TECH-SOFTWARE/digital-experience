@@ -1,0 +1,5 @@
+nav:
+    - Content Templates: index.md
+    - Author Content Templates: author_content_templates.md
+    - Edit Content Templates: edit_a_content_template.md
+    - Delete Content Templates: delete_a_content_template.md

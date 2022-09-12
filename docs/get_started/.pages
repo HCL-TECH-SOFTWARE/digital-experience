@@ -1,0 +1,9 @@
+title: Get Started
+nav:
+    - product_overview
+    - architecture_overview
+    - plan_deployment
+    - system_requirements
+    - download
+    - software_support.md
+    - notices.md

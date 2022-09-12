@@ -1,0 +1,13 @@
+Title: Web Content Manager Artifacts
+nav:
+    - Elements: elements
+    - Page components: page_components
+    - Web Content Library: web_content_library
+    - Managed Pages: managed_pages
+    - Projects: projects
+    - Workflow and Change management: workflow
+    - Tags: tags
+    - Tagging and Rating for Web Content: tagrate_managing
+    - Reserved Authoring Portlet: reserved_auth_portlet
+    - Personalizing Federated Documents: feddocs
+    - Develop WCM Assets: wcm_dev

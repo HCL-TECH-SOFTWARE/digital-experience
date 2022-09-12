@@ -1,0 +1,4 @@
+Title: How to validate friendly URLs for web content
+nav:
+    - index.md
+    - enable_validate_friendly_urls.md    - configure_validate_friendly_urls.md    - prevent_friendly_url_redirects.md

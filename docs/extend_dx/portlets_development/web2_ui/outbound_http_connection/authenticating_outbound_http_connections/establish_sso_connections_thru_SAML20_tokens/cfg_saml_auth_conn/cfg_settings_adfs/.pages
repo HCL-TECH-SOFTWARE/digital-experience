@@ -1,0 +1,7 @@
+title: Configuration settings for Active Directory Federation Services (ADFS)
+nav:
+    - index.md
+    - outbhttp_auth_est_sso_adfs_idpp_url.md
+    - add_cookie_adfs.md
+    - outbhttp_auth_est_sso_adfs_idpp_settings.md
+    - outbhttp_auth_est_sso_adfs_rules.md

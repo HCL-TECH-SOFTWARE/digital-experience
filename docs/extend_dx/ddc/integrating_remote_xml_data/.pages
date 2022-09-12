@@ -1,0 +1,7 @@
+title: Integrating remote XML data
+nav:
+    - index.md
+    - plrf_genrc_beanlst_provider.md
+    - Syntax for XPath based list-rendering profiles: syntax_xpath_based_list_rendering_profiles
+    - plrf_lr_syntax4custom_profl.md
+    - plrf_atom_lr_profl.md

@@ -1,0 +1,21 @@
+Title: Developing a personalized portlet
+nav:
+    - pzn_demoprereq.md
+    - pzn_demoinstall.md
+    - pzn_demo_create_jsp_rad.md
+    - pzn_demo_create_pzn_content_resources.md
+    - pzn_demo_create_pzn_user_resources.md
+    - pzn_demo_finish_coding_portlet_jsp.md
+    - pzn_demo_export_war_install_portlet.md
+    - pzn_demo_import_resource_collections.md
+    - pzn_demo_create_simple_content_rule.md
+    - pzn_demo_create_content_spot.md
+    - pzn_demo_enhance_personalized_portlet.md
+    - pzn_demo_insert_dynamic_table_code.md
+    - pzn_demo_modify_resource_collection_properties.md
+    - pzn_demo_create_user_profiler_rule.md
+    - pzn_demo_create_additional_advanced_rules.md
+    - pzn_demo_change_content_spot_rule_mapping.md
+    - pzn_demo_list_portlet.md
+    - pzn_demouninstall.md
+

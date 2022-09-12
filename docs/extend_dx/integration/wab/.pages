@@ -1,0 +1,7 @@
+title: Integrating with web applications
+nav:
+    - index.md
+    - Web Application Bridge: wab
+    - wab_alogin.md
+    - wab_multi.md
+    - trouble_wab.md

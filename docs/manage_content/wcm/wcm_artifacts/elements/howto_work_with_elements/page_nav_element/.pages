@@ -1,0 +1,7 @@
+Title: Using a page navigation element
+nav:
+    - index.md
+    - wcm_dev_elements_page-navigation.md
+    - wcm_dev_elements_page-navigation_creating.md
+    - wcm_dev_elements_page-navigation_example.md
+    - wcm_dev_elements_page-navigation_props.md

@@ -1,0 +1,5 @@
+title: Configuring the VMM rule-based groups repository
+nav:
+    - index.md
+    - rbug_cfg_vmm_rps_rlm.md
+    - rbug_cfg_vmm_attrb.md

@@ -1,0 +1,6 @@
+title: Integrating remote JSON data
+nav:
+    - index.md
+    - plrf_genrc_beanlst_provider_json.md
+    - plrf_lr_syntax4basicjson_select.md
+    - Syntax for BasicJSONSelection based list-rendering profiles: syntax_basicjsonselection_based_list_rendering_profiles

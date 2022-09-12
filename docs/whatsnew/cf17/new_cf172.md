@@ -10,15 +10,15 @@ You can access the latest software requirements and updates that support HCL Dig
 
 ## Web Content Manager \(WCM\) Support Tools
 
-The HCL WCM Support Tools portlet is provided to investigate and analyze information related to the WCM Java Content Repository \(JCR\) nodes. The WCM Support Tools Portlet is provided in the HCL Digital Experience 9.5 CF172 Container Update release, and is accessible from the standard Digital Experience administration panel in the CF172 release. See [HCL Web Content Manager Support Tools](https://help.hcltechsw.com/digital-experience/9.5/trouble/wcm_support_tools.html){:target="_blank"} for details.
+The HCL WCM Support Tools portlet is provided to investigate and analyze information related to the WCM Java Content Repository \(JCR\) nodes. The WCM Support Tools Portlet is provided in the HCL Digital Experience 9.5 CF172 Container Update release, and is accessible from the standard Digital Experience administration panel in the CF172 release. See [HCL Web Content Manager Support Tools](../../deployment/manage/troubleshooting/wcm_support_tools.md) for details.
 
 ## New Web Content Query Parameter APIs
 
-New Web Content Query Parameter APIs are added in HCL Digital Experience 9.5 CF172. See [REST Query service for web content](https://help.hcltechsw.com/digital-experience/9.5/wcm/wcm_rest_adhoc.html){:target="_blank"} for details.
+New Web Content Query Parameter APIs are added in HCL Digital Experience 9.5 CF172. See [REST Query service for web content](../../manage_content/wcm/usage/wcm_dev/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md){:target="_blank"} for details.
 
 ## New Enhanced Content Template API
 
-The Enhanced Web Content Manager Content Template API adds the ability to retrieve the configuration details of content template elements. See [How to retrieve the settings of the elements for content templates by using REST](https://help.hcltechsw.com/digital-experience/9.5/wcm/wcm_rest_elem_set_cont_temp.html){:target="_blank"} for details.
+The Enhanced Web Content Manager Content Template API adds the ability to retrieve the configuration details of content template elements. See [How to retrieve the settings of the elements for content templates by using REST](../../manage_content/wcm/usage/wcm_dev/wcm_rest/wcm_rest_mng_content/wcm_rest_template/wcm_rest_elem_set_cont_temp.md) for details.
 
 ## Updated HCL Digital Experience 9.5 platform support statements
 

@@ -1,0 +1,6 @@
+title: Web 2.0 user interface features
+nav:
+    - index.md
+    - The client side portlet programming model: clientside_portlet_programming
+    - Outbound HTTP connection: outbound_http_connection
+    - Live text for click-to-action: live_text

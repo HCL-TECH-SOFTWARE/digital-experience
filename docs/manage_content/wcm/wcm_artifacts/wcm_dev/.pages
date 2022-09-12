@@ -1,0 +1,6 @@
+Title: Develop WCM Assets
+nav:
+    - HCL Web Content Manager API: wcm_dev_api
+    - How to create custom plug-ins: wcm_custom_plugin
+    - REST service for Web Content Manager: wcm_rest
+    - ...

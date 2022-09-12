@@ -1,0 +1,9 @@
+title: DAM Extensibility
+nav:
+    - dam_extensibility.md
+    - dam_plugin_communication.md
+    - configure_dam_extensibility.md
+    - configure_dam_Metadata_configuration.md
+    - configure_DAM_extension_to_google_vision_API.md
+    - image_tagging.md
+    - kaltura_configuration.md

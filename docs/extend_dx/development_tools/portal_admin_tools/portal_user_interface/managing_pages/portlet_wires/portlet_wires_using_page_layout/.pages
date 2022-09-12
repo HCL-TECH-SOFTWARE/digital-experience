@@ -1,0 +1,5 @@
+title: Manage wires using the page layout view
+nav:
+    - index.md
+    - h_wires_add.md    - h_wires_del.md
+    - h_wires_setglobact.md

@@ -1,0 +1,8 @@
+title: Troubleshooting modular themes
+nav:
+    - index.md
+    - themeopt_mod_debug.md
+    - themeopt_mod_reloading.md
+    - themeopt_mod_debug_pattern.md
+    - themeopt_json_syntax.md
+    - themeopt_json_syntax_profiles.md

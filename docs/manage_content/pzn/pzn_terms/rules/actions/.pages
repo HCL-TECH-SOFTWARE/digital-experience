@@ -1,0 +1,6 @@
+Title: Actions
+nav:
+    - index.md 
+    - pzn_example_simple_select_content_action.md
+    - pzn_example_simple_update_action.md
+    - pzn_example_simple_email_action.md

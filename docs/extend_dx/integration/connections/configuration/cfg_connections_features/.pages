@@ -1,0 +1,6 @@
+title: Configuring HCL Connections features
+nav:
+    - index.md
+    - i_coll_t_enable_lcprofile.md
+    - Integrating HCL Connections tags: integrating_cnx_tags
+    - Integrating HCL Connections files: integrating_cnx_files

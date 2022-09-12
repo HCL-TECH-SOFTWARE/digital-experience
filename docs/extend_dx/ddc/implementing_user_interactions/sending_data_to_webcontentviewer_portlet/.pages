@@ -1,0 +1,6 @@
+title: Sending data to the Web Content Viewer portlet
+nav:
+    - index.md
+    - plrf_sendata2wcv_createhtmlform.md
+    - plrf_sendata2wcv_receivhtmlform.md
+    - The generic XML Digital Data Connector data sink: generic_xml_ddc_sink

@@ -1,0 +1,8 @@
+title: Configuring outbound HTTP connections by using configuration tasks
+nav:
+    - index.md
+    - outbhttp_cfg_tsk_create.md
+    - outbhttp_cfg_tsk_read.md
+    - outbhttp_cfg_tsk_update.md
+    - outbhttp_cfg_tsk_delete.md
+    - outbhttp_cfg_tsk_clear.md

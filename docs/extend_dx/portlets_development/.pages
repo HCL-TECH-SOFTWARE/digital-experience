@@ -1,0 +1,17 @@
+title: Portlet Development
+nav:
+    - index.md
+    - wpsbpc.md
+    - wpsbscfg.md
+    - Standard Portlet API: standard_portlet_api
+    - Portlet Services: portlet_services
+    - Web 2.0 User Interface: web2_ui
+    - Client-side Aggregation: client_side_aggregation_ref
+    - Portlet Communication: portlet_communication
+    - Dynamic User Interfaces: dynamic_user_interfaces
+    - Collaborative Services API and the Person Tag: collaborative_services_api_person_tag
+    - Portlet API: portlet_api
+    - Portlet Development Reference: portlet_dev_ref
+    - Predefined Public Render Parameters: predefined_public_render_params
+    - jsrsamp.md
+

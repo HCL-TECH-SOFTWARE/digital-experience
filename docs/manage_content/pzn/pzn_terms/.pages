@@ -1,0 +1,14 @@
+Title: Personalization terms
+nav:
+    - index.md 
+    - pzn_resources.md
+    - pzn_user_resources.md
+    - Attribute Based Administration: pzn_attribute_adm
+    - Rules: rules
+    - pzn_content_spots.md
+    - pzn_mappings.md
+    - pzn_campaigns.md
+    - Application object: application_object
+    - pzn_request_context.md
+    - pzn_query_framework.md
+    - pzn_content_resources.md

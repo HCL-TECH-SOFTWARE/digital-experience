@@ -1,0 +1,3 @@
+# Manual Steps: Modify Site URLs for Search Engine Optimization
+
+The Modify Site URLs for Search Engine Optimization option in the Configuration Wizard includes manual steps. For reference only, you can see the details of the manual steps in this section of the product documentation. The Configuration Wizard provides you custom instructions. Depending on your selections, you might not see all of the manual steps in this section in the instructions created for you in the Configuration Wizard.

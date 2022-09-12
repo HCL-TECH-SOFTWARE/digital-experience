@@ -10,33 +10,33 @@ You can access the latest software requirements and updates that support HCL Dig
 
 ## Web Content Manager Multilingual Solution Library Export and Import
 
-The HCL Web Content Manager Multilingual Solution is a set of tools used to manage translated versions Web Content Manager content for localized and regionalized websites. Beginning with the HCL Digital Experience 9.5 Container Update CF195 release, a new export and import capability allows you to support translation of the content of a library by exporting it into a format supported by a translation service and importing the translated content back into the content library using the [DXClient](../../platform/administration/DXClient/dxclient.md) tool.
+The HCL Web Content Manager Multilingual Solution is a set of tools used to manage translated versions Web Content Manager content for localized and regionalized websites. Beginning with the HCL Digital Experience 9.5 Container Update CF195 release, a new export and import capability allows you to support translation of the content of a library by exporting it into a format supported by a translation service and importing the translated content back into the content library using the [DXClient](../../extend_dx/development_tools/dxclient/index.md) tool.
 
-See the [How to export and import WCM library content using DXClient](../../platform/administration/DXClient/dxclient_artifact_type/wcm_mls_export_import.md) topic for more information.
+See the [How to export and import WCM library content using DXClient](../../extend_dx/development_tools/dxclient/usage/dxclient_artifact_types/wcm_mls_export_import.md) topic for more information.
 
 ## Web Content Manager Advanced Cache Options
 
 New options are available to flush the Web Content Manager Advanced cache, as a result of syndication operations, to help improve performance and reliability.
 
-See the [Web Content Manager Cache Parameters](https://help.hcltechsw.com/digital-experience/9.5/wcm/wcm_dev_caching_cache-parameters.html){:target="_blank"}<!-- (../wcm/wcm_dev_caching_cache-parameters.md) --> topic for more information.
+See the [Web Content Manager Cache Parameters](../../manage_content/wcm/custom_caching/wcm_dev_caching_cache-parameters.md) topic for more information.
 
 ## Enhanced Cross Origin Resource Sharing Configuration
 
 Enhanced Cross Origin Resource Sharing Configuration adds new options for HCL Digital Experience administrators to set configuration for CORS using a WP configuration service in the IBM WebSphere Application Server resource environment provider.
 
-See the [Enhanced Cross Origin Resource Sharing Configuration](https://help.hcltechsw.com/digital-experience/9.5/admin-system/adauthflt.html){:target="_blank"}<!-- (../admin-system/adauthflt.md) --> for more information.
+See the [Enhanced Cross Origin Resource Sharing Configuration](../../deployment/manage/config_portal_behavior/auth_filters/index.md) for more information.
 
 ## New HCL Digital Experience 9.5 Release Artifacts supporting CICD release processes
 
 The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and automate processes in the development and delivery process. New release artifact types supporting Undeploy Themes, and Export/Import Web Content Manager Library content are provided in Container Update CF195.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](../../platform/administration/DXClient/dxclient.md) topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../extend_dx/development_tools/dxclient/index.md) topic for more information.
 
 ## Remote Search Configuration for HCL Digital Experience 9.5 deployments on Kubernetes platforms
 
 Beginning with HCL DX 9.5 Container Update CF195 release, Remote Search can be configured for deployment on supported Kubernetes platforms.
 
-See the [Configure Remote Search in Red Hat OpenShift and Kubernetes](../../platform/kubernetes/operations/kubernetes_remote_search.md) topic for more information.
+See the [Configure Remote Search in Red Hat OpenShift and Kubernetes](../../deployment/manage/container_configuration/kubernetes_remote_search.md) topic for more information.
 
 ## Define No Context Root in for HCL Digital Experience 9.5 container deployments
 
@@ -48,16 +48,16 @@ See the [Customizing the Digital Experience URL when deployed to Container platf
 
 View the latest Kubernetes and OpenShift platforms tested and supported for specific HCL Digital Experience 9.5 Container Update deployments.
 
-See the [HCL Digital Experience 9.5 Container Platform Support Matrix Help Center](../../platform/systemrequirements/9.5_express/supportedsoftware.md) topic for more information.
+See the [HCL Digital Experience 9.5 Container Platform Support Matrix Help Center](../../get_started/system_requirements/9.5_express/supportedsoftware.md) topic for more information.
 
 ## New HCL Digital Experience ‘How To’ Videos
 
 Take advantage of new step-by-step guidance for HCL Digital Experience practitioners presented in new videos and webinars. See the following HCL Digital Experience Help Center topics:
 
--   [Getting Started with DXClient on Red Hat OpenShift using HCL Digital Experience CF194](../../platform/administration/DXClient/dxclient.md)
--   [Understanding the Core Persistent Volumes in HCL Digital Experience Container Update CF194](https://help.hcltechsw.com/digital-experience/9.5/containerization/sample_storage_class_volume.html){:target="_blank"}<!-- (../containerization/sample_storage_class_volume.md) -->
--   [Create a WebDAV Theme copy using HCL Digital Experience 9.5](https://help.hcltechsw.com/digital-experience/9.5/dev-theme/themeopt_themedev_manual_webdav.html){:target="_blank"}<!-- (../dev-theme/themeopt_themedev_manual_webdav.md) -->
--   [Create and apply A/B personalized scenarios with HCL Digital Experience](https://help.hcltechsw.com/digital-experience/9.5/pzn/pzn_overview.html){:target="_blank"}<!-- (../pzn/pzn_overview.md) -->
+-   [Getting Started with DXClient on Red Hat OpenShift using HCL Digital Experience CF194](../../extend_dx/development_tools/dxclient/index.md)
+-   [Understanding the Core Persistent Volumes in HCL Digital Experience Container Update CF194](../../deployment/manage/container_configuration/operator-based/sample_storage_class_volume.md)
+-   [Create a WebDAV Theme copy using HCL Digital Experience 9.5](../../build_sites/themes_skins/usage/customizing_theme/copying_theme/manual_copy_theme/creating_webdav_theme_copy/themeopt_themedev_manual_webdav.md)
+-   [Create and apply A/B personalized scenarios with HCL Digital Experience](../../get_started/product_overview/personalization.md)
 
 <!-- ???info "Related information:"
     - [How to export and import WCM library content using DXClient](../wcm/wcm_mls_export_import.md)

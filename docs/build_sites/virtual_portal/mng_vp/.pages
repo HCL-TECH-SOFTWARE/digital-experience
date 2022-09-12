@@ -1,0 +1,8 @@
+title: Managing virtual portals
+nav:
+    - index.md
+    - h_virtual_create.md
+    - h_virtual_reinitialize.md
+    - h_virtual_edit.md
+    - h_virtual_delete.md
+    - h_main_virtual.md
