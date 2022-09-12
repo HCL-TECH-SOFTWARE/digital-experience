@@ -1,6 +1,6 @@
 # What's new in CF202
 
-This HCL Digital Experience 9.5 Container Update and CF202 release includes updated releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management, Experience API, and Design Studio \(Beta\) components. The release also includes updated CICD release process artifacts, new Remote Model REST APIs, Personalization REST APIs, updated Helm deployment guidance to create Persistent Volume Claims for DX Core, configure credentials, also new HCL Digital Experience Cloud Native 9.5 offering, new Digital Experience How-To Videos and Lab exercises, and more.
+This HCL Digital Experience 9.5 Container Update and CF202 release includes updated releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management, Experience API, and Design Studio (Beta) components. The release also includes updated CICD release process artifacts, new Remote Model REST APIs, Personalization REST APIs, updated Helm deployment guidance to create Persistent Volume Claims for DX Core, configure credentials, also new HCL Digital Experience Cloud Native 9.5 offering, new Digital Experience How-To Videos and Lab exercises, and more.
 
 This site describes new features in each release. Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=9bd40c1f1bbf5cd0534c4159cc4bcbbd#CF17){:target="_blank"} and [HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){:target="_blank"} for the list of software fixes, including Container Update releases. 
 
@@ -39,13 +39,13 @@ See the [Design Studio \(Beta\)](https://help.hcltechsw.com/digital-experience/
 
 Beginning with HCL Digital Experience 9.5 Container Update CF202, HCL Digital Experience Cloud Native 9.5 is available as a new offering option for customers to deploy the cloud-native Digital Experience 9.5 components and services on the Kubernetes container environments. HCL Digital Experience Cloud Native 9.5 is available with cloud-friendly subscription pricing.
 
-See the *Digital Experience Cloud Native 9.5 details* in the [Digital Experience Overview](../../get_started/architecture_overview/kubernetes_deployment/index.md) Help Center topic.
+Learn more about the Digital Experience Cloud Native 9.5 details in the [Kubernetes deployment](../../deployment/install/container/index.md) Help Center topic.
 
 ## Digital Experience REST API Explorers
 
 Developers can accelerate development tasks using a set of Explorers provided for REST APIs available for use with HCL Digital Experience deployments to on premises platforms, and HCL Digital Experience 9.5 deployments to supported Kubernetes Container platforms. Developers can also initiate and test transactions or other capabilities using the DX REST API explorers.
 
-See the [Digital Experience REST API Explorers](../../extend_dx/apis/hcl_experience_api/usage/api_explorers.md) Help Center topic for more information.
+See the [Digital Experience REST API Explorers](../../extend_dx/apis/hcl_experience_api/api_explorers.md) Help Center topic for more information.
 
 ## Digital Experience Remote Model REST API Explorer
 

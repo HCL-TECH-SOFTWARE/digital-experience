@@ -7,8 +7,9 @@ The following features and updates are available to customers installing HCL Dig
 -   Digital Asset Management view keywords details
 -   DX Experience API updates
 -   Sample Script Application integration and Theme modernization, plus How-to guides
--   New complementary DX training modules in the HCL Software Academy, and more
 -   New HCL Digital Experience Help Center with enhanced search and improved content architecture
+-   New complementary DX training modules in the HCL Software Academy, and more
+
 
 ## Development sample integrating HCL Unica Campaign segments in DX Personalization Rules
 
