@@ -21,14 +21,14 @@ Beginning with Container Update CF203, the Ambassador shipped as part of the DX 
 
 In CF203, Helm configuration settings for metrics are enabled by default, new guidance is added to deploy to an internal network, and guidance is provided explaining the process to migrate from the Ambassador to new HAProxy service.
 
-See the following Help Center topics [HCL DX 9.5 Kubernetes](../../get_started/architecture_overview/kubernetes_deployment/index.md), [Monitoring](../../deployment/manage/container_configuration/monitoring/monitor_helm_deployment_metrics.md), [Deploying DX on internal network](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_internal_networking.md), and [Migrate from Ambassador to HAProxy](../../deployment/install/container/haproxy-migration/haproxy-introduction.md) for more information. 
+See the following Help Center topics [HCL DX 9.5 Kubernetes](../../deployment/install/container/index.md), [Monitoring](../../deployment/manage/container_configuration/monitoring/monitor_helm_deployment_metrics.md), [Deploying DX on internal network](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_internal_networking.md), and [Migrate from Ambassador to HAProxy](../../deployment/install/container/haproxy-migration/haproxy-introduction.md) for more information. 
 
 !!!important
     In Container Update CF203, the migration from Ambassador to HAProxy must be completed as a required step, in preparation for the removal of Ambassador in the upcoming Container Update release. Refer to the following links for guidance on the migration.
 
 See the following Help Center topics for more information:
 
-- [HCL DX 9.5 Helm deployment](../../get_started/architecture_overview/kubernetes_deployment/index.md)
+- [HCL DX 9.5 Helm deployment](../../get_started/plan_deployment/hybrid_deployment/index.md)
 - [HAProxy overview](../../deployment/install/container/haproxy-migration/haproxy-introduction.md)
 - [Migrate from Ambassador to HAProxy](../../deployment/install/container/haproxy-migration/haproxy-migration.md)
 
@@ -43,7 +43,7 @@ Design Studio enables content managers and designers to build and style their di
 !!! note
     Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF203,and includes a sample DX site.  It is not yet supported for use in production deployments. 
 
-See the [Design Studio (Beta)](../design_studio/design_studio_overview.md) Help Center topic for more information. 
+See the [Design Studio (Beta)](../../manage_content/design_studio/index.md) Help Center topic for more information. 
 
 ## Configure Content Composer to Virtual Portals 
 
@@ -57,9 +57,9 @@ See [Personalization Rules APIs](../../manage_content/pzn/pzn_apis/pzn_rest_API_
 
 ## Customize the Site Manager Interface 
 Guidance and examples are added to customize the Site Manager interface to support specific site and content management requirements.  See the following Help Center topics for more information:
-- HCL DX 9.5: [Customizing the Site Manager User Interface](../../build_sites/site_toolbar_and_site_manager/configuration/site_toolbar/Customize_Site_Manager_User_Interface.md)
+- HCL DX 9.5: [Customizing the Site Manager User Interface](../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/Customize_Site_Manager_User_Interface.md)
 
-- HCL DX 8.5 and 9.0: [Customizing the Site Manager User Interface](../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/Customize_Site_Manager_User_Interface.md)
+- HCL DX 8.5 and 9.0: [Customizing the Site Manager User Interface](https://help.hcltechsw.com/digital-experience/8.5/admin-system/epc_custom_sm.html)
 
 ## Notice of deprecation and replacement of Document Conversion Services
 Document Conversion Services components in HCL Digital Experience software will be updated and replaced in 2022 in a subsequent HCL DX CF Update release. HCL Digital Experience will remove the third-party component providing these capabilities, supplied by Oracle, and replace with HCL supported functions. After that point, HCL Digital Experience v8.5, v9 and v9.5 Container Update and CF releases will include the newer HCL supported component. 
