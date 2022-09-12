@@ -4,10 +4,9 @@ In a portal installation,the Dojo tagging and rating menu options for portal pag
 
 In a HCL Portal V 8.5 installation, the Dojo tagging and rating menu options for portal pages and portlets are available for the Search and Tag Center profile. This profile is named profile\_search\_tag.json. You can apply this profile to a page or portlet where Dojo tagging and rating options are required. After you apply this profile, the page action menu or portlet menu shows the tagging and rating options.
 
-**Notes:**
-
--   If you upgraded your HCL Portal from version 8.0 to 8.5, you also need to update the page to which you add the tagging and rating options with the new Portal V 8.5 theme. For more information, read *Post-migration steps for Tag and Search enter pages*.
--   Enabling the Dojo tagging and rating menu options for a profile can influence performance.
+!!! note
+    -   If you upgraded your HCL Portal from version 8.0 to 8.5, you also need to update the page to which you add the tagging and rating options with the new Portal V 8.5 theme. For more information, read *Post-migration steps for Tag and Search enter pages*.
+    -   Enabling the Dojo tagging and rating menu options for a profile can influence performance.
 
 To enable the Dojo tagging and rating options for other profiles, proceed as follows:
 

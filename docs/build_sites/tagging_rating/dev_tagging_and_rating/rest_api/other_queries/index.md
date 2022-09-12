@@ -21,6 +21,6 @@ To make search for tag names by users easier, search suggestions provide suggest
 You can query for the OpenSearch description document. --->
 
 
-???+ info Related information:"
+???+ info "Related information:"
     - [Basic addressing](../tag_rate_api_rest_addr.md)
 

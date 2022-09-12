@@ -86,27 +86,27 @@ To correlate the tag space model with other models, use the following parameters
 
 ## Correlating the rating space model with other models
 
--   **rtm:rs:empty&rmparam=rm:resource\_uri**
+-   **rtm: rs :empty&rmparam=rm:resource\_uri**
 
     This returns a feed that contains all rating spaces for a given resource with the URI `resource_uri`.
 
--   **rtm:rs:empty&rmparam=rm:resource\_uri1&rmparam=rm:`resource_uri2`**
+-   **rtm: rs :empty&rmparam=rm:resource\_uri1&rmparam=rm:`resource_uri2`**
 
     This returns a feed that contains all ratings for a given resource with the URIs `resource_uri_1` or `resource_uri_2`.
 
--   **rtm:rs:empty&rmparam=rm:type:type**
+-   **rtm: rs :empty&rmparam=rm:type:type**
 
     This returns a feed that contains all rating spaces for resources registered with the type schema `type`.
 
--   **rtm:rs:empty&rmparam=rm:category:category**
+-   **rtm: rs :empty&rmparam=rm:category:category**
 
     This returns a feed that contains all rating spaces for resources registered in the category `category`.
 
--   **rtm:rs:empty&rmparam=rm:type:type\_1&rmparam=rm:type:type2**
+-   **rtm: rs :empty&rmparam=rm:type:type\_1&rmparam=rm:type:type2**
 
     This returns a feed that contains all rating spaces for resources registered with type schema `type_1` or `type_2`.
 
--   **rtm:rs:empty&rmparam=rm:category: category\_1&rmparam=rm:category:category\_2**
+-   **rtm: rs :empty&rmparam=rm:category: category\_1&rmparam=rm:category:category\_2**
 
     This returns a feed that contains all rating spaces for resources registered in category `category_1` or `category_2`.
 
