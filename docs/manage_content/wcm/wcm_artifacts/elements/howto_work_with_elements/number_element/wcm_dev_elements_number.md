@@ -1,4 +1,4 @@
-# Number element
+# Number Element
 
 You can store a numerical value in a number element.
 

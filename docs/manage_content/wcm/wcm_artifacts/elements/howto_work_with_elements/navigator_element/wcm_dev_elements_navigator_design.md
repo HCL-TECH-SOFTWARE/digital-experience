@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_elements_navigator_design
-title: Navigator formatting examples
+title: Navigator Formatting Examples
 ---
 
 
@@ -21,16 +21,16 @@ This example shows the basic structure of the element design that is used by a n
 
 |Design|Details|Design|
 |------|-------|------|
-|Navigator result design 1|A `<b>` tag is added to display the text in the first level of the navigator in bold.|```
-<b>
-[placeholder tag="namelink" ]
-</b><br>
-```
+|Navigator result design 1|A `<b>` tag is added to display the text in the first level of the navigator in bold.|
 
+    ```
+        <b>[placeholder tag="namelink" ]</b><br>
+    ```
 |
-|Navigator result design 2|The second design is repeated for every link that is returned by the parameters that are defined in the navigator element after the first level.|```
-[placeholder tag="namelink" ]
-<br>
+|Navigator result design 2|The second design is repeated for every link that is returned by the parameters that are defined in the navigator element after the first level.|
+```
+    [placeholder tag="namelink" ]
+    <br>
 ```
 
 |
@@ -46,21 +46,24 @@ In this example, a URLCmpnt tag is used to create a link instead of a placeholde
 ```
 
 |
-|**Navigator result design 1**|```
-<tr><td>
-<b>
-<a HREF=
-"<URLCmpnt context="autofill" type="content" mode="portal" portalTarget="URLMap"]"
-target="_blank"> [Property context="autofill" field="title"] </a></b>
-</td></tr>
+|**Navigator result design 1**|
+```
+    <tr><td>
+    <b>
+    <a HREF=
+    "<URLCmpnt context="autofill" type="content" mode="portal" portalTarget="URLMap"]"
+    target="_blank"> [Property context="autofill" field="title"] </a></b>
+    </td></tr>
 ```
 
 |
-|**Navigator result design 2**|```
-<tr><td>
-<a HREF=
-"[URLCmpnt context="autofill" type="content" mode="portal" portalTarget="URLMap"]"
-target="_blank"> [Property context="autofill" field="title"] </a></td></tr>
+|**Navigator result design 2**|
+
+```
+    <tr><td>
+    <a HREF=
+    "[URLCmpnt context="autofill" type="content" mode="portal" portalTarget="URLMap"]"
+    target="_blank"> [Property context="autofill" field="title"] </a></td></tr>
 ```
 
 |

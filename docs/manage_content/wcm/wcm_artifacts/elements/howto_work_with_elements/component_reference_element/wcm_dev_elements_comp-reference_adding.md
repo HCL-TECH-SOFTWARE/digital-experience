@@ -3,7 +3,7 @@ id: wcm_dev_elements_comp-reference_adding
 title: Adding a Component Reference Element to an Item
 ---
 
-# Adding a component reference element to an item
+# Adding a Component Reference Element to an Item
 
 You add a component reference element to a site area or content item when you want the component reference to be used for a specific site area or content item.
 

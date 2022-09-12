@@ -1,4 +1,4 @@
-# Navigator elements
+# Navigator Elements
 
 A navigator element displays metadata and content from a predefined section of a site framework, usually in the form of links.
 

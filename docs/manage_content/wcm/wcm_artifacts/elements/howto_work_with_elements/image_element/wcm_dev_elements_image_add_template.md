@@ -52,13 +52,14 @@ You add an image element to an authoring template when you want the image to be 
 
     3.  If Renditions have been enabled, you can also select images to display with different devices.
 
-9.  Click ![properties](../images/propIcon.jpg) to open the display properties of each field in the element. This view is where you define how the element is displayed on the item form.
+9.  Click ![properties](../../../../../../images//propIcon.jpg) to open the display properties of each field in the element. This view is where you define how the element is displayed on the item form.
 
     1.  To display the field as a required field select **Identify this as a required field**.
 
     2.  To hide a field on the content form from all users select **Hide field**. You must specify a default value if the field is a required field.
 
-        **Note:** Administrators and managers can choose to display hidden fields and elements in an item by clicking **Show hidden fields**.
+        !!!note
+            Administrators and managers can choose to display hidden fields and elements in an item by clicking **Show hidden fields**.
 
     3.  If Renditions have been enabled, you can choose to enable or disable this feature for content items based on this template. If enabled, you can specify separate default image settings for different device types.
 
@@ -71,7 +72,8 @@ You add an image element to an authoring template when you want the image to be 
         -   Upload a file by using the file browser only.
         -   Select a library component only.
         -   Both.
-        **Note:** If Rich Media Edition is installed the **Show digital asset source** option must be cleared if **Select using library component** has been selected.
+        !!!note
+             If Rich Media Edition is installed the **Show digital asset source** option must be cleared if **Select using library component** has been selected.
 
     7.  Type the number of characters to use in **Field Width** to set the size of the displayed field. If you leave this blank, the default field size is used.
 
