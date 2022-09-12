@@ -56,7 +56,7 @@
   <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-169645537-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 
   
-    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+    <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
   
 
     
@@ -92,10 +92,12 @@
           <div class="md-banner__inner md-grid md-typeset">
             
             
+<div class="md-banner--feedback">
 <span class="twemoji">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M287.9 0c9.2 0 17.6 5.25 21.6 13.52l68.6 141.28 153.3 22.7c9 1.3 16.4 7.6 19.3 16.2 2.8 8.7.5 18.2-5.9 24.5L433.6 328.4l26.3 155.5c1.5 9-2.2 18.2-9.7 23.5-7.4 5.3-18.1 6-25.3 1.7l-137-73.2-137.8 73.2c-7.2 4.3-17 3.6-24.5-1.7-7.4-5.3-11.1-14.5-10.5-23.5l27.1-155.5L31.11 218.2c-6.46-6.3-8.75-15.8-5.91-24.5 2.83-8.6 10.3-14.9 19.29-16.2l153.21-22.7 68.6-141.28C270.4 5.249 278.7 0 287.9 0zm0 78.95L235.4 187.2c-3.5 7.1-10.3 12.1-18.1 13.3L98.98 217.9 184.9 303c5.5 5.5 8 13.4 6.7 21.1l-20.2 119.6 105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2-20.2-119.6c-1.3-7.7 1.3-15.6 6.8-21.1l85.9-85.1-118.3-17.4c-7.9-1.2-14.7-6.2-18.1-13.3L287.9 78.95z"/></svg> 
 </span>
-  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github.</a>. <br>Can't find a topic? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. <br>Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>
 
           </div>
           
@@ -109,7 +111,7 @@
             <div class="md-banner__inner md-grid md-typeset">
               
   You're not viewing the latest version.
-  <a href="../../../.."> 
+  <a href="../../../../latest/whatsnew/cf19/newcf195/"> 
     <strong>Click here to go to latest.</strong>
   </a>
 
@@ -232,6 +234,29 @@
         
   
   
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../get_started/product_overview/" class="md-tabs__link">
+        Get Started
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
     
   
 
@@ -239,13 +264,20 @@
   
   
   
+    
+
+  
+  
+  
     <li class="md-tabs__item">
-      <a href="../../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../cf20/newcf206/" class="md-tabs__link md-tabs__link--active">
         What's New
       </a>
     </li>
   
 
+  
+
       
         
   
@@ -256,8 +288,56 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../platform/" class="md-tabs__link">
-        Platform
+      <a href="../../../deployment/" class="md-tabs__link">
+        Deploy DX
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../build_sites/" class="md-tabs__link">
+        Build Sites
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../manage_content/" class="md-tabs__link">
+        Manage Content
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../extend_dx/" class="md-tabs__link">
+        Extend DX
       </a>
     </li>
   
@@ -277,8 +357,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../productfeatures/design_studio/" class="md-tabs__link">
-        Product Features
+      <a href="../../../guide_me/tutorials/" class="md-tabs__link">
+        Guide Me
       </a>
     </li>
   
@@ -331,363 +411,159 @@
     
       
       
+                  
+<li class="md-nav__item">
+  <a href="../../.." class="md-nav__link">
+    Home
+  </a>
+</li>
+  
+    
       
-
+      
+                  
+<li class="md-nav__item">
+  <a
+    href="../../../get_started/product_overview/"
+    class="md-nav__link"
+  >
+    Get Started
+  </a>
+</li>
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
-        Home
-      </a>
-    </li>
-  
-
     
       
       
-      
-
+                 
   
-  
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_3"
+    type="checkbox"
+    id="__nav_3"
+    checked
+  />
+                             
+  <nav
+    class="md-nav md-nested-nav"
+    aria-label="What's New"
+    data-md-level="1"
+  >
+    <label class="md-nav__title" for="__nav_3">
+      <span class="md-nav__icon md-icon"></span>
+      What's New
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+       
+             
   
-  
+<li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
-      
-      
-      
-        
-          
-            
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../">What's New</a>
-          
-            <label for="__nav_2">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" aria-label="What's New" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          What's New
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-          
-            
-              
-  
-  
-  
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_3_1"
+    type="checkbox"
+    id="__nav_3_1"
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-            
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../cf20/">CF200 and later</a>
-          
-            <label for="__nav_2_2">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" aria-label="CF200 and later" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
-          <span class="md-nav__icon md-icon"></span>
-          CF200 and later
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cf20/newcf205/" class="md-nav__link">
-        What's new in CF205
-      </a>
-    </li>
-  
+  />
+                                                    
 
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cf20/newcf204/" class="md-nav__link">
-        What's new in CF204
-      </a>
-    </li>
-  
+  <div class="md-nav__link md-nav__link--index">
+    <a href="../../cf20/newcf206/"> CF200 and later </a>
+    <label for="__nav_3_1">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+  </div>
 
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cf20/newcf203/" class="md-nav__link">
-        What's new in CF203
-      </a>
-    </li>
-  
+      
+</li>
 
-            
-          
-            
-              
+   
+               
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cf20/newcf202/" class="md-nav__link">
-        What's new in CF202
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cf20/newcf201/" class="md-nav__link">
-        What's new in CF201
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cf20/newcf200/" class="md-nav__link">
-        What's new in CF200
-      </a>
-    </li>
-  
-
-            
-          
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-  
-  
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_3_2"
+    type="checkbox"
+    id="__nav_3_2"
+    checked
+  />
+                                   
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../">CF19 to CF199</a>
+
+     
+    <label for="__nav_3_2">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
-      
-      
-      
-        
-          
-            
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../">CF19 to CF199</a>
-          
-            <label for="__nav_2_3">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" aria-label="CF19 to CF199" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_3">
-          <span class="md-nav__icon md-icon"></span>
-          CF19 to CF199
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../newcf199/" class="md-nav__link">
-        What's new in CF199
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../newcf198/" class="md-nav__link">
-        What's new in CF198
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../newcf197/" class="md-nav__link">
-        What's new in CF197
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../newcf196/" class="md-nav__link">
-        What's new in CF196
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
+  </div>
     
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
+  <nav
+    class="md-nav md-nested-nav"
+    aria-label="CF19 to CF199"
+    data-md-level="2"
+  >
+    <label class="md-nav__title" for="__nav_3_2">
+      <span class="md-nav__icon md-icon"></span>
+      CF19 to CF199
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+       
+       
+                
+<li class="md-nav__item">
+  <a href="../newcf199/" class="md-nav__link">
+    What's new in CF199
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../newcf198/" class="md-nav__link">
+    What's new in CF198
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../newcf197/" class="md-nav__link">
+    What's new in CF197
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../newcf196/" class="md-nav__link">
+    What's new in CF196
+  </a>
+</li>
+    
+                
+<li class="md-nav__item md-nav__item--active">
+   
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="toc"
+    type="checkbox"
+    id="__toc"
+  />
+
         
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          What's new in CF195
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        What's new in CF195
-      </a>
-      
-        
+  <label class="md-nav__link md-nav__link--active" for="__toc">
+    What's new in CF195
+    <span class="md-nav__icon md-icon"></span>
+  </label>
+  
+  <a href="./" class="md-nav__link md-nav__link--active">
+    What's new in CF195
+  </a>
+
+    
 
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
@@ -761,3181 +637,181 @@
     </ul>
   
 </nav>
-      
-    </li>
   
+</li>
 
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../newcf194/" class="md-nav__link">
-        What's new in CF194
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../newcf193/" class="md-nav__link">
-        What's new in CF193
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../newcf192/" class="md-nav__link">
-        What's new in CF192
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../newcf191/" class="md-nav__link">
-        What's new in CF191
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../newcf19/" class="md-nav__link">
-        What's new in CF19
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
+   
+                
+<li class="md-nav__item">
+  <a href="../newcf194/" class="md-nav__link">
+    What's new in CF194
+  </a>
+</li>
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
-      
-      
-      
-        
-          
-            
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../cf18/">CF18 to CF184</a>
-          
-            <label for="__nav_2_4">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" aria-label="CF18 to CF184" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_4">
-          <span class="md-nav__icon md-icon"></span>
-          CF18 to CF184
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cf18/newcf184/" class="md-nav__link">
-        What's new in CF184
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cf18/newcf183/" class="md-nav__link">
-        What's new in CF183
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cf18/newcf182/" class="md-nav__link">
-        What's new in CF182
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cf18/new_cf181/" class="md-nav__link">
-        What's new in CF181
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cf18/new_cf18/" class="md-nav__link">
-        What's new in CF18
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
+                
+<li class="md-nav__item">
+  <a href="../newcf193/" class="md-nav__link">
+    What's new in CF193
+  </a>
+</li>
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
-      
-      
-      
-        
-          
-            
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../cf17/">CF17 to CF173</a>
-          
-            <label for="__nav_2_5">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" aria-label="CF17 to CF173" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_5">
-          <span class="md-nav__icon md-icon"></span>
-          CF17 to CF173
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-          
-            
-              
+                
+<li class="md-nav__item">
+  <a href="../newcf192/" class="md-nav__link">
+    What's new in CF192
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../newcf191/" class="md-nav__link">
+    What's new in CF191
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../newcf19/" class="md-nav__link">
+    What's new in CF19
+  </a>
+</li>
+    
+    </ul>
+  </nav>
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cf17/new_cf173/" class="md-nav__link">
-        What's new in CF173
-      </a>
-    </li>
-  
+</li>
 
-            
-          
-            
-              
+   
+             
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cf17/new_cf172/" class="md-nav__link">
-        What's new in CF172
-      </a>
-    </li>
-  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_3_3"
+    type="checkbox"
+    id="__nav_3_3"
+    
+  />
+                         
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../cf18/">CF18 to CF184</a>
 
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cf17/new_cf171/" class="md-nav__link">
-        What's new in CF171
-      </a>
-    </li>
-  
+     
+    <label for="__nav_3_3">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
 
-            
-          
-            
-              
+   
+             
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cf17/new_cf17/" class="md-nav__link">
-        What's new in CF17
-      </a>
-    </li>
-  
+<li class="md-nav__item md-nav__item--nested">
+    
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_3_4"
+    type="checkbox"
+    id="__nav_3_4"
+    
+  />
+                       
+  <div class="md-nav__link md-nav__link--index ">
+    <a href="../../cf17/">CF17 to CF173</a>
 
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
+     
+    <label for="__nav_3_4">
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    
+  </div>
+    
+</li>
 
-            
-          
-            
-              
+   
+                
+<li class="md-nav__item">
+  <a href="../../deprecated_features/" class="md-nav__link">
+    Deprecated features
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../../unsupported_features/" class="md-nav__link">
+    Unsupported features
+  </a>
+</li>
+    
+                
+<li class="md-nav__item">
+  <a href="../../combined_cumulative_fix_strategy/" class="md-nav__link">
+    Combined Cumulative Fix Strategy
+  </a>
+</li>
+    
+    </ul>
+  </nav>
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../../deprecated_features/" class="md-nav__link">
-        Deprecated features
-      </a>
-    </li>
-  
+</li>
 
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../unsupported_features/" class="md-nav__link">
-        Unsupported features
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../combined_cumulative_fix_strategy/" class="md-nav__link">
-        Combined Cumulative Fix Strategy
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
+ 
     
       
       
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
-      
-      
-      
-        
-          
-            
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../platform/">Platform</a>
-          
-            <label for="__nav_3">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" aria-label="Platform" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Platform
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-          
-            
-              
-  
-  
+                  
+<li class="md-nav__item">
+  <a href="../../../deployment/" class="md-nav__link">
+    Deploy DX
+  </a>
+</li>
   
     
-    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
-      
-      
-      
-        
-          
-            
-          
-        
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../platform/software_download/">Getting the sofware</a>
-          
-            <label for="__nav_3_2">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" aria-label="Getting the sofware" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_2">
-          <span class="md-nav__icon md-icon"></span>
-          Getting the sofware
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/software_download/getting_the_software95/" class="md-nav__link">
-        Download and install from the Software licensing portal
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/software_download/dx_from_harbor/" class="md-nav__link">
-        Download and deploy through HCL Harbor repository
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
-      
-      
-      
-        
-          
-            
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../platform/systemrequirements/">System requirements</a>
-          
-            <label for="__nav_3_3">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" aria-label="System requirements" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_3">
-          <span class="md-nav__icon md-icon"></span>
-          System requirements
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2" type="checkbox" id="__nav_3_3_2" >
-      
-      
-      
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_3_3_2">
-          Kubernetes
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Kubernetes" data-md-level="3">
-        <label class="md-nav__title" for="__nav_3_3_2">
-          <span class="md-nav__icon md-icon"></span>
-          Kubernetes
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/systemrequirements/kubernetes/kubernetes-runtime/" class="md-nav__link">
-        Kubernetes runtime
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/systemrequirements/kubernetes/databases/" class="md-nav__link">
-        Databases
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_3" type="checkbox" id="__nav_3_3_3" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_3_3_3">
-          Traditional
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Traditional" data-md-level="3">
-        <label class="md-nav__title" for="__nav_3_3_3">
-          <span class="md-nav__icon md-icon"></span>
-          Traditional
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/systemrequirements/traditional/operatingsystems/" class="md-nav__link">
-        Operating Systems
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/systemrequirements/traditional/hardware/" class="md-nav__link">
-        Hardware requirements
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/systemrequirements/traditional/hypervisors/" class="md-nav__link">
-        Hypervisors
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/systemrequirements/traditional/prerequisites/" class="md-nav__link">
-        Required Software
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/systemrequirements/traditional/databases/" class="md-nav__link">
-        Databases
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/systemrequirements/traditional/othersoftware/" class="md-nav__link">
-        Other software
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_4" type="checkbox" id="__nav_3_3_4" >
-      
-      
-      
-        
-          
-            
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../platform/systemrequirements/docker/">Docker</a>
-          
-        </div>
-      
-      <nav class="md-nav" aria-label="Docker" data-md-level="3">
-        <label class="md-nav__title" for="__nav_3_3_4">
-          <span class="md-nav__icon md-icon"></span>
-          Docker
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/systemrequirements/security/" class="md-nav__link">
-        Security
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/systemrequirements/othersoftware/" class="md-nav__link">
-        Other software
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/systemrequirements/includedsoftware/" class="md-nav__link">
-        Included Software
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/systemrequirements/glossary/" class="md-nav__link">
-        Glossary
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/systemrequirements/disclaimer/" class="md-nav__link">
-        Disclaimers
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_10" type="checkbox" id="__nav_3_3_10" >
-      
-      
-      
-        
-          
-            
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../platform/systemrequirements/9.5_express/">DX 9.5 Express</a>
-          
-            <label for="__nav_3_3_10">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" aria-label="DX 9.5 Express" data-md-level="3">
-        <label class="md-nav__title" for="__nav_3_3_10">
-          <span class="md-nav__icon md-icon"></span>
-          DX 9.5 Express
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/systemrequirements/9.5_express/operatingsystems/" class="md-nav__link">
-        Operating Systems
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/systemrequirements/9.5_express/hypervisors/" class="md-nav__link">
-        Hypervisors
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/systemrequirements/9.5_express/prerequisites/" class="md-nav__link">
-        Prerequisites
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/systemrequirements/9.5_express/supportedsoftware/" class="md-nav__link">
-        Software
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/systemrequirements/9.5_express/hardware/" class="md-nav__link">
-        Hardware
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/systemrequirements/9.5_express/productpackage/" class="md-nav__link">
-        Product packaging
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/systemrequirements/9.5_express/glossary/" class="md-nav__link">
-        Glossary
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/systemrequirements/9.5_express/disclaimer/" class="md-nav__link">
-        Disclaimers
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
-      
-      
-      
-        
-          
-            
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../platform/kubernetes/">Kubernetes deployment</a>
-          
-            <label for="__nav_3_4">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" aria-label="Kubernetes deployment" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_4">
-          <span class="md-nav__icon md-icon"></span>
-          Kubernetes deployment
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/overview/" class="md-nav__link">
-        Overview
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/docker/" class="md-nav__link">
-        Container image list
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_4" type="checkbox" id="__nav_3_4_4" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_3_4_4">
-          Architecture
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Architecture" data-md-level="3">
-        <label class="md-nav__title" for="__nav_3_4_4">
-          <span class="md-nav__icon md-icon"></span>
-          Architecture
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/architecture/helm_overview/" class="md-nav__link">
-        Containers Overview
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/architecture/application_architecture/" class="md-nav__link">
-        DX Applications
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/architecture/core_interactions_kubernetes/" class="md-nav__link">
-        Core Behavior
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/architecture/persistent_volumes/" class="md-nav__link">
-        Persistent Volumes
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/architecture/configure_deployment/" class="md-nav__link">
-        Configuration
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/architecture/container_scaling/" class="md-nav__link">
-        Scaling
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/architecture/dam_persistence_architecture/" class="md-nav__link">
-        Digital Asset Management persistence
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_5" type="checkbox" id="__nav_3_4_5" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_3_4_5">
-          Deployment
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Deployment" data-md-level="3">
-        <label class="md-nav__title" for="__nav_3_4_5">
-          <span class="md-nav__icon md-icon"></span>
-          Deployment
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/deployment/helm_deployment/" class="md-nav__link">
-        Deploying container platforms using Helm
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_5_2" type="checkbox" id="__nav_3_4_5_2" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_3_4_5_2">
-          Preparation
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Preparation" data-md-level="4">
-        <label class="md-nav__title" for="__nav_3_4_5_2">
-          <span class="md-nav__icon md-icon"></span>
-          Preparation
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/deployment/preparation/overview/" class="md-nav__link">
-        Overview
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/deployment/preparation/prepare_namespace/" class="md-nav__link">
-        Prepare namespace
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/deployment/preparation/prepare_configuration/" class="md-nav__link">
-        Prepare configuration
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/deployment/preparation/prepare_load_images/" class="md-nav__link">
-        Load images
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/deployment/preparation/prepare_persistent_volume_claims/" class="md-nav__link">
-        PersistentVolumeClaims
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/deployment/preparation/prepare_configure_networking/" class="md-nav__link">
-        Configure networking
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/deployment/preparation/prepare_ingress_certificate/" class="md-nav__link">
-        Configure HAProxy certificate
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/deployment/preparation/optional_imagepullsecrets/" class="md-nav__link">
-        Using ImagePullSecrets
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/deployment/preparation/optional_nodeselectors/" class="md-nav__link">
-        Using NodeSelectors
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/deployment/preparation/optional_disable_apps/" class="md-nav__link">
-        Select DX applications to deploy
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/deployment/preparation/optional_configure_apps/" class="md-nav__link">
-        Configure applications
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/deployment/preparation/optional_configure_scaling/" class="md-nav__link">
-        Configure scaling
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/deployment/preparation/optional_internal_networking/" class="md-nav__link">
-        Configure to deploy on the internal network
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/deployment/preparation/optional_configure_credentials/" class="md-nav__link">
-        Configure credentials
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/deployment/preparation/optional_experimental_features/" class="md-nav__link">
-        Experimental features
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/deployment/preparation/optional_configure_harbor_helm_repo/" class="md-nav__link">
-        Configure Harbor Helm Repository
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/deployment/preparation/optional_core_sidecar_log/" class="md-nav__link">
-        Configure Core sidecar logging
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/deployment/preparation/optional_labels_annotations/" class="md-nav__link">
-        Configure Labels and Annotations
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/deployment/preparation/optional_rs_sidecar_log/" class="md-nav__link">
-        Configure Remote Search sidecar logging
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/deployment/preparation/probes_configuration/" class="md-nav__link">
-        Probes configuration in values.yaml file
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/deployment/helm_install_commands/" class="md-nav__link">
-        Install
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/deployment/helm_uninstall/" class="md-nav__link">
-        Uninstall
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_6" type="checkbox" id="__nav_3_4_6" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_3_4_6">
-          Operations
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Operations" data-md-level="3">
-        <label class="md-nav__title" for="__nav_3_4_6">
-          <span class="md-nav__icon md-icon"></span>
-          Operations
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/operations/helm_dam_backup_restore/" class="md-nav__link">
-        Back up and restore DAM
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/operations/kubernetes_remote_search/" class="md-nav__link">
-        Configure Remote Search
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/operations/run_core_config_engine/" class="md-nav__link">
-        Running DX Core configuration tasks
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/operations/update_helm_deployment/" class="md-nav__link">
-        Upgrade the Helm deployment to the latest version
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_6_5" type="checkbox" id="__nav_3_4_6_5" >
-      
-      
-      
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_3_4_6_5">
-          Troubleshooting
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Troubleshooting" data-md-level="4">
-        <label class="md-nav__title" for="__nav_3_4_6_5">
-          <span class="md-nav__icon md-icon"></span>
-          Troubleshooting
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/operations/troubleshooting/helm_troubleshooting/" class="md-nav__link">
-        Troubleshooting your Helm deployment
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/operations/troubleshooting/configure_access_helm_logs/" class="md-nav__link">
-        Configure and access logs
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_6_6" type="checkbox" id="__nav_3_4_6_6" >
-      
-      
-      
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_3_4_6_6">
-          Monitoring
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Monitoring" data-md-level="4">
-        <label class="md-nav__title" for="__nav_3_4_6_6">
-          <span class="md-nav__icon md-icon"></span>
-          Monitoring
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/operations/monitoring/basic_monitor_helm_deployment/" class="md-nav__link">
-        Basic monitoring
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/operations/monitoring/monitor_helm_deployment_metrics/" class="md-nav__link">
-        Monitor the deployment using metrics
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_7" type="checkbox" id="__nav_3_4_7" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_3_4_7">
-          Operator to Helm migration
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Operator to Helm migration" data-md-level="3">
-        <label class="md-nav__title" for="__nav_3_4_7">
-          <span class="md-nav__icon md-icon"></span>
-          Operator to Helm migration
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/operator-migration/operator_migration_preparation/" class="md-nav__link">
-        Preparation
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/operator-migration/helm_operator_core_migration/" class="md-nav__link">
-        Migrate the Core profile
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/operator-migration/helm_dam_migration/" class="md-nav__link">
-        Migrate DAM persistence and binaries
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/operator-migration/helm_dam_migration_newDB/" class="md-nav__link">
-        Migrate to new DAM DB
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/operator-migration/helm_fallback_migration_Operator_deployment/" class="md-nav__link">
-        Revert operator migration
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/operator-migration/operator_backup_and_recovery_procedures/" class="md-nav__link">
-        Backup and recovery procedures Containerization
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_8" type="checkbox" id="__nav_3_4_8" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_3_4_8">
-          Ambassador to HAProxy migration
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Ambassador to HAProxy migration" data-md-level="3">
-        <label class="md-nav__title" for="__nav_3_4_8">
-          <span class="md-nav__icon md-icon"></span>
-          Ambassador to HAProxy migration
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/haproxy-migration/haproxy-introduction/" class="md-nav__link">
-        Overview
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/haproxy-migration/haproxy-configuration/" class="md-nav__link">
-        HAProxy configuration
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/haproxy-migration/haproxy-migration/" class="md-nav__link">
-        Migrate from Ambassador to HAProxy
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/kubernetes/haproxy-migration/haproxy-remove-ambassador/" class="md-nav__link">
-        Remove Ambassador CRDs
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
-      
-      
-      
-        
-          
-            
-          
-        
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../platform/docker/">Docker</a>
-          
-            <label for="__nav_3_5">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" aria-label="Docker" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_5">
-          <span class="md-nav__icon md-icon"></span>
-          Docker
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/docker/docker_image_deployment/" class="md-nav__link">
-        Docker image deployment
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../platform/docker/docker_compose/" class="md-nav__link">
-        Docker image deployment using Docker Compose
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
+                  
+<li class="md-nav__item">
+  <a href="../../../build_sites/" class="md-nav__link">
+    Build Sites
+  </a>
+</li>
   
-
     
       
       
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
-      
-      
-      
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_4">
-          Product Features
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Product Features" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          Product Features
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
+                  
+<li class="md-nav__item">
+  <a href="../../../manage_content/" class="md-nav__link">
+    Manage Content
+  </a>
+</li>
   
     
-    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
-      
-      
-      
-        
-          
-            
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../productfeatures/design_studio/">Design Studio (Beta)</a>
-          
-            <label for="__nav_4_1">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" aria-label="Design Studio (Beta)" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_1">
-          <span class="md-nav__icon md-icon"></span>
-          Design Studio (Beta)
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/design_studio/ds_installing/" class="md-nav__link">
-        Install Design Studio (Beta)
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/design_studio/ds_navigating/" class="md-nav__link">
-        Navigate Design Studio (Beta)
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/design_studio/creating_sites_and_pages/" class="md-nav__link">
-        Create sites and pages
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
+                  
+<li class="md-nav__item">
+  <a href="../../../extend_dx/" class="md-nav__link">
+    Extend DX
+  </a>
+</li>
   
     
-    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1_5" type="checkbox" id="__nav_4_1_5" >
-      
-      
-      
-        
-          
-            
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../productfeatures/design_studio/building_content/">Author pages in Design Studio (Beta)</a>
-          
-            <label for="__nav_4_1_5">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" aria-label="Author pages in Design Studio (Beta)" data-md-level="3">
-        <label class="md-nav__title" for="__nav_4_1_5">
-          <span class="md-nav__icon md-icon"></span>
-          Author pages in Design Studio (Beta)
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-          
-            
-              
+                  
+<li class="md-nav__item">
+  <a
+    href="../../../guide_me/tutorials/"
+    class="md-nav__link"
+  >
+    Guide Me
+  </a>
+</li>
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/design_studio/building_content/style_elements/" class="md-nav__link">
-        Craft layouts to pages
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/design_studio/building_content/use_content_containers/" class="md-nav__link">
-        Use content containers
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/design_studio/building_content/use_content_lists/" class="md-nav__link">
-        Use content lists
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/design_studio/building_content/use_data_containers/" class="md-nav__link">
-        Use data containers
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/design_studio/building_content/use_text_elements/" class="md-nav__link">
-        Use text elements
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/design_studio/building_content/use_reusable_blocks/" class="md-nav__link">
-        Use reusable blocks
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/design_studio/update_content_items/" class="md-nav__link">
-        Update content items
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/design_studio/render_ds_pages/" class="md-nav__link">
-        Render Design Studio (Beta) pages
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/design_studio/design_studio_development_APIs/" class="md-nav__link">
-        Web Content Manager Open Standards REST APIs
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
-      
-      
-      
-        
-          
-            
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../productfeatures/digital_asset_mgmt/">Digital Asset Management</a>
-          
-            <label for="__nav_4_2">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" aria-label="Digital Asset Management" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_2">
-          <span class="md-nav__icon md-icon"></span>
-          Digital Asset Management
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/digital_asset_mgmt/install_config_dam/" class="md-nav__link">
-        Install the HCL Digital Experience 9.5 components
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/digital_asset_mgmt/access_digital_asset_mgmt/" class="md-nav__link">
-        Access HCL Digital Asset Management
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/digital_asset_mgmt/configure_dam_sso/" class="md-nav__link">
-        Configure single sign-on (SSO)
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/digital_asset_mgmt/configure_dam_kaltura/" class="md-nav__link">
-        Configure DAM - Kaltura integration
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_6" type="checkbox" id="__nav_4_2_6" >
-      
-      
-      
-        
-          
-            
-          
-        
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../productfeatures/digital_asset_mgmt/staging_dam/">Sharing and staging DAM assets</a>
-          
-            <label for="__nav_4_2_6">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" aria-label="Sharing and staging DAM assets" data-md-level="3">
-        <label class="md-nav__title" for="__nav_4_2_6">
-          <span class="md-nav__icon md-icon"></span>
-          Sharing and staging DAM assets
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/digital_asset_mgmt/staging_dam/dam_staging_to_production/" class="md-nav__link">
-        Sharing the DAM repository between environments
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/digital_asset_mgmt/staging_dam/dam_subscription_staging/" class="md-nav__link">
-        Staging DAM to rendering environments
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_7" type="checkbox" id="__nav_4_2_7" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_4_2_7">
-          DAM extensibility
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="DAM extensibility" data-md-level="3">
-        <label class="md-nav__title" for="__nav_4_2_7">
-          <span class="md-nav__icon md-icon"></span>
-          DAM extensibility
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/digital_asset_mgmt/dam_extensibility/" class="md-nav__link">
-        Using DAM extensibility
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/digital_asset_mgmt/dam_plugin_communication/" class="md-nav__link">
-        How DAM communicates with custom plug-ins
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/digital_asset_mgmt/configure_dam_extensibility/" class="md-nav__link">
-        Configuring DAM extensibility
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/digital_asset_mgmt/configure_dam_Metadata_configuration/" class="md-nav__link">
-        Metadata configuration through DAM extensibility
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/digital_asset_mgmt/configure_DAM_extension_to_google_vision_API/" class="md-nav__link">
-        Configure DAM extension to Google Vision API
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/digital_asset_mgmt/image_tagging/" class="md-nav__link">
-        Image tagging by Google Vision AI
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/digital_asset_mgmt/kaltura_configuration/" class="md-nav__link">
-        Kaltura configuration
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_8" type="checkbox" id="__nav_4_2_8" >
-      
-      
-      
-        
-          
-            
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../productfeatures/digital_asset_mgmt/managing_dam/">Managing DAM</a>
-          
-            <label for="__nav_4_2_8">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" aria-label="Managing DAM" data-md-level="3">
-        <label class="md-nav__title" for="__nav_4_2_8">
-          <span class="md-nav__icon md-icon"></span>
-          Managing DAM
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/digital_asset_mgmt/managing_dam/upload_rich_media_assets/" class="md-nav__link">
-        Upload rich media assets
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/digital_asset_mgmt/managing_dam/manage_media_assets/" class="md-nav__link">
-        Manage media assets
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/digital_asset_mgmt/managing_dam/dam_exim/" class="md-nav__link">
-        DAM Assets Export and Import (EXIM)
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/digital_asset_mgmt/managing_dam/adxmldam/" class="md-nav__link">
-        Using XML Access to export and import Digital Asset Management assets
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/digital_asset_mgmt/managing_dam/manage_collections/" class="md-nav__link">
-        Manage collections
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_8_7" type="checkbox" id="__nav_4_2_8_7" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_4_2_8_7">
-          Modify DAM assets
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Modify DAM assets" data-md-level="4">
-        <label class="md-nav__title" for="__nav_4_2_8_7">
-          <span class="md-nav__icon md-icon"></span>
-          Modify DAM assets
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/digital_asset_mgmt/managing_dam/dam_edit_image/" class="md-nav__link">
-        Edit image
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/digital_asset_mgmt/managing_dam/dam_metadata_properties/" class="md-nav__link">
-        Edit the metadata of a media asset
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/digital_asset_mgmt/managing_dam/dam_generate_renditions_and_versions/" class="md-nav__link">
-        Generate renditions and versioning
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../productfeatures/digital_asset_mgmt/managing_dam/dam_set_unique_custom_URL_media_asset/" class="md-nav__link">
-        Set unique custom URL for a media asset
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
     
   </ul>
 </nav>
@@ -4031,6 +907,9 @@
             <article class="md-content__inner md-typeset">
               
                 
+  
+
+
 
   <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/edit/main/docs/whatsnew/cf19/newcf195.md" title="Edit this page" class="md-content__button md-icon">
     
@@ -4044,33 +923,33 @@
 <p>You can access product software at <a href="https://www.hcltech.com/software/support/release" target="_blank">HCL Software Licensing Portal</a>. See <a href="https://support.hcltechsw.com/csm?id=kb_article&amp;sysparm_article=KB0077878&amp;sys_kb_id=2cde06a31b885494c48197d58d4bcbe2" target="_blank">Step-by-step guide to downloading DX products and accessing Customer Support</a> for more information.</p>
 <p>You can access the latest software requirements and updates that support HCL Digital Experience solutions from the HCL Support pages topic: <a href="https://support.hcltechsw.com/csm?id=kb_article&amp;sysparm_article=KB0013514&amp;sys_kb_id=17d6296a1b5df34077761fc58d4bcb03">HCL Digital Experience V9.5, V9.0, and V8.5 detailed system requirements</a>.</p>
 <h2 id="web-content-manager-multilingual-solution-library-export-and-import">Web Content Manager Multilingual Solution Library Export and Import</h2>
-<p>The HCL Web Content Manager Multilingual Solution is a set of tools used to manage translated versions Web Content Manager content for localized and regionalized websites. Beginning with the HCL Digital Experience 9.5 Container Update CF195 release, a new export and import capability allows you to support translation of the content of a library by exporting it into a format supported by a translation service and importing the translated content back into the content library using the <a href="../../platform/administration/DXClient/dxclient.md">DXClient</a> tool.</p>
-<p>See the <a href="../../platform/administration/DXClient/dxclient_artifact_type/wcm_mls_export_import.md">How to export and import WCM library content using DXClient</a> topic for more information.</p>
+<p>The HCL Web Content Manager Multilingual Solution is a set of tools used to manage translated versions Web Content Manager content for localized and regionalized websites. Beginning with the HCL Digital Experience 9.5 Container Update CF195 release, a new export and import capability allows you to support translation of the content of a library by exporting it into a format supported by a translation service and importing the translated content back into the content library using the <a href="../../../extend_dx/development_tools/dxclient/">DXClient</a> tool.</p>
+<p>See the <a href="../../extend_dx/development_tools/dxclient/usage/dxclient_artifact_types/wcm_mls_export_import.md">How to export and import WCM library content using DXClient</a> topic for more information.</p>
 <h2 id="web-content-manager-advanced-cache-options">Web Content Manager Advanced Cache Options</h2>
 <p>New options are available to flush the Web Content Manager Advanced cache, as a result of syndication operations, to help improve performance and reliability.</p>
-<p>See the <a href="https://help.hcltechsw.com/digital-experience/9.5/wcm/wcm_dev_caching_cache-parameters.html" target="_blank">Web Content Manager Cache Parameters</a><!-- (../wcm/wcm_dev_caching_cache-parameters.md) --> topic for more information.</p>
+<p>See the <a href="../../manage_content/wcm/custom_caching/wcm_dev_caching_cache-parameters.md">Web Content Manager Cache Parameters</a> topic for more information.</p>
 <h2 id="enhanced-cross-origin-resource-sharing-configuration">Enhanced Cross Origin Resource Sharing Configuration</h2>
 <p>Enhanced Cross Origin Resource Sharing Configuration adds new options for HCL Digital Experience administrators to set configuration for CORS using a WP configuration service in the IBM WebSphere Application Server resource environment provider.</p>
-<p>See the <a href="https://help.hcltechsw.com/digital-experience/9.5/admin-system/adauthflt.html" target="_blank">Enhanced Cross Origin Resource Sharing Configuration</a><!-- (../admin-system/adauthflt.md) --> for more information.</p>
+<p>See the <a href="../../../deployment/manage/config_portal_behavior/auth_filters/">Enhanced Cross Origin Resource Sharing Configuration</a> for more information.</p>
 <h2 id="new-hcl-digital-experience-95-release-artifacts-supporting-cicd-release-processes">New HCL Digital Experience 9.5 Release Artifacts supporting CICD release processes</h2>
 <p>The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and automate processes in the development and delivery process. New release artifact types supporting Undeploy Themes, and Export/Import Web Content Manager Library content are provided in Container Update CF195.</p>
-<p>See the <a href="../../platform/administration/DXClient/dxclient.md">DXClient and DXConnect tooling supporting CICD release processes</a> topic for more information.</p>
+<p>See the <a href="../../../extend_dx/development_tools/dxclient/">DXClient and DXConnect tooling supporting CICD release processes</a> topic for more information.</p>
 <h2 id="remote-search-configuration-for-hcl-digital-experience-95-deployments-on-kubernetes-platforms">Remote Search Configuration for HCL Digital Experience 9.5 deployments on Kubernetes platforms</h2>
 <p>Beginning with HCL DX 9.5 Container Update CF195 release, Remote Search can be configured for deployment on supported Kubernetes platforms.</p>
-<p>See the <a href="../../../platform/kubernetes/operations/kubernetes_remote_search/">Configure Remote Search in Red Hat OpenShift and Kubernetes</a> topic for more information.</p>
+<p>See the <a href="../../../deployment/manage/container_configuration/kubernetes_remote_search/">Configure Remote Search in Red Hat OpenShift and Kubernetes</a> topic for more information.</p>
 <h2 id="define-no-context-root-in-for-hcl-digital-experience-95-container-deployments">Define No Context Root in for HCL Digital Experience 9.5 container deployments</h2>
 <p>Beginning with HCL DX 9.5 Container Update CF195 release, administrators can define custom context root URLs, or no context root URL, when deploying HCL DX 9.5 software to the supported container platforms.</p>
 <p>See the <a href="https://help.hcltechsw.com/digital-experience/9.5/containerization/t_customize_dx_url.html" target="_blank">Customizing the Digital Experience URL when deployed to Container platforms</a><!-- (../containerization/t_customize_dx_url.md) --> topic for more information.</p>
 <h2 id="hcl-digital-experience-95-container-platform-support-matrix">HCL Digital Experience 9.5 Container Platform Support Matrix</h2>
 <p>View the latest Kubernetes and OpenShift platforms tested and supported for specific HCL Digital Experience 9.5 Container Update deployments.</p>
-<p>See the <a href="../../../platform/systemrequirements/9.5_express/supportedsoftware/">HCL Digital Experience 9.5 Container Platform Support Matrix Help Center</a> topic for more information.</p>
+<p>See the <a href="../../../get_started/system_requirements/9.5_express/supportedsoftware/">HCL Digital Experience 9.5 Container Platform Support Matrix Help Center</a> topic for more information.</p>
 <h2 id="new-hcl-digital-experience-how-to-videos">New HCL Digital Experience ‘How To’ Videos</h2>
 <p>Take advantage of new step-by-step guidance for HCL Digital Experience practitioners presented in new videos and webinars. See the following HCL Digital Experience Help Center topics:</p>
 <ul>
-<li><a href="../../platform/administration/DXClient/dxclient.md">Getting Started with DXClient on Red Hat OpenShift using HCL Digital Experience CF194</a></li>
-<li><a href="https://help.hcltechsw.com/digital-experience/9.5/containerization/sample_storage_class_volume.html" target="_blank">Understanding the Core Persistent Volumes in HCL Digital Experience Container Update CF194</a><!-- (../containerization/sample_storage_class_volume.md) --></li>
-<li><a href="https://help.hcltechsw.com/digital-experience/9.5/dev-theme/themeopt_themedev_manual_webdav.html" target="_blank">Create a WebDAV Theme copy using HCL Digital Experience 9.5</a><!-- (../dev-theme/themeopt_themedev_manual_webdav.md) --></li>
-<li><a href="https://help.hcltechsw.com/digital-experience/9.5/pzn/pzn_overview.html" target="_blank">Create and apply A/B personalized scenarios with HCL Digital Experience</a><!-- (../pzn/pzn_overview.md) --></li>
+<li><a href="../../../extend_dx/development_tools/dxclient/">Getting Started with DXClient on Red Hat OpenShift using HCL Digital Experience CF194</a></li>
+<li><a href="../../deployment/manage/container_configuration/operator-based/sample_storage_class_volume.md">Understanding the Core Persistent Volumes in HCL Digital Experience Container Update CF194</a></li>
+<li><a href="../../build_sites/themes_skins/usage/customizing_theme/copying_theme/manual_copy_theme/creating_webdav_theme_copy/themeopt_themedev_manual_webdav.md">Create a WebDAV Theme copy using HCL Digital Experience 9.5</a></li>
+<li><a href="../../../get_started/product_overview/personalization/">Create and apply A/B personalized scenarios with HCL Digital Experience</a></li>
 </ul>
 <!-- ???info "Related information:"
     - [How to export and import WCM library content using DXClient](../wcm/wcm_mls_export_import.md)
@@ -4089,7 +968,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 28, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 12, 2022</span>
       
     
   </small>
@@ -4157,7 +1036,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2022, HCL Technologies Limited
+      Copyright &copy; 2022, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
     </div>
   
   
@@ -4189,6 +1068,57 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input type="checkbox" class="md-toggle" id="__settings">
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked>
+          <span class="task-list-indicator"></span>
+          Google Analytics
+        <label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);console.log(new FormData(form)),__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     

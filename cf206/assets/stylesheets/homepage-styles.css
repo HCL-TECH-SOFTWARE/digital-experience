@@ -41,11 +41,6 @@
 }
 
 
-/* Hide main Mkdocs content section */
-.md-main {
-    display: none
-}
-
 /* General Text Stypes */
 .section-heading {
     font-size: 32px;
@@ -62,6 +57,10 @@
 
 .white {
     color: white;
+}
+
+.md-main {
+    display: none;
 }
 
 .body-text {
@@ -300,7 +299,7 @@
 
 .link-item {
     font-weight: 300;
-    width: 23%;
+    width: 30%;
     padding: 0px 5px 20px 5px;
     word-break: break-word;
     margin: 0px 10px 0px 10px;

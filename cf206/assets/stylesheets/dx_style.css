@@ -1,5 +1,13 @@
-.md-banner{
-    background-color: black;
+.md-banner {
+    background: black;
+}
+
+.md-grid {
+    max-width: 70rem;
+}
+
+.md-banner--warning {
+    background: var(--md-typeset-mark-color) !important;
 }
 
 .md-tabs{
