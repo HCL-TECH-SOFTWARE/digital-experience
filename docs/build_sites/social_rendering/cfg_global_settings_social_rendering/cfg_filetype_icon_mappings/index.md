@@ -24,7 +24,7 @@ For your reference, the following topic lists the default file type mappings.
 The social lists show specific icons for the different file and service types in the result lists. You can modify the file type mappings that are used for displaying these icons. For your reference, these mappings are listed here. -->
 
 
-???+ info Related information:"
+???+ info "Related information:"
     - [Digital Data Connector profiles for social rendering](../../customizing_view_definitions/customizing_visualdesign/customizing_markup_gen/ddc_profiles_for_social_rend/index.md)
     - [Forum-related profiles](../../customizing_view_definitions/customizing_visualdesign/customizing_markup_gen/ddc_profiles_for_social_rend/soc_rendr_prfls_forums.md)
     - [Social objects profile](../../customizing_view_definitions/customizing_visualdesign/customizing_markup_gen/ddc_profiles_for_social_rend/soc_rendr_prfls_social_objects.md)

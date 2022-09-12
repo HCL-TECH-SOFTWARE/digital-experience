@@ -2,7 +2,8 @@
 
 Portlet load monitoring provides an API for accessing the monitoring data. You can use this API to write custom code to access that data.
 
-**Note:** This API can change for future portal versions. If you use this API, you may have to modify your code in future portal versions in order to adapt to API changes.
+!!! note
+	This API can change for future portal versions. If you use this API, you may have to modify your code in future portal versions in order to adapt to API changes.
 
 
 ## Portlet load metrics interface

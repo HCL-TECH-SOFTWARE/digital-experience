@@ -275,7 +275,7 @@ Unlike the rating model, the rating space model does not contain information abo
     </atom:entry>
     ```
 
--   **rtm:rs:empty**
+-   **rtm: rs :empty**
 
     This returns a feed that represents the empty set of rating spaces. You can add individual rating spaces to this feed by adding additional query parameters.
 
