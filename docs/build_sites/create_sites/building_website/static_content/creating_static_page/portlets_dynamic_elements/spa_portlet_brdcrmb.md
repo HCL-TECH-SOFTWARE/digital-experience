@@ -21,5 +21,5 @@ The following example produces a breadcrumb trail navigation for the current pag
 ```
 
 ???+ info "Related information:"
-[Class attributes for portlets on static pages](../../../static_content/creating_static_page/spa_plt_mcrfrmt.md)
+     - [Class attributes for portlets on static pages](../../../static_content/creating_static_page/spa_plt_mcrfrmt.md)
 
