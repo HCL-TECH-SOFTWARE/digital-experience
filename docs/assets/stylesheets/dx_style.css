@@ -2,6 +2,10 @@
     background-color: black;
 }
 
+.md-banner--warning {
+    background: var(--md-typeset-mark-color) !important;
+}
+
 .md-tabs{
     background-color: #212121;
 }
