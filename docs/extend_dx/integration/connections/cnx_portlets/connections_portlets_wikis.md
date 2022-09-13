@@ -15,7 +15,8 @@ You must have at least editor access for the page and for the portlet to be able
 -   The currently selected wiki page
 -   The most recent wiki page for this community
 
-**Tip:** If your site has a large number of wikis, use the Tags portlet to find wikis that interest you. You can also edit a wiki and then access it by sorting by recently updated wikis.
+!!! tip
+    If your site has a large number of wikis, use the Tags portlet to find wikis that interest you. You can also edit a wiki and then access it by sorting by recently updated wikis.
 
 ## Configuring the Wikis portlet
 

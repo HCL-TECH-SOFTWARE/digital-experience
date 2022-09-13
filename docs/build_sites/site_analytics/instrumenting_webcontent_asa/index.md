@@ -27,14 +27,13 @@ Web Content Manager provides the following methods for collecting information ab
 -   Using the sample HTML component for Active Site Analytics that is provided with Web Content Manager.
 -   Using the default microformat tags that are supported by web content viewers.
 
+<!--
 -   **[Using the sample HTML component for Active Site Analytics](../admin-system/sa_asa4wcm_oobsmpl.md)**  
 The HTML – Analytics component is a sample HTML component that you can use to instrument web content for Active Site Analytics. You can use this component to insert the supported microformat tags for web content into your content or presentation templates.
 -   **[Enabling default microformat support in Web Content Viewers](../admin-system/sa_asa4wcm_tgs_wcvp.md)**  
-Web Content Viewers provide support for Active Site Analytics microformats by default. You can use this support to inject microformats into your content design or presentation templates.
+Web Content Viewers provide support for Active Site Analytics microformats by default. You can use this support to inject microformats into your content design or presentation templates. -->
 
 
-**Related information**  
-
-
-[Setting up site analysis for the Web Content Viewer](../wcm/wcm_config_wcmviewer_sitean.md)
+???+ "Related information:"
+    - [Setting up site analysis for the Web Content Viewer](../../../manage_content/wcm/wcm_content_delivery/cfg_webcontent_delivery_env/wcmviewer_site_analytics_setup/index.md)
 
