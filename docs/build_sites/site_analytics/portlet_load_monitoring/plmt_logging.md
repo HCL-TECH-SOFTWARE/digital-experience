@@ -75,4 +75,3 @@ EJPPG3001W: Portlet load monitoring disabled the portlet with
 because portlet exceeded its maximum number of requests.
 ```
 
-
