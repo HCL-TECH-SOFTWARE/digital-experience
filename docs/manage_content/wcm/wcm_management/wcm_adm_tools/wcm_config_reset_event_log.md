@@ -8,11 +8,10 @@ You must reset the web content event log under these circumstances:
 -   As a post migration step during migration before syndication.
 -   To troubleshoot syndication problems such as items on the syndicator not being sent.
 
-**Note:**
-
--   Before you reset the web content event log, you must edit the wkplc\_dbtype.properties file and ensure the DbSafeMode property is set to false. This file is located in `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties`.
--   In clustered environments, you must reset only the event log on the primary node.
--   Any objects that were purged on the syndicator since the last syndication is not purged on the subscriber. Purged objects are lost since the event log does not maintain records of objects that were deleted. To clean up purged items on a subscriber, you need to go the subscriber and manually delete them.
+!!! note
+    -   Before you reset the web content event log, you must edit the wkplc\_dbtype.properties file and ensure the DbSafeMode property is set to false. This file is located in `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties`.
+    -   In clustered environments, you must reset only the event log on the primary node.
+    -   Any objects that were purged on the syndicator since the last syndication is not purged on the subscriber. Purged objects are lost since the event log does not maintain records of objects that were deleted. To clean up purged items on a subscriber, you need to go the subscriber and manually delete them.
 
 -   **To reset**
 
@@ -34,18 +33,18 @@ You must reset the web content event log under these circumstances:
 
         ./ConfigEngine.sh run-wcm-admin-task-reset-event-log -Dlibrary="library\_name" -Dfix=true
 
-    **Note:** If -Dfix=true is omitted, then the task runs in report-mode only.
+    !!! note
+        If -Dfix=true is omitted, then the task runs in report-mode only.
 
-    **Note:** The library that is specified in the command is the library to be scanned by the reset event log task. If the query parameter "library" is omitted, the default library that is configured with the defaultLibrary property in the **WCM WCMConfigService** service is used.
+    !!! note
+        The library that is specified in the command is the library to be scanned by the reset event log task. If the query parameter "library" is omitted, the default library that is configured with the defaultLibrary property in the **WCM WCMConfigService** service is used.
 
-    **Note:** When you run this task on a virtual portal, you must add either `-DVirtualPortalHostName`=name or `-DVirtualPortalContext=virtual\_portal\_context` to the command.
-
-
-
-**Related information**  
+    !!! note
+        When you run this task on a virtual portal, you must add either `-DVirtualPortalHostName`=name or `-DVirtualPortalContext=virtual\_portal\_context` to the command.
 
 
-[Syndication troubleshooting](../wcm/wcm_syndication_troubleshooting.md)
 
-[Exporting and importing web content libraries](../wcm/wcm_config_wcmlibrary_export_main.md)
+???+ info Related information:"
+    - [Syndication troubleshooting](../../wcm_content_delivery/syndication/wcm_syndication_troubleshooting.md)
+    - [Exporting and importing web content libraries](../wcm_adm_tools/wcmlibrary_export/index.md)
 
