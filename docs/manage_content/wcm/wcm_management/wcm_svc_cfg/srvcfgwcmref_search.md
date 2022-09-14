@@ -26,10 +26,11 @@ The HCL Web Content Manager search service \(WCM SearchService\) defines setting
 
     -   `elementName` is the name of element you want to search for metadata. Any valid element with that name in a searchable site area or content item will be crawled.
     -   `key` is the "key" that is specified in an element tag used as part of a search element design. In the previous example, the key of `meta` has been used. To render the content of the `metaText` element in a search element design, you would use the following tag: `<Element context="autoFill" type="content" key="meta"/>`.
-    **Notes:**
 
-    -   Only text elements and short text elements can be searched.
-    -   Only site areas that have been configured to be searchable will be crawled.
+    !!! note
+        -   Only text elements and short text elements can be searched.
+        -   Only site areas that have been configured to be searchable will be crawled.
+
     Default value: None
 
 -   **SearchService.SearchSeed.ExcludeFileAttachments**
