@@ -1,6 +1,6 @@
 # Human readable URL mappings for virtual portals
 
-You can provide human readable URLs for your users to access their virtual portals. For example, you can give each virtual portal a human readable URL, such as http://www.ibm.com:10039/wps/portal/tivoli. You can pass the human readable URL of a virtual portal to its users. They can then use it to access their virtual portal.
+You can provide human readable URLs for your users to access their virtual portals. For example, you can give each virtual portal a human readable URL, such as http://www.yourname.com:10039/wps/portal/yourcompanyhere. You can pass the human readable URL of a virtual portal to its users. They can then use it to access their virtual portal.
 
 When you create a virtual portal, you specify the human readable URL as required by your business environment. The URL mapping that you specify is assigned to the virtual portal during its initialization. The URL mapping points to the content root of the virtual portal.
 
