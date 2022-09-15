@@ -26,29 +26,13 @@ You pass the parameters in the parameter list for each configuration task as app
 
     ./ConfigEngine.sh delete-virtual-portal -DPortalAdminPwd=password -DWasPassword=password -DVirtualPortalObjectId=objectID\_of\_virtual\_portal\_to\_delete
 
--   **IBM® i**
-
-    ConfigEngine.sh delete-virtual-portal -DPortalAdminPwd=password -DWasPassword=password -DVirtualPortalObjectId=objectID\_of\_virtual\_portal\_to\_delete
-
--   **HP-UX**
-
-    ./ConfigEngine.sh delete-virtual-portal -DPortalAdminPwd=password -DWasPassword=password -DVirtualPortalObjectId=objectID\_of\_virtual\_portal\_to\_delete
-
 -   **Linux™**
-
-    ./ConfigEngine.sh delete-virtual-portal -DPortalAdminPwd=password -DWasPassword=password -DVirtualPortalObjectId=objectID\_of\_virtual\_portal\_to\_delete
-
--   **Solaris**
 
     ./ConfigEngine.sh delete-virtual-portal -DPortalAdminPwd=password -DWasPassword=password -DVirtualPortalObjectId=objectID\_of\_virtual\_portal\_to\_delete
 
 -   **Windows™**
 
     ConfigEngine.bat delete-virtual-portal -DPortalAdminPwd=password -DWasPassword=password -DVirtualPortalObjectId=objectID\_of\_virtual\_portal\_to\_delete
-
--   **z/OS®**
-
-    ./ConfigEngine.sh delete-virtual-portal -DPortalAdminPwd=password -DWasPassword=password -DVirtualPortalObjectId=objectID\_of\_virtual\_portal\_to\_delete
 
 
 ???+ info "Related information:"

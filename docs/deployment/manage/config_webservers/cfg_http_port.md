@@ -21,8 +21,7 @@ If you want to access HCL Portal with a host name and port different from your w
 
     The following information is the host alias examples:
 
-    -   AIX® HP-UX IBM® i Linux™ Solaris Windows™: \*:10039
-    -   z/OS®: \*:9081
+    -   AIX®, Linux™, Windows™: *:10039
     
 5.  Save your changes.
 
