@@ -5,12 +5,9 @@ You can use the HCL Digital Experience XML configuration interface to configure 
 1.  Edit the following sample XML configuration file:
 
     -   AIX®: PortalServer_root/PortalServer/doc/xml-samples/Task.xml
-    -   HP-UX: PortalServer_root/PortalServer/doc/xml-samples/Task.xml
-    -   IBM® i: PortalServer_root/PortalServer/doc/xml-samples/Task.xml
     -   Linux™: PortalServer_root/PortalServer/doc/xml-samples/Task.xml
-    -   Solaris: PortalServer_root/PortalServer/doc/xml-samples/Task.xml
-    -   Windows™: PortalServer_root\\PortalServer\\doc\\xml-samples\\Task.xml
-    -   z/OS®:PortalServer_root/PortalServer/doc/xml-samples/Task.xml
+    -   Windows™: PortalServer_root\PortalServer\doc\xml-samples\Task.xml
+
 2.  Uncomment and edit the entry that corresponds to the scheduled time that you want to set.
 
     !!!note
@@ -18,7 +15,7 @@ You can use the HCL Digital Experience XML configuration interface to configure 
 
 3.  Save your changes.
 
-4.  Import the modified Task.xml file by using the XML configuration interface \(XMLAccess\).
+4.  Import the modified Task.xml file by using the XML configuration interface (XMLAccess).
 
 
 !!!note "Notes"
@@ -28,6 +25,6 @@ You can use the HCL Digital Experience XML configuration interface to configure 
 
 
 **Related information**  
-[Setting service configuration properties](../../config_portal_behavior/service_config_properties/index.md)
+[Setting service configuration properties](../../config_portal_behavior/service_config_properties/index.md)<br>
 [Portal service configuration](../../config_portal_behavior/service_config_properties/portal_svc_cfg/index.md)
 
