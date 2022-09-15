@@ -14,7 +14,7 @@ You can update the `WCM WCMConfigService` service to enable workflows for differ
 
 To enable workflows, create a new property for the item type to which you want to apply workflow, and specify a value of `com.aptrix.pluto.workflow.WorkflowControl` for the property.
 
-The workflow is only applied to items created after you update this setting. To add or remove workflows from existing items, run the workflow update tool. For information, refer to [Updating workflows by using the workflow update tool](wcm_admin_workflow.md).
+The workflow is only applied to items created after you update this setting. To add or remove workflows from existing items, run the workflow update tool. For information, refer to [Updating workflows by using the workflow update tool](../../wcm_management/wcm_adm_tools/wcm_admin_workflow.md).
 
 You can enable workflow for the following item types:
 
@@ -33,7 +33,8 @@ For example: to enable workflows for an authoring template, you add `com.aptrix.
 
 To disable workflows for an item type, you remove `com.aptrix.pluto.workflow.WorkflowControl` from the item's property type.
 
-**Note:** If workflows are enabled for the following items, a workflow view is not available in the item views navigator.
+!!! note
+    If workflows are enabled for the following items, a workflow view is not available in the item views navigator.
 
 -   Site areas.
 -   Taxonomies and categories.
@@ -41,7 +42,8 @@ To disable workflows for an item type, you remove `com.aptrix.pluto.workflow.Wor
 
 Individual items can still be moved through workflow stages by accessing them through the normal item views and approving them.
 
-**Note:** Only content items can be moved through a workflow by using the web content API. If you enable workflows for other item types, you cannot approve or reject these items by using the API.
+!!! note 
+    Only content items can be moved through a workflow by using the web content API. If you enable workflows for other item types, you cannot approve or reject these items by using the API.
 
 ## Enabling profiling
 
@@ -49,7 +51,7 @@ You can update the `WCM WCMConfigService` service to enable profiling for differ
 
 To enable profiling, create a new property for the item type to which you want to apply profiling, and specify a value of `com.aptrix.pluto.taxonomy.ProfileControl` for the property.
 
-The profiling feature is only applied to items created after you update this setting. To add or remove the profile section from existing items, run [the profile enablement tool](wcm_admin_profile_enable.md).
+The profiling feature is only applied to items created after you update this setting. To add or remove the profile section from existing items, [run the profile enablement tool](../../wcm_management/wcm_adm_tools/wcm_admin_profile_enable.md).
 
 You can enable profiling for the following item types:
 
@@ -66,7 +68,8 @@ For example: to enable profiling for components, you need to add `com.aptrix.plu
 -   Property name: `control.Cmpnt`
 -   Value: `com.aptrix.pluto.workflow.WorkflowControl, com.aptrix.pluto.taxonomy.ProfileControl`
 
-**Note:** From CF08 onwards, all items are enabled to use the profiling feature by default.
+!!! note
+    From CF08 onwards, all items are enabled to use the profiling feature by default.
 
 To disable profiling for an item type, you remove `com.aptrix.pluto.taxonomy.ProfileControl` from the item's property type.
 
@@ -223,7 +226,8 @@ From version 8.5.0 CF3, if this setting is not specified, embed mode is used by 
 
 The default in-place editing mode can be overridden in EditableElement tags by using the mode parameter.
 
-**Note:** The default rich text editor is always used when the in-place modes or embed modes are used. When the 'dialog' mode is used, the rich text editor that is selected in the authoring portlet settings, or in the content template for content items, is used.
+!!! note
+    The default rich text editor is always used when the in-place modes or embed modes are used. When the 'dialog' mode is used, the rich text editor that is selected in the authoring portlet settings, or in the content template for content items, is used.
 
 ## Defining the editor used for in-place editing
 
@@ -241,7 +245,8 @@ As many classes as required are added to this setting, which is separated by spa
 
 You should base your custom classes on the default stylesheet at `[AppServer\_root](../reference/wpsdirstr.md#was_root)\installedApps\nodename\wcm.ear\wcm-inplaceEdit.war\css\default-style.css`.
 
-**Note:** Any classes that are specified on the EditableElement or EditableProperty tag takes precedence over this value.
+!!! note 
+    Any classes that are specified on the EditableElement or EditableProperty tag takes precedence over this value.
 
 If you need to use the default css class as well, add it to the list of classes. For example: `inplaceEdit.defaultClasses=wcm-default-inplace-editable class1 class2`
 
@@ -260,8 +265,6 @@ To enable the creation of content items without using a content template when yo
 Content items that are created by using this option have no content template accessible by the user. This option is useful when there is a need for content to store data, such as configuration parameters, but not be rendered in a website.
 
 
-**Related information**  
-
-
-[Setting service configuration properties](../admin-system/adsetcfg.md)
+???+ info "Related information:"
+    - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 

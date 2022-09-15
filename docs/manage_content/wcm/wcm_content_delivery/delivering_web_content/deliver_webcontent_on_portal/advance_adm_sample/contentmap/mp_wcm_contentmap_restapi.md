@@ -95,19 +95,7 @@ This request updates the content associations defined for a specific web content
 
     |Parameters|Description|
     |----------|-----------|
-    |update|The following values are supported for the update parameter:    -   **merge**
-
-This mode merges the content associations in the request with the content associations on the server. The request updates existing content associations and adds new content associations, but the request does not delete other content associations already on the server.
-
-    -   **replace**
-
-This mode replaces all current content associations on the server with the content associations specified in the request. The request updates existing content associations, adds new content associations, and deletes other content associations on the server that are not represented in the request.
-
-    -   **delete**
-
-This mode deletes the content association specified in the request from the web content page.
-
-|
+    |update|The following values are supported for the update parameter:  <br/>  -   **merge** <br/> This mode merges the content associations in the request with the content associations on the server. The request updates existing content associations and adds new content associations, but the request does not delete other content associations already on the server. <br/> -   **replace** <br/> This mode replaces all current content associations on the server with the content associations specified in the request. The request updates existing content associations, adds new content associations, and deletes other content associations on the server that are not represented in the request. <br/> -   **delete** <br/> This mode deletes the content association specified in the request from the web content page.|
 
 
 ## Delete content associations
@@ -130,10 +118,7 @@ This request deletes either all content associations for a specific web content 
 
     |Parameters|Description|
     |----------|-----------|
-    |content|Indicates the content associations to be deleted. If the content parameter is not specified, all content associations for the web content page are deleted.If the content ID for a content item is specified as the value of the content parameter, only one content association is deleted. The content association deleted is the one that maps the web content page to the specified content item. Any other content associations are unaffected.
-
-|
-    | | |
+    |content|Indicates the content associations to be deleted. If the content parameter is not specified, all content associations for the web content page are deleted.If the content ID for a content item is specified as the value of the content parameter, only one content association is deleted. The content association deleted is the one that maps the web content page to the specified content item. Any other content associations are unaffected.|
 
 
 ## Example Atom feed document
@@ -180,14 +165,9 @@ This request deletes either all content associations for a specific web content 
 ```
 
 
-**Related information**  
-
-
-[Web content associations](../wcm/wcm_delivery_contentmap_about.md)
-
-[Creating a web content page with the XML configuration interface](../admin-system/mp_wcm_createpagexml.md)
-
-[Human readable URL mappings for virtual portals](../admin-system/advppln_shpux_urlmap.md)
-
-[Managing community associations](../admin-system/commpages_create_mapping.md)
+???+ info "Related information:"
+    - [Web content associations](../../getting_started/wcm_delivery_contentmap_about.md)
+    - [Creating a web content page with the XML configuration interface](../mp_wcm_createpagexml.md)
+    - [Human readable URL mappings for virtual portals](../../../../../../../build_sites/virtual_portal/vp_planning/shape_vp_ux/advppln_shpux_urlmap.md)
+    - [Managing community associations](../../../../../../../extend_dx/integration/connections/configuration/managing_community_pages/commpages_create_mapping.md)
 

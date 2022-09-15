@@ -2,6 +2,7 @@
 
 Set up the authoring environment by installing the authoring portlet and enabling other features that are required to support the authoring environment.
 
+<!----
 -   **[How to install the authoring portlet](../wcm/wcm_install_configtasks_authoringportlet.md)**  
 Pages that include the Web Content Manager authoring portlet and the local rendering portlet are created when you install HCL Portal. You run the authoring portlet configuration task only if you have previously uninstalled your authoring or local rendering portlets. The authoring portlet configuration task automatically creates Web Content Manager pages and installs the authoring portlet and local rendering portlets.
 -   **[Further authoring portlet configuration options](../wcm/wcm_config_authoringportlet_manual.md)**  
@@ -20,10 +21,8 @@ If users are experiencing timeout errors when they try to save items, you can in
 Before you can add links to files and documents that are stored in remote content management systems into web content elements, you must configure your server with information about the remote system and the settings that are used to handle communication with the system.
 -   **[Setting up support for federated documents](../wcm/wcm_dev_feddocs_setup.md)**  
 Before you can access metadata from federated documents, you need to configure access to the remote servers that contain the documents and specify information about the feeds or service documents that are used to retrieve the documents. You can also tune the cache settings that are used with the federated documents feature.
+---->
 
-
-**Related information**  
-
-
-[Access HCL Digital Asset Management](../digital_asset_mgmt/access_digital_asset_mgmt.md)
+???+ info "Related information:"
+    - [Access HCL Digital Asset Management](../../../digital_assets/usage/access_digital_asset_mgmt.md)
 
