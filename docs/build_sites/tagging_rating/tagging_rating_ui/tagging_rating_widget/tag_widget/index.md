@@ -83,14 +83,13 @@ The tag widget has the following user interface controls:
     The widget shows this icon. When a user clicks this icon, the widget opens an input field where the user can type tags.
 
 
+<!--
 -   **[Adding the tag widget to your portal content](../admin-system/tag_rate_add_inltag_lite.md)**  
 By default, the tag widget is available for Web Content Manager article template pages and blogs and wikis. You can also add tag widgets to your portal content as required.
 -   **[Customizing the tag widget](../admin-system/tag_rate_cust_inltag_lite.md)**  
-The user interface of the tag widget consists of Web Content Manager HTML components. You can customize the tag widgets by modifying one or more of these components. For example, you can change the order of the user interface elements, or you can remove a field that you do not want to show in the user interface. The components are listed here.
+The user interface of the tag widget consists of Web Content Manager HTML components. You can customize the tag widgets by modifying one or more of these components. For example, you can change the order of the user interface elements, or you can remove a field that you do not want to show in the user interface. The components are listed here. -->
 
 
-**Related information**  
-
-
-[Properties for the tag widget](../admin-system/srvcfg_cpcfg4tr_dlgtag_altui.md)
+???+ info "Related information:"
+    - [Properties for the tag widget](../../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/srvcfg_cpcfg4tr_dlgtag_altui.md)
 

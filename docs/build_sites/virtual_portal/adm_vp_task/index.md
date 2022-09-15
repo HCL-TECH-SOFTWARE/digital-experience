@@ -2,7 +2,8 @@
 
 View information to help you scope your HCL Portal to have multiple virtual portals.
 
-**Note:** Before you start creating or administering virtual portals, read the information in *Planning for virtual portals*.
+!!! note 
+    Before you start creating or administering virtual portals, read the information in *Planning for virtual portals*.
 
 Administering virtual portals and their content comprises the following tasks:
 
@@ -28,13 +29,14 @@ The following table shows how you can use these portal tools to administer virtu
 |Modifying a virtual portal|Virtual Portal Manager|**X**|**---**|
 |Deleting a virtual portal|Virtual Portal Manager|**X**|**---**|
 
-**Note:** The following two administrative tasks are manual tasks:
-
--   Adding and configuring the user repository for the virtual portal
--   Preconfiguring virtual portals
+!!! note
+    The following two administrative tasks are manual tasks:
+    -   Adding and configuring the user repository for the virtual portal
+    -   Preconfiguring virtual portals
 
 The following sections provide more information about these administrative tasks and how you perform them. The portal configuration tasks for administering virtual portals are documented under *Portal configuration tasks for administering virtual portals*.
 
+<!--
 -   **[Administering the portal content and resources for virtual portals](../admin-system/advp_adm_content.md)**  
 When you create a virtual portal by using the Virtual Portal Manager portlet, the portlet also creates default portal content and resources for the virtual portal. This default content is determined by the default XML script file for initializing virtual portals. In general, you can administer portal resources for a virtual portal just like you do for a normal portal installation.
 -   **[Tasks for administering virtual portals](../admin-system/advptsk.md)**  
@@ -60,5 +62,5 @@ Administering virtual portals and their content comprises the tasks described in
 
 [Preconfiguring the default content for virtual portals](../admin-system/advp_precfg_content.md)
 
-[Virtual Portal tasks](../migrate/virt_portal_post_mig.md)
+[Virtual Portal tasks](../migrate/virt_portal_post_mig.md) --->
 

@@ -144,4 +144,3 @@ The following example shows how you can modify link appearance within all the av
 }
 ```
 
-

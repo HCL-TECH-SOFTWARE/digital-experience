@@ -8,7 +8,6 @@ nav:
     - container_scaling.md
     - container_staging.md
     - deploy_container_artifact_updates.md
-    - Operator based configuration: operator-based
     - troubleshooting
     - monitoring
     

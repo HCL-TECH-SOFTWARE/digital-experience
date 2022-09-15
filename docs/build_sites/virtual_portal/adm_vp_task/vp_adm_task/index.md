@@ -2,6 +2,7 @@
 
 Administering virtual portals and their content comprises the tasks described in the following topics.
 
+<!---
 -   **[Managing the users of virtual portals](../admin-system/advp_tsk_mng_usr.md)**  
 You manage the users of virtual portals by adding and configuring the user repository and later administering the users for virtual portals.
 -   **[Creating a virtual portal](../admin-system/advp_tsk_create_vp.md)**  
@@ -13,17 +14,12 @@ You can administer the sub administrators of a virtual portal as required by usi
 -   **[Modifying a virtual portal](../admin-system/advp_tsk_modify.md)**  
 You can modify a virtual portal by using either the Virtual Portal Manager portlet or the appropriate configuration task.
 -   **[Deleting a virtual portal](../admin-system/advp_tsk_delete.md)**  
-You can delete a virtual portal by using the Virtual Portal Manager portlet.
+You can delete a virtual portal by using the Virtual Portal Manager portlet. --->
 
 
-**Related information**  
-
-
-[Planning for virtual portals](../admin-system/advppln.md)
-
-[Administering virtual portals](../admin-system/advp_adm.md)
-
-[Migration: Virtual portals](../migrate/mig_plan_expect_vp.md)
-
-[Virtual Portal tasks](../migrate/virt_portal_post_mig.md)
+???+ info "Related information:"
+    - [Planning for virtual portals](../../vp_planning/index.md)
+    - [Administering virtual portals](../../adm_vp_task/index.md)
+    - [Migration: Virtual portals](../../../../deployment/manage/migrate/planning_migration/mig_plan_expectations/mig_plan_expect_vp.md)
+    - [Virtual Portal tasks](../../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/vp_post_mig_task/index.md)
 

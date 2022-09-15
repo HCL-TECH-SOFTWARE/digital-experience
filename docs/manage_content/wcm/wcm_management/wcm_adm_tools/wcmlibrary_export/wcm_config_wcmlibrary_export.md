@@ -22,13 +22,15 @@ Follow these steps to export and import a web content library. The server that t
 
             The name of the web content library to transfer. You can export multiple libraries. On Windows™, separate each library by a semi-colon. For example: `Lib_1;Lib_2;Lib_3`. On UNIX™Linux™-based systems, separate each library by a backward slash and semi-colon \(\\;\). For example: `Lib_1\;Lib_2\;Lib_3`.
 
-            **Note:** The library names that are specified in this parameter must be the original name of the library, not the localized name. Click the **Administration menu** icon. Then, click **Portal Content** \> **Web Content Libraries**. You can view the original name and view the edit settings of the library.
+            !!! note 
+                The library names that are specified in this parameter must be the original name of the library, not the localized name. Click the **Administration menu** icon. Then, click **Portal Content** \> **Web Content Libraries**. You can view the original name and view the edit settings of the library.
 
         -   **export.singledirectory**
 
             If set to `true`, multiple libraries are written into a single folder that is specified by the `export.directory` property. If set to `false`, the export task created sub-directories with the name corresponding to each exported library names. For example, if `export.directory` is specified as `C:\export` and the library name is `Web Library`, the export task saves the exported library under `C:\export\Web Library`. Set this property to `true` when you are exporting multiple libraries that contain references between each library.
 
-        **Note:** You must restart your server any time you change these settings.
+        !!! note
+            You must restart your server any time you change these settings.
 
     4.  Export the web content library from the source server:
 
@@ -61,13 +63,14 @@ Follow these steps to export and import a web content library. The server that t
 
                 Specify the virtual portal context that identifies the virtual portal. For example, `vp1`.
 
-        **Note:**
+        !!! note
+            -   You can override the `export.directory` property that is defined in the `WCM WCMConfigService` service by using the -Dexport.directory parameter. For example: export-wcm-data -Dexport.directory=c:\\export
+            -   You can override the `export.singledirectory` property that is defined in the `WCM WCMConfigService` service by using the -Dexport.singledirectory parameter. For example: export-wcm-data -Dexport.singledirectory=false saves the exported libraries under different directories.
+            -   You can override the `export.libraryname` property that is defined in the `WCM WCMConfigService` service by using the -Dexport.libraryname parameter. For example: export-wcm-data -Dexport.libraryname=libraryname
+            -   You can override the `export.libraryname` property that is defined in the `WCM WCMConfigService` service by adding the option -Dexport.allLibraries=true parameter to export all libraries. If this option is used, the export might take a long time to finish.
 
-        -   You can override the `export.directory` property that is defined in the `WCM WCMConfigService` service by using the -Dexport.directory parameter. For example: export-wcm-data -Dexport.directory=c:\\export
-        -   You can override the `export.singledirectory` property that is defined in the `WCM WCMConfigService` service by using the -Dexport.singledirectory parameter. For example: export-wcm-data -Dexport.singledirectory=false saves the exported libraries under different directories.
-        -   You can override the `export.libraryname` property that is defined in the `WCM WCMConfigService` service by using the -Dexport.libraryname parameter. For example: export-wcm-data -Dexport.libraryname=libraryname
-        -   You can override the `export.libraryname` property that is defined in the `WCM WCMConfigService` service by adding the option -Dexport.allLibraries=true parameter to export all libraries. If this option is used, the export might take a long time to finish.
-        **Important:** To ensure that your exported libraries can be successfully imported, do not change the names of any of the folders or files within the exported data.
+        !!! important
+            To ensure that your exported libraries can be successfully imported, do not change the names of any of the folders or files within the exported data.
 
     5.  Verify that this transfer step completed without errors. If any errors occurred, check the portal logs on the target server for extended diagnostic information.
 
@@ -87,7 +90,9 @@ Follow these steps to export and import a web content library. The server that t
 
         -   If you specified `true` for the `export.singledirectory` property when you exported your libraries, specify the parent folder where all the exported libraries are located.
         -   If you specified `false` for the `export.singledirectory` property when you exported your libraries, or if you want to import only specific libraries, then you must list the folder of each library, separated by semicolons. For example: `c:\import\Lib1;c:\import\Lib2;c:\import\Lib3`. If you are using Linux use `\;` to separate each library, such as `/opt/importdata/Lib1\;/opt/importdata/Lib2\;/opt/importdata/Lib3`.
-        **Note:** You must restart your server any time you change this setting.
+
+        !!! note
+            You must restart your server any time you change this setting.
 
     4.  Import the web content library to the target server.
 
@@ -120,7 +125,8 @@ Follow these steps to export and import a web content library. The server that t
 
                 Specify the virtual portal context that identifies the virtual portal. For example, `vp1`.
 
-            **Note:** You can override the `import.directory` property that is defined in the `WCM WCMConfigService` service by using the -Dimport.directory parameter. For example: import-wcm-data -Dimport.directory=c:\\import\\Lib1;c:\\import\\Lib2;c:\\import\\Lib3.
+            !!! note
+                You can override the `import.directory` property that is defined in the `WCM WCMConfigService` service by using the -Dimport.directory parameter. For example: import-wcm-data -Dimport.directory=c:\\import\\Lib1;c:\\import\\Lib2;c:\\import\\Lib3.
 
             **Differences in paths between versions:**
 
@@ -166,18 +172,11 @@ Follow these steps to export and import a web content library. The server that t
 -   If you receive 500 errors on ext2 and ext3 versions of Linux, you exceeded the number of children that a parent folder can hold. You cannot store more than 32768 children under one folder on ext2 and ext3 versions of Linux. Move some content items out of the affected site area to another site area so that none of your site areas contain more than 32768 children under one folder and then try exporting again. You can move the content items back to the correct site areas when you import the library.
 
 
-**Related information**  
-
-
-[Staging to production list](../deploy/dep_stage_check.md)
-
-[Creating the initial release](../deploy/dep_cir.md)
-
-[Preparing the servers for initial staging](../deploy/dep_prep.md)
-
-[Deploying the initial release](../deploy/dep_deploy.md)
-
-[Deploying the differential release](../deploy/dep_deploy_diff.md)
-
-[Portal administration tools](../admin-system/admtools.md)
+???+ info "Related information:"
+    - [Staging to production list](../../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_stage_check.md)
+    - [Creating the initial release](../../../../../deployment/manage/staging_to_production/creating_deploying_initial_release/dep_cir.md)
+    - [Preparing the servers for initial staging](../../../../../deployment/manage/staging_to_production/creating_deploying_initial_release/dep_prep.md)
+    - [Deploying the initial release](../../../../../deployment/manage/staging_to_production/creating_deploying_initial_release/dep_deploy.md)
+    - [Deploying the differential release](../../../../../deployment/manage/staging_to_production/creating_deploying_diff_release/dep_deploy_diff.md)
+    - [Portal administration tools](../../../../../extend_dx/development_tools/portal_admin_tools/index.md)
 

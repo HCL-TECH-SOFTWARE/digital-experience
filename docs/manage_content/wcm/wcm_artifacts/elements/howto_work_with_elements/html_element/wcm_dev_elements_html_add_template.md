@@ -3,8 +3,7 @@ id: wcm_dev_elements_html_add_template
 title: Adding an HTML element to a template
 ---
 
-
-
+# Adding an HTML Element to a Template
 
 You add an HTML element to an authoring template when you want the HTML element to be used by a set of items that use the same authoring template.
 
@@ -28,13 +27,14 @@ You add an HTML element to an authoring template when you want the HTML element 
 
 10. Enter HTML in the HTML field, or do nothing if you want your content creators to enter the HTML.
 
-11. Click ![properties](../images/propIcon.jpg) to open the display properties of the element. This view is where you define how the element is displayed on the item form.
+11. Click ![properties](/../images/propIcon.jpg) to open the display properties of the element. This view is where you define how the element is displayed on the item form.
 
     1.  To display the element as a required field select **Identify this as a required field**.
 
     2.  To hide a field on the content form from all users select **Hide field**. You must specify a default value if the field is a required field.
 
-        **Note:** Administrators and managers can choose to display hidden fields and elements in an item by clicking **Show hidden fields**.
+        !!!note
+            Administrators and managers can choose to display hidden fields and elements in an item by clicking **Show hidden fields**.
 
     3.  Type the number of characters to use in **Field Width** to set the size of the displayed field. If you leave this blank, the default field size is used.
 

@@ -1,4 +1,4 @@
-# Using a navigator element
+# Using a Navigator Element
 
 
 Create a navigator element to display a list of links based on a section of the site framework of a site.

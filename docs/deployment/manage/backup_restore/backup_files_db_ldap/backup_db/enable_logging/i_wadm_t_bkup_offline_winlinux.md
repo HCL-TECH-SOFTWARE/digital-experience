@@ -1,4 +1,4 @@
-# Enabling circular logging for offline backup
+# Enabling Circular Logging for Offline Backup
 
 Enable circular logging if you are performing offline backup of the database. Use the Configure Database Logging Wizard to specify the parameters that control circular logging.
 

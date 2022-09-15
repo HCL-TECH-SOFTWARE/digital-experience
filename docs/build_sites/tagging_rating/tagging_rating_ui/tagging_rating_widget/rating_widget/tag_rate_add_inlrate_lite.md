@@ -72,8 +72,6 @@ Specify the appropriate values for the parameters:
 These parameters are mandatory. For information about the optional parameters, read the *Rating widget parameter reference*.
 
 
-**Related information**  
-
-
-[Tag widget parameter reference](../admin-system/tag_rate_parm_ref_inl_tag_lite.md)
+???+ info "Related information:"
+    [Tag widget parameter reference](../../../cfg_reference/parm_ref_tag_rate_widget/tag_rate_parm_ref_inl_tag_lite.md)
 

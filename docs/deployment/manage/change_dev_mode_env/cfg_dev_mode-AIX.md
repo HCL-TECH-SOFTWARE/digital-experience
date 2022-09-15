@@ -1,4 +1,4 @@
-# AIX: Configuring a developer mode environment
+# AIX: Configuring a Developer Mode Environment
 
 Use a developer mode environment to improve startup performance and to configure HCL Digital Experience for development. The developer mode environment is for a development environment only. Please do not use the developer mode environment as your production environment. You can also run the optimize-derby-database task to improve the Derby database performance.
 

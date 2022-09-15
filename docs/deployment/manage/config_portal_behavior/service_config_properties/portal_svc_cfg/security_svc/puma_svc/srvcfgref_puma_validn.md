@@ -23,9 +23,11 @@ In the WebSphere® Integrated Solutions Console, the portal Puma Validation Serv
     Defines extra special characters that are not in the supported character set, but should be treated as valid. By default, the dash, period, and underscore are valid: `- . _`
 
 
-**Note:** The `YOURATTRIBUTE` portion of the property needs to be spelled in uppercase.
+!!!note
+    The `YOURATTRIBUTE` portion of the property needs to be spelled in uppercase.
 
-**Note:** Some attributes need to be named as listed here: `GIVEN_NAME`, `SN`, `MAIL`.
+!!!note
+    Some attributes need to be named as listed here: `GIVEN_NAME`, `SN`, `MAIL`.
 
 The following sections show example sets of properties with attributes. They follow the same pattern as the set described in here. The example properties are set to the default values.
 

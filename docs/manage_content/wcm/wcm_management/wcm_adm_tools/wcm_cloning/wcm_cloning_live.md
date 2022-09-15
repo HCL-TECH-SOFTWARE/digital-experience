@@ -12,9 +12,9 @@ These procedures describe how to clone web content data from one system to anoth
 
         |System|Location|
         |------|--------|
-        |Windows™|[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine\\properties directory.|
-        |UNIX™Linux™|[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.|
-        |IBM® i|[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties|
+        |Windows™|[wp\_profile\_root](../../../../../guide_me/wpsdirstr.md)\\ConfigEngine\\properties directory.|
+        |UNIX™Linux™|[wp\_profile\_root](../../../../../guide_me/wpsdirstr.md)/ConfigEngine/properties directory.|
+        |IBM® i|[wp\_profile\_root](../../../../../guide_me/wpsdirstr.md)/ConfigEngine/properties|
 
         Refer to the documentation for your database for specific backup instructions.
 
@@ -60,8 +60,6 @@ When you finish cloning your web content data:
 -   Validate updates are being syndication into and from the target environment as expected.
 
 
-**Related information**  
-
-
-[Clearing version history](../wcm/wcm_admin_clear_versions.md)
+???+ info "Related information:"
+    - [Clearing version history](../wcm_admin_clear_versions.md)
 

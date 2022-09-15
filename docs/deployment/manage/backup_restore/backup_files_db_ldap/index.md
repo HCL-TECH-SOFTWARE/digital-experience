@@ -1,4 +1,4 @@
-# Backing up files, databases, and the LDAP server(s)
+# Backing up Files, Databases, and the LDAP Servers
 
 Periodically run an automated backup procedure for the HCL Portal file system, databases, and LDAP server(s) using a backup and recovery utility of your choice. Remember to run the backup procedure before performing critical system-wide changes, such as upgrading to a new version of HCL Digital Experience or installing interim fixes and fix packs.
 
@@ -15,6 +15,6 @@ Periodically run an automated backup procedure for the HCL Portal databases.
 5.  [Backing up the IBM Installation Manager](bck_up_iim.md)  
 IBM Installation Manager must also be included in backup and recovery planning. If you back up the HCL Portal file structure and then install a fix pack, the HCL Portal and IBM Installation Manager become out of sync after you restore the HCL Portal file system. This condition is not recoverable.
 
-**Related information**  
-[Backup and recovery](../../migrate/planning_migration/migration_consideration/mig_plan_backup_and_recovery.md)
+???+ info "**Related information:**"
+    - [Backup and recovery](../../migrate/planning_migration/migration_consideration/mig_plan_backup_and_recovery.md)
 

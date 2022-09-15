@@ -1,10 +1,10 @@
-# Sample storage class and volume for HCL Digital Experience 9.5 containers
+# Sample Storage Class and Volume
 
 Learn how to set storage class and volume using a sample storage class and volume scripts for  HCL Digital Experience 9.5 CF171 and higher container releases deployed to Amazon Elastic Container Service \(EKS\) or Red Hat OpenShift environment.
 
 It is recommended to set a separate storage class and volume for production, especially if you have more than one project in the Kubernetes \(Amazon EKS or Red Hat OpenShift\) environment. This is a good practice because it prevents projects from overlapping storage volumes.
 
-See video: [Understanding the Core Persistent Volumes in HCL Digital Experience Container Update CF194](https://youtu.be/yDU7SMnrz_U)
+See video: [Understanding the Core Persistent Volumes in HCL Digital Experience Container Update CF194](https://youtu.be/yDU7SMnrz_U){:target="_blank"}
 
 Follow these steps to create a new persistent volume and storage class, in either Amazon EKS or OpenShift.
 
@@ -64,16 +64,13 @@ Follow these steps to create a new persistent volume and storage class, in eithe
 
 7.  Continue with deployment.
 
-!!! note
+!!!note
     In these examples, NFS volumes have been used. You can use the following sample yaml to create the volume in Amazon EKS OpenShift with the corrected values: 
 
 ```
 nfs:    
-            server: your_nfs_server.com    
-            path: /exports/volume_name
+                server: your_nfs_server.com    
+                path: /exports/volume_name
 ```
 
-
-<!--- **Related information**  
-[Digital Experience on containerized platforms](../containerization/deployment.md) --->
 

@@ -8,4 +8,3 @@ For a page users select the **Browse Tags** option from the Actions menu link in
 
 Clicking **Browse Tags** redirects the user to the tag center. The tag cloud shows the **All** view. The user can now select tags and views as required.
 
-

@@ -25,14 +25,9 @@ In a default HCL Portal Version 8.5 installation, the new tag and rating widgets
 The Dojo tagging and rating menu options of the earlier default widgets are still available in HCL Portal Version 8.5. They are enabled for specific profiles. You can enable and disable them for additional profiles. For more detailed information, read *Enabling and disabling the Dojo tagging and rating options for additional profiles*.
 
 
-**Related information**  
-
-
-[The tag and rating widgets](../admin-system/tag_rate_ui_alt.md)
-
-[Enabling and disabling the tag and rating widgets for additional profiles](../admin-system/tag_rate_nbldsbl_inline_modules.md)
-
-[Enabling and disabling the Dojo tagging and rating options for additional profiles](../admin-system/tag_rate_nbldsbl_dojo_options.md)
-
-[Enabling the new tag and rating widgets after a portal upgrade](../migrate/mig_post_tagandrate.md)
+???+ info "Related information:"
+    - [The tag and rating widgets](../tagging_rating/tagging_rating_ui/index.md)
+    - [Enabling and disabling the tag and rating widgets for additional profiles](../tagging_rating/cfg_reference/tag_rate_nbldsbl_inline_modules.md)
+    - [Enabling and disabling the Dojo tagging and rating options for additional profiles](../tagging_rating/cfg_reference/tag_rate_nbldsbl_dojo_options.md)
+    - [Enabling the new tag and rating widgets after a portal upgrade](../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/mig_post_tagandrate.md)
 

@@ -1,4 +1,4 @@
-# Database considerations for backup and restore
+# Database Considerations for Backup and Restore
 
 Before you back up HCL Portal databases, determine whether you need to perform offline or online backup, what your requirements are for storage capacity and backup frequency, and your preferred utility.
 

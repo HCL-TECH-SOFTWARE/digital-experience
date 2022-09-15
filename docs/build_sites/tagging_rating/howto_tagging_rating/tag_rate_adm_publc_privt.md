@@ -20,14 +20,9 @@ The differences between private and public tags and ratings are described in the
     -   Public tags are also community tags.
 
 
-**Related information**  
 
-
-[Adding query parameters](../admin-system/tag_rate_api_rest_add_qparms.md)
-
-[Security for tagging and rating](../admin-system/tag_rate_secy.md)
-
-[CP Configuration Service for tagging and rating](../admin-system/srvcfg_cpcfg4tr.md)
-
-[Setting service configuration properties](../admin-system/adsetcfg.md)
-
+???+ info "Related information:"
+    - [Adding query parameters](../dev_tagging_and_rating/rest_api/tag_rate_api_rest_add_qparms.md)
+    - [Security for tagging and rating](../tag_rate_secy.md)
+    - [CP Configuration Service for tagging and rating](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/index.md)
+    - [Setting service configuration properties](../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)

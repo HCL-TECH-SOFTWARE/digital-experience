@@ -60,12 +60,7 @@ If you selected a value other than the default, it is listed as a condition on t
 
         cluster-node-config-dynamic-cluster-setup
 
-
-
 **Related information**  
-
-
-[Accessing the Configuration Wizard](../config/cw_run.md)
-
-[Updating DB2 self-tuning memory manager \(STMM\) settings](../migrate/mig_t_post_db2_stmm.md)
+[Accessing the Configuration Wizard](../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/configuration/cw_run.md)<br>
+[Updating DB2 self-tuning memory manager (STMM) settings](../../migrate/next_steps/post_mig_activities/db_task/mig_t_post_db2_stmm.md)
 

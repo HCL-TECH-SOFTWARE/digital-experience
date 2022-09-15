@@ -32,7 +32,7 @@ This can be done using the following commands:
 
 The following label is added using the Kubernetes syntax \(and other configurations are changed\):
 
-```
+```yaml
 metadata:
   labels:
     purpose: haproxy
@@ -65,7 +65,7 @@ You can assign all pods \(deployed by the Helm Chart of HCL Digital Experience 9
 
 Example for HAProxy:
 
-```
+```yaml
 nodeSelector:
   haproxy:
     purpose: haproxy

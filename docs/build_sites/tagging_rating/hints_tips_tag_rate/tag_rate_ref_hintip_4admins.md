@@ -60,14 +60,16 @@ Learn about some hints and tips for administrators who work with tagging and rat
 
     -   Redundant tags that result from similar names or spelling variants, for example, web20 and Web 2.0. The portal reduces such duplicate tags by a syntactical type-ahead feature. This feature helps reduce tag space littering by suggesting tag name variants that other users already use. For example, if a user types web2 and other users already use Web 2.0 to tag portal resources, the type-ahead feature suggests Web 2.0, although web2 is not an exact partial string of the suggested tag name. It supports users to not use too many different variants of the same tag name when you tag portal resources.
 
-        **Note:** The type-ahead feature works only with the dialog tag widget of the default tagging user interface of portal versions earlier than V 8.5. With HCL Portal V 8.5, the tag and rating widgets of earlier portal versions are deprecated.
+        !!! note
+            The type-ahead feature works only with the dialog tag widget of the default tagging user interface of portal versions earlier than V 8.5. With HCL Portal V 8.5, the tag and rating widgets of earlier portal versions are deprecated.
 
     -   Tags pointing to resources that are deleted. You can use the portal administrative cleanup tool, SLChecker. Use it to check for invalid links that do not exist any more and for tags that someone applied who is no longer a portal user. The SLChecker tool can identify and delete tags for deleted resources and tags that are applied by deleted users. For information, read *Deleting orphaned data*.
 -   **Staging and migrating **tagspaces**.**
 
     You can transfer the tag space from one portal to another, for example for staging or for migrating from one portal version to another. To do so, use the XML configuration interface \(XML Access\). For more information, read *Using the XML configuration interface to administer tags and ratings*.
 
-    **Note:** Users can create private and public tags. Private tags are stored in the customization database, whereas public tags are stored in the community database. Only content of the community database is staged and migrated.
+    !!! note
+        Users can create private and public tags. Private tags are stored in the customization database, whereas public tags are stored in the community database. Only content of the community database is staged and migrated.
 
 -   **Tagging custom content requires UI development.**
 
@@ -95,14 +97,15 @@ Learn about some hints and tips for administrators who work with tagging and rat
 
     You configure these two properties globally in the CP Configuration Service for tagging and rating or for individual widgets in the widget properties. For details, read *CP Configuration Service for tagging and rating* and *Setting service configuration properties*.
 
-    **Note:** The type-ahead feature works only with the dialog tag widget of the default tagging user interface of portal versions earlier than V 8.5. With HCL Portal V 8.5, the tag and rating widgets of earlier portal versions are deprecated.
+    !!! note
+        The type-ahead feature works only with the dialog tag widget of the default tagging user interface of portal versions earlier than V 8.5. With HCL Portal V 8.5, the tag and rating widgets of earlier portal versions are deprecated.
 
 -   **Angled brackets are not allowed in tag names.**
 
     Angled brackets \(`<` and `>`\) are not allowed within tag names. Therefore, no matter how you customize the regular expression, angled brackets are not accepted.
 
 
-
+<!--
 **Related information**  
 
 
@@ -116,5 +119,5 @@ Learn about some hints and tips for administrators who work with tagging and rat
 
 [Enabling your own custom content for tagging and rating](../admin-system/tag_rate_custom_content.md)
 
-[Filtering content for tagging](../admin-system/tag_rate_adm_filtr_cont.md)
+[Filtering content for tagging](../admin-system/tag_rate_adm_filtr_cont.md) -->
 

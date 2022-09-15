@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_elements_menu_design
-title: Menu element design examples
+title: Menu Element Design Examples
 ---
 
 
@@ -46,12 +46,12 @@ When you create menus for use in rendering portlets, a **URLCmpnt** tag is used 
 
 **Design for each menu search result:**
 
-```
+<!-- ```
 <a HREF=
 "[URLCmpnt context="autofill" type="content" mode="portal" portalTarget="URLMap">"
 target="_blank"> [Property context="autofill" type="content" field="title"] </a>
 <br>
-```
+``` -->
 
 ## Using a menu to display images
 

@@ -25,7 +25,8 @@ When you run the export cache settings task, a summary of your cache settings is
 
         ./ConfigEngine.sh run-wcm-admin-task-export-cache-settings -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password -Dlibrary=MyLibrary -DinheritPerms=apply -DlibSecurity=true
 
-    **Note:** An administrator user name and password is not required if the portal administrator user name and password are specified in the PortalAdminId and PortalAdminPwd settings in the wkplc.properties file.
+    !!! note
+        An administrator user name and password is not required if the portal administrator user name and password are specified in the PortalAdminId and PortalAdminPwd settings in the wkplc.properties file.
 
 
 ## Displaying cache settings in a browser

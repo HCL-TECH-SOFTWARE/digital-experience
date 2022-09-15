@@ -79,8 +79,6 @@ To update a rating, send an HTTP PUT that contains the same payload against the 
 To delete a rating, send an HTTP DELETE against the URI `uri rtm:oid:oid\_of\_a\_rating`.
 
 
-**Related information**  
-
-
-[The tagging and rating user interface](../admin-system/tag_rate_ui.md)
+???+ info "Related information:"
+   - [The tagging and rating user interface](../../tagging_rating_ui/index.md)
 

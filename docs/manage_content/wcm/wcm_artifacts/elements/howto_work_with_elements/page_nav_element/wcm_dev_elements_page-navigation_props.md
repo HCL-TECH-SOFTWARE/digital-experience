@@ -1,4 +1,4 @@
-# Defining a page navigator
+# Defining a Page Navigator
 
 
 You use the page navigation element to define a page navigator.
@@ -80,14 +80,13 @@ You use the page navigation element to define a page navigator.
         ```
 
 
-**Related information**  
+???+ info "**Related information:**"  
 
+    [Inserting an image in an element](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_image.md)
 
-[Inserting an image in an element](wcm_dev_elements_insert_image.md)
+    [Inserting a link in an element](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_link.md)
 
-[Inserting a link in an element](wcm_dev_elements_insert_link.md)
+    [Inserting element tags](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_tags.md)
 
-[Inserting element tags](wcm_dev_elements_insert_tags.md)
-
-[Creating web content tags](wcm_dev_referencing_tags.md)
+    [Creating web content tags](../../../../wcm_artifacts/tags/creating_web_content_tags/index.md)
 

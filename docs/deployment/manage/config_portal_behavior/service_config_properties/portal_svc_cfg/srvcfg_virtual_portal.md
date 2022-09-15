@@ -54,7 +54,8 @@ Replace the following variables when you define specific properties:
     The host name of the target virtual portal.
 
 
-**Note:** You can determine the URL context and the host name of the target virtual portal with the Manage Virtual Portals administration portlet.
+!!!note
+    You can determine the URL context and the host name of the target virtual portal with the Manage Virtual Portals administration portlet.
 
 ## Property names
 
@@ -71,20 +72,15 @@ The portal evaluates properties for virtual portals in the following order and r
 
 1.  The portal checks for a specific property that is defined for a virtual portal by the context, hostname, or default keyword. The value of the property is returned.
 
-    **Important:** If you define conflicting values for a virtual portal with different properties, the results can be unpredictable. For example, this issue can occur if you define one value with the context keyword and a different value with the hostname keyword. To avoid problems, use only one value.
+    !!!important
+        If you define conflicting values for a virtual portal with different properties, the results can be unpredictable. For example, this issue can occur if you define one value with the context keyword and a different value with the hostname keyword. To avoid problems, use only one value.
 
 2.  If no specific property is defined for a virtual portal, the portal checks for a property defined by the global keyword. The value of the property is returned.
 3.  If no global property is defined, the value null is returned.
 
-
 **Related information**  
-
-
-[Removing the site toolbar on a production server](../wcm/wcm_mngpages_disabletool.md)
-
-[Disabling the toolbar logo](../dev-theme/disable_toolbar_logo.md)
-
-[Customizing the More menu of the action bar](../admin-system/epc_custom_more_menu.md)
-
-[Disabling the preview option](../wcm/wcm_preview_disable.md)
+[Removing the site toolbar on a production server](../../../../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/wcm_mngpages_disabletool.md)<br>
+[Disabling the toolbar logo](../../../../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/disable_toolbar_logo.md)<br>
+[Customizing the More menu of the action bar](../../../../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/epc_custom_more_menu.md)<br>
+[Disabling the preview option](../../../../../manage_content/wcm/wcm_content_delivery/preview_another_user/wcm_preview_disable.md)
 

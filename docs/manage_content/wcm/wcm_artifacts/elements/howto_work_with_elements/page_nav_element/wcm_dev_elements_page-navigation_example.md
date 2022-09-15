@@ -1,4 +1,4 @@
-# Page navigation design example
+# Page Navigation Design Example
 
 This is an example of a design of a page navigation element.
 
@@ -109,20 +109,15 @@ Page [PageInfo value="currentPage" ]
 You use component tags to reference both page navigation components in another element design, such as a menu:
 
 ```
-<div>
-[component name="firstnavigation" ]
-<br>
-[component name="secondnavigation" ]
-</div>
+    <div>
+    [component name="firstnavigation" ]
+    <br>
+    [component name="secondnavigation" ]
+    </div>
 ```
 
-**Related information**  
+???+ info "**Related information:**" 
+ 
+    [Creating a page information tag](../../../../wcm_artifacts/tags/creating_web_content_tags/wcm_dev_elements_page-navigation_tag.md)
 
-
-[Creating a page information tag](../panel_help/wcm_dev_elements_page-navigation_tag.md)
-
-**References:**  
-
-
-[Creating a page information tag](wcm_dev_elements_page-navigation_tag.md)
 

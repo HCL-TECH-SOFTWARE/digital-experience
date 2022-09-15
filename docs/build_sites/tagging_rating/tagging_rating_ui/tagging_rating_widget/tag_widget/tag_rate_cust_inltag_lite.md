@@ -84,8 +84,6 @@ To modify the components, navigate to **Applications** \> **Content** \> **WCM A
 
 
 
-**Related information**  
-
-
-[Tag widget parameter reference](../admin-system/tag_rate_parm_ref_inl_tag_lite.md)
+???+ info "Related information:"
+    - [Tag widget parameter reference](../../../cfg_reference/parm_ref_tag_rate_widget/tag_rate_parm_ref_inl_tag_lite.md)
 

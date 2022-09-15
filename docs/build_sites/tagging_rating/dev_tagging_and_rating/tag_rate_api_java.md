@@ -18,12 +18,8 @@ The following controllers are available for working with resources, tags and rat
 
 
 
-**Related information**  
-
-
-[The tagging and rating user interface](../admin-system/tag_rate_ui.md)
-
-[Controller SPI](../dev/ctrlrapic_ovu.md)
-
-[Model SPI overview](../dev/dgn_modelovw.md)
+???+ info "Related information:"
+    - [The tagging and rating user interface](../tagging_rating_ui/index.md)
+    - [Controller SPI](../../../extend_dx/apis/controller_spi/index.md)
+    - [Model SPI overview](../../../extend_dx/apis/model_spi/index.md)
 

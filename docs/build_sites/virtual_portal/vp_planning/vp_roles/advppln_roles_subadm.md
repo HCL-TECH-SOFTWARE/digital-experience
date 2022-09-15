@@ -57,6 +57,7 @@ The following list shows the tasks for which you can assign extra access permiss
         -   Personalization Editors
         -   Personalization Navigator
         -   Personalization Picker
+
     -   Manager@the Personalization Rule
     These access permissions apply globally to the entire portal installation, including all virtual portals.
 
@@ -72,10 +73,12 @@ The following list shows the tasks for which you can assign extra access permiss
 
     -   `Template Page Content 3.0`
     -   `Web Content Templates 3.0`
+
     If you fail to syndicate these libraries, the portal shows an error when you add the sample content to a page.
 
 
 
+<!--
 **Related information**  
 
 
@@ -89,5 +92,5 @@ The following list shows the tasks for which you can assign extra access permiss
 
 [The XML configuration interface](../admin-system/admxmlai.md)
 
-[Portal Scripting Interface](../admin-system/ad_psi.md)
+[Portal Scripting Interface](../admin-system/ad_psi.md) -->
 

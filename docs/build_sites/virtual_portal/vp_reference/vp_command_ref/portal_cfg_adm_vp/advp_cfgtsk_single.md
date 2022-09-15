@@ -35,4 +35,3 @@ Here is an example for creating two virtual portals:
     -   For Linux™: `ConfigEngine.sh create-virtual-portal -DvirtualPortalList=vp1,vp2`
     -   For Windows™: `ConfigEngine.bat create-virtual-portal -DvirtualPortalList=vp1,vp2`
 
-

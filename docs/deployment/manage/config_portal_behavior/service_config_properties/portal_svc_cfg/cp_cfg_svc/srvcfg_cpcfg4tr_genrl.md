@@ -2,7 +2,8 @@
 
 View the general properties for tagging and rating.
 
-**Note:** The parameters listed here are specific to the inline tag and rating widgets that were introduced with HCL Portal Version 8.5. The dialog and inline widgets of earlier portal versions were deprecated with HCL Portal Version 8.5. For information about the earlier widgets and their parameters, read the appropriate topics in the HCL Portal Version 8.0 product documentation.
+!!!note
+    The parameters listed here are specific to the inline tag and rating widgets that were introduced with HCL Portal Version 8.5. The dialog and inline widgets of earlier portal versions were deprecated with HCL Portal Version 8.5. For information about the earlier widgets and their parameters, read the appropriate topics in the HCL Portal Version 8.0 product documentation.
 
 -   **com.ibm.wps.cp.tagging.isTaggingEnabled = \(true\) com.ibm.wps.cp.rating.isRatingEnabled = \(true\)**
 
@@ -51,7 +52,9 @@ View the general properties for tagging and rating.
         If you set this property to `normalized`, the suggestions from the type-ahead feature are as follows:
 
         -   If a user types the characters c? or co, the type-ahead service shows all three tags as suggestions: c?te, cot?, and cote.
-    **Note:** The type-ahead feature works only with the dialog tag widget of the default tagging user interface of portal versions earlier than V 8.5. With HCL Portal V 8.5, the tag and rating widgets of earlier portal versions are deprecated.
+    
+    !!!note
+        The type-ahead feature works only with the dialog tag widget of the default tagging user interface of portal versions earlier than V 8.5. With HCL Portal V 8.5, the tag and rating widgets of earlier portal versions are deprecated.
 
 -   **com.ibm.wps.cp.filter.tagging.blacklist = \(false\)**
 
@@ -79,12 +82,6 @@ View the general properties for tagging and rating.
 
     Use this property to specify the maximum value that a rating can have. The default is `5`.
 
-
-
 **Related information**  
-
-
-[Properties for the rating widget](../admin-system/srvcfg_cpcfg4tr_dlgrate_altui.md)
-
-[Rating widget parameter reference](../admin-system/tag_rate_parm_ref_inl_rate_lite.md)
-
+[Properties for the rating widget](../../../../config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/srvcfg_cpcfg4tr_dlgrate_altui.md)<br>
+[Rating widget parameter reference](../../../../../../build_sites/tagging_rating/cfg_reference/parm_ref_tag_rate_widget/tag_rate_parm_ref_inl_rate_lite.md)
