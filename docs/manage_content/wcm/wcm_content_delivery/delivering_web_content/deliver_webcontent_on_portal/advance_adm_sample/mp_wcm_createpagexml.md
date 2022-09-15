@@ -18,7 +18,8 @@ As with other portal pages, you can create a web content page with the XML confi
     </content-node> 
     ```
 
-    **Note:** The value of the content-id attribute can be either the ID or the path to the web content item. If you are using the content path, the value must begin with the forward slash character \(`/`\) followed by the library name. When creating a web content page using the content path, you cannot build the path from the **Display title** fields of the items in the path. Instead you must use the **Name** fields of the items when specifying the path.
+    !!! note
+      The value of the content-id attribute can be either the ID or the path to the web content item. If you are using the content path, the value must begin with the forward slash character \(`/`\) followed by the library name. When creating a web content page using the content path, you cannot build the path from the **Display title** fields of the items in the path. Instead you must use the **Name** fields of the items when specifying the path.
 
 2.  Because the web content viewer uses public render parameters to identify the content to render, include the page parameter param.sharing.scope when creating your xmlaccess command. Set the value for the parameter to ibm.portal.sharing.scope.page.
 
@@ -63,7 +64,7 @@ As with other portal pages, you can create a web content page with the XML confi
     </component>
     ```
 
-    **Migration note:** After Version 6.1.5, the format used by the XML configuration interface to represent content associations for a web content page has changed. Typically, the migration process automatically converts all existing web content pages to the updated format. However, if you create web content pages on the older portal after migration and then import the pages to the Version 8.5 portal, the page format is incompatible. In this case, you must manually run the `action-migrate-content-mappings` configuration task on the Version 8.5 portal to convert the new web content pages to the Version 8.5 format. To perform the conversion, run the following task from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory:
+    **Migration note:** After Version 6.1.5, the format used by the XML configuration interface to represent content associations for a web content page has changed. Typically, the migration process automatically converts all existing web content pages to the updated format. However, if you create web content pages on the older portal after migration and then import the pages to the Version 8.5 portal, the page format is incompatible. In this case, you must manually run the `action-migrate-content-mappings` configuration task on the Version 8.5 portal to convert the new web content pages to the Version 8.5 format. To perform the conversion, run the following task from the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md)/ConfigEngine directory:
 
     -   Windows™: ConfigEngine.bat action-migrate-content-mappings -DWasPassword=password -DPortalAdminPwd=password
     -   UNIX™Linux™: ./ConfigEngine.sh action-migrate-content-mappings -DWasPassword=password -DPortalAdminPwd=password
@@ -71,12 +72,8 @@ As with other portal pages, you can create a web content page with the XML confi
     -   z/OS®: ./ConfigEngine.sh action-migrate-content-mappings -DWasPassword=password -DPortalAdminPwd=password
 
 
-**Related information**  
-
-
-[Public render parameters](../dev-portlet/pltcom_pubrndrprm.md)
-
-[REST API and content associations](../admin-system/mp_wcm_contentmap_restapi.md)
-
-[Package com.ibm.portal.services.contentmapping](https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/spi_docs/com/ibm/portal/services/contentmapping/package-summary.html)
+???+ info "Related information:"
+  - [Public render parameters](../../../../../../extend_dx/portlets_development/portlet_communication/pltcom_pubrndrprm.md)
+  - [REST API and content associations](../advance_adm_sample/contentmap/mp_wcm_contentmap_restapi.md)
+  - [Package com.ibm.portal.services.contentmapping](https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/spi_docs/com/ibm/portal/services/contentmapping/package-summary.html)
 

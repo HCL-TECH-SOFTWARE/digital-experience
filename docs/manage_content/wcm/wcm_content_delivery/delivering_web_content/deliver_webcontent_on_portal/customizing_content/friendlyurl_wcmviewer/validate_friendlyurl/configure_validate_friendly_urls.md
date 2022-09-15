@@ -51,23 +51,14 @@ You can specify the following parameters for the overall portal as properties an
 |--------------------------------------------------------------------------|--------------------------------------------------------------|---------------------------------------------------------------------|--------------------------------------|--------------------------------------------------------------------------------------------------|-------------------------------------|---------------------------------------------|
 |404|The page that is specified in the requested URL.|Web content is rendered according to the private or public Web Content Manager context, but not based on the path information. The path information was invalid and removed from the state.|N/A|N/A|N/A|N/A|
 |410|The page that is specified in the requested URL.|Web content is rendered according to the private or public Web Content Manager context, but not based on the path information. The path information was invalid and removed from the state.|410|N/A|N/A|N/A|
-|404|The page displays the following text: Error 404: The requested content does not exist. Please verify that the URL is correct.|N/A|N/A|-   **PathInfoValidationTextProvider**
-
-HTTP\_STATUS\_MESSAGE\_404=The requested content does not exist. Please verify that the URL is correct.
-
-
-|N/A|N/A|
+|404|The page displays the following text: Error 404: The requested content does not exist. Please verify that the URL is correct.|N/A|N/A|- <br/> **PathInfoValidationTextProvider** <br/> HTTP\_STATUS\_MESSAGE\_404=The requested content does not exist. Please verify that the URL is correct.|N/A|N/A|
 |404|The page with the unique name missing.content displays.|Web content is rendered according to the private or public Web Content Manager context, but not based on the path information. The path information was invalid and removed from the state.|N/A|N/A|`nm:oid:missing.content`|N/A|
 |404|The page that is specified in the requested URL.|Web content is rendered according to the private Web Content Manager context of the Web Content Viewer portlet or /Web Content/Home/Missing Content.|N/A|N/A|N/A|/Web Content/Home/Missing Content|
 |410|The page with the unique name missing.content displays.|Web content is rendered according to the private Web Content Manager context of the Web Content Viewer portlet or /Web Content/Home/Missing Content.|410|N/A|`nm:oid:missing.content`|/Web Content/Home/Missing Content|
 
 
-**Related information**  
-
-
-[Advanced options](../panel_help/wcm_config_wcmviewer_hadv.md)
-
-[Editing pages, labels, and URLs](../panel_help/h_mp_edit_pages.md)
-
-[Creating a Text Provider class](../wcm/wcm_dev_api_text_provider.md)
+???+ info "Related information:"
+    - [Advanced options](../../../../../wcm_user_assistance/editing_webcontent_portlet/editing_setting_of_web_content_viewer/wcm_config_wcmviewer_hadv.md)
+    - [Editing pages, labels, and URLs](../../../../../../../../extend_dx/development_tools/portal_admin_tools/portal_user_interface/managing_pages/managing_page_properties/h_mp_edit_pages.md)
+    - [Creating a Text Provider class](../../../../../../wcm_artifacts/wcm_dev/wcm_custom_plugin/wcm_dev_api_text_provider.md)
 

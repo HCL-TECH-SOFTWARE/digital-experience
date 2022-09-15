@@ -2,7 +2,8 @@
 
 With the Portal Scripting Interface, you can create scripts to automate the management of content associations. Using the ContentMapping bean with the Portal Scripting Interface, you can add, modify, and remove content associations.
 
-**Note:** Before a script can work with the ContentMapping bean, you must establish a user session with the portal using the login command of the Portal bean. The user identity must have sufficient permissions to administer the web content pages and web content library folders referenced by the script.
+!!! note
+    Before a script can work with the ContentMapping bean, you must establish a user session with the portal using the login command of the Portal bean. The user identity must have sufficient permissions to administer the web content pages and web content library folders referenced by the script.
 
 ## Retrieve content associations
 
@@ -185,10 +186,7 @@ For the second content association, the association scope is removed by specifyi
 
 
 
-**Related information**  
-
-
-[Web content associations](../wcm/wcm_delivery_contentmap_about.md)
-
-[Community associations and APIs](../admin-system/commpages_access_apis.md)
+???+ info "Related information:"
+    - [Web content associations](../../getting_started/wcm_delivery_contentmap_about.md)
+    - [Community associations and APIs](../../../../../../../extend_dx/integration/connections/configuration/managing_community_pages/commpages_access_apis.md)
 

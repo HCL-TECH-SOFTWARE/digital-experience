@@ -18,7 +18,8 @@ To remove Content as a Service feature in HCL Portal, you must disable it by usi
 
         `./ConfigEngine.sh uninstall-caas -DPortalAdminID=user\_id _DPortalAdminPwd=password DWasUserid=user\_id -DWasPassword=passowrd`
 
-    **Note:** Uninstalling the shared resources while the virtual portal scoped installation is still present for other virtual portals leads Content as a Service feature to become dysfunctional for all virtual portals.
+    !!! note
+        Uninstalling the shared resources while the virtual portal scoped installation is still present for other virtual portals leads Content as a Service feature to become dysfunctional for all virtual portals.
 
 3.  Restart your portal server.
 
