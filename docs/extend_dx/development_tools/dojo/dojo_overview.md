@@ -2,30 +2,34 @@
 
 HCL Digital Experience contains an instance of the Dojo Toolkit, a JavaScript library that is based on the Dojo Toolkit. When you develop components that use Dojo, you must be aware of how the portal uses Dojo, and the tips and restrictions when you use Dojo.
 
-HCL Digital Experience 8.5 comes with six versions of Dojo:
+HCL Digital Experience 9.5 comes with six versions of Dojo:
 
--   Dojo V1.9.x. This version is packaged in its own web application named Dojo\_Resources. You can manage it in the WebSphere® Integrated Solutions Console. By default it is deployed at the context root wps/portal\_dojo. The path for the Dojo V1.9.x files is `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/V1.9`.
--   Dojo V1.7.x. This version is packaged in its own web application named Dojo\_Resources. You can manage it in the WebSphere Integrated Solutions Console. By default it is deployed at the context root wps/portal\_dojo. The path for the Dojo V1.7.x files is `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/v1.7` .
--   Dojo V1.6.x. This version is packaged in its own web application named Dojo\_Resources. You can manage it in the WebSphere Integrated Solutions Console. By default it is deployed at the context root wps/portal\_dojo. The path for the Dojo V1.6.x files is `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/v1.6` .
--   Dojo V1.4.x. This version is packaged in its own web application named Dojo\_Resources. You can manage it in the WebSphere Integrated Solutions Console. By default it is deployed at the context root /portal\_dojo. The path for the Dojo V1.4.x files is `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/v1.4.3` .
--   Dojo V1.3.x. This version is packaged in its own web application named Dojo\_Resources. You can manage it in the WebSphere Integrated Solutions Console. By default it is deployed at the context root /portal\_dojo. The path for the Dojo V1.3.x files is `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war` .
--   Dojo V1.1.1. This version is packaged in the directory `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/installer/wp.ear/installableApps/wps.ear/wps.war/themes/dojo/portal_dojo``[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/installer/wp.ear/installableApps/wps_theme.ear/wps_theme.war/themes/dojo/portal_dojo` .
+-   Dojo V1.9.x. This version is packaged in its own web application named Dojo_Resources. You can manage it in the WebSphere® Integrated Solutions Console. By default it is deployed at the context root wps/portal_dojo. The path for the Dojo V1.9.x files is PortalServer_root/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/V1.9.
+-   Dojo V1.7.x. This version is packaged in its own web application named Dojo_Resources. You can manage it in the WebSphere Integrated Solutions Console. By default it is deployed at the context root wps/portal_dojo. The path for the Dojo V1.7.x files is PortalServer_root/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/v1.7.
+-   Dojo V1.6.x. This version is packaged in its own web application named Dojo_Resources. You can manage it in the WebSphere Integrated Solutions Console. By default it is deployed at the context root wps/portal_dojo. The path for the Dojo V1.6.x files is PortalServer_root/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/v1.6.
+-   Dojo V1.4.x. This version is packaged in its own web application named Dojo_Resources. You can manage it in the WebSphere Integrated Solutions Console. By default it is deployed at the context root /portal_dojo. The path for the Dojo V1.4.x files is PortalServer_root/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/v1.4.3.
+-   Dojo V1.3.x. This version is packaged in its own web application named Dojo_Resources. You can manage it in the WebSphere Integrated Solutions Console. By default it is deployed at the context root /portal_dojo. The path for the Dojo V1.3.x files is PortalServer_root/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war.
+-   Dojo V1.1.1. This version is packaged in the directory PortalServer_root/installer/wp.ear/installableApps/wps.ear/wps.war/themes/dojo/portal_dojo and PortalServer_root/installer/wp.ear/installableApps/wps_theme.ear/wps_theme.war/themes/dojo/portal_dojo.
 
 All Dojo packages can be used by HCL and non-HCL components.
 
-**Notes:**
+!!!note "Notes"
+	1.  The Portal 8.5 theme uses Dojo V1.9.x by default in HCL Digital Experience 8.5. This version is the only supported version of Dojo with the Portal 8.5 theme.
 
-1.  The Portal 8.5 theme uses Dojo V1.9.x by default in HCL Digital Experience 8.5. This version is the only supported version of Dojo with the Portal 8.5 theme.
-2.  The Portal 8.0 theme uses Dojo V1.7.x by default in HCL Digital Experience 8.0. This version is the only supported version of Dojo with the Portal 8.0 theme.
-3.  The Portal 7.0.0.2 theme uses Dojo V1.6.x by default in HCL Digital Experience 7.0.0.2. This version is the only supported version of Dojo with the Portal 7.0.0.2 theme.
-4.  The Page Builder theme uses Dojo V1.4.x by default in HCL Digital Experience 7.0. The Page Builder theme is deprecated in Portal 8.5, and will no longer be supported in the next release.
-5.  The [Dojo toolkit](http://dojotoolkit.org) that is provided with the portal will be updated as needed over time. This toolkit might include entire new Dojo versions, and specific defect fixes. Compatibility of future Dojo versions is defined by the Dojo project.
+	2.  The Portal 8.0 theme uses Dojo V1.7.x by default in HCL Digital Experience 8.0. This version is the only supported version of Dojo with the Portal 8.0 theme.
+	
+	3.  The Portal 7.0.0.2 theme uses Dojo V1.6.x by default in HCL Digital Experience 7.0.0.2. This version is the only supported version of Dojo with the Portal 7.0.0.2 theme.
+	
+	4.  The Page Builder theme uses Dojo V1.4.x by default in HCL Digital Experience 7.0. The Page Builder theme is deprecated in Portal 8.5, and will no longer be supported in the next release.
+	
+	5.  The [Dojo toolkit](http://dojotoolkit.org) that is provided with the portal will be updated as needed over time. This toolkit might include entire new Dojo versions, and specific defect fixes. Compatibility of future Dojo versions is defined by the Dojo project.
 
 ## Where HCL Digital Experience uses Dojo
 
 The Portal 8.5 theme uses Dojo V1.9.x to support various portlets and edit-mode user interface components. The portlets and components that use Dojo vary over time. The current set of portlets that uses Dojo includes Managed Pages edit-mode user interface components, Search Center, External Search Results, Tagging and Rating, Tag Cloud, Active Site Analytics, Unified Task List, WidgetWrapper Portlet, WCM Rendering Portlet, Web Content Libraries, Web Content Subscribers, Web Content Syndicators, Feed Schedules, Web2Bookmarks Portlet, and CMIS Picker Dialog.
 
-**Note:** The portal components that use Dojo are only supported for use with the bundled Dojo.
+!!!note
+	The portal components that use Dojo are only supported for use with the bundled Dojo.
 
 Dojo is packaged as a module as part of the modular architecture for the Portal 8.5 theme. For performance optimization, the minimal profile does not load Dojo at all. The default deferred profile does not load Dojo initially for view mode, but, rather, only when a page is put into edit mode. When you do not load the Dojo module or any module that is a prerequisite for the Dojo module in the non-deferred part of your profile, then you need not pay any performance price of loading Dojo in view mode and at runtime. If you elect, you are now free to use a different JavaScript library in the view mode for your custom theme and runtime. Create and load your own modules for the library.
 
@@ -35,10 +39,10 @@ For information about how to use Dojo in custom portal themes that you create se
 
 Upgrading your custom portal themes to a later Dojo version supported by the portal: To upgrade your existing custom themes to a later supported version of Dojo, see the following sections:
 
--   Portal 7.0.0.2 theme, Dojo V1.6.x -\> Portal 8.0 theme, Dojo V1.7.x: see Updating a Portal 7.0.0.2 theme to use Dojo 1.7.
--   Page Builder theme, Dojo V1.4.x -\> Portal 7.0.0.2 theme, Dojo V1.6.x: see Updating a Page Builder theme to use Dojo 1.6.
--   Dojo V1.3.x -\> Dojo v1.4.x: see Dojo and HCL Portal.wp7
--   Dojo V1.1.x -\> Dojo v1.3.x: see Dojo and HCL Portal.wp7
+-   Portal 7.0.0.2 theme, Dojo V1.6.x -> Portal 8.0 theme, Dojo V1.7.x: see Updating a Portal 7.0.0.2 theme to use Dojo 1.7.
+-   Page Builder theme, Dojo V1.4.x -> Portal 7.0.0.2 theme, Dojo V1.6.x: see Updating a Page Builder theme to use Dojo 1.6.
+-   Dojo V1.3.x -> Dojo v1.4.x: see Dojo and HCL Portal.wp7
+-   Dojo V1.1.x -> Dojo v1.3.x: see Dojo and HCL Portal.wp7
 
 ## Dojo usage best practices
 
@@ -109,8 +113,5 @@ Observe the following restrictions when you use Dojo with the portal:
 -   Do not rely on making your own updates to the bundled Dojo package. HCL Digital Experience support is likely to update individual files over time, and might even replace the entire package.
 
 
-**Related information**  
-
-
-[Updating custom theme Dojo references](../migrate/mig_post_dojo.md)
-
+???+ info "**Related information**:"  
+[Updating custom theme Dojo references](../../../deployment/manage/migrate/next_steps/post_mig_activities/development_task/mig_post_dojo.md)

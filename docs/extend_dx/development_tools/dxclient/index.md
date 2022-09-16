@@ -19,9 +19,11 @@ DXConnect is a servlet-based application deployed on top of IBM WebSphere Applic
 
 !!! note
 
-    1.  HCL DX 9.5 CF19 or later version is installed on target servers, on [supported on premises platforms](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03) \(Microsoft Windows, Linux or IBM AIX\).
+    1.  HCL DX 9.5 CF19 or later version is installed on target servers, on [supported on premises platforms](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03) (Microsoft Windows, Linux).
+    
     2.  Beginning with HCL DX 9.5 Container Update CF192 and later releases, the DXConnect Servlet is pre-configured and started on supported Red Hat OpenShift and Kubernetes platforms that DX 9.5 containers are deployed to.
-    3.  For supported on premises platforms with HCL DX 9.5 CF19 and later releases, the DXConnect application needs to be installed \(refer to [DXConnect Installation](dxconnect.md#dxconnectinstall)\) and started under the Configuration Wizard \(`cw_profile`\) on target servers. For more information on starting the Configuration Wizard, refer to [Accessing the Configuration Wizard](https://help.hcltechsw.com/digital-experience/9.5/config/cw_run.html)
+    
+    3.  For supported on premises platforms with HCL DX 9.5 CF19 and later releases, the DXConnect application needs to be installed (refer to [DXConnect](dxconnect.md)) and started under the Configuration Wizard (`cw_profile`) on target servers. For more information on starting the Configuration Wizard, refer to [Accessing the Configuration Wizard](../portal_admin_tools/cfg_wizard/configuration/cw_run.md)
 
 !!! remember
     Configuration Wizard Administrator credentials are required to access the DXConnect application.
@@ -39,7 +41,8 @@ DXClient docker image comes with a script that you can use to run the docker ima
 See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr_frVlojc)
 
 1.  Navigate to <working-directory\> folder where you wish to use DXClient from.
-2.  Download the DXClient.zip file \(DXClient\_VX\_XXXXXXXX-XXXX.zip\) to a local directory on the local workstation from your HCL Digital Experience 9.5 CF196 or higher entitlements on the HCL Software License Portal.
+
+2.  Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your HCL Digital Experience 9.5 CF196 or higher entitlements on the HCL Software License Portal.
 
     !!! note
         If you are upgrading from the node to Docker image version of DXClient, you must first uninstall or unlink the current version using the following command before installing the newer version.
@@ -55,8 +58,11 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
          ```
 
 3.  Extract the DXClient.zip file locally.
+
 4.  To work with multiple versions of DXClient, update the `IMAGE_TAG` reference in the scripts file under the `/bin` folder. For example, `IMAGE_TAG=v95_CF200_20211201-1021`. By default it will be set in the executable script.
+
 5.  Run docker load < dxclient.tar.gz.
+
 6.  Add the execution shell script to the bin directory to the PATH variable to be able to call dxclient from any directory.
 
     ```
@@ -125,7 +131,7 @@ Common command arguments can be pre-configured inside the `config.json` file ava
 
 ```
 
-## Installing using the node package file \(deprecated in CF196\)
+## Installing using the node package file (deprecated in CF196)
 
 **Prerequisites:** Node.js version 12.18.3 is the minimum supported version, and must be installed on the local workstation or automation server.
 
@@ -149,10 +155,11 @@ See video: [Getting Started with DXClient on Red Hat OpenShift using HCL Digital
         make_unlink.bat
         ```
 
-2.  Ensure that Node.js version 12.18.3 or later version is installed to the local workstation. The DXClient tool is supported on Microsoft Windows, Linux, and Apple macOS workstations and automation servers.
-3.  Download the DXClient.zip file \(DXClient\_VX\_XXXXXXXX-XXXX.zip\) to a local directory on the local workstation from your DX 9.5 CF19 or later entitlements on the [HCL Software License Portal](https://www.hcltech.com/software/support/release). Reference the [Docker](../../kubernetes/docker.md) topic for the latest list of HCL DX 9.5 files available for download.
-4.  Extract the DXClient.zip file locally.
-5.  From the extracted folder, run the following command.
+2.  Ensure that Node.js version 12.18.3 or later version is installed to the local workstation. The DXClient tool is supported on Microsoft Windows, Linux, and Apple macOS workstations and automation servers.3.  Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your DX 9.5 CF19 or later entitlements on the [HCL Software License Portal](https://www.hcltech.com/software/support/release). Reference the [Docker](../../../get_started/system_requirements/docker/index.md) topic for the latest list of HCL DX 9.5 files available for download.
+
+3.  Extract the DXClient.zip file locally.
+
+4.  From the extracted folder, run the following command.
 
     For Linux and Apple macOS platforms:
 
@@ -185,8 +192,8 @@ See video: [Getting Started with DXClient on Red Hat OpenShift using HCL Digital
     ```
 
     !!! note
-        -   Avoid using this command when scripting deployments from an automation server \(for example, in pipelines\) as there is a chance of picking up the wrong dependencies during tool version upgrades.
-        -   If the `link` command is not used \(such as on automation servers\), then use the following command to run the application:
+        -   Avoid using this command when scripting deployments from an automation server (for example, in pipelines) as there is a chance of picking up the wrong dependencies during tool version upgrades.
+        -   If the `link` command is not used (such as on automation servers), then use the following command to run the application:
 
         For Linux and Apple MacOS platforms:
 
@@ -241,10 +248,15 @@ Once installed, commands can be executed using the DXClient tool to perform CI /
     Refer to the list of features that were released in the following HCL DX 9.5 Container releases:
 
     -   HCL DX 9.5 CF201 release:
-        -   An optional parameter `requestId` added to [Deploy theme](../../administration/DXClient/dxclient_artifact_type/themes.md), [Deploy application](../../administration/DXClient/DXClientArtifactType/deployapplication.md), [Restart DX Core server](../../administration/DXClient/DXClientArtifactType/dxcoreserver.md), and [Manage virtual portals](../../administration/DXClient/DXClientArtifactType/virtualportals.md).
+        
+        -   An optional parameter `requestId` added to [Deploy theme](../dxclient/dxclient_artifact_types/themes.md), [Deploy application](../dxclient/dxclient_artifact_types/scriptapplications.md#deploy-script-applications), [Restart DX Core server](../../administration/DXClient/DXClientArtifactType/dxcoreserver.md), and [Manage virtual portals](../../administration/DXClient/DXClientArtifactType/virtualportals.md).
+        
         -   Retrieve feature added to the [Resource environment provider](../../administration/DXClient/DXClientArtifactType/resourceenvironments.md).
+        
         -   [Accessing ConfigWizard in container environment](https://help.hcltechsw.com/digital-experience/9.5/containerization/helm_access_configwizard.html)
+        
         -   Note that a few parameters are deprecated and replaced with new parameters in the DX Core configuration reports. For information, see [DX Core server configuration report](../DXClient/DXClientArtifactType/dxcoreserver.md)
+    
     -   HCL DX 9.5 CF200 release:
         -   [Exporting and Importing WCM libraries](https://help.hcltechsw.com/digital-experience/9.5/containerization/wcmlibraries.html)
         -   [DX Core server configuration report](../DXClient/DXClientArtifactType/dxcoreserver.md)
