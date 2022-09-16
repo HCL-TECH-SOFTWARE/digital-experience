@@ -11,11 +11,11 @@ The following controllers are available via JNDI:
 
 -   **ContentModelController**
 
-    To obtain a ContentModelController, perform a lookup for the string ContentModelControllerHome.CONTENT\_MODEL\_CONTROLLER\_JNDI\_NAME.
+    To obtain a ContentModelController, perform a lookup for the string ContentModelControllerHome.CONTENT_MODEL_CONTROLLER_JNDI_NAME.
 
 -   **PortletModelController**
 
-    To obtain a ContentModelController, perform a lookup for the string PortletModelControllerHome.PORTLET\_MODEL\_CONTROLLER\_JNDI\_NAME.
+    To obtain a ContentModelController, perform a lookup for the string PortletModelControllerHome.PORTLET_MODEL_CONTROLLER_JNDI_NAME.
 
 
 The **LayoutModelController** cannot be obtained via a JNDI lookup. You obtain it through its associated **ContentModelController**.
@@ -48,11 +48,6 @@ final LayoutModelController lmController = cmController.getLayoutModelController
 
 ```
 
-
-<!-- **Related information**  
-
-
-[Obtain a model from the portal](../dev/dgn_modelobt.md)
-
-[Making modifications by using the Controller SPI](../dev/ctrlrapit_mdfy.md) -->
-
+???+ info "**Related information**"   
+    -   [Obtain a model from the portal](../../../apis/model_spi/dgn_modelobt.md)
+    -   [Making modifications by using the Controller SPI](../../../apis/controller_spi/controller_spi_modification/index.md)
