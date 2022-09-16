@@ -44,5 +44,5 @@ Configuring JCR search collections for a virtual portal might require additional
 
 
 ???+ info "Related information:"
-- [Search REST API specification](../search/search-rest-api/index.md)
+    - [Search REST API specification](../search/search-rest-api/index.md)
 

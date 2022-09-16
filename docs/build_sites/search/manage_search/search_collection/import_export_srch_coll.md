@@ -42,27 +42,10 @@ Additionally to export and import your search collections, you must configure Po
 
 If you want to migrate from one portal version to a higher version, you need to delete the search collections between the export and the re-import. For more information, see *Migrating web search collections*.
 
+???+ info "Related information:"
+    - [Exporting and importing search collections](../../../search/portal_search/administer_portal_search/setup_search_collections/srtexpimp.md)
+    - [Hints and tips for Portal Search crawls](../../portal_search/hint_tips/srrhinttips_crawl.md)
+    - [Planning and preparing for Portal Search](../../planning_portal_search/index.md)
+    - [Migrating web search collections](../../../../deployment/manage/migrate/preparing_source_env/migrating_search_cmpt/migrating_websearch_collections/index.md)
 
-<!---
-**Related information**  
-
-
-[Exporting and importing search collections](../admin-system/srtexpimp.md)
-
-[Hints and tips for Portal Search crawls](../admin-system/srrhinttips_crawl.md)
-
-[Planning and preparing for Portal Search](../admin-system/srcbfrwrkgwtprtlsrch.md)
-
-[Migrating web search collections](../migrate/mig_t_webcoll.md)
-
-**References:**  
-
-
-[Exporting and importing search collections](../admin-system/srtexpimp.md)
-
-[Hints and tips for Portal Search crawls](../admin-system/srrhinttips_crawl.md)
-
-[Planning and preparing for Portal Search](../admin-system/srcbfrwrkgwtprtlsrch.md)
-
-[Migrating web search collections](../migrate/mig_t_webcoll.md) --->
 

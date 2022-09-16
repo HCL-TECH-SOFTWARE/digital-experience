@@ -72,6 +72,6 @@ For more details about the Search Center portlet, refer to the following informa
 -   For hints about using the Search Center for remote search on web sites with different languages, refer to Hints and tips for using Portal Search.
 
 
-???+ info Related information:"
+???+ info "Related information:"
     - [Planning and preparing for Portal Search](../planning_portal_search/index.md)
 
