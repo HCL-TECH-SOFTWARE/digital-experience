@@ -4,31 +4,30 @@ The Configuration Wizard creates multiple files to help you complete your config
 
 1.  From the Configuration Wizard, click an option to customize your configuration goal.
 
-2.  Answer Questions
-3.  If you saved values from a previous session, click **Upload Saved Selections** to locate the .xml file with your values. Then, click **Load**.
+2.  If you saved values from a previous session, click **Upload Saved Selections** to locate the .xml file with your values. Then, click **Load**.
 
-4.  Answer questions about your environment, configuration goals, and preferences. The Configuration Wizard uses these values to filter steps when it creates your scripts.
+3.  Answer questions about your environment, configuration goals, and preferences. The Configuration Wizard uses these values to filter steps when it creates your scripts.
 
     For example, you can select the targeted operating system where portal is installed to customize the instructions and scripts that are created for your environment.
 
-5.  Click the forward arrow to proceed to **Customize Values**.
+4.  Click the forward arrow to proceed to **Customize Values**.
 
-6.  Customize Values
-7.  Review parameter and property values. Use the default values or enter new values. Default values are provided for some parameters. Sample values are also provided to guide you through the configuration process. To see more parameters that are not part of the basic configuration path, click **Advanced**.
+5.  Customize Values
+6.  Review parameter and property values. Use the default values or enter new values. Default values are provided for some parameters. Sample values are also provided to guide you through the configuration process. To see more parameters that are not part of the basic configuration path, click **Advanced**.
 
-8.  Click the forward arrow to proceed to **Configure**.
+7.  Click the forward arrow to proceed to **Configure**.
 
-9.  Configure
+8.  Configure
 
-    You can start your configuration on the same system that you are using to access the Configuration Wizard or save your settings to use on another server.
+    You can start your configuration on the same system that you are using to access the Configuration Wizard or save your settings to use on the current server or another server.
 
-10. Click **Download Wizard Selections** to save your configuration settings to configure similar environments. By saving your settings, you can reuse parameter values in the future. When you use this option, an XML file is created for you to download with the information that you provided.
+9. Click **Download Wizard Selections** to save your configuration settings to configure similar environments. By saving your settings, you can reuse parameter values in the future. When you use this option, an XML file is created for you to download with the information that you provided.
 
-11. Review parameter and property values.
+10. Review parameter and property values.
 
     Some of the properties and parameters that display might not be relevant to your task.
 
-12. Click **Download Configuration Scripts** to create a compressed file that contains scripts, instructions, and other files.
+11. Click **Download Configuration Scripts** to create a compressed file that contains scripts, instructions, and other files.
 
     This compressed file is downloaded to the location specified in your browser download settings. The configuration wizard creates the following files:
 
@@ -48,7 +47,7 @@ The Configuration Wizard creates multiple files to help you complete your config
 
         File used for troubleshooting your task.
 
-13. Click **Start Configuration** to run your configuration.
+12. Click **Start Configuration** to run your configuration.
 
 
 

@@ -10,6 +10,7 @@ The Configuration Wizard is installed by default when you install HCL Digital Ex
     -   IBM® i: ConfigEngine.sh deploy-wizard-war-standalone
     -   Windows™: ConfigEngine.bat deploy-wizard-war-standalone
     -   z/OS®: ./ConfigEngine.sh deploy-wizard-war
+    
 3.  To uninstall the Configuration Wizard, run the following command:
 
     -   AIX HP-UX Linux Solaris: ./ConfigEngine.sh remove-wizard-war-standalone

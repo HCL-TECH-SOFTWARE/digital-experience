@@ -2,7 +2,7 @@
 
 The Configuration Wizard reads a properties file at startup. You can change these values and restart the wizard to control runtime behaviors.
 
-The properties file is in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/WebSphere/AppServer/systemApps/isclite.ear/wizard.war/display.properties directory. Any property change requires a restart of the wizard before they take effect.
+The properties file is found here: AppServer/profiles/cw_profile/installedApps/*your_node_cellname*/wizard.ear/wizard.war/display.properties. All property changes require a restart of server1 before they take effect.
 
 The following actions are supported:
 
