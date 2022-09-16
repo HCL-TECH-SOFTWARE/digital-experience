@@ -2,6 +2,7 @@
 
 HCL Digital Experience offers multiple methods and services to integrate with many solutions.
 
+<!--
 -   **[Web Application Bridge integration](../overview/web_application_bridge.md)**  
 Use the Web Application Bridge to integrate with web applications, such as Sharepoint.
 -   **[Process integration](../overview/process_integration.md)**  
@@ -9,5 +10,5 @@ Use the Web Application Bridge to integrate with web applications, such as Share
 -   **[Application integration](../overview/fea_ai.md)**  
 A portal provides access to content, data, and services that are located throughout the enterprise. These services include predefined connectors and portlets, and tools for creating additional connectors and portlets.
 
-**Parent topic:**[Product capabilities](../overview/intr_ovr.md)
+**Parent topic:**[Product capabilities](../overview/intr_ovr.md) -->
 

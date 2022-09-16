@@ -23,7 +23,7 @@ All DB2 instructions apply to DB2 pureScale except where specifically noted.
 
 3.  Ensure that the DB2 instance port was added to the services file during the DB2 installation.
 
-    AIX® HP-UX Linux™ Solaris:
+    AIX® and Linux™:
 
     1.  Get the value for the TCP/IP service name (SVCENAME). Open a shell and log in as the instance owner. Enter the following command:
 
@@ -80,5 +80,6 @@ When you use the wizard and provide information about the database for your envi
 
 Optional: After you transfer your data to DB2, run a configuration task to enable support for high availability recovery (HADR) and roll-forward recovery.
 
-**Related information**: [JDBC type 2 and type 4 drivers](/docs/get_started/plan_deployment/traditional_deployment/database_consideration/db_jdbc_type.md)
+**Related information**: 
+[JDBC type 2 and type 4 drivers](../../../../../et_started/plan_deployment/traditional_deployment/database_consideration/db_jdbc_type.md)
 

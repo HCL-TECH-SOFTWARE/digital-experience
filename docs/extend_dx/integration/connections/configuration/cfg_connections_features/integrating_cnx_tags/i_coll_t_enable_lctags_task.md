@@ -20,12 +20,8 @@ You can schedule the FederationTaskHandler to periodically retrieve \(import\) H
 During the import of the tags if you exceed the number of available connections, increase the value for the configuration parameter max-connections-per-host for the corresponding policy in the Ajax Proxy configuration file proxy-config.xml.
 
 
-**Related information**  
-
-
-[Administering tag federation](../admin-system/tag_fed_admin.md)
-
-[CP Configuration Service for tagging and rating](../admin-system/srvcfg_cpcfg4tr.md)
-
-[Using the XML configuration interface to administer tags and ratings](../admin-system/tag_rate_xml.md)
+???+ info "Related information:"
+    - [Administering tag federation](../../../../../../build_sites/tagging_rating/tag_rate_federation/fed_admin/index.md)
+    - [CP Configuration Service for tagging and rating](../../../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/index.md)
+    - [Using the XML configuration interface to administer tags and ratings](../../../../../../build_sites/tagging_rating/tag_rate_xml.md)
 

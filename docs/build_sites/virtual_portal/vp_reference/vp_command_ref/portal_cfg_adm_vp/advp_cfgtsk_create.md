@@ -80,31 +80,15 @@ You pass the parameters in the parameter list for each configuration task as app
 
 -   **AIX®**
 
-    ./ConfigEngine.sh create-virtual-portal -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalTitle=MyVirtualPortalTitle -DVirtualPortalContext=virtual\_portal\_context\_url
-
--   **HP-UX**
-
-    ./ConfigEngine.sh create-virtual-portal -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalTitle=MyVirtualPortalTitle -DVirtualPortalContext=virtual\_portal\_context\_url
-
--   **IBM® i**
-
-    ConfigEngine.sh create-virtual-portal -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalTitle=MyVirtualPortalTitle -DVirtualPortalContext=virtual\_portal\_context\_url
+    `./ConfigEngine.sh create-virtual-portal -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalTitle=MyVirtualPortalTitle -DVirtualPortalContext=virtual_portal_context_url`
 
 -   **Linux™**
 
-    ./ConfigEngine.sh create-virtual-portal -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalTitle=MyVirtualPortalTitle -DVirtualPortalContext=virtual\_portal\_context\_url
-
--   **Solaris**
-
-    ./ConfigEngine.sh create-virtual-portal -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalTitle=MyVirtualPortalTitle -DVirtualPortalContext=virtual\_portal\_context\_url
+    `./ConfigEngine.sh create-virtual-portal -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalTitle=MyVirtualPortalTitle -DVirtualPortalContext=virtual_portal_context_url`
 
 -   **Windows™**
 
-    ConfigEngine.bat create-virtual-portal -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalTitle=MyVirtualPortalTitle -DVirtualPortalContext=virtual\_portal\_context\_url
-
--   **z/OS®**
-
-    ./ConfigEngine.sh create-virtual-portal -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalTitle=MyVirtualPortalTitle -DVirtualPortalContext=virtual\_portal\_context\_url
+    `ConfigEngine.bat create-virtual-portal -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalTitle=MyVirtualPortalTitle -DVirtualPortalContext=virtual_portal_context_url`
 
 <!--
 -   **[Adding the Site Builder and Script Application libraries](../admin-system/advp_create_add_libs.md)**  

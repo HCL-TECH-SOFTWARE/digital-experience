@@ -19,7 +19,8 @@ The example is composed of the following elements:
          > Missing Content
     ```
 
-    **Note:** The page `Missing Content` applies only to the Combined Cumulative Fix readme 03 \(CF03\).
+    !!! note
+        The page `Missing Content` applies only to the Combined Cumulative Fix readme 03 \(CF03\).
 
     The page `Home` has a friendly URL name of `home`, and the page `Human Resources` has a friendly URL name of `hr`. The pages can be accessed directly using the following friendly URLs for pages:
 
@@ -48,7 +49,8 @@ The example is composed of the following elements:
          > HR Menu (menu component)
     ```
 
-    **Note:** The pages `HR Default`, `Missing Content`, and `Content Not Found` apply only to the Combined Cumulative Fix readme 03 \(CF03\).
+    !!! note
+        The pages `HR Default`, `Missing Content`, and `Content Not Found` apply only to the Combined Cumulative Fix readme 03 \(CF03\).
 
     The content items in the `Home` site area can be referenced by the following content paths:
 
@@ -56,6 +58,7 @@ The example is composed of the following elements:
     -   `Web Content/home/human resources/health/workplace safety`
     -   `Web Content/home/human resources/health/personal wellness`
     -   `Web Content/home/human resources/hr default`
+
     The site area `Missing Content` stores a default content item that is displayed on the corresponding page by default.
 
     The menu component `HR Menu` is defined to display content from the `human resources` site area and the `health` site area.
@@ -85,12 +88,14 @@ With the portal page and web content site framework defined, browsing the conten
     -   The `Web Content Viewer A` viewer renders the menu component and displays links to the content items `HR Welcome`, `Workplace Safety`, and `Personal Wellness`.
     -   The `Web Content Viewer B` viewer shows the default content item `HR Welcome` from the site area `Human Resources`, because of the content association defined on the portal page.
 
-        **Note:** When the portal page is first displayed, the path of the default content item is not included in the friendly URL.
+        !!! note
+            When the portal page is first displayed, the path of the default content item is not included in the friendly URL.
 
 2.  Click **Workplace Safety** from the list of content items.
     -   The URL that is displayed in the address bar in the browser is `http://www.example.com:10039/wps/portal/home/hr/health/workplace%20safety/!ut/p/b1/...`
     -   The `Web Content Viewer B` viewer displays content item `Workplace Safety`.
     -   The URL is adjusted so that the path to the content item \(`health/workplace%20safety`\) becomes part of the URL.
+
 3.  Click **HR Welcome** from the list of content items.
     -   The URL that is displayed in the address bar of the browser is `http://www.example.com:10039/wps/portal/home/hr/hr%20welcome/!ut/p/b1/...`
     -   The `Web Content Viewer B` viewer displays the content item `HR Welcome` again, giving the same result as when the portal page was viewed for the first time.
@@ -106,7 +111,8 @@ For example, to reference the content items `HR Welcome`, `Workplace Safety`, an
 -   `http://www.example.com:10039/wps/portal/home/hr/health/workplace%20safety`
 -   `http://www.example.com:10039/wps/portal/home/hr/health/personal%20wellness`
 
-**Note:** These friendly URLs for web content include URL-encoded space characters \(`%20`\) instead of unencoded space characters. Your web browser might accept unencoded space characters when specifying content item names in friendly URLs for web content. However, to ensure consistent behavior from the portal, use the URL-encoded value.
+!!! note
+    These friendly URLs for web content include URL-encoded space characters \(`%20`\) instead of unencoded space characters. Your web browser might accept unencoded space characters when specifying content item names in friendly URLs for web content. However, to ensure consistent behavior from the portal, use the URL-encoded value.
 
 ## Testing invalid friendly URLs for web content
 
@@ -114,97 +120,14 @@ Sometimes, the friendly URL entered by a user or requested by a search crawler c
 
 |Invalid friendly URL for web content|Portal response|Explanation|
 |------------------------------------|---------------|-----------|
-|http://www.example.com:10039/wps/portal/home/products/appliances|-   **HTTP Status code**
-
-404
-
--   **Page**
-
-Missing Content
-
--   **Web content**
-
-Content Not Found
+|http://www.example.com:10039/wps/portal/home/products/appliances|-   **HTTP Status code** <br/> 404 <br/> -   **Page** <br/> Missing Content <br/> -   **Web content** <br/> Content Not Found|-   **Resolving the page** <br/> The last path segment of the friendly URL that portal can match to a friendly URL name is home. Therefore, the resolved page is Home and /products/appliances becomes the path information of the request. <br/> -   **Validating the path information** <br/> When validating the friendly URL for web content, portal assembles the content path to validate by appending the path information to the path of the default content association of the resolved page. As the page Home does not have a default content association to construct the content path, the friendly URL for web content is considered invalid. <br/> -   **Handling the invalid path information** <br/> The HTTP status code of the response is set to the default value \(404\) because friendly.pathinfo.validation.errorCode is not set. The resolved page \(Home\) inherits the friendly.pathinfo.validation.errorURI setting from Content Root. Therefore, the portal resolves the URI `nm:oid:missing.content` that addresses the page Missing Content. The Web Content Viewer portlet on the page Missing Content uses the default content mapping of the page to determine the web content to render \(Content Not Found\).|
+|http://www.example.com:10039/wps/portal/home/hr/group incentives|-   **HTTP Status code** <br/> 404 <br/> -   **Page** <br/> Missing Content <br/> -   **Web content** <br/> HR Default|-   **Resolving the page** <br/> The last path segment of the friendly URL that portal can match to a friendly URL name is hr. Therefore, the resolved page is Human Resources and /group incentives becomes the path information of the request. <br/> -   **Validating the path information** <br/> When validating the friendly URL for web content, portal assembles the content path to validate by appending the path information to the path of the default content association of the resolved page. The result for the page Human Resources is /Web Content/home/human resources/group incentives. As there is no content item for the computed content path, the friendly URL for web content is considered invalid. <br/> -   **Handling the invalid path information** <br/> The HTTP status code of the response is set to the default value \(404\), because friendly.pathinfo.validation.errorCode is not set. The resolved page \(Human Resources\) inherits the friendly.pathinfo.validation.errorURI setting from Content Root. Therefore, portal resolves the URI `nm:oid:missing.content` that addresses the page Missing Content. Additionally, portal sets the public Web Content Manager context as defined by the page parameter friendly.pathinfo.validation.errorContentPath of the resolved page \(/Web Content/Home/Human Resources/HR Default\).|
+|http://www.example.com:10039/wps/portal/home/hr/health/medical prevention and rehabilitation|-   **HTTP Status code** <br/> 404 <br/> -   **Page** <br/> Missing Content <br/> -   **Web content** <br/> HR Default|-   **Resolving the page** <br/> The last path segment of the friendly URL that portal can match to a friendly URL name is hr. Therefore, the resolved page is Human Resources and/health/medical prevention and rehabilitation becomes the path information of the request. <br/> -   **Validating the path information** <br/> When validating the friendly URL for web content, portal assembles the content path to validate by appending the path information to the path of the default content association of the resolved page. The result for the page Human Resources is /Web Content/home/human resources/health/medical prevention and rehabilitation. As there is no content item for the computed content path, the friendly URL for web content is considered invalid. <br/> -   **Handling the invalid path information** <br/> The HTTP status code of the response is set to the default value \(404\) because friendly.pathinfo.validation.errorCode is not set. The resolved page \(Human Resources\) inherits the friendly.pathinfo.validation.errorURI setting from Content Root. Therefore, the portal resolves the URI `nm:oid:missing.content` that addresses the page Missing Content. Additionally, the portal sets the public Web Content Manager context as defined by the page parameter friendly.pathinfo.validation.errorContentPath of the resolved page \(/Web Content/Home/Human Resources/HR Default\).|
 
 
-|-   **Resolving the page**
-
-The last path segment of the friendly URL that portal can match to a friendly URL name is home. Therefore, the resolved page is Home and /products/appliances becomes the path information of the request.
-
--   **Validating the path information**
-
-When validating the friendly URL for web content, portal assembles the content path to validate by appending the path information to the path of the default content association of the resolved page. As the page Home does not have a default content association to construct the content path, the friendly URL for web content is considered invalid.
-
--   **Handling the invalid path information**
-
-The HTTP status code of the response is set to the default value \(404\) because friendly.pathinfo.validation.errorCode is not set. The resolved page \(Home\) inherits the friendly.pathinfo.validation.errorURI setting from Content Root. Therefore, the portal resolves the URI `nm:oid:missing.content` that addresses the page Missing Content. The Web Content Viewer portlet on the page Missing Content uses the default content mapping of the page to determine the web content to render \(Content Not Found\).
-
-
-|
-|http://www.example.com:10039/wps/portal/home/hr/group incentives|-   **HTTP Status code**
-
-404
-
--   **Page**
-
-Missing Content
-
--   **Web content**
-
-HR Default
-
-
-|-   **Resolving the page**
-
-The last path segment of the friendly URL that portal can match to a friendly URL name is hr. Therefore, the resolved page is Human Resources and /group incentives becomes the path information of the request.
-
--   **Validating the path information**
-
-When validating the friendly URL for web content, portal assembles the content path to validate by appending the path information to the path of the default content association of the resolved page. The result for the page Human Resources is /Web Content/home/human resources/group incentives. As there is no content item for the computed content path, the friendly URL for web content is considered invalid.
-
--   **Handling the invalid path information**
-
-The HTTP status code of the response is set to the default value \(404\), because friendly.pathinfo.validation.errorCode is not set. The resolved page \(Human Resources\) inherits the friendly.pathinfo.validation.errorURI setting from Content Root. Therefore, portal resolves the URI `nm:oid:missing.content` that addresses the page Missing Content. Additionally, portal sets the public Web Content Manager context as defined by the page parameter friendly.pathinfo.validation.errorContentPath of the resolved page \(/Web Content/Home/Human Resources/HR Default\).
-
-
-|
-|http://www.example.com:10039/wps/portal/home/hr/health/medical prevention and rehabilitation|-   **HTTP Status code**
-
-404
-
--   **Page**
-
-Missing Content
-
--   **Web content**
-
-HR Default
-
-
-|-   **Resolving the page**
-
-The last path segment of the friendly URL that portal can match to a friendly URL name is hr. Therefore, the resolved page is Human Resources and/health/medical prevention and rehabilitation becomes the path information of the request.
-
--   **Validating the path information**
-
-When validating the friendly URL for web content, portal assembles the content path to validate by appending the path information to the path of the default content association of the resolved page. The result for the page Human Resources is /Web Content/home/human resources/health/medical prevention and rehabilitation. As there is no content item for the computed content path, the friendly URL for web content is considered invalid.
-
--   **Handling the invalid path information**
-
-The HTTP status code of the response is set to the default value \(404\) because friendly.pathinfo.validation.errorCode is not set. The resolved page \(Human Resources\) inherits the friendly.pathinfo.validation.errorURI setting from Content Root. Therefore, the portal resolves the URI `nm:oid:missing.content` that addresses the page Missing Content. Additionally, the portal sets the public Web Content Manager context as defined by the page parameter friendly.pathinfo.validation.errorContentPath of the resolved page \(/Web Content/Home/Human Resources/HR Default\).
-
-
-|
-
-
-**Related information**  
-
-
-[Defining friendly URLs without state information for pages in your site](../admin-system/mp_friendly_short_url.md)
-
-[Advanced options](../panel_help/wcm_config_wcmviewer_hadv.md)
-
-[Managing custom unique names](../panel_help/h_main_custom_names.md)
-
-[Hiding and displaying pages in the navigation](../site/show_hidden_page.md)
+???+ info" Related information:"
+    - [Defining friendly URLs without state information for pages in your site](../../../../../../../deployment/manage/siteurl_cfg/changing_siteurl/cw_navstate/mp_friendly_short_url.md)
+    - [Advanced options](../../../../wcm_user_assistance/editing_webcontent_portlet/editing_setting_of_web_content_viewer/wcm_config_wcmviewer_hadv.md)
+    - [Managing custom unique names](../../../../../../../build_sites/portal_settings/manage_custom_unique_names/index.md)
+    - [Hiding and displaying pages in the navigation](../../../../../../../build_sites/create_sites/building_website/site_navigation/show_hidden_page.md)
 

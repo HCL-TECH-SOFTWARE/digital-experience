@@ -13,9 +13,9 @@ If you created the portal site collection by navigating to the Manage Search por
     This file path length problem can occur particularly when the portal site collection is created on one of the following operating systems:
 
     -   AIX®
-    -   HP-UX
     -   Linux™
     -   Solaris
+    
     For details about this length limitation, see the topic about what to do if Creating the portal site search collection fails.
 
 -   If you want to turn the summarizer off so summary information is not generated for your portal and web content.

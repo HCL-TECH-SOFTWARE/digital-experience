@@ -34,8 +34,6 @@ Configure authentication for either basic authentication or LTPA forwarding.
 
 
 
-**Related information**  
-
-
-[Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md)
+???+ info "Related information:"
+    - [Starting and stopping servers, deployment managers, and node agents](../../../../../../deployment/manage/stopstart.md)
 

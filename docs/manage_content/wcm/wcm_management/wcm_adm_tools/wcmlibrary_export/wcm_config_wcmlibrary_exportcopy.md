@@ -29,7 +29,8 @@ Follow these steps to export or import a copy of a web content library. The serv
 
         The following properties must be specified either on the command line or in the `wkplc.properties` file.
 
-        **Note:** If you are specifying properties in the `wkplc.properties` file, it is not necessary to put quotation marks \(`"`\) around values that contain spaces. These quotation marks are only required when specifying property values on the command line.
+        !!! note
+            If you are specifying properties in the `wkplc.properties` file, it is not necessary to put quotation marks \(`"`\) around values that contain spaces. These quotation marks are only required when specifying property values on the command line.
 
         -   **LibraryPath**
 
@@ -72,6 +73,7 @@ Follow these steps to export or import a copy of a web content library. The serv
         -   Windows: ConfigEngine.bat export-library-copy -DLibraryPath=C:\\wcm\_export\\webcontent.zip -DLibraryName="Web Content" -DWasPassword=mypassword -DPortalAdminPwd=mypassword -DVirtualPortalHost=vp.example.com
         -   UNIXLinux: ./ConfigEngine.sh export-library-copy -DLibraryPath=/opt/wcm\_export/webcontent.zip -DLibraryName="Web Content" -DWasPassword=mypassword -DPortalAdminPwd=mypassword -DVirtualPortalHost=vp.example.com
         -   IBM i: ConfigEngine.sh export-library-copy -DLibraryPath=/opt/wcm\_export/webcontent.zip -DLibraryName="Web Content" -DWasPassword=mypassword -DPortalAdminPwd=mypassword -DVirtualPortalHost=vp.example.com
+
     3.  Verify that this transfer step completed without errors. If any errors occurred, check the portal logs on the source server for extended diagnostic information.
 
 -   **Importing:**
@@ -94,7 +96,8 @@ Follow these steps to export or import a copy of a web content library. The serv
 
         The following properties must be specified either on the command line or in the `wkplc.properties` file.
 
-        **Note:** If you are specifying properties in the `wkplc.properties` file, it is not necessary to put quotation marks \(`"`\) around values that contain spaces. These quotation marks are only required when specifying property values on the command line.
+        !!! note
+            If you are specifying properties in the `wkplc.properties` file, it is not necessary to put quotation marks \(`"`\) around values that contain spaces. These quotation marks are only required when specifying property values on the command line.
 
         **Differences in paths between versions:**
 
@@ -193,6 +196,7 @@ Follow these steps to export or import a copy of a web content library. The serv
         -   Windows: ConfigEngine.bat import-library-copy -DLibraryPath=C:\\wcm\_import\\webcontent.zip -DLibraryName="Web Content Copy" -DLibraryTitle="Web Content Copy Title" -DLibraryDescription="Copy of Web Content library" -DLibraryNameTextProvider=provider -DLibraryNameTextProviderKey=key -DLibraryBaseLocale=en -DWasPassword=mypassword -DPortalAdminPwd=mypassword
         -   UNIXLinux: ./ConfigEngine.sh import-library-copy -DLibraryPath=/opt/wcm\_import/webcontent.zip -DLibraryName="Web Content Copy" -DLibraryTitle="Web Content Copy Title" -DLibraryDescription="Copy of Web Content library" -DLibraryNameTextProvider=provider -DLibraryNameTextProviderKey=key -DLibraryBaseLocale=en -DWasPassword=mypassword -DPortalAdminPwd=mypassword
         -   IBM i: ConfigEngine.sh import-library-copy -DLibraryPath=/opt/wcm\_import/webcontent.zip -DLibraryName="Web Content Copy" -DLibraryTitle="Web Content Copy Title" -DLibraryDescription="Copy of Web Content library" -DLibraryNameTextProvider=provider -DLibraryNameTextProviderKey=key -DLibraryBaseLocale=en -DWasPassword=mypassword -DPortalAdminPwd=mypassword
+
     3.  Verify that the imported libraries have been imported by reviewing the list of libraries that are listed in the web content libraries section of the administration portlet on the target server. If any errors occurred, check the portal logs on the target server for extended diagnostic information.
 
     4.  Reset the web content event log.
@@ -209,10 +213,12 @@ When exporting and importing multiple web content libraries with a single comman
 
     -   Export: ConfigEngine.bat export-library-copy -DLibraryPath=C:\\wcm\_export\\webcontent.zip -DLibraryName="Web Content;Samples" -DWasPassword=mypassword -DPortalAdminPwd=mypassword
     -   Import: ConfigEngine.bat import-library-copy -DLibraryPath=C:\\wcm\_import\\webcontent.zip -DLibraryName="Web Content Copy;Samples Copy" -DLibraryExportName="Web Content;Samples" -DLibraryTitle="Web Content Copy Title;Samples Copy Title" -DLibraryBaseLocale=en -DWasPassword=mypassword -DPortalAdminPwd=mypassword
+
 -   **UNIX™Linux™**
 
     -   Export: ./ConfigEngine.sh export-library-copy -DLibraryPath=/opt/wcm\_export/webcontent.zip -DLibraryName="Web Content;Samples" -DWasPassword=mypassword -DPortalAdminPwd=mypassword
     -   Import: ./ConfigEngine.sh import-library-copy -DLibraryPath=/opt/wcm\_import/webcontent.zip -DLibraryName="Web Content Copy;Samples Copy" -DLibraryExportName="Web Content;Samples" -DLibraryTitle="Web Content Copy Title;Samples Copy Title" -DLibraryBaseLocale=en -DWasPassword=mypassword -DPortalAdminPwd=mypassword
+    
 -   **IBM® i**
 
     -   Export: ConfigEngine.sh export-library-copy -DLibraryPath=/opt/wcm\_export/webcontent.zip -DLibraryName="Web Content;Samples" -DWasPassword=mypassword -DPortalAdminPwd=mypassword

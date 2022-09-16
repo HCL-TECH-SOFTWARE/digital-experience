@@ -11,17 +11,19 @@ In the Script Application version that is included in HCL DX Combined Cumulative
 
 To set access permissions for your users to work with the Script Application version that is included in CF09 and later, complete the following steps.
 
-**Note:** You need to complete this procedure only for users who you want to be able to author Script Applications, additional to the portal `wpsadmins` group. The `wpsadmins` group has the necessary access rights already.
+!!!note
+    You need to complete this procedure only for users who you want to be able to author Script Applications, additional to the portal `wpsadmins` group. The `wpsadmins` group has the necessary access rights already.
 
 1.  Only for customers who upgrade from the PAA-based Script Portlet V 1.2 or 1.3 from the [HCL®Software Products Catalog](https://www.hcltechsw.com/products) to the version that is included in CF09 and later for portal: The method for providing access to the editor and import utilities changed. Obtain your current security settings before you set access permissions for your Script Portlet of CF09 or the Script Application of CF11 or later.
 
-    **Note:** The cumulative fix installation removes the old Script Portlet application and its role mappings. Therefore, you need to complete this step *before* you install CF09 or later Combined Cumulative Fixpacks.
+    !!!note
+        The cumulative fix installation removes the old Script Portlet application and its role mappings. Therefore, you need to complete this step *before* you install CF09 or later Combined Cumulative Fixpacks.
 
     To obtain the current security settings of your existing Script Portlet configuration, proceed as follows:
 
     1.  Log in to the WebSphere® Integrated Solutions Console.
 
-    2.  Select **Applications** \> **WebSphere enterprise applications** \> **scriptportlet**.
+    2.  Select **Applications > WebSphere enterprise applications > scriptportlet**.
 
     3.  Select **Security role to user/group mapping**.
 

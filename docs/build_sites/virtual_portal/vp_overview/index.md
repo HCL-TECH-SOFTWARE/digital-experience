@@ -1,6 +1,6 @@
 # Deciding about virtual portals
 
-Get an overview of possible business and usage scenarios for virtual portals. Decide whether your business scenario is suitable for virtual portals. Get some ideas and hints about what you need to consider when you plan for your virtual portals. This can help you determine whether your business can work with virtual portals, how many virtual portals it requires, and how, and for which purposes you will use them. Based on your decision, you can then plan how you implement and configure your virtual portals.
+Before you decide on a portal installation with multiple virtual portals, you need to determine your specific business requirements and the purpose of your portal. This section provides an overview of possible business and usage scenarios for virtual portals and help you decide whether your business scenario is suitable for virtual portals. This should provide ideas and hints about what you need to consider when you plan for your virtual portals. This can help you determine how many virtual portals your bussiness requires, and how, and for which purposes you will use them. Based on your decision, you can then plan how you implement and configure your virtual portals.
 
 <!--
 -   **[Scenarios with multiple portals for your business requirements](../admin-system/advpuscn_pln.md)**  

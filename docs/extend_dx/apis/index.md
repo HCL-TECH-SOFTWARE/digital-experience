@@ -12,7 +12,8 @@ HCL Portal supports two different portlet APIs by providing two portlet containe
 -   The Java™ Portlet Specification API
 -   The Standard Portlet API
 
-    **Note:** The IBM® Portlet API has been deprecated for WebSphere® Portal Version 7.0 and later versions.
+    !!! note
+        The IBM® Portlet API has been deprecated for WebSphere® Portal Version 7.0 and later versions.
 
 
 You can enhance and extend the tagging and rating features of the portal by using service APIs. The following service APIs are available with WebSphere Portal:
@@ -24,25 +25,25 @@ You can use Personalization APIs to allow Rational Application Developer and the
 
 # List of APIs
 
-**[HCL Experience API](../apis/hcl_experience_api)**  
+**[HCL Experience API](../apis/hcl_experience_api/index.md)**  
 The HCL Experience API is a set of OpenAPI-compliant REST APIs you can use to deploy HCL Digital Experience 9.5 containers on supported Kubernetes platforms. It supports the integration and management of HCL Digital Experience content and functionality to any digital channel using any front-end development framework. The HCL Experience API includes REST APIs that serve as a wrapper around previously published HCL Digital Experience HTTP-based APIs.
 
 
-**[Controller SPI](/controller_spi/index.md)**  
+**[Controller SPI](../apis/controller_spi/index.md)**  
 You can use the Controller SPI for portal administration. It allows you to modify portal resources. It enhances the read-only portal Model SPI by adding writable aspects.
 
-**[Model SPI overview](/model_spi/index.md)**  
+**[Model SPI overview](../apis/model_spi/index.md)**  
 Models provide information that is needed by HCL to perform tasks such as content aggregation or building navigation to browse the aggregated content. The information that is aggregated is represented through models that can be accessed programmatically by using the Model SPI \(read-only\). The information of a model is usually persistent \(stored in a database\) but can also be transient \(computed and stored only in memory\). Models can be represented by using a tree structure \(nodes have a parent-child relationship\), a list structure, or a selection structure \(a selected element in a tree structure\).
 
-**[Portal Access Control interfaces](/portal_access_control_interfaces/index.md)**  
+**[Portal Access Control interfaces](../apis/portal_access_control_interfaces/index.md)**  
 Portal Access Control provides interfaces for retrieving and modifying and access control information of portal resources, such as portlets or pages.
 
 
-**[User and group management](/puma_spi/index.md)**  
+**[User and group management](../apis/puma_spi/index.md)**  
 The Portal User Management Architecture \(PUMA\) System programming interface \(SPI\) provides interfaces for accessing the profiles of a portal User or Group.
 
 
-**[URL generation in HCL Portal](/url_generation/index.md)**  
+**[URL generation in HCL Portal](../apis/url_generation/index.md)**  
 Generating Portal URLs correctly is one of the most important tasks in programming a HCL Portal based application. There are several programming tools and techniques available for generating HCL Portal URLs in custom code. The following section introduces the programming tools available and discusses when it is most appropriate to use each of the tools.
 
 

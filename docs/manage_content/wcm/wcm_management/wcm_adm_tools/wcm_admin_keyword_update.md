@@ -23,7 +23,8 @@ Use the update keyword tool to add a keyword to the profile settings on multiple
 
         ./ConfigEngine.sh update-wcm-content-template-keywords -DPortalAdminId=username -DPortalAdminPwd=password -Dlibrary=libraryName -Dkeyword=yourkeyword
 
-    **Note:** An administrator user name and password is not required if the portal administrator user name and password are specified in the PortalAdminId and PortalAdminPwd settings in the wkplc.properties file.
+    !!! note
+        An administrator user name and password is not required if the portal administrator user name and password are specified in the PortalAdminId and PortalAdminPwd settings in the wkplc.properties file.
 
 
 ## Running the update keyword tool for all libraries

@@ -10,6 +10,7 @@ The configuration for each service is stored in and accessible through the WebSp
 
     -   If your portal runs stand-alone, use the local console.
     -   If your portal is installed in a cluster, use the console of the deployment manager.
+
 2.  Start the WebSphere Integrated Solutions Console by entering the following string in the **URL location** field of a web browser:
 
     ```
@@ -24,6 +25,7 @@ The configuration for each service is stored in and accessible through the WebSp
 
     -   If your portal is running as a single server, select **Browse Nodes** and select the node.
     -   If your portal is installed in a cluster, select **Browse Clusters** and select the portal cluster.
+
 5.  Select the service in which you want to change a property.
 
     !!!note
@@ -36,7 +38,8 @@ The configuration for each service is stored in and accessible through the WebSp
     -   To set a property, select that property and change its value.
     -   If the property that you want to set does not exist yet, create it new. When you create a new property, use java.lang.String as its type and do not mark the property as **required**. Otherwise, you might not be able to delete it later.
     -   Select one or more properties for removal.
-8.  When you are done, click **Save** at the start of the page under **Message\(s\)**.
+
+8.  When you are done, click **Save** at the start of the page under **Message(s)**.
 
 9.  Click **Save** again when prompted to confirm your changes.
 
@@ -59,8 +62,8 @@ By alternative, you can also set the properties in the properties files and then
 
 1.  Locate the properties file for the appropriate Resource Environment Provider:
 
-        -   The properties files for HCL Portal are in the directory `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/config`.
-        -   The properties files for HCL Web Content Manager are in the directory `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/wcm/shared/app/config/wcmservices`.
+        -   The properties files for HCL Portal are in the directory `wp_profile_root/PortalServer/config`.
+        -   The properties files for HCL Web Content Manager are in the directory `wp_profile_root/PortalServer/wcm/shared/app/config/wcmservices`.
     
     If there is no default properties file for a Resource Environment Provider, for example, for WP DynamicContentSpotMappings, create a new properties file as follows:
 
@@ -84,19 +87,15 @@ By alternative, you can also set the properties in the properties files and then
 
 4.  Run the appropriate configuration task to update the configuration properties:
 
-    For changes to HCL Portal properties files to take effect, run the following task from the `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine` directory.
+    For changes to HCL Portal properties files to take effect, run the following task from the wp_profile_root/ConfigEngine directory.
 
     -   Windows™: `ConfigEngine.bat update-properties -DPortalAdminPwd=password -DWasUserid=username -DWasPassword=password`
-    -   AIX® HP-UX Linux™ Solaris: `./ConfigEngine.sh update-properties -DPortalAdminPwd=password -DWasUserid=username -DWasPassword=password`
-    -   IBM® i: `ConfigEngine.sh update-properties -DPortalAdminPwd=password -DWasUserid=username -DWasPassword=password`
-    -   z/OS: `./ConfigEngine.sh update-properties -DPortalAdminPwd=password -DWasUserid=username -DWasPassword=password`
+    -   AIX®, Linux™: `./ConfigEngine.sh update-properties -DPortalAdminPwd=password -DWasUserid=username -DWasPassword=password`
     
-    For changes to HCL Web Content Manager properties files, run the following task from the `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine` directory.
+    For changes to HCL Web Content Manager properties files, run the following task from the wp_profile_root/ConfigEngine directory.
 
     -   Windows: `ConfigEngine.bat update-wcm-service-properties -DPortalAdminPwd=password -DWasUserid=username -DWasPassword=password`
-    -   AIX HP-UX Linux Solaris: `./ConfigEngine.sh update-wcm-service-properties -DPortalAdminPwd=password -DWasUserid=username -DWasPassword=password`
-    -   IBM i: `ConfigEngine.sh update-wcm-service-properties -DPortalAdminPwd=password -DWasUserid=username -DWasPassword=password`
-    -   z/OS: `./ConfigEngine.sh update-wcm-service-properties -DPortalAdminPwd=password -DWasUserid=username -DWasPassword=password`
+    -   AIX, Linux: `./ConfigEngine.sh update-wcm-service-properties -DPortalAdminPwd=password -DWasUserid=username -DWasPassword=password`
 
 Your service configuration properties updates are now in effect.
 

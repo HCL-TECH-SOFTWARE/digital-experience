@@ -4,7 +4,6 @@ Before you create your virtual portals, review this information for planning pur
 
 HCL has tested an installation with 300 virtual portals successfully. The limiting factor is not the absolute number of virtual portals, but the overall number of pages and URL mappings. For more details see the topic about *Known limitations for virtual portals*.
 
-HCL Portal provides two pre-configured virtual portals, one each for use as internet and intranet portals. For more information see the topic about *Scope of virtual portals*.
 
 <!--
 -   **[Separating and sharing resources between virtual portals](../admin-system/advppln_scope.md)**  

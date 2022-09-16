@@ -12,9 +12,6 @@ Logs can be enabled and disabled as desired by DX developers and administrators 
 
     The DXClient tool Logs can be disabled by setting the parameter `enableLogger: false` in the config.json file.
 
-
-
-<!-- ???Info "Related information:"
-
-[DXClient](../containerization/dxclient.md) -->
+???+ info "**Related information:**"
+[DXClient](dxclient.md)
 

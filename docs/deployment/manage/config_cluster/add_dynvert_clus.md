@@ -60,10 +60,8 @@ You can add vertical cluster members to your dynamic cluster. The members share 
 
     3.  Run the following task:
 
-        -   AIX® HP-UX Linux™ Solaris: `./ConfigEngine.sh cluster-node-config-vertical-cluster-setup -DServerName=unique vertical cluster servername -DWasPassword=password`
-        -   IBM® i: `ConfigEngine.sh cluster-node-config-vertical-cluster-setup -DServerName=unique vertical cluster servername -DWasPassword=password`
+        -   AIX®, Linux™: `./ConfigEngine.sh cluster-node-config-vertical-cluster-setup -DServerName=unique vertical cluster servername -DWasPassword=password`
         -   Windows™: `ConfigEngine.bat cluster-node-config-vertical-cluster-setup -DServerName=unique vertical cluster servername -DWasPassword=password`
-        -   z/OS®: `./ConfigEngine.sh cluster-node-config-vertical-cluster-setup -DServerName=unique vertical cluster servername -DWasPassword=password`
         
         Where unique vertical cluster servername is the name that you specified when you created the cluster member.
 

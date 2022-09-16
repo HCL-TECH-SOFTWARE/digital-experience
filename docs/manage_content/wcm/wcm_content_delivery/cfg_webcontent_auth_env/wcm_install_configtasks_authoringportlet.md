@@ -31,11 +31,10 @@ The language that is displayed in the authoring portlet is determined by the reg
 
 If your site contains content in different languages, then a separate Web Content Manager authoring applications should be set up for each language on different HCL Portal Servers. These can then be combined into one site using a staging server.
 
-**Note:** If a user changes their locale, any currently opened Web Content Manager dialogs will be closed. A user also must start a new session before it is displayed using the new locale. It is best practice to have the client's correct locale set before using Web Content Manager.
+!!! note
+    If a user changes their locale, any currently opened Web Content Manager dialogs will be closed. A user also must start a new session before it is displayed using the new locale. It is best practice to have the client's correct locale set before using Web Content Manager.
 
 
-**Related information**  
-
-
-[Managing portlets in your cluster](../admin-system/manage_portlets.md)
+???+ info "Related information:"
+    - [Managing portlets in your cluster](../../../../deployment/manage/config_cluster/managing_cluster/managing_portlets_in_cluster/index.md)
 

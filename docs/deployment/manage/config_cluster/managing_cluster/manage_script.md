@@ -37,10 +37,9 @@ The Portal Scripting Interface enables the creation of administrative tasks that
     
     |Operating system|Task|
     |----------------|----|
-    |Windows™|wpscript.bat -port ND SOAP Port -user user -password password|
-    |AIX®HP-UXLinux™Solaris|./wpscript.sh -port ND SOAP Port -user user -password password|
-    |IBM® i|wpscript.sh -port ND SOAP Port -user user -password password|
-    |z/OS|./wpscript.sh -port ND SOAP Port -user user -password password <br> **Note:** You must be logged in using the WebSphere administrative user ID.|
+    |Windows™|`wpscript.bat -port ND SOAP Port -user user -password password`|
+    |AIX®, Linux™|`./wpscript.sh -port ND SOAP Port -user user -password password`|
+
 
 
 

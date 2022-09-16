@@ -21,7 +21,7 @@ Further information on using the Solution Installer can be found here: [Installi
         ConfigEngine.bat install-paa update-paa-components  -DPAALocation=site\_template.paa -DappName=site\_template -Dcomponents/site\_template.unique=true 
         ```
 
-    -   **AIX®HP-UX Linux™**
+    -   **AIX and Linux™**
 
         ```
         ./ConfigEngine.sh install-paa update-paa-components  -DPAALocation=site\_template.paa -DappName=site\_template -Dcomponents/site\_template.unique=true 
@@ -40,7 +40,7 @@ Further information on using the Solution Installer can be found here: [Installi
         ConfigEngine.bat -DappName=site\_template -Dcomponents/site\_template.unique=true 
         ```
 
-    -   **AIX®HP-UX Linux™**
+    -   **AIX and Linux™**
 
         ```
         ./ConfigEngine.sh -DappName=site\_template -Dcomponents/site\_template.unique=true 
