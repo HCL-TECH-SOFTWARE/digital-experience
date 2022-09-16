@@ -18,9 +18,8 @@ To send your workflow to a system that you are not connected to, you must provid
 
     -   Check the values of the SOAP connection properties.
     -   Start the remote server in listener mode if you are not already running the server in listener mode.
-        -   AIX® HP-UX Linux™ Solaris: ./ConfigEngine.sh start-listner
-        -   IBM® i: ConfigEngine.sh start-listner
-        -   Windows™:ConfigEngine.bat start-listner
+        -   AIX® Linux™: ./ConfigEngine.sh start-listener
+        -   Windows™:ConfigEngine.bat start-listener
 3.  Click **Send to Remote System** to start your configuration on the remote system.
 
     **Note:**
