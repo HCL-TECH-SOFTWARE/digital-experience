@@ -15,6 +15,6 @@ You can control how many nested child pages that are affected by community assoc
 You can define how many communities are retrieved from the HCL Connections server when searching for communities in the Page Associations window. -->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Single sign-on for authentication](https://www.ibm.com/docs/en/SSAW57_8.5.5/com.ibm.websphere.nd.doc/ae/csec_ssovo.html)
 

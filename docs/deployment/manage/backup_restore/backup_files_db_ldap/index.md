@@ -15,6 +15,6 @@ Periodically run an automated backup procedure for the HCL Portal databases.
 5.  [Backing up the IBM Installation Manager](bck_up_iim.md)  
 IBM Installation Manager must also be included in backup and recovery planning. If you back up the HCL Portal file structure and then install a fix pack, the HCL Portal and IBM Installation Manager become out of sync after you restore the HCL Portal file system. This condition is not recoverable.
 
-???+ info "**Related information:**"
+???+ info "Related information"
     - [Backup and recovery](../../migrate/planning_migration/migration_consideration/mig_plan_backup_and_recovery.md)
 

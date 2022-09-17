@@ -73,6 +73,6 @@ The site toolbar provides access to editing features for managed pages, includin
 The language switcher allows you to switch from any of the supported languages. This feature is available only for authenticated portal users. --->
 
 
-???+ info "Related information:"
-    - [Enabler ContextMenu API](http://public.dhe.ibm.com/software/dw/lotus/mashups/javadoc30/API/api/com/ibm/mashups/builder/model/ContextMenu.html)
+???+ info "Related information"
+    -   [Enabler ContextMenu API](http://public.dhe.ibm.com/software/dw/lotus/mashups/javadoc30/API/api/com/ibm/mashups/builder/model/ContextMenu.html)
 

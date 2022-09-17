@@ -35,7 +35,7 @@ The HCL Connections integration assets use a common infrastructure that is calle
 Single sign-on \(SSO\) for browser-based access to HCL Connections in SmartCloud for Social Business is enabled by using Service Provider Initiated Authentication Flow. You can enable SSO for all links, including external URLs, custom markup, search results, and social portlets. -->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Configuration settings for Tivoli Federated Identity Manager \(TFIM\)](../../../../../portlets_development/web2_ui/outbound_http_connection/authenticating_outbound_http_connections/establish_sso_connections_thru_SAML20_tokens/cfg_saml_auth_conn/cfg_settings_tfim/index.md)
     - [Configuration settings for Active Directory Federation Services \(ADFS\)](../../../../../portlets_development/web2_ui/outbound_http_connection/authenticating_outbound_http_connections/establish_sso_connections_thru_SAML20_tokens/cfg_saml_auth_conn/cfg_settings_adfs/index.md)
     - [Enable federated security](../../../../../../deployment/manage/security/user_registry/cw_ldap.md)

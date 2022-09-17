@@ -15,6 +15,6 @@ Create a theme metadata with the key com.ibm.portal.layout.template.ref. XMLAcce
 ```
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Changing theme metadata](../../../customizing_theme/cfg_portal_theme_and_modules/themeopt_cust_config_metadata.md)
 

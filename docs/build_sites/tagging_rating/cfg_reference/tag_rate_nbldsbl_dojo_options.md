@@ -36,7 +36,7 @@ To enable the Dojo tagging and rating options for other profiles, proceed as fol
 You can now use the Dojo tagging and rating menu options with the modified profile. To disable the Dojo options for a profile, remove the module `wp_tagging_rating_menu` from the profile, and apply the modified profile on the server by the described procedure.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [What is new in tagging and rating](../tag_rate_whatsnew.md)
     - [Tag and Search Center pages](../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/mig_post_tagsearchpages.md)`
 

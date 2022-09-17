@@ -37,6 +37,6 @@ Example 2 - Setting the `BookmarkableFlag` for a content page:
 ```
 
 
-???+ info "**Related information**"  
-    - [Model SPI overview](../dev/dgn_modelovw.md)
+???+ info "Related information"  
+    - [Model SPI overview](../../../../../extend_dx/apis/model_spi/index.md)
 

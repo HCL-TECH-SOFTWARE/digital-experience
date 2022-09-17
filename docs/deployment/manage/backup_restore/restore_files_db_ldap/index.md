@@ -35,6 +35,6 @@ Before you restore HCL Portal databases, remember to adhere to the following pri
     -   For IBM Domino®, refer to the Directory Services topics in the Domino Administrator Help.
     -   For other LDAP servers, refer to the product documentation for instructions.
 
-???+ info "**Related information:**"
+???+ info "Related information"
     - [Backup and recovery](../../migrate/planning_migration/migration_consideration/mig_plan_backup_and_recovery.md)
 

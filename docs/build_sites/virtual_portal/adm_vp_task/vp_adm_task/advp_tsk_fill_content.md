@@ -7,7 +7,7 @@ This default content is determined by the default XML script file for initializi
 For more information, see the *Virtual portals command reference*. For more information, about the XML configuration interface and how to use it, see the *XML configuration interface*.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Preconfiguring the default content for virtual portals](../../vp_mgr_portlet/preconfig_vp/advp_precfg_content.md)
     - [Administering the portal content and resources for virtual portals](../advp_adm_content.md)
     - [Virtual portals command reference](../../vp_reference/vp_command_ref/index.md)

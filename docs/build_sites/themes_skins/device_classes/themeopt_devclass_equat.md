@@ -58,6 +58,6 @@ Portal-if tag has a device class attribute that allows checking the client for a
 <!--
 **Previous topic:**[Assigning device classes](../dev-theme/themeopt_devclass_assign.md) -->
 
-???+ info "Related information:"
+???+ info "Related information"
 - [Target MobileFirst resources](../../../extend_dx/integration/ibm_mobilefirst/wl_device_classes.md)
 

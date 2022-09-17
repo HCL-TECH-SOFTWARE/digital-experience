@@ -29,6 +29,6 @@ Configure a remote search service for Portal Search.
 -   **[Configuring HTTP for the seedlist servlet](../admin-system/confighttpsservlet.md)**  
 Learn how to configure HTTP for the seedlist servlet. The seedlist servlet requires HTTPs by default. Therefore, when you access the servlet through HTTP, WebSphere Application Server redirects you to HTTPs. --->
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Search Services](../manage_search/srch_srvs.md)
 

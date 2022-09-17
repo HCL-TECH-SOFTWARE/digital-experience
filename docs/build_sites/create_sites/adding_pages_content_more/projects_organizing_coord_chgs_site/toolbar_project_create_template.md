@@ -56,7 +56,7 @@ Project templates are the foundation of your projects. As the content owner, you
 
 6.  Click **Save and Close** when you finish managing the project.
 
-7.  Click **More** \> **Create Project Template**. The setup of this project is now saved as a template and uses your project name as the template name.
+7.  Click **More > Create Project Template**. The setup of this project is now saved as a template and uses your project name as the template name.
 
 
     -   **Organize content for customer conferences with projects**
@@ -66,10 +66,10 @@ Project templates are the foundation of your projects. As the content owner, you
         1.  To get started, you open the project menu on the action bar and click **New Project**.
         2.  From the **Create a project from** menu, you select the **Default Project Template**.
         3.  You enter New Product as the name of the project. You click **Create**.
-        4.  You click **Manage Project** \> **Approval** to add approvers. You add the engineering team as the approvers of content for projects based on this template.
+        4.  You click **Manage Project > Approval** to add approvers. You add the engineering team as the approvers of content for projects based on this template.
         5.  You save your changes and return to the Project Overview. You save this project as a template by clicking **More** \> **Create Project Template**.
         6.  You then create the Promotions template. For this template, you add the marketing team as the approvers of content for projects based on this template.
 
-???+ info "Related information:"
-    - [Creating project templates](../../site_prep_content_author/site_project_temps.md)
+???+ info "Related information"
+    -   [Creating project templates](../../site_prep_content_author/site_project_temps.md)
 

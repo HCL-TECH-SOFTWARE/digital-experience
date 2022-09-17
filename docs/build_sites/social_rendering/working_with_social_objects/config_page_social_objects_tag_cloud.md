@@ -44,7 +44,7 @@ Learn how to enable Tag Cloud portlet support on your portal page. You can enabl
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Profile schema definition](../../themes_skins/the_module_framework/writing_module/themeopt_mod_pro_def.md)
     - [Using the portal Tag Cloud with lists of social objects](../working_with_social_objects/using_portal_tagcloud_with_social_objects/index.md)
 

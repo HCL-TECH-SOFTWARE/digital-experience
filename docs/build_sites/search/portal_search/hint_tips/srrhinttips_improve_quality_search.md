@@ -22,6 +22,6 @@ When a site visitor enters more than one search term, the Portal search engine a
 When a site visitor runs a search, any values from metadata fields such as `title`, `description`, or `keywords` are automatically added to the generic `content` field in the search index. The values in these fields contribute equally to relevance calculation for any qualifying documents that are returned in the search results list. Use the search service configuration parameter boostingSettings to give extra weight to specified metadata fields, such as `title` or `description`. You can also use boostingSettings to specify how much extra weight specified metadata fields receive. For more information on the parameter boostingSettings, see *Search service configuration parameters* in the related links.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Search service configuration parameters](../administer_portal_search/search_service_params/index.md)
 

@@ -16,6 +16,6 @@ You can completely disable the site toolbar along with the toolbar tabs for the 
 You can limit the visibility of the toolbar, Site Manager, and action bar to administrators only. You can also limit the visibility of the toolbar and Site Manager to administrators only without affecting the visibility of the action bar.
 -->
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Removing the site toolbar on a production server](../wcm_mngpages_disabletool.md)
 

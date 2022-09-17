@@ -42,7 +42,7 @@ In a default portal installation, the group All Authenticated Portal Users has t
     -   In a default portal installation, anonymous users have no role assigned. For anonymous users to create and delete personal public tags and ratings, assign them the CONTRIBUTOR role.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Tagging and rating](../tagging_rating/index.md)
     - [Access permissions](../../deployment/manage/security/controlling_access/resources_roles/sec_acc_rights.md)
     - [The tag and rating widgets](../tagging_rating/tagging_rating_ui/tagging_rating_widget/index.md)

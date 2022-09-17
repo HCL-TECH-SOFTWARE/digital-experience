@@ -11,17 +11,7 @@ Review the following information to manage replication:
 
     Data replication service (DRS) is the internal WebSphere® Application Server component that replicates data among application servers. There are several types of data replication, and HCL Portal can use data replication for dynamic caching and for memory-to-memory replication of session data. Enabling data replication for dynamic caching in a cluster environment is necessary to maintain data integrity between multiple HCL Portal nodes in the cluster. Replication also helps improve performance by generating data once and then replicating it to other servers in the cluster.
 
-    -   AIX® HP-UX Linux™ Solaris Windows™: [Dynamic cache service settings](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.nd.doc/ae/udyn_rcachesettings.html)
-
-        **DB2 for z/OS tip:** If you use the IBM® DB2 Universal Database™ for z/OS® JDBC type 2 driver, you must set the JDBC driver custom property fullyMaterializeLobData to false. See [Data sources](http://www-01.ibm.com/support/knowledgecenter/SS7K4U_8.5.5/com.ibm.websphere.zseries.doc/ae/cdat_datasor.html) for information.
-
-    -   IBM® i: [Dynamic cache service settings](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.nd.iseries.doc/ae/udyn_rcachesettings.html)
-
-        **DB2 for z/OS tip:** If you use the IBM® DB2 Universal Database™ for z/OS® JDBC type 2 driver, you must set the JDBC driver custom property fullyMaterializeLobData to false. See [Data sources](http://www-01.ibm.com/support/knowledgecenter/SS7K4U_8.5.5/com.ibm.websphere.zseries.doc/ae/cdat_datasor.html) for information.
-
-    -   z/OS®: [Dynamic cache service settings](http://www-01.ibm.com/support/knowledgecenter/SS7K4U_8.5.5/com.ibm.websphere.zseries.doc/ae/udyn_rcachesettings.html)
-
-        **DB2 for z/OS tip:** If you use the IBM® DB2 Universal Database™ for z/OS® JDBC type 2 driver, you must set the JDBC driver custom property fullyMaterializeLobData to false. See [Data sources](http://www-01.ibm.com/support/knowledgecenter/SS7K4U_8.5.5/com.ibm.websphere.zseries.doc/ae/cdat_datasor.html) for information.
+    -   AIX®, Linux™ and Windows™: [Dynamic cache service settings](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.nd.doc/ae/udyn_rcachesettings.html)
 
 -   **Distributed sessions**
 
@@ -30,7 +20,7 @@ Review the following information to manage replication:
     !!!warning
         The memory-to-memory session application can lead to low memory conditions if failures cause replication to fail. This condition can occur because the local and backup sessions are stored in the JVM memory. Therefore, failures with replicating the session data can prevent freeing the memory that is allocated for the backup session.
 
-    -   AIX® HP-UX Linux™ Solaris Windows™:
+    -   AIX®, Linux™ and Windows™:
         -   For general information, read [Session management support](https://www.ibm.com/docs/en/was/9.0.5?topic=sessions-session-management-support).
         -   For memory-to-memory information, read [Memory-to-memory replication](https://www.ibm.com/docs/en/was/9.0.5?topic=SSEQTP_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/cprs_memory2memory.html).
         -   For database session information, read [Configuring for database session persistence](https://www.ibm.com/docs/en/was/9.0.5?topic=sessions-configuring-database-session-persistence).

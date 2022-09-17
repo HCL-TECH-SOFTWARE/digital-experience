@@ -181,6 +181,6 @@ If there have been changes to users and groups that are within the specified rea
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Setting service configuration properties](../../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 

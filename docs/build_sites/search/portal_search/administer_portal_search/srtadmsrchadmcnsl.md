@@ -28,7 +28,7 @@ To administer Portal Search by using the WebSphere Integrated Solutions Console,
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Planning and preparing for Portal Search](../../planning_portal_search/index.md)
     - [Search service configuration parameters](../administer_portal_search/search_service_params/index.md)
 

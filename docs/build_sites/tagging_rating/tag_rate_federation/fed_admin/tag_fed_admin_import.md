@@ -46,6 +46,6 @@ You can also select and specify which HCL Connections features you want a task t
 To retrieve changes in the HCL Connections tag cloud, you need to run the FederationTaskHandler script.
 
 
-???+ info "Related information:"
+???+ info "Related information"
    - [Working with the XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
 

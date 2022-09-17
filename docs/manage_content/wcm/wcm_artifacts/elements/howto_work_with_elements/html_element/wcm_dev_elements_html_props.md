@@ -12,13 +12,10 @@ Any combination of web content tags can be used in HTML elements with the follow
     -   \[Component name="example" start="<a href="" end=""\>link</a\>"\]
     -   \[Component name="example" start="<img src="" end=""/\>"\]
 
-???+ info "**Related information**"  
+???+ info "Related information"  
     - [Inserting an image in an element](../../element_designs/wcm_dev_elements_insert_image.md)
-
     - [Inserting a link in an element](../../element_designs/wcm_dev_elements_insert_link.md)
-
     - [Inserting element tags](../../element_designs/wcm_dev_elements_insert_tags.md)
-
     - [Creating web content tags](../../../../wcm_artifacts/tags/creating_web_content_tags/index.md)
 
 

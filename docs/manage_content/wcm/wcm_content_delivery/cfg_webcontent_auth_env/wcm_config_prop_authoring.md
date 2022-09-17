@@ -265,6 +265,6 @@ To enable the creation of content items without using a content template when yo
 Content items that are created by using this option have no content template accessible by the user. This option is useful when there is a need for content to store data, such as configuration parameters, but not be rendered in a website.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 

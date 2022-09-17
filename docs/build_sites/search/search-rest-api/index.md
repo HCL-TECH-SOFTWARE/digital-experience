@@ -172,7 +172,7 @@ The following document describes the facet parameter of the Search API and the c
 The Digital Experience Search REST API provides developers programmatic access to search indexed Digital Experience content and web pages. The Digital Experience Search REST API Explorer allows developers to explore and test the Digital Experience Search REST APIs. --->
 
 
-???+ info "Related information:"
+???+ info "Related information"
    - [Search](../index.md)
    - [Paged Feeds](https://datatracker.ietf.org/doc/html/rfc5005#section-3)
 

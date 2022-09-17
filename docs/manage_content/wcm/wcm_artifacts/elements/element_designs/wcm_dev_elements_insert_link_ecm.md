@@ -19,22 +19,14 @@ The **Insert Link to Remote Document** function requires the modularized theme a
     If you access the remote server with a user ID and password, a temporary credential vault slot is created to store and manage authentication data. When you close the wizard, the temporary credential vault slot is automatically deleted. However, if you do not close the wizard explicitly, the temporary credential vault slot cannot be deleted. For example, this situation can occur if you close the browser window before you complete the wizard. Any temporary credential vault slots that are not used for at least 3 hours are removed by a cleanup task \(com.ibm.portal.cmis.TransientSlotCleanupTask\) that runs once a day. An administrator can change the schedule of the cleanup task through the XML configuration interface.
 
 
-???+ info "**Related information**"
-
+???+ info "**Related information"
     - [Configuring remote server access for links](../../../wcm_content_delivery/cfg_webcontent_auth_env/wcm_config_ecm_whitelist.md)
-
     - [Reserved authoring portlet](../../../wcm_artifacts/reserved_auth_portlet/index.md)
-
     - [The module framework](../../../../../build_sites/themes_skins/the_module_framework/index.md)
-
     - [Editor options](../../../wcm_content_delivery/wcm_user_assistance/editing_webcontent_portlet/auth_portlet_settings/wcm_config_authoringportlet_richtext.md)
-
     - [Customizing pages](../../../../../extend_dx/development_tools/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/customizing_pages/index.md)
-
     - [Setting up support for federated documents](../../../wcm_content_delivery/cfg_webcontent_auth_env/fed_docs_setup/index.md)
-
     - [Reserved authoring portlet](../../../wcm_artifacts/reserved_auth_portlet/index.md)
-
     - [Integrating HCL Connections files](../../../../../extend_dx/integration/connections/configuration/cfg_connections_features/integrating_cnx_files/index.md)
 
 

@@ -26,6 +26,6 @@ The following examples demonstrate some of the possible combinations:
 
 **Next topic:**[Creating and deleting device classes](../dev-theme/themeopt_devclass_working.md) -->
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Target MobileFirst resources](../../../extend_dx/integration/ibm_mobilefirst/wl_device_classes.md)
 

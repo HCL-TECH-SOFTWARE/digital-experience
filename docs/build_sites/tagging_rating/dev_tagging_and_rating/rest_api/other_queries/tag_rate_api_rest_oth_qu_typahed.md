@@ -25,7 +25,7 @@ You can configure how the tag names are displayed in terms of normalization. To 
 Example: If the search term is `web`, then the response to tos:typeahead&term=web contains the suggestions `WebSphere`, `Website`, and `WebBrowser`. The notation in JSON is as follows in the mime type application/json: `["Web",["WebSphere", "Website", "WebBrowser"]]` . This is the format proposed by OpenSearch Suggestions extension Version 1.1 draft 1.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Adding query parameters](../tag_rate_api_rest_add_qparms.md)
     - [Type-ahead feature for the deprecated tag widget](../../../howto_tagging_rating/tag_rate_adm_typeahead.md)
     - [Normalizing tags](../../../howto_tagging_rating/tag_rate_adm_norm_local.md)

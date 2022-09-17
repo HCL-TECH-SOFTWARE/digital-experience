@@ -86,7 +86,7 @@ Example: Deleting all terms from the blacklist filter:
 This sample snippet deletes all terms from the blacklist.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [CP Configuration Service for tagging and rating](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/index.md)
     - [Setting service configuration properties](../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
     - [Working with the XML configuration interface](../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)

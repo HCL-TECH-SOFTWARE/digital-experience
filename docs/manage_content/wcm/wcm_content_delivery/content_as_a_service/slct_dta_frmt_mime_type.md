@@ -41,6 +41,6 @@ For example, you might use a naming convention to select the proper presentation
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Writing links to web content](../../wcm_artifacts/tags/wcm_dev_writing-links.md)
 

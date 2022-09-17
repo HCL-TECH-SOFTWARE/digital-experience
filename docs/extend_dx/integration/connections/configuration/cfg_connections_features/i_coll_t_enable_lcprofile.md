@@ -60,6 +60,6 @@ After you enable the HCL Connections profile for a particular user, when you mov
     If you integrate HCL Connections and then select a user who does not have a HCL Connections profile, portal displays the message profile does not exist. Click **Back** to return to HCL Portal.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Starting and stopping servers, deployment managers, and node agents](../../../../../deployment/manage/stopstart.md)
 

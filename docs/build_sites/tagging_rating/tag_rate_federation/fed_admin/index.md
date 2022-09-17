@@ -13,6 +13,6 @@ When a user clicks an HCL Connections resource in the result list portlet, this 
 When federated resources are displayed in the Tag Results portlet, you can have them preceded by a icon. --->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Configuring task to retrieve tags](../../../../extend_dx/integration/connections/configuration/cfg_connections_features/integrating_cnx_tags/i_coll_t_enable_lctags_task.md)
 

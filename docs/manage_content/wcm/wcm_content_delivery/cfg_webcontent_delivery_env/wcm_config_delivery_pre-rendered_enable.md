@@ -219,7 +219,7 @@ You can pre-render sites either manually, or to a schedule, or at intervals. The
     -   `connect.businesslogic.module`
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
     - [Pre-render methods](../delivering_web_content/pre-rendered_delivery/wcm_config_delivery_pre-rendered_running.md)
 

@@ -44,7 +44,7 @@ You must reset the web content event log under these circumstances:
 
 
 
-???+ info Related information:"
+???+ info Related information"
     - [Syndication troubleshooting](../../wcm_content_delivery/syndication/wcm_syndication_troubleshooting.md)
     - [Exporting and importing web content libraries](../wcm_adm_tools/wcmlibrary_export/index.md)
 

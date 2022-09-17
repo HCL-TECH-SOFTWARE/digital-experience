@@ -112,7 +112,7 @@ To correlate the tag space model with other models, use the following parameters
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Basic addressing](../rest_api/tag_rate_api_rest_addr.md)
     - [Adding query parameters](../rest_api/tag_rate_api_rest_add_qparms.md)
 
