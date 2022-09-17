@@ -31,5 +31,5 @@ Set up your own customized search collection for searching a secured portal site
 
 
 ???+ info "Related information:"
-- [Searching on secured portal sites and pages and content management items](../../planning_portal_search/security_considerations/srtsrchscrprtlstepgs.md)
+    - [Searching on secured portal sites and pages and content management items](../../planning_portal_search/security_considerations/srtsrchscrprtlstepgs.md)
 

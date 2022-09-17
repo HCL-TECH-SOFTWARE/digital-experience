@@ -63,19 +63,13 @@ Creating the portal site search collection can fail due to a file path length re
 -   **[On IBM i set USER.REGION variable](../admin-system/srrhinttips_i_ureg_var.md)**  
 Under IBM i, Portal Search collections might fail to collect documents.
 -   **[Users cannot see portal site search results in their preferred language](../admin-system/srrhinttips_no_lang.md)**  
-If the preferred language of the crawler user ID does not match the language of the search collection, users might not see search results in their language.
+If the preferred language of the crawler user ID does not match the language of the search collection, users might not see search results in their language. -->
 
 
-**Related information**  
-
-
-[Planning and preparing for Portal Search](../admin-system/srcbfrwrkgwtprtlsrch.md)
-
-[Managing the content sources of a search collection](../admin-system/srtmngcontsrc.md)
-
-[Static content](../site/site_static_content.md)
-
-[Dynamic user interfaces](../dev-portlet/wpsdynui_cpts.md)
-
-[Importing search web collections](../migrate/mig_t_import_webcoll.md) -->
+???+ info "Related information:"
+    - [Planning and preparing for Portal Search](../../planning_portal_search/index.md)
+    - [Managing the content sources of a search collection](../administer_portal_search/setup_search_collections/mng_content_sources_search_collections/index.md)
+    - [Static content](../../../create_sites/building_website/static_content/index.md)
+    - [Dynamic user interfaces](../../../../extend_dx/portlets_development/dynamic_user_interfaces/index.md)
+    - [Importing search web collections](../../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/mig_t_import_webcoll.md)
 

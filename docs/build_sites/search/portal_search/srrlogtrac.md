@@ -35,5 +35,5 @@ If you have set up Portal Search in a remote configuration on a WebSphere® Appl
 
 
 ???+ info "Related information:"
-[Logging and tracing](../../../deployment/manage/troubleshooting/logging_and_tracing/index.md)
+    - [Logging and tracing](../../../deployment/manage/troubleshooting/logging_and_tracing/index.md)
 
