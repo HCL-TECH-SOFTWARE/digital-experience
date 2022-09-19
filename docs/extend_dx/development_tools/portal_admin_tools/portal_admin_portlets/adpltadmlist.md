@@ -95,7 +95,7 @@ The following sections describe the portlets that are provided for working with 
 
     The Tag Center contains 2 portlets for managing and viewing tagging and rating, Tag Cloud and Tag Results. Tag Cloud can be used to see tagged content and pages in either a cloud or list format. The Tag Results portlet will display the details of selected individual or groups of tags.
 
- ## Tracing
+## Tracing
 
 -   **Enable Tracing**
 
