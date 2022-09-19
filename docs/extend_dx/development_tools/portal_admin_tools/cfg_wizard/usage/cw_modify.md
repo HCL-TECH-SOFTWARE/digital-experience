@@ -12,7 +12,7 @@ All Modify topology options assume that you already installed HCL Digital Experi
 
 ## Install a PAA File
 
-PAA files provide you with add-ons \(applications and solutions\) that were not included when you installed the current release of the product. You can download PAA files from the installation itself or develop your own PAA files. The sample PAAs are available in the installation at *PortalServer_HOME*/doc/paa-samples 
+PAA files provide you with add-ons \(applications and solutions\) that were not included when you installed the current release of the product. You can download PAA files from the installation itself or develop your own PAA files. The sample PAAs are available in the installation at *PortalServer_HOME*/doc/paa-samples. 
 
 PAA files must reside on the system that you plan to deploy the files. After you place the PAA files in the correct location, upload these files into the Configuration Wizard to install and deploy the PAA files to your environment. The Configuration Wizard lists the components of the PAA files that you can install. You can deploy all of these components to a single portal. You can also choose to run the workflow multiple times to deploy specific components of your PAA file to different portals or virtual portals.
 
