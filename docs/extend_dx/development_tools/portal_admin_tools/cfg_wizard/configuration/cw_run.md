@@ -4,9 +4,8 @@ The home page of the Configuration Wizard provides access to common configuratio
 
 Click ![Back](../images/cw_backicon.jpg) and ![Next](../images/cw_forwardicon.jpg) to move back or forward in the Configuration Wizard.
 
-1.  To get the latest updates for the wizard, apply the most recent Combined Cumulative Fix. For more information about applying the latest fix pack, see [HCL Digital Experience Combined Cumulative Fix Fix Strategy](https://help.hcltechsw.com/digital-experience/9.5/overview/new_cf95.html).
+1.  To get the latest updates for the wizard, apply the most recent Combined Cumulative Fix. For more information about applying the latest fix pack, see [HCL Digital Experience Combined Cumulative Fix Strategy](https://help.hcltechsw.com/digital-experience/9.5/overview/new_cf95.html).
 
-    **Note:** Skip this step, if you have the most recent fix pack applied.
 
 2.  Restart server1 to ensure that the Configuration Wizard uses the updated environment variables. Go to AppServer\_home/profiles/cw\_profile/bin and stop the server:
 
@@ -18,11 +17,10 @@ Click ![Back](../images/cw_backicon.jpg) and ![Next](../images/cw_forwardicon.jp
     -   AIX HP-UX Linux Solaris: ./startServer.sh server1
     -   IBM i: startServer cw\_profile
     -   Windows: startServer.bat server1
-3.  Access the Configuration Wizard. Go to http://your\_server/hcl/wizard.
+3.  Access the Configuration Wizard. Go to https://your\_server/hcl/wizard for a Kubernetes deployment or  http://your\_server:10200/ibm/wizard for a traditional deployment.
 
-    **Note:** If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address is: http://your\_server:10200/ibm/wizard. After installing CF18, the Configuration Wizard address is http://your\_server/hcl/wizard.
+    **Note:** If working with HCL Digital Experience a software level prior to CF18, the wizard address is: http://your\_server:10200/ibm/wizard. After installing CF18, the Configuration Wizard address is http://your\_server:10200/hcl/wizard.
 
-    **Restriction:** There is a known issue with Chrome version 45.x and the Configuration Wizard. If you are experiencing difficulties, use a different browser when you access the wizard.
 
 4.  Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw\_profile.
 
