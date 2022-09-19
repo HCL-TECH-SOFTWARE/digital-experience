@@ -29,7 +29,7 @@ This section outlines how to enable Practitioner Studio and Woodburn Studio in b
     -   Windows: `ConfigEngine.bat **enable-v95-UI-features-virtual-portal** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> **-DVirtualPortalContext=**`
 
     !!! note
-        -   To configure the virtual Portal Manager so that Practitioner Studio is deployed for the newly created virtual portals, see [How to configure Practitioner Studio](../practitioner_studio/config_prac_studio.html).
+        -   To configure the virtual Portal Manager so that Practitioner Studio is deployed for the newly created virtual portals, see [How to configure Practitioner Studio](../../practitioner_studio/working_with_ps/config_prac_studio.md).
 
         -   To enable Practitioner Studio and Woodburn Studio on all available Virtual Portals, you can use the following parameter: `-DUpdateVPs=true`
 

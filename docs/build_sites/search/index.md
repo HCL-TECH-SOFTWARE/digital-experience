@@ -42,7 +42,5 @@ HCL Digital Experience provides two distinct search capabilities. You can use bo
 19. [Configuring search collections for a virtual portal](../admin-system/advp_tsk_cgf_srchcoll.md)  
 Configuring JCR search collections for a virtual portal might require additional administration, depending on how you set up the virtual portal. -->
 
-
 ???+ info "Related information"
     -   [Search REST API specification](../search/search-rest-api/index.md)
-

@@ -55,6 +55,7 @@ View information on setting up search collections for search by users. This also
 -   **[Searching and crawling Portal and other sites](../admin-system/srcportals.md)**  
 You can configure your local Portal site and crawl remote Portal sites so that they are searchable by users. Run crawlers against other external websites to make them searchable by local portal users.  --->
 
+
 ???+ info Related information"
     - [Planning and preparing for Portal Search](../../../../build_sites/search/planning_portal_search/index.md)
     - [Exporting and importing search collections](../../../../build_sites/search/portal_search/administer_portal_search/setup_search_collections/srtexpimp.md)
