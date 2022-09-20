@@ -61,10 +61,10 @@ With CF 05 and later fix packs, you must not modify the default handler definiti
       xmlns:pfx="http://www.ibm.com/xmlns/prod/websphere/portal/wsrp/wsdl/v2">pfx:WSRPService_v2</service-qname>
    <handler-chains>
       <handler-chain>
-**         <handler\>
-            <handler-name\>WSRP 2.0 Default Consumer Handler</handler-name\>
-            <handler-class\>com.ibm.wps.wsrp.consumer.handler.ConsumerHandlerChain</handler-class\>
-         </handler\>**
+**         <handler>
+            <handler-name>WSRP 2.0 Default Consumer Handler</handler-name>
+            <handler-class>com.ibm.wps.wsrp.consumer.handler.ConsumerHandlerChain</handler-class>
+         </handler>**
          <handler>
             <handler-name>sample handler</handler-name>
             <handler-class>sample.handler.ConsumerHandler</handler-class>
