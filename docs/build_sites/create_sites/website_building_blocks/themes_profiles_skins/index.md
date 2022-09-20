@@ -27,7 +27,7 @@ Skins include more capability and can be used to visually indicate portlets on a
 -   **[JavaScript libraries](site_jslib.md)**  
 HCL includes JavaScript libraries to support various features. --->
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Included profiles](../../../themes_skins/the_module_framework/specify_profiles/themeopt_mod_oob_profile.md)
     - [Modules that are provided with the modularized theme](../../../themes_skins/the_module_framework/oob_modules/index.md)
     - [Default skins](../../../themes_skins/customizing_theme/skins/themeopt_cust_skindefault.md)

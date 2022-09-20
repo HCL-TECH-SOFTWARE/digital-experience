@@ -13,6 +13,6 @@ As an administrator you can promote specific pages, documents, or other pieces o
 Delete or replace the All Sources default scope. -->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Configuring search scopes for the Search Center portlet](../cfg_searchcenter/srtcfg_sc_scopes.md)
 

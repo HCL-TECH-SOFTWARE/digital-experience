@@ -62,6 +62,6 @@ Some of the components are mandatory. Do not remove them.
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Tag widget parameter reference](../../../cfg_reference/parm_ref_tag_rate_widget/tag_rate_parm_ref_inl_tag_lite.md)
 

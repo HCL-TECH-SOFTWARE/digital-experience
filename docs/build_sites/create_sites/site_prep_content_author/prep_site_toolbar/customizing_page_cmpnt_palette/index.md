@@ -14,7 +14,6 @@ Configure the results that display when a content author searches for a portlet 
 
 By default, only web content items can be drag and dropped from the toolbar. You can use a keyword to implement the same behavior with site areas.  --->
 
-
 ???+ info "Related information:"
     - [Site toolbar and Site Manager](../../../authoring_tools/site_site_toolbar.md)
     - [Creating web content when you add a web content viewer to a page](../../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/customizing_content/wcm_delivery_content_addshelf.md)

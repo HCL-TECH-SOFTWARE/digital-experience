@@ -122,6 +122,6 @@ or
     When configuring an item by its path, you cannot build the path from the **Display title** fields of the items in the path. You must use the **Name** fields of the items when specifying the path.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [The XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
 

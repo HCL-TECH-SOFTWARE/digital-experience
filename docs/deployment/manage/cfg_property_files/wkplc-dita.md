@@ -129,17 +129,11 @@ Provide information about the WebSphere Application Server used in the WebSphere
 
     -   **Examples**
 
-        AIX: /usr/IBM/WebSphere/AppServer
+        -   AIX: /usr/IBM/WebSphere/AppServer
 
-        HP-UX: /opt/IBM/WebSphere/AppServer
+        -   Linux: /opt/IBM/WebSphere/AppServer
 
-        IBM i: /QIBM/ProdData/WebSphere/AppServer/V85/ND
-
-        Linux: /opt/IBM/WebSphere/AppServer
-
-        Solaris: /opt/IBM/WebSphere/AppServer
-
-        Windows: c:/Program\_Files/IBM/WebSphere/AppServer
+        -   Windows: c:/Program_Files/IBM/WebSphere/AppServer
 
 -   **WasUserHome**
 
@@ -153,17 +147,11 @@ Provide information about the WebSphere Application Server used in the WebSphere
 
     -   **Examples**
 
-        AIX: /usr/WebSphere/wp\_profile
+        -   AIX: /usr/WebSphere/wp_profile
 
-        HP-UX: /opt/WebSphere/wp\_profile
+        -   Linux: /opt/WebSphere/wp_profile
 
-        IBM i: /QIBM/UserData/WebSphere/AppServer/V8/ND/profiles/wp\_profile
-
-        Linux: /opt/WebSphere/wp\_profile
-
-        Solaris: /opt/WebSphere/wp\_profile
-
-        Windows: c:/WebSphere/wp\_profile
+        -   Windows: c:/WebSphere/wp_profile
 
 -   **CellName**
 

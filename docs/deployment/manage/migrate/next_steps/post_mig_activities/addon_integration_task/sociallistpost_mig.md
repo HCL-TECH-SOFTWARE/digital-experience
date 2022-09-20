@@ -4,17 +4,15 @@ After you migrate from a previous Portal Version to HCL Digital Experience 8.5, 
 
 If you migrated from Portal 7.0 to HCL Digital Experience 8.5, then you must run the action-install-wcm-localrender-portlet task before you start the following procedure:
 
--   AIX® HP-UX Linux™ Solaris: ./ConfigEngine.sh action-install-wcm-localrender-portlet -DPortalAdminPwd=password -DWasPassword=password
--   IBM® i: ConfigEngine.sh action-install-wcm-localrender-portlet -DPortalAdminPwd=password -DWasPassword=password
--   Windows™: ConfigEngine.bat action-install-wcm-localrender-portlet -DPortalAdminPwd=password -DWasPassword=password
--   z/OS®: ./ConfigEngine.sh action-install-wcm-localrender-portlet -DPortalAdminPwd=password -DWasPassword=password
+-   AIX® and Linux™: `./ConfigEngine.sh action-install-wcm-localrender-portlet -DPortalAdminPwd=password -DWasPassword=password`
+-   Windows™: `ConfigEngine.bat action-install-wcm-localrender-portlet -DPortalAdminPwd=password -DWasPassword=password`
 
-1.  Go to the wp\_profile\_root/ConfigEngine directory. Run the deploy-social-rendering task:
 
-    -   AIX HP-UX Linux Solaris: ./ConfigEngine.sh deploy-social-rendering -DPortalAdminPwd=password -DWasPassword=password
-    -   IBM i: ConfigEngine.sh deploy-social-rendering -DPortalAdminPwd=password -DWasPassword=password
-    -   Windows: ConfigEngine.bat deploy-social-rendering -DPortalAdminPwd=password -DWasPassword=password
-    -   z/OS: ./ConfigEngine.sh deploy-social-rendering -DPortalAdminPwd=password -DWasPassword=password
+1.  Go to the wp_profile_root/ConfigEngine directory. Run the deploy-social-rendering task:
+
+    -   AIX and Linux: `./ConfigEngine.sh deploy-social-rendering -DPortalAdminPwd=password -DWasPassword=password`
+    -   Windows: `ConfigEngine.bat deploy-social-rendering -DPortalAdminPwd=password -DWasPassword=password`
+    
     By default, the task is run on the base portal. To run this task on a different virtual portal, identify the virtual portal by adding one of the following parameters to the command line. Each parameter requires the prefix -D on the command line:
 
     -   **VirtualPortalHostName**
@@ -27,18 +25,17 @@ If you migrated from Portal 7.0 to HCL Digital Experience 8.5, then you must run
 
     **Example Commands:**
 
-    ./ConfigEngine.sh deploy-social-rendering -DPortalAdminPwd=password -DWasPassword=password -DVirtualPortalContext=vp1
+    `./ConfigEngine.sh deploy-social-rendering -DPortalAdminPwd=password -DWasPassword=password -DVirtualPortalContext=vp1`
 
-    **Note:** If you plan to continue to use the old toolbar, you can use the following configuration task to deploy new social portlets to that toolbar.
+    !!!note
+        If you plan to continue to use the old toolbar, you can use the following configuration task to deploy new social portlets to that toolbar:<br>
 
-    ./ConfigEngine.sh action-deploy-social-shelf-category-and-portlets -DPortalAdminPwd=password -DWasPassword=password
+        `./ConfigEngine.sh action-deploy-social-shelf-category-and-portlets -DPortalAdminPwd=password -DWasPassword=password`
 
-2.  Verify that the web content library Social Lists 1.1 was created. Click the **Administration menu** icon. Then, click **Portal Content** \> **Web Content Libraries**.
-
-
-
-**Related information**  
+2.  Verify that the web content library Social Lists 1.1 was created. Click the **Administration menu** icon. Then, click **Portal Content > Web Content Libraries**.
 
 
-[How to enable social rendering in a virtual portal](../social/add_sociallists_to_virtualportal.md)
+
+???+ info "Related information"  
+    -   [How to enable social rendering in a virtual portal](../../../../../../build_sites/social_rendering/administering_social_list/add_sociallists_to_virtualportal.md)
 

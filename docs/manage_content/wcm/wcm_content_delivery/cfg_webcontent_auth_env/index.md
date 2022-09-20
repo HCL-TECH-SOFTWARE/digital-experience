@@ -23,6 +23,6 @@ Before you can add links to files and documents that are stored in remote conten
 Before you can access metadata from federated documents, you need to configure access to the remote servers that contain the documents and specify information about the feeds or service documents that are used to retrieve the documents. You can also tune the cache settings that are used with the federated documents feature.
 ---->
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Access HCL Digital Asset Management](../../../digital_assets/usage/access_digital_asset_mgmt.md)
 

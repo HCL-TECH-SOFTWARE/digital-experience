@@ -15,6 +15,6 @@ The parameters are set in the web.xml file of the web module that contains the s
 ```
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Adapt the scripts that register the custom theme and skins](../../../developing_theme/dev_op_overview/manual_packaging_themes/themeopt_move_repack_script.md)
 

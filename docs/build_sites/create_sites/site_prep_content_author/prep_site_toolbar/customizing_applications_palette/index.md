@@ -30,6 +30,6 @@ If a portlet has been added to a category by adding it to a page that has been p
 You can easily modify or delete Applications palette categories. --->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Site toolbar and Site Manager](../../../authoring_tools/site_site_toolbar.md)
 

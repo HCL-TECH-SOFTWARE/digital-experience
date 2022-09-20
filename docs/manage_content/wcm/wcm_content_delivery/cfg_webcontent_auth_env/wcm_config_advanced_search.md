@@ -28,6 +28,6 @@ You can specify the following properties:
     -   If the property is not specified, this setting defaults to the `false` behavior.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 

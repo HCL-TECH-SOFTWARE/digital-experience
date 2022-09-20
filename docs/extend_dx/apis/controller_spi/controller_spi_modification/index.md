@@ -39,7 +39,7 @@ The Controller SPI allows you to modify portal resources and the topology of you
 The Controller SPI enables the modification of properties resources.
 
 
-???info "**Related information:**"  
+???info "Related information"  
     - [Obtaining a controller for working with resources](../working_with_controllers/index.md)
     - [Committing and persisting your modifications](../working_with_controllers/ctrlrapit_comit.md)
 

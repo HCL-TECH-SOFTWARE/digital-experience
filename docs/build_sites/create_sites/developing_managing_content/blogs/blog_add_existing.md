@@ -46,6 +46,6 @@ If you created a blog or blog library for another page and now want to use it ag
     Tagged web content that is displayed in the web content viewer is only available when there is a single instance of this portlet on the page. When you click a tag result, the Tag Center broadcasts the information on what content displays in the viewer with a public render parameter. If you have multiple instances of web content that is displayed in the web content viewer, then these instances display the content that you tagged rather than display the original content of these instances.
 
 
-???+ info "Related information:"
-    - [Web Content Viewer best practices and limitations](../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/wcm_config_delivery_portlet_bestpractice.md)
+???+ info "Related information"
+    -   [Web Content Viewer best practices and limitations](../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/wcm_config_delivery_portlet_bestpractice.md)
 

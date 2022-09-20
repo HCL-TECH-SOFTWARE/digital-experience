@@ -87,6 +87,6 @@ To add the External Search Results portlet to the **HCL Digital Experience Produ
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [How to create an outbound HTTP connection configuration profile](../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/cfg_outbound_http_connections/adm_tools_for_cfg_outbound_http_conn/cfg_outbound_http_using_cfgtsk/outbhttp_cfg_tsk_create.md)
 

@@ -28,7 +28,7 @@ Example: If the search term is `web`, then the response to tos:searchsuggestion&
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Adding query parameters](../tag_rate_api_rest_add_qparms.md)
     - [Normalizing tags](../../../howto_tagging_rating/tag_rate_adm_norm_local.md)
     [OpenSearch Suggestions extension Version 1.1](https://github.com/dewitt/opensearch/blob/master/mediawiki/Specifications/OpenSearch/Extensions/Suggestions/1.1/Draft%201.wiki)

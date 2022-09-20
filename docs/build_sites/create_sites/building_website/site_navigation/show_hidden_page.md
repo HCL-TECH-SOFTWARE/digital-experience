@@ -12,6 +12,6 @@ As a page editor, you might want to access hidden pages by using the navigation.
 -   To make hidden pages display in the navigation, select **Menu** \> **Show Hidden Pages** from the site toolbar. Hidden pages are displayed in brackets in the navigation. For example, `[Hidden Page]`.
 
 
-???+ info "Related information:"
-    - [Marking pages as hidden under the content root](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref_hide_page.md)
+???+ info "Related information"
+    -   [Marking pages as hidden under the content root](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref_hide_page.md)
 

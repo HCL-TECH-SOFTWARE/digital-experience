@@ -8,7 +8,7 @@ Follow the appropriate procedures to enable or disable portal light mode.
 
 Change to the directory `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine` and run the configuration task:
 
--   AIX® HP-UX Linux™ Solaris:
+-   AIX® and Linux™:
 
     ```
     ./ConfigEngine.sh enable-portal-light-startup-performance -DWasPassword=password
@@ -20,24 +20,11 @@ Change to the directory `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profil
     ConfigEngine.bat enable-portal-light-startup-performance -DWasPassword=password
     ```
 
--   IBM® i:
-
-    ```
-    ConfigEngine.sh enable-portal-light-startup-performance -DWasPassword=password
-    ```
-
--   z/OS®:
-
-    ```
-    ./ConfigEngine.sh enable-portal-light-startup-performance -DWasPassword=password
-    ```
-
-
 **Disable portal light mode**
 
 Change to the directory `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine` and run the configuration task:
 
--   AIX HP-UX Linux Solaris:
+-   AIX and Linux:
 
     ```
     ./ConfigEngine.sh disable-portal-light-startup-performance -DWasPassword=password
@@ -49,22 +36,11 @@ Change to the directory `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profil
     ConfigEngine.bat disable-portal-light-startup-performance -DWasPassword=password
     ```
 
--   IBM i:
+!!!note "Limitations"
+    When portal light mode is enabled, the following limitations apply:
 
-    ```
-    ConfigEngine.sh disable-portal-light-startup-performance -DWasPassword=password
-    ```
-
--   z/OS:
-
-    ```
-    ./ConfigEngine.sh disable-portal-light-startup-performance -DWasPassword=password
-    ```
-
-
-**Limitations:** When portal light mode is enabled, the following limitations apply:
-
-1.  If you manually stop applications, for example by using the WebSphere® Integrated Solutions Console or the wsadmin user ID, and they are then accessed by users, the applications are automatically started again.
-2.  When you use the activation task activate-portlets to activate all portlets, it starts all portlets, including the portlets that are set for lazy load.
+        1.  If you manually stop applications, for example by using the WebSphere® Integrated Solutions Console or the wsadmin user ID, and they are then accessed by users, the applications are automatically started again.
+        
+        2.  When you use the activation task activate-portlets to activate all portlets, it starts all portlets, including the portlets that are set for lazy load.
 
 

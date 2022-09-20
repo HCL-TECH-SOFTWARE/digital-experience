@@ -68,7 +68,7 @@ You can export the contents of a web content library to disk and import this dat
 You can export the contents of a web content library to disk by creating a copy of the web content library. By working with an exported copy, you can import the copied library into the same web content server multiple times, resulting in a new library after each import without affecting previous copies. This is a quick way of creating new libraries that are fully populated with web content that you can easily adapt for other purposes. --->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Resetting the web content event log](../wcm_config_reset_event_log.md)
     - [Setting service configuration properties](../../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
     - [Staging to production list](../../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_stage_check.md)

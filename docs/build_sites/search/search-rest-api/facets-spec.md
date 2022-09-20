@@ -94,6 +94,6 @@ Description of response elements:
 ```
 
 
-???+ info "Related information:"
+???+ info "Related information"
 	- [Search constraints REST API specification](../search-rest-api/constraints-spec.md)
 	- [Introducing JSON](https://www.json.org/json-en.html)

@@ -10,17 +10,13 @@ The Configuration Wizard uses a three-step process to customize the selected con
 
 After you install your HCL Digital Experience software, use the Configuration Wizard guide to configure your system. To begin, select a configuration option and provide basic information about your environment. Based on your input, the Configuration Wizard provides examples, values, customized instructions, and scripts.
 
-1
-
-Answer Questions
+## 1. Answer Questions
 
 Answer questions about your environment, configuration goals, and preferences. The selections and input that you enter in this step determine the parameters and properties that you review in the next step. The Configuration Wizard also uses your values to provide relevant examples for your configuration.
 
 **Warning:** Do not use the browser navigation buttons to move between tabs on the **Answer Questions** page.
 
-2
-
-Customize Values
+## 2. Customize Values
 
 The Configuration Wizard initially displays the minimum number of fields that are required for this configuration for you to review and provide input. For a more advanced configuration, click **Advanced** to see fields that might apply to your configuration.
 
@@ -30,9 +26,7 @@ The Configuration Wizard uses your values to create customized property \(helper
 
 **Warning:** Do not use the browser navigation buttons to move between tabs on the **Customize Values** page or to go back to the **Answer Questions** page.
 
-3
-
-Configure
+## 3. Configure
 
 You are ready to configure your system. You can run the configuration now or save files to run on another system.
 

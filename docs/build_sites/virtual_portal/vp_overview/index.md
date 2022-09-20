@@ -11,6 +11,6 @@ Besides virtual portals, another possible configuration may be an alternative fo
 Learn about three typical usage scenarios for virtual portals. -->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Separating and sharing resources between virtual portals](../vp_planning/advppln_scope.md)
 

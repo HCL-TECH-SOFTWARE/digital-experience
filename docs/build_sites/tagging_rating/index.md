@@ -55,7 +55,7 @@ You can use the XML configuration interface to manage tagging and rating in the 
 Learn about some hints and tips that apply to tagging and rating. Some hints and tips might help developers and portal administrators, others might help portal users. --->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [CP Configuration Service for tagging and rating](../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/index.md)
     - [Setting service configuration properties](../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
     - [Enabling your own custom content for tagging and rating](tag_rate_custom_content.md)

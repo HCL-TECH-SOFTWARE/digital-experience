@@ -35,6 +35,6 @@ The table describes each field of the log format:
 |`"JSESSIONID=0000JwIm04xm7btVLwzCj9Qo-uj:-1"`|-   **cookies** <br/> The name and value of a cookie that was sent to the client browser as part of the request. If multiple cookies were sent, the list is delimited by the semicolon character.|
 
 
-???+ info "Related information:"
+???+ info "Related information"
      - [Understanding the site analysis log](../../../../../deployment/manage/monitoring/analyze_portal_usage/serverside_site_data/adsaundr.md)
 

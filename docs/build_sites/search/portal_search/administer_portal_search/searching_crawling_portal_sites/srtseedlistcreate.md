@@ -36,7 +36,7 @@ To configure and create the seedlist crawler:
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Applying filter rules](../setup_search_collections/mng_content_sources_search_collections/srrfiltr.md)
 
 

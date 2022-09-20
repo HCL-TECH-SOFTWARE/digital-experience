@@ -30,6 +30,6 @@ The difference between the deprecated Social Lists 1.0 library and the Social li
     -   AIX and Linux: `./ConfigEngine.sh remove-social-rendering-config -DPortalAdminPwd=password -DWasPassword=password`
     -   Windows: `ConfigEngine.bat remove-social-rendering-config -DPortalAdminPwd=password -DWasPassword=password`
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Static resources](../../create_sites/building_website/static_content/site_static_resources.md)
 
