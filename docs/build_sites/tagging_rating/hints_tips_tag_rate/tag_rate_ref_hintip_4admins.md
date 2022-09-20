@@ -105,19 +105,11 @@ Learn about some hints and tips for administrators who work with tagging and rat
     Angled brackets \(`<` and `>`\) are not allowed within tag names. Therefore, no matter how you customize the regular expression, angled brackets are not accepted.
 
 
-<!--
-**Related information**  
-
-
-[CP Configuration Service for tagging and rating](../admin-system/srvcfg_cpcfg4tr.md)
-
-[Setting service configuration properties](../admin-system/adsetcfg.md)
-
-[Deleting orphaned data](../admin-system/adelorph.md)
-
-[Using the XML configuration interface to administer tags and ratings](../admin-system/tag_rate_xml.md)
-
-[Enabling your own custom content for tagging and rating](../admin-system/tag_rate_custom_content.md)
-
-[Filtering content for tagging](../admin-system/tag_rate_adm_filtr_cont.md) -->
+???+ info "Related information:"
+    - [CP Configuration Service for tagging and rating](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/index.md)
+    - [Setting service configuration properties](../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
+    - [Deleting orphaned data](../../../deployment/manage/config_portal_behavior/adelorph.md)
+    - [Using the XML configuration interface to administer tags and ratings](../tag_rate_xml.md)
+    - [Enabling your own custom content for tagging and rating](../tag_rate_custom_content.md)
+    - [Filtering content for tagging](../howto_tagging_rating/tag_rate_adm_filtr_cont.md)
 

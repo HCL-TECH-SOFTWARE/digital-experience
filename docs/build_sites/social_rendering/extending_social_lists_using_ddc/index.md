@@ -17,14 +17,10 @@ HCL Connections provides a comprehensive remote API. You can use this API to acc
 To dynamically construct HCL Connections query URLs, you can use the \[Plugin:ConnectionsContext\] and \[Plugin:ResourceURL\].
 -   **[Organizing your custom HCL Connections queries](../social/soc_rendr_org_cust_conn_qurs.md)**  
 For the different query URLs that you want to use, you can create multiple dynamic or static HCL Connections query URL components. For convenient use of these query URL components, you can create a generic authoring template for all list definitions that you want to build from those queries.
+--->
 
-
-**Related information**  
-
-
-[Digital Data Connector \(DDC\) for HCL Portal](../social/plrf_ovu.md)
-
-[The HCL Connections context rendering plug-in](../panel_help/soc_rendr_conn_context_plgn.md)
-
-[Using the list-rendering cache](../panel_help/plrf_tune_markup_chache.md) --->
+???+ info "Related information:"
+    - [Digital Data Connector \(DDC\) for HCL Portal](../../../extend_dx/ddc/index.md)
+    - [The HCL Connections context rendering plug-in](../../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/connector_plugins/soc_rendr_conn_context_plgn.md)
+    - [Using the list-rendering cache](../../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/connector_plugins/plrf_tune_markup_chache.md)
 

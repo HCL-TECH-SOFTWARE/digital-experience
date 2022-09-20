@@ -17,14 +17,10 @@ The default CSS styles that are used to define the visual appearance of social l
 To define its visual appearance, the default markup for social lists uses several CSS classes. They are defined in the wp\_social\_rendering\_85 theme module. Learn about the purpose of the most important CSS classes.
 -   **[Using media queries to target mobile devices](../social/soc_rendr_media_qs_4_mobile.md)**  
 The default social list CSS styles use CSS3 media queries to target specific mobile devices and implement responsive web design. Learn more about media queries.
+--->
 
-
-**Related information**  
-
-
-[Using social lists with your own custom theme](../social/soc_rendr_use_oob_socl_list_wcusthm.md)
-
-[Modules that are provided with the modularized theme](../dev-theme/themeopt_oob.md)
-
-[Module capabilities](../dev-theme/themeopt_oob_capability.md) -->
+???+ info "Related information:"
+    - [Using social lists with your own custom theme](../../../working_with_social_objects/soc_rendr_use_oob_socl_list_wcusthm.md)
+    - [Modules that are provided with the modularized theme](../../../../themes_skins/the_module_framework/oob_modules/index.md)
+    - [Module capabilities](../../../../themes_skins/the_module_framework/oob_modules/themeopt_oob_capability.md)
 

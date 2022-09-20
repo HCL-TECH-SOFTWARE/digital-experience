@@ -40,10 +40,6 @@ Tagging and rating are common and effective collaboration techniques that suppor
 
 
 
-**Related information**  
-
-[Adding query parameters](../tagging_rating/dev_tagging_and_rating/rest_api/tag_rate_api_rest_add_qparms.md)
-
 ## Public and private tagging and rating
 
 Users can assign public or private tags and ratings:
@@ -70,3 +66,5 @@ Tags can be personal tags or community tags. All statements made for tags in the
     Community tags are assigned by the community, that is by all other users in the system. Every public tag that a user assigns turns into a community tag, because it is visible to the community.
 
 
+???+ info "Related information:"
+    - [Adding query parameters](../tagging_rating/dev_tagging_and_rating/rest_api/tag_rate_api_rest_add_qparms.md)
