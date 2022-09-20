@@ -25,6 +25,6 @@ Responsive Web Design provides content parity between mobile devices and desktop
 The topic shows the naming conventions that are used to denote the location of files on the servers and the types of resources you can find in those directories. --->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Themes](../../deployment/manage/migrate/planning_migration/mig_plan_expectations/mig_plan_expect_themes.md)
 

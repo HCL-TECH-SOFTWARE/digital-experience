@@ -14,9 +14,9 @@ Install and configure HCL Digital Experience before you configure the IBM Licens
 
     3.  Run the following task to start the WebSphere® agent:
 
-        -   AIX® HP-UX Linux™ Solaris: .`/WASAgentClient.sh`
-        -   IBM i: `WASAgentClient.sh`
+        -   AIX®, Linux™: .`/WASAgentClient.sh`
         -   Windows™: `WASAgentClient.bat`
+        
     4.  Enter servers to list the WebSphere server IDs and locations.
 
     5.  Enter credentials id userid password to provide credentials for the servers. Where id is the server ID and userid and password correspond to the WebSphere Application Server administrator user ID and password.

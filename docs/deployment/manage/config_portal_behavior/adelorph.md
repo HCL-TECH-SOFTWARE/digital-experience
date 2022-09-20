@@ -6,17 +6,13 @@ When portal resources are deleted, dependent resources that are stored in a diff
 
 The SLCheckerTool is included in the file `wp.db.slchecker.jar` in the following directory:
 
--   AIX® HP-UX Linux™ Solaris: `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/bin/slcheckertool.sh`
--   IBM® i: `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/bin/slcheckertool.sh`
+-   AIX® and Linux™: `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/bin/slcheckertool.sh`
 -   Windows™: `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\PortalServer\bin\slcheckertool.bat`
--   z/OS®: `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/bin/slcheckertool.sh`
 
 You start the SLCheckerTool by using the following shell scripts:
 
--   AIX HP-UX Linux Solaris: `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/bin/slcheckertool.sh`
--   IBM i: `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/bin/slcheckertool.sh`
+-   AIX and Linux: `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/bin/slcheckertool.sh`
 -   Windows: `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\PortalServer\bin\slcheckertool.bat`
--   z/OS: `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/bin/slcheckertool.sh`
 
 To prepare and complete deleting orphaned data, you also complete some steps by using the XML configuration interface. For details about the XML configuration interface and how to use it refer to the appropriate topics. A sample XML script for exporting orphaned data that are listed enables the preparation of the orphaned data for work with the SLCheckerTool.
 
@@ -31,7 +27,7 @@ To delete the orphaned data, proceed by the following steps. For each step, use 
 
 2.  Create a full export that includes orphaned data of each production line that shares the particular domain. To complete this step, use the XML configuration interface and the XML sample file ExportIncludingOrphanedData.xml.
 
-3.  Use the SLCheckerTool to create an XML script file to delete the orphaned data. Complete this step with the substeps given later.
+3.  Use the SLCheckerTool to create an XML script file to delete the orphaned data. Complete this step with the sub-steps given later.
 
     Observe the following rules:
 
@@ -41,10 +37,8 @@ To delete the orphaned data, proceed by the following steps. For each step, use 
     Start the SLCheckerTool by using the following shell scripts:
 
 
-    -   AIX HP-UX Linux Solaris: `wp_profile_root/PortalServer/bin/slcheckertool.sh`
-    -   IBM i: `wp_profile_root/PortalServer/bin/slcheckertool.sh`
+    -   AIX and Linux: `wp_profile_root/PortalServer/bin/slcheckertool.sh`
     -   Windows: `[wp_profile_root\PortalServer\bin\slcheckertool.bat`
-    -   z/OS: `wp_profile_root/PortalServer/bin/slcheckertool.sh`
     
     1.  Find candidates for orphaned data in each production line. Repeat this step for each production line, but specify a different output file for each iteration. Otherwise, the results are overwritten. Use the following parameters:
 

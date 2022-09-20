@@ -9,7 +9,7 @@ To take advantage of the site analysis logging available for the Web Content Vie
 The site analysis log uses the NCSA Combined log format, which is a combination of NCSA Common log format and three extra fields: the referrer field, the user\_agent field, and the cookie field. This example describes typical site analysis logging information for the Web Content Viewer. -->
 
 
-???+ info "Related information:" 
+???+ info "Related information" 
     - [Analyzing portal usage data](../../../../../deployment/manage/monitoring/analyze_portal_usage/index.md)
     - [Instrumenting web content for Active Site Analytics](../../../../../build_sites/site_analytics/instrumenting_webcontent_asa/index.md)
 

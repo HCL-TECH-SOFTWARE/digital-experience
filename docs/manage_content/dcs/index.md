@@ -22,6 +22,6 @@ To balance processing power, you can run document conversion services on a remot
 View a list of file types that are supported by DCS for conversion.
 
 
-???+ info "**Related information**"  
+???+ info "Related information"  
     - [Planning and preparing for Portal Search](../../build_sites/search/planning_portal_search/index.md)
 

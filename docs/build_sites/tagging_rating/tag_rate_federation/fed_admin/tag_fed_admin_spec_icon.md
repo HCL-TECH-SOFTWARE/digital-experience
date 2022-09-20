@@ -16,7 +16,7 @@ You configure the custom properties in the Resource Environment Provider for the
     The icons are part of the portal installation. For theHCL Connections features, the custom properties for the icons exist without a predefined path. Unless no icon URL is defined, the icons are loaded directly from HCL Portal.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [CP Configuration Service for tagging and rating](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/index.md)
     - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
     - [Federating tags](../index.md)

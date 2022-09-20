@@ -60,6 +60,6 @@ When you finish cloning your web content data:
 -   Validate updates are being syndication into and from the target environment as expected.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Clearing version history](../wcm_admin_clear_versions.md)
 

@@ -21,6 +21,6 @@ The process of assigning a device class to one of the supported clients in HCL P
 Device class equations are expressions that involve a mixture of device class operands and Boolean logic operators. -->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Target MobileFirst resources](../../../extend_dx/integration/ibm_mobilefirst/wl_device_classes.md)
 

@@ -106,7 +106,7 @@ The following parameters are optional for the rating widget. They correspond to 
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [General properties for tagging and rating](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/srvcfg_cpcfg4tr_genrl.md)
     - [Properties for the rating widget](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/srvcfg_cpcfg4tr_dlgrate_altui.md)
     - [The tag and rating widgets](../../tagging_rating_ui/tagging_rating_widget/index.md)

@@ -48,6 +48,6 @@ final LayoutModelController lmController = cmController.getLayoutModelController
 
 ```
 
-???+ info "**Related information**"   
+???+ info "Related information"   
     -   [Obtain a model from the portal](../../../apis/model_spi/dgn_modelobt.md)
     -   [Making modifications by using the Controller SPI](../../../apis/controller_spi/controller_spi_modification/index.md)

@@ -279,7 +279,7 @@ The following parameters are reserved for internal use only. Do not change their
 The following search service configuration parameters can be modified to enable and configure searching for content that is stored in the JCR database. These JCR search service configuration parameters can be modified by accessing the JCR ConfigService PortalContent resource environment provider. --->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Using the WebSphere Integrated Solutions Console to administer Portal Search](../srtadmsrchadmcnsl.md)
     - [Hints and tips for improving quality of Portal Search results](../../hint_tips/srrhinttips_improve_quality_search.md)
 

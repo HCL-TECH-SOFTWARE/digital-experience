@@ -313,7 +313,7 @@ If you are using a content delivery network \(CDN\) such as [Akamai](https://www
 
 
 
-???+ info "**Related information:**"  
+???+ info "Related information"  
     - [HCL Digital Asset Management](../../digital_assets/index.md)
     - [Configure Digital Asset Management in virtual portals](../installation/configure_cc_virtual_portals.md)
     - [How to enable Practitioner Studio](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md)

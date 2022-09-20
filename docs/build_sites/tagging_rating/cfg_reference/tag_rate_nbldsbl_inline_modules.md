@@ -42,6 +42,6 @@ You can now use the tag and rating widgets with the modified profile.
 To disable the widgets, remove the module `wp_tagging_rating_light` from the profile, and apply the modified profile on the server by the described procedure.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [What is new in tagging and rating](../tag_rate_whatsnew.md)
 

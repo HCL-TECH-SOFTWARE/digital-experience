@@ -17,7 +17,7 @@ You can modify a virtual portal by using either the Virtual Portal Manager portl
 You can delete a virtual portal by using the Virtual Portal Manager portlet. --->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Planning for virtual portals](../../vp_planning/index.md)
     - [Administering virtual portals](../../adm_vp_task/index.md)
     - [Migration: Virtual portals](../../../../deployment/manage/migrate/planning_migration/mig_plan_expectations/mig_plan_expect_vp.md)

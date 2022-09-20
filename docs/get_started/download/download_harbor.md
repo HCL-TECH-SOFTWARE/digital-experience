@@ -86,5 +86,5 @@ You have now downloaded your DX 9.5 Container Update Helm Chart from the HCL Har
 
 After the Helm charts are downloaded, the next step is [Re-tagging images](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_load_images.md#re-tag-images).
 
-???+ info "**Related information:**"
+???+ info "Related information"
     -   [Deploying container platforms using Helm](../../deployment/install/container/helm_deployment/overview.md)

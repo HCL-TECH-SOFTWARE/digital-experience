@@ -113,5 +113,5 @@ Observe the following restrictions when you use Dojo with the portal:
 -   Do not rely on making your own updates to the bundled Dojo package. HCL Digital Experience support is likely to update individual files over time, and might even replace the entire package.
 
 
-???+ info "**Related information**:"  
-[Updating custom theme Dojo references](../../../deployment/manage/migrate/next_steps/post_mig_activities/development_task/mig_post_dojo.md)
+???+ info "Related information"  
+	-	[Updating custom theme Dojo references](../../../deployment/manage/migrate/next_steps/post_mig_activities/development_task/mig_post_dojo.md)

@@ -39,6 +39,6 @@ The profile files must be valid JSON files. The following sample shows the prope
 ```
 
 
-???+ info "Related information:"
+???+ info "Related information"
 	- [Adding jQuery to a theme](../../customizing_theme/add_jquery_to_theme/index.md)
 

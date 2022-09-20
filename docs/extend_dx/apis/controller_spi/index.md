@@ -68,7 +68,7 @@ A controller instance is based on a read-only model instance. Therefore it has t
 -   If the underlying model is scoped to a virtual portal, then so is the controller.
 
 
-???+ info "**Related information:**"  
+???+ info "Related information"  
     - [Model SPI overview](../model_spi/index.md) 
     - [Administration tools for configuring outbound HTTP connections](../../portlets_development/web2_ui/outbound_http_connection/cfg_outbound_http_connections/adm_tools_for_cfg_outbound_http_conn/index.md) 
     - [Obtaining the Controller SPI](../../portlets_development/web2_ui/outbound_http_connection/cfg_outbound_http_connections/adm_tools_for_cfg_outbound_http_conn/cfg_outbound_http_using_modelcontroller_spi/outbhttp_cfg_mcspi_obtstrlrspi.md)

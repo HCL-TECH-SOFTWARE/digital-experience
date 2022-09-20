@@ -51,8 +51,7 @@ You can add vertical cluster members to share the workload demands of your clust
 
 8.  Run the following command on each vertical cluster member to clean up the server-scoped resources, caches, and resource providers:
 
-    -   AIX® HP-UX Linux™ Solaris: `./ConfigEngine.sh cluster-node-config-vertical-cluster-setup -DServerName=unique vertical cluster servername -DWasPassword=password`
-    -   IBM® i: `ConfigEngine.sh cluster-node-config-vertical-cluster-setup -DServerName=unique vertical cluster servername -DWasPassword=password`
+    -   AIX® and Linux™: `./ConfigEngine.sh cluster-node-config-vertical-cluster-setup -DServerName=unique vertical cluster servername -DWasPassword=password`
     -   Windows™: `ConfigEngine.bat cluster-node-config-vertical-cluster-setup -DServerName=unique vertical cluster servername -DWasPassword=password`
     
     The unique vertical cluster servername is the name that you specified when you created the cluster member.

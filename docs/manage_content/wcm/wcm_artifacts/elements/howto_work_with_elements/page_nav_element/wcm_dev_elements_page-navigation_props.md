@@ -1,6 +1,5 @@
 # Defining a Page Navigator
 
-
 You use the page navigation element to define a page navigator.
 
 1.  Select the types of page navigation controls that you want to use with the page navigation element.
@@ -9,6 +8,7 @@ You use the page navigation element to define a page navigator.
     -   Select **Paging** to include navigation links based on page numbers.
     -   Select **Jump to page** to include a field where users can type the page number to display.
     -   Select **Page size** to include different options for the number of items to display on a page.
+
 2.  Specify the layout and design of the header, separator, and footer for the page navigation element by entering HTML tagging in the respective input fields.
 
     The code that is entered in the header and footer designs will appear before and after the displayed page controls. The code that is entered into the separator design appears between each displayed page control.
@@ -57,7 +57,8 @@ You use the page navigation element to define a page navigator.
 
     3.  Type a number to define the **Jump to page** field width.
 
-        **Note:** By default, if a user enters a number in the **Jump to page** field that is higher than the total number of pages, the **No Result Design** is returned. If you want to get the last page returned regardless of how high a number a user enters, ensure that the `handle.invalid.page` property is defined in the **WCM WCMConfigService** service with a value of `false`.
+        !!!note
+            By default, if a user enters a number in the **Jump to page** field that is higher than the total number of pages, the **No Result Design** is returned. If you want to get the last page returned regardless of how high a number a user enters, ensure that the `handle.invalid.page` property is defined in the **WCM WCMConfigService** service with a value of `false`.
 
 6.  If you are using the **Page size** control, specify the following parameters:
 
@@ -80,13 +81,9 @@ You use the page navigation element to define a page navigator.
         ```
 
 
-???+ info "**Related information:**"  
-
-    [Inserting an image in an element](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_image.md)
-
-    [Inserting a link in an element](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_link.md)
-
-    [Inserting element tags](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_tags.md)
-
-    [Creating web content tags](../../../../wcm_artifacts/tags/creating_web_content_tags/index.md)
+???+ info "Related information"  
+    -   [Inserting an image in an element](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_image.md)
+    -   [Inserting a link in an element](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_link.md)
+    -   [Inserting element tags](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_tags.md)
+    -   [Creating web content tags](../../../../wcm_artifacts/tags/creating_web_content_tags/index.md)
 

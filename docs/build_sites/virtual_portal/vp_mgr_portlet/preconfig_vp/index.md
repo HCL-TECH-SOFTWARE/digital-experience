@@ -9,6 +9,6 @@ When you create the virtual portal by using the Virtual Portal Manager portlet, 
 You can configure the roles and access rights that are assigned to sub-administrators on portlets of a virtual portal globally and before you create a virtual portal. The following steps must be completed on your initial portal installation. -->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Creating a virtual portal](../../adm_vp_task/vp_adm_task/create_vp/index.md)
 

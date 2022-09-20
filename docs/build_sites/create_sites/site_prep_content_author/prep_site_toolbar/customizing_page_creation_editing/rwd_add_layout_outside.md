@@ -68,6 +68,6 @@ You can add new styles or layouts to the site toolbar with a JSON file. Sometime
         2.  Then, select the **Style** or **Layout** tab.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Creating a theme style](../../../../themes_skins/customizing_theme/styles/themeopt_cust_newstyle.md)
 

@@ -9,6 +9,6 @@ For the user repository for your virtual portals, you have a choice of using eit
 As the master administrator of the portal installation you assign administrative users for the virtual portals. These virtual portal sub-administrators can manage the access rights of the user population of the virtual portal for which they are responsible. -->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Managing the user population for virtual portals](../../../vp_planning/advppln_mgupop.md)
 

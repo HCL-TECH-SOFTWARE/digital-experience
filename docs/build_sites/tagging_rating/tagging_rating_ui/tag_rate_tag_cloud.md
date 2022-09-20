@@ -36,6 +36,6 @@ For more details refer to the help topic about the *Tag cloud*.
 The tag cloud portlet has several configuration options. You can configure each individual tag cloud portlet instance separately by using its **Edit shared settings** menu. For details see the topic about *Configuring the tag cloud*.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Grouping tags and ratings via resource categorization](../howto_tagging_rating/tag_rate_adm_grp_rescat.md)
 

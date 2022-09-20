@@ -35,6 +35,6 @@ Use the delete libraries tool to delete multiple libraries, even when references
 Syndicating items from one server to another, either after migration or to roll out a new server, can take a long time. Your database backup and restore features can be used to clone data from one repository to another, making your system ready for syndication to be used from then on for incremental updates. -->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Staging to production process](../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_ovr.md)
 

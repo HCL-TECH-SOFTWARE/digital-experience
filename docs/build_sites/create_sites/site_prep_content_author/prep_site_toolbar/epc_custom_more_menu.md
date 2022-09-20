@@ -39,7 +39,7 @@ You can disable the **More** menu in the virtual portal configuration service.
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Simple menu framework](../../../themes_skins/customizing_theme/menus/simple_menu_framework/index.md)
     - [Virtual Portal Configuration Service](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/srvcfg_virtual_portal.md)
 
