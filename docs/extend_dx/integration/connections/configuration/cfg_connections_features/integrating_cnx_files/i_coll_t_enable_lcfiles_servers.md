@@ -1,4 +1,4 @@
-# Set up predefined HCL Connection servers
+# Set up predefined HCL Connections servers
 
 Configuring integration with files is similar to configuring other federated documents. You must specify the remote server URL, a display name, and the supported interface type of the remote server.
 

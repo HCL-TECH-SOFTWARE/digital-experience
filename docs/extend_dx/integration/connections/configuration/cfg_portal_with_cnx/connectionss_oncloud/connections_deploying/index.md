@@ -10,6 +10,6 @@ Follow the instructions to install, configure, and deploy the HCL Connections po
 Import a certificate so that HCL Connections and HCL Portal can communicate over Secure Socket Layer \(SSL\).
 -   **[Configuring SSO for backend calls to HCL Connections Cloud](../connect/t_connections_portlets_cloud_sso_config.md)**  
 Configure single sign-on for the HCL Connections Cloud portlets.
--   **[Installation options \(Cloud\)](../connect/r_connections_portlets_install_options_cc.md)**  
+-   **[Installation options (Cloud)](../connect/r_connections_portlets_install_options_cc.md)**  
 These options allow you to customize your installation.
 
