@@ -18,6 +18,7 @@ The following controllers are available for working with resources, tags and rat
 
 
 
+
 ???+ info "Related information"
     - [The tagging and rating user interface](../tagging_rating_ui/index.md)
     - [Controller SPI](../../../extend_dx/apis/controller_spi/index.md)
