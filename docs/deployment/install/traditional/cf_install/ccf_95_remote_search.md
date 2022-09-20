@@ -59,7 +59,6 @@ All temporary or interim fixes on your system must be removed before installing 
 
 ## Download the cumulative fix
 
-If you are installing the cumulative fix using a live repository, then you do not need to download the cumulative fix to your server. If you need to download the cumulative fix, then you can follow these steps.
 
 1.  Download the latest zip file that corresponds to the installation on your system. Go to the [HCL Software Support](https://support.hcltechsw.com/csm) page and download the HCL Portal Remote Search CF file 8.5-WP-RemoteSearch-CFPInnnnn-CFnn.zip.
 2.  Create a directory and extract the downloaded zip file into this directory. Inside the zip file are a readme file, sample response files, and the actual cumulative fix file itself. The cumulative fix file is named as follows, where **nn** represents the CF number associated with this cumulative fix: WP8500CFnn\_Remote.zip.
@@ -70,7 +69,6 @@ If you are installing the cumulative fix using a live repository, then you do no
 There are several different methods to install the cumulative fix, and they are:
 
 -   Use a Graphical User Interface \(GUI\)
--   Use a live repository via the Graphical User Interface
 -   Use a command line
 -   Use silent mode installation
 -   Use silent mode installation
@@ -100,27 +98,6 @@ Choose one method that is available for your system and follow the detailed step
 7.  Select **Update** and follow the prompts to update HCL Portal Remote Search.
 8.  If you are running an external web server, restart it now.
 
-## Use a live repository via the Graphical User Interface \(available on Windows and Linux operating systems\)
-
-1.  If you are running an external web server such as IBM HTTP server, stop the web server.
-2.  Stop any active application servers by using the `stopServer` command. To see which application servers are active, use the `serverStatus` command from the \(prs\_profile\)/bin directory:
-    -   Linux:
-
-        ```
-        ./serverStatus.sh -all
-        ```
-
-    -   Windows:
-
-        ```
-        serverStatus.bat -all
-        ```
-
-3.  Launch the IBM Installation Manager that was used to install HCL Portal Remote Search Version 8.5.
-4.  Using Installation Manager, click **File** \> **Preferences**.
-5.  Go to the **Repositories** panel and click **Search service repositories during installation and updates**. Click **Apply**.
-6.  Select **Update** and follow the prompts to update HCL Portal Remote Search.
-7.  If you are running an external web server, restart it now.
 
 ## Use a command line \(available on Windows and Linux operating systems\)
 
