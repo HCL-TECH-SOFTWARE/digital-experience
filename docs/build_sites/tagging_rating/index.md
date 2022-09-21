@@ -2,15 +2,16 @@
 
 Get an overview of the administrative tasks related to tagging and rating.
 
-**Attention:** To use tagging and rating with your virtual portal, ensure that the **web resource v7.0** and **web content templates 3.0** libraries exist on the virtual portal.
+**Attention:** To use tagging and rating with your virtual portal, ensure that the **Web Resources v7.0** and **Web Content Templates 3.0** libraries exist on the virtual portal.
 
 Portal administrators can do the following tasks:
 
--   Enable or disable tagging and rating for portal users. Tagging and rating are enabled in the HCL Portal Portal 8.5 theme. You can disable and enable tagging and rating globally for the portal as a whole. To do so, use the following configuration properties:
+-   Enable or disable tagging and rating for portal users. Tagging and rating are enabled in the HCL Portal 8.5 theme. You can disable and enable tagging and rating globally for the portal as a whole. To do so, use the following configuration properties:
 
     -   To disable and enable tagging portal wide, use the property `com.ibm.wps.cp.tagging.isTaggingEnabled`.
     -   To disable and enable rating portal wide, use the property `com.ibm.wps.cp.rating.isRatingEnabled`.
-    these properties are available in the WP CP configuration service Resource Environment Provider in the WebSphere® Integrated Solutions Console. For details about portal service configuration properties and how to set them refer to the topics about Portal configuration services and Setting service configuration properties.
+
+    These properties are available in the WP CP configuration service Resource Environment Provider in the WebSphere® Integrated Solutions Console. For details about portal service configuration properties and how to set them refer to the topics about Portal configuration services and Setting service configuration properties.
 
 -   Add custom content that users can tag and rate, for example, pages, portlets, content that is managed by Web Content Manager, or custom content such as books in a bookstore.
 

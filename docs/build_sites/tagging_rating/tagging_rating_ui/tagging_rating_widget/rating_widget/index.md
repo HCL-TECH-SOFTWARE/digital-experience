@@ -2,7 +2,7 @@
 
 Users can use the rating widget to view, apply, and update ratings that were applied to a resource.
 
-The rating widget displays ratings for users to view directly in the page. The rating widget shows ratings for the resource that has the widget included. When users use the rating widget, they can perform the task given in the following list.
+The rating widget displays ratings for users to view directly in the page. The rating widget shows ratings for the resource that has the widget included. When users use the rating widget, they can perform the tasks given in the following list.
 
 !!! note
     For these tasks, a user needs the rights to edit the HCL Web Content Manager component library `Web Resources V70`.

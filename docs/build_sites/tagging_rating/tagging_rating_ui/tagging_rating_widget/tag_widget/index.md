@@ -24,7 +24,6 @@ The tag widget displays tags for users to view directly in the page. When users 
 
     The user can delete tags that the user added. To do so, the user clicks the delete icon that is shown next to the tags. The delete option is available only if the tag scope is **My public tags** or **My private tags**. A user can delete only the tags that the user added.
 
--   ****
 
 Users cannot modify tags in the tag widget.
 

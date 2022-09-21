@@ -4,7 +4,7 @@ Learn about some hints and tips for administrators who work with tagging and rat
 
 -   **Using tagging and rating on a virtual portal**
 
-    To use tagging and rating with your virtual portal, ensure that the **web resource v7.0** and **web content templates 3.0** libraries exist on the virtual portal.
+    To use tagging and rating with your virtual portal, ensure that the **Web Resources v7.0** and **Web Content Templates 3.0** libraries exist on the virtual portal.
 
 -   **Administrators can assign access roles to users for tagging and rating content.**
 
@@ -22,7 +22,7 @@ Learn about some hints and tips for administrators who work with tagging and rat
 
         The user can also apply public tags and ratings.
 
-    -   ****MANAGER****
+    -   **MANAGER**
 
         The user can also modify tags and ratings that other users applied.
 
@@ -54,7 +54,7 @@ Learn about some hints and tips for administrators who work with tagging and rat
 
     If your portal contains virtual portals, the tags and ratings are limited to the virtual portal in which they were created. It is not possible to share tags across several virtual portals. Tags that are created in a virtual portal cannot be seen anywhere else.
 
--   ****Tagspace cleanliness.****
+-   **Tagspace cleanliness.**
 
     The portal implementation of tagging prevents tag space littering that is the inclusion of tags that do not contribute to categorizing content. It manifests mostly in the following two issues:
 
@@ -64,7 +64,8 @@ Learn about some hints and tips for administrators who work with tagging and rat
             The type-ahead feature works only with the dialog tag widget of the default tagging user interface of portal versions earlier than V 8.5. With HCL Portal V 8.5, the tag and rating widgets of earlier portal versions are deprecated.
 
     -   Tags pointing to resources that are deleted. You can use the portal administrative cleanup tool, SLChecker. Use it to check for invalid links that do not exist any more and for tags that someone applied who is no longer a portal user. The SLChecker tool can identify and delete tags for deleted resources and tags that are applied by deleted users. For information, read *Deleting orphaned data*.
--   **Staging and migrating **tagspaces**.**
+
+-   **Staging and migrating tagspaces.**
 
     You can transfer the tag space from one portal to another, for example for staging or for migrating from one portal version to another. To do so, use the XML configuration interface \(XML Access\). For more information, read *Using the XML configuration interface to administer tags and ratings*.
 

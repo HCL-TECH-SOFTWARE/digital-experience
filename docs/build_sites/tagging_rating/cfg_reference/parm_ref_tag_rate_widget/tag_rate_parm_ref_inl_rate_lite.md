@@ -7,7 +7,7 @@ You configure rating widget instances by setting the JavaScript parameters liste
 
 To set the parameters, proceed as follows:
 
-1.  In HCL Web Content Manager, go to **Applications** \> **Content** \> **WCM Authoring** \> **Libraries** \> **Web Resources v70** \> **Components**.
+1.  In HCL Web Content Manager, go to **Web Content** \> **Authoring** \> **Libraries** \> **Web Resources v70** \> **Components**.
 2.  Select the check box for **HTML - Rating Widget Light - Stars**.
 3.  Click **Edit**.
 
