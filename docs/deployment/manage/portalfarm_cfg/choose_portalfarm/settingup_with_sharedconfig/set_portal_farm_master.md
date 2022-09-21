@@ -79,16 +79,9 @@ The first server where HCL Digital Experience is installed is the basis for the 
 
     The systemTemp parameter specifies where the server-specific directory is located. This directory contains all directories and files that the running portal instance writes to, such as for logging and page-compiling.
 
-        |**Cloned file system**|Run the following task to enable the server to run in farm mode: <br> -  AIX: `./ConfigEngine.sh enable-farm-mode -DsystemTemp=/usr/IBM/WebSphere/wp_profile -DWasPassword=password` <br>
-    -   Linux: `./ConfigEngine.sh enable-farm-mode -DsystemTemp=/opt/IBM/WebSphere/wp_profile -DWasPassword=password`
-    -   Windows: `ConfigEngine.bat enable-farm-mode -DsystemTemp=C:\IBM\WebSphere\wp_profile -DWasPassword=password`
-|
-    |**Shared file system**|    1.  Create the target directory path; for example:<br>
-        -   AIX: /var/log/was_tmp <br>-   Linux: /var/log/was_tmp <br>-   Windows: C:\temp\was_tmp<br><br>
-    2.  Run the following task to enable the server to run in farm mode:<br>
-        -   AIX: `./ConfigEngine.sh enable-farm-mode -DsystemTemp=/var/log/was_tmp -DWasPassword=password`<br>
-        -   Linux: `./ConfigEngine.sh enable-farm-mode -DsystemTemp=/var/log/was_tmp -DWasPassword=password`<br>
-        -   `Windows: ConfigEngine.bat enable-farm-mode -DsystemTemp=C:\temp\was_tmp -DWasPassword=password`|
+        |**Cloned file system**|Run the following task to enable the server to run in farm mode: <br> -  AIX: `./ConfigEngine.sh enable-farm-mode -DsystemTemp=/usr/IBM/WebSphere/wp_profile -DWasPassword=password` <br>-   Linux: `./ConfigEngine.sh enable-farm-mode -DsystemTemp=/opt/IBM/WebSphere/wp_profile -DWasPassword=password`<br>-   Windows: `ConfigEngine.bat enable-farm-mode -DsystemTemp=C:\IBM\WebSphere\wp_profile -DWasPassword=password`|
+        |**Shared file system**|    1.  Create the target directory path; for example:<br>
+        -   AIX: /var/log/was_tmp <br>-   Linux: /var/log/was_tmp <br>-   Windows: C:\temp\was_tmp<br><br>2.  Run the following task to enable the server to run in farm mode:<br>-   AIX: `./ConfigEngine.sh enable-farm-mode -DsystemTemp=/var/log/was_tmp -DWasPassword=password`<br>-   Linux: `./ConfigEngine.sh enable-farm-mode -DsystemTemp=/var/log/was_tmp -DWasPassword=password`<br>-   `Windows: ConfigEngine.bat enable-farm-mode -DsystemTemp=C:\temp\was_tmp -DWasPassword=password`|
 
 8.  Each server that you add to the farm is called a Farm Worker.
 
@@ -102,8 +95,6 @@ The first server where HCL Digital Experience is installed is the basis for the 
     |Operating system|Tasks|
     |----------------|-----|
     |AIX|`./start_WebSphere_Portal.sh./stop_WebSphere_Portal.sh`|
-    |HP-UX|`./start_WebSphere_Portal.sh./stop_WebSphere_Portal.sh`|
-    |IBM i|`start_WebSphere_Portal.shstop_WebSphere_Portal.sh`|
     |Linux|`./start_WebSphere_Portal.sh./stop_WebSphere_Portal.sh`|
     |Windows|`start_WebSphere_Portal.batstop_WebSphere_Portal.bat`|
 
