@@ -3,14 +3,14 @@ id: mp_create_shared_pages
 title: Creating shared pages
 ---
 
-
+# Creating shared pages
 
 
 Use the Manage Pages portlet to set up the original page to be shared.
 
 1.  Log in to the portal as an administrator.
 
-2.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface** \> **Manage Pages**.
+2.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface > Manage Pages**.
 
     The nodes that belong to the currently selected node are displayed.
 

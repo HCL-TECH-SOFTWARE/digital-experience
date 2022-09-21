@@ -1,3 +1,7 @@
+---
+title: Global flags
+---
+
 # Global flags - Component hierarchy
 
 A composition hierarchy has several global flags. The global flags are similar to attributes of the content page node, except that they are associated with the composition hierarchy rather than the content node. Therefore, they are accessed through the Layout bean after the page in the Content bean is selected.
@@ -35,9 +39,9 @@ The following global flags are supported. The bean help documents alternative an
 
 |Attribute|Description|
 |---------|-----------|
-|active, a|Whether the page is active.|
-|bookmarkable, bookmark, b|Whether an internal link to the page can be created.|
-|shareable, share, s|Whether the page can be used as a base for derived pages.|
+|`active`, `a`|Whether the page is active.|
+|`bookmarkable`, `bookmark`, `b`|Whether an internal link to the page can be created.|
+|`shareable`, `share`, `s`|Whether the page can be used as a base for derived pages.|
 
 A page is not shown in the navigation if the active flag is false. You can deactivate the pages while they are modified to prevent user from seeing an inconsistent view of the page. The bookmarkable flag is not writable.
 

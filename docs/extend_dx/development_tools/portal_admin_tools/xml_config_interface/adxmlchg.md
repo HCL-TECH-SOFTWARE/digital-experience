@@ -25,12 +25,11 @@ The different versions of HCL Portal use the following syntax definitions for th
 |Version 8.0.0|8.0.0|
 |8.5|8.5.0|
 
-**Notes:**
-
-1.  **Backward compatibility:** The later XML schemas are backward compatible with earlier supported versions of HCL Portal. This means that you can run XML scripts from earlier portal versions that IBM supports under a later version of the portal. For example, you can run an XML script that is based on the `PortalConfig_7.0.0.xsd` under portal 8.5. In such cases a warning message is written to the output script, which informs that a previous version of the XML schema was used.
-2.  **Schema file naming convention:** If the XML schema is enhanced by updates, a new version of the xsd file with a new file name is created according to the following naming convention:
-    -   Starting with portal V 6.0.1 the schema file name includes the portal version number as follows: `PortalConfig_portal\_version\_number.xsd`. Example: `PortalConfig_**7.0.0**.xsd`.
-    -   If the schema is enhanced during a portal version, the name includes additional ID information to ensure unique schema file names: `PortalConfig_portal\_version\_number**\_id**.xsd`. Example: `PortalConfig_7.0.0**\_2**.xsd`.
+!!!note "Notes"
+  1.  **Backward compatibility:** The later XML schemas are backward compatible with earlier supported versions of HCL Portal. This means that you can run XML scripts from earlier portal versions that IBM supports under a later version of the portal. For example, you can run an XML script that is based on the `PortalConfig_7.0.0.xsd` under portal 8.5. In such cases a warning message is written to the output script, which informs that a previous version of the XML schema was used.
+  2.  **Schema file naming convention:** If the XML schema is enhanced by updates, a new version of the xsd file with a new file name is created according to the following naming convention:
+      -   Starting with portal V 6.0.1 the schema file name includes the portal version number as follows: `PortalConfig_portal\_version\_number.xsd`. Example: `PortalConfig_**7.0.0**.xsd`.
+      -   If the schema is enhanced during a portal version, the name includes additional ID information to ensure unique schema file names: `PortalConfig_portal\_version\_number**\_id**.xsd`. Example: `PortalConfig_7.0.0**\_2**.xsd`.
 
 ## New XML resources in HCL Portal 8.5
 
@@ -69,8 +68,6 @@ The following XML resource is no longer supported in portal 8.5:
 The managed pages feature enables you to edit portal resources, such as pages, in the scope of a project. By working in a project, you can create, update, and approve pages in a draft state, without affecting the live server. You can specify a project scope for actions performed with the XML configuration interface command by including the object ID of the project in the URL. See *XML configuration interface and managed pages* for details.
 
 
-**Related information**  
-
-
-[XML configuration interface and managed pages](../wcm/wcm_mngpages_xmlaccess.md)
+???+ info "Related information"  
+  - [XML configuration interface and managed pages](../../../../manage_content/wcm/wcm_artifacts/managed_pages/advadmin_managedpages/wcm_mngpages_xmlaccess.md)
 

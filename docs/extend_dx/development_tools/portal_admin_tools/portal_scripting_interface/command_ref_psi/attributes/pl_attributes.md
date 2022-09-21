@@ -1,4 +1,8 @@
-# Plain attributes \| Portal Scripting Interface
+---
+title: Plain attributes
+---
+
+# Plain attributes | Portal Scripting Interface
 
 Plain attributes have a single value that is queried by using the get command. The object for which to query the attribute is specified by an ID, and the attribute is specified by name.
 
@@ -52,9 +56,9 @@ The following are standard attribute names available for all objects. Names for 
 
 |Value|Description|
 |-----|-----------|
-|id|The identifier of the object.|
-|type|The type of the object.|
-|uniquename|The unique name of the object if it is assigned.|
-|commonname|The common name of the object, if it is generated.|
+|`id`|The identifier of the object.|
+|`type`|The type of the object.|
+|`uniquename`|The unique name of the object if it is assigned.|
+|`commonname`|The common name of the object, if it is generated.|
 
 

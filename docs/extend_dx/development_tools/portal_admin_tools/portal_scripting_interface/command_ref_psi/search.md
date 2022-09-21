@@ -1,4 +1,8 @@
-# Command references for Search \| Portal Scripting Interface
+---
+title: Command references for Search
+---
+
+# Command references for Search | Portal Scripting Interface
 
 All beans with tree navigation support identical commands for searching, but the available search criteria are different for each bean.
 
@@ -56,7 +60,7 @@ $Content help search-types
 
 ```
 
-You can combine the type selection with an extra search criteria, which is specified by a keyword \(`by`\) and a value to match against \(`value`\). The available search criteria and corresponding keywords depend on the bean. There is a dedicated help topic for the search criteria.
+You can combine the type selection with an extra search criteria, which is specified by a keyword (`by`) and a value to match against (`value`). The available search criteria and corresponding keywords depend on the bean. There is a dedicated help topic for the search criteria.
 
 Jython example:
 
@@ -76,10 +80,10 @@ The following are common search criteria. Alternative, shorter keywords are desc
 
 |Value|Description|
 |-----|-----------|
-|id|The value is an ID. The search is for the object with that ID.|
-|uniquename|The value is a string. The search is for the object with the string as its unique name.|
-|commonnamehas|The value is a string. The search is for objects with the string as a substring in their common name. Comparison is not case-sensitive.|
-|commonnameis|The value is a string. The search is for objects with the string as their common name. Comparison is case-sensitive.|
+|`id`|The value is an ID. The search is for the object with that ID.|
+|`uniquename`|The value is a string. The search is for the object with the string as its unique name.|
+|`commonnamehas`|The value is a string. The search is for objects with the string as a substring in their common name. Comparison is not case-sensitive.|
+|`commonnameis`|The value is a string. The search is for objects with the string as their common name. Comparison is case-sensitive.|
 
 Jython example:
 

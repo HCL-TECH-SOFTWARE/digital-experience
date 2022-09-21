@@ -8,7 +8,8 @@ All the examples use the ID generating mode and do not specify literal object ID
 
 The first example file DeployPortlet.xml shows how you deploy a portlet and create a simple test page to display the portlet. Some of the attributes in the XML must match the corresponding settings that were defined in the portlet.xml deployment descriptor in the portlet WAR file. This is necessary so that the XML processing can properly identify the contents of the WAR file. When you want to deploy a different portlet, you must not only specify a different WAR file but also adapt those attributes. Also, the configuration that is specified for the portlet is less than what you see in an XML export result for the portlet. For example, the localized titles are not included in the XML script. This is because those settings are specified in the portlet.xml deployment descriptor; you do not have to override them with the XML configuration interface.
 
-**Note:** As Windows limits the maximum path length to 260 characters, the name of the WAR file must be 25 characters or less. Deploying a WAR file with a name that is more than 25 characters results in an error.
+!!!note
+    As Windows limits the maximum path length to 260 characters, the name of the WAR file must be 25 characters or less. Deploying a WAR file with a name that is more than 25 characters results in an error.
 
 The CreatePage.xml sample shows the following extra possibilities:
 
@@ -30,7 +31,8 @@ The CreateUser.xml example imports a new user into the portal. It also creates a
 
 To add a language to the portal, use the CreateLanguage.xml example.
 
-**Note:** To prepare for running this XML script, you must insert resource bundles and, where applicable, JSPs for the new language. For details about how to do this, refer to the topic about how to support new languages in the HCL Portal Help Center.
+!!!note
+    To prepare for running this XML script, you must insert resource bundles and, where applicable, JSPs for the new language. For details about how to do this, refer to the topic about how to support new languages in the HCL Portal Help Center.
 
 The UpdateVault.xml example demonstrates how to create new resources in the portal credential vault with an XML script.
 
@@ -40,11 +42,10 @@ The Transaction.xml example demonstrates the effect of using different transacti
 
 The MovePage.xml example shows you how to move a page to another node.
 
-**Note:** The actual move of the page is done by the last two lines in the sample file.
+!!!note
+    The actual move of the page is done by the last two lines in the sample file.
 
 
-**Related information**  
-
-
-[Supporting a new language](../admin-system/adsuplang_new.md)
+???+ info "Related information" 
+    -   [Supporting a new language](../../../../portal_admin_tools/language_support/supporting_new_language/index.md)
 

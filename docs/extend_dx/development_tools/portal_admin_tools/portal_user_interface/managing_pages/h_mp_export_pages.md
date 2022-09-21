@@ -3,6 +3,7 @@ id: h_mp_export_pages
 title: Exporting pages and labels
 ---
 
+# Exporting pages and labels
 
 
 
@@ -10,9 +11,10 @@ Exporting allows you to create a response file so that the page or label and its
 
 Follow these steps to export a page. The same steps can also be used to export a label.
 
-**Note:** For the export to work, you must enable support for JavaScript and disable pop-up blocking in your browser settings.
+!!!note
+    For the export to work, you must enable support for JavaScript and disable pop-up blocking in your browser settings.
 
-1.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface** \> **Manage Pages**.
+1.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface > Manage Pages**.
 
 2.  Go to the page that contains the node that you want to export.
 
@@ -22,6 +24,7 @@ Follow these steps to export a page. The same steps can also be used to export a
 
     -   Click **Yes** to export the page and all of the child pages that it contains.
     -   Click **No** to export just the selected page.
+    
     You are prompted by the browser to download the exported file.
 
 5.  Select a location to save the export file.

@@ -3,7 +3,7 @@ id: h_theme_skin_delete_theme
 title: Deleting a theme
 ---
 
-
+# Deleting a theme
 
 
 You can delete themes that you no longer use.
@@ -17,5 +17,6 @@ To remove a theme:
 
 The theme is removed from use by the portal.
 
-**Note:** The files that compose the theme are not deleted from the system.
+!!!note
+    The files that compose the theme are not deleted from the system.
 

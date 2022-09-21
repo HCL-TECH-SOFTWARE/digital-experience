@@ -1,4 +1,8 @@
-# Search \| Content bean content hierarchy
+---
+title: Search
+---
+
+# Search | Content bean content hierarchy
 
 The generic search syntax is documented in Search. The Content bean supports the default search criteria, and the following keywords for node types in searches. Alternative, shorter keywords are documented in the bean help.
 
@@ -6,7 +10,7 @@ The generic search syntax is documented in Search. The Content bean supports the
 -   composition or page
 -   internalurl
 -   externalurl
--   url \(either internal or external\)
+-   url (either internal or external)
 -   all or any
 
 Jython example:

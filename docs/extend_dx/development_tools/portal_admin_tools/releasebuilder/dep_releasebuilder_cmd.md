@@ -1,6 +1,6 @@
 # ReleaseBuilder command syntax
 
-The ReleaseBuilder command file is in the wp\_profile\_root/PortalServer/bin directory and has the following syntax.
+The ReleaseBuilder command file is in the wp_profile_root/PortalServer/bin directory and has the following syntax.
 
 -   **NAME**
 

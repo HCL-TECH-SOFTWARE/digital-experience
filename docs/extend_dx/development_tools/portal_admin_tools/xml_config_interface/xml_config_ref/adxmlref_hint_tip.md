@@ -9,7 +9,7 @@ For example, this can be different LDAP suffixes for the users or groups. To tra
      <?xml version="1.0" encoding="UTF-8"?>
      <request
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="PortalConfig\_8.5.0.xsd"
+         xsi:noNamespaceSchemaLocation="PortalConfig_8.5.0.xsd"
          type="export"
          export-users="false">
          <portal action="export"/>
@@ -29,7 +29,7 @@ When you use this XML script to transfer the configuration data between these tw
              <?xml version="1.0" encoding="UTF-8"?>
              <request type="update"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                 xsi:noNamespaceSchemaLocation="PortalConfig\_8.5.0.xsd">
+                 xsi:noNamespaceSchemaLocation="PortalConfig_8.5.0.xsd">
                  <portal action="locate">
                  <content-node action="export" name="*" create-type="explicit"/>
              </portal>

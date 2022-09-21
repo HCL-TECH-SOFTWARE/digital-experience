@@ -3,7 +3,7 @@ id: h_theme_skin_fields
 title: Field descriptions for the Themes and Skins portlet
 ---
 
-
+# Field descriptions for the Themes and Skins portlet
 
 
 Learn more about the fields that are provided with the user interface.
@@ -16,7 +16,7 @@ Specify the name with which you would like to refer to the new theme. This is th
 
 **Theme directory name**
 
-Specify the name of the directory in which the theme files are located. This value is equivalent to one of the directories in wp\_profile\_root/installedApps/cell\_name/wps.ear/wps.war/themes/markup\_language/, where wp\_profile\_root is the installation location for the HCL Portal Server profile, cell\_name is the name of the WebSphere Application Server cell, and markup\_language is the type of markup language you are using.
+Specify the name of the directory in which the theme files are located. This value is equivalent to one of the directories in wp_profile_root/installedApps/cell_name/wps.ear/wps.war/themes/markup_language/, where wp_profile_root is the installation location for the HCL Portal Server profile, cell_name is the name of the WebSphere Application Server cell, and markup_language is the type of markup language you are using.
 
 **All skins**
 
@@ -36,7 +36,7 @@ Specify the name with which you would like to refer to the new skin. This is the
 
 **Skin directory name**
 
-Specify the name of the directory in which the skin files are located. This value is equivalent to one of the directories in wp\_profile\_root/installedApps/cell\_name/wps.ear/wps.war/skins/markup\_language/, where wp\_profile\_root is the installation location of the HCL Portal Server profile, cell\_name is the name of the WebSphere Application Server cell, and markup\_language is the type of markup language you are using.
+Specify the name of the directory in which the skin files are located. This value is equivalent to one of the directories in wp_profile_root/installedApps/cell_name/wps.ear/wps.war/skins/markup_language/, where wp_profile_root is the installation location of the HCL Portal Server profile, cell_name is the name of the WebSphere Application Server cell, and markup_language is the type of markup language you are using.
 
 ## Field descriptions for editing a theme
 

@@ -22,12 +22,12 @@ The following table shows the available variables and provides examples of the r
 
 |Variable for HCL Portal installation directory|Example replacement value|
 |----------------------------------------------|-------------------------|
-|`$app_install_root$`|/opt/WebSphere/wp\_profile/installedApps|
-|`$archive_root$`|/opt/WebSphere/wp\_profile/PortalServer/deployed/archive|
-|`$predeployed_root$`|/opt/WebSphere/wp\_profile/installedApps/wpsbvt|
-|`$profile_install_root$`|/opt/WebSphere/wp\_profile/installedApps|
+|`$app_install_root$`|/opt/WebSphere/wp_profile/installedApps|
+|`$archive_root$`|/opt/WebSphere/wp_profile/PortalServer/deployed/archive|
+|`$predeployed_root$`|/opt/WebSphere/wp_profile/installedApps/wpsbvt|
+|`$profile_install_root$`|/opt/WebSphere/wp_profile/installedApps|
 |`$server_root$`|/opt/WebSphere/PortalServer|
-|`$user_install_root$`|/opt/WebSphere/wp\_profile|
-|`$wp_profile_root$`|/opt/WebSphere/wp\_profile|
+|`$user_install_root$`|/opt/WebSphere/wp_profile|
+|`$wp_profile_root$`|/opt/WebSphere/wp_profile|
 
 
