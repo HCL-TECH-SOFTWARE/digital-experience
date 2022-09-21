@@ -303,5 +303,6 @@ WebDAV file store supports the following HTTP methods:
 
 [Enabling HTTP Basic Authentication for simple clients](../security/tait_nbl_hba4sc.md)
 
-[Embedding the HCL Portal 8.5 site toolbar dynamically without a dynamic content spot](../dev-theme/themeopt_cust_toolbar_dynamic_embedding.md)
+[Embedding the HCL Portal 8.5 site toolbar dynamically without a dynamic content spot](../../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/enable_func_migrated_themes/add_85_toolbar/themeopt_cust_toolbar_dynamic_embedding.md)
+
 
