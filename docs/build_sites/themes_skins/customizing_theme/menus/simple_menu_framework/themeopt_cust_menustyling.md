@@ -4,7 +4,7 @@ You can vary the appearance of the items in menus that are delivered through the
 
 The appearance of the items in the menus that are rendered by the JSON menu framework are determined by style names that open on the rendered markup for the menu items. These styles are defined in Cascading Style Sheet \(CSS\) files that are part of the theme. The default theme has these style sheets in WebDAV in the themes/Portal8.5/css directory.
 
-![Screen capture of the themes/Portal8.5/css directory in WebDAV](../images/themeopt_menustyle_85.jpg)
+![Screen capture of the themes/Portal8.5/css directory in WebDAV](../../../../../images/themeopt_menustyle_85.jpg)
 
 There are two ways that the appearance of the menu items can be changed.
 
@@ -32,7 +32,7 @@ These CSS files define the menus.
 
 ## Default menu styles
 
-![Screen capture of the default menu styles](../images/themeopt_defaultmenustyle_85.jpg)
+![Screen capture of the default menu styles](../../../../../images/themeopt_defaultmenustyle_85.jpg)
 
 ## Style class definitions
 
@@ -111,13 +111,10 @@ loadingTemplate: "wpthemeTemplateLoading"
 ....
 }
 ```
+<!--
+**Parent topic:**[Simple menu framework](../dev-theme/themeopt_cust_menu.md) -->
 
-**Parent topic:**[Simple menu framework](../dev-theme/themeopt_cust_menu.md)
-
-**Related information**  
-
-
-[Client-side framework for simple menus](../dev-theme/themeopt_cust_clientframe.md)
-
-[Styles](../dev-theme/themeopt_cust_styles.md)
+???+ info "Related information:"
+    - [Client-side framework for simple menus](../simple_menu_framework/themeopt_cust_clientframe.md)
+    - [Styles](../../styles/index.md)
 
