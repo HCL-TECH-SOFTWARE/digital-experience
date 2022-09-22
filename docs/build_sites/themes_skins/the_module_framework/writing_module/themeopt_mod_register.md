@@ -516,9 +516,7 @@ The following samples are a breakdown of the previous examples and cover all ava
 
 
 
-**Related information**  
-
-
+Related information:"
 [Providing custom styles for social lists](../social/soc_rendr_provide_custom_styles.md)
 
 [Server-side framework](../dev-theme/themeopt_cust_serverframe.md)

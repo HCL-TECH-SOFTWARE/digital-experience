@@ -16,7 +16,7 @@ For example, if you want to hide the third column of a three column layout on a 
 }
 ```
 
-???+ info "Related information"
+???+ info "Related information:"
     - [W3Schools - CSS Selector Reference](https://www.w3schools.com/cssref/css_selectors.asp)
     - [Adding or removing a module from a profile](../the_module_framework/add_remove_oob_modules/index.md)
 

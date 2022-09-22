@@ -8,7 +8,7 @@ Use a pattern to determine an issue within your custom modules. This pattern min
 
 3.  Investigate the logs. If the error is not apparent in the client-side console, then investigating the HCL Portal system logs is another likely place to track down an issue. These logs display any server-side errors and tracing that is enabled.
 
-    1.  Open the HCL Portal logs in the following locations, [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)//logs/HCL Portal and HCL Web Content Manager/SystemOut.log and [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/logs/HCL Portal and HCL Web Content Manager/SystemErr.log.
+    1.  Open the HCL Portal logs in the following locations, [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)//logs/HCL Portal and HCL Web Content Manager/SystemOut.log and [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)/logs/HCL Portal and HCL Web Content Manager/SystemErr.log.
 
     2.  You can enable more tracing through the Enable Tracing portlet in the Administration section of HCL Portal. Click the **Administration menu** icon. Then, click **Portal Analysis** \> **Enable Tracing**.
 
@@ -29,7 +29,7 @@ Use a pattern to determine an issue within your custom modules. This pattern min
 
 6.  Investigate with the Theme Optimization Analyzer. The theme optimization analyzer portlet can display many attributes of the theme, pages, profiles, and modules. You can investigate a module and view the details for visibility that is based on device class and contributions of resources. Each resource is listed with its path in the server. So, you can use this information to determine whether it is being aggregated on the page or to add more logging.
 
-7.  Export XML definition for resources. After you investigate the issue, modifying the resource attributes is the next solution. Resources that would require a change to their XML definition are the theme, page, client, or device class. To export the XML definition of a resource, you can use XMLAccess. This is a command-line tool that is at [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/bin/xmlaccess.bat in Windows and [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/bin/xmlaccess.sh in Linux. You can use the following scripts to export a specific resource that is related to the theme framework but more examples are located here [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/xml-samples/.
+7.  Export XML definition for resources. After you investigate the issue, modifying the resource attributes is the next solution. Resources that would require a change to their XML definition are the theme, page, client, or device class. To export the XML definition of a resource, you can use XMLAccess. This is a command-line tool that is at [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)/PortalServer/bin/xmlaccess.bat in Windows and [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)/PortalServer/bin/xmlaccess.sh in Linux. You can use the following scripts to export a specific resource that is related to the theme framework but more examples are located here [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/doc/xml-samples/.
 
 8.  Export all theme definitions to modify the advanced features such as the metadata, resource root, default layout, or theme template definition. You can also modify other attributes through this definition.
 
@@ -85,8 +85,6 @@ Use a pattern to determine an issue within your custom modules. This pattern min
 
 
 
-**Related information**  
-
-
-[Logging and tracing](../trouble/pd_intr_logs.md)
+???+ info "Related information:"
+    - [Logging and tracing](../../../../deployment/manage/troubleshooting/logging_and_tracing/index.md)
 

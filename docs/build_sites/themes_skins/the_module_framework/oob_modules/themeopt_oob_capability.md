@@ -33,6 +33,6 @@ This table lists explicitly defined capabilities. Implicit capabilities are not 
 For extra modules and capabilities, see Content Template Catalog theme extensions and Customizing the CSS styles of social lists.
 
 
-???+ info "Related information"
+???+ info "Related information:"
     - [Customizing the CSS styles of social lists](../../../social_rendering/customizing_view_definitions/customizing_visualdesign/customizing_css_social_list/index.md)
 

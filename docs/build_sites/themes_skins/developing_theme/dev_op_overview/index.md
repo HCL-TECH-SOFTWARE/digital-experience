@@ -90,19 +90,15 @@ How the theme components were packaged determines the method that is used to dep
     The Solution Installer automatically detects the steps to perform deployment.
 
 
-<!--- 
--   **[Theme PAA files](../dev-theme/themeopt_themedev_exportedpaa.md)**  
+
+-   **[Theme PAA files](../dev_op_overview/theme_paa_files/index.md)**  
 Using the Theme Development tools, you can quickly copy, create, and modify themes. After you modify a theme, you can export that theme as a PAA file so that you can install it on a different server. You can also uninstall theme PAA files that you no longer want to use.
--   **[Manually packaging themes for deployment](../dev-theme/themeopt_move_repackstatic.md)**  
+-   **[Manually packaging themes for deployment](../dev_op_overview/manual_packaging_themes/index.md)**  
 You must repackage the static content as a WAR file or as an EAR file containing the WAR file when it is not possible to exchange the static content with the Operations Team as a separate compressed file.
 
 
-**Related information**  
-
-
-[Installing add-ons](../config/int_sol_installer.md)
-
-[Exporting content from the filestore](../dev-theme/themeopt_move_expfilestore.md)
-
-[Manually packaging themes for deployment](../dev-theme/themeopt_move_repackstatic.md) --->
+???+ info "Related information:"
+    - [Installing add-ons](../../../../deployment/install/traditional/install_addons/index.md)
+    - [Exporting content from the filestore](../dev_op_overview/manual_packaging_themes/themeopt_move_expfilestore.md)
+    - [Manually packaging themes for deployment](../dev_op_overview/manual_packaging_themes/index.md)
 
