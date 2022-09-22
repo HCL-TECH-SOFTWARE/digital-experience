@@ -17,7 +17,7 @@ The XML resource tags and their attributes are listed in the following:
 
     Use the following attributes with the XML resource tag `tag`:
 
-    -   **resourceref = "object_ID"**
+    -   **resourceref = "object\_ID"**
 
         This attribute specifies the reference to the resource that is being tagged.
 
@@ -45,7 +45,7 @@ The XML resource tags and their attributes are listed in the following:
 
     Use the following attributes with the XML resource tag `rating`:
 
-    -   **resourceref = "object_ID"**
+    -   **resourceref = "object\_ID"**
 
         This attribute specifies the reference to the resource that is being rated.
 

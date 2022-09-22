@@ -7,7 +7,7 @@ You configure specific tag widget instances by setting the JavaScript parameters
 
 To set the parameters, proceed as follows:
 
-1.  In HCL Web Content Manager, go to **Applications** \> **Content** \> **WCM Authoring** \> **Libraries** \> **Web Resources v70** \> **Components**.
+1.  In HCL Web Content Manager, go to **Web Content** \> **Authoring** \> **Libraries** \> **Web Resources v70** \> **Components**.
 2.  Select the check box for **HTML - Tagging Widget Light - Menu**.
 3.  Click **Edit**.
 
@@ -21,7 +21,7 @@ The following parameters are optional for the tag widget. They correspond to sim
 
     Use this parameter to specify a non-localized custom label to describe the displayed tags. If you do not want any further labeling or if you want to keep the label short, you can specify an empty string.
 
--   **customLabelCommunityTags = = \(false\)**
+-   **customLabelCommunityTags = \(false\)**
 
     Use this parameter to specify the non-localized label that you want to be used to describe the meaning of the community tagging that is displayed. The default value is `false`.
 

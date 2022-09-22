@@ -4,10 +4,10 @@ The Tag Center is a separate portal page. It combines the tag cloud and the tags
 
 Users can get to this page by one of the following ways:
 
--   By clicking the **Tag Center** link from the portal menu bar.
+-   By clicking the **Tag Center** link under **Administration** > **Search**.
 -   By selecting the option **Browse tags** from the page action menu or the portlet menu.
 -   By clicking a tag from a custom tag cloud that you placed on a page of your portal.
--   By clicking a tag from an tag widget in a portal or custom resource, for example a portal page, a portlet, a wiki, or a blog.
+-   By clicking a tag from a tag widget in a portal or custom resource, for example a portal page, a portlet, a wiki, or a blog.
 
 By default the Tag Center page shows the following two portlets:
 

@@ -37,7 +37,7 @@ To create a tag, send an HTTP POST against the URI `tm:ts:all` with the followin
 
 Replace the variables isPrivate, tagname, resourceURI, and category \(optional\) by the appropriate values.
 
-To delete a tag, send an HTTP DELETE against the URI `uri tm:oid:oid\_of\_a\_tag`.
+To delete a tag, send an HTTP DELETE against the URI `uri tm:oid:oid_of_a_tag`.
 
 ## Creating and deleting ratings by using the REST API
 
@@ -76,7 +76,7 @@ Replace the variables isPrivate, rating, resourceURI, and category \(optional\) 
 
 To update a rating, send an HTTP PUT that contains the same payload against the same URI.
 
-To delete a rating, send an HTTP DELETE against the URI `uri rtm:oid:oid\_of\_a\_rating`.
+To delete a rating, send an HTTP DELETE against the URI `uri rtm:oid:oid_of_a_rating`.
 
 
 ???+ info "Related information"
