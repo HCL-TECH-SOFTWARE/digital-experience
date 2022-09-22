@@ -58,7 +58,7 @@ You pass the parameters in the parameter list for each configuration task as app
 
 
 
-???+ info "Related information"
+???+ info "Related information:"
     - [Modifying a virtual portal](../../../adm_vp_task/vp_adm_task/advp_tsk_modify.md)
     - [Command reference for the Portal Scripting Interface](../../../../../extend_dx/development_tools/portal_admin_tools/portal_scripting_interface/command_ref_psi/index.md)
     - [Language support](../../../../../extend_dx/development_tools/portal_admin_tools/language_support/index.md)

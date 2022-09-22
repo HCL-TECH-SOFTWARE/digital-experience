@@ -61,7 +61,7 @@ Based on these business requirements, you can select one or more of the followin
 You need to set up the configuration required for such a scenario carefully. As an alternative for this scenario, you can consider using separate portal installations rather than virtual portals. This can be the easier solution especially if you provide service for a small number of large tenants.
 
 
-???+ info "Related information"
+???+ info "Related information:"
     - [Separating and sharing resources between virtual portals](../vp_planning/advppln_scope.md)
     - [Managing the user population for virtual portals](../vp_planning/advppln_mgupop.md)
 

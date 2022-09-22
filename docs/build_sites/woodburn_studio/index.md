@@ -29,10 +29,10 @@ However, one can immediately force the indexer to run manually from the **Search
 
 Go to [Configuring a crawler to search your local portal site](../search/searching_local_portal/srccrwlindxsite.md) for more information about configuring and running a search crawler on your local portal site.
 
-<!-- 
--   **[Filtering the Results of a WCM Navigator Component](../woodburn_studio/woodburn_studio_filtering_WCM.md)**  
+
+-   **[Filtering the Results of a WCM Navigator Component](woodburn_studio_filtering_WCM.md)**  
 This document helps to filter navigator component results and use the Woodburn Studio site as an example of when this type of filtering might be needed.
--   **[Update of Woodburn pages optional](../woodburn_studio/update_pages_optional.md)**  -->
+-   **[Update of Woodburn pages optional](../woodburn_studio/update_pages_optional.md)** 
 
 
 

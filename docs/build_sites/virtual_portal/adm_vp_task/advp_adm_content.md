@@ -20,6 +20,6 @@ Other resource types are not scoped. They are shared among all virtual portals o
         -   Web Content Viewer portlet: Select **Web Content Viewer** when you are adding the portlet.
 
 
-???+ info "Related information"
+???+ info "Related information:"
     - [Filling a virtual portal with content](../adm_vp_task/vp_adm_task/advp_tsk_fill_content.md)
 

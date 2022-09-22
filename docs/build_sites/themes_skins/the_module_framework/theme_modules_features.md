@@ -112,7 +112,7 @@ Theme modules contribute resources, such as JavaScript, CSS and HTML, to a theme
 |getting\_started\_module|Adds the default simple module.|
 
 
-???+ info "Related information"
+???+ info "Related information:"
     - [Dojo Toolkit - Themes and Theming](https://dojotoolkit.org/reference-guide/1.9/dijit/themes.html#id6)
     - [Displaying the draft page ribbon](../customizing_theme/themeopt_disp_draft_ribbon.md)
 

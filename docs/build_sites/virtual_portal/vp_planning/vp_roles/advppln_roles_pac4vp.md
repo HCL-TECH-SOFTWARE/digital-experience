@@ -16,6 +16,6 @@ The inheritance concept of Portal Access Control allows this setup. The combinat
 This way, each virtual portal represents a certain sub area of the main portal and can be managed individually.
 
 
-???+ info "Related information"
+???+ info "Related information:"
     - [Managing the user population for virtual portals](../../vp_planning/advppln_mgupop.md)
 
