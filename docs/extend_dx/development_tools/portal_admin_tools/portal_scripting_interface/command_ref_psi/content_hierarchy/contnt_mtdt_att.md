@@ -1,4 +1,8 @@
-# Metadata attributes \| Content bean content hierarchy
+---
+title: Metadata attributes
+---
+
+# Metadata attributes | Content bean content hierarchy
 
 Content nodes can own metadata, which are name-value pairs of data that is associated with the content node. Metadata are used by the portal, for example to set display attributes, or by the user. However, you must ensure that none of the metadata information that is set by the portal is overridden.
 

@@ -14,7 +14,8 @@ The portal resources are represented by the following XML tags.
 
     Settings for global portlet configuration values and for specific portal services. These elements support only locate and export actions.
 
-    **Note:** Leave the XML scripts for exporting and updating these settings unchanged. Do not manually change the values in the XML scripts, as this action might result in invalid portal configurations. To modify these settings, use the appropriate administration portlets instead after the XML update of a configuration.
+    !!!note
+        Leave the XML scripts for exporting and updating these settings unchanged. Do not manually change the values in the XML scripts, as this action might result in invalid portal configurations. To modify these settings, use the appropriate administration portlets instead after the XML update of a configuration.
 
 -   **language**
 
@@ -72,23 +73,23 @@ The portal resources are represented by the following XML tags.
 
     The Task.xml sample shows you how to schedule the cleanup of portal resources.
 
-    **Notes:**
+    !!!note "Notes"
+        1.  When you delete a page with an object ID, and re-create the same page by using the XML configuration interface. If you use the same object ID, you might receive an error message. The error message indicates that the operation was canceled because these actions created a duplicate key value.
+        2.  When you run a cleanup task, the XML configuration interface schedules only the task to be run in IBM® WebSphere® Application Server. This action does not necessarily mean that WebSphere® Application Server runs the task immediately. To determine when a task started and ended, check the portal log SystemOut.log for the EJPDE0005I and JPDE0006I messages. These messages confirm that the task was successfully completed. After you confirmed the completion of the task, you can run the XML script for re-creating a page with the same object ID that it had before the deletion.
 
-    1.  When you delete a page with an object ID, and re-create the same page by using the XML configuration interface. If you use the same object ID, you might receive an error message. The error message indicates that the operation was canceled because these actions created a duplicate key value.
-    2.  When you run a cleanup task, the XML configuration interface schedules only the task to be run in IBM® WebSphere® Application Server. This action does not necessarily mean that WebSphere® Application Server runs the task immediately. To determine when a task started and ended, check the portal log SystemOut.log for the EJPDE0005I and JPDE0006I messages. These messages confirm that the task was successfully completed. After you confirmed the completion of the task, you can run the XML script for re-creating a page with the same object ID that it had before the deletion.
 -   **action**
 
     Use this tag to define the required action. For more information about actions, see the topic about *Actions on portal resources*.
 
 -   **virtual-resource**
 
-    Virtual resources in the access control subsystem. Virtual resources have access control definitions that are attached, but are not otherwise represented in the portal. The virtual resource PORTLET\_APPLICATIONS, for example, allows you to give users access to all installed portlets, but does not correspond to an actual portlet. The virtual resource element supports only update and export actions.
+    Virtual resources in the access control subsystem. Virtual resources have access control definitions that are attached, but are not otherwise represented in the portal. The virtual resource PORTLET_APPLICATIONS, for example, allows you to give users access to all installed portlets, but does not correspond to an actual portlet. The virtual resource element supports only update and export actions.
 
 -   **user**
 
     Users in the portal user repository. The definitions include their properties, for example the user's preferred language, and portal access control settings that apply to users, for example, who is allowed to administer them. The XML configuration interface allows setting the password for a user, but it does not export the password. The password attribute is required for creating new users. Therefore, you cannot directly use the response file from an XML export request to create new users; you need to add a password attribute to the XML first.
 
-    You can specify the name attribute of users and groups with a full DN \(distinguished name\) as in uid=wpsadmin,cn=users,.... Or you can specify the name attribute with a short ID as it is used for portal login, for example wpsadmin. An XML response file from a portal export request always contains full DNs.
+    You can specify the name attribute of users and groups with a full DN (distinguished name) as in uid=wpsadmin,cn=users,.... Or you can specify the name attribute with a short ID as it is used for portal login, for example wpsadmin. An XML response file from a portal export request always contains full DNs.
 
     With regards to the user tag, there are two special cases for which you must specify particular attributes, depending on the task you want to do:
 
@@ -126,18 +127,18 @@ The portal resources are represented by the following XML tags.
                  xsi:noNamespaceSchemaLocation="PortalConfig\_8.5.0.xsd" 
                  type="update" create-oids="true">
              <portal action="locate">
-                 <user action="update" firstname="**John\_1**" password="password" 
+                 <user action="update" firstname="**John_1**" password="password" 
                        lastname="Miller" name="John's name">
                      <description>John Miller</description>
                      <parameter name="cn" type="string" update="set">John Miller</parameter> 
-                     <parameter name="givenName" type="string" update="set">**John\_2**</parameter>
+                     <parameter name="givenName" type="string" update="set">**John_2**</parameter>
                  </user>
              </portal>
         </request>
         
         ```
 
-        This request sets the value John\_2 for the firstname attribute.
+        This request sets the value John_2 for the firstname attribute.
 
         On some LDAP servers, where the cn is part of the distinguished name, you might not be able to update the cn.
 
@@ -152,7 +153,8 @@ The portal resources are represented by the following XML tags.
 
     Before you reimport the file, you need to review and edit the result file and remove all users and groups that you want to keep in the portal database. During XML import, all users and groups that remain listed in the file are removed from the portal database.
 
-    **Note:** After you delete these entries through the modified XML script, all customization is lost for the deleted users and groups.
+    !!!note
+        After you delete these entries through the modified XML script, all customization is lost for the deleted users and groups.
 
     The sample XML file CleanupUsers.xml is an example of exporting users and groups.
 
@@ -182,17 +184,18 @@ The portal resources are represented by the following XML tags.
 
 -   **wsrp-producer**
 
-    The wsrp-producer is the Producer definition on the Consumer side for Web Services for Remote Portlets \(WSRP\). It allows an administrator to use and integrate remote portlets that are provided by the WSRP Producer.
+    The wsrp-producer is the Producer definition on the Consumer side for Web Services for Remote Portlets (WSRP). It allows an administrator to use and integrate remote portlets that are provided by the WSRP Producer.
 
     After you integrate a WSRP service, the portal handles it like a regular local portlet. For example, you can add the portlet to pages.
 
 -   **web-app**
 
-    Web modules, which correspond to a deployed WAR file. To use them in the portal, one or more \(concrete\) portlet applications must be defined that describe specific settings. In a portlet.xml deployment descriptor, this element corresponds to the portlet-app tag.
+    Web modules, which correspond to a deployed WAR file. To use them in the portal, one or more (concrete) portlet applications must be defined that describe specific settings. In a portlet.xml deployment descriptor, this element corresponds to the portlet-app tag.
 
     Web modules for standard API-compliant portlets can contain only one single portlet application, whereas web modules for IBM API-compliant portlets can contain more than one portlet application. For IBM API portlets, the uid attribute must match theuid attribute that is defined in the deployment descriptor.
 
-    **Note:** IBM API portlets are deprecated since HCL Portal Version 7.0, but are still supported.
+    !!!note
+        IBM API portlets are deprecated since HCL Portal Version 7.0, but are still supported.
 
     For standard portlets, the uid attribute must be constructed by the id attribute of the portlet-app subelement and a .webmod suffix. If the id attribute is not specified, then the uid attribute is constructed by the WAR file name and a .webmod suffix. Example:
 
@@ -216,7 +219,7 @@ The portal resources are represented by the following XML tags.
 
     When the application is used in a WSRP context, the portlets that are contained in the application are defined remotely and can be integrated by using the XML configuration interface. In this case, portlet applications need to define a groupid attribute.
 
-    After you deploy a WAR file locally or integrated a WAR file as a WSRP service, you can also create more portlet applications \(and the contained portlets\) with different settings. This action is also known as copying or cloning the portlet application.
+    After you deploy a WAR file locally or integrated a WAR file as a WSRP service, you can also create more portlet applications (and the contained portlets) with different settings. This action is also known as copying or cloning the portlet application.
 
 -   **portlet**
 
@@ -224,7 +227,8 @@ The portal resources are represented by the following XML tags.
 
     When you create a new portlet in an extra application, it must refer to one of the servlets that was defined in the web module. In a portlet.xml deployment descriptor, this element corresponds to the concrete-portlet tag.
 
-    **Note:** If you write standard API-compliant portlets, you must not use the parameter tag to add parameters; use the preferences tag instead.
+    !!!note
+        If you write standard API-compliant portlets, you must not use the parameter tag to add parameters; use the preferences tag instead.
 
 -   **content-node**
 
@@ -235,9 +239,11 @@ The portal resources are represented by the following XML tags.
     -   A static page is a content node that contains a static HTML file or an HTML fragment.
     -   An internal URL is a content node that points to other portal content by referencing a URL.
     -   An external URL is a content node that points to a web page outside the portal.
+    
     All content nodes in the portal are organized in a hierarchy; at the root of this hierarchy is the special content node wps.content.root. A content node of the type page can be derived from another parent content node so that it partially overrides or extends the layout of its parent. The portal and the portlet for Working with pages always display an aggregation of a composition layer and all of its ancestors. But the XML configuration interface must manage every layer separately.
 
-    **Note:** It is recommended to always export and replace an entire stack of page layers and not to use XML requests to modify individual layout components or derived page layers. In particular, do not try to manually create XML scripts for the definition of derived pages, as the reference structure is complex. Instead, use the portlet for Working with pages to edit page layouts, and then export the result into an XML response file.
+    !!!note
+        It is recommended to always export and replace an entire stack of page layers and not to use XML requests to modify individual layout components or derived page layers. In particular, do not try to manually create XML scripts for the definition of derived pages, as the reference structure is complex. Instead, use the portlet for Working with pages to edit page layouts, and then export the result into an XML response file.
 
 -   **component**
 
@@ -251,10 +257,11 @@ The portal resources are represented by the following XML tags.
 
     An individual occurrence of a portlet on a page. The portlet instance includes the user-defined portlet data that was set by using the edit mode of the portlet.
 
-    **Note:**
-
-    1.  A portlet instance is always contained in a component of type control; deleting a portlet instance automatically deletes the component in which the portlet was contained.
-    2.  Instances of standard portlet API-compliant portlets must not use the parameter tag to add parameters; they must use the preferences tag instead.
+    !!!note
+        1.  A portlet instance is always contained in a component of type control; deleting a portlet instance automatically deletes the component in which the portlet was contained.
+    
+        2.  Instances of standard portlet API-compliant portlets must not use the parameter tag to add parameters; they must use the preferences tag instead.
+    
     For personalized content, where only portlet parameters but no page structure is changed, use the following attributes with the portletinstance tag:
 
     -   **owner**
@@ -269,19 +276,21 @@ The portal resources are represented by the following XML tags.
 
     Represents a property broker wiring between two portlet instances on either the same page or on different pages. A wire connects a source and a target portlet instance so that values that change in the source are propagated to the target. This tag has the `source-pageref` and `target-pageref` as the only extra attributes to the wire tag. When you export a page with cross-page wires that are connected, then the `cross-page-wire` tag is exported, even if there is no direct reference to or from the page or the wire.
 
-    **Note:** A wire can be created only if the wiring endpoints of the corresponding portlets exist. Legacy portlets that are not compliant with JSR 168 or 286 might create those endpoints programmatically on their first rendering. Therefore, the XML configuration interface cannot create a new wire for those portlets unless they are rendered the first time. To create this wire, first view the page that contains the portlet with a web browser and then create the wire by using the XML configuration interface.
+    !!!note
+        A wire can be created only if the wiring endpoints of the corresponding portlets exist. Legacy portlets that are not compliant with JSR 168 or 286 might create those endpoints programmatically on their first rendering. Therefore, the XML configuration interface cannot create a new wire for those portlets unless they are rendered the first time. To create this wire, first view the page that contains the portlet with a web browser and then create the wire by using the XML configuration interface.
 
 -   **wire**
 
     Represents a property broker wiring between two portlet instances on a page. A wire connects a source and a target portlet instance so that values, which change in the source are propagated to the target.
 
-    **Notes:**
+    !!!ote "Notes"
+        1.  The `wire` tag is deprecated with HCL Portal Version 7.0, as it supports property broker wiring between two portlets on the same page only. Use the `cross-page-wire` tag as it supports property broker wiring between portlets on the same page and on different pages.
+    
+        2.  A wire can be created only if the wiring endpoints of the corresponding portlets exist. Legacy portlets that are not compliant with JSR 168 or 286 might create those endpoints programmatically on their first rendering. Therefore, the XML configuration interface cannot create a new wire for those portlets unless they are rendered the first time. To create this wire, first view the page that contains the portlet with a web browser and then create the wire by using the XML configuration interface.
 
-    1.  The `wire` tag is deprecated with HCL Portal Version 7.0, as it supports property broker wiring between two portlets on the same page only. Use the `cross-page-wire` tag as it supports property broker wiring between portlets on the same page and on different pages.
-    2.  A wire can be created only if the wiring endpoints of the corresponding portlets exist. Legacy portlets that are not compliant with JSR 168 or 286 might create those endpoints programmatically on their first rendering. Therefore, the XML configuration interface cannot create a new wire for those portlets unless they are rendered the first time. To create this wire, first view the page that contains the portlet with a web browser and then create the wire by using the XML configuration interface.
 -   **credential-segment**
 
-    Groups a collection of credential entries for a specific back-end credential store \(vault\). The configuration of credential segments cannot be modified after they are created.
+    Groups a collection of credential entries for a specific back-end credential store (vault). The configuration of credential segments cannot be modified after they are created.
 
 -   **credential-slot**
 
@@ -374,24 +383,12 @@ The following tags are available for portal resources for tagging and rating: `t
 
 The XML configuration interface manages only resources of the portal core and not the resources of extra components, such as Portal Personalization.
 
--   **[Special configuration data entries](../admin-system/adxmlref_spec_tags.md)**  
-Additional to the tags that represent portal resources as listed in the preceding section, XML provides the following tags or attributes for special purposes.
--   **[Actions on portal resources](../admin-system/adxmlref_actions.md)**  
-All XML elements that represent portal resources have a required action attribute. The action attribute of XML elements determines what type of processing is applied to the portal resources.
 
-
-**Related information**  
-
-
-[Transferring portal configuration data by using the XML configuration interface](../admin-system/adxmltsk_use.md)
-
-[Task register-iwidget-definition](../dev-portlet/csa2r_cfgtsk_regwidgdef.md)
-
-[Actions on portal resources](../admin-system/adxmlref_actions.md)
-
-[Importing WAR files](../admin-system/adxmlref_import_war.md)
-
-[Sample XML configuration files](../admin-system/admxmsmp.md)
-
-[Using the XML configuration interface to administer tags and ratings](../admin-system/tag_rate_xml.md)
+???+ info "Related information"  
+    -   [Transferring portal configuration data by using the XML configuration interface](../../../../portal_admin_tools/xml_config_interface/working_xml_config_interface/using_xml_config_cmd_line/transfer_portal_cfg_using_xml_config_int/index.md)
+    -   [Task register-iwidget-definition](../../../../../portlets_development/mng_portlets_apps_widgets/managing_iwidgets/csa2r_cfgtsk_regwidgdef.md)
+    -   [Actions on portal resources](../../../../portal_admin_tools/xml_config_interface/xml_config_ref/types_portal_resources/adxmlref_actions.md)
+    -   [Importing WAR files](../../../../portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref_import_war.md)
+    -   [Sample XML configuration files](../../../../portal_admin_tools/xml_config_interface/xml_config_ref/admxmsmp.md)
+    -   [Using the XML configuration interface to administer tags and ratings](../../../../../../build_sites/tagging_rating/tag_rate_xml.md)
 

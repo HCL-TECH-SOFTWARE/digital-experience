@@ -4,7 +4,8 @@ By default, pages that you create under the content root display in the main men
 
 You do this by setting the hidden flag for the page parameter for the content-node tag in XML. Use the following XML snippet:
 
-**Note:** You can still view and work with pages that are marked as hidden in Administration portlets. You can also create a direct URL to the hidden page so that the page can be accessed from other areas of the site, such as the page menu.
+!!!note
+  You can still view and work with pages that are marked as hidden in Administration portlets. You can also create a direct URL to the hidden page so that the page can be accessed from other areas of the site, such as the page menu.
 
 ```
 <content-node action="update" ...>
@@ -15,9 +16,6 @@ You do this by setting the hidden flag for the page parameter for the content-no
 
 ```
 
-
-**Related information**  
-
-
-[Hiding and displaying pages in the navigation](../site/show_hidden_page.md)
+???+ info "Related information"  
+  - [Hiding and displaying pages in the navigation](../../../../../build_sites/create_sites/building_website/site_navigation/show_hidden_page.md)
 

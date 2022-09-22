@@ -6,11 +6,4 @@ There are different commands for the different types of attributes. Similar to t
 
 The set of attributes that is supported for an object depends on the type of the object. Many attributes are read-only. Attribute values are always represented as strings in the scripting language. They are mapped from and to portal data types by the respective script bean. Exceptions are triggered if the mapping fails.
 
--   **[Plain attributes \| Portal Scripting Interface](../admin-system/pl_attributes.md)**  
-Plain attributes have a single value that is queried by using the get command. The object for which to query the attribute is specified by an ID, and the attribute is specified by name.
--   **[List valued attributes \| Portal Scripting Interface](../admin-system/lstvl_attributes.md)**  
-List valued attributes can have multiple values. They are queried by using the list command, which returns all values, which are separated by white space.
--   **[Locale-specific attributes \| Portal Scripting Interface](../admin-system/lcl_spcf_att.md)**  
-Locale-specific attributes have different values for different languages and countries. They can be queried by using the nlsget command, where nls stands for National Language Support.
-
 

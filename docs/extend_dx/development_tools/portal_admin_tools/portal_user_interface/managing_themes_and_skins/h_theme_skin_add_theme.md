@@ -3,7 +3,7 @@ id: h_theme_skin_add_theme
 title: Creating your own theme
 ---
 
-
+# Creating your own theme
 
 
 The best way to start creating your own custom theme is by copying the HCL Portal theme. This ensures that your theme has all the required elements for the theme to function.
@@ -18,7 +18,8 @@ Do not modify the standard HCL Digital Experience theme directly, because future
 
 2.  Copy and rename the folder of the theme on which you want to base your new theme.
 
-    **Note:** The /themelist WebDAV entry point does not support the copy action directly. If you encounter an error when you copy and paste theme folders within /themelist, do the following:
+    !!!note
+        The /themelist WebDAV entry point does not support the copy action directly. If you encounter an error when you copy and paste theme folders within /themelist, do the following:
 
     1.  Copy the theme folder to your local file system.
     2.  Give the theme a new title by editing the appropriate localized\_locale.properties file under the metadata folder. If you do not change the theme title, the portal will show multiple themes with the same titles in selection lists.
@@ -30,5 +31,6 @@ You can now assign the theme to pages as required. To customize your theme, edit
 
 To perform administrative customization, for example to the title, description, or metadata of the theme, continue to use the `/themelist/` entry point. To customize the templates and static resources, use the `/fs-type1/` entry point. At this point your theme still points to the same Default.jsp and dynamic content spots as the portal HCL Portal theme.
 
-**Note:** If you have problems using the `/themelist/` entry point, try `/themelist/all` , as some WebDAV clients have issues listening without the `all` .
+!!!note
+    If you have problems using the `/themelist/` entry point, try `/themelist/all` , as some WebDAV clients have issues listening without the `all` .
 

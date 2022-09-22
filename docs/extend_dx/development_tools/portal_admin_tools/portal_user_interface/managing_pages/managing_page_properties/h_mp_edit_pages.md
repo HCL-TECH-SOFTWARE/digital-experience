@@ -4,7 +4,7 @@ You can edit the properties of existing pages, labels, and URLs to modify settin
 
 To edit a page, label, or URL, do the following steps:
 
-1.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface** \> **Manage Pages**.
+1.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface > Manage Pages**.
 
 2.  Go to the page, label, or URL that you want to edit. Click top-level resources to expand nested resources.
 
@@ -14,7 +14,8 @@ To edit a page, label, or URL, do the following steps:
 
 4.  Update the values available for the resource. The following advanced options are only available when you edit the page properties of existing pages, labels, and URLs:
 
-    **Note:** See the **Page Properties Help** for information on how to do these advanced options.
+    !!!note
+        See the **Page Properties Help** for information on how to do these advanced options.
 
     -   **Allowed portlets**
 
@@ -35,8 +36,6 @@ To edit a page, label, or URL, do the following steps:
 5.  Click **OK** to save the modified settings, or click **Cancel** if you want to return to without saving the updated settings.
 
 
-**Related information**  
-
-
-[Configuring the validation of friendly URLs for web content](../wcm/configure_validate_friendly_urls.md)
+???+ info "Related information"  
+    -   [Configuring the validation of friendly URLs for web content](../../../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/customizing_content/friendlyurl_wcmviewer/validate_friendlyurl/configure_validate_friendly_urls.md)
 

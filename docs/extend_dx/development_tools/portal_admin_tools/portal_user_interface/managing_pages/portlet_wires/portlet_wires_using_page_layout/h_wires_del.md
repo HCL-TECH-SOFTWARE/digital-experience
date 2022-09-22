@@ -3,6 +3,7 @@ id: h_wires_del
 title: Deleting a wire
 ---
 
+# Deleting a wire
 
 
 

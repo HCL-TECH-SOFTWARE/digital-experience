@@ -1,4 +1,8 @@
-# Locale-specific attributes \| Content bean content hierarchy
+---
+title: Locale-specific attributes
+---
+
+# Locale-specific attributes | Content bean content hierarchy
 
 The content nodes have two locale-specific attributes, title and description. See the bean help for alternative, shorter names for these attributes. The title must be defined for each locale, though you can set it to the empty string. A new locale is defined by setting the title for it.
 

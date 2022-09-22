@@ -4,7 +4,7 @@ You can import an XML configuration file to your HCL Digital Experience portal s
 
 To import an XML configuration file by using the Import XML portlet, proceed as follows:
 
-1.  Click the **Administration menu** icon. Then, click **Portal Settings** \> **Import XML**.
+1.  Click the **Administration menu** icon. Then, click **Portal Settings > Import XML**.
 
 2.  Locate the XML configuration file that you want to import. Use **Browse** to help locate the file.
 
@@ -14,12 +14,7 @@ To import an XML configuration file by using the Import XML portlet, proceed as 
 
 
 
-**Related information**  
-
-
-[Configuring a Credential Vault for overlay reports](../admin-system/sa_asa_overlay_cfg_crd_vlt.md)
-
-[Exporting and importing static pages](../admin-system/spa_xml.md)
-
-[Tools for staging to production](../deploy/dep_tools.md)
-
+???+ info "Related information"  
+    -   [Configuring a Credential Vault for overlay reports](../../../../../../deployment/manage/monitoring/analyze_portal_usage/user_behavior_by_asa/displaying_overlay_analytics_reports/sa_asa_overlay_cfg_crd_vlt.md)
+    -   [Exporting and importing static pages](../../../../../../build_sites/create_sites/building_website/static_content/including_static_content_pages/export_import_static_page/index.md)
+    -   [Tools for staging to production](../../../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_tools.md)
