@@ -10,6 +10,6 @@ HCL has tested an installation with 300 virtual portals and a total of more than
 -   Setting up and administering a large number of virtual portals by using the portal administration user interface can be time consuming.
 
 
-???+ info "Related information"
+???+ info "Related information:"
     - [Planning for virtual portals](../../vp_planning/index.md)
 

@@ -516,12 +516,9 @@ The following samples are a breakdown of the previous examples and cover all ava
 
 
 
-Related information:"
-[Providing custom styles for social lists](../social/soc_rendr_provide_custom_styles.md)
-
-[Server-side framework](../dev-theme/themeopt_cust_serverframe.md)
-
-[Adding jQuery to a theme](../dev-theme/themeopt_jquery.md)
-
-[Resource bundles to support a Portal based custom theme](../admin-system/adsuplang_add_rsrc_bndl_cstm.md)
+???+ info "Related information:"
+    - [Providing custom styles for social lists](../../../social_rendering/customizing_view_definitions/customizing_visualdesign/customizing_css_social_list/soc_rendr_provide_custom_styles.md)
+    - [Server-side framework](../../customizing_theme/menus/simple_menu_framework/themeopt_cust_serverframe.md)
+    - [Adding jQuery to a theme](../../customizing_theme/add_jquery_to_theme/index.md)
+    - [Resource bundles to support a Portal based custom theme](../../../../extend_dx/development_tools/portal_admin_tools/language_support/supporting_new_language/adding_resource_bundles_for_new_lang/adsuplang_add_rsrc_bndl_cstm.md)
 
