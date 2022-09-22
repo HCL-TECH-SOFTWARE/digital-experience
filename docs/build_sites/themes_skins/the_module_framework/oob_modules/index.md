@@ -701,25 +701,18 @@ The plugin.xml file location is [PortalServer\_root](../../../../guide_me/wpsdir
 |wp\_preview\_menu|A managed pages theme module for the Preview function that is seen in the **More** menu|
 |wp\_template\_select\_dialog|A dialog that is started from the **New Page** dialog. A user can pick a page template and base a newly created page on that template.|
 
-<!--
--   **[Module capabilities](../dev-theme/themeopt_oob_capability.md)**  
+
+-   **[Module capabilities](themeopt_oob_capability.md)**  
 Module capabilities enable the use of modules in the theme.
--   **[Dojo classes provided by the Dojo modules](../dev-theme/themeopt_oob_dojoclass.md)**  
+-   **[Dojo classes provided by the Dojo modules](themeopt_oob_dojoclass.md)**  
 A list of Dojo classes that are provided by each version 1.9 Dojo meta-module.
 
 
-**Related information**  
-
-
-[Adding an Active Site Analytics aggregator to a portal page](../admin-system/sa_asa_add_aggr_2_page.md)
-
-[Themes, profiles, and skins](../site/site_themes.md)
-
-[Module dependencies in portlets](../dev-theme/themeopt_mod_capfilters.md)
-
-[Simple modules](../dev-theme/themeopt_simple_modules.md)
-
-[Customizing the CSS styles of social lists](../social/soc_rendr_custom_css_styles.md)
-
-[Understanding the Portal 8.5 modularized theme](../dev-theme/themeopt_defaultparts.md) -->
+???+ info "Related information:"
+    - [Adding an Active Site Analytics aggregator to a portal page](../../../../deployment/manage/monitoring/analyze_portal_usage/user_behavior_by_asa/collecting_analytics_data/sa_asa_add_aggr_2_page.md)
+    - [Themes, profiles, and skins](../../../create_sites/website_building_blocks/themes_profiles_skins/index.md)
+    - [Module dependencies in portlets](../../the_module_framework/themeopt_mod_capfilters.md)
+    - [Simple modules](../../the_module_framework/writing_module/simple_modules/index.md)
+    - [Customizing the CSS styles of social lists](../../../social_rendering/customizing_view_definitions/customizing_visualdesign/customizing_css_social_list/index.md)
+    - [Understanding the Portal 8.5 modularized theme](../../../create_sites/website_building_blocks/themes_profiles_skins/themeopt_defaultparts.md)
 

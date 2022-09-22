@@ -39,7 +39,7 @@ The navigation on mobile devices is rendered by the mobileNavigation.jsp file. T
 ```
 
 
-???+ info "Related information"
+???+ info "Related information:"
    - [Working with dynamic content spots](../customizing_theme/dynamic_content_spots/working_with_dcs/index.md)
    - [Customizing navigation](../customizing_theme/cust_nav/)
 

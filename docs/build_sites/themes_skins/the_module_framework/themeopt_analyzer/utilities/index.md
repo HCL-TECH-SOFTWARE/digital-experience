@@ -55,13 +55,13 @@ The import and export features are compatible with later versions, so if you hav
 
     Provide an option to export all titles and descriptions of all known modules in the system to a .CSV file.
 
-<!--
--   **[How to Clear the Theme Caches](../wcm/clear_themes_caches.md)**  
+
+-   **[How to Clear the Theme Caches](clear_themes_caches.md)**  
 The Theme Optimization Analyzer portlet which is part of the Portal administration gives users the ability to clear theme related caches.
--   **[How to Clear the Theme Caches](../wcm/clear_themes_caches.md)**  
-The Theme Optimization Analyzer portlet which is part of the Portal administration gives users the ability to clear theme related caches. -->
+-   **[How to Clear the Theme Caches](clear_themes_caches.md)**  
+The Theme Optimization Analyzer portlet which is part of the Portal administration gives users the ability to clear theme related caches.
 
 
-???+ info Related information"
+???+ info Related information:"
     - [Resource Aggregator overview](../../themeopt_reso_agg.md)
 
