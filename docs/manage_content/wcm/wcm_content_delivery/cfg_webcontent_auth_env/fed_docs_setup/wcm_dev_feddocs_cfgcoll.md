@@ -20,7 +20,8 @@ Because the federated documents feature uses the AJAX proxy component to access 
     wp.proxy.config.urlreplacement.federated_documents_policy.1=http://ecm.example.com:10038/*
     ```
 
-    **Note:** The value of the property key `suffix` can be any value as long as it is unique within the set of keys mapping to the `federated_documents_policy` dynamic policy.
+    !!! note
+        The value of the property key `suffix` can be any value as long as it is unique within the set of keys mapping to the `federated_documents_policy` dynamic policy.
 
 6.  Create additional properties as needed for any other content management servers that you need to access through the federated documents feature.
 
@@ -44,8 +45,6 @@ Because the federated documents feature uses the AJAX proxy component to access 
 
 
 
-**Related information**  
-
-
-[Setting service configuration properties](../admin-system/adsetcfg.md)
+???+ info "Related information:"
+    - [Setting service configuration properties](../../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 
