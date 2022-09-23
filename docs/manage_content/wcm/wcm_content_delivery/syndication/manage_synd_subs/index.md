@@ -17,7 +17,6 @@ After you set up a syndication relationship, you can monitor the progress of the
 -   **[Delegated access for syndication](wcm_syndication_delegated_access.md)**  
 After you set up a syndication relationship, you can allow users with Editor access to administer syndication.
 
-**Parent topic:**[Web content](../practitioner_studio/web_content.md)
 
 **Related information**  
 
