@@ -1,10 +1,14 @@
+---
+title: Download configuration scripts
+---
+
 # Configuration Wizard: Download configuration scripts
 
 Choose to download the configuration scripts if you plan to run the scripts instead of completing the steps from the wizard, or if you need to run these steps on a remote system.
 
 You can download a compressed file that is named WorkflowInstanceScriptsAll that contains scripts, instructions, and other files to a directory of your choice. The Configuration Wizard creates the following files:
 
--   **Instruction file \(.html\) named after your workflow**
+-   **Instruction file (.html) named after your workflow**
 
     The instruction file provides you with tailored steps for your configuration and your target operating system. Based on the information you provided, an instruction file is created to guide you in running scripts in combination with other manual configuration steps for your specific configuration goal.
 
@@ -21,13 +25,8 @@ You can download a compressed file that is named WorkflowInstanceScriptsAll that
     The .wfi file is used for troubleshooting your configuration option.
 
 
-**Related information**  
+???+ info "Related information"  
+    -   [Configuration Wizard: Reusable wizard selections](../../../portal_admin_tools/cfg_wizard/usage/cw_save_settings.md)
 
 
-[Configuration Wizard: Reusable wizard selections](../cw_panelhelp/cw_save_settings.md)
-
-**References:**  
-
-
-[Reusable wizard selections](cw_save_settings.md)
 

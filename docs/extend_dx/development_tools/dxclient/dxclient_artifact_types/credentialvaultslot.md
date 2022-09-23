@@ -34,7 +34,7 @@ This topic describes the commands that are used to create or update credential v
     -hostname <value>
     ```
 
-    Use this attribute to specify the port on which to connect to the server \(for Kubernetes Environment, dxPort is 443\):
+    Use this attribute to specify the port on which to connect to the server (for Kubernetes Environment, dxPort is 443):
 
     ```
     -dxPort <value>
