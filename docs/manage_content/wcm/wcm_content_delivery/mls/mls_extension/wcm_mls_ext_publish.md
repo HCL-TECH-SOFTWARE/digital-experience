@@ -4,9 +4,11 @@ This extension uses projects to ensure that the base item and any draft localize
 
 To use the project synchronized publishing extension, set **syncPublish.useProjects=true** in the multilingual configuration file.
 
-**Note:** Individual workflows can be excluded from using synchronized publishing by specifying their name in the **SyncPublish.workflowsToExcludeFromSyncProjectPublishing** setting in the multilingual configuration file.
+!!! note
+    Individual workflows can be excluded from using synchronized publishing by specifying their name in the **SyncPublish.workflowsToExcludeFromSyncProjectPublishing** setting in the multilingual configuration file.
 
-**Note:** The **syncPublish.useProjects** and **SyncPublish.workflowsToExcludeFromSyncProjectPublishing** settings must be the same across all associated multilingual configuration files.
+!!! note
+    The **syncPublish.useProjects** and **SyncPublish.workflowsToExcludeFromSyncProjectPublishing** settings must be the same across all associated multilingual configuration files.
 
 ## How it works
 

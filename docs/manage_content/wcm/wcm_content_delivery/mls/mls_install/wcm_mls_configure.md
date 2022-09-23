@@ -40,6 +40,7 @@ After you install the multilingual extensions, you then must configure your syst
 
         -   use the **LocalizedConfigurationFileAT** content template from the "**ML Configuration**" library for localized sites.
         -   use the **RegionalizedConfigurationFileAT** content template from the **"ML Configuration"** library for regionalized sites.
+
     2.  Type a name and display title to represent the set of multilingual sites.
 
     3.  Complete the following fields:
@@ -62,46 +63,15 @@ After you install the multilingual extensions, you then must configure your syst
 
         |Site Type|Language Tree|Libraries|Configuration files|
         |---------|-------------|---------|-------------------|
-        |Localized site|        -   English
-        -   Spanish
-|        -   English
-        -   Spanish
-|        -   **Localized Configuration file**
-
-            -   Base Content Library: English
-            -   Content Libraries: English, Spanish
-|
-        |Regionalized site|        -   English
-            -   English US \(Primary\)
-            -   English Australia
-        -   Spanish
-            -   Spanish Spain \(Primary\)
-            -   Spanish Mexico
-|        -   English
-        -   English US
-        -   English Australia
-        -   Spanish
-        -   Spanish Spain
-        -   Spanish Mexico
-|        -   **Localized Configuration file**
-
-            -   Base Content Library: English
-            -   Content Libraries: English, Spanish
-        -   **Regionalized Configuration file 1 \(English\)**
-
-            -   Base Content Library: English
-            -   Content Libraries: English, English US, English Australia
-        -   **Regionalized Configuration file 2 \(Spanish\)**
-
-            -   Base Content Library: Spanish
-            -   Content Libraries: Spanish, Spanish Spain, Spanish Mexico
-|
+        |Localized site|        -   English <br> -   Spanish|        -   English <br> -   Spanish|        -   **Localized Configuration file** <br> -   Base Content Library: English <br> -   Content Libraries: English, Spanish|
+        |Regionalized site|        -   English <br> -   English US \(Primary\) <br> -   English Australia <br> -   Spanish <br> -   Spanish Spain \(Primary\) <br> -   Spanish Mexico|        -   English <br> -   English US <br> -   English Australia <br> -   Spanish <br> -   Spanish Spain <br> -   Spanish Mexico|        -   **Localized Configuration file** <br> -   Base Content Library: English <br> -   Content Libraries: English, Spanish <br> -   **Regionalized Configuration file 1 \(English\)** <br>  -   Base Content Library: English <br> -   Content Libraries: English, English US, English Australia <br> -   **Regionalized Configuration file 2 \(Spanish\)** <br> -   Base Content Library: Spanish <br> -   Content Libraries: Spanish, Spanish Spain, Spanish Mexico|
 
 7.  For each library referenced in each multilingual configuration file, create a link component directly under the Components folder that references the multilingual configuration file:
 
     -   For references to a localized multilingual configuration file, the link component name must be **MLConfFileReference**.
     -   For references to a regionalized multilingual configuration file, the link component name must be **RegionalizedMLConfFileReference**.
     -   The **ALL\_USERS** group must be assigned to the **User** role in the component access controls.
+
 8.  This step is optional. Activate email notifications for the workflow synchronization extensions:
 
     1.  Open a multilingual configuration file from the **"ML Configuration"** library.
@@ -152,12 +122,11 @@ After you install the multilingual extensions, you then must configure your syst
 
 11. Enable syndication for the **"ML Configuration"** library.
 
-    **Note:** The multilingual solution must be installed on both the syndicator and subscriber before syndication can be enabled.
+    !!! note
+        The multilingual solution must be installed on both the syndicator and subscriber before syndication can be enabled.
 
 
 
-**Related information**  
-
-
-[Web content associations](../wcm/wcm_delivery_contentmap_about.md)
+???+ info "Related information:"
+    - [Web content associations](../../delivering_web_content/deliver_webcontent_on_portal/getting_started/wcm_delivery_contentmap_about.md)
 
