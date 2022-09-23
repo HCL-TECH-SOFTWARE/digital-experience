@@ -2,7 +2,7 @@
 
 The default context root for the multilingual solution application is /wps. With Version 8.5 CF3, you can change this setting to match the HCL Portal context root to better suit the requirements of your organization.
 
-1.  Ensure that the WebSphere®Portal context root is modified as described in [Changing the portal URI after an installation](../config/cfg_intr.md).
+1.  Ensure that the WebSphere®Portal context root is modified as described in [Changing the portal URI after an installation](../../../../../deployment/manage/siteurl_cfg/changing_portal_uri_after_install/index.md).
 
 2.  Ensure that the WasPassword and PortalAdminPwd passwords are set in the **wkplc.properties** file.
 

@@ -6,7 +6,8 @@ You can use WebDAV to work with the portal themes.
 
 WebDAV is defined by RFC2518 as an HTTP extension framework with a plug point for the access and management of hierarchical data. For example, in content management systems. WebDAV stores the data in collections. You can work with the data in a user interface view that is similar to that of a file system. A folder represents a WebDAV collection. Various tools are available for integrating WebDAV resources into the client file system. Users can use these tools to view and modify resources that they can access with WebDAV.
 
-**Note:** The HTTP Basic Authentication Trust Association Interceptor (TAI) must be enabled to use WebDAV in HCL Portal. This TAI is enabled by default. See the related links for information.
+!!! note
+    The HTTP Basic Authentication Trust Association Interceptor (TAI) must be enabled to use WebDAV in HCL Portal. This TAI is enabled by default. See the related links for information.
 
 You can obtain the entry point URL to the WebDAV file store from the service document under the URL `/wps/mycontenthandler/!ut/p/model/service-document`. The service document contains the top-level access point as follows:
 
@@ -124,7 +125,7 @@ WebDAV prevents the deletion of these folders. Even users with administrator rig
 
 To allow non-administrator users to update or modify existing files do the following steps.
 
-1.  Open a command prompt and change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+1.  Open a command prompt and change to the [wp\_profile\_root](../../../../../guide_me/wpsdirstr.md)/ConfigEngine directory.
 2.  Run the following ConfigEngine task.
     -   AIX® HP-UX Linux™ Solarisz/OS®:
     -   IBM® i: ConfigEngine.sh export-nodes -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin -Dquery="/filestore/fs-type1/themes" -Dwp.content.repository.output.dir="c:\\temp\\jcr"
@@ -189,7 +190,8 @@ The following list shows extra folders. Each of these folders represents a WebDA
 
     Only the user `user_name` has access to these files. This folder is created for the individual user `user_name` when the user accesses the WebDAV file store for the first time.
 
-    **Note:** To have human readable folder names, the portal uses the user IDs of the individual users as the names for the users' folders `user_name`. Internally, the portal uses the VMM ID of the user, so data does not need to be moved when the user name is changed.
+    !!! note
+        To have human readable folder names, the portal uses the user IDs of the individual users as the names for the users' folders `user_name`. Internally, the portal uses the VMM ID of the user, so data does not need to be moved when the user name is changed.
 
     If you want to programmatically find the URL entry point to a folder for the current user, you can look into the services document. The access point for user-specific data is provided as follows:
 
@@ -298,11 +300,8 @@ WebDAV file store supports the following HTTP methods:
 
 
 
-**Related information**  
-
-
-[Enabling HTTP Basic Authentication for simple clients](../security/tait_nbl_hba4sc.md)
-
-[Embedding the HCL Portal 8.5 site toolbar dynamically without a dynamic content spot](../../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/enable_func_migrated_themes/add_85_toolbar/themeopt_cust_toolbar_dynamic_embedding.md)
+???+ info "Related information:"
+    - [Enabling HTTP Basic Authentication for simple clients](../../../../../deployment/manage/security/basic_auth/index.md)
+    - [Embedding the HCL Portal 8.5 site toolbar dynamically without a dynamic content spot](../../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/enable_func_migrated_themes/add_85_toolbar/themeopt_cust_toolbar_dynamic_embedding.md)
 
 

@@ -39,11 +39,11 @@ To enable this WAR file, adapt the application.xml files of the deployed Enterpr
 9.  Restart the portal for your changes to take effect.
 
 
-**Note:** Depending on how your web server is set up, this change might cause all requests to be routed to the web server plug-in. In this case refer to your web server documentation for information about how to route only OPTIONS requests to the plug-in.
+!!! note
+    Depending on how your web server is set up, this change might cause all requests to be routed to the web server plug-in. In this case refer to your web server documentation for information about how to route only OPTIONS requests to the plug-in.
 
 
-**Related information**  
-
-
-[Configuring HCL Sametime Proxy](../collab/cfg_st_single_ldap.md)
+<!---
+???+ info "Related information:"
+    - [Configuring HCL Sametime Proxy](../collab/cfg_st_single_ldap.md)--->
 

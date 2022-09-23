@@ -36,11 +36,10 @@ When you create a page that is based on the Articles template, several things ha
     -   The configuration of the List of Articles viewer is updated during instantiation to point to the newly generated `List of Articles` content item.
     -   The Article viewer is configured to directly retrieve its context from the content association of the containing page.
 
-**Note:** The Articles page template is a managed page that stores its associated web content in the Portal Site library. If you disable managed pages, the content that is associated with this template is no longer copied during page instantiation. In addition, the corresponding preferences of the Articles viewer and List of Articles viewer are not adjusted.
+!!! note
+    The Articles page template is a managed page that stores its associated web content in the Portal Site library. If you disable managed pages, the content that is associated with this template is no longer copied during page instantiation. In addition, the corresponding preferences of the Articles viewer and List of Articles viewer are not adjusted.
 
 
-**Related information**  
-
-
-[The module framework](../dev-theme/themeopt_module.md)
+???= info "Related information:"
+[The module framework](../../../../../../../build_sites/themes_skins/the_module_framework/index.md)
 
