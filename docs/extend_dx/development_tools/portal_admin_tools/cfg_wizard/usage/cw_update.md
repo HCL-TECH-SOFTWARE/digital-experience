@@ -3,8 +3,7 @@ id: cw_update
 title: Migrate to a New Version
 ---
 
-
-
+# Configuration Wizard: Migrate to a New Version
 
 Update your current environment by migrating to the latest version of HCL Digital Experience. With migration, you install the new version of a product alongside of the earlier version and then copy data from the earlier version to the new version. Your goal is to create a new environment that is identical to the earlier environment.
 
@@ -45,8 +44,6 @@ Every migration requires you to set up a target environment. Your target environ
     There are still some directory structure considerations to keep in mind. You might want to use the same directory structure in your new WebSphere® Portal installation to hold logs and backups, for example.
 
 
-**Related information**  
-
-
-[Configuration Wizard](cw_main.md)
+???+ info "Related information"  
+    -   [Configuration Wizard](../../../portal_admin_tools/cfg_wizard/configuration/index.md)
 

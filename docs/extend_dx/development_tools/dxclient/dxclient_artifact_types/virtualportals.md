@@ -95,7 +95,7 @@ This topic describes the commands that are used in managing the virtual portal a
         -hostname <value>
         ```
 
-        Use this parameter to specify the port number of the cw\_profile \(e.g. for Kubernetes Environment dxConnectPort is 443\):
+        Use this parameter to specify the port number of the cw_profile (e.g. for Kubernetes Environment dxConnectPort is 443):
 
         ```
         -dxConnectPort <value>
@@ -184,19 +184,19 @@ This topic describes the commands that are used in managing the virtual portal a
         -dxPassword <value>
         ```
 
-        Use this parameter to specify the port number of the cw\_profile \(e.g. for Kubernetes Environment dxConnectPort is 443\):
+        Use this parameter to specify the port number of the cw_profile (e.g. for Kubernetes Environment dxConnectPort is 443):
 
         ```
         -dxConnectPort <value>
         ```
 
-        Use this parameter to specify the username that is required for authenticating to the cw\_profile:
+        Use this parameter to specify the username that is required for authenticating to the cw_profile:
 
         ```
         -dxConnectUsername <value>
         ```
 
-        Use this parameter to specify the password that is required for authenticating to the cw\_profile:
+        Use this parameter to specify the password that is required for authenticating to the cw_profile:
 
         ```
         -dxConnectPassword <value>
@@ -246,13 +246,13 @@ This topic describes the commands that are used in managing the virtual portal a
         -dxPassword <value>
         ```
 
-        Use this parameter to specify the port on which to connect to the server \(e.g. for Kubernetes Environment dxPort is 443\):
+        Use this parameter to specify the port on which to connect to the server (e.g. for Kubernetes Environment dxPort is 443):
 
         ```
         -dxPort <value>
         ```
 
-        Use this parameter to specify the path to DX configuration endpoint \(for example: /wps/config\):
+        Use this parameter to specify the path to DX configuration endpoint (for example: /wps/config):
 
         ```
         -xmlConfigPath <value>
@@ -299,13 +299,13 @@ This topic describes the commands that are used in managing the virtual portal a
         -dxPassword <value>
         ```
 
-        Use this parameter to specify the port on which to connect to the server \(e.g. for Kubernetes Environment dxPort is 443\):
+        Use this parameter to specify the port on which to connect to the server (e.g. for Kubernetes Environment dxPort is 443):
 
         ```
         -dxPort <value>
         ```
 
-        Use this parameter to specify the path to DX configuration endpoint \(for example: /wps/config\):
+        Use this parameter to specify the path to DX configuration endpoint (for example: /wps/config):
 
         ```
         -xmlConfigPath <value>

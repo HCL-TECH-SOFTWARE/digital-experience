@@ -65,7 +65,7 @@ The restart-dx-core command is used to restart the DX Core server.
 
     Specify either the `dxProfileName` or `dxProfilePath` of the DX core server:
 
-    -   Use this attribute to specify the profile name of the DX core server \(for example: `wp_profile`\):
+    -   Use this attribute to specify the profile name of the DX core server (for example: `wp_profile`):
 
         ```
         -dxProfileName <Profile name of the DX core server>
@@ -73,7 +73,7 @@ The restart-dx-core command is used to restart the DX Core server.
 
     **OR**
 
-    -   Use this attribute to specify the profile path of the DX server \(for example: `/opt/HCL/wp_profile`\):
+    -   Use this attribute to specify the profile path of the DX server (for example: `/opt/HCL/wp_profile`):
 
         ```
         -dxProfilePath <Path of the DX core server profile> 
@@ -150,7 +150,7 @@ The restart-dx-core command is used to restart the DX Core server.
     -targetHostname <value>
     ```
 
-    Use this attribute to specify the port number of the target cw\_profile server:
+    Use this attribute to specify the port number of the target cw_profile server:
 
     ```
     -targetDxConnectPort <value>

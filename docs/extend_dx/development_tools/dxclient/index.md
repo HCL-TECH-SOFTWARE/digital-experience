@@ -2,16 +2,16 @@
 
 DXClient is a tool that helps developers and administrators manage tasks, such as uploading one or more portlets or Script Applications, from source development environments to target HCL DX 9.5 deployments. This tool is capable of taking artifacts developed locally and deploying them to DX 9.5 servers deployed to supported on-premises platforms in standalone, cluster, or farm-topologies and supported Kubernetes platforms.
 
-!!! important 
+!!!important 
     DXClient version is mostly forward and backward compatible with the DX CF versions, however, in some cases it might not work as expected if the CF versions are different. Hence, ensure that the CF versions of both DXClient and DX Core are the same in your installation.
-!!! note
+!!!note
     DXClient is enabled in supported Kubernetes platforms from HCL Digital Experience 9.5 CF192 and later releases:
     -   DXClient is available as a Docker image from HCL DX 9.5 CF196 and later releases, See the *Installation section* below for more details.
     -   DXClient also exists as [Node.js](https://nodejs.org/en/)-based CLI tool and requires Node.js to be installed as a prerequisite. However, this is deprecated in the HCL Digital Experience Container CF196 release.
 
 ## DXConnect
 
-DXConnect is a servlet-based application deployed on top of IBM WebSphere Application Server in the HCL DX 9.5 CF19 and later deployments, under the [Configuration Wizard profile - `cw_profile`](https://help.hcltechsw.com/digital-experience/9.5/config/cw_overview.html). DXConnect enables the DXClient tool to connect over an HTTP or HTTPS connection from a client development machine or remote server to a source or target HCL DX 9.5 server to execute certain tasks requested via DXClient commands.
+DXConnect is a servlet-based application deployed on top of IBM WebSphere Application Server in the HCL DX 9.5 CF19 and later deployments, under the [Configuration Wizard profile - `cw_profile`](../portal_admin_tools/cfg_wizard/configuration/index.md). DXConnect enables the DXClient tool to connect over an HTTP or HTTPS connection from a client development machine or remote server to a source or target HCL DX 9.5 server to execute certain tasks requested via DXClient commands.
 
 ## Architecture
 
@@ -25,7 +25,7 @@ DXConnect is a servlet-based application deployed on top of IBM WebSphere Applic
     
     3.  For supported on premises platforms with HCL DX 9.5 CF19 and later releases, the DXConnect application needs to be installed (refer to [DXConnect](dxconnect.md)) and started under the Configuration Wizard (`cw_profile`) on target servers. For more information on starting the Configuration Wizard, refer to [Accessing the Configuration Wizard](../portal_admin_tools/cfg_wizard/configuration/cw_run.md)
 
-!!! remember
+!!!remember
     Configuration Wizard Administrator credentials are required to access the DXConnect application.
 
 
@@ -33,7 +33,7 @@ DXConnect is a servlet-based application deployed on top of IBM WebSphere Applic
 
 **Prerequisites:** You must ensure that Docker is installed on the workstation.
 
-!!! note
+!!!note
     When you upgrade to use the Docker image DXClient, you should first uninstall the nodejs DXClient.
 
 DXClient docker image comes with a script that you can use to run the docker image. This script creates a store directory, and copies the input files from the absolute path to the shared volume location.
@@ -83,13 +83,13 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 
     A folder named store will be created in your working directory. This is the shared volume location to your docker container.
 
-9.  Configuration, logger, output, and sample files under location - <working-directory\>/store.
+9.  Configuration, logger, output, and sample files under location - <working-directory>/store.
 
-Common command arguments can be pre-configured inside the `config.json` file available under `<working-directory>/store` folder. A sample configuration file that could be used on-premises platforms in standalone, cluster platforms is also available under `<working-directory>/store/samples/sample-configurations/default-config.json` for reference.
+Common command arguments can be pre-configured inside the `config.json` file available under <working-directory>/store folder. A sample configuration file that could be used on-premises platforms in standalone, cluster platforms is also available under <working-directory>/store/samples/sample-configurations/default-config.json for reference.
 
 ## DXClient installation configuration
 
-Common command arguments can be pre-configured inside the `config.json` file available under `dist/src/configuration` folder. A sample configuration file that could be used for any of the supported Kubernetes platforms is also available under `samples/sample-configurations.json` for reference.
+Common command arguments can be pre-configured inside the `config.json` file available under dist/src/configuration folder. A sample configuration file that could be used for any of the supported Kubernetes platforms is also available under samples/sample-configurations.json for reference.
 
 ```
 {

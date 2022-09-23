@@ -31,7 +31,7 @@ The Configuration Wizard creates multiple files to help you complete your config
 
     This compressed file is downloaded to the location specified in your browser download settings. The configuration wizard creates the following files:
 
-    -   **Instruction file \(HTML\) named after your task**
+    -   **Instruction file (HTML) named after your task**
 
         The instruction file provides you with tailored steps for your configuration and your target operating system. Based on the information that you provided when customizing your task, an instruction file is created. This file guides you when you run scripts in combination with other manual configuration steps for your specific configuration goal.
 
@@ -51,8 +51,6 @@ The Configuration Wizard creates multiple files to help you complete your config
 
 
 
-**Related information**  
-
-
-[Roadmaps to deploy your HCL Digital Experience system](../install/deployment_patterns.md)
+???+ info "Related information"  
+    -   [Roadmaps to deploy your HCL Digital Experience system](../../../../../get_started/plan_deployment/traditional_deployment/roadmaps/index.md)
 

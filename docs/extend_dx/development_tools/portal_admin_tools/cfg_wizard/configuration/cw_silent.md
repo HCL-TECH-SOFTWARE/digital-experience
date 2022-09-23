@@ -5,21 +5,23 @@ You can run the Configuration Wizard silently if you have multiple deployments o
 1.  Choose one of the following options to prepare to run the Configuration Wizard silently:
 
     -   Generate the customization data file in the configuration wizard without running the tasks.
-    -   Modify the sample customization data file that matches your deployment. This file is in the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/installer/samples/configwizard directory.
+    -   Modify the sample customization data file that matches your deployment. This file is in the PortalServer_root/installer/samples/configwizard directory.
 
-        **Important:** The sample scenarios do not cover all deployment options. Therefore, if the samples do not match your deployment scenario, generate the customization data file.
+        !!!important:
+            The sample scenarios do not cover all deployment options. Therefore, if the samples do not match your deployment scenario, generate the customization data file.
 
 2.  Open a command prompt.
 
-3.  Change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+3.  Change to the wp_profile_root/ConfigEngine directory.
 
 4.  Create a silent installation from a set of customization data:
 
-    **Note:** All parameters are necessary. Run this task once per deployment cycle.
+    !!!note
+        All parameters are necessary. Run this task once per deployment cycle.
 
-    -   AIX® HP-UX Linux™ Solaris z/OS®: ./ConfigEngine.sh customize-workflow -DwfId=workflow-identifier -DwfData=customization-data-file -DwfOutput=output-directory -DWasPassword=password
-    -   IBM® i: ConfigEngine.sh customize-workflow -DwfId=workflow-identifier -DwfData=customization-data-file -DwfOutput=output-directory -DWasPassword=password
-    -   Windows™: ConfigEngine.bat customize-workflow -DwfId=workflow-identifier -DwfData=customization-data-file -DwfOutput=output-directory -DWasPassword=password
+    -   AIX® and Linux™: `./ConfigEngine.sh customize-workflow -DwfId=workflow-identifier -DwfData=customization-data-file -DwfOutput=output-directory -DWasPassword=password`
+    -   Windows™: `ConfigEngine.bat customize-workflow -DwfId=workflow-identifier -DwfData=customization-data-file -DwfOutput=output-directory -DWasPassword=password`
+    
     Where workflow-identifier is the name in the repository.
 
     Where customization-data-file is the name of the customization data file.
