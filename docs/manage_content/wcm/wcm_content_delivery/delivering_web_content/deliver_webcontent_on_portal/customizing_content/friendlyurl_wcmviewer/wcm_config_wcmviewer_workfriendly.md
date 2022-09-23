@@ -109,7 +109,7 @@ http://host\_name:port\_number/context\_root/portal/page\_id/path\_to\_content/[
 -   The segments of a friendly URL for web content are not localized for multiple languages. The `path\_to\_content` portion of a friendly URL for web content is composed of the unlocalized names of web content folders, site areas, and content items. For example, if you name these items with English terms, the friendly URL for web content is constructed of these English terms, even if the portal language is not English.
 
 
-???+ info "Related information"
+???+ info "Related information:"
     - [Defining friendly URLs without state information for pages in your site](../../../../../../../deployment/manage/siteurl_cfg/changing_siteurl/cw_navstate/mp_friendly_short_url.md)
     - [Changing the site URL after an installation](../../../../../../../deployment/manage/siteurl_cfg/changing_siteurl/index.md)
 

@@ -165,7 +165,7 @@ This request deletes either all content associations for a specific web content 
 ```
 
 
-???+ info "Related information"
+???+ info "Related information:"
     - [Web content associations](../../getting_started/wcm_delivery_contentmap_about.md)
     - [Creating a web content page with the XML configuration interface](../mp_wcm_createpagexml.md)
     - [Human readable URL mappings for virtual portals](../../../../../../../build_sites/virtual_portal/vp_planning/shape_vp_ux/advppln_shpux_urlmap.md)
