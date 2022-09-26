@@ -65,8 +65,6 @@ The syntax for these configuration tasks is as follows:
 
 
 
-**Related information**  
-
-
-[Providing short vanity URLs](../wcm/van_url_short.md)
+???+ info "Related information:"
+     - [Providing short vanity URLs](../adm_vanity_url/van_url_short.md)
 

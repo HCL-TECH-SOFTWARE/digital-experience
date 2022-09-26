@@ -46,6 +46,7 @@ Before starting:
 3.  Restart all servers to complete the uninstallation.
 
 
-**Note:** All SSL certificates for Twitter, Facebook and Linkedin are removed when the uninstall script is run.
+!!! note
+    All SSL certificates for Twitter, Facebook and Linkedin are removed when the uninstall script is run.
 
 

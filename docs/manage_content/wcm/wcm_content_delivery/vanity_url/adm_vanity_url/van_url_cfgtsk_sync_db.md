@@ -52,7 +52,8 @@ For example, if the JCR database on the Web Content Manager side is restored, bu
 
         Use this parameter to specify the host name of the virtual portal. For example, the host name can be vp.example.com.
 
-        **Note:** You can specify the VirtualPortalHost parameter alone only if the host name is unique. If the host name of the virtual portal is the same as the host name of the default virtual portal, you must also specify the VirtualPortalContext parameter.
+        !!! note
+            You can specify the VirtualPortalHost parameter alone only if the host name is unique. If the host name of the virtual portal is the same as the host name of the default virtual portal, you must also specify the VirtualPortalContext parameter.
 
     -   **VirtualPortalContext**
 
@@ -68,12 +69,8 @@ For example, if the JCR database on the Web Content Manager side is restored, bu
 
 
 
-**Related information**  
-
-
-[Troubleshooting pages](../wcm/wcm_mngpages_trouble.md)
-
-[Creating the initial release](../deploy/dep_cir.md)
-
-[Migration: Enabling managed pages](../migrate/mig_t_enable_mngpages.md)
+???+ info "Related information:"
+    - [Troubleshooting pages](../../../../../build_sites/create_sites/website_building_blocks/pages/wcm_mngpages_trouble.md)
+    - [Creating the initial release](../../../../../deployment/manage/staging_to_production/creating_deploying_initial_release/dep_cir.md)
+    - [Migration: Enabling managed pages](../../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/mig_t_enable_mngpages.md)
 

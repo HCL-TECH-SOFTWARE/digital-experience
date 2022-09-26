@@ -11,13 +11,5 @@ You create components to store a single element that is reused in multiple locat
 
 The following sections are common to all component types:
 
-**Related information**  
-
-
-[How to work with elements](../panel_help/wcm_dev_elements.md)
-
-**References:**  
-
-
-[How to work with elements](wcm_dev_elements.md)
-
+???+ info "Related information:"
+    - [How to work with elements](../../../../wcm_artifacts/elements/howto_work_with_elements/index.md)
