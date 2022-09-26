@@ -65,7 +65,7 @@ This section describes how to define the set of attributes available in the bean
 
 ## WCM presentation components
 
-You may use an existing or new WCM library. For this example we have used a a new library with default items such as site area and workflow. You will have to create WCM artifacts under 4 folders: Content, Components, Authoring Templates and Presentation Templates.
+You may use an existing or new WCM library. For this example we have used a new library with default items such as site area and workflow. You will have to create WCM artifacts under 4 folders: Content, Components, Authoring Templates and Presentation Templates.
 
 !!!note
     Refer to [Creating web content libraries](https://help.hcltechsw.com/digital-experience/9.5/panel_help/wcm_config_wcmlibraries.html) for more in depth instructions on how to work with WCM libraries.
@@ -97,9 +97,9 @@ You may use an existing or new WCM library. For this example we have used a a ne
         - Header: `<ul>`
         - Result design:
               ```
-              <li>[AttributeResource attributeName="fullname" separator=","]
-              <li>[AttributeResource attributeName="username" separator=","]
-              <li>[AttributeResource attributeName="email" separator=","]
+              <li>[AttributeResource attributeName="fullname" separator=","]</li>
+              <li>[AttributeResource attributeName="username" separator=","]</li>
+              <li>[AttributeResource attributeName="email" separator=","]</li>
               ```
         - Footer: `</ul>`
         !!!note
@@ -109,12 +109,31 @@ You may use an existing or new WCM library. For this example we have used a a ne
 
     - Click `Save and Close`.
 
+### Create a Presentation Template
+
+Set the context of the DDC content.
+
+Steps to create Presentation Template are as follows:
+
+1. Create a new presentation template with suggested name `Volt MX data presentation template` and under presentation template options, add the following:
+    ```
+    [Plugin:ListRenderingContext action="set" attribute="source=[Element context='current' type='content' key='sourceuri']" profile="[Element context='current' type='content' key='profile']" extension-id="[Element context='current' type='content' key='provider']"][Component name="ddc foundry/appearances/ddc volt mx list appearances" resultsPerPage="" startPage=""]
+    ```
+
+    ![](../../../assets/WCM_Presentation_Template.png "Create Presentation Template.")
+ 
+    - Under `attribute`, define the data `source` endpoint. The content field set in this example is `sourceuri`, where you saved the **endpoint** in the content item.
+    - `profile` refers to the List-Rendering Profile which was saved earlier in the WAS console. The content field that is set in this example is also `profile`, which is saved in the content item with the `ddcDemo.profile.json` value.
+    - `extension-id` refers to the DDC plugin ID. The content field set in this example is `provider`, which is saved in the content item with value `ibm.portal.ddc.json`.
+2. Save and close.
+
 ###  Create a Content Template
+
 Under Authoring Templates, create a Content Template.
 
 1. Click on `New` button. Then, click `Authoring Template`, then `Content Template` component
 
-    ![](../../../assets/WCM_Create_HTML_Component.png "Add Content Template.")
+    ![](../../../assets/WCM_Content_Template.png "Add Content Template.")
  
 2. Add `Name`, `Display title` and `Description` with suggested name `Volt MX Content Template`. Once you have created your presentation template you have to set this as the default presentation template `Volt MX data presentation template`.
 
@@ -124,7 +143,7 @@ Under Authoring Templates, create a Content Template.
 
     | Element type                   | Name                                       | Display title              |
     | ------------------------------ | ------------------------------------------ | ---------------------------|
-    | Component Reference            | auto filled once you've chosen a component | Appearance                 |
+    | Component Reference            | appearance                                 | Appearance                 |
     | Short Text                     | sourceuri                                  | Data Source URI            |
     | Short Text                     | profile                                    | List Rendering Profile     |
     | Short Text                     | provider                                   | DDC Plugin                 |
@@ -137,34 +156,8 @@ Under Authoring Templates, create a Content Template.
     ![](../../../assets/WCM_Add_Workflow.png "Select Express workflow.")
 
 5. Save and close.
-### Create a Presentation Template
 
-Set the context of the DDC content.
-
-Steps to create Presentation Template are as follows:
-
-1. Create a new presentation template with suggested name `Volt MX data presentation template` and under presentation template options, add the following:
-    ```
-    [Plugin:ListRenderingContext action="set" attribute="source=[Element context='current' type='content' key='sourceuri']" profile="[Element context='current' type='content' key='profile']" extension-id="[Element context='current' type='content' key='provider']"]
-    [Component name="ddc foundry/appearances/ddc volt mx list appearances" compute="always"]
-    ```
-
-    ![](../../../assets/WCM_Presentation_Template.png "Create Presentation Template.")
- 
-    - Under `attribute`, define the data `source` endpoint. The content field set in this example is `sourceuri`, where you saved the **endpoint** in the content item.
-    - `profile` refers to the List-Rendering Profile which was saved earlier in the WAS console. The content field that is set in this example is also `profile`, which is saved in the content item with the `ddcDemo.profile.json` value.
-    - `extension-id` refers to the DDC plugin ID. The content field set in this example is `provider`, which is saved in the content item with value `ibm.portal.ddc.json`.
-2. Save and close.
-
-### Set the Presentation Template as default in your Content Template
-
-1. Navigate to the previously created content template.
-
-2. Edit your content template.
-
-3. Add your created Presentation Template as the "Default Presentation Template"
-
-### Create a Content item.
+### Create a Content item
 
 1. Under your libraries, click `Content`, then click `Articles`, and create a new **Content** from the Content Template that you created earlier.
 
@@ -176,7 +169,7 @@ Steps to create Presentation Template are as follows:
     | ------------------------------ | ------------------------------------------                   |
     | Appearance                     | appearance                                                   |
     | Data Source URI                | https://hcl-dx-dev.hclvoltmx.net/services/account/id?id=1    |
-    | List Rendering Profile         | ddcDemo.profle.json                                          |
+    | List Rendering Profile         | ddcDemo.profile.json                                          |
     | DDC Plugin                     | ibm.portal.ddc.json                                          |
 
     ![](../../../assets/WCM_Input_Content_Element.png "Input Main Content.")
@@ -188,30 +181,27 @@ Steps to create Presentation Template are as follows:
 Now you can use all the WCM artifacts that you created on a portal page.
 
 !!!note
-    This guide creates a completely new Content Root but you can use this on any site.
+    This guide using an existing page but you can create a completely new Content Root or any child or sibling page on any site. Refer to [Creating a page from the site toolbar](https://help.hcltechsw.com/digital-experience/9.5/dev-theme/themeopt_addpage.html?hl=create%2Cpage) for creating a page.
 
-1. Under `Administration` > `Site Management` > `Manage Pages`, create a new page under `Content Root` (e.g. `Volt MX DDC` page).
-
-2. Go to the page `Volt MX DDC`, and enable `Edit mode`.
+1. Go to the any page (e.g. Volt MX DDC) and enable `Edit mode`.
 
     ![](../../../assets/WCM_Enable_Edit_Mode.png "Enable Edit mode.")
 
-3. Choose the `layout` and `style` of the page.
-
-    ![](../../../assets/WCM_Choose_Layout_Style.png "Choose Layout and style of the page.")
-
-4. Click on `plus` icon in left navigation panel. Then click on `Applications` and add a `Web Content Viewer` on the page.
+2. Click on `plus` icon in left navigation panel. Then click on `Applications` and add a `Web Content Viewer` on the page.
 
     ![](../../../assets/WCM_Add_Content_Viewer.png "Choose Layout and style of the page.")
 
-5. Inside the `Web Content Viewer`, click on the upper right dropdown button and select `Edit Shared Settings`.
+3. Click on `Add To Page` button.
+    ![](../../../assets/WCM_Add_to_Page.png "Add to page.")
+
+4. Inside the `Web Content Viewer`, click on the upper right dropdown button and select `Edit Shared Settings`.
 
     ![](../../../assets/WCM_Edit_Shared_Setting.png "Select Edit Shared Settings.")
 
-6. Under Content, change the mapped content to the Content Item you created above.
+5. Under Content, change the mapped content to the Content Item you created above.
 
     ![](../../../assets/WCM_Set_Page_Content.png "Select Edit Shared Settings.")
 
-7. Click `OK`, and the following output page will be displayed.
+6. Click `OK`, and the following output page will be displayed.
 
     ![](../../../assets/WCM_Output_Page.png "Result output.")
