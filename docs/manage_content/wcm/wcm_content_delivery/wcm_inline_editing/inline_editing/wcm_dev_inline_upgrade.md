@@ -2,7 +2,7 @@
 
 HCL Web Content Manager includes sample content such as web content template pages and predefined portlets that you can add to pages to render content. If you upgrade, these sample web content template items continue to use the editing method of the earlier release. To use the inline editing method with the earlier template items, you must complete several manual steps.
 
-1.  Go to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+1.  Go to the [wp\_profile\_root](../../../../../guide_me/wpsdirstr.md)/ConfigEngine directory.
 
 2.  To redeploy the web content viewer portlets that are used with the template items, run the action-deploy-templating-portlets task.
 
@@ -10,6 +10,7 @@ HCL Web Content Manager includes sample content such as web content template pag
     -   Windows™: ConfigEngine.bat action-deploy-templating-portlets -DPortalAdminPwd=password -DWasPassword=password
     -   IBM® i: ConfigEngine.sh action-deploy-templating-portlets -DPortalAdminPwd=password -DWasPassword=password
     -   z/OS®: ./ConfigEngine.sh action-deploy-templating-portlets -DPortalAdminPwd=password -DWasPassword=password
+
 3.  Log in to the portal as an administrator.
 
 4.  Go to the web content authoring portlet.
@@ -24,7 +25,7 @@ HCL Web Content Manager includes sample content such as web content template pag
 
 8.  Log out of the portal.
 
-9.  Go to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+9.  Go to the [wp\_profile\_root](../../../../../guide_me/wpsdirstr.md)/ConfigEngine directory.
 
 10. Run the action-init-content-templating-pages task.
 

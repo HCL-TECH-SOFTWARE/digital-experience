@@ -40,6 +40,6 @@ When you create a page that is based on the Articles template, several things ha
     The Articles page template is a managed page that stores its associated web content in the Portal Site library. If you disable managed pages, the content that is associated with this template is no longer copied during page instantiation. In addition, the corresponding preferences of the Articles viewer and List of Articles viewer are not adjusted.
 
 
-???= info "Related information:"
-[The module framework](../../../../../../../build_sites/themes_skins/the_module_framework/index.md)
+???+ info "Related information:"
+    - [The module framework](../../../../../../../build_sites/themes_skins/the_module_framework/index.md)
 

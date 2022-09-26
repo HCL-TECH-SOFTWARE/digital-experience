@@ -30,7 +30,7 @@ In HCL Digital Experience, the Web Content Authoring portlet is on a hidden page
 
 You successfully configured the libraries for the Web Content Authoring portlet.
 
--   **[Authoring portlet settings](../panel_help/wcm_config_authoringportlet.md)**  
+-   **[Authoring portlet settings](../auth_portlet_settings/index.md)**  
 An authoring portlet is used to create and manage web content. You can edit the settings of an authoring portlet from within the Preferences section of the authoring portlet.
 
 
