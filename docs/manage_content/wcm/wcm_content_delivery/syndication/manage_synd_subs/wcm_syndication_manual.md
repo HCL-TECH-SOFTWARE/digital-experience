@@ -34,15 +34,19 @@ To manually update a syndication relationship:
 
             **Restriction:** The **Rebuild with mirror** option can be used only on a syndicator.
 
-            **Note:** The **Rebuild with mirror** option will not automatically cascade through all subscribers downstream of the syndicator. You might need to repeat the **Rebuild with mirror** action on subscribers further down the syndication chain to synchronize all servers.
+            !!! note
+                The **Rebuild with mirror** option will not automatically cascade through all subscribers downstream of the syndicator. You might need to repeat the **Rebuild with mirror** action on subscribers further down the syndication chain to synchronize all servers.
 
-            **Note:** The **Rebuild with mirror** option will not automatically cascade through all subscribers downstream of the syndicator. You might need to repeat the **Rebuild with mirror** action on subscribers further down the syndication chain to synchronize all servers.
+            !!! note
+                The **Rebuild with mirror** option will not automatically cascade through all subscribers downstream of the syndicator. You might need to repeat the **Rebuild with mirror** action on subscribers further down the syndication chain to synchronize all servers.
 
             **Restriction:** Don't use the **Rebuild with mirror** option if other syndicator pairs feed into any of the libraries that are being rebuilt.
 
-            **Note:** With CF09 or higher installed, the **Rebuild with mirror** option automatically cascades through all subscribers downstream of the syndicator that are configured with automatic syndication. Downstream automatic syndication is paused while the upstream mirror is running. Syndication can still be run manually downstream while automatic syndication is paused downstream.
+            !!! note
+                With CF09 or higher installed, the **Rebuild with mirror** option automatically cascades through all subscribers downstream of the syndicator that are configured with automatic syndication. Downstream automatic syndication is paused while the upstream mirror is running. Syndication can still be run manually downstream while automatic syndication is paused downstream.
 
-            **Note:** With HCL Digital Experience 9.5 Container Update release CF173, CF18 and higher releases, an option to disable the rebuild with mirror syndication is available. This option can be set on the syndicator by setting wcm.syndication.syndicator.mirror.ui=false in the WCM **WCMConfigService** Resource Environment Provider \(REP\). This can be useful to avoid accidental mirror syndications that replace everything on the subscriber. Setting this property requires a restart of the HCL Portal server after setting.
+            !!! note
+                With HCL Digital Experience 9.5 Container Update release CF173, CF18 and higher releases, an option to disable the rebuild with mirror syndication is available. This option can be set on the syndicator by setting wcm.syndication.syndicator.mirror.ui=false in the WCM **WCMConfigService** Resource Environment Provider \(REP\). This can be useful to avoid accidental mirror syndications that replace everything on the subscriber. Setting this property requires a restart of the HCL Portal server after setting.
 
             The option to disable the rebuild with mirror syndication is also available to HCL Digital Experience 8.5 and 9.0 CF18 users.
 
@@ -59,6 +63,6 @@ To manually update a syndication relationship:
 
 5.  Click **Update Subscription**.
 
-
-**Parent topic:**[How to manage syndicators and subscribers](../panel_help/wcm_syndication.md)
+<!--
+**Parent topic:**[How to manage syndicators and subscribers](../panel_help/wcm_syndication.md) -->
 

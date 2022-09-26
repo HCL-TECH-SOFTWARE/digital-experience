@@ -61,10 +61,7 @@ An example process flow of a business user who works with a vanity URL is as fol
 
 
 
-**Related information**  
-
-
-[Enabling vanity URL support](../wcm/van_url_cfgtsk_enable_vus.md)
-
-[Providing short vanity URLs](../wcm/van_url_short.md)
+???+ info "Related information:"
+    - [Enabling vanity URL support](../vanity_url/adm_vanity_url/van_url_cfgtsk_enable_vus.md)
+    - [Providing short vanity URLs](../vanity_url/adm_vanity_url/van_url_short.md)
 

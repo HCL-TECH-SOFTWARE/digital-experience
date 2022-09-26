@@ -21,6 +21,7 @@ To add, remove or edit elements, click **Manage Elements** from the toolbar of a
 
 -   To copy an element, click copy icon.
 
+
     1.  Enter a name. Do not use double-byte and non-ASCII characters.
 
     2.  Enter a display title to use as the title of the element displayed indexes and forms.
@@ -28,6 +29,7 @@ To add, remove or edit elements, click **Manage Elements** from the toolbar of a
     3.  Click **Add**.
 
 -   To edit an element, click edit icon. Changing an element type might result in lost data from an existing element. Click **Update** to save any changes.
+
 
 -   Use the arrows to change the order that the elements appear in an item form.
 

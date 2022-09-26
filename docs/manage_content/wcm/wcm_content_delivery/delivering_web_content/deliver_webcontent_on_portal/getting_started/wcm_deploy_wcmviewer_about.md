@@ -16,9 +16,7 @@ When content is rendered, a Web Content Viewer checks first for a render paramet
 |-------------------------------------------|----------------------------------------|----------------------------------|
 |Yes|No|Content that is identified by portlet configuration of the viewer.|
 |No|Yes|Content that is identified by association on page.|
-|Yes|Yes|Content that is identified by portlet configuration of the viewer.The content that is specified in the portlet configuration can use a relative path. In this case, the complete path to the target content is derived by combining the associations on the page and the viewer.
-
-|
+|Yes|Yes|Content that is identified by portlet configuration of the viewer.The content that is specified in the portlet configuration can use a relative path. In this case, the complete path to the target content is derived by combining the associations on the page and the viewer.|
 
 References to content can be direct or relative:
 
@@ -97,8 +95,6 @@ For examples of the different ways that you can use linking with Web Content Vie
 To display web content on a portal that does not include Web Content Manager, you can use the Web Content Viewer and the WSRP support in the portal. The Web Content Viewer can then retrieve and display content from a web content system on a different server.
 
 
-**Related information**  
-
-
-[Enabling remote rendering with WSRP and the Web Content Viewer](../wcm/wcm_config_wcmviewer_wsrp.md)
+???+ info "Related information:"
+    - [Enabling remote rendering with WSRP and the Web Content Viewer](../enable_remote_render_wsrp/index.md)
 

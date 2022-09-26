@@ -4,10 +4,9 @@ Use this configuration task to manage theme artifacts and to deploy iWidgets. Th
 
 Address the target folder by using a corresponding DAV URI, for example `dav:fs-type1/iwidgets/myWidget/`.
 
-**Note:**
-
--   By default, this task replaces the referenced target folder by the extracted contents of the referenced archive or compressed file. As a result, files or folders that are contained in the referenced WebDAV folder are deleted before the new content is added. If you want to avoid this behavior and merge the contents, set the optional `UpdateMode` parameter to the value `merge`. If you add this setting, the task merges the contents of the archive or compressed file into the content that exists at the target URI.
--   If you have a portal cluster installation, start the task on the primary node only. Starting the task on a secondary node has no effect.
+!!! note
+    -   By default, this task replaces the referenced target folder by the extracted contents of the referenced archive or compressed file. As a result, files or folders that are contained in the referenced WebDAV folder are deleted before the new content is added. If you want to avoid this behavior and merge the contents, set the optional `UpdateMode` parameter to the value `merge`. If you add this setting, the task merges the contents of the archive or compressed file into the content that exists at the target URI.
+    -   If you have a portal cluster installation, start the task on the primary node only. Starting the task on a secondary node has no effect.
 
 If the WebDAV folder referenced by the target URI does not exist yet, the task creates it. In this case, make sure to have a trailing slash \( **/** \) at the end of the target URI.
 

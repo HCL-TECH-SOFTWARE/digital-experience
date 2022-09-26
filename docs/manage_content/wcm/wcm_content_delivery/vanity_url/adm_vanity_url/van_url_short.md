@@ -49,7 +49,8 @@ To be able to use such short vanity URLs, you must use a web server. For details
 
     In this example, `f` means file, `d` means directory, and `l` means symbolic link. With these conditions added, the portal does not apply the rewrite rule on requests that match a file, directory, or symbolic link. The user accesses the file, directory, or link and is not redirected to the target website of the vanity URL. For more information, see the information under *Apache Module mod\_rewrite*.
 
-    **Note:** Depending on your environment, it is good practice not to use periods in your vanity URLs to avoid conflicts with files in the HTTP server context root.
+    !!! note 
+        Depending on your environment, it is good practice not to use periods in your vanity URLs to avoid conflicts with files in the HTTP server context root.
 
 8.  If you use Web Application Bridge, add a rewrite rule to avoid namespace conflicts.
 
@@ -67,24 +68,14 @@ To be able to use such short vanity URLs, you must use a web server. For details
 
 
 
-**Related information**  
-
-
-[Getting started with the Web Application Bridge](../panel_help/h_wab_first.md)
-
-[Integrating with web applications](../admin-system/wab.md)
-
-[Vanity URLs](../wcm/vanity_urls.md)
-
-[How vanity URLs work](../wcm/van_url_work.md)
-
-[Preparing a remote web server](../install/prep_ihs.md)
-
-[Configuring the vanity URL preview link](../wcm/van_url_cfg_preview.md)
-
-[IBM HTTP Server](https://www.ibm.com/cloud/websphere-application-server)
-
-[Apache mod\_rewrite](http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html)
-
-[Apache mod\_proxy](http://httpd.apache.org/docs/2.2/mod/mod_proxy.html)
+???+ info "Related information:"
+    - [Getting started with the Web Application Bridge](../../../../../extend_dx/integration/wab/wab/h_wab_first.md)
+    - [Integrating with web applications](../../../../../extend_dx/integration/wab/index.md)
+    - [Vanity URLs](../../vanity_url/index.md)
+    - [How vanity URLs work](../van_url_work.md)
+    - [Preparing a remote web server](../../../../../deployment/install/traditional/install_prereq_software/prep_ihs.md)
+    - [Configuring the vanity URL preview link](../adm_vanity_url/van_url_cfg_preview.md)
+    - [IBM HTTP Server](https://www.ibm.com/cloud/websphere-application-server)
+    - [Apache mod\_rewrite](http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html)
+    - [Apache mod\_proxy](http://httpd.apache.org/docs/2.2/mod/mod_proxy.html)
 
