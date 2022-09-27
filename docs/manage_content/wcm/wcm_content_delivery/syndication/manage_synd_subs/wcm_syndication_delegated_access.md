@@ -22,7 +22,7 @@ Setup a resource environment property in the WCM WCMConfigService. This property
 
 4.  Select **New**.
 
-5.  Enter a name of "enableSyndicationFilter".
+5.  Enter a name of "enableSyndicatorFilter".
 
 6.  Enter a value of "true" 
 
