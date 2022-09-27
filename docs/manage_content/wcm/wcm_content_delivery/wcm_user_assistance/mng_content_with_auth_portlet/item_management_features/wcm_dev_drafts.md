@@ -8,7 +8,8 @@ title: How to work with draft items
 
 Creating a draft of an item allows users to work on changes to that item without changing the published version of the item. Draft items can either be stand-alone items, or form part of a workflow. When the changes are completed, you can choose to either publish the item, or discard the changes by canceling the draft. You can create multiple drafts of a single item.
 
-**Note:** Draft items are only displayed in the Authoring Portlet and are not rendered within the published website.
+!!! note
+    Draft items are only displayed in the Authoring Portlet and are not rendered within the published website.
 
 ## How to work with draft items without a workflow
 

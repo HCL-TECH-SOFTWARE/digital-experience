@@ -18,18 +18,13 @@ You can configure your system to either automatically save a version of an item 
 
 You can apply a label to the most recent set of saved versions in a library at any time and then restore all the items with the same label later.
 
-**Note:** Labels that you apply to versions are not syndicated to subscribers.
+!!! note
+    Labels that you apply to versions are not syndicated to subscribers.
 
 ## Clearing version history
 
 The clear versions tool can be used to clear version histories from items. It is configurable and can be used to clear versions within a specific date range, for specific item-types or libraries, or to keep only some of the most recent versions.
 
-**Related information**  
-
-
-[Restoring items in a library](../panel_help/wcm_managing_versions_library.md)
-
-[How to delete items](../panel_help/wcm_managing_deleting.md)
-
-[Restoring items in a library](wcm_managing_versions_library.md)
-
+???+ info "Related information:"
+    - [Restoring items in a library](../../../../wcm_artifacts/web_content_library/manage_web_content_lib/wcm_managing_versions_library.md)
+    - [How to delete items](../item_management_features/wcm_managing_deleting.md)

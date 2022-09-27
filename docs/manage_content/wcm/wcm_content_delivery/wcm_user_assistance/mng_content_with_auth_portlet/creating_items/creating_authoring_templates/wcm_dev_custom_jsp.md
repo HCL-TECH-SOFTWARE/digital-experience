@@ -26,7 +26,8 @@ When you reference a JSP file in the **custom JSP** field of the element propert
 
     `[AppServer\_root](../reference/wpsdirstr.md#was_root)/installedApps/node-name/PA_WCM_Authoring_UI.ear/ilwwcm-authoring.war/jsp/html`
 
-    **Note:** The JSP page is also stored in the client war directory of the local rendering portlet or of the servlet or portlet that calls the JSP, if the Web Content Manager API is used. For example, to render a JSP page on a local rendering portlet, you would also need to store a copy of the JSP file under `[AppServer\_root](../reference/wpsdirstr.md#was_root)/installedApps/node-name/PA_WCMLocalRendering.ear/ilwwcm-localrende.war`.
+    !!! note
+        The JSP page is also stored in the client war directory of the local rendering portlet or of the servlet or portlet that calls the JSP, if the Web Content Manager API is used. For example, to render a JSP page on a local rendering portlet, you would also need to store a copy of the JSP file under `[AppServer\_root](../reference/wpsdirstr.md#was_root)/installedApps/node-name/PA_WCMLocalRendering.ear/ilwwcm-localrende.war`.
 
 -   **When located within any other web application:**
 
@@ -197,7 +198,8 @@ function mysubmit()
 
 This example is used to create a selection list of predefined dates.
 
-**Note:** Only dates can be selected, not times.
+!!! note
+    Only dates can be selected, not times.
 
 ```
 <%@ taglib uri="/WEB-INF/tld/portlet.tld" prefix="portletAPI" %>

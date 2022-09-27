@@ -53,12 +53,14 @@ Specify the layout and functions available to authors when you create a new item
     -   Supported image file formats are PNG, JPG, and SVG.
     -   If you are using multi-scale icons, the collection of images must be compressed into a ZIP file.
     -   Image sizes of `18x18`,`32x32`, `64x64`, or `128x128` are best suited for custom images. If other sizes are used, the custom image is resized to fit the default sizes and your image might not display as expected. Creating images for use with each of these sizes will also prevent distorted images from being displayed.
+
 9.  If you want to override the default help text for the item form with help text specific to your environment, enter the help text in the **Item form help text** field.
 
     The help text that you create in this field applies to the entire item form. When the author clicks the **Show help** link on the item form, the help text is displayed in a dedicated area of the form.
 
     With the embedded editor provided in this field, you can add help text as HTML. You can format the HTML text in the design view, which provides toolbar buttons for common tasks. You can also work directly with the text in a source view that displays the HTML tagging. Previously prepared content in HTML format can be imported with the embedded editor.
 
-    **Note:** Although link components can be selected with the insert link button, link components do not work in item form help.
+    !!! note
+        Although link components can be selected with the insert link button, link components do not work in item form help.
 
 

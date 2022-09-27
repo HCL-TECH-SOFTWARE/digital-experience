@@ -24,6 +24,7 @@ You define a workflow by selecting a set of workflow actions and defining relate
 
     1.  You must also select the workflow stage that the item is returned to when the project is published.
 
-        **Important:** An item has a status of "published" when the project is published regardless of the workflow stage that is selected here, even if the selected workflow stage does not use a publish action or if the selected workflow stage precedes or follows a workflow stage that contains a publish action.
+        !!! important
+            An item has a status of "published" when the project is published regardless of the workflow stage that is selected here, even if the selected workflow stage does not use a publish action or if the selected workflow stage precedes or follows a workflow stage that contains a publish action.
 
 

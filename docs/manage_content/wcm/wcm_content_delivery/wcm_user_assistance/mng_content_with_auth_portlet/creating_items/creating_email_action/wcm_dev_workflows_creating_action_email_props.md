@@ -24,12 +24,12 @@ Define the action properties of the email action.
 
 3.  Enter text to include in the email in addition to the automatically generated message.
 
-    **Note:**
+    !!! note
+        -   The language of the automatically generated message is determined by the language set in the WebSphere® Application Server administration console. To change the language, go to **Resources\>Resource environment\>Resource environment providers \> WP LocalizerService \> Custom properties** and change the `locale.default.language` property to the appropriate language code.
+        -   To modify the URL displayed in the email message, modify the `WCM WCMConfigService` service and specify the following property:
+            -   Property name: `wcm.authoringui.url`
+            -   Value: `http://${WCM_HOST}:${WCM_PORT}/${WCM_WPS_CONTEXT_ROOT}/${WCM_WPS_PERSONALIZED_HOME}/wcmAuthoring`
 
-    -   The language of the automatically generated message is determined by the language set in the WebSphere® Application Server administration console. To change the language, go to **Resources\>Resource environment\>Resource environment providers \> WP LocalizerService \> Custom properties** and change the `locale.default.language` property to the appropriate language code.
-    -   To modify the URL displayed in the email message, modify the `WCM WCMConfigService` service and specify the following property:
-        -   Property name: `wcm.authoringui.url`
-        -   Value: `http://${WCM_HOST}:${WCM_PORT}/${WCM_WPS_CONTEXT_ROOT}/${WCM_WPS_PERSONALIZED_HOME}/wcmAuthoring`
 4.  Select the **Date Type** to use to trigger the email action.
 
     -   **Selected date**
@@ -52,13 +52,14 @@ Define the action properties of the email action.
 
         This action is run on the date the item entered the current stage, plus any offset, is reached.
 
-    **Note:** If you select a date type that requires a date to be set by a user, and no date has been set by a user, then the action is not run regardless of whether an offset has been selected or not.
+    !!! note
+        If you select a date type that requires a date to be set by a user, and no date has been set by a user, then the action is not run regardless of whether an offset has been selected or not.
 
 5.  If **Selected date** is selected as the date type:
 
-    1.  Click ![date](../images/date.jpg) to select a date.
+    1.  Click date icon to select a date.
 
-    2.  Click ![time](../images/time.jpg) to enter a time. Only the integers "0123456789" can be used when entering times.
+    2.  Click time icon to enter a time. Only the integers "0123456789" can be used when entering times.
 
 6.  If you select one of the other options, you can choose to use a date offset that will run the email action based on a time after the selected date type. For example, if you select the date type of "Live date" and define an offset of one month, the email action is run exactly one month after the item reached the live date and time.
 

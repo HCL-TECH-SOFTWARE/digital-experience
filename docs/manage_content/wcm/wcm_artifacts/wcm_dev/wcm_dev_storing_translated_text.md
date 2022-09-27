@@ -1,4 +1,4 @@
-# How to store translated text in a content item or site area \| HCL Web Content Manager
+# How to store translated text in a content item or site area 
 
 Translated text can be stored in a content item or site area. The translated text can then be referenced in web content tags, or as localized text in web content authoring portlet forms.
 

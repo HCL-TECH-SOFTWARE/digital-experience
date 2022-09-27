@@ -25,7 +25,7 @@ You can choose the file selector from the browser or the Watson Content Hub sele
 
 3.  Add the element to the template.
 
-4.  Edit the properties for the element by clicking the properties icon \(![Properties icon](../images/propIcon.jpg)\).
+4.  Edit the properties for the element by clicking the properties icon \(![Properties icon](../../../../../../../images/propIcon.jpg)\).
 
 5.  Specify the selector with the **Digital asset source** field.
 

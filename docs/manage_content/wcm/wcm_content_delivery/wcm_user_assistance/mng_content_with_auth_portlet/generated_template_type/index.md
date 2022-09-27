@@ -12,7 +12,8 @@ To generate a new author-ready template:
 4.  Click **OK**.
 5.  A pre-mapped authoring template and presentation template are generated under the selected library with the specified name and display title. Edit these templates to match your site requirements.
 
-**Note:** Users must have sufficient library access rights to create both authoring templates and presentation templates to be able to use the generate templates tool.
+!!! note
+    Users must have sufficient library access rights to create both authoring templates and presentation templates to be able to use the generate templates tool.
 
 ## Adding author-ready templates to projects
 
@@ -59,7 +60,8 @@ These items are created when you generate a new author-ready content template:
 
     When first created, the content template is visible in the toolbar. To hide the authoring template in the toolbar while it is being customized, add the keyword named ibm.toolbar.hiddenTemplate to the profile section and click **Save**. The content template is then hidden from the toolbar. Delete this keyword and save the authoring template when you are ready to allow content authors to use the new authoring template.
 
-    -   Documentation resource: [Hiding authoring templates from the Site Manager](../admin-system/epc_wcm_hide_authoring_templates.md)
+    -   Documentation resource: [Hiding authoring templates from the Site Manager](../../../../../../build_sites/create_sites/site_prep_content_author/custom_site_manager/custom_create_content_view/epc_wcm_hide_authoring_templates.md)
+
 -   **Update the content template:**
 
     The generated content template is used by content authors to add new content to a page. It is located at **Your Library** \> **Authoring Templates** \> **Your content template**. Edit the content template to assign a workflow, or add or remove elements.
@@ -72,8 +74,8 @@ These items are created when you generate a new author-ready content template:
 
         Each generated authoring template contains a set or predefines elements. You can modify these elements, remove them, or add your own.
 
-    -   Documentation resource: [An overview of authoring templates](wcm_dev_auth-temp_overview.md)
-    -   Documentation resource: [Creating authoring templates](../panel_help/wcm_dev_auth-temp_creating.md)
+    -   Documentation resource: [An overview of authoring templates](../../../../../../build_sites/create_sites/create_reusable_assets/wcm_dev_auth-temp_overview.md)
+    -   Documentation resource: [Creating authoring templates](../creating_items/creating_authoring_templates/index.md)
 -   **Update the CSS**
 
     An HTML component that stores the default CSS used to set design parameters for the rendered content is also generated. It is located at **Your Library** \> **Components** \> **Your folder** \> **Styles component**.
@@ -86,17 +88,19 @@ These items are created when you generate a new author-ready content template:
 
     If you add or remove elements from the content template, you must update the HTML in the presentation template as well.
 
-    -   Documentation resource: [Presentation templates](wcm_cms_presentation_templates.md)
-    -   Documentation resource: [Creating a presentation template](../panel_help/wcm_dev_pres-temp.md)
+    -   Documentation resource: [Presentation templates](../../../../../../build_sites/create_sites/create_reusable_assets/presentation_template/index.md)
+    -   Documentation resource: [Creating a presentation template](../creating_items/wcm_dev_pres-temp.md)
+
 -   **Update or removed localizations**
 
     Update the localization settings to match the locales that are used by your site, or remove localizations if your site isn't localized. This is located at **Your Library** \> **Content** \> **Localizations** \> **Your text provider content item**.
 
-    -   Documentation resource: [How to store translated text in a content item or site area](wcm_dev_storing_translated_text.md#)
+    -   Documentation resource: [How to store translated text in a content item or site area](../../../../wcm_artifacts/wcm_dev/wcm_dev_storing_translated_text.md#)
+
 -   **Moving the generated items**
 
     By default, the items that are generated are created directly under the top-level sections of the library you specified when you generated the new templates. Use the **Move** feature to move these items to your preferred location.
 
-    -   Documentation resource: [Moving a content item](../panel_help/wcm_dev_content_linking_moving.md)
+    -   Documentation resource: [Moving a content item](../item_management_features/howto_move_copy_link_items/wcm_dev_content_linking_moving.md)
 
 

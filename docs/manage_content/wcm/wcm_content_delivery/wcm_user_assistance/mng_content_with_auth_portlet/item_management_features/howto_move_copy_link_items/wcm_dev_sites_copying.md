@@ -27,5 +27,6 @@ As your site framework evolves, you are required to edit your site framework by 
         -   Select **Before specified child** to copy the site area before a selected child item. A further selection dialog opens if this option is selected. Select a child item and then click **OK**.
         -   Select **After specified child** to copy the site area after a selected child item. A further selection dialog opens if this option is selected. Select a child item and then click **OK**.
 
-**Note:** The children of an item are not copied when an item is copied. You must copy any children separately.
+!!! note
+    The children of an item are not copied when an item is copied. You must copy any children separately.
 
