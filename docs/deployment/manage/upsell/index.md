@@ -38,7 +38,7 @@ After your initial HCL Digital Experience installation, you can purchase a licen
 
 5.  Accept the license agreement and then click **Next**.
 
-6.  On the **Location** panel, select **Use the existing package group**. Select the **HCL Portal V85** package group name and then click **Next**.
+6.  On the **Location** panel, select **Use the existing package group**. Select the package group name used during install and then click **Next**.
 
 7.  On the Features panel, check the box for the additional feature that you purchased. Then, click **Next**.
 
