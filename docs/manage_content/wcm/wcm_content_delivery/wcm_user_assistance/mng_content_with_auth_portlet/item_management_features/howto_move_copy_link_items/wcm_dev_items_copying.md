@@ -19,5 +19,6 @@ You use the **Copy** feature to copy an item from one library to another.
 5.  Click **OK**.
 
 
-**Note:** The children of an item are not copied when you copy an item. You must copy any children separately.
+!!! note
+    The children of an item are not copied when you copy an item. You must copy any children separately.
 

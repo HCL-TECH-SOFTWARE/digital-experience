@@ -26,6 +26,7 @@ When you select a site area to link a content item to, ensure that the site area
         2.  Select **Last child** to link the content item as the last listed content item within a site area. Then, click **OK**.
         3.  Select **Before specified child** to link the content item before the selected child item. A further selection dialog opens if this option is selected. Select a child item and then click **OK**.
         4.  Select **After specified child** to link the content item after the selected child item. A further selection dialog opens if this option is selected. Select a child item and then click **OK**.
+
 5.  Click **OK**.
 
 ## Adding links
@@ -49,5 +50,6 @@ Copying a content item is not the same as linking because a new content item is 
         2.  Select **Last child** to save the new content item as the last listed content item within a site area. Then, click **OK**.
         3.  Select **Before specified child** to save the new content item before a selected child item. A further selection dialog opens if this option is selected. Select a child item and then click **OK**.
         4.  Select **After specified child** to save the new content item after a selected child item. A further selection dialog opens if this option is selected. Select a child item and then click **OK**.
+        
 6.  Click **OK**.
 

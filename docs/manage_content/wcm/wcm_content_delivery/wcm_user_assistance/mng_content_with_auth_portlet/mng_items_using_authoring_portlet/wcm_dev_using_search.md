@@ -18,25 +18,27 @@ Large websites contain large numbers of items. You can search for items by using
         -   You can explicitly search for phrases by enclosing keywords in double quotation marks \( " \). If you are searching a double-byte character set language that you must enter at least 2 characters.
         -   The use of an underscore \( \_ \) character functions in the same manner as the space \( \) character. For example: `_my_content` displays results that contain the word "my" or "content".
         -   Common words \(often called "stopwords"\), such as "the," "and," or "of," are typically not included in search indexes. If you named an item "the home page", and then searched for "the", your search may return no results. To search for stopwords, enclose the word or phrase in double quotation marks. For example, "the".
+        
     3.  Click **Search**.
 
-    **Note:** A basic search searches only for items in the current view:
+    !!! note
+        A basic search searches only for items in the current view:
+        -   If you select a view, only items that are related to that view are shown in the search results for the basic search. For example:
+            -   If the "My items" view is selected, only items that are created by the current user are searched for.
+            -   If the "Content" view is selected, only site areas and content are searched for.
+            -   If the "Categories" view is selected, only taxonomies and categories are searched for.
+            -   If the "Components" view is selected, only components are searched for.
+            -   If the "Authoring Templates" view is selected, authoring templates are searched for.
+            -   If the "Presentation Templates" view is selected, presentation templates are searched for.
+            -   If the "Workflow Items" view is selected, only workflows, workflow stages, and workflow actions are searched for.
+            -   If the "All Items" view is selected, all items are searched for.
+        -   If you open a sublevel view, only items that are displayed within this view are shown in the search results for the basic search. For example:
+            -   If the "Components \> Image Components" view is selected, only image components are searched for.
+            -   If the "Workflow Items \> Workflows" view is selected, only workflows are searched for.
+            -   If the "All Items \> Items by Workflow" view is selected, only items that are workflowed are searched for.
+        -   When you search within the first level of "My Items" or "All Items", only published and expired content is displayed in search results. To search for draft or deleted items that you need to open the "draft" or "deleted" views first.
+        -   If you would like to search for items in all views, select the 'All items' view, or use the advanced search.
 
-    -   If you select a view, only items that are related to that view are shown in the search results for the basic search. For example:
-        -   If the "My items" view is selected, only items that are created by the current user are searched for.
-        -   If the "Content" view is selected, only site areas and content are searched for.
-        -   If the "Categories" view is selected, only taxonomies and categories are searched for.
-        -   If the "Components" view is selected, only components are searched for.
-        -   If the "Authoring Templates" view is selected, authoring templates are searched for.
-        -   If the "Presentation Templates" view is selected, presentation templates are searched for.
-        -   If the "Workflow Items" view is selected, only workflows, workflow stages, and workflow actions are searched for.
-        -   If the "All Items" view is selected, all items are searched for.
-    -   If you open a sublevel view, only items that are displayed within this view are shown in the search results for the basic search. For example:
-        -   If the "Components \> Image Components" view is selected, only image components are searched for.
-        -   If the "Workflow Items \> Workflows" view is selected, only workflows are searched for.
-        -   If the "All Items \> Items by Workflow" view is selected, only items that are workflowed are searched for.
-    -   When you search within the first level of "My Items" or "All Items", only published and expired content is displayed in search results. To search for draft or deleted items that you need to open the "draft" or "deleted" views first.
-    -   If you would like to search for items in all views, select the 'All items' view, or use the advanced search.
 2.  To run an advanced search:
 
     1.  Click **Advanced Search**.
@@ -61,6 +63,7 @@ Large websites contain large numbers of items. You can search for items by using
         -   Common words \(often called "stopwords"\), such as "the," "and," or "of," are typically not included in search indexes. If you named an item "the home page", and then searched for "the", your search may return no results. To search for stopwords, enclose the word or phrase in double quotation marks. For example, "the".
         -   Punctuation in each attribute is ignored during search. For example, searching for "apples bananas" would find the attribute "apples, bananas".
         -   Keywords are treated as a single comma-separated attribute, so multiple keywords on an item are merged and considered as a single phrase during search.
+
     9.  Click **Add an entry** to add further search queries.
 
     10. Select options to filter the search with as required. You can filter search results based on:
@@ -70,6 +73,7 @@ Large websites contain large numbers of items. You can search for items by using
             -   When an item was created, published, expired, or last modified.
             -   The authoring template, category, workflow, or workflow stage that is used by items that are returned in a search result.
         -   Click **Add an entry** to add further filter options.
+
     11. Click **Search**.
 
 

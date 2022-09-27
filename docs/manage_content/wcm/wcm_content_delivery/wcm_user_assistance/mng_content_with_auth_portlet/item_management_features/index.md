@@ -16,11 +16,11 @@ You cannot always immediately delete items. Sometimes you need to take steps to 
 You can view and manage all of the links between items by viewing references.
 -   **[Managing references](wcm_managing_references.md)**  
 When you delete items that are referenced by other items, you need to resolve any references that are broken by deleting the item. A dialog opens listing the items that cannot be deleted.
--   **[How to manage authoring templates](wcm_dev_auth-temp.md)**  
+-   **[How to manage authoring templates](../item_management_features/howto_manage_auth_templates/index.md)**  
 From time to time, you might need to reapply or change the authoring templates that are assigned to a set of items.
--   **[How to manage a taxonomy](wcm_dev_profiling_taxonomy.md)**  
+-   **[How to manage a taxonomy](../item_management_features/howto_manage_taxonomy/index.md)**  
 From time to time, you need to edit the structure of a taxonomy.
--   **[How to move, copy, or link items](wcm_managing_copy-move.md)**  
+-   **[How to move, copy, or link items](../item_management_features/howto_move_copy_link_items/index.md)**  
 From time to time, you need to move, copy, or link items.
 -   **[How to work with draft items](wcm_dev_drafts.md)**  
 Creating a draft of an item allows users to work on changes to that item without changing the published version of the item. Draft items can either be stand-alone items, or form part of a workflow. When the changes are completed, you can choose to either publish the item, or discard the changes by canceling the draft. You can create multiple drafts of a single item.
