@@ -164,9 +164,9 @@ next-stage" enctype="multipart/form-data" method="POST">
 
 The Process Now and Remove Workflow from an item functionality are equivalent to their functionality in user interfaces:
 
-![](../assets/Process_Now_API.png "Process Now")
+![](../../../../../../assets/Process_Now_API.png "Process Now")
 
-![](../assets/Remove_Workflow_API.png "Remove Workflow")
+![](../../../../../../assets/Remove_Workflow_API.png "Remove Workflow")
 
 ## Using the Process Now API
 
@@ -493,7 +493,7 @@ This API works similarly as the other APIs described on this page.
 
 -   **Expected Body**
 
-    See the section [Workflow Comment](#workflow_comments_get) section for the structure on how to submit the comment.
+    See the section [Workflow Comment](#workflow-comments) section for the structure on how to submit the comment.
 
     To ensure that comments are added to workflow stages that require comments, a GET request must be issued to the associated link. This returns an HTML form indicating whether a comment is required.
 
