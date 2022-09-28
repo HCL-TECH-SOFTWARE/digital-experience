@@ -16,5 +16,7 @@ This action prevents the library from being accessed from an authoring portlet, 
 
 
 <!--
-**Parent topic:**[Managing web content libraries](../panel_help/wcm_admin_libraries.md)
--->
+
+**Parent topic:**[Managing web content libraries](../panel_help/wcm_admin_libraries.md) -->
+
+

@@ -209,9 +209,9 @@ Status Code :200
 Status Message : OK
 ```
 
--   **[How to set default site area values for site area templates by using REST](../wcm/wcm_rest_crud_site_temp_default.md)**  
+-   **[How to set default site area values for site area templates by using REST](wcm_rest_crud_site_temp_default.md)**  
 You can update and read default site area values for site areas that are created by using a site area template.
--   **[How to set default properties for site area templates by using REST](../wcm/wcm_rest_crud_site_temp_props.md)**  
+-   **[How to set default properties for site area templates by using REST](wcm_rest_crud_site_temp_props.md)**  
 You can update and read the default properties of site areas that are created by using a site area template.
 
 

@@ -12,6 +12,7 @@ To create a subscriber plug-in, you must create a subscriber class and then regi
         -   This method is run on the subscriber.
         -   The extensions are run only when there are changes in the syndicator.
         -   The extension is not run every time automatic syndication queues the syndicator.
+        
     See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
 
 2.  Implement the `onSubscriberReady` method. This method must return a `com.ibm.workplace.wcm.api.extensions.syndication.ResultDirective` object to indicate whether the syndication engine can continue or stop the syndication process.

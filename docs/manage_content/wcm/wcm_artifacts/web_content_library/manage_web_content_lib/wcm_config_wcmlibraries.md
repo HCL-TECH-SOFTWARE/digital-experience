@@ -35,5 +35,7 @@ You must be an administrator to create web content libraries.
 Ensure that your library is named correctly when first created as renaming a library after you start to create web content can lead to errors. For example, menus and navigators might not correctly display results after a library is renamed until all caches are cleared.
 
 <!--
-**Parent topic:**[Managing web content libraries](../panel_help/wcm_admin_libraries.md)
--->
+
+**Parent topic:**[Managing web content libraries](../panel_help/wcm_admin_libraries.md) -->
+
+

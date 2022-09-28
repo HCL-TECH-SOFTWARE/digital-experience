@@ -60,5 +60,6 @@ To disable automatic inheritance you, specify the following property in the WCM 
 You must restart HCL Portal to enable any configuration changes.
 
 <!--
-**Parent topic:**[Managing web content libraries](../panel_help/wcm_admin_libraries.md)-->
+
+**Parent topic:**[Managing web content libraries](../panel_help/wcm_admin_libraries.md) -->
 
