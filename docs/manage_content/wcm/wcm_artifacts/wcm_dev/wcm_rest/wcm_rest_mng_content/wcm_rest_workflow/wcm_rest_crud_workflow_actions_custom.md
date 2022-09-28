@@ -8,7 +8,8 @@ To create a custom workflow action, you need to first identify the installed act
 
 1.  List all the installed custom workflow actions by sending a GET request to the following URI:
 
-**Note:** Each entry has a link with the "alternate" relation. This link can be used to specify the action to use when you create a custom workflow action.
+!!! note
+    Each entry has a link with the "alternate" relation. This link can be used to specify the action to use when you create a custom workflow action.
 
     ```
     /CustomWorkflowAction/available-actions
@@ -124,7 +125,8 @@ To create a custom workflow action, you need to first identify the installed act
 
     The list of actions that are associated with a custom workflow action factory are obtained by sending a GET request to the following URI.
 
-    **Note:** Each entry has a link with the "alternate" relation. This link is used to specify the action when you create a custom workflow action.
+    !!! note
+        Each entry has a link with the "alternate" relation. This link is used to specify the action when you create a custom workflow action.
 
     ```
     
