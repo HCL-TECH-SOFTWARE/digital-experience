@@ -12,7 +12,7 @@ Use the Web Content Manager API to:
 -   approve items in a workflow
 -   search for items
 
-See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
+See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer_root]/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
 
 ## Getting started
 
