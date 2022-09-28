@@ -55,7 +55,7 @@ This section describes how to define the set of attributes available in the bean
 
     !!!note
         `{profile}.ItemAttribute.id` (in this sample `ddcDemo.ItemAttribute.id`) is always required but it could point to any attribute from the external data source as long as it contains unique values.
-        If your API does not provide any unique field, you might want leverage the [Postprocessor of HCL Volt MX](https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/Java_Preprocessor_Postprocessor_.html) to add a generated field.
+        If your API does not provide any unique field, you might want to leverage the [Postprocessor of HCL Volt MX](https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/Java_Preprocessor_Postprocessor_.html) to add a generated field.
 
 6. Review and save the changes in the master configuration.
 
@@ -65,7 +65,7 @@ This section describes how to define the set of attributes available in the bean
 
 ## WCM presentation components
 
-You may use an existing or new WCM library. For this example we have used a new library with default items such as site area and workflow. You will have to create WCM artifacts under 4 folders: Content, Components, Authoring Templates and Presentation Templates.
+You may use an existing or new WCM library. For this example we have used a new library with default items such as site area and workflow. You will have to create WCM artifacts under 4 folders: Content, Components, Authoring Templates, and Presentation Templates.
 
 !!!note
     Refer to [Creating web content libraries](https://help.hcltechsw.com/digital-experience/9.5/panel_help/wcm_config_wcmlibraries.html) for more in depth instructions on how to work with WCM libraries.
@@ -76,7 +76,7 @@ You may use an existing or new WCM library. For this example we have used a new 
 
     ![](../../../assets/WCM_Library_Component.png "WCM Library default components")
 
-2. Create an Appearances folder under Components. This is only so that your personalization components that uses the DDC selection rule Select pluggable resources can be found easily in one place.
+2. Create an Appearances folder under Components. This is only so that your personalization components that use the DDC selection rule Select pluggable resources can be found easily in one place.
 
     ![](../../../assets/WCM_Appearance.png "WCM Appearance")
 
@@ -121,7 +121,7 @@ Steps to create Presentation Template are as follows:
     ```
 
     ![](../../../assets/WCM_Presentation_Template.png "Create Presentation Template.")
- 
+
     - Under `attribute`, define the data `source` endpoint. The content field set in this example is `sourceuri`, where you saved the **endpoint** in the content item.
     - `profile` refers to the List-Rendering Profile which was saved earlier in the WAS console. The content field that is set in this example is also `profile`, which is saved in the content item with the `ddcDemo.profile.json` value.
     - `extension-id` refers to the DDC plugin ID. The content field set in this example is `provider`, which is saved in the content item with value `ibm.portal.ddc.json`.
@@ -135,7 +135,7 @@ Under Authoring Templates, create a Content Template.
 
     ![](../../../assets/WCM_Content_Template.png "Add Content Template.")
  
-2. Add `Name`, `Display title` and `Description` with suggested name `Volt MX Content Template`. Once you have created your presentation template you have to set this as the default presentation template `Volt MX data presentation template`.
+2. Add `Name`, `Display title` and `Description` with suggested name `Volt MX Content Template`. Once you have created your presentation template, you have to set this as the default presentation template `Volt MX data presentation template`.
 
     ![](../../../assets/WCM_Create_Content_Template.png "Create Content Template and select its attribute.")
 
@@ -167,9 +167,9 @@ Under Authoring Templates, create a Content Template.
 
     | Content field title            | Value                                                        |
     | ------------------------------ | ------------------------------------------                   |
-    | Appearance                     | appearance                                                   |
+    | Appearance                     | auto filled once you've chosen a component                   |
     | Data Source URI                | https://hcl-dx-dev.hclvoltmx.net/services/account/id?id=1    |
-    | List Rendering Profile         | ddcDemo.profile.json                                          |
+    | List Rendering Profile         | ddcDemo.profile.json                                         |
     | DDC Plugin                     | ibm.portal.ddc.json                                          |
 
     ![](../../../assets/WCM_Input_Content_Element.png "Input Main Content.")
@@ -181,9 +181,9 @@ Under Authoring Templates, create a Content Template.
 Now you can use all the WCM artifacts that you created on a portal page.
 
 !!!note
-    This guide using an existing page but you can create a completely new Content Root or any child or sibling page on any site. Refer to [Creating a page from the site toolbar](https://help.hcltechsw.com/digital-experience/9.5/dev-theme/themeopt_addpage.html?hl=create%2Cpage) for creating a page.
+    This guide is using an existing page but you can create a completely new Content Root or any child or sibling page on any site. Refer to [Creating a page from the site toolbar](https://help.hcltechsw.com/digital-experience/9.5/dev-theme/themeopt_addpage.html?hl=create%2Cpage) for creating a page.
 
-1. Go to the any page (e.g. Volt MX DDC) and enable `Edit mode`.
+1. Go to any page (e.g. Volt MX DDC) and enable `Edit mode`.
 
     ![](../../../assets/WCM_Enable_Edit_Mode.png "Enable Edit mode.")
 
