@@ -52,9 +52,7 @@ If you create a new plug-in application with the same names and IDs as an existi
 -   The fully qualified class name plus path of all classes within the application.
 -   The file path of any files within the application.
 
-
-**Related information**  
-
-
-[Plug-ins for Content Template](../ctc/ctc_arch_plugins_auth_branch_copy.md)
+<!--
+???+ info "Related information:"
+[Plug-ins for Content Template](../ctc/ctc_arch_plugins_auth_branch_copy.md) -->
 

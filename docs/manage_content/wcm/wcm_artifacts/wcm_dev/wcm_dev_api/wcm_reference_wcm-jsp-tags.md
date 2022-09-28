@@ -2,9 +2,11 @@
 
 You use HCL Web Content Manager JSP tags with the Web Content Manager API to pull Web Content Manager content and components into external JSP applications.
 
-**Note:** A JSP referenced within a JSP component must not include a reference, directly or indirectly, to the same JSP component. It also includes references within Web Content Manager tags or the API. If it does, a loop is created and your server crashes.
+!!! note
+    A JSP referenced within a JSP component must not include a reference, directly or indirectly, to the same JSP component. It also includes references within Web Content Manager tags or the API. If it does, a loop is created and your server crashes.
 
-**Note:** To use the Web Content Manager JSP tags, the following directive must be provided in the JSP:
+!!! note
+    To use the Web Content Manager JSP tags, the following directive must be provided in the JSP:
 
 ```
 `<%@taglib uri="/WEB-INF/tld/wcm.tld" prefix="wcm" %>`
@@ -42,7 +44,8 @@ This tag is used to set the initial workspace. This tag
 |user|This parameter is used to specify a java.security.Principal object instead of the user name.|
 |password|The password for the valid Web Content Manager user name or user.|
 
-**Note:** User name, user, and password are optional. If not specified, the current user is used instead, including the anonymous user.
+!!! note
+    User name, user, and password are optional. If not specified, the current user is used instead, including the anonymous user.
 
 Example
 
@@ -76,12 +79,11 @@ This tag sets the path to your Web Content Manager server. This tag is not requi
 |wcmWebAppPath|The URL up to the web application. For example, `http://localhost:10039/wps/wcm`|
 |wcmServletPath|The servlet path to the Web Content Manager servlet. For example, `/connect`|
 |path|The path to the content and site areas. For example, `/Site Area A/ Site Area B/Content C`|
-|requestParameters|You specify java Map request parameters to set in the context. These parameters can be used by menu components that are rendered through the JSP that use a query string.See [Writing links to web content](wcm_dev_writing-links.md) for details of request parameters that can be used when you reference web content items.
-
-|
+|requestParameters|You specify java Map request parameters to set in the context. These parameters can be used by menu components that are rendered through the JSP that use a query string.See [Writing links to web content](../../tags/wcm_dev_writing-links.md) for details of request parameters that can be used when you reference web content items.|
 |project|The name of the project to set in the context. If the corresponding project cannot be found, it is ignored and an error is logged. An empty string is used to clear any project that is previously set in the context.|
 
-**Note:** The project, wcmWebAppPath, and wcmServletPath parameters are optional. However, if wcmWebAppPath is specified, wcmServletPath must also be specified.
+!!! note
+    The project, wcmWebAppPath, and wcmServletPath parameters are optional. However, if wcmWebAppPath is specified, wcmServletPath must also be specified.
 
 Developers can add insert context tags at any place in the page and it changes the context for the rest of the page execution, but the tags cannot be nested.
 
@@ -97,35 +99,15 @@ Sets the context given the location of a path string. This tag is not required i
 
 |Parameter|Details|
 |---------|-------|
-|location|This parameter sets the context of the location of a path string. Either-   **`location="query"`**
-
-The context is obtained from the query parameter.
-
--   **`location="request"`**
-
-The context is obtained from the value of the request.
-
--   **`location="session"`**
-
-The context is obtained from the value of the current session.
-
--   **`location="portalContext"`**
-
-This parameter is used to define the path of a site area or content item that is used as the current context of a page. For example `/library1/sitearea3/content4`
-
--   **`location="portalMapping"`**
-
-This parameter is used to define the path of a site area or content item that is used as the default site area of a page. For example `/library1/sitearea3`
-
-
-|
+|location|This parameter sets the context of the location of a path string. Either-   **`location="query"`** <br>The context is obtained from the query parameter. <br>-   **`location="request"`** <br> The context is obtained from the value of the request. <br>-   **`location="session"`** <br>The context is obtained from the value of the current session. <br> -   **`location="portalContext"`** <br>This parameter is used to define the path of a site area or content item that is used as the current context of a page. For example `/library1/sitearea3/content4` <br>-   **`location="portalMapping"`** <br>This parameter is used to define the path of a site area or content item that is used as the default site area of a page. For example `/library1/sitearea3`|
 |wcmWebAppPath|The URL up to the web application. For example, `http://localhost:10039/wps/wcm`|
 |wcmServletPath|The servlet path to the Web Content Manager servlet. For example, `/connect`|
 |param|This is the name of the parameter that the path string is in.|
 |project|The name of the project to set in the context. If the corresponding project cannot be found, it is ignored and an error is logged. An empty string is used to clear any project that is previously set in the context.|
 |defaultPath|If the location parameter does not resolve to a valid location, then the value of the defaultPath is used. For example, `/library2/sitearea1`|
 
-**Note:** The project, wcmWebAppPath, wcmServletPath, and defaultPath parameters are optional. However, if wcmWebAppPath is specified, wcmServletPath must also be specified.
+!!! note
+    The project, wcmWebAppPath, wcmServletPath, and defaultPath parameters are optional. However, if wcmWebAppPath is specified, wcmServletPath must also be specified.
 
 Developers can add context tags at any place in the page and it changes the context for the rest of the page execution, but the tags cannot be nested.
 
@@ -200,6 +182,6 @@ Rendering plug-ins can be referenced within JSP code by using a plug-in tag:
 </wcm:plugin>`
 ```
 
-For more information, see [Creating a plug-in tag](../panel_help/wcm_dev_referencing_plugin.md).
+For more information, see [Creating a plug-in tag](../../tags/creating_web_content_tags/creating_plugin_tag/index.md).
 
 

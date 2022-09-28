@@ -8,7 +8,8 @@ In the rare event where a library becomes locked, you can use the unlock library
 -   connect.businesslogic.module.unlocklibrary.remoteaccess=true
 -   connect.businesslogic.module.unlocklibrary.autoload=false
 
-**Note:** This tool unlocks a web content library only, not the items that are stored in the web content library.
+!!! note
+    This tool unlocks a web content library only, not the items that are stored in the web content library.
 
 1.  Log in to the portal as an administrator.
 
@@ -20,6 +21,5 @@ In the rare event where a library becomes locked, you can use the unlock library
     
     ```
 
-
-**Parent topic:**[Managing web content libraries](../panel_help/wcm_admin_libraries.md)
-
+<!--
+**Parent topic:**[Managing web content libraries](../panel_help/wcm_admin_libraries.md) -->

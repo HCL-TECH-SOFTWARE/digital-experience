@@ -23,5 +23,6 @@ You must be an Administrator to work with web content libraries.
 8.  Click the most recent report to review labeled items.
 
 
-**Parent topic:**[Managing web content libraries](../panel_help/wcm_admin_libraries.md)
+<!--
+**Parent topic:**[Managing web content libraries](../panel_help/wcm_admin_libraries.md) -->
 

@@ -6,7 +6,8 @@ The operation check extension only supports the create operation of a new Item, 
 
 To create a OperationCheckPlugin plug-in, you must create a operation check class and then register the file by deploying it on the server.
 
-**Note:** This extension cannot be used with page components or templates generated using the Generate feature.
+!!! note
+   This extension cannot be used with page components or templates generated using the Generate feature.
 
 1.  Create a Java class that implements the interface interface com.ibm.workplace.wcm.api.extensions.operation.OperationCheckPlugin. This class must implement the following methods:
 

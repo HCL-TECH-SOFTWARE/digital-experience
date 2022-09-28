@@ -361,8 +361,6 @@ If you create a new plug-in application with the same names and IDs as an existi
 When sorting is applied to a set of items, the item title is used to sort the items, not the title specified in the text provider.
 
 
-**Related information**  
-
-
-[Configuring the validation of friendly URLs for web content](../wcm/configure_validate_friendly_urls.md)
+???+ info "Related information:"
+   - [Configuring the validation of friendly URLs for web content](../../../wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/customizing_content/friendlyurl_wcmviewer/validate_friendlyurl/configure_validate_friendly_urls.md)
 

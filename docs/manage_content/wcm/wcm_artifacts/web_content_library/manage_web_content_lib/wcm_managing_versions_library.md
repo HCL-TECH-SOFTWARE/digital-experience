@@ -24,11 +24,10 @@ You can restore a set of items within a library that either have the same label 
 
 4.  Click **Additional Tasks** and then **View Report** to open a list of library restore reports.
 
-
-**Parent topic:**[Managing web content libraries](../panel_help/wcm_admin_libraries.md)
-
-**Related information**  
+<!--
+**Parent topic:**[Managing web content libraries](../panel_help/wcm_admin_libraries.md) -->
 
 
-[How to manage versions of items](../panel_help/wcm_managing_versions.md)
+???+ info "Related information:"
+    - [How to manage versions of items](../../../wcm_content_delivery/wcm_user_assistance/mng_content_with_auth_portlet/item_management_features/wcm_managing_versions.md)
 
