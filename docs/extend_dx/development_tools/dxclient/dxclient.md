@@ -29,11 +29,13 @@ DXConnect is a servlet-based application deployed on top of IBM WebSphere Applic
 
 ## Installing using the Docker image
 
-**Prerequisites:** You must ensure that Docker is installed on the workstation.
+### Prerequisites
+You must ensure that Docker is installed on the workstation.
 
 !!! note
     When you upgrade to use the Docker image DXClient, you should first uninstall the nodejs DXClient.
 
+### Install using Docker
 DXClient docker image comes with a script that you can use to run the docker image. This script creates a store directory, and copies the input files from the absolute path to the shared volume location.
 
 See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr_frVlojc)
@@ -42,18 +44,18 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 
 2.  Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your HCL Digital Experience 9.5 CF196 or higher entitlements on the HCL Software License Portal.
 
-    !!! note
+    !!!note
         If you are upgrading from the node to Docker image version of DXClient, you must first uninstall or unlink the current version using the following command before installing the newer version.
 
-        Syntax for Linux and Apple macOS platforms:
-         ```
-         make unlink
-         ```
+    Syntax for Linux and Apple macOS platforms:
+        ```
+        make unlink
+        ```
 
-        Syntax for Microsoft Windows platforms:
-         ```
-         make_unlink.bat
-         ```
+    Syntax for Microsoft Windows platforms:
+        ```
+        make_unlink.bat
+        ```
 
 3.  Extract the DXClient.zip file locally.
 
@@ -83,11 +85,11 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 
 9.  Configuration, logger, output, and sample files under location - <working-directory\>/store.
 
-Common command arguments can be pre-configured inside the `config.json` file available under `<working-directory>/store` folder. A sample configuration file that could be used on-premises platforms in standalone, cluster platforms is also available under `<working-directory>/store/samples/sample-configurations/default-config.json` for reference.
+Common command arguments can be pre-configured inside the `config.json` file available under <working-directory>/store folder. A sample configuration file that could be used on-premises platforms in standalone, cluster platforms is also available under <working-directory>/store/samples/sample-configurations/default-config.json for reference.
 
 ## DXClient installation configuration
 
-Common command arguments can be pre-configured inside the `config.json` file available under `dist/src/configuration` folder. A sample configuration file that could be used for any of the supported Kubernetes platforms is also available under `samples/sample-configurations.json` for reference.
+Common command arguments can be pre-configured inside the `config.json` file available under dist/src/configuration folder. A sample configuration file that could be used for any of the supported Kubernetes platforms is also available under samples/sample-configurations.json for reference.
 
 ```
 {
@@ -131,7 +133,10 @@ Common command arguments can be pre-configured inside the `config.json` file ava
 
 ## Installing using the node package file (deprecated in CF196)
 
-**Prerequisites:** Node.js version 12.18.3 is the minimum supported version, and must be installed on the local workstation or automation server.
+### Prerequisites
+Node.js version 12.18.3 is the minimum supported version, and must be installed on the local workstation or automation server.
+
+### Install using node package file
 
 See video: [Getting Started with DXClient on Red Hat OpenShift using HCL Digital Experience Container Update CF194](https://www.youtube.com/watch?v=OphJ8-WcLxY)
 
@@ -143,15 +148,15 @@ See video: [Getting Started with DXClient on Red Hat OpenShift using HCL Digital
     !!! note
         If you are upgrading from CF19, CF191, or later releases, you should first unlink the current version using the following command before installing the newer version.
 
-        Syntax for Linux and Apple macOS platforms:
-        ```
-        make unlink
-        ```
+    Syntax for Linux and Apple macOS platforms:
+    ```
+    make unlink
+    ```
 
-        Syntax for Microsoft Windows platforms:
-        ```
-        make_unlink.bat
-        ```
+    Syntax for Microsoft Windows platforms:
+    ```
+    make_unlink.bat
+    ```
 
 2.  Ensure that Node.js version 12.18.3 or later version is installed to the local workstation. The DXClient tool is supported on Microsoft Windows, Linux, and Apple macOS workstations and automation servers.
 
@@ -191,9 +196,9 @@ See video: [Getting Started with DXClient on Red Hat OpenShift using HCL Digital
     make_link.bat
     ```
 
-    !!! note
+    !!!note
         -   Avoid using this command when scripting deployments from an automation server (for example, in pipelines) as there is a chance of picking up the wrong dependencies during tool version upgrades.
-        -   If the `link` command is not used (such as on automation servers), then use the following command to run the application:
+        -   If the `link` command is not used (such as on automation servers), then use the following command to run the application:<br><br>
 
         For Linux and Apple MacOS platforms:
 
@@ -207,34 +212,34 @@ See video: [Getting Started with DXClient on Red Hat OpenShift using HCL Digital
         node bin/dxclient
         ```
 
-**DXClient node uninstalling**
+### DXClient node uninstalling
 
- -   To uninstall the DXClient tool, perform the following commands:
+To uninstall the DXClient tool, perform the following commands:
 
-    For Linux and Apple MacOS platforms:
+For Linux and Apple MacOS platforms:
 
-    ```
-    make clean
-    ```
+```
+make clean
+```
 
-    For Microsoft Windows platforms:
-    ```
-    make uninstall.bat
-    ```
+For Microsoft Windows platforms:
+```
+make uninstall.bat
+```
 
--   To unlink the DXClient tool, perform the following commands:
+To unlink the DXClient tool, perform the following commands:
 
-    For Linux and Apple MacOS platforms:
+For Linux and Apple MacOS platforms:
 
-    ```
-    make unlink
-    ```
+```
+make unlink
+```
 
-    For Microsoft Windows platforms:
+For Microsoft Windows platforms:
 
-    ```
-    make_unlink.bat
-    ```
+```
+make_unlink.bat
+```
 
 ## Verify the DXClient installation
 
@@ -242,7 +247,7 @@ Successful installation of the DXClient tool can be checked by using the "`dxcli
 
 Once installed, commands can be executed using the DXClient tool to perform CI / CD actions on HCL DX 9.5 servers.
 
-!!! note 
+!!!note 
     Refer to the list of features that were released in the following HCL DX 9.5 Container releases:
 
     -   HCL DX 9.5 CF201 release:
