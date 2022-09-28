@@ -15,14 +15,14 @@ Instructions are also included for the following areas:
 -   Tuning the HCL Portal services
 
 A large portion of tuning HCL DX Portal itself has been automated.
-Instructions for running the automation scripts are provided in the next section titled [Portal server performance tuning tool](https://link needed here to portal tuning tool (the next section)).
+Instructions for running the automation scripts are provided in the next section titled [Portal server performance tuning tool](./wp_tune_tool).
 
 Note that the recommendations in the DX Portal Tuning Guide should be considered "a good starting point" for tuning optimization.
 Ultimately, one should then run synthetic loads against this DX Portal with actual content on the site. 
 This synthetic load should approximate actual user scenarios for access.
 Final performance tuning should optimze key metrics such as "page views per second" and "page response times" using this synthetic load and prior to placing the DX Portal site into production.
 
-The [Optimizing Portal Access Control](https://link needed here to the PAC tuning section in the help center) section provides guidance on optimizing access control for all Portal artifacts.
+The [Optimizing Portal Access Control](./wp_pac_tool) section provides guidance on optimizing access control for all Portal artifacts.
 
 **Related information**  
 [HCL DX Performance Tuning Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074411)<br>
