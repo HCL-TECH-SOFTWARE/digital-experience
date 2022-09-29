@@ -6,17 +6,10 @@ To create a backup of a specific outbound HTTP connection profile, use the proce
 
     -   To export the global configuration, start the following portal configuration engine task:
 
-        -   AIX® HP-UX Linux™ Solaris z/OS®:
+        -   AIX® and Linux™:
 
             ```
             ./ConfigEngine.sh read-outbound-http-connection-config 
-                              -DConfigFileName=/tmp/the\_global\_configuration.xml
-            ```
-
-        -   IBM® i:
-
-            ```
-            ConfigEngine.sh   read-outbound-http-connection-config 
                               -DConfigFileName=/tmp/the\_global\_configuration.xml
             ```
 
@@ -27,25 +20,17 @@ To create a backup of a specific outbound HTTP connection profile, use the proce
                               -DConfigFileName=/tmp/the\_global\_configuration.xml
             ```
 
-        The output file /tmp/the\_global\_configuration.xml contains an XML export of the global configuration profile.
+        The output file /tmp/the_global_configuration.xml contains an XML export of the global configuration profile.
 
     -   To run an application scoped profile, proceed as follows:
 
         1.  Determine the name of the application scope. To get this name, follow the procedure under *Listing all available configuration profiles*.
         2.  Start the following portal configuration engine task:
 
-            -   AIX HP-UX Linux Solaris z/OS:
+            -   AIX and Linux:
 
                 ```
                 ./ConfigEngine.sh read-outbound-http-connection-config 
-                                  -DConfigFileName=/tmp/the\_scoped\_configuration.xml
-                                  -DApplicationScopeRef=THE\_APPLICATION\_SCOPE
-                ```
-
-            -   IBM i:
-
-                ```
-                ConfigEngine.sh   read-outbound-http-connection-config 
                                   -DConfigFileName=/tmp/the\_scoped\_configuration.xml
                                   -DApplicationScopeRef=THE\_APPLICATION\_SCOPE
                 ```

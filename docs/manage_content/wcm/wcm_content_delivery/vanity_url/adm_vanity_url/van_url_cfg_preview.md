@@ -23,46 +23,21 @@ The syntax for these configuration tasks is as follows:
 
 -   **AIX®**
 
-    ./ConfigEngine.sh enable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
+    `./ConfigEngine.sh enable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password`
 
-    ./ConfigEngine.sh disable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
-
--   **HP-UX**
-
-    ./ConfigEngine.sh enable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
-
-    ./ConfigEngine.sh disable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
-
--   **IBM® i**
-
-    ConfigEngine.sh enable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
-
-    ConfigEngine.sh disable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
+    `./ConfigEngine.sh disable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password`
 
 -   **Linux™**
 
-    ./ConfigEngine.sh enable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
+    `./ConfigEngine.sh enable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password`
 
-    ./ConfigEngine.sh disable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
-
--   **Solaris**
-
-    ./ConfigEngine.sh enable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
-
-    ./ConfigEngine.sh disable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
+    `./ConfigEngine.sh disable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password`
 
 -   **Windows™**
 
-    ConfigEngine.bat enable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
+    `ConfigEngine.bat enable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password`
 
-    ConfigEngine.bat disable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
-
--   **z/OS®**
-
-    ./ConfigEngine.sh enable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
-
-    ./ConfigEngine.sh disable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
-
+    `ConfigEngine.bat disable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password`
 
 
 ???+ info "Related information:"

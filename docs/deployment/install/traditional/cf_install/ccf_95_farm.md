@@ -29,7 +29,6 @@ The procedures below describe these steps in detail.
 Ensure that enough disk space is available in the following directories:
 
 -   For all platforms: 2.0 GB in the download directory to download the cumulative fix, 1.5 GB in `Portal_Install_Root`, 1 GB temporary disk space in `(wp_profile_root)`, and 1.66 GB in the shared data space, which is the directory where Installation Manager temporarily stores downloaded files for use during the update.
--   For Solaris: It is recommended that you allocate swap space equal to at least twice your physical RAM to avoid memory errors during the configuration of this cumulative fix.
 
 ## Best Practices
 

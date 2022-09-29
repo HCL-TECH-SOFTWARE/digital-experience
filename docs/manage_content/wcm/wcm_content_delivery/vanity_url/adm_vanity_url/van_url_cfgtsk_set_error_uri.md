@@ -15,37 +15,21 @@ The configuration task for configuring an error URI for vanity URLs is `set-vani
 
     -   **AIX®**
 
-        ./ConfigEngine.sh set-vanityurl-error-uri -DPortalAdminPwd=password -DWasPassword=password
-
-    -   **HP-UX**
-
-        ./ConfigEngine.sh set-vanityurl-error-uri -DPortalAdminPwd=password -DWasPassword=password
-
-    -   **IBM® i**
-
-        ConfigEngine.sh set-vanityurl-error-uri -DPortalAdminPwd=password -DWasPassword=password
+        `./ConfigEngine.sh set-vanityurl-error-uri -DPortalAdminPwd=password -DWasPassword=password`
 
     -   **Linux™**
 
-        ./ConfigEngine.sh set-vanityurl-error-uri -DPortalAdminPwd=password -DWasPassword=password
-
-    -   **Solaris**
-
-        ./ConfigEngine.sh set-vanityurl-error-uri -DPortalAdminPwd=password -DWasPassword=password
+        `./ConfigEngine.sh set-vanityurl-error-uri -DPortalAdminPwd=password -DWasPassword=password`
 
     -   **Windows™**
 
-        ConfigEngine.bat set-vanityurl-error-uri -DPortalAdminPwd=password -DWasPassword=password
-
-    -   **z/OS®**
-
-        ./ConfigEngine.sh set-vanityurl-error-uri -DPortalAdminPwd=password -DWasPassword=password
+        `ConfigEngine.bat set-vanityurl-error-uri -DPortalAdminPwd=password -DWasPassword=password`
 
 -   **Extra parameters:**
 
     If you want the vanity URL to redirect the user to an error URI, you must specify the following parameter with this task. It requires the prefix -D in the command.
 
-    -   **ErrorURI = URI\_for\_redirect**
+    -   **ErrorURI = URI_for_redirect**
 
         If the vanity URL of the request is not defined, the vanity URL servlet redirects the requests to the URI specified here. If the value for the parameter is the empty string and the vanity URL of the request is undefined, the portal sends a 404 return code.
 
