@@ -16,11 +16,13 @@ When you first create a content item, you are required to specify the location o
 
         -   Select **First child** to save the content item as the first listed item within a location. Then, click **OK**.
         -   Select **Last child** to save the content item as the last listed item within a location. Then, click **OK**.
+
     3.  If the selected authoring template does not restrict which locations can be selected, but allows multiple locations to be selected:
 
         -   Select **First child** to save the content item as the first listed item within a location. Then, click **OK**.
         -   Select **Last child** to save the content item as the last listed item within a location. Then, click **OK**.
         -   Select **Manage multiple selections** to select multiple locations. To choose a location to save the content item under, select a location and then click **Move to top**. The content item is saved under the first location in the list and then linked to the other locations.
+        
     4.  If the selected authoring template allows only a single location to be selected, you must select a location for the content item. You then select how to add the content item within the location if the parent item already has children:
 
         -   Select **First child** to save the content item as the first listed item within a location. Then, click **OK**.

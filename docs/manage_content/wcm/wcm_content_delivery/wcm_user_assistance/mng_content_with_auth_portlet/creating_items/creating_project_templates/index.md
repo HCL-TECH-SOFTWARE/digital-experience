@@ -5,9 +5,3 @@ Projects help content authors group and manage changes across the website. From 
 To create a project template, open the applications menu and go to **Content** \> **Web Content Management** and then click **New** \> **Project Template**.
 
 **Setting a default project template:** To set a default project template to be used when new projects are created, select a project template in the library explorer view, and then click **More** \> **Set as Default**. To clear the default template, click **More** \> **Clear Default**. This setting is scoped to the virtual portal if managed pages are enabled.
-
-**Related information**  
-
-
-[Creating project templates](../site/site_project_temps.md)
-

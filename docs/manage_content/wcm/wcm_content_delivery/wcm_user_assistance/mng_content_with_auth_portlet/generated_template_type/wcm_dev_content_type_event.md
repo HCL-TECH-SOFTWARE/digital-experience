@@ -38,4 +38,3 @@ These items are created using this template type:
 
     This component stores the default CSS code for the teaser view of the template type you generated.
 
-

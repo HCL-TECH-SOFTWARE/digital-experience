@@ -8,7 +8,8 @@ You can perform various web content library functions by using the Web content A
 -   Import a library
 -   Export a library
 
-**Note:** Drafts are not copied or exported when using the API to copy or export libraries.
+!!! note
+   Drafts are not copied or exported when using the API to copy or export libraries.
 
 See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
 

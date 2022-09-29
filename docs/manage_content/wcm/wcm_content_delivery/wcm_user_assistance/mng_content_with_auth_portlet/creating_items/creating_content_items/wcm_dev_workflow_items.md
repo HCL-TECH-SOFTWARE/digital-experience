@@ -16,15 +16,16 @@ The workflow section is only visible on item types that are enabled to use a wor
 
 3.  Enter dates and times to run any date or time-specific workflow actions.
 
-    1.  Click ![date](../images/date.jpg) to select a date.
+    1.  Click date icon to select a date.
 
-    2.  Click ![time](../images/time.jpg) to select a time.
+    2.  Click time icon to select a time.
 
     -   **Publish Date**
 
         Select the date and time to run a publish action in a workflow stage.
 
-        **Note:** This parameter cannot be set on the content template. You can select a publish date only on the content item itself.
+        !!! note
+            This parameter cannot be set on the content template. You can select a publish date only on the content item itself.
 
     -   **Expiry Date**
 
@@ -34,7 +35,8 @@ The workflow section is only visible on item types that are enabled to use a wor
 
         These dates are run when custom actions are used to run scheduled tasks not based on published or expired dates.
 
-    **Note:** Selecting a publish or expire date does not cause the item to be published or expired. The selected workflow must include a publish or expire action. The publish and expire dates and times do not represent the time that the item is published or expired. They represent the time the publish or expire action can be executed which can occur before the item is moved to either the published or expired stage of the workflow cycle.
+    !!! note
+        Selecting a publish or expire date does not cause the item to be published or expired. The selected workflow must include a publish or expire action. The publish and expire dates and times do not represent the time that the item is published or expired. They represent the time the publish or expire action can be executed which can occur before the item is moved to either the published or expired stage of the workflow cycle.
 
     If no date or time is selected, then it defaults to the date the item was created which allows the publish and expire actions to be executed immediately when the item is moved to the published or expired stage of the workflow cycle.
 
@@ -47,6 +49,7 @@ The workflow section is only visible on item types that are enabled to use a wor
         -   Select either Users or Groups.
         -   Enter text to search for in the Search field and then click **Search**. \(Leave the Search field blank to display all users or groups.\)
         -   Select the required users or groups and then click **OK**.
+
     2.  To remove users or groups, select the users or groups you would like to remove and then click **Remove**.
 
 

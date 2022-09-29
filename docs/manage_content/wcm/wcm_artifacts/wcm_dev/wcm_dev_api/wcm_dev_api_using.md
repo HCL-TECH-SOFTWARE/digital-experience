@@ -33,7 +33,8 @@ To get a workspace item without specifying a user name and password, use one of 
 
 If the user is not recognized as a Web Content Manager user, or for some other reason could not be authenticated, an `OperationFailedException` will be thrown.
 
-**Note:** Only Web Content Manager users \(including external LDAP users if enabled\) are recognized. For example, A workspace cannot be retrieved using an LTPA token.
+!!! note
+   Only Web Content Manager users \(including external LDAP users if enabled\) are recognized. For example, A workspace cannot be retrieved using an LTPA token.
 
 Operations available on the workspace include:
 
@@ -47,8 +48,10 @@ You must call `endWorkspace()` when finished with the workspace item.
 webContentService.getRepository().endWorkspace();
 ```
 
-**Note:** You don't need to call `endWorkspace()` when using a JSP component as rendering and session management is handled by Web Content Manager.
+!!! note
+   You don't need to call `endWorkspace()` when using a JSP component as rendering and session management is handled by Web Content Manager.
 
-**Note:** You use the `setCurrentDocumentLibrary` method to make calls library-specific. If not specified, the default library that has been configured in the WCM WCMConfigService service is used.
+!!! note
+   You use the `setCurrentDocumentLibrary` method to make calls library-specific. If not specified, the default library that has been configured in the WCM WCMConfigService service is used.
 
 

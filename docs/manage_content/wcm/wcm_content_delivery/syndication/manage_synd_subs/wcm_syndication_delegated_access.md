@@ -22,7 +22,7 @@ Setup a resource environment property in the WCM WCMConfigService. This property
 
 4.  Select **New**.
 
-5.  Enter a name of "enableSyndicationFilter".
+5.  Enter a name of "enableSyndicatorFilter".
 
 6.  Enter a value of "true" 
 
@@ -41,11 +41,9 @@ Give the user Administrator access to ALL of the libraries in the syndicator. Th
 
 Give the user Manager access on the WCM Libraries Content Root using the "Set Access on Root" button in the Web Content Library portlet. Giving the user Manager access on the WCM Libraries Content Root gives them Manager access on all of the libraries, however, it is possible to block the Manager access on libraries that should not be administered by this user (unlike giving the user Administrator access which cannot be blocked).
 
+<!--
+**Parent topic:**[How to manage syndicators and subscribers](../panel_help/wcm_syndication.md) -->
 
-**Parent topic:**[How to manage syndicators and subscribers](../panel_help/wcm_syndication.md)
-
-**Related information**  
-
-
-[Syndication](../wcm/wcm_administering.md)
+???+ info "Related information:"
+    - [Syndication](../index.md)
 

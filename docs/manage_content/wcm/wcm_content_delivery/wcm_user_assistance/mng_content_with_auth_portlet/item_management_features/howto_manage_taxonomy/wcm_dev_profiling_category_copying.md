@@ -21,5 +21,6 @@ As a taxonomy evolves, you are required to edit your taxonomy by copying categor
 6.  Click **OK**.
 
 
-**Note:** The children of an item are not copied when you copy an item. You must copy any children separately.
+!!! note
+    The children of an item are not copied when you copy an item. You must copy any children separately.
 

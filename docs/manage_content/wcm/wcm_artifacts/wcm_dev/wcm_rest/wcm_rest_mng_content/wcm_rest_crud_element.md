@@ -10,7 +10,8 @@ An element can be created by sending a POST request to the following URI with an
 /[Content|SiteArea]/<parent-uuid>/elements
 ```
 
-**Note:** The type of the element to be created must be specified in the type field of the entry that is posted.
+!!! note
+    The type of the element to be created must be specified in the type field of the entry that is posted.
 
 For example:
 
@@ -130,7 +131,7 @@ The content of an element is accessed from the media resource that is specified 
 href="/wps/mycontenthandler/!ut/p/wcmrest/SiteArea/c6b00ee6-d628-4cbd-9e65-15c90f2093a6/elements/heading"/>
 ```
 
-A complete list of media types are documented here: [Supported media types](wcm_rest_media_types.md).
+A complete list of media types are documented here: [Supported media types](../wcm_rest_referencematerial/wcm_rest_media_types.md).
 
 To update content of an element PUT content in an accepted media type to the edit-media URL. For example:
 
@@ -174,8 +175,6 @@ Content-type: text/plain
 ```
 
 
-**Related information**  
-
-
-[REST content formats for components and elements](../wcm/wcm_rest_content_formats.md)
+???+ info "Related information:"
+    - [REST content formats for components and elements](../wcm_rest_content_formats.md)
 

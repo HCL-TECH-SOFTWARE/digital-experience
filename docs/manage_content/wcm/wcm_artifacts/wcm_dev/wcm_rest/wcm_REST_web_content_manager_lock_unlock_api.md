@@ -2,11 +2,11 @@
 
 The Web Content Manager Lock/Unlock API lets you lock and unlock WCM content components, authoring templates, and item.
 
-It also extends the [WCM Query API](../wcm/wcm_rest_query.html) to pass on the information if an item is locked and who locked it.
+It also extends the [WCM Query API](../wcm_rest/wcm_rest_query/index.md) to pass on the information if an item is locked and who locked it.
 
 It is equivalent to the functionality in the user interface \(for WCM items\):
 
-![](../assets/HCL_Web_Content_Manager_Lock_Unlock_API.png "Enable WCM Lock/Unlock API")
+![Enable WCM Lock/Unlock API](../../../../../assets/HCL_Web_Content_Manager_Lock_Unlock_API.png)
 
 ## Using the Web Content Manager Lock/Unlock API
 
@@ -176,9 +176,10 @@ When using search when specifying the options=details query parameter the catego
 
 It is equivalent to the functionality in the user interface \(for finding Web Content Manager items\).
 
-![](../assets/HCL_Web_Content_Manager_Reference_API_UI.png "WCM Reference API UI")
+![WCM Reference API UI](../../../../../assets/HCL_Web_Content_Manager_Reference_API_UI.png)
 
-**Note:** Currently, the Web Content Manager Reference API only supports the GET operation for retrieving items. To update items, the document outlines how to use existing APIs to make updates.
+!!! note
+    Currently, the Web Content Manager Reference API only supports the GET operation for retrieving items. To update items, the document outlines how to use existing APIs to make updates.
 
 ## Using the Web Content Manager Reference GET API
 
@@ -343,7 +344,7 @@ It is equivalent to the functionality in the user interface \(for finding Web Co
 
 ## Updating references
 
-Both Digital Asset Management and Web Content Manager references can be updated with the published APIs as documented here: [How to use REST with components](../wcm/wcm_rest_crud_component.html).
+Both Digital Asset Management and Web Content Manager references can be updated with the published APIs as documented here: [How to use REST with components](../wcm_rest/wcm_rest_mng_content/wcm_rest_crud_component.md).
 
 Example for Digital Asset Management, to retrieve references to UUID: 7e3cb713-251a-485c-a578-1aa219411b5e.
 

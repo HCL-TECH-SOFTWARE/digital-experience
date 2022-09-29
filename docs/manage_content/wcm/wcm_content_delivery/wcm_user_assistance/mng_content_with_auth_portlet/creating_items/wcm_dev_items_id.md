@@ -20,7 +20,9 @@ Specify identification information for the current item, including the name and 
         -   \\taxonomyA\\categoryA\\shoes
         -   \\taxonomyA\\categoryB\\shoes
         -   \\taxonomyB\\categoryB\\shoes
+
     -   Names are not case-sensitive, so you cannot create one item that is named "News" and another item of the same item-type named "news" in the same path.
+    
 2.  Type the title of the item in the **Display Title** field. The title is the text that is displayed to users when a list of items is viewed. Unlike the name, titles can use double-byte and non-ASCII characters.
 
     1.  Click **Localizations** to select a text provider plug-in and key. A text provider is used to provide localized text that can be used within web content item forms. The key is used to look up a string from the selected text provider. The text provider displays a different title for each locale it is configured for. The text that is entered in the display title field is only used if an appropriate text label is not available from the selected text provider, or if the text provider is not available.

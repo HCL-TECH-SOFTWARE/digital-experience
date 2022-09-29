@@ -26,6 +26,7 @@ You can change the authoring template that is associated with an item by applyin
     -   **Enter values for mandatory fields**: This option copies default values from the authoring template to mandatory fields and elements in the item that do not already have values.
     -   **Save invalid item**: This option forces invalid content to be saved when you apply or change a template. For example, if a text field that contains 10 characters is replaced with a text field with a maximum of 8 characters, the old text is saved in the updated field. You must fix the invalid content the next time you edit the item.
     -   **Save as draft**: A draft item is created when the authoring template is applied.
+    
 6.  Click **OK**.
 
 

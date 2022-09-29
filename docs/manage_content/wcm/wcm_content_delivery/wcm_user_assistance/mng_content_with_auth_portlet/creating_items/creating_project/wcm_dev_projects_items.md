@@ -16,9 +16,11 @@ To add an item to a project, you can either:
 -   Open a project and click **Add to project** and then select an item to add to the project.
 -   Open a project and click **New** to create a draft item in the project.
 
-**Note:** The maximum number of items that can be used in a single project is 500.
+!!! note
+    The maximum number of items that can be used in a single project is 500.
 
-**Note:** To add an item to a project, you must have editor access to that item.
+!!! note
+    To add an item to a project, you must have editor access to that item.
 
 When you add an item to a project:
 
@@ -41,7 +43,8 @@ Workflows, workflow stages and workflow actions cannot be added to projects.
 
 While you are working on a project, you can preview the draft items in the project as if they were published together on the live site.
 
-**Note:** Care must be taken when you preview content by using the servlet. Clicking a link while you preview items in a project takes you out of the project scope itself, and uses the scope of the current site instead.
+!!! note
+    Care must be taken when you preview content by using the servlet. Clicking a link while you preview items in a project takes you out of the project scope itself, and uses the scope of the current site instead.
 
 ## Deleting items in a project
 

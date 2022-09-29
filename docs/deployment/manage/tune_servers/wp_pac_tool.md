@@ -8,6 +8,7 @@ Note that this can manifest both as occasionally slow DX Portal performance or o
 Check all of your libraries for explicit role assignments. You can run the optimizer per library by specifying the root resource ID or you can run it for all libraries.
 
 !!!note
+
     In some cases, the Portal Access Control optimizer task will not update Web Content Manager access control settings. This is true if if access control for a content item is set via a workflow. The optimizer will report "success" for updating the Web Content Manager item when access control is set in a workflow, even if the access control settings have not changed.
 
 1.  Log in to the WebSphere® Integrated Solutions Console.
@@ -47,6 +48,7 @@ Check all of your libraries for explicit role assignments. You can run the optim
     -   `rootResource`: Set this value to a custom unique name, a Web Content Manager UUID, or leave blank. If you leave this field blank, the Optimizer starts at the root of the resource tree and might take a longer time to run.
     
     !!!note
+    
         If you want a report of every place that might have explicit role assignments, set report-only to true and leave rootResource blank.
 
 9.  Open a command prompt and change to the *wp_profile_root/PortalServer/bin* directory.

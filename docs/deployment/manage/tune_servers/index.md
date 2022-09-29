@@ -15,17 +15,16 @@ Instructions are also included for the following areas:
 -   Tuning the HCL Portal services
 
 A large portion of tuning HCL DX Portal itself has been automated.
-Instructions for running the automation scripts are provided in the next section titled [Portal server performance tuning tool](./wp_tune_tool).
+Instructions for running the automation scripts are provided in the next section titled [Portal server performance tuning tool](./wp_tune_tool.md).
 
 Note that the recommendations in the DX Portal Tuning Guide should be considered "a good starting point" for tuning optimization.
 Ultimately, one should then run synthetic loads against this DX Portal with actual content on the site. 
 This synthetic load should approximate actual user scenarios for access.
-Final performance tuning should optimze key metrics such as "page views per second" and "page response times" using this synthetic load and prior to placing the DX Portal site into production.
+Final performance tuning should optimize key metrics such as "page views per second" and "page response times" using this synthetic load and prior to placing the DX Portal site into production.
 
-The [Optimizing Portal Access Control](./wp_pac_tool) section provides guidance on optimizing access control for all Portal artifacts.
+The [Optimizing Portal Access Control](./wp_pac_tool.md) section provides guidance on optimizing access control for all Portal artifacts.
 
-**Related information**  
-[HCL DX Performance Tuning Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074411)<br>
-[Performance Tuning Guide for Anonymous Page Access Caching](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0075095)<br>
-[Performance Testing and Analysis Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0075607)
-
+???+ info "**Related information**"
+- [HCL DX Performance Tuning Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074411)
+- [Performance Tuning Guide for Anonymous Page Access Caching](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0075095)
+- [Performance Testing and Analysis Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0075607)

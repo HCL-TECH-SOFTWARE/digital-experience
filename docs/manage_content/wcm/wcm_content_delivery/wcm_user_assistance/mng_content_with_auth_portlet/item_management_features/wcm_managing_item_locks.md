@@ -10,7 +10,7 @@ As you collaborate with other users, you might encounter items that are locked b
 
 ## Locked items
 
-When a user is editing an item, the item is locked to other users. Other users cannot edit the item until the current user closes the item that is being edited. A lock ![locked](../images/locked.jpg) displays when container content is locked.
+When a user is editing an item, the item is locked to other users. Other users cannot edit the item until the current user closes the item that is being edited. A lock icon displays when container content is locked.
 
 Users with administrator access can unlock items currently being edited by a user by selecting an item and then clicking **Unlock**.
 

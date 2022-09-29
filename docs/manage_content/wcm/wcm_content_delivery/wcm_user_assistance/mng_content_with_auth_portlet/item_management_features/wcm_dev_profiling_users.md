@@ -8,7 +8,8 @@ title: Editing user profiles
 
 You can add profile information to users. User profiles can be used as search parameters in menus.
 
-**Note:** Profiling cannot be added to groups, only users.
+!!! note
+    Profiling cannot be added to groups, only users.
 
 1.  Open an authoring portlet.
 
@@ -25,5 +26,9 @@ You can add profile information to users. User profiles can be used as search pa
 7.  Click **Finish**.
 
 
-**Note:** To use this feature, you must configure a property extension database to store user-specific data. See [Managing user data](http://www.lotus.com/ldd/portalwiki.nsf/dx/Managing_user_data_wp7) for further information.
+!!! note
+    To use this feature, you must configure a property extension database to store user-specific data. 
+    
+<!---
+See [Managing user data](http://www.lotus.com/ldd/portalwiki.nsf/dx/Managing_user_data_wp7) for further information. -->
 

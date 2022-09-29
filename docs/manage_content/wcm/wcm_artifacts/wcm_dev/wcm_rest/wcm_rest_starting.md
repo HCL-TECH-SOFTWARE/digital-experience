@@ -8,11 +8,11 @@ REST services make it easy to build interactive content, which can be modified d
 
 HTTP makes integration with remote clients easier than with a traditional API. Web Content Manager functions can be visible to remote systems without adding more server-side components, such as JSP, to access Java APIs. HTTP allows these services to work seamlessly with your infrastructure including firewall, proxy servers, and caches.
 
-**Note:** Any examples in this section that contain incomplete XML, or XML without namespace declarations, use the following declarations:
-
--   `xmlns:atom="http://www.w3.org/2005/Atom"`
--   `xmlns:app="http://www.w3.org/2007/app"`
--   `xmlns:wcm="http://www.ibm.com/xmlns/wcm"`
+!!! note
+    Any examples in this section that contain incomplete XML, or XML without namespace declarations, use the following declarations:
+    -   `xmlns:atom="http://www.w3.org/2005/Atom"`
+    -   `xmlns:app="http://www.w3.org/2007/app"`
+    -   `xmlns:wcm="http://www.ibm.com/xmlns/wcm"`
 
 ## Service entry points
 
@@ -49,23 +49,15 @@ To use the REST service, for Web Content Manager a client user be assigned the "
 
 An administrator can edit the WCM REST SERVICE virtual resource. Click the **Administration menu** icon. Then, click **Access** \> **Resource Permissions**. Then, click **Virtual Resources**.
 
-**Note:** Proper library permissions must be configured to be able to create the content.
+!!! note
+    Proper library permissions must be configured to be able to create the content.
 
 The same access control checks also apply to the HCL Digital Experience Version 2 REST APIs. Reference the Help Center topic [HCL Digital Experience Version 2 REST APIs](https://help.hcltechsw.com/digital-experience/8.5/wcm/dx_v2_rest_api.html) for more information.
 
 |Header|Header|
 |------|------|
-|User|Users assigned the "user" role can:-   work with web content items and run defined queries.
-
-|
-|Editor|Users assigned the "editor" role can:-   work with web content items and run defined queries.
--   Run custom queries through the following path: `/wcmrest/query`
-
-|
-|Manager|Users assigned the "manager" role can:-   work with web content items and run defined queries.
--   Run custom queries through the following path: `/wcmrest/query`
--   create, read, update, and delete defined queries.
-
-|
+|User|Users assigned the "user" role can:-   work with web content items and run defined queries.|
+|Editor|Users assigned the "editor" role can:-   work with web content items and run defined queries. <br>-   Run custom queries through the following path: `/wcmrest/query`|
+|Manager|Users assigned the "manager" role can:-   work with web content items and run defined queries. <br>-   Run custom queries through the following path: `/wcmrest/query` <br>-   create, read, update, and delete defined queries.|
 
 

@@ -8,7 +8,8 @@ title: Removing and adding workflows
 
 The process of adding and removing workflows on items is determined by the type of item that is being edited, and your level of access.
 
-**Note:** When an item is first created, you require manager access to that item type in any library to access the **Add Workflow** and **Remove Workflow** buttons. When saved, you require manager access to both the item and item type in the library the item is stored in.
+!!! note
+    When an item is first created, you require manager access to that item type in any library to access the **Add Workflow** and **Remove Workflow** buttons. When saved, you require manager access to both the item and item type in the library the item is stored in.
 
 1.  To add a workflow on a non-workflowed item:
 

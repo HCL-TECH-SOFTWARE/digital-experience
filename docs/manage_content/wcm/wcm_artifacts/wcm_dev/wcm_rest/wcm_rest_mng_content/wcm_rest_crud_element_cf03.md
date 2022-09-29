@@ -40,7 +40,8 @@ An element can be created by sending a POST request to one of the following URIs
     ```
 
 
-**Note:** The type of the element to be created must be specified in the type field of the entry that is posted.
+!!! note
+    The type of the element to be created must be specified in the type field of the entry that is posted.
 
 For example:
 

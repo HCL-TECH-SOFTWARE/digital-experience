@@ -10,7 +10,7 @@ You can define the display properties of field and elements that are displayed o
 
 1.  To hide an entire section in a content form from all users, select **Hide Section**. You must specify a default value in any required fields within the section to use this option.
 
-2.  Click ![properties](../images/propIcon.jpg) to open the display properties of a field or element.
+2.  Click ![properties](../../../../../../../images/propIcon.jpg) to open the display properties of a field or element.
 
     The following field properties can be set. Different field and element types have different display properties.
 
@@ -18,7 +18,8 @@ You can define the display properties of field and elements that are displayed o
 
     2.  To hide a field on the content form from all users select **Hide field**. You must specify a default value if the field is a required field.
 
-        **Note:** Administrators can choose to display hidden fields and elements in a content item by clicking **Show hidden fields**.
+        !!! note
+            Administrators can choose to display hidden fields and elements in a content item by clicking **Show hidden fields**.
 
     3.  Type the number of characters to use in **Field Width** to set the size of the displayed field. If you leave this field blank, the default field size is used.
 
@@ -59,9 +60,10 @@ You can define the display properties of field and elements that are displayed o
 
         -   **When located within the ilwwcm.war directory of your server use this format:**
 
-            [AppServer\_root](../reference/wpsdirstr.md#was_root)/installedApps/node-name/wcm.ear/ilwwcm.war
+            [AppServer\_root](../../../../../../../guide_me/wpsdirstr.md)/installedApps/node-name/wcm.ear/ilwwcm.war
 
-            **Note:** JSP files are stored within a web application that runs on the portal. To reference a JSP file in another web application, use the following path: contextPath;jspPath. For example: /wps/customapplication;/jsp/jspFilename.jsp.
+            !!! note
+                JSP files are stored within a web application that runs on the portal. To reference a JSP file in another web application, use the following path: contextPath;jspPath. For example: /wps/customapplication;/jsp/jspFilename.jsp.
 
             A dynamic context path value can be defined by adding a token to the context path that corresponds to a key and value pair to the Web Content Manager configuration service environment provider. When this key is used as the token in the jsp value field, it is replaced dynamically at render time. For example: \[my.custom.key\];myfile where my.custom.key is a constant within the Web Content Manager configuration service.
 
@@ -135,9 +137,10 @@ You can define the display properties of field and elements that are displayed o
 
             -   **When located within the ilwwcm.war directory of your server use this format:**
 
-                [AppServer\_root](../reference/wpsdirstr.md#was_root)/installedApps/node-name/wcm.ear/ilwwcm.war
+                [AppServer\_root](../../../../../../../guide_me/wpsdirstr.md)/installedApps/node-name/wcm.ear/ilwwcm.war
 
-                **Note:** The JSP page is also stored in the client war directory of the local rendering portlet or of the servlet or portlet that calls the JSP, when the Web Content Manager API is used. For example, to render a JSP page on a local rendering portlet, you would also need to store a copy of the JSP file under [AppServer\_root](../reference/wpsdirstr.md#was_root)/installedApps/node-name/PA\_WCMLocalRendering.ear/ilwwcm-localrende.war.
+                !!! note
+                    The JSP page is also stored in the client war directory of the local rendering portlet or of the servlet or portlet that calls the JSP, when the Web Content Manager API is used. For example, to render a JSP page on a local rendering portlet, you would also need to store a copy of the JSP file under [AppServer\_root](../../../../../../../guide_me/wpsdirstr.md)/installedApps/node-name/PA\_WCMLocalRendering.ear/ilwwcm-localrende.war.
 
             -   **When located within any other web application:**
 

@@ -22,13 +22,5 @@ Users who are granted manager access or higher to a library can purge deleted it
 
 You can view a list of deleted items in either the **My Items** \> **Deleted** or **All Items Deleted** views.
 
-**Related information**  
-
-
-[How to manage versions of items](../panel_help/wcm_managing_versions.md)
-
-**References:**  
-
-
-[How to manage versions of items](wcm_managing_versions.md)
-
+???+ info "Related information:"
+    - [How to manage versions of items](../item_management_features/wcm_managing_versions.md)

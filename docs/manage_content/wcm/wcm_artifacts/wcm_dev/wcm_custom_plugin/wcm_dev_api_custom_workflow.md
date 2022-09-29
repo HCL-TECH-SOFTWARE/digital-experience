@@ -13,6 +13,7 @@ You can create custom workflow action classes to add custom workflow actions to 
         See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
 
     -   Also, see the Web Content Manager Javadoc for further information on valid directives.
+    
 3.  Create a custom workflow action factory class that implements the interface `com.ibm.workplace.wcm.api.custom.CustomWorkflowActionFactory`.
 
 ## Create a plugin.xml file
