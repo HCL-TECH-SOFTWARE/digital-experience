@@ -32,18 +32,18 @@ You can run the Configuration Wizard silently if you have multiple deployments o
     -   The workflow-identifier directory where scripts and related files are created.
 5.  Start the silent installation:
 
-    -   AIX HP-UX Linux Solaris z/OS: ./ConfigEngine.sh execute-workflow -DwfInstance=workflow-instance -DWasPassword=password
-    -   IBM i: ConfigEngine.sh execute-workflow -DwfInstance=workflow-instance -DWasPassword=password
-    -   Windows: ConfigEngine.bat execute-workflow -DwfInstance=workflow-instance -DWasPassword=password
+    -   AIX and Linux: `./ConfigEngine.sh execute-workflow -DwfInstance=workflow-instance -DWasPassword=password`
+    -   Windows: `ConfigEngine.bat execute-workflow -DwfInstance=workflow-instance -DWasPassword=password`
+    
     This task runs until:
 
     -   A step in the silent installation fails. You must correct the error and then run the resume-workflow task.
     -   A step is reached that requires manual action. You must finish the requested action and then run the resume-workflow task.
 6.  To resume the silent installation, run the resume-workflow task:
 
-    -   AIX HP-UX Linux Solaris z/OS: ./ConfigEngine.sh resume-workflow -DWasPassword=password
-    -   IBM i: ConfigEngine.sh resume-workflow -DWasPassword=password
-    -   Windows: ConfigEngine.bat resume-workflow -DWasPassword=password
+    -   AIX and Linux: `./ConfigEngine.sh resume-workflow -DWasPassword=password`
+    -   Windows: `ConfigEngine.bat resume-workflow -DWasPassword=password`
+    
     This task works in the following way:
 
     -   If you resume the silent installation after an error, the task runs the failed step.

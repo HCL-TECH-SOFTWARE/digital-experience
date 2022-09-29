@@ -97,13 +97,9 @@ What can and cannot be syndicated:
 
     2.  Run the xmlaccess command with the CreateVaultSlot.xml file.
 
-        -   **AIX®,HP-UX, Linux™,Solaris**
+        -   **AIX® and Linux™**
 
             ./xmlaccess.sh -in CreateVaultSlot.xml -out slot-out.xml -url http://localhost:10039/wps/config -user wpsadmin -password passw0rd
-
-        -   **IBM® i**
-
-            xmlaccess.sh -in CreateVaultSlot.xml -out slot-out.xml -url http://localhost:10039/wps/config -user wpsadmin -password passw0rd
 
         -   **Windows™**
 
@@ -113,79 +109,35 @@ What can and cannot be syndicated:
 
 4.  On the subscriber server, set up the syndication relationship with the `run-wcm-admin-task-subscribe-now` task. For example, to syndicate published items from the Web Content and Portal Site libraries, use this command:
 
-    -   **AIX®,HP-UX, Linux™,Solaris**
+    -   **AIX® and Linux™**
 
         ./ConfigEngine.sh run-wcm-admin-task-subscribe-now -Dsyndicator=http://syndicator-hostname:10039/wps/wcm -DvaultSlotName=syndication-slot -DsyndicatorName=syndicator1 -DsubscriberName=subscriber1 -DVirtualPortalContext=sample -Dpublished-items="Web Content,Portal Site" -DPortalAdminPwd=passw0rd -DWasPassword=passw0rd
-
-    -   **IBM® i**
-
-        ConfigEngine.sh run-wcm-admin-task-subscribe-now -Dsyndicator=http://syndicator-hostname:10039/wps/wcm -DvaultSlotName=syndication-slot -DsyndicatorName=syndicator1 -DsubscriberName=subscriber1 -DVirtualPortalContext=sample -Dpublished-items="Web Content,Portal Site" -DPortalAdminPwd=passw0rd -DWasPassword=passw0rd
 
     -   **Windows™**
 
         ConfigEngine.bat run-wcm-admin-task-subscribe-now -Dsyndicator=http://syndicator-hostname:10039/wps/wcm -DvaultSlotName=syndication-slot -DsyndicatorName=syndicator1 -DsubscriberName=subscriber1 -DVirtualPortalContext=sample -Dpublished-items="Web Content,Portal Site" -DPortalAdminPwd=passw0rd -DWasPassword=passw0rd
 
-    **Note:** If you are using the HTTPS protocol, you must add `-DWcmConfigClientProtocol=https` to the command line for the task.
+    !!!note
+        If you are using the HTTPS protocol, you must add `-DWcmConfigClientProtocol=https` to the command line for the task.
 
     |Parameter|Details|
     |---------|-------|
     |-Dsyndicator=|The host name of the syndicator server.|
-    |-DsyndicatorName=|This name is used for the syndicator item that is created on the syndicator server. Enter a name that helps identify the syndication relationship you are creating. This name must be unique and cannot be the same as an existing syndicator name.**Note:** To reuse syndicator names of previously deleted syndication relationships on a subscriber, you must also delete the same relationship on the syndicator.
-
-|
+    |-DsyndicatorName=|This name is used for the syndicator item that is created on the syndicator server. Enter a name that helps identify the syndication relationship you are creating. This name must be unique and cannot be the same as an existing syndicator name. <br> **Note:** To reuse syndicator names of previously deleted syndication relationships on a subscriber, you must also delete the same relationship on the syndicator.|
     |-DsubscriberName=|This name is used for the subscriber item that is created on the subscriber server. Enter a name that helps identify the syndication relationship you are creating. This name must be unique and cannot be the same as an existing subscriber name.|
     |-DvaultSlotName=|The name of the syndication credential vault slot.|
     |-DupdateAfterCreation=|If set to true, a syndication update is run as soon as the syndication pair is successfully created. If not specified, the default setting is true. This is a one-off syndication event not related to any automatic configuration settings.|
-    |-Dmode=|This parameter defines the syndication mode to be used:    -   **configured**: This uses the mode configured in the WCM WCMConfigService service.
-    -   **automatic**: Syndication will be scheduled automatically based on the configured syndication interval.
-    -   **manual**: Syndication will occur only when requested using the administration portlet.
-|
-    |-DVirtualPortalContext=|The portal context of the virtual portal if needed.If you set the host name parameter that is described later, the VirtualPortalContext parameter is ignored.
-
-|
-    |-DVirtualPortalHostName=|The host name of the virtual portal if needed. If you specify the host name, the portal uses the host name, and the VirtualPortalContextparameter is ignored.
-
-|
+    |-Dmode=|This parameter defines the syndication mode to be used: <br>   -   **configured**: This uses the mode configured in the WCM WCMConfigService service.<br> -   **automatic**: Syndication will be scheduled automatically based on the configured syndication interval. <br> -   **manual**: Syndication will occur only when requested using the administration portlet.|
+    |-DVirtualPortalContext=|The portal context of the virtual portal if needed.If you set the host name parameter that is described later, the VirtualPortalContext parameter is ignored.|
+    |-DVirtualPortalHostName=|The host name of the virtual portal if needed. If you specify the host name, the portal uses the host name, and the VirtualPortalContextparameter is ignored.|
 
     In addition, the following parameters are used to identify the libraries to be syndicated and the type of syndication that you want to perform. For each syndication relationship, you can specify only one type of syndication. Separate multiple libraries with commas.
 
     |Syndication type parameters. Use only one of these.|Details|
     |---------------------------------------------------|-------|
-    |-Dpublished-items="library\_name\_1,library\_name\_2"|    -   **Published items:**
-
-Published item syndication is mostly used when you syndicate to a staging or delivery server. The following items are syndicated:
-
-        -   Published
-        -   Expired
-Draft items, projects, project templates, and items in a project are not syndicated.
-
-|
-    |-Dall-items="library\_name\_1,library\_name\_2"|    -   **All items:**
-
-Use "All items" syndication to gradually syndicate projects to a staging or delivery server, rather than waiting until all items in a project achieve a published state. The following items are syndicated:
-
-        -   Published
-        -   Expired
-        -   Draft items
-        -   Projects that contain draft items saved in the configured library. See the Knowledge Center topic named **Projects and syndication** for further information.
-Project templates are not syndicated.
-
-|
-    |-Dall-items-and-versions="library\_name\_1,library\_name\_2"|    -   **All items and versions:**
-
-"All items and versions" syndication is mostly used when you syndicate between servers within an authoring environment. Selecting this option can increase the amount of time taken for syndication because it includes versions and deleted items.
-
-The following items are syndicated:
-
-        -   Published
-        -   Expired
-        -   Draft items
-        -   Projects that contain draft items saved in the configured library. See the Knowledge Center topic named **Projects and syndication** for further information.
-        -   Versions
-        -   Deleted items
-Project templates are not syndicated.
-
-|
+    |-Dpublished-items="library_name_1,library_name_2"|    -   **Published items:**<br> Published item syndication is mostly used when you syndicate to a staging or delivery server. The following items are syndicated:<br> -   Published <br>   -   Expired <br> Draft items, projects, project templates, and items in a project are not syndicated.|
+    |-Dall-items="library_name_1,library_name_2"|    -   **All items:**<br>Use "All items" syndication to gradually syndicate projects to a staging or delivery server, rather than waiting until all items in a project achieve a published state. The following items are syndicated:<br> -   Published <br>  -   Expired <br>  -   Draft items <br>  -   Projects that contain draft items saved in the configured library. See the Knowledge Center topic named **Projects and syndication** for further information.<br>Project templates are not syndicated.|
+    |-Dall-items-and-versions="library_name_1,library_name_2"|    -   **All items and versions:**<br> "All items and versions" syndication is mostly used when you syndicate between servers within an authoring environment. Selecting this option can increase the amount of time taken for syndication because it includes versions and deleted items. <br>The following items are syndicated: <br> -   Published<br>  -   Expired <br> -   Draft items<br>  -   Projects that contain draft items saved in the configured library. See the Knowledge Center topic named **Projects and syndication** for further information.<br>-   Versions <br>  -   Deleted items <br>Project templates are not syndicated.|
 
 
 

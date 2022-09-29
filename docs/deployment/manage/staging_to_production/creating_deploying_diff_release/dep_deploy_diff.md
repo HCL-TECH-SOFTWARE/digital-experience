@@ -4,20 +4,12 @@ After you create the differential release PAA file, you can install and deploy y
 
 1.  Run the following command from the wp_profile_root/ConfigEngine directory of the production server to uninstall and delete any existing differential PAA files:
 
-    -   AIX® HP-UX Linux™ Solaris:
+    -   AIX® and Linux™:
 
         ```
         ./ConfigEngine.sh uninstall-paa -DappName=WebSpherePortalUpdate -DWasPassword=password -DPortalAdminPwd=password
         
         ./ConfigEngine.sh delete-paa -DdeleteAll=true
-        ```
-
-    -   IBM® i:
-
-        ```
-        ConfigEngine.sh uninstall-paa -DappName=WebSpherePortalUpdate -DWasPassword=password -DPortalAdminPwd=password
-        
-        ConfigEngine.sh delete-paa -DdeleteAll=true
         ```
 
     -   Windows™:
@@ -28,30 +20,14 @@ After you create the differential release PAA file, you can install and deploy y
         ConfigEngine.bat delete-paa -DdeleteAll=true
         ```
 
-    -   z/OS®:
-
-        ```
-        ./ConfigEngine.sh uninstall-paa -DappName=WebSpherePortalUpdate -DWasPassword=password -DPortalAdminPwd=password
-        
-        ./ConfigEngine.sh delete-paa -DdeleteAll=true
-        ```
-
 2.  Run the following command to install and deploy the differential PAA file:
 
-    -   AIX HP-UX Linux Solaris:
+    -   AIX and Linux:
 
         ```
         ./ConfigEngine.sh install-paa -DPAALocation=/WebSpherePortalUpdate.paa -DWasPassword=password -DPortalAdminPwd=password -Dwp.si.offlineMode=true
         
         ./ConfigEngine.sh deploy-paa -DappName=WebSpherePortalUpdate -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password
-        ```
-
-    -   IBM i:
-
-        ```
-        ConfigEngine.sh install-paa -DPAALocation=/WebSpherePortalUpdate.paa -DWasPassword=password -DPortalAdminPwd=password -Dwp.si.offlineMode=true
-        
-        ConfigEngine.sh deploy-paa -DappName=WebSpherePortalUpdate -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password
         ```
 
     -   Windows:
@@ -62,30 +38,14 @@ After you create the differential release PAA file, you can install and deploy y
         ConfigEngine.bat deploy-paa -DappName=WebSpherePortalUpdate -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password
         ```
 
-    -   z/OS:
-
-        ```
-        ./ConfigEngine.sh install-paa -DPAALocation=/WebSpherePortalUpdate.paa -DWasPassword=password -DPortalAdminPwd=password -Dwp.si.offlineMode=true
-        
-        ./ConfigEngine.sh deploy-paa -DappName=WebSpherePortalUpdate -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password
-        ```
-
 3.  Run the following command from the wp_profile_root/ConfigEngine directory of the production server to uninstall virtual portal updated PAA files:
 
-    -   AIX HP-UX Linux Solaris:
+    -   AIX and Linux:
 
         ```
         ./ConfigEngine.sh uninstall-paa -DappName=object\_idUpdated.paa -DWasPassword=password -DPortalAdminPwd=password
         
         ./ConfigEngine.sh delete-paa -DdeleteAll=true
-        ```
-
-    -   IBM i:
-
-        ```
-        ConfigEngine.sh uninstall-paa -DappName=object\_idUpdated.paa -DWasPassword=password -DPortalAdminPwd=password
-        
-        ConfigEngine.sh delete-paa -DdeleteAll=true
         ```
 
     -   Windows:
@@ -96,30 +56,14 @@ After you create the differential release PAA file, you can install and deploy y
         ConfigEngine.bat delete-paa -DdeleteAll=true
         ```
 
-    -   z/OS:
-
-        ```
-        ./ConfigEngine.sh uninstall-paa -DappName=object\_idUpdated.paa -DWasPassword=password -DPortalAdminPwd=password
-        
-        ./ConfigEngine.sh delete-paa -DdeleteAll=true
-        ```
-
 4.  Run the following commands to install and deploy the virtual portal PAA file:
 
-    -   AIX HP-UX Linux Solaris:
+    -   AIX and Linux:
 
         ```
         ./ConfigEngine.sh install-paa -DPAALocation=/object\_idUpdated.paa -DWasPassword=password -DPortalAdminPwd=password -Dwp.si.offlineMode=true
         
         ./ConfigEngine.sh deploy-paa -DappName=object\_idUpdated -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalParameter=value
-        ```
-
-    -   IBM i:
-
-        ```
-        ConfigEngine.sh install-paa -DPAALocation=/object\_idUpdated.paa -DWasPassword=password -DPortalAdminPwd=password -Dwp.si.offlineMode=true
-        
-        ConfigEngine.sh deploy-paa -DappName=object\_idUpdated -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalParameter=value
         ```
 
     -   Windows:
@@ -128,14 +72,6 @@ After you create the differential release PAA file, you can install and deploy y
         ConfigEngine.bat install-paa -DPAALocation=/object\_idUpdated.paa -DWasPassword=password -DPortalAdminPwd=password -Dwp.si.offlineMode=true
         
         ConfigEngine.bat deploy-paa -DappName=object\_idUpdated -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalParameter=value
-        ```
-
-    -   z/OS:
-
-        ```
-        ./ConfigEngine.sh install-paa -DPAALocation=/object\_idUpdated.paa -DWasPassword=password -DPortalAdminPwd=password -Dwp.si.offlineMode=true
-        
-        ./ConfigEngine.sh deploy-paa -DappName=object\_idUpdated -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalParameter=value
         ```
 
     !!!note "Tip"
@@ -163,7 +99,7 @@ After you create the differential release PAA file, you can install and deploy y
 
 7.  Restart the server.
 
-**Related information**  
-[WSRP services](../../../../extend_dx/development_tools/wsrp/index.md)<br>
-[Exporting and importing a web content library](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcmlibrary_export/wcm_config_wcmlibrary_export.md)<br>
-[Portal configuration tasks for administering virtual portals](../../../../build_sites/virtual_portal/vp_reference/vp_command_ref/portal_cfg_adm_vp/index.md)
+???+ info "Related information"  
+    -   [WSRP services](../../../../extend_dx/development_tools/wsrp/index.md)<br>
+    -   [Exporting and importing a web content library](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcmlibrary_export/wcm_config_wcmlibrary_export.md)<br>
+    -   [Portal configuration tasks for administering virtual portals](../../../../build_sites/virtual_portal/vp_reference/vp_command_ref/portal_cfg_adm_vp/index.md)
