@@ -18,7 +18,6 @@ There are some restrictions in the level of support that HCL Digital Experience 
 -   Sametime currently does not support FIPS 140-2.
 -   By default, Microsoft Internet Explorer might not have TLS enabled. To enable TLS, open the **Internet Explorer browser** and click **Tools > Internet Options**. On the **Advanced** tab, select the **Use TLS 1.0** check box.
 -   The IBM Tivoli Directory Server provides the Use FIPS certified implementation option, which enables the directory server the FIPS-certified encryption algorithms uses. For information, see "Setting the level of encryption" within the IBM Tivoli Directory Server Administration Guide.
--   IBMJSSEFIPS is not supported on the HP-UX platform.
 -   You can use FIPS-certified JSSE providers if your servers and clients are using WebSphere Application Server.
 -   If you are trying to enable FIPS processing mode with GSKit bundled with ITDS, see Technote 1578181.
 

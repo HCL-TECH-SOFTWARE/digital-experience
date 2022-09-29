@@ -4,17 +4,17 @@ After you deploy HCL Digital Experience, you might not require some of the LDAP 
 
 Choose from the following tasks to delete your user registry configurations:
 
--   **[Deleting the LDAP entity type](../security/del_ldap_entitytype.md)**  
+-   **[Deleting the LDAP entity type](del_ldap_entitytype.md)**  
 If you changed your LDAP user registry and no longer require an entity type, you can delete it.
--   **[Deleting the base entry](../security/delete_be.md)**  
+-   **[Deleting the base entry](delete_be.md)**  
 If you changed your LDAP user registry and no longer require a base entry, you can delete it.
--   **[Deleting the LDAP group member](../security/delete_ldap_gm.md)**  
+-   **[Deleting the LDAP group member](delete_ldap_gm.md)**  
 If you changed your LDAP user registry and no longer require the group member, you can delete it from the LDAP user registry.
--   **[Deleting the realm](../security/delete_realm.md)**  
+-   **[Deleting the realm](delete_realm.md)**  
 If you changed your HCL Digital Experience and no longer require a realm, you can delete it from your user registry.
--   **[Deleting the realm base entry](../security/delete_realm_be.md)**  
+-   **[Deleting the realm base entry](delete_realm_be.md)**  
 If you changed your realm and no longer require the base entry for that realm, you can delete it.
--   **[Deleting the repository](../security/delete_repository.md)**  
+-   **[Deleting the repository](delete_repository.md)**  
 If you no longer require the use of a repository within your federated repository, you can delete it from your configuration.
 
 
