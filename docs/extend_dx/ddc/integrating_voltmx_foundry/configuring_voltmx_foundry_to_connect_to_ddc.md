@@ -143,7 +143,7 @@ You can use this sample outbound policy as a base:
     The location of `ConfigEngine.sh` is based on your deployment. In a default deployment, the location would be `/opt/HCL` or `WebSphere/wp_profile/ConfigEngine`.
 
 !!!note
-    For additional resources regarding this topic, please read [Outbound HTTP connection](../../portlets_development/web2_ui/outbound_http_connection/index.md)
+    For additional resources regarding this topic, refer to the [Outbound HTTP connection](../../portlets_development/web2_ui/outbound_http_connection/index.md) topic.
 
 ## Adding HTTP Outbound Proxy and Signer Certificate
 
