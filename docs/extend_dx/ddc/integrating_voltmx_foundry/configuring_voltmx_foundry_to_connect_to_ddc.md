@@ -136,7 +136,7 @@ You can use this sample outbound policy as a base:
 </proxy-rules>
 ```
 
-2. Then you copy the file (e.g. demo_volt_mx_foundry_service_policy.xml) inside your HCL Digital Experience instance.
+2. Then you copy the file (for example: `demo_volt_mx_foundry_service_policy.xml`) inside your HCL Digital Experience instance.
 
 3. And deploy the policy using the **Config Engine**: `./ConfigEngine.sh update-outbound-http-connection-config -DWasPassword=password -DPortalAdminPwd=password -DConfigFileName=/tmp/demo_volt_mx_foundry_service_policy.xml`
 !!!note
