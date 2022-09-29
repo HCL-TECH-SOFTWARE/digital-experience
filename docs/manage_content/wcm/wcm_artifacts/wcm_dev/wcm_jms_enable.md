@@ -23,7 +23,7 @@ The event classes can be delivered as messages to the Java messaging service:
 
 1.  Configure the messaging services parameters in the `WCM MessagingService` service by using the WebSphere® Integrated Solutions Console.
 
-2.  Run the following command from the `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine` directory:
+2.  Run the following command from the `[wp_profile_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine` directory:
 
     -   **Windows™**
 
