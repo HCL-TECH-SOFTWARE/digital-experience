@@ -67,14 +67,5 @@ SearchService.MetaFields=metaText,meta
 
 6.  Delete and create a new search collection for changes to take effect.
 
-<!--
 
-**Previous topic:**[Indexing web content](../wcm/wcm_dev_search_portal.md)
-
-**Next topic:**[Configuring Search Center to search for web content](../wcm/wcm_dev_search_searchcenter.md)
-
-**Related information**  
-
-
-[Setting scoped configuration settings for virtual portals](../wcm/wcm_config_scoped_vp.md) --->
 

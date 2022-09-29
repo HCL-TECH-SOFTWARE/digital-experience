@@ -1,6 +1,6 @@
 # Removing attributes
 
-The Virtual Member Manager \(VMM\) has a limitation. There is no task to update an attribute.
+The Virtual Member Manager (VMM) has a limitation. There is no task to update an attribute.
 
 Remove an attribute for any of the following circumstances:
 
@@ -10,9 +10,11 @@ Remove an attribute for any of the following circumstances:
 
 Use caution when you do these steps.
 
-**Important:** Do not remove attributes that are populated with user values because it can cause inconsistencies.
+!!!important
+    Do not remove attributes that are populated with user values because it can cause inconsistencies.
 
-**Cluster note:** In a clusteredan idle-standby environment, complete these steps on the deployment manager and then resynch the nodes.
+!!!note "Cluster note"
+    In a clustered idle-standby environment, complete these steps on the deployment manager and then resynch the nodes.
 
 1.  Before you configure security, use the IBM® WebSphere® Application Server backupConfig task to create and store a backup of the HCL Digital Experience configuration. Read [backupConfig command](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/rxml_backupconfig.html) for information.
 
@@ -24,7 +26,7 @@ Use caution when you do these steps.
 
     3.  Delete the required attributes from the LAPROP table.
 
-    4.  Open the wimxmlextension.xml file in the dmgr\_profile\_root/config/cells/cellname/wim/model directory.
+    4.  Open the wimxmlextension.xml file in the dmgr_profile_root/config/cells/cellname/wim/model directory.
 
     5.  Locate and delete the propertySchema definition for the attributes that you deleted from the LAPROP table.
 
@@ -32,14 +34,14 @@ Use caution when you do these steps.
 
         ```
             <wim:propertySchema nsURI="http://www.ibm.com/websphere/wim" dataType="String"
-                multiValued="true" propertyName="attribute\_name">
+                multiValued="true" propertyName="attribute_name">
               <wim:applicableEntityTypeNames>PersonAccount</wim:applicableEntityTypeNames>
             </wim:propertySchema>
         ```
 
     6.  Save your changes to the wimxmlextension.xml file.
 
-    7.  Open the wimconfig.xml file in the dmgr\_profile\_root/config/cells/cellname/wim/config directory.
+    7.  Open the wimconfig.xml file in the dmgr_profile_root/config/cells/cellname/wim/config directory.
 
     8.  Locate and delete the attributes or propertiesNotSupported definitions for the attributes that you deleted from the LAPROP table.
 
@@ -56,12 +58,12 @@ Use caution when you do these steps.
         or
 
         ```
-        <config:propertiesNotSupported name="attribute\_name">
+        <config:propertiesNotSupported name="attribute_name">
         ```
 
     9.  Save your changes to the wimconfig.xml file.
 
-    10. Stop and restart all the deployment manager, node agents, and WebSphere\_Portal server to propagate the changes.
+    10. Stop and restart all the deployment manager, node agents, and WebSphere_Portal server to propagate the changes.
 
 3.  Complete the following steps to remove an attribute that is not stored in a property extension database:
 
@@ -73,7 +75,7 @@ Use caution when you do these steps.
 
         ```
         <wim:propertySchema nsURI="http://www.ibm.com/websphere/wim" dataType="String"
-                multiValued="true" propertyName="attribute\_name">
+                multiValued="true" propertyName="attribute_name">
            <wim:applicableEntityTypeNames>PersonAccount</wim:applicableEntityTypeNames>
             </wim:propertySchema>
         ```
@@ -94,14 +96,10 @@ Use caution when you do these steps.
 
     6.  Save your changes to the wimconfig.xml file.
 
-    7.  Stop and restart the WebSphere\_Portal server.
+    7.  Stop and restart the WebSphere_Portal server.
 
 
 
-**Previous topic:**[Mapping attributes](../install/map_attributes.md)
-
-**Related information**  
-
-
-[Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md)
+???+ info  "Related information"  
+    -   [Starting and stopping servers, deployment managers, and node agents](../../../../../deployment/manage/stopstart.md)
 

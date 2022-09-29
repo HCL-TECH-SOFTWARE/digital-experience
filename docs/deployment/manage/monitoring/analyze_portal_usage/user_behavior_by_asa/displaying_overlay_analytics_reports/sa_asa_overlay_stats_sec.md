@@ -17,7 +17,3 @@ In a default portal installation the `wpsadmins` group has the `USER` role. Ther
 
 
 
-**Previous topic:**[Configuring overlay reports](../admin-system/sa_asa_overlay_config.md)
-
-**Next topic:**[Configuring a Credential Vault for overlay reports](../admin-system/sa_asa_overlay_cfg_crd_vlt.md)
-
