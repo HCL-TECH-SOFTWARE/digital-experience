@@ -96,7 +96,7 @@ If you chose **Anonymous App Users** for Operation Security Level, you need to s
 
 Since we already have the Credential Vault slot, we can now configure an outbound connection policy.
 
-1. Create an xml file on your local machine and modify it according to your needs. For more information, please visit this link [Adding an outbound connection policy](../../portlets_development/web2_ui/outbound_http_connection/cfg_outbound_http_connections/sample_admin_tasks/outbhttp_cfgsmptsk_add_ob_conn_plcy.md)
+1. Create an xml file on your local machine and modify it according to your needs. For more information, refer to the [Adding an outbound connection policy](../../portlets_development/web2_ui/outbound_http_connection/cfg_outbound_http_connections/sample_admin_tasks/outbhttp_cfgsmptsk_add_ob_conn_plcy.md) topic.
 
 You can use this sample outbound policy as a base:
 ``` xml
