@@ -140,7 +140,7 @@ You can use this sample outbound policy as a base:
 
 3. And deploy the policy using the **Config Engine**: `./ConfigEngine.sh update-outbound-http-connection-config -DWasPassword=password -DPortalAdminPwd=password -DConfigFileName=/tmp/demo_volt_mx_foundry_service_policy.xml`
 !!!note
-    The location of `ConfigEngine.sh` is based on your deployment. In a default deployment the location would be `/opt/HCL or WebSphere/wp_profile/ConfigEngine`.
+    The location of `ConfigEngine.sh` is based on your deployment. In a default deployment, the location would be `/opt/HCL or WebSphere/wp_profile/ConfigEngine`.
 
 !!!note
     For additional resources regarding this topic, please read [Outbound HTTP connection](../../portlets_development/web2_ui/outbound_http_connection/index.md)
