@@ -2,9 +2,9 @@
 
 Before getting started with the REST service for Web Content Manager you should become familiar with how it works and how to use it.
 
-The REST service for Web Content Manager is a collection of web services that are compliant with the Atom Publishing Protocol. They provide access to web content, including versions and workflow states, through HTTP. The service is designed according to the REST \(REpresentational State Transfer\) architectural style.
+The REST service for Web Content Manager is a collection of web services that are compliant with the Atom Publishing Protocol. They provide access to web content, including versions and workflow states, through HTTP. The service is designed according to the REST (REpresentational State Transfer) architectural style.
 
-REST services make it easy to build interactive content, which can be modified directly by your site users. Responsive, integrated editing tools can be created by embedding HTML and JavaScript in web content components, which bind to the REST service to display or update content asynchronously. \(Ajax\)
+REST services make it easy to build interactive content, which can be modified directly by your site users. Responsive, integrated editing tools can be created by embedding HTML and JavaScript in web content components, which bind to the REST service to display or update content asynchronously. (Ajax)
 
 HTTP makes integration with remote clients easier than with a traditional API. Web Content Manager functions can be visible to remote systems without adding more server-side components, such as JSP, to access Java APIs. HTTP allows these services to work seamlessly with your infrastructure including firewall, proxy servers, and caches.
 

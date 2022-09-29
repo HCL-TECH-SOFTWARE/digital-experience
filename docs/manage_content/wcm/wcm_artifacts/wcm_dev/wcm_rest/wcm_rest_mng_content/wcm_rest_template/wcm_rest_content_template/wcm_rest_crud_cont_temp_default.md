@@ -7,8 +7,8 @@ These values include:
 -   Elements
 -   Default workflow
 -   Presentation template override
--   Configuration properties \(for HCL Digital Experience 9.5 CF173, CF18 and higher releases. This option is also available to HCL Digital Experience 8.5 and 9.0 CF18 users.\)
--   Apply Content templates to Content items \(for HCL Digital Experience 9.5 CF173, CF18 and higher releases. This option is also available to HCL Digital Experience 8.5 and 9.0 CF18 users.\)
+-   Configuration properties (for HCL Digital Experience 9.5 CF173, CF18 and higher releases. This option is also available to HCL Digital Experience 8.5 and 9.0 CF18 users.)
+-   Apply Content templates to Content items (for HCL Digital Experience 9.5 CF173, CF18 and higher releases. This option is also available to HCL Digital Experience 8.5 and 9.0 CF18 users.)
 
 ## Update
 
@@ -84,7 +84,7 @@ wcmrest/PresentationTemplate/832f2d12-829c-41eb-a808-63393a3f77ce" label="Presen
 
 ## Enhanced Content Template API Element Configuration Updates
 
-The Enhanced Content Template API Element Configuration Updates allows the configuration of the elements to be UPDATED by doing an HTTP PUT and including the updates in the body of the HTTP PUT request. If the props=true, the configuration is also included, and the response will contain the full update as in an HTTP GET for the configuration of the elements \(changes will be reflected in the response\). Only the configuration options included will be updated.
+The Enhanced Content Template API Element Configuration Updates allows the configuration of the elements to be UPDATED by doing an HTTP PUT and including the updates in the body of the HTTP PUT request. If the props=true, the configuration is also included, and the response will contain the full update as in an HTTP GET for the configuration of the elements (changes will be reflected in the response). Only the configuration options included will be updated.
 
 Optionally the data can be formatted into json by adding the following:
 
