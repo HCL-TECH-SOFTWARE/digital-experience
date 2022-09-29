@@ -140,9 +140,7 @@ Once you add the tag to your design, you can also add the following parameters t
 
 |Tag parameters|Details|
 |--------------|-------|
-|start=" "end=" "
-
-|The start and end attributes are used to wrap the data that is returned by a tag within other tags, such as HTML. These attributes are not mandatory.|
+|`start=" "` <br> `end=" "`|The start and end attributes are used to wrap the data that is returned by a tag within other tags, such as HTML. These attributes are not mandatory.|
 
 **Using a URLCmpnt tag:**
 
