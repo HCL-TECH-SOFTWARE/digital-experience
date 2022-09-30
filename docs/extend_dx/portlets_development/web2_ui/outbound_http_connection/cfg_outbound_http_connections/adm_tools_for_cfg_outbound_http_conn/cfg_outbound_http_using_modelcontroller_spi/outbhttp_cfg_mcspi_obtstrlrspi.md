@@ -56,12 +56,6 @@ PolicyVariable pvar = model.getPolicyVariableLocator(globalProfile).findByName("
 ```
 
 
-**Previous topic:**[Obtaining the Model SPI](../dev-portlet/outbhttp_cfg_mcspi_obtmapi.md)
-
-**Next topic:**[Viewing the configuration settings of the outbound HTTP connection](../dev-portlet/outbhttp_cfg_mcspi_viewcfgsets.md)
-
-**Related information**  
-
-
-[Controller SPI](../dev/ctrlrapic_ovu.md)
+???+ info "Related information"  
+   -  [Controller SPI](../../../../../../../extend_dx/apis/controller_spi/index.md)
 

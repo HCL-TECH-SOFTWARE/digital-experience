@@ -6,25 +6,16 @@ When the automatic cache entry clearing feature is enabled, content authors can 
 
 1.  Go to the following directory:
 
-    [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine
+    wp_profile_root/ConfigEngine
 
 2.  Run the pzn-disable-Force-Cache-Refresh configuration task to disable this feature or run the pzn-force-enable-Force-Cache-Refresh configuration task to enable this feature.
 
-        |**Disable automatic cache clearing**|    -   AIX® HP-UX Linux™ Solaris z/OS®: ./ConfigEngine.sh pzn-disable-Force-Cache-Refresh
-    -   IBM® i: ConfigEngine.sh pzn-disable-Force-Cache-Refresh
-    -   Windows™: ConfigEngine.bat pzn-disable-Force-Cache-Refresh
-|
-    |**Enable automatic cache clearing**|    -   AIX HP-UX Linux Solaris z/OS: ./ConfigEngine.sh pzn-force-enable-Force-Cache-Refresh
-    -   IBM i: ConfigEngine.sh pzn-force-enable-Force-Cache-Refresh
-    -   Windows: ConfigEngine.bat pzn-force-enable-Force-Cache-Refresh
-|
+    |**Disable automatic cache clearing**|    -   AIX® and Linux™: `./ConfigEngine.sh pzn-disable-Force-Cache-Refresh` <br> -   Windows™: `ConfigEngine.bat pzn-disable-Force-Cache-Refresh`|
+    |**Enable automatic cache clearing**|    -   AIX and Linux: `./ConfigEngine.sh pzn-force-enable-Force-Cache-Refresh` <br> -   Windows: `ConfigEngine.bat pzn-force-enable-Force-Cache-Refresh`|
 
 3.  Restart your server to apply your changes. In a clustered environment, restart all cluster nodes.
 
 
-
-**Related information**  
-
-
-[Portal server performance tuning tool](../install/wp_tune_tool.md)
+???+ info "Related information"  
+    -   [Portal server performance tuning tool](../../../../deployment/manage/tune_servers/wp_tune_tool.md)
 

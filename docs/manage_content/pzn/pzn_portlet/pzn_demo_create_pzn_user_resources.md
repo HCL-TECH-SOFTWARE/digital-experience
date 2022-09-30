@@ -2,9 +2,9 @@
 
 Use the Project Explorer of IBM Rational Application Developer to create the user resource classes and content spot for the Personalization demo that creates the Personalized Offers portlet for different customer profiles.
 
-1.  In the **Project Explorer** tab of Rational® Application Developer, right-click the **Pers\_Offers** project and choose **New** \> **Other**.
+1.  In the **Project Explorer** tab of Rational® Application Developer, right-click the **Pers_Offers** project and choose **New > Other**.
 
-2.  From the **New** window, select **Portal** \> **Personalization** \> **Content or User Resource**.
+2.  From the **New** window, select **Portal > Personalization > Content or User Resource**.
 
 3.  Click **Next**
 
@@ -12,17 +12,17 @@ Use the Project Explorer of IBM Rational Application Developer to create the use
 
     -   **SQL**
     -   **Web users**
-5.  Select **Use an existing connection** and select **pzndemo\_db** from the list of existing connections.
+5.  Select **Use an existing connection** and select **pzndemo_db** from the list of existing connections.
 
 6.  Click **Next**. The personalization resource wizard opens.
 
 7.  Expand **PZNDEMO**.
 
-8.  On the **Tables** tab, highlight **PZN\_USER**. Click the appropriate arrow to select the table.
+8.  On the **Tables** tab, highlight **PZN_USER**. Click the appropriate arrow to select the table.
 
-9.  Right-click **PZN\_USER** and select **Edit Table**.
+9.  Right-click **PZN_USER** and select **Edit Table**.
 
-10. Change the display name of **PZN\_USER** to **Per\_Offers\_User** to avoid naming conflicts with the previously installed demo code. Click the Primary Table to mark it as the primary table.
+10. Change the display name of **PZN_USER** to **Per_Offers_User** to avoid naming conflicts with the previously installed demo code. Click the Primary Table to mark it as the primary table.
 
 11. Select the **Columns** tab
 
@@ -32,7 +32,7 @@ Use the Project Explorer of IBM Rational Application Developer to create the use
 
 14. On the Mappings tab, select **Customertype** and click **Populate**.
 
-15. Click the **Select** buttons and expand **PZNDEMO** \> **PZN\_USER** to select CUSTOMERTYPE for the **Description** and **Value** fields. Click **OK**.
+15. Click the **Select** buttons and expand **PZNDEMO > PZN_USER** to select CUSTOMERTYPE for the **Description** and **Value** fields. Click **OK**.
 
 16. Click the **Deployment** tab.
 
@@ -40,7 +40,7 @@ Use the Project Explorer of IBM Rational Application Developer to create the use
 
 18. Click **Next**.
 
-19. Set the package name as pers\_offers. Select **Generate a Content Spot for this resource**. Select **Include schema names in the generated Resource Runtime Manager**.
+19. Set the package name as pers_offers. Select **Generate a Content Spot for this resource**. Select **Include schema names in the generated Resource Runtime Manager**.
 
 20. Click **Finish**.
 
@@ -50,12 +50,5 @@ You can now see the new JAVA classes in your project:
 You can now finish coding the portlet JSP file.
 
 
-**Previous topic:**[Create the Personalization content resource classes and content spot](../pzn/pzn_demo_create_pzn_content_resources.md)
 
-**Next topic:**[Coding the portlet JSP](../pzn/pzn_demo_finish_coding_portlet_jsp.md)
-
-
-**Previous topic:**[Create the Personalization content resource classes and content spot](../pzn/pzn_demo_create_pzn_content_resources.md)
-
-**Next topic:**[Coding the portlet JSP](../pzn/pzn_demo_finish_coding_portlet_jsp.md)
 

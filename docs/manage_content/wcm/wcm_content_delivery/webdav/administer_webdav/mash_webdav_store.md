@@ -9,7 +9,7 @@ WebDAV is defined by RFC2518 as an HTTP extension framework with a plug point fo
 !!! note
     The HTTP Basic Authentication Trust Association Interceptor (TAI) must be enabled to use WebDAV in HCL Portal. This TAI is enabled by default. See the related links for information.
 
-You can obtain the entry point URL to the WebDAV file store from the service document under the URL `/wps/mycontenthandler/!ut/p/model/service-document`. The service document contains the top-level access point as follows:
+You can obtain the entry point URL to the WebDAV file store from the service document under the URL /wps/mycontenthandler/!ut/p/model/service-document. The service document contains the top-level access point as follows:
 
 ```
 <app:collection href="/webdav/!ut/p/dav/fs-type1/">
@@ -125,11 +125,10 @@ WebDAV prevents the deletion of these folders. Even users with administrator rig
 
 To allow non-administrator users to update or modify existing files do the following steps.
 
-1.  Open a command prompt and change to the [wp\_profile\_root](../../../../../guide_me/wpsdirstr.md)/ConfigEngine directory.
+1.  Open a command prompt and change to the wp_profile_root/ConfigEngine directory.
 2.  Run the following ConfigEngine task.
-    -   AIX® HP-UX Linux™ Solarisz/OS®:
-    -   IBM® i: ConfigEngine.sh export-nodes -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin -Dquery="/filestore/fs-type1/themes" -Dwp.content.repository.output.dir="c:\\temp\\jcr"
-    -   Windows™: ConfigEngine.bat export-nodes -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin -Dquery="/filestore/fs-type1/themes" -Dwp.content.repository.output.dir="c:\\temp\\jcr"
+    -   AIX® and Linux:
+    -   Windows™: `ConfigEngine.bat export-nodes -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin -Dquery="/filestore/fs-type1/themes" -Dwp.content.repository.output.dir="c:\\temp\\jcr"`
 3.  Edit the file that was exported in the c:\\temp\\jcr directory. Add the manager role to a user or group by adding the following code:
 
     -   Code to add the manager role to a user:
@@ -166,9 +165,8 @@ To allow non-administrator users to update or modify existing files do the follo
     ```
 
 4.  Import the file with the following ConfigEngine task.
-    -   AIX HP-UX Linux Solarisz/OS:
-    -   IBM i: ConfigEngine.sh import-nodes -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin -Dwp.content.repository.input.dir="c:\\temp\\jcr"
-    -   Windows: ConfigEngine.bat import-nodes -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin -Dwp.content.repository.input.dir="c:\\temp\\jcr"
+    -   AIX and Linux:
+    -   Windows: `ConfigEngine.bat import-nodes -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin -Dwp.content.repository.input.dir="c:\\temp\\jcr"`
 
 ## Other folders
 
@@ -190,7 +188,7 @@ The following list shows extra folders. Each of these folders represents a WebDA
 
     Only the user `user_name` has access to these files. This folder is created for the individual user `user_name` when the user accesses the WebDAV file store for the first time.
 
-    !!! note
+    !!!note
         To have human readable folder names, the portal uses the user IDs of the individual users as the names for the users' folders `user_name`. Internally, the portal uses the VMM ID of the user, so data does not need to be moved when the user name is changed.
 
     If you want to programmatically find the URL entry point to a folder for the current user, you can look into the services document. The access point for user-specific data is provided as follows:
