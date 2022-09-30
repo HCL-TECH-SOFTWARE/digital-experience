@@ -16,8 +16,8 @@ http://hostname/shoe-sale
 
 You switch between these two options by using the appropriate portal configuration tasks:
 
--   If you want the preview link to point to the HTTP server, run the portal configuration task `**en**able-vanityurl-httpserver-preview`.
--   If you want the link to go to the vanity servlet and show the full vanity URL, run the portal configuration task `**dis**able-vanityurl-httpserver-preview`. This setting is the default.
+-   If you want the preview link to point to the HTTP server, run the portal configuration task `**enable-vanityurl-httpserver-preview`.
+-   If you want the link to go to the vanity servlet and show the full vanity URL, run the portal configuration task `**disable-vanityurl-httpserver-preview`. This setting is the default.
 
 The syntax for these configuration tasks is as follows:
 
@@ -27,10 +27,11 @@ The syntax for these configuration tasks is as follows:
 
     `./ConfigEngine.sh disable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password`
 
+
 -   **Linux™**
 
     `./ConfigEngine.sh enable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password`
-
+    
     `./ConfigEngine.sh disable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password`
 
 -   **Windows™**

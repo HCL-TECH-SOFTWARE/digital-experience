@@ -1,6 +1,6 @@
 # Enabling vanity URL support
 
-In a new HCL Portal 8.5 installation, vanity URL support is enabled. If you upgrade your HCL Portal from a previous version to Version 8.5, vanity URL support is disabled. You can enable and disable vanity URL support as required by using a portal configuration task.
+In a new HCL Portal 9.5 installation, vanity URL support is enabled. If you upgraded your HCL Portal from a previous version, vanity URL support might be disabled. You can enable and disable vanity URL support as required by using a portal configuration task.
 
 If vanity URL support is not enabled and a user tries to access a vanity URL, the portal gives a 404 return code.
 
@@ -25,6 +25,7 @@ If vanity URL support is not enabled and a user tries to access a vanity URL, th
     -   **AIX®**
 
         Enable: `./ConfigEngine.sh enable-vanityurl-support -DPortalAdminPwd=password -DWasPassword=password`
+
 
         Disable: `./ConfigEngine.sh disable-vanityurl-support -DPortalAdminPwd=password -DWasPassword=password`
 
