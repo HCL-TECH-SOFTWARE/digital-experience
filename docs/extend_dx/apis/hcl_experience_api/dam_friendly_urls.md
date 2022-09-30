@@ -51,7 +51,7 @@ Here is a DAM API URL with an item ID, rendition ID, and version ID:
 /collections/7e86ff73-a12a-4180-9db1-387f59674b6a/items/3ea7e44b-38a1-4abc-bc3b-46584a29efd3/renditions/4ea7e44b-38a1-4abc-bc3b-46584a29efd7/versions/8aa7e44b-38a1-4abc-bc3b-46584a29efd9
 ```
 
-With a friendly URL for the collection unique-name, asset file name, rendition name, and version number, the DAM API URL looks like this:
+With a friendly URL for the collection unique-name, asset file name, rendition name, and version number, the DAM API URL looks as follows:
 
 ```
 /collections/collection-one/items/img_1705.jpg/renditions/Desktop/versions/2 
