@@ -3,7 +3,7 @@
 This section describes the DAM API that allows you to create a friendly URL for an asset.
 
 !!! note
-    -   As part of CF207, Collection Unique-name has been added to be used in friendly URL instead of collection ID.
+    -   Starting with CF207, the collection unique-name option is added, which can be used in the friendly URLs instead of the collection IDs.
     -   By default friendly URL feature is disabled & it can be enabled & configured by referring this [documentation](https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/in-progress/manage_content/digital_assets/configuration/configure_dam_friendlyUrl).
 
 !!!important "**Important:**"
