@@ -106,8 +106,8 @@ Collection unique-names are the unique identifier for each collection which can 
 
 ## How collection unique-names are generated?
 - While creating collection, user has provision to enter custom collection unique-name.
-![](../../../images/CreateCollection_friendlyUrl-1.png "CreateCollection_friendlyUrl-1")
-![](../../../images/CreateCollection_friendlyUrl-2.png "CreateCollection_friendlyUrl-2")
+![](../../../images/CreateCollection_friendlyUrl-1.png "Create collection popup")
+![](../../../images/CreateCollection_friendlyUrl-2.png "Create collection popup")
 
 - Collection unique-name is an optional field, If it is not provided by the user, system will generate collection unique-name based on the collection name replacing all URL reserved characters(e.g. "?!#$&%'*+/;:,=@()\[]") with underscores.
 - Collection unique-names will follow simple format of adding “_Number” for collections having same collection-names.
@@ -115,13 +115,13 @@ Collection unique-names are the unique identifier for each collection which can 
 
 ## How can the user change the collection unique-names?
 Once the collection unique-name is generated, user will be able to view/edit the collection unique-name in the collection information panel.
-![](../../../images/CollectionEdit_friendlyUrl.png "CollectionEdit_friendlyUrl")
-![](../../../images/CollectionEdit_friendlyUrl-1.png "CollectionEdit_friendlyUrl-1")
+![](../../../images/CollectionEdit_friendlyUrl.png "Collection edit panel")
+![](../../../images/CollectionEdit_friendlyUrl-1.png "Collection edit panel")
 
 ## What happens if collection unique-name already exists while creating collection?
 When creating collection, the DAM checks for the duplicate collection unique-name and prompts an error message if the collection unique-name is already being used any other collections.
-![](../../../images/CreateCollectionError_friendlyUrl_1.png "CreateCollectionError_friendlyUrl_1")
-![](../../../images/CreateCollectionError_friendlyUrl_2.png "CreateCollectionError_friendlyUrl_2")
+![](../../../images/CreateCollectionError_friendlyUrl_1.png "Create collection duplicate unique name")
+![](../../../images/CreateCollectionError_friendlyUrl_2.png "Create collection unsupported unique name")
 
 
 <!-- **Related information**  
