@@ -12,29 +12,13 @@ For example, if the JCR database on the Web Content Manager side is restored, bu
 
         ./ConfigEngine.sh sync-vanityurl-data -DPortalAdminPwd=password -DWasPassword=password
 
-    -   **HP-UX**
-
-        ./ConfigEngine.sh sync-vanityurl-data -DPortalAdminPwd=password -DWasPassword=password
-
-    -   **IBM® i**
-
-        ConfigEngine.sh sync-vanityurl-data -DPortalAdminPwd=password -DWasPassword=password
-
     -   **Linux™**
-
-        ./ConfigEngine.sh sync-vanityurl-data -DPortalAdminPwd=password -DWasPassword=password
-
-    -   **Solaris**
 
         ./ConfigEngine.sh sync-vanityurl-data -DPortalAdminPwd=password -DWasPassword=password
 
     -   **Windows™**
 
         ConfigEngine.bat sync-vanityurl-data -DPortalAdminPwd=password -DWasPassword=password
-
-    -   **z/OS®**
-
-        ./ConfigEngine.sh sync-vanityurl-data -DPortalAdminPwd=password -DWasPassword=password
 
 -   **Extra parameters:**
 

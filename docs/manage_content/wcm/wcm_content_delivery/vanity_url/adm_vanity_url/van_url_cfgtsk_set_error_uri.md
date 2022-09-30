@@ -17,29 +17,13 @@ The configuration task for configuring an error URI for vanity URLs is `set-vani
 
         ./ConfigEngine.sh set-vanityurl-error-uri -DPortalAdminPwd=password -DWasPassword=password
 
-    -   **HP-UX**
-
-        ./ConfigEngine.sh set-vanityurl-error-uri -DPortalAdminPwd=password -DWasPassword=password
-
-    -   **IBM® i**
-
-        ConfigEngine.sh set-vanityurl-error-uri -DPortalAdminPwd=password -DWasPassword=password
-
     -   **Linux™**
-
-        ./ConfigEngine.sh set-vanityurl-error-uri -DPortalAdminPwd=password -DWasPassword=password
-
-    -   **Solaris**
 
         ./ConfigEngine.sh set-vanityurl-error-uri -DPortalAdminPwd=password -DWasPassword=password
 
     -   **Windows™**
 
         ConfigEngine.bat set-vanityurl-error-uri -DPortalAdminPwd=password -DWasPassword=password
-
-    -   **z/OS®**
-
-        ./ConfigEngine.sh set-vanityurl-error-uri -DPortalAdminPwd=password -DWasPassword=password
 
 -   **Extra parameters:**
 
