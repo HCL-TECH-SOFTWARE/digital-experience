@@ -105,7 +105,7 @@ You can click **Rename** from the notification and provide a unique name.
 Collection unique-names are the unique identifier for each collection which can be used in friendly url instead of collection UUID to access DAM assets. Collection unique-names supports all languages as per existing system. Collection unique-name does not support any URL reserved characters(e.g. "?!#$&%'*+/;:,=@()\[]").
 
 ## How collection unique-names are generated?
-- While creating collection, user has provision to enter custom collection unique-name.
+- While creating a collection, the user has a provision to enter a custom collection unique-name.
 ![](../../../images/CreateCollection_friendlyUrl-1.png "Create collection popup")
 ![](../../../images/CreateCollection_friendlyUrl-2.png "Create collection popup")
 
