@@ -109,7 +109,7 @@ Collection unique-names are the unique identifier for each collection which can 
 ![](../../../images/CreateCollection_friendlyUrl-1.png "Create collection popup")
 ![](../../../images/CreateCollection_friendlyUrl-2.png "Create collection popup")
 
-- Collection unique-name is an optional field, If it is not provided by the user, system will generate collection unique-name based on the collection name replacing all URL reserved characters(e.g. "?!#$&%'*+/;:,=@()\[]") with underscores.
+- Collection unique-name is an optional field. If it is not provided by the user, the system will generate a collection unique-name based on the collection name replacing all the URL reserved characters (e.g. "?!#$&%'*+/;:,=@()\[]") with underscores.
 - Collection unique-names will follow simple format of adding “_Number” for collections having same collection-names.
 - For existing collections, system will generate a collection unique-name based on collection name with migration script.
 
