@@ -10,21 +10,21 @@ For example, if the JCR database on the Web Content Manager side is restored, bu
 
     -   **AIX®**
 
-        ./ConfigEngine.sh sync-vanityurl-data -DPortalAdminPwd=password -DWasPassword=password
+        `./ConfigEngine.sh sync-vanityurl-data -DPortalAdminPwd=password -DWasPassword=password`
 
     -   **Linux™**
 
-        ./ConfigEngine.sh sync-vanityurl-data -DPortalAdminPwd=password -DWasPassword=password
+        `./ConfigEngine.sh sync-vanityurl-data -DPortalAdminPwd=password -DWasPassword=password`
 
     -   **Windows™**
 
-        ConfigEngine.bat sync-vanityurl-data -DPortalAdminPwd=password -DWasPassword=password
+        `ConfigEngine.bat sync-vanityurl-data -DPortalAdminPwd=password -DWasPassword=password`
 
 -   **Extra parameters:**
 
     You can specify the following parameters with this task. Each individual parameter requires the prefix -D on the command.
 
-    -   **RunParallel = \(false\)\|true**
+    -   **RunParallel = (false)|true**
 
         Use this parameter to specify whether you want the task to run with multiple threads or not. If you want the task to run in a single thread, specify the value false. This value is the default value. If you want the task to run with multiple threads, specify the value true. Each thread requires a database connection.
 

@@ -12,7 +12,4 @@ To create a new content type:
 ![This diagram describes the process of creating a new content type.](../images/ctc_gs_custom_component_types.jpg)
 
 
-**Previous topic:**[Creating new Web templates](../ctc/ctc_gs_custom_templates.md)
-
-**Next topic:**[How to change the design](../ctc/ctc_gs_custom_design.md)
 

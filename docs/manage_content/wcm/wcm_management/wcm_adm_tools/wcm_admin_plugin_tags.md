@@ -4,35 +4,27 @@ Plug-in tags are used to reference rendering plug-ins in Web content. Use the ru
 
 ## Finding plug-in tags
 
-To create a report of plug-in tags that are referenced in Web Content Manager items, run the following command from the `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine` directory:
+To create a report of plug-in tags that are referenced in Web Content Manager items, run the following command from the wp_profile_root/ConfigEngine` directory:
 
 -   **Windows™**
 
-    ConfigEngine.bat run-wcm-admin-task-tag-usage -DPortalAdminId=username -DPortalAdminPwd=password -Dfind=Plugin:PluginName -Dlibrary="MyLibrary"
+    `ConfigEngine.bat run-wcm-admin-task-tag-usage -DPortalAdminId=username -DPortalAdminPwd=password -Dfind=Plugin:PluginName -Dlibrary="MyLibrary"`
 
--   **AIX®HP-UXLinux™ Solaris**
+-   **AIX® and Linux™**
 
-    ./ConfigEngine.sh run-wcm-admin-task-tag-usage -DPortalAdminId=username -DPortalAdminPwd=password -Dfind=Plugin:PluginName -Dlibrary="MyLibrary"
-
--   **IBM® i**
-
-    ConfigEngine.sh run-wcm-admin-task-tag-usage -DPortalAdminId=username -DPortalAdminPwd=password -Dfind=Plugin:PluginName -Dlibrary="MyLibrary"
-
--   **z/OS®**
-
-    ./ConfigEngine.sh run-wcm-admin-task-tag-usage -DPortalAdminId=username -DPortalAdminPwd=password -Dfind=Plugin:PluginName -Dlibrary="MyLibrary"
+    `./ConfigEngine.sh run-wcm-admin-task-tag-usage -DPortalAdminId=username -DPortalAdminPwd=password -Dfind=Plugin:PluginName -Dlibrary="MyLibrary"`
 
 
-!!! note
+!!!note
     The library that is specified in the command is the library to be scanned by the task. If the query parameter "library" is omitted, the default library that is configured with the `defaultLibrary` property in the `WCM WCMConfigService` service is used.
 
-!!! note
+!!!note
     An administrator user name and password is not required if you specify the portal administrator user name and password by using the PortalAdminId and PortalAdminPwd settings in the wkplc.properties file.
 
-!!! note
+!!!note
     Before you progress to the next step and run the task in fix mode, ensure that the report mode indicates that the updates will happen as you require. A summary of the updates are shown by the command.
 
-A detailed report of the updates that are made for each item is shown in the SystemOut.log file in `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\logs\HCL Portal and HCL Web Content Manager`.
+A detailed report of the updates that are made for each item is shown in the SystemOut.log file in wp_profile_root\logs\HCL Portal and HCL Web Content Manager`.
 
 A detailed report of the updates that are made for each item is shown in the job log for the portal application server.
 
@@ -40,29 +32,20 @@ If the report indicates that the update will not happen as required, change the 
 
 ## Replacing plug-in tags
 
-To replace one plug-in tag type with another when referenced in web content items, run the following command from the `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine` directory:
+To replace one plug-in tag type with another when referenced in web content items, run the following command from the wp_profile_root/ConfigEngine` directory:
 
 -   **Windows™**
 
-    ConfigEngine.bat run-wcm-admin-task-tag-usage -DPortalAdminId=username -DPortalAdminPwd=password -Dfind=Plugin:OldPluginName -Dfix=true -Dreplace=Plugin:NewPluginName -Dlibrary="MyLibrary"
+    `ConfigEngine.bat run-wcm-admin-task-tag-usage -DPortalAdminId=username -DPortalAdminPwd=password -Dfind=Plugin:OldPluginName -Dfix=true -Dreplace=Plugin:NewPluginName -Dlibrary="MyLibrary"`
 
--   **AIX®HP-UXLinux™ Solaris**
+-   **AIX®and Linux™**
 
-    ./ConfigEngine.sh run-wcm-admin-task-tag-usage -DPortalAdminId=username -DPortalAdminPwd=password -Dfind=Plugin:OldPluginName -Dfix=true -Dreplace=Plugin:NewPluginName -Dlibrary="MyLibrary"
+    `./ConfigEngine.sh run-wcm-admin-task-tag-usage -DPortalAdminId=username -DPortalAdminPwd=password -Dfind=Plugin:OldPluginName -Dfix=true -Dreplace=Plugin:NewPluginName -Dlibrary="MyLibrary"`
 
--   **IBM® i**
-
-    ConfigEngine.sh run-wcm-admin-task-tag-usage -DPortalAdminId=username -DPortalAdminPwd=password -Dfind=Plugin:OldPluginName -Dfix=true -Dreplace=Plugin:NewPluginName -Dlibrary="MyLibrary"
-
--   **z/OS®**
-
-    ./ConfigEngine.sh run-wcm-admin-task-tag-usage -DPortalAdminId=username -DPortalAdminPwd=password -Dfind=Plugin:OldPluginName -Dfix=true -Dreplace=Plugin:NewPluginName -Dlibrary="MyLibrary"
-
-
-!!! note
+!!!note
     The library that is specified in the command is the library to be scanned by the task. If the query parameter "library" is omitted, the default library that has been configured with the `defaultLibrary` property in the `WCM WCMConfigService` service is used.
 
-!!! note
+!!!note
     An administrator user name and password is not required if you specify the portal administrator user name and password by using the PortalAdminId and PortalAdminPwd settings in the wkplc.properties file.
 
 ## Extra parameter values

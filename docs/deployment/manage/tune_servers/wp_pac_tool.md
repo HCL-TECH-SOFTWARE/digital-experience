@@ -37,8 +37,8 @@ Check all of your libraries for explicit role assignments. You can run the optim
     <request
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="PacOptimization.xsd"
-        report-only="false\|true"
-        rootResource="root\_resource\_ID\_or\_blank">
+        report-only="false|true"
+        rootResource="root_resource_ID_or_blank">
     </request>
     ```
 
@@ -55,9 +55,7 @@ Check all of your libraries for explicit role assignments. You can run the optim
 
 10. Run the following task to optimize the portal access control:
 
-    -   AIX®, HP-UX, Linux™, Solaris: `./xmlaccess.sh -user userID -password password -in filename.xml -out /tmp/name\_of\_report.xml`
-    -   IBM® i: `xmlaccess.sh -user userID -password password -in filename.xml -out /tmp/name_of_report.xml`
-    -   Windows™: `xmlaccess.bat -user userID -password password -in filename.xml -out /tmp/name_of_report.xml`
-    -   z/OS®: `./xmlaccess.sh -user userID -password password -in filename.xml -out /tmp/name_of_report.xml`
+    -   AIX® and Linux™: `./xmlaccess.sh -user userID -password password -in filename.xml -out /tmp/name\_of\_report.xml`
+    -   Windows™: `xmlaccess.bat -user userID -password password -in filename.xml -out /tmp/name_of_report.xml`ml`
 
 11. Remove the `accessControlConfig.enablePropagationBlockDeletion` and `accessControlConfig.enablePrivatePageOptimization` parameters previously configured. The parameters do not impact runtime operations because they are only used by the WCM PAC Optimizer tool. You can choose to keep the parameters if you plan to run the tool in the future on the same Portal environment.

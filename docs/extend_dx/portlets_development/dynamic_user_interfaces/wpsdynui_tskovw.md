@@ -4,16 +4,9 @@ Get an overview of the main tasks involved in creating a dynamic UI configuratio
 
 The following describes a general overview of the main tasks involved in creating a dynamic UI configuration.
 
--   [Planning](#planning)
--   [Creating the extension node for containing dynamic pages](#ext_node)
--   [Developing the portlet definition for dynamic portlets](#port_def)
--   [Developing the page definition for dynamic pages](#page_def)
--   [Developing the dynamic UI launching portlet](#launch)
--   [Providing controls for closing dynamic UIs.](#close)
--   [Testing the configuration](#test)
--   [Deploying the configuration](#deploy)
-
-**Note:** Only standard portlets can launch dynamic UIs. HCL portlets, however, can be launched as dynamic portlets and receive properties. Standard portlets can also launch dynamic pages that contain a mixture of standard and HCL portlets.
+!!!note
+    
+    Only standard portlets can launch dynamic UIs. HCL portlets, however, can be launched as dynamic portlets and receive properties. Standard portlets can also launch dynamic pages that contain a mixture of standard and HCL portlets.
 
 1.  Planning. Determine the requirements of the dynamic UI configuration. The following are some of the questions that can help you in the planning process.
 
@@ -30,14 +23,13 @@ The following describes a general overview of the main tasks involved in creatin
 
     3.  Open a command prompt.
 
-    4.  Change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+    4.  Change to the wp_profile_root/ConfigEngine directory.
 
     5.  Run the following configuration task:
 
-        -   AIX®HP-UXLinux™Solaris: ./ConfigEngine.sh action-enable-page-as-extension-node-wp.dynamicui.config -DPageUniqueName=pageUniqueName \[-DVirtualPortalContext=virtualPortalContext\]
-        -   IBM® i: ConfigEngine.sh action-enable-page-as-extension-node-wp.dynamicui.config -DPageUniqueName=pageUniqueName \[-DVirtualPortalContext=virtualPortalContext\]
-        -   Windows™: ConfigEngine.sh action-enable-page-as-extension-node-wp.dynamicui.config -DPageUniqueName=pageUniqueName \[-DVirtualPortalContext=virtualPortalContext\]
-        -   z/OS®: ./ConfigEngine.sh action-enable-page-as-extension-node-wp.dynamicui.config -DPageUniqueName=pageUniqueName \[-DVirtualPortalContext=virtualPortalContext\]
+        -   AIX® and Linux™: .`/ConfigEngine.sh action-enable-page-as-extension-node-wp.dynamicui.config -DPageUniqueName=pageUniqueName [-DVirtualPortalContext=virtualPortalContext]`
+        -   Windows™: `ConfigEngine.sh action-enable-page-as-extension-node-wp.dynamicui.config -DPageUniqueName=pageUniqueName [-DVirtualPortalContext=virtualPortalContext]`
+
         where pageUniqueName is the unique name of the extension node and virtualPortalContext is the context of the virtual portal that the specified page is part of. The -DVirtualPortalContext flag is needed only in the case where a virtual portal is used.
 
         This command designates the page as an extension node. If you subsequently need to remove the extension node designation, run the command using the action-disable-page-as-extension-node-wp.dynamicui.config task.
@@ -76,11 +68,11 @@ The following describes a general overview of the main tasks involved in creatin
             ... 
             ```
 
-            Additionally, you must also modify the file web.xml for HCL portlets to receive portlet properties. The servlet class entry should specify the com.ibm.wps.pb.wrapper.PortletWrapper class. See[Packaging, deploying and compiling cooperative portlets](wpsc2apackage.md#) for more information and an example.
+            Additionally, you must also modify the file web.xml for HCL portlets to receive portlet properties. The servlet class entry should specify the com.ibm.wps.pb.wrapper.PortletWrapper class. See [Packaging, deploying and compiling cooperative portlets](../../../extend_dx/portlets_development/portlet_communication/portlets_publish_subscribe_mech/define_portlet_comm_capabilities/jsr168_hcl_ext_coop_portlets/wpsc2apackage.md#packaging-deploying-and-compiling-cooperative-portlets) for more information and an example.
 
     -   **Considerations for retrieving context**
 
-        Standard portlets receive page properties on the processAction\(\) method using the com.ibm.portal.context request attribute. The value of this attribute is a Map storing the context entries. Each property value is obtained by name. The name and value of each property value is determined by the requirements of your dynamic UI configuration. Use the following code sample to get a value for the property with the name propertyName:
+        Standard portlets receive page properties on the processAction method using the com.ibm.portal.context request attribute. The value of this attribute is a Map storing the context entries. Each property value is obtained by name. The name and value of each property value is determined by the requirements of your dynamic UI configuration. Use the following code sample to get a value for the property with the name propertyName:
 
         ```xmp
         public void processAction (ActionRequest request, ActionResponse response) 
@@ -110,7 +102,7 @@ The following describes a general overview of the main tasks involved in creatin
         }
         ```
 
-        HCL portlets must implement the PropertyListener interface that provides the setProperties\(\) method, which provides the page properties as an array of PropertyValue objects.
+        HCL portlets must implement the PropertyListener interface that provides the setProperties method, which provides the page properties as an array of PropertyValue objects.
 
         In this sample, a loop is used to scan the array for the task properties.
 
@@ -136,9 +128,9 @@ The following describes a general overview of the main tasks involved in creatin
         }
         ```
 
-    -   **IBM portlet considerations**
+    -   **HCL portlet considerations**
 
-        To receive portlet properties, the com.ibm.portal.context.enable configuration parameter is specified in the portlet.xml. This parameter plays the same functional role as the standard portlet preference. Additionally, you must also modify the web.xml file to receive portlet properties. The servlet class entry should specify the com.ibm.wps.pb.wrapper.PortletWrapper class. See the [Packaging, deploying and compiling cooperative portlets](wpsc2apackage.md) section for more information.
+        To receive portlet properties, the com.ibm.portal.context.enable configuration parameter is specified in the portlet.xml. This parameter plays the same functional role as the standard portlet preference. Additionally, you must also modify the web.xml file to receive portlet properties. The servlet class entry should specify the com.ibm.wps.pb.wrapper.PortletWrapper class. See the See [Packaging, deploying and compiling cooperative portlets](../../../extend_dx/portlets_development/portlet_communication/portlets_publish_subscribe_mech/define_portlet_comm_capabilities/jsr168_hcl_ext_coop_portlets/wpsc2apackage.md#packaging-deploying-and-compiling-cooperative-portlets) section for more information.
 
 4.  Developing the page definition for dynamic pages.
 
@@ -180,7 +172,7 @@ The following describes a general overview of the main tasks involved in creatin
         
         ```
 
-    2.  Obtain the object ID of the page definition or portlet definition. This can be done using either a unique name \(for a page or portlet definition\) or portlet name + portlet-app ID \(portlet definition only\).
+    2.  Obtain the object ID of the page definition or portlet definition. This can be done using either a unique name (for a page or portlet definition) or portlet name + portlet-app ID (portlet definition only).
 
         -   **Using a unique name:**
 
@@ -215,7 +207,7 @@ The following describes a general overview of the main tasks involved in creatin
 
     3.  Obtain an instance of the DynamicUICtrl interface from the factory.
 
-        The factory expects the Render/ Action Request/Response followed by the configuration name \(String\) as input parameters. The DynamicUICtrl that is returned is parameterized with the request/response. The DynamicUICtrl must be obtained once per request and should not be stored.
+        The factory expects the Render/ Action Request/Response followed by the configuration name (String) as input parameters. The DynamicUICtrl that is returned is parameterized with the request/response. The DynamicUICtrl must be obtained once per request and should not be stored.
 
         ```xmp
         
@@ -240,7 +232,7 @@ The following describes a general overview of the main tasks involved in creatin
         
         ```
 
-    5.  Launch the dynamic UI using the addPage\(\) or addPortlet methods and passing the object ID of the page/portlet definition. Example of launching a page:
+    5.  Launch the dynamic UI using the addPage or addPortlet methods and passing the object ID of the page/portlet definition. Example of launching a page:
 
         ```xmp
         
@@ -265,9 +257,9 @@ The following describes a general overview of the main tasks involved in creatin
 
 6.  Providing controls for closing dynamic UIs.
 
-    In many cases you can allow the user to explicitly close a dynamic UI from a theme or skin. These icons are enabled by using the `<portal:closePage/>` and `<portal:closePortlet/>` tags. See [Tags used by the portal JSPs](dgn_ptltld.md#) for more information.
+    In many cases you can allow the user to explicitly close a dynamic UI from a theme or skin. These icons are enabled by using the `<portal:closePage/>` and `<portal:closePortlet/>` tags. See [Tags used by the portal JSPs](../../../build_sites/themes_skins/customizing_theme/portal_jsp_tag/index.md) for more information.
 
-    As an alternative, the launching portlet can close a dynamic UI using the removePage\(\) or removePortlet\(\) methods of the DynamicUICtrl interface, providing the object ID of the dynamic UI as input on the call. If removing a dynamic portlet, the calling portlet must be on the same page.
+    As an alternative, the launching portlet can close a dynamic UI using the removePage or removePortlet methods of the DynamicUICtrl interface, providing the object ID of the dynamic UI as input on the call. If removing a dynamic portlet, the calling portlet must be on the same page.
 
 7.  Testing the configuration.
 
@@ -277,6 +269,7 @@ The following describes a general overview of the main tasks involved in creatin
     -   Each time a dynamic UI is launched, a new instance of the page or portlet is created or, in the case of shared dynamic UIs, the user is returned to an existing instance.
     -   Properties are passed and processed by the dynamic portlets as expected.
     -   As portlets are added and removed from a dynamic page, the page maintains a balanced layout.
+    
 8.  Deploying the configuration
 
     When the dynamic UI configuration is ready to be promoted to a production level server, create the XMLAccess scripts that contain the necessary page and portlet definitions. You can use the Manage Pages portlet to export the page configuration to XMLAccess, including any wires or unique names used by the configuration.

@@ -10,12 +10,9 @@ com.lotus.cs.cslog=all=:com.lotus.ap.portlets.*=all=:com.ibm.wkplc.people.portal
 
 The trace file can be found in the following location:
 
--   AIX®: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/logs/HCL Portal and HCL Web Content Manager/trace.log
--   HP-UX: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/logs/HCL Portal and HCL Web Content Manager/trace.log
--   IBM® i: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/logs/HCL Portal and HCL Web Content Manager/trace.log
--   Linux™: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/logs/HCL Portal and HCL Web Content Manager/trace.log
--   Solaris: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/logs/HCL Portal and HCL Web Content Manager/trace.log
--   Windows™: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\logs\\HCL Portal and HCL Web Content Manager\\trace.log
--   z/OS®: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/logs/HCL Portal and HCL Web Content Manager/trace.log
+-   AIX®: wp_profile_root/logs/HCL Portal and HCL Web Content Manager/trace.log
+-   Linux™: wp_profile_root/logs/HCL Portal and HCL Web Content Manager/trace.log
+-   Windows™: wp_profile_root\logs\HCL Portal and HCL Web Content Manager\trace.log
+
 
 

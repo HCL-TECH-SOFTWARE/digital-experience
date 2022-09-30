@@ -75,7 +75,4 @@ To use the WSRP policy sets and client policy set bindings for service configura
 
 
 
-**Previous topic:**[Communicating with Producer portals with different web service configurations](../admin-system/wsrpt_cons_cfg_wsrvc_clnt_xtra.md)
-
-**Next topic:**[Creating and deploying custom service references](../admin-system/wsrpt_cons_crt_cust_wsrvc_refs.md)
 

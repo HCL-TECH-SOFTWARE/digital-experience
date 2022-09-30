@@ -42,11 +42,11 @@ Use the following properties to configure the connection between HCL Portal and 
 
 -   **externalaccesscontrol.pduser = sec\_masterexternalaccesscontrol.pdpw = passw0rd**
 
-    Use these properties to provide an administrative user ID and password with adequate rights in Tivoli to create, delete, modify the objects in the Protected Object Space. You can use the WebSphere® Application Server PropFilePasswordEncoder utility to mask the password. Using PropFilePasswordEncoder will remove any comments and uncommented properties. Therefore create a back up copy of this file for future reference. Example for AIX® IBM® i Linux™ Solaris Windows™:
+    Use these properties to provide an administrative user ID and password with adequate rights in Tivoli to create, delete, modify the objects in the Protected Object Space. You can use the WebSphere® Application Server PropFilePasswordEncoder utility to mask the password. Using PropFilePasswordEncoder will remove any comments and uncommented properties. Therefore create a back up copy of this file for future reference. Example for AIX®, Linux™ and Windows™:
 
     ```
-    [AppServer\_root](../reference/wpsdirstr.md#was_root)/bin/PropFilePasswordEncoder 
-    [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/config/properties/ExternalAccessControlService.properties 
+    [AppServer_root](../reference/wpsdirstr.md#was_root)/bin/PropFilePasswordEncoder 
+    [wp_profile_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/config/properties/ExternalAccessControlService.properties 
             externalaccesscontrol.pdpw
     ```
 

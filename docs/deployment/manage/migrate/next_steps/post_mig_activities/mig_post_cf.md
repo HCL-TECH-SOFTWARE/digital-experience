@@ -6,43 +6,29 @@ This task is a required if you are on CF07 or earlier. After you migrate using t
 
     -   If you migrated a stand-alone server, stop the HCL Portal server.
     -   If you migrated a cluster, stop the HCL Portal server and node agent. Then, ensure that the deployment manager is started.
-2.  Run the PRE-APPLY-FIX task from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory:
 
-    -   **AIX® Linux™ Solaris**
+2.  Run the PRE-APPLY-FIX task from the wp_profile_root/ConfigEngine directory:
 
-        ./ConfigEngine.sh PRE-APPLY-FIX -DWasPassword=password -DPortalAdminPwd=password
+    -   **AIX® and Linux™**
 
-    -   **IBM® i**
-
-        ConfigEngine.sh PRE-APPLY-FIX -DWasPassword=password -DPortalAdminPwd=password
+        `./ConfigEngine.sh PRE-APPLY-FIX -DWasPassword=password -DPortalAdminPwd=password`
 
     -   **Windows™**
 
-        ConfigEngine.bat PRE-APPLY-FIX -DWasPassword=password -DPortalAdminPwd=password
+        `ConfigEngine.bat PRE-APPLY-FIX -DWasPassword=password -DPortalAdminPwd=password`
 
-    -   **z/OS®**
+3.  Run the APPLY-FIX task from the wp_profile_root/ConfigEngine directory:
 
-        ./ConfigEngine.sh PRE-APPLY-FIX -DWasPassword=password -DPortalAdminPwd=password
+    !!!important
+        If you are migrating to Portal 8.5 CF03 or CF04, you must specify the -DForceRun=true parameter when you run APPLY-FIX.
 
-3.  Run the APPLY-FIX task from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory:
+    -   **AIX® and Linux™**
 
-    **Important:** If you are migrating to Portal 8.5 CF03 or CF04, you must specify the -DForceRun=true parameter when you run APPLY-FIX.
-
-    -   **AIX® Linux™ Solaris**
-
-        ./ConfigEngine.sh APPLY-FIX -DWasPassword=password -DPortalAdminPwd=password
-
-    -   **IBM® i**
-
-        ConfigEngine.sh APPLY-FIX -DWasPassword=password -DPortalAdminPwd=password
+        `./ConfigEngine.sh APPLY-FIX -DWasPassword=password -DPortalAdminPwd=password`
 
     -   **Windows™**
 
-        ConfigEngine.bat APPLY-FIX -DWasPassword=password -DPortalAdminPwd=password
-
-    -   **z/OS®**
-
-        ./ConfigEngine.sh APPLY-FIX -DWasPassword=password -DPortalAdminPwd=password
+        `ConfigEngine.bat APPLY-FIX -DWasPassword=password -DPortalAdminPwd=password`
 
 4.  **Cluster only:** Complete each step on every node in the cluster.
 
