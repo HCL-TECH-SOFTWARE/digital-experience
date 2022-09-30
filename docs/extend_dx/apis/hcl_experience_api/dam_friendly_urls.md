@@ -111,7 +111,7 @@ Collection unique-names are the unique identifier for each collection which can 
 
 - Collection unique-name is an optional field. If it is not provided by the user, the system will generate a collection unique-name based on the collection name replacing all the URL reserved characters (e.g. "?!#$&%'*+/;:,=@()\[]") with underscores.
 - Collection unique-names will follow simple format of adding “_Number” for collections having same collection-names.
-- For existing collections, system will generate a collection unique-name based on collection name with migration script.
+- For existing collections, the system will generate a collection unique-name based on the collection name by using the migration script.
 
 ## How can the user change the collection unique-names?
 Once the collection unique-name is generated, user will be able to view/edit the collection unique-name in the collection information panel.
