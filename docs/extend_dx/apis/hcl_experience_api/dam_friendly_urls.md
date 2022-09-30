@@ -119,7 +119,7 @@ Once the collection unique-name is generated, user will be able to view/edit the
 ![](../../../images/CollectionEdit_friendlyUrl-1.png "Collection edit panel")
 
 ## What happens if collection unique-name already exists while creating collection?
-When creating collection, the DAM checks for the duplicate collection unique-name and prompts an error message if the collection unique-name is already being used any other collections.
+When creating a collection, DAM checks for any duplication of the unique-name and prompts with an error message if a duplicate is found in any other collection.
 ![](../../../images/CreateCollectionError_friendlyUrl_1.png "Create collection duplicate unique name")
 ![](../../../images/CreateCollectionError_friendlyUrl_2.png "Create collection unsupported unique name")
 
