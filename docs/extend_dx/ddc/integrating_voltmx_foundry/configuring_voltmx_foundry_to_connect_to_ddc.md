@@ -32,7 +32,7 @@ Perform the following steps to use the new integration service with Volt MX Foun
     ![](../../../../assets/Volt_MX_Foundry_Add_Operation.png "Add Operation for the Service")
 
 !!!note
-    By default DDC generic JSON plugin only supports **GET** but extending the generic DDC JSON plugin can send requests with methods such as **POST**, **PUT**, **DELETE** etc without necessarily having to use the data sink option. In case of other than **GET** resource method, it is mandatory to create a content template with the httpmethod optional field element.
+    By default DDC generic JSON plugin supports **GET** but the generic DDC JSON plugin can now send requests with methods such as **POST**, **PUT**, **DELETE** etc by utilizing the extension of the plugin in the form of an optional content field named httpmethod. When using other resource methods such as **POST**, **PUT**, **DELETE**, it is mandatory to create a content template with the httpmethod optional field element.
 
     ![](../../../../assets/Volt_MX_Foundry_Add_Post_Operation.png "Add Post operation service")
 
