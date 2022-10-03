@@ -16,47 +16,9 @@ Stylesheet elements are referenced in the "header" section of a presentation tem
 
 |Details|Code example|
 |-------|------------|
-|To use the stylesheet that is specified in the authoring template of the current content item, you must use a `<styleElement>` tag.
-
-|```
-<HTML>
-<HEAD>
-<styleElement source="template"/>
-</HEAD>
-<BODY></BODY>
-</HTML>
-
-```
-
-|
-|To use the stylesheet that is selected in a component reference element that is stored in either the current site area or content item, you must use a `<styleElement>` tag.
-
-|```
-<HTML>
-<HEAD>
-<styleElement source="path" name="component 
-reference name"/>
-</HEAD>
-<BODY></BODY>
-</HTML>
-
-```
-
-|
-|To use a specific stylesheet, you must use a `<component>` tag.
-
-|```
-<HTML>
-<HEAD>
-<component name="stylesheet 
-component name"/>
-</HEAD>
-<BODY></BODY>
-</HTML>
-
-```
-
-|
+|To use the stylesheet that is specified in the authoring template of the current content item, you must use a `<styleElement>` |`<HTML>`<br>`<HEAD>`<br>`<styleElement source="template"/>`<br>`</HEAD>`<br>`<BODY></BODY>`<br>`</HTML>`|
+|To use the stylesheet that is selected in a component reference element that is stored in either the current site area or content item, you must use a `<styleElement>` tag.|`<HTML>`<br>`<HEAD>`<br>`<styleElement source="path" name="component` <br>`reference name"/>`<br>`</HEAD>`<br>`<BODY></BODY>`<br>`</HTML>`|
+|To use a specific stylesheet, you must use a `<component>` tag.|`<HTML>`<br>`<HEAD>`<br>`<component name="stylesheet` <br>`component name"/>`<br>`</HEAD>`<br>`<BODY></BODY>`<br>`</HTML>`|
 
 When rendered in web content, references to stylesheet components are rendered as external stylesheet links:
 
