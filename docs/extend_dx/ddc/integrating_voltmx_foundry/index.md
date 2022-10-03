@@ -157,8 +157,8 @@ Under Authoring Templates, create a Content Template.
     ![](../../../assets/WCM_Manage_Element.png "Create Content Template and select its attribute.")
 
 !!!note
-       In case of **GET** Resouce method, adding **httpmethod** element is optional, by default value of **httpmethod** would be considered as **GET** only.
-       But if you selected any other **Resource Method** (for example - **POST** from `Advanced` > `Front End API` > `Resource Method`) while creating new integration service with Volt MX Foundry then you must need to add another element **httpmethod**. Though This element (**httpmethod**) can be added as **Short Text**, **Text** or **OptionSelection**.
+       In case of **GET** resource method, adding **httpmethod** element is not necessary, by default, the connection is initially set to **GET**.
+       But if you selected any other **Resource Method** (for example - **POST** from `Advanced` > `Front End API` > `Resource Method`) while creating a new integration service with Volt MX Foundry, then you need to add another element **httpmethod**. This element (**httpmethod**) can be added as **Short Text**, **Text**, or **OptionSelection**. A content created from this content template can then load and render data from data sources using other resource methods. Leaving the optional httpmethod field value **blank** or empty when creating your content, which is based on the content template, would still have the connection fallback to **GET**.
 
     | Element type                   | Name                                       | Display title              |
     | ------------------------------ | ------------------------------------------ | ---------------------------|
