@@ -190,7 +190,7 @@ Under Authoring Templates, create a Content Template.
     ![](../../../assets/WCM_Input_Content_Element.png "Input Main Content.")
 
 !!!note
-       If you selected any other **Resource Method** (for example - **POST** from `Advanced` > `Front End API` > `Resource Method`) while creating new integration service with Volt MX Foundry then you must need to provide value for **httpmethod**. Also value of **Data Source URI** would be POST URL end point in this case.
+       If you selected any other **Resource Method** (for example - **POST** from `Advanced` > `Front End API` > `Resource Method`) while creating a new integration service with Volt MX Foundry then you need to provide value for **httpmethod**. Also, the value of **Data Source URI** would be the POST URL endpoint in this case.
 
     | Content field title            | Value                                                        |
     | ------------------------------ | ------------------------------------------                   |
