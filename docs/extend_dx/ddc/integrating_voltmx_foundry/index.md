@@ -186,7 +186,6 @@ Under Authoring Templates, create a Content Template.
     | Data Source URI                | https://hcl-dx-dev.hclvoltmx.net/services/account/id?id=1    |
     | List Rendering Profile         | ddcDemo.profile.json                                         |
     | DDC Plugin                     | ibm.portal.ddc.json                                          |
-    | Select Resource Method         | POST                                                         |
 
     ![](../../../assets/WCM_Input_Content_Element.png "Input Main Content.")
 
