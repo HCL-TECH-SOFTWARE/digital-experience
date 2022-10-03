@@ -1,5 +1,4 @@
 title: Software Licensing Portal
 nav:
     - index.md
-    - configure_entitlement_checks.md
-        -   entitlement_checks_scenarios.md
+    - configure_entitlement_checks

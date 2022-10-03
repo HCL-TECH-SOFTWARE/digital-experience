@@ -1,8 +1,12 @@
+---
+title: Entitlement check scenarios
+---
+
 # HCL Digital Experience Cloud Native 9.5 entitlement check scenarios
 
-Review the following [HCL Digital Experience Cloud Native 9.5](../../../get_started/intro_container.md#hcl-digital-experience-cloud-native) entitlement validation check scenarios to be used to formulate responses when entitlement validations encounter failures.
+Review the following [HCL Digital Experience Cloud Native 9.5](../../../../get_started/intro_container.md#hcl-digital-experience-cloud-native) entitlement validation check scenarios to be used to formulate responses when entitlement validations encounter failures.
 
-The approach that HCL takes is to perform automated license validation for all products. This kind of license validation is called an entitlement check. The following information highlights all scenarios which involve HCL Software License Portal entitlement checks within [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7](../../../get_started/intro_container.md#hcl-digital-experience-cloud-native) offering deployments. An entitlement check verifies the customer's purchased product (DX Cloud Native 9.5 Tier 1- 7 part number that is mapped in their Flexnet Server instance(s)) subscription period is valid, or is past due, and requires renewal with HCL. For example, if a customer purchases **Digital Experience Cloud Native 9.5 Tier 2** part in May 30, 2022, their entitlement period is valid through May 30, 2023.
+The approach that HCL takes is to perform automated license validation for all products. This kind of license validation is called an entitlement check. The following information highlights all scenarios which involve HCL Software License Portal entitlement checks within [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7](../../../../get_started/intro_container.md#hcl-digital-experience-cloud-native) offering deployments. An entitlement check verifies the customer's purchased product (DX Cloud Native 9.5 Tier 1- 7 part number that is mapped in their Flexnet Server instance(s)) subscription period is valid, or is past due, and requires renewal with HCL. For example, if a customer purchases **Digital Experience Cloud Native 9.5 Tier 2** part in May 30, 2022, their entitlement period is valid through May 30, 2023.
 
 ## Entitlement check scenarios
 Depending upon your entitlement check result, the **HCL DX Cloud Native 9.5** server starts or issues warning messages when an error is encountered, or an entitlement requires renewal.
@@ -31,14 +35,14 @@ User session consumption for the Digital Experience Cloud Native 9.5 entitlement
 
 1. Access the Reports section of the HCL Software License and Download Portal (Flexnet) server.
 
-    ![](../software_licensing_portal/_img/access_reports_software_license_portal.png)
+    ![](../../software_licensing_portal/_img/access_reports_software_license_portal.png)
 
     Select your account and then click on Search. Select Digital Experience Cloud Native 9.5 from the list of your account entitlements. Results will appear similar to the following example. 
 
     !!!note
         The results may show an overage percentage amount in parentheses which is N/A for this informational dashboard report.
 
-        ![](../software_licensing_portal/_img/select_account_entitlements.png)
+        ![](../../software_licensing_portal/_img/select_account_entitlements.png)
 
 The Usage report will show:
 
