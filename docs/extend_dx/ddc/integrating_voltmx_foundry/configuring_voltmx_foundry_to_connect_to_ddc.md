@@ -31,6 +31,11 @@ Perform the following steps to use the new integration service with Volt MX Foun
 
     ![](../../../../assets/Volt_MX_Foundry_Add_Operation.png "Add Operation for the Service")
 
+!!!note
+    By default DDC generic JSON plugin only supports **GET** but extending the generic DDC JSON plugin can send requests with methods such as **POST**, **PUT**, **DELETE** etc without necessarily having to use the data sink option. In case of other than **GET** resource method, it is mandatory to create a content template with the httpmethod optional field element.
+
+    ![](../../../../assets/Volt_MX_Foundry_Add_Post_Operation.png "Add Post operation service")
+
 6. Adding **Response Output**. Click the **Response Output** tab, then click **Add Parameter**. After clicking, a row will appear on the table. Add the **Name**, then the **Path** or the JSON Path. The path is based on the response of the target URL you define in Service Definition. Try the service by clicking **Save And Fetch Response**. If everything looks fine, then click **Save Operation**.
 
     ![](../../../../assets/Volt_MX_Foundry_Response_Output_And_Testing.png "Add JSON Path and Testing the Service")

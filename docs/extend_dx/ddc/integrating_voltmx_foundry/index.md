@@ -13,7 +13,13 @@ This section describes how to define the set of attributes available in the bean
 
 - Following API end point and response are used to create this sample document.
     
+    Sample API end point for **GET**
+
     ![](../../../assets/Volt_MX_Sample_Endpoint.png "VOLTMX Sample API Endpoint.")
+
+    Sample API end point for **POST**
+
+    ![](../../../assets/Volt_MX_Sample_POST_Endpoint.png "VOLTMX Sample POST API Endpoint.")
 
 ### Steps to create the list rendering profile are as follows:
 
@@ -150,6 +156,15 @@ Under Authoring Templates, create a Content Template.
 
     ![](../../../assets/WCM_Manage_Element.png "Create Content Template and select its attribute.")
 
+!!!note
+       In case of **GET** Resouce method, adding **httpmethod** element is optional, by default value of **httpmethod** would be considered as **GET** only.
+       But if you selected any other **Resource Method** (for example - **POST** from `Advanced` > `Front End API` > `Resource Method`) while creating new integration service with Volt MX Foundry then you must need to add another element **httpmethod**. Though This element (**httpmethod**) can be added as **Short Text**, **Text** or **OptionSelection**.
+
+    | Element type                   | Name                                       | Display title              |
+    | ------------------------------ | ------------------------------------------ | ---------------------------|
+    | Short Text                     | httpmethod                                 | Select Http Method         |
+
+    ![](../../../assets/WCM_Manage_Element_Post.png "Create Content Template and select its attribute for Post.")
 
 4. Click on `Default Content Properties` and add `Express workflow`.
 
@@ -171,9 +186,20 @@ Under Authoring Templates, create a Content Template.
     | Data Source URI                | https://hcl-dx-dev.hclvoltmx.net/services/account/id?id=1    |
     | List Rendering Profile         | ddcDemo.profile.json                                         |
     | DDC Plugin                     | ibm.portal.ddc.json                                          |
+    | Select Resource Method         | POST                                                         |
 
     ![](../../../assets/WCM_Input_Content_Element.png "Input Main Content.")
- 
+
+!!!note
+       If you selected any other **Resource Method** (for example - **POST** from `Advanced` > `Front End API` > `Resource Method`) while creating new integration service with Volt MX Foundry then you must need to provide value for **httpmethod**. Also value of **Data Source URI** would be POST URL end point in this case.
+
+    | Content field title            | Value                                                        |
+    | ------------------------------ | ------------------------------------------                   |
+    | Data Source URI                | https://hcl-dx-dev.hclvoltmx.net/services/account/id         |
+    | Select Http Method             | post                                                         |
+
+    ![](../../../assets/WCM_Input_Content_Element_Post.png "Input Main Content for Post.")
+
 3. Save and close.
 
 ## Use in Portal Page
