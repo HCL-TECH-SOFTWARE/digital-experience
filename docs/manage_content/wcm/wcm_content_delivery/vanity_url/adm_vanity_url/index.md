@@ -8,7 +8,7 @@ HCL Digital Experience provides some configuration tasks. You can use these task
 
 
 -   **[Enabling vanity URL support](van_url_cfgtsk_enable_vus.md)**  
-In a new HCL Portal 8.5 installation, vanity URL support is enabled. If you upgrade your HCL Portal from a previous version to Version 8.5, vanity URL support is disabled. You can enable and disable vanity URL support as required by using a portal configuration task.
+In a new HCL Portal 9.5 installation, vanity URL support is enabled. If you upgraded your HCL Portal from a previous version to Version 8.5, vanity URL support might be disabled. You can enable and disable vanity URL support as required by using a portal configuration task.
 -   **[Providing short vanity URLs](van_url_short.md)**  
 You might want to make your vanity URLs as short and simple as possible for your customers. You can create vanity URLs that contain only the vanity segment by omitting the string /wps/vanityurl. In this case, you must use a web server and define a rewrite rule. If you also use IBM Web Application Bridge, or if you have static files in the root of the HTTP server document directory, adapt the rewrite rule.
 -   **[Configuring the vanity URL preview link](van_url_cfg_preview.md)**  

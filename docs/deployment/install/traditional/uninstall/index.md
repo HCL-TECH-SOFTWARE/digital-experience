@@ -10,6 +10,3 @@ You must prepare your system before you uninstall your HCL Digital Experience en
 You must prepare your system before you uninstall your HCL Digital Experience environment. For example, add passwords to the properties files. You must also decide to keep or discard the database information.
 -   **[Windows: Preparing to uninstall](../uninstall/windows_uninstall/index.md)**  
 You must prepare your system before you uninstall your HCL Digital Experience environment. For example, add passwords to the properties files. You must also decide to keep or discard the database information.
-
-
-

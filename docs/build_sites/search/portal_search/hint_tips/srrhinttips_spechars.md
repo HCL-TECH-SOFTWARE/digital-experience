@@ -1,6 +1,7 @@
 # How Portal Search handles special characters when indexing
 
-Portal Search indexes words that are composed of consecutive literals, that is letters, digits, and special characters. Learn how Portal Search handles special characters during indexing.
+Portal Search indexes words that are composed of consecutive literals, that is letters, digits and special characters. 
+This section describes how Portal Search handles special characters during indexing.
 
 This includes the following characters:
 

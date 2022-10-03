@@ -26,5 +26,4 @@ ctrl.commit(); // Apply the changes.
 ```
 
 
-**Previous topic:**[Modifying configuration settings of the outbound HTTP connection](../dev-portlet/outbhttp_cfg_mcspi_modfcfgsets.md)
 

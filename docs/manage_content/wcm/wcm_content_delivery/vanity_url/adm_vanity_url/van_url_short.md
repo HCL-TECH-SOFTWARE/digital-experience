@@ -4,7 +4,7 @@ You might want to make your vanity URLs as short and simple as possible for your
 
 Example: You advertise your shoe sale by using the short vanity URL `http://hostname/shoe-sale`. The HTTP server rewrites this URL to `http://hostname/wps/vanityurl/shoe-sale`. The portal then redirects the user to `http://hostname/wps/portal/home/shoe_promotion_page`.
 
-To be able to use such short vanity URLs, you must use a web server. For details about using a web server with your portal, see the topic about Preparing a remote web server for your environment in this portal product documentation.
+To be able to use such short vanity URLs, you must use a web server. For details about using a web server with your portal, see the topic about Preparing a remote web server for your environment in this documentation.
 
 1.  If you use the IBM HTTP Server as your web server, modify the file httpd.conf to define the rewrite rule. Proceed by the following steps:
 2.  Open the file httpd.conf with an editor.
