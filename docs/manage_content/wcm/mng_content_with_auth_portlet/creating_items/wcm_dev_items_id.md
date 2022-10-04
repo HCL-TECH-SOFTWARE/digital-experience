@@ -3,23 +3,20 @@ id: wcm_dev_items_id
 title: Entering identification information
 ---
 
-
-
-
 Specify identification information for the current item, including the name and title for the item. The identification section is common to all item forms.
 
 1.  Type the name of the item in the **Name** field. The name of site areas and content items are used to construct the URL path for those items. Component names are used when components are referenced in web content tags.
 
-    -   The value that you type can contain only alphanumeric characters \(a-z, A-Z, 0-9\), spaces, and the following characters: $ - \_ . ! \( \) ,
+    -   The value that you type can contain only alphanumeric characters (a-z, A-Z, 0-9), spaces, and the following characters: `$` `-` `_` `.` `!` `(` `)` `,`
 
-        A period " . "must not be used in an authoring template name, field name within an authoring template, a resource collection name, or attribute name within a collection if you use Personalization to personalize web content.
+        A period "`.`" must not be used in an authoring template name, field name within an authoring template, a resource collection name, or attribute name within a collection if you use Personalization to personalize web content.
 
     -   Do not use double-byte or non-ASCII characters.
     -   You can create different item types with the same name, although this option is not recommended.
     -   You can create items of the same type with the same name so long as the path to the item is different. For example, you can create two categories with the same name so long as they are saved under different categories:
-        -   \\taxonomyA\\categoryA\\shoes
-        -   \\taxonomyA\\categoryB\\shoes
-        -   \\taxonomyB\\categoryB\\shoes
+        -   `\taxonomyA\categoryA\shoes`
+        -   `\taxonomyA\categoryB\shoes`
+        -   `\taxonomyB\categoryB\shoes`
 
     -   Names are not case-sensitive, so you cannot create one item that is named "News" and another item of the same item-type named "news" in the same path.
     
@@ -29,9 +26,7 @@ Specify identification information for the current item, including the name and 
 
         Translated text can also be stored in specialized content items. These appear amongst the list of text providers and are selected in the same way. For more information see the topic named **How to store translated text in a content item** in the Knowledge Center.
 
-        **Sorting conventions:**
-
-        When sorting is applied to a set of items, the item display title is used to sort the items, not the title that is specified in the text provider.
+        **Sorting conventions:** When sorting is applied to a set of items, the item display title is used to sort the items, not the title that is specified in the text provider.
 
 3.  Type a brief description of your item in the **Description** field. The information entered here describes the purpose of the item.
 
