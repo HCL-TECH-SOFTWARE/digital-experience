@@ -1,4 +1,4 @@
-# Experimental features
+# Experimental Features
 
 ## Incubator section in the values.yaml file
 

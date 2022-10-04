@@ -2,7 +2,8 @@
 
 View the properties for the tag widget.
 
-**Note:** The parameters listed here are specific to the inline tag widget that was introduced with HCL Portal Version 8.5. For information about the earlier widgets and their parameters, read the appropriate topics in the HCL Portal Version 8.0 product documentation.
+!!!note
+    The parameters listed here are specific to the inline tag widget that was introduced with HCL Portal Version 8.5. For information about the earlier widgets and their parameters, read the appropriate topics in the HCL Portal Version 8.0 product documentation.
 
 -   **com.ibm.wps.cp.tagging.inline.countsEnabled = \(false\)  **
 
@@ -52,7 +53,8 @@ View the properties for the tag widget.
 
     Use this property to control whether a plus \( **+** \) sign for starting the corresponding dialog widget is shown. The default is `true`.
 
-    **Note:** This property applies only in case of Dojo based inline tagging widgets.
+    !!!note
+        This property applies only in case of Dojo based inline tagging widgets.
 
 -   **com.ibm.wps.cp.tagging.inline.tagClickActionMode = \(TAG\_CENTER\)  **
 
@@ -66,14 +68,8 @@ View the properties for the tag widget.
 
         With this value, the widget shows a public render parameter with the tag name.
 
-
-
 **Related information**  
-
-
-[The tag widget](../admin-system/tag_rate_inline_tag_wdgt_lite.md)
-
-[Tag widget parameter reference](../admin-system/tag_rate_parm_ref_inl_tag_lite.md)
-
-[The rating widget](../admin-system/tag_rate_inline_rate_wdgt_lite.md)
+[The tag widget](../../../../../../build_sites/tagging_rating/tagging_rating_ui/tagging_rating_widget/tag_widget/index.md)<br>
+[Tag widget parameter reference](../../../../../../build_sites/tagging_rating/cfg_reference/parm_ref_tag_rate_widget/tag_rate_parm_ref_inl_tag_lite.md)<br>
+[The rating widget](../../../../../../build_sites/tagging_rating/tagging_rating_ui/tagging_rating_widget/rating_widget/index.md)
 

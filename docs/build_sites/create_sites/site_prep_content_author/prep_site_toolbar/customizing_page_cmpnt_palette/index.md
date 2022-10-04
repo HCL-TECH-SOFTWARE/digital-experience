@@ -11,10 +11,9 @@ Associate content with the hidden content page to define categories in the Page 
 -   **[Creating Content Drag and Drop configurations](../admin-system/epc_custom_add_drag_drop.md)**  
 Configure the results that display when a content author searches for a portlet to add. You can also enable assistance for content authors by displaying supported markup in search results.
 -   **[Implementing drag and drop site areas](../admin-system/epc_wcm_dnd_siteareas.md)**  
-By default, only web content items can be drag and dropped from the toolbar. You can use a keyword to implement the same behavior with site areas. 
+By default, only web content items can be drag and dropped from the toolbar. You can use a keyword to implement the same behavior with site areas.  --->
 
-**Related information**  
-[Site toolbar and Site Manager](../site/site_site_toolbar.md)
-
-[Creating web content when you add a web content viewer to a page](../wcm/wcm_delivery_content_addshelf.md) --->
+???+ info "Related information:"
+    - [Site toolbar and Site Manager](../../../authoring_tools/site_site_toolbar.md)
+    - [Creating web content when you add a web content viewer to a page](../../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/customizing_content/wcm_delivery_content_addshelf.md)
 

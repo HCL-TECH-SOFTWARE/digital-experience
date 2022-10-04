@@ -13,16 +13,16 @@ If you want to access HCL Portal with a host name and port different from your w
 
 1.  Log on to the WebSphere Integrated Solutions Console.
 
-2.  Go to **Environment** \> **Virtual Hosts**.
+2.  Go to **Environment > Virtual Hosts**.
 
-3.  Select the **default\_host** entry or the entry for the virtual host that is being used to access the HCL Portal application.
+3.  Select the **default_host** entry or the entry for the virtual host that is being used to access the HCL Portal application.
 
 4.  Select **Host Aliases**, and verify whether there is a host name and port entry corresponding to the values used to access HCL Portal. If the entry does not exist, select **New**, and enter the information for the host name and port you want to use.
 
     The following information is the host alias examples:
 
-    -   AIX® HP-UX IBM® i Linux™ Solaris Windows™: \*:10039
-    -   z/OS®: \*:9081
+    -   AIX®, Linux™, Windows™: *:10039
+    
 5.  Save your changes.
 
 6.  Regenerate the web server plug-in.

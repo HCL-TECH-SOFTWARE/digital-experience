@@ -50,24 +50,23 @@ Log in to the machine from where you will access your HCL Portal Container.
 4.  Empty the base HCL Portal server.
 
     1.  OpenShift:
+      ```
+      oc exec –it dx-deployment-nnnnn /bin/bash
+      ```
 
-```
-oc exec –it dx-deployment-nnnnn /bin/bash
-```
+    2. Non OpenShift:
+      ```
+      kubectl exec –it dx-deployment-nnnnn /bin/bash
+      ```
 
-Non OpenShift:
-
-```
-kubectl exec –it dx-deployment-nnnnn /bin/bash
-```
-
-    2.  ```
-/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh empty-portal –DWasPassword=<your WAS admin user password> –DPortalAdminPwd=<your DX admin user password>
-```
+5.  
+  ```
+  /opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh empty-portal –DWasPassword=<your WAS admin user password> –DPortalAdminPwd=<your DX admin user password>
+  ```
 
     The output displays a **BUILD SUCCESSFUL** message. If not, check the /opt/HCL/wp\_profile/ConfigEngine/log/ConfigTrace.log for errors.
 
-5.  Clean up the remaining content in the target server by using XML Access:
+6.  Clean up the remaining content in the target server by using XML Access:
 
     ```
     /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config -user <your DX admin user> –password <your DX admin user password> –in /opt/HCL/PortalServer/doc/xml-samples/Task.xml -out /tmp/task_result.xml
@@ -75,10 +74,10 @@ kubectl exec –it dx-deployment-nnnnn /bin/bash
 
     The output displays a **BUILD SUCCESSFUL** message. If not, check the /opt/HCL/wp\_profile/logs/WebSphere\_Portal/SystemOut.log for errors.
 
-6.  Copy the output XML files, custom EAR and WAR files, Workspace.nodes file, and the ../deployed/archive directory files to a location on this local machine, making sure to preserve the file names and structure from the external or shared drive and then into the DX container.
+7.  Copy the output XML files, custom EAR and WAR files, Workspace.nodes file, and the ../deployed/archive directory files to a location on this local machine, making sure to preserve the file names and structure from the external or shared drive and then into the DX container.
     1.  ```
-cp /drive/* /tmp/
-```
+        cp /drive/* /tmp/
+        ```
 
     2.  OpenShift:
 
@@ -92,27 +91,27 @@ cp /drive/* /tmp/
         kubectl cp /tmp/* dx-deployment-nnnnn:/tmp/
         ```
 
-7.  Create a directory under /opt/HCL/wp\_profile to house any custom code or shared libraries.
+8.  Create a directory under /opt/HCL/wp\_profile to house any custom code or shared libraries.
 
     1.  ```
-mkdir –p /opt/HCL/wp_profile/customApps
-```
+      mkdir –p /opt/HCL/wp_profile/customApps
+      ```
 
     **Note:** In any containerized environment, all custom code and shared libraries need to exist under the persisted profile volume.
 
-8.  Move the copied files to the appropriate locations in the container.
+9.  Move the copied files to the appropriate locations in the container.
     1.  ```
-mv /tmp/custom.ear /opt/HCL/wp_profile/customApps/
-```
+        mv /tmp/custom.ear /opt/HCL/wp_profile/customApps/
+        ```
 
     2.  ```
-mv /tmp/deployed/archive/* /opt/HCL/wp_profile/PortalServer/deployed/archive/
-```
+        mv /tmp/deployed/archive/* /opt/HCL/wp_profile/PortalServer/deployed/archive/
+        ```
 
-9.  Deploy custom applications, predeployed portlets, or themes.
-10. Configure any required syndication properties in the WCM ConfigService. For example, enabling memberfixer to run during syndication.
-11. Create any required configuration items. For example, URLs, namespace bindings, etc.
-12. Import the source server base content into the HCL Portal server in the container.
+10. Deploy custom applications, predeployed portlets, or themes.
+11. Configure any required syndication properties in the WCM ConfigService. For example, enabling memberfixer to run during syndication.
+12. Create any required configuration items. For example, URLs, namespace bindings, etc.
+13. Import the source server base content into the HCL Portal server in the container.
 
     1.  OpenShift:
 
@@ -126,13 +125,14 @@ mv /tmp/deployed/archive/* /opt/HCL/wp_profile/PortalServer/deployed/archive/
         kubectl exec –it dx-deployment-nnnnn /bin/bash
         ```
 
-    2.  ```
-/opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config -user <your DX admin user> -password <your DX admin user password> -in /tmp/ExportReleaseResults.xml -out /tmp/ExportReleaseResults_ImportResult.xml
-```
+    2.  
+      ```
+      /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config -user <your DX admin user> -password <your DX admin user password> -in /tmp/ExportReleaseResults.xml -out /tmp/ExportReleaseResults_ImportResult.xml
+      ```
 
     The output displays a successful execution. If not, check /tmp/ExportReleaseResults\_ImportResult.xml for errors.
 
-13. Update the WCM content in the HCL Portal server instance:
+14. Update the WCM content in the HCL Portal server instance:
 
     ```
     /opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh update-wcm -DWasPassword=<your WAS admin user password> -DPortalAdminPwd=<your DX admin user password>
@@ -140,11 +140,11 @@ mv /tmp/deployed/archive/* /opt/HCL/wp_profile/PortalServer/deployed/archive/
 
     The output displays a **BUILD SUCCESSFUL** message. If not, check the /opt/HCL/wp\_profile/ConfigEngine/log/ConfigTrace.log for errors.
 
-14. If you are using PZN rules, import the PZN rules by using the Personalization Administration Portlet functions.
+15. If you are using PZN rules, import the PZN rules by using the Personalization Administration Portlet functions.
     1.  Log in to the HCL Portal home page.
     2.  Navigate to **Personalization** \> **Business Rules** \> **Extra Actions** \> **Import**.
     3.  Browse to the /tmp/Workspace.nodes file and click **Import**.
-15. Log in to the HCL Portal home page and verify that the base server is functioning correctly:
+16. Log in to the HCL Portal home page and verify that the base server is functioning correctly:
 
     ```
     http://my.target.fqdn/wps/portal
@@ -152,19 +152,19 @@ mv /tmp/deployed/archive/* /opt/HCL/wp_profile/PortalServer/deployed/archive/
 
     Check the /opt/HCL/wp\_profile/logs/WebSphere\_Portal/SystemOut.log to ensure that there are no startup errors.
 
-16. Create all of your Virtual Portals.
+17. Create all of your Virtual Portals.
 
     ```
     /opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh create-virtual-portal -DWasPassword=<your WAS admin user password> -DPortalAdminPwd=<your DX admin user password> -DVirtualPortalTitle=VirtualPortal1 -DVirtualPortalRealm=VirtualPortal1Realm -DVirtualPortalContext=VirtualPortal1
     ```
 
-17. For each Virtual Portal, import the content using XML Access. Make sure that the context root and the Virtual Portal name both match in the XML Access command.
+18. For each Virtual Portal, import the content using XML Access. Make sure that the context root and the Virtual Portal name both match in the XML Access command.
 
     ```
     /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config/VirtualPortal1 -user <your DX admin user> -password <your DX admin user password> -in /tmp/ExportVP1Results.xml -out /tmp/ExportVP1Results_ImportResults.xml
     ```
 
-18. Restart the HCL Portal server and check /opt/HCL/wp\_profile/logs/WebSphere\_Portal/SystemOut.log to ensure no startup errors.
+19. Restart the HCL Portal server and check /opt/HCL/wp\_profile/logs/WebSphere\_Portal/SystemOut.log to ensure no startup errors.
 
 ## Syndicate the source and target environments
 
@@ -174,7 +174,7 @@ Follow these steps to syndicate the source and target environments.
 
 1.  Since the Kubernetes deployment typically allows only SSL traffic, you need to update the SSL Signer certificates for the Syndicator and Subscriber setups so that they can communicate with each other. To do this, log into the WAS console \(`https://machine_name/ibm/console` or `https://machine_name:port/ibm/console`\) and go to the **Signer certificates** page that is available in the **Security \> SSL certificate and key management** menu:
 
-    ![Signer certificates page](../images/signer_certificates_page.png)
+    ![Signer certificates page](../../../images/signer_certificates_page.png)
 
 2.  Select **Retrieve from port** and create the signer certificate, and then save the certificate.
 3.  Log in to HCL Portal instance to configure syndication: http://my.target.fqdn/wps/portal.

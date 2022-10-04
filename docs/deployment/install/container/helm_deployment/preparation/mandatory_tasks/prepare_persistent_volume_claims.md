@@ -39,7 +39,7 @@ To access the PersistentVolumes (PVs) on your cluster, the HCL Digital Experienc
 
 Each PVC that applications require allows you to configure the following parameters, as shown below. For a PVC of the Core application:
 
-```
+```yaml
 # Persistent Volume Setup
 volumes:
   # Persistent Volumes for Core

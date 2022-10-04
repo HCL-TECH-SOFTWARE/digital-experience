@@ -1,4 +1,4 @@
-# Using the DB2 Backup wizard
+# Using the DB2 Backup Wizard
 
 Use the Backup wizard of IBM DB2 Universal Database Enterprise Server Edition to create online or offline backups. This sample scenario describes how to create a full offline backup of an HCL Portal database.
 

@@ -4,7 +4,7 @@ This section describes the steps in deploying HCL Digital Experience 9.5 contain
 
 Follow these steps to deploy the HCL Digital Experience 9.5 and later CF container update releases in Docker.
 
-1.  Download the Docker image from your HCL Digital Experience entitlements in the [HCL Software License Portal](https://www.hcltech.com/software/support/release), in the **HCL_Portal_8.5_9.0_9.5_CFs** download package entry. Refer to the [Container image list](../container/image_list.md) for the latest HCL DX 9.5 container update releases.
+1.  Download the Docker image from your HCL Digital Experience entitlements in the [HCL Software License Portal](https://www.hcltech.com/software/support/release){:target="_blank"}, in the **HCL_Portal_8.5_9.0_9.5_CFs** download package entry. Refer to the [Container image list](../container/image_list.md) for the latest HCL DX 9.5 container update releases.
 
 2.  Open a terminal window and change to the root directory of the extracted package.
 

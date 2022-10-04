@@ -40,13 +40,14 @@ You add a JSP element to an authoring template when you want the JSP element to 
 
     2.  Enter an error message to display when an incorrect JSP path is entered. A Java exception stack trace is displayed if there is syntax error.
 
-10. Click ![properties](../images/propIcon.jpg) to open the display properties of the element. This view is where you define how the element is displayed on the item form.
+10. Click ![properties](../../../../../../images/propIcon.jpg) to open the display properties of the element. This view is where you define how the element is displayed on the item form.
 
     1.  To display the element as a required field select **Identify this as a required field**.
 
     2.  To hide a field on the content form from all users select **Hide field**. You must specify a default value if the field is a required field.
 
-        **Note:** Administrators and managers can choose to display hidden fields and elements in an item by clicking **Show hidden fields**.
+        !!!note
+            Administrators and managers can choose to display hidden fields and elements in an item by clicking **Show hidden fields**.
 
     3.  Select the users or groups you want to grant exclusive edit access to a field or element by clicking **Add Editors**.
 

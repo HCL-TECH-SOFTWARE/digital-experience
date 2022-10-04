@@ -1,4 +1,4 @@
-# Enabling archive logging for online backup
+# Enabling Archive Logging for Online Backup
 
 Enable archive logging if you are performing online backup of the database. Use the Configure Database Logging Wizard to specify the parameters that control archive logging.
 

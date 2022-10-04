@@ -1,4 +1,4 @@
-# Backup and restore
+# Back up and Restore
 
 Backup and recovery of data files and databases is an essential operation for any business system, particularly for data and applications that run in production environments. Create and follow a plan for backing up and recovering data on all tiers of your HCL Digital Experience deployment. IBM Installation Manager must also be included in backup and recovery planning. If you back up the HCL Portal file structure and then install a fix pack, your HCL Digital Experience and IBM Installation Manager become out of sync after you restore the HCL Portal file system. This condition is not recoverable.
 
@@ -17,7 +17,7 @@ When you create a backup and recovery plan, consider these general questions:
 
 **Video**: [HCL Digital Experience - How to backup HCL Portal](https://www.youtube.com/watch?v=3cjA9IUMJow)
 
-**Related information**  
-[Managing your HCL Portal environment](../manage_portal_using_iim/index.md)<br>
-[Backing up the system](../migrate/preparing_source_env/back_up_the_system.md)
+???+ info "**Related information:**"
+    - [Managing your HCL Portal environment](../manage_portal_using_iim/index.md)
+    - [Backing up the system](../migrate/preparing_source_env/back_up_the_system.md)
 

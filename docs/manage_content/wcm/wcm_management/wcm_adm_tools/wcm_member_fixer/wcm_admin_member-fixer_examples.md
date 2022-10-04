@@ -162,5 +162,3 @@ Some frequently asked question about how to use the web content member fixer tas
 
         ./ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DmismatchedId=update -Dfix=true
 
-
-

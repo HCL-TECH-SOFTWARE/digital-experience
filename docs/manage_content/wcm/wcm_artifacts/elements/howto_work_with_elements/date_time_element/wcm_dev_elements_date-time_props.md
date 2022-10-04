@@ -1,7 +1,5 @@
 # Specifying a date and time
 
-
-
 Use the date and time element to define the date and time to store in this component.
 
 1.  Click **Date** to select a date.

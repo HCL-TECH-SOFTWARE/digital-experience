@@ -1,4 +1,4 @@
-# Backing up the database
+# Backing up the Database
 
 Periodically run an automated backup procedure for the HCL Portal databases.
 

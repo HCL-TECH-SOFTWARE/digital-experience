@@ -41,5 +41,3 @@ The media queries in this sample work as follows:
 2.  The second media query makes sure that the social object social bar is hidden completely on displays that are 320 pixels wide or narrower.
 
 For displays that are 321 to 480 pixels wide, only the first query applies. For screens that are 320 pixels wide or narrower, both queries apply.
-
-

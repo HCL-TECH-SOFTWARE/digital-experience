@@ -53,9 +53,7 @@ To do the resynchronization, run the `create-page-nodes` configuration task, as 
     This task also removes any draft pages that are not found in the Portal Site library.
 
 
-???+info "Related information:"  
-
+???+ info "Related information:"  
     - [Enabling vanity URL support](../../../../manage_content/wcm/wcm_content_delivery/vanity_url/adm_vanity_url/van_url_cfgtsk_enable_vus.md)
-
     - [Synchronizing the vanity URL database](../../../../manage_content/wcm/wcm_content_delivery/vanity_url/adm_vanity_url/van_url_cfgtsk_sync_db.md)
 

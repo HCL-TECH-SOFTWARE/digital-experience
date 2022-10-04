@@ -58,7 +58,8 @@ Use the following properties to configure the connection between HCL Portal and 
             externalaccesscontrol.pdpw
     ```
 
-    **Note:** This command should be typed *on one line* in a command line window.
+    !!!note
+        This command should be typed *on one line* in a command line window.
 
 -   **externalaccesscontrol.pdurl=file:///$\{WAS\_INSTALL\_ROOT\}/java/jre/PdPerm.properties**
 
@@ -97,19 +98,22 @@ Use the following properties to configure the connection between HCL Portal and 
 
     Use these properties to specify the agent name and secret to establish a run time connection with eTrust SiteMinder. The agent should be a web agent with a static shared secret, so that Web Agents later than Version 4.6 of WebAgents should enable the property `supports 4.x agents` on the eTrust SiteMinder web agent. You can use the WebSphere® Application Server PropFilePasswordEncoder utility to mask the password.
 
-    **Note:** Using PropFilePasswordEncoder removes all comments and all properties that are commented out. Therefore make sure you create a back up copy of this file for future reference *before* using the PropFilePasswordEncoder utility.
+    !!!note
+        Using PropFilePasswordEncoder removes all comments and all properties that are commented out. Therefore make sure you create a back up copy of this file for future reference *before* using the PropFilePasswordEncoder utility.
 
     An example of masking the password is:
 
     `[AppServer\_root](../reference/wpsdirstr.md#was_root)/bin/PropFilePasswordEncoder [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/config/properties/ExternalAccessControlService.properties externalaccesscontrol.agentsecret`
 
-    **Note:** Type this command *on one line* in a command line window.
+    !!!note
+        Type this command *on one line* in a command line window.
 
 -   **externalaccesscontrol.admin = siteminderexternalaccesscontrol.password = passw0rd**
 
     Use these properties to specify the administrative user ID and password for a user who can create, delete, and modify eTrust SiteMinder objects that are used to represent HCL Portal roles. This user ID must have sufficient access to domain level objects in eTrust SiteMinder. You can use the WebSphere® Application Server PropFilePasswordEncoder utility to mask the password.
 
-    **Note:** Using PropFilePasswordEncoder removes all comments and all properties that are commented out. Therefore make sure you create a back up copy of this file for future reference *before* using the PropFilePasswordEncoder utility.
+    !!!note
+        Using PropFilePasswordEncoder removes all comments and all properties that are commented out. Therefore make sure you create a back up copy of this file for future reference *before* using the PropFilePasswordEncoder utility.
 
     An example of masking the password is:
 
@@ -125,13 +129,15 @@ Use the following properties to configure the connection between HCL Portal and 
 
     Use this property to specify whether the ESM subsystem should switch to another Policy Server if it cannot contact the current one. Possible values are `true` and `false`. You can specify this property as either `externalaccesscontrol.failOver` or as `externalaccesscontrol.failover` .
 
-    **Note:** It is important that this value and the number of Policy Server IP addresses that are specified by the `servers` property are carefully coordinated. If you specify multiple Policy Server addresses on the `servers` property, and this property is set to `false`, then the Computer Associate's Agent API will follow round-robin load balancing, by distributing or spraying requests between the configured Policy Servers. This may be appropriate for a TAI which is only doing `read` operations from the Policy Server\(s\), but not for `write` operations . If you have multiple servers defined in the `externalaccesscontrol.servers` property \(following next\), set `failOver` to `true` .
+    !!!note
+        It is important that this value and the number of Policy Server IP addresses that are specified by the `servers` property are carefully coordinated. If you specify multiple Policy Server addresses on the `servers` property, and this property is set to `false`, then the Computer Associate's Agent API will follow round-robin load balancing, by distributing or spraying requests between the configured Policy Servers. This may be appropriate for a TAI which is only doing `read` operations from the Policy Server\(s\), but not for `write` operations . If you have multiple servers defined in the `externalaccesscontrol.servers` property \(following next\), set `failOver` to `true` .
 
 -   **externalaccesscontrol.servers = server1,server2, . . .**
 
     Use this property to specify the IP addresses of all the Policy Servers. Multiple addresses need to separated by commas. An example is: `servers=10.0.0.1,10.0.0.2` .
 
-    **Note:** If you have multiple servers defined in the `externalaccesscontrol.servers` property, set the `failOver` property to `true` .
+    !!!note
+        If you have multiple servers defined in the `externalaccesscontrol.servers` property, set the `failOver` property to `true` .
 
     You can define the following properties for each server. In order to differentiate the properties for each server, specify the keys in the format `Server IP address.key=value` . The defaults are assumed for any keys that you omit. The available keys are as follows:
 

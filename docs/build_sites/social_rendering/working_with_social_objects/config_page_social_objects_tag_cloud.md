@@ -16,7 +16,8 @@ Learn how to enable Tag Cloud portlet support on your portal page. You can enabl
 
         For example, `profiles/profile_search_tag.json`.
 
-        **Note:** The search\_tag theme profile is a hidden profile, therefore it cannot be selected in the theme profile drop-down list. This profile needs to be set manually.
+        !!! note
+            The search\_tag theme profile is a hidden profile, therefore it cannot be selected in the theme profile drop-down list. This profile needs to be set manually.
 
     6.  Click **Add**.
 
@@ -32,7 +33,8 @@ Learn how to enable Tag Cloud portlet support on your portal page. You can enabl
 
     3.  Open your theme profile JSON file and add the following lines to the `moduleIDs` JSON array:
 
-        **Note:** If one or more of the following theme modules are already in the list of `moduleIDs`, you do not have to add them again.
+        !!! note 
+            If one or more of the following theme modules are already in the list of `moduleIDs`, you do not have to add them again.
 
         -   `wp_pagebuilder_ui`
         -   `wp_tagging_rating_tagcloud`
@@ -41,10 +43,9 @@ Learn how to enable Tag Cloud portlet support on your portal page. You can enabl
 
 
 
-**Related information**  
 
+???+ info "Related information:"
+    - [Profile schema definition](../../themes_skins/the_module_framework/writing_module/themeopt_mod_pro_def.md)
+    - [Using the portal Tag Cloud with lists of social objects](../working_with_social_objects/using_portal_tagcloud_with_social_objects/index.md)
 
-[Profile schema definition](../dev-theme/themeopt_mod_pro_def.md)
-
-[Using the portal Tag Cloud with lists of social objects](../social/soc_rendr_tag_cloud_w_socl_list.md)
 

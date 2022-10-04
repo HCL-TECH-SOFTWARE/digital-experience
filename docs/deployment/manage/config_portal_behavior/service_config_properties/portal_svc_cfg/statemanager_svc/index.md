@@ -32,7 +32,8 @@ The portal State Manager Service holds the following properties:
 
     Of the default values given, the following two selection preprocessors are alternative options. They process the page that the user selected. All other preprocessors are for portal internal use only and must not be changed.
 
-    **Note:** Both of the following selection preprocessors are mutually exclusive. They cannot be used in combination with each other.
+    !!!note
+        Both of the following selection preprocessors are mutually exclusive. They cannot be used in combination with each other.
 
     -   **com.ibm.wps.state.preprocessors.selection.StandardPortalSelectionImpl**
 
@@ -95,12 +96,9 @@ The portal State Manager Service holds the following properties:
     Do not specify a value less than zero \(0**** \). Negative values are considered to be not valid.
 
 
--   **[URL normalization for search of portal pages by external search engines](../admin-system/srvcfgref_url_normlz.md)**  
+-   **[URL normalization for search of portal pages by external search engines](../../../../config_portal_behavior/service_config_properties/portal_svc_cfg/statemanager_svc/srvcfgref_url_normlz.md)**  
 You can configure the normalization of the URL of your portal. URL normalization is required to enable external search engines to crawl the content of your portal.
 
-
 **Related information**  
-
-
-[Selecting and changing the language](../admin-system/adsuplang.md)
+[Selecting and changing the language](../../../../../../extend_dx/development_tools/portal_admin_tools/language_support/adsuplang.md)
 

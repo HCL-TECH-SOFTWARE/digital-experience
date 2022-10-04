@@ -2,6 +2,7 @@
 
 Use these topics for general administrative information about tagging and rating in the portal.
 
+<!--
 -   **[How public and private tags and ratings work in the portal](../admin-system/tag_rate_adm_publc_privt.md)**  
 Users can choose between applying a tag or rating as a private or public tag or rating.
 -   **[Tagging and rating with anonymous users](../admin-system/tag_rate_adm_anonusr.md)**  
@@ -13,13 +14,10 @@ The portal provides several options for normalizing tags. Normalization is a pro
 -   **[Type-ahead feature for the deprecated tag widget](../admin-system/tag_rate_adm_typeahead.md)**  
 The tag widget from earlier HCL Portal versions provided a type-ahead feature. With the latest version of HCL Portal, that tag widget is deprecated. The type-ahead feature makes it easier for users to find suitable tags. Type-ahead supports users when they work with tags. For example, when users apply tags using the tag widget, or when they search for tags, for example by using the open search functionality, type-ahead provides users suggestions for tags that other users have applied already before. Type-ahead can also help reduce the number of variants of tags.
 -   **[Filtering content for tagging](../admin-system/tag_rate_adm_filtr_cont.md)**  
-You can use filtering mechanisms to control which terms users can use and which terms they cannot use as tags. The portal provides both a blacklist and a whitelist filter.
+You can use filtering mechanisms to control which terms users can use and which terms they cannot use as tags. The portal provides both a blacklist and a whitelist filter. -->
 
 
-**Related information**  
-
-
-[Adding query parameters](../admin-system/tag_rate_api_rest_add_qparms.md)
-
-[Parameter reference for the tag and rating widgets](../admin-system/tag_rate_parm_ref.md)
+???+ info "Related information:"
+    - [Adding query parameters](../dev_tagging_and_rating/rest_api/tag_rate_api_rest_add_qparms.md)
+    - [Parameter reference for the tag and rating widgets](../cfg_reference/parm_ref_tag_rate_widget/index.md)
 

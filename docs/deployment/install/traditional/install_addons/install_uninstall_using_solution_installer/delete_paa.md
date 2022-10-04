@@ -4,20 +4,19 @@ After you run the uninstall-paa task and removing the assembly from the ConfigEn
 
 1.  Open a command prompt.
 
-2.  Change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+2.  Change to the wp_profile_root/ConfigEngine directory.
 
 3.  Run the following command:
 
-    **Tip:** You can delete one assembly or you can delete multiple assemblies by using a comma-separated list. To delete multiple assemblies, enter -DassemblyList=assembly1,assembly2,assembly3.
+    !!!note "Tip"
+        You can delete one assembly or you can delete multiple assemblies by using a comma-separated list. To delete multiple assemblies, enter -DassemblyList=assembly1,assembly2,assembly3.
 
-    **Optional parameter:** To delete all unregistered assemblies, replace the -DassmeblyList parameter with -DdeleteAll=true. Only unregistered PAA content is removed.
+    !!!note "Optional parameter"
+        To delete all unregistered assemblies, replace the -DassmeblyList parameter with -DdeleteAll=true. Only unregistered PAA content is removed.
 
-    -   AIX®: ./ConfigEngine.sh delete-paa -DassemblyList=assembly\_list -DWasPassword=password -DPortalAdminPwd=password
-    -   HP-UX: ./ConfigEngine.sh delete-paa -DassemblyList=assembly\_list -DWasPassword=password -DPortalAdminPwd=password
-    -   IBM® i: ConfigEngine.sh delete-paa -DassemblyList=assembly\_list -DWasPassword=password -DPortalAdminPwd=password
-    -   Linux™: ./ConfigEngine.sh delete-paa -DassemblyList=assembly\_list -DWasPassword=password -DPortalAdminPwd=password
-    -   Solaris: ./ConfigEngine.sh delete-paa -DassemblyList=assembly\_list -DWasPassword=password -DPortalAdminPwd=password
-    -   Windows™: ConfigEngine.bat delete-paa -DassemblyList=assembly\_list -DWasPassword=password -DPortalAdminPwd=password
-    -   z/OS®: ./ConfigEngine.sh delete-paa -DassemblyList=assembly\_list -DWasPassword=password -DPortalAdminPwd=password
+    -   AIX®: `./ConfigEngine.sh delete-paa -DassemblyList=assembly_list -DWasPassword=password -DPortalAdminPwd=password`
+    -   Linux™: `./ConfigEngine.sh delete-paa -DassemblyList=assembly_list -DWasPassword=password -DPortalAdminPwd=password`
+    -   Windows™: `ConfigEngine.bat delete-paa -DassemblyList=assembly_list -DWasPassword=password -DPortalAdminPwd=password`
+
 
 

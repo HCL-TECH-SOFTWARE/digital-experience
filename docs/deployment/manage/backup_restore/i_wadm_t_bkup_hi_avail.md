@@ -1,4 +1,4 @@
-# Guidelines for Idle Standby clustered deployments
+# Guidelines for Idle Standby Clustered Deployments
 
 If HCL Digital Experience is deployed in an Idle Standby topology, both a primary node and a secondary node are running in a cluster. The primary node is the active node, and the secondary node is the backup node. If HCL Digital Experience is deployed in a clustered topology, both a primary node and additional nodes are running in a cluster. In this topology, there is no difference in database backup and restore because all cluster members use the same HCL Portal databases. However, you need to consider some additional factors when you back up and recover the file system in an Idle Standby clustered deployment.
 

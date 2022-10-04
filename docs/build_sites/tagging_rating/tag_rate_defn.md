@@ -42,8 +42,7 @@ Tagging and rating are common and effective collaboration techniques that suppor
 
 **Related information**  
 
-
-[Adding query parameters](../admin-system/tag_rate_api_rest_add_qparms.md)
+[Adding query parameters](../tagging_rating/dev_tagging_and_rating/rest_api/tag_rate_api_rest_add_qparms.md)
 
 ## Public and private tagging and rating
 

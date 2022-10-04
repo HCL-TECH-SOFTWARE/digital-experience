@@ -42,7 +42,7 @@ The default locations of these directories are:
 -   IBM i - Installation location: /QIBM/ProdData/InstallationManager
 -   IBM i - Agent data location: /QIBM/UserData/InstallationManager
 
-**Related information**  
-[Backing up and restoring Installation Manager](https://www.ibm.com/docs/en/installation-manager/1.8.5?topic=manager-backing-up-restoring-installation)<br>
-[Backing up IBM Installation Manager agent data and shared files for recovery with IBM Business Process Manager (BPM)](https://www.ibm.com/support/pages/node/727017)
+???+ info "**Related information**"  
+    - [Backing up and restoring Installation Manager](https://www.ibm.com/docs/en/installation-manager/1.8.5?topic=manager-backing-up-restoring-installation)
+    - [Backing up IBM Installation Manager agent data and shared files for recovery with IBM Business Process Manager (BPM)](https://www.ibm.com/support/pages/node/727017)
 

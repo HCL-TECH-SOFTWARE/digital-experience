@@ -1,4 +1,4 @@
-# Configure networking
+# Configure Networking
 
 This section explains what must be configured from a networking perspective to get HCL Digital Experience 9.5 running in your Kubernetes or OpenShift cluster, and to provide accessibility to your deployment from outside the Cluster.
 
@@ -46,41 +46,41 @@ Refer to the HCL DX 9.5 `values.yaml` detail for all possible applications that 
 
 **Configuring Hybrid Host**
 
-In a [Hybrid](/docs/get_started/plan_deployment/hybrid_deployment/index.md) deployment, the host for the on-premise DX Core will be added in the core configuration section and the other applications host will be placed under the add-on section. See the following example:
+In a [Hybrid](../../../../../../get_started/plan_deployment/hybrid_deployment/index.md) deployment, the host for the on-premise DX Core will be added in the core configuration section and the other applications host will be placed under the add-on section. See the following example:
 
-```
+```yaml
 networking:
-    # Networking configuration specific to Core
-    core:
-      # Host of Core, must be specified as a FQDN
-      # If you are running hybrid, you need to specify the FQDN of the on-premise Core 
-      host
-      # Example: eks-hybrid.dx.com
-      host: "your-dx-core-instance.whateverdomain.com"
-      port: "10042"
-      contextRoot: "wps"
-      personalizedHome: "myportal"
-      home: "portal"
-    addon:
-      # Host of the addon applications
-      # If you are not running hybrid, you can leave this value empty and the Core host 
-     will be used
-      # If you are running hybrid, you need to specify the FQDN of the Kubernetes 
-     deployment
-      # Example: eks-hybrid.apps.dx.com
-      host: "your-dx-apps-instance.whateverdomain.com"
-      # Port of the addon applications
-      # If you are running hybrid, you can specify a port
-      # If left empty, no specific port will be added to the host
-      port: "443"
-      # Setting if SSL is enabled for addon applications
-      # If you are running hybrid, make sure to set this accordingly to the Kubernetes 
-     deployment configuration
-      # Will default to true if not set    
-      ssl: "true"
+  # Networking configuration specific to Core
+  core:
+    # Host of Core, must be specified as a FQDN
+    # If you are running hybrid, you need to specify the FQDN of the on-premise Core 
+    host
+    # Example: eks-hybrid.dx.com
+    host: "your-dx-core-instance.whateverdomain.com"
+    port: "10042"
+    contextRoot: "wps"
+    personalizedHome: "myportal"
+    home: "portal"
+  addon:
+    # Host of the addon applications
+    # If you are not running hybrid, you can leave this value empty and the Core host 
+    will be used
+    # If you are running hybrid, you need to specify the FQDN of the Kubernetes 
+    deployment
+    # Example: eks-hybrid.apps.dx.com
+    host: "your-dx-apps-instance.whateverdomain.com"
+    # Port of the addon applications
+    # If you are running hybrid, you can specify a port
+    # If left empty, no specific port will be added to the host
+    port: "443"
+    # Setting if SSL is enabled for addon applications
+    # If you are running hybrid, make sure to set this accordingly to the Kubernetes 
+    deployment configuration
+    # Will default to true if not set    
+    ssl: "true"
 ```
 
-Please refer to the original values.yaml for all available applications that can be configured. See the [Planning your container deployment using Helm](/docs/deployment/install/container/helm_deployment/overview.md) topic for details.
+Please refer to the original values.yaml for all available applications that can be configured. See the [Planning your container deployment using Helm](/install/container/index.md) topic for details.
 
 ## Configure HAProxy certificate
 
@@ -129,11 +129,11 @@ This configuration is helpful for those who want to use a custom `Ingress Contro
 Creation of that certificate can be achieved using the following commands for OpenSSL:
 
 ```
-   # Creation of a private key
-   openssl genrsa -out my-key.pem 2048
-                      
-   # Creation of a certificate signed by the private key created before
-   openssl req -x509 -key my-key.pem -out my-cert.pem -days 365 -subj '/CN=my-cert'
+  # Creation of a private key
+  openssl genrsa -out my-key.pem 2048
+                    
+  # Creation of a certificate signed by the private key created before
+  openssl req -x509 -key my-key.pem -out my-cert.pem -days 365 -subj '/CN=my-cert'
 ```
 
 This provides you with a key and cert file that can be used in the next step, creation of the certificate to your deployment.
@@ -147,13 +147,13 @@ To have your deployment and HAProxy to use the certificate, you must store it in
 The secret can be created using the following commands:
 
 !!! note
-    The secret name can be chosen by you and must be referenced in the next configuration step (the following example uses `dx-tls-cert`). The namespace is the Kubernetes namespace where you want to deploy HCL Digital Experience 9.5 to (the example uses `digital-experience`).
+  The secret name can be chosen by you and must be referenced in the next configuration step (the following example uses `dx-tls-cert`). The namespace is the Kubernetes namespace where you want to deploy HCL Digital Experience 9.5 to (the example uses `digital-experience`).
 
 ```
-   # Create secret with the name "dx-tls-cert"
-   # Secret will be created in the namespace "digital-experience"
-   # You can either reference the cert and key file created before, or a proper signed certificate e.g. from your CA
-   kubectl create secret tls dx-tls-cert --cert=my-cert.pem --key=my-key.pem -n digital-experience 
+  # Create secret with the name "dx-tls-cert"
+  # Secret will be created in the namespace "digital-experience"
+  # You can either reference the cert and key file created before, or a proper signed certificate e.g. from your CA
+  kubectl create secret tls dx-tls-cert --cert=my-cert.pem --key=my-key.pem -n digital-experience 
 ```
 
 ## Configure secret in deployment
@@ -162,11 +162,11 @@ You need to make sure that the reference to the secret is set up correctly in yo
 
 You can set the name of the certificate used with the following syntax, the default value is `dx-tls-cert`:
 
-```
-   # Networking specific configuration
-   networking:
-   # TLS Certificate secret used for haproxy
-    tlsCertSecret: "dx-tls-cert"            
+```yaml
+  # Networking specific configuration
+  networking:
+  # TLS Certificate secret used for haproxy
+  tlsCertSecret: "dx-tls-cert"
 ```
 
 !!! note

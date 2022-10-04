@@ -14,4 +14,3 @@ You must prepare your source and target systems before a web content repository 
 
 When you set up an Oracle database for JCR, you must have a separate physical Oracle database for each JCR repository. This setup makes it easy to copy a JCR repository from one system to another. If you do choose to store all of your JCR repositories in a single database, then you must use different schema names for each system. HCL Portal does not support more than one instance of HCL Portal running against a single JCR database or schema.
 
-

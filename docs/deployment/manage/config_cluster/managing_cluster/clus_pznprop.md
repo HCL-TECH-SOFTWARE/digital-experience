@@ -4,7 +4,7 @@ HCL Digital Experience provides two property files that you can modify to custom
 
 To propagate your changes, manually copy the following properties files to each node in the cluster:
 
--   [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/config/config/services/PersonalizationService.properties
--   [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/config/config/services/FeedbackService.properties
+-   wp_profile_root/PortalServer/config/config/services/PersonalizationService.properties
+-   wp_profile_root/PortalServer/config/config/services/FeedbackService.properties
 
 

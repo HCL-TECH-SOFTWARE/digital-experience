@@ -22,7 +22,8 @@ In the WebSphere® Integrated Solutions Console, the portal Authentication Servi
 
     Use this property to enable or disable the automatic login URL in Portal.
 
-    **Note:** This property is a `java.lang.Boolean` property.
+    !!!note
+        This property is a `java.lang.Boolean` property.
 
     -   **true**
 
@@ -84,7 +85,5 @@ Use the following properties to define the custom filters in the various authent
 
 
 **Related information**  
-
-
-[Configuring authentication filters](../admin-system/adauthflt.md)
+[Configuring authentication filters](../../../../config_portal_behavior/auth_filters/index.md)
 

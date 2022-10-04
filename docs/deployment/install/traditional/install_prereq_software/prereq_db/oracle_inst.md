@@ -20,6 +20,7 @@ You can use Oracle or Oracle RAC as the database software to configure it to wor
     -   `$ gsdctl start`
     -   `$ lsnrctl start`
     -   `$ agentctl start`
+
 5.  The default table space size for Oracle RAC might need to be set to 1024 MB with `autoextend` turned on for database transfer to be successful.
 
 6.  Update environment variables
@@ -37,17 +38,13 @@ You can use Oracle or Oracle RAC as the database software to configure it to wor
 
 9.  Restart server1 to ensure that the Configuration Wizard uses the updated environment variables. Go to AppServer_home/profiles/cw_profile/bin and stop the server:
 
-    -   AIX® HP-UX Linux Solaris: `./stopServer.sh server1 -username username -password password`
-    -   IBM® i: `stopServer server1 -username username -password password`
+    -   AIX®, Linux: `./stopServer.sh server1 -username username -password password`
     -   Windows™: `stopServer.bat server1 -username username -password password`
-    -   z/OS®: `./stopServer.sh server1 -username username -password password`
     
     Then, start the server:
 
-    -   AIX HP-UX Linux Solaris: `./startServer.sh server1`
-    -   IBM i: `startServer server1`
+    -   AIX, Linux: `./startServer.sh server1`
     -   Windows: `startServer.bat server1`
-    -   z/OS: `./startServer.sh server1`
 
 Use the Configuration Wizard to set up and configure the database to work with HCL Portal. You can use the wizard to create custom scripts that you or your database administrator can use to configure the database. You can also use the wizard to automatically set up and configure the database. The wizard creates instructions and scripts that are based on your selections and provided data.
 
@@ -61,6 +58,7 @@ When you use the wizard, you provide information about the database for your env
 
 You cannot use the **Database Transfer** option in the Configuration Wizard to assign custom table spaces on your database server. You can perform manual steps to assign custom table spaces. Go to [Assigning custom table spaces](../../../../manage/db_mgmt_sys/custom_tablespace/index.md) for more information.
 
-**Related information**: [JDBC type 2 and type 4 drivers](/docs/get_started/plan_deployment/traditional_deployment/database_consideration/db_jdbc_type.md)
+**Related information**: 
+[JDBC type 2 and type 4 drivers](../../../../../get_started/plan_deployment/traditional_deployment/database_consideration/db_jdbc_type.md)
 
 

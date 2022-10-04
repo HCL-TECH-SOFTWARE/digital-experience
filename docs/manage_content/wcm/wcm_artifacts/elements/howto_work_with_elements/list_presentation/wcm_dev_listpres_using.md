@@ -1,4 +1,4 @@
-# List presentation options
+# List Presentation Options
 
 
 The selection items and fields in the list presentation are equivalent to the same fields used in menu and navigator elements.

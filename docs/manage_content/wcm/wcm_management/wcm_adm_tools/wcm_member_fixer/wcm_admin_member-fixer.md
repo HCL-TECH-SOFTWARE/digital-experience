@@ -29,6 +29,7 @@ If custom mapping is required you must perform the following steps to map the us
     **Library parameters in steps 2 and 3:**
 
     -   The library specified in the command is the library to be scanned by the member fixer task. If the query parameter "library" is omitted, the default library that has been configured with the `defaultLibrary` property in the `WCM WCMConfigService` service is used.
+
 2.  To create a report of users or groups referenced in Web Content Manager items that need fixing, run the following command from the `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine` directory:
 
     -   **Windows™**
@@ -47,9 +48,11 @@ If custom mapping is required you must perform the following steps to map the us
 
         ./ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary"
 
-    **Note:** An administrator user name and password is not required if you have already specified the portal administrator username and password using the PortalAdminId and PortalAdminPwd settings in the wkplc.properties file.
+    !!! note
+        An administrator user name and password is not required if you have already specified the portal administrator username and password using the PortalAdminId and PortalAdminPwd settings in the wkplc.properties file.
 
-    **Note:** Before you progress to the next step and run the member fixer task in fix mode, ensure that the report mode indicates that the updates will happen as you require. A summary of the updates will be shown by the command.
+    !!! note
+        Before you progress to the next step and run the member fixer task in fix mode, ensure that the report mode indicates that the updates will happen as you require. A summary of the updates will be shown by the command.
 
     A detailed report containing the updates that will be made for each item will be shown in the SystemOut.log file located in `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\logs\HCL Portal and HCL Web Content Manager`.
 
@@ -61,15 +64,9 @@ If custom mapping is required you must perform the following steps to map the us
 
     |Condition description|Command to correct condition|
     |---------------------|----------------------------|
-    |Nonexistent users or groups have alternate distinguished names \(DNs\) available.|    -   To update references to nonexistent users or groups with the DN values that are mapped in the MemberFixerModule.properties file, append -DaltDn=update to the command.
-    -   To remove references to nonexistent users or groups append `-DaltDn=remove` to the command.
-|
-    |If users or groups have invalid distinguished names \(DNs\) the report lists these as "invalid". This means the distinguished name doesn't exist and there is no alternate distinguished name available.|    -   To remove references to users and groups that have invalid distinguished names append -DinvalidDn=remove to the command.
-    -   To update references to users and groups that have invalid distinguished names with the portal administrator user distinguished name, append -DinvalidDn=update to the command.
-|
-    |Users or groups have been found with mismatched unique IDs.|    -   To fix the mismatched unique IDs append -DmismatchedId=update to the command.
-    -   To remove references to users and groups with mismatched unique IDs append -DmismatchedId=remove to the command.
-|
+    |Nonexistent users or groups have alternate distinguished names \(DNs\) available.|    -   To update references to nonexistent users or groups with the DN values that are mapped in the MemberFixerModule.properties file, append -DaltDn=update to the command. <br/> -   To remove references to nonexistent users or groups append `-DaltDn=remove` to the command.|
+    |If users or groups have invalid distinguished names \(DNs\) the report lists these as "invalid". This means the distinguished name doesn't exist and there is no alternate distinguished name available.|    -   To remove references to users and groups that have invalid distinguished names append -DinvalidDn=remove to the command. <br/> -   To update references to users and groups that have invalid distinguished names with the portal administrator user distinguished name, append -DinvalidDn=update to the command.|
+    |Users or groups have been found with mismatched unique IDs.|    -   To fix the mismatched unique IDs append -DmismatchedId=update to the command. <br/> -   To remove references to users and groups with mismatched unique IDs append -DmismatchedId=remove to the command.|
 
     -   **Windows™**
 
@@ -87,7 +84,8 @@ If custom mapping is required you must perform the following steps to map the us
 
         ./ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -Dfix=true
 
-    **Note:** An administrator user name and password is not required if you have already specified the portal administrator username and password using the PortalAdminId and PortalAdminPwd settings in the wkplc.properties file.
+    !!! note
+        An administrator user name and password is not required if you have already specified the portal administrator username and password using the PortalAdminId and PortalAdminPwd settings in the wkplc.properties file.
 
 4.  After the member fixer task runs, review the log output to verify that the task ran correctly. The member fixer task may not be able to save items that fail validation, such as items that contain invalid fields. You must edit these items to make them valid and then run the member fixer task again.
 
@@ -183,8 +181,6 @@ If there have been changes to users and groups that are within the specified rea
 
 
 
-**Related information**  
-
-
-[Setting service configuration properties](../admin-system/adsetcfg.md)
+???+ info "Related information:"
+    - [Setting service configuration properties](../../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 

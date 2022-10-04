@@ -2,6 +2,7 @@
 
 These configuration options are available to address installation requirements for other deployment scenarios.
 
+<!--
 -   **[Controlling access to hosts specified in a URL](../wcm/wcm_config_accesshost.md)**  
 By default, you can specify any host name in a URL used to retrieve content. However, you can restrict access to a specified list of host names by modifying the configuration of the WCM WCMConfigService service.
 -   **[Web content substitution variables](../wcm/wcm_config_wasvariables.md)**  
@@ -19,6 +20,6 @@ To use the email workflow action, you must configure Web Content Manager to use 
 -   **[Defining alternative administrators for multi-realm configurations](../wcm/wcm_config_admin_multirealm.md)**  
 Web Content Manager requires a user to run various system tasks such as initialization, and background tasks such as syndication. By default, this system user is the configured JCR domain administrator. In scenarios where the configured user realm does not contain the domain administrator then an alternative user must be provided.
 -   **[Changing the login or redirect page used for servlet rendering](../wcm/wcm_config_admin_redirect.md)**  
-When an unauthenticated user accesses secured content using servlet rendering, the user is redirected to the Web Content Manager login page by default.
+When an unauthenticated user accesses secured content using servlet rendering, the user is redirected to the Web Content Manager login page by default. -->
 
 

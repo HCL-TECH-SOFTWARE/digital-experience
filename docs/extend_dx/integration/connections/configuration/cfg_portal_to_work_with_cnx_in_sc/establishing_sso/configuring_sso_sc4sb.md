@@ -128,11 +128,14 @@ If you have the default log level in the WebSphere® Integrated Solutions Consol
     -   AIX®, HP-UX, Linux™, Solaris: `./ConfigEngine.sh update-outbound-http-connection-config -DConfigFileName=XML\_file -DOutboundProfileType=global`
     -   IBM® i: `ConfigEngine.sh update-outbound-http-connection-config -DConfigFileName=XML\_file -DOutboundProfileType=global`
     -   Windows™: `ConfigEngine.bat update-outbound-http-connection-config -DConfigFileName=XML\_file -DOutboundProfileType=global`
-    **Note:** A preexisting HCL Connections dynamic policy cannot be used for SmartCloud for Social Business. An error can occur if two policies exist. Verify that there is no value set for the wp.proxy.config.urlreplacement.ibm\_connections\_policy in the WP ConfigService Resource Environment Provider.
+
+    !!! note
+		A preexisting HCL Connections dynamic policy cannot be used for SmartCloud for Social Business. An error can occur if two policies exist. Verify that there is no value set for the wp.proxy.config.urlreplacement.ibm\_connections\_policy in the WP ConfigService Resource Environment Provider.
 
 4.  Verify the setup by logging in to HCL and then calling the following URL: http://<portalserver\>:<portalserverport\>/wps/myproxy/https/apps.na.collabserv.com/homeppage/web/updates/\#imFollowing/all.
 
-    **Note:** You might need to change apps.na.collabserv.com to match the host name of your environment.
+    !!! note
+		You might need to change apps.na.collabserv.com to match the host name of your environment.
 
     If the setup is correct, Activity Stream markup displays without CSS styling. If the setup is incorrect, one of the following errors might occur:
 
@@ -141,12 +144,8 @@ If you have the default log level in the WebSphere® Integrated Solutions Consol
     If an error occurs, check SystemOut.log for error messages, verify that the policy file is correct, and rerun the task.
 
 
-**Related information**  
-
-
-[Configuration settings for Tivoli Federated Identity Manager \(TFIM\)](outbhttp_auth_est_sso_tfim.md)
-
-[Configuration settings for Active Directory Federation Services \(ADFS\)](outbhttp_auth_est_sso_adfs.md)
-
-[Import SSL certificate to set up trust association](../collab/i_coll_t_enable_lctrust.md)
+???+ info "Related information:"
+	- [Configuration settings for Tivoli Federated Identity Manager \(TFIM\)](../../../../../portlets_development/web2_ui/outbound_http_connection/authenticating_outbound_http_connections/establish_sso_connections_thru_SAML20_tokens/cfg_saml_auth_conn/cfg_settings_tfim/index.md)
+	- [Configuration settings for Active Directory Federation Services \(ADFS\)](../../../../../portlets_development/web2_ui/outbound_http_connection/authenticating_outbound_http_connections/establish_sso_connections_thru_SAML20_tokens/cfg_saml_auth_conn/cfg_settings_adfs/index.md)
+	- [Import SSL certificate to set up trust association](../../i_coll_t_enable_lctrust.md)
 

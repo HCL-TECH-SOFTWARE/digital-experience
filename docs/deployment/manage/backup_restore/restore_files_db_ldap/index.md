@@ -1,4 +1,4 @@
-# Restoring files, databases, and the LDAP server(s)
+# Restoring Files, Databases, and the LDAP Servers
 
 When necessary, restore the HCL Digital Experience file system, databases, and LDAP server or servers that you backed up.
 
@@ -35,6 +35,6 @@ Before you restore HCL Portal databases, remember to adhere to the following pri
     -   For IBM Domino®, refer to the Directory Services topics in the Domino Administrator Help.
     -   For other LDAP servers, refer to the product documentation for instructions.
 
-**Related information**  
-[Backup and recovery](../../migrate/planning_migration/migration_consideration/mig_plan_backup_and_recovery.md)
+???+ info "**Related information:**"
+    - [Backup and recovery](../../migrate/planning_migration/migration_consideration/mig_plan_backup_and_recovery.md)
 

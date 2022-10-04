@@ -1,4 +1,4 @@
-# Configure and access logs
+# Configure and Access Logs
 
 This topic shows you how to configure logging in Helm, as well as how to access Kubernetes container logs.
 
@@ -15,7 +15,7 @@ In CF200, a new mechanism is introduced for configuring log settings at runtime 
 
 You can set a desired log configuration for a DX application by specifying an appropriate log string in your Helm custom-values.yaml file. Place the log string in the `level` property for the specified application. These properties are found in the `logging` section. For example, to set the configuration for Content Composer, use the following property:
 
-```
+```yaml
 logging:
   # Content Composer specific logging configuration
   contentComposer:

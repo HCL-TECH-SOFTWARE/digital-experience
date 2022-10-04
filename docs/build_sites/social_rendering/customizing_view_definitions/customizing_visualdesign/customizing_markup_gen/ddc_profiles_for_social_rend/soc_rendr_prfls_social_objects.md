@@ -269,6 +269,7 @@ It declares the following attribute names:
     This attribute specifies the type information for the URI of this social object. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
 
+<!--
 
 **Related information**  
 
@@ -277,5 +278,5 @@ It declares the following attribute names:
 
 [Configuring file type icon mappings](../social/soc_rendr_cfg_filetype_map.md)
 
-[Configuring globally how social object data is served](../social/soc_rendr_cfg_data_serve.md)
+[Configuring globally how social object data is served](../social/soc_rendr_cfg_data_serve.md) -->
 

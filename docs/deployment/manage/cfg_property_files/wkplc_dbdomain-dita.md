@@ -1,4 +1,4 @@
-# Properties file: wkplc_dbdomain.properties
+# Properties File: wkplc_dbdomain.properties
 
 
 ## Release Database Properties

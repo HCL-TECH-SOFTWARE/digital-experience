@@ -6,15 +6,7 @@ When you set up a cluster, you must create a deployment manager profile. Use the
 
 The **Create a Deployment Manager** is a sub step in the **Set Up a Cluster** configuration.
 
-
-**Related information**  
-
-
-[Accessing the Configuration Wizard](../config/cw_run.md)
-
-[Updating DB2 self-tuning memory manager \(STMM\) settings](../migrate/mig_t_post_db2_stmm.md)
-
-# Creating a deployment manager
+## Creating a deployment manager
 
 You can create the new deployment manager profile on the same server as portal or on a remote server.
 
@@ -82,16 +74,18 @@ Each potential step in the configuration is included.
 
         None
 
-
 If you changed the context root during the installation or configuration of HCL Digital Experience, then you must complete the following steps:
 
 1.  Log on to the Deployment Manager WebSphere Integrated Solutions Console.
-2.  Go to **Security** \> **Global security** \> **Trust association** \> **Interceptors** \> **com.ibm.portal.auth.tai.HTTPBasicAuthTAI**.
+2.  Go to **Security > Global security > Trust association > Interceptors > com.ibm.portal.auth.tai.HTTPBasicAuthTAI**.
 3.  Edit the urlBlackList and urlWhitelist parameters with the new context path; for example:
-    -   urlBlacklist: /wpsmodified/myportal\*
-    -   urlWhiteList: /wpsmodified/mycontenthandler\*
+    -   urlBlacklist: /wpsmodified/myportal*
+    -   urlWhiteList: /wpsmodified/mycontenthandler*
 4.  Click **Apply**, and save all changes.
 5.  Log out of the Deployment Manager WebSphere Integrated Solutions Console.
 
 Next, use the **Create a Cluster** option to create a static or dynamic cluster.
 
+**Related information**  
+[Accessing the Configuration Wizard](../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/configuration/cw_run.md)<br>
+[Updating DB2 self-tuning memory manager (STMM) settings](../migrate/next_steps/post_mig_activities/db_task/mig_t_post_db2_stmm.md)

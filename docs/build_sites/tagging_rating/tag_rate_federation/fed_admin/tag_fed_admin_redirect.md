@@ -15,10 +15,7 @@ To redirect to the HCL Connections server, use the following value pattern: `con
 This setting is used in the next run of the FederationTaskHandler that retrieves HCL Connections tags and tagged resources. After that a redirect to the external HCL Connections website is possible.
 
 
-**Related information**  
-
-
-[CP Configuration Service for tagging and rating](../admin-system/srvcfg_cpcfg4tr.md)
-
-[Setting service configuration properties](../admin-system/adsetcfg.md)
+???+ info "Related information:"
+    - [CP Configuration Service for tagging and rating](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/index.md)
+    - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 
