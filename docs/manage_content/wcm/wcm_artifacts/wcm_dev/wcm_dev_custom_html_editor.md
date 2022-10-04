@@ -6,7 +6,7 @@ A custom HTML field is JSP that is rendered in place of the standard HTML field 
 
 **Storing JSP files:** JSP files are stored within a web application that runs on the portal. To reference a JSP file in another web application, use the following path: contextPath;jspPath. For example: /wps/customapplication;/jsp/jspFilename.jsp.
 
-A dynamic context path value can be defined by adding a token to the context path that corresponds to a key and value pair to the Web Content Manager configuration service environment provider. When this key is used as the token in the jsp value field, it is replaced dynamically at render time. For example: \[my.custom.key\];myfile where my.custom.key is a constant within the Web Content Manager configuration service.
+A dynamic context path value can be defined by adding a token to the context path that corresponds to a key and value pair to the Web Content Manager configuration service environment provider. When this key is used as the token in the jsp value field, it is replaced dynamically at render time. For example: `[my.custom.key];myfile` where my.custom.key is a constant within the Web Content Manager configuration service.
 
 **Reloading JSP files:**
 
@@ -18,13 +18,13 @@ This is a simple example of a basic integration that shows all necessary steps t
 
 The JSP is broken up into three distinct parts. The first is a simple code snippet to extract the name of the editor field. The next part of the JSP defines the implementation of the custom `ibm.wcm.ui.html.HTMLEditor` object. The `ibm.sample.Editor` defines a constructor to capture the dijit to manage and implement the necessary methods to integrate with the Authoring interface.
 
-!!! note
-   It also chooses to show the HTML field toolbar by calling `this.showToolbar(true)` that starts the method on `ibm.wcm.ui.html.HTMLEditor` that controls the visibility of the toolbar.
+   !!! note
+      It also chooses to show the HTML field toolbar by calling `this.showToolbar(true)` that starts the method on `ibm.wcm.ui.html.HTMLEditor` that controls the visibility of the toolbar.
 
 Finally the dijit is defined, and an instance of the `ibm.sample.Editor` created.
 
-!!! note
-   While this sample defines `ibm.sample.Editor` within the JSP, it would be more efficient to load this by using the static JavaScript library. This is important because if you have more than one editor on the page, the JavaScript definition of `ibm.sample.Editor` is loaded each time, but only the last one is loaded and used.
+   !!! note
+      While this sample defines `ibm.sample.Editor` within the JSP, it would be more efficient to load this by using the static JavaScript library. This is important because if you have more than one editor on the page, the JavaScript definition of `ibm.sample.Editor` is loaded each time, but only the last one is loaded and used.
 
 ```
 <%--
@@ -112,6 +112,6 @@ The available methods are:
 
 -   `launchInsertImageDialog()`
 -   `launchInsertLinkDialog(/* String */ linkText, /* String */ linkHref, /* String */ linkTarget, /* String */ linkDescription, /* String */ linkAttributes)`
--   `launchInsertTagDialog(/* boolean */ includeConsumableTags){`
+-   `launchInsertTagDialog(/* boolean */ includeConsumableTags)`
 
 

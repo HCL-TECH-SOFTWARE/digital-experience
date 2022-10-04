@@ -49,7 +49,7 @@ You can also append remote action plug-ins to the URL of a local web Content Vie
 **Custom authoring interfaces:** Remote action plug-ins are not intended to be used to create a custom authoring interface. There are limitations to the functionality delivered using remote action plug-ins. For example, remote action plug-ins only support plain text. You cannot use remote action plug-ins to add markup into elements such as HTML elements. You instead use the Web Content Manager API to create custom authoring interfaces.
 
 !!! note
-    Each web content item can be identified by a DocumentId. The "docid" can be retrieved using the web content API. In the following examples, the value of the "docid" parameter should be the DocumentId as retrieved by using the DocumentID.getID\(\) API method. A document ID consists of a document type and a unique ID. The "docid" values provided in the examples are placeholders for real document IDs. For example, com.ibm.workplace.wcm.api.WCM\_Content/ID1
+    Each web content item can be identified by a DocumentId. The "docid" can be retrieved using the web content API. In the following examples, the value of the "docid" parameter should be the DocumentId as retrieved by using the DocumentID.getID() API method. A document ID consists of a document type and a unique ID. The "docid" values provided in the examples are placeholders for real document IDs. For example, com.ibm.workplace.wcm.api.WCM_Content/ID1
 
 ## Remote action types
 
@@ -439,7 +439,7 @@ To edit a content item, automatically save the item and prevent any validation e
 -   Tag: `[plugin:RemoteAction action="edit" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1" wcmfield.content.keywords="keyword1" wcmfield.autosave="true" wcmfield.saveValidate="false"]`
 -   Url: `http://<host>/wps/myportal/wcmAuthoring?wcmAuthoringAction=edit&docid=com.ibm.workplace.wcm.api.WCM_Content/ID1&wcmfield.content.keywords=keyword1&wcmfield.autosave=true&wcmfield.saveValidate=false`
 
-To create a content item, set the name and use autosave to automatically save the content \(no dialog opens\). The authoring template used by the content item must have a workflow pre-selected:
+To create a content item, set the name and use autosave to automatically save the content (no dialog opens). The authoring template used by the content item must have a workflow pre-selected:
 
 -   Tag: `[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Content" atid="com.ibm.workplace.wcm.api.WCM_AuthoringTemplate/ID1" pid="com.ibm.workplace.wcm.api.WCM_SiteArea/ID2" wcmfield.content.name="newcontent" wcmfield.autosave="true" wcmfield.saveValidate="true"]`
 -   Url: `http://<host>/wps/myportal/wcmAuthoring?wcmAuthoringAction=new&type=com.ibm.workplace.wcm.api.WCM_Content&atid=com.ibm.workplace.wcm.api.WCM_AuthoringTemplate/ID1&pid=com.ibm.workplace.wcm.api.WCM_SiteArea/ID2&wcmfield.content.name=newcontent&wcmfield.autosave=true&wcmfield.saveValidate=true`
@@ -449,6 +449,6 @@ To edit a content item and create a draft on the edit and set the history log co
 -   Tag: `[plugin:RemoteAction action="edit" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1" createDraft="true" comment="comment"]`
 -   Url: `http://<host>/wps/myportal/wcmAuthoring?wcmAuthoringAction=edit&docid=com.ibm.workplace.wcm.api.WCM_Content/ID1&createDraft=true&comment=comment`
 
-???+ info "Related information:"
+Related information:
 [Creating a plug-in tag](../../tags/creating_web_content_tags/creating_plugin_tag/index.md)
 
