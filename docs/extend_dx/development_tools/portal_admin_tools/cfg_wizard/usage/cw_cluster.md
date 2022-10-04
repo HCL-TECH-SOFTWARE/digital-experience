@@ -3,7 +3,7 @@ id: cw_cluster
 title: Set up a cluster
 ---
 
-
+# Configuration Wizard: Set up a cluster
 
 
 You created a stand-alone, demonstration environment with IBM® Installation Manager. Now you are ready to set up a production-ready, clustered environment. To begin, you can use the Database Transfer option to transfer your database from the default database, Apache Derby, to a more robust database. Then, you can create your deployment manager profile, create a static or dynamic cluster, change from the built-in file-based repository to a federated repository, modify your site URLs for search engine optimization benefits,and add more nodes as needed.
@@ -24,10 +24,10 @@ A cluster topology is useful for the following type of user:
 
 A company or organization that requires failover, centrally managed servers, and workload management.
 
-**Note:** You can create other types of clusters. For example, to create vertical or multiple clusters, use the roadmaps in the product documentation for instructions on the cluster that you want to create.
+!!!note
+    You can create other types of clusters. For example, to create vertical or multiple clusters, use the roadmaps in the product documentation for instructions on the cluster that you want to create.
 
-**Related information**  
 
-
-[Configuration Wizard](cw_main.md)
+???+ info "Related information" 
+    -   [Configuration Wizard](../../../portal_admin_tools/cfg_wizard/configuration/index.md)
 

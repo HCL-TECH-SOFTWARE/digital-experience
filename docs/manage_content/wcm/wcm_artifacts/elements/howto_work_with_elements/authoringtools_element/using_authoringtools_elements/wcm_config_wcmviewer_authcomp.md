@@ -17,7 +17,8 @@ You can specify which behavior to use in the authoring tools element design. Typ
     The placeholder is rendered as a URL that redirects the user to another portal page that is used by the web content viewer for inline editing.
 
 
-**Note:** Authoring tasks that are run in the web content viewer are accomplished through a special instance of the authoring portlet that is reserved specifically for these tasks and is installed on a page that is hidden from the page navigation available to typical users. You can customize the authoring experience for these tasks by configuring the reserved authoring portlet and the page that is used to display it.
+!!!note
+  Authoring tasks that are run in the web content viewer are accomplished through a special instance of the authoring portlet that is reserved specifically for these tasks and is installed on a page that is hidden from the page navigation available to typical users. You can customize the authoring experience for these tasks by configuring the reserved authoring portlet and the page that is used to display it.
 
 ## Authoring tools components that open in a window
 

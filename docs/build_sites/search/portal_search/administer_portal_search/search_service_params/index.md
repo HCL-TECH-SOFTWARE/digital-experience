@@ -9,7 +9,7 @@ To configure a portal search service, use the parameters given in the following 
 -   Unless otherwise stated, the values that you set for parameters of a portal search service apply to that search service and all its collections. They do not affect other search services of the portal or their search collections.
 -   Unless otherwise stated, changing the value of a parameter apply to both the existing search collections and newly created search collections. Some parameters affect only newly created search collections. These parameters cannot be updated for existing search collections.
 -   The search administration portlet Manage Search lists the Default Portal Search Service and its collection Portal Content or other collections in the default portal language. It does not list these items in the language that the user selected as preferred language for the portal or set in the browser. Example: The portal default language is set to English and the user selected German as the preferred portal language or as the browser language. In this case, the Default Portal Search Service and its collections show in English.
--   SOAP support for remote search services was deprecated with HCL Digital Experience Version 8.0. EJB is still supported.
+-   SOAP support for remote search services was deprecated with HCL Digital Experience Version 8.0. EJB is the only type supported for remote search.
 -   If you delete a search service, the portal does not delete the search collections that are related to this search service. Delete the search collections by using the Manage Search administration portlet. If you delete the default search service, it is re-created new when you restart the portal.
 
 ## Search service configuration parameter list
@@ -57,7 +57,7 @@ To configure a portal search service, use the parameters given in the following 
 
 -   **DefaultCollectionsDirectory**
 
-    You can use this parameter to specify the default directory for search collections. If you use Portal Search locally, this parameter is optional. If you specify no value for this parameter, the default collection directory is `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/collections`. If you set up a remote search service, this parameter is mandatory. For details about setting this parameter, read Configuring the default location for search collections.
+    You can use this parameter to specify the default directory for search collections. If you use Portal Search locally, this parameter is optional. If you specify no value for this parameter, the default collection directory is `wp_profile\PortalServer\collections`. If you set up a remote search service, this parameter is mandatory. For details about setting this parameter, read Configuring the default location for search collections.
 
 -   **DEFAULT\_SEARCH\_OPERATOR**
 
@@ -68,7 +68,7 @@ To configure a portal search service, use the parameters given in the following 
 
 -   **CONFIG\_FOLDER\_PATH**
 
-    Use this parameter to determine where the configuration data for search collections is stored. The default is `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/CollectionsConfig`.
+    Use this parameter to determine where the configuration data for search collections is stored. The default is `wp_profile/CollectionsConfig`.
 
 -   **EJB**
 
@@ -86,7 +86,7 @@ To configure a portal search service, use the parameters given in the following 
 
 -   **HTTP\_MAX\_BODY\_SIZE\_MB**
 
-    Use this parameter to limit how much content is fetched during a crawl from application files, such as PDF or Microsoft Word. The specified unit is MB. The default value is `20` MB. If a file exceeds the specified limit, the document is truncated, and Portal Search indexes the fetched portion as is possible. However, indexing might fail on truncated documents. In this case, the document is not listed under search results at all.
+    Use this parameter to limit how much content is fetched during a crawl from application files, such as PDF or Microsoft Word. The specified unit is MB. The default value is `20 MB`. If a file exceeds the specified limit, the document is truncated, and Portal Search indexes the fetched portion as is possible. However, indexing might fail on truncated documents. In this case, the document is not listed under search results at all.
 
     !!! note
         1.  If you modify the value for this parameter, the new value is applied only to newly created collections of the search service. You cannot update this parameter for existing search collections.
@@ -112,7 +112,7 @@ To configure a portal search service, use the parameters given in the following 
 
 -   **IIOP\_URL\_Example**
 
-    This example gives an example value for the parameter `IIOP_URL`. The example value is `iiop://localhost:2811`.
+    This example gives an example value for the parameter `IIOP_URL`. The example value is `iiop://localhost:2811`. When looking at the WebSphere console, this port is also know as the `BOOTSTRAP_ADDRESS`.
 
 -   **PSE\_TYPE**
 
@@ -279,7 +279,7 @@ The following parameters are reserved for internal use only. Do not change their
 The following search service configuration parameters can be modified to enable and configure searching for content that is stored in the JCR database. These JCR search service configuration parameters can be modified by accessing the JCR ConfigService PortalContent resource environment provider. --->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Using the WebSphere Integrated Solutions Console to administer Portal Search](../srtadmsrchadmcnsl.md)
     - [Hints and tips for improving quality of Portal Search results](../../hint_tips/srrhinttips_improve_quality_search.md)
 

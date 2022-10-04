@@ -18,11 +18,13 @@ This is a simple example of a basic integration that shows all necessary steps t
 
 The JSP is broken up into three distinct parts. The first is a simple code snippet to extract the name of the editor field. The next part of the JSP defines the implementation of the custom `ibm.wcm.ui.html.HTMLEditor` object. The `ibm.sample.Editor` defines a constructor to capture the dijit to manage and implement the necessary methods to integrate with the Authoring interface.
 
-**Note:** It also chooses to show the HTML field toolbar by calling `this.showToolbar(true)` that starts the method on `ibm.wcm.ui.html.HTMLEditor` that controls the visibility of the toolbar.
+!!! note
+   It also chooses to show the HTML field toolbar by calling `this.showToolbar(true)` that starts the method on `ibm.wcm.ui.html.HTMLEditor` that controls the visibility of the toolbar.
 
 Finally the dijit is defined, and an instance of the `ibm.sample.Editor` created.
 
-**Note:** While this sample defines `ibm.sample.Editor` within the JSP, it would be more efficient to load this by using the static JavaScript library. This is important because if you have more than one editor on the page, the JavaScript definition of `ibm.sample.Editor` is loaded each time, but only the last one is loaded and used.
+!!! note
+   While this sample defines `ibm.sample.Editor` within the JSP, it would be more efficient to load this by using the static JavaScript library. This is important because if you have more than one editor on the page, the JavaScript definition of `ibm.sample.Editor` is loaded each time, but only the last one is loaded and used.
 
 ```
 <%--

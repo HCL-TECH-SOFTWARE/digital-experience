@@ -5,9 +5,9 @@ Under HCL Digital Experience or z/OS, keys and certificates are usually stored i
 To use a RACF keyring instead of an HFS keystore file, use the following syntax:
 
 ```
-xmlaccess -user user\_ID -password password 
+xmlaccess -user user_ID -password password 
           -url https://myhost:10035/wps/config
-          -in input\_file.xml -out result\_file.xml 
+          -in input_file.xml -out result_file.xml 
           **-keystore safkeyring://user/keyring 
           -keypwd keyPassword -keytype keyType 
           -truststore safkeyring://user/keyring 

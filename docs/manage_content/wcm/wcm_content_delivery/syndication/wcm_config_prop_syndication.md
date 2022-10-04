@@ -10,7 +10,8 @@ Although the frequency of syndication is set by default during installation, you
 
 For example, you might shorten the interval in an active authoring environment where users must collaborate heavily and rely on timely replication. Similarly, you might lengthen the interval to avoid excessive replication of data that does not change often.
 
-**Note:** The syndication interval applies to all syndication operations and cannot be specified separately for different syndicator-subscriber pairs.
+!!! note
+    The syndication interval applies to all syndication operations and cannot be specified separately for different syndicator-subscriber pairs.
 
 To change the syndication interval, modify the deployment.itemChangedTaskDelay property. By default, the syndication interval is set to 30 seconds. Specify the number of seconds to use as the syndication interval, with a minimum of 0 seconds and a maximum of 65536 seconds. A value of 0 prevents syndication from occurring. If you set the value to so short an interval that syndication cannot complete before the interval expires, syndication begins again when the previous syndication completes.
 
@@ -51,8 +52,6 @@ For example, to enable SSL for syndication where the server is configured to pro
 If self-signed certificates are used, extra steps may be necessary to ensure the certificates that are exchanged are trusted on both servers. See the "SSL Configurations" topic in the WebSphere Application Server documentation.
 
 
-**Related information**  
-
-
-[Setting service configuration properties](../admin-system/adsetcfg.md)
+???+ info "Related information:"
+    - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 

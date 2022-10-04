@@ -10,7 +10,7 @@ When you create a page, you always have the option to create a new page with a n
 
 When you create a new page, you must give it a title. All other settings are optional.
 
-1.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface** \> **Manage Pages**.
+1.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface > Manage Pages**.
 
 2.  Click **Content Root**.
 
@@ -28,7 +28,8 @@ When you create a new page, you must give it a title. All other settings are opt
 
     This creates a custom address for your page that is easy to remember and share.
 
-    **Note:** When creating a URL Mapping or creating or modifying a page, make sure that URL Mappings and friendly URLs in your portal do not match, partially overlap, or otherwise interfere with each other. For example, do not use strings such as home, ibm, ibm.com, and do not use strings that have been used as URL Mappings or friendly URLs in your portal already. Otherwise infinite browser redirect loops might occur, sometimes without an error message. To determine such strings, create an export from your portal by using the XML configuration interface and scan the exported XML result output file for the string that you want to use for your URL Mapping or for your friendly URL. By default, the portal ensures that the friendly URL name that you enter is unique. However, this enforcement does not include derived pages with an inherited friendly name and siblings that are moved in by a personalization rule.
+    !!!note
+        When creating a URL Mapping or creating or modifying a page, make sure that URL Mappings and friendly URLs in your portal do not match, partially overlap, or otherwise interfere with each other. For example, do not use strings such as home, ibm, ibm.com, and do not use strings that have been used as URL Mappings or friendly URLs in your portal already. Otherwise infinite browser redirect loops might occur, sometimes without an error message. To determine such strings, create an export from your portal by using the XML configuration interface and scan the exported XML result output file for the string that you want to use for your URL Mapping or for your friendly URL. By default, the portal ensures that the friendly URL name that you enter is unique. However, this enforcement does not include derived pages with an inherited friendly name and siblings that are moved in by a personalization rule.
 
 8.  Select a **Theme** to determine the look of the new page.
 
@@ -36,7 +37,8 @@ When you create a new page, you must give it a title. All other settings are opt
 
 9.  Select a **Theme Style** to select a style to apply to the page.
 
-    **Note:** This field is visible only if the selected theme can be customized with a theme policy.
+    !!!note
+        This field is visible only if the selected theme can be customized with a theme policy.
 
 10. In the **Icon** field, enter a path and filename for a page icon.
 

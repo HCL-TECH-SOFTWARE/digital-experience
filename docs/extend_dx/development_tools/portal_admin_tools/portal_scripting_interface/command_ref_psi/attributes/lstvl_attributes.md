@@ -1,4 +1,8 @@
-# List valued attributes \| Portal Scripting Interface
+---
+title: List valued attributes
+---
+
+# List valued attributes | Portal Scripting Interface
 
 List valued attributes can have multiple values. They are queried by using the list command, which returns all values, which are separated by white space.
 
@@ -28,10 +32,10 @@ Content.empty(list)
 Content.add("markup", "wml")
 
 # example: drop the american locale for the given node
-Content.drop(node\_ID, "locale", "en_US")
+Content.drop(node_ID, "locale", "en_US")
 
 # example: drop all locales for the given node
-Content.empty(node\_ID, "locale")
+Content.empty(node_ID, "locale")
 ```
 
 Jacl example:
@@ -52,15 +56,13 @@ $Content empty list
 $Content add markup wml
 
 # example: drop the american locale for the given node
-$Content drop node\_ID locale en_US
+$Content drop node_ID locale en_US
 
 # example: drop all locales for the given node
-$Content empty node\_ID locale
+$Content empty node_ID locale
 ```
 
 
-**Related information**  
-
-
-[Locale-specific attributes \| Portal Scripting Interface](../admin-system/lcl_spcf_att.md)
+???+ info "Related information"  
+    -   [Locale-specific attributes | Portal Scripting Interface](../../../../portal_admin_tools/portal_scripting_interface/command_ref_psi/attributes/lcl_spcf_att.md)
 

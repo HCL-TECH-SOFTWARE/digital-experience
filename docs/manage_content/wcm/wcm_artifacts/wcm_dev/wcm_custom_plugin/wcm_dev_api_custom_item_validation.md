@@ -14,7 +14,8 @@ Possibly usages of this extension point include:
 
     -   `DocumentId<? extends AbstractAuthoringTemplate>[]validationScope()`
     -   `ItemValidationResult validate(ItemContext context)`
-    **Note:** The validate method returns a ItemValidationResult that reports back any errors to be shown to the current user.
+    !!! note
+      The validate method returns a ItemValidationResult that reports back any errors to be shown to the current user.
 
 2.  Within the validate method any field of the item can be modified. After all validation plug-ins are started the standard item and template validation is performed. See the Web Content Manager Javadoc for further information.
 

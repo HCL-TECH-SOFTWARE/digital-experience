@@ -3,8 +3,7 @@ id: h_mp_lock_delete_option
 title: Setting the delete option
 ---
 
-
-
+# Setting the delete option
 
 Enable or disable users to delete a portlet.
 

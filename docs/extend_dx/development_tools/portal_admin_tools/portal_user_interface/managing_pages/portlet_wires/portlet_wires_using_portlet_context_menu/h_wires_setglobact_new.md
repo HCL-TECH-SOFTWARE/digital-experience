@@ -3,7 +3,7 @@ id: h_wires_setglobact_new
 title: Defining global targets using the context menu
 ---
 
-
+# Defining global targets using the context menu
 
 
 Create wires between portlets on different pages. These special wires are called cross page wires. To indicate that a wire is a cross page wire, you mark the target event on the target portlet as a global target.

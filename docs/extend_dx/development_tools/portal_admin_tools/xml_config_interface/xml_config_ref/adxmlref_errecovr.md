@@ -17,10 +17,7 @@ If the error occurs after some resources have actually been processed, the best 
 To make error recovery easier, use scripts that can be run again partially or completely without the possibility of duplicating resources. To do that, specify an object ID or another identifying attribute on every resource in the script and use only `update` actions. This way resources are simply overwritten with the same configuration if they have already been created. For more information about how to specify attributes, see the topic about *Mandatory and optional attributes*.
 
 
-**Related information**  
-
-
-[Symbolic object IDs and ID generating mode](../admin-system/adxmlref_symbl_obj_id.md)
-
-[Mandatory and optional attributes](../admin-system/adxmlref_mandopt_attrbt.md)
+???+ info "Related information"  
+    -   [Symbolic object IDs and ID generating mode](../../../portal_admin_tools/xml_config_interface/xml_config_ref/objectid_xml_script/adxmlref_symbl_obj_id.md)
+    -   [Mandatory and optional attributes](../../../portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref_mandopt_attrbt.md)
 

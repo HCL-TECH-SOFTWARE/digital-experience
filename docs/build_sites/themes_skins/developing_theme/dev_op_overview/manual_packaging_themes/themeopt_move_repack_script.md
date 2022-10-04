@@ -24,7 +24,7 @@ You must adapt the scripts that register the custom theme and skins that were mo
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
    - [EJPNO1007W error](../../../the_module_framework/themeopt_analyzer/validation_reports/themeopt_an_EJPNO1007W_v85.md)
    - [EJPNO1008W error](../../../the_module_framework/themeopt_analyzer/validation_reports/themeopt_an_EJPNO1008W_v85.md)
    - [EJPNO1011I error](../../../the_module_framework/themeopt_analyzer/validation_reports/themeopt_an_EJPNO1011I_v85.md)

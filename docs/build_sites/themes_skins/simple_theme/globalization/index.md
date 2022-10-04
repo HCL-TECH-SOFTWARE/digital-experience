@@ -73,7 +73,7 @@ You can add title and description values for each locale to your .json files.
     ```
 
 
--   **[Adding support for RTL locales](../dev-theme/themeopt_themedev_rtl_locales.md)**  
+-   **[Adding support for RTL locales](themeopt_themedev_rtl_locales.md)**  
 You can add support for languages that read from right to left.
 
 

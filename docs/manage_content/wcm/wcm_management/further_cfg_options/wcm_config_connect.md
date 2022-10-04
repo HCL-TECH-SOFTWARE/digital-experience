@@ -30,6 +30,6 @@ Enable connect tags to reference web content components and apply customized cac
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 

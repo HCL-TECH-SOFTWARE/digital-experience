@@ -10,7 +10,8 @@ Attachments can be added to the following item types:
 -   Rich text components
 -   HTML components
 
-**Note:** You must create the item and add a rich text or HTML element before you create the attachment.
+!!! note
+    You must create the item and add a rich text or HTML element before you create the attachment.
 
 ## Creating
 

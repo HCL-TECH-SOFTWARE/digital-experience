@@ -19,9 +19,9 @@ You can pre-render a complete HCL Web Content Manager site into HTML and save it
     Item security for different users set in an Web Content Manager environment is not transferred to pre-rendered sites. The security for the entire pre-rendered site is based on the `connect.moduleconfig.cacher.rendereruser` property as specified in the **WCM WCMConfigService** service by using the WebSphere® Integrated Solutions Console.
 
 
--   **[Pre-render methods](../wcm/wcm_config_delivery_pre-rendered_running.md)**  
+-   **[Pre-render methods](wcm_config_delivery_pre-rendered_running.md)**  
 Pre-rendering can be configured to run automatically, or you can manually pre-render a website by using a URL.
--   **[How to access the pre-rendered site](../wcm/wcm_config_delivery_pre-rendered_accessing.md)**  
+-   **[How to access the pre-rendered site](wcm_config_delivery_pre-rendered_accessing.md)**  
 Pre-rendered sites are accessed either through HCL Web Content Manager, or through a web server.
 
 

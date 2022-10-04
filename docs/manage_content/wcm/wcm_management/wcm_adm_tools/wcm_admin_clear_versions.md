@@ -75,6 +75,6 @@ There are two methods available when the tool is run on a virtual portal:
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Cloning data](../wcm_adm_tools/wcm_cloning/wcm_cloning_live.md)
 

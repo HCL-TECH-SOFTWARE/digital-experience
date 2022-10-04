@@ -4,8 +4,8 @@ Learn how to add a wire.
 
 **Prerequisites:**
 
-1.  If you create a cross-page wire, make sure that the target portlet has global targets defined. Refer to [Defining global targets](h_wires_setglobact.md) for more information.
-2.  Before you create a wire, select the matching mode. The matching mode specifies the criteria that determine whether a wire can be created or not. For details refer to [Selecting the matching mode](h_wires_selmatch.md).
+1.  If you create a cross-page wire, make sure that the target portlet has global targets defined. Refer to [Defining global targets](../../../../../portal_admin_tools/portal_user_interface/managing_pages/portlet_wires/portlet_wires_using_page_layout/h_wires_setglobact.md) for more information.
+2.  Before you create a wire, select the matching mode. The matching mode specifies the criteria that determine whether a wire can be created or not. For details refer to [Selecting the matching mode](../../../../../portal_admin_tools/portal_user_interface/managing_pages/portlet_wires/h_wires_selmatch.md).
 
 To create a wire, proceed as follows:
 
@@ -23,7 +23,8 @@ To create a wire, proceed as follows:
 
         The page that contains the communication target. The drop down list contains only peer pages that have global targets defined. If the required page is not listed, select **More**. Then select the required page or search for the target page.
 
-        **Note:** If a target page with no global targets defined is selected for cross-page wires, you will not be able to select target portlets or communication targets.
+        !!!note
+            If a target page with no global targets defined is selected for cross-page wires, you will not be able to select target portlets or communication targets.
 
     -   **Switch page**
 
@@ -44,14 +45,8 @@ To create a wire, proceed as follows:
 3.  When you have completed your changes, click the **Add new wire** icon. The new wire appears in a list of all wires on the page each time you edit the wires for the page.
 
 
-**Related information**  
-
-
-[Configuring a Forms Experience Builder task provider instance](../panel_help/utl_configuring_form_experience_builder_task_provider.md)
-
-[Configuring the Coach portlets for WebSphere Lombardi Edition and WebSphere Business Process Manager](../panel_help/utl_configuring_websphere_lombardi_edition_coach_portlets.md)
-
-[Configuring an IBM Business Process Manager](../integrate/utl_configuring_business_process_manager.md)
-
-[Configuring the Unified Task List portlet with Forms Experience Builder](../integrate/utl_configuring_unified_task_list_with_forms_experience_builder.md)
+???+ info "Related information" 
+    -   [Configuring a Forms Experience Builder task provider instance](../../../../../../integration/unified_task_list/utl_for_adm/creating_task_provider_instance/cfg_feb_task_provider_instance/index.md)
+    -   [Configuring an IBM Business Process Manager](../../../../../../integration/unified_task_list/cfg_utl_portlet_with_process_server/utl_configuring_business_process_manager.md)
+    -   [Configuring the Unified Task List portlet with Forms Experience Builder](../../../../../../integration/unified_task_list/utl_configuring_unified_task_list_with_forms_experience_builder.md)
 

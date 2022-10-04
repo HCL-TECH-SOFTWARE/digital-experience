@@ -210,5 +210,5 @@ To refine your search, you can select one or multiple facets.
 
 To return and view a less restricted search result list, click the link **Remove selection** or the square box icon next to the appropriate facet. To clear **all** facet restrictions and return to the full search result list, click **Clear selections**.
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Portal Search](../../search/welcome_search.md)

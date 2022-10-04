@@ -4,8 +4,6 @@ title: Creating a search scope
 ---
 
 
-
-
 Create a search scope by completing the following steps.
 
 1.  To create a new search scope, click the **New Scope** to display the New Search scope page. Enter the needed data in the fields and select from the available options.
@@ -24,11 +22,14 @@ Create a search scope by completing the following steps.
 
 8.  Select the locations as needed. Only documents from these search locations or content sources are searched when users select this scope for their search.
 
-    **Note:** The location tree also shows content sources that are deleted if they still contain documents in the collection. After a deleted content source has no documents, the cleanup daemon removes it from the location tree.
+    !!! note
+        The location tree also shows content sources that are deleted if they still contain documents in the collection. After a deleted content source has no documents, the cleanup daemon removes it from the location tree.
 
-    **Note:** To set names and descriptions for the search scope, you must create and save the scope first. Then, locate the scope on the scopes list and edit the scope by clicking the **Edit** icon. The option for setting names and descriptions in other locales is available only on the Edit search scope page.
+    !!! note
+        To set names and descriptions for the search scope, you must create and save the scope first. Then, locate the scope on the scopes list and edit the scope by clicking the **Edit** icon. The option for setting names and descriptions in other locales is available only on the Edit search scope page.
 
-    **Note:** If you modify a content source that belongs to search scope, update the scope manually to make sure that the scope still covers that content source. Especially if you changed the name of the content source, edit the scope and make sure that it is still listed there if not add it again.
+    !!! note
+        If you modify a content source that belongs to search scope, update the scope manually to make sure that the scope still covers that content source. Especially if you changed the name of the content source, edit the scope and make sure that it is still listed there if not add it again.
 
 9.  Select the features as needed. Only documents of the selected content source types are searched and returned.
 

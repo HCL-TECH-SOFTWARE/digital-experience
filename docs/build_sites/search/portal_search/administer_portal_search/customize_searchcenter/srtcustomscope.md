@@ -75,6 +75,6 @@ You can readd the All Sources scope only if this scope does not exist in the cur
 7.  Click **Save** to save the new property.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Configuring search scopes for the Search Center portlet](../cfg_searchcenter/srtcfg_sc_scopes.md)
 

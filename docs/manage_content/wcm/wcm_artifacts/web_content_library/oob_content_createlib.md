@@ -28,8 +28,6 @@ After you create the library, it is not immediately visible in the authoring por
 
 Set up access to the library you created.
 
-**Related information**  
-
-
-[Content libraries](../site/site_libraries.md)
+???+ info "Related information:"
+    - [Content libraries](../../../../build_sites/create_sites/building_website/content_libraries/index.md)
 

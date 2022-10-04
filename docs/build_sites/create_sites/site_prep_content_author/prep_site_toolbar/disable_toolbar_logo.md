@@ -39,6 +39,6 @@ You can disable the toolbar logo for the entire portal that includes all the vir
 If you defined the property `global.wp_toolbar_logo.enabled`, it acts as a fallback setting for virtual portals that do not have the toolbar logo property set. For more information about prefixes, placeholders, and the order in which properties are evaluated, go to *Virtual Portal Configuration Service*.
 
 
-???+ info "Related information:"
-    - [Virtual Portal Configuration Service](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/srvcfg_virtual_portal.md)
+???+ info "Related information"
+    -   [Virtual Portal Configuration Service](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/srvcfg_virtual_portal.md)
 

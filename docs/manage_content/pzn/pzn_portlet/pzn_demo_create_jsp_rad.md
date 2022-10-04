@@ -9,7 +9,7 @@ Before you begin, complete the following prerequisites:
 
 1.  Launch Rational Application Developer.
 
-2.  Click **File** \> **New** \> **Project** and select **Portlet Project**.
+2.  Click **File > New > Project** and select **Portlet Project**.
 
 3.  Click **Next**.
 
@@ -29,7 +29,7 @@ Before you begin, complete the following prerequisites:
 
     6.  Select **Create a portlet** and specify the following properties:
 
-        -   In the **Portlet Name** field, type Pers\_\_Offers.
+        -   In the **Portlet Name** field, type Pers__Offers.
         -   In the **Portlet Type** field, select Basic Portlet from the list.
 5.  Click **Next**.
 
@@ -49,12 +49,4 @@ You have created a JSP file using Rational Application Developer.
 You can now create the Personalization content resource classes and content spot.
 
 
-**Previous topic:**[Install the Personalization sample](../pzn/pzn_demoinstall.md)
-
-**Next topic:**[Create the Personalization content resource classes and content spot](../pzn/pzn_demo_create_pzn_content_resources.md)
-
-
-**Previous topic:**[Install the Personalization sample](../pzn/pzn_demoinstall.md)
-
-**Next topic:**[Create the Personalization content resource classes and content spot](../pzn/pzn_demo_create_pzn_content_resources.md)
 

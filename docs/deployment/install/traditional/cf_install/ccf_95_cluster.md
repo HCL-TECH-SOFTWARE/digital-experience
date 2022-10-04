@@ -54,7 +54,6 @@ When rolling back of the cumulative fix in a clustered environment, the portlets
 Space Requirements: Ensure that enough disk space is available in the following directories:
 
 -   For all platforms: 2.0 GB in the download directory to download the cumulative fix, 1.5 GB in `Portal_Install_Root`, 1 GB temporary disk space in `(wp_profile_root)`, and 1.66 GB in the shared data space, which is the directory where Installation Manager temporarily stores downloaded files for use during the update.
--   For Solaris: It is recommended that you allocate swap space equal to at least twice your physical RAM to avoid memory errors during the configuration of this cumulative fix.
 
 ## Best Practices
 
@@ -224,7 +223,6 @@ You may now continue with the installation of the Portal CF.
 
 ## Download the cumulative fix
 
-If you are installing the cumulative fix using a live repository, then you do not need to download the cumulative fix to your server. If you need to download the cumulative fix, then you can follow these steps.
 
 1.  Go and log in to [HCL Software Support](https://support.hcltechsw.com/csm) and download the latest zip file that corresponds to the installation on your system.
 2.  Create a directory and extract the zip file\(s\) into this directory. Inside the zip file is a readme file, sample response files \(Server and Express only\), and the actual cumulative fix file itself.
@@ -250,7 +248,6 @@ Ensure that automatic synchronization is disabled and that all node agents are s
 There are several different methods to install the cumulative fix, and they are:
 
 -   Use a Graphical User Interface \(GUI\)
--   Use a live repository via the Graphical User Interface
 -   Use a command line
 -   Use silent mode installation
 -   Use console mode installation
@@ -578,7 +575,6 @@ If you previously disabled automatic propagation of the Web server\(s\), re-enab
 There are several different methods to install the cumulative fix, and they are:
 
 -   Use a Graphical User Interface \(GUI\)
--   Use a live repository via the Graphical User Interface
 -   Use a command line
 -   Use silent mode installation
 -   Use console mode installation
@@ -622,26 +618,6 @@ Note that the web server plug-in will check periodically for configuration updat
 6.  Select **Update** and follow the prompts to update HCL Portal.
 7.  After installation completes, proceed with the *Additional configuration steps on additional nodes*.
 
-## Use a live repository via the Graphical User Interface on additional nodes \(available on Windows and Linux operating systems\)
-
-1.  Stop any active application servers and node agents by using the `stopServer` and `stopNode` commands. To see which application servers are active, use the `serverStatus` command from the `(wp_profile)/bin directory` and again from the `cw_profile>/bin` directory. If the Deployment Manager is installed on the same server as one of the cluster nodes, you must also stop the Deployment Manager using the `stopManager` command from the `(dmgr)/bin` directory:
-    -   Linux:
-
-        ```
-        ./serverStatus.sh -all
-        ```
-
-    -   Windows:
-
-        ```
-        serverStatus.bat -all
-        ```
-
-2.  Launch the IBM Installation Manager that was used to install HCL Portal 8.5.
-3.  Using Installation Manager, click **File** \> **Preferences**.
-4.  Go to the **Repositories** panel and click **Search service repositories** during installation and updates. Click apply.
-5.  Select **Update** and follow the prompts to update HCL Portal.
-6.  After installation completes, proceed with the *Additional configuration steps on additional nodes*.
 
 ## Use a command line on additional nodes \(available on Windows and Linux operating systems\)
 

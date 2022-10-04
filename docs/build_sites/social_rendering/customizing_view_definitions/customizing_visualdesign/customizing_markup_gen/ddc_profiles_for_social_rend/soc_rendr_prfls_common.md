@@ -102,7 +102,7 @@ In addition to these attributes, the common profile also provides access to the 
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [XPath list-rendering profile keys](../../../../../../extend_dx/ddc/integrating_remote_xml_data/syntax_xpath_based_list_rendering_profiles/plrf_lr_profl_keys.md)
     - [Configuring globally how social object data is served](../../../../cfg_global_settings_social_rendering/soc_rendr_cfg_data_serve.md)
 

@@ -100,15 +100,10 @@ Example for a scoped unique name: Each virtual portal has its own separate login
 
 Example for a unique name that is not scoped: Portlet applications are not scoped but shared between all virtual portals. You can assign a unique name to the portlet application. You can reference that portlet application by that unique name throughout the portal installation with all virtual portals.
 
-<!--
-**Related information**  
 
-
-[Deciding about virtual portals](../admin-system/advpuscn.md)
-
-[Scenarios with multiple portals for your business requirements](../admin-system/advpuscn_pln.md)
-
-[Usage scenarios for virtual portals](../admin-system/advpuscn_usage.md)
-
-[Administering virtual portals](../admin-system/advp_adm.md) -->
+???+ info "Related information:"
+    - [Deciding about virtual portals](../vp_overview/index.md)
+    - [Scenarios with multiple portals for your business requirements](../vp_overview/advpuscn_pln.md)
+    - [Usage scenarios for virtual portals](../vp_overview/advpuscn_usage.md)
+    - [Administering virtual portals](../adm_vp_task/index.md)
 

@@ -9,5 +9,5 @@ To get started, explore the different areas of HCL Web Content Manager.
 You have a number of ways to grant and restrict access to libraries. There are five content user roles: User, Contributor, Editor, Manager, and Administrator. Each role has specific access rights. You can associate individual users or groups of users with a role. There are three levels that you can assign access to: library, item type per library, and item level.
 3.  [Set up the authoring experience](oob_content_auth.md)  
  HCL Web Content Manager includes a number of authoring user interface options. After the installation, the library explorer is the selected use interface. The provided options help you quickly get started. 
-4.  [Managing web content libraries](/manage_web_content_lib)  
+4.  [Managing web content libraries](../web_content_library/manage_web_content_lib/index.md)  
 As an administrator you need to periodically assist content managers with library maintenance, such as disabling or deleting a library.

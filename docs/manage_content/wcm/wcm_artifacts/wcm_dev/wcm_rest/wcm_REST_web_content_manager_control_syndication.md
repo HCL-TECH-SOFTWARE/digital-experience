@@ -3,7 +3,7 @@
 The Web Content Manager Syndication REST APIs let you control syndication processes.
 
 !!! note
-   Developers should continue to use the Digital Experience Administration panel and options to create or delete Web Content Manager syndicator and subscriber pairs. See the [**Creating a syndication relationship by using the Administration view**](../panel_help/wcm_syndication_settingup.md) topic for further information.
+   Developers should continue to use the Digital Experience Administration panel and options to create or delete Web Content Manager syndicator and subscriber pairs. See the [**Creating a syndication relationship by using the Administration view**](../../../wcm_content_delivery/syndication/manage_synd_subs/wcm_syndication_settingup.md) topic for further information.
 
 
 

@@ -9,9 +9,9 @@ Almost everything on a page is rendered through a portlet. The portlet can provi
 
 ![Wireframe with one portlet highlighted. There are five portlets on the page.](../../../images/wireframe_portlet.jpg)
 
-## Application palette
+## Page Components and Application palettes
 
-Content authors access portlets from the **Applications** palette \(**Create** \> **Applications**\).
+Administrators can add web content or portlet applications to a page using either the Page Components or Applications palette. To access the palettes, go into Edit mode on the page. Clicking the plus button in the left toolbar will open the **Page Components** and **Applications** tabs. Either web content or portlet applications can be added to the page from these tabs.
 
 ## Content portlets
 

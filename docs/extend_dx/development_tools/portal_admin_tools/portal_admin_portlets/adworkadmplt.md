@@ -10,7 +10,7 @@ You can customize the administration portlets by using the configure mode of the
 
 ## Searching for portal resources in administration portlets
 
-Portal administration portlets that list portal resources, such as pages, portlets, users, or virtual portals, provide a search feature. You can search for resources available in the portlet. You can use an asterisk \( \* \) as a wildcard character for your search. Following is a list of some search types. Their availability differs between portlets. It depends on the portal resource type that the portlet administers.
+Portal administration portlets that list portal resources, such as pages, portlets, users, or virtual portals, provide a search feature. You can search for resources available in the portlet. You can use an asterisk ( * ) as a wildcard character for your search. Following is a list of some search types. Their availability differs between portlets. It depends on the portal resource type that the portlet administers.
 
 -   **Title starts with:** Select this option to search on the beginning of a string in the title. This setting is the default setting, and the input is expected in string format.
 -   **Title contains:** Select this option to search on a string in the title. The input is expected in string format.
@@ -29,32 +29,28 @@ Portal administration portlets that list portal resources, such as pages, portle
 -   **Last modified:** Select this option to search by items that were modified on or since a specific date. The input is expected in the format YYYY MM DD.
 -   **All available:** Select this option to return a listing of all items. No input is required.
 
-**Notes:**
+!!!note "Notes"
+    -   **For title search:** <br>
+        By default, searches for **Title starts with** and **Title contains** return only portal resources with titles in the locale of the current portal session. You can configure portal administration portlets to return search results across all supported locales, regardless of the locale of the current portal session or the locale set in the browser. To do this configuration, proceed as follows:
 
--   **For title search:**
+            1.  Access the **Manage Portlets portlet**.
+            2.  Locate the administration portlet for which you want to configure search of resources across all locales. To locate, use the search feature that is described earlier.
+            3.  Click the **Configure portlet** icon for the portlet.
+            4.  Add the parameter searchByTitle.all.locales with the value true.
+            5.  Click **Add** and **OK**.
+            The default value of the parameter searchByTitle.all.locales is `false`. Searches for portal resources return results only in the locale of the current portal session or the locale set in the browser.
 
-    By default, searches for **Title starts with** and **Title contains** return only portal resources with titles in the locale of the current portal session. You can configure portal administration portlets to return search results across all supported locales, regardless of the locale of the current portal session or the locale set in the browser. To do this configuration, proceed as follows:
+        **Note:** Configuring search across all locales can have an impact on the search performance.
 
-    1.  Access the **Manage Portlets portlet**.
-    2.  Locate the administration portlet for which you want to configure search of resources across all locales. To locate, use the search feature that is described earlier.
-    3.  Click the **Configure portlet** icon for the portlet.
-    4.  Add the parameter searchByTitle.all.locales with the value true.
-    5.  Click **Add** and **OK**.
-    The default value of the parameter searchByTitle.all.locales is `false`. Searches for portal resources return results only in the locale of the current portal session or the locale set in the browser.
+    -   **For the Users and Groups portlet:**<br>
+        Searching with wild characters, such as the asterisk ( * ), is only supported for the User and Groups and User and Groups Permissions portlets. Wildcard character searches for the User and Groups and User and Groups Permissions portlets must have the asterisk ( \* ) at the end or beginning of the search parameter. For example, the following searches are supported for the User and Groups and User and Groups Permissions portlets:
 
-    **Note:** Configuring search across all locales can have an impact on the search performance.
+            -   *user
+            -   user*
+            -   *user*
 
-    .
+        The following searches are not supported for the User and Groups and User and Groups Permissions portlets:
 
--   **For the Users and Groups portlet:**
-
-    Searching with wild characters, such as the asterisk \( \* \), is only supported for the User and Groups and User and Groups Permissions portlets. Wildcard character searches for the User and Groups and User and Groups Permissions portlets must have the asterisk \( \* \) at the end or beginning of the search parameter. For example, the following searches are supported for the User and Groups and User and Groups Permissions portlets:
-
-    -   \*user
-    -   user\*
-    -   \*user\*
-    The following searches are not supported for the User and Groups and User and Groups Permissions portlets:
-
-    -   us\*r
+            -   us*r
 
 

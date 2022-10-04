@@ -149,6 +149,6 @@ Localized versions: fs-type1:\\themes\\Portal8.5\\nls
 -   theme\_sidenav.html: Defines a theme layout that uses a side navigation.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Removing the previous version of social rendering](../../social_rendering/administering_social_list/rem_soc_rend.md)
 

@@ -22,7 +22,7 @@ Prerequisites: [Completing prerequisites for backup](i_wadm_t_bkup_prereq_winlin
 
 7.  Back up additional custom files outside of the PortalServer, profile, or AppServer directories; such as SSL certificates or shared libraries; that your HCL Portal server might use.
 
-???+ info "**Related information:**"
+???+ info "Related information"
     - [Backing up and restoring Installation Manager](https://www.ibm.com/docs/en/installation-manager/1.8.5?topic=manager-backing-up-restoring-installation)
     - [Backing up IBM Installation Manager agent data and shared files for recovery with IBM Business Process Manager \(BPM\)](https://www.ibm.com/support/pages/node/727017)
 

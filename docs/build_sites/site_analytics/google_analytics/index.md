@@ -8,7 +8,7 @@ Complete the following steps to integrate Google Analytics to the HCL Digital Ex
 
 ## Installation
 
-HCL Digital Experience utilizes the platform [Active Site Analytics](../admin-system/sa_asa_work.html) framework, which includes application scripts, called Aggregators, to collect page interactions data sent to external web analytics services for analysis. HCL DX administrators and page owners can manage the aggregators. They can assign an aggregator to one or more DX labels or pages.
+HCL Digital Experience utilizes the platform [Active Site Analytics](../../../deployment/manage/monitoring/analyze_portal_usage/index.md) framework, which includes application scripts, called Aggregators, to collect page interactions data sent to external web analytics services for analysis. HCL DX administrators and page owners can manage the aggregators. They can assign an aggregator to one or more DX labels or pages.
 
 In HCL DX 9.5 CF19 and higher, a new Active Site Analytics aggregator for Google Analytics is available.
 
@@ -42,7 +42,8 @@ Obtain a Google Analytics account with ability to connect to your Digital Experi
 
 2.  Add the DX GoogleAnalyticsAggregator.js to the **HCL DX theme profile**.
 
-    **Note:** The theme profile used by the page\(s\) needs to include `wp_analytics` or at least `wp_analytics_aggregator`.
+    !!! note
+        The theme profile used by the page\(s\) needs to include `wp_analytics` or at least `wp_analytics_aggregator`.
 
     -   **HCL DX without Practitioner Studio installed:**
 
@@ -54,16 +55,17 @@ Obtain a Google Analytics account with ability to connect to your Digital Experi
 
         a. Select **Administration** \> **Site Management** \> **Pages** to access the **Manage Pages** interface.
 
-        ![sing Manage Pages to add Google Analytics tracking                                                 to specified DX pages](../assets/use_manage_pages_google_analytics.png "Using Manage Pages to add Google Analytics
-                                                        tracking to specified DX pages")
+        ![Using Manage Pages to add Google Analytics tracking to specified DX pages](../../../assets/use_manage_pages_google_analytics.png "Using Manage Pages to add Google Analytics tracking to specified DX pages")
 
         b. Locate the page to which you want to assign the aggregator. Use the **Manage Pages** portlet to locate the page.
 
-        **Note:** The page must be located as a child of the portal content root.
+        !!! note
+            The page must be located as a child of the portal content root.
 
         c. Select **Edit Page Properties** for the page that you selected.
 
-        **Note:** You cannot add an Active Site Analytics aggregator to the content root. Edit Page Properties is not available for the content root.
+        !!! note
+            You cannot add an Active Site Analytics aggregator to the content root. Edit Page Properties is not available for the content root.
 
         d. To expand the available choices, click the plus sign \(+\) icon next to **Advanced Options**.
 
@@ -83,13 +85,14 @@ Obtain a Google Analytics account with ability to connect to your Digital Experi
 
         l. Click **OK** to save your changes and return to the Manage Pages screen.
 
-    **Note:** Child pages inherit the script that is set on the parent page. If you want to use a different aggregator on a child page, follow the same procedure that is previously addressed for the child page to make the appropriate assignment. If you want to block inheriting the aggregator setting from the parent page, follow the same procedure, but leave the value empty. As a result, the page has no aggregator that is assigned any longer, and all child pages of the parent page inherit the new setting.
+    !!! note
+        Child pages inherit the script that is set on the parent page. If you want to use a different aggregator on a child page, follow the same procedure that is previously addressed for the child page to make the appropriate assignment. If you want to block inheriting the aggregator setting from the parent page, follow the same procedure, but leave the value empty. As a result, the page has no aggregator that is assigned any longer, and all child pages of the parent page inherit the new setting.
 
 3.  Log in to your Google Analytics account and obtain the `GA_MEASUREMENT_ID` in your Google Analytics Dashboard. It is also referred to as **Tracking ID**.
 
     Example:
 
-    ![Get Google Analytics Tracking ID](../assets/get_google_analytics_tracking_ID.png)
+    ![Get Google Analytics Tracking ID](../../../assets/get_google_analytics_tracking_ID.png)
 
 4.  Add the following metadata in your target HCL DX page\(s\) properties:
 
@@ -98,15 +101,13 @@ Obtain a Google Analytics account with ability to connect to your Digital Experi
     -   `asa_js_ga_measurement_id`: GA\_MEASUREMENT\_ID
     Example:
 
-    ![Google Analytics Tracking ID](../assets/google_analytics_tracking_ID.png "Adding the Google Analytics Aggregator metadata to
-                                            specified HCL DX page(s) for analytics tracking")
+    ![Google Analytics Tracking ID](../../../assets/google_analytics_tracking_ID.png)
 
     Optionally, you can register the Active Site Analytics tags/microformats as custom dimensions or metrics in the Google Analytics Dashboard and configure the aggregator to use your custom map. See [Google Analytics Custom Dimensions & Metrics](https://support.google.com/analytics/answer/2709828).
 
-    For a list of Active Site Analytics tags associated with HCL DX site pages that can be tracked by the Google Analytics Aggregator, see [How Active Site Analytics data is represented in the portal](../admin-system/sa_asa_data.html) and [Supported aggregator tags](../admin-system/sa_asa_aggr_tags.html).
+    For a list of Active Site Analytics tags associated with HCL DX site pages that can be tracked by the Google Analytics Aggregator, see [How Active Site Analytics data is represented in the portal](../../../deployment/manage/monitoring/analyze_portal_usage/user_behavior_by_asa/collecting_analytics_data/how_asa_data_is_represented_in_portal/index.md) and [Supported aggregator tags](../../../deployment/manage/monitoring/analyze_portal_usage/user_behavior_by_asa/collecting_analytics_data/how_asa_data_is_represented_in_portal/sa_asa_aggr_tags.md).
 
-    ![Optionally configure the DX Google Analytics Aggregator to                                     use a custom map](../assets/configure_DX_go0gle_analytics_aggregator_using_custom_map.png "Optionally configure the DX Google Analytics Aggregator to
-                                        use a custom map")
+    ![Optionally configure the DX Google Analytics Aggregator to use a custom map](../../../assets/configure_DX_go0gle_analytics_aggregator_using_custom_map.png)
 
 5.  Access the HCL Digital Experience site page analytics from Google Analytics analyze HCL DX site activity.
 
@@ -114,10 +115,9 @@ Obtain a Google Analytics account with ability to connect to your Digital Experi
 
     See the following example:
 
-    ![In page analysis of HCL DX 9.5 Woodburn Studio site user interactions in Google Analytics](../assets/in_page_analysis_DX_Woodburn_Studio_site_user_interactions.png "In page analysis of HCL DX 9.5 Woodburn Studio site user
-                                        interactions in Google Analytics")
+    ![In page analysis of HCL DX 9.5 Woodburn Studio site user interactions in Google Analytics](../../../assets/in_page_analysis_DX_Woodburn_Studio_site_user_interactions.png)
 
-    Refer to the [Analytics tags and site promotions](../admin-system/sa_asa_anal_tags_site_prom.html) topics for more information on how to add additional tags and site promotions in addition to the out-of-the-box ones.
+    Refer to the [Analytics tags and site promotions](../../../deployment/manage/monitoring/analyze_portal_usage/user_behavior_by_asa/analytics_tags_site_promo/index.md) topics for more information on how to add additional tags and site promotions in addition to the out-of-the-box ones.
 
 
 ## Using the Active Site Analytics Aggregator for Google Analytics to track DX deployment user sessions
@@ -132,7 +132,7 @@ After completing the previous integration steps with the Active Site Analytics A
 
 As shown in examples above, Google Analytics Dashboards present collections of widgets that allow you to quickly visualize data collected to measure interactions with your deployment sites. An additional example is presented below.
 
-![](../assets/ga_dashboards.png "View interaction data using Google Analytics Dashboards")
+![View interaction data using Google Analytics Dashboards](../../../assets/ga_dashboards.png)
 
 Refer to the Google Analytics documentation for additional information about [Google Dashboards](https://support.google.com/analytics/answer/1068216?hl=en#zippy=%2Cin-this-article).
 
@@ -140,9 +140,10 @@ Refer to the Google Analytics documentation for additional information about [Go
 
 To view the user sessions information for the DX deployment website from the Google Analytics dashboard that you have integrated with, go to the **Audience** tab in the left-side column of the Google Analytics dashboard, then click **Overview** \> **Sessions**. See the following example:
 
-![](../assets/ga_user_session.png "View User Session data for DX deployment site")
+![View User Session data for DX deployment site](../../../assets/ga_user_session.png)
 
-**Note:** By default, the user session presents the data for the last 7 days. To revise that time frame, configure the timeline option located in the top-right corner of the dashboard, for example, **Last 30 Days**. Once the time is configured, the data below the graph will present the total number of sessions in the last 30 days.
+!!! note
+    By default, the user session presents the data for the last 7 days. To revise that time frame, configure the timeline option located in the top-right corner of the dashboard, for example, **Last 30 Days**. Once the time is configured, the data below the graph will present the total number of sessions in the last 30 days.
 
 ## Configuration options for the HCL DX Google Analytics Aggregator
 

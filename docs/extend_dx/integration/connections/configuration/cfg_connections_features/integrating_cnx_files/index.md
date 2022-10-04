@@ -7,7 +7,7 @@ Authors can use the generic CMIS file picker dialog, in the HCL Web Content Mana
 <!--
 -   **[Determining the URL of the CMIS service document](../collab/i_coll_t_enable_lcfiles_url.md)**  
 HCL Connections Files offers a set of CMIS service documents that provide specific views of the content that is stored in files. Determine which CMIS API service document URL you need before starting the configuration.
--   **[Set up predefined HCL Connection servers](../collab/i_coll_t_enable_lcfiles_servers.md)**  
+-   **[Set up predefined HCL Connections servers](../collab/i_coll_t_enable_lcfiles_servers.md)**  
 Configuring integration with files is similar to configuring other federated documents. You must specify the remote server URL, a display name, and the supported interface type of the remote server.
 -   **[Configure federated documents feature for files](../collab/i_coll_t_enable_lcfiles_feddocs.md)**  
 Complete the configuration of the federated documents feature to communicate with HCL Connections. -->

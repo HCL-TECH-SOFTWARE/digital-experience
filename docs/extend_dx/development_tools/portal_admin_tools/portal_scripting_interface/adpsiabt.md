@@ -11,7 +11,7 @@ In addition to these benefits, portal scripts provide the following advantages:
 -   The Portal Scripting Interface provides delegated administration in the same manner as the portal administrative user interface. This allows distributed portal administration as follows:
 
     -   Different development teams can work on related portal updates without interfering with the work of others.
-    -   Different administrative teams can perform the tasks of developing a solution, and deploying and operating that solution for production. These teams can be within the same organization \(for example in the same enterprise\), or in independent companies, such as independent solution centers for the operation. In a typical scenario, the solution development team may have in-depth knowledge about the software solution internals, the operation is focused on the external characteristics of the solution. The operation solution team can receive the solution from the development team as a black box that can be operated without much knowledge of the solution internals. This allows enterprises to use automated solution deployment and distributed staging processes.
+    -   Different administrative teams can perform the tasks of developing a solution, and deploying and operating that solution for production. These teams can be within the same organization (for example in the same enterprise), or in independent companies, such as independent solution centers for the operation. In a typical scenario, the solution development team may have in-depth knowledge about the software solution internals, the operation is focused on the external characteristics of the solution. The operation solution team can receive the solution from the development team as a black box that can be operated without much knowledge of the solution internals. This allows enterprises to use automated solution deployment and distributed staging processes.
     In this regard the portal scripting interface goes beyond the XML configuration interface that has been provided by HCL Portal for several releases now. The XML configuration interface does not allow for easy separation of distributed portal administration.
 
 -   You can use the portal scripting interface for staging and integration of new releases A new release can be developed and tested on a test system and can then be integrated into the production system while the system is running.
@@ -33,7 +33,7 @@ In previous versions of HCL Portal the Portal Scripting Interface was based on J
 
 The Jython syntax can be derived from the JACL syntax in a generic way as follows:
 
--   **JACL**:   `$Object method arg1 arg2`     Example: `$Portal login myuserid mypassword`
--   **Jython**:  `Object.method(arg1, arg2)`   Example: `Portal.login('myuserid', 'mypassword')`
+-   **JACL**:   `$Object method arg1 arg2`  <br>   Example: `$Portal login myuserid mypassword`
+-   **Jython**:  `Object.method(arg1, arg2)` <br>   Example: `Portal.login('myuserid', 'mypassword')`
 
 

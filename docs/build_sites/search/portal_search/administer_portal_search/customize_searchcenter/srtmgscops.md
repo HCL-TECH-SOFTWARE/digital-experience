@@ -39,6 +39,6 @@ Examples for web interface syntax are:
 Working with search scopes and custom links: To open the **Manage Search** portlet, click the **Administration menu** icon. Then, click **Search Administration** \> **Manage Search**. To work with search scopes and custom links, click **Search Scopes** Portal Search displays the Search Scopes panel. It lists the search scopes and the custom links, shows their status and related information. You can do tasks on the scopes and custom links. For more information about these tasks and the available options, see the **Manage Search** portlet help.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Configuring search scopes for the Search Center portlet](../cfg_searchcenter/srtcfg_sc_scopes.md)
 

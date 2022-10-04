@@ -16,11 +16,7 @@ Increasing the `total transaction lifetime timeout` setting might not always be 
 |------|-------|
 |Authoring Templates|If many elements are added to an authoring template, you might experience a timeout error when an item is saved. Instead of using a single authoring template, create multiple authoring templates that contain only those elements that are required for a specific task.|
 |Presentation templates and components|You might receive timeout errors when you try to save presentation templates or components that contain large amounts of HTML or rich text in their designs. You can instead create multiple HTML or rich text components and then reference these components in the presentation templates or component designs.|
-|Site areas and content items|You can receive timeout errors when you try to save site areas and content items that contain elements that use large amounts of HTML. You can instead create multiple HTML or rich text components and then reference these components in element designs.
-
- If many elements are added to a site area or content item, you can also experience a timeout error when you try to save the item. In this case, you can reduce the number of elements that are stored in the site area or content item.
-
-|
+|Site areas and content items|You can receive timeout errors when you try to save site areas and content items that contain elements that use large amounts of HTML. You can instead create multiple HTML or rich text components and then reference these components in element designs. <br/> If many elements are added to a site area or content item, you can also experience a timeout error when you try to save the item. In this case, you can reduce the number of elements that are stored in the site area or content item.|
 |Downloadable files|Another alternative to creating web content with large amounts of HTML or rich text is to provide information on your website in the form of downloadable files. These files can be stored as file resource elements.|
 
 

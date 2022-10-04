@@ -1,10 +1,15 @@
-# Command reference - Portal objects \| Portal Scripting Interface
+---
+title: Command reference - Portal objects
+---
 
-Most portal objects are represented in the script by an object identifier string, which is based on the object ID in the portal. For example: \_6\_00KJL57F9D02H456\_A .
+# Command reference - Portal objects | Portal Scripting Interface
+
+Most portal objects are represented in the script by an object identifier string, which is based on the object ID in the portal. For example: _6_00KJL57F9D02H456_A .
 
 These IDs are expected by methods as arguments and returned as results. Since an ID never contains white spaces or characters that would be misinterpreted by Jacl, it is a convenient handle for a portal object. If a method returns several objects, the IDs are separated by white spaces. The results are then used directly as a Jacl list.
 
-**Note:** In Jython, you use the method split\(\) on the result string to create a list.
+!!!note
+  In Jython, you use the method split (\) on the result string to create a list.
 
 Unlike with the GUI, where geometric arrangement and a locale-specific title provide information about an object, the IDs used in the script are unintelligible to the user. Most of the Script beans therefore provide a details method that prints information about an object. The details method of a bean works only for the objects that are handled by that bean. For example, the content bean cannot provide details about IDs returned by the layout bean.
 

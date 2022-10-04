@@ -3,8 +3,7 @@ id: cw_standalone
 title: Set up a stand-alone server
 ---
 
-
-
+# Configuration Wizard: Set up a stand-alone server
 
 You created a stand-alone, demonstration environment with IBM® Installation Manager. Now you are ready to change your demonstration environment into a production-ready, distributed stand-alone server environment. To begin, you can use the Database Transfer option to transfer your database from the default database, Apache Derby, to a more robust database. After your data is transferred, you can change from the built-in file-based repository to a federated repository. Then, you can choose to modify your site URLs for search engine optimization benefits.
 
@@ -24,8 +23,6 @@ You can select the stand-alone topology to set up to four different environments
 
 See a list of the topology options available to you for setting up an environment. Use the descriptions to guide you in selecting the best topology to apply to your environment.
 
-**Related information**  
-
-
-[Configuration Wizard](cw_main.md)
+???+ info "Related information" 
+    -   [Configuration Wizard](../../../portal_admin_tools/cfg_wizard/configuration/index.md)
 

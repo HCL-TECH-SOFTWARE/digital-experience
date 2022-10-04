@@ -2,10 +2,7 @@
 id: h_theme_skin_what_are_themes_and_skins
 title: What are themes and skins?
 ---
-
-
-
-
+# Themes and skins
 Learn how themes and skins can change the look of your site.
 
 ## What is a theme?

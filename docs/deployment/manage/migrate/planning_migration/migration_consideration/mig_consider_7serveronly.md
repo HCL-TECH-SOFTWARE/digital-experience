@@ -4,29 +4,23 @@ You can migrate from a Portal Server Offering 7.0 to Portal 8.5. For more inform
 
 To complete a 7.0 Server Offering-only migration, follow the steps for stand-alone and cluster migrations that are available in the *Roadmaps for migration*. However, when you use the Configuration Wizard options to **Migrate to a New Version**, complete all steps from the wizard except for the final **Upgrade the Portal Profile** step. You must run this step manually.
 
-Manually run the two following ConfigEngine tasks from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory:
+Manually run the two following ConfigEngine tasks from the wp_profile_root/ConfigEngine directory:
 
 1.  Run the add-disabled-wcm-to-server task:
-    -   AIX® HP-UX Linux™ Solaris: ./ConfigEngine.sh add-disabled-wcm-to-server -DWasPassword=yourpassword -DPortalAdminPwd=yourpassword
-    -   IBM® i: ConfigEngine.sh add-disabled-wcm-to-server -DWasPassword=yourpassword -DPortalAdminPwd=yourpassword
-    -   Windows™: ConfigEngine.bat add-disabled-wcm-to-server -DWasPassword=yourpassword -DPortalAdminPwd=yourpassword
-    -   z/OS®: ./ConfigEngine.sh add-disabled-wcm-to-server -DWasPassword=yourpassword -DPortalAdminPwd=yourpassword
+
+    -   AIX® and Linux™: `./ConfigEngine.sh add-disabled-wcm-to-server -DWasPassword=yourpassword -DPortalAdminPwd=yourpassword`
+    -   Windows™: `ConfigEngine.bat add-disabled-wcm-to-server -DWasPassword=yourpassword -DPortalAdminPwd=yourpassword`
+
 2.  Run the upgrade-profile task and include the additional -Dprevious.family.WPFamilyName=server parameter:
 
-    -   AIX HP-UX Linux Solaris: ./ConfigEngine/ConfigEngine.sh upgrade-profile -DWasPassword=yourpassword -DPortalAdminPwd=yourpassword -javaoption -Xms512m -javaoption -Xmx2048m -Dwcm.transactionTimeout=1200 -Dprevious.family.WPFamilyName=server
-    -   IBM i: ConfigEngine/ConfigEngine.sh upgrade-profile -DWasPassword=yourpassword -DPortalAdminPwd=yourpassword -javaoption -Xms512m -javaoption -Xmx2048m -Dwcm.transactionTimeout=1200 -Dprevious.family.WPFamilyName=server
-    -   Windows: ConfigEngine/ConfigEngine.bat upgrade-profile -DWasPassword=yourpassword -DPortalAdminPwd=yourpassword -javaoption -Xms512m -javaoption -Xmx2048m -Dwcm.transactionTimeout=1200 -Dprevious.family.WPFamilyName=server
-    -   z/OS: .ConfigEngine/ConfigEngine.sh upgrade-profile -DWasPassword=yourpassword -DPortalAdminPwd=yourpassword -javaoption -Xms512m -javaoption -Xmx2048m -Dwcm.transactionTimeout=1200 -Dprevious.family.WPFamilyName=server
-    **Note:** If you encounter any problems when you run the upgrade-profile task and you need to restart the task with -Dwp.migration.framework.resume=parameter, then ensure that you continue to use the -Dprevious.family.WPFamilyName=server parameter.
+    -   AIX and Linux: `./ConfigEngine/ConfigEngine.sh upgrade-profile -DWasPassword=yourpassword -DPortalAdminPwd=yourpassword -javaoption -Xms512m -javaoption -Xmx2048m -Dwcm.transactionTimeout=1200 -Dprevious.family.WPFamilyName=server`
+    -   Windows: `ConfigEngine/ConfigEngine.bat upgrade-profile -DWasPassword=yourpassword -DPortalAdminPwd=yourpassword -javaoption -Xms512m -javaoption -Xmx2048m -Dwcm.transactionTimeout=1200 -Dprevious.family.WPFamilyName=server`
+    
+    !!!note
+        If you encounter any problems when you run the upgrade-profile task and you need to restart the task with `-Dwp.migration.framework.resume=parameter`, then ensure that you continue to use the `-Dprevious.family.WPFamilyName=server` parameter.
 
-
-
-**Related information**  
-
-
-[Roadmaps for migration](../install/rm_migration.md)
-
-[Migrate data using the configuration wizard](../migrate/mig_85_wizard.md)
-
-[Overview 9.5](../overview/intro_container.md)
+???+ info "Related information"  
+    -   [Roadmaps for migration](../../../../../deployment/manage/migrate/planning_migration/rm_migration/index.md)
+    -   [Migrate data using the configuration wizard](../../../../../deployment/manage/migrate/migrate_using_cfgwizard/index.md)
+    -   [Overview 9.5](../../../../../get_started/intro_container.md)
 

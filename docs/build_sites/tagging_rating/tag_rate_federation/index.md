@@ -49,6 +49,6 @@ During configuration or administration of the HCL Connections integration there 
 When tags from remote systems, such as HCL Connections are integrated into your HCL Digital Experience site, you need to schedule tasks to retrieve tags and related data from the remote system, and later to clean them up from the portal. You can also redirect the rendering of federated resources to HCL Connections and add icons to federated resources.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Specifying an icon for a federated resource](../tag_rate_federation/fed_admin/tag_fed_admin_spec_icon.md)
 

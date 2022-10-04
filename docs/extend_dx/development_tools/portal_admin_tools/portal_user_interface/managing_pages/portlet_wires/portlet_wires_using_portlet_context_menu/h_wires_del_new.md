@@ -3,7 +3,7 @@ id: h_wires_del_new
 title: Deleting a wire using the context menu
 ---
 
-
+# Deleting a wire using the context menu
 
 
 The wires tab lists the existing wires that are heading away from the source portlet.

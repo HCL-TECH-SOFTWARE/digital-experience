@@ -7,7 +7,7 @@ When you work with pages, you might encounter problems that are related to proje
 Ensure that User A has the following access rights:
 
 -   User on the project. Specify this access by editing the project and adding User A to the **User** list in the **Access** section.
--   User on the WCM\_REST\_SERVICE virtual resource. Specify this access in the portal.Click the **Administration menu** icon. Then, click **Access** \> **Resource Permissions**. From the list of Resource Types, select **Virtual Resources** by clicking it. On the Resource Permissions page, click on the **Assign Access** icon for the WCM\_REST\_SERVICE resource. Then, click on the **Edit Role** icon to specify the access for the user.
+-   User on the WCM\_REST\_SERVICE virtual resource. Specify this access in the portal. Go to **Administration** \> **Security** \> **Resource Permissions**. From the list of Resource Types, select **Virtual Resources**. Click on the **Assign Access** icon for the **WCM\_REST\_SERVICE** resource. Then, click on the **Edit Role** icon to specify the access for the user.
 
 ## User A cannot modify a published or draft page
 
@@ -53,7 +53,7 @@ To do the resynchronization, run the `create-page-nodes` configuration task, as 
     This task also removes any draft pages that are not found in the Portal Site library.
 
 
-???+ info "Related information:"  
+???+ info "Related information"  
     - [Enabling vanity URL support](../../../../manage_content/wcm/wcm_content_delivery/vanity_url/adm_vanity_url/van_url_cfgtsk_enable_vus.md)
     - [Synchronizing the vanity URL database](../../../../manage_content/wcm/wcm_content_delivery/vanity_url/adm_vanity_url/van_url_cfgtsk_sync_db.md)
 

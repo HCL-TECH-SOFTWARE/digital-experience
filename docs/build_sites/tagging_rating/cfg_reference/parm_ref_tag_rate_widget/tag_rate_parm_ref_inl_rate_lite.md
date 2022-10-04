@@ -7,7 +7,7 @@ You configure rating widget instances by setting the JavaScript parameters liste
 
 To set the parameters, proceed as follows:
 
-1.  In HCL Web Content Manager, go to **Applications** \> **Content** \> **WCM Authoring** \> **Libraries** \> **Web Resources v70** \> **Components**.
+1.  In HCL Web Content Manager, go to **Web Content** \> **Authoring** \> **Libraries** \> **Web Resources v70** \> **Components**.
 2.  Select the check box for **HTML - Rating Widget Light - Stars**.
 3.  Click **Edit**.
 
@@ -106,7 +106,7 @@ The following parameters are optional for the rating widget. They correspond to 
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [General properties for tagging and rating](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/srvcfg_cpcfg4tr_genrl.md)
     - [Properties for the rating widget](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/srvcfg_cpcfg4tr_dlgrate_altui.md)
     - [The tag and rating widgets](../../tagging_rating_ui/tagging_rating_widget/index.md)

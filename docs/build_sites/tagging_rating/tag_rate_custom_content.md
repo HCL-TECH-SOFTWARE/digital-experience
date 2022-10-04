@@ -8,7 +8,7 @@ Starting with HCL Portal Version 8.5, you can enable your own custom content for
     Tagging or rating for your own custom content works only with the dialog widgets, but not with the inline widgets of earlier portal versions.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Tagging and rating](../index.md)
     - [Hints and tips for developers and portal administrators](../tagging_rating/hints_tips_tag_rate/index.md)
 

@@ -31,18 +31,11 @@ When a text provider is enabled on an item, identity controls work this way:
 |--------|----------|
 |`<wcm:name>text</wcm:name>`|Name|
 |`<wcm:displayTitle>text</wcm:displayTitle>`|Display title|
-|`<atom:title lang="language code" >text</atom:title>`For example:
-
-`<atom:title lang="fr" >text</atom:title>`|Localized title**Note:** When a text provider is enabled, only the localized title can be read by the REST service. You need to update the text provider plug-in directly to change the localized title.
-
-|
+|`<atom:title lang="language code" >text</atom:title>`For example: <br>`<atom:title lang="fr" >text</atom:title>`|Localized title**Note:** When a text provider is enabled, only the localized title can be read by the REST service. You need to update the text provider plug-in directly to change the localized title.|
 |`<wcm:description>text</wcm:description>`|Description|
-|`<atom:summary lang="language code" >text</atom:summary>`For example:
+|`<atom:summary lang="language code" >text</atom:summary>`For example: <br>`<atom:summary lang="fr" >text</atom:summary>`|Localized description**Note:** When a text provider is enabled, only the localized description can be read by the REST service. You need to update the text provider plug-in directly to change the localized description.|
 
-`<atom:summary lang="fr" >text</atom:summary>`|Localized description**Note:** When a text provider is enabled, only the localized description can be read by the REST service. You need to update the text provider plug-in directly to change the localized description.
-
-|
-
-**Note:** The language code that is required for the localized tags must be an IETF BCP47 compliant language code.
+!!! note
+    The language code that is required for the localized tags must be an IETF BCP47 compliant language code.
 
 

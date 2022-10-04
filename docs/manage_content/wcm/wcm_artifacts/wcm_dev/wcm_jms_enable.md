@@ -41,9 +41,11 @@ The event classes can be delivered as messages to the Java messaging service:
 
         ./ConfigEngine.sh create-wcm-jms-resources -DPortalAdminId=username -DPortalAdminPwd=password -DuseRemoteEndPoints=true/false
 
-    **Note:** An administrator user name and password is not needed if you specify the portal administrator user name and password by using the `PortalAdminId` and `PortalAdminPwd` settings in the wkplc.properties file.
+    !!! note
+        An administrator user name and password is not needed if you specify the portal administrator user name and password by using the `PortalAdminId` and `PortalAdminPwd` settings in the wkplc.properties file.
 
-    **Note:** The `-DuseRemoteEndPoints` parameter is only used on clustered systems. If set to true, the task uses all node end points on the current setup. If set to "false", the task uses the end points of the current node.
+    !!! note
+        The `-DuseRemoteEndPoints` parameter is only used on clustered systems. If set to true, the task uses all node end points on the current setup. If set to "false", the task uses the end points of the current node.
 
 3.  Restart HCL Portal.
 
@@ -52,7 +54,8 @@ The `create-wcm-jms-resources` command creates a topic space that is named `IWK.
 
 The messages are sent with no expiration time and need to be consumed, otherwise the queue fills up.
 
-**Note:** There is a default limit of fifty thousand \(50,000\) messages per queue topic. When that limit is reached, messages cannot be stored anymore in the queue and exceptions are logged in the Portal server log file.
+!!! note
+    There is a default limit of fifty thousand \(50,000\) messages per queue topic. When that limit is reached, messages cannot be stored anymore in the queue and exceptions are logged in the Portal server log file.
 
 For information about the default implementation of the WebSphere Application Server JMS implementation and choices of message providers, read [Types of messaging providers](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/cmj_jmsp.html).
 

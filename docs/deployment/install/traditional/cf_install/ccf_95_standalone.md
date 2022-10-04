@@ -13,7 +13,6 @@ Read the installation instructions to learn how to apply a cumulative fix to a s
 Ensure that enough disk space is available in the following directories:
 
 -   For all platforms: 2.0 GB in the download directory to download the cumulative fix, 1.5 GB in `Portal_Install_Root`, 1 GB temporary disk space in `(wp_profile_root)`, and 1.66 GB in the shared data space, which is the directory where Installation Manager temporarily stores downloaded files for use during the update.
--   For Solaris: It is recommended that you allocate swap space equal to at least twice your physical RAM to avoid memory errors during the configuration of this cumulative fix.
 
 ## Best Practices
 
@@ -155,7 +154,6 @@ You may now continue with the installation of the Portal CF.
 
 ## Download the cumulative fix
 
-If you are installing the cumulative fix using a live repository \(only possible with CFs prior to CF17\), then you do not need to download the cumulative fix to your server. If you need to download the cumulative fix, then you can follow these steps.
 
 1.  Go and log in to [HCL Software Support](https://support.hcltechsw.com/csm) and download the latest zip file that corresponds to the installation on your system.
 2.  Create a directory and extract the zip file\(s\) into this directory. Inside the zip file is a readme file, sample response files \(Server and Express only\), and the actual cumulative fix file itself.
@@ -188,27 +186,6 @@ There are several different methods to install the cumulative fix. Choose one me
 7.  Select **Update** and follow the prompts to update HCL Portal.
 8.  After installation completes, proceed with the *Additional configuration steps*.
 
-## Use a live repository via the Graphical User Interface \(available on Windows and Linux operating systems\)
-
-1.  If you are running an external web server, stop the web server.
-2.  Stop any active application servers by using the `stopServer` command. To see which application servers are active, use the `serverStatus` command from the \(wp\_profile\)/bin directory and again from the \(cw\_profile\)/bin directory:
-    -   Linux:
-
-        ```
-        ./serverStatus.sh -all
-        ```
-
-    -   Windows:
-
-        ```
-        serverStatus.bat -all
-        ```
-
-3.  Launch the IBM Installation Manager that was used to install HCL Portal Version 8.5.
-4.  Using Installation Manager, click **File** then **Preferences**.
-5.  Go to the **Repositories** panel and click **Search service repositories during installation and updates**. Click apply.
-6.  Select **Update** and follow the prompts to update HCL Portal.
-7.  After installation completes, proceed with the *Additional configuration steps*.
 
 ## Use a command line \(available on Windows and Linux operating systems\)
 

@@ -15,7 +15,6 @@ All URL mappings use the same context root and servlet name in the URL. This set
 
 For more information, see *URL mappings*.
 
-**Notes:**
 
 1.  There is a 1:1 relation between a virtual portal and its initial URL Mapping. Each mapped URL points to the root content node of one virtual portal. You cannot use the same URL Mapping for two different virtual portals.
 2.  You must not delete or modify the initial URL Mapping for a virtual portal or modify its unique name. Deleting this URL Mapping or modifying its unique name makes the virtual portal unusable. This setting is independent of whether you use the administration portlets URL Mapping or Custom Unique Names or the XML configuration interface to change the URL Mapping.
@@ -36,19 +35,12 @@ For more information, see *URL mappings*.
     ```
 
 
-<!--
-**Related information**  
 
-
-[Using friendly URLs](../admin-system/mp_friendly_url.md)
-
-[URL mapping](../admin-system/adurlmap.md)
-
-[XML configuration interface and content associations](../admin-system/mp_wcm_contentmap_xml.md)
-
-[Automatically grant page access to community members](../admin-system/commpages_delegate_access.md)
-
-[REST API and content associations](../admin-system/mp_wcm_contentmap_restapi.md)
-
-[Access permissions](../admin-system/sec_acc_rights.md) -->
+???+ info "Related information:"
+    - [Using friendly URLs](../../../../extend_dx/development_tools/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/mp_friendly_url.md)
+    - [URL mapping](../../../../deployment/manage/config_portal_behavior/adurlmap.md)
+    - [XML configuration interface and content associations](../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/advance_adm_sample/contentmap/mp_wcm_contentmap_xml.md)
+    - [Automatically grant page access to community members](../../../../extend_dx/integration/connections/configuration/cfg_community_pages/commpages_delegate_access.md)
+    - [REST API and content associations](../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/advance_adm_sample/contentmap/mp_wcm_contentmap_restapi.md)
+    - [Access permissions](../../../../deployment/manage/security/controlling_access/resources_roles/sec_acc_rights.md)
 

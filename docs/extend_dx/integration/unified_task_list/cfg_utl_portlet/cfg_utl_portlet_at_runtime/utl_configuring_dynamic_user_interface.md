@@ -8,14 +8,13 @@ Create a dynamic page and register it using the ConfigEngine.
 
 3.  Open a command prompt.
 
-4.  Change to the IBM\\WebSphere\\wp\_profile\\ConfigEngine directory.
+4.  Change to the IBM\WebSphere\wp_profile\ConfigEngine directory.
 
 5.  Enable the Unified Task List portlet page to start dynamic pages by running the following command:
 
-    -   AIX® HP-UX Solaris Linux™: ./ConfigEngine.sh action-enable-page-as-extension-node-wp.dynamicui.config -DPageUniqueName=wps.utl
-    -   Windows™: ConfigEngine.bat action-enable-page-as-extension-node-wp.dynamicui.config -DPageUniqueName=wps.utl
-    -   IBM® i: ConfigEngine.sh action-enable-page-as-extension-node-wp.dynamicui.config -DPageUniqueName=wps.utl
-    -   z/OS®: ./ConfigEngine.sh action-enable-page-as-extension-node-wp.dynamicui.config -DPageUniqueName=wps.utl
+    -   AIX® and Linux™: `./ConfigEngine.sh action-enable-page-as-extension-node-wp.dynamicui.config -DPageUniqueName=wps.utl`
+    -   Windows™: `ConfigEngine.bat action-enable-page-as-extension-node-wp.dynamicui.config -DPageUniqueName=wps.utl`
+
     Where -DPageUniqueName is the value of the unique ID you previously specified.
 
 

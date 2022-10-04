@@ -70,12 +70,9 @@ You can customize social rendering view definitions in a number of ways. For exa
 As an owner of an HCL Connections community, you can define the set of widgets that are available in the community. For this purpose, you use the Customize option in HCL Connections. For example, you might choose to add the Blog widget to a specific community. This way, community owners have control over the set of services available in the communities they own.
 -   **[Extending social lists by using the digital data connector](../social/soc_rendr_xtnd_sl_by_plrf.md)**  
 The social rendering feature in HCL Digital Experience 8.5 is implemented as an Digital Data Connector \(DDC\) for HCL Portal plug-in.
+--->
 
-
-**Related information**  
-
-
-[Digital Data Connector profiles for social rendering](../social/soc_rendr_lst_rndr_prfls.md)
-
-[Digital Data Connector \(DDC\) for HCL Portal](../social/plrf_ovu.md) -->
+???+ info "Related information:"
+    - [Digital Data Connector profiles for social rendering](../social_rendering/customizing_view_definitions/customizing_visualdesign/customizing_markup_gen/ddc_profiles_for_social_rend/index.md)
+    - [Digital Data Connector \(DDC\) for HCL Portal](../../extend_dx/ddc/index.md)
 

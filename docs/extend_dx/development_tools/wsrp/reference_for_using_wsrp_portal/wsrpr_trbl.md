@@ -2,10 +2,6 @@
 
 You can troubleshoot WSRP by using different methods such as logging and tracing, debugging, and monitoring.
 
--   [Setting traces and using the portal run time log file for WSRP diagnosis](wsrpr_trbl.md#setrac)
--   [Debugging and monitoring the WSRP protocol flow](wsrpr_trbl.md#debug)
--   [Monitoring WSRP messages between the Consumer and Producer by using TCPMon](wsrpr_trbl.md#monmsg)
-
 ## Setting traces and using the portal run time log file for WSRP diagnosis
 
 You can diagnose problems that might occur during the use of WSRP. To do so, you set WSRP-specific traces and enable run time logs for the Consumer, Producer, and administration components of the WSRP implementation. Use the administration portlet Enable Tracing.
@@ -14,10 +10,10 @@ You can enable the following trace loggers for the WSRP implementation:
 
 |Component|Trace string|
 |---------|------------|
-|Administration|com.ibm.wps.command.wsrp.\*=all com.ibm.wps.wsrp.cmd.\*=allcom.ibm.wps.wsrp.common.\*=allcom.ibm.ws.websvcs.trace.MessageTrace=all|
-|Consumer|com.ibm.wps.wsrp.consumer.\*=allcom.ibm.wps.wsrp.common.\*=allcom.ibm.ws.websvcs.trace.MessageTrace=all|
-|Producer|com.ibm.wps.wsrp.producer.\*=allcom.ibm.wps.wsrp.common.\*=allcom.ibm.ws.websvcs.trace.MessageTrace=all|
-|XMLAccess|com.ibm.wps.command.xml.\*=allcom.ibm.wps.wsrp.common.\*=allcom.ibm.ws.websvcs.trace.MessageTrace=all|
+|Administration|com.ibm.wps.command.wsrp.*=all com.ibm.wps.wsrp.cmd.*=allcom.ibm.wps.wsrp.common.*=allcom.ibm.ws.websvcs.trace.MessageTrace=all|
+|Consumer|com.ibm.wps.wsrp.consumer.*=allcom.ibm.wps.wsrp.common.*=allcom.ibm.ws.websvcs.trace.MessageTrace=all|
+|Producer|com.ibm.wps.wsrp.producer.*=allcom.ibm.wps.wsrp.common.*=allcom.ibm.ws.websvcs.trace.MessageTrace=all|
+|XMLAccess|com.ibm.wps.command.xml.*=allcom.ibm.wps.wsrp.common.*=allcom.ibm.ws.websvcs.trace.MessageTrace=all|
 
 ## Debugging and monitoring the WSRP protocol flow
 

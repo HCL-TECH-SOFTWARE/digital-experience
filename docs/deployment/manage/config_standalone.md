@@ -1,6 +1,6 @@
-# Setting up a stand-alone server
+# Configuring a stand-alone server
 
-Use the Configuration Wizard to set up a stand-alone server. A stand-alone server is useful for different environments, such as a content authoring environment, test environment, and more.
+Use the Configuration Wizard to configure a stand-alone server. A stand-alone server is useful for different environments, such as a content authoring environment, test environment, and more. Installation of a stand-alone server is covered elsewhere in this documentation.
 
 Roadmaps provide an overview of the steps that are required for common environment configurations. Select the roadmap that is most like the environment that you want to set up.
 

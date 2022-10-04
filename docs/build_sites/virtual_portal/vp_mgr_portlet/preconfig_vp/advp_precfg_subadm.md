@@ -28,13 +28,9 @@ You can configure the roles and access rights that are assigned to sub-administr
 6.  Assign the virtual portal sub-administrators administrator rights on the JCR root as required.
 
 
-<!--
-**Related information**  
 
-
-[Content of a virtual portal](../admin-system/advppln_content.md)
-
-[Sub-administrators of a virtual portal and their access roles and permissions](../admin-system/advppln_roles_subadm.md)
-
-[Filling a virtual portal with content](../admin-system/advp_tsk_fill_content.md) -->
+???+ info "Related information:"
+    - [Content of a virtual portal](../../vp_planning/advppln_content.md)
+    - [Sub-administrators of a virtual portal and their access roles and permissions](../../vp_planning/vp_roles/advppln_roles_subadm.md)
+    - [Filling a virtual portal with content](../../adm_vp_task/vp_adm_task/advp_tsk_fill_content.md)
 

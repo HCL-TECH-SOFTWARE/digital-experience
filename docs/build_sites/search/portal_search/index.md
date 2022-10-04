@@ -24,7 +24,7 @@ Site visitors who are working with search can now experience enhanced features, 
 
 To enhance the possibilities available to site visitors who are working with search, administrators can customize Portal search as follows:
 
--   Configuration of additional search portlets that are deployed on the Search Center page already. These portlets include the Suggested Links portlet, which can be used to promote certain pages, and the External Results portlet, which reaches out to additional search services with the same search request and renders their RSS or Atom feeds to the user.
+-   Configuration of additional search portlets that are already deployed on the Search Center page. These portlets include the *Suggested Links* portlet, which can be used to promote certain pages, and the *External Results* portlet, which reaches out to additional search services with the same search request and renders their RSS or Atom feeds to the user.
 -   Simplified administration of Suggested Links by using a concept similar to tagging.
 
 ## Benefits for DX Portal administrators
@@ -32,7 +32,7 @@ To enhance the possibilities available to site visitors who are working with sea
 Portal site administrators who are working with search also benefit from enhanced search administration features. By using portal search, site administrators can complete the following tasks:
 
 -   Setting up security as required. Administrators can provide a portal search on public content for anonymous site visitors and a portal search on secured content for authenticated visitors.
--   Configuring portal search for local operation or remote search service. Depending on your portal deployment \(single node or portal cluster\), remote search service handles requests that come from cluster nodes as well as providing performance benefits by balancing system load.
+-   Configuring portal search for local operation or remote search service. Depending on your portal deployment \(single noder,  portal cluster or Kubernetes\), remote search service handles requests that come from cluster nodes as well as providing performance benefits by balancing system load.
 -   Simplified setting up remote search service by using IBM Installation Manager or Helm processes for DX deployments on Kubernetes platforms.
 -   Administer portal search by using the Manager Search administration portlet.
 
@@ -49,7 +49,7 @@ Creating the portal site search collection can fail due to a file path length re
 Portal Search provides logging and tracing so that you can get additional information for resolving possible problems. -->
 
 
-???+ info "Related information:"
+*Related information*
     - [Exporting and importing search collections](../../search/portal_search/administer_portal_search/setup_search_collections/srtexpimp.md)
     - [Improving Search Quality in HCL Digital Experience Search](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0076375)
 

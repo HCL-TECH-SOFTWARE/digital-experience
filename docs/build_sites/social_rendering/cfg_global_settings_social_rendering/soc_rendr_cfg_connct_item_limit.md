@@ -27,13 +27,8 @@ To configure this maximum value, proceed by the following steps:
     A page editor can override this default value for an individual social list by editing the social list definition and setting the value in the field Maximum Results. For more information, see *Customizing social list definitions by using inline editing*.
 
 
-<!--
-
-**Related information**  
-
-[Cache Manager Service](../admin-system/srvcfgref_cach_mgr.md)
-
-[Customizing social list definitions by using inline editing](../social/soc_rendr_cust_socl_list.md)
-
-[Digital Data Connector caches](../social/plrf_caches.md) -->
+???+ info "Related information:"
+    - [Cache Manager Service](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/srvcfgref_cach_mgr.md)
+    - [Customizing social list definitions by using inline editing](../customizing_view_definitions/soc_rendr_cust_socl_list.md)
+    - [Digital Data Connector caches](../../../extend_dx/ddc/ddc_cache_tuning/plrf_caches.md)
 

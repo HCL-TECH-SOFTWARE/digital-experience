@@ -30,6 +30,5 @@ Set up your own customized search collection for searching a secured portal site
         5.  For details about how to create a search collection and a content source, see the topics *Creating and configuring search collections* and *Managing the content sources of a search collection*, and the *Manage Search* portlet help.
 
 
-???+ info "Related information:"
-- [Searching on secured portal sites and pages and content management items](../../planning_portal_search/security_considerations/srtsrchscrprtlstepgs.md)
-
+???+ info "Related information"
+    -   [Searching on secured portal sites and pages and content management items](../../planning_portal_search/security_considerations/srtsrchscrprtlstepgs.md)

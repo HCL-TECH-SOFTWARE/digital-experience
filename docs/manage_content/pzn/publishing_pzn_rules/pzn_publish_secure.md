@@ -12,15 +12,13 @@ In some environments even SSL publishing may not be secure enough. The pznload c
 
     If the remote server is not using the default HTTPS port of 443, modify the URL by adding a colon and the port number immediately after the host name.
 
-    ![Altering the publish servlet URL for secure publishing](../images/pzn_screen_publish_servlet.jpg "Altering the publish servlet URL for
-    secure publishing by adding a colon and the port number after the
-    host name for remote servers not using the default HTTPs port of 443.")
+    ![Altering the publish servlet URL for secure publishing](../publishing_pzn_rules/_img/pzn_screen_publish_servlet.jpeg)
 
 3.  Configure the personalization server from which you will be publishing to use the HTTPS protocol.
 
     To determine whether a particular URL is valid, point your browser to that location and enter your username and password for the system. If you see the message Publish servlet available and all SSL certificates have been properly imported, you should be able to publish. You can change this URL to redirect all publish jobs through a specific cluster member. If you encounter an error message that indicates the publish service was not available, the local publish servlet may not be configured correctly. To configure the local publish servlet URL:
 
-    1.  Click the **Administration menu** icon. Then, click **Portlet Management** \> **Portlets**.
+    1.  Click the **Administration menu** icon. Then, click **Portlet Management > Portlets**.
 
     2.  Locate the Personalization Navigator portlet in the list.
 
@@ -28,18 +26,9 @@ In some environments even SSL publishing may not be secure enough. The pznload c
 
     4.  Add a new portlet parameter whose name is pzn.publishServlet.url and specify the appropriate value.
 
-    ![Configuring the local publish service by adding pzn.publishServlet.url in the New parameter field.](../images/pzn_screen_local_pub.jpg "Configuring the local publish service")
+    ![Configuring the local publish service by adding pzn.publishServlet.url in the New parameter field.](../publishing_pzn_rules/_img/pzn_screen_local_pub.jpeg)
 
 
 If a Personalization server is configured to use a nonstandard HTTPS port or context root, or if you see messages such as EJPVP20002E: The local publish service was not available when publishing from the authoring environment, the local publish servlet URL might be incorrect.
 
-
-**Previous topic:**[Publishing and deleting personalization rules using a script](../pzn/pzn_publish_script.md)
-
-**Next topic:**[Monitoring the status of publishing](../pzn/pzn_publish_status.md)
-
-
-**Previous topic:**[Publishing and deleting personalization rules using a script](../pzn/pzn_publish_script.md)
-
-**Next topic:**[Monitoring the status of publishing](../pzn/pzn_publish_status.md)
 

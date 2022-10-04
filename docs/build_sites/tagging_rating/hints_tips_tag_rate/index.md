@@ -9,7 +9,7 @@ Learn about some hints and tips for administrators who work with tagging and rat
 Learn about some hints and tips for portal users who work with tagging and rating. -->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [CP Configuration Service for tagging and rating](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/index.md)
     - [Setting service configuration properties](../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
     - [Parameter reference for the tag and rating widgets](../cfg_reference/parm_ref_tag_rate_widget/index.md)

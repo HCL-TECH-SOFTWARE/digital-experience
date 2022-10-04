@@ -34,25 +34,8 @@ When building a hierarchy of taxonomies and categories, it is important to consi
 
 |Scenario|Example|
 |--------|-------|
-|If you base a menu on a top-level category, all content that is profiled with categories that belong to that top-level category and their descendants appear in the menu.|In the previous example, a menu based on Financial displays content that is profiled with any of the following:-   Financial
-    -   Banking Solutions
-    -   Interest Rates
-        -   Personal
-        -   Business
-        -   Corporate
-
-|
-|If you base a menu on a mid-level category, all content that is profiled with the mid-level category or its descendants or its ancestors appear in the menu.|A menu based on Interest Rates displays content that is profiled with any of the following:-   Financial
-    -   Interest Rates
-        -   Personal.
-        -   Business.
-        -   Corporate.
-
-|
-|If you base a menu on a bottom-level category, all content that is profiled with the bottom-level category or its ancestors are returned by the menu.|A menu based on Business displays content that is profiled with any of the following:-   Financial
-    -   Interest Rates
-        -   Business.
-
-|
+|If you base a menu on a top-level category, all content that is profiled with categories that belong to that top-level category and their descendants appear in the menu.|In the previous example, a menu based on Financial displays content that is profiled with any of the following: <br> -   Financial <br>  -   Banking Solutions <br> -   Interest Rates <br>   -   Personal <br>  -   Business <br> -   Corporate|
+|If you base a menu on a mid-level category, all content that is profiled with the mid-level category or its descendants or its ancestors appear in the menu.|A menu based on Interest Rates displays content that is profiled with any of the following: <br> -   Financial <br>    -   Interest Rates <br>        -   Personal <br>        -   Business <br>        -   Corporate|
+|If you base a menu on a bottom-level category, all content that is profiled with the bottom-level category or its ancestors are returned by the menu.|A menu based on Business displays content that is profiled with any of the following: <br> -   Financial <br>    -   Interest Rates <br>        -   Business|
 
 

@@ -14,6 +14,9 @@ You can administer and configure many details for Portal Search.
 In order to enable Portal Search and make documents available for search by users, you perform administrative tasks such as the following:
 
 1.  Create search services. You can use the default search services provided with portal, or you can create additional search services, for example, for setting up remote search or search in a portal cluster.
+If no search services exist, Portal will automatically create one at Portal initialization time.
+Note that the default search service is only for "local" search.
+If the Portal exists in a WebSphere cluster or if this is a multi-pod Kubernetes deployement, the default search collection should be deleted and "Remote Search" used instead.
 
 2.  Configure Portal Search. You do this by configuring the search service.
 
@@ -26,9 +29,6 @@ In order to enable Portal Search and make documents available for search by user
     2.  Create one or more content sources for that collection and have them crawled.
 
     For more details about these tasks refer to the topic about Setting up search collections.
-
-    **Migrating search collections:** Starting with HCL Portal Version 6.1 the syntax of the seedlist URL has changed to seedlist format 1.0. Older search collections created before portal V 6.1 use seedlist format 0.9 and cannot be reused or migrated to the new format. Starting with HCL Portal Version 7 JCR was added as 1.0 seedlist format. Be sure that you index all content again before using seedlist format 1.0.
-
 
 Portal Search is pre-configured with a search service, a portal site search collection, and scopes. You can add and remove search services, collections, and scopes.
 
@@ -55,12 +55,10 @@ View information on setting up search collections for search by users. This also
 -   **[Searching and crawling Portal and other sites](../admin-system/srcportals.md)**  
 You can configure your local Portal site and crawl remote Portal sites so that they are searchable by users. Run crawlers against other external websites to make them searchable by local portal users.  --->
 
-???+ info Related information:"
-    - [Planning and preparing for Portal Search](../../planning_portal_search/index.md)
 
-    - [Exporting and importing search collections](../administer_portal_search/setup_search_collections/srtexpimp.md)
-
+???+ info "Related information"
+    - [Planning and preparing for Portal Search](../../../../build_sites/search/planning_portal_search/index.md)
+    - [Exporting and importing search collections](../../../../build_sites/search/portal_search/administer_portal_search/setup_search_collections/srtexpimp.md)
     - [Using the view definitions provided with social rendering on your portal pages](../../../social_rendering/working_with_social_objects/soc_rendr_use_oob_socl_list.md)
-
     - [Customizing social list definitions by using inline editing](../../../social_rendering/customizing_view_definitions/soc_rendr_cust_socl_list.md)
 

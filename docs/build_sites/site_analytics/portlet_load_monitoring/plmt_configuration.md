@@ -47,6 +47,6 @@ You can configure these portlet preferences for a portlet either by setting them
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Setting service configuration properties](../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 

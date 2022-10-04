@@ -84,7 +84,8 @@ Components are data-oriented items and represented as files and metadata folders
           access-control.xml	
 ```
 
-**Important:** Although displayed in WebDAV, the following components cannot be created or modified through WebDAV and are represented by empty files:
+!!! important
+    Although displayed in WebDAV, the following components cannot be created or modified through WebDAV and are represented by empty files:
 
 -   Authoring tools
 -   Component references
@@ -109,7 +110,8 @@ To change these components, you must use the authoring portlet.
 
     For example, you might drag an HTML file into the `wcm.comps.html` folder for a new HTML component or into the `wcm.comps.rich.text` folder for a new rich text element.
 
-    **Important:** Placing an incompatible file into a component type folder \(for example, putting a JPEG file into the `wcm.comps.html` folder\) can cause errors during component creation and might result in an unusable component.
+    !!! important
+        Placing an incompatible file into a component type folder \(for example, putting a JPEG file into the `wcm.comps.html` folder\) can cause errors during component creation and might result in an unusable component.
 
     **Updating components:** To update an existing component, you can replace the corresponding file in the WebDAV tree with a new file that has the same name. For example you can place `myCoolPic.jpg` into the image components folder that already contains `myCoolPic.jpg`, and the component is automatically updated with the new file's content. If you place a file with a different name, a new component with that name is created.
 
