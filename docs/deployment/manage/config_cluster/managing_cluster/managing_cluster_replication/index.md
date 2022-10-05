@@ -24,13 +24,5 @@ Review the following information to manage replication:
         -   For general information, read [Session management support](https://www.ibm.com/docs/en/was/9.0.5?topic=sessions-session-management-support).
         -   For memory-to-memory information, read [Memory-to-memory replication](https://www.ibm.com/docs/en/was/9.0.5?topic=SSEQTP_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/cprs_memory2memory.html).
         -   For database session information, read [Configuring for database session persistence](https://www.ibm.com/docs/en/was/9.0.5?topic=sessions-configuring-database-session-persistence).
-    -   IBM® i:
-        -   For general information, read [Session management support](https://www.ibm.com/docs/en/was/9.0.5?topic=sessions-session-management-support).
-        -   For memory-to-memory information, read [Memory-to-memory replication](https://www.ibm.com/docs/en/was/9.0.5?topic=SSEQTP_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/cprs_memory2memory.html).
-        -   For database session information, read [Configuring for database session persistence](https://www.ibm.com/docs/en/was/9.0.5?topic=sessions-configuring-database-session-persistence).
-    -   z/OS®:
-        -   For general information, read [Session management support](https://www.ibm.com/docs/en/was/9.0.5?topic=sessions-session-management-support).
-        -   For memory-to-memory information, read [Memory-to-memory replication](https://www.ibm.com/docs/en/was/9.0.5?topic=SSEQTP_9.0.5/com.ibm.websphere.nd.multiplatform.doc/ae/cprs_memory2memory.html).
-        -   For database session information, read [Configuring for database session persistence](https://www.ibm.com/docs/en/was/9.0.5?topic=sessions-configuring-database-session-persistence).
 
 
