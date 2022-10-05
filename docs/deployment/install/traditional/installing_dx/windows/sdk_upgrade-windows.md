@@ -11,14 +11,7 @@ Ensure that your Portal profile is created before you upgrade the SDK.
     !!!note
         Starting with HCL Digital Experience Combined fix pack 05, you can change your SDK Java Technology Edition from version 7.0 to version 7.1.Starting with HCL Digital Experience Combined fix pack 12, you can change your SDK Java Technology Edition to version 8.0.
 
-3.  Install one of the following PTF Groups or higher:
-
-    -   V7R1 for SDK version 7.1: **PTF Group SF99572 level 15** or higher
-    -   V7R2 for SDK version 7.1: **PTF Group SF99716 level 4** or higher
-    -   V7R1 for SDK version 8: **PTF Group SF99572 level 20** or higher
-    -   V7R2 for SDK version 8: **PTF Group SF99716 level 5** or higher
-
-4.  Read the following information before you run the managesdk task:
+3.  Read the following information before you run the managesdk task:
 
     -   For stand-alone environments: Stop the profile server (node) before you run the managesdk command.
     -   For clustered environments:
@@ -37,16 +30,16 @@ Ensure that your Portal profile is created before you upgrade the SDK.
         -   You must provide the administrative user name and password with the managesdk command for each profile that contains a federated node or deployment manager node in a cell with security enabled. If you do not specify the -user and -password parameters, the managesdk command might fail or stop processing.
         -   When you enable the SDK for a deployment manager, only the deployment manager server is enabled. None of the managed nodes of the deployment manager is enabled to use the specific SDK.
 
-5.  Open a command prompt and change to the AppServer_root/bin directory.
+4.  Open a command prompt and change to the AppServer_root/bin directory.
 
-6.  Run the following command to list the available SDK versions:
+5.  Run the following command to list the available SDK versions:
 
     Go to [managesdk command](https://www.ibm.com/docs/en/was/9.0.5?topic=tools-managesdk-command) for information about the managesdk commands.
 
     -   AIX® and Linux™: `./managesdk.sh -listAvailable`
     -   Windows™: `managesdk.bat -listAvailable`
 
-7.  Run the following command to enable all existing profiles to use the new SDK version:
+6.  Run the following command to enable all existing profiles to use the new SDK version:
 
     !!!note
         version_number is the supported SDK version number that was listed when you ran the `managesdk -listAvailable` command.
@@ -54,7 +47,7 @@ Ensure that your Portal profile is created before you upgrade the SDK.
     -   AIX and Linux: `./managesdk.sh -enableProfileAll -sdkname version_number -enableServers`
     -   Windows: `managesdk.bat -enableProfileAll -sdkname version_number -enableServers`
 
-8.  Run the following commands to make the new SDK version the new default:
+7.  Run the following commands to make the new SDK version the new default:
 
     -   AIX and Linux: `./managesdk.sh -setCommandDefault -sdkname version_number`<br>
 
@@ -64,9 +57,9 @@ Ensure that your Portal profile is created before you upgrade the SDK.
 
         `managesdk.bat -setNewProfileDefault -sdkname version_number`
 
-9.  If you have a DB2® database, upgrade the JCC driver. Go to [DB2 APAR PI47282 needed when using JAVA SDK8 in WebSphere Application Server V8.5.5.9+](https://support.hcltechsw.com/csm) for information.
+8.  If you have a DB2® database, upgrade the JCC driver. Go to [DB2 APAR PI47282 needed when using JAVA SDK8 in WebSphere Application Server V8.5.5.9+](https://support.hcltechsw.com/csm) for information.
 
-10. Repeat these steps on each node in your environment.
+9. Repeat these steps on each node in your environment.
 
     !!!note
         You cannot roll back to a version of HCL Digital Experience earlier than fix pack 11 while you use SDK Java Technology Edition version 8. Support for SDK Java Technology Edition version 8 does not exist in earlier releases of Portal. If you want to roll back to an earlier CF level, use the commands that are shown in steps 7 and 8 to switch back to SDK version 7.0 or 7.1 before you roll back.
