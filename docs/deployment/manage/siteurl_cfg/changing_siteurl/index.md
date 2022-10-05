@@ -9,10 +9,10 @@ http://www.example.com:port/wps/portal/products/\[!ut/p/encoded\_portal\_suffix\
 http://www.example.com:port/products/
 
 !!!note "Limitation"
-    If you removed the context root, the HCLWeb Content Manager Commerce Integration linking and editing function does not work.
+    If you removed the context root, the HCL Web Content Manager Commerce Integration linking and editing function does not work.
 
 !!!note "Notes"
-    -   HCL Portal and Web Services for Remote Portlets are installed with a default context root that you can change in the Configuration Wizard. Some applications have a fixed context root that cannot be changed.
+    -   HCL Portal and Web Services for Remote Portlets (WSRP) are installed with a default context root that you can change in the Configuration Wizard. Some applications have a fixed context root that cannot be changed.
     -   If you use Web Application Bridge, you cannot remove the context root from your site URL. Use the Configuration Wizard to modify the context root and default home values in your site URLs or to remove the default home value from your site URL.
     -   You can use this option for stand-alone and clustered environments. For clustered environments, you can use this option only on the primary node.
 

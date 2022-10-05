@@ -1,6 +1,7 @@
 # Configuring your portal site for search by internet search engines
 
-You can enable your portal site for search by using search services such as Google or Yahoo! Search on your portal site by external search services works for public portal pages only, that is, for pages that users can access without a user ID and password.
+You can enable your portal site for search by using search services such as Google.
+Search on your portal site by external search services works for public portal pages only, that is, for pages that users can access without a user ID and password.
 
 To make your portal available for search by internet search engines, you configure search with external search services. Register your portal with the external search service\(s\) of your choice. Give the URL of your portal to the search service providers so that they can crawl and index your portal site. Depending on how you customize your portal, you might consider indicating the Site Map page rather than your portal home page, or otherwise enhancing the configuration.
 
