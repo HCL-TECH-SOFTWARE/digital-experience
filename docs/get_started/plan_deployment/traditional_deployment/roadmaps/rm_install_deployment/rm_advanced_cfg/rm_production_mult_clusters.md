@@ -68,7 +68,7 @@ Portal is running and 10039 is the default transport port that is created by DXÂ
 for your environment.
 ```
 
-1.  To get the latest updates for the wizard, apply the most recent Combined Cumulative Fix. For more information about applying the latest fix pack, visit *Combined cumulative fix strategy* for more topic information.
+1.  To get the latest updates for the wizard, apply the most recent Combined Cumulative Fix. For more information about applying the latest fix pack, visit [Apply Combined Cumulative Fix](../../../../../../deployment/install/traditional/cf_install/index.md) for more topic information.
 
     **Note:** Skip this step, if you have the most recent fix pack applied.
 
