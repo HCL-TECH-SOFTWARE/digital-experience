@@ -22,7 +22,7 @@ After you install the multilingual extensions, you then must configure your syst
 
     5.  Assign the **Administrators** group to the **Administrators** role on the library and all item types.
 
-4.  Run the Update Member Fixer tool by running the following command from the `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine` directory:
+4.  Run the Update Member Fixer tool by running the following command from the [wp\_profile\_root](../../../../../guide_me/wpsdirstr.md)`/ConfigEngine` directory:
 
     -   **Windows™**
 
