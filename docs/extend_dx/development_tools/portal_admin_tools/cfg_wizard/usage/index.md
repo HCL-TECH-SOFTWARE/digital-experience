@@ -1,8 +1,8 @@
-# Configuration Wizard
+---
+title: Usage
+---
 
-You installed your HCL Digital Experience software. Now let the Configuration Wizard guide you through configuring your system. To begin, select a configuration option and provide basic input about your environment. Based on this information, the Configuration Wizard provides you with examples, recommended values, customized instructions, and scripts that you can run.
-
-## Steps for configuring your target system with the selected configuration option
+# Steps for configuring your target system with the selected configuration option
 
 The Configuration Wizard uses a three-step process to customize the selected configuration option to your environment.
 

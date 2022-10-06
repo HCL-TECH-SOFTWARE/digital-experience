@@ -3,10 +3,10 @@
 The [HCL Software License Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344) supports entitlement checking for several HCL Software solutions, including the [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7 offerings](https://blog.hcltechsw.com/digital-experience/introducing-new-hcl-digital-experience-cloud-native-9-5-bundle-with-user-session-pricing/) within the HCL Digital Experience portfolio. This enables customers to track their purchased software entitlement periods, and usage levels. 
 
 ## Overview
--   Beginning with HCL Digital Experience 9.5 Container Update CF207, you must specify certain entitlement check parameters within your [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7](../../../../get_started/intro_container.md#hcl-digital-experience-cloud-native) installations to accomplish entitlement checks. If you do not specify these entitlement check parameters, or fail to configure them correctly, then the entitlement check will not pass and will enter the grace period. To learn more about the various entitlement check scenarios, see HCL Digital Experience Cloud Native 9.5 entitlement check scenarios.
+-   Beginning with HCL Digital Experience 9.5 Container Update CF207, you must specify certain entitlement check parameters within your [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7](../../../../get_started/intro_container.md#hcl-digital-experience-cloud-native) installations to accomplish entitlement checks. If you do not specify these entitlement check parameters, or fail to configure them correctly, then the entitlement check will not pass and will enter the grace period. To learn more about the various entitlement check scenarios, see [HCL Digital Experience Cloud Native 9.5 entitlement check scenarios](entitlement_checks_scenarios.md).
 
 During the grace period, errors are displayed in your server logs. If you encounter these errors, contact HCL Support to resolve the issue. 
--   For more information on Flexnet user and device management, see What is the [HCL License & Delivery Portal (FlexNet Portal)](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344) knowledge article on the HCL Customer Support portal.
+-   For more information on Flexnet user and device management, see [What is the HCL License & Delivery Portal (FlexNet Portal?)](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344) knowledge article on the HCL Customer Support portal.
 
 ## Before you begin
 The following are the prerequisites for configuring Digital Experience Cloud Native V9.5 entitlements to your HCL Flexnet License and Delivery Portal instance.  
@@ -18,7 +18,7 @@ The following are the prerequisites for configuring Digital Experience Cloud Nat
 -   See the How to check your Entitlements and Map Entitlements sections in the instructions: [What is the HCL Software License & Download Portal?](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344#a8) for guidance to locate and map your entitlements to your deployment servers.
 -   You plan to deploy or update to an [HCL Digital Experience 9.5 Container Update CF207]() or higher release. 
 
-Review the Architecture that presents the License Manager component of HCL Digital Experience v9.5 Container Update software
+Review the Architecture that presents the License Manager component of HCL Digital Experience v9.5 Container Update software below.
 
 ## Architecture
 The License Manager component communicates with the HCL Flexnet server to validate license entitlement periods for HCL Digital Experience Cloud Native V9.5 Tier 1 – 7 software, once configured in the DX Cloud Native 9.5 deployment Helm chart. The License Manager component also transmits user session consumption from the customer’s production DX Cloud Native 9.5 deployments to their specific Flexnet entitlements dashboard.

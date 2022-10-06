@@ -1,15 +1,12 @@
-# Configuration Wizard
+---
+title: Configuration options
+---
 
-Use the Configuration Wizard to set up stand-alone servers and new deployments, create clusters, migrate and update to new versions, and add new capabilities to existing deployments.
-
-In the Configuration Wizard, you answer questions about the environment that you are configuring. Based on your answers, the wizard prompts you for custom values that are needed to configure your environment. Finally, the wizard generates custom steps and scripts to set up your environment.
-
-**Video**: [HCL Portal - How to Access ConfigWizard](https://www.youtube.com/watch?v=YAEO78T7coM&feature=youtu.be)
-
-## Configuration options in the Configuration Wizard
+# Configuration options in the Configuration Wizard
 
 Using the following configuration options, you can configure the portal server that you are connected to in real time. You can also download scripts and instructions to run on other servers, create reusable scripts for common configuration patterns, and create scripts to compare to scripts created in previous releases.
 
+1. Standalone
 -   **Database Transfer**
 
     Select this option to transfer data from Apache Derby to any of the database types that are supported by HCL Portal.
@@ -36,6 +33,7 @@ Using the following configuration options, you can configure the portal server t
     !!!note
         **Note:** The Configuration Wizard is not used to shorten site URLs for Search Engine Optimization on Kubernetes platforms. Refer to the [Customizing the HCL DX URL when deployed to container platforms](https://help.hcltechsw.com/digital-experience/9.5/containerization/t_customize_dx_url.html) topic for more information.
 
+2. Cluster
 -   **Create a Deployment Manager**
 
     Create a deployment manager profile that is augmented with HCL Portal resources.
@@ -60,6 +58,7 @@ Using the following configuration options, you can configure the portal server t
     -   Documentation resource: [Create an additional cluster node](../../../../../deployment/manage/config_cluster/cw_add_node.md)
     -   Documentation resource: [Troubleshooting: Create an additional cluster node](../../../../../deployment/manage/troubleshooting/troubleshooting_configwizard/cw_create_addnode.md)
 
+3. Add-ons
 -   **Install and Uninstall Add-ons**
 
     You can install add-on functionality to your HCL Portal with the solution installer through the Configuration Wizard.
@@ -67,44 +66,19 @@ Using the following configuration options, you can configure the portal server t
     -   This option is found in **Add On New Capability**.
     -   Documentation resource: [Install and uninstall add-ons using the Configuration Wizard](../../../../../deployment/install/traditional/install_addons/inst_cw_addons.md)
 
--   **Migrate a Stand-alone Server**
+- **Install a PAA file**
+    You do not have to wait until the next release to add on new features to your installed Exceptional Digital Experience software. From the Modify option, you can add HCL Web Content Manager to your portal installation, and use the Solution Installer to distribute Portal Application Archive applications to your environment.
+    -   This option is found in **Add On New Capability**.
+    -   Documentation resource: [Install a PAA file](../../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/usage/cw_modify.md#install-a-paa-file)
 
-    Use the Configuration Wizard to migrate a stand-alone server environment.
-
-    -   This option is found in **Migrate to a New Version**.
-    -   Documentation resource: [Migrate a stand-alone server](../../../../../deployment/manage/migrate/migrate_using_cfgwizard/cw_migrate_stand_alone.md)
-    -   Documentation resource: [Troubleshooting: Migrate a stand-alone server](../../../../../deployment/manage/troubleshooting/troubleshooting_configwizard/cw_migrate_standalone.md)
-
--   **Migrate a Cluster Step 1: Migrate the Deployment Manager Profile**
-
-    Use the Configuration Wizard to migrate the deployment manager profile for a cluster environment. These steps must be completed before you start the migration of any nodes.
-
-    -   This option is found in **Migrate to a New Version**.
-    -   Documentation resource: [Cluster: Migrate the deployment manager profile](../../../../../deployment/manage/migrate/migrate_using_cfgwizard/cw_migrate_cluster_1.md)
-    -   Documentation resource: [Troubleshooting: Migrate the deployment manager profile for a cluster environment](../../../../../deployment/manage/troubleshooting/troubleshooting_configwizard/cw_migrate_cluster1.md)
-
--   **Migrate a Cluster Step 2: Migrate Node Profiles**
-
-    Use the Configuration Wizard to upgrade the node profiles for a cluster environment. These steps must be completed on all portal nodes in the cell before you begin the next cluster migration step.
-
-    -   This option is found in **Migrate to a New Version**.
-    -   Documentation resource: [Cluster: Migrate node profiles](../../../../../deployment/manage/migrate/migrate_using_cfgwizard/cw_migrate_cluster_2.md)
-    -   Documentation resource: [Troubleshooting: Migrate node profiles for a cluster environment](../../../../../deployment/manage/troubleshooting/troubleshooting_configwizard/cw_migrate_cluster2.md)
-
--   **Migrate a Cluster Step 3: Upgrade Node Profiles**
-
-    Use the Configuration Wizard to upgrade the nodes profiles for a cluster environment. Start these steps only after you migrate node profiles on all portal nodes in the cell.
-
-    -   This option is found in **Migrate to a New Version**.
-    -   Documentation resource: [Cluster: Upgrade node profiles](../../../../../deployment/manage/migrate/migrate_using_cfgwizard/cw_migrate_cluster_3.md)
-    -   Documentation resource: [Troubleshooting: Upgrade node profiles for a cluster environment](../../../../../deployment/manage/troubleshooting/troubleshooting_configwizard/cw_migrate_cluster3.md)
-
+4. More options
 -   **Recycle a Managed HCL Digital Experience Cell**
 
     Select this option to recycle the deployment manager and node agents. This configuration option runs the action-cluster-recycle-dmgr task.
 
     -   This option is found in **More Options**.
--   **Remove the HCL Digital ExperienceProfile**
+
+-   **Remove the HCL Digital Experience Profile**
 
     Use the Configuration Wizard to remove a portal profile.
 
