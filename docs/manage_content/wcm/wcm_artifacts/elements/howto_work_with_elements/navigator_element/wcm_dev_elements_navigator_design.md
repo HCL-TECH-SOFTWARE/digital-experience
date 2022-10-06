@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_elements_navigator_design
-title: Navigator formatting examples
+title: Navigator element formatting examples
 ---
 
 You use HTML to format the layout of a navigator.

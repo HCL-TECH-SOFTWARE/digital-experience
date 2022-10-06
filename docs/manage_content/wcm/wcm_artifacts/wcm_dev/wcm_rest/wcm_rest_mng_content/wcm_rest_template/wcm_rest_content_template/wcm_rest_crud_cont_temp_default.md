@@ -1449,6 +1449,7 @@ LTPA token of the user.
 -   `saveItemsAsDrafts`= Save items as drafts - true\|false
 -   `listOfContentIDs`= Optional paramater - if not supplied or empty the template is applied to all content of the template - comma separated list of IDs
 -   `templateContentID`= Content ID of the template used for the default values - content ID
+-   `libraryID`= Optional paramater - Apply only to content in a specific library, if not supplied or empty the template is applied to all content of the template - library ID
 
 **Return body**
 

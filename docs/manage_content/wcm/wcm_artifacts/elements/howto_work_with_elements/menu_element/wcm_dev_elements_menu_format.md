@@ -1,4 +1,4 @@
-# Defining Menu Element Formatting Options
+# Defining menu element formatting options
 
 Define how search results are displayed for the menu element. These options include defining the sort order for results, paging options for menu elements with multiple pages of results, and formatting options that control how the menu is rendered.
 
