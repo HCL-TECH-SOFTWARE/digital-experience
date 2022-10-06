@@ -4,7 +4,7 @@ The home page of the Configuration Wizard provides access to common configuratio
 
 Click **Back** and **Next** to move back or forward in the Configuration Wizard.
 
-1.  To get the latest updates for the wizard, apply the most recent Combined Cumulative Fix. For more information about applying the latest fix pack, see [HCL Digital Experience Combined Cumulative Fix Strategy](../../../../../whatsnew/combined_cumulative_fix_strategy.md).
+1.  To get the latest updates for the wizard, apply the most recent Combined Cumulative Fix. For more information about applying the latest fix pack, see [Apply Combined Cumulative Fix](../../../../../deployment/install/traditional/cf_install/index.md) for more information.
 
 2.  Restart server1 to ensure that the Configuration Wizard uses the updated environment variables. Go to AppServer_home/profiles/cw_profile/bin and stop the server:
 

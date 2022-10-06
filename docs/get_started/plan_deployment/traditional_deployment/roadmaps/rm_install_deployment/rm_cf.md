@@ -63,7 +63,7 @@ Some combined cumulative fixes focus on fixing known issues that are identified 
 
 1.  Get an overview of the features and improvements delivered in the latest combined cumulative fix.
 
-    -   Documentation resource: [Combined Cumulative Fix Strategy](http://help.hcltechsw.com/digital-experience/9.5/overview/new_cf95.html)
+    -   Documentation resource: [Apply Combined Cumulative Fix](../../../../../deployment/install/traditional/cf_install/index.md)
 2.  View the fixes delivered for HCL Digital Experience 9.5. The documentation provides specific information on how to enable and use the new feature.
 
     -   Documentation resource: [What's new with CF17](../overview/new_cf17.md)
@@ -75,7 +75,7 @@ To apply a Combined Cumulative Fix, you must update the product files with IBM®
 
 Use the Health Checker tool to identify issues with your installation. Use the Health Checker tool on your target system before you apply a Combined Cumulative Fix.
 
-**Individual fixes:** Individual fixes \(Fixes\) are included in the Combined Cumulative Fix Strategy. However, if you are going to upgrade prior to CF08, the following iFixes are required. Install one of the following Fixes, based on your system, before you upgrade:
+**Individual fixes:** Individual fixes (Fixes) are included in the [Apply Combined Cumulative Fix](../../../../../deployment/install/traditional/cf_install/index.md) topic. However, if you are going to upgrade prior to CF08, the following iFixes are required. Install one of the following Fixes, based on your system, before you upgrade:
 
 -   IBM WebSphere® Application Server Version 8.5.5.X FOR SDK 7.1: [PI50090: SHIP JDK IV77682 AS AN IFIX FOR WAS 8.5.5.X FOR SDK 7.1](https://support.hcltechsw.com/csm)
 -   WebSphere Application Server Version 8.5.5.X FOR SDK 7: [PI50092: SHIP JDK IV77682 AS AN IFIX FOR WAS 8.5.5.X FOR SDK 7PI50092: SHIP JDK IV77682 AS AN IFIX FOR WAS 8.5.5.X FOR SDK 7](https://support.hcltechsw.com/csm)
