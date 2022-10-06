@@ -21,7 +21,7 @@ The following rules apply:
 4.  The default value for `-keytype` and `-trusttype` is `jks`. Therefore the `-keytype` and `-trusttype` options are optional unless the used keystore or truststore uses a different format.
 
 !!!note
-   When your HCL Portal runs on the Oracle Solaris platform, the default protocol handler for the hybrid IBM JDK is the Sun handler. Therefore, in order to successfully connect by using the XML configuration interface and the IBM JSSE2 provider, you need to add an additional parameter to the file `wp_profile_root/PortalServer/bin/xmlaccess.xml`. Edit that file and add the parameter -Djava.protocol.handler.pkgs=com.ibm.net.ssl.www2.protocol as follows:
+   When your HCL Portal runs on the Oracle Solaris platform, the default protocol handler for the hybrid IBM JDK is the Sun handler. Therefore, in order to successfully connect by using the XML configuration interface and the IBM JSSE2 provider, you need to add an additional parameter to the file wp_profile_root/PortalServer/bin/xmlaccess.xml. Edit that file and add the parameter -Djava.protocol.handler.pkgs=com.ibm.net.ssl.www2.protocol as follows:
 
 ```
    . . . . .

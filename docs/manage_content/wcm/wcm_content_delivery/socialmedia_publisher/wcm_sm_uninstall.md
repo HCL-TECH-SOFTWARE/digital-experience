@@ -13,7 +13,7 @@ Before starting:
 
         `ConfigEngine.bat action-remove-wcm-social-tables`
 
-    -   **AIX® and Linux™Solaris**
+    -   **AIX® and Linux™**
 
         `./ConfigEngine.sh action-remove-wcm-social-tables`
 

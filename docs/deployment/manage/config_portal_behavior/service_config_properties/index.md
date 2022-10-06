@@ -17,7 +17,7 @@ The configuration for each service is stored in and accessible through the WebSp
     http://example.com:admin\_port/ibm/console
     ```
 
-    where `example.com` is the name of your server or node host name of your server when on z/OS® and `admin\_port` is the port that is assigned to the WebSphere Integrated Solutions Console.
+    where `example.com` is the name of your server or node host name of your server when on z/OS® and `admin_port` is the port that is assigned to the WebSphere Integrated Solutions Console.
 
 3.  Go to **Resources > Resources Environment > Resource Environment Providers**.
 

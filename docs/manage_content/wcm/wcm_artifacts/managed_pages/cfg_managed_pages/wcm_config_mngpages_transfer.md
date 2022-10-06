@@ -2,13 +2,15 @@
 
 When you enable manage pages, any web content pages that you have are converted to managed pages and added to the Portal Site library. However, the content that is associated with the web content pages remains in the original libraries. You can transfer this associated content to the Portal Site library with the internalize-content-mappings task.
 
-**Note:** Administration pages are not intended to be managed pages and so are not included when you enable managed pages.
+!!!note
+    Administration pages are not intended to be managed pages and so are not included when you enable managed pages.
 
 When you transfer the content association for a page to the Portal Site library, several things happen:
 
 -   The content that is referenced by the default content association for the page is copied to the portal page site area for the page. Only the default content association is affected; other content associations for the page are ignored.
 
-    **Note:** Nested pages are not copied. Nested site areas are not copied in the following cases:
+    !!!note
+        Nested pages are not copied. Nested site areas are not copied in the following cases:
 
     -   The nested site area is referenced by the default association of another page.
     -   The nested site area has the same name as an existing site area for the same page.
@@ -16,23 +18,15 @@ When you transfer the content association for a page to the Portal Site library,
 -   The default content setting for the portal page is modified to reference the copied content.
 -   The configuration of any web content viewers on the page is updated to reference the content that is stored in the portal page site area. However, viewer configurations that use content paths are not affected.
 
-1.  To transfer content associations, run the `internalize-content-mappings` task from the `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine` directory.
+1.  To transfer content associations, run the `internalize-content-mappings` task from the wp_profile_root/ConfigEngine` directory.
 
     -   **Windows™**
 
-        ConfigEngine.bat internalize-content-mappings -DPortalPage=target\_page -DIncludeDescendants=true\_or\_false -DSynchronous=true\_or\_false -DPortalAdminPwd=password -DWasPassword=password
+        `ConfigEngine.bat internalize-content-mappings -DPortalPage=target_page -DIncludeDescendants=true_or_false -DSynchronous=true_or_false -DPortalAdminPwd=password -DWasPassword=password`
 
-    -   **AIX® Linux™ Solaris**
+    -   **AIX® and Linux™**
 
-        ./ConfigEngine.sh internalize-content-mappings -DPortalPage=target\_page -DIncludeDescendants=true\_or\_false -DSynchronous=true\_or\_false -DPortalAdminPwd=password -DWasPassword=password
-
-    -   **IBM® i**
-
-        ConfigEngine.sh internalize-content-mappings -DPortalPage=target\_page -DIncludeDescendants=true\_or\_false -DSynchronous=true\_or\_false -DPortalAdminPwd=password -DWasPassword=password
-
-    -   **z/OS®**
-
-        ./ConfigEngine.sh internalize-content-mappings -DPortalPage=target\_page -DIncludeDescendants=true\_or\_false -DSynchronous=true\_or\_false -DPortalAdminPwd=password -DWasPassword=password
+        `./ConfigEngine.sh internalize-content-mappings -DPortalPage=target_page -DIncludeDescendants=true_or_false -DSynchronous=true_or_false -DPortalAdminPwd=password -DWasPassword=password`
 
     The following properties must be specified either on the command line or in the `wkplc.properties` file.
 
@@ -64,7 +58,8 @@ When you transfer the content association for a page to the Portal Site library,
 
         Specify the host name of the virtual portal. For example, `vp.example.com`.
 
-        **Important:** If the host name of the virtual portal is the same as the host name of the default virtual portal, you must also specify the VirtualPortalContext property. You can specify the VirtualPortalHost property by itself only if the host name is unique.
+        !!!important
+            If the host name of the virtual portal is the same as the host name of the default virtual portal, you must also specify the VirtualPortalContext property. You can specify the VirtualPortalHost property by itself only if the host name is unique.
 
     -   **PortalAdminPwd**
 
@@ -76,18 +71,13 @@ When you transfer the content association for a page to the Portal Site library,
 
     Example commands:
 
-    -   Windows: ConfigEngine.bat internalize-content-mappings -DPortalPage=example.page -DIncludeDescendants=true -DSynchronous=true -DPortalAdminPwd=password -DWasPassword=password
-    -   AIX Linux Solaris: ./ConfigEngine.sh internalize-content-mappings -DPortalPage=example.page -DIncludeDescendants=true -DSynchronous=true -DPortalAdminPwd=password -DWasPassword=password
-    -   IBM i: ConfigEngine.sh internalize-content-mappings -DPortalPage=example.page -DIncludeDescendants=true -DSynchronous=true -DPortalAdminPwd=password -DWasPassword=password
-    -   z/OS: ./ConfigEngine.sh internalize-content-mappings -DPortalPage=example.page -DIncludeDescendants=true -DSynchronous=true -DPortalAdminPwd=password -DWasPassword=password
+    -   Windows: `ConfigEngine.bat internalize-content-mappings -DPortalPage=example.page -DIncludeDescendants=true -DSynchronous=true -DPortalAdminPwd=password -DWasPassword=password`
+    -   AIX and Linux: `./ConfigEngine.sh internalize-content-mappings -DPortalPage=example.page -DIncludeDescendants=true -DSynchronous=true -DPortalAdminPwd=password -DWasPassword=password`
 
 
-**Related information**  
 
-
-[Enabling managed pages](../wcm/wcm_config_mngpages_enable.md)
-
-[Page templates](../site/site_page_temps.md)
-
-[Migration: Enabling managed pages](../migrate/mig_t_enable_mngpages.md)
+???+ info "Related information"  
+    -   [Enabling managed pages](../../../../../manage_content/wcm/wcm_artifacts/managed_pages/cfg_managed_pages/wcm_config_mngpages_enable.md)
+    -   [Page templates](../../../../../build_sites/sitebuilder/site_dev_with_sitebuilder/creating_sites_using_sitebuilder/sitebuilder_learn_pgtemplate.md)
+    -   [Migration: Enabling managed pages](../../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/mig_t_enable_mngpages.md)
 
