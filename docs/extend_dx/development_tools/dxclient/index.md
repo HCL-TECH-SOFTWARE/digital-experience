@@ -12,7 +12,7 @@ DXClient is a tool that helps developers and administrators manage tasks, such a
 DXclient is a CLI-based tool wrapped in a container image. This tool will be capable of executing artifacts connecting remotely to DX servers in standalone, cluster, or in Kubernetes environment. The container version of this tool is available from CF196 onwards.
 
 ## Requirement
-By default container runtime is supported, however, you may use any container runtime that implements OCI Runtime Specification. For example, Podman.
+By default docker container runtime is supported, however, you may use any container runtime that implements OCI Runtime Specification. For example, Podman.
 
 !!! note
     DXClient installation using other container runtimes
