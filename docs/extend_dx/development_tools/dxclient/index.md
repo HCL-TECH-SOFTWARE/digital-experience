@@ -95,12 +95,12 @@ DXConnect is a servlet-based application deployed on top of IBM WebSphere Applic
 
 ## Installing using the container image
 
-**Prerequisites:** You must ensure that container is installed on the workstation.
+**Prerequisites:** You must ensure that container runtime is installed on the workstation.
 
 !!!note
     When you upgrade to use the container image DXClient, you should first uninstall the nodejs DXClient.
 
-DXClient container image comes with a script that you can use to run the container image. This script creates a store directory, and copies the input files from the absolute path to the shared volume location.
+DXClient package comes with a script that you can use to run the commands within container runtime. This script creates a store directory and copies the input files from the absolute path to the shared volume location.
 
 See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr_frVlojc)
 
@@ -125,7 +125,7 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 
 4.  To work with multiple versions of DXClient, update the `IMAGE_TAG` reference in the scripts file under the `/bin` folder. For example, `IMAGE_TAG=v95_CF200_20211201-1021`. By default it will be set in the executable script.
 
-5.  Run container load < dxclient.tar.gz.
+5.  Run docker load < dxclient.tar.gz.
 
 6.  Add the execution shell script to the bin directory to the PATH variable to be able to call dxclient from any directory.
 
