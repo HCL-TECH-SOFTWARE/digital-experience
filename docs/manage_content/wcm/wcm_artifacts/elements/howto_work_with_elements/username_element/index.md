@@ -8,5 +8,5 @@ To create a user name component, open the applications menu and go to **Content*
 **Related information**  
 
 
-[How to work with elements](../panel_help/wcm_dev_elements.md)
+[How to work with elements](../index.md)
 

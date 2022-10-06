@@ -1,4 +1,4 @@
-# Specifying a Location for an Item
+# Specifying a location for an item
 
 
 When you create an item, you can specify the location of the item.

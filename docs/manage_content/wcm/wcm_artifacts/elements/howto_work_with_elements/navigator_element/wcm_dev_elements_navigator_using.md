@@ -1,4 +1,4 @@
-# Defining Navigator Element Design Options
+# Defining navigator element design options
 
 You use the element design options of a navigator element to determine how to display the results a navigator.
 

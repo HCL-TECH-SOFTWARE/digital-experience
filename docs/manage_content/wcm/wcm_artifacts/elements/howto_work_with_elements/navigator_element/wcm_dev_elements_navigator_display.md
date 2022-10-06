@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_elements_navigator_display
-title: Defining Navigator Element Display Options
+title: Defining navigator element display options
 ---
 
 
