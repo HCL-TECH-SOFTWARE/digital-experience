@@ -24,7 +24,7 @@ first_statement_in_line() ; second_statement()
 outer statement [first inner] [second inner statement]
 ```
 
-A variable can contain an object. In a statement, an object method starts with the object followed by a dot \(.\), the method name, and arguments that are passed to the method in parentheses \(\).
+A variable can contain an object. In a statement, an object method starts with the object followed by a dot (.), the method name, and arguments that are passed to the method in parentheses (\).
 
 Example:
 
@@ -52,7 +52,7 @@ Jacl is an interpreted language without strong typing. It is a procedural langua
 -   The number sign character (`#`) starts a comment that extends to the end of the line.
 -   By default, each line is interpreted as one statement.
 -   You can write multiple statements on one line by separating the statements with semicolons.
--   You can nest statements by using brackets `[]`. The brackets are interpreted like back quotation marks in most AIX® HP-UX Linux™ Solaris shells. The statement within the brackets is run, and its result is substituted in place of the bracketed statement before the surrounding statement is interpreted.
+-   You can nest statements by using brackets `[]`. The brackets are interpreted like back quotation marks in most AIX® and Linux™ shells. The statement within the brackets is run, and its result is substituted in place of the bracketed statement before the surrounding statement is interpreted.
 -   Jacl is case-sensitive.
 
 Example:

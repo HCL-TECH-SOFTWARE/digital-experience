@@ -41,7 +41,8 @@ Use the `Portlet` rendering plug-in to add portlet information to your web conte
     This attribute is optional. Use this attribute to specify the delimiter that you want to use when you render portlet preferences that have more than one value. If you do not set this attribute, the portal places a comma between the individual preference values when it renders them.
 
 
-**Note:** The Portlet rendering plug-in does not render the content that you can specify between the start and end tags.
+!!! note
+    The Portlet rendering plug-in does not render the content that you can specify between the start and end tags.
 
 Examples:
 

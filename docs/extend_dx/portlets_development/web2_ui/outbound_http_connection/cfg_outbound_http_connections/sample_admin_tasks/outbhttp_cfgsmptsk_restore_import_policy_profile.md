@@ -11,21 +11,12 @@ The following procedure assumes that the configuration that you want to restore 
 2.  Start the appropriate portal configuration engine task, depending on whether you want to restore the global configuration or an application-scoped configuration:
 
     -   To restore the global configuration, run the following configuration engine tasks:
-        -   AIX® HP-UX Linux™ Solaris z/OS®:
+        -   AIX® and Linux™:
 
             ```
             ./ConfigEngine.sh clean-outbound-http-connection-config 
                               -DOutboundProfileType=global 
             ./ConfigEngine.sh update-outbound-http-connection-config
-                              -DConfigFileName=/tmp/configuration.xml
-            ```
-
-        -   IBM® i:
-
-            ```
-            ConfigEngine.sh   clean-outbound-http-connection-config 
-                              -DOutboundProfileType=global 
-            ConfigEngine.sh   update-outbound-http-connection-config
                               -DConfigFileName=/tmp/configuration.xml
             ```
 
@@ -39,22 +30,12 @@ The following procedure assumes that the configuration that you want to restore 
             ```
 
     -   To restore an application-scoped configuration, run the following configuration engine tasks:
-        -   AIX HP-UX Linux Solaris z/OS:
+        -   AIX and Linux:
 
             ```
             ./ConfigEngine.sh clean-outbound-http-connection-config 
                               -DapplicationScopeRef=THE\_APPLICATION\_SCOPE
             ./ConfigEngine.sh update-outbound-http-connection-config 
-                              -DapplicationScopeRef=THE\_APPLICATION\_SCOPE
-                              -DConfigFileName=/tmp/configuration.xml
-            ```
-
-        -   IBM i:
-
-            ```
-            ConfigEngine.sh   clean-outbound-http-connection-config 
-                              -DapplicationScopeRef=THE\_APPLICATION\_SCOPE
-            ConfigEngine.sh   update-outbound-http-connection-config 
                               -DapplicationScopeRef=THE\_APPLICATION\_SCOPE
                               -DConfigFileName=/tmp/configuration.xml
             ```

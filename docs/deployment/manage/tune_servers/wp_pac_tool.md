@@ -8,6 +8,7 @@ Note that this can manifest both as occasionally slow DX Portal performance or o
 Check all of your libraries for explicit role assignments. You can run the optimizer per library by specifying the root resource ID or you can run it for all libraries.
 
 !!!note
+
     In some cases, the Portal Access Control optimizer task will not update Web Content Manager access control settings. This is true if if access control for a content item is set via a workflow. The optimizer will report "success" for updating the Web Content Manager item when access control is set in a workflow, even if the access control settings have not changed.
 
 1.  Log in to the WebSphere® Integrated Solutions Console.
@@ -36,8 +37,8 @@ Check all of your libraries for explicit role assignments. You can run the optim
     <request
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="PacOptimization.xsd"
-        report-only="false\|true"
-        rootResource="root\_resource\_ID\_or\_blank">
+        report-only="false|true"
+        rootResource="root_resource_ID_or_blank">
     </request>
     ```
 
@@ -47,15 +48,14 @@ Check all of your libraries for explicit role assignments. You can run the optim
     -   `rootResource`: Set this value to a custom unique name, a Web Content Manager UUID, or leave blank. If you leave this field blank, the Optimizer starts at the root of the resource tree and might take a longer time to run.
     
     !!!note
+    
         If you want a report of every place that might have explicit role assignments, set report-only to true and leave rootResource blank.
 
 9.  Open a command prompt and change to the *wp_profile_root/PortalServer/bin* directory.
 
 10. Run the following task to optimize the portal access control:
 
-    -   AIX®, HP-UX, Linux™, Solaris: `./xmlaccess.sh -user userID -password password -in filename.xml -out /tmp/name\_of\_report.xml`
-    -   IBM® i: `xmlaccess.sh -user userID -password password -in filename.xml -out /tmp/name_of_report.xml`
-    -   Windows™: `xmlaccess.bat -user userID -password password -in filename.xml -out /tmp/name_of_report.xml`
-    -   z/OS®: `./xmlaccess.sh -user userID -password password -in filename.xml -out /tmp/name_of_report.xml`
+    -   AIX® and Linux™: `./xmlaccess.sh -user userID -password password -in filename.xml -out /tmp/name\_of\_report.xml`
+    -   Windows™: `xmlaccess.bat -user userID -password password -in filename.xml -out /tmp/name_of_report.xml`ml`
 
 11. Remove the `accessControlConfig.enablePropagationBlockDeletion` and `accessControlConfig.enablePrivatePageOptimization` parameters previously configured. The parameters do not impact runtime operations because they are only used by the WCM PAC Optimizer tool. You can choose to keep the parameters if you plan to run the tool in the future on the same Portal environment.

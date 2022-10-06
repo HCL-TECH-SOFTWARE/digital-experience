@@ -6,4 +6,4 @@ nav:
     - Creating an authoring tools component: authoring_tools_cmpnt
     - wcm_dev_elements_authoring-tools_referencing.md
     - authoring_portlet
-    - using_authoringtools_elements
+    - using_authoringtools_elements: Using Authoring Tools elements

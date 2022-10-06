@@ -36,7 +36,7 @@ Perform the following steps to use the new integration service with Volt MX Foun
     ![](../../../../assets/Volt_MX_Foundry_Response_Output_And_Testing.png "Add JSON Path and Testing the Service")
 
 !!!note
-    You do not need to map all the responses in the  **Response Output** and can only map what you need. Make the response output flat as possible, as shown in the sample above.
+    You do not need to map all the responses in the  **Response Output** and can only map what you need. Make the response output flat as possible, as shown in the sample above. The values you set here will be reused as properties in DDC.
 
 ## Publish and Test integration service with Volt MX Foundry
 
@@ -58,6 +58,9 @@ Perform the following steps to use the new integration service with Volt MX Foun
 
 !!!note
     If you created your Operation **Public** in Operation Security Level you dont need any authorization.
+
+!!!note
+    You will need the information on this page later during the setup to configure DDC accordingly.
 
 ## Creating Credential Vault Slot for the Volt MX Foundry Endpoint
 
@@ -93,7 +96,7 @@ If you chose **Anonymous App Users** for Operation Security Level, you need to s
 
 Since we already have the Credential Vault slot, we can now configure an outbound connection policy.
 
-1. Create an xml file on your local machine and modify it according to your needs. For more information, please visit this link [Adding an outbound connection policy](../../../portlets_development/usage/web2_ui/outbound_http_connection/cfg_outbound_http_connections/sample_admin_tasks/outbhttp_cfgsmptsk_add_ob_conn_plcy.md)
+1. Create an xml file on your local machine and modify it according to your needs. For more information, refer to the [Adding an outbound connection policy](../../portlets_development/web2_ui/outbound_http_connection/cfg_outbound_http_connections/sample_admin_tasks/outbhttp_cfgsmptsk_add_ob_conn_plcy.md) topic.
 
 You can use this sample outbound policy as a base:
 ``` xml
@@ -133,12 +136,14 @@ You can use this sample outbound policy as a base:
 </proxy-rules>
 ```
 
-2. Then you copy the file inside your HCL Digital Experience instance.
+2. Then you copy the file (for example: `demo_volt_mx_foundry_service_policy.xml`) inside your HCL Digital Experience instance.
 
 3. And deploy the policy using the **Config Engine**: `./ConfigEngine.sh update-outbound-http-connection-config -DWasPassword=password -DPortalAdminPwd=password -DConfigFileName=/tmp/demo_volt_mx_foundry_service_policy.xml`
+!!!note
+    The location of `ConfigEngine.sh` is based on your deployment. In a default deployment, the location would be `/opt/HCL` or `WebSphere/wp_profile/ConfigEngine`.
 
 !!!note
-    For additional resources regarding this topic, please read [Outbound HTTP connection](../../../portlets_development/usage/web2_ui/outbound_http_connection/outbound_http.md)
+    For additional resources, refer to the [Outbound HTTP connection](../../portlets_development/web2_ui/outbound_http_connection/index.md) topic.
 
 ## Adding HTTP Outbound Proxy and Signer Certificate
 
@@ -191,3 +196,4 @@ Steps to add the target URL and Certificate are as follows:
 5. Review and save the changes in the master configuration.
 
     ![](../../../../assets/WAS_Save_In_Master_Configuration.png "Save in master configuration")
+6. Restart the server to apply the changes.

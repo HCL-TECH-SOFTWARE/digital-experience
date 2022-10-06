@@ -30,19 +30,11 @@ Some frequently asked question about how to use the web content member fixer tas
 
     -   **Windows™**
 
-        ConfigEngine.bat run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DinvalidDn=remove -Dfix=true
+        `ConfigEngine.bat run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DinvalidDn=remove -Dfix=true`
 
-    -   **AIX®HP-UXLinux™ Solaris**
+    -   **AIX® and Linux™**
 
-        ./ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DinvalidDn=remove -Dfix=true
-
-    -   **IBM® i**
-
-        ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DinvalidDn=remove -Dfix=true
-
-    -   **z/OS®**
-
-        ./ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DinvalidDn=remove -Dfix=true
+        `./ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DinvalidDn=remove -Dfix=true`
 
 -   **How can users or groups be replaced in web content items by a specific user or group when they have been removed from the user repository or LDAP?**
 
@@ -50,7 +42,7 @@ Some frequently asked question about how to use the web content member fixer tas
 
     To fix this, use the -DaltDn=update and -Dfix=true options.
 
-    For this option, it is necessary to add member mappings in the custom mapping file: `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/wcm/shared/app/config/wcmservices/MemberFixerModule.properties`
+    For this option, it is necessary to add member mappings in the custom mapping file: wp_profile_root/PortalServer/wcm/shared/app/config/wcmservices/MemberFixerModule.properties`
 
     The member mappings for one user or group to be replaced with another user or group use this format: `Old DN -> New DN`
 
@@ -64,19 +56,11 @@ Some frequently asked question about how to use the web content member fixer tas
 
     -   **Windows™**
 
-        ConfigEngine.bat run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DaltDn=update -Dfix=true
+        `ConfigEngine.bat run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DaltDn=update -Dfix=true`
 
-    -   **AIX®HP-UXLinux™ Solaris**
+    -   **AIX® and Linux™**
 
-        ./ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DaltDn=update -Dfix=true
-
-    -   **IBM® i**
-
-        ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DaltDn=update -Dfix=true
-
-    -   **z/OS®**
-
-        ./ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DaltDn=update -Dfix=true
+        `./ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DaltDn=update -Dfix=true`
 
 -   **How can users or groups be replaced in web content items where user common names are unchanged but their distinguished names have been changed in the user repository or LDAP?**
 
@@ -84,7 +68,7 @@ Some frequently asked question about how to use the web content member fixer tas
 
     To fix this, use the -DaltDn=update and -Dfix=true options.
 
-    For this option, it is necessary to add member mappings in the custom mapping file: `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/wcm/shared/app/config/wcmservices/MemberFixerModule.properties`
+    For this option, it is necessary to add member mappings in the custom mapping file: wp_profile_root]/PortalServer/wcm/shared/app/config/wcmservices/MemberFixerModule.properties`
 
     Create member mappings for changing multiple users or groups DN with the exception of the common name portion. Once all the member mappings have been made, restart the portal server and execute the member fixer task.
 
@@ -98,19 +82,11 @@ Some frequently asked question about how to use the web content member fixer tas
 
     -   **Windows™**
 
-        ConfigEngine.bat run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DaltDn=update -Dfix=true
+        `ConfigEngine.bat run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DaltDn=update -Dfix=true`
 
-    -   **AIX®HP-UXLinux™ Solaris**
+    -   **AIX® and Linux™**
 
-        ./ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DaltDn=update -Dfix=true
-
-    -   **IBM® i**
-
-        ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DaltDn=update -Dfix=true
-
-    -   **z/OS®**
-
-        ./ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DaltDn=update -Dfix=true
+        `./ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DaltDn=update -Dfix=true`
 
 -   **How can users or groups be replaced in web content items by the administrator user when they have been removed from the user repository or LDAP?**
 
@@ -124,19 +100,11 @@ Some frequently asked question about how to use the web content member fixer tas
 
     -   **Windows™**
 
-        ConfigEngine.bat run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DinvalidDn=update -Dfix=true
+        `ConfigEngine.bat run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DinvalidDn=update -Dfix=true`
 
-    -   **AIX®HP-UXLinux™ Solaris**
+    -   **AIX® and Linux™**
 
-        ./ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DinvalidDn=update -Dfix=true
-
-    -   **IBM® i**
-
-        ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DinvalidDn=update -Dfix=true
-
-    -   **z/OS®**
-
-        ./ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DinvalidDn=update -Dfix=true
+        `./ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DinvalidDn=update -Dfix=true`
 
 -   **Distinguished names for users and groups remain unchanged in the user repository, but users or groups cannot access web content items.**
 
@@ -148,17 +116,10 @@ Some frequently asked question about how to use the web content member fixer tas
 
     -   **Windows™**
 
-        ConfigEngine.bat run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DmismatchedId=update -Dfix=true
+        `ConfigEngine.bat run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DmismatchedId=update -Dfix=true`
 
-    -   **AIX®HP-UXLinux™ Solaris**
+    -   **AIX® and Linux™**
 
-        ./ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DmismatchedId=update -Dfix=true
+        `./ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DmismatchedId=update -Dfix=true`
 
-    -   **IBM® i**
-
-        ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DmismatchedId=update -Dfix=true
-
-    -   **z/OS®**
-
-        ./ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary" -DmismatchedId=update -Dfix=true
 

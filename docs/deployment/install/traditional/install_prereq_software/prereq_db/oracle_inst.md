@@ -30,7 +30,7 @@ You can use Oracle or Oracle RAC as the database software to configure it to wor
     LIBPATH=/u01/app/oracle/product/11.2.0/client_1;export LIBPATH
     ```
 
-8.  JDBC OCI (Linux and Solaris): Set the environment variable on the HCL Digital Experience server to point to the directory where you downloaded and extracted the compressed Oracle client files.
+8.  JDBC OCI (Linux): Set the environment variable on the HCL Digital Experience server to point to the directory where you downloaded and extracted the compressed Oracle client files.
 
     ```
     LD_LIBRARY_PATH=/u01/app/oracle/product/11.2.0/client_1;export LD_LIBRARY_PATH
