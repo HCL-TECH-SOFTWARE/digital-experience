@@ -22,8 +22,6 @@ The default locations of these directories are:
 -   Windows: C:\\ProgramData\IBM\InstallationManager
 -   Linux/UNIX root users: /var/ibm/InstallationManager
 -   Linux/UNIX non-root users: /home/(user id)/var/ibm/InstallationManager
--   IBM i - Installation location: /QIBM/ProdData/InstallationManager
--   IBM i - Agent data location: /QIBM/UserData/InstallationManager
 
 For more information about the default locations of these directories and to determine the directories, see the following documentation resources:
 
@@ -39,8 +37,6 @@ The default locations of these directories are:
 -   Windows: C:\\ProgramData\IBM\InstallationManager
 -   Linux/UNIX root users: /var/ibm/InstallationManager
 -   Linux/UNIX non-root users: /home/(user id)/var/ibm/InstallationManager
--   IBM i - Installation location: /QIBM/ProdData/InstallationManager
--   IBM i - Agent data location: /QIBM/UserData/InstallationManager
 
 ???+ info "Related information"  
     - [Backing up and restoring Installation Manager](https://www.ibm.com/docs/en/installation-manager/1.8.5?topic=manager-backing-up-restoring-installation)

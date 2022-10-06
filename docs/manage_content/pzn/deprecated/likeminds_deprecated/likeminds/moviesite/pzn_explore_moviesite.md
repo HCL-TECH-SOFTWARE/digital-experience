@@ -18,7 +18,7 @@ To set up the Movie Site sample, choose the appropriate option:
 Complete the following steps to start the application:
 
 1.  Open the WebSphere® Integrated Solutions Console.
-2.  Go to http://machine:port_number/ibm/console where port\_number is the port number for HCL Portal.
+2.  Go to http://machine:port_number/ibm/console where port_number is the port number for HCL Portal.
 3.  Click **Applications > Application Types > WebSphere enterprise applications**.
 4.  Select **Movie Site Application**, and click **Start**.
 5.  Rate movies by using the Movie Site home page.

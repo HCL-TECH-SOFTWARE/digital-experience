@@ -133,7 +133,7 @@ A property extension database stores attributes that the LDAP directory does not
 
     6.  Run the following task to create the local Deployment Manager WebSphere variable that is used to access the database JAR files:
 
-        -   AIX and Linux: `./ConfigEngine.sh wp-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=la -Ddb_type.DmgrDbLibrary=local path of the database jars on the Deployment Manager -DDmgrNodeName=dmgr_node_name -DparentProperties=full path to wp_profile_root/ConfigEngine/config/helpers/wp\_add\_LA.properties -DSaveParentProperties=true`
+        -   AIX and Linux: `./ConfigEngine.sh wp-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=la -Ddb_type.DmgrDbLibrary=local path of the database jars on the Deployment Manager -DDmgrNodeName=dmgr_node_name -DparentProperties=full path to wp_profile_root/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
         -   Windows: `ConfigEngine.bat wp-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=la -Ddb_type.DmgrDbLibrary=local path of the database jars on the Deployment Manager -DDmgrNodeName=dmgr_node_name -DparentProperties=full path to wp_profile_root/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
         
         !!!note
@@ -226,7 +226,7 @@ A property extension database stores attributes that the LDAP directory does not
             If the path name contains blank space, you must enclose the path in quotation marks.
 
         -   AIX and Linux: `./ConfigEngine.sh wp-add-la-property -DWasPassword=password -DparentProperties=full path to wp_profile_root/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
-        -   Windows: `ConfigEngine.bat wp-add-la-property -DWasPassword=password -DparentProperties=full path to wp_profile_root\\ConfigEngine\\config\\helpers\\wp_add_LA.properties -DSaveParentProperties=true`
+        -   Windows: `ConfigEngine.bat wp-add-la-property -DWasPassword=password -DparentProperties=full path to wp_profile_root\ConfigEngine\config\helpers\wp_add_LA.properties -DSaveParentProperties=true`
 
     2.  Run the following task to add the attributes to Web Content Manager if you use user profiling or Category selection trees:
 

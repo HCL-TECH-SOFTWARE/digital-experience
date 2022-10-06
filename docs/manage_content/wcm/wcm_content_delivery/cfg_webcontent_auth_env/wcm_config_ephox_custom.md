@@ -4,43 +4,37 @@ Run these configuration tasks to change the configuration of the rich text edito
 
 **Video**: [Using the advanced rich text editor in HCL Digital Experience](https://www.youtube.com/watch?v=JmkcRPfC8TQ)
 
-!!! note
+!!!note
     In a clustered environment, these tasks are only run on the primary server.
 
 ## Using a custom Textbox.io editor toolbar
 
-1.  The Textbox.io editor uses a custom configuration file that is named tbio\_config.jsp to set custom parameters for the toolbar. Copy your custom configuration file to `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)`\\PortalServer\\wcm\\shared\\app\\config\\textboxio.
+1.  The Textbox.io editor uses a custom configuration file that is named tbio_config.jsp to set custom parameters for the toolbar. Copy your custom configuration file to wp_profile_root\PortalServer\wcm\shared\app\config\textboxio.
 
-    !!! note
-        Sample configurations can be found in `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)`\\wcm\\prereq.wcm\\wcm\\config\\templates\\shared\\app\\config\\textboxio
+    !!!note
+        Sample configurations can be found in PortalServer_root\wcm\prereq.wcm\wcm\config\templates\shared\app\config\textboxio
 
 2.  Open a command prompt.
-3.  Run the following command from the `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine` directory:
+3.  Run the following command from the wp_profile_root/ConfigEngine directory:
 
     -   **Windows™**
 
         ```
-        ConfigEngine.bat configure-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password
+        `ConfigEngine.bat configure-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password`
         ```
 
-    -   **UNIX™Linux™**
+    -   **UNIX™ and Linux™**
 
         ```
-        ./ConfigEngine.sh configure-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password
+        `./ConfigEngine.sh configure-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password`
         ```
 
-    -   **IBM® i**
-
-        ```
-        ConfigEngine.sh configure-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password
-        ```
-
-    !!! note
+    !!!note
         An administrator user name and password is not required if you already specified the portal administrator user name and password with the PortalAdminId and PortalAdminPwd settings in the wkplc.properties file.
 
 4.  Restart the server.
 
-    !!! note
+    !!!note
         To revert to the default editor toolbar, run the task that is named remove-wcm-ephox-editor-custom-configuration on the primary node only.
 
 
@@ -62,7 +56,7 @@ Run these configuration tasks to change the configuration of the rich text edito
 
 3.  Restart the WebSphere\_Portal server once the configuration process is completed.
 
-**Beginning with HCL DX 9.5 Container Update CF182**, the updated Textbox.io Rich Text editor is deployed out-of-box for the HCL DX 9.5 Containers. When deployed in supported Kubernetes environments, **a ConfigEngine task is required** to be run before the Textbox.io editor application will work correctly \(i.e. before for selecting the Advanced editor for use in Web Content Manager\). Run the ConfigEngine task:
+**Beginning with HCL DX 9.5 Container Update CF182**, the updated Textbox.io Rich Text editor is deployed out-of-box for the HCL DX 9.5 Containers. When deployed in supported Kubernetes environments, **a ConfigEngine task is required** to be run before the Textbox.io editor application will work correctly (i.e. before for selecting the Advanced editor for use in Web Content Manager). Run the ConfigEngine task:
 
 ```
 /opt/HCL/wp_profile/ConfigEngine/./ConfigEngine.sh action-create-was-variable-tiny-editors-cloud -DDxHost=<FQDN of the exposed DX host> 
@@ -94,20 +88,20 @@ For example, if the URL for accessing DX in your cloud environment is https://dx
     ConfigEngine(sh/bat) remove-wcm-ephox-editor-custom-configuration (if a custom configuration is used)
     ```
 
-2.  Restart the WebSphere\_Portal server.
+2.  Restart the WebSphere_Portal server.
 
 ## Using a custom EditLive! editor toolbar
 
 !!! note
     Ephox EditLive! is a deprecated feature as of CF11 or higher.
 
-1.  The EditLive! editor uses a custom configuration file that is named config.xml.jsp to set custom parameters for the toolbar. Copy your custom configuration file to `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)`\\PortalServer\\wcm\\shared\\app\\config\\ephox.
+1.  The EditLive! editor uses a custom configuration file that is named config.xml.jsp to set custom parameters for the toolbar. Copy your custom configuration file to wp_profile_root\PortalServer\wcm\shared\app\config\ephox.
 
     !!! note 
-        Sample configurations can be found in `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)`\\wcm\\prereq.wcm\\wcm\\config\\templates\\shared\\app\\config\\ephox.
+        Sample configurations can be found in PortalServer_root\wcm\prereq.wcm\wcm\config\templates\shared\app\config\ephox.
 
 2.  Open a command prompt.
-3.  Run the following command from the `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine` directory:
+3.  Run the following command from the wp_profile_root/ConfigEngine directory:
 
     -   **Windows™**
 
@@ -115,31 +109,25 @@ For example, if the URL for accessing DX in your cloud environment is https://dx
         ConfigEngine.bat configure-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password
         ```
 
-    -   **UNIX™Linux™**
+    -   **UNIX™ and Linux™**
 
         ```
         ./ConfigEngine.sh configure-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password
         ```
 
-    -   **IBM® i**
-
-        ```
-        ConfigEngine.sh configure-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password
-        ```
-
-    !!! note
+    !!!note
         An administrator user name and password is not required if you already specified the portal administrator user name and password with the PortalAdminId and PortalAdminPwd settings in the wkplc.properties file.
 
 4.  Restart the server.
 
-!!! note
-    To revert to the default editor toolbar, run the task that is named remove-wcm-ephox-editor-custom-configuration on the primary node only.
+!!!note
+    To revert to the default editor toolbar, run the task that is named `remove-wcm-ephox-editor-custom-configuration` on the primary node only.
 
-**Beginning with HCL Digital Experience Container Update CF182,**, the updated Textbox.io Rich Text editor is deployed out-of-the-box for HCL DX 9.5 Containers. When deployed in supported Kubernetes environments, a ConfigEngine must be required to be run before the Textbox.io editor application will work correctly \(i.e. before for selecting the Advanced editor for use in Web Content Manager.
+**Beginning with HCL Digital Experience Container Update CF182,**, the updated Textbox.io Rich Text editor is deployed out-of-the-box for HCL DX 9.5 Containers. When deployed in supported Kubernetes environments, a ConfigEngine must be required to be run before the Textbox.io editor application will work correctly (i.e. before for selecting the Advanced editor for use in Web Content Manager.
 
 ## Reverting to the EditLive! editor version 7 toolbar
 
-!!! note
+!!!note
     Ephox EditLive! is fully unsupported.
 
 -   Documentation resource: [Newly unsupported features and themes for HCL Digital Experience 8.5 and 9.0](../../../../whatsnew/unsupported_features.md)

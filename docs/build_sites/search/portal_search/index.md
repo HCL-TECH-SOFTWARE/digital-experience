@@ -49,7 +49,7 @@ Creating the portal site search collection can fail due to a file path length re
 Portal Search provides logging and tracing so that you can get additional information for resolving possible problems. -->
 
 
-*Related information*
+???+ info "Related information"
     - [Exporting and importing search collections](../../search/portal_search/administer_portal_search/setup_search_collections/srtexpimp.md)
     - [Improving Search Quality in HCL Digital Experience Search](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0076375)
 
