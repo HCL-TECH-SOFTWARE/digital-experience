@@ -577,7 +577,6 @@ dxclient help [command]
 You can access the ConfigWizard admin console in a container environment from your local system. For more information, refer to [Accessing the ConfigWizard admin console in a container environment](https://help.hcltechsw.com/digital-experience/9.5/containerization/helm_access_configwizard.html).
 
 
-
 <!-- ???Info "Related information:"
 
 
