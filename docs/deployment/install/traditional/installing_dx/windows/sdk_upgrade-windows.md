@@ -36,7 +36,6 @@ Ensure that your Portal profile is created before you upgrade the SDK.
 
     Go to [managesdk command](https://www.ibm.com/docs/en/was/9.0.5?topic=tools-managesdk-command) for information about the managesdk commands.
 
-    -   AIX® and Linux™: `./managesdk.sh -listAvailable`
     -   Windows™: `managesdk.bat -listAvailable`
 
 6.  Run the following command to enable all existing profiles to use the new SDK version:
@@ -44,14 +43,9 @@ Ensure that your Portal profile is created before you upgrade the SDK.
     !!!note
         version_number is the supported SDK version number that was listed when you ran the `managesdk -listAvailable` command.
 
-    -   AIX and Linux: `./managesdk.sh -enableProfileAll -sdkname version_number -enableServers`
     -   Windows: `managesdk.bat -enableProfileAll -sdkname version_number -enableServers`
 
 7.  Run the following commands to make the new SDK version the new default:
-
-    -   AIX and Linux: `./managesdk.sh -setCommandDefault -sdkname version_number`<br>
-
-        `./managesdk.sh -setNewProfileDefault -sdkname version_number`
 
     -   Windows: `managesdk.bat -setCommandDefault -sdkname version_number`<br>
 
