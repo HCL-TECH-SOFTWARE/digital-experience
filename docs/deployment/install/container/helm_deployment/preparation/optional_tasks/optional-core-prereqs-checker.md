@@ -16,7 +16,7 @@ The following checks have been implemented for only one mounted volume which is 
 ## What are Prereqs Checker:
 
 #### File Permission Check:
-On running the prereqs checks, the read and write permissions for the files within the mounted volumes will be displayed. If you have read and write permissions the file within the mounted volumes is created and acessable, the success message and the users read and write access for the file is added to the system out logs. If you done have read and write permissions the failure message is added to the system out log.
+On running the prereqs checks, the read and write permissions for the files within the mounted volumes will be displayed. If you have read and write permissions the file within the mounted volumes is created and accessible, the success message and the users read and write access for the file is added to the system out logs. If you dont have read and write permissions the failure message is added to the system out log.
 
 #### Latency Check for I/O:
 On running the prereqs checks the latency i.e the read write speed of the filesystem are displayed. If the minimum latency speed recorded is lower than the threshold value, the latency test is passed. The success message, minimum latency speed and the threshold value is added to the system out log. If the minimum latency speed recorded is higher than the threshold value, the latency test is failed. The failure message, minimum latency speed and the threshold value is added to the system out log. 
