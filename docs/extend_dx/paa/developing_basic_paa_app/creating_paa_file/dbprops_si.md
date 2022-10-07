@@ -1,6 +1,6 @@
 # Database properties for the Solution Installer
 
-Some Portal Application Archive \(PAA\) files require access to an external database. The database properties are stored in either the assemblyName.properties file for the assembly or in the componentName.properties file of the component requiring database support.
+Some Portal Application Archive (PAA) files require access to an external database. The database properties are stored in either the assemblyName.properties file for the assembly or in the componentName.properties file of the component requiring database support.
 
 The Solution Installer uses the following database properties:
 
@@ -32,10 +32,10 @@ The Solution Installer uses the following database properties:
 
     The name of jdbc provider to be used. Use the following example jdbc provider names:
 
-    -   Derby: wpdbJDBC\_derby
-    -   DB2®: wpdbJDBC\_db2
-    -   Oracle: wpdbJDBC\_oracle
-    -   SQL Server: wpdbJDBC\_sqlserver
+    -   Derby: wpdbJDBC_derby
+    -   DB2®: wpdbJDBC_db2
+    -   Oracle: wpdbJDBC_oracle
+    -   SQL Server: wpdbJDBC_sqlserver
 -   **dbDriverType**
 
     Connection pool data source
@@ -60,29 +60,30 @@ The Solution Installer uses the following database properties:
 
     The path to the database driver. Use one of the following examples with values specific to your database:
 
-    -   Derby: $\{WasHome\}/derby/lib
-    -   DB2®: $\{WasHome\}/deploytool/itp/plugins/$\{dbPlugin\}/driver
-    -   Oracle: \{$ORACLE\_HOME\}/jdbc/lib/
+    -   Derby: ${WasHome}/derby/lib
+    -   DB2®: ${WasHome}/deploytool/itp/plugins/${dbPlugin}/driver
+    -   Oracle: {$ORACLE_HOME}/jdbc/lib/
 
-        **Note:** ORACLE\_HOME is the environment variable specified during the installation of the Oracle database.
+        !!!note
+            ORACLE_HOME is the environment variable specified during the installation of the Oracle database.
 
-    -   SQL Server: installation\_directory/sqljdbc\_2.0/enu
+    -   SQL Server: installation_directory/sqljdbc_2.0/enu
 -   **dbClasspath**
 
     The database class path value. Use one of the following examples with values specific to your database:
 
-    -   Derby: $\{dbDriverPath\}/derby.jar:$\{dbDriverPath\}/derbyclient.jar:$ \{dbDriverPath\}/derbytools.jar:$\{dbDriverPath\}/derbynet.jar
-    -   DB2®: $\{dbDriverPath\}/db2jcc4.jar:$ \{dbDriverPath\}/db2jcc\_license\_cisuz.jar:$\{dbDriverPath\}/db2jcc\_license\_cu.jar
-    -   Oracle: $\{dbDriverPath\}/ojdbc6.jar
-    -   SQL Server: installation\_directory/sqljdbc\_2.0/enu/sqljdbc4.jar
+    -   Derby: ${dbDriverPath}/derby.jar:${dbDriverPath}/derbyclient.jar:$ {dbDriverPath}/derbytools.jar:${dbDriverPath}/derbynet.jar
+    -   DB2®: ${dbDriverPath}/db2jcc4.jar:$ {dbDriverPath}/db2jcc_license_cisuz.jar:${dbDriverPath}/db2jcc_license_cu.jar
+    -   Oracle: ${dbDriverPath}/ojdbc6.jar
+    -   SQL Server: installation_directory/sqljdbc_2.0/enu/sqljdbc4.jar
 -   **dbUrl**
 
     The database URL value. Use one of the following examples with values specific to your database:
 
-    -   Derby: jdbc:$\{dbType\}:$\{dbName\}
-    -   DB2®: jdbc:$\{dbType\}://$\{dbHostname\}:$\{dbPort\}/$\{dbName\}
-    -   Oracle: jdbc:$\{dbType\}:thin:@$\{dbHostname\}:$\{dbPort\}:$\{dbName\}
-    -   SQL Server: jdbc:sqlserver://hostname:$ \{DbPort\};SelectMethod=cursor;DatabaseName=tbmesg
+    -   Derby: jdbc:${dbType}:${dbName}
+    -   DB2®: jdbc:${dbType}://${dbHostname}:${dbPort}/${dbName}
+    -   Oracle: jdbc:${dbType}:thin:@${dbHostname}:${dbPort}:$\{dbName}
+    -   SQL Server: jdbc:sqlserver://hostname:$ {DbPort};SelectMethod=cursor;DatabaseName=tbmesg
 -   **dbJndiName**
 
     Specify the JNDI name that will be used for a component.

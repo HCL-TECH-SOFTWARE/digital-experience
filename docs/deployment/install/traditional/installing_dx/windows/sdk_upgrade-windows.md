@@ -11,7 +11,7 @@ Ensure that your Portal profile is created before you upgrade the SDK.
     !!!note
         Starting with HCL Digital Experience Combined fix pack 05, you can change your SDK Java Technology Edition from version 7.0 to version 7.1.Starting with HCL Digital Experience Combined fix pack 12, you can change your SDK Java Technology Edition to version 8.0.
 
-3.  Read the following information before you run the managesdk task:
+3.  Read the following information before you run the `managesdk` task:
 
     -   For stand-alone environments: Stop the profile server (node) before you run the managesdk command.
     -   For clustered environments:

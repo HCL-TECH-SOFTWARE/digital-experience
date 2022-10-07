@@ -21,8 +21,8 @@ The information in these files is basic instruction. Before you change your syst
 6.  After you install the interim fix, review all readme files that are included with your fixes for additional instructions.
 
 
-**Related information**  
+<!-- ???+ info "Related information**  
 
 
-[Recommended fixes and updates for HCL Portal and Web Content Management](https://support.hcltechsw.com/csm)
+[Recommended fixes and updates for HCL Portal and Web Content Management](https://support.hcltechsw.com/csm) -->
 

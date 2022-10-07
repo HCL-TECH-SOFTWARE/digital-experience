@@ -190,7 +190,8 @@ You can install remote search service by using manual steps instead of the IBM I
         5.  When you are done, restart the remote server.
 13. Back on your portal, configure Portal Search for remote search service.
 
-    **Cluster note:** In a clustered environment, complete this step on the primary node only.
+    !!!note "Cluster note"
+        In a clustered environment, complete this step on the primary node only.
 
 <!--
 -   **[Updating remote search service by using manual steps](../admin-system/update_rssman.md)**  

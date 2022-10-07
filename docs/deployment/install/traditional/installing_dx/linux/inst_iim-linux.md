@@ -8,7 +8,7 @@ The IBM Installation Manager is used to install installation packages such as HC
 
 2.  Start all servers and applications that require a port number to avoid port conflicts when installing HCL Portal.
 
-3.  Type ping yourserver.yourcompany.com on a command line to verify that your fully qualified host name is properly configured.
+3.  Type `ping yourserver.yourcompany.com` on a command line to verify that your fully qualified host name is properly configured.
 
 4.  Type ping localhost on a command line to verify that your network is properly configured.
 
@@ -25,6 +25,7 @@ The IBM Installation Manager is used to install installation packages such as HC
         -   Non-root user, including password
         -   Group
         -   Directory, used when you install IBM® Installation Manager and HCL Portal
+
     4.  Set the user profile for the number of open files. Set the value to ulimit -n 10240.
 
     5.  Add the non-root user to the new group.
@@ -53,9 +54,10 @@ The IBM Installation Manager is used to install installation packages such as HC
 
 7.  Run the following task from the IIM directory:
 
-    ./install
+    `./install`
 
-    **Note:** Skip this step if you already have an existing installation.
+    !!!note
+        Skip this step if you already have an existing installation.
 
 
 

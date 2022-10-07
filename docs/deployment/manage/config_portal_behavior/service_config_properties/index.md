@@ -14,7 +14,7 @@ The configuration for each service is stored in and accessible through the WebSp
 2.  Start the WebSphere Integrated Solutions Console by entering the following string in the **URL location** field of a web browser:
 
     ```
-    http://example.com:admin\_port/ibm/console
+    http://example.com:admin_port/ibm/console
     ```
 
     where `example.com` is the name of your server or node host name of your server when on z/OS® and `admin_port` is the port that is assigned to the WebSphere Integrated Solutions Console.

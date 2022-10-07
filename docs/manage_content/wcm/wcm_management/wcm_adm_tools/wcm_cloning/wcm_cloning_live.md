@@ -12,9 +12,9 @@ These procedures describe how to clone web content data from one system to anoth
 
         |System|Location|
         |------|--------|
-        |Windows™|[wp\_profile\_root](../../../../../guide_me/wpsdirstr.md)\\ConfigEngine\\properties directory.|
-        |UNIX™Linux™|[wp\_profile\_root](../../../../../guide_me/wpsdirstr.md)/ConfigEngine/properties directory.|
-        |IBM® i|[wp\_profile\_root](../../../../../guide_me/wpsdirstr.md)/ConfigEngine/properties|
+        |Windows™|wp_profile_root\ConfigEngine\properties directory.|
+        |UNIX™ and Linux™|wp_profile_root/ConfigEngine/properties directory.|
+
 
         Refer to the documentation for your database for specific backup instructions.
 
