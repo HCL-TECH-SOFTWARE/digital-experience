@@ -76,7 +76,7 @@ Use the [Health Checker](../../../../../deployment/install/traditional/cf_instal
 
 For more information, see [Apply Combined Cumulative Fix](../../../../../deployment/install/traditional/cf_install/index.md)
 
-**Individual fixes:** Individual fixes (Fixes) are included in the Combined Cumulative Fix Strategy. However, if you are going to upgrade prior to CF08, the following iFixes are required. Install one of the following Fixes, based on your system, before you upgrade:
+**Individual fixes:** Individual fixes (Fixes) are included in the [Apply Combined Cumulative Fix](../../../../../deployment/install/traditional/cf_install/index.md) topic. However, if you are going to upgrade prior to CF08, the following iFixes are required. Install one of the following Fixes, based on your system, before you upgrade:
 
 -   IBM WebSphere® Application Server Version 8.5.5.X FOR SDK 7.1: [PI50090: SHIP JDK IV77682 AS AN IFIX FOR WAS 8.5.5.X FOR SDK 7.1](https://support.hcltechsw.com/csm)
 -   WebSphere Application Server Version 8.5.5.X FOR SDK 7: [PI50092: SHIP JDK IV77682 AS AN IFIX FOR WAS 8.5.5.X FOR SDK 7PI50092: SHIP JDK IV77682 AS AN IFIX FOR WAS 8.5.5.X FOR SDK 7](https://support.hcltechsw.com/csm)
