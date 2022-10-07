@@ -57,11 +57,12 @@ DXClient package comes with a script that you can use to run the container image
 
 7. You can find the configuration, logger, output, and sample files under location  `<working-directory>/store`.
 
-Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/store` folder. A sample configuration file that could be used in on-premises platforms in standalone, cluster platforms is also available under `<working-directory>/store/samples/sample-configurations/default-config.json` for reference.
+    Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/store` folder. A sample configuration file that could be used in on-premises platforms in standalone, cluster platforms is also available under `<working-directory>/store/samples/sample-configurations/default-config.json` for reference.
+
 
 8. Refer to the sample pipeline provided to find out how to integrate the container image directly (without bin script) in the automation server.
 
-9. By default, the logs will be available in UTC format, If needed synchronize your local timezone from host to container using an environment variable as given in the example below.
+9.  By default, the logs will be available in UTC format, If needed synchronize your local timezone from host to container using an environment variable as given in the example below.
 
 Example Usage:
 ```
