@@ -119,8 +119,9 @@ Since we already have the Credential Vault slot, we can now configure an outboun
         
       <policy name="demo_volt_mx_foundry_service" url="{$demo_volt_mx_foundry_service.url}" basic-auth-support="true">
           <actions>
-            <!-- Step 2. Add the HTTP Method.  We will use GET since this is what we defined when we created the operation of our service.-->
+            <!-- Step 2. Add the HTTP Method.  We will use GET or POST since this is what we defined when we created the operation of our service.-->
             <method>GET</method>
+            <method>POST</method>
           </actions>    
             
           <!-- Step 3. Add the credential vault slot that we have created. The vault slot name is also the vault slot id hpaa.slotid you will need to put in the policy. -->
