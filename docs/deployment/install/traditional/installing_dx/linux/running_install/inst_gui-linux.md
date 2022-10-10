@@ -4,6 +4,8 @@ Use the IBM Installation Manager to install HCL Digital Experience, IBM WebSpher
 
 The installation program verifies the operating system and its prerequisites, available disk space, and any required software prerequisites before installation. You cannot install two instances of the server at the same time, even if you are installing to different directories. You must install each server completely before you install the next one.
 
+## Procedure
+
 1.  Start all servers and applications that require a port number to avoid port conflicts when you install HCL Digital Experience. If you are installing multiple copies of HCL Portal on your server, start the existing Configuration Wizard servers. Also, when using the IBM Installation Manager graphical user interface in Linux, the package `libXtst.i686` and all dependent packages are required as a prerequisite.
 
     !!!note
