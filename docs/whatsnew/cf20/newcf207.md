@@ -4,10 +4,10 @@ The following features and updates are available to customers installing HCL Dig
 
 -   DX Client Updates support ability to execute in multiple container environments
 -   Digital Asset Management Plugin extensibility Helm configuration updates
--   DAM Friendly URLs Update adds ability to define a collection-unique name
+-   DAM Friendly URLs update adds ability to define a collection-unique name
 -   Content Composer enhancements adds ability to add keywords to content items
 -   New Script Application Tutorials and Sample Applications are available on the HCL Software Github repository
--   Web Content Manager Apply Content Template API Update
+-   Web Content Manager Apply Content Template API update
 -   Syndication Administration updates extend Delegated Administration roles assignments
 -   HCL Digital Experience Cloud Native 9.5 Entitlement checks
 -   HCL Digital Experience Cloud Native 9.5 offering adds components for on-premises installations and HCL Leap
