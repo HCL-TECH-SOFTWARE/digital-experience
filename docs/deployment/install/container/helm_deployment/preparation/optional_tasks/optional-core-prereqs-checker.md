@@ -15,7 +15,7 @@ The main objective to enable these checks is to get basic information about the 
 In these checks, the basic file access permission would get checked and according to the access, the result will get printed on the logs.
 
 #### Latency Check for I/O:
-On running the prereqs checks the latency i.e the read write speed of the filesystem are displayed. If the minimum latency speed recorded is lower than the threshold value, the latency test is passed. The success message, minimum latency speed and the threshold value is added to the system out log. If the minimum latency speed recorded is higher than the threshold value, the latency test is failed. The failure message, minimum latency speed and the threshold value is added to the system out log. 
+These checks will give the result of the disk latency. This check will help to know the essential efficiency of the file system. This check would get fail if the measured latency will not match the threshold value (minimum requirement).
 
 #### Soft Links and Hard Links Check:
 On running the prereqs checks the users permissions for Soft links or Hard links creation capabilities for the specified mounted volumes are displayed. If softlink/hardlink is created in the specified directory, the test is passed and the success message is added to the system out log. If softlink/hardlink is not created in the specified directory, the test is failed and the failure message is added to the system out log. 
