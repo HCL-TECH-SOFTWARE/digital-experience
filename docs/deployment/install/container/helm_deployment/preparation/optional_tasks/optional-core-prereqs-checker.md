@@ -28,7 +28,7 @@ On running the prereqs checks the users permissions for Soft links or Hard links
 On running the prereqs checks the Random Read Write Test Check i.e the time take to send a specific amount of data for read and write capabilities within the mounted volumes are displayed
 If the Read/Write IOPS is higher than the threshold value, the test is passed. The success message, Read/Write IOPS and the threshold value is added to the system out log. If the Read/Write IOPS is lower than the threshold value, the test is failed. The failure message, Read/Write IOPS and the threshold value is added to the system out log.
 
-## Running and Checking the Prereqs Checker:
+## How to manually trigger the checks:
 
 The following command can be triggered to run the checks manually, once all the checks will get performed, results will be available in the logs
 
