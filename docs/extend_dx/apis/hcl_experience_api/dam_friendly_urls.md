@@ -125,7 +125,7 @@ When creating collection, the DAM checks for the duplicate collection unique-nam
 ![](../../../images/CreateCollectionError_friendlyUrl_2.png "Create collection unsupported unique name")
 
 ## Copying friendly URL for assets
-User can copy friendly URL and API URL of an assets from the URLs section of asset's inspector panel
+User can copy the friendly URL and API URL of an assets from the URLs section of asset's inspector panel
 ![](../../../images/Copy_friendlyUrl.png "Copy friendly url")
 
 <!-- **Related information**  
