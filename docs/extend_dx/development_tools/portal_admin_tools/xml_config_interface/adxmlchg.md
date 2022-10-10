@@ -28,8 +28,8 @@ The different versions of HCL Portal use the following syntax definitions for th
 !!!note "Notes"
   1.  **Backward compatibility:** The later XML schemas are backward compatible with earlier supported versions of HCL Portal. This means that you can run XML scripts from earlier portal versions that IBM supports under a later version of the portal. For example, you can run an XML script that is based on the `PortalConfig_7.0.0.xsd` under portal 8.5. In such cases a warning message is written to the output script, which informs that a previous version of the XML schema was used.
   2.  **Schema file naming convention:** If the XML schema is enhanced by updates, a new version of the xsd file with a new file name is created according to the following naming convention:
-      -   Starting with portal V 6.0.1 the schema file name includes the portal version number as follows: `PortalConfig_portal\_version\_number.xsd`. Example: `PortalConfig_**7.0.0**.xsd`.
-      -   If the schema is enhanced during a portal version, the name includes additional ID information to ensure unique schema file names: `PortalConfig_portal\_version\_number**\_id**.xsd`. Example: `PortalConfig_7.0.0**\_2**.xsd`.
+      -   Starting with portal V 6.0.1 the schema file name includes the portal version number as follows: `PortalConfig_portal_version_number.xsd`. Example: `PortalConfig_**7.0.0**.xsd`.
+      -   If the schema is enhanced during a portal version, the name includes additional ID information to ensure unique schema file names: `PortalConfig_portal_version_number**_id**.xsd`. Example: `PortalConfig_7.0.0**_2**.xsd`.
 
 ## New XML resources in HCL Portal 8.5
 
