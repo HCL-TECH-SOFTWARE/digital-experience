@@ -30,7 +30,7 @@ If the Read/Write IOPS is higher than the threshold value, the test is passed. T
 
 ## Running and Checking the Prereqs Checker:
 
-The following command can be trigger for running the checks, Once its run the results will be available in the logs
+The following command can be triggered to run the checks manually, once all the checks will get performed, results will be available in the logs
 
 ```shell
 kubectl -n dxns exec --stdin --tty dx-deployment-core-0 -c prereqs-checker -- /bin/bash /usr/local/sbin/run_test.sh
