@@ -21,8 +21,7 @@ On running the prereqs checks the latency i.e the read write speed of the filesy
 On running the prereqs checks the users permissions for Soft links or Hard links creation capabilities for the specified mounted volumes are displayed. If softlink/hardlink is created in the specified directory, the test is passed and the success message is added to the system out log. If softlink/hardlink is not created in the specified directory, the test is failed and the failure message is added to the system out log. 
 
 #### Random Read/Write Checks
-On running the prereqs checks the Random Read Write Test Check i.e the time take to send a specific amount of data for read and write capabilities within the mounted volumes are displayed
-If the Read/Write IOPS is higher than the threshold value, the test is passed. The success message, Read/Write IOPS and the threshold value is added to the system out log. If the Read/Write IOPS is lower than the threshold value, the test is failed. The failure message, Read/Write IOPS and the threshold value is added to the system out log.
+In this check, `IOPS` will get measured for the file system. This check is very essential to measure the performance of the file system. This check will get fail if the measured `IOPS` will not be higher or equal to the threshold value.
 
 ## How to manually trigger the checks:
 
