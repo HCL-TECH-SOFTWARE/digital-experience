@@ -18,7 +18,7 @@ In these checks, the basic file access permission would get checked and accordin
 These checks will give the result of the disk latency. This check will help to know the essential efficiency of the file system. This check would get fail if the measured latency will not match the threshold value (minimum requirement).
 
 #### Soft Links and Hard Links Check:
-On running the prereqs checks the users permissions for Soft links or Hard links creation capabilities for the specified mounted volumes are displayed. If softlink/hardlink is created in the specified directory, the test is passed and the success message is added to the system out log. If softlink/hardlink is not created in the specified directory, the test is failed and the failure message is added to the system out log. 
+This check will give the result of `Soft Links` and `Hard Links` creation capabilities on the file system.
 
 #### Random Read/Write Checks
 In this check, `IOPS` will get measured for the file system. This check is very essential to measure the performance of the file system. This check will get fail if the measured `IOPS` will not be higher or equal to the threshold value.
