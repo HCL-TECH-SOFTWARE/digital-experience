@@ -4,6 +4,8 @@ Change your version of the SDK Java Technology Edition using the applicable HCL 
 
 Ensure that your Portal profile is created before you upgrade the SDK.
 
+## Procedure
+
 1.  Start the IBM® Installation Manager.
 
 2.  Install the latest supported version of IBM WebSphere SDK Java Technology Edition.
@@ -29,6 +31,7 @@ Ensure that your Portal profile is created before you upgrade the SDK.
 
         -   You must provide the administrative user name and password with the managesdk command for each profile that contains a federated node or deployment manager node in a cell with security enabled. If you do not specify the -user and -password parameters, the managesdk command might fail or stop processing.
         -   When you enable the SDK for a deployment manager, only the deployment manager server is enabled. None of the managed nodes of the deployment manager is enabled to use the specific SDK.
+
 4.  Open a command prompt and change to the AppServer_root/bin directory.
 
 5.  Run the following command to list the available SDK versions:
