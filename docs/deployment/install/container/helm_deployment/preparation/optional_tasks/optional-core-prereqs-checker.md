@@ -6,7 +6,7 @@
 There are some checks that are performed to check the efficiency of various components called Prereqs Checkers. Currently, these checks are implemented for the mounted volume's file system of the core. You get the result of these checks from the container logs (system-out-logs).
 For these checks, one separate sidecar container would get deployed along with the main application container. This is a lightweight container so the main application performance would not get affected. The result of the checks would be extractable from container logs.
 
-The main motive for implementing these checks is that, when mounted volume related issues are raised, you will have the basic information about the file system of the volume mounted in your environment. So the ultimate goal is to collect that information through these checks. On Analysing the information related to file systems, you will be suggested to change the file system if its performance is not up to the mark.
+The main objective to enable these checks is to get basic information about the file system of the mounted volumes. The result of these checks is also helpful to track the issues related to file systems.
 
 The following checks have been implemented for only one mounted volume which is mounted in DX core. The following are the checks which have been performed:
 - file permission check for the user under which the core container runs
