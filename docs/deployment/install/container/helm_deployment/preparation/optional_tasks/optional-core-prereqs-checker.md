@@ -9,7 +9,7 @@ For these checks, one separate sidecar container would get deployed along with t
 The main objective to enable these checks is to get basic information about the file system of the mounted volumes. The result of these checks is also helpful to track the issues related to file systems.
 
 
-## What are Prereqs Checker:
+## Checks implemented in Prereqs Checker:
 
 #### File Permission Check:
 On running the prereqs checks, the read and write permissions for the files within the mounted volumes will be displayed. If you have read and write permissions the file within the mounted volumes is created and accessible, the success message and the users read and write access for the file is added to the system out logs. If you dont have read and write permissions the failure message is added to the system out log.
