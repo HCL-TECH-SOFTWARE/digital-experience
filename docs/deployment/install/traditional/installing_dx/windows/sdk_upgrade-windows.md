@@ -4,6 +4,8 @@ Change your version of the SDK Java Technology Edition using the applicable HCL 
 
 Ensure that your Portal profile is created before you upgrade the SDK.
 
+## Procedure
+
 1.  Start the IBM® Installation Manager.
 
 2.  Install the latest supported version of IBM WebSphere SDK Java Technology Edition.
