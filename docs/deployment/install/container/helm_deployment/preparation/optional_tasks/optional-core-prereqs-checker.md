@@ -41,5 +41,3 @@ The following command can be run to print the logs:
 ```shell
 kubectl -n dxns logs pod/dx-deployment-core-0 prereqs-checker
 ```
-
-All the information which results from all the checks are extracted from the logs and printed.
