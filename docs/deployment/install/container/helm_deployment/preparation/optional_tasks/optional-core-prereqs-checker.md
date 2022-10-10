@@ -3,7 +3,7 @@
 
 ## Introduction of Prereqs Checker:
 
-There are some checks that are performed to check the efficiency of various components called Prereqs Checkers. Currently, these checks are implemented for the mounted volume's file system of core. You get the result of these checks from the container logs (system out logs).
+There are some checks that are performed to check the efficiency of various components called Prereqs Checkers. Currently, these checks are implemented for the mounted volume's file system of the core. You get the result of these checks from the container logs (system-out-logs).
 For these checks, one separate container would get deployed along with main application container. This is a light weight container so the main application performance would not get affected. The result of the checks would be extractable from container logs.
 
 The main motive for implementing these checks is that, when mounted volume related issues are raised, you will have the basic information about the file system of the volume mounted in your environment. So the ultimate goal is to collect that information through these checks. On Analysing the information related to file systems, you will be suggested to change the file system if its performance is not up to the mark.
