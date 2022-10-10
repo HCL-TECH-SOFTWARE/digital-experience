@@ -8,10 +8,6 @@ For these checks, one separate sidecar container would get deployed along with t
 
 The main objective to enable these checks is to get basic information about the file system of the mounted volumes. The result of these checks is also helpful to track the issues related to file systems.
 
-The following checks have been implemented for only one mounted volume which is mounted in DX core. The following are the checks which have been performed:
-- file permission check for the user under which the core container runs
-- latency checks for I/O
-- soft/hard links capabilities for the mounted volumes
 
 ## What are Prereqs Checker:
 
