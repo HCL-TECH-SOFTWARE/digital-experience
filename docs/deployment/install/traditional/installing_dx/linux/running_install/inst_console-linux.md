@@ -55,7 +55,9 @@ The installation program verifies the operating system and its prerequisites, av
     -   WebSphere Application Server Version 8.5.5.2 or later
     -   Java Version 8.0.3.
     -   No existing Portal profile
-    **Tip:** If you have a HCL Portal Enable license, you must select both the **HCL Portal Server****HCL Portal Express** and **HCL Portal Enable** packages.
+    
+    !!!note "Tip"
+        If you have a HCL Portal Enable license, you must select both the **HCL Portal Server****HCL Portal Express** and **HCL Portal Enable** packages.
 
 8.  Choose one of the following options:
 
@@ -75,13 +77,16 @@ The installation program verifies the operating system and its prerequisites, av
 
     -   Enter M to change the installation directory. Then, enter the new installation directory. Read the **Tip** about installation path length to avoid issues that are caused by long paths.
     -   Enter N to keep the existing directory.
-    **Tip:** Ensure that the installation paths for WebSphere Application Server and HCL Portal that are reasonably short. Long paths can cause installation problems.
+    
+    !!!note "Tip"
+        Ensure that the installation paths for WebSphere Application Server and HCL Portal that are reasonably short. Long paths can cause installation problems.
 
 14. Enter the number for the WebSphere Application Server root directory to use as the existing WebSphere Application Server.
 
-15. On the **IBM Installation Manager** \> **Install** \> **Licenses** \> **Location** \> **Features** menu, enter 1 to select the **Portal Server Profile** feature. Then, enter N to continue.
+15. On the **IBM Installation Manager > Install > Licenses > Location > *Features** menu, enter 1 to select the **Portal Server Profile** feature. Then, enter N to continue.
 
-    **Note:** Ensure that **Portal Server Profile** is selected to create a profile that contains the Portal application server and the product binary files. Clear this option if you need a binary only installation for migrationor your clustered environment.
+    !!!note
+        Ensure that **Portal Server Profile** is selected to create a profile that contains the Portal application server and the product binary files. Clear this option if you need a binary only installation for migrationor your clustered environment.
 
 16. Enter the configuration wizard administrator user ID and password.
 
@@ -93,7 +98,7 @@ The installation program verifies the operating system and its prerequisites, av
     -   **Enter an administrator user ID for the portal server**
     -   **Enter an administrator user password for the portal server**
     -   **Confirm administrator user password for the portal server**
-18. Enter Y to enter advanced parameters such as customized Uniform Resource Identifier \(URI\) settings, profile name, and port numbers. Enter N to accept the default parameters.
+18. Enter Y to enter advanced parameters such as customized Uniform Resource Identifier (URI) settings, profile name, and port numbers. Enter N to accept the default parameters.
 
     -   **Enter the context root**
     -   **Enter the default home**
@@ -109,20 +114,24 @@ The installation program verifies the operating system and its prerequisites, av
 
     -   Enter G to generate a response file.
 
-        **Note:** Go to [Create a response file for your Linux environment](inst_response-linux.md) for more information.
+        !!!note
+            Go to [Create a response file for your Linux environment](../running_install/install_with_responsefile/inst_response-linux.md) for more information.
 
     -   Enter I to install HCL Portal.
 22. When the installation is complete, enter F to return to the main installation menu.
 
-23. Access the Configuration Wizard. Go to http://your\_server:10200/hcl/wizard.
+23. Access the Configuration Wizard. Go to http://your_server:10200/hcl/wizard.
 
-    **Note:** If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your\_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your\_server:10200/hcl/wizard.
+    !!!note
+        If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your_server:10200/hcl/wizard.
 
-    **Restriction:** There is a known issue with Chrome version 45.x and the Configuration Wizard. If you are experiencing difficulties, use a different browser when you access the wizard.
+    !!!restriction
+        There is a known issue with Chrome version 45.x and the Configuration Wizard. If you are experiencing difficulties, use a different browser when you access the wizard.
 
 24. Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw\_profile.
 
-    **Note:** If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Supported languages](../config/../reference/supportedlanguages.md) in the HCL Digital Experience Version 8.5 documentation.
+    !!!note
+        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Language support](../../../../../../extend_dx/development_tools/portal_admin_tools/language_support/index.md) in the HCL Digital Experience Version 8.5 documentation.
 
 
 After you upgrade to CF08 or higher, you can upgrade your SDK to version 7.1. Go to *Upgrading the SDK* for information.
