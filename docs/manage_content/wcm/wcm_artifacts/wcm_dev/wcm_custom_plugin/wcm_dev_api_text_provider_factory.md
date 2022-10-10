@@ -18,11 +18,11 @@ To use a text provider factory, you must create a text provider factory class an
 
         This method returns the text providers in the factory with the given name.
 
-    -   **public boolean isShownInAuthoringUI\(\)**
+    -   **public boolean isShownInAuthoringUI(\)**
 
         This method is used to prevent the text providers in your text provider factory from appearing in the authoring UI.
 
-    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
+    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer_root](../reference/wpsdirstr.md#wp_root)/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
 
 2.  A plugin.xml file is needed whether the deployment is done using a WAR or EAR, or using a loose jar. If deploying via an application in a WAR or EAR, include the plugin.xml file in the application's WEB-INF folder. When using a jar, include the plugin.xml in the root of the jar.
 

@@ -31,7 +31,7 @@ If you plan to use a SecureWay Security Server as an LDAP user registry, you mus
 
     1.  Complete the following steps to create a directory suffix:
 
-        1.  Go to [IBM System i and IBM i Information Center](http://www-01.ibm.com/support/knowledgecenter/ssw_ibm_i/welcome), select the appropriate documentation version and go to **Networking > TCP/IP applications, protocols, and services > IBM Directory Server for iSeries (LDAP) > Administering Directory Server > General administration tasks > Adding and Removing Directory Server suffixes** for information.
+        1.  Go to [IBM System i and IBMi Information Center](http://www-01.ibm.com/support/knowledgecenter/ssw_ibm_i/welcome), select the appropriate documentation version and go to **Networking > TCP/IP applications, protocols, and services > IBM Directory Server for iSeries (LDAP) > Administering Directory Server > General administration tasks > Adding and Removing Directory Server suffixes** for information.
         2.  Stop and restart the LDAP server.
     2.  Open the appropriate LDIF file in the PortalServer_root/installer/wp.iim/ldif directory, with a text editor:
 

@@ -101,8 +101,3 @@ Map the attributes between HCL Digital Experience and your LDAP user registries.
     4.  Stop and restart all necessary servers to propagate your changes.
 
 
-
-**Previous topic:**[Adding attributes](../install/add_attributes.md)
-
-**Next topic:**[Removing attributes](../install/remove_attr_def.md)
-

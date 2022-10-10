@@ -89,7 +89,8 @@ Use this information to install DB2 for z/OS for use with HCL Digital Experience
     export EXTSHM=ON
     ```
 
-    **Note:** The shell must be reopened before you restart DB2 for z/OS.
+    !!!note
+        The shell must be reopened before you restart DB2 for z/OS.
 
 17. If you are using the older DB2 Type 2 JDBC driver, configure your DB2 Connect client with the following commands:
 
@@ -116,5 +117,6 @@ When you use the Configuration Wizard and provide information about your databas
 -   Before you enter your database name (`dbdomain.DbName`) in the Configuration Wizard, check your database documentation for restrictions on character length.
 -   You cannot use the **Database Transfer** option in the Configuration Wizard to assign custom table spaces on your database server. You can perform manual steps to assign custom table spaces. Go to [Assigning custom table spaces](../../../../manage/db_mgmt_sys/custom_tablespace/index.md) for more information.
 
-**Related information**: [JDBC type 2 and type 4 drivers](/docs/get_started/plan_deployment/traditional_deployment/database_consideration/db_jdbc_type.md)
+???+ info "Related information" 
+    -   [JDBC type 2 and type 4 drivers](/docs/get_started/plan_deployment/traditional_deployment/database_consideration/db_jdbc_type.md)
 

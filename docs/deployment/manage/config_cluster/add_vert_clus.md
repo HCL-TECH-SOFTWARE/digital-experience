@@ -123,5 +123,5 @@ You can add vertical cluster members to share the workload demands of your clust
 
     3.  Stop and start the web server.
 
-**Related information**  
-[Setting up a cluster](../config_cluster/index.md)
+???+ info "Related information"
+    -   [Setting up a cluster](../config_cluster/index.md)

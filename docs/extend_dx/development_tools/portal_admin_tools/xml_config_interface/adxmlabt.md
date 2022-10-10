@@ -49,8 +49,7 @@ Requests to and responses from the XML configuration interface use the same XML 
 
 Use the XML schema for the XML format that HCL Digital Experience provides for reference. You will find it in the JAR file wp.xml.jar in the HCL Portal installation directory:
 
--   UNIX™Linux™: PortalServer_root/base/wp.xml/shared/app
--   IBM® i: PortalServer_root/base/wp.xml/shared/app
+-   UNIX™ and Linux™: PortalServer_root/base/wp.xml/shared/app
 -   Windows™: PortalServer_root\base\wp.xml\shared\app`
 
 Unpack the JAR file and you will find the file with the XML schema under the path `com/ibm/wps/command/xml/PortalConfig_8.5.0.xsd`. An XML request contains the following:

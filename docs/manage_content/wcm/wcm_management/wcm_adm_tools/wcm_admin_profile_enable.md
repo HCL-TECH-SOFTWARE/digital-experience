@@ -4,20 +4,20 @@ Use the profile enablement tool to enable or disable the profile feature on web 
 
 1.  Open a command prompt.
 
-2.  Change to the [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)/ConfigEngine directory.
+2.  Change to the wp_profile_root/ConfigEngine directory.
 
 3.  To enable or disable the profile enablement tool, run the following command:
 
-    -   AIX® HP-UX Linux™ Solaris z/OS®: ./ConfigEngine.sh run-wcm-admin-task-enable-profile -DPortalAdminId=username -DPortalAdminPwd=password -Dlibrary=MyLibrary
-    -   IBM® i: ConfigEngine.sh run-wcm-admin-task-enable-profile -DPortalAdminId=username -DPortalAdminPwd=password -Dlibrary=libraryName
-    -   Windows™: ConfigEngine.bat run-wcm-admin-task-enable-profile -DPortalAdminId=username -DPortalAdminPwd=password -Dlibrary=libraryName
+    -   AIX® and Linux™: ./Confi`gEngine.sh run-wcm-admin-task-enable-profile -DPortalAdminId=username -DPortalAdminPwd=password -Dlibrary=MyLibrary`
+    -   Windows™: `ConfigEngine.bat run-wcm-admin-task-enable-profile -DPortalAdminId=username -DPortalAdminPwd=password -Dlibrary=libraryName`
+
     Add the following required parameters to the run-wcm-admin-task-enable-profile task to enable or disable profiling on a specific library or on all libraries. You must specify either the -Dlibrary or -DallLibraries parameter.
 
     -   **-Dlibrary=libraryName**
 
         Use this parameter if you want to enable or disable profiling on a specific library. The value for this parameter is the name of the library.
 
-        !!! note
+        !!!note
             If there is a space in your library name; for example: Work Library, put quotation marks around the library name.
 
     -   **-DallLibraries=true**
@@ -56,7 +56,7 @@ Use the profile enablement tool to enable or disable the profile feature on web 
 
     -   **To run the task on a virtual portal**
 
-        When you run this task on a virtual portal, you must add either -DVirtualPortalHostName=name or -DVirtualPortalContext=virtual\_portal\_context to the command.
+        When you run this task on a virtual portal, you must add either -DVirtualPortalHostName=name or -DVirtualPortalContext=virtual_portal_context to the command.
 
     -   **To preserve dates**
 

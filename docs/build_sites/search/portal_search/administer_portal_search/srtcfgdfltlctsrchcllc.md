@@ -6,7 +6,6 @@ The default directory location under which search collections are created is as 
 
 -   AIX and Linux: `wp_profile_root/PortalServer/collections`
 -   Windows™: `wp_profile_root\PortalServer\collections`
--   z/OS®: `wp_profile_root/PortalServer/collections`
 
 This default can be applied when you create a new search collection, depending on the value you specify in the entry field **Location of Collection** when you create a search collection:
 

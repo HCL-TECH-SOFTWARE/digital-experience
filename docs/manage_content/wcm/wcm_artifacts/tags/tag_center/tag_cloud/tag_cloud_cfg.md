@@ -58,7 +58,8 @@ Configure the following options:
 
         Type the categories that you want to make available as scopes. Specify a comma separated list.
 
-        **Note:** These scoping selections are not relevant for the HCL Connections view. In the HCL Connections view you scope explicitly by selecting the corresponding check boxes in the **HCL Connections tags** area.
+        !!! note
+            These scoping selections are not relevant for the HCL Connections view. In the HCL Connections view you scope explicitly by selecting the corresponding check boxes in the **HCL Connections tags** area.
 
     -   **Type schemas to be used as scopes**
 
@@ -106,7 +107,8 @@ Configure the following options:
 
             When you select this option, no scopes will be preselected for tag clouds.
 
-    **Note:** For more details about scopes, how they work, and how you can use them refer to the portal documentation about tagging and rating.
+    !!! note
+        For more details about scopes, how they work, and how you can use them refer to the portal documentation about tagging and rating.
 
 -   **Display Settings**
 
@@ -140,7 +142,8 @@ Configure the following options:
 
     If a HCL Connections server is integrated into the HCL Portal, check boxes for HCL Connections features such as Activities, Blogs, Bookmarks, Communities, Files, Forums, Profiles, and Wikis are displayed. Each HCL Connections feature can be selected individually. Clicking the **All** check box selects or clears all of the HCL Connections features. When you select aHCL Connections feature, the corresponding HCL Connections tags are integrated in the **Others’ tags** view of the tag cloud.
 
-    **Note:** One or more Lotus Connections check boxes can be hidden by setting a comma separated list of check box identifiers in the custom property `com.ibm.wps.cp.tagging.federation.ui.disabled.ids` that is located in the WP CPConfigurationService Resource Environment Provider.
+    !!! note
+        One or more Lotus Connections check boxes can be hidden by setting a comma separated list of check box identifiers in the custom property `com.ibm.wps.cp.tagging.federation.ui.disabled.ids` that is located in the WP CPConfigurationService Resource Environment Provider.
 
     For details about how to set properties in the Portal Configuration Service, see the topic about Setting service configuration properties. The identifiers of the Connections check boxes are: All, Activities, Blogs, Bookmarks, Communities, Files, Forums, Profiles, and Wikis. For example, if you do not want the Blogs and Profiles check boxes to be shown, use the value `Blogs,Profiles` for the properties. You can integrate HCL Connections tags in the All view by selecting the check box **Display HCL Connections tags in the All view**.
 
@@ -176,7 +179,8 @@ Configure the following options:
 
         If you select this option, portal site visitors can see the analytics tab. For more information about analytics, read the section about *Analyzing user behavior by Active Site Analytics* in the HCL Portal documentation.
 
-        **Note:** To see the analytics tab in the Tag Cloud portlet, the user needs to have at least the USER@ANALYTICS\_TAGS role.
+        !!! note
+            To see the analytics tab in the Tag Cloud portlet, the user needs to have at least the USER@ANALYTICS\_TAGS role.
 
 
 Click **Submit** to save your changes. To return to the tag cloud portlet without saving your changes, click **Cancel**.

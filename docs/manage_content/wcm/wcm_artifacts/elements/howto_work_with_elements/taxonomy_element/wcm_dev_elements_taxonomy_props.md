@@ -18,7 +18,8 @@ You use the taxonomy element to define the properties of the taxonomy component.
 
     3.  Select **Query string** to enter a query string parameter to search for. For example, if you entered `myquery` in this field, a menu that is displayed on a page whose URL contained a search query `?myquery=library1/shoes` would display content that is profiled with a category called shoes from the library called library1. If no library is specified in the original URL the library of the current content item is used, and if that cannot be resolved the default library that is specified in the `WCM WCMConfigService` service is used.
 
-        **Note:** If a category exists in more than one taxonomy, only the first found category is used by the search query. You cannot specify a taxonomy name in the search query. You should rename one of the categories to ensure the search query uses the correct category.
+        !!!note
+            If a category exists in more than one taxonomy, only the first found category is used by the search query. You cannot specify a taxonomy name in the search query. You should rename one of the categories to ensure the search query uses the correct category.
 
     The categories selected here appear only in the category selection tree if they are included within the parent categories that are defined in steps 1 and 3.
 
@@ -39,25 +40,9 @@ You use the taxonomy element to define the properties of the taxonomy component.
     3.  The code that is entered into the unselected design is used to format unselected categories in a category selection tree.
 
 
-**Related information**  
-
-
-[Inserting an image in an element](../panel_help/wcm_dev_elements_insert_image.md)
-
-[Inserting a link in an element](../panel_help/wcm_dev_elements_insert_link.md)
-
-[Inserting element tags](../panel_help/wcm_dev_elements_insert_tags.md)
-
-[Creating web content tags](../panel_help/wcm_dev_referencing_tags.md)
-
-**References:**  
-
-
-[Inserting an image in an element](wcm_dev_elements_insert_image.md)
-
-[Inserting a link in an element](wcm_dev_elements_insert_link.md)
-
-[Inserting element tags](wcm_dev_elements_insert_tags.md)
-
-[Creating web content tags](wcm_dev_referencing_tags.md)
+???+ info "Related information"  
+    -   [Inserting an image in an element](../../../../../../deployment/manage/security/user_registry/update_user_registry/lookaside_db.md)
+    -   [Inserting a link in an element](../../../../../../manage_content/wcm/wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_link.md)
+    -   [Inserting element tags](../../../../../../manage_content/wcm/wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_tags.md)
+    -   [Creating web content tags](../../../../../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/index.md)
 

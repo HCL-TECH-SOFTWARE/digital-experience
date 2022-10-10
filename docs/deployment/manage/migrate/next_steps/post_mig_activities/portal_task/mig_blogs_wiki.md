@@ -6,7 +6,8 @@ If you customized your blogs and wiki, you will lose your customizations and you
 
 1.  z/OS® only: When you use z/OS, open a UNIX™ System Service command prompt to change directories.
 
-    **Note:** If you are instructed to open a properties file, the files are ASCII files and must be opened by using the appropriate tool.
+    !!!note
+        If you are instructed to open a properties file, the files are ASCII files and must be opened by using the appropriate tool.
 
 2.  Go to the wp_profile_root/ConfigEngine directory.
 

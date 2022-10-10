@@ -6,11 +6,11 @@ To enable this WAR file, adapt the application.xml files of the deployed Enterpr
 
 1.  Export the EAR, wps.earWebDAV for WebSphere Portal, through the WebSphere® Integrated Solutions Console.
 
-2.  Open a command prompt. Under z/OS®, open a UNIX System Services \(USS) command prompt.
+2.  Open a command prompt. Under z/OS®, open a UNIX System Services (USS) command prompt.
 
 3.  Run the following command to expand the EAR:
 
-    -   ./EARExpander.sh\|bat -ear directory/WebDAV\_for\_HCL Portal and HCL Web Content Manager.ear -operationDir directory webdav\_expanded -operation expand
+    -   ./EARExpander.sh\|bat -ear directory/WebDAV_for_HCL Portal and HCL Web Content Manager.ear -operationDir directory webdav\_expanded -operation expand
 4.  Locate the file application.xml in the expanded EAR file directory.
 
 5.  Edit the file application.xml of the exported EAR, and uncomment or add the following section:

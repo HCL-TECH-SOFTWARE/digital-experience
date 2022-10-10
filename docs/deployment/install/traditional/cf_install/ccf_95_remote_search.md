@@ -4,17 +4,17 @@ Read the installation instructions to learn how to apply a cumulative fix to a p
 
 ## About Version 8.5 Cumulative Fixes
 
-This cumulative fix can only be applied to an existing functional version of HCL Portal Version 8.5 remote search or document conversion services \(DCS\) server, with or without a previous cumulative fix applied.
+This cumulative fix can only be applied to an existing functional version of HCL Portal Version 8.5 remote search or document conversion services (DCS) server, with or without a previous cumulative fix applied.
 
 ## Overview
 
-If you have set up a remote search server or document conversion server for use with Portal Version 8.5, then whenever you apply a cumulative fix to the portal server, you should also apply the corresponding cumulative fix to the remote server. \(Likewise, when you roll back a fix from the portal server, you should roll back the corresponding fix from the remote server.\) There are two ways of doing this, depending on how you installed the server originally.
+If you have set up a remote search server or document conversion server for use with Portal Version 8.5, then whenever you apply a cumulative fix to the portal server, you should also apply the corresponding cumulative fix to the remote server (Likewise, when you roll back a fix from the portal server, you should roll back the corresponding fix from the remote server). There are two ways of doing this, depending on how you installed the server originally.
 
--   If you originally installed the remote service using manual steps, then you must use manual steps to upgrade it. Update the application on the remote search server by copying updated files from the primary portal server and redeploying them. Refer to the [Updating remote search by using manual steps](../admin-system/update_rssman.md) topic for details on how to set up the application.
+-   If you originally installed the remote service using manual steps, then you must use manual steps to upgrade it. Update the application on the remote search server by copying updated files from the primary portal server and redeploying them. Refer to the [Updating remote search by using manual steps](../../../../build_sites/search/remotesearch/install_manual/update_rssman.md) topic for details on how to set up the application.
 
 ## What's new
 
-For a list of the Fixes which have gone into each CF, visit [Combined Cumulative Fix Strategy](new_cf_95.md) for more information.
+For a list of the Fixes which have gone into each CF, visit [Apply Combined Cumulative Fix](../../../../deployment/install/traditional/cf_install/index.md) for more information.
 
 ## Before you begin
 

@@ -6,19 +6,11 @@ By default, virtual portals do not contain the Articles template page. To use th
 
 2.  To add the template page to the virtual portal, start the following portal configuration engine task:
 
-    -   AIX® HP-UX Linux™ Solaris z/OS®:
+    -   AIX® and Linux™:
 
         ```
         ./ConfigEngine.sh action-init-content-templating-pages
-        -DVirtualPortalContext=virtual\_portal\_context\_url
-        -DWasPassword=adminpwd -DPortalAdminPwd=adminpwd
-        ```
-
-    -   IBM® i:
-
-        ```
-        ConfigEngine.sh action-init-content-templating-pages
-        -DVirtualPortalContext=virtual\_portal\_context\_url
+        -DVirtualPortalContext=virtual_portal_context_url
         -DWasPassword=adminpwd -DPortalAdminPwd=adminpwd
         ```
 
@@ -26,25 +18,17 @@ By default, virtual portals do not contain the Articles template page. To use th
 
         ```
         ConfigEngine.bat action-init-content-templating-pages
-        -DVirtualPortalContext=virtual\_portal\_context\_url
+        -DVirtualPortalContext=virtual_portal_context_url
         -DWasPassword=adminpwd -DPortalAdminPwd=adminpwd
         ```
 
 3.  To move the referenced content items into the PortalSite library, start the following portal configuration engine task:
 
-    -   AIX HP-UX Linux Solaris z/OS:
+    -   AIX and Linux:
 
         ```
         ./ConfigEngine.sh action-internalize-content-mappings-vp
-        -DVirtualPortalContext=virtual\_portal\_context\_url
-        -DWasPassword=adminpwd -DPortalAdminPwd=adminpwd
-        ```
-
-    -   IBM i:
-
-        ```
-        ConfigEngine.sh action-internalize-content-mappings-vp
-        -DVirtualPortalContext=virtual\_portal\_context\_url
+        -DVirtualPortalContext=virtual_portal_context_url
         -DWasPassword=adminpwd -DPortalAdminPwd=adminpwd
         ```
 
@@ -52,7 +36,7 @@ By default, virtual portals do not contain the Articles template page. To use th
 
         ```
         ConfigEngine.bat action-internalize-content-mappings-vp
-        -DVirtualPortalContext=virtual\_portal\_context\_url
+        -DVirtualPortalContext=virtual_portal_context_url
         -DWasPassword=adminpwd -DPortalAdminPwd=adminpwd
         ```
 

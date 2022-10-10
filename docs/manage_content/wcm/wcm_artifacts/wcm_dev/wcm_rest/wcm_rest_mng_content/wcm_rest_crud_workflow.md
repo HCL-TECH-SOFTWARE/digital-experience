@@ -174,11 +174,11 @@ The Process Now and Remove Workflow from an item functionality are equivalent to
 
     POST request to:
 
-    http://host:port/wps/mycontenthandler/wcmrest/item/<\(UUID of the content\)\>/process-now
+    http://host:port/wps/mycontenthandler/wcmrest/item/<(UUID of the content)\>/process-now
 
     Sample URL:
 
-    localhost:10039/wps/mycontenthandler/wcmrest/item/02894453-b03a-4935-8078-5f8ac923a5b0/process-now
+    http://localhost:10039/wps/mycontenthandler/wcmrest/item/02894453-b03a-4935-8078-5f8ac923a5b0/process-now
 
 
 -   **Expected Body**
@@ -301,7 +301,7 @@ The Process Now and Remove Workflow from an item functionality are equivalent to
 
     **Sample URL:**
 
-    localhost:10039/wps/mycontenthandler/wcmrest/item/02894453-b03a-4935-8078-5f8ac923a5b0/remove-workflow
+    http://localhost:10039/wps/mycontenthandler/wcmrest/item/02894453-b03a-4935-8078-5f8ac923a5b0/remove-workflow
 
 
 -   **Expected Body**

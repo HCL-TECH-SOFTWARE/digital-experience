@@ -27,7 +27,7 @@ You add an HTML element to an authoring template when you want the HTML element 
 
 10. Enter HTML in the HTML field, or do nothing if you want your content creators to enter the HTML.
 
-11. Click ![properties](/../images/propIcon.jpg) to open the display properties of the element. This view is where you define how the element is displayed on the item form.
+11. Click ![properties](../html_element/_img/propIcon.jpg) to open the display properties of the element. This view is where you define how the element is displayed on the item form.
 
     1.  To display the element as a required field select **Identify this as a required field**.
 
@@ -64,7 +64,7 @@ You add an HTML element to an authoring template when you want the HTML element 
 
             **Storing JSP files:** JSP files are stored within a web application that runs on the portal. To reference a JSP file in another web application, use the following path: contextPath;jspPath. For example: /wps/customapplication;/jsp/jspFilename.jsp.
 
-            A dynamic context path value can be defined by adding a token to the context path that corresponds to a key and value pair to the Web Content Manager configuration service environment provider. When this key is used as the token in the jsp value field, it is replaced dynamically at render time. For example: \[my.custom.key\];myfile where my.custom.key is a constant within the Web Content Manager configuration service.
+            A dynamic context path value can be defined by adding a token to the context path that corresponds to a key and value pair to the Web Content Manager configuration service environment provider. When this key is used as the token in the jsp value field, it is replaced dynamically at render time. For example: `[my.custom.key];myfile` where `my.custom.key` is a constant within the Web Content Manager configuration service.
 
 12. Save the authoring template.
 

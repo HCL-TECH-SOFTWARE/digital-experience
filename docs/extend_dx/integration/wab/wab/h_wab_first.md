@@ -32,7 +32,7 @@ The portal administrator collects information about the content provider and its
 
             Now you can run the command as follows:
 
-            -   AIX and Linux Solaris: `./ConfigEngine.sh deploy-wab-virtual-host -DVirtualHostName=virtualHostName -DVirtualHostAlias=virtualHostAlias`
+            -   AIX and Linux: `./ConfigEngine.sh deploy-wab-virtual-host -DVirtualHostName=virtualHostName -DVirtualHostAlias=virtualHostAlias`
 
             -   Windows: `ConfigEngine.bat deploy-wab-virtual-host -DVirtualHostName=virtualHostName -DVirtualHostAlias=virtualHostAlias`
                
@@ -57,7 +57,7 @@ The portal administrator collects information about the content provider and its
             8.  Stop and restart the **wp.vwat.servlet.ear** application.
         2.  Complete the following steps if you configured a web server:
             1.  Log in to the WebSphere Integrated Solutions Console.
-            2.  Go to **Applications > Application Types > WebSphere enterprise applications > wp.vwat.servlet.ear** \> **Manage Modules**.
+            2.  Go to **Applications > Application Types > WebSphere enterprise applications > wp.vwat.servlet.ear > Manage Modules**.
             3.  Complete the following steps to map the **wp.vwat.servlet.ear** application to the web server: For more information, go to the *More information about this page* link in the WebSphere Integrated Solutions Console.
                 1.  Check the **Select** check box for the **Virtual Web Application Servlet** application.
                 2.  Select the web server in the **Clusters and servers** box.
@@ -85,7 +85,8 @@ The portal administrator collects information about the content provider and its
 
 3.  The system administrator clicks the **Administration menu** icon from the toolbar. Then, clicks **Portlet Management > Virtual Web Application Manager**.
 
-    **Warning:** Do not enter < or > into any of the text boxes.
+    !!!warning
+        Do not enter < or > into any of the text boxes.
 
 4.  The system administrator clicks **Content Provider Profiles** and then selects **Create Content Provider Profiles**.
 
@@ -93,7 +94,8 @@ The portal administrator collects information about the content provider and its
 
 6.  The system administrator goes to the profile that was created and clicks **Add policy** to create a policy.
 
-    **Tip:** The system administrator must create at least one policy for the content provider profile.
+    !!!tip
+        The system administrator must create at least one policy for the content provider profile.
 
 7.  The system administrator clicks **Web Dock Applications** and then selects **Create Web Dock Applications**.
 

@@ -11,14 +11,15 @@ You use a list presentation when a set of navigator, menu, personalization, or s
 
 To create a new list presentation, click **New** \> **Component** \> **List Presentation**.
 
--   [Entering identification information](../../../../wcm_artifacts/elements/howto_work_with_elements/jsp_element/wcm_dev_elements_image_props.md)  
+1.  [Entering identification information](../../../../../wcm/mng_content_with_auth_portlet/creating_items/wcm_dev_items_id.md)  
 Specify identification information for the current item, including the name and title for the item. The identification section is common to all item forms.
--   [Specifying a location for an item](../../../../wcm_content_delivery/wcm_user_assistance/mng_content_with_auth_portlet/creating_items/wcm_dev_items_location.md)  
+2.  [Specifying a location for an item](../../../../../wcm/mng_content_with_auth_portlet/creating_items/wcm_dev_items_location.md)  
 When you create an item, you can specify the location of the item.
--   [List presentation options](./wcm_dev_listpres_using.md)  
+3.  [List presentation options](./wcm_dev_listpres_using.md)  
 The selection items and fields in the list presentation are equivalent to the same fields used in menu and navigator elements.
--   [List presentation override](./wcm_dev_listpres_override.md)  
+4.  [List presentation override](./wcm_dev_listpres_override.md)  
 You can override the list presentation that is used to render any list by setting the request parameter or request attribute `ListPresentationId` to set the ID, or `ListPresentation` to set the name path.
--   [Granting users or groups access to an item](../../../../wcm_content_delivery/wcm_user_assistance/mng_content_with_auth_portlet/creating_items/wcm_dev_items_access.md)  
+5.  [Granting users or groups access to an item](../../../../../wcm/mng_content_with_auth_portlet/creating_items/wcm_dev_items_access.md)  
 Specify the access control settings for the current item to designate which users have access to an item and their level of access. The access section is common to all item forms.
+
 

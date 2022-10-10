@@ -39,15 +39,11 @@ The theme module for analytics overlay reports is not part of the theme profiles
     }
     ```
 
-4.  Restart your Portal server or invalidate the resource aggregator cache. To invalidate your cache, click **Theme Analyzer** \> **Utilities** \> **Control Center** \> **Invalidate Cache**. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](../dev-theme/themeopt_an_util.md#).
+4.  Restart your Portal server or invalidate the resource aggregator cache. To invalidate your cache, click **Theme Analyzer > Utilities > Control Center > Invalidate Cache**. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities for theme issues](../../../../../../build_sites/themes_skins/the_module_framework/themeopt_analyzer/utilities/index.md).
 
 
 The theme module menu entries are displayed only if the theme module `wp_analytics_overlay_reports` is part of the theme profile. The theme profile is associated with the portal page that is being rendered.
 
 If you have a custom modular theme, you can use the same approach to integrate the overlay features into a different menu.
 
-
-**Previous topic:**[Configuring a Credential Vault for overlay reports](../admin-system/sa_asa_overlay_cfg_crd_vlt.md)
-
-**Next topic:**[Viewing overlay analytics statistics](../admin-system/sa_asa_ovrly_stats_ui.md)
 

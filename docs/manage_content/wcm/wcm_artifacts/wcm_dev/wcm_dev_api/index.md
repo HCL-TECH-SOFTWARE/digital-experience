@@ -12,7 +12,7 @@ Use the Web Content Manager API to:
 -   approve items in a workflow
 -   search for items
 
-See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
+See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer_root]/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
 
 ## Getting started
 
@@ -37,6 +37,6 @@ You can perform various web content library functions by using the Web content A
 -   **[Syndication APIs](wcm_dev_api_syndication.md)**  
 You can run various syndication functions by using the web content API.
 -   **[Web Content Manager Multilingual Solution API](wcm_mls_api.md)**  
-This set of APIs allow you to retrieve information about the configured Multilingual Solution \(MLS\) libraries and also to retrieve the translated content items for a given default language content ID \(for example, from English content find translated French and Spanish strings\).
+This set of APIs allow you to retrieve information about the configured Multilingual Solution (MLS) libraries and also to retrieve the translated content items for a given default language content ID (for example, from English content find translated French and Spanish strings).
 
 

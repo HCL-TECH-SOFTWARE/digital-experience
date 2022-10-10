@@ -1,6 +1,6 @@
 # REST service for Web Content Manager
 
-Application developers can use Representational State Transfer \(REST\) services to work with Web Content Manager. The REST service for Web Content Manager provides authoring access to content items and elements. The service follows the Atom Publication Protocol, and Atom feeds, and entries are accessible in XML \(application/atom+xml\) and JSON \(application/json\) format.
+Application developers can use Representational State Transfer (REST) services to work with Web Content Manager. The REST service for Web Content Manager provides authoring access to content items and elements. The service follows the Atom Publication Protocol, and Atom feeds, and entries are accessible in XML (application/atom+xml) and JSON (application/json) format.
 
 -   **[Getting started with the REST service for Web Content Manager](wcm_rest_starting.md)**  
 Before getting started with the REST service for Web Content Manager you should become familiar with how it works and how to use it.

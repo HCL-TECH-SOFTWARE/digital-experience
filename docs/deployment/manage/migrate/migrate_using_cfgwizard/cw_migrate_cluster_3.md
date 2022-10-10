@@ -6,25 +6,11 @@ Use the Configuration Wizard to upgrade the nodes profiles for a cluster environ
 
 Select **Migrate to a New Version**, and choose the **Migrate a Cluster Step 3: Upgrade Node Profiles** option.
 
-**Note:** This option is not available for IBM® z/OS®.
-
-
-**Related information**  
-
-
-[Troubleshooting: Upgrade node profiles for a cluster environment](../trouble/cw_migrate_cluster3.md)
-
-[Configuration Wizard](../config/cw_overview.md)
-
-[Roadmap: Migrating a clustered environment](../migrate/rm_mig_cluster.md)
-
-[Accessing the Configuration Wizard](../config/cw_run.md)
-
-# Worksheet
+## Worksheet
 
 To set up the migration, you answer questions about your wanted configuration. Some fields apply to migration configurations. Some fields are required based on your environment. The remaining fields are advanced and do not apply to most configurations.
 
-## Minimal required fields
+### Minimal required fields
 
 The following table lists the fields that are unique to the Migrate a cluster step 3: Upgrade node profiles configuration option. You might be prompted for additional information about system or user IDs and passwords that you defined during the portal installation process.
 
@@ -43,7 +29,7 @@ The following table lists the fields that are unique to the Migrate a cluster st
 |**What is the new host name**| | |
 |**Where is the target portal installed**|/opt/IBM/WebSphere/PortalServer| |
 
-## Advanced fields
+### Advanced fields
 
 The following table lists the advanced fields that are unique to the Migrate a cluster step 3: Upgrade node profiles configuration option. Click **Advanced** on the Answer Questions page for the target node to see the advanced properties. Default values are provided for advanced fields that are required.
 
@@ -171,13 +157,10 @@ If you click **View Step Command**, you can see the task and properties that are
 
         upgrade-profile
 
-    **Version 7.0 Server Offering-only migration:** Do not complete the upgrade profile step using the Configuration Wizard. Instead you must run this task manually. For more information about running this task manually, see [Migration from Portal Server Offering 7.0 to Portal 8.5](../migrate/mig_consider_7serveronly.md).
+    **Version 7.0 Server Offering-only migration:** Do not complete the upgrade profile step using the Configuration Wizard. Instead you must run this task manually. For more information about running this task manually, see [Migration from Portal Server Offering 7.0 to Portal 8.5](../../../../deployment/manage/migrate/planning_migration/migration_consideration/mig_consider_7serveronly.md).
 
-    **Note:** When you run this step, the sub task that is named action-deploy-portlets-applyMIGStatic-wp.oob.full runs and completes successfully. However, the following error messages are shown. You can ignore these error messages:
-
-    -   EJPXA0161W: The web module ContactList could not be activated. Please see previous messages for reasons and possible corrective actions.
-    -   EJPPH0048W: The synchronization mode of all nodes in the portal cluster is not consistently set. The portlet application PA\_ContactList will not be started in the Application Server. Manual synchronization is assumed for all nodes. Manually start the application after all nodes were synchronized.
-    -   EJPXA0067E: The following configuration data is needed to create a content-node resource: content-parentref.
+    !!!note
+        When you run this step, the sub task that is named action-deploy-portlets-applyMIGStatic-wp.oob.full runs and completes successfully. However, the following error messages are shown. You can ignore these error messages: <br> -   EJPXA0161W: The web module ContactList could not be activated. Please see previous messages for reasons and possible corrective actions. <br> -   EJPPH0048W: The synchronization mode of all nodes in the portal cluster is not consistently set. The portlet application PA_ContactList will not be started in the Application Server. Manual synchronization is assumed for all nodes. Manually start the application after all nodes were synchronized. <br> -   EJPXA0067E: The following configuration data is needed to create a content-node resource: content-parentref.
 11. Apply the latest Combined Cumulative Fix updates to your system.
 
     -   **Condition**
@@ -193,8 +176,13 @@ You must repeat the **Migrate a Cluster Step 3: Upgrade Node Profiles** steps on
 
 To complete migration, you must perform several post-migration tasks that depend on how you use HCL Digital Experience.
 
-1.  Review the [Next steps](../migrate/mig_nextsteps.md) section of the product documentation.
-    -   Complete the [post-migration activities](../migrate/mig_t_post_mig.md) that apply to how you are using HCL Digital Experience before you move on to the next step. For example, if you are using a virtual portal, then complete the virtual portal post-migration steps.
-    -   Start the [enabling new functionality](../migrate/mig_t_enable_new.md) tasks only after you complete the post-migration tasks.
+1.  Review the [Migration: Next steps](../next_steps/index.md) section of the product documentation.
+    -   Complete the [Migration: Post-migration activities](../next_steps/post_mig_activities/index.md) that apply to how you are using HCL Digital Experience before you move on to the next step. For example, if you are using a virtual portal, then complete the virtual portal post-migration steps.
+    -   Start the [enabling new functionality](../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/index.md) tasks only after you complete the post-migration tasks.
     -   If your target migration server is IBM WebSphere® Application Server Version 9.0, you will need to upgrade to HCL Portal 9.0.
 
+???+ info "Related information"  
+    -   [Troubleshooting: Migrate node profiles for a cluster environment](../../../../deployment/manage/troubleshooting/troubleshooting_configwizard/cw_migrate_cluster2.md)
+    -   [Configuration Wizard](../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/index.md)
+    -   [Roadmap: Migrating a clustered environment](../../../../deployment/manage/migrate/planning_migration/rm_migration/rm_mig_cluster.md)
+    -   [Accessing the Configuration Wizard](../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/configuration/cw_run.md)

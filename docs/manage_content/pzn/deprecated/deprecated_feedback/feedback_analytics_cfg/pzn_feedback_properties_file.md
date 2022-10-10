@@ -2,7 +2,7 @@
 
 The FeedbackService.properties file contains several customizable properties that are used by the Feedback component. These properties are used to enable custom log listeners, to tune the performance of the Feedback data collection system.
 
-The `FeedbackService.properties` file is installed to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/config/config/services directory.
+The `FeedbackService.properties` file is installed to the wp_profile_root/PortalServer/config/config/services directory.
 
 To modify the properties:
 
@@ -19,7 +19,7 @@ Before information about the usage of your site can be recorded, logging must fi
 
 It is possible to customize the name of the feedback schema used in the database. For most platforms the Personalization installer will create the feedback tables under a schema named FEEDBACK.
 
-For IBM i installations, the schemaName property must be set to the name of the database library that contains the Feedback tables \(for example, QWPS51\).
+For IBM i installations, the schemaName property must be set to the name of the database library that contains the Feedback tables (for example, QWPS51).
 
 `schemaName = FEEDBACK`
 
@@ -60,13 +60,13 @@ As the log buffer begins to fill due to heavy Web site loads or slow log listene
 
 Multiple rules or logging beans can be placed on a single Web page or JSP. The Feedback component collects all the data from the rules and log beans on a page and then updates the Feedback database with all of the information for the page \(HTTP request\). Updating the Feedback database only once per page improves the performance of the Feedback component. It is necessary to determine when all of the data for a page request has been collected. Two mechanisms are used in the current release to determine when the log data for a page request should be written to the Feedback database. The first method is to flush all of the log data for a page request whenever a new page request is received from the same user session. The second method uses a time interval to determine when the response to a page request has been completed and, thus, all the logging data for the request has been generated.
 
-The requestFlushInterval applies to this second method of flushing the logging data for a page request. It is the time interval during which no new logging data has been received during a user session after which the log data for the most recent request is assumed to be complete and is flushed to the database. The default value for the request flush interval is 10 seconds. You can modify this interval by changing the requestFlushInterval property \(specified in milliseconds\) in the `FeedbackService.properties` file:
+The requestFlushInterval applies to this second method of flushing the logging data for a page request. It is the time interval during which no new logging data has been received during a user session after which the log data for the most recent request is assumed to be complete and is flushed to the database. The default value for the request flush interval is 10 seconds. You can modify this interval by changing the requestFlushInterval property (specified in milliseconds) in the `FeedbackService.properties` file:
 
 `requestFlushInterval = 10000`
 
 ## inactiveListenerInterval
 
-It is possible for a log listener to become inactive due to a run-time error or resource deadlock. The result of such a deadlock would be an accumulation of data in the log buffer that will never be processed. Since the log buffer is finite in size, it will eventually reach capacity. Once it reaches capacity, no new data will be logged and all active listeners will be unable to collect and process additional log data. To protect against this scenario, the activity of all listeners is monitored. If log data is available for a listener to process and the listener remains inactive for a pre-determined, the log listener will be removed from the set of registered log listeners. The default period of inactivity is 2 minutes. You can modify this interval by changing the inactiveListenerInterval property \(specified in milliseconds\) in the `FeedbackService.properties` file:
+It is possible for a log listener to become inactive due to a run-time error or resource deadlock. The result of such a deadlock would be an accumulation of data in the log buffer that will never be processed. Since the log buffer is finite in size, it will eventually reach capacity. Once it reaches capacity, no new data will be logged and all active listeners will be unable to collect and process additional log data. To protect against this scenario, the activity of all listeners is monitored. If log data is available for a listener to process and the listener remains inactive for a pre-determined, the log listener will be removed from the set of registered log listeners. The default period of inactivity is 2 minutes. You can modify this interval by changing the inactiveListenerInterval property (specified in milliseconds) in the `FeedbackService.properties` file:
 
 `inactiveListenerInterval = 120000`
 

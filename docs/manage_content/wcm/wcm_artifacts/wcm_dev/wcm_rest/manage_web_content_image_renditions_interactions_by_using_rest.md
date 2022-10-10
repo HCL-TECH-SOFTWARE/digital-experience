@@ -15,7 +15,7 @@ The **Image Element Rendition Interactions REST API** allows developers to acces
 
 When placing a GET request for either a Web Content `LibraryImageComponent` or Content that contains a `LibraryImageComponent`, data on current image renditions will be returned in a `renditionList` after the resource URI for the default image.
 
-Within the `renditionList`, each `imageRendition` tag includes a name property \("desktop", "tablet", or "smart phone"\) to identify which platform it is intended to display on, as well as information about image height, width, file name, file type, and the rendition image's URI.
+Within the `renditionList`, each `imageRendition` tag includes a name property ("desktop", "tablet", or "smart phone") to identify which platform it is intended to display on, as well as information about image height, width, file name, file type, and the rendition image's URI.
 
 The sample below has both a Digital Asset Management and a non-Digital Asset Management image:
 

@@ -14,7 +14,6 @@ If you created the portal site collection by navigating to the Manage Search por
 
     -   AIX®
     -   Linux™
-    -   Solaris
     
     For details about this length limitation, see the topic about what to do if Creating the portal site search collection fails.
 
