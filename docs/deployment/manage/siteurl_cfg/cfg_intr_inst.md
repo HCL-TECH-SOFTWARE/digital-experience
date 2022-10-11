@@ -2,7 +2,7 @@
 
 If you changed the context root on the **Configuration for HCL Portal: Profile configuration details: Advanced** pane during installation, there are more steps to take to complete the change.
 
-HCL Digital Experience and Web Services for Remote Portlets are installed with a default URI. You can change this URI after installation to better suit the requirements of your organization.
+HCL Digital Experience and Web Services for Remote Portlets (WSRP) are installed with a default URI. You can change this URI after installation to better suit the requirements of your organization.
 
 !!!note "Notes"
     -   To change the HCL Portal URI: When you specify the context root, do not specify a value that is the same as a directory that exists in a portlet WAR directory. For example, you set the HCL Portal context root to /images. There is a portlet with the directory structure /myPortlet.ear/myPortlet.war/images. This issue might cause a conflict if the portlet encodes URI references to resources in its own /images directory. In this situation, the portlet would be unable to display images. HCL Portal looks for the image resources according to its own context root path instead of the directory path that is specified by the portlet WAR file.
@@ -13,9 +13,9 @@ HCL Digital Experience and Web Services for Remote Portlets are installed with a
 
     -   Modify the context root for the WSRP Producer to `/wsrp`. This change enables the Consumers to access the Producer without requiring further changes to the Consumers.
     -   Update the configuration of the WSRP Consumers to use the new context root \(`/wps/wsrp`\).
-    -   If you use HCL Web Content Manager Syndication, the Syndicators and Subscribers servers that refer to this Portal instance must be updated with the modified URI. Log on to the HCL Portal syndicating to this instance. Click the **Administration menu** icon. Then, click **Portal Content** \> **Syndicators**. Click the edit icon of the Syndicator you want to edit. Update the URL with the new context root information. Then, log on to the HCL Portal subscribing to this instance. Click the **Administration menu** icon. Then, click **Portal Content** \> **Subscribers**. Click the edit icon of the subscriber you want to edit. Update the URL with the new context root information.
+    -   If you use HCL Web Content Manager (WCM) Syndication, the Syndicator and Subscriber servers that refer to this Portal instance must be updated with the modified URI. Log on to the HCL Portal syndicating to this instance. Click the **Administration menu** icon. Then, click **Portal Content** \> **Syndicators**. Click the edit icon of the Syndicator you want to edit. Update the URL with the new context root information. Then, log on to the HCL Portal subscribing to this instance. Click the **Administration menu** icon. Then, click **Portal Content** \> **Subscribers**. Click the edit icon of the subscriber you want to edit. Update the URL with the new context root information.
 
-1.  If necessary, start the WebSphere_Portal server in a stand-alone environment or the deployment manager and node agent in a clustered environment.
+1.  If necessary, start the WebSphere_Portal server in a stand-alone environment or the deployment manager and node agent if in a clustered environment.
 
 2.  Complete the following steps if you are using an external web server, such as an HTTP Server:
 
@@ -23,8 +23,7 @@ HCL Digital Experience and Web Services for Remote Portlets are installed with a
 
         |HCL Portal environment|Steps|
         |----------------------|-----|
-        |Stand-alone configuration|Complete the following steps in a stand-alone configuration:        1.  Copy the following script from the plugin_root/bin directory of the web server to the wp_profile_root/bin directory on your HCL Portal server:<br> -   AIX® and Linux™: `./configurewebservername.sh` <br> -   Windows™: `configurewebservername.bat` <br><br>
-where webservername is the web server definition name you defined previously when you configured the HTTP Server for HCL Portal, for example: configurewebserver1.bat. <br> 2.  Run the following command, from the wp_profile_root/bin directory:<br> -   AIX and Linux: `./configurewebservername.sh` <br> -   Windows: `configurewebservername.bat`|
+|Stand-alone configuration|Complete the following steps in a stand-alone configuration:   Copy the following script from the plugin_root/bin directory of the web server to the wp_profile_root/bin directory on your HCL Portal server:<br> -   AIX® and Linux™: `./configurewebservername.sh` <br> -   Windows™: `configurewebservername.bat` <br><br>where webservername is the web server definition name you defined previously when you configured the HTTP Server for HCL Portal, for example: configurewebserver1.bat. <br> Run the following command, from the wp_profile_root/bin directory:<br> -   AIX and Linux: `./configurewebservername.sh` <br> -   Windows: `configurewebservername.bat`|
         |Clustered configurationIdle standby configuration|Complete the following steps in a clustered configurationidle standby configuration: <br> 1.  Copy the following script from the plugin_root/bin directory of the web server to the dmgr_profile/bin directory on your Deployment Manager server:<br> -   AIX and Linux: `./configurewebservername.sh` <br> -   Windows: `configurewebservername.bat` <br><br>where webservername is the web server definition name you defined previously when you configured the HTTP Server for HCL Portal, for example: configurewebserver1.bat.<br> 2.  Run the following command on the Deployment Manager server:<br> -   AIX and Linux: `./configurewebservername.sh` <br> -   Windows: `configurewebservername.bat`|
 
     2.  Regenerate the web server plug-in in WebSphere® Application Server. If you are using a remote web server, copy the generated plugin-cfg.xml file to the remote server.

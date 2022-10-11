@@ -11,16 +11,16 @@ Existing users need to be on one-level previous version of HCL Digital Experienc
 
 -   **[HCL Portal Express 9.5 - Server startup and installation](inst_portal_express_95.md)**  
 Learn how to resolve HCL Portal server startup/restart failure on HCL Portal Express 8.5 or 9.0 or new HCL Portal Express installation failures.
--   **[AIX system - HCL Digital Experience installation](installingwp95-AIX.md)**  
+-   **[AIX system - HCL Digital Experience installation](../installing_dx/aix/index.md)**  
 Installing includes preparing your operating system, installing HCL Portal and HCL Web Content Manager, and completing the deployment configuration.
--   **[Preparing your Linux system for installation](installingwp95-linux.md)**  
+-   **[Preparing your Linux system for installation](../installing_dx/linux/index.md)**  
 Installing includes preparing your operating system, installing HCL Portal and HCL Web Content Manager, and completing the deployment configuration.
--   **[Windows system - HCL Digital Experience installation](installingwp95-windows.md)**  
+-   **[Windows system - HCL Digital Experience installation](../installing_dx/windows/index.md)**  
 Installing includes preparing your operating system, installing HCL Portal and HCL Web Content Manager, and completing the deployment configuration.
 
 
 
 
-???+ info "Related information"  
--   [Installing the HCL Digital Experience software](../../../../deployment/install/traditional/installing_dx/index.md)
+???+ info "Related information:"  
+    -   [Installing the HCL Digital Experience software](../../../../deployment/install/traditional/installing_dx/index.md)
 

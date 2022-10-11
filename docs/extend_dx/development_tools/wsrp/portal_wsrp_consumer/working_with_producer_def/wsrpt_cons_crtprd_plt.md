@@ -22,7 +22,7 @@ Optionally, you can also do the following tasks:
 
 After you create a Producer definition, you can proceed to using the portlets that are provided by that Producer, that is, integrating them into your Consumer portal as remote portlets.
 
-To work with the **Web Service Configuration** portlet, click the **Administration menu** icon. Then, click **Portlet Management > **Web Services**.
+To work with the **Web Service Configuration** portlet, click the **Administration menu** icon. Then, click **Portlet Management > Web Services**.
 
 For details about how to work with the portlet, refer to the portlet help.
 

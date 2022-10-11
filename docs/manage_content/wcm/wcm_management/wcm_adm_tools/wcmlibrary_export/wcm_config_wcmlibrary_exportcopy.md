@@ -5,7 +5,7 @@ You can export the contents of a web content library to disk by creating a copy 
 Although many aspects are the same for the standard export and import and the copy export and import, there are some important differences:
 
 -   When you export a library as a copy, new IDs are generated for all items in the library. This ensures that there are no conflicts with existing libraries or items when you import the copy into a web content server that already contains the original library. In this way, you can run multiple imports to the same web content server, resulting in a new library for each import.
--   The configuration tasks \(`export-library-copy` and `import-library-copy`\) that work on library copies, use properties that can either be added to the `wkplc.properties` file or manually appended to the command line, for easier scripting.
+-   The configuration tasks (`export-library-copy` and `import-library-copy`) that work on library copies, use properties that can either be added to the `wkplc.properties` file or manually appended to the command line, for easier scripting.
 
 Follow these steps to export or import a copy of a web content library. The server that the data is being exported from is called the source server, and the server that the data is being imported into is called the target server.
 
@@ -13,24 +13,20 @@ Follow these steps to export or import a copy of a web content library. The serv
 
     1.  Open a command prompt on the source server.
 
-    2.  Run the `export-library-copy` task from the `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine` directory.
+    2.  Run the `export-library-copy` task from the wp_profile_root/ConfigEngine` directory.
 
         -   **Windows™**
 
-            ConfigEngine.bat export-library-copy -DLibraryPath=path\_to\_export\_file -DLibraryName=library\_name\_to\_export -DWasPassword=password -DPortalAdminPwd=password
+            `ConfigEngine.bat export-library-copy -DLibraryPath=path_to_export_file -DLibraryName=library_name_to_export -DWasPassword=password -DPortalAdminPwd=password`
 
         -   **UNIX™Linux™**
 
-            ./ConfigEngine.sh export-library-copy -DLibraryPath=path\_to\_export\_file -DLibraryName=library\_name\_to\_export -DWasPassword=password -DPortalAdminPwd=password
-
-        -   **IBM® i**
-
-            ConfigEngine.sh export-library-copy -DLibraryPath=path\_to\_export\_file -DLibraryName=library\_name\_to\_export -DWasPassword=password -DPortalAdminPwd=password
+            `./ConfigEngine.sh export-library-copy -DLibraryPath=path_to_export_file -DLibraryName=library_name_to_export -DWasPassword=password -DPortalAdminPwd=password`
 
         The following properties must be specified either on the command line or in the `wkplc.properties` file.
 
         !!! note
-            If you are specifying properties in the `wkplc.properties` file, it is not necessary to put quotation marks \(`"`\) around values that contain spaces. These quotation marks are only required when specifying property values on the command line.
+            If you are specifying properties in the `wkplc.properties` file, it is not necessary to put quotation marks (`"`) around values that contain spaces. These quotation marks are only required when specifying property values on the command line.
 
         -   **LibraryPath**
 
@@ -38,7 +34,7 @@ Follow these steps to export or import a copy of a web content library. The serv
 
         -   **LibraryName**
 
-            The name of the web content library to copy. If you are exporting multiple libraries, separate each library name by a semi-colon \(`;`\). For example, `LibraryName="Web Content;Samples"`.
+            The name of the web content library to copy. If you are exporting multiple libraries, separate each library name by a semi-colon (`;`). For example, `LibraryName="Web Content;Samples"`.
 
         -   **WasUserid**
 
@@ -70,9 +66,8 @@ Follow these steps to export or import a copy of a web content library. The serv
 
         Example commands:
 
-        -   Windows: ConfigEngine.bat export-library-copy -DLibraryPath=C:\\wcm\_export\\webcontent.zip -DLibraryName="Web Content" -DWasPassword=mypassword -DPortalAdminPwd=mypassword -DVirtualPortalHost=vp.example.com
-        -   UNIXLinux: ./ConfigEngine.sh export-library-copy -DLibraryPath=/opt/wcm\_export/webcontent.zip -DLibraryName="Web Content" -DWasPassword=mypassword -DPortalAdminPwd=mypassword -DVirtualPortalHost=vp.example.com
-        -   IBM i: ConfigEngine.sh export-library-copy -DLibraryPath=/opt/wcm\_export/webcontent.zip -DLibraryName="Web Content" -DWasPassword=mypassword -DPortalAdminPwd=mypassword -DVirtualPortalHost=vp.example.com
+        -   Windows: `ConfigEngine.bat export-library-copy -DLibraryPath=C:\\wcm_export\webcontent.zip -DLibraryName="Web Content" -DWasPassword=mypassword -DPortalAdminPwd=mypassword -DVirtualPortalHost=vp.example.com`
+        -   UNIX™ and Linux™: .`/ConfigEngine.sh export-library-copy -DLibraryPath=/opt/wcm_export/webcontent.zip -DLibraryName="Web Content" -DWasPassword=mypassword -DPortalAdminPwd=mypassword -DVirtualPortalHost=vp.example.com`
 
     3.  Verify that this transfer step completed without errors. If any errors occurred, check the portal logs on the source server for extended diagnostic information.
 
@@ -80,24 +75,20 @@ Follow these steps to export or import a copy of a web content library. The serv
 
     1.  Open a command prompt on the target server.
 
-    2.  Run the `import-library-copy` task from the `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine` directory.
+    2.  Run the `import-library-copy` task from the wp_profile_root/ConfigEngine` directory.
 
         -   **Windows™**
 
-            ConfigEngine.bat import-library-copy -DLibraryPath=path\_to\_export\_file -DLibraryName=library\_name\_to\_import -DWasPassword=password -DPortalAdminPwd=password
+            `ConfigEngine.bat import-library-copy -DLibraryPath=path_to_export_file -DLibraryName=library_name_to_import -DWasPassword=password -DPortalAdminPwd=password`
 
-        -   **UNIX™Linux™**
+        -   **UNIX™ and Linux™**
 
-            ./ConfigEngine.sh import-library-copy -DLibraryPath=path\_to\_export\_file -DLibraryName=library\_name\_to\_import -DWasPassword=password -DPortalAdminPwd=password
-
-        -   **IBM® i**
-
-            ConfigEngine.sh import-library-copy -DLibraryPath=path\_to\_export\_file -DLibraryName=library\_name\_to\_import -DWasPassword=password -DPortalAdminPwd=password
+            `./ConfigEngine.sh import-library-copy -DLibraryPath=path_to_export_file -DLibraryName=library_name_to_import -DWasPassword=password -DPortalAdminPwd=password`
 
         The following properties must be specified either on the command line or in the `wkplc.properties` file.
 
         !!! note
-            If you are specifying properties in the `wkplc.properties` file, it is not necessary to put quotation marks \(`"`\) around values that contain spaces. These quotation marks are only required when specifying property values on the command line.
+            If you are specifying properties in the `wkplc.properties` file, it is not necessary to put quotation marks (`"`) around values that contain spaces. These quotation marks are only required when specifying property values on the command line.
 
         **Differences in paths between versions:**
 
@@ -107,7 +98,7 @@ Follow these steps to export or import a copy of a web content library. The serv
         /opt/61/folder/jcr_root 
         ```
 
-        When importing into version 8.0 from version 6.1, the jcr\_root is not required to be specified in the import path:
+        When importing into version 8.0 from version 6.1, the jcr_root is not required to be specified in the import path:
 
         ```
         /opt/61/folder/
@@ -133,7 +124,7 @@ Follow these steps to export or import a copy of a web content library. The serv
 
         -   **LibraryName**
 
-            The name to use for the web content library copy that you are importing. If you are importing multiple libraries, separate each new library name by a semi-colon \(`;`\). For example, `LibraryName="Web Content Copy;Samples Copy"`.
+            The name to use for the web content library copy that you are importing. If you are importing multiple libraries, separate each new library name by a semi-colon (`;`). For example, `LibraryName="Web Content Copy;Samples Copy"`.
 
         -   **LibraryExportName**
 
@@ -173,15 +164,15 @@ Follow these steps to export or import a copy of a web content library. The serv
 
         -   **LibraryTitle**
 
-            The title to use for the web content library copy that you are importing. If you are importing multiple libraries, separate each new library title by a semi-colon \(`;`\). For example, `LibraryTitle="Web Content Title;Samples Title"`.
+            The title to use for the web content library copy that you are importing. If you are importing multiple libraries, separate each new library title by a semi-colon (`;`). For example, `LibraryTitle="Web Content Title;Samples Title"`.
 
         -   **LibraryDescription**
 
-            The description to use for the web content library copy that you are importing. If you are importing multiple libraries, separate each new library description by a semi-colon \(`;`\). For example, `LibraryDescription="Copy of Web Content library;Copy of Samples library"`.
+            The description to use for the web content library copy that you are importing. If you are importing multiple libraries, separate each new library description by a semi-colon (`;`). For example, `LibraryDescription="Copy of Web Content library;Copy of Samples library"`.
 
         -   **LibraryNameTextProvider**
 
-            This property specifies the name of the text provider to use to locate the translated title of the library that you are importing. If you are importing multiple libraries with different text providers, separate each provider name by a semi-colon \(`;`\). For example, `LibraryNameTextProvider=provider1;provider2`.
+            This property specifies the name of the text provider to use to locate the translated title of the library that you are importing. If you are importing multiple libraries with different text providers, separate each provider name by a semi-colon (`;`). For example, `LibraryNameTextProvider=provider1;provider2`.
 
         -   **LibraryNameTextProviderKey**
 
@@ -193,9 +184,8 @@ Follow these steps to export or import a copy of a web content library. The serv
 
         Example commands:
 
-        -   Windows: ConfigEngine.bat import-library-copy -DLibraryPath=C:\\wcm\_import\\webcontent.zip -DLibraryName="Web Content Copy" -DLibraryTitle="Web Content Copy Title" -DLibraryDescription="Copy of Web Content library" -DLibraryNameTextProvider=provider -DLibraryNameTextProviderKey=key -DLibraryBaseLocale=en -DWasPassword=mypassword -DPortalAdminPwd=mypassword
-        -   UNIXLinux: ./ConfigEngine.sh import-library-copy -DLibraryPath=/opt/wcm\_import/webcontent.zip -DLibraryName="Web Content Copy" -DLibraryTitle="Web Content Copy Title" -DLibraryDescription="Copy of Web Content library" -DLibraryNameTextProvider=provider -DLibraryNameTextProviderKey=key -DLibraryBaseLocale=en -DWasPassword=mypassword -DPortalAdminPwd=mypassword
-        -   IBM i: ConfigEngine.sh import-library-copy -DLibraryPath=/opt/wcm\_import/webcontent.zip -DLibraryName="Web Content Copy" -DLibraryTitle="Web Content Copy Title" -DLibraryDescription="Copy of Web Content library" -DLibraryNameTextProvider=provider -DLibraryNameTextProviderKey=key -DLibraryBaseLocale=en -DWasPassword=mypassword -DPortalAdminPwd=mypassword
+        -   Windows: `ConfigEngine.bat import-library-copy -DLibraryPath=C:\\wcm_import\webcontent.zip -DLibraryName="Web Content Copy" -DLibraryTitle="Web Content Copy Title" -DLibraryDescription="Copy of Web Content library" -DLibraryNameTextProvider=provider -DLibraryNameTextProviderKey=key -DLibraryBaseLocale=en -DWasPassword=mypassword -DPortalAdminPwd=mypassword`
+        -   UNIX and Linux: `./ConfigEngine.sh import-library-copy -DLibraryPath=/opt/wcm_import/webcontent.zip -DLibraryName="Web Content Copy" -DLibraryTitle="Web Content Copy Title" -DLibraryDescription="Copy of Web Content library" -DLibraryNameTextProvider=provider -DLibraryNameTextProviderKey=key -DLibraryBaseLocale=en -DWasPassword=mypassword -DPortalAdminPwd=mypassword`
 
     3.  Verify that the imported libraries have been imported by reviewing the list of libraries that are listed in the web content libraries section of the administration portlet on the target server. If any errors occurred, check the portal logs on the target server for extended diagnostic information.
 
@@ -206,22 +196,18 @@ Follow these steps to export or import a copy of a web content library. The serv
 
 When exporting and importing multiple web content libraries with a single command, the following considerations apply:
 
--   For properties such as `LibraryName` that reference multiple libraries, separate the respective values for that property with a semi-colon \(`;`\).
+-   For properties such as `LibraryName` that reference multiple libraries, separate the respective values for that property with a semi-colon (`;`).
 -   The value of the `LibraryExportName` property must match the value of the `LibraryName` property used during the export process to indicate the sequence of libraries.
 
 -   **Windows™**
 
-    -   Export: ConfigEngine.bat export-library-copy -DLibraryPath=C:\\wcm\_export\\webcontent.zip -DLibraryName="Web Content;Samples" -DWasPassword=mypassword -DPortalAdminPwd=mypassword
-    -   Import: ConfigEngine.bat import-library-copy -DLibraryPath=C:\\wcm\_import\\webcontent.zip -DLibraryName="Web Content Copy;Samples Copy" -DLibraryExportName="Web Content;Samples" -DLibraryTitle="Web Content Copy Title;Samples Copy Title" -DLibraryBaseLocale=en -DWasPassword=mypassword -DPortalAdminPwd=mypassword
+    -   Export: `ConfigEngine.bat export-library-copy -DLibraryPath=C:\\wcm_export\webcontent.zip -DLibraryName="Web Content;Samples" -DWasPassword=mypassword -DPortalAdminPwd=mypassword`
+    -   Import: `ConfigEngine.bat import-library-copy -DLibraryPath=C:\\wcm_import\webcontent.zip -DLibraryName="Web Content Copy;Samples Copy" -DLibraryExportName="Web Content;Samples" -DLibraryTitle="Web Content Copy Title;Samples Copy Title" -DLibraryBaseLocale=en -DWasPassword=mypassword -DPortalAdminPwd=mypassword`
 
--   **UNIX™Linux™**
+-   **UNIX™ and Linux™**
 
-    -   Export: ./ConfigEngine.sh export-library-copy -DLibraryPath=/opt/wcm\_export/webcontent.zip -DLibraryName="Web Content;Samples" -DWasPassword=mypassword -DPortalAdminPwd=mypassword
-    -   Import: ./ConfigEngine.sh import-library-copy -DLibraryPath=/opt/wcm\_import/webcontent.zip -DLibraryName="Web Content Copy;Samples Copy" -DLibraryExportName="Web Content;Samples" -DLibraryTitle="Web Content Copy Title;Samples Copy Title" -DLibraryBaseLocale=en -DWasPassword=mypassword -DPortalAdminPwd=mypassword
-    
--   **IBM® i**
+    -   Export: `./ConfigEngine.sh export-library-copy -DLibraryPath=/opt/wcm_export/webcontent.zip -DLibraryName="Web Content;Samples" -DWasPassword=mypassword -DPortalAdminPwd=mypassword`
+    -   Import: `./ConfigEngine.sh import-library-copy -DLibraryPath=/opt/wcm_import/webcontent.zip -DLibraryName="Web Content Copy;Samples Copy" -DLibraryExportName="Web Content;Samples" -DLibraryTitle="Web Content Copy Title;Samples Copy Title" -DLibraryBaseLocale=en -DWasPassword=mypassword -DPortalAdminPwd=mypassword`
 
-    -   Export: ConfigEngine.sh export-library-copy -DLibraryPath=/opt/wcm\_export/webcontent.zip -DLibraryName="Web Content;Samples" -DWasPassword=mypassword -DPortalAdminPwd=mypassword
-    -   Import: ConfigEngine.sh import-library-copy -DLibraryPath=/opt/wcm\_import/webcontent.zip -DLibraryName="Web Content Copy;Samples Copy" -DLibraryExportName="Web Content;Samples" -DLibraryTitle="Web Content Copy Title;Samples Copy Title" -DLibraryBaseLocale=en -DWasPassword=mypassword -DPortalAdminPwd=mypassword
 
 

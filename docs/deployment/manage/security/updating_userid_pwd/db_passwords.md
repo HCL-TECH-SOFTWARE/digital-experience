@@ -4,7 +4,7 @@ If database passwords are modified or expired, you must specify the new password
 
 -   Ensure that the administrative server for WebSphere® Application Server is running.
 -   If this server is a clustered environment, you must have the Deployment Manager and the nodes up and the HCL Portal server stopped.
--   If the Virtual Member Manager \(VMM\) is using the database, see *Changing the password for a repository under a federated repositories configuration* in the related links for instructions on updating the VMM database password.
+-   If the Virtual Member Manager (VMM) is using the database, see *Changing the password for a repository under a federated repositories configuration* in the related links for instructions on updating the VMM database password.
 
 1.  Check whether the database user was disabled because of invalid login attempts. Re-enable the database user if necessary.
 
@@ -12,7 +12,7 @@ If database passwords are modified or expired, you must specify the new password
 
     1.  Log in to the WebSphere Integrated Solutions Console.
 
-    2.  Click **Security** \> **Global security** \> **Java Authentication and Authorization Service** \> **J2C Authentication Data**.
+    2.  Click **Security > Global security > Java Authentication and Authorization Service > J2C Authentication Data**.
 
     3.  Select the alias that you want to change; for example:
 
@@ -21,7 +21,8 @@ If database passwords are modified or expired, you must specify the new password
         -   fbkDBAuth
         -   lmDBAuth
         -   wcmDBAuth
-    4.  For z/OS®: Select the alias that you want to change; for example wpdbDS\_WPSDBADM.
+
+    4.  For z/OS®: Select the alias that you want to change; for example wpdbDS_WPSDBADM.
 
     5.  Update the password accordingly.
 
@@ -41,7 +42,7 @@ If database passwords are modified or expired, you must specify the new password
 
 5.  On the DB2 server, complete the following steps:
 
-    1.  Click **Administrative Tools** \> **Services**.
+    1.  Click **Administrative Tools > Services**.
 
     2.  Stop all running DB2 services.
 
@@ -61,10 +62,7 @@ Results:
 WebSphere Application Server and HCL Digital Experience were updated to use your new database passwords. Verify that the HCL Digital Experience application server is running by opening the following URL in a browser: http://hostname.example.com:10039/wps/portal, where hostname.example.com is the fully qualified host name of the server where Portal is running and 10039 is the default transport port that is created by WebSphere® Application Server. The port number might be different for your environment.http://hostname.example.com:10039/wps/portal, where hostname.example.com is the fully qualified host name of the server where Portal is running and 10039 is the default transport port that is created by HCL Digital Experience application server. The port number might be different for your environment.http://hostname.example.com:10039/wps/portal, where hostname.example.com is the fully qualified host name of the server where Portal is running and 10039 is the default transport port that is created by HCL Digital Experience application server. The port number might be different for your environment.Lotus Quickr.
 
 
-**Related information**  
-
-
-[Changing the password for a repository under a federated repositories configuration](https://www.ibm.com/docs/en/was-nd/8.5.5)
-
-[Applying fix packs to your portal](../security/apply_fixpacks.md)
+<!-- ???+ info "Related information"  
+    -   [Changing the password for a repository under a federated repositories configuration](https://www.ibm.com/docs/en/was-nd/8.5.5)
+    -   [Applying fix packs to your portal](../security/apply_fixpacks.md) -->
 

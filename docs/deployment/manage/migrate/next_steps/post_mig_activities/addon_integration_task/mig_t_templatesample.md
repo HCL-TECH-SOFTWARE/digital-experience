@@ -2,7 +2,8 @@
 
 The sample web content template items are not installed or updated during migration. This sample content includes examples of web content template pages and predefined content items that you can add to pages to render content. You can add or update these items manually after migration.
 
-**Important:** These instructions apply only if you installed an offering that includes the sample web content template items. These steps do not work with an offering that does not include the sample content.
+!!!important
+    These instructions apply only if you installed an offering that includes the sample web content template items. These steps do not work with an offering that does not include the sample content.
 
 When you add the sample content, the following artifacts are created:
 
@@ -11,9 +12,10 @@ When you add the sample content, the following artifacts are created:
 -   The "Image," "Rich Text," "List of Articles," and "Article" content items. These content items are available from **Create > Content** tab of the site toolbar.
 -   The "Articles" web content page template.
 
-**Note:** The "Articles" page template can be deployed only if the Portal 8.5 theme is available in your portal.
+!!!note
+    The "Articles" page template can be deployed only if the Portal 8.5 theme is available in your portal.
 
-1.  Go to the wp_profile_root/ConfigEngine directory. When using z/OS®, open a UNIX™ System Services command prompt to change directories.
+1.  Go to the wp_profile_root/ConfigEngine directory.
 
     !!!note
         If you are instructed to open a properties file, edit the file only with a tool appropriate for editing ASCII files.

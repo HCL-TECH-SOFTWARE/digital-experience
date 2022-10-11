@@ -13,7 +13,13 @@ This section describes how to define the set of attributes available in the bean
 
 - Following API end point and response are used to create this sample document.
     
+    Sample API end point for **GET**
+
     ![](../../../assets/Volt_MX_Sample_Endpoint.png "VOLTMX Sample API Endpoint.")
+
+    Sample API end point for **POST**
+
+    ![](../../../assets/Volt_MX_Sample_POST_Endpoint.png "VOLTMX Sample POST API Endpoint.")
 
 ### Steps to create the list rendering profile are as follows:
 
@@ -76,7 +82,7 @@ You may use an existing or new WCM library. For this example we have used a new 
 
     ![](../../../assets/WCM_Library_Component.png "WCM Library default components")
 
-2. Create an Appearances folder under Components. This is only so that your personalization components that use the DDC selection rule Select pluggable resources can be found easily in one place.
+2. Create an Appearances folder under Components. This is only so that your personalization components that use the DDC selection rule. Select pluggable resources can be found easily in one place.
 
     ![](../../../assets/WCM_Appearance.png "WCM Appearance")
 
@@ -115,17 +121,26 @@ Set the context of the DDC content.
 
 Steps to create Presentation Template are as follows:
 
-1. Create a new presentation template with suggested name `Volt MX data presentation template` and under presentation template options, add the following:
+1. Create a new presentation template with suggested name `Volt MX data presentation template` and under presentation template options, click on `Insert Tag` button:
+
+    ![](../../../assets/WCM_Presentation_Template.png "Create Presentation Template.")
+
+
+2. Select the type of tag to create, and then define parameters for the selected tag. You can then either copy and paste the tag into your design, or click `OK` to insert the tag at the current cursor location.
+
+    ![](../../../assets/WCM_Presentation_Select_Plugin.png "Select plugin in Presentation Template.")
+
+    Sample Presentation Template Options - 
+
     ```
     [Plugin:ListRenderingContext action="set" attribute="source=[Element context='current' type='content' key='sourceuri']" profile="[Element context='current' type='content' key='profile']" extension-id="[Element context='current' type='content' key='provider']"][Component name="ddc foundry/appearances/ddc volt mx list appearances" resultsPerPage="" startPage=""]
     ```
 
-    ![](../../../assets/WCM_Presentation_Template.png "Create Presentation Template.")
-
     - Under `attribute`, define the data `source` endpoint. The content field set in this example is `sourceuri`, where you saved the **endpoint** in the content item.
     - `profile` refers to the List-Rendering Profile which was saved earlier in the WAS console. The content field that is set in this example is also `profile`, which is saved in the content item with the `ddcDemo.profile.json` value.
     - `extension-id` refers to the DDC plugin ID. The content field set in this example is `provider`, which is saved in the content item with value `ibm.portal.ddc.json`.
-2. Save and close.
+
+3. Save and close.
 
 ###  Create a Content Template
 
@@ -150,6 +165,15 @@ Under Authoring Templates, create a Content Template.
 
     ![](../../../assets/WCM_Manage_Element.png "Create Content Template and select its attribute.")
 
+    !!!note
+        In case of **GET** resource method, adding **httpmethod** element is not necessary, by default, the connection is initially set to **GET**.
+        But if you selected any other **Resource Method** (for example - **POST** from `Advanced` > `Front End API` > `Resource Method`) while creating a new integration service with Volt MX Foundry, then you need to add another element **httpmethod**. This element (**httpmethod**) can be added as **Short Text**, **Text**, or **OptionSelection**. A content created from this content template can then load and render data from data sources using other resource methods. Leaving the optional httpmethod field value **blank** or empty when creating your content, which is based on the content template, would still have the connection fallback to **GET**.
+
+    | Element type                   | Name                                       | Display title              |
+    | ------------------------------ | ------------------------------------------ | ---------------------------|
+    | Short Text                     | httpmethod                                 | Select Http Method         |
+
+    ![](../../../assets/WCM_Manage_Element_Post.png "Create Content Template and select its attribute for Post.")
 
 4. Click on `Default Content Properties` and add `Express workflow`.
 
@@ -173,7 +197,17 @@ Under Authoring Templates, create a Content Template.
     | DDC Plugin                     | ibm.portal.ddc.json                                          |
 
     ![](../../../assets/WCM_Input_Content_Element.png "Input Main Content.")
- 
+
+    !!!note
+        If you selected any other **Resource Method** (for example - **POST** from `Advanced` > `Front End API` > `Resource Method`) while creating a new integration service with Volt MX Foundry then you need to provide value for **httpmethod**. Also, the value of **Data Source URI** would be the POST URL endpoint in this case.
+
+    | Content field title            | Value                                                        |
+    | ------------------------------ | ------------------------------------------                   |
+    | Data Source URI                | https://hcl-dx-dev.hclvoltmx.net/services/account/id         |
+    | Select Http Method             | post                                                         |
+
+    ![](../../../assets/WCM_Input_Content_Element_Post.png "Input Main Content for Post.")
+
 3. Save and close.
 
 ## Use in Portal Page

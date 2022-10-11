@@ -48,14 +48,17 @@ It is equivalent to the functionality in the user interface:
 
     LTPA token of the user.
 
--   **Query Parameters \(See PUT request above for example format and parameter\)**
+-   **Query Parameters (See PUT request above for example format and parameter)**
 
     -   `setVersion`: Name of the version that should become the current version
     -   `restoreAsPublished`: Restore as a draft or replace the published version
 
 -   **Return body**
 
-    The list of versions. Same as when calling **.../wcmrest/item/uuid/versions** Structure see: [How to use REST with versions](../wcm_rest_mng_content/wcm_rest_crud_versions.md)
+    The list of versions. Same as when calling **.../wcmrest/item/uuid/versions** 
+    
+    
+    Structure see: [How to use REST with versions](../wcm_rest_mng_content/wcm_rest_crud_versions.md)
 
     Sample:
 

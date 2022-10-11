@@ -2,8 +2,6 @@
 
 Configure the Document Conversion Services to view images in an operating system other than Windows.
 
-The following steps do not apply to IBM® i. For information about viewing images on IBM i, read *Rendering documents on IBM i*.
-
 1.  Connect to one of the following workstations from your Windows™ workstation with PuTTY or any other Telnet client.
 
     -   AIX®

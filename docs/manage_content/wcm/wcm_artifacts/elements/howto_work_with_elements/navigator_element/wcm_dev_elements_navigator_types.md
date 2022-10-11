@@ -1,4 +1,4 @@
-# Navigator Type Examples
+# Navigator element type examples
 
 
 

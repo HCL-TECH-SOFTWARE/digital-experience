@@ -18,7 +18,7 @@ Configure the Document Conversion Services to complete document conversions in a
     In AIX®, the command might be `export LIBPATH=wp_profile_root/PortalServer/config/oiexport:/usr/X11R6/lib`
 
     !!!note "**Required library:**" 
-        On SolarisLinux™, you must install the following library to run document conversion services: libstdc++.so.5. This library is included with GNU Compiler Collection (GCC) 3.2 to 3.3.6.
+        On Linux™, you must install the following library to run document conversion services: libstdc++.so.5. This library is included with GNU Compiler Collection (GCC) 3.2 to 3.3.6.
 
     You must install libstdc++.so.5 and include the folder that contains the library in the library path variable. The command might be `export LD_LIBRARY_PATH=wp_profile_root/PortalServer/config/oiexport:/usr/X11R6/lib:/user/lib`
 

@@ -7,9 +7,7 @@ You can run spell checker on the following systems:
 |Platform|Versions|
 |--------|--------|
 |Windows (32-bit)|-   Microsoft™ Windows™Server 2008 Standard Edition<br>-   Microsoft WindowsServer 2008 Datacenter Edition<br>-   Microsoft WindowsServer 2008 Enterprise Edition|
-|IBM® AIX®|-   AIXV6.1 with Service Pack 4<br>-   AIXV5L V5.3 with Service Pack 5300-04-01 (32 bit)|
-|Linux™ (x86\|-   Red Hat Enterprise Linux (RHEL) Enterprise Server 6<br>-   SUSE Linux Enterprise Server (SLES) 9 Service Pack 4<br>-   SUSE Linux Enterprise Server (SLES) 10<br>-   SUSE Linux Enterprise Server (SLES) 11|
-|Solarison SPARC|Oracle SolarisSPARC 10|
+|Linux™ (x86)|-   Red Hat Enterprise Linux (RHEL) Enterprise Server 6<br>-   SUSE Linux Enterprise Server (SLES) 9 Service Pack 4<br>-   SUSE Linux Enterprise Server (SLES) 10<br>-   SUSE Linux Enterprise Server (SLES) 11|
 
 Running spell checker on the following systems is not supported:
 

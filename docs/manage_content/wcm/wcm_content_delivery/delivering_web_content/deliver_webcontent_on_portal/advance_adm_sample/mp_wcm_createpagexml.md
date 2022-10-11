@@ -1,6 +1,6 @@
 # Creating a web content page with the XML configuration interface
 
-As with other portal pages, you can create a web content page with the XML configuration interface \(xmlaccess command\). Page definition is similar to a standard portal page. However, there is an additional page parameter that specifies the site area that is associated with the web content page.
+As with other portal pages, you can create a web content page with the XML configuration interface (xmlaccess command). Page definition is similar to a standard portal page. However, there is an additional page parameter that specifies the site area that is associated with the web content page.
 
 1.  When creating your xmlaccess command, specify your page parameters as you would for a standard portal page.
 
@@ -19,7 +19,7 @@ As with other portal pages, you can create a web content page with the XML confi
     ```
 
     !!! note
-      The value of the content-id attribute can be either the ID or the path to the web content item. If you are using the content path, the value must begin with the forward slash character \(`/`\) followed by the library name. When creating a web content page using the content path, you cannot build the path from the **Display title** fields of the items in the path. Instead you must use the **Name** fields of the items when specifying the path.
+      The value of the content-id attribute can be either the ID or the path to the web content item. If you are using the content path, the value must begin with the forward slash character (`/`) followed by the library name. When creating a web content page using the content path, you cannot build the path from the **Display title** fields of the items in the path. Instead you must use the **Name** fields of the items when specifying the path.
 
 2.  Because the web content viewer uses public render parameters to identify the content to render, include the page parameter param.sharing.scope when creating your xmlaccess command. Set the value for the parameter to ibm.portal.sharing.scope.page.
 
@@ -64,12 +64,11 @@ As with other portal pages, you can create a web content page with the XML confi
     </component>
     ```
 
-    **Migration note:** After Version 6.1.5, the format used by the XML configuration interface to represent content associations for a web content page has changed. Typically, the migration process automatically converts all existing web content pages to the updated format. However, if you create web content pages on the older portal after migration and then import the pages to the Version 8.5 portal, the page format is incompatible. In this case, you must manually run the `action-migrate-content-mappings` configuration task on the Version 8.5 portal to convert the new web content pages to the Version 8.5 format. To perform the conversion, run the following task from the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md)/ConfigEngine directory:
+    !!!note "Migration note"
+      After Version 6.1.5, the format used by the XML configuration interface to represent content associations for a web content page has changed. Typically, the migration process automatically converts all existing web content pages to the updated format. However, if you create web content pages on the older portal after migration and then import the pages to the Version 8.5 portal, the page format is incompatible. In this case, you must manually run the `action-migrate-content-mappings` configuration task on the Version 8.5 portal to convert the new web content pages to the Version 8.5 format. To perform the conversion, run the following task from the wp_profile_root/ConfigEngine directory:
 
-    -   Windows™: ConfigEngine.bat action-migrate-content-mappings -DWasPassword=password -DPortalAdminPwd=password
-    -   UNIX™Linux™: ./ConfigEngine.sh action-migrate-content-mappings -DWasPassword=password -DPortalAdminPwd=password
-    -   IBM® i: ConfigEngine.sh action-migrate-content-mappings -DWasPassword=password -DPortalAdminPwd=password
-    -   z/OS®: ./ConfigEngine.sh action-migrate-content-mappings -DWasPassword=password -DPortalAdminPwd=password
+    -   Windows™: `ConfigEngine.bat action-migrate-content-mappings -DWasPassword=password -DPortalAdminPwd=password`
+    -   UNIX™Linux™: `./ConfigEngine.sh action-migrate-content-mappings -DWasPassword=password -DPortalAdminPwd=password`
 
 
 ???+ info "Related information:"

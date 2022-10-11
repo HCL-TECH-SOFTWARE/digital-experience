@@ -2,5 +2,4 @@ title: Configure DCS
 nav:
     - index.md
     - For Systems Other than Windows: dcs_config_nonwin.md
-    - For IBMi: dcs_config_i.md
     - Images for OS Other than Windows: dcs_config_images.md

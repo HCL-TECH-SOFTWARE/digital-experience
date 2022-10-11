@@ -6,8 +6,6 @@ The topic shows the naming conventions that are used to denote the location of f
 
 Throughout this documentation, the installation location for the portal server component of HCL Portal is noted as PortalServer_root.
 
-For the IBM® i operating system, an extra variable is used to indicate the user data directory. The user data directory is noted as PortalServer_root\user.
-
 The following information shows the default location if it is not otherwise specified during installation:
 
 -   **AIX®**
@@ -22,12 +20,14 @@ The following information shows the default location if it is not otherwise spec
 
 -   **Windows™**
 
-    C:\\Program Files\\HCL\\WebSphere\\PortalServerC:\\Program Files\\HCL\\WebSphere\\PortalExpress\\PortalServer
+    C:\\Program Files\HCL\WebSphere\PortalServer
+    
+    C:\\Program Files\HCL\WebSphere\PortalExpress\PortalServer
 
 
 ## wp_profile_root
 
-Throughout this documentation, the profile location is noted as wp\_profile\_root. The following information shows the default profile location if another location is not specified during installation:
+Throughout this documentation, the profile location is noted as wp_profile_root. The following information shows the default profile location if another location is not specified during installation:
 
 -   **AIX®**
 
@@ -41,7 +41,7 @@ Throughout this documentation, the profile location is noted as wp\_profile\_roo
 
 -   **Windows™**
 
-    C:\\Program Files\\HCL\\WebSphere\\wp\_profile
+    C:\\Program Files\HCL\WebSphere\wp_profile
 
 
 ## ConfigEngine_root
@@ -60,7 +60,7 @@ Throughout this documentation, the installation location for the Configuration E
 
 -   **Windows™**
 
-    C:\\Program Files\\HCL\\WebSphere\\ConfigEngine
+    C:\\Program Files\HCL\WebSphere\ConfigEngine
 
 
 ## Configuration Engine profile directory
@@ -75,11 +75,11 @@ The Configuration Engine profile directory is the location of the ConfigEngine t
 
     /opt/HCL/WebSphere/wp_profile/ConfigEngine
 
-    /opt/HCL/WebSphere/PortalExpress/AppServer/profiles/wp\_profile/ConfigEngine
+    /opt/HCL/WebSphere/PortalExpress/AppServer/profiles/wp_profile/ConfigEngine
 
 -   **Windows™**
 
-    C:\\Program Files\\HCL\\WebSphere\\wp\_profile\\ConfigEngine
+    C:\\Program Files\HCL\WebSphere\wp_profile\ConfigEngine
 
 
 ## HCL Portal directory structure after installation
@@ -169,7 +169,7 @@ Throughout this documentation, the configuration wizard profile location is note
 
 -   **Windows™**
 
-    C:\\Program Files\\HCL\\WebSphere\\AppServer\\profiles\\cw\_profile
+    C:\\Program Files\HCL\WebSphere\AppServer\profiles\cw_profile
 
 The following information shows the default WebSphere Application Server installation location if it is not otherwise specified during installation:
 
@@ -179,7 +179,7 @@ The following information shows the default WebSphere Application Server install
 
 -   **Windows™**
 
-    C:\\Program Files\\HCL\\WebSphere\\PortalExpress\\AppServer
+    C:\\Program Files\HCL\WebSphere\PortalExpress\AppServer
 
 
 

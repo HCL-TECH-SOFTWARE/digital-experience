@@ -5,29 +5,33 @@ title: Set up a cluster
 
 # Configuration Wizard: Set up a cluster
 
+Use the Configuration Wizard to set up either a dynamic or static horizontal cluster.
 
-You created a stand-alone, demonstration environment with IBM® Installation Manager. Now you are ready to set up a production-ready, clustered environment. To begin, you can use the Database Transfer option to transfer your database from the default database, Apache Derby, to a more robust database. Then, you can create your deployment manager profile, create a static or dynamic cluster, change from the built-in file-based repository to a federated repository, modify your site URLs for search engine optimization benefits,and add more nodes as needed.
+## Before you begin
+Roadmaps provide an overview of the steps that are required for common environment configurations. Select the roadmap that is most like the environment that you want to set up. See [Roadmaps for clusters](../../../../../get_started/plan_deployment/traditional_deployment/roadmaps/rm_install_deployment/rm_clusters/rm_cluster_parent.md) for more information.
 
-## Cluster Topology
+## About this task
+The Configuration Wizard supports adding additional nodes to a horizontal cluster. If you are setting up a vertical cluster, multiple node on a single physical server, ,manual instructions are available for adding an additional vertical node to either a dynamic or static cluster configuration.
 
-Clusters enable you to scale your HCL Portal configuration. Clusters also enable enterprise applications to be highly available because requests are automatically routed to the running servers in the event of a failure. There are numerous cluster configuration, such as horizontal, vertical, multiple, and dynamic.
+## Procedure
+1. Select the roadmap that is most like the configuration that you need to configure.
 
-Using a horizontal cluster is beneficial for many reasons:
+2. Access the Configuration Wizard. Go to http://your_server:10200/hcl/wizard.
 
--   Workload management. A cluster distributes traffic across multiple servers. If one server goes down, traffic is routed to another node in the cluster. A node typically represents a single physical server in a managed cell.
--   Improved security. You can place the web server outside the firewall to direct traffic to the cluster.
--   Balanced traffic. The web server plug-in balances user traffic across all members of the cluster.
--   Identical behavior. Configuration is shared across the portal instances, including database, applications, portlets, and site design.
--   Simplified administration. Changes are synchronized across the cluster, such as updates, stopping and starting the servers, session data, cache data, and more.
+    !!!restriction
+        There is a known issue with Chrome version 45.x and the Configuration Wizard. If you are experiencing difficulties, use a different browser when you access the wizard.
 
-A cluster topology is useful for the following type of user:
+3. Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw_profile.
 
-A company or organization that requires failover, centrally managed servers, and workload management.
+    !!!note
+        The wizard user interface might not be available in all languages. If the language is not currently supported, you might see the English version. For details on the supported languages for all of the HCL Digital Experience user interfaces, see [Language Support](../../../../../extend_dx/development_tools/portal_admin_tools/language_support/index.md).
 
-!!!note
-    You can create other types of clusters. For example, to create vertical or multiple clusters, use the roadmaps in the product documentation for instructions on the cluster that you want to create.
+4. Click **Set Up a Cluster**.
+5. Complete each sub step in the order that is shown in the wizard. Use the Configuration Wizard in conjunction with your selected Roadmap.
 
-
-???+ info "Related information" 
-    -   [Configuration Wizard](../../../portal_admin_tools/cfg_wizard/configuration/index.md)
+???+ info "Related tasks" 
+    -   [Adding vertical cluster members to a static cluster](../../../../../deployment/manage/config_cluster/add_vert_clus.md)
+    -   [Adding vertical cluster members to a dynamic cluster](../../../../../deployment/manage/config_cluster/add_dynvert_clus.md)
+    -   [Accessing the Configuration Wizard](../../../portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+    -   [Updating DB2 self-tuning memory manager (STMM) settings](../../../../../deployment/manage/migrate/next_steps/post_mig_activities/db_task/mig_t_post_db2_stmm.md)
 

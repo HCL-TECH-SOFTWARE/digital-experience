@@ -6,21 +6,7 @@ Use the Configuration Wizard to migrate the deployment manager profile for a clu
 
 Select **Migrate to a New Version**, and choose the **Migrate a Cluster Step 1: Migrate the Deployment Manager Profile** option.
 
-**Note:** This option is not available for IBM® z/OS®.
-
-
-**Related information**  
-
-
-[Troubleshooting: Migrate the deployment manager profile for a cluster environment](../trouble/cw_migrate_cluster1.md)
-
-[Configuration Wizard](../config/cw_overview.md)
-
-[Roadmap: Migrating a clustered environment](../migrate/rm_mig_cluster.md)
-
-[Accessing the Configuration Wizard](../config/cw_run.md)
-
-# Worksheet
+## Worksheet
 
 To set up the migration, you answer questions about your wanted configuration. Some fields apply to migration configurations. Some fields are required based on your environment. The remaining fields are advanced and do not apply to most configurations.
 
@@ -31,17 +17,14 @@ The following table lists the fields that are unique to the Migrate a cluster st
 |Field Label|Default|Your Value|
 |-----------|-------|----------|
 |**Target operating system**|Linux™| |
-|**Target portal profile name**|wp\_profile| |
-|**Target portal profile home directory**|/opt/IBM/WebSphere/wp\_profile| |
+|**Target portal profile name**|wp_profile| |
+|**Target portal profile home directory**|/opt/IBM/WebSphere/wp_profile| |
 |**Is the target portal on the same server or a different server**|Same server| |
 |**WebSphere Application Server administrator**|wpsadmin| |
 |**WebSphere Application Server administrator password**| | |
 |**What is the deployment manager profile name**|dmgr01| |
 |**What is the cell name**|CellName| |
 |**What is the deployment manager node name**|dmgr| |
-|**Where is the source application server installed****IBMi only:** Provide the path to the source profile directory instead of the application server directory.
-
-|/opt/IBM/WebSphere/AppServer| |
 |**What is new host name**| | |
 |**Target deployment manager profile name**|dmgr01| |
 |**Where is the target application server installed**|/opt/IBM/WebSphere/AppServer| |
@@ -137,8 +120,6 @@ If you click **View Step Command**, you can see the task and properties that are
 
 8.  Manual Step: Create a backup of the source deployment manager
 
-    **IBMi only:** You must remove the oldProfile parameter before running the command.
-
     -   **Condition**
 
         none
@@ -168,3 +149,8 @@ If you click **View Step Command**, you can see the task and properties that are
         none
 
 
+???+ info "Related information"  
+    -   [Troubleshooting: Migrate the deployment manager profile for a cluster environment](../../../../deployment/manage/troubleshooting/troubleshooting_configwizard/cw_migrate_cluster1.md)
+    -   [Configuration Wizard](../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/index.md)
+    -   [Roadmap: Migrating a clustered environment](../../../../deployment/manage/migrate/planning_migration/rm_migration/rm_mig_cluster.md)
+    -   [Accessing the Configuration Wizard](../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/configuration/cw_run.md)
