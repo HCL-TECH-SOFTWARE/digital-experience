@@ -3,7 +3,7 @@
 
 ## Introduction of Prereqs Checker:
 
-There are some checks that are performed to check the efficiency of various components called Prereqs Checkers. Currently, these checks are implemented for the mounted volume's file system of the core. You get the result of these checks from the container logs (system-out-logs).
+The "Prereqs Checker" is a tool that runs a number of checks to confirm if the prerequisites for various components are met. Currently, these checks are implemented for the mounted volume's file system of DX Core. You get the result of these checks from the container logs of the `prereqs-checker` container in the Core Pod.
 For these checks, one separate sidecar container would get deployed along with the main application container. This is a lightweight container so the main application performance would not get affected. The result of the checks would be extractable from container logs.
 
 The main objective to enable these checks is to get basic information about the file system of the mounted volumes. The result of these checks is also helpful to track the issues related to file systems.
