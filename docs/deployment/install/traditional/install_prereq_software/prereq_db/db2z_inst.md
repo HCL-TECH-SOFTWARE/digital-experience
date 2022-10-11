@@ -10,6 +10,8 @@ Use this information to install DB2 for z/OS for use with HCL Digital Experience
     -   The IBM Redbooks publication, [DB2 for z/OS and OS/390: Ready for Java SG24-6435-00](http://www.redbooks.ibm.com/abstracts/sg246435.html?Open).
 -   Except, when you migrate to a new release of HCL Portal, using the same DB2 for z/OS subsystem for two independent lines of production must be avoided. Each line of production of HCL Portal must use a subsystem of DB2 for z/OS that is dedicated exclusively to this installation. Because the DB2 for z/OS database catalog is shared, complications might occur in a shared environment.
 
+## Procedure
+
 1.  To use DB2 for z/OS as the database software for HCL Portal, you must have DB2 for z/OS installed on your z/OS system. Refer to the DB2 for z/OS product documentation for instructions.
 
 2.  Read the Planning for DB2 for z/OS topic before you configure DB2 for z/OS as the HCL Portal database.
@@ -30,6 +32,7 @@ Use this information to install DB2 for z/OS for use with HCL Digital Experience
         -   bp5
         -   bp32k1
         -   bp32k2
+
 4.  Update the BP8K0 catalog buffer pool to 35,000 buffers before you transfer the database. Change this value according to your environment. The SYSIBM.SYSDATABASE table is in this buffer pool and is used extensively by DB2 for z/OS for the database transfer.
 
 5.  Change the Common Service Area (CSA) setting to 3500,350000.
@@ -38,6 +41,7 @@ Use this information to install DB2 for z/OS for use with HCL Digital Experience
 
     -   DB2 for z/OS Version 10.1, [End of Support Statement](https://www.ibm.com/support/pages/db2-version-101-end-support-september-30-2017)
     -   DB2 for z/OS Version 11.1, [Common service area storage requirements](https://www.ibm.com/docs/en/db2-for-zos/11?topic=zos-common-service-area-storage-requirements)
+
 6.  During database transfer from Derby to DB2 for z/OS, a supporting low-order byte table space is created for the database tables that store documents. The PRIQTY and SECQTY for the table space are assigned with the default values. If you plan to store many documents, use an automatic class selection (ACS) routine to allocate the DB2 for z/OS data sets with a primary and secondary space allocation of at least 10 cylinders. Or, specify a large enough value for **PRIQTY** and **SEQTY** in the DB2 DSNTIJUZ member. The table spaces can be identified by their name, having a structure like JCRDB.Sxxxxxxx, where xxxxxxx is a system-assigned combination of seven numbers and characters.
 
     1.  Also, in member DSNTIJUZ, update the following parameters and then verify DSNTIJUZ runs successfully.
@@ -50,6 +54,7 @@ Use this information to install DB2 for z/OS for use with HCL Digital Experience
         -   cachedyn=yes (prepared, dynamic SQL statements are cached)
         -   dbacrvw=yes (to allow database administrators to create Views)
         -   +++tbsbpxml=BP16K1 (to explicitly create an XML table space. This value can be changed to any valid 16 K buffer pool where the Administrative User has the USE privilege.)
+
 7.  Ensure that the job DSNTIJSG ran to create the objects that are needed for the DB2 JDBC and ODBC metadata methods. See the DB2 Installation Guide Enabling stored procedures and tables for JDBC and ODBC support.
 
 8.  Ensure that job DSNTIJMS runs successfully (re-execute binds).
@@ -116,6 +121,6 @@ When you use the Configuration Wizard and provide information about your databas
 -   Before you enter your database name (`dbdomain.DbName`) in the Configuration Wizard, check your database documentation for restrictions on character length.
 -   You cannot use the **Database Transfer** option in the Configuration Wizard to assign custom table spaces on your database server. You can perform manual steps to assign custom table spaces. Go to [Assigning custom table spaces](../../../../manage/db_mgmt_sys/custom_tablespace/index.md) for more information.
 
-???+ info "Related information" 
-    -   [JDBC type 2 and type 4 drivers](/docs/get_started/plan_deployment/traditional_deployment/database_consideration/db_jdbc_type.md)
+???+ info "Related information:" 
+    -   [JDBC type 2 and type 4 drivers](../../../../../get_started/plan_deployment/traditional_deployment/database_consideration/db_jdbc_type.md)
 
