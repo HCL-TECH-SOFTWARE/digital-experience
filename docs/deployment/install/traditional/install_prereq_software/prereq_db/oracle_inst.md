@@ -6,6 +6,8 @@ You can use Oracle or Oracle RAC as the database software to configure it to wor
 -   Ensure the database that you plan to use is supported by this version of HCL Portal. Refer to the list of supported databases in the HCL Portal detailed system requirements.
 -   For Linux™ and Oracle OCI Type-2 JDBC driver: The Oracle OCI Type-2 JDBC driver with the full oracle client works with HCL Portal. However, to successfully complete the database transfer task, the Oracle Thin Type-4 JDBC is required for Linux. After successfully completing the database transfer task using the thin driver, if needed, you can specify and then return to using the Oracle OCI Type-2 full client.
 
+## Procedure
+
 1.  Install Oracle JDBC Type 4 drivers or Oracle JDBC OCI Type 2 client and drivers as appropriate.
 
     Refer to the Oracle or Oracle RAC product documentation for installation instructions.
@@ -58,7 +60,7 @@ When you use the wizard, you provide information about the database for your env
 
 You cannot use the **Database Transfer** option in the Configuration Wizard to assign custom table spaces on your database server. You can perform manual steps to assign custom table spaces. Go to [Assigning custom table spaces](../../../../manage/db_mgmt_sys/custom_tablespace/index.md) for more information.
 
-**Related information**: 
-[JDBC type 2 and type 4 drivers](../../../../../get_started/plan_deployment/traditional_deployment/database_consideration/db_jdbc_type.md)
+???+ info "Related information:" 
+    - [JDBC type 2 and type 4 drivers](../../../../../get_started/plan_deployment/traditional_deployment/database_consideration/db_jdbc_type.md)
 
 
