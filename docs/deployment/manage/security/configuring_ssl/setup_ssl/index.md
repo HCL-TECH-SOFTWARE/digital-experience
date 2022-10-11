@@ -19,7 +19,7 @@ If you plan to use a Security Access Manager WebSEAL TAI with an SSL junction, c
 3.  The web server must have a port that is defined (usually 443), and the necessary certificates and keys must be installed.
 
     -   Go to Securing with SSL communications in the related links section for information about how to enable SSL on an IBM HTTP Server.
-    -   Refer to the book *z/OS® HTTP Server Planning, Installing, and Using* in the related links section. It provides information about setting up a secure server.
+
 4.  In a production environment, you must obtain a certificate from a certificate authority. For testing purposes, you can use iKeyman to generate a self-signed certificate. For Internet Information Server, use the web server's resource toolkit to create SSL keys. Refer to the related links section for information about iKeyman and creating Secure Sockets Layer digital certificates.
 
 5.  Configure the WebSphere Application Server plug-in for the web server to forward HCL Portal traffic that is received over SSL to WebSphere Application Server (which then forwards the traffic to HCL Portal). Refer to the related links section for information about how to configure the plug-in.
