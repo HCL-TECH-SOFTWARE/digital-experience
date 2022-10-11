@@ -1,8 +1,5 @@
 # Defining page item properties
 
-
-
-
 Select default content for a page item and create template mappings.
 
 1.  To select the default content item to display when a link to this page item is clicked, click **Select Default Content**.

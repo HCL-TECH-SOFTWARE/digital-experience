@@ -3,7 +3,7 @@ id: wcm_dev_profiling_taxonomy_editing
 title: Changing the order within a taxonomy
 ---
 
-
+# Changing the order within a taxonomy
 
 
 As your site evolves, you need to change the structure of a taxonomy.

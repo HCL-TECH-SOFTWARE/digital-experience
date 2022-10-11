@@ -3,7 +3,7 @@
 
 You select the workflow stages to comprise a workflow in a workflow form.
 
-To create a workflow, open the applications menu and go to **Content** \> **Web Content Management** and then click **New** \> **Workflow**.
+To create a workflow, open the applications menu and go to **Content > Web Content Management** and then click **New > Workflow**.
 
 
 1.  [Entering identification information](../wcm_dev_items_id.md)  

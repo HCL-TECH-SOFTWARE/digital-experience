@@ -3,7 +3,7 @@ id: wcm_dev_elements_style-sheet_props
 title: Selecting a style sheet
 ---
 
-
+# Selecting a style sheet
 
 
 You use the style sheet element to select a style sheet to store in this component.

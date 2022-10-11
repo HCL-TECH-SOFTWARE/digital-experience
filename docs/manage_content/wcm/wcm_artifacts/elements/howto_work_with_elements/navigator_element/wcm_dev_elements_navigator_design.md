@@ -3,6 +3,8 @@ id: wcm_dev_elements_navigator_design
 title: Navigator element formatting examples
 ---
 
+# Navigator element formatting examples
+
 You use HTML to format the layout of a navigator.
 
 -   Navigator elements can have more than one element design.

@@ -3,7 +3,7 @@ id: wcm_dev_items_copying
 title: Copying other items to a different library
 ---
 
-
+# Copying other items to a different library
 
 
 You use the **Copy** feature to copy an item from one library to another.
@@ -19,6 +19,6 @@ You use the **Copy** feature to copy an item from one library to another.
 5.  Click **OK**.
 
 
-!!! note
+!!!note
     The children of an item are not copied when you copy an item. You must copy any children separately.
 

@@ -3,8 +3,7 @@ id: wcm_dev_profiling_items
 title: Entering profile information
 ---
 
-
-
+# Entering profile information
 
 Specify the profile information that is used to identify the current item, such as the categories to which the item belongs and any keywords that you want to associate with the item.
 
