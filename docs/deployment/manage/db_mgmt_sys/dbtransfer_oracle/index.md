@@ -68,15 +68,6 @@ If you click **View Step Command**, you can see the task and properties associat
 
         None
 
-5.  Manual Step: Create the database configuration users on DB2 for z/OS®.
-    -   **Condition**
-
-        None
-
-    -   **ConfigEngine task**
-
-        None
-
 6.  Manual Step: Download the script and view instructions to delete existing databases.
     -   **Condition**
 

@@ -8,7 +8,6 @@ Use this information to install DB2 for z/OS for use with HCL Digital Experience
 -   Ensure that Java Database Connectivity requirements are met. Consult the following references:
     -   *DB2 Universal Database for OS/390 and z/OS: Application Programming Guide and Reference for Java™*
     -   The IBM Redbooks publication, [DB2 for z/OS and OS/390: Ready for Java SG24-6435-00](http://www.redbooks.ibm.com/abstracts/sg246435.html?Open).
--   If the current version of HCL Portal and an earlier version coexist with the same DB2 for z/OS® subsystem, the database user IDs for the current version must be different from the earlier version to avoid conflicts during installation. If the two versions of HCL Portal connect to two different DB2 for z/OS subsystems, using the same user ID does not cause conflict.
 -   Except, when you migrate to a new release of HCL Portal, using the same DB2 for z/OS subsystem for two independent lines of production must be avoided. Each line of production of HCL Portal must use a subsystem of DB2 for z/OS that is dedicated exclusively to this installation. Because the DB2 for z/OS database catalog is shared, complications might occur in a shared environment.
 
 1.  To use DB2 for z/OS as the database software for HCL Portal, you must have DB2 for z/OS installed on your z/OS system. Refer to the DB2 for z/OS product documentation for instructions.

@@ -199,7 +199,7 @@ Provide information about the WebSphere Application Server used in the WebSphere
 
     -   **Description**
 
-        The name of the application server for administration. For IBM i, if your WebSphere Application Server profile was created with a different WebSphere Application Server administrative server name, you should change this value to reflect that.
+        The name of the application server for administration.
 
     -   **Default value**
 
@@ -325,7 +325,7 @@ Provide basic information about HCL Portal, such as installation directory, port
         -   Exclamation point {!}, Hyphen {-}, period {.}, question mark {?}, accent grave {`}, tilde {~} Open parenthesis {(}, and
         -   close parenthesis {)}
         -   Open bracket {[} and close bracket {]}
-        -   Underscore {_}, which is the only special character that is allowed in IBM i
+        -   Underscore {_}
     -   **Default value**
 
         No default value
@@ -394,7 +394,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        Required for IBM i only. Specify the port block to use for HCL Portal Server.
+        Specify the port block to use for HCL Portal Server.
 
     -   **Default value**
 
@@ -408,7 +408,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        Required for z/OS only. The library where the ifaedjreg.jar file resides
+        The library where the ifaedjreg.jar file resides
 
     -   **Default value**
 
@@ -422,7 +422,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        Required for z/OS only. The library where the SMF DLLs reside.
+        The library where the SMF DLLs reside.
 
     -   **Default value**
 
@@ -436,7 +436,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        Required for z/OS only. The server's jobname, as specified in the MVS START command JOBNAME parameter. JOBNAME is the name of the task or script that runs when the server is running. MVS \(Multiple Virtual Storage\) is the name of the operating system that runs on the mainframe. The value is passed as a parameter to the server's start procedures to specify the location of the server's configuration files and identify the server to certain WebSphere for z/OS- exploited z/OS facilities \(for example, SAF\). The name must be seven or fewer characters and all uppercase.
+        The server's jobname, as specified in the MVS START command JOBNAME parameter. JOBNAME is the name of the task or script that runs when the server is running. MVS (Multiple Virtual Storage) is the name of the operating system that runs on the mainframe. The value is passed as a parameter to the server's start procedures to specify the location of the server's configuration files and identify the server to certain WebSphere for z/OS- exploited z/OS facilities (for example, SAF). The name must be seven or fewer characters and all uppercase.
 
     -   **Default value**
 
@@ -450,7 +450,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        Required for z/OS only. The cluster transition name of the WLM APPLENV \(WLM application environment\) name for this server. The name must be eight or fewer characters and all uppercase.
+        The cluster transition name of the WLM APPLENV (WLM application environment) name for this server. The name must be eight or fewer characters and all uppercase.
 
     -   **Default value**
 
@@ -464,7 +464,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        Required for z/OS only. The location of the SMP/E installation image for the HCL Portal SMP/E package.
+        The location of the SMP/E installation image for the HCL Portal SMP/E package.
 
     -   **Default value**
 
@@ -3807,16 +3807,16 @@ The following properties are used by the `wp-change-was-admin-user` and `wp-chan
 
         \(UNIX only\)For command line tasks, if you provide the DN by using the -D parameter, some tasks require that you enter the fully qualified DN. If your fully qualified DN contains a space, you cannot provide the ID by using the -D parameter. For example, if your DN is `cn=someuser,cn=users,o=Software Group,dc=yourco,dc=com,` then you must place the DN in the properties file or a parent properties file. If you create a parent properties file named mysecurity.properties, your command is: ./ConfigEngine.sh task\_name -DparentProperties=/opt/mysecurity.properties.
 
-        \(Windows only\)For command prompt tasks, if you provide the DN by using the -D parameter, some tasks require that you enter the fully qualified user DN. If your fully qualified DN contains a space, then you must place quotations around the fully qualified DN in the command. An example of a DN with spaces is: `cn=someuser,cn=users,o=Software Group,dc=yourco,dc=com,` An example of the DN provided using the -D parameter is: ConfigEngine.bat task\_name -DuserID="cn=someuser,cn=users,o=Software Group,dc=yourco,dc=com"
+        \(Windows only\)For command prompt tasks, if you provide the DN by using the -D parameter, some tasks require that you enter the fully qualified user DN. If your fully qualified DN contains a space, then you must place quotations around the fully qualified DN in the command. An example of a DN with spaces is: `cn=someuser,cn=users,o=Software Group,dc=yourco,dc=com,` An example of the DN provided using the -D parameter is: ConfigEngine.bat task_name -DuserID="cn=someuser,cn=users,o=Software Group,dc=yourco,dc=com"
 
         A valid user DN can contain the following characters:
 
-        -   Lowercase characters \{a-z\} and upper case characters \{A-Z\}
-        -   Numbers \{0-9\}
-        -   Exclamation point \{!\}, hyphen \{-\}, period \{.\}, question mark \{?\}, accent grave \{\`\}, tilde \{~\}
-        -   Open parenthesis \{\(\} and close parenthesis \{\)\}
-        -   Open bracket \{\[\} and close bracket \{\]\}
-        -   Underscore \{\_\}, which is the only special character allowed in IBM i
+        -   Lowercase characters {a-z} and upper case characters {A-Z}
+        -   Numbers {0-9}
+        -   Exclamation point {!}, hyphen {-}, period {.}, question mark {?}, accent grave {`}, tilde {~}
+        -   Open parenthesis {(} and close parenthesis {)}
+        -   Open bracket {[} and close bracket {]}
+        -   Underscore {_}
         -   Must be less than 200 characters
     -   **Default value**
 
@@ -3848,12 +3848,12 @@ The following properties are used by the `wp-change-was-admin-user` and `wp-chan
 
         Type the password for the DN that already exists in the user registry. Valid passwords contains only ASCII characters and the following characters:
 
-        -   Lowercase letter \{a-z\} and uppercase letters \{A-Z\}
-        -   Numbers \{0-9\}
-        -   Exclamation point \{!\}, hyphen \{-\}, period \{.\}, question mark \{?\}, accent grave \{\`\}, and tilde \{~\}
-        -   Open parenthesis \{\(\} and close parenthesis \{\)\}
-        -   Open bracket \{\[\} and close bracket \{\]\}
-        -   Underscore \{\_\}, which is the only special character that is allowed in IBM i
+        -   Lowercase letter {a-z} and uppercase letters {A-Z}
+        -   Numbers {0-9}
+        -   Exclamation point {!}, hyphen {-}, period {.}, question mark {?}, accent grave {`}, and tilde {~}
+        -   Open parenthesis {(} and close parenthesis {)}
+        -   Open bracket {[} and close bracket {]}
+        -   Underscore {_}
         -   The password cannot contain a space
         -   Must be 128 characters or less
     -   **Default value**

@@ -451,6 +451,7 @@ This page will contain the known issues for the HCL Portal 9.5 Combined Cumulati
 -   Solution: Go and log in to [HCL Software Support](https://support.hcltechsw.com/csm?sys_kb_id=2d96ede61b5df34077761fc58d4bcbcb&id=kb_article_view&sysparm_rank=2&sysparm_tsqueryId=6a3bcab51b529414a67e9759bc4bcbc4) page to find related information about this issue.
 
 -   Problem: If you do a database transfer to z/OS DB2 after installing HCL Portal 8.5 GA and before updating to the current CF, the schema name used for JCR indices will be the config user name instead of the designated schema name, resulting in potential duplicate entries if more than one portal uses the same z/OS DB2. The schema name is supposed to be sufficient for uniquely configuring multiple Portals to the same z/OS DB2 and it is very possible that the same config user could be used for both Portals.
+
 -   Solution: Apply HCL Portal 8.5 CF01 or later prior to doing a database transfer to z/OS DB2.
 
 -   Problem: After installing and rolling back the Cumulative Fix, you may observe error messages similar to the following in the Installation Manager if you subsequently uninstall HCL Portal 8.5:

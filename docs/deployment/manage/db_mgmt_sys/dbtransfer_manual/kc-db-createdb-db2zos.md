@@ -7,7 +7,7 @@ Manual steps from the Configuration Wizard are included in HCL Digital Experienc
 
 1.  Copy the downloaded script to the database server and extract it.
 
-2.  Use your preferred SQL processor, such as SPUFI, to run the script on the database server. Run the DB2® commands on z/OS® in the order that is listed in the script.
+2.  Use your preferred SQL processor, such as SPUFI, to run the script on the database server.
 
     Example of the script that the Configuration Wizard generates.
 
