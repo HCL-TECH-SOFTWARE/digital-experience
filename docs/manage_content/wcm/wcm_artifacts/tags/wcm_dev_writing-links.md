@@ -81,7 +81,8 @@ Use one of the POC URIs to create a URL with the following format:
 http://hostname/context\_root/mypoc/virtual\_portal\_context?urile=poc\_uri
 ```
 
-**Note:** The POC URI needs to be URL encoded. For example:
+!!! note
+    The POC URI needs to be URL encoded. For example:
 
 ```
 http://myportal/wps/mypoc/myvp?urile=wcm%3Apath%3A/Web+Content/Articles/Sample+Article
@@ -174,11 +175,12 @@ http://hostname/context\_root/portal_page_url_mapping/?current=true&urile=wcm%3A
     The name of the content item.
 
 
-**Note:** The web content viewer on the target page must be configured to receive links from **Other portlets and this portlet**.
+!!! note
+    The web content viewer on the target page must be configured to receive links from **Other portlets and this portlet**.
 
 ## Adding cache parameters to a URL
 
-You can add web content [Cache parameters](wcm_dev_caching_cache-parameters.md) and [Cache expire parameters](wcm_dev_caching_expire-parameters.md) to a URL to custom caching strategies to individual items. For example:
+You can add web content [Cache parameters](../../wcm_management/custom_caching/wcm_dev_caching_cache-parameters.md) and [Cache expire parameters](../../wcm_management/custom_caching/wcm_dev_caching_expire-parameters.md) to a URL to custom caching strategies to individual items. For example:
 
 ```
 `http://hostname/context\_root/library/site\_area\_path/content?cache=site&contentcache=session`
@@ -267,12 +269,8 @@ The urlModeOverride parameter is used to override the default URL context when l
 
 
 
-**Related information**  
-
-
-[Content as a Service pages](../wcm/cntnt_serv_pgs.md)
-
-[Select data format based on MIME type](../wcm/slct_dta_frmt_mime_type.md)
-
-[Access Content as a Service](../wcm/access_cntnt_serv.md)
+???+ info "Related information:"
+    - [Content as a Service pages](../../wcm_content_delivery/content_as_a_service/cntnt_serv_pgs.md)
+    - [Select data format based on MIME type](../../wcm_content_delivery/content_as_a_service/slct_dta_frmt_mime_type.md)
+    - [Access Content as a Service](../../wcm_content_delivery/content_as_a_service/index.md)
 

@@ -10,6 +10,7 @@ The single sign-on cookie represents a security credential that both by the WSRP
 
     -   The WSRP Consumer and the WSRP Producer must be configured to use a shared user registry.
     -   The LTPA keys must be exchanged between WSRP Consumer and WSRP Producer.
+
 -   **Configuring the WSRP Consumer for HTTP-cookie-based single sign-on:**
 
     For cookie forwarding of the LTPA v2 cookie, follow the description given in *Customizing client cookie forwarding*. You need to create a cookie forwarding rule for the cookie named LtpaToken2. To include the Producer host and the hosts of all resources that are linked by the remote portlets, choose the `hostdomainname` parameter.
@@ -27,10 +28,7 @@ The following example properties contain cookie forwarding rules for using HTTP-
 
 
 
-**Related information**  
-
-
-[Securing the WSRP Producer by HTTP-cookie-based single sign-on](../admin-system/wsrpt_prod_sec_ws_http_cb_sso.md)
-
-[Customizing Client Cookie Forwarding](../admin-system/wsrpc_clnt_cook_frwrd.md)
+???+ info "Related information"  
+    -   [Securing the WSRP Producer by HTTP-cookie-based single sign-on](../../../../wsrp/portal_wsrp_producer/securing_wsrp_prod_portal/cfg_security_producer_portal/wsrpt_prod_sec_ws_http_cb_sso.md)
+    -   [Customizing Client Cookie Forwarding](../../../../wsrp/portal_wsrp_consumer/customizing_wsrp_cfg_consumer_portal/wsrpc_clnt_cook_frwrd.md)
 

@@ -3,8 +3,7 @@ id: h_theme_skin_set_default_skin
 title: Setting the default skin
 ---
 
-
-
+# Setting the default skin
 
 Select a skin that is used as the default for all portlets across the portal.
 

@@ -4,6 +4,6 @@ For your convenience, the properties files that are used to configure HCL Digita
 
 During the configuration process, you can enter passwords and user IDs in the properties file. You can also specify them on the command line when you run the task. If you specify the information in the properties file, you can use the delete passwords task to remove the passwords.
 
-???+ info "**Related information:**"
+???+ info "Related information"
     - [Deleting passwords from properties files](../security/sec_del_pswds.md)
 

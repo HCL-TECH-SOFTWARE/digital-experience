@@ -3,7 +3,7 @@ id: h_mp_organizing_objects
 title: Organizing objects
 ---
 
-
+# Organizing objects
 
 
 Objects such as portlets and containers can be rearranged on the page.

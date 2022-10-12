@@ -16,7 +16,8 @@ You can configure HCL Web Content Manager to use different editors for rich text
 
     Select this option to use the EditLive! Java editor. This editor requires a working Java runtime environment on the client computer. Browser pop-up windows must be enabled to use this editor.
 
-    **Note:** Ephox EditLive! is a deprecated feature as of CF11 or higher.
+    !!! note
+        Ephox EditLive! is a deprecated feature as of CF11 or higher.
 
 -   **Custom**
 

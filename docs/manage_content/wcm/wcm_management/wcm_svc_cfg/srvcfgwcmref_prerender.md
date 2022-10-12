@@ -81,4 +81,3 @@ The HCL Web Content Manager pre-rendering service \(WCM PrerenderService\) defin
     Default value: `${WCM_CONTEXT_ROOT}/connect`
 
 
-

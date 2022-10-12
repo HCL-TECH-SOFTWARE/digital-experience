@@ -1,4 +1,4 @@
-# Defining Menu Element Formatting Options
+# Defining menu element formatting options
 
 Define how search results are displayed for the menu element. These options include defining the sort order for results, paging options for menu elements with multiple pages of results, and formatting options that control how the menu is rendered.
 
@@ -37,14 +37,10 @@ Define how search results are displayed for the menu element. These options incl
     -   The text that is entered into the **Separator** field appears between each displayed menu result.
     -   The text that is entered into the **No result design** field is displayed if no matches are found for the menu search criteria.
 
-???+ info "**Related information**"  
-
-    [Inserting an image in an element](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_image.md)
-
-    [Inserting a link in an element](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_link.md)
-
-    [Inserting element tags](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_tags.md)
-
-    [Creating web content tags](../../../../wcm_artifacts/tags/creating_web_content_tags/index.md)
+???+ info "Related information"  
+    -   [Inserting an image in an element](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_image.md)
+    -   [Inserting a link in an element](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_link.md)
+    -   [Inserting element tags](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_tags.md)
+    -   [Creating web content tags](../../../../wcm_artifacts/tags/creating_web_content_tags/index.md)
 
 

@@ -2,6 +2,8 @@
 
 To use Active Directory-Lightweight-Directory-Services as an LDAP user registry, install and set up the server to communicate with your HCL Portal system.
 
+## Procedure
+
 1.  Download and install Active Directory Application Mode. Visit the product documentation for more information.
 
     -   Documentation resource: [Active Directory Application Mode Overview](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831593(v=ws.11))

@@ -1,6 +1,6 @@
 # Virtual portal selection \| Portal authentication
 
-You can set a virtual portal for a login or Portal.login\(\) command with the $Portal setvp or Portal.setvp\(\) command. It is possible to set the virtual portal during a session, but the session becomes effective only during the $Portal login command. The virtual portal is specified by the URL context. The URL context is the part of the home URL that identifies the virtual portal. If $Portal setvp or Portal.setvp\(\) is started without a URL context, the default virtual portal is set.
+You can set a virtual portal for a login or Portal.login(\) command with the $Portal setvp or Portal.setvp(\) command. It is possible to set the virtual portal during a session, but the session becomes effective only during the $Portal login command. The virtual portal is specified by the URL context. The URL context is the part of the home URL that identifies the virtual portal. If $Portal setvp or Portal.setvp(\) is started without a URL context, the default virtual portal is set.
 
 Jython example:
 

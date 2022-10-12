@@ -1,12 +1,12 @@
 # Web Content Manager Multilingual Solution API
 
-This set of APIs allow you to retrieve information about the configured Multilingual Solution \(MLS\) libraries and also to retrieve the translated content items for a given default language content ID \(for example, from English content find translated French and Spanish strings\).
+This set of APIs allow you to retrieve information about the configured Multilingual Solution (MLS) libraries and also to retrieve the translated content items for a given default language content ID (for example, from English content find translated French and Spanish strings).
 
 In the user interface of the WCM Authoring Portlet, one can see the linked translated content and this API gives a similar aggregated view:
 
-![Diagram depicting ML translations within the Web Content Manager Authoring Portlet.](../images/mls_library_links.png)
+![Diagram depicting ML translations within the Web Content Manager Authoring Portlet.](../../../../../images/mls_library_links.png)
 
-The following MLS APIs are available \(as of HCL Digital Experience 9.5 Container Update CF192 and later\):
+The following MLS APIs are available (as of HCL Digital Experience 9.5 Container Update CF192 and later):
 
 -   MLS Library Configuration API
 -   Translated Content API
@@ -128,7 +128,7 @@ The following MLS APIs are available \(as of HCL Digital Experience 9.5 Containe
     http://localhost:10039/wps/mycontenthandler/!ut/p/digest!-qnYtpJ-Sz3gh0FSR\_oeyA/wcmrest/translations/2b287d10-d60a-43c7-9600-ec66907e635e?allAvailableLang=true&amp;allElements=true
 
 
--   **Endpoint for PUT \(From CF193 and higher\)**
+-   **Endpoint for PUT (From CF193 and higher)**
 
     **PUT request to:**
 
@@ -154,7 +154,7 @@ The following MLS APIs are available \(as of HCL Digital Experience 9.5 Containe
     ```
 
 
--   **Expected Body for PUT \(From CF193 and higher\)**
+-   **Expected Body for PUT (From CF193 and higher)**
 
     The body for PUT is same as the result of the GET
 
@@ -220,7 +220,7 @@ The following MLS APIs are available \(as of HCL Digital Experience 9.5 Containe
                                 <wcm:title xml:lang="fi">Body</wcm:title>
                                 <wcm:type>RichTextComponent</wcm:type>
                                 <wcm:data type="text/html"><![CDATA[<p dir="ltr">Tämä on TestMLContentin rungoteksti, joka asuu BaseContentEn / Artikkelit -sivustossa</p>
-    ]]></wcm:data>
+                                ]]></wcm:data>
                             </wcm:element>
                         </elements>
                         <uuid>43970b4e-c66f-46a3-b612-0665c7494918</uuid>
@@ -232,7 +232,7 @@ The following MLS APIs are available \(as of HCL Digital Experience 9.5 Containe
                                 <wcm:title xml:lang="es">Body</wcm:title>
                                 <wcm:type>RichTextComponent</wcm:type>
                                 <wcm:data type="text/html"><![CDATA[<p dir="ltr">This is the the Spanish translated text for TestMLContent which lives in BaseContentEn/Articles</p>
-    ]]></wcm:data>
+                                ]]></wcm:data>
                             </wcm:element>
                         </elements>
                         <uuid>e110f518-5943-411b-b6aa-f21b8a69491a</uuid>
@@ -244,7 +244,7 @@ The following MLS APIs are available \(as of HCL Digital Experience 9.5 Containe
                                 <wcm:title xml:lang="he">Body</wcm:title>
                                 <wcm:type>RichTextComponent</wcm:type>
                                 <wcm:data type="text/html"><![CDATA[<p dir="ltr">זהו הטקסט לגוף של TestMLContent שחי ב- BaseContentEn / Articles</p>
-    ]]></wcm:data>
+                                ]]></wcm:data>
                             </wcm:element>
                         </elements>
                         <uuid>39ec8ba1-d6b3-47b5-8c57-1d78489820bd</uuid>
@@ -263,8 +263,6 @@ The following MLS APIs are available \(as of HCL Digital Experience 9.5 Containe
 
 
 
-**Related information**  
-
-
-[HCL Web Content Manager Multilingual Solution](../wcm/wcm_mls.md)
+    Related information:
+    - [HCL Web Content Manager Multilingual Solution](../../../wcm_content_delivery/mls/index.md)
 

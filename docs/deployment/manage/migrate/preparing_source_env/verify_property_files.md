@@ -2,13 +2,11 @@
 
 Ensure that the existing portal environment is at the appropriate service level for migration.
 
-1.  Open a command prompt and change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+1.  Open a command prompt and change to the wp_profile_root/ConfigEngine directory.
 
-2.  Run the following command to ensure that the wkplc\_comp.properties file contains the correct information:
+2.  Run the following command to ensure that the wkplc_comp.properties file contains the correct information:
 
-    -   AIX® HP-UX Linux™ Solaris : ./ConfigEngine.sh validate-database-connection
-    -   IBM® i: ConfigEngine.sh validate-database-connection
-    -   Windows™: ConfigEngine.bat validate-database-connection
-    -   z/OS®: ./ConfigEngine.sh validate-database-connection
+    -   AIX® and Linux™: `./ConfigEngine.sh validate-database-connection`
+    -   Windows™: `ConfigEngine.bat validate-database-connection`
 
 

@@ -1,3 +1,7 @@
+---
+title: Download wizard selections
+---
+
 # Configuration Wizard: Download wizard selections
 
 Download your wizard selections to save time customizing your values when you set up multiple, similar environments.
@@ -9,13 +13,8 @@ If you choose to reuse your saved wizard selections and you are completing the c
 -   You must select the correct operating system in Step 1 Answer Questions if the target operating system for this configuration has changed.
 -   You must change your database URL value in Step 2 Customize Values if you are using database software on a different system from your last configuration.
 
-**Related information**  
+???+ info "Related information"  
+    -   -   [Configuration Wizard: Reusable wizard selections](../../../portal_admin_tools/cfg_wizard/usage/cw_save_settings.md)
 
 
-[Configuration Wizard: Reusable wizard selections](../cw_panelhelp/cw_save_settings.md)
-
-**References:**  
-
-
-[Reusable wizard selections](cw_save_settings.md)
 

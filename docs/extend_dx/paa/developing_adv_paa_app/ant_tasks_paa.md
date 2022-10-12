@@ -14,14 +14,11 @@ These attributes are a reflection of similar attributes present on the WsAdmin t
 -   NONE: No server connection is used. Instead, a direct connection to the local WebSphere® Application Server configuration repository is used.
 
 |No|Global|
-|properties|Java properties file containing attributes to set in the JVM System properties. The default is $\{EngineInstallLocation\}/config/work/was/jacl.properties.|No|Global|
-|script|Provides the location of the deployment script file. This file contains a set of commands to be passed to the WsAdmin script processor. Set the lang attribute to determine the script processor.If not specified, each deployment task assigns a default script location. It is built from the home directory of the configuration engine and a name specific to the task. For example, wplc\_deployEar. Refer to the individual task for this name. Set the lang attribute to determine the file extension.
+|properties|Java properties file containing attributes to set in the JVM System properties. The default is ${EngineInstallLocation}/config/work/was/jacl.properties.|No|Global|
+|script|Provides the location of the deployment script file. This file contains a set of commands to be passed to the WsAdmin script processor. Set the lang attribute to determine the script processor.If not specified, each deployment task assigns a default script location. It is built from the home directory of the configuration engine and a name specific to the task. For example, wplc_deployEar. Refer to the individual task for this name. Set the lang attribute to determine the file extension.
 
 |No|Global|
-|lang|Contains the language to be used to interpret scripts. The supported values are as follows:-   jacl: Use the Jacl interpreter. This value is the default.
--   jpython: Use the Java Python interpreter.
-
-|No|Global|
+|lang|Contains the language to be used to interpret scripts. The supported values are as follows:-   jacl: Use the Jacl interpreter. This value is the default. <br>-   jpython: Use the Java Python interpreter.|No|Global|
 
 ## Framework-specific Attributes
 
@@ -51,7 +48,7 @@ The following markup tags are supported.
 
 -   **Password markup tag**
 
-    Use the password markup tag to indicate a portion of text that is to remain hidden \(or obscured\) whenever the text value is logged. Use `<p>`, `<pw>`, or `<password>` to indicate the beginning of password text. This tag has no attributes. The default is to substitute the string, PASSWORD\_REMOVED, for the text value during logging. You can override this value with the log attribute.
+    Use the password markup tag to indicate a portion of text that is to remain hidden (or obscured) whenever the text value is logged. Use `<p>`, `<pw>`, or `<password>` to indicate the beginning of password text. This tag has no attributes. The default is to substitute the string, PASSWORD_REMOVED, for the text value during logging. You can override this value with the log attribute.
 
     -   log: The value that is substituted for the real password during logging of the task. Defaults to PASSWORD\_REMOVED. This attribute is not required.
 -   **Upper markup tag**
@@ -799,7 +796,7 @@ The following markup tags are supported.
     -   node: The node scope of the resource action.
     -   required: The Boolean value that is used to tell WebSphere if this property is required or not.
     -   server: The server scope of the resource action.
-    -   zosProcessDefType: z/OS® only: Used to tell which region this property is created for: Servant, Control, or Abjunct. The value defaults to Servant.
+    -   zosProcessDefType: Used to tell which region this property is created for: Servant, Control, or Abjunct. The value defaults to Servant.
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.JVMCustomPropertyCreateImpl class implements this task.
@@ -824,7 +821,7 @@ The following markup tags are supported.
     -   cell: The cell scope of the resource action. The scope is global.
     -   node: The node scope of the resource action.
     -   server: The server scope of the resource action.
-    -   zosProcessDefType: z/OS® only: Used to tell which region this property is removed from: Servant, Control, or Abjunct. The value defaults to Servant.
+    -   zosProcessDefType: Used to tell which region this property is removed from: Servant, Control, or Abjunct. The value defaults to Servant.
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.JVMCustomPropertyRemoveImpl class implements this task.
@@ -1543,7 +1540,7 @@ The following markup tags are supported.
     -   value: The value of the option. If no value is present and the option does not contain nested value elements, then this key does not take a value.
     If a keyword can take a list of values, then a single nested value element is used for each value in the list.
 
-    |Parameter type|Example \(with AdminApp syntax\)|Option element syntax|
+    |Parameter type|Example (with AdminApp syntax)|Option element syntax|
     |--------------|--------------------------------|---------------------|
     |Keyword only|`-nodeployejb`|`<option key="nodeployejb"/>`|
     |Keyword with simple value|`-custom value`|`<option key="custom" value="value"/>`|

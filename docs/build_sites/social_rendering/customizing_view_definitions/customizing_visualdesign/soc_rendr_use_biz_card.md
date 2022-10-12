@@ -35,13 +35,10 @@ For more information, read *Integrating the business card and online status in a
       -   If you want to use the business card on a HCL Portal page, the page editor must add the `portal.livetext.hcard` theme capability to the page. To achieve this, the page editor can add the `wp_liveobject_framework` theme module to the current page profile. For more information, read *The module framework*in the HCL Portal product documentation.
 
 
-<!--
-**Related information**  
-[Configuring global settings for social rendering](../social/soc_rendr_cfg_global.md)
 
-[Integrating with HCL Connections](../collab/i_coll_t_enable_lc.md)
-
-[Integrating the Business card and online status in a custom portlet](../collab/i_domi_t_api_ptag_add_to_portlet.md)
-
-[The module framework](../dev-theme/themeopt_module.md) -->
+???+ info "Related information:"
+      - [Configuring global settings for social rendering](../../cfg_global_settings_social_rendering/index.md)
+      - [Integrating with HCL Connections](../../../../extend_dx/integration/connections/installation/index.md)
+      - [Integrating the Business card and online status in a custom portlet](../../../../extend_dx/portlets_development/collaborative_services_api_person_tag/i_domi_t_api_ptag_add_to_portlet.md)
+      - [The module framework](../../../themes_skins/the_module_framework/index.md)
 

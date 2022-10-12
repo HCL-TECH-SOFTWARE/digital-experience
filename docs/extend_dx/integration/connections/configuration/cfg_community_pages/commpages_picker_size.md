@@ -10,7 +10,8 @@ During this procedure, modify the following property in the WP\_ConnectionsInteg
 
     The value of this property also determines the number of communities that are retrieved the first time that the Page Associations window is used.
 
-    **Performance note:** If you increase this value too much, the response times of the HCL Connections server can become slow.
+    !!! note
+        If you increase this value too much, the response times of the HCL Connections server can become slow.
 
 
 1.  On the portal server, log in to the WebSphere® Integrated Solutions Console.
@@ -24,6 +25,5 @@ During this procedure, modify the following property in the WP\_ConnectionsInteg
 5.  Update the value for the community.picker.page.size property.
 
 6.  Save the property changes.
-
 
 

@@ -9,7 +9,3 @@ You use element designs to define the design and layout of elements.
 -   **[URL generation by using PathCmpnt and URLCmpnt tags](wcm_config_wcmviewer_urlgen.md)**  
 There are some special considerations to keep in mind when you use URLCmpnt and PathCmpnt tags to create URLs to other web content items from within your content.
 
-???+ info "**Related information**"  
-    - [How to work with elements](../panel_help/wcm_dev_elements.md)
-    - [Element designs](../panel_help/wcm_dev_elements_design.md)
-

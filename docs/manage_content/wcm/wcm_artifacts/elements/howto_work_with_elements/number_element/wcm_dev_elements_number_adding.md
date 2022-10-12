@@ -1,9 +1,9 @@
 ---
 id: wcm_dev_elements_number_adding
-title: Adding a Number Element to an Item
+title: Adding a number element to an item
 ---
 
-
+# Adding a number element to an item
 
 
 You add a number element to a site area or content item when you want a numerical value to be used for a specific site area or content item.

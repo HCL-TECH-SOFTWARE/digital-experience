@@ -3,12 +3,13 @@ id: wcm_dev_elements_fileresource_adding
 title: Adding a file resource element to an item
 ---
 
-
+# Adding a file resource element to an item
 
 
 You add a file resource element to a site area or content item when you want the file resource to be used for a specific site area or content item.
 
-**Note:** You can add an element to a content item only if the manage elements feature is enabled in the authoring template that is used by the content item.
+!!!note
+    You can add an element to a content item only if the manage elements feature is enabled in the authoring template that is used by the content item.
 
 1.  Open or create a site area, site area template, content item, or content template.
 
@@ -28,7 +29,8 @@ You add a file resource element to a site area or content item when you want the
 
 9.  Click **Upload a file** to select a file to store in the file resource component.
 
-    **Note:** In CF06 or higher, click **Upload** to upload a file, or click **Select** to select a component. Selecting a component is useful if you need to store a file in a different library, or apply different access settings to the original file resource component. You can select a component only if this option is enabled for the file resource element in the authoring template that is used by the content item or site area.
+    !!!note
+        In CF06 or higher, click **Upload** to upload a file, or click **Select** to select a component. Selecting a component is useful if you need to store a file in a different library, or apply different access settings to the original file resource component. You can select a component only if this option is enabled for the file resource element in the authoring template that is used by the content item or site area.
 
 10. Save the item form.
 

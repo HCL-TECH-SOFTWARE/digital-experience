@@ -29,21 +29,13 @@ Typically, only the master administrator should have the access permissions for 
 For more information about Portal Access Control, go to *Controlling access*. For more information about virtual portal security, go to *Portal Access Control with virtual portals*.
 
 
-<!--
-**Related information**  
 
-
-[Administering virtual portals](../admin-system/advp_adm.md)
-
-[Content of a virtual portal](../admin-system/advppln_content.md)
-
-[Controlling access](../admin-system/control_access.md)
-
-[Setting user and group permissions](../admin-system/sec_ugpp.md)
-
-[Setting resource permissions](../admin-system/sec_rpp.md)
-
-[WSRP services](../admin-system/wsrpc.md)
-
-[The XML configuration interface](../admin-system/admxmlai.md) -->
+???+ info "Related information:"
+    - [Administering virtual portals](../../adm_vp_task/index.md)
+    - [Content of a virtual portal](../advppln_content.md)
+    - [Controlling access](../../../../deployment/manage/security/controlling_access/index.md)
+    - [Setting user and group permissions](../../../../deployment/manage/security/controlling_access/sec_ugpp.md)
+    - [Setting resource permissions](../../../../deployment/manage/security/controlling_access/sec_rpp.md)
+    - [WSRP services](../../../../extend_dx/development_tools/wsrp/index.md)
+    - [The XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
 

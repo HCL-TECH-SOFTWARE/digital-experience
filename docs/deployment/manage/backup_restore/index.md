@@ -17,7 +17,7 @@ When you create a backup and recovery plan, consider these general questions:
 
 **Video**: [HCL Digital Experience - How to backup HCL Portal](https://www.youtube.com/watch?v=3cjA9IUMJow)
 
-???+ info "**Related information:**"
+???+ info "Related information"
     - [Managing your HCL Portal environment](../manage_portal_using_iim/index.md)
     - [Backing up the system](../migrate/preparing_source_env/back_up_the_system.md)
 

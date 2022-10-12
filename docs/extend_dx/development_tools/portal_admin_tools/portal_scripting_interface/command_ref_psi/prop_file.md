@@ -1,10 +1,15 @@
-# Property file format \| Portal scripting interface
+---
+title: Property file format
+---
+
+# Property file format | Portal scripting interface
 
 You can provide locale-specific attributes for a set of locales in a Java property file. The generic format of Java property files is described in the Java API documentation for method load in class java.util.Properties. The description here covers the particular properties that are interpreted when locale-specific attributes are loaded from a portal script.
 
 The property files are loaded by the script interpreter. They must be on the client workstation where the script is run.
 
-**Note:** A property file must be encoded in the ISO 8859-1 character encoding format.
+!!!note
+    A property file must be encoded in the ISO 8859-1 character encoding format.
 
 Here is an example of a property file with no prefix.
 

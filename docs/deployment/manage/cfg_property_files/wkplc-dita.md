@@ -6,7 +6,7 @@
 When specifying values:
 
 -   Do NOT enclose any value in quotes. This will cause a failure in the configuration tasks.
--   Windows paths must use a forward slash \(/\) instead of a backward slash. A backward slash is an escaped character. C
+-   Windows paths must use a forward slash (/) instead of a backward slash. A backward slash is an escaped character. C
 -   Windows long paths are acceptable.
 -   Properties are immutable. Once set, they cannot be changed when a configuration task is running.
 -   Property values can be defined in three ways: on the command line, in this property file, and in a build file. The configuration task uses the following order to determine the property value:
@@ -32,11 +32,11 @@ When specifying values:
 
     -   **Description**
 
-        The host name of the remote server that connects to WebSphere Application Server. Enter the host name including the domain, such as my\_host\_name.mydomain.com
+        The host name of the remote server that connects to WebSphere Application Server. Enter the host name including the domain, such as my_host_name.mydomain.com
 
     -   **Default value**
 
-        @your\_host\_name@
+        @your_host_name@
 
     -   **Examples**
 
@@ -77,7 +77,7 @@ Provide information about the WebSphere Application Server used in the WebSphere
 
     -   **Default value**
 
-        default\_host
+        default_host
 
     -   **Examples**
 
@@ -121,7 +121,7 @@ Provide information about the WebSphere Application Server used in the WebSphere
 
     -   **Description**
 
-        Type the directory path to where WebSphere Application Server product files are installed. You must use forward slashes \(/\) to delimit elements in the path.
+        Type the directory path to where WebSphere Application Server product files are installed. You must use forward slashes (/) to delimit elements in the path.
 
     -   **Default value**
 
@@ -129,23 +129,17 @@ Provide information about the WebSphere Application Server used in the WebSphere
 
     -   **Examples**
 
-        AIX: /usr/IBM/WebSphere/AppServer
+        -   AIX: /usr/IBM/WebSphere/AppServer
 
-        HP-UX: /opt/IBM/WebSphere/AppServer
+        -   Linux: /opt/IBM/WebSphere/AppServer
 
-        IBM i: /QIBM/ProdData/WebSphere/AppServer/V85/ND
-
-        Linux: /opt/IBM/WebSphere/AppServer
-
-        Solaris: /opt/IBM/WebSphere/AppServer
-
-        Windows: c:/Program\_Files/IBM/WebSphere/AppServer
+        -   Windows: c:/Program_Files/IBM/WebSphere/AppServer
 
 -   **WasUserHome**
 
     -   **Description**
 
-        The directory where WebSphere Application Server user data \(profile\) is created. The installation program sets this value based on user information that is provided during installation. You must use forward slashes \(/\) to delimit elements in the path.
+        The directory where WebSphere Application Server user data (profile) is created. The installation program sets this value based on user information that is provided during installation. You must use forward slashes (/) to delimit elements in the path.
 
     -   **Default value**
 
@@ -153,17 +147,11 @@ Provide information about the WebSphere Application Server used in the WebSphere
 
     -   **Examples**
 
-        AIX: /usr/WebSphere/wp\_profile
+        -   AIX: /usr/WebSphere/wp_profile
 
-        HP-UX: /opt/WebSphere/wp\_profile
+        -   Linux: /opt/WebSphere/wp_profile
 
-        IBM i: /QIBM/UserData/WebSphere/AppServer/V8/ND/profiles/wp\_profile
-
-        Linux: /opt/WebSphere/wp\_profile
-
-        Solaris: /opt/WebSphere/wp\_profile
-
-        Windows: c:/WebSphere/wp\_profile
+        -   Windows: c:/WebSphere/wp_profile
 
 -   **CellName**
 
@@ -201,7 +189,7 @@ Provide information about the WebSphere Application Server used in the WebSphere
 
     -   **Default value**
 
-        WebSphere\_Portal
+        WebSphere_Portal
 
     -   **Examples**
 
@@ -211,7 +199,7 @@ Provide information about the WebSphere Application Server used in the WebSphere
 
     -   **Description**
 
-        The name of the application server for administration. For IBM i, if your WebSphere Application Server profile was created with a different WebSphere Application Server administrative server name, you should change this value to reflect that.
+        The name of the application server for administration.
 
     -   **Default value**
 
@@ -235,23 +223,6 @@ Provide information about the WebSphere Application Server used in the WebSphere
 
         None available
 
--   **wasJvmBitType**
-
-    -   **Description**
-
-        This value is a Solaris specific property that specifies whether to use the 64 bit or 32 bit JVM.
-
-    -   **Default value**
-
-        sparc32
-
-    -   **Examples**
-
-        32bit JVM: sparc32, x86, or ia32
-
-        64 bit JVM: sparc64 or x64
-
-
 ### 2.2. HCL Portal configuration properties
 
 Provide basic information about HCL Portal, such as installation directory, ports numbers, user IDs and passwords, and more.
@@ -260,7 +231,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        The directory where HCL Portal is installed. You must use forward slashes \(/\) to delimit elements in the path.
+        The directory where HCL Portal is installed. You must use forward slashes (/) to delimit elements in the path.
 
     -   **Default value**
 
@@ -284,13 +255,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
         AIX: /usr/IBM/WebSphere/PortalServer
 
-        IBM i \(Server, Enable, or Extend offerings\): /QIBM/ProdData/WebSphere/PortalServer/V85/Server
-
-        IBM i \(Express offering\): /QIBM/ProdData/WebSphere/PortalServer/V85/Express
-
         Linux: /opt/IBM/WebSphere/PortalServer
-
-        Solaris: /opt/IBM/WebSphere/PortalServer
 
         Windows: c:/IBM/WebSphere/PortalServer
 
@@ -326,20 +291,19 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        This ID is the short name for the initial HCL Portal administrator user account. This name is used to create a full Distinguished Name \(DN\), which is used to create an account in the VMM file-based repository. If the ID includes spaces, then you must take extra steps to enter it on the command line by using the -D parameter.
+        This ID is the short name for the initial HCL Portal administrator user account. This name is used to create a full Distinguished Name (DN), which is used to create an account in the VMM file-based repository. If the ID includes spaces, then you must take extra steps to enter it on the command line by using the -D parameter.
 
-        \(UNIX only\)For command line tasks, if you provide the ID by using the -D parameter, some tasks require that you enter the fully qualified user DN. If your fully qualified user DN contains a space, you cannot provide the DN using the -D parameter. For example, if your DN is `cn=wpsadmin,cn=users,o=Software Group,dc=yourco,dc=com,` then you must place the DN in the properties file or a parent properties file. If you create a parent properties file named mysecurity.properties, they you would run the following command: ./ConfigEngine.sh task\_name -DparentProperties=/opt/mysecurity.properties.
+        (UNIX only)For command line tasks, if you provide the ID by using the -D parameter, some tasks require that you enter the fully qualified user DN. If your fully qualified user DN contains a space, you cannot provide the DN using the -D parameter. For example, if your DN is `cn=wpsadmin,cn=users,o=Software Group,dc=yourco,dc=com,` then you must place the DN in the properties file or a parent properties file. If you create a parent properties file named mysecurity.properties, they you would run the following command: ./ConfigEngine.sh task_name -DparentProperties=/opt/mysecurity.properties.
 
-        \(Windows only\)For command prompt tasks, if you provide the ID by using the -D parameter, some tasks require that you enter the fully qualified DN. If your fully qualified user DN contains a space, then you must place quotations around the fully qualified user DN in the command. An example of a DN with spaces is: `cn=wpsadmin,cn=users,o=Software Group,dc=yourco,dc=com,` An example of the DN provided using the -D parameter is: ConfigEngine.bat task\_name -DuserID="cn=wpsadmin,cn=users,o=Software Group,dc=yourco,dc=com"
+        (Windows only)For command prompt tasks, if you provide the ID by using the -D parameter, some tasks require that you enter the fully qualified DN. If your fully qualified user DN contains a space, then you must place quotations around the fully qualified user DN in the command. An example of a DN with spaces is: `cn=wpsadmin,cn=users,o=Software Group,dc=yourco,dc=com,` An example of the DN provided using the -D parameter is: ConfigEngine.bat task_name -DuserID="cn=wpsadmin,cn=users,o=Software Group,dc=yourco,dc=com"
 
         A valid user ID contains only ASCII characters and can contain the following characters:
 
-        -   Lowercase characters \{a-z\} and uppercase characters \{A-Z\}
-        -   Numbers \{0-9\}
-        -   Exclamation point \{!\}, Hyphen \{-\}, period \{.\}, question mark \{?\}, accent grave \{\`\}, tilde \{~\} Open parenthesis \{\(\}, and
-        -   close parenthesis \{\)\}
-        -   Open bracket \{\[\} and close bracket \{\]\}
-        -   Underscore \{\_\}, which is the only special character that is allowed in IBM i
+        -   Lowercase characters {a-z} and uppercase characters {A-Z}
+        -   Numbers {0-9}
+        -   Exclamation point {!}, Hyphen {-}, period {.}, question mark {?}, accent grave {`}, tilde {~} Open parenthesis {(}, and
+        -   close parenthesis {)}
+        -   Open bracket {[} and close bracket {]}
     -   **Default value**
 
         wpsadmin
@@ -356,12 +320,12 @@ Provide basic information about HCL Portal, such as installation directory, port
 
         A valid password contains only ASCII characters and can contain the following characters:
 
-        -   Lowercase characters \{a-z\} and uppercase characters \{A-Z\}
-        -   Numbers \{0-9\}
-        -   Exclamation point \{!\}, Hyphen \{-\}, period \{.\}, question mark \{?\}, accent grave \{\`\}, tilde \{~\} Open parenthesis \{\(\}, and
-        -   close parenthesis \{\)\}
-        -   Open bracket \{\[\} and close bracket \{\]\}
-        -   Underscore \{\_\}, which is the only special character that is allowed in IBM i
+        -   Lowercase characters {a-z} and uppercase characters {A-Z}
+        -   Numbers {0-9}
+        -   Exclamation point {!}, Hyphen {-}, period {.}, question mark {?}, accent grave {`}, tilde {~} Open parenthesis {(}, and
+        -   close parenthesis {)}
+        -   Open bracket {[} and close bracket {]}
+        -   Underscore {_}
     -   **Default value**
 
         No default value
@@ -374,7 +338,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        The fully qualified Distinguished Name \(DN\) for the HCL Portal Administrator group. Type the value in lowercase, regardless of the case that is used in the DN.
+        The fully qualified Distinguished Name (DN) for the HCL Portal Administrator group. Type the value in lowercase, regardless of the case that is used in the DN.
 
     -   **Default value**
 
@@ -430,7 +394,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        Required for IBM i only. Specify the port block to use for HCL Portal Server.
+        Specify the port block to use for HCL Portal Server.
 
     -   **Default value**
 
@@ -444,7 +408,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        Required for z/OS only. The library where the ifaedjreg.jar file resides
+        The library where the ifaedjreg.jar file resides
 
     -   **Default value**
 
@@ -458,7 +422,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        Required for z/OS only. The library where the SMF DLLs reside.
+        The library where the SMF DLLs reside.
 
     -   **Default value**
 
@@ -472,7 +436,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        Required for z/OS only. The server's jobname, as specified in the MVS START command JOBNAME parameter. JOBNAME is the name of the task or script that runs when the server is running. MVS \(Multiple Virtual Storage\) is the name of the operating system that runs on the mainframe. The value is passed as a parameter to the server's start procedures to specify the location of the server's configuration files and identify the server to certain WebSphere for z/OS- exploited z/OS facilities \(for example, SAF\). The name must be seven or fewer characters and all uppercase.
+        The server's jobname, as specified in the MVS START command JOBNAME parameter. JOBNAME is the name of the task or script that runs when the server is running. MVS (Multiple Virtual Storage) is the name of the operating system that runs on the mainframe. The value is passed as a parameter to the server's start procedures to specify the location of the server's configuration files and identify the server to certain WebSphere for z/OS- exploited z/OS facilities (for example, SAF). The name must be seven or fewer characters and all uppercase.
 
     -   **Default value**
 
@@ -486,7 +450,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        Required for z/OS only. The cluster transition name of the WLM APPLENV \(WLM application environment\) name for this server. The name must be eight or fewer characters and all uppercase.
+        The cluster transition name of the WLM APPLENV (WLM application environment) name for this server. The name must be eight or fewer characters and all uppercase.
 
     -   **Default value**
 
@@ -500,7 +464,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        Required for z/OS only. The location of the SMP/E installation image for the HCL Portal SMP/E package.
+        The location of the SMP/E installation image for the HCL Portal SMP/E package.
 
     -   **Default value**
 
@@ -575,11 +539,11 @@ The following properties are used if you have a clustered environment.
 
     -   **Description**
 
-        Set the global sharing policy for this application server. Type NONE if you do not want to share cache among different application servers. Only invalidation events are shared among servers in the replication domain. NONE is the equivalent of NOT\_SHARED in the WebSphere Application Server Integrated Solutions Console.
+        Set the global sharing policy for this application server. Type NONE if you do not want to share cache among different application servers. Only invalidation events are shared among servers in the replication domain. NONE is the equivalent of NOT_SHARED in the WebSphere Application Server Integrated Solutions Console.
 
         Type PUSH to share cache. Cache insertions, both the cache ID and the content, are distributed to other nodes in the cluster as they are inserted into the cache on any node.
 
-        Type PUSH\_PULL to share the cache ID but not the cache content. Cache content is pulled by other servers as needed.
+        Type PUSH_PULL to share the cache ID but not the cache content. Cache content is pulled by other servers as needed.
 
     -   **Valid values**
 
@@ -587,7 +551,7 @@ The following properties are used if you have a clustered environment.
 
         PUSH
 
-        PUSH\_PULL
+        PUSH_PULL
 
     -   **Default value**
 
@@ -622,7 +586,7 @@ The following properties are used if you have a clustered environment.
 
 Step-up authentication allows for different types of authentication, with different trust levels or "strength of authentication". Different pages and portlets can be configured to require different trust levels in order to access those pages and portlets.
 
--   **sua\_user**
+-   **sua_user**
 
     -   **Description**
 
@@ -636,7 +600,7 @@ Step-up authentication allows for different types of authentication, with differ
 
         : myname
 
--   **sua\_serversecret\_password**
+-   **sua_serversecret_password**
 
     -   **Description**
 
@@ -650,7 +614,7 @@ Step-up authentication allows for different types of authentication, with differ
 
         None available
 
--   **enable\_rememberme**
+-   **enable_rememberme**
 
     -   **Description**
 
@@ -670,7 +634,7 @@ Step-up authentication allows for different types of authentication, with differ
 
         None available
 
--   **disable\_rememberme**
+-   **disable_rememberme**
 
     -   **Description**
 
@@ -741,7 +705,7 @@ Configuration tasks that use the virtual portal configuration properties include
 
     -   **Description**
 
-        Type the unique portal context that must be provided for the Virtual Portal. If you set the host name parameter \(VirtualPortalHostName\), the portal context is ignored. A virtual portal can either be accessed by a DNS/Host name or a URL prefix. When both a DNS/Host name and URL prefix are provided, the DNS/Host name is used for VirtualPortalContext.
+        Type the unique portal context that must be provided for the Virtual Portal. If you set the host name parameter (VirtualPortalHostName), the portal context is ignored. A virtual portal can either be accessed by a DNS/Host name or a URL prefix. When both a DNS/Host name and URL prefix are provided, the DNS/Host name is used for VirtualPortalContext.
 
     -   **Default value**
 
@@ -775,7 +739,7 @@ Configuration tasks that use the virtual portal configuration properties include
 
     -   **Description**
 
-        The object ID of the virtual portal. The object ID is required to modify and delete virtual portals. To determine object ID, run the following task: list-all-virtual-portals. Do not delete the default virtual portal. The object ID for the default Virtual Portal ends with \_0.
+        The object ID of the virtual portal. The object ID is required to modify and delete virtual portals. To determine object ID, run the following task: list-all-virtual-portals. Do not delete the default virtual portal. The object ID for the default Virtual Portal ends with _0.
 
     -   **Default value**
 
@@ -833,7 +797,7 @@ Configuration tasks that use the virtual portal configuration properties include
 
 ### 7.1. Add or update an LDAP
 
-Use the properties in this section to create \(wp-create-ldap\) or update \(wp-update-federated-ldap\) the LDAP configuration in virtual member manager \(VMM\). If you are updating the LDAP configuration, the federated.ldap.id and federated.ldap.host must match the repository that you want to update.
+Use the properties in this section to create (wp-create-ldap) or update (wp-update-federated-ldap\) the LDAP configuration in virtual member manager (VMM). If you are updating the LDAP configuration, the federated.ldap.id and federated.ldap.host must match the repository that you want to update.
 
 -   **federated.ldap.id**
 
@@ -841,7 +805,7 @@ Use the properties in this section to create \(wp-create-ldap\) or update \(wp-u
 
         Specify a unique identifier for the repository within the cell. For the task wp-create-ldap, the ID can be an arbitrary string to name the new repository definition. For the task wp-update-federated-ldap, the ID must be the ID of the existing repository definition that you want to update.
 
-        Characters that are not allowed in normal XML strings cannot be used in the repository ID. The ID can contain only the following characters: Alphanumeric \(a-z, A-Z, 0-9\), dash \(-\), and underscore \(\_\). It cannot start or end with a dash \(-\) or an underscore \(\_\), and must be a minimum of 3 characters and a maximum of 36 characters in length.
+        Characters that are not allowed in normal XML strings cannot be used in the repository ID. The ID can contain only the following characters: Alphanumeric (a-z, A-Z, 0-9), dash (-), and underscore (_). It cannot start or end with a dash (-) or an underscore (_), and must be a minimum of 3 characters and a maximum of 36 characters in length.
 
     -   **Default value**
 
@@ -855,7 +819,7 @@ Use the properties in this section to create \(wp-create-ldap\) or update \(wp-u
 
     -   **Description**
 
-        Specify the host name of the primary LDAP server. Type either an IP address or a domain name service \(DNS\) name. If multiple load-balanced LDAP servers are in use, enter the host name of the load balancer. During an update, the value of federated.ldap.host must match the LDAP host name of the existing repository that is named by the federated.ldap.id property NOTE: It is not possible to use the wp-update-federated-ldap task to change the host name of an existing LDAP repository definition. To do that, you must delete the old repository definition and add a repository definition by running the wp-create-ldap task again.
+        Specify the host name of the primary LDAP server. Type either an IP address or a domain name service (DNS) name. If multiple load-balanced LDAP servers are in use, enter the host name of the load balancer. During an update, the value of federated.ldap.host must match the LDAP host name of the existing repository that is named by the federated.ldap.id property NOTE: It is not possible to use the wp-update-federated-ldap task to change the host name of an existing LDAP repository definition. To do that, you must delete the old repository definition and add a repository definition by running the wp-create-ldap task again.
 
     -   **Default value**
 
@@ -3843,16 +3807,16 @@ The following properties are used by the `wp-change-was-admin-user` and `wp-chan
 
         \(UNIX only\)For command line tasks, if you provide the DN by using the -D parameter, some tasks require that you enter the fully qualified DN. If your fully qualified DN contains a space, you cannot provide the ID by using the -D parameter. For example, if your DN is `cn=someuser,cn=users,o=Software Group,dc=yourco,dc=com,` then you must place the DN in the properties file or a parent properties file. If you create a parent properties file named mysecurity.properties, your command is: ./ConfigEngine.sh task\_name -DparentProperties=/opt/mysecurity.properties.
 
-        \(Windows only\)For command prompt tasks, if you provide the DN by using the -D parameter, some tasks require that you enter the fully qualified user DN. If your fully qualified DN contains a space, then you must place quotations around the fully qualified DN in the command. An example of a DN with spaces is: `cn=someuser,cn=users,o=Software Group,dc=yourco,dc=com,` An example of the DN provided using the -D parameter is: ConfigEngine.bat task\_name -DuserID="cn=someuser,cn=users,o=Software Group,dc=yourco,dc=com"
+        \(Windows only\)For command prompt tasks, if you provide the DN by using the -D parameter, some tasks require that you enter the fully qualified user DN. If your fully qualified DN contains a space, then you must place quotations around the fully qualified DN in the command. An example of a DN with spaces is: `cn=someuser,cn=users,o=Software Group,dc=yourco,dc=com,` An example of the DN provided using the -D parameter is: ConfigEngine.bat task_name -DuserID="cn=someuser,cn=users,o=Software Group,dc=yourco,dc=com"
 
         A valid user DN can contain the following characters:
 
-        -   Lowercase characters \{a-z\} and upper case characters \{A-Z\}
-        -   Numbers \{0-9\}
-        -   Exclamation point \{!\}, hyphen \{-\}, period \{.\}, question mark \{?\}, accent grave \{\`\}, tilde \{~\}
-        -   Open parenthesis \{\(\} and close parenthesis \{\)\}
-        -   Open bracket \{\[\} and close bracket \{\]\}
-        -   Underscore \{\_\}, which is the only special character allowed in IBM i
+        -   Lowercase characters {a-z} and upper case characters {A-Z}
+        -   Numbers {0-9}
+        -   Exclamation point {!}, hyphen {-}, period {.}, question mark {?}, accent grave {`}, tilde {~}
+        -   Open parenthesis {(} and close parenthesis {)}
+        -   Open bracket {[} and close bracket {]}
+        -   Underscore {_}
         -   Must be less than 200 characters
     -   **Default value**
 
@@ -3884,12 +3848,12 @@ The following properties are used by the `wp-change-was-admin-user` and `wp-chan
 
         Type the password for the DN that already exists in the user registry. Valid passwords contains only ASCII characters and the following characters:
 
-        -   Lowercase letter \{a-z\} and uppercase letters \{A-Z\}
-        -   Numbers \{0-9\}
-        -   Exclamation point \{!\}, hyphen \{-\}, period \{.\}, question mark \{?\}, accent grave \{\`\}, and tilde \{~\}
-        -   Open parenthesis \{\(\} and close parenthesis \{\)\}
-        -   Open bracket \{\[\} and close bracket \{\]\}
-        -   Underscore \{\_\}, which is the only special character that is allowed in IBM i
+        -   Lowercase letter {a-z} and uppercase letters {A-Z}
+        -   Numbers {0-9}
+        -   Exclamation point {!}, hyphen {-}, period {.}, question mark {?}, accent grave {`}, and tilde {~}
+        -   Open parenthesis {(} and close parenthesis {)}
+        -   Open bracket {[} and close bracket {]}
+        -   Underscore {_}
         -   The password cannot contain a space
         -   Must be 128 characters or less
     -   **Default value**

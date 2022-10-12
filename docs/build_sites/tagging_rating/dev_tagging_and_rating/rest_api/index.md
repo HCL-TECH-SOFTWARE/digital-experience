@@ -15,6 +15,6 @@ You can add other query parameters, for example for related tags.
 You can create, update, and delete tags and ratings by using the REST API. --->
 
 
-???+ info "Related information:" 
+???+ info "Related information" 
     - [The tagging and rating user interface](../../tagging_rating_ui/index.md)
 

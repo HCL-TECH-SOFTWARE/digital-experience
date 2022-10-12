@@ -99,8 +99,6 @@ The following table shows which actions the parameters support and whether they 
 
 For examples about how to set the list-rendering context, read the following topics.
 
-**Related information**  
-
-
-[Digital Data Connector \(DDC\) for HCL Portal](../social/plrf_ovu.md)
+???+ info "Related information:"
+    - [Digital Data Connector \(DDC\) for HCL Portal](../../../../../../../../extend_dx/ddc/index.md)
 

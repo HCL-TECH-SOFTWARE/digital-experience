@@ -2,7 +2,7 @@
 
 You can configure the search portlets for local operation, or you can configure them for remote search service. Depending on your configuration, remote search service might have performance benefits by offloading and balancing system load.
 
-You can provide the remote search service as an EJB. Also, separate HCL Portal environments cannot use the same remote search server. Only multiple HCL Portal servers in the same cell can use the same remote search server.
+You can provide the remote search service as an EJB. Also, separate HCL Portal environments cannot use the same remote search server. Only multiple HCL Portal servers in the same cell or Kubernetes cluster can use the same remote search server.
 
 !!! note
     SOAP support for remote search services was deprecated with HCL Digital Experience Version 8.0.
@@ -29,6 +29,6 @@ Configure a remote search service for Portal Search.
 -   **[Configuring HTTP for the seedlist servlet](../admin-system/confighttpsservlet.md)**  
 Learn how to configure HTTP for the seedlist servlet. The seedlist servlet requires HTTPs by default. Therefore, when you access the servlet through HTTP, WebSphere Application Server redirects you to HTTPs. --->
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Search Services](../manage_search/srch_srvs.md)
 

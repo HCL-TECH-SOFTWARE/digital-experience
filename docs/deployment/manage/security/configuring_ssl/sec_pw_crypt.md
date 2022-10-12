@@ -18,23 +18,19 @@ Create a custom class to encrypt passwords after you create your server profile.
 
 In stand-alone environments, administrative functions such as installing WAR files or adding trace settings can fail when you meet both of the following conditions:
 
--   Your HCL Portal server uses the RSA\_token value for security.
+-   Your HCL Portal server uses the RSA_token value for security.
 -   You enable cryptographic offloading of SSL decryption and encryption through an implementation of PKCS11.
 
 If your stand-alone environment meets both of the preceding conditions, complete the following steps:
 
 1.  Log in to the WebSphere Integrated Solutions Console.
-2.  Go to **Security** \> **Global Security** \> **Administrative security** \> **Administrative authentication**
+2.  Go to **Security > Global Security > Administrative security > Administrative authentication**
 3.  Select **Only use the active application authentication mechanism**.
 4.  Click **Apply** then **OK** and save the changes to the master configuration.
 5.  Log out of the WebSphere Integrated Solutions Console.
-6.  Restart the WebSphere\_Portal server.
+6.  Restart the WebSphere_Portal server.
 
 
-**Previous topic:**[Setting up Client Certificate Authentication](../security/certauth.md)
-
-**Related information**  
-
-
-[Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md)
+???+ info "Related information"  
+    -   [Starting and stopping servers, deployment managers, and node agents](../../../../deployment/manage/stopstart.md)
 

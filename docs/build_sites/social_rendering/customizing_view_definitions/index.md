@@ -22,6 +22,6 @@ Social rendering provides you a set of view definitions that you can use to add 
 Site designers can implement design components that support interactions between the user and the social data. For example, a user can post a new reply to a forum topic or delete a previous reply. --->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Roadmap: How to work with social rendering](../soc_rendr_roadmap.md)
 

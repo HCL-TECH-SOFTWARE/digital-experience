@@ -20,6 +20,6 @@ This task can be used to assign users a specific level of access to all librarie
 
 4.  Click `Done`
 
-
-**Parent topic:**[Managing web content libraries](../panel_help/wcm_admin_libraries.md)
+<!--
+**Parent topic:**[Managing web content libraries](../panel_help/wcm_admin_libraries.md) -->
 

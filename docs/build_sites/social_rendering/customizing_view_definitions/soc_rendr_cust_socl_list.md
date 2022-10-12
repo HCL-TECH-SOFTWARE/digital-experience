@@ -146,23 +146,14 @@ The following settings and options are available for customizing social list vie
     You can use this field to control the social object resolution behavior for links that users click in this list. For more detailed information, read *Social Object Resolution*.
 
 
-<!---
-**Related information**  
 
-
-[Using the view definitions provided with social rendering on your portal pages](../social/soc_rendr_use_oob_socl_list.md)
-
-[Using the portal Tag Cloud with lists of social objects](../social/soc_rendr_tag_cloud_w_socl_list.md)
-
-[Configuring the maximum number of items loaded from HCL Connections](../social/soc_rendr_cfg_connct_item_limit.md)
-
-[Customizing the visual design of your view definitions](../social/soc_rendr_cust_socl_list_visual_design.md)
-
-[Dynamic list-rendering contexts](../panel_help/plrf_list_rndr_dynamic_cntxts.md)
-
-[Social object resolution](../social/soc_rendr_soc_obj_resltn.md)
-
-[Managing community associations](../admin-system/commpages_create_mapping.md)
-
-[Administering Portal Search](../admin-system/srtadmsrch.md) --->
+???+ info "Related information:"
+    - [Using the view definitions provided with social rendering on your portal pages](../working_with_social_objects/soc_rendr_use_oob_socl_list.md)
+    - [Using the portal Tag Cloud with lists of social objects](../working_with_social_objects/using_portal_tagcloud_with_social_objects/index.md)
+    - [Configuring the maximum number of items loaded from HCL Connections](../cfg_global_settings_social_rendering/soc_rendr_cfg_connct_item_limit.md)
+    - [Customizing the visual design of your view definitions](../customizing_view_definitions/customizing_visualdesign/index.md)
+    - [Dynamic list-rendering contexts](../../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/connector_plugins/list_rendering_context/plrf_list_rndr_dynamic_cntxts.md)
+    - [Social object resolution](../working_with_social_objects/concept_list_social_objects/soc_rendr_soc_obj_resltn.md)
+    - [Managing community associations](../../../extend_dx/integration/connections/configuration/managing_community_pages/commpages_create_mapping.md)
+    - [Administering Portal Search](../../search/portal_search/administer_portal_search/index.md)
 

@@ -1,6 +1,6 @@
-# Digital Data Connector \(DDC\) for HCL Portal
+# Digital Data Connector (DDC) for HCL Portal
 
-You can use the Digital Data Connector \(DDC\) for HCL Portal framework to integrate data from external data sources on your portal pages by using HCL Web Content Manager presentation components. External data means that the data does not need to be stored directly in HCL Web Content Manager. For example, you can use DDC to render social data that you have on your HCL Connections server or on other social platforms in the context of your portal pages. Other possible data sources include news feeds, task lists, product catalog information, to name just a few.
+You can use the Digital Data Connector (DDC) for HCL Portal framework to integrate data from external data sources on your portal pages by using HCL Web Content Manager presentation components. External data means that the data does not need to be stored directly in HCL Web Content Manager. For example, you can use DDC to render social data that you have on your HCL Connections server or on other social platforms in the context of your portal pages. Other possible data sources include news feeds, task lists, product catalog information, to name just a few.
 
 With Digital Data Connector, your website designers can use Web Content Manager presentation components to generate the web page markup for your external data. They can use all the Web Content Manager data management facilities for managing your external data visualizations. These facilities include content syndication, version handling, workflow, and targeting. They can manage the design components in the same way as your other Web Content Manager content and design components. The major benefits of this approach include the following:
 

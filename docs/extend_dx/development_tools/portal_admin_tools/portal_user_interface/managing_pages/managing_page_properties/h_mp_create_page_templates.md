@@ -4,20 +4,23 @@ To simplify the creation of pages, define pre-configured pages that can be used 
 
 You can configure a template page like any portal page and add pre-configured portlets. Whenever a new page is created from the template, the page layout, portlets, and portlet configuration from the template are copied to the new page. You can also associate a page template with a community in HCL Connections or with a site area in HCL Web Content Manager. When such an association is present, pages that are created from the template can automatically create the associated community or site area.
 
-**Important:** When a new page is created from a template, no reference to the template page used to create the page is maintained. This action means that all changes that you apply to a template page after pages are created from this template are not propagated to any of the pages that exist.
+!!!important
+    When a new page is created from a template, no reference to the template page used to create the page is maintained. This action means that all changes that you apply to a template page after pages are created from this template are not propagated to any of the pages that exist.
 
-1.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface** \> **Manage Pages**.
+1.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface > Manage Pages**.
 
-2.  Click **Content Root** \> **Hidden Pages** \> **Page Templates**.
+2.  Click **Content Root > Hidden Pages > Page Templates**.
 
-    **Note:** Virtual portals do not include the **Page Templates** label by default. However, you can add the label manually. When you do so, ensure that you give the label the unique name of `wps.content.template.root`.
+    !!!note
+        Virtual portals do not include the **Page Templates** label by default. However, you can add the label manually. When you do so, ensure that you give the label the unique name of `wps.content.template.root`.
 
 3.  Create the page to be used as a template by clicking **New Page** or **New Page from**.
 
     -   **New Page** creates a standard portal page. Specify a title for the page and any other page characteristics, as you would for a standard portal page.
     -   **New Page from** creates the page from an existing template. Specify a title for the page and any other page characteristics. If you intend to add a content association to the template, ensure that you specify a friendly URL for the page. Select the page template to use as the basis for the new template.
 
-        **Note:** When you use page templates from a different theme, the page layouts are not found and can cause the options for portlet actions to be unavailable. To avoid such issues, when you create pages update the page templates to match to the theme that you are using.
+        !!!note
+            When you use page templates from a different theme, the page layouts are not found and can cause the options for portlet actions to be unavailable. To avoid such issues, when you create pages update the page templates to match to the theme that you are using.
 
 4.  Save the new template.
 
@@ -52,8 +55,6 @@ Page titles in any language are not copied.
 -   A new community is created in HCL Connections. The name of the community is derived from the title of the new page.
 -   The community association on the new page is modified to reference the newly created community.
 
-**Related information**  
-
-
-[Page templates](../site/site_page_temps.md)
+???+ info "Related information"  
+    -   [Page templates](../../../../../../build_sites/sitebuilder/site_dev_with_sitebuilder/creating_sites_using_sitebuilder/sitebuilder_learn_pgtemplate.md)
 

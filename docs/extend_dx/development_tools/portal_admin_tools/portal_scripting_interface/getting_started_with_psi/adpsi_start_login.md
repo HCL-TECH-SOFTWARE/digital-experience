@@ -5,14 +5,14 @@ Before you can work with portal scripting commands, you need to log in to the po
 At the command prompt `wsadmin>` use the following command: `Portal.login("your_userid", "your_password")`:
 
 ```
-wsadmin> **Portal.login\(your\_userid, your\_password\)**
+wsadmin> **Portal.login(your_userid, your_password)**
 ```
 
 If you logged in successfully, the Portal Scripting Interface returns a message that starts with `logged in as . . .`. The console now shows the following lines:
 
 ```
-wsadmin> **Portal.login\(your\_userid, your\_password\)**wsadmin> 
-**logged in as "uid=your\_userid,o=defaultWIMFileBasedRealm"**
+wsadmin> **Portal.login(your_userid, your_password)**wsadmin> 
+**logged in as "uid=your_userid,o=defaultWIMFileBasedRealm"**
 
 ```
 

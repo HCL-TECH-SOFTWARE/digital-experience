@@ -4,7 +4,7 @@ With a WebDAV-based theme, static theme content is deployed through WebDAV. Use 
 
 **Video:** [Create a WebDAV theme copy using HCL Digital Experience 9.5](https://www.youtube.com/watch?v=Ql64T1EPvZI&list=PL2tETTrnR4wui1rTIF7coAIRa0WsbS5Mv)
 
-
+<!--
 -   **[Copying the static resources for your theme](../dev-theme/themeopt_cust_copy_statictheme.md)**  
 You need to make a unique copy of the Portal 8.5 theme static resources before you start customizing your custom theme.
 -   **[Copying the static resources for your skin](../dev-theme/themeopt_cust_copy_skin.md)**  
@@ -19,5 +19,5 @@ After you copy your static and dynamic theme resources and modify your dynamic r
 You must bind your theme to the context root of the web application for your theme.
 -   **[Making your custom skin the default skin](../dev-theme/themeopt_cust_copy_setskin.md)**  
 Add your custom skin to the skins list to set it as the default skin for your theme. If it is the only custom skin, it is automatically set as the default skin for your theme. 
-
+-->
 

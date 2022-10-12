@@ -1,5 +1,4 @@
-# Using a Number Element
-
+# Using a number element
 
 You use a number element to store a numerical value.
 

@@ -15,29 +15,20 @@ By applying these concepts it is possible to turn on and off an arbitrary number
 
 The Portal 8.5 theme contains three types of files: JavaScript, dynamic content \(JSP files\) and static resources.
 
-<!--
--   **[Static resources](../dev-theme/themeopt_defaultparts_static.md)**  
+
+-   **[Static resources](themeopt_defaultparts_static.md)**  
 Static resources include the markup that is defined by .html, .css, and .js files that are used by the theme. Some .json files are used to define menu options, module definitions, and module profiles.
--   **[Dynamic content \(jsp\) resources](../dev-theme/themeopt_defaultparts_jsp.md)**  
+-   **[Dynamic content \(jsp\) resources](themeopt_defaultparts_jsp.md)**  
 Dynamic content includes resources that are defined by jsp files that are used by the theme.
 
 
-**Related information**  
-
-
-[Setting up Client Certificate Authentication](../security/certauth.md)
-
-[Changing the login and logout pages](../security/sec_chg_login.md)
-
-[Importing a static page from an installed template](../admin-system/spa_xml_impt_tmplt.md)
-
-[The module framework](../dev-theme/themeopt_module.md)
-
-[Simple menu framework](../dev-theme/themeopt_cust_menu.md)
-
-[Modules that are provided with the modularized theme](../dev-theme/themeopt_oob.md)
-
-[<portal-logic/\> tags](../dev-portlet/dgn_ptllogic.md)
-
-[Dynamically changing the language during the user session](../admin-system/adchglang_dynamic.md) -->
+???+ info "Related information:"
+    - [Setting up Client Certificate Authentication](../../../deployment/manage/security/configuring_ssl/certauth.md)
+    - [Changing the login and logout pages](../../../deployment/manage/security/external_sec_mgmt/sec_chg_login.md)
+    - [Importing a static page from an installed template](../../create_sites/building_website/static_content/including_static_content_pages/export_import_static_page/spa_xml_impt_tmplt.md)
+    - [The module framework](../the_module_framework/index.md)
+    - [Simple menu framework](../customizing_theme/menus/simple_menu_framework/index.md)
+    - [Modules that are provided with the modularized theme](../the_module_framework/oob_modules/index.md)
+    - [<portal-logic/\> tags](../customizing_theme/portal_jsp_tag/dgn_ptllogic.md)
+    - [Dynamically changing the language during the user session](../../../extend_dx/development_tools/portal_admin_tools/language_support/adchglang_dynamic.md)
 

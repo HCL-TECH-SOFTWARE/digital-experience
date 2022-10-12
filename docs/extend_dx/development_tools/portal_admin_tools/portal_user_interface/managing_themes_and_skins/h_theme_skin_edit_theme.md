@@ -3,7 +3,7 @@ id: h_theme_skin_edit_theme
 title: Editing a theme
 ---
 
-
+# Editing a theme
 
 
 Add or remove skins that the theme uses.
@@ -16,6 +16,7 @@ To edit a theme:
 
     -   To add a skin to the theme, select a skin from the **All skins** list, and then click the arrow key to add the skin to the **Skins for this theme** list.
     -   To remove a skin from the theme, select a skin from the **Skins for this theme** list, and then click the arrow key to remove it.
+    
 3.  Click **OK** to save your changes, or click **Cancel** to exit without saving any changes.
 
 

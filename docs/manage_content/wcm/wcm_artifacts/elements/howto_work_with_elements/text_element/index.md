@@ -1,7 +1,4 @@
 # Using a text element
-
-
-
 You use a text element to store a short section of text. To create a text element, you can either add a text element to an authoring template, site area, or content item, or create a text component.
 
 1.  [Creating a text component](wcm_dev_elements_text_creating.md)  

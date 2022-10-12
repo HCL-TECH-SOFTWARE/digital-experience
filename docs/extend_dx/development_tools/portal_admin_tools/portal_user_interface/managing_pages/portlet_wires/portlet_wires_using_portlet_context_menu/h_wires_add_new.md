@@ -3,7 +3,7 @@ id: h_wires_add_new
 title: Adding a wire from the portlet context menu
 ---
 
-
+# Adding a wire from the portlet context menu
 
 
 Use the **Create** tab to define a new wire from the source event on the source portlet window and a target event on a different portlet window.

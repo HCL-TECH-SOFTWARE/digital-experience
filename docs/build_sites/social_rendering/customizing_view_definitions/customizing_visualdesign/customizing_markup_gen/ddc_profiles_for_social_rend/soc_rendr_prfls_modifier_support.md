@@ -48,5 +48,5 @@ The modifier support profile declares the following attribute names:
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Configuring globally how social object data is served](../../../../cfg_global_settings_social_rendering/soc_rendr_cfg_data_serve.md)

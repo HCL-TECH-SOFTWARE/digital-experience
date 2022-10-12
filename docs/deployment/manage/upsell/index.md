@@ -38,7 +38,7 @@ After your initial HCL Digital Experience installation, you can purchase a licen
 
 5.  Accept the license agreement and then click **Next**.
 
-6.  On the **Location** panel, select **Use the existing package group**. Select the **HCL Portal V85** package group name and then click **Next**.
+6.  On the **Location** panel, select **Use the existing package group**. Select the package group name used during install and then click **Next**.
 
 7.  On the Features panel, check the box for the additional feature that you purchased. Then, click **Next**.
 
@@ -46,10 +46,8 @@ After your initial HCL Digital Experience installation, you can purchase a licen
 
     New profiles are enabled with the upgraded offering. Existing profiles are only updated if they were created with the IBM Installation Manager. If you created profiles with the Configuration Wizard, run the following configuration task from the wp_profile_root/ConfigEngine directory.
 
-    -   AIX® HP-UX Linux™ Solaris: `./ConfigEngine.sh enable-wcm -DWasPassword=password`
-    -   IBM i: `ConfigEngine.sh enable-wcm -DWasPassword=password`
+    -   AIX® and Linux™: `./ConfigEngine.sh enable-wcm -DWasPassword=password`
     -   Windows™: `ConfigEngine.bat enable-wcm -DWasPassword=password`
-    -   z/OS®: `./ConfigEngine.sh enable-wcm -DWasPassword=password`
 
     New profiles are enabled with the upgraded offering. Existing profiles are only updated if they were created with the IBM Installation Manager.
 

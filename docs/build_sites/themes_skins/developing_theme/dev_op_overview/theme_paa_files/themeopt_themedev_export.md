@@ -12,6 +12,6 @@ A message displays that indicates whether the export process was successful. If 
 You can now use the theme PAA file to install your theme on different servers.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [PAA file structure overview](../../../../../extend_dx/paa/developing_basic_paa_app/creating_paa_file/paa_file_structure/index.md)
 

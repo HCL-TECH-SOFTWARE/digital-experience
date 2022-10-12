@@ -6,11 +6,11 @@ Ensure that the Portal 8.5 theme is set for your Tag and Search Center pages bef
 
 The Search and Tag Center profile is a hidden profile. Therefore, you must set this profile in the page properties.
 
-1.  To create the Tag Center pages, or apply the correct theme in order to work with these pages, run the following configuration task. Go to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory and enter:
+1.  To create the Tag Center pages, or apply the correct theme in order to work with these pages, run the following configuration task. Go to the wp_profile_root/ConfigEngine directory and enter:
 
-    -   AIX® HP-UX Linux™ Solaris: ./ConfigEngine.sh cp-setup-tag-center
-    -   IBM® i: ConfigEngine.sh cp-setup-tag-center
-    -   Windows™: ConfigEngine.bat cp-setup-tag-center
+    -   AIX® and Linux™: `./ConfigEngine.sh cp-setup-tag-center`
+    -   Windows™: `ConfigEngine.bat cp-setup-tag-center`
+
 2.  To update the profile for the Search Center pages, complete the following steps:
 
     1.  Go to Page properties.
@@ -19,8 +19,6 @@ The Search and Tag Center profile is a hidden profile. Therefore, you must set t
 
 
 
-**Related information**  
-
-
-[Enabling and disabling the Dojo tagging and rating options for additional profiles](../admin-system/tag_rate_nbldsbl_dojo_options.md)
+???+ info "Related information**"  
+    -   [Enabling and disabling the Dojo tagging and rating options for additional profiles](../../../../../../build_sites/tagging_rating/cfg_reference/tag_rate_nbldsbl_dojo_options.md)
 

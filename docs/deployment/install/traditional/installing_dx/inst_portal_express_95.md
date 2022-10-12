@@ -18,7 +18,7 @@ CLFBD0030E: Caught error, message: Past the expiration date on license.
 ```
 
 
-Similarly, attempts to install the product will also fail. A review of the installation logs will show the same CLFBD0026E and CLFBD0030E errors. The cause of this issue is an invalid license duration in the license file \(wpe85.lic\). This issue impacts both trial \(evaluation\) and non-trial versions of HCL Portal Express 8.5, 9.0 and new installations.
+Similarly, attempts to install the product will also fail. A review of the installation logs will show the same CLFBD0026E and CLFBD0030E errors. The cause of this issue is an invalid license duration in the license file (wpe85.lic). This issue impacts both trial (evaluation) and non-trial versions of HCL Portal Express 8.5, 9.0 and new installations.
 
 ## Recommended Solution
 
@@ -28,7 +28,7 @@ To apply iFix PH03610 solution, users need to visit the HCL Software License Por
 
 To address a server startup failure, remove the License Check application via the following steps:
 
-1.  Replace the existing file of the same name with the following: lc\_adv\_cfg.xml. Where
+1.  Replace the existing file of the same name with the following: lc_adv_cfg.xml. Where
 
     ```
     <PortalHome>/installer/wp.exp.wart/lcComponent/config/includes/lc_adv_cfg.xml
@@ -36,14 +36,14 @@ To address a server startup failure, remove the License Check application via th
 
     where <PortalHome\> represents the installed location. By default, this is:
 
-    -   Windows: C:\\IBM\\WebSphere\\PortalServer
+    -   Windows: C:\\IBM\WebSphere\PortalServer
     -   Linux: /opt/IBM/WebSphere/PortalServer
-    -   IBM i: /QIBM/ProdData/WebSphere/PortalServer/V85/Express
+
 2.  In the `ConfigEngine` directory of your Portal profile, run the following `ConfigEngine` task:
 
     -   Windows: `ConfigEngine.bat action-remove-ear-wp.exp.wart/lcComponent -DWasPassword=<Was_admin-password>`
     -   Linux: `./ConfigEngine.sh action-remove-ear-wp.exp.wart/lcComponent -DWasPassword=<Was_admin-password>`
-    -   IBM i: `ConfigEngine.sh action-remove-ear-wp.exp.wart/lcComponent -DWasPassword=<Was_admin-password>`
+
     The server should now start successfully.
 
 

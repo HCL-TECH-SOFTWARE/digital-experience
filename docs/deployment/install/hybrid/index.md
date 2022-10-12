@@ -22,8 +22,8 @@ The HCL Digital Experience 9.5 Hybrid deployment reference architecture and topi
 
 -   A high-performance network connection is established between the HCL DX 9.5 CF19 and higher on-premises environment and the target DX Red Hat Open Shift or Kubernetes platform deployment.
 
--   **Volume Requirement**: Requires an AccessMode of `ReadWriteMany`. Refer to [Storage class and volume](/manage/container_configuration/sample_storage_class_volume.md) for more information.
--   Ensure you have obtained a backup of the HCL DX 9.5 on-premises deployment. See [Backup and Rrestore](../../../deployment/manage/backup_restore//index.md) for additional information.
+-   **Volume Requirement**: Requires an AccessMode of `ReadWriteMany`. Refer to [Storage class and volume](../../manage/container_configuration/sample_storage_class_volume.md) for more information.
+-   Ensure you have obtained a backup of the HCL DX 9.5 on-premises deployment. See [Backup and Restore](../../../deployment/manage/backup_restore//index.md) for additional information.
     -   **Step 1: Configure Networking** between the on-premises DX 9.5 CF198 or later deployment so that the HCL DX 9.5 Container Update CF198 or later components are accessible externally from the Kubernetes or OpenShift platform cluster. Reference the [Configure networking](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md) topic for more information.
 
     -   **Step 2: Set the Core application deployment parameter** in your custom-values.yaml file to `false`. Refer to the [Planning your container deployment using Helm](../../../deployment/install/container/helm_deployment/preparation/index.md) topic for more information.

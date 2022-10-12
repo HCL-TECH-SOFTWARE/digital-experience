@@ -14,13 +14,14 @@ You set the extended mode in the custom properties of the WP Configuration Servi
 4.  Save your changes.
 5.  Restart your HCL Digital Experience server for your changes to take effect.
 
-**Example:** Assume that the browser sends the Accept-Language header `"DE_de, en"`. This combination means that the user prefers German as spoken in Germany as first priority, then English, but not German in general. In a portal scenario, these preferences would result in serving resources in `"en"`, even though `"de"` would be supported \(but is not acceptable according to the header\). The default language fallback mode adds all fallback locales to the header, preserving the relative order of the original locales in the header. The result would be `"DE_de, en, de"`, with the fallback to `"de"` showing after `"en"` to match the user preference.
+**Example:** 
+Assume that the browser sends the Accept-Language header `"DE_de, en"`. This combination means that the user prefers German as spoken in Germany as first priority, then English, but not German in general. In a portal scenario, these preferences would result in serving resources in `"en"`, even though `"de"` would be supported \(but is not acceptable according to the header\). The default language fallback mode adds all fallback locales to the header, preserving the relative order of the original locales in the header. The result would be `"DE_de, en, de"`, with the fallback to `"de"` showing after `"en"` to match the user preference.
 
 In contrast, the extended language fallback mode gives fallbacks precedence over the original order of locales in the header. For `"DE_de, en"`, the filter would generate `"DE_de, de, en"`, giving all fallbacks for `"DE_de"` the same relative priority as `"DE_de"`.
 
 You can write your own filters and apply your own locale fallback logic. HCL Digital Experience uses the value of the Accept-Language header for further processing. To replace the Language fallback servlet filter, proceed as follows:
 
-1.  Edit the file `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/config/cells/node-name/applications/wps.ear/deployments/wps/wps.war/WEB-INF/web.xml`.
+1.  Edit the wp_profile_root/config/cells/node-name/applications/wps.ear/deployments/wps/wps.war/WEB-INF/web.xml file.
 2.  Locate the following section:
 
     ```
@@ -34,17 +35,11 @@ You can write your own filters and apply your own locale fallback logic. HCL Dig
 4.  Save the file.
 5.  Restart your HCL Digital Experience server for your changes to take effect.
 
-**Notes:**
-
--   If you remove a language from the portal, both filters rely on the locales that were defined last. For example, if you remove Japanese \(`"ja-JP"`, `"ja"`\) from the locales that are defined in the portal, then the browser locale list specifies `"ja-JP,de,ja"`. In this case, the portal recognizes that `"ja-JP"` and `"ja"` do not have a match among the portal defined locales. Therefore, it ignores these entries `"ja-JP"` and `"ja"`. Instead, it falls back to the second entry named `"de"`.
--   HCL Web Content Manager does not use portlets and therefore cannot apply the filter that the portal uses for portlets. Therefore, if your portal installation includes Web Content Manager, you must set the custom filter in the Web Content Manager `web.xml` under the directory location `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/config/cells/node-name/applications/wcm.ear/deployments/wcm/ilwwcm.war/WEB-INF/`. Replace the extended filter as shown previously and restart the portal.
-
-    If you use servlet delivery instead of portlet delivery, then you must edit `web.xml` under the directory location `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/config/cells/node-name/applications/PA_WCM_Authoring_UI.ear/deployments/PA_WCM_Authoring_UI/ilwwcm-authoring.war/WEB-INF/`.
+!!!note "Notes"
+    -   If you remove a language from the portal, both filters rely on the locales that were defined last. For example, if you remove Japanese (`"ja-JP"`, `"ja"`\) from the locales that are defined in the portal, then the browser locale list specifies `"ja-JP,de,ja"`. In this case, the portal recognizes that `"ja-JP"` and `"ja"` do not have a match among the portal defined locales. Therefore, it ignores these entries `"ja-JP"` and `"ja"`. Instead, it falls back to the second entry named `"de"`.
+    -   HCL Web Content Manager does not use portlets and therefore cannot apply the filter that the portal uses for portlets. Therefore, if your portal installation includes Web Content Manager, you must set the custom filter in the Web Content Manager `web.xml` under the directory location wp_profile_root/config/cells/node-name/applications/wcm.ear/deployments/wcm/ilwwcm.war/WEB-INF/. Replace the extended filter as shown previously and restart the portal.<br><br>If you use servlet delivery instead of portlet delivery, then you must edit web.xml under the directory location wp_profile_root]/config/cells/node-name/applications/PA_WCM_Authoring_UI.ear/deployments/PA_WCM_Authoring_UI/ilwwcm-authoring.war/WEB-INF/.
 
 
-
-**Related information**  
-
-
-[XML samples for creating or removing language definitions](../admin-system/adxmlsmp_lang.md)
+???+ info "Related information"  
+    -   [XML samples for creating or removing language definitions](../../portal_admin_tools/language_support/supporting_new_language/adxmlsmp_lang.md)
 

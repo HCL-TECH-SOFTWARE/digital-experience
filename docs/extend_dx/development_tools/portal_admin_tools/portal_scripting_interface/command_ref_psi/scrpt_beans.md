@@ -1,4 +1,8 @@
-# Command reference - Script beans \| Portal Scripting Interface
+---
+title: Command reference - Script beans
+---
+
+# Command reference - Script beans | Portal Scripting Interface
 
 The portal scripting component adds Script beans to the wsadmin tool. These Script beans are objects with methods that work on the portal data.
 

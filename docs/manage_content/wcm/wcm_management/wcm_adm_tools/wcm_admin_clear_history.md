@@ -51,7 +51,8 @@ You use the clear history tool to clear the history of an item.
         If set to true, the last modified date of items that are updated by the module is preserved. If omitted or set to false, the last modified date is not preserved.
 
 
-**Note:** You cannot completely clear item history. One history item always remains in an item no matter what parameters you select when the item history is cleared.
+!!! note
+    You cannot completely clear item history. One history item always remains in an item no matter what parameters you select when the item history is cleared.
 
 ## Running the tool on a virtual portal
 
@@ -71,8 +72,6 @@ There are two methods available when the tool is run on a virtual portal:
 
 
 
-**Related information**  
-
-
-[Setting service configuration properties](../admin-system/adsetcfg.md)
+???+ info "Related information"
+    - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 

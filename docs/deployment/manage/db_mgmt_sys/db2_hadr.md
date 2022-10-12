@@ -13,14 +13,16 @@ Before you enable the HADR, use the **Database Transfer** option in the Configur
 
 2.  Back up the JCR database. The reconfigure-jcr-for-hadr task permanently changes the JCR schema.
 
-3.  Open a command prompt and change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory.
+3.  Open a command prompt and change to the wp_profile_root\\ConfigEngine directory.
 
-4.  Run the reconfigure-jcr-for-hadr task to convert columns in ICMUTMWIDE0 table from NOT LOGGED BLOB \(Binary Large Object\) TO LOGGED BLOB.
+4.  Run the reconfigure-jcr-for-hadr task to convert columns in ICMUTMWIDE0 table from NOT LOGGED BLOB (Binary Large Object) TO LOGGED BLOB.
 
-    **Note:** For clustered environments, run this task only from one node.
+    !!!note
+        For clustered environments, run this task only from one node.
 
-    -   AIX® HP-UX Linux™ Solaris: ./ConfigEngine.sh reconfigure-jcr-for-hadr -DTransferDomainList=jcr -DWasPassword=password
-    -   Windows™: ConfigEngine.bat reconfigure-jcr-for-hadr -DTransferDomainList=jcr -DWasPassword=password
+    -   AIX®, Linux™: ./ConfigEngine.sh reconfigure-jcr-for-hadr -DTransferDomainList=jcr -DWasPassword=password
+    -   Windows™: `ConfigEngine.bat reconfigure-jcr-for-hadr -DTransferDomainList=jcr -DWasPassword=password`
+
 5.  Start the portal server.
 
 6.  Complete the following steps on the primary databases:
@@ -48,7 +50,7 @@ Before you enable the HADR, use the **Database Transfer** option in the Configur
         DB2_HADR_CUS_2    50002/tcp
         ```
 
-        DB2\_HADR\_DB\_1 represents a database on the primary server. DB2\_HADR\_DB\_2 represents a database on the standby server.
+        DB2_HADR_DB_1 represents a database on the primary server. DB2_HADR_DB_2 represents a database on the standby server.
 
     2.  Run the following command, for each portal database, to enable log archiving in the databases:
 
@@ -141,7 +143,7 @@ Before you enable the HADR, use the **Database Transfer** option in the Configur
         DB2_HADR_CUS_2    50002/tcp
         ```
 
-        DB2\_HADR\_DB\_1 represents a database on the primary server. DB2\_HADR\_DB\_2 represents a database on the standby server.
+        DB2_HADR_DB_1 represents a database on the primary server. DB2_HADR_DB_2 represents a database on the standby server.
 
     3.  Copy the backup images from the primary server to the standby server.
 
@@ -227,7 +229,7 @@ Before you enable the HADR, use the **Database Transfer** option in the Configur
 
     1.  Log in to the WebSphere Integrated Solutions Console.
 
-    2.  Go to **Resources** \> **JDBC** \> **JDBC providers** \> **wpdbJDBC\_db2** \> **Data sources** \> **JCR85DBLADS** \> **WebSphere Application Server data source properties**.
+    2.  Go to **Resources > JDBC > JDBC providers > wpdbJDBC_db2 > Data sources > JCR85DBLADS > WebSphere Application Server data source properties**.
 
     3.  Go to the **Advanced DB2 features** section.
 
@@ -237,6 +239,7 @@ Before you enable the HADR, use the **Database Transfer** option in the Configur
         -   **Maximum retries for client reroute**: Enter a minimum of 3 retries.
         -   **Alternate server names**: Enter an alternative server.
         -   **Alternate port numbers**: For example, enter 50000.
+
     5.  Save your changes.
 
     6.  Restart the WebSphere Application Server application servers.
@@ -246,7 +249,5 @@ Before you enable the HADR, use the **Database Transfer** option in the Configur
 
 
 **Related information**  
-
-
-[Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md)
+[Starting and stopping servers, deployment managers, and node agents](../../../deployment/manage/stopstart.md)
 

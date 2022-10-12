@@ -20,7 +20,7 @@ To enable the tag and rating widgets for other profiles, proceed as follows:
 
     1.  Start a WebDAV client.
 
-    2.  Create a connection with the entry point to /wps/mycontenthandler/dav/fs-type1 of HCL Portal Version 8.5.
+    2.  Create a connection with the entry point to /wps/mycontenthandler/dav/fs-type1.
 
     3.  Go to **Themes** \> **Portal 8.5** \> **Profiles**.
 
@@ -28,7 +28,7 @@ To enable the tag and rating widgets for other profiles, proceed as follows:
 
     5.  Log in to the portal server.
 
-    6.  Invalidate the cache with the Portal Theme Analyzer. Or, click **Administration** \> **Utilities** \> **Control Center** \> **Invalidate cache**. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](../../themes_skins/the_module_framework/themeopt_analyzer/utilities/index.md).
+    6.  Invalidate the cache with the Portal Theme Analyzer. Or, click **Themes** \> **Analyzer** \> **Utilities** \> **Control Center** \> **Invalidate cache**. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](../../themes_skins/the_module_framework/themeopt_analyzer/utilities/index.md).
 
     This step applies the changes that you made to the profile on the server.
 
@@ -42,6 +42,6 @@ You can now use the tag and rating widgets with the modified profile.
 To disable the widgets, remove the module `wp_tagging_rating_light` from the profile, and apply the modified profile on the server by the described procedure.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [What is new in tagging and rating](../tag_rate_whatsnew.md)
 

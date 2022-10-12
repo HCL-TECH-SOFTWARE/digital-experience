@@ -8,10 +8,9 @@ For example, consider the case of content sources in the form of secured portal 
 
     The original file is located in the following directory:
 
-    -   For UNIX™Linux™: `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/search/wp.search.admin/bin`
-    -   For z/OS®: `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/search/wp.search.admin/bin`
-    -   For IBM® i: `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/search/wp.search.admin/bin`
-    -   For Windows™: `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)\search\wp.search.admin\bin`
+    -   For UNIX™ and Linux™: PortalServer_root]/search/wp.search.admin/bin
+    -   For Windows™: PortalServer_root\search\wp.search.admin\bin`
+
 2.  Open the copied file searchsecret.xml with an editor.
 
     Open the copied file searchsecret.xml with an ASCII editor.
@@ -23,7 +22,7 @@ For example, consider the case of content sources in the form of secured portal 
     ```
     xmlaccess.sh|bat -in searchsecret.xml -out results.xml 
                      -user wpsadmin -pwd wpsadmin 
-                     -url http://local\_host:local\_port/wps/config 
+                     -url http://local_host:local_port/wps/config 
     ```
 
     1.  Specify the file name using the -in option.
@@ -34,10 +33,10 @@ For example, consider the case of content sources in the form of secured portal 
 
     The script creates a slot called `search.secret` in the credential vault. Portal search uses this slot to encrypt the passwords configured for crawlers. If this slot does not exist, the password is saved as clear text on the portal server hard drive.
 
-    The file xmlaccess.sh\|bat is located in the directory `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/bin`. Example of the full command syntax for running the script searchsecret.xml:
+    The file xmlaccess.sh|bat is located in the directory PortalServer_root/bin. Example of the full command syntax for running the script searchsecret.xml:
 
     ```
-    [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/bin/xmlaccess.sh|bat -in temp/searchsearchsecret.xml 
+    PortalServer_root/bin/xmlaccess.sh|bat -in temp/searchsearchsecret.xml 
          -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config
     ```
 
@@ -45,8 +44,5 @@ For example, consider the case of content sources in the form of secured portal 
 
 5.  Delete the copied file searchsecret.xml that contains your encryption key.
 
-
-
-???+ info "Related information:"
-- [Working with the XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
-
+???+ info "Related information"
+    -   [Working with the XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)

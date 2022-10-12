@@ -242,7 +242,7 @@ To move tags and ratings between portals, for example for staging purposes, proc
 4.  Import the result file from the previous export step to the target portal.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Configuring task to retrieve tags](../../extend_dx/integration/connections/configuration/cfg_connections_features/integrating_cnx_tags/i_coll_t_enable_lctags_task.md)
     - [Types of portal resources](../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/xml_config_ref/types_portal_resources/adxmlref_resrc_types.md)
     - [Working with the XML configuration interface](../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)

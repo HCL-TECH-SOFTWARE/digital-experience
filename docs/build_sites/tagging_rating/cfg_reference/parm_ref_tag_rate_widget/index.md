@@ -32,20 +32,13 @@ For details about the parameters in the CP configuration service and how to set 
 You configure specific tag widget instances by setting the JavaScript parameters that are listed here.
 -   **[Rating widget parameter reference](../admin-system/tag_rate_parm_ref_inl_rate_lite.md)**  
 You configure rating widget instances by setting the JavaScript parameters listed here.
+-->
 
-
-**Related information**  
-
-
-[CP Configuration Service for tagging and rating](../admin-system/srvcfg_cpcfg4tr.md)
-
-[Setting service configuration properties](../admin-system/adsetcfg.md)
-
-[How tagging and rating works in the portal](../admin-system/tag_rate_adm_gen.md)
-
-[The tag and rating widgets](../admin-system/tag_rate_ui_alt.md)
-
-[The tagging and rating user interface](../admin-system/tag_rate_ui.md)
-
-[Hints and tips for tagging and rating](../admin-system/tag_rate_ref_hintip.md) --->
+???+ info "Related information:"
+    - [CP Configuration Service for tagging and rating](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/index.md)
+    - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
+    - [How tagging and rating works in the portal](../../howto_tagging_rating/index.md)
+    - [The tag and rating widgets](../../tagging_rating_ui/tagging_rating_widget/index.md)
+    - [The tagging and rating user interface](../../tagging_rating_ui/index.md)
+    - [Hints and tips for tagging and rating](../../hints_tips_tag_rate/index.md)
 

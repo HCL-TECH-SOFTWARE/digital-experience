@@ -1,6 +1,6 @@
 # What's new in CF206
 
-The following features and updates are available to customers installing HCL Digital Experience Container Update CF206 on [supported container platforms](../../deployment/install/index.md):
+The following features and updates are available to customers installing HCL Digital Experience Container Update CF206 on [supported platforms](../../deployment/install/index.md):
 
 -   Development sample integrating HCL Unica Campaign segments in DX Personalization Rules
 -   Extension to Personalization Java APIs supporting page metadata operations with custom application objects
@@ -10,6 +10,8 @@ The following features and updates are available to customers installing HCL Dig
 -   New HCL Digital Experience Help Center with enhanced search and improved content architecture
 -   New complementary DX training modules in the HCL Software Academy, and more
 
+!!!note
+    Tabs in each section indicate the supported platforms/deployments each feature is available on.
 
 ## Development sample integrating HCL Unica Campaign segments in DX Personalization Rules
 
@@ -64,13 +66,7 @@ The following features and updates are available to customers installing HCL Dig
 
 ## The new HCL Digital Experience Help Center
 
-=== "Containers"
-
-    At HCL, we are continuously improving the quality and overall user experience of our product documentation. We have moved the HCL Digital Experience 9.5 product documentation to a new site, which has enhanced search capability and an improved content architecture for easy navigation and access to topics that are relevant to you. Visit the site [here](https://opensource.hcltechsw.com/digital-experience/) to view the latest documentation. 
-
-=== "On-Premises"
-
-    At HCL, we are continuously improving the quality and overall user experience of our product documentation. We have moved the HCL Digital Experience 9.5 product documentation to a new site, which has enhanced search capability and an improved content architecture for easy navigation and access to topics that are relevant to you. Visit the site [here](https://opensource.hcltechsw.com/digital-experience/) to view the latest documentation. 
+At HCL, we are continuously improving the quality and overall user experience of our product documentation. We have moved the HCL Digital Experience 9.5 product documentation to a new site, which has enhanced search capability and an improved content architecture for easy navigation and access to topics that are relevant to you. 
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
 

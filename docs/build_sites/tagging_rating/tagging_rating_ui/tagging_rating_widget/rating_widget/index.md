@@ -2,7 +2,7 @@
 
 Users can use the rating widget to view, apply, and update ratings that were applied to a resource.
 
-The rating widget displays ratings for users to view directly in the page. The rating widget shows ratings for the resource that has the widget included. When users use the rating widget, they can perform the task given in the following list.
+The rating widget displays ratings for users to view directly in the page. The rating widget shows ratings for the resource that has the widget included. When users use the rating widget, they can perform the tasks given in the following list.
 
 !!! note
     For these tasks, a user needs the rights to edit the HCL Web Content Manager component library `Web Resources V70`.
@@ -104,7 +104,7 @@ By default, the rating widget is available for Web Content Manager article templ
 -   **[Customizing the rating widget](../admin-system/tag_rate_cust_inlrate_lite.md)**  
 The user interface of the rating widget consists of Web Content Manager HTML components. You can customize the rating widgets by modifying one or more of these components. For example, you can change the order of the user interface elements, or you can remove a field that you do not want to show in the user interface. The components are listed here. -->
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Properties for the rating widget](../../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/srvcfg_cpcfg4tr_dlgrate_altui.md)
     - [Tag widget parameter reference](../../../cfg_reference/parm_ref_tag_rate_widget/tag_rate_parm_ref_inl_tag_lite.md)
     - [Properties for the tag widget](../../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/srvcfg_cpcfg4tr_dlgtag_altui.md)

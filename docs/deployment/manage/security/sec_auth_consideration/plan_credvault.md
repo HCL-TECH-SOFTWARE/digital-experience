@@ -21,15 +21,10 @@ HCL Portal initially provides two vault adapter configurations that write to the
 HCL Portal also supports the storage and retrieval of credentials from other vault services, such as Security Access Manager. HCL Portal includes a Credential Vault adapter for Security Access Manager. This plug-in works on the following operating systems:
 
 -   AIX®
--   Solaris
 -   Windows™
--   z/OS®
 
 
-**Related information**  
-
-
-[Configuring Basic Authentication for SSO for the SAP navigation integration](../admin-system/sap_int_cfg_basauth_sso_4nav.md)
-
-[Providing user credentials for authenticated connections](../dev-portlet/outbhttp_auth_prv_ucreds.md)
+???+ info "Related information"  
+    -   [Configuring Basic Authentication for SSO for the SAP navigation integration](../../../manage/security/basic_auth/tait_cfg_hba4sc.md)
+    -   [Providing user credentials for authenticated connections](../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/authenticating_outbound_http_connections/outbhttp_auth_prv_ucreds.md)
 

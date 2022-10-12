@@ -94,25 +94,15 @@ For example, you can set up the following configurations:
             -   Assign virtual portal administrators contributor access to the JCR content root node to enable them to create new libraries and view, edit, and delete libraries that they created.
         -   You can also assign virtual portal administrators access to libraries they did not create by editing the access settings of individual libraries.
 
-<!--
-**Related information**  
 
-
-[Usage scenarios for virtual portals](../admin-system/advpuscn_usage.md)
-
-[Securing](../security/securing_wp.md)
-
-[Configuring](../config/configuring_parent2.md)
-
-[Realm support](../plan/plan_realm.md)
-
-[Controlling access](../admin-system/control_access.md)
-
-[Virtual Member Manager integration](../plan/plan_vmm_int.md)
-
-[Adding realm support](../security/cfg_realm.md)
-
-[Managing the users of virtual portals](../admin-system/advp_tsk_mng_usr.md)
-
-[Portal Access Control with virtual portals](../admin-system/advppln_roles_pac4vp.md) -->
+???+ info "Related information:"
+    - [Usage scenarios for virtual portals](../vp_overview/advpuscn_usage.md)
+    - [Securing](../../../deployment/manage/security/index.md)
+    - [Configuring](../../search/manage_search/search_collection/creating_content_source/configuring.md)
+    - [Realm support](../../../get_started/plan_deployment/traditional_deployment/user_registry_consideration/plan_realm.md)
+    - [Controlling access](../../../deployment/manage/security/controlling_access/index.md)
+    - [Virtual Member Manager integration](../../../get_started/plan_deployment/traditional_deployment/user_registry_consideration/plan_vmm_int.md)
+    - [Adding realm support](../../../deployment/manage/security/user_registry/cfg_realm.md)
+    - [Managing the users of virtual portals](../adm_vp_task/vp_adm_task/managing_users_vp/index.md)
+    - [Portal Access Control with virtual portals](../vp_planning/vp_roles/advppln_roles_pac4vp.md)
 

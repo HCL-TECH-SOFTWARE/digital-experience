@@ -58,7 +58,7 @@ If your markup is visible and needs to be injected at a specific point on a page
 
 5.  Add the module theme\_powertips to the module listings in your jQuery profile file.
 
-6.  Invalidate the cache so the Portal server includes your profile and module changes. Click the **Administration menu** icon. Then, click **Portal Analysis** \> **Theme Analyzer**. Then, click **Utilities** \> **Control Center** \> **Invalidate Cache**. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](themeopt_an_util.md#).
+6.  Invalidate the cache so the Portal server includes your profile and module changes. Click the **Administration menu** icon. Then, click **Portal Analysis** \> **Theme Analyzer**. Then, click **Utilities** \> **Control Center** \> **Invalidate Cache**. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](../../the_module_framework/themeopt_analyzer/utilities/index.md).
 
 
 Go to your page that has your jQuery profile applied, move the mouse over the help icon, or whichever theme element you specified in step 4, and you see your tip appear.

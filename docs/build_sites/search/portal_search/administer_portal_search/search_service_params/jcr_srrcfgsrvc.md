@@ -1,6 +1,9 @@
 # JCR search service configuration parameters
 
-The following search service configuration parameters can be modified to enable and configure searching for content that is stored in the JCR database. These JCR search service configuration parameters can be modified by accessing the JCR ConfigService PortalContent resource environment provider.
+The following search service configuration parameters can be modified to enable and configure searching for WCM content that is stored in the JCR database. These JCR search service configuration parameters can be modified by accessing the JCR ConfigService PortalContent resource environment provider.
+
+!!! important
+    Setting these parameters correctly is required for WCM Authoring search to work.
 
 To access the JCR search service configuration parameters that are stored in the **JCR ConfigService PortalContent** resource environment provider, complete the following steps:
 
@@ -64,9 +67,6 @@ The following new properties are integrated in [CF16 and later](https://www.ibm.
     This value defines the maximum number of rows that the Seedlist Cleanup Utility will attempt to delete from the `ICMSTJCRTSSEEDLISTPENDING` table in a single SQL call.
 
 
-<!-- 
-**Related information**  
-[Database transfer: Set up JCR collation](../eua-workflows/kc-db-jcr-db2.md)
-
-[Setting up a JCR search collection](../admin-system/srtcfg_jcr_colls.md) -->
-
+???+ info "Related information:"
+    - [Database transfer: Set up JCR collation](../../../../../deployment/manage/db_mgmt_sys/dbtransfer_manual/kc-db-createdb-db2.md)
+    - [Setting up a JCR search collection](../setup_search_collections/jcr_search_collections/index.md)

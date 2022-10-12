@@ -27,6 +27,6 @@ To configure the tags transmission limit, proceed by the following steps:
 
 For more information, see the topic about *Using the portal Tag Cloud with social lists*.
 
-???+ info "Related information:" 
+???+ info "Related information" 
     - [Using the portal Tag Cloud with lists of social objects](../working_with_social_objects/using_portal_tagcloud_with_social_objects/index.md)
 

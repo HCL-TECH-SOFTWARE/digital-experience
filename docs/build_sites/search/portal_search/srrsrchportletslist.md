@@ -8,8 +8,6 @@ The portal search portlets are briefly described in the following sections:
 -   Search administration portlet **Manage Search**
 -   **Search Center** portlet for search by users
 
-For more details about enhancements to the search portlets for HCL Digital Experience Version 8.5, refer to Portal Search.
-
 ## Overview of Portal Search portlets
 
 The following portlets are all installed and deployed as part of the default portal installation:
@@ -61,7 +59,7 @@ The Search Center portlet provides a central starting point to all searchable co
 
 The Search Center portlet is installed as part of the default portal installation. Note that it is deployed and placed on a hidden portal page. The portal takes users to the Search Center when they enter a search using the portal Search Box.
 
-Starting with Version 8 of HCL Portal the Search and Browse portlet provided with earlier portal versions is no longer available. The Search Center has been enhanced with advanced search options previously available in the Search and Browse portlet. Categorization and taxonomy are no longer available.
+Starting with Version 8 of HCL Portal, the Search and Browse portlet provided with earlier portal versions is no longer available. The Search Center has been enhanced with advanced search options previously available in the Search and Browse portlet. Categorization and taxonomy are no longer available.
 
 !!! note 
     By default both the Search Center portlet and the Search box are available only to authenticated users, that is for users who have logged on with a user ID and password. Anonymous users, that is users who access the portal without logging in, cannot use the Search Center or the search box. For more information about how to use the search portlets on anonymous pages refer to Enabling anonymous users to search public pages of your portal.
@@ -72,6 +70,6 @@ For more details about the Search Center portlet, refer to the following informa
 -   For hints about using the Search Center for remote search on web sites with different languages, refer to Hints and tips for using Portal Search.
 
 
-???+ info Related information:"
+*Related information*
     - [Planning and preparing for Portal Search](../planning_portal_search/index.md)
 

@@ -88,21 +88,13 @@ To export and import your search collections, use the **Import or Export Collect
     6.  When you import a portal site collection from a Version 5.1 portal to a Version 6 portal, the collection configuration data are imported, but not the documents. Therefore, to enable users to search the portal site collection on the target portal, you can either import the portal site collection and then start a crawl, or re-create the portal site collection. For details about how to do this see the topic abut Resetting the default search collection. This restriction does not apply if you migrate your portal site search collections between Version 6 portals.
     7.  When you import a collection, a background process fetches, crawls, and indexes all documents that are listed by URL in the previously exported file. Therefore, be aware that the crawling process can require extended memory and time, depending on your Portal Search configuration. For more information, see the topic about Hints and tips for Portal Search crawls.
 
-<!---
-**Related information**  
 
-
-[Importing and exporting search collections](../panel_help/import_export_srch_coll.md)
-
-[HCL Digital Experience Portal Search](../admin-system/admsrch.md)
-
-[Planning and preparing for Portal Search](../admin-system/srcbfrwrkgwtprtlsrch.md)
-
-[Administering Portal Search](../admin-system/srtadmsrch.md)
-
-[Resetting the default search collection](../admin-system/srtcrtprtlstecllc.md)
-
-[Hints and tips for Portal Search crawls](../admin-system/srrhinttips_crawl.md)
-
-[Migrating web search collections](../migrate/mig_t_webcoll.md) --->
+???+ info "Related information:"
+    - [Importing and exporting search collections](../../../manage_search/search_collection/import_export_srch_coll.md)
+    - [HCL Digital Experience Portal Search](../../../portal_search/index.md)
+    - [Planning and preparing for Portal Search](../../../planning_portal_search/index.md)
+    - [Administering Portal Search](../../administer_portal_search/index.md)
+    - [Resetting the default search collection](../searching_crawling_portal_sites/srtcrtprtlstecllc.md)
+    - [Hints and tips for Portal Search crawls](../../hint_tips/srrhinttips_crawl.md)
+    - [Migrating web search collections](../../../../../deployment/manage/migrate/preparing_source_env/migrating_search_cmpt/migrating_websearch_collections/index.md) 
 

@@ -2,8 +2,6 @@
 
 When a web content library is no longer required, you can delete the library.
 
-**Note:**
-
 -   You must be an administrator to delete web content libraries.
 -   A library cannot be deleted if there are references to items in the library that is being deleted from items in other libraries.
 -   A library is only deleted on the current server. If you are syndicating to other servers, you must delete each library on each server separately.
@@ -22,13 +20,12 @@ To delete a library:
 
 4.  Click the most recent report to review the library deletion.
 
-    **Note:** Items that were previously deleted but not purged from the library are not included in the "total items deleted successfully" count.
+    !!! note
+        Items that were previously deleted but not purged from the library are not included in the "total items deleted successfully" count.
 
+<!--
+**Parent topic:**[Managing web content libraries](../panel_help/wcm_admin_libraries.md) -->
 
-**Parent topic:**[Managing web content libraries](../panel_help/wcm_admin_libraries.md)
-
-**Related information**  
-
-
-[Staging to production list](../deploy/dep_stage_check.md)
+???+ info "Related information:"
+    - [Staging to production list](../../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_stage_check.md)
 

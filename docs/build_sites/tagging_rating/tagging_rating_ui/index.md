@@ -27,7 +27,7 @@ The portal provides a tag cloud for aggregating tags for multiple resources. Use
 Besides tagging content and viewing tags users can browse tags. This can be useful for finding related or similar content. -->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [The Java API](../dev_tagging_and_rating/tag_rate_api_java.md)
     - [The REST API](../dev_tagging_and_rating/rest_api/index.md)
     - [Using the Rest API to add, update, and delete tags and ratings](../dev_tagging_and_rating/rest_api/tag_rate_api_rest_cud_tr.md)

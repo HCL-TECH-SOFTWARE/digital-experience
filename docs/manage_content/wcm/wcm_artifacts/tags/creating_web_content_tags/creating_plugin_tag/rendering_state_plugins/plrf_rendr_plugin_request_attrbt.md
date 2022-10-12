@@ -47,7 +47,8 @@ This plug-in uses the following attributes:
     Use this attribute to define the escaping that you want to be used for writing the URL. Specify one of the values `xml`, `json`, `javascript`, or `none`. The default value is `none`. This value is evaluated only if the `mode` attribute is set to `get` or `remove`.
 
 
-**Note:** The `RequestAttribute` plug-in is available with Version 8.0.0.1 of HCL Web Content Manager.
+!!! note
+    The `RequestAttribute` plug-in is available with Version 8.0.0.1 of HCL Web Content Manager.
 
 ## Examples
 
@@ -84,8 +85,6 @@ This plug-in uses the following attributes:
     ```
 
 
-**Related information**  
-
-
-[Digital Data Connector \(DDC\) for HCL Portal](../social/plrf_ovu.md)
+???+ info "Related information:"
+    - [Digital Data Connector \(DDC\) for HCL Portal](../../../../../../../extend_dx/ddc/index.md)
 

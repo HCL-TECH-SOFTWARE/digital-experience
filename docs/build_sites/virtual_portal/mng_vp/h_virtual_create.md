@@ -73,6 +73,6 @@ To create a new virtual portal, perform the following steps:
 
 
 
-???+ info "Related Information:"
+???+ info "Related information:"
     - [Creating or updating a global web server plug-in configuration file](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/twsv_plugin_regen.html)
 

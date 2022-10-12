@@ -3,7 +3,7 @@ id: h_mp_create_labels
 title: Creating a label
 ---
 
-
+# Creating a label
 
 
 You can create a label to act as a separator to organize pages and URLs.
@@ -12,7 +12,7 @@ Labels can be used to help organize groups of pages and URLs into categories. Fo
 
 To create a new label, do the following steps:
 
-1.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface** \> **Manage Pages**.
+1.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface > Manage Pages**.
 
 2.  Click **New label** to create a new label. You leave to create the new label.
 

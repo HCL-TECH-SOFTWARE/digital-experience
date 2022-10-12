@@ -3,7 +3,7 @@ id: h_mp_change_portlet_settings
 title: Changing portlet settings
 ---
 
-
+# Changing portlet settings
 
 
 You can change the settings of each portlet listed in the Edit Layout portlet. These options are available from the drop-down menu on each portlet shown in the container.

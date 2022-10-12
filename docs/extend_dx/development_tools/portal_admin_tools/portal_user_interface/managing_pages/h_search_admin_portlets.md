@@ -6,15 +6,17 @@ Perform the following steps to search:
 
 1.  Select the search type from the **Search by** menu.
 
-    **Notes:**
+    !!!note "Notes"
+        1.  The search types that are available depend on the portlet and on the resource type that is listed. The following list shows all search types that can be available in any of the portal administration portlets. Individual portlets usually provide only a limited number of these search types.
+    
+        2.  Searches for users or user groups can be case-sensitive, depending on the attributes that are used.
+    
+        3.  Wildcard search by an asterisk ( * ) is required for only some combinations of portal resources and search types. In general, the type of search implies whether an exact string must be entered. For example, for the search types xxx contains and xxx starts with, a wildcard is not usually required, however, for some combinations you can add an asterisk for wildcard search. Examples:
 
-    1.  The search types that are available depend on the portlet and on the resource type that is listed. The following list shows all search types that can be available in any of the portal administration portlets. Individual portlets usually provide only a limited number of these search types.
-    2.  Searches for users or user groups can be case-sensitive, depending on the attributes that are used.
-    3.  Wildcard search by an asterisk \( \* \) is required for only some combinations of portal resources and search types. In general, the type of search implies whether an exact string must be entered. For example, for the search types xxx contains and xxx starts with, a wildcard is not usually required, however, for some combinations you can add an asterisk for wildcard search. Examples:
-
-        -   When you search for users or groups by the search type **Name contains**, you can use an asterisk as a wildcard.
-        -   When you search for web modules by the search type **Name contains**, you do not need to add the asterisk. For example, to search for WelcomePortlet.war, type welcome without an asterisk in the **Search** field and select search type **Name contains**. The search returns all Web modules that contain the string welcome. Adding an asterisk returns no search results.
-        When your search does not return the correct results, try by reentering your search with or without an asterisk.
+            -   When you search for users or groups by the search type **Name contains**, you can use an asterisk as a wildcard.
+            -   When you search for web modules by the search type **Name contains**, you do not need to add the asterisk. For example, to search for WelcomePortlet.war, type welcome without an asterisk in the **Search** field and select search type **Name contains**. The search returns all Web modules that contain the string welcome. Adding an asterisk returns no search results.
+        
+            When your search does not return the correct results, try by reentering your search with or without an asterisk.
 
     -   Select **Title starts with** to search on the beginning of a string in the title. This is the default setting, and the input is expected in string format.
     -   Select **Title contains** to search on a string in the title. The input is expected in string format.
@@ -41,49 +43,13 @@ Perform the following steps to search:
 3.  Click **Search**.
 
 
-**Related information**  
-
-
-[Managing pages](../panel_help/h_main_managing_pages.md)
-
-[Managing Web modules](../panel_help/h_main_web_module.md)
-
-[Managing portlet applications](../panel_help/h_main_manage_portlet_app.md)
-
-[Managing portlets](../panel_help/h_main_manage_portlets.md)
-
-[Configuring your portal for Web services](../panel_help/h_main_web_services.md)
-
-[Working with resource permissions](../panel_help/h_main_resource_permissions.md)
-
-[Managing permissions for users and groups](../panel_help/h_main_ug_permissions.md)
-
-[Creating meaningful URLs for your site](../panel_help/h_main_url.md)
-
-[Managing custom unique names](../panel_help/h_main_custom_names.md)
-
-[Managing virtual portals](../panel_help/h_main_virtual.md)
-
-**References:**  
-
-
-[Managing pages](h_main_managing_pages.md)
-
-[Managing Web modules](h_main_web_module.md)
-
-[Managing portlet applications](h_main_manage_portlet_app.md)
-
-[Managing portlets](h_main_manage_portlets.md)
-
-[Configuring your portal for Web services](h_main_web_services.md)
-
-[Working with resource permissions](h_main_resource_permissions.md)
-
-[Managing permissions for users and groups](h_main_ug_permissions.md)
-
-[Creating meaningful URLs for your site](h_main_url.md)
-
-[Managing custom unique names](h_main_custom_names.md)
-
-[Managing virtual portals](h_main_virtual.md)
-
+???+ info "Related information*"  
+    -   [Managing pages](../../../portal_admin_tools/portal_user_interface/managing_pages/index.md)
+    -   [Managing Web modules](../../../../portlets_development/mng_portlets_apps_widgets/portlet_management/managing_web_modules/index.md)
+    -   [Managing portlet applications](../../../../portlets_development/mng_portlets_apps_widgets/portlet_management/managing_portlet_apps/index.md)
+    -   [Configuring your portal for Web services](../../../../portlets_development/mng_portlets_apps_widgets/portlet_management/cfg_portal_for_webservices/index.md)
+    -   [Working with resource permissions](../../../../../deployment/manage/security/access/working_with_resource_permission/index.md)
+    -   [Managing permissions for users and groups](../../../../../deployment/manage/security/access/user_group_permission/index.md)
+    -   [Creating meaningful URLs for your site](../../../../../deployment/manage/config_portal_behavior/h_main_url.md)
+    -   [Managing custom unique names](../../../../../build_sites/portal_settings/manage_custom_unique_names/index.md)
+    -   [Managing virtual portals](../../../../../build_sites/virtual_portal/wcm_mngpages_virtualportal.md)

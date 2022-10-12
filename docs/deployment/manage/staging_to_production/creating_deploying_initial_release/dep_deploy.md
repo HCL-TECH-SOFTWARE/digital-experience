@@ -4,20 +4,12 @@ After you create and prepare your initial staging and production servers, you mu
 
 1.  Run the following command from the wp_profile_root/ConfigEngine directory of the production server to install and deploy the initial PAA file on the production server:
 
-    -   AIX® HP-UX Linux™ Solaris:
+    -   AIX® and Linux™:
 
         ```
         ./ConfigEngine.sh install-paa -DPAALocation=/WebSpherePortal.paa -DWasPassword=password -DPortalAdminPwd=password -Dwp.si.offlineMode=true
         
         ./ConfigEngine.sh deploy-paa -DappName=WebSpherePortal -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password
-        ```
-
-    -   IBM® i:
-
-        ```
-        ConfigEngine.sh install-paa -DPAALocation=/WebSpherePortal.paa -DWasPassword=password -DPortalAdminPwd=password -Dwp.si.offlineMode=true
-        
-        ConfigEngine.sh deploy-paa -DappName=WebSpherePortal -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password
         ```
 
     -   Windows™:
@@ -28,49 +20,26 @@ After you create and prepare your initial staging and production servers, you mu
         ConfigEngine.bat deploy-paa -DappName=WebSpherePortal -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password
         ```
 
-    -   z/OS®:
-
-        ```
-        ./ConfigEngine.sh install-paa -DPAALocation=/WebSpherePortal.paa -DWasPassword=password -DPortalAdminPwd=password -Dwp.si.offlineMode=true
-        
-        ./ConfigEngine.sh deploy-paa -DappName=WebSpherePortal -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password
-        ```
-
 2.  Run the following commands to install and deploy the virtual portal PAA file on the production server:
 
-    -   AIX HP-UX Linux Solaris:
+    -   AIX and Linux:
 
         ```
-        ./ConfigEngine.sh install-paa -DPAALocation=/object\_id.paa -DWasPassword=password -DPortalAdminPwd=password -Dwp.si.offlineMode=true
+        ./ConfigEngine.sh install-paa -DPAALocation=/object_id.paa -DWasPassword=password -DPortalAdminPwd=password -Dwp.si.offlineMode=true
         
-        ./ConfigEngine.sh deploy-paa -DappName=object\_id -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalParameter=value
-        ```
-
-    -   IBM i:
-
-        ```
-        ConfigEngine.sh install-paa -DPAALocation=/object\_id.paa -DWasPassword=password -DPortalAdminPwd=password -Dwp.si.offlineMode=true
-        
-        ConfigEngine.sh deploy-paa -DappName=object\_id -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalParameter=value
+        ./ConfigEngine.sh deploy-paa -DappName=object_id -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalParameter=value
         ```
 
     -   Windows:
 
         ```
-        ConfigEngine.bat install-paa -DPAALocation=/object\_id.paa -DWasPassword=password -DPortalAdminPwd=password -Dwp.si.offlineMode=true
+        ConfigEngine.bat install-paa -DPAALocation=/object_id.paa -DWasPassword=password -DPortalAdminPwd=password -Dwp.si.offlineMode=true
         
-        ConfigEngine.bat deploy-paa -DappName=object\_id -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalParameter=value
+        ConfigEngine.bat deploy-paa -DappName=object_id -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalParameter=value
         ```
 
-    -   z/OS:
-
-        ```
-        ./ConfigEngine.sh install-paa -DPAALocation=/object\_id.paa -DWasPassword=password -DPortalAdminPwd=password -Dwp.si.offlineMode=true
-        
-        ./ConfigEngine.sh deploy-paa -DappName=object\_id -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalParameter=value
-        ```
-
-    **Tip:** Where VirtualPortalParameter is one of the following options:
+    !!!note "Tip"
+        Where VirtualPortalParameter is one of the following options:
 
     -   **-DVirtualPortalHostName=myvirtualportal.mycompany.com**
 
@@ -87,28 +56,16 @@ After you create and prepare your initial staging and production servers, you mu
 
 3.  If you cloned your JCR database, extra steps are necessary. You must attach the clone JCR after you do the deployment for the base and virtual portals. The JCR database has objectIDs for the virtual portal that must match the source environment. The deploy-paa for the virtual portal does that task, but the deploy-paa for the virtual portals must be done before you attach to the cloned database. Run the following task on the target server to synchronize your vanity URL data. The release database and JCR databases share some vanity URLs. If you clone the JCR database, the sharing is broken. This task fixes those errors.
 
-    -   AIX HP-UX Linux Solaris:
+    -   AIX and Linux:
 
         ```
         ./ConfigEngine.sh sync-vanityurl-data -DWasPassword=password -DPortalAdminPwd=password
-        ```
-
-    -   IBM i:
-
-        ```
-        ConfigEngine.sh sync-vanityurl-data -DWasPassword=password -DPortalAdminPwd=password
         ```
 
     -   Windows:
 
         ```
         ConfigEngine.bat sync-vanityurl-data -DWasPassword=password -DPortalAdminPwd=password
-        ```
-
-    -   z/OS:
-
-        ```
-        ./ConfigEngine.sh sync-vanityurl-data -DWasPassword=password -DPortalAdminPwd=password
         ```
 
 4.  Review the checklist. Export or manually re-create any items that cannot be packaged with the PAA file such as Resource Environment Providers and custom content.
@@ -123,7 +80,7 @@ After you create and prepare your initial staging and production servers, you mu
         4.  If you configured HTTP-cookie-based single sign-on, for example, by configuring corresponding client cookie forwarding rules, you must review and re-create the resource environment properties for the cookie forwarding rules. For more information, see the *WSRP services* section.
 6.  Export search collections from the staging server and import them into the production server. For more information, see *Exporting and importing search collections*. If you are using alternative context root URLs, go to **Manage Search** portlet. To open the **Manage Search** portlet, click the **Administration menu** icon. Then, click **Search Administration > Manage Search**. Update the search collection URL links on the staging server to point to the alternative root.
 
-    For example, http://yourdomain.com:port/your\_root/seedlist/myserver?SeedlistId=&Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&Action=GetDocuments
+    For example, http://yourdomain.com:port/your_root/seedlist/myserver?SeedlistId=&Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&Action=GetDocuments
 
     !!!note
         If you installed any additional PAA files on the staging server, they are not included in the initial release PAA. Each additional PAA that was installed and deployed on the staging server must be manually installed and deployed on the production server after the initial release PAA is installed.
@@ -132,8 +89,8 @@ After you create and prepare your initial staging and production servers, you mu
 
 8.  Restart the server.
 
-**Related information**  
-[WSRP services](../../../../extend_dx/development_tools/wsrp/index.md)<br>
-[Exporting and importing a web content library](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcmlibrary_export/wcm_config_wcmlibrary_export.md)<br>
-[Portal configuration tasks for administering virtual portals](../../../../build_sites/virtual_portal/vp_reference/vp_command_ref/portal_cfg_adm_vp/index.md)
+???+ info "Related information"  
+    -   [WSRP services](../../../../extend_dx/development_tools/wsrp/index.md)<br>
+    -   [Exporting and importing a web content library](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcmlibrary_export/wcm_config_wcmlibrary_export.md)<br>
+    -   [Portal configuration tasks for administering virtual portals](../../../../build_sites/virtual_portal/vp_reference/vp_command_ref/portal_cfg_adm_vp/index.md)
 

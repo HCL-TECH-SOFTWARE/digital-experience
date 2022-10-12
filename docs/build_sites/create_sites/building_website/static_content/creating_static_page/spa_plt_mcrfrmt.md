@@ -117,7 +117,7 @@ The following is an example of a microformat representation for a portlet window
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
    - [The Navigation portlet](../../static_content/creating_static_page/portlets_dynamic_elements/spa_portlet_nav.md)
    - [The Breadcrumb Trail portlet](../../static_content/creating_static_page/portlets_dynamic_elements/spa_portlet_brdcrmb.md)
    - [The SPA Resource Addressability portlet](../../static_content/creating_static_page/portlets_dynamic_elements/spa_portlet_pagelist.md)

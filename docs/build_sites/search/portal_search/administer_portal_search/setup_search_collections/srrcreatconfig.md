@@ -48,11 +48,9 @@ In the Search Collections panel you can select the following option icons and do
 
     -   **Work with the content sources of the collection**.
 
-<!---
-**Related information**  
-[Managing the content sources of a search collection](../admin-system/srtmngcontsrc.md)
 
-[Delayed cleanup of deleted portal pages](../admin-system/addelclnup.md)
-
-[The portal site search collection fails](../admin-system/srrhinttips_crt_scoll_fails.md) --->
+???+ info "Related information:"
+    - [Managing the content sources of a search collection](../setup_search_collections/mng_content_sources_search_collections/index.md)
+    - [Delayed cleanup of deleted portal pages](../../../../../deployment/manage/config_portal_behavior/delayed_cleanup/index.md)
+    - [The portal site search collection fails](../../srrhinttips_crt_scoll_fails.md) 
 

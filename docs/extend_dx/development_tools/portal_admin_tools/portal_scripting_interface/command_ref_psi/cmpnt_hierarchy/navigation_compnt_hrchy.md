@@ -1,3 +1,7 @@
+---
+title: Navigation
+---
+
 # Navigation - Component hierarchy
 
 The Layout bean is a tree bean. The layout bean provides the index command to obtain and resolve so-called index paths. For more information, see Index paths. When started with an ID as argument, the command returns the absolute index path for that component. When started without an argument, it returns the absolute index path for the currently selected component.
@@ -38,8 +42,6 @@ $Layout index 0 select
 ```
 
 
-**Related information**  
-
-
-[Index paths \| Portal scripting interface](../admin-system/index_paths.md)
+???+ info "Related information"  
+    -   [Index paths | Portal scripting interface](../../../../portal_admin_tools/portal_scripting_interface/command_ref_psi/index_paths.md)
 

@@ -1,6 +1,4 @@
-# Navigator Type Examples
-
-
+# Navigator element type examples
 
 You can use navigator elements to display different sections of a site framework in different ways.
 

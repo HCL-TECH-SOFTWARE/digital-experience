@@ -19,33 +19,26 @@ You pass the parameters in the parameter list for each configuration task as app
     !!! note
         The property file must be encoded in the ISO 8859-1 character encoding format.
 
-<!--
--   **[Task: create-virtual-portal](../admin-system/advp_cfgtsk_create.md)**  
+
+-   **[Task: create-virtual-portal](advp_cfgtsk_create.md)**  
 Portal ConfigEngine task that creates a new virtual portal.
--   **[Task: assign-virtual-portal-admin-group](../admin-system/advp_cfgtsk_assign_adm.md)**  
+-   **[Task: assign-virtual-portal-admin-group](advp_cfgtsk_assign_adm.md)**  
 Portal ConfigEngine task that assigns a group of administrators to a virtual portal.
--   **[Task: list-all-virtual-portals](../admin-system/advp_cfgtsk_list.md)**  
+-   **[Task: list-all-virtual-portals](advp_cfgtsk_list.md)**  
 Portal ConfigEngine task that lists all virtual portals.
--   **[Task: modify-virtual-portal](../admin-system/advp_cfgtsk_modify.md)**  
+-   **[Task: modify-virtual-portal](advp_cfgtsk_modify.md)**  
 Portal ConfigEngine task that modifies a virtual portal.
--   **[Task: delete-virtual-portal](../admin-system/advp_cfgtsk_delete.md)**  
+-   **[Task: delete-virtual-portal](advp_cfgtsk_delete.md)**  
 Portal ConfigEngine task that deletes a virtual portal.
--   **[Using a single configuration task to administer multiple virtual portals](../admin-system/advp_cfgtsk_single.md)**  
+-   **[Using a single configuration task to administer multiple virtual portals](advp_cfgtsk_single.md)**  
 You can administer multiple virtual portals by running a single configuration command. The following configuration tasks support working with multiple virtual portals: create-virtual-portal, delete-virtual-portal, and modify-virtual-portal. Use the -DvirtualPortalList parameter with task to create, delete, or modify multiple virtual portals at the same time.
 
 
-**Related information**  
-
-
-[Deploying the initial release](../deploy/dep_deploy.md)
-
-[Deploying the differential release](../deploy/dep_deploy_diff.md)
-
-[Administering virtual portals](../admin-system/advp_adm.md)
-
-[Planning for virtual portals](../admin-system/advppln.md)
-
-[Configuring](../config/configuring_parent2.md)
-
-[Creating a virtual portal](../admin-system/advp_tsk_create_vp.md) -->
+???+ info "Related information:"
+    - [Deploying the initial release](../../../../../deployment/manage/staging_to_production/creating_deploying_initial_release/dep_deploy.md)
+    - [Deploying the differential release](../../../../../deployment/manage/staging_to_production/creating_deploying_diff_release/index.md)
+    - [Administering virtual portals](../../../adm_vp_task/index.md)
+    - [Planning for virtual portals](../../../vp_planning/index.md)
+    - [Configuring](../../../../search/manage_search/search_collection/creating_content_source/configuring.md)
+    - [Creating a virtual portal](../../../mng_vp/h_virtual_create.md)
 

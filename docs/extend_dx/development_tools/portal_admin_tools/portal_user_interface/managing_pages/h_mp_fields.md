@@ -3,7 +3,7 @@ id: h_mp_fields
 title: Field descriptions for the Manage Pages portlet
 ---
 
-
+# Field descriptions for the Manage Pages portlet
 
 
 Learn more about the fields that are provided with the user interface. These fields appear under the **Edit Shared Settings** and **Configure** menus for the **Manage Pages** portlet.

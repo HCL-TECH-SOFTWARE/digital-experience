@@ -19,9 +19,9 @@ Exporting a site template or section template to a file downloads the file to th
 
 6.  Move the Site Builder template file to a location where you or someone else can import it.
 
-???+ info "Related Information:"
-    -   **[Importing a Site Builder template from a file](../export_sitebuilder_temp/exporting_sitebuilder_to_file/sitebuilder_temp_dist_import.md)**  
-    -   **[Importing a Site Builder template from a file by using Solution Installer](../export_sitebuilder_temp/exporting_sitebuilder_to_file/sitebuilder_temp_dist_import_solution.md)**  
+???+ info "Related information"
+    -   [Importing a Site Builder template from a file](../export_sitebuilder_temp/exporting_sitebuilder_to_file/sitebuilder_temp_dist_import.md)  
+    -   [Importing a Site Builder template from a file by using Solution Installer](../export_sitebuilder_temp/exporting_sitebuilder_to_file/sitebuilder_temp_dist_import_solution.md)  
     
 <!--
 -   **[Importing a Site Builder template from a file](../sitebuilder/sitebuilder_temp_dist_import.md)**  

@@ -46,31 +46,15 @@ You pass the parameters in the parameter list for each configuration task as app
 
 -   **AIX®**
 
-    ./ConfigEngine.sh modify-virtual-portal -DPortalAdminPwd=password -DWasPassword=password
-
--   **HP-UX**
-
-    ./ConfigEngine.sh modify-virtual-portal -DPortalAdminPwd=password -DWasPassword=password
-
--   **IBM® i**
-
-    ConfigEngine.sh modify-virtual-portal -DPortalAdminPwd=password -DWasPassword=password
+    `./ConfigEngine.sh modify-virtual-portal -DPortalAdminPwd=password -DWasPassword=password`
 
 -   **Linux™**
 
-    ./ConfigEngine.sh modify-virtual-portal -DPortalAdminPwd=password -DWasPassword=password
-
--   **Solaris**
-
-    ./ConfigEngine.sh modify-virtual-portal -DPortalAdminPwd=password -DWasPassword=password
+    `./ConfigEngine.sh modify-virtual-portal -DPortalAdminPwd=password -DWasPassword=password`
 
 -   **Windows™**
 
-    ConfigEngine.bat modify-virtual-portal -DPortalAdminPwd=password -DWasPassword=password
-
--   **z/OS®**
-
-    ./ConfigEngine.sh modify-virtual-portal -DPortalAdminPwd=password -DWasPassword=password
+    `ConfigEngine.bat modify-virtual-portal -DPortalAdminPwd=password -DWasPassword=password`
 
 
 

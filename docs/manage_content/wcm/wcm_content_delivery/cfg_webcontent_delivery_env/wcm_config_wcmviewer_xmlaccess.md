@@ -24,6 +24,7 @@ By default, the Web Content Viewer is configured with unique IDs. This has the a
     -   `WCM_LINKING_SELF`: The context of the current Web Content Viewer is broadcast to other Web Content Viewers on the same portal page.
     -   `WCM_LINKING_OTHER`: The context of the current Web Content Viewer is broadcast to other Web Content Viewers on another portal page, as specified by the `WCM_PORTAL_PAGE_ID` parameter.
     -   `WCM_LINKING_NONE`: The context of the current Web Content Viewer is not broadcast to other Web Content Viewers.
+
 -   **`WCM_COMPONENT_IDR`**
 
     Specifies a library component and is only used if content type **Component** is selected.
@@ -42,6 +43,7 @@ By default, the Web Content Viewer is configured with unique IDs. This has the a
 
     -   `CONTENT`: Indicates that the content context is a content item.
     -   `PARENT`: Indicates that the content context is a site area.
+
 -   **`WCM_CONTENT_TYPE`**
 
     Specifies the item to be displayed. Values include:
@@ -51,6 +53,7 @@ By default, the Web Content Viewer is configured with unique IDs. This has the a
     -   `CONTENT_COMPONENT`: Indicates that the item to be displayed is an element.
     -   `SUMMARY`: Indicates that the item is to be rendered with the summary presentation template. A summary presentation template can be specified in the item's content template.
     -   `ALTERNATE`: Indicates that the item is to be rendered with the alternative presentation template, as specified by the parameter `WCM_DESIGN_IDR`.
+
 -   **`WCM_DESIGN_IDR`**
 
     Specifies an alternative presentation template.
@@ -62,6 +65,7 @@ By default, the Web Content Viewer is configured with unique IDs. This has the a
     -   `WCM_LINKING_OTHER`: Information is received from any Web Content Viewer broadcasting links.
     -   `WCM_LINKING_SELF`: Information is received only from this Web Content Viewer.
     -   `WCM_LINKING_NONE`: No information from other Web Content Viewers is received.
+
 -   **`WCM_PAGE_TITLE`**
 
     Used with the `WCM_PAGE_TITLE_TYPE` parameter, this parameter specifies the page title for the Web Content Viewer. Values include:
@@ -77,6 +81,7 @@ By default, the Web Content Viewer is configured with unique IDs. This has the a
     -   `WCM_PAGE_TITLE_TYPE_RESBUN`: The title is defined in a resource bundle, as specified by `WCM_PAGE_TITLE` parameter.
     -   `WCM_PAGE_TITLE_TYPE_DYN`: The title is defined by the value of the **Display title** field for the content item that is displayed in the Web Content Viewer.
     -   `WCM_PAGE_TITLE_TYPE_DYN_CONTENT_CMPNT`: The title is defined by the value of an element of the content item that is displayed in the Web Content Viewer. You must also specify the element name using the WCM\_PAGE\_TITLE parameter.
+
 -   **`WCM_PORTAL_PAGE_ID`**
 
     Specifies the unique name or object ID of the page, which is the target for link broadcasts when the `WCM_BROADCASTS_TO` parameter is set to `WCM_LINKING_OTHER`.
@@ -87,6 +92,7 @@ By default, the Web Content Viewer is configured with unique IDs. This has the a
 
     -   The user-defined title for the portlet, if the `WCM_PORTLET_TITLE_TYPE` parameter has a value of `WCM_PORTLET_TITLE_TYPE_GENERAL`.
     -   The name of the resource bundle containing the title for the portlet, if the `WCM_PORTLET_TITLE_TYPE` parameter has a value of `WCM_PORTLET_TITLE_TYPE_RESBUN`.
+
 -   **`WCM_PORTLET_TITLE_TYPE`**
 
     Specifies how the portlet title is displayed for the Web Content Viewer. Values include:
@@ -109,13 +115,13 @@ or
 /mylib/mypresentationtemplate
 ```
 
-**Note:** If you configure an item by its path rather than by its ID, the portlet configuration can become invalid if the item is renamed or moved. If an item has been configured by its path, the Web Content Viewer displays a small path icon after the item when you are in the **Edit Shared Settings** or **Configure** mode.
+!!! note
+    If you configure an item by its path rather than by its ID, the portlet configuration can become invalid if the item is renamed or moved. If an item has been configured by its path, the Web Content Viewer displays a small path icon after the item when you are in the **Edit Shared Settings** or **Configure** mode.
 
-**Important:** When configuring an item by its path, you cannot build the path from the **Display title** fields of the items in the path. You must use the **Name** fields of the items when specifying the path.
+!!! important
+    When configuring an item by its path, you cannot build the path from the **Display title** fields of the items in the path. You must use the **Name** fields of the items when specifying the path.
 
 
-**Related information**  
-
-
-[The XML configuration interface](../admin-system/admxmlai.md)
+???+ info "Related information"
+    - [The XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
 

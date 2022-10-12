@@ -18,7 +18,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [CurrentModuleList](themeopt_el_bean_mod_current_list.md); Never null.
+    Returns: [CurrentModuleList](../module_list/current_module_list/themeopt_el_bean_mod_current_list.md); Never null.
 
 -   **get\(moduleKey\)**
 

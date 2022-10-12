@@ -9,7 +9,7 @@ These properties are specific to individual portals. Each virtual portal has its
 If you edit the Script Application Configuration Properties component directly in the Script Application Library web content library, your changes are overwritten when a new version of the library is installed, for example when you upgrade your portal installation. To avoid this issue, use the following measure, depending on the type of your HCL DX installation:
 
 -   If your portal version includes a Web Content Manager license and the Web Content Authoring option for creating extra components, create a new text component for overriding properties. To do so, use the full procedure given later.
--   If you use a base portal installation without a HCL Web Content Manager license and with limited Web Content Manager support, you cannot create new components in the Web Content Authoring user interface. In this case, you can edit the default Script Application Configuration Properties component directly, and then update it again after upgrade as mentioned in step [4](import_export_config.md#chk_upgrade) of the procedure given later.
+-   If you use a base portal installation without a HCL Web Content Manager license and with limited Web Content Manager support, you cannot create new components in the Web Content Authoring user interface. In this case, you can edit the default Script Application Configuration Properties component directly, and then update it again after upgrade as mentioned in step 4 of the procedure given later.
 
 1.  Add a text component that is called Script Portlet Override Properties in the Web Content Manager library Script Application Library.
 

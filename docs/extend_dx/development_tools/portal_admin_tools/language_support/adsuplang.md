@@ -6,7 +6,8 @@ You can control the multiple language-specific settings within the portal.
 
 After the installation, you can change the default language of the portal. To change the language, use the **Global Settings** portlet. Click the **Administration menu** icon. Then, click **Portal Settings** \> **Global Settings**. From the drop-down list, select the required default language for the portal. This option can be, for example, en for English. For a list of languages that are supported by the portal, refer to the topic about Language support.
 
-**Note:** The Global Settings portlet does not work in portal cluster configurations. For portal clusters, set the portal default language in the portal Localizer service by using the WebSphere® Integrated Solutions Console. For details about how to set the language refer to the topic about Setting service configuration properties.
+!!!note
+    The Global Settings portlet does not work in portal cluster configurations. For portal clusters, set the portal default language in the portal Localizer service by using the WebSphere® Integrated Solutions Console. For details about how to set the language refer to the topic about Setting service configuration properties.
 
 ## Portlets
 
@@ -14,13 +15,14 @@ A portlet can support one or more locales. All portlets must have their own defa
 
 ## Changing titles for pages
 
-You can edit titles for pages in the portlet for Managing Pages by using the configure option for the locale-specific settings. To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface** \> **Manage Pages**. Click the **Edit Page Properties** icon, expand the Advanced options, and select the option for setting page titles and descriptions. You can enter a different title for each available language.
+You can edit titles for pages in the portlet for Managing Pages by using the configure option for the locale-specific settings. To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface > Manage Pages**. Click the **Edit Page Properties** icon, expand the Advanced options, and select the option for setting page titles and descriptions. You can enter a different title for each available language.
 
 ## Language selection by the user
 
 The user can select the preferred language for rendering portal content during the enrollment process. The user can select from a list of available languages. If required, the user can later change the selected language in the self-care portlet by selecting **Edit My Profile**. The selection list that is shown to the user for choosing a language shows all available portal languages.
 
-**Note:** The user's language selection does not become effective until after the user logs in.
+!!!note
+    The user's language selection does not become effective until after the user logs in.
 
 ## Language determined by the portal
 
@@ -36,11 +38,11 @@ The portal determines the language for rendering the portal content by a search 
 
 This sequence describes the language selection process that is applied for each user at logon time. For pages viewed by anonymous users only, the last three steps for determining the language apply. This step applies, for example, before login and after logoff.
 
-The language that is determined by this selection process is applied to the complete portal. If the portal or one component does not find the appropriate resources for the language as selected by this sequence, it tries to find the resources in a similar language. For example, if the determined language was US English \(`en_US`\), the next closest option is English \(`en`\).
+The language that is determined by this selection process is applied to the complete portal. If the portal or one component does not find the appropriate resources for the language as selected by this sequence, it tries to find the resources in a similar language. For example, if the determined language was US English (`en_US`), the next closest option is English (`en`).
 
 This search sequence applies to all portal components individually including portlets. For example, if a portlet does not support the language that is selected by the portal, it is shown in default language of the portlet. This way, the portal can show individual portlets in different languages.
 
-If a page does not support any of the languages that are determined by the steps that are given in the preceding list, then the navigation displays the object ID of the page rather than the page title. Such an object ID can be, for example, 7\_0\_5T.
+If a page does not support any of the languages that are determined by the steps that are given in the preceding list, then the navigation displays the object ID of the page rather than the page title. Such an object ID can be, for example, 7_0_5T.
 
 ## Preserving the language of the browser session
 
@@ -51,12 +53,8 @@ You can also determine the maximum lifetime of the cookie that holds the languag
 For more detailed information, read *State Manager Service*
 
 
-**Related information**  
-
-
-[Creating a virtual portal](../admin-system/advp_tsk_create_vp.md)
-
-[Dynamically changing the language during the user session](../admin-system/adchglang_dynamic.md)
-
-[State Manager Service](../admin-system/srvcfgref_state_mgr.md)
+???+ info "Related information"  
+    -   [Creating a virtual portal](../../../../build_sites/virtual_portal/mng_vp/h_virtual_create.md)
+    -   [Dynamically changing the language during the user session](../../portal_admin_tools/language_support/adchglang_dynamic.md)
+    -   [State Manager Service](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/statemanager_svc/index.md)
 

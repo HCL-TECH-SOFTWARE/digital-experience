@@ -10,7 +10,7 @@ You can integrate the business card and online status in a list of social object
 The lists of social objects rely on the availability of several CSS class definitions in the wp\_social\_rendering\_85 theme module. -->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Customizing social list definitions by using inline editing](../customizing_visualdesign/soc_rendr_use_biz_card.md)
 
 

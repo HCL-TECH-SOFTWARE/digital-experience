@@ -3,7 +3,7 @@ id: wcm_dev_elements_short-text_props
 title: Enter some text in the short text element
 ---
 
-
+# Enter some text in the short text element
 
 
 You enter text in the short text element.

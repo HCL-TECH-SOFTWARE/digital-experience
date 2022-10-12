@@ -1,4 +1,8 @@
-# List valued attributes \| Content bean content hierarchy
+---
+title: List valued attributes
+---
+
+# List valued attributes | Content bean content hierarchy
 
 The content nodes have three list valued attributes, locales, markups, and allowedportlets. See the bean help for alternative, shorter names for these lists.
 
@@ -50,13 +54,8 @@ $Content drop markup wml
 $Content list allowedportlets
 ```
 
-
-**Related information**  
-
-
-[Plain attributes \| Content bean content hierarchy](../admin-system/contnt_pl_att.md)
-
-[Locale-specific attributes \| Portal Scripting Interface](../admin-system/lcl_spcf_att.md)
-
-[Lifecycle \| Content bean content hierarchy](../admin-system/contnt_lfcycl.md)
+???+ info "Related information" 
+    -   [Plain attributes | Content bean content hierarchy](../../../../portal_admin_tools/portal_scripting_interface/command_ref_psi/content_hierarchy/contnt_pl_att.md)
+    -   [Locale-specific attributes | Portal Scripting Interface](../../../../portal_admin_tools/portal_scripting_interface/command_ref_psi/attributes/lcl_spcf_att.md)
+    -   [Lifecycle | Content bean content hierarchy](../../../../portal_admin_tools/portal_scripting_interface/command_ref_psi/content_hierarchy/contnt_lfcycl.md)
 
