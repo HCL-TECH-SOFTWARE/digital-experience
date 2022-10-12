@@ -1,5 +1,5 @@
 ---
-title: Configure Authoring Tools Components
+title: Configure Authoring tool components
 ---
 
 # How to configure authoring tools components
@@ -16,9 +16,8 @@ You can specify which behavior to use in the authoring tools element design. Typ
 
     The placeholder is rendered as a URL that redirects the user to another portal page that is used by the web content viewer for inline editing.
 
-
 !!!note
-  Authoring tasks that are run in the web content viewer are accomplished through a special instance of the authoring portlet that is reserved specifically for these tasks and is installed on a page that is hidden from the page navigation available to typical users. You can customize the authoring experience for these tasks by configuring the reserved authoring portlet and the page that is used to display it.
+    Authoring tasks that are run in the web content viewer are accomplished through a special instance of the authoring portlet that is reserved specifically for these tasks and is installed on a page that is hidden from the page navigation available to typical users. You can customize the authoring experience for these tasks by configuring the reserved authoring portlet and the page that is used to display it.
 
 ## Authoring tools components that open in a window
 
@@ -39,7 +38,7 @@ The default value of the `format` attribute for a placeholder tag is `tag`, so t
 ```
 
 !!!note
-  It is not possible to open the window in a separate browser window by adding `target="_blank"` to the HTML anchor tag in the design.
+    It is not possible to open the window in a separate browser window by adding `target="_blank"` to the HTML anchor tag in the design.
 
 ## Authoring tools components that open on another page
 
@@ -59,7 +58,7 @@ To redirect users to another page for authoring tasks, specify a value of `url` 
 ```
 
 !!!note
-  You can open the portal page in a separate browser window by adding `target="_blank"` to the HTML anchor tag in the design.
+    You can open the portal page in a separate browser window by adding `target="_blank"` to the HTML anchor tag in the design.
 
 
 <!-- ???+ info "**Related information**"  

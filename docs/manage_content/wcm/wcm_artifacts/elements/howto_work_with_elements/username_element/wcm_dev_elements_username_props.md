@@ -3,7 +3,7 @@ id: wcm_dev_elements_username_props
 title: Define component designs for different users
 ---
 
-
+# Define component designs for different users
 
 
 A user name element displays the current user's name in a presentation template, component design, or element design. You can use a user name element only by creating a user name component. You cannot add a user name element to authoring templates, site areas, or content items.
@@ -25,14 +25,9 @@ A user name element displays the current user's name in a presentation template,
     ```
 
 
-**Related information**  
-
-
-[Inserting an image in an element](wcm_dev_elements_insert_image.md)
-
-[Inserting a link in an element](wcm_dev_elements_insert_link.md)
-
-[Inserting element tags](wcm_dev_elements_insert_tags.md)
-
-[Creating web content tags](wcm_dev_referencing_tags.md)
+???+ info "Related information"  
+    -   [Inserting an image in an element](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_image.md)
+    -   [Inserting a link in an element](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_link.md)
+    -   [Inserting element tags](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_tags.md)
+    -   [Creating web content tags](../../../../wcm_artifacts/tags/creating_web_content_tags/index.md)
 

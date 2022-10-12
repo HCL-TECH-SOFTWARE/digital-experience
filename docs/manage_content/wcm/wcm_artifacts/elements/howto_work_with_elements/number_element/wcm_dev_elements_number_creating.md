@@ -1,14 +1,14 @@
 ---
 id: wcm_dev_elements_number_creating
-title: Creating a Number Component
+title: Creating a number component
 ---
 
-
+# Creating a number component
 
 
 You create a number component when you want to reuse a numerical value in multiple places in your website.
 
-To create a number component, open the applications menu and go to **Content** \> **Web Content Management** and then click **New** \> **Component** \> **Number**.
+To create a number component, open the applications menu and go to **Content > Web Content Management** and then click **New > Component > Number**.
 
 1.  [Entering identification information](../../../../../wcm/mng_content_with_auth_portlet/creating_items/wcm_dev_items_id.md)  
 Specify identification information for the current item, including the name and title for the item. The identification section is common to all item forms.

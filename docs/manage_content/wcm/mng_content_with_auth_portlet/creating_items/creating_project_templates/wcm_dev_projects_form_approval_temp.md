@@ -2,9 +2,7 @@
 id: wcm_dev_projects_form_approval_temp
 title: Defining project template approval settings
 ---
-
-
-
+# Defining project template approval settings
 
 If you want a project to be reviewed before it is published, you must select at least one approver in the approval section.
 
@@ -23,6 +21,6 @@ If you want a project to be reviewed before it is published, you must select at 
 4.  Select **Require a comment from the approver** if you want to enforce the recording of a comment when the project is approved.
 
 
-!!! note
+!!!note
     The approvers that are selected here apply only to the project itself, not to the items added to the project. Item approval is defined separately on each item.
 

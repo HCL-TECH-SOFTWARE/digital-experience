@@ -26,5 +26,5 @@ You can apply a label to the most recent set of saved versions in a library at a
 The clear versions tool can be used to clear version histories from items. It is configurable and can be used to clear versions within a specific date range, for specific item-types or libraries, or to keep only some of the most recent versions.
 
 ???+ info "Related information:"
-    - [Restoring items in a library](../../../../wcm_artifacts/web_content_library/manage_web_content_lib/wcm_managing_versions_library.md)
+    - [Restoring items in a library](../../wcm_artifacts/web_content_library/manage_web_content_lib/wcm_managing_versions_library.md)
     - [How to delete items](../item_management_features/wcm_managing_deleting.md)

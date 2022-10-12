@@ -1,7 +1,5 @@
 # How to move, copy, or link items
 
-
-
 From time to time, you need to move, copy, or link items.
 
 -   **[Copying a site area](wcm_dev_sites_copying.md)**  

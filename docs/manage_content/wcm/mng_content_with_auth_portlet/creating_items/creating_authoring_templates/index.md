@@ -1,6 +1,5 @@
 # Creating authoring templates
 
-
 An authoring template is used to define the default authoring settings for site areas and content items. These settings include the design of the authoring form, what fields and elements appear on the authoring form, and default values for fields and elements. You must create authoring templates before you create site areas and content items.
 
 -   **[Creating a site area template](../creating_authoring_templates/creating_sitearea_template/index.md)**  
