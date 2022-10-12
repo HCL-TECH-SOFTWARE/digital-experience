@@ -22,6 +22,6 @@ Depending on the action, the data sink requires extra form data.
     The update operation for individual replies that Forum Topic Details appearance component supports is implemented as a post to *The generic XML Digital Data Connector data sink*.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [The generic XML Digital Data Connector data sink](../../../../extend_dx/ddc/implementing_user_interactions/sending_data_to_webcontentviewer_portlet/generic_xml_ddc_sink/index.md)
 

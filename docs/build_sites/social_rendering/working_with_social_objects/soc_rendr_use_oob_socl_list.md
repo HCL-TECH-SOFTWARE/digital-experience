@@ -51,11 +51,9 @@ The social rendering feature provides you with a set of predefined view definiti
     For a list and descriptions of the available options, see *Customizing social list definitions by using inline editing*.
 
 
-<!--
-**Related information**  
-[Customizing social list definitions by using inline editing](../social/soc_rendr_cust_socl_list.md)
 
-[Web content associations](../wcm/wcm_delivery_contentmap_about.md)
-
-[Administering Portal Search](../admin-system/srtadmsrch.md) -->
+???+ info "Related information:"
+    - [Customizing social list definitions by using inline editing](../customizing_view_definitions/soc_rendr_cust_socl_list.md)
+    - [Web content associations](../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/getting_started/wcm_delivery_contentmap_about.md)
+    - [Administering Portal Search](../../search/portal_search/administer_portal_search/index.md)
 

@@ -6,35 +6,12 @@ To do this, proceed as follows in the newly migrated environment:
 
 1.  Change to the following directory that contains the HCL Digital Experience tools:
 
-    -   AIX® HP-UX Linux™ Solaris: `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/bin`
-    -   IBM® i: `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/bin`
-    -   z/OS®: `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/bin`
-    -   Windows™: `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)\bin`
+    -   AIX® and Linux™: PortalServer_root/bin
+    -   Windows™: PortalServer_root\bin
+
 2.  Create the analytics tag root label by running the following command:
 
-    -   AIX HP-UX Linux Solaris:
-
-        ```
-        ./xmlaccess.sh 
-        -url http://example\_server.com:port/wps/config
-        -user wpsadmin -password wpsadminpwd 
-        -in [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/base/wp.asa.server.impl/config/templates/create_asa_tag_root.xml
-        -out results.xml
-        
-        ```
-
-    -   IBM i:
-
-        ```
-        ./xmlaccess.sh 
-        -url http://example\_server.com:port/wps/config
-        -user wpsadmin -password wpsadminpwd 
-        -in [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/base/wp.asa.server.impl/config/templates/create_asa_tag_root.xml
-        -out results.xml
-        
-        ```
-
-    -   z/OS:
+    -   AIX and Linux:
 
         ```
         ./xmlaccess.sh 

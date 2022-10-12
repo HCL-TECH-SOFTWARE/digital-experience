@@ -16,7 +16,7 @@ You can configure each individual Tag Cloud portlet instance separately. Use the
 These options are added to the ones that are described in *Configuring the Tag Cloud*.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Using the portal Tag Cloud with lists of social objects](../using_portal_tagcloud_with_social_objects/index.md)
     - [Configuring the tag cloud](../../../../manage_content/wcm/wcm_artifacts/tags/tag_center/tag_cloud/tag_cloud_cfg.md)
 

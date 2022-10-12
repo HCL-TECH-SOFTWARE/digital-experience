@@ -20,7 +20,7 @@ In XML scripts the objectid attribute of a resource is used for the following pu
 -   To set the object ID for a new resource, if the action is update and no resource with that object ID exists.
 -   To describe links from one resource to another.
 
-You can use object IDs to uniquely specify resources that you want to administer. For example, the following snippet deletes a specific known page. \(You would normally get the object ID of the page from an XML export.\)
+You can use object IDs to uniquely specify resources that you want to administer. For example, the following snippet deletes a specific known page. (You would normally get the object ID of the page from an XML export.)
 
 ```
 
@@ -61,14 +61,7 @@ An object ID is globally unique. Two object IDs that were automatically generate
 
 In many cases, this is the required behavior. However, if you do not want to copy the same resource to another portal, but you want to create a new resource instead, regardless of existing OIDs and without any chance of causing conflicts, you must either use symbolic object IDs or delete the objectid attribute from the XML script. In the latter case the portal creates a new object ID.
 
--   **[Symbolic object IDs and ID generating mode](../admin-system/adxmlref_symbl_obj_id.md)**  
-In some cases, you might need to use object ID attributes to express references between resources in your XML script, but you do not want these to be read from or written to the portal database. In this case, the object ID would be only a symbolic reference inside the XML script.
--   **[Lookup of portal resources](../admin-system/adxmlref_lookup.md)**  
-XML elements with locate, export, update and delete actions need to refer to existing resources in the portal. Those resources must be identified by specific attributes.
 
-
-**Related information**  
-
-
-[Special configuration data entries](../admin-system/adxmlref_spec_tags.md)
+???+ info "Related information"  
+   -  [Special configuration data entries](../../../../portal_admin_tools/xml_config_interface/xml_config_ref/types_portal_resources/adxmlref_spec_tags.md)
 

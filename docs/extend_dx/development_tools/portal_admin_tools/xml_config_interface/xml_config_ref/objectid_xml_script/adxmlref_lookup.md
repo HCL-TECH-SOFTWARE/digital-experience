@@ -17,14 +17,13 @@ The following table shows the relationship between resources and the attributes 
 |portal, global-settings, services-settings|None; these items always exist only once.|
 |markup, virtual-resource, user, group, credential-segment, credential-slot, portlet|name|
 |web-app, portlet-app|uid|
-|servlet|name **Note:** The refid is used as fallback for XML imports from earlier portal versions that do not contain the name attribute.
-
-|
+|servlet|name <br>**Note:** The refid is used as fallback for XML imports from earlier portal versions that do not contain the name attribute.|
 |portletinstance|None; there is at most one portlet instance per component.|
 |url-mapping-context|label|
 
 In any case, the lookup process first tries to find the resource by its object ID, if specified, and then by its unique name, if that is specified. Only when those attempts fail, other attributes are used for locating the resource.
 
-**Note:** If an objectid attribute is specified in the XML input, but the corresponding resource cannot be found by that object ID but only by another attribute, and if that object ID is used in other parts of the XML script as a reference, those references are mapped to the actual object ID for the resource that was found. In this case the objectid attribute behaves like a symbolic object ID as described earlier.
+!!!note
+    If an objectid attribute is specified in the XML input, but the corresponding resource cannot be found by that object ID but only by another attribute, and if that object ID is used in other parts of the XML script as a reference, those references are mapped to the actual object ID for the resource that was found. In this case the objectid attribute behaves like a symbolic object ID as described earlier.
 
 

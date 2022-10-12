@@ -41,9 +41,9 @@ For details see, *Using the Virtual Portal Manager administration portlet*. As a
 
 You can preconfigure the content and the sub-administrators for virtual portals. For details see, *Preconfiguring virtual portals*.
 
-<!--
--   **[Adding the Site Builder and Script Application libraries](../admin-system/advp_create_add_libs.md)**  
-If you add virtual portals to your portal installation after you install CF09 or a later cumulative fix and you use Site Builder or the Script Application, you need to add the appropriate library or libraries to each new virtual portal. -->
+
+-   **[Adding the Site Builder and Script Application libraries](advp_create_add_libs.md)**  
+If you add virtual portals to your portal installation after you install CF09 or a later cumulative fix and you use Site Builder or the Script Application, you need to add the appropriate library or libraries to each new virtual portal.
 
 
 ???+ info "Related information:"

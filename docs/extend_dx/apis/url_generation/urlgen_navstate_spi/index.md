@@ -6,7 +6,7 @@ For details about the back button behavior and the support of bookmarks, see to 
 
 You can use the Navigational State SPI to read, create, and modify URLs that carry navigational state. The `com.ibm.portal.state` package is the main package of the Navigational State SPI. It holds the service interfaces and the interfaces that make up the navigational state object model.
 
-The SPI offers two services \(obtainable through JNDI\) to create such URLs. Which service you choose depends on whether you are writing Portal-level code or portlet code, for example within a theme.
+The SPI offers two services (obtainable through JNDI) to create such URLs. Which service you choose depends on whether you are writing Portal-level code or portlet code, for example within a theme.
 
 -   **Portal-level code: Portal State Manager Service**
 

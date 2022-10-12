@@ -4,11 +4,11 @@ You can configure a limit for the size of file uploads during an action request.
 
 To configure set the following configuration parameters on the Consumer:
 
--   **wsrp.maxUploadDataLength = \(the maximum size in Kilo Bytes, a integer value \> 0\)**
+-   **wsrp.maxUploadDataLength = (the maximum size in Kilo Bytes, a integer value > 0)**
 
     Use this parameter to define a maximum size of upload data. By default this parameter is undefined. The default setting means that the Consumer does not limit the size of upload data. Also, if you specify a negative value, the Consumer does not limit the size of the upload data.
 
--   **wsrp.uploadErrorHandledByProducer = \(true,false\)**
+-   **wsrp.uploadErrorHandledByProducer = (true,false)**
 
     Use this parameter to define the Consumer behavior if a file upload exceeds the defined limit. The default for this parameter is true. This default setting means that if the upload data exceeds the defined limit, the Consumer continues processing. The Consumer sends a WSRP request, which is cleared of all upload data, to the Producer. The remote portlet needs to handle this situation.
 

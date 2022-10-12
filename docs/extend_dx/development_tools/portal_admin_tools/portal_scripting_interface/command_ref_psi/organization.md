@@ -1,4 +1,8 @@
-# Organization \| Portal Scripting Interface
+---
+title: Organization
+---
+
+# Organization | Portal Scripting Interface
 
 For some beans, in particular the Content and Layout beans, the order of nodes is significant. In tree beans, the parent relationship of the nodes defines the hierarchy. Only nodes with the same parent node are in a particular order in trees.
 
@@ -25,7 +29,7 @@ Layout.move("to", 0)
 
 # example: move given node one down in the list
 # if it already is the last node, do nothing
-Layout.move(node\_ID, "by", 1)
+Layout.move(node_ID, "by", 1)
 
 # example: move selected node 4 up in the list
 # if it is at position 0 to 4, it becomes the new head
@@ -33,7 +37,7 @@ Layout.move("by", -4)
 
 # example: move given node to the last position
 # negative absolute positions are interpreted as max int
-Layout.move(node\_ID, "to", -1)
+Layout.move(node_ID, "to", -1)
 ```
 
 Jacl example:
@@ -51,7 +55,7 @@ $Layout move to 0
 
 # example: move given node one down in the list
 # if it already is the last node, do nothing
-$Layout move node\_ID by 1
+$Layout move node_ID by 1
 
 # example: move selected node 4 up in the list
 # if it is at position 0 to 4, it becomes the new head
@@ -59,7 +63,7 @@ $Layout move by -4
 
 # example: move given node to the last position
 # negative absolute positions are interpreted as max int
-$Layout move node\_ID to -1
+$Layout move node_ID to -1
 ```
 
 ## Hierarchy
@@ -71,34 +75,30 @@ This change of the parent of a node in the tree is achieved by the commands tran
 Jython example:
 
 ```
-Content.transfer(child\_ID, "to", parent\_ID)
-Layout.transfer(child\_ID, "to", parent\_ID)
-Layout.adopt(child\_ID)
+Content.transfer(child_ID, "to", parent_ID)
+Layout.transfer(child_ID, "to", parent_ID)
+Layout.adopt(child_ID)
 
 # example: move a layout node under the root component of the page
 Layout.select("the", "root")
-Layout.adopt(node\_id)
+Layout.adopt(node_id)
 ```
 
 Jacl example:
 
 ```
-$Content transfer child\_ID to parent\_ID
-$Layout transfer child\_ID to parent\_ID
-$Layout adopt child\_ID
+$Content transfer child_ID to parent_ID
+$Layout transfer child_ID to parent_ID
+$Layout adopt child_ID
 
 # example: move a layout node under the root component of the page
 $Layout select the root
-$Layout adopt node\_ID
+$Layout adopt node_ID
 ```
 
 
-**Related information**  
-
-
-[Content hierarchy accessed through Content bean](../admin-system/contnt_hierarchy.md)
-
-[Component hierarchy \| Portal scripting interface](../admin-system/compnt_hrchy.md)
-
-[Plain attributes - Component hierarchy](../admin-system/pl_att_compnt_hrchy.md)
+???+ info "Related information"  
+    -   [Content hierarchy accessed through Content bean](../../../portal_admin_tools/portal_scripting_interface/command_ref_psi/content_hierarchy/index.md)
+    -   [Component hierarchy | Portal scripting interface](../../../portal_admin_tools/portal_scripting_interface/command_ref_psi/cmpnt_hierarchy/index.md)
+    -   [Plain attributes - Component hierarchy](../../../portal_admin_tools/portal_scripting_interface/command_ref_psi/cmpnt_hierarchy/pl_att_compnt_hrchy.md)
 

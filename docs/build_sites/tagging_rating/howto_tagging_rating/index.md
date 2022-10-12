@@ -17,7 +17,7 @@ The tag widget from earlier HCL Portal versions provided a type-ahead feature. W
 You can use filtering mechanisms to control which terms users can use and which terms they cannot use as tags. The portal provides both a blacklist and a whitelist filter. -->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Adding query parameters](../dev_tagging_and_rating/rest_api/tag_rate_api_rest_add_qparms.md)
     - [Parameter reference for the tag and rating widgets](../cfg_reference/parm_ref_tag_rate_widget/index.md)
 

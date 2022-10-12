@@ -7,7 +7,7 @@ An XML file that you process must always be in UTF-8 encoding. It must specify t
 ```
    <?xml version="1.0" encoding="UTF-8"?>
    <request xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-            xsi:noNamespaceSchemaLocation="PortalConfig\_8.5.0.xsd"
+            xsi:noNamespaceSchemaLocation="PortalConfig_8.5.0.xsd"
 **            type="export\|update"\>**
          . . . configuration  . . .    
       </portal>       
@@ -23,36 +23,21 @@ For an XML export, specify export for the request type. For an XML import, speci
 
 3.  Run the XML command-line interface, and specify the XML file that resulted from the XML export and that you might have modified in the previous steps. You can also use one of the XML sample files with request type update in it. The XML command-line interface returns a result file that indicates whether the specified resources were imported successfully, or what errors might have occurred.
 
-
-**Usage notes:**
-
--   **Using the XML output result file for further processing:**
-
-    When the XML request finishes processing on the server, the resulting XML output is sent back to the client and written to the standard output. You can write the output to an XML file by using the -out command-line option. Using this option always writes the output in UTF-8 encoding, so you can usually use that file for further XML processing. If you do not use this option, the output is written in a console encoding that depends on your operating system and active locale. It might therefore be invalid XML. For more information, see the topics about using the XML command-line client.
-
--   **Usage notes on the difference between XML exports and imports:**
-
-    -   The command-line syntax and XML processing is the same for both exports and imports. You specify an XML input file to the XML configuration interface, and the XML configuration interface returns a resulting XML export file.
-    -   The difference between export and import is determined by whether you set the request type to export or update in the XML input file that you specify in the command-line request. When you run an XML import, the resources action attribute can have the following values: locate, create or update. For more information about XML resources, elements, and attributes, see the topics about the *XML configuration reference* and *Types of portal resources*.
+!!!note "Usage notes"
+    -   **Using the XML output result file for further processing:**<br>
+        When the XML request finishes processing on the server, the resulting XML output is sent back to the client and written to the standard output. You can write the output to an XML file by using the -out command-line option. Using this option always writes the output in UTF-8 encoding, so you can usually use that file for further XML processing. If you do not use this option, the output is written in a console encoding that depends on your operating system and active locale. It might therefore be invalid XML. For more information, see the topics about using the XML command-line client.
+    -   **Usage notes on the difference between XML exports and imports:**
+        -   The command-line syntax and XML processing is the same for both exports and imports. You specify an XML input file to the XML configuration interface, and the XML configuration interface returns a resulting XML export file.
+        -   The difference between export and import is determined by whether you set the request type to export or update in the XML input file that you specify in the command-line request. When you run an XML import, the resources action attribute can have the following values: locate, create or update. For more information about XML resources, elements, and attributes, see the topics about the *XML configuration reference* and *Types of portal resources*.
 
 For more information about XML exports and imports and transfers of portal configuration, see the following topics. For more information about the structure of an XML input script file, see the reference topics about the XML configuration interface.
 
--   **[Transferring a complete configuration](../admin-system/adxmltsk_xfer_compl_cfg.md)**  
-For transferring complete portal configurations, HCL Digital Experience provides a Release Builder tool.
--   **[Exporting and transferring parts of a portal configuration](../admin-system/adxmltsk_xfer_partl_cfg.md)**  
-You can also export partial configurations.
 
 
-**Related information**  
-
-
-[Creating the initial release](../deploy/dep_cir.md)
-
-[Using the XML configuration command line client](../admin-system/adxmltsk_cmdln.md)
-
-[XML input script file structure](../admin-system/adxmlref_input_structure.md)
-
-[Types of portal resources](../admin-system/adxmlref_resrc_types.md)
-
-[Sample XML configuration files](../admin-system/admxmsmp.md)
+???+ info "Related information"  
+    -   [Creating the initial release](../../../../../../../deployment/manage/staging_to_production/creating_deploying_initial_release/dep_cir.md)
+    -   [Using the XML configuration command line client](../../../../../portal_admin_tools/xml_config_interface/working_xml_config_interface/using_xml_config_cmd_line/index.md)
+    -   [XML input script file structure](../../../../../portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref_input_structure.md)
+    -   [Types of portal resources](../../../../../portal_admin_tools/xml_config_interface/xml_config_ref/types_portal_resources/adxmlref_resrc_types.md)
+    -   [Sample XML configuration files](../../../../../portal_admin_tools/xml_config_interface/xml_config_ref/admxmsmp.md)
 

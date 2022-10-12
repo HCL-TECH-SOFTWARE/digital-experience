@@ -6,7 +6,7 @@ The following XML sample shows how you use the XML configuration interface to cr
 
 ```
 <request xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="update"
-         xsi:noNamespaceSchemaLocation="PortalConfig\_8.5.0.xsd">
+         xsi:noNamespaceSchemaLocation="PortalConfig_8.5.0.xsd">
      <portal action="locate">
           <language action="update" domain="rel" locale="ja">
           <localedata locale="ja">
@@ -21,7 +21,7 @@ The following XML sample shows how you use the XML configuration interface to re
 
 ```
 <request xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="update"  
-         xsi:noNamespaceSchemaLocation="PortalConfig\_8.5.0.xsd">
+         xsi:noNamespaceSchemaLocation="PortalConfig_8.5.0.xsd">
     <portal action="locate">
          <language action="delete" domain="rel" locale="ja">
          <localedata locale="ja">
@@ -33,12 +33,8 @@ The following XML sample shows how you use the XML configuration interface to re
 ```
 
 
-**Related information**  
-
-
-[Sample XML configuration files](../admin-system/admxmsmp.md)
-
-[Working with the XML configuration interface](../admin-system/adxmltsk.md)
-
-[How to control the behavior of the language fallback filter](../admin-system/adlangflt.md)
+???+ info "Related information"  
+     -    [Sample XML configuration files](../../../portal_admin_tools/xml_config_interface/xml_config_ref/admxmsmp.md)
+     -    [Working with the XML configuration interface](../../../portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
+     -    [How to control the behavior of the language fallback filter](../../../portal_admin_tools/language_support/adlangflt.md)
 

@@ -17,13 +17,12 @@ To change the character set for a language, use the **Supported Markups** portle
 
 For details about how to perform these tasks refer to the Supported Markups portlet help.
 
-**Note:** For a portlet to be rendered correctly, the language of the portlet must be supported by the character set of the portal.
+!!!note
+    For a portlet to be rendered correctly, the language of the portlet must be supported by the character set of the portal.
 
-To help the user's browser to render content correctly, the used character set is written to the HTTP header of the response stream. The default encoding is UTF-8. If it set to another encoding, you can force the default encoding by setting the JVM parameter as follows default.client.encoding=UTF-8.
-
-
-**Related information**  
+To help the user's browser to render content correctly, the used character set is written to the HTTP header of the response stream. The default encoding is UTF-8. If it set to another encoding, you can force the default encoding by setting the JVM parameter as follows: `default.client.encoding=UTF-8`.
 
 
-[Themes and skins](../admin-system/admcustom_skins.md)
+???+ info "Related information"  
+    -   [Themes and skins](../../portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/customizing_pages/admcustom_skins.md)
 

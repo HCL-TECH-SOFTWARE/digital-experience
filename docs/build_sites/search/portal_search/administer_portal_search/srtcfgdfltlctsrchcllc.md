@@ -4,14 +4,12 @@ You can modify the default directory location under which search collections are
 
 The default directory location under which search collections are created is as follows:
 
--   AIX®HP-UXLinux™Solaris: `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/collections`
--   IBM® i: `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/collections`
--   Windows™: `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\PortalServer\collections`
--   z/OS®: `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/collections`
+-   AIX and Linux: `wp_profile_root/PortalServer/collections`
+-   Windows™: `wp_profile_root\PortalServer\collections`
 
 This default can be applied when you create a new search collection, depending on the value you specify in the entry field **Location of Collection** when you create a search collection:
 
--   If you type a relative directory location of your choice, the location for the new search collection is combined from the default directory for search locations and the location that you type. Example: If you type my\_collection\_location, the new search collection is created under the directory `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/collections/my_collection_location`.
+-   If you type a relative directory location of your choice, the location for the new search collection is combined from the default directory for search locations and the location that you type. Example: If you type my\_collection\_location, the new search collection is created under the directory `wp_profile_root/PortalServer/collections/my_collection_location`.
 -   If you want to create the search collection in a location that is different from the default search collection location, type the full directory location. The new search collection is created under the directory location that you specified.
 
 You can customize this default directory location under which search collections are created. To complete this process, you set the directory location of your choice as the value for the parameter `DefaultCollectionsDirectory` for the search service. You can configure this parameter for each search service separately. The value that you set for this parameter is prefixed to the relative location that you specify when you are creating a search collection for that search service.
@@ -20,7 +18,7 @@ The specified value determines the default directory location for the search col
 
 To configure a different default search collection location, proceed by the following steps:
 
-1.  To open the **Manage Search** portlet, click the **Administration menu** icon. Then, click **Search Administration** \> **Manage Search**.
+1.  To open the **Manage Search** portlet, click the **Administration menu** icon. Then, click **Search Administration > **Manage Search**.
 
 2.  Click **Search Services**.
 
@@ -45,7 +43,5 @@ To configure a different default search collection location, proceed by the foll
         This issue can occur particularly when the site collection is created under one of the following operating systems.
 
         -   AIX
-        -   HP-UX
         -   Linux
-        -   Solaris
 

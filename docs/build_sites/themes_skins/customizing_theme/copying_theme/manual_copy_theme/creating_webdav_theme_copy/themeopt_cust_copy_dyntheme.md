@@ -14,17 +14,17 @@ You need to make a unique copy of the dynamic resources for your theme. Make sur
 
 6.  Expand your new CustomTheme project and find and expand the WebContent folder.
 
-7.  Find the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\skins folder on file system and drag it onto the WebContent folder. This step copies and imports the skins folder into your dynamic web project.
+7.  Find the [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\skins folder on file system and drag it onto the WebContent folder. This step copies and imports the skins folder into your dynamic web project.
 
-8.  Find the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\themes folder on file system and drag it onto the WebContent folder. This step copies and imports the themes folder into your dynamic web project.
+8.  Find the [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\themes folder on file system and drag it onto the WebContent folder. This step copies and imports the themes folder into your dynamic web project.
 
 9.  In your CustomTheme project, find the WEB-INF folder inside the WebContent folder.
 
-10. Find the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\WEB-INF\\decorations.xml file on file system and drag it onto the WEB-INF folder. This step copies and imports the file into your dynamic web project.
+10. Find the [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\WEB-INF\\decorations.xml file on file system and drag it onto the WEB-INF folder. This step copies and imports the file into your dynamic web project.
 
-11. Find the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\WEB-INF\\tld folder on file system and drag it onto the WEB-INF folder. This step copies and imports the tld folder into your dynamic web project.
+11. Find the [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\WEB-INF\\tld folder on file system and drag it onto the WEB-INF folder. This step copies and imports the tld folder into your dynamic web project.
 
-12. Copy the following plugin.xml file into your dynamic resources and drag it into the WEB-INF folder: [PortalServer\_root](../reference/wpsdirstr.md#wp_root)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\WEB-INF\\plugin.xml.
+12. Copy the following plugin.xml file into your dynamic resources and drag it into the WEB-INF folder: [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\WEB-INF\\plugin.xml.
 
 13. Create a whitelist and a blacklist. For security reasons, the WAR data source does not serve content until a special context parameter is set. This context parameter defines which files from your web module HCL Portal is able to serve. You can set your whitelist and blacklist in two ways: in a context parameter in the web.xml of the web application, or in the Resource Environment Provider settings.
 
@@ -57,30 +57,17 @@ You need to make a unique copy of the dynamic resources for your theme. Make sur
 
         Each web application defines three custom properties in the WP ConfigService Resource Environment Provider. All three properties are required.
 
-        **Note:** The variable your\_key\_for\_web\_app is used during parsing to identify the three properties that belong together for one web application, so you must use a different key for each web application.
+        !!! note
+         The variable your\_key\_for\_web\_app is used during parsing to identify the three properties that belong together for one web application, so you must use a different key for each web application.
 
         |Name|Value|
         |----|-----|
-        |`com.ibm.portal.resource.your\_key\_for\_web\_app.contextroot`|The context root under which the WAR file is deployed. You can use the variable'$\{URI\_CONTEXT\_PATH\}' to avoid a hardcoded reference to the context root because the context root can be changed. The variable '$\{URI\_CONTEXT\_PATH\}' resolves the correct context root, which by default is `'/wps'`.Example:
-
-        -   Name: `com.ibm.portal.resource.my\_web\_app\_1.contextroot`
-        -   Value: `${URI_CONTEXT_PATH}/PA_My_Web_App`
-|
-        |`com.ibm.portal.resource.your\_key\_for\_web\_app.whitelist`|A regular expression that defines the resources in the WAR file that can be served by the portal resource data source.Example:
-
-        -   Name: `ibm.portal.resource.my\_web\_app\_1.whitelist`
-        -   Value: `.*`
-|
-        |`com.ibm.portal.resource.your\_key\_for\_web\_app.blacklist`|A regular expression that defines the resources in the WAR file that cannot be served by the portal resource data source.Example:
-
-        -   Name: `com.ibm.portal.resource.my\_web\_app\_1.blacklist`
-        -   Value: `WEB-INF/.*`
-|
+        |`com.ibm.portal.resource.your\_key\_for\_web\_app.contextroot`|The context root under which the WAR file is deployed. You can use the variable'$\{URI\_CONTEXT\_PATH\}' to avoid a hardcoded reference to the context root because the context root can be changed. The variable '$\{URI\_CONTEXT\_PATH\}' resolves the correct context root, which by default is `'/wps'`.Example: <br/> -   Name: `com.ibm.portal.resource.my\_web\_app\_1.contextroot` <br/> -   Value: `${URI_CONTEXT_PATH}/PA_My_Web_App`|
+        |`com.ibm.portal.resource.your\_key\_for\_web\_app.whitelist`|A regular expression that defines the resources in the WAR file that can be served by the portal resource data source.Example: <br/> -   Name: `ibm.portal.resource.my\_web\_app\_1.whitelist` <br/> -   Value: `.*`|
+        |`com.ibm.portal.resource.your\_key\_for\_web\_app.blacklist`|A regular expression that defines the resources in the WAR file that cannot be served by the portal resource data source.Example: <br/> -   Name: `com.ibm.portal.resource.my\_web\_app\_1.blacklist` <br/> -   Value: `WEB-INF/.*`|
 
 
 
-**Related information**  
-
-
-[Modify the dynamic resource references for your theme](../dev-theme/themeopt_cust_copy_modifystatres.md)
+???+ info "Related information:"
+   - [Modify the dynamic resource references for your theme](../creating_webdav_theme_copy/themeopt_cust_copy_modifystatres.md)
 

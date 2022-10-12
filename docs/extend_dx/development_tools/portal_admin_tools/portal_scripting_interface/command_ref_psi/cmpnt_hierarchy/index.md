@@ -1,4 +1,8 @@
-# Component hierarchy \| Portal scripting interface
+---
+title: Component hierarchy
+---
+
+# Component hierarchy | Portal scripting interface
 
 The component hierarchy is a tree of components on a page. Components can be containers and controls. A container holds other components, a control displays a portlet. The component hierarchy is accessed and modified by using the Layout bean, referenced as $Layout in Jacl.
 
@@ -18,20 +22,8 @@ The Layout bean offers the following functions:
 
 -   **[Navigation - Component hierarchy](../admin-system/navigation_compnt_hrchy.md)**  
 The Layout bean is a tree bean. The layout bean provides the index command to obtain and resolve so-called index paths. For more information, see Index paths. When started with an ID as argument, the command returns the absolute index path for that component. When started without an argument, it returns the absolute index path for the currently selected component.
--   **[Search - Component hierarchy](../admin-system/search_compnt_hrchy.md)**  
-The generic search syntax is documented in Search. The Layout bean supports the following keywords for node types in searches. Alternative, shorter keywords are documented in the bean help.
--   **[Plain attributes - Component hierarchy](../admin-system/pl_att_compnt_hrchy.md)**  
-In addition to the default attributes, components have the following attributes. Alternatively, shorter names are documented in the bean help.
--   **[Global flags - Component hierarchy](../admin-system/gbl_flgs_compnt_hrchy.md)**  
-A composition hierarchy has several global flags. The global flags are similar to attributes of the content page node, except that they are associated with the composition hierarchy rather than the content node. Therefore, they are accessed through the Layout bean after the page in the Content bean is selected.
--   **[Lifecycle - Component hierarchy](../admin-system/lifecycle_compnt_hrchy.md)**  
-The create command creates a new component. You must select the parent container for the new component. The first argument is a keyword that indicates whether a container or control is created. Alternative, shorter keywords are documented in the bean help.
 
-
-**Related information**  
-
-
-[Content hierarchy accessed through Content bean](../admin-system/contnt_hierarchy.md)
-
-[Organization \| Portal Scripting Interface](../admin-system/organization.md)
+???+ info "Related information"  
+    -   [Content hierarchy accessed through Content bean](../../../../portal_admin_tools/portal_scripting_interface/command_ref_psi/content_hierarchy/index.md)
+    -   [Organization | Portal Scripting Interface](../../../../portal_admin_tools/portal_scripting_interface/command_ref_psi/organization.md)
 

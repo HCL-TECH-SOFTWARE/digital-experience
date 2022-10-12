@@ -6,13 +6,7 @@ For example, you might want to create a new theme and page, and reference the th
 
 There are two ways to achieve this:
 
--   You can switch the XML processing to **ID generating mode** by setting the create-oids flag on the main request tag:
-
-    ```
-    
-              <request . . . create-oids="true" . . . >
-    
-    ```
+-   You can switch the XML processing to **ID generating mode** by setting the create-oids flag on the main request tag: `<request . . . create-oids="true" . . . >`<br>
 
     In this mode, all object IDs are not written to or read from the portal database. Instead, their only purpose is to express the linking between resources in the XML. When the XML processing creates new resources, they are created with a new system generated object ID, not with the object ID specified in the XML.
 
@@ -54,15 +48,14 @@ When you set this flag, a mapping section is appended to the XML response. For e
 
 The ID generating mode is useful if you want to create an XML script that installs a group of new resources and is executed on many different portal installations. This can be, for example, a part of the installation procedure of a portal add-on that you give out to other parties. In this case, you have no control over the systems on which the XML script is executed, and it is of no interest to you which object IDs the resources actually get.
 
-**Note:** Use the ID generating mode for all the examples under Working with the XML configuration interface, because they should work on any portal installation.
+!!!note
+    Use the ID generating mode for all the examples under Working with the XML configuration interface, because they should work on any portal installation.
 
 The identity of the objects that are configured in the XML script is expressed by their object ID. Therefore you should use "real" object IDs in your scripts, when you want the objects in your XML to retain their identity. For example, when you use an XML export request and the resulting response file to copy a resource from a staging to a production system, the resource is created on the production system with the same object ID as on the staging system. This way you can establish a correspondence between the two resources. When you later transfer the same resource again, the XML processing looks up the resource by its object ID, finds that it already exists, and updates the existing resource instead of creating a new one.
 
 When setting up the target system in such scenarios, you should use only the XML configuration interface to copy resources from the source system. If you deploy portlets on the target system during the portal installation or if you deploy them using the administration portlets, they will not have the same object IDs as on the source system, so you can run into problems when you later copy other resources that reference them.
 
 
-**Related information**  
-
-
-[Error recovery](../admin-system/adxmlref_errecovr.md)
+???+ info "Related information" 
+    -   [Error recovery](../../../../portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref_errecovr.md)
 

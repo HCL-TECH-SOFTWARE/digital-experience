@@ -46,11 +46,11 @@ To include a tag widget in a portal page, a portlet or other portal content, ins
 
 -   **src**
 
-    Specify the appropriate values for the `src` attribute for the images. To obtain these values, copy them from the `src` attributes for images from the Web Content Manager HTML - Tag Widget Light - Menu component. Proceed as follows:
+    Specify the appropriate values for the `src` attribute for the images. To obtain these values, copy them from the `src` attributes for images from the Web Content Manager HTML - Tagging Widget Light - Menu component. Proceed as follows:
 
-    1.  In Web Content Manager, go to **Applications** \> **Content** \> **WCM Authoring** \> **Libraries** \> **Web Resources v70** \> **Components**.
-    2.  Select the check box for **HTML - Tag Widget Light - Menu**.
-    3.  Click **Read** and copy the `src` attribute value that you found here.
+    1.  Go to **Web Content** \> **Authoring** \> **Libraries** \> **Web Resources v70** \> **Components**. (You may need to add the Web Resources v70 library to the Library Selection list if it is not initially shown. Click on **Preferences** > **Edit Shared Settings** > **Library Selection** to adjust which libraries are shown when authoring web content.)
+    2.  Select the check box for **HTML - Tagging Widget Light - Menu**.
+    3.  Click **Read** and copy the img `src` attribute value that you find here.
     4.  Paste the value into your code for including the tag widget.
 
 These parameters are mandatory. For information about the optional parameters, read the *Tag widget parameter reference*.

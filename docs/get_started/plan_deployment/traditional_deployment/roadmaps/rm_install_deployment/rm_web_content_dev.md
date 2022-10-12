@@ -64,7 +64,7 @@ Portal is running and 10039 is the default transport port that is created by DXÂ
 for your environment.
 ```
 
-1.  To get the latest updates for the wizard, apply the most recent Combined Cumulative Fix. For more information about applying the latest fix pack, visit *Combined cumulative fix strategy* for more topic information.
+1.  To get the latest updates for the wizard, apply the most recent Combined Cumulative Fix. For more information about applying the latest fix pack, visit [Apply Combined Cumulative Fix](../../../../../deployment/install/traditional/cf_install/index.md) for more topic information.
 
     **Note:** Skip this step, if you have the most recent fix pack applied.
 
@@ -99,7 +99,7 @@ After you install your web experience, a default file-based repository is your a
 
 **Note:** If you set **Use Administrator IDs stored in your LDAP user registry** to yes, the WebSphereÂ® Application Server and HCL Portal user IDs and passwords are changed to the LDAP user ID and password. If you do not want to change both user IDs and passwords to match the LDAP user ID and password, set this value to no. After you configure your LDAP user registry, you can manually change the user IDs and passwords.
 
-1.  To get the latest updates for the wizard, apply the most recent Combined Cumulative Fix. For more information about applying the latest fix pack, visit *Combined cumulative fix strategy* for more topic information.
+1.  To get the latest updates for the wizard, apply the most recent Combined Cumulative Fix. For more information about applying the latest fix pack, visit [Apply Combined Cumulative Fix](../../../../../deployment/install/traditional/cf_install/index.md)for more topic information.
 
     **Note:** Skip this step, if you have the most recent fix pack applied.
 

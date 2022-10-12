@@ -41,7 +41,8 @@ To enable asynchronous web content rendering for a single portlet instance, use 
 
 The web content now renders asynchronously. Until the web content is available, a loading icon and corresponding text appears.
 
-**Note:** Be aware of the following possible error scenarios with asynchronous web content rendering:
+!!! note
+    Be aware of the following possible error scenarios with asynchronous web content rendering:
 
 -   If a timeout occurs, the placeholder area of the Web Content Viewer removes the waiting icon and displays an error text instead.
 -   If the request fails on the server side inside the `serveResource` method, an HTTP error code is displayed in the placeholder area with a corresponding HCL Web Content Manager error message.

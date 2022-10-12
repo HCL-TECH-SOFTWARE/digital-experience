@@ -10,19 +10,7 @@ The Portal Scripting Interface enables the creation of administrative tasks that
 
     3.  Restart the deployment manager.
 
-2.  For z/OS®: Before you use the Portal Scripting Interface for the first time, complete the following steps:
-
-    1.  Mount the SMP/E home directory of HCL Portal, read only, on your deployment manager node.
-
-    2.  Edit job EJPSSEWL with the SMP/E home directory of HCL Portal for #EJPSMPH# and with the WebSphere® Application Server home directory of the deployment manager node for #ASWASH#.
-
-    3.  Submit the job on the deployment manager node.
-
-    4.  Upon completion, examine the job output. Success is indicated with "rc=0" in the job output.
-
-    5.  Restart the deployment manager.
-
-3.  Run the following task to connect the scripting client to the WebSphere Application Server Network Deployment SOAP port:
+2.  Run the following task to connect the scripting client to the WebSphere Application Server Network Deployment SOAP port:
 
     Where:
 
@@ -37,10 +25,9 @@ The Portal Scripting Interface enables the creation of administrative tasks that
     
     |Operating system|Task|
     |----------------|----|
-    |Windows™|wpscript.bat -port ND SOAP Port -user user -password password|
-    |AIX®HP-UXLinux™Solaris|./wpscript.sh -port ND SOAP Port -user user -password password|
-    |IBM® i|wpscript.sh -port ND SOAP Port -user user -password password|
-    |z/OS|./wpscript.sh -port ND SOAP Port -user user -password password <br> **Note:** You must be logged in using the WebSphere administrative user ID.|
+    |Windows™|`wpscript.bat -port ND SOAP Port -user user -password password`|
+    |AIX®, Linux™|`./wpscript.sh -port ND SOAP Port -user user -password password`|
+
 
 
 

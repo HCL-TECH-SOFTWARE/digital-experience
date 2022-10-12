@@ -21,9 +21,6 @@ $Portlet select the webmodule
 
 ```
 
-
-**Related information**  
-
-
-[Command reference - Tree navigation \| Portal Scripting Interface](../admin-system/tree_nav.md)
+???+ info "Related information"  
+    -   [Command reference - Tree navigation | Portal Scripting Interface](../../../../portal_admin_tools/portal_scripting_interface/command_ref_psi/tree_nav.md)
 

@@ -1,8 +1,8 @@
-# Updating an existing Portal Application Archive \(PAA\) file
+# Updating an existing Portal Application Archive (PAA) file
 
-You can update an existing Portal Application Archive \(PAA\) file when a new version is available. The process is not as simple as overwriting the file with the new content. There might be large differences between the content in both versions of the file.
+You can update an existing Portal Application Archive (PAA) file when a new version is available. The process is not as simple as overwriting the file with the new content. There might be large differences between the content in both versions of the file.
 
-The install-paa-update command creates a backup of your current PAA file. It is stored in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/paa/backup directory. The command then completes the following actions:
+The install-paa-update command creates a backup of your current PAA file. It is stored in the wp_profile_root/paa/backup directory. The command then completes the following actions:
 
 -   Uninstalls the PAA file from HCL Digital Experience
 -   Deletes the content from the expanded PAA file
@@ -10,28 +10,29 @@ The install-paa-update command creates a backup of your current PAA file. It is 
 
 After you run the install-paa-update command, you must deploy the changes to your system.
 
-**PAA file developer note:** Make all updates in the custom code. No code generation is available for an upgrade through the regular install-paa process. Read the guide about creating updated PAA files for information.
+!!!note "PAA file developer note"
+    Make all updates in the custom code. No code generation is available for an upgrade through the regular install-paa process. Read the guide about creating updated PAA files for information.
 
-**Cluster note:** Complete these steps on the primary node and then on all additional nodes.
+!!!note "Cluster"
+    Complete these steps on the primary node and then on all additional nodes.
 
 1.  Open a command line.
 
-2.  Change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+2.  Change to the wp_profile_root/ConfigEngine directory.
 
 3.  Run the following task to update the PAA file:
 
-    -   AIX® HP-UX Linux™ Solaris: ./ConfigEngine.sh install-paa-update -DPAALocation=paaLocation/yourPaa.paa -DappName=assemblyName -DWasPassword=password -DPortalAdminPwd=password
-    -   IBM® i: ConfigEngine.sh install-paa-update -DPAALocation=paaLocation/yourPaa.paa -DappName=assemblyName -DWasPassword=password -DPortalAdminPwd=password
-    -   Windows™: ConfigEngine.bat install-paa-update -DPAALocation=paaLocation/yourPaa.paa -DappName=assemblyName -DWasPassword=password -DPortalAdminPwd=password
-    -   z/OS®:./ConfigEngine.sh install-paa-update -DappName=assemblyName -DWasPassword=password -DPortalAdminPwd=password
-    **Optional parameter:** You can add the following parameter to your install-paa-update command: -Dwcmdetect=true. This parameter controls the behavior of the installed HCL Web Content Manager libraries. If you include this parameter, a properties file is created in the paa/ComponentName directory. The name of the properties file matches the PAA file name.
+    -   AIX®, Linux™: `./ConfigEngine.sh install-paa-update -DPAALocation=paaLocation/yourPaa.paa -DappName=assemblyName -DWasPassword=password -DPortalAdminPwd=password`
+    -   Windows™: `ConfigEngine.bat install-paa-update -DPAALocation=paaLocation/yourPaa.paa -DappName=assemblyName -DWasPassword=password -DPortalAdminPwd=password`
+
+    !!!note "Optional parameter"
+        You can add the following parameter to your install-paa-update command: -Dwcmdetect=true. This parameter controls the behavior of the installed HCL Web Content Manager libraries. If you include this parameter, a properties file is created in the paa/ComponentName directory. The name of the properties file matches the PAA file name.
 
 4.  After the task successfully completes, verify that the following sub-directory exists:
 
-    -   AIX HP-UXLinux Solaris: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/paa/paa\_filename
-    -   IBM i: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/paa/paa\_filename
-    -   Windows: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\paa\\paa\_filename
-    -   z/OS:[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/paa/paa\_filename
+    -   AIX, Linux: wp_profile_root/paa/paa\_filename
+    -   Windows: wp_profile_root\\paa\\paa\_filename
+
 5.  From the PAA file sub-directory, open the components.properties file. Complete the following steps to check for and resolve conflicts with previously installed components:
 
     1.  Search for the component parameters. Parameters that are set to true are not already installed. Parameters that are set to false are already installed.
@@ -54,15 +55,14 @@ After you run the install-paa-update command, you must deploy the changes to you
 
     This task updates the registration of the existing components with the new assembly.
 
-    -   AIX HP-UXLinux Solaris: ./ConfigEngine.sh update-paa-components -DappName=assemblyName -DWasPassword=password -DPortalAdminPwd=password
-    -   IBM i: ConfigEngine.sh update-paa-components -DappName=assemblyName -DWasPassword=password -DPortalAdminPwd=password
-    -   Windows: ConfigEngine.bat update-paa-components -DappName=assemblyName -DWasPassword=password -DPortalAdminPwd=password
-    -   z/OS: ./ConfigEngine.sh update-paa-components -DappName=assemblyName -DWasPassword=password -DPortalAdminPwd=password
-8.  If you use the Simple and Protected GSS-API Negotiation Mechanism \(SPNEGO\) for single sign-on, complete the following steps to disable SPNEGO:
+    -   AIX, Linux: `./ConfigEngine.sh update-paa-components -DappName=assemblyName -DWasPassword=password -DPortalAdminPwd=password`
+    -   Windows: `ConfigEngine.bat update-paa-components -DappName=assemblyName -DWasPassword=password -DPortalAdminPwd=password`
+
+8.  If you use the Simple and Protected GSS-API Negotiation Mechanism (SPNEGO) for single sign-on, complete the following steps to disable SPNEGO:
 
     1.  Log on to WebSphere® Integrated Solutions Console.
 
-    2.  Go to **Security** \> **Global security** \> **Web and SIP security** \> **SPNEGO Web authentication**.
+    2.  Go to **Security > Global security > Web and SIP security > SPNEGO Web authentication**.
 
     3.  Clear the **Enable SPNEGO** check box.
 
@@ -70,25 +70,28 @@ After you run the install-paa-update command, you must deploy the changes to you
 
 9.  Run the following task to deploy the updated PAA content to HCL Portal:
 
-    -   AIX HP-UXLinux Solaris: ./ConfigEngine.sh deploy-paa -DappName=assemblyName -DWasPassword=password -DPortalAdminPwd=password
-    -   IBM i: ConfigEngine.sh deploy-paa -DappName=assemblyName -DWasPassword=password -DPortalAdminPwd=password
-    -   Windows: ConfigEngine.bat deploy-paa -DappName=assemblyName -DWasPassword=password -DPortalAdminPwd=password
-    -   z/OS: ./ConfigEngine.sh deploy-paa -DappName=assemblyName -DWasPassword=password -DPortalAdminPwd=password
-    **Clustered environment parameters:** If you are deploying to a clustered environment and your PAA file contains XMLAccess script files, add the following two parameters to the deploy-paa task:
+    -   AIX, Linux: `./ConfigEngine.sh deploy-paa -DappName=assemblyName -DWasPassword=password -DPortalAdminPwd=password`
+    -   Windows: `ConfigEngine.bat deploy-paa -DappName=assemblyName -DWasPassword=password -DPortalAdminPwd=password`
 
-    -   -DmaxTimeToWait
-    -   -DmaxAppTimeToWait
+    !!!note "Clustered environment parameters"
+        If you are deploying to a clustered environment and your PAA file contains XMLAccess script files, add the following two parameters to the deploy-paa task:
+
+            -   -`DmaxTimeToWait`
+            -   -`DmaxAppTimeToWait`
+
     These values define the time that the wplc-wait-for-sync-to-complete task waits to synchronize your nodes. The default values are -DmaxTimeToWait=30 and -DmaxAppTimeToWait=5. The values are in minutes. Add these parameters to your deploy-paa task with values that meet your requirements.
 
-    **Virtual portal parameters:** If you are deploying to a virtual portal, you must include the context root and host name parameters for the virtual portal. Add the -DVirtualPortalHostName and -DVirtualPortalContext parameters to the deploy-paa task. Read [Virtual portals](../admin-system/ad_vp.md) for information.
+    !!!note "Virtual portal parameters"
+        If you are deploying to a virtual portal, you must include the context root and host name parameters for the virtual portal. Add the -DVirtualPortalHostName and -DVirtualPortalContext parameters to the deploy-paa task. Read [Virtual portals](../../../../../build_sites/virtual_portal/index.md) for information.
 
-    **Note:** By default, only components that are set to true in the components.properties file are deployed. To deploy all components, add the -DforceDeploy=true parameter to the deploy-paa task.
+    !!!note
+        By default, only components that are set to true in the components.properties file are deployed. To deploy all components, add the -DforceDeploy=true parameter to the deploy-paa task.
 
 10. Complete the following steps to enable SPNEGO:
 
     1.  Log on to WebSphere Integrated Solutions Console.
 
-    2.  Go to **Security** \> **Global security** \> **Web and SIP security** \> **SPNEGO Web authentication**.
+    2.  Go to **Security > Global security > Web and SIP security > SPNEGO Web authentication**.
 
     3.  Check the **Enable SPNEGO** check box.
 

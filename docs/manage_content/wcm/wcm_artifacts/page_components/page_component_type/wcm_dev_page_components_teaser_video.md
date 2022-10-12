@@ -3,14 +3,14 @@ id: wcm_dev_page_components_teaser_video
 title: Video page component type
 ---
 
-
+# Video page component type
 
 
 The video page component is used to add a video to your page.
 
 ## Authoring templates
 
-The authoring templates associated with your video are created under this folder: **Your Library** \> **Authoring Templates** \> **Your Video**
+The authoring templates associated with your video are created under this folder: **Your Library > Authoring Templates > Your Video**
 
 -   **Your Video**
 
@@ -19,7 +19,7 @@ The authoring templates associated with your video are created under this folder
 
 ## Presentation templates
 
-The presentation templates associated with your video are created under this folder: **Your Library** \> **Presentation Templates** \> **Your Video**
+The presentation templates associated with your video are created under this folder: **Your Library > Presentation Templates > Your Video**
 
 -   **Your Video**
 
@@ -28,7 +28,7 @@ The presentation templates associated with your video are created under this fol
 
 ## Content items
 
-The content items associated with your video are created under this site area: **Your Library** \> **Content** \> **Page Components** \> **Your Video**
+The content items associated with your video are created under this site area: **Your Library > Content > Page Components > Your Video**
 
 -   **Your Video**
 
@@ -37,7 +37,7 @@ The content items associated with your video are created under this site area: *
 
 ## Localizations
 
-The localized text associated with your video is created under this site area: **Your Library** \> **Localizations**
+The localized text associated with your video is created under this site area: **Your Library > Localizations**
 
 -   **Your Video**
 
@@ -46,7 +46,7 @@ The localized text associated with your video is created under this site area: *
 
 ## Components
 
-The components associated with your video are created under this folder: **Your Library** \> **Components** \> **Your Video**
+The components associated with your video are created under this folder: **Your Library > Components > Your Video**
 
 -   **Styles**
 

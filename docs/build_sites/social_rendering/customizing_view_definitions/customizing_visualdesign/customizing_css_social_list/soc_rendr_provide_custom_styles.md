@@ -115,6 +115,6 @@ To create your own styles, proceed by the following steps:
 After you complete this procedure, you can use your own custom styles for your social lists.
 
 
-???+ info "Related information:"
+???+ info "Related information"
    - [Defining theme modules](../../../../../guide_me/tutorials/scriptapps/common-setup/optimized-scriptapps/dependencies_as_module.md)
 

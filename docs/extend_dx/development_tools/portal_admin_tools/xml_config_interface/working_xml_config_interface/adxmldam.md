@@ -4,14 +4,14 @@ Using XML Access with HCL DX CF19 and higher, to manage staging scenarios, admin
 
 This enables a Digital Asset Management staging scenario in which an administrator can copy the persistent volumes as deployed in Kubernetes or OpenShift platforms for Digital Asset Management, and the persistence layer from the source deployment system. The XML Access script will also export the Digital Asset Management assets access control information, and then import all artifacts it to the target deployment system.
 
-**Note:** This staging scenario presents some constraints:
+!!!note
+    This staging scenario presents some constraints:
 
--   All Digital Asset Management access control assets will be copied from the source deployment \(staging\) to the target deployment system.
--   The assets on the target system will be replaced.
--   Access Control is matched between environments, though it is possible to manipulate the access control data after completing the export.
+        -   All Digital Asset Management access control assets will be copied from the source deployment \(staging\) to the target deployment system.
+        -   The assets on the target system will be replaced.
+        -   Access Control is matched between environments, though it is possible to manipulate the access control data after completing the export.
 
-![](../images/admin-system-digital-asset-management-access-control-using-xml-access.png "Digital Asset Management access control staging to production scenario using XML
-          Access")
+![](../working_xml_config_interface/using_xml_config_cmd_line/_img/admin-system-digital-asset-management-access-control-using-xml-access.png "Digital Asset Management access control staging to production scenario using XML Access")
 
 ## Export Digital Asset Management Access Control Assets - Sample XML Access script
 

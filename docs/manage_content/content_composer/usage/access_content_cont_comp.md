@@ -53,6 +53,8 @@ The HCL Content Composer Dashboard has the following components:
 
     -   Content type
 
+    -   Content keywords
+
     ![Content metadata column](../../../images/Content_metadata_column.png "Content metadata column")
 
     Content users can also access view, editing and delete options of the selected content or content template in this column.

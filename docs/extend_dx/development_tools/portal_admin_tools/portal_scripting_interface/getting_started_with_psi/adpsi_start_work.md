@@ -87,7 +87,7 @@ The following exercise shows you some steps how to work with portal resources, s
     
     ```
 
-    This command returns a 'list' of object IDs of the nodes from the root node to your currently selected node. As you can see, it is not a 'true' list in the Jython sense, it is rather a string with entries separated by blanks. To get a list that is better readable, the command split\(\) as shown in the following example:
+    This command returns a 'list' of object IDs of the nodes from the root node to your currently selected node. As you can see, it is not a 'true' list in the Jython sense, it is rather a string with entries separated by blanks. To get a list that is better readable, the command split (\) as shown in the following example:
 
     ```
     wsadmin>for id in Content.path().split():

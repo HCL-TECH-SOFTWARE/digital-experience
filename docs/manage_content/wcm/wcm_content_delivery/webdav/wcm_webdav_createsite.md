@@ -29,11 +29,13 @@ sites
    access-control.xml
 ```
 
-**Note:** Support for content items is limited to modifying the metadata and access control settings. You cannot create or delete content items by using WebDAV.
+!!! note
+    Support for content items is limited to modifying the metadata and access control settings. You cannot create or delete content items by using WebDAV.
 
 1.  To create a new site area for your library, create a new folder with the `wcm.siteArea` prefix.
 
-    **Important:** Some WebDAV clients create a folder with a default name, such as `New Folder`, and as soon as you enter the name of the new folder, the client sends a request to rename the already created folder. Because site area folders require a corresponding prefix for creation, this client behavior does not work. If your WebDAV client uses this method to create new folders, you can first create the new site area folder locally and then copy it into the WebDAV tree.
+    !!! important
+        Some WebDAV clients create a folder with a default name, such as `New Folder`, and as soon as you enter the name of the new folder, the client sends a request to rename the already created folder. Because site area folders require a corresponding prefix for creation, this client behavior does not work. If your WebDAV client uses this method to create new folders, you can first create the new site area folder locally and then copy it into the WebDAV tree.
 
     **Deleting site areas:** To delete site areas delete the corresponding folder. Parent site areas containing site areas or content items cannot be deleted until you have also first deleted the child items. To delete child content items before deleting a site area, you must use the authoring portlet rather than WebDAV.
 

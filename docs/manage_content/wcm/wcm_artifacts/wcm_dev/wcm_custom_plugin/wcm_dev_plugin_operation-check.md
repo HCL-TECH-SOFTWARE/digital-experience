@@ -6,7 +6,8 @@ The operation check extension only supports the create operation of a new Item, 
 
 To create a OperationCheckPlugin plug-in, you must create a operation check class and then register the file by deploying it on the server.
 
-**Note:** This extension cannot be used with page components or templates generated using the Generate feature.
+   !!! note
+      This extension cannot be used with page components or templates generated using the Generate feature.
 
 1.  Create a Java class that implements the interface interface com.ibm.workplace.wcm.api.extensions.operation.OperationCheckPlugin. This class must implement the following methods:
 
@@ -17,7 +18,7 @@ To create a OperationCheckPlugin plug-in, you must create a operation check clas
     -   **`OperationCheckResult checkOperation(OperationContext context)`**
     See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
 
-2.  Implement the checkOperation\(\) method. This method contains the code that will be run when the plug-in is invoked prior to committing a Web Content Manager operation. The method needs to return an instance which implements the interface com.ibm.workplace.wcm.api.extensions.operation.OperationCheckResult. The instance needs to implement twomethods:
+2.  Implement the checkOperation() method. This method contains the code that will be run when the plug-in is invoked prior to committing a Web Content Manager operation. The method needs to return an instance which implements the interface com.ibm.workplace.wcm.api.extensions.operation.OperationCheckResult. The instance needs to implement twomethods:
 
     -   **`boolean canContinue()`**
 
@@ -27,7 +28,7 @@ To create a OperationCheckPlugin plug-in, you must create a operation check clas
 
         Returns localized messages to the caller. If null is returned, no message will be shown.
 
-    If canContinue\(\) returns true, the operation continues. If not, the operation is blocked and the message returned by the method messages\(\) is displayed in the user interface.
+    If canContinue() returns true, the operation continues. If not, the operation is blocked and the message returned by the method messages() is displayed in the user interface.
 
     For example:
 

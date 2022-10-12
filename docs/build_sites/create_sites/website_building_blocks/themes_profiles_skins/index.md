@@ -14,7 +14,7 @@ The default theme, Portal 8.5, is designed using Responsive Web Design principle
 
 ## Theme profiles
 
-Use profiles to load only the modules that are required for a page. If a portlet require specific extra modules, you can group those modules into a profile. Then, assign the profile to the page that contains the portlet. For example, the Web Dock Portlet requires extra modules to render third-party content in an iFrame. Those modules are grouped into a profile called Web Dock profile. Only the pages that contain Web Dock Portlets need to load the additional modules. Assign the Web Dock profile to pages that contain the Web Dock Portlet. Pages that do not contain a Web Dock Portlet do not need to waste resources loading extra modules.
+Use profiles to load only the modules that are required for a page. If a portlet requires specific extra modules, you can group those modules into a profile. Then, assign the profile to the page that contains the portlet. For example, the Web Dock Portlet requires extra modules to render third-party content in an iFrame. Those modules are grouped into a profile called Web Dock profile. Only the pages that contain Web Dock Portlets need to load the additional modules. Assign the Web Dock profile to pages that contain the Web Dock Portlet. Pages that do not contain a Web Dock Portlet do not need to waste resources loading extra modules.
 
 !!! note 
     Starting with CF03, the Web Dock profile no longer exists. If you are using the Resource Aggregator for Portlets, no additional steps are necessary. If you are not using the Resource Aggregator for Portlets, add the **wp\_webdock** module to an existing profile on your page. You do not need any extra profiles when module autoLoad is turned on.
@@ -27,7 +27,7 @@ Skins include more capability and can be used to visually indicate portlets on a
 -   **[JavaScript libraries](site_jslib.md)**  
 HCL includes JavaScript libraries to support various features. --->
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Included profiles](../../../themes_skins/the_module_framework/specify_profiles/themeopt_mod_oob_profile.md)
     - [Modules that are provided with the modularized theme](../../../themes_skins/the_module_framework/oob_modules/index.md)
     - [Default skins](../../../themes_skins/customizing_theme/skins/themeopt_cust_skindefault.md)

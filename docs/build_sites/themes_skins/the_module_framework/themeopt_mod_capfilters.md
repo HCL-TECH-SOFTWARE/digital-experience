@@ -62,7 +62,8 @@ For the list of available capabilities, see *Modules provided with the HCL Porta
 
 In addition to the definition of the capabilities, the portlet must define a `capabilities.selfManaged` preference that describes whether the portlet handles the error case of missing capabilities itself or not. To delegate the handling of the error case to HCL Portal, the preference `capabilities.selfManaged` must be set to `false`.
 
-**Note:** A portlet can either handle all capability dependencies or none.
+!!! note
+    A portlet can either handle all capability dependencies or none.
 
 If this preference is not set, the framework expects that the portlet itself manages the handling of the error case of a missing capability dependency.
 
@@ -124,17 +125,11 @@ With auto-loading on, a deferred capability does not load until the page is in e
 
 The `deferredCapability` sequence-number is independent of the `capability` sequence-number. For example, both can start at 1. And, like `capability`, `deferredCapability.sequence-number.minValue` is optional.
 
-<!---
-**Related information**  
 
-
-[Resource Aggregator overview](../dev-theme/themeopt_reso_agg.md)
-
-[Modules that are provided with the modularized theme](../dev-theme/themeopt_oob.md)
-
-[Configuration settings for capability filters](../dev-theme/themeopt_mod_capfilter_settings.md)
-
-[Change the auto-loading of portlet capabilities](../dev-theme/themeopt_chng_auto_load_cap.md)
-
-[Adding or removing a capability from a portlet](../dev-theme/themeopt_add_cap_portlet.md) --->
+???+ info "Related information:"
+    - [Resource Aggregator overview](../the_module_framework/themeopt_reso_agg.md)
+    - [Modules that are provided with the modularized theme](../the_module_framework/oob_modules/index.md)
+    - [Configuration settings for capability filters](../customizing_theme/cfg_portal_theme_and_modules/themeopt_mod_capfilter_settings.md)
+    - [Change the auto-loading of portlet capabilities](../the_module_framework/change_the_auto_loading_of_portlet/index.md)
+    - [Adding or removing a capability from a portlet](../the_module_framework/add_remove_oob_modules/themeopt_add_cap_portlet.md)
 

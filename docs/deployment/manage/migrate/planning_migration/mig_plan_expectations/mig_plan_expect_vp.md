@@ -16,21 +16,16 @@ Add the portal administrator to a virtual portal realm:
     -   realmName=realmName
     -   addBaseEntry=o=BaseEntryName
 2.  Open a command line.
-3.  Change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+3.  Change to the wp_profile_root/ConfigEngine directory.
 4.  Run the following command:
-    -   AIX® HP-UX Linux™ Solaris: ./ConfigEngine.sh wp-add-realm-baseentry -DWasPassword=password
-    -   IBM® i: ConfigEngine.sh wp-add-realm-baseentry -DWasPassword=password
-    -   Windows™: ConfigEngine.bat wp-add-realm-baseentry -DWasPassword=password
+
+    -   AIX® and Linux™: `./ConfigEngine.sh wp-add-realm-baseentry -DWasPassword=password`
+    -   Windows™: `ConfigEngine.bat wp-add-realm-baseentry -DWasPassword=password`
 
 
-**Related information**  
-
-
-[Virtual portals](../admin-system/ad_vp.md)
-
-[Preconfiguring the default content for virtual portals](../admin-system/advp_precfg_content.md)
-
-[Tasks for administering virtual portals](../admin-system/advptsk.md)
-
-[Adding realm support](../security/cfg_realm.md)
+???+ info "Related information"  
+    -   [Virtual portals](../../../../../build_sites/virtual_portal/index.md)
+    -   [Preconfiguring the default content for virtual portals](../../../../../build_sites/virtual_portal/vp_mgr_portlet/preconfig_vp/advp_precfg_content.md)
+    -   [Tasks for administering virtual portals](../../../../../build_sites/virtual_portal/adm_vp_task/vp_adm_task/index.md)
+    -   [Adding realm support](../../../../../deployment/manage/security/user_registry/cfg_realm.md)
 

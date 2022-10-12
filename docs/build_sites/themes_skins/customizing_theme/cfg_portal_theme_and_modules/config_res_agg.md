@@ -17,8 +17,6 @@ This setting defines a regular expression that is used by the server to invalida
 In the WP ConfigService Resource Environment Provider, modify the `resourceaggregation.cache-refresh.skipPluginRegEx` property. By default, the property is set to `ˆ(com\.ibm|wp\.|wcm\.|jquery).*`.
 
 
-**Related information**  
-
-
-[Modify the dynamic resource references for your theme](../dev-theme/themeopt_cust_copy_modifystatres.md)
+???+ info "Related information:"
+    - [Modify the dynamic resource references for your theme](../../customizing_theme/copying_theme/manual_copy_theme/creating_webdav_theme_copy/themeopt_cust_copy_modifystatres.md)
 

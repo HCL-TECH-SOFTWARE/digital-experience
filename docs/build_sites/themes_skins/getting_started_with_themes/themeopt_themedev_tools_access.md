@@ -10,11 +10,10 @@ To create, delete, and edit themes, users must have access to three areas:
 
 To allow non-administrator users to update or modify existing files do the following steps.
 
-1.  Open a command prompt and change to the [wp\_profile\_root](../../../guide_me/wpsdirstr.md)/ConfigEngine directory.
+1.  Open a command prompt and change to the wp_profile_root/ConfigEngine directory.
 2.  Run the following ConfigEngine task.
-    -   AIX® HP-UX Linux™ Solarisz/OS®:
-    -   IBM® i: ConfigEngine.sh export-nodes -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin -Dquery="/filestore/fs-type1/themes" -Dwp.content.repository.output.dir="c:\\temp\\jcr"
-    -   Windows™: ConfigEngine.bat export-nodes -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin -Dquery="/filestore/fs-type1/themes" -Dwp.content.repository.output.dir="c:\\temp\\jcr"
+    -   AIX, Linux:
+    -   Windows™: `ConfigEngine.bat export-nodes -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin -Dquery="/filestore/fs-type1/themes" -Dwp.content.repository.output.dir="c:\\temp\\jcr"`
 3.  Edit the file that was exported in the c:\\temp\\jcr directory. Add the manager role to a user or group by adding the following code:
 
     -   Code to add the manager role to a user:
@@ -51,8 +50,7 @@ To allow non-administrator users to update or modify existing files do the follo
     ```
 
 4.  Import the file with the following ConfigEngine task.
-    -   AIX HP-UX Linux Solarisz/OS:
-    -   IBM i: ConfigEngine.sh import-nodes -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin -Dwp.content.repository.input.dir="c:\\temp\\jcr"
+    -   AIX, Linux:
     -   Windows: ConfigEngine.bat import-nodes -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin -Dwp.content.repository.input.dir="c:\\temp\\jcr"
 
 You can grant users access with XMLAccess. Create users with the following script:

@@ -55,6 +55,6 @@ Before you can begin using remote search service, you must create two new search
 Before you can begin using remote search service, you must create three new content sources, one for the Web Content Manager, one for your portal site, and one for JCR search. --->
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Container Staging](../../../../deployment/manage/container_configuration/container_staging.md)
 

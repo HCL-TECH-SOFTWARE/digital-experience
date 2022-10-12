@@ -11,31 +11,15 @@ Use the following syntax:
 
 -   **AIX®**
 
-    ./ConfigEngine.sh import-libs-to-vp -DVirtualPortalContext=virtual\_portal\_context\_url
-
--   **HP-UX**
-
-    ./ConfigEngine.sh import-libs-to-vp -DVirtualPortalContext=virtual\_portal\_context\_url
-
--   **IBM® i**
-
-    ConfigEngine.sh import-libs-to-vp -DVirtualPortalContext=virtual\_portal\_context\_url
+    `./ConfigEngine.sh import-libs-to-vp -DVirtualPortalContext=virtual_portal_context_url`
 
 -   **Linux™**
 
-    ./ConfigEngine.sh import-libs-to-vp -DVirtualPortalContext=virtual\_portal\_context\_url
-
--   **Solaris**
-
-    ./ConfigEngine.sh import-libs-to-vp -DVirtualPortalContext=virtual\_portal\_context\_url
+    `./ConfigEngine.sh import-libs-to-vp -DVirtualPortalContext=virtual_portal_context_url`
 
 -   **Windows™**
 
-    ConfigEngine.bat import-libs-to-vp -DVirtualPortalContext=virtual\_portal\_context\_url
-
--   **z/OS®**
-
-    ./ConfigEngine.sh import-libs-to-vp -DVirtualPortalContext=virtual\_portal\_context\_url
+    `ConfigEngine.bat import-libs-to-vp -DVirtualPortalContext=virtual_portal_context_url`
 
 
 

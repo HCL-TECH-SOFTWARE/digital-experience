@@ -22,14 +22,7 @@ The service clients and service references are defined in the web.xml deployment
 
     -   Export the portal EAR file from the assembly tool.
     -   Save the modified web.xml file, and save or compress the portal EAR file. Then, update the portal application from the modified portal EAR file. To do so, you use a WebSphere Application Server administrative client, for example, the WebSphere Integrated Solutions Console. For details about updating an enterprise application, read the WebSphere Application Server documentation.
+
 5.  Restart your portal.
 
     In a stand-alone installation, restart the portal server. In a cluster configuration, restart the portal on each node.
-
-
--   **[Adding service references to the wps.war web application](../admin-system/wsrpt_cons_add_srvcrefs2webapp.md)**  
-The WSRP service clients and service references are defined in the web.xml deployment descriptor of the wps.war web application. That web application that is contained in the portal enterprise application archive wps.ear. To add service references, you modify the web.xml deployment descriptor.
-
-
-**Previous topic:**[Using the WSRP policy sets and client policy set bindings](../admin-system/wsrpt_cons_use_deflt_polsets.md)
-

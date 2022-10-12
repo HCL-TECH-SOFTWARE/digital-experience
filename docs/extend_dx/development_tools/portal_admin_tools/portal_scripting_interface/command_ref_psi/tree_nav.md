@@ -1,10 +1,14 @@
-# Command reference - Tree navigation \| Portal Scripting Interface
+---
+title: Command reference - Tree navigation
+---
+
+# Command reference - Tree navigation | Portal Scripting Interface
 
 The Content, Layout, and Portlet beans each represent a tree hierarchy. The basic navigation methods are the same for all three. A tree bean provides methods to access the root node to look up the parent and children of a node, and to maintain a cursor that points to a selected node in the tree.
 
 The code examples use the Content bean, but you can do the same operations on the other tree beans as well. The command root returns the ID of the root node, as a fixed starting point for navigation.
 
-Jython: Content.root\(\)
+Jython: Content.root(\)
 
 Jacl: $Content root
 
@@ -59,7 +63,7 @@ $Content parent
 $Content children
 
 # example: select a node and print its children
-$Content select node\_ID
+$Content select node_ID
 foreach child [$Content children] { puts "$child" }
 ```
 
@@ -98,10 +102,7 @@ $Content select the parent
 ```
 
 
-**Related information**  
-
-
-[Content hierarchy accessed through Content bean](../admin-system/contnt_hierarchy.md)
-
-[Navigation - Portlet repository](../admin-system/navigation_ptlt_rep.md)
+???+ info "Related information"  
+    -   [Content hierarchy accessed through Content bean](../../../portal_admin_tools/portal_scripting_interface/command_ref_psi/content_hierarchy/index.md)
+    -   [Navigation - Portlet repository](../../../portal_admin_tools/portal_scripting_interface/command_ref_psi/portlet_repo/navigation_ptlt_rep.md)
 

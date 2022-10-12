@@ -6,19 +6,15 @@ Open a command line and browse to the ConfigEngine directory.
 
 -   **Windows™**
 
-    C:\\IBM/WebSphere\\wp\_profile\\ConfigEngine
+    C:\\IBM/WebSphere\wp_profile\ConfigEngine
 
 -   **AIX®**
 
-    /usr/IBM/WebSphere/wp\_profile/ConfigEngine
-
--   **HP-UX**
-
-    /opt/IBM/WebSphere/wp\_profile/ConfigEngine
+    /usr/IBM/WebSphere/wp_profile/ConfigEngine
 
 -   **Linux™**
 
-    /opt/IBM/WebSphere/wp\_profile/ConfigEngine
+    /opt/IBM/WebSphere/wp_profile/ConfigEngine
 
 
 Run the ConfigEngine batch or script file with the import-libs-to-vp parameter to copy the library. For example:
@@ -27,7 +23,7 @@ Run the ConfigEngine batch or script file with the import-libs-to-vp parameter t
 
     `ConfigEngine.bat import-libs-to-vp -DVirtualPortalContext=your\_vp`
 
--   **AIX®HP-UX Linux™**
+-   **AIX and Linux**
 
     `./ConfigEngine.sh import-libs-to-vp -DVirtualPortalContext=your\_vp`
 

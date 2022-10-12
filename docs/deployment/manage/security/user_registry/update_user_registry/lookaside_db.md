@@ -26,8 +26,8 @@ A property extension database stores attributes that the LDAP directory does not
 
         |Environment|Task|
         |-----------|----|
-        |Stand-alone environment| -   AIX® HP-UX Linux™ Solaris: `./ConfigEngine.sh wp-la-install-ear -DWasPassword=password` <br> -   IBM® i: `ConfigEngine.sh wp-la-install-ear -DWasPassword=password` <br> -   Windows™: `ConfigEngine.bat wp-la-install-ear -DWasPassword=password`|
-        |Clustered environment| -   AIX HP-UX Linux Solaris: `./ConfigEngine.sh wp-la-install-ear -DWasPassword=dmgr_password -DServerName=dmgr_server_name -DNodeName=node_name` <br> - IBM i: `ConfigEngine.sh wp-la-install-ear -DWasPassword=dmgr_password -DServerName=dmgr_server_name -DNodeName=node_name` <br> -   Windows: `ConfigEngine.bat wp-la-install-ear -DWasPassword=dmgr_password -DServerName=dmgr_server_name -DNodeName=node_name` <br><br> Where the default value for dmgr_server_name is `dmgr`. You can find the dmgr_server_name value in the WebSphere Integrated Solutions Console. Go to **System administrator > Deployment Manager > Configuration tab > General Properties > Name**. <br> <br> Where node_name is the name of the node where the deployment manager is located. You can find the node_name value in the WebSphere Integrated Solutions Console. Go to **System administrator > Deployment Manager > Runtime tab > General Properties > Node Name**.|
+        |Stand-alone environment| -   AIX® and Linux™: `./ConfigEngine.sh wp-la-install-ear -DWasPassword=password` <br> -   Windows™: `ConfigEngine.bat wp-la-install-ear -DWasPassword=password`|
+        |Clustered environment| -   AIX and Linux: `./ConfigEngine.sh wp-la-install-ear -DWasPassword=dmgr_password -DServerName=dmgr_server_name -DNodeName=node_name` <br> -   Windows: `ConfigEngine.bat wp-la-install-ear -DWasPassword=dmgr_password -DServerName=dmgr_server_name -DNodeName=node_name` <br><br> Where the default value for dmgr_server_name is `dmgr`. You can find the dmgr_server_name value in the WebSphere Integrated Solutions Console. Go to **System administrator > Deployment Manager > Configuration tab > General Properties > Name**. <br> <br> Where node_name is the name of the node where the deployment manager is located. You can find the node_name value in the WebSphere Integrated Solutions Console. Go to **System administrator > Deployment Manager > Runtime tab > General Properties > Node Name**.|
 
 3.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, read [Starting and stopping servers, deployment managers, and node agents](../../../stopstart.md).
 
@@ -133,8 +133,7 @@ A property extension database stores attributes that the LDAP directory does not
 
     6.  Run the following task to create the local Deployment Manager WebSphere variable that is used to access the database JAR files:
 
-        -   AIX HP-UX Linux Solaris: `./ConfigEngine.sh wp-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=la -Ddb_type.DmgrDbLibrary=local path of the database jars on the Deployment Manager -DDmgrNodeName=dmgr_node_name -DparentProperties=full path to wp_profile_root/ConfigEngine/config/helpers/wp\_add\_LA.properties -DSaveParentProperties=true`
-        -   IBM i: `ConfigEngine.sh wp-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=la -Ddb_type.DmgrDbLibrary=local path of the database jars on the Deployment Manager -DDmgrNodeName=dmgr_node_name -DparentProperties=full path to wp_profile_root/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
+        -   AIX and Linux: `./ConfigEngine.sh wp-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=la -Ddb_type.DmgrDbLibrary=local path of the database jars on the Deployment Manager -DDmgrNodeName=dmgr_node_name -DparentProperties=full path to wp_profile_root/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
         -   Windows: `ConfigEngine.bat wp-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=la -Ddb_type.DmgrDbLibrary=local path of the database jars on the Deployment Manager -DDmgrNodeName=dmgr_node_name -DparentProperties=full path to wp_profile_root/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
         
         !!!note
@@ -151,8 +150,7 @@ A property extension database stores attributes that the LDAP directory does not
 
     7.  Run the following task on each node to create the variable that is used to access the VMM database JAR files. Include each node name as a comma-separated list in the command:
 
-        -   AIX HP-UX Linux Solaris: `./ConfigEngine.sh wp-node-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=la -DVmmNodeName=node_name,node_name,node_name -Ddb_type.NodeDbLibrary=local full path of the database jars -DparentProperties=full path to wp_profile_root/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
-        -   IBM i: `ConfigEngine.sh wp-node-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=la -DVmmNodeName=node_name,node_name,node_name -Ddb_type.NodeDbLibrary=local full path of the database jars -DparentProperties=full path to wp_profile_root/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
+        -   AIX and Linux: `./ConfigEngine.sh wp-node-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=la -DVmmNodeName=node_name,node_name,node_name -Ddb_type.NodeDbLibrary=local full path of the database jars -DparentProperties=full path to wp_profile_root/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
         -   Windows: `ConfigEngine.bat wp-node-prep-vmm-db-secured-environment -DWasPassword=password -DDbDomain=la -DVmmNodeName=node_name,node_name,node_name -Ddb_type.NodeDbLibrary=local full path of the database jars -DparentProperties=full path to wp_profile_root/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
 
         !!!note
@@ -185,11 +183,10 @@ A property extension database stores attributes that the LDAP directory does not
 
 11. Run the following task to add a property extension repository to the federated LDAP repository:
 
-    -   AIX HP-UX Linux Solaris: .`/ConfigEngine.sh wp-configure-la-complete -DWasPassword=password -DparentProperties=full path to wp_profile_root/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
-    -   IBM i: `ConfigEngine.sh wp-configure-la-complete -DWasPassword=password -DparentProperties=full path to wp_profile_root/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
+    -   AIX and Linux: .`/ConfigEngine.sh wp-configure-la-complete -DWasPassword=password -DparentProperties=full path to wp_profile_root/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
     -   Windows: `ConfigEngine.bat wp-configure-la-complete -DWasPassword=password -DparentProperties=full path to wp_profile_root/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
 
-    Command on AIX® HP-UX Linux™ Solaris: `ConfigEngine.sh wp-configure-la-complete -DWasPassword=wpadmin -DparentProperties=/opt/IBM/WebSphere/AppServer/profiles/wp_profile/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
+    Command on AIX® and Linux™: `ConfigEngine.sh wp-configure-la-complete -DWasPassword=wpadmin -DparentProperties=/opt/IBM/WebSphere/AppServer/profiles/wp_profile/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
 
     Command on Windows™: `ConfigEngine.bat wp-configure-la-complete -DWasPassword=wpadmin -DparentProperties=C:/IBM/WebSphere/AppServer/profiles/wp_profile/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
 
@@ -228,17 +225,15 @@ A property extension database stores attributes that the LDAP directory does not
         !!!note
             If the path name contains blank space, you must enclose the path in quotation marks.
 
-        -   AIX HP-UX Linux Solaris: `./ConfigEngine.sh wp-add-la-property -DWasPassword=password -DparentProperties=full path to wp_profile_root/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
-        -   IBM i: `ConfigEngine.sh wp-add-la-property -DWasPassword=password -DparentProperties=full path to wp_profile_root/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
-        -   Windows: `ConfigEngine.bat wp-add-la-property -DWasPassword=password -DparentProperties=full path to wp_profile_root\\ConfigEngine\\config\\helpers\\wp_add_LA.properties -DSaveParentProperties=true`
+        -   AIX and Linux: `./ConfigEngine.sh wp-add-la-property -DWasPassword=password -DparentProperties=full path to wp_profile_root/ConfigEngine/config/helpers/wp_add_LA.properties -DSaveParentProperties=true`
+        -   Windows: `ConfigEngine.bat wp-add-la-property -DWasPassword=password -DparentProperties=full path to wp_profile_root\ConfigEngine\config\helpers\wp_add_LA.properties -DSaveParentProperties=true`
 
     2.  Run the following task to add the attributes to Web Content Manager if you use user profiling or Category selection trees:
 
         !!!note
             If the path name contains blank space, you must enclose the path in quotation marks.
 
-        -   AIX HP-UX Linux Solaris: `./ConfigEngine.sh add-wcm-la-attributes -DWasPassword=password`
-        -   IBM i: `ConfigEngine.sh add-wcm-la-attributes -DWasPassword=password`
+        -   AIX and Linux: `./ConfigEngine.sh add-wcm-la-attributes -DWasPassword=password`
         -   Windows: `ConfigEngine.bat add-wcm-la-attributes -DWasPassword=password`
        
        **Receiving an authentication prompt:** This task makes an EJB call to WebSphere Application Server, which requires authentication. You might receive an authentication prompt. Enter the appropriate WebSphere Application Server user ID and password.

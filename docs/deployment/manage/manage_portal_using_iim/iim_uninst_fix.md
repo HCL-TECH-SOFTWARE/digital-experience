@@ -6,19 +6,17 @@ Complete the following steps if you want to uninstall an interim fix from your e
 
 CAUTION:
 
-The information in these files are basic instructions. Before making any changes to your system, review all readme files that are included with your fixes for complete instructions.
+The information in these files are basic instructions. Before making any changes to your system, review all readme files that are included with your interim fixes for complete instructions.
 
 1.  Start the Installation Manager.
 
 2.  Select **Uninstall** to remove the interim fix.
 
-    **Note:** Ensure that you select the fix level to uninstall and not the product.
-
 3.  Select or enter the interim fix level to which you want to return.
 
 4.  Clear the interim fix level from the HCL Portal product build.
 
-5.  Review the summary information, and then run the process to uninstall the interim fix.
+5.  Review the summary information, and then run any additonal processes listed in the summary to uninstall the interim fix.
 
 
 

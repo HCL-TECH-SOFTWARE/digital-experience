@@ -9,19 +9,19 @@ The login command with two arguments expects a user name and a password as the f
 Jython example:
 
 ```
-Portal.login(user\_ID, password)
+Portal.login(user_ID, password)
 
 # example: login as Portal user
-Portal.login(user\_ID, password)
+Portal.login(user_ID, password)
 ```
 
 Jacl example:
 
 ```
-$Portal login user\_ID password
+$Portal login user_ID password
 
 # example: login as Portal user
-$Portal login user\_ID password
+$Portal login user_ID password
 ```
 
 The login command without arguments is used only if security is enabled in the portal. In that case, a user name and password had to be given to the application server to connect to the portal. The portal accepts the user identity from the connection without a second password check. This action requires that the application server user is also a portal user.
@@ -45,7 +45,7 @@ If these preconditions are satisfied, the user name that is given as argument, i
 Jython example:
 
 ```
-Portal.login(user\_ID)
+Portal.login(user_ID)
 
 # example: login and change to Portal user
 Portal.login("johndoe")
@@ -54,7 +54,7 @@ Portal.login("johndoe")
 Jacl example:
 
 ```
-$Portal login user\_ID
+$Portal login user_ID
 
 # example: login and change to Portal user
 $Portal login johndoe
@@ -77,7 +77,7 @@ Jacl example:
 $Portal logout
 ```
 
-In a deployment scenario, the authentication must not be handled by the deployment script itself. Use a wrapper script for the authentication instead, so that you can run the deployment script under different user identities without changes. Here is an example for a wrapper script, which assumes that the deployment script defines a run\_deployment procedure.
+In a deployment scenario, the authentication must not be handled by the deployment script itself. Use a wrapper script for the authentication instead, so that you can run the deployment script under different user identities without changes. Here is an example for a wrapper script, which assumes that the deployment script defines a run_deployment procedure.
 
 Jython example:
 
@@ -108,8 +108,8 @@ Jython example:
 
 ```
 # login function
-def portal_login(user\_ID, password):
-  Portal.login(user\_ID, password)
+def portal_login(user_ID, password):
+  Portal.login(user_ID, password)
   # other startup operations, like logging the access
 # logout function
 def portal_logout():

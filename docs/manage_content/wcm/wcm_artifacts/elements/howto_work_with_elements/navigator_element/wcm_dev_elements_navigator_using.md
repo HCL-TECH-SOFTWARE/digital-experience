@@ -1,4 +1,4 @@
-# Defining Navigator Element Design Options
+# Defining navigator element design options
 
 You use the element design options of a navigator element to determine how to display the results a navigator.
 
@@ -34,14 +34,10 @@ You use the element design options of a navigator element to determine how to di
     -   The text that is entered into the **Distinguish items with no children** field is used for items that have no children.
     -   The text that is entered into the **No result design** field is displayed if no results are found for the navigator criteria.
 
-???+ info "**Related information:**"  
-
-    [Inserting an image in an element](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_image.md)
-
-    [Inserting a link in an element](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_link.md)
-
-    [Inserting element tags](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_tags.md)
-
-    [Creating web content tags](../../../../wcm_artifacts/tags/creating_web_content_tags/index.md)
+???+ info "Related information"  
+    -   [Inserting an image in an element](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_image.md)
+    -   [Inserting a link in an element](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_link.md)
+    -   [Inserting element tags](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_tags.md)
+    -   [Creating web content tags](../../../../wcm_artifacts/tags/creating_web_content_tags/index.md)
 
 

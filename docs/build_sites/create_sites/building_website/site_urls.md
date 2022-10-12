@@ -62,6 +62,6 @@ You can create both vanity URLs and friendly URLs for the same portal page.
 URL mappings were deprecated starting with HCL Portal Version 8.5. Instead, you can now use friendly URLs or Vanity URLs as an alternative to URL mappings.
 
 
-???+ info "Related information:"
-    - [URL generation in HCL Portal](../../../extend_dx/apis/url_generation/index.md)
+???+ info "Related information"
+    -   [URL generation in HCL Portal](../../../extend_dx/apis/url_generation/index.md)
 

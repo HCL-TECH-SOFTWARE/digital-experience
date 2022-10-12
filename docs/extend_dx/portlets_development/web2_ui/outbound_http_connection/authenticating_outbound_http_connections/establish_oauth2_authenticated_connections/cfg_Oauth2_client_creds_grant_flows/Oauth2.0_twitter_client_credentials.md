@@ -2,7 +2,7 @@
 
 Set up a client credential grant flow to configure OAuth 2.0 access to Twitter resources.
 
-1.  Create an app at your OAuth 2.0 provider \(Twitter\).
+1.  Create an app at your OAuth 2.0 provider (Twitter).
 
     1.  Open a browser and go to `https://apps.twitter.com`.
 
@@ -20,7 +20,7 @@ Set up a client credential grant flow to configure OAuth 2.0 access to Twitter r
 
     1.  Log in to the WebSphere Application Server admin console of the Proxy.
 
-    2.  Select **Security** \> **SSL certificate** and **key management** \> **Key stores and certificates**.
+    2.  Select **Security > SSL certificate** and **key management > Key stores and certificates**.
 
     3.  Click the truststore that is used by the Portal Server, Depending on your security configuration and topology, this `NodeDefaultTrustStore`, or `CellDefaultTrustStore`.
 
@@ -28,7 +28,7 @@ Set up a client credential grant flow to configure OAuth 2.0 access to Twitter r
 
     5.  Click **Retrieve from port**.
 
-    6.  Enter /api.twitter.com as Host value, 443 for the Port address, and enter an alias name like my\_twitter. Then, click **Retrieve signer information**.
+    6.  Enter /api.twitter.com as Host value, 443 for the Port address, and enter an alias name like my_twitter. Then, click **Retrieve signer information**.
 
     7.  The signer certificate is loaded to your WebSphere Application Server administration. Click **OK** to add the certificate to your WebSphere Application Server configuration, then click **Save** to add the settings at the master configuration.
 
@@ -138,14 +138,8 @@ Set up a client credential grant flow to configure OAuth 2.0 access to Twitter r
         ```
         AIX: ./ConfigEngine.sh update-outbound-http-connection-config -DconfigFileName=/tmp/global\_oauth\_update.xml \
                 -DWasPassword=password -DPortalAdminPwd=password 
-        HP-UX: ./ConfigEngine.sh update-outbound-http-connection-config -DconfigFileName=/tmp/global\_oauth\_update.xml \
-                  -DWasPassword=password -DPortalAdminPwd=password 
-        IBM i: ConfigEngine.sh update-outbound-http-connection-config -DconfigFileName=/tmp/global\_oauth\_update.xml \
-                -DWasPassword=password -DPortalAdminPwd=password 
         Linux: ./ConfigEngine.sh update-outbound-http-connection-config -DconfigFileName=/tmp/global\_oauth\_update.xml \
                  -DWasPassword=password -DPortalAdminPwd=password 
-        Solaris: ./ConfigEngine.sh update-outbound-http-connection-config -DconfigFileName=/tmp/global\_oauth\_pdate.xml \
-                    -DWasPassword=password -DPortalAdminPwd=password 
         Windows: ConfigEngine.bat update-outbound-http-connection-config -DconfigFileName=/tmp/global\_oauth\_update.xml \
                   -DWasPassword=password -DPortalAdminPwd=password 
         ```

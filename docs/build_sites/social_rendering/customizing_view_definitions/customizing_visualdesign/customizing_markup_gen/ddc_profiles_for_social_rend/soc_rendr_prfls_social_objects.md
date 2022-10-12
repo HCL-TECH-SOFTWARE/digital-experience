@@ -269,14 +269,9 @@ It declares the following attribute names:
     This attribute specifies the type information for the URI of this social object. This attribute is computed by the social rendering Digital Data Connector plug-in.
 
 
-<!--
 
-**Related information**  
-
-
-[Setting parameters to format dates](https://help.hcltechsw.com/digital-experience/8.5/panel_help/wcm_reference-dates.html)
-
-[Configuring file type icon mappings](../social/soc_rendr_cfg_filetype_map.md)
-
-[Configuring globally how social object data is served](../social/soc_rendr_cfg_data_serve.md) -->
+???+ info "Related information:"
+    - [Setting parameters to format dates](https://help.hcltechsw.com/digital-experience/8.5/panel_help/wcm_reference-dates.html)
+    - [Configuring file type icon mappings](../../../../cfg_global_settings_social_rendering/cfg_filetype_icon_mappings/index.md)
+    - [Configuring globally how social object data is served](../../../../cfg_global_settings_social_rendering/soc_rendr_cfg_data_serve.md)
 

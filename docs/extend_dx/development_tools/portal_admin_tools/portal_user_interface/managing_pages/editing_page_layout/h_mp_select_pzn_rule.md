@@ -3,7 +3,7 @@ id: h_mp_select_pzn_rule
 title: Selecting a personalization rule
 ---
 
-
+# Selecting a personalization rule
 
 
 You can manage personalization rules for a particular portlet from the Edit Layout portlet.

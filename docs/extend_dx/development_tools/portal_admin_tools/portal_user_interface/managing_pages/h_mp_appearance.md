@@ -3,7 +3,7 @@ id: h_mp_appearance
 title: Changing portlet appearance
 ---
 
-
+# Changing portlet appearance
 
 
 The Appearance portlet lets you change the skin of a portlet on the page. Changing the portlet skin changes the look of the area surrounding the portlet, including the border, margins, and title bar.

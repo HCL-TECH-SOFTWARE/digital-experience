@@ -5,7 +5,7 @@ You can associate friendly URLs with portal pages and labels. You and your users
 For a friendly URL to work for a specific page, you must define a friendly URL name for every page or label in the path of the portal page hierarchy that leads to that page. You can do this in the page properties. Friendly URLs take the following general form:
 
 ```
-http://host\_name:port\_number/[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/portal/page\_id/[!ut/p/encoded\_portal\_suffix]
+http://host_name:port_number/PortalServer_root/portal/page_id/[!ut/p/encoded_portal_suffix]
 ```
 
 The `page_id` portion of the friendly URL is made up of the friendly URL names of all pages in the path of the page hierarchy. This path begins at the content root and ends with the page for which you want to give your users a friendly URL.
@@ -18,9 +18,10 @@ http://www.example.com:10039/wps/portal/products/appliances
 
 You can configure a friendly URL by using the portal toolbar or the Manage Pages administration portlet. To configure a friendly URL by using the Manage Pages portlet, use the following procedure.
 
-**Note:** When you define friendly URLs within a virtual portal, consider the name restrictions. For more information, read *Human readable URL mappings for virtual portals*.
+!!!note
+    When you define friendly URLs within a virtual portal, consider the name restrictions. For more information, read *Human readable URL mappings for virtual portals*.
 
-1.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface** \> **Manage Pages**.
+1.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface > Manage Pages**.
 
 2.  Locate the page for which you want to configure a friendly URL.
 
@@ -36,16 +37,10 @@ You can configure a friendly URL by using the portal toolbar or the Manage Pages
 To make up the full HCL Portal URL, the portal appends a suffix to that friendly URL. This suffix represents the current state of the page and its components. Some scenarios require short and fully human readable URLs that omit the state information. For information about how to configure short stateless URLs see *Using friendly URLs without state information*.
 
 
-**Related information**  
-
-
-[URL mapping](../admin-system/adurlmap.md)
-
-[Navigation options for static pages](../dev/spa_nav_mcrfrmt.md)
-
-[DAM API for friendly URLs](../open_api/dam_friendly_urls.md)
-
-[Defining friendly URLs without state information for pages in your site](../admin-system/mp_friendly_short_url.md)
-
-[Human readable URL mappings for virtual portals](../admin-system/advppln_shpux_urlmap.md)
+???+ info "Related information"
+    -   [URL mapping](../../../../../../deployment/manage/config_portal_behavior/adurlmap.md)
+    -   [Navigation options for static pages](../../../../../../build_sites/create_sites/building_website/static_content/creating_static_page/spa_nav_mcrfrmt.md)
+    -   [DAM API for friendly URLs](../../../../../apis/hcl_experience_api/dam_friendly_urls.md)
+    -   [Defining friendly URLs without state information for pages in your site](../../../../../../deployment/manage/siteurl_cfg/changing_siteurl/cw_navstate/mp_friendly_short_url.md)
+    -   [Human readable URL mappings for virtual portals](../../../../../../build_sites/virtual_portal/vp_planning/shape_vp_ux/advppln_shpux_urlmap.md)
 

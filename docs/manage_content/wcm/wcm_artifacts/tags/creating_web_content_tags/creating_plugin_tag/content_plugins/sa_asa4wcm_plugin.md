@@ -53,7 +53,8 @@ The microformats gather information about the content items that are rendered on
 
         Use this attribute to pass a text value to the plug-in. If you set this attribute, you must also set the CSS class value by using the attribute css-class. See the following description of this attribute for details.
 
-    **Note:** In a single reference to a tag, you can use only one of the previous attributes. If you want to use more than one attribute, add another reference to the tag.
+    !!! note
+        In a single reference to a tag, you can use only one of the previous attributes. If you want to use more than one attribute, add another reference to the tag.
 
     -   **css-class**
 

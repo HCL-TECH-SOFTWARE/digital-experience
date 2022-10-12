@@ -6,10 +6,9 @@ Run the following tasks to build .ear and .war files:
 
 1.  Run the following task to build a .war file:
 
-    -   AIX® HP-UX Solaris Linux™: ./ConfigEngine.sh build-war-file -Dsource.war.directory=directory\_path.war -Doutput.war=directory\_path.war
-    -   Windows™: ConfigEngine.bat build-war-file -Dsource.war.directory=directory\_path.war -Doutput.war=directory\_path.war
-    -   IBM® i: ConfigEngine.sh build-war-file -Dsource.war.directory=directory\_path.war -Doutput.war=directory\_path.war
-    -   z/OS®: ./ConfigEngine.sh build-war-file -Dsource.war.directory=directory\_path.war -Doutput.war=directory\_path.war
+    -   AIX® amd Linux™: `./ConfigEngine.sh build-war-file -Dsource.war.directory=directory_path.war -Doutput.war=directory_path.war`
+    -   Windows™: `ConfigEngine.bat build-war-file -Dsource.war.directory=directory_path.war -Doutput.war=directory_path.war`
+
     where the following parameters are defined as:
 
     -   source.war.directory: The location of the expanded or customized war file.
@@ -32,10 +31,9 @@ Run the following tasks to build .ear and .war files:
 
 2.  Run the following task to build an .ear file:
 
-    -   AIX HP-UX Solaris Linux: ./ConfigEngine.sh build-ear-file -Dsource.war.directory=directory\_path.war -Doutput.ear=directory\_path.ear -Dapp.name=app\_name -Dwar.name=war\_name.war -Ddisp.name="display\_name"
-    -   Windows: ConfigEngine.bat build-ear-file -Dsource.war.directory=directory\_path.war -Doutput.ear=directory\_path.ear -Dapp.name=app\_name -Dwar.name=war\_name.war -Ddisp.name="display\_name"
-    -   IBM i: ConfigEngine.sh build-ear-file -Dsource.war.directory=directory\_path.war -Doutput.ear=directory\_path.ear -Dapp.name=app\_name -Dwar.name=war\_name.war -Ddisp.name="display\_name"
-    -   z/OS: ./ConfigEngine.sh build-ear-file -Dsource.war.directory=directory\_path.war -Doutput.ear=directory\_path.ear -Dapp.name=app\_name -Dwar.name=war\_name.war -Ddisp.name="display\_name"
+    -   AIX and Linux: `./ConfigEngine.sh build-ear-file -Dsource.war.directory=directory_path.war -Doutput.ear=directory_path.ear -Dapp.name=app_name -Dwar.name=war_name.war -Ddisp.name="display_name"`
+    -   Windows: `ConfigEngine.bat build-ear-file -Dsource.war.directory=directory_path.war -Doutput.ear=directory_path.ear -Dapp.name=app_name -Dwar.name=war_name.war -Ddisp.name="display_name"`
+
     Where the following parameters are defined as:
 
     -   source.war.directory: The location of the expanded or customized war file.
@@ -43,6 +41,7 @@ Run the following tasks to build .ear and .war files:
     -   app.name: The application name substituted in the application.xml template.
     -   war.name: The war name substituted in the application.xml and ibm-application-runtime.props files.
     -   disp.name: The display name substituted in the application.xml template.
+    
     The following information is an example of the build-ear-file task:
 
     ```

@@ -26,11 +26,7 @@ The main difference between the two features is that the pre-rendering feature t
 |Custom caching:|Yes|No|
 |Memory requirements:|Low to Medium|Memory requirements depend on the web server that is being used.|
 |Disk requirements:|Low to Medium|Potentially very high as the entire site must be able to fit on disk.|
-|Unexpected broken links:|YesAs some pages can be cached at different times, there is a small chance that not all the links on a cached page are currently valid.
-
-|NoThe site is pre-rendered in a single batch, greatly reducing the chances of inconsistencies in the site.
-
-|
+|Unexpected broken links:|Yes <br/> As some pages can be cached at different times, there is a small chance that not all the links on a cached page are currently valid.|No <br/> The site is pre-rendered in a single batch, greatly reducing the chances of inconsistencies in the site.|
 
 ## Advanced caching versus a pre-rendered site delivered by using Web Content Manager
 
@@ -43,10 +39,6 @@ These options are similar. You might need to test both strategies before you whi
 |Custom caching:|Yes|No|
 |Memory requirements:|Medium to high.|Medium to high.|
 |Disk requirements:|Medium to high.|Medium to high.|
-|Unexpected broken links:|YesAs some pages may be cached at different times, there is a small chance that not all the links on a cached page will be currently valid.
-
-|NoThe site is pre-rendered in a single batch, greatly reducing the chances of inconsistencies in the site.
-
-|
+|Unexpected broken links:|Yes <br/> As some pages may be cached at different times, there is a small chance that not all the links on a cached page will be currently valid.|No <br/> The site is pre-rendered in a single batch, greatly reducing the chances of inconsistencies in the site.|
 
 

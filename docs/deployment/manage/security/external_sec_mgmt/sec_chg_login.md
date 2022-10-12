@@ -32,9 +32,10 @@ Complete the following steps to change the login and logout pages:
             --%>
     ```
 
-    **Note:** The previous example uses the 'portal-fmt:' prefix to designate JSP tags from the tag library in portal.tld. Your custom JSPs might use a different tag prefix.
+    !!!note
+        The previous example uses the 'portal-fmt:' prefix to designate JSP tags from the tag library in portal.tld. Your custom JSPs might use a different tag prefix.
 
-5.  Touch the Default.jsp file after editing any JSP files and before any restart. This updates the timestamp on the file to the current time and will signal a recompile of Default.jsp to incorporate the edit changes from other JSP files. Type: touch Default.jsp. An alternative is to edit \(open and save\) Default.jsp, which has the same effect as the touch command.
+5.  Touch the Default.jsp file after editing any JSP files and before any restart. This updates the timestamp on the file to the current time and will signal a recompile of Default.jsp to incorporate the edit changes from other JSP files. Type: touch Default.jsp. An alternative is to edit (open and save) Default.jsp, which has the same effect as the touch command.
 
 6.  Redirect the browser to navigate to the logoff page of the external security manager \(ESM\) after the HCL Portal logoff command executes. Learn how to invalidate the single sign on session of the ESM by reviewing the documentation provided by the ESM relating to logoff pages.
 
@@ -42,31 +43,24 @@ Complete the following steps to change the login and logout pages:
     -   In eTrust SiteMinder, the Web Agent configuration object contains a property named LogoffUri where you can supply a URL to terminate the eTrust SiteMinder login session
     Complete the following steps to enable HCL Portal to execute the external security manager logoff URL after completing its logoff command:
 
-    1.  Specify the following values in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/config/ConfigService.properties file:
+    1.  Specify the following values in the wp_profile_root/PortalServer/config/ConfigService.properties file:
 
         -   redirect.logout=true
         -   redirect.logout.ssl=false or true, depending on your environment
-        -   redirect.logout.url=protocol://host\_name/logout\_page
-        where protocol is the protocol of the ESM machine: http or https, host\_name is the fully qualified host name of the ESM machine, and logout\_page is the ESM page that users will be directed to when they log out. Refer to the ESM Administrator's Guide for information about using logout forms.
+        -   redirect.logout.url=protocol://host_name/logout_page
+        where protocol is the protocol of the ESM machine: http or https, host\_name is the fully qualified host name of the ESM machine, and logout_page is the ESM page that users will be directed to when they log out. Refer to the ESM Administrator's Guide for information about using logout forms.
 
     2.  Run the following task to update the property:
 
         |Operating system|Task|
         |----------------|----|
-        |Windows™:|ConfigEngine.bat update-properties -DWasPassword=password from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory|
-        |AIX®SolarisLinux™:|./ConfigEngine.sh update-properties -DWasPassword=password from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory|
-        |z/OS®:|Perform the following steps:        1.  Open a UNIX System Services \(z/OS UNIX System Services\) command prompt.
-        2.  Run the ./ConfigEngine.sh update-properties -DWasPassword=password task from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
-|
+        |Windows™:|`ConfigEngine.bat update-properties -DWasPassword=password` from the wp_profile_root\ConfigEngine directory|
+        |AIX® and Linux™:|`./ConfigEngine.sh update-properties -DWasPassword=password` from the wp_profile_root/ConfigEngine directory|
 
-    3.  Restart the WebSphere\_Portal server on the standalone server or on each cluster member.
+    3.  Restart the WebSphere_Portal server on the standalone server or on each cluster member.
 
 
-
-**Related information**  
-
-
-[Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md)
-
-[Understanding the Portal 8.5 modularized theme](../dev-theme/themeopt_defaultparts.md)
+???+ info "Related information"  
+    -   [Starting and stopping servers, deployment managers, and node agents](../../../../deployment/manage/stopstart.md)
+    -   [Understanding the Portal 8.5 modularized theme](../../../../build_sites/create_sites/website_building_blocks/themes_profiles_skins/themeopt_defaultparts.md)
 

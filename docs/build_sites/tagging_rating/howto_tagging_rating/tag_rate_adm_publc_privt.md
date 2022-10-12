@@ -10,6 +10,7 @@ The differences between private and public tags and ratings are described in the
     -   A user can apply the same private tag only once to one specific resource.
     -   A user can apply the same private tag to multiple resources. This means that an individual user can use the same tag more than once, but only once per resource.
     -   Users can only delete private tags that they have applied themselves. Users with a Manager role have more rights. For more information see the topic about *Security for tagging and rating*.
+    
 -   **Public tags**
 
     -   All public tags and ratings are visible to all users who belong to the community and who have access to the resource itself, independent of who created the tag or rating.
@@ -21,7 +22,7 @@ The differences between private and public tags and ratings are described in the
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Adding query parameters](../dev_tagging_and_rating/rest_api/tag_rate_api_rest_add_qparms.md)
     - [Security for tagging and rating](../tag_rate_secy.md)
     - [CP Configuration Service for tagging and rating](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/index.md)

@@ -9,13 +9,10 @@ If you want to set up your own search collection for searching your portal site,
     2.  Set the preferred language of the portal site crawler user ID to match the language of the portal site search collection that it crawls. If you set the language after you started a crawl, you must reset the portal site collection. Refer to *Creating or resetting the portal site collection*.
 
 
-<!--
-**Related information**  
-[Customizing your search collection for secured portal pages](../admin-system/srtconfgownsrchsec.md)
 
-[Resetting the default search collection](../admin-system/srtcrtprtlstecllc.md)
-
-[User roles and access](../wcm/wcm_security_items.md)
-
-[Indexing web content](../wcm/wcm_dev_search_portal.md) -->
+???+ info "Related information:"
+    - [Customizing your search collection for secured portal pages](../../searching_local_portal/cfg_search_portal_site/srtconfgownsrchsec.md)
+    - [Resetting the default search collection](../../portal_search/administer_portal_search/searching_crawling_portal_sites/srtcrtprtlstecllc.md)
+    - [User roles and access](../../../../deployment/manage/security/controlling_access/wcm_security/wcm_cms_access/wcm_security_items.md)
+    - [Indexing web content](../../indexing_webcontent/index.md)
 

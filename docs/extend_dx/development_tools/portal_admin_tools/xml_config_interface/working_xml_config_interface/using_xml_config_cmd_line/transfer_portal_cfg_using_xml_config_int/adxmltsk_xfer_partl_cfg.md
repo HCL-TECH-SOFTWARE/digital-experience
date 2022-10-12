@@ -16,7 +16,7 @@ All those references are described by object IDs. Therefore, if the object IDs a
 
 Exporting resource configurations normally creates update actions for all exported elements. This means that if the portal resource exists on the importing system, the settings are modified, and if it does not yet exist, it is created. This in turn means that if you reimport the page into the portal that you exported it from, nothing changes.
 
-You can import the XML file into another portal to create a copy of the page, this importation requires that the referenced resources \(such as the portlet and the content parents\) also exist on the target portal and can be found by an identifying attribute. In that case, the page and all contained resources take their object IDs with them so that they have the same object IDs on the source and target system - the resources retain their identity. You can avoid that by using the ID generating mode. For more information, see the XML reference documentation. When you use the ID generating mode, the object IDs in the input are not taken literally, but during the import process the resources obtain new object IDs when they are created on the target system. You apply ID generating mode by adding the following attribute to the main request tag:
+You can import the XML file into another portal to create a copy of the page, this importation requires that the referenced resources (such as the portlet and the content parents) also exist on the target portal and can be found by an identifying attribute. In that case, the page and all contained resources take their object IDs with them so that they have the same object IDs on the source and target system - the resources retain their identity. You can avoid that by using the ID generating mode. For more information, see the XML reference documentation. When you use the ID generating mode, the object IDs in the input are not taken literally, but during the import process the resources obtain new object IDs when they are created on the target system. You apply ID generating mode by adding the following attribute to the main request tag:
 
 ```
 
@@ -32,7 +32,7 @@ The ExportSubTree.xml example shows how you export subtrees of the portal conten
 
 Using wildcard characters:
 
-When you export portal resources, you can specify the asterisk \(\*\) as a wildcard character for tag attributes. Be aware of the following limitations:
+When you export portal resources, you can specify the asterisk (*) as a wildcard character for tag attributes. Be aware of the following limitations:
 
 1.  The asterisk wildcard character is supported for attributes of top-level tags only, that is, subtags of the `portal` tag.
 2.  Specify the asterisk wild character for the object ID attribute of tags as follows: `objectid='*'`, except for `policy-node` tags, where you can specify it for the `path` attribute.
@@ -41,13 +41,10 @@ When you export portal resources, you can specify the asterisk \(\*\) as a wildc
     -   The tag `content-node`, attribute `create-type`
     -   The tag `tag`, attribute `locale`.
 
-The ExportAllPortlets.xml example shows the use of the asterisk character \(\*\) as a wildcard to export all resources of a given type. This example exports all the web modules that were installed in the portal and their contained portlets.
+The ExportAllPortlets.xml example shows the use of the asterisk character (*) as a wildcard to export all resources of a given type. This example exports all the web modules that were installed in the portal and their contained portlets.
 
 
-**Related information**  
-
-
-[XML configuration reference](../admin-system/adxmlref.md)
-
-[Sample XML configuration files](../admin-system/admxmsmp.md)
+???+ info "Related information"  
+    -   [XML configuration reference](../../../../../portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref.md)
+    -   [Sample XML configuration files](../../../../../portal_admin_tools/xml_config_interface/xml_config_ref/admxmsmp.md)
 

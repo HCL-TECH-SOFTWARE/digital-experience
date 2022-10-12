@@ -20,7 +20,8 @@ To administer Portal Search by using the WebSphere Integrated Solutions Console,
 
 6.  Edit the **Value** field, which displays the value from the XML file that is used to configure Search, and set the parameter as required.
 
-    **Tip:** Refer to the following file for information about the XML schema : `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/search/wp.search.provider/core/service/schema/WplcSearchService.xsd`.
+    !!! tip
+        Refer to the following file for information about the XML schema : `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/search/wp.search.provider/core/service/schema/WplcSearchService.xsd`.
 
 7.  Apply and then save the change.
 
@@ -28,7 +29,7 @@ To administer Portal Search by using the WebSphere Integrated Solutions Console,
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Planning and preparing for Portal Search](../../planning_portal_search/index.md)
     - [Search service configuration parameters](../administer_portal_search/search_service_params/index.md)
 

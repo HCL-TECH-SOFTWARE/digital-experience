@@ -29,7 +29,7 @@ The LanguageList contains all languages that are supported by the portal. The Ma
 
 ## The sub package com.ibm.portal.content
 
-Elements of this package define how content is represented in the portal. The two main models of this package are the ContentModel and the LayoutModel. The content model defines a tree structure for content elements \(such as pages and labels\); it is used to group these content elements logically.
+Elements of this package define how content is represented in the portal. The two main models of this package are the ContentModel and the LayoutModel. The content model defines a tree structure for content elements (such as pages and labels); it is used to group these content elements logically.
 
 **Note:**
 
@@ -37,7 +37,7 @@ The topology of the content model currently dictates the topology of the navigat
 
 Currently, the elements of the content model can be pages, labels, or URLs. For each type, a specific ContentNode interface exists: ContentPage, ContentLabel, and ContentURL. Each content node has different information that is associated with it.
 
-Each content node can provide the type of content node it represents; if this type is ContentNodeType.PAGE, a model exists that represents the layout of that page. It can be obtained with the getLayoutModel method of the content model. The layout model holds LayoutNode elements that describe the layout and contents of the page. Each layout node can return metrics in form of the LayoutMetrics interface. It can describe attributes of the node such as width or orientation \(horizontal/vertical\).
+Each content node can provide the type of content node it represents; if this type is ContentNodeType.PAGE, a model exists that represents the layout of that page. It can be obtained with the getLayoutModel method of the content model. The layout model holds LayoutNode elements that describe the layout and contents of the page. Each layout node can return metrics in form of the LayoutMetrics interface. It can describe attributes of the node such as width or orientation (horizontal/vertical).
 
 The elements of the layout model are either LayoutContainers that define rows and columns or LayoutControls, which represent portlets. This information is used when a page is rendered.
 
@@ -55,7 +55,7 @@ The metadata of individual content nodes are shown in XML Access scripts by usin
 
 ## The sub package com.ibm.portal.identification
 
-This package holds the Identification interface, which allows the conversion between ObjectID objects and their string representation. This Identification interface is required where an object ID is to be passed as a parameter that can be only a String \(for inclusion into URLs, for example\). An implementation of this interface can be retrieved by using a JNDI lookup, as in the following example.
+This package holds the Identification interface, which allows the conversion between ObjectID objects and their string representation. This Identification interface is required where an object ID is to be passed as a parameter that can be only a String (for inclusion into URLs, for example). An implementation of this interface can be retrieved by using a JNDI lookup, as in the following example.
 
 ```xmp
 
@@ -85,7 +85,7 @@ catch (NamingException nx)
 
 ## The sub package com.ibm.portal.navigation
 
-This package defines the navigation model \(NavigationModel\) which represents a view on content model that is used for navigation. As described in section *The sub package com.ibm.portal.content*, the topology of the navigation model currently corresponds with the content model. Each node in the content model has an equivalent navigation node at the same hierarchical level.
+This package defines the navigation model (NavigationModel) which represents a view on content model that is used for navigation. As described in section *The sub package com.ibm.portal.content*, the topology of the navigation model currently corresponds with the content model. Each node in the content model has an equivalent navigation node at the same hierarchical level.
 
 The elements of the navigation model are NavigationNodes. Each such node can reference a ContentNode. The navigation nodes have a title that is provided through the Localized interface. The following figure shows the connection between the navigation model and the content model.
 
@@ -99,7 +99,7 @@ The figure shows how the navigation selection model defines a path through the n
 
 ![This image illustrates the relationship between the navigation model and the navigation selection model.](../images/nav_select.jpg)
 
-The last node of this path is always the currently selected navigation node. Its referenced content node represents what is aggregated for the user to see \(normally a page that is represented through a ContentPage object\).
+The last node of this path is always the currently selected navigation node. Its referenced content node represents what is aggregated for the user to see (normally a page that is represented through a ContentPage object).
 
 ## The sub package com.ibm.portal.portletmodel
 
@@ -119,7 +119,7 @@ The PortletModel represents portlets and their configuration data in the portal.
 
 -   **PortletEntity**
 
-    Represents user configuration for a portlet. It is normally created by placing a portlet definition on a page; the same portlet definition can be added to multiple pages, resulting in multiple portlet entities. There can be two levels of user configuration \(shared and personalized configuration\) that are stored in the form of separate portlet entities.
+    Represents user configuration for a portlet. It is normally created by placing a portlet definition on a page; the same portlet definition can be added to multiple pages, resulting in multiple portlet entities. There can be two levels of user configuration (shared and personalized configuration) that are stored in the form of separate portlet entities.
 
 -   **PortletWindow**
 

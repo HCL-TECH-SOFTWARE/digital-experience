@@ -59,9 +59,10 @@
     color: white;
 }
 
-.md-main {
+/* Hide the mkdocs tabbed menu */
+/* .md-main {
     display: none;
-}
+} */
 
 .body-text {
     font-size: 16px;

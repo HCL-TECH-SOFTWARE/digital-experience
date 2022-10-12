@@ -32,7 +32,8 @@ The type of link that points to the social object determines the resolution outc
 
 The connections resolver determines the candidate pages based on the resolution root page parameter and the ID of the community that contains the social object. You can specify the resolution root page parameter in the social list definition authoring template by using the element Custom Resolution Root Page. For more information, read *Customizing list view definitions by using inline editing*. You can use the resolution root page parameter to identify a specific portal page by using its custom unique name. To identify the current portal page that renders the current view definition, you can also use the value `current`. If you identify a portal page by using the resolution root page parameter, the connections resolver considers the identified page and all of its descendant pages to be candidate pages for the current social object resolution process.
 
-**Note:** The value of the resolution root page parameter is passed to the connections resolver as a root page URL parameter. If the resolution root page parameter is not set and the social object belongs to a community, the connections resolver considers all portal pages that are associated with this community to be candidate pages. For more information, read *Managing community associations*.
+!!! note
+    The value of the resolution root page parameter is passed to the connections resolver as a root page URL parameter. If the resolution root page parameter is not set and the social object belongs to a community, the connections resolver considers all portal pages that are associated with this community to be candidate pages. For more information, read *Managing community associations*.
 
 If the set of candidate pages is not empty, the social object resolution process tries to determine the appropriate page from the set of candidate pages. To do so, it searches the candidate pages for a page that contains a suitable viewer portlet that matches the type of the social object that is to be resolved. Whether a portlet entity can render a detail view for a specific social object is determined based on specific portlet preferences. For example, the drag-and-drop configuration for the Forum Topic Details view definition sets the portlet preference `IC_Forums.topic=true` to indicate that this portlet can render a detail view for a forum topic. For a full list of the supported portlet preferences, read *HCL Connections Portlets for HCL Portal*.
 
@@ -41,13 +42,9 @@ If the connections resolver finds no candidate page or candidate page that conta
 If the connections resolver does not find the default page, the final fallback is either to redirect the user to a defined portal error page or to take the user to the details view in the HCL Connections user interface. An administrator can control this behavior by running the portal configuration tasks `disable-poc-redirect-to-connections` or `enable-poc-redirect-to-connections`. For more details about the social object resolution, read *HCL Connections Portlets for HCL Portal: HCL Connections Portlets for HCL Portal*.
 
 
-<!---
-**Related information**  
 
-
-[Managing community associations](../admin-system/commpages_create_mapping.md)
-
-[Configuring globally how social object links are resolved](../social/soc_rendr_cfg_reslv_links.md)
-
-[Customizing social list definitions by using inline editing](../social/soc_rendr_cust_socl_list.md) --->
+???+ info "Related information:"
+    - [Managing community associations](../../../../extend_dx/integration/connections/configuration/managing_community_pages/commpages_create_mapping.md)
+    - [Configuring globally how social object links are resolved](../../cfg_global_settings_social_rendering/soc_rendr_cfg_reslv_links.md)
+    - [Customizing social list definitions by using inline editing](../../customizing_view_definitions/soc_rendr_cust_socl_list.md)
 

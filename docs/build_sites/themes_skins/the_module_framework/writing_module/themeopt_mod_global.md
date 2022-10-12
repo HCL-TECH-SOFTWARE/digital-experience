@@ -230,10 +230,7 @@ In the following examples, use the following syntax.
     -   runtimeActivation
 
 
-**Related information**  
-
-
-[Simple menu framework](../dev-theme/themeopt_cust_menu.md)
-
-[Syntax in modules and profile definitions](../dev-theme/themeopt_json_syntax_profiles.md)
+???+ info "Related information:"
+    - [Simple menu framework](../../customizing_theme/menus/simple_menu_framework/index.md)
+    - [Syntax in modules and profile definitions](../../the_module_framework/troubleshooting_modular_themes/themeopt_json_syntax_profiles.md)
 
