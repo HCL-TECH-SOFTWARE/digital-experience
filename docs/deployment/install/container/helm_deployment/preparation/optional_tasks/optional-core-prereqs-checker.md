@@ -8,9 +8,6 @@ For these checks, one separate sidecar container is deployed along with the main
 
 The main objective is to check if the specified prerequisites are met and inform about the result in the logs, i.e if the tests have passed or failed. It can also be used to check the basic information about the file system of the mounted volumes which would help to track the issues related to the file systems.
 
-I think the main objective rather is to get informed in the logs if prerequisites are not met.
-An additional helpful result is that you can get information about the results from there
-
 ## Checks implemented in Prereqs Checker:
 
 #### File Permission Check:
@@ -34,7 +31,7 @@ The checks are running periodically. The frequency can be configured using a val
 The following command can be triggered to run the checks manually, once all the checks will get performed, results will be available in the logs
 
 ```shell
-kubectl -n dxns exec --stdin --tty <deployment-name>-core-0 -c prereqs-checker -- /bin/bash /usr/local/sbin/run_test.sh
+kubectl -n <my-namespace> exec --stdin --tty <deployment-name>-core-0 -c prereqs-checker -- /bin/bash /usr/local/sbin/run_test.sh
 ```
 
 The following command can be run to print the logs:
