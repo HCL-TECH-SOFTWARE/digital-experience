@@ -22,7 +22,7 @@ To use a text provider, you must create a text provider class and then register 
 
         This method is used to prevent your text provider from appearing in the authoring UI.
 
-    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer_root](../reference/wpsdirstr.md#wp_root)/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
+    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the [PortalServer_root](../../../../../guide_me/wpsdirstr.md)`/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
 
 2.  Methods that are inherited from com.ibm.portal.Localized must also be implemented.
 
