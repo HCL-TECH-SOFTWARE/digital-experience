@@ -31,9 +31,9 @@ The MovieSite documentation focuses on six aspects of LikeMinds capabilities.
     LikeMinds implements a filtering system for each of the Personalization rules that query LikeMinds. This system filters items at the LikeMinds level according to any number of filter ID's associated with each item. Only the items which satisfy the filter are surfaced to the content spot in the JSP.
 
 
--   **[Exploring Movie Site](../pzn/pzn_explore_moviesite.md)**  
+-   **[Exploring Movie Site](pzn_explore_moviesite.md)**  
 Movie Site demonstrates the LikeMinds Recommendation Engine, guiding you through a Personalization scenario that is based on factual data from a site on the internet. The website uses a personalization solution to analyze visitor behavior and to recommend individualized content information and services while the visitor is actively engaged on the site.
--   **[Exploring Movie Site](../pzn/pzn_explore_moviesite.md)**  
+-   **[Exploring Movie Site](pzn_explore_moviesite.md)**  
 Movie Site demonstrates the LikeMinds Recommendation Engine, guiding you through a Personalization scenario that is based on factual data from a site on the internet. The website uses a personalization solution to analyze visitor behavior and to recommend individualized content information and services while the visitor is actively engaged on the site.
 
 
