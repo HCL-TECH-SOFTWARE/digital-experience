@@ -16,6 +16,6 @@ When the automatic cache entry clearing feature is enabled, content authors can 
 3.  Restart your server to apply your changes. In a clustered environment, restart all cluster nodes.
 
 
-???+ info "Related information"  
+???+ info "Related information:"  
     -   [Portal server performance tuning tool](../../../../deployment/manage/tune_servers/wp_tune_tool.md)
 

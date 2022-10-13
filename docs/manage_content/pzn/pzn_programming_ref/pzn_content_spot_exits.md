@@ -71,6 +71,7 @@ Example Usage Scenario
     -   Specify a request user ID
     -   Change the rule name to be executed
     -   Bypass the rule by setting the rule name to null
+    
 6.  The rule is executed
 7.  `aRuleExit.getFilteredResults()` is invoked; the rule exit modifies results as required, then returns the updated set
 8.  The updated results are stored
