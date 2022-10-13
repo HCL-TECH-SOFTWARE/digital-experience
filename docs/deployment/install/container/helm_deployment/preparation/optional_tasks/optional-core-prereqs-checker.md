@@ -26,7 +26,8 @@ This check will give the result of `Soft Links` and `Hard Links` creation capabi
 In this check, `IOPS` (Input/Output Operations per second) will get measured for the file system. This check is very essential to measure the performance of the file system. This check will get fail if the measured `IOPS` will not be higher or equal to the threshold value.
 
 ## Helm Chart `values.yaml`
-Helm Chart contains a `values.yaml` file, within which the Prereqs Checker configurations are set. For changing the state enable/disable the value of `enable` can be set to `true` or `false`. The periodicity of running the cron jobs is set in `cronExpression` which by default is set to `0 8 */1 * *` i.e the cron job is run at 8AM everyday.
+Helm Chart contains a `values.yaml` file, within which the Prereqs Checker configurations are set. For changing the state enable/disable the value of `enable` can be set to `true` or `false`. 
+The checks are running periodically. The frequency can be configured using a value in cron syntax in `cronExpression` which by default is set to `0 8 */1 * *` i.e the cron job is run at 8AM everyday.
 
 ## How to manually trigger the checks:
 
