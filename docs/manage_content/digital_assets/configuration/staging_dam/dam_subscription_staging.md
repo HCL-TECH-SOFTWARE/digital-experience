@@ -250,6 +250,98 @@ Use the `manage-dam-staging **register**-dam-subscriber` command to register or 
         ```
 
 
+## Get all subscribers details for DAM staging
+
+
+Use the `manage-dam-staging get-all-subscribers` command to get all the registered subscribers details for DAM staging.
+
+-   **Command description**
+
+    You can get all subscribers details for DAM staging with the following command:
+
+    ```
+    dxclient manage-dam-staging get-all-subscribers
+    ```
+
+-   **Help command**
+
+    The following command shows the help information for `manage-dam-staging get-all-subscribers` command usage:
+
+    ```
+    dxclient manage-dam-staging get-all-subscribers -h
+    ```
+
+-   **Command options**
+
+    Use this attribute to specify the protocol with which to connect to the DX server \(default: ""\)
+
+    ```
+    -dxProtocol <value>
+    ```
+
+    Use this attribute to specify the host name of the DX server \(default: ""\)
+
+    ```
+    -hostname <value>
+    ```
+
+    Use this attribute to specify the port on which to connect to the DX server \(default: ""\)
+
+    ```
+    -dxPort <value>
+    ```
+
+    Use this attribute to specify the user name that is required for authenticating with the DX server \(default: ""\)
+
+    ```
+    -dxUsername <value> 
+    ```
+
+    Use this attribute to specify the password that is required for authenticating with the DX Core \(default: ""\)
+
+    ```
+    -dxPassword <value>
+    ```
+
+    Use this attribute to specify the port number of the DAM server \(default: ""\)
+
+    ```
+    -damAPIPort <value>
+    ```
+
+    Use this attribute to specify the port number of the DX Core API server \(default: ""\)
+
+    ```
+    -ringAPIPort <value>
+    ```
+
+    Use this attribute to specify the API version number of DAM \(default: ""\)
+
+    ```
+    -damAPIVersion <value>
+    ```
+
+    Use this attribute to specify the API version number of DX Core \(default: ""\):
+
+    ```
+    -ringAPIVersion <value>
+    ```
+
+-   **Commands:**
+
+    To get all subscribers details:
+
+    ```
+    dxclient manage-dam-staging get-all-subscribers -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion>
+    ```
+
+    !!! example
+
+        ```
+        dxclient manage-dam-staging get-all-subscribers -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1
+        ```
+
+
 ## Using WCM with DAM staging
 
 The typical setup involves a WCM staging/authoring server connected to DAM staging/authoring, and a separate WCM rendering connected to DAM rendering \(there could be multiple WCM rendering/DAM rendering environments, for example, a Blue/Green setup\).
