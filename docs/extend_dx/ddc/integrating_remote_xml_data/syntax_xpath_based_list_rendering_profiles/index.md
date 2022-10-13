@@ -72,8 +72,6 @@ The following list shows the set of list-rendering profile entry keys that are a
 Some item attribute and list property declarations support metadata that can be associated by using corresponding metadata keys.
 
 
-**Related information**  
-
-
-[The Atom Syndication Format](http://www.ietf.org/rfc/rfc4287)
+???+ info "Related information:" 
+    - [The Atom Syndication Format](http://www.ietf.org/rfc/rfc4287)
 

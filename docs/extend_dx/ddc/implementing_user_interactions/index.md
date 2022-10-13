@@ -10,8 +10,6 @@ You can use HCL Web Content Manager presentation components to create user inter
 Digital Data Connector \(DDC\) for HCL Portal defines a dedicated public render parameter that can be used by DDC plug-ins for filtering lists.
 
 
-**Related information**  
-
-
-[Using the list-rendering cache](../../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/connector_plugins/plrf_tune_markup_chache.md)
+???+ info "Related information:"
+    - [Using the list-rendering cache](../../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/connector_plugins/plrf_tune_markup_chache.md)
 

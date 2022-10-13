@@ -59,8 +59,6 @@ The following list shows and describes the main building blocks of the Digital D
     2.  Then, it renders the component reference to the list appearance component.
 
 
-**Related information**  
-
-
-[Customizing the markup generation](../../build_sites/social_rendering/customizing_view_definitions/customizing_visualdesign/customizing_markup_gen/index.md)
+???+ info "Related information:"
+    - [Customizing the markup generation](../../build_sites/social_rendering/customizing_view_definitions/customizing_visualdesign/customizing_markup_gen/index.md)
 
