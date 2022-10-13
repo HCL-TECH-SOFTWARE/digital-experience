@@ -6,7 +6,7 @@
 The "Prereqs Checker" is a tool that runs a number of checks to confirm if the prerequisites for various components are met. Currently, these checks are implemented for the mounted volume's file system of DX Core. You get the result of these checks from the container logs of the `prereqs-checker` container in the Core Pod.
 For these checks, one separate sidecar container is deployed along with the main application container. This is a lightweight container so the main application performance would not get affected.
 
-The main objective is to read the log file and check if the specified prerequisites are met, i.e if the tests have passed or failed. It can also be used to check the basic information about the file system of the mounted volumes which would help to track the issues related to the file systems.
+The main objective is to check if the specified prerequisites are met and inform about the result in the logs, i.e if the tests have passed or failed. It can also be used to check the basic information about the file system of the mounted volumes which would help to track the issues related to the file systems.
 
 I think the main objective rather is to get informed in the logs if prerequisites are not met.
 An additional helpful result is that you can get information about the results from there
