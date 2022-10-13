@@ -62,5 +62,5 @@ The following list shows and describes the main building blocks of the Digital D
 **Related information**  
 
 
-[Customizing the markup generation](../social/soc_rendr_cust_markup_genrtn.md)
+[Customizing the markup generation](../../build_sites/social_rendering/customizing_view_definitions/customizing_visualdesign/customizing_markup_gen/index.md)
 

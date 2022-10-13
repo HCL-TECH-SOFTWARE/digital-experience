@@ -16,50 +16,50 @@ You can use Digital Data Connector in the following ways:
 -   You can use the generic XML DDC plug-in that is built into Digital Data Connector. You can use this plug-in to integrate remote XML data without writing or deploying extra Java code. It supports various parameters that you can use to specify from where the plug-in obtains the XML data and how it transforms the data. The transformation turns a specific XML document format into the generic DDC bean list data structure. With DDC, you can define these transformations in a declarative way so that you can use arbitrary XML formats without having to write transformation code.
 -   You can also use a combination of the two approaches.
 
--   **[Technical concepts](../social/plrf_tech_concepts.md)**  
+-   **[Technical concepts](plrf_tech_concepts.md)**  
 Before you use the Digital Data Connector \(DDC\) for HCL Portal framework, you can familiarize yourself with its main technical concepts and building blocks.
--   **[The rendering flow](../social/plrf_render_flow.md)**  
+-   **[The rendering flow](plrf_render_flow.md)**  
 Read about the rendering flow of Digital Data Connector \(DDC\) for HCL Portal.
--   **[Connecting to HCL VoltMX Foundry through Digital Data Connector (DDC)](../social/integrate_mxvolt_foundry_using_ddc.md)**  
+-   **[Connecting to HCL VoltMX Foundry through Digital Data Connector (DDC)](../ddc/integrating_voltmx_foundry/index.md)**  
 This section provides the steps on using DDC for HCL Portal framework to integrate data from HCL VoltMX Foundry (integrated external data sources) on your portal pages by using HCL Web Content Manager presentation components.
--   **[Implementing user interactions](../social/plrf_impl_user_interactns.md)**  
+-   **[Implementing user interactions](../ddc/implementing_user_interactions/index.md)**  
 With Digital Data Connector \(DDC\) for HCL Portal, you can use HCL Web Content Manager presentation components for visualizing external data. As a further benefit, you can also add user interfaces for creating, modifying, and deleting external data to your DDC list appearance components. This way, your users can use these features to create, modify, or delete external data items from your lists.
--   **[Working with list-rendering profiles](../social/plrf_work_lr_profiles.md)**  
+-   **[Working with list-rendering profiles](../ddc/working_with_list_rendering_profiles/index.md)**  
 You can create new or derived list-rendering profiles. After you create a list-rendering profile, you deploy it.
--   **[Integrating remote XML data](../social/plrf_intgrt_rmt_xml.md)**  
+-   **[Integrating remote XML data](../ddc/integrating_remote_xml_data/index.md)**  
 The Digital Data Connector \(DDC\) for HCL Portal framework provides a generic XML DDC plug-in that is ready to use for integrating external XML data of your choice. You can use this plug-in to render external XML data on your portal pages without having to write custom Java code.
--   **[Integrating remote JSON data](../social/plrf_intgrt_rmt_json.md)**  
+-   **[Integrating remote JSON data](../ddc/integrating_remote_json_data/index.md)**  
 The Digital Data Connector \(DDC\) for HCL Portal framework provides a generic JSON DDC plug-in that is ready to use for integrating external JSON data of your choice. You can use this plug-in to render external JSON data on your portal pages without having to write custom Java code.
--   **[Creating and deploying custom Digital Data Connector plug-ins](../social/plrf_crt_dply_cust_beanlst_prvdr.md)**  
+-   **[Creating and deploying custom Digital Data Connector plug-ins](plrf_crt_dply_cust_beanlst_prvdr.md)**  
 You can deploy custom Digital Data Connector \(DDC\) for HCL Portal plug-ins as plug-ins into the HCL Portal application extension registry.
--   **[Creating and deploying custom attribute value processor plug-ins](../social/crt_dply_cstm_attval_pro_plgin.md)**  
+-   **[Creating and deploying custom attribute value processor plug-ins](crt_dply_cstm_attval_pro_plgin.md)**  
 You can deploy custom attribute value processor plug-ins for DDC into the HCL Portal application extension registry. Attribute value processor plug-ins can be used to process the value of an item attribute after the value is determined by the list rendering profile.
--   **[Digital Data Connector cache tuning](../social/plrf_cach_tune.md)**  
+-   **[Digital Data Connector cache tuning](../ddc/ddc_cache_tuning/index.md)**  
 To improve performance, you can tune the caches for the Digital Data Connector \(DDC\) for HCL Portal framework.
--   **[Hints and tips for Digital Data Connector](../social/plrf_hint_tip.md)**  
+-   **[Hints and tips for Digital Data Connector](plrf_hint_tip.md)**  
 Learn about things that are useful to know when you work with the social rendering integration with Digital Data Connector \(DDC\) for HCL Portal.
 
 
 **Related information**  
 
 
-[Social rendering](../social/soc_rendr_ovu.md)
+[Social rendering](../../build_sites/social_rendering/index.md)
 
-[Concept of the lists of social objects provided with the social rendering feature](../social/soc_rendr_undrstd.md)
+[Concept of the lists of social objects provided with the social rendering feature](../../build_sites/social_rendering/working_with_social_objects/concept_list_social_objects/index.md)
 
-[Extending social lists by using the digital data connector](../social/soc_rendr_xtnd_sl_by_plrf.md)
+[Extending social lists by using the digital data connector](../../build_sites/social_rendering/extending_social_lists_using_ddc/index.md)
 
-[The list-rendering context](../panel_help/plrf_list_render_context.md)
+[The list-rendering context](../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/connector_plugins/list_rendering_context/index.md)
 
-[The action URL plug-in](../panel_help/plrf_rendr_plugin_actionurl.md)
+[The action URL plug-in](../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/portlet_plugins/plrf_rendr_plugin_actionurl.md)
 
-[The render parameter plug-in](../panel_help/plrf_rendr_plugin_render_parm.md)
+[The render parameter plug-in](../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_render_parm.md)
 
-[The render URL plug-in](../panel_help/plrf_rendr_plugin_render_url.md)
+[The render URL plug-in](../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_render_url.md)
 
-[The request attribute plug-in](../panel_help/plrf_rendr_plugin_request_attrbt.md)
+[The request attribute plug-in](../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_request_attrbt.md)
 
-[The session attribute plug-in](../panel_help/plrf_rendr_plugin_session_attrbt.md)
+[The session attribute plug-in](../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_session_attrbt.md)
 
-[The resource URL plug-in](../panel_help/plrf_rendr_plugin_resrc_url.md)
+[The resource URL plug-in](../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_resrc_url.md)
 

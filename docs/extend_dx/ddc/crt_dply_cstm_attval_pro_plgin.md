@@ -17,7 +17,7 @@ All three interfaces are defined in the public Digital Data Connector SPI. For m
 **Related information**  
 
 
-[XPath list-rendering profile metadata keys](../social/plrf_lr_profl_metadata_keys.md)
+[XPath list-rendering profile metadata keys](../ddc/integrating_remote_xml_data/syntax_xpath_based_list_rendering_profiles/plrf_lr_profl_metadata_keys.md)
 
-[BasicJSONSelection list-rendering profile metadata keys](../social/plrf_lr_profl_metadata_keys_json.md)
+[BasicJSONSelection list-rendering profile metadata keys](../ddc/integrating_remote_json_data/syntax_basicjsonselection_based_list_rendering_profiles/plrf_lr_profl_metadata_keys_json.md)
 

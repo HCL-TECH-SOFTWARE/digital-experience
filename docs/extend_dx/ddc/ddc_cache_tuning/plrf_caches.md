@@ -31,9 +31,9 @@ You configure the caches through the WP Cache Manager Service resource environme
 **Related information**  
 
 
-[Setting service configuration properties](../admin-system/adsetcfg.md)
+[Setting service configuration properties](../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 
-[Portal service configuration](../admin-system/srvcfgref.md)
+[Portal service configuration](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/index.md)
 
-[Configuring the maximum number of items loaded from HCL Connections](../social/soc_rendr_cfg_connct_item_limit.md)
+[Configuring the maximum number of items loaded from HCL Connections](../../../build_sites/social_rendering/cfg_global_settings_social_rendering/soc_rendr_cfg_connct_item_limit.md)
 

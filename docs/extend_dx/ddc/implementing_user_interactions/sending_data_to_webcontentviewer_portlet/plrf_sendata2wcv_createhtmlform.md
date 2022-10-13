@@ -68,7 +68,7 @@ Replace the variable `$DATA_SINK_URI` by the appropriate value for your enviro
 **Related information**  
 
 
-[Using the list-rendering cache](../panel_help/plrf_tune_markup_chache.md)
+[Using the list-rendering cache](../../../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/connector_plugins/plrf_tune_markup_chache.md)
 
-[The generic XML Digital Data Connector data sink](../social/plrf_use_gen_xml_ddc_datasink.md)
+[The generic XML Digital Data Connector data sink](../../../../extend_dx/ddc/implementing_user_interactions/sending_data_to_webcontentviewer_portlet/generic_xml_ddc_sink/index.md)
 

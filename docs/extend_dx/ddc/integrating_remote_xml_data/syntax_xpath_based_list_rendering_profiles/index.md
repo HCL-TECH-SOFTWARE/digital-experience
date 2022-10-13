@@ -66,9 +66,9 @@ The format for the entry names is `profile-id.key[.name[.meta-data-key]]`. The m
 
 The set of valid values for a list-rendering profile entry depend on the key that is used in the entry name. For more information, read the following topics.
 
--   **[XPath list-rendering profile keys](../social/plrf_lr_profl_keys.md)**  
+-   **[XPath list-rendering profile keys](plrf_lr_profl_keys.md)**  
 The following list shows the set of list-rendering profile entry keys that are available in the Digital Data Connector \(DDC\) for HCL Portal framework.
--   **[XPath list-rendering profile metadata keys](../social/plrf_lr_profl_metadata_keys.md)**  
+-   **[XPath list-rendering profile metadata keys](plrf_lr_profl_metadata_keys.md)**  
 Some item attribute and list property declarations support metadata that can be associated by using corresponding metadata keys.
 
 

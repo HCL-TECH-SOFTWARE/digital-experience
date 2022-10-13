@@ -51,5 +51,5 @@ You can use them in combination with `ItemAttribute`, `AssociatedItemAttribute`,
 **Related information**  
 
 
-[Creating and deploying custom attribute value processor plug-ins](../social/crt_dply_cstm_attval_pro_plgin.md)
+[Creating and deploying custom attribute value processor plug-ins](../../crt_dply_cstm_attval_pro_plgin.md)
 

@@ -10,5 +10,5 @@ Individual DDC plug-in implementations can delegate the initial bean list comput
 **Related information**  
 
 
-[Application extension registry](../dev-portlet/extension.md)
+[Application extension registry](../portlets_development/portlet_dev_ref/extension.md)
 
