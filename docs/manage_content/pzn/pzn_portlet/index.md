@@ -5,9 +5,11 @@ This exercise demonstrates how to use Personalization features of HCL Digital Ex
 The demonstration Web site is organized into the following three pages:
 
 1.  **Front Page**
+
     -   **Internal News** displays internal YourCo news for the user. This portlet displays the news upon clicking upon one of the links.
     -   **General News**displays external worldwide news articles for users. This portlet messages to the GeneralNewsDetails upon clicking upon one of the links.
     -   **UserInfo** displays the current user's information. This information is used in rules to target content throughout the website to the particular preferences of your users. This user information can be modified using the edit feature.
+
 2.  **Partners Page**
 
     -   **Products** displays products for the current user. This portlet messages to the PartnersDetails upon clicking upon one of the links.
@@ -17,6 +19,7 @@ The demonstration Web site is organized into the following three pages:
     A second campaign is also running in the promotions spot between April 14 and April 15, 2005. This campaign has a higher priority than the Tax Season campaign so it will run at this time.
 
 3.  **Services Page**
+
     -   **Services** displays services that are offered to the user. Clicking on one of the services will display the details of the service. If logging is enabled, clicking on one of the services will log the fact that this particular type of service was selected by the user.
     -   **Offers** displays current offers for the user. This portlet demonstrates calling an analysis bean from a rule.
 

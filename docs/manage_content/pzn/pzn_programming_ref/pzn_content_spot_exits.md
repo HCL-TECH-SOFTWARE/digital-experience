@@ -66,6 +66,7 @@ Example Usage Scenario
 3.  As each content spot is triggered, the Personalization rule engine determines the rule name to be used
 4.  `aRuleExit.aboutToExecuteRule()` is invoked, passing the spot and the request context
 5.  `aRuleExit` has several options:
+
     -   Access request context information \(includes HTTP request and session\)
     -   Get the campaign and rule names
     -   Specify a request user ID

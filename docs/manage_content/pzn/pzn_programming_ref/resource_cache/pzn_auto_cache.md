@@ -10,6 +10,8 @@ When the automatic cache entry clearing feature is enabled, content authors can 
 
 2.  Run the pzn-disable-Force-Cache-Refresh configuration task to disable this feature or run the pzn-force-enable-Force-Cache-Refresh configuration task to enable this feature.
 
+    |Option|Description|
+    |---|--------------|
     |**Disable automatic cache clearing**|    -   AIX® and Linux™: `./ConfigEngine.sh pzn-disable-Force-Cache-Refresh` <br> -   Windows™: `ConfigEngine.bat pzn-disable-Force-Cache-Refresh`|
     |**Enable automatic cache clearing**|    -   AIX and Linux: `./ConfigEngine.sh pzn-force-enable-Force-Cache-Refresh` <br> -   Windows: `ConfigEngine.bat pzn-force-enable-Force-Cache-Refresh`|
 

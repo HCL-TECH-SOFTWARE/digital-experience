@@ -58,6 +58,7 @@ rulesEngine.exceptionHandling=logMessage_stdout
     -   RuntimeUtils.LOG\_MESSAGE\_AND\_STACKTRACE\_STDOUT\_AND\_RETHROW
     -   RuntimeUtils.LOG\_MESSAGE\_AND\_STACKTRACE\_STDERR\_AND\_RETHROW
     -   RuntimeUtils.RETHROW\_EXCEPTION
+    
     !!! note 
         Settings with RETHROW will pass the exception to the screen and are recommended for use within a testing environment only.
 
