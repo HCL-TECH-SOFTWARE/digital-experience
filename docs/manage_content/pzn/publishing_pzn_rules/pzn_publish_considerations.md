@@ -11,7 +11,7 @@ When you first used the Personalization authoring portlets on a cluster to publi
 For example, supposed the cluster head is visible at http://intranet.yourco.com, and the cluster members are accessible at http://intranet01.yourco.com and http://intranet02.yourco.com. If you set the publish servlet URL parameter to http://intranet01.yourco.com:10039/wps/pznpublish/pznpublishservlet you force all publishing requests to run on this single machine.
 
 !!!note
-    **Note:** Publish to a single node in the cluster as opposed to the cluster head, making sure that you do not pass through a web server.
+    Publish to a single node in the cluster as opposed to the cluster head, making sure that you do not pass through a web server.
 
 ## IPv6 hosts
 

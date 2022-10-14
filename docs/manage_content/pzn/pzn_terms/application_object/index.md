@@ -43,6 +43,7 @@ Custom application objects contains both fixed and dynamic properties that are a
     The custom application object fixed properties are determined by the get() methods implemented in the class. For example, if getXyzProperty() is implemented, xyzProperty will be shown in the PZN portlet.
 
 - Dynamic Properties:
+
     Custom application object dynamic properties can be manually defined in the PZN portlet or via XML.
     -   To manually define the properties, select the application object in the PZN portlet and the details are displayed in the Personalization Editor. 
         In Manage Properties tab in the Personalization Editor section, lists all of the properties (fixed and dynamic). From the Add Dynamic Property button on the Manage Properties tab, you can manually define dynamic properties. To access these dynamic properties the application object class must extend the DynamicApplicationObject class.
