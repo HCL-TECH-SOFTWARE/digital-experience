@@ -4,7 +4,6 @@ If you plan to use a Novell eDirectory as an LDAP user registry, you must instal
 
 ## Procedure
 
-
 1.  Install Novell eDirectory. Refer to [eDirectory](http://www.novell.com/products/edirectory/) for information.
 
 2.  Complete the following steps with the web administration tool to create the HCL Portal administrative user:

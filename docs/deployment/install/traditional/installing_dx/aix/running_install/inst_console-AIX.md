@@ -31,11 +31,11 @@ The installation program verifies the operating system and its prerequisites, av
 
 4.  Run the command to start the IBM Installation Manager in console mode:
 
-    ./imcl -c
+    `./imcl -c`
 
-    imcl -c
+    `imcl -c`
 
-    imcl -c
+    `imcl -c`
 
 5.  Complete the following steps to add the repositories:
 
@@ -90,7 +90,7 @@ The installation program verifies the operating system and its prerequisites, av
     -   WebSphere Application Server default profile location: /QIBM/UserData/WebSphere/AppServer/V85/ND
     -   HCL Portal installation location: /QIBM/ProdData/WebSphere/PortalServer/V85/Server
     -   Configuration Engine location: /QIBM/ProdData/WebSphere/PortalServer/V85/ConfigEngine
-    -   HCL Portal profile path: /QIBM/UserData/WebSphere/AppServer/V85/ND/profiles/wp\_profile
+    -   HCL Portal profile path: /QIBM/UserData/WebSphere/AppServer/V85/ND/profiles/wp_profile
 
 14. Enter the number for the WebSphere Application Server root directory to use as the existing WebSphere Application Server.
 

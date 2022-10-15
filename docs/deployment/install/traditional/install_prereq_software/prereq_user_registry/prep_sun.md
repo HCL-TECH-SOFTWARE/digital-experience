@@ -4,7 +4,6 @@ If you plan to use an Oracle Directory Server as an LDAP user registry, you must
 
 ## Procedure
 
-
 1.  Install Oracle Directory Server. Refer to [Oracle software](https://www.oracle.com/security/identity-management/directory-services/) for information.
 
 2.  Complete the following steps with the web administration tool to create the HCL Portal administrative user:

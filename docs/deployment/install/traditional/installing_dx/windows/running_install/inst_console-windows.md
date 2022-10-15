@@ -35,11 +35,11 @@ The installation program verifies the operating system and its prerequisites, av
 
 4.  Run the command to start the IBM Installation Manager in console mode:
 
-    ./imcl -c
+    `./imcl -c`
 
-    imcl -c
+    `imcl -c`
 
-    imcl -c
+    `imcl -c`
 
 5.  Complete the following steps to add the repositories:
 

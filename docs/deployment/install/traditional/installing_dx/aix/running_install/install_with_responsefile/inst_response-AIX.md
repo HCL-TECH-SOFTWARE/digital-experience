@@ -9,13 +9,13 @@ You can also use the console mode to generate a response file. Go to [Installing
 1.  Start all servers and applications that require a port number to avoid port conflicts when you install HCL Portal. If you are installing multiple copies of HCL Digital Experience on your server, start the existing Configuration Wizard servers.
 
     !!! note 
-        Currently, the cw\_profile starting point always defaults to 10200. If you install a second version of portal on the same server, you must customize the cw\_profile port value. Add the following line to the InstallationManager\_root/InstallationManager/eclipse/tools/imcl.ini file:
+        Currently, the cw_profile starting point always defaults to 10200. If you install a second version of portal on the same server, you must customize the cw_profile port value. Add the following line to the InstallationManager_root/InstallationManager/eclipse/tools/imcl.ini file:
 
     ```
-    -Dcwprofile_startingport=new\_starting\_port\_number
+    -Dcwprofile_startingport=new_starting_port_number
     ```
 
-2.  Go to the InstallationManager\_root/eclipse directory.
+2.  Go to the InstallationManager_root/eclipse directory.
 
 3.  Run the following task to start the recording:
 
@@ -35,7 +35,7 @@ You can also use the console mode to generate a response file. Go to [Installing
 
 4.  Complete the following steps to add the repositories where the installation media exists:
 
-    1.  Open the IBM Installation Manager and go to **File** \> **Preferences** \> **Repositories**.
+    1.  Open the IBM Installation Manager and go to **File > Preferences > Repositories**.
 
     2.  Select **Add Repositories**.
 
@@ -69,7 +69,8 @@ You can also use the console mode to generate a response file. Go to [Installing
         !!! note 
             The **IBM WebSphere SDK Java Technology Edition** option is required for a HCL Digital Experience installation even though it might be marked as "Optional" on the Select packages to install screen.
 
-    **Tip:** If you have a HCL Portal Enable license, you must select both the **HCL Portal Server****HCL Portal Express** and **HCL Portal Enable** packages.
+    !!!tip
+        If you have a HCL Portal Enable license, you must select both the **HCL Portal Server****HCL Portal Express** and **HCL Portal Enable** packages.
 
 8.  On Install Packages: Select the fixes to install screen, select any required fixes. Then, click **Next**.
 
@@ -80,7 +81,7 @@ You can also use the console mode to generate a response file. Go to [Installing
 11. Complete the following steps on the Install Packages: Installation Directory panel:
 
     !!! remember
-        The installation directory that you specify must NOT contain any files or the following characters: ~ ! @ \# $ % ^ & \* \( \) + \{ \} \| < \> ? \` = \[ \] ; ' , . " and spaces.
+        The installation directory that you specify must NOT contain any files or the following characters: ~ ! @\# $ % ^ & * ( ) + { } \| < > ? ` = [ ] ; ' , . " and spaces.
 
     1.  Select the WebSphere Application Server Package Group Name and then enter the installation directory path.
 
@@ -92,23 +93,23 @@ You can also use the console mode to generate a response file. Go to [Installing
 
 13. If you chose to install Portal to an existing copy of WebSphere Application Server, select the available copy of WebSphere Application Server, and click **Next**.
 
-    !!! note 
+    !!!note 
         Skip this step, if you are not installing Portal to an existing copy of WebSphere Application Server.
 
 14. On Install Packages: Select the features to install, expand the WebSphere Application Server and HCL Digital Experience packages to modify the features you want to install and then click **Next**.
 
-    !!! note 
+    !!!note 
         Ensure that **Portal Server Profile** is selected to create a profile that contains the Portal application server and the product binary files. Clear this option if you need a binary only installation for migrationor your clustered environment.
 
-    !!! note 
+    !!!note 
         As you select the items, read the **Details** section for information.
 
 15. On Profile configuration details, enter the user ID and password for the configuration wizard administrator. Then, click **Next**.
 
 16. If you selected the **Portal Server Profile** package, click **Enter the Administrator user ID and password for the Portal Server**. Then, select either the **Standard** or **Advanced** configuration mode and then enter the parameter details for the selected configuration mode.
 
-    !!! note 
-        Select **Advanced** if you want to specify Uniform Resource Identifier \(URI\) information that is specific to your company.
+    !!!note 
+        Select **Advanced** if you want to specify Uniform Resource Identifier (URI) information that is specific to your company.
 
 17. Confirm the Summary information and then click **Install**.
 

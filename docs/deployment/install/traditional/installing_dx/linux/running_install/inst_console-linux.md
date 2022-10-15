@@ -11,15 +11,15 @@ The installation program verifies the operating system and its prerequisites, av
 1.  Start all servers and applications that require a port number to avoid port conflicts when you install HCL Portal. If you are installing multiple copies of HCL Digital Experience on your server, start the existing Configuration Wizard servers.
 
     !!! note 
-        Currently, the cw\_profile starting point always defaults to 10200. If you install a second version of portal on the same server, you must customize the cw\_profile port value. Add the following line to the InstallationManager\_root/InstallationManager/eclipse/tools/imcl.ini file:
+        Currently, the cw_profile starting point always defaults to 10200. If you install a second version of portal on the same server, you must customize the cw_profile port value. Add the following line to the InstallationManager_root/InstallationManager/eclipse/tools/imcl.ini file:
 
     ```
-    -Dcwprofile_startingport=new\_starting\_port\_number
+    -Dcwprofile_startingport=new_starting_port_number
     ```
 
 2.  Complete the following steps to run the program as an administrator:
 
-    1.  Go to the InstallationManager\_root/eclipse/tools directory.
+    1.  Go to the InstallationManager_root/eclipse/tools directory.
 
     2.  Right-click on the imcl command.
 
@@ -31,11 +31,11 @@ The installation program verifies the operating system and its prerequisites, av
 
     6.  Click **OK**.
 
-3.  Open a command prompt and change to the InstallationManager\_root/eclipse/tools directory.
+3.  Open a command prompt and change to the InstallationManager_root/eclipse/tools directory.
 
 4.  Run the command to start the IBM Installation Manager in console mode:
 
-    ./imcl -c
+    `./imcl -c`
 
 5.  Complete the following steps to add the repositories:
 
