@@ -6,6 +6,7 @@ DAM Extensibility allows DAM to support user-defined custom renditions and confi
 
 Image tagging simply requires setting keywords for the elements that are contained in a visual. It allows the effective and direct search on the basis of preassigned keywords.
 
+
 ![Architecture diagram for Google vision Plugin](../../../../../images/Image_tagging_DAM-Plugin-google-vision.png)
 
 ## Google vision plugin configuration
@@ -130,6 +131,7 @@ Body
 
 For additional information about the Google Vision API and image resource processing, see [Google Vision documentation](https://cloud.google.com/vision/docs/data-usage). 
 
+<!--
 ## HCL Digital Experience Solution Feedback
 
-HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).
+HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).-->
