@@ -12,7 +12,7 @@ hide: tags
 
 ## Overview
 ### What You Will Learn In This Tutorial
-   - How to export parts of a DX Site****
+   - How to export parts of a DX Site
    - How to import parts of a DX Site from exported files
    - What to look out for when exporting and deploying DX sites
 
@@ -83,7 +83,7 @@ Here are the steps in order to deploy your exported DX Site:
 !!!note "When using Woodburn Insurance Demo"
    The following xml files are already included in the demo named theme-export.xml and site-export.xml respectively.
 
-###  Theme Metadata Export XML
+###  Theme Metadata XML
 This xml will be used to export the metadata xml of theme.
 !!!example "theme-export.xml"
         
@@ -136,7 +136,7 @@ This xml will be used to export the metadata xml of theme.
    - Theme objectid.
       ![Theme Object ID](../../images/19theme_objectid.png)
 
-###  Page Hierarchy Export XML
+###  Page Hierarchy XML
 This xml will be used to export the Page metadata and hierarchy xml of your site.
 !!!example "site-export.xml"
       ``` XML

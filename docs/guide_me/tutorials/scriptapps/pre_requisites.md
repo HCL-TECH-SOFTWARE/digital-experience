@@ -4,7 +4,7 @@
 
 HCL DXClient is required for deployments. Follow the online guide on how to install [HCL DXClient](../../../extend_dx/development_tools/dxclient/index.md). Please note that the DX and/or DXClient link provided here may be superseded, you may use a newer version if available. 
 
-!!! note "The DXClient Docker image in the DX release CF206 and older versions do not have the full functionality to support the sample codes in these tutorials. Please use the Node.js-based DXClient for release builds CF206 and older."
+!!! note "Please use the latest or at least the CF207 build of the DXClient Docker image.  The DXClient in CF206 and older versions do not have the full functionality to support the sample codes in these tutorials. In some cases, the latest DXClient will still work with older DX Core versions."
 
 If you have replaced the default context root of your DX installation, you should update the [config.json](../../../extend_dx/development_tools/dxclient/index.md#dxclient-installation-configuration) file of your DXClient accordingly.
 
