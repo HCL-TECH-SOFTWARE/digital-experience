@@ -4,8 +4,8 @@ This section provides the steps on how the DAM extensibility allows the Kaltura 
 
 ## Architecture
 
-![Kaltura plugin 2](../../images/Kaltura_configuration_Kaltura-Plugin-Design.png)
-![Kaltura Plugin](../../images/kaltura_configuration_Kaltura-Plugin.png)
+![Kaltura plugin 2](../../../../images/Kaltura_configuration_Kaltura-Plugin-Design.png)
+![Kaltura Plugin](../../../../images/kaltura_configuration_Kaltura-Plugin.png)
 
 
 ## Kaltura configuration via DAM Extensibility
@@ -236,7 +236,8 @@ The following DAM APIs are deprecated and no longer in use:-
 !!! note
     Please take a note of all Kaltura Plugin configuration details before upgrading.
 
+<!--
 
 ## HCL Digital Experience Solution Feedback
 
-HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).
+HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1). -->

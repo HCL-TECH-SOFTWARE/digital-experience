@@ -15,7 +15,7 @@ After you upload assets in DAM, renditions are created. You can then do the acti
 
 A custom plug-in must meet certain conditions to work with DAM. The high-level application flow for a DAM plug-in is as follows:
 
-![How DAM communicates with custom plug-ins](../../images/dam-extensibility-plugin-design.png)
+![How DAM communicates with custom plug-ins](../../../../images/dam-extensibility-plugin-design.png)
 
 -   DAM sends a request to the plug-in API with an authentication token, along with the asset and action parameters in the request body.
 -   The plug-in receives and validates the token.

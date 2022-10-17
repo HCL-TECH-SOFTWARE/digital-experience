@@ -24,24 +24,24 @@ Follow these steps to get your Kaltura Partner ID and Administrator Secret key:
 1.  Log in to [https://kmc.kaltura.com/index.php/kmcng/login](https://kmc.kaltura.com/index.php/kmcng/login).
 2.  Enter your Kaltura login credentials.
 
-    ![Kaltura Management Console login page](../../images/dam_kmc_login_page.png)
+    ![Kaltura Management Console login page](../../../images/dam_kmc_login_page.png)
 
 3.  Click **Settings**.
 
-    ![KMC Settings](../../images/dam_kmc_settings_icon.png)
+    ![KMC Settings](../../../images/dam_kmc_settings_icon.png)
 
 4.  Click **Integration**.
 
-    ![Integration > Account Info](../../images/dam_kmc_integration_account_info_partner_id_secret_key_.png)
+    ![Integration > Account Info](../../../images/dam_kmc_integration_account_info_partner_id_secret_key_.png)
 
 5.  Copy your **Partner ID** and **Administrator Secret** key. These are needed to configure your Kaltura plugin.
 6.  Click **Studio**.
 
-    ![KMC Studio](../../images/dam_kmc_studio.png)
+    ![KMC Studio](../../../images/dam_kmc_studio.png)
 
 7.  Copy the **Player ID**.
 
-    ![Player ID](../../images/dam_kaltura_player_id_from_list.png)
+    ![Player ID](../../../images/dam_kaltura_player_id_from_list.png)
 
 
 ## Configure Kaltura plugin
@@ -50,7 +50,7 @@ Follow these steps to configure your Kaltura plugin:
 
 1.  From your HCL Digital Experience 9.5 Practitioner Studio interface, select **Digital Assets** from the navigator as shown below.
 
-    ![Select Digital Assets from the Practitioner Studio navigator](../../images/dam_practitioner_studio_home_page.png)
+    ![Select Digital Assets from the Practitioner Studio navigator](../../../images/dam_practitioner_studio_home_page.png)
 
     The HCL Digital Experience 9.5 Digital Asset Management can also be accessed from the Practitioner Studio **Digital Assets** tile.
 
@@ -58,11 +58,11 @@ Follow these steps to configure your Kaltura plugin:
 3.  Click **Plugins**.
 4.  Click **Edit Kaltura plugin settings**.
 
-    ![Edit Kaltura plugin settings](../../images/dam_settings_plugins_kaltura_edit.png)
+    ![Edit Kaltura plugin settings](../../../images/dam_settings_plugins_kaltura_edit.png)
 
 5.  Enter your Kaltura Management Console \(KMC\) credentials.
 
-    ![Kaltura Management Console (KMC) credentials](../../images/dam_settings_plugins_kaltura_edit_configure_credentials.png)
+    ![Kaltura Management Console (KMC) credentials](../../../images/dam_settings_plugins_kaltura_edit_configure_credentials.png)
 
     -   **Partner ID** - your Kaltura **Partner ID**
     -   **Administrator secret key** - your **Administrator Secret** key
@@ -75,11 +75,11 @@ Follow these steps to configure your Kaltura plugin:
 2.  Click **Plugins**.
 3.  Click **Edit Kaltura plugin settings**.
 
-    ![Edit Kaltura plugin settings](../../images/dam_settings_plugins_kaltura_edit.png)
+    ![Edit Kaltura plugin settings](../../../images/dam_settings_plugins_kaltura_edit.png)
 
 4.  Update your Kaltura Management Console \(KMC\) credentials.
 
-    ![Kaltura Management Console (KMC) credentials](../../images/dam_settings_plugins_kaltura_edit_credentials.png)
+    ![Kaltura Management Console (KMC) credentials](../../../images/dam_settings_plugins_kaltura_edit_credentials.png)
 
     -   **Partner ID** - your Kaltura **Partner ID**
     -   **Administrator secret key** - your **Administrator Secret** key
@@ -93,11 +93,11 @@ Follow these steps to configure your Kaltura plugin:
 2.  Click **Plugins**.
 3.  Click **Enable**.
 
-    ![Enable Kaltura plugin](../../images/dam_settings_plugins_kaltura_enable.png)
+    ![Enable Kaltura plugin](../../../images/dam_settings_plugins_kaltura_enable.png)
 
 4.  Enter your Kaltura Management Console \(KMC\) credentials.
 
-    ![Kaltura Management Console (KMC) credentials](../../images/dam_settings_plugins_kaltura_edit_credentials.png)
+    ![Kaltura Management Console (KMC) credentials](../../../images/dam_settings_plugins_kaltura_edit_credentials.png)
 
     -   **Partner ID** - your Kaltura **Partner ID**
     -   **Administrator secret key** - your **Administrator Secret** key
@@ -111,14 +111,16 @@ Follow these steps to configure your Kaltura plugin:
 2.  Click **Plugins**.
 3.  Click **Disable Kaltura plugin**.
 
-    ![Disable Kaltura plugin](../../images/dam_settings_plugins_kaltura_disable.png)
+    ![Disable Kaltura plugin](../../../images/dam_settings_plugins_kaltura_disable.png)
 
     The status is updated to **Disabled**.
 
-    ![Plugin Disabled status](../../images/dam_settings_plugins_kaltura_disabled_status.png)
+    ![Plugin Disabled status](../../../images/dam_settings_plugins_kaltura_disabled_status.png)
 
+
+<!--
 ## HCL Digital Experience Solution Feedback
 
-HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).
+HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).-->
 
 

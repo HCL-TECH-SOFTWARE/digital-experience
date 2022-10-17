@@ -1,6 +1,6 @@
 # Staging DAM to rendering environments
 
-This topic contains the commands that administrators can use to configure the staging of [Digital Asset Management](../../digital_asset_mgmt/index.md) \(DAM\) content. This allows you to manage subscriber registration or configure periodic sync.
+This topic contains the commands that administrators can use to configure the staging of [Digital Asset Management](../../index.md) \(DAM\) content. This allows you to manage subscriber registration or configure periodic sync.
 
 ## DAM staging framework
 
@@ -13,7 +13,7 @@ The DAM staging framework allows you to stage your DAM content from an authoring
     !!! note
         A subscriber must be registered with a publisher. Access rights from DAM staging assets are not transferred for subscribers that do not share the same Lightweight Directory Access Protocol \(LDAP\).
 
-![Use separate Digital Asset Management and staging between HCL DX environments](../../../images/new_dam_staging_options.png)
+![Use separate Digital Asset Management and staging between HCL DX environments](../../../../images/new_dam_staging_options.png)
 
 ## Manage DAM staging
 
