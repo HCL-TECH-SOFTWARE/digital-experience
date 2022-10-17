@@ -149,6 +149,4 @@ For AIX and Linux, you must start IBM Workplace Services Express® from the cons
 
 For AIX, refer to the prerequisites as described in [Configuring images for Document Conversion Services](../../manage_content/dcs/configuration/index.md).
 
-For IBM i, refer to the prerequisites as described in [Configuring images for Document Conversion Services](../../manage_content/dcs/configuration/index.md).
-
 

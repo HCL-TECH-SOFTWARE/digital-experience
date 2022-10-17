@@ -4,47 +4,41 @@ This section provides the steps on how the DAM extensibility allows the Kaltura 
 
 ## Architecture
 
-![Kaltura plugin 2](../../../../images/Kaltura_configuration_Kaltura-Plugin-Design.png)
-![Kaltura Plugin](../../../../images/kaltura_configuration_Kaltura-Plugin.png)
+
+![Kaltura plugin 2](../../../../../images/Kaltura_configuration_Kaltura-Plugin-Design.png)
+![Kaltura Plugin](../../../../../images/kaltura_configuration_Kaltura-Plugin.png)
+
 
 
 ## Kaltura configuration via DAM Extensibility
 
-Following kaltura configuration changes are required to configure through DAM extensibility
+Following kaltura configuration changes are required to configure through DAM extensibility in values.yaml
 
 **Kaltura Plugin configuration**
 Under kaltura plugin configuration by default the enable flag will be set as false, the end user can enable kaltura-plugin by setting the enable flag to true.
 
 ```
-{
-  "kaltura-plugin": {
-    "url": "http://localhost:8081/dx/api/kaltura/v1/plugin",
-    "callBackHost": "http://localhost:3000",
-    "authKey": "kalturaPluginSecretAuthKey",
-    "playerid": "KalturaPluginPlayerId",
-    "dataUrlPattern": "https://cdnapisec.kaltura.com/p/{PARTNERID}/sp/{PARTNERID}00/playManifest/entryId/{ENTRYID}/format/url/protocol/https",
-    "playerLibraryUrlPattern": "https://cdnapisec.kaltura.com/p/{PARTNERID}/sp/{PARTNERID}00/embedIframeJs/uiconf_id/{PLAYERID}/partner_id/{PARTNERID}",
-    "enable": false,
-    "actions": {
-      "upload": {
-        "params": {},
-        "url": "/upload"
-      },
-      "status": {
-        "params": {},
-        "url": "/status"
-      },
-      "resize": {
-        "params": {},
-        "url": "/resize"
-      },
-      "delete": {
-        "params": {},
-        "url": "/delete"
-      }
-    }
-  }
-}
+kaltura-plugin:
+        url: http://RELEASE_NAME-dam-plugin-kaltura:DAM_HTTP_PORT/dx/api/kaltura/v0/plugin
+        callBackHost: http://RELEASE_NAME-digital-asset-management:DAM_HTTP_PORT
+        authKey: Key
+        enable: false
+        playerid: kalturaPluginPlayerId
+        dataUrlPattern: https://cdnapisec.kaltura.com/p/{PARTNERID}/sp/{PARTNERID}00/playManifest/entryId/{ENTRYID}/format/url/protocol/https
+        playerLibraryUrlPattern: https://cdnapisec.kaltura.com/p/{PARTNERID}/sp/{PARTNERID}00/embedIframeJs/uiconf_id/{PLAYERID}/partner_id/{PARTNERID}
+        actions:
+          upload:
+            params: {}
+            url: "/upload"
+          status:
+            params: {}
+            url: "/status"
+          resize:
+            params: {}
+            url: "/resize"
+          delete:
+            params: {}
+            url: "/delete"
 ```
 
 **Kaltura Plugin Server Configurations**
@@ -58,133 +52,75 @@ Under kaltura plugin configuration by default the enable flag will be set as fal
 ```
 !!! example
     ```
-    {
-      "thumbnailUrlPattern": "https://cfvod.kaltura.com/p/{PARTNERID}/sp/{PARTNERID}00/thumbnail/entry_id/{ENTRYID}/width/{WIDTH}/height/{HEIGHT}/type/3",
-      "partnerId": "1234"
-    }
+    damPluginKaltura:
+    # kaltura plugin configuration for thumbnail URL.
+    thumbnailUrlPattern: https://cfvod.kaltura.com/p/{PARTNERID}/sp/{PARTNERID}00/thumbnail/entry_id/{ENTRYID}/width/{width}/height/{height}/type/3
+    # kaltura plugin configuration for partnerId.
+    partnerId: partnerId
     ```
 
 - Video Configuration in DAM
 ```
-{
-   "video/mp4":{
-      "rendition":[
-         {
-            "name":"Original",
-            "transformationStack":[
-                {
-                  "plugin":"kaltura-plugin",
-                  "operation":{
-                     "upload":{
-                       "mediaId":'',
-                     }
-                  }
-               }
-            ],
-            "thumbnailStack":[
-               {  
-                  "plugin":"kaltura-plugin",
-                  "operation":{
-                     "resize":{
-                        "height":192,
-                        "width":192,
-                         "entryId":'',
-                     }
-                  }
-               }
-            ],
-            "supplementalStack":[
-               {
-                  "plugin":"kaltura-plugin",
-                  "operation":{
-                     "status":{
-                       "entryId":'',
-                     }
-                  }
-               }
-            ]
-         }
-      ]
-   },
-   "video/ogg":{
-      "rendition":[
-         {
-            "name":"Original",
-            "transformationStack":[
-               {
-                  "plugin":"kaltura-plugin",
-                  "operation":{
-                     "upload":{
-                       "mediaId":'',
-                     }
-                  }
-               }
-            ],
-            "thumbnailStack":[
-               {
-                  "plugin":"kaltura-plugin",
-                  "operation":{
-                     "resize":{
-                        "height":192,
-                        "width":192,
-                        "entryId":'',
-                     }
-                  }
-               }
-            ],
-            "supplementalStack":[
-               {
-                  "plugin":"kaltura-plugin",
-                  "operation":{
-                     "status":{
-                       "entryId":'',
-                     }
-                  }
-               }
-            ]
-         }
-      ]
-   },
-   "video/webm":{
-      "rendition":[
-         {
-            "name":"Original",
-            "transformationStack":[
-               {
-                  "plugin":"kaltura-plugin",
-                  "operation":{
-                     "upload":{
-                       "mediaId":'',
-                     }
-                  }
-               }
-            ],
-            "thumbnailStack":[
-               {
-                  "plugin":"kaltura-plugin",
-                  "operation":{
-                     "resize":{
-                        "height":192,
-                        "width":192,
-                        "entryId":'',
-                     }
-                  }
-               }
-            ],
-            "supplementalStack":[
-               {
-                  "plugin":"kaltura-plugin",
-                  "operation":{
-                     "status":{
-                       "entryId":'',
-                     }
-                  }
-               }
-            ]
-         }
-      ]
-   }
-}
+video/mp4:
+        rendition:
+        - name: Original
+          transformationStack:
+          - plugin: kaltura-plugin
+            operation:
+              upload:
+                mediaId: ''
+          thumbnailStack:
+          - plugin: kaltura-plugin
+            operation:
+              resize:
+                height: 192
+                width: 192
+                entryId: ''
+          supplementalStack:
+          - plugin: kaltura-plugin
+            operation:
+              status:
+                entryId: ''
+      video/ogg:
+        rendition:
+        - name: Original
+          transformationStack:
+          - plugin: kaltura-plugin
+            operation:
+              upload:
+                mediaId: ''
+          thumbnailStack:
+          - plugin: kaltura-plugin
+            operation:
+              resize:
+                height: 192
+                width: 192
+                entryId: ''
+          supplementalStack:
+          - plugin: kaltura-plugin
+            operation:
+              status:
+                entryId: ''
+      video/webm:
+        rendition:
+        - name: Original
+          transformationStack:
+          - plugin: kaltura-plugin
+            operation:
+              upload:
+                mediaId: ''
+          thumbnailStack:
+          - plugin: kaltura-plugin
+            operation:
+              resize:
+                height: 192
+                width: 192
+                entryId: ''
+          supplementalStack:
+          - plugin: kaltura-plugin
+            operation:
+              status:
+                entryId: ''
 ```
 
 ### Kaltura Synchronisation time interval configuration in DAM

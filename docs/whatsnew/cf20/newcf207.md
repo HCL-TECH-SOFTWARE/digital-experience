@@ -17,7 +17,7 @@ The following features and updates are available to customers installing HCL Dig
 !!!note
     Tabs in each section indicate the supported platforms/deployments each feature is available on.
 
-## Development sample integrating HCL Unica Campaign segments in DX Personalization Rules
+## DX Client Updates support ability to execute in multiple container environments
 
 === "Containers"
     By default, the Docker container runtime is supported, updates enable use of any container runtime that implements the OCI Runtime Specification.  See the [DX Client](../../extend_dx/development_tools/dxclient/dxclient.md) topic in the Help Center for more information. 
@@ -27,7 +27,7 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     See the [DAM API for Friendly URLs](../../extend_dx/apis/hcl_experience_api/dam_friendly_urls.md) Help Center topic for more information.
 
-## DAM Asset Keyword updates
+## DAM Asset keyword updates
 
 === "Containers"
 
