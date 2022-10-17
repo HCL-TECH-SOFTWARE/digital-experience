@@ -5,6 +5,7 @@ The following features and updates are available to customers installing HCL Dig
 -   DX Client Updates support ability to execute in multiple container environments
 -   Digital Asset Management Plugin extensibility Helm configuration updates
 -   DAM Friendly URLs update adds ability to define a collection-unique name
+-   DAM Asset Keyword updates
 -   Content Composer enhancements adds ability to add keywords to content items
 -   New Script Application Tutorials and Sample Applications are available on the HCL Software Github repository
 -   Web Content Manager Apply Content Template API update
@@ -22,6 +23,11 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     By default, the Docker container runtime is supported, updates enable use of any container runtime that implements the OCI Runtime Specification.  See the [DX Client](../../extend_dx/development_tools/dxclient/dxclient.md) topic in the Help Center for more information. 
 
+## Digital Asset Management Plugin extensibility Helm configuration updates
+
+=== "Containers"
+    See the [Configure DAM extensibility](../../manage_content/digital_assets/configuration/dam_extensibility/configure_dam_extensibility.md) topic in the Help Center for more information. 
+
 ## DAM Friendly URLs Update adds ability to define a collection-unique name
 
 === "Containers"
@@ -30,8 +36,7 @@ The following features and updates are available to customers installing HCL Dig
 ## DAM Asset keyword updates
 
 === "Containers"
-
-    We have now added capability to show a detailed display of keywords, options to retain or replace keywords and to generate new keywords. See the [Digital Asset Management (DAM)](../../get_started/product_overview/asset_management.md) topic for more information.
+    We have now added capability to show a detailed display of keywords, options to retain or replace keywords and to generate new keywords. See the [DAM Keyword enhancements](../../manage_content/digital_assets/configuration/dam_extensibility/dam_keyword_enhancement.md) topic for more information.
 
 ## Content Composer enhancements 
 
