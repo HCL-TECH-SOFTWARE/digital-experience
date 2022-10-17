@@ -4,7 +4,7 @@ This topic describes how to configure DAM extensibility in the configuration fol
 
 ## Configure DAM extensibility
 
-Rendition and plug-in configurations are currently maintained as config maps. These are maintained in the values.yaml and can be modified through a Helm upgrade.
+Rendition, plug-in, Kaltura configurations are expected to be config maps in DAM. And these are maintained in the values.yaml and can be deployed through a Helm upgrade.
 
 Refer to the section [Planning your container deployment using Helm](../../platform/kubernetes/deployment/preparation/prepare_configuration.md) for more information on Helm support.
 
@@ -151,7 +151,124 @@ When using DAM extensibility, plug-ins come with security enabled by default. AP
     # Security configuration for Image processor
     imageProcessor:
       # Authentication key for Plugin API
-      authenticationKey: "PluginSecretAuthKey"
+      authenticationKey: "hKey"
+```
+
+## Configure custom renditions
+
+Similar to default renditions, DAM also supports custom renditions and this can be configured in values.yaml under DAM configurations. for example, below steps for adding custom rendition for jpeg image mime-type
+
+1. Copy renditions configurations for jpeg image mime type from values.yaml and add it in the same configuration path in custom values file. and add custom rendition along with default renditions
+
+```
+# Application configuration
+configuration:
+  renditionsConfiguration:
+    image/jpeg:
+      rendition:
+      - name: Original
+        transformationStack: []
+        thumbnailStack:
+        - plugin: image-processor
+        operation:
+            crop:
+            region: CENTER
+        - plugin: image-processor
+        operation:
+            resize:
+            height: 192
+            width: 192
+        supplementalStack:
+        - plugin: image-processor
+        operation:
+            metadata: {}
+        - plugin: google-vision
+        operation:
+            annotation: {}
+      - name: Desktop
+        transformationStack:
+        - plugin: image-processor
+        operation:
+            resize:
+            height: 1080
+            width: 1920
+        thumbnailStack:
+        - plugin: image-processor
+        operation:
+            crop:
+            region: CENTER
+        - plugin: image-processor
+        operation:
+            resize:
+            height: 192
+            width: 192
+        supplementalStack:
+        - plugin: image-processor
+        operation:
+            metadata: {}
+      - name: Tablet
+        transformationStack:
+        - plugin: image-processor
+        operation:
+            resize:
+            height: 768
+            width: 1024
+        thumbnailStack:
+        - plugin: image-processor
+        operation:
+            crop:
+            region: CENTER
+        - plugin: image-processor
+        operation:
+            resize:
+            height: 192
+            width: 192
+        supplementalStack:
+        - plugin: image-processor
+        operation:
+            metadata: {}
+      - name: Smartphone
+        transformationStack:
+        - plugin: image-processor
+        operation:
+            resize:
+            height: 760
+            width: 360
+        thumbnailStack:
+        - plugin: image-processor
+        operation:
+            crop:
+            region: CENTER
+        - plugin: image-processor
+        operation:
+            resize:
+            height: 192
+            width: 192
+        supplementalStack:
+        - plugin: image-processor
+        operation:
+            metadata: {}
+      - name: Custom
+        transformationStack:
+        - plugin: image-processor
+          operation:
+            resize:
+            height: 760
+            width: 360
+        thumbnailStack:
+        - plugin: image-processor
+          operation:
+            crop:
+            region: CENTER
+        - plugin: image-processor
+          operation:
+            resize:
+            height: 192
+            width: 192
+        supplementalStack:
+        - plugin: image-processor
+          operation:
+            metadata: {}
 ```
 
 

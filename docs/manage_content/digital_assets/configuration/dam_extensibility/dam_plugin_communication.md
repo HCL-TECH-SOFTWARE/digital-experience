@@ -15,7 +15,7 @@ After you upload assets in DAM, renditions are created. You can then do the acti
 
 A custom plug-in must meet certain conditions to work with DAM. The high-level application flow for a DAM plug-in is as follows:
 
-![How DAM communicates with custom plug-ins](../../images/dam-extensibility-plugin-design.png)
+![How DAM communicates with custom plug-ins](../../../../../images/dam-extensibility-plugin-design.png)
 
 -   DAM sends a request to the plug-in API with an authentication token, along with the asset and action parameters in the request body.
 -   The plug-in receives and validates the token.
@@ -34,7 +34,7 @@ You need to get the following up and running with a custom plug-in:
 -   Write a simple middleware that sends a POST request to the third-party plug-ins.
 -   The middleware must meet the request and response structure supported by DAM to make successful requests to the API.
 -   You must configure the middleware API URL in DAM.
--   You must configure the `renditions` and `operations` in rendition-extensibility.json in configurations. This allows generating asset renditions with the specific operations handled by the respective plug-ins.
+-   You must configure the `renditions` and `operations` in renditionsConfiguration section in values.yaml. This allows generating asset renditions with the specific operations handled by the respective plug-ins.
 -   DAM picks the URL in the plug-in configuration file and makes the request to the middleware. The middleware then requests the third-party plug-ins to do the operations, and once successfully completed, sends back the asset to DAM through a callback API.
 
 ## Extensibility API design
