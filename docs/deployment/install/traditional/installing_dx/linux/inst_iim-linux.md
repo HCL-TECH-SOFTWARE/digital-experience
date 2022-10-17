@@ -4,7 +4,7 @@ The IBM Installation Manager is used to install installation packages such as HC
 
 ## Procedure
 
-If you have an existing Installation Manager, start it and go to **File** \> **Preferences**. Then, click **Updates**. Click the **Search for Installation Manager updates** check box. This box enables the Installation Manager to search for updates the next time you run an installation or update.
+If you have an existing Installation Manager, start it and go to **File > Preferences**. Then, click **Updates**. Click the **Search for Installation Manager updates** check box. This box enables the Installation Manager to search for updates the next time you run an installation or update.
 
 If you do not have an existing Installation Manager, then complete the following procedure:
 

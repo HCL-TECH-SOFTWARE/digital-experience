@@ -112,7 +112,7 @@ You can also use the console mode to generate a response file. Go to [Installing
 16. If you selected the **Portal Server Profile** package, click **Enter the Administrator user ID and password for the Portal Server**. Then, select either the **Standard** or **Advanced** configuration mode and then enter the parameter details for the selected configuration mode.
 
     !!!note
-        Select **Advanced** if you want to specify Uniform Resource Identifier \(URI\) information that is specific to your company.
+        Select **Advanced** if you want to specify Uniform Resource Identifier (URI) information that is specific to your company.
 
 17. Confirm the Summary information and then click **Install**.
 
