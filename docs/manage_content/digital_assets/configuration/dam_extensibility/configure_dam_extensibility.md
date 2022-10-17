@@ -6,7 +6,7 @@ This topic describes how to configure DAM extensibility in the configuration fol
 
 Rendition and plug-in configurations are currently maintained as config maps. You can find these config maps \(`renditions-extensibility.json` and `plugin-extensibility.json`\) in the Helm configuration folder. You can deploy these into DAM through a Helm upgrade.
 
-Refer to the section [Planning your container deployment using Helm](../../platform/kubernetes/deployment/preparation/prepare_configuration.md) for more information on Helm support.
+Refer to the section [Planning your container deployment using Helm](../../../../deployment/install/container/helm_deployment/preparation/index.md) for more information on Helm support.
 
 Once configured, DAM gets the latest config maps to handle assets and their transformations.
 
@@ -73,8 +73,8 @@ When using DAM extensibility, plug-ins come with security enabled by default. AP
     }
 }
 ```
-
+<!--
 ## HCL Digital Experience Solution Feedback
 
-HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).
+HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1). -->
 
