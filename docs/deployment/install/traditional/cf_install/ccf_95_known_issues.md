@@ -9,25 +9,7 @@ This page will contain the known issues for the HCL Portal 9.5 Combined Cumulati
 -   Problem: As of HCL Portal 8.5 and 9.0 CF16, some features are not visible to users assigned to the Anonymous user role and the All authenticated users role, such as the tree view in Site Manager.
 -   Solution: Add the necessary roles for user **Anonymous** and user group **All Authenticated Users** explicitly. For example, to use site manager features within the toolbar, you must assign the **User** role to the **All Authenticated Users** group for the Site Manager portlet.
 
--   Problem: The `applyCF` task may fail on iSeries when used in combination with certain WAS levels, potentially with WAS 8.5.5.13 or greater. An error similar to the following may be seen in the failure\*.log in the ConfigEngine 'log' directory:
-
-    ```
-    /QIBM/ProdData/WebSphere/PortalServer/V85/ConfigEngine/config/includes/apply_
-    PTF.xml:172: /QIBM/ProdData/WebSphere/PortalServer/V85/Server/installer/wp.ie
-    hs.ear/config/includes/wp.iehs.ear_cfg.xml:62
-    ```
-
--   Solution: This may be due to an OSGi issue stemming from a WAS level upgrade. Run the following on the iSeries system:
-
-    ```
-    cd /QIBM/UserData/WebSphere/AppServer/V85/ND/profiles/wp_profile/bin
-    osgiCfgInit -all
-    ```
-
-    Then rerun the `applyCF` task.
-
-
--   Problem: The HCL Portal 8.5 and 9.0 CF15 `applyCF` task may fail if using the specific combination of WAS 8.5.5.12 on a Windows OS. An error similar to the following may be seen in the failure\*.log in the \(profile\_root\)/ConfigEngine/log directory:
+-   Problem: The HCL Portal 8.5 and 9.0 CF15 `applyCF` task may fail if using the specific combination of WAS 8.5.5.12 on a Windows OS. An error similar to the following may be seen in the failure*.log in the (profile_root)/ConfigEngine/log directory:
 
     ```
     wp.theme.modules.webapp_cfg.xml:296: java.lang.NoClassDefFoundError: com.ibm.ffdc.config.Formattable
