@@ -14,7 +14,7 @@ For information about the XML syntax elements for a secure HTTPS connection see 
 |`-askForCredential`|You can use the parameter askForCredential and leave out the parameters user and password. The XML configuration interface will then prompt you for the user ID and password. The parameter askForCredential requires no value to be specified.|
 |`-useEncryptedCredentials`|Use this option if you want to provide the user credentials in a properties file rather than with the XML command.|
 |`-noUpdateProperties`|Use this option additionally with the option useEncryptedCredentials, if you do not want to have the encrypted credentials written back to the properties file.|
-|`-url`|Use this element to specify the URL to access the configuration servlet. This URL consists of the host name, the base URI as specified during installation (for example /wps), and the servlet extension /config. For z/OS: Use this element to specify the URL to access the configuration servlet. This URL consists of the host name and port, the base URI as specified during installation (for example /wps), and the servlet extension /config.|
+|`-url`|Use this element to specify the URL to access the configuration servlet. This URL consists of the host name, the base URI as specified during installation (for example /wps), and the servlet extension /config.|
 |`-out`|The name of the result file that contains the XML output. This file gives a result status and thereby indicates whether the XML request was performed successfully, or what errors might have occurred. In the case of an XML export, this file contains the exported configuration. You can later use this file to re-import the exported configuration.|
 
 

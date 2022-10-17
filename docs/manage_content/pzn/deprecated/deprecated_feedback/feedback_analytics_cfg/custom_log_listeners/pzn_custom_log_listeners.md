@@ -4,7 +4,7 @@ When the log method of a logging bean is called, the feedback facility generates
 
 The Feedback component provides two default log listeners, the LMListener that collects data for use by the LikeMinds recommendation engine and the FeedbackListener that collects data for use in the feedback reports. Custom log listeners can be used to modify the default behavior of the FeedbackListener or to implement a listener that provides user-specific behavior.
 
-![custom log listeners](../images/custom_log_listen.jpg)
+![custom log listeners](../../../../../../images/custom_log_listen.jpg)
 
 There are a number of reasons that you might want to provide a customized feedback listener. Some of these are:
 
@@ -18,13 +18,13 @@ There are a number of reasons that you might want to provide a new custom listen
 -   To generate email when an event occurs. Perhaps you want to send email to customers after they purchase a large order. By processing an action event with the purchase amount included as action data, you could do this with a custom log listener.
 -   To generate notifications when an event occurs. You can detect the frequency of shopping cart abandons and generate a notification to the site administrator to check site availability and performance.
 
--   **[Custom listener classes](../pzn/pzn_custom_listener_classes.md)**  
+-   **[Custom listener classes](pzn_custom_listener_classes.md)**  
 A custom listener class is a class that implements the LogListener interface. View the steps to implement a custom listener class.
--   **[Customized feedback listeners](../pzn/pzn_customized_feedback_listeners.md)**  
+-   **[Customized feedback listeners](pzn_customized_feedback_listeners.md)**  
 A customized feedback listener is a subclassed FeedbackListener object that is registered with the feedback LogManager. View the steps to implement a custom feedback listener.
--   **[Custom listener classes](../pzn/pzn_custom_listener_classes.md)**  
+-   **[Custom listener classes](pzn_custom_listener_classes.md)**  
 A custom listener class is a class that implements the LogListener interface. View the steps to implement a custom listener class.
--   **[Customized feedback listeners](../pzn/pzn_customized_feedback_listeners.md)**  
+-   **[Customized feedback listeners](pzn_customized_feedback_listeners.md)**  
 A customized feedback listener is a subclassed FeedbackListener object that is registered with the feedback LogManager. View the steps to implement a custom feedback listener.
 
 

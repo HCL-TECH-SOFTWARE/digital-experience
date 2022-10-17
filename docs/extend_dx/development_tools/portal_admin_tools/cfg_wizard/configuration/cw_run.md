@@ -4,25 +4,25 @@ The home page of the Configuration Wizard provides access to common configuratio
 
 Click **Back** and **Next** to move back or forward in the Configuration Wizard.
 
-1.  To get the latest updates for the wizard, apply the most recent Combined Cumulative Fix. For more information about applying the latest fix pack, see [HCL Digital Experience Combined Cumulative Fix Strategy](../../../../../whatsnew/combined_cumulative_fix_strategy.md).
+1.  To get the latest updates for the wizard, apply the most recent Combined Cumulative Fix. For more information about applying the latest fix pack, see [Apply Combined Cumulative Fix](../../../../../deployment/install/traditional/cf_install/index.md) for more information.
 
 2.  Restart server1 to ensure that the Configuration Wizard uses the updated environment variables. Go to AppServer_home/profiles/cw_profile/bin and stop the server:
 
     -   AIX® and Linux™: `./stopServer.sh server1 -username username -password password`
     -   Windows™: `stopServer.bat server1 -username username -password password`
-    <br>
+
     Then, start the server:
 
     -   AIX and Linux: `./startServer.sh server1`
     -   Windows: `startServer.bat server1`
 
-3.  Access the Configuration Wizard. Go to https://your_server/hcl/wizard for a Kubernetes deployment or  http://your_server:10200/ibm/wizard for a traditional deployment.
+3.  Access the Configuration Wizard. Go to https://your_server/hcl/wizard for a Kubernetes deployment or http://your_server:10200/ibm/wizard for a traditional deployment.
 
     !!!note
         If working with HCL Digital Experience a software level prior to CF18, the wizard address is: http://your_server:10200/ibm/wizard. After installing CF18, the Configuration Wizard address is http://your_server:10200/hcl/wizard.
 
 
-4.  Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw\_profile.
+4.  Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw_profile.
 
     !!!note
         The wizard user interface might not be available in all languages. If the language is not currently supported, you might see the English version. For details on the supported languages for all of the HCL Digital Experience user interfaces, see [Language support](../../../portal_admin_tools/language_support/index.md).

@@ -14,10 +14,10 @@ The configuration for each service is stored in and accessible through the WebSp
 2.  Start the WebSphere Integrated Solutions Console by entering the following string in the **URL location** field of a web browser:
 
     ```
-    http://example.com:admin\_port/ibm/console
+    http://example.com:admin_port/ibm/console
     ```
 
-    where `example.com` is the name of your server or node host name of your server when on z/OS® and `admin\_port` is the port that is assigned to the WebSphere Integrated Solutions Console.
+    where `example.com` is the name of your server or node host name of your server and `admin_port` is the port that is assigned to the WebSphere Integrated Solutions Console.
 
 3.  Go to **Resources > Resources Environment > Resource Environment Providers**.
 
@@ -99,65 +99,65 @@ By alternative, you can also set the properties in the properties files and then
 
 Your service configuration properties updates are now in effect.
 
-**Related information**  
-[Using a page navigation element](../../../../manage_content/wcm/wcm_artifacts/elements/howto_work_with_elements/page_nav_element/index.md)<br>
-[Creating category selection trees](../../../../manage_content/wcm/wcm_artifacts/elements/howto_work_with_elements/taxonomy_element/wcm_dev_elements_taxonomy_selectiontrees.md)<br>
-[Setting the language of the portal](../../config_portal_behavior/adlang.md)<br>
-[Setting the portal entry page](../../config_portal_behavior/adloginview.md)<br>
-[How administrators define persistent session options](../../config_portal_behavior/user_session_persistence/adm_define_user_session_persistence/index.md)<br>
-[Configuring your own delayed deletion schedule by using the XML configuration interface](../../config_portal_behavior/delayed_cleanup/addelclnup_cfgxml.md)<br>
-[Pre-render methods](../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/pre-rendered_delivery/wcm_config_delivery_pre-rendered_running.md)<br>
-[Syndication properties](../../../../manage_content/wcm/wcm_content_delivery/syndication/wcm_config_prop_syndication.md)<br>
-[Web content authoring options](../../../../manage_content/wcm/wcm_content_delivery/cfg_webcontent_auth_env/wcm_config_prop_authoring.md)<br>
-[Data cache configuration](../../../../manage_content/wcm/wcm_content_delivery/cfg_webcontent_delivery_env/caching_options/wcm_config_delivery_caching_data.md)<br>
-[How to configure authoring tools components](../../../../manage_content/wcm/wcm_artifacts/elements/howto_work_with_elements/authoringtools_element/using_authoringtools_elements/wcm_config_wcmviewer_authcomp.md)<br>
-[How to configure authoring portlet search](../../../../manage_content/wcm/wcm_content_delivery/cfg_webcontent_auth_env/wcm_config_advanced_search.md)<br>
-[How to access the pre-rendered site](../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/pre-rendered_delivery/wcm_config_delivery_pre-rendered_accessing.md)<br>
-[Pre-rendering options](../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/pre-rendered_delivery/wcm_config_delivery_pre-rendered_accessing.md)<br>
-[Text, rich text and HTML elements](../../../../manage_content/wcm/wcm_artifacts/elements/howto_work_with_elements/richtext_element/wcm_dev_elements_text-richtext-html.md)<br>
-[Syndication troubleshooting](../../../../manage_content/wcm/wcm_content_delivery/syndication/wcm_syndication_troubleshooting.md)<br>
-[User roles and access](../../security/controlling_access/wcm_security/wcm_cms_access/wcm_security_items.md)<br>
-[How to use the member fixer task](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcm_member_fixer/wcm_admin_member-fixer.md)<br>
-[Cache tuning for federated documents](../../../../manage_content/wcm/wcm_content_delivery/cfg_webcontent_auth_env/fed_docs_setup/wcm_dev_feddocs_cache.md)<br>
-[Importing large files and images](../../../../manage_content/wcm/wcm_content_delivery/cfg_webcontent_auth_env/wcm_config_importbuffer.md)<br>
-[Enabling connect tags](../../../../manage_content/wcm/wcm_management/further_cfg_options/wcm_config_connect.md)<br>
-[Controlling access to hosts specified in a URL](../../../../manage_content/wcm/wcm_management/further_cfg_options/wcm_config_accesshost.md)<br>
-[Enabling email](../../../../manage_content/wcm/wcm_management/further_cfg_options/wcm_config_smtp.md)<br>
-[HCL Web Content Manager](../../../../manage_content/wcm/index.md)<br>
-[Configuring remote server access for links](../../../../manage_content/wcm/wcm_content_delivery/cfg_webcontent_auth_env/wcm_config_ecm_whitelist.md)<br>
-[Configuring access to remote systems for federated documents](../../../../manage_content/wcm/wcm_content_delivery/cfg_webcontent_auth_env/fed_docs_setup/wcm_dev_feddocs_cfgcoll.md)<br>
-[Enabling People Finder for anonymous users](https://help.hcltechsw.com/digital-experience/9.5/collab/i_coll_t_pfnd_enable_anon_users.html)<br>
-[Filtering the content models](../../../../extend_dx/apis/model_spi/dgn_modelfilter.md)<br>
-[Synchronizing scopes for web content](../../../../manage_content/wcm/wcm_artifacts/tagrate_managing/syn_scope/index.md)<br>
-[Synchronizing scopes when items change](../../../../manage_content/wcm/wcm_artifacts/tagrate_managing/syn_scope/wcm_tagrate_syncscope_item.md)<br>
-[Synchronizing scopes after syndication](../../../../manage_content/wcm/wcm_artifacts/tagrate_managing/syn_scope/wcm_tagrate_syncscope_synd.md)<br>
-[Scheduling scope synchronization](../../../../manage_content/wcm/wcm_artifacts/tagrate_managing/syn_scope/wcm_tagrate_syncscope_sched.md)<br>
-[Configuring Integrator for SAP](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_cfg.html)<br>
-[Configuring Tivoli Federated Identity Manager with SAML for single sign-on to SAP NetWeaver Portal](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_cfg_tfimsaml_sso.html)<br>
-[Performance tuning for Integrator for SAP](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_perf_tun.html)<br>
-[Portlet load monitoring properties](../../../../build_sites/site_analytics/portlet_load_monitoring/plmt_configuration.md)<br>
-[Enabling site analysis logging](../../monitoring/analyze_portal_usage/serverside_site_data/adsaconf_tsk_nbl.md)<br>
-[Auditing](../../monitoring/sec_audit.md)<br>
-[Cache expire parameters](../../../../manage_content/wcm/wcm_management/custom_caching/wcm_dev_caching_expire-parameters.md)<br>
-[CORS and remote web content rendering with WSRP and the Web Content Viewer](../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/enable_remote_render_wsrp/wcm_config_wcmviewer_wsrp_cors.md)<br>
-[Setting policy variables](../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/cfg_outbound_http_connections/cfg_structure/outbhttp_cfg_strctr_policy_variable.md)<br>
-[Digital Data Connector caches](../../../../extend_dx/ddc/ddc_cache_tuning/plrf_caches.md)<br>
-[Working with the XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)<br>
-[XML Syntax for exporting and importing credential vault data](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_xml_config_cmd_line/cmdline_syntax/xml_syntax_export_import_creds/index.md)<br>
-[Updating workflows by using the workflow update tool](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcm_admin_workflow.md)<br>
-[Clearing item history](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcm_admin_clear_history.md)<br>
-[Exporting and importing web content libraries](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcmlibrary_export/index.md)<br>
-[Customize common name generation](../../security/users_and_groups/sec_cust_names.md)<br>
-[Nested groups](../../security/users_and_groups/adusrgrp_nested.md)<br>
-[Tagging and rating](../../../../build_sites/tagging_rating/index.md)<br>
-[Parameter reference for the tag and rating widgets](../../../../build_sites/tagging_rating/cfg_reference/parm_ref_tag_rate_widget/index.md)<br>
-[How public and private tags and ratings work in the portal](../../../../build_sites/tagging_rating/howto_tagging_rating/tag_rate_adm_publc_privt.md)<br>
-[Filtering content for tagging](../../../../build_sites/tagging_rating/howto_tagging_rating/tag_rate_adm_filtr_cont.md)<br>
-[The tagging and rating user interface](../../../../build_sites/tagging_rating/tagging_rating_ui/index.md)<br>
-[Normalizing tags](../../../../build_sites/tagging_rating/howto_tagging_rating/tag_rate_adm_norm_local.md)<br>
-[Redirecting to an HCL Connections site](../../../../build_sites/tagging_rating/tag_rate_federation/fed_admin/tag_fed_admin_redirect.md)<br>
-[Specifying an icon for a federated resource](../../../../build_sites/tagging_rating/tag_rate_federation/fed_admin/tag_fed_admin_spec_icon.md)<br>
-[Hints and tips for tagging and rating](../../../../build_sites/tagging_rating/hints_tips_tag_rate/index.md)<br>
-[Hints and tips for developers and portal administrators](../../../../build_sites/tagging_rating/hints_tips_tag_rate/tag_rate_ref_hintip_4admins.md)<br>
-[Customizing Client Cookie Forwarding](../../../../extend_dx/development_tools/wsrp/portal_wsrp_consumer/customizing_wsrp_cfg_consumer_portal/wsrpc_clnt_cook_frwrd.md)<br>
-[System event logging](../../troubleshooting/logging_and_tracing/adsyslog.md)
+???+ info "Related information"  
+    -   [Using a page navigation element](../../../../manage_content/wcm/wcm_artifacts/elements/howto_work_with_elements/page_nav_element/index.md)
+    -   [Creating category selection trees](../../../../manage_content/wcm/wcm_artifacts/elements/howto_work_with_elements/taxonomy_element/wcm_dev_elements_taxonomy_selectiontrees.md)
+    -   [Setting the language of the portal](../../config_portal_behavior/adlang.md)
+    -   [Setting the portal entry page](../../config_portal_behavior/adloginview.md)
+    -   [How administrators define persistent session options](../../config_portal_behavior/user_session_persistence/adm_define_user_session_persistence/index.md)
+    -   [Configuring your own delayed deletion schedule by using the XML configuration interface](../../config_portal_behavior/delayed_cleanup/addelclnup_cfgxml.md)
+    -   [Pre-render methods](../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/pre-rendered_delivery/wcm_config_delivery_pre-rendered_running.md)
+    -   [Syndication properties](../../../../manage_content/wcm/wcm_content_delivery/syndication/wcm_config_prop_syndication.md)
+    -   [Web content authoring options](../../../../manage_content/wcm/wcm_content_delivery/cfg_webcontent_auth_env/wcm_config_prop_authoring.md)
+    -   [Data cache configuration](../../../../manage_content/wcm/wcm_content_delivery/cfg_webcontent_delivery_env/caching_options/wcm_config_delivery_caching_data.md)
+    -   [How to configure authoring tools components](../../../../manage_content/wcm/wcm_artifacts/elements/howto_work_with_elements/authoringtools_element/using_authoringtools_elements/wcm_config_wcmviewer_authcomp.md)
+    -   [How to configure authoring portlet search](../../../../manage_content/wcm/wcm_content_delivery/cfg_webcontent_auth_env/wcm_config_advanced_search.md)
+    -   [How to access the pre-rendered site](../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/pre-rendered_delivery/wcm_config_delivery_pre-rendered_accessing.md)
+    -   [Pre-rendering options](../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/pre-rendered_delivery/wcm_config_delivery_pre-rendered_accessing.md)
+    -   [Text, rich text and HTML elements](../../../../manage_content/wcm/wcm_artifacts/elements/howto_work_with_elements/richtext_element/wcm_dev_elements_text-richtext-html.md)
+    -   [Syndication troubleshooting](../../../../manage_content/wcm/wcm_content_delivery/syndication/wcm_syndication_troubleshooting.md)
+    -   [User roles and access](../../security/controlling_access/wcm_security/wcm_cms_access/wcm_security_items.md)
+    -   [How to use the member fixer task](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcm_member_fixer/wcm_admin_member-fixer.md)
+    -   [Cache tuning for federated documents](../../../../manage_content/wcm/wcm_content_delivery/cfg_webcontent_auth_env/fed_docs_setup/wcm_dev_feddocs_cache.md)
+    -   [Importing large files and images](../../../../manage_content/wcm/wcm_content_delivery/cfg_webcontent_auth_env/wcm_config_importbuffer.md)
+    -   [Enabling connect tags](../../../../manage_content/wcm/wcm_management/further_cfg_options/wcm_config_connect.md)
+    -   [Controlling access to hosts specified in a URL](../../../../manage_content/wcm/wcm_management/further_cfg_options/wcm_config_accesshost.md)
+    -   [Enabling email](../../../../manage_content/wcm/wcm_management/further_cfg_options/wcm_config_smtp.md)
+    -   [HCL Web Content Manager](../../../../manage_content/wcm/index.md)
+    -   [Configuring remote server access for links](../../../../manage_content/wcm/wcm_content_delivery/cfg_webcontent_auth_env/wcm_config_ecm_whitelist.md)
+    -   [Configuring access to remote systems for federated documents](../../../../manage_content/wcm/wcm_content_delivery/cfg_webcontent_auth_env/fed_docs_setup/wcm_dev_feddocs_cfgcoll.md)
+    -   [Enabling People Finder for anonymous users](https://help.hcltechsw.com/digital-experience/9.5/collab/i_coll_t_pfnd_enable_anon_users.html)
+    -   [Filtering the content models](../../../../extend_dx/apis/model_spi/dgn_modelfilter.md)
+    -   [Synchronizing scopes for web content](../../../../manage_content/wcm/wcm_artifacts/tagrate_managing/syn_scope/index.md)
+    -   [Synchronizing scopes when items change](../../../../manage_content/wcm/wcm_artifacts/tagrate_managing/syn_scope/wcm_tagrate_syncscope_item.md)
+    -   [Synchronizing scopes after syndication](../../../../manage_content/wcm/wcm_artifacts/tagrate_managing/syn_scope/wcm_tagrate_syncscope_synd.md)
+    -   [Scheduling scope synchronization](../../../../manage_content/wcm/wcm_artifacts/tagrate_managing/syn_scope/wcm_tagrate_syncscope_sched.md)
+    -   [Configuring Integrator for SAP](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_cfg.html)
+    -   [Configuring Tivoli Federated Identity Manager with SAML for single sign-on to SAP NetWeaver Portal](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_cfg_tfimsaml_sso.html)
+    -   [Performance tuning for Integrator for SAP](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_perf_tun.html)
+    -   [Portlet load monitoring properties](../../../../build_sites/site_analytics/portlet_load_monitoring/plmt_configuration.md)
+    -   [Enabling site analysis logging](../../monitoring/analyze_portal_usage/serverside_site_data/adsaconf_tsk_nbl.md)
+    -   [Auditing](../../monitoring/sec_audit.md)
+    -   [Cache expire parameters](../../../../manage_content/wcm/wcm_management/custom_caching/wcm_dev_caching_expire-parameters.md)
+    -   [CORS and remote web content rendering with WSRP and the Web Content Viewer](../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/enable_remote_render_wsrp/wcm_config_wcmviewer_wsrp_cors.md)
+    -   [Setting policy variables](../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/cfg_outbound_http_connections/cfg_structure/outbhttp_cfg_strctr_policy_variable.md)
+    -   [Digital Data Connector caches](../../../../extend_dx/ddc/ddc_cache_tuning/plrf_caches.md)
+    -   [Working with the XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
+    -   [XML Syntax for exporting and importing credential vault data](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_xml_config_cmd_line/cmdline_syntax/xml_syntax_export_import_creds/index.md)
+    -   [Updating workflows by using the workflow update tool](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcm_admin_workflow.md)
+    -   [Clearing item history](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcm_admin_clear_history.md)
+    -   [Exporting and importing web content libraries](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcmlibrary_export/index.md)
+    -   [Customize common name generation](../../security/users_and_groups/sec_cust_names.md)
+    -   [Nested groups](../../security/users_and_groups/adusrgrp_nested.md)
+    -   [Tagging and rating](../../../../build_sites/tagging_rating/index.md)
+    -   [Parameter reference for the tag and rating widgets](../../../../build_sites/tagging_rating/cfg_reference/parm_ref_tag_rate_widget/index.md)
+    -   [How public and private tags and ratings work in the portal](../../../../build_sites/tagging_rating/howto_tagging_rating/tag_rate_adm_publc_privt.md)
+    -   [Filtering content for tagging](../../../../build_sites/tagging_rating/howto_tagging_rating/tag_rate_adm_filtr_cont.md)
+    -   [The tagging and rating user interface](../../../../build_sites/tagging_rating/tagging_rating_ui/index.md)
+    -   [Normalizing tags](../../../../build_sites/tagging_rating/howto_tagging_rating/tag_rate_adm_norm_local.md)
+    -   [Redirecting to an HCL Connections site](../../../../build_sites/tagging_rating/tag_rate_federation/fed_admin/tag_fed_admin_redirect.md)
+    -   [Specifying an icon for a federated resource](../../../../build_sites/tagging_rating/tag_rate_federation/fed_admin/tag_fed_admin_spec_icon.md)
+    -   [Hints and tips for tagging and rating](../../../../build_sites/tagging_rating/hints_tips_tag_rate/index.md)
+    -   [Hints and tips for developers and portal administrators](../../../../build_sites/tagging_rating/hints_tips_tag_rate/tag_rate_ref_hintip_4admins.md)
+    -   [Customizing Client Cookie Forwarding](../../../../extend_dx/development_tools/wsrp/portal_wsrp_consumer/customizing_wsrp_cfg_consumer_portal/wsrpc_clnt_cook_frwrd.md)
+    -   [System event logging](../../troubleshooting/logging_and_tracing/adsyslog.md)

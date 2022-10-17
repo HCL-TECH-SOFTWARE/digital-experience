@@ -58,7 +58,8 @@ Use the `Matches` rendering plug-in to conditionally insert markup into your web
 
 You can also have negative pattern matching. In this case, the markup of the body of the plug-in tag is rendered only if the text does not match the regular expression. To use negative pattern matching, set the negative-match attribute to true.
 
-**Note:** The regular expression dialect that is used by the plug-in is defined by the Java language class `java.util.regex.Pattern`.
+!!! note
+  The regular expression dialect that is used by the plug-in is defined by the Java language class `java.util.regex.Pattern`.
 
 Examples:
 

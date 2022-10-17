@@ -24,25 +24,11 @@ Virtual portals can be created in environments where multiple portal installatio
 
 -   Automated cleanup of virtual portal resources in shared database domains. Run the configuration task `delete-virtual-portal` and specify either the URL context or the host name of the virtual portal that you want to delete. Example syntax for both options:
 
-    -   For IBM® i:
-        -  ```
-ConfigEngine.sh delete-virtual-portal 
-                -DremoveResourcesInSharedDomains=true 
-                -DVirtualPortalContext=URL\_context\_of\_the\_VP
-
-```
-
-        -   ```
-ConfigEngine.sh delete-virtual-portal 
-               -DremoveResourcesInSharedDomains=true
-               -DVirtualPortalHostName=host\_name\_of\_the\_VP
-```
-
     -   For Linux™:
         -   ```
 ConfigEngine.sh delete-virtual-portal 
                 -DremoveResourcesInSharedDomains=true 
-                -DVirtualPortalContext=URL\_context\_of\_the\_VP
+                -DVirtualPortalContext=URL_context_of_the_VP
 
 ```
 

@@ -7,10 +7,9 @@ You use HCL Web Content Manager JSP tags with the Web Content Manager API to pul
 
 !!! note
     To use the Web Content Manager JSP tags, the following directive must be provided in the JSP:
-
-```
-`<%@taglib uri="/WEB-INF/tld/wcm.tld" prefix="wcm" %>`
-```
+        ```
+        <%@taglib uri="/WEB-INF/tld/wcm.tld" prefix="wcm" %>
+        ```
 
 **Storing JSP files:** JSP files are stored within a web application that runs on the portal. To reference a JSP file in another web application, use the following path: contextPath;jspPath. For example, /wps/customapplication;/jsp/jspFilename.jsp.
 
@@ -32,11 +31,11 @@ This tag is used to set the initial workspace. This tag
 -   Sets the Web Content Manager workspace on the pageContext as a parameter with key com.ibm.workplace.wcm.api.Workspace.WCM\_WORKSPACE\_KEY.
 -   Sets the Web Content Manager RenderingContext on the request as a parameter with key Workspace.WCM\_RENDERINGCONTEXT\_KEY
 
-```
-`<wcm:initworkspace username=" " password=" " user=" " >
-[Error Message]
-</wcm:initworkspace>`
-```
+    ```
+    <wcm:initworkspace username=" " password=" " user=" " >
+    [Error Message]
+    </wcm:initworkspace>
+    ```
 
 |Parameter|Details|
 |---------|-------|
@@ -47,32 +46,32 @@ This tag is used to set the initial workspace. This tag
 !!! note
     User name, user, and password are optional. If not specified, the current user is used instead, including the anonymous user.
 
-Example
+**Example:**
 
-```
-`<%@ taglib uri="/WEB-INF/tld/wcm.tld" prefix="wcm"%>
-<%@ page import="com.ibm.workplace.wcm.api.*" %>
+    
+    <%@ taglib uri="/WEB-INF/tld/wcm.tld" prefix="wcm"%>
+    <%@ page import="com.ibm.workplace.wcm.api.*" %>
 
-<p><wcm:initworkspace>login fail</wcm:initworkspace>
-<%
-  // Get the workspace for use
-  Workspace workspace = (Workspace) pageContext.getAttribute(Workspace.WCM_WORKSPACE_KEY);
+    <p><wcm:initworkspace>login fail</wcm:initworkspace>
+    <%
+    // Get the workspace for use
+    Workspace workspace = (Workspace) pageContext.getAttribute(Workspace.WCM_WORKSPACE_KEY);
   
-  // Get the WCM rendering context for use
-  RenderingContext renderingContext = (RenderingContext) request.getAttribute(Workspace.WCM_RENDERINGCONTEXT_KEY);
-%>`
-```
+    // Get the WCM rendering context for use
+    RenderingContext renderingContext = (RenderingContext) request.getAttribute(Workspace.WCM_RENDERINGCONTEXT_KEY);
+    %>
+    
 
 ## Explicit context tag
 
 This tag sets the path to your Web Content Manager server. This tag is not required in JSP that is displayed by using a JSP component.
 
-```
-`<wcm:setExplicitContext wcmWebAppPath=" " wcmServletPath=" " path=" "
- requestParameters=" " prefix=" " project=" " >
-[Error Message]
-</wcm:setExplicitContext>`
-```
+    
+    <wcm:setExplicitContext wcmWebAppPath=" " wcmServletPath=" " path=" "
+    requestParameters=" " prefix=" " project=" " >
+    [Error Message]
+    </wcm:setExplicitContext>
+    
 
 |Parameter|Details|
 |---------|-------|
@@ -92,9 +91,9 @@ Developers can add insert context tags at any place in the page and it changes t
 Sets the context given the location of a path string. This tag is not required in JSP that is displayed by using a JSP component.
 
 ```
-`<wcm:setContext location=" "  wcmWebAppPath=" " wcmServletPath=" " param=" " project=" " defaultPath=" " >
-[Error Message]
-</wcm:setContext>`
+    <wcm:setContext location=" "  wcmWebAppPath=" " wcmServletPath=" " param=" " project=" " defaultPath=" " >
+    [Error Message]
+    </wcm:setContext>
 ```
 
 |Parameter|Details|
@@ -118,9 +117,9 @@ These tags are equivalent to element and component tags.
 -   **Rendering an element from the current site area, or content item**
 
     ```
-    `<wcm:contentComponent type=" " key=" " >
+    <wcm:contentComponent type=" " key=" " >
     [Error Message]
-    </wcm:contentComponent>`
+    </wcm:contentComponent>
     ```
 
     |Parameter|Details|
@@ -129,9 +128,9 @@ These tags are equivalent to element and component tags.
     |key|This parameter is the name of the element that is being referenced.|
 
     ```
-    `<wcm:libraryComponent name=" " library=" " >
+    <wcm:libraryComponent name=" " library=" " >
     [Error Message]
-    </wcm:libraryComponent >`
+    </wcm:libraryComponent >
     ```
 
 -   **Rendering a component from the Component Library**
@@ -141,20 +140,20 @@ These tags are equivalent to element and component tags.
     |name|This parameter is the name of the component that is being referenced.|
     |library|This parameter is the name of the library where the component is stored.|
 
-    Example
+    **Example:**
 
     ```
-    `<wcm:libraryComponent name="SC Menu Events" library="Showcase" /> 
+    <wcm:libraryComponent name="SC Menu Events" library="Showcase" /> 
     You do not have access to this item.
-    </wcm:libraryComponent >`
+    </wcm:libraryComponent >
     ```
 
 -   **Rendering Content based on the current context of a page**
 
     ```
-    `<wcm:content pageDesign=" " >
+    <wcm:content pageDesign=" " >
     [Error Message]
-    </wcm:content >`
+    </wcm:content >
     ```
 
     |Parameter|Details|
@@ -166,20 +165,20 @@ These tags are equivalent to element and component tags.
 
 The following tag can be added to error messages to enable error handling:
 
-```
+
 `<%=error%>`
-```
+
 
 ## Plug-in tag
 
 Rendering plug-ins can be referenced within JSP code by using a plug-in tag:
 
 ```
-`<wcm:plugin name=" " param1="value" param2="value2" >
+<wcm:plugin name=" " param1="value" param2="value2" >
 
 // Your text.
 
-</wcm:plugin>`
+</wcm:plugin>
 ```
 
 For more information, see [Creating a plug-in tag](../../tags/creating_web_content_tags/creating_plugin_tag/index.md).

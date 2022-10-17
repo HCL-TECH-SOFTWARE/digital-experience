@@ -2,7 +2,8 @@
 
 Before you install HCL Digital Experience in a production environment, assess your hardware and software needs, possible database configurations, security options, and LDAP server options.
 
-**Restriction:** The serverName is hardcoded to the HCL Portal. The serverName cannot be changed in a stand-alone environment. If you do change it, the ConfigEngine scripts do not work. For a clustered environment, see [Roadmaps for clusters](../traditional_deployment/roadmaps/rm_install_deployment/rm_clusters/rm_cluster_parent.md) for more information.
+!!!restriction
+    The serverName is hardcoded to the HCL Portal. The serverName cannot be changed in a stand-alone environment. If you do change it, the ConfigEngine scripts do not work. For a clustered environment, see [Roadmaps for clusters](../traditional_deployment/roadmaps/rm_install_deployment/rm_clusters/rm_cluster_parent.md) for more information.
 
 <!--- 
 -   **[System requirements](../../systemrequirements/index.md)**  

@@ -22,7 +22,9 @@ You can apply a label to the most recent versions of all items in a library. Thi
 Learn how to set root access for all HCL Digital Experience web content libraries using the web content authoring portlet.
 
 <!--
+
 **Parent topic:**[Web content](../practitioner_studio/web_content.md) -->
+
 
 ???+ info "Related information:"
     - [Adding an existing Script Application from the toolbar](../../../../../extend_dx/script_application/build_app_with_script_application/drop_app_toolbar.md)

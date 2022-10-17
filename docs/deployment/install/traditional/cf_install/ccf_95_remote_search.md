@@ -4,27 +4,28 @@ Read the installation instructions to learn how to apply a cumulative fix to a p
 
 ## About Version 8.5 Cumulative Fixes
 
-This cumulative fix can only be applied to an existing functional version of HCL Portal Version 8.5 remote search or document conversion services \(DCS\) server, with or without a previous cumulative fix applied.
+This cumulative fix can only be applied to an existing functional version of HCL Portal Version 8.5 remote search or document conversion services (DCS) server, with or without a previous cumulative fix applied.
 
 ## Overview
 
-If you have set up a remote search server or document conversion server for use with Portal Version 8.5, then whenever you apply a cumulative fix to the portal server, you should also apply the corresponding cumulative fix to the remote server. \(Likewise, when you roll back a fix from the portal server, you should roll back the corresponding fix from the remote server.\) There are two ways of doing this, depending on how you installed the server originally.
+If you have set up a remote search server or document conversion server for use with Portal Version 8.5, then whenever you apply a cumulative fix to the portal server, you should also apply the corresponding cumulative fix to the remote server (Likewise, when you roll back a fix from the portal server, you should roll back the corresponding fix from the remote server). There are two ways of doing this, depending on how you installed the server originally.
 
--   If you originally installed the remote service using manual steps, then you must use manual steps to upgrade it. Update the application on the remote search server by copying updated files from the primary portal server and redeploying them. Refer to the [Updating remote search by using manual steps](../admin-system/update_rssman.md) topic for details on how to set up the application.
+-   If you originally installed the remote service using manual steps, then you must use manual steps to upgrade it. Update the application on the remote search server by copying updated files from the primary portal server and redeploying them. Refer to the [Updating remote search by using manual steps](../../../../build_sites/search/remotesearch/install_manual/update_rssman.md) topic for details on how to set up the application.
 
 ## What's new
 
-For a list of the Fixes which have gone into each CF, visit [Combined Cumulative Fix Strategy](new_cf_95.md) for more information.
+For a list of the Fixes which have gone into each CF, visit [Apply Combined Cumulative Fix](../../../../deployment/install/traditional/cf_install/index.md) for more information.
 
 ## Before you begin
 
-## Space Requirements
+### Space Requirements
 
 Ensure that enough disk space is available in the following directories:
 
 -   All platforms: 250 MB in the download directory to download the cumulative fix, 1 MB in the installation directory, and 75 MB in the shared data space, which is the directory where Installation Manager temporarily stores downloaded files for use during the update.
 
-    **Note:** If you configured a user or group other than `wpsadmin` for the security role mapping for the PSEStandalone application, ensure that you add the property `portalAdminUser=<username>` replacing `<username>` with your username e.g. `wpsbind` in the `<searchProfile>/ConfigEngine/properties/wkplc.properties` file before the update.
+    !!!note
+        If you configured a user or group other than `wpsadmin` for the security role mapping for the PSEStandalone application, ensure that you add the property `portalAdminUser=<username>` replacing `<username>` with your username e.g. `wpsbind` in the `<searchProfile>/ConfigEngine/properties/wkplc.properties` file before the update.
 
     If you missed this configuration step, you can still manually re-add the user or groups after the update.
 
@@ -39,9 +40,9 @@ Backup the contents of the IBM Installation Manager data directory on the server
 
 The default locations of these directories are:
 
--   Windows: C:\\ProgramData\\IBM\\InstallationManager
+-   Windows: C:\\ProgramData\IBM\InstallationManager
 -   Linux root users: /var/ibm/InstallationManager
--   Linux non-root users: /home/\(user id\)/var/ibm/InstallationManager
+-   Linux non-root users: /home/(user id)/var/ibm/InstallationManager
 
 ## Known Issues
 
@@ -51,7 +52,7 @@ Review the *Known issues for combined cumulative fix* topic page to be aware of 
 
 For Portal Version 8.5 CF08 or later, the minimum recommended WebSphere Application Server level is at least WAS 8.5.5.6 with the corresponding JDK level applied.
 
-Review the \(supported hardware and software requirements external link\) for this cumulative fix. If necessary, upgrade all hardware and software before applying this cumulative fix, including interim fixes required for WebSphere Application Server.
+Review the (supported hardware and software requirements external link) for this cumulative fix. If necessary, upgrade all hardware and software before applying this cumulative fix, including interim fixes required for WebSphere Application Server.
 
 ## Check fixes installed on your system
 
@@ -68,52 +69,34 @@ All temporary or interim fixes on your system must be removed before installing 
 
 There are several different methods to install the cumulative fix, and they are:
 
--   Use a Graphical User Interface \(GUI\)
+-   Use a Graphical User Interface (GUI)
 -   Use a command line
 -   Use silent mode installation
 -   Use silent mode installation
 
 Choose one method that is available for your system and follow the detailed steps for that option.
 
-## Use a Graphical User Interface \(available on Windows and Linux operating systems\)
+## Use a Graphical User Interface (available on Windows and Linux operating systems)
 
 1.  If you are running an external web server such as IBM HTTP server, stop the web server.
-2.  Stop any active application servers by using the `stopServer` command. To see which application servers are active, use the `serverStatus` command from the \(prs\_profile\)/bin directory:
-    -   Linux:
-
-        ```
-        ./serverStatus.sh -all
-        ```
-
-    -   Windows:
-
-        ```
-        serverStatus.bat -all
-        ```
+2.  Stop any active application servers by using the `stopServer` command. To see which application servers are active, use the `serverStatus` command from the (prs_profile)/bin directory:
+    -   Linux: `./serverStatus.sh -all`
+    -   Windows: `serverStatus.bat -all`
 
 3.  Launch the IBM Installation Manager that was used to install HCL Portal Remote Search Version 8.5.
-4.  Using Installation Manager, click **File** \> **Preferences**.
+4.  Using Installation Manager, click **File > Preferences**.
 5.  Go to the **Repositories** panel and click **Add Repository**.
 6.  Navigate to the repository.config file mentioned earlier and select it.
 7.  Select **Update** and follow the prompts to update HCL Portal Remote Search.
 8.  If you are running an external web server, restart it now.
 
 
-## Use a command line \(available on Windows and Linux operating systems\)
+## Use a command line (available on Windows and Linux operating systems)
 
 1.  If you are running an external web server such as IBM HTTP server, stop the web server.
-2.  Stop any active application servers by using the `stopServer` command. To see which application servers are active, use the `serverStatus` command from the \(prs\_profile\)/bin directory:
-    -   Linux:
-
-        ```
-        ./serverStatus.sh -all
-        ```
-
-    -   Windows:
-
-        ```
-        serverStatus.bat -all
-        ```
+2.  Stop any active application servers by using the `stopServer` command. To see which application servers are active, use the `serverStatus` command from the (prs_profile)/bin directory:
+    -   Linux: `./serverStatus.sh -all`
+    -   Windows: `serverStatus.bat -all`
 
 3.  Open a command window and switch to the eclipse/tools sub-directory of Installation Manager. By default, this is:
     -   Linux:
@@ -150,21 +133,13 @@ Choose one method that is available for your system and follow the detailed step
 
 5.  If you are running an external web server, restart it now.
 
-## Use silent mode installation \(available on Windows and Linux operating systems\)
+## Use silent mode installation (available on Windows and Linux operating systems)
 
 1.  If you are running an external web server such as IBM HTTP server, stop the web server.
-2.  Stop any active application servers by using the `stopServer` command. To see which application servers are active, use the `serverStatus` command from the \(prs\_profile\)/bin directory:
-    -   Linux:
+2.  Stop any active application servers by using the `stopServer` command. To see which application servers are active, use the `serverStatus` command from the (prs_profile)/bin directory:
 
-        ```
-        ./serverStatus.sh -all
-        ```
-
-    -   Windows:
-
-        ```
-        serverStatus.bat -all
-        ```
+    -   Linux: `./serverStatus.sh -all`
+    -   Windows: `serverStatus.bat -all`
 
 3.  Open a command window and switch to the eclipse/tools sub-directory of Installation Manager. By default, this is:
     -   Linux: `/opt/IBM/InstallationManager/eclipse/tools`
@@ -177,13 +152,13 @@ Choose one method that is available for your system and follow the detailed step
 
     If the server you are applying the fix to is configured only as a remote search server, then you should remove `main.dcs.deploy` from this list.
 
-    -   Example \(Remote Search server only\):
+    -   Example (Remote Search server only):
 
         ```
         features='main.ce,main.rs.install,main.dcs.install,main.rs.deploy'
         ```
 
-    -   Example \(Document Conversion server only\):
+    -   Example (Document Conversion server only):
 
         ```
         features='main.ce,main.rs.install,main.dcs.install,main.dcs.deploy'
@@ -198,21 +173,12 @@ Choose one method that is available for your system and follow the detailed step
 
 6.  If you are running an external web server, restart it now.
 
-## Use Console Mode Interface \(available on Windows and Linux operating systems\)
+## Use Console Mode Interface (available on Windows and Linux operating systems)
 
 1.  If you are running an external web server such as IBM HTTP server, stop the web server.
-2.  Stop any active application servers by using the `stopServer` command. To see which application servers are active, use the `serverStatus` command from the \(prs\_profile\)/bin directory:
-    -   Linux:
-
-        ```
-        ./serverStatus.sh -all
-        ```
-
-    -   Windows:
-
-        ```
-        serverStatus.bat -all
-        ```
+2.  Stop any active application servers by using the `stopServer` command. To see which application servers are active, use the `serverStatus` command from the (prs_profile)/bin directory:
+    -   Linux: `./serverStatus.sh -all`
+    -   Windows: `serverStatus.bat -all`
 
 3.  Open a command window and switch to the eclipse/tools sub-directory of Installation Manager. By default, this is:
     -   Linux:
@@ -252,43 +218,37 @@ Choose one method that is available for your system and follow the detailed step
 6.  Select **Update** and follow the prompts to update HCL Portal.
 7.  If you are running an external web server, restart it now.
 
-**Reminder:** Go to Known Issues in this topic section to be aware of any known issues for HCL Portal CF releases.
+!!!reminder
+    Go to Known Issues in this topic section to be aware of any known issues for HCL Portal CF releases.
 
 ## Steps for rolling back the cumulative fix
 
-**Note:** The steps in these sections for rolling back the cumulative fix describe how to roll back from a successful update to a previous level. However, rolling back from a failed update does not guarantee return to a dependable state. When an update fails, it is advised that you fix the cause of the failure and try again for a successful update; to return to a previous level, you must depend on a system and database backup and restore.
+!!!note
+    The steps in these sections for rolling back the cumulative fix describe how to roll back from a successful update to a previous level. However, rolling back from a failed update does not guarantee return to a dependable state. When an update fails, it is advised that you fix the cause of the failure and try again for a successful update; to return to a previous level, you must depend on a system and database backup and restore.
 
 There are several different methods to roll back the cumulative fix, and they are:
 
--   Use a Graphical User Interface \(GUI\) to roll back
+-   Use a Graphical User Interface (GUI) to roll back
 -   Use a command line rollback
 -   Use silent mode rollback
 -   Use console mode rollback
 
 Choose one method that is available for your system. Follow the detailed steps for that option, and then proceed with the *Post Rollback Steps*.
 
-## Use a Graphical User Interface to roll back \(available on Windows and Linux operating systems\)
+## Use a Graphical User Interface to roll back (available on Windows and Linux operating systems)
 
 1.  If you are running an external web server such as IBM HTTP server, stop the web server.
-2.  Stop any active application servers by using the `stopServer` command. To see which application servers are active, use the `serverStatus` command from the \(prs\_profile\)/bin directory:
-    -   Linux:
-
-        ```
-        ./serverStatus.sh -all
-        ```
-
-    -   Windows:
-
-        ```
-        serverStatus.bat -all
-        ```
+2.  Stop any active application servers by using the `stopServer` command. To see which application servers are active, use the `serverStatus` command from the (prs_profile)/bin directory:
+    -   Linux: `./serverStatus.sh -all`
+    -   Windows: `serverStatus.bat -all`
 
 3.  Open a command window and switch to the eclipse/tools sub-directory of Installation Manager.
     -   For Linux: /opt/IBM/InstallationManager/eclipse/tools
-    -   For Windows: C:\\Program Files\\IBM\\Installation Manager\\eclipse\\tools
+    -   For Windows: C:\\Program Files\IBM\Installation Manager\eclipse\tools
 4.  Run the following command to launch the installation program of IBM Installation Manager.
 
-    **Note:** The command is shown here on multiple lines for clarity, but the entire command must be entered on one line. Include quotation marks around file paths that include spaces.
+    !!!note
+        The command is shown here on multiple lines for clarity, but the entire command must be entered on one line. Include quotation marks around file paths that include spaces.
 
     For Linux:
 
@@ -306,25 +266,16 @@ Choose one method that is available for your system. Follow the detailed steps f
 
 5.  If you are running an external web server, restart it now.
 
-## Use silent mode to roll back \(available on Windows and Linux operating systems\)
+## Use silent mode to roll back (available on Windows and Linux operating systems)
 
 1.  If you are running an external web server such as IBM HTTP server, stop the web server.
-2.  Stop any active application servers by using the `stopServer` command. To see which application servers are active, use the `serverStatus` command from the \(prs\_profile\)/bin directory.
-    -   Linux:
-
-        ```
-        ./serverStatus.sh -all
-        ```
-
-    -   Windows:
-
-        ```
-        serverStatus.bat -all
-        ```
+2.  Stop any active application servers by using the `stopServer` command. To see which application servers are active, use the `serverStatus` command from the (prs_profile)/bin directory.
+    -   Linux: `./serverStatus.sh -all`
+    -   Windows: `serverStatus.bat -all`
 
 3.  Open a command window and switch to the eclipse/tools sub-directory of Installation Manager. By default, this is:
     -   Linux: /opt/IBM/InstallationManager/eclipse/tools
-    -   Windows: C:\\ProgramFiles\\IBM\\Installation Manager\\eclipse\\tools
+    -   Windows: C:\\ProgramFiles\IBM\Installation Manager\eclipse\tools
 4.  Update the sample response file that is packaged with your cumulative fix level according to the comments in the file.
 5.  Run the following command to roll back in silent mode:
 
@@ -335,25 +286,16 @@ Choose one method that is available for your system. Follow the detailed steps f
 
 6.  If you are running an external web server, restart it now.
 
-## Use Console Mode interface \(available on Windows and Linux operating systems\)
+## Use Console Mode interface (available on Windows and Linux operating systems)
 
 1.  If you are running an external web server such as IBM HTTP server, stop the web server.
-2.  Stop any active application servers by using the `stopServer` command. To see which application servers are active, use the `serverStatus` command from the \(prs\_profile\)/bin directory.
-    -   Linux:
-
-        ```
-        ./serverStatus.sh -all
-        ```
-
-    -   Windows:
-
-        ```
-        serverStatus.bat -all
-        ```
+2.  Stop any active application servers by using the `stopServer` command. To see which application servers are active, use the `serverStatus` command from the (prs_profile)/bin directory.
+    -   Linux: `./serverStatus.sh -all`
+    -   Windows: `serverStatus.bat -all`
 
 3.  Open a command window and switch to the eclipse/tools sub-directory of Installation Manager. By default, this is:
     -   Linux: /opt/IBM/InstallationManager/eclipse/tools
-    -   Windows: C:\\ProgramFiles\\IBM\\Installation Manager\\eclipse\\tools
+    -   Windows: C:\\ProgramFiles\IBM\Installation Manager\eclipse\tools
 4.  Run the command to start the IBM Installation Manager in console mode:
     -   Linux:
 

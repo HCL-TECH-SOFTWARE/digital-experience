@@ -1,6 +1,6 @@
 # Creating scripts and instructions
 
-The Configuration Wizard creates multiple files to help you complete your configuration objectives in a three-step process \(Answer Questions, Customize Values, and Configure\). When you select an option to customize for a specific configuration scenario, you provide information about your environment. Instructions, scripts, and helper files with updated property values are created to guide you in completing your configuration goal. You can run your configuration in real time or you can save your settings to use on another server.
+The Configuration Wizard creates multiple files to help you complete your configuration objectives in a three-step process (Answer Questions, Customize Values, and Configure). When you select an option to customize for a specific configuration scenario, you provide information about your environment. Instructions, scripts, and helper files with updated property values are created to guide you in completing your configuration goal. You can run your configuration in real time or you can save your settings to use on another server.
 
 1.  From the Configuration Wizard, click an option to customize your configuration goal.
 
@@ -48,7 +48,6 @@ The Configuration Wizard creates multiple files to help you complete your config
         File used for troubleshooting your task.
 
 12. Click **Start Configuration** to run your configuration.
-
 
 
 ???+ info "Related information"  

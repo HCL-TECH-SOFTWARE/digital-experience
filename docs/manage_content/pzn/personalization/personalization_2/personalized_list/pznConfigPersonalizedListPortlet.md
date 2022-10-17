@@ -68,7 +68,8 @@ The JSP is now able to start methods and read properties on the resource that is
     -   The **Ascending** and **Descending** order override any sorting declared in your rules.
     -   The **Order-as-is** displays the categories in the order that the rule or content spot runs.
 
-        **Note:** If you specify **order-as-is** and do not declare an ordering in the rule that is run, the resulting resources might not be grouped when displayed.
+        !!! note 
+            If you specify **order-as-is** and do not declare an ordering in the rule that is run, the resulting resources might not be grouped when displayed.
 
 
 # Selecting style classes

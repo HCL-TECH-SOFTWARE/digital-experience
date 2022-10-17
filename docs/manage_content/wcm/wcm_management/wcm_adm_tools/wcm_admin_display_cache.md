@@ -7,25 +7,17 @@ When you run the export cache settings task, a summary of your cache settings is
 ## Running the export cache settings task
 
 1.  Open a command prompt.
-2.  Run the following command from the `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine` directory:
+2.  Run the following command from the wp_profile_root/ConfigEngine directory:
 
     -   **Windows™**
 
-        ConfigEngine.bat run-wcm-admin-task-export-cache-settings -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password -Dlibrary=MyLibrary -DinheritPerms=apply -DlibSecurity=true
+        C`onfigEngine.bat run-wcm-admin-task-export-cache-settings -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password -Dlibrary=MyLibrary -DinheritPerms=apply -DlibSecurity=true`
 
-    -   **UNIX™Linux™**
+    -   **UNIX™ and Linux™**
 
-        ./ConfigEngine.sh run-wcm-admin-task-export-cache-settings -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password -Dlibrary=MyLibrary -DinheritPerms=apply -DlibSecurity=true
+        `./ConfigEngine.sh run-wcm-admin-task-export-cache-settings -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password -Dlibrary=MyLibrary -DinheritPerms=apply -DlibSecurity=true`
 
-    -   **IBM® i**
-
-        ConfigEngine.sh run-wcm-admin-task-export-cache-settings -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password -Dlibrary=MyLibrary -DinheritPerms=apply -DlibSecurity=true
-
-    -   **z/OS®**
-
-        ./ConfigEngine.sh run-wcm-admin-task-export-cache-settings -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password -Dlibrary=MyLibrary -DinheritPerms=apply -DlibSecurity=true
-
-    !!! note
+    !!!note
         An administrator user name and password is not required if the portal administrator user name and password are specified in the PortalAdminId and PortalAdminPwd settings in the wkplc.properties file.
 
 

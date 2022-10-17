@@ -1,4 +1,4 @@
-# Menu Element
+# Menu element
 
 A menu element displays metadata and content from content items that match the search criteria of the menu element. The search criteria of a menu element can include matching site areas, authoring templates, categories, and keywords.
 

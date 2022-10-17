@@ -8,7 +8,7 @@ Contextual path links attempt to resolve a link by using a relative path techniq
 
 Contextual path links can be applied to elements referenced by using the element tag. For example:
 
--   ```
+```
 [Element type="content" context="current" key="body" link="path" ]
 ```
 

@@ -36,16 +36,7 @@ If the Producer portal has security for its WSRP services set up, the administra
 
 If the Producer requires registration by the Consumer portal, the Producer must provide the required registration information to the Consumer.
 
--   **[Producer checklist for exchanging information with a Consumer](../admin-system/wsrpr_prod_chklst.md)**  
-Use this list to check whether you provided and obtained all required information that you must exchange with the Consumer.
 
-
-**Previous topic:**[Securing a WSRP Producer portal](../admin-system/wsrpt_prod_prep_sec.md)
-
-**Next topic:**[Providing WSRP services as a Producer](../admin-system/wsrpt_prod_prvd_ws.md)
-
-**Related information**  
-
-
-[How Producer and Consumer portals communicate](../admin-system/wsrpc_comint.md)
+???+ info "Related information" 
+    -   [How Producer and Consumer portals communicate](../../../../../../extend_dx/development_tools/wsrp/learning_wsrp/wsrpc_comint.md)
 

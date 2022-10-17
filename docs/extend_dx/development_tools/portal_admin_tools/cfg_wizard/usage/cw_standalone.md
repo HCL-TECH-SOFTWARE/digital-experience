@@ -5,24 +5,36 @@ title: Set up a stand-alone server
 
 # Configuration Wizard: Set up a stand-alone server
 
-You created a stand-alone, demonstration environment with IBM® Installation Manager. Now you are ready to change your demonstration environment into a production-ready, distributed stand-alone server environment. To begin, you can use the Database Transfer option to transfer your database from the default database, Apache Derby, to a more robust database. After your data is transferred, you can change from the built-in file-based repository to a federated repository. Then, you can choose to modify your site URLs for search engine optimization benefits.
+Use the Configuration Wizard to set up a stand-alone server. A stand-alone server is useful for different environments, such as a content authoring environment, test environment, and more.
 
-When a stand-alone topology is used as the foundation for a distributed environment, the web server, database, and user registry software is distributed to different physical servers. Using a distributed environment is beneficial for many reasons:
+## Before you begin
+Roadmaps provide an overview of the steps that are required for common environment configurations. Select the roadmap that is most like the environment that you want to set up. See [HCL Digital Experience roadmaps for stand-alone servers](../../../../../get_started/plan_deployment/traditional_deployment/roadmaps/rm_install_deployment/rm_standalone_servers/rm_standalone_parent.md) for more information.
 
--   Workload management. Database workload is distributed to another server.
--   Improved security. You can place the web server outside the firewall to direct traffic to the portal server.
--   Potential for growth. You can add more servers later as traffic increases.
+## About this task
+Use your selected roadmap and the Configuration Wizard to complete a new environment set up.
 
-A distributed, stand-alone server topology is useful for the following types of users:
+## Procedure
+1. Select the roadmap that is most like the configuration that you need to configure.
 
--   A company or organization that does not need a cluster environment for failover or high availability.
--   A company or organization that needs an environment to test your applications and designs before these applications and designs go to the live server.
--   A company or organization with limited server resources that wants to set up a department server or small website.
+2. Access the Configuration Wizard. Go to http://your_server:10200/hcl/wizard.
 
-You can select the stand-alone topology to set up to four different environments. This topology is used to set up a demonstration environment, a portlet and theme development environment, a web content development environment, and a stand-alone server, distributed environment.
+    !!!restriction
+        There is a known issue with Chrome version 45.x and the Configuration Wizard. If you are experiencing difficulties, use a different browser when you access the wizard.
 
-See a list of the topology options available to you for setting up an environment. Use the descriptions to guide you in selecting the best topology to apply to your environment.
+3. Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw_profile.
 
-???+ info "Related information" 
-    -   [Configuration Wizard](../../../portal_admin_tools/cfg_wizard/configuration/index.md)
+    !!!note
+        The wizard user interface might not be available in all languages. If the language is not currently supported, you might see the English version. For details on the supported languages for all of the HCL Digital Experience user interfaces, see [Language Support](../../../../../extend_dx/development_tools/portal_admin_tools/language_support/index.md).
+
+4. Click **Set Up a Stand-alone Server**.
+
+5. Complete each sub step in the order that is shown in the wizard. Use the Configuration Wizard in conjunction with your selected Roadmap.
+
+???+ info "Related concepts"
+    -   [Database Management Systems](../../../../../deployment/manage/db_mgmt_sys/index.md)
+    -   [Enable federated security](../../../../../deployment/manage/security/user_registry/cw_ldap.md)
+
+???+ info "Related tasks" 
+    -   [Accessing the Configuration Wizard](../../../portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+    -   [Updating DB2 self-tuning memory manager (STMM) settings](../../../../../deployment/manage/migrate/next_steps/post_mig_activities/db_task/mig_t_post_db2_stmm.md)
 

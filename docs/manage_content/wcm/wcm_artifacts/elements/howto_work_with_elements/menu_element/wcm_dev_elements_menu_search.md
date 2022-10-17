@@ -3,7 +3,7 @@ id: wcm_dev_elements_menu_search
 title: Defining menu element search properties
 ---
 
-
+# Menu element design examples
 
 
 Specify the search criteria to be used when you generate the menu element. You can limit the search according to the properties of content items, including authoring templates, site areas, categories, and keywords.

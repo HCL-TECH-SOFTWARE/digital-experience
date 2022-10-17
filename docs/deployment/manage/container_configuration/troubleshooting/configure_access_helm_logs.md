@@ -13,14 +13,13 @@ In CF200, a new mechanism is introduced for configuring log settings at runtime 
 
 ## Setting the log configuration for a DX application
 
-You can set a desired log configuration for a DX application by specifying an appropriate log string in your Helm custom-values.yaml file. Place the log string in the `level` property for the specified application. These properties are found in the `logging` subsection of the `incubator` section. For example, to set the configuration for Content Composer, use the following property:
+You can set a desired log configuration for a DX application by specifying an appropriate log string in your Helm custom-values.yaml file. Place the log string in the `level` property for the specified application. These properties are found in the `logging` section. For example, to set the configuration for Content Composer, use the following property:
 
 ```yaml
-incubator:
-  logging:
-    # Content Composer specific logging configuration
-    contentComposer:
-      level: "api:server-v1:*=info"
+logging:
+  # Content Composer specific logging configuration
+  contentComposer:
+    level: "api:server-v1:*=info"
 ```
 
 You can see the string format in the following section. Once the property is set, run the `helm upgrade` command.

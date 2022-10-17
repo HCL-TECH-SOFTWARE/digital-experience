@@ -4,7 +4,7 @@ Change the default rule mapping to the new binding rule that you created for dif
 
 Before you begin this procedure, ensure you have properly created additional advanced rules.
 
-1.  In the Personalization Navigator, select the content spot **Pzn\_offersSpot**, located in the **Workspace Root**.
+1.  In the Personalization Navigator, select the content spot **Pzn_offersSpot**, located in the **Workspace Root**.
 
 2.  In the Personalization Editor portlet, click **Edit**.
 
@@ -25,13 +25,4 @@ Congratulations! You have finished building a Personalized portlet.
 
 The next topic, *Personalized list portlet*, shows how to use this portlet instead of coding the Rational Application Developer portlet.
 
-
-**Previous topic:**[Create additional advanced rules](../pzn/pzn_demo_create_additional_advanced_rules.md)
-
-**Next topic:**[Personalized List portlet](../pzn/pzn_demo_list_portlet.md)
-
-
-**Previous topic:**[Create additional advanced rules](../pzn/pzn_demo_create_additional_advanced_rules.md)
-
-**Next topic:**[Personalized List portlet](../pzn/pzn_demo_list_portlet.md)
 

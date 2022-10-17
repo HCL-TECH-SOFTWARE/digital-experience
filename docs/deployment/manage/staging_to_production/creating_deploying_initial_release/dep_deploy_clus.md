@@ -6,16 +6,10 @@ If you have a single cell with a cluster A and a cluster B, use the following st
 
 1.  On cluster B, run the following commands.
 
-    -   AIX® HP-UX Linux™ Solaris:
+    -   AIX® and Linux™:
 
         ```
         ./ConfigEngine.sh empty-portal -DWasPassword=password -DPortalAdminPwd=password
-        ```
-
-    -   IBM® i:
-
-        ```
-        ConfigEngine.sh empty-portal -DWasPassword=password -DPortalAdminPwd=password
         ```
 
     -   Windows™:
@@ -24,26 +18,14 @@ If you have a single cell with a cluster A and a cluster B, use the following st
         ConfigEngine.bat empty-portal -DWasPassword=password -DPortalAdminPwd=password
         ```
 
-    -   z/OS®:
-
-        ```
-        ./ConfigEngine.sh empty-portal -DWasPassword=password -DPortalAdminPwd=password
-        ```
-
 2.  On cluster A, do a full resynchronization with the WebSphere® Integrated Solutions Console.
 
 3.  On cluster A, run the following commands:
 
-    -   AIX HP-UX Linux Solaris:
+    -   AIX and Linux:
 
         ```
         ./ConfigEngine.sh empty-portal -DWasPassword=password -DPortalAdminPwd=password
-        ```
-
-    -   IBM i:
-
-        ```
-        ConfigEngine.sh empty-portal -DWasPassword=password -DPortalAdminPwd=password
         ```
 
     -   Windows:
@@ -52,26 +34,14 @@ If you have a single cell with a cluster A and a cluster B, use the following st
         ConfigEngine.bat empty-portal -DWasPassword=password -DPortalAdminPwd=password
         ```
 
-    -   z/OS:
-
-        ```
-        ./ConfigEngine.sh empty-portal -DWasPassword=password -DPortalAdminPwd=password
-        ```
-
 4.  On cluster B, do a full resynchronization with the WebSphere Integrated Solutions Console.
 
 5.  On cluster A, run the following commands:
 
-    -   AIX HP-UX Linux Solaris:
+    -   AIX and Linux:
 
         ```
         ./ConfigEngine.sh deploy-paa -DappName=WebSpherePortal -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password -DemptyPortalDuringDeployPAA=false
-        ```
-
-    -   IBM i:
-
-        ```
-        ConfigEngine.sh deploy-paa -DappName=WebSpherePortal -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password -DemptyPortalDuringDeployPAA=false
         ```
 
     -   Windows:
@@ -80,34 +50,16 @@ If you have a single cell with a cluster A and a cluster B, use the following st
         ConfigEngine.bat deploy-paa -DappName=WebSpherePortal -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password -DemptyPortalDuringDeployPAA=false
         ```
 
-    -   z/OS:
-
-        ```
-        ./ConfigEngine.sh deploy-paa -DappName=WebSpherePortal -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password -DemptyPortalDuringDeployPAA=false
-        ```
-
 6.  On cluster B, run the following commands:
 
-    -   AIX HP-UX Linux Solaris:
+    -   AIX and Linux:
 
         ```
         ./ConfigEngine.sh deploy-paa -DappName=WebSpherePortal -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password -DemptyPortalDuringDeployPAA=false
-        ```
-
-    -   IBM i:
-
-        ```
-        ConfigEngine.sh deploy-paa -DappName=WebSpherePortal -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password -DemptyPortalDuringDeployPAA=false
         ```
 
     -   Windows:
 
         ```
         ./ConfigEngine.bat deploy-paa -DappName=WebSpherePortal -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password -DemptyPortalDuringDeployPAA=false
-        ```
-
-    -   z/OS:
-
-        ```
-        ./ConfigEngine.sh deploy-paa -DappName=WebSpherePortal -DforceDeploy=true -DWasPassword=password -DPortalAdminPwd=password -DemptyPortalDuringDeployPAA=false
         ```

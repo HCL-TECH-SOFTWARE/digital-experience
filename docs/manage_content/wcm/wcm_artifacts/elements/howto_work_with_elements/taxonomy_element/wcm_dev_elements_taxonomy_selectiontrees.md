@@ -2,15 +2,9 @@
 
 You use category selection trees to allow users to personalize menus.
 
-**Note:**
-
--   Ensure the `connect.businesslogic.module.ajpecatselect.class` property is defined in the `WCM WCMConfigService` service, using the IBM® WebSphere® Application Server administration console, with a value of `com.aptrix.pluto.CategoryProfileUpdaterModule`.
--   You cannot use category selection trees in a local rendering portlet. Instead, you must render the tree directly. For example:
-
-    ```
-    http://host:port/wps/wcm/myconnect/library/sitearea/content 
-    ```
-
+!!!note "Notes"
+    -   Ensure the `connect.businesslogic.module.ajpecatselect.class` property is defined in the `WCM WCMConfigService` service, using the IBM® WebSphere® Application Server administration console, with a value of `com.aptrix.pluto.CategoryProfileUpdaterModule`.
+    -   You cannot use category selection trees in a local rendering portlet. Instead, you must render the tree directly. For example: `http://host:port/wps/wcm/myconnect/library/sitearea/content` 
 
 ## Taxonomy element form
 
@@ -38,96 +32,41 @@ The following code examples are used to develop a basic category selection tree:
 
 |Code|Details|
 |----|-------|
-|```
-[PathCmpnt end="/[Library]/[SiteArea]/[Content]?MOD=AJPECatSelect' 
-method=post> 
-"start="
-<FORM action='" type="servlet"]
-```
-
-|This code calls the Category Profile Updater Module.|
-|```
-<input type="hidden" 
-value='[PathCmpnt type="servlet"]/[Library]/[SiteArea]/[Content]' 
-name="redirectURL">
-```
-
-|This code points to the page to go to after the user request has been processed. The element does not render correctly if the path, "\[Site area\]/\[Content\]" is not valid.|
-|```
-<input type="hidden" 
-name="updateSourceProfile" value="true">
-```
-
-|This line determines how a user's category profile is updated. The "value" parameter is optional.
-
--   **True**
-
-Permanently updates the user category profile.
-
--   **False**
-
-Updates only the user's session profile.
-
-**Updating the user's session profile:**
-
-The user's selected categories are calculated by combining the categories that are in the user's session profile and the categories that are in the permanent user category profile. Therefore, if a category is in the user category profile and is removed from the user's session profile only, it will still be shown as selected.
-
-
-|
+|`[PathCmpnt end="[Library]/[SiteArea]/[Content]?MOD=AJPECatSelect'`<br> 
+`method=post>` <br> 
+`"start="`<br> 
+`<FORM action='" type="servlet"]`<br> |This code calls the Category Profile Updater Module.|
+|`<input type="hidden"` <br> `value='[PathCmpnt type="servlet"][Library]/[SiteArea]/[Content]'` <br> `name="redirectURL">`|This code points to the page to go to after the user request has been processed. The element does not render correctly if the path, "[Site area]/[Content]" is not valid.|
+|`<input type="hidden"` <br> `name="updateSourceProfile" value="true">`|This line determines how a user's category profile is updated. The "value" parameter is optional.<br><br> -   **True** <br> Permanently updates the user category profile. <br> -   **False**<br> Updates only the user's session profile. <br><br> **Updating the user's session profile:** <br>The user's selected categories are calculated by combining the categories that are in the user's session profile and the categories that are in the permanent user category profile. Therefore, if a category is in the user category profile and is removed from the user's session profile only, it will still be shown as selected.|
 
 |Code|Details|
 |----|-------|
-|```
-<input type="checkbox" name="selectedCategories"
- value="[Placeholder tag="idnum"]"/>
-<IndentCmpnt offset="0" repeat=".."]
-[Placeholder tag="name"]
-<input type="hidden" name="visibleCategories"
- value="[Placeholder tag="idnum"]"/>
-<br>
-```
-
-|This is used to display unselected items in the rendered category selection tree.|
+|`<input type="checkbox" name="selectedCategories"`<br>`value="[Placeholder tag="idnum"]"/>`<br>`<IndentCmpnt offset="0" repeat=".."]`<br>`[Placeholder tag="name"]`<br>`<input type="hidden" name="visibleCategories"`<br>`value="[Placeholder tag="idnum"]"/>`</br>`<br>`|This is used to display unselected items in the rendered category selection tree.|
 
 |Code|Details|
 |----|-------|
-|```
-<input type="checkbox" checked name="selectedCategories"
- value="[Placeholder tag="idnum"]"/>
-[IndentCmpnt offset="0" repeat=".."]
-[Placeholder tag="name"]
-<input type="hidden" name="visibleCategories"
- value="[Placeholder tag="idnum"]"/>
-<br>
-
-```
-
-|This is used to display selected items in the rendered category selection tree.|
+|`<input type="checkbox" checked name="selectedCategories"`</br>`value="[Placeholder tag="idnum"]"/>`</br>`[IndentCmpnt offset="0" repeat=".."]`</br>`[Placeholder tag="name"]`</br>`<input type="hidden" name="visibleCategories"`</br>`value="[Placeholder tag="idnum"]"/>`</br>`<br>`|This is used to display selected items in the rendered category selection tree.|
 
 |Code|Details|
 |----|-------|
-|```
-<input type="submit" value="Set User Categories"></input>
-</form>
-```
+|`<input type="submit" value="Set User Categories"></input>`<br>
+`</form>`|The footer contains the submit button.|
 
-|The footer contains the submit button.|
-
-**Indent element:**
+## Indent element
 
 This example uses the indent element tag. This can be used in the navigator and taxonomy elements. This tag represents an HTML/text string that should be repeated depending on the depth of a tree node being rendered in these elements.
 
 In the taxonomy element example, the indent element is used to render and repeat the "." string dependent on the depth of the node the element design is being applied to. It is possible to offset the repeat value by assigning an integer value to the "offset" attribute of the tag. For example, A current node depth of 5 and an offset value of -2 would render the repeat string three times. If the sum of the offset and the node depth is negative or 0, the repeat string is not rendered.
 
-**element designs:**
+## Element designs
 
 The only difference between the unselected element design and the selected element design is that the check box input field in the selected element design has the "checked" attribute set.
 
-**User access:**
+## User access
 
 If using a taxonomy element, users must be given "Edit" access to their own user item to enable them to update their selected categories.
 
-**Using a URL to update user categories:**
+## Using a URL to update user categories
 
 You can use a URL as an alternative to using a category selection tree to update a user's selected categories:
 
@@ -143,8 +82,6 @@ The "selectedCategories" and "visibleCategories" parameters have multiple values
 This URL could be used on a page in the form of a button to allow users to update their user categories. For example, You could create a button that would add the category "News" to a user's selected categories list.
 
 
-**Related information**  
-
-
-[Setting service configuration properties](../admin-system/adsetcfg.md)
+???+ info "Related information"  
+    -   [Setting service configuration properties](../../../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 

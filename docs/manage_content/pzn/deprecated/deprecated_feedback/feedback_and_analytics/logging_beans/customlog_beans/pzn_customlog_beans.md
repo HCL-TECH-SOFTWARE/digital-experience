@@ -6,13 +6,10 @@ Logged data is stored in the Feedback schema in the HITPARMS, KEY\_VALUE\_COMBO,
 
 All custom log data is logged to the Feedback schema. Custom log data is not logged to the LikeMinds schema nor to the user session.
 
--   **[Implementing custom logging](../pzn/pzn_implement_custom_logging.md)**  
+-   **[Implementing custom logging](pzn_implement_custom_logging.md)**  
 To implement custom logging, insert a CustomLog bean into your JSP.
--   **[CustomLog beans reference](../pzn/pzn_customlog_beans_reference.md)**  
+-   **[CustomLog beans reference](pzn_customlog_beans_reference.md)**  
 View the CustomLog bean method signatures.
--   **[Implementing custom logging](../pzn/pzn_implement_custom_logging.md)**  
-To implement custom logging, insert a CustomLog bean into your JSP.
--   **[CustomLog beans reference](../pzn/pzn_customlog_beans_reference.md)**  
-View the CustomLog bean method signatures.
+
 
 
