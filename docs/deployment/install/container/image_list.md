@@ -7,6 +7,105 @@ You can obtain the HCL DX 9.5 container update releases may be obtained from you
 Video: [How to upload HCL Digital Experience 9.5 CF container images to a private repository](https://youtu.be/XJONRdpgCuo){:target="_blank"}
 
 
+## HCL DX 9.5 CF207
+
+-   **Container Update CF207**
+
+    If you are deploying the HCL DX 9.5 CF207 release, the package name and images are as follows:
+
+    **HCL DX 9.5 CF207 DXClient files**:
+
+    -   ```
+        hcl-dxclient-image-v95_CF2067_20221014-1618.zip
+       ```
+
+    -   ```
+        hcl-dxclient-v95_CF207_20221014-1614.zip
+        ```
+
+    **hcl-dx-kubernetes-v95-CF207.zip**:
+
+    -   ```
+        HCL DX notices V9.5 CF207.txt
+        ```
+
+    -   ```
+        hcl-dx-content-composer-image-v1.20.0_20221014-1558.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-core-image-v95_CF207_20221014-1607.tar.gz
+        ```
+    
+    -   ```
+        hcl-dx-dam-plugin-google-vision-image-v0.1.0_20221014-1559.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-dam-plugin-kaltura-image-v0.1.0_20221014-1600.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-deployment-v2.10.0_20221017-1419.tgz
+        ```
+
+    -   ```
+        hcl-dx-design-studio-image-v0.12.0_20221014-1613.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-digital-asset-manager-image-v1.19.0_20221014-1611.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-experience-api-sample-ui-v0.2.0.20221014-1613.zip
+        ```
+
+    -   ```
+        hcl-dx-haproxy-image-v1.3.0_20221014-1605.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-image-processor-image-v1.20.0_20221014-1606.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-license-manager-image-v95_CF207_20221014-1601.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-logging-sidecar-image-v1.0.0_20221014-1603.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-openldap-image-v1.2.0_20221014-1601.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-persistence-connection-pool-image-v1.20.0_20221014-1612.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-persistence-metrics-exporter-image-v1.18.0_20221014-1612.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-persistence-node-image-v1.10_20221014-1612.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-remote-search-image-v95_CF207_20221014-1607.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-ringapi-image-v1.20.0_20221014-1614.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-runtime-controller-image-v95_CF207_20221014-1603.tar.gz
+        ```
+
+
 ## HCL DX 9.5 CF206
 
 -   **Container Update CF206**
@@ -16,11 +115,11 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
     **HCL DX 9.5 CF206 DXClient files**:
 
     -   ```
-        hcl-dxclient-image-v95_CF206_20220908-1249.zip x
+        hcl-dxclient-image-v95_CF206_20220908-1249.zip
        ```
 
     -   ```
-        hcl-dxclient-v95_CF206_20220908-1248.zip x
+        hcl-dxclient-v95_CF206_20220908-1248.zip
         ```
 
     **hcl-dx-kubernetes-v95-CF206.zip**:
