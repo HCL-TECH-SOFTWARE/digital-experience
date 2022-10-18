@@ -12,7 +12,6 @@ The keyword section has the details link which shows the user-defined and plugin
 !!! note
     The confidence percentages are configurable via Helm configurations. For information, refer [Google vision plugin configuration](image_tagging.md#google-vision-plugin-configuration)
 
-![DAM Detailed keywords](../../../../images/keyword_dam_detail.png)
 
 ## Retain keywords during Save and Save as New
 
