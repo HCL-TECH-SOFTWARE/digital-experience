@@ -3,9 +3,15 @@
 Execute the npm script dx-deploy-app, pre-set with the DX admin username and password.
 
 ## Uploads via DXClient
-   ```bash
-   dxUsername=<username> dxPassword=<password> npm run dx-deploy-app 
-   ```
+
+   === "MacOS or Linux"
+       ```bash
+       dxUsername=<username> dxPassword=<password> npm run dx-deploy-app 
+       ```
+   === "Windows"
+       ```bash
+       dxUsername=<username> dxPassword=<password> npm run dx-deploy-app-win
+       ```
 
    Sample successful _deployDxModule_ log:
 

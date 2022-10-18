@@ -45,7 +45,8 @@ The portal resources are represented by the following XML tags.
 
             This task refreshes iWidget definitions that are stored in HCL Portal. Refreshing iWidget definitions refers to reloading the iWidget definition XML files and updating the corresponding iWidget Wrapper portlet clones.
 
-            **Tip:** To call this task directly, run the following portal configuration task: refresh-iwidget-definitions. See the topic about the *Task refresh-iwidget-definitions* for instructions.
+            !!!note "Tip"
+                To call this task directly, run the following portal configuration task: refresh-iwidget-definitions. See the topic about the *Task refresh-iwidget-definitions* for instructions.
 
         -   **com.ibm.portal.cmis.TransientSlotCleanupTask**
 

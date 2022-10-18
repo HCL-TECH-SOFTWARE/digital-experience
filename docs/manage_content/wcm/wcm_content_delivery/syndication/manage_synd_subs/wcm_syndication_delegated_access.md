@@ -4,7 +4,7 @@ Business users may want the ability to administer syndicators. Until delegated a
 
 If this feature is enabled, users having at least Manager access are eligible to see the syndicators they have access to and be able to test the syndicator, update the syndicator and list the pending items. In order for a user to have access to a syndicator, they must have Administrator access on all of the libraries listed in the syndicator.
 
-In addition, the REST calls for /wcmrest/Syndication/Syndicators and /wcmrest/Syndicator/{uuid}/Status are available to the user.
+In addition, the REST calls for `/wcmrest/Syndication/Syndicators` and `/wcmrest/Syndicator/{uuid}/Status` are available to the user.
 
 ## Setting up delegated access for syndication
 
@@ -16,7 +16,7 @@ Setup a resource environment property in the WCM WCMConfigService. This property
 
 1.  Log on to the WebSphere® Integrated Solutions Console.
 
-2.  Go to **Resources** \> **Resource Environment** \> **Resource environment providers** \> **WCM WCMConfigService**.
+2.  Go to **Resources > Resource Environment > Resource environment providers > WCM WCMConfigService**.
 
 3.  Select **Custom Properties**.
 
@@ -44,6 +44,6 @@ Give the user Manager access on the WCM Libraries Content Root using the "Set Ac
 <!--
 **Parent topic:**[How to manage syndicators and subscribers](../panel_help/wcm_syndication.md) -->
 
-???+ info "Related information:"
-    - [Syndication](../index.md)
+<!-- ???+ info "Related information:"
+    - [Syndication](../index.md) -->
 

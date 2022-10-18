@@ -3,14 +3,14 @@
 
 An email action sends an email to a set of users or groups.
 
-**Email settings:**
+## Email settings
 
 To be able to send a user an email notification during a workflow:
 
 -   Ensure that you configure the `WCM WCMConfigService` service to enable email and specify your SMTP server.
 -   Ensure that the user has a valid email address that is defined in their HCL Portal user profile.
 
-To create an email action, open the applications menu and go to **Content** \> **Web Content Management** and then click **New** \> **Workflow Actions** \> **Email Action**.
+To create an email action, open the applications menu and go to **Content > Web Content Management** and then click **New> Workflow Actions > Email Action**.
 
 
 1.  [Entering identification information](../wcm_dev_items_id.md)  

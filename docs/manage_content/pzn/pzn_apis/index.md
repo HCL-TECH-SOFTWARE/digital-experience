@@ -9,11 +9,13 @@ Visit the following Help Center documentation to learn more: [Personalization](h
 As of HCL Digital Experience CF204, the following types of rules or artifacts are enabled via REST:
 
 -   [Rules](https://opensource.hcltechsw.com/experience-api-documentation/pzn-api/#tag/Rules)
+
     -   Visibility Rules
     -   Profiler Rules \(updated with CF204\)
     -   Selection Rules \(updated with CF204\)
     -   [Embedded WCM Selection Rules](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/#tag/Component) \(new with 204\)
     -   Binding Rules (new with CF205)
+    
 -   [Folders](https://opensource.hcltechsw.com/experience-api-documentation/pzn-api/#tag/Folders)
 -   [Dynamic Properties](https://opensource.hcltechsw.com/experience-api-documentation/pzn-api/#tag/Dynamic-Properties)
 

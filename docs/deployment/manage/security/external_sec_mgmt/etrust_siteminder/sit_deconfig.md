@@ -6,15 +6,17 @@ Perform the following steps to remove eTrust SiteMinder from the HCL Digital Exp
 
 1.  Perform the following steps if you used eTrust SiteMinder for authorization:
 
-    1.  Use either the Resource Permissions portlet or, if you are set up to execute it, the XML Configuration Interface \(XMLAccess\) to internalize any resources managed by eTrust SiteMinder.
+    1.  Use either the Resource Permissions portlet or, if you are set up to execute it, the XML Configuration Interface (XMLAccess) to internalize any resources managed by eTrust SiteMinder.
 
-    2.  Open a UNIX System Services \(z/OS UNIX System Services\) command prompt.
+    2.  Open a UNIX System Services command prompt.
 
-        **Note:** If you are instructed to open a properties file, the files are ASCII files and should be opened with the appropriate tool.
+        !!!note
+            If you are instructed to open a properties file, the files are ASCII files and should be opened with the appropriate tool.
 
-    3.  Edit the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/config/config/services.properties file and change the value of com.ibm.wps.services.ac.ExternalAccessControlService to com.ibm.wps.ac.impl.ExternalAccessControlDefaultImpl.
+    3.  Edit the wp_profile_root/PortalServer/config/config/services.properties file and change the value of com.ibm.wps.services.ac.ExternalAccessControlService to com.ibm.wps.ac.impl.ExternalAccessControlDefaultImpl.
 
-        **Note:** In a cluster environment, you must edit the services.properties file on all nodes.
+        !!!note
+            In a cluster environment, you must edit the services.properties file on all nodes.
 
     4.  Change the enableExternalization property to false in the External Access Control Service. This will prevent the Externalize/Internalize icon from appearing in the Administration Access portlet after removing eTrust SiteMinder.
 
@@ -22,13 +24,13 @@ Perform the following steps to remove eTrust SiteMinder from the HCL Digital Exp
 
 3.  Complete the following steps to remove the eTrust SiteMinder TAI module from the WebSphere® Application Server console:
 
-    1.  In the WebSphere Application Server Administration Console, click **Securiry** \> **Global security** \> **Web and SIP security** \> **Trust association** \> **Interceptors.**.
+    1.  In the WebSphere Application Server Administration Console, click **Securiry > Global security > Web and SIP security > Trust association > Interceptors.**.
 
     2.  Select the eTrust SiteMinder TAI module and then click **Delete**.
 
     3.  Click **OK** and then click **Save**.
 
-4.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md).
+4.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](../../../stopstart.md).
 
 5.  If necessary, uninstall any Computer Associates components.
 

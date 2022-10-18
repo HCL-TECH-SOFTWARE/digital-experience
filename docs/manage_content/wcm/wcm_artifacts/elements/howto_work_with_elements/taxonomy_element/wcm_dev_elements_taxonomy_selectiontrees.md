@@ -52,21 +52,21 @@ The following code examples are used to develop a basic category selection tree:
 |`<input type="submit" value="Set User Categories"></input>`<br>
 `</form>`|The footer contains the submit button.|
 
-**Indent element:**
+## Indent element
 
 This example uses the indent element tag. This can be used in the navigator and taxonomy elements. This tag represents an HTML/text string that should be repeated depending on the depth of a tree node being rendered in these elements.
 
 In the taxonomy element example, the indent element is used to render and repeat the "." string dependent on the depth of the node the element design is being applied to. It is possible to offset the repeat value by assigning an integer value to the "offset" attribute of the tag. For example, A current node depth of 5 and an offset value of -2 would render the repeat string three times. If the sum of the offset and the node depth is negative or 0, the repeat string is not rendered.
 
-**Element designs:**
+## Element designs
 
 The only difference between the unselected element design and the selected element design is that the check box input field in the selected element design has the "checked" attribute set.
 
-**User access:**
+## User access
 
 If using a taxonomy element, users must be given "Edit" access to their own user item to enable them to update their selected categories.
 
-**Using a URL to update user categories:**
+## Using a URL to update user categories
 
 You can use a URL as an alternative to using a category selection tree to update a user's selected categories:
 
@@ -83,5 +83,5 @@ This URL could be used on a page in the form of a button to allow users to updat
 
 
 ???+ info "Related information"  
-    -   [Setting service configuration properties](../admin-system/adsetcfg.md)
+    -   [Setting service configuration properties](../../../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 

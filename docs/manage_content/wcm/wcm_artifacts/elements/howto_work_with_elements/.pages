@@ -1,7 +1,7 @@
 Title: Work with Elements
 nav:
     - index.md
-    - The Authoring tools element: authoringtools_element
+    - Create an Authoring tools element: authoringtools_element
     - Creating a component reference element: component_reference_element
     - Creating a date and time element: date_time_element
     - File resource elements: using_file_resource_element

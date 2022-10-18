@@ -37,14 +37,10 @@ Availability problems that are related to the reserved authoring portlet or the 
 
 If any of these problems occur, verify that the conditions for proper operation of the reserved authoring portlet and hidden portlet page are fully implemented.
 
-**Note:** If the reserved authoring portlet or the hidden portlet page are removed inadvertently, you can deploy them again using the `action-install-wcm-hidden-authoring` configuration task.
-
--   **[Configuring the reserved authoring portlet](../wcm/wcm_config_wcmviewer_reservedcfg.md)**  
-The reserved authoring portlet is essential to the proper operation of web content pages and the web content viewer, so it is important that the configuration of the reserved authoring portlet is similar to the configuration of other instances of the authoring portlet.
+!!!note
+    If the reserved authoring portlet or the hidden portlet page are removed inadvertently, you can deploy them again using the `action-install-wcm-hidden-authoring` configuration task.
 
 
-**Related information**  
-
-
-[Creating a federated documents selection rule](../wcm/wcm_dev_feddocs_createrule.md)
+???+ info "Related information"  
+    -   [Creating a federated documents selection rule](../../wcm_artifacts/feddocs/wcm_dev_feddocs_createrule.md)
 

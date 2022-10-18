@@ -17,14 +17,9 @@ Usage: Reference the layout template by its file store URI, for example as follo
 
 You can execute the task in synchronous or asynchronous manner. If you execute it asynchronously, the configuration task completes immediately after starting a corresponding asynchronous system task. You can use this mode to avoid timeout problems that might occur if a high number of pages are to be refreshed. The completion of the system task is indicated by a corresponding message in the file SystemOut.log.
 
-Under z/OS® you can run the task by either of the following two options:
-
--   Create a Job Control Language (JCL) script to run the configuration task
--   Open a UNIX System Services (USS) command prompt or use a Telnet client to connect to the portal server and run the configuration task
-
 Syntax: Start this task as part of the ConfigEngine script file as follows:
 
--   For UNIX™Linux™: `./ConfigEngine.sh refresh-page-layout-template`
+-   For UNIX™ and Linux™: `./ConfigEngine.sh refresh-page-layout-template`
 -   For Windows™: `ConfigEngine.bat refresh-page-layout-template`
 
 Mandatory parameters to be specified on the command line or in the file wkplc.properties:

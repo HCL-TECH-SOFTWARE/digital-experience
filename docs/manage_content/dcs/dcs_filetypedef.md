@@ -113,14 +113,10 @@ Set up file definition types to ensure that document conversions works for the M
     |Systems|Extra Packages|
     |-------|--------------|
     |AIX|X11R6|
-    |Linux|
-    ```
-X11R6
-LessTif or Motif with libXm.so.1 (Stellent 8.0.1)
-LessTif or Motif with libXm.so.2 (Stellent 
-7.75 or earlier)
-    ```|
+    |Linux| <br><pr> \``` <br> X11R6 <br> LessTif or Motif with libXm.so.1 (Stellent 8.0.1) <br> LessTif or Motif with libXm.so.2 (Stellent 7.75 or earlier)<br> ```|
+    |Solaris|X11R6|
     |Windows|n/a|
+    | z/OS®| X11R6|
 
     If OpenMotif is included on the Linux server, do not need to install the LessTif Rational Portfolio Manager package. The binary files for the LessTif package are already included.
 
@@ -152,7 +148,5 @@ For AIX and Linux, you must start IBM Workplace Services Express® from the cons
     Graphical conversions require access to an X Windows server. They require access to the **Xm**, **Xt**, and **X11** libraries. Also, the DISPLAY environment variable must be set to the account that Portal is running under. The DISPLAY must be valid at the point that Portal is started. Therefore, telnetting to a server and starting Portal from there does not work. You must start the portal from an X terminal.
 
 For AIX, refer to the prerequisites as described in [Configuring images for Document Conversion Services](../../manage_content/dcs/configuration/index.md).
-
-For IBM i, refer to the prerequisites as described in [Configuring images for Document Conversion Services](../../manage_content/dcs/configuration/index.md).
 
 

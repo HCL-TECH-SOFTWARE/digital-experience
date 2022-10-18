@@ -9,25 +9,7 @@ This page will contain the known issues for the HCL Portal 9.5 Combined Cumulati
 -   Problem: As of HCL Portal 8.5 and 9.0 CF16, some features are not visible to users assigned to the Anonymous user role and the All authenticated users role, such as the tree view in Site Manager.
 -   Solution: Add the necessary roles for user **Anonymous** and user group **All Authenticated Users** explicitly. For example, to use site manager features within the toolbar, you must assign the **User** role to the **All Authenticated Users** group for the Site Manager portlet.
 
--   Problem: The `applyCF` task may fail on iSeries when used in combination with certain WAS levels, potentially with WAS 8.5.5.13 or greater. An error similar to the following may be seen in the failure\*.log in the ConfigEngine 'log' directory:
-
-    ```
-    /QIBM/ProdData/WebSphere/PortalServer/V85/ConfigEngine/config/includes/apply_
-    PTF.xml:172: /QIBM/ProdData/WebSphere/PortalServer/V85/Server/installer/wp.ie
-    hs.ear/config/includes/wp.iehs.ear_cfg.xml:62
-    ```
-
--   Solution: This may be due to an OSGi issue stemming from a WAS level upgrade. Run the following on the iSeries system:
-
-    ```
-    cd /QIBM/UserData/WebSphere/AppServer/V85/ND/profiles/wp_profile/bin
-    osgiCfgInit -all
-    ```
-
-    Then rerun the `applyCF` task.
-
-
--   Problem: The HCL Portal 8.5 and 9.0 CF15 `applyCF` task may fail if using the specific combination of WAS 8.5.5.12 on a Windows OS. An error similar to the following may be seen in the failure\*.log in the \(profile\_root\)/ConfigEngine/log directory:
+-   Problem: The HCL Portal 8.5 and 9.0 CF15 `applyCF` task may fail if using the specific combination of WAS 8.5.5.12 on a Windows OS. An error similar to the following may be seen in the failure*.log in the (profile_root)/ConfigEngine/log directory:
 
     ```
     wp.theme.modules.webapp_cfg.xml:296: java.lang.NoClassDefFoundError: com.ibm.ffdc.config.Formattable
@@ -57,7 +39,7 @@ This page will contain the known issues for the HCL Portal 9.5 Combined Cumulati
     /opt/IBM/WebSphere/wp_profile/bin/managesdk.sh -enableProfileAll -sdkName 1.7_64
     ```
 
-    Then rerun the failing `rollbackCF` command, from the start by removing the rollbackCFprogress directory in example \(profile\_root\)/ConfigEngine/log. After rollback success, the JDK can then be switched back to the original JDK8 via the same command and substituting `-sdkName 1.8_64`. This is planned to be fixed in the next Portal CF.
+    Then rerun the failing `rollbackCF` command, from the start by removing the rollbackCFprogress directory in example (profile_root)/ConfigEngine/log. After rollback success, the JDK can then be switched back to the original JDK8 via the same command and substituting `-sdkName 1.8_64`. This is planned to be fixed in the next Portal CF.
 
 
 -   Problem: The following error may be seen when working with or installing Portal Web Modules, when configured with WAS 8.5.5.12 / 9.0.0.5 generates this error:
@@ -80,7 +62,7 @@ This page will contain the known issues for the HCL Portal 9.5 Combined Cumulati
     ```
 
 
--   Problem: Errors may be seen in DCS \(Document Conversion Service\) based on Oracle OIT \(Outside In Technology\) levels. The new OIT 8.5.3 level has additional prerequisites outside of Portal's scope.
+-   Problem: Errors may be seen in DCS (Document Conversion Service) based on Oracle OIT (Outside In Technology\) levels. The new OIT 8.5.3 level has additional prerequisites outside of Portal's scope.
 -   Solution: Go and log in to [HCL Software Support](https://support.hcltechsw.com/csm) page to find related information about the PI84847 introduced in Portal Version 8.5 and Version 9.0 CF15 section.
 
 -   Problem: On a Linux system, it is possible that the `applyCF` command may fail, with this error message recorded in ConfigTrace.log:
@@ -92,9 +74,9 @@ This page will contain the known issues for the HCL Portal 9.5 Combined Cumulati
 -   Solution: The problem concerns Java system and/or user preferences and can potentially be addressed in one of the following ways:
     1.  Make sure that Java's preferences directory is accessible. Ensure that the /etc/.java/.systemPrefs directory exists and is read/writable by the user performing the upgrade as well as any alternate user ID used to do WAS administration.
     2.  Create a new unique Java preferences path for use by WAS.
-        -   a. Create a new sub-directory of your choice \(for example, under /home/wasadmin/prefs/\).
+        -   a. Create a new sub-directory of your choice (for example, under /home/wasadmin/prefs/).
         -   b. Assign permissions on this directory so that it is read/writable by the user performing the upgrade as well as any alternate user ID used to do WAS administration.
-        -   c. Set the following argument on the affected WebSphere JVM: `-Djava.util.prefs.userRoot=/home/wasadmin/prefs`. To set this argument, go to the administrative console, click **Servers** \> **Server Types** \> **WebSphere application servers**, and select the server that you want to add the generic argument to. Then, in the **Server Infrastructure** section, click **Java** and **Process management** \> **Process definition** \> **Java virtual machine**.
+        -   c. Set the following argument on the affected WebSphere JVM: `-Djava.util.prefs.userRoot=/home/wasadmin/prefs`. To set this argument, go to the administrative console, click **Servers > Server Types > WebSphere application servers**, and select the server that you want to add the generic argument to. Then, in the **Server Infrastructure** section, click **Java** and **Process management > Process definition > Java virtual machine**.
         -   d. Add `-Djava.util.prefs.userRoot=/home/wasadmin/prefs` to any existing properties in the **Generic JVM Arguments** field and click **OK**. Then click **Save** to save your changes and restart the application server.
 
 -   Problem: An error may occur during `applyCF` on the primary cluster node, similar to the following:
@@ -161,7 +143,7 @@ This page will contain the known issues for the HCL Portal 9.5 Combined Cumulati
     6.  Save and Close.
 
 -   Problem: XMLAccess in the `applyCF` command may fail when updating a virtual portal
--   Solution: The CF install attempts to update the Portal owned pages in the base portal and all virtual portals. Prior to CF11 there were some cases where error conditions were suppressed for both the base portal and all virtual portals. This has changed and error conditions are no longer suppressed. If the CF install \(`applyCF` command\) reports an error while running the XMLAccess tool on a virtual portal, there may be a problem with the virtual portal. If virtual portal\(s\) have been modified and removed some of the Portal owned pages on purpose then these errors can be safely suppressed and allow the CF install to continue. This can be done by adding the `ignore-errors-all-vps` property to the `applyCF` command. Example:
+-   Solution: The CF install attempts to update the Portal owned pages in the base portal and all virtual portals. Prior to CF11 there were some cases where error conditions were suppressed for both the base portal and all virtual portals. This has changed and error conditions are no longer suppressed. If the CF install (`applyCF` command) reports an error while running the XMLAccess tool on a virtual portal, there may be a problem with the virtual portal. If virtual portal\(s\) have been modified and removed some of the Portal owned pages on purpose then these errors can be safely suppressed and allow the CF install to continue. This can be done by adding the `ignore-errors-all-vps` property to the `applyCF` command. Example:
 
     ```
     applyCF.(sh|bat) ..... -Dignore-errors-all-vps='true'
@@ -179,12 +161,12 @@ This page will contain the known issues for the HCL Portal 9.5 Combined Cumulati
 
     There might be many of these warning messages which could cause a significant performance issue.
 
--   Solution: HCL Portal 8.5 CF12 \(and later\) contains a security fix \(PI65954\). Similar to APAR PI47714, this APAR warns and then blocks access to files in a web application that does not have a blacklist or whitelist. The difference between PI47714 and PI65954 is that the default value for the blacklist is now ".\*" instead of "WEB-INF/.\*" which is much more restrictive than before. Applications can define a custom blacklist or whitelist list by adding the keys `com.ibm.portal.resource.whitelist` and `com.ibm.portal.resource.blacklist` to their web.xml deployment descriptor. Custom themes must be redeployed for these changes to take effect. Alternatively, as a temporary solution, you can define a different default value for the blacklist. Details on the action required for the custom code mentioned in these messages and the setting of a default value for the blacklist can be found on the [HCL Software Support](https://support.hcltechsw.com/csm) page.
+-   Solution: HCL Portal 8.5 CF12 (and later) contains a security fix (PI65954). Similar to APAR PI47714, this APAR warns and then blocks access to files in a web application that does not have a blacklist or whitelist. The difference between PI47714 and PI65954 is that the default value for the blacklist is now ".*" instead of "WEB-INF/.*" which is much more restrictive than before. Applications can define a custom blacklist or whitelist list by adding the keys `com.ibm.portal.resource.whitelist` and `com.ibm.portal.resource.blacklist` to their web.xml deployment descriptor. Custom themes must be redeployed for these changes to take effect. Alternatively, as a temporary solution, you can define a different default value for the blacklist. Details on the action required for the custom code mentioned in these messages and the setting of a default value for the blacklist can be found on the [HCL Software Support](https://support.hcltechsw.com/csm) page.
 
 -   Problem: If you drag and drop digital assets into:
 
     1.  The Dropzone in the Sharing Tab of Rich Media Edition console, or
-    2.  Shared files directory \(MBAssets folder and its subfolders\) that the Rich Media Edition uses,
+    2.  Shared files directory (MBAssets folder and its subfolders) that the Rich Media Edition uses,
     then default renditions may not be created automatically.
 
 -   Solution: One of the two workaround approaches can be followed to place assets into Rich Media Edition and generate default renditions.
@@ -251,7 +233,7 @@ This page will contain the known issues for the HCL Portal 9.5 Combined Cumulati
 -   Problem: In installations with a large number of resources, it is possible that the `applyCF` script could run out of memory and fail. Such a failure would record a `"java.lang.OutOfMemoryError: Java heap space"` message and a Java stack trace in the ConfigTrace.log file.
 -   Solution: If this problem is encountered, the amount of memory available to the JVM can be increased, and the configuration can then be re-run.
     1.  For Linux:
-        1.  Backup the \(AppServer\_home\)/bin/wsadmin.sh file.
+        1.  Backup the (AppServer_home)/bin/wsadmin.sh file.
         2.  Open this file in a text editor.
         3.  Locate the `PERF_JVM_OPTIONS=` line specific to your operating system.
         4.  Modify this line to have an Xmx parameter of 2048, e.g. from
@@ -269,7 +251,7 @@ This page will contain the known issues for the HCL Portal 9.5 Combined Cumulati
         5.  Save changes.
         6.  Re-run `applyCF.sh`. After some initialization, the script will skip configuration steps that have already completed and pick up where it left off before the crash.
     2.  For Windows:
-        1.  Backup the AppServer\_home\)\\bin\\wsadmin.bat file.
+        1.  Backup the AppServer_home)\bin\wsadmin.bat file.
         2.  Locate the `set PERFJAVAOPTION` statement.
         3.  Modify this line to have an Xmx parameter of 2048, e.g.
 
@@ -304,10 +286,10 @@ This page will contain the known issues for the HCL Portal 9.5 Combined Cumulati
     serverindex.xml.
     ```
 
--   Solution: It is recommended to execute `upgrade-profile` before upgrading to WAS 8.5.5.9. Alternatively the conflicting port configuration for the DCS\_UNICAST\_ADDRESS needs to be solved by setting unique port numbers for `server1` and `nodeagent`.
+-   Solution: It is recommended to execute `upgrade-profile` before upgrading to WAS 8.5.5.9. Alternatively the conflicting port configuration for the DCS_UNICAST_ADDRESS needs to be solved by setting unique port numbers for `server1` and `nodeagent`.
 
 -   Problem: After Rollback from CF09 or above to CF08 or below, the portal toolbar may show extra items that have titles `$Banner$`, `$Teaser$` and `$Video$`.
--   Solution: These items can be ignored and should not be used. During an update to CF09 or above again, these items will disappear. To have these items no longer visible in the toolbar, go to **Applications** \> **Content** \> **Web Content Authoring**. Search for each of these pieces of content. Edit each of the pieces of content and go to properties. In the profile keyword field, remove the keyword `hcl.portal.toolbar.NewContent`. Save this change.
+-   Solution: These items can be ignored and should not be used. During an update to CF09 or above again, these items will disappear. To have these items no longer visible in the toolbar, go to **Applications > Content > Web Content Authoring**. Search for each of these pieces of content. Edit each of the pieces of content and go to properties. In the profile keyword field, remove the keyword `hcl.portal.toolbar.NewContent`. Save this change.
 
 -   Problem: During the upgrade-profile task in migration, there may be an intermittent issue which can cause the uninstall of an application to fail because files from the application are locked and cannot be deleted. This is an example of an error message that may be seen:
 
@@ -323,7 +305,7 @@ This page will contain the known issues for the HCL Portal 9.5 Combined Cumulati
 -   Solution: If this issue is encountered, wait 5 minutes and re-run the `upgrade-profile` task with the same options to resume the migration. The lock on the file should be released and the uninstall can continue as expected.
 
 -   Problem: It may be noticed that a page created from a page template does not have the access controls that are expected or that the access controls for such a page have recently changed.
--   Solution: APAR PI39231 \(IN STANTIATING A PAGE TEMPLATE LEADS TO INCONSISTENT ACCESS CONTROL SETTINGS ON THE TARGET PAGE\) was introduced in CF08. With this APAR, access control settings applied to a page template are consistently copied onto the target page. This means that all access rights assigned explicitly on a page template are also applied to the created page. If, for example, the **All Authenticated Portal Users** group is assigned to `USER@PageTemplate`, then the created page will be visible to every authenticated user, independent of the access control configuration of the parent page. During the installation of the CF the out of the box page templates have also been changed, including those in existing virtual portals, to no longer have explicit role mappings and it is recommended that all customers do the same for custom code templates unless the use case really is to copy that role mapping onto the target page. This is a permanent change in behavior effective in CF08 or later. Go to [Creating page templates](../panel_help/h_mp_create_page_templates.html) topic for more information about this behavior.
+-   Solution: APAR PI39231 \(IN STANTIATING A PAGE TEMPLATE LEADS TO INCONSISTENT ACCESS CONTROL SETTINGS ON THE TARGET PAGE\) was introduced in CF08. With this APAR, access control settings applied to a page template are consistently copied onto the target page. This means that all access rights assigned explicitly on a page template are also applied to the created page. If, for example, the **All Authenticated Portal Users** group is assigned to `USER@PageTemplate`, then the created page will be visible to every authenticated user, independent of the access control configuration of the parent page. During the installation of the CF the out of the box page templates have also been changed, including those in existing virtual portals, to no longer have explicit role mappings and it is recommended that all customers do the same for custom code templates unless the use case really is to copy that role mapping onto the target page. This is a permanent change in behavior effective in CF08 or later. Go to [Creating page templates](https://help.hcltechsw.com/digital-experience/8.5/panel_help/h_mp_create_page_templates.html) topic for more information about this behavior.
 
 -   Problem: Non-English characters are not supported when exporting a Site/Section template from Site Builder. When importing Site or Section templates into the Site Builder application, you may encounter an error that the template PAA file could not be imported. This could be due to using non-English characters in the Site/Section template PAA import object file name. You will see the following messages on the site builder interface:
 
@@ -383,15 +365,16 @@ This page will contain the known issues for the HCL Portal 9.5 Combined Cumulati
 
     There might be many of these warning messages which could cause a significant performance issue.
 
--   Solution: HCL Portal Version 8.5 CF08 \(or later\) contained a security fix \(PI47714 / CVE-2014-8912\), which requires specification of black and white lists for custom themes and portlets in certain usage scenarios involving the 'res' data source. You must redeploy your custom theme for these changes to take effect. Details on the action required for the custom code mentioned in these messages can be found in the [HCL Software Support](https://support.hcltechsw.com/csm) page.
+-   Solution: HCL Portal Version 8.5 CF08 (or later) contained a security fix (PI47714 / CVE-2014-8912), which requires specification of black and white lists for custom themes and portlets in certain usage scenarios involving the 'res' data source. You must redeploy your custom theme for these changes to take effect. Details on the action required for the custom code mentioned in these messages can be found in the [HCL Software Support](https://support.hcltechsw.com/csm) page.
 
--   Problem: When following steps to modify site URLs for the Search Engine Optimization \(SEO\) workflow some portlets and labels may not be available in clustered environments. For example, you cannot perform the *Change the JSP components in the Web Resources v70 Library* step.
+-   Problem: When following steps to modify site URLs for the Search Engine Optimization (SEO) workflow some portlets and labels may not be available in clustered environments. For example, you cannot perform the *Change the JSP components in the Web Resources v70 Library* step.
 -   Solution: If you do not have a web server, you must resynchronize the nodes and restart the cluster before you can change the JSP components in the Web Resources library.
 
--   Problem: There may be a performance issue seen \(in EditLive\) when using Java 1.8 Update 60 / Internet Explorer.
--   Solution: Oracle and Ephox have acknowledged this issue and are documenting the following link on their support site: [https://ephox.zendesk.com/entries/96347398-Java-1-8-u60-Internet-Explorer-Issue](https://ephox.zendesk.com/entries/96347398-Java-1-8-u60-Internet-Explorer-Issue).
+-   Problem: There may be a performance issue seen (in EditLive) when using Java 1.8 Update 60 / Internet Explorer.
+-   Solution: Oracle and Ephox have acknowledged this issue and are documenting the following link on their support site: [https://docs.ephox.com/IBMWCMTB/](https://docs.ephox.com/IBMWCMTB/.
 
-    **Note:** The Ephox \(EditLive\) Java based Rich Text Editor has been deprecated as of HCL Portal 8.5 CF11 and replaced by Textbox.IO. HCL Portal 9.5 requires a minimum of CF17 to offer Textbox.io. The Ephox \(EditLive\) feature is only available in HCL Portal 9.5 if you explicitly enable it.
+    !!!note
+        The Ephox (EditLive) Java based Rich Text Editor has been deprecated as of HCL Portal 8.5 CF11 and replaced by Textbox.IO. HCL Portal 9.5 requires a minimum of CF17 to offer Textbox.io. The Ephox (EditLive\) feature is only available in HCL Portal 9.5 if you explicitly enable it.
 
 
 -   Problem: Error messages can be seen in the SystemOut.log after rollback regarding `ManagedRules` feature updates. These features would no longer be available after the rollback to a level earlier than CF08. The following error example may be seen in the log:
@@ -424,7 +407,7 @@ This page will contain the known issues for the HCL Portal 9.5 Combined Cumulati
 -   Solution: To fix this problem you can remove the XML element `localedata` with its child elements or you can change the `locale` attribute to an existing locale identifier.
 
 -   Problem: The Live Repository will not show any available packages to be updated when selecting the IIM Preferences checkbox **Search service repositories during installation and updates**.
--   Solution: IBM Installation Manager \(IIM\) should be updated to the latest level, at least IIM 1.8, for the packages to be displayed.
+-   Solution: IBM Installation Manager (IIM) should be updated to the latest level, at least IIM 1.8, for the packages to be displayed.
 
 -   Problem: The `applyCF.bat|sh` task may fail with an error like the following:
 
@@ -451,6 +434,7 @@ This page will contain the known issues for the HCL Portal 9.5 Combined Cumulati
 -   Solution: Go and log in to [HCL Software Support](https://support.hcltechsw.com/csm?sys_kb_id=2d96ede61b5df34077761fc58d4bcbcb&id=kb_article_view&sysparm_rank=2&sysparm_tsqueryId=6a3bcab51b529414a67e9759bc4bcbc4) page to find related information about this issue.
 
 -   Problem: If you do a database transfer to z/OS DB2 after installing HCL Portal 8.5 GA and before updating to the current CF, the schema name used for JCR indices will be the config user name instead of the designated schema name, resulting in potential duplicate entries if more than one portal uses the same z/OS DB2. The schema name is supposed to be sufficient for uniquely configuring multiple Portals to the same z/OS DB2 and it is very possible that the same config user could be used for both Portals.
+
 -   Solution: Apply HCL Portal 8.5 CF01 or later prior to doing a database transfer to z/OS DB2.
 
 -   Problem: After installing and rolling back the Cumulative Fix, you may observe error messages similar to the following in the Installation Manager if you subsequently uninstall HCL Portal 8.5:

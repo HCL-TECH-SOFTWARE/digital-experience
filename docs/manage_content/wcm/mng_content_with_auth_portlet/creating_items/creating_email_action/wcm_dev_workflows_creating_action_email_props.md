@@ -2,9 +2,7 @@
 id: wcm_dev_workflows_creating_action_email_props
 title: Creating an email action
 ---
-
-
-
+# Creating an email action
 
 Define the action properties of the email action.
 
@@ -18,14 +16,14 @@ Define the action properties of the email action.
     1.  To add users or groups, click **Add**.
 
         -   Select either Users or Groups.
-        -   Enter text to search for in the Search field and then click Search. \(Leave the Search field blank to display all users or groups.\)
+        -   Enter text to search for in the Search field and then click Search. (Leave the Search field blank to display all users or groups.)
         -   Select the required users or groups and then click **OK**.
     2.  To remove users or groups, select the users or groups you would like to remove and then click **Remove**.
 
 3.  Enter text to include in the email in addition to the automatically generated message.
 
     !!! note
-        -   The language of the automatically generated message is determined by the language set in the WebSphere® Application Server administration console. To change the language, go to **Resources\>Resource environment\>Resource environment providers \> WP LocalizerService \> Custom properties** and change the `locale.default.language` property to the appropriate language code.
+        -   The language of the automatically generated message is determined by the language set in the WebSphere® Application Server administration console. To change the language, go to **Resources > Resource environment > Resource environment providers > WP LocalizerService > Custom properties** and change the `locale.default.language` property to the appropriate language code.
         -   To modify the URL displayed in the email message, modify the `WCM WCMConfigService` service and specify the following property:
             -   Property name: `wcm.authoringui.url`
             -   Value: `http://${WCM_HOST}:${WCM_PORT}/${WCM_WPS_CONTEXT_ROOT}/${WCM_WPS_PERSONALIZED_HOME}/wcmAuthoring`
@@ -52,7 +50,7 @@ Define the action properties of the email action.
 
         This action is run on the date the item entered the current stage, plus any offset, is reached.
 
-    !!! note
+    !!!note
         If you select a date type that requires a date to be set by a user, and no date has been set by a user, then the action is not run regardless of whether an offset has been selected or not.
 
 5.  If **Selected date** is selected as the date type:

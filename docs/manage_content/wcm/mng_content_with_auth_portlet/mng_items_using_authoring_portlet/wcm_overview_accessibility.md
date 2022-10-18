@@ -3,7 +3,7 @@ id: wcm_overview_accessibility
 title: Authoring portlet accessibility features
 ---
 
-
+# Authoring portlet accessibility features
 
 
 Accessibility features help a user who has a physical disability, such as restricted mobility or limited vision, to use software products successfully.
@@ -16,7 +16,7 @@ The HCL Web Content Manager authoring portlet supports the following accessibili
 
 -   **Browser accessibility features:**
 
-    The accessibility features of supported browsers \(large fonts, high contrast colors\) are supported in the authoring portlet.
+    The accessibility features of supported browsers (large fonts, high contrast colors) are supported in the authoring portlet.
 
 
 !!! note
@@ -40,16 +40,16 @@ The detached accessible toolbar can be closed by using the **alt-F4** keystroke.
 !!! note
     **Control-shift-t** and **Control-shift-g** do not work when the focus is on the detached accessible toolbar. Click **Alt+Tab** to set the focus back to the browser that contains the authoring portlet where the focus is within the rich text editor area.
 
-You can customize the detached accessible toolbar keystrokes by editing the KeySequence.properties file that is located under the `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\PortalServer\config\com\ibm\wps\odc\editors` folder.
+You can customize the detached accessible toolbar keystrokes by editing the KeySequence.properties file that is located under the wp_profile_root\PortalServer\config\com\ibm\wps\odc\editors folder.
 
-!!! note
+!!!note
     These features apply only to the default rich text editor. See the documentation of other rich text editors for details on any accessibility features used by those editors.
 
 ## How to use JAWS with rich text fields
 
 JAWS users need to install the Java Access Bridge to be able to read the content of Java applet rich text fields. Otherwise, the JAWS reader identifies only rich text fields as an RTE frame and not read the content of the rich text field.
 
-!!! note
+!!!note
     This step is not required for the default rich text editor, which is not a Java applet rich text editor.
 
 ## Writing accessible web content

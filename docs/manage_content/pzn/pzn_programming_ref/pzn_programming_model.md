@@ -6,7 +6,7 @@ Two components of that model are Java Server Pages \(JSP\) and business logic \(
 
 The term developer could refer to Web page authors or programmers. The developer does not need programming skills to author JSPs that access databases and reusable Java components. The author only needs to know the type of content that the bean, servlet, or other Java component adds to the page. The programmers create the reusable Java components and provide the Web page authors with the component names and properties. The database administrators provide the Web page programmers with the database access and table information.
 
-![run-time model](../images/runtime1.jpg)
+![run-time model](../../../images/runtime1.jpg)
 
 The model expands three Web team roles:
 

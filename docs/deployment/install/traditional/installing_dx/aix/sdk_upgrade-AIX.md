@@ -4,6 +4,8 @@ Change your version of the SDK Java Technology Edition using the applicable HCL 
 
 Ensure that your Portal profile is created before you upgrade the SDK.
 
+## Procedure
+
 1.  Start the IBM® Installation Manager.
 
 2.  Install the latest supported version of IBM WebSphere SDK Java Technology Edition.
@@ -11,24 +13,25 @@ Ensure that your Portal profile is created before you upgrade the SDK.
     !!!note
         Starting with HCL Digital Experience Combined fix pack 05, you can change your SDK Java Technology Edition from version 7.0 to version 7.1.Starting with HCL Digital Experience Combined fix pack 12, you can change your SDK Java Technology Edition to version 8.0.
 
-3.  Read the following information before you run the managesdk task:
+3.  Read the following information before you run the `managesdk` task:
 
-    -   For stand-alone environments:- Stop the profile server (node) before you run the managesdk command.
-    -   For clustered environments:-
-        -   If the profile is a federated node of a deployment manager, ensure that the deployment manager is running before you run the managesdk command to update the profile.
+    -   For stand-alone environments: Stop the profile server (node) before you run the `managesdk` command.
+    -   For clustered environments:
+        -   If the profile is a federated node of a deployment manager, ensure that the deployment manager is running before you run the `managesdk` command to update the profile.
         -   Stop all the nodes.
         -   Ensure that the node agent for each node is started.
-        -   When you enable the SDK for a node, run the managesdk command from the /bin directory to which the node belongs. You can also run the command from the /bin directory of the profile that contains the node that you want to update.
+        -   When you enable the SDK for a node, run the `managesdk` command from the /bin directory to which the node belongs. You can also run the command from the /bin directory of the profile that contains the node that you want to update.
         -   A connection to the deployment manager must exist with a supported connector protocol in the following order of preference:
 
             -   SOAP
             -   Inter-Process Communications (IPC)
             -   Remote Method Invocation (RMI)
             
-            If the SOAP protocol is enabled, the managesdk command uses the SOAP protocol. If the SOAP protocol is not enabled but the IPC protocol is enabled, the command uses the IPC protocol. If the SOAP and IPC protocol are not enabled, then the command uses the RMI protocol.
+            If the SOAP protocol is enabled, the `managesdk` command uses the SOAP protocol. If the SOAP protocol is not enabled but the IPC protocol is enabled, the command uses the IPC protocol. If the SOAP and IPC protocol are not enabled, then the command uses the RMI protocol.
 
-        -   You must provide the administrative user name and password with the managesdk command for each profile that contains a federated node or deployment manager node in a cell with security enabled. If you do not specify the -user and -password parameters, the managesdk command might fail or stop processing.
+        -   You must provide the administrative user name and password with the `managesdk` command for each profile that contains a federated node or deployment manager node in a cell with security enabled. If you do not specify the -user and -password parameters, the `managesdk` command might fail or stop processing.
         -   When you enable the SDK for a deployment manager, only the deployment manager server is enabled. None of the managed nodes of the deployment manager is enabled to use the specific SDK.
+
 4.  Open a command prompt and change to the AppServer_root/bin directory.
 
 5.  Run the following command to list the available SDK versions:

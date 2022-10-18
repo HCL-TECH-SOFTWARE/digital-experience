@@ -4,7 +4,7 @@ View all operations of the remote REST service for PUMA including the necessary 
 
 The following list shows and describes all the possible URI path operations, together with the related query parameters. Note that some URI path operations apply to different HTTP methods - GET, or PUT and POST, or DELETE.
 
-**Notational convention:** Parameter values are separated by vertical slashes \( `|` \). Default values are indicated with an asterisk \(\*\).
+**Notational convention:** Parameter values are separated by vertical slashes ( `|` ). Default values are indicated with an asterisk (*).
 
 -   **/um/attributes/users**
 
@@ -88,7 +88,7 @@ The following list shows and describes all the possible URI path operations, tog
 
         -   **searchAttributes**
 
-            Use this query parameter to define a search string that specifies various combinations of attribute values as search criteria. All implementations have to support at least values such as `attribute name%3Dattribute value`, where the attribute value can contain an asterisk \( \* \) as a wildcard character.
+            Use this query parameter to define a search string that specifies various combinations of attribute values as search criteria. All implementations have to support at least values such as `attribute name%3Dattribute value`, where the attribute value can contain an asterisk ( * ) as a wildcard character.
 
         -   **identifier**
 
@@ -96,17 +96,17 @@ The following list shows and describes all the possible URI path operations, tog
 
         -   **resultsPerPage**
 
-            The returned list will contain only the given number of results. Additionally, links to additional result pages \(first, last, next, previous\) will be included in the response, if available.
+            The returned list will contain only the given number of results. Additionally, links to additional result pages (first, last, next, previous) will be included in the response, if available.
 
         -   **sortByAttributes**
 
             Comma-separated list that specifies the sort order for the results. This is only supported for a paged search.
 
-        -   **descending=true\|\*false**
+        -   **descending=true|*false**
 
             Determines if the sorting according to sortByAttributes will be descending.
 
-        **Note:** The parameters `memberOf`, `searchAttributes`, and `identifier` are mutually exclusive. Paged search \(resultsPerPage\) only works for searchAttributes.
+        **Note:** The parameters `memberOf`, `searchAttributes`, and `identifier` are mutually exclusive. Paged search (resultsPerPage) only works for searchAttributes.
 
     -   **For the HTTP method POST:**
 

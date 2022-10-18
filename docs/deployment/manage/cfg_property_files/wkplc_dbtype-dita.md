@@ -242,7 +242,7 @@ The following value pairs are specific to Microsoft SQL Server and can be used w
 
 The following value pairs are specific to IBM DB2 for z/OS.
 
--   **db2\_zos.DbDriver**
+-   **db2_zos.DbDriver**
 
     -   **Description**<br>
 
@@ -276,7 +276,7 @@ The following value pairs are specific to IBM DB2 for z/OS.
 
         Windows: C://jcc/classes/db2jcc4.jar;C://jcc/classes/db2jcc_license_cisuz.jar;C://jcc/classes/db2jcc_javax.jar
 
--   **db2\_zos.JdbcProviderName**
+-   **db2_zos.JdbcProviderName**
 
     -   **Description**<br>
 
@@ -294,7 +294,7 @@ The following value pairs are specific to IBM DB2 for z/OS.
 
     -   **Description**<br>
 
-        Type the path to the native IBM DB2 libraries. Required when HCL Portal is running on z/OS only.
+        Type the path to the native IBM DB2 libraries.
 
     -   **Default value**<br>
 
@@ -304,11 +304,11 @@ The following value pairs are specific to IBM DB2 for z/OS.
 
         `Native libraries: : /usr/lpp/db2910_jdbc/lib`
 
--   **db2\_zos.DbSqljProperties**
+-   **db2_zos.DbSqljProperties**
 
     -   **Description**<br>
 
-        Type the directory and name of the DB2 JDBC property file on z/OS. Required when HCL Portal is running on z/OS only.
+        Type the directory and name of the DB2 JDBC property file on z/OS.
 
     -   **Default value**<br>
 
@@ -318,7 +318,7 @@ The following value pairs are specific to IBM DB2 for z/OS.
 
         None available
 
--   **db2\_zos.DbDriverType**
+-   **db2_zos.DbDriverType**
 
     -   **Description**<br>
 

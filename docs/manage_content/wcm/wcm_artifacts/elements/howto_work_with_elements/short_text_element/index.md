@@ -1,7 +1,5 @@
 # Using a short text element
 
-
-
 A short text element is used to store small amounts of fixed-length text where the length is 250 bytes or less. Unlike the other text elements, short text elements can also be used as a search parameter in a Personalization rule. To create a short text element, you can either add a short text element to an authoring template, site area, or content item, or create a short text component.
 
 -   **[Creating a short text component](wcm_dev_elements_short-text_creating.md)**  

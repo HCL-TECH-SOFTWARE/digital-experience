@@ -3,7 +3,7 @@ id: wcm_dev_elements_navigator_display
 title: Defining navigator element display options
 ---
 
-
+# Defining navigator element display options
 
 
 When you define the display options of a navigator, you select a start area, and also define what levels, before and after the start area, are displayed in the navigator.
