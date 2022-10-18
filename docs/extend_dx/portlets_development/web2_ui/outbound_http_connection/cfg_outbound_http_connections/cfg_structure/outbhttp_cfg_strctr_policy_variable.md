@@ -26,5 +26,4 @@ For hints and tips for working with policy variables and setting them, read the 
 -   **[Setting policy variables](../dev-portlet/outbhttp_cfg_strctr_policy_variable_set.md)**  
 You can set policy variables in different ways.
 
-**Parent topic:**[Configuration structure](../dev-portlet/outbhttp_cfg_structure.md)
 
