@@ -38,6 +38,7 @@ Review your chosen Kubernetes platform and ensure that it supports the following
 
 |CF Level|Kubernetes versions|
 |--------------|-----------------|
+|CF207| Kubernetes 1.23<br/>Kubernetes 1.22<br/>Kubernetes 1.21<br/>Kubernetes 1.20<br/>|
 |CF206| Kubernetes 1.23<br/>Kubernetes 1.22<br/>Kubernetes 1.21<br/>Kubernetes 1.20<br/>|
 |CF205| Kubernetes 1.23<br/>Kubernetes 1.22<br/>Kubernetes 1.21<br/>Kubernetes 1.20<br/>|
 |CF204| Kubernetes 1.22<br/>Kubernetes 1.21<br/>Kubernetes 1.20<br/>Kubernetes 1.19<br/>|
