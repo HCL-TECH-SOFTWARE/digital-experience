@@ -25,10 +25,7 @@ Generally, portlets are administered more dynamically than servlets. Portlet app
 Enablement of Java 2 security on the portal server can affect the operation of portlets that rely on certain privileges for processing. If your portlet requires certain privileges, for example, access to the file system or to the network, you might need to package a `was.policy` file in the portlet WAR indicating which privileges are needed. Even more important, any privileges needed by the portlet should be documented for the administrator.
 
 
-**Related information**  
-
-
-[Java 2 security](../plan/sec_java2.md)
-
-[Standard portlet API](../dev-portlet/jsrapi.md)
+???+ info "Related information"
+    - [Java 2 security](../../deployment/manage/security/sec_java2.md)
+    - [Standard portlet API](../portlets_development/standard_portlet_api/index.md)
 

@@ -12,28 +12,18 @@ For portlets conforming to JSR 286, HCL Digital Experience also includes support
 
 The following topics provide specific information about the implementation of the standard portlet API within HCL Digital Experience.
 
--   **[Using two-phase rendering with JSR 286 portlets](../dev-portlet/jsr2phase_overview.md)**  
+-   **[Using two-phase rendering with JSR 286 portlets](../standard_portlet_api/twophase_rendering_jsr_portlets/index.md)**  
 For portlets conforming to JSR 286, HCL Digital Experience includes support for two-phase rendering, which allows portlets to set cookies and the HTTP headers and to change the portal page title dynamically.
 
 
-**Related information**  
-
-
-[Portlet concepts](../dev-portlet/wpsbpc.md)
-
-[JSP tags for standard portlets](../dev-portlet/jsrjsp.md)
-
-[Converting HCL Digital Experience portlets \(AIX, Linux, Windows\) to the Java Standard API](../dev-portlet/jsrmig.md)
-
-[Portlet API](../dev-portlet/wpspapi.md)
-
-[Deployment descriptors](../dev-portlet/wpsptdesc.md)
-
-[JSR 286: Portlet Specification 2.0](https://jcp.org/en/jsr/detail?id=286)
-
-[JSR 168: Portlet Specification](https://jcp.org/en/jsr/detail?id=168)
-
-[Introducing the Portlet Specification, Part 1](https://www.infoworld.com/article/2073645/introducing-the-portlet-specification--part-1.html)
-
-[Introducing the Portlet Specification, Part 2](https://www.infoworld.com/article/2073698/introducing-the-portlet-specification--part-2.html)
+???+ info "Related information"
+    - [Portlet concepts](../wpsbpc.md)
+    - [JSP tags for standard portlets](../portlet_dev_ref/jsrjsp.md)
+    - [Converting HCL Digital Experience portlets (AIX, Linux, Windows) to the Java Standard API](../portlet_api/converting_dx_portlets_to_java_standard_api/index.md)
+    - [Portlet API](../portlet_api/index.md)
+    - [Deployment descriptors](../portlet_dev_ref/wpsptdesc.md)
+    - [JSR 286: Portlet Specification 2.0](https://jcp.org/en/jsr/detail?id=286)
+    - [JSR 168: Portlet Specification](https://jcp.org/en/jsr/detail?id=168)
+    - [Introducing the Portlet Specification, Part 1](https://www.infoworld.com/article/2073645/introducing-the-portlet-specification--part-1.html)
+    - [Introducing the Portlet Specification, Part 2](https://www.infoworld.com/article/2073698/introducing-the-portlet-specification--part-2.html)
 

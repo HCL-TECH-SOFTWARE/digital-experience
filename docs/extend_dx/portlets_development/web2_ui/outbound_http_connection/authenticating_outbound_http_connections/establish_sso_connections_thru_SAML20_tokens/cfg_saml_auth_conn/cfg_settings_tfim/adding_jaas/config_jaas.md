@@ -95,5 +95,5 @@ Copying the JAAS plug-in to the AppServer directory prevents the plug-in from be
     3.  Exit wsadmin and restart the server.
 
 
-**Parent topic:**[Adding the Java Authentication and Authorization Service \(JAAS\) login module to the Tivoli Federated Identity Manager \(TFIM\) server](../dev-portlet/add_jaas.md)
+
 

@@ -31,5 +31,3 @@ xmlns:stsuuser="urn:ibm:names:ITFIM:1.0:stsuuser">
 </xsl:stylesheet>
 ```
 
-**Parent topic:**[Adding the Java Authentication and Authorization Service \(JAAS\) login module to the Tivoli Federated Identity Manager \(TFIM\) server](../dev-portlet/add_jaas.md)
-
