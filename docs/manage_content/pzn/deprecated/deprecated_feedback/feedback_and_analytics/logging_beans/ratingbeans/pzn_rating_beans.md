@@ -8,13 +8,10 @@ The ratings logged through the Rating bean provide the user data necessary for t
 
 All rating data is logged to the Feedback schema and to the LikeMinds schema. Rating data are not logged to the user session.
 
--   **[Implementing rating logging](../pzn/pzn_implement_rating_logging.md)**  
+-   **[Implementing rating logging](pzn_implement_rating_logging.md)**  
 To implement rating logging, insert a Rating bean into your JSP.
--   **[Rating beans reference](../pzn/pzn_rating_beans_reference.md)**  
+-   **[Rating beans reference](pzn_rating_beans_reference.md)**  
 Learn about the various method signatures of Rating beans.
--   **[Implementing rating logging](../pzn/pzn_implement_rating_logging.md)**  
-To implement rating logging, insert a Rating bean into your JSP.
--   **[Rating beans reference](../pzn/pzn_rating_beans_reference.md)**  
-Learn about the various method signatures of Rating beans.
+
 
 

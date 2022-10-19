@@ -54,9 +54,8 @@ To use the portlet service, you retrieve a service object from the home, cast it
 
 Note that, while it is good practice to store the PortletServiceHome object in an instance variable, you must not store the actual service object, because references to service objects may not be held for longer than a single request.
 
-For more information, please refer to the following Help Center topics:
-
--   Documentation resource: [Portlet services](wpsptservice.md)
--   Documentation resource: [Creating your own portlet service](wpsbsservice.md)
+???+ info "Related information"
+      - [Portlet services](../portlet_services/index.md)
+      - [Creating your own portlet service](wpsbsservice.md)
 
 

@@ -28,8 +28,6 @@ The settings in the following example code snippet enable an SSO outbound connec
 -   The metadata setting `forward-credentials-from-vault` specifies that the credentials of the SSO authentication are gathered from the Credential Vault.
 
 
-**Related information**  
-
-
-[Providing user credentials for authenticated connections](../dev-portlet/outbhttp_auth_prv_ucreds.md)
+???+ info "Related information"
+     - [Providing user credentials for authenticated connections](outbhttp_auth_prv_ucreds.md)
 

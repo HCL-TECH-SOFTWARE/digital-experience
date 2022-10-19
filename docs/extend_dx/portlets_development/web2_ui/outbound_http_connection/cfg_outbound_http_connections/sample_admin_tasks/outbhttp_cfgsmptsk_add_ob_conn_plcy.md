@@ -185,7 +185,7 @@ To add a policy to the outbound HTTP connection configuration, follow the proced
 
 
 ???+ info "Related information"  
-   -  [Using the AJAX proxy in portlets](../../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/http_ajax_proxy/programming_model_ajax_proxy/ajax_proxy_prgrmdl_inplt.md)
-   -  [Policy mappings](../../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/cfg_outbound_http_connections/cfg_structure/outbhttp_cfg_strctr_policy_mapng.md)
-   -  [Authenticating outbound HTTP connections](../../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/authenticating_outbound_http_connections/index.md)
+      - [Using the AJAX proxy in portlets](../../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/http_ajax_proxy/programming_model_ajax_proxy/ajax_proxy_prgrmdl_inplt.md)
+      - [Policy mappings](../../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/cfg_outbound_http_connections/cfg_structure/outbhttp_cfg_strctr_policy_mapng.md)
+      - [Authenticating outbound HTTP connections](../../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/authenticating_outbound_http_connections/index.md)
 

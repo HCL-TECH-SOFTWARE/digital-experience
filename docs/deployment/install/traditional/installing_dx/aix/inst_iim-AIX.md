@@ -63,7 +63,7 @@ If you do not have an existing Installation Manager, then complete the following
 
 7.  Run the following task from the Portal Setup disk if you want to start the launchpad to complete all necessary installation steps:
 
-    ./setup.sh
+    `./setup.sh`
 
     !!!note
         If the language is not currently supported for the user interface, you might see the English version.

@@ -56,6 +56,6 @@ PolicyVariable pvar = model.getPolicyVariableLocator(globalProfile).findByName("
 ```
 
 
-???+ info "Related information"  
-   -  [Controller SPI](../../../../../../../extend_dx/apis/controller_spi/index.md)
+???+ info "Related information"
+      - [Controller SPI](../../../../../../../extend_dx/apis/controller_spi/index.md)
 

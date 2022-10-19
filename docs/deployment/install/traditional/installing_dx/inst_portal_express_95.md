@@ -6,14 +6,14 @@ Learn how to resolve HCL Portal server startup/restart failure on HCL Portal Exp
 
 Starting October 1st, 2018, attempts to start/restart the server on HCL Portal Express 8.5 or 9.0 will fail with the following error in SystemOut.log:
 
--   ```
+```
 CLFBD0026E: The product HCL Portal Express does not have a valid license key installed and the evaluation period has expired. 
 Functions specific to this product are not enabled.
 ```
 
-    or
+or
 
--   ```
+```
 CLFBD0030E: Caught error, message: Past the expiration date on license.
 ```
 

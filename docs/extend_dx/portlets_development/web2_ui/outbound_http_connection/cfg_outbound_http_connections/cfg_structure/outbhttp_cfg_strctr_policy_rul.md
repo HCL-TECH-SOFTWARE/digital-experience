@@ -30,8 +30,6 @@ A policy rule contains the following settings:
 
 
 
-**Related information**  
-
-
-[Using programmatic extensions for outbound HTTP connections](../dev-portlet/outbhttp_progr_xtns.md)
+???+ info "Related information"
+    - [Using programmatic extensions for outbound HTTP connections](../../programmatic_extensions_outbound_http_connections/index.md)
 

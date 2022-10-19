@@ -1,6 +1,6 @@
 # Personalization rules REST API content details
 
-The following topic provides details about DX [Personalization](pzn_concepts.md) rules REST API content.
+The following topic provides details about DX [Personalization](../../../personalization/index.md) rules REST API content.
 
 ## Visibility rule contents
 
@@ -13,7 +13,7 @@ Possible examples for `conditions` with Date properties:
 
 1.  **Example: The condition with Date property `current Date.day is 25` is shown**
 
-    ![current Date.day is 25 request condition](../images/Date-Day-25.png)
+    ![current Date.day is 25 request condition](../../../../../images/Date-Day-25.png)
 
     -   In this example, the condition with Date property `current Date.day is 25` is shown.
     -   The operator given is `is` and gets a single parameter in the `value` key.
@@ -74,7 +74,7 @@ Possible examples of `conditions` where `visibility` is an attribute, and it say
 
 1.  **Example: The condition `current Browser Capability.Accept Language is 1` is shown**
 
-    ![show current Browser Capability.Accept Language               is 1](../images/show_page_portlet_current_browsercapability_accept_lang_1.png)
+    ![show current Browser Capability.Accept Language  is 1](../../../../../images/show_page_portlet_current_browsercapability_accept_lang_1.png)
 
     -   In this example, the condition `current Browser Capability.Accept Language is 1` is shown.
     -   The operator given is *is* and gets a single parameter in the `value` key.
@@ -97,7 +97,7 @@ Possible examples of `conditions` where `visibility` is an attribute, and it say
 
 2.  **Example: The condition of like `current Browser Capability.Accept Language is between 1 and 5` is defined**
 
-![show current Browser                   Capability.Accept Language is between 1 and 5](../images/show_page_portlet_current_browsercapability_accept_lang_1_5.png)
+![show current Browser Capability.Accept Language is between 1 and 5](../../../../../images/show_page_portlet_current_browsercapability_accept_lang_1_5.png)
 
     -   This example shows results when the condition of like `current Browser Capability.Accept Language is between 1 and 5` is defined.
     -   The operator is defined as *is between* and returns multiple parameters in the **value** key.
@@ -121,7 +121,7 @@ Possible examples of `conditions` where `visibility` is an attribute, and it say
 
 3.  **Example: The condition `current Device.Device Class includes current Device.City` is defined**
 
-    ![Current Device.DeviceClass               includes current Device.City](../images/Current_Device.DeviceClass_includes_currentDevice.City.png)
+    ![Current Device.DeviceClass               includes current Device.City](../../../../../images/Current_Device.DeviceClass_includes_currentDevice.City.png)
 
     -   In this example, the condition `current Device.Device Class includes current Device.City` is defined.
     -   The `current Device.Device Class` property is defined as `current Device.City`.
@@ -143,7 +143,7 @@ Possible examples of `conditions` where `visibility` is an attribute, and it say
 
 4.  **Example: The condition of addition of one or more attributes is defined `attr1 + attr2 is 5`**
 
-    ![attr1 + attr2 is 5](../images/attr1+attr2_is_5.png)
+   <!-- ![attr1 + attr2 is 5](../../../../../images/attr1+attr2_is_5.png) -->
 
     -   In this example the condition of addition of one or more attributes is defined `attr1 + attr2 is 5`.
     -   The `attributes`, `arithmeticOperator` are defined and values presented in an array format.
@@ -167,7 +167,7 @@ Possible examples of `conditions` where `visibility` is an attribute, and it say
 
 5.  **Example: The condition is defined as a set of matching conditions**
 
-    ![(current Action Bean.Action Names is 1) is               2 and (current Device.Device Class is current Device.City) is               between 1 and 4](../images/current_Action_Bean.Action_Names.png)
+    ![(current Action Bean.Action Names is 1) is               2 and (current Device.Device Class is current Device.City) is               between 1 and 4](../../../../../images/current_Action_Bean.Action_Names.png)
 
     -   In this example the condition is defined as a set of matching conditions which is a wrapper of two properties `(current Action Bean.Action Names is 1) is 2` and `(current Device.Device Class is current Device.City) is between 1 and 4`.
     **Reference response structure:**
@@ -209,7 +209,7 @@ Possible examples of `conditions` where `visibility` is an attribute, and it say
 
 6.  **Example: The profile user conditions are defined by selecting `ProfileName` with result\(s\) returned in an array format**
 
-    ![profile user conditions](../images/profile_rule.png)
+    ![profile user conditions](../../../../../images/profile_rule.png)
 
     -   In this example, the profile user conditions are defined by selecting `ProfileName` with result\(s\) returned in an array format. Multiple multiple names can be presented.
     -   `"or"` and `"and"` conditions can also be defined.
@@ -255,7 +255,7 @@ Possible examples of `conditions` where `visibility` is an attribute, and it say
 
 Overall summary:
 
-![Reference examples summary](../images/Reference_examples_summary.png)
+![Reference examples summary](../../../../../images/Reference_examples_summary.png)
 
 The following example shows the entire API response structure body for `Visibility` rule type as reference:
 
@@ -408,7 +408,7 @@ Possible example for `profiles` with `conditions` having Date properties:
 
 1.  **Sample request condition: Profiler Rule with title as `Profiler User Rule 1`**
 
-    ![Profile Date Day 25](../images/Profiler-Date-Day-25.png)
+    ![Profile Date Day 25](../../../../../images/Profiler-Date-Day-25.png)
 
     -   In this example, the profile name is `Profile1`.
     -   The conditions provided include `current Date.day is 25`.
@@ -537,7 +537,7 @@ Possible example for `conditions` having `Web Content` select type:
 
 1.  **Example: Select Action Rule with title as `SelectActionWebContent`**
 
-    ![Select UI](../images/select-ui.png)
+    ![Select UI](../../../../../images/select-ui.png)
 
     -   In this example, we have selected the `Web Content` with the name `SelectActionWebContent`.
     -   The operator given for the 1st condition is `is` and the `value` has a selected `attributeName` and `attributeType` having `propertyType` as `fixed` and `propertyName` as `location`.

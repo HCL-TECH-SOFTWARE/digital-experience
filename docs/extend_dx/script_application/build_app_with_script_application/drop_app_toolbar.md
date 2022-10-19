@@ -26,7 +26,5 @@ The content toolbar can display the applications that were saved there with the 
 
 
 
-**Related information**  
-
-
-[Script Application security overview](../script_application_security/index.md)
+???+ info "Related information" 
+    - [Script Application security overview](../script_application_security/index.md)

@@ -6,16 +6,13 @@ The configuration process has changed. Use the Configuration Wizard to set up yo
 
 Unless you selected to install only the binary files, you can log in to the portal and verify that your installation was successful. Access HCL Portal with the http://yourserver:yourport/wps/portal format.
 
-If you are not sure what your port number is, use the list-server-ports command to determine the port number. Change to the [wp\_profile\_root](../../../../../guide_me/wpsdirstr.md)/ConfigEngine/log. Run the list-server-ports task to generate the HCL Portal and HCL Web Content Manager\_PortMatrix.txt file. For example: ./ConfigEngine.sh list-server-ports -DWasPassword=password.
+If you are not sure what your port number is, use the list-server-ports command to determine the port number. Change to the wp_profile_root/ConfigEngine/log. Run the list-server-ports task to generate the HCL Portal and HCL Web Content Manager_PortMatrix.txt file. For example: `./ConfigEngine.sh list-server-ports -DWasPassword=password`.
 
-Change to the /opt/IBM/WebSphere/AppServer/profiles/cw\_profile/ConfigEngine. Run the list-server-ports task to generate the server1\_PortMatrix.txt file. For example: ./ConfigEngine.sh list-server-ports -DWasPassword=password.
+Change to the /opt/IBM/WebSphere/AppServer/profiles/cw_profile/ConfigEngine. Run the list-server-ports task to generate the server1_PortMatrix.txt file. For example: `./ConfigEngine.sh list-server-ports -DWasPassword=password`.
 
 ## Select a roadmap
 
 If you have not already selected a roadmap to guide you through the installation and deployment process, look at the available roadmaps. The roadmaps are based on typical environments, such as development environment, test environment, and more. They provide a high-level overview of the installation and deployment process. Each roadmap includes a topology diagram, usage recommendations, and instructions. Roadmaps are available for both new deployments and migrations scenarios.
-
--   [Roadmaps for V9.5 installation and deployment](../../../../../get_started/plan_deployment/traditional_deployment/roadmaps/rm_install_deployment/rm_installation.md)
--   [HCL Portal Roadmaps for migration](../../../../manage/migrate/planning_migration/rm_migration/index.md)
 
 ## Run the Configuration Wizard to finish the deployment
 
@@ -50,4 +47,6 @@ Use the following default URLs to access HCL Digital Experience, the WebSphere®
 
 If you had any processes from other software in the default port range when the installation started, you might have different port numbers than the defaults.
 
-
+???+ info "References"
+    -   [Roadmaps for V9.5 installation and deployment](../../../../../get_started/plan_deployment/traditional_deployment/roadmaps/rm_install_deployment/rm_installation.md)
+    -   [HCL Portal Roadmaps for migration](../../../../manage/migrate/planning_migration/rm_migration/index.md)

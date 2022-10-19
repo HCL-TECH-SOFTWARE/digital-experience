@@ -18,6 +18,7 @@ db.applic.param.unrated = -2
 
 The LikeMinds server ignores ratings which are neither in the specified range of rating values nor equal to `db.applic.param.wontrate` or `db.applic.param.unrated`.
 
-**Note:** You can use these parameters for all of the Recommendation engines except for the Item Affinity Engine.
+!!! note 
+    You can use these parameters for all of the Recommendation engines except for the Item Affinity Engine.
 
 

@@ -168,7 +168,8 @@ public class HelloServiceImpl2
 
 In the following example, `HelloService` is the name of the portlet service, `HelloServiceIBM` is the name of the interface for HCL portlets, and the `message` configuration parameter is set with the value `Greetings`.
 
-**Note:** The colon \(:\) used in previous versions of HCL Portal to designate JNDI entries with `jndi:` is not supported for resource environment providers. Use `jndi.` instead.
+!!!note
+    The colon (:) used in previous versions of HCL Portal to designate JNDI entries with `jndi:` is not supported for resource environment providers. Use `jndi.` instead.
 
 To register this portlet service, add the following property names and values to the PortletServiceRegistryService:
 
@@ -178,7 +179,8 @@ To register this portlet service, add the following property names and values to
 |`sample.portletservice.HelloServiceIBM`|`sample.portletservice.HelloServiceImpl2`|
 |`sample.portletservice.HelloServiceImpl2.message`|`Greetings`|
 
-**Tip:** To check whether your service has been registered successfully, use the application server dumpNamespace tool. The following command, run from the [AppServer\_root](../reference/wpsdirstr.md#was_root)/bin directory, lists all portlet service entries in JNDI:
+!!!note "Tip"
+    To check whether your service has been registered successfully, use the application server dumpNamespace tool. The following command, run from the [AppServer\_root](../reference/wpsdirstr.md#was_root)/bin directory, lists all portlet service entries in JNDI:
 
 ```
 

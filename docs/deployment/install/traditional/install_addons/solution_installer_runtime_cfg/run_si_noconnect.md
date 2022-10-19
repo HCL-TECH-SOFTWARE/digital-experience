@@ -2,7 +2,7 @@
 
 You can run the Solution Installer from a server that does not have an internet connection.
 
-1.  Open the wkplc\_comp.properties file, which is in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine\\properties directory.
+1.  Open the wkplc_comp.properties file, which is in the wp_profile_root\ConfigEngine\properties directory.
 
 2.  Locate the wp.si.offlineMode parameter.
 

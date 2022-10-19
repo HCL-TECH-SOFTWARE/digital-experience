@@ -4,7 +4,8 @@ With the client-side programming model, you can handle portlet mode and window s
 
 In client-side aggregation, you can provide an event handler for changes of portlet mode and portlet window state. This handler gets called when a mode change or a window state change is triggered.
 
-**Note:** This function is only supported in the portal CSA theme and the CSA skin. You can adapt the CSA theme and skin to write your own custom themes and skins to support this feature.
+!!!note  
+   This function is only supported in the portal CSA theme and the CSA skin. You can adapt the CSA theme and skin to write your own custom themes and skins to support this feature.
 
 The return value of your handler determines whether the default action is run:
 
