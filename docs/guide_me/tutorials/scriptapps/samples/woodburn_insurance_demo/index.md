@@ -1,7 +1,7 @@
 # WoodBurn Insurance Sample Site
 
 !!!note "Download Sample"
-     The WoodBurn Insurance sample site is available for download via this [link](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/showcase-sites/WoodBurnInsurance)
+     The WoodBurn Insurance sample site is available for download via this [link](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/tree/main/showcase-sites/WoodBurnInsurance)
 
 To try out and load the site into your DX instance and share/collaborate updates amongst teams, you may follow this guide:
   

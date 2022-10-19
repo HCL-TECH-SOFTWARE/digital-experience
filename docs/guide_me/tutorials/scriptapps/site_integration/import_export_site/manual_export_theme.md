@@ -1,4 +1,5 @@
 # Manually exporting your Theme via Practitioner Studio
+
    1. Go to Theme manager in Practitioner Studio.
    2. Find your theme in the list of themes.
    3. The export theme will be located in the rightmost tab in line with your theme.
@@ -6,7 +7,6 @@
    4. This will start downloading your theme into a {theme name}.paa. You can find it in the default download location of your browser. 
    5. To use this exported theme. Extract or uncompress the PAA then inside find inside webdav folder the zip file of your theme and then the xmls needed to deploy and undeploy the theme are inside xmlaccess folder.
   
-
 ## Sample file directory inside PAA
 
    ```
@@ -32,11 +32,11 @@
    ```
 
 ### Main area of focus
+
    The main area of focus when using this kind of exported theme is inside the content folder.
 
-
    ```
-       ┃ ┃ ┣ 📂content
+   ┃ ┃ ┣ 📂content
    ┃ ┃ ┃ ┣ 📂webdav
    ┃ ┃ ┃ ┃ ┗ 📂themes
    ┃ ┃ ┃ ┃ ┃ ┗ 📜Woodburn Insurance.zip
@@ -54,5 +54,6 @@
       - uninstallTheme.xml is the xml used when undeploying your theme through dxclient.
 
 ## Related Pages
-   - [Exporting your theme from your system](export_theme.md)
-   - [How to deploy Theme](import_theme.md)
+
+- [Exporting your theme from your system](export_theme.md)
+- [How to deploy Theme](import_theme.md)
