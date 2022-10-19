@@ -8,7 +8,7 @@ The property rulesEngine.throwObjectNotFoundException specifies what happens if 
 
 For example, if no user object is found and rulesEngine.throwObjectNotFoundException is set to false, a rule such as `Show page or portlet when user.name is null` would return `show`. A null user is treated as if the user name is null. However, if no user object was found and rulesEngine.throwObjectNotFoundException is set to true, this same rule would throw an exception. If this rule was used to determine the visibility of a page or portlet, the ultimate result would depend upon the value of the rulesEngine.visibilityDefault property, which would decide what occurs if an exception is thrown during processing of a rule in attribute based administration.
 
-1.  Open the PersonalizationService.properties file. This file is located in the following directory:[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/config/config/services/PersonalizationService.properties.
+1.  Open the PersonalizationService.properties file. This file is located in the following directory:[wp\_profile\_root](../../../../guide_me/wpsdirstr.md)/PortalServer/config/config/services/PersonalizationService.properties.
 
 2.  Find the rulesEngine.visibilityDefault property.
 

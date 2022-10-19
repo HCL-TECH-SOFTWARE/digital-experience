@@ -36,13 +36,13 @@ The table 2 lists the Kubernetes versions that HCL tested and supports in HCL DX
 This table provides information about the Kubernetes versions that are tested and supported in HCL DX CF releases.
 Review your chosen Kubernetes platform and ensure that it supports the following Kubernetes versions:
 
+<!-- Note: As per L2/L3, only keep three latest releases and delete older ones -->
+
 |CF Level|Kubernetes versions|
 |--------------|-----------------|
+|CF207| Kubernetes 1.23<br/>Kubernetes 1.22<br/>Kubernetes 1.21<br/>Kubernetes 1.20<br/>|
 |CF206| Kubernetes 1.23<br/>Kubernetes 1.22<br/>Kubernetes 1.21<br/>Kubernetes 1.20<br/>|
 |CF205| Kubernetes 1.23<br/>Kubernetes 1.22<br/>Kubernetes 1.21<br/>Kubernetes 1.20<br/>|
-|CF204| Kubernetes 1.22<br/>Kubernetes 1.21<br/>Kubernetes 1.20<br/>Kubernetes 1.19<br/>|
-|CF203| Kubernetes 1.22 __*__ <br/>Kubernetes 1.21<br/>Kubernetes 1.20<br/>Kubernetes 1.19<br/>|
-<!-- |CF202| Kubernetes 1.21<br/>Kubernetes 1.20<br/>Kubernetes 1.19 <br/>| -->
 
 !!! attention "__*__ CF203 limited support statement"
     In CF203, HCL DX supports Kubernetes 1.22 only for HAProxy-based deployments

@@ -9,7 +9,8 @@ Take note of the location of the generated DLL manifest as configured in the Dll
         dxmodules: './modules-index.js'
     },
     mode: "production",
-    target: 'node',
+    target: 'web',
+    node: { global: true },
     output: {
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, "dist-dx-module"),

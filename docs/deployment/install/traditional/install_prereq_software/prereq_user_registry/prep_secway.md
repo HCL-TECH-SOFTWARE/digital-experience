@@ -2,9 +2,7 @@
 
 If you plan to use a SecureWay Security Server as an LDAP user registry, you must install and set up the server so that it communicates with HCL Digital Experience.
 
-
 ## Procedure
-
 
 1.  Install SecureWay Security Server. Refer to [IBM® SecureWay™ Security Server for z/OS® and OS/390®](http://www.ibm.com/servers/eserver/zseries/zos/security/securityserver.html) for information.
 

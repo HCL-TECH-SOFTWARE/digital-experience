@@ -14,7 +14,7 @@ Prepare the operating system to ensure a successful HCL Digital Experience insta
 The IBM Installation Manager is used to install installation packages such as HCL Digital Experience and IBM WebSphere Application Server.
 -   **[Running the HCL Digital Experience installer in AIX](../aix/running_install/index.md)**  
 Before installing, users need to follow the proven, stable path and must be at the one-level previous version of HCL Digital Experience plus applicable fixes.
--   **[Next steps \| Installing HCL Digital Experience](inst_next_steps-AIX.md)**  
+-   **[Next steps](inst_next_steps-AIX.md)**  
 The configuration process has changed. Use the Configuration Wizard to set up your integration with prerequisites, clusters, and more.
 -   **[Upgrading the SDK](sdk_upgrade-AIX.md)**  
 Change your version of the SDK Java Technology Edition using the applicable HCL Digital Experience Combined fix pack.

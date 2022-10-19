@@ -34,6 +34,7 @@ To manage your web content feeds, you need to create a feed configuration.
 
         -   ETag: \{etag\_value\}
         -   Last-Modified: \{last-modified\_value\}
+
     -   **In the Feed:**
 
         The feed producer puts the information in the feed and the consumer returns the values with the query string.
@@ -45,6 +46,7 @@ To manage your web content feeds, you need to create a feed configuration.
 
         -   <lastBuildDate\>\{last-modified\_value\}</lastBuildDate\>
         -   <ibmfs:etag\>\{etag\_value\}</ibmfs:etag\>
+        
 9.  Select whether to check the publication date or not. If selected, web content items that have the same publish date as the feed source are not processed.
 
 10. Select whether to use an XSLT style sheet or not.

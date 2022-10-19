@@ -6,7 +6,7 @@ This topic outlines the post-requisite steps after running the HCL Digital Exper
 
 Unless you selected to install only the binary files, you can log in to the portal and verify that your installation was successful. Access HCL Portal with the http://yourserver:yourport/wps/portal format.
 
-If you are not sure what your port number is, use the list-server-ports command to determine the port number. Change to the [wp\_profile\_root](../../../../../guide_me/wpsdirstr.md)\\ConfigEngine\\log\\. Run the list-server-ports task to generate the HCL Portal and HCL Web Content Manager\_PortMatrix.txt file. For example:
+If you are not sure what your port number is, use the list-server-ports command to determine the port number. Change to the [wp\_profile\_root](../../../../../guide_me/wpsdirstr.md)\ConfigEngine\log\. Run the list-server-ports task to generate the HCL Portal and HCL Web Content Manager_PortMatrix.txt file. For example:
 
 ConfigEngine.bat list-server-ports -DWasPassword=password.
 
