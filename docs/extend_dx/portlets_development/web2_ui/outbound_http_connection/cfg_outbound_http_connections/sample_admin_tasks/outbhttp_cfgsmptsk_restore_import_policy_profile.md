@@ -6,7 +6,7 @@ The following procedure assumes that the configuration that you want to restore 
 
 1.  If you want to restore the global configuration, skip this step. Determine the name of the application scope for which you want to restore its outbound HTTP connection profile.
 
-    To obtain this name, follow the procedure given under *Listing all available configuration profiles*.
+    To obtain this name, follow the procedure given under [Listing all available configuration profiles](outbhttp_cfgsmptsk_list_all_cfg_prfls.md).
 
 2.  Start the appropriate portal configuration engine task, depending on whether you want to restore the global configuration or an application-scoped configuration:
 

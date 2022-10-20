@@ -12,7 +12,7 @@ The installation program verifies the operating system and its prerequisites, av
         Currently, the cw_profile starting point always defaults to 10200. If you install a second version of portal on the same server, you must customize the cw_profile port value. Add the following line to the InstallationManager_root/InstallationManager/eclipse/IBMIM.ini file:
 
     ```
-    -Dcwprofile_startingport=new\_starting\_port\_number
+    -Dcwprofile_startingport=new_starting_port_number
     ```
 
 2.  If necessary, start the Installation Manager.
@@ -101,7 +101,7 @@ The installation program verifies the operating system and its prerequisites, av
 15. If you selected the **Portal Server Profile** package, click **Enter the Administrator user ID and password for the Portal Server**. Then, select either the **Standard** or **Advanced** configuration mode and then enter the parameter details for the selected configuration mode.
 
     !!!note
-        Select **Advanced** if you want to specify Uniform Resource Identifier \(URI\) information that is specific to your company.
+        Select **Advanced** if you want to specify Uniform Resource Identifier (URI) information that is specific to your company.
 
 16. Confirm the Summary information and then click **Install**.
 

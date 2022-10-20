@@ -6,4 +6,5 @@ nav:
     - configure_dam_Metadata_configuration.md
     - configure_DAM_extension_to_google_vision_API.md
     - image_tagging.md
+    - dam_keyword_enhancement.md
     - kaltura_configuration.md

@@ -242,7 +242,7 @@ The following value pairs are specific to Microsoft SQL Server and can be used w
 
 The following value pairs are specific to IBM DB2 for z/OS.
 
--   **db2\_zos.DbDriver**
+-   **db2_zos.DbDriver**
 
     -   **Description**<br>
 
@@ -276,7 +276,7 @@ The following value pairs are specific to IBM DB2 for z/OS.
 
         Windows: C://jcc/classes/db2jcc4.jar;C://jcc/classes/db2jcc_license_cisuz.jar;C://jcc/classes/db2jcc_javax.jar
 
--   **db2\_zos.JdbcProviderName**
+-   **db2_zos.JdbcProviderName**
 
     -   **Description**<br>
 
@@ -318,7 +318,7 @@ The following value pairs are specific to IBM DB2 for z/OS.
 
         None available
 
--   **db2\_zos.DbDriverType**
+-   **db2_zos.DbDriverType**
 
     -   **Description**<br>
 

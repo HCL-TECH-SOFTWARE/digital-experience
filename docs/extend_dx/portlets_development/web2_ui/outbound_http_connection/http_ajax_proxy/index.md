@@ -8,7 +8,7 @@ To prevent cross-site scripting attacks in such web applications, browsers intro
 
 The solution that HCL Digital Experience offers is based on a server-side HTTP proxy. This proxy is named the HTTP Proxy for Ajax Applications, or also known as the Ajax Proxy. The underlying security model allows administrators to restrict access to trusted origins in a flexible way. The Ajax Proxy can be used for developing themes, skins, static pages, or portlets. The following sections explain how to use and configure the Ajax proxy.
 
--   **[The programming model for using the AJAX proxy](../dev-portlet/ajax_proxy_prgrmdl.md)**  
+-   **[The programming model for using the AJAX proxy](../http_ajax_proxy/programming_model_ajax_proxy/index.md)**  
 View information on using the proxy when programming portlets.
 
 
