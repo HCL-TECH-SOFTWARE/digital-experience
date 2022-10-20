@@ -11,5 +11,5 @@ You can convert your basic HCL Digital Experience portlets to the standard portl
 **Related information**  
 
 
-[Standard portlet API](../dev-portlet/jsrapi.md)
+[Standard portlet API](../standard_portlet_api/index.md)
 

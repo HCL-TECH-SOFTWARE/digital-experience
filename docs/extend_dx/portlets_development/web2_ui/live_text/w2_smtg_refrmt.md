@@ -2,7 +2,8 @@
 
 Application of live text elements to sources and targets is based on special HTML classes that are attached to elements of the HTML markup.
 
-**Note:** The class attribute can be attached to any HTML element and that it can have multiple values, which are separated by spaces. Therefore, you can annotate any HTML element in your output with a click-to-action class, even if it has already a class attribute for CSS formatting.
+!!!note
+    The class attribute can be attached to any HTML element and that it can have multiple values, which are separated by spaces. Therefore, you can annotate any HTML element in your output with a click-to-action class, even if it has already a class attribute for CSS formatting.
 
 Sources for Live text are span \(`<span>`\) or division \(`<div>`\) elements that are annotated with a `c2a:source` class. Targets are HTML form \(`<form>`\) elements that are annotated with a `c2a:target` class. Both sources and targets have mandatory and optional properties. These properties are provided by annotated subelements of the main source or target tag. The property value is the entire content of the annotated property element with leading and trailing white spaces removed Example:
 

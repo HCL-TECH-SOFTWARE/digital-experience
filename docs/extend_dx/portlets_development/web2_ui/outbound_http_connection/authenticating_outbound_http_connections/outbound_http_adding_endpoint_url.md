@@ -155,7 +155,8 @@ This parameter modifies the path of the remote URL. The metadata value contains 
 
 -   The URL `http://mysite.com/test8/production/` is changed to `http://mysite.com/test8/test/`
 
-**Note:** The feature does not support the transformation of the parts of the URL, which are relevant for the cookie handling or URL pattern resolution. For example,
+!!!note
+     The feature does not support the transformation of the parts of the URL, which are relevant for the cookie handling or URL pattern resolution. For example,
 
 ```
 

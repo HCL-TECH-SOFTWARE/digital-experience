@@ -7,7 +7,7 @@ The easiest way to create proxy URLs in a portlet is to register the AJAX proxy 
 If you want the proxy to be able to access resources that require authentication, specify a second servlet mapping that is associated with a security constraint. In the sample, only authenticated users can access proxy URLs that match the URL pattern `/myproxy/*`.
 
 !!!note
-   You must associate the user roles that you specify in the `web.xml` file with the user roles of the portal server. You can do this by creating the corresponding role mappings for the respective application in the WebSphere® Integrated Solutions Console.
+      You must associate the user roles that you specify in the `web.xml` file with the user roles of the portal server. You can do this by creating the corresponding role mappings for the respective application in the WebSphere® Integrated Solutions Console.
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>

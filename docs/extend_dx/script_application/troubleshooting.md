@@ -26,7 +26,7 @@ The following solutions can help you solve troubleshooting issues.
 
         Make sure to also grant the user or group Editor and Reviewer access to the Web Content Manager library and site area where that Script Application instance is stored. For example, for a Script Application that is stored in the default Script Application Library or Script Application site area, the developer needs Edit and Review access to that library and site area. For a Script Application stored with the page in the Portal Site library, the developer needs Edit and Review access to that page in the Portal Site library.
 
-    For more information about assigning access rights to Script Application users, read *Script Application security overview* and *Assigning user access for the Script Application*.
+    For more information about assigning access rights to Script Application users, read [Script Application security overview](../script_application/script_application_security/index.md) and [User access to Script Applications](../script_application/script_application_security/sp_security_upgrade.md).
 
 - **Unspecific message and Script Application library not available after creating a virtual portal**
 
