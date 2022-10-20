@@ -131,6 +131,28 @@ By default, two sidecar containers are launched with Remote Search:
 
 For information on configuring additional Remote Search sidecar log containers, please see [Configure Remote Search sidecar logging](../../deployment/preparation/optional_rs_sidecar_log.md).
 
+## Accessing Persistence Node logs
+
+To access a Persistence Node application log, use the command:
+
+```
+kubectl logs -n <namespace>
+    -f <persistence-node-pod-name> <sidecar-container-name>
+```
+
+For example:
+
+```
+kubectl logs -n dxns 
+    -f pod/dx-deployment-persistence-node-0 persistence-repmgr-log
+```
+
+This retrieves the log for a single sidecar container, which corresponds to a single Persistence Node log file.
+
+By default, one sidecar container is launched with Persistence Node:
+
+-   `persistence-repmgr-log` - Exposes the `WebSphere_Portal/SystemOut.log` file.
+
 ## Accessing logs for other applications
 
 Applications other than Core and Remote Search do not have logging sidecar containers and only provide a single log per pod, which can typically be obtained using the command: `kubectl logs -n <namespace> <pod-name>` \(omitting a container name\), for example:
