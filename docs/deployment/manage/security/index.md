@@ -1,6 +1,6 @@
 # Securing
 
-Security tasks include setting up property extension databases and custom user repositories, configuring and activating SSL, and configuring authentication. In addition, tasks such as activating Federal Information Processing Standards \(FIPS\) and NIST SP800-131a security modules and configuring external security managers such as Security Access Manager might be required to secure your portal environment.
+Security tasks include setting up property extension databases and custom user repositories, configuring and activating SSL, and configuring authentication. In addition, tasks such as activating Federal Information Processing Standards (FIPS) and NIST SP800-131a security modules and configuring external security managers such as Security Access Manager might be required to secure your portal environment.
 
 If you have not configured your user registry yet, go to the Installing section, select the appropriate operating system, and then choose the appropriate deployment scenario. Then, select the Configuring portal to use a user registry topic.
 
@@ -11,18 +11,18 @@ After creating users and groups, you can assign them different levels of access 
 -   **[Enabling Attribute Based Security](../security/enable_abs.md)**  
 Attribute based security for HCL Web Content Manager content is an access filter in the product filter chain. You can extend the access control permission checks for HCL Web Content Manager content beyond the user or group-based decisions. You can define your own criteria. The criteria might involve categories, keywords, textComponents, htmlComponents, or shortTextComponents for an item.
 -   **[Java 2 security](../plan/sec_java2.md)**  
-Java 2 \(J2SE\) security provides a policy-based, fine-grain access control mechanism that increases overall system integrity by checking for permissions before allowing access to certain protected system resources. J2SE security allows you to set up individual policy files that control the privileges assigned to individual code sources. If the code does not have the required permissions and still tries to execute a protected operation, the Java™ Access Controller will throw a corresponding security exception.
+Java 2 (J2SE) security provides a policy-based, fine-grain access control mechanism that increases overall system integrity by checking for permissions before allowing access to certain protected system resources. J2SE security allows you to set up individual policy files that control the privileges assigned to individual code sources. If the code does not have the required permissions and still tries to execute a protected operation, the Java™ Access Controller will throw a corresponding security exception.
 -   **[Integrating with OpenID authentication](../security/use_openid.md)**  
-Web applications provide information and services to public users and personalized information and services to authenticated users. Users often work with multiple web applications, which require multiple IDs and passwords. This requirement can be difficult to maintain. Integrating identity providers \(Google, Yahoo, or Facebook\) into your site can simplify logging in for your users.
+Web applications provide information and services to public users and personalized information and services to authenticated users. Users often work with multiple web applications, which require multiple IDs and passwords. This requirement can be difficult to maintain. Integrating identity providers (Google, Yahoo, or Facebook) into your site can simplify logging in for your users.
 -   **[Integrating with IBM WAS TAI authentication](../wcm/wcm_secure_int_tai_auth.md)**  
-This roadmap outlines integration with IBM WebSphere Application Server Trust Association Interceptors \(TAI\) authentication for your environment.
+This roadmap outlines integration with IBM WebSphere Application Server Trust Association Interceptors (TAI) authentication for your environment.
 -   **[Enabling step-up authentication and/or the Remember me cookie](../security/cfg_sec_intro.md)**  
 Using step-up authentication and/or the Remember me cookie lets you fine-tune user authentication to pages and portlets.
 -   **[Securing LTPA keys on a production environment](../security/ltpa.md)**  
-The Lightweight Third Party Authentication \(LTPA\) key holds cryptographic keys that secure the user authentication session and cookies. To secure the production server environment, regenerate the LTPA key using the WebSphere Integrated Solutions Console. If you plan to enable single sign-on at a later time, you must first disable the automatic key generation.
+The Lightweight Third Party Authentication (LTPA) key holds cryptographic keys that secure the user authentication session and cookies. To secure the production server environment, regenerate the LTPA key using the WebSphere Integrated Solutions Console. If you plan to enable single sign-on at a later time, you must first disable the automatic key generation.
 -   **[Configuring SSL](../security/ssl_intro.md)**  
-Secure socket layers \(SSL\) encrypt traffic between the client browser and the server to secure information exchanged over the network between the browser and HCL Digital Experience. You will need to configure your environment for SSL to activate this additional security feature.
--   **[Enabling FIPS and \(NIST\) SP800-131a](../config/cfg_fips.md)**  
+Secure socket layers (SSL) encrypt traffic between the client browser and the server to secure information exchanged over the network between the browser and HCL Digital Experience. You will need to configure your environment for SSL to activate this additional security feature.
+-   **[Enabling FIPS and (NIST) SP800-131a](../config/cfg_fips.md)**  
 HCL Digital Experience tolerates IBM WebSphere Application Server support of Federal Information Processing Standards \(FIPS\) and National Institute of Standards and Technology \(NIST\) SP800-131a. You can configure WebSphere Application Server to activate FIPS 140-2 compliant security modules. When you enable FIPS, you can use only FIPS to securely encrypt data. For this reason, you must also configure FIPS for systems that require secure transactions, which can include HTTP servers and LDAP servers.
 -   **[Configuring Session Security Integration](../security/ssi_cons.md)**  
 IBM WebSphere Application Server protects your session from access by other users.
@@ -46,16 +46,10 @@ Control who has access to the site.
 User information is stored in your user registry. You can enable LDAP referrals, configure HCL Digital Experience to use dynamic groups, update your user registry, or delete your user registry configurations.
 
 
-**Related information**  
-
-
-[WebSphere Application Server V7.0 Security Guide](http://www.redbooks.ibm.com/abstracts/sg247660.html?Open)
-
-[Security Hardening Guide for HCL Digital Experience](https://support.hcltechsw.com/csm?id=kb_article&sys_id=9d66bc2bdbf2a890a45ad9fcd3961983&spa=1)
-
-[HCL Digital Experience: Integrating Transient Users with OpenID Connect](https://support.hcltechsw.com/csm?id=kb_article&sys_id=5f2f004a1bf068d0534c4159cc4bcbc8&spa=1)
-
-[Portal administration tools](../admin-system/admtools.md)
-
-[Managing the user population for virtual portals](../admin-system/advppln_mgupop.md)
+???+ info "Related information"  
+    -   [WebSphere Application Server V7.0 Security Guide](http://www.redbooks.ibm.com/abstracts/sg247660.html?Open)
+    <!-- -   [Security Hardening Guide for HCL Digital Experience](https://support.hcltechsw.com/csm?id=kb_article&sys_id=9d66bc2bdbf2a890a45ad9fcd3961983&spa=1)
+    -   [HCL Digital Experience: Integrating Transient Users with OpenID Connect](https://support.hcltechsw.com/csm?id=kb_article&sys_id=5f2f004a1bf068d0534c4159cc4bcbc8&spa=1) -->
+    -   [Portal administration tools](../../../extend_dx/development_tools/portal_admin_tools/index.md)
+    -   [Managing the user population for virtual portals](../../../build_sites/virtual_portal/vp_planning/advppln_mgupop.md)
 

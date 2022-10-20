@@ -4,7 +4,8 @@ After you install HCL Digital Experience, you can use the Solution Installer to 
 
 Before you install the application, review the included readme file for extra installation information. The readme file is either in the extracted PAA file in the documentation directory or outside the PAA file in a higher level compression file. Include information such as assembly names and extra parameters that you might need for the install-paa, update-paa-components, or deploy-paa tasks in the readme file.
 
-**Cluster note:** Complete these steps on the primary node and then on all additional nodes.
+!!!note "Cluster note"
+    Complete these steps on the primary node and then on all additional nodes.
 
 1.  Open a command prompt.
 

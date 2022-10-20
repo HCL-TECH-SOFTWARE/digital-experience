@@ -7,6 +7,6 @@ To address this case, the portal remote REST service for PUMA allows you to spec
 -   The result of the operation. For example, search results are limited to the realm.
 -   Security checks. The user performing the operation must be member of the realm that is implicitly addressed.
 
-The virtual portal information is represented by two additional path elements `/vp/virtul\_portal\_url\_mapping` that follow the URL path element `/um` or, respectively, the `/um/secure` path element. When no particular virtual portal is specified, the implementation uses the default virtual portal. For example, if the portal installation defines a virtual portal with the URL mapping `sales` for the user realm SalesPersons, the URL `/wps/um/secure/vp/sales/users/profiles` returns the references to all user profiles in the SalesPersons user realm.
+The virtual portal information is represented by two additional path elements `/vp/virtul_portal_url_mapping` that follow the URL path element `/um` or, respectively, the `/um/secure` path element. When no particular virtual portal is specified, the implementation uses the default virtual portal. For example, if the portal installation defines a virtual portal with the URL mapping `sales` for the user realm SalesPersons, the URL `/wps/um/secure/vp/sales/users/profiles` returns the references to all user profiles in the SalesPersons user realm.
 
 

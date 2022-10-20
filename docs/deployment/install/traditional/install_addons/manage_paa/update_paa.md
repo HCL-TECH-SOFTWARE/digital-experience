@@ -30,8 +30,8 @@ After you run the install-paa-update command, you must deploy the changes to you
 
 4.  After the task successfully completes, verify that the following sub-directory exists:
 
-    -   AIX, Linux: wp_profile_root/paa/paa\_filename
-    -   Windows: wp_profile_root\\paa\\paa\_filename
+    -   AIX, Linux: wp_profile_root/paa/paa_filename
+    -   Windows: wp_profile_root\paa\paa_filename
 
 5.  From the PAA file sub-directory, open the components.properties file. Complete the following steps to check for and resolve conflicts with previously installed components:
 

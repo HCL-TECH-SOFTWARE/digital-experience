@@ -68,7 +68,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
         None
 
-5.  Manual Step: Create the database configuration users on DB2 for z/OS®.
+5. Manual Step: Download the script and view instructions to delete existing databases.
     -   **Condition**
 
         None
@@ -77,16 +77,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
         None
 
-6.  Manual Step: Download the script and view instructions to delete existing databases.
-    -   **Condition**
-
-        None
-
-    -   **ConfigEngine task**
-
-        None
-
-7.  Create your databases.
+6.  Create your databases.
     -   **Condition**
 
         None
@@ -94,6 +85,15 @@ If you click **View Step Command**, you can see the task and properties associat
     -   **ConfigEngine task**
 
         create-database
+
+7.  Manual Step: Download the script and run it on the database server to create your database.
+    -   **Condition**
+
+        Select to manually create your database.
+
+    -   **ConfigEngine task**
+
+        None
 
 8.  Manual Step: Download the script and run it on the database server to create your database.
     -   **Condition**
@@ -104,16 +104,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
         None
 
-9.  Manual Step: Download the script and run it on the database server to create your database.
-    -   **Condition**
-
-        Select to manually create your database.
-
-    -   **ConfigEngine task**
-
-        None
-
-10. Manual Step: Create your Oracle database.
+9. Manual Step: Create your Oracle database.
     -   **Condition**
 
         None
@@ -122,7 +113,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
         None
 
-11. Manual Step: Download the script and view instructions to create your databases.
+10. Manual Step: Download the script and view instructions to create your databases.
     -   **Condition**
 
         None
@@ -131,7 +122,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
         None
 
-12. Manual Step: Create the data directory, `data`, and the index directory, `index`, on your database server.
+11. Manual Step: Create the data directory, `data`, and the index directory, `index`, on your database server.
     -   **Condition**
 
         Select to manually create users and assign them permissions.
@@ -140,7 +131,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
         None
 
-13. Set up your database.
+12. Set up your database.
 
     (Automatic Storage Management Users only): If you have configured your database with Automatic Storage Management, you must perform additional manual instructions after you perform this step. Run the setup database script to create database schemas and users and grant privileges to database users. Then, go to [Oracle: Creating JCR table spaces (Automatic Storage Management)](../../../../deployment/manage/db_mgmt_sys/oracle_create_tablespaces.md) to perform additional manual instructions.
 
@@ -152,7 +143,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
         setup-database
 
-14. Manual Step: Download the script and run it on the database server to set up your database.
+143. Manual Step: Download the script and run it on the database server to set up your database.
     -   **Condition**
 
         Select to manually assign users permissions.
@@ -161,7 +152,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
         None
 
-15. Manual Step: Download the script and run it on the database server to set up your database.
+14. Manual Step: Download the script and run it on the database server to set up your database.
 
     (Automatic Storage Management Users only): If you have configured your database with Automatic Storage Management, you must edit the script that you download for your environment before you run it on the database server.
 
@@ -173,7 +164,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
         None
 
-16. Manual Step: Download the script and run it on the database server to set up your database.
+15. Manual Step: Download the script and run it on the database server to set up your database.
     -   **Condition**
 
         Select to manually create users and assign them permissions.
@@ -182,7 +173,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
         None
 
-17. Manual Step: Set up JCR collation for correct language locale order.
+16. Manual Step: Set up JCR collation for correct language locale order.
     -   **Condition**
 
         Select to have advanced database collation support.
@@ -191,7 +182,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
         None
 
-18. Manual Step: Restart the DB2 server.
+17. Manual Step: Restart the DB2 server.
     -   **Condition**
 
         None
@@ -200,7 +191,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
         None
 
-19. Validate the database connection and environment.
+18. Validate the database connection and environment.
     -   **Condition**
 
         None
@@ -209,7 +200,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
         validate-database validate-database-environment
 
-20. Stop the portal server.
+19. Stop the portal server.
     -   **Condition**
 
         collation support
@@ -218,7 +209,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
         stop-portal-server
 
-21. Transfer the database.
+20. Transfer the database.
     -   **Condition**
 
         None
@@ -227,7 +218,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
         database-transfer enable-profiles-check-managed package-profiles
 
-22. Grant privileges to the database runtime users.
+21. Grant privileges to the database runtime users.
     -   **Condition**
 
         None
@@ -236,7 +227,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
         grant-runtime-db-user-privileges
 
-23. Manual Step: Download the script and run it on the database server to grant privileges to the runtime user.
+22. Manual Step: Download the script and run it on the database server to grant privileges to the runtime user.
     -   **Condition**
 
         Select to manually create users and assign them permissions.
@@ -245,7 +236,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
         None
 
-24. Manual Step: Download the script and run it to grant the database runtime user the appropriate privileges to work with database tables.
+23. Manual Step: Download the script and run it to grant the database runtime user the appropriate privileges to work with database tables.
     -   **Condition**
 
         Select to manually create users and assign them permissions.
@@ -254,7 +245,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
         None
 
-25. Manual Step: Download the script and run it on the database server to grant privileges to database runtime users.
+24. Manual Step: Download the script and run it on the database server to grant privileges to database runtime users.
     -   **Condition**
 
         Select to manually create users and assign them permissions.
@@ -263,7 +254,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
         None
 
-26. Connect to your databases.
+25. Connect to your databases.
     -   **Condition**
 
         None
@@ -272,7 +263,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
         None
 
-27. Manual Step: Download the script and view instructions to reset the check pending status on portal table spaces.
+26. Manual Step: Download the script and view instructions to reset the check pending status on portal table spaces.
     -   **Condition**
 
         None
@@ -281,7 +272,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
         None
 
-28. Reset the web content manager event log.
+27. Reset the web content manager event log.
     -   **Condition**
 
         None
@@ -290,7 +281,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
         None
 
-29. Configure the JCR domain to support large files.
+28. Configure the JCR domain to support large files.
     -   **Condition**
 
         None
@@ -299,7 +290,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
         datasource-enable-fully-materialize-lob-data
 
-30. Manual Step: Improve database response time for your database that contains the JCR domain.
+29. Manual Step: Improve database response time for your database that contains the JCR domain.
     -   **Condition**
 
         None
@@ -308,7 +299,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
         None
 
-31. Start the portal server.
+30. Start the portal server.
     -   **Condition**
 
         None

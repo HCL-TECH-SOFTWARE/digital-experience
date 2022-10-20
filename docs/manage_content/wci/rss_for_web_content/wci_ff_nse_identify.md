@@ -32,13 +32,7 @@ The owner element provides a mechanism to set the value of the **Owners** field 
 |-------------------|-------------------------|
 |Applies to item types|All|
 |Required for item types|None|
-|Allowable Values|\[all users\]
-
-\[all authenticated portal users\]
-
-The common name of any valid HCL Portal user or group
-
-|
+|Allowable Values|\[all users\] <br>\[all authenticated portal users\] <br>The common name of any valid HCL Portal user or group|
 |Required Attributes|None|
 |Optional Attributes|None|
 |Required sub-elements|None|

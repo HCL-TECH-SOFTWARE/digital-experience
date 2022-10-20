@@ -3,7 +3,7 @@
 
 A workflow stage is composed of a set of selected workflow actions.
 
-To create a workflow stage, open the applications menu and go to **Content** \> **Web Content Management** and then click **New** \> **Workflow Stage**.
+To create a workflow stage, open the applications menu and go to **Content > Web Content Management** and then click **New > Workflow Stage**.
 
 
 1.  [Entering identification information](../wcm_dev_items_id.md)  

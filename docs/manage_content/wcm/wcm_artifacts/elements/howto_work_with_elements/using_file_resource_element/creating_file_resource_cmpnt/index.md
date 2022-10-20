@@ -3,7 +3,7 @@
 
 You create a file resource component when you want to reuse a file resource in multiple places in your website.
 
-To create a file resource component, open the applications menu and go to **Content** \> **Web Content Management** and then click **New** \> **Component** \> **File Resource**.
+To create a file resource component, open the applications menu and go to **Content > Web Content Management** and then click **New > Component > File Resource**.
 
 1.  [Entering identification information](../../../../../../wcm/mng_content_with_auth_portlet/creating_items/wcm_dev_items_id.md)  
 Specify identification information for the current item, including the name and title for the item. The identification section is common to all item forms.

@@ -2,7 +2,7 @@
 id: wcm_dev_import-export-html
 title: Importing and Exporting HTML
 ---
-# Importing and Exporting HTML
+# Importing and exporting HTML
 
 You can import HTML and export HTML to and from presentation templates and elements that store HTML.
 
@@ -40,7 +40,7 @@ You can import HTML and export HTML to and from presentation templates and eleme
             No warning is given when you export HTML to an existing file. Be careful not to save over existing HTML files when you export HTML.
 
 
-!!!note "**Notes:**"
+!!!note "Notes"
     -   Web Content Manager does not verify whether the imported HTML or text is valid. For example, if you import HTML that contains a JavaScript error, then that error appears in your content when previewed.
     -   The encoding of the current browser window determines the encoding of the imported or exported HTML. For example if the browser is using GB2312 for Chinese, then only GB2312 encoded HTML can be imported, and on export the exported HTML encoding is GB2312.
     -   Some HTML editors save HTML with a mixture of UTF-8 and non UTF-8 encodings. You cannot successfully upload files that contain a mixture of UTF-8 and non UTF-8 encodings. Save your HTML file as UTF-8 only and try importing the HTML.

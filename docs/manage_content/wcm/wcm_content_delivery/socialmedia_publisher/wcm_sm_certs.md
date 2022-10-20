@@ -44,10 +44,6 @@ To install the certificates for Facebook, LinkedIn and Twitter, run the followin
     If your server is located behind a firewall, you might need to manually import these certificates. See the WebSphere® Application Server documentation for [instructions on importing certificates](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/tsec_ssladdsignercert.html?cp=SSAW57_8.5.5%2F3-8-2-33-4-11). The following locations are for each certificate type:
 
 -   Facebook: graph.facebook.com
-
-    !!!note
-        On z/OS systems, you must use the IP address of the Facebook certificate.
-
 -   LinkedIn: api.linkedin.com
 -   Twitter: api.twitter.com
 

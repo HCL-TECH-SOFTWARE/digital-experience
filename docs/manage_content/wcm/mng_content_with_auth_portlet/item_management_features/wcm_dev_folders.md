@@ -3,7 +3,7 @@ id: wcm_dev_folders
 title: Web content folders
 ---
 
-
+# Web content folders
 
 
 You use folders to group sets of web content item types into logical groupings.

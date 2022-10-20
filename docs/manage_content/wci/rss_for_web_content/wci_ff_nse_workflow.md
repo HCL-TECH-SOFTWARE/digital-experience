@@ -13,8 +13,7 @@ If the workflow is in a different library from the content item, you can specify
 |Applies to item types|Content items|
 |Required for item types|None|
 |Allowable Values|Workflow name and related workflow stage.|
-|Required Attributes|The name of an existing workflow, or the library and name of an existing library and workflow that is separated by a forward slash. For example:-   3-Stage-Workflow
--   Library1/3-Stage-Workflow|
+|Required Attributes|The name of an existing workflow, or the library and name of an existing library and workflow that is separated by a forward slash. For example:-   3-Stage-Workflow <br>-   Library1/3-Stage-Workflow|
 |Optional Attributes|None|
 |Required sub-elements|-   **workflowStage**<br>
 The value of this sub-element must be the name of a workflow stage that is included in the named workflow.|
@@ -46,9 +45,7 @@ Used to set the published date of an item. If this element is not present in the
 -   **expirationDate**<br>
 Used to set the expiry date of an item. This requires an expire action to be included in a workflow stage in the specified workflow.<br>
 -   **genDateOne and genDateTwo**<br>
-Used to populate the general date fields of an item.<br>
-
--   ****|
+Used to populate the general date fields of an item.|
 |Required Attributes|An RFC 822 formatted date.|
 |Optional Attributes|None|
 |Required sub-elements|None|
@@ -85,9 +82,7 @@ This element allows the additional viewers field to be populated via the feed. I
 |-------------------|-------------------------|
 |Applies to item types|Content items|
 |Required for item types|None|
-|Allowable Values|-   \[all users\]
--   \[all authenticated portal users\]
--   The common name of any valid portal user or group.|
+|Allowable Values|-   \[all users\] <br>-   \[all authenticated portal users\]  <br>-   The common name of any valid portal user or group.|
 |Required Attributes|None|
 |Optional Attributes|None|
 |Required sub-elements|None|

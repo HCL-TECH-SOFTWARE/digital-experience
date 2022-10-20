@@ -32,13 +32,14 @@ If your file resource is a file type that can be converted to HTML, you can inst
 
 Examples of supported file types include:
 
--   word-processing documents \(\*.doc, \*.odt\)
--   spreadsheets \(\*.xls\) \*
--   HTML files \(\*.htm, \*.html\)
--   Text files \(\*.txt\)
+-   word-processing documents (*.doc, *.odt)
+-   spreadsheets (*.xls) *
+-   HTML files (*.htm, *.html)
+-   Text files (*.txt)
 
 Other file types might also work but you need to test them first.
 
-**Note:** If you configure an authoring template to be a resource template, then the content items you create are resource content items. When a link to a resource content item is rendered, the file that is stored in the selected file resource element is rendered on the web page. In this case, you would not use an element tag. Instead, the file resource is rendered either with a placeholder tag in a navigator or menu design, or by writing a link directly to the resource content itself.
+!!!note
+    If you configure an authoring template to be a resource template, then the content items you create are resource content items. When a link to a resource content item is rendered, the file that is stored in the selected file resource element is rendered on the web page. In this case, you would not use an element tag. Instead, the file resource is rendered either with a placeholder tag in a navigator or menu design, or by writing a link directly to the resource content itself.
 
 

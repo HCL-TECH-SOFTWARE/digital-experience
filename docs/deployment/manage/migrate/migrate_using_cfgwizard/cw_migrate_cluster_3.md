@@ -99,8 +99,6 @@ If you click **View Step Command**, you can see the task and properties that are
 
     -   **Condition**
 
-        IBM® z/OS®
-
         DB2®
 
     -   **ConfigEngine task**
@@ -110,8 +108,6 @@ If you click **View Step Command**, you can see the task and properties that are
 7.  Upgrade the base portal database component
 
     -   **Condition**
-
-        IBM® z/OS®
 
         DB2®
 
@@ -125,8 +121,6 @@ If you click **View Step Command**, you can see the task and properties that are
 
     -   **Condition**
 
-        IBM® z/OS®
-
         DB2®
 
     -   **ConfigEngine task**
@@ -136,8 +130,6 @@ If you click **View Step Command**, you can see the task and properties that are
 9.  Upgrade the remaining portal databases
 
     -   **Condition**
-
-        IBM® z/OS®
 
         DB2®
 

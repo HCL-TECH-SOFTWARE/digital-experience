@@ -3,8 +3,7 @@ id: wcm_managing_workflows_remove
 title: Removing and adding workflows
 ---
 
-
-
+# Removing and adding workflows
 
 The process of adding and removing workflows on items is determined by the type of item that is being edited, and your level of access.
 

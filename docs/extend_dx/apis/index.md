@@ -33,14 +33,14 @@ The HCL Experience API is a set of OpenAPI-compliant REST APIs you can use to de
 You can use the Controller SPI for portal administration. It allows you to modify portal resources. It enhances the read-only portal Model SPI by adding writable aspects.
 
 **[Model SPI overview](../apis/model_spi/index.md)**  
-Models provide information that is needed by HCL to perform tasks such as content aggregation or building navigation to browse the aggregated content. The information that is aggregated is represented through models that can be accessed programmatically by using the Model SPI \(read-only\). The information of a model is usually persistent \(stored in a database\) but can also be transient \(computed and stored only in memory\). Models can be represented by using a tree structure \(nodes have a parent-child relationship\), a list structure, or a selection structure \(a selected element in a tree structure\).
+Models provide information that is needed by HCL to perform tasks such as content aggregation or building navigation to browse the aggregated content. The information that is aggregated is represented through models that can be accessed programmatically by using the Model SPI (read-only). The information of a model is usually persistent (stored in a database) but can also be transient (computed and stored only in memory). Models can be represented by using a tree structure (nodes have a parent-child relationship), a list structure, or a selection structure (a selected element in a tree structure).
 
 **[Portal Access Control interfaces](../apis/portal_access_control_interfaces/index.md)**  
 Portal Access Control provides interfaces for retrieving and modifying and access control information of portal resources, such as portlets or pages.
 
 
 **[User and group management](../apis/puma_spi/index.md)**  
-The Portal User Management Architecture \(PUMA\) System programming interface \(SPI\) provides interfaces for accessing the profiles of a portal User or Group.
+The Portal User Management Architecture (PUMA) System programming interface (SPI) provides interfaces for accessing the profiles of a portal User or Group.
 
 
 **[URL generation in HCL Portal](../apis/url_generation/index.md)**  
@@ -55,7 +55,7 @@ Reference copy of the Portal Version 8.5.0. API, javadocs, and other specificati
 Reference copy of the Portal Version 8.5.0. SPI, javadocs, and other specifications.
 
 
-<!-- **[Developing themes and skins](../dev-theme/themeopt_themes.md)**  
+**[Developing themes and skins](../dev-theme/themeopt_themes.md)**  
 You can create themes using modules to contribute to separate areas of pages to provide flexibility, enhance the user experience, and maximize performance. To optimize themes on your website, use the theme optimization module framework. The framework separates feature-specific logic and capabilities from the theme code.
 
 **[Portlets API](../dev-portlet/wpsdev.md)**  
@@ -74,11 +74,11 @@ The following document describes the API call to search HCL Digital Experience. 
 Developers can enhance and extend the tagging and rating features of the portal. For this purpose the portal tagging and rating feature provides service APIs that you can use to enhance tagging and rating by your requirements.
 
 **[REST service for Web Content Manager](../wcm/wcm_rest.md)**  
-Application developers can use Representational State Transfer \(REST\) services to work with Web Content Manager. The REST service for Web Content Manager provides authoring access to content items and elements. The service follows the Atom Publication Protocol, and Atom feeds, and entries are accessible in XML \(application/atom+xml\) and JSON \(application/json\) format.
+Application developers can use Representational State Transfer (REST) services to work with Web Content Manager. The REST service for Web Content Manager provides authoring access to content items and elements. The service follows the Atom Publication Protocol, and Atom feeds, and entries are accessible in XML (application/atom+xml) and JSON (application/json) format.
 
 **[API for accessing Portlet load monitoring data](../build_sites/site_analytics/portled_load_monitoring/plmr_api.md)**  
 Portlet load monitoring provides an API for accessing the monitoring data. You can use this API to write custom code to access that data.
 
 **[Personalization APIs](../manage_content/pzn/pzn_apis/index.md)**  
-Portlet load monitoring provides an API for accessing the monitoring data. You can use this API to write custom code to access that data. -->
+Portlet load monitoring provides an API for accessing the monitoring data. You can use this API to write custom code to access that data.
 
