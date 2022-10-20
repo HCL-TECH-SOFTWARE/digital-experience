@@ -26,7 +26,7 @@ In this check, `IOPS` (Input/Output Operations per second) will get measured for
 
 ## Helm Chart `values.yaml`
 Helm Chart contains a `values.yaml` file, within which the Prereqs Checker configurations are set. For changing the state enable/disable the value of `enable` can be set to `true` or `false`.
-The checks are running periodically. The frequency can be configured using a value in cron syntax in `cronExpression` which by default is set to `0 8 * * *` i.e the cron job is run at 8AM every day.
+The checks are running periodically. The frequency can be configured using a value in cron syntax in `checkSchedule` which by default is set to `0 8 * * *` i.e the cron job is run at 8AM every day.
 
 ## How to manually trigger the checks:
 
