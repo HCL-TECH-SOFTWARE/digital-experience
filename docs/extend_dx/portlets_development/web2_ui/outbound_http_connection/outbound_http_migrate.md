@@ -24,8 +24,6 @@ If you upgrade your HCL Portal from a previous version to Version 8.5, the outbo
 -   One of the portal configuration tasks `create-outbound-http-connection-config` or `update-outbound-http-connection-config` is started.
 
 
-**Related information**  
-
-
-[Configuring outbound HTTP connections by using configuration tasks](../dev-portlet/outbhttp_cfg_tasks.md)
+???+ info "Related information" 
+    - [Configuring outbound HTTP connections by using configuration tasks](../outbound_http_connection/cfg_outbound_http_connections/adm_tools_for_cfg_outbound_http_conn/cfg_outbound_http_using_cfgtsk/index.md)
 

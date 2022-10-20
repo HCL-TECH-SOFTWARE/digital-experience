@@ -8,6 +8,8 @@ The Portlet API is no longer supported starting with HCL Portal Version 8.5.0. Y
 
 
 
+
 ???+ info "Related information"  
     -   [Standard portlet API](../standard_portlet_api/index.md)
+
 

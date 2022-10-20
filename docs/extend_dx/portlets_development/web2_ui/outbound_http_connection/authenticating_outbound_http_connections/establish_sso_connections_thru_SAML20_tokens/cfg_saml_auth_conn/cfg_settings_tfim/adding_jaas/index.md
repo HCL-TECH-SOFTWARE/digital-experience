@@ -9,7 +9,7 @@ The local Tivoli Federated Identity Manager server creates SAML tickets to inter
 
 The preceding modules are enabled by default.
 
-If these prerequisites are not met in your environment, or you have another way of obtaining the email address that is not stored in your User Repository, you can implement your own JAAS plug-in by using the developerWorks guidelines. For more information, see the developerWorks article *Developing a custom Java module* in the related links.
+If these prerequisites are not met in your environment, or you have another way of obtaining the email address that is not stored in your User Repository, you can implement your own JAAS plug-in by using the developerWorks guidelines. For more information, see the developerWorks article [Developing a custom Java module](https://support.hcltechsw.com/csm) in the related links.
 
 -   **[Configuring the Java Authentication and Authorization Service \(JAAS\) login module](config_jaas.md)**  
 The behavior of the JAAS login module is configurable. If you change the attribute name for the security context, make sure to adjust the mapping rule accordingly.
