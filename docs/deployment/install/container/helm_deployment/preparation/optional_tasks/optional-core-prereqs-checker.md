@@ -44,5 +44,5 @@ kubectl -n <my-namespace> exec --stdin --tty <release-name>-<application-name>-0
 The following command can be run to print the logs:
 
 ```shell
-kubectl -n dxns logs pod/<release-name>-<release-name>-0 prereqs-checker
+kubectl -n dxns logs pod/<release-name>-<application-name>-0 prereqs-checker
 ```
