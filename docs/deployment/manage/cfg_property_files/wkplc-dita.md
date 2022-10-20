@@ -10,7 +10,7 @@ When specifying values:
 -   Windows long paths are acceptable.
 -   Properties are immutable. Once set, they cannot be changed when a configuration task is running.
 -   Property values can be defined in three ways: on the command line, in this property file, and in a build file. The configuration task uses the following order to determine the property value:
-    -   First the task checks the command line values, so specifying \(-DMyNode=somenode\) takes precedence.
+    -   First the task checks the command line values, so specifying (-DMyNode=somenode) takes precedence.
     -   Second, the task checks the property file values.
     -   Third, the task checks the build file property values.
 
@@ -87,12 +87,12 @@ Provide information about the WebSphere Application Server used in the WebSphere
 
     -   **Description**
 
-        User ID that is used for WebSphere Application Server security authentication. Type the value in lower case, regardless of the case used in the distinguished name \(DN\).
+        User ID that is used for WebSphere Application Server security authentication. Type the value in lower case, regardless of the case used in the distinguished name (DN).
 
         For an LDAP configuration:
 
         -   The ID cannot contain spaces
-        -   The ID is the fully qualified distinguished name \(DN\) of a current administrative user for the WebSphere Application Server.
+        -   The ID is the fully qualified distinguished name (DN) of a current administrative user for the WebSphere Application Server.
         For a configuration using a Virtual Manager User Registry database, the short version of the distinguished name must be used.
 
     -   **Default value**
@@ -199,7 +199,7 @@ Provide information about the WebSphere Application Server used in the WebSphere
 
     -   **Description**
 
-        The name of the application server for administration. For IBM i, if your WebSphere Application Server profile was created with a different WebSphere Application Server administrative server name, you should change this value to reflect that.
+        The name of the application server for administration.
 
     -   **Default value**
 
@@ -325,7 +325,7 @@ Provide basic information about HCL Portal, such as installation directory, port
         -   Exclamation point {!}, Hyphen {-}, period {.}, question mark {?}, accent grave {`}, tilde {~} Open parenthesis {(}, and
         -   close parenthesis {)}
         -   Open bracket {[} and close bracket {]}
-        -   Underscore {_}, which is the only special character that is allowed in IBM i
+        -   Underscore {_}
     -   **Default value**
 
         No default value
@@ -380,7 +380,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        The value of this property is part of the URL that is used to access HCL Portal from a browser. Valid characters are alphabetic and numeric including underscore, forward slash, and dash. The value entered may contain forward slashes but may not start with a forward slash. Leave the Context root and Default home fields blank to remove the context root information. Or, modify the fields by adding a new context root and default home. Example URL if the context root is wps: `http://localhost:80/wps/portal`
+        The value of this property is part of the URL that is used to access HCL Portal from a browser. Valid characters are alphabetic and numeric including underscore, forward slash, and dash. The value entered may contain forward slashes but may not start with a forward slash. Leave the Context root and Default home fields blank to remove the context root information. Or, modify the fields by adding a new context root and default home. Example URL if the context root is wps: `http://localhost:80/wps/portal`.
 
     -   **Default value**
 
@@ -394,7 +394,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        Required for IBM i only. Specify the port block to use for HCL Portal Server.
+        Specify the port block to use for HCL Portal Server.
 
     -   **Default value**
 
@@ -408,7 +408,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        Required for z/OS only. The library where the ifaedjreg.jar file resides
+        The library where the ifaedjreg.jar file resides
 
     -   **Default value**
 
@@ -422,7 +422,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        Required for z/OS only. The library where the SMF DLLs reside.
+        The library where the SMF DLLs reside.
 
     -   **Default value**
 
@@ -436,7 +436,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        Required for z/OS only. The server's jobname, as specified in the MVS START command JOBNAME parameter. JOBNAME is the name of the task or script that runs when the server is running. MVS \(Multiple Virtual Storage\) is the name of the operating system that runs on the mainframe. The value is passed as a parameter to the server's start procedures to specify the location of the server's configuration files and identify the server to certain WebSphere for z/OS- exploited z/OS facilities \(for example, SAF\). The name must be seven or fewer characters and all uppercase.
+        The server's jobname, as specified in the MVS START command JOBNAME parameter. JOBNAME is the name of the task or script that runs when the server is running. MVS (Multiple Virtual Storage) is the name of the operating system that runs on the mainframe. The value is passed as a parameter to the server's start procedures to specify the location of the server's configuration files and identify the server to certain WebSphere for z/OS- exploited z/OS facilities (for example, SAF). The name must be seven or fewer characters and all uppercase.
 
     -   **Default value**
 
@@ -450,7 +450,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        Required for z/OS only. The cluster transition name of the WLM APPLENV \(WLM application environment\) name for this server. The name must be eight or fewer characters and all uppercase.
+        The cluster transition name of the WLM APPLENV (WLM application environment) name for this server. The name must be eight or fewer characters and all uppercase.
 
     -   **Default value**
 
@@ -464,7 +464,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        Required for z/OS only. The location of the SMP/E installation image for the HCL Portal SMP/E package.
+        The location of the SMP/E installation image for the HCL Portal SMP/E package.
 
     -   **Default value**
 
@@ -970,7 +970,7 @@ Provide information used to add or update your federated LDAP Group entity type.
 
     -   **Description**
 
-        Specify one or more object classes for the group entity type. Separate multiple object classes with a semicolon\(;\). Use object classes that are unique to groups only. If there are both users and groups with an objectclass of 'top', then you cannot use the object class 'top' here.
+        Specify one or more object classes for the group entity type. Separate multiple object classes with a semicolon(;). Use object classes that are unique to groups only. If there are both users and groups with an objectclass of 'top', then you cannot use the object class 'top' here.
 
     -   **Default value**
 
@@ -1010,9 +1010,9 @@ Provide information used to add or update your federated LDAP Group entity type.
 
     -   **Description**
 
-        Type one or more object classes to use when an entity type is created. Separate multiple object classes with a semicolon\(;\). If the value of this property is the same as the federated.ldap.et.group.objectClasses property, then you do not need to type a value for this property. If your LDAP is read-only, meaning portal is not allowed to write to it, then you do not need to type a value for this property.
+        Type one or more object classes to use when an entity type is created. Separate multiple object classes with a semicolon(;). If the value of this property is the same as the federated.ldap.et.group.objectClasses property, then you do not need to type a value for this property. If your LDAP is read-only, meaning portal is not allowed to write to it, then you do not need to type a value for this property.
 
-        Type one or more object classes to use when an entity type is created. Separate multiple object classes with a semicolon\(;\).
+        Type one or more object classes to use when an entity type is created. Separate multiple object classes with a semicolon(;).
 
         If the value of this field is the same as the **LDAP group objectclasses**, then leave this field empty.
 
@@ -1024,7 +1024,7 @@ Provide information used to add or update your federated LDAP Group entity type.
 
     -   **Examples**
 
-        \(Multiple group objectClasses\): groupOfUniqueNames;myPortalObjectClass
+        (Multiple group objectClasses): groupOfUniqueNames;myPortalObjectClass
 
 -   **federated.ldap.et.group.searchFilter**
 
@@ -1042,13 +1042,13 @@ Provide information used to add or update your federated LDAP Group entity type.
 
     -   **Examples**
 
-        : \(&\(cn=\*\)\(objectClass=myCustomGroupObjectClass\)\)
+        : (&(cn=*)(objectClass=myCustomGroupObjectClass))
 
 -   **federated.ldap.et.group.searchBases**
 
     -   **Description**
 
-        VMM performs a search operation for each search base that you enter, which affects performance. Minimize the number of search bases. Leave the value blank and VMM uses the baseEntries as the search bases that are configured for this repository. Specify one or more search bases if you need to limit where VMM searches for groups to the portion of the subtree below the baseEntries. For example, if the baseEntries are high up in the LDAP tree and a search returns results that should not be included. Separate multiple search bases with a semicolon \(;\).
+        VMM performs a search operation for each search base that you enter, which affects performance. Minimize the number of search bases. Leave the value blank and VMM uses the baseEntries as the search bases that are configured for this repository. Specify one or more search bases if you need to limit where VMM searches for groups to the portion of the subtree below the baseEntries. For example, if the baseEntries are high up in the LDAP tree and a search returns results that should not be included. Separate multiple search bases with a semicolon (;).
 
         If you use the portal configuration tools, it is only possible to create one base entry as specified by the federated.ldap.baseDN property. However, WebSphere Application Server allows multiple base entries per repository definition.
 
@@ -1066,7 +1066,7 @@ Provide information used to add or update your federated LDAP Group entity type.
 
     -   **Description**
 
-        Type one or more object classes for the entity type. Use object classes that are unique to users. If there are both users and groups with an objectclass of 'top', then you cannot use the object class 'top' here. Separate multiple object classes with a semicolon \(;\).
+        Type one or more object classes for the entity type. Use object classes that are unique to users. If there are both users and groups with an objectclass of 'top', then you cannot use the object class 'top' here. Separate multiple object classes with a semicolon (;).
 
     -   **Default value**
 
@@ -1106,7 +1106,7 @@ Provide information used to add or update your federated LDAP Group entity type.
 
     -   **Description**
 
-        Specify one or more object classes to use when an entity type is created. If the value of this property is the same as the federated.ldap.et.personaccount.objectClasses property, leave this value blank. If your LDAP is read-only, meaning portal is not allowed to it, leave this value blank. Separate multiple object classes with a semicolon\(;\).
+        Specify one or more object classes to use when an entity type is created. If the value of this property is the same as the federated.ldap.et.personaccount.objectClasses property, leave this value blank. If your LDAP is read-only, meaning portal is not allowed to it, leave this value blank. Separate multiple object classes with a semicolon(;).
 
     -   **Default value**
 
@@ -1132,13 +1132,13 @@ Provide information used to add or update your federated LDAP Group entity type.
 
     -   **Examples**
 
-        : \(&\(cn=\*\)\(objectClass=myCustomPersonAccountObjectClass\)\)
+        : (&(cn=*)(objectClass=myCustomPersonAccountObjectClass))
 
 -   **federated.ldap.et.personaccount.searchBases**
 
     -   **Description**
 
-        VMM performs a search operation for each search base that you enter, which affects performance. Minimize the number of search bases. Leave the value blank and VMM uses the baseEntries as the search bases that are configured for this repository. Specify one or more search bases if you need to limit where VMM searches for groups to the portion of the subtree below the baseEntries. For example, if the baseEntries are high up in the LDAP tree and a search returns results that should not be included. Separate multiple search bases with a semicolon \(;\).
+        VMM performs a search operation for each search base that you enter, which affects performance. Minimize the number of search bases. Leave the value blank and VMM uses the baseEntries as the search bases that are configured for this repository. Specify one or more search bases if you need to limit where VMM searches for groups to the portion of the subtree below the baseEntries. For example, if the baseEntries are high up in the LDAP tree and a search returns results that should not be included. Separate multiple search bases with a semicolon (;).
 
         If you use the portal configuration tools, it is only possible to create one base entry as specified by the federated.ldap.baseDN property. However, WebSphere Application Server allows multiple base entries per repository definition.
 
@@ -1285,7 +1285,7 @@ Provide information that is used to add or update your federated LDAP user regis
 
         Oracle Directory Server: isMemberOf
 
-        SunOne \(versions prior to 6.3\): nsrole
+        SunOne (versions prior to 6.3): nsrole
 
         Novell eDirectory: groupMembership
 
@@ -1479,13 +1479,13 @@ Provide information that is used to add or update your federated LDAP user regis
 
     -   **Valid values**
 
-        EXACT\_DN
+        EXACT_DN
 
-        CERTIFICATE\_FILTER
+        CERTIFICATE_FILTER
 
     -   **Default value**
 
-        EXACT\_DN
+        EXACT_DN
 
     -   **Examples**
 
@@ -1495,7 +1495,7 @@ Provide information that is used to add or update your federated LDAP user regis
 
     -   **Description**
 
-        Specifies the filter certificate mapping property for the LDAP filter if client certificate authentication is used for HCL Portal. The filter is used to map attributes in the client certificate to entries within the LDAP repository. To use this filter, the value for federated.ldap.certificateMapMode must be set to CERTIFICATE\_FILTER. Filter syntax: $\{Client certificate attribute\}
+        Specifies the filter certificate mapping property for the LDAP filter if client certificate authentication is used for HCL Portal. The filter is used to map attributes in the client certificate to entries within the LDAP repository. To use this filter, the value for federated.ldap.certificateMapMode must be set to CERTIFICATE_FILTER. Filter syntax: ${Client certificate attribute}
 
     -   **Default value**
 
@@ -1503,7 +1503,7 @@ Provide information that is used to add or update your federated LDAP user regis
 
     -   **Examples**
 
-        : uid=$\{SubjectCN\}
+        : uid=${SubjectCN}
 
 -   **federated.ldap.supportPaging**
 
@@ -1584,7 +1584,7 @@ Provide information that is used to add or update your federated LDAP user regis
         -   Set the value to never and the alias entries that are encountered during the search operation are processed as 'normal' entries. The alias entries are returned if they match the search filter.
         -   Set the value to always and the alias entries that are encountered during the search operation, in both the search base and entries within the scope of the search, are dereferenced.
         -   Set the value to finding and the LDAP dereference the search base entry but does not dereference any other alias entries within the search scope. Alias entries within the search scope of the dereferenced base are processed as 'normal' entries and are returned if they match the search filter.
-        -   Set the value to searching and the LDAP dereferences alias entries within the scope of the search but does not dereference the search base entry \(if it contains an alias\). The search base is processed as a 'normal' entry \(even if it is an alias entry\). It is returned if it matches the search filter and is in the search scope.
+        -   Set the value to searching and the LDAP dereferences alias entries within the scope of the search but does not dereference the search base entry (if it contains an alias). The search base is processed as a 'normal' entry (even if it is an alias entry). It is returned if it matches the search filter and is in the search scope.
     -   **Valid values**
 
         never
@@ -1717,7 +1717,7 @@ Provide information that is used to add or update your federated LDAP user regis
 
     -   **Description**
 
-        The maximum number of context instances that can be maintained concurrently by the context pool for this LDAP server by VMM. Specifying a value of 0 allows the pool to grow without bound. This is the only context pooling property that can be set by the initial LDAP repository setup ConfigEngine task \(wp-create-ldap\). See the Portal Tuning Guide for recommendations on setting on up context pooling in VMM under Portal. You can set other "cp.\*" properties and run the wp-update-ldap-contextpool task to completely configure VMM context pooling. VMM uses the maximum pool size per node in the cluster. Therefore the total number of connections that might be made to the LDAP server is the maximum context pool size value multiplied by the number of nodes in the cluster.
+        The maximum number of context instances that can be maintained concurrently by the context pool for this LDAP server by VMM. Specifying a value of 0 allows the pool to grow without bound. This is the only context pooling property that can be set by the initial LDAP repository setup ConfigEngine task (wp-create-ldap). See the Portal Tuning Guide for recommendations on setting on up context pooling in VMM under Portal. You can set other "cp.*" properties and run the wp-update-ldap-contextpool task to completely configure VMM context pooling. VMM uses the maximum pool size per node in the cluster. Therefore the total number of connections that might be made to the LDAP server is the maximum context pool size value multiplied by the number of nodes in the cluster.
 
     -   **Default value**
 
@@ -1758,9 +1758,9 @@ The following properties are used for creating or updating a database user regis
 
         db2
 
-        db2\_iseries
+        db2_iseries
 
-        db2\_zos
+        db2_zos
 
         oracle
 
@@ -1816,15 +1816,15 @@ The following properties are used for creating or updating a database user regis
 
     -   **Description**
 
-        The name of the database \(location name of the DB2 for z/OS subsystem\) to be used for this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.
+        The name of the database (location name of the DB2 for z/OS subsystem) to be used for this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.
 
     -   **Default value**
 
         federated.db.DbType=db2: WPVMM
 
-        federated.db.DbType=db2\_iseries:
+        federated.db.DbType=db2_iseries:
 
-        federated.db.DbType=db2\_zos:
+        federated.db.DbType=db2_zos:
 
         federated.db.DbType=oracle:
 
@@ -1850,7 +1850,7 @@ The following properties are used for creating or updating a database user regis
 
     -   **Description**
 
-        Specify a unique identifier for the repository within the cell. Characters that are not allowed in normal XML strings \( &amp; &lt; \> " ' \) cannot be used in the repository ID.
+        Specify a unique identifier for the repository within the cell. Characters that are not allowed in normal XML strings ( &amp; &lt; > " ' ) cannot be used in the repository ID.
 
     -   **Default value**
 
@@ -2003,7 +2003,7 @@ The following properties are used for creating or updating a database user regis
 
     -   **Default value**
 
-        \*
+        *
 
     -   **Examples**
 
@@ -2013,7 +2013,7 @@ The following properties are used for creating or updating a database user regis
 
     -   **Description**
 
-        Identifies the integrated catalog facility catalog \(VCAT\) for the DB2 for z/OS storage group that is used for this portal database domain.
+        Identifies the integrated catalog facility catalog (VCAT) for the DB2 for z/OS storage group that is used for this portal database domain.
 
     -   **Default value**
 
@@ -2215,13 +2215,13 @@ Provide information that is needed to configure tables for your federated databa
 
 ### 7.3. Custom user registry properties
 
-The following properties are used to create or updated a custom user registry \(CUR\) in a federated security configuration. The properties are referenced when the following tasks are run: wp-create-cur and wp-update-federated-cur
+The following properties are used to create or updated a custom user registry (CUR) in a federated security configuration. The properties are referenced when the following tasks are run: wp-create-cur and wp-update-federated-cur
 
 -   **federated.cur.id**
 
     -   **Description**
 
-        This ID specifies a unique identifier for the repository within the cell. Characters that are not allowed in normal XML strings \( &amp; &lt; \> " ' \) cannot be used in the repository ID.
+        This ID specifies a unique identifier for the repository within the cell. Characters that are not allowed in normal XML strings ( &amp; &lt; > " ' ) cannot be used in the repository ID.
 
     -   **Default value**
 
@@ -2360,7 +2360,7 @@ The following properties are used to create or updated a custom user registry \(
         None available
 
 
-### 7.3.1. Federated custom user registry \(CUR\) custom properties
+### 7.3.1. Federated custom user registry (CUR) custom properties
 
 The following properties and values are used to create a custom property using the wp-create-cur-custom-property task.
 
@@ -2713,17 +2713,17 @@ Property extension database was previously called the lookaside database. The pr
 
     -   **Description**
 
-        The name of the database \(location name of the DB2 for z/OS subsystem\) to be used for the property extension database domain. Use the property extension domain store more properties outside of the user registry. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.
+        The name of the database (location name of the DB2 for z/OS subsystem) to be used for the property extension database domain. Use the property extension domain store more properties outside of the user registry. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.
 
-        If you change the name of the HCL Portal data source due to a database migration, you must manually update the la.DbName property in the wpconfig\_dbdomain.properties file. The file is located here: portal\_server\_root/config/wpconfig\_dbdomain.properties
+        If you change the name of the HCL Portal data source due to a database migration, you must manually update the la.DbName property in the wpconfig_dbdomain.properties file. The file is located here: portal_server_root/config/wpconfig_dbdomain.properties
 
     -   **Default value**
 
         la.DbType=db2: VMMLADB
 
-        la.DbType=db2\_iseries:
+        la.DbType=db2_iseries:
 
-        la.DbType=db2\_zos:
+        la.DbType=db2_zos:
 
         la.DbType=oracle:
 
@@ -2886,7 +2886,7 @@ Property extension database was previously called the lookaside database. The pr
 
 ### 8.3. Add a property
 
-The following properties are used by wp-add-la-property and wp-add-property configuration tasks. Use wp-add-la-property if you are defining a new property to store in VMM property extension database. Use wp-add-property if you are defining a new property that maps to an attribute in LDAP or a custom registry. These tasks use a secured connection to WebSphere Application Server. Check the wp\_profile/properties/sas.client.props file and verify the following setting: com.ibm.CORBA.securityEnabled=true If you are using a remote telnet connection, set `com.ibm.CORBA.loginSource` to stdin or properties.
+The following properties are used by wp-add-la-property and wp-add-property configuration tasks. Use wp-add-la-property if you are defining a new property to store in VMM property extension database. Use wp-add-property if you are defining a new property that maps to an attribute in LDAP or a custom registry. These tasks use a secured connection to WebSphere Application Server. Check the wp_profile/properties/sas.client.props file and verify the following setting: com.ibm.CORBA.securityEnabled=true If you are using a remote telnet connection, set `com.ibm.CORBA.loginSource` to stdin or properties.
 
 -   **la.providerURL**
 
@@ -3179,7 +3179,7 @@ Provide values for the following properties if you need to create, delete, or ad
 
 ## VMM supported entity types configuration
 
-The `wp-update-entitytype` task updates the entity type 'entityTypeName' with the value of defaultParent and adds the RDN attribute to the existing list. The `wp-set-entitytype` task updates the entity type 'entityTypeName' with the value of defaultParent. It also resets the rdnProperties list to contain only rdnProperties entries for the value \(or values, if a semicolon-delimited list is supplied\) of the RDN attribute name property.
+The `wp-update-entitytype` task updates the entity type 'entityTypeName' with the value of defaultParent and adds the RDN attribute to the existing list. The `wp-set-entitytype` task updates the entity type 'entityTypeName' with the value of defaultParent. It also resets the rdnProperties list to contain only rdnProperties entries for the value (or values, if a semicolon-delimited list is supplied) of the RDN attribute name property.
 
 -   **entityTypeName**
 
@@ -3302,7 +3302,7 @@ The wp-update-entitytypes task updates the defaultParent of the entity types Gro
 
     -   **Description**
 
-        The RDN attribute is the first attribute in the Distinguished Name. Usually the attribute is "cn" for the Group entity type, but it depends on how the DNs in your LDAP server are set up. It is possible to specify multiple attribute names that are separated by semicolons, but this is highly unusual. Do not leave this property blank. This property is primarily used when you are creating a new group through VMM. In combination with the default parent for the entity type, the attribute tells VMM how to create the DN for the new entry. The value \(or values, if multiple values are specified in a semicolon-delimited list\) is set as rdnProperties entries with the supportedEntityType stanza in VMM's wimconfig.xml configuration file.
+        The RDN attribute is the first attribute in the Distinguished Name. Usually the attribute is "cn" for the Group entity type, but it depends on how the DNs in your LDAP server are set up. It is possible to specify multiple attribute names that are separated by semicolons, but this is highly unusual. Do not leave this property blank. This property is primarily used when you are creating a new group through VMM. In combination with the default parent for the entity type, the attribute tells VMM how to create the DN for the new entry. The value (or values, if multiple values are specified in a semicolon-delimited list) is set as rdnProperties entries with the supportedEntityType stanza in VMM's wimconfig.xml configuration file.
 
     -   **Default value**
 
@@ -3784,7 +3784,7 @@ The following properties are used by the `wp-create-base-entry` , `wp-update-bas
 
     -   **Description**
 
-        The distinguished name \(DN\) in the repository that uniquely identifies the base entry name. In most cases, the name is not the same value as the base DN.
+        The distinguished name (DN) in the repository that uniquely identifies the base entry name. In most cases, the name is not the same value as the base DN.
 
     -   **Default value**
 
@@ -3805,18 +3805,18 @@ The following properties are used by the `wp-change-was-admin-user` and `wp-chan
 
         Type the fully qualified DN that exists in your LDAP registry that you want to use as the Portal Administrator account. The short login name for this administrator account must not be identical to the original administrative user ID short login name. If the DN includes spaces, then you must take extra steps to enter it on the command line by using the -D parameter.
 
-        \(UNIX only\)For command line tasks, if you provide the DN by using the -D parameter, some tasks require that you enter the fully qualified DN. If your fully qualified DN contains a space, you cannot provide the ID by using the -D parameter. For example, if your DN is `cn=someuser,cn=users,o=Software Group,dc=yourco,dc=com,` then you must place the DN in the properties file or a parent properties file. If you create a parent properties file named mysecurity.properties, your command is: ./ConfigEngine.sh task\_name -DparentProperties=/opt/mysecurity.properties.
+        (UNIX only)For command line tasks, if you provide the DN by using the -D parameter, some tasks require that you enter the fully qualified DN. If your fully qualified DN contains a space, you cannot provide the ID by using the -D parameter. For example, if your DN is `cn=someuser,cn=users,o=Software Group,dc=yourco,dc=com,` then you must place the DN in the properties file or a parent properties file. If you create a parent properties file named mysecurity.properties, your command is: ./ConfigEngine.sh task_name -DparentProperties=/opt/mysecurity.properties.
 
-        \(Windows only\)For command prompt tasks, if you provide the DN by using the -D parameter, some tasks require that you enter the fully qualified user DN. If your fully qualified DN contains a space, then you must place quotations around the fully qualified DN in the command. An example of a DN with spaces is: `cn=someuser,cn=users,o=Software Group,dc=yourco,dc=com,` An example of the DN provided using the -D parameter is: ConfigEngine.bat task\_name -DuserID="cn=someuser,cn=users,o=Software Group,dc=yourco,dc=com"
+        (Windows only)For command prompt tasks, if you provide the DN by using the -D parameter, some tasks require that you enter the fully qualified user DN. If your fully qualified DN contains a space, then you must place quotations around the fully qualified DN in the command. An example of a DN with spaces is: `cn=someuser,cn=users,o=Software Group,dc=yourco,dc=com,` An example of the DN provided using the -D parameter is: ConfigEngine.bat task_name -DuserID="cn=someuser,cn=users,o=Software Group,dc=yourco,dc=com"
 
         A valid user DN can contain the following characters:
 
-        -   Lowercase characters \{a-z\} and upper case characters \{A-Z\}
-        -   Numbers \{0-9\}
-        -   Exclamation point \{!\}, hyphen \{-\}, period \{.\}, question mark \{?\}, accent grave \{\`\}, tilde \{~\}
-        -   Open parenthesis \{\(\} and close parenthesis \{\)\}
-        -   Open bracket \{\[\} and close bracket \{\]\}
-        -   Underscore \{\_\}, which is the only special character allowed in IBM i
+        -   Lowercase characters {a-z} and upper case characters {A-Z}
+        -   Numbers {0-9}
+        -   Exclamation point {!}, hyphen {-}, period {.}, question mark {?}, accent grave {`}, tilde {~}
+        -   Open parenthesis {(} and close parenthesis {)}
+        -   Open bracket {[} and close bracket {]}
+        -   Underscore {_}
         -   Must be less than 200 characters
     -   **Default value**
 
@@ -3848,12 +3848,12 @@ The following properties are used by the `wp-change-was-admin-user` and `wp-chan
 
         Type the password for the DN that already exists in the user registry. Valid passwords contains only ASCII characters and the following characters:
 
-        -   Lowercase letter \{a-z\} and uppercase letters \{A-Z\}
-        -   Numbers \{0-9\}
-        -   Exclamation point \{!\}, hyphen \{-\}, period \{.\}, question mark \{?\}, accent grave \{\`\}, and tilde \{~\}
-        -   Open parenthesis \{\(\} and close parenthesis \{\)\}
-        -   Open bracket \{\[\} and close bracket \{\]\}
-        -   Underscore \{\_\}, which is the only special character that is allowed in IBM i
+        -   Lowercase letter {a-z} and uppercase letters {A-Z}
+        -   Numbers {0-9}
+        -   Exclamation point {!}, hyphen {-}, period {.}, question mark {?}, accent grave {`}, and tilde {~}
+        -   Open parenthesis {(} and close parenthesis {)}
+        -   Open bracket {[} and close bracket {]}
+        -   Underscore {_}
         -   The password cannot contain a space
         -   Must be 128 characters or less
     -   **Default value**
@@ -3897,7 +3897,7 @@ The `wp-update-attribute-config` task sets the overall required and unsupported 
 
     -   **Description**
 
-        This value specifies the new \(comma separated\) list of attributes that are required for user creation
+        This value specifies the new (comma separated) list of attributes that are required for user creation
 
     -   **Default value**
 
@@ -3911,7 +3911,7 @@ The `wp-update-attribute-config` task sets the overall required and unsupported 
 
     -   **Description**
 
-        This value specifies the new \(comma separated\) list of attributes that are ignored by portal.
+        This value specifies the new (comma separated) list of attributes that are ignored by portal.
 
     -   **Default value**
 
@@ -3958,7 +3958,7 @@ The following properties are used with the `wp-restore-default-repository-config
 
     -   **Description**
 
-        This value specifies the ID \(short name\) of the WebSphere Application Server administrative user. The ID must exist in a user repository.
+        This value specifies the ID (short name) of the WebSphere Application Server administrative user. The ID must exist in a user repository.
 
     -   **Default value**
 
@@ -3986,7 +3986,7 @@ The following properties are used with the `wp-restore-default-repository-config
 
     -   **Description**
 
-        The user group \(short name\) with administrative permission in portal. The group must exist in the LDAP server.
+        The user group (short name) with administrative permission in portal. The group must exist in the LDAP server.
 
     -   **Default value**
 
@@ -4005,7 +4005,7 @@ The following properties are used with the `wp-configure-community-isolation` an
 
     -   **Description**
 
-        This value specifies whether the Boolean flag enables community isolation \(peer groups\).
+        This value specifies whether the Boolean flag enables community isolation (peer groups).
 
     -   **Valid values**
 
@@ -4045,7 +4045,7 @@ The following properties are used with the `wp-configure-community-isolation` an
 
     -   **Description**
 
-        The parent distinguished name \(DN\) for new external users.
+        The parent distinguished name (DN) for new external users.
 
     -   **Default value**
 

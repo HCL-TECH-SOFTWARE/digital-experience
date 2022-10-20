@@ -20,7 +20,7 @@ To set the supported markups for a resource, proceed as follows:
     For example, if you want to set a markup, use the `addMarkup` method.
 
 
-Example - Setting a supported markup on a layout control \(error handling omitted\):
+Example - Setting a supported markup on a layout control (error handling omitted):
 
 ```
 

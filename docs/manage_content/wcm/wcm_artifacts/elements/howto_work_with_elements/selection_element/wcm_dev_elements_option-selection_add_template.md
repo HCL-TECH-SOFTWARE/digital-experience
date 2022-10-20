@@ -3,7 +3,7 @@ id: wcm_dev_elements_option-selection_add_template
 title: Using an option selection element
 ---
 
-
+# Using an option selection element
 
 
 An option selection element can be added only to an authoring template. You create a predefined set of values for content creators to select from when you create a content item or site area.
@@ -30,7 +30,8 @@ An option selection element can be added only to an authoring template. You crea
 
 11. To hide a field on the content form from all users select **Hide field**. You must specify a default value if the field is a required field.
 
-    **Note:** Administrators and managers can choose to display hidden fields and elements in an item by clicking **Show hidden fields**.
+    !!!note
+        Administrators and managers can choose to display hidden fields and elements in an item by clicking **Show hidden fields**.
 
 12. Select whether to allow content creators to be able to select multiple options, or just a single option. If you are using multiple select, you can also specify the minimum and maximum selections a content creator can make.
 

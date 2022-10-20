@@ -3,8 +3,7 @@ id: wcm_dev_auth-temp_formprop
 title: Defining form properties
 ---
 
-
-
+# Defining form properties
 
 Specify the layout and functions available to authors when you create a new item that is based on this content template.
 
@@ -60,7 +59,7 @@ Specify the layout and functions available to authors when you create a new item
 
     With the embedded editor provided in this field, you can add help text as HTML. You can format the HTML text in the design view, which provides toolbar buttons for common tasks. You can also work directly with the text in a source view that displays the HTML tagging. Previously prepared content in HTML format can be imported with the embedded editor.
 
-    !!! note
+    !!!note
         Although link components can be selected with the insert link button, link components do not work in item form help.
 
 

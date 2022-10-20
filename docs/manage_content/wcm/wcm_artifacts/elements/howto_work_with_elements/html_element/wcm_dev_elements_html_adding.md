@@ -3,6 +3,8 @@ id: wcm_dev_elements_html_adding
 title: Adding an HTML element to an item
 ---
 
+# Adding an HTML element to an item
+
 You add an HTML element to a site area or content item when you want a section of HTML to be used for a specific site area or content item.
 
 !!!note

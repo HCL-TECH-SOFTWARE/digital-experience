@@ -2,7 +2,7 @@
 
 The Configuration Wizard is installed by default when you install HCL Digital Experience. As an alternative to using the default installation, you can install the Configuration Wizard on another server that already has IBM WebSphere Application Server installed.
 
-1.  Change to the AppServer_root](../reference/wpsdirstr.md#was_root/ConfigEngine directory.
+1.  Change to the AppServer_root/ConfigEngine directory.
 
 2.  To install the Configuration Wizard, run the following command:
 

@@ -1,7 +1,5 @@
 # Using a file resource element
 
-
-
 You use a file resource element to store a file that can later be referenced on a web page. To create a file resource element, you can either add a file resource element to an authoring template, site area, or content item, or create a file resource component.
 
 -   **[Creating a file resource component](wcm_dev_elements_fileresource.md)**

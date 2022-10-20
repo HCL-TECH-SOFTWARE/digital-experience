@@ -4,7 +4,7 @@ After you add your user registry, you can update a single entity type with the v
 
 In a stand-alone server environment, you can complete the following task when the servers are either stopped or started. In a clustered environment, start the deployment manager and node agent. Then, verify that they are able to synchronize.
 
-1.  Open a UNIX System Services (z/OS UNIX System Services) command prompt.
+1.  Open a UNIX System Services command prompt.
 
     !!!note
         If you are instructed to open a properties file, they are ASCII files. Open them with the appropriate tool.

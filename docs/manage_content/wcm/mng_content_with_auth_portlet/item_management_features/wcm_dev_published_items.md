@@ -3,7 +3,7 @@ id: wcm_dev_published_items
 title: How to manage published items
 ---
 
-
+# How to manage published items
 
 
 Items are not visible on a website until they are published. When published, an item can be expired, or returned to a draft state.

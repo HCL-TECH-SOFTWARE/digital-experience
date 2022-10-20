@@ -11,15 +11,15 @@ The installation program verifies the operating system and its prerequisites, av
 1.  Start all servers and applications that require a port number to avoid port conflicts when you install HCL Portal. If you are installing multiple copies of HCL Digital Experience on your server, start the existing Configuration Wizard servers.
 
     !!! note
-        Currently, the cw\_profile starting point always defaults to 10200. If you install a second version of portal on the same server, you must customize the cw\_profile port value. Add the following line to the InstallationManager\_root/InstallationManager/eclipse/tools/imcl.ini file:
+        Currently, the cw_profile starting point always defaults to 10200. If you install a second version of portal on the same server, you must customize the cw_profile port value. Add the following line to the InstallationManager_root/InstallationManager/eclipse/tools/imcl.ini file:
 
     ```
-    -Dcwprofile_startingport=new\_starting\_port\_number
+    -Dcwprofile_startingport=new_starting_port_number
     ```
 
 2.  Complete the following steps to run the program as an administrator:
 
-    1.  Go to the InstallationManager\_root/eclipse/tools directory.
+    1.  Go to the InstallationManager_root/eclipse/tools directory.
 
     2.  Right-click on the imcl command.
 
@@ -31,15 +31,15 @@ The installation program verifies the operating system and its prerequisites, av
 
     6.  Click **OK**.
 
-3.  Open a command prompt and change to the InstallationManager\_root/eclipse/tools directory.
+3.  Open a command prompt and change to the InstallationManager_root/eclipse/tools directory.
 
 4.  Run the command to start the IBM Installation Manager in console mode:
 
-    ./imcl -c
+    `./imcl -c`
 
-    imcl -c
+    `imcl -c`
 
-    imcl -c
+    `imcl -c`
 
 5.  Complete the following steps to add the repositories:
 
@@ -98,7 +98,7 @@ The installation program verifies the operating system and its prerequisites, av
 
 14. Enter the number for the WebSphere Application Server root directory to use as the existing WebSphere Application Server.
 
-15. On the **IBM Installation Manager** \> **Install** \> **Licenses** \> **Location** \> **Features** menu, enter 1 to select the **Portal Server Profile** feature. Then, enter N to continue.
+15. On the **IBM Installation Manager > Install > Licenses > Location > Features** menu, enter 1 to select the **Portal Server Profile** feature. Then, enter N to continue.
 
     !!! note
         Ensure that **Portal Server Profile** is selected to create a profile that contains the Portal application server and the product binary files. Clear this option if you need a binary only installation for migrationor your clustered environment.
@@ -138,10 +138,10 @@ The installation program verifies the operating system and its prerequisites, av
 
 22. When the installation is complete, enter F to return to the main installation menu.
 
-23. Access the Configuration Wizard. Go to http://your\_server:10200/hcl/wizard.
+23. Access the Configuration Wizard. Go to http://your_server:10200/hcl/wizard.
 
     !!! note
-        If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your\_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your\_server:10200/hcl/wizard.
+        If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your_server:10200/hcl/wizard.
 
     !!! restriction 
         There is a known issue with Chrome version 45.x and the Configuration Wizard. If you are experiencing difficulties, use a different browser when you access the wizard.
@@ -152,7 +152,7 @@ The installation program verifies the operating system and its prerequisites, av
         If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Supported languages](https://help.hcltechsw.com/digital-experience/8.5/reference/supportedlanguages.html?hl=supported%2Clanguages%2Chcl%2Cdigital%2Cexperience) in the HCL Digital Experience Version 8.5 documentation.
 
 
-Before you access WebSphere Application Server, configure the software license agreement to set the usage limit from the Proof of Entitlement \(POE\) or invoice. Go to [Configuring software license information](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.installation.nd.iseries.doc/ae/tins_is_cfglic.html?cp=SSAW57_8.5.5%2F2-5-0-7-1) for information.
+Before you access WebSphere Application Server, configure the software license agreement to set the usage limit from the Proof of Entitlement (POE) or invoice. Go to [Configuring software license information](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.installation.nd.iseries.doc/ae/tins_is_cfglic.html?cp=SSAW57_8.5.5%2F2-5-0-7-1) for information.
 
 After you upgrade to CF08 or higher, you can upgrade your SDK to version 7.1. Go to *Upgrading the SDK* for information.
 

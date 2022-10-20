@@ -6,8 +6,8 @@ With the Portal Scripting Interface, you can create Jacl or Jython scripts to au
 
 To create a library, use the create method.
 
--   Jacl syntax: `$DocumentLibrary create "library\_name"`
--   Jython syntax: `DocumentLibrary.create("library\_name")`
+-   Jacl syntax: `$DocumentLibrary create "library_name"`
+-   Jython syntax: `DocumentLibrary.create("library_name")`
 
 -   **Jacl example:**
 
@@ -28,8 +28,8 @@ To create a library, use the create method.
 
 To delete a library, use the delete method.
 
--   Jacl syntax: `$DocumentLibrary delete "library\_name"`
--   Jython syntax: `DocumentLibrary.delete("library\_name")`
+-   Jacl syntax: `$DocumentLibrary delete "library_name"`
+-   Jython syntax: `DocumentLibrary.delete("library_name")`
 
 -   **Jacl example:**
 
@@ -72,10 +72,10 @@ To retrieve a list of libraries, use the listall method.
 
 ## Retrieve library details
 
-Retrieve library details with the details method. This method returns the following information about the library: the Universally Unique Identifier \(UUID\), state, name, and title.
+Retrieve library details with the details method. This method returns the following information about the library: the Universally Unique Identifier (UUID), state, name, and title.
 
--   Jacl syntax: `$DocumentLibrary details "library\_name"`
--   Jython syntax: `DocumentLibrary.details("library\_name")`
+-   Jacl syntax: `$DocumentLibrary details "library_name"`
+-   Jython syntax: `DocumentLibrary.details("library_name")`
 
 -   **Jacl example:**
 
@@ -103,8 +103,6 @@ Retrieve library details with the details method. This method returns the follow
 
 
 
-**Related information**  
-
-
-[Command reference for the Portal Scripting Interface](../admin-system/adpsicrf.md)
+???+ info "Related information"  
+    -   [Command reference for the Portal Scripting Interface](../../../../../extend_dx/development_tools/portal_admin_tools/portal_scripting_interface/command_ref_psi/index.md)
 

@@ -31,6 +31,7 @@ Before you begin, complete the following prerequisites:
 
         -   In the **Portlet Name** field, type Pers__Offers.
         -   In the **Portlet Type** field, select Basic Portlet from the list.
+        
 5.  Click **Next**.
 
 6.  Accept the default Portlet Settings and click **Next**.

@@ -2,9 +2,108 @@
 
 This section presents the latest available HCL Digital Experience (DX) 9.5 Container images available.
 
-You can obtain the HCL DX 9.5 container update releases may be obtained from your HCL Digital Experience entitlements in the [HCL Software License Portal](https://www.hcltech.com/software/support/release){:target="_blank"}, in the **HCL\_Portal\_8.5\_9.0\_9.5\_CFs** download package entry, and the **HCL\_DX\_9.5\_Container\_Updates** download package entry for HCL Digital Experience Cloud Native 9.5 entitlements.
+You can obtain the HCL DX 9.5 container update releases may be obtained from your HCL Digital Experience entitlements in the [HCL Software License Portal](https://www.hcltech.com/software/support/release){:target="_blank"}, in the **HCL_Portal_8.5_9.0_9.5_CFs** download package entry, and the **HCL_DX_9.5_Container_Updates** download package entry for HCL Digital Experience Cloud Native 9.5 entitlements.
 
 Video: [How to upload HCL Digital Experience 9.5 CF container images to a private repository](https://youtu.be/XJONRdpgCuo){:target="_blank"}
+
+
+## HCL DX 9.5 CF207
+
+-   **Container Update CF207**
+
+    If you are deploying the HCL DX 9.5 CF207 release, the package name and images are as follows:
+
+    **HCL DX 9.5 CF207 DXClient files**:
+
+    -   ```
+        hcl-dxclient-image-v95_CF2067_20221014-1618.zip
+       ```
+
+    -   ```
+        hcl-dxclient-v95_CF207_20221014-1614.zip
+        ```
+
+    **hcl-dx-kubernetes-v95-CF207.zip**:
+
+    -   ```
+        HCL DX notices V9.5 CF207.txt
+        ```
+
+    -   ```
+        hcl-dx-content-composer-image-v1.20.0_20221014-1558.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-core-image-v95_CF207_20221014-1607.tar.gz
+        ```
+    
+    -   ```
+        hcl-dx-dam-plugin-google-vision-image-v0.1.0_20221014-1559.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-dam-plugin-kaltura-image-v0.1.0_20221014-1600.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-deployment-v2.10.0_20221017-1419.tgz
+        ```
+
+    -   ```
+        hcl-dx-design-studio-image-v0.12.0_20221014-1613.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-digital-asset-manager-image-v1.19.0_20221014-1611.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-experience-api-sample-ui-v0.2.0.20221014-1613.zip
+        ```
+
+    -   ```
+        hcl-dx-haproxy-image-v1.3.0_20221014-1605.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-image-processor-image-v1.20.0_20221014-1606.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-license-manager-image-v95_CF207_20221014-1601.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-logging-sidecar-image-v1.0.0_20221014-1603.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-openldap-image-v1.2.0_20221014-1601.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-persistence-connection-pool-image-v1.20.0_20221014-1612.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-persistence-metrics-exporter-image-v1.18.0_20221014-1612.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-persistence-node-image-v1.10_20221014-1612.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-remote-search-image-v95_CF207_20221014-1607.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-ringapi-image-v1.20.0_20221014-1614.tar.gz
+        ```
+
+    -   ```
+        hcl-dx-runtime-controller-image-v95_CF207_20221014-1603.tar.gz
+        ```
 
 
 ## HCL DX 9.5 CF206
@@ -16,11 +115,11 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
     **HCL DX 9.5 CF206 DXClient files**:
 
     -   ```
-        hcl-dxclient-image-v95_CF206_20220908-1249.zip x
+        hcl-dxclient-image-v95_CF206_20220908-1249.zip
        ```
 
     -   ```
-        hcl-dxclient-v95_CF206_20220908-1248.zip x
+        hcl-dxclient-v95_CF206_20220908-1248.zip
         ```
 
     **hcl-dx-kubernetes-v95-CF206.zip**:
@@ -806,28 +905,28 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 |Component|Image name|CF198|CF199|
 |---------|----------|-----|-----|
-|DX Core|hcl-dx-core-image-vx.x.x\_xxxxxxxx-xxxx.tar.gz|hcl-dx-core-image-v95\_CF198\_20210917-1438.tar.gz|hcl-dx-core-image-v95\_CF199\_20211029-1348.tar.gz|
-|Ring API|hcl-dx-ringapi-image-vx.x.x\_xxxxxxxx-xxxx.tar.gz|hcl-dx-ringapi-image-v1.11.0\_20210917-1441.tar.gz|hcl-dx-ringapi-image-v1.12.0\_20211029-1357.tar.gz|
-|Content Composer|hcl-dx-content-composer-image-vx.x.x\_xxxxxxxx-xxxx.tar.gz|hcl-dx-content-composer-image-v1.10.0\_20210917-1437.tar.gz|hcl-dx-content-composer-image-v1.12.0\_20211029-1341.tar.gz|
-|DX Deployment|hcl-dx-deployment-vx.x.x\_xxxxxxxx-xxxx.tgz|hcl-dx-deployment-v2.0.0\_20210917-1441.tgz|hcl-dx-deployment-v2.1.0\_20211029-1346.tgz|
-|Design Studio|hcl-dx-design-studio-image- vx.x.x\_xxxxxxxx-xxxx.tar.gz|**hcl-dx-site-manager-image-v0.4.0\_20210917-1445.tar.gz**|**hcl-dx-design-studio-image-v0.5.0\_20211029-0013.tar.gz**|
-|Digital Asset Management|hcl-dx-digital-asset-manager-image- vx.x.x\_xxxxxxxx-xxxx.tar.gz|hcl-dx-digital-asset-manager-image-v1.10.0\_20210917-1444.tar.gz|hcl-dx-digital-asset-manager-image-v1.11.0\_20211029-1350.tar.gz|
-|Persistence Connection Pool|hcl-dx-persistence-connection-pool-image- vx.x.x\_xxxxxxxx-xxxx.tar.gz|**hcl-dx-postgres-persistence-pgpool-image-v1.11.0\_20210916-0224.tar.gz**|**hcl-dx-persistence-connection-pool-image-v1.11.0\_20211029-0224.tar.gz**|
-|Persistence Node|hcl-dx-persistence-node-image-vx.x.x\_xxxxxxxx-xxxx.tar.gz|**hcl-dx-persistence-postgres-repmgr-image-v1.1\_20210916-0148.tar.gz**|**hcl-dx-persistence-node-image-v1.1\_20211029-0148.tar.gz**|
-|Persistence Metrics Exporter|hcl-dx-persistence-metrics-exporter-image-vx.x.x\_xxxxxxxx-xxxx.tar.gz|NA|**hcl-dx-persistence-metrics-exporter-image-v1.10.0\_20211029-1352.tar.gz**|
-|Persistence|hcl-dx-persistence-image- vx.x.x\_xxxxxxxx-xxxx.tar.gz|**hcl-dx-postgres-image-v1.11.0\_20210917-1444.tar.gz**|**hcl-dx-persistence-image-v1.11.0\_20211029-1349.tar.gz**|
+|DX Core|hcl-dx-core-image-vx.x.x_xxxxxxxx-xxxx.tar.gz|hcl-dx-core-image-v95_CF198_20210917-1438.tar.gz|hcl-dx-core-image-v95_CF199_20211029-1348.tar.gz|
+|Ring API|hcl-dx-ringapi-image-vx.x.x_xxxxxxxx-xxxx.tar.gz|hcl-dx-ringapi-image-v1.11.0_20210917-1441.tar.gz|hcl-dx-ringapi-image-v1.12.0_20211029-1357.tar.gz|
+|Content Composer|hcl-dx-content-composer-image-vx.x.x_xxxxxxxx-xxxx.tar.gz|hcl-dx-content-composer-image-v1.10.0_20210917-1437.tar.gz|hcl-dx-content-composer-image-v1.12.0_20211029-1341.tar.gz|
+|DX Deployment|hcl-dx-deployment-vx.x.x_xxxxxxxx-xxxx.tgz|hcl-dx-deployment-v2.0.0_20210917-1441.tgz|hcl-dx-deployment-v2.1.0_20211029-1346.tgz|
+|Design Studio|hcl-dx-design-studio-image- vx.x.x_xxxxxxxx-xxxx.tar.gz|**hcl-dx-site-manager-image-v0.4.0_20210917-1445.tar.gz**|**hcl-dx-design-studio-image-v0.5.0_20211029-0013.tar.gz**|
+|Digital Asset Management|hcl-dx-digital-asset-manager-image- vx.x.x_xxxxxxxx-xxxx.tar.gz|hcl-dx-digital-asset-manager-image-v1.10.0_20210917-1444.tar.gz|hcl-dx-digital-asset-manager-image-v1.11.0_20211029-1350.tar.gz|
+|Persistence Connection Pool|hcl-dx-persistence-connection-pool-image- vx.x.x_xxxxxxxx-xxxx.tar.gz|**hcl-dx-postgres-persistence-pgpool-image-v1.11.0_20210916-0224.tar.gz**|**hcl-dx-persistence-connection-pool-image-v1.11.0_20211029-0224.tar.gz**|
+|Persistence Node|hcl-dx-persistence-node-image-vx.x.x_xxxxxxxx-xxxx.tar.gz|**hcl-dx-persistence-postgres-repmgr-image-v1.1_20210916-0148.tar.gz**|**hcl-dx-persistence-node-image-v1.1_20211029-0148.tar.gz**|
+|Persistence Metrics Exporter|hcl-dx-persistence-metrics-exporter-image-vx.x.x_xxxxxxxx-xxxx.tar.gz|NA|**hcl-dx-persistence-metrics-exporter-image-v1.10.0_20211029-1352.tar.gz**|
+|Persistence|hcl-dx-persistence-image- vx.x.x_xxxxxxxx-xxxx.tar.gz|**hcl-dx-postgres-image-v1.11.0_20210917-1444.tar.gz**|**hcl-dx-persistence-image-v1.11.0_20211029-1349.tar.gz**|
 |DX Experience API|hcl-dx-experience-api-sample-ui-vx.x.x.xxxxxxxx-xxxx.zip|hcl-dx-experience-api-sample-ui-v0.2.0.20210917-1439.zip|hcl-dx-experience-api-sample-ui-v0.2.0.20211029-1354.zip|
-|Image processor|hcl-dx-image-processor-image-vx.x.x\_xxxxxxxx-xxxx.tar.gz|hcl-dx-image-processor-image-v1.11.0\_20210917-1449.tar.gz|hcl-dx-image-processor-image-v1.12.0\_20211029-1346.tar.gz|
-|Open LDAP|hcl-dx-openldap-image-vx.x.x\_xxxxxxxx-xxxx.tar.gz|hcl-dx-openldap-image-v1.2.0\_20210917-1437.tar.gz|hcl-dx-openldap-image-v1.2.0\_20211029-1342.tar.gz|
-|Remote search|hcl-dx-remote-search-image-v95\_CFxxx\_xxxxxxxx-xxxx.tar.gz|hcl-dx-remote-search-image-v95\_CF198\_20210917-1438.tar.gz|hcl-dx-remote-search-image-v95\_CF199\_20211029-1348.tar.gz|
-|Runtime Controller|hcl-dx-runtime-controller-image-v95\_CFxxx\_xxxxxxxx-xxxx.tar.gz|hcl-dx-runtime-controller-image-v95\_CF198\_20210917-1441.tar.gz|hcl-dx-runtime-controller-image-v95\_CF199\_20211029-1344.tar.gz|
+|Image processor|hcl-dx-image-processor-image-vx.x.x_xxxxxxxx-xxxx.tar.gz|hcl-dx-image-processor-image-v1.11.0_20210917-1449.tar.gz|hcl-dx-image-processor-image-v1.12.0_20211029-1346.tar.gz|
+|Open LDAP|hcl-dx-openldap-image-vx.x.x_xxxxxxxx-xxxx.tar.gz|hcl-dx-openldap-image-v1.2.0_20210917-1437.tar.gz|hcl-dx-openldap-image-v1.2.0_20211029-1342.tar.gz|
+|Remote search|hcl-dx-remote-search-image-v95_CFxxx_xxxxxxxx-xxxx.tar.gz|hcl-dx-remote-search-image-v95_CF198_20210917-1438.tar.gz|hcl-dx-remote-search-image-v95_CF199_20211029-1348.tar.gz|
+|Runtime Controller|hcl-dx-runtime-controller-image-v95_CFxxx_xxxxxxxx-xxxx.tar.gz|hcl-dx-runtime-controller-image-v95_CF198_20210917-1441.tar.gz|hcl-dx-runtime-controller-image-v95_CF199_20211029-1344.tar.gz|
 |Ambassador|hcl-dx-ambassador-image-xxx.tar.gz|hcl-dx-ambassador-image-154.tar.gz|hcl-dx-ambassador-image-154.tar.gz|
 |Redis|hcl-dx-redis-image-x.x.x.tar.gz|hcl-dx-redis-image-5.0.1.tar.gz|hcl-dx-redis-image-5.0.1.tar.gz|
-|Sidecar|hcl-dx-sidecar-image-vx.x.\_x.x-xxx.tar.gz|NA|**hcl-dx-sidecar-image-v1.0.0\_8.4-205.tar.gz**|
+|Sidecar|hcl-dx-sidecar-image-vx.x._x.x-xxx.tar.gz|NA|**hcl-dx-sidecar-image-v1.0.0_8.4-205.tar.gz**|
 
 !!! note
-
     The new image files and the change in file names are highlighted in the table.
+
 ## HCL DX 9.5 CF198
 
 -   **CF198**
@@ -1838,7 +1937,7 @@ Video: [How to upload HCL Digital Experience 9.5 CF container images to a privat
 
 -   See the following sections for additional information:
     -   [Docker image deployment](../docker/docker_image_deployment.md)
-    -   [Requirements and limitations](../../../get_started/system_requirements/othersoftware.md)
+    -   [System requirements](../../../get_started/system_requirements/index.md)
     -   [Customizing the container deployment](https://help.hcltechsw.com/digital-experience/9.5/containerization/customizing_container_deployment.html){:target="_blank"}
     
 

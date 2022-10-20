@@ -3,6 +3,8 @@ id: wcm_dev_elements_menu_design
 title: Menu element design examples
 ---
 
+# Menu element design examples
+
 Format the design and layout of menu elements with HTML and placeholder tags.
 
 ## Simple menu design

@@ -3,7 +3,7 @@
 You can insert links into elements that contain an HTML or rich text field.
 
 !!!note
-    When you create a link to a site area or content item, this method is only used if the link requires no customization. If you need to create a link to a site area or content item that requires customization, such as "jump-to" navigation, you must instead use a [URL Tag](/wcm_artifacts/tags/creating_web_content_tags/wcm_dev_item-details_url.md).
+    When you create a link to a site area or content item, this method is only used if the link requires no customization. If you need to create a link to a site area or content item that requires customization, such as "jump-to" navigation, you must instead use a [URL Tag](../../../wcm_artifacts/tags/creating_web_content_tags/wcm_dev_item-details_url.md).
 
 1.  Click **Insert Link**.
 

@@ -3,6 +3,8 @@ id: wcm_dev_elements_user-selection_add_template
 title: Adding a user selection element to a template
 ---
 
+# Adding a user selection element to a template
+
 You add a user selection element to an authoring template when you want the user selection element to be used by a set of items that use the same authoring template.
 
 1.  Open or create an authoring template.

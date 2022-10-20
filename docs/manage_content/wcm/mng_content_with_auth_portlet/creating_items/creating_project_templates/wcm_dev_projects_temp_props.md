@@ -3,7 +3,7 @@ id: wcm_dev_projects_temp_props
 title: Defining publish options for a project template
 ---
 
-
+# Defining publish options for a project template
 
 
 Define the default publish options for any projects that are created by using a project template.

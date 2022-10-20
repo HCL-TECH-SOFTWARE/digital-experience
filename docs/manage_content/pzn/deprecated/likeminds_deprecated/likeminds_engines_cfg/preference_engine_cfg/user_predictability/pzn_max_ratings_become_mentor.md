@@ -26,6 +26,7 @@ Use the following guidelines for setting `<mentor_set_name>.max_mentor_ratings:`
 |5000–10,000|<= 1500|
 |10,000+|<= 1500|
 
-**Note:** For more information on how the `sifter` makes use of `<mentor_set_name>.max_mentor_ratings`, see [Maximum number of mentors assigned to each user](pzn_max_mentors_per_user.md).
+!!! note
+    For more information on how the `sifter` makes use of `<mentor_set_name>.max_mentor_ratings`, see [Maximum number of mentors assigned to each user](pzn_max_mentors_per_user.md).
 
 

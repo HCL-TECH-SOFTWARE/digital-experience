@@ -1,7 +1,5 @@
 # How to manage a taxonomy
 
-
-
 From time to time, you need to edit the structure of a taxonomy.
 
 -   **[Changing the order within a taxonomy](wcm_dev_profiling_taxonomy_editing.md)**  

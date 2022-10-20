@@ -93,6 +93,3 @@ In clustered environments, you can use the Configuration Wizard from the primary
 ## Configuration Wizard profile
 
 The wizard has a unique profile, cw_profile, and administrator credentials.
-
-!!!note
-    Running the Configuration Wizard on z/OS® is not supported.

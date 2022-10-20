@@ -6,7 +6,7 @@ The configuration process has changed. Use the Configuration Wizard to set up yo
 
 Unless you selected to install only the binary files, you can log in to the portal and verify that your installation was successful. Access HCL Portal with the http://yourserver:yourport/wps/portal format.
 
-If you are not sure what your port number is, use the list-server-ports command to determine the port number. Change to the \{installation path\}/AppServer/profiles/cw\_profile/ConfigEngine/log. Run the list-server-ports task to generate the HCL Portal and HCL Web Content Manager\_PortMatrix.txt file. For example:
+If you are not sure what your port number is, use the list-server-ports command to determine the port number. Change to the {installation path}/AppServer/profiles/cw_profile/ConfigEngine/log. Run the list-server-ports task to generate the HCL Portal and HCL Web Content Manager\_PortMatrix.txt file. For example:
 
 ./ConfigEngine.sh list-server-ports -DWasPassword=password.
 

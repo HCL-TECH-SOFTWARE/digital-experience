@@ -1,4 +1,4 @@
-# Defining a Page Navigator
+# Defining a page navigator
 
 You use the page navigation element to define a page navigator.
 
