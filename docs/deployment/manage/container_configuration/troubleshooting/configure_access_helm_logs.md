@@ -162,13 +162,6 @@ kubectl logs -n dxns
       dx-deployment-digital-asset-management-0
 ```
 
-This is not the case for Persistence Node pods, which have non-logging sidecar containers \(for metrics gathering\). For these pods, you must append the main container name \(`persistence-node`\) when accessing the log, for example:
-
-```
-kubectl logs -n dxns dx-deployment-persistence-node-0
-        persistence-node
-```
-
 ## Accessing all application logs simultaneously
 
 All application logs from DX pods in a deployment can be combined into a single output using the command:
