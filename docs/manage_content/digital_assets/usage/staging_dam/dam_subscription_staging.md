@@ -285,7 +285,7 @@ Use the `manage-dam-staging get-all-subscribers` command to get all the register
     -hostname <value>
     ```
 
-    Use this attribute to specify the port on which to connect to the DX server \(default: ""\)
+    Use this attribute to specify the port on which to connect to the DX server \(default: ""; default port for any Kubernetes environment is 443\):
 
     ```
     -dxPort <value>
@@ -303,25 +303,25 @@ Use the `manage-dam-staging get-all-subscribers` command to get all the register
     -dxPassword <value>
     ```
 
-    Use this attribute to specify the port number of the DAM server \(default: ""\)
+    Use this attribute to specify the port number of the DAM server \(default: ""; default port for any Kubernetes environment is 443\):
 
     ```
     -damAPIPort <value>
     ```
 
-    Use this attribute to specify the port number of the DX Core API server \(default: ""\)
+    Use this attribute to specify the port number of the DX Core API server \(default: ""; default port for any Kubernetes environment is 443\):
 
     ```
     -ringAPIPort <value>
     ```
 
-    Use this attribute to specify the API version number of DAM \(default: ""\)
+    Use this attribute to specify the API version number of DAM \(default: ""; default port for any Kubernetes environment is 443\):
 
     ```
     -damAPIVersion <value>
     ```
 
-    Use this attribute to specify the API version number of DX Core \(default: ""\):
+    Use this attribute to specify the API version number of DX Core \(default: ""; default port for any Kubernetes environment is 443\):
 
     ```
     -ringAPIVersion <value>
