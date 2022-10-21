@@ -151,7 +151,7 @@ This retrieves the log for a single sidecar container, which corresponds to a si
 
 By default, one sidecar container is launched with Persistence Node:
 
--   `persistence-repmgr-log` - Exposes the `WebSphere_Portal/SystemOut.log` file.
+-   `persistence-repmgr-log` - Exposes the `repmgr.log` file.
 
 ## Accessing logs for other applications
 
