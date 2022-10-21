@@ -155,7 +155,7 @@ By default, one sidecar container is launched with Persistence Node:
 
 ## Accessing logs for other applications
 
-Applications other than Core and Remote Search do not have logging sidecar containers and only provide a single log per pod, which can typically be obtained using the command: `kubectl logs -n <namespace> <pod-name>` \(omitting a container name\), for example:
+Other applications where logging sidecar container is not deployed, only provide a single log per pod, which can typically be obtained using the command: `kubectl logs -n <namespace> <pod-name>` \(omitting a container name\), for example:
 
 ```
 kubectl logs -n dxns
