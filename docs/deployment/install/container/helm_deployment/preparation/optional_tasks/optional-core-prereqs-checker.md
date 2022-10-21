@@ -35,7 +35,6 @@ The following command can be triggered to run the checks manually, once all the 
 Replace the `<application-name>` with the following depending on which application you want to run the checks.
 - `core`
 - `digital-asset-management`
-- `open-ldap`
 - `remote-search`
 - `persistence-node`
 
