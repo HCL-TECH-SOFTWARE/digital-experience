@@ -5,8 +5,8 @@ This section provides the steps on how the DAM extensibility allows the Kaltura 
 ## Architecture
 
 
-![Kaltura plugin 2](../../../../../images/Kaltura_configuration_Kaltura-Plugin-Design.png)
-![Kaltura Plugin](../../../../../images/kaltura_configuration_Kaltura-Plugin.png)
+![Kaltura plugin 2](../../../../images/Kaltura_configuration_Kaltura-Plugin-Design.png)
+![Kaltura Plugin](../../../../images/kaltura_configuration_Kaltura-Plugin.png)
 
 
 
@@ -131,14 +131,6 @@ OPERATION_WAIT_INTERVAL is used as environment variable with default value of 2 
 
 ## How is the configuration setup for Kaltura Plugin
 
-The Kaltura plugin configurations are currently maintained as config maps. The user can find the kaltura-plugin.json file in the configuration folder under the Helm Package and can be deployed into DAM through the HELM upgrade.
-
-```
-configuration:
-      # Configuration for Kaltura Plugin
-        # File path for the kaltura plugin config JSON file
-        kalturaPluginConfigFile: "configurations/kaltura-plugin.json"
-```
 
 ### Plugin security Configuration
 In DAM Extensibility, plugins come with the security enabled. So, the API requests are authenticated with the security key, which is transmitted and validated in every call, both for plugin and callback calls, and the user can write this in the same config file under security configuration and give the value to the authenticationKey parameter. This value is then passed for plugin configuration key attribute, so that DAM sends this with each request to authenticate.

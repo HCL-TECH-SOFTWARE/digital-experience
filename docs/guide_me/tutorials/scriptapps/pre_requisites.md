@@ -1,4 +1,4 @@
-# Pre-Requisites
+# Pre-requisites
 
 ## HCL DXClient
 

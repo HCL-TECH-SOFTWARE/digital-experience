@@ -1,17 +1,18 @@
-# Windows: Preparing to uninstall
+# Preparing to uninstall
 
 You must prepare your system before you uninstall your HCL Digital Experience environment. For example, add passwords to the properties files. You must also decide to keep or discard the database information.
 
 !!!important "Important cluster note"
-    You must issue the removeNode command to unfederate a node before uninstalling because HCL Digital Experience cannot uninstall a federated node.
+    You must issue the *removeNode* command to unfederate a node before uninstalling because HCL Digital Experience cannot uninstall a federated node.
 
 1.  Make a backup of the HCL Digital Experience configuration. Use the XML Configuration Interface.
 
     !!!important
         If you delete the database, the following information is not backed up and is deleted:
 
-    -   User attributes that are stored in the database and not in the user registry
-    -   Credential data that is stored in the default vault implementation
+		-   User attributes that are stored in the database and not in the user registry
+		-   Credential data that is stored in the default vault implementation
+
 2.  Complete the following steps to remove a node from the cell in a clustered environment:
 
     !!!note
@@ -27,6 +28,7 @@ You must prepare your system before you uninstall your HCL Digital Experience en
         2.  Select the box for the node to be uninstalled and then click **Remove**.
         3.  Save the changes to the master configuration repository.
         4.  Synchronize the node to be uninstalled.
+
     4.  Go to **System Administration > Nodes**. Select the node that contains the server that you want to remove from the cell, and then click **Remove Node** to remove the node from the cell.
 
         !!!important
@@ -45,6 +47,7 @@ You must prepare your system before you uninstall your HCL Digital Experience en
         3.  Change the value of the ServerName property to the original HCL Portal server name.
         4.  Ensure that the value of the PrimaryNode property is set to true.
         5.  Save your changes.
+
 3.  Add passwords to the wkplc.properties, wkplc_dbdomain.properties, and wkplc_dbtype.properties files in the wp_profile_root/ConfigEngine/properties directory. You can also specify passwords on the command line.
 
 4.  Decide whether to keep your database to preserve HCL Digital Experience information.
@@ -58,13 +61,13 @@ You must prepare your system before you uninstall your HCL Digital Experience en
 
         1.  Stop all the servers. For specific instructions, go to [Starting and stopping servers, deployment managers, and node agents](../../../../manage/stopstart.md).
         2.  Open a command prompt and change to the wp_profile_root/ConfigEngine directory.
-        3.  Run the ConfigEngine.bat remove-schema -DWasPassword=password -Drelease.DbPassword=password -Dcustomization.DbPassword=password -Dcommunity.DbPassword=password -Djcr.DbPassword=password -Dfeedback.DbPassword=password -Dlikeminds.DbPassword=password task.
+        3.  Run the ./ConfigEngine.sh remove-schema -DWasPassword=password -Drelease.DbPassword=password -Dcustomization.DbPassword=password -Dcommunity.DbPassword=password -Djcr.DbPassword=password -Dfeedback.DbPassword=password -Dlikeminds.DbPassword=password task.
         
         !!!note
             Some tables remain in the IBM Java™ Content Repository database. Removing the database removes these tables.
 
 
--   **[Windows: Uninstalling HCL Digital Experience](uninst_portal-Windows.md)**  
+-   **[Performing the Uninstall of HCL Digital Experience](uninst_portal.md)**  
 If you have a complete and functional uninstallation program, you can uninstall HCL Digital Experience only or both HCL Digital Experience and IBM WebSphere Application Server.
 
 

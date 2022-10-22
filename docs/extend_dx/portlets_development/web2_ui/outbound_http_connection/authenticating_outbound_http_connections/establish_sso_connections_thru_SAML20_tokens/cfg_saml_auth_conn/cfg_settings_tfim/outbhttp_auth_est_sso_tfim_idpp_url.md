@@ -1,4 +1,4 @@
-# Finding the Identity Provider login URL and the Partner URL \(TFIM\)
+# Finding the Identity Provider login URL and the Partner URL (TFIM)
 
 In order to establish an SSO connection through Tivoli Federated Identity Manager, you must specify the Identity Provider login URL and the Partner URL. Learn how to find these values from the Tivoli Federated Identity Manager configuration if you do not already know them. If you know these values already, skip this step.
 
