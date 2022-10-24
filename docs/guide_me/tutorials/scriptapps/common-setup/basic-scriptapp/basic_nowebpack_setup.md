@@ -17,7 +17,7 @@ This guide describes the steps on how to deploy a built React app into DX to bec
 
 !!!tip "Ensure your system is set up properly. Please read the system pre-requisites [here](../../pre_requisites.md)."
 
-!!!tip "Sample codes are available in [GitHub: Deploy a React App to DX as a ScriptApp](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/01WebpackWithDependencies)"
+!!!tip "Sample codes are available in [GitHub: Deploy a React App to DX as a ScriptApp](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/tree/main/01WebpackWithDependencies)"
 
 ## How To Bundle and Deploy React Applications to DX
 
@@ -46,7 +46,7 @@ This guide describes the steps on how to deploy a built React app into DX to bec
         ...
     }
     ```
-    - Make sure the contentRoot folder specified in the dxclient config matches your app's build folder:
+2. Update the `package.json` project file. Make sure the contentRoot folder specified in the dxclient config matches your app's build folder:
     ```js
       "config": {
         "dxclient": {
@@ -56,11 +56,11 @@ This guide describes the steps on how to deploy a built React app into DX to bec
         }
        },
     ```
-    - If a homepage value is set in package.json, replace it with "./".
+3. Update the `package.json` project file. Add the homepage line to exactly "./" to make the app load properly in DX. If there is an existing homepage value, replace it with "./". You'll encounter http 404 errors when this step is skipped.
     ```js
       "homepage": "./",
     ```
-2. Use a unique HTML DOM root id in your application to avoid overwriting other DX Script Applications.
+4. Use a unique HTML DOM root id in your application to avoid overwriting other DX Script Applications during rendering.
     - sample-app/public/index.html
       ```
         <div id="root-cf5708ac"></div>
@@ -70,7 +70,7 @@ This guide describes the steps on how to deploy a built React app into DX to bec
         const root = ReactDOM.createRoot(document.getElementById('root-cf5708ac'));
       ```
 
-3. Test your React App in local browser:
+5. Test your React App in local browser:
 
     ``` bash
         cd <app-folder>
@@ -78,7 +78,7 @@ This guide describes the steps on how to deploy a built React app into DX to bec
         npm start
     ```
 
-4. Build your application to generate a production-level bundle as-usual:
+6. Build your application to generate a production-level bundle as-usual:
 
     ``` bash
         cd <app-folder>
@@ -86,7 +86,7 @@ This guide describes the steps on how to deploy a built React app into DX to bec
         npm run build
     ```
 
-5. Execute the npm script dx-deploy-app, pre-set with the DX admin username and password.
+7. Execute the npm script dx-deploy-app, pre-set with the DX admin username and password.
 
     === "MacOS or Linux"
         ```bash
@@ -119,7 +119,7 @@ This guide describes the steps on how to deploy a built React app into DX to bec
             2022-08-08 21:13:39 : Body content: {"results":{"status":"success","importedFiles":{"file":[{"filename":"HTML/index.html"},{"filename":"JavaScript/main.269f6c0111b67c725c63.bundle.js"},{"filename":"JavaScript/131.d190506afae2cd09f1fd.bundle.js"},{"filename":"CSS/main.9a71fbc56a658baede15.css"}]},"skippedFiles":"","message":"The file that you selected was imported successfully.","contentId":"6fa0b659-7b18-499d-a8de-090a0e9f8987"}}.     
     ```
 
-6. Check the DXClient logs in store/logs/logger.log file within your workspace.
-7. Prepare your target DX page that will host the Script Application. Follow this [link](../post-deployment/prepare_dx_page.md).
-8. Add the Script Application (note the wcmContentName in the package.json config) into the target DX test page. Follow this [link](../post-deployment/add_scriptapp_to_page.md).
+8. Check the DXClient logs in store/logs/logger.log file within your workspace.
+9. Prepare your target DX page that will host the Script Application. Follow this [link](../post-deployment/prepare_dx_page.md).
+10. Add the Script Application (note the wcmContentName in the package.json config) into the target DX test page. Follow this [link](../post-deployment/add_scriptapp_to_page.md).
 
