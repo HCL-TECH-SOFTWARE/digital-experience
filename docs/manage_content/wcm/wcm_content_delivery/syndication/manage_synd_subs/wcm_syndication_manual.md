@@ -28,7 +28,7 @@ To manually update a syndication relationship:
 
         -   **Rebuild with mirror**
 
-            If you select the mirror option, all items on the subscriber are reset to mirror the syndicator. All items that are newer on the syndicator are sent to the subscriber. Items that are newer on the subscriber are overwritten with the older version from the syndicator. Items that are created on the subscriber that do not exist on the syndicator are removed from the subscriber. Version history is not syndicated.
+            If you select the mirror option, all items on the subscriber are reset to mirror the syndicator. All items that are newer on the syndicator are sent to the subscriber. Items that are newer on the subscriber are overwritten with the later version from the syndicator. Items that are created on the subscriber that do not exist on the syndicator are removed from the subscriber. Version history is not syndicated.
 
             **Restriction:** The **Rebuild with mirror** option must not be used with two-way syndication. Two-way syndication means that server A syndicates to server B, and server B syndicates to server A.
 
