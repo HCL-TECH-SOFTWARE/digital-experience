@@ -1,7 +1,3 @@
----
-audience: [, , ]
----
-
 # Cooperative portlet programming model
 
 View information on how properties and actions are registered, how properties are generated and received, and some available APIs.
@@ -32,11 +28,12 @@ Associated with each action is zero or one input parameters and zero or more out
 
 For standard portlets, the property broker provides additional APIs to give developers more control over inter-portlet communication. The following functionality can be implemented using the programmatic APIs:
 
--   -   Activate or deactivate actions for a session. Only active actions can be triggered through wires or through Click-to-Action menus.
+-   Activate or deactivate actions for a session. Only active actions can be triggered through wires or through Click-to-Action menus.
 -   Determine if a property is wired, and if it is a cross-page wire. It can also determine if the wire is actually active \(the target action is active\). This knowledge may be used to render links for triggering wired actions.
 
-**Note:** Both sources and targets must register their input and output properties and actions for wire creation to be possible.
+!!!note
+    Both sources and targets must register their input and output properties and actions for wire creation to be possible.
 
-The following package define the programmatic APIs provided by the property broker: com.ibm.portal.propertybroker.service.PropertyBrokerService \(this is an interface\).
+The following package define the programmatic APIs provided by the property broker: com.ibm.portal.propertybroker.service.PropertyBrokerService (this is an interface).
 
 
