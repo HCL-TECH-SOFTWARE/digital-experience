@@ -9,6 +9,7 @@ Component support: Full / Partial / None
 |-------|-------|-------|-------|-------|-------|-------|
 |AIX 7.1|Base|Base and later maintenance releases|POWER System - Big Endian|64-Exploit, 64-Tolerate|9.5|Full|
 |AIX 7.2|Base|Base and later maintenance releases|Power System - Big Endian|64-Exploit, 64-Tolerate|9.5|Full|
+|AIX 7.3|Base|Base and later maintenance releases|Power System - Big Endian|64-Exploit, 64-Tolerate|9.5|Full|
 
 !!! important "AIX support"
 
