@@ -10,37 +10,69 @@ If necessary, the portal can support portlets that are shown in different langua
 HCL Digital Experience has already been translated into a number of languages. They are shown in the following list, together with the ISO 639 language codes. These codes are used for the languages in HCL Digital Experience:
 
 HCL Digital Experience language codes:
+
 - ar  ;  ; =  ; Arabic
+
 - ca  ;  ; =  ; Catalan
+
 - cs  ;  ; =  ; Czech
+
 - da  ;  ; =  ; Danish
+
 - nl  ;  ; =  ; Dutch
+
 - en  ;  ; =  ; English
+
 - fi  ;  ; =  ; Finnish
+
 - fr  ;  ; =  ; French
+
 - de  ;  ; =  ; German  
+
 - el  ;  ; =  ; Greek
+
 - iw  ;  ; =  ; Hebrew
+
 - hr  ;  ; =  ; Croatian
+
 - hu  ;  ; =  ; Hungarian
+
 - it  ;  ; =  ; Italian
+
 - ja  ;  ; =  ; Japanese
+
 - kk  ;  ; =  ; Kazakh
+
 - ko  ;  ; =  ; Korean
+
 - no  ;  ; =  ; Norwegian
+
 - pl  ;  ; =  ; Polish  
+
 - pt  ;  ; =  ; Portuguese
+
 - pt_BR =  ; Brazilian Portuguese
+
 - ro  ;  ; =  ; Romanian
+
 - ru  ;  ; =  ; Russian
+
 - sk  ;  ; =  ; Slovak
+
 - sl  ;  ; =  ; Slovenian
+
 - es  ;  ; =  ; Spanish
+
 - zh  ;  ; =  ; Simplified Chinese
+
 - zh_TW =  ; Traditional Chinese
+
 - sv  ;  ; =  ; Swedish
+
 - th  ;  ; =  ; Thai
+
 - tr  ;  ; =  ; Turkish
+
 - uk  ;  ; =  ; Ukrainian
 
 HCL Digital Experience uses the *ISO 639 Codes for the Representation of Names of Languages* to represent localized resources. The names for directories containing language-dependent resources follow the ISO 639 naming convention, for more information see [Directory structure](../../../../guide_me/wpsdirstr.md).
