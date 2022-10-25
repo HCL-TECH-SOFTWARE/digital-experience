@@ -9,6 +9,12 @@ Component support: Full / Partial / None
 |-------|-------|-------|-------|-------|-------|-------|
 |AIX 7.1|Base|Base and later maintenance releases|POWER System - Big Endian|64-Exploit, 64-Tolerate|9.5|Full|
 |AIX 7.2|Base|Base and later maintenance releases|Power System - Big Endian|64-Exploit, 64-Tolerate|9.5|Full|
+|AIX 7.3|Base|Base and later maintenance releases|Power System - Big Endian|64-Exploit, 64-Tolerate|9.5|Full|
+
+!!! important "Installing DX on AIX 7.3"
+    If the AIX IIM installation fails using the IIM installer contained in the DX Setup zips (with missing library messages) then use the IBM AIX IIM later level (1.9.2.3 or later version) to ensure that the needed AIX 7.3 required libraries for install is present. 
+
+	Refer to the link below to check the list of IIM fix level and their corresponding download link: [Fix list for Installation Manager](https://www.ibm.com/support/pages/fix-list-installation-manager)
 
 !!! important "AIX support"
 
