@@ -11,69 +11,69 @@ HCL Digital Experience has already been translated into a number of languages. T
 
 HCL Digital Experience language codes:
 
-- ar  ;  ; =  ; Arabic
+- ar  =  Arabic
 
-- ca  ;  ; =  ; Catalan
+- ca  =   Catalan
 
-- cs  ;  ; =  ; Czech
+- cs  =   Czech
 
-- da  ;  ; =  ; Danish
+- da  =   Danish
 
-- nl  ;  ; =  ; Dutch
+- nl  =   Dutch
 
-- en  ;  ; =  ; English
+- en  =   English
 
-- fi  ;  ; =  ; Finnish
+- fi  =   Finnish
 
-- fr  ;  ; =  ; French
+- fr  =   French
 
-- de  ;  ; =  ; German  
+- de  =   German  
 
-- el  ;  ; =  ; Greek
+- el  =   Greek
 
-- iw  ;  ; =  ; Hebrew
+- iw  =   Hebrew
 
-- hr  ;  ; =  ; Croatian
+- hr  =   Croatian
 
-- hu  ;  ; =  ; Hungarian
+- hu  =   Hungarian
 
-- it  ;  ; =  ; Italian
+- it  =   Italian
 
-- ja  ;  ; =  ; Japanese
+- ja  =   Japanese
 
-- kk  ;  ; =  ; Kazakh
+- kk  =   Kazakh
 
-- ko  ;  ; =  ; Korean
+- ko  =   Korean
 
-- no  ;  ; =  ; Norwegian
+- no  =   Norwegian
 
-- pl  ;  ; =  ; Polish  
+- pl  =   Polish  
 
-- pt  ;  ; =  ; Portuguese
+- pt  =   Portuguese
 
-- pt_BR =  ; Brazilian Portuguese
+- pt_BR =   Brazilian Portuguese
 
-- ro  ;  ; =  ; Romanian
+- ro  =   Romanian
 
-- ru  ;  ; =  ; Russian
+- ru  =   Russian
 
-- sk  ;  ; =  ; Slovak
+- sk  =   Slovak
 
-- sl  ;  ; =  ; Slovenian
+- sl  =   Slovenian
 
-- es  ;  ; =  ; Spanish
+- es  =   Spanish
 
-- zh  ;  ; =  ; Simplified Chinese
+- zh  =   Simplified Chinese
 
-- zh_TW =  ; Traditional Chinese
+- zh_TW =   Traditional Chinese
 
-- sv  ;  ; =  ; Swedish
+- sv  =   Swedish
 
-- th  ;  ; =  ; Thai
+- th  =   Thai
 
-- tr  ;  ; =  ; Turkish
+- tr  =   Turkish
 
-- uk  ;  ; =  ; Ukrainian
+- uk  =   Ukrainian
 
 HCL Digital Experience uses the *ISO 639 Codes for the Representation of Names of Languages* to represent localized resources. The names for directories containing language-dependent resources follow the ISO 639 naming convention, for more information see [Directory structure](../../../../guide_me/wpsdirstr.md).
 
