@@ -135,6 +135,7 @@ After you install your web experience, a default file-based repository is your a
 
     -   Click **Download Files** to run the steps remotely.
     -   Click **Run All Steps** to run the steps locally.
+    
 8.  Log in to HCL Portal to verify that you have a working portal server.
 
 
