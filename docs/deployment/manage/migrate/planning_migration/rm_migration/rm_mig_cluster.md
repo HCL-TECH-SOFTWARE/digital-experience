@@ -48,7 +48,7 @@ Start the Configuration Wizard to migrate data, applications, databases, propert
     |Administrator password| |
     |Soap port| |
 
-2.  To get the latest updates for the wizard, apply the most recent cumulative fix. For more information about applying the latest fix pack, Visit *Combined cumulative fix strategy* for more topic information.
+2.  To get the latest updates for the wizard, apply the most recent cumulative fix. For more information about applying the latest fix pack, Visit [Apply Combined Cumulative Fix](../../../../deployment/install/traditional/cf_install/index.md) for more information for more topic information.
 
     **Note:** Skip this step, if you have the most recent fix pack applied.
 

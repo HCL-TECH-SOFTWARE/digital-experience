@@ -1,4 +1,7 @@
-# Inline item creation with authoring tool components
+---
+title: Inline Item Creation 
+---
+# Inline Item Creation with Authoring Tool Components
 
 Inline item creation can be enabled for authoring tool components so that users can quickly create a new content item without having to access the authoring interface.
 

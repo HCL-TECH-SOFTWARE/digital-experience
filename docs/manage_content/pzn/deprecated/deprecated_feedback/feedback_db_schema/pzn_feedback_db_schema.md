@@ -10,20 +10,13 @@ For instance, you can use the data in the Feedback database schema to:
 -   Integrate OnLine Analytical Processing \(OLAP\) tools.
 -   Create your own data integration tools.
 
--   **[Feedback schema tables](../pzn/pzn_feedback_schema_tables.md)**  
+-   **[Feedback schema tables](pzn_feedback_schema_tables.md)**  
 Learn about the feedback schema tables and the fields or columns they contain.
--   **[Key value pairs](../pzn/pzn_key_value_pairs.md)**  
-The additional information passed by rule logging events and certain bean logging events is logged to the Feedback database in the form of key value pairs.
--   **[Feedback schema tables](../pzn/pzn_feedback_schema_tables.md)**  
-Learn about the feedback schema tables and the fields or columns they contain.
--   **[Key value pairs](../pzn/pzn_key_value_pairs.md)**  
+-   **[Key value pairs](pzn_key_value_pairs.md)**  
 The additional information passed by rule logging events and certain bean logging events is logged to the Feedback database in the form of key value pairs.
 
 
-**Related information**  
-
-
-[FeedbackListener](../pzn/pzn_feedbacklistener.md)
-
-[Reports](../pzn/pzn_reports.md)
+???+ info "Related information:"
+    - [FeedbackListener](../feedback_and_analytics/listeners_and_persistence/pzn_feedbacklistener.md)
+    - [Reports](../feedback_analytics_cfg/pzn_reports.md)
 

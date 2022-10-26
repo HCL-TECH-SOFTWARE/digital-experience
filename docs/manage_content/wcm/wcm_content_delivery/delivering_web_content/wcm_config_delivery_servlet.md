@@ -19,26 +19,8 @@ Non-ascii characters cannot be used in the query string section of URLs. For thi
 
 |Service option|Details|
 |--------------|-------|
-|`srv=cmpnt`|This option retrieves a component either from the component library or from a site area or content item. You must also specify the following:-   **`source=`**
-
-This determines where the component is being sourced from. This is either:
-
-    -   library
-    -   sitearea
-    -   content
--   **`cmpntname=`componentname**
-
-This is the name of the component being retrieved.
-
-
-|
-|`srv=page`|This retrieves a content item. As srv=page is returned as default, this can be omitted from the URL.The presentation template to use when displaying this content is specified by adding:
-
-```
-presentationtemplate=library/presentationtemplatename
-```
-
-|
+|`srv=cmpnt`|This option retrieves a component either from the component library or from a site area or content item. You must also specify the following:-  <br> **`source=`** <br> This determines where the component is being sourced from. This is either: <br>-   library <br>-   sitearea <br>-   content <br> **`cmpntname=`componentname** <br>This is the name of the component being retrieved.|
+|`srv=page`|This retrieves a content item. As srv=page is returned as default, this can be omitted from the URL.The presentation template to use when displaying this content is specified by adding: <br> \``` <br> presentationtemplate=library/presentationtemplatename <br>\ ```|
 
 ## Examples:
 

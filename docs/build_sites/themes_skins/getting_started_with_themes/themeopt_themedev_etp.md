@@ -26,9 +26,11 @@ The General pane includes basic and commonly modified theme properties.
 
     The layout that is used for any page that does not have a specified layout. You can change the default layout from a list of available layouts for the selected theme.
 
-    **Note:** If you select Custom Layout, you must provide more input before you can use the layout. The additional input can be used to specify the URL for a layout that is not included in the Default layout list. The encoded version of this URL can be specified in the Metadata pane.
+    !!! note
+        If you select Custom Layout, you must provide more input before you can use the layout. The additional input can be used to specify the URL for a layout that is not included in the Default layout list. The encoded version of this URL can be specified in the Metadata pane.
 
-    **Tip:** When you click **Create** \> **Page** from the toolbar, the layout that is embedded in the selected page template supersedes the default page layout that is referenced by the theme. To change the layout, click **Page** \> **Layout** from the toolbar and choose another available layout for the theme.
+    !!! tip
+        When you click **Create** \> **Page** from the toolbar, the layout that is embedded in the selected page template supersedes the default page layout that is referenced by the theme. To change the layout, click **Page** \> **Layout** from the toolbar and choose another available layout for the theme.
 
 -   **Default profile**
 
@@ -123,7 +125,8 @@ When you click **Edit this skin** or expand the Skins menu and click on an avail
 
         URI to the folder that contains the static content of the skin. This value is required, and the URI must be valid. The static content of the skin is not affected when you change this value. If you are creating a new skin, the skin points to the following location: dav:fs-type1/themes/yournewtheme/skins/My New Skin/. You must change the location of the new skin to a unique location in WebDAV in the skins directory and move its static content to the new specified location; for example, dav:fs-type1/themes/yournewtheme/skins/My New Skin 1/. If you are modifying an existing skin, you must move its static content to the new specified location.
 
-        **Note:** You must manually create the static content for the new skin. Learn more about how to [Create a theme-scoped skin](themeopt_cust_skintheme.md#).
+        !!! note
+            You must manually create the static content for the new skin. Learn more about how to [Create a theme-scoped skin](../customizing_theme/skins/creating_skin/themescoped_skin/index.md).
 
 
 

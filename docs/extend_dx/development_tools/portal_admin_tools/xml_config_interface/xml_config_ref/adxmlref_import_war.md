@@ -17,8 +17,6 @@ The WAR files are not used in the running portal. However, when you process the 
 An XML export request does not create any archive files that might be required. Instead, it only creates pseudo-references in the form of file URLs that rely on the assumption that the file resides in the /installableApps/ sub-directory of the portal installation. If these assumptions are not met, an exported portal configuration cannot be successfully re-created without editing the generated URLs manually. A back up of a portal configuration requires that the WAR files required for redeployment are saved in addition to the XML export.
 
 
-**Related information**  
-
-
-[Types of portal resources](../admin-system/adxmlref_resrc_types.md)
+???+ info "Related information"
+        -       [Types of portal resources](../.././../portal_admin_tools/xml_config_interface/xml_config_ref/types_portal_resources/adxmlref_resrc_types.md)
 

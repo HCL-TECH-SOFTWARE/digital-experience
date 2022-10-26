@@ -12,7 +12,8 @@ These steps add a new style to the Styles tab of the site toolbar.
 
     For example, ./custom/custom.css.
 
-    **Note:** Best practice is to create a minified custom.css and human readable custom.css.uncompressed.css for debugging purposes.
+    !!! note
+        Best practice is to create a minified custom.css and human readable custom.css.uncompressed.css for debugging purposes.
 
 2.  Connect to the fs-type1 WebDAV entry point, http://server:port/wps/mycontenthandler/dav/fs-type1/.
 
@@ -44,8 +45,6 @@ These steps add a new style to the Styles tab of the site toolbar.
 
 
 
-**Related information**  
-
-
-[Creating new styles or layouts by using a JSON file](../rwd/rwd_add_layout_outside.md)
+???+ info "Related information:"
+    - [Creating new styles or layouts by using a JSON file](../../../create_sites/site_prep_content_author/prep_site_toolbar/customizing_page_creation_editing/rwd_add_layout_outside.md)
 

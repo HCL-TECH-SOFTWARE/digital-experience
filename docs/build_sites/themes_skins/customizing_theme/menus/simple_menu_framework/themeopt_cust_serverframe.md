@@ -28,7 +28,7 @@ HCL Portal provides three ready-to-use menu definition files with the Portal 8.5
 
 These files exist in WebDAV, under a `menuDefinitions` directory within the root for the theme root. The root is set in theme metadata under the metadata entry name `com.ibm.portal.theme.template.ref`. Other files in that directory are JSON syntax but are not used by the JSON menu framework
 
-![Screen capture of theme root in WebDAV](../images/themeopt_menuframe_80.jpg)
+![Screen capture of theme root in WebDAV](../../../../../images/themeopt_menuframe_80.jpg)
 
 **New starting in version 8.0.0.1:** It is possible to name a menu ID \(the specific menu name after the `?uri=menu:` in the request\) which does not exist. Before 8.0.0.1, this menuID would result in an error message about an invalid or non-existent menu name being requested. In 8.0.0.1 and later, this menuID is treated as though a menu file with that name did exist, with the contents being an empty array \("\[ \]"\). A menu feed response is then generated that consists only of processing of the dynamic menu contributions or JSON subcontributions for the current theme profile, which are tagged with a `ref-id` matching the menu name on the request.
 
@@ -58,7 +58,8 @@ The JSON syntax of a menu definition file consists of an array of JSON objects, 
 
 You can add comments in this file by using a portal-specific extension to JSON syntax.
 
-**Note:** The minimum valid JSON menu definition file consists of an opening and closing array bracket \(\[\]\). An empty file results in an illegal syntax exception.
+!!! note
+    The minimum valid JSON menu definition file consists of an opening and closing array bracket \(\[\]\). An empty file results in an illegal syntax exception.
 
 The final object in the array does not have a comma between its curly brace and the ending array closing bracket.
 
@@ -70,7 +71,8 @@ Each object consists of multiple comma-separated JSON members, each of which has
 
 Each menu item definition must have a `type` entry, which defines that particular menu entry item.
 
-**Important:** All entry names are case-sensitive.
+!!! important
+    All entry names are case-sensitive.
 
 The following menu item names and values are acceptable values for the type entry.
 
@@ -321,12 +323,8 @@ In HCL Portal version 8.0.0.1 and later, the JSON menu framework accepts one or 
 The `<menu name>` values from these WP ConfigService settings are matched against the value from the `"?uri=menu:<menu name>"` query parameter on the incoming request for a menu. The comparison of the menu names from the WP ConfigService to the received request for a menu is case-sensitive.
 
 
-**Related information**  
-
-
-[Defining theme modules](../dev-theme/themeopt_mod_register.md)
-
-[Dynamically extending an existing menu item from a module](../rwd/rwd_add_menu_module.md)
-
-[Introducing JSON](https://www.json.org/json-en.html)
+???+ info "Related information:"
+    - [Defining theme modules](../../../the_module_framework/writing_module/themeopt_mod_register.md)
+    - [Dynamically extending an existing menu item from a module](../../../the_module_framework/writing_module/rwd_add_menu_module.md)
+    - [Introducing JSON](https://www.json.org/json-en.html)
 

@@ -12,6 +12,6 @@ The Referrer application object supports the following search engines:
 -   Ask
 -   Bing
 
--   **[Create a visibility rule that uses referral attributes](../contarget/targeting_referrer_example.md)**  
+-   **[Create a visibility rule that uses referral attributes](targeting_referrer_example.md)**  
 Learn how to create the Referrer application object by using a visibility rule for your HCL Digital Experience portal website.
 

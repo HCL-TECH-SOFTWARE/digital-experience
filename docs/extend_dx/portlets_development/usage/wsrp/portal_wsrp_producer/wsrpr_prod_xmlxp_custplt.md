@@ -9,28 +9,20 @@ Here is an example XML script for exporting all customized WSRP portlet instance
 ```
 <request
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="PortalConfig\_8.5.0.xsd"
+    xsi:noNamespaceSchemaLocation="PortalConfig_8.5.0.xsd"
     type="export">
 
     <!-- Sample for exporting the customized portlet instances of a WSRP Producer -->
     <portal action="locate">
     
-        **<wsrp-customized-portletinstance objectid="\*" action="export"/\>**
+        **<wsrp-customized-portletinstance objectid="*" action="export"/>**
 
     </portal>
 </request>
 
 ```
 
-
-**Previous topic:**[Providing WSRP services as a Producer](../admin-system/wsrpt_prod_prvd_ws.md)
-
-**Next topic:**[Changing the WSRP Producer context root](../admin-system/wsrpt_chg_prod_uri.md)
-
-**Related information**  
-
-
-[Working with the XML configuration interface](../admin-system/adxmltsk.md)
-
-[The XML configuration interface](../admin-system/admxmlai.md)
+???+ info "Related information"  
+    -   [Working with the XML configuration interface](../../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
+    -   [The XML configuration interface](../../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
 

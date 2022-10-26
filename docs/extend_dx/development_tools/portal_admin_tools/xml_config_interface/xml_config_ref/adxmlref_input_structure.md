@@ -10,7 +10,7 @@ The main level structure of an XML request or response is always as follows:
    <request
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:noNamespaceSchemaLocation="PortalConfig\_8.5.0.xsd"
-    type="export\|update"> 
+    type="export|update"> 
       <portal . . . >
       definition of configuration parts to be exported or updated
       </portal>
@@ -21,19 +21,15 @@ The main level structure of an XML request or response is always as follows:
 
 ```
 
-The main request element specifies the XML schema used by the XML configuration interface. You must always use the schema reference that is shown in the example, that is a reference with no namespace to the schema `PortalConfig\_8.5.0.xsd`. All XML requests must conform to this schema. For your reference, you can find the schema declaration in the JAR file wp.xml.jar under the location `com/ibm/wps/command/xml/PortalConfig\_8.5.0.xsd`. The JAR file wp.xml.jar is located under the following directory:
+The main request element specifies the XML schema used by the XML configuration interface. You must always use the schema reference that is shown in the example, that is a reference with no namespace to the schema `PortalConfig_8.5.0.xsd`. All XML requests must conform to this schema. For your reference, you can find the schema declaration in the JAR file wp.xml.jar under the location `com/ibm/wps/command/xml/PortalConfig_8.5.0.xsd`. The JAR file wp.xml.jar is located under the following directory:
 
--   **For UNIX™Linux™:** `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/base/wp.xml/shared/app`
--   **For z/OS®:** `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/base/wp.xml/shared/app`
--   **For IBM® i:** `[PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/base/wp.xml/shared/app`
--   **For Windows™:** `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)\base\wp.xml\shared\app`
+-   **For UNIX™Linux™:** PortalServer_root/base/wp.xml/shared/app
+-   **For Windows™:** PortalServer_root\base\wp.xml\shared\app
 
 All other XML sample files are located in the following directory:
 
--   **For UNIXLinux:** `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/xml-samples`
--   **For z/OS:** `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/xml-samples`
--   **For IBM i:** `[PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_usr)/doc/xml-samples`
--   **For Windows:** `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)\doc\xml-samples`
+-   **For UNIXLinux:** PortalServer_root/doc/xml-samples
+-   **For Windows:** PortalServer_root\doc\xml-samples
 
 Before you send requests to the portal, you can verify them against this schema using a suitable editor or parser to ensure syntactic correctness. The schema also contains annotations that give detailed information on the meaning and possible values of all configuration entries.
 
@@ -48,7 +44,7 @@ The simplest request that you can send to a server is the following:
 ```
    <?xml version="1.0" encoding="UTF-8"?>
       <request xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-         xsi:noNamespaceSchemaLocation="PortalConfig\_8.5.0.xsd"
+         xsi:noNamespaceSchemaLocation="PortalConfig_8.5.0.xsd"
             type="export"> 
          <portal action="export"/>
       </request>
@@ -60,8 +56,6 @@ This request exports the entire configuration of the portal. You can look at the
 Additional to the `export` and `update` request types, a third request type `export-orphaned-data` is available for the special scenario of preparing the deletion of orphaned data.
 
 
-**Related information**  
-
-
-[Transferring portal configuration data by using the XML configuration interface](../admin-system/adxmltsk_use.md)
+???+ info "Related information" 
+   -  [Transferring portal configuration data by using the XML configuration interface](../../../portal_admin_tools/xml_config_interface/working_xml_config_interface/using_xml_config_cmd_line/transfer_portal_cfg_using_xml_config_int/index.md)
 

@@ -2,7 +2,7 @@
 
 HCL Connections use the common Directory Services to enable directory lookup from HCL Connections in the HCL Portal environment.
 
-To configure the common Directory Services to work with your security configuration, follow the steps that are provided in the HCL Connections Document.
+To configure the common Directory Services to work with your security configuration, follow the steps that are provided in the HCL Connections Documentation.
 
 -   **Documentation resource:**
 

@@ -1,6 +1,6 @@
 # Locale-specific attributes in portlet bean
 
-Portlets and portlet applications have the following locale-specific attributes. All attributes are optional. You can query the list of locales for which attributes are defined by using the list command \(List valued attributes\).
+Portlets and portlet applications have the following locale-specific attributes. All attributes are optional. You can query the list of locales for which attributes are defined by using the list command (List valued attributes).
 
 -   title
 -   shorttitle

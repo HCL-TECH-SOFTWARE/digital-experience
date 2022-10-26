@@ -3,7 +3,7 @@ id: wcm_dev_elements_menu_search
 title: Defining menu element search properties
 ---
 
-
+# Menu element design examples
 
 
 Specify the search criteria to be used when you generate the menu element. You can limit the search according to the properties of content items, including authoring templates, site areas, categories, and keywords.
@@ -89,7 +89,8 @@ Menus do not display search results if you select a search criteria but do not e
         -   Select the categories that you would like restrict the search to. Only the selected categories that also are found in the portlet-defined, user-defined, or content-defined categories are used in the search.
         -   Enter a query string parameter to search for. For example, if you entered `myquery` in this field, a menu that is displayed on a page whose URL contained a search query `?myquery=library1/shoes` would display content that is profiled with a category named `shoes` from the library named `library1`. If no library is specified in the original URL the library of the current content item is used, and if that cannot be resolved the default library that is specified in the `WCM WCMConfigService` service is used.
 
-            **Note:** If a category exists in more than one taxonomy, only the first found category is used by the search query. You cannot specify a taxonomy name in the search query. Rename one of the categories to ensure that the search query uses the correct category.
+            !!!note
+                If a category exists in more than one taxonomy, only the first found category is used by the search query. You cannot specify a taxonomy name in the search query. Rename one of the categories to ensure that the search query uses the correct category.
 
             The query string can also be set in the request attributes, for example by using this tag:
 

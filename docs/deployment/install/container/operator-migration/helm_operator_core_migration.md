@@ -1,4 +1,4 @@
-# Migrate the Core profile
+# Migrate the Core Profile
 
 This section shows the steps to migrate your Core profile. You can create a backup of the profile and restore it later in the Helm deployment.
 

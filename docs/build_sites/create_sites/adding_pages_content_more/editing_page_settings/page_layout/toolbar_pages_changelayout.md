@@ -4,8 +4,6 @@ title: Changing page layout
 ---
 
 
-
-
 You can select a different page layout from a list of predefined layouts.
 
 To help you anticipate how the layout change renders on different devices, each layout option provides three thumbnail views: desktop computer, tablet, and mobile device.

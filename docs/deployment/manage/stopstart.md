@@ -3,33 +3,31 @@
 Various installation and configuration tasks require you to start and stop IBM WebSphere Application Server and the HCL Digital Experience application servers, deployment managers, and node agents.
 
 !!!note
-    Run the following command if you have a clustered environment or you renamed the HCL Portal server as `HCL Portal and HCL Web Content Manager`:<br> -   AIX, HP-UX, Linux, and Solaris: `./startServer.sh HCL Portal and HCL Web Content Manager`<br>-   Windows: `startServer.bat HCL Portal and HCL Web Content Manager`<br>-   IBM i: `startServer HCL Portal and HCL Web Content Manager`<br>-   z/OS: `./startServer.sh HCL Portal and HCL Web Content Manager`
+    Run the following command if you have a clustered environment or you renamed the HCL Portal server as `HCL Portal and HCL Web Content Manager`: <br> -   AIX and Linux: `./startServer.sh HCL Portal and HCL Web Content Manager` <br> -   Windows: `startServer.bat HCL Portal and HCL Web Content Manager`
 
 1.  Open a command prompt and change to the following directory:
     
     !!!note
-        In a clustered environment, use the `dmgr_profile_root` directory and not the `wp_profile_root` directory.
+        In a clustered environment, use the dmgr_profile_root directory and not the wp_profile_root directory.
     
     -   Windows™: wp_profile_root\bin
-    -   AIX® HP-UX Linux™ Solaris: wp_profile_root/bin
-    -   IBM® i: wp_profile_root/bin
-    -   z/OS®: wp_profile_root/bin
+    -   AIX®, Linux™: wp_profile_root/bin
 
 2.  Complete the following steps to start the servers, deployment managers, and node agents
 
     |Server|Steps|
     |------|-----|
-    |Deployment manager|Enter the following command: <br>   -   AIX, HP-UX, Linux, and Solaris: `./startManager.sh`<br> -   Windows: `startManager.bat`<br> -   IBM i: `startManager`<br> -   z/OS: `./startManager.sh`|
-    |Node agent|Enter the following command:  <br>  -   AIX, HP-UX, Linux, and Solaris: `./startNode.sh`<br> -   Windows: `startNode.bat` <br> -   IBM i: `startNode`<br> -   z/OS: `./startNode.sh`|
-    |**HCL Portal server**|Enter the following command: <br> -   AIX, HP-UX, Linux, and Solaris: `./startServer.sh HCL Portal and HCL Web Content Manager` <br> -   Windows: `startServer.bat HCL Portal and HCL Web Content Manager`<br> -   IBM i: `startServer HCL Portal and HCL Web Content Manager`<br> -   z/OS: `./startServer.sh HCL Portal and HCL Web Content Manager`|
+    |Deployment manager|Enter the following command: <br>   -   AIX and Linux: `./startManager.sh`<br> -   Windows: `startManager.bat`|
+    |Node agent|Enter the following command:  <br>  -   AIX and Linux: `./startNode.sh`<br> -   Windows: `startNode.bat`|
+    |**HCL Portal server**|Enter the following command: <br> -   AIX and Linux: `./startServer.sh HCL Portal and HCL Web Content Manager` <br> -   Windows: `startServer.bat HCL Portal and HCL Web Content Manager`|
 
 3.  Complete the following steps to stop the servers, deployment managers, and node agents:
 
     |Server|Steps|
     |------|-----|
-    |**HCL Portal server**|Enter the following command:<br> -   AIX, HP-UX, Linux, and Solaris: `./stopServer.sh HCL Portal and HCL Web Content Manager`<br> -   Windows: `stopServer.bat HCL Portal and HCL Web Content Manager`<br> -   IBM i: `stopServer HCL Portal and HCL Web Content Manager`<br> -   z/OS: `./stopServer.sh HCL Portal and HCL Web Content Manager`|
-    |Node agent|Enter the following command:  <br> -   AIX, HP-UX, Linux, and Solaris: `./stopNode.sh`<br> -   Windows: `stopNode.bat`<br> -   IBM i: `stopNode`<br> -   z/OS: `./stopNode.sh`|
-    |Deployment manager|Enter the following command: <br> -   AIX, HP-UX, Linux, and Solaris: `./stopManager.sh`<br>  -   Windows: `stopManager.bat`<br> -   IBM i: `stopManager`<br> -   z/OS: .`/stopManager.sh`|
+    |**HCL Portal server**|Enter the following command:<br> -   AIX and Linux: `./stopServer.sh HCL Portal and HCL Web Content Manager`<br> -   Windows: `stopServer.bat HCL Portal and HCL Web Content Manager`|
+    |Node agent|Enter the following command:  <br> -   AIX and Linux: `./stopNode.sh`<br> -   Windows: `stopNode.bat`|
+    |Deployment manager|Enter the following command: <br> -   AIX and Linux: `./stopManager.sh`<br>  -   Windows: `stopManager.bat`|
 
 4.  In a clustered environment, you can use the deployment manager WebSphere® Integrated Solutions Console to stop and start the application servers that are managed by the deployment manager:
 

@@ -63,14 +63,15 @@ To create a project, use the create method.
     ```
 
 
-**Note:** If you create a project with the Portal Scripting Interface, the project is not listed with the recent projects in the project menu.
+!!!note
+  If you create a project with the Portal Scripting Interface, the project is not listed with the recent projects in the project menu.
 
 ## Delete projects
 
 To delete a project, use the delete method.
 
--   Jacl syntax: `$Project delete "project\_name"`
--   Jython syntax: `Project.delete("project\_name")`
+-   Jacl syntax: `$Project delete "project_name"`
+-   Jython syntax: `Project.delete("project_name")`
 
 -   **Jacl example:**
 
@@ -91,8 +92,8 @@ For commands that you want to run within a project, use the setproject method of
 
 To set the active project, you must establish a user session with the portal by using the login command of the Portal bean.
 
--   Jacl syntax: `$Project setproject "project\_name"`
--   Jython syntax: `Portal.setproject("project\_name")`
+-   Jacl syntax: `$Project setproject "project_name"`
+-   Jython syntax: `Portal.setproject("project_name")`
 
 -   **Jacl example:**
 
@@ -111,7 +112,7 @@ To set the active project, you must establish a user session with the portal by 
 
 Retrieve project details with the details method. This method returns the following information about the project:
 
--   Universally Unique Identifier \(UUID\)
+-   Universally Unique Identifier (UUID)
 -   State
 -   Name
 -   Title
@@ -122,8 +123,8 @@ Retrieve project details with the details method. This method returns the follow
 
 Syntax:
 
--   Jacl syntax: `$Project details "project\_name"`
--   Jython syntax: `Project.details("project\_name")`
+-   Jacl syntax: `$Project details "project_name"`
+-   Jython syntax: `Project.details("project_name")`
 
 -   **Jacl example:**
 
@@ -191,8 +192,8 @@ If any project attributes are translated, such as the title or description, you 
 
 Syntax:
 
--   Jacl syntax: `$Project nlsget "project\_name" attribute\_parameter [locale]`
--   Jython syntax: `Project.nlsget("project\_name","attribute\_parameter"[,"locale"])`
+-   Jacl syntax: `$Project nlsget "project_name" attribute_parameter [locale]`
+-   Jython syntax: `Project.nlsget("project_name","attribute_parameter"[,"locale"])`
 
 -   **Jacl example:**
 
@@ -216,7 +217,7 @@ If you do not specify a value for the locale parameter, the currently selected l
 To submit a project for review, use the submitforreview method. The project needs to be in active state, and all contained documents need to be in publish, pending, or deleted state. When you submit a project for review, the project moves into the review state.
 
 -   Jacl syntax: `$Project submitforreview "project_name"`
--   Jython syntax: `Project.submitforreview("project\_name")`
+-   Jython syntax: `Project.submitforreview("project_name")`
 
 -   **Jacl example:**
 
@@ -266,7 +267,7 @@ To submit a project for review, use the submitforreview method. The project need
 To withdraw a project from review, use the withdrawfromreview method. The project needs to be in review state. When you withdraw a project from review, the project moves into the active state.
 
 -   Jacl syntax: `$Project withdrawfromreview "project_name"`
--   Jython syntax: `Project.withdrawfromreview("project\_name")`
+-   Jython syntax: `Project.withdrawfromreview("project_name")`
 
 -   **Jacl example:**
 
@@ -336,15 +337,15 @@ The command approves only the project. The drafts in the project need to be appr
 -   Jacl syntax:
 
     ```
-    $Project approve "project\_name"
-    $Project approve "project\_name" "comment"
+    $Project approve "project_name"
+    $Project approve "project_name" "comment"
     ```
 
 -   Jython syntax:
 
     ```
-    Project.approve("project\_name")
-    Project.approve("project\_name", "comment")
+    Project.approve("project_name")
+    Project.approve("project_name", "comment")
     ```
 
 
@@ -489,8 +490,8 @@ To decline the drafts in a project, use the decline method. Additional to the pr
 
 To approve all documents of a project, use the approvedocuments method. It approves all Web Content Manager items that are parts of a workflow.
 
--   Jacl syntax: `$Project approvedocuments project\_name`
--   Jython syntax: `Project.approvedocuments("project\_name")`
+-   Jacl syntax: `$Project approvedocuments project_name`
+-   Jython syntax: `Project.approvedocuments("project_name")`
 
 -   **Jacl example:**
 
@@ -537,8 +538,8 @@ To approve all documents of a project, use the approvedocuments method. It appro
 
 To decline all documents of a project, use the declinedocuments method. This method declines all Web Content Manager items that are parts of a workflow.
 
--   Jacl syntax: `$Project declinedocuments project\_name`
--   Jython syntax: `Project.declinedocuments("project\_name")`
+-   Jacl syntax: `$Project declinedocuments project_name`
+-   Jython syntax: `Project.declinedocuments("project_name")`
 
 -   **Jacl example:**
 
@@ -583,8 +584,8 @@ To decline all documents of a project, use the declinedocuments method. This met
 
 To publish a project, use the publish method. Before you can publish a project, all items in the project must be approved and the project needs to be in publish pending state.
 
--   Jacl syntax: `$Project publish "project\_name"`
--   Jython syntax: `Project.publish("project\_name")`
+-   Jacl syntax: `$Project publish "project_name"`
+-   Jython syntax: `Project.publish("project_name")`
 
 -   **Jacl example:**
 
@@ -661,7 +662,7 @@ To publish a project, use the publish method. Before you can publish a project, 
 These examples demonstrate a typical command sequence to create a page within a specific project. Each example script performs the following operations:
 
 -   Establishes a user session.
--   Creates a project \(`myproject`\).
+-   Creates a project (`myproject`).
 -   Retrieves the details for the `myproject` project.
 -   Sets the active project to the `myproject` project.
 -   Locates the `Home` page in the portal.
@@ -697,8 +698,6 @@ These examples demonstrate a typical command sequence to create a page within a 
 
 
 
-**Related information**  
-
-
-[Command reference for the Portal Scripting Interface](../admin-system/adpsicrf.md)
+???+ info "Related information"  
+    -   [Command reference for the Portal Scripting Interface](../../../../../extend_dx/development_tools/portal_admin_tools/portal_scripting_interface/command_ref_psi/index.md)
 

@@ -18,7 +18,8 @@ The Social Media Publisher for Web Content Manager is used to manage social medi
 |LinkedIn|Share|None|No|No|Yes|No|
 |Twitter|Tweet|Reshare count|Yes|Yes|Yes|Yes|
 
-**Note:** Page notes have been deprecated by Facebook.
+!!! note
+    Page notes have been deprecated by Facebook.
 
 ## Before you begin
 

@@ -1,4 +1,4 @@
-# Monitor the deployment using metrics
+# Monitor Deployment Using Metrics
 
 This topic outlines the use of standards-based metrics to monitor activity and performance of DX container deployments.
 

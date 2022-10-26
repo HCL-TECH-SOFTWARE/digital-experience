@@ -2,6 +2,7 @@
 
 Depending on your portal environment and your users, you might want to make multilingual content available and searchable in your portal.
 
+<!---
 -   **[Configuring search for multilingual sites](../admin-system/config_search_multi.html)**  
 
 -   **[Language support and multilingual sites](../admin-system/srr_lang_spprt.md)**  
@@ -12,5 +13,5 @@ Global companies might choose to publish content, and offer products or services
 
 **Previous topic:**[Configuring Search Center to search for web content](../wcm/wcm_dev_search_searchcenter.md)
 
-**Next topic:**[Crawling web content with search seedlists](../wcm/wcm_dev_search_seedbase.md)
+**Next topic:**[Crawling web content with search seedlists](../wcm/wcm_dev_search_seedbase.md) --->
 

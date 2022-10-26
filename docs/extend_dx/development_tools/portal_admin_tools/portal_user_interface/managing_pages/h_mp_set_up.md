@@ -3,7 +3,7 @@ id: h_mp_set_up
 title: Configuring the Manage Pages portlet
 ---
 
-
+# Configuring the Manage Pages portlet
 
 
 You can change the number of pages that display on a page and the total number of pages that are listed by default. In addition, you can control whether or not the search option will appear.
@@ -14,7 +14,8 @@ Depending on your access rights, you can configure or edit some the standard fea
 -   If you select **Edit shared settings**, changes affect a particular instance of a portlet on a page and apply to all users who view that instance of the portlet on that page or on pages that are derived from that page.
 -   If you want to make individual changes to the portlet, click **Personalize**.
 
-**Note:** Changes made in **Edit shared settings** override changes made in **Configure**.
+!!!note
+    Changes made in **Edit shared settings** override changes made in **Configure**.
 
 Perform the following steps to make changes:
 
@@ -34,6 +35,7 @@ Perform the following steps to make changes:
 
 -   **Yes**: Displays only first level pages on which a user has Editor roles.
 -   **No**: Displays all first level pages on which a user has User roles.
+
 8.  Click **OK** to apply these settings or **Cancel** to discard the changes you have made. returns to the main panel. You can also return without saving by selecting **Back** from the portlet context menu.
 
 

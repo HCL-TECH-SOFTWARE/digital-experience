@@ -8,7 +8,7 @@ Complete the following steps to determine what mappings exist for a particular a
 
 1.  Open the Deployment Manager WebSphere® Integrated Solutions Console.
 
-2.  Click **Applications** \> **Application Types** \> **WebSphere enterprise applications** in the navigation pane.
+2.  Click **Applications > Application Types > WebSphere enterprise applications** in the navigation pane.
 
 3.  Find and click the required application.
 

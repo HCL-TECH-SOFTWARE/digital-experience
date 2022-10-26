@@ -25,7 +25,6 @@ Plan ahead and apply special care when you modify these properties. There are tw
 
     They are used to override a global setting, for example the size of the cache, for a specific instance of a cache.
 
-
 Changing some or all of these properties can dramatically improve or impair portal performance. Therefore, it is recommended not to change the shared setting for any cache unless the consequences are understood and agreed. If you want to determine the optimal values for the size, lifetime, admit-threshold and replacement properties, monitor the cache properties during the staging phase of your portal installation. Use the Tivoli Performance viewer that is the WebSphere Application Server PMI client \(PMI = Performance Monitoring Interface\) to find the optimal settings for your environment.
 
 The following list is the properties for the Cache Manager Service for both shared and non-shared caches:
@@ -72,15 +71,9 @@ You can set the following additional properties for non-shared caches. \(Setting
 
 For information on the available caches, refer to the *HCL Digital Experience Performance Tuning Guide*.
 
-
 **Related information**  
-
-
-[Configuring the maximum number of items loaded from HCL Connections](../social/soc_rendr_cfg_connct_item_limit.md)
-
-[HCL Digital Experience Performance Tuning Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074411)
-
-[Performance tuning for Integrator for SAP](../admin-system/sap_int_perf_tun.md)
-
-[Shared database domains](../plan/db_domains_shared.md)
+[Configuring the maximum number of items loaded from HCL Connections](../../../../../build_sites/social_rendering/cfg_global_settings_social_rendering/soc_rendr_cfg_connct_item_limit.md)<br>
+[HCL Digital Experience Performance Tuning Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074411)<br>
+[Performance tuning for Integrator for SAP](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_perf_tun.html)<br>
+[Shared database domains](../../../../../get_started/plan_deployment/traditional_deployment/database_consideration/db_domains_shared.md)
 

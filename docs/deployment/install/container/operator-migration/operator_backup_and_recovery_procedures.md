@@ -1,4 +1,4 @@
-# Backup and recovery procedures containerization
+# Backup and Recovery Procedures 
 
 This section shows the deployment architecture and provides the instructions to create and manage backup and recovery of HCL Digital Experience components in containerized DX 9.5 environments.
 
@@ -39,7 +39,7 @@ The following sections describe how the administrators can create and manage bac
 
         -   The entire /opt/HCL/wp_profile directory is backed up.
         
-            In the command line interface, run the following command to back up the Digital Experience 9.5 Persistent volume claim **wp\_profile**:
+            In the command line interface, run the following command to back up the Digital Experience 9.5 Persistent volume claim **wp_profile**:
 
         -   Before running the tar command, ensure that the backup file system that you are using has ~50% free profile.
 
@@ -112,9 +112,9 @@ The following sections describe how the administrators can create and manage bac
     2.  [Volume SnapShots: \(1.17 \[beta\] and later\)](https://kubernetes.io/docs/concepts/storage/volume-snapshots/){:target="_blank"}
     3.  [CSI Volume Cloning](https://kubernetes.io/docs/concepts/storage/volume-pvc-datasource/){:target="_blank"}
     !!!note
-        If either of the methods described in [Step 2]<!-- (#vol_snapshots) --> or [Step 3]<!-- (#vol_pvc_datasource) --> is used, it is important to understand fuzzy backups with the wp\_profile.  A fuzzy backup is a copy of data files or directories that were operating in one state when the backup started, but in a different state by the time the backup completed. In case a volume snapshot or Container Storage Interface \(CSI\) volume cloning approach is used with the `wp_profile`, it is important that the snapshot is taken with the Digital Experience instance in shutdown state to ensure that recovery is performed.
+        If either of the methods described in [Step 2] as Volume Snapshots or [Step 3] as CSI Volume Cloning is used, it is important to understand fuzzy backups with the wp_profile.  A fuzzy backup is a copy of data files or directories that were operating in one state when the backup started, but in a different state by the time the backup completed. In case a volume snapshot or Container Storage Interface (CSI) volume cloning approach is used with the `wp_profile`, it is important that the snapshot is taken with the Digital Experience instance in shutdown state to ensure that recovery is performed.
 
-        HCL Digital Experience has successfully tested the volume snapshot and CSI volume cloning methods with HCL Digital Experience 9.5 container deployments. It is recommended that customers perform the additional testing if they are using options [Step 2]<!-- (#vol_snapshots) --> and [Step 3]<!-- (#vol_pvc_datasource) --> to manage the wp\_profile backup.
+        HCL Digital Experience has successfully tested the volume snapshot and CSI volume cloning methods with HCL Digital Experience 9.5 container deployments. It is recommended that customers perform the additional testing if they are using options Step 2 and Step 3 to manage the wp_profile backup.
 
 <!-- ???info "Related information:"
    - [Install the HCL Digital Experience 9.5 components](../containerization/install_config_cc_dam.md)

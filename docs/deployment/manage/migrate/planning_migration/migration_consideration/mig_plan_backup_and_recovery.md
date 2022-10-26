@@ -12,15 +12,12 @@ When you create a backup and recovery plan, consider these general questions:
 -   How does the scope of your portal deployment affect the backup and recovery strategy? For example, the number of users and the volume and importance of the data that is stored and used in applications affect your decisions about backup and recovery practices.
 -   Will you use IBM Tivoli® Storage Manager or other utility to back up the file system?
 
-**Attention:** Backing up and recovering an HCL Digital Experience installation includes the WebSphere Application Server runtime environment and all applications that are deployed on HCL Portal. However, if applications use remote information sources outside of the HCL Portal databases and the LDAP directory, you need to consider these remote sources. Develop backup and recovery procedures for these remote sources as part of your comprehensive strategy.
+!!!attention
+    Backing up and recovering an HCL Digital Experience installation includes the WebSphere Application Server runtime environment and all applications that are deployed on HCL Portal. However, if applications use remote information sources outside of the HCL Portal databases and the LDAP directory, you need to consider these remote sources. Develop backup and recovery procedures for these remote sources as part of your comprehensive strategy.
 
 
-**Related information**  
-
-
-[Guidelines for Idle Standby clustered deployments](../admin-system/i_wadm_t_bkup_hi_avail.md)
-
-[Backing up files, databases, and the LDAP server\(s\)](../admin-system/i_wadm_t_bkup_winlinux.md)
-
-[Restoring files, databases, and the LDAP server\(s\)](../admin-system/i_wadm_t_restr_winlinux.md)
+???+ info "Related information"  
+    -   [Guidelines for Idle Standby clustered deployments](../../../../../deployment/manage/backup_restore/i_wadm_t_bkup_hi_avail.md)
+    -   [Backing up files, databases, and the LDAP servers](../../../../../deployment/manage/backup_restore/backup_files_db_ldap/index.md)
+    -   [Restoring files, databases, and the LDAP servers](../../../../../deployment/manage/backup_restore/restore_files_db_ldap/index.md)
 

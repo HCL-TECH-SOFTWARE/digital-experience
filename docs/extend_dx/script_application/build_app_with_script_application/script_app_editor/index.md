@@ -22,11 +22,9 @@ Workflow in HCL Web Content Manager is customizable. Your organization can creat
 
 You can build applications with the help of the following tools.
 
--   **[Importing Script Applications](../script-portlet/import-apps.md)**  
+- **[Importing Script Applications](./import-apps.md)**  
 Add the Script Application to a page. Then, import an application.
--   **[Exporting Script Applications](../script-portlet/export-apps.md)**  
+- **[Exporting Script Applications](./export-apps.md)**  
 You can export applications to edit the scripts by using your portal interface.
--   **[CSS best practices](../script-portlet/css_best_practices.md)**  
+- **[CSS best practices](./css_best_practices.md)**  
 If your code uses a map, or another element that has no fixed height, you must give it an explicit height, such as `400px vs 50%`.
-
-

@@ -36,6 +36,20 @@ Perform the following steps to change the administrator password:
 
     3.  Update the user ID and password for the RunAs role mapping for the StartupCheck application.
 
+7. Update the security settings for your search collections.
+
+    1. Go to Portal Adminstration.
+    
+    2. Select **Admistration** \> **Search** \> **Setting** \> **Search Collections**
+
+    3. Go into each colleciion and edit the Content Source.
+
+    4. Choose the Security tab.
+
+    5. Update the password for the already defined security realms. 
+    
+    6. Mkde sure to click Update and then Save. 
+
 
 Additionally, you should also change the password in the wkplc.properties file, located in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
 

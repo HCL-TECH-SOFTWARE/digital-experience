@@ -10,7 +10,7 @@ Jython example:
 # delete all welcome-portlets from all pages of a user
 # see the Authentication section for portal_login and
 portal_logout
-portal_login(user\_ID, password)
+portal_login(user_ID, password)
 for page in Content.search("pages").split():
   Content.select(page)
   for c in Layout.search("control", "commonnamehas",
@@ -101,8 +101,6 @@ portal_logout
 ```
 
 
-**Related information**  
-
-
-[Portal administration tools](../admin-system/admtools.md)
+???+ info "Related information"  
+  - [Portal administration tools](../../../portal_admin_tools/index.md)
 

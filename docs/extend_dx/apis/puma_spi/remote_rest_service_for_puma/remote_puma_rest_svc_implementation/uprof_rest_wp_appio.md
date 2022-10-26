@@ -1,6 +1,6 @@
 # Using ATOM/APP as input and output format
 
-The remote REST service for PUMA uses the ATOM Publishing Protocol \(APP\) as the primary input and output format. It wraps the elements described by the schema document in the remote REST service for PUMA in appropriate ATOM feed or entry documents. Although this is the default input and output format, the client should specify the mime type `application/atom+xml` either in the `mime-type` request parameter or in the accept header. A more detailed description of how the APP maps to the RESTful interface and some examples are given here.
+The remote REST service for PUMA uses the ATOM Publishing Protocol (APP) as the primary input and output format. It wraps the elements described by the schema document in the remote REST service for PUMA in appropriate ATOM feed or entry documents. Although this is the default input and output format, the client should specify the mime type `application/atom+xml` either in the `mime-type` request parameter or in the accept header. A more detailed description of how the APP maps to the RESTful interface and some examples are given here.
 
 For details about the APP refer to the draft for the protocol on the internet.
 

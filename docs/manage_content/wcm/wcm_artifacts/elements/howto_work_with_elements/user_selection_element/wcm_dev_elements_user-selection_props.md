@@ -3,7 +3,7 @@ id: wcm_dev_elements_user-selection_props
 title: Select users
 ---
 
-
+# Select users
 
 
 You use the user selection element to select the user names to store in the component.

@@ -18,16 +18,7 @@ Log in to the portal and use one of the following methods to access the portlet:
 -   After creating a new page, you are directed to the Edit Layout portlet to edit the layout and content of the new page. Other portlets in the Page Customizer are available if you have appropriate access. To create a new page, select **New Page** from the drop-down menu. The drop-down menu for a page is located on the tab for that page.
 -   Navigate to the Manage Pages portlet and click the **Edit Page Layout** icon in the appropriate row.
 
--   **[Locking content on a page](../admin-system/admcustom_lock.md)**  
-Use the Locks portlet to set permissions for moving containers or content, or for deleting portlets. This allows you to lock content to certain locations on a page. Any element on the page, such as a row container, a column container, or a portlet, can be locked or unlocked for many variations that give a user control of what can be modified. On a page where content and layout should be preserved, both can be locked, preventing other users from altering the arrangement of containers or portlets on the page.
--   **[Connections between portlets](../admin-system/admcustom_wires.md)**  
-The Portlet Wiring Tool allows you to configure connections, or wires, between cooperative portlets. Cooperative portlets can exchange information, or properties, with each other through the property broker. Properties are exchanged either by prompting the user with a Click-To-Action menu or automatically using pre-configured wires. As a result, portlets on the page can react in an integrated and unified manner to the user's actions.
--   **[Themes and skins](../admin-system/admcustom_skins.md)**  
-A theme determines the global appearance of a page. The purpose of this is to ensure visual consistency. Themes affect the navigational structure, the banner, the colors and fonts, the available portlet skins, and other visual elements of a page. A skin determines the frame that is displayed around a portlet.
 
-
-**Related information**  
-
-
-[Managing iWidgets in your portal](../admin-system/add_widget.md)
+???+ info "Related information"  
+    -   [Managing iWidgets in your portal](../../../../../../portlets_development/mng_portlets_apps_widgets/managing_iwidgets/index.md)
 

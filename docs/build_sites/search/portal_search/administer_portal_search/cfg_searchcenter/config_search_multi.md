@@ -31,4 +31,3 @@ By default, the Search Center uses the preferred language of the user to analyze
     6.  Click **OK** to activate the changes.
 
 
-

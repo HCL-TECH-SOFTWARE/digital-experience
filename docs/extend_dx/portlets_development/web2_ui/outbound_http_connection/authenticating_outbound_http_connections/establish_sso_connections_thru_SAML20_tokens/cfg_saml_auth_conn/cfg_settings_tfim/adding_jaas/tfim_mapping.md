@@ -1,4 +1,4 @@
-# Tivoli Federated Identity Manager \(TFIM\) mapping for the Java Authentication and Authorization Service \(JAAS\) login module
+# Tivoli Federated Identity Manager (TFIM) mapping for the Java Authentication and Authorization Service \(JAAS\) login module
 
 By default, the JAAS plug-in reads a user's email address from the VMM attribute with the name mail. The JAAS plug-in sets the mail attribute in the security context. If you change the name of the attribute in the security context, update the following mapping rule accordingly.
 
@@ -30,6 +30,4 @@ xmlns:stsuuser="urn:ibm:names:ITFIM:1.0:stsuuser">
         </xsl:template>
 </xsl:stylesheet>
 ```
-
-**Parent topic:**[Adding the Java Authentication and Authorization Service \(JAAS\) login module to the Tivoli Federated Identity Manager \(TFIM\) server](../dev-portlet/add_jaas.md)
 

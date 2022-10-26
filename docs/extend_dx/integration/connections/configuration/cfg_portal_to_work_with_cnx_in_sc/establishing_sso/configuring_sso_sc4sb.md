@@ -1,22 +1,20 @@
-# Configuring single sign-on \(SSO\) for backend calls to HCL Connections in SmartCloud for Social Business
-
-
+# Configuring single sign-on (SSO) for backend calls to HCL Connections in SmartCloud for Social Business
 
 The HCL Connections integration assets use a common infrastructure that is called HTTP Outbound to complete calls to the HCL Connections backend server. Learn about the steps that are required to configure the HTTP outbound component to complete calls to HCL Connections in SmartCloud for Social Business.
 
 If you have the default log level in the WebSphere® Integrated Solutions Console set to `INFO` or lower, an increase in logged informational messages might occur when you establish an HTTP Outbound connection to HCL Connections in SmartCloud for Social Business. To disable the logging of informational messages so that only error and warning messages are logged, complete the following steps:
 
 1.  Log in to the WebSphere Integrated Solutions Console.
-2.  Click **Troubleshooting** \> **Logs and trace** \> **HCL Digital Experience**.
+2.  Click **Troubleshooting > Logs and trace > HCL Digital Experience**.
 3.  Click **Diagnostic trace** in the General Properties section.
 4.  Click **Change log detail levels** in the Additional Properties section.
 5.  Change the log detail level for `org.apache.commons.httpclient.*` to `WARNING` or higher. For example, if you are logging informational messages by default and therefore have `*=info` already specified, change the log detail level to `*=info:org.apache.commons.httpclient.*=WARNING`.
-6.  Click **Apply** \> **OK**.
+6.  Click **Apply > OK**.
 7.  Restart your portal server for the changes to take effect.
 
 1.  Set up a trust association between your portal server and the HCL Connections server by using the SSL certificate. For detailed steps on how to do this, see *Import SSL certificate to set up trust association* in the related links.
 
-2.  Create a policy file that defines the URL and metadata that specifies the location of the Tivoli Federated Identity Manager server and which mapping to use. For complete instructions on how to complete this step, see *Configuration settings for Tivoli Federated Identity Manager \(TFIM\)* in the related links section.
+2.  Create a policy file that defines the URL and metadata that specifies the location of the Tivoli Federated Identity Manager server and which mapping to use. For complete instructions on how to complete this step, see *Configuration settings for Tivoli Federated Identity Manager (TFIM)* in the related links section.
 
     For example:
 
@@ -125,14 +123,16 @@ If you have the default log level in the WebSphere® Integrated Solutions Consol
 
 3.  Push the policy to the HCL policy store by running the update-outbound-http-connection-config task, where XML\_file is the name of the policy file that you created in step 2:
 
-    -   AIX®, HP-UX, Linux™, Solaris: `./ConfigEngine.sh update-outbound-http-connection-config -DConfigFileName=XML\_file -DOutboundProfileType=global`
-    -   IBM® i: `ConfigEngine.sh update-outbound-http-connection-config -DConfigFileName=XML\_file -DOutboundProfileType=global`
+    -   AIX® and Linux™: `./ConfigEngine.sh update-outbound-http-connection-config -DConfigFileName=XML\_file -DOutboundProfileType=global`
     -   Windows™: `ConfigEngine.bat update-outbound-http-connection-config -DConfigFileName=XML\_file -DOutboundProfileType=global`
-    **Note:** A preexisting HCL Connections dynamic policy cannot be used for SmartCloud for Social Business. An error can occur if two policies exist. Verify that there is no value set for the wp.proxy.config.urlreplacement.ibm\_connections\_policy in the WP ConfigService Resource Environment Provider.
+
+    !!! note
+		A preexisting HCL Connections dynamic policy cannot be used for SmartCloud for Social Business. An error can occur if two policies exist. Verify that there is no value set for the wp.proxy.config.urlreplacement.ibm_connections_policy in the WP ConfigService Resource Environment Provider.
 
 4.  Verify the setup by logging in to HCL and then calling the following URL: http://<portalserver\>:<portalserverport\>/wps/myproxy/https/apps.na.collabserv.com/homeppage/web/updates/\#imFollowing/all.
 
-    **Note:** You might need to change apps.na.collabserv.com to match the host name of your environment.
+    !!! note
+		You might need to change apps.na.collabserv.com to match the host name of your environment.
 
     If the setup is correct, Activity Stream markup displays without CSS styling. If the setup is incorrect, one of the following errors might occur:
 
@@ -141,12 +141,8 @@ If you have the default log level in the WebSphere® Integrated Solutions Consol
     If an error occurs, check SystemOut.log for error messages, verify that the policy file is correct, and rerun the task.
 
 
-**Related information**  
-
-
-[Configuration settings for Tivoli Federated Identity Manager \(TFIM\)](outbhttp_auth_est_sso_tfim.md)
-
-[Configuration settings for Active Directory Federation Services \(ADFS\)](outbhttp_auth_est_sso_adfs.md)
-
-[Import SSL certificate to set up trust association](../collab/i_coll_t_enable_lctrust.md)
+???+ info "Related information"
+	- [Configuration settings for Tivoli Federated Identity Manager (TFIM)](../../../../../portlets_development/web2_ui/outbound_http_connection/authenticating_outbound_http_connections/establish_sso_connections_thru_SAML20_tokens/cfg_saml_auth_conn/cfg_settings_tfim/index.md)
+	- [Configuration settings for Active Directory Federation Services (ADFS)](../../../../../portlets_development/web2_ui/outbound_http_connection/authenticating_outbound_http_connections/establish_sso_connections_thru_SAML20_tokens/cfg_saml_auth_conn/cfg_settings_adfs/index.md)
+	- [Import SSL certificate to set up trust association](../../i_coll_t_enable_lctrust.md)
 

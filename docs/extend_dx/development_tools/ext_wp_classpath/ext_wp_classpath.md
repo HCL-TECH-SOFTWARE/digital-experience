@@ -1,4 +1,4 @@
-# Extending DX's class path
+# Extending DX class path
 
 There are several options to add the general code that is not part of an EAR or WAR files.
 
@@ -24,7 +24,7 @@ There are several options to add the general code that is not part of an EAR or 
 
 2.  If you are developing a PAA, include the compressed files in the PAA components/COMPONENTNAME/shared/app or components/COMPONENTNAME/shared/ext directories. The solution installer handles creating the shared libraries for these files.
 
-3.  If you are creating a custom Trust Association Interceptor \(TAI\) or a custom Java Authentication and Authorization Service \(JAAS\) module, place a copy of your jar file\(s\) in the <wp\_profile\>/classes directory, for example, /opt/HCL/wp\_profile/classes/MyCustomTAI.jar.
+3.  If you are creating a custom Trust Association Interceptor (TAI) or a custom Java Authentication and Authorization Service (JAAS) module, place a copy of your jar file(s) in the <wp_profile>/classes directory, for example, /opt/HCL/wp_profile/classes/MyCustomTAI.jar.
 
 
 

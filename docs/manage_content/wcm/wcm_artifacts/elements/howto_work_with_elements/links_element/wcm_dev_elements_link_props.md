@@ -3,7 +3,7 @@ id: wcm_dev_elements_link_props
 title: Selecting a link
 ---
 
-
+# Selecting a link
 
 
 You use the link element to define the item or URL to link to.
@@ -12,7 +12,8 @@ You use the link element to define the item or URL to link to.
 
 2.  To add a link to a URL, either type or paste the URL in the **Type a URL** field.
 
-    **Note:** The inserted URL is rendered relative to the URL of the site area of the currently rendered content item. Internet protocols, such as "`Http://`", must be added at the beginning of the inserted link if an absolute URL is intended to be rendered.
+    !!!note
+        The inserted URL is rendered relative to the URL of the site area of the currently rendered content item. Internet protocols, such as "`Http://`", must be added at the beginning of the inserted link if an absolute URL is intended to be rendered.
 
 3.  To add a link to web content, an image component, a file component, or an existing link component, click **Browse Content**.
 

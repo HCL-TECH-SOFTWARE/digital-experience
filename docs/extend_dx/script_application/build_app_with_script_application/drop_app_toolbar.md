@@ -1,10 +1,15 @@
+---
+title: Add Existing Script Application to a Page
+---
+
 # Adding an existing Script Application from the toolbar
 
 You can add a Script Application to a page directly from the toolbar when a Script Application is created and added to a site area.
 
-**Note:** If you add the Script Application to pages for which you selected the Lightweight profile, you cannot start the portal dialog to use the Edit and Import features. Script Application instances that you created and edited on pages with profiles other than the Lightweight profile or elsewhere can be added to Lightweight profile pages from the Script Applications for runtime use.
+!!!note
+    If you add the Script Application to pages for which you selected the Lightweight profile, you cannot start the portal dialog to use the Edit and Import features. Script Application instances that you created and edited on pages with profiles other than the Lightweight profile or elsewhere can be added to Lightweight profile pages from the Script Applications for runtime use.
 
-The content toolbar can display the applications that were saved there with the Script Application Editor. It can also display the applications that an administrator pushed to the Script Applications Site Area by using the command line application. You must have HCL Portal Version 8.5 to use this tool. For best results, upgrade to combined cumulative fix 05 or later. Updates to the application in a site area are immediately available to references of the application from the toolbar in HCL Portal Version 8.5 with CF05 or later. Earlier versions of HCL Portal create copies of the application from the toolbar, which does not reflect further updates to applications in the site area.
+The content toolbar can display the applications that were saved there with the Script Application Editor. It can also display the applications that an administrator pushed to the Script Applications Site Area by using the command line application. You must have HCL DX Version 8.5 to use this tool. For best results, upgrade to combined cumulative fix 05 or later. Updates to the application in a site area are immediately available to references of the application from the toolbar in HCL DX Version 8.5 with CF05 or later. Earlier versions of HCL DX create copies of the application from the toolbar, which does not reflect further updates to applications in the site area.
 
 1.  Select **Edit mode**.
 
@@ -22,10 +27,5 @@ The content toolbar can display the applications that were saved there with the 
 
 
 
-**Related information**  
-
-
-[Script Application security overview](../script-portlet/security.md)
-
-[Managing web content libraries](../panel_help/wcm_admin_libraries.md)
-
+???+ info "Related information" 
+    - [Script Application security overview](../script_application_security/index.md)

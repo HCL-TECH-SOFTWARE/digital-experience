@@ -1,9 +1,9 @@
 # Developing and managing content
 
 
-
 Use these tools and processes to develop and manage your website.
 
+<!--
 -   **[Previewing as another user](../wcm/wcm_mngpages_preview_changes.md)**  
 You can preview changes to your website without logging out and logging on again as another user. This preview capability is used to quickly verify that users with different access levels see only content that they are authorized to see. You can preview changes as a specific user or as an unauthenticated user.
 -   **[Projects](../wcm/wcm_proj_overview.md)**  
@@ -23,5 +23,5 @@ Learn about the portlets that are provided with HCL.
 -   **[Renditions](../renditions/rend_ovr.md)**  
 Renditions are different versions of an image component or element. Renditions can be thumbnails or smaller versions of an image formatted for mobile devices.
 -   **[Video start and end points](../renditions/rend_cue_points.md)**  
-File components or elements that have a video file that is stored in an HTML5 video format, which includes MP4, webM, or ogg, are stored in Brightcove and have a Brightcove ID.
+File components or elements that have a video file that is stored in an HTML5 video format, which includes MP4, webM, or ogg, are stored in Brightcove and have a Brightcove ID. -->
 

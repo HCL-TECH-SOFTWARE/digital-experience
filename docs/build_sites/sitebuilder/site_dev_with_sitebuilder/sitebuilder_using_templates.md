@@ -52,7 +52,7 @@ Templates are created using a wizard that guides you through a set of properties
 
     For the section template, you can also specify a default location for the new section. You select an anchor page and then specify where the new section is placed relative to the selected anchor page. Section creators can remove pages, change page properties, select a new location, and select additional content.
 
-    By default the content for each page in the Site Builder template will be based on the content from the relevant page template. The user has the option to use their own custom content that will work along side or completely replace the content of a page template. See [Content seeding](sitebuilder_using_content_seeding.md) for further information.
+    By default the content for each page in the Site Builder template will be based on the content from the relevant page template. The user has the option to use their own custom content that will work along side or completely replace the content of a page template. See [Content seeding](../site_dev_with_sitebuilder/creating_sites_using_sitebuilder/sitebuilder_using_content_seeding.md) for further information.
 
 -   **Site Experience**
 

@@ -1,3 +1,7 @@
+---
+title: Troubleshooting
+---
+
 # Troubleshooting the Portal Scripting Interface
 
 The following solutions help solve the troubleshooting issues.

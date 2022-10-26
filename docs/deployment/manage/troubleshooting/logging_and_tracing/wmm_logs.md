@@ -6,7 +6,7 @@ Virtual Member Manager uses the WebSphere® Application Server trace facilities 
 
 1.  Log on to the WebSphere Integrated Solutions Console.
 
-2.  Go to section **Troubleshooting** \> **Logs and Traces** \> **HCL Digital Experience** \> **Diagnostic Trace**.
+2.  Go to section **Troubleshooting > Logs and Traces > HCL Digital Experience > **Diagnostic Trace**.
 
 3.  Ensure the **File** radio button under **Trace Output** is selected.
 
@@ -24,9 +24,7 @@ Virtual Member Manager uses the WebSphere® Application Server trace facilities 
 
 The resulting traces of Virtual Member Manager are written to:
 
--   Windows™: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\logs\\HCL Portal and HCL Web Content Manager\\trace.log
--   AIX® Linux™ Solaris: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/logs/HCL Portal and HCL Web Content Manager/trace.log
--   IBM® i: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/logs/HCL Portal and HCL Web Content Manager/trace.log
--   z/OS®: The resulting traces of Virtual Member Manager are written to the output location you specified as ras\_trace\_outputLocation in the WebSphere Integrated Solutions Console. For more information, refer to [Setting trace controls](https://help.hcltechsw.com/digital-experience/8.5/trouble/adsyslog.html#adsyslog__tra_log).
+-   Windows™: wp_profile_root\logs\HCL Portal and HCL Web Content Manager\trace.log
+-   AIX® and Linux™: wp_profile_root/logs/HCL Portal and HCL Web Content Manager/trace.log
 
 

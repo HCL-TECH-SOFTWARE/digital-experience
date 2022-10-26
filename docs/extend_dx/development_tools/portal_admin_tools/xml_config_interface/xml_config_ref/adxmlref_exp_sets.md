@@ -15,7 +15,7 @@ The XML configuration interface provides two additional features that allow you 
     
     ```
 
--   All first level resources that can take an objectid attribute, such as markup, virtual-resource, user, group, client, event-handler, web-app, theme, skin, content-node, credential-segment and url-mapping-context support the asterisk \( **\*** \) as a wild card symbol that you can use as a value for the object ID. The asterisk can be used as a wild card symbol only with the export and delete actions. Depending on the action with which it is specified, it exports or deletes all resources of the respective type. For example: the following fragment exports the complete client configuration of the portal:
+-   All first level resources that can take an objectid attribute, such as markup, virtual-resource, user, group, client, event-handler, web-app, theme, skin, content-node, credential-segment and url-mapping-context support the asterisk ( * ) as a wild card symbol that you can use as a value for the object ID. The asterisk can be used as a wild card symbol only with the export and delete actions. Depending on the action with which it is specified, it exports or deletes all resources of the respective type. For example: the following fragment exports the complete client configuration of the portal:
 
     ```
     
@@ -24,7 +24,8 @@ The XML configuration interface provides two additional features that allow you 
     ```
 
 
-**Note:** A combination of a partial search string and the asterisk is not valid. The asterisk also has no special meaning if it is used as a value for any other attribute.
+!!!note
+    A combination of a partial search string and the asterisk is not valid. The asterisk also has no special meaning if it is used as a value for any other attribute.
 
 The XML configuration interface offers no other "query" features, that allow you to export resources based on specific criteria. The only other possibility to export a selected subset of resources is to specify all the resources individually with their object IDs or other identifying attributes in your XML input.
 

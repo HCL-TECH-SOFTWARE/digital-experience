@@ -25,12 +25,11 @@ You can add new categories to the site toolbar to organize your applications. Af
 You can also use external URLs to represent categories to organize your portlet entities. The advantage of representing labels, or external URLs, with categories is that administrators can easily add, delete, and modify categories by using the Manage Pages portlet as the administrative user interface. Since categories are labels, or external URLs, they can be assigned localized titles and descriptions, which can be set with the Manage Pages portlet as well.
 -   **[Hiding portlets within Applications palette categories](../admin-system/epc_hide_app_cat.md)**  
 If a portlet has been added to a category by adding it to a page that has been placed under a category label, remove the page it has been added to. Alternatively, if you do not want to delete the page, you can mark it as hidden.
+
 -   **[Modifying and deleting Applications palette categories](../admin-system/epc_mod_del_categories.md)**  
-You can easily modify or delete Applications palette categories.
+You can easily modify or delete Applications palette categories. --->
 
 
-**Related information**  
-
-
-[Site toolbar and Site Manager](../site/site_site_toolbar.md) --->
+???+ info "Related information"
+    - [Site toolbar and Site Manager](../../../authoring_tools/site_site_toolbar.md)
 

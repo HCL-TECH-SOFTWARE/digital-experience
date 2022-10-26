@@ -12,76 +12,36 @@ Use the interactive mode if you want to interact directly and dynamically with t
 
 Before initiating a session in interactive mode, make sure that HCL Digital Experience is running. The portal script client is located in the HCL Portal installation directory:
 
--   AIX®HP-UXLinux™Solaris: `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/bin`
--   IBM i: `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/bin`
--   Windows™: `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\PortalServer\bin`
--   z/OS®: `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/bin`
+-   AIX® and Linux™: wp_profile_root/PortalServer/bin
+-   Windows™: wp_profile_root\PortalServer\bin
 
 Log in using the administrative user ID, and invoke the portal script client using the following commands:
 
--   AIXHP-UXLinuxSolaris: ./wpscript.sh
--   IBM i: wpscript.sh
--   Windows: wpscript.bat
--   z/OS: ./wpscript.sh
+-   AIX and Linux: `./wpscript.sh`
+-   Windows: `wpscript.bat`
 
 The following procedures provide examples:
 
-Before initiating a session in interactive mode, make sure that HCL Portal is running. You can invoke the portal script client using the `wpscript.sh` command from the `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/bin` directory. You must be logged in using the administrative user ID. The following procedures provide examples:
+Before initiating a session in interactive mode, make sure that HCL Portal is running. You can invoke the portal script client using the `wpscript.sh` command from the wp_profile_root/PortalServer/bin directory. You must be logged in using the administrative user ID. The following procedures provide examples:
 
 1.  If WebSphere Application Server security is enabled, specify a user ID and password during login as shown in the following example:
 
-    -   AIXHP-UXLinuxSolaris: ./wpscript.sh -port port\_number -user user\_id -password password
-    -   IBM i: wpscript.sh -port port\_number -user user\_id -password password
-    -   Windows: wpscript.bat -port port\_number -user user\_id -password password
-    -   z/OS: ./wpscript.sh -port port\_number -user user\_id -password password
+    -   AIX and Linux: `./wpscript.sh -port port_number -user user_id -password password`
+    -   Windows: `wpscript.bat -port port_number -user user_id -password password`
+
     The most basic parameters are explained briefly in the following table.
 
     |Parameter|Description|
     |---------|-----------|
-    |-lang|Specifies the language of the script file, command, or an interactive shell. Specify one of the following values for the -lang parameter:
+    |`-lang`|Specifies the language of the script file, command, or an interactive shell. Specify one of the following values for the -lang parameter:<br>-   jacl <br>-   jython <br><br> This parameter is optional and has no default value. This option overrides language determinations that are based on script file names, profile script file names, or the com.ibm.ws.scripting.defaultLang property. <br><br>**Important:** If you do not specify the script language in the command line or as a parameter, and the wsadmin tool cannot determine the script language, an error occurs. If you do not specify the script language as the value for -lang, the wsadmin tool determines the script language as follows:<br>-   If you specify the -f script_file_name argument, the wsadmin tool determines the language from the name of the target script file.<br>-   If you specify the -profile profile_script_name argument, the wsadmin tool determines the language from the name of the profile script.|
+    |`-conntype`|The type of connection that should be established between scripting. Valid connection types include:<br>-   SOAP <br>-   RMI <br>-   NONE <br><br>The default value is SOAP. This parameter is optional. Use the -conntype NONE option to run in local mode. The result is that the scripting client is not connected to a running server. If the connection type NONE is selected, the scripting beans are inactive and cannot be used for administration, with the exception of the help command.|
+    |`-port`|The connection port number. This parameter is optional. The port number depends on values chosen during installation. You can verify the value that is set for the WasSoapPort property in the wkplc.properties file found in the appropriate directory given here:<br> -   AIX and Linux: wp_profile_root/ConfigEngine <br> -   Windows: wp_profile_root\ConfigEngine <br><br>If you are running wpscript on a server that is part of a cell managed by a deployment manager, the port\_number can vary depending on what ports are in use on the system when the deployment manager is created. To verify the value, check the setting for SOAP_CONNECTOR_ADDRESS in serverindex.xml located in the appropriate directory given here:<br>-   AIX and Linux: dmgr_profile_root/config/cells/cell_name/nodes/node_name <br> -   Windows: dmgr_profile_root\config\cells\cell_name\nodes\node_name<br>|
+    |`-user`|The user ID under which you establish the connection. This parameter can be mandatory, depending on your security configuration.|
+    |`-password`|The password for the user ID under which you establish the connection.|
 
-    -   jacl
-    -   jython
- This parameter is optional and has no default value. This option overrides language determinations that are based on script file names, profile script file names, or the com.ibm.ws.scripting.defaultLang property.
-
- **Important:** If you do not specify the script language in the command line or as a parameter, and the wsadmin tool cannot determine the script language, an error occurs. If you do not specify the script language as the value for -lang, the wsadmin tool determines the script language as follows:
-
-    -   If you specify the -f script\_file\_name argument, the wsadmin tool determines the language from the name of the target script file.
-    -   If you specify the -profile profile\_script\_name argument, the wsadmin tool determines the language from the name of the profile script.
-|
-    |-conntype|The type of connection that should be established between scripting. Valid connection types include:
-
-    -   SOAP
-    -   RMI
-    -   NONE
- The default value is SOAP. This parameter is optional. Use the -conntype NONE option to run in local mode. The result is that the scripting client is not connected to a running server. If the connection type NONE is selected, the scripting beans are inactive and cannot be used for administration, with the exception of the help command.
-
-|
-    |-port|The connection port number. This parameter is optional. The port number depends on values chosen during installation. You can verify the value that is set for the WasSoapPort property in the wkplc.properties file found in the appropriate directory given here:
-
-    -   AIXHP-UXLinuxSolaris: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine
-    -   IBM i: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine
-    -   Windows: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine
-If you are running wpscript on a server that is part of a cell managed by a deployment manager, the port\_number can vary depending on what ports are in use on the system when the deployment manager is created. To verify the value, check the setting for SOAP\_CONNECTOR\_ADDRESS in serverindex.xml located in the appropriate directory given here:
-
-    -   AIXHP-UXLinuxSolaris: dmgr\_profile\_root/config/cells/cell\_name/nodes/node\_name
-    -   IBM i: dmgr\_profile\_root/config/cells/cell\_name/nodes/node\_name
-    -   Windows: dmgr\_profile\_root\\config\\cells\\cell\_name\\nodes\\node\_name
-For z/OS: The name of the connection port. This is the SOAP port of the portal server. This parameter is optional. To determine the SOAP port, access the WebSphere Integrated Solutions Console, go to **yourPortalServerName** \> **End Points** \> **SOAP\_CONNECTOR\_ADDRESS**. For example, if you are running wpscript on a server that is part of a cell managed by a deployment manager, the SOAP port might be 10033.
-
-|
-    |-user|The user ID under which you establish the connection. This parameter can be mandatory, depending on your security configuration.
-
-|
-    |-password|The password for the user ID under which you establish the connection.
-
-|
-
-2.  Log on to the portal using one of the following script commands:
-
-    Jython: `Portal.login\("user\_ID", "password"\)`
-
-    JACL: `$Portal login user\_ID password`
+2.  Log on to the portal using one of the following script commands:<br>
+    Jython: `Portal.login("user_ID", "password")`<br>
+    JACL: `$Portal login user_ID password`
 
 3.  Issue portal script commands as required.
 4.  After you have completed all tasks by the portal scripting interface, close and exit the script processor. All changes that you committed are applied to the portal configuration.
@@ -97,19 +57,17 @@ Users who have access permission to perform XML configuration interface requests
 Before using script mode, make sure that HCL Portal is running and a portal script file is available. You must be logged in using the WebSphere administrative user ID. Use the following procedure:
 
 1.  Update the script file with the appropriate credentials, if required.
-2.  Use one of the following commands to launch the script processor tool:
+2.  Use one of the following commands to launch the script processor tool:<br>
 
-    Jython: `wpscript.sh -port port\_number -f script\_file\_name.py`
-
-    JACL: `wpscript.sh -port port\_number -f script\_file\_name.jacl`
+    Jython: `wpscript.sh -port port_number -f script_file_name.py`<br>
+    JACL: `wpscript.sh -port port_number -f script_file_name.jacl`
 
     This initializes the interactive script environment of the portal JACL or Jython script processor.
 
-3.  In the directory `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/bin`, use the following command to launch the script processor tool:
+3.  In the directory wp_profile_root/PortalServer/bin, use the following command to launch the script processor tool:<br>
 
-    Jython: `wpscript.sh -port port\_number -f script\_file\_name.py`
-
-    JACL: `wpscript.sh -port port\_number -f script\_file\_name.jacl`
+    Jython: `wpscript.sh -port port_number -f script_file_name.py`<br>
+    JACL: `wpscript.sh -port port_number -f script_file_name.jacl`
 
     This command initializes the script environment of the portal script processor. You must be logged in at the z/OS console using the WebSphere Application Server administrative user ID.
 
@@ -270,8 +228,8 @@ if { $argc != 2 }  {
 
 The security-sensitive username and password are removed from the script. The modified code expects the user ID and password to be specified as command line arguments, for example:
 
-Jython: wpscript.sh -port port\_number -f testme.py user\_IDpassword  
- JACL:wpscript.sh -port port\_number -f testme.jacl user\_ID password
+Jython: `wpscript.sh -port port_number -f testme.py user_IDpassword`  
+JACL: `wpscript.sh -port port_number -f testme.jacl user_ID password`
 
 ## Run scripting commands in a profile
 
@@ -286,7 +244,7 @@ A profile is a script that runs before the main script, or before entering inter
     # contains log-in procedure on portal with disabled security
     if len(sys.argv) != 2:
        print "invocation syntax: wpscript -f testme.jacl -profile
-    mylogin.py user\_ID password"
+    mylogin.py user_ID password"
        sys.exit(1)
     
     user = argv[0]
@@ -298,7 +256,7 @@ A profile is a script that runs before the main script, or before entering inter
 
     ```
     if len(sys.argv) != 2:
-       print "invocation syntax: wpscript testme.py user\_ID password"
+       print "invocation syntax: wpscript testme.py user_ID password"
        sys.exit(1)
     
     user = argv[0]
@@ -306,7 +264,7 @@ A profile is a script that runs before the main script, or before entering inter
     Portal.login(user, pwd)
     ```
 
-    To invoke `mylogin.py`, enter the following command: wpscript.sh -port port\_number -profile mylogin.py -f testme.py user\_ID password
+    To invoke `mylogin.py`, enter the following command: wpscript.sh -port port_number -profile mylogin.py -f testme.py user\_ID password
 
 -   **JACL profile script example**
 
@@ -316,7 +274,7 @@ A profile is a script that runs before the main script, or before entering inter
     # scripting profile 
       # contains log-in procedure on portal with disabled security
       if { $argc != 2 }  {
-        puts "invocation syntax: wpscript -f testme.jacl -profile mylogin.jacl user\_ID password"
+        puts "invocation syntax: wpscript -f testme.jacl -profile mylogin.jacl user_ID password"
     	  exit
       }
       set user [lindex $argv 0]
@@ -328,7 +286,7 @@ A profile is a script that runs before the main script, or before entering inter
 
     ```
       if { $argc != 2 }  {
-        puts "invocation syntax: wpscript testme.jacl user\_ID password"
+        puts "invocation syntax: wpscript testme.jacl user_ID password"
         exit
       }
       set user [lindex $argv 0]
@@ -336,7 +294,7 @@ A profile is a script that runs before the main script, or before entering inter
       $Portal login $user $pwd 
     ```
 
-    To invoke `mylogin.jacl`, enter the following command: wpscript.sh -port port\_number -profile mylogin.jacl -f testme.jacl user\_ID password
+    To invoke `mylogin.jacl`, enter the following command: wpscript.sh -port port_number -profile mylogin.jacl -f testme.jacl user_ID password
 
 
 The benefit of this change is that the environment-specific login procedure is removed from the administration script. For systems with enabled WebSphere Application Server security, the login procedure is:
@@ -358,19 +316,11 @@ The benefit of this change is that the environment-specific login procedure is r
     ```
 
 
-
-**Related information**  
-
-
-[Scripting for static pages](../admin-system/spa_psi.md)
-
-[Portal Scripting Interface](../admin-system/ad_psi.md)
-
-[Command reference for the Portal Scripting Interface](../admin-system/adpsicrf.md)
-
-[Configuring portal behavior](../admin-system/adptlcfg.md)
-
-[The XML configuration interface](../admin-system/admxmlai.md)
-
-[Users and groups](../admin-system/adusrgrp.md)
+???+ info "Related information" 
+    -   [Scripting for static pages](../../../../build_sites/create_sites/building_website/static_content/including_static_content_pages/spa_psi.md)
+    -   [Portal Scripting Interface](../../portal_admin_tools/portal_scripting_interface/index.md)
+    -   [Command reference for the Portal Scripting Interface](../../portal_admin_tools/portal_scripting_interface/command_ref_psi/index.md)
+    -   [Configuring portal behavior](../../../../deployment/manage/config_portal_behavior/index.md)
+    -   [The XML configuration interface](../../portal_admin_tools/xml_config_interface/index.md)
+    -   [Users and groups](../../../../deployment/manage/security/users_and_groups/index.md)
 

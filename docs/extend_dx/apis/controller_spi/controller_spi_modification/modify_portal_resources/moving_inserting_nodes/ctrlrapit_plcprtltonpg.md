@@ -1,4 +1,4 @@
-# Placing a portlet on a page
+# Placing a Portlet on a Page
 
 To put a portlet on a page, use the `insert()` method of the controller.
 

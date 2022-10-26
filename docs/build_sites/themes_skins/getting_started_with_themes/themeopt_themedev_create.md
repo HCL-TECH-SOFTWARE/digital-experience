@@ -7,7 +7,8 @@ Use the following steps to create a new theme:
 1.  In the Theme Manager, click **Create Theme**.
 2.  Enter a theme title and an optional theme description.
 
-    **Note:** By default, the theme title is used as the system name. The system name is used for the WebDAV path, the theme unique name, and the skin unique name. If one of the following conditions is true, you must choose a different system name:
+    !!! note
+        By default, the theme title is used as the system name. The system name is used for the WebDAV path, the theme unique name, and the skin unique name. If one of the following conditions is true, you must choose a different system name:
 
     -   **Invalid characters are used**
 
@@ -26,6 +27,7 @@ You can also designate a theme that you created as a template. Only WebDAV-based
 com.ibm.portal.isTemplate = true
 ```
 
-**Note:** Newly created themes are WebDAV-based. By default, they are connected to the WAR file of the template that you select, and you can reuse the dynamic content spots that are included in the template. If you want to create your own dynamic content spot, create your own WAR file with a module that defines the dynamic content spot ID. Then, you can reference that module within your profile and use that dynamic content spot ID.
+!!! note
+    Newly created themes are WebDAV-based. By default, they are connected to the WAR file of the template that you select, and you can reuse the dynamic content spots that are included in the template. If you want to create your own dynamic content spot, create your own WAR file with a module that defines the dynamic content spot ID. Then, you can reference that module within your profile and use that dynamic content spot ID.
 
 

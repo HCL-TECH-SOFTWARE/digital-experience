@@ -15,7 +15,7 @@ There are three additional cases where the invalidation is not performed immedia
 As in the external case, you can enforce a permissions refresh by performing a logout and login for the user. Alternatively, modify the following properties in the wp\_profile\_root/PortalServer/config/CacheManagerService.properties file to influence the caching behavior:
 
 -   To switch it off completely and allow immediate propagation of all permission changes, remove the comment tag from the cacheinstance.com.ibm.wps.ac.AccessControlUserContextCache.enabled property and set the value to false. This can have a considerable performance impact.
--   To speed up permission refresh by timeout, the lifetime of this cache can be decreased by setting the cacheinstance.com.ibm.wps.ac.AccessControlUserContextCache.lifetime property \(in seconds\) to a smaller numerical value. These settings can affect performance.
+-   To speed up permission refresh by timeout, the lifetime of this cache can be decreased by setting the cacheinstance.com.ibm.wps.ac.AccessControlUserContextCache.lifetime property (in seconds) to a smaller numerical value. These settings can affect performance.
 -   For nested groups, you can also modify the values for the enabled or lifetime properties for both cacheinstance.com.ibm.wps.ac.groupmanagement.NestedGroupCache and cacheinstance.com.ibm.wps.ac.groupmanagement.GroupCache. These settings can affect performance.
 -   If you configure access control to use nested groups, disable cacheinstance.com.ibm.wps.ac.groupmanagement.GroupCache and modify the values of the enabled and lifetime properties for cacheinstance.com.ibm.wps.ac.groupmanagement.NestedGroupCache.
 
@@ -25,17 +25,16 @@ As in the external case, you can enforce a permissions refresh by performing a l
 
 -   All user and user group specific cache data can be explicitly invalidated upon user login authentication through the following two configuration settings through the WebSphere® Integrated Solutions Console:
 
-    **Note:** These two settings will cause high Dynamic Replication Service load in the application server in a cluster environment and therefore can affect performance.
+    !!!note
+        These two settings will cause high Dynamic Replication Service load in the application server in a cluster environment and therefore can affect performance.
 
-    -   Navigate to **Resource environment providers** \> **WP PACGroupManagementService** \> **Custom properties**. Either add or update **accessControlGroupManagement.invalidateGroupCacheOnLoginLogout** with a value of true.
-    -   Navigate to **Resource environment providers** \> **WP AccessControlDataManagementService** \> **Custom properties**. Either add or update **accessControlDataManagement.invalidateResourceCacheOnLoginLogout** with a value of true.
+    -   Navigate to **Resource environment providers > WP PACGroupManagementService > Custom properties**. Either add or update **accessControlGroupManagement.invalidateGroupCacheOnLoginLogout** with a value of true.
+    -   Navigate to **Resource environment providers > WP AccessControlDataManagementService > Custom properties**. Either add or update **accessControlDataManagement.invalidateResourceCacheOnLoginLogout** with a value of true.
 
-**Note:** After modifying the CacheManagerService.properties file, run the following task, from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory, to make the changes effective:
+!!!note
+    After modifying the CacheManagerService.properties file, run the following task, from the wp_profile_root/ConfigEngine directory, to make the changes effective:
 
--   UNIX™Linux™: ./ConfigEngine.sh update-properties -DWasPassword=password
--   IBM® i: ConfigEngine.sh update-properties -DWasPassword=password
--   Windows™: ConfigEngine.bat update-properties -DWasPassword=password
-
-**Note:** Under z/OS®, modify the CacheManagerService.properties file. Then open a UNIX System Services \(USS\) command prompt or a Telnet client, and run the ./ConfigEngine.sh update-properties -DWasPassword=password task, from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory, to make the changes effective.
+-   UNIX™ and  Linux™: `./ConfigEngine.sh update-properties -DWasPassword=password`
+-   Windows™: `ConfigEngine.bat update-properties -DWasPassword=password`
 
 

@@ -29,23 +29,24 @@ For such scenarios you configure HCL DX Portal as follows:
 The configuration applies to all pages that use that theme and that are configured to display friendly URLs.
 
 **Notes:**
+!!!note "Notes"
+    -   You can create friendly URLs for portal pages.
+    -   If you configure your portal to show stateless friendly URLs, you gain improved URL readability at the cost of losing the state functionality. Example consequences are as follows:
+        -   Portal URLs always point to the default state of a page, as they do not contain the state information.
+        -   If a user clicks the **Back** button, or refreshes a page by clicking the **Refresh** button or the page title, the page moves back into the default View mode.
+        -   If a user views a page, and then creates a bookmark, clicking the bookmark later opens the page in the default View mode.
+        -   Stateless friendly URLs do not contain the usual information about the language of the page. The portal determines the language for the page by the following order:
 
--   You can create friendly URLs for portal pages.
--   If you configure your portal to show stateless friendly URLs, you gain improved URL readability at the cost of losing the state functionality. Example consequences are as follows:
-    -   Portal URLs always point to the default state of a page, as they do not contain the state information.
-    -   If a user clicks the **Back** button, or refreshes a page by clicking the **Refresh** button or the page title, the page moves back into the default View mode.
-    -   If a user views a page, and then creates a bookmark, clicking the bookmark later opens the page in the default View mode.
-    -   Stateless friendly URLs do not contain the usual information about the language of the page. The portal determines the language for the page by the following order:
-
-        1.  First, the portal looks for the user preference.
-        2.  If the user preference is not set, the portal looks for the preferred language that is set in the browser. If the page is a public page, the user is an anonymous user. In this case, the portal also looks for the preferred language that is set in the browser.
-        3.  If the portal cannot determine a preferred language setting for the portal or the browser, it applies the default language that is defined for the portal.
+            1.  First, the portal looks for the user preference.
+            2.  If the user preference is not set, the portal looks for the preferred language that is set in the browser. If the page is a public page, the user is an anonymous user. In this case, the portal also looks for the preferred language that is set in the browser.
+            3.  If the portal cannot determine a preferred language setting for the portal or the browser, it applies the default language that is defined for the portal.
+        
         For information about how to present language-specific portal pages with stateless friendly URLs, read the information at the end of the procedure that follows here.
 
 
 1.  In the portal WP Configuration Service, set the custom property `friendly.redirect.enabled` to the value false.
 
-    You do this step by editing the Resource Environment Provider \(REP\) WPConfigService in the WebSphere® Integrated Solutions Console. If the property is not listed there, add it and set it to false. For information about this property and how to set it see the topics about the portal Configuration Service and Setting service configuration properties.
+    You do this step by editing the Resource Environment Provider (REP) WPConfigService in the WebSphere® Integrated Solutions Console. If the property is not listed there, add it and set it to false. For information about this property and how to set it see the topics about the portal Configuration Service and Setting service configuration properties.
 
 2.  In the theme, that you want configure, for short stateless URLs, set the parameter `com.ibm.portal.theme.hasBaseURL` to true.
 
@@ -152,7 +153,6 @@ The configuration applies to all pages that use that theme and that are configur
     http://www.myco.com/wps/home/fr/shop
     http://www.myco.com/wps/home/de/shop
     ```
-
 
 The portal now no longer displays the state information with the URLs.
 

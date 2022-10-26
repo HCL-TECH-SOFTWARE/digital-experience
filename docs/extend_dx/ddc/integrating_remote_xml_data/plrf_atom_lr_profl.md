@@ -101,8 +101,6 @@ The Atom list-rendering profile declares the following attributes:
 
 
 
-**Related information**  
-
-
-[The Atom Syndication Format](http://www.ietf.org/rfc/rfc4287)
+???+ info "Related information:"
+    - [The Atom Syndication Format](http://www.ietf.org/rfc/rfc4287)
 

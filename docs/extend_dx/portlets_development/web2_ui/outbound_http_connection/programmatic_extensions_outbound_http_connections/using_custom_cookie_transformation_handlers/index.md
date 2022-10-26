@@ -9,14 +9,12 @@ You define custom cookie transformation handlers in a cookie rule. The interface
 
 Application developers can use a custom cookie transformation handler to modify the name, path, domain, or value of the affected cookie, or to produce analytic or statistical information about the cookie.
 
--   **[Implementing a custom cookie transformation filter](../dev-portlet/outbhttp_impl_cust_cookie_xform_fltr.md)**  
+-   **[Implementing a custom cookie transformation filter](outbhttp_impl_cust_cookie_xform_fltr.md)**  
 Application developers can implement a custom cookie transformation filter.
--   **[Registering a custom cookie transformation filter](../dev-portlet/outbhttp_reg_cust_cookie_xform_fltr.md)**  
+-   **[Registering a custom cookie transformation filter](outbhttp_reg_cust_cookie_xform_fltr.md)**  
 For a custom cookie transformation filter to take effect, you must register it.
 
 
-**Related information**  
-
-
-[Cookie rules](../dev-portlet/outbhttp_cfg_strctr_cookie_rul.md)
+???+ info "Related information"
+    - [Cookie rules](../../cfg_outbound_http_connections/cfg_structure/outbhttp_cfg_strctr_cookie_rul.md)
 

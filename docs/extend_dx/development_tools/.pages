@@ -1,5 +1,6 @@
 title: Development Tools
 nav:
+    - index.md
     - DX Client: dxclient
     - Portal Admin Tools: portal_admin_tools
     - WebDAV: webdav

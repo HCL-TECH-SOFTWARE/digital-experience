@@ -6,16 +6,14 @@ The portlet programmer defines which information a portlet can send or receive i
 
 Message-based communication allows more programmatic and administrative control than shared state, but also creates more overhead. If you need to coordinate many portlets and create many connections, consider using shared state instead.
 
--   **[Communication with persistent wires](../dev-portlet/pltcom_pubsub_perstwire.md)**  
+-   **[Communication with persistent wires](communication_persistent_wires/index.md)**  
 You can use portlet wires for communication between portlets. Portlet wires are persistent data links.
--   **[Communication with dynamic menus](../dev-portlet/pltcom_pubsub_dyn_menu.md)**  
+-   **[Communication with dynamic menus](pltcom_pubsub_dyn_menu.md)**  
 You can use dynamic menus for communication between portlets.
--   **[Runtime behavior](../dev-portlet/pltcom_event_brkr.md)**  
+-   **[Runtime behavior](pltcom_event_brkr.md)**  
 The portal event broker subsystem provides support for inter-portlet communication with active notifications using portlet events or the cooperative programming model.
 
 
-**Related information**  
-
-
-[Standard portlets publish and subscribe mechanisms](../dev-portlet/pltcom_pubsub_model.md)
+???+ info "Related information"
+    - [Standard portlets publish and subscribe mechanisms](../../portlets_publish_subscribe_mech/index.md)
 

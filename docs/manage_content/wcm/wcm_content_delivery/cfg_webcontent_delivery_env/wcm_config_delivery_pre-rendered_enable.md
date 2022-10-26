@@ -32,7 +32,8 @@ To enable users to access the pre-rendered site through a Web Content Manager ap
 -   Property name: connect.businesslogic.module.default.class
 -   Value: com.aptrix.cacher.CacherModule
 
-**Note:** You cannot use the local rendering portlet \(Web Content Viewer\) when pre-rendering is set as the default module.
+!!! note
+    You cannot use the local rendering portlet \(Web Content Viewer\) when pre-rendering is set as the default module.
 
 ## Enable pre-rendering for stand-alone sites
 
@@ -87,7 +88,8 @@ Specify the following properties to configure caching. Default values are listed
 
         The first time a site is pre-rendered, the cached site files are added to the destination directory. As changes are made to the site through the authoring portlet, the new version of the site is gradually cached in the temporary directory and the old site remains in the destination directory. After the cacher has finished caching the site completely, the contents of the temporary directory are moved to the destination directory that will then contain both old and new versions of the cached site.
 
-        **Note:** A value of false should not be used if a web server is used to display the pre-rendered data because some web servers lock the data directories.
+        !!! note
+            A value of false should not be used if a web server is used to display the pre-rendered data because some web servers lock the data directories.
 
 -   **`connect.moduleconfig.cacher.rendereruser`**
 
@@ -121,7 +123,8 @@ Specify the following properties to configure caching. Default values are listed
 
     The site areas within a Web Content Manager environment to cache are entered here, separated by commas. This property provides the option of specifying the library in addition to the site area. If the library is specified, the pre-renderer looks for the site area in that library. If no library is specified, the default library is used, as specified in the `defaultLibrary` property.
 
-    **Note:** If any of your site area names contain commas, you must create separate parameters for each site area using this format: `connect.moduleconfig.cacher.task.siteareas.N`
+    !!! note 
+        If any of your site area names contain commas, you must create separate parameters for each site area using this format: `connect.moduleconfig.cacher.task.siteareas.N`
 
     N represents a different integer for each parameter. For example, if you want to pre-render a site area named "SiteArea,Red" and a site named "Site,Yellow", you would need to create the following parameters:
 
@@ -146,7 +149,8 @@ Specify the following properties to configure caching. Default values are listed
 
         The delay in minutes prior to starting the first recurring task.
 
-    **Note:** If you do not configure pre-rendering to start automatically when the server starts, pre-rendering at intervals does not work until you manually trigger the cacher module.
+    !!! note
+        If you do not configure pre-rendering to start automatically when the server starts, pre-rendering at intervals does not work until you manually trigger the cacher module.
 
 -   **`connect.moduleconfig.cacher.task.scheduled.times`**
 
@@ -154,9 +158,11 @@ Specify the following properties to configure caching. Default values are listed
 
     Alternately, the CacherModule can be set to run at certain times. Enter a series of absolute times, separated by commas.
 
-    **Important:** When specifying time values, be sure you conform to the format `H:MM am|pm`, including the use of the colon \(`:`\) character and the space. Incorrectly specified values prevent pre-rendering from functioning properly.
+    !!! important
+        When specifying time values, be sure you conform to the format `H:MM am|pm`, including the use of the colon \(`:`\) character and the space. Incorrectly specified values prevent pre-rendering from functioning properly.
 
-    **Note:** If you do not configure pre-rendering to start automatically when the server starts, pre-rendering at scheduled times does not work until you manually trigger the cacher module.
+    !!! note
+        If you do not configure pre-rendering to start automatically when the server starts, pre-rendering at scheduled times does not work until you manually trigger the cacher module.
 
 
 ## Pre-rendering resources
@@ -213,10 +219,7 @@ You can pre-render sites either manually, or to a schedule, or at intervals. The
     -   `connect.businesslogic.module`
 
 
-**Related information**  
-
-
-[Setting service configuration properties](../admin-system/adsetcfg.md)
-
-[Pre-render methods](../wcm/wcm_config_delivery_pre-rendered_running.md)
+???+ info "Related information"
+    - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
+    - [Pre-render methods](../delivering_web_content/pre-rendered_delivery/wcm_config_delivery_pre-rendered_running.md)
 

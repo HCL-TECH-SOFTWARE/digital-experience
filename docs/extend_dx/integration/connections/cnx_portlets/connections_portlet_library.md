@@ -19,11 +19,13 @@ A community page can contain only one Library portlet. When you add a library po
 -   If a single library exists for the associated IBM Connections community, that library displays automatically in the Library portlet.
 -   If multiple libraries exist for the associated Connections community, the contents of the first library in the community displays in the portlet.
 
-    **Note:** Use a setting in the **Edit Settings** panel of the Library portlet to select a different library when there is more than one to choose from.
+    !!! note
+        Use a setting in the **Edit Settings** panel of the Library portlet to select a different library when there is more than one to choose from.
 
 -   If no library exists for the associated Connections community, a message informs you that there are no libraries to display.
 
-    **Note:** If the library associated with the Library portlet is removed from the Connections community, you see this message: Configured library does not exist in the community.
+    !!! note
+        If the library associated with the Library portlet is removed from the Connections community, you see this message: Configured library does not exist in the community.
 
 
 ## Using the Library portlet
@@ -39,10 +41,9 @@ Community libraries provide owners and members with the following content manage
 
 For details on how to use the library, see the IBM Connections documentation on libraries.
 
-**Note:**
-
--   The portlet provides only the full page view experience of the Library widget. Therefore, any references in the documentation to configuring the Library or the Overview page capabilities of the Library do not apply to the portlet.
--   The Library portlet does not support basic authentication.
+!!! note
+    -   The portlet provides only the full page view experience of the Library widget. Therefore, any references in the documentation to configuring the Library or the Overview page capabilities of the Library do not apply to the portlet.
+    -   The Library portlet does not support basic authentication.
 
 ## Editing the settings for the Library portlet
 

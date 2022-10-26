@@ -6,15 +6,14 @@ After you migrate from Portal Version 7.x to HCL Digital Experience 8.5, change 
 
 Run this task to move the Personalization page to the application level. If you do not run this task, the Personalization welcome page remains in the Content application. If the personalization welcome page remains in the Content application, you cannot access the other existing pages in the Content application area.
 
-1.  Open a command prompt and change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+1.  Open a command prompt and change to the wp_profile_root/ConfigEngine directory.
 
 2.  Run the following task to move the Personalization welcome page:
 
-    -   AIX® HP-UX Linux™ Solaris: ./ConfigEngine.sh move-pzn-page
-    -   IBM® i: ConfigEngine.sh move-pzn-page
-    -   Windows™: ConfigEngine.bat move-pzn-page
-    -   z/OS®: ./ConfigEngine.sh move-pzn-page
-    **Virtual Portal parameter:** Add the -DVirtualPortalContext=vp \_context\_root parameter to the move-pzn-page task.
+    -   AIX® and Linux™: `./ConfigEngine.sh move-pzn-page`
+    -   Windows™: `ConfigEngine.bat move-pzn-page`
+
+    **Virtual Portal parameter:** Add the `-DVirtualPortalContext=vp _context_root` parameter to the move-pzn-page task.
 
 
 

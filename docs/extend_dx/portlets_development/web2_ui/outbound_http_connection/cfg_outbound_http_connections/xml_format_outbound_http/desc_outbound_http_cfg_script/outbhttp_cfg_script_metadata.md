@@ -164,8 +164,6 @@ The following example shows a typical metadata setting:
 ```
 
 
-**Related information**  
-
-
-[Configuring overlay reports](../admin-system/sa_asa_overlay_config.md)
+???+ info "Related information"
+    - [Configuring overlay reports](../../../../../../../deployment/manage/monitoring/analyze_portal_usage/user_behavior_by_asa/displaying_overlay_analytics_reports/sa_asa_overlay_config.md)
 

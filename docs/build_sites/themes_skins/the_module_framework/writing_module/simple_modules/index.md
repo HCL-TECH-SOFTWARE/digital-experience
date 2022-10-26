@@ -19,7 +19,7 @@ WebDAV Root
 
 The getting\_started\_module is predefined so you can start quickly. Add your JavaScript, CSS, or markup file to one of the subfolders, and your resources are integrated into HCL Portal.
 
-You must invalidate the resource aggregator cache before your changes are integrated. Click the **Administration menu** icon. Then, click **Portal Analysis** \> **Theme Analyzer**. Then, click **Utilities** \> **Control Center** \> **Invalidate cache** to invalidate the cache. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](themeopt_an_util.md#).
+You must invalidate the resource aggregator cache before your changes are integrated. Click the **Administration menu** icon. Then, click **Portal Analysis** \> **Theme Analyzer**. Then, click **Utilities** \> **Control Center** \> **Invalidate cache** to invalidate the cache. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](../../themeopt_analyzer/utilities/index.md).
 
 ## Module directory
 
@@ -83,14 +83,12 @@ Simple modules can be customized with the following files and directories.
             JSON resources that contain the menu definition are served in alphabetical order.
 
 
--   **[Head contribution](../dev-theme/themeopt_simple_modules_head.md)**  
+-   **[Head contribution](themeopt_simple_modules_head.md)**  
 The HEAD folder contains files that are served as head contribution through the resource aggregator framework. Those resources appear in the head tag of the markup served to the browser.
--   **[Config contribution](../dev-theme/themeopt_simple_modules_config.md)**  
+-   **[Config contribution](themeopt_simple_modules_config.md)**  
 The CONFIG folder contains files that are served as config contribution through the resource aggregator framework. Those resources are usually before the closing body tag.
 
 
-**Related information**  
-
-
-[Modules that are provided with the modularized theme](../dev-theme/themeopt_oob.md)
+???+ info "Related information:"
+    - [Modules that are provided with the modularized theme](../../oob_modules/index.md)
 

@@ -3,7 +3,7 @@ id: wcm_dev_elements_number_add_template
 title: Adding a number element to a template
 ---
 
-
+# Adding a number element to a template
 
 
 You add a number element to an authoring template when you want the number element to be used by a set of items that use the same authoring template.
@@ -26,7 +26,7 @@ You add a number element to an authoring template when you want the number eleme
 
 9.  Go to the number element you created. Enter a numeric value. The maximum number of digits that can be entered into a number element is 16.
 
-10. Click ![properties](../images/propIcon.jpg) to open the display properties of the element. This property is where you define how the element is displayed on the item form.
+10. Click ![properties](../../../../../../images/propIcon.jpg) to open the display properties of the element. This property is where you define how the element is displayed on the item form.
 
     1.  To display the element as a required field select **Identify this as a required field**.
 

@@ -29,14 +29,14 @@ The client has been implemented with the following settings:
 
 If you want to include search engines that are not covered by the default set, you can do so by using either the administration portlet Manage Clients or the XML configuration interface. For more information see the following topics.
 
-**Notes:**
+!!! note
+    1.  The search mechanism works correctly for the portal only if the search engine robots are identified to the portal in advance.
+    2.  Search on your portal by external search engines requires additional configuration beyond client identification. For more details about this see the topics about *Configuring your portal site for search by external search services* and *Configuring the Search Sitemap portlet for search by external search engines*.
 
-1.  The search mechanism works correctly for the portal only if the search engine robots are identified to the portal in advance.
-2.  Search on your portal by external search engines requires additional configuration beyond client identification. For more details about this see the topics about *Configuring your portal site for search by external search services* and *Configuring the Search Sitemap portlet for search by external search engines*.
-
+<!--
 -   **[Adding search engines by using the administration portlet Manage Clients](../admin-system/srrclientid_mng_clients.md)**  
 To add search engines by using the administration portlet Manage Clients, follow the procedure that is given here.
 -   **[Adding search engines by using the XML configuration interface](../admin-system/srrclientid_xml.md)**  
-To add search engines by using the XML configuration interface, you import them by an XML script file. To make sure that the search mechanism works correctly, you need to add the capability HTML\_SEARCH.
+To add search engines by using the XML configuration interface, you import them by an XML script file. To make sure that the search mechanism works correctly, you need to add the capability HTML\_SEARCH. -->
 
 

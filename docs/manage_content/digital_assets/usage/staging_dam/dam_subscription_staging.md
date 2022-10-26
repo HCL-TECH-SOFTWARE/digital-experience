@@ -1,10 +1,10 @@
 # Staging DAM to rendering environments
 
-This topic contains the commands that administrators can use to configure the staging of [Digital Asset Management](../../digital_asset_mgmt/index.md) \(DAM\) content. This allows you to manage subscriber registration or configure periodic sync.
+This topic contains the commands that administrators can use to configure the staging of [Digital Asset Management](../../index.md) \(DAM\) content. This allows you to manage subscriber registration or configure periodic sync.
 
 ## DAM staging framework
 
-The DAM staging framework allows you to stage your DAM content from an authoring environment \(source environment/publisher\) to multiple rendering environments \(target environment/subscriber\). Using [DXClient](../../../platform/administration/DXClient/dxclient.md), you can configure DAM staging to:
+The DAM staging framework allows you to stage your DAM content from an authoring environment \(source environment/publisher\) to multiple rendering environments \(target environment/subscriber\). Using [DXClient](../../../../extend_dx/development_tools/dxclient/dxclient.md), you can configure DAM staging to:
 
 -   Trigger a manual staging or use periodic staging processes.
 -   Set the cycle length \(default: 2 minutes, maximum: 24 hours\) for periodic sync.
@@ -13,7 +13,7 @@ The DAM staging framework allows you to stage your DAM content from an authoring
     !!! note
         A subscriber must be registered with a publisher. Access rights from DAM staging assets are not transferred for subscribers that do not share the same Lightweight Directory Access Protocol \(LDAP\).
 
-![Use separate Digital Asset Management and staging between HCL DX environments](../../../images/new_dam_staging_options.png)
+![Use separate Digital Asset Management and staging between HCL DX environments](../../../../images/new_dam_staging_options.png)
 
 ## Manage DAM staging
 
@@ -247,6 +247,98 @@ Use the `manage-dam-staging **register**-dam-subscriber` command to register or 
 
         ```
         dxclient manage-dam-staging deregister-dam-subscriber -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -subscriberId d7e5e014-12a0-4dc5-a5d7-971fd4fa86f3
+        ```
+
+
+## Get all subscribers details for DAM staging
+
+
+Use the `manage-dam-staging get-all-subscribers` command to get all the registered subscribers details for DAM staging.
+
+-   **Command description**
+
+    You can get all subscribers details for DAM staging with the following command:
+
+    ```
+    dxclient manage-dam-staging get-all-subscribers
+    ```
+
+-   **Help command**
+
+    The following command shows the help information for `manage-dam-staging get-all-subscribers` command usage:
+
+    ```
+    dxclient manage-dam-staging get-all-subscribers -h
+    ```
+
+-   **Command options**
+
+    Use this attribute to specify the protocol with which to connect to the DX server \(default: ""\)
+
+    ```
+    -dxProtocol <value>
+    ```
+
+    Use this attribute to specify the host name of the DX server \(default: ""\)
+
+    ```
+    -hostname <value>
+    ```
+
+    Use this attribute to specify the port on which to connect to the DX server \(default: ""; default port for any Kubernetes environment is 443\):
+
+    ```
+    -dxPort <value>
+    ```
+
+    Use this attribute to specify the user name that is required for authenticating with the DX server \(default: ""\)
+
+    ```
+    -dxUsername <value> 
+    ```
+
+    Use this attribute to specify the password that is required for authenticating with the DX Core \(default: ""\)
+
+    ```
+    -dxPassword <value>
+    ```
+
+    Use this attribute to specify the port number of the DAM server \(default: ""; default port for any Kubernetes environment is 443\):
+
+    ```
+    -damAPIPort <value>
+    ```
+
+    Use this attribute to specify the port number of the DX Core API server \(default: ""; default port for any Kubernetes environment is 443\):
+
+    ```
+    -ringAPIPort <value>
+    ```
+
+    Use this attribute to specify the API version number of DAM \(default: ""; default port for any Kubernetes environment is 443\):
+
+    ```
+    -damAPIVersion <value>
+    ```
+
+    Use this attribute to specify the API version number of DX Core \(default: ""; default port for any Kubernetes environment is 443\):
+
+    ```
+    -ringAPIVersion <value>
+    ```
+
+-   **Commands:**
+
+    To get all subscribers details:
+
+    ```
+    dxclient manage-dam-staging get-all-subscribers -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion>
+    ```
+
+    !!! example
+
+        ```
+        dxclient manage-dam-staging get-all-subscribers -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1
         ```
 
 

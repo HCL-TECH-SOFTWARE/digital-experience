@@ -1,35 +1,34 @@
 ---
 id: wcm_reference-dates
-title: Setting parameters to format dates
+title: Set Parameters to Format Dates
 ---
 
-
-
+# Set Parameters to Format Dates
 
 These parameters are used to set the format of dates.
 
 |Symbol|Meaning|Presentation|Example|
 |------|-------|------------|-------|
-|`G`|era designator|\(Text\)|AD|
-|`y`|year|\(Number\)|1996|
-|`M`|month in year|\(Text and Number\)|July and 07|
-|`d`|day in month|\(Number\)|10|
-|`h`|hour in am/pm \(1-12\)|\(Number\)|12|
-|`H`|hour in day \(0-23\)|\(Number\)|0|
-|`m`|minute in hour|\(Number\)|30|
-|`s`|second in minute|\(Number\)|55|
-|`S`|millisecond|\(Number\)|978|
-|`E`|day in week|\(Text\)|Tuesday|
-|`D`|day in year|\(Number\)|189|
-|`F`|day of week in month|\(Number\)|2 \(2nd Wed in July\)|
-|`w`|week in year|\(Number\)|27|
-|`W`|week in month|\(Number\)|2|
-|`a`|am/pm marker|\(Text\)|PM|
-|`k`|hour in day \(1-24\)|\(Number\)|24|
-|`K`|hour in am/pm \(0-11\)|\(Number\)|0|
-|`z`|time zone|\(Text\)|Pacific Standard Time|
-|`'`|escape for text|\(Delimiter\)| |
-|`''`|single quotation mark|\(Literal\)| |
+|`G`|era designator|(Text)|AD|
+|`y`|year|(Number)|1996|
+|`M`|month in year|(Text and Number)|July and 07|
+|`d`|day in month|(Number)|10|
+|`h`|hour in am/pm (1-12)|(Number)|12|
+|`H`|hour in day (0-23)|(Number)|0|
+|`m`|minute in hour|(Number)|30|
+|`s`|second in minute|(Number)|55|
+|`S`|millisecond|(Number)|978|
+|`E`|day in week|(Text)|Tuesday|
+|`D`|day in year|(Number)|189|
+|`F`|day of week in month|(Number)|2 (2nd Wed in July)|
+|`w`|week in year|(Number)|27|
+|`W`|week in month|(Number)|2|
+|`a`|am/pm marker|(Text)|PM|
+|`k`|hour in day (1-24)|(Number)|24|
+|`K`|hour in am/pm (0-11)|(Number)|0|
+|`z`|time zone|(Text)|Pacific Standard Time|
+|`'`|escape for text|(Delimiter)| |
+|`''`|single quotation mark|(Literal)| |
 
 **The number of letters determines format:**
 
@@ -55,7 +54,7 @@ If a date or time code is entered incorrectly, nothing is returned.
 
 **Other characters:**
 
-Any characters in the pattern that are not in the ranges of \['a'..'z'\] and \['A'..'Z'\] is treated as quoted text. For example, characters like ':', '.', ' ', '\#' and '@' appear in the resulting time text even if they are not embraced within single quotation marks.
+Any characters in the pattern that are not in the ranges of ['a'..'z'] and ['A'..'Z'] is treated as quoted text. For example, characters like ':', '.', ' ', '\#' and '@' appear in the resulting time text even if they are not embraced within single quotation marks.
 
 ## Examples Using the US locale:
 

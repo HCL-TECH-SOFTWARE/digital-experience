@@ -6,12 +6,11 @@ In general, a Web Content Manager Personalization component combines a portal Pe
 
 For extracting the individual pieces of metadata of social objects contained in a social list, you can use the Web Content Manager `AttributeResource` tag. For more information about Web Content Manager Personalization components, see the topic about *Personalization element* in the Web Content Manager product documentation.
 
+<!--
 -   **[Digital Data Connector profiles for social rendering](../social/soc_rendr_lst_rndr_prfls.md)**  
-Starting with Version 8.5, HCL Digital Experience includes a set of Digital Data Connector \(DDC\) for HCL Portal profiles. You can use them with the social rendering DDC plug-in that is identified by the extension ID ibm.portal.ddc.sr.
+Starting with Version 8.5, HCL Digital Experience includes a set of Digital Data Connector \(DDC\) for HCL Portal profiles. You can use them with the social rendering DDC plug-in that is identified by the extension ID ibm.portal.ddc.sr. -->
 
 
-**Related information**  
-
-
-[Technical concepts](../social/plrf_tech_concepts.md)
+???+ info "Related information"
+    - [Technical concepts](../../../../../extend_dx/ddc/plrf_tech_concepts.md)
 

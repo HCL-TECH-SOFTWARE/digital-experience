@@ -4,7 +4,7 @@ This section provides the steps on how to author a web content item using HCL Co
 
 ## Prerequisite
 
-Content Composer should be installed and configured to HCL Digital Experience 9.5 container release update CF181 or higher. See instructions to install to supported container environments in the [Install HCL Digital Experience 9.5 Components](/installation/install_config_cc_dam.md) topic.
+Content Composer should be installed and configured to HCL Digital Experience 9.5 container release update CF181 or higher. See instructions to install to supported container environments in the [Install HCL Digital Experience 9.5 Components](../../installation/install_config_cc_dam.md) topic.
 
 Content Composer is accessible from the Practitioner Studio interface \(after image configuration to your HCL Digital Experience 9.5 CF181 and higher deployment\).
 
@@ -98,8 +98,56 @@ The **Dashboard** view allows users to perform content authoring actions.
     ![Authoring actions on HCL Content Composer Dashboard](../../../../assets/Authoring_actions_via_HCL_CC_Dashboard.png)
 
 
+## Create new content with default keywords
+
+Follow the steps to create a new content with auto-populated keywords from the Dashboard view:
+
+1.  From the HCL Digital Experience 9.5 Content Composer Dashboard, locate your content template with Default Content Keywords, hover to the icon to display checkbox then click it.
+    
+    ![](../../../../assets/HCL_Content_Composer_DefaultKeyword_Checkbox.png)
+
+2.  Click **Create Content** in the actions bar.
+
+    ![](../../../../assets/HCL_Content_Composer_DefaultKeyword_ActionBar.png)
+
+3.  The Content Template and Keywords in Properties will be auto populated as shown below.
+
+    ![](../../../../assets/HCL_Content_Composer_DefaultKeyword.png)
+
+4.  Complete the fields on the **Content** tab, of which the content author will be directed to by default.
+5.  When done, select **Save** to save your settings and create your new content, or **Save and Close** which will create your new content with the saved settings and will redirect you to the new content's location in the Content Composer dashboard.
+
+
+## Create new content and add/remove keywords
+
+Follow the steps to create a new content and add keywords from the Dashboard view:
+
+1.  From the HCL Digital Experience 9.5 Content Composer Dashboard, locate your content template, hover to the icon to display checkbox then click it.
+    
+    ![](../../../../assets/HCL_Content_Composer_Sample_Template.png)
+
+2.  Click **Create Content** in the actions bar.
+
+    ![](../../../../assets/HCL_Content_Composer_Sample_Template_Create_Content.png)
+
+3.  Click the **Properties** icon, which is on the right side as shown below.
+
+    ![](../../../../assets/HCL_Content_Composer_Properties_Tab.png)
+
+4.  Add a keyword by inputting in the Keywords Field shown below. You can also add multiple keywords by adding a delimeter (,) in between the keywords.
+
+    ![](../../../../assets/HCL_Content_Composer_Content_Add_Keywords.png)
+
+5. If you want to remove a keyword, just click the 'x' button of the keyword you want to delete as shown below.
+
+    ![](../../../../assets/HCL_Content_Composer_Content_Remove_Keyword.png)
+
+6.  Complete the fields on the **Content** tab, of which the content author will be directed to by default.
+7.  When done, select **Save** to save your settings and create your new content, or **Save and Close** which will create your new content with the saved settings and keywords and will redirect you to the new content's location in the Content Composer dashboard.
+
+<!--
 ## HCL Digital Experience Solution Feedback
 
-HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1){:target="_blank"}.
+HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1){:target="_blank"}. -->
 
 

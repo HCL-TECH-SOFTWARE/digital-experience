@@ -22,7 +22,7 @@ Use this roadmap if you are an organization with the following requirements:
 
 A cluster topology is versatile. You can use it to set up a production environment, a test environment, and more. The clustered topology diagram includes two horizontal nodes that are managed in the same cell. The nodes in the cluster use a common LDAP and database server. A remote search server is depicted too. In a cluster environment, you must use a remote search server.
 
-![Single cluster cell with two nodes. The managed cell connects to a remote database and LDAP server](../images/Cluster.jpg)
+![Single cluster cell with two nodes. The managed cell connects to a remote database and LDAP server](../../../../../../images/Cluster.jpg)
 
 # Preparing for the installation process
 
@@ -65,24 +65,28 @@ Portal is running and 10039 is the default transport port that is created by DXÂ
 for your environment.
 ```
 
-1.  To get the latest updates for the wizard, apply the most recent Combined Cumulative Fix. For more information about applying the latest fix pack, visit *Combined cumulative fix strategy* for more topic information.
+1.  To get the latest updates for the wizard, apply the most recent Combined Cumulative Fix. For more information about applying the latest fix pack, visit [Apply Combined Cumulative Fix](../../../../../../deployment/install/traditional/cf_install/index.md) for more topic information.
 
-    **Note:** Skip this step, if you have the most recent fix pack applied.
+    !!! note
+        Skip this step, if you have the most recent fix pack applied.
 
 2.  Access the Configuration Wizard. Go to http://your\_server:10200/hcl/wizard.
 
-    **Note:** If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your\_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your\_server:10200/hcl/wizard.
+    !!! note
+        If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your\_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your\_server:10200/hcl/wizard.
 
     **Restriction:** There is a known issue with Chrome version 45.x and the Configuration Wizard. If you are experiencing difficulties, use a different browser when you access the wizard.
 
 3.  Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw\_profile.
 
-    **Note:** If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Supported languages](../config/../reference/supportedlanguages.html).
+    !!! note 
+        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Supported languages](../../../../../../extend_dx/development_tools/portal_admin_tools/language_support/index.md).
 
 4.  Complete the following steps to transfer your database:
 5.  Select **Set Up a Cluster** \> **Database Transfer**.
 
-    **Note:** The **Database Transfer** configuration option in the Configuration Wizard assigns users and permissions, creates databases, obtains support for database collation, and transfers your database.
+    !!! note 
+        The **Database Transfer** configuration option in the Configuration Wizard assigns users and permissions, creates databases, obtains support for database collation, and transfers your database.
 
 6.  Provide information about your environment.
 
@@ -92,6 +96,7 @@ for your environment.
 
     -   Click **Download Files** to run the steps remotely.
     -   Click **Run All Steps** to run the steps locally.
+
 9.  Log in to HCL Portal to verify that you have a working portal server.
 
 10. Complete the following steps to create your deployment manager:
@@ -105,6 +110,7 @@ for your environment.
 
     -   Click **Download Files** to run the steps remotely.
     -   Click **Run All Steps** to run the steps locally.
+
 15. If you changed the context root during the installation or configuration of HCL Digital Experience, then you must complete the optional next step from the Configuration Wizard to update parameters with the new context path after you complete the Create a Deployment Manager configuration option.
 
 16. Log in to HCL Portal to verify that you have a working portal server.
@@ -120,12 +126,14 @@ for your environment.
 
     -   Click **Download Files** to run the steps remotely.
     -   Click **Run All Steps** to run the steps locally.
+
 22. Log in to HCL Portal to verify that you have a working portal server.
 
 23. Complete the following steps to enable federated security:
 24. **Set Up a Cluster** \> **Enable Federated Security**.
 
-    **Note:** If you set **Use Administrator IDs stored in your LDAP user registry** to yes, the WebSphere Application Server and HCL Portal user IDs and passwords are changed to the LDAP user ID and password. If you do not want to change both user IDs and passwords to match the LDAP user ID and password, set this value to no. After you configure your LDAP user registry, you can manually change the user IDs and passwords.
+    !!! note
+        If you set **Use Administrator IDs stored in your LDAP user registry** to yes, the WebSphere Application Server and HCL Portal user IDs and passwords are changed to the LDAP user ID and password. If you do not want to change both user IDs and passwords to match the LDAP user ID and password, set this value to no. After you configure your LDAP user registry, you can manually change the user IDs and passwords.
 
 25. Provide information about your environment.
 
@@ -135,6 +143,7 @@ for your environment.
 
     -   Click **Download Files** to run the steps remotely.
     -   Click **Run All Steps** to run the steps locally.
+
 28. Log in to HCL Portal to verify that you have a working portal server.
 
 29. Complete the following steps to create extra cluster nodes:
@@ -144,7 +153,8 @@ for your environment.
 
 31. **Set Up a Cluster** \> **Create an Additional Cluster Node**.
 
-    **Note:** If you are setting up a vertical cluster, manual instructions are available for dynamic and static cluster configurations.
+    !!! note 
+        If you are setting up a vertical cluster, manual instructions are available for dynamic and static cluster configurations.
 
 32. Provide information about your environment.
 
@@ -154,6 +164,7 @@ for your environment.
 
     -   Click **Download Files** to run the steps remotely.
     -   Click **Run All Steps** to run the steps locally.
+    
 35. Log in to HCL Portal to verify that you have a working portal server.
 
 

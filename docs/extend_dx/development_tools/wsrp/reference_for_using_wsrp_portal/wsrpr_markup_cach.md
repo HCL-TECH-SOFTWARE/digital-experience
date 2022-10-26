@@ -10,7 +10,8 @@ The Producer derives the WSRP cache control from the cache settings of the local
 
 -   Expiration specifies the duration in seconds that markup fragment remains valid. A value of `-1` indicates that the markup fragment never expires.
 
-    **Note:** If an expiration value of `-1` is specified, the Consumer and all remote caches cache the content for unlimited time. This way, the content is never updated.
+    !!!note
+        If an expiration value of `-1` is specified, the Consumer and all remote caches cache the content for unlimited time. This way, the content is never updated.
 
 -   Scope specifies a string that indicates when the cached markup can be used by various users. The markup is either cached specifically for one user or for all users. This parameter is relevant for remote caching. For more information, read the section about tuning your portal.
 
@@ -18,13 +19,14 @@ If the local portlet is not a standard API portlet, the Producer does not return
 
 The Consumer can configure WSRP markup caching by using the following configuration parameters:
 
--   **wsrp.markupcaching.enabled = \(false,true\)**
+-   **wsrp.markupcaching.enabled = (false,true)**
 
     Use this parameter to enable or disable WSRP markup caching. The default for this parameter is `false`. This default setting means that WSRP markup caching is disabled, if no value is specified for this parameter.
 
-    **Note:** If the parameter wsrp.requiresSeparateRenderPhase is enabled, the Consumer automatically disables WSRP markup caching for the corresponding portlet and does not consider this parameter.
+    !!!note
+        If the parameter wsrp.requiresSeparateRenderPhase is enabled, the Consumer automatically disables WSRP markup caching for the corresponding portlet and does not consider this parameter.
 
--   **wsrp.caching.enabled = \(true, false\)**
+-   **wsrp.caching.enabled = (true, false)**
 
     Use this parameter to enable or disable setting the HTTP cache control header in a resource response or in a render response during the render headers phase. The default for this parameter is `true`.
 

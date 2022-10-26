@@ -16,9 +16,9 @@ Portlet service interfaces used by standard portlets are different from those us
 -   [PumaHome](../dev/wpspuma.md)
 -   [DynamicUIManagementFactoryService](wpsdynui_cpts.md)
 
--   **[Accessing portlet services](../dev-portlet/wpsaccpserv.md)**  
+-   **[Accessing portlet services](wpsaccpserv.md)**  
 Using an example, learn how a standard portlet can retrieve and use a sample portlet service. Accessing a portlet service requires a JNDI lookup for a PortletServiceHome. To use the portlet service, you retrieve a service object from the home, cast it to the service-specific interface and invoke service methods.
--   **[Creating your own portlet service](../dev-portlet/wpsbsservice.md)**  
+-   **[Creating your own portlet service](wpsbsservice.md)**  
 Write a portlet service by defining the interface, writing the service implementation, making the service accessible, and registering the service.
 
 

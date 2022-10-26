@@ -1,10 +1,9 @@
 ---
 id: wcm_dev_elements_navigator_design
-title: Navigator formatting examples
+title: Navigator element formatting examples
 ---
 
-
-
+# Navigator element formatting examples
 
 You use HTML to format the layout of a navigator.
 
@@ -21,19 +20,8 @@ This example shows the basic structure of the element design that is used by a n
 
 |Design|Details|Design|
 |------|-------|------|
-|Navigator result design 1|A `<b>` tag is added to display the text in the first level of the navigator in bold.|```
-<b>
-[placeholder tag="namelink" ]
-</b><br>
-```
-
-|
-|Navigator result design 2|The second design is repeated for every link that is returned by the parameters that are defined in the navigator element after the first level.|```
-[placeholder tag="namelink" ]
-<br>
-```
-
-|
+|Navigator result design 1|A `<b>` tag is added to display the text in the first level of the navigator in bold.|`<b>[placeholder tag="namelink" ]</b><br>`|
+|Navigator result design 2|The second design is repeated for every link that is returned by the parameters that are defined in the navigator element after the first level.|`[placeholder tag="namelink" ]`<br>`<br>`|
 
 ## Navigator used in a rendering portlet
 
@@ -41,34 +29,10 @@ In this example, a URLCmpnt tag is used to create a link instead of a placeholde
 
 |Design field|Design code|
 |------------|-----------|
-|**Header**|```
-<Table>
-```
-
-|
-|**Navigator result design 1**|```
-<tr><td>
-<b>
-<a HREF=
-"<URLCmpnt context="autofill" type="content" mode="portal" portalTarget="URLMap"]"
-target="_blank"> [Property context="autofill" field="title"] </a></b>
-</td></tr>
-```
-
-|
-|**Navigator result design 2**|```
-<tr><td>
-<a HREF=
-"[URLCmpnt context="autofill" type="content" mode="portal" portalTarget="URLMap"]"
-target="_blank"> [Property context="autofill" field="title"] </a></td></tr>
-```
-
-|
-|**Footer**|```
-</Table>
-```
-
-|
+|**Header**|`<Table>`|
+|**Navigator result design 1**|`<tr><td>`<br>`<b>`<br>`<a HREF=`<br>`"<URLCmpnt context="autofill" type="content" mode="portal" portalTarget="URLMap"]"`<br>`target="_blank"> [Property context="autofill" field="title"] </a></b>`<br>`</td></tr>`|
+|**Navigator result design 2**|`<tr><td>`<br>`<a HREF=`<br>`"[URLCmpnt context="autofill" type="content" mode="portal" portalTarget="URLMap"]"`<br>`target="_blank"> [Property context="autofill" field="title"] </a></td></tr>`|
+|**Footer**|`</Table>`|
 
 ## An unordered list
 
@@ -78,26 +42,9 @@ In this example, unordered list tags are used to format navigator results. This 
 
 |Design|Details|Design|
 |------|-------|------|
-|Header 1|The header is used to open new `<ul>` and `<li>` tags at each level in the navigator.|```
-<ul><li>
-```
-
-|
-|Navigator result design 1|The placeholder tag is used to render the name and link of each item in the navigator.|```
-[placeholder tag="namelink"]
-
-```
-
-|
-|Separator 1|The separator field closes and open the `<li>` tag for each item that is displayed in the navigator.|```
-</li><li>
-```
-
-|
-|Footer 1|The footer is used to close `<ul>` and `<li>` tags at each level in the navigator.|```
-</li></ul>
-```
-
-|
+|Header 1|The header is used to open new `<ul>` and `<li>` tags at each level in the navigator.|`<ul><li>`|
+|Navigator result design 1|The placeholder tag is used to render the name and link of each item in the navigator.|`[placeholder tag="namelink"]`|
+|Separator 1|The separator field closes and open the `<li>` tag for each item that is displayed in the navigator.|`</li><li>`|
+|Footer 1|The footer is used to close `<ul>` and `<li>` tags at each level in the navigator.|`</li></ul>`|
 |Navigator result design 2|In this example, you do not need to add any markup to the Navigator result design 2. The markup that is entered in Navigator result design 1 is automatically used for the other levels of the navigator.| |
 

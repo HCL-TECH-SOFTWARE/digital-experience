@@ -29,12 +29,8 @@ Web content cache configuration settings are specified by the following properti
 
 |Cache Type|Properties|
 |----------|----------|
-|Basic cache:|`connect.businesslogic.defaultcacheexpires``connect.businesslogic.defaultcache`
-
-|
-|Advanced cache: All|`connect.moduleconfig.ajpe.contentcache.defaultcontentcache``connect.moduleconfig.ajpe.contentcache.contentcacheexpires`
-
-|
+|Basic cache:|`connect.businesslogic.defaultcacheexpires``connect.businesslogic.defaultcache`|
+|Advanced cache: All|`connect.moduleconfig.ajpe.contentcache.defaultcontentcache``connect.moduleconfig.ajpe.contentcache.contentcacheexpires`|
 |Advanced cache: Session cache only|`connect.sessioncacheconfig.memcachesize`|
 
 |Cache Property|Details|
@@ -92,7 +88,8 @@ When you use the cache expire settings that are listed in Table 3, you can speci
 -   Mon Nov 6 09:00:00 2000
 -   6 Nov 2000 9:00 AM
 
-**Note:** The last two formats assume GMT.
+!!! note
+    The last two formats assume GMT.
 
 Examples:
 

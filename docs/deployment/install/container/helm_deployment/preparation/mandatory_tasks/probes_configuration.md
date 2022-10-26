@@ -1,4 +1,4 @@
-# Probes configuration in values.yaml file
+# Probes Configuration in values.yaml file
 
 The `liveness` and `readiness` probes such as the status thresholds and time values can be modified. The probe target values are not configurable anymore because they are application specific and the values must not be changed.
 

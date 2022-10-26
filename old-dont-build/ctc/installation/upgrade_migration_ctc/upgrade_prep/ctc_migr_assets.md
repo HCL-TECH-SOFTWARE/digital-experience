@@ -14,9 +14,9 @@ The list presentation was introduced in Web Content Manager version 8.0.0.1. It 
 -   Slideshow
 -   List
 
-Older versions of these authoring templates are stored in the **Obsolete** folder in the **CTC Design Library**. You should apply the new templates to your migrated content.
+Later versions of these authoring templates are stored in the **Obsolete** folder in the **CTC Design Library**. You should apply the new templates to your migrated content.
 
-The list presentations added in version 4.0 are located under **CTC Design \> Components \> List Presentations** in the **CTC Design Library**
+The list presentations added in version 4.0 are located under **CTC Design > Components > List Presentations** in the **CTC Design Library**
 
 ## Upgrading slideshows
 

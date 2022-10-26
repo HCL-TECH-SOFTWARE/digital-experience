@@ -2,6 +2,7 @@
 
 Themes and modules are configured through theme metadata properties and resource environment provider custom properties.
 
+<!--
 -   **[Changing theme metadata](../dev-theme/themeopt_cust_config_metadata.md)**  
 The first step of theme configuration is through theme metadata properties. Changes to the metadata are specific to a single theme, and the entries and values, therefore, can vary from theme to theme.
 -   **[Changing resource environment provider custom properties](../dev-theme/themeopt_cust_config_rep.md)**  
@@ -13,6 +14,6 @@ Set the following properties in the WP ConfigService Resource Environment Provid
 -   **[Using your configuration properties](../dev-theme/themeopt_cust_config_useprops.md)**  
 Create a JavaScript object for your theme on the client side. Theme metadata properties must be loaded dynamically. If you must load a property statically, use a resource environment provider custom property instead.
 -   **[Configuration settings for capability filters](../dev-theme/themeopt_mod_capfilter_settings.md)**  
-Set the following properties in the Wp ConfigService Resource Environment Provider to enable or disable the various capability filters.
+Set the following properties in the Wp ConfigService Resource Environment Provider to enable or disable the various capability filters. -->
 
 

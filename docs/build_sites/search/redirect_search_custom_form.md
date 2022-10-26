@@ -37,8 +37,8 @@ If you placed the Search Center on a different page, for example, a public page,
 
 For more information, see *Placing the Search Center on a public portal page*.
 
-
+<!-- 
 **Previous topic:**[Configuring your custom portal themes to include the search box](../admin-system/srcconfthmsforsrch.md)
 
-**Next topic:**[Remote search service](../admin-system/srcusgrmtsrchsrv.md)
+**Next topic:**[Remote search service](../admin-system/srcusgrmtsrchsrv.md) -->
 

@@ -21,10 +21,7 @@ If you experience issues when you configure the consumed Web Content Viewer port
 -   Configure the WSRP resource proxy of the WSRP Consumer to prevent it from forwarding the `com.ibm.lotus.openajax.virtualhost` and `com.ibm.lotus.openajax.virtualport` HTTP headers that are set by the Enabler component. If the headers are not present in the Dojo XMLHttpRequests, the WSRP resource proxy addresses the remote web content portal correctly. For more information, read *Customizing the WSRP resource proxy HTTP header forwarding behavior*.
 
 
-**Related information**  
-
-
-[The module framework](../dev-theme/themeopt_module.md)
-
-[Customizing the WSRP resource proxy HTTP header forwarding behavior](../admin-system/wsrpt_cons_cust_resproxy_frwrd.md)
+???+ info "Related information:"
+    - [The module framework](../../../../../../build_sites/themes_skins/the_module_framework/index.md)
+    - [Customizing the WSRP resource proxy HTTP header forwarding behavior](../../../../../../extend_dx/development_tools/wsrp/portal_wsrp_consumer/customizing_wsrp_cfg_consumer_portal/customizing_wsrp_resource_proxy/wsrpt_cons_cust_resproxy_frwrd.md)
 

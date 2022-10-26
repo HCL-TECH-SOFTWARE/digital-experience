@@ -2,7 +2,7 @@
 
 The Portal Scripting Interface provides more commands and variants of commands than shown in the previous topics. To learn more about these commands and their syntax and function, and beans and parameters, refer to the integrated help of the Portal Scripting Interface.
 
-Use the command help\(\) and specify the command for which you want to get help. Start by entering the following command:
+Use the command help (\) and specify the command for which you want to get help. Start by entering the following command:
 
 ```
 wsadmin>print Content.help("find")

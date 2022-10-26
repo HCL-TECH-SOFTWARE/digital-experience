@@ -13,15 +13,15 @@ A reject stage can be specified, which is a stage that is run when a document is
 
 You can also specify that a comment must be entered on every move a document makes in the workflow or only on specific stages. This comment is added to the document's history section.
 
--   **[Workflow stages](../wcm/wcm_dev_workflows_stages.md)**  
+-   **[Workflow stages](wcm_dev_workflows_stages.md)**  
 Workflow stages are the building blocks of a workflow. You need to create at least one stage before you can create a workflow.
--   **[Workflow actions](../wcm/wcm_dev_workflows_actions.md)**  
+-   **[Workflow actions](wcm_dev_workflows_actions.md)**  
 Each workflow stage contains sets of actions; actions that are run when an item enters the stage, and actions run when an item exits the stage. The exit actions are restricted to non-scheduled actions, since they must be run immediately.
--   **[Access to items during a workflow](../wcm/wcm_managing_workflow_using.md)**  
+-   **[Access to items during a workflow](wcm_managing_workflow_using.md)**  
 If an item is participating in a workflow, the creator is given manager access to the item only in the first workflow stage. As the item progresses through a workflow, the item access is determined by the combined workflow and system defined access levels.
--   **[Joint approval](../wcm/wcm_managing_workflow_joint-approval.md)**  
+-   **[Joint approval](wcm_managing_workflow_joint-approval.md)**  
 Joint approval is used in cases where approval from multiple users is required before an item is moved to the next stage.
--   **[Workflow example](../wcm/wcm_dev_workflows_example.md)**  
+-   **[Workflow example](wcm_dev_workflows_example.md)**  
 This example describes the steps that are required to create a four stage Workflow.
 
 

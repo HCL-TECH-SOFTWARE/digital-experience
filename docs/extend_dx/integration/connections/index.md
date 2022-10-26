@@ -18,9 +18,3 @@ Test the configuration of the application-specific Ajax proxy to manage authenti
 Depending on your deployment, follow these steps to optimize the HCL Connections portlets.
 -   **[Addressing HCL Connections content from a portlet](../connect/c_connections_portlets_poc_ovr.md)**  
 Use custom URIs to identify, access, and display HCL Connections in a portlet.
--   **[Configuring common Directory Services for your security configuration](../connect/t_connections_portlets_common_directory.md)**  
-Configure the common Directory Services to work with your security configuration.
--   **[Configuring the Ajax proxy to allow FileNet requests](../connect/t_connections_portlest_proxy_Filenet.md)**  
-Configure the Ajax proxy so that direct requests that the CCM portlet makes to the FileNet server are allowed to pass through the proxy server.
-
-
