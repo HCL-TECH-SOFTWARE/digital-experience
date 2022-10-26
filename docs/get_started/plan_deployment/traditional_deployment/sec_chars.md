@@ -52,10 +52,7 @@ The following table contains a list of the required fields on the user informati
     The previous characters are true if the user.UNIQUEID.charset parameter is set to ascii. If set to unicode, the standard Java Letter definition is used and all characters that are recognized as letter or digit by Java are allowed by default. See the **Puma Validation Service** section in the "Portal configuration services" link for information about further parameters that can be modified to affect the behavior of Portal's validation of users, groups, and passwords.
 
 
-<!--- ???info:**Related information**  
-
-
-[Creating new users and groups](../admin-system/adctnewu.md)
-
-[Target environment considerations](../plan/mig_plan_targetenvironment.md) --->
+???+ info "Related information:"
+    - [Creating new users and groups](../../../deployment/manage/security/users_and_groups/adctnewu.md)
+    - [Target environment considerations](../../../deployment/manage/migrate/settingup_target_env/mig_plan_targetenvironment.md)
 
