@@ -55,7 +55,7 @@ The Usage report will show:
     !!!note
         Only user session data totals per month for the calendar year of purchase are transmitted to the customer's Flexnet dashboards for their view and monitoring purposes. No personal or PII data is transmitted.
         
--   **Entitlement**: Amount will equal 1 which is equivalent to your HCL Digital Experience Cloud Native 1 – 7 Tier 1 – 7 purchased part. 
+-   **Entitlement**: Amount will equal to one (1), which is equivalent to your HCL Digital Experience Cloud Native 9.5 Tier 1 – 7 purchased part. 
 
 !!!note
-    The Flexnet dashboard **Usage** data may show a data percentage amount in parenthesis. This overage percentage amount is not applicable for  HCL Digital Experience Cloud Native 9.5 Tier 1 - 7 entitlement checking and informational user session consumption reporting, and may be disregarded. 
+    The Flexnet dashboard **Usage** data may show a data percentage amount in parenthesis. This overage percentage amount is not applicable for HCL Digital Experience Cloud Native 9.5 Tier 1 - 7 entitlement checking and informational user session consumption reporting, and may be disregarded. 
