@@ -125,12 +125,8 @@ The following is a brief description of the extension to the JSR 168 portlet JSP
 You can also use JSTL tags as described in *Generating output*.
 
 
-**Related information**  
-
-
-[Standard portlet API](../dev-portlet/jsrapi.md)
-
-[Advanced URL generation for data exchange](../dev-portlet/pltcom_datxchg_xptltlnks.md)
-
-[Generating output](../dev-portlet/wpsbsoutput.md)
+???+ info "Related information"
+    - [Standard portlet API](../standard_portlet_api/index.md)
+    - [Advanced URL generation for data exchange](../portlet_communication/pltcom_datxchg_xptltlnks.md)
+    - [Generating output](../dev-portlet/wpsbsoutput.md)
 

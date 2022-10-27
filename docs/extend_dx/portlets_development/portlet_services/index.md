@@ -11,8 +11,8 @@ A portlet service can be invoked only from within a portlet.
 
 Portlet service interfaces used by standard portlets are different from those used by HCL portlets. You can write your own portlet service and register it in the portal, so that all portlets can use it. Various services may be implemented by different vendors, for example, a SearchService, LocationService, or a MailService. The following services are available with HCL Portal:
 
--   [CredentialVaultService](wpsadvdev.md)
--   [Model SPI services](../dev/dgn_modelovw.md)
+-   [Credential Vault Service](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/security_svc/srvcfgref_cred_vault.md)
+-   [Model SPI services](../../apis/model_spi/index.md)
 -   [PumaHome](../dev/wpspuma.md)
 -   [DynamicUIManagementFactoryService](wpsdynui_cpts.md)
 
