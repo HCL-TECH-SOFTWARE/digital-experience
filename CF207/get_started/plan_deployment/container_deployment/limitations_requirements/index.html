@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/get_started/plan_deployment/container_deployment/limitations_requirements/">
       
       <link rel="icon" href="../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
@@ -941,7 +941,7 @@
 
 <h1 id="containerization-requirements-and-limitations">Containerization requirements and limitations</h1>
 <p>This section describes the requirements to deploy the HCL Digital Experience 9.5 images to container platforms and current limitations.</p>
-<p><strong>Attention:</strong> Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience (DX) <a href="deploy_container_platforms.md">Operator-based deployments</a> and will provide support only for <a href="helm.md">Helm-based deployments</a>. There will be no further updates or code fixes provided for the Operator-based deployments. HCL requires all customers to migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see <a href="helm_operator_migration.md">Migrating from Operator-based to Helm-based deployments</a>.</p>
+<p><strong>Attention:</strong> Beginning with HCL Digital Experience 9.5 Container Update CF200, HCL has discontinued releasing the HCL Digital Experience (DX) <a href="../../../../deployment/install/container/overview/">Operator-based deployments</a> and will provide support only for <a href="../../../../deployment/install/container/helm_deployment/overview/">Helm-based deployments</a>. There will be no further updates or code fixes provided for the Operator-based deployments. HCL requires all customers to migrate to Helm-based deployments for their DX installations. HCL will work with our customers as they transition from Operator-based to Helm-based deployments. For more information on the migration process, see <a href="../../../../deployment/install/container/operator-migration/operator_migration_preparation/">Migrating from Operator-based to Helm-based deployments</a>.</p>
 <p>Consult the <a href="https://support.hcltechsw.com/csm?id=kb_article&amp;sysparm_article=KB0013514&amp;sys_kb_id=17d6296a1b5df34077761fc58d4bcb03">HCL Digital Experience 9.5 Support Statements</a> on the HCL DX Support pages for the latest updates on supported platforms, components, and release levels.</p>
 <h2 id="requirements-for-supported-file-systems">Requirements for supported file systems</h2>
 <p>This section describes the requirements for supported file systems.</p>
@@ -956,7 +956,7 @@
 <li>A <code>persistence-node</code> relies on PostgreSQL which requires the use of hard links. Storage systems (like Azure Files) that do not support the use of hard links cannot be used. For more information, see the <a href="https://docs.microsoft.com/en-us/rest/api/storageservices/features-not-supported-by-the-azure-file-service">Microsoft documentation for features not supported by the Azure File service</a>.</li>
 <li>All DX applications require the use of symbolic links and soft links. Storage systems must support the use of symbolic links and soft links. If you are using Azure Files, you must enable <code>mountOptions</code> of the StorageClass using <code>mfsymlinks</code>. For more information, see the <a href="https://docs.microsoft.com/en-us/azure/storage/files/storage-troubleshoot-linux-file-connection-problems#cannot-create-symbolic-links---ln-failed-to-create-symbolic-link-t-operation-not-supported">Microsoft documentation on troubleshooting Azure Files on Linux (SMB)</a>.</li>
 <li>You can configure volume sizes individually per volume and these are dependent of the respective usage. For more information, see the following Help Center topics:<ul>
-<li><a href="helm_persistent_volume_claims.md#configuration_parameters">Configuring PVCs in a Helm deployment</a></li>
+<li><a href="../../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_persistent_volume_claims/">Configuring PVCs in a Helm deployment</a></li>
 <li><a href="customizing_container_deployment.md#section_a2l_xhv_4nb">Customizing the container for Operator-based deployments</a></li>
 </ul>
 </li>
@@ -979,7 +979,7 @@
 </li>
 <li>
 <p><strong>Migration</strong>:</p>
-<p>For information about migrating from Operator-based to Helm-based deployments, see <a href="helm_operator_migration.md">Migrating from Operator-based to Helm-based deployments</a>.</p>
+<p>For information about migrating from Operator-based to Helm-based deployments, see <a href="../../../../deployment/install/container/operator-migration/operator_migration_preparation/">Migrating from Operator-based to Helm-based deployments</a>.</p>
 </li>
 <li>
 <p><strong>Container platform capacity resource requirements</strong>:</p>
@@ -1104,20 +1104,21 @@
 </table>
 </li>
 </ul>
-<p><strong>Related information</strong>  </p>
-<p><a href="../install/rm_container_deployment.md">HCL Digital Experience 9.5 Roadmap: Container deployment</a></p>
-<p><a href="../containerization/c_kubesupportstatement.md">DX Kubernetes support matrix</a></p>
-<p><a href="../containerization/openshift.md">Deploy DX 9.5 Container to Red Hat OpenShift</a></p>
-<p><a href="../containerization/kubernetes_eks.md">Deploy DX Container to Amazon EKS</a></p>
-<p><a href="../containerization/kubernetes_eks_cf192andlater.md">Deploy DX CF192 and later release Containers to Amazon EKS</a></p>
-<p><a href="../containerization/kubernetes_eks_cf191andearlier.md">Deploy DX CF191 and earlier release Containers to Amazon EKS</a></p>
+<!--
+???+ info "Related information:"
+    - [HCL Digital Experience 9.5 Roadmap: Container deployment](../container_deployment/rm_container/rm_container_deployment.md)
+    - [DX Kubernetes support matrix](../../system_requirements/kubernetes/kubernetes-runtime.md)
+    - [Deploy DX 9.5 Container to Red Hat OpenShift](../containerization/openshift.md)
+    - [Deploy DX Container to Amazon EKS](../containerization/kubernetes_eks.md)
+    - [Deploy DX CF192 and later release Containers to Amazon EKS](../containerization/kubernetes_eks_cf192andlater.md)
+    - [Deploy DX CF191 and earlier release Containers to Amazon EKS](../containerization/kubernetes_eks_cf191andearlier.md)-->
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 18, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>
@@ -1288,10 +1289,10 @@
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);console.log(new FormData(form)),__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
     
   </body>

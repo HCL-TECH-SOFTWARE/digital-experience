@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/build_sites/create_sites/building_website/static_content/creating_static_page/">
       
       <link rel="icon" href="../../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
@@ -1403,8 +1403,10 @@ The portlet window and portlet container microformats can contain object IDs. Th
 <ul>
 <li>To render the page as a stand-alone static page, include the <code>&lt;html&gt;</code> element as a root element in the markup file.</li>
 <li>To render the page as part of a portal page, omit the <code>&lt;html&gt;</code> element.</li>
-<li>You can also include other resources as part of the page, such as cascading style sheets or graphic images. You must bundle all the files into a compressed file. This single compressed file is then used to create or update the static page.</li>
 </ul>
+</li>
+<li>
+<p>You can also include other resources as part of the page, such as cascading style sheets or graphic images. You must bundle all the files into a compressed file. This single compressed file is then used to create or update the static page.</p>
 </li>
 <li>
 <p>You can use portal frameworks such as Live Text with your static pages. To achieve this, include your static page as part of a dynamic portal page when you add the static page to your portal in a later step.</p>
@@ -1435,26 +1437,27 @@ The portlet window and portlet container microformats can contain object IDs. Th
 <p class="admonition-title">Note</p>
 <p>When you use only characters that can be encoded in ASCII in the names of the compressed file and the directories and files within the compressed file, you can use a compressed tool of your choice to create the file package. If you use characters that are not ASCII encoded, for example special characters or DBCS, in the names of the compressed file and the directories and files within the compressed file, you must create the compressed file by using the JRE tool <code>jar.exe</code>.</p>
 </div>
-<!---
--   **[Example HTML markup for defining a portal page](../dev/spa_html_xmpl.md)**  
-Use these code samples as examples of HTML markup to create a portal page.
--   **[Class attributes for portlets on static pages](../dev/spa_plt_mcrfrmt.md)**  
- When you place a portlet on a static HTML page to be rendered by the portal, use a suitable CSS file to format the portlet. The CSS file makes use of the portlet microformat. You can make use of this microformat if you want to render portlets on your static HTML page with a skin of your choice. When you write the static page, you can use CSS or JavaScript techniques to convert the microformat into a friendly user interface. The portlet references in the static HTML page are replaced by the content of the portlet and the portlet microformat.
--   **[Class attributes for a portlet container on static pages](../dev/spa_contnr_mcrfrmt.md)**  
-To render a portlet container on a static page, you use a CSS file that makes use of the container microformat. One of the benefits is that users with the required access rights can later move the portlets by drag and drop.
--   **[Class attributes for components on static pages](../dev/spa_compnt_mcrfrmt.md)**  
- When you place a component on a static HTML page to be rendered by the portal, use a suitable CSS file to format the portlet. The CSS file uses the component microformat. You can use this microformat if you want to render components on your static HTML page with a skin of your choice. When you write the static page, you can use CSS or JavaScript techniques to convert the microformat into a friendly user interface. The component references in the static HTML page are replaced by the content of the component and the component microformat.
--   **[Navigation options for static pages](../dev/spa_nav_mcrfrmt.md)**  
-You can provide navigation for your static pages by using either the portal theme or by making use of the navigation microformat.
--   **[Portlets for adding dynamic elements to static pages](../dev/spa_portlets.md)**  
-If you want to add dynamic elements such as portal navigation to your static pages, you can use portlets that the portal provides. --->
+<ul>
+<li><strong><a href="spa_html_xmpl/">Example HTML markup for defining a portal page</a></strong><br />
+Use these code samples as examples of HTML markup to create a portal page.</li>
+<li><strong><a href="spa_plt_mcrfrmt/">Class attributes for portlets on static pages</a></strong><br />
+ When you place a portlet on a static HTML page to be rendered by the portal, use a suitable CSS file to format the portlet. The CSS file makes use of the portlet microformat. You can make use of this microformat if you want to render portlets on your static HTML page with a skin of your choice. When you write the static page, you can use CSS or JavaScript techniques to convert the microformat into a friendly user interface. The portlet references in the static HTML page are replaced by the content of the portlet and the portlet microformat.</li>
+<li><strong><a href="spa_contnr_mcrfrmt/">Class attributes for a portlet container on static pages</a></strong><br />
+To render a portlet container on a static page, you use a CSS file that makes use of the container microformat. One of the benefits is that users with the required access rights can later move the portlets by drag and drop.</li>
+<li><strong><a href="spa_compnt_mcrfrmt/">Class attributes for components on static pages</a></strong><br />
+ When you place a component on a static HTML page to be rendered by the portal, use a suitable CSS file to format the portlet. The CSS file uses the component microformat. You can use this microformat if you want to render components on your static HTML page with a skin of your choice. When you write the static page, you can use CSS or JavaScript techniques to convert the microformat into a friendly user interface. The component references in the static HTML page are replaced by the content of the component and the component microformat.</li>
+<li><strong><a href="spa_nav_mcrfrmt/">Navigation options for static pages</a></strong><br />
+You can provide navigation for your static pages by using either the portal theme or by making use of the navigation microformat.</li>
+<li><strong><a href="portlets_dynamic_elements/">Portlets for adding dynamic elements to static pages</a></strong><br />
+If you want to add dynamic elements such as portal navigation to your static pages, you can use portlets that the portal provides. ---&gt;</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 18, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>
@@ -1625,10 +1628,10 @@ If you want to add dynamic elements such as portal navigation to your static pag
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);console.log(new FormData(form)),__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
     
   </body>

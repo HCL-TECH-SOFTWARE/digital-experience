@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/extend_dx/script_application/build_app_with_script_application/import_app_that_links_to_js_framework/">
       
       <link rel="icon" href="../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
@@ -828,7 +828,7 @@
     id="__nav_7_4"
     
   />
-                               
+                             
   <div class="md-nav__link md-nav__link--index ">
     <a href="../../../development_tools/">Development Tools</a>
 
@@ -1030,7 +1030,7 @@
 
 <h1 id="import-applications-that-include-links-to-javascript-frameworks">Import applications that include links to JavaScript frameworks</h1>
 <p>To use a JavaScript framework or library from an application, use portal theme modules to load the shared JavaScript. Do not load them from the application.</p>
-<p>However, application developers must load those JavaScript frameworks for testing locally, before they push them to the server. Not all JavaScript frameworks are available in the portal theme profiles and modules by default. For more information on loading JavaScript into portal pages with theme modules, read <em>Third-party JavaScript libraries</em>.</p>
+<p>However, application developers must load those JavaScript frameworks for testing locally, before they push them to the server. Not all JavaScript frameworks are available in the portal theme profiles and modules by default. For more information on loading JavaScript into portal pages with theme modules, read <a href="js_libraries/">Third-party JavaScript libraries</a>.</p>
 <p>When you develop a Script Application that includes a JavaScript framework reference locally, add a directive HTML attribute to the script reference. Comment out the local reference when you push it with the command line application or import it.</p>
 <p>Add the attribute <code>data-scriptportlet-theme-capability</code> to a script element. You can add a value if the attribute is specified, which is the name of the capability that is provided by the theme.</p>
 <p>For example, to include a script reference to jQuery directly from the local application, take the following example.</p>
@@ -1056,7 +1056,7 @@ data-scriptportlet-theme-capability=&quot;jquery&quot;&gt;&lt;/script&gt; [/Plug
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 18, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>
@@ -1227,10 +1227,10 @@ data-scriptportlet-theme-capability=&quot;jquery&quot;&gt;&lt;/script&gt; [/Plug
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);console.log(new FormData(form)),__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
     
   </body>

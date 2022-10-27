@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/manage_content/wcm/wcm_content_delivery/syndication/manage_synd_subs/wcm_syndication_delegated_access/">
       
       <link rel="icon" href="../../../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
@@ -961,6 +961,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#assigning-a-user-manager-access-to-the-portal-virtual-resources" class="md-nav__link">
+    Assigning a user Manager access to the PORTAL Virtual Resources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#setup-a-resource-environment-provider-property" class="md-nav__link">
     Setup a resource environment provider property
   </a>
@@ -983,6 +990,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results-of-setting-up-delegated-access-for-syndication" class="md-nav__link">
+    Results of setting up delegated access for syndication
+  </a>
   
 </li>
       
@@ -1427,6 +1441,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#assigning-a-user-manager-access-to-the-portal-virtual-resources" class="md-nav__link">
+    Assigning a user Manager access to the PORTAL Virtual Resources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#setup-a-resource-environment-provider-property" class="md-nav__link">
     Setup a resource environment provider property
   </a>
@@ -1449,6 +1470,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results-of-setting-up-delegated-access-for-syndication" class="md-nav__link">
+    Results of setting up delegated access for syndication
+  </a>
   
 </li>
       
@@ -1481,6 +1509,11 @@
 <p>In addition, the REST calls for <code>/wcmrest/Syndication/Syndicators</code> and <code>/wcmrest/Syndicator/{uuid}/Status</code> are available to the user.</p>
 <h2 id="setting-up-delegated-access-for-syndication">Setting up delegated access for syndication</h2>
 <p>To assign delegated access for a specific user, do the steps in the following sections.</p>
+<h3 id="assigning-a-user-manager-access-to-the-portal-virtual-resources">Assigning a user Manager access to the PORTAL Virtual Resources</h3>
+<p>Assign the user Manager access to the PORTAL Virtual Resources using the Resource Permission portlet in the Portal Administration. Navigate to Resource Type &gt; Virtual Resources &gt; PORTAL and edit the Manager role.</p>
+<p><img alt="Navigate to Resource Type" src="../../../../../../images/DelegatedAccessSyn1.png" /></p>
+<p>In this example, User1 and User2 have been given access.</p>
+<p><img alt="User1 and User2 access" src="../../../../../../images/DelegatedAccessSyn2.png" /></p>
 <h3 id="setup-a-resource-environment-provider-property">Setup a resource environment provider property</h3>
 <p>Setup a resource environment property in the WCM WCMConfigService. This property is used to indicate to the Portal that delegated access is enabled and it must be set to "true" for the function to be available (the default for the property is "false"). This property allows the function to be available for all users (it is not user specific).</p>
 <ol>
@@ -1500,7 +1533,7 @@
 <p>Enter a name of "enableSyndicatorFilter".</p>
 </li>
 <li>
-<p>Enter a value of "true" </p>
+<p>Enter a value of "true". </p>
 </li>
 <li>
 <p>Select <strong>OK</strong>.</p>
@@ -1513,9 +1546,28 @@
 </li>
 </ol>
 <h3 id="library-administrator-access">Library Administrator access</h3>
-<p>Give the user Administrator access to ALL of the libraries in the syndicator. This must be done to enable the user to administer the syndicator.</p>
+<p>Give the user Administrator access to ALL of the libraries in the syndicator pair they will manage. This must be done to enable the user to administer the syndicator pair.</p>
+<p>In this example, a new syndicator, WebContentSyndicator, has been created that includes the WCM Web Content library.</p>
+<p><img alt="WebContentSyndicator" src="../../../../../../images/DelegatedAccessSyn3.png" /></p>
+<p>To give User1 Administrator access to the library use the Web Content Libraries portlet and select the wrench to set permissions on the Web Content library.</p>
+<p><img alt="Set permissions" src="../../../../../../images/DelegatedAccessSyn4.png" /></p>
+<p>The Resource Permissions portlet will be invoked and users can be added by editing the Administrator role.</p>
+<p><img alt="Set Administrator" src="../../../../../../images/DelegatedAccessSyn5.png" /></p>
+<p>In this example, only User1 is given Administrator access on the library.</p>
+<p><img alt="Set Administrator for User1" src="../../../../../../images/DelegatedAccessSyn6.png" /></p>
 <h3 id="wcm-libraries-root-access">WCM libraries root access</h3>
-<p>Give the user Manager access on the WCM Libraries Content Root using the "Set Access on Root" button in the Web Content Library portlet. Giving the user Manager access on the WCM Libraries Content Root gives them Manager access on all of the libraries, however, it is possible to block the Manager access on libraries that should not be administered by this user (unlike giving the user Administrator access which cannot be blocked).</p>
+<p>Give the user Manager access on the WCM Libraries Content Root on the server you are syndicating using the "Set Access on Root" button in the Web Content Library portlet. Giving the user Manager access on the WCM Libraries Content Root gives them Manager access on all of the libraries, however, it is possible to block the Manager access on libraries that should not be administered by this user (unlike giving the user Administrator access which cannot be blocked).</p>
+<p><img alt="Set Root Access permissions" src="../../../../../../images/DelegatedAccessSyn7.png" /></p>
+<p>The Resource Permissions portlet will be invoked and users can be added by editing the Manager role.</p>
+<p><img alt="Set Manager" src="../../../../../../images/DelegatedAccessSyn8.png" /></p>
+<p>In this example, only User1 is given Manager access on the WCM Libraries Content Root.</p>
+<p><img alt="Set Manager for User1" src="../../../../../../images/DelegatedAccessSyn9.png" /></p>
+<h2 id="results-of-setting-up-delegated-access-for-syndication">Results of setting up delegated access for syndication</h2>
+<p>In the example above, setup for delegated access was completed for User1, but not for User2. </p>
+<p>As a result, User1 will be able to view the syndicator.</p>
+<p><img alt="Result for User1" src="../../../../../../images/DelegatedAccessSyn10.png" /></p>
+<p>But the syndicator will not be in the list for User2. </p>
+<p><img alt="Result for User2" src="../../../../../../images/DelegatedAccessSyn11.png" /></p>
 <!--
 **Parent topic:**[How to manage syndicators and subscribers](../panel_help/wcm_syndication.md) -->
 
@@ -1527,7 +1579,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 18, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>
@@ -1698,10 +1750,10 @@
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);console.log(new FormData(form)),__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
     
   </body>

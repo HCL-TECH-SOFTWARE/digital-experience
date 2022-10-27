@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/get_started/plan_deployment/traditional_deployment/roadmaps/rm_install_deployment/rm_web_content_dev/">
       
       <link rel="icon" href="../../../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
@@ -1165,16 +1165,18 @@
 <p><strong>Important:</strong> Developing or publishing web content requires a supported database other than Apache Server. An Apache Server database is available after installation. Therefore, you must transfer to a supported database; for example DB2® or Oracle.</p>
 <h2 id="topology-diagram">Topology diagram</h2>
 <p>The topology for a web content server includes a remote database and LDAP server. The topology depicts an HCL Web Content Manager server, instead of a portal server. When you install HCL Digital Experience, it includes the HCL Web Content Manager. The configuration steps for the web content development server are different from a basic stand-alone server. The web content server configuration includes syndication with the rendering or test server.</p>
-<p><img alt="HCL Web Content Manager server with a remote database and LDAP server" src="../images/WebContentDevelopment.jpg" /></p>
+<p><img alt="HCL Web Content Manager server with a remote database and LDAP server" src="../../../../../../images/WebContentDevelopment.jpg" /></p>
 <h1 id="preparing-for-the-installation-process">Preparing for the installation process</h1>
 <p>Gather information and software before you install HCL Digital Experience.</p>
 <ol>
 <li>
 <p>Check requirements.</p>
 <ul>
-<li>Documentation resource: <a href="../overview/inst_req.md">Detailed system requirements</a></li>
-<li>Get the software. New and existing users need to <a href="https://www.hcltechsw.com/wps/portal/about/welcome">sign up or register at HCL Software</a> and download their preferred HCL Digital Experience package.</li>
+<li>Documentation resource: <a href="../../../../../system_requirements/">Detailed system requirements</a></li>
 </ul>
+</li>
+<li>
+<p>Get the software. New and existing users need to <a href="https://www.hcltechsw.com/wps/portal/about/welcome">sign up or register at HCL Software</a> and download their preferred HCL Digital Experience package.</p>
 </li>
 </ol>
 <h1 id="installing-prerequisites">Installing prerequisites</h1>
@@ -1190,12 +1192,12 @@
 <h1 id="installing-the-hcl-digital-experience">Installing the HCL Digital Experience</h1>
 <p>Installing HCL Portal involves preparing your operating system, installing or upgrading the installation manager, and running the installation program.</p>
 <ul>
-<li>Documentation resource: <a href="inst_web_experience.md">Installing the HCL Digital Experience software</a></li>
+<li>Documentation resource: <a href="../../../../../../deployment/install/traditional/installing_dx/">Installing the HCL Digital Experience software</a></li>
 </ul>
 <h1 id="applying-the-latest-cumulative-fix">Applying the latest cumulative fix</h1>
 <p>Portal maintenance is delivered through individual fixes (Fixes) and Combined Cumulative Fixes (CFs), which is recommended to your environment.</p>
 <h1 id="transferring-your-database">Transferring your database</h1>
-<p>After you install your web experience, Apache Server is your available database. Depending on your requirements, you might need to transfer to a different database. The <strong>Database Transfer</strong> configuration option in the Configuration Wizard assigns users and permissions, creates databases, obtains support for database collation, and transfers your database. See <a href="../eua-workflows/kc-db-parent.md">Database Transfer in Configuration Wizard</a> for more information about this topic.</p>
+<p>After you install your web experience, Apache Server is your available database. Depending on your requirements, you might need to transfer to a different database. The <strong>Database Transfer</strong> configuration option in the Configuration Wizard assigns users and permissions, creates databases, obtains support for database collation, and transfers your database. See <a href="../../../../../../deployment/manage/db_mgmt_sys/dbtransfer_manual/">Database Transfer in Configuration Wizard</a> for more information about this topic.</p>
 <p>Log in to HCL Portal to verify that you have a working portal:</p>
 <div class="highlight"><pre><span></span><code>http://hostname.example.com:10039/wps/portal,
 where hostname.example.com is the fully qualified host name of the server where
@@ -1205,16 +1207,25 @@ for your environment.
 <ol>
 <li>
 <p>To get the latest updates for the wizard, apply the most recent Combined Cumulative Fix. For more information about applying the latest fix pack, visit <a href="../../../../../../deployment/install/traditional/cf_install/">Apply Combined Cumulative Fix</a> for more topic information.</p>
-<p><strong>Note:</strong> Skip this step, if you have the most recent fix pack applied.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Skip this step, if you have the most recent fix pack applied.</p>
+</div>
 </li>
 <li>
 <p>Access the Configuration Wizard. Go to http://your_server:10200/hcl/wizard.</p>
-<p><strong>Note:</strong> If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your_server:10200/hcl/wizard.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your_server:10200/hcl/wizard.</p>
+</div>
 <p><strong>Restriction:</strong> There is a known issue with Chrome version 45.x and the Configuration Wizard. If you are experiencing difficulties, use a different browser when you access the wizard.</p>
 </li>
 <li>
 <p>Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw_profile.</p>
-<p><strong>Note:</strong> If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see <a href="../config/../reference/supportedlanguages.html">Supported languages</a> in the HCL Digital Experience Version 8.5 documentation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see <a href="../../../../../extend_dx/development_tools/portal_admin_tools/language_support/index.md">Supported languages</a> in the HCL Digital Experience Version 8.5 documentation.</p>
+</div>
 </li>
 <li>
 <p>Select <strong>Set Up a Stand-alone Server</strong> > <strong>Database Transfer</strong>.</p>
@@ -1230,8 +1241,10 @@ for your environment.
 <ul>
 <li>Click <strong>Download Files</strong> to run the steps remotely.</li>
 <li>Click <strong>Run All Steps</strong> to run the steps locally.</li>
-<li>If you want to shorten your site URL for search engine optimization benefits, you can modify your context root and remove navigational state information from your URL by using the <strong>Modify Site URLs for Search Engine Optimization</strong> configuration option.</li>
 </ul>
+</li>
+<li>
+<p>If you want to shorten your site URL for search engine optimization benefits, you can modify your context root and remove navigational state information from your URL by using the <strong>Modify Site URLs for Search Engine Optimization</strong> configuration option.</p>
 </li>
 <li>
 <p>Log in to HCL Portal to verify that you have a working portal server.</p>
@@ -1239,24 +1252,39 @@ for your environment.
 </ol>
 <h1 id="enabling-federated-security">Enabling federated security</h1>
 <p>After you install your web experience, a default file-based repository is your available user registry. Depending on your requirements, you might need to enable a federated LDAP user registry.</p>
-<p><strong>Note:</strong> If you set <strong>Use Administrator IDs stored in your LDAP user registry</strong> to yes, the WebSphere® Application Server and HCL Portal user IDs and passwords are changed to the LDAP user ID and password. If you do not want to change both user IDs and passwords to match the LDAP user ID and password, set this value to no. After you configure your LDAP user registry, you can manually change the user IDs and passwords.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you set <strong>Use Administrator IDs stored in your LDAP user registry</strong> to yes, the WebSphere® Application Server and HCL Portal user IDs and passwords are changed to the LDAP user ID and password. If you do not want to change both user IDs and passwords to match the LDAP user ID and password, set this value to no. After you configure your LDAP user registry, you can manually change the user IDs and passwords.</p>
+</div>
 <ol>
 <li>
 <p>To get the latest updates for the wizard, apply the most recent Combined Cumulative Fix. For more information about applying the latest fix pack, visit <a href="../../../../../../deployment/install/traditional/cf_install/">Apply Combined Cumulative Fix</a>for more topic information.</p>
-<p><strong>Note:</strong> Skip this step, if you have the most recent fix pack applied.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Skip this step, if you have the most recent fix pack applied.</p>
+</div>
 </li>
 <li>
 <p>Access the Configuration Wizard. Go to http://your_server:10200/hcl/wizard.</p>
-<p><strong>Note:</strong> If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your_server:10200/hcl/wizard.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your_server:10200/hcl/wizard.</p>
+</div>
 <p><strong>Restriction:</strong> There is a known issue with Chrome version 45.x and the Configuration Wizard. If you are experiencing difficulties, use a different browser when you access the wizard.</p>
 </li>
 <li>
 <p>Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw_profile.</p>
-<p><strong>Note:</strong> If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see <a href="../config/../reference/supportedlanguages.html">Supported languages</a> in the HCL Digital Experience Version 8.5 documentation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see <a href="../../../../../extend_dx/development_tools/portal_admin_tools/language_support/index.md">Supported languages</a> in the HCL Digital Experience Version 8.5 documentation.</p>
+</div>
 </li>
 <li>
 <p>Select <strong>Set Up a Stand-alone Server</strong> > <strong>Enable Federated Security</strong>.</p>
-<p><strong>Note:</strong> If you set <strong>Use Administrator IDs stored in your LDAP user registry</strong> to yes, the WebSphere Application Server and HCL Portal user IDs and passwords are changed to the LDAP user ID and password. If you do not want to change both user IDs and passwords to match the LDAP user ID and password, set this value to no. After you configure your LDAP user registry, you can manually change the user IDs and passwords.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you set <strong>Use Administrator IDs stored in your LDAP user registry</strong> to yes, the WebSphere Application Server and HCL Portal user IDs and passwords are changed to the LDAP user ID and password. If you do not want to change both user IDs and passwords to match the LDAP user ID and password, set this value to no. After you configure your LDAP user registry, you can manually change the user IDs and passwords.</p>
+</div>
 </li>
 <li>
 <p>Provide information about your environment.</p>
@@ -1269,8 +1297,10 @@ for your environment.
 <ul>
 <li>Click <strong>Download Files</strong> to run the steps remotely.</li>
 <li>Click <strong>Run All Steps</strong> to run the steps locally.</li>
-<li>Log in to HCL Portal to verify that you have a working portal server.</li>
 </ul>
+</li>
+<li>
+<p>Log in to HCL Portal to verify that you have a working portal server.</p>
 </li>
 </ol>
 <h1 id="tuning-the-servers-in-your-environment">Tuning the servers in your environment</h1>
@@ -1309,25 +1339,25 @@ for your environment.
 <li>
 <p>Plan your syndication strategies.</p>
 <ul>
-<li>Documentation resource: <a href="../wcm/wcm_syndication_overview.md">Syndication relationships</a></li>
-<li>
-<p>Define syndication properties.</p>
+<li>Documentation resource: <a href="../../../../../../manage_content/wcm/wcm_content_delivery/syndication/wcm_syndication_overview/">Syndication relationships</a></li>
+</ul>
 </li>
 <li>
-<p>Documentation resource: <a href="../wcm/wcm_config_prop_syndication.md">Syndication properties</a></p>
+<p>Define syndication properties.</p>
+<ul>
+<li>Documentation resource: <a href="../../../../../../manage_content/wcm/wcm_content_delivery/syndication/wcm_config_prop_syndication/">Syndication properties</a></li>
+</ul>
 </li>
 <li>
 <p>Tune your syndication strategy to improve performance.</p>
-</li>
-<li>
-<p>Documentation resource: <a href="../wcm/wcm_syndication_tuning.md">Syndication tuning</a></p>
+<ul>
+<li>Documentation resource: <a href="../../../../../../manage_content/wcm/wcm_content_delivery/syndication/wcm_syndication_tuning/">Syndication tuning</a></li>
+</ul>
 </li>
 <li>
 <p>Create your syndication relationships.</p>
-</li>
-<li>
-<p>Documentation resource: <a href="../panel_help/wcm_syndication_settingup.md">Creating a syndication relationship by using the Administration Portlet</a></p>
-</li>
+<ul>
+<li>Documentation resource: <a href="../../../../../../manage_content/wcm/wcm_content_delivery/syndication/manage_synd_subs/wcm_syndication_settingup/">Creating a syndication relationship by using the Administration Portlet</a></li>
 </ul>
 </li>
 </ol>
@@ -1405,7 +1435,7 @@ for your environment.
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 18, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>
@@ -1576,10 +1606,10 @@ for your environment.
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);console.log(new FormData(form)),__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
     
   </body>

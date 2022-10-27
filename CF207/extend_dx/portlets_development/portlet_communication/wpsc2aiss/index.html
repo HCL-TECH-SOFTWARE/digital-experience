@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/extend_dx/portlets_development/portlet_communication/wpsc2aiss/">
       
       <link rel="icon" href="../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
@@ -947,7 +947,7 @@
     id="__nav_7_4"
     
   />
-                               
+                             
   <div class="md-nav__link md-nav__link--index ">
     <a href="../../../development_tools/">Development Tools</a>
 
@@ -1154,7 +1154,10 @@
 <li>The pop-up menu functionality requires browsers with JavaScript on the client.</li>
 <li>
 <p>Complex Java types can only be transferred between portlets if they are deployed in a shared class loader. Use basic Java types, such as <code>java.lang.String</code> or <code>java.util.HashMap</code> for compound data. Custom classes must be installed in a IBM® WebSphere® Application Server shared library available to both portlets or must be directly installed into the directory <code>[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/config</code>.</p>
-<p><strong>Note:</strong> JSR 286 events with XML bindings allow you to transfer complex data types between portlets in different class loaders. However, to avoid the performance penalty incurred by XML serialization, follow the previous recommendations.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>JSR 286 events with XML bindings allow you to transfer complex data types between portlets in different class loaders. However, to avoid the performance penalty incurred by XML serialization, follow the previous recommendations.</p>
+</div>
 </li>
 <li>
 <p>When you import sample Struts WAR files including the file <code>pbstrutsExample.war</code> into Rational® Application Developer Version 6, it reports broken links. You can ignore this warning message.</p>
@@ -1167,16 +1170,19 @@
 <li>Click <strong>Apply</strong>.</li>
 <li>Select <strong>Window</strong>, then <strong>Preferences</strong>, then <strong>Web Services</strong>, and then <strong>WS-I Compliance</strong>.</li>
 <li>Set the compliance levels to <strong>Ignore</strong> compliance.</li>
-<li>Click <strong>Apply</strong>.
-<strong>Important:</strong> To remove the compliance warnings from the Problems view open the project's pop-up menu in the Project Explorer and select Run Validation.</li>
+<li>Click <strong>Apply</strong>.</li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Important</p>
+<p>To remove the compliance warnings from the Problems view open the project's pop-up menu in the Project Explorer and select Run Validation.</p>
+</div>
 </li>
 <li>
 <p>If multiple cross-page wires marked with the <code>switch page</code> flag are triggered at the same time, all wire targets are invoked. However, the target page to which a user gets directed cannot be predicted unambiguously.</p>
 </li>
 <li>Cross-page wires for standard portlets are executed before redirecting to the target page. Therefore cross-page target portlets must not assume that they are executed on the target page.</li>
 <li>Wires created on a root page do not apply to derived pages that you create by referencing the root page. While such pages do inherit the content of the original page, this inheritance does not apply to wires; you have to explicitly create the wires for the derived page.</li>
-<li>Cooperative Java Server Faces (JSF) portlets that you developed by using older versions of Rational Application Developer Version 6 can contain code that does not work with HCL Digital Experience Version 8.5. If this occurs, replace the file <code>jsf-portlet.jar</code> in the failing WAR file with the version in the latest fix pack level.</li>
+<li>Cooperative Java Server Faces (JSF) portlets that you developed by using later versions of Rational Application Developer Version 6 can contain code that does not work with HCL Digital Experience Version 8.5. If this occurs, replace the file <code>jsf-portlet.jar</code> in the failing WAR file with the version in the latest fix pack level.</li>
 <li>Cooperative portlet action declarations with multiple input parameters configured in the WSDL file are not supported.</li>
 </ul>
 
@@ -1185,7 +1191,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 18, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>
@@ -1356,10 +1362,10 @@
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);console.log(new FormData(form)),__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
     
   </body>

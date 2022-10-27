@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/get_started/plan_deployment/traditional_deployment/wcm_env/wcm_cms_server_authoring/">
       
       <link rel="icon" href="../../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
@@ -1101,7 +1101,7 @@
 <p>Most HCLWeb Content Manager sites need to support many content authors. A clustered server solution is the best solution for this scenario.</p>
 <h2 id="standard-authoring-environment">Standard authoring environment</h2>
 <p>A standard authoring environment consists of a single authoring cluster that syndicates directly to either a staging or delivery environment. The following topology depicts an authoring environment that is configured to syndicate live items to the live production environment. The production server hosts the live site that visitors browse. Live items include published and expired items. The authoring environment is depicted as a stand-alone server, however it might be clustered.</p>
-<p><img alt="Simple authoring environment that syndicates live changes to the website" src="../images/wcm_authoring.jpg" /></p>
+<p><img alt="Simple authoring environment that syndicates live changes to the website" src="../../../../../images/wcm_authoring.jpg" /></p>
 <p>The following activities occur in the authoring environment:</p>
 <ul>
 <li>Create drafts</li>
@@ -1134,7 +1134,7 @@
 </li>
 </ul>
 <p>In addition, theme changes might be pushed to testing environment to validate that the content elements and design elements integrate as expected. Design integration elements are not included in the topology diagram.</p>
-<p><img alt="Authoring environment that is configured to send and receive changes to and from a testing environment. Live changes are then sent to the website." src="../images/wcm_authoring_uat.jpg" /></p>
+<p><img alt="Authoring environment that is configured to send and receive changes to and from a testing environment. Live changes are then sent to the website." src="../../../../../images/wcm_authoring_uat.jpg" /></p>
 <h2 id="decentralized-authoring-environments">Decentralized authoring environments</h2>
 <p>If your content authors are at different locations, or you have different groups of content authors, consider deploying a set of decentralized authoring clusters. This scenario works best if the decentralized content authors work with separate content stored in different content libraries.</p>
 <p>For example, if you have users that are in different locations, it might be more efficient to set up a local authoring environment at each location. Two-way syndication is used between all authoring environments with a centralized authoring environment. The centralized authoring environment provides an integrated view of all changes from the different authoring environments.</p>
@@ -1159,18 +1159,22 @@
 </ul>
 </li>
 </ul>
-<p><img alt="Complex decentralized authoring environment configuration that includes three authoring environments, one central authoring environment, and the live website environment" src="../images/wcm_authoring_decentralized.jpg" /></p>
+<p><img alt="Complex decentralized authoring environment configuration that includes three authoring environments, one central authoring environment, and the live website environment" src="../../../../../images/wcm_authoring_decentralized.jpg" /></p>
 <p>Decentralized authoring creates the risk of conflicting updates between authoring environments. To reduce the risk of conflicts, you can allocate different sites, or different sections of a site, to each authoring environment. You can also use different authoring environments for different user roles. For example, content authors might use a different authoring environment than presentation template designers.</p>
 <p>Access to each decentralized authoring environment is controlled with a combination of authoring portlet access controls and item security settings. For example, only users that require access to the local authoring environment would be granted access to the local authoring portlet. Users would be given "Read" access to all items, but only "Edit" access to items they are required to update.</p>
-<p><strong>Related information</strong>  </p>
-<p><a href="../wcm/wcm_deploy.md">HCL Web Content Manager (WCM) environments</a></p>
+<details class="info" open="open">
+<summary>Related information:</summary>
+<ul>
+<li><a href="../">HCL Web Content Manager (WCM) environments</a></li>
+</ul>
+</details>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 18, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>
@@ -1341,10 +1345,10 @@
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);console.log(new FormData(form)),__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
     
   </body>

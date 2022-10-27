@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/get_started/plan_deployment/traditional_deployment/wcm_env/wcm_cms_server_uat/">
       
       <link rel="icon" href="../../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
@@ -1087,10 +1087,10 @@
 <p>A single website might have multiple testing environments. Some testing environments focus on content and design integration, application and data integration, performance, and more. A web content test environment is a layer of validation before changes are sent to the live website. The test environment might be used to accumulate changes from your authoring environments before the changes are syndicated to the production delivery environment.</p>
 <h2 id="site-testing-within-an-authoring-environment">Site testing within an authoring environment</h2>
 <p>When testing within an authoring environment a testing server is paired with an authoring server. The testing server simulates the delivery environment and is used to test major changes to a website.</p>
-<p><img alt="Authoring environment that is configured to send and receive changes to and from a testing environment. Live changes are then sent to the website." src="../images/wcm_authoring_uat.jpg" /></p>
+<p><img alt="Authoring environment that is configured to send and receive changes to and from a testing environment. Live changes are then sent to the website." src="../../../../../images/wcm_authoring_uat.jpg" /></p>
 <h2 id="system-testing-within-a-staging-environment">System testing within a staging environment</h2>
 <p>When testing within a staging environment, data from the authoring environment is syndicated to a staging environment. User acceptance testing happens in the staging environment. If all tests are passed, data is syndicated from staging to the delivery production environment.</p>
-<p><img alt="Diagram depicting flow from authoring, to staging, to the live website by using syndication of live items" src="../images/wcm_staging_production.jpg" /></p>
+<p><img alt="Diagram depicting flow from authoring, to staging, to the live website by using syndication of live items" src="../../../../../images/wcm_staging_production.jpg" /></p>
 <p>Specific activities take place in each environment.</p>
 <ul>
 <li>
@@ -1101,8 +1101,10 @@
 <li>Test changes</li>
 <li>Publish changes</li>
 <li>Syndicate live items to the staging environment</li>
-<li><strong>Testing environment</strong></li>
 </ul>
+</li>
+<li>
+<p><strong>Testing environment</strong></p>
 <p>Test changes.</p>
 <p>Syndicate live items to production environment.</p>
 </li>
@@ -1111,16 +1113,20 @@
 <p>Deliver live website.</p>
 </li>
 </ul>
-<p><strong>Related information</strong>  </p>
-<p><a href="../deploy/dep_stage_check.md">Staging to production list</a></p>
-<p><a href="../wcm/wcm_deploy.md">HCL Web Content Manager (WCM) environments</a></p>
+<details class="info" open="open">
+<summary>Related information:</summary>
+<ul>
+<li><a href="../../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_stage_check/">Staging to production list</a></li>
+<li><a href="../">HCL Web Content Manager (WCM) environments</a></li>
+</ul>
+</details>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 18, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>
@@ -1291,10 +1297,10 @@
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);console.log(new FormData(form)),__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
     
   </body>

@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/guide_me/tutorials/scriptapps/site_integration/import_export_site/">
       
       <link rel="icon" href="../../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
@@ -968,15 +968,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#theme-metadata-xml" class="md-nav__link">
-    Theme Metadata XML
+  <a href="#theme-metadata-export-xml" class="md-nav__link">
+    Theme Metadata Export XML
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#page-hierarchy-xml" class="md-nav__link">
-    Page Hierarchy XML
+  <a href="#page-hierarchy-export-xml" class="md-nav__link">
+    Page Hierarchy Export XML
   </a>
   
 </li>
@@ -1108,20 +1108,22 @@
 <li><a href="export_wcm_library/">Export the DX site's WCM libraries via commandline</a></li>
 </ol>
 <h2 id="how-to-import-parts-of-a-dx-site-from-exported-files">How to import parts of a DX Site from exported files</h2>
-<p>Here are the steps in order to deploy your exported DX Site:
-1. <a href="../../common-setup/build-and-deploy/build_and_deploy_dx_modules/">Deploy all DX Modules required by your DX Theme.</a>
-2. <a href="import_theme/">Deploy the DX Theme you have created for your site. (Skip if you are using one of the out the box themes).</a>
-3. <a href="import_wcm_libraries/">Import all of WCM library that have your components.</a>
-4. <a href="import_site_page_hierarchy/">Import your site page hierarchy.</a>
-5. <a href="import_wcm_libraries/">Update all of WCM library that have references to site pages.</a>
-6. <a href="../../common-setup/build-and-deploy/build_and_deploy_scriptapps/">(Optional) Update the script applications</a></p>
+<p>Here are the steps in order to deploy your exported DX Site:</p>
+<ol>
+<li><a href="../../common-setup/build-and-deploy/build_and_deploy_dx_modules/">Deploy all DX Modules required by your DX Theme.</a></li>
+<li><a href="import_theme/">Deploy the DX Theme you have created for your site. (Skip if you are using one of the out the box themes).</a></li>
+<li><a href="import_wcm_libraries/">Import all of WCM library that have your components.</a></li>
+<li><a href="import_site_page_hierarchy/">Import your site page hierarchy.</a></li>
+<li><a href="import_wcm_libraries/">Update all of WCM library that have references to site pages.</a></li>
+<li><a href="../../common-setup/build-and-deploy/build_and_deploy_scriptapps/">(Optional) Update the script applications</a></li>
+</ol>
 <h2 id="xml-files">XML files</h2>
 <p>Sample XML files are available in the <a href="https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/showcase-sites/WoodBurnInsurance">WoodBurn Insurance reference site</a>. DXClient samples are also available in the DX server located in the following directory: <code>&lt;portal_server_home&gt;/doc/xml-samples</code>.</p>
 <div class="admonition note">
 <p class="admonition-title">When using Woodburn Insurance Demo</p>
-</div>
 <p>The following xml files are already included in the demo named theme-export.xml and site-export.xml respectively.</p>
-<h3 id="theme-metadata-xml">Theme Metadata XML</h3>
+</div>
+<h3 id="theme-metadata-export-xml">Theme Metadata Export XML</h3>
 <p>This xml will be used to export the metadata xml of theme.</p>
 <div class="admonition example">
 <p class="admonition-title">theme-export.xml</p>
@@ -1160,41 +1162,45 @@
 </code></pre></div>
 </div>
 <ul>
-<li>modify the objectid to match yours.
-   <div class="highlight"><pre><span></span><code>   <span class="nt">&lt;portal</span> <span class="na">action=</span><span class="s">&quot;locate&quot;</span><span class="nt">&gt;</span>
+<li>
+<p>modify the objectid to match yours.</p>
+<div class="highlight"><pre><span></span><code>   <span class="nt">&lt;portal</span> <span class="na">action=</span><span class="s">&quot;locate&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;skin</span> <span class="na">action=</span><span class="s">&quot;export&quot;</span> <span class="na">objectid=</span><span class="s">&quot;custom.portal.skin.Woodburn%20Insurance.Standard&quot;</span> <span class="nt">/&gt;</span>
       <span class="nt">&lt;theme</span> <span class="na">action=</span><span class="s">&quot;export&quot;</span> <span class="na">objectid=</span><span class="s">&quot;custom.portal.theme.Woodburn%20Insurance&quot;</span> <span class="nt">/&gt;</span>
    <span class="nt">&lt;/portal&gt;</span>
-</code></pre></div></li>
-<li>You can find the objectid by going to Theme Manager and then clicking the cog.
-      <img alt="Theme Manager" src="../../images/19theme_manager.png" /></li>
+</code></pre></div>
+</li>
+<li>
+<p>You can find the objectid by going to Theme Manager and then clicking the cog.
+      <img alt="Theme Manager" src="../../images/19theme_manager.png" /></p>
+</li>
 <li>Skin objectid.
       <img alt="Skin Object ID" src="../../images/19skin_objectid.png" /></li>
 <li>Theme objectid.
       <img alt="Theme Object ID" src="../../images/19theme_objectid.png" /></li>
 </ul>
-<h3 id="page-hierarchy-xml">Page Hierarchy XML</h3>
-<p>This xml will be used to export the Page metadata and hierarchy xml of your site.</p>
+<h3 id="page-hierarchy-export-xml">Page Hierarchy Export XML</h3>
+<p>This xml is used to export the Page metadata and hierarchy xml of your site.</p>
 <div class="admonition example">
 <p class="admonition-title">site-export.xml</p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="cm">&lt;!--</span>
 <span class="cm">=================================================================</span>
-<span class="cm">* Licensed Materials - Property of IBM</span>
+<span class="cm">*Licensed Materials - Property of IBM</span>
 <span class="cm">* (c) Copyright IBM Corp. 2003, 2010.  All rights reserved.</span>
 <span class="cm">*</span>
 <span class="cm">* US Government Users Restricted Rights - Use, duplication or</span>
-<span class="cm">* disclosure restricted by GSA ADP Schedule Contract with IBM</span>
+<span class="cm">*disclosure restricted by GSA ADP Schedule Contract with IBM</span>
 <span class="cm">* Corp.</span>
 <span class="cm">*</span>
 <span class="cm">* DISCLAIMER OF WARRANTIES.  The following [enclosed] code is</span>
-<span class="cm">* sample code created by IBM Corporation.  This sample code is</span>
+<span class="cm">*sample code created by IBM Corporation.  This sample code is</span>
 <span class="cm">* not part of any standard or IBM product and is provided to you</span>
-<span class="cm">* solely for the purpose of assisting you in the development of</span>
+<span class="cm">*solely for the purpose of assisting you in the development of</span>
 <span class="cm">* your applications.  The code is provided &quot;AS IS&quot;, without</span>
-<span class="cm">* warranty of any kind.  IBM shall not be liable for any damages</span>
+<span class="cm">*warranty of any kind.  IBM shall not be liable for any damages</span>
 <span class="cm">* arising out of your use of the sample code, even if they have</span>
-<span class="cm">* been advised of the possibility of such damages.</span>
+<span class="cm">*been advised of the possibility of such damages.</span>
 <span class="cm">*</span>
 <span class="cm">=================================================================</span>
 <span class="cm">--&gt;</span>
@@ -1214,13 +1220,15 @@
 </code></pre></div>
 </div>
 <ul>
-<li>modify the uniquename to match yours.</li>
-</ul>
+<li>
+<p>modify the uniquename to match yours.</p>
 <div class="highlight"><pre><span></span><code>      <span class="nt">&lt;content-node</span> <span class="na">action=</span><span class="s">&quot;export&quot;</span> <span class="na">uniquename=</span><span class="s">&quot;Woodburn Insurance&quot;</span>  <span class="na">export-descendants=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
 </code></pre></div>
-<ul>
-<li>You can find it in <code>Administration &gt; Site Management</code> under the <code>Unique name or Identifier</code> Column.
-   <img alt="Skin Object ID" src="../../images/19page_unique_name.png" /></li>
+</li>
+<li>
+<p>You can find it in <code>Administration &gt; Site Management</code> under the <code>Unique name or Identifier</code> Column.
+   <img alt="Skin Object ID" src="../../images/19page_unique_name.png" /></p>
+</li>
 </ul>
 
   <hr>
@@ -1228,7 +1236,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 18, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>
@@ -1403,10 +1411,10 @@
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);console.log(new FormData(form)),__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
     
   </body>

@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/extend_dx/portlets_development/predefined_public_render_params/use_predef_pubrenparam_inportlet/">
       
       <link rel="icon" href="../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
@@ -908,7 +908,7 @@
     id="__nav_7_4"
     
   />
-                               
+                             
   <div class="md-nav__link md-nav__link--index ">
     <a href="../../../development_tools/">Development Tools</a>
 
@@ -1110,7 +1110,7 @@
 
 <h1 id="to-use-predefined-public-render-parameters-in-your-portlet">To use predefined public render parameters in your portlet</h1>
 <p>Creating portlet URLs based on these predefined public render parameters is not different from creating any other portlet URL. The typical use case is to create a portlet render URL that addresses one or multiple predefined public render parameters.</p>
-<p>The following code snippet shows how to create a portlet render URL that takes the user to a specific portal page. And to create a portlet render URL that requests the page to be displayed in a certain locale. The URL is created within the render phase of the portlet lifecycle. The sample code assumes that the page selection and locale parameter are registered in the portlet deployment descriptor and mapped to the local identifiers pageID and locale. For more information, see the sample in <em>To register predefined public render parameters in portlet.xml</em>.</p>
+<p>The following code snippet shows how to create a portlet render URL that takes the user to a specific portal page. And to create a portlet render URL that requests the page to be displayed in a certain locale. The URL is created within the render phase of the portlet lifecycle. The sample code assumes that the page selection and locale parameter are registered in the portlet deployment descriptor and mapped to the local identifiers pageID and locale. For more information, see the sample in <a href="../reg_predef_pubrenpara_inptl.xml/">To register predefined public render parameters in portlet.xml</a>.</p>
 <p>The logic that determines the values of the parameters is not a part of the code example as it strongly depends on the specific use case. Typically you would use the Model SPI to search for a specific page in the content model and then address the page by using its ObjectID. If you want to create deep links to specific pages, you can also address the page through its unique name. In this case, you can set the unique name as the value for the selection parameter.</p>
 <p>Code Sample:</p>
 <div class="highlight"><pre><span></span><code>import com.ibm.portal.ObjectID;
@@ -1164,7 +1164,7 @@ public class MyPortlet extends GenericPortlet {
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 18, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>
@@ -1335,10 +1335,10 @@ public class MyPortlet extends GenericPortlet {
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);console.log(new FormData(form)),__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
     
   </body>

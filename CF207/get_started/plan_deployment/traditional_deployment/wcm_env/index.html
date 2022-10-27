@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/get_started/plan_deployment/traditional_deployment/wcm_env/">
       
       <link rel="icon" href="../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
@@ -1015,36 +1015,28 @@
 <p>Reviewing the Web Content Manager environments help you understand what happens in each environment and how you might want to set up your physical servers.</p>
 <p>Each server or cluster in your web content system requires a separate data repository, but they would usually share LDAP. An HCL Web Content Manager system can be deployed in isolation or in parallel with an HCL Digital Experience system.</p>
 <ul>
-<li>Documentation resource: <a href="../wcm/wcm_install_cfg.html">Configuring Web Content Manager</a></li>
-<li>Documentation resource: <a href="../wcm/wcm_maintain.html">Web Content Administration tools</a></li>
-<li>Documentation resource: <a href="../wcm/wcm_cms_delivery_system.html">Delivering web content</a></li>
-<li>Documentation resource: <a href="../wcm/wcm_dev_api.html">The Web Content Manager API</a></li>
-<li>
-<p>Documentation resource: <a href="../wcm/wcm_rest.html">REST Service for Web Content Manager</a></p>
-</li>
-<li>
-<p><strong><a href="../wcm/wcm_system_overview.md">Web content system overview</a></strong><br />
-The type of web content system you deploy is determined by the size of your web content system, the type of website, and the number of users that create content, or view your web content.</p>
-</li>
-<li><strong><a href="../wcm/wcm_cms_server_authoring.md">Web content authoring environments</a></strong><br />
+<li><strong><a href="wcm_system_overview/">Web content system overview</a></strong><br />
+The type of web content system you deploy is determined by the size of your web content system, the type of website, and the number of users that create content, or view your web content.</li>
+<li><strong><a href="wcm_cms_server_authoring/">Web content authoring environments</a></strong><br />
 An authoring environment is used to create and manage web content and is used by your content authors and website designers.</li>
-<li><strong><a href="../wcm/wcm_cms_server_uat.md">Web content testing environments</a></strong><br />
+<li><strong><a href="wcm_cms_server_uat/">Web content testing environments</a></strong><br />
 Testing environments can be as simple or as complex as a test environment used to test content, theme, application changes, and the delivery environment performance.</li>
-<li><strong><a href="../wcm/wcm_cms_server_delivery.md">Web content delivery environments</a></strong><br />
+<li><strong><a href="wcm_cms_server_delivery/">Web content delivery environments</a></strong><br />
 If you have a HCL Web Content Manager only license, you can deliver your website without using HCL Digital Experience features.</li>
 </ul>
-<p><strong>Related information</strong>  </p>
-<p><a href="../wcm/wcm_system_overview.md">Web content system overview</a></p>
-<p><a href="../wcm/wcm_cms_server_authoring.md">Web content authoring environments</a></p>
-<p><a href="../wcm/wcm_cms_server_uat.md">Web content testing environments</a></p>
-<p><a href="../wcm/wcm_cms_server_delivery.md">Web content delivery environments</a></p>
+<p><strong>Related information</strong><br />
+-   <a href="../../../../manage_content/wcm/">Configuring Web Content Manager</a>
+-   <a href="../../../../manage_content/wcm/wcm_management/wcm_adm_tools/">Web Content Administration tools</a>
+-   <a href="../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/">Delivering web content</a>
+-   <a href="../../../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_dev_api/">The Web Content Manager API</a>
+-   <a href="../../../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_rest/">REST Service for Web Content Manager</a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 18, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>
@@ -1215,10 +1207,10 @@ If you have a HCL Web Content Manager only license, you can deliver your website
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);console.log(new FormData(form)),__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
     
   </body>

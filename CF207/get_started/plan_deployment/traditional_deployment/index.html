@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/get_started/plan_deployment/traditional_deployment/">
       
       <link rel="icon" href="../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
@@ -974,41 +974,41 @@
 <p class="admonition-title">Restriction</p>
 <p>The serverName is hardcoded to the HCL Portal. The serverName cannot be changed in a stand-alone environment. If you do change it, the ConfigEngine scripts do not work. For a clustered environment, see <a href="roadmaps/rm_install_deployment/rm_clusters/rm_cluster_parent/">Roadmaps for clusters</a> for more information.</p>
 </div>
-<!--- 
--   **[System requirements](../../systemrequirements/index.md)**  
-Before installing HCL Digital Experience, you must review the system requirements to ensure that you have the supported versions of prerequisite and co-requisite software and hardware.
--   **[HCL Digital Experience Support Statement](../../inst_req_supt.md)**  
-This support statement proposes a revision to the definition of supported and unsupported about the various products of which HCL Digital Experience depends on for proper operation.
--   **[User IDs and passwords](sec_chars.md)**  
-Understanding character limitations for user IDs and passwords is important because they are used throughout the system to provide access and secure content.
--   **[HCL Web Content Manager environments](../../../product2/wcm/installation/wcm/index.md)**  
-Reviewing the Web Content Manager environments help you understand what happens in each environment and how you might want to set up your physical servers.
--   **[Database considerations](../traditional_deployment/database/db_considerations.md)**  
-HCL Digital Experience includes an Apache Derby database that is configured and ready for immediate use. But for a production environment or any environment for HCL Web Content Manager, you must use one of the other supported database management systems.
--   **[User registry considerations](../traditional_deployment/user_registry_consideration/plan_ureg.md)**  
-A user registry or repository authenticates a user and retrieves information about users and groups to do security-related functions, including authorization.
--   **[High availability](express_ha.md)**  
- HCL Portal Express offering is licensed for use in a single-server configuration and may not be used in either a cloned configuration or a clustered configuration except when implementing idle standby for the purpose of failover.
--   **[Cluster considerations](../traditional_deployment/cluster_consideration/plan_clus_ovr.md)**  
-Multiple portal servers can be clustered with IBM WebSphere Application Server Network Deployment.
--   **[Virtual environment overview](plan_virt_envir.md)**  
-Use virtualized environments to meet your business needs like production server consolidation, centralized management, or dynamic test environments.
--   **[Multiple profile support](plan_multiple_profile.md)**  
-Multiple profiles give you the ability to have multiple, independently configured portal instances that run from the same installation.
-
-**Next topic:**[Roadmaps to deploy your HCL Digital Experience system](../install/deployment_patterns.md)
-
-**Related information**  
-
-
-[Target environment considerations](../plan/mig_plan_targetenvironment.md) --->
+<ul>
+<li><strong><a href="../../system_requirements/">System requirements</a></strong><br />
+Before installing HCL Digital Experience, you must review the system requirements to ensure that you have the supported versions of prerequisite and co-requisite software and hardware.</li>
+<li><strong><a href="../../software_support/">HCL Digital Experience Support Statement</a></strong><br />
+This support statement proposes a revision to the definition of supported and unsupported about the various products of which HCL Digital Experience depends on for proper operation.</li>
+<li><strong><a href="sec_chars/">User IDs and passwords</a></strong><br />
+Understanding character limitations for user IDs and passwords is important because they are used throughout the system to provide access and secure content.</li>
+<li><strong><a href="wcm_env/">HCL Web Content Manager environments</a></strong><br />
+Reviewing the Web Content Manager environments help you understand what happens in each environment and how you might want to set up your physical servers.</li>
+<li><strong><a href="database_consideration/">Database considerations</a></strong><br />
+HCL Digital Experience includes an Apache Derby database that is configured and ready for immediate use. But for a production environment or any environment for HCL Web Content Manager, you must use one of the other supported database management systems.</li>
+<li><strong><a href="user_registry_consideration/">User registry considerations</a></strong><br />
+A user registry or repository authenticates a user and retrieves information about users and groups to do security-related functions, including authorization.</li>
+<li><strong><a href="express_ha/">High availability</a></strong><br />
+ HCL Portal Express offering is licensed for use in a single-server configuration and may not be used in either a cloned configuration or a clustered configuration except when implementing idle standby for the purpose of failover.</li>
+<li><strong><a href="cluster_consideration/">Cluster considerations</a></strong><br />
+Multiple portal servers can be clustered with IBM WebSphere Application Server Network Deployment.</li>
+<li><strong><a href="plan_virt_envir/">Virtual environment overview</a></strong><br />
+Use virtualized environments to meet your business needs like production server consolidation, centralized management, or dynamic test environments.</li>
+<li><strong><a href="plan_multiple_profile/">Multiple profile support</a></strong><br />
+Multiple profiles give you the ability to have multiple, independently configured portal instances that run from the same installation.</li>
+</ul>
+<details class="info" open="open">
+<summary>Related information:</summary>
+<ul>
+<li><a href="../../../deployment/manage/migrate/settingup_target_env/mig_plan_targetenvironment/">Target environment considerations</a></li>
+</ul>
+</details>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 18, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>
@@ -1179,10 +1179,10 @@ Multiple profiles give you the ability to have multiple, independently configure
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);console.log(new FormData(form)),__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
     
   </body>

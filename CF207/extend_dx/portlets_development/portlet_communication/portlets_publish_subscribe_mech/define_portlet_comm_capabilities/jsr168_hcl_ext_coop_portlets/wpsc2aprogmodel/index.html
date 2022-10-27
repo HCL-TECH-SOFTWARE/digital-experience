@@ -14,11 +14,11 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/extend_dx/portlets_development/portlet_communication/portlets_publish_subscribe_mech/define_portlet_comm_capabilities/jsr168_hcl_ext_coop_portlets/wpsc2aprogmodel/">
       
       <link rel="icon" href="../../../../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
-        <title>Wpsc2aprogmodel - HCL Digital Experience Help Center</title>
+        <title>Cooperative portlet programming model - HCL Digital Experience Help Center</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#audience" class="md-skip">
+        <a href="#cooperative-portlet-programming-model" class="md-skip">
           Skip to content
         </a>
       
@@ -146,7 +146,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Wpsc2aprogmodel
+              Cooperative portlet programming model
             
           </span>
         </div>
@@ -860,14 +860,14 @@
     id="__toc"
   />
 
-      
+        
   <label class="md-nav__link md-nav__link--active" for="__toc">
-    Wpsc2aprogmodel
+    Cooperative portlet programming model
     <span class="md-nav__icon md-icon"></span>
   </label>
   
   <a href="./" class="md-nav__link md-nav__link--active">
-    Wpsc2aprogmodel
+    Cooperative portlet programming model
   </a>
 
     
@@ -875,6 +875,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -884,50 +886,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#audience" class="md-nav__link">
-    audience: [, , ]
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cooperative-portlet-programming-model" class="md-nav__link">
-    Cooperative portlet programming model
-  </a>
-  
-    <nav class="md-nav" aria-label="Cooperative portlet programming model">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#registering-properties-and-actions" class="md-nav__link">
     Registering properties and actions
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#generating-property-values" class="md-nav__link">
     Generating property values
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#receiving-property-values" class="md-nav__link">
     Receiving property values
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#advanced-programmatic-apis" class="md-nav__link">
     Advanced programmatic APIs
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -941,7 +923,7 @@
                 
 <li class="md-nav__item">
   <a href="../wpsc2apackage/" class="md-nav__link">
-    Wpsc2apackage
+    Packaging, deploying and compiling cooperative portlets
   </a>
 </li>
     
@@ -1178,7 +1160,7 @@
     id="__nav_7_4"
     
   />
-                               
+                             
   <div class="md-nav__link md-nav__link--index ">
     <a href="../../../../../../development_tools/">Development Tools</a>
 
@@ -1354,6 +1336,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1362,50 +1346,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#audience" class="md-nav__link">
-    audience: [, , ]
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cooperative-portlet-programming-model" class="md-nav__link">
-    Cooperative portlet programming model
-  </a>
-  
-    <nav class="md-nav" aria-label="Cooperative portlet programming model">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#registering-properties-and-actions" class="md-nav__link">
     Registering properties and actions
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#generating-property-values" class="md-nav__link">
     Generating property values
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#receiving-property-values" class="md-nav__link">
     Receiving property values
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#advanced-programmatic-apis" class="md-nav__link">
     Advanced programmatic APIs
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1432,8 +1396,6 @@
   </a>
 
 
-<hr />
-<h2 id="audience">audience: [, , ]</h2>
 <h1 id="cooperative-portlet-programming-model">Cooperative portlet programming model</h1>
 <p>View information on how properties and actions are registered, how properties are generated and received, and some available APIs.</p>
 <h2 id="registering-properties-and-actions">Registering properties and actions</h2>
@@ -1457,14 +1419,13 @@
 <h2 id="advanced-programmatic-apis">Advanced programmatic APIs</h2>
 <p>For standard portlets, the property broker provides additional APIs to give developers more control over inter-portlet communication. The following functionality can be implemented using the programmatic APIs:</p>
 <ul>
-<li>
-<ul>
 <li>Activate or deactivate actions for a session. Only active actions can be triggered through wires or through Click-to-Action menus.</li>
-</ul>
-</li>
 <li>Determine if a property is wired, and if it is a cross-page wire. It can also determine if the wire is actually active (the target action is active). This knowledge may be used to render links for triggering wired actions.</li>
 </ul>
-<p><strong>Note:</strong> Both sources and targets must register their input and output properties and actions for wire creation to be possible.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Both sources and targets must register their input and output properties and actions for wire creation to be possible.</p>
+</div>
 <p>The following package define the programmatic APIs provided by the property broker: com.ibm.portal.propertybroker.service.PropertyBrokerService (this is an interface).</p>
 
   <hr>
@@ -1472,7 +1433,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 18, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>
@@ -1520,13 +1481,13 @@
       
       
         
-        <a href="../wpsc2apackage/" class="md-footer__link md-footer__link--next" aria-label="Next: Wpsc2apackage" rel="next">
+        <a href="../wpsc2apackage/" class="md-footer__link md-footer__link--next" aria-label="Next: Packaging, deploying and compiling cooperative portlets" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Wpsc2apackage
+              Packaging, deploying and compiling cooperative portlets
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1643,10 +1604,10 @@
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);console.log(new FormData(form)),__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../../../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
     
   </body>

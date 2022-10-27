@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/guide_me/tutorials/scriptapps/site_integration/import_export_site/import_site_page_hierarchy/">
       
       <link rel="icon" href="../../../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
@@ -1023,18 +1023,20 @@ dxclient xmlaccess <span class="se">^</span>
 </div>
 </li>
 <li>
-<p>The output should look similar to this.
-   <div class="highlight"><pre><span></span><code><span class="go">2022-09-05 21:46:57 : XML Access execution in progress.</span>
+<p>The output should look similar to this.</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="go">2022-09-05 21:46:57 : XML Access execution in progress.</span>
 <span class="gp gp-VirtualEnv">(node:27677)</span> <span class="go">Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to &#39;0&#39; makes TLS connections and HTTPS requests insecure by disabling certificate verification.</span>
 <span class="go">2022-09-05 21:47:01 : XML Access execution successfully completed, please find the output below, also refer to this file for more details store/outputFiles/xmlaccess/Output-20220905214701.xml.</span>
-</code></pre></div></p>
-</li>
+</code></pre></div>
+<ol>
 <li>
 <p>Update the wcm libraries that are referencing to this DX Site page hierarchy. You can do this by doing the <a href="../import_wcm_libraries/">import process</a> of the wcm library again or by manually updating each of the component in Authoring of Practitioner Studio.</p>
 </li>
 <li>
 <p>To verify, your site should appear in Sites tab.
-      <img alt="Verify Site" src="../../../../images/19site_verify.png" /></p>
+      <img alt="Verify Site" src="../../../images/19site_verify.png" /></p>
 </li>
 </ol>
 <div class="admonition tip">
@@ -1051,7 +1053,7 @@ dxclient xmlaccess <span class="se">^</span>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 18, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>
@@ -1222,10 +1224,10 @@ dxclient xmlaccess <span class="se">^</span>
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);console.log(new FormData(form)),__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
     
   </body>

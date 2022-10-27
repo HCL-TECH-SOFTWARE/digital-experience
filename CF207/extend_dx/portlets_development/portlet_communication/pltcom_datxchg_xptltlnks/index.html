@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/extend_dx/portlets_development/portlet_communication/pltcom_datxchg_xptltlnks/">
       
       <link rel="icon" href="../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
@@ -947,7 +947,7 @@
     id="__nav_7_4"
     
   />
-                               
+                             
   <div class="md-nav__link md-nav__link--index ">
     <a href="../../../development_tools/">Development Tools</a>
 
@@ -1156,37 +1156,43 @@
 <ul>
 <li>
 <p><strong>JSP tag URL generation</strong></p>
-<p>This approach is only supported for JSR portlets and allows the user to generate URLS that transport information from within portlet JSPs. For more information, see <em>JSP tags for standard portlets</em> in the related links.</p>
+<p>This approach is only supported for JSR portlets and allows the user to generate URLS that transport information from within portlet JSPs. For more information, see <a href="../../portlet_dev_ref/jsrjsp/">JSP tags for standard portlets</a> in the related links.</p>
 </li>
 <li>
 <p><strong>PortalURLGenerationService based URL generation</strong></p>
-<p>Use this service to generate render URLs to other portlets. For more information, see <em>Interface PortalURLGenerationService</em> in the related links. This option might be available only if specific portlets are targeted and if render URLs need to be created for the target portlets in question. For more information, see <em>Leveraging HCL Portal V6 programming model: Part 2. Advanced URL generation in themes and portlets</em> in the related links.</p>
+<p>Use this service to generate render URLs to other portlets. For more information, see <a href="https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/api_docs/com/ibm/portal/portlet/service/url/PortalURLGenerationService.html">Interface PortalURLGenerationService</a> in the related links. This option might be available only if specific portlets are targeted and if render URLs need to be created for the target portlets in question. For more information, see <em>Leveraging HCL Portal V6 programming model: Part 2. Advanced URL generation in themes and portlets</em> in the related links.</p>
 </li>
 <li>
 <p><strong>State API-based link generation</strong></p>
 <p>Generating state API-based URLs allows the transfer of data to portlets developed by using the JSR168 API or JSR286 API. State API-based link generation is the most powerful way of modifying the navigational state and thus share information between portlets. In addition to the portlet state aspects such as portlet mode and window state, state API-based link generation also enables you to set private or public render parameters for one or multiple portlets. For more information, see <em>Leveraging HCL Portal V6 programming model: Part 2. Advanced URL generation in themes and portlets</em>.</p>
 </li>
 </ul>
-<p><strong>Notes:</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Notes</p>
 <ul>
-<li>To set private render parameters for a given portlet, request the PortletAccessorController from the PortletAccessorFactory. For more information, see <em>Interface PortletAccessorController</em> in the related links.</li>
-<li>To modify shared state information such as public render parameters for JSR286 portlets, you can also request the SharedStateAccessorController from the PortletAccessorFactory. For more information, see <em>Interface SharedStateAccessorController</em> in the related links.</li>
+<li>To set private render parameters for a given portlet, request the PortletAccessorController from the PortletAccessorFactory. For more information, see <a href="https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/spi_docs/com/ibm/portal/state/accessors/portlet/PortletAccessor.html">Interface PortletAccessor</a> in the related links.</li>
+<li>To modify shared state information such as public render parameters for JSR286 portlets, you can also request the SharedStateAccessorController from the PortletAccessorFactory. For more information, see <a href="https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/spi_docs/com/ibm/portal/state/accessors/portlet/SharedStateAccessorController.html">Interface SharedStateAccessorController</a> in the related links.</li>
 <li>So far, the URLs being generated modify navigational state information only and do not carry any action semantic, which is necessary to modify the persistent backend state. PortletTargetAccessorController is available from the PortletAccessorFactory and enables the targeting of a specific portlet's processAction method. PortletTargetAccessorController triggers a processAction on the specific target portlet that the generated URL points to.</li>
 <li>Standard portlets provide powerful publish and subscribe mechanisms for exchanging information through an action phase invoked between portlets. During the invocation, portlets can exchange complex data and trigger portlet activity such as updates to back-end systems.</li>
 </ul>
-<p><strong>Related information</strong>  </p>
-<p><a href="../dev-portlet/pltcom_pubrndrprm.md">Public render parameters</a></p>
-<p><a href="../dev-portlet/jsrjsp.md">JSP tags for standard portlets</a></p>
-<p><a href="https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/api_docs/com/ibm/portal/portlet/service/url/PortalURLGenerationService.html">Interface PortalURLGenerationService</a></p>
-<p><a href="https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/spi_docs/com/ibm/portal/state/accessors/portlet/PortletAccessor.html">Interface PortletAccessor</a></p>
-<p><a href="https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/spi_docs/com/ibm/portal/state/accessors/portlet/SharedStateAccessorController.html">Interface SharedStateAccessorController</a></p>
+</div>
+<details class="info" open="open">
+<summary>Related information</summary>
+<ul>
+<li><a href="../pltcom_pubrndrprm/">Public render parameters</a></li>
+<li><a href="../../portlet_dev_ref/jsrjsp/">JSP tags for standard portlets</a></li>
+<li><a href="https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/api_docs/com/ibm/portal/portlet/service/url/PortalURLGenerationService.html">Interface PortalURLGenerationService</a></li>
+<li><a href="https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/spi_docs/com/ibm/portal/state/accessors/portlet/PortletAccessor.html">Interface PortletAccessor</a></li>
+<li><a href="https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/spi_docs/com/ibm/portal/state/accessors/portlet/SharedStateAccessorController.html">Interface SharedStateAccessorController</a></li>
+</ul>
+</details>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 18, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>
@@ -1357,10 +1363,10 @@
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);console.log(new FormData(form)),__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
     
   </body>

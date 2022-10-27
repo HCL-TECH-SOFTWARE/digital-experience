@@ -14,11 +14,11 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/extend_dx/portlets_development/portlet_communication/portlets_publish_subscribe_mech/define_portlet_comm_capabilities/jsr168_hcl_ext_coop_portlets/wpsc2apackage/">
       
       <link rel="icon" href="../../../../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
-        <title>Wpsc2apackage - HCL Digital Experience Help Center</title>
+        <title>Packaging, deploying and compiling cooperative portlets - HCL Digital Experience Help Center</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#audience" class="md-skip">
+        <a href="#packaging-deploying-and-compiling-cooperative-portlets" class="md-skip">
           Skip to content
         </a>
       
@@ -146,7 +146,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Wpsc2apackage
+              Packaging, deploying and compiling cooperative portlets
             
           </span>
         </div>
@@ -853,7 +853,7 @@
                 
 <li class="md-nav__item">
   <a href="../wpsc2aprogmodel/" class="md-nav__link">
-    Wpsc2aprogmodel
+    Cooperative portlet programming model
   </a>
 </li>
     
@@ -867,14 +867,14 @@
     id="__toc"
   />
 
-      
+        
   <label class="md-nav__link md-nav__link--active" for="__toc">
-    Wpsc2apackage
+    Packaging, deploying and compiling cooperative portlets
     <span class="md-nav__icon md-icon"></span>
   </label>
   
   <a href="./" class="md-nav__link md-nav__link--active">
-    Wpsc2apackage
+    Packaging, deploying and compiling cooperative portlets
   </a>
 
     
@@ -882,6 +882,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -891,43 +893,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#audience" class="md-nav__link">
-    audience: [, , ]
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#packaging-deploying-and-compiling-cooperative-portlets" class="md-nav__link">
-    Packaging, deploying and compiling cooperative portlets
-  </a>
-  
-    <nav class="md-nav" aria-label="Packaging, deploying and compiling cooperative portlets">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#creating-the-deployment-descriptors" class="md-nav__link">
     Creating the deployment descriptors
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#war-file-considerations" class="md-nav__link">
     WAR file considerations
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#additional-considerations-for-compiling" class="md-nav__link">
     Additional considerations for compiling
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1171,7 +1153,7 @@
     id="__nav_7_4"
     
   />
-                               
+                             
   <div class="md-nav__link md-nav__link--index ">
     <a href="../../../../../../development_tools/">Development Tools</a>
 
@@ -1347,6 +1329,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1355,43 +1339,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#audience" class="md-nav__link">
-    audience: [, , ]
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#packaging-deploying-and-compiling-cooperative-portlets" class="md-nav__link">
-    Packaging, deploying and compiling cooperative portlets
-  </a>
-  
-    <nav class="md-nav" aria-label="Packaging, deploying and compiling cooperative portlets">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#creating-the-deployment-descriptors" class="md-nav__link">
     Creating the deployment descriptors
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#war-file-considerations" class="md-nav__link">
     WAR file considerations
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#additional-considerations-for-compiling" class="md-nav__link">
     Additional considerations for compiling
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1418,8 +1382,6 @@
   </a>
 
 
-<hr />
-<h2 id="audience">audience: [, , ]</h2>
 <h1 id="packaging-deploying-and-compiling-cooperative-portlets">Packaging, deploying and compiling cooperative portlets</h1>
 <p>When packaging, deploying, and compiling cooperative portlets, refer to these considerations on aspects of the process such as creating deployment descriptors and packaging the WAR file.</p>
 <h2 id="creating-the-deployment-descriptors">Creating the deployment descriptors</h2>
@@ -1477,14 +1439,17 @@
 
 &lt;/portlet-app&gt;
 </code></pre></div>
-<p><strong>Note:</strong> For standard portlets, you must use a special <code>&lt;preference&gt;</code> entry to specify the application portlet class.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For standard portlets, you must use a special <code>&lt;preference&gt;</code> entry to specify the application portlet class.</p>
 <div class="highlight"><pre><span></span><code>&lt;portlet-preferences&gt;
-   &lt;preference&gt;
-      &lt;name&gt;com.ibm.portal.propertybroker.wsdllocation&lt;/name&gt;
-      &lt;value&gt;/wsdl/OrderDetail.wsdl&lt;/value&gt;
-   &lt;/preference&gt;
+&lt;preference&gt;
+    &lt;name&gt;com.ibm.portal.propertybroker.wsdllocation&lt;/name&gt;
+    &lt;value&gt;/wsdl/OrderDetail.wsdl&lt;/value&gt;
+&lt;/preference&gt;
 &lt;/portlet-preferences&gt;
 </code></pre></div>
+</div>
 </li>
 </ul>
 <h2 id="war-file-considerations">WAR file considerations</h2>
@@ -1515,7 +1480,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 18, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>
@@ -1547,7 +1512,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../wpsc2aprogmodel/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Wpsc2aprogmodel" rel="prev">
+        <a href="../wpsc2aprogmodel/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Cooperative portlet programming model" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1556,7 +1521,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Wpsc2aprogmodel
+              Cooperative portlet programming model
             </div>
           </div>
         </a>
@@ -1686,10 +1651,10 @@
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);console.log(new FormData(form)),__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../../../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
     
   </body>

@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/manage_content/pzn/deprecated/classes_apis_for_custom_listeners/log_event_class/pzn_logevent_class/">
       
       <link rel="icon" href="../../../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
@@ -1222,151 +1222,151 @@
 </thead>
 <tbody>
 <tr>
-<td><br><pr>``` <br>protected LogEvent( HttpServletRequest request ) <br>```</td>
+<td>protected LogEvent( HttpServletRequest request )</td>
 <td>Constructor</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public Cookie[] getCookies( )<br>```</td>
+<td>public Cookie[] getCookies( )</td>
 <td>Returns the cookies available with the request for this event.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public void setCookies( Cookie[] )<br>```</td>
+<td>public void setCookies( Cookie[] )</td>
 <td>Sets the cookies for this event. Can be used by custom listeners in order to replace the cookie data received with the current JSP request.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public void enableLogCookies( boolean enable )<br>```</td>
+<td>public void enableLogCookies( boolean enable )</td>
 <td>If enable is true, enables the collection of cookies for this event instance; otherwise, disables the collection of cookies for this event instance. If you want to collect cookie information with the FeedbackListener or a subclassed FeedbackListener, use this method.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public void enableLogCookies( )<br>```</td>
+<td>public void enableLogCookies( )</td>
 <td>Same as <code>enableLogCookies( true )</code>.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public boolean logCookies( )<br>```</td>
+<td>public boolean logCookies( )</td>
 <td>Returns true if cookie information should be logged to the Feedback schema for this event; otherwise, returns false.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public String getIPAddress( )<br>```</td>
+<td>public String getIPAddress( )</td>
 <td>Returns the Web client IP address.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public void setIPAddress( String ipAddress )<br>```</td>
+<td>public void setIPAddress( String ipAddress )</td>
 <td>Sets the IP address for this event. Can be used by custom listeners in order to replace the IP address for the current JSP request.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public String getMethod( )<br>```</td>
+<td>public String getMethod( )</td>
 <td>Returns the HTTP method used in the current JSP request (GET, POST). Note that the method is not stored in the Feedback schema.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public void setMethod( String method )<br>```</td>
+<td>public void setMethod( String method )</td>
 <td>Sets the HTTP method for the current JSP request. Can be used by custom listeners in order to replace the method from the current JSP request. Note that the method is not stored in the Feedback schema.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public String getProtocol( )<br>```</td>
+<td>public String getProtocol( )</td>
 <td>Returns the protocol for the current JSP request (HTTP or HTTPS).</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public void setProtocol( String protocol )<br>```</td>
+<td>public void setProtocol( String protocol )</td>
 <td>Sets the protocol for the current JSP request. Can be used by custom listeners in order to replace the protocol from the current JSP request.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public void enableLogReferralParms( boolean enable )<br>```</td>
+<td>public void enableLogReferralParms( boolean enable )</td>
 <td>If enable is true, enables the collection of referral parameters for this event instance; otherwise, disables the collection of referral parameters for this event instance. If you want to collect the referral query string parameters with the FeedbackListener or a subclassed FeedbackListener, use this method.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public void enableLogReferralParms( )<br>```</td>
+<td>public void enableLogReferralParms( )</td>
 <td>Same as <code>enableLogReferralParms( true )</code>.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public boolean logReferralParms( )<br>```</td>
+<td>public boolean logReferralParms( )</td>
 <td>Returns true if referral parameter information should be logged to the Feedback schema for this event; otherwise, return false.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public String getRemoteHost( )<br>```</td>
+<td>public String getRemoteHost( )</td>
 <td>Returns the host name of the client machine that issued this JSP request. Note that the remote host name is not stored in the Feedback schema.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public void setRemoteHost( String hostName )<br>```</td>
+<td>public void setRemoteHost( String hostName )</td>
 <td>Sets the host name of the client machine that issued this JSP request. Can be used by custom listeners that perform DNS resolution. Note that the remote host name is not stored in the Feedback schema.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public String getQueryString( )<br>```</td>
+<td>public String getQueryString( )</td>
 <td>Returns the query string parameters for this event.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public void setQueryString( String queryString )<br>```</td>
+<td>public void setQueryString( String queryString )</td>
 <td>Sets the query string parameters for this event. Can be used by custom listeners in order to replace the query string parameters for the current JSP request.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public void enableLogQueryParms( boolean enable )<br>```</td>
+<td>public void enableLogQueryParms( boolean enable )</td>
 <td>If enable is true, enables the collection of query parameters for this event instance; otherwise, disables the collection of referral parameters for this event instance. If you want to collect the query string parameters with the FeedbackListener or a subclassed FeedbackListener, use this method.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public void enableLogQueryParms( )<br>```</td>
+<td>public void enableLogQueryParms( )</td>
 <td>Same as <code>enableLogQueryParms( true )</code>.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public boolean logQueryParms( )<br>```</td>
+<td>public boolean logQueryParms( )</td>
 <td>Returns true if query parameter information should be logged to the Feedback schema for this event; otherwise, return false.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public String getReferrer( )<br>```</td>
+<td>public String getReferrer( )</td>
 <td>Returns the URL of the referral page or null if there was no referrer.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public void setReferrer( String referrer )<br>```</td>
+<td>public void setReferrer( String referrer )</td>
 <td>Sets the referral page for this event. Can be used by custom listeners in order to replace the referrer for the current JSP request.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public String getServerName( )<br>```</td>
+<td>public String getServerName( )</td>
 <td>Returns the host name of the server machine that is processing this JSP request. Note that the server host name is not stored in the Feedback schema.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public void setServerName( String serverName )<br>```</td>
+<td>public void setServerName( String serverName )</td>
 <td>Sets the host name of the server machine that is processing this JSP request. Can be used by custom listeners to set the name of the current server. Note that the server host name is not stored in the Feedback schema.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public String getSessionId( )<br>```</td>
+<td>public String getSessionId( )</td>
 <td>Returns the id of the session for the current JSP request.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public void setSessionId( String sessionId )<br>```</td>
+<td>public void setSessionId( String sessionId )</td>
 <td>Sets the id of the current user session. Can be used by custom listeners in order to replace the id of the current HttpSession object. This can be useful when an alternative session identification mechanism is used.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public Date getTimestamp( )<br>```</td>
+<td>public Date getTimestamp( )</td>
 <td>Returns the time that this log event was generated. Note that this timestamp differs slightly from the time the event was received by the IBM® WebSphere® Application Server. Note that if there are multiple logging beans or content spots in a JSP, the timestamps in the generated log events will be the same.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public void setTimestamp( Date timestamp )<br>```</td>
+<td>public void setTimestamp( Date timestamp )</td>
 <td>Sets the time for this log event. Can be used by custom listeners in order to replace the timestamp used for this event.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public String getUrl( )<br>```</td>
+<td>public String getUrl( )</td>
 <td>Returns the URL of the page request encapsulated by this log event.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public void setUrl( String url )<br>```</td>
+<td>public void setUrl( String url )</td>
 <td>Sets the URL of the page request for this event. Can be used by custom listeners in order to replace the URL for the current JSP request.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public String getUser( )<br>```</td>
+<td>public String getUser( )</td>
 <td>Returns the HTTP authenticated user for the current session.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public void setUser( String user )<br>```</td>
+<td>public void setUser( String user )</td>
 <td>Sets the user for this event. Can be used by custom listeners in order to replace the user for the current JSP request. This can be useful when an alternative authentication mechanism is used.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public String getUserAgent( )<br>```</td>
+<td>public String getUserAgent( )</td>
 <td>Returns the browser engine for the current session.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public void setUserAgent( String userAgent )<br>```</td>
+<td>public void setUserAgent( String userAgent )</td>
 <td>Sets the user agent for this event. Can be used by custom listeners in order to replace the user agent from the current JSP request.</td>
 </tr>
 <tr>
-<td><br><pr>``` <br>public String toString( )    <br>```</td>
+<td>public String toString( )</td>
 <td>Returns a String representation of this event.</td>
 </tr>
 </tbody>
@@ -1403,7 +1403,7 @@ The PageViewEvent class is used to access data logged by a PageView bean.</li>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 18, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>
@@ -1574,10 +1574,10 @@ The PageViewEvent class is used to access data logged by a PageView bean.</li>
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);console.log(new FormData(form)),__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
     
   </body>

@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/guide_me/tutorials/scriptapps/site_integration/import_export_site/export_theme/">
       
       <link rel="icon" href="../../../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
@@ -1059,10 +1059,9 @@ dxclient xmlaccess <span class="se">^</span>
 <h2 id="2-exporting-theme-source-code">2. Exporting Theme source code</h2>
 <ol>
 <li>Use the same directory as before.</li>
-<li>Find a undeploy request xml for your theme and then edit the uniquename to match yours or create yours like the following. Sample XML files can be found in the samples directory of DXClient or in DX server located in the following directory: <code>PortalServer_root/doc/xml-samples</code>.</li>
-</ol>
-<div class="admonition example">
-<p class="admonition-title">theme-export.xml</p>
+<li>
+<p>Find a undeploy request xml for your theme and then edit the uniquename to match yours or create yours like the following. Sample XML files can be found in the samples directory of DXClient or in DX server located in the following directory: <code>PortalServer_root/doc/xml-samples</code>.
+   !!!example "theme-export.xml"</p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="nt">&lt;request</span> <span class="na">type=</span><span class="s">&quot;update&quot;</span> <span class="na">version=</span><span class="s">&quot;8.0.0.1&quot;</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">&quot;PortalConfig_8.0.0.xsd&quot;</span><span class="nt">&gt;</span>
 <span class="nt">&lt;portal</span> <span class="na">action=</span><span class="s">&quot;locate&quot;</span><span class="nt">&gt;</span>
@@ -1071,24 +1070,21 @@ dxclient xmlaccess <span class="se">^</span>
 <span class="nt">&lt;/portal&gt;</span>
 <span class="nt">&lt;/request&gt;</span>
 </code></pre></div>
-</div>
 <ul>
-<li>
-<p>Modify the uniquename to match yours.
-   <div class="highlight"><pre><span></span><code>   <span class="nt">&lt;portal</span> <span class="na">action=</span><span class="s">&quot;locate&quot;</span><span class="nt">&gt;</span>
-   <span class="nt">&lt;skin</span> <span class="na">action=</span><span class="s">&quot;delete&quot;</span> <span class="na">uniquename=</span><span class="s">&quot;custom.portal.skin.Woodburn%20Insurance.Standard&quot;</span><span class="nt">/&gt;</span>
-   <span class="nt">&lt;theme</span> <span class="na">action=</span><span class="s">&quot;delete&quot;</span> <span class="na">uniquename=</span><span class="s">&quot;custom.portal.theme.Woodburn%20Insurance&quot;</span><span class="nt">/&gt;</span>
-   <span class="nt">&lt;/portal&gt;</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>You can find it by going to Theme Manager and then clicking the cog.
-   <img alt="Theme Manager" src="../../../images/19theme_manager.png" /></p>
+<li>Modify the uniquename to match yours.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;portal</span> <span class="na">action=</span><span class="s">&quot;locate&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;skin</span> <span class="na">action=</span><span class="s">&quot;delete&quot;</span> <span class="na">uniquename=</span><span class="s">&quot;custom.portal.skin.Woodburn%20Insurance.Standard&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;theme</span> <span class="na">action=</span><span class="s">&quot;delete&quot;</span> <span class="na">uniquename=</span><span class="s">&quot;custom.portal.theme.Woodburn%20Insurance&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/portal&gt;</span>
+</code></pre></div>
 <ul>
+<li>You can find it by going to Theme Manager and then clicking the cog.
+  <img alt="Theme Manager" src="../../../images/19theme_manager.png" /></li>
 <li>For skin uniquename.
-    <img alt="Skin Object ID" src="../../../images/19skin_objectid.png" /></li>
+     <img alt="Skin Object ID" src="../../../images/19skin_objectid.png" /></li>
 <li>For theme uniquename.
-    <img alt="Theme Object ID" src="../../../images/19theme_objectid.png" /></li>
+     <img alt="Theme Object ID" src="../../../images/19theme_objectid.png" /></li>
 </ul>
 </li>
 <li>
@@ -1134,7 +1130,7 @@ dxclient undeploy-theme <span class="se">^</span>
 </div>
 </div>
 </li>
-</ul>
+</ol>
 <div class="admonition info">
 <p class="admonition-title">Notes on parameters:</p>
 <ol>
@@ -1209,23 +1205,23 @@ dxclient deploy-theme <span class="se">^</span>
 </li>
 <li>
 <p>The output should look similar to this.</p>
-<div class="highlight"><pre><span></span><code><span class="go">2022-09-22 14:39:10 : Start to deploy theme in WebDav.</span>
-<span class="gp gp-VirtualEnv">(node:1)</span> <span class="go">Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to &#39;0&#39; makes TLS connections and HTTPS requests insecure by disabling certificate verification.</span>
-<span class="gp gp-VirtualEnv">(Use `node --trace-warnings ...` to show where the warning was created)</span>
-<span class="go">2022-09-22 14:39:10 : The theme Woodburn Insurance is available under WebDAV themes collection.</span>
-<span class="go">2022-09-22 14:39:12 : WebDAV theme back up has been taken and placed in : store/outputFiles/themes/backup/webdav/Woodburn Insurance-20220922143911.zip.</span>
-<span class="go">2022-09-22 14:39:15 : Files uploaded successfully to Woodburn Insurance under WebDAV themes collection.</span>
-<span class="go">2022-09-22 14:39:19 : Export of the theme has been completed, Please refer this file for more details - store/outputFiles/themes/backup/xmlfile/Output-20220922143919.xml.</span>
-<span class="go">2022-09-22 14:39:19 : Theme registration has been completed, Please refer this file for more details - store/outputFiles/themes/Output-20220922143919.xml.</span>
-<span class="go">2022-09-22 14:39:19 : Deploy theme execution successful.</span>
-<span class="go">2022-09-22 14:39:19 : </span>
-<span class="go">Theme WebDAV deployment successful.</span>
-<span class="go">Theme Registration successful.</span>
+<div class="highlight"><pre><span></span><code><span class="go">   2022-09-22 14:39:10 : Start to deploy theme in WebDav.</span>
+<span class="go">   (node:1) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to &#39;0&#39; makes TLS connections and HTTPS requests insecure by disabling certificate verification.</span>
+<span class="go">   (Use `node --trace-warnings ...` to show where the warning was created)</span>
+<span class="go">   2022-09-22 14:39:10 : The theme Woodburn Insurance is available under WebDAV themes collection.</span>
+<span class="go">   2022-09-22 14:39:12 : WebDAV theme back up has been taken and placed in : store/outputFiles/themes/backup/webdav/Woodburn Insurance-20220922143911.zip.</span>
+<span class="go">   2022-09-22 14:39:15 : Files uploaded successfully to Woodburn Insurance under WebDAV themes collection.</span>
+<span class="go">   2022-09-22 14:39:19 : Export of the theme has been completed, Please refer this file for more details - store/outputFiles/themes/backup/xmlfile/Output-20220922143919.xml.</span>
+<span class="go">   2022-09-22 14:39:19 : Theme registration has been completed, Please refer this file for more details - store/outputFiles/themes/Output-20220922143919.xml.</span>
+<span class="go">   2022-09-22 14:39:19 : Deploy theme execution successful.</span>
+<span class="go">   2022-09-22 14:39:19 : </span>
+<span class="go">   Theme WebDAV deployment successful.</span>
+<span class="go">   Theme Registration successful.</span>
 </code></pre></div>
 </li>
 <li>
 <p>Verify your theme by going to the Theme Manager and your theme should still be here.
-<img alt="Verify Themes" src="../../../../images/19themes_verify.png" /></p>
+<img alt="Verify Themes" src="../../../images/19themes_verify.png" /></p>
 </li>
 </ol>
 <div class="admonition tip">
@@ -1242,7 +1238,7 @@ dxclient deploy-theme <span class="se">^</span>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 18, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>
@@ -1413,10 +1409,10 @@ dxclient deploy-theme <span class="se">^</span>
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);console.log(new FormData(form)),__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
     
   </body>

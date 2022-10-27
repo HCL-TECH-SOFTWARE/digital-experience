@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/get_started/plan_deployment/container_deployment/">
       
       <link rel="icon" href="../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
@@ -906,7 +906,7 @@
 
 <h1 id="containers-overview">Containers Overview</h1>
 <p>This topic provides administrators with a high-level overview and important pre-requisite guidance to prepare your container environments for later deployments of the HCL Digital Experience 9.5 Kubernetes and OpenShift deployment capabilities using Helm.</p>
-<p>Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to <a href="../../../deployment/container/installation/helm_deployment/helm_deployment.md">supported container platforms</a> using Helm Charts. Using a Helm Chart deployment provides administrators a larger degree of transparency in the deployment operations than the operator-based deployment also available using the HCL DX dxctl process. <!--[see *Related information* section for related topic links]--></p>
+<p>Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to <a href="../../../deployment/install/container/helm_deployment/overview/">supported container platforms</a> using Helm Charts. Using a Helm Chart deployment provides administrators a larger degree of transparency in the deployment operations than the operator-based deployment also available using the HCL DX dxctl process.</p>
 <h2 id="overview">Overview</h2>
 <p>Helm is a software package manager that simplifies deployment of applications and services to Red Hat OpenShift and Kubernetes container platforms.</p>
 <p>Helm is a tool for managing Kubernetes applications and deployments. It allows for packaging all required resource definitions into a single package, called a Helm Chart. The Helm Charts provide a convenient way to define application deployments with a predefined set of configurable items. Furthermore, Helm Charts are written using declarative definitions, applying <code>yaml</code> structures and go templates. This approach provides administrators with transparency about the operations the Helm Chart is performing during the DX 9.5 container deployment.</p>
@@ -944,15 +944,15 @@
 <p>For accessing applications from the outside, we deploy a reverse proxy in the form of an HAProxy. This reverse proxy routes the incoming requests to all application Services, which then distributes the requests to the corresponding Pods hosting the applications.</p>
 <p>HAProxy uses its configuration to decide which request needs to be mapped to which application in the DX 9.5 deployment (back-end). When requests are initiated from outside the Kubernetes or OpenShift cluster, HAProxy tries to fulfill those requests by using the configured routing. If it finds a matching endpoint, it forwards the request to the corresponding service, which then forwards the same requests to a Pod that is ready to fulfill the request.</p>
 <ul>
-<li><strong><a href="../../../deployment/container/configuration/core_interactions_kubernetes.md">DX 9.5 Core Interactions with Kubernetes</a></strong><br />
+<li><strong><a href="../../../deployment/manage/container_configuration/core_interactions_kubernetes/">DX 9.5 Core Interactions with Kubernetes</a></strong><br />
 This section provides more detailed information about how the  Digital Experience 9.5 Core container interacts with Kubernetes. Understanding this information may assist in interpreting observed behavior or in troubleshooting your HCL DX 9.5 Container deployments in Helm.</li>
-<li><strong><a href="../../../deployment/container/installation/helm_deployment/helm_deployment.md">Deploying DX 9.5 applications to container platforms using Helm</a></strong><br />
+<li><strong><a href="../../../deployment/install/container/helm_deployment/overview/">Deploying DX 9.5 applications to container platforms using Helm</a></strong><br />
 This topic provides a list of all DX applications and resource definitions that configure the application runtime and are deployed to containers using Helm on OpenShift or Kubernetes platforms. As outlined in the overview, applications can also include ConfigMaps, Secrets, and Ingress.</li>
 <li><strong><a href="persistent_volumes/">PersistentVolumes and related operations considerations</a></strong><br />
 This topic provides details covering the PersistentVolumes (PVs) and related operations considerations in storing data for DX 9.5 stateful applications.</li>
-<li><strong><a href="../../../deployment/container/installation/helm_deployment/preparation/overview.md">Configuring DX 9.5 deployments to container platforms using Helm</a></strong><br />
+<li><strong><a href="../../../deployment/install/container/helm_deployment/preparation/">Configuring DX 9.5 deployments to container platforms using Helm</a></strong><br />
 This topic covers details the configuration structure in the HCL Digital Experience 9.5 OpenShift and Kubernetes deployment with Helm.</li>
-<li><strong><a href="../../../deployment/container/configuration/container_scaling.md">Scaling DX 9.5 container deployments using Helm</a></strong><br />
+<li><strong><a href="../../../deployment/manage/container_configuration/container_scaling/">Scaling DX 9.5 container deployments using Helm</a></strong><br />
 This topic provides information to apply container scaling capabilities, and how scaling resources are handled within the HCL DX 9.5 deployment using Helm. Refer to <code>HorizontalPodAutoscaler</code> details in <a href="https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/">Kubernetes</a> and <a href="https://docs.openshift.com/container-platform/4.7/nodes/pods/nodes-pods-autoscaling.html">Red Hat OpenShift documentation</a> for more information on these services.</li>
 <li><strong><a href="dam_persistence_architecture/">Digital Asset Management persistence architecture</a></strong><br />
 This topic describes the components of the Digital Asset Management persistence. The updated DAM persistence feature is available from HCL Digital Experience 9.5 Container Update CF198 and later.</li>
@@ -965,7 +965,7 @@ This topic describes the components of the Digital Asset Management persistence.
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 18, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>
@@ -1136,10 +1136,10 @@ This topic describes the components of the Digital Asset Management persistence.
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);console.log(new FormData(form)),__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
     
   </body>
