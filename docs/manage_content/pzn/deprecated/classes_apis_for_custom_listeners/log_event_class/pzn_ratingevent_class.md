@@ -11,11 +11,11 @@ Get an overview of the methods of the RatingEvent class.
 
 |Method|Explanation|
 |------|-----------|
-|<br><pr>\``` <br>public RatingEvent( HttpServletRequest request,<br>                    ResourceInfo       resourceInfo,<br>                    int                rating )<br>```|Constructor.|
-|<br><pr>\``` <br>public ResourceInfo getResourceInfo( )<br>```|Returns the resource that is the target of the current rating. The resource object returned contains the collection name and resource id.|
-|<br><pr>\``` <br>public void setResourceInfo( ResourceInfo resourceInfo )<br>```|Sets the resource information for this rating event. Can be used by custom listeners to replace the resource information for this rating.|
-|<br><pr>\``` <br>public int getRating( )<br>```|Returns the rating as an integer value. The value can be any valid integer as defined by the Web application implementor.|
-|<br><pr>\``` <br>public void setRating( int rating )<br>```|Sets the rating for this event. Can be used by custom listeners to replace the rating in this event.|
-|<br><pr>\``` <br>public String toString( )<br>```|Returns a String representation of this event.|
+|public RatingEvent( HttpServletRequest request,<br>                    ResourceInfo       resourceInfo,<br>                    int                rating )|Constructor.|
+|public ResourceInfo getResourceInfo( )|Returns the resource that is the target of the current rating. The resource object returned contains the collection name and resource id.|
+|public void setResourceInfo( ResourceInfo resourceInfo )|Sets the resource information for this rating event. Can be used by custom listeners to replace the resource information for this rating.|
+|public int getRating( )|Returns the rating as an integer value. The value can be any valid integer as defined by the Web application implementor.|
+|public void setRating( int rating )|Sets the rating for this event. Can be used by custom listeners to replace the rating in this event.|
+|public String toString( )|Returns a String representation of this event.|
 
 

@@ -7,6 +7,7 @@ Detailed system requirements are the complete lists of hardware requirements, su
 - Kubernetes
     - [Kubernetes runtime](../system_requirements/kubernetes/kubernetes-runtime.md)
     - [Databases](kubernetes/databases.md)
+
 - Traditional Deployments
     - [Operating systems](traditional/operatingsystems.md)
     - [Hypervisors](traditional/hypervisors.md)
@@ -14,8 +15,10 @@ Detailed system requirements are the complete lists of hardware requirements, su
     - [Databases](traditional/databases.md)
     - [Other Software](othersoftware.md)
     - [Hardware](traditional/hardware.md)
+
 - Docker
     - [Docker](docker/index.md)
+    
 - All Platforms
     - [Security](security.md)
     - [Other Software](othersoftware.md)

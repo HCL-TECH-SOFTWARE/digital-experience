@@ -127,9 +127,8 @@ version="1.0">
 
 ```
 
-**Note:**
-
--   The fact that the cooperative portlet properties use `java.lang.String` as data type and that the corresponding events must be declared with `<value-type>java.lang.String` depends only on the `class="java.lang.String"` attribute of the <portlet:param\>WSDL element. If no class attribute is present, `java.lang.String` is also used as default value. The XML type declarations in the WSDL are not used to determine the Java type of a property.
--   The declaration of cooperative portlet actions does not allow multiple input parameters. Actions or events that require multiple inputs must instead be declared with a single compound input property or event payload that combines all required data.
+!!!note "Notes"
+    - The fact that the cooperative portlet properties use `java.lang.String` as data type and that the corresponding events must be declared with `<value-type>java.lang.String` depends only on the `class="java.lang.String"` attribute of the <portlet:param\>WSDL element. If no class attribute is present, `java.lang.String` is also used as default value. The XML type declarations in the WSDL are not used to determine the Java type of a property.
+    - The declaration of cooperative portlet actions does not allow multiple input parameters. Actions or events that require multiple inputs must instead be declared with a single compound input property or event payload that combines all required data.
 
 

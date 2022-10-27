@@ -5,7 +5,9 @@ To write into the HTML head section of your JSR 286 portlet, for example, to cha
 1.  Invoke the `addProperty` method to modify the HTML head section.
 
     -   `PortletReponse.addProperty(String key, org.w3c.dom.Element element)`
-    **Note:** When modifying the HTML head section, you must invoke the `addProperty` method before the response headers are committed. This should occur no later than during the render headers sub phase of the render lifecycle phase.
+    
+    !!!note
+         When modifying the HTML head section, you must invoke the `addProperty` method before the response headers are committed. This should occur no later than during the render headers sub phase of the render lifecycle phase.
 
 
 Example:

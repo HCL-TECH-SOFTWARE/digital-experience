@@ -8,7 +8,7 @@ When creating a Recommend Content rule, you specify one of three recommendation 
 
     This method is associated with the LikeMinds Clickstream Engine.
 
--   ****preferences explicitly expressed by the user****
+-   **preferences explicitly expressed by the user**
 
     Use this recommendation method to generate recommendations based on users' ratings of items. This method is associated with the LikeMinds Preference engine.
 

@@ -27,9 +27,7 @@ The following portlet preferences can be specified for Site Manager:
     This preference hides specific top-level portal pages in the site switcher control of site manager. This preference is only effective for portal pages that are direct children of the Content Root. The value must list the unique names of these pages, separated by commas. The default value is `ibm.portal.page.Applications, ibm.portal.HiddenPages, ibm.portal.Administration, ibm.portal.Search, ibm.portal.Page Customizer, ibm.portal.sharedPages`.
 
 
-<!---
 -   **[Customizing the Create Content view](../custom_site_manager/custom_create_content_view/index.md)**  
-
-The Create Content view, which is accessed by clicking context menu in Site Manager, is used by a content author to add web content items to a page. --->
+The Create Content view, which is accessed by clicking context menu in Site Manager, is used by a content author to add web content items to a page. 
 
 

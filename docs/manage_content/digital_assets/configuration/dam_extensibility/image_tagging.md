@@ -7,7 +7,7 @@ DAM Extensibility allows DAM to support user-defined custom renditions and confi
 Image tagging simply requires setting keywords for the elements that are contained in a visual. It allows the effective and direct search on the basis of preassigned keywords.
 
 
-![Architecture diagram for Google vision Plugin](../../../../../images/Image_tagging_DAM-Plugin-google-vision.png)
+![Architecture diagram for Google vision Plugin](../../../../images/Image_tagging_DAM-Plugin-google-vision.png)
 
 ## Google vision plugin configuration
 

@@ -9,7 +9,7 @@ Site Builder is an application that you can use to create site templates or sect
 
 
 !!! note
-    Older versions of Content Template cannot be used to install Site Builder on HCL Portal 8.5 CF08 or higher. The old Content Template version of Site Builder does not work on HCL Portal 8.5 CF08 or higher.
+    Later versions of Content Template cannot be used to install Site Builder on HCL Portal 8.5 CF08 or higher. The old Content Template version of Site Builder does not work on HCL Portal 8.5 CF08 or higher.
 
 <!--
 -   **[Deploying Site Builder](../sitebuilder/sitebuilder_access.md)**  

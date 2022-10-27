@@ -2,7 +2,7 @@
 
 Using an example, learn how a standard portlet can retrieve and use a sample portlet service. Accessing a portlet service requires a JNDI lookup for a PortletServiceHome. To use the portlet service, you retrieve a service object from the home, cast it to the service-specific interface and invoke service methods.
 
-This section describes how a portlet can invoke a portlet service. See [Portlet services](wpsptservice.md) for a general overview of portlet services. The following example shows how a standard portlet can retrieve and use a sample portlet service. The service implementation and deployment is explained in [Creating your own portlet service](wpsbsservice.md).
+This section describes how a portlet can invoke a portlet service. See [Portlet services](../portlet_services/index.md) for a general overview of portlet services. The following example shows how a standard portlet can retrieve and use a sample portlet service. The service implementation and deployment is explained in [Creating your own portlet service](wpsbsservice.md).
 
 Accessing a portlet service requires a JNDI lookup for a PortletServiceHome. As this is may be a rather expensive operation, you should do it in the init\(\) method of the portlet and store the returned object in an instance variable:
 

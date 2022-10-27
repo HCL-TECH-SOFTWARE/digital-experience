@@ -31,7 +31,7 @@ In the Search Collections panel you can select the following option icons and do
         -   Edit the fields of the documents in the selected collection.
         -   Delete documents from the selected collection.
 
-    -   **Import or Export Collection**. Use this option to import or export the selected search collection. Portal Search provides a Portal Search XML interface for this feature. The export and import operations can be beneficial when you upgrade to software levels, which are not necessarily compatible with the data storage format of older versions of the software. To prevent loss of data, export all data of search collections to XML files before you upgrade the software. Then, after you upgrade the software level, you can use the previously exported files to return the search collection data back into the new software level.
+    -   **Import or Export Collection**. Use this option to import or export the selected search collection. Portal Search provides a Portal Search XML interface for this feature. The export and import operations can be beneficial when you upgrade to software levels, which are not necessarily compatible with the data storage format of later versions of the software. To prevent loss of data, export all data of search collections to XML files before you upgrade the software. Then, after you upgrade the software level, you can use the previously exported files to return the search collection data back into the new software level.
 
         !!! note
             1.  Before you export a collection, make sure that the user who is running the portal application process has write access to the target directory location. Otherwise, you might get an error message, such as File not found.
