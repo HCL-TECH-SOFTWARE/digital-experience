@@ -48,7 +48,7 @@ Content authors can view and compare current to previous versions of a selected 
 
     ![Show only differences between content versions](../../../images/Show%20only%20differences%20between%20content%20versions.png)
 
-8.  To switch to an older version, simply click the drop-down arrow beside the Content title to view and select another version, as shown below. You can perform this action on either of the content versions.
+8.  To switch to a later version, simply click the drop-down arrow beside the Content title to view and select another version, as shown below. You can perform this action on either of the content versions.
 
     ![Switch to other versions within Version Comparison view](../../../images/Switch%20to%20other%20versions%20within%20Version%20Comparison%20view.png)
 
@@ -56,10 +56,10 @@ Content authors can view and compare current to previous versions of a selected 
 ## Restore, Compare and Merge a Content Version
 
 1.  Log in to your HCL Digital Experience 9.5 platform and select **Web Content** to edit from the Practitioner Studio navigator.
-2.  On the content, click the **Versions** icon, then hover to click to open the context menu \(three dot icon\) on the version you wish to edit.
-3.  **To restore to an older version**, select **Make Current**. In the example below, if Version 2 is selected from previous versions to be the current version, a new version will be created \(Version 4\).
+2.  On the content, click the **Versions** icon, then hover to click to open the context menu (3-dot icon) on the version you wish to edit.
+3.  **To restore to a later version**, select **Make Current**. In the example below, if Version 2 is selected from previous versions to be the current version, a new version will be created (Version 4).
 
-    ![Revert to an older version](../../../images/Revert%20to%20an%20older%20version-2.png)
+    ![Revert to a later version](../../../images/Revert%20to%20an%20older%20version-2.png)
 
     The **Make current** option is also available in **Version Comparison** view, along with the other editing options. Select **Compare with current version**, and then click the **Make current** button on the top right side of the previous version you wish to restore the Current Version to.
 

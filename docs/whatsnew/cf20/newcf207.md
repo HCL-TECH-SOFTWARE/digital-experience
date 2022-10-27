@@ -1,6 +1,6 @@
 # What's new in CF207
 
-The following features and updates are available to customers installing HCL Digital Experience Container Update CF206 on [supported platforms](../../deployment/install/index.md):
+The following features and updates are available to customers installing HCL Digital Experience Container Update CF207 on [supported platforms](../../deployment/install/index.md):
 
 -   DX Client Updates support ability to execute in multiple container environments
 -   Digital Asset Management Plugin extensibility Helm configuration updates
@@ -11,7 +11,7 @@ The following features and updates are available to customers installing HCL Dig
 -   Web Content Manager Apply Content Template API update
 -   Syndication Administration updates extend Delegated Administration roles assignments
 -   HCL Digital Experience Cloud Native 9.5 Entitlement checks
--   HCL Digital Experience Cloud Native 9.5 offering adds components for on-premises installations and HCL Leap
+-   HCL Digital Experience Cloud Native 9.5 offering adds components for on-premises installations and [HCL Leap](https://www.hcltechsw.com/leap)
 -   New HCL Digital Experience Help Center
 -   Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
 

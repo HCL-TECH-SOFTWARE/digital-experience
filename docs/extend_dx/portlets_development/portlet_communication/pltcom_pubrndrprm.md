@@ -2,22 +2,17 @@
 
 Public render parameters allow JSR 286 portlets to share navigational state information. They are specially useful for coordinating the multiple navigation or viewer portlets that display different information items that are all related to the same parameter name. The portal stores all portlet render parameters, including public render parameters, as an encoded part of the current portal URL. Therefore, public render parameters are correctly preserved by typical browser navigation actions such as the Back button and bookmarking.
 
-**Notes:**
-
--   Public render parameters are generated between JSR portlets during the render phase and not the action phase. For more information, see *JSR 286 portlet events based communications* in the related links.
--   You can set shared render parameters as well as private render parameters during URL generation by using the state API. For more information, see *Advanced URL generation for data exchange*.
--   Public render parameters can also be shared with remote portlets by using the WSRP V 2.0 protocol.
--   Information about render parameters is normally encoded into the URL. Therefore their names and values should be as short as possible in order to not exceed the URL length restrictions set by your browser.
-
-
-**Related information**  
+!!!note "Notes"
+      -   Public render parameters are generated between JSR portlets during the render phase and not the action phase. For more information, see [JSR 286 portlet events based communications](../portlet_communication/portlets_publish_subscribe_mech/define_portlet_comm_capabilities/pltcom_events.md) in the related links.
+      -   You can set shared render parameters as well as private render parameters during URL generation by using the state API. For more information, see [Advanced URL generation for data exchange](pltcom_datxchg_xptltlnks.md).
+      -   Public render parameters can also be shared with remote portlets by using the WSRP V 2.0 protocol.
+      -   Information about render parameters is normally encoded into the URL. Therefore their names and values should be as short as possible in order to not exceed the URL length restrictions set by your browser.
 
 
-[Creating a web content page with the XML configuration interface](../admin-system/mp_wcm_createpagexml.md)
-
-[JSR 286 portlet events based communications](../dev-portlet/pltcom_events.md)
-
-[Advanced URL generation for data exchange](../dev-portlet/pltcom_datxchg_xptltlnks.md)
+???+ info "Related information"
+      - [Creating a web content page with the XML configuration interface](../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/advance_adm_sample/mp_wcm_createpagexml.md)
+      - [JSR 286 portlet events based communications](../portlet_communication/portlets_publish_subscribe_mech/define_portlet_comm_capabilities/pltcom_events.md)
+      - [Advanced URL generation for data exchange](pltcom_datxchg_xptltlnks.md)
 
 ## Concepts of the Java Portlet Specification 2.0
 

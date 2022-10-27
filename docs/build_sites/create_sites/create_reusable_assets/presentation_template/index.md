@@ -12,10 +12,9 @@ When you display content in a servlet delivered site, the presentation template 
 
 There is little difference between building a presentation template and using HTML to build a servlet delivered web page. It might even be helpful to build a "mock-up" of the page you are designing in HTML before creating a new presentation template. Then replace the different sections of your web page with references to elements and components by using web content tags.
 
-<!-- 
--   **[Page layout](../panel_help/wcm_dev_pres-temp_examples_layout.md)**  
+-   **[Page layout](wcm_dev_pres-temp_examples_layout.md)**  
 You will use HTML to define the layout of a presentation template in the same way you use HTML to define the layout of a web page.
--   **[Page style](../wcm/wcm_dev_pres-temp_examples_style.md)**  
-You use HTML to define the default properties of a presentation template in the same way you use HTML to define the default properties of a web page. -->
+-   **[Page style](wcm_dev_pres-temp_examples_style.md)**  
+You use HTML to define the default properties of a presentation template in the same way you use HTML to define the default properties of a web page. 
 
 

@@ -4,8 +4,8 @@ During the migration, your source profile is exported. Basically, this export co
 
 Delete or move the following files from your profile folder:
 
--   HCL Digital Experience logs files in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/logs directory. Some of these log files require you to stop the HCL Portal server.
--   ConfigEngine log files in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/log directory.
--   Any application .ear files that are not installed; typically saved older versions.
+-   HCL Digital Experience logs files in the wp_profile_root/logs directory. Some of these log files require you to stop the HCL Portal server.
+-   ConfigEngine log files in the wp_profile_root/ConfigEngine/log directory.
+-   Any application .ear files that are not installed; typically saved later versions.
 
 

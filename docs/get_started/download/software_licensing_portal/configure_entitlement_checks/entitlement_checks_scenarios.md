@@ -51,7 +51,11 @@ The Usage report will show:
 
 -   **Period**: The time period for the report results.
 -   **Usage**: The number of User sessions executed to your Digital Experience 9.5 Container Update deployment mapped to this entitlement and has the ProductionEnvironment variable enabled and set to True. See the User Session details in the [HCL Digital Experience Cloud Native 9.5 license](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad) on the [HCL Software License Agreements](https://www.hcltechsw.com/resources/license-agreements) site.
--   **Entitlement**: Amount will equal 1 which is equivalent to your HCL Digital Experience Cloud Native 1 – 7 Tier 1 – 7 purchased part. 
+
+    !!!note
+        Only user session data totals per month for the calendar year of purchase are transmitted to the customer's Flexnet dashboards for their view and monitoring purposes. No personal or PII data is transmitted.
+        
+-   **Entitlement**: Amount will equal to one (1), which is equivalent to your HCL Digital Experience Cloud Native 9.5 Tier 1 – 7 purchased part. 
 
 !!!note
-    The Flexnet dashboard **Usage** data may show a data percentage amount in parenthesis. This overage percentage amount is not applicable for  HCL Digital Experience Cloud Native 9.5 Tier 1 - 7 entitlement checking and informational user session consumption reporting, and may be disregarded. 
+    The Flexnet dashboard **Usage** data may show a data percentage amount in parenthesis. This overage percentage amount is not applicable for HCL Digital Experience Cloud Native 9.5 Tier 1 - 7 entitlement checking and informational user session consumption reporting, and may be disregarded. 

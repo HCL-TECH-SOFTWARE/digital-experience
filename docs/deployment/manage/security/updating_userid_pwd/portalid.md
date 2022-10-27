@@ -54,6 +54,25 @@ Complete the following steps to replace the HCL Digital Experience administrator
     3.  Update the user ID and password for the RunAs role mapping for the StartupCheck application.
 
 
+7. Update the security settings for your search collections.
+
+    1. Go to Portal Adminstration.
+    
+    2. Select **Admistration** \> **Search** \> **Setting** \> **Search Collections**
+
+    3. Go into each colleciion and edit the Content Source.
+
+    4. Choose the Security tab.
+
+    5. Update the user and password for the already defined security realms. 
+    
+    6. Mkde sure to click Update and then Save. 
+
+
+Additionally, you may want to change the password in the wkplc.properties file, located in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+
+
+
 !!!note "Notes"
     -   If you use an external security manager such as Security Access Manager, you must manually remove the old administrator user ID from the external security manager.
     -   If you set the default portal administrator user ID to be used as the crawler user ID for Portal Search, you need to adapt that crawler user ID accordingly. For more information, read [Managing the content sources of a search collection](../../../../build_sites/search/portal_search/administer_portal_search/setup_search_collections/mng_content_sources_search_collections/index.md).
