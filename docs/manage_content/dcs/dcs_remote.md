@@ -9,14 +9,11 @@ To balance processing power, you can run document conversion services on a remot
     !!!note
         Updated versions of RemoteDCS.zip might be available online. Check the *Recommended fixes and updates for WebSphere® Portal and Web Content Management* site.
 
-
-Local document conversion is supported on z/OS®. You do not have to run Document Conversion Services remotely for z/OS. If required, install the following package on the remote server to improve graphics performance with your document conversions: X11R6.
-
 **Linux on PowerPC:** Run document conversion services on a remote WebSphere Application Server that supports document conversion services. Local document conversion is not supported on Linux™ for PowerPC®. Additionally, the 64-bit Linux on z Systems does not support running document conversion or spell checker locally. You must run these functions on a remote server.
 
 1.  Install WebSphere Application Server on the remote system.
 
-    !!! restriction "**Restriction:**" 
+    !!! restriction "Restriction:" 
         Stellent version 8.01 must support the remote system.
 
 2.  Copy RemoteDCS.zip to the remote server and extract it in any directory with an appropriate archiving tool.

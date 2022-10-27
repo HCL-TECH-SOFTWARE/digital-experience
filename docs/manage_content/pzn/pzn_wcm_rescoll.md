@@ -22,20 +22,10 @@ The Web Content resource collection allows rules based on the following attribut
 |Keywords|The keywords stored on the piece of Web content.|
 |Last modified date|The date a modification last occurred on the piece of content.|
 |Last modifier|The last person to modify the piece of content. This attribute value is stored as a Distinguished name; for example, `uid=wpsadmin,o=defaultWimFileBasedRealm`.|
-|Name|The name of the piece of Web content as specified in Web Content Manager.This property uses case-insensitive matching. For example, a piece of content with a name of "SampleContent" matches "SampleContent," "samplecontent," "SAMPLECONTENT," and other variations.
-
-|
-|Position|The zero-based numeric position of the piece of content among its siblings in the nodes of the content hierarchy. Web Content resource collections use absolute positioning and relative positioning to support the ordering of content items. The algorithm used to generate position numbers results in fractional and negative values that control the display order of a set of child content items under a given area of a site.
-
-For more information, refer to the description of the position attribute in the *Command reference for the Portal Scripting Interface*.
-
-|
+|Name|The name of the piece of Web content as specified in Web Content Manager.This property uses case-insensitive matching. For example, a piece of content with a name of "SampleContent" matches "SampleContent," "samplecontent," "SAMPLECONTENT," and other variations.|
+|Position|The zero-based numeric position of the piece of content among its siblings in the nodes of the content hierarchy. Web Content resource collections use absolute positioning and relative positioning to support the ordering of content items. The algorithm used to generate position numbers results in fractional and negative values that control the display order of a set of child content items under a given area of a site. <br>For more information, refer to the description of the position attribute in the *Command reference for the Portal Scripting Interface*.|
 |Publish date|The publish date as specified in Web Content Manager.|
-|Location|The document library or site area from which to select content. If specified as a string, it should be in the format /Library/Site/SiteArea. You can also specify */Site/SiteArea to search by site area in all document libraries.
-
-Rules from previous versions with the Site Area attribute will automatically reference Location. If the site area was specified as a string, ensure the string starts with /Library or an asterisk (*).
-
-|
+|Location|The document library or site area from which to select content. If specified as a string, it should be in the format /Library/Site/SiteArea. You can also specify */Site/SiteArea to search by site area in all document libraries. <br>Rules from previous versions with the Site Area attribute will automatically reference Location. If the site area was specified as a string, ensure the string starts with /Library or an asterisk (*).|
 |Title|The display title as specified in Web Content Manager.|
 |Unique Identifier|Use this attribute to select pieces of Web Content.|
 

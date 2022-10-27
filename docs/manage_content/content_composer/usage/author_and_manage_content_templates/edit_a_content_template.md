@@ -4,7 +4,7 @@ This section provides the steps on how to edit a content template using HCL Cont
 
 ## Prerequisite
 
-Content Composer should be installed and configured to HCL Digital Experience 9.5 container release update CF181 or higher. See instructions to install to supported container environments in the [Install HCL Digital Experience 9.5 Components](/installation/install_config_cc_dam.md) topic.
+Content Composer should be installed and configured to HCL Digital Experience 9.5 container release update CF181 or higher. See instructions to install to supported container environments in the [Install HCL Digital Experience 9.5 Components](../..//installation/install_config_cc_dam.md) topic.
 
 Content Composer is accessible from the Practitioner Studio interface \(after image configuration to your HCL Digital Experience 9.5 CF181 and higher deployment\).
 
@@ -82,9 +82,9 @@ The Content Composer Web Content workflow selections can be accessed from the HC
 
     Select the *Date* and *Time* and confirm your selections.
 
-
+<!--
 ## HCL Digital Experience Solution Feedback
 
-HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1){:target="_blank"}.
+HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1){:target="_blank"}. -->
 
 

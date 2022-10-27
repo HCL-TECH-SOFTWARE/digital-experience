@@ -11,7 +11,7 @@ Get an overview of how you prepare your portal system for remote search service.
         SOAP support for remote search services was deprecated with HCL Digital Experience Version 8.0. EJB is still supported.
 
 -   For EJB: If you use EJB, complete the following security administration tasks:
-    1.  Prepare security for remote search service in a single sign-on domain \(SSO\).
+    1.  Prepare security for remote search service in a single sign-on domain (SSO).
     2.  Add the signer certification of the remote search service server into the portal search server. To do this addition, proceed by the following steps:
 
         1.  Access the WebSphere® Integrated Solutions Console of the portal search server.
@@ -129,12 +129,6 @@ Get an overview of how you prepare your portal system for remote search service.
 
             ```
                   /usr/WebSphere/AppServer/profiles/profile\_name
-            ```
-
-            For z/OS this directory can be:
-
-            ```
-                 /WebSphere/VR1M0/AppServer/profiles/default
             ```
 
         -   **`cell`** is the cell name of your remote search computer.

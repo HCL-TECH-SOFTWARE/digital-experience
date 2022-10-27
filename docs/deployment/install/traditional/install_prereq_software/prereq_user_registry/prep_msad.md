@@ -2,6 +2,8 @@
 
 If you plan to use Active Directory as an LDAP user registry, you must install and set up the server so that it can communicate with HCL Digital Experience.
 
+## Procedure
+
 1.  Complete the following steps to install and configure Active Directory:
 
     1.  Install Windows Server version 2008 or 2012, which includes Active Directory. Refer to the following product documentation for more information: [Windows Server installation and upgrade](https://docs.microsoft.com/en-us/windows-server/get-started/installation-and-upgrade).

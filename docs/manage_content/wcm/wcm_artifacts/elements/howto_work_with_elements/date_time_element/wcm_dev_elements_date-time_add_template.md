@@ -3,7 +3,7 @@ id: wcm_dev_elements_date-time_add_template
 title: Adding a date and time element to a template
 ---
 
-# Adding Date and Time Elements to a Template
+# Adding date and time elements to a template
 
 
 You add a date and time element to an authoring template when you want the date and time element to be used by a set of items that use the same authoring template.

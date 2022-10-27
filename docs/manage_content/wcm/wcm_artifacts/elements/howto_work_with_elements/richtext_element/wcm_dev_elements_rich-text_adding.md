@@ -3,12 +3,13 @@ id: wcm_dev_elements_rich-text_adding
 title: Adding a rich text element to an item
 ---
 
-
+# Adding a rich text element to an item
 
 
 You add a rich text element to a site area or content item when you want a section of HTML to be used for a specific site area or content item and you want to use a rich text editor to create and edit the section of HTML.
 
-**Note:** You can add an element to a content item only if the manage elements feature is enabled in the authoring template that is used by the content item.
+!!!note
+    You can add an element to a content item only if the manage elements feature is enabled in the authoring template that is used by the content item.
 
 1.  Open or create a site area or content item.
 

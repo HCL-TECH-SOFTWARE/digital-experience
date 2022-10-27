@@ -35,7 +35,6 @@ The following properties are domain specific properties. They are paired. The la
     |DBMS used|DBMS value for `xxx.datasource.dbms` properties|
     |---------|-----------------------------------------------|
     |Apache Derby|`DERBY`|
-    |IBM® DB2 Universal Database™ for z/OS®|`DB2_ZOS`|
     |IBM® DB2 Universal Database™ Enterprise Server Edition|DB2|
     |IBM® DB2® Universal Database Express® Edition|DB2|
     |IBM® DB2 Universal Database™ for i|DB2_ISERIES|

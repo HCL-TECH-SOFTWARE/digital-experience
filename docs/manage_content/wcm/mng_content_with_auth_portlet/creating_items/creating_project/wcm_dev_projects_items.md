@@ -3,8 +3,7 @@ id: wcm_dev_projects_items
 title: Manage items in a project
 ---
 
-
-
+# Manage items in a project
 
 You can both create new items or add existing items to a project and then edit them as required.
 
@@ -12,14 +11,14 @@ To add an item to a project, you can either:
 
 -   Open an item in read mode and click **Add to project**.
 -   Open an item in edit mode and click **Add to project** and then save the item. If the item is closed before saving, the item is not added to the project.
--   Select items in a view and click **More actions \> Add to project**.
+-   Select items in a view and click **More actions > Add to project**.
 -   Open a project and click **Add to project** and then select an item to add to the project.
 -   Open a project and click **New** to create a draft item in the project.
 
-!!! note
+!!!note
     The maximum number of items that can be used in a single project is 500.
 
-!!! note
+!!!note
     To add an item to a project, you must have editor access to that item.
 
 When you add an item to a project:
@@ -35,7 +34,7 @@ When added to a project, you work with your items in the same way as any other i
 -   Draft items in a project are displayed alongside other items in your item views, but are displayed with a status of draft. If you create a draft of a previously published item, both the draft and published versions of your item appear in your item views.
 -   When you use selection dialogs, draft items from your current project appear alongside currently published items so you can select and link to both current items and draft project items.
 
-**Workflow item types:**
+## Workflow item types
 
 Workflows, workflow stages and workflow actions cannot be added to projects.
 

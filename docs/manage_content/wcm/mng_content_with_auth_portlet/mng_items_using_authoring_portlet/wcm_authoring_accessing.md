@@ -3,10 +3,10 @@ id: wcm_authoring_accessing
 title: How to access the authoring portlet
 ---
 
+# How to access the authoring portlet
 
 
-
-To access the authoring portlet, open the applications menu and go to **Content** \> **Web Content Management**.
+To access the authoring portlet, open the applications menu and go to **Content > Web Content Management**.
 
 ## Authoring portlet access rights
 
@@ -22,7 +22,7 @@ The first time that you use a Web Content Manager system you will, at some point
 
 If you ever receive an error where the "Web Content Manager applet failed to load or is unavailable," you might need to reinstall the applet:
 
-1.  Remove the certificate for the Web Content Manager applet. For example, on a Windows™ system, go to **Control Panel** \> **Java Plugin** \> **Certificates**. See your Java documentation for details.
+1.  Remove the certificate for the Web Content Manager applet. For example, on a Windows™ system, go to **Control Panel > Java Plugin > Certificates**. See your Java documentation for details.
 2.  Reinstall or update your JRE.
 3.  Open a new HCL Portal session.
 4.  Go to the **Web Content Management** tab.

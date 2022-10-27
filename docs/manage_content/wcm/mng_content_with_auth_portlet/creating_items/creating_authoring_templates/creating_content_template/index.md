@@ -4,7 +4,7 @@
 
 Create a content template to configure the design of the authoring form and determine what elements can be included in the form.
 
-To create a content template, open the applications menu and go to **Content** \> **Web Content Management** and then click **New** \> **Authoring Template** \> **Content Template**.
+To create a content template, open the applications menu and go to **Content > Web Content Management** and then click **New > Authoring Template > Content Template**.
 
 -   **[Entering identification information](../../wcm_dev_items_id.md)**  
 Specify identification information for the current item, including the name and title for the item. The identification section is common to all item forms.

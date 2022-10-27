@@ -29,13 +29,11 @@ Caching occurs before any rule exits are called.
 
 For information about the DistributedMap and DistributedObjectCache interfaces for the dynamic cache, refer to the IBM® WebSphere Application Server documentation.
 
--   **[Automatically clearing your cache entry](../pzn/pzn_auto_cache.md)**  
+-   **[Automatically clearing your cache entry](pzn_auto_cache.md)**  
 In Combined Cumulative Fix 10 and later, an automatic cache entry clearing feature is enabled by default to automatically clear cache entries that are affected by a content change.
 
 
 
-**Related information**  
-
-
-[Using the DistributedMap and DistributedObjectCache interfaces for the dynamic cache](https://www.ibm.com/docs/en/was/8.5.5?topic=service-using-distributedmap-distributedobjectcache-interfaces-dynamic-cache)
+???+ info "Related information:"
+    - [Using the DistributedMap and DistributedObjectCache interfaces for the dynamic cache](https://www.ibm.com/docs/en/was/8.5.5?topic=service-using-distributedmap-distributedobjectcache-interfaces-dynamic-cache)
 

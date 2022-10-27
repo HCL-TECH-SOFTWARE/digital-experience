@@ -3,7 +3,7 @@ id: wcm_dev_elements_link_add_template
 title: Adding a link element to a template
 ---
 
-
+# Adding a link element to a template
 
 
 You add a link element to an authoring template when you want the link element to be used by a set of items that use the same authoring template.

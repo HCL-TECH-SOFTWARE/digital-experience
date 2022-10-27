@@ -127,6 +127,7 @@ Example rich text component feed item:
     -   HTML Source of the rich text Component: `<p>Image 1:</p><img src="http://wci-feed-server/img/l/leaf.jpg">`
     -   The rich text HTML is not modified.
     -   The image source is unmanaged because Web Content Manager cannot detect a broken image source.
+
 -   **Rich text component with image processing enabled:**
 
     -   A rich text component named: "RichText Component With Image 4" is created in the feed library.
@@ -134,6 +135,7 @@ Example rich text component feed item:
     -   HTML Source of the rich text Component: `<p>Image 1:</p><img src="/wps/wcm/myconnect/[IMAGE COMPONENT ID]/leaf.jpg?MOD=AJPERES">`
     -   The image source is replaced with a URL pointing to the newly created image.
     -   The image source is managed by Web Content Manager and is updated as the image component is updated.
+
 -   **Rich text component with embedded images enabled:**
 
     -   A rich text component named: "RichText Component With Image 4" is created in the feed library.
@@ -169,6 +171,7 @@ Example feed item:
     -   HTML Source of the HTML Component: `<p>Image 1:</p><img src="http://wci-feed-server/img/l/leaf.jpg"/>`
     -   The HTML is not modified.
     -   The image source is unmanaged because Web Content Manager cannot detect a broken image source.
+    
 -   **HTML element with image processing enabled**
 
     -   HTML Component that is named "HTML Component With Image 1" is created in the feed library.

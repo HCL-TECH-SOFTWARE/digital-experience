@@ -26,7 +26,7 @@ The following known issues and restrictions exist with portlet communication.
 -   If multiple cross-page wires marked with the `switch page` flag are triggered at the same time, all wire targets are invoked. However, the target page to which a user gets directed cannot be predicted unambiguously.
 -   Cross-page wires for standard portlets are executed before redirecting to the target page. Therefore cross-page target portlets must not assume that they are executed on the target page.
 -   Wires created on a root page do not apply to derived pages that you create by referencing the root page. While such pages do inherit the content of the original page, this inheritance does not apply to wires; you have to explicitly create the wires for the derived page.
--   Cooperative Java Server Faces \(JSF\) portlets that you developed by using older versions of Rational Application Developer Version 6 can contain code that does not work with HCL Digital Experience Version 8.5. If this occurs, replace the file `jsf-portlet.jar` in the failing WAR file with the version in the latest fix pack level.
+-   Cooperative Java Server Faces (JSF) portlets that you developed by using later versions of Rational Application Developer Version 6 can contain code that does not work with HCL Digital Experience Version 8.5. If this occurs, replace the file `jsf-portlet.jar` in the failing WAR file with the version in the latest fix pack level.
 -   Cooperative portlet action declarations with multiple input parameters configured in the WSDL file are not supported.
 
 

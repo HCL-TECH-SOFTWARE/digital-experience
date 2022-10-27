@@ -3,12 +3,12 @@ id: wcm_dev_profiling_users
 title: Editing user profiles
 ---
 
-
+# Editing user profiles
 
 
 You can add profile information to users. User profiles can be used as search parameters in menus.
 
-!!! note
+!!!note
     Profiling cannot be added to groups, only users.
 
 1.  Open an authoring portlet.

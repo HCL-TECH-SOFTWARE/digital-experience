@@ -23,14 +23,6 @@ For IBM i installations, the schemaName property must be set to the name of the 
 
 `schemaName = FEEDBACK`
 
-## z/OS® only: dbPlatform
-
-**Note:** For IBM DB2 Universal Database™ for z/OS only.
-
-If the Feedback database is installed on the DB2® for z/OS platform then the dbPlatform property must be set to 390 to identify this fact. It is unnecessary to set this property for all other database platforms.
-
-`dbPlatform = 390`
-
 ## logListeners
 
 Log events are generated whenever the log method of a bean is called or whenever a rule is fired. Log listeners process these log events and can store the event data or perform other actions as a result of these events. The Feedback component provides two default log listeners, the LMListener that collects data for use by the LikeMinds Recommendation Engine and the FeedbackListener that collects data for use in the Feedback reports. Custom log listeners can be used to modify the default behavior of the FeedbackListener or to provide a listener that processes the Feedback events in a user-specified manner.

@@ -3,12 +3,12 @@ id: wcm_dev_workflows_creating_action_publish
 title: Creating a publish action
 ---
 
-
+# Creating a publish action
 
 
 A publish action changes the status of an item from "draft" to "published".
 
-To create a publish action, open the applications menu and go to **Content** \> **Web Content Management** and then click **New** \> **Workflow Actions** \> **Publish Action**.
+To create a publish action, open the applications menu and go to **Content > Web Content Management** and then click **New > Workflow Actions > Publish Action**.
 
 
 1.  [Entering identification information](wcm_dev_items_id.md)  

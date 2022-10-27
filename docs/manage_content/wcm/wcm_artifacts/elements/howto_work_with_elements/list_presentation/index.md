@@ -1,5 +1,4 @@
-# List Presentation Uses
-
+# List presentation uses
 
 A list presentation stores a reusable presentation for navigator, menu, personalization, and search components. If the presentation of a navigator, menu, personalization, or search component is used in more than one component design, then you store that presentation in a list presentation.
 
@@ -9,7 +8,7 @@ Unlike other components, the list presentation cannot be rendered directly on a 
 
 You use a list presentation when a set of navigator, menu, personalization, or search components share design parameters. You store these design parameters in a single reusable site presentation that is reused throughout your site. When you need to update your list presentation design, you edit the list presentation item, not the components that use the shared list presentation item.
 
-To create a new list presentation, click **New** \> **Component** \> **List Presentation**.
+To create a new list presentation, click **New > Component > List Presentation**.
 
 1.  [Entering identification information](../../../../../wcm/mng_content_with_auth_portlet/creating_items/wcm_dev_items_id.md)  
 Specify identification information for the current item, including the name and title for the item. The identification section is common to all item forms.

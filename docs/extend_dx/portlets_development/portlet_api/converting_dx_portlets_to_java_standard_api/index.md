@@ -1,10 +1,10 @@
 # Converting HCL Digital Experience portlets (AIX, Linux, Windows) to the Java Standard API
 
-You can convert your DX portlets that use the [Struts Portlet Framework](wpsstruts.md) and the deprecated [Portlet API](https://help.hcltechsw.com/digital-experience/8.5/reference/previously_unsupported.html) to the [Standard portlet API](https://help.hcltechsw.com/digital-experience/8.5/dev-portlet/jsrapi.html).
+You can convert your DX portlets that use the [Struts Portlet Framework](https://help.hcltechsw.com/digital-experience/8.5/dev-portlet/wpsstruts.html) and the deprecated [Portlet API](https://help.hcltechsw.com/digital-experience/8.5/reference/previously_unsupported.html) to the [Standard portlet API](https://help.hcltechsw.com/digital-experience/8.5/dev-portlet/jsrapi.html).
 
 ## Converting basic Portlet API or Struts portlets to the Standard Portlet API
 
-This section describes some of the more common changes \(but not all\) that are required to convert a basic portlet built using the deprecated Portlet API, or using the [Struts Portlet Framework](wpsstruts.md) to a [Java standard portlet](https://help.hcltechsw.com/digital-experience/8.5/dev-portlet/jsrapi.html). Many conversion tasks depend on the amount of complexity in the portlet code. You must become familiar with the [Java Portlet Specification](https://www.jcp.org/en/jsr/detail?id=286) to determine any remaining changes that are not covered in this section.
+This section describes some of the more common changes (but not all) that are required to convert a basic portlet built using the deprecated Portlet API, or using the [Struts Portlet Framework](https://help.hcltechsw.com/digital-experience/8.5/dev-portlet/wpsstruts.html) to a [Java standard portlet](https://help.hcltechsw.com/digital-experience/8.5/dev-portlet/jsrapi.html). Many conversion tasks depend on the amount of complexity in the portlet code. You must become familiar with the [Java Portlet Specification](https://www.jcp.org/en/jsr/detail?id=286) to determine any remaining changes that are not covered in this section.
 
 -   **Changing Java source**
 
@@ -42,7 +42,7 @@ This section describes some of the more common changes \(but not all\) that are 
         }
         ```
 
-    3.  Change objects that are used for all render methods. In the standard portlet API, the PortletRequest and PortletResponse define common functions for the RenderRequest and RenderResponse subclasses. These subclasses are the arguments for all implementations of the render\(\) method, including doView\(\), doEdit\(\), and doHelp\(\).
+    3.  Change objects that are used for all render methods. In the standard portlet API, the PortletRequest and PortletResponse define common functions for the RenderRequest and RenderResponse subclasses. These subclasses are the arguments for all implementations of the render() method, including doView(), doEdit(), and doHelp().
 
         Change this:
 
@@ -61,7 +61,7 @@ This section describes some of the more common changes \(but not all\) that are 
         }
         ```
 
-    4.  Change the actionPerformed\(\) method. In the standard portlet API, this method is replaced by the processAction\(\) method, which does not require the portlet to implement a listener. The processAction\(\) methods accepts the ActionRequest and ActionResponse as arguments, which extend the PortletRequest and PortletResponse.
+    4.  Change the actionPerformed() method. In the standard portlet API, this method is replaced by the processAction() method, which does not require the portlet to implement a listener. The processAction() methods accepts the ActionRequest and ActionResponse as arguments, which extend the PortletRequest and PortletResponse.
 
         Change this:
 
@@ -88,7 +88,7 @@ This section describes some of the more common changes \(but not all\) that are 
         response.setContentType("text/html");
         ```
 
-    6.  Change JSP includes. In the standard portlet API, JSPs are included by a request dispatcher's include\(\) method. In the portlets' render method, set the MIME type of the output before returning it in the response.
+    6.  Change JSP includes. In the standard portlet API, JSPs are included by a request dispatcher's include() method. In the portlets' render method, set the MIME type of the output before returning it in the response.
 
         Change this:
 
@@ -123,9 +123,9 @@ This section describes some of the more common changes \(but not all\) that are 
         prefs.store();
         ```
 
-        Some preferences are read-only and can be modified only by an administrator. See [Change configuration parameters to preferences](#readonly) for information.
+        Some preferences are read-only and can be modified only by an administrator. See Change configuration parameters to preferences (Step 10) for information.
 
-    8.  Change the method that is used for namespace encoding. For example, if the portlet uses encodeNamespace\(\) to return a unique string to be prefixed to a JavaScript variable name within the content that is generated by the portlet, the portlet can use getNamespace\(\).
+    8.  Change the method that is used for namespace encoding. For example, if the portlet uses encodeNamespace() to return a unique string to be prefixed to a JavaScript variable name within the content that is generated by the portlet, the portlet can use getNamespace().
 
         Change this:
 
@@ -139,7 +139,7 @@ This section describes some of the more common changes \(but not all\) that are 
         RenderResponse.getNamespace()
         ```
 
-    9.  Change how portlet URLs are generated. For example, a portlet's doEdit\(\) method might save the URI to the edit mode to pass to the JSP. The portlet must instantiate a PortletURL object using the createRenderURL\(\) method.
+    9.  Change how portlet URLs are generated. For example, a portlet's doEdit() method might save the URI to the edit mode to pass to the JSP. The portlet must instantiate a PortletURL object using the createRenderURL() method.
 
         Change this:
 
@@ -163,7 +163,7 @@ This section describes some of the more common changes \(but not all\) that are 
         request.setAttribute("editURL", editURL.toString());
         ```
 
-        The standard portlet API does not have an equivalent method for createReturnURI\(\). If the URL is intended to call the portlets' action method, however, the portlet should use the createActionURL\(\) method.
+        The standard portlet API does not have an equivalent method for createReturnURI(). If the URL is intended to call the portlets' action method, however, the portlet should use the createActionURL() method.
 
 -   **Changing JSP source**
 
@@ -238,7 +238,7 @@ This section describes some of the more common changes \(but not all\) that are 
                   </portlet:actionURL>" >  
         ```
 
-    5.  Change resource bundles. The `<portletAPI:text/>` tag of the HCL Portlet API has been deprecated and should be replaced in all portlets by the JSTL equivalent. See [Using JSTL in portlet JSPs](wpsbsoutput.md) for more information.
+    5.  Change resource bundles. The `<portletAPI:text/>` tag of the HCL Portlet API has been deprecated and should be replaced in all portlets by the JSTL equivalent. See [Using JSTL in portlet JSPs](https://help.hcltechsw.com/digital-experience/8.5/dev-portlet/jsrjsp.html) for more information.
 
         Change this:
 
@@ -461,7 +461,7 @@ This section describes some of the more common changes \(but not all\) that are 
             <resource-bundle>nls.MyPortlet</resource-bundle>
             ```
 
-            In this example, the default resource bundle `MyPortlet.properties` is in the `/WEB-INF/nls` sub-directory of the WAR file and all of the locale-specific resource bundles append the locale to the file name \(for example, `MyPortlet_ja.properties` for Japanese\).
+            In this example, the default resource bundle `MyPortlet.properties` is in the `/WEB-INF/nls` sub-directory of the WAR file and all of the locale-specific resource bundles append the locale to the file name (for example, `MyPortlet_ja.properties` for Japanese).
 
         4.  Declare each supported locale as in the following example:
 
@@ -492,7 +492,7 @@ This section describes some of the more common changes \(but not all\) that are 
 
 ## Converting HCL Digital Experience portlets that use the Struts Portlet Framework
 
-The existing versions of the [Struts Portlet Framework](wpsstruts.md) supported the [Portlet API](https://help.hcltechsw.com/digital-experience/8.5/reference/previously_unsupported.html), or the legacy container. This release uses a newer version of the Struts Portlet Framework that supports the standard portlet container. This release will continue to ship a version to support the legacy container and a new version for the Standard container. The Struts Portlet Framework is still shipped as example war files that can be used to build the Struts application. The war files for each container can be distinguished by the name. The SPFLegacy examples support the legacy container, and the SPFStandard examples support the standard container. The SPFLegacyBlank.war file is the starting point for Struts applications for the Legacy container, and the SPFStandardBlank is the starting point for the Struts applications for the Standard container.
+The existing versions of the [Struts Portlet Framework](https://help.hcltechsw.com/digital-experience/8.5/dev-portlet/wpsstruts.html) supported the [Portlet API](../../portlet_api/index.md), or the legacy container. This release uses a newer version of the Struts Portlet Framework that supports the standard portlet container. This release will continue to ship a version to support the legacy container and a new version for the Standard container. The Struts Portlet Framework is still shipped as example war files that can be used to build the Struts application. The war files for each container can be distinguished by the name. The SPFLegacy examples support the legacy container, and the SPFStandard examples support the standard container. The SPFLegacyBlank.war file is the starting point for Struts applications for the Legacy container, and the SPFStandardBlank is the starting point for the Struts applications for the Standard container.
 
 -   **The Struts Portlet Framework for the Legacy Container**
 
@@ -617,12 +617,6 @@ The existing versions of the [Struts Portlet Framework](wpsstruts.md) supported 
     The `com.ibm.wps.portlets.struts.WpsRequestProcessor` class for the legacy container may have been extended to customize the processing. The Request Processor class for the standard container is `com.ibm.portal.struts.portlet.WpRequestProcessor`. If the legacy interfaces were used for the customizations, these changes should be converted to the Standard interfaces.
 
 
--   **[Converting portlet instances and settings from the HCL DX API to the standard API](../dev-portlet/migrt_ptlt_api.md)**  
-The portal provides a portlet conversion task that allows you to convert the settings and instances of HCL DX API portlets to the corresponding standard API portlets. This is useful when you intend to replace HCL DX API portlets by standard API portlets.
-
-
-**Related information**  
-
-
-[Standard portlet API](../dev-portlet/jsrapi.md)
+???+ info "Related information"  
+    -   [Standard portlet API](../../standard_portlet_api/index.md)
 

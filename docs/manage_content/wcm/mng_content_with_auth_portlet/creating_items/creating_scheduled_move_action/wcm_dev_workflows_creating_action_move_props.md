@@ -3,7 +3,7 @@ id: wcm_dev_workflows_creating_action_move_props
 title: Defining scheduled move action properties
 ---
 
-
+# Defining scheduled move action properties
 
 
 Define the action properties of the scheduled move action.
@@ -30,7 +30,7 @@ Define the action properties of the scheduled move action.
 
         This action is run on the date the item entered the current stage, plus any offset, is reached.
 
-    !!! note
+    !!!note
         If you select a date type that requires a date to be set by a user, and no date is set by a user, then the action is not run regardless of whether an offset is selected or not.
 
 2.  If **Selected date** is selected as the date type:
@@ -52,7 +52,7 @@ Define the action properties of the scheduled move action.
 4.  In some circumstances, the date that is specified in the scheduled action may have already been reached when an item enters a stage. In this case, by default the action is automatically run as soon the item reaches the current stage. You can choose to not run the action if the date has already been reached by selecting **Do not run the action if date has already been reached**.
 
 
-**The process of publishing and expiring items:**
+## The process of publishing and expiring items
 
 When a scheduled move action also triggers a published or expired action, it does not mean that the item has become published or expired. A status of published or expired instead means that the process of publishing or expiring an item has begun. The actual time a published item appears on a website, or the time an expired item is removed from a website, also depends on:
 
