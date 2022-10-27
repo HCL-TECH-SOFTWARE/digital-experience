@@ -2,7 +2,8 @@
 
 View some pointers on handling portlet sessions in situations where portlets are placed on pages that do not require authentication.
 
-**Note:** Authenticated and remembered users must have cookies enabled on their browser. Users can access portal sites without cookies enabled if they are anonymous users. If you turn on session tracking for anonymous users, then anonymous users also require cookies.
+!!!note
+   Authenticated and remembered users must have cookies enabled on their browser. Users can access portal sites without cookies enabled if they are anonymous users. If you turn on session tracking for anonymous users, then anonymous users also require cookies.
 
 Administrators can place your portlet on a page that is presented to anonymous users \(similar to the Welcome page provided by HCL Portal\). By default, when a portlet is placed on a page that does not require authentication and no user is logged in, the portal server does track sessions across subsequent request to the server. Portlets should not create a session using the `request.getSession(true)` call in this case; which results in WebSphere Application Server warning messages similar to:
 

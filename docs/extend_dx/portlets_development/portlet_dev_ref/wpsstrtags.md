@@ -10,7 +10,7 @@ The following tags are used by portlets within the Struts Application Framework.
 
     |Attribute name|Description|
     |--------------|-----------|
-    |property|The parameter name with the specified value that is set in the request object. **Note:** If the property attribute is set, then the application will have to handle cancel detection.
+    |property|The parameter name with the specified value that is set in the request object.<br> **Note:** If the property attribute is set, then the application will have to handle cancel detection.
 
 \[Runtime expression\]
 
@@ -106,12 +106,20 @@ The following tags are used by portlets within the Struts Application Framework.
     |action|The action is the URL that is used for the form submission. The action will be picked up by a nested tag, and postfield tags are used to submit the data. \[Runtime expression\]
 
 |
-    |forward|The name of the global `ActionForward` to be used to create the URL for the go element. **Note:** This attribute is ignored if this tag is specified in the body of a form tag that specifies the action attribute. For addition information on the forward attribute, see the Struts `html:link` documentation.
+    |forward|The name of the global `ActionForward` to be used to create the URL for the go element. 
+
+!!!note
+    This attribute is ignored if this tag is specified in the body of a form tag that specifies the action attribute. For addition information on the forward attribute, see the Struts `html:link` documentation.
 
 \[Runtime expression\]
 
 |
-    |href|This attribute specifies the URL for the go element. **Note:** This attribute is ignored if this tag is specified in the body of a form tag that specifies the action attribute. For addition information on the href attribute, see the Struts `html:link` documentation.
+    |href|This attribute specifies the URL for the go element.
+
+!!!note
+    This attribute is ignored if this tag is specified in the body of a form tag that specifies the action attribute. For addition information on the href attribute, see the Struts `html:link` documentation.
+    
+    
 
 \[Runtime expression\]
 
@@ -119,7 +127,10 @@ The following tags are used by portlets within the Struts Application Framework.
     |method|Allows specifying the HTTP submission method, get or post \[Runtime expression\]
 
 |
-    |page|The context relative path to the URL that will be used as the href for the go element. **Note:** This attribute is ignored if this tag is specified in the body of a form tag that specifies the action attribute. For addition information on the page attribute, see the Struts `html:link` documentation.
+    |page|The context relative path to the URL that will be used as the href for the go element. 
+    
+!!!note
+    This attribute is ignored if this tag is specified in the body of a form tag that specifies the action attribute. For addition information on the page attribute, see the Struts `html:link` documentation.
 
 \[Runtime expression\]
 
@@ -314,7 +325,9 @@ The following tags are used by portlets within the Struts Application Framework.
     -   forward
     -   href
     -   page
-    **Note:** One and only one of the `forward`, `href`, or `page` attributes can be specified.
+    
+    !!!note
+        One and only one of the `forward`, `href`, or `page` attributes can be specified.
 
     |Attribute name|Description|
     |--------------|-----------|

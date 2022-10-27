@@ -1,4 +1,4 @@
-# Configuring the Java Authentication and Authorization Service \(JAAS\) login module
+# Configuring the Java Authentication and Authorization Service (JAAS) login module
 
 The behavior of the JAAS login module is configurable. If you change the attribute name for the security context, make sure to adjust the mapping rule accordingly.
 

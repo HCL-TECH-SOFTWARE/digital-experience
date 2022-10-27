@@ -1,5 +1,6 @@
 
-# Manually exporting the your DX Site Page Hierarchy 
+# Manually exporting the your DX Site Page Hierarchy
+
    1. Go to Administration in Practitioner Studio.
    2. Go to the Site Management tab.
    3. Under Manage Pages, find your page name or site name.
@@ -8,5 +9,6 @@
    5. Then click yes in the new dialog. This will start downloading your site into a pageExport.xml in a new small pop-up window. You can find it in the default download location of your browser. 
 
 ## Related Pages
-   - [Exporting the DX Site Page Hierarchy xml from your system](export_site_page_hierarchy.md)
-   - [How to import DX Site Page Hierarchy](import_site_page_hierarchy.md)
+
+- [Exporting the DX Site Page Hierarchy xml from your system](export_site_page_hierarchy.md)
+- [How to import DX Site Page Hierarchy](import_site_page_hierarchy.md)

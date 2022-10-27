@@ -1,8 +1,9 @@
 # How to Import WCM library
 
 ## Importing WCM library
+
 !!!danger
-    Ensure that you import the wcm library first before redeploying or updating the script applications in it. **DO NOT deploy script applications first** if you those have script applications in this library. The uuid of script applications will change if you deploy them first.
+    **DO NOT deploy script applications first** if you those have script applications in this library. Ensure that you import the wcm library first before redeploying or updating the script applications in it. The uuid of script applications will change if you deploy them first.
 
 1. Import the Woodburn Insurance wcm-library zip into your system by running the following command.
 
@@ -64,13 +65,13 @@
             1. Import library A first. This will result in broken references in the components.
             2. Import library B. This will have complete references.
             3. Import the library A again to fix the broken references.
-      3. If you have script applications in this library. 
-         1. It is **optional** to deploy the scripts applications again.
-         2. Ensure to import the library first before [deploying the script applications](../../common-setup/build-and-deploy/build_and_deploy_scriptapps.md).
-         3. This is because deploying the script applications first before will generate new uuid which will break any old references.
-         4. Deploying the script applications after importing the library will update existing script applications.
+      3. If you have script applications in this library.
+         1. Ensure to import the library first before [deploying the script applications](../../common-setup/build-and-deploy/build_and_deploy_scriptapps.md).
+         2. This is because deploying the script applications first before will generate new uuid which will break any old references.
+         3. Deploying the script applications after importing the library will update existing script applications.
 
 !!!tip "See more detailed information [here](https://help.hcltechsw.com/digital-experience/9.5/containerization/wcmlibraries.html)."
 
 ## Related Page
-   - [Exporting your WCM library](export_wcm_library.md)
+
+- [Exporting your WCM library](export_wcm_library.md)

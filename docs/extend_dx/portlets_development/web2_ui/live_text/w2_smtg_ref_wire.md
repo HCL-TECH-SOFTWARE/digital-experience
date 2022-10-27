@@ -10,6 +10,7 @@ However, the execution flow for both methods is different:
     2.  The user clicks a link to execute the source portlet action.
     3.  The source portlet action is executed on the server, producing the source data and triggering the wires.
     4.  The wires fire target portlet actions that are executed with the source data.
+
 -   **Flow for click-to-action**
 
     1.  The source portlet renders a source HTML tag that contains the source data.
@@ -30,8 +31,6 @@ The following table lists differences that will help you decide which method for
 2.  You can also combine both methods: a target action that is triggered by click-to-action can have wires attached that will propagate to other portlet actions on the server within the same request. consequently, a single click-to-action menu selection can trigger multiple portlet actions on the server.
 
 
-**Related information**  
-
-
-[Portlet communication](../dev-portlet/pltcom_ptlt_com.md)
+???+ info "Related information"
+    - [Portlet communication](../../portlet_communication/index.md)
 

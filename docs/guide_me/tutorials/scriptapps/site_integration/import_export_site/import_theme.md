@@ -43,18 +43,17 @@
            ```
 
     !!!info "Notes on parameters:"
-         1. `xmlFile` should be pointing to your installTheme.xml which can be the one exported from [here](export_theme.md) or the one mentioned in [manual export](manual_export_theme.md).
+         1. `xmlFile` should be pointing to your installTheme.xml which can be the one exported from [here](export_theme.md#1-exporting-the-theme-metadata) or the one mentioned in [manual export](manual_export_theme.md).
             - `"Woodburn Insurance/components/Woodburn Insurance/content/xmlaccess/install/installTheme.xml"` if you are on Woodburn Insurance Demo
          2. `themeName` should be what is the theme name.
             - `"Woodburn Insurance"` if you are on Woodburn Insurance Demo
-         3. `themePath` should be pointing to your exported theme zip which can be the one exported from [here](export_theme.md) or the one mentioned in [manual export](manual_export_theme.md).
+         3. `themePath` should be pointing to your exported theme zip which can be the one exported from [here](export_theme.md#2-exporting-theme-source-code) or the one mentioned in [manual export](manual_export_theme.md).
             - This could be a uncompressed folder just like in the Woodburn Insurance Demo.
             - `"Woodburn Insurance/components/Woodburn Insurance/content/webdav/themes/Woodburn Insurance"` if you are on Woodburn Insurance Demo
          4. Ensure to place your correct credentials in the `{DXUSERNAME}` and `{DXPASSWORD}`.
 
-
    2. The output should look similar to this.
-   
+
       ```console
       2022-09-22 14:39:10 : Start to deploy theme in WebDav.
       (node:1) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
@@ -71,7 +70,7 @@
       ```
 
    3. Verify your theme by going to the Theme Manager and your theme should appear here.
-![Verify Themes](../../../../images/19themes_verify.png)
+![Verify Themes](../../images/19themes_verify.png)
 
 !!!tip "See more detailed information [here](https://help.hcltechsw.com/digital-experience/9.5/containerization/themes.html)."
 

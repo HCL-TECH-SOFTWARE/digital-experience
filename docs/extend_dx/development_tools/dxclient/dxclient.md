@@ -15,7 +15,7 @@ DXConnect is a servlet-based application deployed on top of IBM WebSphere Applic
 
 ## Architecture
 
-![HCL DXClient Architecture diagram](../../../images/HCLDXClient_Architecture_Diagram.jpg)
+![HCL DXclient Architecture diagram](../../../images/HCLDXClient_Architecture_Diagram.jpg)
 
 !!! note
 

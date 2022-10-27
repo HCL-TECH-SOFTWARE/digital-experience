@@ -116,14 +116,14 @@ To view the status of the search collection, click the collection name in the li
     Shows the date when a content source was last updated by a scheduled crawl and indexed.
 
     !!! note
-        The timeout that you might set under **Stop collecting after \(minutes\):** is an approximation. It might be exceeded by some percentage, as indexing the documents after the crawl takes more time.
+        The timeout that you might set under **Stop collecting after (minutes):** is an approximation. It might be exceeded by some percentage, as indexing the documents after the crawl takes more time.
 
 
 If you have a faulty search collection in your portal, the portlet shows a link to that faulty collection.
 
 ## Migrating search collections
 
-When you upgrade to a higher version of HCL, the data storage format is not necessarily compatible with the older version. To prevent loss of data, export all data of search collections to XML files before you upgrade. After the upgrade, you create a search collection and use the previously exported data to import the search collection data back into your upgraded portal.
+When you upgrade to a higher version of HCL, the data storage format is not necessarily compatible with the later version. To prevent loss of data, export all data of search collections to XML files before you upgrade. After the upgrade, you create a search collection and use the previously exported data to import the search collection data back into your upgraded portal.
 
 1.  If you do not complete these steps, the search collections are lost after you upgrade.
 2.  When you create the search collection on the upgraded portal, type data and make selections as follows:

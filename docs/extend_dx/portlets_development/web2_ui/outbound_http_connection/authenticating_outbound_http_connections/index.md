@@ -10,6 +10,8 @@ For several authentication mechanisms, the outbound HTTP connection infrastructu
 -   Single Sign-On \(SSO\) by using LTPA tokens
 -   Form-based authentication.
 
+[]()
+
 -   **[Providing user credentials for authenticated connections](outbhttp_auth_prv_ucreds.md)**  
 Several authentication handlers require that user credentials are presented in the authentication process. For example, the HTTP basic authentication handler requires such user credentials. Before the outbound connection can be used, these user credentials are set in the Credential Vault.
 -   **[Establishing a basic authenticated HTTP connection](outbhttp_auth_est_base_auth.md)**  
