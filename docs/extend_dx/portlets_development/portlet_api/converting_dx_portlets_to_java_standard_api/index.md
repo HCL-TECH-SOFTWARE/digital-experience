@@ -1,4 +1,4 @@
-# Converting HCL Digital Experience portlets \(AIX, Linux, Windows\) to the Java Standard API
+# Converting HCL Digital Experience portlets (AIX, Linux, Windows) to the Java Standard API
 
 You can convert your DX portlets that use the [Struts Portlet Framework](wpsstruts.md) and the deprecated [Portlet API](https://help.hcltechsw.com/digital-experience/8.5/reference/previously_unsupported.html) to the [Standard portlet API](https://help.hcltechsw.com/digital-experience/8.5/dev-portlet/jsrapi.html).
 
