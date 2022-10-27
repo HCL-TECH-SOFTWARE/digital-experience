@@ -36,7 +36,6 @@ You can now use this segment group to target different content to different segm
 !!! note
     If you do not want to see managed segments in the Add Segments view, your developer can disable the managed segments. Learn more about enabling and disabling managed segmentsat [Enabling and disabling segments in the Add Segments view](../../../../site_prep_content_author/contarget_enable_disable_segments.md) in the HCL Product Documentation.
 
-<!--- 
 -   **[Example: Creating managed segments](contarget_segments_mgd_example.md)**  
-Learn more about creating managed segments through an example. --->
+Learn more about creating managed segments through an example.
 
