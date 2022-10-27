@@ -23,7 +23,7 @@ You can import a static content page from an archive or compressed file by using
 You can import a static content page from an installed layout template by using the XML configuration interface.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Exporting and importing static pages](../../../../../../build_sites/create_sites/building_website/static_content/including_static_content_pages/export_import_static_page/index.md)
 
 <!--
