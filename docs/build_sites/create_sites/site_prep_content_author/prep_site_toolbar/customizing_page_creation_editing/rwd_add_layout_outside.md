@@ -63,6 +63,7 @@ You can add new styles or layouts to the site toolbar with a JSON file. Sometime
         1.  Click the context menu for a page in the Site Manager tree view.
         2.  Click **Open Page Settings**.
         3.  Click the **Style** or **Layout** tab to view layouts or styles.
+        
     -   If you have portal with Combined Cumulative Fix 7 or earlier, proceed as follows:
         1.  Select the **Page** tab.
         2.  Then, select the **Style** or **Layout** tab.

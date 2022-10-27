@@ -54,7 +54,7 @@ The tree view in site manager does not always provide you with a complete view o
 
     You can filter and sort your content in content explorer to display content items on the page in a way that is more useful to you. For example, you might want to see only draft content for your page in the content explorer. You can filter your view by draft or published status.
 
-<!---
+
 -   **[Associated content on your page](toolbar_pages_assoc.md)**  
-Web content associations combine portal pages with content that is stored in web content libraries. The content explorer provides you with a quick way to see your content associations, manage these associations, and switch content associations. --->
+Web content associations combine portal pages with content that is stored in web content libraries. The content explorer provides you with a quick way to see your content associations, manage these associations, and switch content associations.
 

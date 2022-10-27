@@ -15,6 +15,7 @@ The following items are created when you select **Include default items in the n
         -   **Draft Stage**
         -   **Publish Stage** by using the publish action named **Publish**.
         -   **Expire Stage** by using the expire action that is named **Expire**.
+
 -   **Authoring template:**
 
     The authoring template is named **Article** and contains a single rich text element that is named **Body** and uses the **Express Workflow** as the default workflow for content items that are created by using this authoring template.
@@ -27,6 +28,7 @@ The following items are created when you select **Include default items in the n
 
     -   The content items that are named **Sample Article** and **Sample Article 2** are stored in the site area named **Articles**.
     -   The site area that is named **Articles** contains a template map between the authoring template that is named **Article** and the presentation template named **Article Presentation**.
+    
 -   **Components:**
 
     -   The authoring tool that is named **Article Toolbar** is used to add **New** and **Edit** functions to the rendered page. It is referenced in the presentation template named **Article Presentation**.

@@ -70,6 +70,6 @@ Project templates are the foundation of your projects. As the content owner, you
         5.  You save your changes and return to the Project Overview. You save this project as a template by clicking **More** \> **Create Project Template**.
         6.  You then create the Promotions template. For this template, you add the marketing team as the approvers of content for projects based on this template.
 
-???+ info "Related information"
+???+ info "Related information:"
     -   [Creating project templates](../../site_prep_content_author/site_project_temps.md)
 
