@@ -49,7 +49,7 @@ Prereqs Checker would only run periodically in the first pod of the `StatefulSet
 Persistence Node for example will have the checks running periodically based on the `checkSchedule` on the first pod but not on the subsequent ones.
 
 First Pod (`dx-deployment-persistence-node-0`)
-```shell
+```console
 $ kubectl -n dxns logs dx-deployment-persistence-node-0 -c prereqs-checker
 Checks are scheduled */5 * * * *.
 [2022-10-28 07:25:00]: == File permission check for /mnt/prereqs-checks-volumes/database/ ==
@@ -59,7 +59,7 @@ Checks are scheduled */5 * * * *.
 ...
 ```
 Second Pod (`dx-deployment-persistence-node-1`)
-```shell
+```console
 $ kubectl -n dxns logs dx-deployment-persistence-node-1 -c prereqs-checker
 Prereqs checker will NOT run.
 Hostname "dx-deployment-persistence-node-1" ends with a number greater than 0 so we assume this is a subsequent Pod in a Helm deployment. Checks are only scheduled on the first Pod.
