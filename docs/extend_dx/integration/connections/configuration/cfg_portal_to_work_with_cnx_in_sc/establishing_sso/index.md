@@ -1,4 +1,4 @@
-# Establishing single sign-on \(SSO\) between the portal installation and HCL Connections in SmartCloud for Social Business
+# Establishing single sign-on (SSO) between the portal installation and HCL Connections in SmartCloud for Social Business
 
 Learn about the requirements that must be fulfilled in order to successfully integrate HCL Portal with HCL Connections in SmartCloud for Social Business. You can provide a user experience where a user logs in one time into HCL Portal and then automatically sees all integrated HCL Connections information.
 

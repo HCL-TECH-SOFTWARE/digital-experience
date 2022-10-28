@@ -2,13 +2,15 @@
 
 Add the Script Application to a page. Then, import an application.
 
-**Note:** If you add the Script Application to pages for which you selected the Lightweight profile, you cannot start the portal dialog to use the Edit and Import features. Script Application instances that you created and edited on pages with profiles other than the Lightweight profile or elsewhere can be added to Lightweight profile pages from the Script Applications for runtime use.
+!!!note
+        If you add the Script Application to pages for which you selected the Lightweight profile, you cannot start the portal dialog to use the Edit and Import features. Script Application instances that you created and edited on pages with profiles other than the Lightweight profile or elsewhere can be added to Lightweight profile pages from the Script Applications for runtime use.
 
 You can import files from your file system or from another portlet. To import from your file system, you must add your files in a .zip format.
 
 The compressed archive file that you select to import can include .css, .js, and .html files. If there is more than one .html file, you must select the default file when you are prompted. If you choose to import files from another portlet, the system makes copies of the files. If there are multiple .html elements or file components, then you must select the main .html file.
 
-**Note:** The main .html file must be at the root of the imported application. The JavaScript and images must be in subfolders with relative references from the main .html file.
+!!!note
+        The main .html file must be at the root of the imported application. The JavaScript and images must be in subfolders with relative references from the main .html file.
 
 When you import a .zip file or copy files from another portlet, the files are stored as HCL Web Content Manager elements. Elements that are already associated with the Script Application are overwritten.
 

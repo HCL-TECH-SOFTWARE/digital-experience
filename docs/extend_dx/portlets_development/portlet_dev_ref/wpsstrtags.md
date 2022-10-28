@@ -2,7 +2,7 @@
 
 Learn about the WML tags used by the portlets within the Struts Application Framework.
 
-The following tags are used by portlets within the Struts Application Framework. For a brief description of WML support in the Struts Application Framework, see [Using the WML tags](wpstrjsps.md).
+The following tags are used by portlets within the Struts Application Framework. For a brief description of WML support in the Struts Application Framework, see [Using the WML tags](https://help.hcltechsw.com/digital-experience/9.5/dev-portlet/wpstrjsps.html#wpstrjsps__wml).
 
 -   **<wml:cancel/\>**
 
