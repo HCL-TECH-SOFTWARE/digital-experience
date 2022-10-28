@@ -7,8 +7,8 @@ For several authentication mechanisms, the outbound HTTP connection infrastructu
 -   HTTP basic authentication
 -   HTTP digest authentication
 -   SPNEGO authentication
--   Single Sign-On \(SSO\) by using LTPA tokens
--   Form-based authentication.
+-   Single Sign-On (SSO) by using LTPA tokens
+-   Form-based authentication
 
 []()
 

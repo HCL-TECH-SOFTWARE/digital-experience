@@ -1,10 +1,10 @@
 # Converting HCL Digital Experience portlets (AIX, Linux, Windows) to the Java Standard API
 
-You can convert your DX portlets that use the [Struts Portlet Framework](wpsstruts.md) and the deprecated [Portlet API](https://help.hcltechsw.com/digital-experience/8.5/reference/previously_unsupported.html) to the [Standard portlet API](https://help.hcltechsw.com/digital-experience/8.5/dev-portlet/jsrapi.html).
+You can convert your DX portlets that use the [Struts Portlet Framework](https://help.hcltechsw.com/digital-experience/9.5/dev-portlet/wpsstruts.html) and the deprecated [Portlet API](https://help.hcltechsw.com/digital-experience/8.5/reference/previously_unsupported.html) to the [Standard portlet API](https://help.hcltechsw.com/digital-experience/9.5/dev-portlet/jsrapi.html).
 
 ## Converting basic Portlet API or Struts portlets to the Standard Portlet API
 
-This section describes some of the more common changes \(but not all\) that are required to convert a basic portlet built using the deprecated Portlet API, or using the [Struts Portlet Framework](wpsstruts.md) to a [Java standard portlet](https://help.hcltechsw.com/digital-experience/8.5/dev-portlet/jsrapi.html). Many conversion tasks depend on the amount of complexity in the portlet code. You must become familiar with the [Java Portlet Specification](https://www.jcp.org/en/jsr/detail?id=286) to determine any remaining changes that are not covered in this section.
+This section describes some of the more common changes \(but not all\) that are required to convert a basic portlet built using the deprecated Portlet API, or using the [Struts Portlet Framework](https://help.hcltechsw.com/digital-experience/9.5/dev-portlet/wpsstruts.html) to a [Java standard portlet](https://help.hcltechsw.com/digital-experience/9.5/dev-portlet/jsrapi.html). Many conversion tasks depend on the amount of complexity in the portlet code. You must become familiar with the [Java Portlet Specification](https://www.jcp.org/en/jsr/detail?id=286) to determine any remaining changes that are not covered in this section.
 
 -   **Changing Java source**
 
@@ -492,7 +492,7 @@ This section describes some of the more common changes \(but not all\) that are 
 
 ## Converting HCL Digital Experience portlets that use the Struts Portlet Framework
 
-The existing versions of the [Struts Portlet Framework](wpsstruts.md) supported the [Portlet API](https://help.hcltechsw.com/digital-experience/8.5/reference/previously_unsupported.html), or the legacy container. This release uses a newer version of the Struts Portlet Framework that supports the standard portlet container. This release will continue to ship a version to support the legacy container and a new version for the Standard container. The Struts Portlet Framework is still shipped as example war files that can be used to build the Struts application. The war files for each container can be distinguished by the name. The SPFLegacy examples support the legacy container, and the SPFStandard examples support the standard container. The SPFLegacyBlank.war file is the starting point for Struts applications for the Legacy container, and the SPFStandardBlank is the starting point for the Struts applications for the Standard container.
+The existing versions of the [Struts Portlet Framework](https://help.hcltechsw.com/digital-experience/9.5/dev-portlet/wpsstruts.html) supported the [Portlet API](https://help.hcltechsw.com/digital-experience/8.5/reference/previously_unsupported.html), or the legacy container. This release uses a newer version of the Struts Portlet Framework that supports the standard portlet container. This release will continue to ship a version to support the legacy container and a new version for the Standard container. The Struts Portlet Framework is still shipped as example war files that can be used to build the Struts application. The war files for each container can be distinguished by the name. The SPFLegacy examples support the legacy container, and the SPFStandard examples support the standard container. The SPFLegacyBlank.war file is the starting point for Struts applications for the Legacy container, and the SPFStandardBlank is the starting point for the Struts applications for the Standard container.
 
 -   **The Struts Portlet Framework for the Legacy Container**
 
@@ -617,12 +617,10 @@ The existing versions of the [Struts Portlet Framework](wpsstruts.md) supported 
     The `com.ibm.wps.portlets.struts.WpsRequestProcessor` class for the legacy container may have been extended to customize the processing. The Request Processor class for the standard container is `com.ibm.portal.struts.portlet.WpRequestProcessor`. If the legacy interfaces were used for the customizations, these changes should be converted to the Standard interfaces.
 
 
--   **[Converting portlet instances and settings from the HCL DX API to the standard API](../dev-portlet/migrt_ptlt_api.md)**  
+-   **[Converting portlet instances and settings from the HCL DX API to the standard API](migrt_ptlt_api.md)**  
 The portal provides a portlet conversion task that allows you to convert the settings and instances of HCL DX API portlets to the corresponding standard API portlets. This is useful when you intend to replace HCL DX API portlets by standard API portlets.
 
 
-**Related information**  
-
-
-[Standard portlet API](../dev-portlet/jsrapi.md)
+???+ info "Related information"  
+    - [Standard portlet API](../../standard_portlet_api/index.md)
 
