@@ -41,6 +41,32 @@ configuration:
     checkSchedule: "0 8 * * *"
 ```
 
+### Automatic Running of Checks
+Prereqs Checker by default would be deployed as a sidecar container for each of the application mentioned [below](#how-to-manually-trigger-the-checks), scaling the StatefulSet would also create a sidecar container per pod instance.
+
+Prereqs Checker would only run periodically in the first pod of the `StatefulSet` since it is not required that all pods (for the same application or `StatefulSet`) should perform the checks as all the pods would have similar configuration.
+
+Persistence Node for example will have the checks running on the first pod but not on the subsequent ones.
+
+First Pod (`dx-deployment-persistence-node-0`)
+```shell
+$ kubectl -n dxns logs dx-deployment-persistence-node-0 -c prereqs-checker
+Checks are scheduled */5 * * * *.
+[2022-10-28 07:25:00]: == File permission check for /mnt/prereqs-checks-volumes/database/ ==
+[2022-10-28 07:25:00]: dx_user is current user.
+[2022-10-28 07:25:00]: dx_user has a write permission on /mnt/prereqs-checks-volumes/database/.
+[2022-10-28 07:25:00]: dx_user has read permission on /mnt/prereqs-checks-volumes/database/.
+...
+```
+Second Pod (`dx-deployment-persistence-node-1`)
+```shell
+$ kubectl -n dxns logs dx-deployment-persistence-node-1 -c prereqs-checker
+Prereqs checker will NOT run.
+Hostname "dx-deployment-persistence-node-1" ends with a number greater than 0 so we assume this is a subsequent Pod in a Helm deployment. Checks are only scheduled on the first Pod.
+If this is not a Helm deployment and you need to have the test running please change "dx-deployment-persistence-node-1" to something that ends with 0 or that doesn't end with a number.
+```
+
+Subsequent pod(s) would still have the `prereqs-checker` container so you can still [trigger the checks](#how-to-manually-trigger-the-checks) manually for the other pods.
 ## How to manually trigger the checks:
 
 The following command can be triggered to run the checks manually, once all the checks will get performed, results will be available in the logs
