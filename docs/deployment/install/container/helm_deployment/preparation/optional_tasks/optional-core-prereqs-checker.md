@@ -46,7 +46,7 @@ Prereqs Checker by default would be deployed as a sidecar container for each of 
 
 Prereqs Checker would only run periodically in the first pod of the `StatefulSet` since it is not required that all pods (for the same application or `StatefulSet`) should perform the checks as all the pods would have similar configuration.
 
-Persistence Node for example will have the checks running on the first pod but not on the subsequent ones.
+Persistence Node for example will have the checks running periodically based on the `checkSchedule` on the first pod but not on the subsequent ones.
 
 First Pod (`dx-deployment-persistence-node-0`)
 ```shell
