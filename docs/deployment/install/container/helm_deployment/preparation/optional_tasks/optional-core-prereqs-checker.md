@@ -41,7 +41,7 @@ configuration:
     checkSchedule: "0 8 * * *"
 ```
 
-### Automatic Running of Checks
+## Automatic Running of Checks
 Prereqs Checker by default would be deployed as a sidecar container for each of the application mentioned [below](#how-to-manually-trigger-the-checks), scaling the StatefulSet would also create a sidecar container per pod instance.
 
 Prereqs Checker would only run periodically in the first pod of the `StatefulSet` since it is not required that all pods (for the same application or `StatefulSet`) should perform the checks as all the pods would have similar configuration.
