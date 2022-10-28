@@ -3,7 +3,7 @@ id: wcm_dev_sites_moving
 title: Moving a site area
 ---
 
-
+# Moving a site area
 
 
 As your site framework evolves, you are required to edit your site framework by moving site areas from one section of your site framework to another. You use the **Move** feature to change the position of a site area in the site framework. When you reposition a parent site area, any child site areas and related content are also moved.

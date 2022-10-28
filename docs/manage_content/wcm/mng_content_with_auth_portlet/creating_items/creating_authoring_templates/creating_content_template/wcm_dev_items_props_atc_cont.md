@@ -1,7 +1,5 @@
 # Entering content item properties
 
-
-
 Specify properties for the current item, including an alternative presentation template and the list of authors and owners that are associated with the item.
 
 1.  Click **Add Authors** to select the users and groups you want to classify as "authors".

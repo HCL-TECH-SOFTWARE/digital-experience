@@ -3,6 +3,8 @@ id: wcm_dev_elements_rich-text_creating
 title: Creating a rich text component
 ---
 
+# Creating a rich text component
+
 You create a rich text component when you want to reuse a section of HTML in multiple places in your website, and you want to use a rich text editor to create and edit the HTML. A copyright notice is an example of the kind of HTML you might store in a rich text component.
 
 To create a rich text component, open the applications menu and go to **Content > Web Content Management** and then click **New > Component > Rich Text**.

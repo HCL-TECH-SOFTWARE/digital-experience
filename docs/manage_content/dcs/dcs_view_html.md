@@ -54,7 +54,7 @@ HCL Digital Experience has a feature that allows you to view documents as HTML f
 |EML with Digital Signature|SMIME|
 |IBM® Lotus Notes® Domino® XML Language DXL|8.5|
 |IBM Lotus Notes NSF (File ID)|7.x, 8.x|
-|IBM Lotus Notes NSF (Win32, Win64, Linux™ x86-32 and Oracle Solaris 32-bit only with Notes® Client or Domino Server)|8.x|
+|IBM Lotus Notes NSF (Win32, Win64, Linux™ x86-32 and Oracle 32-bit only with Notes® Client or Domino Server)|8.x|
 |MBOX Mailbox|RFC 822|
 |Microsoft Outlook (MSG)|97 - 2013|
 |Microsoft Outlook Express® (EML)| |

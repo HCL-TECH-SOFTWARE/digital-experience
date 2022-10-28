@@ -2,9 +2,7 @@
 id: wcm_dev_items_props_content
 title: Entering content item properties
 ---
-
-
-
+# Entering content item properties
 
 Specify properties for the current item, including an alternative presentation template and the list of authors and owners that are associated with the item.
 
@@ -26,7 +24,7 @@ Specify properties for the current item, including an alternative presentation t
 
 3.  To select a different presentation template to use when you display this item instead of the one specified in the template mapping that is used by the item, click **Select Presentation Template Override**.
 
-    !!! note
+    !!!note
         The presentation template that you select must contain tags that are appropriate to this item if this item is to be displayed correctly.
 
 

@@ -3,12 +3,12 @@ id: wcm_dev_workflows_creating_action_version
 title: Creating a version action
 ---
 
-
+# Creating a version action
 
 
 A version action causes a new version of an item to be created when run.
 
-To create a version action, open the applications menu and go to **Content** \> **Web Content Management** and then click **New** \> **Workflow Actions** \> **Version Action**.
+To create a version action, open the applications menu and go to **Content > Web Content Management** and then click **New > Workflow Actions > Version Action**.
 
 
 1.  [Entering identification information](wcm_dev_items_id.md)  

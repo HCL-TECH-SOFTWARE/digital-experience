@@ -1,9 +1,9 @@
 ---
 id: wcm_dev_elements_number_props
-title: Defining a Number
+title: Defining a number
 ---
 
-
+# Defining a number
 
 
 You use the number element to store a numerical value in this component.

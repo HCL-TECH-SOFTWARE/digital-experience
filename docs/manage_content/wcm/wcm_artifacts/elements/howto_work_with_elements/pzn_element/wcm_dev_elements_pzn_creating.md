@@ -3,12 +3,9 @@ id: wcm_dev_elements_pzn_creating
 title: Creating a Personalization component
 ---
 
-
-
-
 You can use a Personalization element only by creating a Personalization component. You cannot add a Personalization element to authoring templates, site areas, or content items.
 
-To create a Personalization component, open the applications menu and go to **Content** \> **Web Content Management** and then click **New** \> **Component** \> **Personalization**.
+To create a Personalization component, open the applications menu and go to **Content > Web Content Management** and then click **New > Component > Personalization**.
 
 1.  [Entering identification information](../../../../../wcm/mng_content_with_auth_portlet/creating_items/wcm_dev_items_id.md)  
 Specify identification information for the current item, including the name and title for the item. The identification section is common to all item forms.

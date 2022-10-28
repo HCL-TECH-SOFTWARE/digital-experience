@@ -77,7 +77,6 @@ ESM support spans two categories:
     In general, HCL Digital Experience support makes a best effort to support ESM servers that have not been tested with HCL Digital Experience when relying on the ESM for authentication only. HCL Digital Experience support accepts problem reports for the appropriate HCL Digital Experience releases using untested ESM Trust Association Interceptor \(TAI\) implementations. If HCL Digital Experience support can re-create the reported problem using a tested ESM, staff will attempt to fix the problem. If the support team is not able to re-create the problem on a tested ESM, customers are referred to the ESM provider for further assistance.
 
 
-<!-- ???+ "**Related information**"  
-
-[Planning for external security managers](../plan/plan_extsecman.md) -->
+???+ info "Related information:"  
+    - [Planning for external security managers](../deployment/manage/security/external_sec_mgmt/planning_esm/index.md)
 

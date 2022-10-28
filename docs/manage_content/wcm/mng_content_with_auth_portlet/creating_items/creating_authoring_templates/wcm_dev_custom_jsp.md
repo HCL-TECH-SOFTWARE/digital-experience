@@ -2,21 +2,19 @@
 id: wcm_dev_custom_jsp
 title: Customizing elements with JSP
 ---
-
-
-
+# Customizing elements with JSP
 
 A "custom JSP" field is available on some element types when added to an authoring template. You use this field to reference a JSP file to use instead of the element default view in the user interface. You can write JSP to control the design of an element, and to restrict the values that can be entered into an element.
 
 **Storing JSP files:** JSP files are stored within a web application that runs on the portal. To reference a JSP file in another web application, use the following path: contextPath;jspPath. For example: /wps/customapplication;/jsp/jspFilename.jsp.
 
-A dynamic context path value can be defined by adding a token to the context path that corresponds to a key and value pair to the Web Content Manager configuration service environment provider. When this key is used as the token in the jsp value field, it is replaced dynamically at render time. For example: \[my.custom.key\];myfile where my.custom.key is a constant within the Web Content Manager configuration service.
+A dynamic context path value can be defined by adding a token to the context path that corresponds to a key and value pair to the Web Content Manager configuration service environment provider. When this key is used as the token in the jsp value field, it is replaced dynamically at render time. For example: [my.custom.key];myfile where my.custom.key is a constant within the Web Content Manager configuration service.
 
 **Custom bean and EditorBean API:**
 
 The CustomBean and EditorBean API can be found under com.ibm.workplace.wcm.api.authoring in the Javadoc.
 
-See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
+See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the PortalServer_root)/doc/Javadoc/spi_docs/com/ibm/workplace/wcm directory.
 
 ## Referencing jsp files
 
@@ -24,16 +22,16 @@ When you reference a JSP file in the **custom JSP** field of the element propert
 
 -   **When located within the ilwwcm-authoring.war/jsp/html directory of your server use this format**
 
-    `[AppServer\_root](../reference/wpsdirstr.md#was_root)/installedApps/node-name/PA_WCM_Authoring_UI.ear/ilwwcm-authoring.war/jsp/html`
+    AppServer_root/installedApps/node-name/PA_WCM_Authoring_UI.ear/ilwwcm-authoring.war/jsp/html`
 
-    !!! note
-        The JSP page is also stored in the client war directory of the local rendering portlet or of the servlet or portlet that calls the JSP, if the Web Content Manager API is used. For example, to render a JSP page on a local rendering portlet, you would also need to store a copy of the JSP file under `[AppServer\_root](../reference/wpsdirstr.md#was_root)/installedApps/node-name/PA_WCMLocalRendering.ear/ilwwcm-localrende.war`.
+    !!!note
+        The JSP page is also stored in the client war directory of the local rendering portlet or of the servlet or portlet that calls the JSP, if the Web Content Manager API is used. For example, to render a JSP page on a local rendering portlet, you would also need to store a copy of the JSP file under AppServer_root/installedApps/node-name/PA_WCMLocalRendering.ear/ilwwcm-localrende.war.
 
 -   **When located within any other web application:**
 
     -   **contextPath;jspPath**
 
-        Specifies an edit mode version of the field where the JSP is in another application. For example: `/wps/customapplication;/jsp/editor.jsp`
+        Specifies an edit mode version of the field where the JSP is in another application. For example: /wps/customapplication;/jsp/editor.jsp
 
     -   **jspPath**
 

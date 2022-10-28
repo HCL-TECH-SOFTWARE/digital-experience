@@ -34,6 +34,7 @@ Ensure that you have properly followed the steps in [Coding the portlet JSP](pzn
     2.  Select **Content Root > Personalization**.
     3.  Select **New Page**.
     4.  Label the Page Pers Offer.
+    
 10. Add the Pers_Offers portlet to the page.
 
 11. Click **Done**.

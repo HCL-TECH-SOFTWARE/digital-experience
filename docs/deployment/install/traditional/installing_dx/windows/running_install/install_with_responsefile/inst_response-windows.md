@@ -4,6 +4,7 @@ Use IBM Installation Manager to record a response file based on your environment
 
 You can also use the console mode to generate a response file. Go to [Installing with the console for a Windows environment](../inst_console-windows.md) for more information. After you review the summary information, enter G to generate a response file instead of I to install.
 
+## Procedure
 
 1.  Start all servers and applications that require a port number to avoid port conflicts when you install HCL Portal. If you are installing multiple copies of HCL Digital Experience on your server, start the existing Configuration Wizard servers.
 

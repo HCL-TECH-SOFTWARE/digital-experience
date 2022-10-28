@@ -4,7 +4,7 @@ Learn about the .jar files that contain public APIs documented in Personalizatio
 
 When you use IBM® Rational® Application Developer and the Portal Personalization tools, these classes are added to your project classpath automatically and no further action is necessary.
 
-If you are compiling your application outside of Rational Application Developer and you are using Personalization APIs, you may need to add the following classes to your classpath when compiling your application. These .jar files are located in [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/pzn/prereq.pzn/lib:
+If you are compiling your application outside of Rational Application Developer and you are using Personalization APIs, you may need to add the following classes to your classpath when compiling your application. These .jar files are located in [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/pzn/prereq.pzn/lib:
 
 -   pznquery.jar
 -   pznresources.jar

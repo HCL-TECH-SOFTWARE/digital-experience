@@ -10,7 +10,7 @@ Install and configure the web server plug-in. The IBM WebSphere Application Serv
 
     Refer to [Configuring Microsoft Internet Information Services (IIS)](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.nd.doc/ae/tins_manualWebIIS.html) for information.
 
-    !!!note
+    !!! note
         Refer to [Http.sys registry settings for IIS](http://support.microsoft.com/kb/820129) for information.
 
 3.  If you are using HCL® Domino®, edit the NOTES.INI file on the web server. Set the HTTPEnableConnectorHeaders and HTTPAllowDecodedUrlPercent parameters to 1. Also, if you are using WebDAV, enable it in the Domino web server administrative console.
@@ -40,6 +40,7 @@ Install and configure the web server plug-in. The IBM WebSphere Application Serv
 
     -   Enable HTTP tunneling to simulate PUT and DELETE requests, which means that POST requests are used instead. See the "Switch for tunneling of HTTP methods" link for information.
     -   Follow the instructions for your web server to enable PUT and DELETE requests.
+
 9.  Start the web server.
 
 10. Complete the following steps if you plan to use the Web Application Bridge feature:
@@ -62,5 +63,5 @@ Install and configure the web server plug-in. The IBM WebSphere Application Serv
 
     8.  Stop and restart the **wp.vwat.servlet.ear** application.
 
-11. If you want to use the short version of vanity URLs, add a rewrite rule to your web server. For more information, refer to [Providing short vanity URLs](/docs/manage_content/wcm/wcm_content_delivery/vanity_url/adm_vanity_url/van_url_short.md).
+11. If you want to use the short version of vanity URLs, add a rewrite rule to your web server. For more information, refer to [Providing short vanity URLs](../../../../manage_content/wcm/wcm_content_delivery/vanity_url/adm_vanity_url/van_url_short.md).
 

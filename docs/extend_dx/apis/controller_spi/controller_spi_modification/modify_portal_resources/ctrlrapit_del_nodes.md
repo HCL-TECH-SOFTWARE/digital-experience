@@ -11,7 +11,7 @@ To delete nodes, use the `delete()` method of the controller.
 4.  Persist your modifications by using the `commit()` method of the controller.
 
 
-Example 1 - Deleting a node \(error handling omitted\):
+Example 1 - Deleting a node (error handling omitted):
 
 ```
 // obtain locator of ContentModelController

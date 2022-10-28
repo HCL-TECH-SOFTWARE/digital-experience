@@ -4,7 +4,7 @@
 The authoring portlet is used to create and manage the items that you use to create websites. There are a common set of features within the authoring portlet to assist you work with items.
 
 -   **[How to access the authoring portlet](wcm_authoring_accessing.md)**  
-To access the authoring portlet, open the applications menu and go to **Content** \> **Web Content Management**.
+To access the authoring portlet, open the applications menu and go to **Content > Web Content Management**.
 -   **[Authoring portlet navigation options](wcm_authoring_views.md)**  
 You select different navigation options to customize the authoring portlet for different types of users.
 -   **[Filtering items displayed in an index](wcm_dev_using_filter.md)**  

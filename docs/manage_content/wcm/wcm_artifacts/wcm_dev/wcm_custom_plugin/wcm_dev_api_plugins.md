@@ -26,7 +26,7 @@ A rendering plug-in is a reusable class that you create to run a task at render 
 
         This method returns a description of the rendering plug-in.
 
-    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer_root](../reference/wpsdirstr.md#wp_root)/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
+    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the [PortalServer_root](../../../../../guide_me/wpsdirstr.md)`/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
 
 4.  The rendering plug-in can optionally implement `RenderingPluginDefinition` instead of `RenderingPlugin` to define its type and parameters. This is recommended, because it allows the rendering plug-ins to be used more easily.
 

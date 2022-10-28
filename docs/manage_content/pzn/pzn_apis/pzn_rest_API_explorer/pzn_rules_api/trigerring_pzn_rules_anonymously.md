@@ -6,7 +6,8 @@ The Personalization rules REST APIs can be triggered anonymously.
 
 To allow the rule to be triggered by unauthenticated users, go to the **Personalization Navigator** and grant the user role via **Edit Access**:
 
-![PZN grant access](../images/PZN-grant-access.png) ![]()
+![PZN grant access](../../../../../images/PZN-grant-access.png)
+![PZN editor](../../../../../images/PZN-grant-access-edit.png)
 
 The rule can then be triggered via *Invoke \(POST\) the Personalization ID rule* call.
 
@@ -52,7 +53,7 @@ The rule can then be triggered via *Invoke \(POST\) the Personalization ID rule*
 
     Output of the sample is displayed as follows:
 
-    ![Anonymous PZN executuon](../images/anonymous-pzn-execution.png)
+    ![Anonymous PZN executuon](../../../../../images/anonymous-pzn-execution.png)
 
 
 

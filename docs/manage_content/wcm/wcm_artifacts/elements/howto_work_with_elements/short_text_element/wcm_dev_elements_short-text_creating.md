@@ -3,12 +3,12 @@ id: wcm_dev_elements_short-text_creating
 title: Creating a short text component
 ---
 
-
+# Creating a short text component
 
 
 You create a short text component when you want to reuse a small section of text in multiple places in your website. For example, you can use a short text component to store the name of a product or service.
 
-To create a short text component, open the applications menu and go to **Content** \> **Web Content Management** and then click **New** \> **Component** \> **Short Text**.
+To create a short text component, open the applications menu and go to **Content > Web Content Management** and then click **New > Component > Short Text**.
 
 1.  [Entering identification information](../../../../../wcm/mng_content_with_auth_portlet/creating_items/wcm_dev_items_id.md)  
 Specify identification information for the current item, including the name and title for the item. The identification section is common to all item forms.
