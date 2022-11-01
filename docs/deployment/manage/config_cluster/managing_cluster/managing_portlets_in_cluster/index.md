@@ -1,11 +1,11 @@
 # Managing portlets in your cluster
 
-Because all HCL Portal servers in the cluster share database, any node can be used to manage portlets. Cluster nodes can run when you are managing portlets. When you deploy a portlet, HCL Portal stores the portlet configuration data in the HCL Portal database. Then, HCL Portal forwards the portlet application's web module and associated configuration to the deployment manager. The deployment manager is responsible for pushing the web module to each node in the cluster.
+Because all HCL Portal servers in the cluster share the same database, any node can be used to manage portlets. Cluster nodes can run when you are managing portlets. When you deploy a portlet, HCL Portal stores the portlet configuration data in the HCL Portal database. Then, HCL Portal forwards the portlet application's web module and associated configuration to the deployment manager. The deployment manager is responsible for pushing the web module to each node in the cluster.
 
 The deployed portlets must be activated before they can be used. Activation cannot be accomplished until the deployment manager synchronizes the associated web modules to each node in the cluster.
 
 !!!note
-    Auto-synchronization of the web modules to each node in the cluster might not happen immediately, or at all. This auto-synchronization depends on how the administrator configured auto-synchronization in the deployment manager. So, HCL Portal cannot promise that the portlet was successfully synchronized to each node in the cluster and thus cannot automatically activate the portlet during deployment.
+    Auto-synchronization of the web modules to each node in the cluster might not happen immediately, or at all. This auto-synchronization depends on how the administrator configured auto-synchronization in the deployment manager. Auto-synchronization is configured via the node agent definitions in the deployment manager. So, HCL Portal cannot promise that the portlet was successfully synchronized to each node in the cluster and thus cannot automatically activate the portlet during deployment.
 
 1.  Deploy your portlets by using either the HCL Portal Administration page or the XML configuration interface utility (`xmlaccess` command).
 
