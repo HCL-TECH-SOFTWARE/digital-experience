@@ -16,13 +16,31 @@ The main objective is to check if the specified prerequisites are met and inform
 In these checks, the basic file access permission would get checked and according to the access, the result will get printed on the logs.
 
 #### Latency Check for I/O:
-These checks will give the result of the disk latency. This check will help to know the essential efficiency of the file system. This check would get fail if the measured latency will not match the threshold value (minimum requirement).
+These checks will give the result of the disk latency. This check will help to know the essential efficiency of the file system. This check would get fail if the measured latency will not match the [threshold value](#threshold-values) (minimum requirement).
 
 #### Soft Links and Hard Links Check:
 This check will give the result of `Soft Links` and `Hard Links` creation capabilities on the file system.
 
 #### Random Read/Write Checks
-In this check, `IOPS` (Input/Output Operations per second) will get measured for the file system. This check is very essential to measure the performance of the file system. This check will get fail if the measured `IOPS` will not be higher or equal to the threshold value.
+In this check, `IOPS` (Input/Output Operations per second) will get measured for the file system. This check is very essential to measure the performance of the file system. This check will get fail if the measured `IOPS` will not be higher or equal to the [threshold value](#threshold-values).
+
+#### Threshold Values
+The `threshold values` for `prereqs-checker` are used as a benchmark to evaluate the disk latency and random RW (read/write) efficiency of a file system. These values are passed from the Helm chart via environment variables to the sidecar container which will be compared to the actual test results  of [disk latency (ms)](#latency-check-for-I/O) and [random read/write (IOPS)](#random-read/write-checks). From there the check can evaluate if the file system pass or fail the test.
+
+```yaml
+Env:
+  # Threshold value for disk latency (ms)
+  - name: "THRESHOLD_LATENCY_MS"
+    value: "3"
+  # Threshold value for random read (IOPS)
+  - name: "THRESHOLD_RANDOM_READ_IOPS"
+    value: "1800"
+  # Threshold value for random write (IOPS)
+  - name: "THRESHOLD_RANDOM_WRITE_IOPS"
+    value: "600"
+```
+
+`Threshold values` are derived from computing the average/median result of testing disk latency (MS) and random RW (IOPS) efficiency from different environments mainly `NATIVE KUBE`, `OPENSHIFT`, `OPENSHIFT-NJDC`, `AKS`, `EKS`, and `GKE`.
 
 ## Prereqs Checker configuration options
 
@@ -39,6 +57,37 @@ configuration:
     enabled: true
     # Cronjob expression to run the checks periodically
     checkSchedule: "0 8 * * *"
+```
+
+## Automatic Running of Checks
+Prereqs Checker by default would be deployed as a sidecar container for each of the applications mentioned [below](#how-to-manually-trigger-the-checks), scaling the StatefulSet would also create a sidecar container per pod instance.
+
+Prereqs Checker would only run periodically in the first pod of the `StatefulSet` since it is not required that all pods (for the same application or `StatefulSet`) should perform the checks as all the pods would have similar configuration.
+
+Persistence Node for example will have the checks running periodically based on the `checkSchedule` on the **first pod** but not on the subsequent ones.
+
+First Pod (`dx-deployment-persistence-node-0`)
+```console
+$ kubectl -n dxns logs dx-deployment-persistence-node-0 -c prereqs-checker
+Checks are scheduled */5 * * * *.
+[2022-10-28 07:25:00]: == File permission check for /mnt/prereqs-checks-volumes/database/ ==
+[2022-10-28 07:25:00]: dx_user is current user.
+[2022-10-28 07:25:00]: dx_user has a write permission on /mnt/prereqs-checks-volumes/database/.
+[2022-10-28 07:25:00]: dx_user has read permission on /mnt/prereqs-checks-volumes/database/.
+...
+```
+Second Pod (`dx-deployment-persistence-node-1`)
+```console
+$ kubectl -n dxns logs dx-deployment-persistence-node-1 -c prereqs-checker
+Prereqs checker will NOT run.
+Hostname "dx-deployment-persistence-node-1" ends with a number greater than 0 so we assume this is a subsequent Pod in a Helm deployment. Checks are only scheduled on the first Pod.
+If this is not a Helm deployment and you need to have the test running please change "dx-deployment-persistence-node-1" to something that ends with 0 or that doesn't end with a number.
+```
+
+Subsequent pod(s) would still have the `prereqs-checker` container so you can still [trigger the checks](#how-to-manually-trigger-the-checks) manually for the other pods.
+
+```console
+$ kubectl -n dxns exec --stdin --tty dx-deployment-persistence-node-1 -c prereqs-checker -- /bin/bash /usr/local/sbin/run_test.sh
 ```
 
 ## How to manually trigger the checks:
