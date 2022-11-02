@@ -25,7 +25,7 @@ This check will give the result of `Soft Links` and `Hard Links` creation capabi
 In this check, `IOPS` (Input/Output Operations per second) will get measured for the file system. This check is very essential to measure the performance of the file system. This check will get fail if the measured `IOPS` will not be higher or equal to the [threshold value](#threshold-values).
 
 #### Threshold Values
-The `threshold values` for `prereqs-checker` are used as a benchmark to evaluate the disk latency and random RW (read/write) efficiency of a file system. These values are passed from the Helm chart via environment variables to the sidecar container which will be compared to the actual test results  of [disk latency (ms)](#latency-check-for-I/O) and [random read/write (IOPS)](#random-read/write-checks). From there the check can evaluate if the file system pass or fail the test.
+The `threshold values` for `prereqs-checker` are used as a benchmark to evaluate the disk latency and random RW (read/write) efficiency of a file system. These values are passed from the Helm chart via environment variables to the sidecar container which will be compared to the actual test results  of [disk latency (ms)](#latency-check-for-io) and [random read/write (IOPS)](#random-readwrite-checks). From there the check can evaluate if the file system pass or fail the test.
 
 ```yaml
 Env:
