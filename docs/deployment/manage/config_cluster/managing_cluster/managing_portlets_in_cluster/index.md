@@ -19,7 +19,7 @@ The deployed portlets must be activated before they can be used. Activation cann
     |Operating system|Task|
     |----------------|----|
     |AIX®, Linux™|`./ConfigEngine.sh activate-portlets -DWasPassword=password`|
-    |Windows™|ConfigEngine.bat activate-portlets -DWasPassword=password|
+    |Windows™|`ConfigEngine.bat activate-portlets -DWasPassword=password`|
 
 4.  Use the following information to provide portlets as WSRP services:
 
