@@ -18,7 +18,7 @@ The `deploy-portlet` command is used to deploy one or more new or updated portle
 
 -   **Portlet Application web archive file**
 
-    This web archive .war file should contain the necessary portlet artifacts for deployment, as per the JSR 286 portlet standard. Refer to [Importing WAR files](../../portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref_import_war.md).
+    This web archive .war file should contain the necessary portlet artifacts for deployment, as per the JSR 286 portlet standard. Refer to [Importing WAR files](../../../../deployment/manage//portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref_import_war.md).
 
 
 **Command**
