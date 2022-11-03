@@ -13,16 +13,15 @@ The following information applies to HCL Digital Experience Version 8.5 with CF0
 
 The title and description of your page are associated with the language of the page. After you create a page, you can set up language-specific titles and descriptions. To set up language-specific titles and descriptions, after you create your page, click the context menu for that page in site manager. Then, select **Open Page Settings** \> **Edit Page Properties** \> **Localization**.
 
-<!---
+
 -   **[Friendly URL name](toolbar_friendlyurl.md)**  
  Associate friendly URL names with pages, labels, and content items in your website. Then, the URLs are constructed by using the friendly URLs names. As a result, your website has human readable URLs that are easy to remember.
--   **[Page layout](toolbar_page_layout.md)**  
+-   **[Page layout](../editing_page_settings/page_layout/index.md)**  
 Changing the page layout takes effect immediately. You can view and modify the assignments of portlets to specific columns on the page in real time. Choose the best layout option for your users by viewing the impact of your selection as it would be seen on a desktop computer, tablet, or mobile device.
 -   **[Changing page style](toolbar_pages_style.md)**  
 You can change the appearance of a page by selecting a style from the list of styles. Available styles are defined in the website theme. The site administrator selects the theme.
--   **[Vanity URLs](toolbar_vanityurls.md)**  
+-   **[Vanity URLs](../editing_page_settings/vanity_url/index.md)**  
 Create a vanity URL when you need a short page address that people can easily remember.
 
-**Table of Contents:**  --->
 
 

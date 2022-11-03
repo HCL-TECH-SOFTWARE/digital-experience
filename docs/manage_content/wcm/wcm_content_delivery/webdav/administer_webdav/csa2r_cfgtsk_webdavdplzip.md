@@ -16,7 +16,7 @@ If the WebDAV folder referenced by the target URI does not exist yet, the task c
 
 -   **Usage:**
 
-    Use this task to upload archive or compressed files to portal WebDAV folders. Under z/OS®, the Customization Dialog uses this task to upload archive or compressed files to portal WebDAV folders.
+    Use this task to upload archive or compressed files to portal WebDAV folders.
 
 -   **Syntax:**
 

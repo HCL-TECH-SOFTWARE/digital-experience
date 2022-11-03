@@ -16,7 +16,7 @@ To create a OperationCheckPlugin plug-in, you must create a operation check clas
         This method returns the operation that this plug-in is executed against. Currently, only Operation.CREATE is supported
 
     -   **`OperationCheckResult checkOperation(OperationContext context)`**
-    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
+    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the [PortalServer\_root](../../../../../guide_me/wpsdirstr.md)`/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
 
 2.  Implement the checkOperation() method. This method contains the code that will be run when the plug-in is invoked prior to committing a Web Content Manager operation. The method needs to return an instance which implements the interface com.ibm.workplace.wcm.api.extensions.operation.OperationCheckResult. The instance needs to implement twomethods:
 

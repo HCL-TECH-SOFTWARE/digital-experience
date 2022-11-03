@@ -16,7 +16,7 @@ Use this roadmap if you are an organization with the following requirements:
 
 A demonstration environment is a portal server with a local database. Since Apache Derby is installed, configured, and ready for use, a database is not included in the topology diagram.
 
-![This topology diagram contains only one portal server.](../images/demoServer.jpg)
+![This topology diagram contains only one portal server.](../../../../../../images/demoServer.jpg)
 
 # Preparing for the installation process
 

@@ -1,5 +1,4 @@
-# Using a Menu Element
-
+# Using a menu element
 
 To create a menu element you must specify the criteria to search content items with, and then create a layout for the metadata or content to be displayed in the menu element.
 

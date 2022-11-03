@@ -6,16 +6,16 @@ To assist you with your upgrade, HCL is now providing a Health Checker tool that
 
 We suggest running the tool a few days before you plan to apply the cumulative fix so that you have time to reconcile any problems it finds.
 
-The tool will be installed with Cumulative Fix 03 or later and will be available for use with all future updates. To use it before applying CF03, simply unzip the archive from the maintenance package into your \(PortalServer\_root\) directory. By default, this is:
+The tool will be installed with Cumulative Fix 03 or later and will be available for use with all future updates. To use it before applying CF03, simply unzip the archive from the maintenance package into your (PortalServer_root) directory. By default, this is:
 
--   Windows: C:\\IBM\\WebSphere\\PortalServer
+-   Windows: C:\\IBM\WebSphere\PortalServer
 -   Linux: /opt/IBM/WebSphere/PortalServer
 
 This will overwrite two or possibly three existing files:
 
 -   installer/wp.config/bin/wp.config.jar
--   installer/wp.update/config/includes/upgrade\_health\_check.xml
--   installer/wp.update/config/was/wp\_TestPortalScripting.jacl
+-   installer/wp.update/config/includes/upgrade_health_check.xml
+-   installer/wp.update/config/was/wp_TestPortalScripting.jacl
 
 Once the tool is installed, execute the following ConfigEngine command from within the path of the profile to run it:
 

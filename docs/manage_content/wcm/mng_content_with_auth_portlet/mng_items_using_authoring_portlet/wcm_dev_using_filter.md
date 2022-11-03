@@ -3,8 +3,7 @@ id: wcm_dev_using_filter
 title: Filtering items displayed in an index
 ---
 
-
-
+# Filtering items displayed in an index
 
 Large websites contain large numbers of items. You can filter the items that are displayed within an index by using the filter feature.
 

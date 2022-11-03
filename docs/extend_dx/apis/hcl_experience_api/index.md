@@ -34,7 +34,7 @@ It is recommended that developers building solutions for HCL Digital Experience 
 The HCL Experience API is a component of the HCL Digital Experience offerings. HCL Digital Experience offering license and download packages are provided with HCL Digital Experience entitlements available to customers on the [HCL Software License Portal](https://www.hcltech.com/software/support/release){:target="_blank"}.
 
 !!!note
-    Beginning with Container Update and CF196, additional Experience APIs are introduced, which support development of [Design Studio \(Beta\)](../../../manage_content/design_studio/index.md) and [Web Content Manager](../../../manage_content/wcm/index.md) functions.
+    Beginning with Container Update and CF196, additional Experience APIs are introduced, which support development of [Design Studio (Beta)](../../../manage_content/design_studio/index.md) and [Web Content Manager](../../../manage_content/wcm/index.md) functions.
 
 Video: [Using the Digital Experience V2 Web Content Manager APIs](https://www.youtube.com/watch?v=7N4yVJUjqOo&list=PLEjl4yzB6ckH2QJw886wkwqmSotdCLxdf&index=6).
 

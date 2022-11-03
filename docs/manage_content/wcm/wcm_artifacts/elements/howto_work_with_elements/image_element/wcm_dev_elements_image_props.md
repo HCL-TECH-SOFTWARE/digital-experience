@@ -3,7 +3,7 @@ id: wcm_dev_elements_image_props
 title: Selecting an image
 ---
 
-
+# Selecting an image
 
 
 You use the image element to upload an image.
@@ -14,15 +14,15 @@ You use the image element to upload an image.
 
     -   **Border**
 
-        Define the size of the border to appear around the image. \(0 = no border\)
+        Define the size of the border to appear around the image. (0 = no border)
 
     -   **Width**
 
-        Set the width of the image \(in pixels\). Optional.
+        Set the width of the image (in pixels). Optional.
 
     -   **Height**
 
-        Set the height of the image \(in pixels\). Optional.
+        Set the height of the image (in pixels). Optional.
 
     -   **Alternate text**
 

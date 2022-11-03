@@ -10,10 +10,11 @@ With HCL Digital Experience there are some IBM specific parameters for portlets 
 
 For portlets conforming to JSR 286, HCL Digital Experience also includes support for two-phase rendering.
 
-The following topics provide specific information about the implementation of the standard portlet API within HCL Digital Experience.
+The following topic provide specific information about the implementation of the standard portlet API within HCL Digital Experience.
 
 -   **[Using two-phase rendering with JSR 286 portlets](../standard_portlet_api/twophase_rendering_jsr_portlets/index.md)**  
 For portlets conforming to JSR 286, HCL Digital Experience includes support for two-phase rendering, which allows portlets to set cookies and the HTTP headers and to change the portal page title dynamically.
+
 
 
 ???+ info "Related information"

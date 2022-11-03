@@ -3,7 +3,7 @@ id: wcm_dev_profiling_category_moving
 title: Moving a category
 ---
 
-
+# Moving a category
 
 
 As a taxonomy evolves, you are required to edit your taxonomy by moving categories from one section of your taxonomy to another. You use the **Move** feature to change the position of a category in a taxonomy. When you reposition a parent category, any child categories are also moved.

@@ -27,10 +27,10 @@ Use your selected roadmap and the Configuration Wizard to complete a new environ
 
     Use the Configuration Wizard in conjunction with your selected roadmap.
 
-**Related information**  
-[HCL Digital Experience roadmaps for stand-alone servers](../../get_started/plan_deployment/traditional_deployment/roadmaps/rm_install_deployment/rm_standalone_servers/rm_standalone_parent.md)<br>
-[DB2 z/OS: Database transfer](../manage/db_mgmt_sys/dbtransfer_zOS/index.md)<br>
-[Enable federated security](../manage/security/user_registry/cw_ldap.md)<br>
-[Accessing the Configuration Wizard](../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/configuration/cw_run.md)<br>
-[Updating DB2 self-tuning memory manager (STMM settings](../manage/migrate/next_steps/post_mig_activities/mig_post_cf.md)<br>
+???+ info "Related information"  
+    -   [HCL Digital Experience roadmaps for stand-alone servers](../../get_started/plan_deployment/traditional_deployment/roadmaps/rm_install_deployment/rm_standalone_servers/rm_standalone_parent.md)
+    -   [DB2 z/OS: Database transfer](../manage/db_mgmt_sys/dbtransfer_zOS/index.md)
+    -   [Enable federated security](../manage/security/user_registry/cw_ldap.md)
+    -   [Accessing the Configuration Wizard](../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+    -   [Updating DB2 self-tuning memory manager (STMM settings](../manage/migrate/next_steps/post_mig_activities/mig_post_cf.md)
 

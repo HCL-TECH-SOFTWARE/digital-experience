@@ -3,7 +3,7 @@ id: wcm_dev_items_access
 title: Granting users or groups access to an item
 ---
 
-
+# Granting users or groups access to an item
 
 
 Specify the access control settings for the current item to designate which users have access to an item and their level of access. The access section is common to all item forms.

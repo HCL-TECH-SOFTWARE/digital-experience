@@ -44,32 +44,32 @@ All of the drag-and-drop actions are based on the native HTML 5 drag-and-drop ca
 
 The Search controls that are displayed on some toolbar tabs, use the auto-completion capability of HTML 5. Internally it is based on the HTML 5 `<datalist>` tag. As a consequence, you might see different search result suggestions, depending on the browser that you use. Internet Explorer version 9 does not support the HTML 5 auto completion feature.
 
-<!---
--   **[Configuring the behavior of toolbar tabs](../admin-system/epc_adding_custom_source.sm.md)**  
+
+-   **[Configuring the behavior of toolbar tabs](epc_adding_custom_source.sm.md)**  
 You can use the following page parameters to configure the main properties of your toolbar tabs.
--   **[Configuring display options in the primary and secondary toolbar frames](../dev-theme/themeopt_toolbar_frames.md)**  
+-   **[Configuring display options in the primary and secondary toolbar frames](themeopt_toolbar_frames.md)**  
 When you open the site toolbar, Site Manager automatically opens in the primary toolbar frame. You can control what displays in the primary and secondary toolbar frames by setting page parameters on the hidden page Toolbar Content Root.
--   **[Disabling the toolbar logo](../dev-theme/disable_toolbar_logo.md)**  
+-   **[Disabling the toolbar logo](disable_toolbar_logo.md)**  
 You can disable the toolbar logo for the entire portal that includes all the virtual portals or for a specific virtual portal.
--   **[Implementing portlets for the site toolbar](../admin-system/epc_adding_custom_other_content.md)**  
+-   **[Implementing portlets for the site toolbar](epc_adding_custom_other_content.md)**  
 The toolbar tabs of the Portal 8.5 site toolbar are represented as portal pages. The content of the toolbar tabs can be implemented by using portlets.
--   **[Customizing the More menu of the action bar](../admin-system/epc_custom_more_menu.md)**  
+-   **[Customizing the More menu of the action bar](epc_custom_more_menu.md)**  
 The More menu is a public extension point that you can use to plug in your own menu actions that you want to make available in the action bar.
--   **[Customizing the Page Component palette](../admin-system/epc_custom_add_site_toolbar.md)**  
+-   **[Customizing the Page Component palette](epc_custom_add_site_toolbar.md)**  
 The Page Component palette, which is accessed from the site toolbar, contains the content items a content author can add to a page. This was known as the Content palette prior to CF08.
--   **[Customizing the Applications palette](../admin-system/epc_app_categories.md)**  
+-   **[Customizing the Applications palette](epc_app_categories.md)**  
 HCL Portal includes ready to use portlets that you can browse through in the site toolbar. To ease browsing through this set of portlets, HCL Portal supports assigning portlets to one or more categories. As the site administrator, you can create, delete, and modify categories and assign portlets to them.
--   **[Customizing page creation and page editing options](../admin-system/epc_custom_page_tab.md)**  
+-   **[Customizing page creation and page editing options](epc_custom_page_tab.md)**  
 When content authors edit a page, they can choose layouts and styles. As an administrator, you can customize these page editing options. If you are on Combined Cumulative Fix 8 or later, you can also customize page creation for your content authors.
--   **[Customizing toolbar layouts](../admin-system/layout_toolbar_customization.md)**  
+-   **[Customizing toolbar layouts](layout_toolbar_customization.md)**  
 The toolbar layouts can be customized by adding theme metadata to the theme deployment file.
--   **[Customizing site manager User Interface](../admin-system/Customize_Site_Manager_User_Interface.md)**  
+-   **[Customizing site manager User Interface](Customize_Site_Manager_User_Interface.md)**  
 The site manager user interface can be customized by adding additional functionality.
--   **[Controlling the visibility of the site toolbar and toolbar tabs](../admin-system/cntrl_vsblty_ste_tlbr.md)**  
+-   **[Controlling the visibility of the site toolbar and toolbar tabs](cntrl_vsblty_ste_tlbr.md)**  
 You can control the visibility of the site toolbar and single toolbar tabs per virtual portal by using Portal Access Control.
--   **[Removing the site toolbar on a production server](../wcm/wcm_mngpages_disabletool.md)**  
+-   **[Removing the site toolbar on a production server](wcm_mngpages_disabletool.md)**  
 The site toolbar provides access to editing features for managed pages, including adding and editing pages and web content. Although essential for an authoring server, it is recommended that you disable the site toolbar on a delivery server. You can disable the toolbar for an entire portal or for specific virtual portals.
--   **[Disabling the language switcher](../wcm/wcm_mngpages_disable_lang_switch.md)**  
+-   **[Disabling the language switcher](wcm_mngpages_disable_lang_switch.md)**  
 The language switcher allows you to switch from any of the supported languages. This feature is available only for authenticated portal users. --->
 
 

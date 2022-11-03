@@ -3,7 +3,7 @@ id: wcm_dev_workflows_creating_action_custom_props
 title: Defining custom action properties
 ---
 
-
+# Defining custom action properties
 
 
 Define the custom action properties by selecting a custom workflow plug-in and defining related properties.
@@ -55,6 +55,6 @@ Define the custom action properties by selecting a custom workflow plug-in and d
 
     4.  If you select either "Months" or "Days" you can also specify the time of day to run the action by selecting **Time to run action after offset has been reached**. For example, if you select one month plus 9 am, then the action will run at 9 am, one month after the selected date type is reached.
 
-5.  In some circumstances, the date that is specified in the scheduled action has been reached when an item enters a stage. In this case, by default the action is automatically run as soon the item reaches the current stage. You can choose to not run the action if the date ia reached by selecting **Do not run the action if date has already been reached**.
+5.  In some circumstances, the date that is specified in the scheduled action has been reached when an item enters a stage. In this case, by default the action is automatically run as soon the item reaches the current stage. You can choose to not run the action if the date is reached by selecting **Do not run the action if date has already been reached**.
 
 

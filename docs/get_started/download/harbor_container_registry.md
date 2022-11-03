@@ -39,7 +39,7 @@ After adding the repository to your Helm deployment, you should see the followin
 
 ### Listing available Helm Chart versions
 
-To verify that your Helm configuration works to connect and to see which [HCL DX 9.5 Container Update CF application versions](../../deployment/install/docker/index.md) are available from the HCL Harbor repository, you can use the following command:
+To verify that your Helm configuration works to connect and to see which [HCL DX 9.5 Container Update CF application versions](../../deployment/install/container/image_list.md) are available from the HCL Harbor repository, you can use the following command:
 
 ```
 # Using helm search to find available versions, the DX helm charts are named hcl-dx-deployment

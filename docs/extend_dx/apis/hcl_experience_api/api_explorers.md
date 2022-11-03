@@ -15,12 +15,9 @@ This section shows the DX REST API explorers available for use with deployments 
 |Access Control API|/dx/api/access/v1/explorer|Shows the developer entry points to Access Control Management.|Atom XML format. See the [Portal Access Control REST API](../portal_access_control_interfaces/pacrestapi.md) Help Center topic for more information.|
 |Personalization API|/dx/api/pzn/v1/explorer|Shows the developer entry points to the Personalization rules.|JSON format. Currently in beta stage as support for more rules are added. See the [HCL Digital Experience Personalization](../../../manage_content/pzn/index.md) Help Center topic for more information.|
 |Remote Model API|/dx/api/remotemodel/v1/explorer|Shows the develop entry points to the various models for pages, layouts, and more.|Atom XML format. Support for more endpoints are planned in upcoming releases. See the [Digital Experience Portal Remote Model REST API Explorer](../model_spi/remote_model_rest_api.md) Help Center topic for more information.|
-|Search API|/dx/api/search/v1/explorer|Shows the developer entry points to search \(like text or keyword searches\).|Atom XML format. See the [Search REST API specification](../../../build_sites/search/search-rest-api/index.md) Help Center topic for more information.|
-|Users and Groups API|/dx/api/users/v1/explorer|Shows the developer entry points to the users and groups.|Atom XML format. See the [Remote REST service for PUMA](../puma_spi/remote_rest_service_for_puma/index.md) Help Center topic for more information.
+|Search API|/dx/api/search/v1/explorer|Shows the developer entry points to search (like text or keyword searches).|Atom XML format. See the [Search REST API specification](../../../build_sites/search/search-rest-api/index.md) Help Center topic for more information.|
+|Users and Groups API|/dx/api/users/v1/explorer|Shows the developer entry points to the users and groups.|Atom XML format. See the [Remote REST service for PUMA](../puma_spi/remote_rest_service_for_puma/index.md) Help Center topic for more information.|
+|WCM API|/dx/api/wcm/v2/explorer|Shows the updated set of entry points to the Web Content Manager (WCM).|JSON format. Currently in beta stage as support for more WCM artifacts are added.See the [REST service for Web Content Manager](../../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_dev_api/index.md) Help Center topic for more information.
 
-|
-|WCM API|/dx/api/wcm/v2/explorer|Shows the updated set of entry points to the Web Content Manager \(WCM\).|JSON format. Currently in beta stage as support for more WCM artifacts are added.See the [REST service for Web Content Manager](../../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_dev_api/index.md) Help Center topic for more information.
-
-|
 
 

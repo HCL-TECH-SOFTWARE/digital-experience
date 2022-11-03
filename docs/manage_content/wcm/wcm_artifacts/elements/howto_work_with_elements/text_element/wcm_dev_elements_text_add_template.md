@@ -2,6 +2,7 @@
 id: wcm_dev_elements_text_add_template
 title: Adding a text element to a template
 ---
+# Adding a text element to a template
 
 You add a text element to an authoring template when you want the text element to be used by a set of items that use the same authoring template.
 
