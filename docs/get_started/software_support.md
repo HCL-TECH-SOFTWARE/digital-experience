@@ -1,82 +1,44 @@
 # Support Statement
 
-HCL Digital Experience requires the use of several collateral products for its normal operations. In particular, it requires WebSphere® Application Server, a database, a repository for user information \(typically an LDAP\), and other products depending on specific customer requirements.
+HCL Software relies on a range of other commercial and non-commercial software (“Dependent Products”) to perform its function. This document describes the support that customers can expect for various configurations of HCL Digital Experience and Dependent Products.
 
-During the testing of a new release, Development generally tests HCL Digital Experience with a prescribed list of these collateral products. These products are designated as “Supported Products” in the documented hardware and software requirements for that release.
+HCL tests HCL Digital Experience with a defined list of Dependent Products during the development of a new release. However, we cannot reasonably describe all possible configurations that a customer might choose to use. HCL created this document to describe the level of support that customers can expect for various configurations of HCL Digital Experience and Dependent Products.
 
-Because the list of “Supported Products” cannot reasonably describe all possible configurations that a customer might need to use, some customers voiced concerns about the level of support that is provided for configurations that are not designated as “Supported”. This document is intended to provide clarification of the level of support that can be expected for the current release with various combinations of dependent products.
+HCL only provides direct support for configuration and problem determination of Dependent Products that are explicitly supplied with HCL Products. In **all other cases**, it is your responsibility to obtain configuration assistance and support for Dependent Products yourself. In those cases, if HCL determines that a problem reported to HCL is caused by a Dependent Product, we will ask you to engage directly with your service provider to obtain support or assistance
 
 !!! note 
-    Although the statements in this document reflect the general level of support that can be expected for HCL Digital Experience, the terms and conditions of any specific support offering, license or other Agreement you might have with HCL will determine the actual delivered support for the product. Nothing herein shall be construed as supplementing, modifying or superseding the terms of your HCL license agreement for HCL Digital Experience or any other agreement you might have with HCL, nor shall it create any obligation for HCL to deliver a level of support other than might be set forth in such Agreements.
+    The statements in this document reflect the general level of support that can be expected for HCL Digital Experience, the terms and conditions of any specific support offering, license or other Agreement you might have with HCL will determine the actual delivered support for the product. Nothing in this document shall be construed as supplementing, modifying or superseding the terms of your HCL license agreement for HCL Digital Experience or any other agreement you might have with HCL, nor shall it create any obligation for HCL to deliver a level of support other than might be set forth in such Agreements.
 
 ## Categories of Support
 
-There are three categories of support for collateral products to HCL Digital Experience. They are “Supported Products”, “Newer Versions, and Releases of Supported Products” and “Unsupported Products”. The definition and support statement for each category follows:
+For support purposes, we define three categories of configuration:
 
--   **Supported Product**
+-   **Supported Configuration**
 
-    A “Supported Product” is a product \(at a specified version, release and fix level\) that was tested by Development and is known to work with HCL Digital Experience.
+    A “Supported Configuration” is a combination of HCL Software and other Dependent Products (usually at a specified version, release, fix or specification level) that has been validated by HCL.
+    
+    HCL provides full support for configurations within this category. Support is provided under the terms of the product license, to ensure that the product operates within its specifications.
 
-    Products in this category are supported according to the terms of your HCL Digital Experience License Agreement. PMRs \(Problem Management Records\) are accepted by HCL Software Support in accordance with the conditions of the License Agreement you have for HCL Digital Experience
+-   **Unsupported Configurations**
 
--   **Newer Versions and Releases of Supported Products**
+    An “Unsupported Configuration” is a combination of HCL Software and other Dependent Products (usually at a specified version, release, fix or specification level) that is known to not work with HCL Digital Experience and is therefore not supported.
+    
+    HCL does not provide support for Unsupported Configurations. Resolutions to deficiencies or incompatibilities found in Unsupported Configurations are not generally available.
+    
+    If business reasons warrant, customers can seek assistance on an additional fee basis from HCL services, from an HCL Business Partner or from another service provider.
 
-    Many products outside the specific version\(s\), release\(s\), or fix pack\(s\) of the “Supported” version \(referenced in the documented hardware and software requirements\) might not be explicitly tested by HCL Software, yet can reasonably be expected to perform within the accepted bounds of reliability, function, and performance by a customer.
+-   **Other Configurations**
+  
+    Many configurations of HCL Products and other software exist that are not explicitly listed in “Supported Configurations” or “Unsupported Configurations”, but which can reasonably be expected to perform within the accepted bounds of reliability, function, and performance.
+    
+    Configurations that fall into this category typically substitute a Dependent Product listed in the “Supported Configuration” for similar software. This may be a newer fix level of the Dependent Product or another software product that adheres to a supported specification. For example, this could be a newer WebSphere® Application Server (WAS) fix pack, an LDAP server that adheres to that standard or an external security manager that integrates via public APIs.
 
-    Products that fall into this category are typically newer releases or fix levels of a product already in the “Supported Product” category or a product that adheres to a standard API that HCL Digital Experience supports \(such as an LDAP server\). Some specific examples might include a newer operating system fix level, a WebSphere® Application Server \(WAS\) fix pack newer than the original “Supported” fix pack level, an IBM Java \(JVM\) fix pack, a new fix pack, or release of DB2 or an updated LDAP server.
+    <p style="margin-left: 50px;">Customers may access HCL Support for “Other Configurations”. In these scenarios HCL Support will use commercially reasonable efforts to provide the same level of support as that provided for a Supported Configuration. 
+    
+    <p style="margin-left: 50px;">During problem determination HCL Support will determine if the problem exists in a Supported Configuration, if a resolution can be provided, or if this is an Unsupported Configuration.</p>
+    
+    <p style="margin-left: 50px;">Resources for problem determination are applied until HCL Support <ins>either provides a solution to the issue, determines that a solution is not commercially reasonable, or determines that the issue is caused by the substituted Dependent Product and does not exist in a Supported Configuration.<ins></p>
+            
+    <p style="margin-left: 50px;">If HCL Support is not able to resolve the problem on the customer configuration in question, then customers may choose to explore alternative solutions on an additional fee basis from HCL services, from an HCL Business Partner or from another service provider.</p>
 
-    For products that fall into this category, support is as follows:
-
-    For Products, such as IBM Directory Server or HCL Domino LDAP, IBM DB2, IBM JDKs \(JVMs\) and WebSphere® Application Server, HCL Digital Experience will fully support fix-pack, release and version updates that do not significantly change interfaces or other underlying support that HCL Digital Experience depends on for its functionality. If and when a newer release of one of these products is shipped that HCL Digital Experience cannot accommodate, that fact will be noted as described in the next section entitled “Unsupported Products”. Note that in order for HCL Digital Experience to support an update to a database or LDAP product, WebSphere® Application Server must support that update as well.
-
-    For non-HCL products, the Support team makes a commercially reasonable effort to support products in this category. Support accepts problem reports \(PMRs\) for the appropriate releases that use these untested products. If Support is able to re-create the reported problem with a “Supported” version of the product, we will attempt to fix the problem.
-
-    If Support is not able to re-create the problem with a “Supported” version of the product in question and is not able to resolve the problem on the untested version of the product in question, Support will look to the support organization for the product in question to provide resolution. Please note that varying degrees of customer involvement may be necessary to handle this process for non-HCL products.
-
-    If the support organization for the untested product in question is unable to resolve the problem, Support will deem that version, release or fix pack level of the untested product in question to now be an “Unsupported Product”.
-
--   **Unsupported Products**
-
-    An “Unsupported Product” is a product \(at a specified version, release and fix level\) that is known to not work with HCL Digital Experience and is therefore not supported. A product can be included in this category as a result of an explicit test effort by Development or as a result of discovery from a prior customer problem. The HCL Digital Experience Support team maintains a list, by release, of all known “Unsupported Products”. The list is published as a technical document and is available to all customers.
-
-    WebSphere® Application Server has a similar support statement, which can be found on the web.
-
-    !!! note 
-        WebSphere® Application Server uses specially customized builds of the IBM Java SDKs on certain platforms. Updates to these builds must be obtained from WebSphere® Application Server support.
-
-    HCL Portal can be sensitive to changes in the underlying WebSphere® Application Server. Upgrading to a new fix pack level of the application server is well tolerated and encouraged \(such as from WebSphere® Application Server version 8.5.5.2 to 9.0.x\) as long as all required fixes for WebSphere® Application Server are available as integrated into that fix pack or by applying an interim fix specifically for that maintenance level. However, upgrading from one version of WebSphere® Application Server to the next is problematic if not done within the context of a migration of versions and must never be attempted with an “in-place” system.
-
-
-## Support for Kubernetes
-
-Docker and Kubernetes are third-party products. HCL support is available to assist in configuration and support related issues as it pertains to the HCL Digital Experience product. If you require assistance with a full Kubernetes or Docker deployment, contact [HCL Services](https://www.hcltechsw.com/wps/portal/resources) or one of our HCL Business Partners to inquire about professional services.
-
-## Support for LDAP Servers
-
-LDAP support spans two categories:
-
--   **Fully tested and supported LDAP servers:**
-
-    The list of fully tested LDAP servers for each release of HCL Digital Experience is documented in the detailed system requirements for each release. HCL Digital Experience support accepts problem reports for the appropriate HCL Digital Experience releases using the tested directory servers. These problem reports receive high-priority attention. Features that are tested with these directories include relatively simple search and retrieval functions for user and group objects. Functions outside this scope, such as the Active Directory Global Catalog feature, are considered advanced features and have not been tested with HCL Digital Experience. HCL Digital Experience support encourages customers to work with their LDAP provider for additional support on these advanced features.
-
--   **Untested and partially supported LDAP servers:**
-
-    In general, HCL Digital Experience support makes a best effort to support directory servers that have not been tested with HCL Digital Experience. HCL Digital Experience support accepts problem reports for the appropriate HCL Digital Experience releases using untested directory servers. If HCL Digital Experience support can re-create the reported problem using a tested LDAP server, staff will attempt to fix the problem. If the support team is not able to re-create the problem on a tested LDAP server, customers are referred to the LDAP provider for further assistance.
-
-
-## Support for External Security Managers \(ESM\)
-
-ESM support spans two categories:
-
--   **Fully tested and supported ESM software:**
-
-    The list of fully tested ESM software versions for each release of HCL Digital Experience is documented in the detailed system requirements for each release. HCL Digital Experience support accepts problem reports for the appropriate HCL Digital Experience releases using the tested ESM servers. These problem reports receive high-priority attention. Features that are tested with these software products include authentication and authorization. Functions outside this scope, such as login customizations, referrals, impersonation, and step up authentication are considered advanced features and have not been tested with HCL Digital Experience. HCL Digital Experience support encourages customers to work with their ESM provider for additional support on these advanced features.
-
--   **Untested and partially supported ESM servers:**
-
-    In general, HCL Digital Experience support makes a best effort to support ESM servers that have not been tested with HCL Digital Experience when relying on the ESM for authentication only. HCL Digital Experience support accepts problem reports for the appropriate HCL Digital Experience releases using untested ESM Trust Association Interceptor \(TAI\) implementations. If HCL Digital Experience support can re-create the reported problem using a tested ESM, staff will attempt to fix the problem. If the support team is not able to re-create the problem on a tested ESM, customers are referred to the ESM provider for further assistance.
-
-
-???+ info "Related information:"  
-    - [Planning for external security managers](../deployment/manage/security/external_sec_mgmt/planning_esm/index.md)
-
+    One possible outcome of a problem in this category is that HCL determines the configuration not to work, and will update the list of Unsupported Configurations accordingly.
