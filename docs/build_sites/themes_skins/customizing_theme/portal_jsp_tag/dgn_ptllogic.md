@@ -1,16 +1,17 @@
-# <portal-logic/\> tags
+# <portal-logic/> tags
 
-The <portal-logic/\> tags are used to provide tags for conditional logic.
+The <portal-logic/> tags are used to provide tags for conditional logic.
 
--   **<portal-logic:find\>**
+-   **<portal-logic:find>**
 
     Used to access the portal-wide find URL that is specified in **Portal Settings**. The tag is conditional. If no URL is set, the body of the tag is not evaluated. A scripting variable that is called <% wpsPortalFindURL %\> is available inside the body of the tag for accessing the URL. This tag can be used in both theme and skin JSPs.
 
--   **<portal-logic:if attribute="value"\>**
+-   **<portal-logic:if attribute="value">**
 
     Through the attributes of this tag, several conditions can be checked. If the condition is true, the content of the tag's body is written to the page. Otherwise, the content is skipped. More than one condition can be evaluated. For example, the user must be logged in and the Home screen must be active for the content of the following tag to be rendered:
 
-    **Note:** All earlier attributes that started with "not" are deprecated. Use the <portal-logic:unless/\> tag instead of these attributes.
+    !!!note
+        All earlier attributes that started with "not" are deprecated. Use the <portal-logic:unless/\> tag instead of these attributes.
 
     ```xmp
     
@@ -28,19 +29,19 @@ The <portal-logic/\> tags are used to provide tags for conditional logic.
 
         Indicates whether the client supports the specified capability. capability can be one of the following values:
 
-        -   HTML\_2\_0
-        -   HTML\_3\_0
-        -   HTML\_3\_2
-        -   HTML\_4\_0
-        -   HTML\_CSS
-        -   HTML\_FRAME
-        -   HTML\_JAVA
-        -   HTML\_JAVASCRIPT
-        -   HTML\_NESTED\_TABLE
-        -   HTML\_TABLE
-        -   WML\_1\_0
-        -   WML\_1\_2
-        -   WML\_TABLE
+        -   HTML_2_0
+        -   HTML_3_0
+        -   HTML_3_2
+        -   HTML_4_0
+        -   HTML_CSS
+        -   HTML_FRAME
+        -   HTML_JAVA
+        -   HTML_JAVASCRIPT
+        -   HTML_NESTED_TABLE
+        -   HTML_TABLE
+        -   WML_1_0
+        -   WML_1_2
+        -   WML_TABLE
     -   **deviceClass="deviceClass"**
 
         Compares whether the indicated device classes match the current device class. The value is a string that represents the expected device classes, and can be a single device class name or an equation of multiple device class names that use `+` for AND, `/` for OR, `!` for NOT, and parentheses.
@@ -55,9 +56,9 @@ The <portal-logic/\> tags are used to provide tags for conditional logic.
 
     -   **locale="locale"**
 
-        Indicates whether the locale of the client is that of the specified locale \(or subtype of the specified locale\). You can specify a comma-separated list, such as en, en\_US.
+        Indicates whether the locale of the client is that of the specified locale (or subtype of the specified locale). You can specify a comma-separated list, such as en, en_US.
 
-    -   **loggedIn="yes\|no"**
+    -   **loggedIn="yes|no"**
 
         Indicates whether the user is logged in. For example, the following code displays a login link if the user is not logged in:
 
@@ -77,19 +78,19 @@ The <portal-logic/\> tags are used to provide tags for conditional logic.
             
         ```
 
-    -   **navigationAvailable="yes\|no"**
+    -   **navigationAvailable="yes|no"**
 
         Indicates whether a navigation is available.
 
-    -   **newWindow="yes\|no"**
+    -   **newWindow="yes|no"**
 
         Indicates whether the portlet is rendered in a separate browser window or iFrame from the portal \(HTML only\).
 
-    -   **nodeInSelectionPath="yes\|no"**
+    -   **nodeInSelectionPath="yes|no"**
 
         Checks whether a page is selected. This means that the page is in the selected path by the user of which the content is shown.
 
-    -   **pageAvailableNext="yes\|no"**
+    -   **pageAvailableNext="yes|no"**
 
         Checks if a subsequent set of pages is available to be accessed from the navigation.
 
@@ -97,7 +98,7 @@ The <portal-logic/\> tags are used to provide tags for conditional logic.
 
         Checks if a previous set of pages is available to be access from the navigation. For example, use this tag in combination with <portal-navigation:navigationShift\> to render a scroll icon. The scroll icon displays when the number of user-defined pages exceeds the number of displayed page tabs. This condition behaves contrary to the pageAvailableNext attribute.
 
-    -   **pageCompletelyActive="yes\|no"**
+    -   **pageCompletelyActive="yes|no"**
 
         Indicates whether the page and its parents are active. The following example displays a message if the page is not active.
 
@@ -114,7 +115,7 @@ The <portal-logic/\> tags are used to provide tags for conditional logic.
             
         ```
 
-    -   **pageBookmarkable="true\|false"**
+    -   **pageBookmarkable="true|false"**
 
         Renders its contents if the page can be bookmarked. A page can be set to bookmark with **Manage pages**. The following example provides an "Add to favorites" option in a select list. Users can bookmark the current page, if it can be bookmarked.
 
@@ -128,17 +129,17 @@ The <portal-logic/\> tags are used to provide tags for conditional logic.
             
         ```
 
-    -   **portletMaximized="yes\|no"**
+    -   **portletMaximized="yes|no"**
 
         Renders its contents if the portlet is maximized. Use this call inside a JSP skin.
 
-    -   **portletMode="edit\|view\|configure\|help"**
+    -   **portletMode="edit|view|configure|help"**
 
         Checks if the portlet is in one of the modes. This tag is most useful in a customized skin.
 
         **Finding theme resources:** See the *Location of theme resources* link in the Related section.
 
-    -   **portletState="portlet\_state"**
+    -   **portletState="portlet_state"**
 
         Checks if the portlet is in the indicated state. Portlet states are `normal`, `maximized`, and `minimized`. For example, in `Control.jsp`, the following code sets the `tableHeight` variable to 100%.
 
@@ -151,7 +152,7 @@ The <portal-logic/\> tags are used to provide tags for conditional logic.
             
         ```
 
-    -   **portletSolo="yes\|no"**
+    -   **portletSolo="yes|no"**
 
         Checks whether the portal is displaying a portlet in solo state. In the following example from `Default.jsp`, the navigation are hidden when the current portlet is displayed in solo state.
 
@@ -176,15 +177,16 @@ The <portal-logic/\> tags are used to provide tags for conditional logic.
         -   portlet.not.available
         -   portlet.title.not.available
         -   userID.invalid
-    -   **resumeLevel="0\|1\|2"**
+
+    -   **resumeLevel="0|1|2"**
 
         Used in the `Login.jsp` screen to write the content of the tag if the value of this attribute is equal to the setting of the persistent.session.level key in the `ConfigService`.
 
-    -   **resumeOption="0\|1"**
+    -   **resumeOption="0|1"**
 
         Used in the `Login.jsp` screen to write the content of the tag if the value of this attribute is equal to the setting of the persistent.session.option key in the `ConfigService`.
 
-    -   **screen="screen\_name"**
+    -   **screen="screen_name"**
 
         Checks the value of the current screen name. Use a comma to separate multiple screen names. In the following example, the content of the tag is displayed only when the selected screen is Home, LoggedIn, or LoggedOut.
 
@@ -206,7 +208,7 @@ The <portal-logic/\> tags are used to provide tags for conditional logic.
             </portal-logic:if>    
         ```
 
-    -   **showTools="yes\|no"**
+    -   **showTools="yes|no"**
 
         Indicates whether to display more controls for the portlet title bar and page tabs. In the following example, the `show_tools_off.gif` icon is displayed for the condition when showTools="no".
 
@@ -231,15 +233,15 @@ The <portal-logic/\> tags are used to provide tags for conditional logic.
               </portal-logic:if>   
         ```
 
-        For either condition, the <portal-navigation:url command="ShowTools"/\> command is used to change the value of showTools. It allows the icon on the portal page to be used as a toggle. This condition is also checked in `ShowTools.jsp` to determine whether to render the move and delete portlet icons in the portlet title bar.
+        For either condition, the <portal-navigation:url command="ShowTools"/> command is used to change the value of showTools. It allows the icon on the portal page to be used as a toggle. This condition is also checked in `ShowTools.jsp` to determine whether to render the move and delete portlet icons in the portlet title bar.
 
-    -   **userImpersonated="true\|false"**
+    -   **userImpersonated="true|false"**
 
         Used to access another user's system as though you are that user. Users such as support specialists can use the impersonation feature to find issues and errors. For example, if a portal administrator encounters a problem that they cannot resolve, a support specialist can use the impersonation feature and access that portal administrator's system to determine a solution to the problem.
 
         For more information about the user impersonation feature, see Administering user impersonation.
 
--   **<portal-logic:pageMetaData/\>**
+-   **<portal-logic:pageMetaData/>**
 
     Used to access metadata of the currently rendered page. The tag has two attributes:
 
@@ -264,25 +266,26 @@ The <portal-logic/\> tags are used to provide tags for conditional logic.
     </portal-logic:pageMetaData>
     ```
 
--   **<portal-logic:unless\>**
+-   **<portal-logic:unless>**
 
-    This tag operates in contrast to the <portal-logic:if\> tag. Through the attributes of this tag, several conditions can be checked. If the condition is true, the content of the tag is not written to the page. Otherwise, the content is written. More than one condition can be evaluated. The following list of attributes can be evaluated. For more information, see the corresponding description for each attribute under the <portal-logic:if\> tag.
+    This tag operates in contrast to the <portal-logic:if> tag. Through the attributes of this tag, several conditions can be checked. If the condition is true, the content of the tag is not written to the page. Otherwise, the content is written. More than one condition can be evaluated. The following list of attributes can be evaluated. For more information, see the corresponding description for each attribute under the <portal-logic:if> tag.
 
-    -   [capableOf](#capableof)
-    -   [locale](#if_locale)
-    -   [loggedIn](#if_loggedin)
-    -   [newWindow](#if_newwindow)
-    -   [navigationAvailable](#if_navigation)
-    -   [pageAvailableNext](#pageavailablenext)
-    -   [pageAvailablePrevious](#pageavailableprevious)
-    -   [nodeInSelectionPath](#if_nodeinsel)
-    -   [portletMaximized](#if_portletmaximized)
-    -   [portletMode](#portletmode)
-    -   [portletSolo](#portletsolo)
-    -   [portletState](#portletstate)
-    -   [problem](#if_problem)
-    -   [screen](#screen)
--   **<portal-logic:urlFind\>**
+    -   `capableOf`
+    -   `locale`
+    -   `loggedIn`
+    -   `newWindow`
+    -   `navigationAvailable`
+    -   `pageAvailableNext`
+    -   `pageAvailablePrevious`
+    -   `nodeInSelectionPath`
+    -   `portletMaximized`
+    -   `portletMode`
+    -   `portletSolo`
+    -   `portletState`
+    -   `problem`
+    -   `screen`
+    
+-   **<portal-logic:urlFind>**
 
     Generates a URL pointing to a file. The resource is searched under different paths that are based on the markup and locale that is supported by the client and the specified attributes of the tag.
 
@@ -294,7 +297,7 @@ The <portal-logic/\> tags are used to provide tags for conditional logic.
 
         This attribute is required
 
-    -   `allowRelativeURL="true\|false"`
+    -   `allowRelativeURL="true|false"`
     The first place where the resource is found is used to construct the URL. The following search order that is used:
 
     1.  Root path
@@ -305,9 +308,9 @@ The <portal-logic/\> tags are used to provide tags for conditional logic.
     6.  File name
     Read *Aggregation* for more information about how the portal server locates resources. The allowRelativeURL attribute indicates whether a fully qualified or relative URL is generated.
 
--   **<portal-logic:urlFindInSkin file="file\_name" id="identifier"\>**
+-   **<portal-logic:urlFindInSkin file="file_name" id="identifier">**
 
-    Similar to <portal-logic:urlFind\>, this tag generates a URL that points to a file contained in the theme WAR file.
+    Similar to <portal-logic:urlFind>, this tag generates a URL that points to a file contained in the theme WAR file.
 
     **Finding theme resources:** See the *Location of theme resources* link in the Related section.
 
@@ -317,13 +320,13 @@ The <portal-logic/\> tags are used to provide tags for conditional logic.
 
     Attribute:
 
-    -   **forceAbsolute = "true\|false"**
+    -   **forceAbsolute = "true|false"**
 
         This attribute is optional. It specifies whether the URL that is generated by this tag is to be absolute or not. If you set this attribute to true, absolute URLs are enforced; in these case other settings that affect the generation of URLs might be overridden.
 
--   **<portal-logic:urlFindInTheme file="file\_name" id="identifier"\>**
+-   **<portal-logic:urlFindInTheme file="file_name" id="identifier">**
 
-    Similar to <portal-logic:urlFind\>, this tag generates a URL that points to a file contained in the theme WAR file.
+    Similar to <portal-logic:urlFind>, this tag generates a URL that points to a file contained in the theme WAR file.
 
     **Finding theme resources:** See the *Location of theme resources* link in the Related section.
 
@@ -333,16 +336,13 @@ The <portal-logic/\> tags are used to provide tags for conditional logic.
 
     Attribute:
 
-    -   **forceAbsolute = "true\|false"**
+    -   **forceAbsolute = "true|false"**
 
         This attribute is optional. It specifies whether the URL that is generated by this tag is to be absolute or not. If you set this attribute to true, absolute URLs are enforced; in these case other settings that affect the generation of URLs might be overridden.
 
 
 
-**Related information**  
-
-
-[Administering user impersonation](../admin-system/impers_user.md)
-
-[Understanding the Portal 8.5 modularized theme](../dev-theme/themeopt_defaultparts.md)
+???+ info "Related information"  
+    -   [Administering user impersonation](../../../../deployment/manage/security/users_and_groups/impersonation/index.md)
+    -   [Understanding the Portal 8.5 modularized theme](../../../../build_sites/themes_skins/portal85_modularized_theme/index.md)
 

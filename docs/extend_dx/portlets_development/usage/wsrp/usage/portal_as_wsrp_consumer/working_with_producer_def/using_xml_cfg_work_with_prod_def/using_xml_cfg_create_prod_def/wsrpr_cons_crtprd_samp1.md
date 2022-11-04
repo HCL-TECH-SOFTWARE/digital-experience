@@ -68,12 +68,9 @@ This sample also includes specification of user attributes.
 To use this sample with a HCL Portal Producer portal, set registration-required="false" and remove the parameter tags. This modification is necessary because the HCL Portal Producer does not support registration.
 
 
-**Related information**  
-
-
-[Sample XML configuration files](../admin-system/admxmsmp.md)
-
-[The XML configuration interface](../admin-system/admxmlai.md)
-
-[Working with the XML configuration interface](../admin-system/adxmltsk.md)
+  
+???+ info "Related information"
+   -  [Sample XML configuration files](../../../../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/xml_config_ref/admxmsmp.md)
+   -  [The XML configuration interface](../../../../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/index.md)
+   -  [Working with the XML configuration interface](../../../../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
 

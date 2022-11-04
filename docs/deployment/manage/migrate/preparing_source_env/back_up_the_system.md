@@ -9,8 +9,6 @@ Before you start the migration, make a fresh backup of your environment. At a mi
 -   Security configurations
 
 
-**Related information**  
-
-
-[Backup and restore](../admin-system/i_wadm_c_bkup_restr_winlinux.md)
+???+ info "Related information" 
+    -   [Backup and restore](../../../../deployment/manage/backup_restore/index.md)
 

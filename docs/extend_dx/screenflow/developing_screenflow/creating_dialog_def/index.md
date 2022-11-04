@@ -44,10 +44,7 @@ Dialog sets can contain one or more screen flow definitions. For example, in a t
   </dialog-set>
 ```
 
--   **[Transition endpoints](../screenflow/ref_trnstn_endpnts.md)**  
-Resources that are part of a screen flow which marks an endpoint, that is, the source or target of a transition are referred to as transition endpoints. Resources can be pages and portlets and they can also wrap widgets or forms. A particular page or portlet that is the active step in a screen flow is referred to as the source and the potential next steps are referred to as targets.
--   **[Transitions](../screenflow/transitions.md)**  
-Transitions define how to route a user from one subdialog to another. As subdialogs are represented by pages or portlets, they reference transition-endpoints. For example, in a travel site, a user can be routed from the Passenger information subdialog or portlet to the Calendar subdialog or portlet.
 
-**Parent topic:**[Developing screen flows](../screenflow/dev_scrnflow.md)
+
+
 

@@ -24,5 +24,5 @@ Code sample
 </transition>
 ```
 
-**Parent topic:**[Transitions reference](../screenflow/ref_trnstntns.md)
+
 
