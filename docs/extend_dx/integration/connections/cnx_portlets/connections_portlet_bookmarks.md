@@ -22,7 +22,8 @@ The **My Blogs** view lists blogs for which you are an owner or member. From thi
 -   Click **Settings** to edit the basics for a blog, including the title, description, and tags. You can also add blog owners, authors, or draft users.
 -   Click **Start a Blog** to start a new blog.
 
-    **Note:** You cannot create an Ideation Blog from the Blogs portlet because it must be created within a community.
+    !!! note
+        You cannot create an Ideation Blog from the Blogs portlet because it must be created within a community.
 
 
 ## Editing the shared settings for the Bookmarks portlet

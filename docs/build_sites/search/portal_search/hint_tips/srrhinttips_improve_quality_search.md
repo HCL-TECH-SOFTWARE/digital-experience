@@ -1,10 +1,15 @@
 # Hints and tips for improving quality of Portal Search results
 
-There are three options available to improve the quality of search results and thus the overall search experience for your site visitors. The three options are using the Suggested Links portlet, changing the default query operator from Or to And, and applying boost factors to specific metadata fields.
+There are three options available to improve the quality of search results and thus the overall search experience for your site visitors. The three options are:
+- Using the *Suggested Links* portlet 
+- Changing the default query operator from *Or* to *And* 
+- Applying boost factors to specific metadata fields.
 
 ## Using the Suggested Links portlet
 
-Use the Suggested Links portlet to ensure that a specific document is listed at the beginning of a set of search results. When a site visitor runs a search, the Suggested Links portlet displays the documents that are tagged with the same keywords from the search. To edit the keywords for Suggested Links, complete the following steps:
+Use the *Suggested Links* portlet to ensure that a specific document is listed at the beginning of a set of search results. 
+When a site visitor runs a search, the *Suggested Links* portlet displays the documents that are tagged with the same keywords from the search.
+To edit the keywords for *Suggested Links*, complete the following steps:
 
 1.  Log in to HCL Digital Experience as an administrator and navigate to the Search Center.
 2.  Select **Edit keywords for Suggested Links** for the document that you would like to edit.
@@ -22,8 +27,6 @@ When a site visitor enters more than one search term, the Portal search engine a
 When a site visitor runs a search, any values from metadata fields such as `title`, `description`, or `keywords` are automatically added to the generic `content` field in the search index. The values in these fields contribute equally to relevance calculation for any qualifying documents that are returned in the search results list. Use the search service configuration parameter boostingSettings to give extra weight to specified metadata fields, such as `title` or `description`. You can also use boostingSettings to specify how much extra weight specified metadata fields receive. For more information on the parameter boostingSettings, see *Search service configuration parameters* in the related links.
 
 
-**Related information**  
-
-
-[Search service configuration parameters](../admin-system/srrcfgsrvc.md)
+???+ info "Related information"
+    - [Search service configuration parameters](../administer_portal_search/search_service_params/index.md)
 

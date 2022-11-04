@@ -2,33 +2,33 @@
 
 A custom plug-in is a reusable Java class that you create to run a task. You can create custom plug-ins such as custom workflow actions, plug-ins to run when a page is rendered, plug-ins to store multi-locale text strings and plug-ins to run when a file is uploaded.
 
--   **[Creating a custom button class](../wcm/wcm_dev_api_custom_button.md)**  
+-   **[Creating a custom button class](wcm_dev_api_custom_button.md)**  
 You can create custom button classes that dynamically add custom actions to the authoring interface. Custom buttons are used to integrate third-party tools into the authoring interface without using a custom element. For example, you can use a custom button that adds automatic profiling of a content item or that adds or changes elements on the item forms.
--   **[How to create a rendering plug-in class](../wcm/wcm_dev_api_plugins.md)**  
+-   **[How to create a rendering plug-in class](wcm_dev_api_plugins.md)**  
 A rendering plug-in is a reusable class that you create to run a task at render time. It can be referenced within web content by using a plug-in tag. For example, you might write a plug-in that uses attributes from the current user's profile to determine whether the body of the plug-in tag is rendered or not. A rendering plug-in class requires you to reference a set of web content API methods.
--   **[How to create a custom workflow action class](../wcm/wcm_dev_api_custom_workflow.md)**  
+-   **[How to create a custom workflow action class](wcm_dev_api_custom_workflow.md)**  
 You can create custom workflow action classes to add custom workflow actions to a workflow.
--   **[Creating a Text Provider class](../wcm/wcm_dev_api_text_provider.md)**  
+-   **[Creating a Text Provider class](wcm_dev_api_text_provider.md)**  
 A text provider is used to provide localized text that can be used within web content item forms. For example, a text provider can be used to localize the field labels or help text within an authoring template so that each user sees the labels or help text in their own language.
--   **[Creating a Text Provider Factory class](../wcm/wcm_dev_api_text_provider_factory.md)**  
+-   **[Creating a Text Provider Factory class](wcm_dev_api_text_provider_factory.md)**  
 A text provider factory is used to provide multiple text providers that can be used within web content item forms. Text provider can be used to localize the field labels or help text within an authoring template so that each user sees the labels or help text in their own language. A text provider factory can make multiple such text providers available.
--   **[Creating a file upload validation class](../wcm/wcm_dev_api_file_upload.md)**  
+-   **[Creating a file upload validation class](wcm_dev_api_file_upload.md)**  
 A file upload validation plug-in is started anytime a file is uploaded into Web Content Manager. This includes uploading files into file resource, image and stylesheet elements, and images that are uploaded into rich text or HTML elements. The plug-in is called within the "validation" processing that is used by Web Content Manager when uploading files.
--   **[Creating an item validation plug-in class](../wcm/wcm_dev_api_custom_item_validation.md)**  
+-   **[Creating an item validation plug-in class](wcm_dev_api_custom_item_validation.md)**  
 An item validation plug-in is used to validate a TemplatedDocument prior to it being committed to the repository. It is invoked as part of the standard item validation step. For example, saves occurring in the authoring interface, public API or REST API.
--   **[Creating a subscriber class](../wcm/wcm_dev_plugin_sub.md)**  
+-   **[Creating a subscriber class](wcm_dev_plugin_sub.md)**  
 A subscriber plug-in is used to run extra functions on the subscriber that can be used to determine if the subscriber is ready for syndication when a syndication event is started.
--   **[Creating a syndicator class](../wcm/wcm_dev_plugin_syn.md)**  
+-   **[Creating a syndicator class](wcm_dev_plugin_syn.md)**  
 A syndicator plug-in is used to run extra functions on the syndicator when a syndication event is started.
--   **[Creating a context processor class](../wcm/wcm_dev_api_context_processor.md)**  
+-   **[Creating a context processor class](wcm_dev_api_context_processor.md)**  
 When configured, a context processor plug-in is started by the web content viewer portlet before rendering and allows the current context, such as the item to display, to be modified.
--   **[Creating an operation check class](../wcm/wcm_dev_plugin_operation-check.md)**  
+-   **[Creating an operation check class](wcm_dev_plugin_operation-check.md)**  
 The OperationCheckPlugin plugin is used to control whether an operation within the system should continue or whether it should be stopped. The extension is called prior to committing a Web Content Manager operation to evaluate whether the operation should be allowed to continue. The plug-in can return an error message to be shown to the user.
--   **[Creating a content page resolution filter class](../wcm/wcm_dev_api_page_resolution.md)**  
+-   **[Creating a content page resolution filter class](wcm_dev_api_page_resolution.md)**  
 A content page resolution filter is used to customize the behavior of the content page resolution filter chain. This method is used to tailor the response to a web content request in several ways, including overriding the content item that is displayed or the portal page that is used to display a content item in the web content viewer.
--   **[Creating a content URL generation filter class](../wcm/wcm_dev_api_urlgen.md)**  
+-   **[Creating a content URL generation filter class](../wcm_custom_plugin/wcm_dev_api_urlgen/index.md)**  
 A content URL generation filter is used to customize the URLs that are generated by a web content viewer. By creating a plug-in that implements a content URL generation filter, you can tailor the URLs to content items.
--   **[Deploying custom plug-in applications](../wcm/wcm_dev_class_register.md)**  
+-   **[Deploying custom plug-in applications](wcm_dev_class_register.md)**  
 You must deploy your custom plug-in applications on your server before they can be used in your web content system.
 
 

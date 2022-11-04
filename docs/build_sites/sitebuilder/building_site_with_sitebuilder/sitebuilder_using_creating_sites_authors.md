@@ -56,4 +56,3 @@ These wizards steps you through creating either a website or adding a section to
 ## Creation status
 
 When you create a new site or section, a new creation task is run and can be monitored from the Site Builder home page. There you can view a list of completed tasks, tasks in progress, and failed tasks. You can view the reason for a failed task using the **More** button next to the failed task.
-

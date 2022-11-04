@@ -8,7 +8,8 @@ To find out which of these XML files is used for creating virtual portals in you
 
 Advanced master administrators can customize the default content for virtual portals as required by modifying or replacing the XML script that specifies the initial content for virtual portals.
 
-**Note:** When you modify or replace this XML script, plan ahead and apply special care. You can add or remove some content to enhance or reduce the functionality of a virtual portal to a certain extent. The following portal resources are mandatory content of a virtual portal and must be included in a customized XML initialization script for virtual portals:
+!!! note
+    When you modify or replace this XML script, plan ahead and apply special care. You can add or remove some content to enhance or reduce the functionality of a virtual portal to a certain extent. The following portal resources are mandatory content of a virtual portal and must be included in a customized XML initialization script for virtual portals:
 
 -   Content Root \(`wps.content.root`\)
 -   Login \(`wps.Login`\)
@@ -66,16 +67,10 @@ Depending on the functionality that you want to make available, more content is 
 
 
 
-**Related information**  
-
-
-[Content of a virtual portal](../admin-system/advppln_content.md)
-
-[Administering virtual portals](../admin-system/advp_adm.md)
-
-[Using the Virtual Portal Manager administration portlet](../admin-system/advp_vpmgr_use.md)
-
-[Filling a virtual portal with content](../admin-system/advp_tsk_fill_content.md)
-
-[Migration: Virtual portals](../migrate/mig_plan_expect_vp.md)
+???+ info "Related information:"
+    - [Content of a virtual portal](../../vp_planning/advppln_content.md)
+    - [Administering virtual portals](../../adm_vp_task/index.md)
+    - [Using the Virtual Portal Manager administration portlet](../../vp_mgr_portlet/advp_vpmgr_use.md)
+    - [Filling a virtual portal with content](../../adm_vp_task/vp_adm_task/advp_tsk_fill_content.md)
+    - [Migration: Virtual portals](../../../../deployment/manage/migrate/planning_migration/mig_plan_expectations/mig_plan_expect_vp.md)
 

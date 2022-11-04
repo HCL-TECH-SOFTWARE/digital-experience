@@ -42,10 +42,11 @@ SearchService.MetaFields=metaText,meta
 
         -   `elementName` is the name of element you would like to search for metadata. Any valid element with that name in a searchable site area or content item is crawled.
         -   `key` is the "key" that is specified in an element tag that is used as part of a search element design. In the previous example, the key of "meta" is used. To render the content of the metaText element in a search element design, you would use the following tag: `<Element context="autoFill" type="content" key="meta"/>`
-        **Note:**
 
-        -   Only text elements and short text elements can be searched.
-        -   Only site areas that are configured to be searchable are crawled.
+        !!! note
+            -   Only text elements and short text elements can be searched.
+            -   Only site areas that are configured to be searchable are crawled.
+            
     -   **SearchService.SearchSeed.ExcludeFileAttachments**
 
         Set this parameter to `true` to prevent file resource component attachments from being included in the search results.
@@ -67,13 +68,4 @@ SearchService.MetaFields=metaText,meta
 6.  Delete and create a new search collection for changes to take effect.
 
 
-
-**Previous topic:**[Indexing web content](../wcm/wcm_dev_search_portal.md)
-
-**Next topic:**[Configuring Search Center to search for web content](../wcm/wcm_dev_search_searchcenter.md)
-
-**Related information**  
-
-
-[Setting scoped configuration settings for virtual portals](../wcm/wcm_config_scoped_vp.md)
 

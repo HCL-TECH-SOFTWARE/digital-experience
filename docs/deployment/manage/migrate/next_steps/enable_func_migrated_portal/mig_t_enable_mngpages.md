@@ -25,79 +25,59 @@ When you enable managed pages after migration, several considerations apply:
 -   Private pages
 Each virtual portal has its own Portal Site library.
 
--   In scenarios where the configured user realm does not contain the domain administrator, an alternative user must be provided. If you have a multi-realm configuration, see [Defining alternative administrators for multi-realm configurations](../wcm/wcm_config_admin_multirealm.md).
+-   In scenarios where the configured user realm does not contain the domain administrator, an alternative user must be provided. If you have a multi-realm configuration, see [Defining alternative administrators for multi-realm configurations](../../../../../manage_content/wcm/wcm_management/further_cfg_options/wcm_config_admin_multirealm.md).
 
-**Note:** To take advantage of the features available to managed pages in the user interface, your pages must use the Portal 8.5 theme.
+!!!note
+    To take advantage of the features available to managed pages in the user interface, your pages must use the Portal 8.5 theme.
 
 1.  Start the portal server.
 
-2.  To enable support for managed pages, run the enable-managed-pages task from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+2.  To enable support for managed pages, run the enable-managed-pages task from the wp_profile_root/ConfigEngine directory.
 
     -   **Windows™**
 
-        ConfigEngine.bat enable-managed-pages -DPortalAdminPwd=password -DWasPassword=password
+        `ConfigEngine.bat enable-managed-pages -DPortalAdminPwd=password -DWasPassword=password`
 
-    -   **AIX® HP-UX Linux™ Solaris**
+    -   **AIX® and Linux™**
 
-        ./ConfigEngine.sh enable-managed-pages -DPortalAdminPwd=password -DWasPassword=password
-
-    -   **IBM® i**
-
-        ConfigEngine.sh enable-managed-pages -DPortalAdminPwd=password -DWasPassword=password
-
-    -   **z/OS®**
-
-        ./ConfigEngine.sh enable-managed-pages -DPortalAdminPwd=password -DWasPassword=password
+        `./ConfigEngine.sh enable-managed-pages -DPortalAdminPwd=password -DWasPassword=password`
 
     After you run the enable-managed-pages task for the first time, the property managed.pages is created in the portal WP Configuration Service. The value of the property is set to true.
 
 3.  Restart the portal server.
 
-4.  To populate web content libraries with information about virtual portals in the system, run the create-virtual-portal-site-nodes task from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+4.  To populate web content libraries with information about virtual portals in the system, run the create-virtual-portal-site-nodes task from the wp_profile_root/ConfigEngine directory.
 
     For each virtual portal, this task creates a library and a site area that is called `lost-found` for resources that cannot be properly located. If the library or site area exists, the task exits. By default, the task runs on all virtual portals in the system.
 
     -   **Windows™**
 
-        ConfigEngine.bat create-virtual-portal-site-nodes -DPortalAdminPwd=password -DWasPassword=password
+        `ConfigEngine.bat create-virtual-portal-site-nodes -DPortalAdminPwd=password -DWasPassword=password`
 
-    -   **AIX® HP-UX Linux™ Solaris**
+    -   **AIX® and Linux™**
 
-        ./ConfigEngine.sh create-virtual-portal-site-nodes -DPortalAdminPwd=password -DWasPassword=password
+        `./ConfigEngine.sh create-virtual-portal-site-nodes -DPortalAdminPwd=password -DWasPassword=password`
 
-    -   **IBM® i**
-
-        ConfigEngine.sh create-virtual-portal-site-nodes -DPortalAdminPwd=password -DWasPassword=password
-
-    -   **z/OS®**
-
-        ./ConfigEngine.sh create-virtual-portal-site-nodes -DPortalAdminPwd=password -DWasPassword=password
-
-5.  To populate web content libraries with information about the portal pages in the system, run the create-page-nodes task from the `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine` directory.
+5.  To populate web content libraries with information about the portal pages in the system, run the create-page-nodes task from the wp_profile_root/ConfigEngine` directory.
 
     This task can also be used when portal pages and managed pages artifacts in Web Content Manager are not synchronized. In this case, the task attempts to resynchronize the portal artifacts and web content artifacts, giving precedence to the portal artifacts.
 
-    **Performance note:** Depending on the amount of information in the system, the create-page-nodes task can take a long time to run. Because of the database load of the task, do not run the task frequently. The initial run of the task requires the most time, while subsequent runs typically require less time.
+    !!!note "Performance note"
+        Depending on the amount of information in the system, the create-page-nodes task can take a long time to run. Because of the database load of the task, do not run the task frequently. The initial run of the task requires the most time, while subsequent runs typically require less time.
 
-    **Note:** If you have many pages, then it might be necessary to increase the soap client timeout. Edit the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/properties/soap.client.props file to change the com.ibm.SOAP.requestTimeout to 60000.
+    !!!note
+        If you have many pages, then it might be necessary to increase the soap client timeout. Edit the wp_profile_root/properties/soap.client.props file to change the com.ibm.SOAP.requestTimeout to 60000.
 
-    **Attention:** If your virtual portals have different administrative accounts, you cannot run the create-page-nodes task directly. You must run the task for every virtual portal, including the base virtual portal. Use the VirtualPortalHost or VirtualPortalContext parameter with the create-page-nodes task. Run the list-all-virtual-portals task to get a list of all your virtual portals. When you run the create-page-nodes task on the base virtual portal, set the VirtualPortalContext value to \_\_NO\_\_VP\_\_ID\_\_.
+    !!!attention
+        If your virtual portals have different administrative accounts, you cannot run the create-page-nodes task directly. You must run the task for every virtual portal, including the base virtual portal. Use the VirtualPortalHost or VirtualPortalContext parameter with the create-page-nodes task. Run the list-all-virtual-portals task to get a list of all your virtual portals. When you run the create-page-nodes task on the base virtual portal, set the VirtualPortalContext value to __NO__VP__ID__.
 
     -   **Windows™**
 
-        ConfigEngine.bat create-page-nodes -DPortalAdminPwd=password -DWasPassword=password
+        `ConfigEngine.bat create-page-nodes -DPortalAdminPwd=password -DWasPassword=password`
 
-    -   **AIX® HP-UX Linux™ Solaris**
+    -   **AIX® and Linux™**
 
-        ./ConfigEngine.sh create-page-nodes -DPortalAdminPwd=password -DWasPassword=password
-
-    -   **IBM® i**
-
-        ConfigEngine.sh create-page-nodes -DPortalAdminPwd=password -DWasPassword=password
-
-    -   **z/OS®**
-
-        ./ConfigEngine.sh create-page-nodes -DPortalAdminPwd=password -DWasPassword=password
+        `./ConfigEngine.sh create-page-nodes -DPortalAdminPwd=password -DWasPassword=password`
 
     By default, this task is run on all pages in all virtual portals. To limit this task to a specific virtual portal, identify the virtual portal by adding one of the following parameters to the command line. Each parameter requires the prefix `-D` on the command line.
 
@@ -127,38 +107,23 @@ Each virtual portal has its own Portal Site library.
 
     -   **Windows™**
 
-        ConfigEngine.bat import-all-libs-to-vp -DPortalAdminPwd=password -DWasPassword=password
+        `ConfigEngine.bat import-all-libs-to-vp -DPortalAdminPwd=password -DWasPassword=password`
 
-    -   **AIX® HP-UX Linux™ Solaris**
+    -   **AIX® and Linux™**
 
-        ./ConfigEngine.sh import-all-libs-to-vp -DPortalAdminPwd=password -DWasPassword=password
-
-    -   **IBM® i**
-
-        ConfigEngine.sh import-all-libs-to-vp -DPortalAdminPwd=password -DWasPassword=password
-
-    -   **z/OS®**
-
-        ./ConfigEngine.sh import-all-libs-to-vp -DPortalAdminPwd=password -DWasPassword=password
+        `./ConfigEngine.sh import-all-libs-to-vp -DPortalAdminPwd=password -DWasPassword=password`
 
 7.  If you used web content pages before you enabled managed pages, you can transfer the content for those pages to the Portal Site library. If you plan to use the default page templates and store your web content in the Portal Site library, transfer the content for the template pages to the Portal Site library. Otherwise, you will no longer be able to create new pages with these templates. For more information, go to *Page templates* and *Transferring content associations to the Portal Site library*.
 
-8.  Ensure that users have appropriate access to the Web Content Manager REST virtual resource so they can use **Edit mode**.
+8.  Ensure that users have appropriate access to the Web Content Manager REST virtual resource so they can use **Edit mode**.<br>
 
-    For example, they have user access.
+    For example, they have user access.<br>
 
-
-After you migrate from Version 7.0 or Version 8.0, vanity URLs are not available. After you enable managed pages, you can enable vanity URL support. If you migrated from Version 7.0 or 8.0, go to [Enabling vanity URL support](../wcm/van_url_cfgtsk_enable_vus.md).
-
-
-**Related information**  
+After you migrate from Version 7.0 or Version 8.0, vanity URLs are not available. After you enable managed pages, you can enable vanity URL support. If you migrated from Version 7.0 or 8.0, go to [Enabling vanity URL support](../../../../../manage_content/wcm/wcm_content_delivery/vanity_url/adm_vanity_url/van_url_cfgtsk_enable_vus.md).
 
 
-[Enabling vanity URL support after migration](../migrate/mig_post_vurls.md)
-
-[Transferring content associations to the Portal Site library](../wcm/wcm_config_mngpages_transfer.md)
-
-[Enabling vanity URL support](../wcm/van_url_cfgtsk_enable_vus.md)
-
-[Synchronizing the vanity URL database](../wcm/van_url_cfgtsk_sync_db.md)
-
+???+ info "Related information"  
+    -   [Enabling vanity URL support after migration](../../../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/mig_post_vurls.md)
+    -   [Transferring content associations to the Portal Site library](../../../../../manage_content/wcm/wcm_artifacts/managed_pages/cfg_managed_pages/wcm_config_mngpages_transfer.md)
+    -   [Enabling vanity URL support](../../../../../manage_content/wcm/wcm_content_delivery/vanity_url/adm_vanity_url/van_url_cfgtsk_enable_vus.md)
+    -   [Synchronizing the vanity URL database](../../../../../manage_content/wcm/wcm_content_delivery/vanity_url/adm_vanity_url/van_url_cfgtsk_sync_db.md)

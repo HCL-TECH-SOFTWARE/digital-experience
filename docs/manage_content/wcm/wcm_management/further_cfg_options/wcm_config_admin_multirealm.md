@@ -6,7 +6,8 @@ Web Content Manager requires a user to run various system tasks such as initiali
 
 2.  Click **Resources** \> **Resource Environment** \> **Resource Environment Providers** \> **WCM WCMConfigService** \> **Custom properties**.
 
-    **Cluster note:** If you are using this web content server as part of a cluster, ensure that you use the WebSphere Integrated Solutions Console for the deployment manager when you edit configuration properties.
+    !!! note
+        If you are using this web content server as part of a cluster, ensure that you use the WebSphere Integrated Solutions Console for the deployment manager when you edit configuration properties.
 
 3.  The settings are different for the base portal and any virtual portals.
 
@@ -25,6 +26,5 @@ Web Content Manager requires a user to run various system tasks such as initiali
 4.  Save your changes.
 
 5.  Restart the portal for the new settings to take effect.
-
 
 

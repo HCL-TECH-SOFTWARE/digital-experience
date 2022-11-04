@@ -14,9 +14,9 @@ When you use the wizard and provide information about the database for your envi
 
     |Field label in Configuration Wizard|Example value|
     |-----------------------------------|-------------|
-    |**Database name**|\*LOCAL/wpsdb|
-    |**Database URL**|jdbc:db2:\*LOCAL/wpsdb|
-    |**DB2 for IBM i library**|/QIBM/ProdData/OS400/Java400/ext/db2\_classes16.jar|
+    |**Database name**|*LOCAL/wpsdb|
+    |**Database URL**|jdbc:db2:*LOCAL/wpsdb|
+    |**DB2 for IBM i library**|/QIBM/ProdData/OS400/Java400/ext/db2_classes16.jar|
     |**DB2 for IBM i driver class name**|com.ibm.db2.jdbc.app.DB2Driver|
 
 

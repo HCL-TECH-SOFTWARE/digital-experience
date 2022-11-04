@@ -46,6 +46,7 @@ If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernet
     -   **HCL Digital Asset Management \(Image processor\)** - `hcl-dx-image-processor-image-v1.0.0_xxxxxxxx-xxxx.tar.gz`
     -   **HCL Digital Asset Management \(Docker image\)** - `hcl-dx-digital-asset-manager-image-v1.0.0_xxxxxxxx-xxxx.tar.gz`
     -   **HCL Content Composer \(Docker image\)** - `hcl-dx-content-composer-image-v1.0.0_xxxxxxxx-xxxx.tar.gz`
+
 3.  Extract the images to the local file system.
 4.  Open a terminal window and change to the root directory of the extracted package images.
 5.  Load the images into your Docker environment.
@@ -313,7 +314,7 @@ If you are using a content delivery network \(CDN\) such as [Akamai](https://www
 
 
 
-???+ info "**Related information:**"  
+???+ info "Related information:"  
     - [HCL Digital Asset Management](../../digital_assets/index.md)
     - [Configure Digital Asset Management in virtual portals](../installation/configure_cc_virtual_portals.md)
     - [How to enable Practitioner Studio](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md)

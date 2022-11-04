@@ -4,6 +4,6 @@ nav:
     - install_upgrade_plan_supported_paths.md
     - Prepare the prerequisite software: install_prereq_software
     - Install HCL Digital Experience: installing_dx
-    - Apply Combined Cummulative Fix: cf_install
+    - Apply Combined Cumulative Fix: cf_install
     - Add ons: install_addons
     - Uninstall HCL Digital Experience: uninstall

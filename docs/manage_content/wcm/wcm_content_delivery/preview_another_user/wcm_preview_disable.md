@@ -16,11 +16,13 @@ You disable the preview option in the virtual portal configuration service.
         1.  Click **Custom properties**.
         2.  Edit the property `global.wp_toolbar_sitepreview.enabled`, and set its value to `false`.
         3.  Save your changes.
+        
     -   To disable preview for a specific virtual portal, proceed as follows:
 
         1.  Click **Custom properties**.
         2.  To disable preview for the default virtual portal, edit the property `default.wp_toolbar_sitepreview.enabled`, and set its value to `false`.
         3.  To disable preview for any other virtual portal than the default virtual portal, specify the following properties:
+
             -   **context.virtual\_portal\_context.property.wp\_toolbar\_sitepreview.enabled = false**
 
                 Set the value for this property to `false`. Replace `virtual_portal_context` with the context of the target virtual portal. Example: `context.vp1.property.wp_toolbar_sitepreview.enabled = false`.
@@ -33,8 +35,5 @@ You disable the preview option in the virtual portal configuration service.
 
 
 
-**Related information**  
-
-
-[Virtual Portal Configuration Service](../admin-system/srvcfg_virtual_portal.md)
-
+???+ info "Related information:"
+    - [Virtual Portal Configuration Service](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/srvcfg_virtual_portal.md)

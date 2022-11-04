@@ -38,7 +38,7 @@ The site toolbar function is not typically needed on a delivery server, and disa
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Virtual Portal Configuration Service](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/srvcfg_virtual_portal.md)
     - [Controlling the visibility of the site toolbar and toolbar tabs](../prep_site_toolbar/controlling_visibility_site_toolbar/index.md)
 

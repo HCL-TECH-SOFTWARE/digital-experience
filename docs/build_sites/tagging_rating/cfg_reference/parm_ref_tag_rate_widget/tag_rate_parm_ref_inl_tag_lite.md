@@ -2,11 +2,12 @@
 
 You configure specific tag widget instances by setting the JavaScript parameters that are listed here.
 
-**Note:** The parameters listed here are specific to the inline tag widget that was introduced with HCL Portal Version 8.5. For information about the earlier widgets and their parameters, read the appropriate topics in the HCL Portal Version 8.0 product documentation.
+!!! note
+    The parameters listed here are specific to the inline tag widget that was introduced with HCL Portal Version 8.5. For information about the earlier widgets and their parameters, read the appropriate topics in the HCL Portal Version 8.0 product documentation.
 
 To set the parameters, proceed as follows:
 
-1.  In HCL Web Content Manager, go to **Applications** \> **Content** \> **WCM Authoring** \> **Libraries** \> **Web Resources v70** \> **Components**.
+1.  In HCL Web Content Manager, go to **Web Content** \> **Authoring** \> **Libraries** \> **Web Resources v70** \> **Components**.
 2.  Select the check box for **HTML - Tagging Widget Light - Menu**.
 3.  Click **Edit**.
 
@@ -20,7 +21,7 @@ The following parameters are optional for the tag widget. They correspond to sim
 
     Use this parameter to specify a non-localized custom label to describe the displayed tags. If you do not want any further labeling or if you want to keep the label short, you can specify an empty string.
 
--   **customLabelCommunityTags = = \(false\)**
+-   **customLabelCommunityTags = \(false\)**
 
     Use this parameter to specify the non-localized label that you want to be used to describe the meaning of the community tagging that is displayed. The default value is `false`.
 
@@ -112,18 +113,11 @@ The following parameters are optional for the tag widget. They correspond to sim
 
 
 
-**Related information**  
-
-
-[Properties for the tag widget](../admin-system/srvcfg_cpcfg4tr_dlgtag_altui.md)
-
-[The tag and rating widgets](../admin-system/tag_rate_ui_alt.md)
-
-[The rating widget](../admin-system/tag_rate_inline_rate_wdgt_lite.md)
-
-[Customizing the tag widget](../admin-system/tag_rate_cust_inltag_lite.md)
-
-[Adding the rating widget to your portal content](../admin-system/tag_rate_add_inlrate_lite.md)
-
-[Customizing the rating widget](../admin-system/tag_rate_cust_inlrate_lite.md)
+???+ info "Related information"
+    - [Properties for the tag widget](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/srvcfg_cpcfg4tr_dlgtag_altui.md)
+    - [The tag and rating widgets](../../tagging_rating_ui/tagging_rating_widget/index.md)
+    - [The rating widget](../../tagging_rating_ui/tagging_rating_widget/rating_widget/index.md)
+    - [Customizing the tag widget](../../tagging_rating_ui/tagging_rating_widget/tag_widget/tag_rate_cust_inltag_lite.md)
+    - [Adding the rating widget to your portal content](../../tagging_rating_ui/tagging_rating_widget/tag_widget/tag_rate_add_inltag_lite.md)
+    - [Customizing the rating widget](../../tagging_rating_ui/tagging_rating_widget/rating_widget/)
 

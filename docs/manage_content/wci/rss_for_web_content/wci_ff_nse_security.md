@@ -12,22 +12,13 @@ The access element provides a mechanism to set the access controls on Web Conten
 |Required for item types|None|
 |Allowable Values|-   \[all users\]
 -   \[all authenticated portal users\]
--   The common name of any valid portal user or group.
-
-|
+-   The common name of any valid portal user or group.|
 |Required Attributes|None|
-|Optional Attributes|-   **type**
-
-This attribute allows the feed producer to specify the exact access level that should be granted to the user or group. The allowable values for the type attribute correspond to the access levels available in Web Content Manager: " "user", "contributor", "draftcreator", "editor", "manager" and "reviewer". If the type attribute is not specified, "user" access is applied.
-
--   **inheritance**
-
-You can specify whether inheritance is enabled by adding either `inheritance="enabled"` or `inheritance="disabled"`. If not specified, the default or current inheritance setting for an item is used.
-
-You can specify whether propagation is enabled by adding either `propagation="enabled"` or `propagation="disabled"`. If not specified, the default or current propagation setting for an item is used.
-
-
-|
+|Optional Attributes|-   **type**<br>
+This attribute allows the feed producer to specify the exact access level that should be granted to the user or group. The allowable values for the type attribute correspond to the access levels available in Web Content Manager: " "user", "contributor", "draftcreator", "editor", "manager" and "reviewer". If the type attribute is not specified, "user" access is applied.<br>
+-   **inheritance**<br>
+You can specify whether inheritance is enabled by adding either `inheritance="enabled"` or `inheritance="disabled"`. If not specified, the default or current inheritance setting for an item is used.<br>
+You can specify whether propagation is enabled by adding either `propagation="enabled"` or `propagation="disabled"`. If not specified, the default or current propagation setting for an item is used.|
 |Required sub-elements|None|
 |Optional sub-elements| |
 

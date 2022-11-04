@@ -25,13 +25,14 @@ When an item reaches the **Localize** or **Regionalize** workflow stage:
 -   If one or more localized copies of the current item are found that do not have a corresponding draft base locale item in any stage of the workflow, then all copies are moved to the next workflow stage and a notification is sent to the base locale owner to inform them that changes have been made to localized documents without an associated change to the base locale item.
 -   If the base locale item is in an earlier stage of the workflow, then nothing happens.
 
-**Note:** If no base locale library is configured, then the current item is deemed to the base item for the current processing cycle only.
+!!! note
+    If no base locale library is configured, then the current item is deemed to the base item for the current processing cycle only.
 
-**Note:** If the base item is renamed or moved, then all localized drafts and regionalized drafts are moved or renamed
+!!! note
+    If the base item is renamed or moved, then all localized drafts and regionalized drafts are moved or renamed
 
 
-**Related information**  
-
-
-[Rolling out a second locale](../ctc/ctc_deploy_locale_second.md)
+<!--
+???+ info "Related information:"
+    - [Rolling out a second locale](../ctc/ctc_deploy_locale_second.md) -->
 

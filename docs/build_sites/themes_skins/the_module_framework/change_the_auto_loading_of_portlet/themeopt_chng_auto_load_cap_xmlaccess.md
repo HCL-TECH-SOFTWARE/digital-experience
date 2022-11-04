@@ -29,4 +29,3 @@ You can change the auto-loading of portlet capabilities with XMLAccess.
 4.  Restart HCL Portal.
 
 
-

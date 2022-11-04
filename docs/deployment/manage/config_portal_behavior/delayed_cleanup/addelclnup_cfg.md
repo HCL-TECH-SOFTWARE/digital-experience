@@ -5,12 +5,13 @@ You can configure the deletion cleanup to happen either immediately when you del
 -   **Immediate deletion**. This means that the page and all resources that depend on it are deleted immediately after the user completes the action for the deletion.
 -   **Delayed deletion**. This means that the page is marked for deletion, but the page and all dependent resources are actually deleted later.
 
-    **Note:** Once the page has been marked for deletion, users cannot view or otherwise access the page any longer.
+    !!!note
+        Once the page has been marked for deletion, users cannot view or otherwise access the page any longer.
 
 
 You can change between the immediate and delayed deletion of portal pages by configuring the property value scheduler.cleanup.enabled in the portal Data Store Service in the WebSphere® Integrated Solutions Console. Set the following Data Store Service configuration parameters as required:
 
--   **scheduler.cleanup.enabled = \(true\)**
+-   **scheduler.cleanup.enabled = (true)**
 
     Determines whether deletion of portal pages is performed later by the scheduled cleanup service, or immediately after the user completes the deletion task. This affects the deletion of portal pages and all their dependent resources, such as components and portlet instances.
 

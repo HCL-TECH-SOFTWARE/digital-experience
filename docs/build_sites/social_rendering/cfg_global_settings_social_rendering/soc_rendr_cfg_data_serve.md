@@ -52,24 +52,15 @@ To globally configure the method by which social object data is served, proceed 
 
 
 
-**Related information**  
 
-
-[Digital Data Connector profiles for social rendering](../social/soc_rendr_lst_rndr_prfls.md)
-
-[Blog-related profiles](../social/soc_rendr_prfls_blogs.md)
-
-[Communities and community members profiles](../social/soc_rendr_prfls_communities.md)
-
-[Forum-related profiles](../social/soc_rendr_prfls_forums.md)
-
-[Profiles and profiles connections profiles](../social/soc_rendr_prfls_profiles.md)
-
-[Social objects profile](../social/soc_rendr_prfls_social_objects.md)
-
-[Wiki-related profiles](../social/soc_rendr_prfls_wikis.md)
-
-[Common profile](../social/soc_rendr_prfls_common.md)
-
-[Modifier support profile](../social/soc_rendr_prfls_modifier_support.md)
+???+ info "Related information:"
+    - [Digital Data Connector profiles for social rendering](../customizing_view_definitions/customizing_visualdesign/customizing_markup_gen/ddc_profiles_for_social_rend/index.md)
+    - [Blog-related profiles](../customizing_view_definitions/customizing_visualdesign/customizing_markup_gen/ddc_profiles_for_social_rend/soc_rendr_prfls_blogs.md)
+    - [Communities and community members profiles](../customizing_view_definitions/customizing_visualdesign/customizing_markup_gen/ddc_profiles_for_social_rend/soc_rendr_prfls_communities.md)
+    - [Forum-related profiles](../customizing_view_definitions/customizing_visualdesign/customizing_markup_gen/ddc_profiles_for_social_rend/soc_rendr_prfls_forums.md)
+    - [Profiles and profiles connections profiles](../customizing_view_definitions/customizing_visualdesign/customizing_markup_gen/ddc_profiles_for_social_rend/soc_rendr_prfls_profiles.md)
+    - [Social objects profile](../customizing_view_definitions/customizing_visualdesign/customizing_markup_gen/ddc_profiles_for_social_rend/soc_rendr_prfls_social_objects.md)
+    - [Wiki-related profiles](../customizing_view_definitions/customizing_visualdesign/customizing_markup_gen/ddc_profiles_for_social_rend/soc_rendr_prfls_wikis.md)
+    - [Common profile](../customizing_view_definitions/customizing_visualdesign/customizing_markup_gen/ddc_profiles_for_social_rend/soc_rendr_prfls_common.md)
+    - [Modifier support profile](../customizing_view_definitions/customizing_visualdesign/customizing_markup_gen/ddc_profiles_for_social_rend/soc_rendr_prfls_modifier_support.md)
 

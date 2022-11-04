@@ -20,7 +20,7 @@ Use this roadmap if you are an organization with the following requirements:
 
 The topology for a web content server includes a remote database and LDAP server. The topology depicts an HCL Web Content Manager server, instead of a portal server. When you install HCL Digital Experience, it includes the HCL Web Content Manager. The configuration steps for the web content development server are different from a basic stand-alone server. The web content server configuration includes syndication with the rendering or test server.
 
-![HCL Web Content Manager server with a remote database and LDAP server](../images/WebContentDevelopment.jpg)
+![HCL Web Content Manager server with a remote database and LDAP server](../../../../../images/WebContentDevelopment.jpg)
 
 # Preparing for the installation process
 
@@ -28,7 +28,8 @@ Gather information and software before you install HCL Digital Experience.
 
 1.  Check requirements.
 
-    -   Documentation resource: [Detailed system requirements](../overview/inst_req.md)
+    -   Documentation resource: [Detailed system requirements](../../../../system_requirements/index.md)
+
 2.  Get the software. New and existing users need to [sign up or register at HCL Software](https://www.hcltechsw.com/wps/portal/about/welcome) and download their preferred HCL Digital Experience package.
 
 
@@ -45,7 +46,7 @@ Before you install HCL Digital Experience, install any prerequisites that are ne
 
 Installing HCL Portal involves preparing your operating system, installing or upgrading the installation manager, and running the installation program.
 
--   Documentation resource: [Installing the HCL Digital Experience software](inst_web_experience.md)
+-   Documentation resource: [Installing the HCL Digital Experience software](../../../../../deployment/install/traditional/installing_dx/index.md)
 
 # Applying the latest cumulative fix
 
@@ -53,7 +54,7 @@ Portal maintenance is delivered through individual fixes \(Fixes\) and Combined 
 
 # Transferring your database
 
-After you install your web experience, Apache Server is your available database. Depending on your requirements, you might need to transfer to a different database. The **Database Transfer** configuration option in the Configuration Wizard assigns users and permissions, creates databases, obtains support for database collation, and transfers your database. See [Database Transfer in Configuration Wizard](../eua-workflows/kc-db-parent.md) for more information about this topic.
+After you install your web experience, Apache Server is your available database. Depending on your requirements, you might need to transfer to a different database. The **Database Transfer** configuration option in the Configuration Wizard assigns users and permissions, creates databases, obtains support for database collation, and transfers your database. See [Database Transfer in Configuration Wizard](../../../../../deployment/manage/db_mgmt_sys/dbtransfer_manual/index.md) for more information about this topic.
 
 Log in to HCL Portal to verify that you have a working portal:
 
@@ -64,19 +65,22 @@ Portal is running and 10039 is the default transport port that is created by DX�
 for your environment.
 ```
 
-1.  To get the latest updates for the wizard, apply the most recent Combined Cumulative Fix. For more information about applying the latest fix pack, visit *Combined cumulative fix strategy* for more topic information.
+1.  To get the latest updates for the wizard, apply the most recent Combined Cumulative Fix. For more information about applying the latest fix pack, visit [Apply Combined Cumulative Fix](../../../../../deployment/install/traditional/cf_install/index.md) for more topic information.
 
-    **Note:** Skip this step, if you have the most recent fix pack applied.
+    !!! note 
+        Skip this step, if you have the most recent fix pack applied.
 
 2.  Access the Configuration Wizard. Go to http://your\_server:10200/hcl/wizard.
 
-    **Note:** If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your\_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your\_server:10200/hcl/wizard.
+    !!! note 
+        If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your\_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your\_server:10200/hcl/wizard.
 
     **Restriction:** There is a known issue with Chrome version 45.x and the Configuration Wizard. If you are experiencing difficulties, use a different browser when you access the wizard.
 
 3.  Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw\_profile.
 
-    **Note:** If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Supported languages](../config/../reference/supportedlanguages.html) in the HCL Digital Experience Version 8.5 documentation.
+    !!! note 
+        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Supported languages](../../../../../extend_dx/development_tools/portal_admin_tools/language_support/index.md) in the HCL Digital Experience Version 8.5 documentation.
 
 4.  Select **Set Up a Stand-alone Server** \> **Database Transfer**.
 
@@ -88,6 +92,7 @@ for your environment.
 
     -   Click **Download Files** to run the steps remotely.
     -   Click **Run All Steps** to run the steps locally.
+
 8.  If you want to shorten your site URL for search engine optimization benefits, you can modify your context root and remove navigational state information from your URL by using the **Modify Site URLs for Search Engine Optimization** configuration option.
 
 9.  Log in to HCL Portal to verify that you have a working portal server.
@@ -97,25 +102,30 @@ for your environment.
 
 After you install your web experience, a default file-based repository is your available user registry. Depending on your requirements, you might need to enable a federated LDAP user registry.
 
-**Note:** If you set **Use Administrator IDs stored in your LDAP user registry** to yes, the WebSphere® Application Server and HCL Portal user IDs and passwords are changed to the LDAP user ID and password. If you do not want to change both user IDs and passwords to match the LDAP user ID and password, set this value to no. After you configure your LDAP user registry, you can manually change the user IDs and passwords.
+!!! note 
+    If you set **Use Administrator IDs stored in your LDAP user registry** to yes, the WebSphere® Application Server and HCL Portal user IDs and passwords are changed to the LDAP user ID and password. If you do not want to change both user IDs and passwords to match the LDAP user ID and password, set this value to no. After you configure your LDAP user registry, you can manually change the user IDs and passwords.
 
-1.  To get the latest updates for the wizard, apply the most recent Combined Cumulative Fix. For more information about applying the latest fix pack, visit *Combined cumulative fix strategy* for more topic information.
+1.  To get the latest updates for the wizard, apply the most recent Combined Cumulative Fix. For more information about applying the latest fix pack, visit [Apply Combined Cumulative Fix](../../../../../deployment/install/traditional/cf_install/index.md)for more topic information.
 
-    **Note:** Skip this step, if you have the most recent fix pack applied.
+    !!! note 
+        Skip this step, if you have the most recent fix pack applied.
 
 2.  Access the Configuration Wizard. Go to http://your\_server:10200/hcl/wizard.
 
-    **Note:** If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your\_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your\_server:10200/hcl/wizard.
+    !!! note 
+        If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your\_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your\_server:10200/hcl/wizard.
 
     **Restriction:** There is a known issue with Chrome version 45.x and the Configuration Wizard. If you are experiencing difficulties, use a different browser when you access the wizard.
 
 3.  Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw\_profile.
 
-    **Note:** If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Supported languages](../config/../reference/supportedlanguages.html) in the HCL Digital Experience Version 8.5 documentation.
+    !!! note 
+        If the language is not currently supported for the user interface, you might see the English version. For details on supported languages and the language codes for all of the HCL Portal user interfaces, see [Supported languages](../../../../../extend_dx/development_tools/portal_admin_tools/language_support/index.md) in the HCL Digital Experience Version 8.5 documentation.
 
 4.  Select **Set Up a Stand-alone Server** \> **Enable Federated Security**.
 
-    **Note:** If you set **Use Administrator IDs stored in your LDAP user registry** to yes, the WebSphere Application Server and HCL Portal user IDs and passwords are changed to the LDAP user ID and password. If you do not want to change both user IDs and passwords to match the LDAP user ID and password, set this value to no. After you configure your LDAP user registry, you can manually change the user IDs and passwords.
+    !!! note
+        If you set **Use Administrator IDs stored in your LDAP user registry** to yes, the WebSphere Application Server and HCL Portal user IDs and passwords are changed to the LDAP user ID and password. If you do not want to change both user IDs and passwords to match the LDAP user ID and password, set this value to no. After you configure your LDAP user registry, you can manually change the user IDs and passwords.
 
 5.  Provide information about your environment.
 
@@ -125,6 +135,7 @@ After you install your web experience, a default file-based repository is your a
 
     -   Click **Download Files** to run the steps remotely.
     -   Click **Run All Steps** to run the steps locally.
+    
 8.  Log in to HCL Portal to verify that you have a working portal server.
 
 
@@ -160,16 +171,19 @@ Use syndication to synchronize content between authoring, staging, and publishin
 
 1.  Plan your syndication strategies.
 
-    -   Documentation resource: [Syndication relationships](../wcm/wcm_syndication_overview.md)
+    -   Documentation resource: [Syndication relationships](../../../../../manage_content/wcm/wcm_content_delivery/syndication/wcm_syndication_overview.md)
+
 2.  Define syndication properties.
 
-    -   Documentation resource: [Syndication properties](../wcm/wcm_config_prop_syndication.md)
+    -   Documentation resource: [Syndication properties](../../../../../manage_content/wcm/wcm_content_delivery/syndication/wcm_config_prop_syndication.md)
+
 3.  Tune your syndication strategy to improve performance.
 
-    -   Documentation resource: [Syndication tuning](../wcm/wcm_syndication_tuning.md)
+    -   Documentation resource: [Syndication tuning](../../../../../manage_content/wcm/wcm_content_delivery/syndication/wcm_syndication_tuning.md)
+
 4.  Create your syndication relationships.
 
-    -   Documentation resource: [Creating a syndication relationship by using the Administration Portlet](../panel_help/wcm_syndication_settingup.md)
+    -   Documentation resource: [Creating a syndication relationship by using the Administration Portlet](../../../../../manage_content/wcm/wcm_content_delivery/syndication/manage_synd_subs/wcm_syndication_settingup.md)
 
 # Deploying the delivery environment
 

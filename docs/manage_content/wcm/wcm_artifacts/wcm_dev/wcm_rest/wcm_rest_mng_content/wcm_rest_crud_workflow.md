@@ -164,9 +164,9 @@ next-stage" enctype="multipart/form-data" method="POST">
 
 The Process Now and Remove Workflow from an item functionality are equivalent to their functionality in user interfaces:
 
-![](../assets/Process_Now_API.png "Process Now")
+![](../../../../../../assets/Process_Now_API.png "Process Now")
 
-![](../assets/Remove_Workflow_API.png "Remove Workflow")
+![](../../../../../../assets/Remove_Workflow_API.png "Remove Workflow")
 
 ## Using the Process Now API
 
@@ -174,11 +174,11 @@ The Process Now and Remove Workflow from an item functionality are equivalent to
 
     POST request to:
 
-    http://host:port/wps/mycontenthandler/wcmrest/item/<\(UUID of the content\)\>/process-now
+    http://host:port/wps/mycontenthandler/wcmrest/item/<(UUID of the content)\>/process-now
 
     Sample URL:
 
-    localhost:10039/wps/mycontenthandler/wcmrest/item/02894453-b03a-4935-8078-5f8ac923a5b0/process-now
+    http://localhost:10039/wps/mycontenthandler/wcmrest/item/02894453-b03a-4935-8078-5f8ac923a5b0/process-now
 
 
 -   **Expected Body**
@@ -301,7 +301,7 @@ The Process Now and Remove Workflow from an item functionality are equivalent to
 
     **Sample URL:**
 
-    localhost:10039/wps/mycontenthandler/wcmrest/item/02894453-b03a-4935-8078-5f8ac923a5b0/remove-workflow
+    http://localhost:10039/wps/mycontenthandler/wcmrest/item/02894453-b03a-4935-8078-5f8ac923a5b0/remove-workflow
 
 
 -   **Expected Body**
@@ -493,7 +493,7 @@ This API works similarly as the other APIs described on this page.
 
 -   **Expected Body**
 
-    See the section [Workflow Comment](#workflow_comments_get) section for the structure on how to submit the comment.
+    See the section [Workflow Comment](#workflow-comments) section for the structure on how to submit the comment.
 
     To ensure that comments are added to workflow stages that require comments, a GET request must be issued to the associated link. This returns an HTML form indicating whether a comment is required.
 

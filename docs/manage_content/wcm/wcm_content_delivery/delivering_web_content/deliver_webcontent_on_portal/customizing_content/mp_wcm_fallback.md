@@ -2,7 +2,8 @@
 
 Set up a web content fallback page to be used when a web content viewer cannot determine which page to use to display a content item. The fallback page can also be used when users do not have sufficient privileges to view the page originally associated with the content item.
 
-**Note:** Although a fallback page is one way of handling failed page resolution, you can also use a content page resolution filter to perform more advanced resolution. With these filters, you can tailor how the viewer behaves if no page can be found for a content item. For more information, see *Creating a content page resolution filter class.*
+!!! note
+    Although a fallback page is one way of handling failed page resolution, you can also use a content page resolution filter to perform more advanced resolution. With these filters, you can tailor how the viewer behaves if no page can be found for a content item. For more information, see *Creating a content page resolution filter class.*
 
 1.  Create the portal page to be used as the web content fallback page.
 
@@ -37,12 +38,10 @@ The web content fallback page is displayed when a viewer is configured with a li
 -   The web content viewer identifies the page associated with the content item, but the user does not have sufficient privileges to view that page.
 
 
-**Related information**  
+???+ info "Related information:"
+    - [Dynamic web content page selection](../advance_adm_sample/mp_wcm_dynamicpage.md)
+    - [Creating a content page resolution filter class](../../../../wcm_artifacts/wcm_dev/wcm_custom_plugin/wcm_dev_api_page_resolution.md)
 
-
-[Dynamic web content page selection](../admin-system/mp_wcm_dynamicpage.md)
-
-[Creating a page from the site toolbar](../dev-theme/themeopt_addpage.md)
-
-[Creating a content page resolution filter class](../wcm/wcm_dev_api_page_resolution.md)
+<!--
+ - [Creating a page from the site toolbar](../dev-theme/themeopt_addpage.md) --->
 

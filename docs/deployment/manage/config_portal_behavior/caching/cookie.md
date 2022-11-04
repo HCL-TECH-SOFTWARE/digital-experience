@@ -4,11 +4,11 @@ Use the cookie.ignore.regex parameter to configure which cookies to ignore from 
 
 Complete the following steps to add the cookie.ignore.regex parameter to the portal resource environment provider:
 
-1.  If necessary, start the WebSphere\_Portal server.
+1.  If necessary, start the WebSphere_Portal server.
 
 2.  Log in to the WebSphere® Integrated Solutions Console.
 
-3.  Go to **Resources** \> **Resource Environment** \> **Resource Environment Providers**.
+3.  Go to **Resources > Resource Environment > Resource Environment Providers**.
 
 4.  Select **WP ConfigService**.
 
@@ -27,13 +27,14 @@ Complete the following steps to add the cookie.ignore.regex parameter to the por
      $\{com.ibm.websphere.security.customSSOCookieName\}= LTPAToken2  
      $\{cookie.sessionid.name\}=JSESSIONID
 
-    **Important:** Any cookie that is set or modified by any component causes the digests in the URL to change, directly affecting the cache of those resources. If a particular cookie is required for some custom code or feature to work but it is not designed to invalidate the cache, that cookie name must be included in the cookie.ignore.regex list or at least matched successfully by the regular expression in that property. This process ensures that changes to the cookie value do not have any adverse impact on performance by prematurely invalidating cache entries.
+    !!!important
+        Any cookie that is set or modified by any component causes the digests in the URL to change, directly affecting the cache of those resources. If a particular cookie is required for some custom code or feature to work but it is not designed to invalidate the cache, that cookie name must be included in the cookie.ignore.regex list or at least matched successfully by the regular expression in that property. This process ensures that changes to the cookie value do not have any adverse impact on performance by prematurely invalidating cache entries.
 
 8.  Click **Apply** and save your changes.
 
 9.  Log out of the WebSphere Integrated Solutions Console.
 
-10. Restart the WebSphere\_Portal server.
+10. Restart the WebSphere_Portal server.
 
 
 

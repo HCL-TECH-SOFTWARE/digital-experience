@@ -19,7 +19,3 @@ if (pvar.getType() == VariableType.Endpoint) {
 ```
 
 
-**Previous topic:**[Obtaining the Controller SPI](../dev-portlet/outbhttp_cfg_mcspi_obtstrlrspi.md)
-
-**Next topic:**[Modifying configuration settings of the outbound HTTP connection](../dev-portlet/outbhttp_cfg_mcspi_modfcfgsets.md)
-

@@ -5,9 +5,9 @@ A CI/CD pipeline can help automate processes in the development and test cycle, 
 !!! note 
     The sample pipelines referred in this topic are supported only until the HCL Digital Experience Container update version CF195. We recommend that you refer to the following sample pipelines for releases CF196 and later.
 
-    - [Sample Pipelines for the DXClient Docker image file](../DXClient/sample_pipelines_docker_dxclient.md)
+    - [Sample Pipelines for the DXClient Docker image file](sample_pipelines_docker_dxclient.md)
     
-    - [Sample Pipelines for the DXClient node package file](../DXClient/sample_pipelines_node_dxclient.md)
+    - [Sample Pipelines for the DXClient node package file](sample_pipelines_node_dxclient.md)
 
 ## Sample Pipeline details
 
@@ -22,7 +22,7 @@ This sample shows how to install the DXClient tool in a pipeline and then deploy
 |`AGENT_LABEL`|Jenkins agent label|Determines on which agents the pipeline can run|
 |`TOOL_PACKAGE_URL`|URL to DXClient zip|Fetched via curl|
 |`TOOL_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name/password credentials needed to access tool package URL|
-|`ARTEFACT_PATH`|URL \(except filenames\) for artifacts to be deployed|Artifacts fetched via curl|
+|`ARTEFACT_PATH`|URL (except filenames) for artifacts to be deployed|Artifacts fetched via curl|
 |`WAR_ARTEFACT_NAME`|Filename of WAR to deploy| |
 |`XMLACCESS_ARTEFACT_NAME`|Filename of XMLAccess script used to deploy| |
 |`ARTEFACT_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name/password credentials needed to access artifact URLs|

@@ -19,9 +19,9 @@ Propagation from the web content library is the preferred strategy because this 
 
 3.  Set your library access permissions:
 
-    1.  Click ![permissions](../images/permissions.jpg) on the library you would like to edit.
+    1.  Click ![permissions](../../../../../images/permissions.jpg) on the library you would like to edit.
 
-    2.  Click ![edit](../images/edit.jpg) on the role you would like to edit.
+    2.  Click ![edit](../../../../../images/edit.jpg) on the role you would like to edit.
 
     3.  Click **Add** and search for any users or groups you would like to assign to a role.
 
@@ -33,9 +33,9 @@ Propagation from the web content library is the preferred strategy because this 
 
 4.  Set **access permissions** to the different library item types. This setting defines the views and actions that are available from within the authoring portlet:
 
-    1.  Click ![Library resource](../images/keydoc.jpg) on the library you would like to edit.
+    1.  Click ![Library resource](../../../../../images/keydoc.jpg) on the library you would like to edit.
 
-    2.  Click ![edit](../images/edit.jpg) on the role you would like to edit.
+    2.  Click ![edit](../../../../../images/edit.jpg) on the role you would like to edit.
 
     3.  Click **Add** and search for any users or groups you would like to assign to a role.
 
@@ -59,5 +59,7 @@ To disable automatic inheritance you, specify the following property in the WCM 
 
 You must restart HCL Portal to enable any configuration changes.
 
-**Parent topic:**[Managing web content libraries](../panel_help/wcm_admin_libraries.md)
+<!--
+
+**Parent topic:**[Managing web content libraries](../panel_help/wcm_admin_libraries.md) -->
 

@@ -6,10 +6,9 @@ In Version 8.0, the PortalTheme was removed. Complete the following procedure on
 
 1.  Run the following command to install the PortalTheme.
 
-    -   AIX® HP-UX Linux™ Solaris: ./ConfigEngine.sh deploy-portal-theme -DPortalAdminPwd=password -DWasPassword=password
-    -   IBM® i: ConfigEngine.sh deploy-portal-theme -DPortalAdminPwd=password -DWasPassword=password
-    -   Windows™: ConfigEngine.bat deploy-portal-theme -DPortalAdminPwd=password -DWasPassword=password
-    -   z/OS®: ./ConfigEngine.sh deploy-portal-theme -DPortalAdminPwd=password -DWasPassword=password
+    -   AIX® and Linux™: `./ConfigEngine.sh deploy-portal-theme -DPortalAdminPwd=password -DWasPassword=password`
+    -   Windows™: `ConfigEngine.bat deploy-portal-theme -DPortalAdminPwd=password -DWasPassword=password`
+
 2.  Restart your portal server.
 
 

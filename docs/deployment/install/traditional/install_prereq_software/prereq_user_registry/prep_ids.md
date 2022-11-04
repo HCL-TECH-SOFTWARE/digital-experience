@@ -16,10 +16,12 @@ If you plan to use a IBM Directory Server as an LDAP user registry, you must ins
         3.  Type the **Base DN** name for the suffix; for example: dc=yourcompany,dc=com.
         4.  Click **Add**.
         5.  Click **OK** to save your changes.
+
     2.  Open the appropriate LDIF file in the PortalServer_root/installer/wp.iim/ldif directory, with a text editor:
 
         -   Use the PortalUsers.ldif file as a working example and adapt appropriately to work with your LDAP server.
         -   Use the ContentUsers.ldif file for the HCL Content Manager group and user ID if you configured HCL Content Manager.
+
     3.  Replace every dc=yourco,dc=com with your suffix.
 
     4.  Replace any prefixes and suffixes that are unique to your LDAP server.
@@ -36,6 +38,7 @@ If you plan to use a IBM Directory Server as an LDAP user registry, you must ins
 
         -   Use the PortalUsers.ldif file as a working example and adapt appropriately to work with your LDAP server.
         -   Use the ContentUsers.ldif file for the HCL Content Manager group and user ID if you configured HCL Content Manager.
+        
     2.  Replace every dc=yourco,dc=com with your suffix.
 
     3.  Replace any prefixes and suffixes that are unique to your LDAP server.

@@ -11,8 +11,6 @@ To validate the basic JSON syntax, use a tool such as JSONLint. For more informa
 To validate the HCL Portal specific definition syntax, you can use a JSON schema validator, which takes as input two JSON files. It compares the input to be validated, and a schema against which to validate. JSON schema files are available for module definitions, profiles, and menu definitions.
 
 
-**Related information**  
-
-
-[JSONLint - The JSON Validator](https://jsonlint.com)
+???+ info "Related information:"
+    - [JSONLint - The JSON Validator](https://jsonlint.com)
 

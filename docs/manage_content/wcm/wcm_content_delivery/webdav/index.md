@@ -5,7 +5,7 @@ With WebDAV for HCL Digital Experience, you can use standard operating system to
 Before you can use WebDAV with web content, you need to set up a WebDAV client. After your client is set up, you can access the web content libraries with WebDAV with the following URL:
 
 ```
-http://server:port/portal\_context\_root/mycontenthandler/dav/content/libraries/
+http://server:port/portal_context_root/mycontenthandler/dav/content/libraries/
 ```
 
 For example:
@@ -24,14 +24,14 @@ In addition to modifying the actual content of an item, you can also modify any 
 
 You can create, modify, or delete the following items: libraries, taxonomies, categories, site areas, folders, components, and presentation templates.
 
-**Note:** Be aware that the following features are not supported when using WebDAV with web content:
-
--   Content items, except for managing metadata and access control
--   Authoring templates, except for managing metadata and access control
--   Nested items within site areas
--   Server-side copy and move
--   Unauthenticated users
--   Exporting of web content libraries with WebDAV to be imported into another web content server
+!!! note
+    Be aware that the following features are not supported when using WebDAV with web content:
+    -   Content items, except for managing metadata and access control
+    -   Authoring templates, except for managing metadata and access control
+    -   Nested items within site areas
+    -   Server-side copy and move
+    -   Unauthenticated users
+    -   Exporting of web content libraries with WebDAV to be imported into another web content server
 
 When using WebDAV with web content, be aware of the following considerations.
 
@@ -56,26 +56,28 @@ When using WebDAV with web content, be aware of the following considerations.
     When you use an HTTP server front end to work with WebDAV, you need to set **Accept content for all requests** to true for the Web server plugin in the WebSphere® Integrated Solutions Console under **Web servers** \> **webserver1** \> **Plug-in properties** \> **Request and response**.
 
 
--   Documentation resource: [Using WebDAV with HCL Portal](../../9.5/admin-system/webdav.md)
--   Documentation resource: [Model WebDAV service](../admin-system/srvcfg_modelwebdav.md)
--   Documentation resource: [Creating components with WebDAV](../wcm/wcm_webdav_createcomp.md)
--   Documentation resource: [Using WebDAV file store](../../9.5/admin-system/mash_webdav_store.md)
--   Documentation resource: [Using WebDAV to manage pages and site content](../admin-system/webdav_static.md)
--   Documentation resource: [Using HCL Digital Experience File Sync](../../9.5/dxsync/DXSync.md)
+-   Documentation resource: [Using WebDAV with HCL Portal](../webdav/administer_webdav/index.md)
+-   Documentation resource: [Model WebDAV service](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/srvcfg_modelwebdav.md)
+-   Documentation resource: [Creating components with WebDAV](../webdav/wcm_webdav_createcomp.md)
+-   Documentation resource: [Using WebDAV file store](../webdav/administer_webdav/mash_webdav_store.md)
 
--   **[Web content items in the WebDAV tree](../wcm/wcm_webdav_tree.md)**  
+<!-- 
+-   Documentation resource: [Using WebDAV to manage pages and site content](../webdav_static.md)
+-   Documentation resource: [Using HCL Digital Experience File Sync](../../9.5/dxsync/DXSync.md) -->
+
+-   **[Web content items in the WebDAV tree](wcm_webdav_tree.md)**  
 The WebDAV tree that contains your web content items begins at the WebDAV root /libraries/, which displays all libraries to which you have access. All web content items within the libraries are organized with folders and files.
--   **[Metadata and access control for web content items in WebDAV](../wcm/wcm_webdav_metadata.md)**  
+-   **[Metadata and access control for web content items in WebDAV](wcm_webdav_metadata.md)**  
 WebDAV uses XML files to represent metadata and access control information for a web content item. You can change an item's metadata and access control settings by modifying these files, and you can specify settings for multiple files by copying the XML files to their appropriate locations in the WebDAV tree.
--   **[Creating taxonomies and categories with WebDAV](../wcm/wcm_webdav_createtax.md)**  
+-   **[Creating taxonomies and categories with WebDAV](wcm_webdav_createtax.md)**  
 Taxonomies and categories are profiling methods that are used to group content items, and you can work with taxonomies and categories directly through WebDAV. Taxonomies and categories are represented in WebDAV as folders, and you can set up your taxonomy by creating and nesting folders.
--   **[Managing content with site areas in WebDAV](../wcm/wcm_webdav_createsite.md)**  
+-   **[Managing content with site areas in WebDAV](wcm_webdav_createsite.md)**  
 Site areas are used to organize content items in your web content system. In WebDAV site areas are represented as folders, and you can set up your site structure by creating and nesting folders. A content item within a site area is represented as a folder that contains the metadata and access control settings for the content item.
--   **[Creating components with WebDAV](../wcm/wcm_webdav_createcomp.md)**  
+-   **[Creating components with WebDAV](wcm_webdav_createcomp.md)**  
 Components are used to store elements in your web content system, and you can use WebDAV to create and manage components. Each component type is represented as a folder in WebDAV, with individual components represented as files in the appropriate component folder.
--   **[Creating presentation templates in WebDAV](../wcm/wcm_webdav_prestemp.md)**  
+-   **[Creating presentation templates in WebDAV](wcm_webdav_prestemp.md)**  
 With WebDAV, you can create and maintain presentation templates to define the layout and appearance characteristics of web pages that are used to display content. You can also create nested image components for use with the presentation templates. Presentation templates are stored in a folder with nested image components in an associated folder.
--   **[Managing metadata and access control settings for authoring templates with WebDAV](../wcm/wcm_webdav_authtemp.md)**  
+-   **[Managing metadata and access control settings for authoring templates with WebDAV](wcm_webdav_authtemp.md)**  
 With WebDAV, you can change the metadata information for an authoring portlet or update the template's access control settings.
 
 

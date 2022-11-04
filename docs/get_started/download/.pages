@@ -1,3 +1,5 @@
-title: Download Software
+title: Download software
 nav:
-    - ...
+    - index.md
+    - software_licensing_portal
+    - harbor_container_registry.md

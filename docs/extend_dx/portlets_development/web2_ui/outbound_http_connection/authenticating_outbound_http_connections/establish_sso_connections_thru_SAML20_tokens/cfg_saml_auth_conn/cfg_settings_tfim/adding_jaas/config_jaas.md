@@ -1,4 +1,4 @@
-# Configuring the Java Authentication and Authorization Service \(JAAS\) login module
+# Configuring the Java Authentication and Authorization Service (JAAS) login module
 
 The behavior of the JAAS login module is configurable. If you change the attribute name for the security context, make sure to adjust the mapping rule accordingly.
 
@@ -95,5 +95,5 @@ Copying the JAAS plug-in to the AppServer directory prevents the plug-in from be
     3.  Exit wsadmin and restart the server.
 
 
-**Parent topic:**[Adding the Java Authentication and Authorization Service \(JAAS\) login module to the Tivoli Federated Identity Manager \(TFIM\) server](../dev-portlet/add_jaas.md)
+
 

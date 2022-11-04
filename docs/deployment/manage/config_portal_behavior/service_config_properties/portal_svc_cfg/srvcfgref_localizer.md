@@ -23,9 +23,6 @@ The default language must be supported by HCL Portal. If you leave all three pro
 
 All properties are case-insensitive. The ISO standard ISO-639 is used for the language codes of most languages. For Hebrew the old language code iw is used. The ISO standard ISO-3166 is used for the country/region codes.
 
-
 **Related information**  
-
-
-[System event logging](../trouble/adsyslog.md)
+[System event logging](../../../troubleshooting/logging_and_tracing/adsyslog.md)
 

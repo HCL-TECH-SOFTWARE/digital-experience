@@ -7,10 +7,7 @@ The predefined social lists require that the social rendering CSS styles are loa
 If you want to use social rendering with your own custom theme or a custom theme profile, add the `wp_social_rendering_85` theme module to that theme profile. For example, you can do so by using the `add-theme-modules` configuration task. If the theme profile that is active on the current page does not contain the social rendering theme module, the social rendering CSS classes are missing. In this case, the markup does not look as expected.
 
 
-**Related information**  
-
-
-[Customizing the CSS styles of social lists](../social/soc_rendr_custom_css_styles.md)
-
-[Adding the social rendering theme module to a theme profile](../social/soc_rendr_adm_add_sr_thm_2prof.md)
+???+ info "Related information"
+    - [Customizing the CSS styles of social lists](../customizing_view_definitions/customizing_visualdesign/customizing_css_social_list/index.md)
+    - [Adding the social rendering theme module to a theme profile](../administering_social_list/soc_rendr_adm_add_sr_thm_2prof.md)
 

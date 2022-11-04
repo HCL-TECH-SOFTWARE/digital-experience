@@ -47,7 +47,8 @@ For more information, see *Modules and dynamic content spots*.
 
             A pointer to the markup for the dynamic spot. In this example, it points to an HTML file relative to the theme location in WebDAV.
 
-            **Note:** If you want to point to a .JSP file, you must define this module within a plugin.xml .
+            !!! note
+                If you want to point to a .JSP file, you must define this module within a plugin.xml .
 
         -   **prereqs**
 
@@ -109,11 +110,9 @@ For more information, see *Modules and dynamic content spots*.
     You can change the profile for the theme or a specific page to define the modules that are loaded. For more information, see *Changing the theme profile*.
 
 
+<!--
+???+ info "Related information:"
+    - [Create a module profile](../dev-theme/themeopt_update_modprof.md)
+    - [Changing the theme profile](../dev-theme/themeopt_cust_changepro.md)
 
-**Related information**  
-
-
-[Create a module profile](../dev-theme/themeopt_update_modprof.md)
-
-[Changing the theme profile](../dev-theme/themeopt_cust_changepro.md)
-
+--->

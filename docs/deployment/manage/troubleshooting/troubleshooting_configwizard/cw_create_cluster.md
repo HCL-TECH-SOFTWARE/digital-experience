@@ -1,16 +1,15 @@
+---
+title: Create a cluster option
+---
+
 # Troubleshooting: Create a cluster option
 
 Creating a cluster is part of setting up a clustered environment.If you encounter a failure during the configuration process, determine whether you can run the step again, skip the step, or if you must clean up the step. For some failed steps, learn how to correct the issue and recover from the failure.
 
 Each potential step in the configuration is included. Because the steps vary depending on your selections, the steps are not numbered. Find the step that failed to learn more about correcting and recovering from the failure. If you need to change a value that you entered in the wizard, then you must run the configuration again.
 
-**Tip:** If you must go through the wizard again, download the wizard selections that you made to save time. Then, cancel the configuration. Start the process over and upload your saved selections. Correct or enter values for the parameters that caused the failure.
-
-
-**Related information**  
-
-
-[Accessing the Configuration Wizard](../config/cw_run.md)
+!!!note "Tip"
+    If you must go through the wizard again, download the wizard selections that you made to save time. Then, cancel the configuration. Start the process over and upload your saved selections. Correct or enter values for the parameters that caused the failure.
 
 # Manual Step: Verify that the portal node and deployment manager system clocks are within 5 minutes of each other
 
@@ -28,19 +27,13 @@ When you federate the node, it becomes a managed node in the deployment manager 
 
 If this step fails see the addNode.log to determine why the step failed. In most cases, you can correct the error condition and run the step again. You do not have to cancel or reset the configuration steps.
 
-The log is in the /wp\_profile/logs directory
+The log is in the /wp_profile/logs directory
 
 |Actions|Notes|
 |-------|-----|
 |Run the step again|If the step did not complete successfully during the previous configuration, run it again.|
 |Skip the step|If you successfully completed the step before, then skip this step.|
-|Clean up step|Based on where the step failed during the addNode task, you might need to remove the node and run the step again. Run the removeNode command from the wp\_profile/bin directory. Example:
-
-```
-wp_profile/bin/removeNode.sh
-```
-
-|
+|Clean up step|Based on where the step failed during the addNode task, you might need to remove the node and run the step again. Run the removeNode command from the wp_profile/bin directory. <br> Example: `wp_profile/bin/removeNode.sh`|
 
 # Configure the dynamic cluster node
 
@@ -70,3 +63,5 @@ If this step fails, click **View Results** to see the applicable section of the 
 |Skip the step|If you successfully completed the step before, then skip this step.|
 |Clean up step|None required|
 
+**Related information**  
+[Accessing the Configuration Wizard](./../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/configuration/cw_run.md)

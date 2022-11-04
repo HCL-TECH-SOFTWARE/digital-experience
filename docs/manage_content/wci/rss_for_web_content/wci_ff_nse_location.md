@@ -44,9 +44,7 @@ The path element cannot be used with components. Components can only be created 
 |Required for item types|Site Areas and Taxonomies.|
 |Allowable Values|All values should start with a leading forward slash "/" character. For site area and taxonomy items the value should be just a single forward slash "/".|
 |Required Attributes|None|
-|Optional Attributes|"library" Contains the name of a library where the site path resides. This attribute is used where linked content resides on a different library from the main content. This attribute is ignored on the first path element that is listed in the feed entry.
-
-|
+|Optional Attributes|"library" Contains the name of a library where the site path resides. This attribute is used where linked content resides on a different library from the main content. This attribute is ignored on the first path element that is listed in the feed entry.|
 |Required sub-elements|None|
 |Optional sub-elements|None|
 
@@ -71,12 +69,7 @@ This is used to specify which parent items to link to when creating content item
 |Allowable Values|The createLinks element is a container for readability and has no attributes or expected values.|
 |Required Attributes|None|
 |Optional Attributes|None|
-|Required sub-elements|-   **parentGuid**
-
-The parentGuid element should contain the unique ID of another item in the feed that describes the parent item.
-
-
-|
+|Required sub-elements|-   **parentGuid** <br>The parentGuid element should contain the unique ID of another item in the feed that describes the parent item.|
 |Optional sub-elements|None|
 
 Examples:
@@ -111,22 +104,8 @@ Site areas and categories can only have one immediate parent. Any preexisting pa
 |Required for item types|None|
 |Allowable Values|The children element is just a container for readability. It has no expected values.|
 |Required Attributes|None|
-|Optional Attributes|-   **action**
-
-The action attribute can have a value of "add" or "replace". These values indicate whether to replace children that are existing or to add to them.
-
--   **position**
-
-This attribute can have the value "start" or "end". These values indicate where the children are placed in sibling order as they are processed.
-
-
-|
-|Required sub-elements|-   **childGuid**
-
-The childGuid element should contain the unique ID of another item in the feed that describes the child item.
-
-
-|
+|Optional Attributes|-   **action** <br>The action attribute can have a value of "add" or "replace". These values indicate whether to replace children that are existing or to add to them. <br>-   **position** <br>This attribute can have the value "start" or "end". These values indicate where the children are placed in sibling order as they are processed.|
+|Required sub-elements|-   **childGuid**  <br>The childGuid element should contain the unique ID of another item in the feed that describes the child item.|
 |Optional sub-elements|None|
 
 Examples:
@@ -182,16 +161,10 @@ The WCM APIs don't provide a mechanism to get a complete list of template mappin
 |Applies to item types|siteArea.|
 |Required for item types|None|
 |Allowable Values|This element does not take any values. The data is specified in the attributes.|
-|Required Attributes|-   **authoring**
-
-The value of this attribute must be a string that exactly matches the name of an existing authoring template.
-
--   **presentation**
-
-The value of this attribute must be a string that exactly matches the name of an existing presentation template.
-
-
-|
+|Required Attributes|-   **authoring**<br>
+The value of this attribute must be a string that exactly matches the name of an existing authoring template.<br>
+-   **presentation**<br>
+The value of this attribute must be a string that exactly matches the name of an existing presentation template.|
 |Optional Attributes|None|
 |Required sub-elements|None|
 |Optional sub-elements|None|

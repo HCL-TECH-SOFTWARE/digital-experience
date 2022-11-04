@@ -30,18 +30,15 @@ You must adapt the list of required runtime configuration changes for your theme
         dav:fs-type1/layout-templates/.*|dav:fs-type1/themes/.*|war:/themes/.*
         ```
 
-        **Note:** If you do not perform the last step, users must have the Markup Editor role that is assigned to be able to change a layout.
+        !!! note
+            If you do not perform the last step, users must have the Markup Editor role that is assigned to be able to change a layout.
 
 
 You can define the secure locations of layout templates by using this setting. If portal receives a request to create or update a page that contains a layout link, and that link is matching this regular expression, the markup editor role is not enforced on that layout. Include only locations in the regular expression that are under Access Control enforcement. For example, the layout templates and theme folders can be changed only by users that have the Theme Manager role. References to war files are also usable, as the war file deployment is secured by Java Platform, Enterprise Edition rights.
 
 
-**Related information**  
-
-
-[Access permissions](../admin-system/sec_acc_rights.md)
-
-[CSS styles used by the sample web content template items](../wcm/wcm_delivery_ctsamples_css.md)
-
-[Modify the dynamic resource references for your theme](../dev-theme/themeopt_cust_copy_modifystatres.md)
+???+ info "Related information"
+    - [Access permissions](../../../../../deployment/manage/security/controlling_access/resources_roles/sec_acc_rights.md)
+    - [CSS styles used by the sample web content template items](../../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/getting_started/creating_contentsamples/wcm_delivery_ctsamples_css.md)
+    - [Modify the dynamic resource references for your theme](../../../customizing_theme/copying_theme/manual_copy_theme/creating_webdav_theme_copy/themeopt_cust_copy_modifystatres.md)
 

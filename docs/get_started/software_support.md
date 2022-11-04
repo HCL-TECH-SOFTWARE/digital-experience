@@ -28,17 +28,17 @@ For support purposes, we define three categories of configuration:
     If business reasons warrant, customers can seek assistance on an additional fee basis from HCL services, from an HCL Business Partner or from another service provider.
 
 -   **Other Configurations**
-
+  
     Many configurations of HCL Products and other software exist that are not explicitly listed in “Supported Configurations” or “Unsupported Configurations”, but which can reasonably be expected to perform within the accepted bounds of reliability, function, and performance.
     
     Configurations that fall into this category typically substitute a Dependent Product listed in the “Supported Configuration” for similar software. This may be a newer fix level of the Dependent Product or another software product that adheres to a supported specification. For example, this could be a newer WebSphere® Application Server (WAS) fix pack, an LDAP server that adheres to that standard or an external security manager that integrates via public APIs.
 
-    Customers may access HCL Support for “Other Configurations”. In these scenarios HCL Support will use commercially reasonable efforts to provide the same level of support as that provided for a Supported Configuration.
-        
-    During problem determination HCL Support will determine if the problem exists in a Supported Configuration, if a resolution can be provided, or if this is an Unsupported Configuration.
-        
-    Resources for problem determination are applied until HCL Support either provides a solution to the issue, determines that a solution is not commercially reasonable, or determines that the issue is caused by the substituted Dependent Product and does not exist in a Supported Configuration.
-        
-    If HCL Support is not able to resolve the problem on the customer configuration in question, then customers may choose to explore alternative solutions on an additional fee basis from HCL services, from an HCL Business Partner or from another service provider.
+    <p style="margin-left: 50px;">Customers may access HCL Support for “Other Configurations”. In these scenarios HCL Support will use commercially reasonable efforts to provide the same level of support as that provided for a Supported Configuration. 
+    
+    <p style="margin-left: 50px;">During problem determination HCL Support will determine if the problem exists in a Supported Configuration, if a resolution can be provided, or if this is an Unsupported Configuration.</p>
+    
+    <p style="margin-left: 50px;">Resources for problem determination are applied until HCL Support <ins>either provides a solution to the issue, determines that a solution is not commercially reasonable, or determines that the issue is caused by the substituted Dependent Product and does not exist in a Supported Configuration.<ins></p>
+            
+    <p style="margin-left: 50px;">If HCL Support is not able to resolve the problem on the customer configuration in question, then customers may choose to explore alternative solutions on an additional fee basis from HCL services, from an HCL Business Partner or from another service provider.</p>
 
     One possible outcome of a problem in this category is that HCL determines the configuration not to work, and will update the list of Unsupported Configurations accordingly.

@@ -63,7 +63,7 @@ This jQuery module is not turned on by default. jQuery is an open framework and 
 
 4.  Add the plug-in modules to the module listings in your profile, such as add the module `jquery_powertip` in this example.
 
-5.  Invalidate the cache so that your profile and module changes are picked up by the Portal server. Click the **Administration menu** icon. Then, click **Portal Analysis** \> **Theme Analyzer**. Then, click **Utilities** \> **Control Center** \> **Invalidate Cache** \> **Click to invalidate**. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](themeopt_an_util.md#).
+5.  Invalidate the cache so that your profile and module changes are picked up by the Portal server. Click the **Administration menu** icon. Then, click **Portal Analysis** \> **Theme Analyzer**. Then, click **Utilities** \> **Control Center** \> **Invalidate Cache** \> **Click to invalidate**. Auto invalidation recognizes your changes automatically for WebDAV based themes. No further action is required. For more information, see [Utilities](../../the_module_framework/themeopt_analyzer/utilities/index.md).
 
 6.  Apply your profile to a page. In **Edit Page Properties** \> **Advanced**, select your Profile: `jQuery Deferred`.
 
@@ -74,22 +74,16 @@ This jQuery module is not turned on by default. jQuery is an open framework and 
 
 Now the jQuery core and your plug-ins are ready and available for use. To learn the basics about jQuery core usage, see *jQuery basics* in the related links. You can learn the usage of your plug-ins at the same site where you downloaded the plug-in. For more information, see *PowerTip download*.
 
+<!--
 -   **[Defining tooltips with PowerTip](../dev-theme/themeopt_jquery_power.md)**  
-Once your PowerTip module is active, you can add one or more tooltips to your pages through a dynamic content spot, or a config markup type subcontribution in a module.
+Once your PowerTip module is active, you can add one or more tooltips to your pages through a dynamic content spot, or a config markup type subcontribution in a module. --->
 
 
-**Related information**  
-
-
-[jQuery plug-in download](https://jquery.com)
-
-[jQuery PowerTip plug-in download](https://plugins.jquery.com/powertip/)
-
-[jQuery basics](https://learn.jquery.com/using-jquery-core/)
-
-[PowerTip download](https://stevenbenner.github.io/jquery-powertip/)
-
-[Defining theme modules](../dev-theme/themeopt_mod_register.md)
-
-[Specify profiles with metadata](../dev-theme/themeopt_define_module.md)
+???+ info "Related information:"
+    - [jQuery plug-in download](https://jquery.com)
+    - [jQuery PowerTip plug-in download](https://plugins.jquery.com/powertip/)
+    - [jQuery basics](https://learn.jquery.com/using-jquery-core/)
+    - [PowerTip download](https://stevenbenner.github.io/jquery-powertip/)
+    - [Defining theme modules](../../the_module_framework/writing_module/themeopt_mod_register.md)
+    - [Specify profiles with metadata](../../the_module_framework/specify_profiles/themeopt_define_module.md)
 

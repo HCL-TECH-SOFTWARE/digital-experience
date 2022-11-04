@@ -106,16 +106,13 @@ Theme modules contribute resources, such as JavaScript, CSS and HTML, to a theme
 |wp\_client\_ext|Client-side JavaScript APIs for modules and promises.|
 |wp\_client\_selector|Client-side JavaScript CSS selection engine API.|
 |wp\_worklight|Adds MobileFirst® function.|
-|wp\_one\_ui|Provides CSS for common elements in Portal. For more information, see the documentation in [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)\\theme\\wp.theme.modules\\webapp\\installedApps\\ThemeModules.ear\\ThemeModules.war\\modules\\oneui\\v2.1\\lotusOneUIv2.1\_Documentation.zip.|
+|wp\_one\_ui|Provides CSS for common elements in Portal. For more information, see the documentation in [PortalServer\_root](../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.modules\\webapp\\installedApps\\ThemeModules.ear\\ThemeModules.war\\modules\\oneui\\v2.1\\lotusOneUIv2.1\_Documentation.zip.|
 |wp\_one\_ui\_dijit|An extension of One UI that provides styling for dijits, it acts as a Dojo theme. For more information, see *Themes and theming*.|
 |wp\_portlet\_css|Styles for HCL Administrative portlets.|
 |getting\_started\_module|Adds the default simple module.|
 
 
-**Related information**  
-
-
-[Dojo Toolkit - Themes and Theming](https://dojotoolkit.org/reference-guide/1.9/dijit/themes.html#id6)
-
-[Displaying the draft page ribbon](../dev-theme/themeopt_disp_draft_ribbon.md)
+???+ info "Related information:"
+    - [Dojo Toolkit - Themes and Theming](https://dojotoolkit.org/reference-guide/1.9/dijit/themes.html#id6)
+    - [Displaying the draft page ribbon](../customizing_theme/themeopt_disp_draft_ribbon.md)
 

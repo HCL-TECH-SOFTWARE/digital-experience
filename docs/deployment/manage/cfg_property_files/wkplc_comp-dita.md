@@ -1,47 +1,43 @@
-# Properties file: wkplc\_comp.properties
-
+# Properties File: wkplc_comp.properties
 
 ## HCL Portal URLs
 
 Define the URL that is used to access your portal site.
 
 -   **WpsDefaultHome**
-
     -   **Description**
-
         The first page that site visitors see before they log in to the site. Valid characters are alphabetic and numeric including underscore and dash. The value entered must be different than the Personalized Home value. If portal is the default home, the following is an example of the URL for the site: http://localhost:10039/wps/portal
 
         In this example:
 
-        -   localhost is the portal host name \(WpsHostName\)
-        -   10039 is the host port \(WpsHostPort\)
-        -   wps is the context root \(WpsContextRoot\).
+        -   `localhost` is the portal host name (WpsHostName)
+        -   `10039` is the host port (WpsHostPort)
+        -   `wps` is the context root (WpsContextRoot).
     -   **Default value**
 
-        portal
+        `portal`
 
     -   **Examples**
 
-        : portal
+        `: portal`
 
 -   **WpsPersonalizedHome**
-
     -   **Description**
 
         The page that site visitors see after they log in to the site. Valid characters are alphabetic and numeric including underscore and dash.The value entered must be different than the Default Home value. If myportal is the personalized home, then the following is an example URL for the site: http://localhost:10039/wps/myportal
 
         In this example:
 
-        -   localhost is the portal host name \(WpsHostName\)
-        -   10039 is the host port \(WpsHostPort\)
-        -   wps is the context root \(WpsContextRoot\).
+        -   `localhost` is the portal host name (WpsHostName)
+        -   `10039` is the host port (WpsHostPort)
+        -   `wps` is the context root (WpsContextRoot).
     -   **Default value**
 
-        myportal
+        `myportal`
 
     -   **Examples**
 
-        : myportal
+        `: myportal`
 
 
 ## Properties for HCL Portal integration with IBM Process Server
@@ -53,13 +49,13 @@ The following properties are used to configure integration with WebSphere Proces
     -   **Description**
     -   **Valid values**
 
-        true
+        `true`
 
-        false
+        `false`
 
     -   **Default value**
 
-        true
+        `true`
 
     -   **Examples**
 
@@ -69,7 +65,7 @@ The following properties are used to configure integration with WebSphere Proces
 
     -   **Description**
 
-        This property is used only if the pi.IsCrossCell value is set to true. The server host name address of the WebSphere Process Server installation located in another cell.
+        This property is used only if the pi.IsCrossCell value is set to `true`. The server host name address of the WebSphere Process Server installation located in another cell.
 
     -   **Default value**
 
@@ -101,7 +97,7 @@ The following properties are used to configure integration with WebSphere Proces
 
     -   **Default value**
 
-        $\{USER\_INSTALL\_ROOT\}/processArtifacts
+        `$\{USER\_INSTALL\_ROOT\}/processArtifacts`
 
     -   **Examples**
 
@@ -115,9 +111,9 @@ The following properties are used to configure integration with WebSphere Proces
 
     -   **Valid values**
 
-        true
+        `true`
 
-        false
+        `false`
 
     -   **Default value**
 
@@ -182,7 +178,7 @@ The following properties are specific to XMLAccess.
 
     -   **Default value**
 
-        localhost
+        `localhost`
 
     -   **Examples**
 
@@ -196,11 +192,11 @@ The following properties are specific to XMLAccess.
 
     -   **Default value**
 
-        10040
+        `10040`
 
     -   **Examples**
 
-        :
+        `10040`
 
 -   **XmlAccessProtocol**
 
@@ -210,13 +206,13 @@ The following properties are specific to XMLAccess.
 
     -   **Valid values**
 
-        http
+        `http`
 
-        https
+        `https`
 
     -   **Default value**
 
-        http
+        `http`
 
     -   **Examples**
 
@@ -231,7 +227,7 @@ The following parameters are used for advanced security configuration using exte
 
     -   **Description**
 
-        \(Optional\) You can set different "contexts" to further distinguish externalized role names from other role names in the Tivoli Access Manager namespace. This context information will be added to the namespace entry created upon role externalization. If any of the three context values \(EACserverName, EACcellName, or EACappName\) are null, none will be used.
+        (Optional) You can set different "contexts" to further distinguish externalized role names from other role names in the Tivoli Access Manager namespace. This context information will be added to the namespace entry created upon role externalization. If any of the three context values (EACserverName, EACcellName, or EACappName) are null, none will be used.
 
     -   **Default value**
 
@@ -263,11 +259,11 @@ The following parameters are used for advanced security configuration using exte
 
     -   **Default value**
 
-        wps
+        `wps`
 
     -   **Examples**
 
-        :
+        `wps`
 
 -   **wp.ac.impl.reorderRoles**
 
@@ -277,13 +273,13 @@ The following parameters are used for advanced security configuration using exte
 
     -   **Valid values**
 
-        true
+        `true`
 
-        false
+        `false`
 
     -   **Default value**
 
-        false
+        `false`
 
     -   **Examples**
 
@@ -320,7 +316,7 @@ Provide authentication information to enable WebSphere Portal to connect with TA
 
     -   **Default value**
 
-        sec\_master
+        `sec_master`
 
     -   **Examples**
 
@@ -334,7 +330,7 @@ Provide authentication information to enable WebSphere Portal to connect with TA
 
     -   **Default value**
 
-        ReplaceWithYourTAMAdminPwd
+        `ReplaceWithYourTAMAdminPwd`
 
     -   **Examples**
 
@@ -348,7 +344,7 @@ Provide authentication information to enable WebSphere Portal to connect with TA
 
     -   **Default value**
 
-        $\{WasHome\}/tivoli/tam/PdPerm.properties
+        `$\{WasHome\}/tivoli/tam/PdPerm.properties`
 
     -   **Examples**
 
@@ -357,7 +353,7 @@ Provide authentication information to enable WebSphere Portal to connect with TA
 
 ## Tivoli Access Manager: PDJrteCfg command and filesystem parameters
 
-The following parameter locations depend on your WebSphere Application Server installation structure. For more information or detail on the individual parameters, refer to: http://publib.boulder.ibm.com/infocenter/wasinfo/v6r1/topic/com.ibm.websphere.nd.doc/info/ae/ae/rsec\_tampdjrtecfg.html
+The following parameter locations depend on your WebSphere Application Server installation structure. For more information or detail on the individual parameters, refer to: http://publib.boulder.ibm.com/infocenter/wasinfo/v6r1/topic/com.ibm.websphere.nd.doc/info/ae/ae/rsec_tampdjrtecfg.html
 
 -   **wp.ac.impl.PDClasspath**
 
@@ -367,7 +363,7 @@ The following parameter locations depend on your WebSphere Application Server in
 
     -   **Default value**
 
-        $\{WasHome\}/tivoli/tam/PD.jar
+        `$\{WasHome\}/tivoli/tam/PD.jar`
 
     -   **Examples**
 
@@ -381,7 +377,7 @@ The following parameter locations depend on your WebSphere Application Server in
 
     -   **Default value**
 
-        $\{WasHome\}/tivoli/tam/PolicyDirector
+        `$\{WasHome\}/tivoli/tam/PolicyDirector`
 
     -   **Examples**
 
@@ -395,7 +391,7 @@ The following parameter locations depend on your WebSphere Application Server in
 
     -   **Default value**
 
-        $\{WasHome\}/java/jre/
+        `$\{WasHome\}/java/jre/`
 
     -   **Examples**
 
@@ -409,7 +405,7 @@ The following parameter locations depend on your WebSphere Application Server in
 
     -   **Default value**
 
-        $\{WasHome\}/tivoli/tam
+        `$\{WasHome\}/tivoli/tam`
 
     -   **Examples**
 
@@ -423,7 +419,7 @@ The following parameter locations depend on your WebSphere Application Server in
 
     -   **Default value**
 
-        your.TAM.Policy.Server.hostname
+        `your.TAM.Policy.Server.hostname`
 
     -   **Examples**
 
@@ -442,7 +438,7 @@ HCL Portal requires the following information to run the SvrSslCfg command
 
     -   **Default value**
 
-        amwp80
+        `amwp80`
 
     -   **Examples**
 
@@ -456,7 +452,7 @@ HCL Portal requires the following information to run the SvrSslCfg command
 
     -   **Default value**
 
-        7223
+        `7223`
 
     -   **Examples**
 
@@ -470,7 +466,7 @@ HCL Portal requires the following information to run the SvrSslCfg command
 
     -   **Default value**
 
-        remote
+        `remote`
 
     -   **Examples**
 
@@ -484,7 +480,7 @@ HCL Portal requires the following information to run the SvrSslCfg command
 
     -   **Default value**
 
-        your.TAM.Policy.Server.hostname:7135:1
+        `your.TAM.Policy.Server.hostname:7135:1`
 
     -   **Examples**
 
@@ -498,7 +494,7 @@ HCL Portal requires the following information to run the SvrSslCfg command
 
     -   **Default value**
 
-        your.TAM.Authorization.Server.hostname:7136:1
+        `your.TAM.Authorization.Server.hostname:7136:1`
 
     -   **Examples**
 
@@ -512,7 +508,7 @@ HCL Portal requires the following information to run the SvrSslCfg command
 
     -   **Default value**
 
-        $\{WasHome\}/tivoli/tam/pdperm.ks
+        `$\{WasHome\}/tivoli/tam/pdperm.ks`
 
     -   **Examples**
 
@@ -527,7 +523,7 @@ HCL Portal uses the following information for WebSEAL.
 
     -   **Description**
 
-        \(Optional\) This value sets the WebSEAL TAI's hostnames parameter. You should include the host name you provided when configuring the WebSEAL instance. The default behavior when configuring a WebSEAL instance is to use the network short name. For example, hosta.yourcompany.com may be represented as hosta. When the WebSEAL instance is configured and if any additional proxies are included, their host names must be added as well. Presence of this parameter will cause the TAI to evaluate the VIA header and only handle those requests that contain one of the provided host name, and port combinations. This value is case-sensitive and may be a comma-delimited list if more than one host name is provided
+        (Optional) This value sets the WebSEAL TAI's hostnames parameter. You should include the host name you provided when configuring the WebSEAL instance. The default behavior when configuring a WebSEAL instance is to use the network short name. For example, hosta.yourcompany.com may be represented as hosta. When the WebSEAL instance is configured and if any additional proxies are included, their host names must be added as well. Presence of this parameter will cause the TAI to evaluate the VIA header and only handle those requests that contain one of the provided host name, and port combinations. This value is case-sensitive and may be a comma-delimited list if more than one host name is provided
 
     -   **Default value**
 
@@ -541,7 +537,7 @@ HCL Portal uses the following information for WebSEAL.
 
     -   **Description**
 
-        \(Optional\) This value sets the WebSEAL TAI's ports parameter. You should include the WebSEAL ports in this comma-delimited list. The default WebSEAL port is 443. Presence of this parameter will cause the TAI to evaluate the VIA header and only handle those requests that contain one of the provided host name and port combinations.
+        (Optional) This value sets the WebSEAL TAI's ports parameter. You should include the WebSEAL ports in this comma-delimited list. The default WebSEAL port is 443. Presence of this parameter will cause the TAI to evaluate the VIA header and only handle those requests that contain one of the provided host name and port combinations.
 
     -   **Default value**
 
@@ -559,7 +555,7 @@ HCL Portal uses the following information for WebSEAL.
 
     -   **Default value**
 
-        wpsadmin
+        `wpsadmin`
 
     -   **Examples**
 
@@ -587,13 +583,13 @@ HCL Portal uses the following information for WebSEAL.
 
     -   **Valid values**
 
-        true
+        `true`
 
-        false
+        `false`
 
     -   **Default value**
 
-        false
+        `false`
 
     -   **Examples**
 
@@ -607,7 +603,7 @@ HCL Portal uses the following information for WebSEAL.
 
     -   **Default value**
 
-        0
+        `0`
 
     -   **Examples**
 
@@ -621,7 +617,7 @@ HCL Portal uses the following information for WebSEAL.
 
     -   **Default value**
 
-        600
+        `600`
 
     -   **Examples**
 
@@ -635,13 +631,13 @@ HCL Portal uses the following information for WebSEAL.
 
     -   **Valid values**
 
-        true
+        `true`
 
-        false
+        `false`
 
     -   **Default value**
 
-        false
+        `false`
 
     -   **Examples**
 
@@ -660,7 +656,7 @@ The following information is used to authenticate with TAM.
 
     -   **Default value**
 
-        /WPv80
+        `/WPv80`
 
     -   **Examples**
 
@@ -674,7 +670,7 @@ The following information is used to authenticate with TAM.
 
     -   **Default value**
 
-        m
+        `m`
 
     -   **Examples**
 
@@ -688,7 +684,7 @@ The following information is used to authenticate with TAM.
 
     -   **Default value**
 
-        \[WP80\]
+        `[WP80]`
 
     -   **Examples**
 
@@ -702,13 +698,13 @@ The following information is used to authenticate with TAM.
 
     -   **Valid values**
 
-        true
+        `true`
 
-        false
+        `false`
 
     -   **Default value**
 
-        true
+        `true`
 
     -   **Examples**
 
@@ -717,7 +713,7 @@ The following information is used to authenticate with TAM.
 
 ## Tivoli Access Manager: Portal vault parameters
 
-The following information is used to confgure a vault for Tivoli Access Manager.
+The following information is used to configure a vault for Tivoli Access Manager.
 
 -   **wp.ac.impl.vaultType**
 
@@ -727,7 +723,7 @@ The following information is used to confgure a vault for Tivoli Access Manager.
 
     -   **Default value**
 
-        AccessManager
+        `AccessManager`
 
     -   **Examples**
 
@@ -741,7 +737,7 @@ The following information is used to confgure a vault for Tivoli Access Manager.
 
     -   **Default value**
 
-        accessmanagervault.properties
+        `accessmanagervault.properties`
 
     -   **Examples**
 
@@ -755,13 +751,13 @@ The following information is used to confgure a vault for Tivoli Access Manager.
 
     -   **Valid values**
 
-        true
+        `true`
 
-        false
+        `false`
 
     -   **Default value**
 
-        true
+        `true`
 
     -   **Examples**
 
@@ -771,17 +767,17 @@ The following information is used to confgure a vault for Tivoli Access Manager.
 
     -   **Description**
 
-        This value determines if the portal credential vault or any custom portlet is allowed to modify the secrets stored in TAM. If you set this value to true \("Read Only"\), the Tivoli administrator must change the credentials associated with resources using the Tivoli command line or GUI.
+        This value determines if the portal credential vault or any custom portlet is allowed to modify the secrets stored in TAM. If you set this value to true ("Read Only"), the Tivoli administrator must change the credentials associated with resources using the Tivoli command line or GUI.
 
     -   **Valid values**
 
-        true
+        `true`
 
-        false
+        `false`
 
     -   **Default value**
 
-        false
+        `false`
 
     -   **Examples**
 
@@ -800,7 +796,7 @@ The following parameters enables HCL Portal to authenticate wit Netegrity SiteMi
 
     -   **Default value**
 
-        HCL Portal v80
+        `HCL Portal v80`
 
     -   **Examples**
 
@@ -828,7 +824,7 @@ The following parameters enables HCL Portal to authenticate wit Netegrity SiteMi
 
     -   **Default value**
 
-        ReplaceWithYourSiteMinderAgentName
+        `ReplaceWithYourSiteMinderAgentName`
 
     -   **Examples**
 
@@ -842,7 +838,7 @@ The following parameters enables HCL Portal to authenticate wit Netegrity SiteMi
 
     -   **Default value**
 
-        ReplaceWithYourSiteMinderAgentPwd
+        `ReplaceWithYourSiteMinderAgentPwd`
 
     -   **Examples**
 
@@ -870,7 +866,7 @@ The following parameters enables HCL Portal to authenticate wit Netegrity SiteMi
 
     -   **Default value**
 
-        siteminder
+        `siteminder`
 
     -   **Examples**
 
@@ -884,7 +880,7 @@ The following parameters enables HCL Portal to authenticate wit Netegrity SiteMi
 
     -   **Default value**
 
-        ReplaceWithYourSiteMinderAdminPwd
+        `ReplaceWithYourSiteMinderAdminPwd`
 
     -   **Examples**
 
@@ -898,7 +894,7 @@ The following parameters enables HCL Portal to authenticate wit Netegrity SiteMi
 
     -   **Default value**
 
-        ReplaceWithYourSiteMinderUserDirectoryObject
+        `ReplaceWithYourSiteMinderUserDirectoryObject`
 
     -   **Examples**
 
@@ -912,13 +908,13 @@ The following parameters enables HCL Portal to authenticate wit Netegrity SiteMi
 
     -   **Valid values**
 
-        true
+        `true`
 
-        false
+        `false`
 
     -   **Default value**
 
-        false
+        `false`
 
     -   **Examples**
 
@@ -928,11 +924,11 @@ The following parameters enables HCL Portal to authenticate wit Netegrity SiteMi
 
     -   **Description**
 
-        This value is a comma delimited list of server for the SiteMinder agent. Important: If your Policy Servers are listening on non-default ports \(for example: not 44441,44442,44443\), you must add the port property for each policy server manually in the ExternalAccessControlService.properties file.
+        This value is a comma delimited list of server for the SiteMinder agent. Important: If your Policy Servers are listening on non-default ports (for example: not 44441,44442,44443), you must add the port property for each policy server manually in the ExternalAccessControlService.properties file.
 
     -   **Default value**
 
-        your.Policy.Server.ipaddress
+        `your.Policy.Server.ipaddress`
 
     -   **Examples**
 
@@ -949,10 +945,10 @@ The following parameters enables HCL Portal to authenticate wit Netegrity SiteMi
 
     -   **Default value**
 
-        wsrp
+        `wsrp`
 
     -   **Examples**
 
-        WSRP context root:: /wsrp
+        `WSRP context root:: /wsrp`
 
 

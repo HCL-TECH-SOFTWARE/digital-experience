@@ -4,9 +4,4 @@ nav:
     - kubernetes
     - traditional
     - docker
-   # - security.md
-   # - othersoftware.md
-   # - includedsoftware.md
-   # - glossary.md
-   # - disclaimer.md
-   # - 9.5_express
+    - othersoftware.md

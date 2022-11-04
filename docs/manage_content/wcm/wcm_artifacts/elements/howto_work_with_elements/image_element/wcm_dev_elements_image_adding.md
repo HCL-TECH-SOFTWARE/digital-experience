@@ -3,12 +3,13 @@ id: wcm_dev_elements_image_adding
 title: Adding an image element to an item
 ---
 
-
+# Adding an image element to an item
 
 
 You add an image element to a site area or content item when you want the image to be used for a specific site area or content item.
 
-**Note:** You can add an element to a content item only if the manage elements feature is enabled in the authoring template that is used by the content item.
+!!!note
+    You can add an element to a content item only if the manage elements feature is enabled in the authoring template that is used by the content item.
 
 1.  Open or create a site area or content item.
 
@@ -28,21 +29,22 @@ You add an image element to a site area or content item when you want the image 
 
     1.  Click **Upload a file** to select a file to store in the image component.
 
-        **Note:** In CF06 or higher, click **Upload** to upload a file, or click **Select** to select a component. Selecting a component is useful if you need to apply different image properties to an existing image component, or store an image in a different library, or apply different access settings to the original image component. You can select a component only if this option is enabled for the image element in the authoring template that is used by the content item or site area.
+        !!!note
+            In CF06 or higher, click **Upload** to upload a file, or click **Select** to select a component. Selecting a component is useful if you need to apply different image properties to an existing image component, or store an image in a different library, or apply different access settings to the original image component. You can select a component only if this option is enabled for the image element in the authoring template that is used by the content item or site area.
 
     2.  Define the image properties:
 
         -   **Border**
 
-            Define the size of the border to appear around the image. \(0 = no border\)
+            Define the size of the border to appear around the image. (0 = no border)
 
         -   **Width**
 
-            Set the width of the image \(in pixels\). Optional.
+            Set the width of the image (in pixels). Optional.
 
         -   **Height**
 
-            Set the height of the image \(in pixels\). Optional.
+            Set the height of the image (in pixels). Optional.
 
         -   **Alternate text**
 

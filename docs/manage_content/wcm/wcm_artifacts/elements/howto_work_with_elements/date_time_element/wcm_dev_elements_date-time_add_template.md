@@ -3,7 +3,7 @@ id: wcm_dev_elements_date-time_add_template
 title: Adding a date and time element to a template
 ---
 
-
+# Adding date and time elements to a template
 
 
 You add a date and time element to an authoring template when you want the date and time element to be used by a set of items that use the same authoring template.
@@ -26,17 +26,18 @@ You add a date and time element to an authoring template when you want the date 
 
 9.  Go to the date and time element you added. Select a date and time, or do nothing if you want your content creators to select a date and time:
 
-    1.  Click ![date](../images/date.jpg) to select a date.
+    1.  Click **Date** to select a date.
 
-    2.  Click ![time](../images/time.jpg) to enter a time. Only the integers "0123456789" can be used when times are entered.
+    2.  Click **Time** to enter a time. Only the integers "0123456789" can be used when times are entered.
 
-10. Click ![properties](../images/propIcon.jpg) to open the display properties of the element. This section is where you define how the element is displayed on the item form.
+10. Click properties icon to open the display properties of the element. This section is where you define how the element is displayed on the item form.
 
     1.  To display the element as a required field select **Identify this as a required field**.
 
     2.  To hide a field on the content form from all users select **Hide field**. You must specify a default value if the field is a required field.
 
-        **Note:** Administrators and managers can choose to display hidden fields and elements in an item by clicking **Show hidden fields**.
+        !!!note
+             Administrators and managers can choose to display hidden fields and elements in an item by clicking **Show hidden fields**.
 
     3.  You can select to display both the date and time selection fields, or just date or just time.
 

@@ -24,6 +24,7 @@ You can use the WSRP implementation in HCL Portal 8.5 to do the following with y
     The HCL Portal WSRP Consumer supports both WSRP V 1.0 and WSRP V 2.0 Producer portals. It can therefore consume all two types of portlets: JSR 168 and JSR 286.
 
 
-**Note:** Currently, the WSRP Producer implementation in the portal does not support the Registration interface of the WSRP specification. This interface is optional. However, the Consumer portal can handle Producers that support WSRP registration interfaces.
+!!!note
+    Currently, the WSRP Producer implementation in the portal does not support the Registration interface of the WSRP specification. This interface is optional. However, the Consumer portal can handle Producers that support WSRP registration interfaces.
 
 

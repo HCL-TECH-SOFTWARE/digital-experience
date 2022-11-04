@@ -210,7 +210,7 @@ The content of a component is accessed from the location that is specified in th
 href="/wps/mycontenthandler/!ut/p/wcmrest/LibraryTextComponent/0d678334-69ae-4d3a-a525-91bb551e5a18"/>
 ```
 
-A complete list of media types are documented here: [Supported media types](wcm_rest_media_types.md).
+A complete list of media types are documented here: [Supported media types](../wcm_rest_referencematerial/wcm_rest_media_types.md).
 
 To update content of a library component PUT content in an accepted media type to the edit-media URL. For example:
 
@@ -254,8 +254,6 @@ This is some text to add to the component.
 ```
 
 
-**Related information**  
-
-
-[REST content formats for components and elements](../wcm/wcm_rest_content_formats.md)
+???+ info "Related information:"
+    - [REST content formats for components and elements](../../wcm_rest/wcm_rest_content_formats.md)
 

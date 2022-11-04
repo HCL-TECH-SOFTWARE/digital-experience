@@ -21,4 +21,3 @@ For example, the settings in the following table allow all authenticated users t
 |Presentation Templates|All Authenticated Portal Users|User| |
 |Content|All Authenticated Portal Users|Editor| |
 
-

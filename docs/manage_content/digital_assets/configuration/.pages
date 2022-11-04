@@ -1,8 +1,8 @@
 nav:
     - index.md
     - Configure SSO for DAM: configure_dam_sso.md
-    - Integrate Kaltura: configure_dam_kaltura.md
     - Sharing and Staging DAM Assets: staging_dam
     - DAM Extensions: dam_extensibility
     - Restore DAM version: dam_restore_image_operator.md
     - Backup and Restore DAM Images: operator_dam_backup_restore_image.md
+    - Configure Friendly URLs: configure_dam_friendlyUrl.md

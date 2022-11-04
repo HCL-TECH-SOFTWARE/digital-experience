@@ -14,7 +14,8 @@ The tag result list displays an icon for each resource that represents the resou
 
 It is possible that different resource types will use the same icon or that no icon is defined for a resource type. Refer to the topic about Federating tags to see how an icon can be configured for a resource type of federated resources.
 
-**Note:** Resources shown in the tag result list might not always show the tags that you selected from the tag cloud to start the search. This depends on how the resource has been tagged by other users. If other tags have been applied to the resource more often than the tag by which you searched, then those tags will take precedence among the tags shown for that resource. By default the tag result list shows the three most popular tags. You can configure this number for the portlet by using the Personalize option from the portlet menu. For details refer to the section about Configuring the tag result list.
+!!! note
+    Resources shown in the tag result list might not always show the tags that you selected from the tag cloud to start the search. This depends on how the resource has been tagged by other users. If other tags have been applied to the resource more often than the tag by which you searched, then those tags will take precedence among the tags shown for that resource. By default the tag result list shows the three most popular tags. You can configure this number for the portlet by using the Personalize option from the portlet menu. For details refer to the section about Configuring the tag result list.
 
 When you are on the Tag Center page, you can select additional tags from the cloud to narrow down your result list. To clear a tag, either click it in the cloud or clear it from the tag result list by clicking the **X** for that tag.
 

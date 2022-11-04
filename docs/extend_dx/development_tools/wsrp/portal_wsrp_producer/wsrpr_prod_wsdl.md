@@ -5,7 +5,7 @@ As a Producer you must provide the URL for the Producer WSDL service description
 The basic WSDL document is available under the following URL:
 
 ```
-http://producer\_portal\_host:producer\_port/WpsContextRoot/wsdl/wsrp_service.wsdl
+http://producer_portal_host:producer_port/WpsContextRoot/wsdl/wsrp_service.wsdl
 ```
 
 where `WpsContextRoot` is the portal context root that was set at installation time. You can find its value in the file `wkplc.properties`.
@@ -15,10 +15,10 @@ This URL refers to a WSDL file with the WSRP 2.0 services. When a Consumer porta
 The URL format of the WSRP service endpoint addresses is as follows:
 
 ```
-protocol://host\_name:port\_number/wsrp\_context\_root/wsrp\_port\_name
+protocol://host_name:port_number/wsrp_context_root/wsrp_port_name
 ```
 
-wsrp\_context\_root references the context root for the WSRP Producer facade servlet. The facade servlet is provided with the wps.ear enterprise application in the HCL Portal Server WSRP Facade web module wps\_facade.war and controls access to the WSRP web service engine.
+wsrp_context_root references the context root for the WSRP Producer facade servlet. The facade servlet is provided with the wps.ear enterprise application in the HCL Portal Server WSRP Facade web module wps_facade.war and controls access to the WSRP web service engine.
 
 You can change the context root for the WSRP Producer with the `modify-servlet-path` configuration task, as described in *Changing the portal URI*
 
@@ -66,7 +66,8 @@ The following table lists possible values for URL parameters:
 |portSecure|Integer, for example 443|Port number for HTTP**s** endpoint addresses|
 |hostname|Name of the host, for example localhost|The host name that is used for endpoint addresses|
 
-**Note:** The URL parameters do not modify the Producer settings and bindings. They manipulate only the content of the WSDL service description document, for example, for debugging and tracing purposes.
+!!!note
+    The URL parameters do not modify the Producer settings and bindings. They manipulate only the content of the WSDL service description document, for example, for debugging and tracing purposes.
 
 ## Settings in the portal Config Service
 
@@ -85,11 +86,6 @@ To control the default output for the WSDL document, you set the following param
     Use this property to specify the HTTP**S** port that is used for the endpoint addresses in the WSRP service WSDL document of the Producer.
 
 
-
-**Next topic:**[Securing a WSRP Producer portal](../admin-system/wsrpt_prod_prep_sec.md)
-
-**Related information**  
-
-
-[Changing the portal URI after an installation](../config/cfg_intr.md)
+???+ info "Related information"  
+    -   [Changing the portal URI after an installation](../../../../deployment/manage/siteurl_cfg/changing_portal_uri_after_install/index.md)
 

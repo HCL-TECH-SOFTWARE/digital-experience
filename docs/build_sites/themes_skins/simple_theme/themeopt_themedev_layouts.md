@@ -27,7 +27,8 @@ The layout templates use grid CSS that is defined in a module that is located in
 
 You can modify existing layouts, or you can create a new layout by copying and modifying an existing layout. Certain elements are required for layouts to work correctly. These elements include the component-container class, the name attribute, and one of the `Dnd` classes if you want to support drag-and-drop functionality.
 
-**Note:** If you add a new layout or change the title of an existing layout, update fs-type1/themes/themename/system/layouts.json with the new layout information so that the layout appears in the toolbar.
+!!! note
+    If you add a new layout or change the title of an existing layout, update fs-type1/themes/themename/system/layouts.json with the new layout information so that the layout appears in the toolbar.
 
 The following list describes the values of these required elements.
 
@@ -68,6 +69,6 @@ The following list describes the values of these required elements.
     This class is required for client-side drag-and-drop support. Mark your component container with one of these classes.
 
 
-Learn more about [Working with layout templates](themeopt_cust_layouttemp.md#). Note that not all information at this link applies to the Simple Theme.
+Learn more about [Working with layout templates](../customizing_theme/layouts/themeopt_cust_layouttemp.md). Note that not all information at this link applies to the Simple Theme.
 
 

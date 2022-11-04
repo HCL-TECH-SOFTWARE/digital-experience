@@ -17,13 +17,13 @@ You can use the client side programming model for writing your portlets. You can
 
 For the full description of the JavaScript interfaces refer to the Web 2.0 Javadoc documentation available on developerWorks.
 
--   **[Getting started with the client-side programming model for portlets](../dev-portlet/w2_clntprgmd_start.md)**  
+-   **[Getting started with the client-side programming model for portlets](w2_clntprgmd_start.md)**  
 Getting started with the client-side programming Model requires a few updates to the portlet JSPs.
--   **[Handling portlet preferences on the client](../dev-portlet/w2_clntprgmd_clntprfs.md)**  
+-   **[Handling portlet preferences on the client](w2_clntprgmd_clntprfs.md)**  
 One of the most useful aspects of the client side programming model is the ability to read, modify, and save portlet preferences on the client.
--   **[Changing portlet mode and window state on the client side](../dev-portlet/w2_clntprgmd_pltmdst.md)**  
+-   **[Changing portlet mode and window state on the client side](w2_clntprgmd_pltmdst.md)**  
 With the client-side programming model, you can handle portlet mode and window state changes entirely on the client, rather than requiring a full server-client roundtrip.
--   **[JavaScript namespacing - observing good practice](../dev-portlet/w2_clntprgmd_jsnsp.md)**  
+-   **[JavaScript namespacing - observing good practice](w2_clntprgmd_jsnsp.md)**  
 The client side context of Web programming requires good namespacing.
 
 

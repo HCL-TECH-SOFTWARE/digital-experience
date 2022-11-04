@@ -6,11 +6,12 @@ The event broker is based on a loosely coupled publish/subscribe communication m
 
 Depending on the programming model that you use, sources and targets are defined and implemented in a different way \(refer to the documentation about interoperability between events and cooperative portlets\), but on the level of concepts described here, they are treated the same way.
 
-**Note:** The following explanations apply to standard based portlets.
+!!!note
+    The following explanations apply to standard based portlets.
 
-How messages are distributed between portlets is determined by portlet wires that are defined as part of page editing. Portlet wires link a defined output of one portlet on a page to a defined input of another portlet on the same page or on a different page.
+    How messages are distributed between portlets is determined by portlet wires that are defined as part of page editing. Portlet wires link a defined output of one portlet on a page to a defined input of another portlet on the same page or on a different page.
 
-The wiring step is separate from portlet development and deployment. This allows independent development of source and target portlets, as long as both portlets use common data types and semantics for information exchange. Portlets can operate stand-alone, and, as partner portlets for the communication are added by editing pages, they can exchange information and react in a coordinated manner, and thereby improve the user experience. Conversely, as portlets are removed, the remaining portlets still work correctly.
+    The wiring step is separate from portlet development and deployment. This allows independent development of source and target portlets, as long as both portlets use common data types and semantics for information exchange. Portlets can operate stand-alone, and, as partner portlets for the communication are added by editing pages, they can exchange information and react in a coordinated manner, and thereby improve the user experience. Conversely, as portlets are removed, the remaining portlets still work correctly.
 
 
 ## Action/event and render phases
@@ -28,11 +29,13 @@ This allows the synchronization of multiple portlets within a single request-res
 
 To avoid infinite loops, event distribution will also stop when a maximum limit of portlet calls is reached; this is considered an error situation and should be avoided.
 
-**Note:** Event processing is completely sequential and never nested within one client request; each target event or action is fully processed before the next one is invoked. The portal guarantees that the order in which events are delivered to a single target preserves the order in which the events were published. However, for performance reasons, events for different targets may be re-ordered to minimize context switches.
+!!!note
+    Event processing is completely sequential and never nested within one client request; each target event or action is fully processed before the next one is invoked. The portal guarantees that the order in which events are delivered to a single target preserves the order in which the events were published. However, for performance reasons, events for different targets may be re-ordered to minimize context switches.
 
 ## Cross-page communication
 
 Wires can link source output from a portlet on one page to target events of other portlets on different pages. All targets, whether on the same page or on different pages, are processed within the action/event phase of one request cycle. A redirect to the target page can be sent only after the entire action/event phase has been completed. For details about wiring and cross-page wires, refer to the documentation about portlet wires.
 
-**Note:** This behavior implies that the target portlet that receives event or action calls from a cross-page wire can be on a different page than the current page. In other words the "current page" at execution time can be different from the page that contains the target portlet. Portlet code that relies on retrieving programmatic information about the current page context during the action/event phase should be prepared to handle this case.
+!!!note
+    This behavior implies that the target portlet that receives event or action calls from a cross-page wire can be on a different page than the current page. In other words the "current page" at execution time can be different from the page that contains the target portlet. Portlet code that relies on retrieving programmatic information about the current page context during the action/event phase should be prepared to handle this case.
 

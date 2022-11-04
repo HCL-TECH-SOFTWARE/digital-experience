@@ -1,11 +1,11 @@
-title: Build applications with the Script Application
+title: Build Script Applications
 nav:
     - index.md
-    - Script Application Editor: script_app_editor
+    - script_app_editor
     - script_app_improvements.md
     - cmd_line_push_cmd_patt_rep.md
-    - Import applications that include links to JavaScript frameworks: import_app_that_links_to_js_framework
-    - Script Application Editor actions menu overview: script_app_editor_actions_menu_overview
+    - import_app_that_links_to_js_framework
+    - script_app_editor_actions_menu_overview
     - combine_js_files.md
     - drop_app_toolbar.md
     - cmd_line_push_cfg.md

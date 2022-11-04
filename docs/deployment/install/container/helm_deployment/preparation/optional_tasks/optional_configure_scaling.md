@@ -1,4 +1,4 @@
-# Configure scaling
+# Configure Scaling
 
 The HCL Digital Experience 9.5 Kubernetes deployment using Helm allows you to configure the pod count of each individual application.
 
@@ -13,7 +13,7 @@ Even if you don't want to automatically scale your DX 9.5 deployment based on CP
 
 You can use the following syntax to reconfigure the pod count per application in your custom-values.yaml file:
 
-```
+```yaml
 # Scaling settings for deployed applications
 scaling:
   # The default amount of replicas per application
@@ -34,7 +34,7 @@ The use of HorizontalPodAutoscalers requires your cluster to have the [Kubernete
 
 You can set up the use of `HorizontalPodAutoscalers` on a per application basis using the following syntax in your custom-values.yaml file, showing Content Composer, as an example:
 
-```
+```yaml
 # Scaling settings for deployed applications
 scaling:
   # Automated scaling using HorizontalPodAutoscaler

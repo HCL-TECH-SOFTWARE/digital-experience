@@ -20,14 +20,10 @@ If you migrated from Version 8.0.0.1 with the UX Screen Flow Manager \(UXFM\) en
 
 2.  Run the following task to import your dialog definitions:
 
-    -   AIX® HP-UX Linux™ Solaris: ./xmlaccess.sh -user userID -password password -url url -in ImportSampleCode.xml -in import.xml
-    -   IBM® i: xmlaccess.sh -user userID -password password -url url -in ImportSampleCode.xml -in import.xml
-    -   Windows™: xmlaccess.bat -user userID -password password -url url -in ImportSampleCode.xml -in ImportSampleCode.xml -in import.xml
-    -   z/OS®: ./xmlaccess.sh -user userID -password password -url url -in ImportSampleCode.xml -in import.xml
+    -   AIX® and Linux™: `./xmlaccess.sh -user userID -password password -url url -in ImportSampleCode.xml -in import.xml`
+    -   Windows™: `xmlaccess.bat -user userID -password password -url url -in ImportSampleCode.xml -in ImportSampleCode.xml -in import.xml`
 
 
-**Related information**  
-
-
-[Exporting UXFM dialog definitions](../migrate/mig_pre_uxfm_exportdialog.md)
+???+ info "Related information"  
+    -   [Exporting UXFM dialog definitions](../../../preparing_source_env/prepare_ux_screenflow_mgr/mig_pre_uxfm_exportdialog.md)
 

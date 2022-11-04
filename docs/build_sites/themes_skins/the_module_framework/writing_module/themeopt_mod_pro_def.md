@@ -46,8 +46,6 @@ You can see the properties in the following example.
 ```
 
 
-**Related information**  
-
-
-[Configuring a page with lists of social objects for Tag Cloud support](../social/config_page_social_objects_tag_cloud.md)
+???+ info "Related information:"
+    - [Configuring a page with lists of social objects for Tag Cloud support](../../../social_rendering/working_with_social_objects/config_page_social_objects_tag_cloud.md)
 

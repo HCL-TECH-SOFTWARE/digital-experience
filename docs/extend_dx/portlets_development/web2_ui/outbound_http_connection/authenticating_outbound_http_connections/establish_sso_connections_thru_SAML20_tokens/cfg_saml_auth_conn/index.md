@@ -13,7 +13,8 @@ To enable a connection policy for SAML-based authentication, the following setti
     </meta-data>
     ```
 
-    **Important:** For the remaining settings, `IdpName` refers to the name of the Identity Provider that you specified in the SSO\_SAML20\_IDP setting.
+    !!!note "Important"
+            For the remaining settings, `IdpName` refers to the name of the Identity Provider that you specified in the SSO\_SAML20\_IDP setting.
 
 -   **IdpName.IDP\_HOST**
 
@@ -141,13 +142,7 @@ To enable a connection policy for SAML-based authentication, the following setti
     </meta-data>
     ```
 
-
--   **[Configuration settings for Tivoli Federated Identity Manager \(TFIM\)](../dev-portlet/outbhttp_auth_est_sso_tfim.md)**  
-Learn about establishing an SAML-based SSO connection for Tivoli Federated Identity Manager. Tivoli Federated Identity Manager must be installed and operational before an SSO connection can be established.
--   **[Configuration settings for Active Directory Federation Services \(ADFS\)](../dev-portlet/outbhttp_auth_est_sso_adfs.md)**  
-Learn about establishing a single-sign on \(SSO\) connection for Active Directory Federation Services \(ADFS\).
-
-# Adding the \(JAAS\) login module to the \(TFIM\) server
+## Adding the (JAAS) login module to the (TFIM) server
 
 The Java Authentication and Authorization Service \(JAAS\) login module is available as a plug-in. This plug-in sets the email address of the logged in user within the security context so that the email address can be used within Tivoli Federated Identity Manager.
 
@@ -158,14 +153,10 @@ The local Tivoli Federated Identity Manager server creates SAML tickets to inter
 
 The preceding modules are enabled by default.
 
-If these prerequisites are not met in your environment, or you have another way of obtaining the email address that is not stored in your User Repository, you can implement your own JAAS plug-in by using the developerWorks guidelines. For more information, see the developerWorks article *Developing a custom Java module* in the related links.
+If these prerequisites are not met in your environment, or you have another way of obtaining the email address that is not stored in your User Repository, you can implement your own JAAS plug-in by using the developerWorks guidelines. For more information, see the developerWorks article [Developing a custom Java module](https://support.hcltechsw.com/csm).
 
--   **[Configuring the Java Authentication and Authorization Service \(JAAS\) login module](../dev-portlet/config_jaas.md)**  
-The behavior of the JAAS login module is configurable. If you change the attribute name for the security context, make sure to adjust the mapping rule accordingly.
--   **[Tivoli Federated Identity Manager \(TFIM\) mapping for the Java Authentication and Authorization Service \(JAAS\) login module](../dev-portlet/tfim_mapping.md)**  
-By default, the JAAS plug-in reads a user's email address from the VMM attribute with the name mail. The JAAS plug-in sets the mail attribute in the security context. If you change the name of the attribute in the security context, update the following mapping rule accordingly.
 
-# Configuring the Java Authentication and Authorization Service \(JAAS\) login module
+### Configuring the Java Authentication and Authorization Service (JAAS) login module
 
 The behavior of the JAAS login module is configurable. If you change the attribute name for the security context, make sure to adjust the mapping rule accordingly.
 
@@ -261,7 +252,7 @@ Copying the JAAS plug-in to the AppServer directory prevents the plug-in from be
 
     3.  Exit wsadmin and restart the server.
 
-# Tivoli Federated Identity Manager \(TFIM\) mapping for the Java Authentication and Authorization Service \(JAAS\) login module
+### Tivoli Federated Identity Manager (TFIM) mapping for the Java Authentication and Authorization Service (JAAS) login module
 
 By default, the JAAS plug-in reads a user's email address from the VMM attribute with the name mail. The JAAS plug-in sets the mail attribute in the security context. If you change the name of the attribute in the security context, update the following mapping rule accordingly.
 
@@ -293,3 +284,8 @@ xmlns:stsuuser="urn:ibm:names:ITFIM:1.0:stsuuser">
         </xsl:template>
 </xsl:stylesheet>
 ```
+???+ info "Related information"
+    - [Configuration settings for Tivoli Federated Identity Manager (TFIM)](../cfg_saml_auth_conn/cfg_settings_tfim/index.md)
+    - [Configuration settings for Active Directory Federation Services (ADFS)](../cfg_saml_auth_conn/cfg_settings_adfs/index.md)
+    - [Configuring the Java Authentication and Authorization Service (JAAS) login module](../cfg_saml_auth_conn/cfg_settings_tfim/adding_jaas/config_jaas.md)
+    - [Tivoli Federated Identity Manager (TFIM) mapping for the Java Authentication and Authorization Service (JAAS) login module](../cfg_saml_auth_conn/cfg_settings_tfim/adding_jaas/tfim_mapping.md)

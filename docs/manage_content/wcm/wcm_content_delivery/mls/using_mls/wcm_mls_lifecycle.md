@@ -13,6 +13,7 @@ To keep content and components synchronized between locales, a special workflow 
     -   The item is copied into the library for later translation.
     -   The item is linked into the library if no translation is required. This applies to content items only.
     -   Nothing happens and the library is ignored.
+    
 -   **Updating**
 
     When content or components are updated in the base library, draft copies of existing published localized items are created and a notification sent to localized content owners.

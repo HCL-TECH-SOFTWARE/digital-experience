@@ -2,6 +2,7 @@
 
 Use the Digital Experience Portal Search feature to search for text that is displayed in websites that are created by HCL Web Content Manager and additional web sources integrated to your Digital Experience platform.
 
+<!--
 1.  [HCL Digital Experience Portal Search](../admin-system/admsrch.md)  
 Use HCL Digital Experience Portal Search to facilitate indexing content sources and searching for information. You can administer search services, search collections, and search scopes, as well as enhance the search experience of your portal site with the portal search portlets. Refer to the topics below for additional information.
 2.  [Searching pages](../admin-system/mp_search_pages.md)  
@@ -39,11 +40,7 @@ HCL Digital Experience provides two distinct search capabilities. You can use bo
 18. [Configuring search in a portal farm](../install/config_search_farm.md)  
 HCL Digital Experience provides two distinct search capabilities. You can use both types of search capabilities in a portal farm environment.
 19. [Configuring search collections for a virtual portal](../admin-system/advp_tsk_cgf_srchcoll.md)  
-Configuring JCR search collections for a virtual portal might require additional administration, depending on how you set up the virtual portal.
+Configuring JCR search collections for a virtual portal might require additional administration, depending on how you set up the virtual portal. -->
 
-
-**Related information**  
-
-
-[Search REST API specification](../search-rest-api/search.md)
-
+???+ info "Related information"
+    -   [Search REST API specification](../search/search-rest-api/index.md)

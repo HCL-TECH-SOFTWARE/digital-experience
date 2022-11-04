@@ -33,10 +33,8 @@ Refreshing an iWidget definition in this context means, reloading the iWidget de
 
 **Syntax:** Invoke this task as part of the ConfigEngine script as follows:
 
--   UNIX™Linux™: ./ConfigEngine.sh refresh-iwidget-definitions
--   IBM® i:
-    -   **From the UserData directory:** ConfigEngine.sh refresh-iwidget-definitions
--   Windows™: ConfigEngine.bat refresh-iwidget-definitions
+-   UNIX™ and Linux™: `./ConfigEngine.sh refresh-iwidget-definitions`
+-   Windows™: `ConfigEngine.bat refresh-iwidget-definitions`
 
 **Mandatory parameters** that you can specify through the command line or in wkplc.properties:
 

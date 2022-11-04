@@ -89,7 +89,7 @@ Some dynamic content spots can take parameters. These parameters are added to th
     Displays the edit profile page in fs-type1/themes/themename/menu-definitions/profileActions.json
 
 
--   **[Adding a status bar to the Simple Theme](../dev-theme/themeopt_themedev_statusbar_2.md)**  
+-   **[Adding a status bar to the Simple Theme](themeopt_themedev_statusbar_2.md)**  
 The status bar is an optional feature that displays system messages.
 
 

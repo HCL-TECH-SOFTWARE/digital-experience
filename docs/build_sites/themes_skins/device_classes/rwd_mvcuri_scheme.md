@@ -21,13 +21,11 @@ The following examples demonstrate some of the possible combinations:
 -   mvc:res:/hello.jsp,smartphone@,tablet@res:/hello\_tablet.jsp: Uses res:/hello.jsp as the default URI and res:/hello\_tablet.jsp as the URI for tablets. No URI is assigned for smartphones.
 -   mvc:res:/hello.jsp,smartphone+ios@res:/hello\_smartphone\_ios.jsp,\(smartphone/tablet\)+android@res:/hello\_mobile\_android.jsp: Uses res:/hello.jsp as the default URI, res:/hello\_smartphone\_ios.jsp as the URI for iOS smartphones, and res:/hello\_mobile\_android.jsp as the URI for Android smartphones and tablets.
 
-
+<!--
 **Previous topic:**[Additional information about device classes for developers](../dev-theme/themeopt_devclass_devlop.md)
 
-**Next topic:**[Creating and deleting device classes](../dev-theme/themeopt_devclass_working.md)
+**Next topic:**[Creating and deleting device classes](../dev-theme/themeopt_devclass_working.md) -->
 
-**Related information**  
-
-
-[Target MobileFirst resources](../integrate/wl_device_classes.md)
+???+ info "Related information"
+    - [Target MobileFirst resources](../../../extend_dx/integration/ibm_mobilefirst/wl_device_classes.md)
 

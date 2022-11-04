@@ -20,7 +20,6 @@ Proceed as follows:
 
     -   Change the administrator user ID and the password by using the Manage Search administration portlet.
     -   Delete the default portal search services and collections. After a portal restart as by the next step, the portal recreates these search services and collections.
+    
 3.  Restart the HCL Portal servers.
-
-
 

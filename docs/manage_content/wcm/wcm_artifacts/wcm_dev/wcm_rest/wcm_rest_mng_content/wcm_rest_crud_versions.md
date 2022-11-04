@@ -2,7 +2,8 @@
 
 Item versions can be listed and read by using the REST service.
 
-**Note:** New with HCL Digital Experience 9.5 CF173 and CF18 higher releases: the Restore version API supports restoring content versions to a previous level. This option is available to 8.5 and 9.0 CF18 users.
+!!! note
+    New with HCL Digital Experience 9.5 CF173 and CF18 higher releases: the Restore version API supports restoring content versions to a previous level. This option is available to 8.5 and 9.0 CF18 users.
 
 ## Retrieving a list of versions
 
@@ -106,9 +107,9 @@ HTTP/1.0 200 OK
 
     This new API supports capability to restore a version of content to a previous one.
 
-    It is equivalent to the functionality and versions in the Web Content Manager user interface \(example below\):
+    It is equivalent to the functionality and versions in the Web Content Manager user interface (example below):
 
-    ![Restore_version_API_HCL_DX](../assets/Restore_Version_API_HCL_DX.png)
+    ![Restore_version_API_HCL_DX](../../../../../../assets/Restore_Version_API_HCL_DX.png)
 
 
 ## Using the Restore Version API
