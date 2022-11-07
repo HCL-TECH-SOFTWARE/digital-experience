@@ -4,7 +4,7 @@ Although syndication is configured to run automatically by default, from time to
 
 To manually update a syndication relationship:
 
-1.  Go to **Administration** \> **Portal Content**.
+1.  Go to **Administration > Portal Content**.
 
 2.  Go to either the syndicator or subscriber views.
 
@@ -46,7 +46,7 @@ To manually update a syndication relationship:
                 With CF09 or higher installed, the **Rebuild with mirror** option automatically cascades through all subscribers downstream of the syndicator that are configured with automatic syndication. Downstream automatic syndication is paused while the upstream mirror is running. Syndication can still be run manually downstream while automatic syndication is paused downstream.
 
             !!! note
-                With HCL Digital Experience 9.5 Container Update release CF173, CF18 and higher releases, an option to disable the rebuild with mirror syndication is available. This option can be set on the syndicator by setting wcm.syndication.syndicator.mirror.ui=false in the WCM **WCMConfigService** Resource Environment Provider \(REP\). This can be useful to avoid accidental mirror syndications that replace everything on the subscriber. Setting this property requires a restart of the HCL Portal server after setting.
+                With HCL Digital Experience 9.5 Container Update release CF173, CF18 and higher releases, an option to disable the rebuild with mirror syndication is available. This option can be set on the syndicator by setting wcm.syndication.syndicator.mirror.ui=false in the WCM **WCMConfigService** Resource Environment Provider (REP). This can be useful to avoid accidental mirror syndications that replace everything on the subscriber. Setting this property requires a restart of the HCL Portal server after setting.
 
             The option to disable the rebuild with mirror syndication is also available to HCL Digital Experience 8.5 and 9.0 CF18 users.
 
@@ -59,7 +59,7 @@ To manually update a syndication relationship:
         |Delete item on subscriber.|Add item on subscriber.|Add item on subscriber.|
         |Add item on syndicator.|Add item on subscriber.|Add item on subscriber.|
         |Add item on subscriber.|No action.|Purge item on subscriber.|
-        |Update item on syndicator and then update item on subscriber.|No action \(subscriber modification preserved\).|Revert item to syndicator version.|
+        |Update item on syndicator and then update item on subscriber.|No action (subscriber modification preserved).|Revert item to syndicator version.|
 
 5.  Click **Update Subscription**.
 

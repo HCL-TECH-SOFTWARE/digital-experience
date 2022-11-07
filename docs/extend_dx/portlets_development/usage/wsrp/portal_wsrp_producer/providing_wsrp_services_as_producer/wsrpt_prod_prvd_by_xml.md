@@ -59,10 +59,7 @@ To provide or withdraw the portlet by using the XML configuration interface, spe
 
 
 
-**Related information**  
-
-
-[Working with the XML configuration interface](../admin-system/adxmltsk.md)
-
-[The XML configuration interface](../admin-system/admxmlai.md)
+???+ info "Related information"
+    -   [Working with the XML configuration interface](../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
+    -   [The XML configuration interface](../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/index.md)
 
