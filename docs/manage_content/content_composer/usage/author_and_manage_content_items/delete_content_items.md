@@ -46,7 +46,7 @@ Users can also delete content from the Search Results view.
 
 2.  Click the avatar icon of the content you wish to delete. Users can choose more than one content to delete, as shown below.
 
-    ![](../../../../assets/Authoring_actions_via_HCL_CC_Dashboard.png)
+    ![](../../../../assets/Authoring_actions_multi_select_via_HCL_CC_Dashboard.png)
 
 3.  Click the **Delete** from the main header.
 4.  A pop-up will ask to confirm the **Delete** action. Click **Delete** to confirm or **Cancel** cancel action.
