@@ -38,7 +38,7 @@ Text and HCL Web Content Manager tags are then added to the different table cell
 Connect tags are advanced Web Content Manager tags that can be used to retrieve data from external sources and apply custom caching. **Process connect tags** must be selected in a presentation template form for connect tags to be processed.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Inserting an image in an element](../../../../manage_content/wcm/wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_image.md)
     - [Inserting a link in an element](../../../../manage_content/wcm/wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_link.md)
     - [Inserting element tags](../../../../manage_content/wcm/wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_tags.md)

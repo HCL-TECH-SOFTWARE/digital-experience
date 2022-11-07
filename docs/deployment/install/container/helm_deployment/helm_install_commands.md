@@ -21,7 +21,7 @@ helm install -n my-namespace -f path/to/your/custom-values.yaml your-release-nam
 -   The `my-namespace` is the namespace where your HCL Digital Experience 9.5 deployment is installed to.
 -   The `-f path/to/your/custom-values.yaml` must point to the custom-values.yaml you have created, which contains all deployment configuration.
 -   `your-release-name` is the Helm release name and prefixes all resources created in that installation, such as Pods, Services, and others.
--   path/to/hcl-dx-deployment-vX.X.X\_XXXXXXXX-XXXX.tar.gz is the HCL Digital Experience 9.5 Helm Chart that you have extracted as described earlier in the planning and preparation steps.
+-   path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz is the HCL Digital Experience 9.5 Helm Chart that you have extracted as described earlier in the planning and preparation steps.
 
 After a successful deployment, Helm responds with the following message:
 
@@ -56,7 +56,7 @@ In the following examples, replace <host-url\> with your corresponding externa
         password> -DPortalAdminPwd=<admin-password>
     ```
 
--   Design Studio \(Beta\):
+-   Design Studio (Beta):
 
     ```
         <Path to wp_profile>/ConfigEngine/ConfigEngine.sh enable-content-sites 
@@ -69,7 +69,7 @@ In the following examples, replace <host-url\> with your corresponding externa
 
 During the configuration process, you might need the following URLs to access different administration user interfaces.
 
-Use the following default URLs to access HCL Digital Experience \(Portal and WCM\), the WebSphere® Integrated Solutions Console, and the Configuration Wizard:
+Use the following default URLs to access HCL Digital Experience (Portal and WCM), the WebSphere® Integrated Solutions Console, and the Configuration Wizard:
 
 -   **HCL Digital Experience (Portal and WCM)**
 

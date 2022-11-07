@@ -13,9 +13,11 @@ Ensure you have the basic system requirements listed in the Prerequisites for th
     -   UNIX™Linux™:
         -   `./ConfigEngine.sh create-pzndemo-users -DPortalAdminPwd=``password -DWasPassword=password`
         -   `./ConfigEngine.sh install-pzndemo -DPortalAdminPwd=password -DWasPassword=password`
+
     -   Windows™:
         -   `ConfigEngine.bat create-pzndemo-users -DPortalAdminPwd=password -DWasPassword=password`
         -   `ConfigEngine.bat install-pzndemo -DPortalAdminPwd=password -DWasPassword=password`
+
 4.  Stop the HCL Portal server.
 
 5.  Restart the HCL Portal server
@@ -26,6 +28,7 @@ Ensure you have the basic system requirements listed in the Prerequisites for th
     -   marge
     -   tawana
     -   andy
+    
 7.  Navigate to **Personalization > Demo**, then click through the different pages and portlets for each user. Notice the different information that displays for each user.
 
 8.  Log out of HCL Portal.

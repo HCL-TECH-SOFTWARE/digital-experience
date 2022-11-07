@@ -19,7 +19,6 @@ When you alter the layout of your portal page, it is possible for some of your c
 -   In the Items hidden for current layout pane, select **Add All To Page** to add all hidden content to the page.
 -   In the Items hidden for current layout pane, manually remove or add content by dragging and dropping or by using the context menu for a content item.
 
-<!--
 -   **[Changing page layout](toolbar_pages_changelayout.md)**  
-You can select a different page layout from a list of predefined layouts. -->
+You can select a different page layout from a list of predefined layouts.
 

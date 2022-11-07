@@ -8,6 +8,7 @@ To specify the interval in seconds for the `sifter` to check the sift priority v
 <mentor_set_name>.pri_check_interval = 40
 ```
 
-**Note:** You can also use this setting when you are setting the time for the `sifter` to sleep during busy periods of database access. See [Sifter performance considerations](pzn_sifter_performance_considerations.md).
+!!! note 
+    You can also use this setting when you are setting the time for the `sifter` to sleep during busy periods of database access. See [Sifter performance considerations](pzn_sifter_performance_considerations.md).
 
 

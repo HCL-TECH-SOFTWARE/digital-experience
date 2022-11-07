@@ -14,7 +14,7 @@ The layouts in Content Template 4.4 have been updated so that the layout section
 
         `ConfigEngine.bat upgrade-ctc41-site -DuniqueName=UNIQUE_NAME`
 
-    -   **AIX® HP-UX Linux™ z/OS®**
+    -   **AIX® and Linux™**
 
         `./ConfigEngine.sh upgrade-ctc41-site -DuniqueName=UNIQUE_NAME`
 

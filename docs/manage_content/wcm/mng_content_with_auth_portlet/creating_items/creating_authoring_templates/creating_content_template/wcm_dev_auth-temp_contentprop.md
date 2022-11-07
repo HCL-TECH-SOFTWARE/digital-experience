@@ -1,8 +1,5 @@
 # Defining content item properties
 
-
-
-
 Specify the characteristics of the item that is generated from the content template, including the type of item to be created, where it can be saved and version control strategies.
 
 1.  Select the type of content rendering to use:
@@ -38,7 +35,7 @@ Specify the characteristics of the item that is generated from the content templ
 
 4.  Select whether content created with this content template can be saved to any available site area or only to those site areas specified by the template author.
 
-    !!! note
+    !!!note
         Restricting the location of a content item applies only when a content item is first created. Location restriction does not apply when you move, copy, link, or restore a content item, or when you save a content item as a new item.
 
     -   **All available site areas**
@@ -68,7 +65,7 @@ Specify the characteristics of the item that is generated from the content templ
 
                 Content is automatically saved to the site areas in the list, and the content author is not provided a choice when the content is saved.
 
-    !!! note
+    !!!note
         When you save content under multiple site areas, the content item is saved under the first site area in the list and then linked to the other site areas.
 
 5.  Specify where new content created from this content template is listed by selecting one of the following options from the **Placement of new content item** field. The option that you select determines where the new content item is displayed in indexes and navigators.

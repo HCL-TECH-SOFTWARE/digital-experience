@@ -7,8 +7,6 @@ The FeedbackListener processes all log event types. Each page request \(JSP invo
 An instance of the FeedbackListener is active on all run-time servers whenever logging is enabled.
 
 
-**Related information**  
-
-
-[Feedback database schema](../pzn/pzn_feedback_db_schema.md)
+???+ info "Related information:"
+    - [Feedback database schema](../../feedback_db_schema/pzn_feedback_db_schema.md)
 

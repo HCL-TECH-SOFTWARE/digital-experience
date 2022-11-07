@@ -50,8 +50,6 @@ The following table identifies the minimum privileges that are needed to correct
 |Drop views|No|No|No|Yes|No|No|
 
 
-<!--- ???Info**Related information**  
-
-
-[Database transfer: Granting privileges to database users for DB2 for i](../config/unix_db2i_priv_dbusers_common.md) --->
+???+ Info "Related information:"
+    - [Database transfer: Granting privileges to database users for DB2 for i](../../../../deployment/manage/db_mgmt_sys/dbtransfer_manual/unix_db2i_priv_dbusers_common.md)
 

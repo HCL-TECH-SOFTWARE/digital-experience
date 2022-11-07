@@ -9,6 +9,7 @@ View the steps to uninstall Personalization sample demo, database, and users.
     -   UNIX™Linux™:
         -   `./ConfigEngine.sh remove-pzndemo -DPortalAdminPwd=password -DWasPassword=password`
         -   `./ConfigEngine.sh remove-pzndemo-users -DPortalAdminPwd=password -DWasPassword=password`
+        
     -   Windows™:
         -   `ConfigEngine.bat remove-pzndemo -DPortalAdminPwd=password -DWasPassword=password`
         -   `ConfigEngine.bat remove-pzndemo-users -DPortalAdminPwd=password -DWasPassword=password`

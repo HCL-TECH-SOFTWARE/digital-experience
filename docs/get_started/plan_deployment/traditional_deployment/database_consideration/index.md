@@ -26,19 +26,19 @@ Transfer data to another supported database before you use the portal extensivel
 
 Use the wizard to either create scripts that you or your database administrator can use to create databases, create database user IDs, and configure database user ID privileges. The wizard collects information about your database management system, the database topology you want, the user IDs you require, and more. Then, it generated custom scripts and instructions.
 
-<!---
--   **[Database users](../plan/dbusers_common.md)**  
+
+-   **[Database users](dbusers_common.md)**  
 Become familiar with the privileges required for each user type to work with the database domains of HCL Portal and the commands for creating database configuration users and granting privileges.
--   **[Database topologies](../plan/db_topology.md)**  
+-   **[Database topologies](db_topology.md)**  
 Consider the database configuration options in relation to your HCL Portal deployment scenario.
--   **[Portal database domains](../plan/db_domains.md)**  
+-   **[Portal database domains](db_domains.md)**  
 Sets of databases tables and schemas for portal resources are called database domains. Database domains classify and help you determine how to distribute portal data.
--   **[JDBC type 2 and type 4 drivers](../plan/db_jdbc_type.md)**  
+-   **[JDBC type 2 and type 4 drivers](db_jdbc_type.md)**  
 The Configuration Wizard uses JDBC type 4 drivers by default. You can change the default selection in the Configuration Wizard.
--   **[Shared database domains](../plan/db_domains_shared.md)**  
+-   **[Shared database domains](db_domains_shared.md)**  
 To maximize data availability, you can distribute portal data across multiple databases and for some domains, share data between multiple lines of production.
 
-
+<!--
 **Related information**  
 
 

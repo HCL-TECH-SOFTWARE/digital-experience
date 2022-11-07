@@ -4,7 +4,7 @@ The reserved authoring portlet is essential to the proper operation of web conte
 
 1.  Log in to the portal as an administrator.
 
-2.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface** \> **Manage Pages**.
+2.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface > **Manage Pages**.
 
 3.  Search for the page with the unique name of `com.ibm.wps.hiddenpage.wcm.Authoring_Portlet`.
 
@@ -12,14 +12,15 @@ The reserved authoring portlet is essential to the proper operation of web conte
 
 5.  Select **Edit shared settings** from the portlet menu, and specify any settings for the reserved authoring portlet. The available settings and the process for updating them is the same for the reserved authoring portlet as it is for any other instance of the authoring portlet.
 
-    **Note:** Changes made to the reserved authoring portlet with the **Edit shared settings** mode affect only the reserved authoring portlet and no other instances of the authoring portlet. To ensure a consistent authoring experience, you can make the same changes to other authoring portlet instances by using the **Edit shared settings** mode for each instance. Alternatively, you can make the same changes to every instance of the authoring portlet by using the **Configure** mode from a single instance. Changes that you make in the **Configure** mode also affect the reserved authoring portlet.
+    !!!note
+        Changes made to the reserved authoring portlet with the **Edit shared settings** mode affect only the reserved authoring portlet and no other instances of the authoring portlet. To ensure a consistent authoring experience, you can make the same changes to other authoring portlet instances by using the **Edit shared settings** mode for each instance. Alternatively, you can make the same changes to every instance of the authoring portlet by using the **Configure** mode from a single instance. Changes that you make in the **Configure** mode also affect the reserved authoring portlet.
 
 6.  Save your changes.
 
 
 
-**Related information**  
+<!-- **Related information**  
 
 
-[New Web Content Manager features](../wcm/wcm_migration_post_functions.md)
+[New Web Content Manager features](../wcm/wcm_migration_post_functions.md) -->
 

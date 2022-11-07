@@ -3,8 +3,7 @@ id: wcm_dev_content_linking_removing
 title: How to remove content item links from site areas
 ---
 
-
-
+# How to remove content item links from site areas
 
 You remove content items from site areas with the **Remove Links** or **Link** featured. This procedure is different from deleting content items because the content you choose to remove is removed from a site area, but not from the web content library.
 

@@ -10,12 +10,14 @@ When the automatic cache entry clearing feature is enabled, content authors can 
 
 2.  Run the pzn-disable-Force-Cache-Refresh configuration task to disable this feature or run the pzn-force-enable-Force-Cache-Refresh configuration task to enable this feature.
 
+    |Option|Description|
+    |---|--------------|
     |**Disable automatic cache clearing**|    -   AIX® and Linux™: `./ConfigEngine.sh pzn-disable-Force-Cache-Refresh` <br> -   Windows™: `ConfigEngine.bat pzn-disable-Force-Cache-Refresh`|
     |**Enable automatic cache clearing**|    -   AIX and Linux: `./ConfigEngine.sh pzn-force-enable-Force-Cache-Refresh` <br> -   Windows: `ConfigEngine.bat pzn-force-enable-Force-Cache-Refresh`|
 
 3.  Restart your server to apply your changes. In a clustered environment, restart all cluster nodes.
 
 
-???+ info "Related information"  
+???+ info "Related information:"  
     -   [Portal server performance tuning tool](../../../../deployment/manage/tune_servers/wp_tune_tool.md)
 

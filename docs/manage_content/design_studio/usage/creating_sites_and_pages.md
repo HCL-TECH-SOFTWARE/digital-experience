@@ -97,7 +97,7 @@ There are two ways to choose a location when creating a new page from **Sites** 
 ### Choosing location by navigation
   1.  Navigate to the target site location. In the Palace Hotel demo site example below, you can create a new page under **Profile Page**:
 
-      ![Navigate to target location and create a new site page../usage/_img/Navigate%20to%20target%20location%20and%20create%20a%20new%20site%20page.png)
+      ![Navigate to target location and create a new site page](../usage/_img/Navigate%20to%20target%20location%20and%20create%20a%20new%20site%20page.png)
 
   2.  Type in the name of the new page. You can choose the pre-populated location last selected in **Sites** overview, or type in the name of the new location, as shown below:
 
@@ -309,7 +309,8 @@ There are three ways to delete a page in the new Design Studio (Beta).
 
       ![Delete page in Page editor](../usage/_img/delete_page_from_page_editor.png)
 
+<!--
 ## HCL Digital Experience Solution Feedback
 
-HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).
+HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1). -->
 

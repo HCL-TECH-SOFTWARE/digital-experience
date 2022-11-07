@@ -1,9 +1,9 @@
 ---
 id: wcm_dev_elements_link_adding
-title: Adding a Link Element to an Item
+title: Adding a ink element to an item
 ---
 
-
+# Adding a ink element to an item
 
 
 You add a link element to a site area or content item when you want a link to be used for a specific site area or content item.

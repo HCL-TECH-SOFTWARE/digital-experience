@@ -3,7 +3,6 @@ nav:
     - cluster_guidelines.md
     - cluster_limitations.md
     - clus_plan_http_failover.md
-    - clus_plan_iseries_db.md
     - plan_clussec.md
     - securityscenarios.md
     - clus_plan_esm.md

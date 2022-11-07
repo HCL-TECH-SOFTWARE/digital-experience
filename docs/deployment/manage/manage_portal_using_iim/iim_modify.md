@@ -16,10 +16,7 @@ Complete the following steps to modify your environment using the Installation M
 
 
 
-**Related information**  
-
-
-[Create an HCL Portal profile](../config/cw_create_profile.md)
-
-[Remove an HCL Portal profile](../config/cw_remove_profile.md)
+???+ info "Related information"
+    -   [Create an HCL Portal profile](../../../deployment/manage/profile/cw_create_profile.md)
+    -   [Remove an HCL Portal profile](../../../deployment/manage/profile/cw_remove_profile.md)
 

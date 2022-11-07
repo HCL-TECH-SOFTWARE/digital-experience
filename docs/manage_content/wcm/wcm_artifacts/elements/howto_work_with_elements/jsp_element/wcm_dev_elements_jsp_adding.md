@@ -3,7 +3,7 @@ id: wcm_dev_elements_jsp_adding
 title: Adding a JSP element to an item
 ---
 
-
+# Adding a JSP element to an item
 
 
 You add a JSP element to a site area or content item when you want a section of JSP to be used for a specific site area or content item.

@@ -1,8 +1,5 @@
 # Defining site area properties
 
-
-
-
 Specify the characteristics of the item that is generated from the site area template, including the type of item to be created, where it can be saved and version control.
 
 1.  If you want to define a default presentation template for site areas that use this site area template, click **Select Presentation Template** to select an appropriate presentation template for different types of rendering.

@@ -34,7 +34,7 @@ To use a content page resolution filter, you must create a content page resoluti
 
         This method is started during `ContentPageResolution` processing. The `response` parameter is used to modify the content item that is displayed, the portal page where the content is displayed, and the presentation template that is used to render the content item. The request extends the resolver interface with an extra method that gets the content item that is addressed. The filter chain contains the subsequent filters that can be started if needed.
 
-    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer_root](../reference/wpsdirstr.md#wp_root)/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
+    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the [PortalServer_root](../../../../../guide_me/wpsdirstr.md)`/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
 
 2.  A plugin.xml file is needed whether the deployment is done by using a WAR or EAR, or by using a loose jar. If deploying with an application in a WAR or EAR, include the plugin.xml file in the application's "WEB-INF" folder. When using a jar, include the plugin.xml in the root of the jar.
 

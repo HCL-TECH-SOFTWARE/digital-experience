@@ -80,7 +80,7 @@ networking:
     ssl: "true"
 ```
 
-Please refer to the original values.yaml for all available applications that can be configured. See the [Planning your container deployment using Helm](/install/container/index.md) topic for details.
+Please refer to the original values.yaml for all available applications that can be configured. See the [Planning your container deployment using Helm](../../../../container/index.md) topic for details.
 
 ## Configure HAProxy certificate
 
@@ -175,13 +175,13 @@ You can set the name of the certificate used with the following syntax, the defa
 ### OpenShift Passthrough
 Helm charts have an `openShiftPassthrough` value to create a `Route` resource, which only passes through the main HAProxy port (443 most of the time). Instead of having such a flavor-specific configuration in Helm charts, such setups are documented and point to the flavor-specific documentation and will be deprecated.
 
-The default value set for "openShiftPassthrough" is `auto` i.e it detects Openshift deployments automatically. Even though it is not manually enabled it will be active by default. To prevent this it needs to be manually disabled. This can be done by setting "openShiftPassthrough" to `false`
+The default value set for "openShiftPassthrough" is `auto` i.e it detects OpenShift deployments automatically. Even though it is not manually enabled it will be active by default. To prevent this it needs to be manually disabled. This can be done by setting "openShiftPassthrough" to `false`
 
 !!! note
     The "openShiftPassthrough" value is deprecated and if "openShiftPassthrough" is to be used a new route resource must be created manually 
 
 #### Create the route resource manually
-If you want to deploy Openshift manually using Routes, you need to create a .yaml file like below and any changes required can be made in that. To apply those change the the Openshift cluster you can run `kubectl apply` and specify its namespace and location.
+If you want to deploy OpenShift manually using Routes, you need to create a .yaml file like below and any changes required can be made in that. To apply those change the the OpenShift cluster you can run `kubectl apply` and specify its namespace and location.
 For more information, refer to the [OpenShift Route Configuration](https://docs.openshift.com/container-platform/latest/networking/routes/route-configuration.html) documentation.
 
 ```yaml

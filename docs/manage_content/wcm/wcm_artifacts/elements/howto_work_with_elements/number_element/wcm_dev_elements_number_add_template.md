@@ -1,9 +1,9 @@
 ---
 id: wcm_dev_elements_number_add_template
-title: Adding a Number Element to a Template
+title: Adding a number element to a template
 ---
 
-
+# Adding a number element to a template
 
 
 You add a number element to an authoring template when you want the number element to be used by a set of items that use the same authoring template.

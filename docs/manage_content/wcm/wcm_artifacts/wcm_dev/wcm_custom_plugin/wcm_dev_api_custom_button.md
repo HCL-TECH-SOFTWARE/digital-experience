@@ -14,7 +14,7 @@ Each extension adds an optional single button to the Read or Edit mode of an ite
 
         This method returns a number that determines where the button is placed relative to any other buttons created by other AuthoringAction classes. The button with the lowest number is listed first.
 
-    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer_root](../reference/wpsdirstr.md#wp_root)/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
+    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the [PortalServer_root](../../../../../guide_me/wpsdirstr.md)`/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
 
 2.  Implement the `ActionResult execute(final FormContext formContext)` method, which is started when the user clicks the button.
 

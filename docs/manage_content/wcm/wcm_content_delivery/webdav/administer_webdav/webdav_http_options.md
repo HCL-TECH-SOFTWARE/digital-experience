@@ -6,7 +6,7 @@ To enable this WAR file, adapt the application.xml files of the deployed Enterpr
 
 1.  Export the EAR, wps.earWebDAV for WebSphere Portal, through the WebSphere® Integrated Solutions Console.
 
-2.  Open a command prompt. Under z/OS®, open a UNIX System Services (USS) command prompt.
+2.  Open a command prompt.
 
 3.  Run the following command to expand the EAR:
 

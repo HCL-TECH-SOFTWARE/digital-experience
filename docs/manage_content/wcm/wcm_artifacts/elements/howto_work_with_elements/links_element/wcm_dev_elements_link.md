@@ -1,4 +1,4 @@
-# Link Element
+# Link element
 
 A link element stores a link to a web content item, or to external content such as a web page.
 

@@ -25,5 +25,5 @@ The benefit to creating new categories for the Page Component palette by using t
 
 
 ???+ info "Related information"
-    - [Creating site areas](../../../../../manage_content/wcm/wcm_content_delivery/wcm_user_assistance/mng_content_with_auth_portlet/creating_items/wcm_dev_sites_items_creating.md)
+    - [Creating site areas](../../../../../manage_content/wcm/mng_content_with_auth_portlet/creating_items/wcm_dev_sites_items_creating.md)
 

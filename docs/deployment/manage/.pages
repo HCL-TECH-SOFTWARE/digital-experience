@@ -11,6 +11,7 @@ nav:
     - port_chg.md
     - Changing your site URL: siteurl_cfg
     - Configuring portal behavior: config_portal_behavior
+    - Portal administration tools: portal_admin_tools
     - Managing Interim Fixes for HCL Portal: manage_portal_using_iim
     - Web server: config_webservers
     - Database Management Systems: db_mgmt_sys
