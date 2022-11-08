@@ -23,6 +23,24 @@ The supported software section specifies the additional software that HCL Digita
 |-----------|-----|------------------|-----|------|-------------|
 |Rational Application Developer for WebSphere|9.7|9.7 and later maintenance|9.5|Full|No|
 
+## JDBC Drivers
+|Supported Software|Version|Supported software minimum|Product minimum|Components|Operating System Restrictions?|
+|-----------|-----|------------------|-----|------|-------------|
+|DB2 Connect Enterprise Edition|11.1|11.1, and later maintenance releases|9.5|Full|No|
+|IBM Application Connectivity for DB2 for z/OS Feature|All versions|and later maintenance releases|9.5|Full|No|
+|IBM DB2 Universal JDBC Provider (XA) from DB2 z/OS (type 2)|All versions and future fix packs*|and later maintenance releases|9.5|Full|No|
+|IBM DB2 Universal JDBC Provider (XA) from DB2 z/OS (type 4)|All versions**|and later maintenance releases|9.5|Full|No|
+|IBM Data Server Driver for JDBC and SQLJ|4.21 (11.1)|4.21 (11.1)<br>No future versions, releases, or fix packs supported.|9.5|Full|No|
+|Microsoft SQL Server JDBC Driver|4.2|4.2, and later maintenance releases|9.5|Full|No|
+||6.2|6.2, and later maintenance releases|9.5|Full|No|
+|Oracle JDBC Driver 12.c|12.2***|12.2, and later maintenance releases|9.5|Full|No|
+
+*JDBC drivers are shipped as DB2 for z/OS APARs. You can check for the appropriate APAR/PTF numbers in the DB2 for z/OS Infocenter, 'Programming for DB2 > Programming for Java > Supported drivers for JDBC and SQLJ'. Obtain the PTFs from DB2 on z/OS support or IBMLINK. Version 3.58 and later are supported.
+
+**Requires APAR PK93123 for DB2 on z/OS V9.1. You can obtain the fix from DB2 on z/OS support or IBMLINK.
+
+***Oracle JDBC Driver Thin (type 4) Oracle JDBC Driver Thick, TAF (type 2) - Supported on Linux operating systems only.
+
 ## LDAP Servers 
 All LDAP Servers that support the LDAP V3 Specification are supported.
 
