@@ -5,7 +5,7 @@ This document provides minimum system requirements for version 9.5 of HCL Digita
 Detailed system requirements are the complete lists of hardware requirements, supported operating systems, prerequisites and optional supported software, with component-level details and operating system restrictions.
 
 - Kubernetes
-    - [Kubernetes runtime](../system_requirements/kubernetes/kubernetes-runtime.md)
+    - [Kubernetes Runtime](kubernetes/kubernetes-runtime.md)
     - [Databases](kubernetes/databases.md)
 
 - Traditional Deployments

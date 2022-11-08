@@ -36,6 +36,16 @@ All LDAP Servers that support the LDAP V3 Specification are supported.
 |Dojo Toolkit|1.9|1.9|9.5|Full|No|
 |IBM License Metric Tool|9.2|9.2 and later maintenance|9.5|Full|No|
 
+## Security Management
+|Supported Software|Version|Supported software minimum|Product minimum|Components|Operating System Restrictions?|
+|-----------|-----|------------------|-----|------|-------------|
+|CA Siteminder|12.0*|12.0, and later maintenance releases|9.5|Full|No|
+|IBM Security Access Manager|9.0|9.0, and later maintenance releases|9.5|Full|No|
+|IBM Security Access Manager for Web|7.0|7.0, and later maintenance releases|9.5|Full|No|
+|Tivoli Directory Integrator|7.1.1|7.1.1, and later maintenance releases|9.5|Full|No|
+
+*For AIX customers, AIX 7.1 or later is required. Please note this product does not support JDK 8.
+
 ## Web Browsers 
 |Supported Software|Supported software minimum and later|Product minimum|Components|Operating System Restrictions?|
 |-----------|-----|------------------|-----|------|
@@ -58,7 +68,7 @@ All LDAP Servers that support the LDAP V3 Specification are supported.
 ||9.0.5|9.0.5 and later maintenance|9.5|Full|No|
 |Microsoft Internet Information Services|10.0|10.0 and later maintenance|9.5|Full|No|
 
-* IBM HTTP Server 8.5.5 is only supported with HCL Digital Experience Server V8.5.5.x.
+*IBM HTTP Server 8.5.5 is only supported with HCL Digital Experience Server V8.5.5.x.
 
 ## WebDAV Client 
 |Supported Software|Version|Supported software minimum|Product minimum|Components|Operating System Restrictions?|
