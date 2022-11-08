@@ -2,9 +2,7 @@
 id: wcm_dev_projects_form_access_temp
 title: Template defined project access settings
 ---
-
-
-
+# Template defined project access settings
 
 Define the default access settings for any projects that are created by using a project template.
 

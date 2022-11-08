@@ -43,7 +43,7 @@ An absolute date specifies the date and time the document expires.
 
 To indicate a time, use the following format:
 
--   ABS \{date and time\}
+-   ABS {date and time}
 
 For example:
 
@@ -70,9 +70,10 @@ Rather than specifying a fixed time for the expiry of cached data, the expiry ca
 
 To indicate a relative time use the following format:
 
--   REL \{integer\}\{units\}
+-   REL {integer}{units}
 
-**Note:** The space after REL is required.
+!!!note
+    The space after REL is required.
 
 The integer specifies a whole number of time units. Decimal numbers are not supported. The units are specified by using a single case-insensitive character:
 
@@ -91,21 +92,17 @@ The integer specifies a whole number of time units. Decimal numbers are not supp
 
 |
 
-The first example indicates an expiry of two months. The second indicates 9000 seconds \(2.5 hours\).
+The first example indicates an expiry of two months. The second indicates 9000 seconds (2.5 hours).
 
-By design only seconds, hours, days, or months can be specified. Minutes are not supported to simplify the interface \(M is used for months\). Instead, a multiple of seconds can be used \(for example, 300 seconds for 5 minutes\).
+By design only seconds, hours, days, or months can be specified. Minutes are not supported to simplify the interface (M is used for months). Instead, a multiple of seconds can be used (for example, 300 seconds for 5 minutes).
 
 ## Caching, content updates, and syndication
 
 When an item is updated, either directly or as a result of syndication, no cache is updated. The rendered item is not updated until each configured cache is expired. It is important to choose cache timeout parameters that compliment your syndication strategy.
 
 
-**Related information**  
-
-
-[Strategies for expiring content](../wcm/wcm_config_delivery_caching_expiring.md)
-
-[Controlling access to hosts specified in a URL](../wcm/wcm_config_accesshost.md)
-
-[Setting service configuration properties](../admin-system/adsetcfg.md)
+???+ info "Related information" 
+    -   [Strategies for expiring content](../../../../manage_content/wcm/wcm_content_delivery/cfg_webcontent_delivery_env/caching_options/wcm_config_delivery_caching_expiring.md)
+    -   [Controlling access to hosts specified in a URL](../../../../manage_content/wcm/wcm_management/further_cfg_options/wcm_config_accesshost.md)
+    -   [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 

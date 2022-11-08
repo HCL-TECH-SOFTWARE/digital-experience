@@ -796,7 +796,7 @@ The following markup tags are supported.
     -   node: The node scope of the resource action.
     -   required: The Boolean value that is used to tell WebSphere if this property is required or not.
     -   server: The server scope of the resource action.
-    -   zosProcessDefType: z/OS® only: Used to tell which region this property is created for: Servant, Control, or Abjunct. The value defaults to Servant.
+    -   zosProcessDefType: Used to tell which region this property is created for: Servant, Control, or Abjunct. The value defaults to Servant.
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.JVMCustomPropertyCreateImpl class implements this task.
@@ -821,7 +821,7 @@ The following markup tags are supported.
     -   cell: The cell scope of the resource action. The scope is global.
     -   node: The node scope of the resource action.
     -   server: The server scope of the resource action.
-    -   zosProcessDefType: z/OS® only: Used to tell which region this property is removed from: Servant, Control, or Abjunct. The value defaults to Servant.
+    -   zosProcessDefType: Used to tell which region this property is removed from: Servant, Control, or Abjunct. The value defaults to Servant.
 -   **Implementation bean**
 
     The com.ibm.wplc.deploy.tasks.impl.JVMCustomPropertyRemoveImpl class implements this task.

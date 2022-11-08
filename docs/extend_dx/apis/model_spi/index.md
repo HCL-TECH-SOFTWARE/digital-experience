@@ -1,6 +1,6 @@
 # Model SPI Overview
 
-Models provide information that is needed by HCL Portal to perform tasks such as content aggregation or building navigation to browse the aggregated content. The information that is aggregated is represented through models that can be accessed programmatically by using the Model SPI \(read-only\). The information of a model is usually persistent \(stored in a database\) but can also be transient \(computed and stored only in memory\). Models can be represented by using a tree structure \(nodes have a parent-child relationship\), a list structure, or a selection structure \(a selected element in a tree structure\).
+Models provide information that is needed by HCL Portal to perform tasks such as content aggregation or building navigation to browse the aggregated content. The information that is aggregated is represented through models that can be accessed programmatically by using the Model SPI (read-only). The information of a model is usually persistent (stored in a database) but can also be transient (computed and stored only in memory). Models can be represented by using a tree structure (nodes have a parent-child relationship), a list structure, or a selection structure (a selected element in a tree structure).
 
 The following models can be obtained by using the Model SPI:
 
@@ -26,7 +26,7 @@ The following models can be obtained by using the Model SPI:
 
 -   **Layout Model**
 
-    Describes the layout of a page, which is composed of layout nodes. Layout nodes can be containers, which affect the layout of the page \(rows and columns\), or controls, which affect the content \(portlets\) of a page.
+    Describes the layout of a page, which is composed of layout nodes. Layout nodes can be containers, which affect the layout of the page (rows and columns), or controls, which affect the content (portlets) of a page.
 
 -   **Markup List**
 
@@ -73,20 +73,20 @@ The concept of virtual portals scopes some models to the virtual portal in which
 
 The `com.ibm.portal` package holds interfaces that are commonly used throughout the object model. This document describes important interfaces and classes that are found in the object model. It does not describe every class. For the complete information about all interfaces, read the Javadoc documentation.
 
-Most resources carry an identifier. You can use it to address or locate them. This identifier is defined with the interface Identifiable, by which you can retrieve the ID of an element. An object ID uniquely identifies an element in an installation - and beyond \(the ID is also called GUID - globally unique ID\). An object ID can optionally have a unique name assigned \(a name that can exist only once per installation\) to make it easier to address specific elements.
+Most resources carry an identifier. You can use it to address or locate them. This identifier is defined with the interface Identifiable, by which you can retrieve the ID of an element. An object ID uniquely identifies an element in an installation - and beyond (the ID is also called GUID - globally unique ID). An object ID can optionally have a unique name assigned (a name that can exist only once per installation) to make it easier to address specific elements.
 
-Do not use `toString` on object IDs - a human readable representation is returned that cannot be parsed back into an ObjectID object. For conversion between an ObjectID object and its string representation, the Identification interface is used \(see package `com.ibm.portal.identification`\).
+Do not use `toString` on object IDs - a human readable representation is returned that cannot be parsed back into an ObjectID object. For conversion between an ObjectID object and its string representation, the Identification interface is used (see package `com.ibm.portal.identification`).
 
 A common operation is to search for resources that have a specific object ID. To perform this search in a general way, the concept of a Locator is introduced: A locator is provided by a model and allows searching for elements of the model in specific ways. To obtain such a locator object, you must use the getLocator method of an object that implements the LocatorProvider interface.
 
-You can use the generic locator interface to locate a resource by its object ID \(findByObjectID\) or by its unique name \(findByUniqueName\). Some models provide specialized locators that extend the generic locator to provide more search functions such as search by title or some other criterion.
+You can use the generic locator interface to locate a resource by its object ID (findByObjectID) or by its unique name (findByUniqueName). Some models provide specialized locators that extend the generic locator to provide more search functions such as search by title or some other criterion.
 
 On a generic level, models are either lists or trees. Therefore, a TreeModel and a ListModel interface exist in the main package. In a tree model, you can perform the following tasks.
 
--   Obtain the root node of a tree model \(getRoot\)
--   Query the children of a node of the model \(hasChildren\)
--   Obtain the children of a node of the model \(getChildren\)
--   Obtain the parent of a node of the model \(getParent\)
+-   Obtain the root node of a tree model (getRoot)
+-   Query the children of a node of the model (hasChildren)
+-   Obtain the children of a node of the model (getChildren)
+-   Obtain the parent of a node of the model (getParent)
 
 With these methods, it is possible to explore a tree model. You must obtain the input arguments that represent nodes of the model from the model itself.
 
@@ -96,9 +96,9 @@ Some models also take on the form of a list, for example the list of markups or 
 
 List models become searchable the same way by which tree models do: SearchableListModel is a list model that also extends from LocatorProvider.
 
-A widespread interface on elements of models is Localized. This interface provides a title and description of an element. Title and description are properties that are locale-dependant. To obtain a title or description call getTitle\(Locale\) or getDescription\(Locale\), depending on the case.
+A widespread interface on elements of models is Localized. This interface provides a title and description of an element. Title and description are properties that are locale-dependant. To obtain a title or description call getTitle(Locale) or getDescription(Locale), depending on the case.
 
-**Note:** An element returns a title or description only if such information exists in the exact locale that is passed in to the methods mentioned. No fallback mechanism is implemented inside of these methods. A suitable fallback mechanism must be employed by invokers of the methods of Localized, or the default that is provided by LocalizedStringResolver \(see package `com.ibm.portal.model`\) can be used.
+**Note:** An element returns a title or description only if such information exists in the exact locale that is passed in to the methods mentioned. No fallback mechanism is implemented inside of these methods. A suitable fallback mechanism must be employed by invokers of the methods of Localized, or the default that is provided by LocalizedStringResolver (see package `com.ibm.portal.model`) can be used.
 
 -   **[Sub packages of the Model SPI](../dev/dgn_modelpkg.md)**  
 Sub packages provide information on installed resources, hold Identification interface, and define the navigational model and the content that is represented in the Portal. The sub packages also represent portlets and their configuration data in the portal and the interconnections between the portlets.

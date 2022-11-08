@@ -20,7 +20,7 @@ The developer can take one of the following approaches to convert this query obj
 
     2.  IBM® DB2 Universal Database™ Enterprise Server Edition: (com.ibm.websphere.query.callbacks.DB2SqlSelectQueryCallback)
     3.  IBM DB2 Universal Database for z/OS®: (com.ibm.websphere.query.callbacks.DB2390SqlSelectQueryCallback)
-    4.  IBM DB2 Universal Database for i:\(com.ibm.websphere.query.callbacks.DB2400SqlSelectQueryCallback)
+    4.  IBM DB2 Universal Database for i:(com.ibm.websphere.query.callbacks.DB2400SqlSelectQueryCallback)
     5.  Apache Derby: (com.ibm.websphere.query.callbacks.DerbySqlSelectQueryCallback)
     6.  Oracle Enterprise Edition: (com.ibm.websphere.query.callbacks.OracleSelectQueryCallback)
     7.  LDAP: (com.ibm.websphere.query.callbacks.LdapSelectQueryCallback)

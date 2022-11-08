@@ -4,9 +4,7 @@ The interface com.ibm.websphere.personalization.resources.Resource enables mappi
 
 |Method|Explanation|
 |------|-----------|
-|getId\(\)|Returns the primary key or identifier for this resource. The primary key must be a string and unique within the resource collection. This method behaves in coordination with the findById method of the associated resource manager class such that the following method returns true:`manager.findById(resource.getId(), context).getId().equals(resource.getId())`
-
-|
+|getId\(\)|Returns the primary key or identifier for this resource. The primary key must be a string and unique within the resource collection. This method behaves in coordination with the findById method of the associated resource manager class such that the following method returns true:`manager.findById(resource.getId(), context).getId().equals(resource.getId())`|
 |get\(String name\)|Returns the value of the specified dynamic property for this resource|
 |keys\(\)|Returns all \(an Enumeration\) of the dynamic property keys associated with this resource|
 |put\(String name, Object value\)|Sets the specified dynamic property for this resource|

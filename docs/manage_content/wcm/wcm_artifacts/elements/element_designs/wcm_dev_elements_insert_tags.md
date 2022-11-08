@@ -1,4 +1,4 @@
-# Inserting Element Tags
+# Inserting element tags
 
 You can insert elements tags for all the elements of a selected authoring template into the design of a presentation element.
 

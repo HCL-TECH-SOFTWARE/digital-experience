@@ -18,7 +18,7 @@ Complete the following steps to manage your Single Sign-on settings:
 
 7.  Restart all servers in the cell, including the node agents and the deployment manager.
 
-**Related information**  
-[Starting and stopping servers, deployment managers, and node agents](../../stopstart.md)<br>
-[Single sign-on settings](https://www.ibm.com/docs/en/was-nd/8.5.5?topic=webseal-single-sign-settings)
+???+ info "Related information"  
+    -   [Starting and stopping servers, deployment managers, and node agents](../../stopstart.md)
+    -   [Single sign-on settings](https://www.ibm.com/docs/en/was-nd/8.5.5?topic=webseal-single-sign-settings)
 

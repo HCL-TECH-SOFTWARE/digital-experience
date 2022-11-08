@@ -1,10 +1,8 @@
 # Creating a site area template
 
-
-
 Create a site area template to configure the design of the authoring form and determine what elements can be included in the form.
 
-To create a site area template, open the applications menu and go to **Content** \> **Web Content Management** and then click **New** \> **Authoring Template** \> **Site Area Template**.
+To create a site area template, open the applications menu and go to **Content > Web Content Management** and then click **New > Authoring Template > Site Area Template**.
 
 
 -   **[Entering identification information](../../wcm_dev_items_id.md)**  

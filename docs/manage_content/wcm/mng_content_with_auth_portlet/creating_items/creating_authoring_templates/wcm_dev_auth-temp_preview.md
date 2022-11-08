@@ -2,9 +2,7 @@
 id: wcm_dev_auth-temp_preview
 title: Previewing an authoring template
 ---
-
-
-
+# Previewing an authoring template
 
 Preview the authoring template to view how the item form appears to the user. You can also test any settings that need validation when the form is submitted, such as a valid workflow or required element values.
 
@@ -16,7 +14,7 @@ Preview the authoring template to view how the item form appears to the user. Yo
 
     1.  Click **Select Preview User**.
 
-    2.  Search for the user \(or group\) that you want to use to preview the item form.
+    2.  Search for the user (or group) that you want to use to preview the item form.
 
     3.  Select the user, and click **OK**.
 

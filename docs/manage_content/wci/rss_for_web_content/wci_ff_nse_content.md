@@ -13,8 +13,7 @@ If the authoring template is in a different library from the item, you can speci
 |-------------------|-------------------------|
 |Applies to item types|Content, site area|
 |Required for item types|None|
-|Allowable Values|The name of an existing authoring template, or the name of an existing library and authoring template that is separated by a forward slash. For example:-   News-AT
--   TmpltLib/News-AT|
+|Allowable Values|The name of an existing authoring template, or the name of an existing library and authoring template that is separated by a forward slash. <br> For example:-   News-AT <br>-   TmpltLib/News-AT|
 |Required Attributes|None|
 |Optional Attributes|None|
 |Required sub-elements|None|

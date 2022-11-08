@@ -3,7 +3,7 @@ id: wcm_dev_content_location
 title: Specifying the location of a content item
 ---
 
-
+# Specifying the location of a content item
 
 
 When you first create a content item, you are required to specify the location of the item if the location is not defined in the authoring template.

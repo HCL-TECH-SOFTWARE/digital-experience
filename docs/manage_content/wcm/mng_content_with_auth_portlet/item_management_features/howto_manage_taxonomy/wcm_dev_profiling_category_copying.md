@@ -3,8 +3,7 @@ id: wcm_dev_profiling_category_copying
 title: Copying a category
 ---
 
-
-
+# Copying a category
 
 As a taxonomy evolves, you are required to edit your taxonomy by copying categories from one section of your taxonomy to another. You use the **Copy** feature to copy a category in a taxonomy.
 
@@ -21,6 +20,6 @@ As a taxonomy evolves, you are required to edit your taxonomy by copying categor
 6.  Click **OK**.
 
 
-!!! note
+!!!note
     The children of an item are not copied when you copy an item. You must copy any children separately.
 

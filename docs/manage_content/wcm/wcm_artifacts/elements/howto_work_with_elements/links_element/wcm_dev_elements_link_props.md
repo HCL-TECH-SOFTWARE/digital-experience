@@ -1,9 +1,9 @@
 ---
 id: wcm_dev_elements_link_props
-title: Selecting a Link
+title: Selecting a link
 ---
 
-
+# Selecting a link
 
 
 You use the link element to define the item or URL to link to.

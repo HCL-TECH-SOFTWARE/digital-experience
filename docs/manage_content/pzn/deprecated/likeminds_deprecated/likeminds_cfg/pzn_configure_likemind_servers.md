@@ -20,6 +20,7 @@ LikeMinds stores its configuration information in the lps_cfg table of its datab
     -   AIX® and Linux™: `./ConfigEngine.sh likeminds-load-config -DWasPassword=password`
     -   Windows™: `ConfigEngine.bat likeminds-load-config -DWasPassword=password`
     -   Use the DB modification tool to update the configuration directly.
+    
 4.  Start the HCL Portal server.
 
 

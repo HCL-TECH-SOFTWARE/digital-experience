@@ -90,7 +90,7 @@ You can manually syndicate by using the following methods:
 
     -   **Rebuild with mirror**
 
-        If you select the mirror option, all items on the subscriber are reset to mirror the syndicator. All items that are newer on the syndicator are sent to the subscriber. Items that are newer on the subscriber are overwritten with the older version from the syndicator. Items that are created on the subscriber that do not exist on the syndicator are removed from the subscriber. Version history is not syndicated.
+        If you select the mirror option, all items on the subscriber are reset to mirror the syndicator. All items that are newer on the syndicator are sent to the subscriber. Items that are newer on the subscriber are overwritten with the later version from the syndicator. Items that are created on the subscriber that do not exist on the syndicator are removed from the subscriber. Version history is not syndicated.
 
         **Restriction:** The **Rebuild with mirror** option can only be used when syndicating between servers that use CF07 or higher.
 

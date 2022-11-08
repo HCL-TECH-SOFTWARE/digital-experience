@@ -7,7 +7,7 @@ HCL Content Composer 9.5 CF192 and later releases now has a Version Comparison f
 -   Compare versions of a specific content or content item.
 -   Create a new version of content from old versions of a specific content or content item.
 
-!!!note
+!!! note
     The **Versions** icon will only show in content items that are in **Published** or **Expired** workflow state. The **Versions** icon will not be visible for content in **Draft** workflow state.
 
 ## Prerequisite
@@ -48,7 +48,7 @@ Content authors can view and compare current to previous versions of a selected 
 
     ![Show only differences between content versions](../../../images/Show%20only%20differences%20between%20content%20versions.png)
 
-8.  To switch to an older version, simply click the drop-down arrow beside the Content title to view and select another version, as shown below. You can perform this action on either of the content versions.
+8.  To switch to a later version, simply click the drop-down arrow beside the Content title to view and select another version, as shown below. You can perform this action on either of the content versions.
 
     ![Switch to other versions within Version Comparison view](../../../images/Switch%20to%20other%20versions%20within%20Version%20Comparison%20view.png)
 
@@ -56,10 +56,10 @@ Content authors can view and compare current to previous versions of a selected 
 ## Restore, Compare and Merge a Content Version
 
 1.  Log in to your HCL Digital Experience 9.5 platform and select **Web Content** to edit from the Practitioner Studio navigator.
-2.  On the content, click the **Versions** icon, then hover to click to open the context menu \(three dot icon\) on the version you wish to edit.
-3.  **To restore to an older version**, select **Make Current**. In the example below, if Version 2 is selected from previous versions to be the current version, a new version will be created \(Version 4\).
+2.  On the content, click the **Versions** icon, then hover to click to open the context menu (3-dot icon) on the version you wish to edit.
+3.  **To restore to a later version**, select **Make Current**. In the example below, if Version 2 is selected from previous versions to be the current version, a new version will be created (Version 4).
 
-    ![Revert to an older version](../../../images/Revert%20to%20an%20older%20version-2.png)
+    ![Revert to a later version](../../../images/Revert%20to%20an%20older%20version-2.png)
 
     The **Make current** option is also available in **Version Comparison** view, along with the other editing options. Select **Compare with current version**, and then click the **Make current** button on the top right side of the previous version you wish to restore the Current Version to.
 
@@ -92,9 +92,9 @@ Content authors can view and compare current to previous versions of a selected 
 
     Using the same example, this will generate a new version \(Version 4\), which will now be the new Current version. Version 3 will now be moved as a Previous Version.
 
-
+<!--
 ## HCL Digital Experience Solution Feedback
 
-HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1){:target="_blank"}.
+HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1){:target="_blank"}. -->
 
 

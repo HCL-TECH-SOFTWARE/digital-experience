@@ -51,12 +51,9 @@ Do not edit the HCL Digital Experience 8.5 theme CSS style sheets directly, beca
     7.  After you determine that the new value applied has the appearance that you want, copy the CSS file that you changed in the **Style** tab into the custom style sheet.
 
 
--   **[Style definitions](themeopt_cust_styledef.md)**  
-Customize your theme with these definitions.
 
 
-**Related information**  
 
-
-[Get Firebug](https://getfirebug.com)
+???+ info "Related information"  
+    -   [Get Firebug](https://getfirebug.com)
 
