@@ -8,11 +8,64 @@ The query parameters can be set in the request parameters. For instance, a searc
 
 This is an example of a simple search query form:
 
-|Code example|Description|
-|------------|-----------|
-|`<form`<br> `action='<PathCmpnt type="servlet" />`<br>`/library/sitearea/content' method="post">`|This is the form header where you specify the location of the content item containing the search element that is used to display the search result.This is typically the same content item that this HTML element is stored in.|
-|`<table>`<br>`<tr><td>`<br>`<input type="text" name="search_query"/>`<br>`</td></tr>`<br>`<tr><td align="right">`<br>`<input type="submit" value="Search"/>`<br>`</td></tr>`<br>`</table>`|This is the body of the search form. Like any standard HTML form, it contains an input field and a submit button.In this example, a table has been used to format the search query form.|
-|`</form>`|This closes the form.|
+<table>
+<tr>
+<td> <b>Code example</b> </td> <td> <b>Description</b> </td>
+</tr>
+<tr>
+<td> 
+
+```
+<form 
+action='<PathCmpnt type="servlet" />
+/library/sitearea/content' method="post">
+```
+
+</td>
+<td> 
+
+This is the form header where you specify the location of the content item containing the search element that is used to display the search result.
+This is typically the same content item that this HTML element is stored in.
+
+</td>
+</tr>
+<tr>
+<td> 
+
+```
+<table>
+   <tr><td>
+        <input type="text" name="search_query"/>
+    </td></tr>
+    <tr><td align="right">
+        <input type="submit" value="Search"/>
+    </td></tr>
+</table>
+``` 
+
+</td>
+<td> 
+
+This is the body of the search form. Like any standard HTML form, it contains an input field and a submit button.
+In this example, a table has been used to format the search query form.
+
+</td>
+</tr>
+<tr>
+<td> 
+
+```
+</form>
+``` 
+
+</td>
+<td> 
+
+This closes the form.
+
+</td>
+</tr>
+</table>
 
 ## Searching metadata
 
