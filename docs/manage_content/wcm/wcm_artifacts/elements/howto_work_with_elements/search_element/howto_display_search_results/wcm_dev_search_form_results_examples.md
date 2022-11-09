@@ -6,25 +6,221 @@ These are examples of how to design your search results.
 
 In this example, a table is used to lay out the search results.
 
-|Design field|Details|Code example|
-|------------|-------|------------|
-|Header| |`<table>`|
-|Result|The attributes to display in each search result are defined here.|`<tr><td>`<br>`<attributeResource attributeName="namelink"/><br>`<br>`<attributeResource attributeName="summary"/>`<br>`</td></tr>`|
-|Separator|A separator can be used to delineate each search result.|`<tr><td  bgcolor="#FFFAA" colspan="2"/></tr>`|
-|Footer|A page navigation element that is stored in a component is referenced here to add page navigation to the search results.|`<tr><td>`<br>`<component name="pagenavigationcomponent"/>`<br>`</td></tr>`<br>`</table>`|
-|No results| |There are no results for your query. Please refine your search and try again.|
+**Table 1. Search element design example for use in a website**
+
+<table>
+<tr>
+<td> <b>Design field</b> </td> <td> <b>Details</b> </td><td> <b>Code example</b> </td>
+</tr>
+<tr>
+<td> 
+
+Header
+
+</td>
+<td> 
+
+</td>
+<td> 
+
+```
+<table>
+```
+
+</td>
+</tr>
+<tr>
+<td> 
+
+Result
+
+</td>
+<td> 
+
+The attributes to display in each search result are defined here.
+
+</td>
+<td> 
+
+```
+<tr><td>
+    <attributeResource attributeName="namelink"/><br>
+    <attributeResource attributeName="summary"/>
+</td></tr>
+```
+
+</td>
+</tr>
+<tr>
+<td> 
+
+Separator
+
+</td>
+<td> 
+
+A separator can be used to delineate each search result.
+
+</td>
+<td> 
+
+```
+<tr><td  bgcolor="#FFFAA" colspan="2"/></tr>
+```
+
+</td>
+</tr>
+<tr>
+<td> 
+
+Footer
+
+</td>
+<td> 
+
+A page navigation element that is stored in a component is referenced here to add page navigation to the search results.
+
+</td>
+<td> 
+
+```
+    <tr><td>
+        <component name="pagenavigationcomponent"/>
+    </td></tr>
+</table>
+```
+
+</td>
+</tr>
+<tr>
+<td> 
+
+No results
+
+</td>
+<td> 
+
+</td>
+<td> 
+
+There are no results for your query. Please refine your search and try again.
+
+</td>
+</tr>
+</table>
 
 ## Search element design example for use in a rendering portlet
 
 In this example, a table is used to lay out the search results.
 
-|Design field|Details|Code example|
-|------------|-------|------------|
-|Header| |`<table>`|
-|Result|The attributes to display in each search result are defined here.When displaying search results in a rendering portlet, you must specify the page that the linked content is displayed in when opened. <br><br>A URL map to the portal page that contains the rendering portlet is required.|`<tr><td>`<br>`<a href="/[PORTAL_CONTEXT_ROOT]/`<br>`[PORTAL_PAGE_URL_MAPPING]/?WCM_GLOBAL_CONTEXT=`<br>`<AttributeResource attributeName="url" />">`<br>`<AttributeResource attributeName="title" /></a>`<br>`<attributeResource attributeName="summary"/>`<br>`</td></tr>`|
-|Separator|A separator can be used to delineate each search result.|`<tr> <td  bgcolor="#FFFAA" colspan="2"/>  </tr>`|
-|Footer|A page navigation element that is stored in a component is referenced here to add page navigation to the search results.|`<tr><td>`<br>`[component name="pagenavigationcomponent"]`<br>`</td></tr>`<br>`</table>`|
-|No results| |There are no results for your query. Refine your search and try again.|
+**Table 2. Search element design example for use in a rendering portlet**
+
+<table>
+<tr>
+<td> <b>Design field</b> </td> <td> <b>Details</b> </td><td> <b>Code example</b> </td>
+</tr>
+<tr>
+<td> 
+
+Header
+
+</td>
+<td> 
+
+</td>
+<td> 
+
+```
+<table>
+```
+
+</td>
+</tr>
+<tr>
+<td> 
+
+Result
+
+</td>
+<td> 
+
+The attributes to display in each search result are defined here.
+When displaying search results in a rendering portlet, you must specify the page that the linked content is displayed in when opened.
+
+A URL map to the portal page that contains the rendering portlet is required.
+
+</td>
+<td> 
+
+```
+<tr><td>
+<a href="/[PORTAL_CONTEXT_ROOT]/
+[PORTAL_PAGE_URL_MAPPING]/?WCM_GLOBAL_CONTEXT=
+<AttributeResource attributeName="url" />">
+<AttributeResource attributeName="title" /></a>
+<attributeResource attributeName="summary"/>
+</td></tr>
+```
+
+</td>
+</tr>
+<tr>
+<td> 
+
+Separator
+
+</td>
+<td> 
+
+A separator can be used to delineate each search result.
+
+</td>
+<td> 
+
+```
+<tr> <td  bgcolor="#FFFAA" colspan="2"/>  </tr>
+```
+
+</td>
+</tr>
+<tr>
+<td> 
+
+Footer
+
+</td>
+<td> 
+
+A page navigation element that is stored in a component is referenced here to add page navigation to the search results.
+
+</td>
+<td> 
+
+```
+    <tr><td>
+        [component name="pagenavigationcomponent"]
+    </td></tr>
+</table>
+```
+
+</td>
+</tr>
+<tr>
+<td> 
+
+No results
+
+</td>
+<td> 
+
+</td>
+<td> 
+
+There are no results for your query. Please refine your search and try again.
+
+</td>
+</tr>
+</table>
 
 ## Search parameters using attribute resource tag
 
@@ -33,6 +229,35 @@ The following parameters can be used to display data in a search result design u
 ```
 <attributeResource attributeName="parameter" separator=" " format=" "/>
 ```
+
+<table>
+<tr>
+<td>
+
+`attributeName=authoringtemplate`
+
+</td> 
+<td> 
+
+The name of the authoring template, if available, that was used to create the content item.
+
+</td>
+</tr>
+<tr>
+<td>
+
+`attributeName=author`
+
+</td> 
+<td> 
+
+The name or names of the authors of the content item, if any are defined. If there is more than one author, then they will be rendered with the string specified in the optional separator attribute between each value.
+
+</td>
+</tr>
+
+</table>
+
 
 |`attributeName=authoringtemplate`|The name of the authoring template, if available, that was used to create the content item.|
 |`attributeName=author`|The name or names of the authors of the content item, if any are defined. If there is more than one author, then they will be rendered with the string specified in the optional separator attribute between each value.|
