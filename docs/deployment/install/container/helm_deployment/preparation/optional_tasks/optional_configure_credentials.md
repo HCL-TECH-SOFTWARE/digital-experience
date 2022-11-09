@@ -61,7 +61,7 @@ If no LDAP is configured in the helm values, HCL Digital Experience is configure
 
 
 !!! note
-    Currently the Configuration Wizard and DXConnect always use the `wpsadmin` user. Changes to the `wasUser` do therefore not affect the Configuration Wizard and DXClient (which connects to DXConnect). If the `wasUser` is kept as the default `wpsadmin` but it's password is changed, the new password will also apply for the Configuration Wizard and DXConnect.
+    Currently the Configuration Wizard and DXConnect always use the `wpsadmin` user. Changes to the `wasUser` do therefore not affect the Configuration Wizard and DXClient (which connects to DXConnect). If the `wasUser` is kept as the default `wpsadmin` but its password is changed, the new password will also apply for the Configuration Wizard and DXConnect.
 
 #### 2. LDAP
 
