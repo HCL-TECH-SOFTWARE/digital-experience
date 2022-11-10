@@ -25,11 +25,12 @@ You can customize your installation with the following options.
 |-DICrunAsAdmin|The default is false. This attribute determines whether adapter runs in admin mode or non-admin mode.|
 |-DICpumaFilterClassname|Always set to com.ibm.connections.vmm.adapter.filter.VMMPrincipalFilter|
 |-DICpumaFilterPosition|Set to 120.|
-|-Drepository.id|The LDAP repository identifier from the federated repository to configure the group repository relationship. To determine what repository identifier is set for a particular LDAP, 1.  Log in to the WebSphere Application Server administration console and go to **Security** \> **Global Security**.
+|-Drepository.id|The LDAP repository identifier from the federated repository to configure the group repository relationship. To determine what repository identifier is set for a particular LDAP: 
+1.  Log in to the WebSphere Application Server administration console and go to **Security** \> **Global Security**.
 2.  Under the **User account repository** section, click **Configure** for **Federated repositories**.
-3.  In the **Related Items** section, select **Manage repositories**. All of the LDAP repositories are listed on the page and the repository IDs are listed under the **Repository Identifier** column.
+3.  In the **Related Items** section, select **Manage repositories**. All of the LDAP repositories are listed on the page and the repository IDs are listed under the **Repository Identifier** column.|
 
-|
+
 
 |Property|Value|
 |--------|-----|
@@ -81,7 +82,7 @@ You can customize your installation with the following options.
 |-DICserverType|Set to on-premise when you deploy with HCL Connections \(on-premises\) and set to SC4SB when you deploy to HCL Connections Cloud.|
 |-DICinterServiceURL|The interServiceURL is used in the SiteMinder and SPNEGO configuration. To get the value of the interservice URL, open the file LotusConnections-config.xml in the HCL Connections deployment and get the value of the href attribute in the element **<sloc:interService\>**. For example, if the element looks like the following `<sloc:interService href="https://<host\>:<port\>"/>`, the value you must pick is <host\>:<port\>.
 
- For more configuration changes needed for SiteMinder and SPNEGO configuration, see the topic *Configuring common directory services for your security configuration.*
+ For more configuration changes needed for SiteMinder and SPNEGO configuration, see the topic [Configuring common directory services for your security configuration](../../connections/configuration/cfg_portal_with_cnx/cfg_common_dir/t_connections_portlets_common_directory.md).
 
-|
+
 

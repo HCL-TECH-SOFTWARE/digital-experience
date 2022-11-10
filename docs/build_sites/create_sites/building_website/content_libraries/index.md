@@ -35,7 +35,9 @@ You can store web content in the HCL Digital Experience site library or in a sep
     -   This scenario is easy to set up, but means that the content cannot be syndicated, exported or imported separately.
     -   Managed pages must be enabled.
     -   The web content is moved or deleted when a page is moved or deleted.
--   **Storing web content in dedicated content libraries**
+
+-   **Storing web content in dedicated content libraries**    
+
 
     -   This scenario is easy to deploy if the content associations are set up correctly. The content can be syndicated, and exported or imported separately.
     -   The web content is associated with a page.

@@ -5,6 +5,6 @@ With the persistent session state feature, portal users can resume and continue 
 Example: A user logs in and maximizes some portlets. Afterwards the user logs out. When the user logs in again, all of the previously maximized portlets are still maximized.
 
 
-**Related information**  
-[Setting the portal entry page](../../config_portal_behavior/adloginview.md)
+???+ info "Related information" 
+    -   [Setting the portal entry page](../../config_portal_behavior/adloginview.md)
 

@@ -1,4 +1,4 @@
-# HCL Web Content Manager \(WCM\) environments
+# HCL Web Content Manager (WCM) environments
 
 Reviewing the Web Content Manager environments help you understand what happens in each environment and how you might want to set up your physical servers.
 
@@ -14,7 +14,7 @@ Testing environments can be as simple or as complex as a test environment used t
 If you have a HCL Web Content Manager only license, you can deliver your website without using HCL Digital Experience features.
 
 
-**Related information**  
+???+ info "Related information" 
 -   [Configuring Web Content Manager](../../../../manage_content/wcm/index.md)
 -   [Web Content Administration tools](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/index.md)
 -   [Delivering web content](../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/index.md)

@@ -5,8 +5,6 @@ Building a website includes creating libraries, pages, and web content. You also
 
 -   **[Site Builder](../../sitebuilder/index.md)**  
 Site Builder is an application that you can use to create site templates or section templates for use with HCL Digital Experience.
--   **[Content Template](site_ctc.md)**  
-The Content Template \(CTC\) is a set of templates that accelerate the process of building a website. You should also install the Content Template with Site Builder so you can build sites based on Content Template components.
 -   **[Content libraries](../building_website/content_libraries/index.md)**  
 Content libraries store the assets for your website, including but not limited to pages, content, images, authoring and presentation templates, and workflows.
 -   **[Setting up access](site_acl.md)**  

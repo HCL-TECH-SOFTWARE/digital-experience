@@ -4,7 +4,7 @@ When you model a transition certain rules and restrictions apply.
 
 The following are descriptions of the rules:
 
-1.  The entire set of dialogs, together with all their transitions, needs to be deterministic. That is the transitions need to produce the same results all times. To achieve this condition, the HCL UX Screen Flow Manager must always clearly determine the transition that is to be triggered. The transition is determined based on the transition endpoint that emits an event and the name \(`QName`\) of the event. The screenflow is not valid if the definition is not deterministic. For example, the definition of two dialogs as shown in code sample is not valid, as it is not deterministic: The Screen Flow Manager might not decide whether to trigger the first or the second transition after `portlet1` emits event `e1`.
+1.  The entire set of dialogs, together with all their transitions, needs to be deterministic. That is the transitions need to produce the same results all times. To achieve this condition, the HCL UX Screen Flow Manager must always clearly determine the transition that is to be triggered. The transition is determined based on the transition endpoint that emits an event and the name (`QName`) of the event. The screenflow is not valid if the definition is not deterministic. For example, the definition of two dialogs as shown in code sample is not valid, as it is not deterministic: The Screen Flow Manager might not decide whether to trigger the first or the second transition after `portlet1` emits event `e1`.
 
     Code sample
 
@@ -46,5 +46,5 @@ The following are descriptions of the rules:
         -   The same event or multiple events that are sent to the page.
         -   One or multiple dedicated events that are sent to the portlet itself.
 
-**Parent topic:**[Transitions](../screenflow/transitions.md)
+
 

@@ -220,7 +220,7 @@ This topic describes the commands that are used to create, update, delete, and r
     -filePath <value>
     ```
 
-- !!! example
+!!! example
 
     -   For creating property:
 

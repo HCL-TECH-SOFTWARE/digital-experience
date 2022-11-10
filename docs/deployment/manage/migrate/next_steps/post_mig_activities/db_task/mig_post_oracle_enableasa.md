@@ -22,8 +22,6 @@ SQL> select status from dba_autotask_client where client_name = 'auto space advi
 ```
 
 
-**Related information**  
-
-
-[Oracle: Disabling the auto space advisor background task](../migrate/mig_pre_oracle_disableasa.md)
+???+ info "Related information"
+    -   [Oracle: Disabling the auto space advisor background task](../../../../../../deployment/manage/migrate/settingup_target_env/db_consideration/mig_pre_oracle_disableasa.md)
 

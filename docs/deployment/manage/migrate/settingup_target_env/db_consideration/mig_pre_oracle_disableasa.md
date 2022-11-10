@@ -20,14 +20,13 @@ SQL> select status from dba_autotask_client where client_name = 'auto space advi
     /
     ```
 
-    **Note:** If you do not turn off the "Auto Space Advisor," it is possible for the migration to fail with the following Oracle error: ORA-00060: deadlock detected while waiting for resource.
+    !!!note
+        If you do not turn off the "Auto Space Advisor," it is possible for the migration to fail with the following Oracle error: ORA-00060: deadlock detected while waiting for resource.
 
 
 When you complete migrating your data using the Configuration Wizard, complete the post-migration step to enable the "Auto Space Advisor" Oracle background task.
 
 
-**Related information**  
-
-
-[Oracle: Enabling the auto space advisor background task](../migrate/mig_post_oracle_enableasa.md)
+???+ info "Related information"  
+    -   [Oracle: Enabling the auto space advisor background task](../../../../../deployment/manage/migrate/next_steps/post_mig_activities/db_task/mig_post_oracle_enableasa.md)
 

@@ -146,7 +146,8 @@ Code sample
 
 ```
 
-**Note:** If the dialogs `dialog2` and `dialog3` are started in a chained or nested fashion, the transition endpoint that is referenced by the start transition's source becomes irrelevant.
+!!!note
+    If the dialogs `dialog2` and `dialog3` are started in a chained or nested fashion, the transition endpoint that is referenced by the start transition's source becomes irrelevant.
 
-**Parent topic:**[Dialog chaining and nesting](../screenflow/dlg_chng_nstng.md)
+
 
