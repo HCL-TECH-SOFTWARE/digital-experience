@@ -34,8 +34,8 @@ In a typical example scenario, you can work in two stages:
 !!! note
     Suggested links are case-sensitive. The tagging and rating normalization parameter `com.ibm.wps.cp.tagging.normalization.displayNormalizedNames` does not apply to suggested links. For example, if an administrator adds a suggested link of `WebSphere`, a user search for `websphere` does not return `WebSphere` as a result. This action is independent of whether the tagging and rating parameter `com.ibm.wps.cp.tagging.normalization.displayNormalizedNames` is set to `true` or `false`.
 
-<!---  
--   **[Configuring the Suggested Links view](../admin-system/srtrecommendedlinks.md)**  
-Customize the display of search results to show users the preferred or recommended results and associated links. --->
+
+-   **[Configuring the Suggested Links view](srtrecommendedlinks.md)**  
+Customize the display of search results to show users the preferred or recommended results and associated links.
 
 

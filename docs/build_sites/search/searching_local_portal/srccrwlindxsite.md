@@ -43,6 +43,7 @@ Portal Search provides a default portal site search collection that enables your
     -   Enable the default scheduler:
         1.  Click the **View Content Source Schedulers** icon next to the collection name.
         2.  In the Manage Schedulers page, click **Disabled**. This action changes the status of the scheduler to Enabled and displays a confirmation message.
+        
     -   Set up your own scheduler:
 
         1.  Click the **Edit** icon for the content source.
