@@ -6,6 +6,9 @@ This topic describes collection access feature and details about API added for D
 
 DX Portal Access Control follows an inheritance based tree structure. At the top of the tree is the virtual Resource Portal, below it is the virtual Resource Media Library and below that the resource instances you are registering with its children. By assigning a role on a resource to a user, the user gets permissions on the resource and its children. There is a way to block the inheritance with role blocks but it is not exposed in this initial configuration. 
 
+![Portal Access Control Roles](../../../../images/access_roles_portal.png)
+
+Currently, only Administrator, Editor and User roles are exposed in DAM UI.
 ### Portal Access Control Management API
 
 To enable the usage of Portal Access Control for Media Library Management, new APIs were exposed in DX portal for below scenarios. DAM calls the below Portal API's by invoking corresponding REST API's exposed by Experience API.
@@ -22,6 +25,27 @@ New API's were exposed for below scenarios too.
 - Querying all root resources
 - Filtering Access
 
+### DAM Access Control
+
 From the DAM perspective, each individual collection is a resource instance. 
 
 DAM collection resource is accessible by the current user based on his role and this access permission is managed by DX Portal Access Control (e.g. Possible Role Types are User, Editor (edit, create), Manager (edit, create, delete), Administrator (edit, create, delete, set/remove access) in DX perspective). So, current user can view the collection if he has User role, if current user has Editor role, he can view, create and edit the collection and he can even delete the collection if he has Manager role. If user has Administrator role, then he can even assign/remove the permission for other users as well.
+
+![DAM Access Control Roles](../../../../images/access_roles_dam.png)
+
+# Authorisation API Endpoints
+
+## API's to fetch user’s allowed permission list for a given collection resource
+
+A user’s allowed permission list for a given resource are available via a call to following Experience API method calls:
+
+For authenticated endpoints: “/dxmyrest/access/current-user?resourceId={accessReferenceId}”.
+For anonymous endpoints: “/dxrest/access/current-user?resourceId={accessReferenceId}”.
+
+## API's to get the filtered resource list for granting the permission based on multiple resources.
+
+For authenticated user: /dxmyrest/resources?role={role}&parentid={virtualResourceId} where role can be Editor/Manager/Administrator and virtualResourceId will be wps.MEDIA_LIBRARY for media library.
+
+For anonymous user: /dxrest/resources?role='User'&parentid={virtualResourceId} where virtualResourceId will be wps.MEDIA_LIBRARY for media library.
+
+Ex: Currently GET Endpoint like /items/{item_id} can call one of the above mentioned API's based on the access type. This API endpoint can be accessible by both authenticated and anonymous user, based on the granted permission.
