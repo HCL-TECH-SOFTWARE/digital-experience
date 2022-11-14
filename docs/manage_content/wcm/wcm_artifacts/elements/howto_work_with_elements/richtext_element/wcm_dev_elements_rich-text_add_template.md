@@ -3,7 +3,7 @@ id: wcm_dev_elements_rich-text_add_template
 title: Adding a rich text element to a template
 ---
 
-# Adding a rich text element to a template
+
 
 
 You add a rich text element to an authoring template when you want a section of HTML to be used by a set of items that use the same authoring template and you want your content authors to use a rich text editor to create and edit the HTML.
@@ -28,14 +28,13 @@ You add a rich text element to an authoring template when you want a section of 
 
 10. Enter text in the rich text field, or do nothing if you want your content creators to enter text in the rich text field.
 
-11. Click ![properties](../../../../../../images/propIcon.jpg) to open the display properties of the element. This is where you define how the element is displayed on the item form.
+11. Click ![properties](../images/propIcon.jpg) to open the display properties of the element. This is where you define how the element is displayed on the item form.
 
     1.  To display the element as a required field select **Identify this as a required field**.
 
     2.  To hide a field on the content form from all users select **Hide field**. You must specify a default value if the field is a required field.
 
-        !!!note
-            Administrators and managers can choose to display hidden fields and elements in an item by clicking **Show hidden fields**.
+        **Note:** Administrators and managers can choose to display hidden fields and elements in an item by clicking **Show hidden fields**.
 
     3.  Type the number of characters to use in **Field Width** to set the size of the displayed field. If you leave this blank, the default field size is used.
 
@@ -83,7 +82,7 @@ You add a rich text element to an authoring template when you want a section of 
 
             **Storing JSP files:** JSP files are stored within a web application that runs on the portal. To reference a JSP file in another web application, use the following path: contextPath;jspPath. For example: /wps/customapplication;/jsp/jspFilename.jsp.
 
-            A dynamic context path value can be defined by adding a token to the context path that corresponds to a key and value pair to the Web Content Manager configuration service environment provider. When this key is used as the token in the jsp value field, it is replaced dynamically at render time. For example: [my.custom.key];myfile where my.custom.key is a constant within the Web Content Manager configuration service.
+            A dynamic context path value can be defined by adding a token to the context path that corresponds to a key and value pair to the Web Content Manager configuration service environment provider. When this key is used as the token in the jsp value field, it is replaced dynamically at render time. For example: \[my.custom.key\];myfile where my.custom.key is a constant within the Web Content Manager configuration service.
 
 12. Save the authoring template.
 

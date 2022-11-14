@@ -28,12 +28,10 @@ On the delivery server, the following activities occur:
 -   The staging environment can consist of:
     -   A web content delivery server or cluster that subscribes to the authoring environment. This method would be used when you want to allow changes from the authoring environment to accumulate before you syndicate your changes to your delivery environment in a single batch.
     -   A complete replica of the delivery environment. This type of environment would be used for system UAT to ensure that the website is accurate, error-free, and can run under load.
-
 -   The delivery environment can consist of:
     -   A web content delivery server or cluster that subscribes to the staging environment. Content can be delivered by using either a web content viewer portlet, the web content servlet, or a pre-rendered site.
     -   A local WebSphere Portal production environment that subscribes to the staging environment and delivers web content by using a web content viewer.
     -   A remote WebSphere Portal production environment. In this scenario, a web content delivery server subscribes from the staging environment, and the remote WebSphere Portal production environment uses WSRP and a web content viewer to display content from the web content delivery server.
-
 -   The delivery environment can consist of:
     -   A web content delivery server or cluster that subscribes to the staging environment. Content can be delivered by using either the web content servlet or a pre-rendered site.
     -   A local WebSphere Portal production environment that subscribes to the staging environment and delivers web content by using the web content servlet.
@@ -44,6 +42,8 @@ On the delivery server, the following activities occur:
 -   Automatic one-way syndication from the authoring environment to the staging environment.
 -   Manual one-way syndication from the staging environment to the delivery environment.
 
-???+ info "Related information:"
-    - [Staging to production list](../../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_stage_check.md)
+**Related information**  
+
+
+[Staging to production list](../deploy/dep_stage_check.md)
 

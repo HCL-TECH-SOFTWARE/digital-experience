@@ -10,21 +10,37 @@ For example, if the JCR database on the Web Content Manager side is restored, bu
 
     -   **AIX®**
 
-        `./ConfigEngine.sh sync-vanityurl-data -DPortalAdminPwd=password -DWasPassword=password`
+        ./ConfigEngine.sh sync-vanityurl-data -DPortalAdminPwd=password -DWasPassword=password
+
+    -   **HP-UX**
+
+        ./ConfigEngine.sh sync-vanityurl-data -DPortalAdminPwd=password -DWasPassword=password
+
+    -   **IBM® i**
+
+        ConfigEngine.sh sync-vanityurl-data -DPortalAdminPwd=password -DWasPassword=password
 
     -   **Linux™**
 
-        `./ConfigEngine.sh sync-vanityurl-data -DPortalAdminPwd=password -DWasPassword=password`
+        ./ConfigEngine.sh sync-vanityurl-data -DPortalAdminPwd=password -DWasPassword=password
+
+    -   **Solaris**
+
+        ./ConfigEngine.sh sync-vanityurl-data -DPortalAdminPwd=password -DWasPassword=password
 
     -   **Windows™**
 
-        `ConfigEngine.bat sync-vanityurl-data -DPortalAdminPwd=password -DWasPassword=password`
+        ConfigEngine.bat sync-vanityurl-data -DPortalAdminPwd=password -DWasPassword=password
+
+    -   **z/OS®**
+
+        ./ConfigEngine.sh sync-vanityurl-data -DPortalAdminPwd=password -DWasPassword=password
 
 -   **Extra parameters:**
 
     You can specify the following parameters with this task. Each individual parameter requires the prefix -D on the command.
 
-    -   **RunParallel = (false)|true**
+    -   **RunParallel = \(false\)\|true**
 
         Use this parameter to specify whether you want the task to run with multiple threads or not. If you want the task to run in a single thread, specify the value false. This value is the default value. If you want the task to run with multiple threads, specify the value true. Each thread requires a database connection.
 
@@ -36,8 +52,7 @@ For example, if the JCR database on the Web Content Manager side is restored, bu
 
         Use this parameter to specify the host name of the virtual portal. For example, the host name can be vp.example.com.
 
-        !!! note
-            You can specify the VirtualPortalHost parameter alone only if the host name is unique. If the host name of the virtual portal is the same as the host name of the default virtual portal, you must also specify the VirtualPortalContext parameter.
+        **Note:** You can specify the VirtualPortalHost parameter alone only if the host name is unique. If the host name of the virtual portal is the same as the host name of the default virtual portal, you must also specify the VirtualPortalContext parameter.
 
     -   **VirtualPortalContext**
 
@@ -53,8 +68,12 @@ For example, if the JCR database on the Web Content Manager side is restored, bu
 
 
 
-???+ info "Related information:"
-    - [Troubleshooting pages](../../../../../build_sites/create_sites/website_building_blocks/pages/wcm_mngpages_trouble.md)
-    - [Creating the initial release](../../../../../deployment/manage/staging_to_production/creating_deploying_initial_release/dep_cir.md)
-    - [Migration: Enabling managed pages](../../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/mig_t_enable_mngpages.md)
+**Related information**  
+
+
+[Troubleshooting pages](../wcm/wcm_mngpages_trouble.md)
+
+[Creating the initial release](../deploy/dep_cir.md)
+
+[Migration: Enabling managed pages](../migrate/mig_t_enable_mngpages.md)
 

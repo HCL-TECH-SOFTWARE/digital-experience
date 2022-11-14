@@ -7,7 +7,9 @@ The XML resources related to tagging and rating are `tag`, `rating`, and `custom
 -   To tag or rate **portal resources**, you use their object IDs directly.
 -   To represent **custom resources**, for example books, you use the XML resource `custom-resource`. The object ID of the `custom-resource` resource is used as the `resourceref` attribute in the `tag` and `rating` tags.
 
-The XML resource tags and their attributes are listed in the following:
+The XML resource tags and their attributes are listed in the following.
+
+**Notes:**
 
 1.  When you create tags, ratings, or custom resources, you need to specify all attributes except the ones marked as optional.
 2.  When you move tagspaces between portals, both the users who have applied the tags and the resources to which the tags have been applied must exist in the target portal.
@@ -242,10 +244,16 @@ To move tags and ratings between portals, for example for staging purposes, proc
 4.  Import the result file from the previous export step to the target portal.
 
 
-???+ info "Related information"
-    - [Configuring task to retrieve tags](../../extend_dx/integration/connections/configuration/cfg_connections_features/integrating_cnx_tags/i_coll_t_enable_lctags_task.md)
-    - [Types of portal resources](../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/xml_config_ref/types_portal_resources/adxmlref_resrc_types.md)
-    - [Working with the XML configuration interface](../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
-    - [Tagging and rating](../tagging_rating/hints_tips_tag_rate/index.md)
-    - [Hints and tips for developers and portal administrators](../tagging_rating/hints_tips_tag_rate/index.md)
+**Related information**  
+
+
+[Configuring task to retrieve tags](../collab/i_coll_t_enable_lctags_task.md)
+
+[Types of portal resources](../admin-system/adxmlref_resrc_types.md)
+
+[Working with the XML configuration interface](../admin-system/adxmltsk.md)
+
+[Tagging and rating](../admin-system/tag_rate_mngadmin.md)
+
+[Hints and tips for developers and portal administrators](../admin-system/tag_rate_ref_hintip_4admins.md)
 

@@ -4,24 +4,22 @@ Manual steps from the Configuration Wizard are included in HCL Digital Experienc
 
 Ensure your DB2® server is already installed and running.
 
-!!!attention
-    All steps for all database environments are included without consideration for your environment. Use the Configuration Wizard to generate custom instructions for your environment.
+**Attention:** All steps for all database environments are included without consideration for your environment. Use the Configuration Wizard to generate custom instructions for your environment.
 
-Instructions for AIX, and Linux:
+1.  Instructions for AIX, HP-UX, Linux, and Solaris
+2.  Copy the JDBC Driver JAR files from your database server to your portal server.
 
-1.  Copy the JDBC Driver JAR files from your database server to your portal server.<br>
+    Example location:
 
-    Example location:<br>
+    `C:\\\\Program Files\\\\IBM\\\\SQLLIB\\\\java\\\\db2jcc4.jar`
 
-    C:\\\\Program Files\\\\IBM\\\\SQLLIB\\\\java\\\\db2jcc4.jar<br>
+    `C:\\\\Program Files\\\\IBM\\\\SQLLIB\\\\java\\\\db2jcc\_license\_cu.jar`
 
-    C:\\\\Program Files\\\\IBM\\\\SQLLIB\\\\java\\\\db2jcc_license_cu.jar<br>
-
-    Place the files on the portal server in the directory that you specified for database library files.<br>
+    Place the files on the portal server in the directory that you specified for database library files.
 
     `$\{db2.DbLibrary\}``db2.DbLibrary`
 
-3.  Log in as a DB2 system administrator with the required database privileges (SYSADM or at a minimum SYSCTRL).<br>
+3.  Log in as a DB2 system administrator with the required database privileges \(SYSADM or at a minimum SYSCTRL\).
 
     `su - ${release.DBA.DbUser}` `su - domain.DBA.DbUser`
 
@@ -29,11 +27,11 @@ Instructions for AIX, and Linux:
 
 5.  Rename the file that you downloaded to include a `.sh` extension.
 
-6.  Run the shell file on your database server.<br>
+6.  Run the shell file on your database server.
 
-    `/your\_database\_server\_file\_location/CreateDB2Database.sh`<br>
+    `/your\_database\_server\_file\_location/CreateDB2Database.sh`
 
-    Example of the script that the Configuration Wizard generates.<br>
+    Example of the script that the Configuration Wizard generates.
 
     ```
     db2set DB2COMM=TCPIP
@@ -41,6 +39,7 @@ Instructions for AIX, and Linux:
     db2set DB2_INLIST_TO_NLJN=YES
     db2 "UPDATE DBM CFG USING sheapthres 0"
     
+    	
     db2 "CREATE DB WPSDB using codeset UTF-8 territory us PAGESIZE 8192"
     db2 "UPDATE DB CFG FOR WPSDB USING locktimeout 30"
     
@@ -71,15 +70,15 @@ Instructions for AIX, and Linux:
 
     Example location:
 
-    C:\\\\Program Files\\\\IBM\\\\SQLLIB\\\\java\\\\db2jcc4.jar
+    `C:\\\\Program Files\\\\IBM\\\\SQLLIB\\\\java\\\\db2jcc4.jar`
 
-    C:\\\\Program Files\\\\IBM\\\\SQLLIB\\\\java\\\\db2jcc\_license\_cu.jar
+    `C:\\\\Program Files\\\\IBM\\\\SQLLIB\\\\java\\\\db2jcc\_license\_cu.jar`
 
     Place the files on the portal server in the directory that you specified for database library files.
 
     `$\{db2.DbLibrary\}``db2.DbLibrary`
 
-9.  Log in as a DB2 system administrator. This DB2 system administrator must have the required database privileges (SYSADM or at a minimum SYSCTRL) to create your database. This user is typically a member of both the Administrators and DB2ADMNS groups.
+9.  Log in as a DB2 system administrator. This DB2 system administrator must have the required database privileges \(SYSADM or at a minimum SYSCTRL\) to create your database. This user is typically a member of both the Administrators and DB2ADMNS groups.
 
 10. Copy the script that you downloaded for this step to the database server, and extract the file.
 

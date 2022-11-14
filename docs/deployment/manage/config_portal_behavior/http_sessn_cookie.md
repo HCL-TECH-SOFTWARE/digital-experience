@@ -15,7 +15,7 @@ A common use case for changing the JSESSIONID cookie name results from cookie na
 
     1.  Open the WebSphere Integrated Solutions Console.
 
-    2.  Select **Servers > Application Servers > Server_Name > Web Container Settings > Session management > Enable Cookies**.
+    2.  Select **Servers** \> **Application Servers** \> **Server\_Name** \> **Web Container Settings** \> **Session management** \> **Enable Cookies**.
 
     3.  Change the value for session cookie name as required.
 

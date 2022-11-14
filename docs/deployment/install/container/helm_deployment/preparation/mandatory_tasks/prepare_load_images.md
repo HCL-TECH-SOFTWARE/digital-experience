@@ -244,7 +244,7 @@ After you have successfully prepared all DX 9.5 images, you need to configure th
 The following syntax may be used to define the correct image configuration for your environment:
 
 !!!note
-    If deploying to a [Hybrid](../../../../hybrid/index.md) environment, with DX 9.5 Container Update CF198 or later, the Core needs to be set as false, since Core is already installed to an On-premise Server.
+    If deploying to a Hybrid<!-- [Hybrid](hybrid_deployment_helm.md) --> environment, with DX 9.5 Container Update CF198 or later, the Core needs to be set as false, since Core is already installed to an On-premise Server.
 
 !!!note
     From CF205 onwards, the image name and tag configuration of the Helm Chart is pre-filled using the default image names and matching version tags for the respective version of DX. You might need to re-adjust these if you have renamed/re-tagged the images in your local container image repository.

@@ -2,7 +2,7 @@
 
 To use a JavaScript framework or library from an application, use portal theme modules to load the shared JavaScript. Do not load them from the application.
 
-However, application developers must load those JavaScript frameworks for testing locally, before they push them to the server. Not all JavaScript frameworks are available in the portal theme profiles and modules by default. For more information on loading JavaScript into portal pages with theme modules, read [Third-party JavaScript libraries](./js_libraries.md).
+However, application developers must load those JavaScript frameworks for testing locally, before they push them to the server. Not all JavaScript frameworks are available in the portal theme profiles and modules by default. For more information on loading JavaScript into portal pages with theme modules, read *Third-party JavaScript libraries*.
 
 When you develop a Script Application that includes a JavaScript framework reference locally, add a directive HTML attribute to the script reference. Comment out the local reference when you push it with the command line application or import it.
 
@@ -32,7 +32,7 @@ data-scriptportlet-theme-capability="jquery"></script> [/Plugin:Comment]
 
 When you export an application, the original script reference is re-enabled so that your application runs properly as a stand-alone application in a test environment.
 
--   **[Third-party JavaScript libraries](./js_libraries.md)**  
+-   **[Third-party JavaScript libraries](../script-portlet/js_libraries.md)**  
  You can easily use third-party JavaScript libraries from a Script Application.
 
 

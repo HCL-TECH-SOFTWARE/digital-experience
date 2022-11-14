@@ -3,6 +3,4 @@ nav:
     - index.md
     - pre_requisites.md
     - common-setup
-    - site_integration
     - how_to
-    - samples

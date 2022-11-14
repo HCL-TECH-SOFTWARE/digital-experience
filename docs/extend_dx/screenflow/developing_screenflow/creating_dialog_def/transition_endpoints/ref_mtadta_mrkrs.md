@@ -23,9 +23,12 @@ Code sample shows an example where resources, either pages or portlets, that are
 </transition-endpoint>
 ```
 
-!!!note
-  Marking portlet definitions instead of portlet windows lead to a different behavior. For more information, go to the topic *Dynamic pages and portlets*
+**Note:** Marking portlet definitions instead of portlet windows lead to a different behavior. For more information, go to the topic *Dynamic pages and portlets*
 
-???+ info "Related information"
-    -   [Dynamic pages and portlets](../../../../../extend_dx/screenflow/advance_concepts/dyn_pgs_ptlts.md)
+**Parent topic:**[Transition endpoints](../screenflow/ref_trnstn_endpnts.md)
+
+**Related information**  
+
+
+[Dynamic pages and portlets](../screenflow/dyn_pgs_ptlts.md)
 

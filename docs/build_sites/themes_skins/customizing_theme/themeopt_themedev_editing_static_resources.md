@@ -2,7 +2,7 @@
 
 After you create a new theme, you can edit the static resources that are associated with the theme.
 
-Static theme resources include the theme.html file, layout templates, skins, JavaScript, CSS, and image files. The resources are stored by default within WebDAV, which is accessible with any WebDAV client. Learn more about [WebDAV](../../../manage_content/wcm/wcm_content_delivery/webdav/index.md) here.
+Static theme resources include the theme.html file, layout templates, skins, JavaScript, CSS, and image files. The resources are stored by default within WebDAV, which is accessible with any WebDAV client. Learn more about [WebDAV](../wcm/wcm_webdav_overview.md#) here.
 
 1.  Create a directory where you want to save the static theme resources.
 

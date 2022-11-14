@@ -1,8 +1,6 @@
 # Deprecated features
 
-Deprecation means that the features are supported at this time but can be removed in an upcoming CF. It is recommended that deprecated items be removed as soon as possible as they can cause unpredictable behavior. 
-
-Links to more information on the replacement for those items listed for deprecation will be posted as they become available to provide help as you move away from these features.
+Deprecation means that the features are supported at this time but can be removed in an upcoming CF. It is recommended that deprecated items be removed as soon as possible as they can cause unpredictable behavior. Links to more information on the replacement for those items listed for deprecation will be posted as they become available to provide help as you move away from these features.
 
 ## Recently Deprecated Features
 |Category|Deprecated|Recommended Action|Effective Date|

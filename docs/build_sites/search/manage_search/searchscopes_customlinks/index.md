@@ -22,7 +22,6 @@ HCL includes the following scopes:
 
 You can add your own custom search scopes and an icon for search scope. Your icons are placed in the list of scopes. You can also add new custom links to search locations. This custom link includes links in the selection menu for search options.
 
-
 -   **[Creating a search scope](crt_nw_srch_scp.md)**  
  Create a search scope by completing the following steps.
 -   **[Adding a custom link](add_nw_cstm_lnk.md)**  

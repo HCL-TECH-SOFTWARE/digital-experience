@@ -48,7 +48,10 @@ You can build custom queries for social data by constructing corresponding query
 
 
 
-???+ info "Related information"
-    - [The HCL Connections context rendering plug-in](https://help.hcltechsw.com/digital-experience/8.5/panel_help/soc_rendr_conn_context_plgn.html)
-    - [Setting the list-rendering context](https://help.hcltechsw.com/digital-experience/8.5/panel_help/plrf_list_render_context.html)
+**Related information**  
+
+
+[The HCL Connections context rendering plug-in](https://help.hcltechsw.com/digital-experience/8.5/panel_help/soc_rendr_conn_context_plgn.html)
+
+[Setting the list-rendering context](https://help.hcltechsw.com/digital-experience/8.5/panel_help/plrf_list_render_context.html)
 

@@ -1,4 +1,4 @@
-# Using the DB2 RESTORE DATABASE Command
+# Using the DB2 RESTORE DATABASE command
 
 Use the RESTORE DATABASE command of IBM DB2 Universal Database Enterprise Server Edition as an alternative to the DB2 Restore wizard to restore the databases that you backed up.
 
@@ -10,7 +10,7 @@ To replace an existing WPSDB database with the backup copy using the RESTORE DAT
 
 3.  Run the RESTORE DATABASE command:
 
-    This example refers to the WPSDB database, the default name for the Release database domain. RESTORE DATABASE WPSDB FROMbackup_directory_path TAKEN AT timestamp REPLACE EXISTING
+    This example refers to the WPSDB database, the default name for the Release database domain. RESTORE DATABASE WPSDB FROMbackup\_directory\_path TAKEN AT timestamp REPLACE EXISTING
 
 4.  Roll the restored database forward by choosing the same point in time for the database.
 

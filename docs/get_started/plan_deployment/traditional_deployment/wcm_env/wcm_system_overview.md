@@ -27,14 +27,12 @@ There are three main types of web content systems:
 
     -   An authoring server or cluster.
     -   Individual UAT servers where site and content updates can be tested before the content is syndicated to the delivery environment.
-
 -   **Staging environment**
 
     A staging environment can consist of:
 
     -   Individual holding servers where changes from your authoring environment can be accumulated before your changes are syndicated to your delivery environment in a single batch. Pairs of holding servers can be used to provide you with built-in redundancy.
     -   A complete replica of your delivery environment where UAT can occur to both review site and content updates, and to test the performance of your delivery environment.
-
 -   **Delivery environment**
 
     This environment is used by your website viewers. A delivery environment can consist of:
@@ -45,6 +43,8 @@ There are three main types of web content systems:
     -   A combination of the previous three.
 
 
-???+ info "Related information:"
-    - [HCL Web Content Manager \(WCM\) environments](../wcm_env/index.md)
+**Related information**  
+
+
+[HCL Web Content Manager \(WCM\) environments](../wcm/wcm_deploy.md)
 

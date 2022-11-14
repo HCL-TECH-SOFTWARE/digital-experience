@@ -17,7 +17,7 @@ To create a context processor plug-in, you must create a context processor class
        public void process(HttpSession p_currentSession, ContextProcessorParams p_contextProcessorParams);
     ```
 
-    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the [PortalServer_root](../../../../../guide_me/wpsdirstr.md) `/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
+    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
 
 2.  Implement the process method. This method contains the code that is run when the plug-in is started and modifies the current context by using the `ContextProcessorParams` object before the current context is rendered.
 

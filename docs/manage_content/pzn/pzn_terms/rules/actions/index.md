@@ -23,10 +23,10 @@ The following action items are supported:
     Although email actions differ somewhat from email promotions, both have prerequisites that must be in place and working before email can be sent.
 
 
--   **[Example: Simple select content action](pzn_example_simple_select_content_action.md)**  
+-   **[Example: Simple select content action](../pzn/pzn_example_simple_select_content_action.md)**  
 View an example for a simple select content action.
--   **[Example: Simple update action](pzn_example_simple_update_action.md)**  
+-   **[Example: Simple update action](../pzn/pzn_example_simple_update_action.md)**  
 View an example of an update action that is part of a Web site that allows visitors to manage certain information and preferences about themselves.
--   **[Example: Simple email action](pzn_example_simple_email_action.md)**  
+-   **[Example: Simple email action](../pzn/pzn_example_simple_email_action.md)**  
 This email action rule example is typical of one that might be used after a website visitor submits a form indicating interest in an item or service.
 

@@ -102,6 +102,8 @@ There are three changes that are needed to add menu items with a module.
 
 
 
-???+ info "Related information:"
-    - [Server-side framework](../../customizing_theme/menus/simple_menu_framework/themeopt_cust_serverframe.md)
+**Related information**  
+
+
+[Server-side framework](../dev-theme/themeopt_cust_serverframe.md)
 

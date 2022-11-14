@@ -28,10 +28,8 @@ You can add custom links to allow direct searches from web search engines, such 
 
         -   For Google:http://www.google.com/search?&q=
         -   For Yahoo: http://search.yahoo.com/search?p=
-        
 5.  Enter the URL location where the portal can find the icon that you want to be displayed with the new custom link. Click **Check** icon path to ensure that the icon is available at the URL you specified.
 
-    !!! note
-        To set names for the custom link, you must create and save the link first. Then, locate the custom link on the list, and edit the link by clicking the **Edit** icon. The option for setting names in the other locales is available only on the Edit Custom Link page.
+    **Note:** To set names for the custom link, you must create and save the link first. Then, locate the custom link on the list, and edit the link by clicking the **Edit** icon. The option for setting names in the other locales is available only on the Edit Custom Link page.
 
 

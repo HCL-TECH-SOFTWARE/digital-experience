@@ -37,6 +37,8 @@ You can set the side navigation template as the theme default by changing the re
 You can customize your side navigation by scoping styles specifically to the side navigation template or changing the width of the side navigation area or main content area.
 
 
-???+ info "Related information"  
-    -   [Navigation with consecutive labels is dynamic](../../../../../deployment/manage/migrate/next_steps/post_mig_activities/addon_integration_task/themeopt_upgrade_secnav_labels.md)
+**Related information**  
+
+
+[Navigation with consecutive labels is dynamic](../dev-theme/themeopt_upgrade_secnav_labels.md)
 

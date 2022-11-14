@@ -2,11 +2,11 @@
 
 Learn about vanity URLs, how they work, and how you work with them.
 
-In a new HCL Portal Version 9.5 installation, vanity URL support is enabled. If you upgraded your HCL Portal from a previous version, vanity URL support might be disabled. You can enable and disable vanity URL support as required by using a portal configuration task. For more information, see *Enabling vanity URL support*. For vanity URLs to work, you must also enable managed pages. If vanity URL support is not enabled and a user tries to access a vanity URL, the portal gives a 404 return code.
+In a new HCL Portal Version 8.5 installation, vanity URL support is enabled. If you upgrade your HCL Portal from a previous version to Version 8.5, vanity URL support is disabled. You can enable and disable vanity URL support as required by using a portal configuration task. For more information, see *Enabling vanity URL support*. For vanity URLs to work, you must also enable managed pages. If vanity URL support is not enabled and a user tries to access a vanity URL, the portal gives a 404 return code.
 
 Vanity URLs are stored as part of the page data on the Web Content Manager portal page site area. When you create a vanity URL, both the vanity URL and the information for resolving the vanity URL is stored in the Vanity URL property of the portal page site area item. This storage method has the following consequences:
 
--   You manage vanity URLs by using the portal toolbar and the Managed Pages features. Therefore, if you want to use vanity URLs, Managed Pages must be enabled. The Managed Pages feature is enabled by default in a HCL Portal Version 9.5 installation. 
+-   You manage vanity URLs by using the portal toolbar and the Managed Pages features. Therefore, if you want to use vanity URLs, Managed Pages must be enabled. The Managed Pages feature is enabled by default in a HCL Portal Version 8.5 installation. If you upgrade your portal from a previous version to Version 8.5 and want to use vanity URLs, you must enable Managed Pages.
 -   Assigning a new vanity URL to a page, or changing or deleting an existing vanity URL in the scope of a project creates a draft of the page.
 -   To export vanity URL information, you do not use the XML configuration interface \(XMLAccess\), but the JCR export feature of the portal page site area.
 
@@ -61,7 +61,10 @@ An example process flow of a business user who works with a vanity URL is as fol
 
 
 
-???+ info "Related information:"
-    - [Enabling vanity URL support](../vanity_url/adm_vanity_url/van_url_cfgtsk_enable_vus.md)
-    - [Providing short vanity URLs](../vanity_url/adm_vanity_url/van_url_short.md)
+**Related information**  
+
+
+[Enabling vanity URL support](../wcm/van_url_cfgtsk_enable_vus.md)
+
+[Providing short vanity URLs](../wcm/van_url_short.md)
 

@@ -6,8 +6,7 @@ The Restrict view access to this page to community members setting on a communit
 
     You can set this parameter by editing the page properties in the user interface or by using the XML configuration interface \(xmlaccess command\).
 
-    !!! important
-        When specified, this parameter defines the behavior of the **Restrict view access to this page to community members** setting for pages that are created from the template. The corresponding setting in the Page Associations window for the page template is disregarded.
+    **Important:** When specified, this parameter defines the behavior of the **Restrict view access to this page to community members** setting for pages that are created from the template. The corresponding setting in the Page Associations window for the page template is disregarded.
 
     Specify one of the following values:
 

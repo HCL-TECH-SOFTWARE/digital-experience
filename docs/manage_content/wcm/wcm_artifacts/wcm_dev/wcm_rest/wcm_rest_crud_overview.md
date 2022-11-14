@@ -4,7 +4,7 @@ Different processes are used when items are created and updated by using REST.
 
 ## Item types
 
-A complete list of supported item types are documented here: [REST Item Types](../wcm_rest/wcm_rest_referencematerial/wcm_rest_item_types.md).
+A complete list of supported item types are documented here: [REST Item Types](wcm_rest_item_types.md).
 
 ## Content representations
 
@@ -51,8 +51,7 @@ When a resource supports multiple representations with different content types, 
     `GET /wps/mycontenthandler/!ut/p/wcmrest/SiteArea/c6b00ee6-d628-4cbd-9e65-15c90f2093a6?mime-type=application%2Fjson HTTP/1.0`
 
 
-!!! note
-    The methods that are used to specify the accept type work for all supported media types as listed in [Supported media types](../wcm_rest/wcm_rest_referencematerial//wcm_rest_media_types.md).
+**Note:** The methods that are used to specify the accept type work for all supported media types as listed in [Supported media types](wcm_rest_media_types.md).
 
 ## Item path
 

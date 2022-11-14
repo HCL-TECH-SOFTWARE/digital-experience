@@ -6,18 +6,17 @@ To add a policy to the outbound HTTP connection configuration, follow the proced
 
     You can place the policy in the global profile, or in an application-scoped profile:
 
-    -   Policies that are stored in the global profile are not linked to a specific application. For details about application scoping, see [Using the AJAX proxy in portlets](../../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/http_ajax_proxy/programming_model_ajax_proxy/ajax_proxy_prgrmdl_inplt.md).
+    -   Policies that are stored in the global profile are not linked to a specific application. For details about application scoping, see *Using the Ajax proxy in portlets*.
     -   Policies that are stored in an application-scoped profile are visible in the scope of the application that is associated with the profile. The connection is effective only in the scope of that application, with the following consequences:
         -   If the remote connection is opened through the Ajax proxy, the caller must use the Ajax proxy URL that is registered in the web module. Application-scoped policies are not visible to the Ajax proxy servlet of HCL Digital Experience.
         -   If the remote connection is opened through the outbound connection service, the policy is only visible if the code runs in the web module for which the profile is scoped.
-
 2.  Decide the mapping for which you want the policy to apply. The policy mapping determines the entry point of the Ajax proxy.
 
     For example, the HCL Portal Ajax proxy servlet provides the following mapping points:
 
     -   `/proxy` is for unauthenticated access. With this mapping point, an HTTP client can access the remote content without further authentication at the portal server.
     -   `/myproxy` is for authenticated access. With this mapping point, the HTTP client must authenticate before it can access the remote resource through the Ajax proxy.
-    Furthermore, you can also place the policy into the default mapping. Policies that are stored in the default mapping are accessible through all servlet entry points. Usually, policies for remote URLs that have security sensitive content are stored under the `/myproxy` mapping. Otherwise, it is good practice to store the policy in the default mapping. For more information, see [Policy mappings](../../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/cfg_outbound_http_connections/cfg_structure/outbhttp_cfg_strctr_policy_mapng.md).
+    Furthermore, you can also place the policy into the default mapping. Policies that are stored in the default mapping are accessible through all servlet entry points. Usually, policies for remote URLs that have security sensitive content are stored under the `/myproxy` mapping. Otherwise, it is good practice to store the policy in the default mapping. For more information, see *Policy Mappings*.
 
 3.  Open one of the following XML templates in a text editor, depending on whether you want to place the policy in the default mapping or a different mapping.
 
@@ -131,7 +130,7 @@ To add a policy to the outbound HTTP connection configuration, follow the proced
 
     For example, you can use `policy_01`.
 
-    Locate all occurrences of `MY_ADMINISTRATIVE_NAME` and replace this string with the administrative name that you determined (example: `policy_01`).
+    Locate all occurrences of `MY_ADMINISTRATIVE_NAME` and replace this string with the administrative name that you determined \(example: `policy_01`\).
 
 5.  Define a URL pattern to which you want the policy to apply. Replace `MY_URL_PATTERN` with the URL pattern to which you want this policy to apply.
 
@@ -141,7 +140,7 @@ To add a policy to the outbound HTTP connection configuration, follow the proced
 
 7.  Determine the authentication method that is required to establish the remote connection.
 
-    The remote host might restrict the access to the URL. If you want the remote connection to be an authenticated connection, add the metadata settings that are required for the authentication type. Also, for certain authentications extra user credentials are referenced. Make sure that the Credential Vault contains the user credentials that are referenced in the authentication settings. For details, read [Authenticating outbound HTTP connections](../../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/authenticating_outbound_http_connections/index.md).
+    The remote host might restrict the access to the URL. If you want the remote connection to be an authenticated connection, add the metadata settings that are required for the authentication type. Also, for certain authentications extra user credentials are referenced. Make sure that the Credential Vault contains the user credentials that are referenced in the authentication settings. For details, read *Authenticating outbound HTTP connections*.
 
 8.  Save the XML document to a file.
 
@@ -150,10 +149,17 @@ To add a policy to the outbound HTTP connection configuration, follow the proced
 9.  Deploy the policy at the configuration profile that you selected in an earlier step.
 
     -   If you want the policy to be active globally, start the following portal configuration engine task:
-        -   AIX® and Linux™:
+        -   AIX® HP-UX Linux™ Solaris z/OS®:
 
             ```
             ./ConfigEngine.sh update-outbound-http-connection-config 
+                              -DConfigFileName=/tmp/create\_policy.xml
+            ```
+
+        -   IBM® i:
+
+            ```
+            ConfigEngine.sh   update-outbound-http-connection-config 
                               -DConfigFileName=/tmp/create\_policy.xml
             ```
 
@@ -165,10 +171,18 @@ To add a policy to the outbound HTTP connection configuration, follow the proced
             ```
 
     -   If you want the policy to be active in the scope of a web module only, start the following portal configuration engine task. This example scopes the policy to the web module Banner AD:
-        -   AIX and Linux:
+        -   AIX HP-UX Linux Solaris z/OS:
 
             ```
             ./ConfigEngine.sh update-outbound-http-connection-config 
+                              -DConfigFileName=/tmp/create\_policy.xml 
+                              -DApplicationScopeRef=/PA\_Banner\_Ad
+            ```
+
+        -   IBM i:
+
+            ```
+            ConfigEngine.sh   update-outbound-http-connection-config 
                               -DConfigFileName=/tmp/create\_policy.xml 
                               -DApplicationScopeRef=/PA\_Banner\_Ad
             ```
@@ -185,8 +199,12 @@ To add a policy to the outbound HTTP connection configuration, follow the proced
 
 
 
-???+ info "Related information"  
-      - [Using the AJAX proxy in portlets](../../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/http_ajax_proxy/programming_model_ajax_proxy/ajax_proxy_prgrmdl_inplt.md)
-      - [Policy mappings](../../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/cfg_outbound_http_connections/cfg_structure/outbhttp_cfg_strctr_policy_mapng.md)
-      - [Authenticating outbound HTTP connections](../../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/authenticating_outbound_http_connections/index.md)
+**Related information**  
+
+
+[Using the AJAX proxy in portlets](../dev-portlet/ajax_proxy_prgrmdl_inplt.md)
+
+[Policy mappings](../dev-portlet/outbhttp_cfg_strctr_policy_mapng.md)
+
+[Authenticating outbound HTTP connections](../dev-portlet/outbhttp_authntct.md)
 

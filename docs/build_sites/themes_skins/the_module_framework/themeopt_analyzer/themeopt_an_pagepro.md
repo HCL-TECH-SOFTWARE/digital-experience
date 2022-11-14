@@ -4,14 +4,13 @@ Use Examine page profile information to explore the whole page hierarchy of the 
 
 When you select the **Examine page profile information** on the **Home** screen, the Page Explorer screen displays.
 
-!!! note
-    In simulation mode, the **Examine page profile information** section is not available and cannot be clicked.
+**Note:** In simulation mode, the **Examine page profile information** section is not available and cannot be clicked.
 
 ## Page explorer
 
 The page explorer displays the page hierarchy of your system in a split view. The tree view shows the page hierarchy and the details view shows information about the branch that is selected in the tree view.
 
-![Screen capture of Page explorer to examine page profile information.](../../../../images/themeopt_an_page_explorer.JPG)
+![Screen capture of Page explorer to examine page profile information.](../images/themeopt_an_page_explorer.JPG)
 
 In the tree view, when a page has a specified profile that is not inherited from the parent, the profile name displays in parentheses after the page name.
 

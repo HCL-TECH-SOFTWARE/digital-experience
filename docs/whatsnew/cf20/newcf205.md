@@ -7,14 +7,14 @@ The HCL Digital Experience 9.5 Container Update and CF205 release includes the f
 -	Design Studio (Beta) Content list item and Data container extensions
 -	Personalization API binding rules
 -	Digital Asset Management extension plugin to Google Vision API service 
--	Updated Digital Asset Management Kaltura Video extension plugin support 
+-	Updated Digital Asset Management Kaltura Video extension plugin support. 
 -	Removal and replacement of Document Conversion Services 
 -	HCL Web Experience Factory V8.5.1 (available in the DX 8.5 offerings)
 -	End of Support is announced for the Digital Experience Pattern v8.5 offerings
 -   The Ring API strictly enforces the case on query parameters
--	New complementary DX training modules in the HCL Software Academy, and more
+-	New complementary DX training modules in the HCL Software Academy, and more.
 
-Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases. 
+Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=9bd40c1f1bbf5cd0534c4159cc4bcbbd#CF17){:target="_blank"} and [HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){:target="_blank"} for the list of software fixes, including Container Update releases. 
 
 For the HCL DX 9.5 Container Update CF205 image list, see the [Container Image listings](../../deployment/install/docker/index.md) topic. 
 
@@ -27,7 +27,7 @@ In Container Update CF205, configurable logging support for HAProxy is enhanced.
 
 ## Option for entitled customers to download HCL DX 9.5 Docker images from HCL Harbor 
 For customers considering or managing deployments to supported Kubernetes platforms, beginning with HCL Digital Experience V9.5 Container Update 205 the 
-For customers considering or managing deployments to supported Kubernetes platforms, beginning with HCL Digital Experience V9.5 Container Update 205, the Docker images for deployment to Kubernetes environments can be optionally accessed via Helm charts in the HCL Harbor repository at https://hclcr.io . Customers with credentials to access entitled software in the HCL Software Licensing Portal may apply those credentials to optionally access the Docker components of Digital Experience v9.5 Container Update CF205 or later releases. Customers with credentials to access entitled software in the HCL Software Licensing Portal may apply those credentials to optionally access the Docker components of Digital Experience v9.5 Container Update CF205 or later releases. For more information, see the [Getting the Software and Access](../../get_started/download/software_licensing_portal/index.md) and [Deploy DX 9.5 Docker components from HCL Harbor](../../get_started/download/harbor_container_registry.md) topics. 
+For customers considering or managing deployments to supported Kubernetes platforms, beginning with HCL Digital Experience V9.5 Container Update 205, the Docker images for deployment to Kubernetes environments can be optionally accessed via Helm charts in the HCL Harbor repository at https://hclcr.io . Customers with credentials to access entitled software in the HCL Software Licensing Portal may apply those credentials to optionally access the Docker components of Digital Experience v9.5 Container Update CF205 or later releases. Customers with credentials to access entitled software in the HCL Software Licensing Portal may apply those credentials to optionally access the Docker components of Digital Experience v9.5 Container Update CF205 or later releases. For more information, see the [Getting the Software and Access](../../get_started/download/download_flexnet.md) and [Deploy DX 9.5 Docker components from HCL Harbor](../../get_started/download/download_harbor.md) topics. 
 
 ## Design Studio (Beta) Content list item and Data container extensions 
 Reusable elements for use with Content lists are added to Design Studio (Beta). APIs are added to support integration with data containers to provide the capability of rendering information from an external data source, such as HCL Volt MX Foundry. For more information, see the [Design Studio (Beta) Reusable blocks](https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/design_studio/building_content/use_reusable_blocks/) and [Data Containers](https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/design_studio/building_content/use_data_containers/) topics.
@@ -76,13 +76,13 @@ Beginning with HCL Digital Experience 9.5 Container Update CF205, using a custom
 The Digital Asset Management plugin extension method available to integrate the [Kaltura Video Content Management](https://corp.kaltura.com/video-content-management-system/){:target="_blank"} platform assets is updated. For more information, see [Configure DAM - Kaltura Integration](../../manage_content/digital_assets/configuration/configure_dam_kaltura.md), and [DAM Extensibility Configure of Kaltura](../../manage_content/digital_assets/configuration/dam_extensibility/kaltura_configuration.md) topics.
 
 ## HCL Web Experience Factory V8.5.1
-Along with the release of HCL Digital Experience CF205, HCL has released an updated version of HCL Web Experience Factory, version 8.5.1. This release includes support for Java 1.8 and Eclipse 4.2.2. For additional information, see [HCL Web Experience Factory](../../extend_dx/development_tools/wef/index.md).
+Along with the release of HCL Digital Experience CF205, HCL has released an updated version of HCL Web Experience Factory, version 8.5.1. This release includes support for Java 1.8 and Eclipse 4.2.2. For additional information, see [HCL Web Experience Factory](../../extend_dx/development_tools/wef/web_experience_factory.md).
 
 ## End of Support is announced for the Digital Experience Pattern v8.5 offerings
 Effective on June 30, 2022, HCL announces the withdrawal of support for the Digital Experience Patterns for HCL Portal Server and Web Content Manager v8.5. For more information including recommended Digital Experience replacement offerings, see the [HCL Digital Experience Patterns for Web Content Manager and Portal v8.5](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0099137){:target="_blank"} and [HCL Digital Experience deprecated features and themes for HCL Digital Experience 8.5 and 9.0](../../whatsnew/deprecated_features.md).
 
 ## Ring API query parameters
-Refer to the Limitations table in [REST API Explorers](../../extend_dx/apis/hcl_experience_api/api_explorers.md) to learn the query parameters enforced for Ring API.
+Refer to this [Limitations table](../../extend_dx/apis/hcl_experience_api/usage/api_explorers.md)) to learn the query parameters enforced for Ring API.
 
 ## Site Manager - Delete pages and their contents
 Beginning with CF205, a new feature is added, which allows you to delete a page and its contents along with the content that is referenced by the WCM rendering portlets on the page. For more information, see [Delete pages and their contents](https://help.hcltechsw.com/digital-experience/9.5/admin-system/delete_page_and_contents.html){:target="_blank"}. 

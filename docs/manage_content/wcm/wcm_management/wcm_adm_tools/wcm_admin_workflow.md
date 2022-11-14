@@ -16,11 +16,9 @@ You must first enable the workflow update tool by adding the following parameter
     http://[HOST]:[PORT]/wps/wcm/myconnect/?MOD=workflowenablement&library=*libraryname*&workflow=*workflowname*&fix=true
     ```
 
-    !!! note
-        If the "`library`" parameter is omitted, the default library that is configured in the **WCM WCMConfigService** service is used.
+    **Note:** If the "`library`" parameter is omitted, the default library that is configured in the **WCM WCMConfigService** service is used.
 
-    !!! note
-        If the "`&fix=true`" parameter is omitted, the tool runs in read-only mode and generates a report.
+    **Note:** If the "`&fix=true`" parameter is omitted, the tool runs in read-only mode and generates a report.
 
 
 -   **Specifying the workflow:**
@@ -84,10 +82,11 @@ There are two methods available when the tool is run on a virtual portal:
     ```
 
 
-!!! note
-    After you enable workflows for an item type, ensure that workflows are also enabled for newly created items in the WCM WCMConfigService service. See the **Enabling workflows** section of the [Web content authoring options](../../wcm_content_delivery/cfg_webcontent_auth_env/wcm_config_prop_authoring.md) topic.
+**Note:** After you enable workflows for an item type, ensure that workflows are also enabled for newly created items in the WCM WCMConfigService service. See the **Enabling workflows** section of the [Web content authoring options](wcm_config_prop_authoring.md) topic.
 
 
-???+ info "Related information"
-    - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
+**Related information**  
+
+
+[Setting service configuration properties](../admin-system/adsetcfg.md)
 

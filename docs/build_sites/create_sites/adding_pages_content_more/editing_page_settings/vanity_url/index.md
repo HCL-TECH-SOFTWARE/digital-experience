@@ -3,6 +3,9 @@ id: toolbar_vanityurls
 title: Vanity URLs
 ---
 
+
+
+
 Create a vanity URL when you need a short page address that people can easily remember.
 
 As a content author, you can create short, arbitrary URLs that are easy to use in marketing campaigns and for site visitors to remember. You can change vanity URLs as frequently as you want to. You can also set up multiple vanity URLs for a single page. When you create the vanity URL, you can select to display one or more specific content items on the page. When a user accesses the vanity URL, the portal shows the page with the content item that you specified.
@@ -21,7 +24,6 @@ When you go to a vanity URL, this URL does not remain in the browser **URL addre
 
 Ideally the vanity URL is your-hostname.com/your-vanity-url. Your site administrator must set up HTTP server rewrite rules to ensure this behavior. Your authoring environment might be set up differently than the live server site. If you do not have an HTTP server for your authoring environment, then your vanity URL might look as follows: your-hostname.com/context-root/vanityurl/your-vanity-url. After you publish to the production server that has an HTTP server that is configured correctly, your vanity URL is your-hostname.com/your-vanity-url.
 
-
--   **[Content types](toolbar_content_types.md)** 
+-   **[Content types](toolbar_content_types.md)**  
 
 

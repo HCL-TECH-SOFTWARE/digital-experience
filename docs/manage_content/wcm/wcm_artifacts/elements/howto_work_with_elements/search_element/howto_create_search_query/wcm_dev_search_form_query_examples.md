@@ -8,33 +8,18 @@ The query parameters can be set in the request parameters. For instance, a searc
 
 This is an example of a simple search query form:
 
-**Table 1. Simple search query**
-
-<table>
-<tr>
-<td> <b>Code example</b> </td> <td> <b>Description</b> </td>
-</tr>
-<tr>
-<td> 
-
-```
+|Code example|Description|
+|------------|-----------|
+|```
 <form 
 action='<PathCmpnt type="servlet" />
 /library/sitearea/content' method="post">
 ```
 
-</td>
-<td> 
+|This is the form header where you specify the location of the content item containing the search element that is used to display the search result.This is typically the same content item that this HTML element is stored in.
 
-This is the form header where you specify the location of the content item containing the search element that is used to display the search result.
-This is typically the same content item that this HTML element is stored in.
-
-</td>
-</tr>
-<tr>
-<td> 
-
-```
+|
+|```
 <table>
    <tr><td>
         <input type="text" name="search_query"/>
@@ -43,63 +28,33 @@ This is typically the same content item that this HTML element is stored in.
         <input type="submit" value="Search"/>
     </td></tr>
 </table>
-``` 
-
-</td>
-<td> 
-
-This is the body of the search form. Like any standard HTML form, it contains an input field and a submit button.
-In this example, a table has been used to format the search query form.
-
-</td>
-</tr>
-<tr>
-<td> 
-
 ```
+
+|This is the body of the search form. Like any standard HTML form, it contains an input field and a submit button.In this example, a table has been used to format the search query form.
+
+|
+|```
 </form>
-``` 
+```
 
-</td>
-<td> 
-
-This closes the form.
-
-</td>
-</tr>
-</table>
+|This closes the form.|
 
 ## Searching metadata
 
 In this example, two more fields have been added allowing users to search both content title and author name:
 
-**Table 2. Searching metadata**
-
-<table>
-<tr>
-<td> <b>Code example</b> </td> <td> <b>Description</b> </td>
-</tr>
-<tr>
-<td> 
-
-```
+|Code example|Description|
+|------------|-----------|
+|```
 <form 
 action='<PathCmpnt type="servlet" />
 /library/sitearea/content' method="post">
 ```
 
-</td>
-<td> 
+|This is the form header where you specify the location of the content item containing the search element that is used to display the search result.This is typically the same content item that this HTML element is stored in.
 
-This is the form header where you specify the location of the content item containing the search element that is used to display the search result.
-This is typically the same content item that this HTML element is stored in.
-
-</td>
-</tr>
-<tr>
-<td> 
-
-```
+|
+|```
 <table>
     <tr>
         <td>Content Title</td>
@@ -118,78 +73,38 @@ This is typically the same content item that this HTML element is stored in.
         <input type="submit" value="Search"/>
     </td></tr>
 </table>
-``` 
-
-</td>
-<td> 
-
-This is the body of the search form. Like any standard HTML form, it contains input fields and a submit button.
-
-</td>
-</tr>
-<tr>
-<td> 
-
 ```
+
+|This is the body of the search form. Like any standard HTML form, it contains input fields and a submit button.|
+|```
 </form>
-``` 
+```
 
-</td>
-<td> 
-
-This closes the form.
-
-</td>
-</tr>
-</table>
+|This closes the form.|
 
 ## Including hidden data
 
 In this example, a hidden field has been added to restrict the search to content that use the authoring template called "Press Release":
 
-**Table 3. Including hidden data**
-
-<table>
-<tr>
-<td> <b>Code example</b> </td> <td> <b>Description</b> </td>
-</tr>
-<tr>
-<td> 
-
-```
+|Code examples|Description|
+|-------------|-----------|
+|```
 <form 
 action='<PathCmpnt type="servlet" />
 /library/sitearea/content' method="post">
 ```
 
-</td>
-<td> 
+|This is the form header where you specify the location of the content item containing the search element used to display the search result.This is typically the same content item that this HTML element is stored in.
 
-This is the form header where you specify the location of the content item containing the search element used to display the search result.
-This is typically the same content item that this HTML element is stored in.
-
-</td>
-</tr>
-<tr>
-<td> 
-
-```
+|
+|```
 <input type="hidden"
        name="search_authoringtemplate"
        value="Press Release"/>
-``` 
-
-</td>
-<td> 
-
-Here a hidden input field has been added that searches for content that use the authoring template called "Press Release".
-
-</td>
-</tr>
-<tr>
-<td> 
-
 ```
+
+|Here a hidden input field has been added that searches for content that use the authoring template called "Press Release".|
+|```
 <table>
     <tr>
         <td>Content Title</td>
@@ -208,37 +123,17 @@ Here a hidden input field has been added that searches for content that use the 
         <input type="submit" value="Search"/>
     </td></tr>
 </table>
-``` 
-
-</td>
-<td> 
-
-This is the body of the search form. Like any standard HTML form, it contains input fields and a submit button.
-
-</td>
-</tr>
-<tr>
-<td> 
-
 ```
+
+|This is the body of the search form. Like any standard HTML form, it contains input fields and a submit button.|
+|```
 </form>
-``` 
+```
 
-</td>
-<td> 
-
-This closes the form.
-
-</td>
-</tr>
-</table>
+|This tag closes the form.|
 
 ## Setting the search query in the request attributes
 
-The query parameters can also be set in the request attributes on the server. For instance, a search component that is displayed after the following tag is used displays search results for shoes: 
-
-```
-[Plugin:RequestAttribute key="search_query" value="shoes" compute="once"]
-```
+The query parameters can also be set in the request attributes on the server. For instance, a search component that is displayed after the following tag is used: `[Plugin:RequestAttribute key="search_query" value="shoes" compute="once"]` displays search results for shoes.
 
 

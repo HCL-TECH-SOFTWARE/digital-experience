@@ -17,8 +17,7 @@ A choice of attribute delimiters can be used when you write web content tags. Fo
 -   `[Property field='title']`
 -   `[Property field=title]`
 
-!!! note
-    The anchor and image HTML tags are the only HTML tags that are processed within web content tags. An attribute delimiter tag must always be used with these HTML tags, and are added automatically if omitted.
+**Note:** The anchor and image HTML tags are the only HTML tags that are processed within web content tags. An attribute delimiter tag must always be used with these HTML tags, and are added automatically if omitted.
 
 ## Primary parameters
 

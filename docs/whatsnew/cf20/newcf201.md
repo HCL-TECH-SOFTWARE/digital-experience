@@ -16,7 +16,7 @@ Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators
 
 See the following Help Center topics for more information:
 
--   [Containers overview](../../get_started/plan_deployment/container_deployment/index.md)
+-   [Containerization overview](../../get_started/architecture_overview/kubernetes_deployment/index.md)
 -   [Containerization Requirements and Limitations](../../get_started/system_requirements/9.5_express/supportedsoftware.md)
 -   [Additional Helm Tasks](../../deployment/install/container/helm_deployment/preparation/index.md)
 -   [Monitor the HCL Digital Experience Container Deployment using Metrics](../../deployment/manage/container_configuration/monitoring/basic_monitor_helm_deployment.md)
@@ -29,9 +29,9 @@ See the [Using DAM Extensibility](../../manage_content/digital_assets/configura
 
 ## Script Application Updates
 
-New features and updates available for the Script Application include a new configuration task for use to configure Web Content Manager properties used to run Single Page Applications \(SPAs\) that use React or Angular. Improvements are added to support uploads of minified content for use in production SPAs. An out-of-the-box React profile, “Deferred with React,” is added for use with the Digital Experience 8.5 theme. See [Understanding the Portal 8.5 modularized theme](../../build_sites/create_sites/website_building_blocks/themes_profiles_skins/themeopt_defaultparts.md) for more information.
+New features and updates available for the Script Application include a new configuration task for use to configure Web Content Manager properties used to run Single Page Applications \(SPAs\) that use React or Angular. Improvements are added to support uploads of minified content for use in production SPAs. An out-of-the-box React profile, “Deferred with React,” is added for use with the [Digital Experience 8.5 Theme](../../build_sites/themes_skins/usage/portal85_modularized_theme/themeopt_defaultparts.md).
 
-See the following Help Center topic for more information: [Script Application Improvements](../../extend_dx/script_application/build_app_with_script_application/script_app_improvements.md).
+See the Script Application Improvements topic for more information: [HCL Digital Experience 9.5](../../extend_dx/development_tools/script_application/usage/build_app_with_script_application/script_app_improvements.md).
 
 ## Enhancements to DXClient
 
@@ -49,7 +49,7 @@ See the Help Center topic [Personalization Folder APIs](../../manage_content/pzn
 
 Introduced in Container Update CF201, you can disable the language switcher by setting disable.languageSwitcher to `true` at the root page level in the configuration page. When set to `true`, the language switcher is hidden from the portal interface.
 
-See the Help Center topic [Disabling the language switcher](../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/wcm_mngpages_disable_lang_switch.md) for more information.
+See the Help Center topic [Disabling the language switcher](../../build_sites/site_toolbar_and_site_manager/configuration/site_toolbar/wcm_mngpages_disable_lang_switch.md) for more information.
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software Academy
 

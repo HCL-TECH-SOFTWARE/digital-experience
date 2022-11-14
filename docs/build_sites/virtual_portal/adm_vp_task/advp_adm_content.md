@@ -14,12 +14,14 @@ Other resource types are not scoped. They are shared among all virtual portals o
 
     2.  Use the XML configuration interface to import content into the virtual portal. You can use this portal tool only from the initial portal installation.
 
-    !!! note
-        When you create a virtual portal, the portlets that are associated with HCL Web Content Manager are not included in the virtual portal, even if you deployed these portlets as part of your original portal installation. To use any of these portlets in a virtual portal, you must manually create a page and add the portlets:
-        -   Authoring portlet: Select **Web Content Authoring** when you are adding the portlet.
-        -   Web Content Viewer portlet: Select **Web Content Viewer** when you are adding the portlet.
+    **Note:** When you create a virtual portal, the portlets that are associated with HCL Web Content Manager are not included in the virtual portal, even if you deployed these portlets as part of your original portal installation. To use any of these portlets in a virtual portal, you must manually create a page and add the portlets:
+
+    -   Authoring portlet: Select **Web Content Authoring** when you are adding the portlet.
+    -   Web Content Viewer portlet: Select **Web Content Viewer** when you are adding the portlet.
 
 
-???+ info "Related information:"
-    - [Filling a virtual portal with content](../adm_vp_task/vp_adm_task/advp_tsk_fill_content.md)
+**Related information**  
+
+
+[Filling a virtual portal with content](../admin-system/advp_tsk_fill_content.md)
 

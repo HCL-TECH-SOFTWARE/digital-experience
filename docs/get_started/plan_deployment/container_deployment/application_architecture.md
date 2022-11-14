@@ -2,7 +2,7 @@
 
 This topic provides a list of all DX applications and resource definitions that configure the application runtime and are deployed to containers using Helm on OpenShift or Kubernetes platforms. As outlined in the overview, applications can also include ConfigMaps, Secrets, and Ingress.
 
-For more information about Helm applications, consult the [Helm documentation](https://helm.sh/docs/){:target="_blank"}. Refer to the DX 9.5 Container component image listing in the DX 9.5 Docker [Image file listing](../../../deployment/install/container/image_list.md) topic.
+For more information about Helm applications, consult the [Helm documentation](https://helm.sh/docs/){:target="_blank"}. Refer to the DX 9.5 Container component image listing in the DX 9.5 Docker [Image file listing](../../../deployment/container/installation/image_list.md) topic.
 
 Do note that each application defined only lists its next direct dependencies. Sub-dependencies are not explicitly listed.
 
@@ -25,7 +25,7 @@ HCL DX 9.5 CF196 and later Core contains the primary Portal and Web Content Mana
 
 **Type:** Stateless
 
-The Ring API, a component of the HCL DX Experience API  [HCL DX Experience API](../../../extend_dx/apis/hcl_experience_api/index.md), is a REST API wrapping Core functionality. It provides easy-to-use API endpoints and requires that a DX Core 9.5 instance is deployed and started. That instance can either be running inside the Kubernetes or OpenShift deployment or be an existing external on-premise DX-Core installation using the Hybrid pattern.
+The Ring API, a component of the HCL DX Experience API<!--  [HCL DX Experience API](../../../design/api/openapi_overview.md) -->, is a REST API wrapping Core functionality. It provides easy-to-use API endpoints and requires that a DX Core 9.5 instance is deployed and started. That instance can either be running inside the Kubernetes or OpenShift deployment or be an existing external on-premise DX-Core installation using the Hybrid pattern.
 
 ![Ring API Application definition](../../../images/Ring%20API%20Application%20definition.png)
 
@@ -35,7 +35,7 @@ The Ring API, a component of the HCL DX Experience API  [HCL DX Experience API](
 
 **Type:** Stateless
 
-Content Composer [Content Composer](../../../manage_content/content_composer/index.md) requires the Ring API to be deployed to execute Content authoring capabilities.
+Content Composer<!-- [Content Composer](../../../design/content_composer/cont_comp_overview.md) --> requires the Ring API to be deployed to execute Content authoring capabilities.
 
 ![Content Composer Application Definition](../../../images/Content%20Composer%20Application%20Definition.png "Content Composer Application definition")
 
@@ -45,7 +45,7 @@ Content Composer [Content Composer](../../../manage_content/content_composer/ind
 
 **Type:** Stateful
 
-Digital Asset Management requires the Ring API be deployed and operational to communicate with the DX Core, and Image Processor components to perform image manipulation, and Persistence to store its application data. See [Digital Asset Management](../../../manage_content/digital_assets/index.md)
+Digital Asset Management requires the Ring API be deployed and operational to communicate with the DX Core, and Image Processor components to perform image manipulation, and Persistence to store its application data. See [Digital Asset Management](../../../product3/digital_asset_mgmt/index.md)
 
 ![Digital Asset Management Application Definition](../../../images/Digital%20Asset%20Management%20Application%20Definition.png "Digital Asset Management Application definition")
 
@@ -77,7 +77,7 @@ The Image Processor provides image manipulation capabilities that are leveraged 
 
 **Type:** Stateless
 
-Refer to the Design Studio \(Beta\)[Design Studio \(Beta\)](../../../manage_content/design_studio/index.md) topic section for more information about this application.
+Refer to the Design Studio \(Beta\)<!-- [Design Studio \(Beta\)](../../../design/design_studio/design_studio_overview.md) --> topic section for more information about this application.
 
 ![Design Studio (Beta) Application Definition](../../../images/Design%20Studio%20Beta%20Application%20Definition.png "Design Studio (Beta) Application Definition")
 
@@ -109,9 +109,10 @@ Application names are defined as follows:
 |PER|Persistence|
 |IMG|Image Processor|
 
-???info "Related information:"
-    -   [HCL DX Experience API](../../../extend_dx/apis/hcl_experience_api/index.md)
-    -   [Content Composer](../../../manage_content/content_composer/index.md)
-    -   [Digital Asset Management](../../../manage_content/digital_assets/index.md)
-    -   [Design Studio \(Beta\)](../../../manage_content/design_studio/index.md)
-    -   [Hybrid deployment](../hybrid_deployment/index.md)
+<!-- ???info "Related information:"
+    -   [HCL DX Experience API](../../../design/api/openapi_overview.md)
+    -   [Content Composer](../../../design/content_composer/cont_comp_overview.md)
+    -   [Digital Asset Management](../../../design/digital_asset_mgmt/digital_asset_mgmt_overview.md)
+    -   [Design Studio \(Beta\)](../../../design/design_studio/design_studio_overview.md)
+    -   [Hybrid deployment](../../hybrid/hybrid_deployment_operator.md)
+ -->

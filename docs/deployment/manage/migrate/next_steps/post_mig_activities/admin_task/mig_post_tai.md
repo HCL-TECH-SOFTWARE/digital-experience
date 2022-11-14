@@ -5,11 +5,11 @@ If TAI was disabled before you began migration, and you had to enable it in orde
 1.  To disable TAI, complete the following task:
 2.  Log in to the WebSphere® Integrated Solutions Console.
 
-3.  Go to **Security > Global security**.
+3.  Go to **Security** \> **Global security**.
 
 4.  Select **Enable administrative security** and **Enable application security**.
 
-5.  On the Global security page, locate the **Authentication** section and click **Web and SIP security > Trust association**.
+5.  On the Global security page, locate the **Authentication** section and click **Web and SIP security** \> **Trust association**.
 
 6.  Clear **Enable Trust Assocation**.
 
@@ -23,6 +23,8 @@ If TAI was disabled before you began migration, and you had to enable it in orde
 
 
 
-???+ info "Related information" 
-    -   [Verifying that WebSphere Application Server Trust Association Interceptor is enabled](../../../../../../deployment/manage/migrate/preparing_source_env/mig_pre_src_tai.md)
+**Related information**  
+
+
+[Verifying that WebSphere Application Server Trust Association Interceptor is enabled](../migrate/mig_pre_src_tai.md)
 

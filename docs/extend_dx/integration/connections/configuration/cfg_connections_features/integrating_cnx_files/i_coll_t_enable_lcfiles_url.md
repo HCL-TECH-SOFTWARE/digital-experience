@@ -17,6 +17,8 @@ The set of CMIS service documents includes service documents that define the fol
 
 
 
-???+ info "Related information"
-    - [Files CMIS API: Retrieving the Files CMIS API service document](https://ds_infolib.hcltechsw.com/ldd/appdevwiki.nsf/xpDocViewer.xsp?lookupName=CMIS%3A+Files#action=openDocument&res_title=Retrieving_the_Files_CMIS_API_service_document&content=pdcontent)
+**Related information**  
+
+
+[Files CMIS API: Retrieving the Files CMIS API service document](https://ds_infolib.hcltechsw.com/ldd/appdevwiki.nsf/xpDocViewer.xsp?lookupName=CMIS%3A+Files#action=openDocument&res_title=Retrieving_the_Files_CMIS_API_service_document&content=pdcontent)
 

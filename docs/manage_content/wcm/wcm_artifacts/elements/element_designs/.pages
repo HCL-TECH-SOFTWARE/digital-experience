@@ -1,11 +1,11 @@
-Title: Element Designs
+Title: Element designs
 nav:
     - index.md
-    - Insert an Image: wcm_dev_elements_insert_image.md
-    - Insert Link to Remote Content: wcm_dev_elements_insert_link.md
-    - Insert a Link: wcm_dev_elements_insert_link_ecm.md
-    - Insert Element Tags: wcm_dev_elements_insert_tags.md
-    - Importing and Exporting HTML: wcm_dev_import-export-html.md
-    - Start and End Attributes: wcm_dev_tags_start-end.md
-    - Set Parameters to Format Dates: wcm_reference-dates.md
+    - wcm_dev_elements_insert_image.md
+    - wcm_dev_elements_insert_link.md
+    - wcm_dev_elements_insert_link_ecm.md
+    - wcm_dev_elements_insert_tags.md
+    - wcm_dev_import-export-html.md
+    - wcm_dev_tags_start-end.md
+    - wcm_reference-dates.md
     - wcm_reference-numbers.md

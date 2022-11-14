@@ -6,8 +6,6 @@ Use this information to install and configure SQL Server for use with your HCL D
 -   Ensure the database that you plan to use is supported by this version of HCL Portal. Refer to the list of supported databases in the HCL Portal detailed system requirements.
 -   Download a JDBC 6.2 compliant driver from Microsoft.
 
-## Procedure
-
 1.  Install SQL Server and all required patches.
 
 2.  In the SQL Server Setup, choose the following:
@@ -18,8 +16,9 @@ Use this information to install and configure SQL Server for use with your HCL D
 
     3.  In the Database Engine Configuration, select **Mixed Mode (SQL Server Authentication and Windows authentication)**.
 
-        !!! important
-            Mixed Mode authentication allows either a Windows user or an SQL Server user to log in to the SQL Server. However, HCL Portal requires the user to be an SQL Server user.
+        **Important:**
+
+        Mixed Mode authentication allows either a Windows user or an SQL Server user to log in to the SQL Server. However, HCL Portal requires the user to be an SQL Server user.
 
 3.  Complete the installation. Use the SQL Server documentation as a guide.
 
@@ -36,7 +35,7 @@ Use this information to install and configure SQL Server for use with your HCL D
     6.  Select **File > Open > File** and select xa_install.sql from the sub-directory of the downloaded and extracted JDBC driver.
     7.  Run the script by Select **Query > Execute** to run the script.
 
-        !!!note
+        !!!note:
             Ignore any warnings that say that stored procedures cannot be found.
 
     8.  To grant permission to a specific user to participate in distributed transactions with the JDBC driver, add the user to the SqlJDBCXAUser role.

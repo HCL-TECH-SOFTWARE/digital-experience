@@ -25,12 +25,9 @@ To programmatically start a rule, follow these steps:
 
 3.  Trigger the rule and, if applicable, get the content from the rule. Use one of the following methods, depending on the type of rule:
     -   Select content actions, bindings, and recommendation actions are mapped to content spots and return content from a resource.
-
         -   `getRuleContent()` - returns an array of results
         -   `getRuleContent(int which)` - returns the resource at the index
-
     -   Profilers are mapped to empty content spots, which do not declare a return type.
-
         -   `boolean isProfiledAs(string value)` - returns true or false depending on whether the string passed to the method matches a profile that is given to the user
         -   `String getProfile(integer value)` - returns the profile in the location that is specified by the integer passed
 
@@ -42,9 +39,7 @@ To programmatically start a rule, follow these steps:
 
         -   `boolean isProfiledAsAll(String[] profiles)` - returns True or False depending on whether all the profiles match all the profiles in the list of profiles that are passed to the method
         -   `boolean isProfiledAsAny(String[] profiles)` - returns True or False depending on whether the profile is in the list of profiles that are passed to the method
-
     -   Update actions and email actions are mapped to empty content spots.
-
         1.  `trigger()` - runs the rule
 
 

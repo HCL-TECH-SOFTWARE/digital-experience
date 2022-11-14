@@ -171,8 +171,7 @@ The HCL Web Content Manager configuration service \(WCM WCMConfigService\) defin
 
     The error percent threshold for a given type when deleting a library. This value is specified as an integer from `0` to `100`. If the threshold level is reached for any type, the library deletion task is stopped.
 
-    !!! note 
-        If the threshold is set to `100`, the task ignores the error rate. If the threshold is set to an unsupported value, such as a value less than `0` or greater than `100`, the threshold is set to the default value of `40` percent.
+    **Note:** If the threshold is set to `100`, the task ignores the error rate. If the threshold is set to an unsupported value, such as a value less than `0` or greater than `100`, the threshold is set to the default value of `40` percent.
 
     Default value: `40`
 

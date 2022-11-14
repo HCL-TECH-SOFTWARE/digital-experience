@@ -160,8 +160,7 @@ Accept-Type: application/atom+xml
 200 OK
 ```
 
-!!! note
-    If you use REST inside a Portal project context, posting to the create-draft link relation creates the draft in a project.
+**Note:** If you use REST inside a Portal project context, posting to the create-draft link relation creates the draft in a project.
 
 ## Removing an item from a project
 

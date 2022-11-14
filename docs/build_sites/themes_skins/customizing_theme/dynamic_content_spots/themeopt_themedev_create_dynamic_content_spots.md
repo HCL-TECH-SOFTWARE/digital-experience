@@ -31,6 +31,8 @@ After you create a new theme, you can customize it by creating your own dynamic 
 
 
 
-???+ info "Related information:"
-    - [Modules and dynamic content spots](../dynamic_content_spots/working_with_dcs/themeopt_modules_dyn_cnt_spts.md)
+**Related information**  
+
+
+[Modules and dynamic content spots](../dev-theme/themeopt_modules_dyn_cnt_spts.md)
 

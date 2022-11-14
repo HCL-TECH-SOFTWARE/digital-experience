@@ -19,7 +19,6 @@ These publishing methods are used by projects:
 
 When the project is published, you can continue to review the status and version history of the items in the project by opening the project form.
 
-!!! note
-    You and other users can update the same items in multiple projects. Messages are displayed when you move an item to the publish state to warn you when this event occurs.
+**Note:** You and other users can update the same items in multiple projects. Messages are displayed when you move an item to the publish state to warn you when this event occurs.
 
 

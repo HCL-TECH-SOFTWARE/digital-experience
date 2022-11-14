@@ -9,8 +9,7 @@ When you use the Web Content Viewer for remote rendering with WSRP, the followin
 -   The remote web content server acts as the WSRP Producer.
 -   The portal with the Web Content Viewer acts as the WSRP Consumer.
 
-!!! note
-    Remote rendering with WSRP is supported only when you render content from the default virtual portal.
+**Note:** Remote rendering with WSRP is supported only when you render content from the default virtual portal.
 
 1.  Set up the WSRP environment between the Producer portal and the Consumer portal, as described in *WSRP Services*. If you plan to use the **Edit Shared Settings** mode or the **Configure** mode in the portlet with WSRP, configure web service security between the Producer and the Consumer portals.
 
@@ -24,8 +23,7 @@ When you use the Web Content Viewer for remote rendering with WSRP, the followin
 
     When you use the viewer with WSRP, settings for selecting content from a web content library show content from the remote web content system.
 
-    !!! note
-        Depending on the configuration of the Web Content Viewer, resources like resource bundle files or content processor plug-ins might be required. In such cases, the resources must be available on the remote web content server acting as the WSRP Producer.
+    **Note:** Depending on the configuration of the Web Content Viewer, resources like resource bundle files or content processor plug-ins might be required. In such cases, the resources must be available on the remote web content server acting as the WSRP Producer.
 
     **Limitations when using WSRP with the Web Content Viewer:**
 
@@ -37,16 +35,22 @@ When you use the Web Content Viewer for remote rendering with WSRP, the followin
     **Limitations when using WSRP with the Web Content Viewer with other non-HCL Digital Experience WSRP Consumers:** The link broadcasting feature of the viewer is not supported for the WSRP Consumers of other vendors. This limitation is because the concept of pages and web content pages does not exist in WSRP. When you specify how to broadcast links, you can select only the option **None**.
 
 
--   **[CORS and remote web content rendering with WSRP and the Web Content Viewer](wcm_config_wcmviewer_wsrp_cors.md)**  
+-   **[CORS and remote web content rendering with WSRP and the Web Content Viewer](../wcm/wcm_config_wcmviewer_wsrp_cors.md)**  
 Cross-origin resource sharing \(CORS\) describes a mechanism for supporting requests that a web page sends to a server that is not in the same domain as the originating web page. The CORS concept must be supported by both the web browser and the server.
--   **[OpenAjax security and remote web content rendering with WSRP and the Web Content Viewer](wcm_config_wcmviewer_wsrp_open_ajax.md)**  
+-   **[OpenAjax security and remote web content rendering with WSRP and the Web Content Viewer](../wcm/wcm_config_wcmviewer_wsrp_open_ajax.md)**  
 The Enabler from the Mashups 3.0.0.1 component that is included in HCL Digital Experience as a theme module implements some features that are specified by the OpenAjax Alliance. One of them is a generic override for Dojo XMLHttpRequests.
 
 
-???+ info "Related information:"
-    - [Web Content Viewers](../getting_started/wcm_deploy_wcmviewer_about.md)
-    - [WSRP services](../../../../../../extend_dx/development_tools/wsrp/index.md)
-    - [Providing WSRP services as a Producer](../../../../../../extend_dx/development_tools/wsrp/portal_wsrp_producer/providing_wsrp_services_as_producer/index.md)
-    - [Configuring security on the Consumer portal](../../../../../../extend_dx/portlets_development/usage/wsrp/configuration/portal_wsrp_consumer/cfg_security_consumer_portal/wsrpt_cons_prep_sec.md)
-    - [Working with lists of social objects](../../../../../../build_sites/social_rendering/working_with_social_objects/index.md)
+**Related information**  
+
+
+[Web Content Viewers](../wcm/wcm_deploy_wcmviewer_about.md)
+
+[WSRP services](../admin-system/wsrpc.md)
+
+[Providing WSRP services as a Producer](../admin-system/wsrpt_prod_prvd_ws.md)
+
+[Configuring security on the Consumer portal](../admin-system/wsrpt_cons_prep_sec.md)
+
+[Working with lists of social objects](../social/soc_rendr_tsk_socl_list.md)
 

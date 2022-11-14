@@ -68,7 +68,12 @@ You can use these parameters to customize the build-initial-release-paa task whe
 
     Add this parameter if you are staging a large set of data. For example, add this string to your command: -javaoption -Xmx2048M. Depending on your system and the amount of data, the -Xmx value might be higher. Use 2048 Mb as a starting value.
 
+
+
 **Related information**  
-[Staging a virtual portal overview](../staging_to_production/overview_of_staging_to_prod/dep_vp.md)<br>
-[Creating the differential release](../staging_to_production/creating_deploying_diff_release/dep_diff.md)
+
+
+[Staging a virtual portal overview](../deploy/dep_vp.md)
+
+[Creating the differential release](../deploy/dep_diff.md)
 

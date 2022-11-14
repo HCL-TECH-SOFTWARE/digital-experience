@@ -1,6 +1,6 @@
-# Updating DB2 self-tuning memory manager (STMM) settings
+# Updating DB2 self-tuning memory manager \(STMM\) settings
 
-With the Version 8.5 release, a number of the settings have been changed to be managed by the self-tuning memory manager (STMM) engine. Change your settings to the recommended values, if there are no specific needs for the current values.
+With the Version 8.5 release, a number of the settings have been changed to be managed by the self-tuning memory manager \(STMM\) engine. Change your settings to the recommended values, if there are no specific needs for the current values.
 
 1.  Stop the portal server.
 
@@ -8,18 +8,18 @@ With the Version 8.5 release, a number of the settings have been changed to be m
 
     UPDATE DBM CFG USING sheapthres 0;
 
-    For each Portal database (release, community, customization, jcr, feedback, likeminds):
+    For each Portal database \(release, community, customization, jcr, feedback, likeminds\):
 
     -   UPDATE DB CFG FOR dbname USING applheapsz automatic;
     -   UPDATE DB CFG FOR dbname USING stmtheap automatic;
     -   UPDATE DB CFG FOR dbname USING dbheap automatic;
     -   UPDATE DB CFG FOR dbname USING locklist automatic;
-    -   UPDATE DB CFG FOR dbname USING avg_appls automatic;
+    -   UPDATE DB CFG FOR dbname USING avg\_appls automatic;
     -   UPDATE DB CFG FOR dbname USING PCKCACHESZ automatic;
-    -   UPDATE DB CFG FOR dbname USING AUTO_MAINT on;
-    -   UPDATE DB CFG FOR dbname USING SHEAPTHRES_SHR automatic;
+    -   UPDATE DB CFG FOR dbname USING AUTO\_MAINT on;
+    -   UPDATE DB CFG FOR dbname USING SHEAPTHRES\_SHR automatic;
     -   UPDATE DB CFG FOR dbname USING SORTHEAP automatic;
-    -   UPDATE DB CFG FOR dbname USING SELF_TUNING_MEM ON;
+    -   UPDATE DB CFG FOR dbname USING SELF\_TUNING\_MEM ON;
     -   Required only for the database that contains the JCR Domain: UPDATE DB CFG FOR dbname USING logfilsiz 16000;
     -   Required only for the database that contains the JCR Domain: UPDATE DB CFG FOR dbname USING logprimary 20;
     -   Required only for the database that contains the JCR Domain: UPDATE DB CFG FOR dbname USING logsecond 50;
@@ -28,11 +28,11 @@ With the Version 8.5 release, a number of the settings have been changed to be m
 
     db2 connect to dbdomain.DbName user dbdomain.DBA.DbUser using dbdomain.DBA.DbPassword
 
-    !!!note
-        -   For dbdomain.DbName, enter the name of the portal domain database.
-        -   For dbdomain.DBA.DbUser, enter the name of the database administrator user ID for privileged access operations during database creation and setup.
-        -   For dbdomain.DBA.DbPassword, enter the database administrator password for privileged access operations during database creation.
+    **Note:**
 
+    -   For dbdomain.DbName, enter the name of the portal domain database.
+    -   For dbdomain.DBA.DbUser, enter the name of the database administrator user ID for privileged access operations during database creation and setup.
+    -   For dbdomain.DBA.DbPassword, enter the database administrator password for privileged access operations during database creation.
 4.  Change your settings to the recommended bufferpool values:
 
     -   ALTER BUFFERPOOL ICMLSFREQBP4 SIZE automatic;
@@ -41,11 +41,24 @@ With the Version 8.5 release, a number of the settings have been changed to be m
     -   ALTER BUFFERPOOL CMBMAIN4 SIZE automatic;
 
 
-???+ info "Related information"  
-    -   [HCL Digital Experience roadmaps for stand-alone servers](../../../../../../get_started/plan_deployment/traditional_deployment/roadmaps/rm_install_deployment/rm_standalone_servers/rm_standalone_parent.md)
-    -   [Setting up a cluster](../../../../../../deployment/manage/config_cluster/index.md)
-    -   [Create a deployment manager](../../../../../../deployment/manage/config_cluster/cw_dmgr_profile.md)
-    -   [Create a cluster](../../../../../../deployment/manage/config_cluster/create_cluster/index.md)
-    -   [Create an additional cluster node](../../../../../../deployment/manage/config_cluster/cw_add_node.md)
-    -   [Enable federated security](../../../../../../deployment/manage/security/user_registry/cw_ldap.md)
+**Related information**  
+
+
+[Setting up a stand-alone server](../config/config_standalone.md)
+
+[Setting up a cluster](../config/config_cluster.md)
+
+[Create a deployment manager](../config/cw_dmgr_profile.md)
+
+[Create a cluster](../config/cw_create_cluster.md)
+
+[Static cluster](../config/cw_create_staticcluster.md)
+
+[Dynamic cluster](../config/cw_create_dynamiccluster.md)
+
+[Create an additional cluster node](../config/cw_add_node.md)
+
+[DB2 z/OS: Database transfer](../config/cw_db_transfer.md)
+
+[Enable federated security](../config/cw_ldap.md)
 

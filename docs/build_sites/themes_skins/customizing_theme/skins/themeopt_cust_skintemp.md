@@ -76,11 +76,9 @@ Client-side content spots are replaced at page load time or at run time through 
     	skinNode.setDynamicContent(com.ibm.mashups.enabler.runtime.skin.Constants.DYNAMIC_CONTENT_ICON, "http://www.cntserv_exmp.com/icon.gif");
     ```
 
-    !!! note
-        The somePortletID function fetched from the runtime skin model is a string ID of the layout node for which the title or icon is changed. The profile used on the page must include Enabler in view mode as it is required to fetch the skin node and set the dynamic content.
+    **Note:** The somePortletID function fetched from the runtime skin model is a string ID of the layout node for which the title or icon is changed. The profile used on the page must include Enabler in view mode as it is required to fetch the skin node and set the dynamic content.
 
-    !!! note
-        Enabler has been deprecated.
+    **Note:** Enabler has been deprecated.
 
 -   **class='lm-dynamic-title'**
 
@@ -100,6 +98,8 @@ Client-side content spots are replaced at page load time or at run time through 
     -   var skinConstants: `com.ibm.mashups.enabler.runtime.skin.Constants`.
 
 
-???+ info "Related information:"
-    - [Apache Ant - Welcome Page](http://ant.apache.org)
+**Related information**  
+
+
+[Apache Ant - Welcome Page](http://ant.apache.org)
 

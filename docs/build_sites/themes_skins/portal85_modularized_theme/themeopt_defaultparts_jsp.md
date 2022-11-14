@@ -4,7 +4,7 @@ Dynamic content includes resources that are defined by jsp files that are used b
 
 The entry point for a theme is either Default.jsp or Plain.jsp, both of these files are located here:
 
-[PortalServer\_root](../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\themes\\html
+[PortalServer\_root](../reference/wpsdirstr.md#wp_root)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\themes\\html
 
 -   Default.jsp: Is a main entry point for the theme and bootstraps any required infrastructure, and then delegates all markup rendering to the static template file, which is usually theme.html.
 -   Plain.jsp: Is an alternative entry point. This jsp is commonly used for helps or rendering a portlet with an iframe skin.
@@ -13,7 +13,7 @@ The entry point for a theme is either Default.jsp or Plain.jsp, both of these fi
 
 ## dynamicSpots
 
-[PortalServer\_root](../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\themes\\html\\dynamicSpots
+[PortalServer\_root](../reference/wpsdirstr.md#wp_root)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\themes\\html\\dynamicSpots
 
 -   commonActions.jsp: Provides the common actions in the banner sections and the **Actions** menu. The **Actions** menu is not available to anonymous users.
 -   crumbTrial.jsp: Provides the crumb trail information for the location.

@@ -1,6 +1,6 @@
 # Dialog context keys
 
-The dialog context (DCX) acts like the transient memory of a dialog. It maintains contextual information that is passed from one portlet to subsequent portlets and provides the information to all subsequent portlets. Data that is stored in the dialog context (DCX) is stored only for the lifetime of a user session. If a user logs out of the portal or the user session times out, the current dialog instance, all suspended dialog instances, and all related data are lost.
+The dialog context \(DCX\) acts like the transient memory of a dialog. It maintains contextual information that is passed from one portlet to subsequent portlets and provides the information to all subsequent portlets. Data that is stored in the dialog context \(DCX\) is stored only for the lifetime of a user session. If a user logs out of the portal or the user session times out, the current dialog instance, all suspended dialog instances, and all related data are lost.
 
 -   The DCX is divided into segments where each segment holds data or contextual information of a single dialog instance.
 -   Normally, when you specify events, the `QName` defines how and under which key the corresponding payload is stored in the segment of the specific dialog instance.
@@ -78,5 +78,5 @@ To enable `portlet1` to communicate with `portlet2`, you have the following two 
     ```
 
 
-
+**Parent topic:**[Retrieve and store event payload](../screenflow/ret_str_evnt_pyld.md)
 

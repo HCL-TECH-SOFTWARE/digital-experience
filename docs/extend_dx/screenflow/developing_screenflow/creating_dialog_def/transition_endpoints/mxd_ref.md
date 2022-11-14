@@ -16,5 +16,5 @@ Example of mixed referencing.
       <resource uniquename="uniquename.page1"/
 ```
 
-
+**Parent topic:**[Transition endpoints](../screenflow/ref_trnstn_endpnts.md)
 

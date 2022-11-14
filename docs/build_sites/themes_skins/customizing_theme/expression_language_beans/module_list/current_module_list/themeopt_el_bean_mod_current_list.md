@@ -18,7 +18,7 @@ Attributes:
 
     Parameters: None
 
-    Returns: An iterator with [Module](../themeopt_el_bean_module.md) objects; it is never null.
+    Returns: An iterator with [Module](themeopt_el_bean_module.md) objects; it is never null.
 
 -   **capabilities**
 
@@ -34,7 +34,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [ModuleCapabilitiesList](../current_module_list/module_capabilities_list/index.md); Never null.
+    Returns: [ModuleCapabilitiesList](themeopt_el_bean_mod_cap_list.md); Never null.
 
 -   **deferredCapabilities**
 
@@ -50,7 +50,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [ModuleCapabilitiesList](../current_module_list/module_capabilities_list/index.md); Never null.
+    Returns: [ModuleCapabilitiesList](themeopt_el_bean_mod_cap_list.md); Never null.
 
 -   **get\(moduleKey\)**
 
@@ -69,6 +69,6 @@ Attributes:
 
         String representing the module. Must be in the format `<module name>` or `<module name>/<module version>`.
 
-    Returns: [Module](../themeopt_el_bean_module.md). Can be null if it is not found.
+    Returns: [Module](themeopt_el_bean_module.md). Can be null if it is not found.
 
 

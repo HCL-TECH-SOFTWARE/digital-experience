@@ -1,4 +1,4 @@
-# Configure Metadata
+# Metadata configuration through DAM extensibility
 
 This topic describes how the metadata can be configured through DAM extensibility.
 
@@ -17,41 +17,128 @@ Similar to rendition and thumbnail actions such as crop and resize, the Image pr
 
     ```
     
-    pluginsConfiguration:
-      image-processor:
-        url: http://RELEASE_NAME-image-processor:DAM_HTTP_PORT/dx/api/image-processor/v1/plugin
-        callBackHost: http://RELEASE_NAME-digital-asset-management:DAM_HTTP_PORT
-        authKey: Key
-        enable: true
-        actions:
-          metadata:
-            params: {}
-            url: "/metadata"
+    {
+       "image-processor":{
+          "url":"<PROTOCOL>://<IMAGE_PROCESSOR_HOST>/dx/api/image-processor/v1/plugin",
+          "callBackHost": "<PROTOCOL>://<DAM_HOST>",
+          "key":"IMAGE_PROCESSOR_PLUGIN_SECRET_KEY",
+          "actions":{
+             "metadata":{
+                "params":{},
+                "url":"/metadata"
+             }
+          }
+       }
     ```
 
-2.  The second change is to add metadata to the new stack configuration `SupplementalStack` in rendition configuration.
+2.  The second change is to add metadata to the new stack configuration `SupplementalStack` in rendition extensibility configuration.
 
     !!! note 
         The operation name needs to be `metadata` and cannot contain any custom names.
 
+    ```
+    
+    {
+        "[mimeType: string]": {
+            "type": "string",
+            "rendition": [
+                {
+                    "name": "string",
+                    "transformationStack": [
+                        {
+                            "plugin": "string",
+                            "operation": {
+                                "[operation]": "object"
+                            },
+                        }
+                    ],
+                    "thumbnailStack": [
+                        {
+                            "plugin": "string",
+                            "operation": {
+                                "[operation]": "object"
+                            },
+                        }
+                    ],
+                    "supplementalStack": [
+                        {
+                            "plugin": "string",
+                            "operation": {
+                                "[operation]": "object"
+                            },
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+    ```
 
     !!! example
 
         ```
         
-        image/jpeg:
-        rendition:
-        - name: Original
-          transformationStack: []
-          thumbnailStack:[]
-          supplementalStack:
-          - plugin: image-processor
-            operation:
-              metadata: {}
+        {
+          'image/jpeg': {
+            rendition: [
+              {
+                name: 'Original',
+                transformationStack: [],
+                thumbnailStack: [],
+                supplementalStack: [
+                  {
+                    plugin: 'image-processor',
+                    operation: {
+                      metadata: {},
+                    },
+                  },
+                ],
+              },
+              {
+                name: 'Desktop',
+                transformationStack: [],
+                thumbnailStack: [],
+                supplementalStack: [
+                  {
+                    plugin: 'image-processor',
+                    operation: {
+                      metadata: {},
+                    },
+                  },
+                ],
+              },
+              {
+                name: 'Tablet',
+                transformationStack: [],
+                thumbnailStack: [],
+                supplementalStack: [
+                  {
+                    plugin: 'image-processor',
+                    operation: {
+                      metadata: {},
+                    },
+                  },
+                ],
+              },
+              {
+                name: 'Smartphone',
+                transformationStack: [],
+                thumbnailStack: [],
+                supplementalStack: [
+                  {
+                    plugin: 'image-processor',
+                    operation: {
+                      metadata: {},
+                    },
+                  },
+                ],
+              },
+            ],
+          }
+        }
         ```
 
-<!--
 ## HCL Digital Experience Solution Feedback
 
-HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).-->
+HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).
 

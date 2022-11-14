@@ -4,6 +4,7 @@ nav:
     - wcm_rest_crud_libraries.md
     - wcm_rest_crud_content.md
     - wcm_rest_crud_component.md
+    - wcm_rest_crud_element.md
     - wcm_rest_crud_element_cf03.md
     - How to use REST with authoring templates: wcm_rest_template
     - wcm_rest_crud_presentation.md

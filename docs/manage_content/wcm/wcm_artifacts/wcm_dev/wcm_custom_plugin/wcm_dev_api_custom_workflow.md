@@ -5,15 +5,14 @@ You can create custom workflow action classes to add custom workflow actions to 
 ## Creating the custom workflow action class
 
 1.  Create a java class that implements the interface `com.ibm.workplace.wcm.api.custom.CustomWorkflowAction`. This class must implement the following methods:
-    -   `public Date getExecuteDate(Document p_document) {}` (This method specifies when the custom action is run.)
-    -   `public CustomWorkflowActionResult execute(Document p_document) {}` (This method contains the code that runs when the custom action is run.)
+    -   `public Date getExecuteDate(Document p_document) {}` \(This method specifies when the custom action is run.\)
+    -   `public CustomWorkflowActionResult execute(Document p_document) {}` \(This method contains the code that runs when the custom action is run.\)
 2.  Implement `execute()method`. This method contains the code that is run against the supplied Document. This method must return a `com.ibm.workplace.wcm.api.custom.CustomWorkflowActionResult` object to indicate the result of the custom code by using `com.ibm.workplace.wcm.api.custom.Directives`.
     -   A custom workflow action result object is created by first retrieving a reference to the `WebContentCustomWorkflowService` object, and then calling the method `webContentCustomWorkflowService.getCustomWorkflowService().createResult`. If the `CustomWorkflowActionResult` does not indicate a failure, changes to the document is saved.
 
-        See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the [PortalServer\_root](../../../../../guide_me/wpsdirstr.md)`/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
+        See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
 
     -   Also, see the Web Content Manager Javadoc for further information on valid directives.
-    
 3.  Create a custom workflow action factory class that implements the interface `com.ibm.workplace.wcm.api.custom.CustomWorkflowActionFactory`.
 
 ## Create a plugin.xml file

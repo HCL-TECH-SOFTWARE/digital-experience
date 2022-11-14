@@ -19,6 +19,8 @@ Choose from the two options when you are migrating multiple environments, and re
 
 
 
-???+ info "Related information" 
-    -   [Staging to production](../../../../../deployment/manage/staging_to_production/index.md)
+**Related information**  
+
+
+[Staging to production](../deploy/dep_intr.md)
 

@@ -27,5 +27,5 @@ In contrast to the special start event, the special end event is not expected to
 
 ```
 
-
+**Parent topic:**[Transitions](../screenflow/transitions.md)
 

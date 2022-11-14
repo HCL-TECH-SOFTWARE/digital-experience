@@ -69,10 +69,11 @@ Before updating the settings for large file handling, review the following consi
 16. Restart the portal for the settings to take effect.
 
 
-!!! note
-    If the portal's policy cache manager indicates that a number of web container threads are hung, set the `cacheinstance.com.ibm.wps.policy.services.PolicyCacheManager.lifetime` property in the `WP CacheManagerService` service to a value of `-1`. This setting reduces the database connections and load times and helps prevent threads from hanging.
+**Note:** If the portal's policy cache manager indicates that a number of web container threads are hung, set the `cacheinstance.com.ibm.wps.policy.services.PolicyCacheManager.lifetime` property in the `WP CacheManagerService` service to a value of `-1`. This setting reduces the database connections and load times and helps prevent threads from hanging.
 
 
-???+ info "Related information"
-    - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
+**Related information**  
+
+
+[Setting service configuration properties](../admin-system/adsetcfg.md)
 

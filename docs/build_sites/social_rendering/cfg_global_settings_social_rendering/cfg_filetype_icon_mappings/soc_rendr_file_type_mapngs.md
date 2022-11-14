@@ -62,3 +62,4 @@ The following types and services have no default mappings:
 -   visualization
 -   wordProcessingDocs
 
+

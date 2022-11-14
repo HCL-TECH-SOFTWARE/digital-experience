@@ -6,7 +6,7 @@ Ensure that you created a custom theme for Greenwheels that uses the Simple Them
 
 1.  Create the directory ThemeLogo.
 
-2.  Use a [WebDAV client](../../../manage_content/wcm/wcm_content_delivery/webdav/index.md) to donwload the Greenwheels theme.
+2.  Use a [WebDAV client](../admin-system/webdav.md) to donwload the Greenwheels theme.
 
 3.  Open the directory ThemeLogo.
 
@@ -24,7 +24,7 @@ Ensure that you created a custom theme for Greenwheels that uses the Simple Them
 
 8.  Save the file.
 
-9.  Use a [WebDAV client](../../../manage_content/wcm/wcm_content_delivery/webdav/index.md) to upload the changed files of your theme.
+9.  Use a [WebDAV client](../admin-system/webdav.md) to upload the changed files of your theme.
 
 
 The default logo is replaced by your custom logo.

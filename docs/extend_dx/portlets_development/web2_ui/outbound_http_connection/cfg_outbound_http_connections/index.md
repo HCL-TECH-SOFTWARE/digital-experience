@@ -4,17 +4,20 @@ In HCL Portal Version 8.0 and earlier versions, outbound HTTP connections were a
 
 For more detailed information, read the following topics.
 
--   **[Configuration structure](../cfg_outbound_http_connections/cfg_structure/index.md)**  
+-   **[Configuration structure](../dev-portlet/outbhttp_cfg_structure.md)**  
 The Outbound Connection Service Configuration model has the following structure.
--   **[XML format for outbound HTTP connection configuration settings](../cfg_outbound_http_connections/xml_format_outbound_http/index.md)**  
+-   **[XML format for outbound HTTP connection configuration settings](../dev-portlet/outbhttp_cfg_xml.md)**  
 To export or import the outbound HTTP Connections configuration, you use an XML file with a specific schema.
--   **[Administration tools for configuring outbound HTTP connections](../cfg_outbound_http_connections/adm_tools_for_cfg_outbound_http_conn/index.md)**  
+-   **[Administration tools for configuring outbound HTTP connections](../dev-portlet/outbhttp_cfg_tools.md)**  
 Portal system administrators can administer the outbound HTTP connection configuration in one of two ways: either by using configuration tasks, or by using the portal Model and Controller SPIs.
--   **[Sample administration tasks](../cfg_outbound_http_connections/sample_admin_tasks/index.md)**  
+-   **[Sample administration tasks](../dev-portlet/outbhttp_cfg_smpl_adm_tasks.md)**  
 Here you find some procedures for running administration tasks on the outbound HTTP connection settings. These tasks use the portal configuration engine interface.
 
 
-???+ info "Related information"
-    - [Preparing your system environment and the prerequisites for Integrator for SAP](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_prep.html)
-    - [Performance tuning for Integrator for SAP](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_perf_tun.html)
+**Related information**  
+
+
+[Preparing your system environment and the prerequisites for Integrator for SAP](../admin-system/sap_int_prep.md)
+
+[Performance tuning for Integrator for SAP](../admin-system/sap_int_perf_tun.md)
 

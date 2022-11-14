@@ -46,14 +46,24 @@ If the parent page of the new page has both a system content association with th
 Set page parameters on your web content page templates by using **Page Properties** \> **Advanced** in the Manage Pages portlet or by using **Page** \> **General** \> **Edit Page Properties** \> **Advanced** in the site toolbar.
 
 
-???+ info "Related information:"
-    - [Content settings](../../../wcm_user_assistance/editing_webcontent_portlet/editing_setting_of_web_content_viewer/wcm_config_wcmviewer_hcontent.md)
-    - [XML configuration interface and content associations](../advance_adm_sample/contentmap/mp_wcm_contentmap_xml.md)
-    - [Portal Scripting Interface and content associations](../advance_adm_sample/contentmap/mp_wcm_contentmap_pscript.md)
-    - [REST API and content associations](../advance_adm_sample/contentmap/mp_wcm_contentmap_restapi.md)
-    - [Enabling page-based access control for web content pages](../customizing_content/mp_wcm_pageaccess.md)
-    - [Java API for Content Mapping Service](https://support.hcltechsw.com/csm)
-    - [Using the view definitions provided with social rendering on your portal pages](../../../../../../build_sites/social_rendering/working_with_social_objects/soc_rendr_use_oob_socl_list.md)
-    - [Configuring a multilingual system Multilingual Solution](../../../mls/mls_install/wcm_mls_configure.md)
-    - [Portlet Render-time navigation extensions](../../../mls/mls_extension/wcm_mls_ext_portlet.md)
+**Related information**  
+
+
+[Content settings](../panel_help/wcm_config_wcmviewer_hcontent.md)
+
+[XML configuration interface and content associations](../admin-system/mp_wcm_contentmap_xml.md)
+
+[Portal Scripting Interface and content associations](../admin-system/mp_wcm_contentmap_pscript.md)
+
+[REST API and content associations](../admin-system/mp_wcm_contentmap_restapi.md)
+
+[Enabling page-based access control for web content pages](../admin-system/mp_wcm_pageaccess.md)
+
+[Java API for Content Mapping Service](https://support.hcltechsw.com/csm)
+
+[Using the view definitions provided with social rendering on your portal pages](../social/soc_rendr_use_oob_socl_list.md)
+
+[Configuring a multilingual system Multilingual Solution](../wcm/wcm_mls_configure.md)
+
+[Portlet Render-time navigation extensions](../wcm/wcm_mls_ext_portlet.md)
 

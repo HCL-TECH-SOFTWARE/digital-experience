@@ -37,3 +37,4 @@ You must have administrative access to the portlet to be able to configure it. C
 |------|-----------|
 |Enabling this will provide link to the External Connections UI for editing profile|Displays an Edit Profile link so that users can update their profiles in the IBM® Connections web application.|
 |Display page controls only in bottom bar|Hides the page controls in the header of the window. Clear the check box to display paging controls in the header as well as the footer of the page.|
+

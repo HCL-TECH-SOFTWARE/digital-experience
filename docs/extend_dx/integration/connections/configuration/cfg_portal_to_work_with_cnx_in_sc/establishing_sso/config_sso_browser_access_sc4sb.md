@@ -11,8 +11,7 @@ By default, if an unauthenticated user is working within an HCL Connections Inte
 
 If you enable a Service Provider Initiated Authentication Flow, the following scenario occurs the first time that a user clicks a URL that points to the web user interface for HCL Connections in SmartCloud for Social Business:
 
-!!! note
-    The user is not yet authenticated with HCL Connections in SmartCloud for Social Business.
+**Note:** The user is not yet authenticated with HCL Connections in SmartCloud for Social Business.
 
 1.  In the prompt that opens, the user selects **Use My Organization's Login Page**.
 2.  The user specifies their email address.
@@ -22,8 +21,7 @@ If you enable a Service Provider Initiated Authentication Flow, the following sc
 
 If the user specifies that they want to be remembered and does not clear their browser's cookies, the following scenario occurs the next time that the user clicks a URL that points to the web user interface for HCL Connections in SmartCloud for Social Business:
 
-!!! note
-    The user is not yet authenticated with HCL Connections in SmartCloud for Social Business.
+**Note:** The user is not yet authenticated with HCL Connections in SmartCloud for Social Business.
 
 1.  The user is redirected to the local Tivoli Federated Identity Manager server and then back to the HCL Connections in SmartCloud for Social Business web user interface without any further user interaction.
 2.  The requested content displays for the user.

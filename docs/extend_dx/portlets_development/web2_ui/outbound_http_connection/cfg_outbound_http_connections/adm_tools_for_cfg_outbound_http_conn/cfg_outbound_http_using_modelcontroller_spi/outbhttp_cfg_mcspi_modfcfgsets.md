@@ -22,3 +22,7 @@ System.out.println("The URL pattern of the PolicyRule is now "+rule.getUrlPatter
 ```
 
 
+**Previous topic:**[Viewing the configuration settings of the outbound HTTP connection](../dev-portlet/outbhttp_cfg_mcspi_viewcfgsets.md)
+
+**Next topic:**[Creating and deleting configuration settings of the outbound HTTP connection](../dev-portlet/outbhttp_cfg_mcspi_crtdelcfgsets.md)
+

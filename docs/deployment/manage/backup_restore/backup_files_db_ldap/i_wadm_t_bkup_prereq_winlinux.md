@@ -1,4 +1,4 @@
-# Completing Prerequisites for Backup
+# Completing prerequisites for backup
 
 Before you back up the HCL Digital Experience installation, decide which utility to use and whether to perform online backup or offline backup.
 
@@ -9,6 +9,12 @@ Before you back up the HCL Digital Experience installation, decide which utility
     -   An offline backup occurs when the portal servers are stopped prior to running the backup procedure.
     If you choose to use an online backup, make sure that the techniques and tools used for file system and database backup support the capturing of online backups where open files and database changes can be encountered during the backup procedure.
 
-???+ info "Related information"
-    - [Backing up the LDAP server(s)](i_wadm_t_bkup_ldap_winlinux.md)
+
+
+**Next topic:**[Backing up the HCL Portal file system](../admin-system/i_wadm_t_bkup_files_winlinux.md)
+
+**Related information**  
+
+
+[Backing up the LDAP server\(s\)](../admin-system/i_wadm_t_bkup_ldap_winlinux.md)
 

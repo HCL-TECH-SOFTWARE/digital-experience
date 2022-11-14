@@ -4,7 +4,7 @@ This topic provides information about the deployment and undeployment of themes 
 
 ## Deploy theme
 
-The `deploy-theme` command is used to deploy a theme (EAR and WebDAV based) from a source client or server environment to a target HCL DX 9.5 CF192 or later server using the provided theme registration XML file, deployable EAR file, and WebDAV theme collection.
+The `deploy-theme` command is used to deploy a theme \(EAR and WebDAV based\) from a source client or server environment to a target HCL DX 9.5 CF192 or later server using the provided theme registration XML file, deployable EAR file, and WebDAV theme collection.
 
 -   **Required files**
 
@@ -38,7 +38,7 @@ The `deploy-theme` command is used to deploy a theme (EAR and WebDAV based) from
 
 -   **Common Command options**
 
-    Use this attribute to specify the protocol with which to connect to the DX server (`wp_profile`):
+    Use this attribute to specify the protocol with which to connect to the DX server \(`wp_profile`\):
 
     ```
     -dxProtocol <value>
@@ -50,13 +50,13 @@ The `deploy-theme` command is used to deploy a theme (EAR and WebDAV based) from
     -hostname <value>
     ```
 
-    Use this attribute to specify the port on which to connect to the DX server (`wp_profile`):
+    Use this attribute to specify the port on which to connect to the DX server \(`wp_profile`\):
 
     ```
     -dxPort <value>
     ```
 
-    Use this attribute to specify the username to authenticate with the DX server (`wp_profile`):
+    Use this attribute to specify the username to authenticate with the DX server \(`wp_profile`\):
 
     ```
     -dxUsername <value>
@@ -82,14 +82,14 @@ The `deploy-theme` command is used to deploy a theme (EAR and WebDAV based) from
     -xmlFile <Absolute or relative path to theme registration xml input file>
     ```
 
-    Use this attribute to specify the path to DX configuration endpoint (for example, /wps/config):
+    Use this attribute to specify the path to DX configuration endpoint \(for example, /wps/config\):
 
     ```
     -xmlConfigPath <value>
     ```
 
     !!! note
-        For theme registration, a backup of the complete DX configuration export (not including users) is taken and placed in `store/outputFiles/themes/backup/foldername` folder.
+        For theme registration, a backup of the complete DX configuration export \(not including users\) is taken and placed in `store/outputFiles/themes/backup/foldername` folder.
 
 -   **Required options for Theme EAR deployment**
 
@@ -125,7 +125,7 @@ The `deploy-theme` command is used to deploy a theme (EAR and WebDAV based) from
 
     Specify either the `dxProfileName` or `dxProfilePath` of the DX core server:
 
-    -   Use this attribute to specify the profile name of the DX core server (for example: `wp_profile`):
+    -   Use this attribute to specify the profile name of the DX core server \(for example: `wp_profile`\):
 
         ```
         -dxProfileName <Profile name of the DX core server>
@@ -133,7 +133,7 @@ The `deploy-theme` command is used to deploy a theme (EAR and WebDAV based) from
 
     **OR**
 
-    -   Use this attribute to specify the profile path of the DX server (for example: `/opt/HCL/wp_profile`):
+    -   Use this attribute to specify the profile path of the DX server \(for example: `/opt/HCL/wp_profile`\):
 
         ```
         -dxProfilePath <Path of the DX core server profile> 
@@ -165,7 +165,7 @@ The `deploy-theme` command is used to deploy a theme (EAR and WebDAV based) from
     -themePath <value>
     ```
 
-    Use this attribute to specify the path to the contenthandler servlet on the DX server (e.g. /wps/mycontenthandler):
+    Use this attribute to specify the path to the contenthandler servlet on the DX server \(e.g. /wps/mycontenthandler\):
 
     ```
     -contenthandlerPath <value>
@@ -173,8 +173,8 @@ The `deploy-theme` command is used to deploy a theme (EAR and WebDAV based) from
 
     !!! note
 
-        -   For new WebDAV theme collection, DXClient tool adds the provided collection (folder/zip) to the WebDAV file store.
-        -   For existing WebDAV theme collection, the existing theme collection is replaced by the provided theme collection during the update. To get the latest theme collection from the DX server, see [Exporting content from the filestore](../../../../build_sites/themes_skins/developing_theme/dev_op_overview/manual_packaging_themes/themeopt_move_expfilestore.md) and make modifications on the same folder to get it updated in the DX Server WebDAV file store.
+        -   For new WebDAV theme collection, DXClient tool adds the provided collection \(folder/zip\) to the WebDAV file store.
+        -   For existing WebDAV theme collection, the existing theme collection is replaced by the provided theme collection during the update. To get the latest theme collection from the DX server, see [Exporting content from the filestore](https://help.hcltechsw.com/digital-experience/9.5/dev-theme/themeopt_move_expfilestore.html) and make modifications on the same folder to get it updated in the DX Server WebDAV file store.
         -   For WebDAV theme collection update, a backup of the existing theme collection is taken and placed in `store/outputFiles/themes/backup/foldername` folder.
         Log files from command execution can be found in the logs directory of the DXClient installation.
 
@@ -190,7 +190,7 @@ The `deploy-theme` command is used to deploy a theme (EAR and WebDAV based) from
 The undeploy-theme command can be used to undeploy a theme, including the EAR application and WebDAV files, and it also unregisters the registered theme from the target DX server.
 
 !!! note
-    If enableBackup is set to true, then undeploy-theme takes a backup of the deployed EAR theme, WebDAV theme collection, and completes DX configuration export (without users) and place it in the backup folder. When the user is downloading EAR, WeDAV, and XML to backup, we must separate it by the folder names `store/outputFiles/themes/backup/foldername`.
+    If enableBackup is set to true, then undeploy-theme takes a backup of the deployed EAR theme, WebDAV theme collection, and completes DX configuration export \(without users\) and place it in the backup folder. When the user is downloading EAR, WeDAV, and XML to backup, we must separate it by the folder names `store/outputFiles/themes/backup/foldername`.
 
 The backup of EAR is placed in `store/outputFiles/themes/backup/application`.
 
@@ -227,7 +227,6 @@ Users can restore the theme by using the backup files.
     -   Theme unregistration
     -   Undeploy theme EAR application
     -   Undeploy WebDAV theme collection
-
 -   **Common commands**
 
     Use this attribute to specify the hostname of the target server:
@@ -242,7 +241,7 @@ Users can restore the theme by using the backup files.
     -dxProtocol <value>
     ```
 
-    Use this attribute to specify the port on which to connect to the server (for Kubernetes Environment, dxPort is `443`):
+    Use this attribute to specify the port on which to connect to the server \(for Kubernetes Environment, dxPort is `443`\):
 
     ```
     -dxPort <value>
@@ -260,7 +259,7 @@ Users can restore the theme by using the backup files.
     -dxPassword <value>
     ```
 
-    Use this attribute to specify the path to the contenthandler servlet on the DX server (e.g. /wps/mycontenthandler):
+    Use this attribute to specify the path to the contenthandler servlet on the DX server \(e.g. /wps/mycontenthandler\):
 
     ```
     -contenthandlerPath <value>
@@ -299,19 +298,19 @@ Users can restore the theme by using the backup files.
     -hostname <value>
     ```
 
-    Use this attribute to specify the port number of the cw_profile (for Kubernetes Environment dxConnectPort is 443):
+    Use this attribute to specify the port number of the cw\_profile \(for Kubernetes Environment dxConnectPort is 443\):
 
     ```
     -dxConnectPort <value>
     ```
 
-    Use this attribute to specify the username that is required for authenticating to the cw_profile:
+    Use this attribute to specify the username that is required for authenticating to the cw\_profile:
 
     ```
     -dxConnectUsername <value>
     ```
 
-    Use this attribute to specify the password that is required for authenticating to the cw_profile:
+    Use this attribute to specify the password that is required for authenticating to the cw\_profile:
 
     ```
     -dxConnectPassword <value>
@@ -325,7 +324,7 @@ Users can restore the theme by using the backup files.
 
     Specify either the `dxProfileName` or `dxProfilePath` of the DX core server:
 
-    -   Use this attribute to specify the profile name of the DX core server (for example: `wp_profile`):
+    -   Use this attribute to specify the profile name of the DX core server \(for example: `wp_profile`\):
 
         ```
         -dxProfileName <Profile name of the DX core server>
@@ -333,7 +332,7 @@ Users can restore the theme by using the backup files.
 
     **OR**
 
-    -   Use this attribute to specify the profile path of the DX server (for example: `/opt/HCL/wp_profile`):
+    -   Use this attribute to specify the profile path of the DX server \(for example: `/opt/HCL/wp_profile`\):
 
         ```
         -dxProfilePath <Path of the DX core server profile> 

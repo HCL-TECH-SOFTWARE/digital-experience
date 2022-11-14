@@ -13,3 +13,6 @@ For an example of assigning access to users, refer to the following instructions
 3.  Click **Edit Role** for the **Editor** role.
 
 4.  Click **Add** to assign users or groups to the Editor role. Search for the users or groups that belong to this role.
+
+
+

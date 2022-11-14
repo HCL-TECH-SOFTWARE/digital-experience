@@ -9,6 +9,6 @@ The portal remote REST service for PUMA allows requests to the following operati
 -   `/um/attributes/groups`
 -   `/um/attributes/groups/attribute name`
 
-For all other operations, the implementation performs permission checks by using the corresponding Portal Access Control (PAC) settings for users and groups.
+For all other operations, the implementation performs permission checks by using the corresponding Portal Access Control \(PAC\) settings for users and groups.
 
 

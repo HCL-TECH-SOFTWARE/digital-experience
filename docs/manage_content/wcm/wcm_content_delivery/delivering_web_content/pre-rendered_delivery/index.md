@@ -5,9 +5,9 @@ You can pre-render a complete HCL Web Content Manager site into HTML and save it
 -   **Restrictions**
 
     -   Site areas and content item names cannot contain characters that are considered invalid in file names by the operating system on which you are pre-rendering. For example, on a Windows™ server, these characters are invalid: `/ \ : * ? " < > |`.
-    -   The path to the content item, including the directory path to which you are pre-rendering (for example, site area/content) cannot exceed the operating system's maximum path length:
+    -   The path to the content item, including the directory path to which you are pre-rendering \(for example, site area/content\) cannot exceed the operating system's maximum path length:
         -   Windows™: 255 characters
-        -   AIX®: 1024 characters
+        -   AIX®IBM® iLinux™Solarisz/OS®: 1024 characters
     -   The Search component cannot be used in pre-rendered sites.
 
     -   The Page navigation component cannot be used in pre-rendered sites.
@@ -17,5 +17,11 @@ You can pre-render a complete HCL Web Content Manager site into HTML and save it
 -   **Site security**
 
     Item security for different users set in an Web Content Manager environment is not transferred to pre-rendered sites. The security for the entire pre-rendered site is based on the `connect.moduleconfig.cacher.rendereruser` property as specified in the **WCM WCMConfigService** service by using the WebSphere® Integrated Solutions Console.
+
+
+-   **[Pre-render methods](../wcm/wcm_config_delivery_pre-rendered_running.md)**  
+Pre-rendering can be configured to run automatically, or you can manually pre-render a website by using a URL.
+-   **[How to access the pre-rendered site](../wcm/wcm_config_delivery_pre-rendered_accessing.md)**  
+Pre-rendered sites are accessed either through HCL Web Content Manager, or through a web server.
 
 

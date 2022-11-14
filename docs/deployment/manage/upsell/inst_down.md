@@ -2,11 +2,11 @@
 
 After you upgrade your product offering, you can remove the upgraded product offering and return to your original product offering.
 
-!!!note "Cluster note"
-    In a clustered environment, run these steps on all the nodes.
+**Cluster note:** In a clustered environment, run these steps on all the nodes.
 
-!!!note "Response file note"
-    You can record and run a response file to upgrade your existing product offering. You may refer to the following topics in using a response file to install DX. Use the following steps when you record your response file. Ensure that you exit from the IBM® Installation Manager program to finish your recording. <br> - [Installing HCL Digital Experience in AIX system using a response file](../../install/traditional/installing_dx/aix/running_install/install_with_responsefile/index.md) <br> - [Installing HCL Digital Experience in Linux using a response file](../../install/traditional/installing_dx/linux/running_install/install_with_responsefile/index.md)<br> - [Installing HCL Digital Experience in Windows using a response file](../../install/traditional/installing_dx/windows/running_install/install_with_responsefile/index.md)
+**Response file note:** You can record and run a response file to remove the HCL Portal Enable product offering. Read [Uninstalling a package silently by using a response file](http://www-01.ibm.com/support/knowledgecenter/SSDV2W_1.7.0/com.ibm.silentinstall12.doc/topics/t_silent_response_file_uninstall.html) for information. Use the following steps when you record your response file. Ensure that you exit from the IBM® Installation Manager program to finish your recording.
+
+**IBM i response file note:** Run the sample response file to remove the HCL Portal Enable product offering. For IBM i, edit the appropriate sample response file that is in the setup\_root/responsefiles/iseries directory. You cannot record the response file from your IBM i operating system. You can record a response file on another operating system. Use the following steps when you record your response file. Ensure that you exit from the IBM Installation Manager program to finish your recording. You must edit the response file that you recorded to add your IBM i specific parameters.
 
 1.  Stop all the application servers.
 
@@ -19,6 +19,7 @@ After you upgrade your product offering, you can remove the upgraded product off
 5.  Review the summary information and then click **Uninstall**.
 
 6.  When the removal is complete, click **Finish**.
+
 
 Now that you removed the HCL Portal Enable package, you cannot access the HCL Web Content Manager Authoring feature.
 

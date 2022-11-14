@@ -1,4 +1,4 @@
-# Creating a Component Reference Element
+# Creating a component reference element
 
 
 You use a component reference element to store a reference to a component. To create a component reference element, you can either add a component reference element to an authoring template, site area, or content item, or create a component reference component.

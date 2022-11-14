@@ -18,9 +18,9 @@ You can configure top-level domain names with country codes and subdomains with 
 
     -   `home`
     -   `products` This has three region specifics pages: `us`, `fr`, and `it`.
-    
 -   The second option has the same first two levels in its page hierarchy as the first: `home` and `products`. The products page renders the content based on user selection or preference. Then Web Content Manager delivers the content for the chosen country. The association of a web page with a set of content items in the Web Content Manager library is done by using site areas. The names of the site areas represent the country codes. Three portal "content" pages are added to the `products` page associated with the site areas. In the example, this adds three region-specific portal pages that are associated with the site areas `us`, `fr` and `it`.
 
     For more information, about friendly URLs see the topics about friendly URLs.
+
 
 

@@ -11,3 +11,6 @@ Use the following steps to enable crawling on a selected portal site.
 2.  Select **Web site** from the drop-down menu.
 
 3.  Enter the URL of the portal site that you want to make available for search by your users.
+
+
+

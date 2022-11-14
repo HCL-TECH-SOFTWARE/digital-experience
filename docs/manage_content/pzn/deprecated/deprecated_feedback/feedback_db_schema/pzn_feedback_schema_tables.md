@@ -69,8 +69,7 @@ Table description: This table is RESERVED for IBM Feedback component use.
 
 Table description: This table contains the information processed during data collection. Each row represents a hit to a page of your Web site--if that page contains a rule or logging bean. Not all fields are used on each entry.
 
-!!! note 
-    The first date stamp \(date ID=1\) corresponds to 1/1/1995. Time stamp IDs are calculated such that each second of the day has a separate ID.
+**Note:** The first date stamp \(date ID=1\) corresponds to 1/1/1995. Time stamp IDs are calculated such that each second of the day has a separate ID.
 
 |Column Name|Column Description|
 |-----------|------------------|

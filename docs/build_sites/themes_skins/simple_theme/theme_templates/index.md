@@ -11,9 +11,9 @@ You can use static HTML to write portal themes. Then, add static and server-side
 3.  Add the following parameter to the theme: `<parameter name="`com.ibm.portal.theme.hasBaseURL`" type="string" update="set"><![CDATA[true]]></parameter>`
 4.  Save the theme file and import it by using XMLAccess.
 
--   **[Adding static content to theme.html](themeopt_themedev_static.md)**  
+-   **[Adding static content to theme.html](../dev-theme/themeopt_themedev_static.md)**  
 You can add static content to the file theme.html in three ways: directly, from WebDAV, or by adding relative URLs.
--   **[Adding server-side dynamic content to theme.html](themeopt_themedev_dynamic.md)**  
+-   **[Adding server-side dynamic content to theme.html](../dev-theme/themeopt_themedev_dynamic.md)**  
 You can identify dynamic content spots in theme.html so that the server-side theme parser pulls in dynamic content to fill them. Dynamic content changes for every user, page, or other server state, so you cannot define it statically in the theme file. Instead, it is inserted into the response at run time.
 
 

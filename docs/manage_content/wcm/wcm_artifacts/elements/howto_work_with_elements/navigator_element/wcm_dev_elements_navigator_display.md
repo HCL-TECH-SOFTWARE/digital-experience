@@ -3,7 +3,7 @@ id: wcm_dev_elements_navigator_display
 title: Defining navigator element display options
 ---
 
-# Defining navigator element display options
+
 
 
 When you define the display options of a navigator, you select a start area, and also define what levels, before and after the start area, are displayed in the navigator.
@@ -30,13 +30,11 @@ When you define the display options of a navigator, you select a start area, and
 
 5.  Select the number of siblings to display before the current site area.
 
-    !!!note
-        This setting applies to all site areas that include top-level site areas.
+    **Note:** This setting applies to all site areas that include top-level site areas.
 
 6.  Select the number of siblings to display after the current site area.
 
-    !!!note
-        This setting applies to all site areas that include top-level site areas.
+    **Note:** This setting applies to all site areas that include top-level site areas.
 
 7.  Select **Show Top Level Site Area** to display the top site area as the first navigator item.
 

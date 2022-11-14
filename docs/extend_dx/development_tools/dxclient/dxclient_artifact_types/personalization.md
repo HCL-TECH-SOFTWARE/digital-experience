@@ -1,6 +1,6 @@
 # Personalization rules
 
-This topic contains the commands that the administrators can use to export and import the personalization (PZN) rules from the source server to the target server as specified by the user.
+This topic contains the commands that the administrators can use to export and import the personalization \(PZN\) rules from the source server to the target server as specified by the user.
 
 ## Export PZN rules
 
@@ -34,7 +34,7 @@ This topic contains the commands that the administrators can use to export and i
     -hostname <value>
     ```
 
-    Use this attribute to specify the port on which to connect to the DX server (e.g. for Kubernetes Environment `dxPort` is 443):
+    Use this attribute to specify the port on which to connect to the DX server \(e.g. for Kubernetes Environment `dxPort` is 443\):
 
     ```
     -dxPort <value>
@@ -58,7 +58,7 @@ This topic contains the commands that the administrators can use to export and i
     -targetPath <value>
     ```
 
-    Use this attribute to specify the name of the workspace containing the rules in DX server (default `targetWorkspace` is 'ROOTWORKSPACE'):
+    Use this attribute to specify the name of the workspace containing the rules in DX server \(default `targetWorkspace` is 'ROOTWORKSPACE'\):
 
     ```
     -targetWorkspace <value>
@@ -67,7 +67,7 @@ This topic contains the commands that the administrators can use to export and i
     !!! note
         The `targetPath` and `targetWorkspace` parameters are optional. If the user does not pass the respective parameters, then the default values are taken.
 
-         Use this attribute to specify the path to the context root on the DX server (for example, /wps):
+         Use this attribute to specify the path to the context root on the DX server \(for example, /wps\):
 
         ```
         -dxContextRoot <value>
@@ -120,7 +120,7 @@ This topic contains the commands that the administrators can use to export and i
     -hostname <value>
     ```
 
-    Use this attribute to specify the port on which to connect to the DX server (e.g. for Kubernetes Environment dxPort is 443):
+    Use this attribute to specify the port on which to connect to the DX server \(e.g. for Kubernetes Environment dxPort is 443\):
 
     ```
     -dxPort <value>
@@ -138,19 +138,19 @@ This topic contains the commands that the administrators can use to export and i
     -dxPassword <value>
     ```
 
-    Use this attribute to specify the username that is required for authenticating to the cw_profile:
+    Use this attribute to specify the username that is required for authenticating to the cw\_profile:
 
     ```
     -dxConnectUsername <value>
     ```
 
-    Use this attribute to specify the password that is required for authenticating to the cw_profile:
+    Use this attribute to specify the password that is required for authenticating to the cw\_profile:
 
     ```
     -dxConnectPassword <value>
     ```
 
-    Use this attribute to specify the port number of the cw_profile (e.g. for Kubernetes Environment dxConnectPort is 443):
+    Use this attribute to specify the port number of the cw\_profile \(e.g. for Kubernetes Environment dxConnectPort is 443\):
 
     ```
     -dxConnectPort <value>
@@ -168,13 +168,13 @@ This topic contains the commands that the administrators can use to export and i
     -targetPath <value>
     ```
 
-    Use this attribute to specify the name of the workspace containing the rules in DX server (default targetWorkspace is 'ROOTWORKSPACE'):
+    Use this attribute to specify the name of the workspace containing the rules in DX server \(default targetWorkspace is 'ROOTWORKSPACE'\):
 
     ```
     -targetWorkspace <value>
     ```
 
-    Use this attribute to specify the path to the context root on the DX server (for example, /wps):
+    Use this attribute to specify the path to the context root on the DX server \(for example, /wps\):
 
     ```
     -dxContextRoot <value>

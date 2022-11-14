@@ -22,7 +22,10 @@ The following list gives an overview of the supported use cases of the WSRP Cons
 
 
 
-???+ info "Related information"  
-    -   [Customizing Client Cookie Forwarding](../../wsrp/portal_wsrp_consumer/customizing_wsrp_cfg_consumer_portal/wsrpc_clnt_cook_frwrd.md)
-    -   [Customizing the WSRP resource proxy](../../wsrp/portal_wsrp_consumer/customizing_wsrp_cfg_consumer_portal/customizing_wsrp_resource_proxy/index.md)
+**Related information**  
+
+
+[Customizing Client Cookie Forwarding](../admin-system/wsrpc_clnt_cook_frwrd.md)
+
+[Customizing the WSRP resource proxy](../admin-system/wsrpt_cons_res_proxy.md)
 

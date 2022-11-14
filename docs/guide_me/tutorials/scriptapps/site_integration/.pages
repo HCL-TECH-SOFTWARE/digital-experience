@@ -1,7 +1,0 @@
-title: Site Integration
-nav:
-    - index.md
-    - import_export_site
-    - use_of_cookies.md
-    - code_splitting.md
-    - styling_css_and_scss.md

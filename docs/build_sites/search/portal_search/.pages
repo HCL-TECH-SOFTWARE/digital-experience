@@ -1,6 +1,8 @@
 title: HCL Digital Experience Portal Search
 nav:
     - index.md
+    - srrsrchportletslist.md
     - Administering Portal Search: administer_portal_search
     - Hints and tips for using Portal Search: hint_tips
-    - srrsrchportletslist.md
+    - srrhinttips_crt_scoll_fails.md
+    - srrlogtrac.md

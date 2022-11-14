@@ -37,10 +37,12 @@ You can change the theme logo in .wpthemeLogo in fs-type1:themes\\Your\_custom\_
 
 You can also create your own custom style to use with your custom theme defined infs-type1:themes\\Your\_custom\_theme\\system\\styles.json. If you do that, you can override these styles in the custom style css file, such as fs-type1:themes\\Your\_custom\_theme \\css\\Your\_custom\_style \\Your\_custom\_style .css.
 
--   **[Changing the logo action](themeopt_change_logo_action.md)**  
+-   **[Changing the logo action](../dev-theme/themeopt_change_logo_action.md)**  
  You can change the default action of a logo to take users to different pages in your portal.
 
 
-???+ info "Related information:"
-     - [Vanity URLs](../../../../manage_content/wcm/wcm_content_delivery/vanity_url/index.md)
+**Related information**  
+
+
+[Vanity URLs](../wcm/vanity_urls.md)
 

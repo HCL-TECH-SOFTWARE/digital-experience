@@ -1,4 +1,4 @@
-# Embedded Links
+# How to handle embedded links
 
 From time to time, the content that is being retrieved by the Web Content Integrator contains embedded links to images, files, and other content within the feed. You can use the link tag in your feed to represent embedded links so that they are converted into links to other Web Content Manager items that are created when the feed is processed.
 

@@ -2,7 +2,7 @@
 
 By default, HCL Digital Experience URLs include navigational state information. If you configure pages for friendly URLs, the portal appends the state information to the friendly URLs. Some scenarios require short and fully human readable URLs that omit the state information. For such scenarios, you can configure friendly URLs so that the portal does not show that state information.
 
-If you are on Combined Cumulative Fix 8 or later, go to [Defining friendly URLs without state information for pages in your site](../../../siteurl_cfg/changing_siteurl/cw_navstate/mp_friendly_short_url.md).
+If you are on Combined Cumulative Fix 8 or later, go to [Defining friendly URLs without state information for pages in your site](mp_friendly_short_url.md).
 
 State information is an encoded aggregation of the navigational state of the portal and the portlet.
 
@@ -26,7 +26,8 @@ For such scenarios, you can configure HCL Digital Experience as follows:
 
 The configuration applies to all pages that use that theme and that are configured to display friendly URLs.
 
-!!!note "Notes"
+**Notes:**
+
 -   If you configure your portal to show stateless friendly URLs, you gain improved URL readability at the cost of losing the state functionality:
     -   Portal URLs always point to the default state of a page because they do not contain the state information.
     -   If a user clicks the **Back** button, or refreshes a page by clicking the **Refresh** button or the page title, the page moves back into the default View mode.
@@ -36,8 +37,7 @@ The configuration applies to all pages that use that theme and that are configur
         1.  First, the portal looks for the user preference.
         2.  If the user preference is not set, the portal looks for the preferred language that is set in the browser. If the page is a public page, the user is an anonymous user. In this case, the portal also looks for the preferred language that is set in the browser.
         3.  If the portal cannot determine a preferred language setting for the portal or the browser, it applies the default language that is defined for the portal.
-        
-    You might want to present language-specific portal pages with stateless friendly URLs. For more information, see step [mp\_friendly\_short\_url\_prevcf7.md\#step\_lang\_spec\_urls](mp_friendly_short_url_prevcf7.md) of the following procedure.
+        You might want to present language-specific portal pages with stateless friendly URLs. For more information, see step [mp\_friendly\_short\_url\_prevcf7.md\#step\_lang\_spec\_urls](mp_friendly_short_url_prevcf7.md#step_lang_spec_urls) of the following procedure.
 
 -   Make sure that the JSPs of your theme provide a `<base>` tag in the header section of your markup. For example, you can use the portal tag `<portal-core:stateBase/>`. For more information, read *<portal-core/\> tags*.
 
@@ -103,6 +103,7 @@ The configuration applies to all pages that use that theme and that are configur
 8.  If you are using HCL Web Content Manager, you might want the HCL Web Content Manager Rendering portlet to also display the friendly and stateless URLs. In this case, implement a plug-in that translates the HCL Web Content Manager URLs into the required custom format.
 
     For instructions and sample code for such a plug-in, read *Example 2: Generate a friendly URL for web content*.
+
 
 The portal now no longer displays the navigational state information within the URLs.
 

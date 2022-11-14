@@ -21,7 +21,10 @@ The site toolbar and site manager are populated with the portlets that are immed
 -   Hide or display authoring templates from the Create Content dialog
 
 
-???+ info "Related information"
-    - [Customizing the Page Component palette](../site_prep_content_author/prep_site_toolbar/customizing_page_cmpnt_palette/index.md)
-    - [Customizing the Applications palette](../site_prep_content_author/prep_site_toolbar/customizing_applications_palette/index.md)
+<!-- 
+**Related information**  
+
+[Customizing the Page Component palette](../site_prep_content_author/prep_site_toolbar/customizing_page_cmpnt_palette/index.md)
+
+[Customizing the Applications palette](../site_prep_content_author/prep_site_toolbar/customizing_applications_palette/index.md) -->
 

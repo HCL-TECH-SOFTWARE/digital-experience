@@ -34,4 +34,4 @@ These two modes of content editing are not mutually exclusive. Since a single it
 
 ## External Data and Content
 
-You can use Web Content Integrator, [WCM REST services](api_access.md), [Digital Data Connector](application_integration.md), specialized portlets and other mechanisms to retrieve and render content from sources outside HCL DX. Every time a form is created with [HCL Leap](https://www.hcltechsw.com/leap), an API is generated that enables you to access its logic and data.
+You can use Web Content Integrator, [WCM REST services](api_access.md), [Digital Data Connector](application_integration.md), specialized portlets and other mechanisms to retrieve and render content from sources outside HCL DX. Every time a form is created with [HCL LEAP](forms_building.md), an API is generated that enables you to access its logic and data.

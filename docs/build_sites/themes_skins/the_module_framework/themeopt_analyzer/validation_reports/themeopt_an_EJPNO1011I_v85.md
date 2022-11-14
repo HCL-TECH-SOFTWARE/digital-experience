@@ -11,6 +11,8 @@ The theme contains static content deployed in a WAR. It was detected that a valu
 Open the WebSphere Integrated Solutions Console. **Open Resources** \> **Resource Environment** \> **Resource Environment Providers** \> **WP ConfigService** \> **Custom Properties**. Create or adapt a regular expression for the refreshPageLayout.template.regexp parameter.
 
 
-???+ info "Related information"
-    - [Adapt the scripts that register the custom theme and skins](../../../developing_theme/dev_op_overview/manual_packaging_themes/themeopt_move_repack_script.md)
+**Related information**  
+
+
+[Adapt the scripts that register the custom theme and skins](../dev-theme/themeopt_move_repack_script.md)
 

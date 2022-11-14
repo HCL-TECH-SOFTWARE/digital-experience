@@ -1,9 +1,8 @@
-# Example Feeds
+# Example feeds
 
 View some example feeds that illustrate how to represent the various item types within a feed.
 
-!!! note 
-   If non-ASCII data is used in a feed, then encoding="UTF-8" must be specified in the feed:
+**Note:** If non-ASCII data is used in a feed, then encoding="UTF-8" must be specified in the feed:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>

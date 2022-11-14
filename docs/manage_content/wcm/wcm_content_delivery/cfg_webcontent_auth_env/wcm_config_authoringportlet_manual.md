@@ -21,9 +21,10 @@ You can add any of the following optional configuration parameters:
 |htmlfield.htmlcomponent.columns|Defines the width of the HTML field that is used in an HTML component. The width is defined as the number of characters to display per row. If not specified, the number of characters that are defined by using htmlfield.columns is used.|
 |htmlfield.presentation.rows|Defines the number of rows to display in the HTML field that is used in a presentation template. If not specified, the number of rows that are defined by using htmlfield.rows is used.|
 |htmlfield.presentation.columns|Defines the width of the HTML field that is used in a presentation template. The width is defined as the number of characters to display per row. If not specified, the number of characters that are defined by using htmlfield.columns is used.|
-|edit\_live\_custom\_licence|Use this parameter to enter a custom license key to use in place of the OEM license for Ephox EditLive! with this format:`Account ID,Domain,Expiration,License Key,Licensee,Product,Release`**Note:** Ephox EditLive! is a deprecated feature as of CF11 or higher.|
+|edit\_live\_custom\_licence|Use this parameter to enter a custom license key to use in place of the OEM license for Ephox EditLive! with this format:`Account ID,Domain,Expiration,License Key,Licensee,Product,Release`**Note:** Ephox EditLive! is a deprecated feature as of CF11 or higher.
 
-!!! note
-    - All users need to log off and login before any configuration changes appear in the authoring portlet.
+|
+
+**Note:** All users need to log off and login before any configuration changes appear in the authoring portlet.
 
 

@@ -6,7 +6,7 @@ The goal of the migration process is to carry over the portal site and all of it
 
 -   **Toleration**
 
-    The ability to support and host the source environment's portal site exactly the way it was on the previous source version. The migration process automates this process, but complete toleration cannot always be contained due to the adoption of new technical specifications, features, and specifications that are deprecated when updating to a new version. The steps that are not automated and that need to be performed following the migration process are documented in the [Post-migration activities](../../../../../deployment/manage/migrate/next_steps/post_mig_activities/index.md) section of the product documentation. In many cases, deprecated features will be replaced by new features that provide equivalent or enhanced functionality, and these will either be included in the new version of HCL Digital Experience or available in Content Template.
+    The ability to support and host the source environment's portal site exactly the way it was on the previous source version. The migration process automates this process, but complete toleration cannot always be contained due to the adoption of new technical specifications, features, and specifications that are deprecated when updating to a new version. The steps that are not automated and that need to be performed following the migration process are documented in the [Post-migration activities](mig_t_post_mig.md) section of the product documentation. In many cases, deprecated features will be replaced by new features that provide equivalent or enhanced functionality, and these will either be included in the new version of HCL Digital Experience or available in Content Template.
 
 -   **Exploitation**
 
@@ -14,7 +14,10 @@ The goal of the migration process is to carry over the portal site and all of it
 
 
 
-???+ info "Related information" 
-    -   [Post-migration activities](../../../../../deployment/manage/migrate/next_steps/post_mig_activities/index.md)
-    -   [Enabling new functionality in a migrated portal](../../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/index.md)
+**Related information**  
+
+
+[Post-migration activities](../migrate/mig_t_post_mig.md)
+
+[Enabling new functionality in a migrated portal](../migrate/mig_t_enable_new.md)
 

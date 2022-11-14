@@ -1,4 +1,6 @@
-#  Portal Search Center
+# Search Center
+
+
 
 The portal search engine helps your site visitors to find information easily. Visitors can search HCL Portal and HCL Web Content Manager sources, along with additional internal and external web search sources that you make available to them. To help your visitors manage searching different information sources, define search collections and scopes.
 
@@ -28,14 +30,12 @@ After the installation finishes, the following search capability is available:
 
     -   Default Search Collection: Includes two content sources, WCM Content Source and Portal Content Source. They include content that is delivered on the website, also referred to as runtime content.
     -   JCRCollection1: Includes one content source, JCRSource. This content source includes the HCL Digital Experience Web Content Manager authoring artifacts, such as the authoring template.
-
 -   **Search Scopes**
 
     There are two search scopes:
 
     -   All Sources: Includes everything
     -   Managed Web Content: Includes only HCL Digital Experience Web Content Manager content
-
 
 1.  [Configure search collections and scopes](oob_search_scope.md)  
 HCL provides two search collections and a search scope. A search collection contains a number of content sources that the portal search service indexes. A search scope allows you to partition or organize your search collections. As a result your site visitors can limit their search to specific areas. Defined scopes are visible to visitors from the search dialog.

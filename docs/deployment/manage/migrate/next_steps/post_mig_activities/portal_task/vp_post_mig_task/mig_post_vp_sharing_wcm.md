@@ -5,6 +5,8 @@ When you created Web Content Manager libraries in the base portal of earlier ver
 If you have managed pages enabled and want to share a Web Content Manager library between virtual portals, use syndication to replicate the library to the virtual portals.
 
 
-???+ info "Related information" 
-    -   [Syndication](../../../../../../../manage_content/wcm/wcm_content_delivery/syndication/index.md)
+**Related information**  
+
+
+[Syndication](../wcm/wcm_administering.md)
 

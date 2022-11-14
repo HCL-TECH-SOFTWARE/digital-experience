@@ -3,7 +3,7 @@ id: wcm_dev_elements_search_props
 title: Creating a search results design
 ---
 
-# Creating a search results design
+
 
 
 The search element is used to define the design that is used to display search results.
@@ -40,9 +40,14 @@ The search element is used to define the design that is used to display search r
 
 
 
-???+ info "References" 
-    -   [Inserting an image in an element](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_image.md)
-    -   [Inserting a link in an element](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_link.md)
-    -   [Inserting element tags](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_tags.md)
-    -   [Creating web content tags](../../../../wcm_artifacts/tags/creating_web_content_tags/index.md)
+**References:**  
+
+
+[Inserting an image in an element](wcm_dev_elements_insert_image.md)
+
+[Inserting a link in an element](wcm_dev_elements_insert_link.md)
+
+[Inserting element tags](wcm_dev_elements_insert_tags.md)
+
+[Creating web content tags](wcm_dev_referencing_tags.md)
 

@@ -24,8 +24,7 @@ Where:
 -   The <port\> value is the port number for HCL Portal.
 -   The <folder-name\> value is the folder to be compressed. This value is optional.
 
-!!! note
-    A / must follow the folder name.
+**Note:** A / must follow the folder name.
 
 The URL triggers a download of a compressed file. If you are prompted for a user and password enter the admin user ID and password for HCL Portal. Store the file on the local file system.
 
@@ -60,8 +59,7 @@ Where:
 -   The <port\> value is the port number for HCL Portal.
 -   The <folder-name\> value is the folder to be compressed. This value is optional.
 
-!!! note
-    A / must follow the folder name.
+**Note:** A / must follow the folder name.
 
 ## Use WebDAV to connect to the filestore
 
@@ -72,9 +70,12 @@ Use a WebDav Client to connect to the filestore using the following url:
 Browse to the folder you need and copy the files to your local drive.
 
 
+**Related information**  
 
-???+ info "Related information:"
-    - [Development and operations overview](../../dev_op_overview/index.md)
-    - [Adding static content to your custom theme](../../dev_op_overview/manual_packaging_themes/themeopt_move_repack_addstatic.md)
-    - [Staging to production list](../../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_stage_check.md)
+
+[Development and operations overview](../dev-theme/themeopt_move_devopaspect.md)
+
+[Adding static content to your custom theme](../dev-theme/themeopt_move_repack_addstatic.md)
+
+[Staging to production list](../deploy/dep_stage_check.md)
 

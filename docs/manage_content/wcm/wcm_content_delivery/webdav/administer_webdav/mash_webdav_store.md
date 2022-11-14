@@ -6,10 +6,9 @@ You can use WebDAV to work with the portal themes.
 
 WebDAV is defined by RFC2518 as an HTTP extension framework with a plug point for the access and management of hierarchical data. For example, in content management systems. WebDAV stores the data in collections. You can work with the data in a user interface view that is similar to that of a file system. A folder represents a WebDAV collection. Various tools are available for integrating WebDAV resources into the client file system. Users can use these tools to view and modify resources that they can access with WebDAV.
 
-!!! note
-    The HTTP Basic Authentication Trust Association Interceptor (TAI) must be enabled to use WebDAV in HCL Portal. This TAI is enabled by default. See the related links for information.
+**Note:** The HTTP Basic Authentication Trust Association Interceptor \(TAI\) must be enabled to use WebDAV in HCL Portal. This TAI is enabled by default. See the related links for information.
 
-You can obtain the entry point URL to the WebDAV file store from the service document under the URL /wps/mycontenthandler/!ut/p/model/service-document. The service document contains the top-level access point as follows:
+You can obtain the entry point URL to the WebDAV file store from the service document under the URL `/wps/mycontenthandler/!ut/p/model/service-document`. The service document contains the top-level access point as follows:
 
 ```
 <app:collection href="/webdav/!ut/p/dav/fs-type1/">
@@ -27,7 +26,7 @@ You can obtain the entry point URL to the WebDAV file store from the service doc
 The entry point URL for themes is as follows:
 
 ```
-http://server:port/[PortalServer_root](../reference/wpsdirstr.md#wp_root)/mycontenthandler/dav/fs-type1/
+http://server:port/[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/mycontenthandler/dav/fs-type1/
 ```
 
 Examples of URLs for themes are as follows:
@@ -125,10 +124,11 @@ WebDAV prevents the deletion of these folders. Even users with administrator rig
 
 To allow non-administrator users to update or modify existing files do the following steps.
 
-1.  Open a command prompt and change to the wp_profile_root/ConfigEngine directory.
+1.  Open a command prompt and change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 2.  Run the following ConfigEngine task.
-    -   AIX® and Linux:
-    -   Windows™: `ConfigEngine.bat export-nodes -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin -Dquery="/filestore/fs-type1/themes" -Dwp.content.repository.output.dir="c:\\temp\\jcr"`
+    -   AIX® HP-UX Linux™ Solarisz/OS®:
+    -   IBM® i: ConfigEngine.sh export-nodes -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin -Dquery="/filestore/fs-type1/themes" -Dwp.content.repository.output.dir="c:\\temp\\jcr"
+    -   Windows™: ConfigEngine.bat export-nodes -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin -Dquery="/filestore/fs-type1/themes" -Dwp.content.repository.output.dir="c:\\temp\\jcr"
 3.  Edit the file that was exported in the c:\\temp\\jcr directory. Add the manager role to a user or group by adding the following code:
 
     -   Code to add the manager role to a user:
@@ -165,8 +165,9 @@ To allow non-administrator users to update or modify existing files do the follo
     ```
 
 4.  Import the file with the following ConfigEngine task.
-    -   AIX and Linux:
-    -   Windows: `ConfigEngine.bat import-nodes -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin -Dwp.content.repository.input.dir="c:\\temp\\jcr"`
+    -   AIX HP-UX Linux Solarisz/OS:
+    -   IBM i: ConfigEngine.sh import-nodes -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin -Dwp.content.repository.input.dir="c:\\temp\\jcr"
+    -   Windows: ConfigEngine.bat import-nodes -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin -Dwp.content.repository.input.dir="c:\\temp\\jcr"
 
 ## Other folders
 
@@ -184,12 +185,11 @@ The following list shows extra folders. Each of these folders represents a WebDA
 
     Anonymous users have read access only.
 
--   **/users/user_name**
+-   **/users/user\_name**
 
-    Only the user `user_name` has access to these files. This folder is created for the individual user `user_name` when the user accesses the WebDAV file store for the first time.
+    Only the user `user\_name` has access to these files. This folder is created for the individual user `user\_name` when the user accesses the WebDAV file store for the first time.
 
-    !!!note
-        To have human readable folder names, the portal uses the user IDs of the individual users as the names for the users' folders `user_name`. Internally, the portal uses the VMM ID of the user, so data does not need to be moved when the user name is changed.
+    **Note:** To have human readable folder names, the portal uses the user IDs of the individual users as the names for the users' folders `user\_name`. Internally, the portal uses the VMM ID of the user, so data does not need to be moved when the user name is changed.
 
     If you want to programmatically find the URL entry point to a folder for the current user, you can look into the services document. The access point for user-specific data is provided as follows:
 
@@ -206,15 +206,15 @@ The following list shows extra folders. Each of these folders represents a WebDA
                                   </app:collection>
     ```
 
--   **/users/user_name/public**
+-   **/users/user\_name/public**
 
-    The user `user_name` has read and write access to this folder. This folder contains content that the user `user_name` shared with other users. Portal access control mapping: inherited.
+    The user `user\_name` has read and write access to this folder. This folder contains content that the user `user\_name` shared with other users. Portal access control mapping: inherited.
 
     All authenticated users have read access to this folder.
 
     Anonymous users have read access to this folder.
 
-    All other subfolders of /users/user_name can only the accessed by the user `user_name`.
+    All other subfolders of /users/user\_name can only the accessed by the user `user\_name`.
 
 -   **/system**
 
@@ -244,14 +244,14 @@ The id value can consist of an arbitrary string. It is used only to establish th
 2.  All items of a certain resource type, such as jpg or gif have an expiration time of 6000 seconds:
 
     ```
-    filestore.cache.expiration.1.re=.*.jpg|.*.gif 
+    filestore.cache.expiration.1.re=.*\.jpg|.*\.gif 
                                        filestore.cache.expiration.1.seconds=6000
     ```
 
     All CSS files in the themes folder have an expiration time of 8000 seconds:
 
     ```
-    filestore.cache.expiration.2.re=themes/.*.css 
+    filestore.cache.expiration.2.re=themes/.*\.css 
                                        filestore.cache.expiration.2.seconds=8000
     ```
 
@@ -298,8 +298,10 @@ WebDAV file store supports the following HTTP methods:
 
 
 
-???+ info "Related information:"
-    - [Enabling HTTP Basic Authentication for simple clients](../../../../../deployment/manage/security/basic_auth/index.md)
-    - [Embedding the HCL Portal 8.5 site toolbar dynamically without a dynamic content spot](../../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/enable_func_migrated_themes/add_85_toolbar/themeopt_cust_toolbar_dynamic_embedding.md)
+**Related information**  
 
+
+[Enabling HTTP Basic Authentication for simple clients](../security/tait_nbl_hba4sc.md)
+
+[Embedding the HCL Portal 8.5 site toolbar dynamically without a dynamic content spot](../dev-theme/themeopt_cust_toolbar_dynamic_embedding.md)
 

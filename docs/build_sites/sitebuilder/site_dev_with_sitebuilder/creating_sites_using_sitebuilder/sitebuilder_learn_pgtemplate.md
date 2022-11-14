@@ -1,6 +1,7 @@
 # Page templates
 
 
+
 Page templates are reusable assets that you can use to quickly assemble new sections of entire websites that are based on repeatable patterns. For example, if you routinely must add sections to your website for new products, you can assemble page templates into a section template.
 
 **Page Templates** lists all the available page templates in the portal site library. All pages and page templates are stored in the portal site library. However, the content for the pages can be stored in a different content library. Only the page templates included with HCL Portal store content in the portal site library.

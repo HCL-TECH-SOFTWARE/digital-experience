@@ -20,5 +20,5 @@ Code sample
  </transition>
 ```
 
-
+**Parent topic:**[Transitions](../screenflow/transitions.md)
 

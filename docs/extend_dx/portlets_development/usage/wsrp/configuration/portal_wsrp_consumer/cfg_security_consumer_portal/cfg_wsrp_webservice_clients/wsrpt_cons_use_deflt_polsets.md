@@ -41,13 +41,13 @@ To use the WSRP policy sets and client policy set bindings for service configura
 
     1.  Open the **Application policy sets** panel.
 
-    2.  Select **Import (From Selected Location)**.
+    2.  Select **Import \(From Selected Location\)**.
 
     3.  Select the LTPA-based message authentication policy set.zip file or the username-based message authentication policy set.zip file that you want to import.
 
     4.  Open the **General client policy set bindings** panel.
 
-    5.  Select **Import (From Selected Location)**.
+    5.  Select **Import \(From Selected Location\)**.
 
     6.  Select the LTPA-based message authentication client binding.zip file or username-based message authentication client binding.zip file that you want to import.
 
@@ -74,4 +74,8 @@ To use the WSRP policy sets and client policy set bindings for service configura
 3.  After you have completed this configuration, restart your portal.
 
 
+
+**Previous topic:**[Communicating with Producer portals with different web service configurations](../admin-system/wsrpt_cons_cfg_wsrvc_clnt_xtra.md)
+
+**Next topic:**[Creating and deploying custom service references](../admin-system/wsrpt_cons_crt_cust_wsrvc_refs.md)
 

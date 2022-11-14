@@ -8,10 +8,9 @@ You can perform various web content library functions by using the Web content A
 -   Import a library
 -   Export a library
 
-   !!! note
-      Drafts are not copied or exported when using the API to copy or export libraries.
+**Note:** Drafts are not copied or exported when using the API to copy or export libraries.
 
-See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer_root]/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
+See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
 
 ## Invoking web content library API methods asynchronously
 
@@ -19,7 +18,7 @@ Although Web content library API functions can be invoked synchronously, if you 
 
 WebSphere® Application Server uses a mechanism known as asynchronous beans. An asynchronous bean is a Java object that can be run asynchronously. The "Work object" asynchronous bean is used to invoke web content library API methods asynchronously.
 
-A Work object (which is represented by the interface `com.ibm.websphere.asynchbeans.Work`) extends `java.lang.Runnable` It is used to run a block of code as an independent thread. WebSphere Application Server maintains a pool of independent threads that can be assigned to run code encapsulated in Work instances. This pool of threads is managed by the `WorkManager`. This is used to spawn threads to run Work objects and to monitor them. WebSphere Application Server maintains default Work Managers for each of the application servers that are contained on a particular node. The sample in this topic makes use of the default Work Manager (`wm/wpsWorkManager`) for the HCL Portal application server. This maintains a pool of 300 threads. It is possible to create new Work manager instances with customized thread pools. This is done using the WebSphere Integrated Solutions Console for the HCL Portal server.
+A Work object \(which is represented by the interface `com.ibm.websphere.asynchbeans.Work`\) extends `java.lang.Runnable` It is used to run a block of code as an independent thread. WebSphere Application Server maintains a pool of independent threads that can be assigned to run code encapsulated in Work instances. This pool of threads is managed by the `WorkManager`. This is used to spawn threads to run Work objects and to monitor them. WebSphere Application Server maintains default Work Managers for each of the application servers that are contained on a particular node. The sample in this topic makes use of the default Work Manager \(`wm/wpsWorkManager`\) for the HCL Portal application server. This maintains a pool of 300 threads. It is possible to create new Work manager instances with customized thread pools. This is done using the WebSphere Integrated Solutions Console for the HCL Portal server.
 
 The example uses the `DeleteWork` class to implement the Work interface:
 

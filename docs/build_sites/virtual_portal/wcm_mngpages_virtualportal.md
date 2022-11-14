@@ -6,3 +6,4 @@ Because web content libraries are not shared across virtual portals, these pages
 
 Syndication of the Portal Site library for a virtual portal is the same as syndication of any other web content library.
 
+

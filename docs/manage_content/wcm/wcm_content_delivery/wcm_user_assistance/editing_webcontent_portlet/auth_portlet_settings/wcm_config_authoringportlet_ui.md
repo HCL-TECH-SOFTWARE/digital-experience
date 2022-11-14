@@ -16,8 +16,7 @@ You use the User Interface Options section to define the user interface options 
 
         If this option is selected, the navigation bar is hidden when the home page or launch page is displayed, but is visible when the item forms are displayed. The initial interface is made simpler, while still having the navigation bar available in other views. This option is for users who need to work on more complex web content management tasks.
 
-    !!! note
-        The navigation bar is always displayed when you use the library explorer.
+    **Note:** The navigation bar is always displayed when you use the library explorer.
 
 2.  Select a default view:
 

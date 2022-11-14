@@ -16,11 +16,11 @@ If you use friendly URLs for web content, you can configure HCL Portal to valida
 -   Return an HTTP error code and display a specific page.
 -   Return an HTTP error code and display a specific page that renders a specific content item.
 
-
--   **[How to enable the validation of friendly URLs for web content](enable_validate_friendly_urls.md)**  
+-   **[How to enable the validation of friendly URLs for web content](../wcm/enable_validate_friendly_urls.md)**  
 Learn about the properties and values that are required in WP Configuration Service Resource Environment Provider to validate friendly URLs for web content.
--   **[Configuring the validation of friendly URLs for web content](configure_validate_friendly_urls.md)**  
+-   **[Configuring the validation of friendly URLs for web content](../wcm/configure_validate_friendly_urls.md)**  
 After you enable the validation of friendly URLs for web content, you can choose from various configuration options. These options enable you to specify how the portal responds to friendly URLs that contain path information that does not identify an available content item. Learn about the parameter combinations you can specify and how the portal response varies based on these combinations.
--   **[How to prevent friendly URL redirects for invalid friendly URLs for web content](prevent_friendly_url_redirects.md)**  
+-   **[How to prevent friendly URL redirects for invalid friendly URLs for web content](../wcm/prevent_friendly_url_redirects.md)**  
 If the validation of friendly URLs for web content is enabled and the path information of an incoming friendly URL is not valid, portal responds with the HTTP status code as defined by the portal Configuration Service property and page parameter friendly.pathinfo.validation.errorCode. However, depending on the configuration, portal does not always send the configured HTTP status code. Portal can identify conditions that require a different HTTP status code.
+
 

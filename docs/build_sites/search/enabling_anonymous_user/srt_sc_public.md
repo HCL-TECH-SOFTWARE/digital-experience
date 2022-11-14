@@ -15,19 +15,15 @@ To do this, you need to create your custom search center page, place a copy of t
         4.  Scroll to the Metadata section of the Manage Page Properties window.
         5.  To specify the Search and Tag Center profile for the custom search center page, add the key resourceaggregation.profile with the value of profiles/profile\_search\_tag.json to the list of key value pairs.
 
-            !!! note
-                If you created the custom search center page as a child to the original Search Center page, the Search and Tag Center profile is inherited from the parent page.
+            **Note:** If you created the custom search center page as a child to the original Search Center page, the Search and Tag Center profile is inherited from the parent page.
 
         6.  Click **Save**.
-
     -   If you create the page by using the Manage Pages administration portlet, proceed as follows:
-    
         1.  Select **Edit Page Properties** for the page.
         2.  Select **Advanced options**.
         3.  Select **I want to set parameters**.
         4.  Add the parameter resourceaggregation.profile with a value of profiles/profile\_search\_tag.json.
         5.  Click **OK** \> **OK**.
-
 2.  Add the Search Center portlet to the custom search center page by completing the following steps:
 
     1.  From the custom search center page, select the **Create** tab in the site toolbar.
@@ -72,7 +68,6 @@ To do this, you need to create your custom search center page, place a copy of t
 
     -   Change the value for `navigation node` to the unique name of your custom Search Center page.
     -   Change the value for `control holding` to the unique name that you gave the copy of your Search Center portlet.
-
     After your updates, the code snippet might look like the following:
 
     ```

@@ -58,9 +58,12 @@ A Cookie Rule contains the following settings:
 
     1.  Before the remote HTTP connection writes the request header to the remote connection
     2.  When the response header of the remote HTTP connection is evaluated.
-    The custom transformation handler can modify the name, value, domain, and path of the cookie that is assigned with the custom transformation handler. For more information, read [Using custom cookie transformation handlers](../../programmatic_extensions_outbound_http_connections/using_custom_cookie_transformation_handlers/index.md).
+    The custom transformation handler can modify the name, value, domain, and path of the cookie that is assigned with the custom transformation handler. For more information, read *Using custom cookie transformation handlers*.
 
 
 
-???+ info "Related information"
-    - [Using custom cookie transformation handlers](../../programmatic_extensions_outbound_http_connections/using_custom_cookie_transformation_handlers/index.md)
+**Related information**  
+
+
+[Using custom cookie transformation handlers](../dev-portlet/outbhttp_cust_cookie_xform_hdlr.md)
+

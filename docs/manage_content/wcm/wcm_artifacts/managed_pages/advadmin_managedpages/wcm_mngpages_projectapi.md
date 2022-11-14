@@ -2,7 +2,7 @@
 
 You can redirect request processing to a specific project by generating URLs with the ProjectIdentificationService API, or the REST API. Request processing operates either completely within the scope of a project or completely outside the scope of a project. You cannot switch projects during request processing.
 
-When a request originates from within a project, the request URL contains a project identifier for that project. The project information is included only in the URL and is not bound to the session. The project identifier can be an object ID (OID), as used by the portal, or a universally unique identifier (UUID), as used by Web Content Manager. To direct request processing to a specific project, you must generate a URL for the project and then render the URL.
+When a request originates from within a project, the request URL contains a project identifier for that project. The project information is included only in the URL and is not bound to the session. The project identifier can be an object ID \(OID\), as used by the portal, or a universally unique identifier \(UUID\), as used by Web Content Manager. To direct request processing to a specific project, you must generate a URL for the project and then render the URL.
 
 ## Java API
 
@@ -54,6 +54,6 @@ This example constructs a portal URL to a URI in a specific project:
 
 ## REST API
 
-If your application uses the Representational State Transfer (REST) architecture, you can use the remote APIs provided with the portal to construct project-specific URLs.
+If your application uses the Representational State Transfer \(REST\) architecture, you can use the remote APIs provided with the portal to construct project-specific URLs.
 
 

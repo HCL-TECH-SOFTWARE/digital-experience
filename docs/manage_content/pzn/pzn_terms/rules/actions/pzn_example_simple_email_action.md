@@ -16,6 +16,8 @@ The email action rule can be attached to a content spot that, when triggered by 
 ```
 
 
-???+ info "Related information:"
-	- [Email administration](../pzn_email_admin.md)
+**Related information**  
+
+
+[Email administration](../pzn/pzn_email_admin.md)
 

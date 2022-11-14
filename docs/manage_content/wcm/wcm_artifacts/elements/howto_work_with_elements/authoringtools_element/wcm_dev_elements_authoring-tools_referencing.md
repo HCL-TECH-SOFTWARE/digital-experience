@@ -1,7 +1,4 @@
----
-title: Refer to an Authoring Tool
----
-# Refer to an Authoring Tool
+# How to reference an authoring tool
 
 An authoring tool component can be referenced within presentation templates, menu component designs, navigator component designs, and personalization component designs. When added to menus, navigators, or personalization component designs, the edit and delete functions are applied to each displayed item.
 

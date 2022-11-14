@@ -2,11 +2,12 @@
 
 Configure a portlet that retrieves and displays search results from third-party search engines, then add the External Search Results portlet to the Search Center.
 
-The External Search Results is a specialized portlet that administrators can add to HCL Digital Experience Search. When you add that portlet to HCL Digital Experience Product Documentation Search, the results of a search that is initiated from the **Search** page includes results from third-party external search engines. You can add more than one copy of the External Search Results portlet to the **HCL Digital Experience Product Documentation Search** page. You can also configure each of these portlets to display a specific number of search results.
+The External Search Results is a specialized portlet that administrators can add to HCL Digital Experience Search. When you add that portlet to HCL Digital Experience Product Documentation Search, the results of a search that is initiated from the **Search** page include results from third-party external search engines. You can add more than one copy of the External Search Results portlet to the **HCL Digital Experience Product Documentation Search** page. You can also configure each of these portlets to display a specific number of search results.
 
-!!! note
-    1.  You must be logged in as Administrator to add an External Search Results portlet to the Search Center.
-    2.  The External Search Results portlet can be added only to the Search Center on the HCL Digital Experience Product Documentation Search page. It does not function anywhere else.
+**Note:**
+
+1.  You must be logged in as Administrator to add an External Search Results portlet to the Search Center.
+2.  The External Search Results portlet can be added only to the Search Center on the HCL Digital Experience Product Documentation Search page. It does not function anywhere else.
 
 To add the External Search Results portlet to the **HCL Digital Experience Product Documentation Search** page and configure it, proceed as follows:
 
@@ -44,8 +45,6 @@ To add the External Search Results portlet to the **HCL Digital Experience Produ
         http://www.ibm.com/developerworks/views/rss/customrssatom.jsp?zone_type=AllZones&content_type=AllTypes&search_by=${searchTerms}&day=1&month=01&year=2008
         ```
 
-	Be careful to insure that if the URL of the external search service is SSL (HTTPS) based, that you import the SSL certificate of that search provider in the appropriate *truststore* in the WebSphere Application Server console for SSL. Otherwise, the search site will not be accessible and you will get errors in the SystemOut.log file pertaining to SSL errors.
-
     4.  Edit the value of the parameter **searchEngineFullPageUrl**. This parameter is optional. You can delete it or leave it empty. When you set this parameter, a **More** link is added to the portlet. It links to the website of the external search engine. The value represents a parameterized form of the URL used to locate the search engine that is queried. The string `${searchTerms}` must be included in the parameter value. During the search, the portlet replaces the string by the actual query.
 
         For example:
@@ -60,8 +59,7 @@ To add the External Search Results portlet to the **HCL Digital Experience Produ
 
     6.  If the external search engine returns search results in a format that is not supported, or if the provided rendering of the search results is not acceptable, an XSLT file can be specified. Edit the value of the **externalXsltUrl** parameter to supply a URL for such an external XSLT file.
 
-        !!! note
-            The XSLT does not create an entire HTML document, but an HTML fragment that can be embedded inside a page.
+        **Note:** The XSLT does not create an entire HTML document, but an HTML fragment that can be embedded inside a page.
 
     7.  On the page for editing the preference `searchEngineFullPageUrl`, click **OK**.
 
@@ -89,6 +87,8 @@ To add the External Search Results portlet to the **HCL Digital Experience Produ
 
 
 
-???+ info "Related information"
-    - [How to create an outbound HTTP connection configuration profile](../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/cfg_outbound_http_connections/adm_tools_for_cfg_outbound_http_conn/cfg_outbound_http_using_cfgtsk/outbhttp_cfg_tsk_create.md)
+**Related information**  
+
+
+[How to create an outbound HTTP connection configuration profile](../dev-portlet/outbhttp_cfg_tsk_create.md)
 

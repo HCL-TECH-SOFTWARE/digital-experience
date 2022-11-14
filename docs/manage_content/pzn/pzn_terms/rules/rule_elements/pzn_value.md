@@ -4,8 +4,7 @@ Value is the placeholder for the result of an evaluation. This value can be one 
 
 The value must be compatible with the data type of the other side of the expression or evaluation. For example, if you are evaluating an attribute that has the type Number, you can only compare it to resource attributes of the type Number or Decimal Number. The rule editor prevents you from choosing other resource attributes with incompatible types.
 
-!!! note 
-    Making comparisons against resources in a database respects the column type and size. Therefore, to compare a value to a column typed as CHAR\(10\), you must include all 10 characters. For example, assume you have a table with a column named DAY that is typed as CHAR\(10\). A row in the table has the value of 'Monday&nbsp;&nbsp;&nbsp;&nbsp;' rather than 'Monday' in the DAY column because DAY is compared against a profiler condition, and must have all 10 characters defined. However, if the column is typed as VARCHAR, the value in the profiler condition can be 'Monday' \(without the four additional blanks\).
+**Note:** Making comparisons against resources in a database respects the column type and size. Therefore, to compare a value to a column typed as CHAR\(10\), you must include all 10 characters. For example, assume you have a table with a column named DAY that is typed as CHAR\(10\). A row in the table has the value of 'Monday&nbsp;&nbsp;&nbsp;&nbsp;' rather than 'Monday' in the DAY column because DAY is compared against a profiler condition, and must have all 10 characters defined. However, if the column is typed as VARCHAR, the value in the profiler condition can be 'Monday' \(without the four additional blanks\).
 
 ## Mapped values
 

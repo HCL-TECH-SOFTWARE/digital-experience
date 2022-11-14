@@ -55,13 +55,13 @@ The configuration settings for each social network you want to post to are store
         This option is used to select the language that is used to render social media posts.
 
 
--   **[Defining social network settings for HCL Connections](wcm_sm_config_doc_connections.md)**  
+-   **[Defining social network settings for HCL Connections](../wcm/wcm_sm_config_doc_connections.md)**  
 Complete these steps to set up a social network connection for HCL Connections.
--   **[Configuration settings for Facebook](wcm_sm_config_doc_fb.md)**  
+-   **[Configuration settings for Facebook](../wcm/wcm_sm_config_doc_fb.md)**  
 Complete these configuration parameters to set up a social network connection for Facebook.
--   **[Defining social network settings for LinkedIn](wcm_sm_config_doc_li.md)**  
+-   **[Defining social network settings for LinkedIn](../wcm/wcm_sm_config_doc_li.md)**  
 Complete these configuration parameters to set up a social network connection for LinkedIn.
--   **[Defining social network settings for Twitter](wcm_sm_config_doc_twitter.md)**  
+-   **[Defining social network settings for Twitter](../wcm/wcm_sm_config_doc_twitter.md)**  
 Complete these configuration parameters to set up a social network connection for Twitter.
 
 

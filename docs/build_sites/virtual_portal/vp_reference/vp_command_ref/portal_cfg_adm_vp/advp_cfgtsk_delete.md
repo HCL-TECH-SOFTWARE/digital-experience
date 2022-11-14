@@ -18,11 +18,18 @@ You pass the parameters in the parameter list for each configuration task as app
 -   Specifying the parameter and value that is preceded by -D on the command line.
 -   Defining them in the file wkplc.properties.
 
-    !!! note 
-        The property file must be encoded in the ISO 8859-1 character encoding format.
+    **Note:** The property file must be encoded in the ISO 8859-1 character encoding format.
 
 
 -   **AIX®**
+
+    ./ConfigEngine.sh delete-virtual-portal -DPortalAdminPwd=password -DWasPassword=password -DVirtualPortalObjectId=objectID\_of\_virtual\_portal\_to\_delete
+
+-   **IBM® i**
+
+    ConfigEngine.sh delete-virtual-portal -DPortalAdminPwd=password -DWasPassword=password -DVirtualPortalObjectId=objectID\_of\_virtual\_portal\_to\_delete
+
+-   **HP-UX**
 
     ./ConfigEngine.sh delete-virtual-portal -DPortalAdminPwd=password -DWasPassword=password -DVirtualPortalObjectId=objectID\_of\_virtual\_portal\_to\_delete
 
@@ -30,11 +37,22 @@ You pass the parameters in the parameter list for each configuration task as app
 
     ./ConfigEngine.sh delete-virtual-portal -DPortalAdminPwd=password -DWasPassword=password -DVirtualPortalObjectId=objectID\_of\_virtual\_portal\_to\_delete
 
+-   **Solaris**
+
+    ./ConfigEngine.sh delete-virtual-portal -DPortalAdminPwd=password -DWasPassword=password -DVirtualPortalObjectId=objectID\_of\_virtual\_portal\_to\_delete
+
 -   **Windows™**
 
     ConfigEngine.bat delete-virtual-portal -DPortalAdminPwd=password -DWasPassword=password -DVirtualPortalObjectId=objectID\_of\_virtual\_portal\_to\_delete
 
+-   **z/OS®**
 
-???+ info "Related information:"
-    - [Modifying a virtual portal](../../../adm_vp_task/vp_adm_task/advp_tsk_modify.md)
+    ./ConfigEngine.sh delete-virtual-portal -DPortalAdminPwd=password -DWasPassword=password -DVirtualPortalObjectId=objectID\_of\_virtual\_portal\_to\_delete
+
+
+
+**Related information**  
+
+
+[Modifying a virtual portal](../admin-system/advp_tsk_modify.md)
 

@@ -4,7 +4,7 @@ Configure the communication between HCL Portal and your OnDemand Router \(ODR\).
 
 1.  Log in to the WebSphere® Integrated Solutions Console.
 
-2.  Go to **Servers > Server Types > Web server**.
+2.  Go to **Servers** \> **Server Types** \> **Web server**.
 
 3.  Select your ODR.
 

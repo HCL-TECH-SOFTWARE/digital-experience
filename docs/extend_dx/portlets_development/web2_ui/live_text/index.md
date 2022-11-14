@@ -20,13 +20,13 @@ Therefore portlets that use these declarations do not need to generate semantic 
 
 Administrators can turn off the automatic generation of click-to-action targets by specifying a portlet preference `com.ibm.portal.c2a.target.generation = false`.
 
--   **[Live text formats](w2_smtg_refrmt.md)**  
+-   **[Live text formats](../dev-portlet/w2_smtg_refrmt.md)**  
 Application of live text elements to sources and targets is based on special HTML classes that are attached to elements of the HTML markup.
--   **[Integrating click-to-action targets with the person menu](w2_smtg_int_c2atpm.md)**  
+-   **[Integrating click-to-action targets with the person menu](../dev-portlet/w2_smtg_int_c2atpm.md)**  
 Target actions for live text based click-to-action can also integrate with the person menus that are generated for hCard microformats found in the page markup.
--   **[Relation to cooperative portlet wiring](w2_smtg_ref_wire.md)**  
+-   **[Relation to cooperative portlet wiring](../dev-portlet/w2_smtg_ref_wire.md)**  
 You can use both live text elements and cooperative portlet wires to exchange data between portlets on a page.
--   **[Comparison of the new features with click-to-action in HCL Digital Experience portlets](w2_smtg_ref_compr.md)**  
+-   **[Comparison of the new features with click-to-action in HCL Digital Experience portlets](../dev-portlet/w2_smtg_ref_compr.md)**  
 The user experience of live text elements based click-to-action is similar to that of the click-to-action JSP tags that are available for IBM portlets.
 
 

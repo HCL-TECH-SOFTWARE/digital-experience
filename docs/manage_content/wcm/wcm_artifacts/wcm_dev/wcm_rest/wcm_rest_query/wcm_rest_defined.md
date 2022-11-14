@@ -46,8 +46,7 @@ The response to a create operation contains a link relation "query-results" spec
 atom:href="/wps/mycontenthandler/!ut/p/wcmrest/definedquery/query-name"/>
 ```
 
-!!! note
-    The only way to update this URI is by modifying the name of the component.
+**Note:** The only way to update this URI is by modifying the name of the component.
 
 ## Read
 

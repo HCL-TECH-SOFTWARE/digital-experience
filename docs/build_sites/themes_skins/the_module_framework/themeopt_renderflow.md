@@ -8,8 +8,7 @@ When the template parser encounters a dynamic content spot for a particular comb
 
 The modules are then processed in order, and contributions to each type are aggregated into sets. All contributions of a particular type at the current extension point are collected into groups by their type.
 
-!!! important
-    It is the responsibility of the contributor to ensure that the content of the contribution does not include malicious code. For example, config values that are read by a data source must be escaped before serializing it.
+**Important:** It is the responsibility of the contributor to ensure that the content of the contribution does not include malicious code. For example, config values that are read by a data source must be escaped before serializing it.
 
 Responses are rendered in this order:
 
@@ -17,17 +16,13 @@ Responses are rendered in this order:
     -   CSS is only valid in the head extension point.
     -   The framework generates a link element with an `href` attribute whose value is URL that resolves to the combined results of all contributions to CSS at the head extension point.
     -   When debug is enabled, separate link elements are generated for each contribution.
-
 2.  Static JavaScript configuration
     -   The framework writes an external `<script>` tag with a `src` attribute whose value is a URL that resolves to the combined results of all contributions to static JavaScript configuration at the current extension point.
     -   When debug is enabled, separate script elements are generated for each contribution.
-
 3.  Dynamic JavaScript configuration. The framework generates an inline script tag that loads the combined results of all contributions to dynamic JavaScript configuration at the current extension point.
-
 4.  JavaScript code
     -   The framework generates an external script tag that loads the combined results of all contributions to JavaScript code at the current extension point.
     -   When debug is enabled, separate script elements are generated for each contribution.
-    
 5.  Markup
     -   The framework directly writes the output from each markup contribution at the current extension point to the output stream.
     -   This framework is intended to be used for markup that always shows in the page when this module is enabled. Use markup for content that is not visual but is semantic.

@@ -11,7 +11,7 @@ Before you enable remote session invalidation, carefully consider the performanc
 
 To configure remote session invalidation, set the following configuration property on the Consumer portal:
 
--   **wsrp.consumer.releaseSessions.enabled = (false|true)**
+-   **wsrp.consumer.releaseSessions.enabled = \(false\|true\)**
 
     Use this property to enable or disable remote session invalidation. The default for this property is `false`. This default setting means that the Consumer does not invalidate remote sessions.
 

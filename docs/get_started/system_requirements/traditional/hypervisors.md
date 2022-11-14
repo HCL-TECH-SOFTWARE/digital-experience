@@ -1,5 +1,5 @@
 # Hypervisors
-The Hypervisors section specifies the hypervisors that HCL Digital Experience 9.5 supports.
+The Hypervisors section specifies the hypervisors that HCL Digital Experience 9.5 (Portal Extend, Express, Enable, WCM) supports.
 
 ## AIX Summary
 |Hypervisor|Product minimum|Components|Deployment Units|Supported Guest Operating System|

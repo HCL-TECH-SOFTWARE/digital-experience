@@ -10,12 +10,10 @@ Ensure that your **SearchAdminUser** alias matches your HCL Digital Experience a
 4.  Edit the **SearchAdminUser** alias.
 5.  Update the user ID and/or password to match your HCL Digital Experience administrator information.
 6.  If you are working in a clustered environment, you must synchronize the nodes of your cluster. To synchronize the nodes of your cluster, complete the following steps:
-
     1.  Log on to the Deployment Manager.
     2.  Go to **System Administration** \> **Nodes**.
     3.  Select the nodes to synchronize from the list.
     4.  Click **Full Resynchronize**.
-
 7.  Restart the portal servers.
 
 In a remote search environment, the remote search server must be configured for the same LDAP as HCL Digital Experience.

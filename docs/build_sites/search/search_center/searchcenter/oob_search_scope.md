@@ -35,3 +35,4 @@ In addition to the scheduled time, you can also start the crawler manually. If y
 
 
 Search scopes can be defined at anytime. As your site grows, adding scopes help your visitors target areas of your site to search.
+

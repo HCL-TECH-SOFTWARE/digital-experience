@@ -4,15 +4,19 @@ If tracing is enabled, HCL Digital Experience generates a log file during run ti
 
 The default runtime log file is shown:
 
--   AIX® and Linux™: wp_profile_root/logs/WebSphere_Portal/trace.log
--   Windows™: wp_profile_root\logs\WebSphere_Portal\trace.log
+-   AIX® Linux™ Solaris: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/logs/WebSphere\_Portal/trace.log
+-   IBM® i \(UserData\): [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/logs/WebSphere\_Portal/trace.log
+-   Windows™: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\logs\\WebSphere\_Portal\\trace.log
+-   z/OS®: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/logs/WebSphere\_Portal/trace.log
+
+    **Note:** The default runtime log file is at the output location you specified as ras\_trace\_outputLocation in your IBM WebSphere® Application Server for z/OS installation. It can either be in the job log of the servant region, in a CTRACE data set, or in a file in HFS. For details, see [Trace control settings](https://help.hcltechsw.com/digital-experience/8.5/trouble/adsyslog.html#adsyslog__tra_log).
+
 
 See the topic on system event logging for details on how to configure logging and for information on the grammar of the "trace string" configuration key.
 
 The following information describes trace loggers for particular situations and problem symptoms. Enabling the trace loggers can slow down HCL Portal.
 
-!!!note
-    If there are problems with portal administration portlets, the error is not caused by the portlet code itself, but by the underlying function for which the portlet provides the UI. Therefore, the portlet trace strings are not listed here. If there are issues with these portlets, provide the trace strings of the underlying function. If you need traces or logs for portlets, you can learn how to obtain them from support personnel.
+**Note:** If there are problems with portal administration portlets, the error is not caused by the portlet code itself, but by the underlying function for which the portlet provides the UI. Therefore, the portlet trace strings are not listed here. If there are issues with these portlets, provide the trace strings of the underlying function. If you need traces or logs for portlets, you can learn how to obtain them from support personnel.
 
 ## Access Control
 

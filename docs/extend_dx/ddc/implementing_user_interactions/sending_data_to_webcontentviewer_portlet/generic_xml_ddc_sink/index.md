@@ -8,16 +8,22 @@ The data sink supports simple HTTP PUT, POST, and DELETE operations for XML-base
 
 The result data that the addressed service returns is transformed into a generic JSON object. You can access this object in the Web Content Manager design components after the page refresh that is triggered by the form post.
 
--   **[Parameters that the generic XML data sink supports](plrf_datasink_parms.md)**  
+-   **[Parameters that the generic XML data sink supports](../social/plrf_datasink_parms.md)**  
 The generic XML Digital Data Connector \(DDC\) for HCL Portal data sink supports the parameters that are listed here.
--   **[The generic XML data sink result object](plrf_use_gen_xml_ddc_datasink_rsltobjct.md)**  
+-   **[The generic XML data sink result object](../social/plrf_use_gen_xml_ddc_datasink_rsltobjct.md)**  
 The Digital Data Connector \(DDC\) for HCL Portal data sink returns a JSON string. The JSON string contains the result information for the outbound interaction call that was performed.
 
 
-???+ info "Related information:" 
-    - [Implementing interactions with social objects](../../../../../build_sites/social_rendering/customizing_view_definitions/implementing_interactions_social_object/index.md)
-    - [Interacting with forums](../../../../../build_sites/social_rendering/customizing_view_definitions/implementing_interactions_social_object/wcm_dev_intract_forum.md)
-    - [Creating the HTML form](../../../../../extend_dx/ddc/implementing_user_interactions/sending_data_to_webcontentviewer_portlet/plrf_sendata2wcv_createhtmlform.md)
-    - [REST service for Web Content Manager](../../../../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_rest/index.md)
-    - [How to use REST with content items](../../../../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_rest/wcm_rest_mng_content/wcm_rest_crud_content.md)
+**Related information**  
+
+
+[Implementing interactions with social objects](../wcm/wcm_dev_impl_intrax_soc_objects.md)
+
+[Interacting with forums](../wcm/wcm_dev_intract_forum.md)
+
+[Creating the HTML form](../social/plrf_sendata2wcv_createhtmlform.md)
+
+[REST service for Web Content Manager](../wcm/wcm_rest.md)
+
+[How to use REST with content items](../wcm/wcm_rest_crud_content.md)
 

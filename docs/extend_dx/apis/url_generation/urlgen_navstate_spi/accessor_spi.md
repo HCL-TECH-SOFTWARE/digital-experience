@@ -8,11 +8,11 @@ The navigational state information is in the state document model and is availab
 
 The SelectionAccessorFactory offers the following interfaces, as shown in the example:
 
--   **SelectionAccessor getSelectionAccessor(StateHolder)**
+-   **SelectionAccessor getSelectionAccessor\(StateHolder\)**
 
     This method returns a SelectionAccessor interface that allows for reading page selection information from the StateHolder.
 
--   **SelectionAccessorController getSelectionAccessorController(StateHolderController)**
+-   **SelectionAccessorController getSelectionAccessorController\(StateHolderController\)**
 
     This method returns a SelectionAccessorController interface that allows programmers to modify page selection information. The controller uses the StateHolderController interface to modify the navigational state accordingly.
 
@@ -38,7 +38,7 @@ try {
 
 ## Using the SelectionAccessorController to create a page link
 
-The base Accessor interface is derived from the com.ibm.portal.Disposable interface. Start the dispose() method to indicate when the accessor is no longer required. Using the dispose() method allows the accessor factory to store the accessors and accessor controllers in object pools to achieve better performance (due to less initialization and garbage collection overhead).
+The base Accessor interface is derived from the com.ibm.portal.Disposable interface. Start the dispose\(\) method to indicate when the accessor is no longer required. Using the dispose\(\) method allows the accessor factory to store the accessors and accessor controllers in object pools to achieve better performance \(due to less initialization and garbage collection overhead\).
 
 The Navigational State SPI offers the following accessor factories, each covering a certain state aspect:
 
@@ -48,7 +48,7 @@ The Navigational State SPI offers the following accessor factories, each coverin
 
 -   **PortletAccessorFactory**
 
-    The PortletAccessorFactory provides accessors to read and write portlet-related navigational state information, which includes portlet mode, window state, and render parameters. In particular the PortletAccessorController can be used to change the navigational state of a portlet (for example, the portlet mode).
+    The PortletAccessorFactory provides accessors to read and write portlet-related navigational state information, which includes portlet mode, window state, and render parameters. In particular the PortletAccessorController can be used to change the navigational state of a portlet \(for example, the portlet mode\).
 
 -   **PortletTargetAccessorFactory**
 

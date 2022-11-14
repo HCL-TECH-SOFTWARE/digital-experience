@@ -1,4 +1,4 @@
-# HAProxy Configuration
+# HAProxy configuration
 
 !!!note
     When migrating from Ambassador, the default configuration of HAProxy matches the default configuration of Ambassador as close as possible.

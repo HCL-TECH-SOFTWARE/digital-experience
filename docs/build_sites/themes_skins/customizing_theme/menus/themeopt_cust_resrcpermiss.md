@@ -30,6 +30,6 @@ To view or modify role types or inherited access, you must use the **Resource Pe
 
 The following screen shot shows the modified **Actions** menu. The link in the menu opens a resource page permissions portlet that affects the page that the user is currently viewing.
 
-![Link to the Assign Page Permissions portlet in the Actions menu.](../../../../images/themeopt_resrc_permiss.jpg)
+![Link to the Assign Page Permissions portlet in the Actions menu.](../images/themeopt_resrc_permiss.jpg)
 
 

@@ -56,23 +56,24 @@ Specify the appropriate values for the parameters:
 
         For the `img_Src` attribute, proceed as follows:
 
-        1.  In Web Content Manager, go to **Web Content** \> **Authoring** \> **Libraries** \> **Web Resources v70** \> **Components**.
+        1.  In Web Content Manager, go to **Applications** \> **Content** \> **WCM Authoring** \> **Libraries** \> **Web Resources v70** \> **Components**.
         2.  Select the check box for **HTML - Rating Widget Light - Menu**.
-        3.  Click **Read** and copy the img `src` attribute value that you found here.
+        3.  Click **Read** and copy the `src` attribute value that you found here.
         4.  Paste the value into your code for including the rating widget.
-
     -   **errorimg\_Src**
 
         For the `errorimg_Src` attribute, proceed as follows:
 
-        1.  In Web Content Manager, go to **Web Content** \> **Authoring** \> **Libraries** \> **Web Resources v70** \> **Components**.
+        1.  In Web Content Manager, go to **Applications** \> **Content** \> **WCM Authoring** \> **Libraries** \> **Web Resources v70** \> **Components**.
         2.  Select the check box for **HTML - Rating Widget Light - Messages**.
-        3.  Click **Read** and copy the img `src` attribute value that you found here.
+        3.  Click **Read** and copy the `src` attribute value that you found here.
         4.  Paste the value into your code for including the rating widget.
 
 These parameters are mandatory. For information about the optional parameters, read the *Rating widget parameter reference*.
 
 
-???+ info "Related information"
-    [Tag widget parameter reference](../../../cfg_reference/parm_ref_tag_rate_widget/tag_rate_parm_ref_inl_tag_lite.md)
+**Related information**  
+
+
+[Tag widget parameter reference](../admin-system/tag_rate_parm_ref_inl_tag_lite.md)
 

@@ -1,21 +1,18 @@
 # References for display formats of attribute properties defined to Personalization APIs and examples
 
-The following topic provides additional details about the conditions and response structures for various attributes defined in the examples to execute API calls presenting different attributes of DX [Personalization](../.././../personalization/index.md) services.
+The following topic provides additional details about the conditions and response structures for various attributes defined in the examples to execute API calls presenting different attributes of DX [Personalization](pzn_concepts.md) services.
 
 ## Browser Capability
 
 Sample conditions for each `Browser Capability` property with different operators:
 
-![All Browser Capability properties](../../../../../images/All-Browser-Capability-Properties.png)
+![All Browser Capability properties](../images/All-Browser-Capability-Properties.png)
 
 -   Sample attributes: `AcceptLanguage`, `AcceptMimeTypes`, `Agent`, `BrowserType`, `FullVersion`, and `MajorVersion`.
 -   Sample operators allowed \(values passed differs from based on the applied operator\):
-
     -   `includes`, `includes any of`, `is not any of`, `is empty and is not empty` for `AcceptMimeTypes`.
     -   `includes`, `is`, `is not`, `is empty`, `is not empty`, `is between`, `is between but not equal to`, `is greater than`, `is greater than or equal to`, `is less than`, `is less than or equal to`, and `is included in` for other properties.
-
 -   `BrowserType` allows set of values from the following operators: `Mozilla`, `Internet Explorer`, `Safari`, `Opera`, `Netscape`, `Firefox`, `Chrome`, and `Other`.
-
 -   Request/Response structure example:
 
     ```
@@ -79,7 +76,7 @@ Sample conditions for each `Browser Capability` property with different operator
 
 Sample conditions for each `Date` property with different operators:
 
-![All Date Properties](../../../../../images/All-Date-Properties.png)
+![All Date Properties](../images/All-Date-Properties.png)
 
 -   Sample attributes: `day`, `date`, `month`, `time`, `weekday`, `timestamp`, and `year`.
 -   Sample operators allowed \(values passed differs from based on the applied operator\): `is`, `is not`, `is empty`, `is not empty`, `is between`, `is between but not equal to`, `is greater than`, `is greater than or equal to`, `is less than`, `is less than or equal to`, and `is included in`.
@@ -159,13 +156,12 @@ Sample conditions for each `Date` property with different operators:
 
 Sample conditions for each `Device` property with different operators:
 
-![All Device Properties](../../../../../images/All-Device-Properties.png)
+![All Device Properties](../images/All-Device-Properties.png)
 
 -   Sample attributes: `City`, `Country`, `DeviceClass`, `Latitude`, `Longitude`, and `State`.
 -   Sample operators allowed \(values passed differs from based on the applied operator\):
     -   `includes`, `includes any of`, `is not any of`, `is empty` and `is not empty` for `DeviceClass`.
     -   `includes`, `is`, `is not`, `is empty`, `is not empty`, `is between`, `is between but not equal to`, `is greater than`, `is greater than or equal to`, `is less than`, `is less than or equal to`, and `is included in` for other properties.
-
 -   `DeviceClass` allows set of values from: `Mozilla`, `Internet Explorer`, `Safari`, `Opera`, `Netscape`, `Firefox`, `Chrome`, and `Other`.
 -   Request/Response structure example:
 
@@ -229,7 +225,7 @@ Sample conditions for each `Device` property with different operators:
 
 Sample condition for each `Referrer` property with different operators:
 
-![All Referrer Properties](../../../../../images/All-Referrer-Properties.png)
+![All Referrer Properties](../images/All-Referrer-Properties.png)
 
 -   Sample attributes: `ReferralHost`, `ReferralUrl`, and `SearchKeywords`.
 -   Sample operators allowed \(values passed differs from based on the applied operator\): `includes`, `is`, `is not`, `is empty`, `is not empty`, `is between`, `is between but not equal to`, `is greater than`, `is greater than or equal to`, `is less than`, `is less than or equal to`, and `is included in`.
@@ -275,7 +271,7 @@ Sample condition for each `Referrer` property with different operators:
 
 Sample condition for the `ActionBean` property with different operators:
 
-![All Action Bean properties](../../../../../images/All-ActionBean-Properties.png)
+![All Action Bean properties](../images/All-ActionBean-Properties.png)
 
 -   Sample attribute: `actionNames`.
 -   Sample operators allowed \(values passed differs from based on the applied operator\): `includes`, `includes any of`, `is not any of`, `is empty`, and `is not empty`.
@@ -327,18 +323,15 @@ Sample condition for the `ActionBean` property with different operators:
 
 Sample condition for the `Action Count` property with different operators:
 
-![Action Count properties](../../../../../images/ActionCount-Properties.png)
+![Action Count properties](../images/ActionCount-Properties.png)
 
 -   Sample attributes:
     -   There are no default sample attributes for `ActionCount` property.
 
-        !!! note 
-          Custom attributes can be configured as needed depending on the leveraged underlying user registry.
+        **Note:** Custom attributes can be configured as needed depending on the leveraged underlying user registry.
 
     -   Attributes are dynamically created in the user interface. Refer to *Dynamic Properties* below for more information.
-
 -   Sample operators allowed \(values passed differs from based on the applied operator\): `includes`, `is`, `is not`, `is empty`, `is not empty`, `is between`, `is between but not equal to`, `is greater than`, `is greater than or equal to`, `is less than`, `is less than or equal to`, `includes any of`, `is not any of`, and `is included in`.
-
 -   Request/Response structure example:
 
     ```
@@ -375,7 +368,7 @@ Sample condition for the `Action Count` property with different operators:
 
 Sample condition for the `Category Bean` property with different operators:
 
-![All Category Bean properties](../../../../../images/All-CategoryBean-Properties.png)
+![All Category Bean properties](../images/All-CategoryBean-Properties.png)
 
 -   Sample attribute: `categoryNames`.
 -   Sample operators allowed \(values passed differs from based on the applied operator\): `includes`, `includes any of`, `is not any of`, `is empty`, and `is not empty`.
@@ -427,13 +420,12 @@ Sample condition for the `Category Bean` property with different operators:
 
 Sample condition for the `CategoryCount` property with different operators:
 
-![Category Count property](../../../../../images/CategoryCount-Properties.png)
+![Category Count property](../images/CategoryCount-Properties.png)
 
 -   Sample attributes:
     -   There are no default sample attributes for `CategoryCount` property.
 
-        !!! note 
-           Custom attributes can be configured as needed depending on the leveraged underlying user registry.
+        **Note:** Custom attributes can be configured as needed depending on the leveraged underlying user registry.
 
     -   Attributes are dynamically created in the user interface. Refer to *Dynamic Properties* below for more information.
 -   Sample operators allowed \(values passed differs from based on the applied operator\): `includes`, `is`, `is not`, `is empty`, `is not empty`, `is between`, `is between but not equal to`, `is greater than`, `is greater than or equal to`, `is less than`, `is less than or equal to`, `includes any of`, `is not any of`, and `is included in`.
@@ -473,18 +465,15 @@ Sample condition for the `CategoryCount` property with different operators:
 
 Sample condition for the `User` property with different operators:
 
-![User property](../../../../../images/User-Properties-2.png)
+![User property](../images/User-Properties-2.png)
 
 -   Sample attributes:
     -   `Last Name`, `mail`.
 
-        !!! note 
-          Custom attributes can be configured as needed depending on the leveraged underlying user registry.
+        **Note:** Custom attributes can be configured as needed depending on the leveraged underlying user registry.
 
     -   Attributes are dynamically created in the user interface. Refer to *Dynamic Properties* below for more information.
-
 -   Sample operators allowed \(values passed differs from based on the applied operator\): `includes`, `is`, `is not`, `is empty`, `is not empty`, `is between`, `is between but not equal to`, `is greater than`, `is greater than or equal to`, `is less than`, `is less than or equal to`, `is not any of`, and `is included in` for other properties.
-
 -   Request/Response structure example:
 
     ```
@@ -523,13 +512,12 @@ Sample condition for the `User` property with different operators:
 
 Sample condition for the `Session` property with different operators:
 
-![Session property](../../../../../images/Session-Properties.png)
+![Session property](../images/Session-Properties.png)
 
 -   Sample attributes:
     -   There are no default sample attributes for the `Session` property.
 
-        !!! note 
-          Custom attributes can be configured as needed depending on the leveraged underlying user registry.
+        **Note:** Custom attributes can be configured as needed depending on the leveraged underlying user registry.
 
     -   Attributes are dynamically created in the user interface. Refer to *Dynamic Properties* below for more information.
 -   Sample operators allowed \(values passed differs from based on the applied operator\): `includes`, `is`, `is not`, `is empty`, `is not empty`, `is between`, `is between but not equal to`, `is greater than`, `is greater than or equal to`, `is less than`, `is less than or equal to`, `is not any of`, and `is included in`.
@@ -577,13 +565,12 @@ Sample condition for the `Session` property with different operators:
 
 Sample condition for the `SharedData` property with different operators:
 
-![Shared data property](../../../../../images/SharedData-Properties.png)
+![Shared data property](../images/SharedData-Properties.png)
 
 -   Sample attributes:
     -   There are no default sample attributes for the `SharedData` property.
 
-        !!! note 
-          Custom attributes can be configured as needed depending on the leveraged underlying user registry.
+        **Note:** Custom attributes can be configured as needed depending on the leveraged underlying user registry.
 
     -   Attributes are dynamically created in the user interface. Refer to *Dynamic Properties* below for more information.
 -   Sample operators allowed \(values passed differs from based on the applied operator\): `includes`, `is`, `is not`, `is empty`, `is not empty`, `is between`, `is between but not equal to`, `is greater than`, `is greater than or equal to`, `is less than`, `is less than or equal to`, `is not any of`, and `is included in`.
@@ -631,13 +618,12 @@ Sample condition for the `SharedData` property with different operators:
 
 Sample condition for the `RenderParameter` property with different operators:
 
-![Render Parameter property](../../../../../images/RenderParameters.png)
+![Render Parameter property](../images/RenderParameters.png)
 
 -   Sample attributes:
     -   There are no default sample attributes for the `RenderParameter` property.
 
-        !!! note
-          Custom attributes can be configured as needed depending on the leveraged underlying user registry.
+        **Note:** Custom attributes can be configured as needed depending on the leveraged underlying user registry.
 
     -   Attributes are dynamically created in the user interface. Refer to *Dynamic Properties* below for more information.
 -   Sample operators allowed \(values passed differs from based on the applied operator\): `includes`, `is`, `is not`, `is empty`, `is not empty`, `is between`, `is between but not equal to`, `is greater than`, `is greater than or equal to`, `is less than`, `is less than or equal to`, `is not any of`, and `is included in`.
@@ -687,13 +673,12 @@ Sample condition for the `RenderParameter` property with different operators:
 
 Sample condition for the `PortletAttributes` property with different operators:
 
-![Portlet attribute property](../../../../../images/PortletAttr-Properties.png)
+![Portlet attribute property](../images/PortletAttr-Properties.png)
 
 -   Sample attributes:
     -   There are no default sample attributes for the `PortletAttributes` property.
 
-        !!! note 
-          Custom attributes can be configured as needed depending on the leveraged underlying user registry.
+        **Note:** Custom attributes can be configured as needed depending on the leveraged underlying user registry.
 
     -   Attributes are dynamically created in the user interface. Refer to *Dynamic Properties* below for more information.
 -   Sample operators allowed \(values passed differs from based on the applied operator\): `includes`, `is`, `is not`, `is empty`, `is not empty`, `is between`, `is between but not equal to`, `is greater than`, `is greater than or equal to`, `is less than`, `is less than or equal to`, `includes any of`, `is not any of`, and `is included in`.
@@ -741,13 +726,12 @@ Sample condition for the `PortletAttributes` property with different operators:
 
 Sample condition for `Request` property with different operators:
 
-![Request property](../../../../../images/Request-Properties.png)
+![Request property](../images/Request-Properties.png)
 
 -   Sample attributes:
     -   There are no default sample attributes for the `Request` property.
 
-        !!! note 
-          Custom attributes can be configured as needed depending on the leveraged underlying user registry.
+        **Note:** Custom attributes can be configured as needed depending on the leveraged underlying user registry.
 
     -   Attributes are dynamically created in the user interface. Refer to *Dynamic Properties* below for more information.
 -   Sample operators allowed \(values passed differs from based on the applied operator\): `includes`, `is`, `is not`, `is empty`, `is not empty`, `is between`, `is between but not equal to`, `is greater than`, `is greater than or equal to`, `is less than, is less than or equal to`, `includes any of`, `is not any of`, and `is included in`.
@@ -795,12 +779,11 @@ Sample condition for `Request` property with different operators:
 
 Sample condition for `Profiler` property with different operators:
 
-![Profiler property](../../../../../images/ProfilerProperties.png)
+![Profiler property](../images/ProfilerProperties.png)
 
 -   Sample attributes inside `profile`: `id`, `profilerName`, and `profiles`.
 
-    !!! note 
-      The `profilerName` or `id` passed should belong to the already created Profiler.
+    **Note:** The `profilerName` or `id` passed should belong to the already created Profiler.
 
 -   Sample operators allowed outside `matchingItems` \(profiles passed differs based on the operator applied\): `is`, `is not`, `is all of`, `is any of`, and `is not any of`.
 -   Request/Response structure example:
@@ -838,7 +821,7 @@ Sample condition for `Profiler` property with different operators:
 
 Sample condition with `Arithmetic Operations` with different operators:
 
-![Arithmetic Operations](../../../../../images/ArithmeticOperations.png)
+![Arithmetic Operations](../images/ArithmeticOperations.png)
 
 -   Sample attributes used inside `arithmetic`: `attributeNames` and `arithmeticOperator`.
 -   Sample operators outside `arithmetic` \(values passed differs based on the operator applied\): `is`, `is not`, `is empty`, `is not empty`, `is between`, `is between but not equal to`, `is greater than`, `is greater than or equal to`, `is less than`, `is less than or equal to`, and `is included in`.
@@ -881,11 +864,10 @@ Sample condition with `Arithmetic Operations` with different operators:
 
 The sample condition with `Matching Items` with different operators:
 
-![Matching Items](../../../../../images/Matching-Items-2.png)
+![Matching Items](../images/Matching-Items-2.png)
 
 -   Sample attributes and operators used inside `matchingItems` differs based on the type of attributes used for conditions.
 -   Sample operators allowed outside `matchingItems` \(values passed differs based on the operator applied\): `is`, `is not`, `is empty`, `is not empty`, `is between`, `is between but not equal to`, `is greater than`, `is greater than or equal to`, `is less than`, `is less than or equal to`, and `is included in`.
-
 -   Request/Response structure example:
 
     ```

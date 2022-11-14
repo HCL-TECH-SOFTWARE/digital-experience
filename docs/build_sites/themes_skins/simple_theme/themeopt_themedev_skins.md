@@ -25,6 +25,6 @@ Use the following steps to create a new skin by modifying the default skin.
 
 Your new skin is now deployed and ready to use.
 
-Learn more about [Skins](../customizing_theme/skins/index.md). Note that not all information at this link applies to the Simple Theme.
+Learn more about [Skins](themeopt_cust_scopeskin.md#). Note that not all information at this link applies to the Simple Theme.
 
 

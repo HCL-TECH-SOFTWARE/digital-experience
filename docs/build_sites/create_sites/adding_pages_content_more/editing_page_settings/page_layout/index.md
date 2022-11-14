@@ -8,7 +8,7 @@ Changing the page layout takes effect immediately. You can view and modify the a
 
 You have the opportunity to specialize your content for specific types of devices that are used to access your portal. For each layout option that you choose, you can view the impact of that selection as it would be seen by users on a desktop computer, tablet, or mobile device. For example, if you choose the layout that uses three equal columns, you can view how the layout of your content might change based on the device:
 
-![Three sections layout - Desktop computer, items are longest vertically. Tablet, items are one half and two quarters in relative size. Mobile device, items are longest horizontally.](../../../../../images/toolbar_layout_device_views.jpg)
+![Three sections layout - Desktop computer, items are longest vertically. Tablet, items are one half and two quarters in relative size. Mobile device, items are longest horizontally.](../images/toolbar_layout_device_views.jpg)
 
 ## Hidden content
 

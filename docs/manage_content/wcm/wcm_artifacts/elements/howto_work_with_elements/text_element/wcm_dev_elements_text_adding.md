@@ -3,13 +3,12 @@ id: wcm_dev_elements_text_adding
 title: Adding a text element to an item
 ---
 
-# Adding a text element to an item
+
 
 
 You add a text element to a site area or content item when you want a section of text to be used for a specific site area or content item.
 
-!!!note
-    You can only add an element to a content item if the manage elements feature is enabled in the authoring template that is used by the content item.
+**Note:** You can only add an element to a content item if the manage elements feature is enabled in the authoring template that is used by the content item.
 
 1.  Open or create a site area or content item.
 

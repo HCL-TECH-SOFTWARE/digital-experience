@@ -8,7 +8,7 @@ The Experience API consists of multiple parts: Ring API, DAM API, Image-processo
 
 Users need to meet the following prerequisites first before installing HCL Experience API:
 
--   Download and install [Docker](https://docs.docker.com/install/){:target="_blank"};
+-   Download and install [Docker](https://docs.docker.com/install/);
 -   Make sure your HCL Digital Experience 9.5 instance is up and running, either in Docker or supported Kubernetes platforms.
 
 

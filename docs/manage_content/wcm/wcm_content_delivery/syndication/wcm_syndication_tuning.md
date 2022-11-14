@@ -13,7 +13,9 @@ Here are some general guidelines for setting the syndication interval.
 |Interval setting|Recommended environments|
 |----------------|------------------------|
 |10 minutes – 2 hours|Staging servers to delivery servers.|
-|30 seconds – 10 minutes|Any environment that requires frequent replication, such as an authoring server to a staging server, a test server, or distributed authoring server.When you increase the syndication interval for environments where authoring servers are involved, be mindful that timely replication is often essential, particularly in collaborative authoring environments where multiple authors on different servers might be working on the same content.|
+|30 seconds – 10 minutes|Any environment that requires frequent replication, such as an authoring server to a staging server, a test server, or distributed authoring server.When you increase the syndication interval for environments where authoring servers are involved, be mindful that timely replication is often essential, particularly in collaborative authoring environments where multiple authors on different servers might be working on the same content.
+
+|
 
 ## Publish and expire dates
 
@@ -23,7 +25,7 @@ The publish date for each content item specifies the date and time when the cont
 
 The expire date specifies the date and time when the content item is removed from a website. As with the publish date, you can use the expire date to cause the syndication activity that is associated with removing the content to occur at a time when other syndication activity is less intensive.
 
-For more information on the publish and expire dates in the workflow process, refer to [Item status](../../wcm_artifacts/workflow/wcm_managing_workflow_status.md).
+For more information on the publish and expire dates in the workflow process, refer to [Item status](wcm_managing_workflow_status.md).
 
 ## Syndicating large libraries
 

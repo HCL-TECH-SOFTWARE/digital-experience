@@ -4,9 +4,10 @@ Several components of the portal need to open HTTP or HTTPs connections to other
 
 In the WebSphere® Integrated Solutions Console, the portal HTTP Client Service is listed as **WP HTTPClientService**.
 
-!!!note "Notes"
-    1.  These properties do not currently replace all individual portlet proxy configuration properties. To set the proxy properties for specific portlets, consult the documentation for each portlet for how to modify their specific properties.
-    2.  Some functional components of the portal can overwrite each of the settings if the component configuration differs from the global value. The following describes the global settings only; if a component allows you to set component specific properties, these are described in the respective component documentation.
+**Notes:**
+
+1.  These properties do not currently replace all individual portlet proxy configuration properties. To set the proxy properties for specific portlets, consult the documentation for each portlet for how to modify their specific properties.
+2.  Some functional components of the portal can overwrite each of the settings if the component configuration differs from the global value. The following describes the global settings only; if a component allows you to set component specific properties, these are described in the respective component documentation.
 
 -   **global.ssl.configuration = \(NodeDefaultSSLConfig\)**
 

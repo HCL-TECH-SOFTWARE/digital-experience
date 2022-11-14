@@ -6,7 +6,7 @@ Attributes:
 
 -   **autoNavigationalState**
 
-    The configuration determines if the navigational state is included in the URL. See the description for `stateless.urls.enabled`, `generate.stateless.redirect.urls` and `generate.stateless.urls` of *Configuration Service*. Parameters: none. Returns: [UrlGeneration](../url_generation/index.md), which is the same object, so multiple method calls can be concatenated.
+    The configuration determines if the navigational state is included in the URL. See the description for `stateless.urls.enabled`, `generate.stateless.redirect.urls` and `generate.stateless.urls` of *Configuration Service*. Parameters: none. Returns: [UrlGeneration](themeopt_el_bean_url_gen.md), which is the same object, so multiple method calls can be concatenated.
 
     Example:
 
@@ -26,7 +26,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [UrlGeneration](../url_generation/index.md), which is the same object, so multiple method calls can be concatenated.
+    Returns: [UrlGeneration](themeopt_el_bean_url_gen.md), which is the same object, so multiple method calls can be concatenated.
 
 -   **noNavigationalState**
 
@@ -40,7 +40,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [UrlGeneration](../url_generation/index.md), which is the same object, so multiple method calls can be concatenated.
+    Returns: [UrlGeneration](themeopt_el_bean_url_gen.md), which is the same object, so multiple method calls can be concatenated.
 
 -   **setParam\(name, value\)**
 
@@ -62,7 +62,7 @@ Attributes:
 
         String; the value of the parameter.
 
-    Returns: [UrlGeneration](../url_generation/index.md), which is the same object, so multiple method calls can be concatenated.
+    Returns: [UrlGeneration](themeopt_el_bean_url_gen.md), which is the same object, so multiple method calls can be concatenated.
 
 -   **setLocale\(locale\)**
 
@@ -80,7 +80,7 @@ Attributes:
 
         String; the locale to be set.
 
-    Returns: [UrlGeneration](../url_generation/index.md), which is the same object, so multiple method calls can be concatenated.
+    Returns: [UrlGeneration](themeopt_el_bean_url_gen.md), which is the same object, so multiple method calls can be concatenated.
 
 -   **clearThemeTemplate**
 
@@ -94,7 +94,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [UrlGeneration](../url_generation/index.md), which is the same object, so multiple method calls can be concatenated.
+    Returns: [UrlGeneration](themeopt_el_bean_url_gen.md), which is the same object, so multiple method calls can be concatenated.
 
 -   **setThemeTemplate\(template\)**
 
@@ -112,7 +112,7 @@ Attributes:
 
         String; the template name.
 
-    Returns: [UrlGeneration](../url_generation/index.md), which is the same object, so multiple method calls can be concatenated.
+    Returns: [UrlGeneration](themeopt_el_bean_url_gen.md), which is the same object, so multiple method calls can be concatenated.
 
 -   **secure**
 
@@ -126,7 +126,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [UrlGeneration](../url_generation/index.md), which is the same object, so multiple method calls can be concatenated.
+    Returns: [UrlGeneration](themeopt_el_bean_url_gen.md), which is the same object, so multiple method calls can be concatenated.
 
 -   **unsecure**
 
@@ -140,7 +140,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [UrlGeneration](../url_generation/index.md), which is the same object, so multiple method calls can be concatenated.
+    Returns: [UrlGeneration](themeopt_el_bean_url_gen.md), which is the same object, so multiple method calls can be concatenated.
 
 -   **forceProtected**
 
@@ -154,7 +154,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [UrlGeneration](../url_generation/index.md), which is the same object, so multiple method calls can be concatenated.
+    Returns: [UrlGeneration](themeopt_el_bean_url_gen.md), which is the same object, so multiple method calls can be concatenated.
 
 -   **forcePublic**
 
@@ -168,7 +168,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [UrlGeneration](../url_generation/index.md), which is the same object, so multiple method calls can be concatenated.
+    Returns: [UrlGeneration](themeopt_el_bean_url_gen.md), which is the same object, so multiple method calls can be concatenated.
 
 -   **forceAbsolute**
 
@@ -182,7 +182,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [UrlGeneration](../url_generation/index.md), which is the same object, so multiple method calls can be concatenated.
+    Returns: [UrlGeneration](themeopt_el_bean_url_gen.md), which is the same object, so multiple method calls can be concatenated.
 
 -   **allowRelativeURL**
 
@@ -196,7 +196,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [UrlGeneration](../url_generation/index.md), which is the same object, so multiple method calls can be concatenated.
+    Returns: [UrlGeneration](themeopt_el_bean_url_gen.md), which is the same object, so multiple method calls can be concatenated.
 
 -   **normalize**
 
@@ -210,7 +210,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [UrlGeneration](../url_generation/index.md), which is the same object, so multiple method calls can be concatenated.
+    Returns: [UrlGeneration](themeopt_el_bean_url_gen.md), which is the same object, so multiple method calls can be concatenated.
 
 -   **logout**
 
@@ -224,7 +224,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [UrlGeneration](../url_generation/index.md), which is the same object, so multiple method calls can be concatenated.
+    Returns: [UrlGeneration](themeopt_el_bean_url_gen.md), which is the same object, so multiple method calls can be concatenated.
 
 -   **login**
 
@@ -238,7 +238,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [UrlGeneration](../url_generation/index.md), which is the same object, so multiple method calls can be concatenated.
+    Returns: [UrlGeneration](themeopt_el_bean_url_gen.md), which is the same object, so multiple method calls can be concatenated.
 
 -   **setPageEditMode\(flag\)**
 
@@ -256,7 +256,7 @@ Attributes:
 
         String that indicates a Boolean value as a string. The value `true` enables the page edit mode. The value `false` disables it.
 
-    Returns: [UrlGeneration](../url_generation/index.md), which is the same object, so multiple method calls can be concatenated.
+    Returns: [UrlGeneration](themeopt_el_bean_url_gen.md), which is the same object, so multiple method calls can be concatenated.
 
 -   **url**
 

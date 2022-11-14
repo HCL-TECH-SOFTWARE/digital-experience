@@ -6,7 +6,7 @@ The single sign-on cookie represents a security credential that both by the WSRP
 
 -   **Prerequisites for using HTTP-cookie-based single sign-on:**
 
-    For using HTTP-cookie-based single sign-on (SSO), single sign-on must be configured between the WSRP Consumer and the WSRP Producer. This configuration requires the following two prerequisites:
+    For using HTTP-cookie-based single sign-on \(SSO\), single sign-on must be configured between the WSRP Consumer and the WSRP Producer. This configuration requires the following two prerequisites:
 
     -   The WSRP Consumer and the WSRP Producer must be configured to use a shared user registry.
     -   The LTPA keys must be exchanged between WSRP Consumer and WSRP Producer.
@@ -27,7 +27,10 @@ The following example properties contain cookie forwarding rules for using HTTP-
 
 
 
-???+ info "Related information"
-    -   [Securing the WSRP Producer by HTTP-cookie-based single sign-on](../../../../../../../extend_dx/development_tools/wsrp/portal_wsrp_producer/securing_wsrp_prod_portal/cfg_security_producer_portal/wsrpt_prod_sec_ws_http_cb_sso.md)
-    -   [Customizing Client Cookie Forwarding](../../../../../../../extend_dx/development_tools/wsrp/portal_wsrp_consumer/customizing_wsrp_cfg_consumer_portal/wsrpc_clnt_cook_frwrd.md)
+**Related information**  
+
+
+[Securing the WSRP Producer by HTTP-cookie-based single sign-on](../admin-system/wsrpt_prod_sec_ws_http_cb_sso.md)
+
+[Customizing Client Cookie Forwarding](../admin-system/wsrpc_clnt_cook_frwrd.md)
 

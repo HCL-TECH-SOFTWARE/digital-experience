@@ -89,9 +89,9 @@ For information about migrating applications, read more about the Application Mi
 
 3.  Upgrade Apache plug-in modules.
 
-    There are no Apache API (application programming interface) changes from the previous major release, so there should be no need to rebuild modules that worked with the previous release. However, if you use modules from third-party vendors, contact your vendors to verify that they support the module with the version of IBM HTTP Server to which you are upgrading.
+    There are no Apache API \(application programming interface\) changes from the previous major release, so there should be no need to rebuild modules that worked with the previous release. However, if you use modules from third-party vendors, contact your vendors to verify that they support the module with the version of IBM HTTP Server to which you are upgrading.
 
-    Apache plug-in modules from sources other than the Version 8.5 IBM HTTP Server must be built to support Apache 2.2. The distributors of modules that are used with later versions of IBM HTTP Server might need to recompile the modules to support Apache 2.2.
+    Apache plug-in modules from sources other than the Version 8.5 IBM HTTP Server must be built to support Apache 2.2. The distributors of modules that are used with older versions of IBM HTTP Server might need to recompile the modules to support Apache 2.2.
 
     -   WebSphere Application Server provides a new plug-in for Apache 2.2 and IBM HTTP Server 8.5.
     -   If you use modules from third-party vendors, contact your vendor for a version of the module that works with the Apache 2.2 API.

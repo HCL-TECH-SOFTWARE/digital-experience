@@ -8,5 +8,18 @@ For example, screen flow modelers can model flows for processing the sequence of
 
 Screen flows can be used together with business workflows. Long-running business processes that are run by a business workflow can trigger screen flows that are run by portal. After the screen flow completes, the portal gives the control back to the business workflow. Data can be exchanged between the business workflow and the screen flow on the portal. If a user suspends a screen flow, the portal can hand over the processed data over to the business workflow to save it.
 
+-   **[Developing screen flows](../screenflow/dev_scrnflow.md)**  
+To develop screen flows you need to create user interface artifacts, interconnect the artifacts and deploy the artifacts.
+-   **[Advanced concepts](../screenflow/adv_cncpts.md)**  
+Learn about the advanced concepts of the HCL UX Screen Flow Manager.
+-   **[User interface components](../screenflow/ui_compnts.md)**  
+In a default HCL Portal installation, the Dialog Stack and Dialog State Display portlets are deployed. The following topics describe how these portlets function.
+-   **[Configuration options](../screenflow/cfg_opt.md)**  
+To change the overall behavior of the HCL UX Screen Flow Manager, several configuration options are available. You specify the options as Resource Environment Provider \(REP\) properties.
+-   **[Staging and migration](../screenflow/stg_mig.md)**  
+For staging or migration purposes, you can use the portal XML configuration interface \(XMLAccess\) to transfer HCL UX Screen Flow Manager related data from one system to another.
+-   **[Transitions reference](../screenflow/ref_trnstntns.md)**  
+You can configure transitions in multiple ways. For example, with single portlets as source, you can configure it to transition to targets such as single portlets, multiple portlets through single or multiple transition endpoints, single page, or mixed resources. Similarly, you can configure single portlets, multiple portlets, single page, or mixed resources to become the source and transition to the target single portlet. The following reference topics show the code samples for these transitions.
 
+**Parent topic:**[Developing](../dev/developing_parent.md)
 

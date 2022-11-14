@@ -17,13 +17,31 @@ This task does not take any parameters.
 
 -   **AIX®**
 
-    `./ConfigEngine.sh list-all-virtual-portals -DPortalAdminPwd=password -DWasPassword=password`
+    ./ConfigEngine.sh list-all-virtual-portals -DPortalAdminPwd=password -DWasPassword=password
+
+-   **HP-UX**
+
+    ./ConfigEngine.sh list-all-virtual-portals -DPortalAdminPwd=password -DWasPassword=password
+
+-   **IBM® i**
+
+    ConfigEngine.sh list-all-virtual-portals -DPortalAdminPwd=password -DWasPassword=password
 
 -   **Linux™**
 
-    `./ConfigEngine.sh list-all-virtual-portals -DPortalAdminPwd=password -DWasPassword=password`
+    ./ConfigEngine.sh list-all-virtual-portals -DPortalAdminPwd=password -DWasPassword=password
+
+-   **Solaris**
+
+    ./ConfigEngine.sh list-all-virtual-portals -DPortalAdminPwd=password -DWasPassword=password
 
 -   **Windows™**
 
-    `ConfigEngine.bat list-all-virtual-portals -DPortalAdminPwd=password -DWasPassword=password`
+    ConfigEngine.bat list-all-virtual-portals -DPortalAdminPwd=password -DWasPassword=password
+
+-   **z/OS®**
+
+    ./ConfigEngine.sh list-all-virtual-portals -DPortalAdminPwd=password -DWasPassword=password
+
+
 

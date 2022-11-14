@@ -57,7 +57,6 @@ The following list shows the tasks for which you can assign extra access permiss
         -   Personalization Editors
         -   Personalization Navigator
         -   Personalization Picker
-
     -   Manager@the Personalization Rule
     These access permissions apply globally to the entire portal installation, including all virtual portals.
 
@@ -73,17 +72,22 @@ The following list shows the tasks for which you can assign extra access permiss
 
     -   `Template Page Content 3.0`
     -   `Web Content Templates 3.0`
-
     If you fail to syndicate these libraries, the portal shows an error when you add the sample content to a page.
 
 
 
+**Related information**  
 
-???+ info "Related information:"
-    - [Preconfiguring the sub-administrators for virtual portals](../../vp_mgr_portlet/preconfig_vp/advp_precfg_subadm.md)
-    - [Controlling access](../../../../deployment/manage/security/controlling_access/index.md)
-    - [Setting user and group permissions](../../../../deployment/manage/security/controlling_access/sec_ugpp.md)
-    - [Setting resource permissions](../../../../deployment/manage/security/controlling_access/sec_rpp.md)
-    - [The XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
-    - [Portal Scripting Interface](../../../../extend_dx/development_tools/portal_admin_tools/portal_scripting_interface/index.md)
+
+[Preconfiguring the sub-administrators for virtual portals](../admin-system/advp_precfg_subadm.md)
+
+[Controlling access](../admin-system/control_access.md)
+
+[Setting user and group permissions](../admin-system/sec_ugpp.md)
+
+[Setting resource permissions](../admin-system/sec_rpp.md)
+
+[The XML configuration interface](../admin-system/admxmlai.md)
+
+[Portal Scripting Interface](../admin-system/ad_psi.md)
 

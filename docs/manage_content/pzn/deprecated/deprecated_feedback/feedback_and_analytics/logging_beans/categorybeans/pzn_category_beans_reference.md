@@ -6,11 +6,24 @@ The `com.ibm.wcp.analysis.beans.Category` bean method signatures are:
 
 |CustomLog bean method signatures|Description|
 |--------------------------------|-----------|
-|<br><pre>\```<br>public void log( HttpServletRequest request, <br>                 String category ) <br>```
+|```
+public void log( HttpServletRequest request, 
+                 String category ) 
+```
 
 |Logs a single category literal.|
-|<br><pre>\```<br>public void log( HttpServletRequest request, <br>                 String[]  categories ) <br>```|Logs an array of category literals.|
-|<br><pre>\```<br> public void log( HttpServletRequest request, <br>                 LoggableResource   resource ) <br>```|Logs categories of interest by querying the `LoggableResource` interface of the object.|
+|```
+public void log( HttpServletRequest request, 
+                 String[]  categories ) 
+```
+
+|Logs an array of category literals.|
+|```
+public void log( HttpServletRequest request, 
+                 LoggableResource   resource ) 
+```
+
+|Logs categories of interest by querying the `LoggableResource` interface of the object.|
 
 The `LoggableResource` interface can be implemented in addition to the Resource interface in order to facilitate logging. The categories of you resources can then be stored and retrieved from a database. By using this interface, you avoid the specification of category literals in your JSPs.
 

@@ -1,8 +1,8 @@
 # Setting up an IBM i database in a cluster
 
-To communicate with a database, servers that run IBM i can use either of two JDBC drivers: the IBM Toolbox for Java JDBC driver or the IBM Developer Kit for Java JDBC driver (also referred to as the native JDBC driver). Which JDBC driver you must use depends on how you are setting up your clustered environment.
+To communicate with a database, servers that run IBM i can use either of two JDBC drivers: the IBM Toolbox for Java JDBC driver or the IBM Developer Kit for Java JDBC driver \(also referred to as the native JDBC driver\). Which JDBC driver you must use depends on how you are setting up your clustered environment.
 
-The JDBC driver is specified by the `db2_iseries.DbDriver` property in the wkplc_dbtype.properties file, which is in the wp_profile_root/ConfigEngine/properties directory. You can specify the value by editing the file manually or by selecting the appropriate value by using the Configuration Wizard.
+The JDBC driver is specified by the `db2_iseries.DbDriver` property in the wkplc\_dbtype.properties file, which is in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory. You can specify the value by editing the file manually or by selecting the appropriate value by using the Configuration Wizard.
 
 -   Native JDBC driver: `com.ibm.db2.jdbc.app.DB2Driver`
 -   IBM Toolbox for Java JDBC driver: `com.ibm.as400.access.AS400JDBCDriver`
@@ -18,19 +18,19 @@ Vertical and horizontal scaling topologies in an IBM® i environment require dif
 
 ## Using a local database in an IBM i horizontal cluster
 
-Although the instructions for setting up a horizontal cluster describe how to use a remote database for both primary and secondary nodes, you can choose to configure your IBM i horizontal cluster to use a local database for the primary node instead. In this example, a database and Web Server are locally installed on the system (System 1) where IBM® WebSphere® Portal and IBM WebSphere Application Server are installed. System 1 is the primary node. System 2 is the secondary node.
+Although the instructions for setting up a horizontal cluster describe how to use a remote database for both primary and secondary nodes, you can choose to configure your IBM i horizontal cluster to use a local database for the primary node instead. In this example, a database and Web Server are locally installed on the system \(System 1\) where IBM® WebSphere® Portal and IBM WebSphere Application Server are installed. System 1 is the primary node. System 2 is the secondary node.
 
-![Local database configuration for primary node in a horizontal cluster.](../cluster_consideration/_img/iseries_horiz_clus.jpeg)
+![Local database configuration for primary node in a horizontal cluster.](../images/iseries_horiz_clus.jpg)
 
 !!! note
     Although it is possible to use a local database on a secondary node instead of the primary node, this configuration is not tested and is not documented here.
 
 !!! important
-    Even though you are using a local database for the primary node in this scenario, all database connections are configured as if the database were remote. Specifically, you must use the IBM Toolbox for Java JDBC driver (com.ibm.as400.access.AS400JDBCDriver) when you configure the database for both primary and secondary nodes.
+    Even though you are using a local database for the primary node in this scenario, all database connections are configured as if the database were remote. Specifically, you must use the IBM Toolbox for Java JDBC driver \(com.ibm.as400.access.AS400JDBCDriver\) when you configure the database for both primary and secondary nodes.
 
-To use a local database with your primary node, do the database configuration, with the following variations when you update the properties files in the wp_profile_root/ConfigEngine directory.
+To use a local database with your primary node, do the database configuration, with the following variations when you update the properties files in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 
--   **wkplc_dbtype.properties**
+-   **wkplc\_dbtype.properties**
 
     -   Specify the JDBC driver in the `db2_iseries.DbDriver` property. For example:
 
@@ -44,10 +44,10 @@ To use a local database with your primary node, do the database configuration, w
         db2_iseries.DbDriverType=4
         ```
 
--   **wkplc_dbdomain.properties**
+-   **wkplc\_dbdomain.properties**
 
-    -   Specify the primary node's host name for the `domain.DbName` properties. For example: release.DbName=primary_host_name/wpsdb
-    -   Specify the primary node's host name in the `domain.DbUrl` properties. For example: release.DbUrl=jdbc:as400:primary_host_name/wpsdb
+    -   Specify the primary node's host name for the `domain.DbName` properties. For example: release.DbName=primary\_host\_name/wpsdb
+    -   Specify the primary node's host name in the `domain.DbUrl` properties. For example: release.DbUrl=jdbc:as400:primary\_host\_name/wpsdb
 
 !!! note 
     If you use the configuration wizard for database transfer, update the values in the wizard panels rather than in the properties files.

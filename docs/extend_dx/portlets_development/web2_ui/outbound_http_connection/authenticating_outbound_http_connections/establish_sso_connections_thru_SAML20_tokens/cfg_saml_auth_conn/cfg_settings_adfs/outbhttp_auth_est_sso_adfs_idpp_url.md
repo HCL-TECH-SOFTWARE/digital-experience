@@ -1,4 +1,4 @@
-# Finding the Identity Provider login URL and the Partner URL (ADFS)
+# Finding the Identity Provider login URL and the Partner URL \(ADFS\)
 
 To establish a single sign-on \(SSO\) connection through Active Directory Federation Services \(ADFS\), you must specify the Identity Provider login URL and the Partner URL. Learn how to find these values from the ADFS configuration if you do not already know them. If you know these values already, skip this step.
 

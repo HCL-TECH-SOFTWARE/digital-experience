@@ -16,6 +16,8 @@ If you create a custom authoring template, make sure that it contains all the el
 
 
 
-???+ info "Related information"
-    - [Roadmap: How to work with social rendering](../soc_rendr_roadmap.md)
+**Related information**  
+
+
+[Roadmap: How to work with social rendering](../social/soc_rendr_roadmap.md)
 

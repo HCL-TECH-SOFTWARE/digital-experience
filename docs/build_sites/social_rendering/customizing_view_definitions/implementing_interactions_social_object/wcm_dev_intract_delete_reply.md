@@ -63,7 +63,6 @@ If the `deleteReply` action fails, the forums data sink returns a JSON object as
 }
 ```
 
-!!! note
-  The `formData` property contains the actual form input, which includes all additional form data that you submit. If the action is successful, the `replyDeleteReason` is not returned to the caller.
+The `formData` property contains the actual form input, which includes all additional form data that you submit. If the action is successful, the `replyDeleteReason` is not returned to the caller.
 
 

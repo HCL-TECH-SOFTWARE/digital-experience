@@ -210,6 +210,8 @@ The portal defines container run time options, which can be used by portlets tha
 
 
 
-???+ info "Related information"
-    - [Standard portlet API](../standard_portlet_api/index.md)
+**Related information**  
+
+
+[Standard portlet API](../dev-portlet/jsrapi.md)
 

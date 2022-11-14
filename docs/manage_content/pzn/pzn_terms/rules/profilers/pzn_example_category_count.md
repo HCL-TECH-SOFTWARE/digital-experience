@@ -13,8 +13,7 @@ scope="session">
 
 These values were typed into the Attribute text field during the creation of this profiler after selecting current Category Count.
 
-!!! note
-	A complete version of this profiler will contain profile definitions for movies and cooking for the cases where those category counts are greater than sports and each other.
+**Note:** A complete version of this profiler will contain profile definitions for movies and cooking for the cases where those category counts are greater than sports and each other.
 
 ## Category count
 

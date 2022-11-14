@@ -24,16 +24,18 @@ If you are using a federated repository, you must plan on where you want to stor
 -   If HCL® Domino® is one of your user registries in a multiple registry configuration and shares a realm with another user registry, ensure that the groups are stored in a hierarchical format in the Domino Directory as opposed to the default flat-naming structure. For example, the flat-naming convention is cn=groupName and the hierarchical format is cn=groupName,o=root.
 -   The user must exist in a user registry and not within the property extension configuration; otherwise, the user cannot be a member of the realm.
 
--   **[User registry options](plan_ureg_ov.md)**  
+-   **[User registry options](../plan/plan_ureg_ov.md)**  
 HCL Digital Experience provides various security configuration tasks. In the past, there was one task and you might not recover from errors. Also, you might not expand your user registry to meet your growing business needs. Now there are multiple tasks and you can fine-tune your system to meet your business needs.
--   **[Virtual Member Manager integration](plan_vmm_int.md)**  
+-   **[Virtual Member Manager integration](../plan/plan_vmm_int.md)**  
 HCL Portal uses Virtual Member Manager \(VMM\), an interface that enables communication between HCL Digital Experience and any repository.
--   **[Realm support](plan_realm.md)**  
+-   **[Realm support](../plan/plan_realm.md)**  
 A realm is a collection of users or groups from one or more branches of your repository tree. Those branches can be part of a single repository, for example an LDAP user registry, or it can be a combination of multiple user registries. A realm is then mapped to a Virtual Portal to allow the realm's user population to log in to the Virtual Portal. This functionality allows you to define areas within HCL Portal that only a limited set of users can access.
--   **[Property extension](plan_ladb.md)**  
+-   **[Property extension](../plan/plan_ladb.md)**  
 Use property extension to store extra user attributes into a database store without touching your backend user registry.
 
 
-???+ info "Related information:"
-    - [Choose the type of group to use](../../../../deployment/manage/security/users_and_groups/type_of_group.md)
+**Related information**  
+
+
+[Choose the type of group to use](../admin-system/type_of_group.md)
 

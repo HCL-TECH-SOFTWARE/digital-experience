@@ -19,7 +19,7 @@ Use the following sample markup in your theme.html, skin.html, or other markup s
 
 Note that the JavaScript calls `wptheme.contextMenu.init` and specified several parameters, including the `menuID`, which refers to the .json file in the menuDefinitions directory.
 
-You can create menu content based on the content of a JSON file. The Simple Theme contains three such JSON files, which are located in the menuDefitions folder in WebDAV. You can modify the existing files to add menu entries or add your own menus by using a similar format. Go to [Server-side framework](../customizing_theme/menus/simple_menu_framework/themeopt_cust_serverframe.md#) to learn more about the format and content of these JSON files.
+You can create menu content based on the content of a JSON file. The Simple Theme contains three such JSON files, which are located in the menuDefitions folder in WebDAV. You can modify the existing files to add menu entries or add your own menus by using a similar format. Go to [Server-side framework](themeopt_cust_serverframe.md#) to learn more about the format and content of these JSON files.
 
 -   **pageAction.json**
 
@@ -34,9 +34,8 @@ You can create menu content based on the content of a JSON file. The Simple Them
     Defines the items that can appear in the Portlet menu of the skin. It also defines all of the possible menu entries that are supported by the specific portlet.
 
 
-!!! note
-    If you add many top-level pages to the banner, the navigation line of the banner might wrap. To ensure that the navigation line does not wrap, you can modify style attributes like font size or spacing between items in the CSS file. You can also reorganize your page structure so that fewer pages are top level.
+**Note:** If you add many top-level pages to the banner, the navigation line of the banner might wrap. To ensure that the navigation line does not wrap, you can modify style attributes like font size or spacing between items in the CSS file. You can also reorganize your page structure so that fewer pages are top level.
 
-Learn more about the [Simple menu framework](../customizing_theme/menus/simple_menu_framework/index.md). Note that not all information at this link applies to the Simple Theme.
+Learn more about the [Simple menu framework](themeopt_cust_menu.md#). Note that not all information at this link applies to the Simple Theme.
 
 

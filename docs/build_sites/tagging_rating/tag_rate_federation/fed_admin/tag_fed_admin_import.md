@@ -39,13 +39,16 @@ You can also select and specify which HCL Connections features you want a task t
 </request>
 ```
 
-!!! note
-    - The `<parameter>` element contains the ID of the HCL Connections feature. These IDs are listed on the page Federating Tags.
-    -  Carefully consider which features you want to integrate into portal. With each HCL Connections feature, there is potential for coupling large amounts of data.
+**Notes:**
+
+-   The `<parameter>` element contains the ID of the HCL Connections feature. These IDs are listed on the page Federating Tags.
+-   Carefully consider which features you want to integrate into portal. With each HCL Connections feature, there is potential for coupling large amounts of data.
 
 To retrieve changes in the HCL Connections tag cloud, you need to run the FederationTaskHandler script.
 
 
-???+ info "Related information"
-   - [Working with the XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
+**Related information**  
+
+
+[Working with the XML configuration interface](../admin-system/adxmltsk.md)
 

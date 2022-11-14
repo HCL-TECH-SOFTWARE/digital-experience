@@ -2,11 +2,11 @@
 
 You can display messages in the status bar to share important information with users.
 
-Go to [Adding a message module](../simple_theme/themeopt_themedev_status_bar.md#) to learn more about customizing status bar messages in the Simple Theme.
+Go to [Adding a message module](themeopt_themedev_status_bar.md#) to learn more about customizing status bar messages in the Simple Theme.
 
 All ready-to-use theme profiles include the status\_bar module, which provides an area beneath the header for displaying error, warning and information messages. The following image shows an example error message in red.
 
-![Screen capture of an example error message in red](../../../images/themeopt_statusbar.jpg)
+![Screen capture of an example error message in red](../images/themeopt_statusbar.jpg)
 
 1.  Add a line of JavaScript to Use this status bar in your themes, modules, and portlets can use this status bar.
 

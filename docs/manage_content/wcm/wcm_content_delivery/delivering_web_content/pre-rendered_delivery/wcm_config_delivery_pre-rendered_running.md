@@ -16,10 +16,26 @@ http://host\_name:port\_number/wps/wcm/connect?MOD=Cacher&SRV=cacheSite&sitearea
 
 |Service|Required Parameters|Optional Parameters|
 |-------|-------------------|-------------------|
-|SRV=cacheSiteInitializes pre-rendering for the site area with a delay as given \(in seconds\).|`sitearea=`site area name|DELAY=<delay\>LIBRARY=<library\> <br> **Note:** If no library is specified, the default library is used, as specified by the `defaultLibrary` property in the `WCM WCMConfigService` service.|
-|SRV=flushSiteCacheClears \(flushes\) the site cache. Deletes all pre-rendered data.|`sitearea=`site area name|LIBRARY=<library\> <br>**Note:** If no library is specified, the default library is used, as specified by the `defaultLibrary` property in the `WCM WCMConfigService` service.|
-|SRV=flushPageCacheFlushes the page from the site cache. The site area and page are determined from the request URL.| | |
-|No SRV specifiedThe CacherModule attempts to retrieve the page from the cache.| | |
+|SRV=cacheSiteInitializes pre-rendering for the site area with a delay as given \(in seconds\).
+
+|`sitearea=`site area name|DELAY=<delay\>LIBRARY=<library\>
+
+**Note:** If no library is specified, the default library is used, as specified by the `defaultLibrary` property in the `WCM WCMConfigService` service.
+
+|
+|SRV=flushSiteCacheClears \(flushes\) the site cache. Deletes all pre-rendered data.
+
+|`sitearea=`site area name|LIBRARY=<library\>
+
+**Note:** If no library is specified, the default library is used, as specified by the `defaultLibrary` property in the `WCM WCMConfigService` service.
+
+|
+|SRV=flushPageCacheFlushes the page from the site cache. The site area and page are determined from the request URL.
+
+| | |
+|No SRV specifiedThe CacherModule attempts to retrieve the page from the cache.
+
+| | |
 
 ## Pre-rendering individual content items
 
@@ -27,12 +43,15 @@ You can also pre-render individual content items by using the following URL:
 
 http://host\_name:port\_number/wps/wcm/connect/library\_name/site\_area\_name/content?MOD=Cacher
 
-!!! note
-    -   To pre-render individual content items, the site area that is specified in the URL must either be a site area set in connect.moduleconfig.cacher.task.siteareas in the **WCM WCMConfigService** service, or you must have previously manually pre-rendered the site area using "SRV=cacheSite" so that the site area already exists in the location you pre-render to.
+**Note:**
+
+-   To pre-render individual content items, the site area that is specified in the URL must either be a site area set in connect.moduleconfig.cacher.task.siteareas in the **WCM WCMConfigService** service, or you must have previously manually pre-rendered the site area using "SRV=cacheSite" so that the site area already exists in the location you pre-render to.
 
 
+**Related information**  
 
 
-???+ info "Related information:"
-    - [Setting service configuration properties](../../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
-    - [Pre-rendering options](../../cfg_webcontent_delivery_env/wcm_config_delivery_pre-rendered_enable.md)
+[Setting service configuration properties](../admin-system/adsetcfg.md)
+
+[Pre-rendering options](../wcm/wcm_config_delivery_pre-rendered_enable.md)
+

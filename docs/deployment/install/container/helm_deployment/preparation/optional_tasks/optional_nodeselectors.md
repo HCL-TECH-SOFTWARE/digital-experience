@@ -30,9 +30,9 @@ This can be done using the following commands:
     ```
 
 
-The following label is added using the Kubernetes syntax (and other configurations are changed):
+The following label is added using the Kubernetes syntax \(and other configurations are changed\):
 
-```yaml
+```
 metadata:
   labels:
     purpose: haproxy
@@ -61,11 +61,11 @@ The node is now labeled with the desired target label:
 
 ## Configure nodes
 
-You can assign all pods (deployed by the Helm Chart of HCL Digital Experience 9.5) to specific nodes by using `NodeSelectors`. Modify your custom-values.yaml file to include the `NodeSelector`configuration. Make sure to use the proper indentation as YAML is indent-sensitive.
+You can assign all pods \(deployed by the Helm Chart of HCL Digital Experience 9.5\) to specific nodes by using `NodeSelectors`. Modify your custom-values.yaml file to include the `NodeSelector`configuration. Make sure to use the proper indentation as YAML is indent-sensitive.
 
 Example for HAProxy:
 
-```yaml
+```
 nodeSelector:
   haproxy:
     purpose: haproxy

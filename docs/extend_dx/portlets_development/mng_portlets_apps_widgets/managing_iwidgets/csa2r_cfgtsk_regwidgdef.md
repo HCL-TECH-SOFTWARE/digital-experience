@@ -6,8 +6,10 @@ Identify the iWidget definition by an absolute URL that points to the iWidget de
 
 **Syntax:** Invoke this task as part of the ConfigEngine script file as follows:
 
--   UNIX™Linux™: `./ConfigEngine.sh register-iwidget-definition -DIWidgetDefinition=IWidget Definition URL -DIWidgetCatalog=dav:fs-type1/iwidgets/IWidget_name/catalog.xml -DPortalAdminPwd=wpsadmin -DWasPassword=wpsadmin`
--   Windows™: `ConfigEngine.bat register-iwidget-definition -DIWidgetDefinition=iwidget_Definition_URL -DIWidgetCatalog=dav:fs-type1/iwidgets/IWidget_name/catalog.xml -DPortalAdminPwd=wpsadmin -DWasPassword=wpsadmin`
+-   UNIX™Linux™: `./ConfigEngine.sh register-iwidget-definition -DIWidgetDefinition=IWidget Definition URL -DIWidgetCatalog=dav:fs-type1/iwidgets/IWidget\_name/catalog.xml -DPortalAdminPwd=wpsadmin -DWasPassword=wpsadmin`
+-   IBM® i:
+    -   **From the UserData directory:** `ConfigEngine.sh register-iwidget-definition -DIWidgetDefinition=IWidget Definition URL -DIWidgetCatalog=dav:fs-type1/iwidgets/IWidget\_name/catalog.xml -DPortalAdminPwd=wpsadmin -DWasPassword=wpsadmin`
+-   Windows™: `ConfigEngine.bat register-iwidget-definition -DIWidgetDefinition=iwidget\_Definition\_URL -DIWidgetCatalog=dav:fs-type1/iwidgets/IWidget\_name/catalog.xml -DPortalAdminPwd=wpsadmin -DWasPassword=wpsadmin`
 
 **Mandatory parameters** that you can specify through the command line or in wkplc.properties:
 
@@ -27,7 +29,7 @@ Identify the iWidget definition by an absolute URL that points to the iWidget de
 
     Password that corresponds to the administrator ID for HCL Portal
 
--   **WPS_SOAP_PORT**
+-   **WPS\_SOAP\_PORT**
 
     SOAP port that connects the portal server to remote connections
 
@@ -53,8 +55,7 @@ Identify the iWidget definition by an absolute URL that points to the iWidget de
 
     If this parameter is specified, a new iWidget Wrapper portlet will be created with a unique name as specified by this parameter. If this parameter is specified, the task always creates a new iWidget Wrapper portlet clone independent of the given IWIdgetDefinition URL that is already being registered at portal.
 
-    !!!note
-        If the given unique name is already assigned to some other resource, the task fails and no IWidget Wrapper portlet is created.
+    **Note:** If the given unique name is already assigned to some other resource, the task fails and no IWidget Wrapper portlet is created.
 
 
 **Assumptions/Prerequisites:** HCL Portal is running. If HCL Portal is not running, the task will start it.
@@ -65,12 +66,12 @@ Identify the iWidget definition by an absolute URL that points to the iWidget de
 
 **Tasks invoked:** None
 
-**Examples:** You can register the iWidget definition XML file located at http://server_name:port_number/someWidget/someWidget/someWidget.xml as follows:
+**Examples:** You can register the iWidget definition XML file located at http://server\_name:port\_number/someWidget/someWidget/someWidget.xml as follows:
 
 ```
 ./ConfigEngine.sh register-iwidget-definition
    -DPortletUniqueName="someWidget"
-   -DIWidgetDefinition=http://server_name:port_number/someWidget/someWidget/someWidget.xml  
+   -DIWidgetDefinition=http://server\_name:port\_number/someWidget/someWidget/someWidget.xml  
    -DPortalAdminPwd=wpsadmin -DWasPassword=wpsadmin
 ```
 
@@ -81,21 +82,21 @@ You can refresh the IWidget Wrapper portlet clone with the unique name someWidge
    -DPortalAdminPwd=wpsadmin -DWasPassword=wpsadmin
 ```
 
-You can register the iWidget definition XML file located at http://server_name:port_number/someWidget/someWidget/someWidget.xml considering titles and descriptions from the Mashup Center catalog XML file located at http://server_name:port_number/someWidget/someWidget/catalog.xml:
+You can register the iWidget definition XML file located at http://server\_name:port\_number/someWidget/someWidget/someWidget.xml considering titles and descriptions from the Mashup Center catalog XML file located at http://server\_name:port\_number/someWidget/someWidget/catalog.xml:
 
 ```
 ./ConfigEngine.sh register-iwidget-definition
-   -DIWidgetDefinition=http://server_name:port_number/someWidget/someWidget/someWidget.xml
-   -DIWidgetCatalog=http://server_name:port_number/someWidget/someWidget/catalog.xml  
+   -DIWidgetDefinition=http://server\_name:port\_number/someWidget/someWidget/someWidget.xml
+   -DIWidgetCatalog=http://server\_name:port\_number/someWidget/someWidget/catalog.xml  
    -DPortalAdminPwd=wpsadmin -DWasPassword=wpsadmin
 ```
 
-You can refresh the IWidget Wrapper portlet clone with the unique name someWidget, considering titles and descriptions from the Mashup Center catalog XML file located at http://server_name:port_number/someWidget/someWidget/catalog.xml:
+You can refresh the IWidget Wrapper portlet clone with the unique name someWidget, considering titles and descriptions from the Mashup Center catalog XML file located at http://server\_name:port\_number/someWidget/someWidget/catalog.xml:
 
 ```
 ./ConfigEngine.sh register-iwidget-definition
    -DPortletDefinition="someWidget"
-   -DIWidgetCatalog=http://server_name:port_number/someWidget/someWidget/catalog.xml
+   -DIWidgetCatalog=http://server\_name:port\_number/someWidget/someWidget/catalog.xml
    -DPortalAdminPwd=wpsadmin -DWasPassword=wpsadmin
 ```
 
@@ -103,16 +104,17 @@ You can perform a bulk registration of iWidget definition XML files or a refresh
 
 ```
 ./ConfigEngine.sh register-iwidget-definition
-   -DIWidgetCatalog=http://server_name:port_number/catalog.xml
+   -DIWidgetCatalog=http://server\_name:port\_number/catalog.xml
    -DPortalAdminPwd=wpsadmin -DWasPassword=wpsadmin
 ```
 
-!!!notes
-    1.  The URL can point to the portal server itself or to an external server. Configure the portal AJAX proxy to allow access to that server. For details refer to the following section.
-    2.  If the definition element of an entry in the Mashup Center catalog XML file contains a relative URL, the URL is resolved into an absolute form using the URL from the IWidgetCatalog parameter as a base URL. Only that absolute URL is used for further processing such as accessing the iWidget definition XML file. The absolute URL is also compared with the IWidgetDefinition parameter value or the iWidget definition URL of the IWidget Wrapper portlet clone identified by the PortletDefinition parameter in order to determine whether or not to consider titles and descriptions from the catalog XML file entry when parsing creating or updating the IWidget Wrapper portlet clone.
-    3.  The register-iwidget-definition task only updates titles and descriptions of an IWidget Wrapper portlet clone when you set the following portlet preferences to true: `com.ibm.portal.replace.titles` and `com.ibm.portal.replace.descriptions`.
-    4.  When the titles and the descriptions of an IWidgetWrapper portlet clone are set using values from an IBM Mashup Center catalog XML file, the portlet preferences `com.ibm.portal.replace.titles` (default: true) and `com.ibm.portal.replace.descriptions` are set to `false` on the IWidget Wrapper portlet clone. Those portlet preferences prevent the titles and the descriptions of the IWidget Wrapper portlet clone from being overwritten when performing subsequent updates. This is particularly useful when running the register-iwidget-definition task to update all IWidget definitions registered in HCL Portal. The task only considers iWidget definitions that comply with the iWidget specification and does not process IBM Mashup Center catalog XML files.
-    5.  When you refresh IWidget Wrapper portlet clones, values of iWidget attributes ( items of the iWidget attributes item set) are not updated unless the attributes are flagged as read only in the iWidget definition XML file. As a result, values of iWidget attributes customized after registering the iWidget in HCL Portal are prevented from getting lost during a refresh operation.
+**Notes:**
+
+1.  The URL can point to the portal server itself or to an external server. Configure the portal AJAX proxy to allow access to that server. For details refer to the following section.
+2.  If the definition element of an entry in the Mashup Center catalog XML file contains a relative URL, the URL is resolved into an absolute form using the URL from the IWidgetCatalog parameter as a base URL. Only that absolute URL is used for further processing such as accessing the iWidget definition XML file. The absolute URL is also compared with the IWidgetDefinition parameter value or the iWidget definition URL of the IWidget Wrapper portlet clone identified by the PortletDefinition parameter in order to determine whether or not to consider titles and descriptions from the catalog XML file entry when parsing creating or updating the IWidget Wrapper portlet clone.
+3.  The register-iwidget-definition task only updates titles and descriptions of an IWidget Wrapper portlet clone when you set the following portlet preferences to true: `com.ibm.portal.replace.titles` and `com.ibm.portal.replace.descriptions`.
+4.  When the titles and the descriptions of an IWidgetWrapper portlet clone are set using values from an IBM Mashup Center catalog XML file, the portlet preferences `com.ibm.portal.replace.titles` \(default: true\) and `com.ibm.portal.replace.descriptions` are set to `false` on the IWidget Wrapper portlet clone. Those portlet preferences prevent the titles and the descriptions of the IWidget Wrapper portlet clone from being overwritten when performing subsequent updates. This is particularly useful when running the register-iwidget-definition task to update all IWidget definitions registered in HCL Portal. The task only considers iWidget definitions that comply with the iWidget specification and does not process IBM Mashup Center catalog XML files.
+5.  When you refresh IWidget Wrapper portlet clones, values of iWidget attributes \( items of the iWidget attributes item set\) are not updated unless the attributes are flagged as read only in the iWidget definition XML file. As a result, values of iWidget attributes customized after registering the iWidget in HCL Portal are prevented from getting lost during a refresh operation.
 
 ## Registering an iWidget hosted on a Portal server
 
@@ -124,12 +126,11 @@ If you want to register iWidgets deployed as WAR or EAR files directly on your p
      -DPortalAdminPwd=wpsadmin -DWasPassword=wpsadmin     
 ```
 
-!!!remember
-    Do not forget the leading slash "/" in your iWidget definition URL.
+**Remember:** Do not forget the leading slash "/" in your iWidget definition URL.
 
 ## Registering an iWidget hosted on an external server
 
-If you use an iWidget definition URL that points to a server different from your portal server, you need to make sure that your current AJAX proxy configuration allows accessing this server. For details about this refer to the topics about AJAX proxy Configuration. One way of configuring this is to make sure that the URL to the iWidget definition XML file is mapped to the default_policy dynamic policy in the global AJAX proxy configuration file. You can map a given URL, for example `http://server_name:port_number/someWidget/someWidget/someWidget.xml`, to that policy by adding a custom property such as the following to the WP ConfigService Resource Environment Provider in the WebSphere Application Server administrative console:
+If you use an iWidget definition URL that points to a server different from your portal server, you need to make sure that your current AJAX proxy configuration allows accessing this server. For details about this refer to the topics about AJAX proxy Configuration. One way of configuring this is to make sure that the URL to the iWidget definition XML file is mapped to the default\_policy dynamic policy in the global AJAX proxy configuration file. You can map a given URL, for example `http://server\_name:port\_number/someWidget/someWidget/someWidget.xml`, to that policy by adding a custom property such as the following to the WP ConfigService Resource Environment Provider in the WebSphere Application Server administrative console:
 
 ```
 wp.proxy.config.urlreplacement.default_policy.someID=http://some.server.com:10039/*
@@ -138,14 +139,14 @@ wp.proxy.config.urlreplacement.default_policy.someID=http://some.server.com:1003
 **Notes:**
 
 1.  The updated policy will not be effective until you restart either the portal server or the AJAX proxy Configuration enterprise application running on the portal server.
-2.  If you use a URL prefix, do not omit the trailing asterisk ( **\*** ).
+2.  If you use a URL prefix, do not omit the trailing asterisk \( **\*** \).
 
 ## Registering light weight iWidgets stored in the WebDAV file store
 
 Additional to HTTP or HTTPs based iWidget definition URLs, you can also use WebDAV file store URIs pointing to iWidget definition XML files located in the WebDAV file store. Such URIs have the following format:
 
 ```
-dav:fs-type1/path_to_your_IWidget_definition_XML_file
+dav:fs-type1/path\_to\_your\_IWidget\_definition\_XML\_file
 ```
 
 For example, you might have an archive or compressed file with a light weight iWidget that contains an iWidget definition XML file called someWidget.xml in the file root folder of the archive or compressed file. In this case you typically first copy the archive or compressed file to the WebDAV file store by using a generic WebDAV client or by using the configuration task `webdav-deploy-zip-file` as follows:
@@ -157,7 +158,7 @@ For example, you might have an archive or compressed file with a light weight iW
      -DPortalAdminPwd=wpsadmin -DWasPassword=wpsadmin
 ```
 
-This extracts your light weight iWidget package represented by the file /tmp/SomeWidgetPackage.zip into the folder /iwidgets/SomeWidget of the WebDAV file store. Make sure to add the trailing slash ( **/** ) in the parameter `TargetURI`. After the extraction you can register the iWidget definition XML file `someWidget.xml` as follows:
+This extracts your light weight iWidget package represented by the file /tmp/SomeWidgetPackage.zip into the folder /iwidgets/SomeWidget of the WebDAV file store. Make sure to add the trailing slash \( **/** \) in the parameter `TargetURI`. After the extraction you can register the iWidget definition XML file `someWidget.xml` as follows:
 
 ```
 ./ConfigEngine.sh register-iwidget-definition 
@@ -166,7 +167,10 @@ This extracts your light weight iWidget package represented by the file /tmp/Som
 ```
 
 
-???+ info "Related information"  
-    -   [Types of portal resources](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/xml_config_ref/types_portal_resources/adxmlref_resrc_types.md)
-    -   [Managing iWidgets in your portal](../../../../extend_dx/portlets_development/mng_portlets_apps_widgets/managing_iwidgets/index.md)
+**Related information**  
+
+
+[Types of portal resources](../admin-system/adxmlref_resrc_types.md)
+
+[Managing iWidgets in your portal](../admin-system/add_widget.md)
 

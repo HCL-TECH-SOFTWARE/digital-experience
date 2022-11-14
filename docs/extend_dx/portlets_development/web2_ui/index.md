@@ -50,11 +50,11 @@ These are terms that are used in the documentation for the Web 2.0 features:
     Representational State Transfer.
 
 
--   **[The client side portlet programming model](../web2_ui/clientside_portlet_programming/index.md)**  
+-   **[The client side portlet programming model](../dev-portlet/w2_clntprgmdl.md)**  
 You can use the client side programming model to make use of AJAX techniques in your standard API portlets.
--   **[Outbound HTTP connection](../web2_ui/outbound_http_connection/index.md)**  
+-   **[Outbound HTTP connection](../dev-portlet/outbound_http.md)**  
 Applications in your HCL Portal and the related user activities can require outbound HTTP connections to remote computer systems. The outbound HTTP connection service provides an administration infrastructure with a central point of administration for all outbound HTTP connections that are defined in the portal environment.
--   **[Live text for click-to-action](../web2_ui/live_text/index.md)**  
+-   **[Live text for click-to-action](../dev-portlet/w2_smtg.md)**  
 HCL Digital Experience supports a live text API for user controlled data transfer between components. With live text, a component on a page can declare sources and targets for data transfer. For example, this can be a portlet or a navigation element. When the user clicks on a source element, the portal displays a menu listing targets that match the selected source. When a menu item is selected, the portal invokes the corresponding target passing it the source data. This process is called Click-to-Action \(C2A\).
 
 

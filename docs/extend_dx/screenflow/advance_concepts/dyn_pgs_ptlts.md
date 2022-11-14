@@ -17,7 +17,7 @@ During the processing of a dialog, single subdialogs can either be static or dyn
 
 You can use the dialog definition to control whether to start a resource dynamically. You can also specify in which extension node you want to add the dynamic copy. The following code sample shows an example.
 
-Code sample:
+Code sample
 
 ```
 
@@ -69,8 +69,10 @@ In this sample, you can see two transitions: In both cases, `portlet1` exists on
 
 The portal removes dynamic resources when they are no longer needed. For example, after a transition redirects a user from a dynamic page `dpage1` to a dynamic page `dpage2,` `dpage1` is removed and `dpage2` is created.
 
+**Parent topic:**[Advanced concepts](../screenflow/adv_cncpts.md)
+
+**Related information**  
 
 
-???+ info "Related information"
-    -   [Referencing through metadata markers](../../../extend_dx/screenflow/developing_screenflow/creating_dialog_def/transition_endpoints/ref_mtadta_mrkrs.md)
+[Referencing through metadata markers](../screenflow/ref_mtadta_mrkrs.md)
 

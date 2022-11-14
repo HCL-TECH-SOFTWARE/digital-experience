@@ -9,7 +9,7 @@ You can use the Web Content Manager REST service to create, read, update, and de
 -   The default content of a content template
 -   The default site area of a site area template
 
-There are two ways to run these operations. The first is to address each element individually, and by using a URI and use the HTTP verbs (GET, PUT, POST, DELETE) to manipulate them. You can also update multiple elements with a PUT request.
+There are two ways to run these operations. The first is to address each element individually, and by using a URI and use the HTTP verbs \(GET, PUT, POST, DELETE\) to manipulate them. You can also update multiple elements with a PUT request.
 
 ## Create
 
@@ -40,8 +40,7 @@ An element can be created by sending a POST request to one of the following URIs
     ```
 
 
-!!! note
-    The type of the element to be created must be specified in the type field of the entry that is posted.
+**Note:** The type of the element to be created must be specified in the type field of the entry that is posted.
 
 For example:
 

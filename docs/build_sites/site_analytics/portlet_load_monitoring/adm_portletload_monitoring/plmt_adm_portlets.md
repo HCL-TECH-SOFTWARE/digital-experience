@@ -14,8 +14,9 @@ You can administer the portlets that Portlet load monitoring monitors. You can c
     -   If a portlet that is monitored by Portlet load monitoring is active, the list shows an icon for disabling that portlet. If you click this icon, the portlet is blocked by Portlet load monitoring and is no longer rendered in the portal.
     -   If a portlet that is monitored by Portlet load monitoring is blocked and inactive, the list shows an icon for enabling that portlet. If you click this icon, the portlet is enabled for rendering again.
 
-        !!! note
-            1.  If the portlet was blocked for exceeding the maximum number of concurrent requests and the number of requests did not decrease and you did not set the value for maximum number of requests to a higher value, clicking this icon has no effect. In this case, the portlet is blocked again with the next request that arrives for this portlet.
-            2.  Activating a blocked portlet clears the response times that are stored for this portlet.
+        **Notes:**
+
+        1.  If the portlet was blocked for exceeding the maximum number of concurrent requests and the number of requests did not decrease and you did not set the value for maximum number of requests to a higher value, clicking this icon has no effect. In this case, the portlet is blocked again with the next request that arrives for this portlet.
+        2.  Activating a blocked portlet clears the response times that are stored for this portlet.
 
 

@@ -48,7 +48,7 @@ If you are familiar with WSDL, you might notice that the service section \(enclo
 
 ## Extensions to the <binding\> element
 
-The <binding\> element has been extended to support cooperative portlets. Each extension element is prefixed with `portlet:`, which refers to the C2A namespace, `http://www.ibm.com/wps/c2a`. The `portlet:` prefix is used to identify the extension elements in this section, but a different name may be used for the prefix as long as it refers to the C2A namespace. See [WSDL Extension Schema](wpsc2awsdl.md#wsdl_ext_schema).
+The <binding\> element has been extended to support cooperative portlets. Each extension element is prefixed with `portlet:`, which refers to the C2A namespace, `http://www.ibm.com/wps/c2a`. The `portlet:` prefix is used to identify the extension elements in this section, but a different name may be used for the prefix as long as it refers to the C2A namespace. See [WSDL Extension Schema](wpsc2awsdl.md#wsdl_ext_schema)
 
 -   <portlet:binding\>
 

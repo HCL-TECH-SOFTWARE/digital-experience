@@ -6,8 +6,7 @@ With Editor access to the portal or the portal page, you can add a blog or blog 
 
 2.  If you did not already, create a page for the existing blog or blog library or open an existing page.
 
-    !!! note
-        Blog and Blog Library require a certain amount of horizontal screen space to render properly, and are not supported on mobile devices. For desktop applications with limited horizontal screen space, use the portlets in a one-column layout.
+    **Note:** Blog and Blog Library require a certain amount of horizontal screen space to render properly, and are not supported on mobile devices. For desktop applications with limited horizontal screen space, use the portlets in a one-column layout.
 
 3.  Click the **Content** tab, then click **Communications**.
 
@@ -28,10 +27,11 @@ After you publish the site with a blog library, click **Create Blog** and **Crea
 
 After you publish the site with a blog, click **Create Post** to add content. Click **Edit** to modify content. To delete a post, click **Delete**.
 
-!!! note 
-    Tagged web content that is displayed in the web content viewer is only available when there is a single instance of this portlet on the page. When you click a tag result, the Tag Center broadcasts the information on what content displays in the viewer with a public render parameter. If you have multiple instances of web content displayed in the web content viewer, then these instances display the content that you tagged rather than display the original content of these instances.
+**Note:** Tagged web content that is displayed in the web content viewer is only available when there is a single instance of this portlet on the page. When you click a tag result, the Tag Center broadcasts the information on what content displays in the viewer with a public render parameter. If you have multiple instances of web content displayed in the web content viewer, then these instances display the content that you tagged rather than display the original content of these instances.
 
 
-???+ info "Related information"
-    -   [Web Content Viewer best practices and limitations](../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/wcm_config_delivery_portlet_bestpractice.md)
+**Related information**  
+
+
+[Web Content Viewer best practices and limitations](../wcm/wcm_config_delivery_portlet_bestpractice.md)
 

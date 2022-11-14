@@ -29,8 +29,7 @@ All presentation templates for a library are listed under the `presentationTempl
 
     When you create a new presentation template in this way, the object's file name is used as the name and title of the new template, and the file's content is stored as the template's data. In addition, the user who is authenticated with the WebDAV client is specified as the author and owner of the new template.
 
-    !!! important
-        Placing an incompatible file into the `presentationTemplates` folder \(for example, a JPEG file\) can cause errors during template creation and might result in an unusable presentation template.
+    **Important:** Placing an incompatible file into the `presentationTemplates` folder \(for example, a JPEG file\) can cause errors during template creation and might result in an unusable presentation template.
 
     **Deleting presentation templates:** To delete a presentation template delete the corresponding file. If the presentation template is being referenced by another item, such as a site area, it cannot be deleted until you have first removed the corresponding references by using the authoring portlet.
 
@@ -40,8 +39,7 @@ All presentation templates for a library are listed under the `presentationTempl
 
     For example, if your template is `template1.html`, you would add the image files to the `template1.html_files` folder.
 
-    !!! note
-        When you add an image to the nested components folder, a temporary image is created initially, and the image is only permanently added to the list of nested components when a reference to that image is added to the presentation template's HTML code. This is done to prevent orphaned components within the presentation template.
+    **Note:** When you add an image to the nested components folder, a temporary image is created initially, and the image is only permanently added to the list of nested components when a reference to that image is added to the presentation template's HTML code. This is done to prevent orphaned components within the presentation template.
 
 3.  If you have added a nested image component, update the presentation template's HTML code to reference the component according to the relative WebDAV path to the component.
 

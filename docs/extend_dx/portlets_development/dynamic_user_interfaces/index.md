@@ -36,10 +36,11 @@ Dynamic portlets include portlets on a dynamic page and portlets that are dynami
 
 When a portlet is dynamically added to an existing dynamic page, it is added to special containers that have been designated as launch areas. Each dynamic portlet that is added to the page is placed in the column with the least number of portlets. If all of the content of a dynamic page is locked, any attempt to launch a dynamic portlet on that page throws an `AddUIElementException`.
 
-!!!note "Notes"
-    -   It is possible for a user to access edit mode for a dynamic portlet. However, the preferences are not preserved (cannot be persisted).
-    -   For a user to launch a dynamic portlet, the user must have view rights to the portlet definition from which the dynamic portlet would be launched.
-    -   Dynamic portlets cannot be moved on a dynamic page.
+**Note:**
+
+-   It is possible for a user to access edit mode for a dynamic portlet. However, the preferences are not preserved \(cannot be persisted\).
+-   For a user to launch a dynamic portlet, the user must have view rights to the portlet definition from which the dynamic portlet would be launched.
+-   Dynamic portlets cannot be moved on a dynamic page.
 
 ## Dynamic UI configuration
 
@@ -61,10 +62,12 @@ If a dynamic UI is launched as shared, subsequent launching of the UI using the 
 
 The scope of a shared portlet or shared page instance is restricted to a dynamic UI configuration. This means, for example, that a portlet can add a shared dynamic page in dynamic UI configuration A. When another portlet also tries to create a shared instance in dynamic UI configuration B, a new one is created.
 
--   **[Overview: Developing a dynamic UI configuration](wpsdynui_tskovw.md)**  
+-   **[Overview: Developing a dynamic UI configuration](../dev-portlet/wpsdynui_tskovw.md)**  
 Get an overview of the main tasks involved in creating a dynamic UI configuration.
 
 
-???+ info "Related information"
-    - [Hints and tips for using Portal Search](../../../build_sites/search/portal_search/hint_tips/index.md)
+**Related information**  
+
+
+[Hints and tips for using Portal Search](../admin-system/srrhinttips.md)
 

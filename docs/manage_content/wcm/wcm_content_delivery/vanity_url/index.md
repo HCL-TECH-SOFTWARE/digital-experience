@@ -19,14 +19,12 @@ Business users can create short and arbitrary URLs as vanity URLs. The vanity UR
     -   You can choose a specific locale for the target page of the vanity URL. When a user accesses the page, the portal shows the page in the locale that you specified. You can also attach multiple locales to a vanity URL. This way, the user can view the page in the preferred language.
     -   In their ease of use, vanity URLs are similar to friendly URLs. However, unlike friendly URLs, they do not include the portal context. They are also not constructed as a portal navigation path; therefore portal site visitors cannot go to a vanity URL by using the portal navigation.
     -   You can make your vanity URLs even shorter by using an HTTP server rewrite rule. You can then omit the segment `wps/vanityurl` and reduce the vanity URL to the host name and the vanity URL segment as follows: `host/hotnews`. For more information, read *Providing short vanity URLs*.
-
 -   **Example of a vanity URL for a portal page:**
 
     -   A portal page can have the following friendly name path: `host/wps/portal/home/products/newandexiciting`.
     -   You can define a vanity URL segment that is named `coolstuff`. You can then post the following vanity URL to your customers: `host/wps/vanityurl/coolstuff`.
     -   You can reduce the vanity URL even further by using an HTTP server rewrite rule and then omitting the segment `wps/vanityurl`. You can now give your site visitors the shorter vanity URL: `host/coolstuff`.
     -   When a user enters the vanity URL in the browser address field, the vanity URL servlet resolves the vanity URL segment to the URL of the appropriate portal page.
-
 -   **Vanity URLs and URL mappings:**
 
     URL mappings were deprecated starting with HCL Portal Version 8.5. Instead, you can now use friendly URLs or Vanity URLs as an alternative to URL mapping. Vanity URLs are similar to URL mappings in that you can define them independent from the page hierarchy. However, the following differences apply between vanity URLs and URL mappings:
@@ -50,19 +48,26 @@ Business users can create short and arbitrary URLs as vanity URLs. The vanity UR
     You can create both vanity URLs and friendly URLs for the same portal page.
 
 
--   **[Viewing and creating vanity URLs](van_url_create.md)**  
+-   **[Viewing and creating vanity URLs](../wcm/van_url_create.md)**  
 To view and create vanity URLs, you work with the HCL Portal toolbar.
--   **[How vanity URLs work](van_url_work.md)**  
+-   **[How vanity URLs work](../wcm/van_url_work.md)**  
 Learn about vanity URLs, how they work, and how you work with them.
--   **[Administering vanity URLs](../vanity_url/adm_vanity_url/index.md)**  
+-   **[Administering vanity URLs](../wcm/van_url_admin_ref.md)**  
 HCL Digital Experience provides some configuration tasks. You can use these tasks to administer vanity URL support. You can also configure your IBM HTTP Server so that you can use short vanity URLs.
 
 
-???+ info "Related information:"
-    - [URL mapping](../../../../deployment/manage/config_portal_behavior/adurlmap.md)
-    - [Configuring managed pages](../../wcm_artifacts/managed_pages/cfg_managed_pages/index.md)
-    - [Providing short vanity URLs](../vanity_url/adm_vanity_url/van_url_short.md)
-    - [URL generation in HCL Portal](../../../../extend_dx/apis/url_generation/index.md)
-    - [Changing the theme logo](../../.././../build_sites/themes_skins/customizing_theme/theme_logo/index.md)
-    - [Administering managed pages](../../wcm_artifacts/managed_pages/advadmin_managedpages/index.md)
+**Related information**  
+
+
+[URL mapping](../admin-system/adurlmap.md)
+
+[Configuring managed pages](../wcm/wcm_config_mngpages.md)
+
+[Providing short vanity URLs](../wcm/van_url_short.md)
+
+[URL generation in HCL Portal](../dev/url_gen_main.md)
+
+[Changing the theme logo](../dev-theme/themeopt_change_theme_logo.md)
+
+[Administering managed pages](../wcm/wcm_mngpages_advadmin.md)
 

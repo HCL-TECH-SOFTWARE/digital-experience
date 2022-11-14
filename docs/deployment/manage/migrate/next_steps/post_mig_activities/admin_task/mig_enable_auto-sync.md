@@ -4,7 +4,7 @@ Before you started migration, you disabled automatic synchronization to prevent 
 
 1.  Start the WebSphere® Integrated Solutions Console for the deployment manager.
 
-2.  Select **System Administration > Node Agents**.
+2.  Select **System Administration** \> **Node Agents**.
 
 3.  Click **nodeagent** for the required node.
 
@@ -18,12 +18,14 @@ Before you started migration, you disabled automatic synchronization to prevent 
 
 8.  Repeat these steps for all remaining nodes.
 
-9.  Select **System Administration > Node Agents**.
+9.  Select **System Administration** \> **Node Agents**.
 
 10. Select all nodes that previously had automatic synchronization disabled, and click **Restart**.
 
 
 
-???+ info "Related information"
-    -   [Disabling automatic synchronization to protect your clustered source environment](../../../../../../deployment/manage/migrate/preparing_source_env/mig_disable_auto-sync.md)
+**Related information**  
+
+
+[Disabling automatic synchronization to protect your clustered source environment](../migrate/mig_disable_auto-sync.md)
 

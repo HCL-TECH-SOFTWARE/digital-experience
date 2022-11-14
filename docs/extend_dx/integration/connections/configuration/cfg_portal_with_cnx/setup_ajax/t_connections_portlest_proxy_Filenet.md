@@ -4,15 +4,14 @@ Configure the Ajax proxy so that direct requests that the CCM portlet makes to t
 
 The CCM portlet makes direct requests to the FileNet server, which might be embedded with HCL Connections or deployed to a separate server. You must configure the Ajax proxy so that requests can pass through the Ajax proxy.
 
-!!!note
-    If you installed the embedded option when you installed HCL Connections, you do not need to do these steps.
+**Note:** If you installed the embedded option when you installed HCL Connections, you do not need to do these steps.
 
 1.  Determine the HTTP and HTTPS URLs for the FileNet server.
 
     1.  Find the URLs configured for HCL Connections by looking in LotusConnections-config.xml at:
 
-        -   For a clustered deployment: `/AppServer/profiles/dmgr_profile/config/cells/cell_name/LotusConnections-config`
-        -   For a stand-alone deployment: `/AppServer/profiles/app_server_profile/config/cells/cell_name/LotusConnections-config`
+        -   For a clustered deployment: /AppServer/profiles/dmgr\_profile/config/cells/cell\_name/LotusConnections-config
+        -   For a stand-alone deployment: /AppServer/profiles/app\_server\_profile/config/cells/cell\_name/LotusConnections-config
     2.  Locate the `<sloc:serviceReference>` entry with the value `serviceName="ecm_files"`. The entry looks like:
 
         ```
@@ -25,18 +24,18 @@ The CCM portlet makes direct requests to the FileNet server, which might be embe
             </sloc:serviceReference>
         ```
 
-    3.  Take note of the href and the ssl_href attributes to use to run the command in step 3.
+    3.  Take note of the href and the ssl\_href attributes to use to run the command in step 3.
 
 2.  Open a command line and change to the following directory:
 
-    -   AIX: wp_profile_root/ConfigEngine
-    -   Linux: wp_profile_root/ConfigEngine
-    -   Windows: wp_profile_root\ConfigEngine
-
-3.  Run this command to configure the Ajax proxy to handle all requests to FileNet:<br><br>
+    -   AIX: wp\_profile\_root/ConfigEngine
+    -   Linux: wp\_profile\_root/ConfigEngine
+    -   Solaris: wp\_profile\_root/ConfigEngine
+    -   Windows: wp\_profile\_root\\ConfigEngine
+3.  Run this command to configure the Ajax proxy to handle all requests to FileNet:
 
     ```
-    ConfigEngine action-config-ajax-proxy-SNPortlets-filenet -DICfilenetURL=ssl_href_attribute -DICfilenetURLunsecured=href_attribute 
+    ConfigEngine action-config-ajax-proxy-SNPortlets-filenet -DICfilenetURL=ssl\_href\_attribute -DICfilenetURLunsecured=href\_attribute 
     ```
 
     ```

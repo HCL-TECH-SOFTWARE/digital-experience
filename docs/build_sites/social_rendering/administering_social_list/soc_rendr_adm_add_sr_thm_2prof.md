@@ -11,7 +11,7 @@ To determine which HCL Portal theme profiles already specify the `wp_social_list
 To add the theme module to your theme, you register the theme module by using the `add-theme-modules` portal configuration task. For more information, see the following examples.
 
 -   To add the social rendering theme module to a custom profile of a custom theme, run the task as follows:
-    -   For AIX, Linux:
+    -   For AIX® HP-UX Linux™ Solaris z/OS®:
 
         ```
         ./ConfigEngine.sh add-theme-modules 
@@ -21,7 +21,17 @@ To add the theme module to your theme, you register the theme module by using th
         
         ```
 
-    -   For Windows:
+    -   For IBM® i:
+
+        ```
+        ConfigEngine.sh add-theme-modules 
+             -DThemeUniqueName=my.custom.theme
+             -DThemeProfileFileName=profile_my_custom_profile.json 
+             -DModuleIDs=wp_social_lists_v1_1
+        
+        ```
+
+    -   For Windows™:
 
         ```
         ConfigEngine.bat add-theme-modules 
@@ -32,7 +42,7 @@ To add the theme module to your theme, you register the theme module by using th
         ```
 
 -   To remove the social rendering theme module from the lightweight profile of the Portal 8.5 theme, run the remove task as follows:
-    -   For AIX, Linux:
+    -   For AIX HP-UX Linux Solaris z/OS:
 
         ```
         ./ConfigEngine.sh remove-theme-modules 
@@ -40,7 +50,17 @@ To add the theme module to your theme, you register the theme module by using th
              -DThemeProfileFileName=profile_my_custom_profile.json 
              -DModuleIDs=wp_social_lists_v1_1
         
-        ````
+        ```
+
+    -   For IBM i:
+
+        ```
+        ConfigEngine.sh remove-theme-modules 
+             -DThemeUniqueName=my.custom.theme 
+             -DThemeProfileFileName=profile_my_custom_profile.json 
+             -DModuleIDs=wp_social_lists_v1_1
+        
+        ```
 
     -   For Windows:
 
@@ -54,6 +74,8 @@ To add the theme module to your theme, you register the theme module by using th
 
 
 
-???+ info "Related information"
-    - [Using social lists with your own custom theme](../working_with_social_objects/soc_rendr_use_oob_socl_list_wcusthm.md)
+**Related information**  
+
+
+[Using social lists with your own custom theme](../social/soc_rendr_use_oob_socl_list_wcusthm.md)
 

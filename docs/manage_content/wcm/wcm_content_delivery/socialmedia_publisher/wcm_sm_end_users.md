@@ -19,6 +19,6 @@ To enable this feature:
 
     The domain that is specified in the URL must be the same as the domain specified in the facebook.endUser.statistics.domain and twitter.endUser.statistics.domain global settings.
 
-3.  Enable the tracking of user's social activity within the Social Media Publisher by setting the global settings `Facebook.endUser.statistics.enabled` and `Twitter.endUser.statistics.enabled` to true. See [Global configuration settings](../socialmedia_publisher/socialmedia_publisher_cfg/wcm_sm_config_doc_global.md) for details.
+3.  Enable the tracking of user's social activity within the Social Media Publisher by setting the global settings `Facebook.endUser.statistics.enabled` and `Twitter.endUser.statistics.enabled` to true. See [Global configuration settings](wcm_sm_config_doc_global.md) for details.
 
 

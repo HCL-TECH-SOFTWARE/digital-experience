@@ -28,7 +28,7 @@ Note that the Remote Model SPI currently does not support the following models:
 -   SkinList
 -   ThemeList
 
-The Remote Model SPI uses feeds in the [Atom Syndication Format](http://www.ietf.org/rfc/rfc4287) in conjunction with the [Atom Threading Extension](http://www.ietf.org/rfc/rfc4685.txt) to expose model resources, and the HTTP-based [Atom Publishing Protocol (APP)](http://tools.ietf.org/html/rfc5023) to modify portal resources. With the Remote Model SPI as a REST service, you must use the following HTTP verbs:
+The Remote Model SPI uses feeds in the [Atom Syndication Format](http://www.ietf.org/rfc/rfc4287) in conjunction with the [Atom Threading Extension](http://www.ietf.org/rfc/rfc4685.txt) to expose model resources, and the HTTP-based [Atom Publishing Protocol \(APP\)](http://tools.ietf.org/html/rfc5023) to modify portal resources. With the Remote Model SPI as a REST service, you must use the following HTTP verbs:
 
 -   To obtain model information: `HTTP GET`
 -   To modify existing model information: `HTTP PUT`

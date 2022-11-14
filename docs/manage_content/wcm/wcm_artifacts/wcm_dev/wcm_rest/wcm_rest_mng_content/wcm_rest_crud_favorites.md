@@ -138,8 +138,7 @@ For example:
     ```
 
 
-!!! note
-    The item-uri parameter specifies the item to add, and can be in the expanded form, as shown in the previous examples, or the compact form. For example:
+**Note:** The item-uri parameter specifies the item to add, and can be in the expanded form, as shown in the previous examples, or the compact form. For example:
 
 ```
 wcmrest:item/65a46943-ed1c-4f5d-b497-03c18886ca8e

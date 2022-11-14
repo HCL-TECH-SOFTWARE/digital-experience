@@ -10,26 +10,24 @@ Install and configure HCL Digital Experience before you configure the IBM Licens
 
     1.  Open a shell window.
 
-    2.  Change to the IBM License Metric Tool installation directory: agent_home/wasagent.
+    2.  Change to the IBM License Metric Tool installation directory: agent\_home/wasagent.
 
     3.  Run the following task to start the WebSphere® agent:
 
-        -   AIX®, Linux™: .`/WASAgentClient.sh`
-        -   Windows™: `WASAgentClient.bat`
-        
+        -   AIX® HP-UX Linux™ Solaris: ./WASAgentClient.sh
+        -   IBM i: WASAgentClient.sh
+        -   Windows™: WASAgentClient.bat
     4.  Enter servers to list the WebSphere server IDs and locations.
 
     5.  Enter credentials id userid password to provide credentials for the servers. Where id is the server ID and userid and password correspond to the WebSphere Application Server administrator user ID and password.
 
-        !!!note:
-            Whenever the IBM Tivoli® License Compliance Manager agent is stopped, rerun the WASAgentClient task and then reissue the credentials.
+        **Note:** Whenever the IBM Tivoli® License Compliance Manager agent is stopped, rerun the WASAgentClient task and then reissue the credentials.
 
     6.  Complete any additional configuration tasks after installation. Read the following topic for instructions: [Configuring IBM License Metric Tool](http://publib.boulder.ibm.com/infocenter/tivihelp/v31r1/topic/com.ibm.license.mgmt.planinconf.doc/t_configure_main.html).
 
 3.  Follow the IBM License Metric Tool instructions that are provided with your customer agreement to complete the IBM License Metric Tool licensing configuration for HCL Portal and HCL Web Content Manager.
 
 4.  Ensure that the appropriate inventory signature file exists in the PortalServer_root/properties/version directory path. The file that is present depends on your license agreement and has a general format of IBM_offering_nameversion_number.swtag.
-    
     !!!note "Tip"
         Only one filename.swtag signature file can exist per product offering. Refer to the following table to determine the correct signature file. If you installed HCL Portal Server as a prerequisite for Enable, Extend, HCL Web Content Manager, or HCL Web Content Manager Standard Edition, only the .swtag for the advanced offering exists.
 

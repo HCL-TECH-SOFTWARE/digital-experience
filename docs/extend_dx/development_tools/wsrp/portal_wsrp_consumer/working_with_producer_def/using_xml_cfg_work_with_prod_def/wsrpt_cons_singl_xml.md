@@ -16,7 +16,7 @@ The following XML sample shows how you use the XML configuration interface to in
 
 <?xml version="1.0" encoding="UTF-8" ?>
 <request type="update" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-   xsi:noNamespaceSchemaLocation="PortalConfig_8.5.0.xsd">
+   xsi:noNamespaceSchemaLocation="PortalConfig\_8.5.0.xsd">
    <portal action="locate">
       <wsrp-producer action="locate" objectid="Producer_OID" uniquename="wps.myProducer1">
       <web-app action="locate" uid="com.ibm.wps.wsrp.proxyportletapp.webmod">
@@ -38,7 +38,13 @@ The following XML sample shows how you use the XML configuration interface to in
 
 ```
 
-???+ info "Related information"  
-   -  [Sample XML configuration files](../../../../portal_admin_tools/xml_config_interface/xml_config_ref/admxmsmp.md)
-   -  [The XML configuration interface](../../../../portal_admin_tools/xml_config_interface/index.md)
-   -  [Working with the XML configuration interface](../../../../portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
+
+**Related information**  
+
+
+[Sample XML configuration files](../admin-system/admxmsmp.md)
+
+[The XML configuration interface](../admin-system/admxmlai.md)
+
+[Working with the XML configuration interface](../admin-system/adxmltsk.md)
+

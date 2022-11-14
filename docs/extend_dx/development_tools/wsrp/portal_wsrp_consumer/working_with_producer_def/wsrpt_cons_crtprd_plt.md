@@ -2,8 +2,7 @@
 
 If you work online, you can use the Web Service Configuration portlet to create a Producer definition.
 
-!!!note
-    Creating the Producer definition by using the Web Service Configuration portlet works only if both the Producer portal and the Consumer portal are online. Under this condition, the Consumer portal can connect to the Producer portal and to all files that are referenced in the Producer's WSDL service definition. If one of the portals is offline and you want to create a Producer definition on the Consumer portal, you must use the XML configuration interface. For example, this case can occur if you prepare your Consumer portal in a staging environment and do not connect to the Producer portal to use WSRP services until you transfer your portal to the next stage.
+**Note:** Creating the Producer definition by using the Web Service Configuration portlet works only if both the Producer portal and the Consumer portal are online. Under this condition, the Consumer portal can connect to the Producer portal and to all files that are referenced in the Producer's WSDL service definition. If one of the portals is offline and you want to create a Producer definition on the Consumer portal, you must use the XML configuration interface. For example, this case can occur if you prepare your Consumer portal in a staging environment and do not connect to the Producer portal to use WSRP services until you transfer your portal to the next stage.
 
 When you create a new Producer definition, you do the following tasks:
 
@@ -22,8 +21,8 @@ Optionally, you can also do the following tasks:
 
 After you create a Producer definition, you can proceed to using the portlets that are provided by that Producer, that is, integrating them into your Consumer portal as remote portlets.
 
-To work with the **Web Service Configuration** portlet, click the **Administration menu** icon. Then, click **Portlet Management > Web Services**.
+To work with the **Web Service Configuration** portlet, click the **Administration menu** icon. Then, click **Portlet Management** \> **Web Services**.
 
-For details about how to work with the portlet, refer to the portlet help.
+For details about how to work with the portlet refer to the portlet help.
 
 

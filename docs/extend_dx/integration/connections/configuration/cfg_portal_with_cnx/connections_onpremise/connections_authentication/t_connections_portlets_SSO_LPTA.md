@@ -4,7 +4,7 @@ Before you install the HCL Connections Portlets for HCL Digital Experience, enab
 
 This task describes the steps that are required to enable SSO between HCL Connections portlets and HCL Portal when they are on different WebSphere® Application Server cells. Applications that are deployed on servers within the same WebSphere Application Server cell are enabled by default for SSO.
 
-Set the realm name in the LTPA token to that of the LDAP server before you export the LTPA token. For example, if you connect to an LDAP server at ldapserver.example.com over port 389, then you must set the realm name to ldapserver.example.com:389. If you must change the realm name, see the topic [Changing the realm name](connections_portlets_change_realm_name.md).
+Set the realm name in the LTPA token to that of the LDAP server before you export the LTPA token. For example, if you connect to an LDAP server at ldapserver.example.com over port 389, then you must set the realm name to ldapserver.example.com:389. If you must change the realm name, see the topic *Changing the realm name*.
 
 To allow SSO between HCL Connections and HCL Portal, complete the following steps:
 
@@ -12,12 +12,13 @@ To allow SSO between HCL Connections and HCL Portal, complete the following step
 
     1.  Log in to the WebSphere Application Server Integrated Solutions Console as an administrator, expand **Security** \> **Global security**.
 
-    2.  Expand **Web and SIP security** and then click **Single sign-on (SSO)**.
+    2.  Expand **Web and SIP security** and then click **Single sign-on \(SSO\)**.
 
-    3.  Enter the domain name.
+    3.  Enter the domain name
 
-        !!!note
-            Ensure that the domain name you enter is valid: on the node where HCL Portal is installed, log in to the WebSphere Application Server Integrated Solutions Console as an administrator, click **Security** \> **Global security** \> **Web and SIP security** \> **Single sign-on (SSO)** and verify that the domain name is present.
+        .
+
+        **Note:** Ensure that the domain name you enter is valid: on the node where HCL Portal is installed, log in to the WebSphere Application Server Integrated Solutions Console as an administrator, click **Security** \> **Global security** \> **Web and SIP security** \> **Single sign-on \(SSO\)** and verify that the domain name is present.
 
 2.  On HCL Connections deployment manager node, complete the following steps
 

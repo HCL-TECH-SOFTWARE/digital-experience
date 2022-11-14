@@ -16,22 +16,18 @@ To use the email workflow action, you must configure Web Content Manager to use 
 
         -   Property name: `connect.connector.mailconnector.defaultsmtpserver`
         -   Value: `mail.yourmailserver.com`
-
     -   **Default SMTP port**
 
         -   Property name: `connect.connector.mailconnector.defaultsmtpport`
         -   Value: `yourport`
-
     -   **Default email address for "from" field**
 
         -   Property name: `connect.connector.mailconnector.defaultfromaddress`
         -   Value: `admin@yourmailserver.com`
-
     -   **Default email address for "reply-to" field**
 
         -   Property name: `connect.connector.mailconnector.defaultreplytoaddress`
         -   Value: `admin@yourmailserver.com`
-
 4.  If you use a secured SMTP server, you need to specify a user name and password to access the SMTP server:
 
     Add the following properties:
@@ -44,13 +40,14 @@ To use the email workflow action, you must configure Web Content Manager to use 
 
         -   Property name: `connect.connector.mailconnector.defaultpassword`
         -   Value: `password`
-
 5.  Save your changes.
 
 6.  Restart the portal for the new settings to take effect.
 
 
 
-???+ info "Related information"
-    - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
+**Related information**  
+
+
+[Setting service configuration properties](../admin-system/adsetcfg.md)
 

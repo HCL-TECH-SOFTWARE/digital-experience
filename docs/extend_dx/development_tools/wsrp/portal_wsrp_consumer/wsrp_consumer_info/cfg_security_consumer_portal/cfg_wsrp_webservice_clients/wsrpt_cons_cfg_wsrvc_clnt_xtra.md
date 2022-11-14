@@ -19,11 +19,11 @@ To deploy an extra service client reference for communication with Producers wit
 
     -   Leave the default service reference as it is. Do not configure Web Service Security for the default service reference.
     -   Deploy an extra custom service reference and configure it for WS-Security compliant Web Service Security.
-    
 2.  When you create or edit the Producer definitions that represent the WSRP Producers, you can select the appropriate custom service references for the Producer ports:
 
     -   Select the additional service reference for all ports of the Producer definition that represents the secure Producer.
     -   For the non-secure ports of the Producer definition, you do not need to select a service reference. If no specific service reference is selected for a Producer port, the WSRP Consumer portal uses the default service reference.
 
 
+**Next topic:**[Using the WSRP policy sets and client policy set bindings](../admin-system/wsrpt_cons_use_deflt_polsets.md)
 

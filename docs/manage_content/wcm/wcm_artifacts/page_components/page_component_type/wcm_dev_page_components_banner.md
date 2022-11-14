@@ -3,14 +3,14 @@ id: wcm_dev_page_components_banner
 title: Banner page component type
 ---
 
-# Banner page component type
+
 
 
 A banner page component is a full width piece of stand-alone marketing content that is used to label a page. The banner can also include a link that allows the user to click through to the related content. The banner designs elements contain options for both a dark text on a light image design, and a light text on a dark image design.
 
 ## Authoring templates
 
-The authoring templates associated with your banner are created under this folder: **Your Library > Authoring Templates > Your Banner**
+The authoring templates associated with your banner are created under this folder: **Your Library** \> **Authoring Templates** \> **Your Banner**
 
 -   **Your Banner**
 
@@ -19,7 +19,7 @@ The authoring templates associated with your banner are created under this folde
 
 ## Presentation templates
 
-The presentation templates associated with your banner are created under this folder: **Your Library > Presentation Templates > Your Banner**
+The presentation templates associated with your banner are created under this folder: **Your Library** \> **Presentation Templates** \> **Your Banner**
 
 -   **Your Banner**
 
@@ -28,7 +28,7 @@ The presentation templates associated with your banner are created under this fo
 
 ## Content items
 
-The content items associated with your banner are created under this site area: **Your Library > Content > Page Components > Your Banner**
+The content items associated with your banner are created under this site area: **Your Library** \> **Content** \> **Page Components** \> **Your Banner**
 
 -   **Your Banner**
 
@@ -37,7 +37,7 @@ The content items associated with your banner are created under this site area: 
 
 ## Localizations
 
-The localized text associated with your banner is created under this site area: **Your Library > Localizations**
+The localized text associated with your banner is created under this site area: **Your Library** \> **Localizations**
 
 -   **Your Banner**
 
@@ -46,7 +46,7 @@ The localized text associated with your banner is created under this site area: 
 
 ## Components
 
-The components associated with your banner are created under this folder: **Your Library > Components > Your Banner**
+The components associated with your banner are created under this folder: **Your Library** \> **Components** \> **Your Banner**
 
 -   **Styles**
 

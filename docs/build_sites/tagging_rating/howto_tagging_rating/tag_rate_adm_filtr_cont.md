@@ -2,7 +2,7 @@
 
 You can use filtering mechanisms to control which terms users can use and which terms they cannot use as tags. The portal provides both a blacklist and a whitelist filter.
 
-You enable and disable both filters in the WebSphere® Integrated Solutions Console under the **Resources** \> **Resource Environment** \> **Resource Environment Provider** \> **WP_CPConfigurationService** \> **Custom Properties** for tagging and rating. For details see the topics about *Setting service configuration properties* and the *CP Configuration Service for tagging and rating*.
+You enable and disable both filters in the WebSphere® Integrated Solutions Console under the **Resource Environment Provider** \> **CPConfigService** for tagging and rating. For details see the topics about *Setting service configuration properties* and the *CP Configuration Service for tagging and rating*.
 
 -   **Blacklist filter**
 
@@ -24,11 +24,10 @@ You enable and disable both filters in the WebSphere® Integrated Solutions Cons
     com.ibm.wps.cp.filter.tagging.whitelist = true
     ```
 
-    !!! note
-        The portal applies the filter only if you activate it **and** add at least one entry to the whitelist filter database.
+    **Note:** The portal applies the filter only if you activate it **and** add at least one entry to the whitelist filter database.
 
 
-You can configure both filter lists by using the XML configuration interface. The following examples show how to add or remove terms to the blacklist. To work with the whitelist, adapt the examples by changing the ID of the filter from `DefaultBlacklistFilter` to `DefaultWhitelist Filter`. Sample scripts for the XML configuration interface are located under the directory `PortalServer_root/PortalServer/doc/xml-samples`.
+You can configure both filter lists by using the XML configuration interface. The following examples show how to add or remove terms to the blacklist. To work with the whitelist, adapt the examples by changing the ID of the filter from `DefaultBlacklistFilter` to `DefaultWhitelist Filter`. Sample scripts for the XML configuration interface are located under the directory `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/xml-samples`.
 
 Example: Creating new words to the blacklist filter:
 
@@ -86,9 +85,14 @@ Example: Deleting all terms from the blacklist filter:
 This sample snippet deletes all terms from the blacklist.
 
 
-???+ info "Related information"
-    - [CP Configuration Service for tagging and rating](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/index.md)
-    - [Setting service configuration properties](../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
-    - [Working with the XML configuration interface](../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
-    - [Hints and tips for developers and portal administrators](../hints_tips_tag_rate/tag_rate_ref_hintip_4admins.md)
+**Related information**  
+
+
+[CP Configuration Service for tagging and rating](../admin-system/srvcfg_cpcfg4tr.md)
+
+[Setting service configuration properties](../admin-system/adsetcfg.md)
+
+[Working with the XML configuration interface](../admin-system/adxmltsk.md)
+
+[Hints and tips for developers and portal administrators](../admin-system/tag_rate_ref_hintip_4admins.md)
 

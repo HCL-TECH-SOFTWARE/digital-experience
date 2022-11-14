@@ -8,13 +8,11 @@ Portal Search provides a default portal site search collection that enables your
 
     1.  Define the crawler user ID by using the Manage Users and Groups portlet.
 
-        !!! note
-            It is of benefit to define a dedicated crawler user ID. The pre-configured default portal site search uses the default administrator user ID wpsadmin with the default password of that user ID for the crawler. If you changed the default administrator user ID during your portal installation, the crawler uses that default user ID. Set the crawler user ID if any of the following items are true:
+        **Note:** It is of benefit to define a dedicated crawler user ID. The pre-configured default portal site search uses the default administrator user ID wpsadmin with the default password of that user ID for the crawler. If you changed the default administrator user ID during your portal installation, the crawler uses that default user ID. Set the crawler user ID if any of the following items are true:
 
         -   You changed the password for the wpsadmin or other administrative user ID
         -   You changed the default administrator user ID to an ID other than wpsadmin
         -   You want to use a separate user ID
-
     2.  Edit the portal site collection content source and enter the crawler user ID and its password:
 
         1.  To open the **Manage Search** portlet, click the **Administration menu** icon. Then, click **Search Administration** \> **Manage Search**.
@@ -27,7 +25,6 @@ Portal Search provides a default portal site search collection that enables your
         8.  Type the crawler user ID and password into the appropriate fields.
         9.  Click **Update**.
         10. Click **Save** to save your changes. When you save the content source settings, **Manage Search** appends the locale information of the collection to the content source URL, unless you already added locale information.
-
     3.  For content sources of type **Web Site**, you can configure the crawler to follow external links from inside the portal. To do this task, modify the value in the field **Levels of links to follow** under the tab **General Parameters**. Set the level to a value higher than 1. In addition, you can configure filters for those external links from the Filters tab. The default filter suppresses all links that point back to portal pages. The default filter is displayed only after you save the configuration of the content source.
 
 2.  Start the initial crawl. Start the initial crawl on the portal site content source:
@@ -43,19 +40,18 @@ Portal Search provides a default portal site search collection that enables your
     -   Enable the default scheduler:
         1.  Click the **View Content Source Schedulers** icon next to the collection name.
         2.  In the Manage Schedulers page, click **Disabled**. This action changes the status of the scheduler to Enabled and displays a confirmation message.
-        
     -   Set up your own scheduler:
-
         1.  Click the **Edit** icon for the content source.
 
-            !!! note
-                You can have only one schedule at a time. Therefore, to create your own schedule, you first must delete the existing schedule.
+            **Note:** You can have only one schedule at a time. Therefore, to create your own schedule, you first must delete the existing schedule.
 
         2.  Select the **Schedulers** tab.
         3.  Configure your own scheduler as needed. For more information, see *Manage Search portlet help*.
         4.  Click **Save** to save your changes.
 
 For more information about how to work with content sources, see *Managing the content sources of a search collection* and *Manage Search portlet help*.
+
+**Notes:**
 
 1.  The local portal site is visible through a service that requires SSL. Therefore, if your portal is configured with a web server and you configure the content source root URL through the web server, you must configure the web server for SSL.
 2.  By default, items in the result lists from portal site searches provide no summary information. If users use the Search and Browse portlet, they can refer to the information given under **Description:** for information about the search result list item. If you want to have the summary information that is added, configure the portlet with the summary parameter enabled as follows: PortalCollectionSummarizer=on.
@@ -73,8 +69,7 @@ When users search a portal site, they can access portal pages of two types:
 
 -   The secured portal pages are pages that users can view only if they authenticate themselves to the portal by logging in to the portal with a user ID and password. For details, see *configuring search on a secured portal site*.
 
-    !!! note
-        You can crawl, index, and search secured portal pages only on your local portal installation. For security reasons, you cannot crawl secured pages of one portal site from another portal site.
+    **Note:** You can crawl, index, and search secured portal pages only on your local portal installation. For security reasons, you cannot crawl secured pages of one portal site from another portal site.
 
 
 If you customize search on your portal site, you might find useful information under the topics about configuring the default location for search collections and Resetting the default search collection.

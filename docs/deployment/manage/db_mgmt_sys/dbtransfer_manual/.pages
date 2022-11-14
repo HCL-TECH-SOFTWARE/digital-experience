@@ -3,6 +3,12 @@ nav:
     - index.md
     - kc-db-ugroups.md
     - kc-db-run-ugroups.md
+    - kc-db-ugroups-db2i.md
+    - unix_db2i_priv_dbusers_common.md
+    - kc-db-db2zos-ugroup.md
+    - kc-db-db2zos-deletedbs.md
+    - kc-db-createdb-db2zos.md
+    - kc-db-db2zos-pending.md
     - kc-db-createdb-db2.md
     - kc-db-setupdb-db2.md
     - kc-db-grantpermrun-db2.md
