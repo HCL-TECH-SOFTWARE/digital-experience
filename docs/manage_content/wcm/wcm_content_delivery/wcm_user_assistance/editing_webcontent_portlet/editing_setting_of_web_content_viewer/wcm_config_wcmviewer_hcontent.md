@@ -2,11 +2,9 @@
 
 Use the Content settings for the web content viewer to specify which content from your web content library to display in the viewer.
 
-!!! note
-    If no content is selected in the viewer configuration, the viewer renders the content that is specified by the web content association on the page that contains the viewer. To add or change web content associations for a page, edit the web content settings in the **Page General** tab of the site toolbar.
+**Note:** If no content is selected in the viewer configuration, the viewer renders the content that is specified by the web content association on the page that contains the viewer. To add or change web content associations for a page, edit the web content settings in the **Page General** tab of the site toolbar.
 
-!!! important
-    Only published content can be displayed with the web content viewer. Draft content cannot be displayed and cannot be selected when you configure a web content viewer.
+**Important:** Only published content can be displayed with the web content viewer. Draft content cannot be displayed and cannot be selected when you configure a web content viewer.
 
 ## Fields
 
@@ -101,8 +99,19 @@ When you configure the viewer, content paths are represented as readable paths t
 
 If you configure the viewer with the XML configuration interface \(xmlaccess\), you have the option of specifying content location with the content path instead of the unique ID. With the content path, you do not have to determine the unique ID of the content item. But if the content item is moved or renamed later, the viewer can no longer render the content.
 
-If a viewer is configured to use content paths, a path icon \(![Path icon](../../../../../../images/wcmviewer_path.jpg)\) is displayed after the title path. If you change the configuration to reference different content, the location of the new content item continues to be stored as a content path. If you want to store the location as a unique ID instead, you must click **Clear** before you select the new content. The path icon is also removed to indicate that the content path is no longer being used.
+If a viewer is configured to use content paths, a path icon \(![Path icon](../images/wcmviewer_path.jpg)\) is displayed after the title path. If you change the configuration to reference different content, the location of the new content item continues to be stored as a content path. If you want to store the location as a unique ID instead, you must click **Clear** before you select the new content. The path icon is also removed to indicate that the content path is no longer being used.
 
-???+ info "Related information:"
-    - [Configure your content spot](../../../../../../build_sites/create_sites/content_spot/index.md)
-    - [Web content associations](../../../delivering_web_content/deliver_webcontent_on_portal/getting_started/wcm_delivery_contentmap_about.md)
+**Related information**  
+
+
+[Configure your content spot](../panel_help/contarget_editor.md)
+
+[Web content associations](../wcm/wcm_delivery_contentmap_about.md)
+
+**References:**  
+
+
+[Configure your content spot](contarget_editor.md)
+
+[Web content associations](../wcm/wcm_delivery_contentmap_about.html)
+

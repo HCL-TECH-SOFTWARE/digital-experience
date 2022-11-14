@@ -10,8 +10,7 @@ The `GetSiteNews` rule will always be executed. Any content the rule retrieves f
 
 The `GetNewsAlreadyRead` action works like any other action because it retrieves content from the data store. However, when the action is placed under `Exclude`, any content retrieved by this action is removed from the total return set.
 
-!!! note
-	It must be possible to indicate an article has been read by a given user. When you click the Select Action menu, you will only see rules that are assigned a Select Action type. Binding rules are also Select Action type rules. Once a resourceCollectiontype is set for the binding, all of the action rules will be locked and will use the same collection type.
+**Note:** It must be possible to indicate an article has been read by a given user. When you click the Select Action menu, you will only see rules that are assigned a Select Action type. Binding rules are also Select Action type rules. Once a resourceCollectiontype is set for the binding, all of the action rules will be locked and will use the same collection type.
 
 The order of the total return set is randomized and the number truncated to no more than 10 items. This effect takes place each time the rule is executed, so the news articles displayed on the Web page will change from page view to page view.
 

@@ -11,8 +11,7 @@ Use the Forums Summary portlet to insert a targeted view of Forums content in a 
 -   **Answered Questions** lists the answered questions in the forum.
 -   **Topics Followed by User** lists the topics that the logged-in users asked to follow.
 
-!!! note
-    The Forums Summary portlet displays forum entries for the logged-in user only and does not display public forum entries that are not associated with the user.
+**Note:** The Forums Summary portlet displays forum entries for the logged-in user only and does not display public forum entries that are not associated with the user.
 
 ## Editing the shared settings for the Forums Summary portlet
 

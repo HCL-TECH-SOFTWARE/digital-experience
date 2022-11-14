@@ -18,3 +18,4 @@ A portlet page that contains a community overview portlet has membership that is
 ## Editing the shared settings for the Community Overview portlet
 
 You must have at least editor access for the page and for the portlet to be able to edit shared settings for Connections features. For more information about access levels, see the WebSphere Portal product wiki. Settings you enter on this page can be overridden by settings on the **Personalize** page for a portlet. Choose**Edit Shared Settings** from the portlet menu and choose which information from the community you want to display in the portlet.
+

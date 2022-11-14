@@ -2,8 +2,7 @@
 
 JCR-based content includes content that is created with Web Content Manager or Personalization.
 
-!!! note
-    If you create content in a portal farm with the **Authoring** portlet, extra configuration steps are required. The steps enable content that is created by these content features to be searchable in a farm.
+**Note:** If you create content in a portal farm with the **Authoring** portlet, extra configuration steps are required. The steps enable content that is created by these content features to be searchable in a farm.
 
 1.  Log in to WebSphere® Integrated Solutions Console.
 
@@ -27,7 +26,9 @@ JCR-based content includes content that is created with Web Content Manager or P
 
     |Value|Extra steps|
     |-----|-----------|
-    |EJB|Complete the following steps if you have an EJB service:    1.  Change the jcr.textsearch.EJB.IIOP.URL property to the URL of the naming service that is used to access the WebScanner EJB; for example iiop://localhost:2811. <br/> 2.  Change the jcr.textsearch.EJB.EJBName property to the name of the WebScanner EJB; for example ejb/com/ibm/hrl/portlets/WsPse/WebScannerLiteEJBHome.|
+    |EJB|Complete the following steps if you have an EJB service:    1.  Change the jcr.textsearch.EJB.IIOP.URL property to the URL of the naming service that is used to access the WebScanner EJB; for example iiop://localhost:2811.
+    2.  Change the jcr.textsearch.EJB.EJBName property to the name of the WebScanner EJB; for example ejb/com/ibm/hrl/portlets/WsPse/WebScannerLiteEJBHome.
+|
     |SOAP|If you have a SOAP service, change the jcr.textsearch.SOAP.url property to the SOAP URL of the WebScanner for the search service.|
 
 6.  Save your changes.

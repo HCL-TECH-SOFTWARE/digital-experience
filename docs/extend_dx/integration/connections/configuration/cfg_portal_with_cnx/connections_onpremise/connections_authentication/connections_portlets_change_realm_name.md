@@ -30,11 +30,9 @@ When you configure HCL Connections portlets to use single sign-on, you might nee
         ./ConfigEngine.sh wp-change-was-admin-user -DWasPassword=password -DnewAdminId=newadminid -DnewAdminPw=newpassword -DnewAdminGroupId=newadmingroupid
         ```
 
-        !!!note "Important"
-            You must provide the full distinguished name (DN) for the newAdminId and newAdminGroupId parameters.
+        **Important:** You must provide the full distinguished name \(DN\) for the newAdminId and newAdminGroupId parameters.
 
-        !!!note
-            The task is intended to run against a running server. If the server is stopped, add the-Dskip.ldap.validation=true parameter to the task to skip the validation.
+        **Note:** The task is intended to run against a running server. If the server is stopped, add the-Dskip.ldap.validation=true parameter to the task to skip the validation.
 
     2.  Verify that the task completed successfully. In a clustered environment, restart the deployment manager, the node agents, and HCL Portal servers. In a stand-alone environment, restart the server and HCL Portal servers.
 
@@ -44,11 +42,9 @@ When you configure HCL Connections portlets to use single sign-on, you might nee
         ./ConfigEngine.sh wp-change-portal-admin-user -DWasPassword=password -DnewAdminId=newadminid -DnewAdminPw=newpassword -DnewAdminGroupId=newadmingroupid
         ```
 
-        !!!note "Important"
-            You must provide the full distinguished name (DN) for the newAdminId and newAdminGroupId parameters.
+        **Important:** You must provide the full distinguished name \(DN\) for the newAdminId and newAdminGroupId parameters.
 
-        !!!note
-            The task is intended to run against a running server. If the server is stopped, add the-Dskip.ldap.validation=true parameter to the task to skip the validation.
+        **Note:** The task is intended to run against a running server. If the server is stopped, add the-Dskip.ldap.validation=true parameter to the task to skip the validation.
 
 
 

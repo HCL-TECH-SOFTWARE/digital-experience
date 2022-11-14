@@ -23,8 +23,7 @@ For more details on the Personalization `contents` attributes, please refer to
 
 This API is used to obtain a list of Personalization rules defined to the Personalization workspace.
 
-!!! note 
-  Pagination of the list results is supported.
+**Note:** Pagination of the list results is supported.
 
 -   **GET request format:**
 
@@ -47,12 +46,11 @@ This API is used to obtain a list of Personalization rules defined to the Person
     4.  Add the offset, which defines the pagination parameter and the starting point from which results will be returned.
     5.  Add the `ruleType`, which is the parameter to filter rules based on the Personalization rule type.
 
-        !!! note 
-          As of HCL DX Container Update and CF200, Personalization [Visibility rules](https://help.hcltechsw.com/digital-experience/8.5/pzn/pzn_visibility.html) and Profiler rule are supported.
+        **Note:** As of HCL DX Container Update and CF200, Personalization [Visibility rules](https://help.hcltechsw.com/digital-experience/8.5/pzn/pzn_visibility.html) and Profiler rule are supported.
 
     For example:
 
-    ![Get list of Personalization Rules REST API](../../../../../images/get_list_pzn_rules_api.png)
+    ![Get list of Personalization Rules REST API](../images/get_list_pzn_rules_api.png)
 
 
 -   **Response structure details:**
@@ -138,7 +136,7 @@ This API is used to obtain a list of Personalization rules defined to the Person
 
     List of rules created in the Personalization interface:
 
-    ![List of rules in the Personalization workspace](../../../../../images/workspaceRule.png)
+    ![List of rules in the Personalization workspace](../images/workspaceRule.png)
 
     In the example API response structure below, the list of Visibility and Profiler rules available in the Workspace interface is presented:
 
@@ -221,7 +219,7 @@ This API is used to obtain a list of Personalization rules defined to the Person
 
     List of Personalization rules in the Personalization interface:
 
-    ![List of Personalization rules in the Personalization interface](../../../../../images/folderRule.png)
+    ![List of Personalization rules in the Personalization interface](../images/folderRule.png)
 
     In the example API response structure below, the list of Visibility and Profiler rules available in the Folder created under the Workspace interface is presented:
 
@@ -500,7 +498,10 @@ This API is used to obtain a list of Personalization rules defined to the Person
     |Error Code|Means|
     |----------|-----|
     |200|This code is returned when the list of Personalization rules are successfully returned.|
-    |400|This code is returned if the input parameters are missing or invalid. <br>   -   Limit is a decimal value. <br>  -   Offset is a decimal value. <br>  -   Rule type is not one among the allowed rule types.|
+    |400|This code is returned if the input parameters are missing or invalid.    -   Limit is a decimal value.
+    -   Offset is a decimal value.
+    -   Rule type is not one among the allowed rule types.
+|
     |401|This code is returned when the `LtpaToken` is invalid or expired.|
     |403|This code is returned when user access is restricted.|
     |404|This code is returned when the `?URL` can’t be accessed.|
@@ -529,7 +530,7 @@ This API is used to get individual Personalization Rule ID details.
     1.  Login to your Digital Experience solution.
     2.  The login cookie contains the Authentication token. Leave the cookie field empty if you are already authenticated, unless you intend to put a token value.
     3.  Obtain the Get Personalization Rule ID details using the REST API `GET all` command, as shown in the following example:
-    ![Get Personalization Rule ID details](../../../../../images/GetSS.png)
+    ![Get Personalization Rule ID details](../images/GetSS.png)
 
 
 -   **Response structure details:**
@@ -583,48 +584,48 @@ This API is used to invoke a Personalization rule using rule-id.
     1.  Login to your Digital Experience solution.
     2.  The login cookie contains the Authentication token. Leave the cookie field empty if you are already authenticated, unless you intend to put a token value.
     3.  Invoke the Personalization rule as shown in the example below:
-    ![API to invoke the Personalization ID rule](../../../../../images/PostSS.png)
+    ![API to invoke the Personalization ID rule](../images/PostSS.png)
 
 
 -   **Response Structure for Visibility rule:**
 
     The response structure presents the details of `ruleId`, `title`, `ruleType` and `result`, as shown below:
 
-    ![API to invoke the Personalization ID rule response structure](../../../../../images/pzn_id_invoke_rule_response_structure.png)
+    ![API to invoke the Personalization ID rule response structure](../images/pzn_id_invoke_rule_response_structure.png)
 
     For example, the image below shows the use of the API to create a **Visibility Rule ruleType** called `TestRule` with a condition that the `current date` is November 16, 2021, and when executed, the `result` shows as `Show`:
 
-    ![API to invoke the Personalization ID rule Example 1](../../../../../images/pzn_id_invoke_rule_response_structure_example_1.png)
+    ![API to invoke the Personalization ID rule Example 1](../images/pzn_id_invoke_rule_response_structure_example_1.png)
 
     When you modify the rule condition of the example from the current date \(November 16, 2021\) to a different date \(November 17, 2021\), and when executed, the `result` shows as `Hide`, the response structure is shown as follows:
 
-    ![API to invoke the Personalization ID rule Example 2](../../../../../images/pzn_id_invoke_rule_response_structure_example_2.png)
+    ![API to invoke the Personalization ID rule Example 2](../images/pzn_id_invoke_rule_response_structure_example_2.png)
 
 -   **Response Structure for Profiler:**
 
     The response structure presents the details of `ruleID`, `title`, `ruleType`, and `result`, as shown below:
 
-    ![Invoke Profile rule](../../../../../images/Invoke_Profile_rule.png)
+    ![Invoke Profile rule](../images/Invoke_Profile_rule.png)
 
     For example, the image below shows the use of the API to create a **Profiler ruleType** called `Profile User Example` with a condition that assumes `current Weekday` is Tuesday, and when executed, the `result` shows as an array as `Profile 2`, the response structure is as follows:
 
-    ![Profile User Rule example](../../../../../images/Profile_User_Rule_Example.png)
+    ![Profile User Rule example](../images/Profile_User_Rule_Example.png)
 
     When you modify the rule to satisfy conditions for multiple profiles and on execution, the result shows in an array as `Profile 1` and `Profile 2`, the response structure is as follows:
 
-    ![Multiple profiles](../../../../../images/Multiple_profiles.png)
+    ![Multiple profiles](../images/Multiple_profiles.png)
 
     When you modify the rule to satisfy conditions for multiple profiles, but request to get first profile that satisfies the condition and on execution, the result shows in an array as `Profile 1`, the response structure is as follows:
 
-    ![](../../../../../images/Multiple_profiles_Profile1.png)
+    ![](../images/Multiple_profiles_Profile1.png)
 
     When you modify the rule to not satisfy any condition and on execution, the `result` shows in an array as `Profile 3`, the response structure is as follows:
 
-    ![](../../../../../images/Multiple_profiles_Profile3.png)
+    ![](../images/Multiple_profiles_Profile3.png)
 
     When you modify the rule to not satisfy any condition, but you removed the profile otherwise and on execution, the `result` shows an empty array as `[]`, the response structure is as follows:
 
-    ![](../../../../../images/Multiple_Profiles_emptyarray_removed.png)
+    ![](../images/Multiple_Profiles_emptyarray_removed.png)
 
 
 -   **Success and Error Messages:**
@@ -750,15 +751,16 @@ This API is used to create a new Personalization rule.
 
         For example:
 
-        ![Create Profiler rule API](../../../../../images/Create-profiler-rule-API.png)
+        ![Create Profiler rule API](../images/Create-profiler-rule-API.png)
 
     Steps to get the `ResourceId`:
 
     1.  Login to HCL Digital Experience.
-    2.  Go to [Personalization Navigator](../../../pzn_portlets.md).
+    2.  Go to [Personalization Navigator](pzn_portlets.md).
     3.  Select the resource and document information as shown below.
 
-        ![Get resource id](../../../../../images/get-resource-id.png)
+        ![Get resource id](../images/get-resource-id.png "Go to Applications menu > Personalization > Business rules > resource id
+                              > Document info")
 
 -   **Success and Error Messages:**
 
@@ -826,7 +828,7 @@ This API is used to update an existing Personalization rule.
 
     Screenshot for reference for Visibility rule:
 
-    ![Update Personalization rule API](../../../../../images/Update-rule-API.png)
+    ![Update Personalization rule API](../images/Update-rule-API.png)
 
 
 -   **Response structure details for Visibility rule:**
@@ -902,7 +904,7 @@ This API is used to update an existing Personalization rule.
 
     Screenshot for reference for Visibility rule:
 
-    ![Update Profiler rule API](../../../../../images/Update-profiler-rule-API.png)
+    ![Update Profiler rule API](../images/Update-profiler-rule-API.png)
 
 
 -   **Response structure details for Profiler rule:**
@@ -948,13 +950,13 @@ This API is used to update an existing Personalization rule.
     Steps to get the `ResourceId`:
 
     1.  Login to HCL Digital Experience.
-    2.  Go to [Personalization Navigator](../../../pzn_portlets.md).
+    2.  Go to [Personalization Navigator](pzn_portlets.md).
     3.  Select the resource and document information as shown below.
 
-        ![Get resource id](../../../../../images/get-resource-id.png)
+        ![Get resource id](../images/get-resource-id.png "Go to Applications menu > Personalization > Business rules > resource id >
+                            Document info")
 
-        !!! note 
-          Updating a ruleType is restricted.
+        **Note:** Updating a ruleType is restricted.
 
 
 -   **Success and Error Messages:**
@@ -999,7 +1001,7 @@ Each dynamic property is represented as an object in each resource type, which i
     3.  Get the dynamic properties for a selected resource type using the REST API `GET all` command.
     For example, the dynamic properties added in one of the resource type `Action Count` looks like this:
 
-    ![PZN Get Action Count dynamic properties](../../../../../images/pzn-get-action-count-dynamic-properties.png)
+    ![PZN Get Action Count dynamic properties](../images/pzn-get-action-count-dynamic-properties.png)
 
     To get the dynamic properties of the resource type `Action Count`, the list of properties is returned in the specific resource type as an object:
 
@@ -1192,8 +1194,7 @@ This API endpoint is used to update dynamic properties for all resource types.
 
 You can update the property object, which includes property name \(i.e. `attr1`\) and its `displayName` and `propertyType` in the request payload, along with the ones received from your GET request.
 
-!!! note 
-  `displayName` and `propertyType` is mandatory for each dynamic property.
+**Note:** `displayName` and `propertyType` is mandatory for each dynamic property.
 
 -   **PUT request format:**
 
@@ -1419,7 +1420,7 @@ The following example shows how to use this API is to delete a Personalization r
     3.  Provide the `rule-id` of the rule you wish to delete.
     For example:
 
-    ![Delete Personalization rule API](../../../../../images/Delete-rule-API.png)
+    ![Delete Personalization rule API](../images/Delete-rule-API.png)
 
 
 -   **Response Structure Details:**
@@ -1444,11 +1445,17 @@ The following example shows how to use this API is to delete a Personalization r
     |500|This code is returned when internal server error occurs.|
 
 
--   **[Personalization rules REST API content details](rules_api_contents_details.md)**  
-The following topic provides details about DX [Personalization](../../../personalization/index.md) rules REST API content.
--   **[References for display formats of attribute properties defined to Personalization APIs and examples](api_display_formats_attribute_properties.md)**  
-The following topic provides additional details about the conditions and response structures for various attributes defined in the examples to execute API calls presenting different attributes of DX [Personalization](../../../personalization/index.md) services.
--   **[Triggering Personalization rules anonymously](trigerring_pzn_rules_anonymously.md)**  
+-   **[Personalization rules REST API content details](../pzn/rules_api_contents_details.md)**  
+The following topic provides details about DX [Personalization](pzn_concepts.md) rules REST API content.
+-   **[References for display formats of attribute properties defined to Personalization APIs and examples](../pzn/api_display_formats_attribute_properties.md)**  
+The following topic provides additional details about the conditions and response structures for various attributes defined in the examples to execute API calls presenting different attributes of DX [Personalization](pzn_concepts.md) services.
+-   **[Triggering Personalization rules anonymously](../pzn/trigerring_pzn_rules_anonymously.md)**  
+The Personalization rules REST APIs can be triggered anonymously.
+-   **[Personalization rules REST API content details](../pzn/rules_api_contents_details.md)**  
+The following topic provides details about DX [Personalization](pzn_concepts.md) rules REST API content.
+-   **[References for display formats of attribute properties defined to Personalization APIs and examples](../pzn/api_display_formats_attribute_properties.md)**  
+The following topic provides additional details about the conditions and response structures for various attributes defined in the examples to execute API calls presenting different attributes of DX [Personalization](pzn_concepts.md) services.
+-   **[Triggering Personalization rules anonymously](../pzn/trigerring_pzn_rules_anonymously.md)**  
 The Personalization rules REST APIs can be triggered anonymously.
 
 

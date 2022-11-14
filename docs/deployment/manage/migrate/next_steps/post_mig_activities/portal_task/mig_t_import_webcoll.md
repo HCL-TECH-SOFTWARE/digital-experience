@@ -54,7 +54,10 @@ Complete the following steps on the target portal, using the Manage Search portl
 
 
 
-???+ info "Related information" 
-    -   [Exporting search web collections](../../../../../../deployment/manage/migrate/preparing_source_env/migrating_search_cmpt/migrating_websearch_collections/mig_t_export_webcoll.md)
-    -   [Hints and tips for using Portal Search](../../../../../../build_sites/search/portal_search/hint_tips/index.md)
+**Related information**  
+
+
+[Exporting search web collections](../migrate/mig_t_export_webcoll.md)
+
+[Hints and tips for using Portal Search](../admin-system/srrhinttips.md)
 

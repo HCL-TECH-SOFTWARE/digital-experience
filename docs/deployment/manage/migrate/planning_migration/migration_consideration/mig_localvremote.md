@@ -3,7 +3,10 @@
 Review the considerations for local and remote migrations. Plan and review your options for an appropriate migration path that is based on your current environment.
 
 ## Local migration
+
 There are a few migration combinations that can be considered local migration depending on the availability of the environment being migrated. At a minimum, you have two distinctive options with this migration path. You can perform a local migration by taking the source environment offline, or you can maintain both source and target environments coexisting. Depending on the migration path you choose, there might be additional factors to consider.
+
+**Note:** IBM® i supports local migration only.
 
 -   **Local migration without coexistence**
 

@@ -3,7 +3,7 @@ nav:
     - product_overview
     - architecture_overview
     - plan_deployment
+    - software_support.md
     - system_requirements
     - download
-    - software_support.md
     - notices.md

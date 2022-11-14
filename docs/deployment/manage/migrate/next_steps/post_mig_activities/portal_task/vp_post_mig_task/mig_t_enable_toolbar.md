@@ -6,16 +6,15 @@ The site toolbar requires a Portal 8.0 theme or a custom Portal 8.0 theme. The t
 
 If you want to use the HCL Digital ExperienceVersion 8.5 site toolbar on other migrated virtual portals, complete the following configuration task after you remove the old toolbar from your theme.
 
-!!!note "Cluster only"
-    Complete this step only on the primary node.
+**Cluster only:** Complete this step only on the primary node.
 
-1.  Go to the wp_profile_root/ConfigEngine directory of your portal installation and run:
+1.  Go to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory of your portal installation and run:
 
-    -   AIX® and Linux™: `./ConfigEngine.sh install-toolbar -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalContext=virtual_portal_context_url`
-    -   Windows™: `ConfigEngine.bat install-toolbar -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalContext=virtual_portal_context_url`
-
-    !!!note
-        Run the `list-all-virtual-portals` ConfigEngine task to find your virtual portal context.
+    -   AIX® HP-UX Linux™ Solaris: `./ConfigEngine.sh install-toolbar -DWasPassword=password -DPortalAdminPwd=password `-DVirtualPortalContext=virtual\_portal\_context\_url``
+    -   IBM® i: `ConfigEngine.sh install-toolbar -DWasPassword=password -DPortalAdminPwd=password `-DVirtualPortalContext=virtual\_portal\_context\_url``
+    -   Windows™: `ConfigEngine.bat install-toolbar -DWasPassword=password -DPortalAdminPwd=password `-DVirtualPortalContext=virtual\_portal\_context\_url``
+    -   z/OS®: `./ConfigEngine.sh install-toolbar -DWasPassword=password -DPortalAdminPwd=password `-DVirtualPortalContext=virtual\_portal\_context\_url``
+    **Note:** Run the list-all-virtual-portals ConfigEngine task to find your virtual portal context.
 
 
 You must restart the Portal server after you run the install-toolbar task.

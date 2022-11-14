@@ -4,7 +4,7 @@ Use dynamic content spots to determine what is displayed by Top, Primary, and Se
 
 These are the levels of navigation that is provided in a theme:
 
-![Top, Primary, and Secondary levels of navigation](../../../../images/themeopt_navigation.jpg)
+![Top, Primary, and Secondary levels of navigation](../images/themeopt_navigation.jpg)
 
 -   **Top - Item 1**
 
@@ -82,17 +82,27 @@ These are the levels of navigation that is provided in a theme:
 
 ## Navigation content spots
 
-The content spot IDs map to wp\_dynamicContentSpots\_85 module subcontributions in the [PortalServer\_root](../../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\WEB-INF\\plugin.xml file.
+The content spot IDs map to wp\_dynamicContentSpots\_85 module subcontributions in the [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\WEB-INF\\plugin.xml file.
 
 |Name|Value|
 |----|-----|
-|`85theme_topNav`|mvc:smartphone/tablet@res:\{war:context-root\}/themes/html/dynamicSpots/navigation.jsp?type=top|
-|`85theme_primaryNav`|mvc:res:\{war:context-root\}/themes/html/dynamicSpots/navigation.jsp?type=primary,smartphone@,tablet@|
-|`85theme_secondaryNav`|mvc:res:\{war:context-root\}/themes/html/dynamicSpots/navigation.jsp?type=secondary,smartphone@,tablet@|
-|`85theme_sideNav`|mvc:res:\{war:context-root\}/themes/html/dynamicSpots/sideNavigation.jsp?startLevel=2,smartphone@,tablet@|
-|`85theme_mobileNav`|mvc:smartphone/tablet@res:\{war:context-root\}/themes/html/dynamicSpots/mobileNavigation.jspmvc:smartphone/tablet@res:\{war:context-root\}/themes/html/dynamicSpots/lazyMobileNavigation.jsp?context=\{war:context-root\}|
+|`85theme_topNav`|mvc:smartphone/tablet@res:\{war:context-root\}/themes/html/dynamicSpots/navigation.jsp?type=top
 
-The subcontribution URI value indicates which JSP is loaded in the spot. For the three horizontal navigation spots, the same navigation.jsp file is used with a different parameter passed to the JSP. The navigation.jsp file is in the [PortalServer\_root](../../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\themes\\html\\dynamicSpots folder. The parameter is a key of `type` with three possible values:
+|
+|`85theme_primaryNav`|mvc:res:\{war:context-root\}/themes/html/dynamicSpots/navigation.jsp?type=primary,smartphone@,tablet@
+
+|
+|`85theme_secondaryNav`|mvc:res:\{war:context-root\}/themes/html/dynamicSpots/navigation.jsp?type=secondary,smartphone@,tablet@
+
+|
+|`85theme_sideNav`|mvc:res:\{war:context-root\}/themes/html/dynamicSpots/sideNavigation.jsp?startLevel=2,smartphone@,tablet@
+
+|
+|`85theme_mobileNav`|mvc:smartphone/tablet@res:\{war:context-root\}/themes/html/dynamicSpots/mobileNavigation.jspmvc:smartphone/tablet@res:\{war:context-root\}/themes/html/dynamicSpots/lazyMobileNavigation.jsp?context=\{war:context-root\}
+
+|
+
+The subcontribution URI value indicates which JSP is loaded in the spot. For the three horizontal navigation spots, the same navigation.jsp file is used with a different parameter passed to the JSP. The navigation.jsp file is in the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\themes\\html\\dynamicSpots folder. The parameter is a key of `type` with three possible values:
 
 -   **top**
 
@@ -109,7 +119,6 @@ The subcontribution URI value indicates which JSP is loaded in the spot. For the
 
 In the theme.html files for your theme, you can remove the default navigation dynamic content spots. You can then replace the dynamic content spots with your own mappings that point to your own jsp implementation. For example, you can replace the three top navigation levels with a single top navigation and a single side navigation.
 
-<!--
 -   **[Creating a dynamic content spot for navigation](../dev-theme/themeopt_cust_nav_custnavspot.md)**  
 Create a dynamic content spot mapping to customize the theme for Top, Primary, and Secondary navigation. Change the yourTheme value to the name of your theme.
 -   **[Adding a level of navigation](../dev-theme/themeopt_cust_nav_addnav.md)**  
@@ -118,8 +127,10 @@ You can increase levels of navigation by adding a fourth level of navigation.
 You can reduce your levels of navigation to two levels.
 -   **[Side navigation](../dev-theme/themeopt_cust_nav_side.md)**  
 The Portal 8.5 theme includes a side navigation template that can be applied to render pages at the secondary level in a list with the main content. By default, this template is applied to the Administration section of your portal.
---->
 
-???+ info "Related information:"
-    - [Mobile navigation](../../responsive_web_design/rwd_add_navphone.md)
+
+**Related information**  
+
+
+[Mobile navigation](../rwd/rwd_add_navphone.md)
 

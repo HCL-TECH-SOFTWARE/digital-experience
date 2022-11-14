@@ -2,7 +2,7 @@
 
 View the global settings portlet to verify which server is handling user requests for a session.
 
-In a clustered environment, all requests for a particular session are directed to the same server instance in the cluster. In other words, after a user establishes a session (for example, by logging in), the user is served by the same server instance during the session.
+In a clustered environment, all requests for a particular session are directed to the same server instance in the cluster. In other words, after a user establishes a session \(for example, by logging in\), the user is served by the same server instance during the session.
 
 To verify which server is handling user requests for a session, you can view the global settings portlet. This portlet displays the node name of the server handling requests. If one of the servers in the cluster fails, the request is rerouted to another server in the cluster. If distributed sessions support is enabled, the new server can access session data from the database or another server instance.
 
@@ -10,8 +10,9 @@ By default, failover support is available for HCL Portal and any portlets that a
 
 Distributed session support must be configured separately in WebSphere® Application Server. Refer to the WebSphere Application Server documentation for information:
 
--   Windows™, UNIX™ and Linux™: [Distributed sessions](http://pic.dhe.ibm.com/infocenter/wasinfo/v8r5/index.jsp?topic=%2Fcom.ibm.websphere.base.doc%2Fae%2Fcprs_persistent_sessions.html)
-
+-   Windows™ and UNIX™Linux™: [Distributed sessions](http://pic.dhe.ibm.com/infocenter/wasinfo/v8r5/index.jsp?topic=%2Fcom.ibm.websphere.base.doc%2Fae%2Fcprs_persistent_sessions.html)
+-   IBM® i: [Distributed session support](http://pic.dhe.ibm.com/infocenter/wasinfo/v8r5/index.jsp?topic=%2Fcom.ibm.websphere.base.iseries.doc%2Fae%2Fcprs_persistent_sessions.html)
+-   [Distributed sessions](http://pic.dhe.ibm.com/infocenter/wasinfo/v8r5/index.jsp?topic=%2Fcom.ibm.websphere.base.iseries.doc%2Fae%2Fcprs_persistent_sessions.html)
 
 ## Failover and lost data
 
@@ -21,8 +22,7 @@ In cases where a portlet does not support failover, a "Portlet unavailable" mess
 
 After a failover occurs, the request is redirected to another cluster member by the web server plug-in. Most browsers issue a GET request as a response to a redirect after you submit a POST request. It ensures that the browser does not send the same data multiple times without the user's knowledge. However, after the failover, users must refresh the page or resubmit the form to recover the POST data.
 
-!!!note
-    Any portlets or applications that use POST data are affected by this behavior.
+**Note:** Any portlets or applications that use POST data are affected by this behavior.
 
 ## Failover for the Authoring Portlet
 

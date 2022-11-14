@@ -1,37 +1,43 @@
----
-title: Create an HCL Digital Experience profile
----
-
 # Troubleshooting: Create an HCL Digital Experience profile
 
 View troubleshooting information for creating an HCL Digital Experience profile.
 
 Each potential step in the configuration is included. Because the steps vary depending on your selections, the steps are not numbered. Find the step that failed to learn more about correcting and recovering from the failure. If you need to change a value that you entered in the wizard, then you must run the configuration again.
 
-!!!note "Tip"
-    If you must go through the wizard again, download the wizard selections that you made to save time. Then, cancel the configuration. Start the process over and upload your saved selections. Correct or enter values for the parameters that caused the failure.
+**Tip:** If you must go through the wizard again, download the wizard selections that you made to save time. Then, cancel the configuration. Start the process over and upload your saved selections. Correct or enter values for the parameters that caused the failure.
 
 If you are on HCL Portal Version 8.5 without a Combined Cumulative Fix applied, then you can use this option in the Configuration Wizard to create an additional profile.
 
-!!!important
-    You cannot complete this configuration option, if you have CF01 or a later Combined Cumulative Fix applied.
+**Important:** You cannot complete this configuration option, if you have CF01 or a later Combined Cumulative Fix applied.
 
 ## Create the target profile for HCL Digital Experience in the WebSphere Application Server
 
 **About this task:**
 
-If the step fails, see the logs for the `manageprofiles` command to determine why the step failed. The wizard uses the portal profile templates to create the deployment manager profile. An error might result from a problem with the profile templates. The error message in the log provides more information.
+If the step fails, see the logs for the manageprofiles command to determine why the step failed. The wizard uses the portal profile templates to create the deployment manager profile. An error might result from a problem with the profile templates. The error message in the log provides more information.
 
-The log files are in the app_server_root/logs/manageprofiles directory.
+The log files are in the app\_server\_root/logs/manageprofiles directory.
 
-!!!important
-    WebSphere® Application Server Version 8.5.5.5 requires that fix PI37248 is applied when creating the managed portal profile. This step fails if PI37248 is not installed.
+**Important:** WebSphere® Application Server Version 8.5.5.5 requires that fix PI37248 is applied when creating the managed portal profile. This step fails if PI37248 is not installed.
 
 |Actions|Notes®|
 |-------|------|
 |Run the step again|If this step fails, you can run this step again after you clean up the issue.|
 |Skip the step|If this step was successful, you can skip it if you run the configuration process again.|
-|Clean up step|If an unrecoverable error occurs and this step fails, remove the profile. Use the manageprofiles command to remove the profile. The command file is in the app_server_root/bin directory. The command file is a script that is named `manageprofiles.sh\|bat`.<br>Example: <br> `/opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh -delete -profileName dmgr01`<br> Delete the profile directory only if the manageprofiles command completes successfully. <br> Then, run **Create the target profile for HCL Digital Experience** again.|
+|Clean up step|If an unrecoverable error occurs and this step fails, remove the profile. Use the manageprofiles command to remove the profile. The command file is in the app\_server\_root/bin directory. The command file is a script that is named manageprofiles.sh\|bat.
+
+Example:
+
+```
+ /opt/IBM/WebSphere/AppServer/bin/manageprofiles.sh -delete 
+ -profileName dmgr01
+```
+
+Delete the profile directory only if the manageprofiles command completes successfully.
+
+Then, run **Create the target profile for HCL Digital Experience** again.
+
+|
 
 ## Install the ConfigEngine into the target HCL Digital Experience profile
 
@@ -125,7 +131,7 @@ If you completed a binary installation, this is your first step.
 |Skip the step|If this step was successful, you can skip it if you run the configuration process again.|
 |Clean up step|If this step fails, look in configtrace.log for any failures.|
 
-## Remove the application server (server1) from the profile
+## Remove the application server \(server1\) from the profile
 
 **About this task:**
 
@@ -165,7 +171,11 @@ If you completed a binary installation, this is your first step.
 |Skip the step|Do not skip this step, if you are running the configuration again.|
 |Clean up step|Check for failures in the systemout and systemerror logs for starting or stopping the portal server.|
 
+
 **Related information**  
-[Create an HCL Portal profile](../../profile/cw_create_profile.md)<br>
-[Accessing the Configuration Wizard](./../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+
+
+[Create an HCL Portal profile](../config/cw_create_profile.md)
+
+[Accessing the Configuration Wizard](../config/cw_run.md)
 

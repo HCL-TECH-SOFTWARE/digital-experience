@@ -2,8 +2,7 @@
 
 This API allows for the permanent removal of deleted content items.
 
-!!! note
-    The APIs to Purge Deleted Content items is available for HCL Digital Experience 9.5 CF192 and higher releases.
+**Note:** The APIs to Purge Deleted Content items is available for HCL Digital Experience 9.5 CF192 and higher releases.
 
 ## Using the Purge Deleted Content Items API
 

@@ -30,7 +30,7 @@ The different ways to obtain Portal models are as follows:
     
     ```
 
--   **Portlet service (standard portlet API)**
+-   **Portlet service \(standard portlet API\)**
 
     Standard portlets can access models through specific portlet services. These portlet services are in `com.ibm.portal.portlet.service.model`. The following example shows how the navigation model is obtained by a standard portlet.
 

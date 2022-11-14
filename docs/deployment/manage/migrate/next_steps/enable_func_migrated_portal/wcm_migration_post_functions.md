@@ -118,8 +118,12 @@ To enable the **Insert Link to Remote Content** function after migration, ensure
 To enable the folder selection wizard in Personalization, ensure that the `wp_federated_documents_picker` theme module is available to the page that contains the Personalization Editor.
 
 
-???+ info "Related information"
-    -   [Configuring the reserved authoring portlet](../../../../../manage_content/wcm/wcm_artifacts/reserved_auth_portlet/wcm_config_wcmviewer_reservedcfg.md)
-    -   [Inserting a Link in an Element](../../../../../manage_content/wcm/wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_link.md)
-    -   [Personalizing federated documents](../../../../../manage_content/wcm/wcm_artifacts/feddocs/index.md)
+**Related information**  
+
+
+[Configuring the reserved authoring portlet](../wcm/wcm_config_wcmviewer_reservedcfg.md)
+
+[Supported specifications for inserting links to remote content](../overview/new_wcm_standards.md)
+
+[Personalizing federated documents](../wcm/wcm_dev_feddocs.md)
 

@@ -117,6 +117,8 @@ Hello example
 ```
 
 
-???+ info "Related information"
-    - [Using the business card](../../../build_sites/social_rendering/customizing_view_definitions/customizing_visualdesign/soc_rendr_use_biz_card.md)
+**Related information**  
+
+
+[Using the business card](../social/soc_rendr_use_biz_card.md)
 

@@ -8,7 +8,7 @@ The target environment initially uses the same ports as the source environment. 
 
     1.  Start the WebSphere® Integrated Solutions Console.
 
-    2.  Select **System Administration > Node Agents** in the navigation tree.
+    2.  Select **System Administration** \> **Node Agents** in the navigation tree.
 
     3.  Click **nodeagent** for the required node.
 
@@ -22,11 +22,11 @@ The target environment initially uses the same ports as the source environment. 
 
     8.  Repeat these steps for all remaining nodes.
 
-    9.  Select **System Administration > Nodes** in the navigation tree.
+    9.  Select **System Administration** \> **Nodes** in the navigation tree.
 
     10. Select all nodes that must be manually synchronized, and click **Synchronize**.
 
-    11. Select **System Administration > Node Agents** in the navigation tree.
+    11. Select **System Administration** \> **Node Agents** in the navigation tree.
 
     12. For the primary node, select the node agent and click **Restart**.
 
@@ -36,11 +36,11 @@ The target environment initially uses the same ports as the source environment. 
 
     1.  Open the WebSphere Integrated Solutions Console.
 
-    2.  Click **System administration > Node agents**.
+    2.  Click **System administration** \> **Node agents**.
 
     3.  Select the check box for the node agents and click **Stop**.
 
-    4.  Click **System administration > Deployment manager**.
+    4.  Click **System administration** \> **Deployment manager**.
 
     5.  On the **Configuration** tab of the deployment manager settings, click **Stop**.
 
@@ -49,6 +49,9 @@ The target environment initially uses the same ports as the source environment. 
     You will update the ports for the target environment in a step that is detailed in Migrate a Cluster Step 3: Upgrade node profiles. After you update the ports, the source deployment manager and node agents can be started.
 
 
-???+ info "Related information" 
-    -   [Enabling automatic synchronization for a clustered environment](../../../../deployment/manage/migrate/next_steps/post_mig_activities/admin_task/mig_enable_auto-sync.md)
+
+**Related information**  
+
+
+[Enabling automatic synchronization for a clustered environment](../migrate/mig_enable_auto-sync.md)
 

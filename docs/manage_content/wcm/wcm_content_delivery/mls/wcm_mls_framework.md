@@ -8,8 +8,7 @@ The key elements of this framework are:
 
     A library is created for the base site, and one library for each localized site, and another library for shared templates and components. When you create libraries, ensure that the correct locale is specified during the creation process, as this locale is used during search and in the multilingual user interface extensions.
 
-    !!! note
-        If a language does not exist in the list of languages available when you create a library, you can add that language to the list of supported languages.
+    **Note:** If a language does not exist in the list of languages available when you create a library, you can add that language to the list of supported languages.
 
 -   **Same site structure in each locale**
 

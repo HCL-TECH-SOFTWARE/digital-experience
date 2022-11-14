@@ -4,8 +4,7 @@ If you plan to use search in a cluster, you must configure a remote search serve
 
 1.  Prevent the creation of search collections. To do so, complete the substeps listed here.
 
-    !!! note
-        If you have CF07 or a later fix pack installed, start the portal configuration engine task `suppress-automatic-search-service-creation` to prevent the creation of search collections. You do not need to perform the substeps listed here. After running the configuration task, continue with the next main step that deletes all search collections from the primary node.
+    **Note:** If you have CF07 or a later fix pack installed, start the portal configuration engine task `suppress-automatic-search-service-creation` to prevent the creation of search collections. You do not need to perform the substeps listed here. After running the configuration task, continue with the next main step that deletes all search collections from the primary node.
 
     1.  Log in to the WebSphere® Integrated Solutions Console.
 

@@ -6,11 +6,11 @@ Public render parameters is a concept that is defined by the Java Portlet Specif
 
 The main benefit of these predefined parameters is that the portlet developer can rely on the Portlet API to work with portal\_specific state information without using any portal-specific APIs or SPIs. For example, you can easily create a portlet render URI that addresses a portal page by using the public render parameter that holds the portal page selection information.
 
--   **[Predefined public render parameters representing portal state](pre-def_pub_ren_param_repptlst.md)**  
+-   **[Predefined public render parameters representing portal state](../dev-portlet/pre-def_pub_ren_param_repptlst.md)**  
 Pre-defined public render parameters that represent portal-specific state information are available in all lifecycle methods of the portlet: processAction, processEvent, render, and serveResource. During rendering, you can create portlet URLs that address these parameters.
--   **[To register predefined public render parameters in portlet.xml](reg_predef_pubrenpara_inptl.xml.md)**  
+-   **[To register predefined public render parameters in portlet.xml](../dev-portlet/reg_predef_pubrenpara_inptl.xml.md)**  
 To use these predefined public render parameters in your portlet, declare each of them in your portlet deployment descriptor \(portlet.xml\) as specified in the Java Portlet specification.
--   **[To use predefined public render parameters in your portlet](use_predef_pubrenparam_inportlet.md)**  
+-   **[To use predefined public render parameters in your portlet](../dev-portlet/use_predef_pubrenparam_inportlet.md)**  
 Creating portlet URLs based on these predefined public render parameters is not different from creating any other portlet URL. The typical use case is to create a portlet render URL that addresses one or multiple predefined public render parameters.
 
 

@@ -4,9 +4,15 @@ Before a Consumer can consume portlets from a Producer, the Consumer needs speci
 
 The information that Producers and Consumers exchange includes the following items:
 
+-   [WSRP service description](wsrpc_cons_get_info.md#web_srvc_dscrpt)
+-   [WSRP interfaces](wsrpc_cons_get_info.md#wsrp_if). They are included in the WSDL service description document.
+-   [WSRP web service configuration and user information](wsrpc_cons_get_info.md#wsrp_wscfg_userinfo)
+-   [Registration information](wsrpc_cons_get_info.md#rgstr_info)
+-   [Group IDs and handles of portlets](wsrpc_cons_get_info.md#groupid_handle).
+
 ## WSRP service description
 
-WSRP Consumers need technical information about the WSRP services that the Producer provides. This information is described in the Web Service Description Language (WSDL) document of the Producer. The Consumer can use the information in the WSDL document to set up communication with the Producer.
+WSRP Consumers need technical information about the WSRP services that the Producer provides. This information is described in the Web Service Description Language \(WSDL\) document of the Producer. The Consumer can use the information in the WSDL document to set up communication with the Producer.
 
 The WSDL document provides information about various aspects and properties of the Producer:
 
@@ -17,13 +23,18 @@ The WSDL document provides information about various aspects and properties of t
 If the WSRP Producer is an HCL Portal, then Consumers of WSRP services can access the WSDL document of the Producer at the following URL:
 
 ```
- http://producer_portal_host:producer_port/wp_contextRoot/wsdl/wsrp_service.wsdl
+ http://producer\_portal\_host:producer\_port/wp\_contextRoot/wsdl/wsrp_service.wsdl
 ```
 
-!!!note "Notes"
-    1.  The host and port and the wp_contextRoot directory must match the host and port of the Producer HCL Portal installation.
+**Notes:**
 
-    2.  If the communication with the Producer is set up to use Secure Socket Layer communication, the Consumer must use **HTTPs** to address this URL: <br> `http**s**://producer_portal_host:producer_port/wp_contextRoot/wsdl/wsrp_service.wsdl`
+1.  The host and port and the wp\_contextRoot directory must match the host and port of the Producer HCL Portal installation.
+2.  If the communication with the Producer is set up to use Secure Socket Layer communication, the Consumer must use **HTTPs** to address this URL:
+
+    ```
+     http**s**://producer\_portal\_host:producer\_port/wp\_contextRoot/wsdl/wsrp_service.wsdl
+    ```
+
 
 If the WSRP service Producer is not a HCL Portal, then the owner or administrator of the Producer portal must provide the information to the Consumer.
 
@@ -48,7 +59,7 @@ The WSRP standard defines a set of four web service interfaces. The interfaces a
     This interface is optional. It is not supported by the current implementation of the WSRP Producer in HCL Portal. However, the HCL Portal Consumer can handle Producers that support WSRP registration interfaces.
 
 
-The Producer can provide some or all of these interfaces to the Consumers as appropriate. The Producer describes these WSRP interfaces in the Web Services Description Language (WSDL) document as described under [WSRP service description](../../../wsrp/portal_wsrp_producer/wsrp_producer_info/index.md#wsrp-service-description). The WSDL document provides general technical information about the web services that the Producer provides.
+The Producer can provide some or all of these interfaces to the Consumers as appropriate. The Producer describes these WSRP interfaces in the Web Services Description Language \(WSDL\) document as described under [WSRP service description](wsrpc_cons_get_info.md#web_srvc_dscrpt). The WSDL document provides general technical information about the web services that the Producer provides.
 
 ## WSRP web service configuration and user information
 
@@ -66,6 +77,16 @@ A Consumer portal can consume a remote portlet from a Producer portal by using t
 
 The portlet handle and group ID are listed in the WSRP service description of the Producer. The portlet handle for each portlet that the Producer provides is listed in a `portletHandle` tag. The group ID for each portlet that the Producer provides is listed in the `groupID` tag of the service description.
 
-???+ info "Related information"  
-    -   [How Producer and Consumer portals communicate](../../../wsrp/learning_wsrp/wsrpc_comint.md)
+-   **[Consumer checklist for exchanging information with a Producer](../admin-system/wsrpr_cons_chklst.md)**  
+Use this list to check whether you have obtained and provided all required information that you must exchange with the Producer.
+-   **[Configuring security on the Consumer portal](../admin-system/wsrpt_cons_prep_sec.md)**  
+You can configure security for the WSRP Consumer. If you enable security, the WSRP Consumer sends a security token as part of the WSRP request message to the WSRP producer. The security token represents the identity of the user who is logged in to the Consumer Portal. The WSRP Producer uses the security token to process the WSRP requests under the user identity that is represented by the security token.
+
+
+**Next topic:**[Working with Producer definitions](../admin-system/wsrpt_cons_creat_prod.md)
+
+**Related information**  
+
+
+[How Producer and Consumer portals communicate](../admin-system/wsrpc_comint.md)
 

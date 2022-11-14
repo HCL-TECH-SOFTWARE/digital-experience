@@ -167,7 +167,7 @@ The following metadata name-value pairs are used to establish the Password Grant
 
 For an example of a sample configuration that uses the Password Grant flow, see Setting up OAuth 2.0 for Liberty authentication providers by using the Password Grant Flow .
 
--   **[Setting up OAuth 2.0 for Liberty authentication providers by using the Password Grant flow](Oauth2.0_libertyauth_password_grant.md)**  
+-   **[Setting up OAuth 2.0 for Liberty authentication providers by using the Password Grant flow](../dev-portlet/Oauth2.0_libertyauth_password_grant.md)**  
 Set up a password grant flow to resources that are protected by the Liberty OAuth 2.0 authorization server by using the password grant flow.
 
 

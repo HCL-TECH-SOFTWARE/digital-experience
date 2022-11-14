@@ -42,5 +42,5 @@ A transition with a source that points to a transition endpoint that references 
 </transition-endpoint>     
 ```
 
-
+**Parent topic:**[Transition endpoints](../screenflow/ref_trnstn_endpnts.md)
 

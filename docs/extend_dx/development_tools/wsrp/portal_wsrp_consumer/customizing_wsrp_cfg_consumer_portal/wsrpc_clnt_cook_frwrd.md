@@ -17,7 +17,7 @@ By default the WSRP Consumer does not forward client cookies to WSRP Producers o
 
 Description:
 
--   **wsrp.consumer.cookieforward.cookiename = hostdomainnames [; cookiepriority]**
+-   **wsrp.consumer.cookieforward.cookiename = hostdomainnames \[; cookiepriority\]**
 
     This property defines a cookie forwarding rule for the cookie that is identified by the value for cookiename. The cookie forwarding rule specifies a list of host names and domain names and optionally specifies the cookie priority.
 
@@ -53,12 +53,15 @@ Example properties that contain cookie forwarding rules are as follows:
     With this setting, the WSRP Consumer forwards the client cookie named `COOKIE2` to the host `beta.sample.com` and to all hosts in the domain `myorg.com`. It gives client cookies first priority.
 
 
-!!!note
-    The WSRP Consumer does not send cookies when it requests the WSDL service description documents from a Producer.
+**Note:** The WSRP Consumer does not send cookies when it requests the WSDL service description documents from a Producer.
 
 
-???+ info "Related information"  
-    -   [Securing the WSRP Consumer by HTTP-cookie-based single sign-on](../../../wsrp/portal_wsrp_consumer/wsrp_consumer_info/cfg_security_consumer_portal/wsrpt_cons_sec_ws_http_cb_sso.md)
-    -   [Cookie support](../../../wsrp/reference_for_using_wsrp_portal/wsrpc_cookie.md)
-    -   [Setting service configuration properties](../../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
+**Related information**  
+
+
+[Securing the WSRP Consumer by HTTP-cookie-based single sign-on](../admin-system/wsrpt_cons_sec_ws_http_cb_sso.md)
+
+[Cookie support](../admin-system/wsrpc_cookie.md)
+
+[Setting service configuration properties](../admin-system/adsetcfg.md)
 

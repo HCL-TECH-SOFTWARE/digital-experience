@@ -37,6 +37,34 @@ Resetting the steps does not undo any tasks that the wizard completed before the
 
 After you correct the values, on the Configure page, click **Skip Step** for any steps that ran that you do not need to run again. If you completed a step in the previous attempt that did not use values that you changed, then you can skip the step.
 
+-   **[Troubleshooting: Database Transfer](../trouble/cw_dbtransfer_trouble.md)**  
+Database transfer is part of setting up a stand-alone and cluster server topologies. Learn how to troubleshoot each step in your configuration for your target database.
+-   **[Troubleshooting: Enable federated security option](../trouble/cw_ldap.md)**  
+Enabling federated security is part of many environment setups. If you encounter a failure during the configuration process, determine whether you can run the step again, skip the step, or if you must clean up the step. For some failed steps, learn how to correct the issue and recover from the failure.
+-   **[Troubleshooting: Create a deployment manager](../trouble/cw_create_dmgr.md)**  
+Create a deployment manager for clustered environments. If you encounter a failure during the configuration process, determine whether you can run the step again, skip the step, or if you must clean up the step. For some failed steps, learn how to correct the issue and recover from the failure.
+-   **[Troubleshooting: Create a cluster option](../trouble/cw_create_cluster.md)**  
+Creating a cluster is part of setting up a clustered environment.If you encounter a failure during the configuration process, determine whether you can run the step again, skip the step, or if you must clean up the step. For some failed steps, learn how to correct the issue and recover from the failure.
+-   **[Troubleshooting: Modify site URLs for search engine optimization](../trouble/cw_shorten_url_seo_ts.md)**  
+Shorten your HCL Digital Experience site URLs for search engine optimization.
+-   **[Troubleshooting: Create an additional cluster node](../trouble/cw_create_addnode.md)**  
+Adding a node to a cluster is part of setting up a clustered environment. If you encounter a failure during the configuration process, determine whether you can run the step again, skip the step, or if you must clean up the step. For some failed steps, learn how to correct the issue and recover from the failure.
+-   **[Troubleshooting: Create an HCL Digital Experience profile](../trouble/cw_createprofile.md)**  
+View troubleshooting information for creating an HCL Digital Experience profile.
+-   **[Troubleshooting: Remove a WebSphere Portal profile](../trouble/cw_removeprofile.md)**  
+View troubleshooting information for creating a HCL Portal profile.
+-   **[Troubleshooting: Migrate a stand-alone server](../trouble/cw_migrate_standalone.md)**  
+If you encounter a failure during the configuration process, determine whether you can run the step again, skip the step, or if you must clean up the step. For some failed steps, learn how to correct the issue and recover from the failure.
+-   **[Troubleshooting: Migrate the deployment manager profile for a cluster environment](../trouble/cw_migrate_cluster1.md)**  
+If you encounter a failure during the configuration process, determine whether you can run the step again, skip the step, or if you must clean up the step. For some failed steps, learn how to correct the issue and recover from the failure.
+-   **[Troubleshooting: Migrate node profiles for a cluster environment](../trouble/cw_migrate_cluster2.md)**  
+If you encounter a failure during the migration of the node profiles for a cluster environment, learn how to correct the issue and recover from the failure.
+-   **[Troubleshooting: Upgrade node profiles for a cluster environment](../trouble/cw_migrate_cluster3.md)**  
+If you encounter a failure while upgrading the node profiles for a cluster environment, learn how to correct the issue and recover from the failure.
+
+
 **Related information**  
-[Accessing the Configuration Wizard](../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/configuration/cw_run.md)
+
+
+[Accessing the Configuration Wizard](../config/cw_run.md)
 

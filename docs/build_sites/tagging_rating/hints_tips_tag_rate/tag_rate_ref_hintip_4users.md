@@ -26,8 +26,7 @@ Learn about some hints and tips for portal users who work with tagging and ratin
 
     When a user types a tag, the user needs to type at least 3 characters for the type-ahead support feature to work.
 
-    !!! note
-        The type-ahead feature works only with the dialog tag widget of the default tagging user interface of portal versions earlier than V 8.5. With HCL Portal V 8.5, the tag and rating widgets of earlier portal versions are deprecated.
+    **Note:** The type-ahead feature works only with the dialog tag widget of the default tagging user interface of portal versions earlier than V 8.5. With HCL Portal V 8.5, the tag and rating widgets of earlier portal versions are deprecated.
 
 
 

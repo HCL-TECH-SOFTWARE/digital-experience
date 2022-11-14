@@ -10,7 +10,7 @@ You can set the following general configuration properties Credential Vault Serv
 
 -   **systemcred.dn**
 
-    Specifies the Distinguished name (DN) of the vault administrative user. All system credentials are stored under the user's account. This property is set to the portal administrative user by default.
+    Specifies the Distinguished name \(DN\) of the vault administrative user. All system credentials are stored under the user's account. This property is set to the portal administrative user by default.
 
 -   **export.userDN**
 
@@ -43,25 +43,28 @@ You can define the following properties for each Vault Adapter Implementation Ty
 
     Use this property to specify the path of a configuration file that your adapter may need . This property is optional.
 
--   **domain = (rel)**
+-   **domain = \(rel\)**
 
     Use this property to specify the database domain where the segment and slot configuration data is stored. In the special case of the `DefaultVault`, this also specifies where the actual credentials are stored. This property is mandatory. Possible values are all available database domains as specified in the Data Store Service. The default value is `rel` ; this specifies the release domain.
 
--   **manageresources = (false)**
+-   **manageresources = \(false\)**
 
     Use this property to specify whether the Vault Adapter should create and delete resources. This property is optional.
 
-    !!!note
-        If you set this property to `true`, the adapter must have internal support to manage resources. If you omit this property, it will default to `false` .
+    **Note:** If you set this property to `true`, the adapter must have internal support to manage resources. If you omit this property, it will default to `false` .
 
--   **readonly = (true)**
+-   **readonly = \(true\)**
 
     Use this property to specify whether the underlying vault for this adapter should be considered read only. This property is optional.
 
-    !!!note
-        If you set this property to `true`, the `manageresources` property is ignored. If you omit this property, it will default to `true` .
+    **Note:** If you set this property to `true`, the `manageresources` property is ignored. If you omit this property, it will default to `true` .
 
-???+ info "Related information" 
-    -   [Working with the XML configuration interface](../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface)
-    -   [XML Syntax for exporting and importing credential vault data](../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_xml_config_cmd_line/cmdline_syntax/xml_syntax_export_import_creds/index.md)
+
+
+**Related information**  
+
+
+[Working with the XML configuration interface](../admin-system/adxmltsk.md)
+
+[XML Syntax for exporting and importing credential vault data](../admin-system/adxmltsk_cmdln_sntx_crd_vlt.md)
 

@@ -54,6 +54,8 @@ Use the following command to create profile with the name profile\_new\_deferred
 ```
 
 
-???+ info "Related information:"
-    - [Managing theme capabilities](../manage_theme_capabilities/index.md)
+**Related information**  
+
+
+[Managing theme capabilities](../dev-theme/themeopt_admin_themes.md)
 

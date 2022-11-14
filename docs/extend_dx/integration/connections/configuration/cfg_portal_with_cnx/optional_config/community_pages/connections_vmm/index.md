@@ -8,7 +8,7 @@ For more information about the architecture of VMM, go to [HCL Software Support]
 
 For more information about configuring a user repository for VMM, go to [HCL Software Support](https://support.hcltechsw.com/csm).
 
-After you configure HCL Connections to work with VMM, user can:
+After you configure HCL Connections to work with VMM, user can
 
 -   Search for HCL Connections public and private communities by name \(represented as groups in WebSphere\)
 -   Resolve public and private community membership for particular users \(represented as group membership in WebSphere\)
@@ -22,17 +22,16 @@ The following are some known limitations:
 
 ## Prerequisites
 
-!!!note
-    The VMM adapter uses the `externalId` field to map the **user object ID** field from the LDAP server to identify users and determine community membership for logged in users. This action helps to control access for Community pages based on community membership in HCL Connections. HCL Portal must be configured to use the same LDAP that was used to import users into the People database for the HCL Connections Profiles service. So that the `externalId` between the two servers matches. Other HCL Portal components such as Social Rendering and the integrated person card require the `externalId` between the two servers to match as well.
+**Note:** The VMM adapter uses the `externalId` field to map the **user object ID** field from the LDAP server to identify users and determine community membership for logged in users. This action helps to control access for Community pages based on community membership in HCL Connections. HCL Portal must be configured to use the same LDAP that was used to import users into the People database for the HCL Connections Profiles service. So that the `externalId` between the two servers matches. Other HCL Portal components such as Social Rendering and the integrated person card require the `externalId` between the two servers to match as well.
 
 To configure the VMM to recognize an HCL Connections repository, the following actions must be true:
 
 -   HCL Digital Experience must be installed and verified
 -   HCL Connections must be installed and verified to work
 -   Hidden email is supported. In the 3.0.1.1 refresh, it is not mandatory any longer to enable the email.
--   Single sign-on must be configured between HCL Connections and Portal. Follow the steps in [Set up single sign-on](../../../i_coll_t_enable_lcsso.md).
+-   Single sign-on must be configured between HCL Connections and Portal. Follow the steps in *Configuring single sign-on*.
 -   HCL Connections and HCL Digital Experience must share a common LDAP.
--   Import the SSL certificate from HCL Digital Experience server to HCL Connections. Follow the steps in [Importing a certificate to support SSL](../../../connectionss_oncloud/connections_deploying/t_connections_portlets_import_cert.md) with the following differences:
+-   Import the SSL certificate from HCL Digital Experience server to HCL Connections. Follow the steps in *Importing a certificate to support SSL* with the following differences:
     -   Log in to the WebSphere Application Server Integrated Solutions Console for the HCL Connections server, rather than the Portal server.
     -   Enter the host, port, and alias for the Portal server. For example:
 
@@ -42,19 +41,19 @@ To configure the VMM to recognize an HCL Connections repository, the following a
         Alias : Portal Certificate (Admin can choose any appropriate alias)
         ```
 
--   Update the VMM schema so that PersonAccount on the Portal server includes personCorrelationAttribute. Use this attribute to specify the corresponding person relative distinguished name attribute. For example, ibm-primaryEmail. For more information about name attributes for different directories, go to [HCL Software Support](https://support.hcltechsw.com/csm). In a clustered environment, run this command on the Deployment manager. To open the scripting interface, go to [HCL Software Support](https://support.hcltechsw.com/csm) for more information. Enter the following commands in the scripting interface:
+-   Update the VMM schema so that PersonAccount on the Portal server includes personCorrelationAttribute. Use this attribute to specify the corresponding person relative distinguished name attribute. For example, ibm-primaryEmail. For more information about name attributes for different directories, go to [HCL Software Support](https://support.hcltechsw.com/csm). In a clustered environment, run this command on the Deployment manager. To open the scripting interface, go to [HCL Software Support](https://support.hcltechsw.com/csm) for more information. Enter the following commands in the scripting interface
 
     ```
     $AdminTask addIdMgrPropertyToEntityTypes {-name <personCorrelationAttribute> -dataType string -entityTypeNames PersonAccount} 
     ```
 
-    Then, enter the following command:
+    . Then, enter the following command
 
     ```
     $AdminConfig save
     ```
 
-    For example, if the personCorrelationAttribute matches ibm-entryUuid, use:
+    . For example, if the personCorrelationAttribute matches ibm-entryUuid, use:
 
     ```
     $AdminTask addIdMgrPropertyToEntityTypes {-name ibm-entryUuid -dataType string -entityTypeNames PersonAccount} 
@@ -62,20 +61,18 @@ To configure the VMM to recognize an HCL Connections repository, the following a
     $AdminConfig save
     ```
 
-    !!!note
-        Portal must be running while you run this command. Restart the server to apply the changes.
+    **Note:** Portal must be running while you run this command. Restart the server to apply the changes.
 
 
 ## Configuring the HCL Connections repository to work with VMM
 
 Complete these tasks to configure the HCL Connections User Repository adapter. When configuration is complete, you can verify that it is working by logging in to HCL Portal as an administrator. Open the Users and Groups portlet from the Administration tab. Search for groups that must be present as communities in your HCL Connections deployment. If you find the correct groups and the members of the groups are listed, the deployment is successful.
 
-!!!note
-    Make sure that you configured Common Directory Services when you installed the portlets. Common Directory Services are a requirement for configuring the VMM adapter.
+**Note:** Make sure that you configured Common Directory Services when you installed the portlets. Common Directory Services are a requirement for configuring the VMM adapter.
 
--   **[Configuring the HCL Connections repository for VMM](t_connections_portlets_VMM_repository_config.md)**  
-Configure the HCL Connections repository for the Virtual Member manager (VMM) so that you can integrate communities with Portal security.
--   **[Verifying impersonation configuration](t_connections_portlets_impersonation.md)**  
+-   **[Configuring the HCL Connections repository for VMM](../connect/t_connections_portlets_VMM_repository_config.md)**  
+Configure the HCL Connections repository for the Virtual Member manager \(VMM\) so that you can integrate communities with Portal security.
+-   **[Verifying impersonation configuration](../connect/t_connections_portlets_impersonation.md)**  
  You can access another user's system with the impersonation feature as though you are that user so that you can test user access. Impersonation is configured as part of the installation process. Use this procedure to confirm that it is working as expected.
 
 

@@ -30,8 +30,7 @@ You can use the Live Object configuration service to configure the behavior of t
 
     Use this property to specify whether the Person Card handler is included in static content. The default value is true .
 
-    !!!note
-        This property is only considered if the property isDynamicLoading is set to the value false .
+    **Note:** This property is only considered if the property isDynamicLoading is set to the value false .
 
     -   **true**
 
@@ -45,8 +44,7 @@ You can use the Live Object configuration service to configure the behavior of t
 
     Use this property to specify whether the Person Card action handler is included in static content. The default value is true .
 
-    !!!note
-        This property is only considered if the property isDynamicLoading is set to the value false .
+    **Note:** This property is only considered if the property isDynamicLoading is set to the value false .
 
     -   **true**
 
@@ -60,8 +58,7 @@ You can use the Live Object configuration service to configure the behavior of t
 
     Use this property to specify whether the click-to-action \(C2A\) handler is included in static content. The default value is true .
 
-    !!!note
-        This property is only considered if the property isDynamicLoading is set to the value false .
+    **Note:** This property is only considered if the property isDynamicLoading is set to the value false .
 
     -   **true**
 

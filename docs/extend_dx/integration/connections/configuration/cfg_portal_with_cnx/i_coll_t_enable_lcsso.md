@@ -12,6 +12,8 @@ You can configure single sign-on using IBM® WebSphere® Application Server or b
 
 
 
-???+ info "Related information"
-    - [WebSphere Application Server: Single sign-on for authentication](https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/csec_ssovo.html?cp=SSAW57_8.5.5)
+**Related information**  
+
+
+[WebSphere Application Server: Single sign-on for authentication](https://www.ibm.com/docs/en/was-nd/8.5.5?topic=SSAW57_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/csec_ssovo.html?cp=SSAW57_8.5.5)
 

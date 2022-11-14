@@ -53,7 +53,7 @@ What can and cannot be syndicated:
 
 2.  On your subscriber server, log in to HCL Digital Experience.
 
-3.  If using HCL Digital Experience 9.5, go to the [Practitioner Studio](../../../../../build_sites/practitioner_studio/index.md) interface.
+3.  If using HCL Digital Experience 9.5, go to the [Practitioner Studio](../practitioner_studio/practitionerstudio_overview.md) interface.
 
 4.  Go to **Administration** \> **Security** \> **Manage Users and Groups** and create a shared credential vault slot.
 
@@ -67,8 +67,9 @@ What can and cannot be syndicated:
 
     For example: `http://authoring:10039/wps/wcm`
 
-    !!! note
-        When Setting Up WCM Syndication using Digital Experience 9.5 Containers in Kubernetes:
+    **Note:**
+
+    When Setting Up WCM Syndication using Digital Experience 9.5 Containers in Kubernetes:
 
     -   **When you first subscribe to a syndicator, on-prem deployments will use a URL in this format:**
 
@@ -82,8 +83,7 @@ What can and cannot be syndicated:
         https://service_name.namespace_name:HostPort/WcmContextRoot
         ```
 
-    !!! note
-        For syndication to work in HTTPs, you have to import the SSL certificates between syndicator and subscriber servers.
+    **Note:** For syndication to work in HTTPs, you have to import the SSL certificates between syndicator and subscriber servers.
 
     -   **Once the syndication pair has been created, you must edit the syndicator. The Subscriber URL field needs to be modified to look like this:**
 
@@ -93,25 +93,25 @@ What can and cannot be syndicated:
 
     Once the change to the syndicator properties has been made, syndication will work properly.
 
-    !!! note
-        When you syndicate from a virtual portal:
+    **Note:**
 
-        -   **Using the URL context of a virtual portal:**
+    When you syndicate from a virtual portal:
 
-            ```
-            http://HostName:HostPort/wps/wcm/url_context
-            ```
+    -   **Using the URL context of a virtual portal:**
 
-        -   **Using the host name of a virtual portal:**
+        ```
+        http://HostName:HostPort/wps/wcm/url_context
+        ```
 
-            ```
-            http://VirtualHostName:HostPort/wps/wcm
-            ```
+    -   **Using the host name of a virtual portal:**
+
+        ```
+        http://VirtualHostName:HostPort/wps/wcm
+        ```
 
 8.  Enter a name for the syndicator item. This name is used for the syndicator item that is created on the syndicator server. Enter a name that helps identify the syndication relationship that you are creating. This name must be unique and cannot be the same as an existing syndicator name.
 
-    !!! note
-        To reuse syndicator names of previously deleted syndication relationships on a subscriber, you must also delete the same relationship on the syndicator.
+    **Note:** To reuse syndicator names of previously deleted syndication relationships on a subscriber, you must also delete the same relationship on the syndicator.
 
 9.  Enter a name for the subscriber item. This name is used for the subscriber item that is created on the subscriber server. Enter a name that helps identify the syndication relationship that you are creating. This name must be unique and cannot be the same as an existing subscriber name.
 
@@ -126,7 +126,6 @@ What can and cannot be syndicated:
     -   **Configured**: This option uses the mode that is configured in the WCM WCMConfigService service.
     -   **Automatic**: Syndication is scheduled automatically based on the configured syndication interval.
     -   **Manual**: Syndication occurs only when requested by using the administration portlet.
-
 13. Select **Update syndication when a syndication pair is created** to run a one-off syndication event when the syndication pair is successfully created. This is not related to any automatic configuration settings.
 
 14. Click **Next**
@@ -165,20 +164,70 @@ What can and cannot be syndicated:
         -   Deleted items
         Project templates are not syndicated.
 
-    !!! note
-        If the syndication configuration is updated to change the syndication type to be more restrictive, then a normal rebuild will not remove previously syndicated items that are now out of scope. For example draft items on the subscriber would not be removed if the syndication type is changed from "All Items" to "Published Items". A [Rebuild With Mirror](wcm_syndication_manual.md) can be used to fully synchronize the library with respect to the new syndication type which includes the removal of subscriber modifications and previously syndicated items.
+    **Note:** If the syndication configuration is updated to change the syndication type to be more restrictive, then a normal rebuild will not remove previously syndicated items that are now out of scope. For example draft items on the subscriber would not be removed if the syndication type is changed from "All Items" to "Published Items". A [Rebuild With Mirror](wcm_syndication_manual.md) can be used to fully synchronize the library with respect to the new syndication type which includes the removal of subscriber modifications and previously syndicated items.
 
     |Action on syndicator|Syndication type on syndicator|Rebuild: Action on Subscriber|Rebuild with mirror: Action on subscriber|
     |--------------------|------------------------------|-----------------------------|-----------------------------------------|
-    |    1.  Update Live items on the syndicator.|Published items|    1.  Updates Live items on the subscriber.|    1.  Updates Live items on the subscriber.|
-    |    1.  Update Live or Draft items on the syndicator. <br>2.  Delete Live items on the syndicator. <br>3.  Restore Live items on the syndicator.|All items|    1.  Update Live or Draft items on subscriber. <br>2.  Purge items on the subscriber. <br>3.  Create items on the subscriber.|    1.  Update Live or Draft items on subscriber. <br>2.  Purge items on the subscriber. <br>3.  Create items on the subscriber.|
-    |    1.  Update items on the syndicator. <br>2.  Delete items on the syndicator. <br>3.  Restore items on the syndicator.<br>4.  Purge items on the syndicator.|All items and versions|    1.  Update items on subscriber. <br>2.  Delete items on the subscriber. <br>3.  Restore items on the subscriber. <br>4.  No action.|    1.  Update items on subscriber. <br>2.  Delete items on the subscriber. <br>3.  Restore items on the subscriber.<br>4.  No action.|
+    |    1.  Update Live items on the syndicator.
+|Published items|    1.  Updates Live items on the subscriber.
+|    1.  Updates Live items on the subscriber.
+|
+    |    1.  Update Live or Draft items on the syndicator.
+    2.  Delete Live items on the syndicator.
+    3.  Restore Live items on the syndicator.
+|All items|    1.  Update Live or Draft items on subscriber.
+    2.  Purge items on the subscriber.
+    3.  Create items on the subscriber.
+|    1.  Update Live or Draft items on subscriber.
+    2.  Purge items on the subscriber.
+    3.  Create items on the subscriber.
+|
+    |    1.  Update items on the syndicator.
+    2.  Delete items on the syndicator.
+    3.  Restore items on the syndicator.
+    4.  Purge items on the syndicator.
+|All items and versions|    1.  Update items on subscriber.
+    2.  Delete items on the subscriber.
+    3.  Restore items on the subscriber.
+    4.  No action.
+|    1.  Update items on subscriber.
+    2.  Delete items on the subscriber.
+    3.  Restore items on the subscriber.
+    4.  No action.
+|
 
     |Action on subscriber|Syndication type on syndicator|Rebuild: Action on Subscriber|Rebuild with mirror: Action on subscriber|
     |--------------------|------------------------------|-----------------------------|-----------------------------------------|
-    |    1.  Update Live items on the subscriber.|Published items|    1.  No action.|    1.  Revert Live items on the subscriber.|
-    |    1.  Update Live or Draft items on the subscriber. <br>2.  Delete Live items on the subscriber. <br>3.  Restore Live items on the subscriber. <br>|All items|    1.  No action. <br> 2.  Add items on the subscriber. <br>3.  Create items on the subscriber.|    1.  Revert items on the subscriber. <br>2.  Add items on the subscriber. <br>3.  Delete items on the subscriber.|
-    |    1.  Update Live or Draft items on the subscriber. <br> 2.  Delete Live items on the subscriber. <br>3.  Restore items on the subscriber. <br>4.  Create items on the subscriber.<br>5.  Purge items on the subscriber.|All items and versions|    1.  No action. <br> 2.  Add items on the subscriber. <br>3.  Delete items on the subscriber. <br>4.  No action. <br>5.  No action.|    1.  Revert items on the subscriber. <br>2.  Add items on the subscriber. <br>3.  Purge items on the subscriber. <br>4.  Purge items on the subscriber. <br>5.  No action.|
+    |    1.  Update Live items on the subscriber.
+|Published items|    1.  No action.
+|    1.  Revert Live items on the subscriber.
+|
+    |    1.  Update Live or Draft items on the subscriber.
+    2.  Delete Live items on the subscriber.
+    3.  Restore Live items on the subscriber.
+|All items|    1.  No action.
+    2.  Add items on the subscriber.
+    3.  Create items on the subscriber.
+|    1.  Revert items on the subscriber.
+    2.  Add items on the subscriber.
+    3.  Delete items on the subscriber.
+|
+    |    1.  Update Live or Draft items on the subscriber.
+    2.  Delete Live items on the subscriber.
+    3.  Restore items on the subscriber.
+    4.  Create items on the subscriber.
+    5.  Purge items on the subscriber.
+|All items and versions|    1.  No action.
+    2.  Add items on the subscriber.
+    3.  Delete items on the subscriber.
+    4.  No action.
+    5.  No action.
+|    1.  Revert items on the subscriber.
+    2.  Add items on the subscriber.
+    3.  Purge items on the subscriber.
+    4.  Purge items on the subscriber.
+    5.  No action.
+|
 
 16. Click **Finish**.
 
@@ -189,9 +238,10 @@ What can and cannot be syndicated:
 
 In the case where a security proxy is in place in front of the subscriber cluster, this host name is the host name of the security proxy. Syndication must be set up directly between the syndicator and subscriber, not through the security proxy. After creation of the syndication pair, the syndicator must be manually edited and changed to use the actual subscriber host name rather than the host name of the security proxy. Without this extra step, syndication will not be successful.
 
-<!--
-**Parent topic:**[How to manage syndicators and subscribers](../panel_help/wcm_syndication.md) -->
+**Parent topic:**[How to manage syndicators and subscribers](../panel_help/wcm_syndication.md)
 
-???+ info "Related information:"
-    - [Syndication](../index.md)
+**Related information**  
+
+
+[Syndication](../wcm/wcm_administering.md)
 

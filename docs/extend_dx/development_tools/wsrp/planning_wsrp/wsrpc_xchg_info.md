@@ -12,14 +12,14 @@ WSRP defines a set of four web service interfaces. Two of these web service inte
 |---------------------|-------------------------------------|-------------------------------------|
 |Service Description|Yes|Yes|
 |Markup|Yes|Yes|
-|Registration (optional)|No|Yes|
-|Portlet Management (optional)|Yes|Yes|
+|Registration \(optional\)|No|Yes|
+|Portlet Management \(optional\)|Yes|Yes|
 
 Currently, the WSRP Producer implementation of the portal does not support the Registration interface of the WSRP specification. However, the Consumer implementation of the portal can interoperate with Producers that support WSRP Registration interfaces.
 
 To set up communication with a Producer portal, the Consumer portal requires the following information from the Producer portal:
 
--   The WSDL (Web Services Description Language) service description document, which provides the following information:
+-   The WSDL \(Web Services Description Language\) service description document, which provides the following information:
     -   Descriptions of the WSRP interfaces and WSRP services that the Producer provides.
     -   Technical information, such as the service endpoint addresses.
 -   Information about the quality of service and security configuration of the WSRP services on the Producer portal.
@@ -42,8 +42,7 @@ To comply with the JAX-WS standard, the WSRP Producer of HCL Portal provides a s
 
 You can administer and configure each of the WSRP 1.0 and 2.0 service providers separately. You administer and configure them by using the administration clients of WebSphere Application Server. For example, you can use the WebSphere Integrated Solutions Console.
 
-!!!note
-    Do not change the configuration of the WSRP 2.0 service providers for portal-internal WSRP communication. These service providers are used internally by HCL Portal during client side aggregation. Remote consumer portals cannot access these service providers.
+**Note:** Do not change the configuration of the WSRP 2.0 service providers for portal-internal WSRP communication. These service providers are used internally by HCL Portal during client side aggregation. Remote consumer portals cannot access these service providers.
 
 ## Service clients and references of the WSRP Consumer
 
@@ -54,14 +53,15 @@ The following table lists the supported service clients and service references:
 | |WSRP 1.0|WSRP 2.0|
 |--|--------|--------|
 |Service client|`WSRPService`|`WSRPService_v2`|
-|Service reference|service/wsrp/WSRPService|service/wsrp/WSRPService_v2|
+|Service reference|service/wsrp/WSRPService|service/wsrp/WSRPService\_v2|
 
 The service clients support all WSRP service interfaces: Service Description, Markup, Portlet Management, and Registration.
 
-!!!note
-    The configuration of the WSRP service clients is managed outside HCL Portal. The portal WSRP Consumer supports all service client configurations that are configured in WebSphere Application Server. This support includes message level security, transport level security, and other quality of service configuration. However, the service client configuration of the WSRP Consumer must be compatible with the web service configuration of the WSRP Producer. Example: If the service providers of the Producer portal are configured for WS-Security, the service references of the Consumer portal must also be configured for WS-Security. Otherwise, the WSRP communication fails.
+**Note:** The configuration of the WSRP service clients is managed outside HCL Portal. The portal WSRP Consumer supports all service client configurations that are configured in WebSphere Application Server. This support includes message level security, transport level security, and other quality of service configuration. However, the service client configuration of the WSRP Consumer must be compatible with the web service configuration of the WSRP Producer. Example: If the service providers of the Producer portal are configured for WS-Security, the service references of the Consumer portal must also be configured for WS-Security. Otherwise, the WSRP communication fails.
 
 
-???+ info "Related information"  
-    -   [How Producer and Consumer portals communicate](../../wsrp/learning_wsrp/wsrpc_comint.md)
+**Related information**  
+
+
+[How Producer and Consumer portals communicate](../admin-system/wsrpc_comint.md)
 

@@ -84,13 +84,13 @@ The operations that you can do on the portal page site areas in the authoring po
 The portal page site area is a special site area. In addition, to the usual Web Content Manager data site area pages contain an XML document that represents the portal page in the portal release domain database. This XML document is updated whenever a new version of the page is created or during a JCR import.
 
 
-
--   **[System content associations](wcm_mngpages_sysmapping.md)**  
+<!--- 
+-   **[System content associations](../wcm/wcm_mngpages_sysmapping.md)**  
 System content associations are used to associate a portal page with its corresponding artifacts in HCL Web Content Manager. A system content association is an extension of the standard content association.
--   **[Best practices for pages](wcm_mngpages_bestpractice.md)**  
+-   **[Best practices for pages](../wcm/wcm_mngpages_bestpractice.md)**  
 Use these tips and guidelines to develop and deploy pages more effectively.
--   **[Troubleshooting pages](wcm_mngpages_trouble.md)**  
+-   **[Troubleshooting pages](../wcm/wcm_mngpages_trouble.md)**  
 When you work with pages, you might encounter problems that are related to projects, access rights, or other issues.
--   **[Known issues for pages](wcm_mngpages_limits.md)**  
-You can review known issues for pages. 
+-   **[Known issues for pages](../wcm/wcm_mngpages_limits.md)**  
+You can review known issues for pages. --->
 

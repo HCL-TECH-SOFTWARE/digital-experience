@@ -14,6 +14,8 @@ You can change which sets of modules are used to render a page quickly through t
 
 
 
-???+ info "Related information:"
-    -   [Resource Aggregator overview](../themeopt_reso_agg.md)
+**Related information**  
+
+
+[Resource Aggregator overview](../dev-theme/themeopt_reso_agg.md)
 

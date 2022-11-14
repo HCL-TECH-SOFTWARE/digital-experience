@@ -2,7 +2,7 @@
 
 The Enhanced Web Content Manager Content Template API available with HCL Digital Experience 9.5 CF172 and CF18 higher releases adds the ability to retrieve the configuration of the elements, for example, if an element is required or not. This option is also available to HCL Digital Experience 8.5 and 9.0 CF18 users.
 
-Prior to **HCL Digital Experience 9.5 CF172** and **CF18**, the **WCM REST API** allowed developers to retrieve content templates via/wps/mycontenthandler/wcmrest/ContentTemplate/id. As of **HCL Digital Experience 9.5 CF172** and **CF18**, developers can retrieve the prototype (the elements) via /wps/mycontenthandler/wcmrest/ContentTemplate/id/Prototype, and the details of the prototype elements via /wps/mycontenthandler/wcmrest/ContentTemplate/id/Prototype/elements. This option is also available to HCL Digital Experience 8.5 and 9.0 CF18 users.
+Prior to **HCL Digital Experience 9.5 CF172** and **CF18**, the **WCM REST API** allowed developers to retrieve content templates via/wps/mycontenthandler/wcmrest/ContentTemplate/id. As of **HCL Digital Experience 9.5 CF172** and **CF18**, developers can retrieve the prototype \(the elements\) via /wps/mycontenthandler/wcmrest/ContentTemplate/id/Prototype, and the details of the prototype elements via /wps/mycontenthandler/wcmrest/ContentTemplate/id/Prototype/elements. This option is also available to HCL Digital Experience 8.5 and 9.0 CF18 users.
 
 ## Enhancements to the WCM Content Template API
 
@@ -28,7 +28,7 @@ The following elements are available in WCM:
 -   Short Text
 -   Text
 
-New with **HCL Digital Experience 9.5 CF172** and **CF18** higher releases, for all elements, the API returns the following results (the following sample presented is in XML for none/false/false). This option is also available to HCL Digital Experience 8.5 and 9.0 CF18 users:
+New with **HCL Digital Experience 9.5 CF172** and **CF18** higher releases, for all elements, the API returns the following results \(the following sample presented is in XML for none/false/false\). This option is also available to HCL Digital Experience 8.5 and 9.0 CF18 users:
 
 ```
 <properties>

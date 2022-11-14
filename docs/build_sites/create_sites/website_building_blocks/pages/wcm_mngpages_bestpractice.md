@@ -9,7 +9,7 @@ When you enable pages, you can create links to portal pages from within the auth
 -   By editing a content item in the rich text editor and inserting a link.
 -   By creating a link component.
 
-To create a link component from the authoring portlet select **New** \> **Component** \> **Link**. When creating the link, select the **Web Content** button and click **Browse content** to browse for the page in the Portal Site library.
+To select the portal page, click **Browse content** in the **Link** field, and browse to the page in the Portal Site library.
 
 Referential integrity applies for links to portal pages. You cannot delete a portal page if a link pointing to that page exists. You can view or remove such link references in the following ways:
 
@@ -43,3 +43,9 @@ Example:
     xsi:noNamespaceSchemaLocation="PortalConfig\_8.5.0.xsd"
     transaction-level="resource">
 ```
+
+## Associating extra metadata to a portal page
+
+When you need to associate extra metadata to a portal page, create a separate content item that stores the metadata and that can be referenced by using the portal page metadata. Since the portal page content template is not exposed as public API it is not advised to add elements to the portal page content item itself.
+
+

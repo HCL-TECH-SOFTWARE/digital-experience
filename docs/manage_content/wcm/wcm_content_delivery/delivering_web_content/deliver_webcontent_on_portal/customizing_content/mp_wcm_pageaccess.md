@@ -14,15 +14,17 @@ Page-based access control affects only the access control enforcement that is tr
 
 2.  For each content association for which you want to enable page-based access control, select **Use Portal Page Security** for the association.
 
-    !!! note
-        If the user creating the page does not have sufficient permissions to enable page-based access control, the check box is disabled. The following access rights must be defined:
+    **Note:** If the user creating the page does not have sufficient permissions to enable page-based access control, the check box is disabled. The following access rights must be defined:
 
-        -   Administrator @ wcm\_library, where wcm\_library represents the library containing the content that is associated to the web content page.
-        -   Administrator @ CONTENT\_MAPPINGS
-        -   Editor @ wcm\_page, where wcm\_page represents the web content page for which you want to enable page-based access.
+    -   Administrator @ wcm\_library, where wcm\_library represents the library containing the content that is associated to the web content page.
+    -   Administrator @ CONTENT\_MAPPINGS
+    -   Editor @ wcm\_page, where wcm\_page represents the web content page for which you want to enable page-based access.
 
 
-???+ info "Related information:"
-    - [Web content associations](../getting_started/wcm_delivery_contentmap_about.md)
-    - [Creating a web content page](../displaying_content/mp_wcm_createpage.md)
+**Related information**  
+
+
+[Web content associations](../wcm/wcm_delivery_contentmap_about.md)
+
+[Creating a web content page](../admin-system/mp_wcm_createpage.md)
 

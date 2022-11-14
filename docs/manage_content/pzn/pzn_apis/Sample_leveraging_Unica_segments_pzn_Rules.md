@@ -3,7 +3,7 @@
 In this document we outline sample code and steps to integrate Unica segments into PZN rules.
 
 ## PZN extension process
-The PZN extension process involves developing an application object and registering it inside PZN. The object has access to the current request data. More information can be found [here](../../pzn/pzn_terms/application_object/index.md).
+The PZN extension process involves developing an application object and registering it inside PZN. The object has access to the current request data. More information can be found [here](../../usage/personalization_terms/application_object/pzn_application_object.md).
 
 ## Unica segments
 
@@ -323,18 +323,18 @@ Compile the code, package in a jar file and place the jar file at **../wp_profil
 
 ### Loading the Application Object
 - Create an Application Object in PZN UI using the package details for the application object loaded in the above steps.
-![personalization-navigator](../../../images/personalization-navigator.png)
+![personalization-navigator](../../../../images/personalization-navigator.png)
 
 - Add the **Session key** and **Class Name** for the loaded Application Object with the qualified **Class Name** and click **Save**.
-![load-application-object ](../../../images/pzn_load-application-object.png)
+![load-application-object ](../../../../images/pzn_load-application-object.png)
 
 ## Leveraging the Application Object in a rule
 
 - Create a **Rule** and add the attribute of the Application Object created.. It shows the variable added in the loaded Application Object.
-![use-application-object-in-rules](../../../images/use-application-object-in-rules.png)
+![use-application-object-in-rules](../../../../images/use-application-object-in-rules.png)
 
 - Add the values to the segments, to compare it as per the rule creation.
-![pzn_create_rule](../../../images/pzn_create-rule.png)
+![pzn_create_rule](../../../../images/pzn_create-rule.png)
 
 - Preview the result in the **Preview Tab** from the navigator for the rule created.
-![pzn_check-rule-result](../../../images/pzn_check-rule-result.png)
+![pzn_check-rule-result](../../../../images/pzn_check-rule-result.png)

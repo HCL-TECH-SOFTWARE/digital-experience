@@ -10,7 +10,7 @@ The following procedure deletes all changes that are made to the Site Template L
 
 1.  Log in as the portal administrator.
 
-2.  Click **Administration > Portal Content > Web Content Libraries**.
+2.  Click **Administration** \> **Portal Content** \> **Web Content Libraries**.
 
 3.  Browse to the Site Builder Template Library and click the **Delete Library** icon.
 
@@ -22,7 +22,7 @@ The following procedure deletes all changes that are made to the Site Template L
 
 7.  Open the site-builder.properties or site-builder-zos.properties file in a text editor.
 
-8.  Set the value to true for SB_CONTENT and set the value to false for all other components.
+8.  Set the value to true for SB\_CONTENT and set the value to false for all other components.
 
     ```
     SB_APP=false
@@ -42,13 +42,17 @@ The following procedure deletes all changes that are made to the Site Template L
 
         `site-builder-install.bat`
 
-    -   **AIX® and Linux**
+    -   **AIX® HP-UX Linux™**
 
         `site-builder-install.sh`
 
+    -   **z/OS**
+
+        `site-builder-install-zos.sh`
+
     When the script finishes successfully, the installation is complete.
 
-11. Log in as the portal administrator and click **Administration > Portal Content > Web Content Libraries**.
+11. Log in as the portal administrator and click **Administration** \> **Portal Content** \> **Web Content Libraries**.
 
 12. Browse to the Site Builder Template Library. Click the **Set Permissions** icon.
 
@@ -69,5 +73,6 @@ The following procedure deletes all changes that are made to the Site Template L
 20. Click **Resources**.
 
 21. Click **Apply** and **Done**.
+
 
 

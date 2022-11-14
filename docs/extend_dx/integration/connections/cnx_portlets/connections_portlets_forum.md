@@ -22,3 +22,4 @@ You must have administrative access to the portlet to be able to configure it. C
 |------|-----------|
 |Display icon to open IBM Connections in a browser window|Display an icon so users can open Connections in a browser window to access the full application.|
 |Display page controls only in bottom bar|Hides the page controls in the header of the window. Clear the check box to display paging controls in the header as well as the footer of the page.|
+

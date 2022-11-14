@@ -2,7 +2,7 @@
 
 The layout and design of a personalization element is created in a similar way to a menu element, with a header design, footer design, and a design to be repeated for each result.
 
-## Creating a Personalized menu
+## Creating a **Personalized** menu
 
 1.  Create a content spot or personalization rule in Portal Personalization based on some Web Content Manager content.
 2.  Create a personalization element in Web Content Manager.

@@ -30,10 +30,15 @@ The itemType element indicates the type of item that is represented by the feed 
 |-------------------|-------------------------|
 |Applies to item types|All|
 |Required for item types|All|
-|Allowable Values|"siteArea" for site areas.<br>
-"content" for content items.<br>
-"component" for components.<br>
-"category" for taxonomies and categories.|
+|Allowable Values|"siteArea" for site areas.
+
+"content" for content items.
+
+"component" for components.
+
+"category" for taxonomies and categories.
+
+|
 |Required Attributes|None|
 |Optional Attributes|None|
 |Required sub-elements|None|

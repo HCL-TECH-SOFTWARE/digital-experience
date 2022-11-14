@@ -6,31 +6,48 @@ Use the Configuration Wizard to upgrade the node profiles for a cluster environm
 
 Select **Migrate to a New Version**, and choose the **Migrate a Cluster Step 2: Migrate Node Profiles** option.
 
-## Worksheet
+**Note:** This option is not available for IBM® z/OS®.
+
+
+**Related information**  
+
+
+[Troubleshooting: Migrate node profiles for a cluster environment](../trouble/cw_migrate_cluster2.md)
+
+[Configuration Wizard](../config/cw_overview.md)
+
+[Roadmap: Migrating a clustered environment](../migrate/rm_mig_cluster.md)
+
+[Accessing the Configuration Wizard](../config/cw_run.md)
+
+# Worksheet
 
 To set up the migration, you answer questions about your wanted configuration. Some fields apply to migration configurations. Some fields are required based on your environment. The remaining fields are advanced and do not apply to most configurations.
 
-### Minimal required fields
+## Minimal required fields
 
 The following table lists the fields that are unique to the Migrate a cluster step 2: Migrate node profiles configuration. You might be prompted for additional information about system or user IDs and passwords that you defined during the portal installation process.
 
 |Field Label|Default|Your Value|
 |-----------|-------|----------|
 |**Target operating system**|Linux™| |
-|**Target portal profile name**|wp_profile| |
-|**Target portal profile home directory**|/opt/IBM/WebSphere/wp_profile| |
+|**Target portal profile name**|wp\_profile| |
+|**Target portal profile home directory**|/opt/IBM/WebSphere/wp\_profile| |
 |**Is the target portal on the same server or a different server**|Same server| |
 |**WebSphere Application Server administrator**|wpsadmin| |
 |**WebSphere Application Server administrator password**| | |
-|**What is the portal profile name**|wp_profile| |
+|**What is the portal profile name**|wp\_profile| |
 |**What is the cell name**|CellName| |
 |**What is the portal node name**|NodeName| |
 |**What is the deployment manager node name**|dmgr| |
+|**Where is the source application server installed****IBMi only:** Provide the path to the source profile directory instead of the application server directory.
+
+|/opt/IBM/WebSphere/AppServer| |
 |**What is the new host name**| | |
 |**Where is the target application server installed**|/opt/IBM/WebSphere/AppServer| |
 |**Target temporary path**|/tmp| |
 
-### Advanced fields
+## Advanced fields
 
 The following table lists the advanced fields that are unique to the Migrate a cluster step 2: Migrate node profiles configuration option. Click **Advanced** on the Answer Questions page for the target system to see the advanced properties. Default values are provided for advanced fields that are required.
 
@@ -38,7 +55,7 @@ The following table lists the advanced fields that are unique to the Migrate a c
 |-----------|-------|----------|
 |**JVM heap size**|2048| |
 
-## Migrate a cluster step 2: Migrate node profiles option
+# Migrate a cluster step 2: Migrate node profiles option
 
 After you answer questions and provide information about your migration, the wizard generates a custom configuration procedure.
 
@@ -106,9 +123,12 @@ If you click **View Step Command**, you can see the task and properties that are
 
         none
 
-    !!!note
-        If you are migrating from HCL Portal Enable or Portal Extend offerings to Portal Server or Web Content Management offerings, complete the following steps manually. <br> 1.  Locate the backup of the source profile. For example, in the /tmp/wp_profile_bak directory. <br> 2.  Locate the wps.properties file in this directory. For example, /tmp/wp_profile_bak/PortalServer/wps.properties. <br> 3.  Open the wps.properties file in a text editor. Modify the value of the WPFamilyName to match your 8.5 licensed offering. For example, if you were on 8.0 Enable, and you purchased 8.5 Web Content Manager, you would modify from WPFamilyName=enable to WPFamilyName=wcm. Valid values for HCL Portal 8.5 include: server, enable, extend, wcm, and wse. <br> 4.  Save changes to the wps.properties file.
+    **Note:** If you are migrating from HCL Portal Enable or Portal Extend offerings to Portal Server or Web Content Management offerings, complete the following steps manually.
 
+    1.  Locate the backup of the source profile. For example, in the /tmp/wp\_profile\_bak directory.
+    2.  Locate the wps.properties file in this directory. For example, /tmp/wp\_profile\_bak/PortalServer/wps.properties.
+    3.  Open the wps.properties file in a text editor. Modify the value of the WPFamilyName to match your 8.5 licensed offering. For example, if you were on 8.0 Enable, and you purchased 8.5 Web Content Manager, you would modify from WPFamilyName=enable to WPFamilyName=wcm. Valid values for HCL Portal 8.5 include: server, enable, extend, wcm, and wse.
+    4.  Save changes to the wps.properties file.
 7.  Manual Step: Update the deployment manager settings
 
     -   **Condition**
@@ -160,9 +180,3 @@ If you click **View Step Command**, you can see the task and properties that are
         none
 
 
-
-???+ info "Related information"  
-    -   [Troubleshooting: Migrate node profiles for a cluster environment](../../../../deployment/manage/troubleshooting/troubleshooting_configwizard/cw_migrate_cluster2.md)
-    -   [Configuration Wizard](../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/index.md)
-    -   [Roadmap: Migrating a clustered environment](../../../../deployment/manage/migrate/planning_migration/rm_migration/rm_mig_cluster.md)
-    -   [Accessing the Configuration Wizard](../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/configuration/cw_run.md)

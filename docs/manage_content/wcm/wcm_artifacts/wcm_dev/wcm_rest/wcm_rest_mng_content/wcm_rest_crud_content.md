@@ -73,10 +73,11 @@ WCM content items or components managed in external resources can be retrieved u
 
 -   **Return body**
 
-    !!! note
-        -   For additional information regarding the structure for content and components reference, see [How to REST with components](wcm_rest_crud_component.md).
-        -   For additional information regarding the structure for content, see [How to use REST with content items](wcm_rest_crud_content.md).
-        **Sample for a content item that has a file and image element that are populated by linked Digital Asset Manager (external) references:**
+    **Note:**
+
+    -   For additional information regarding the structure for content and components reference, see [How to REST with components](wcm_rest_crud_component.md).
+    -   For additional information regarding the structure for content, see [How to use REST with content items](wcm_rest_crud_content.md).
+    **Sample for a content item that has a file and image element that are populated by linked Digital Asset Manager \(external\) references:**
 
     ```
     <?xml version="1.0" encoding="UTF-8"?><entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0">
@@ -193,12 +194,11 @@ WCM content items or components managed in external resources can be retrieved u
 
 This API lets developers find and retrieve all references to a Digital Asset Management asset or Web Content Manager item identified by its UUID.
 
-It is equivalent to the functionality in the user interface (for finding Web Content Manager items):
+It is equivalent to the functionality in the user interface \(for finding Web Content Manager items\):
 
-![](../../../../../../images/web_content_mgr_ref_ui.png "WCM Reference API UI")
+![](../images/web_content_mgr_ref_ui.png "WCM Reference API UI")
 
-!!! note
-    Currently, the Web Content Manager Reference API only supports the GET operation for retrieving items. To update items, the document outlines how to use existing APIs to make updates.
+**Note:** Currently, the Web Content Manager Reference API only supports the GET operation for retrieving items. To update items, the document outlines how to use existing APIs to make updates.
 
 ## Using the Web Content Manager Reference GET API:
 
@@ -258,7 +258,7 @@ None.
 
 Limitations
 
-Currently, Digital Asset Manager (DAM) UUID references for elements and components are found – but items are not retrieved from within Rich Text. Retrieval of UUID items in Rich Text will be supported in a later update.
+Currently, Digital Asset Management \(DAM\) UUID references for elements and components are found – but items are not retrieved from within Rich Text. Retrieval of UUID items in Rich Text will be supported in a later update.
 
 Return Body
 
@@ -750,6 +750,8 @@ For example:
 
 
 
-???+ info "Related information:"
-    - [The generic XML Digital Data Connector data sink](../../../../../../extend_dx/ddc/implementing_user_interactions/sending_data_to_webcontentviewer_portlet/generic_xml_ddc_sink/index.md)
+**Related information**  
+
+
+[The generic XML Digital Data Connector data sink](../social/plrf_use_gen_xml_ddc_datasink.md)
 

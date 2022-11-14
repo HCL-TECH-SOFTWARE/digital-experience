@@ -2,13 +2,14 @@
 
 The social rendering feature provides you with a set of predefined view definitions. You can add them to the pages of your HCL Portal and modify them according to your requirements. For example, you can define which types of social objects are listed, how they are filtered, sorted, and presented. These tasks are done by a page editor.
 
-!!! note
-    -   Social rendering view definitions are represented by Web Content Manager content items. Therefore, you can drag and drop these view definitions only to managed pages or pages that have an explicitly defined web content association to a site area in Web Content Manager. For more information, see *Web content associations*.
-    -   The list view definitions that are provided with social rendering use the HCL Connections search service remote API to retrieve the social objects that are displayed in the list. This action has the following consequences:
+**Notes:**
 
-        -   Only information that is available in the HCL Connections search feed can be displayed in the social lists.
-        -   Updates to social objects in HCL Connections do not appear in the social lists that are provided with social rendering until the index of the HCL Connections search service was updated.
-        For more details about how to administer the HCL Connections search service, read the information about *Administering Search* in the HCL Connections product documentation.
+-   Social rendering view definitions are represented by Web Content Manager content items. Therefore, you can drag and drop these view definitions only to managed pages or pages that have an explicitly defined web content association to a site area in Web Content Manager. For more information, see *Web content associations*.
+-   The list view definitions that are provided with social rendering use the HCL Connections search service remote API to retrieve the social objects that are displayed in the list. This action has the following consequences:
+
+    -   Only information that is available in the HCL Connections search feed can be displayed in the social lists.
+    -   Updates to social objects in HCL Connections do not appear in the social lists that are provided with social rendering until the index of the HCL Connections search service was updated.
+    For more details about how to administer the HCL Connections search service, read the information about *Administering Search* in the HCL Connections product documentation.
 
 
 1.  To add a social rendering view definition to a portal page and modify it as required, proceed as follows:
@@ -52,8 +53,12 @@ The social rendering feature provides you with a set of predefined view definiti
 
 
 
-???+ info "Related information:"
-    - [Customizing social list definitions by using inline editing](../customizing_view_definitions/soc_rendr_cust_socl_list.md)
-    - [Web content associations](../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/getting_started/wcm_delivery_contentmap_about.md)
-    - [Administering Portal Search](../../search/portal_search/administer_portal_search/index.md)
+**Related information**  
+
+
+[Customizing social list definitions by using inline editing](../social/soc_rendr_cust_socl_list.md)
+
+[Web content associations](../wcm/wcm_delivery_contentmap_about.md)
+
+[Administering Portal Search](../admin-system/srtadmsrch.md)
 

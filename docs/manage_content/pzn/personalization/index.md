@@ -49,6 +49,6 @@ Rules are used to define how your website interacts with individuals and groups 
 A content spot is a placeholder for a personalization rule on a web page. When you create a content spot, you associate a business rule with it. This association is referred to as mapping or linking the personalization rule to a content spot.
 4.  [Publish your rules to production](oob_pzn_publish.md)  
 You can publish selected rules or the full workspaces from the personalization navigator. Before you publish, you must define the publishing server.
-5.  [Personalization](../personalization/personalization_2/index.md)  
+5.  [Personalization](pznOverviewHelp.md)  
 Personalization allows a portal or website to choose which content appears for particular site visitors. For example, a site that uses Personalization can show different news articles to managers than to regular employees, or different information to valued customers.
 

@@ -30,7 +30,7 @@ By default, syndicated projects can be published only on the server the project 
 This behavior can be changed by using the configuration property wcm.publishProjectOnSubscriberEnabled. When set to true, users can publish projects on subscriber.
 
 1.  Log in to the WebSphere® Integrated Solutions Console.
-2.  Click **Resources > Resource Environment > Resource Environment Providers > WCM WCMConfigService > Custom properties**
+2.  Click **Resources** \> **Resource Environment** \> **Resource Environment Providers** \> **WCM WCMConfigService** \> **Custom properties**
 
     **Cluster note:** If you are using this web content server as part of a cluster, ensure that you use the WebSphere Integrated Solutions Console for the deployment manager when you edit configuration properties.
 
@@ -38,12 +38,13 @@ This behavior can be changed by using the configuration property wcm.publishProj
     -   Property name: wcm.publishProjectOnSubscriberEnabled
     -   Value: `true`
 
-!!!restriction
-    -   While manually syndicating by using **Update** or **Rebuild** will continue to change items in a published project, only [**Rebuild with mirror**](../../wcm_content_delivery/syndication/manage_synd_subs/wcm_syndication_manual.md) will revert the project itself to an unpublished state after publishing on a subscriber. Any syndication option other than **Rebuild with mirror** results in a history on the subscriber that is written as though the project was published and that items were then changed to match the syndicator.
-    -   If a project is published on a syndicator, publishing the same project on the subscriber removes its association with the project on the syndicator. Changes to items continue to syndicate, but the project item itself is no longer synchronized.
-    -   If a **Rebuild with mirror** occurs while a large project is publishing on a subscriber, it might revert only some of the items while others continue to publish. Using **Rebuild with mirror** again after the project is finished publishing reverts it completely.
-    -   Syndication does not always delete the project item on the subscriber when a project is deleted on the Syndicator even when all the items in the project are deleted on both servers. You might then need to delete the empty project item itself on the subscriber.
-    -   Project templates are not syndicated.
-    -   Workflows set to immediately publish drafts are not supported by projects.
+**Restriction:**
+
+-   While manually syndicating by using **Update** or **Rebuild** will continue to change items in a published project, only [**Rebuild with mirror**](../panel_help/wcm_syndication_manual.md) will revert the project itself to an unpublished state after publishing on a subscriber. Any syndication option other than **Rebuild with mirror** results in a history on the subscriber that is written as though the project was published and that items were then changed to match the syndicator.
+-   If a project is published on a syndicator, publishing the same project on the subscriber removes its association with the project on the syndicator. Changes to items continue to syndicate, but the project item itself is no longer synchronized.
+-   If a **Rebuild with mirror** occurs while a large project is publishing on a subscriber, it might revert only some of the items while others continue to publish. Using **Rebuild with mirror** again after the project is finished publishing reverts it completely.
+-   Syndication does not always delete the project item on the subscriber when a project is deleted on the Syndicator even when all the items in the project are deleted on both servers. You might then need to delete the empty project item itself on the subscriber.
+-   Project templates are not syndicated.
+-   Workflows set to immediately publish drafts are not supported by projects.
 
 

@@ -42,9 +42,10 @@ The markup fragments are cached in the `com.ibm.workplace.wcm.pzn.plr.ListRender
 
 Using the list rendering cache as described here can improve performance by caching fully rendered markup fragments.
 
-!!! note
-    -   The ListRenderingCache plug-ins cache the cached markup only if you enabled the ListRenderingCache. Rendering the list on a cache hit can then be faster than with the ListRenderingCache disabled.
-    -   If you disable the ListRenderingCache, caching is not active, but all markup generated between the start and the stop action on the ListRenderingCache plugin is rendered normally.
+**Notes:**
+
+-   The ListRenderingCache plug-ins cache the cached markup only if you enabled the ListRenderingCache. Rendering the list on a cache hit can then be faster than with the ListRenderingCache disabled.
+-   If you disable the ListRenderingCache, caching is not active, but all markup generated between the start and the stop action on the ListRenderingCache plugin is rendered normally.
 
 When you use the list rendering cache, you can still have context dependent data in the markup. By default, all values of non-lazy computed item attributes and list properties are not cached with the markup, but recomputed with every rendering. This way, state dependent data, for example stateful portal URLs, continue to work as expected. If you want to improve performance even more, you can cache the full markup. To do so add a `type="static"` parameter to the render action as follows:
 
@@ -52,9 +53,14 @@ When you use the list rendering cache, you can still have context dependent data
 [Plugin:ListRenderingCache action="render" type="static" elementName=""]
 ```
 
-???+ info "Related information:"
-    - [Extending social lists by using the digital data connector](../../../../../../../build_sites/social_rendering/extending_social_lists_using_ddc/index.md)
-    - [Implementing user interactions](../../../../../../../extend_dx/ddc/implementing_user_interactions/index.md)
-    - [Creating the HTML form](../../../../../../../extend_dx/ddc/implementing_user_interactions/sending_data_to_webcontentviewer_portlet/plrf_sendata2wcv_createhtmlform.md)
-    - [Digital Data Connector cache tuning](../../../../../../../extend_dx/ddc/ddc_cache_tuning/index.md)
+**Related information**  
+
+
+[Extending social lists by using the digital data connector](../social/soc_rendr_xtnd_sl_by_plrf.md)
+
+[Implementing user interactions](../social/plrf_impl_user_interactns.md)
+
+[Creating the HTML form](../social/plrf_sendata2wcv_createhtmlform.md)
+
+[Digital Data Connector cache tuning](../social/plrf_cach_tune.md)
 

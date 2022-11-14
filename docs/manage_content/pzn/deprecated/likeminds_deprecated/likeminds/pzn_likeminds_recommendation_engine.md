@@ -23,6 +23,6 @@ If you want your application to predict a matching product to go with a user's s
 
 Depending on the type of recommendation you want to extract, the specific engines must be configured, such as the Preference Engine or Item Affinity Engine. The following image shows the details of the overall LikeMinds Recommendation Engine architecture.
 
-![LikeMinds Recommendation Engine architecture](../../../../../images/lpsparts.jpg)
+![LikeMinds Recommendation Engine architecture](../images/lpsparts.jpg)
 
 

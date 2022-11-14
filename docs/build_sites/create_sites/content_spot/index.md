@@ -30,6 +30,8 @@ From Details, you can learn the following information about your content item:
 -   Summary of when the content item was last updated, created, and workflow status.
 -   Location information that includes the path to the content item in the web content library and any associated project name.
 
-???+ info "Related information" 
-    -   [Content settings](../../../manage_content/wcm/wcm_content_delivery/wcm_user_assistance/editing_webcontent_portlet/editing_setting_of_web_content_viewer/wcm_config_wcmviewer_hcontent.md)
+**Related information**  
+
+
+[Content settings](../panel_help/wcm_config_wcmviewer_hcontent.md)
 

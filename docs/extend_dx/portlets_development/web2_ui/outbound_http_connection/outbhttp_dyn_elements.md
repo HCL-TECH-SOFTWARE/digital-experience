@@ -2,7 +2,7 @@
 
 In some cases, it is useful to control configuration settings at run time. For example, an administrator might want to have the program decide at run time which policy rule is applied. In another scenario, parts of a policy rule configuration that are known only at run time must be included in the configuration.
 
-Enabling and disabling policy rules: Administrators can use the metadata parameter `active` to enable or disable the policy rule to which the metadata belongs. Instead of setting a static metadata value to `true` or `false`, the administrator can set a variable token. The following example uses this feature to disable policy mappings. For more details, read the information about *deactivate policy rules, mappings, or custom connection filters* under [Description of the outbound HTTP connection configuration script](../outbound_http_connection/cfg_outbound_http_connections/xml_format_outbound_http/desc_outbound_http_cfg_script/index.md).
+Enabling and disabling policy rules: Administrators can use the metadata parameter `active` to enable or disable the policy rule to which the metadata belongs. Instead of setting a static metadata value to `true` or `false`, the administrator can set a variable token. The following example uses this feature to disable policy mappings. For more details, read the information about *deactivate policy rules, mappings, or custom connection filters* under *Description of the outbound HTTP connection configuration script*.
 
 The following example deactivates multiple policy rules, depending on a single policy variable:
 

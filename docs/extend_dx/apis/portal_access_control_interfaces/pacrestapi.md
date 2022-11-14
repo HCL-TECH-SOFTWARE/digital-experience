@@ -156,12 +156,12 @@ Parameters -
 The HTTP `GET` method
 
 -   Provides all members mapped to a single role for a resource.
--   Equivalent Portal Access Control Java API - accessControlHome.getRoleData(resourceID).getMappedPrincipals(roleType)
+-   Equivalent Portal Access Control Java API - accessControlHome.getRoleData\(resourceID\).getMappedPrincipals\(roleType\)
 -   Returns 200 if successful.
 -   Returns 404 if `resourceID` cannot be resolved.
 -   Returns 400 if `roleTypeName` is not applicable.
 
-The following code is the result of the `GET` method. Each entry element in the member collection contains a single member element that specifies the member identity. The edit link can be used to remove the member from the role (DELETE on member feed).
+The following code is the result of the `GET` method. Each entry element in the member collection contains a single member element that specifies the member identity. The edit link can be used to remove the member from the role \(DELETE on member feed\).
 
 ```
 <atom:entry ...>
@@ -226,7 +226,7 @@ As an alternative to `ac:id`, which is used to identify a Principal by using the
 
 -   **`ac:DN="uid=wpsadmin,o=defaultWIMFileBasedRealm"`**
 
-    Specifies the principal by using the distinguished name. The type can be user, group, or virtual (for virtual principals), where user is the default. Valid Virtual Principals are the ones defined in the following Javadoc: com.ibm.portal.um.PumaEnvironment.VirtualPrincipalNames and are currently all authenticated portal users, all portal user groups, and anonymous portal user.
+    Specifies the principal by using the distinguished name. The type can be user, group, or virtual \(for virtual principals\), where user is the default. Valid Virtual Principals are the ones defined in the following Javadoc: com.ibm.portal.um.PumaEnvironment.VirtualPrincipalNames and are currently all authenticated portal users, all portal user groups, and anonymous portal user.
 
 -   **`ac:email="wpsadmin@de.ibm.com"`**
 
@@ -248,7 +248,7 @@ The HTTP `GET` method
 
 -   Returns information about a single role available for given resource.
 -   Role is only available if at least one principal is mapped to it, otherwise returns 404.
--   Equivalent Portal Access Control Java API - accessControlHome.getRoleData(resourceID).getRole(RoleType).
+-   Equivalent Portal Access Control Java API - accessControlHome.getRoleData\(resourceID\).getRole\(RoleType\).
 -   Returns 200 if successful.
 -   Returns 404 if
     -   `resourceID` cannot be resolved.
@@ -444,7 +444,7 @@ As an alternative to `ac:id`, which is used to identify the owner by using the `
 
 -   **`ac:DN="uid=wpsadmin,o=defaultWIMFileBasedRealm" ac:type=user`**
 
-    Specifies the principal by using the distinguished name. The type can be user, group, or virtual (for virtual principals), where user is the default.
+    Specifies the principal by using the distinguished name. The type can be user, group, or virtual \(for virtual principals\), where user is the default.
 
 -   **`ac:email="wpsadmin@de.ibm.com"`**
 

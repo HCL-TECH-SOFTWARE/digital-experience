@@ -12,20 +12,22 @@ The inline editing feature requires:
 -   When using inline editing with page components, users must have Editor access to the Portal Site library.
 
 
-!!! important
-    This feature can be enabled or disabled by enabling or disabling the content targeting feature and application objects. For more information, see *Installing content targeting features and application objects*.
+**Important:** This feature can be enabled or disabled by enabling or disabling the content targeting feature and application objects. For more information, see *Installing content targeting features and application objects*.
 
-!!! note
-    When a user tabs between in-place editing enabled fields, users need to click each field in turn to access in-place editing for each field.
+**Note:** When a user tabs between in-place editing enabled fields, users need to click each field in turn to access in-place editing for each field.
 
--   **[Updating sample template items for inline editing after an upgrade installation \| HCL Web Content Manager](wcm_dev_inline_upgrade.md)**  
+-   **[Updating sample template items for inline editing after an upgrade installation \| HCL Web Content Manager](../wcm/wcm_dev_inline_upgrade.md)**  
 HCL Web Content Manager includes sample content such as web content template pages and predefined portlets that you can add to pages to render content. If you upgrade, these sample web content template items continue to use the editing method of the earlier release. To use the inline editing method with the earlier template items, you must complete several manual steps.
--   **[Enabling inline editing for content items](wcm_dev_inline_tags.md)**  
+-   **[Enabling inline editing for content items](../wcm/wcm_dev_inline_tags.md)**  
 You can enable inline editing for content item fields in your site design.
 
 
-???+ info "Related information:"
-    - [Creating an editable property tag](../../../wcm_artifacts/tags/creating_web_content_tags/wcm_dev_item-details_property_edit.md)
-    - [Creating an editable element tag](../../../wcm_artifacts/tags/creating_web_content_tags/wcm_dev_referencing_elements_edit.md)
-    - [Creating an If Edit Mode tag](../../../wcm_artifacts/tags/creating_web_content_tags/wcm_dev_tag_ifeditmode.md)
+**Related information**  
+
+
+[Creating an editable property tag](../panel_help/wcm_dev_item-details_property_edit.md)
+
+[Creating an editable element tag](../panel_help/wcm_dev_referencing_elements_edit.md)
+
+[Creating an If Edit Mode tag](../panel_help/wcm_dev_tag_ifeditmode.md)
 

@@ -6,10 +6,13 @@ The WSRP web services conform to the JAX-WS standard. To create and process cust
 
 By default, the WSRP Producer and WSRP Consumer do not use any handler.
 
-!!!note "Migration note"
-    Up to HCL Portal Version 8.0, WSRP was based on the JAX-RPC standard. If you upgrade your HCL Digital Experience from Version 8.0 to Version 8.5, you must reimplement your existing JAX-RPC compliant handlers to comply with JAX-WS.
+**Migration note:** Up to HCL Portal Version 8.0, WSRP was based on the JAX-RPC standard. If you upgrade your HCL Digital Experience from Version 8.0 to Version 8.5, you must reimplement your existing JAX-RPC compliant handlers to comply with JAX-WS.
 
 Before you can use a custom handler, you must first create a handler implementation according to the JAX-WS specification. For details about the handler framework, read the JAX-WS specification. For information about how to use handlers with JAX-WS web services, read the appropriate information in the WebSphere® Application Server documentation.
 
+-   **[WSRP Producer portal](../admin-system/wsrpt_websrvc_handlers_prod.md)**  
+Learn how to configure and use a handler on a WSRP Producer portal.
+-   **[WSRP Consumer portal](../admin-system/wsrpt_websrvc_handlers_cons.md)**  
+Learn how to configure and use a handler on a WSRP Consumer portal.
 
 

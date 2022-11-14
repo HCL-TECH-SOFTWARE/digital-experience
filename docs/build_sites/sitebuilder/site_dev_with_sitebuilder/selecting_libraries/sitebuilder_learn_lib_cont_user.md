@@ -4,6 +4,8 @@ title: Content libraries for sites created with Site Builder
 ---
 
 
+
+
 The user that runs the Site Wizard can determine where the content for a new site will be stored. This selection does not apply to the Section Wizard. For sections, the content library is determined by the selected anchor page.
 
 A good practice is to store content in a library that is distinct from other site assets such as workflows, presentation and authoring templates and pages.

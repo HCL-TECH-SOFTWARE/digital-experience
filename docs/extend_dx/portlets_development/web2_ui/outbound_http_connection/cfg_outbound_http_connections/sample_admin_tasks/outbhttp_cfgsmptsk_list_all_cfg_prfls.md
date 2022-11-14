@@ -4,10 +4,17 @@ To create a file that contains all profiles that are registered at the outbound 
 
 1.  Start the following portal configuration engine task:
 
-    -   AIX® and Linux™:
+    -   AIX® HP-UX Linux™ Solaris z/OS®:
 
         ```
         ./ConfigEngine.sh list-outbound-http-connection-profiles 
+                          -DListFileName=/tmp/list.xml
+        ```
+
+    -   IBM® i:
+
+        ```
+        ConfigEngine.sh   list-outbound-http-connection-profiles 
                           -DListFileName=/tmp/list.xml
         ```
 

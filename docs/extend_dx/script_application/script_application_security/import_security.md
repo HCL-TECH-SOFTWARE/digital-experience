@@ -1,4 +1,4 @@
-# Imported Archive Security
+# Imported archive security
 
 There are constraints on the size and content of uploaded archives to add a layer of security when you import archives.
 
@@ -20,6 +20,6 @@ The import feature applies content filtering to ignore files of unsupported type
 -   .png
 -   .json
 
-You can override the configuration for some of these constraints. For more information, read [Custom configuration properties for Script Applications](../script_application_security/import_export_config.md).
+You can override the configuration for some of these constraints. For more information, read *Setting custom configuration properties for the Script Application*.
 
 

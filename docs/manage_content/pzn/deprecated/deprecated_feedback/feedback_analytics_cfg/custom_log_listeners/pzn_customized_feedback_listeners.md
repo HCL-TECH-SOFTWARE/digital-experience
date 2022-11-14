@@ -6,7 +6,7 @@ Perform the following steps to implement a custom feedback listener:
 
 1.  Implement a class that extends com.ibm.wcp.analysis.event.FeedbackListener. Override the handleEvent methods that accept the event type of interest.
 2.  Install the class file for your custom feedback listener in the classpath of the server where the Personalization run-time is installed.
-3.  Add the class name to the logListeners property in the FeedbackService.properties file, located in the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md)/PortalServer/config/config/services directory.
+3.  Add the class name to the logListeners property in the FeedbackService.properties file, located in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/config/config/services directory.
 4.  Ensure that the LoggingEnabled is set to true.
 5.  Restart the Personalization run-time server.
 

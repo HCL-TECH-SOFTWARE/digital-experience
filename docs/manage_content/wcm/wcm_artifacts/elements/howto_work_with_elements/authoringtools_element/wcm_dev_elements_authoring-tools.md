@@ -1,7 +1,4 @@
----
-title: The Authoring tools element
----
-# What is an Authoring tools element?
+# The Authoring tools element
 
 The authoring tool element is used to add authoring portlet functions to web pages.
 
@@ -14,7 +11,7 @@ You can add the following authoring portlet functions to a web page:
 
 Authoring tools can be referenced within presentation templates, menu element designs, and navigator element designs. When added to menus and navigators, the edit, delete, and approve functions are applied to each item displayed in a menu or navigator.
 
-## Creating an Authoring Tool Element
+## Creating an authoring tool element
 
 You can use an authoring tool element only by creating an authoring tool component. You cannot add an authoring tool element to authoring templates, site areas, or content items.
 
@@ -22,8 +19,7 @@ You can use an authoring tool element only by creating an authoring tool compone
 
 When content is previewed, users with access to an authoring tool are able to run various authoring portlet functions.
 
-!!!note
-    When content items that use a presentation template that includes an authoring tool are previewed, some functions are active and ready to use while other functions might not work as normal.
+**Note:** When content items that use a presentation template that includes an authoring tool are previewed, some functions are active and ready to use while other functions might not work as normal.
 
 The authoring tool is also visible on the published site.
 

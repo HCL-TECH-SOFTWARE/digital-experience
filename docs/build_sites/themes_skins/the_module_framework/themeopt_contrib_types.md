@@ -75,7 +75,10 @@ The only allowed subcontribution is JSON. For more information, see *Menu framew
 The only allowed subcontribution is `xslt`. You can use `xslt` to gather `xslt` resources along the module hierarchy.
 
 
-???+ info "Related information:"
-    - [Simple menu framework](../customizing_theme/menus/simple_menu_framework/index.md)
-    - [Dynamic content spots](../customizing_theme/dynamic_content_spots/index.md)
+**Related information**  
+
+
+[Simple menu framework](../dev-theme/themeopt_cust_menu.md)
+
+[Dynamic content spots](../dev-theme/themeopt_cust_jsp.md)
 

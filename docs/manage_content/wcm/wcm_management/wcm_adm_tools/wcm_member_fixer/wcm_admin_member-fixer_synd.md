@@ -24,9 +24,11 @@ To convert the case to lowercase, set this parameter to lower.
 |syndication.memberfixer.realm|In a federated security environment with multiple realms, you must specify the name of the realm to run the member fixer against using this parameter.|
 |syndication.memberfixer.norealmdn|In a federated security environment with multiple realms, the member fixer task can be used to check whether there are any users and groups that are referenced in items that are not under any of the base distinguished names that are defined for the realm and fix these references. To enable this, set this parameter to true.|
 
-!!! note
-    The Member fixer, when run automatically via Syndication, preserves the dates of the updated items.
+**Note:** The Member fixer, when run automatically via Syndication, preserves the dates of the updated items.
 
-???+ info "Related information"
-    - [Staging to production process](../../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_ovr.md)
+
+**Related information**  
+
+
+[Staging to production process](../deploy/dep_ovr.md)
 

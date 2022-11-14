@@ -17,7 +17,6 @@ Add your custom skin to the skins list to set it as the default skin for your th
 
 Your theme is now available for use on your portal. To verify, create a page, edit page properties, and assign your theme to the page.
 
-!!! note
-    Your custom theme uses ready-use modules, which are shared across themes and intentionally remain uncopied in the Theme Modules web application. For your theme to operate the Theme Modules web application must remain started in addition to the web application for your theme.
+**Note:** Your custom theme uses ready-use modules, which are shared across themes and intentionally remain uncopied in the Theme Modules web application. For your theme to operate the Theme Modules web application must remain started in addition to the web application for your theme.
 
 

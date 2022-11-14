@@ -17,8 +17,7 @@ You can set the portlet title that is displayed for the web content viewer as pa
 
 -   Select **Select from content** to use the value of the **Display title** field for the content item that is displayed by the portlet.
 
-    !!! note
-        If the web content viewer renders a site area, the title that is used is the display title of the site area itself and not the title of the default content of the site area.
+    **Note:** If the web content viewer renders a site area, the title that is used is the display title of the site area itself and not the title of the default content of the site area.
 
 -   Select **Select from element**, and enter the name of an element of the content item that the rendering portlet displays. The rendering portlet then uses the value of the element to set the title. The element must be of type `Text` or `Short Text`. If it has a different type or does not exist for the content item that the rendering portlet displays, the rendering portlet uses the default title of the portlet.
 
@@ -26,8 +25,7 @@ You can set the portlet title that is displayed for the web content viewer as pa
 
 You can set the page title that is part of the page header and that is normally displayed by the browser window title bar. If more than one portlet on the same page tries to set the page title, only one of these titles is used for the browser window title bar.
 
-!!! note
-    It is good practice to determine for only one portlet on the page to set the page display title to something different than the **Use default title** option. Preferably, use the portlet that contributes the main content on the page.
+**Note:** It is good practice to determine for only one portlet on the page to set the page display title to something different than the **Use default title** option. Preferably, use the portlet that contributes the main content on the page.
 
 -   Select **Use default title** to display the title that was set for the page in the administration portlet **Manage Pages**. Note that a setting that is different from the **Use default title** option means that this portlet tries to set the HTTP page title tag.
 -   Select **Set the following title**, and enter a page title to be used for all languages. If you leave the input field empty, the default title is used. To explicitly set the title to be empty, you must enter a blank.
@@ -39,8 +37,7 @@ You can set the page title that is part of the page header and that is normally 
 
 -   Select **Select from content** to display the **Display title** of the currently rendered content.
 
-    !!! note
-        If the web content viewer renders a site area, the title that is used is the display title of the site area itself and not the title of the default content of the site area.
+    **Note:** If the web content viewer renders a site area, the title that is used is the display title of the site area itself and not the title of the default content of the site area.
 
 -   Select **Select from element**, and enter the name of an element of the content item that the rendering portlet displays. The rendering portlet then uses the value of the element to set the title. The element must be of type Text or Short Text. If it has a different type or does not exist for the content item that the rendering portlet displays, the rendering portlet uses the default title of the page.
 
@@ -72,8 +69,7 @@ The cache expiration time determines how long the page is stored in a portlet fr
     Content is stored for the number of seconds specified in either a shared or a private portlet cache.
 
 
-!!! note
-    To cache the markup output of the web content viewer, the portlet fragment cache must be enabled. The HCL Portal documentation contains more information about the caching of portlet output and explains how to enable the portlet fragment cache.
+**Note:** To cache the markup output of the web content viewer, the portlet fragment cache must be enabled. The HCL Portal documentation contains more information about the caching of portlet output and explains how to enable the portlet fragment cache.
 
 ## Bypass Web Content Manager Caching
 

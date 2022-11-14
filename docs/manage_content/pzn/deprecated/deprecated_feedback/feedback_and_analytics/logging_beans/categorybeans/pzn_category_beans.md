@@ -28,9 +28,13 @@ Select content
 
 ```
 
--   **[Implementing category logging](pzn_implement_category_logging.md)**  
+-   **[Implementing category logging](../pzn/pzn_implement_category_logging.md)**  
 To implement category logging, insert a Category bean into your JSP.
--   **[Category beans reference](pzn_category_beans_reference.md)**  
+-   **[Category beans reference](../pzn/pzn_category_beans_reference.md)**  
+Learn about the various method signatures of Category beans.
+-   **[Implementing category logging](../pzn/pzn_implement_category_logging.md)**  
+To implement category logging, insert a Category bean into your JSP.
+-   **[Category beans reference](../pzn/pzn_category_beans_reference.md)**  
 Learn about the various method signatures of Category beans.
 
 

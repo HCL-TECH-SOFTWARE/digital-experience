@@ -2,10 +2,7 @@
 
 If you plan to use a SecureWay Security Server as an LDAP user registry, you must install and set up the server so that it communicates with HCL Digital Experience.
 
-## Procedure
-
 1.  Install SecureWay Security Server. Refer to [IBM® SecureWay™ Security Server for z/OS® and OS/390®](http://www.ibm.com/servers/eserver/zseries/zos/security/securityserver.html) for information.
-
 
 2.  Complete the following steps with the web administration tool to create the HCL Portal administrative user:
 
@@ -16,12 +13,10 @@ If you plan to use a SecureWay Security Server as an LDAP user registry, you mus
         3.  Type the **Base DN** name for the suffix; for example: dc=yourcompany,dc=com.
         4.  Click **Add**.
         5.  Click **OK** to save your changes.
-        
     2.  Open the appropriate LDIF file in the PortalServer_root/installer/wp.iim/ldif directory, with a text editor:
 
         -   Use the PortalUsers.ldif file as a working example and adapted appropriately to work with your LDAP server.
         -   Use the ContentUsers.ldif file for the IBM Content Manager group and user ID if you configured HCL Web Content Manager.
-        
     3.  Replace every dc=yourco,dc=com with your suffix.
 
     4.  Replace any prefixes and suffixes that are unique to your LDAP server.
@@ -36,14 +31,12 @@ If you plan to use a SecureWay Security Server as an LDAP user registry, you mus
 
     1.  Complete the following steps to create a directory suffix:
 
-        1.  Go to [IBM System i and IBMi Information Center](http://www-01.ibm.com/support/knowledgecenter/ssw_ibm_i/welcome), select the appropriate documentation version and go to **Networking > TCP/IP applications, protocols, and services > IBM Directory Server for iSeries (LDAP) > Administering Directory Server > General administration tasks > Adding and Removing Directory Server suffixes** for information.
+        1.  Go to [IBM System i and IBM i Information Center](http://www-01.ibm.com/support/knowledgecenter/ssw_ibm_i/welcome), select the appropriate documentation version and go to **Networking > TCP/IP applications, protocols, and services > IBM Directory Server for iSeries (LDAP) > Administering Directory Server > General administration tasks > Adding and Removing Directory Server suffixes** for information.
         2.  Stop and restart the LDAP server.
-        
     2.  Open the appropriate LDIF file in the PortalServer_root/installer/wp.iim/ldif directory, with a text editor:
 
         -   Use the PortalUsers.ldif file as a working example and adapted appropriately to work with your LDAP server.
         -   Use the ContentUsers.ldif file for the IBM Content Manager group and user ID if you configured HCL Web Content Manager.
-        
     3.  Replace every dc=yourco,dc=com with your suffix.
 
     4.  Replace any prefixes and suffixes that are unique to your LDAP server.

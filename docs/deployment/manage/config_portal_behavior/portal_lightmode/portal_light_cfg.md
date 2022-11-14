@@ -6,7 +6,7 @@ The default list of these applications whose initialization is deferred until fi
 
     1.  Log on to the WebSphere® Integrated Solutions Console.
 
-    2.  Select **Applications > Application Types > WebSphere Enterprise Applications**.
+    2.  Select **Applications** \> **Application Types** \> **WebSphere Enterprise Applications**.
 
     3.  Write down the names of the applications that you want to add to the list of lazy applications. Add only applications to the list that are not used by your usual scenarios and that are not required for portal start.
 
@@ -28,9 +28,7 @@ The default list of these applications whose initialization is deferred until fi
 
     -   To add an application to this list, type the required application names from the **WebSphere Enterprise Applications** list.
     -   To remove an application, comment out the appropriate application name or delete it from the list.
-    
-    !!!note
-        Make sure that your list of lazy applications does not contain any applications that are either required for portal startup or frequently used. Do not add portlet applications to the list that hold portal services or a plug-in for an Eclipse extension point. You can use the white list in the wp.base_TargetMapExclList.properties file as a reference. Never disable any of the applications that are listed in that properties file. For more information, see *Configuring developer mode on Windows*.
+    **Note:** Make sure that your list of lazy applications does not contain any applications that are either required for portal startup or frequently used. Do not add portlet applications to the list that hold portal services or a plug-in for an Eclipse extension point. You can use the white list in the wp.base\_TargetMapExclList.properties file as a reference. Never disable any of the applications that are listed in that properties file. For more information, see *Configuring developer mode on Windows*.
 
 6.  Save your changes.
 

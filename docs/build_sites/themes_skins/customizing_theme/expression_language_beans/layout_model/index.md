@@ -20,9 +20,9 @@ Attributes:
 
     -   **node**
 
-        Identifiable, or [NavigationNode](../nav_model/themeopt_el_bean_nav_node.md) object to look up the children; it must not be null.
+        Identifiable, or [NavigationNode](themeopt_el_bean_nav_node.md) object to look up the children; it must not be null.
 
-    Returns: An iterator with [NavigationNode](../nav_model/themeopt_el_bean_nav_node.md) objects; it is never null.
+    Returns: An iterator with [NavigationNode](themeopt_el_bean_nav_node.md) objects; it is never null.
 
 -   **get\(id\)**
 
@@ -43,11 +43,11 @@ Attributes:
 
         String or identifiable object of the navigation object; must not be null.
 
-    Returns: [LayoutModel](index.md) for the navigation node. Can be null.
+    Returns: [LayoutModel](themeopt_el_bean_lay_model.md) for the navigation node. Can be null.
 
 -   **hasChildren**
 
-    Determines whether the specified [NavigationNode](../nav_model/themeopt_el_bean_nav_node.md) has associated nodes.
+    Determines whether the specified [NavigationNode](themeopt_el_bean_nav_node.md) has associated nodes.
 
     Example:
 
@@ -59,13 +59,13 @@ Attributes:
 
     -   **node**
 
-        Identifiable, or [NavigationNode](../nav_model/themeopt_el_bean_nav_node.md) object to look up the children; it must not be null.
+        Identifiable, or [NavigationNode](themeopt_el_bean_nav_node.md) object to look up the children; it must not be null.
 
     Returns: Boolean; true if the node has children. Otherwise, it is false.
 
 -   **parent**
 
-    Access to the parent of a [NavigationNode](../nav_model/themeopt_el_bean_nav_node.md).
+    Access to the parent of a [NavigationNode](themeopt_el_bean_nav_node.md).
 
     Example:
 
@@ -77,7 +77,7 @@ Attributes:
 
     -   **node**
 
-        Identifiable or [NavigationNode](../nav_model/themeopt_el_bean_nav_node.md) object to look up the children; it must not be null.
+        Identifiable or [NavigationNode](themeopt_el_bean_nav_node.md) object to look up the children; it must not be null.
 
     Returns: LayoutNode; the parent node for the node if there is a parent. Otherwise, it is null.
 
@@ -97,7 +97,7 @@ Attributes:
 
     -   **node**
 
-        Identifiable or [NavigationNode](../nav_model/themeopt_el_bean_nav_node.md) object to look up the children; it must not be null.
+        Identifiable or [NavigationNode](themeopt_el_bean_nav_node.md) object to look up the children; it must not be null.
 
     Returns: a list of LayoutNodes representing the path from the root to the node.
 
@@ -113,6 +113,6 @@ Attributes:
 
     Parameters: none
 
-    Returns: [NavigationNode](../nav_model/themeopt_el_bean_nav_node.md); it is never null.
+    Returns: [NavigationNode](themeopt_el_bean_nav_node.md); it is never null.
 
 

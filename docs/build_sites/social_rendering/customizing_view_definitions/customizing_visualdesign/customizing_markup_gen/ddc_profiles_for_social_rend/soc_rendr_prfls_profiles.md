@@ -331,6 +331,8 @@ In addition to these attributes, the profiles connections profile also provides 
 
 
 
-???+ info "Related information"
-    - [Configuring globally how social object data is served](../../../../cfg_global_settings_social_rendering/soc_rendr_cfg_data_serve.md)
+**Related information**  
+
+
+[Configuring globally how social object data is served](../social/soc_rendr_cfg_data_serve.md)
 

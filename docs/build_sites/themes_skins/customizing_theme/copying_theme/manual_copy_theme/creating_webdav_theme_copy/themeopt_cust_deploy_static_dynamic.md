@@ -13,8 +13,7 @@ When you upload new resources on WebDAV, the theme cache is cleared automaticall
     -   The contents of the metadata.properties file
     -   The contents of the profiles folder, including all profiles files and updated module
     -   The theme\_lang.html files, including updated `dyn-cs:id` elements
-    !!! note
-        Ensure that the URI is encoded. If the URI contains any spaces or invalid characters, the theme does not work.
+    **Note:** Ensure that the URI is encoded. If the URI contains any spaces or invalid characters, the theme does not work.
 
 4.  Connect your WebDAV client to http://host:port/wps/mycontenthandler/dav/skinlist/.
 

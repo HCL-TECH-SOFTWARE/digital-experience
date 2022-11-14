@@ -81,8 +81,10 @@ As you can start dialogs by specifying dedicated transition endpoints, undetermi
  </dialog>
 ```
 
+**Parent topic:**[Transitions](../screenflow/transitions.md)
+
+**Related information**  
 
 
-???+ info "Related information"
-    -   [Configuration options](../../../cfg_opt.md)
+[Configuration options](../screenflow/cfg_opt.md)
 

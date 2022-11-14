@@ -19,14 +19,20 @@ To go the advanced path of working with social lists, proceed as follows:
 7.  To enable your page editors to create your own social lists, read *Creating custom authoring templates for social lists*. This work task is done by a website designer.
 
 
-???+ info "Related information:"
-    - [Integrating with HCL Connections](../../extend_dx/integration/connections/installation/index.md)
-    - [Working with lists of social objects](../social_rendering/working_with_social_objects/index.md)
-    - [Configuring global settings for social rendering](../social_rendering/cfg_global_settings_social_rendering/index.md)
-    - [Administering social lists](../social_rendering/administering_social_list/index.md)
-    - [Customizing view definitions for portal site visitors](../social_rendering/customizing_view_definitions/index.md)
-    - [Creating custom authoring templates for list definitions](../social_rendering/customizing_view_definitions/soc_rendr_create_cust_auth_templt.md)
+**Related information**  
 
 
-<!---
-[Roadmap: Integrating with HCL Connections](../../extend_dx/integration/connections/roadmap_connections.md)--->
+[Integrating with HCL Connections](../collab/i_coll_t_enable_lc.md)
+
+[Roadmap: Integrating with HCL Connections](../integrate/roadmap_connections.md)
+
+[Working with lists of social objects](../social/soc_rendr_tsk_socl_list.md)
+
+[Configuring global settings for social rendering](../social/soc_rendr_cfg_global.md)
+
+[Administering social lists](../social/soc_rendr_adm_socl_list.md)
+
+[Customizing view definitions for portal site visitors](../social/soc_rendr_shape_socl_list.md)
+
+[Creating custom authoring templates for list definitions](../social/soc_rendr_create_cust_auth_templt.md)
+

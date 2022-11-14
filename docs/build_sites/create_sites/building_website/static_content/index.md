@@ -36,16 +36,14 @@ When you write the static page, you can include it in your portal by using the M
 !!! note
     When a static page uses the default Portal 8.5 theme, Portal 8.0 theme, or Portal 7.0.0.2 theme, users can change the style of the page, but they cannot change the layout of the page or add content to it.
 
-
--   **[Creating a static page](../static_content/creating_static_page/index.md)**  
+<!--- 
+-   **[Creating a static page](../dev/spa_define_page.md)**  
 You can create a new portal page by starting with a static HTML file or an HTML fragment. If you revise the HTML, you can refresh the page to render the changes in the portal.
 -   **[Static resources](site_static_resources.md)**  
 In addition to the HTML file that describes the page, static pages can contain resources such as images, scripts, and styles. Learn about the static resources that are available when you are using static pages.
 -   **[Dynamic page metadata](site_dynamic_metadata.md)**  
 HTML defines some elements that refer to information that is managed as page metadata on portal pages. You can use the dynamic page metadata rewriting feature to place this information into the static HTML code automatically.
--   **[Including static content pages in your portal](../static_content/including_static_content_pages/index.md)**  
+-   **[Including static content pages in your portal](../admin-system/spa_include_page.md)**  
 You can create a new portal page by starting with a static HTML file or an HTML fragment. If you revise the HTML, you can refresh the page to render the changes in the portal. To include, update, and administer your static content pages, you can use any of the portal administration tools, Manage Pages portlet, XML configuration interface, or the Portal Scripting Interface.
-
-<!--
--   **[Using WebDAV to manage pages and static content](webdav_static.md)**  
+-   **[Using WebDAV to manage pages and static content](../admin-system/webdav_static.md)**  
 WebDAV for HCL Digital Experience provides a simple and easy way to administer portal resources. Both administrators and users can use it. --->

@@ -1,6 +1,6 @@
 # Configuration options
 
-To change the overall behavior of the HCL UX Screen Flow Manager, several configuration options are available. You specify the options as Resource Environment Provider (REP) properties.
+To change the overall behavior of the HCL UX Screen Flow Manager, several configuration options are available. You specify the options as Resource Environment Provider \(REP\) properties.
 
 You can enable or disable the Screen Flow Manager by using a single configuration switch. The switch can be found in the REP WP\_ConfigService for the portal configuration service
 
@@ -25,7 +25,7 @@ Property: `com.ibm.wps.pcm.dialog.default.priority`
 Property: `com.ibm.wps.pcm.dialog.default.dialogstep.display.endtransition`  
  Values: `true, false`  
  Default: `true`  
- Description: Use this property to determine whether the end transition is part of the set of dialog steps that is revealed by the dialog state display (DSD) (`true`) or not (`false`).
+ Description: Use this property to determine whether the end transition is part of the set of dialog steps that is revealed by the dialog state display \(DSD\) \(`true`\) or not \(`false`\).
 
 Property: `com.ibm.wps.pcm.dcx.jaxb.serialization.mode`  
  Values: `on, off, auto`  
@@ -36,9 +36,16 @@ Property: `com.ibm.wps.pcm.dcx.jaxb.serialization.mode`
 -   The value `auto` means that the data is JAXB marshaled only if required. The decision is computed by analyzing the class loader hierarchy.
 -   The value `off` means that the data is never JAXB marshaled. For more information, read *Packaging of event mappers and JAXB serialization.*
 
-???+ info "Related information"
-    -   [Other special transitions](../../extend_dx/screenflow/developing_screenflow/creating_dialog_def/transitions/othr_spl_trnstns.md)
-    -   [Execution priority](../../extend_dx/screenflow/developing_screenflow/creating_dialog_def/transitions/exe_priority.md)
-    -   [Packaging of event mappers and JAXB serialization](../../extend_dx/screenflow/advance_concepts/retrieve_store_event_payload/event_mappers/pkg_evntmpr_jaxb_srlztn.md)
-    -   [Start transitions and special events](../../extend_dx/screenflow/developing_screenflow/creating_dialog_def/transitions/strt_trnstn_spl_evnt.md)
+**Parent topic:**[HCL UX Screen Flow Manager](../screenflow/screenflow_intro.md)
+
+**Related information**  
+
+
+[Other special transitions](../screenflow/othr_spl_trnstns.md)
+
+[Execution priority](../screenflow/exe_priority.md)
+
+[Packaging of event mappers and JAXB serialization](../screenflow/pkg_evntmpr_jaxb_srlztn.md)
+
+[Start transitions and special events](../screenflow/strt_trnstn_spl_evnt.md)
 

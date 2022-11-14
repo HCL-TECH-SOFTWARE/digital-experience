@@ -11,7 +11,7 @@ DXClient is a tool that helps developers and administrators manage tasks, such a
 
 ## DXConnect
 
-DXConnect is a servlet-based application deployed on top of IBM WebSphere Application Server in the HCL DX 9.5 CF19 and later deployments, under the [Configuration Wizard profile - `cw_profile`](../portal_admin_tools/cfg_wizard/configuration/index.md#configuration-wizard-profile). DXConnect enables the DXClient tool to connect over an HTTP or HTTPS connection from a client development machine or remote server to a source or target HCL DX 9.5 server to execute certain tasks requested via DXClient commands.
+DXConnect is a servlet-based application deployed on top of IBM WebSphere Application Server in the HCL DX 9.5 CF19 and later deployments, under the [Configuration Wizard profile - `cw_profile`](https://help.hcltechsw.com/digital-experience/9.5/config/cw_overview.html). DXConnect enables the DXClient tool to connect over an HTTP or HTTPS connection from a client development machine or remote server to a source or target HCL DX 9.5 server to execute certain tasks requested via DXClient commands.
 
 ## Architecture
 
@@ -19,9 +19,9 @@ DXConnect is a servlet-based application deployed on top of IBM WebSphere Applic
 
 !!! note
 
-    1.  HCL DX 9.5 CF19 or later version is installed on target servers, on [supported on premises platforms](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03)(Microsoft Windows, Linux).
+    1.  HCL DX 9.5 CF19 or later version is installed on target servers, on [supported on premises platforms](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=17d6296a1b5df34077761fc58d4bcb03) \(Microsoft Windows, Linux or IBM AIX\).
     2.  Beginning with HCL DX 9.5 Container Update CF192 and later releases, the DXConnect Servlet is pre-configured and started on supported Red Hat OpenShift and Kubernetes platforms that DX 9.5 containers are deployed to.
-    3.  For supported on premises platforms with HCL DX 9.5 CF19 and later releases, the DXConnect application needs to be installed (refer to [DXConnect Installation](dxconnect.md#dxconnectinstall)) and started under the Configuration Wizard (`cw_profile`) on target servers. For more information on starting the Configuration Wizard, refer to [Accessing the Configuration Wizard](../portal_admin_tools/cfg_wizard/configuration/cw_run.md).
+    3.  For supported on premises platforms with HCL DX 9.5 CF19 and later releases, the DXConnect application needs to be installed \(refer to [DXConnect Installation](dxconnect.md#dxconnectinstall)\) and started under the Configuration Wizard \(`cw_profile`\) on target servers. For more information on starting the Configuration Wizard, refer to [Accessing the Configuration Wizard](https://help.hcltechsw.com/digital-experience/9.5/config/cw_run.html)
 
 !!! remember
     Configuration Wizard Administrator credentials are required to access the DXConnect application.
@@ -29,40 +29,34 @@ DXConnect is a servlet-based application deployed on top of IBM WebSphere Applic
 
 ## Installing using the Docker image
 
-### Prerequisites
-You must ensure that Docker is installed on the workstation.
+**Prerequisites:** You must ensure that Docker is installed on the workstation.
 
 !!! note
     When you upgrade to use the Docker image DXClient, you should first uninstall the nodejs DXClient.
 
-### Install using Docker
 DXClient docker image comes with a script that you can use to run the docker image. This script creates a store directory, and copies the input files from the absolute path to the shared volume location.
 
 See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr_frVlojc)
 
 1.  Navigate to <working-directory\> folder where you wish to use DXClient from.
+2.  Download the DXClient.zip file \(DXClient\_VX\_XXXXXXXX-XXXX.zip\) to a local directory on the local workstation from your HCL Digital Experience 9.5 CF196 or higher entitlements on the HCL Software License Portal.
 
-2.  Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your HCL Digital Experience 9.5 CF196 or higher entitlements on the HCL Software License Portal.
-
-    !!!note
+    !!! note
         If you are upgrading from the node to Docker image version of DXClient, you must first uninstall or unlink the current version using the following command before installing the newer version.
 
-    Syntax for Linux and Apple macOS platforms:
-        ```
-        make unlink
-        ```
+        Syntax for Linux and Apple macOS platforms:
+         ```
+         make unlink
+         ```
 
-    Syntax for Microsoft Windows platforms:
-        ```
-        make_unlink.bat
-        ```
+        Syntax for Microsoft Windows platforms:
+         ```
+         make_unlink.bat
+         ```
 
 3.  Extract the DXClient.zip file locally.
-
 4.  To work with multiple versions of DXClient, update the `IMAGE_TAG` reference in the scripts file under the `/bin` folder. For example, `IMAGE_TAG=v95_CF200_20211201-1021`. By default it will be set in the executable script.
-
 5.  Run docker load < dxclient.tar.gz.
-
 6.  Add the execution shell script to the bin directory to the PATH variable to be able to call dxclient from any directory.
 
     ```
@@ -85,11 +79,11 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 
 9.  Configuration, logger, output, and sample files under location - <working-directory\>/store.
 
-Common command arguments can be pre-configured inside the `config.json` file available under <working-directory>/store folder. A sample configuration file that could be used on-premises platforms in standalone, cluster platforms is also available under <working-directory>/store/samples/sample-configurations/default-config.json for reference.
+Common command arguments can be pre-configured inside the `config.json` file available under `<working-directory>/store` folder. A sample configuration file that could be used on-premises platforms in standalone, cluster platforms is also available under `<working-directory>/store/samples/sample-configurations/default-config.json` for reference.
 
 ## DXClient installation configuration
 
-Common command arguments can be pre-configured inside the `config.json` file available under dist/src/configuration folder. A sample configuration file that could be used for any of the supported Kubernetes platforms is also available under samples/sample-configurations.json for reference.
+Common command arguments can be pre-configured inside the `config.json` file available under `dist/src/configuration` folder. A sample configuration file that could be used for any of the supported Kubernetes platforms is also available under `samples/sample-configurations.json` for reference.
 
 ```
 {
@@ -131,12 +125,9 @@ Common command arguments can be pre-configured inside the `config.json` file ava
 
 ```
 
-## Installing using the node package file (deprecated in CF196)
+## Installing using the node package file \(deprecated in CF196\)
 
-### Prerequisites
-Node.js version 12.18.3 is the minimum supported version, and must be installed on the local workstation or automation server.
-
-### Install using node package file
+**Prerequisites:** Node.js version 12.18.3 is the minimum supported version, and must be installed on the local workstation or automation server.
 
 See video: [Getting Started with DXClient on Red Hat OpenShift using HCL Digital Experience Container Update CF194](https://www.youtube.com/watch?v=OphJ8-WcLxY)
 
@@ -148,22 +139,19 @@ See video: [Getting Started with DXClient on Red Hat OpenShift using HCL Digital
     !!! note
         If you are upgrading from CF19, CF191, or later releases, you should first unlink the current version using the following command before installing the newer version.
 
-    Syntax for Linux and Apple macOS platforms:
-    ```
-    make unlink
-    ```
+        Syntax for Linux and Apple macOS platforms:
+        ```
+        make unlink
+        ```
 
-    Syntax for Microsoft Windows platforms:
-    ```
-    make_unlink.bat
-    ```
+        Syntax for Microsoft Windows platforms:
+        ```
+        make_unlink.bat
+        ```
 
 2.  Ensure that Node.js version 12.18.3 or later version is installed to the local workstation. The DXClient tool is supported on Microsoft Windows, Linux, and Apple macOS workstations and automation servers.
-
-3.  Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your DX 9.5 CF19 or later entitlements on the [HCL Software License Portal](https://www.hcltech.com/software/support/release). Reference the [Docker](../../../get_started/system_requirements/docker/index.md) topic for the latest list of HCL DX 9.5 files available for download.
-
+3.  Download the DXClient.zip file \(DXClient\_VX\_XXXXXXXX-XXXX.zip\) to a local directory on the local workstation from your DX 9.5 CF19 or later entitlements on the [HCL Software License Portal](https://www.hcltech.com/software/support/release). Reference the [Docker](../../kubernetes/docker.md) topic for the latest list of HCL DX 9.5 files available for download.
 4.  Extract the DXClient.zip file locally.
-
 5.  From the extracted folder, run the following command.
 
     For Linux and Apple macOS platforms:
@@ -196,9 +184,9 @@ See video: [Getting Started with DXClient on Red Hat OpenShift using HCL Digital
     make_link.bat
     ```
 
-    !!!note
-        -   Avoid using this command when scripting deployments from an automation server (for example, in pipelines) as there is a chance of picking up the wrong dependencies during tool version upgrades.
-        -   If the `link` command is not used (such as on automation servers), then use the following command to run the application:<br><br>
+    !!! note
+        -   Avoid using this command when scripting deployments from an automation server \(for example, in pipelines\) as there is a chance of picking up the wrong dependencies during tool version upgrades.
+        -   If the `link` command is not used \(such as on automation servers\), then use the following command to run the application:
 
         For Linux and Apple MacOS platforms:
 
@@ -212,34 +200,36 @@ See video: [Getting Started with DXClient on Red Hat OpenShift using HCL Digital
         node bin/dxclient
         ```
 
-### DXClient node uninstalling
 
-To uninstall the DXClient tool, perform the following commands:
+**DXClient node uninstalling**
 
-For Linux and Apple MacOS platforms:
+ -   To uninstall the DXClient tool, perform the following commands:
 
-```
-make clean
-```
+    For Linux and Apple MacOS platforms:
 
-For Microsoft Windows platforms:
-```
-make uninstall.bat
-```
+    ```
+    make clean
+    ```
 
-To unlink the DXClient tool, perform the following commands:
+    For Microsoft Windows platforms:
+    ```
+    make uninstall.bat
+    ```
 
-For Linux and Apple MacOS platforms:
+-   To unlink the DXClient tool, perform the following commands:
 
-```
-make unlink
-```
+    For Linux and Apple MacOS platforms:
 
-For Microsoft Windows platforms:
+    ```
+    make unlink
+    ```
 
-```
-make_unlink.bat
-```
+    For Microsoft Windows platforms:
+
+    ```
+    make_unlink.bat
+    ```
+
 
 ## Verify the DXClient installation
 
@@ -247,96 +237,53 @@ Successful installation of the DXClient tool can be checked by using the "`dxcli
 
 Once installed, commands can be executed using the DXClient tool to perform CI / CD actions on HCL DX 9.5 servers.
 
-!!!note 
+!!! note 
     Refer to the list of features that were released in the following HCL DX 9.5 Container releases:
 
     -   HCL DX 9.5 CF201 release:
-        
-        -   An optional parameter `requestId` added to [Deploy theme](../dxclient/dxclient_artifact_types/themes.md), [Deploy application](../dxclient/dxclient_artifact_types/scriptapplications.md), [Restart DX Core server](../dxclient/dxclient_artifact_types/dxcoreserver.md), and [Manage virtual portals](../dxclient/dxclient_artifact_types/virtualportals.md).
-        
-        -   Retrieve feature added to the [Resource environment provider](../dxclient/dxclient_artifact_types/resourceenvironments.md).
-        
-        -   [Accessing ConfigWizard in a container environment](../dxclient/index.md#accessing-the-configwizard-admin-console-in-a-container-environment)
-        
-        -   Note that a few parameters are deprecated and replaced with new parameters in the DX Core configuration reports. For information, see [DX Core server configuration report](../dxclient/dxclient_artifact_types/dxcoreserver.md#dx-core-server-configuration-report)
-    
+        -   An optional parameter `requestId` added to [Deploy theme](../../administration/DXClient/dxclient_artifact_type/themes.md), [Deploy application](../../administration/DXClient/DXClientArtifactType/deployapplication.md), [Restart DX Core server](../../administration/DXClient/DXClientArtifactType/dxcoreserver.md), and [Manage virtual portals](../../administration/DXClient/DXClientArtifactType/virtualportals.md).
+        -   Retrieve feature added to the [Resource environment provider](../../administration/DXClient/DXClientArtifactType/resourceenvironments.md).
+        -   [Accessing ConfigWizard in container environment](https://help.hcltechsw.com/digital-experience/9.5/containerization/helm_access_configwizard.html)
+        -   Note that a few parameters are deprecated and replaced with new parameters in the DX Core configuration reports. For information, see [DX Core server configuration report](../DXClient/DXClientArtifactType/dxcoreserver.md)
     -   HCL DX 9.5 CF200 release:
-        
-        -   [Exporting and Importing WCM libraries](../dxclient/dxclient_artifact_types/wcmlibraries.md)
-
-        -   [DX Core server configuration report](../dxclient/dxclient_artifact_types/dxcoreserver.md#dx-core-server-configuration-report)
-
+        -   [Exporting and Importing WCM libraries](https://help.hcltechsw.com/digital-experience/9.5/containerization/wcmlibraries.html)
+        -   [DX Core server configuration report](../DXClient/DXClientArtifactType/dxcoreserver.md)
     -   HCL DX 9.5 CF199 release:
-        
-        -   [Sharing or staging DAM Assets](../../../manage_content/digital_assets/configuration/staging_dam/index.md)
-
-        -   [Create credential vault slot](../dxclient/dxclient_artifact_types/credentialvaultslot.md)
-
-        -   [Create syndication relation](../dxclient/dxclient_artifact_types/syndicatorsandsubscribers.md#create-syndication-relation)
-
-        -   [Resource environment provider](../dxclient/dxclient_artifact_types/resourceenvironments.md)
-
-        -   [Personalization rules](../dxclient/dxclient_artifact_types/personalization.md)
-    
+        -   [DAM Staging](../../../productfeatures/digital_asset_mgmt/staging_dam/dam_subscription_staging.md)
+        -   [Create credential vault slot](https://help.hcltechsw.com/digital-experience/9.5/containerization/credentialvaultslot.html)
+        -   [Create syndication relation](../../administration/DXClient/DXClientArtifactType/syndicatorsandsubscribers.md)
+        -   [Export and import multiple resource environment providers](../../administration/DXClient/DXClientArtifactType/resourceenvironments.md)
+        -   [Specify the context root for exporting and importing personalization rules](../../administration/DXClient/DXClientArtifactType/personalization.md)
     -   HCL DX 9.5 CF198 release:
-
-        -   [Listing DAM schemas](../dxclient/dxclient_artifact_types/dam_artifacts/damschemas.md#listing-dam-schemas)
-        
-        -   [Personalization export and import rules](../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_stage_check.md#personalization-rules-and-campaigns)
-        
-        -   [Resource environment provider](../dxclient/dxclient_artifact_types/resourceenvironments.md)
-        
-        -   [Manage virtual portals](../../../build_sites/virtual_portal/mng_vp/index.md)
-
+        -   [List DAM schemas](../../administration/DXClient/DXClientArtifactType/damschemas.md)
+        -   [Personalization export and import rules](../../administration/DXClient/DXClientArtifactType/personalization.md)
+        -   [Resource environment provider](../../administration/DXClient/DXClientArtifactType/resourceenvironments.md)
+        -   [Manage virtual portals](../../administration/DXClient/DXClientArtifactType/virtualportals.md)
     -   HCL DX 9.5 CF197 release:
-        
-        -   [Undeploy portlets](../dxclient/dxclient_artifact_types/portlets.md#undeploy-portlets)
-        
-        -   [Themes](../dxclient/dxclient_artifact_types/themes.md)
-        
-        -   [Deploy application](../dxclient/dxclient_artifact_types/scriptapplications.md#deploy-script-applications)
-        
-        -   [Manage-syndicator get-syndication-report](../dxclient/dxclient_artifact_types/syndicatorsandsubscribers.md)
-        
-        -   [Restart DX Core server](../dxclient/dxclient_artifact_types/dxcoreserver.md)
-        
-        -   [Deleting DAM schemas](../dxclient/dxclient_artifact_types/dam_artifacts/damschemas.md#deleting-dam-schemas)
-
+        -   [Undeploy portlets](../../administration/DXClient/DXClientArtifactType/portlets.md)
+        -   [Deploy and undeploy themes](../../administration/DXClient/DXClientArtifactType/themes.md)
+        -   [Deploy application](../../administration/DXClient/DXClientArtifactType/deployapplication.md)
+        -   [manage get-syndication report](../../administration/DXClient/DXClientArtifactType/syndicatorsandsubscribers.md)
+        -   [Restart Core](../../administration/DXClient/DXClientArtifactType/dxcoreserver.md)
+        -   [Delete DAM schema](../../administration/DXClient/DXClientArtifactType/damschemas.md)
     -   HCL DX 9.5 CF196 release:
-
-        -   [Shared library](../dxclient/dxclient_artifact_types/sharedlibrary.md)
-
+        -   [Shared library](../../administration/DXClient/DXClientArtifactType/sharedlibrary.md)
     -   HCL DX 9.5 CF195 release:
-
-        -   [Undeploy theme](../dxclient/dxclient_artifact_types/themes.md#undeploy-theme)
-
-        -   [MLS export and import of WCM library](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md)
-
+        -   [Undeploy theme](../../administration/DXClient/DXClientArtifactType/themes.md)
+        -   [MLS export and import of WCM library](https://help.hcltechsw.com/digital-experience/9.5/wcm/wcm_mls_export_import.html)
     -   HCL DX 9.5 CF193 release:
-
-        -   [Restart DX Core server](../dxclient/dxclient_artifact_types/dxcoreserver.md)
-
-        -   [Deploy application](../dxclient/dxclient_artifact_types/scriptapplications.md#deploy-script-applications)
-
-        -   [Managing syndicators](../dxclient/dxclient_artifact_types/syndicatorsandsubscribers.md#managing-syndicators)
-
-        -   [Managing subscribers](../dxclient/dxclient_artifact_types/syndicatorsandsubscribers.md#managing-subscribers)
-
+        -   [Restart DX Core server](../../administration/DXClient/DXClientArtifactType/dxcoreserver.md)
+        -   [Deploy Application](../../administration/DXClient/DXClientArtifactType/deployapplication.md)
+        -   [Managing syndicators](../../administration/DXClient/DXClientArtifactType/syndicatorsandsubscribers.md)
+        -   [Managing subscribers](../../administration/DXClient/DXClientArtifactType/syndicatorsandsubscribers.md)
     -   HCL DX 9.5 CF192 release:
-        
-        -   [Undeploy script applications](../dxclient/dxclient_artifact_types/scriptapplications.md#undeploy-script-applications)
-        
-        -   [Themes](../dxclient/dxclient_artifact_types/themes.md)
-    
+        -   [Undeploy script applications](../../administration/DXClient/DXClientArtifactType/scriptapplications.md)
+        -   [Deploy theme](../../administration/DXClient/DXClientArtifactType/themes.md) \(EAR and WebDAV based\)
     -   HCL DX 9.5 CF19 release:
-        
-        -   [Portlets](../dxclient/dxclient_artifact_types/portlets.md)
-        
-        -   [Deploy application](../dxclient/dxclient_artifact_types/scriptapplications.md#deploy-script-applications)
-        
-        -   [XML Access](../dxclient/dxclient_artifact_types/xmlaccess.md)
-        
-        -   [Restore Script Application](../dxclient/dxclient_artifact_types/scriptapplications.md#restore-script-application)
+        -   [Deploy Portlets](../../administration/DXClient/DXClientArtifactType/portlets.md) or [Undeploy portlets](../DXClient/DXClientArtifactType/portlets.md)
+        -   [Deploy script applications](../../administration/DXClient/DXClientArtifactType/scriptapplications.md)
+        -   [XML Access](../../administration/DXClient/DXClientArtifactType/xmlaccess.md)
+        -   [Restore Script Application](../../administration/DXClient/DXClientArtifactType/scriptapplications.md)
 
 ## DXClient commands
 
@@ -554,7 +501,10 @@ dxclient help [command]
 You can access the ConfigWizard admin console in a container environment from your local system. For more information, refer to [Accessing the ConfigWizard admin console in a container environment](https://help.hcltechsw.com/digital-experience/9.5/containerization/helm_access_configwizard.html).
 
 
+
 <!-- ???Info "Related information:"
+
+
 [How to translate WCM library content using export and import WCM with DXClient](../wcm/wcm_mls_export_import.md)
 
 [DXClient Artifact Types](../containerization/dxclientartifacts.md)

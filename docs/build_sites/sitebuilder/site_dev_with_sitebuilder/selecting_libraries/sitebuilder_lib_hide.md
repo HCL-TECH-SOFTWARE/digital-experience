@@ -4,6 +4,8 @@ title: Hiding libraries in Site Builder
 ---
 
 
+
+
 You can prevent libraries from being shown to website creators and administrators that use Site Builder on a particular server. When you hide a library, it does not display in Site Builder, either as a required library or as a library that can be chosen for storing content. Hidden libraries are also excluded from exported site template packages. The content library selection, "Use the existing portal content library \(Portal Site\)" is always shown to users.
 
 Before you start, you must know the library names that you want to hide.

@@ -6,8 +6,28 @@ The following table describes the provided WSRP application policy sets and the 
 
 |WSRP application policy sets|WSRP client policy set bindings|
 |----------------------------|-------------------------------|
-|-   **LTPA-based message authentication policy set**<br> This policy set defines LTPA token-based message authentication. It does not define other security mechanisms such as message confidentiality, or other web service mechanisms such as WS-Addressing.|-   **Username and LTPA-based message authentication client binding**<br> You must use this client policy set binding with each of the two WSRP policy sets. It defines the corresponding client binding.|
-|-   **Username-based message authentication policy set**<br> This policy set defines Username token-based message authentication. It does not define other security mechanisms such as message confidentiality, or other web service mechanisms such as WS-Addressing.|-   **Username and LTPA-based message authentication client binding** <br> You must use this client policy set binding with each of the two WSRP policy sets. It defines the corresponding client binding.|
+|-   **LTPA-based message authentication policy set**
+
+This policy set defines LTPA token-based message authentication. It does not define other security mechanisms such as message confidentiality, or other web service mechanisms such as WS-Addressing.
+
+
+|-   **Username and LTPA-based message authentication client binding**
+
+You must use this client policy set binding with each of the two WSRP policy sets. It defines the corresponding client binding.
+
+
+|
+|-   **Username-based message authentication policy set**
+
+This policy set defines Username token-based message authentication. It does not define other security mechanisms such as message confidentiality, or other web service mechanisms such as WS-Addressing.
+
+
+|-   **Username and LTPA-based message authentication client binding**
+
+You must use this client policy set binding with each of the two WSRP policy sets. It defines the corresponding client binding.
+
+
+|
 
 The WSRP application policy sets and client policy set bindings are contained in compressed format in the directory PortalServer/doc/policy-sets-samples of the portal installation.
 
@@ -21,13 +41,13 @@ To use the WSRP policy sets and client policy set bindings for service configura
 
     1.  Open the **Application policy sets** panel.
 
-    2.  Select **Import (From Selected Location)**.
+    2.  Select **Import \(From Selected Location\)**.
 
     3.  Select the LTPA-based message authentication policy set.zip file or the username-based message authentication policy set.zip file that you want to import.
 
     4.  Open the **General client policy set bindings** panel.
 
-    5.  Select **Import (From Selected Location)**.
+    5.  Select **Import \(From Selected Location\)**.
 
     6.  Select the LTPA-based message authentication client binding.zip file or username-based message authentication client binding.zip file that you want to import.
 
@@ -52,3 +72,10 @@ To use the WSRP policy sets and client policy set bindings for service configura
     8.  Save your changes to the master configuration.
 
 3.  After you have completed this configuration, restart your portal.
+
+
+
+**Previous topic:**[Communicating with Producer portals with different web service configurations](../admin-system/wsrpt_cons_cfg_wsrvc_clnt_xtra.md)
+
+**Next topic:**[Creating and deploying custom service references](../admin-system/wsrpt_cons_crt_cust_wsrvc_refs.md)
+

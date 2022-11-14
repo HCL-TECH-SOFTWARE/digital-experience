@@ -12,22 +12,22 @@ If you experience issues when you use the **Edit shared settings** or **Configur
 
 -   The best solution is to add the WSRP consumer as a trusted origin to the whitelist of the WSRP Producer. For more information, read *Manage CORS in HCL Portal*.
 
-    !!! note
-        If you choose this option, be aware that you might need to repeat this configuration after you upgrade or migrate your HCL Portal to a newer version.
+    **Note:** If you choose this option, be aware that you might need to repeat this configuration after you upgrade or migrate your HCL Portal to a newer version.
 
 -   Configure the WSRP resource proxy of the WSRP consumer to prevent it from forwarding the `Origin` HTTP header that CORS uses. If the requests do not contain the header, the remote web content portal does not reject the requests. For more information, read *Customizing the WSRP resource proxy HTTP header forwarding behavior*.
 
-    !!! note
-        If you choose this option, make sure that you fully understand the implications of removing the `Origin` HTTP header. The target server treats all requests that are made through the WSRP resource proxy as same-origin requests, even if the target server supports CORS and normally rejects requests from that domain.
+    **Note:** If you choose this option, make sure that you fully understand the implications of removing the `Origin` HTTP header. The target server treats all requests that are made through the WSRP resource proxy as same-origin requests, even if the target server supports CORS and normally rejects requests from that domain.
 
 -   Disable the CORS support of the WSRP Producer portal. To disable CORS, set the property `com.ibm.portal.csrf.enabled` of the portal WP Configuration Service resource environment provider to `false`. Then, restart your portal for the changes to take effect. For details, about how to set portal service configuration properties, read *Setting service configuration properties*.
 
-    !!! note
-        If you choose this option, make sure that you fully understand the implications of disabling the CORS support. With disabled CORS support, the portal accepts all cross-origin requests that it rejects if the CORS support is enabled.
+    **Note:** If you choose this option, make sure that you fully understand the implications of disabling the CORS support. With disabled CORS support, the portal accepts all cross-origin requests that it rejects if the CORS support is enabled.
 
 
 
-???+ info "Related information:"
-    - [Customizing the WSRP resource proxy HTTP header forwarding behavior](../../../../../../extend_dx/development_tools/wsrp/portal_wsrp_consumer/customizing_wsrp_cfg_consumer_portal/customizing_wsrp_resource_proxy/wsrpt_cons_cust_resproxy_frwrd.md)
-    - [Setting service configuration properties](../../../../../../deployment/manage/config_portal_behavior/service_config_properties/)
+**Related information**  
+
+
+[Customizing the WSRP resource proxy HTTP header forwarding behavior](../admin-system/wsrpt_cons_cust_resproxy_frwrd.md)
+
+[Setting service configuration properties](../admin-system/adsetcfg.md)
 

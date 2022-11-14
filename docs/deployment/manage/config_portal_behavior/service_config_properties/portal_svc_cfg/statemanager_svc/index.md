@@ -6,7 +6,7 @@ In the WebSphere® Integrated Solutions Console, the portal State Manager Servic
 
 The portal State Manager Service holds the following properties:
 
--   **preprocessors = (com.ibm.wps.state.preprocessors.selection.StandardPortalSelectionImpl )**
+-   **preprocessors = \(com.ibm.wps.state.preprocessors.selection.StandardPortalSelectionImpl \)**
 
     This property specifies a list of one or more preprocessors that are used. It can take multiple values.
 
@@ -32,12 +32,11 @@ The portal State Manager Service holds the following properties:
 
     Of the default values given, the following two selection preprocessors are alternative options. They process the page that the user selected. All other preprocessors are for portal internal use only and must not be changed.
 
-    !!!note
-        Both of the following selection preprocessors are mutually exclusive. They cannot be used in combination with each other.
+    **Note:** Both of the following selection preprocessors are mutually exclusive. They cannot be used in combination with each other.
 
     -   **com.ibm.wps.state.preprocessors.selection.StandardPortalSelectionImpl**
 
-        This value implements the standard portal selection behavior, which prefers displaying pages over displaying labels. Therefore, if a user selects a label, the portal displays a page under that label, rather than the label itself with the message that says that there is no content available. (In this case the page that is displayed is the last page that the user selected under this label, or if that page is not available, the first available page under the label.) This value is the default value.
+        This value implements the standard portal selection behavior, which prefers displaying pages over displaying labels. Therefore, if a user selects a label, the portal displays a page under that label, rather than the label itself with the message that says that there is no content available. \(In this case the page that is displayed is the last page that the user selected under this label, or if that page is not available, the first available page under the label.\) This value is the default value.
 
     -   **com.ibm.wps.state.preprocessors.selection.SimpleSelectionImpl**
 
@@ -49,7 +48,7 @@ The portal State Manager Service holds the following properties:
 
         This preprocessor creates a backup copy of the locale information that is found in the navigational state of the portal page to a cookie. A users's choice of language is lost when the navigational state is cleared. For example, the language information is lost if users use bookmarks to friendly URLs for navigation or if the navigational state is cleared intentionally. You can use this preprocessor to preserve the user's language choice. The language is then persisted to the next page that the user selects. When then user selects a different language, the portal updates the information in the cookie accordingly. You can also determine the maximum lifetime of the cookie that holds the language information. To do so, specify the following property in the State Manager Service:
 
-        -   **com.ibm.wps.state.preprocessors.locale.CookieSupportedLanguagePreProcessor.cookie.maxage = (-1)**
+        -   **com.ibm.wps.state.preprocessors.locale.CookieSupportedLanguagePreProcessor.cookie.maxage = \(-1\)**
 
             Specify an integer value. The value is interpreted as the number of seconds until the cookie is invalidated. A negative value, for example `-1`, means that the cookie is not deleted until the browser session is finished, for example by closing the web browser window. The default value for this property is `-1`, by which the cookie is not invalidated until the end of the browser session. Examples:
 
@@ -75,9 +74,9 @@ The portal State Manager Service holds the following properties:
 
     Use this property together with the `state.decoding.fallback` property in the portal WP configuration service. Set the values for the two properties in a consistent way.
 
--   **keymanager.lru.size = ( integer )**
+-   **keymanager.lru.size = \( integer \)**
 
-    Use this property to specify the history expiration limit of portal pages that users select. The number that you specify defines the minimum number of different pages that are selected by the user after which the portal can discard the render parameters of a page. (The decision whether the render parameters of the page are discarded depends on the expiration policy of the internal cache that stores the render parameters of those pages.) If the user returns to a page after the user selects the specified number of other pages and if the render parameters of that page expired, the portal displays that page in its default state.
+    Use this property to specify the history expiration limit of portal pages that users select. The number that you specify defines the minimum number of different pages that are selected by the user after which the portal can discard the render parameters of a page. \(The decision whether the render parameters of the page are discarded depends on the expiration policy of the internal cache that stores the render parameters of those pages.\) If the user returns to a page after the user selects the specified number of other pages and if the render parameters of that page expired, the portal displays that page in its default state.
 
     You can specify by which circumstances the render parameters of a page are stored or discarded:
 
@@ -93,9 +92,15 @@ The portal State Manager Service holds the following properties:
 
         Render parameters are always stored in the portal session memory and never discarded.
 
-    Do not specify a value less than zero (0**** ). Negative values are considered to be not valid.
+    Do not specify a value less than zero \(0**** \). Negative values are considered to be not valid.
 
 
-???+ info "Related information" 
-    -   [Selecting and changing the language](../../../../../../deployment/manage/portal_admin_tools/language_support/adsuplang.md)
+-   **[URL normalization for search of portal pages by external search engines](../admin-system/srvcfgref_url_normlz.md)**  
+You can configure the normalization of the URL of your portal. URL normalization is required to enable external search engines to crawl the content of your portal.
+
+
+**Related information**  
+
+
+[Selecting and changing the language](../admin-system/adsuplang.md)
 

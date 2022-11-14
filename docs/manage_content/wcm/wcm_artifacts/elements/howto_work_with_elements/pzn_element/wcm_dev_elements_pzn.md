@@ -12,8 +12,7 @@ A personalization element can:
 
 You can use a personalization element only by creating a personalization component. You cannot add a personalization element to authoring templates, site areas, or content items.
 
-!!!note
-    A maximum of 100 items can be displayed in a single Personalization element.
+**Note:** A maximum of 100 items can be displayed in a single Personalization element.
 
 ## Access controls
 

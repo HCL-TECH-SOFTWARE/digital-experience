@@ -6,6 +6,18 @@ Use the Configuration Wizard to migrate a stand-alone server environment. Use th
 
 Select **Migrate to a New Version**, and choose the **Migrate a Stand-alone Server** option.
 
+
+**Related information**  
+
+
+[Troubleshooting: Migrate a stand-alone server](../trouble/cw_migrate_standalone.md)
+
+[Configuration Wizard](../config/cw_overview.md)
+
+[Roadmap: Migrating a stand-alone server environment](../migrate/rm_mig_standalone.md)
+
+[Accessing the Configuration Wizard](../config/cw_run.md)
+
 ## Worksheet
 
 To set up the migration, you answer questions about your wanted configuration. Some fields apply to migration configurations. Some fields are required based on your environment. The remaining fields are advanced and do not apply to most configurations.
@@ -17,19 +29,24 @@ The following table lists the fields that are unique to the migrate a stand-alon
 |Field Label|Default|Your Value|
 |-----------|-------|----------|
 |**Target operating system**|Linux™| |
-|**Target portal profile name**|wp_profile| |
-|**Target portal profile home directory**|/opt/IBM/WebSphere/wp_profile| |
+|**Target portal profile name**|wp\_profile| |
+|**Target portal profile home directory**|/opt/IBM/WebSphere/wp\_profile| |
 |**Is the target portal on the same server or a different server**|Same server| |
 |**Database management software**|Derby| |
 |**Target operating system**| | |
 |**WebSphere Application Server administrator**|wpsadmin| |
 |**WebSphere Application Server administrator password**| | |
 |**Portal administrator password**| | |
-|**What is the portal profile name**|wp_profile| |
+|**What is the portal profile name**|wp\_profile| |
 |**What is the cell name**|CellName| |
 |**What is the portal node name**|NodeName| |
+|**Where is the source application server installed****IBMi only:** Provide the path to the source profile directory instead of the application server directory.
+
+|/opt/IBM/WebSphere/AppServer| |
 |**What is the new host name**| | |
-|**Target portal soap port** <br> **Note:** Enter the same port number used for the source environment.|10033| |
+|**Target portal soap port****Note:** Enter the same port number used for the source environment.
+
+|10033| |
 |**Where is the target application server installed**|/opt/IBM/WebSphere/AppServer| |
 |**Where is the target portal installed**|/opt/IBM/WebSphere/PortalServer| |
 |**Target temporary path**|/opt/IBM/WebSphere/PortalServer| |
@@ -42,7 +59,7 @@ The following table lists the advanced fields that are unique to the migrate a s
 |-----------|-------|----------|
 |**JVM heap size**|2048| |
 
-## Migrate a stand-alone server option
+# Migrate a stand-alone server option
 
 After you answer questions and provide information about your migration, the wizard generates a custom configuration procedure.
 
@@ -100,9 +117,12 @@ If you click **View Step Command**, you can see the task and properties that are
 
         none
 
-    !!!note
-        If you are migrating from HCL Portal Enable or Portal Extend offerings to Portal Server or Web Content Management offerings, complete the following steps manually. <br> 1.  Locate the backup of the source profile. For example, in the /tmp/wp_profile_bak directory. <br>  2.  Locate the wps.properties file in this directory. For example, /tmp/wp_profile_bak/PortalServer/wps.properties. <br> 3.  Open the wps.properties file in a text editor. Modify the value of the WPFamilyName to match your 8.5 licensed offering. For example, if you were on 8.0 Enable, and you purchased 8.5 Web Content Manager, you would modify from WPFamilyName=enable to WPFamilyName=wcm. Valid values for HCL Portal 8.5 include: server, enable, extend, wcm, and wse. <br> 4.  Save changes to the wps.properties file.
+    **Note:** If you are migrating from HCL Portal Enable or Portal Extend offerings to Portal Server or Web Content Management offerings, complete the following steps manually.
 
+    1.  Locate the backup of the source profile. For example, in the /tmp/wp\_profile\_bak directory.
+    2.  Locate the wps.properties file in this directory. For example, /tmp/wp\_profile\_bak/PortalServer/wps.properties.
+    3.  Open the wps.properties file in a text editor. Modify the value of the WPFamilyName to match your 8.5 licensed offering. For example, if you were on 8.0 Enable, and you purchased 8.5 Web Content Manager, you would modify from WPFamilyName=enable to WPFamilyName=wcm. Valid values for HCL Portal 8.5 include: server, enable, extend, wcm, and wse.
+    4.  Save changes to the wps.properties file.
 6.  Manual Step: If the backup profile is larger than 2 GB, clean up the backup profile
 
     -   **Condition**
@@ -207,6 +227,8 @@ If you click **View Step Command**, you can see the task and properties that are
 
     -   **Condition**
 
+        IBM® z/OS®
+
         DB2®
 
     -   **ConfigEngine task**
@@ -219,6 +241,8 @@ If you click **View Step Command**, you can see the task and properties that are
 
     -   **Condition**
 
+        IBM® z/OS®
+
         DB2®
 
     -   **ConfigEngine task**
@@ -228,6 +252,8 @@ If you click **View Step Command**, you can see the task and properties that are
 18. Upgrade the remaining portal databases
 
     -   **Condition**
+
+        IBM® z/OS®
 
         DB2®
 
@@ -247,11 +273,13 @@ If you click **View Step Command**, you can see the task and properties that are
 
         upgrade-profile
 
-    **Version 7.0 Server Offering-only migration:** Do not complete the upgrade profile step using the Configuration Wizard. Instead you must run this task manually. For more information about running this task manually, see [Migration from Portal Server Offering 7.0 to Portal 8.5](../../../../deployment/manage/migrate/planning_migration/migration_consideration/mig_consider_7serveronly.md).
+    **Version 7.0 Server Offering-only migration:** Do not complete the upgrade profile step using the Configuration Wizard. Instead you must run this task manually. For more information about running this task manually, see [Migration from Portal Server Offering 7.0 to Portal 8.5](../migrate/mig_consider_7serveronly.md).
 
-    !!!note
-        When you run this step, the sub task that is named action-deploy-portlets-applyMIGStatic-wp.oob.full runs and completes successfully. However, the following error messages are shown. You can ignore these error messages: <br> -   EJPXA0161W: The web module ContactList could not be activated. Please see previous messages for reasons and possible corrective actions. <br> -   EJPPH0048W: The synchronization mode of all nodes in the portal cluster is not consistently set. The portlet application PA_ContactList will not be started in the Application Server. Manual synchronization is assumed for all nodes. Manually start the application after all nodes were synchronized. <br> -   EJPXA0067E: The following configuration data is needed to create a content-node resource: content-parentref.
+    **Note:** When you run this step, the sub task that is named action-deploy-portlets-applyMIGStatic-wp.oob.full runs and completes successfully. However, the following error messages are shown. You can ignore these error messages:
 
+    -   EJPXA0161W: The web module ContactList could not be activated. Please see previous messages for reasons and possible corrective actions.
+    -   EJPPH0048W: The synchronization mode of all nodes in the portal cluster is not consistently set. The portlet application PA\_ContactList will not be started in the Application Server. Manual synchronization is assumed for all nodes. Manually start the application after all nodes were synchronized.
+    -   EJPXA0067E: The following configuration data is needed to create a content-node resource: content-parentref.
 20. Apply the latest Combined Cumulative Fix updates to your system.
 
     -   **Condition**
@@ -262,16 +290,10 @@ If you click **View Step Command**, you can see the task and properties that are
 
         none
 
+
 To complete migration, you must perform several post-migration tasks that depend on how you use HCL Digital Experience.
 
-1.  Review the [Migration: Next steps](../../../../deployment/manage/migrate/next_steps/index.md) section of the product documentation.
-    -   Complete the [Migration: Post-migration activities](../../../../deployment/manage/migrate/next_steps/post_mig_activities/index.md) that apply to how you are using HCL Digital Experience before you move on to the next step. For example, if you are using a virtual portal, then complete the virtual portal post-migration steps.
-    -   Start the [enabling new functionality](../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/index.md) tasks only after you complete the post-migration tasks.
+1.  Review the [Next steps](../migrate/mig_nextsteps.md) section of the product documentation.
+    -   Complete the [post-migration activities](../migrate/mig_t_post_mig.md) that apply to how you are using HCL Digital Experience before you move on to the next step. For example, if you are using a virtual portal, then complete the virtual portal post-migration steps.
+    -   Start the [enabling new functionality](../migrate/mig_t_enable_new.md) tasks only after you complete the post-migration tasks.
 
-
-
-???+ info "Related information"  
-    -   [Troubleshooting: Migrate the deployment manager profile for a cluster environment](../../../../deployment/manage/troubleshooting/troubleshooting_configwizard/cw_migrate_cluster1.md)
-    -   [Configuration Wizard](../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/index.md)
-    -   [Roadmap: Migrating a clustered environment](../../../../deployment/manage/migrate/planning_migration/rm_migration/rm_mig_cluster.md)
-    -   [Accessing the Configuration Wizard](../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/configuration/cw_run.md)

@@ -20,8 +20,7 @@ To prevent linking to unsafe servers, you need to specify a list of allowed doma
     wp.proxy.config.urlreplacement.federated_documents_policy.1=http://ecm.example.com:10038/*
     ```
 
-    !!! note
-        The value of the property key `suffix` can be any value as long as it is unique within the set of keys mapping to the `federated_documents_policy`.
+    **Note:** The value of the property key `suffix` can be any value as long as it is unique within the set of keys mapping to the `federated_documents_policy`.
 
 6.  Create additional properties as needed for any other Enterprise Content Manager servers that you need to access through the server.
 
@@ -36,8 +35,12 @@ Please contact your system administrator.
 ```
 
 
-???+ info "Related information:"
-    - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
-    - [Using the AJAX proxy in portlets](../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/http_ajax_proxy/programming_model_ajax_proxy/ajax_proxy_prgrmdl_inplt.md)
-    - [IBM DB2 Content Manager publication library](https://support.hcltechsw.com/csm)
+**Related information**  
+
+
+[Setting service configuration properties](../admin-system/adsetcfg.md)
+
+[Using the AJAX proxy in portlets](../dev-portlet/ajax_proxy_prgrmdl_inplt.md)
+
+[IBM DB2 Content Manager publication library](https://support.hcltechsw.com/csm)
 

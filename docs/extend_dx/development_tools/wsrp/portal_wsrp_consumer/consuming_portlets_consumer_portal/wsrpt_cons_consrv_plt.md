@@ -2,7 +2,7 @@
 
 To consume portlets from a Producer portal, you use the Manage Web Modules portlet and consume a web module.
 
-Click the **Administration menu** icon. Then, click **Portlet Management > Web Modules**.
+Click the **Administration menu** icon. Then, click **Portlet Management** \> **Web Modules**.
 
 For details about how to work with the portlet refer to the portlet help.
 

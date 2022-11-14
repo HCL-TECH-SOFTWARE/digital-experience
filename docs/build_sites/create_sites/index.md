@@ -2,7 +2,7 @@
 
 Setting up a website includes, creating pages, adding navigation, setting up search, and adding content to the site. Themes are used to customize the portal's look-and-feel. Out-of-the-box templates and the site wizard can help you set up your portal site faster. You can add wikis and blogs to your site and let users tag and rate content on your site.
 
-
+<!--- 
 -   **[Website building blocks](../create_sites/website_building_blocks/index.md)**  
 Unless you are familiar with the HCL Digital Experience and HCL Web Content Manager website model, review the building blocks. Building blocks are the different parts that make up the website framework, such as pages, navigation, themes, content, content libraries, and more.
 -   **[Creating reusable assets](../create_sites/create_reusable_assets/index.md)**  
@@ -17,18 +17,14 @@ Before content authors can create content you must prepare your site to be ready
 Use these tools and processes to develop and manage your website.
 -   **[Delivering web content](../create_sites/)**  
  The type of delivery method you use to deliver web content to your viewers depend on the type of content that is being delivered, and the type of viewers your website is intended for.
--   **[Vanity URLs](../../manage_content/wcm/wcm_content_delivery/vanity_url/index.md)**  
+-   **[Vanity URLs](../wcm/vanity_urls.md)**  
 You can associate vanity URLs with portal pages and labels. Vanity URLs are short URLs that people can easily remember. They are shorter than full HCL Portal URLs. They are sometimes also called marketing URLs. You can publish vanity URLs for marketing campaigns through different channels, such as email or print. This way, you can use vanity URLs to direct customers to a specific portal page or content item. Interested site visitors who want to view your campaign can then remember or copy the short vanity URL and type it into the browser address field.
--   **[Social rendering](../../build_sites/social_rendering/index.md)**  
+-   **[Social rendering](../social/soc_rendr_ovu.md)**  
 HCL Digital Experience page editors can use social rendering to feature social data that is hosted on a remote HCL Connections server in the context of portal pages.
--   **[HCL Web Content Manager Multilingual Solution](../../manage_content/wcm/wcm_content_delivery/mls/index.md)**  
-The Web Content Manager Multilingual Solution is a set of tools that are used to manage translated versions of localized and regionalized websites. 
-
-
-<!--
 -   **[Setting up marketing campaigns](site_market.md)**  
 Use these tools and features to setup marketing campaigns for your website.
--->
+-   **[HCL Web Content Manager Multilingual Solution](../wcm/wcm_mls.md)**  
+The Web Content Manager Multilingual Solution is a set of tools that are used to manage translated versions of localized and regionalized websites. --->
 
 
 

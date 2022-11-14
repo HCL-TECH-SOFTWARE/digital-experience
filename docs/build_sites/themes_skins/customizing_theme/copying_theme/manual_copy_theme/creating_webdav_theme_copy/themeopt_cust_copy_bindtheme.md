@@ -6,7 +6,7 @@ You can bind your theme by using XMLAccess in two ways: on the command line or i
 
 To bind your theme by using XMLAccess in the Portal Administration pages, click the **Administration menu** icon. Then, click **Portal Settings** \> **Import XML**. Click **Browse** and select the input.xml file. Then, click **Import** and copy the results from the **View Details** window.
 
-1.  In [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)\\bin, create the file input.xml with the following contents:
+1.  In [PortalServer\_root](../reference/wpsdirstr.md#wp_root)\\bin, create the file input.xml with the following contents:
 
     ```
     <?xml version="1.0" encoding="UTF-8"?>
@@ -21,7 +21,7 @@ To bind your theme by using XMLAccess in the Portal Administration pages, click 
     </request>
     ```
 
-2.  From a command line, change to the [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)\\bin directory and run the following xmlaccess command to export all skin and theme definitions to a file called output.xml:
+2.  From a command line, change to the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)\\bin directory and run the following xmlaccess command to export all skin and theme definitions to a file called output.xml:
 
     ```
     xmlaccess -user admin userid -password admin password -url hostname:10039/wps/config -in input.xml -out output.xml
@@ -59,8 +59,7 @@ To bind your theme by using XMLAccess in the Portal Administration pages, click 
 
     Set the correct context-root, resourceroot, and uniquename for your skin.
 
-    !!! note
-      resourceroot was used in previous versions of Portal when multiple themes were deployed in the same WAR file. It indicates which folder in the WAR file to find the specific theme. For the skin, this parameter should be set to the folder name where the skin is located.
+    **Note:** resourceroot was used in previous versions of Portal when multiple themes were deployed in the same WAR file. It indicates which folder in the WAR file to find the specific theme. For the skin, this parameter should be set to the folder name where the skin is located.
 
 5.  Find the `<theme>` tag for the Portal 8.5 theme. It is likely the first `<theme>` tag in the file. Find and copy one of the `<allowed-skin>` tag lines, such as:
 

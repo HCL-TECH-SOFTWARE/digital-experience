@@ -1,15 +1,14 @@
 # Configuring the HTTP Outbound connection in HCL Portal
 
-Configure the proxy server in HCL Portal. To avoid cross-site scripting (XSS) vulnerabilities, many browsers deny JavaScript commands on a remote server. The commands are denied because the remote server is on a different domain than the HCL Portal server. Therefore, the function of Forms that are created on Forms Experience Builder are limited. When you configure the HTTP Outbound connection, a proxy rule is enabled on the portal server that allows the JavaScript commands on the remote server.
+Configure the proxy server in HCL Portal. To avoid cross-site scripting \(XSS\) vulnerabilities, many browsers deny JavaScript commands on a remote server. The commands are denied because the remote server is on a different domain than the HCL Portal server. Therefore, the function of Forms that are created on Forms Experience Builder are limited. When you configure the HTTP Outbound connection, a proxy rule is enabled on the portal server that allows the JavaScript commands on the remote server.
 
-Make a backup copy of the proxy-config.xml file. This file is in the wp_profile_root)/wp_profile/config/cells/applications/AJAX Proxy Configuration.ear/deployments/AJAX Proxy Configuration/wp.proxy.config.war/WEB-INF/ directory. Keep the copy so that you can revert to the original version if an error occurs.
+Make a backup copy of the proxy-config.xml file. This file is in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/wp\_profile/config/cells/applications/AJAX Proxy Configuration.ear/deployments/AJAX Proxy Configuration/wp.proxy.config.war/WEB-INF/ directory. Keep the copy so that you can revert to the original version if an error occurs.
 
 1.  Open the proxy-config.xml file.
 
 2.  Add the following `<policy url="...">...</policy>` content after the last entry:
 
-    !!!note
-        Change `{$serverHostname}` and `{$serverPort}` to reflect the Forms Experience Builder server configuration. `/forms/` is the standard context-root of the Forms Experience Builder application. If the `/forms/` context-root was configured differently during the setup, change it as required. Change `{$token.ltpa.name}` and `{$token.ltpa2.name}` to reflect the single sign-on (SSO) configuration page on the portal server. If the fields are blank, then use LtpaToken and LtpaToken2.
+    **Note:** Change `{$serverHostname}` and `{$serverPort}` to reflect the Forms Experience Builder server configuration. `/forms/` is the standard context-root of the Forms Experience Builder application. If the `/forms/` context-root was configured differently during the setup, change it as required. Change `{$token.ltpa.name}` and `{$token.ltpa2.name}` to reflect the single sign-on \(SSO\) configuration page on the portal server. If the fields are blank, then use LtpaToken and LtpaToken2.
 
     ```
     <policy url="{http|https}://{$serverHostname}:{$serverPort}/forms/*"" name="feb">
@@ -58,14 +57,22 @@ Make a backup copy of the proxy-config.xml file. This file is in the wp_profile_
     </meta-data>
     ```
 
-4.  Open a command prompt on the portal server. Change to the wp_profile_root\ConfigEngine directory.
+4.  Open a command prompt on the portal server. Change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory.
 
 5.  Run the following command to configure the proxy:
 
-    -   AIX® and Linux™:
+    -   AIX® HP-UX Linux™ Solaris:
 
         ```
         ./ConfigEngine.sh -DWasPassword=wpsadmin
+                          -DPortalAdminPwd=wpsadmin checkin-wp-proxy-config
+                          -DProxyConfigFileName=/proxy-config.xml
+        ```
+
+    -   IBM® i:
+
+        ```
+        ConfigEngine.sh   -DWasPassword=wpsadmin
                           -DPortalAdminPwd=wpsadmin checkin-wp-proxy-config
                           -DProxyConfigFileName=/proxy-config.xml
         ```
@@ -86,10 +93,18 @@ Make a backup copy of the proxy-config.xml file. This file is in the wp_profile_
 
     3.  Update the global Outbound Connections profile by using the following portal configuration engine task:
 
-        -   AIX and Linux:
+        -   AIX HP-UX Linux Solaris:
 
             ```
             ./ConfigEngine.sh update-outbound-http-connection-config   
+                              -DConfigFileName=c:/IBM/feb-configuration.xml 
+                              -DOutboundProfileType=global
+            ```
+
+        -   IBM i:
+
+            ```
+            ConfigEngine.sh   update-outbound-http-connection-config   
                               -DConfigFileName=c:/IBM/feb-configuration.xml 
                               -DOutboundProfileType=global
             ```
@@ -104,7 +119,7 @@ Make a backup copy of the proxy-config.xml file. This file is in the wp_profile_
 
     4.  To confirm that the updates were applied correctly, export the global configuration again. To do so, use the following portal configuration engine task:
 
-        -   AIX and Linux:
+        -   AIX HP-UX Linux Solaris:
 
             ```
             ./ConfigEngine.sh read-outbound-http-connection-config
@@ -127,9 +142,17 @@ ConfigEngine.bat  read-outbound-http-connection-config
 6.  Restart the portal server.
 
 
-???+ info "Related information"  
-    -   [How to update an outbound HTTP connection configuration profile](../../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/cfg_outbound_http_connections/adm_tools_for_cfg_outbound_http_conn/cfg_outbound_http_using_cfgtsk/outbhttp_cfg_tsk_update.md)
-    -   [How to read an outbound HTTP connection configuration profile](../../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/cfg_outbound_http_connections/adm_tools_for_cfg_outbound_http_conn/cfg_outbound_http_using_cfgtsk/outbhttp_cfg_tsk_read.md)
+**Related information**  
 
 
+[How to update an outbound HTTP connection configuration profile](../dev-portlet/outbhttp_cfg_tsk_update.md)
+
+[How to read an outbound HTTP connection configuration profile](../dev-portlet/outbhttp_cfg_tsk_read.md)
+
+**References:**  
+
+
+[Updating an outbound HTTP connection configuration profile](Updating an outbound HTTP connection configuration profile../dev-portlet/outbhttp_cfg_tsk_update.dita)
+
+[Reading an outbound HTTP connection configuration profile](Reading an outbound HTTP connection configuration profile../dev-portlet/outbhttp_cfg_tsk_read.dita)
 

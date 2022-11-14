@@ -1,12 +1,11 @@
 title: Document Conversion Services
 nav:
     - index.md
-    - Supported Operating Systems: dcs_platform.md
-    - Configure DCS: configuration
-    - Set File Type Definitions: dcs_filetypedef.md
-    - Back Up DCS Files: dcs_backup.md
-    - Stellent as DCS: dcs_stellent.md
-    - Disable Oracle DCS: disable_3rdparty_dcs.md
-    - Remote DCS: dcs_remote.md
-    - File Types Supported: dcs_view_html.md
+    - dcs_platform.md
+    - Configure Document Conversion Services: configuration
+    - dcs_filetypedef.md
+    - dcs_backup.md
+    - dcs_stellent.md
+    - dcs_remote.md
+    - dcs_view_html.md
 

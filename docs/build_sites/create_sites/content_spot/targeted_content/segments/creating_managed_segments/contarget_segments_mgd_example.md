@@ -4,6 +4,8 @@ title: Example - Creating managed segments
 ---
 
 
+
+
 Learn more about creating managed segments through an example.
 
 In this example, your goal is to create a segment group that is called Device and two segments that are called Smartphone User and Tablet User.
@@ -24,7 +26,6 @@ In this example, your goal is to create a segment group that is called Device an
     4.  Select **smartphone** as the value.
     5.  You can add more conditions for the segment. In this example, no additional condition is set.
     6.  Click **add segment** to create another segment that is called Tablet User. Then, select the attribute, comparison operator, and value as you did for the Smartphone User segment.
-    
 6.  Click **Save** to save the new segments.
 
 7.  Click **Save and Close** to save the new segment group.

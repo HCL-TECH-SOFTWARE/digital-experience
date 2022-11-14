@@ -1,5 +1,8 @@
 # Configuring
 
+
+
+
 Configure the **Schedulers**, **Filters**, and **Security** from the respective tabs in the Create a New Content Source page.
 
 ## Configuring the scheduler
@@ -15,8 +18,7 @@ To configure the schedule, click the **Scheduler** tab to display the following 
     The schedule updates of the crawls are displayed.
 
 
-!!! note
-    The time interval between the crawler runs must be more than the maximum execution time. A crawler cannot be started if it is running. If a crawler job is started while the crawler is running, this execution is ignored and the crawler is only started at the next scheduled time.
+**Note:** The time interval between the crawler runs must be more than the maximum execution time. A crawler cannot be started if it is running. If a crawler job is started while the crawler is running, this execution is ignored and the crawler is only started at the next scheduled time.
 
 ## Configuring the Filters
 

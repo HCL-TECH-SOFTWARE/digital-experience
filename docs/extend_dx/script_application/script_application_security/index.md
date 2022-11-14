@@ -1,4 +1,4 @@
-# Script Application Security Overview
+# Script Application security overview
 
 The default security configuration of the Script Application places limits on which portal users and groups can access the editor and import features. You can customize these limits.
 
@@ -18,7 +18,7 @@ Configure the security for these tasks properly to protect your portal from mali
 
 The Script Application also puts extra constraints upon the upload option. The size and content of uploaded archives is limited. They are set by default at levels that accommodate most use cases.
 
-The default settings for the Script Application might not be appropriate for all customers and all environments. You can change the permissions on the Script Application Library, and the Script Applications Site Area where you can push script-based applications for use as Script Applications. Review the permissions and security settings by using the portal administration tools, the Web Content Authoring tool, and the HCL DX and Web Content Manager security practices. These tools and documents help you ensure that the permissions are set for the users and roles in your environment.
+The default settings for the Script Application might not be appropriate for all customers and all environments. You can change the permissions on the Script Application Library, and the Script Applications Site Area where you can push script-based applications for use as Script Applications. Review the permissions and security settings by using the portal administration tools, the Web Content Authoring tool, and the HCL Portal and Web Content Manager security practices. These tools and documents help you ensure that the permissions are set for the users and roles in your environment.
 
 When you review and set security permissions, be aware that the Script Application Library contains different types of artifacts. The **Script Applications** Site Area is where Script Application developers push applications to, unless you create a custom site area for that use. Protect these site areas to provide access permissions to users in the following ways:
 
@@ -29,4 +29,26 @@ The other contents of the Script Application Library include templates, which ne
 
 You can use the Script Application in virtual portals and give different users or groups of users access to modify Script Application artifacts in their own virtual portal. Each virtual portal has its own copy of the Script Application Library. Therefore, verify for each virtual portal that you have appropriate permissions set on the Script Application Library and its contents, and all custom site areas.
 
-You can provide security for the content of your Script Application primarily by Web Content Manager authorization. You give users Read, Edit, or Review access to the site areas and portal content where you store your Script Applications. For more information about how to set access rights to Web Content Manager libraries, site areas and content items, read the section about [Web Content Manager access control](../../../deployment/manage/security/controlling_access/wcm_security/index.md). For Script Application libraries, site areas, and content that your users use with the Script Application editor, import, export, and command line push utility, users need Editor rights to these Script Application libraries, site areas, and content.
+You can provide security for the content of your Script Application primarily by Web Content Manager authorization. You give users Read, Edit, or Review access to the site areas and portal content where you store your Script Applications. For more information about how to set access rights to Web Content Manager libraries, site areas and content items, read the section about *Web Content Manager access control*. For Script Application libraries, site areas, and content that your users use with the Script Application editor, import, export, and command line push utility, users need Editor rights to these Script Application libraries, site areas, and content.
+
+-   **[Assigning user access for the Script Application](../script-portlet/sp_security_upgrade.md)**  
+When you provide access rights for users and groups to author Script Applications, make sure that you combine access to both the Script Application Editor and Import portlets and to the Script Application Library.
+-   **[Editor and reviewer Access to the Script Application Library and Script Applications Site Area](../script-portlet/acc_lib_site_area.md)**  
+For a user or group of users that are not members of the `wpsadmins` group, who you wish to allow access to edit Script Applications and Script Application configuration, you can grant editor and reviewer access to those users for the Script Application Library and Script Applications Site Area. Users who push Script Applications must have these access roles.
+-   **[Imported archive security](../script-portlet/import_security.md)**  
+There are constraints on the size and content of uploaded archives to add a layer of security when you import archives.
+-   **[Setting custom configuration properties for the Script Application](../script-portlet/import_export_config.md)**  
+When the Script Application imports or exports an application, it uses specific properties as the parameters for the import or export. You can override these properties. For example, you can change the file types and sizes that can be uploaded and the number of files that a compressed file for upload can contain.
+
+
+**Related information**  
+
+
+[Replacing the HCL Digital Experience administrator user ID](../security/portalid.md)
+
+[Web Content Manager access control](../wcm/wcm_security.md)
+
+[Adding an existing Script Application from the toolbar](../script-portlet/drop_app_toolbar.md)
+
+[Script Application limitations and troubleshooting](../script-portlet/ts_preview.md)
+

@@ -9,11 +9,11 @@ The default theme includes these skins that can be used as a basis for creating 
 
 Figure 1. Hidden Skin in view mode.
 
-![Hidden skin in view mode](../../../../images/themeopt_hiddenskin_view.jpg)
+![Hidden skin in view mode](../images/themeopt_hiddenskin_view.jpg)
 
 Figure 2. Hidden Skin in edit mode.
 
-![Hidden skin in edit mode.](../../../../images/themeopt_hiddenskin_edit.jpg)
+![Hidden skin in edit mode.](../images/themeopt_hiddenskin_edit.jpg)
 
 -   **Standard skin**
 
@@ -22,7 +22,7 @@ Figure 2. Hidden Skin in edit mode.
 
 Figure 3. Standard Skin.
 
-![Standard skin.](../../../../images/themeopt_standardskin.jpg)
+![Standard skin.](../images/themeopt_standardskin.jpg)
 
 -   **NoSkin skin**
 
@@ -30,6 +30,8 @@ Figure 3. Standard Skin.
 
 
 
-???+ info "Related information:"
-    - [Themes, profiles, and skins](../../../create_sites/website_building_blocks/themes_profiles_skins/index.md)
+**Related information**  
+
+
+[Themes, profiles, and skins](../site/site_themes.md)
 

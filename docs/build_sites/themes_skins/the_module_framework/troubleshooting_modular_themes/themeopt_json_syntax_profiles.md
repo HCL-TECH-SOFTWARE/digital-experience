@@ -13,6 +13,8 @@ EJPNK0060W: The attribute "version" in module test_analyzer_module_invalidsyntax
 All syntax warnings are also included in the Theme Optimization Analyzer Validation Report.
 
 
-???+ info "Related information:"
-    - [Module schema definition](../writing_module/themeopt_mod_global.md)
+**Related information**  
+
+
+[Module schema definition](../dev-theme/themeopt_mod_global.md)
 

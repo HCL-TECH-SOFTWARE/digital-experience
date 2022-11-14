@@ -25,7 +25,6 @@ For more information about these three parameters and their meaning, refer to th
     -   To set the maximum number of requests that you want to allow for this portlet, add `com.ibm.wps.pe.plm.maxrequest = xyz` for the new portlet preference. For example, if you want to allow this portlet no more than 15 concurring requests, specify com.ibm.wps.pe.plm.maxrequest = 15.
     -   To set the reactivation limit for this portlet, add `com.ibm.wps.pe.plm.minrequest = xyz` for the new portlet preference. For example, if you want this portlet to be reenabled when its concurrent requests fall back to 5 or less, specify com.ibm.wps.pe.plm.minrequest = 5.
     -   To set the allowed average response time for this portlet, add `com.ibm.wps.pe.plm.average.time.processing = xyz`, where `xyz` is the average response time in milliseconds. For example, if you specify `com.ibm.wps.pe.plm.average.time.processing = 3000` and the average response time for this portlet exceeds 3 seconds, then Portlet load monitoring blocks further requests to this portlet.
-    
 6.  Click **Add** to add the preference.
 
 7.  Save your changes by clicking **OK**.

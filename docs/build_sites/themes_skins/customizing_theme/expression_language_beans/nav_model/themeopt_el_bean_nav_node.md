@@ -38,7 +38,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [Description](../common_beans/themeopt_el_bean_description.md) object for the navigation node; it is never null. You can use the value of the title object to retrieve the description in current locale.
+    Returns: [Description](themeopt_el_bean_description.md) object for the navigation node; it is never null. You can use the value of the title object to retrieve the description in current locale.
 
 -   **isPrivate**
 
@@ -74,7 +74,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [Metadata](../common_beans/themeopt_el_bean_meta.md), never null.
+    Returns: [Metadata](themeopt_el_bean_meta.md), never null.
 
 -   **moduleList**
 
@@ -96,7 +96,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [CurrentModuleList](../module_list/current_module_list/themeopt_el_bean_mod_current_list.md), never null.
+    Returns: [CurrentModuleList](themeopt_el_bean_mod_current_list.md), never null.
 
 -   **objectID**
 
@@ -186,7 +186,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [Title](../common_beans/themeopt_el_bean_title.md) associated with the current object.
+    Returns: [Title](themeopt_el_bean_title.md) associated with the current object.
 
 -   **url**
 
@@ -270,6 +270,6 @@ Attributes:
 
     Parameters: none
 
-    Returns: [UrlGenerationPage](../common_beans/url_generation/themeopt_el_bean_url_gen_page.md); the URL object pointing to this page
+    Returns: [UrlGenerationPage](themeopt_el_bean_url_gen_page.md); the URL object pointing to this page
 
 

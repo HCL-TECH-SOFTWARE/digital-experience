@@ -30,7 +30,8 @@ An outbound connection profile contains at least one policy mapping item. This i
 -   The policy rules that are defined at the default policy mapping.
 
 
+**Related information**  
 
-???+ info "Related information" 
-    - [Adding an outbound connection policy](../../cfg_outbound_http_connections/sample_admin_tasks/outbhttp_cfgsmptsk_add_ob_conn_plcy.md)
+
+[Adding an outbound connection policy](../dev-portlet/outbhttp_cfgsmptsk_add_ob_conn_plcy.md)
 

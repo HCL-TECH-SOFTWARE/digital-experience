@@ -79,8 +79,7 @@ In addition to enabling or disabling credential vault slots for authentication, 
 
         Value: The name of the credential vault slot that stores the credentials that are used for authentication with the remote server. Credential vault slots are set up and managed by the portal administrator. This property defines the default credential vault slot that is predefined in the user interface, although the user can also select a different slot if one is available. If this property is not defined, the user interface does not display a default credential vault slot, but you can still select a slot from the available list. This property is optional.
 
-        !!! note
-            The credential vault slot must contain the credentials that are required for authentication with the remote server.
+        **Note:** The credential vault slot must contain the credentials that are required for authentication with the remote server.
 
     -   **wp.federated.documents.suffix.override.authentication.enabled**
 
@@ -128,6 +127,8 @@ In addition to enabling or disabling credential vault slots for authentication, 
 
 
 
-???+ info "Related information:"
-    - [Creating a federated documents selection rule](../../../wcm_artifacts/feddocs/wcm_dev_feddocs_createrule.md)
+**Related information**  
+
+
+[Creating a federated documents selection rule](../wcm/wcm_dev_feddocs_createrule.md)
 

@@ -171,6 +171,9 @@ if (status >= 400) {
 }
 ```
 
-???+ info "Related information"
-      - [Description of the outbound HTTP connection configuration script](../outbound_http_connection/cfg_outbound_http_connections/xml_format_outbound_http/desc_outbound_http_cfg_script/index.md)
+
+**Related information**  
+
+
+[Description of the outbound HTTP connection configuration script](../dev-portlet/outbhttp_cfg_descript.md)
 

@@ -12,8 +12,6 @@ Use this information to install DB2 or DB2 pureScale for use with HCL Digital Ex
 
 All DB2 instructions apply to DB2 pureScale except where specifically noted.
 
-## Procedure
-
 1.  To install DB2 or the DB2 client and the required fix pack, follow the instructions that are provided with the DB2 documentation.
 
 2.  If DB2 is installed on another system than HCL Portal, copy the driver JAR files from the DB2 server to the Portal server.
@@ -25,7 +23,7 @@ All DB2 instructions apply to DB2 pureScale except where specifically noted.
 
 3.  Ensure that the DB2 instance port was added to the services file during the DB2 installation.
 
-    AIX® and Linux™:
+    AIX® HP-UX Linux™ Solaris:
 
     1.  Get the value for the TCP/IP service name (SVCENAME). Open a shell and log in as the instance owner. Enter the following command:
 
@@ -82,6 +80,5 @@ When you use the wizard and provide information about the database for your envi
 
 Optional: After you transfer your data to DB2, run a configuration task to enable support for high availability recovery (HADR) and roll-forward recovery.
 
-???+ info "Related information:" 
-    - [JDBC type 2 and type 4 drivers](../../../../../get_started/plan_deployment/traditional_deployment/database_consideration/db_jdbc_type.md)
+**Related information**: [JDBC type 2 and type 4 drivers](/docs/get_started/plan_deployment/traditional_deployment/database_consideration/db_jdbc_type.md)
 

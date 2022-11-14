@@ -1,4 +1,4 @@
-# Properties File: wkplc_dbdomain.properties
+# Properties file: wkplc\_dbdomain.properties
 
 
 ## Release Database Properties
@@ -11,21 +11,21 @@
 
     -   **Valid values**
 
-        `derby`
+        derby
 
-        `db2`
+        db2
 
-        `db2_iseries`
+        db2\_iseries
 
-        `db2_zos`
+        db2\_zos
 
-        `oracle`
+        oracle
 
-        `sqlserver2005`
+        sqlserver2005
 
     -   **Default value**
 
-        `derby`
+        derby
 
     -   **Examples**
 
@@ -35,37 +35,37 @@
 
     -   **Description**
 
-        The name of the database (location name of the DB2 for z/OS subsystem) to be used for this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.
+        The name of the database \(location name of the DB2 for z/OS subsystem\) to be used for this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.
 
     -   **Default value**
 
-        release.DbType=db2: `WPREL`
+        release.DbType=db2: WPREL
 
-        release.DbType=db2_iseries:
+        release.DbType=db2\_iseries:
 
-        release.DbType=db2_zos:
+        release.DbType=db2\_zos:
 
-        release.DbType=oracle: `WPREL`
+        release.DbType=oracle: WPREL
 
-        release.DbType=sqlserver2005: `WPREL`
+        release.DbType=sqlserver2005: WPREL
 
-        Otherwise: `wpsdb`
+        Otherwise: wpsdb
 
     -   **Examples**
 
-        Apache Derby: `wpsdb`
+        Apache Derby: wpsdb
 
         IBM DB2: WPREL
 
-        IBM DB2 for i with type 4 driver: `/WPSDB`
+        IBM DB2 for i with type 4 driver: /WPSDB
 
-        IBM DB2 for i with type 2 driver: `\*LOCAL/WPSDB`
+        IBM DB2 for i with type 2 driver: \*LOCAL/WPSDB
 
         DB2 for z/OS:
 
-        Oracle Database: `WPREL`
+        Oracle Database: WPREL
 
-        Microsoft SQL Server: `WPREL`
+        Microsoft SQL Server: WPREL
 
 -   **release.DbSchema**
 
@@ -75,7 +75,7 @@
 
     -   **Default value**
 
-        `release`
+        release
 
     -   **Examples**
 
@@ -89,7 +89,7 @@
 
     -   **Default value**
 
-        `WPREL`
+        WPREL
 
     -   **Examples**
 
@@ -103,13 +103,13 @@
 
     -   **Default value**
 
-        release.DbType=db2: `wpreldbDS`
+        release.DbType=db2: wpreldbDS
 
-        release.DbType=oracle: `wpreldbDS`
+        release.DbType=oracle: wpreldbDS
 
-        release.DbType=sqlserver2005: `wpreldbDS`
+        release.DbType=sqlserver2005: wpreldbDS
 
-        Otherwise: `wpdbDS`
+        Otherwise: wpdbDS
 
     -   **Examples**
 
@@ -125,37 +125,37 @@
 
         release.DbType=db2:
 
-        release.DbType=db2_iseries:
+        release.DbType=db2\_iseries:
 
-        release.DbType=db2_zos:
+        release.DbType=db2\_zos:
 
         release.DbType=oracle:
 
         release.DbType=sqlserver2005:
 
-        Otherwise: `jdbc:derby:wpsdb;create=true`
+        Otherwise: jdbc:derby:wpsdb;create=true
 
     -   **Examples**
 
-        Apache Derby: `jdbc:derby:wpsdb;create=true`
+        Apache Derby: jdbc:derby:wpsdb;create=true
 
-        IBM DB2 with type 4 drivers: `jdbc:db2://:50000/WPREL:returnAlias=0;`
+        IBM DB2 with type 4 drivers: jdbc:db2://:50000/WPREL:returnAlias=0;
 
-        IBM DB2 with type 2 drivers: `jdbc:db2:WPREL`
+        IBM DB2 with type 2 drivers: jdbc:db2:WPREL
 
-        IBM DB2 for i with type 4 drivers: `jdbc:as400:///WPSDB;metadata source=1;prompt=false`
+        IBM DB2 for i with type 4 drivers: jdbc:as400:///WPSDB;metadata source=1;prompt=false
 
-        IBM DB2 for i with type 2 drivers: `jdbc:db2:\*LOCAL/WPSDB`
+        IBM DB2 for i with type 2 drivers: jdbc:db2:\*LOCAL/WPSDB
 
-        IBM DB2 for z/OS with type 4 drivers: `jdbc:db2://:/`
+        IBM DB2 for z/OS with type 4 drivers: jdbc:db2://:/
 
-        IBM DB2 for z/OS with type 2 drivers: `jdbc:db2:`
+        IBM DB2 for z/OS with type 2 drivers: jdbc:db2:
 
-        Oracle Database with type 4 drivers and thin client: `jdbc:oracle:thin:@//:1521/`
+        Oracle Database with type 4 drivers and thin client: jdbc:oracle:thin:@//:1521/
 
-        Oracle Database with type 2 drivers and thick client: `jdbc:oracle:oci:@//:1521/`
+        Oracle Database with type 2 drivers and thick client: jdbc:oracle:oci:@//:1521/
 
-        Microsoft SQL Server: `jdbc:sqlserver://:1433;SelectMethod=cursor;DatabaseName=WPREL`
+        Microsoft SQL Server: jdbc:sqlserver://:1433;SelectMethod=cursor;DatabaseName=WPREL
 
 -   **release.DbUser**
 
@@ -189,7 +189,7 @@
 
     -   **Description**
 
-        The database user ID used for the data source of the portal database domain to connect with the database during day-to-day operations. It must comply with your database management software requirements. It has fewer permissions than the configuration database user (DbUser) that is used when you leave this blank.
+        The database user ID used for the data source of the portal database domain to connect with the database during day-to-day operations. It must comply with your database management software requirements. It has fewer permissions than the configuration database user \(DbUser\) that is used when you leave this blank.
 
     -   **Default value**
 
@@ -255,9 +255,9 @@
 
     -   **Examples**
 
-        Oracle Database: `/product/11.2.0/dbhome\_1`
+        Oracle Database: /product/11.2.0/dbhome\_1
 
-        Microsoft SQL Server: `C:\\\\Microsoft SQL Server\\\\\\\\MSSQL`
+        Microsoft SQL Server: C:\\\\Microsoft SQL Server\\\\\\\\MSSQL
 
 -   **release.AdminUrl**
 
@@ -271,7 +271,7 @@
 
     -   **Examples**
 
-        Microsoft SQL Server: `jdbc:sqlserver://:1433`
+        Microsoft SQL Server: jdbc:sqlserver://:1433
 
 -   **release.DbConfigRoleName**
 
@@ -281,11 +281,11 @@
 
     -   **Default value**
 
-        release.DbType=db2\_iseries: `WPBASCFG`
+        release.DbType=db2\_iseries: WPBASCFG
 
-        release.DbType=db2\_zos: `WPBASCFG`
+        release.DbType=db2\_zos: WPBASCFG
 
-        Otherwise: `WP\_BASE\_CONFIG\_USERS`
+        Otherwise: WP\_BASE\_CONFIG\_USERS
 
     -   **Examples**
 
@@ -299,11 +299,11 @@
 
     -   **Default value**
 
-        release.DbType=db2_iseries: `WPBASRT`
+        release.DbType=db2\_iseries: WPBASRT
 
-        release.DbType=db2_zos: `WPBASRT`
+        release.DbType=db2\_zos: WPBASRT
 
-        Otherwise: WP`\_BASE\_RUNTIME\_USERS`
+        Otherwise: WP\_BASE\_RUNTIME\_USERS
 
     -   **Examples**
 
@@ -317,7 +317,7 @@
 
     -   **Default value**
 
-        `WPREL`
+        WPREL
 
     -   **Examples**
 
@@ -331,7 +331,7 @@
 
     -   **Default value**
 
-        `wpsNode`
+        wpsNode
 
     -   **Examples**
 
@@ -345,7 +345,7 @@
 
     -   **Default value**
 
-        `WPSSG`
+        WPSSG
 
     -   **Examples**
 
@@ -359,7 +359,7 @@
 
     -   **Default value**
 
-        `\*`
+        \*
 
     -   **Examples**
 
@@ -369,7 +369,7 @@
 
     -   **Description**
 
-        Identifies the integrated catalog facility catalog (VCAT) for the DB2 for z/OS storage group that is used for this portal database domain.
+        Identifies the integrated catalog facility catalog \(VCAT\) for the DB2 for z/OS storage group that is used for this portal database domain.
 
     -   **Default value**
 
@@ -377,7 +377,7 @@
 
     -   **Examples**
 
-        `DSN910`
+        : DSN910
 
 -   **release.DbIndex4KBufferPoolName**
 
@@ -387,7 +387,7 @@
 
     -   **Default value**
 
-        `BP3`
+        BP3
 
     -   **Examples**
 
@@ -401,7 +401,7 @@
 
     -   **Default value**
 
-        `BP2`
+        BP2
 
     -   **Examples**
 
@@ -415,7 +415,7 @@
 
     -   **Default value**
 
-        `BP32K1`
+        BP32K1
 
     -   **Examples**
 
@@ -429,13 +429,13 @@
 
     -   **Valid values**
 
-        `YES`
+        YES
 
-        `NO`
+        NO
 
     -   **Default value**
 
-        `YES`
+        YES
 
     -   **Examples**
 
@@ -449,13 +449,13 @@
 
     -   **Valid values**
 
-        `YES`
+        YES
 
-        `NO`
+        NO
 
     -   **Default value**
 
-        `NO`
+        NO
 
     -   **Examples**
 
@@ -472,17 +472,17 @@
 
     -   **Valid values**
 
-        `derby`
+        derby
 
-        `db2`
+        db2
 
-        `db2_iseries`
+        db2\_iseries
 
-        `db2_zos`
+        db2\_zos
 
-        `oracle`
+        oracle
 
-        `sqlserver2005`
+        sqlserver2005
 
     -   **Default value**
 
@@ -496,37 +496,37 @@
 
     -   **Description**
 
-        The name of the database (location name of the DB2 for z/OS subsystem) to be used for this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.
+        The name of the database \(location name of the DB2 for z/OS subsystem\) to be used for this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.
 
     -   **Default value**
 
-        community.DbType=db2: `WPCOMM`
+        community.DbType=db2: WPCOMM
 
-        community.DbType=db2_iseries:
+        community.DbType=db2\_iseries:
 
-        community.DbType=db2_zos:
+        community.DbType=db2\_zos:
 
-        community.DbType=oracle: `WPCOMM`
+        community.DbType=oracle: WPCOMM
 
-        community.DbType=sqlserver2005: `WPCOMM`
+        community.DbType=sqlserver2005: WPCOMM
 
-        Otherwise: `wpsdb`
+        Otherwise: wpsdb
 
     -   **Examples**
 
-        Apache Derby: `wpsdb`
+        Apache Derby: wpsdb
 
         IBM DB2: WPCOMM
 
-        IBM DB2 for i with type 4 driver: `/WPSDB`
+        IBM DB2 for i with type 4 driver: /WPSDB
 
-        IBM DB2 for i with type 2 driver: `\*LOCAL/WPSDB`
+        IBM DB2 for i with type 2 driver: \*LOCAL/WPSDB
 
         DB2 for z/OS:
 
-        Oracle Database: `WPCOMM`
+        Oracle Database: WPCOMM
 
-        Microsoft SQL Server: `WPCOMM`
+        Microsoft SQL Server: WPCOMM
 
 -   **community.DbSchema**
 
@@ -536,7 +536,7 @@
 
     -   **Default value**
 
-        `community`
+        community
 
     -   **Examples**
 
@@ -550,7 +550,7 @@
 
     -   **Default value**
 
-        `WPCOMM`
+        WPCOMM
 
     -   **Examples**
 
@@ -564,13 +564,13 @@
 
     -   **Default value**
 
-        community.DbType=db2: `wpcommdbDS`
+        community.DbType=db2: wpcommdbDS
 
-        community.DbType=oracle: `wpcommdbDS`
+        community.DbType=oracle: wpcommdbDS
 
-        community.DbType=sqlserver2005: `wpcommdbDS`
+        community.DbType=sqlserver2005: wpcommdbDS
 
-        Otherwise: `wpdbDS`
+        Otherwise: wpdbDS
 
     -   **Examples**
 
@@ -586,37 +586,37 @@
 
         community.DbType=db2:
 
-        community.DbType=db2_iseries:
+        community.DbType=db2\_iseries:
 
-        community.DbType=db2_zos:
+        community.DbType=db2\_zos:
 
         community.DbType=oracle:
 
         community.DbType=sqlserver2005:
 
-        Otherwise: `jdbc:derby:wpsdb;create=true`
+        Otherwise: jdbc:derby:wpsdb;create=true
 
     -   **Examples**
 
-        Apache Derby: `jdbc:derby:wpsdb;create=true`
+        Apache Derby: jdbc:derby:wpsdb;create=true
 
-        IBM DB2 with type 4 drivers: `jdbc:db2://:50000/WPCOMM:returnAlias=0;`
+        IBM DB2 with type 4 drivers: jdbc:db2://:50000/WPCOMM:returnAlias=0;
 
-        IBM DB2 with type 2 drivers: `jdbc:db2:WPCOMM`
+        IBM DB2 with type 2 drivers: jdbc:db2:WPCOMM
 
-        IBM DB2 for i with type 4 drivers: `jdbc:as400:///WPSDB;metadata source=1;prompt=false`
+        IBM DB2 for i with type 4 drivers: jdbc:as400:///WPSDB;metadata source=1;prompt=false
 
-        IBM DB2 for i with type 2 drivers: `jdbc:db2:\*LOCAL/WPSDB`
+        IBM DB2 for i with type 2 drivers: jdbc:db2:\*LOCAL/WPSDB
 
-        IBM DB2 for z/OS with type 4 drivers: `jdbc:db2://:/`
+        IBM DB2 for z/OS with type 4 drivers: jdbc:db2://:/
 
-        IBM DB2 for z/OS with type 2 drivers: `jdbc:db2:`
+        IBM DB2 for z/OS with type 2 drivers: jdbc:db2:
 
-        Oracle Database with type 4 drivers and thin client: `jdbc:oracle:thin:@//:1521/`
+        Oracle Database with type 4 drivers and thin client: jdbc:oracle:thin:@//:1521/
 
-        Oracle Database with type 2 drivers and thick client: `jdbc:oracle:oci:@//:1521/`
+        Oracle Database with type 2 drivers and thick client: jdbc:oracle:oci:@//:1521/
 
-        Microsoft SQL Server: `jdbc:sqlserver://:1433;SelectMethod=cursor;DatabaseName=WPCOMM`
+        Microsoft SQL Server: jdbc:sqlserver://:1433;SelectMethod=cursor;DatabaseName=WPCOMM
 
 -   **community.DbUser**
 
@@ -716,9 +716,9 @@
 
     -   **Examples**
 
-        Oracle Database: `/product/11.2.0/dbhome\_1`
+        Oracle Database: /product/11.2.0/dbhome\_1
 
-        Microsoft SQL Server: `C:\\\\Microsoft SQL Server\\\\\\\\MSSQL`
+        Microsoft SQL Server: C:\\\\Microsoft SQL Server\\\\\\\\MSSQL
 
 -   **community.AdminUrl**
 
@@ -732,7 +732,7 @@
 
     -   **Examples**
 
-        Microsoft SQL Server: `jdbc:sqlserver://:1433`
+        Microsoft SQL Server: jdbc:sqlserver://:1433
 
 -   **community.DbConfigRoleName**
 
@@ -742,11 +742,11 @@
 
     -   **Default value**
 
-        community.DbType=db2_iseries: `WPBASCFG`
+        community.DbType=db2\_iseries: WPBASCFG
 
-        community.DbType=db2_zos: `WPBASCFG`
+        community.DbType=db2\_zos: WPBASCFG
 
-        Otherwise: `WP_BASE_CONFIG_USERS`
+        Otherwise: WP\_BASE\_CONFIG\_USERS
 
     -   **Examples**
 
@@ -760,11 +760,11 @@
 
     -   **Default value**
 
-        community.DbType=db2_iseries: `WPBASRT`
+        community.DbType=db2\_iseries: WPBASRT
 
-        community.DbType=db2_zos: `WPBASRT`
+        community.DbType=db2\_zos: WPBASRT
 
-        Otherwise: `WP_BASE_RUNTIME_USERS`
+        Otherwise: WP\_BASE\_RUNTIME\_USERS
 
     -   **Examples**
 
@@ -778,7 +778,7 @@
 
     -   **Default value**
 
-        `WPCOMM`
+        WPCOMM
 
     -   **Examples**
 
@@ -792,7 +792,7 @@
 
     -   **Default value**
 
-        `wpsNode`
+        wpsNode
 
     -   **Examples**
 
@@ -820,7 +820,7 @@
 
     -   **Default value**
 
-        `\*`
+        \*
 
     -   **Examples**
 
@@ -838,7 +838,7 @@
 
     -   **Examples**
 
-        `DSN910`
+        : DSN910
 
 -   **community.DbIndex4KBufferPoolName**
 
@@ -848,7 +848,7 @@
 
     -   **Default value**
 
-        `BP3`
+        BP3
 
     -   **Examples**
 
@@ -862,7 +862,7 @@
 
     -   **Default value**
 
-        `BP2`
+        BP2
 
     -   **Examples**
 
@@ -876,7 +876,7 @@
 
     -   **Default value**
 
-        `BP32K1`
+        BP32K1
 
     -   **Examples**
 
@@ -890,13 +890,13 @@
 
     -   **Valid values**
 
-        `YES`
+        YES
 
-        `NO`
+        NO
 
     -   **Default value**
 
-        `YES`
+        YES
 
     -   **Examples**
 
@@ -910,13 +910,13 @@
 
     -   **Valid values**
 
-        `YES`
+        YES
 
-        `NO`
+        NO
 
     -   **Default value**
 
-        `NO`
+        NO
 
     -   **Examples**
 
@@ -933,21 +933,21 @@
 
     -   **Valid values**
 
-        `derby`
+        derby
 
-        `db2`
+        db2
 
-        `db2_iseries`
+        db2\_iseries
 
-        `db2_zos`
+        db2\_zos
 
-        `oracle`
+        oracle
 
-        `sqlserver2005`
+        sqlserver2005
 
     -   **Default value**
 
-        `derby`
+        derby
 
     -   **Examples**
 
@@ -957,37 +957,37 @@
 
     -   **Description**
 
-        The name of the database (location name of the DB2 for z/OS subsystem) to be used for this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.
+        The name of the database \(location name of the DB2 for z/OS subsystem\) to be used for this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.
 
     -   **Default value**
 
-        customization.DbType=db2: `WPCUST`
+        customization.DbType=db2: WPCUST
 
-        customization.DbType=db2_iseries:
+        customization.DbType=db2\_iseries:
 
-        customization.DbType=db2_zos:
+        customization.DbType=db2\_zos:
 
-        customization.DbType=oracle: `WPCUST`
+        customization.DbType=oracle: WPCUST
 
-        customization.DbType=sqlserver2005: `WPCUST`
+        customization.DbType=sqlserver2005: WPCUST
 
-        Otherwise: `wpsdb`
+        Otherwise: wpsdb
 
     -   **Examples**
 
-        Apache Derby: `wpsdb`
+        Apache Derby: wpsdb
 
-        IBM DB2: `WPCUST`
+        IBM DB2: WPCUST
 
-        IBM DB2 for i with type 4 driver: `/WPSDB`
+        IBM DB2 for i with type 4 driver: /WPSDB
 
-        IBM DB2 for i with type 2 driver: `\*LOCAL/WPSDB`
+        IBM DB2 for i with type 2 driver: \*LOCAL/WPSDB
 
         DB2 for z/OS:
 
-        Oracle Database: `WPCUST`
+        Oracle Database: WPCUST
 
-        Microsoft SQL Server: `WPCUST`
+        Microsoft SQL Server: WPCUST
 
 -   **customization.DbSchema**
 
@@ -997,9 +997,9 @@
 
     -   **Default value**
 
-        customization.DbType=db2_iseries: `customiz`
+        customization.DbType=db2\_iseries: customiz
 
-        Otherwise: `customization`
+        Otherwise: customization
 
     -   **Examples**
 
@@ -1013,7 +1013,7 @@
 
     -   **Default value**
 
-        `WPCUST`
+        WPCUST
 
     -   **Examples**
 
@@ -1027,13 +1027,13 @@
 
     -   **Default value**
 
-        customization.DbType=db2: `wpcustdbDS`
+        customization.DbType=db2: wpcustdbDS
 
-        customization.DbType=oracle: `wpcustdbDS`
+        customization.DbType=oracle: wpcustdbDS
 
-        customization.DbType=sqlserver2005: `wpcustdbDS`
+        customization.DbType=sqlserver2005: wpcustdbDS
 
-        Otherwise: `wpdbDS`
+        Otherwise: wpdbDS
 
     -   **Examples**
 
@@ -1049,37 +1049,37 @@
 
         customization.DbType=db2:
 
-        customization.DbType=db2_iseries:
+        customization.DbType=db2\_iseries:
 
-        customization.DbType=db2_zos:
+        customization.DbType=db2\_zos:
 
         customization.DbType=oracle:
 
         customization.DbType=sqlserver2005:
 
-        Otherwise: `jdbc:derby:wpsdb;create=true`
+        Otherwise: jdbc:derby:wpsdb;create=true
 
     -   **Examples**
 
-        Apache Derby: `jdbc:derby:wpsdb;create=true`
+        Apache Derby: jdbc:derby:wpsdb;create=true
 
-        IBM DB2 with type 4 drivers: `jdbc:db2://:50000/WPCUST:returnAlias=0;`
+        IBM DB2 with type 4 drivers: jdbc:db2://:50000/WPCUST:returnAlias=0;
 
-        IBM DB2 with type 2 drivers: `jdbc:db2:WPCUST`
+        IBM DB2 with type 2 drivers: jdbc:db2:WPCUST
 
-        IBM DB2 for i with type 4 drivers: `jdbc:as400:///WPSDB;metadata source=1;prompt=false`
+        IBM DB2 for i with type 4 drivers: jdbc:as400:///WPSDB;metadata source=1;prompt=false
 
-        IBM DB2 for i with type 2 drivers: `jdbc:db2:\*LOCAL/WPSDB`
+        IBM DB2 for i with type 2 drivers: jdbc:db2:\*LOCAL/WPSDB
 
-        IBM DB2 for z/OS with type 4 drivers: `jdbc:db2://:/`
+        IBM DB2 for z/OS with type 4 drivers: jdbc:db2://:/
 
-        IBM DB2 for z/OS with type 2 drivers: `jdbc:db2:`
+        IBM DB2 for z/OS with type 2 drivers: jdbc:db2:
 
-        Oracle Database with type 4 drivers and thin client: `jdbc:oracle:thin:@//:1521/`
+        Oracle Database with type 4 drivers and thin client: jdbc:oracle:thin:@//:1521/
 
-        Oracle Database with type 2 drivers and thick client: `jdbc:oracle:oci:@//:1521/`
+        Oracle Database with type 2 drivers and thick client: jdbc:oracle:oci:@//:1521/
 
-        Microsoft SQL Server: `jdbc:sqlserver://:1433;SelectMethod=cursor;DatabaseName=WPCUST`
+        Microsoft SQL Server: jdbc:sqlserver://:1433;SelectMethod=cursor;DatabaseName=WPCUST
 
 -   **customization.DbUser**
 
@@ -1113,7 +1113,7 @@
 
     -   **Description**
 
-        The database user ID used for the data source of the portal database domain to connect with the database during day-to-day operations. It must comply with your database management software requirements. It has fewer permissions than the configuration database user (DbUser) that is used when you leave this blank.
+        The database user ID used for the data source of the portal database domain to connect with the database during day-to-day operations. It must comply with your database management software requirements. It has fewer permissions than the configuration database user \(DbUser\) that is used when you leave this blank.
 
     -   **Default value**
 
@@ -1179,9 +1179,9 @@
 
     -   **Examples**
 
-        Oracle Database: `/product/11.2.0/dbhome\_1`
+        Oracle Database: /product/11.2.0/dbhome\_1
 
-        Microsoft SQL Server: `C:\\\\Microsoft SQL Server\\\\\\\\MSSQL`
+        Microsoft SQL Server: C:\\\\Microsoft SQL Server\\\\\\\\MSSQL
 
 -   **customization.AdminUrl**
 
@@ -1195,7 +1195,7 @@
 
     -   **Examples**
 
-        Microsoft SQL Server: `jdbc:sqlserver://:1433`
+        Microsoft SQL Server: jdbc:sqlserver://:1433
 
 -   **customization.DbConfigRoleName**
 
@@ -1205,11 +1205,11 @@
 
     -   **Default value**
 
-        customization.DbType=db2_iseries: `WPBASCFG`
+        customization.DbType=db2\_iseries: WPBASCFG
 
-        customization.DbType=db2_zos: `WPBASCFG`
+        customization.DbType=db2\_zos: WPBASCFG
 
-        Otherwise: `WP_BASE_CONFIG_USERS`
+        Otherwise: WP\_BASE\_CONFIG\_USERS
 
     -   **Examples**
 
@@ -1223,11 +1223,11 @@
 
     -   **Default value**
 
-        customization.DbType=db2_iseries: `WPBASRT`
+        customization.DbType=db2\_iseries: WPBASRT
 
-        customization.DbType=db2_zos: `WPBASRT`
+        customization.DbType=db2\_zos: WPBASRT
 
-        Otherwise: `WP_BASE_RUNTIME_USERS`
+        Otherwise: WP\_BASE\_RUNTIME\_USERS
 
     -   **Examples**
 
@@ -1241,7 +1241,7 @@
 
     -   **Default value**
 
-        `WPCUST`
+        WPCUST
 
     -   **Examples**
 
@@ -1255,7 +1255,7 @@
 
     -   **Default value**
 
-        `wpsNode`
+        wpsNode
 
     -   **Examples**
 
@@ -1269,7 +1269,7 @@
 
     -   **Default value**
 
-        `WPSSG`
+        WPSSG
 
     -   **Examples**
 
@@ -1283,7 +1283,7 @@
 
     -   **Default value**
 
-        `\*`
+        \*
 
     -   **Examples**
 
@@ -1293,7 +1293,7 @@
 
     -   **Description**
 
-        Identifies the integrated catalog facility catalog (VCAT) for the DB2 for z/OS storage group that is used for this portal database domain.
+        Identifies the integrated catalog facility catalog \(VCAT\) for the DB2 for z/OS storage group that is used for this portal database domain.
 
     -   **Default value**
 
@@ -1301,7 +1301,7 @@
 
     -   **Examples**
 
-        `DSN910`
+        : DSN910
 
 -   **customization.DbIndex4KBufferPoolName**
 
@@ -1311,7 +1311,7 @@
 
     -   **Default value**
 
-        `BP3`
+        BP3
 
     -   **Examples**
 
@@ -1325,7 +1325,7 @@
 
     -   **Default value**
 
-        `BP2`
+        BP2
 
     -   **Examples**
 
@@ -1339,7 +1339,7 @@
 
     -   **Default value**
 
-        `BP32K1`
+        BP32K1
 
     -   **Examples**
 
@@ -1353,7 +1353,7 @@
 
     -   **Default value**
 
-        `YES`
+        YES
 
     -   **Examples**
 
@@ -1367,13 +1367,13 @@
 
     -   **Valid values**
 
-        `YES`
+        YES
 
-        `NO`
+        NO
 
     -   **Default value**
 
-        `NO`
+        NO
 
     -   **Examples**
 
@@ -1390,21 +1390,21 @@
 
     -   **Valid values**
 
-        `derby`
+        derby
 
-        `db2`
+        db2
 
-        `db2_iseries`
+        db2\_iseries
 
-        `db2_zos`
+        db2\_zos
 
-        `oracle`
+        oracle
 
-        `sqlserver2005`
+        sqlserver2005
 
     -   **Default value**
 
-        `derby`
+        derby
 
     -   **Examples**
 
@@ -1414,37 +1414,37 @@
 
     -   **Description**
 
-        The name of the database (location name of the DB2 for z/OS subsystem) to be used for this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.
+        The name of the database \(location name of the DB2 for z/OS subsystem\) to be used for this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.
 
     -   **Default value**
 
-        jcr.DbType=db2: `WPJCR`
+        jcr.DbType=db2: WPJCR
 
-        jcr.DbType=db2_iseries:
+        jcr.DbType=db2\_iseries:
 
-        jcr.DbType=db2_zos:
+        jcr.DbType=db2\_zos:
 
-        jcr.DbType=oracle: `WPJCR`
+        jcr.DbType=oracle: WPJCR
 
-        jcr.DbType=sqlserver2005: `WPJCR`
+        jcr.DbType=sqlserver2005: WPJCR
 
         Otherwise: wpsdb
 
     -   **Examples**
 
-        Apache Derby: `wpsdb`
+        Apache Derby: wpsdb
 
         IBM DB2: WPJCR
 
-        IBM DB2 for i with type 4 driver: `/WPSDB`
+        IBM DB2 for i with type 4 driver: /WPSDB
 
-        IBM DB2 for i with type 2 driver: `\*LOCAL/WPSDB`
+        IBM DB2 for i with type 2 driver: \*LOCAL/WPSDB
 
         DB2 for z/OS:
 
-        Oracle Database: `WPJCR`
+        Oracle Database: WPJCR
 
-        Microsoft SQL Server: `WPJCR`
+        Microsoft SQL Server: WPJCR
 
 -   **jcr.DbSchema**
 
@@ -1454,7 +1454,7 @@
 
     -   **Default value**
 
-        `jcr`
+        jcr
 
     -   **Examples**
 
@@ -1468,7 +1468,7 @@
 
     -   **Default value**
 
-        `WPJCR`
+        WPJCR
 
     -   **Examples**
 
@@ -1482,13 +1482,13 @@
 
     -   **Default value**
 
-        jcr.DbType=db2: `wpjcrdbDS`
+        jcr.DbType=db2: wpjcrdbDS
 
-        jcr.DbType=oracle: `wpjcrdbDS`
+        jcr.DbType=oracle: wpjcrdbDS
 
-        jcr.DbType=sqlserver2005: `wpjcrdbDS`
+        jcr.DbType=sqlserver2005: wpjcrdbDS
 
-        Otherwise: `wpdbDS`
+        Otherwise: wpdbDS
 
     -   **Examples**
 
@@ -1504,37 +1504,37 @@
 
         jcr.DbType=db2:
 
-        jcr.DbType=db2_iseries:
+        jcr.DbType=db2\_iseries:
 
-        jcr.DbType=db2_zos:
+        jcr.DbType=db2\_zos:
 
         jcr.DbType=oracle:
 
         jcr.DbType=sqlserver2005:
 
-        Otherwise: `jdbc:derby:wpsdb;create=true`
+        Otherwise: jdbc:derby:wpsdb;create=true
 
     -   **Examples**
 
-        Apache Derby: `jdbc:derby:wpsdb;create=true`
+        Apache Derby: jdbc:derby:wpsdb;create=true
 
-        IBM DB2 with type 4 drivers: `jdbc:db2://:50000/WPJCR:returnAlias=0;`
+        IBM DB2 with type 4 drivers: jdbc:db2://:50000/WPJCR:returnAlias=0;
 
-        IBM DB2 with type 2 drivers: `jdbc:db2:WPJCR`
+        IBM DB2 with type 2 drivers: jdbc:db2:WPJCR
 
-        IBM DB2 for i with type 4 drivers: `jdbc:as400:///WPSDB;metadata source=1;prompt=false`
+        IBM DB2 for i with type 4 drivers: jdbc:as400:///WPSDB;metadata source=1;prompt=false
 
-        IBM DB2 for i with type 2 drivers: `jdbc:db2:\*LOCAL/WPSDB`
+        IBM DB2 for i with type 2 drivers: jdbc:db2:\*LOCAL/WPSDB
 
-        IBM DB2 for z/OS with type 4 drivers: `jdbc:db2://:/`
+        IBM DB2 for z/OS with type 4 drivers: jdbc:db2://:/
 
-        IBM DB2 for z/OS with type 2 drivers: `jdbc:db2:`
+        IBM DB2 for z/OS with type 2 drivers: jdbc:db2:
 
-        Oracle Database with type 4 drivers and thin client: `jdbc:oracle:thin:@//:1521/`
+        Oracle Database with type 4 drivers and thin client: jdbc:oracle:thin:@//:1521/
 
-        Oracle Database with type 2 drivers and thick client: `jdbc:oracle:oci:@//:1521/`
+        Oracle Database with type 2 drivers and thick client: jdbc:oracle:oci:@//:1521/
 
-        Microsoft SQL Server: `jdbc:sqlserver://:1433;SelectMethod=cursor;DatabaseName=WPJCR`
+        Microsoft SQL Server: jdbc:sqlserver://:1433;SelectMethod=cursor;DatabaseName=WPJCR
 
 -   **jcr.DbUser**
 
@@ -1568,7 +1568,7 @@
 
     -   **Description**
 
-        The database user ID used for the data source of the portal database domain to connect with the database during day-to-day operations. It must comply with your database management software requirements. It has fewer permissions than the configuration database user (DbUser) that is used when you leave this blank.
+        The database user ID used for the data source of the portal database domain to connect with the database during day-to-day operations. It must comply with your database management software requirements. It has fewer permissions than the configuration database user \(DbUser\) that is used when you leave this blank.
 
     -   **Default value**
 
@@ -1634,9 +1634,9 @@
 
     -   **Examples**
 
-        Oracle Database: `/product/11.2.0/dbhome\_1`
+        Oracle Database: /product/11.2.0/dbhome\_1
 
-        Microsoft SQL Server: `C:\\\\Microsoft SQL Server\\\\\\\\MSSQL`
+        Microsoft SQL Server: C:\\\\Microsoft SQL Server\\\\\\\\MSSQL
 
 -   **jcr.AdminUrl**
 
@@ -1650,7 +1650,7 @@
 
     -   **Examples**
 
-        Microsoft SQL Server: `jdbc:sqlserver://:1433`
+        Microsoft SQL Server: jdbc:sqlserver://:1433
 
 -   **jcr.DbConfigRoleName**
 
@@ -1660,11 +1660,11 @@
 
     -   **Default value**
 
-        jcr.DbType=db2_iseries: `WPJCRCFG`
+        jcr.DbType=db2\_iseries: WPJCRCFG
 
-        jcr.DbType=db2_zos: `WPJCRCFG`
+        jcr.DbType=db2\_zos: WPJCRCFG
 
-        Otherwise: `WP_JCR_CONFIG_USERS`
+        Otherwise: WP\_JCR\_CONFIG\_USERS
 
     -   **Examples**
 
@@ -1678,11 +1678,11 @@
 
     -   **Default value**
 
-        release.DbType=db2_iseries: `WPJCRRT`
+        release.DbType=db2\_iseries: WPJCRRT
 
-        release.DbType=db2_zos: `WPJCRRT`
+        release.DbType=db2\_zos: WPJCRRT
 
-        Otherwise: `WP_JCR_RUNTIME_USERS`
+        Otherwise: WP\_JCR\_RUNTIME\_USERS
 
     -   **Examples**
 
@@ -1696,7 +1696,7 @@
 
     -   **Default value**
 
-        `WPJCR`
+        WPJCR
 
     -   **Examples**
 
@@ -1720,7 +1720,7 @@
 
     -   **Description**
 
-        The host name of the remote system that hosts the DB2 Content Manager Runtime Edition database (DB2 for z/OS only).
+        The host name of the remote system that hosts the DB2 Content Manager Runtime Edition database \(DB2 for z/OS only\).
 
     -   **Default value**
 
@@ -1734,7 +1734,7 @@
 
     -   **Description**
 
-        The domain (not including the host name) of the remote system that hosts the DB2 Content Manager Runtime Edition database (DB2 for z/OS only).
+        The domain \(not including the host name\) of the remote system that hosts the DB2 Content Manager Runtime Edition database \(DB2 for z/OS only\).
 
     -   **Default value**
 
@@ -1742,13 +1742,13 @@
 
     -   **Examples**
 
-        `yourco.com`
+        : yourco.com
 
 -   **jcr.DbPort**
 
     -   **Description**
 
-        The port number of the DB2 Content Manager Runtime Edition database on the remote system (DB2 for z/OS only).
+        The port number of the DB2 Content Manager Runtime Edition database on the remote system \(DB2 for z/OS only\).
 
     -   **Default value**
 
@@ -1756,7 +1756,7 @@
 
     -   **Examples**
 
-        `446`
+        : 446
 
 -   **jcr.ZosDbPrefix**
 
@@ -1766,7 +1766,7 @@
 
     -   **Default value**
 
-        `ICM`
+        ICM
 
     -   **Examples**
 
@@ -1776,11 +1776,11 @@
 
     -   **Description**
 
-        The maximum number of user-defined tables to be stored in a particular Node Type database in the DB2 Content Manager Runtime Edition database (DB2 for z/OS only).
+        The maximum number of user-defined tables to be stored in a particular Node Type database in the DB2 Content Manager Runtime Edition database \(DB2 for z/OS only\).
 
     -   **Default value**
 
-        `100`
+        100
 
     -   **Examples**
 
@@ -1794,7 +1794,7 @@
 
     -   **Default value**
 
-        `WPSSG`
+        WPSSG
 
     -   **Examples**
 
@@ -1808,7 +1808,7 @@
 
     -   **Default value**
 
-        `\*`
+        \*
 
     -   **Examples**
 
@@ -1818,7 +1818,7 @@
 
     -   **Description**
 
-        Identifies the integrated catalog facility catalog (VCAT) for the DB2 for z/OS storage group that is used for this portal database domain.
+        Identifies the integrated catalog facility catalog \(VCAT\) for the DB2 for z/OS storage group that is used for this portal database domain.
 
     -   **Default value**
 
@@ -1826,7 +1826,7 @@
 
     -   **Examples**
 
-        `DSN910`
+        : DSN910
 
 -   **jcr.DbIndex4KBufferPoolName**
 
@@ -1836,7 +1836,7 @@
 
     -   **Default value**
 
-        `BP3`
+        BP3
 
     -   **Examples**
 
@@ -1850,7 +1850,7 @@
 
     -   **Default value**
 
-        `BP2`
+        BP2
 
     -   **Examples**
 
@@ -1864,7 +1864,7 @@
 
     -   **Default value**
 
-        `BP32K1`
+        BP32K1
 
     -   **Examples**
 
@@ -1878,7 +1878,7 @@
 
     -   **Default value**
 
-        `YES`
+        YES
 
     -   **Examples**
 
@@ -1892,9 +1892,9 @@
 
     -   **Valid values**
 
-        `YES`
+        YES
 
-        `NO`
+        NO
 
     -   **Default value**
 
@@ -1917,7 +1917,7 @@ The following properties are required to configure the JCR.
 
     -   **Default value**
 
-        `BP32K1`
+        BP32K1
 
     -   **Examples**
 
@@ -1934,21 +1934,21 @@ The following properties are required to configure the JCR.
 
     -   **Valid values**
 
-        `db2`
+        db2
 
-        `db2_iseries`
+        db2\_iseries
 
-        `db2_zos`
+        db2\_zos
 
-        `derby`
+        derby
 
-        `oracle`
+        oracle
 
-        `sqlserver2005`
+        sqlserver2005
 
     -   **Default value**
 
-        `derby`
+        derby
 
     -   **Examples**
 
@@ -1962,13 +1962,13 @@ The following properties are required to configure the JCR.
 
     -   **Valid values**
 
-        `true`
+        true
 
-        `false`
+        false
 
     -   **Default value**
 
-        `true`
+        true
 
     -   **Examples**
 
@@ -1978,21 +1978,21 @@ The following properties are required to configure the JCR.
 
     -   **Description**
 
-        The name of the database (location name of the DB2 for z/OS subsystem) to be used for this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.
+        The name of the database \(location name of the DB2 for z/OS subsystem\) to be used for this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.
 
     -   **Default value**
 
-        feedback.DbType=db2: `WPFDBK`
+        feedback.DbType=db2: WPFDBK
 
-        feedback.DbType=db2_iseries:
+        feedback.DbType=db2\_iseries:
 
-        feedback.DbType=db2_zos:
+        feedback.DbType=db2\_zos:
 
-        feedback.DbType=oracle: `WPFDBK`
+        feedback.DbType=oracle: WPFDBK
 
-        feedback.DbType=sqlserver2005: `WPFDBK`
+        feedback.DbType=sqlserver2005: WPFDBK
 
-        Otherwise: `wpsdb`
+        Otherwise: wpsdb
 
     -   **Examples**
 
@@ -2000,13 +2000,13 @@ The following properties are required to configure the JCR.
 
         IBM DB2: WPFDBK
 
-        IBM DB2 for i with type 4 driver: `/WPSDB`
+        IBM DB2 for i with type 4 driver: /WPSDB
 
-        IBM DB2 for i with type 2 driver: `\*LOCAL/WPSDB`
+        IBM DB2 for i with type 2 driver: \*LOCAL/WPSDB
 
         DB2 for z/OS:
 
-        Oracle Database: `WPFDBK`
+        Oracle Database: WPFDBK
 
         Microsoft SQL Server: WPFDBK
 
@@ -2032,7 +2032,7 @@ The following properties are required to configure the JCR.
 
     -   **Default value**
 
-        `WPFDBK`
+        WPFDBK
 
     -   **Examples**
 
@@ -2046,13 +2046,13 @@ The following properties are required to configure the JCR.
 
     -   **Default value**
 
-        feedback.DbType=db2: `wpfdbkdbDS`
+        feedback.DbType=db2: wpfdbkdbDS
 
-        feedback.DbType=oracle: `wpfdbkdbDS`
+        feedback.DbType=oracle: wpfdbkdbDS
 
-        feedback.DbType=sqlserver2005: `wpfdbkdbDS`
+        feedback.DbType=sqlserver2005: wpfdbkdbDS
 
-        Otherwise: `wpdbDS`
+        Otherwise: wpdbDS
 
     -   **Examples**
 
@@ -2068,37 +2068,37 @@ The following properties are required to configure the JCR.
 
         feedback.DbType=db2:
 
-        feedback.DbType=db2_iseries:
+        feedback.DbType=db2\_iseries:
 
-        feedback.DbType=db2_zos:
+        feedback.DbType=db2\_zos:
 
         feedback.DbType=oracle:
 
         feedback.DbType=sqlserver2005:
 
-        Otherwise: `jdbc:derby:wpsdb;create=true`
+        Otherwise: jdbc:derby:wpsdb;create=true
 
     -   **Examples**
 
-        Apache Derby: `jdbc:derby:wpsdb;create=true`
+        Apache Derby: jdbc:derby:wpsdb;create=true
 
-        IBM DB2 with type 4 drivers: `jdbc:db2://:50000/WPFDBK:returnAlias=0;`
+        IBM DB2 with type 4 drivers: jdbc:db2://:50000/WPFDBK:returnAlias=0;
 
-        IBM DB2 with type 2 drivers: `jdbc:db2:WPFDBK`
+        IBM DB2 with type 2 drivers: jdbc:db2:WPFDBK
 
-        IBM DB2 for i with type 4 drivers: `jdbc:as400:/WPSDB;metadata source=1;prompt=false`
+        IBM DB2 for i with type 4 drivers: jdbc:as400:/WPSDB;metadata source=1;prompt=false
 
-        IBM DB2 for i with type 2 drivers: `jdbc:db2:\*LOCAL/WPSDB`
+        IBM DB2 for i with type 2 drivers: jdbc:db2:\*LOCAL/WPSDB
 
-        IBM DB2 for z/OS with type 4 drivers: `jdbc:db2://:/`
+        IBM DB2 for z/OS with type 4 drivers: jdbc:db2://:/
 
-        IBM DB2 for z/OS with type 2 drivers: `jdbc:db2:`
+        IBM DB2 for z/OS with type 2 drivers: jdbc:db2:
 
-        Oracle Database with type 4 drivers and thin client: `jdbc:oracle:thin:@//:1521/`
+        Oracle Database with type 4 drivers and thin client: jdbc:oracle:thin:@//:1521/
 
-        Oracle Database with type 2 drivers and thick client: `jdbc:oracle:oci:@//:1521/`
+        Oracle Database with type 2 drivers and thick client: jdbc:oracle:oci:@//:1521/
 
-        Microsoft SQL Server: `jdbc:sqlserver://:1433;SelectMethod=cursor;DatabaseName=WPFDBK`
+        Microsoft SQL Server: jdbc:sqlserver://:1433;SelectMethod=cursor;DatabaseName=WPFDBK
 
 -   **feedback.DbUser**
 
@@ -2132,7 +2132,7 @@ The following properties are required to configure the JCR.
 
     -   **Description**
 
-        The database user ID used for the data source of the portal database domain to connect with the database during day-to-day operations. It must comply with your database management software requirements. It has fewer permissions than the configuration database user (DbUser) that is used when you leave this blank.
+        The database user ID used for the data source of the portal database domain to connect with the database during day-to-day operations. It must comply with your database management software requirements. It has fewer permissions than the configuration database user \(DbUser\) that is used when you leave this blank.
 
     -   **Default value**
 
@@ -2198,9 +2198,9 @@ The following properties are required to configure the JCR.
 
     -   **Examples**
 
-        Oracle Database: `/product/11.2.0/dbhome\_1`
+        Oracle Database: /product/11.2.0/dbhome\_1
 
-        Microsoft SQL Server: `C:\\\\Microsoft SQL Server\\\\\\\\MSSQL`
+        Microsoft SQL Server: C:\\\\Microsoft SQL Server\\\\\\\\MSSQL
 
 -   **feedback.AdminUrl**
 
@@ -2214,9 +2214,9 @@ The following properties are required to configure the JCR.
 
     -   **Examples**
 
-        Microsoft SQL Server 2008: `jdbc:sqlserver://:1433`
+        Microsoft SQL Server 2008: jdbc:sqlserver://:1433
 
-        Microsoft SQL Server 2005: `jdbc:sqlserver://:1433`
+        Microsoft SQL Server 2005: jdbc:sqlserver://:1433
 
 -   **feedback.DbConfigRoleName**
 
@@ -2226,11 +2226,11 @@ The following properties are required to configure the JCR.
 
     -   **Default value**
 
-        feedback.DbType=db2_iseries: `WPPZNCFG`
+        feedback.DbType=db2\_iseries: WPPZNCFG
 
-        feedback.DbType=db2_zos: `WPPZNCFG`
+        feedback.DbType=db2\_zos: WPPZNCFG
 
-        Otherwise: `WP_PZN_CONFIG_USERS`
+        Otherwise: WP\_PZN\_CONFIG\_USERS
 
     -   **Examples**
 
@@ -2244,11 +2244,11 @@ The following properties are required to configure the JCR.
 
     -   **Default value**
 
-        feedback.DbType=db2_iseries: `WPPZNRT`
+        feedback.DbType=db2\_iseries: WPPZNRT
 
-        feedback.DbType=db2_zos: `WPPZNRT`
+        feedback.DbType=db2\_zos: WPPZNRT
 
-        Otherwise: `WP_PZN_RUNTIME_USERS`
+        Otherwise: WP\_PZN\_RUNTIME\_USERS
 
     -   **Examples**
 
@@ -2262,7 +2262,7 @@ The following properties are required to configure the JCR.
 
     -   **Default value**
 
-        `WPFDBK`
+        WPFDBK
 
     -   **Examples**
 
@@ -2276,7 +2276,7 @@ The following properties are required to configure the JCR.
 
     -   **Default value**
 
-        `pznNode`
+        pznNode
 
     -   **Examples**
 
@@ -2290,7 +2290,7 @@ The following properties are required to configure the JCR.
 
     -   **Default value**
 
-        `myserver`
+        myserver
 
     -   **Examples**
 
@@ -2304,7 +2304,7 @@ The following properties are required to configure the JCR.
 
     -   **Default value**
 
-        `WPSSG`
+        WPSSG
 
     -   **Examples**
 
@@ -2318,7 +2318,7 @@ The following properties are required to configure the JCR.
 
     -   **Default value**
 
-        `\*`
+        \*
 
     -   **Examples**
 
@@ -2336,7 +2336,7 @@ The following properties are required to configure the JCR.
 
     -   **Examples**
 
-        `DSN910`
+        : DSN910
 
 -   **feedback.Db4KBufferPoolName**
 
@@ -2346,7 +2346,7 @@ The following properties are required to configure the JCR.
 
     -   **Default value**
 
-        `BP2`
+        BP2
 
     -   **Examples**
 
@@ -2360,7 +2360,7 @@ The following properties are required to configure the JCR.
 
     -   **Default value**
 
-        `BP32K1`
+        BP32K1
 
     -   **Examples**
 
@@ -2377,21 +2377,21 @@ The following properties are required to configure the JCR.
 
     -   **Valid values**
 
-        `derby`
+        derby
 
-        `db2`
+        db2
 
-        `db2_iseries`
+        db2\_iseries
 
-        `db2_zos`
+        db2\_zos
 
-        `oracle`
+        oracle
 
-        `sqlserver2005`
+        sqlserver2005
 
     -   **Default value**
 
-        `derby`
+        derby
 
     -   **Examples**
 
@@ -2401,37 +2401,37 @@ The following properties are required to configure the JCR.
 
     -   **Description**
 
-        The name of the database (location name of the DB2 for z/OS subsystem) to be used for this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.
+        The name of the database \(location name of the DB2 for z/OS subsystem\) to be used for this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.
 
     -   **Default value**
 
-        likeminds.DbType=db2: `WPLM`
+        likeminds.DbType=db2: WPLM
 
-        likeminds.DbType=db2_iseries:
+        likeminds.DbType=db2\_iseries:
 
-        likeminds.DbType=db2_zos:
+        likeminds.DbType=db2\_zos:
 
-        likeminds.DbType=oracle: `WPLM`
+        likeminds.DbType=oracle: WPLM
 
-        likeminds.DbType=sqlserver2005: `WPLM`
+        likeminds.DbType=sqlserver2005: WPLM
 
-        Otherwise: `wpsdb`
+        Otherwise: wpsdb
 
     -   **Examples**
 
-        Apache Derby: `wpsdb`
+        Apache Derby: wpsdb
 
-        IBM DB2: `WPLM`
+        IBM DB2: WPLM
 
-        IBM DB2 for i with type 4 driver: `/WPSDB`
+        IBM DB2 for i with type 4 driver: /WPSDB
 
-        IBM DB2 for i with type 2 driver: `\*LOCAL/WPSDB`
+        IBM DB2 for i with type 2 driver: \*LOCAL/WPSDB
 
         DB2 for z/OS:
 
-        Oracle Database: `WPLM`
+        Oracle Database: WPLM
 
-        Microsoft SQL Server: `WPLM`
+        Microsoft SQL Server: WPLM
 
 -   **likeminds.DbSchema**
 
@@ -2455,7 +2455,7 @@ The following properties are required to configure the JCR.
 
     -   **Default value**
 
-        `WPLM`
+        WPLM
 
     -   **Examples**
 
@@ -2469,13 +2469,13 @@ The following properties are required to configure the JCR.
 
     -   **Default value**
 
-        likeminds.DbType=db2: `wplmdbDS`
+        likeminds.DbType=db2: wplmdbDS
 
-        likeminds.DbType=oracle: `wplmdbDS`
+        likeminds.DbType=oracle: wplmdbDS
 
-        likeminds.DbType=sqlserver2005: `wplmdbDS`
+        likeminds.DbType=sqlserver2005: wplmdbDS
 
-        Otherwise: `wpdbDS`
+        Otherwise: wpdbDS
 
     -   **Examples**
 
@@ -2491,7 +2491,7 @@ The following properties are required to configure the JCR.
 
         likeminds.DbType=db2:
 
-        likeminds.DbType=db2_iseries:
+        likeminds.DbType=db2\_iseries:
 
         likeminds.DbType=db2\_zos:
 
@@ -2499,29 +2499,29 @@ The following properties are required to configure the JCR.
 
         likeminds.DbType=sqlserver2005:
 
-        Otherwise: `jdbc:derby:wpsdb;create=true`
+        Otherwise: jdbc:derby:wpsdb;create=true
 
     -   **Examples**
 
-        Apache Derby: `jdbc:derby:wpsdb;create=true`
+        Apache Derby: jdbc:derby:wpsdb;create=true
 
-        IBM DB2 with type 4 drivers: `jdbc:db2://:50000/WPLM:returnAlias=0;`
+        IBM DB2 with type 4 drivers: jdbc:db2://:50000/WPLM:returnAlias=0;
 
-        IBM DB2 with type 2 drivers: `jdbc:db2:WPLM`
+        IBM DB2 with type 2 drivers: jdbc:db2:WPLM
 
-        IBM DB2 for i with type 4 drivers: `jdbc:as400:/WPSDB;metadata source=1;prompt=false`
+        IBM DB2 for i with type 4 drivers: jdbc:as400:/WPSDB;metadata source=1;prompt=false
 
-        IBM DB2 for i with type 2 drivers: `jdbc:db2:\*LOCAL/WPSDB`
+        IBM DB2 for i with type 2 drivers: jdbc:db2:\*LOCAL/WPSDB
 
-        IBM DB2 for z/OS with type 4 drivers: `jdbc:db2://:/`
+        IBM DB2 for z/OS with type 4 drivers: jdbc:db2://:/
 
-        IBM DB2 for z/OS with type 2 drivers: `jdbc:db2:`
+        IBM DB2 for z/OS with type 2 drivers: jdbc:db2:
 
-        Oracle Database with type 4 drivers and thin client: `jdbc:oracle:thin:@//:1521/`
+        Oracle Database with type 4 drivers and thin client: jdbc:oracle:thin:@//:1521/
 
-        Oracle Database with type 2 drivers and thick client: `jdbc:oracle:oci:@//:1521/`
+        Oracle Database with type 2 drivers and thick client: jdbc:oracle:oci:@//:1521/
 
-        Microsoft SQL Server: `jdbc:sqlserver://:1433;SelectMethod=cursor;DatabaseName=WPLM`
+        Microsoft SQL Server: jdbc:sqlserver://:1433;SelectMethod=cursor;DatabaseName=WPLM
 
 -   **likeminds.DbUser**
 
@@ -2621,9 +2621,9 @@ The following properties are required to configure the JCR.
 
     -   **Examples**
 
-        Oracle Database: `/product/11.2.0/dbhome\_1`
+        Oracle Database: /product/11.2.0/dbhome\_1
 
-        Microsoft SQL Server: `C:\\\\Microsoft SQL Server\\\\\\\\MSSQL`
+        Microsoft SQL Server: C:\\\\Microsoft SQL Server\\\\\\\\MSSQL
 
 -   **likeminds.AdminUrl**
 
@@ -2637,9 +2637,9 @@ The following properties are required to configure the JCR.
 
     -   **Examples**
 
-        Microsoft SQL Server 2008: `jdbc:sqlserver://:1433`
+        Microsoft SQL Server 2008: jdbc:sqlserver://:1433
 
-        Microsoft SQL Server 2005: `jdbc:sqlserver://:1433`
+        Microsoft SQL Server 2005: jdbc:sqlserver://:1433
 
 -   **likeminds.DbConfigRoleName**
 
@@ -2649,11 +2649,11 @@ The following properties are required to configure the JCR.
 
     -   **Default value**
 
-        likeminds.DbType=db2_iseries: `WPPZNCFG`
+        likeminds.DbType=db2\_iseries: WPPZNCFG
 
-        likeminds.DbType=db2_zos: `WPPZNCFG`
+        likeminds.DbType=db2\_zos: WPPZNCFG
 
-        Otherwise: `WP_PZN_CONFIG_USERS`
+        Otherwise: WP\_PZN\_CONFIG\_USERS
 
     -   **Examples**
 
@@ -2667,11 +2667,11 @@ The following properties are required to configure the JCR.
 
     -   **Default value**
 
-        likeminds.DbType=db2_iseries: `WPPZNRT`
+        likeminds.DbType=db2\_iseries: WPPZNRT
 
-        likeminds.DbType=db2_zos: `WPPZNRT`
+        likeminds.DbType=db2\_zos: WPPZNRT
 
-        Otherwise: `WP_PZN_RUNTIME_USERS`
+        Otherwise: WP\_PZN\_RUNTIME\_USERS
 
     -   **Examples**
 
@@ -2685,7 +2685,7 @@ The following properties are required to configure the JCR.
 
     -   **Default value**
 
-        `WPLM`
+        WPLM
 
     -   **Examples**
 
@@ -2699,7 +2699,7 @@ The following properties are required to configure the JCR.
 
     -   **Default value**
 
-        `pznNode`
+        pznNode
 
     -   **Examples**
 
@@ -2713,7 +2713,7 @@ The following properties are required to configure the JCR.
 
     -   **Default value**
 
-        `myserver`
+        myserver
 
     -   **Examples**
 
@@ -2727,7 +2727,7 @@ The following properties are required to configure the JCR.
 
     -   **Default value**
 
-        `WPSSG`
+        WPSSG
 
     -   **Examples**
 
@@ -2741,7 +2741,7 @@ The following properties are required to configure the JCR.
 
     -   **Default value**
 
-        `\*`
+        \*
 
     -   **Examples**
 
@@ -2751,7 +2751,7 @@ The following properties are required to configure the JCR.
 
     -   **Description**
 
-        Identifies the integrated catalog facility catalog (VCAT) for the DB2 for z/OS storage group that is used for this portal database domain.
+        Identifies the integrated catalog facility catalog \(VCAT\) for the DB2 for z/OS storage group that is used for this portal database domain.
 
     -   **Default value**
 
@@ -2759,7 +2759,7 @@ The following properties are required to configure the JCR.
 
     -   **Examples**
 
-        `DSN910`
+        : DSN910
 
 -   **likeminds.Db4KBufferPoolName**
 
@@ -2769,7 +2769,7 @@ The following properties are required to configure the JCR.
 
     -   **Default value**
 
-        `BP2`
+        BP2
 
     -   **Examples**
 
@@ -2783,7 +2783,7 @@ The following properties are required to configure the JCR.
 
     -   **Default value**
 
-        `BP32K1`
+        BP32K1
 
     -   **Examples**
 

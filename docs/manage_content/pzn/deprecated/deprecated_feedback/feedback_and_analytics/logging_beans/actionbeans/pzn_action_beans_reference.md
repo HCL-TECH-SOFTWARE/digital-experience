@@ -6,10 +6,42 @@ The `com.ibm.wcp.analysis.beans.Action` bean method signatures are:
 
 |Action bean method signatures|Description|
 |-----------------------------|-----------|
-|public void log( HttpServletRequest request, <br>                    String actionName )|Logs a non-resource specific action|
-|<br><pre>\```public void log( HttpServletRequest request, <br>                    String resourceId,                    String collectionName, <br>                    String actionName )<br>```|Logs a resource specific action|
-|<br><pre>\```public void log( HttpServletRequest request, <br>                    String resourceId,<br>                    String collectionName,<br>                     String actionName,<br>                    String key, <br>                    String value )<br>```|Logs a resource specific action with key/value action datum|
-|<br><pre>\```public void log( HttpServletRequest request, <br>                    String resourceId,<br>                    String collectionName, <br>                    String actionName,<br>                    Hashtable keyValueData )<br>```|Logs a resource specific action with multiple key/value action data. Each key can have a single value specified by a string object or multiple values specified by a string array|
+|```
+public void log( HttpServletRequest request, 
+                    String actionName )
+```
+
+|Logs a non-resource specific action|
+|```
+public void log( HttpServletRequest request, 
+                    String resourceId,
+                    String collectionName, 
+                    String actionName )
+
+
+```
+
+|Logs a resource specific action|
+|```
+public void log( HttpServletRequest request, 
+                    String resourceId,
+                    String collectionName, 
+                    String actionName,
+                    String key, 
+                    String value )
+
+```
+
+|Logs a resource specific action with key/value action datum|
+|```
+public void log( HttpServletRequest request, 
+                    String resourceId,
+                    String collectionName, 
+                    String actionName,
+                    Hashtable keyValueData )
+```
+
+|Logs a resource specific action with multiple key/value action data. Each key can have a single value specified by a string object or multiple values specified by a string array|
 
 Action beans should be instantiated as session beans. They maintain user action information for the current session including the actions logged by resource and their corresponding log counts.
 

@@ -18,17 +18,17 @@ Only the files that are specified in this procedure need to be copied. Your them
 
 7.  Expand your new CustomThemeDynamic project and find and expand the WebContent folder.
 
-8.  Find the [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installed Apps\\DefaultTheme85.ear\\DefaultTheme85.war\\skins folder on file system and drag it onto the WebContent folder. This step copies and imports the skins folder into your dynamic web project.
+8.  Find the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)\\theme\\wp.theme.themes\\default85\\installed Apps\\DefaultTheme85.ear\\DefaultTheme85.war\\skins folder on file system and drag it onto the WebContent folder. This step copies and imports the skins folder into your dynamic web project.
 
-9.  Find the [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installed Apps\\DefaultTheme85.ear\\DefaultTheme85.war\\themes folder on file system and drag it onto the WebContent folder. This step copies and imports the themes folder into your dynamic web project.
+9.  Find the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)\\theme\\wp.theme.themes\\default85\\installed Apps\\DefaultTheme85.ear\\DefaultTheme85.war\\themes folder on file system and drag it onto the WebContent folder. This step copies and imports the themes folder into your dynamic web project.
 
 10. In your CustomTheme project, find the WEB-INF folder inside the WebContent folder.
 
-11. Find the [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installed Apps\\DefaultTheme85.ear\\DefaultTheme85.war\\WEBINF\\ decorations.xml file on file system and drag it onto the WEB-INF folder. This step copies and imports the file into your dynamic web project.
+11. Find the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)\\theme\\wp.theme.themes\\default85\\installed Apps\\DefaultTheme85.ear\\DefaultTheme85.war\\WEBINF\\ decorations.xml file on file system and drag it onto the WEB-INF folder. This step copies and imports the file into your dynamic web project.
 
-12. Find the [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installed Apps\\DefaultTheme85.ear\\DefaultTheme85.war\\WEB-INF\\tld folder on file system and drag it onto the WEB-INF folder. This step copies and imports the tld folder into your dynamic web project.
+12. Find the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)\\theme\\wp.theme.themes\\default85\\installed Apps\\DefaultTheme85.ear\\DefaultTheme85.war\\WEB-INF\\tld folder on file system and drag it onto the WEB-INF folder. This step copies and imports the tld folder into your dynamic web project.
 
-13. Find the [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installed Apps\\DefaultTheme85.ear\\DefaultTheme85.war\\WEBINF\\ plugin.xml file on the file system and drag it onto the WEB-INF folder. This step copies and imports the file into your dynamic web project.
+13. Find the [PortalServer\_root](../reference/wpsdirstr.md#wp_root)\\theme\\wp.theme.themes\\default85\\installed Apps\\DefaultTheme85.ear\\DefaultTheme85.war\\WEBINF\\ plugin.xml file on the file system and drag it onto the WEB-INF folder. This step copies and imports the file into your dynamic web project.
 
 14. Modify web.xml from the WebContent\\WEB-INF directory with the following code:
 

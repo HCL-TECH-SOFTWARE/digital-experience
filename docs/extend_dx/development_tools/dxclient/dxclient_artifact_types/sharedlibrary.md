@@ -10,8 +10,7 @@ Default shared Library: DXCLib
 
 Default shared library location: `<dx-server-profile>/PortalServer/sharedLibrary`
 
-!!!note
-    For Shared Library artifact, the DX Server needs to be at HCL DX 9.5 CF196 or higher. The default shared library DXCLib is already configured and associated to application server.
+**Note:** For Shared Library artifact, the DX Server needs to be at HCL DX 9.5 CF196 or higher. The default shared library DXCLib is already configured and associated to application server.
 
 The shared-library command uses two sub-commands upload and delete to manage files in the DX server. The sub-command upload is used to upload jar files and sub-command delete is used to delete the files from the default shared library location provided below.
 
@@ -63,19 +62,19 @@ The shared-library command uses two sub-commands upload and delete to manage fil
     -hostname <value>
     ```
 
-    Use this attribute to specify the port number of the cw_profile (for Kubernetes Environment dxConnectPort is 443):
+    Use this attribute to specify the port number of the cw\_profile\(for Kubernetes Environment dxConnectPort is 443\):
 
     ```
     -dxConnectPort <value>
     ```
 
-    Use this attribute to specify the username that is required for authenticating to the cw_profile:
+    Use this attribute to specify the username that is required for authenticating to the cw\_profile:
 
     ```
     -dxConnectUsername <value>
     ```
 
-    Use this attribute to specify the password that is required for authenticating to the cw_profile:
+    Use this attribute to specify the password that is required for authenticating to the cw\_profile:
 
     ```
     -dxConnectPassword <value>

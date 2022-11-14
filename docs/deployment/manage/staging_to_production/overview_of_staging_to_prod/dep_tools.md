@@ -2,7 +2,7 @@
 
 You can use several tools to stage your server to a production environment.
 
-## Portal application archive (PAA)
+## Portal application archive \(PAA\)
 
 Each type of artifact can be exported, moved to the target, and imported independently. However, a common archive format does the same tasks. Place all artifacts into the correct location inside the archive file. Copy the PAA file to the target and then use the Solution Installer to deploy it.
 
@@ -14,8 +14,13 @@ Syndication allows your business users to define the content of your Portal Site
 
 Syndication can be set up between main or virtual portals on different systems or on the same portal system. Because the syndicated pages refer to portlets with the ID of the portlets, an initial staging needs to take place before syndication can be used.
 
+
 **Related information**  
-[Publishing and deleting personalization rules using a script](../../../../manage_content/pzn/publishing_pzn_rules/pzn_publish_script.md)<br>
-[Importing pages or page hierarchies by using the XML Import portlet](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_admin_portlets_for_xml_config/adxmltsk_portlets_imp.md)<br>
-[The XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
+
+
+[Publishing and deleting personalization rules using a script](../pzn/pzn_publish_script.md)
+
+[Importing pages or page hierarchies by using the XML Import portlet](../admin-system/adxmltsk_portlets_imp.md)
+
+[The XML configuration interface](../admin-system/admxmlai.md)
 

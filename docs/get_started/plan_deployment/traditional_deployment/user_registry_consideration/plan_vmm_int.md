@@ -4,7 +4,7 @@ HCL Portal uses Virtual Member Manager \(VMM\), an interface that enables commun
 
 The Virtual Member Manager \(VMM\) is an abstract component within the WebSphere® Application Server infrastructure. As the following diagram illustrates, HCL Portal uses the Portal User Management Architecture \(PUMA\) System Programming Interface \(SPI\) to retrieve and set attributes on user objects. PUMA passes these requests to VMM, which then passes the requests on to a corresponding registry adapter that connects VMM to the repository.
 
-![Illustration of HCL Portal interaction with Virtual Member Manager. For more information on this graphic, refer to the text in this topic.](../../../../images/vmm_integration.jpg)
+![Illustration of HCL Portal interaction with Virtual Member Manager. For more information on this graphic, refer to the text in this topic.](../images/vmm_integration.jpg)
 
 The preceding diagram includes the following components:
 
@@ -26,6 +26,8 @@ The preceding diagram includes the following components:
     -   *Sample custom adapters for federated repositories examples*
 
 
-???+ info "Related information:"
-    - [Managing the user population for virtual portals](../../../../build_sites/virtual_portal/vp_planning/advppln_mgupop.md)
+**Related information**  
+
+
+[Managing the user population for virtual portals](../admin-system/advppln_mgupop.md)
 

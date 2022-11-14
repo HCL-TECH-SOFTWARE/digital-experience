@@ -12,7 +12,6 @@ This topic contains information for other plug-ins.
 
     -   Writes the current date with a given date pattern.
     -   The format is `[plugin:getDate format='dd/MM/yyyy']`.
-    
 -   **The Script Portlet Namespace Plugin**
 
     -   Renders the namespace for the portlet that the plugin is used in.

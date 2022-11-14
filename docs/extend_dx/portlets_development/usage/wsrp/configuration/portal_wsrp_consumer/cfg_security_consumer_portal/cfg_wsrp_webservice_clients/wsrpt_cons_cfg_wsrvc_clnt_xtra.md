@@ -25,4 +25,5 @@ To deploy an extra service client reference for communication with Producers wit
     -   For the non-secure ports of the Producer definition, you do not need to select a service reference. If no specific service reference is selected for a Producer port, the WSRP Consumer portal uses the default service reference.
 
 
+**Next topic:**[Using the WSRP policy sets and client policy set bindings](../admin-system/wsrpt_cons_use_deflt_polsets.md)
 

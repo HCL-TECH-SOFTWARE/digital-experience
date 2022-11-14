@@ -14,19 +14,22 @@ The portlet is included with the current version of HCL Portal. Click the **Admi
 
 For debugging errors in the client-side execution of JavaScript™ or the client-side application of cascading style sheets, use a client-side console and debugging tool. Most browsers have their own development tools that are built in, or available as an add-on. For example, the Firebug add-on can be downloaded and installed into Mozilla Firefox. If there are client-side errors in the JavaScript, they are displayed in the console of these tools. By default, the resources are still being compressed and aggregated so it can be difficult to identify the exact resource that causes the error.
 
--   **[Turning off aggregation and compression in client-side debug mode](themeopt_mod_debug.md)**  
+-   **[Turning off aggregation and compression in client-side debug mode](../dev-theme/themeopt_mod_debug.md)**  
 Turning on debug mode disables compression and makes modules easier to debug.
--   **[Reloading the profile and module in development mode without caching](themeopt_mod_reloading.md)**  
+-   **[Reloading the profile and module in development mode without caching](../dev-theme/themeopt_mod_reloading.md)**  
 When you are debugging an issue, sometimes you must actively update the profile or module definitions.
--   **[Debugging your module systematically](themeopt_mod_debug_pattern.md)**  
+-   **[Debugging your module systematically](../dev-theme/themeopt_mod_debug_pattern.md)**  
 Use a pattern to determine an issue within your custom modules. This pattern minimizes the time that is required to investigate and debug.
--   **[Verifying JSON file Syntax](themeopt_json_syntax.md)**  
+-   **[Verifying JSON file Syntax](../dev-theme/themeopt_json_syntax.md)**  
 If a JSON file is not formatted correctly it cannot be processed by the server, and is not loaded into your theme.
--   **[Syntax in modules and profile definitions](themeopt_json_syntax_profiles.md)**  
+-   **[Syntax in modules and profile definitions](../dev-theme/themeopt_json_syntax_profiles.md)**  
 If your theme is not behaving as it should, it could be because there are syntax problems within the module or profile files.
 
 
-???+ info "Related information:"
-    - [Theme Optimization Analyzer](../themeopt_analyzer/index.md)
-    - [Themes](../../../../deployment/manage/migrate/planning_migration/mig_plan_expectations/mig_plan_expect_themes.md)
+**Related information**  
+
+
+[Theme Optimization Analyzer](../dev-theme/themeopt_an_analyzer.md)
+
+[Themes](../migrate/mig_plan_expect_themes.md)
 

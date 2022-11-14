@@ -68,6 +68,15 @@ If you click **View Step Command**, you can see the task and properties associat
 
         None
 
+5.  Manual Step: Create the database configuration users on DB2 for z/OS®.
+    -   **Condition**
+
+        None
+
+    -   **ConfigEngine task**
+
+        None
+
 6.  Manual Step: Download the script and view instructions to delete existing databases.
     -   **Condition**
 
@@ -133,7 +142,7 @@ If you click **View Step Command**, you can see the task and properties associat
 
 13. Set up your database.
 
-    (Automatic Storage Management Users only): If you have configured your database with Automatic Storage Management, you must perform additional manual instructions after you perform this step. Run the setup database script to create database schemas and users and grant privileges to database users. Then, go to [Oracle: Creating JCR table spaces (Automatic Storage Management)](../../../../deployment/manage/db_mgmt_sys/oracle_create_tablespaces.md) to perform additional manual instructions.
+    \(Automatic Storage Management Users only\): If you have configured your database with Automatic Storage Management, you must perform additional manual instructions after you perform this step. Run the setup database script to create database schemas and users and grant privileges to database users. Then, go to [Oracle: Creating JCR table spaces \(Automatic Storage Management\)](oracle_create_tablespaces.md) to perform additional manual instructions.
 
     -   **Condition**
 
@@ -315,7 +324,7 @@ You transferred your data from Apache Derby to your preferred database.
 
 One quick way to test your database configuration is to log in and explore the site to validate the site is working as you expected.
 
-Go to http://host_name:port/context_root/default_portal_home. For example, go to http://host_name:10039/wps/portal.
+Go to http://host\_name:port/context\_root/default\_portal\_home. For example, go to http://host\_name:10039/wps/portal.
 
 Next, you can use other options to configure your environment more.
 
@@ -323,6 +332,9 @@ If you are setting up a stand-alone server environment, you can use the Enable F
 
 If you are setting up a cluster environment, you can use the Create a Deployment Manager option to create a deployment manager profile that is augmented with HCL Portal resources.
 
-
+-   **[Oracle worksheet: Transfer your database](../config/cw_db_ws_oracle_singledb.md)**  
+This worksheet highlights the fields and properties that you see in the Configuration Wizard when you use the transfer database option.
+-   **[Oracle worksheet: Transfer to multiple databases](../config/cw_db_ws_oracle_multidb.md)**  
+When you use the database transfer option, you can use the condition to create multiple databases in the Configuration Wizard. This condition is selected by default. This worksheet highlights the fields and properties that you see in the Configuration Wizard when you use the multiple databases condition.
 
 

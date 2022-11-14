@@ -10,8 +10,7 @@ When a page is created from the template, the site structure that is required in
 
     -   Click **Portal User Interface** \> **Page Templates**.
 
-        !!! note
-            This path uses the site toolbar that is included with the Portal 8.0 theme.
+        **Note:** This path uses the site toolbar that is included with the Portal 8.0 theme.
 
     -   Click **Portal User Interface** \> **Manage Pages** \> **Content Root** \> **Hidden Pages** \> **Page Templates**.
 2.  Create a page.
@@ -25,8 +24,7 @@ When a page is created from the template, the site structure that is required in
     1.  Select **Edit Shared Settings**.
     2.  Select **Select content and use the content association of current page** from the **Content behavior** section. This setting causes the viewer to reference content from the site area that is defined in the content association on the page that contains the viewer.
 
-        !!! note
-            If you did not add a content association to the page template, this option is not available.
+        **Note:** If you did not add a content association to the page template, this option is not available.
 
 
 After you create the template page, the new template is displayed in the list of available templates when you create a page.

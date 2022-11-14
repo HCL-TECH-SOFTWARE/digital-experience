@@ -1,4 +1,4 @@
-# Configure HAProxy Certificate
+# Configure HAProxy certificate
 
 To have the HAProxy allow forward requests to your applications, you must provide it with a TLS Certificate. This certificate is used for incoming/outgoing traffic from the outside of the Kubernetes or OpenShift cluster to your applications. HAProxy performs TLS offloading.
 
@@ -42,11 +42,11 @@ You need to make sure that the reference to the secret is set up correctly in yo
 
 You can set the name of the certificate used with the following syntax, the default value is `dx-tls-cert`:
 
-```yaml
+```
 # Networking specific configuration
 networking:
  # TLS Certificate secret used for HAProxy
- tlsCertSecret: "dx-tls-cert"
+ tlsCertSecret: "dx-tls-cert"            
 ```
 
 !!! note

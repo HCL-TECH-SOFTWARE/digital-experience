@@ -4,13 +4,13 @@ View the guidelines for using HTML, WML, and cHTML markup in your portlet JSPs t
 
 The portal server page is displayed with skins and themes that are defined by the portal designer or administrator. For portlets to integrate with an organization's portal or user's customized portal, they must generate markup that starts the generic style classes for portlets. They must not use tags or attributes to specify colors, fonts, or other visual elements.
 
-Portlets are allowed to render only markup fragments, which are then assembled by the portlet framework for a page. Portlet output must contain complete, well-structured, and valid markup fragments. This output helps to prevent the portlet's HTML code, for example, from corrupting the portal's aggregated HTML code. Use a validation tool for your markup, such as the [W3C HTML Validation Service](https://validator.w3.org/) or a tool from a markup editor.
+Portlets are allowed to render only markup fragments, which are then assembled by the portlet framework for a page. Portlet output must contain complete, well-structured, and valid markup fragments. This output helps to prevent the portlet's HTML code, for example, from corrupting the portal's aggregated HTML code. Use a validation tool for your markup, such as the [W3C HTML Validation Service](http://validator.w3.org/) or a tool from a markup editor.
 
 These guidelines are based on the JSP coding guidelines for standard portlets.
 
 ## HTML
 
--   Use standard HTML. For the official HTML specification, see [W3C](https://www.w3.org).
+-   Use standard HTML. For the official HTML specification, see [W3C](http://www.w3.org).
 -   Use only HTML fragments. Because portlets contribute to the content of a larger page, they must provide HTML fragments and must not have `<html>`, `<head>`, or `<body>` tags.
 -   Use only elements that can be rendered properly in an HTML table cell \(`<td>...</td>`\). Frames, for example, do not open when inserted in a table.
 -   Make sure that the fragments are well-formed to prevent unbalanced pages. Watch out for unterminated, extraneous, or improperly nested tags. The behavior of pages with improperly stopped tags is unpredictable.
@@ -49,7 +49,7 @@ These guidelines are based on the JSP coding guidelines for standard portlets.
     -   The IFRAME fills its content based on a URL. The URL must be addressable by the browser, therefore the server that is the target of the URL must be accessible by the browser.
     -   Not all browser levels support IFRAMEs.
     -   If the content is larger than the IFRAME region, then enable horizontal and vertical scrolling to allow the user scroll through the embedded content. Content that contains scrolling regions itself can make it difficult for the user to manipulate all scrolling regions to view all embedded content, causing usability problems.
--   Use JSTL instead of inventing common tags. The Java Standard Tag Library \(JSTL\) defines many commonly needed tags for conditions, iterations, URLs, globalization, and formatting. For more information, go to [Using JSTL in portlet JSPs](https://help.hcltechsw.com/digital-experience/9.5/dev-portlet/jsrjsp.html).
+-   Use JSTL instead of inventing common tags. The Java Standard Tag Library \(JSTL\) defines many commonly needed tags for conditions, iterations, URLs, globalization, and formatting. For more information, go to [Using JSTL in portlet JSPs](wpsbsoutput.md).
 
 ## WML
 

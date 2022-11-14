@@ -28,6 +28,6 @@ The Controller SPI allows you to set flags for resources. For example, you can s
 -   **[Setting themes](ctrlrapit_set_theme.md)**  
 The Controller SPI enables the setting of themes on modifiable instances that implement the `ThemeSetter` interface, for example `ContentPage` and `ContentLabel`.
 -   **[Setting URLs](../modify_properties/setting_urls/index.md)**  
-You can set URLs to point to external content (`ExternalContentURL`) or to internal content, that is to nodes in the portal (`InternalContentURL`).
+You can set URLs to point to external content \(`ExternalContentURL`\) or to internal content, that is to nodes in the portal \(`InternalContentURL`\).
 
 

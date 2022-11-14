@@ -6,9 +6,9 @@ You set flags for resources either on modifiable instances of those resources or
 
 |Flag|Flag is associated to resource|Flag is set on|
 |----|------------------------------|--------------|
-|`ActiveFlag`|`ContentNode` (resources that implement the `ActiveFlag` interfac\)|`ModifiableContentNode`|
-|`BookmarkableFlag`|`ContentNode` (resources that implement the `BookmarkableFlag` interface)|`ModifiableContentNode`|
-|`ShareableFlag`|`ContentNode` (resources that implement the `ShareableFlag` interface)|`ModifiableContentNode`|
+|`ActiveFlag`|`ContentNode` \(resources that implement the `ActiveFlag` interface\)|`ModifiableContentNode`|
+|`BookmarkableFlag`|`ContentNode` \(resources that implement the `BookmarkableFlag` interface\)|`ModifiableContentNode`|
+|`ShareableFlag`|`ContentNode` \(resources that implement the `ShareableFlag` interface\)|`ModifiableContentNode`|
 |`AllPortletsAllowedFlag`|`ContentPage`|`LayoutModelController`|
 |`DeletableFlag`|`LayoutNode`|`LayoutModelController`|
 |`ModifiableFlag`|`LayoutNode`|`LayoutModelController`|
@@ -37,6 +37,6 @@ Example 2 - Setting the `BookmarkableFlag` for a content page:
 ```
 
 
-???+ info "Related information"  
-    - [Model SPI overview](../../../../../extend_dx/apis/model_spi/index.md)
+???+ info "**Related information**"  
+    - [Model SPI overview](../dev/dgn_modelovw.md)
 

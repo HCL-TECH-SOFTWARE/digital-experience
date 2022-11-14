@@ -19,3 +19,6 @@ With the search seedlist 1.0 support, custom metadata fields that are specified 
 6.  Click **OK**, and save the changes to the master configuration.
 
 7.  Restart the portal.
+
+
+

@@ -13,12 +13,12 @@ The `deploy-portlet` command is used to deploy one or more new or updated portle
 
 -   **XMLAccess file**
 
-    This xml file should contain the definition of the web application along with the details of the portlet(s) to be deployed. The web archive file path referred to in this file inside the URL element is ignored, but the URL element itself must exist as it is dynamically replaced when the command is executed. A sample XML file for deploying portlet(s) can be found in the samples directory of DXClient (samples/DeployPortlet.xml) or in DX server located in the following directory: PortalServer_root/doc/xml-samples/DeployPortlet.xml.
+    This xml file should contain the definition of the web application along with the details of the portlet\(s\) to be deployed. The web archive file path referred to in this file inside the URL element is ignored, but the URL element itself must exist as it is dynamically replaced when the command is executed. A sample XML file for deploying portlet\(s\) can be found in the samples directory of DXClient \(samples/DeployPortlet.xml\) or in DX server located in the following directory: PortalServer\_root/doc/xml-samples/DeployPortlet.xml.
 
 
 -   **Portlet Application web archive file**
 
-    This web archive .war file should contain the necessary portlet artifacts for deployment, as per the JSR 286 portlet standard. Refer to [Importing WAR files](../../../../deployment/manage//portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref_import_war.md).
+    This web archive .war file should contain the necessary portlet artifacts for deployment, as per the JSR 286 portlet standard. Refer to [Importing WAR files](https://help.hcltechsw.com/digital-experience/9.5/admin-system/adxmlref_import_war.html).
 
 
 **Command**
@@ -37,7 +37,7 @@ dxclient deploy-portlet -h
 
 **Command options**
 
-Use this attribute to specify the protocol with which to connect to the DX server (`wp_profile`):
+Use this attribute to specify the protocol with which to connect to the DX server \(`wp_profile`\):
 
 ```
 -dxProtocol <value>
@@ -49,19 +49,19 @@ Use this attribute to specify the hostname of the target DX server:
 -hostname <value>
 ```
 
-Use this attribute to specify the port on which to connect to the DX server (`wp_profile`):
+Use this attribute to specify the port on which to connect to the DX server \(`wp_profile`\):
 
 ```
 -dxPort <value>
 ```
 
-Use this attribute to specify the path to DX configuration endpoint (e.g. /wps/config):
+Use this attribute to specify the path to DX configuration endpoint \(e.g. /wps/config\):
 
 ```
 -xmlConfigPath <value>
 ```
 
-Use this attribute to specify the username to authenticate with the DX server (`wp_profile`):
+Use this attribute to specify the username to authenticate with the DX server \(`wp_profile`\):
 
 ```
 -dxUsername <value>
@@ -110,7 +110,7 @@ Log files from command execution can be found in the logs directory of the DXCli
 The `undeploy-portlet` command is used to undeploy the portlets in the target DX servers.
 
 !!! note
-    `Undeploy-portlet` command takes a backup of the XML file of the deployed portlet application and application (EAR) if user has given enableBackup as true. By default, enableBackup is set to true and placed in the store/outputFiles/portlets/backup/undeploy-portlet/. In case, if the undeployed portlet is required again, then the user can restore the portlet WAR file from the downloaded portlet application EAR file along with the exported deployable portlet application XML file.
+    Undeploy-portlet command takes a backup of the XML file of the deployed portlet application and application \(EAR\) if user has given enableBackup as true. By default, enableBackup is set to true and placed in the `store/outputFiles/portlets/backup/undeploy-portlet/`. In case, if the undeployed portlet is required again, then the user can restore the portlet WAR file from the downloaded portlet application EAR file along with the exported deployable portlet application XML file.
 
 -   **Command description**
 
@@ -144,25 +144,25 @@ The `undeploy-portlet` command is used to undeploy the portlets in the target DX
     -hostname <value>
     ```
 
-    Use this attribute to specify the protocol with which to connect to the DX server (wp_profile):
+    Use this attribute to specify the protocol with which to connect to the DX server \(wp\_profile\):
 
     ```
     -dxProtocol <value>
     ```
 
-    Use this attribute to specify the port on which to connect to the DX server (`wp_profile`):
+    Use this attribute to specify the port on which to connect to the DX server \(`wp_profile`\):
 
     ```
     -dxPort <value>
     ```
 
-    Use this attribute to specify the path to DX configuration endpoint (e.g. /wps/configwps/config):
+    Use this attribute to specify the path to DX configuration endpoint \(e.g. /wps/configwps/config\):
 
     ```
     -xmlConfigPath <value>
     ```
 
-    Use this attribute to specify the username to authenticate with the DX server (`wp_profile`):
+    Use this attribute to specify the username to authenticate with the DX server \(`wp_profile`\):
 
     ```
     -dxUsername <value>
@@ -194,19 +194,19 @@ The `undeploy-portlet` command is used to undeploy the portlets in the target DX
     -hostname <value>
     ```
 
-    Use this attribute to specify the port number of the cw_profile(for Kubernetes Environment dxConnectPort is 443):
+    Use this attribute to specify the port number of the cw\_profile\(for Kubernetes Environment dxConnectPort is 443\):
 
     ```
     -dxConnectPort <value>
     ```
 
-    Use this attribute to specify the username that is required for authenticating to the cw_profile:
+    Use this attribute to specify the username that is required for authenticating to the cw\_profile:
 
     ```
     -dxConnectUsername <value>
     ```
 
-    Use this attribute to specify the password that is required for authenticating to the cw_profile:
+    Use this attribute to specify the password that is required for authenticating to the cw\_profile:
 
     ```
     -dxConnectPassword <value>
@@ -220,7 +220,7 @@ The `undeploy-portlet` command is used to undeploy the portlets in the target DX
 
     Specify either the `dxProfileName` or `dxProfilePath` of the DX core server:
 
-    -   Use this attribute to specify the profile name of the DX core server (for example: `wp_profile`):
+    -   Use this attribute to specify the profile name of the DX core server \(for example: `wp_profile`\):
 
         ```
         -dxProfileName <Profile name of the DX core server>
@@ -228,7 +228,7 @@ The `undeploy-portlet` command is used to undeploy the portlets in the target DX
 
     **OR**
 
-    -   Use this attribute to specify the profile path of the DX server (for example: `/opt/HCL/wp_profile`):
+    -   Use this attribute to specify the profile path of the DX server \(for example: `/opt/HCL/wp_profile`\):
 
         ```
         -dxProfilePath <Path of the DX core server profile> 

@@ -12,7 +12,7 @@ Use the Web Content Manager API to:
 -   approve items in a workflow
 -   search for items
 
-See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer_root]/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
+See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
 
 ## Getting started
 
@@ -23,20 +23,20 @@ To use the Web Content Manager API, you have 2 options:
 
     -   /opt/WebSphere/PortalServer/wcm/prereq.wcm/wcm/shared/app/ilwwcm-api.jar
     -   /opt/WebSphere/PortalServer/base/wp.base/shared/app/wp.base.jar
-    This code can then be used in your Web Content Manager content by using custom plug-ins. See [How to create custom plug-ins](../wcm_custom_plugin/index.md) for further information.
+    This code can then be used in your Web Content Manager content by using custom plug-ins. See [How to create custom plug-ins](wcm_dev_plugins.md) for further information.
 
 
--   **[How to use the Web Content Manager API](wcm_dev_api_using.md)**  
+-   **[How to use the Web Content Manager API](../wcm/wcm_dev_api_using.md)**  
 The workspace is the heart of the HCL Web Content Manager API. Items are created, saved, deleted and searched for in the workspace item. A workspace is basically an interface to Web Content Manager that is associated with a user. Using a workspace item, the user can perform operations as that user.
--   **[The Query API](wcm_dev_api_using_query.md)**  
+-   **[The Query API](../wcm/wcm_dev_api_using_query.md)**  
 The query API provides querying capabilities that are much more rich than the "findBy" methods on the workspace class.
--   **[Web Content Manager JSP tags](wcm_reference_wcm-jsp-tags.md)**  
+-   **[Web Content Manager JSP tags](../wcm/wcm_reference_wcm-jsp-tags.md)**  
 You use HCL Web Content Manager JSP tags with the Web Content Manager API to pull Web Content Manager content and components into external JSP applications.
--   **[Web Content Library Management APIs](wcm_dev_api_library.md)**  
+-   **[Web Content Library Management APIs](../wcm/wcm_dev_api_library.md)**  
 You can perform various web content library functions by using the Web content API.
--   **[Syndication APIs](wcm_dev_api_syndication.md)**  
+-   **[Syndication APIs](../wcm/wcm_dev_api_syndication.md)**  
 You can run various syndication functions by using the web content API.
--   **[Web Content Manager Multilingual Solution API](wcm_mls_api.md)**  
-This set of APIs allow you to retrieve information about the configured Multilingual Solution (MLS) libraries and also to retrieve the translated content items for a given default language content ID (for example, from English content find translated French and Spanish strings).
+-   **[Web Content Manager Multilingual Solution API](../wcm/wcm_mls_api.md)**  
+This set of APIs allow you to retrieve information about the configured Multilingual Solution \(MLS\) libraries and also to retrieve the translated content items for a given default language content ID \(for example, from English content find translated French and Spanish strings\).
 
 

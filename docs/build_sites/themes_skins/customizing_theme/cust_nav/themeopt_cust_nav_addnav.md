@@ -2,10 +2,9 @@
 
 You can increase levels of navigation by adding a fourth level of navigation.
 
-!!! note
-    Change the yourTheme value to the actual name of your theme.
+**Note:** Change the yourTheme value to the actual name of your theme.
 
-1.  Add a subcontribution to the wp\_dynamicContentSpots\_85 module in your theme's plugin.xml file. The plugin.xml file is in the [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)\\installedApps\\cell\\YourTheme.ear\\YourTheme.war\\WEB-INF folder.
+1.  Add a subcontribution to the wp\_dynamicContentSpots\_85 module in your theme's plugin.xml file. The plugin.xml file is in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\installedApps\\cell\\YourTheme.ear\\YourTheme.war\\WEB-INF folder.
 
     1.  Give your subcontribution the `ref-id` yourTheme\_tertiaryNav.
 

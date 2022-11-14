@@ -40,7 +40,7 @@ The deploy-application command is used to deploy the EAR file into the WebSphere
     -dxProtocol <value>
     ```
 
-    Use this attribute to specify the port on which to connect to the server (for Kubernetes Environment dxPort is 443):
+    Use this attribute to specify the port on which to connect to the server\(for Kubernetes Environment dxPort is 443\):
 
     ```
     -dxPort <value>
@@ -72,19 +72,19 @@ The deploy-application command is used to deploy the EAR file into the WebSphere
     -hostname <value>
     ```
 
-    Use this attribute to specify the port number of the cw_profile (e.g. for Kubernetes Environment, dxConnectPort is 443):
+    Use this attribute to specify the port number of the cw\_profile \(e.g. for Kubernetes Environment, dxConnectPort is 443\):
 
     ```
     -dxConnectPort <value>
     ```
 
-    Use this attribute to specify the username that is required for authenticating to the cw_profile:
+    Use this attribute to specify the username that is required for authenticating to the cw\_profile:
 
     ```
     -dxConnectUsername <value>
     ```
 
-    Use this attribute to specify the password that is required for authenticating to the cw_profile:
+    Use this attribute to specify the password that is required for authenticating to the cw\_profile:
 
     ```
     -dxConnectPassword <value>
@@ -98,7 +98,7 @@ The deploy-application command is used to deploy the EAR file into the WebSphere
 
     Specify either the `dxProfileName` or `dxProfilePath` of the DX core server:
 
-    -   Use this attribute to specify the profile name of the DX core server (for example: `wp_profile`):
+    -   Use this attribute to specify the profile name of the DX core server \(for example: `wp_profile`\):
 
         ```
         -dxProfileName <Profile name of the DX core server>
@@ -106,7 +106,7 @@ The deploy-application command is used to deploy the EAR file into the WebSphere
 
     **OR**
 
-    -   Use this attribute to specify the profile path of the DX server (for example: `/opt/HCL/wp_profile`):
+    -   Use this attribute to specify the profile path of the DX server \(for example: `/opt/HCL/wp_profile`\):
 
         ```
         -dxProfilePath <Path of the DX core server profile> 
@@ -124,7 +124,7 @@ The deploy-application command is used to deploy the EAR file into the WebSphere
     -applicationName <value>
     ```
 
-    Use this attribute to specify the path to the contenthandler servlet on the DX server (e.g. /wps/mycontenthandler):
+    Use this attribute to specify the path to the contenthandler servlet on the DX server \(e.g. /wps/mycontenthandler\):
 
     ```
     -contenthandlerPath <value>

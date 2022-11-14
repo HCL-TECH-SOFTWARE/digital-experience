@@ -6,7 +6,7 @@ The standard normalization algorithm provided by the portal removes all diacriti
 
 This is important when you consider which tags you want to be aggregated together when they are displayed as part of a tag widget, or, even more important, part of a tag cloud.
 
-You can control the normalization behavior by various configuration parameters. To configure normalization behavior, go to **Resources** \> **Resource Environment** \> **Resource Environment** \> **Providers** \> **WP_CPConfigurationService** \> **Custom Properties**. You configure normalization by using the following parameter in the portal CP Configuration Service resource environment provider in the WebSphere® Integrated Solutions Console:
+You can control the normalization behavior by various configuration parameters. To configure normalization behavior, go to **Resources** \> **Resource Environment** \> **Resource Environment** \> **Providers** \> **WP CPConfigurationService** \> **Custom Properties**. You configure normalization by using the following parameter in the portal CP Configuration Service resource environment provider in the WebSphere® Integrated Solutions Console:
 
 -   **normalization.displayNormalizedName = \(false\)**
 
@@ -18,15 +18,20 @@ You can control the normalization behavior by various configuration parameters. 
 
     This parameter defines the tag names that the type ahead for tag creation mechanism displays to the user. Valid values are `normalized` and `unnormalized`. The default value for this parameter is `normalized`.
 
-    !!! note
-        The type-ahead feature works only with the deprecated dialog tag widget of the default tagging user interface of portal versions earlier than V 8.5.
+    **Note:** The type-ahead feature works only with the dialog tag widget of the default tagging user interface of portal versions earlier than V 8.5. With HCL Portal V 8.5, the tag and rating widgets of earlier portal versions are deprecated.
 
 
 
-???+ info "Related information"
-    - [Adding query parameters](../dev_tagging_and_rating/rest_api/tag_rate_api_rest_add_qparms.md)
-    - [Type-ahead with the deprecated tag widget](../dev_tagging_and_rating/rest_api/other_queries/tag_rate_api_rest_oth_qu_typahed.md)
-    - [Search suggestions for tag names](../dev_tagging_and_rating/rest_api/other_queries/tag_rate_api_rest_oth_qu_opsrchsug.md)
-    - [CP Configuration Service for tagging and rating](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/index.md)
-    - [Setting service configuration properties](../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
+**Related information**  
+
+
+[Adding query parameters](../admin-system/tag_rate_api_rest_add_qparms.md)
+
+[Type-ahead with the deprecated tag widget](../admin-system/tag_rate_api_rest_oth_qu_typahed.md)
+
+[Search suggestions for tag names](../admin-system/tag_rate_api_rest_oth_qu_opsrchsug.md)
+
+[CP Configuration Service for tagging and rating](../admin-system/srvcfg_cpcfg4tr.md)
+
+[Setting service configuration properties](../admin-system/adsetcfg.md)
 

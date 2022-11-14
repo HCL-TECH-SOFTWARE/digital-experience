@@ -9,16 +9,18 @@ Using the same database user ID and password for each identically named domain/d
 Complete the following steps on the primary node of Cluster A:
 
 1.  Open a command line.
-2.  Change to the wp_profile_root/ConfigEngine directory.
+2.  Change to the wp\_profile\_root/ConfigEngine directory.
 3.  Run the following task to create the JAAS Authentication Aliases:
 
-    -   AIX® and Linux™: `./ConfigEngine.sh create-alias-multiple-cluster -DauthDomainList=release,jcr -DWasPassword=dmgr_password`
-    -   Windows™: Con`figEngine.bat create-alias-multiple-cluster -DauthDomainList=release,jcr -DWasPassword=dmgr_password`
+    -   AIX® HP-UX Linux™ Solaris: ./ConfigEngine.sh create-alias-multiple-cluster -DauthDomainList=release,jcr -DWasPassword=dmgr\_password
+    -   IBM® i: ConfigEngine.sh create-alias-multiple-cluster -DauthDomainList=release,jcr -DWasPassword=dmgr\_password
+    -   Windows™: ConfigEngine.bat create-alias-multiple-cluster -DauthDomainList=release,jcr -DWasPassword=dmgr\_password
+    Where authDomainList is set to a list of domains that use unique database user ID and passwords and those domain properties are set correctly in the wkplc\_comp.properties file, including user ID and password.
 
-    Where authDomainList is set to a list of domains that use unique database user ID and passwords and those domain properties are set correctly in the wkplc_comp.properties file, including user ID and password.
 
 
+**Related information**  
 
-???+ info "Related information"  
-    -   [Adding secondary nodes to a clustered environment](../../../../manage/migrate/next_steps/post_mig_activities/admin_task/mig_post_secondarynodes.md)
+
+[Adding secondary nodes to a clustered environment](../migrate/mig_post_secondarynodes.md)
 

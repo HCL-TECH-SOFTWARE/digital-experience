@@ -11,7 +11,6 @@ When using the tag cloud, you can select from the following options:
 -   Select the option to view the tags in a **cloud** view or in a **list** view. Depending on your choice, use the following user interface controls for adjusting the tag view as required:
     -   In the cloud view determine whether you want to view more or fewer tags by moving the slider.
     -   In the list view use the pagination controls to scroll through the listed tags.
-    
 -   Select from the available tag cloud views to filter what is displayed in the tag cloud:
 
     -   Select the **All tags** view to show all tags available in the portal.

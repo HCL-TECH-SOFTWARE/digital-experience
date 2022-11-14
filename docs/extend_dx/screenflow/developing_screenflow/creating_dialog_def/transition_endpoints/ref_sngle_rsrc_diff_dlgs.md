@@ -72,5 +72,5 @@ The example references the same Calendar portlet twice as part of two separate t
  </dialog>
 ```
 
-
+**Parent topic:**[Transition endpoints](../screenflow/ref_trnstn_endpnts.md)
 

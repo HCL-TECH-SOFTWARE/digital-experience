@@ -110,7 +110,7 @@ This topic describes the commands that are used to create, update, delete, and r
     -hostname <value>
     ```
 
-    Use this attribute to specify the port on which to connect to the server (e.g. for Kubernetes Environment, dxPort is 443):
+    Use this attribute to specify the port on which to connect to the server \(e.g. for Kubernetes Environment, dxPort is 443\):
 
     ```
     -dxPort <value>
@@ -128,19 +128,19 @@ This topic describes the commands that are used to create, update, delete, and r
     -dxPassword <value>
     ```
 
-    Use this attribute to specify the port number of the cw_profile (e.g. for Kubernetes Environment, dxConnectPort is 443):
+    Use this attribute to specify the port number of the cw\_profile \(e.g. for Kubernetes Environment, dxConnectPort is 443\):
 
     ```
     -dxConnectPort <value>
     ```
 
-    Use this attribute to specify the username that is required for authenticating to the cw_profile:
+    Use this attribute to specify the username that is required for authenticating to the cw\_profile:
 
     ```
     -dxConnectUsername <value>
     ```
 
-    Use this attribute to specify the password that is required for authenticating to the cw_profile:
+    Use this attribute to specify the password that is required for authenticating to the cw\_profile:
 
     ```
     -dxConnectPassword <value>
@@ -178,19 +178,19 @@ This topic describes the commands that are used to create, update, delete, and r
     -hostname <value>
     ```
 
-    Use this attribute to specify the port number of the cw_profile (for Kubernetes Environment, dxConnectPort is 443):
+    Use this attribute to specify the port number of the cw\_profile\(for Kubernetes Environment, dxConnectPort is 443\):
 
     ```
     -dxConnectPort <value>
     ```
 
-    Use this attribute to specify the username that is required for authenticating to the cw_profile:
+    Use this attribute to specify the username that is required for authenticating to the cw\_profile:
 
     ```
     -dxConnectUsername <value>
     ```
 
-    Use this attribute to specify the password that is required for authenticating to the cw_profile:
+    Use this attribute to specify the password that is required for authenticating to the cw\_profile:
 
     ```
     -dxConnectPassword <value>
@@ -220,7 +220,7 @@ This topic describes the commands that are used to create, update, delete, and r
     -filePath <value>
     ```
 
-!!! example
+- !!! example
 
     -   For creating property:
 

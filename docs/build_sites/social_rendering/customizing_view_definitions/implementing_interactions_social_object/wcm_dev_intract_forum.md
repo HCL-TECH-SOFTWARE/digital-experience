@@ -18,10 +18,11 @@ To implement such an interaction, the HTML form that targets the Web Content Vie
 
 Depending on the action, the data sink requires extra form data.
 
-!!! note
-    The update operation for individual replies that Forum Topic Details appearance component supports is implemented as a post to *The generic XML Digital Data Connector data sink*.
+**Note:** The update operation for individual replies that Forum Topic Details appearance component supports is implemented as a post to *The generic XML Digital Data Connector data sink*.
 
 
-???+ info "Related information"
-    - [The generic XML Digital Data Connector data sink](../../../../extend_dx/ddc/implementing_user_interactions/sending_data_to_webcontentviewer_portlet/generic_xml_ddc_sink/index.md)
+**Related information**  
+
+
+[The generic XML Digital Data Connector data sink](../social/plrf_use_gen_xml_ddc_datasink.md)
 

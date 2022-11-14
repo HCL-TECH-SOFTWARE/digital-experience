@@ -4,11 +4,12 @@ The portal Configuration Service is responsible for collecting the most essentia
 
 In the WebSphere® Integrated Solutions Console, the portal Configuration Service is listed as **WP ConfigService**.
 
-!!!note "Notes"
-    -   Many of the properties that are listed here are set by the installation procedure. Therefore, plan ahead and apply special care when you modify these properties.
-    -   HCL Portal and the WebSphere Integrated Solutions Console also provide a CP Configuration Service; this service has properties for tagging and rating only.
-    -   The Configuration Service also includes the configuration properties for WSRP services. They are listed and described in the context of the respective WSRP topics for which they are relevant.
-    -   If a property does not exist, create the property in the WebSphere Integrated Solutions Console Resource Environment Provider.
+**Notes:**
+
+-   Many of the properties that are listed here are set by the installation procedure. Therefore, plan ahead and apply special care when you modify these properties.
+-   HCL Portal and the WebSphere Integrated Solutions Console also provide a CP Configuration Service; this service has properties for tagging and rating only.
+-   The Configuration Service also includes the configuration properties for WSRP services. They are listed and described in the context of the respective WSRP topics for which they are relevant.
+-   If a property does not exist, create the property in the WebSphere Integrated Solutions Console Resource Environment Provider.
 
 -   **was.home = \($\{WAS\_INSTALL\_ROOT\}\)**
 
@@ -118,8 +119,7 @@ In the WebSphere® Integrated Solutions Console, the portal Configuration Servic
 
     Determines whether a public URL must be translated to a protected URL if a user session exists.
 
-    !!!important
-        To preserve the original behavior and design assumptions of HCL Portal URLs, set the value of the uri.home.substitution property to true.
+    **Important:** To preserve the original behavior and design assumptions of HCL Portal URLs, set the value of the uri.home.substitution property to true.
 
     Uri.home.substitution controls the behavior of HCL Portal when a user who is already logged on to the IBM® WebSphere® Application Server environment on which HCL Portal is running uses a /portal URL to access HCL Portal.
 
@@ -129,8 +129,7 @@ In the WebSphere® Integrated Solutions Console, the portal Configuration Servic
 
     Setting the uri.home.substitution property to true ensures that even when a request to the /portal URL is forwarded by WebSphere® Application Server with a security context, HCL Portal still redirects the user to a /myportal version of that same URL. This behavior maintains the original design assumption of using two URL entry points into HCL Portal, one for anonymous access and one for authenticated access.
 
-    !!!note
-        If you want to preserve the original behavior of HCL Portal when uri.home.substitution is not set or is set to false, see the property logout.user.onpublic and the following technote, [Default triggers for implicit logouts changed in HCL Portal Version 8](https://support.hcltechsw.com/csm?id=kb_article&sys_id=83d6e56a1b5df34077761fc58d4bcbbe).
+    **Note:** If you want to preserve the original behavior of HCL Portal when uri.home.substitution is not set or is set to false, see the property logout.user.onpublic and the following technote, [Default triggers for implicit logouts changed in HCL Portal Version 8](https://support.hcltechsw.com/csm?id=kb_article&sys_id=83d6e56a1b5df34077761fc58d4bcbbe).
 
 -   **wsrp.resourceproxy.basic.auth.credentialslot = <none\>**
 
@@ -218,17 +217,16 @@ In the WebSphere® Integrated Solutions Console, the portal Configuration Servic
 
     This property determines an identifier for Portal URLs. For the specification of the format of this property, refer to the topic about URL mapping.
 
-    !!!note
-        With HCL Portal Version 8.5, URL mappings are deprecated.
+    **Note:** With HCL Portal Version 8.5, URL mappings are deprecated.
 
 -   **wps.mappingurl.enabled = \(true\)**
 
     This property determines whether URL mapping is enabled or not. Possible values are `true` to enable URL mapping, or `false` to disable URL mapping. The default value is `true`.
 
-    !!!note "Notes"
-        -   With HCL Portal Version 8.5, URL mappings are deprecated.
-        -   When you create a URL mapping or create or modify a page, make sure that URL mappings and friendly URLs in your portal do not match, partially overlap, or otherwise interfere with each other. For example, do not use strings such as home, ibm, ibm.com, and do not use strings that are used as URL mappings or friendly URLs in your portal already. Otherwise, several browser redirect loops might occur, sometimes without an error message. To determine such strings, create an export from your portal by using the XML configuration interface and scan the exported XML result output file for the string that you want to use for your URL mapping or for your friendly URL.
+    **Note:**
 
+    -   With HCL Portal Version 8.5, URL mappings are deprecated.
+    -   When you create a URL mapping or create or modify a page, make sure that URL mappings and friendly URLs in your portal do not match, partially overlap, or otherwise interfere with each other. For example, do not use strings such as home, ibm, ibm.com, and do not use strings that are used as URL mappings or friendly URLs in your portal already. Otherwise, several browser redirect loops might occur, sometimes without an error message. To determine such strings, create an export from your portal by using the XML configuration interface and scan the exported XML result output file for the string that you want to use for your URL mapping or for your friendly URL.
 -   **wps.mappingurl.invalid = \(false\)**
 
     This property determines how the portal responds to a URL mapping that contains path information. Specify one of the following two values:
@@ -241,11 +239,11 @@ In the WebSphere® Integrated Solutions Console, the portal Configuration Servic
 
         This value is the default value. If you set this property to `false` and the portal gets a request for a URL mapping that contains path information, the portal responds as defined by the property `friendly.pathinfo.enabled`.
 
-    !!!note "Notes"
-        -   With HCL Portal Version 8.5, URL mappings are deprecated.
-        -   The property `friendly.pathinfo.enabled` applies to both friendly URLs and URL mappings.
-        -   The property `state.decoding.fallback` is not applied to URLs that the portal interprets as URL mappings or friendly URLs. If you use friendly URLs or URL mappings, consider setting the parameters `state.decoding.fallback`, `wps.mappingurl.invalid`, and `friendly.pathinfo.invalid` in a consistent way. This action can help provide a consistent user experience. Example: If you set `state.decoding.fallback = false`, consider setting `wps.mappingurl.invalid = true` and `friendly.pathinfo.invalid = true`.
+    **Notes:**
 
+    -   With HCL Portal Version 8.5, URL mappings are deprecated.
+    -   The property `friendly.pathinfo.enabled` applies to both friendly URLs and URL mappings.
+    -   The property `state.decoding.fallback` is not applied to URLs that the portal interprets as URL mappings or friendly URLs. If you use friendly URLs or URL mappings, consider setting the parameters `state.decoding.fallback`, `wps.mappingurl.invalid`, and `friendly.pathinfo.invalid` in a consistent way. This action can help provide a consistent user experience. Example: If you set `state.decoding.fallback = false`, consider setting `wps.mappingurl.invalid = true` and `friendly.pathinfo.invalid = true`.
 -   **navigation.portletmenu.mode = \(0\)**
 
     The navigation.portletmenu.mode property defines in which way portlet menus are integrated in the overall portal navigation menu structure. Portlet menus are navigation parts that are provided by the portlet itself. They can be added as a subtree to the navigation menu item that references the page in which the portlet is found. This property has the following three options:
@@ -274,8 +272,7 @@ In the WebSphere® Integrated Solutions Console, the portal Configuration Servic
 
     This property determines whether friendly URL names can be set for portal pages in the Manage Pages portlet. The default value is true. If you set this property to true, you can add friendly URLs for portal pages in the Manage Pages portlet. "Friendly" means that you can use a name that is concise and easy to remember to address a specific portal page. To add a friendly URL for a portal page, click the **Edit Page Properties** icon for the page for which you want to add a friendly URL. You can then give your portal users that URL, and they can access that page by entering the URL in the Address field of their browser.
 
-    !!!note
-        When you create a URL mapping or create or modify a page, make sure that URL mappings and friendly URLs in your portal do not match, partially overlap, or otherwise interfere with each other. For example, do not use strings such as home, ibm, ibm.com, and do not use strings that are used as URL mappings or friendly URLs in your portal already. Otherwise, several browser redirect loops might occur, sometimes without an error message. To determine such strings, create an export from your portal by using the XML configuration interface and scan the exported XML result output file for the string that you want to use for your URL mapping or for your friendly URL.
+    **Note:** When you create a URL mapping or create or modify a page, make sure that URL mappings and friendly URLs in your portal do not match, partially overlap, or otherwise interfere with each other. For example, do not use strings such as home, ibm, ibm.com, and do not use strings that are used as URL mappings or friendly URLs in your portal already. Otherwise, several browser redirect loops might occur, sometimes without an error message. To determine such strings, create an export from your portal by using the XML configuration interface and scan the exported XML result output file for the string that you want to use for your URL mapping or for your friendly URL.
 
     If this property is set to `true`, you can use the property `friendly.redirect.enabled` listed later to determine whether a redirect must be sent if the incoming URL did not contain the friendly URL prefix of the addressed page.
 
@@ -315,8 +312,7 @@ In the WebSphere® Integrated Solutions Console, the portal Configuration Servic
 
         This value is the default value. If you set this property to `false` and the portal gets a request for a friendly URL that contains path information, the portal responds as defined by the property `friendly.pathinfo.enabled`.
 
-    !!!note
-        The property `state.decoding.fallback` is not applied to URLs that the portal interprets as URL mappings or friendly URLs. If you use friendly URLs or URL mappings, consider setting the parameters `state.decoding.fallback`, `wps.mappingurl.invalid`, and `friendly.pathinfo.invalid` in a consistent way. This action can help provide a consistent user experience. Example: If you set `state.decoding.fallback = false`, consider setting `wps.mappingurl.invalid = true` and `friendly.pathinfo.invalid = true`.
+    **Note:** The property `state.decoding.fallback` is not applied to URLs that the portal interprets as URL mappings or friendly URLs. If you use friendly URLs or URL mappings, consider setting the parameters `state.decoding.fallback`, `wps.mappingurl.invalid`, and `friendly.pathinfo.invalid` in a consistent way. This action can help provide a consistent user experience. Example: If you set `state.decoding.fallback = false`, consider setting `wps.mappingurl.invalid = true` and `friendly.pathinfo.invalid = true`.
 
 -   **friendly.pathinfo.enabled = \(true\)**
 
@@ -326,8 +322,7 @@ In the WebSphere® Integrated Solutions Console, the portal Configuration Servic
 
         This value is the default value. If you set this property to `true` and the portal gets a request for a URL that contains path information, the portal respects that path information and takes the user to the specified portal page.
 
-        !!!note
-            The property `friendly.pathinfo.enabled` applies to both friendly URLs and URL mappings.Support for path information in friendly URLs also requires that the property `friendly.enabled` is set to `true` and the property `friendly.pathinfo.invalid` is set to `false`. Support for path information in URL mappings also requires that the property `wps.mappingurl.enabled` is set to `true` and the property `wps.mappingurl.invalid` is set to `false`.
+        **Note:** The property `friendly.pathinfo.enabled` applies to both friendly URLs and URL mappings.Support for path information in friendly URLs also requires that the property `friendly.enabled` is set to `true` and the property `friendly.pathinfo.invalid` is set to `false`. Support for path information in URL mappings also requires that the property `wps.mappingurl.enabled` is set to `true` and the property `wps.mappingurl.invalid` is set to `false`.
 
     -   **false**
 
@@ -351,15 +346,13 @@ In the WebSphere® Integrated Solutions Console, the portal Configuration Servic
 
     This key specifies the text provider of the localized HTTP status message to send as well as the configured HTTP status code. If you configure a text provider and a request URL has invalid path information, portal responds with a blank page that displays only the HTTP status code and the corresponding localized message that is specified by the text provider. The value of this parameter must be the ID of an implementation of the com.ibm.workplace.wcm.api.plugin.textprovider.TextProvider interface. To use the default messages of HCL Portal, specify the text provider with the ID PathInfoValidationTextProvider. If you implement a custom text provider, make sure that it supports message keys that are composed of the prefix HTTP\_STATUS\_MESSAGE\_ and the configured HTTP status code, for example: HTTP\_STATUS\_MESSAGE\_404.
 
-    !!!important
-        Portal ignores this setting if you also specify the friendly.pathinfo.validation.errorURI property or page parameter.
+    **Important:** Portal ignores this setting if you also specify the friendly.pathinfo.validation.errorURI property or page parameter.
 
 -   **friendly.pathinfo.validation.errorResourceBundle**
 
     This key specifies a Java resource bundle as an alternative to implementing a custom text provider. If you configure a Java resource bundle and a request URL has invalid path information, portal responds with a blank page displays only the HTTP status code and the corresponding localized message from the Java resource bundle. The value of this setting must be the fully qualified name of the Java resource bundle. If you provide a custom Java resource bundle, make sure that it contains message keys that are composed of the prefix HTTP\_STATUS\_MESSAGE\_ and the configured HTTP status code, for example: HTTP\_STATUS\_MESSAGE\_404.
 
-    !!!important
-        Portal ignores this setting if you also specify the friendly.pathinfo.validation.errorURI property or page parameter. Portal also ignores this setting if you set the value of the friendly.pathinfo.validation.errorTextProvider property or page parameter to a custom text provider ID.
+    **Important:** Portal ignores this setting if you also specify the friendly.pathinfo.validation.errorURI property or page parameter. Portal also ignores this setting if you set the value of the friendly.pathinfo.validation.errorTextProvider property or page parameter to a custom text provider ID.
 
 -   **friendly.pathinfo.validation.errorURI**
 
@@ -457,8 +450,7 @@ In the WebSphere® Integrated Solutions Console, the portal Configuration Servic
 
         If you set this parameter to false, then the portal serves an HTTP 404 error to requests that it cannot decode. This action can be the preferred solution for other scenarios.
 
-    !!!note
-        The property `state.decoding.fallback` is not applied to URLs that the portal interprets as URL mappings or friendly URLs. If you use friendly URLs or URL mappings, consider setting the parameters `state.decoding.fallback`, `wps.mappingurl.invalid`, and `friendly.pathinfo.invalid` in a consistent way. This action can help provide a consistent user experience. Example: If you set `state.decoding.fallback = false`, consider setting `wps.mappingurl.invalid = true` and `friendly.pathinfo.invalid = true`.
+    **Note:** The property `state.decoding.fallback` is not applied to URLs that the portal interprets as URL mappings or friendly URLs. If you use friendly URLs or URL mappings, consider setting the parameters `state.decoding.fallback`, `wps.mappingurl.invalid`, and `friendly.pathinfo.invalid` in a consistent way. This action can help provide a consistent user experience. Example: If you set `state.decoding.fallback = false`, consider setting `wps.mappingurl.invalid = true` and `friendly.pathinfo.invalid = true`.
 
 -   **search.service.suppress\_automatic\_creation = \(false\)**
 
@@ -518,14 +510,25 @@ In the WebSphere® Integrated Solutions Console, the portal Configuration Servic
 
     This property enables the stateless friendly redirect feature. The stateless friendly redirect feature is disabled by default. The feature can be enabled by setting the following custom properties in REP WP ConfigService. `stateless.urls.enabled = true` `generate.stateless.redirect.urls = true`
 
-    !!!note
-        The stateless friendly redirect feature requires the base tag to be enabled in the theme.
+    **Note:** The stateless friendly redirect feature requires the base tag to be enabled in the theme.
 
 
-???+ info "Related information" 
-    -   [How administrators define persistent session options](../../../../config_portal_behavior/user_session_persistence/adm_define_user_session_persistence/index.md)
-    -   [Configuring globally how social object links are resolved](../../../../../../build_sites/social_rendering/cfg_global_settings_social_rendering/soc_rendr_cfg_reslv_links.md)
-    -   [Authenticating outbound HTTP connections](../../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/authenticating_outbound_http_connections/index.md)
-    -   [Configuring Integrator for SAP](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_cfg.html)
-    -   [Configuring Tivoli Federated Identity Manager with SAML for single sign-on to SAP NetWeaver Portal](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_cfg_tfimsaml_sso.html)
-    -   [Performance tuning for Integrator for SAP](https://help.hcltechsw.com/digital-experience/8.5/admin-system/sap_int_perf_tun.html)
+-   **[Portlet Response headers](../admin-system/srvcfgref_ptlt_resp_hdrs.md)**  
+The portlet response headers are part of the portal Configuration Service.
+
+
+**Related information**  
+
+
+[How administrators define persistent session options](../admin-system/adcfgpss_adm_define.md)
+
+[Configuring globally how social object links are resolved](../social/soc_rendr_cfg_reslv_links.md)
+
+[Authenticating outbound HTTP connections](../dev-portlet/outbhttp_authntct.md)
+
+[Configuring Integrator for SAP](../admin-system/sap_int_cfg.md)
+
+[Configuring Tivoli Federated Identity Manager with SAML for single sign-on to SAP NetWeaver Portal](../admin-system/sap_int_cfg_tfimsaml_sso.md)
+
+[Performance tuning for Integrator for SAP](../admin-system/sap_int_perf_tun.md)
+

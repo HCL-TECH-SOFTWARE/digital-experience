@@ -11,10 +11,14 @@ A portlet service can be invoked only from within a portlet.
 
 Portlet service interfaces used by standard portlets are different from those used by HCL portlets. You can write your own portlet service and register it in the portal, so that all portlets can use it. Various services may be implemented by different vendors, for example, a SearchService, LocationService, or a MailService. The following services are available with HCL Portal:
 
--   [Credential Vault Service](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/security_svc/srvcfgref_cred_vault.md)
--   [Model SPI services](../../apis/model_spi/index.md)
--   [Puma Store and Validation Services](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/security_svc/puma_svc/index.md)
--   [Dynamic user interfaces](../../portlets_development/dynamic_user_interfaces/index.md)
+-   [CredentialVaultService](wpsadvdev.md)
+-   [Model SPI services](../dev/dgn_modelovw.md)
+-   [PumaHome](../dev/wpspuma.md)
+-   [DynamicUIManagementFactoryService](wpsdynui_cpts.md)
 
+-   **[Accessing portlet services](../dev-portlet/wpsaccpserv.md)**  
+Using an example, learn how a standard portlet can retrieve and use a sample portlet service. Accessing a portlet service requires a JNDI lookup for a PortletServiceHome. To use the portlet service, you retrieve a service object from the home, cast it to the service-specific interface and invoke service methods.
+-   **[Creating your own portlet service](../dev-portlet/wpsbsservice.md)**  
+Write a portlet service by defining the interface, writing the service implementation, making the service accessible, and registering the service.
 
 

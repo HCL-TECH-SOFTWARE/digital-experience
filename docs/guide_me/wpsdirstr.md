@@ -2,9 +2,11 @@
 
 The topic shows the naming conventions that are used to denote the location of files on the servers and the types of resources you can find in those directories.
 
-## PortalServer_root
+## PortalServer\_root
 
-Throughout this documentation, the installation location for the portal server component of HCL Portal is noted as PortalServer_root.
+Throughout this documentation, the installation location for the portal server component of HCL Portal is noted as PortalServer\_root.
+
+For the IBM® i operating system, an extra variable is used to indicate the user data directory. The user data directory is noted as PortalServer\_root\_user.
 
 The following information shows the default location if it is not otherwise specified during installation:
 
@@ -12,45 +14,84 @@ The following information shows the default location if it is not otherwise spec
 
     /usr/HCL/WebSphere/PortalServer
 
+-   **HP-UX**
+
+    /opt/HCL/WebSphere/PortalServer
+
+-   **IBM® i**
+
+    -   portal\_server\_root \(ProdData\)
+
+        -   /QIBM/ProdData/WebSphere/PortalServer/V85/product offering
+        -   /QIBM/ProdData/WebSphere/PortalServer/V85/<product offering\>
+        Where product offering is Server or Express
+
+    -   PortalServer\_root\_user \(UserData\)
+        -   WebSphere® Application Server 8.5.5 for Network Deployment:
+            -   /QIBM/UserData/WebSphere/AppServer/V85/ND/profiles/wp\_profile/PortalServer
 -   **Linux™**
 
     /opt/HCL/WebSphere/PortalServer
 
     /opt/HCL/WebSphere/PortalExpress/PortalServer
 
+-   **Solaris**
+
+    /opt/HCL/WebSphere/PortalServer
+
 -   **Windows™**
 
-    C:\\Program Files\HCL\WebSphere\PortalServer
-    
-    C:\\Program Files\HCL\WebSphere\PortalExpress\PortalServer
+    C:\\Program Files\\HCL\\WebSphere\\PortalServerC:\\Program Files\\HCL\\WebSphere\\PortalExpress\\PortalServer
 
 
-## wp_profile_root
+## wp\_profile\_root
 
-Throughout this documentation, the profile location is noted as wp_profile_root. The following information shows the default profile location if another location is not specified during installation:
+Throughout this documentation, the profile location is noted as wp\_profile\_root. The following information shows the default profile location if another location is not specified during installation:
 
 -   **AIX®**
 
-    /usr/HCL/WebSphere/wp_profile
+    /usr/HCL/WebSphere/wp\_profile
+
+-   **HP-UX**
+
+    /opt/HCL/WebSphere/wp\_profile
+
+-   **IBM® i**
+
+    -   WebSphere® Application Server 8.5 for Network Deployment:
+        -   /QIBM/UserData/WebSphere/AppServer/V85/ND/profiles/wp\_profile
+    The wp\_profile is the default profile name but is used here as an example since there can be multiple profiles with self described or incremental names \(for example, wp\_profile1, wp\_profile2\).
 
 -   **Linux™**
 
-    /opt/HCL/WebSphere/wp_profile
+    /opt/HCL/WebSphere/wp\_profile
 
-    /opt/HCL/WebSphere/PortalExpress/AppServer/profiles/wp_profile
+    /opt/HCL/WebSphere/PortalExpress/AppServer/profiles/wp\_profile
+
+-   **Solaris**
+
+    /opt/HCL/WebSphere/wp\_profile
 
 -   **Windows™**
 
-    C:\\Program Files\HCL\WebSphere\wp_profile
+    C:\\Program Files\\HCL\\WebSphere\\wp\_profile
 
 
-## ConfigEngine_root
+## ConfigEngine\_root
 
-Throughout this documentation, the installation location for the Configuration Engine component is noted as ConfigEngine_root.
+Throughout this documentation, the installation location for the Configuration Engine component is noted as ConfigEngine\_root.
 
 -   **AIX®**
 
     /usr/HCL/WebSphere/ConfigEngine
+
+-   **HP-UX**
+
+    /opt/HCL/WebSphere/ConfigEngine
+
+-   **IBM® i**
+
+    /QIBM/ProdData/WebSphere/PortalServer/V85/ConfigEngine
 
 -   **Linux™**
 
@@ -58,9 +99,13 @@ Throughout this documentation, the installation location for the Configuration E
 
     /opt/HCL/WebSphere/PortalExpress/AppServer/profiles/ConfigEngine
 
+-   **Solaris**
+
+    /opt/HCL/WebSphere/ConfigEngine
+
 -   **Windows™**
 
-    C:\\Program Files\HCL\WebSphere\ConfigEngine
+    C:\\Program Files\\HCL\\WebSphere\\ConfigEngine
 
 
 ## Configuration Engine profile directory
@@ -69,28 +114,41 @@ The Configuration Engine profile directory is the location of the ConfigEngine t
 
 -   **AIX®**
 
-    /usr/HCL/WebSphere/wp_profile/ConfigEngine
+    /usr/HCL/WebSphere/wp\_profile/ConfigEngine
+
+-   **HP-UX**
+
+    /opt/HCL/WebSphere/wp\_profile/ConfigEngine
+
+-   **IBM® i**
+
+    -   WebSphere® Application Server 8.5.5 for Network Deployment:
+        -   /QIBM/UserData/WebSphere/AppServer/V85/ND/profiles/wp\_profile/ConfigEngine
+    The wp\_profile is the default profile name but is used here as an example since there can be multiple profiles with self described or incremental names \(for example, wp\_profile1, wp\_profile2\).
 
 -   **Linux™**
 
-    /opt/HCL/WebSphere/wp_profile/ConfigEngine
+    /opt/HCL/WebSphere/wp\_profile/ConfigEngine
 
-    /opt/HCL/WebSphere/PortalExpress/AppServer/profiles/wp_profile/ConfigEngine
+    /opt/HCL/WebSphere/PortalExpress/AppServer/profiles/wp\_profile/ConfigEngine
+
+-   **Solaris**
+
+    /opt/HCL/WebSphere/wp\_profile/ConfigEngine
 
 -   **Windows™**
 
-    C:\\Program Files\HCL\WebSphere\wp_profile\ConfigEngine
+    C:\\Program Files\\HCL\\WebSphere\\wp\_profile\\ConfigEngine
 
 
 ## HCL Portal directory structure after installation
 
 HCL Portal has the following directory structure after installation:
 
-!!!note
-    On the Linux and IBM i operating systems, all directories are r/o.
+**Note:** On the Linux and IBM i operating systems, all directories are r/o.
 
 ```
-`[PortalServer_root](wpsdirstr.md#wp_root)`          Root directory for HCL Portal
+`[PortalServer\_root](wpsdirstr.md#wp_root)`          Root directory for HCL Portal
  |
  +-- ap
  |
@@ -149,29 +207,51 @@ HCL Portal has the following directory structure after installation:
  +-- wps.properties                    
 ```
 
-## AppServer_root
+## AppServer\_root
 
-Throughout this documentation, the installation location for WebSphere Application Server is noted as AppServer_root.
+Throughout this documentation, the installation location for WebSphere Application Server is noted as AppServer\_root.
 
 The following information shows the WebSphere Application Server installation directory:
 
-HCL Portal Configuration profile directory cw_profile_root
+HCL Portal Configuration profile directory cw\_profile\_root
 
-Throughout this documentation, the configuration wizard profile location is noted as cw_profile_root. The following information shows the profile location:
+Throughout this documentation, the configuration wizard profile location is noted as cw\_profile\_root. The following information shows the profile location:
 
 -   **AIX®**
 
-    /usr/HCL/WebSphere/AppServer/profiles/cw_profile
+    /usr/HCL/WebSphere/AppServer/profiles/cw\_profile
+
+-   **HP-UX**
+
+    /opt/HCL/WebSphere/AppServer/profiles/cw\_profile
+
+-   **IBM® i**
+
+    WebSphere Application Server 8.5 for Network Deployment:/QIBM/UserData/WebSphere/AppServer/V8/ND/profiles/cw\_profile
 
 -   **Linux™**
 
-    /opt/HCL/WebSphere/AppServer/profiles/cw_profile
+    /opt/HCL/WebSphere/AppServer/profiles/cw\_profile
+
+-   **Solaris**
+
+    /opt/HCL/WebSphere/AppServer/profiles/cw\_profile
 
 -   **Windows™**
 
-    C:\\Program Files\HCL\WebSphere\AppServer\profiles\cw_profile
+    C:\\Program Files\\HCL\\WebSphere\\AppServer\\profiles\\cw\_profile
+
+
+-   **IBM® i**
+
+    The installation location for WebSphere® Application Server is noted as app\_server\_root and refers to the UserData path, unless otherwise specified in the topic where you see it. The profile\_root following variable refers to the name given to the WebSphere® Application Server profile in use.
+
 
 The following information shows the default WebSphere Application Server installation location if it is not otherwise specified during installation:
+
+-   **IBM® i**
+
+    The installation location for WebSphere® Application Server is noted as app\_server\_root and refers to the UserData path, unless otherwise specified in the topic where you see it. The profile\_root following variable refers to the name given to the WebSphere® Application Server profile in use.
 
 -   **Linux™**
 
@@ -179,11 +259,14 @@ The following information shows the default WebSphere Application Server install
 
 -   **Windows™**
 
-    C:\\Program Files\HCL\WebSphere\PortalExpress\AppServer
+    C:\\Program Files\\HCL\\WebSphere\\PortalExpress\\AppServer
 
 
 
-???+ info "Related information"  
-    -   [Language support](../extend_dx/development_tools/portal_admin_tools/language_support/index.md)
-    -   [System event logging](../deployment/manage/troubleshooting/logging_and_tracing/adsyslog.md)
+**Related information**  
+
+
+[Language support](../admin-system/adintern.md)
+
+[System event logging](../trouble/adsyslog.md)
 

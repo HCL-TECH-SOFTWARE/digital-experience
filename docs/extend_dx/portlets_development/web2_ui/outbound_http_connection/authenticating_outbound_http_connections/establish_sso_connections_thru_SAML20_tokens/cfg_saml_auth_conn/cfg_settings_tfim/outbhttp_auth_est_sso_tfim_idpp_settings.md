@@ -1,38 +1,38 @@
-# Creating Identity Provider settings at the Outbound Connection Service configuration (TFIM)
+# Creating Identity Provider settings at the Outbound Connection Service configuration \(TFIM\)
 
 Certain metadata settings such as the Identity Provider URL and the Partner URL are required to use Tivoli Federated Identity Manager Identity Provider for SSO connections through SAML 2.0 authentication protocol.
 
 The following metadata values are required to define a Tivoli Federated Identity Manager Identity Provider, where IdpName is the unique name of the Identity Provider:
 
--   **IdpName.IDP_PROTOCOL**
+-   **IdpName.IDP\_PROTOCOL**
 
-    The protocol part of the Identity Provider login URL. Replace the value my_idp_prot with the value of the protocol part of the Identity Provider login URL, either `http` or `https`.
+    The protocol part of the Identity Provider login URL. Replace the value my\_idp\_prot with the value of the protocol part of the Identity Provider login URL, either `http` or `https`.
 
--   **IdpName.IDP_HOST**
+-   **IdpName.IDP\_HOST**
 
-    The host name part of the Identity Provider login URL. Replace the value my_idp_host with the Identity Provider login URL host name.
+    The host name part of the Identity Provider login URL. Replace the value my\_idp\_host with the Identity Provider login URL host name.
 
--   **IdpName.IDP_PORT**
+-   **IdpName.IDP\_PORT**
 
-    The port number of the Identity Provider login URL. Replace the value my_idp_port with the value of the Identity provider login URL port.
+    The port number of the Identity Provider login URL. Replace the value my\_idp\_port with the value of the Identity provider login URL port.
 
--   **IdpName.IDP_URI**
+-   **IdpName.IDP\_URI**
 
-    The URL path of the Identity Provider login URL. Replace the value my_idp_uri with the path of the Identity Provider login URL.
+    The URL path of the Identity Provider login URL. Replace the value my\_idp\_uri with the path of the Identity Provider login URL.
 
--   **IdpName.IDP_AUTH_COOKIE.1 and IdpName.IDP_AUTH_COOKIE.2**
+-   **IdpName.IDP\_AUTH\_COOKIE.1 and IdpName.IDP\_AUTH\_COOKIE.2**
 
     Authentication tokens that are created by the federation partner.
 
--   **IdpName.PARAM_NAME.1 and IdpName.PARAM_VALUE.1**
+-   **IdpName.PARAM\_NAME.1 and IdpName.PARAM\_VALUE.1**
 
     This setting selects the SAML 2.0 binding. Specify `HTTPPost` as the value.
 
--   **IdpName.PARAM_NAME.2 and IdpName.PARAM_VALUE.2**
+-   **IdpName.PARAM\_NAME.2 and IdpName.PARAM\_VALUE.2**
 
-    The partner URL. Replace the value my_partner_url with the URL of the partner that runs the Service Provider service.
+    The partner URL. Replace the value my\_partner\_url with the URL of the partner that runs the Service Provider service.
 
--   **IdpName.PARAM_NAME.3 and IdpName.PARAM_VALUE.3**
+-   **IdpName.PARAM\_NAME.3 and IdpName.PARAM\_VALUE.3**
 
     Defines the format of the name ID field. Specify `Email` as the value.
 
@@ -57,23 +57,23 @@ Change these values according to your configuration.
       <endpoint name="tfim101.idp_host">idp.example.com</endpoint>
       <endpoint name="tfim101.idp_port">443</endpoint>
       <endpoint name="tfim101.idp_uri">/sps/myfederation/saml20/login</endpoint>
-    		<endpoint name="tfim101.partner_url">https://sp.example.com/sps/myfederation/saml20/v2_0</endpoint>
+    		<endpoint name="tfim101.partner_url">https://sp.example.com/sps/myfederation/saml20/v2\_0</endpoint>
     	</variables>
     	<meta-data>
     		<name>tfim101.IDP_PROTOCOL</name>
-    		<value>my_idp_prot</value>
+    		<value>my\_idp\_prot</value>
     	</meta-data>
     	<meta-data>
     		<name>tfim101.IDP_HOST</name>
-    		<value>my_idp_host</value>
+    		<value>my\_idp\_host</value>
     	</meta-data>
     	<meta-data>
     		<name>tfim101.IDP_PORT</name>
-    		<value>my_idp_port</value>
+    		<value>my\_idp\_port</value>
     	</meta-data>
     	<meta-data>
     		<name>tfim101.IDP_URI</name>
-    		<value>my_idp_uri</value>
+    		<value>my\_idp\_uri</value>
     	</meta-data>
     	<meta-data>
     		<name>tfim101.PARAM_NAME.1</name>
@@ -89,7 +89,7 @@ Change these values according to your configuration.
     	</meta-data>
     	<meta-data>
     		<name>tfim101.PARAM_VALUE.2</name>
-    		<value>my_partner_url</value>
+    		<value>my\_partner\_url</value>
     	</meta-data>
     	<meta-data>
     		<name>tfim101.PARAM_NAME.3</name>
@@ -112,9 +112,10 @@ Change these values according to your configuration.
 
 2.  After you save the XML file, run the ConfigEngine task update-outbound-http-connection-config to apply the Identity Provider settings at the global configuration profile.
 
-    -   AIX® and Linux™: `./ConfigEngine.sh update-outbound-http-connection-config -DConfigFileName=XML\_file -DOutboundProfileType=global`
+    -   AIX®, HP-UX, Linux™, Solaris: `./ConfigEngine.sh update-outbound-http-connection-config -DConfigFileName=XML\_file -DOutboundProfileType=global`
+    -   IBM® i: `ConfigEngine.sh update-outbound-http-connection-config -DConfigFileName=XML\_file -DOutboundProfileType=global`
     -   Windows™: `ConfigEngine.bat update-outbound-http-connection-config -DConfigFileName=XML\_file -DOutboundProfileType=global`
-    where XML_file is the file path to the XML file.
+    where XML\_file is the file path to the XML file.
 
 
 

@@ -18,7 +18,8 @@ Typically, the cloned file system path is in the following directory:
 
 -   AIX®: /usr/IBM/WebSphere
 -   Linux™: /opt/IBM/WebSphere
--   Windows™: C:\\IBM\WebSphere
+-   IBM® i: /QIBM/IBM/WebSphere
+-   Windows™: C:\\IBM\\WebSphere
 
 The following steps use rsync as a cloning technique example:
 

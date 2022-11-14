@@ -26,7 +26,10 @@ The default filter plug-ins perform the following tests to determine a web conte
     -   If no fallback page is configured or if the user does not have view rights on the fallback page, the Web Content Manager servlet renders the item.
 
 
-???+ info "Related information:"
-    - [Setting up a web content fallback page](../customizing_content/mp_wcm_fallback.md)
-    - [Creating a content page resolution filter class](../../../../wcm_artifacts/wcm_dev/wcm_custom_plugin/wcm_dev_api_page_resolution.md)
+**Related information**  
+
+
+[Setting up a web content fallback page](../admin-system/mp_wcm_fallback.md)
+
+[Creating a content page resolution filter class](../wcm/wcm_dev_api_page_resolution.md)
 

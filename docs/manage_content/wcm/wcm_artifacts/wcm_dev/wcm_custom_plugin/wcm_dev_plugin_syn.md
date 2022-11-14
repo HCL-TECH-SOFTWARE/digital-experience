@@ -12,14 +12,12 @@ To create a syndicator plug-in, you must create a syndicator class and then regi
         -   This method is run after the plug-ins for the `SubscriberReady` extension point are run.
         -   The extensions are run only when there are changes on the syndicator.
         -   The extension is not run every time automatic syndication queues the syndicator.
-
-    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the [PortalServer_root](../../../../../guide_me/wpsdirstr.md)`/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
+    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
 
 2.  Implement the `onSyndicatorStarted` method.
 
     -   This method contains the code that is run on the syndicator when there are changes available for syndication to the subscriber.
     -   This method must return a `com.ibm.workplace.wcm.api.extensions.syndication.ResultDirective` object to indicate whether the syndication engine can continue or stop the syndication process.
-    
 3.  A plugin.xml file is needed whether the deployment is done by using a WAR or EAR, or by using a loose jar. If deployed by using an application in a WAR or EAR, include the plugin.xml file in the application's WEB-INF folder. When you use a jar, include the plugin.xml in the root of the jar.
 
     ```

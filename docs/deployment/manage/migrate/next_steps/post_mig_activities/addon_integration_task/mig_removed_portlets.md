@@ -5,12 +5,18 @@ Some portlets that were available on previous releases of HCL Portal are no long
 Choose one of the following methods to correct any references to unsupported portlets:
 
 -   Some of the portlets have replacements that are installed during the migration, and the references to the old portlets can be updated to refer to the replacements.
--   If you need to retain the original functionality, copy the war file to wp_profile_root/PortalServer/deployed/archive/, and follow the instructions from *Updating Portlets URLs* in the post-migration activities section.
+-   If you need to retain the original functionality, copy the war file to [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/deployed/archive/, and follow the instructions from *Updating Portlets URLs* in the post-migration activities section.
 -   If the functionality is no longer needed, delete those portlet references or pages that contain the portlets.
 
 See the *What's new* section for details on what changed and what features are deprecated in this release.
 
 
-???+ info "Related information"
-    -   [Updating portlets URL](../../../../../../deployment/manage/migrate/next_steps/post_mig_activities/development_task/mig_updating_portlets_url.md)
+**Related information**  
+
+
+[What's changed 8.5](../overview/change_portal.md)
+
+[Unsupported features for HCL Digital Experience 8.5 and 9.0](../reference/intr_depc.md)
+
+[Updating portlets URL](../migrate/mig_updating_portlets_url.md)
 

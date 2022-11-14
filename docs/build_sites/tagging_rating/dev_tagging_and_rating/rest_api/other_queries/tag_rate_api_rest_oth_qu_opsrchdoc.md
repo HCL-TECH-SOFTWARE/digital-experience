@@ -31,7 +31,10 @@ Optionally, you can specify the following query parameter:
 
 
 
-???+ info "Related information"
-    - [Searching for tagged content](../../../../search/tag_rate_search.md)
-    - [OpenSearch](https://opensearch.org)
+**Related information**  
+
+
+[Searching for tagged content](../admin-system/tag_rate_search.md)
+
+[OpenSearch](https://opensearch.org)
 

@@ -17,8 +17,12 @@ The following example shows how you use the portal XML configuration interface t
 ```
 
 
-???+ info "Related information"
-   -  [Sample XML configuration files](../../../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/xml_config_ref/admxmsmp.md)
-   -  [The XML configuration interface](../../../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/index.md)
-   -  [Working with the XML configuration interface](../../../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
+**Related information**  
+
+
+[Sample XML configuration files](../admin-system/admxmsmp.md)
+
+[The XML configuration interface](../admin-system/admxmlai.md)
+
+[Working with the XML configuration interface](../admin-system/adxmltsk.md)
 

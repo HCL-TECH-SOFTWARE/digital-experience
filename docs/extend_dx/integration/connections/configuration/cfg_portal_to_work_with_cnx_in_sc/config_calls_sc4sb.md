@@ -34,6 +34,8 @@ The instructions for deploying the HCL Connections portlets include a procedure 
 
 
 
-???+ info "Related information"
-    - [Configuring the HCL Connections server type](../../../../../build_sites/social_rendering/cfg_global_settings_social_rendering/soc_rendr_cfg_connct_srvr_type.md)
+**Related information**  
+
+
+[Configuring the HCL Connections server type](../social/soc_rendr_cfg_connct_srvr_type.md)
 

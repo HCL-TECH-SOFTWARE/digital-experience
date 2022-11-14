@@ -31,11 +31,9 @@ Comma separated list of unique names of themes for which the filters should appl
 Default: ibm.portal.80Theme, ibm.portal.85Theme
 ```
 
-!!! note
-    This setting does not apply for the remote rendering use case \(WSRP\).
+**Note:** This setting does not apply for the remote rendering use case \(WSRP\).
 
-!!! note
-    This property is no longer supported in Combined Cumulative Fix 03. The filters are applied for custom themes by default, and you must now disable it for custom themes, if you do not want them filtered. In previous versions, the opposite was true. To disable the filter for any theme, add the metadata `THEME_METADATA_DISABLE_THEME_FILTER` to your theme with the value of `true`. For more information about how to set metadata, see *Change the auto-loading of portlet capabilities*.
+**Note:** This property is no longer supported in Combined Cumulative Fix 03. The filters are applied for custom themes by default, and you must now disable it for custom themes, if you do not want them filtered. In previous versions, the opposite was true. To disable the filter for any theme, add the metadata `THEME_METADATA_DISABLE_THEME_FILTER` to your theme with the value of `true`. For more information about how to set metadata, see *Change the auto-loading of portlet capabilities*.
 
 ## Disable theme filters in local rendering
 
@@ -79,7 +77,10 @@ false: Does not filter any files in the WebDav contribution and profile director
 ```
 
 
-???+ info "Related information:"
-    - [Module dependencies in portlets](../../the_module_framework/themeopt_mod_capfilters.md)
-    - [Change the auto-loading of portlet capabilities](../../the_module_framework/change_the_auto_loading_of_portlet/index.md)
+**Related information**  
+
+
+[Module dependencies in portlets](../dev-theme/themeopt_mod_capfilters.md)
+
+[Change the auto-loading of portlet capabilities](../dev-theme/themeopt_chng_auto_load_cap.md)
 

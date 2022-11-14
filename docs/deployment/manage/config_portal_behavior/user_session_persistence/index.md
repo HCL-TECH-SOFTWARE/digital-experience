@@ -4,7 +4,16 @@ With the persistent session state feature, portal users can resume and continue 
 
 Example: A user logs in and maximizes some portlets. Afterwards the user logs out. When the user logs in again, all of the previously maximized portlets are still maximized.
 
+-   **[Session settings stored by the portal](../admin-system/adcfgpss_set_str_ptl.md)**  
+After a user logs out or the session times out, the portal stores the complete navigational state into the database.
+-   **[User option during login](../admin-system/adcfgpss_usr_opt.md)**  
+Depending on the configuration defined by the administrator, the user can choose whether to resume the last session or not.
+-   **[How administrators define persistent session options](../admin-system/adcfgpss_adm_define.md)**  
+As an administrator, you can configure the persistent session behavior.
 
-???+ info "Related information" 
-    -   [Setting the portal entry page](../../config_portal_behavior/adloginview.md)
+
+**Related information**  
+
+
+[Setting the portal entry page](../admin-system/adloginview.md)
 

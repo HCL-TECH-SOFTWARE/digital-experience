@@ -12,5 +12,9 @@ For example, if you work in French and Italian languages in your Web Content Man
 
 For more information about searching multilingual sites, go to Crawling a multilingual portal site in the related links.
 
-???+ info "Related information" 
-    - [Crawling a multilingual portal site](../searching_local_portal/srtmultiling.md)
+
+**Related information**  
+
+
+[Crawling a multilingual portal site](../admin-system/srtmultiling.md)
+

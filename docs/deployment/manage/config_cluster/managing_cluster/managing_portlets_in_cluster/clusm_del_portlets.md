@@ -6,7 +6,7 @@ You can use the XMLAccess task to delete a portlet common across clusters. If th
 
 2.  Open the Deployment Manager WebSphere® Integrated Solutions Console.
 
-3.  Click **Applications > Application Types > WebSphere enterprise applications**.
+3.  Click **Applications** \> **Application Types** \> **WebSphere enterprise applications**.
 
 4.  Select the enterprise application definition.
 

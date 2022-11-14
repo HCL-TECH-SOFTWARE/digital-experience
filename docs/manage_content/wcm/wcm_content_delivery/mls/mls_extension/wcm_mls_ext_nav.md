@@ -8,8 +8,7 @@ To use the edit-time navigation creation extension:
 
 1.  Add a text element that is named **ML Translations** to an authoring template.
 
-    !!! note
-        This element is displayed in the content item form only if the Multilingual Solution is enabled. Otherwise, this element is hidden in the content item form, but still visible in the **Manage Elements** dialog.
+    **Note:** This element is displayed in the content item form only if the Multilingual Solution is enabled. Otherwise, this element is hidden in the content item form, but still visible in the **Manage Elements** dialog.
 
 2.  Edit the element properties and add the following code to the custom JSP field:
     -   **For the Auto load version before version 8.5 CF3**
@@ -59,7 +58,6 @@ If no matching content items are found, and you have edit access to the content 
     Clicking **Link** creates a content link to the current content under the equivalent site area in the localized library.
 
 
-!!! note
-    When performing copy or link operations against an item within the Portal Site library, any pages on the path to the item being copied will be copied as site areas in the destination library.
+**Note:** When performing copy or link operations against an item within the Portal Site library, any pages on the path to the item being copied will be copied as site areas in the destination library.
 
 

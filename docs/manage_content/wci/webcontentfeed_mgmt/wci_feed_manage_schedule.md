@@ -1,4 +1,4 @@
-# Creating a Feed Job
+# Creating a feed job
 
 You use a feed job to manage a group of feed configurations and apply a schedule to them.
 
@@ -17,4 +17,7 @@ You use a feed job to manage a group of feed configurations and apply a schedule
 5.  Select the feed configurations that you want to include in the feed job.
 
 6.  Click **Save** to save the feed job.
+
+
+**Parent topic:**[Web content feed management](../panel_help/wci_feed_manage.md)
 

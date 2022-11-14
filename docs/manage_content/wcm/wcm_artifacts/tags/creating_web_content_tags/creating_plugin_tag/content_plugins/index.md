@@ -7,16 +7,13 @@ Content plug-ins are used with the current content item.
 
     -   This plug-in writes information suitable for active site analytics.
     -   For example: `[Plugin:AnalyticsData property="title" css-class="asa.wcm.content_item.title"]`
-
 -   **Copy Text plug-in**
 
     -   This plug-in writes text once or multiple times.
     -   The syntax of the plug-in is `[Plugin:CopyText text="" count="" separator="" format="trim | tolower | toupper" escape="xml | json | none"]`.
-
 -   **If List Index plug-in**
 
     -   This plug-in writes the enclosed body markup based on counting where the current item is positioned in the rendering of a Menu, Navigator, Search, Personalization, or Taxonomy component. The plug-in renders the body if the current count is between the specified numbers, subject to the value of 'by'. The first item in the list has count 1. The 'from' and 'to' value can be omitted if no lower or upper bound is required.
-
     -   For example:
         -   `[Plugin:ifListIndex is='2']` renders the body for the second item.
         -   `[Plugin:ifListIndex from='2']` renders the body for all items from the second onwards.
@@ -24,11 +21,9 @@ Content plug-ins are used with the current content item.
         -   `[Plugin:ifListIndex from='2' to='8']` renders the body for items from the second to the eighth.
         -   `[Plugin:ifListIndex from='1' by='2']` or `[Plugin:ifListIndex by='odd']` renders the body for all odd items.
         -   `[Plugin:ifListIndex from='2' by='2']` or `[Plugin:ifListIndex by='even']` renders the body for all even items.
-
 -   **If Count Index plug-in**
 
     -   This plug-in is similar to ifListIndex Plug-in. It writes the enclosed body markup based on counting where the current item is positioned in the rendering of a Menu, Navigator, Search, Personalization, or Taxonomy component that render the IfCountIndex plug-in, but only counts the items that are visible in a Menu, Navigator, Search, Personalization, or Taxonomy component. The plug-in renders the body if the current count is between the specified numbers, subject to the value of 'by'. The first item in the list has count 1. The 'from' and 'to' value can be omitted if no lower or upper bound is required.
-
     -   For example:
         -   `[Plugin:ifCountIndex is='2']` renders the body for the second counted item.
         -   `[Plugin:ifCountIndex from='2']` renders the body for all counted items from the second content item onwards.
@@ -36,9 +31,8 @@ Content plug-ins are used with the current content item.
         -   `[Plugin:ifCountIndex from='2' to='8']` renders the body for counted items from the second to the eighth.
         -   `[Plugin:ifCountIndex from='1' by='2']` or `[Plugin:ifCountIndex by='odd']` renders the body for all odd counted items.
         -   `[Plugin:ifCountIndex from='2' by='2']` or `[Plugin:ifCountIndex by='even']` renders the body for all even counted items.
-
     |Item|IfCountIndex Tag Rendered in list|Count method used by the **If List Index Plug-in**|Count method used by the **If Content Index Plug-in**|
-    |----|---------------------------------|--------------------------------------------------|------|
+    |----|---------------------------------|--------------------------------------------------|-----------------------------------------------------|
     |Item 1|No|1|None|
     |Item 2|Yes|2|1|
     |Item 3|Yes|3|2|
@@ -101,6 +95,6 @@ These topics contain additional information for some of these plug-ins.
 Use the RemoteAction plug-in to reference remote actions from your web content. Remote actions are used to run actions, such as creating and editing items and generating views.
 -   **[Using the analytics data rendering plug-in tag](sa_asa4wcm_plugin.md)**  
 Use the AnalyticsData rendering plug-in tag to inject microformats for Active Site Analytics into your web content.
--   **[Tagging and rating plug-ins for web content](../content_plugins/tagging_rating_plugins/index.md)**  
+-   **[Tagging and rating plug-ins for web content](wcm_tagrate_adding.md)**  
 You can tag and rate portal resources, such as pages and portlets. You can also tag and rate content items that were generated with HCL Web Content Manager and are shown with the web content viewer. Two plug-in components are available to support the tagging and rating of content items in your web content system. You can add the `[Plugin:tags]` component and `[Plugin:ratings]` component in a presentation template to quickly integrate tagging and rating widgets into the current content item.
 

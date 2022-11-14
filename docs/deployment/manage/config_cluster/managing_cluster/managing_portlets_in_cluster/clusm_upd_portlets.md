@@ -6,7 +6,7 @@ You can use the Deployment Manager or the XML configuration interface to update 
 
 2.  Open the Deployment Manager WebSphere® Integrated Solutions Console.
 
-3.  Go to **Applications > Application Types > WebSphere enterprise applications**.
+3.  Go to **Applications** \> **Application Types** \> **WebSphere enterprise applications**.
 
 4.  Select the enterprise application to update and click **Update**.
 

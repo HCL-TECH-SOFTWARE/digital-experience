@@ -21,7 +21,7 @@ To give users more insight on how to use Experience API, the following samples a
     6.  Copy the UUID value.
     Use the UUID obtained in the previous process and use it to access content and logout flow:
 
-    1.  Open HCL Experience API explorer using `http://<HOST>:<PORT>/dx/api/core/v1/explorer` (e.g. 'http://127.0.0.1:3000/dx/api/core/v1/explorer`).
+    1.  Open HCL Experience API explorer using `http://<HOST>:<PORT>/dx/api/core/v1/explorer` \(e.g. 'http://127.0.0.1:3000/dx/api/core/v1/explorer`\).
     2.  Execute Login API endpoint `auth/login` by entering a valid username and password.
     3.  Once the login is successful, execute the following content ID endpoint to fetch content based on the content ID:
 
@@ -44,7 +44,7 @@ Open the HCL Experience API GraphQL URL: http://localhost:4000/dx/api/core/v1/gr
 
 See example result:
 
-![](./assets/ExperienceAPI_GraphQL_HCL_DX.png)
+![](../assets/ExperienceAPI_GraphQL_HCL_DX.png)
 
 -   ****
 
@@ -62,9 +62,9 @@ See example result:
                         }
         ```
 
-        ![Experience API login script](./assets/ExperienceAPI_login_script.png)
+        ![Experience API login script](../assets/ExperienceAPI_login_script.png)
 
-    2.  **Get Roles script (Without authentication)**
+    2.  **Get Roles script \(Without authentication\)**
 
         ```
         query{
@@ -77,9 +77,9 @@ See example result:
                       
         ```
 
-        ![Experience API get roles script without authorization](./assets/ExperienceAPI_get_roles_script.png)
+        ![Experience API get roles script without authorization](../assets/ExperienceAPI_get_roles_script.png)
 
-    3.  **Get Roles script (With authentication)** - Refer to the screenshot below to retrieve the cookie and pass using the HCL Experience API.
+    3.  **Get Roles script \(With authentication\)** - Refer to the screenshot below to retrieve the cookie and pass using the HCL Experience API.
 
         ```
         query{
@@ -105,7 +105,7 @@ See example result:
                           }
         ```
 
-        ![Experience API get roles script with authorization](./assets/ExperienceAPI_get_roles_with_auth.png)
+        ![Experience API get roles script with authorization](../assets/ExperienceAPI_get_roles_with_auth.png)
 
 
 

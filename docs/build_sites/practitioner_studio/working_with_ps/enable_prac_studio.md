@@ -29,7 +29,7 @@ This section outlines how to enable Practitioner Studio and Woodburn Studio in b
     -   Windows: `ConfigEngine.bat **enable-v95-UI-features-virtual-portal** -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> **-DVirtualPortalContext=**`
 
     !!! note
-        -   To configure the virtual Portal Manager so that Practitioner Studio is deployed for the newly created virtual portals, see [How to configure Practitioner Studio](../../practitioner_studio/working_with_ps/config_prac_studio.md).
+        -   To configure the virtual Portal Manager so that Practitioner Studio is deployed for the newly created virtual portals, see [How to configure Practitioner Studio](../practitioner_studio/config_prac_studio.html).
 
         -   To enable Practitioner Studio and Woodburn Studio on all available Virtual Portals, you can use the following parameter: `-DUpdateVPs=true`
 
@@ -48,6 +48,6 @@ Follow the steps to enable your site to be seen in SiteMap:
 5.  Save, then test.
 
 
-???+ info "Related information"  
+???+ info "Related information:"  
     - [Install the HCL Digital Experience 9.5 components](../../../manage_content/digital_assets/installation/install_config_dam.md)
 

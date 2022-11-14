@@ -6,8 +6,7 @@ DAM Extensibility allows DAM to support user-defined custom renditions and confi
 
 Image tagging simply requires setting keywords for the elements that are contained in a visual. It allows the effective and direct search on the basis of preassigned keywords.
 
-
-![Architecture diagram for Google vision Plugin](../../../../images/Image_tagging_DAM-Plugin-google-vision.png)
+![Architecture diagram for Google vision Plugin](../../images/Image_tagging_DAM-Plugin-google-vision.png)
 
 ## Google vision plugin configuration
 
@@ -21,35 +20,50 @@ Following configuration changes are required for generating image keywords by Go
 # Security configuration for dam-plugin-google-vision
   damPluginGoogleVision:
     # Authentication key for Plugin API
-    authenticationKey: "Key"
+    authenticationKey: "PluginSecretAuthKey"
     # API key for Google vision
     apiKey: ""
 ```
 2. Under plugin configuration, enable google-vision by setting the enable flag to true.
 
 ```
-google-vision:
-        url: http://RELEASE_NAME-dam-plugin-google-vision:DAM_HTTP_PORT/dx/api/google-vision/v0/googleVisionAI
-        callBackHost: http://RELEASE_NAME-digital-asset-management:DAM_HTTP_PORT
-        authKey: Key
-        enable: true
-        actions:
-          annotation:
-            params: {}
-            url: "/annotation"
+{
+   "google-vision":{
+      "url":"<PROTOCOL>://<GOOGLE_VISION_HOST>/dx/api/google-vision/v0/googleVisionAI",
+      "callBackHost": "<PROTOCOL>://<DAM_HOST>",
+      "authKey": "PluginSecretAuthKey",
+      "enable": true,
+      "actions":{
+         "annotation": {
+            "params": {},
+            "url": "/annotation"
+         }
+      }
+   }
+}
 ```
-3. In case, if keywords are to be generated for a specific mime type, copy the configurations to the custom values yaml and modify the supplemental stack.
+3. In case, if keywords are to be not generated or added to a specific mime type, modify supplemental stack in rendition-extensibility.json for the specific mime type.
 
 ```
-image/jpeg:
-        rendition:
-        - name: Original
-          transformationStack: []
-          thumbnailStack:[]
-          supplementalStack:
-          - plugin: google-vision
-            operation:
-              annotation: {}
+{
+  'image/jpeg': {
+    rendition: [
+      {
+        name: 'Original',
+        transformationStack: [],
+        thumbnailStack: [],
+        supplementalStack: [
+          {
+            plugin: 'google-vision',
+            operation: {
+              annotation: {},
+            },
+          },
+        ],
+      }
+    ],
+  }
+}
 ```
 There are two configurations available in values.yaml for keyword generation.
 
@@ -131,7 +145,6 @@ Body
 
 For additional information about the Google Vision API and image resource processing, see [Google Vision documentation](https://cloud.google.com/vision/docs/data-usage). 
 
-<!--
 ## HCL Digital Experience Solution Feedback
 
-HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).-->
+HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).

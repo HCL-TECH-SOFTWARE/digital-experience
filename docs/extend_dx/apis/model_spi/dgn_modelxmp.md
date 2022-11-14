@@ -4,7 +4,7 @@ The Model SPI can be used in portlets, themes, and skins. The models can be used
 
 The following samples focus on JSPs, but the code can also be used in Java source files.
 
-## Displaying the portal selection path (breadcrumb trail)
+## Displaying the portal selection path \(breadcrumb trail\)
 
 The following example shows how to render a breadcrumb trail that shows the current selection path.
 
@@ -74,7 +74,7 @@ catch (NamingException nx) {
 
 ```
 
-This example uses a JNDI lookup to obtain the navigation selection model. The model is then iterated and for each node a title is produced by using the <portal:title> tag. Until the last node is reached, the <portal:navigationUrl> tag is used to generate links to the referenced pages.
+This example uses a JNDI lookup to obtain the navigation selection model. The model is then iterated and for each node a title is produced by using the <portal:title/\> tag. Until the last node is reached, the <portal:navigationUrl/\> tag is used to generate links to the referenced pages.
 
 ## Getting page layout information
 

@@ -29,7 +29,6 @@ By default, the global proxy configuration as defined in the HTTP Client Service
     Use this property to specify a particular host for which no proxy connection is used, even if a proxy is configured. You can set this property more than once. Specify one setting for each host that is excluded from proxy connections.
 
 
-!!!note
-    You can explicitly set no value for a property that has a value in the global configuration. To do so, specify the value none to overwrite the global configuration value. Restart the portal or the cluster for the changes to take effect.
+**Note:** You can explicitly set no value for a property that has a value in the global configuration. To do so, specify the value none to overwrite the global configuration value. Restart the portal or the cluster for the changes to take effect.
 
 

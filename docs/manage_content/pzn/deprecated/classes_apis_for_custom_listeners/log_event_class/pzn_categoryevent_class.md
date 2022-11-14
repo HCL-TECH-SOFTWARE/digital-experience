@@ -11,9 +11,26 @@ Get an overview of the methods of the CategoryEvent class.
 
 |Method|Explanation|
 |------|-----------|
-|public CategoryEvent( HttpServletRequest request, <br>                      String[]           topics )|Constructor.|
-|public String[] getTopics( )|Returns the array of topics for this category event.|
-|public void setTopics( String[] topics )|Sets the topics for this event. Can be used by custom listeners in order to replace the topics for this event.|
-|String toString( )|Returns a String representation of this event.|
+|```
+public CategoryEvent( HttpServletRequest request,
+                      String[]           topics )
+```
+
+|Constructor.|
+|```
+public String[] getTopics( )
+```
+
+|Returns the array of topics for this category event.|
+|```
+public void setTopics( String[] topics )
+```
+
+|Sets the topics for this event. Can be used by custom listeners in order to replace the topics for this event.|
+|```
+String toString( )
+```
+
+|Returns a String representation of this event.|
 
 

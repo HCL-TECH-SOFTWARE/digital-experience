@@ -26,6 +26,8 @@ You can configure the Person card to display longer than the default number of m
 
 
 
-???+ info "Related information"
-    - [People awareness](https://help.hcltechsw.com/digital-experience/9.5/collab/i_coll_c_people_aw.html)
+**Related information**  
+
+
+[People awareness](../collab/i_coll_c_people_aw.md)
 

@@ -6,7 +6,11 @@ You have the following general security options to choose from:
 
 |Security option|Explanation|
 |---------------|-----------|
-|Federated security|With this option, you can create Virtual Portals with multiple realms. You can also use multiple repositories \(LDAP, database, custom\), and you can add Application Groups to your system. This option is good if you must merge multiple LDAP servers into one cohesive structure.**Attention:** If you plan to enable the transient user feature, you must choose the federated user registry configuration. <br>**Important:** You must take special care that there are no duplicate names between the various repositories. For example, if you installed the product with a Portal Administrator of admin1, then admin1 must not exist in the corporate LDAP server.|
+|Federated security|With this option, you can create Virtual Portals with multiple realms. You can also use multiple repositories \(LDAP, database, custom\), and you can add Application Groups to your system. This option is good if you must merge multiple LDAP servers into one cohesive structure.**Attention:** If you plan to enable the transient user feature, you must choose the federated user registry configuration.
+
+**Important:** You must take special care that there are no duplicate names between the various repositories. For example, if you installed the product with a Portal Administrator of admin1, then admin1 must not exist in the corporate LDAP server.
+
+|
 |Custom security|This option provides you with the ability to write a fully controlled WebSphere Security environment. There is a custom user registry and a custom member adapter for Virtual Member Manager \(VMM\). The abilities of this option depend on your implementation.|
 
 ## Federated security

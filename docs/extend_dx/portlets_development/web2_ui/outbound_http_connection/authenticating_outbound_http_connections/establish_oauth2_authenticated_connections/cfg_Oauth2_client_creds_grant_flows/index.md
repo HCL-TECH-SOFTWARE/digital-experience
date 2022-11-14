@@ -141,7 +141,7 @@ The following metadata name-value pairs are used to establish the Client Credent
 
 For an example of using the Client Credentials flow for accessing twitter resources, see Setting up OAuth 2.0 for Twitter by using the Client Credentials Grant flow.
 
--   **[Setting up OAuth 2.0 for Twitter by using the Client Credentials Grant flow](Oauth2.0_twitter_client_credentials.md)**  
+-   **[Setting up OAuth 2.0 for Twitter by using the Client Credentials Grant flow](../dev-portlet/Oauth2.0_twitter_client_credentials.md)**  
 Set up a client credential grant flow to configure OAuth 2.0 access to Twitter resources.
 
 

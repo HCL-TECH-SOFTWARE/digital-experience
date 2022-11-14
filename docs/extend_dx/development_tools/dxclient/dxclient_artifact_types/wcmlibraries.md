@@ -7,7 +7,7 @@ This section provides information about how to export and import WCM libraries u
 
 ## Export WCM libraries
 
-The `wcm-library-export` command is used to export the WCM libraries from the source server to an output location in the <working-directory>/store/ folder.
+The `wcm-library-export` command is used to export the WCM libraries from the source server to an output location in the <working-directory\>/store/ folder.
 
 -   **Command description**
 
@@ -44,7 +44,7 @@ The `wcm-library-export` command is used to export the WCM libraries from the so
     -hostname <value>
     ```
 
-    Use this attribute to specify the port number of the `cw_profile` (for Kubernetes Environment, `dxConnectPort` is 443):
+    Use this attribute to specify the port number of the `cw_profile` \(for Kubernetes Environment, `dxConnectPort` is 443\):
 
     ```
     -dxConnectPort <value>
@@ -80,7 +80,7 @@ The `wcm-library-export` command is used to export the WCM libraries from the so
     -dxProfileName <Profile name of the DX core server> 
     ```
 
-    Use this attribute to specify the names of the WCM libraries of the DX core server (for example, "hello_library,demo_library"):
+    Use this attribute to specify the names of the WCM libraries of the DX core server \(for example, "hello\_library,demo\_library"\):
 
     ```
     -librariesName <value>
@@ -140,7 +140,7 @@ The `wcm-library-import` command is used to import the WCM libraries from the so
     -hostname <value>
     ```
 
-    Use this attribute to specify the port number of the `cw_profile` (for Kubernetes Environment, `dxConnectPort` is 443):
+    Use this attribute to specify the port number of the `cw_profile` \(for Kubernetes Environment, `dxConnectPort` is 443\):
 
     ```
     -dxConnectPort <value>

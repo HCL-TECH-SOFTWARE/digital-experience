@@ -43,12 +43,10 @@ The Forum Topic Details view definition is uses the Forum Topics profile. For mo
 
 The profiles define the attribute names that you can use in your `[AttributeResource]` tags when you generate the HTML markup for your bean lists. You can either manually add the `AttributeResource` tags to the design component of a social list, or you can use the **Insert a Tag** user interface of HCL Web Content Manager. Example: If a profile defines an attribute that is named `title`, you can write out the title value of the items in your list by using the following tag: `[AttributeResource attributeName="title"]`.
 
-!!! note
-    When you integrate an HCL Connections server that runs in the Smart Cloud for Social Business, the following item attributes always return empty string values: `authorObjectID`, `memberObjectID`, and `modifierObjectID`.
+**Note:** When you integrate an HCL Connections server that runs in the Smart Cloud for Social Business, the following item attributes always return empty string values: `authorObjectID`, `memberObjectID`, and `modifierObjectID`.
 
 The profiles that HCL Portal includes are listed in the following topics.
 
-<!--
 -   **[Blog-related profiles](../social/soc_rendr_prfls_blogs.md)**  
 These profiles provide access to HCL Connections blog-related feed data for blogs, blogs details, blog posts, and blog post comments.
 -   **[Communities and community members profiles](../social/soc_rendr_prfls_communities.md)**  
@@ -71,15 +69,24 @@ The modifier support profile provides general modifier aspects. These modifier a
 The tag support profile provides access to a list of tags that is associated with the social objects served by HCL Connections feed data.
 -   **[OpenSearch support profile](../social/soc_rendr_prfls_opensearch_support.md)**  
 The OpenSearch support profile provides access to information that is defined in the OpenSearch specification. The OpenSearch specification is commonly used in the Atom feed format.
---->
 
-???+ info "Related information:"
-    - [Social rendering](../../../../../social_rendering/index.md)
-    - [Configuring globally how social object data is served](../../../../cfg_global_settings_social_rendering/soc_rendr_cfg_data_serve.md)
-    - [Configuring globally how social object links are resolved](../../../../cfg_global_settings_social_rendering/soc_rendr_cfg_reslv_links.md)
-    - [Configuring file type icon mappings](../../../../cfg_global_settings_social_rendering/cfg_filetype_icon_mappings/index.md)
-    - [Web content tags](../../../../../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/wcm_tags.md)
-    - [Setting parameters to format dates](https://help.hcltechsw.com/digital-experience/8.5/panel_help/wcm_reference-dates.html)
-    - [Implementing interactions with social objects](../../../implementing_interactions_social_object/index.md)
-    - [The social rendering Digital Data Connector plug-in](../../../../extending_social_lists_using_ddc/soc_rendr_bean_lst_prvdr.md)
+
+**Related information**  
+
+
+[Social rendering](../social/soc_rendr_ovu.md)
+
+[Configuring globally how social object data is served](../social/soc_rendr_cfg_data_serve.md)
+
+[Configuring globally how social object links are resolved](../social/soc_rendr_cfg_reslv_links.md)
+
+[Configuring file type icon mappings](../social/soc_rendr_cfg_filetype_map.md)
+
+[Web content tags](../wcm/wcm_tags.md)
+
+[Setting parameters to format dates](https://help.hcltechsw.com/digital-experience/8.5/panel_help/wcm_reference-dates.html)
+
+[Implementing interactions with social objects](../wcm/wcm_dev_impl_intrax_soc_objects.md)
+
+[The social rendering Digital Data Connector plug-in](../social/soc_rendr_bean_lst_prvdr.md)
 

@@ -14,13 +14,16 @@ To tune these caches, you can configure the Cache Manager Service \(`WP CacheMan
 
 Updates occurring on the remote content management system might not immediately be reflected on the portal side if there is a corresponding entry in the cache. The individual cache life time values determine the maximum time lag for corresponding updates.
 
-??? note
-    -   The time lag for new documents to be visible and deleted documents to be removed depends on the lifetime value for the configured document list cache.
-    -   The time lag for updates in the metadata in a document \(for example, changes to the document title\) depends on the configured lifetime value for the document data cache.
+**Note:**
+
+-   The time lag for new documents to be visible and deleted documents to be removed depends on the lifetime value for the configured document list cache.
+-   The time lag for updates in the metadata in a document \(for example, changes to the document title\) depends on the configured lifetime value for the document data cache.
 
 The user-specific document list cache is explicitly invalidated each time the user logs in, so that the most current list of available document identifiers is available upon login.
 
 
-???+ info "Related information:"
-    - [Setting service configuration properties](../../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
+**Related information**  
+
+
+[Setting service configuration properties](../admin-system/adsetcfg.md)
 

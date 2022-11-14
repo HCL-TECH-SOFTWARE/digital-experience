@@ -65,5 +65,5 @@ For example, in a travel site, in a Flight booking dialog, the transition can po
 </transition-endpoint>
 ```
 
-
+**Parent topic:**[Transition endpoints](../screenflow/ref_trnstn_endpnts.md)
 

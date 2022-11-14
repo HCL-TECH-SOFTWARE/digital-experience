@@ -43,9 +43,9 @@ The following example is a sample outbound HTTP connection configuration script.
 </proxy-rules>
 ```
 
--   **[XML schema of outbound HTTP connection configuration script](outbhttp_cfg_script_strct.md)**  
+-   **[XML schema of outbound HTTP connection configuration script](../dev-portlet/outbhttp_cfg_script_strct.md)**  
 An outbound connection configuration script file needs to conform to the following XML schema.
--   **[Description of the outbound HTTP connection configuration script](../xml_format_outbound_http/desc_outbound_http_cfg_script/index.md)**  
+-   **[Description of the outbound HTTP connection configuration script](../dev-portlet/outbhttp_cfg_descript.md)**  
 The configuration settings of an outbound HTTP connection configuration script are described here.
 
 

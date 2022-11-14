@@ -2,8 +2,7 @@
 
 Manual steps from the Configuration Wizard are included in HCL Digital Experience Product Documentation for reference and for advanced users. The procedure includes variables and steps for different databases. When you use the wizard to configure your deployment, it replaces the variable with information that you provided in the wizard. It also shows only the steps that are specific to your environment. The instructions that the wizard generates are specific to your environment.
 
-!!!note
-    All steps for all database environments are included without consideration for your environment. Use the Configuration Wizard to generate custom instructions for your environment.
+**Note:** All steps for all database environments are included without consideration for your environment. Use the Configuration Wizard to generate custom instructions for your environment.
 
 JCR collation is recommended when the language locales of your users do not natively collate correctly in the DB2 database and when language locale correct ordering is important.
 
@@ -22,7 +21,7 @@ ${WasUserHome}/PortalServer/jcr/config/registerCollationUDFTemplate.sql
 3.  Set up collation on the database where the JCR domain is located. Change to this directory:
 
     ```
-    db2_instance_owner_home/sqllib/function
+    db2\_instance\_owner\_home/sqllib/function
     ```
 
 4.  Enter this command:
@@ -115,6 +114,8 @@ ${WasUserHome}/PortalServer/jcr/config/registerCollationUDFTemplate.sql
 
 
 
-???+ info "Related information" 
-    -   [JCR search service configuration parameters](../../../../build_sites/search/portal_search/administer_portal_search/search_service_params/jcr_srrcfgsrvc.md)
+**Related information**  
+
+
+[JCR search service configuration parameters](../admin-system/jcr_srrcfgsrvc.md)
 

@@ -19,9 +19,9 @@ You can create skins in the following scopes:
 
 All skins created in Portal can be access by the WebDAV skinlist entry point.
 
--   **[Create a theme-scoped skin](../creating_skin/index.md)**  
+-   **[Create a theme-scoped skin](../dev-theme/themeopt_create_themescoped_skin.md)**  
 You can create a custom skin that is scoped to a specific theme when you copy an existing ready-use choice to use as the base for your new skin.
--   **[Add static resources to a skin](themeopt_cust_skinstatic.md)**  
+-   **[Add static resources to a skin](../dev-theme/themeopt_cust_skinstatic.md)**  
 You can add images, URLs, and other static resources to your skin.
 
 

@@ -8,3 +8,5 @@ As the portal cannot distinguish one anonymous user from another, there are some
 -   For rating, the same user can normally rate a single resource only once, but an anonymous user can rate the same resource more than once.
 -   Anonymous users cannot view their personal tags, and they cannot delete tags or ratings.
 -   Anonymous users cannot tag or rate a page with the Search and Tag Center profile deployed on it.
+
+

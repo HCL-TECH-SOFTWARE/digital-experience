@@ -26,7 +26,7 @@ Because of this limitation, changes made in a project are displayed immediately 
 
 ## Changing the order of pages in the portal
 
-You can modify the ordering and hierarchy of pages in the portal by either using the site toolbar or by going to **Administration** \> **Site Management** \> **Pages** and using the Manage Pages portlet in the portal interface. If you move the portal page site area in the authoring portlet, the page order in the portal is not affected.
+You can modify the ordering and hierarchy of pages in the portal only with the site toolbar in the portal interface. If you move the portal page site area in the authoring portlet, the page order in the portal is not affected.
 
 ## Personalization rules
 

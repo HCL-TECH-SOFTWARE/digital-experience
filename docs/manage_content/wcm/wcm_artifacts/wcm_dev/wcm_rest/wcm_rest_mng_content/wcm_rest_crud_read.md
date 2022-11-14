@@ -85,11 +85,11 @@ The Digital Experience Core Configuration API allows developers to retrieve DX c
 
 Explanation of parameters
 
--   dam - enabled: If the Digital Asset Management (DAM) is configured.
--   dam - picker-url-files: If DAM is enabled, this parameter holds the URL to launch the DAM Selection interface and the filter for Files (excluding images).
--   dam - picker-url-images: If DAM is enabled, this parameter holds the URL to launch the DAM Selection interface and filter for Images (excluding other files).
--   wcm - maxuploadsize: Maximum size of assets that can be uploaded to the Web Content Manager JCR (not the Digital Asset Manager storage container).
+-   dam - enabled: If the Digital Asset Management \(DAM\) is configured.
+-   dam - picker-url-files: If DAM is enabled, this parameter holds the URL to launch the DAM Selection interface and the filter for Files \(excluding images\).
+-   dam - picker-url-images: If DAM is enabled, this parameter holds the URL to launch the DAM Selection interface and filter for Images \(excluding other files\).
+-   wcm - maxuploadsize: Maximum size of assets that can be uploaded to the Web Content Manager JCR \(not the Digital Asset Manager storage container.
 -   wcm - browserCacheMaxAge: The configured timeout value in Web Content Manager for static resources, in seconds. Default value is 600 seconds.
--   wcm - picker-url-content: The URL to launch the Content Picker (selection interface).
+-   wcm - picker-url-content: The URL to launch the Content Picker \(selection interface\).
 
 

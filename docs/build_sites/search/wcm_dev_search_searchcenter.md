@@ -13,8 +13,8 @@ You can use the Search Center to search for web content by adding a web content 
 5.  Complete the search scope and click **OK**.
 
 
-<!--
+
 **Previous topic:**[Configuring Web Content Manager search options](../wcm/wcm_config_search.md)
 
-**Next topic:**[Language and region support in Portal Search](../admin-system/srr_lng_regio_spprt.md) -->
+**Next topic:**[Language and region support in Portal Search](../admin-system/srr_lng_regio_spprt.md)
 

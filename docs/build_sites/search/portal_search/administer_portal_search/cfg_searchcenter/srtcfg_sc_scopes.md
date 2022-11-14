@@ -10,8 +10,12 @@ For search collections provided by Portal Search you can configure the search sc
 You can configure additional scopes. For more information about search scopes and how to configure them refer to Managing search scopes and custom links.
 
 
-???+ info "Related information"
-    - [Customizing the Search Center](../customize_searchcenter/index.md)
-    - [Managing search scopes and custom links](../customize_searchcenter/srtmgscops.md)
-    - [Customizing the All Sources scope](../customize_searchcenter/srtcustomscope.md)
+**Related information**  
+
+
+[Customizing the Search Center](../admin-system/srtcentercustomze.md)
+
+[Managing search scopes and custom links](../admin-system/srtmgscops.md)
+
+[Customizing the All Sources scope](../admin-system/srtcustomscope.md)
 

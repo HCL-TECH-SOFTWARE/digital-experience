@@ -27,8 +27,7 @@ Cache parameters in connect tags and URL requests can be used to override your s
 
 In most cases, basic, site and session caching would only be used as your server's default web content cache. User, secured and personalized caching would mostly be used when using custom caching in connect tags and URL requests.
 
-!!! note
-    If basic caching is used as your default web content cache, custom caching cannot be used.
+**Note:** If basic caching is used as your default web content cache, custom caching cannot be used.
 
 ## Cache comparisons
 

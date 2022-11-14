@@ -20,7 +20,6 @@ To edit the virtual portal properties, perform the following steps:
     -   **Virtual portal description:** Enter the new description of the virtual portal. This field is limited to 255 characters.
     -   **User realm:** Select a realm from the list. This pulldown appears only if realms are enabled on your environment.
     -   **Default theme:** Select the default theme for the virtual portal from the drop down list. Select the **Preview theme** icon to see a preview of the selected theme.
-    
 3.  To set locale-specific titles and descriptions:
 
     1.  Select the link **I want to set titles and descriptions for other languages**.

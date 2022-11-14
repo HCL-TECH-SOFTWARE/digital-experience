@@ -1,6 +1,6 @@
 # Managing Web Content Syndicators and Subscribers using DXClient
 
-The section provides information about using the DXClient process to automate the management of Web Content Manager Syndicators, Subscribers, and get-syndication reports. For more information on the process and settings of the Web Content Manager Syndicators and Subscribers, see [How to manage syndicators and subscribers](../../../../manage_content/wcm/wcm_content_delivery/syndication/manage_synd_subs/index.md).
+The section provides information about using the DXClient process to automate the management of Web Content Manager Syndicators, Subscribers, and get-syndication reports. For more information on the process and settings of the Web Content Manager Syndicators and Subscribers, see [How to manage syndicators and subscribers](https://help.hcltechsw.com/digital-experience/9.5/panel_help/wcm_syndication.html).
 
 ## Managing syndicators
 
@@ -36,7 +36,7 @@ The manage-syndicator command is used to enable or disable the syndicator using 
     -dxProtocol <value>
     ```
 
-    Use this attribute to specify the port on which to connect to the server(for Kubernetes Environment dxPort is 443)
+    Use this attribute to specify the port on which to connect to the server\(for Kubernetes Environment dxPort is 443\)
 
     ```
     -dxPort <value>
@@ -54,7 +54,7 @@ The manage-syndicator command is used to enable or disable the syndicator using 
     -dxPassword <value>
     ```
 
-    Use this attribute to specify the path to the contenthandler servlet on the DX server (example: /wps/mycontenthandler).
+    Use this attribute to specify the path to the contenthandler servlet on the DX server \(example: /wps/mycontenthandler\).
 
     ```
     -contenthandlerPath <value>
@@ -115,7 +115,7 @@ The manage-syndicator get-syndication-report command is used to fetch the failed
     -dxProtocol <value>
     ```
 
-    Use this attribute to specify the port on which to connect to the server (for Kubernetes Environment, dxPort is 443)
+    Use this attribute to specify the port on which to connect to the server \(for Kubernetes Environment, dxPort is 443\)
 
     ```
     -dxPort <value>
@@ -133,7 +133,7 @@ The manage-syndicator get-syndication-report command is used to fetch the failed
     -dxPassword <value>
     ```
 
-    Use this attribute to specify the path to the contenthandler servlet on the DX server (for example, /wps/mycontenthandler)
+    Use this attribute to specify the path to the contenthandler servlet on the DX server \(for example, /wps/mycontenthandler\)
 
     ```
     -contenthandlerPath <value>
@@ -197,7 +197,7 @@ The manage-subscriber command is used to enable or disable the subscriber using 
     -dxProtocol <value>
     ```
 
-    Use this attribute to specify the port on which to connect to the server (for Kubernetes Environment dxPort is 443).
+    Use this attribute to specify the port on which to connect to the server\(for Kubernetes Environment dxPort is 443\).
 
     ```
     -dxPort <value>
@@ -215,7 +215,7 @@ The manage-subscriber command is used to enable or disable the subscriber using 
     -dxPassword <value>
     ```
 
-    Use this attribute to specify the path to the contenthandler servlet on the DX server (for example, /wps/mycontenthandler).
+    Use this attribute to specify the path to the contenthandler servlet on the DX server \(for example, /wps/mycontenthandler\).
 
     ```
     -contenthandlerPath <value>
@@ -276,7 +276,7 @@ The `create-syndication-relation` command is used to create the syndication rela
     -hostname <value>
     ```
 
-    Use this attribute to specify the port on which to connect to the DX server (for Kubernetes Environment, dxPort is 443):
+    Use this attribute to specify the port on which to connect to the DX server \(for Kubernetes Environment, dxPort is 443\):
 
     ```
     -dxPort <value>
@@ -300,7 +300,7 @@ The `create-syndication-relation` command is used to create the syndication rela
     -contenthandlerPath <value>
     ```
 
-    Syndicator URL of target server, for example, http(s)://host:port/wps/wcm:
+    Syndicator URL of target server, for example, http\(s\)://host:port/wps/wcm:
 
     ```
     -syndicatorUrl <value>
@@ -324,13 +324,13 @@ The `create-syndication-relation` command is used to create the syndication rela
     -vaultSlotName <value>
     ```
 
-    Whether the syndicator/subscriber pair is enabled on creation: isEnabled (default is true):
+    Whether the syndicator/subscriber pair is enabled on creation: isEnabled \(default is true\):
 
     ```
     -isEnabled <value>
     ```
 
-    Whether the syndicator/subscriber pair is updateAfterCreation : updateAfterCreation (default is true):
+    Whether the syndicator/subscriber pair is updateAfterCreation : updateAfterCreation \(default is true\):
 
     ```
     -updateAfterCreation <value>
@@ -348,7 +348,7 @@ The `create-syndication-relation` command is used to create the syndication rela
     -webContentLibraries <value> 
     ```
 
-    Use this attribute to specify the Subscriber URL, for example, http(s)://host:port/wps/wcm:
+    Use this attribute to specify the Subscriber URL, for example, http\(s\)://host:port/wps/wcm:
 
     ```
     -subscriberURL <value>
@@ -366,7 +366,7 @@ The `create-syndication-relation` command is used to create the syndication rela
     -syndicatorVaultSlotName <value>
     ```
 
-    Use this attribute to specify the path to the context root on the DX server (for example, /wps):
+    Use this attribute to specify the path to the context root on the DX server \(for example, /wps\):
 
     ```
     -dxContextRoot <value>
