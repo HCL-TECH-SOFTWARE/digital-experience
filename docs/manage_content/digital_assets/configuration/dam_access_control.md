@@ -6,7 +6,9 @@ This topic describes details about DAM collection access feature that currently 
 
 DX Portal Access Control follows an inheritance based tree structure. At the top of the tree is the virtual Resource Portal, below it is the virtual Resource Media Library and below that, is the resource instances you are registering with its children. By assigning a role on a resource to a user, the user gets permissions on the resource and its children. There is a way to block the inheritance with role blocks but it is not exposed in the initial configuration. 
 
-In DX perspective, possible Role Types are User (view only), Editor (view, edit, create), Manager (view, edit, create, delete), Administrator (view, edit, create, delete, set/remove access) .
+In DX perspective, possible Role Types are User (view only), Editor (view, edit, create), Manager (view, edit, create, delete), Administrator (view, edit, create, delete, set/remove access).
+
+Note: Currently, only highlighted roles (Administrator, Editor, User) are applicable in DAM. 
 
 ![Portal Access Control Roles](../../../../images/access_roles_portal.png)
 ## Overview on DAM Collection Access Control
