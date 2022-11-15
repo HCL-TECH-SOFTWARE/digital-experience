@@ -58,7 +58,7 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 4.  To work with multiple versions of DXClient, update the `IMAGE_TAG` reference in the scripts file under the `/bin` folder. For example, `IMAGE_TAG=v95_CF200_20211201-1021`. By default it will be set in the executable script.
 5.  Run docker load < dxclient.tar.gz.
 
-6.  Optional (It is advisable to not set this incase you run multiple DXClient versions in your system) : Open terminal, Add the execution shell script to the bin directory to the PATH variable to be able to call dxclient from any directory.
+6.  Optional (It is advisable to not set this incase you run multiple DXClient versions in your system). Open terminal, add the execution shell script to the bin directory to the PATH variable to be able to call dxclient from any directory.
 
     ```
     export PATH=<working-directory>/bin:$PATH
@@ -72,7 +72,8 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
     set PATH=<working-directory>\bin;%PATH%
     ```
 
-    Note: You will loose these changes by closing the terminal / command prompt. If you set in system path permanently, kindly take the necessary steps to remove it. 
+    !!! note
+        You will loose these changes by closing the terminal / command prompt. If you set in system path permanently, kindly take the necessary steps to remove it. 
 
 7.  Set appropriate permission.
 
