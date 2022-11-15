@@ -48,8 +48,6 @@ You can pass parameters to a JSP page that is rendering the dynamic content. If 
 ```
 
 
-**Related information**  
-
-
-[Working with dynamic content spots](../dev-portlet/csa2r_dyn_cntnt_spot.md)
+???+ info "Related information:"
+    - [Working with dynamic content spots](../../working_with_dcs/index.md)
 

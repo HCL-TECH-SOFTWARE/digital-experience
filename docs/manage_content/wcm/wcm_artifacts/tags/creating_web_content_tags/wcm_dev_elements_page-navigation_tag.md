@@ -32,34 +32,9 @@ Once you add the tag to your design, you can also add the following parameters t
 
 |Tag parameters|Details|
 |--------------|-------|
-|`knowntext=" "``unknowntext=" "`
+|`knowntext=" "` <br> `unknowntext=" "`|These parameters are used when value="unknownPages". For example: <br> <pre>``` [PageInfo value="unknownPages"   knowntext="of" unknowntext="of at least" ] ``` <br> This can be used with other PageInfo tags to render the following: <br> -   When the total number of pages are known: "Page 2 of 5." <br> -   When the total number of pages are unknown: "Page 2 of at least 5."|
+|`start=" "`<br> `end=" "` |The start and end attributes are used to wrap the data that is returned by a tag within other tags, such as HTML. These attributes are not mandatory.|
 
-|These parameters are used when value="unknownPages". For example:```
-[PageInfo value="unknownPages" 
-knowntext="of" unknowntext="of at least" ]
-```
-
-This can be used with other PageInfo tags to render the following:
-
--   When the total number of pages are known: "Page 2 of 5."
--   When the total number of pages are unknown: "Page 2 of at least 5."
-
-|
-|`start=" "``end=" "`
-
-|The start and end attributes are used to wrap the data that is returned by a tag within other tags, such as HTML. These attributes are not mandatory.|
-
-**Related information**  
-
-
-[Creating a page navigation component](../panel_help/wcm_dev_elements_page-navigation_creating.md)
-
-[Page navigation design example](../panel_help/wcm_dev_elements_page-navigation_example.md)
-
-**References:**  
-
-
-[Page navigation design example](wcm_dev_elements_page-navigation_example.md)
-
-[Creating a page navigation component](wcm_dev_elements_page-navigation_creating.md)
-
+???+ info "Related information:"
+    - [Creating a page navigation component](../../elements/howto_work_with_elements/page_nav_element/wcm_dev_elements_page-navigation_creating.md)
+    - [Page navigation design example](../../elements/howto_work_with_elements/page_nav_element/wcm_dev_elements_page-navigation_example.md)

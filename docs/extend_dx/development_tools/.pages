@@ -1,7 +1,7 @@
 title: Development Tools
 nav:
+    - index.md
     - DX Client: dxclient
-    - Portal Admin Tools: portal_admin_tools
     - WebDAV: webdav
     - Web Experience Factory: wef
     - Dojo Support: dojo

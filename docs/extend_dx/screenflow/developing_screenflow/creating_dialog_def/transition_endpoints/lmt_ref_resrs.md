@@ -14,5 +14,5 @@ Table 1 provides an overview of what referencing mechanism is allowed and disall
 |Metadata marker|✓| |
 |Single dialog|✓|✓|
 
-**Parent topic:**[Transition endpoints](../screenflow/ref_trnstn_endpnts.md)
+
 

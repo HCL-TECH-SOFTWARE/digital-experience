@@ -1,3 +1,6 @@
+---
+title: Adding the Custom Namespace Definition
+---
 # Adding the custom namespace definition to the feed
 
 The first requirement is to add the namespace reference to the RSS element at the beginning of the feed.

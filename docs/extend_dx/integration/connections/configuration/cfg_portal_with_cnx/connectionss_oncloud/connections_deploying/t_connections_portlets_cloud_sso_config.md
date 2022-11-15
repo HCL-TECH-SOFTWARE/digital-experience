@@ -2,15 +2,17 @@
 
 Configure single sign-on for the HCL Connections Cloud portlets.
 
-Make sure to perform the steps for the global portal proxy entry point as described here: [Configuring single sign-on \(SSO\) for backend calls to HCL Connections Cloud](t_connections_portlets_cloud_sso_config.md)
+Make sure to perform the steps for the global portal proxy entry point as described here: [Configuring single sign-on (SSO) for backend calls to HCL Connections Cloud](t_connections_portlets_cloud_sso_config.md)
 
-**Note:** A preexisting HCL Connections dynamic policy cannot be used for HCL Connections Cloud. An error can occur if two policies exist. Verify that there is no value set for the wp.proxy.config.urlreplacement.ibm\_connections\_policy in the WP ConfigService Resource Environment Provider.
+!!!note
+    A preexisting HCL Connections dynamic policy cannot be used for HCL Connections Cloud. An error can occur if two policies exist. Verify that there is no value set for the wp.proxy.config.urlreplacement.ibm_connections_policy in the WP ConfigService Resource Environment Provider.
 
 1.  To create a policy rule for a remote connection that uses a Tivoli Federated Identity Manager Identity Provider, create an XML document similar to the example file provided for you.
 
-    **Note:** The following example creates a policy for an SSO connection to https://apps.na.collabserv.com, which is controlled by the Tivoli Federated Identity Manager Identity Provider. If you connect to another URL, modify the path accordingly.
+    !!!note
+        The following example creates a policy for an SSO connection to https://apps.na.collabserv.com, which is controlled by the Tivoli Federated Identity Manager Identity Provider. If you connect to another URL, modify the path accordingly.
 
-    Replace the variable placeholders, indicated in uppercase, \(for example, IDP\_HOST\) with the values that map to your deployment. A detailed description of their meaning can in the HCL Digital Experience Knowledge Center article [Creating Identity Provider settings at the Outbound Connection Service configuration](../dev-portlet/outbhttp_auth_est_sso_adfs_idpp_settings.md).
+    Replace the variable placeholders, indicated in uppercase, (for example, IDP_HOST) with the values that map to your deployment. A detailed description of their meaning can in the HCL Digital Experience Knowledge Center article [Creating Identity Provider settings at the Outbound Connection Service configuration](../../../../../../../extend_dx/portlets_development/web2_ui/outbound_http_connection/authenticating_outbound_http_connections/establish_sso_connections_thru_SAML20_tokens/cfg_saml_auth_conn/cfg_settings_tfim/outbhttp_auth_est_sso_tfim_idpp_settings.md).
 
     ```
     <?xml version="1.0" encoding="UTF-8"?>
@@ -143,17 +145,11 @@ Make sure to perform the steps for the global portal proxy entry point as descri
 
 2.  After you save the XML file, run the ConfigEngine task update-outbound-http-connection-config to apply the policy settings to the configuration profile:
 
-    -   AIX, HP-UX, Linux, Solaris:
+    -   AIX and Linux:
 
         ```
          ./ConfigEngine.sh update-outbound-http-connection-config -DConfigFileName=XML_file -DApplicationScopeRef=PA_icWEFPtlts
         
-        ```
-
-    -   IBM i:
-
-        ```
-        ConfigEngine.sh update-outbound-http-connection-config -DConfigFileName=XML_file -DApplicationScopeRef=PA_icWEFPtlts
         ```
 
     -   Windows:
@@ -162,7 +158,7 @@ Make sure to perform the steps for the global portal proxy entry point as descri
         ConfigEngine.bat update-outbound-http-connection-config -DConfigFileName=XML_file -DApplicationScopeRef=PA_icWEFPtlts
         ```
 
-    where XML\_file is the file path to the XML file.
+    where XML_file is the file path to the XML file.
 
 
 

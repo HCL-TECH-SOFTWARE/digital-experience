@@ -12,12 +12,4 @@ We need a few more things in this portlet to make it interesting:
 -   A dynamic HTML table, to display any number of special offers
 
 
-**Previous topic:**[Create a content spot](../pzn/pzn_demo_create_content_spot.md)
-
-**Next topic:**[Insert dynamic table HTML/JSP code](../pzn/pzn_demo_insert_dynamic_table_code.md)
-
-
-**Previous topic:**[Create a content spot](../pzn/pzn_demo_create_content_spot.md)
-
-**Next topic:**[Insert dynamic table HTML/JSP code](../pzn/pzn_demo_insert_dynamic_table_code.md)
 

@@ -2,7 +2,8 @@
 
 You can enable the HCL Connections profile in HCL Portal so that users can view HCL Connections business card information and link to features such as communities, blogs, and activities.
 
-**Note:** You must enable **Show Email** on the HCL Connections server to ensure that portal users can view profile information.
+!!! note
+    You must enable **Show Email** on the HCL Connections server to ensure that portal users can view profile information.
 
 1.  Search the HCL Connections LDAP directory for the user whose profile you want to enable in HCL Portal and then add that user to the portal LDAP directory.
 
@@ -55,11 +56,10 @@ You can enable the HCL Connections profile in HCL Portal so that users can view 
 
 After you enable the HCL Connections profile for a particular user, when you move the cursor over that person's active \(underlined\) name in HCL Portal, and then click **Click for Person Card**, you see the HCL Connections profile for that person. The profile is displayed in the business card section of the Person card, with links to more HCL Connections features. Click **Profile** to see the user's full HCL Connections profile. To return to the HCL Portal page, click **Back** in the browser.
 
-**Note:** If you integrate HCL Connections and then select a user who does not have a HCL Connections profile, portal displays the message profile does not exist. Click **Back** to return to HCL Portal.
+!!! note
+    If you integrate HCL Connections and then select a user who does not have a HCL Connections profile, portal displays the message profile does not exist. Click **Back** to return to HCL Portal.
 
 
-**Related information**  
-
-
-[Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md)
+???+ info "Related information"
+    - [Starting and stopping servers, deployment managers, and node agents](../../../../../deployment/manage/stopstart.md)
 

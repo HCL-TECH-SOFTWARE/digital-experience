@@ -5,7 +5,7 @@ The HCL Multilingual Solution \(MLS\) export and import capability allows you to
 ## Prerequisites
 
 -   The libraries for the other languages for translated are already existing and are filled with the content from the main language library, like with the MLS copy portlet.
--   The DXClient tool is used to manage the library export and import functions by providing an integrated solution to export and import CSV files for translation. The DXClient export and import process works on HCL Digital Experience 9.5 only. See the [DXClient Help Center](../../DXClient/dxclient.md) topic for more information.
+-   The DXClient tool is used to manage the library export and import functions by providing an integrated solution to export and import CSV files for translation. The DXClient export and import process works on HCL Digital Experience 9.5 only. See the [DXClient Help Center](../dxclient.md) topic for more information.
 
 ## About this task
 
@@ -51,7 +51,7 @@ dxclient mls-export -h
 -   `-dxProtocol <value>` - use this attribute to specify the protocol to use to connect to the DX server.
 -   `-hostname <value>` - use this attribute to specify the host name of the DX server.
 -   `-dxPort <value>` - use this attribute to specify the port on which to connect to the DX server.
--   `-contenthandlerPath <value>` - use this attribute to specify the path to the contenthandler servlet on the DX server \(for example, /wps/mycontenthandler\).
+-   `-contenthandlerPath <value>` - use this attribute to specify the path to the contenthandler servlet on the DX server (for example, /wps/mycontenthandler).
 -   `-dxUsername <value>` - use this attribute to specify the user name required for authenticating with the server.
 -   `-dxPassword <value>` - use this attribute to specify the password required for authenticating with the server.
 -   `-wcmLibraryId <value>` - the WCM library ID to export the contents of the library.
@@ -86,7 +86,7 @@ dxclient mls-import -h
 -   `-dxProtocol <value>` - use this attribute to specify the protocol to use to connect to the DX server.
 -   `-hostname <value>` - use this attribute to specify the host name of the DX server.
 -   `-dxPort <value>` - use this attribute to specify the port on which to connect to the DX server.
--   `-contenthandlerPath <value>` - use this attribute to specify the path to the contenthandler servlet on the DX server \(for example, /wps/mycontenthandler\).
+-   `-contenthandlerPath <value>` - use this attribute to specify the path to the contenthandler servlet on the DX server (for example, /wps/mycontenthandler).
 -   `-dxUsername <value>` - use this attribute to specify the user name required for authenticating with the server.
 -   `-dxPassword <value>` - use this attribute to specify the password required for authenticating with the server.
 -   `-importPath <value>` - the path to import the translated contents into DX.
@@ -109,16 +109,16 @@ MLS Export
 
 |Parameter|Value|Notes|
 |---------|-----|-----|
-|AGENT\_LABEL|Jenkins agent label|Determines the agents the pipeline can run|
-|TOOL\_PACKAGE\_URL|URL to DXClient zip|Fetched via curl|
-|TOOL\_CREDENTIALS\_ID|Credentials ID in Jenkins store|The user name and password needed to access the tool package URL|
-|DX\_CREDENTIALS\_ID|Credentials ID in Jenkins store|The user name and password needed to access DX server|
-|DX\_PROTOCOL|Protocol to connect to the DX server|HTTP or HTTPS|
-|DX\_HOST|Host name or IP address of the DX server|Artifacts are deployed to this server|
-|DX\_PORT|Port to connect to the DX server|Port for the DX main profile|
-|CONTENT\_HANDLER\_PATH|Alternate path for the portal context root or the content handler servlet|Default path: /wps/mycontenthandler/|
-|WCM\_LIBRARY\_ID|WCM library ID to export the contents of the library|Exports the available content from this library ID|
-|EXPORT\_PATH|The path to export the WCM contents of a library|The path where the content is exported|
+|`AGENT_LABEL`|Jenkins agent label|Determines the agents the pipeline can run|
+|`TOOL_PACKAGE_URL`|URL to DXClient zip|Fetched via curl|
+|`TOOL_CREDENTIALS_ID`|Credentials ID in Jenkins store|The user name and password needed to access the tool package URL|
+|`DX_CREDENTIALS_ID`|Credentials ID in Jenkins store|The user name and password needed to access DX server|
+|`DX_PROTOCOL`|Protocol to connect to the DX server|HTTP or HTTPS|
+|`DX_HOST`|Host name or IP address of the DX server|Artifacts are deployed to this server|
+|`DX_PORT`|Port to connect to the DX server|Port for the DX main profile|
+|`CONTENT_HANDLER_PATH`|Alternate path for the portal context root or the content handler servlet|Default path: /wps/mycontenthandler/|
+|`WCM_LIBRARY_ID`|WCM library ID to export the contents of the library|Exports the available content from this library ID|
+|`EXPORT_PATH`|The path to export the WCM contents of a library|The path where the content is exported|
 
 ![DXClient MLS export pipeline sample](../../../../images/wcm_mls_exim_export_pipeline.png)
 
@@ -126,17 +126,17 @@ MLS Import
 
 |Parameter|Value|Notes|
 |---------|-----|-----|
-|AGENT\_LABEL|Jenkins agent label|Determines the agents the pipeline can run|
-|TOOL\_PACKAGE\_URL|URL to DXClient zip|Fetched via curl|
-|TOOL\_CREDENTIALS\_ID|Credentials ID in Jenkins store|The user name and password needed to access the tool package URL|
-|DX\_CREDENTIALS\_ID|Credentials ID in Jenkins store|The user name and password needed to access DX server|
-|ARTIFACT\_CREDENTIALS\_ID|Credentials ID in Jenkins store|The user name and password needed to access artifact URLs|
-|ARTIFACT\_PATH|URL \(except file names\) for artifacts to be deployed|Artifacts fetched via curl|
-|DX\_PROTOCOL|Protocol to connect to the DX server|HTTP or HTTPS|
-|DX\_HOST|Host name or IP address of the DX server|Artifacts are deployed to this server|
-|DX\_PORT|Port to connect to the DX server|Port for the DX main profile|
-|CONTENT\_HANDLER\_PATH|Alternate path for the portal context root or the content handler servlet|Default path: /wps/mycontenthandler/|
-|IMPORT\_FILE\_NAME|File name to import the translated content into DX|Imports the content from this file|
+|`AGENT_LABEL`|Jenkins agent label|Determines the agents the pipeline can run|
+|`TOOL_PACKAGE_URL`|URL to DXClient zip|Fetched via curl|
+|`TOOL_CREDENTIALS_ID`|Credentials ID in Jenkins store|The user name and password needed to access the tool package URL|
+|`DX_CREDENTIALS_ID`|Credentials ID in Jenkins store|The user name and password needed to access DX server|
+|`ARTIFACT_CREDENTIALS_ID`|Credentials ID in Jenkins store|The user name and password needed to access artifact URLs|
+|`ARTIFACT_PATH`|URL (except file names) for artifacts to be deployed|Artifacts fetched via curl|
+|`DX_PROTOCOL`|Protocol to connect to the DX server|HTTP or HTTPS|
+|`DX_HOST`|Host name or IP address of the DX server|Artifacts are deployed to this server|
+|`DX_PORT`|Port to connect to the DX server|Port for the DX main profile|
+|`CONTENT_HANDLER_PATH`|Alternate path for the portal context root or the content handler servlet|Default path: /wps/mycontenthandler/|
+|IMPORT_FILE_NAME|File name to import the translated content into DX|Imports the content from this file|
 
 ![DXClient MLS import pipeline sample](../../../../images/wcm_mls_exim_import_pipeline.png)
 

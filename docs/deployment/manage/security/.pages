@@ -1,5 +1,23 @@
 title: Security
 nav:
     - index.md
-    - people
-    - information
+    - Security and authentication considerations: sec_auth_consideration
+    - Controlling access: controlling_access
+    - enable_abs.md
+    - sec_java2.md
+    - Integrating with OpenID authentication: integrate_oid
+    - wcm_secure_int_tai_auth.md
+    - Enabling step-up authentication and/or the Remember me cookie: stepup_auth
+    - ltpa.md
+    - Configuring SSL: configuring_ssl
+    - cfg_fips.md
+    - ssi_cons.md
+    - Enabling HTTP Basic Authentication for simple clients: basic_auth
+    - Setting up custom user repositories: customer_user_repo
+    - External security managers: external_sec_mgmt
+    - sec_del_pswds.md
+    - Updating user ID and passwords: updating_userid_pwd
+    - Content Security Policy: content_sec_policy
+    - Users and groups: users_and_groups
+    - access
+    - User registry: user_registry

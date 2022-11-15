@@ -4,28 +4,20 @@ After you migrate from HCL Portal Versions 7.0 or 8.0 to Version 8.5, you must r
 
 If you customized your blogs and wiki, you will lose your customizations and you must reapply those customizations after you run the task.
 
-1.  z/OS® only: When you use z/OS, open a UNIX™ System Service command prompt to change directories.
+1.  Open a command prompt and go to the wp_profile_root/ConfigEngine directory.
 
-    **Note:** If you are instructed to open a properties file, the files are ASCII files and must be opened by using the appropriate tool.
+2.  Run the following command:
 
-2.  Go to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+    -   AIX® and Linux™: `./ConfigEngine.sh configure-blog -DPortalAdminPwd=password -DWasPassword=password`
+    -   Windows™: `ConfigEngine.bat configure-blog -DPortalAdminPwd=password -DWasPassword=password`
 
-3.  Run the following command:
-
-    -   AIX® HP-UX Linux™ Solaris: ./ConfigEngine.sh configure-blog -DPortalAdminPwd=password -DWasPassword=password
-    -   IBM® i: ConfigEngine.sh configure-blog -DPortalAdminPwd=password -DWasPassword=password
-    -   Windows™: ConfigEngine.bat configure-blog -DPortalAdminPwd=password -DWasPassword=password
-    -   z/OS: ./ConfigEngine.sh configure-blog -DPortalAdminPwd=password -DWasPassword=password
-4.  Restart HCL Portal.
+3.  Restart HCL Portal.
 
 
-Enabling blogs and wikis by running the configure-blog task also enables tag and rating widgets. Go to [Enabling the new tag and rating widgets after a portal upgrade](mig_post_tagandrate.md#) to verify and finish enabling tag and rating widgets.
+Enabling blogs and wikis by running the configure-blog task also enables tag and rating widgets. Go to [Enabling the new tag and rating widgets after a portal upgrade](../../../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/mig_post_tagandrate.md)) to verify and finish enabling tag and rating widgets.
 
 
-**Related information**  
-
-
-[The tag and rating widgets](../admin-system/tag_rate_ui_alt.md)
-
-[Deploying and updating sample web content template items](../migrate/mig_t_templatesample.md)
+???+ info "Related information" 
+    -   [The tag and rating widgets](../../../../../../build_sites/tagging_rating/tagging_rating_ui/tagging_rating_widget/index.md)
+    -   [Deploying and updating sample web content template items](../../../../../../deployment/manage/migrate/next_steps/post_mig_activities/addon_integration_task/mig_t_templatesample.md)
 

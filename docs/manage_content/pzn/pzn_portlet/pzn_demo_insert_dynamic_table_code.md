@@ -1,10 +1,10 @@
 # Insert dynamic table HTML/JSP code
 
-Use Rational Application Developer to code the dynamic table in the Personalized Offers portlet JSP. Export the project as a web archive \(WAR\) file. Open the HCL Digital Experience Administration page for Portlet Management and update the web module that contains the Personalized Offers portlet.
+Use Rational Application Developer to code the dynamic table in the Personalized Offers portlet JSP. Export the project as a web archive (WAR) file. Open the HCL Digital Experience Administration page for Portlet Management and update the web module that contains the Personalized Offers portlet.
 
 Before you begin this procedure, ensure that you created a content spot.
 
-1.  Open Rational Application Developer and open Pers\_OffersPortalView.jsp in edit mode.
+1.  Open Rational Application Developer and open Pers_OffersPortalView.jsp in edit mode.
 
 2.  Insert the following code at the end of the JSP page:
 
@@ -84,22 +84,14 @@ Before you begin this procedure, ensure that you created a content spot.
 
 4.  Export the project as a war file. Close Rational Application Developer.
 
-5.  Log in to HCL Portal as wpsadmin. Click the **Administration menu** icon. Then, click **Portlet Management** \> **Web Modules**.
+5.  Log in to HCL Portal as wpsadmin. Click the **Administration menu** icon. Then, click **Portlet Management > Web Modules**.
 
 6.  Click **Update** to update the web module.
 
 7.  Complete the installation process by using the newly created war file.
 
 
-You can now modify the resource collection properties for Pzn\_Offers\_User.
+You can now modify the resource collection properties for Pzn_Offers_User.
 
 
-**Previous topic:**[Enhance the Personalized Portlet](../pzn/pzn_demo_enhance_personalized_portlet.md)
-
-**Next topic:**[Modify resource collection properties](../pzn/pzn_demo_modify_resource_collection_properties.md)
-
-
-**Previous topic:**[Enhance the Personalized Portlet](../pzn/pzn_demo_enhance_personalized_portlet.md)
-
-**Next topic:**[Modify resource collection properties](../pzn/pzn_demo_modify_resource_collection_properties.md)
 

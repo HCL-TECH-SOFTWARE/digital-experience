@@ -2,9 +2,9 @@
 
 To maximize data availability, you can distribute portal data across multiple databases and for some domains, share data between multiple lines of production.
 
-When you separate HCL Portal data, you can store each category of data in its own set of database tables or the file system. Database domains support the storage and transfer of data by category, for example, Configuration, Release, Customization, Community, and IBM® Java™ Content Repository \(JCR\). When you separate your data, you can share domains across multiple portals. You can also spread the different domains across different database types. For example, you can choose to leave LikeMinds data on your default database and move all other data to another database. The separation of the domains can be used to support production environments, where the production nodes are split into separate clusters. Each cluster can run independently, but share the Community and Customization database domains, for example. Each of these clusters is called a line of production.
+When you separate HCL Portal data, you can store each category of data in its own set of database tables or the file system. Database domains support the storage and transfer of data by category, for example, Configuration, Release, Customization, Community, and IBM® Java™ Content Repository (JCR). When you separate your data, you can share domains across multiple portals. You can also spread the different domains across different database types. For example, you can choose to leave LikeMinds data on your default database and move all other data to another database. The separation of the domains can be used to support production environments, where the production nodes are split into separate clusters. Each cluster can run independently, but share the Community and Customization database domains, for example. Each of these clusters is called a line of production.
 
-Preferences are kept in layers that are modifiable based on portlet modes. In WebSphere® Application Server, the values of the portlet deployment descriptor are read-only. z/OS® provides one more preference layer that enables portal administrators to specify different default values per portlet window. This capability is supported through the portlet mode EDIT\_DEFAULTS, and applies to all who use the same portlet window. Such a preference layer does not exist in WebSphere Application Server. Both products support the standard modes: VIEW, EDIT, and HELP. When a user customizes a portlet on a page in any standard mode, the user can change their personal portlet preferences. Default preferences on a per page or per portlet base cannot be set in any standard mode; you need to use custom portlet modes instead. Portlet preferences are stored in the customization domain when stored by users \(typically in edit mode\) on the entity level. Whereas, when you use configure mode, you're working on the portlet definition level and the portlet preferences are stored on the release level.
+Preferences are kept in layers that are modifiable based on portlet modes. In WebSphere® Application Server, the values of the portlet deployment descriptor are read-only. z/OS® provides one more preference layer that enables portal administrators to specify different default values per portlet window. This capability is supported through the portlet mode EDIT_DEFAULTS, and applies to all who use the same portlet window. Such a preference layer does not exist in WebSphere Application Server. Both products support the standard modes: VIEW, EDIT, and HELP. When a user customizes a portlet on a page in any standard mode, the user can change their personal portlet preferences. Default preferences on a per page or per portlet base cannot be set in any standard mode; you need to use custom portlet modes instead. Portlet preferences are stored in the customization domain when stored by users (typically in edit mode) on the entity level. Whereas, when you use configure mode, you're working on the portlet definition level and the portlet preferences are stored on the release level.
 
 The following table lists the supported database domains, whether a domain is sharable, and notes.
 
@@ -25,7 +25,7 @@ The following table summarizes the portlet modes, the database that data is in, 
 |Type|Portlet mode|Domain|Shareable between multiple lines of production|
 |----|------------|------|----------------------------------------------|
 |Administrator preferences|config|release|no|
-|Shared preferences|edit\_defaults|release|no|
+|Shared preferences|edit_defaults|release|no|
 |Personalized preferences|edit|customization|yes|
 
 For maintenance and staging purposes, you can take a single line of production out of service while another line is still serving requests with the old data. After the first production line is updated and back in service again, the second line is updated by using the same approach. Updates of data in the shared domain are critical because they influence the other production line.
@@ -59,12 +59,9 @@ This configuration defines a cache lifetime of 900 seconds. You can choose anoth
 
 ## Sharing of VMM databases
 
-The VMM database feature makes it much simpler to use multiple repositories, since this capability is achieved through configuration, rather than development, with the use of the new VMM. In essence, with this feature you can map entries from multiple individual user repositories into a single virtual repository. The federated repository consists of a single named realm, which is a set of independent user repositories. Each repository might be an entire external repository or in the case of LDAP, a subtree within that repository. The root of each repository is mapped to a base entry within the federated repository, which is a starting point within the hierarchical namespace of the virtual realm. The Virtual Member Manager \(VMM\) databases for a full repository and for the property extension can be shared between lines of production. If the VMM databases are out of service, HCL Portal does not function.
+The VMM database feature makes it much simpler to use multiple repositories, since this capability is achieved through configuration, rather than development, with the use of the new VMM. In essence, with this feature you can map entries from multiple individual user repositories into a single virtual repository. The federated repository consists of a single named realm, which is a set of independent user repositories. Each repository might be an entire external repository or in the case of LDAP, a subtree within that repository. The root of each repository is mapped to a base entry within the federated repository, which is a starting point within the hierarchical namespace of the virtual realm. The Virtual Member Manager (VMM) databases for a full repository and for the property extension can be shared between lines of production. If the VMM databases are out of service, HCL Portal does not function.
 
-<!--- ???info**Related information**  
-
-
-[Cache Manager Service](../admin-system/srvcfgref_cach_mgr.md)
-
-[HCL Digital Experience Performance Tuning Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074411) --->
+???+ info "Related information:"
+    - [Cache Manager Service](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/srvcfgref_cach_mgr.md)
+    - [HCL Digital Experience Performance Tuning Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074411) 
 

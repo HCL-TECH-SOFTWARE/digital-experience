@@ -21,7 +21,7 @@ Messages for HCL Portal are logged in the following files:
     Contains exception stack trace information that is useful when problem analysis is done.
 
 
-**Locating the log files:** Log files for HCL Portal, including SystemOut.log and System.err are in the following directory: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/logs/WebSphere\_Portal
+**Locating the log files:** Log files for HCL Portal, including SystemOut.log and System.err are in the following directory: wp_profile_root/logs/WebSphere_Portal
 
 ## Trace logging
 
@@ -34,8 +34,8 @@ Traces can be set for different durations:
     Traces can be set for a temporary period by using the administration portlet **Enable Tracing** or the WebSphere® Integrated Solutions Console. To set traces by using the portlet, complete the following steps:
 
     1.  Log in as the administrator.
-    2.  Click the **Administration menu** icon. Then, click **Portal Analysis** \> **Enable Tracing**. The Enable Tracing portlet displays.
-    3.  Click **Site Administration** \> **Advanced Administration** \> **Portal Analysis** \> **Enable Tracing**. The Enable Tracing portlet displays.
+    2.  Click the **Administration menu** icon. Then, click **Portal Analysis > Enable Tracing**. The Enable Tracing portlet displays.
+    3.  Click **Site Administration > Advanced Administration > Portal Analysis > Enable Tracing**. The Enable Tracing portlet displays.
     4.  Type the required trace string into the field **Append these trace settings:** For example, this string can be `com.ibm.wps.command.credentialvault.*=finest`
     5.  Click the **Add** icon. **Enable Tracing** updates the **Current trace settings** field.
     **Note:** Restarting HCL Portal removes traces that were set by using the Enable Tracing Administration portlet.
@@ -43,23 +43,23 @@ Traces can be set for different durations:
     To disable tracing, use either of the following methods:
 
     -   Select the current trace settings under **Current trace settings:** and click the **Remove** icon. For example, the current setting can be `com.ibm.wps.command.credentialvault.*=finest`.
-    -   Type the trace string \*=info into the field **Append these trace settings:** and click the **Add** icon. This trace string overwrites all settings that are listed under **Current trace settings:** and resets it to the default.
+    -   Type the trace string *=info into the field **Append these trace settings:** and click the **Add** icon. This trace string overwrites all settings that are listed under **Current trace settings:** and resets it to the default.
 -   **Extended**
 
     To enable trace settings for a longer period, that is, for more than one session, switch them on in the WebSphere® Application Server configuration. Proceed by the following steps:
 
-    1.  Access the WebSphere® Integrated Solutions Console by using this URL: `http://hostname:port\_number/ibm/console`
-    2.  Go to **Servers** \> **Server Types** \> **WebSphere application servers**.
+    1.  Access the WebSphere® Integrated Solutions Console by using this URL: `http://hostname:port_number/ibm/console`
+    2.  Go to **Servers > Server Types > WebSphere application servers**.
     3.  Select the application server.
-    4.  Click **Troubleshooting** \> **Change Log Detail Levels**.
+    4.  Click **Troubleshooting > Change Log Detail Levels**.
     5.  Specify the required trace settings. For example, this setting can be `com.ibm.wps.command.credentialvault.*=finest`
     6.  Save your updates.
-    7.  Restart the WebSphere\_Portal server.
-    8.  To disable tracing, specify `tracestring: *=info` and restart the WebSphere\_Portal server.
+    7.  Restart the WebSphere_Portal server.
+    8.  To disable tracing, specify `tracestring: *=info` and restart the WebSphere_Portal server.
 
 ## Changing the log file name and location
 
-You can change the locations of the log files by configuring them in the WebSphere Integrated Solutions Console. Go to **Troubleshooting** \> **Logs and Trace** \> **server\_name** and select the logger type that you want to change. In the configuration dialog, change the path for the log file as required.
+You can change the locations of the log files by configuring them in the WebSphere Integrated Solutions Console. Go to **Troubleshooting > Logs and Trace > server_name** and select the logger type that you want to change. In the configuration dialog, change the path for the log file as required.
 
 ## Changing the language used in the log file
 
@@ -67,10 +67,8 @@ By default, information in the log file is written in the language that was used
 
 To change the language that is used for the log file, edit the file log.properties. This file is in the following HCL Portal directory:
 
--   AIX® HP-UX Linux™ Solaris: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)`/PortalServer/config/config`
--   z/OS®: `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)`/PortalServer/config/config``
--   IBM® i: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)`/PortalServer/config/config`
--   Windows™: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)`\PortalServer\config\config`
+-   AIX® and Linux™: wp_profile_root/PortalServer/config/config
+-   Windows™: wp_profile_root\PortalServer\config\config
 
 Add the following line:
 
@@ -99,7 +97,7 @@ The log records have the following format:
 
 Where:
 
--   The timestamp is the time \(to the millisecond\) when the log record was created.
+-   The timestamp is the time (to the millisecond) when the log record was created.
 -   The classification is one of the following letters:
     -   **E**
 
@@ -115,15 +113,15 @@ Where:
 
     -   **l**
 
-        For traces \(low details\)
+        For traces (low details)
 
     -   **m**
 
-        For traces \(medium details\)
+        For traces (medium details)
 
     -   **h**
 
-        For traces \(high details\)
+        For traces (high details)
 
 -   The classname is the Java class that contains the code that triggered the log event.
 -   The method is the name of the Java method that contains the code that triggered the log event.
@@ -134,10 +132,9 @@ Where:
 -   The logmessage is the actual log message that describes the logged event. Error, warning, and informational messages are translated into the system locale. Trace messages are not translated.
 -   The threadID is the identification of the thread that triggered the log event.
 
-**Note:**
-
-1.  Traces are written only if the specific tracing facility is enabled; all other messages are written unconditionally.
-2.  The system locale is part of the general globalization features of HCL Portal and can be configured by using LocalizerService. For more information, see the topics about Setting service configuration properties and about the Portal configuration services.
+!!!note
+    1.  Traces are written only if the specific tracing facility is enabled; all other messages are written unconditionally.
+    2.  The system locale is part of the general globalization features of HCL Portal and can be configured by using LocalizerService. For more information, see the topics about Setting service configuration properties and about the Portal configuration services.
 
 Here is an example of a log record:
 
@@ -150,19 +147,11 @@ The current value is TRANSACTION_REPEATABLE_READ.
 
 ```
 
-
-**Related information**  
-
-
-[Starting and stopping servers, deployment managers, and node agents](../admin-system/stopstart.md)
-
-[Setting service configuration properties](../admin-system/adsetcfg.md)
-
-[Portal service configuration](../admin-system/srvcfgref.md)
-
-[Localizer Service](../admin-system/srvcfgref_localizer.md)
-
-[Directory structure](../reference/wpsdirstr.md)
-
-[WebSphere Application Server 8.5.:Log and trace settings](https://www.ibm.com/docs/en/SSEQTP_8.5.5/com.ibm.websphere.base.doc/ae/utrb_logtrace.html)
+???+ info "Related information"  
+    -   [Starting and stopping servers, deployment managers, and node agents](../../../../deployment/manage/stopstart.md)
+    -   [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
+    -   [Portal service configuration](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/index.md)
+    -   [Localizer Service](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/srvcfgref_localizer.md)
+    -   [Directory structure](../../../../guide_me/wpsdirstr.md)
+    -   [WebSphere Application Server 8.5.:Log and trace settings](https://www.ibm.com/docs/en/SSEQTP_8.5.5/com.ibm.websphere.base.doc/ae/utrb_logtrace.html)
 

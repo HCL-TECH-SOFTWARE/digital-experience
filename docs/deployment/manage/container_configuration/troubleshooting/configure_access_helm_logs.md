@@ -1,4 +1,4 @@
-# Configure and access logs
+# Configure and Access Logs
 
 This topic shows you how to configure logging in Helm, as well as how to access Kubernetes container logs.
 
@@ -13,14 +13,13 @@ In CF200, a new mechanism is introduced for configuring log settings at runtime 
 
 ## Setting the log configuration for a DX application
 
-You can set a desired log configuration for a DX application by specifying an appropriate log string in your Helm custom-values.yaml file. Place the log string in the `level` property for the specified application. These properties are found in the `logging` subsection of the `incubator` section. For example, to set the configuration for Content Composer, use the following property:
+You can set a desired log configuration for a DX application by specifying an appropriate log string in your Helm custom-values.yaml file. Place the log string in the `level` property for the specified application. These properties are found in the `logging` section. For example, to set the configuration for Content Composer, use the following property:
 
-```
-incubator:
-  logging:
-    # Content Composer specific logging configuration
-    contentComposer:
-      level: "api:server-v1:*=info"
+```yaml
+logging:
+  # Content Composer specific logging configuration
+  contentComposer:
+    level: "api:server-v1:*=info"
 ```
 
 You can see the string format in the following section. Once the property is set, run the `helm upgrade` command.
@@ -132,20 +131,35 @@ By default, two sidecar containers are launched with Remote Search:
 
 For information on configuring additional Remote Search sidecar log containers, please see [Configure Remote Search sidecar logging](../../deployment/preparation/optional_rs_sidecar_log.md).
 
+## Accessing Persistence Node logs
+
+To access a Persistence Node application log, use the command:
+
+```
+kubectl logs -n <namespace>
+    -f <persistence-node-pod-name> <sidecar-container-name>
+```
+
+For example:
+
+```
+kubectl logs -n dxns 
+    -f pod/dx-deployment-persistence-node-0 persistence-repmgr-log
+```
+
+This retrieves the log for a single sidecar container, which corresponds to a single Persistence Node log file.
+
+By default, one sidecar container is launched with Persistence Node:
+
+-   `persistence-repmgr-log` - Exposes the `repmgr.log` file.
+
 ## Accessing logs for other applications
 
-Applications other than Core and Remote Search do not have logging sidecar containers and only provide a single log per pod, which can typically be obtained using the command: `kubectl logs -n <namespace> <pod-name>` \(omitting a container name\), for example:
+Other applications where only one container is deployed in the Pod, only provide a single log, which can typically be obtained using the command: `kubectl logs -n <namespace> <pod-name>` (omitting a container name), for example:
 
 ```
 kubectl logs -n dxns
       dx-deployment-digital-asset-management-0
-```
-
-This is not the case for Persistence Node pods, which have non-logging sidecar containers \(for metrics gathering\). For these pods, you must append the main container name \(`persistence-node`\) when accessing the log, for example:
-
-```
-kubectl logs -n dxns dx-deployment-persistence-node-0
-        persistence-node
 ```
 
 ## Accessing all application logs simultaneously

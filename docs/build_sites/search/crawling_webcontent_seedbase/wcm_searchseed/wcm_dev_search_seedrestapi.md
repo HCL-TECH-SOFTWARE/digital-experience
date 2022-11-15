@@ -74,7 +74,8 @@ For the SeedlistId parameter, you can specify the value in the following formats
 
 -   **Retrieve a maximum of 100 items from all libraries**
 
-    **Note:** To use all libraries, leave `SeedlistId` value empty.
+    !!! note
+        To use all libraries, leave `SeedlistId` value empty.
 
     ```
     http://host\_name:port\_number/wps/seedlist/myserver?SeedlistId=&Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&Action=GetDocuments
@@ -88,7 +89,8 @@ For the SeedlistId parameter, you can specify the value in the following formats
 
 -   **Retrieve a maximum of 100 items from a cluster**
 
-    **Note:** When referencing a cluster, specify the request with the host name and port number of the HTTP server.
+    !!! note
+        When referencing a cluster, specify the request with the host name and port number of the HTTP server.
 
     ```
     http://http\_server:port\_number/wps/seedlist/myserver?SeedlistId=library/site\_area&Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&Action=GetDocuments
@@ -107,31 +109,16 @@ For the SeedlistId parameter, you can specify the value in the following formats
     ```
 
 
-**Important:** You can access the REST API for the Web Content Manager search seedlist 1.0 with a secured connection \(HTTPS\) or with an unsecured connection \(HTTP\). Depending on the method, ensure that you use the correct port. However, if you access this REST API with an unsecured connection, you are automatically redirected to a secured connection.
+!!! important
+    You can access the REST API for the Web Content Manager search seedlist 1.0 with a secured connection \(HTTPS\) or with an unsecured connection \(HTTP\). Depending on the method, ensure that you use the correct port. However, if you access this REST API with an unsecured connection, you are automatically redirected to a secured connection.
 
 |Parameter|Default Value|Description|
 |---------|-------------|-----------|
-|SeedlistID|No default; must be specified.|Identifies the seedlist. This parameter can be specified in the following ways:-   An empty value causes all libraries to be used.
--   A specific library \(for example, `library1`\)
--   A specific site area \(for example, `site\_area1`\)
--   A list of libraries, which are separated by commas. For example,
-
-    ```
-library1,library2,library3
-    ```
-
--   The JCRID of a site area
-
-|
+|SeedlistID|No default; must be specified.|Identifies the seedlist. This parameter can be specified in the following ways:-   An empty value causes all libraries to be used. <br/> A specific library \(for example, `library1`\) <br/> A specific site area \(for example, `site\_area1`\) <br/> A list of libraries, which are separated by commas. For example, <br/> 'library1,library2,library3' <br/> The JCRID of a site area <br/>|
 |Start|0|Defines the start number for currently returned section.|
 |Range|100|Defines the number of returned entries for current section.|
-|Date|No default. If not specified, all applicable results are returned.|Indicates that entries \(documents\) that were updated after this date are retrieved. The date format \(compliant to standard ISO 8601\) is the following : dateTtimezone, where date is yyyy-MM-dd, time is HH:mm:ss, and zone is ±hhmm. This format includes time zone information, which is critical if the client and server are in different time zones. **Important:** Proper HTML URL encoding must be performed \(for example, represent the plus symbol `+` as `%2B`\).
-
-|
-|Action|GetDocuments|Defines requested action to execute.-   GetDocuments retrieve all underlying documents.
--   GetNumberOfDocuments returns the number of all underlying documents, typically for debug purposes. This value must be the same as the number of all documents that are returned from an appropriate GetDocuments request.
-
-|
+|Date|No default. If not specified, all applicable results are returned.|Indicates that entries \(documents\) that were updated after this date are retrieved. The date format \(compliant to standard ISO 8601\) is the following : dateTtimezone, where date is yyyy-MM-dd, time is HH: mm :ss, and zone is ±hhmm. This format includes time zone information, which is critical if the client and server are in different time zones. **Important:** Proper HTML URL encoding must be performed \(for example, represent the plus symbol `+` as `%2B`\).|
+|Action|GetDocuments|Defines requested action to execute.-   GetDocuments retrieve all underlying documents. <br/> GetNumberOfDocuments returns the number of all underlying documents, typically for debug purposes. This value must be the same as the number of all documents that are returned from an appropriate GetDocuments request.|
 |Format|ATOM|Defines the output format : ATOM / HTML/ XML.|
 |Timestamp|No default.|Indicates the content provider timestamp from a previous crawling session. The timestamp represents for the content provider some snapshot of the content and allows the crawler to get only the content changes on the next crawling. This parameter is used for incremental crawling.|
 

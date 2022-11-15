@@ -4,8 +4,6 @@ title: Adding site updates to your project
 ---
 
 
-
-
 The content owner created your project. Now it is time to add your changes and updates to the project. Projects are used when you have more than one update so that you can organize these changes for easy publishing at a later point in the project.
 
 1.  Click the project menu in the action bar, and select the project that will contain your site updates.
@@ -14,9 +12,9 @@ The content owner created your project. Now it is time to add your changes and u
 
 3.  Update your site within your project. Updates might include moving a page in your site navigation, creating a new page, adding content to a page, and more.
 
-    -   If you want to add a new page to your project, click a page in site manager, and click the context menu icon ![Screen capture of the context menu](../images/toolbar_context_menu.jpg). From the context menu, you can create a sibling, child, or copy of the selected page.
-    -   If you want to add content to a page in your project, click a page in site manager, and click the context menu icon ![Screen capture of the context menu](../images/toolbar_context_menu.jpg). From the context menu, click **Create Content**.
-    -   If you want to add page components or applications to an existing page, navigate to that page and click ![Screen capture of the add page components and applications icon](../images/toolbar_sm_add_app_comp_icon.JPG) **Add page components and applications** in the site toolbar.
+    -   If you want to add a new page to your project, click a page in site manager, and click the context menu icon ![Screen capture of the context menu](../../../../images/toolbar_context_menu.jpg). From the context menu, you can create a sibling, child, or copy of the selected page.
+    -   If you want to add content to a page in your project, click a page in site manager, and click the context menu icon ![Screen capture of the context menu](../../../../images/toolbar_context_menu.jpg). From the context menu, click **Create Content**.
+    -   If you want to add page components or applications to an existing page, navigate to that page and click ![Screen capture of the add page components and applications icon](../../../../images/toolbar_sm_add_app_comp_icon.JPG) **Add page components and applications** in the site toolbar.
 
 As you add pages and other content, click project menu at any point to get a quick view of the content that you add to the project and to edit content. When you edit a content item, you can click **Preview** to see your edits in the context of the site. Other content authors can edit and collaborate on content in this project.
 

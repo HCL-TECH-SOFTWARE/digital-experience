@@ -38,25 +38,14 @@ Set a whitelist and a blacklist. You can set the lists in two ways.
 
     Each web application defines three custom properties in the WP ConfigService Resource Environment Provider. All three properties are required.
 
-    **Note:** The variable your\_key\_for\_web\_app is used during parsing to identify the three properties that belong together for one web application, so you must use a different key for each web application.
+    !!! note
+        The variable your\_key\_for\_web\_app is used during parsing to identify the three properties that belong together for one web application, so you must use a different key for each web application.
 
-    |Name|Value|
-    |----|-----|
-    |`com.ibm.portal.resource.your\_key\_for\_web\_app.contextroot`|The context root under which the WAR file is deployed. You can use the variable'$\{URI\_CONTEXT\_PATH\}' to avoid a hardcoded reference to the context root because the context root can be changed. The variable '$\{URI\_CONTEXT\_PATH\}' resolves the correct context root, which by default is `'/wps'`.Example:
-
-    -   Name: `com.ibm.portal.resource.my\_web\_app\_1.contextroot`
-    -   Value: `${URI_CONTEXT_PATH}/PA_My_Web_App`
-|
-    |`com.ibm.portal.resource.your\_key\_for\_web\_app.whitelist`|A regular expression that defines the resources in the WAR file that can be served by the portal resource data source.Example:
-
-    -   Name: `ibm.portal.resource.my\_web\_app\_1.whitelist`
-    -   Value: `.*`
-|
-    |`com.ibm.portal.resource.your\_key\_for\_web\_app.blacklist`|A regular expression that defines the resources in the WAR file that cannot be served by the portal resource data source.Example:
-
-    -   Name: `com.ibm.portal.resource.my\_web\_app\_1.blacklist`
-    -   Value: `WEB-INF/.*`
-|
+|Name|Value|
+|----|-----|
+|`com.ibm.portal.resource.your\_key\_for\_web\_app.contextroot`|The context root under which the WAR file is deployed. You can use the variable'$\{URI\_CONTEXT\_PATH\}' to avoid a hardcoded reference to the context root because the context root can be changed. The variable '$\{URI\_CONTEXT\_PATH\}' resolves the correct context root, which by default is `'/wps'`.Example: <br/> -   Name: `com.ibm.portal.resource.my\_web\_app\_1.contextroot` <br/> -   Value: `${URI_CONTEXT_PATH}/PA_My_Web_App`|
+|`com.ibm.portal.resource.your\_key\_for\_web\_app.whitelist`|A regular expression that defines the resources in the WAR file that can be served by the portal resource data source.Example: <br/> -   Name: `ibm.portal.resource.my\_web\_app\_1.whitelist` <br/> -   Value: `.*`|
+|`com.ibm.portal.resource.your\_key\_for\_web\_app.blacklist`|A regular expression that defines the resources in the WAR file that cannot be served by the portal resource data source.Example: <br/> -   Name: `com.ibm.portal.resource.my\_web\_app\_1.blacklist` <br/> -   Value: `WEB-INF/.*`|
 
 
 

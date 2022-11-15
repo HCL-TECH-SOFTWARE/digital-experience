@@ -2,7 +2,7 @@
 
 This topic provides administrators with a high-level overview and important pre-requisite guidance to prepare your container environments for later deployments of the HCL Digital Experience 9.5 Kubernetes and OpenShift deployment capabilities using Helm.
 
-Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to [supported container platforms](../../../deployment/container/installation/helm_deployment/helm_deployment.md) using Helm Charts. Using a Helm Chart deployment provides administrators a larger degree of transparency in the deployment operations than the operator-based deployment also available using the HCL DX dxctl process. <!--[see *Related information* section for related topic links]-->
+Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to [supported container platforms](../../../deployment/install/container/helm_deployment/overview.md) using Helm Charts. Using a Helm Chart deployment provides administrators a larger degree of transparency in the deployment operations than the operator-based deployment also available using the HCL DX dxctl process.
 
 ## Overview
 
@@ -65,15 +65,15 @@ For accessing applications from the outside, we deploy a reverse proxy in the fo
 
 HAProxy uses its configuration to decide which request needs to be mapped to which application in the DX 9.5 deployment \(back-end\). When requests are initiated from outside the Kubernetes or OpenShift cluster, HAProxy tries to fulfill those requests by using the configured routing. If it finds a matching endpoint, it forwards the request to the corresponding service, which then forwards the same requests to a Pod that is ready to fulfill the request.
 
--   **[DX 9.5 Core Interactions with Kubernetes](../../../deployment/container/configuration/core_interactions_kubernetes.md)**  
+-   **[DX 9.5 Core Interactions with Kubernetes](../../../deployment//manage/container_configuration/core_interactions_kubernetes.md)**  
 This section provides more detailed information about how the  Digital Experience 9.5 Core container interacts with Kubernetes. Understanding this information may assist in interpreting observed behavior or in troubleshooting your HCL DX 9.5 Container deployments in Helm.
--   **[Deploying DX 9.5 applications to container platforms using Helm](../../../deployment/container/installation/helm_deployment/helm_deployment.md)**  
+-   **[Deploying DX 9.5 applications to container platforms using Helm](../../../deployment/install/container/helm_deployment/overview.md)**  
 This topic provides a list of all DX applications and resource definitions that configure the application runtime and are deployed to containers using Helm on OpenShift or Kubernetes platforms. As outlined in the overview, applications can also include ConfigMaps, Secrets, and Ingress.
 -   **[PersistentVolumes and related operations considerations](persistent_volumes.md)**  
 This topic provides details covering the PersistentVolumes \(PVs\) and related operations considerations in storing data for DX 9.5 stateful applications.
--   **[Configuring DX 9.5 deployments to container platforms using Helm](../../../deployment/container/installation/helm_deployment/preparation/overview.md)**  
+-   **[Configuring DX 9.5 deployments to container platforms using Helm](../../../deployment/install/container/helm_deployment/preparation/index.md)**  
 This topic covers details the configuration structure in the HCL Digital Experience 9.5 OpenShift and Kubernetes deployment with Helm.
--   **[Scaling DX 9.5 container deployments using Helm](../../../deployment/container/configuration/container_scaling.md)**  
+-   **[Scaling DX 9.5 container deployments using Helm](../../../deployment/manage/container_configuration/container_scaling.md)**  
 This topic provides information to apply container scaling capabilities, and how scaling resources are handled within the HCL DX 9.5 deployment using Helm. Refer to `HorizontalPodAutoscaler` details in [Kubernetes](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) and [Red Hat OpenShift documentation](https://docs.openshift.com/container-platform/4.7/nodes/pods/nodes-pods-autoscaling.html) for more information on these services.
 -   **[Digital Asset Management persistence architecture](dam_persistence_architecture.md)**  
 This topic describes the components of the Digital Asset Management persistence. The updated DAM persistence feature is available from HCL Digital Experience 9.5 Container Update CF198 and later.

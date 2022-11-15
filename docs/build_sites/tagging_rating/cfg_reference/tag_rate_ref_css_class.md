@@ -2,7 +2,7 @@
 
 The portal tag and rating widgets allow for detailed look and feel customization by providing a customizable CSS class hierarchy.
 
-Each widget has a set of tagging and rating specific CSS classes assigned to it. This allows administrators to customize either the complete set or a subset of the tag and rating widgets, or individual tag and rating widgets. To do this, the administrator modifies the CS class or classes for the widget that needs to be customized. For details refer to the information in the following tables.
+Each widget has a set of tagging and rating specific CSS classes assigned to it. This allows administrators to customize either the complete set or a subset of the tag and rating widgets, or individual tag and rating widgets. To do this, the administrator modifies the CSS class or classes for the widget that needs to be customized. For details refer to the information in the following tables.
 
 |Widget name|Tagging and rating CSS class assigned to the widget|
 |-----------|---------------------------------------------------|
@@ -60,9 +60,14 @@ Administrators can override each CSS class that is used by the widget by adding 
 
 ## Customizing tagging and rating specific CSS classes
 
-The CSS classes used to customize the visual appearance of the tag and rating widgets are located in the following file: `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/v1.4.1/com/ibm/widgets/css/widgets_combined.css``[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/modules/portalclient/css/trcWidgets.css`.
+The CSS classes used to customize the visual appearance of the tag and rating widgets are located in the following files:
 
-This file contains CSS classes specific to tagging and rating. They either start with the prefix `trc`, for example `trc Editable` or `trc Delete` or they are otherwise scoped to the tagging and rating context, for example ul.trcEdit. To customize the visual appearance of tag and rating widgets, you override these definitions in the CSS file. To do this, you add class definitions at the end of the file trcWidgets.css based on the CSS class hierarchy given by the Hierarchy of CSS classes list.
+[PortalServer\_root](../../../guide_me/wpsdirstr.md#portalserver_root)/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/v1.4.1/com/ibm/widgets/css/widgets_combined.css
+
+
+[PortalServer\_root](../../../guide_me/wpsdirstr.md#portalserver_root)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/modules/portalclient/css/trcWidgets.css
+
+These files contain CSS classes specific to tagging and rating. They either start with the prefix `trc`, for example `trc Editable` or `trc Delete` or they are otherwise scoped to the tagging and rating context, for example ul.trcEdit. To customize the visual appearance of tag and rating widgets, you override these definitions in the CSS file. To do this, you add class definitions at the end of the file trcWidgets.css based on the CSS class hierarchy given by the Hierarchy of CSS classes list.
 
 Examples: To change the link color for all tag and rating widgets to green, use the following CSS class declaration in the file `trcWidgets.css` :
 
@@ -143,5 +148,4 @@ The following example shows how you can modify link appearance within all the av
 .trcInlineRating a {
 }
 ```
-
 

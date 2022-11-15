@@ -1,4 +1,4 @@
-# Migrate DAM persistence and binaries
+# Migrate DAM Persistence and Binaries
 
 This section shows the guidance to back up and restore your DAM persistence and binaries.
 

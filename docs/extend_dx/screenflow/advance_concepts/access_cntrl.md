@@ -1,8 +1,8 @@
 # Access control
 
-You can use the Portal Access Control \(PAC\) to control what users can do when they are working with dialogs.
+You can use the Portal Access Control (PAC) to control what users can do when they are working with dialogs.
 
-You can assign users the following roles on the virtual resource PCM\_DIALOGS:
+You can assign users the following roles on the virtual resource PCM_DIALOGS:
 
 -   Administrator - An administrator has the rights and all tasks that are related to dialogs are done by the administrator.
 -   Security administrator - A security administrator can grant access on dialogs to other users.
@@ -14,7 +14,7 @@ These roles settings are inherited.
 
 To assign users or user groups to these roles with the XML configuration interface \(XMLAccess\), run a script similar to the one shown in the following code sample.
 
-Code sample
+Code sample:
 
 ```
 
@@ -29,7 +29,7 @@ Code sample
 
 Processing a specific dialog depends on whether the user has sufficient rights on all pages and portlets that are part of the dialog. You specify access control settings on a dialog definition level. The following code sample shows an example.
 
-Code sample
+Code sample:
 
 ```
 
@@ -52,7 +52,8 @@ Code sample
 
 ```
 
-**Note:** Assigning access on a specific dialog definition does not automatically assign access to all artifacts that are part of this dialog definition, such as pages, and portlets.
+!!!note
+    Assigning access on a specific dialog definition does not automatically assign access to all artifacts that are part of this dialog definition, such as pages, and portlets.
 
-**Parent topic:**[Advanced concepts](../screenflow/adv_cncpts.md)
+
 

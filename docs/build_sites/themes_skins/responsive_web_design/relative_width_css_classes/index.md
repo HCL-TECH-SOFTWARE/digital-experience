@@ -90,14 +90,13 @@ The Semantic types maps to the following page width amount:
 |`wpthemeWide`|3/4ths to 11/12ths|
 |`wpthemeFull`|all|
 
--   **[Creating your own layout](../rwd/rwd_relwidth_layouts.md)**  
+
+-   **[Creating your own layout](rwd_relwidth_layouts.md)**  
 When you create your own layout.html files, it is important to apply one semantic type and one grid type relative width class to each container. Such as wpthemeMedium and wpthemeCol6of12. Applying both ensures that those creating portlets and other page elements do not have to define styles for both types. Along with neither type and both types, they also have the choice to define styles for just one of the types, depending on their needs of granularity.
--   **[Creating portlets and page elements](../rwd/rwd_relwidth_elements.md)**  
+-   **[Creating portlets and page elements](rwd_relwidth_elements.md)**  
 When you create portlets and the page elements within them, you can now define your own style overrides as needed. Use these relative width CSS classes to make your page elements responsive to various widths.
 
 
-**Related information**  
-
-
-[Working with layout templates](../dev-theme/themeopt_cust_layouttemp.md)
+???+ info "Related information"
+    - [Working with layout templates](../../customizing_theme/layouts/themeopt_cust_layouttemp.md)
 

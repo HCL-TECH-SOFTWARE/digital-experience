@@ -16,6 +16,7 @@ If neither of the preceding options succeed in creating the JCR search collectio
 
 To view the steps to manually set up a JCR search collection, see *Setting up a JCR search collection* in the related links.
 
+<!---
 
-**Previous topic:**[Configuring search in a portal farm](../install/config_search_farm.md)
+**Previous topic:**[Configuring search in a portal farm](../install/config_search_farm.md) --->
 

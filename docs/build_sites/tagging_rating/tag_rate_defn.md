@@ -8,9 +8,9 @@ Tagging and rating are common and effective collaboration techniques that suppor
 
 -   **Tagging**
 
-    Tagging means assigning keywords as metadata to resources to describe or evaluate the content of these resources. These keywords are tags. For example, a user can apply the tag websphere to a page that provides information about IBM WebSphere products. Tagging content provides users the ability to describe, and better categorize, resources. By tagging content, users make it easier to find and highlight the importance or quality of content, which, in turn, benefits the other users in the knowledge-sharing community. Tagging provides better search results, as the search criteria is descriptive and users do not have to scan the content for the keywords.
+    Tagging means assigning keywords as metadata to resources to describe or evaluate the content of these resources. These keywords are tags. For example, a user can apply the tag <samp class="tag-example">dx</samp> to a page that provides information about HCL Digital Experience products. Tagging content provides users the ability to describe, and better categorize, resources. By tagging content, users make it easier to find and highlight the importance or quality of content, which, in turn, benefits the other users in the knowledge-sharing community. Tagging provides better search results, as the search criteria is descriptive and users do not have to scan the content for the keywords.
 
-    A user typically assigns more than just one tag to a single resource. For example, a user can assign a book the tags portal, web20, and computer\_science. This allows for multiple ways of finding the book, like putting multiple copies of the same book on different shelves.
+    A user typically assigns more than just one tag to a single resource. For example, a user can assign a book the tags <samp class="tag-example">portal</samp>, <samp class="tag-example">web20</samp>, and <samp class="tag-example">computer_science</samp>. This allows for multiple ways of finding the book, like putting multiple copies of the same book on different shelves.
 
     Tagging has become one of the most popular techniques to allow users and entire user communities to classify, organize, and structure content autonomously. By tagging content users add valuable meta information and even lightweight semantics to Web content. Tagging allows non-expert users to develop folksonomies that categorize content available in the system.
 
@@ -28,7 +28,7 @@ Tagging and rating are common and effective collaboration techniques that suppor
 
 -   **Rating**
 
-    Rating is the evaluation or assessment of something, in terms of quality, for example, \(as with a critic rating a novel\), quantity \(as with an athlete being rated by his or her statistics\), or a combination of both. Examples of quality ratings are critics who rate books or customers who rate purchased products for quality. Examples of quantitative ratings can be the performance data of cars or computers. Users rate resources by assigning numeric or other values to resources to indicate how much they like the resource. Thus, a rating is a value associated to a resource. Ratings are selected from a range of possible values where one end of the range usually refers to "like" and the other end to "dislike".
+    Rating is the evaluation or assessment of something, in terms of quality, for example, (as with a critic rating a novel), quantity (as with an athlete being rated by his or her statistics), or a combination of both. Examples of quality ratings are critics who rate books or customers who rate purchased products for quality. Examples of quantitative ratings can be the performance data of cars or computers. Users rate resources by assigning numeric or other values to resources to indicate how much they like the resource. Thus, a rating is a value associated to a resource. Ratings are selected from a range of possible values where one end of the range usually refers to "like" and the other end to "dislike".
 
     Rating allows users and entire communities to express which content they like or dislike.
 
@@ -38,20 +38,13 @@ Tagging and rating are common and effective collaboration techniques that suppor
 
     A user can apply the same rating to multiple resources. A resource is anything that can be uniquely identified and addressed in a portal. For example, this can be a portal page, or portlet, or an item for sale in an internet shop.
 
-
-
-**Related information**  
-
-
-[Adding query parameters](../admin-system/tag_rate_api_rest_add_qparms.md)
-
 ## Public and private tagging and rating
 
 Users can assign public or private tags and ratings:
 
 -   **Private tagging and rating**
 
-    With private tagging and rating users can see only their own tags and ratings. This allows users to browse through their Web content and retrieve important resources fast. A user typically assigns more than just one tag to a single resource. For example, a user can assign a book the tags portal, web20, and computer\_science. This allows for multiple ways of finding the book, like putting multiple copies of the same book on different shelves.
+    With private tagging and rating users can see only their own tags and ratings. This allows users to browse through their Web content and retrieve important resources fast. A user typically assigns more than just one tag to a single resource. For example, a user can assign a book the tags <samp class="tag-example">portal</samp>, <samp class="tag-example">web20</samp>, and <samp class="tag-example">computer\_science</samp>. This allows for multiple ways of finding the book, like putting multiple copies of the same book on different shelves.
 
 -   **Public tagging and rating**
 
@@ -71,3 +64,5 @@ Tags can be personal tags or community tags. All statements made for tags in the
     Community tags are assigned by the community, that is by all other users in the system. Every public tag that a user assigns turns into a community tag, because it is visible to the community.
 
 
+???+ info "Related information"
+    - [Adding query parameters](../tagging_rating/dev_tagging_and_rating/rest_api/tag_rate_api_rest_add_qparms.md)

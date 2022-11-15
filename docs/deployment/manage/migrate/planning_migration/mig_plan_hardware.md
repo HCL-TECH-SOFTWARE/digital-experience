@@ -26,8 +26,6 @@ Architecture:
 -   Your target environment must be on the same system architecture than your source environment for migration. Migrating to a different architecture is not supported.
 
 
-**Related information**  
-
-
-[HCL Portal detailed system requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=ba230c701b983c50f37655352a4bcb29)
+???+ info "Related information" 
+    -   [HCL Portal detailed system requirements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514&sys_kb_id=ba230c701b983c50f37655352a4bcb29)
 

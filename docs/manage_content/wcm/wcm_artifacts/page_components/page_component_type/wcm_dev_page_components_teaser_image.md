@@ -3,14 +3,14 @@ id: wcm_dev_page_components_teaser_image
 title: Teaser page component type
 ---
 
-
+# Teaser page component type
 
 
 The teaser page component is used to add an image and teaser text to a page that links to an existing piece of web content.
 
 ## Authoring templates
 
-The authoring templates associated with your teaser are created under this folder: **Your Library** \> **Authoring Templates** \> **Your Teaser**
+The authoring templates associated with your teaser are created under this folder: **Your Library > Authoring Templates > Your Teaser**
 
 -   **Your Teaser**
 
@@ -19,7 +19,7 @@ The authoring templates associated with your teaser are created under this folde
 
 ## Presentation templates
 
-The presentation templates associated with your teaser are created under this folder: **Your Library** \> **Presentation Templates** \> **Your Teaser**
+The presentation templates associated with your teaser are created under this folder: **Your Library > Presentation Templates > Your Teaser**
 
 -   **Your Teaser**
 
@@ -28,7 +28,7 @@ The presentation templates associated with your teaser are created under this fo
 
 ## Content items
 
-The content items associated with your teaser are created under this site area: **Your Library** \> **Content** \> **Page Components** \> **Your Teaser**
+The content items associated with your teaser are created under this site area: **Your Library > Content > Page Components > Your Teaser**
 
 -   **Your Teaser**
 
@@ -37,7 +37,7 @@ The content items associated with your teaser are created under this site area: 
 
 ## Localizations
 
-The localized text associated with your teaser is created under this site area: **Your Library** \> **Localizations**
+The localized text associated with your teaser is created under this site area: **Your Library > Localizations**
 
 -   **Your Teaser**
 
@@ -46,7 +46,7 @@ The localized text associated with your teaser is created under this site area: 
 
 ## Components
 
-The components associated with your teaser are created under this folder: **Your Library** \> **Components** \> **Your Teaser**
+The components associated with your teaser are created under this folder: **Your Library > Component > Your Teaser**
 
 -   **Styles**
 

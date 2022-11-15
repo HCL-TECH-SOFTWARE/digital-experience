@@ -3,9 +3,6 @@ id: toolbar_friendlyurl
 title: Friendly URL name
 ---
 
-
-
-
 Associate friendly URL names with pages, labels, and content items in your website. Then, the URLs are constructed by using the friendly URLs names. As a result, your website has human readable URLs that are easy to remember.
 
 For a friendly URL to work for a specific page or content item, every page or label that leads to that page or content item must have a friendly URL name. When you create a new page or content item from site manager, the system recommends a friendly URL name, based on the title of your content item or page. Friendly URLs take the following general form:
@@ -25,4 +22,3 @@ http://www.host_name/wps/portal/products/appliances
 When the page renders, the URL resolves to `http://www.host_name/wps/portal/products/appliances/[!ut/p/encoded\_portal\_suffix]`
 
 Portal appends an encoded suffix to that friendly URL. The suffix represents the current state of the page and its components.
-

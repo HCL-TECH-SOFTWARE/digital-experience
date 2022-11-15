@@ -22,9 +22,9 @@ You might find errors that are captured in the systemOut.log file if the migrate
 1.  Remove the hidden pages to avoid these errors in the systemOut.log.
 2.  Log in to Portal as an Administrator.
 
-3.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface** \> **Manage Pages**.
+3.  To open the **Manage Pages** portlet, click the **Administration menu** icon. Then, click **Portal User Interface > Manage Pages**.
 
-4.  Then, click **Context Root** \> **Hidden Pages**.
+4.  Then, click **Context Root > Hidden Pages**.
 
 5.  Look for **Person Tag** with unique name **ibm.portal.Person.Tag**.
 
@@ -32,8 +32,6 @@ You might find errors that are captured in the systemOut.log file if the migrate
 
 
 
-**Related information**  
-
-
-[Virtual Portal tasks](../migrate/virt_portal_post_mig.md)
+???+ info "Related information" 
+-   [Virtual Portal tasks](../../../../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/vp_post_mig_task/index.md)
 

@@ -7,5 +7,3 @@ After the user repositories are configured the same between the HCL Portal serve
 Follow the WebSphere® Application Server product documentation *Configuring Lightweight Directory Access Protocol in a federated repository configuration* to configure LDAP settings on the remote search server.
 
 After configuring user repositories on the remote search server, you must enable single-sign on \(SSO\) between HCL Portal and the remote search server. For details about how to do this step, refer to *Creating a single-sign on domain between HCL Portal and the remote search service*.
-
-

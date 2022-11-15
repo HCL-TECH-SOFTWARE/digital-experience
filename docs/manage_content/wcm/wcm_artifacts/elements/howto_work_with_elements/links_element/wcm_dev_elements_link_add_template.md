@@ -3,7 +3,7 @@ id: wcm_dev_elements_link_add_template
 title: Adding a link element to a template
 ---
 
-
+# Adding a link element to a template
 
 
 You add a link element to an authoring template when you want the link element to be used by a set of items that use the same authoring template.
@@ -28,7 +28,8 @@ You add a link element to an authoring template when you want the link element t
 
 10. To add a link to a URL, either type or paste the URL in the **Type a URL** field.
 
-    **Note:** The inserted URL is rendered relative to the URL of the site area of the currently rendered content item. Internet protocols, such as "`Http://`", must be added at the beginning of the inserted link if an absolute URL is intended to be rendered.
+    !!!note
+        The inserted URL is rendered relative to the URL of the site area of the currently rendered content item. Internet protocols, such as "`Http://`", must be added at the beginning of the inserted link if an absolute URL is intended to be rendered.
 
 11. To add a link to web content, an image component, a file component, or an existing link component, click **Browse Content**.
 
@@ -134,13 +135,14 @@ You add a link element to an authoring template when you want the link element t
 
     -   To create the link tag, `<a class="classname" href="http://www.ibm.com"></a>` you would enter class="classname" in the **Additional attributes** field.
     -   To create the link tag, `<a name="homepage" class="classname" href="http://www.ibm.com"></a>` you would enter name="homepage" class="classname" in the **Additional attributes** field.
-16. Click ![properties](../images/propIcon.jpg) to open the display properties of the element. This is where you define how the element is displayed on the item form.
+16. Click ![properties](../../../../../../images/propIcon.jpg) to open the display properties of the element. This is where you define how the element is displayed on the item form.
 
     1.  To display the element as a required field select **Identify this as a required field**.
 
     2.  To hide a field on the content form from all users select **Hide field**. You must specify a default value if the field is a required field.
 
-        **Note:** Administrators and managers can choose to display hidden fields and elements in an item by clicking **Show hidden fields**.
+        !!!note
+            Administrators and managers can choose to display hidden fields and elements in an item by clicking **Show hidden fields**.
 
     3.  By default, a content creator can select any type of link. To restrict the types of links that a content creator can select, click **Select** within the **Restrict Link Types** section. Select the appropriate link types and then click **OK**. To remove a link type from the restricted list, select the checkbox next to the link type, and click **Remove**.
 

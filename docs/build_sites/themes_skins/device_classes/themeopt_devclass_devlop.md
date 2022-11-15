@@ -40,14 +40,9 @@ The DeviceClass profile attribute contains only the highest priority device clas
 
 
 
-**Previous topic:**[Device classes overview](../dev-theme/themeopt_devclass_overview.md)
+???+ info "Related information:"
+[Target MobileFirst resources](../../../extend_dx/integration/ibm_mobilefirst/wl_device_classes.md)
 
-**Next topic:**[mvc:URI scheme](../rwd/rwd_mvcuri_scheme.md)
-
-**Related information**  
-
-
-[Target MobileFirst resources](../integrate/wl_device_classes.md)
-
-[Client profile information \(CC/PP\) in portlets](../dev-portlet/wpsccpp.md)
+<!--
+[Client profile information \(CC/PP\) in portlets](../dev-portlet/wpsccpp.md) -->
 

@@ -2,7 +2,7 @@
 
 Configure HCL Connections portlets to use single sign-on with IBM Security Access Manager and SPNEGO.
 
-Single sign-on \(SSO\) enables users to log in to an HCL Connections application and switch to other applications within the product without having to authenticate again.
+Single sign-on (SSO) enables users to log in to an HCL Connections application and switch to other applications within the product without having to authenticate again.
 
 There are several different ways to configure SSO. This procedure describes an approach that uses the Kerberos authentication protocol. This authentication method allows Security Access Manager and users web browsers to prove their identities to one another in a secure manner. After users sign in to their Active Directory Windows™ client systems, they are automatically signed into both Security Access Manager and HCL Connections.
 
@@ -127,15 +127,16 @@ Configuring HCL Connections and HCL Portal to share a single deployment manager 
         
         ```
 
-    5.  Enable SPNEGO single sign-on by configuring Kerberos in the WebSphere Application Server Integrated Solutions Console, following the steps in the *Enabling single sign-on for Security® Access Manager with SPNEGO* topic.
+    5.  Enable SPNEGO single sign-on by configuring Kerberos in the WebSphere Application Server Integrated Solutions Console, following the steps in the [Enabling single sign-on for Security® Access Manager with SPNEGO](https://help.hcltechsw.com/connections/v7/admin/secure/t_secure_with_tam-spnego.html) topic.
 
     6.  Synchronize the node and restart the deployment manager node.
 
         If you cannot manage the Portal node on the WebSphere Application Server Integrated Solutions Console, manually synchronize the node and restart the deployment manager node.
 
-10. Configure Security Access Manager on the Portal server, following the directions in the [Configuring Security Access Manager](../security/tam.md) article that corresponds to your Portal server.
+10. Configure Security Access Manager on the Portal server, following the directions in the [Configuring Security Access Manager](../../../../../../../deployment/manage/security/external_sec_mgmt/security_access_manager/cfg_sec_access_mgr/index.md) article that corresponds to your Portal server.
 
-    **Note:** For the connections integration with the portlets, it is important that WebSEAL session cookies are sent to the junction server. This action can be defined by adding the -k option to the commands that create a junction.
+    !!!note
+        For the connections integration with the portlets, it is important that WebSEAL session cookies are sent to the junction server. This action can be defined by adding the -k option to the commands that create a junction.
 
     For example, on Portal 7:
 

@@ -14,9 +14,9 @@ The Web Content Manager login page is used by default when an unauthenticated us
 
     -   Property name: `connect.usermanagement.loginpagelocation`
     -   Value: The URL of the custom page. For example:http://hostname.example.com:10039/sample/customerrorpage.html
+
 4.  Save your changes.
 
 5.  Restart the portal for the new settings to take effect.
-
 
 

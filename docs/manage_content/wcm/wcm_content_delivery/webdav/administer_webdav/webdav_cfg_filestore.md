@@ -11,9 +11,8 @@ To enable write access for all authenticated users, proceed as follows:
 3.  Restart the portal server for the new setting to take effect.
 
 
-**Notes:**
-
--   There are several WebDAV entry points. However, the property filestore.writeaccess.allowed applies to the filestore entry points for home directories for each user located at: http://server\_name:WC\_default\_host/wps/mycontenthandler/dav/fs-type1/users/user\_name
--   Users can modify only their own directories. You must grant additional permissions for users to modify other directories.
+!!! note
+    -   There are several WebDAV entry points. However, the property filestore.writeaccess.allowed applies to the filestore entry points for home directories for each user located at: http://server\_name:WC\_default\_host/wps/mycontenthandler/dav/fs-type1/users/user\_name
+    -   Users can modify only their own directories. You must grant additional permissions for users to modify other directories.
 
 

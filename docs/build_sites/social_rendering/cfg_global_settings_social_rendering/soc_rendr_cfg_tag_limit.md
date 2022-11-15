@@ -2,10 +2,9 @@
 
 You can configure your lists of social objects that retrieve data from the HCL Connections to transmit tags to the Tag Cloud portlet. You can limit the number of tag names that are loaded from HCL Connections. You configure this limit in the WP Connections Integration Service resource environment provider.
 
-**Notes:**
-
--   Loading too many tags can affect performance.
--   You set this maximum limit in the WP Connections Integration Service. The Tag Cloud can further reduce the number of shown tag names. This reduction depends on the configuration of the tag cloud.
+!!! note
+    -   Loading too many tags can affect performance.
+    -   You set this maximum limit in the WP Connections Integration Service. The Tag Cloud can further reduce the number of shown tag names. This reduction depends on the configuration of the tag cloud.
 
 To configure the tags transmission limit, proceed by the following steps:
 
@@ -28,9 +27,6 @@ To configure the tags transmission limit, proceed by the following steps:
 
 For more information, see the topic about *Using the portal Tag Cloud with social lists*.
 
-
-**Related information**  
-
-
-[Using the portal Tag Cloud with lists of social objects](../social/soc_rendr_tag_cloud_w_socl_list.md)
+???+ info "Related information" 
+    - [Using the portal Tag Cloud with lists of social objects](../working_with_social_objects/using_portal_tagcloud_with_social_objects/index.md)
 

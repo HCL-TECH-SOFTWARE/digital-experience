@@ -57,8 +57,6 @@ Usually, the profiles and contributions are determined once, when the portal ser
 To see the changes to profiles and contributions immediately, the `resourceaggregation.development.mode` property to true within the WP ConfigService resource environment provider.
 
 
-**Related information**  
-
-
-[Copying the static resources for your theme](../dev-theme/themeopt_cust_copy_statictheme.md)
+???+ info "Related information"
+    - [Copying the static resources for your theme](../customizing_theme/copying_theme/manual_copy_theme/creating_webdav_theme_copy/themeopt_cust_copy_statictheme.md)
 

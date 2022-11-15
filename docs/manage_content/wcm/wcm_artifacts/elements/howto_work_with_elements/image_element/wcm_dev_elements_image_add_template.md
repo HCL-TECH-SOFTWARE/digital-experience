@@ -3,7 +3,7 @@ id: wcm_dev_elements_image_add_template
 title: Adding an image element to a template
 ---
 
-
+# Adding an image element to a template
 
 
 You add an image element to an authoring template when you want the image to be used by a set of items that use the same authoring template.
@@ -26,21 +26,22 @@ You add an image element to an authoring template when you want the image to be 
 
     1.  Click **Upload a file** to select a file to store in the image component.
 
-        **Note:** In CF06 or higher, click **Upload** to upload a file, or click **Select** to select a component. Selecting a component is useful if you need to apply different image properties to an existing image component, or store an image in a different library, or apply different access settings to the original image component.
+        !!!note
+            In CF06 or higher, click **Upload** to upload a file, or click **Select** to select a component. Selecting a component is useful if you need to apply different image properties to an existing image component, or store an image in a different library, or apply different access settings to the original image component.
 
     2.  Define the image properties:
 
         -   **Border**
 
-            Define the size of the border to appear around the image. \(0 = no border\)
+            Define the size of the border to appear around the image. (0 = no border)
 
         -   **Width**
 
-            Set the width of the image \(in pixels\). Optional.
+            Set the width of the image (in pixels). Optional.
 
         -   **Height**
 
-            Set the height of the image \(in pixels\). Optional.
+            Set the height of the image (in pixels). Optional.
 
         -   **Alternate text**
 
@@ -52,13 +53,14 @@ You add an image element to an authoring template when you want the image to be 
 
     3.  If Renditions have been enabled, you can also select images to display with different devices.
 
-9.  Click ![properties](../images/propIcon.jpg) to open the display properties of each field in the element. This view is where you define how the element is displayed on the item form.
+9.  Click ![properties](../../../../../../images//propIcon.jpg) to open the display properties of each field in the element. This view is where you define how the element is displayed on the item form.
 
     1.  To display the field as a required field select **Identify this as a required field**.
 
     2.  To hide a field on the content form from all users select **Hide field**. You must specify a default value if the field is a required field.
 
-        **Note:** Administrators and managers can choose to display hidden fields and elements in an item by clicking **Show hidden fields**.
+        !!!note
+            Administrators and managers can choose to display hidden fields and elements in an item by clicking **Show hidden fields**.
 
     3.  If Renditions have been enabled, you can choose to enable or disable this feature for content items based on this template. If enabled, you can specify separate default image settings for different device types.
 
@@ -71,7 +73,8 @@ You add an image element to an authoring template when you want the image to be 
         -   Upload a file by using the file browser only.
         -   Select a library component only.
         -   Both.
-        **Note:** If Rich Media Edition is installed the **Show digital asset source** option must be cleared if **Select using library component** has been selected.
+        !!!note
+             If Rich Media Edition is installed the **Show digital asset source** option must be cleared if **Select using library component** has been selected.
 
     7.  Type the number of characters to use in **Field Width** to set the size of the displayed field. If you leave this blank, the default field size is used.
 

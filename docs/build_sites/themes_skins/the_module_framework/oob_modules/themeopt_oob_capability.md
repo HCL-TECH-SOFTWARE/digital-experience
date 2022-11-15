@@ -25,9 +25,7 @@ This table lists explicitly defined capabilities. Implicit capabilities are not 
 |`oneUI`|3.0.3|wp\_one\_ui\_303|
 |`oneUIDijit`|3.0.1|wp\_one\_ui\_dijit\_30|
 |`oneUIDijit`|3.0.3|wp\_one\_ui\_dijit\_303|
-|`cp_tagging_rating`|8.0|wp\_tagging\_ratingwp\_tagging\_rating\_opensearch
-
-|
+|`cp_tagging_rating`|8.0|wp\_tagging\_ratingwp\_tagging\_rating\_opensearch|
 |`sametime.proxy`|8.5.2|wp\_sametime\_proxy|
 |`sametime.links`|8.5.2|wp\_sametime\_links|
 |`portal.search`|8.0|wp\_search|
@@ -35,8 +33,6 @@ This table lists explicitly defined capabilities. Implicit capabilities are not 
 For extra modules and capabilities, see Content Template Catalog theme extensions and Customizing the CSS styles of social lists.
 
 
-**Related information**  
-
-
-[Customizing the CSS styles of social lists](../social/soc_rendr_custom_css_styles.md)
+???+ info "Related information:"
+    - [Customizing the CSS styles of social lists](../../../social_rendering/customizing_view_definitions/customizing_visualdesign/customizing_css_social_list/index.md)
 

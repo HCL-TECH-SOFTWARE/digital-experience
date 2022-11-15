@@ -34,8 +34,6 @@ The values of the public render parameters need to adhere to the URI syntax. For
 
 For example, the social rendering DDC plug-in makes it possible to set a dynamic search term filter for social lists. You do so by setting the public render parameter `filters` to the value `sr:searchterm:searchterm`. Replace `searchterm` by the actual search term that you want to use for filtering the bean list. The social rendering DDC plug-in processes only `filters` parameters that are defined in the URI scheme `sr`, in other words, it ignores all `filters` parameters that do not start with a `sr:` prefix.
 
-**Related information**  
-
-
-[Customizing social list definitions by using inline editing](../social/soc_rendr_cust_socl_list.md)
+???+ info "Related information:"
+    - [Customizing social list definitions by using inline editing](../../../../../../../../build_sites/social_rendering/customizing_view_definitions/soc_rendr_cust_socl_list.md)
 

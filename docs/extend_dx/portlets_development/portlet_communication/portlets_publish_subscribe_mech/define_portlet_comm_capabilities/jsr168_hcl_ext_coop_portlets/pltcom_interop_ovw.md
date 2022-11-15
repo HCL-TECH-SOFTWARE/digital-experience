@@ -4,7 +4,8 @@ Cooperative portlets communicate by using properties that are produced and consu
 
 This means that cooperative portlets do not require extra APIs for communication, but can use the same interfaces that handle normal action processing. Action processing in a target portlet often does not actually need to distinguish between an action initiated by a portlet URL and an action initiated by the transfer of a property value from another portlet.
 
-**Note:** Cooperative portlet WSDLs are not evaluated for JSR 286 portlets, and therefore JSR 286 portlets do not support this model of re-using portlet actions for portlet communication.
+!!!note
+    Cooperative portlet WSDLs are not evaluated for JSR 286 portlets, and therefore JSR 286 portlets do not support this model of re-using portlet actions for portlet communication.
 
 For more detailed information about the cooperative portlet programming model refer to the documentation about the cooperative portlet programming model. For more information about how to declare actions and properties in cooperative portlet WSDL descriptors.
 

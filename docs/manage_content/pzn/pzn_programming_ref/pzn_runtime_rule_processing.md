@@ -6,17 +6,18 @@ At run time, the content spot bean searches for the best rule to fill the spot w
 
 Rule processing results in the return of a set of resources or a profiler. The returned resources or profiler can be used for generating a partial or entire web page. The figure illustrates how a rule is processed.
 
-![rule processing](../images/rules_proc.jpg)
+![rule processing](../../../images/rules_proc.jpg)
 
 Step A: The process begins when a user requests a JavaServer Page \(JSP\) or servlet in which a content spot bean is embedded. The content spot bean contains the code to find and run the rule. When the web server receives the client request for the JSP or servlet, the web server passes the JSP or servlet request to the IBM® WebSphere® Application Server, which then starts its JSP or servlet processor.
 
 The content spot bean can be embedded in the JSP by using any JSP editor. The following example code demonstrates how to embed and use a content spot bean in a JSP.
 
-**Note:** IBM Rational® Application Developer provides a visual JSP editor \(Page Designer\) that simplifies the development task and generates the JSP scriptlet coding for you.
+!!! note 
+    IBM Rational® Application Developer provides a visual JSP editor \(Page Designer\) that simplifies the development task and generates the JSP scriptlet coding for you.
 
 The bean is embedded by using the JSP useBean tag. The HTTPServletRequest object is passed to the bean within the body of the useBean tag. The content spot bean properties are retrieved in the same manner as retrieving properties for any JavaBeans. The getRuleContent method of the contactsByLocation content spot bean determines the appropriate rule to run. This action is based on campaigns that have a rule that is mapped to the spot, runs the rule, and returns the results. The bean returns an array of Personnel objects.
 
-|```
+```
  <jsp:useBean id="contactsByLocation" class="GetContactsByLocation">
  <% contactsByLocation.setRequest(request); %>
  </jsp:useBean>
@@ -56,9 +57,8 @@ The bean is embedded by using the JSP useBean tag. The HTTPServletRequest object
  
 ```
 
-|
-
-**Note:** When you decide to add personalized content to a web page, all that is needed to develop the JSP is the content spot bean. The content spot can display personalized data of a single data type \(for example, Personnel in this example\). The web developer does not need to know where or how the content is retrieved only that personalized content of type Personnel is returned and it has a set of properties to be displayed.
+!!! note 
+    When you decide to add personalized content to a web page, all that is needed to develop the JSP is the content spot bean. The content spot can display personalized data of a single data type \(for example, Personnel in this example\). The web developer does not need to know where or how the content is retrieved only that personalized content of type Personnel is returned and it has a set of properties to be displayed.
 
 Step B: When the embedded content spot bean is started, the processor passes the HTTP servlet request object to the content spot bean. The client request is used to initialize the RequestContext. The RequestContext provides access to the resources needed for rule processing. Those resources include collections, application objects, requests, and sessions. The RequestContext is applicable for the life of the HTTP request.
 

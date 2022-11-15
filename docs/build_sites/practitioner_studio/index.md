@@ -19,8 +19,8 @@ In time, this interface also serves as the launching point for newly developed f
 
 Enabling Practitioner Studio deactivates the legacy Administration and Applications pages. However, all of these functions are still available.
 
-<!--- 
--   **[Working with Practitioner Studio](../practitioner_studio/working_prac_studio.md)**  
+
+-   **[Working with Practitioner Studio](../practitioner_studio/working_with_ps/index.md)**  
 Learn how to enable, configure and disable Practitioner Studio on the latest version of HCL Digital Experience.
 -   **[Web content](../practitioner_studio/web_content.md)**  
 Learn more about managing libraries, creating, editing or cleaning up data, and setting up syndication for HCL Digital Experience web content management.
@@ -33,6 +33,6 @@ Learn how to configure your HCL Digital Experience portal site as an Administrat
 -   **[Portal administration](../practitioner_studio/administration.md)**  
 Use the Portal administration portlets that are provided with HCL Digital Experience to do various day-to-day administration tasks.
 -   **[Registration/Edit my profile](../practitioner_studio/edit_my_profile.md)**  
-Managing Registration/Edit my Profile is one of the available Administrator-related features in the Practitioner Studio interface. --->
+Managing Registration/Edit my Profile is one of the available Administrator-related features in the Practitioner Studio interface.
 
 

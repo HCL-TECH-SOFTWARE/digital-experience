@@ -20,5 +20,3 @@ To configure the Suggested Links view, proceed as follows:
 
     Users can now use the Suggested Links portlet.
 
-
-

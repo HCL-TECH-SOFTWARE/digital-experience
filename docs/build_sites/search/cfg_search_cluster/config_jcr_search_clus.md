@@ -12,6 +12,7 @@ Set up remote search service on the primary node of the cluster. For more inform
 
     -   Select the appropriate cluster from the Scopes list.
     -   Clear the **Show Scope** check box and select **Browse Clusters** to specify the portal cluster.
+    
 4.  Select **JCR ConfigService PortalContent** \> **Custom properties**.
 
 5.  Change the value of the jcr.textsearch.indexdirectory property to point to a directory on the remote search server.
@@ -51,6 +52,4 @@ Set up remote search service on the primary node of the cluster. For more inform
     7.  Go to the Manage Search portlet and confirm that the JCRCollection1 search collection was deleted.
 
     8.  Manually create a JCR search collection called JCRCollection1. For more information about creating the JCR search collection, see *Setting up a JCR search collection* in the related links.
-
-
 

@@ -1,7 +1,7 @@
 # Web Experience Factory (WEF)
 ## Web Experience Factory Designer - Overview
 
-Web Experience Factory Designer is a tool for developing Java™ 2 Platform, Enterprise Edition \(J2EE\) Web applications and portlets. Web Experience Factory Designer is a plugin to Eclipse-based integrated development environments \(IDEs\). Working in the Web Experience Factory perspective in Eclipse, you create projects, for which you use builders and profile sets to develop models and generate the resulting Web applications from those models.
+Web Experience Factory Designer is a tool for developing Java™ 2 Platform, Enterprise Edition \(J2EE\) Web applications and portlets. Web Experience Factory Designer is a plugin to Eclipse-based integrated development environments (IDEs). Working in the Web Experience Factory perspective in Eclipse, you create projects, for which you use builders and profile sets to develop models and generate the resulting Web applications from those models.
 
 Each builder has a wizard user interface through which you specify input. The builder automatically generates or modifies part of the application. Profiles in profile sets let you tailor one application and generate multiple versions, for example, a different version for different human languages or different user groups. You assemble builders in models to implement a user interface or a data service. If you make a change in the inputs to a builder in a model, the application code is regenerated. The regeneration lets you iteratively develop an application. The builders generate all the necessary application code, including JSPs, Java classes, and XML documents. You use builders to implement design patterns to facilitate iterative development.
 
@@ -21,7 +21,7 @@ Web Experience Factory Designer provides context-sensitive help for all features
   Builder call editors provide a Help button that you can use to access configuration help for the builder. Eclipse Help menu item.
 
 
-Web Experience Factory installs a documentation plugin into the Eclipse Help system. This plugin runs within the context of the Eclipse help engine, and can be accessed from the **Eclipse Help** menu. To access Web Experience Factory help in Eclipse, click **Help** \> **Help Contents** to open the Eclipse SDK Help window. From Contents, click **Web Experience Factory Designer** to display the introductory page.
+Web Experience Factory installs a documentation plugin into the Eclipse Help system. This plugin runs within the context of the Eclipse help engine, and can be accessed from the **Eclipse Help** menu. To access Web Experience Factory help in Eclipse, click **Help > Help Contents** to open the Eclipse SDK Help window. From Contents, click **Web Experience Factory Designer** to display the introductory page.
 
 ## Key concepts: builders, models, and profiles
 
@@ -38,9 +38,9 @@ In addition, developers can create multiple variations of a portlet from one cod
 
 Web Experience Factory Designer is integrated into the Eclipse development environment.
 
-Web Experience Factory Designer is a tool for developing Java™ 2 Platform, Enterprise Edition \(J2EE\) Web applications and portlets.
+Web Experience Factory Designer is a tool for developing Java™ 2 Platform, Enterprise Edition (J2EE) Web applications and portlets.
 
-Web Experience Factory Designer is a plugin to Eclipse-based integrated development environments \(IDEs\). Working in the Web Experience Factory perspective in Eclipse, you create projects, for which you use builders and profile sets to develop models and generate the resulting Web applications from those models.
+Web Experience Factory Designer is a plugin to Eclipse-based integrated development environments (IDEs). Working in the Web Experience Factory perspective in Eclipse, you create projects, for which you use builders and profile sets to develop models and generate the resulting Web applications from those models.
 
 For more information about Web Experience Factory refer to the following resources:
 

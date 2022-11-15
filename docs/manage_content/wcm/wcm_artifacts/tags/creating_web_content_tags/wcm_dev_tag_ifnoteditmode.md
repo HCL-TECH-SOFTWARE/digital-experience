@@ -30,8 +30,7 @@ This content is only rendered when in view mode.
 [/IfNotEditMode]
 ```
 
-**Related information**  
 
-
-[Enabling inline editing for content items](../wcm/wcm_dev_inline_tags.md)
+???+ info "Related information:"
+    - [Enabling inline editing for content items](../../../wcm_content_delivery/wcm_inline_editing/inline_editing/wcm_dev_inline_tags.md)
 

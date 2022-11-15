@@ -1,17 +1,11 @@
 # Configuration Wizard instructions: Modify site URLs for search engine optimization
 
-Use the Configuration Wizard to change or remove /wps/portal \(context root and default home values\) to create shorter, human-readable URLs. Select an option to remove navigational state information from site URLs. This procedure is intended only as a reference.
+Use the Configuration Wizard to change or remove /wps/portal (context root and default home values) to create shorter, human-readable URLs. Select an option to remove navigational state information from site URLs. This procedure is intended only as a reference.
 
 You can use the Configuration Wizard to shorten site URLs when you set up a stand-alone server or when you set up a cluster.
 
--   **[Manual Steps: Modify Site URLs for Search Engine Optimization](../config/cw_shorten_url_seo_manual.md)**  
+-   **[Manual Steps: Modify Site URLs for Search Engine Optimization](../../../siteurl_cfg/changing_siteurl/cw_shorten_url/manual_cw_shorten_url_for_seo/index.md)**  
 The Modify Site URLs for Search Engine Optimization option in the Configuration Wizard includes manual steps. For reference only, you can see the details of the manual steps in this section of the product documentation. The Configuration Wizard provides you custom instructions. Depending on your selections, you might not see all of the manual steps in this section in the instructions created for you in the Configuration Wizard.
-
-
-**Related information**  
-
-
-[Manual Step: Redeploying the HCL Web Application Bridge to a virtual host](../config/cw_shorten_url_seo_manual-wab.md)
 
 # Configuration Wizard instructions
 
@@ -81,7 +75,7 @@ If you are using syndication, ensure that all of the syndication target servers 
 
         None
 
-    Go to [Manual Step: Configure your external web server](cw_shorten_url_seo_manual-web-server.md#) for instructions.
+    Go to [Manual Step: Configure your external web server](../../../siteurl_cfg/changing_siteurl/cw_shorten_url/manual_cw_shorten_url_for_seo/cw_shorten_url_seo_manual-web-server.md) for instructions.
 
 7.  Manual step: Change the JSP components in the Web Resources v70 Library.
 
@@ -93,7 +87,7 @@ If you are using syndication, ensure that all of the syndication target servers 
 
         None
 
-    Go to [Manual Step: Change the JSP components in the Web Resources v70 Library](cw_shorten_url_seo_manual-jsp.md#) for instructions.
+    Go to [Manual Step: Change the JSP components in the Web Resources v70 Library](../../../siteurl_cfg/changing_siteurl/cw_shorten_url/manual_cw_shorten_url_for_seo/cw_shorten_url_seo_manual-jsp.md) for instructions.
 
 8.  Optional manual step: If your custom themes use Dojo, update your themes to reference the correct Dojo context root.
 
@@ -105,7 +99,7 @@ If you are using syndication, ensure that all of the syndication target servers 
 
         None
 
-    Go to [Manual Step: Updating your themes to reference the correct Dojo context root](cw_shorten_url_seo_manual-dojo.md#) for instructions.
+    Go to [Manual Step: Updating your themes to reference the correct Dojo context root](../../../siteurl_cfg/changing_siteurl/cw_shorten_url/manual_cw_shorten_url_for_seo/cw_shorten_url_seo_manual-dojo.md) for instructions.
 
 9.  Manual step: Refresh your search collection and regather documents.
 
@@ -117,7 +111,7 @@ If you are using syndication, ensure that all of the syndication target servers 
 
         None
 
-    Go to [Manual Step: Refreshing the search collection](cw_shorten_url_seo_manual-search.md#) for instructions.
+    Go to [Manual Step: Refreshing the search collection](../../../siteurl_cfg/changing_siteurl/cw_shorten_url/manual_cw_shorten_url_for_seo/cw_shorten_url_seo_manual-search.md) for instructions.
 
 10. Manual step: Resynchronize the nodes and restart the cluster.
 
@@ -129,7 +123,7 @@ If you are using syndication, ensure that all of the syndication target servers 
 
         None
 
-    Go to [Manual Step: Resynchronizing the nodes and restarting the cluster](cw_shorten_url_seo_manual-resycn-cluster.md#) for instructions.
+    Go to [Manual Step: Resynchronizing the nodes and restarting the cluster](../../../siteurl_cfg/changing_siteurl/cw_shorten_url/manual_cw_shorten_url_for_seo/cw_shorten_url_seo_manual-resycn-cluster.md) for instructions.
 
 11. Optional manual step: Update syndicator and subscriber servers that reference your modified site URL. If you do not use syndication, skip this step.
 
@@ -143,7 +137,7 @@ If you are using syndication, ensure that all of the syndication target servers 
 
         None
 
-    Go to [Manual Step: Updating syndicator and subsubscriber servers that reference your URL](cw_shorten_url_seo_manual-synd.md#) for instructions.
+    Go to [Manual Step: Updating syndicator and subsubscriber servers that reference your URL](../../../siteurl_cfg/changing_siteurl/cw_shorten_url/manual_cw_shorten_url_for_seo/cw_shorten_url_seo_manual-synd.md) for instructions.
 
 12. Optional manual step: Disable friendly URL redirects.
 
@@ -155,7 +149,7 @@ If you are using syndication, ensure that all of the syndication target servers 
 
         None
 
-    Go to [Manual Step: Disabling friendly URL redirects](cw_shorten_url_seo_manual-disable-redirect.md#) for instructions.
+    Go to [Manual Step: Disabling friendly URL redirects](../../../siteurl_cfg/changing_siteurl/cw_shorten_url/manual_cw_shorten_url_for_seo/cw_shorten_url_seo_manual-disable-redirect.md) for instructions.
 
 13. Optional manual step: Update the personalization publishing server with the new site URL.
 
@@ -167,7 +161,7 @@ If you are using syndication, ensure that all of the syndication target servers 
 
         None
 
-    Go to [Manual Step: Updating the personalization publishing server with the new site URL](cw_shorten_url_seo_manual-pzn-publish.md#) for instructions.
+    Go to [Manual Step: Updating the personalization publishing server with the new site URL](../../../siteurl_cfg/changing_siteurl/cw_shorten_url/manual_cw_shorten_url_for_seo/cw_shorten_url_seo_manual-pzn-publish.md) for instructions.
 
 14. Optional manual step: Redeploy the HCL Web Application Bridge to a virtual host.
 
@@ -179,11 +173,4 @@ If you are using syndication, ensure that all of the syndication target servers 
 
         None
 
-    Go to [Manual Step: Redeploying the IBM Web Application Bridge to a virtual host.](cw_shorten_url_seo_manual-wab.md) for instructions.
-
-
-**Related information**  
-
-
-[Manual Step: Redeploying the HCL Web Application Bridge to a virtual host.](cw_shorten_url_seo_manual-wab.md#)
-
+    Go to [Manual Step: Redeploying the IBM Web Application Bridge to a virtual host](../../../siteurl_cfg/changing_siteurl/cw_shorten_url/manual_cw_shorten_url_for_seo/cw_shorten_url_seo_manual-wab.md) for instructions.

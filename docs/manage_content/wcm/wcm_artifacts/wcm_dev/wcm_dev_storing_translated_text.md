@@ -1,4 +1,4 @@
-# How to store translated text in a content item or site area \| HCL Web Content Manager
+# How to store translated text in a content item or site area 
 
 Translated text can be stored in a content item or site area. The translated text can then be referenced in web content tags, or as localized text in web content authoring portlet forms.
 
@@ -37,7 +37,8 @@ You specify the name path to the content item or site area in the `provider` par
 [Plugin:Localize key="keyname2" provider="library/sitearea/contentitem"]
 ```
 
-**Note:** If you move or rename a content item or site area that is used to store localized text, or its parent, you will break the localized reference that is specified in a tag. To avoid this issue, you can instead specify the item ID instead of the name path.
+!!! note
+    If you move or rename a content item or site area that is used to store localized text, or its parent, you will break the localized reference that is specified in a tag. To avoid this issue, you can instead specify the item ID instead of the name path.
 
 For example:
 
@@ -45,7 +46,7 @@ For example:
 [Plugin:Localize provider="[Element key='Text Provider Name' format='id']" key="keyname2"]
 ```
 
-See [Content plug-ins](../panel_help/plugin_content.md) for further information about the localized plug-in within the text provider plug-in tag section.
+See [Content plug-ins](../tags/creating_web_content_tags/creating_plugin_tag/connector_plugins/index.md) for further information about the localized plug-in within the text provider plug-in tag section.
 
 ## Setting a default localized item in a web content tag
 

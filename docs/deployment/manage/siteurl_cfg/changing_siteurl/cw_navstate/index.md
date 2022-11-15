@@ -34,12 +34,3 @@ You can remove navigational state information from the URL by using the **Modify
         2.  If the user preference is not set, the portal looks for the preferred language that is set in the browser. If the page is a public page, the user is an anonymous user. In this case, the portal also looks for the preferred language that is set in the browser.
         3.  If the portal cannot determine a preferred language setting for the portal or the browser, it applies the default language that is defined for the portal.
     -   Portlets cannot be minimized or maximized. The portlet state includes render parameters, window state, and portlet mode.
-
--   **[Defining friendly URLs without state information for pages in your site](../admin-system/mp_friendly_short_url.md)**  
-The Configuration Wizard option for Modifying Site URLs for Search Engine Optimization makes it possible to remove navigational state information from your site URLs site wide. To enable friendly URLs without state information at the page level, you must complete extra steps after you use this option.
--   **[CF07 and earlier: Using friendly URLs without state information](../admin-system/mp_friendly_short_url_prevcf7.md)**  
-By default, HCL Digital Experience URLs include navigational state information. If you configure pages for friendly URLs, the portal appends the state information to the friendly URLs. Some scenarios require short and fully human readable URLs that omit the state information. For such scenarios, you can configure friendly URLs so that the portal does not show that state information.
--   **[CF04 and earlier: Using friendly URLs without state information](../admin-system/mp_fsu_prevcf.md)**  
-By default, HCL DX Portal URLs include navigational state information. If you configure pages for friendly URLs, the portal appends the state information to the friendly URLs. Some scenarios require short and fully human readable URLs that omit the state information. For such scenarios, you can configure friendly URLs so that the portal does not show that state information.
-
-

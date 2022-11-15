@@ -16,7 +16,7 @@ Set up a password grant flow to resources that are protected by the Liberty OAut
 
     1.  Log in to the WebSphere Application Server admin console of the Proxy.
 
-    2.  Select **Security** \> **SSL certificate** and **key management** \> **Key stores and certificates**.
+    2.  Select **Security > SSL certificate** and **key management > Key stores and certificates**.
 
     3.  Click the truststore that is used by the Portal Server. Depending on your security configuration and topology, this `NodeDefaultTrustStore`, or `CellDefaultTrustStore`.
 
@@ -150,14 +150,8 @@ Set up a password grant flow to resources that are protected by the Liberty OAut
         ```
         AIX: ./ConfigEngine.sh update-outbound-http-connection-config -DconfigFileName=/tmp/global\_oauth\_update.xml \
         -DWasPassword=password -DPortalAdminPwd=password 
-        HP-UX: ./ConfigEngine.sh update-outbound-http-connection-config -DconfigFileName=/tmp/global\_oauth\_update.xml \
-                  -DWasPassword=password -DPortalAdminPwd=password 
-        IBM i: ConfigEngine.sh update-outbound-http-connection-config -DconfigFileName=/tmp/global\_oauth\_update.xml \
-                -DWasPassword=password -DPortalAdminPwd=password 
         Linux: ./ConfigEngine.sh update-outbound-http-connection-config -DconfigFileName=/tmp/global\_oauth\_update.xml \
                  -DWasPassword=password -DPortalAdminPwd=password 
-        Solaris: ./ConfigEngine.sh update-outbound-http-connection-config -DconfigFileName=/tmp/global\_oauth\_pdate.xml \
-                    -DWasPassword=password -DPortalAdminPwd=password 
         Windows: ConfigEngine.bat update-outbound-http-connection-config -DconfigFileName=/tmp/global\_oauth\_update.xml \
                   -DWasPassword=password -DPortalAdminPwd=password 
         ```
@@ -175,8 +169,8 @@ Set up a password grant flow to resources that are protected by the Liberty OAut
 
     Where
 
-    -   The variable dx\_host.com is for the host name and port number of the Portal Server.
-    -   The variables portal\_user and portal\_pwd are for the portal credentials that you want to use.
+    -   The variable dx_host.com is for the host name and port number of the Portal Server.
+    -   The variables portal_user and portal_pwd are for the portal credentials that you want to use.
     -   The variable `www.myremotesite.com:9443` is for the host name and port of the liberty server.
 
 

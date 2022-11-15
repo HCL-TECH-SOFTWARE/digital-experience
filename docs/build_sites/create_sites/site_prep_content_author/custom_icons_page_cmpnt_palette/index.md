@@ -43,14 +43,14 @@ When the icon is rendered, the best match is found in the following way:
 
 Image sizes of `18x18`,`32x32`, `64x64`, or `128x128` are best suited for custom images. If other sizes are used, the custom image is resized to fit the default sizes and your image might not display as expected. Creating images for use with each of these sizes will also prevent distorted images from being displayed.
 
-<!---
--   **[Specifying custom icons for content items in a content template](../admin-system/epc_custom_images_content_template.md)**  
+
+-   **[Specifying custom icons for content items in a content template](epc_custom_images_content_template.md)**  
 You can specify custom icons for content items that are displayed in the web content authoring interface by deploying the image file or multi-scale ZIP file directly into a content template.
--   **[Creating custom icons by adding a file element](../admin-system/epc_custom_images_element.md)**  
+-   **[Creating custom icons by adding a file element](epc_custom_images_element.md)**  
 You can create custom images for items in the Page Components palette and Web content authoring interface by deploying the image file or multi-scale ZIP file directly into the item in the Page Components palette or Web content authoring interface as an element.
--   **[Creating custom icons by referencing a file component](../admin-system/epc_custom_images_reference.md)**  
+-   **[Creating custom icons by referencing a file component](epc_custom_images_reference.md)**  
 You can create custom images for items in the Page Components palette and Web content authoring interface by deploying the image file or multi-scale ZIP file as a file component in a library. Then, put a component reference element into your item that refers to that file component.
--   **[Creating custom icons by adding an image element](../admin-system/epc_custom_images_element_img.md)**  
-You can create custom images for items in the Page Components palette and Web content authoring interface by deploying the image file directly into the item in the Page Components palette or Web content authoring interface as an element. --->
+-   **[Creating custom icons by adding an image element](epc_custom_images_element_img.md)**  
+You can create custom images for items in the Page Components palette and Web content authoring interface by deploying the image file directly into the item in the Page Components palette or Web content authoring interface as an element.
 
 
