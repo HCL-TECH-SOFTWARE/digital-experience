@@ -4,8 +4,10 @@ You can customize social rendering view definitions in a number of ways. For exa
 
 Typically, a website designer does these customizing tasks.
 
-**Note:** If you want to customize the web content that the sample web content library named Social Lists 1.0 provides, create a copy of that library and customize that copy.
+!!! note
+    If you want to customize the web content that the sample web content library named Social Lists 1.0 provides, create a copy of that library and customize that copy.
 
+<!---
 -   **[Customizing social list definitions by using inline editing](../social/soc_rendr_cust_socl_list.md)**  
 You can customize your list view definitions by defining the following settings in inline editing mode. List view definitions are represented by content items of the social list definition authoring template. This customization is normally done by a web designer or a page editor.
 -   **[Customizing forum topic details view definitions by using inline editing](../social/soc_rendr_cust_forum_topc_dvd.md)**  
@@ -17,11 +19,9 @@ You can customize the visual appearance of the markup that your social rendering
 -   **[Creating custom authoring templates for list definitions](../social/soc_rendr_create_cust_auth_templt.md)**  
 Social rendering provides you a set of view definitions that you can use to add social data to your portal pages. These list view definition content items are created from the social list definition HCL Web Content Manager authoring template. You can create your own custom list view definitions by creating new content items from this authoring template. To customize social rendering even further, you can also create your own authoring templates to extend the data set that makes up your list view definitions.
 -   **[Implementing interactions with social objects](../wcm/wcm_dev_impl_intrax_soc_objects.md)**  
-Site designers can implement design components that support interactions between the user and the social data. For example, a user can post a new reply to a forum topic or delete a previous reply.
+Site designers can implement design components that support interactions between the user and the social data. For example, a user can post a new reply to a forum topic or delete a previous reply. --->
 
 
-**Related information**  
-
-
-[Roadmap: How to work with social rendering](../social/soc_rendr_roadmap.md)
+???+ info "Related information"
+    - [Roadmap: How to work with social rendering](../soc_rendr_roadmap.md)
 

@@ -2,7 +2,7 @@
 
 Create a dynamic content spot mapping to customize the theme for Top, Primary, and Secondary navigation. Change the yourTheme value to the name of your theme.
 
-1.  For primary navigation, add a subcontribution to the wp\_dynamicContentSpots\_85 module in your theme's plugin.xml file. The plugin.xml file is in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\installedApps\\cell\\YourTheme.ear\\YourTheme.war\\WEB-INF folder.
+1.  For primary navigation, add a subcontribution to the wp\_dynamicContentSpots\_85 module in your theme's plugin.xml file. The plugin.xml file is in the [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)\\installedApps\\cell\\YourTheme.ear\\YourTheme.war\\WEB-INF folder.
 
     1.  Give your subcontribution the `ref-id` yourTheme\_primaryNav, assuming you are changing the primary level.
 

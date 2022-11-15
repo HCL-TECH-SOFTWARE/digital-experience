@@ -11,7 +11,8 @@ The `allow` and `deny` settings support the following value formats:
 -   Specific IP address. Example `192.168.0.1`
 -   Specific IP address with wildcards. Example `192.168.*.1`
 
-**Note:** If you declare multiple `ipfilter` settings in the proxy configuration, the proxy processes them by the sequence in which you specify them. As a result, the last matching rule always takes effect, regardless of the previous rules.
+!!!note
+     If you declare multiple `ipfilter` settings in the proxy configuration, the proxy processes them by the sequence in which you specify them. As a result, the last matching rule always takes effect, regardless of the previous rules.
 
 The following example makes the policies in the `/myproxy` mapping accessible only to clients that have an IP address in the specified range:
 

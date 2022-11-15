@@ -12,12 +12,10 @@ When you create or edit a template, you define default values for the site or se
 
 -   To move templates from one virtual portal to another, use the **Export** action. Each virtual portal must have Web Content Manager and Site Builder installed.
 
-
+<!--
 -   **[Site and section templates](../panel_help/sitebuilder_using_templates.md)**  
 Create site templates to rapidly deploy complete websites. Create section templates to quickly add sections that are based on common information architecture patterns to existing websites.
 -   **[Creating sites and adding sections](../panel_help/sitebuilder_using_creating_sites.md)**  
 Rapidly deploy websites or add new sections to existing sites from predefined site or section templates.
 -   **[Content seeding](../panel_help/sitebuilder_using_content_seeding.md)**  
-Content seeding allows the user to create a page from a page template by using their own custom content that works along side or completely replace the default content of a page template.
-
-
+Content seeding allows the user to create a page from a page template by using their own custom content that works along side or completely replace the default content of a page template. -->

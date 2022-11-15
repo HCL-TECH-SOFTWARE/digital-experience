@@ -12,15 +12,7 @@ Get an overview of the methods of the PageViewEvent class.
 
 |Method|Explanation|
 |------|-----------|
-|```
-public PageViewEvent( HttpServletRequest request )
-```
-
-|Constructor.|
-|```
-public String toString( )
-```
-
-|Returns a String representation of this event.|
+|public PageViewEvent( HttpServletRequest request )|Constructor.|
+|public String toString( )|Returns a String representation of this event.|
 
 

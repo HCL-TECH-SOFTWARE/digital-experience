@@ -4,7 +4,8 @@ To use these predefined public render parameters in your portlet, declare each o
 
 The following example shows how to register the parameters that hold the portal page selection and locale information. In this case, the prefix mapping for the portal namespace is defined on the root portlet-app element of the deployment descriptor.
 
-**Note:** The portlet itself does not need to deal with the qualified names of the respective render parameters in its implementation. It can use local identifiers instead, which are defined as part of the respective public-render-parameter element at the end of the descriptor. In this specific case, the page selection parameter is mapped to the local identifier pageID whereas the locale parameter is mapped to the local identifier locale.
+!!!note
+     The portlet itself does not need to deal with the qualified names of the respective render parameters in its implementation. It can use local identifiers instead, which are defined as part of the respective public-render-parameter element at the end of the descriptor. In this specific case, the page selection parameter is mapped to the local identifier pageID whereas the locale parameter is mapped to the local identifier locale.
 
 Code Sample:
 

@@ -22,21 +22,16 @@ Advantages are as follows:
 
 By default the searches are case sensitive. If you want to perform a case insensitive search, an administrator needs to enable tag normalization in the CP Configuration Service. For details refer to the topic about the CP Configuration Service for tagging and rating
 
-
+<!--
 **Previous topic:**[Search Center](../wcm/h_search_searchcenter.md)
 
-**Next topic:**[Planning and preparing for Portal Search](../admin-system/srcbfrwrkgwtprtlsrch.md)
-
-**Related information**  
+**Next topic:**[Planning and preparing for Portal Search](srcbfrwrkgwtprtlsrch.md)-->
 
 
-[Querying for the OpenSearch description document](../admin-system/tag_rate_api_rest_oth_qu_opsrchdoc.md)
-
-[CP Configuration Service for tagging and rating](../admin-system/srvcfg_cpcfg4tr.md)
-
-[Type-ahead feature for the deprecated tag widget](../admin-system/tag_rate_adm_typeahead.md)
-
-[Searching for tagged content](../admin-system/tag_rate_search.md)
-
-[Open Search - http://www.opensearch.org/Home](https://www.opensearch.org/Home)
+???+ info "Related information"
+    - [Querying for the OpenSearch description document](../tagging_rating/dev_tagging_and_rating/rest_api/other_queries/tag_rate_api_rest_oth_qu_opsrchdoc.md)
+    - [CP Configuration Service for tagging and rating](../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/index.md)
+    - [Type-ahead feature for the deprecated tag widget](../tagging_rating/howto_tagging_rating/tag_rate_adm_typeahead.md)
+    - [Searching for tagged content](tag_rate_search.md)
+    - [Open Search - http://www.opensearch.org/Home](https://www.opensearch.org/Home)
 

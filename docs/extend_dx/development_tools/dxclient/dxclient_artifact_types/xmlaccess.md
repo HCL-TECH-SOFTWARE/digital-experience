@@ -26,7 +26,7 @@ dxclient xmlaccess -h
 
 **Command options**
 
-Use this attribute to specify the protocol with which to connect to the DX server \(wp\_profile\):
+Use this attribute to specify the protocol with which to connect to the DX server (wp_profile):
 
 ```
 -dxProtocol <value>
@@ -38,19 +38,19 @@ Use this attribute to specify the hostname of the target DX server:
 -hostname <value>
 ```
 
-Use this attribute to specify the port on which to connect to the DX server \(`wp_profile`\):
+Use this attribute to specify the port on which to connect to the DX server (`wp_profile`):
 
 ```
 -dxPort <value>
 ```
 
-Use this attribute to specify the path to DX configuration endpoint \(e.g. /wps/config\):
+Use this attribute to specify the path to DX configuration endpoint (e.g. /wps/config):
 
 ```
 -xmlConfigPath <value>
 ```
 
-Use this attribute to specify the username to authenticate with the DX server \(`wp_profile`\):
+Use this attribute to specify the username to authenticate with the DX server (`wp_profile`):
 
 ```
 -dxUsername <value>

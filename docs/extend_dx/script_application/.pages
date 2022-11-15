@@ -1,9 +1,9 @@
 title: Script Applications
 nav:
     - index.md
-    - installing_the_script_portlet.md
-    - Command Line Overview: script_application_cmdln_app_overview
-    - Security Overview: script_application_security
-    - Build Script Applications: build_app_with_script_application
-    - sample_script_application.md
-    - ts_preview.md
+    - build_app_with_script_application
+    - DXClient CLI: ../extend_dx/development_tools/dxclient/
+    - script_application_security
+    - Tutorial: ../guide_me/tutorials/scriptapps/
+    - limitations.md
+    - troubleshooting.md

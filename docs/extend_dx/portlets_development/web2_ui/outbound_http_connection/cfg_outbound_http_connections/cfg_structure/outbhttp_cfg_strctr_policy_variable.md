@@ -21,10 +21,6 @@ Policy variables are used in the `urlPattern` setting of a proxy rule item, or i
     As a result, the policy rule applies to URLs that start with `http://localhost/wps/portal/Main/` or `http://localhost/wps/myportal/Main/`. The purpose of this technique is to make one policy rule available for multiple URL patterns that can contain dynamic parts.
 
 
-For hints and tips for working with policy variables and setting them, read the following topic.
-
--   **[Setting policy variables](../dev-portlet/outbhttp_cfg_strctr_policy_variable_set.md)**  
-You can set policy variables in different ways.
-
-**Parent topic:**[Configuration structure](../dev-portlet/outbhttp_cfg_structure.md)
+???+ info "Related information"
+    - [Setting policy variables](https://help.hcltechsw.com/digital-experience/9.5/dev-portlet/outbhttp_cfg_strctr_policy_variable_set.html)
 

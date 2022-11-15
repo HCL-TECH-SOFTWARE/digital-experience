@@ -4,7 +4,8 @@ You can export and import the contents of individual virtual portals by using th
 
 Address the virtual portal by the URL context or the host name that you specified when you created the virtual portal. Specify the unique virtual portal URL or host name with your XML request by either of the following options:
 
-**Note:** In the following examples, the commands are shown on three lines, but you must enter them as one line.
+!! note
+    In the following examples, the commands are shown on three lines, but you must enter them as one line.
 
 -   If you created the virtual portal by specifying a URL context:
 
@@ -28,7 +29,8 @@ Address the virtual portal by the URL context or the host name that you specifie
     For the variable `host\_name` use the host name that you specified when you created the virtual portal. For more information, see *Creating a virtual portal* and *Task create-virtual-portal*.
 
 
-**Note:** When you use the XML configuration interface to work with virtual portals, be aware of the following rules:
+
+When you use the XML configuration interface to work with virtual portals, be aware of the following rules:
 
 1.  You cannot export or import a complete virtual portal by using the XML configuration interface. You can export or import only the contents of a virtual portal. If you want to transfer a virtual portal from a source server to a target server, proceed as follows:
 
@@ -44,11 +46,13 @@ Address the virtual portal by the URL context or the host name that you specifie
 
         -   If the source virtual portal and the target virtual portal are on the same portal server, the URL mappings of the source virtual portal are updated to point to resources in the target virtual portal into which you imported the content. You can no longer use such a URL context to access the resource in the source virtual portal.
         -   If the source virtual portal and the target virtual portal are not on the same portal server, but there is another virtual portal on the target portal server that has the same URL context as the source virtual portal. The URL mappings of this virtual portal are updated to point to resources in the target virtual portal into which you imported the content. And you can no longer use such a URL context to access the resource in this virtual portal.
-        **Note:** This step is critical for the URL mapping of a URL context that is created for a virtual portal during its creation. Updating this initial URL mapping of a virtual portal URL context makes that virtual portal unusable.
+        !!! note
+            This step is critical for the URL mapping of a URL context that is created for a virtual portal during its creation. Updating this initial URL mapping of a virtual portal URL context makes that virtual portal unusable.
 
     -   Deploying portlet applications into a virtual portal by using the XML configuration interface: If you deploy a portlet, that portlet is available to all virtual portals in the portal installation, unless you restrict this deployment by using Portal Access Control. If that portlet was already deployed in other virtual portals, errors can occur during the execution of the XML request.
 
 
+<!--
 **Related information**  
 
 
@@ -64,5 +68,5 @@ Address the virtual portal by the URL context or the host name that you specifie
 
 [Task: create-virtual-portal](../admin-system/advp_cfgtsk_create.md)
 
-[Configuring the sub administrators for virtual portals](../admin-system/advp_tsk_cfg_subadmin.md)
+[Configuring the sub administrators for virtual portals](../admin-system/advp_tsk_cfg_subadmin.md) -->
 

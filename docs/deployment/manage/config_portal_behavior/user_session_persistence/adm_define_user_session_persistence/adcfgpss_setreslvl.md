@@ -4,7 +4,8 @@ The session resume level specifies which navigational state information is resum
 
 You configure the session resume level by setting the property `persistent.session.level` in the Portal Configuration Service as described in the topic about *Setting service configuration properties*. You can configure the property to one of four predefined values: 0, 1, 2, and 3.
 
-**Note:** If you want the user to benefit from the setting, give users the resume option as described in the topic about *Giving users the resume option*. However, the defined setting is in effect, independent of whether you give users the resume option or not.
+!!!note
+    If you want the user to benefit from the setting, give users the resume option as described in the topic about *Giving users the resume option*. However, the defined setting is in effect, independent of whether you give users the resume option or not.
 
 The four persistent session level values have the following effects:
 

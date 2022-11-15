@@ -8,18 +8,16 @@ Enabling auto-loading makes the system simpler and easier to use. Users can add 
 
 When auto-loading is turned on for a theme, it is not common to turn it off later. If you do, many pages can report missing capability error messages until appropriate profiles are assigned to the pages.
 
--   **[Changing the auto-loading of portlet capabilities with WebDAV](../dev-theme/themeopt_chng_auto_load_cap_webdav.md)**  
+
+
+-   **[Changing the auto-loading of portlet capabilities with WebDAV](themeopt_chng_auto_load_cap_webdav.md)**  
 You can change the auto-loading of portlet capabilities with WebDAV.
--   **[Changing the auto-loading of portlet capabilities with XMLAccess](../dev-theme/themeopt_chng_auto_load_cap_xmlaccess.md)**  
+-   **[Changing the auto-loading of portlet capabilities with XMLAccess](themeopt_chng_auto_load_cap_xmlaccess.md)**  
 You can change the auto-loading of portlet capabilities with XMLAccess.
 
 
-**Related information**  
-
-
-[Resource Aggregator overview](../dev-theme/themeopt_reso_agg.md)
-
-[Module dependencies in portlets](../dev-theme/themeopt_mod_capfilters.md)
-
-[Configuration settings for capability filters](../dev-theme/themeopt_mod_capfilter_settings.md)
+???+ info "Related information:"
+    - [Resource Aggregator overview](../../the_module_framework/themeopt_reso_agg.md)
+    - [Module dependencies in portlets](../themeopt_mod_capfilters.md)
+    - [Configuration settings for capability filters](../../customizing_theme/cfg_portal_theme_and_modules/themeopt_mod_capfilter_settings.md)
 

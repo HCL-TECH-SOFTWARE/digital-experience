@@ -17,7 +17,7 @@ To verify inside HCL Digital Experience:
    ![Theme Button](../../images/18PSThemeButton.png)
    Click Pencil Button on the right side of the theme to be used (i.e. Script Applications Test Theme)
    ![Edit Button](../../images/18EditTestTheme.png)
-   Go to profiles->profile_deferred_react.json then remove the 3 highlighted moduleIDs
+   Go to profiles->profile_deferred_react.json then remove the 3 highlighted moduleIDs (for release builds prior to CF205, the following modules will not exist).
    ![Remove Default](../../images/18removedefaultmodule.png)
    Add the new module (i.e. Reactv18r2). Click on the Save button (disc icon) in the upper right area.
    ![Add DX Module](../../images/18addModuleReactv18r12.png)

@@ -6,7 +6,7 @@ Changes that you make here apply to all instances of the rating widget.
 
 Some of the components are mandatory. Do not remove them.
 
-To modify the components, navigate to **Applications** \> **Content** \> **WCM Authoring** \> **Libraries** \> **Web Resources v70** \> **Components**.
+To modify the components, navigate to **Web Content** \> **Authoring** \> **Libraries** \> **Web Resources v70** \> **Components**. (You may need to add the Web Resources v70 library to the Library Selection list if it is not initially shown. Click on **Preferences** > **Edit Shared Settings** > **Library Selection** to adjust which libraries are shown when authoring web content.)
 
 -   **HTML - Tagging Widget Light - Label:**
 
@@ -84,8 +84,6 @@ To modify the components, navigate to **Applications** \> **Content** \> **WCM A
 
 
 
-**Related information**  
-
-
-[Tag widget parameter reference](../admin-system/tag_rate_parm_ref_inl_tag_lite.md)
+???+ info "Related information"
+    - [Tag widget parameter reference](../../../cfg_reference/parm_ref_tag_rate_widget/tag_rate_parm_ref_inl_tag_lite.md)
 

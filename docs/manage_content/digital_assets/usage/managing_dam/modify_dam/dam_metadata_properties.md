@@ -22,19 +22,19 @@ Follow these steps to view/edit the embedded metadata of a media asset:
     -   **Versions** - Presents multiple versions of the asset that have been saved. You can also use this feature to view versions of media asset renditions.
 5.  Click **Save**. A notification shows that the media asset information is updated successfully.
 
-![View and edit media asset keywords](../../../../images/View_and_edit_media_asset_keywords.png)
+![View and edit media asset keywords](../../../../../images/View_and_edit_media_asset_keywords.png)
 
 ## DAM Asset Tagging with Google Vision API
 
 Beginning with HCL Digital Experience 9.5 Container Update CF205, using a custom  Digital Asset Management extension that provides integration with the Google Vision API, DX practitioners can leverage the integration to automate additional asset tagging to the DAM media item details. This feature can be used alongside traditional DAM asset tagging methods and can help content authors and marketing professionals fine tune the relevance of their DAM assets in search results for target audiences.  
 
-![Leverage integration with Google Vision API image tagging on DAM assets](../../../../images/Leverage_integration_with%20Google%20API.png)
-![Edit or add to keywords defined to DAM assets](../../../../images/Edit_or_add_to_keyword_to_DAM_assets.png)
+![Leverage integration with Google Vision API image tagging on DAM assets](../../../../../images/Leverage_integration_with%20Google%20API.png)
+![Edit or add to keywords defined to DAM assets](../../../../../images/Edit_or_add_to_keyword_to_DAM_assets.png)
 
 **Pre-requisites:**
 
 1. An entitlement to [Google Vision API](https://cloud.google.com/vision/docs/detect-labels-image-api). 
-2. Configuration of the Digital Asset Management extension capability to integrate Google Vision image tagging. For more information, see [Configure DAM extension to Google Vision API](../../configuration/dam_extensibility/configure_DAM_extension_to_google_vision_API.md).
+2. Configuration of the Digital Asset Management extension capability to integrate Google Vision image tagging. For more information, see [Configure DAM extension to Google Vision API](../../../configuration/dam_extensibility/configure_DAM_extension_to_google_vision_API.md).
 
 ## Keyword details
 
@@ -45,9 +45,9 @@ Keyword details feature showcases data on both user-added and plugin-generated k
 1. Click on an asset to open the inspector panel or click on the edit media icon.
 
 2. Click **Details**, to view the keyword details.
-![Keyword details](../../../../images/dam_keyword_details.png)
+![Keyword details](../../../../../images/dam_keyword_details.png)
 
-![Keyword screen](../../../../images/dam_keyword_screen.png)
+![Keyword screen](../../../../../images/dam_keyword_screen.png)
 
 **Keyword details screen contains following details**
 

@@ -155,18 +155,19 @@ This parameter modifies the path of the remote URL. The metadata value contains 
 
 -   The URL `http://mysite.com/test8/production/` is changed to `http://mysite.com/test8/test/`
 
-**Note:** The feature does not support the transformation of the parts of the URL, which are relevant for the cookie handling or URL pattern resolution. For example,
+!!!note
+     The feature does not support the transformation of the parts of the URL, which are relevant for the cookie handling or URL pattern resolution. For example,
 
-```
+     ```
 
-<policy url="http://mysite.com/invalid_example*" >
-     <actions><method>GET</method></actions>
-     <meta­data>
-          <name>url_transformation.modify_url_path</name>
-          <value>s/www.mysite.com/www.anothersite.com/</value>
-     </meta­data>
-</policy>
+     <policy url="http://mysite.com/invalid_example*" >
+          <actions><method>GET</method></actions>
+          <meta­data>
+               <name>url_transformation.modify_url_path</name>
+               <value>s/www.mysite.com/www.anothersite.com/</value>
+          </meta­data>
+     </policy>
 
-```
+     ```
 
 

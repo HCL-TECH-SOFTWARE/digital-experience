@@ -14,6 +14,7 @@ Use the **Configure** mode to define default values for the configuration settin
 
     The default values are used whenever a new instance of the web content viewer is added to a page.
 
-    **Note:** Any configuration setting that is changed in the **Edit Shared Settings** mode can be restored to the default value defined in the **Configure** mode by clicking **Reset** for the setting.
+    !!! note
+        Any configuration setting that is changed in the **Edit Shared Settings** mode can be restored to the default value defined in the **Configure** mode by clicking **Reset** for the setting.
 
 

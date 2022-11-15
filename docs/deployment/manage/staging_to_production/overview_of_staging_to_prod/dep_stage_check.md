@@ -5,7 +5,7 @@ The items in the production list can be included in the staging to production Po
 Within the Staging to production documentation, the following directories are the root directories where you place your subdirectories:
 
 -   For the base portal: WebSpherePortal
--   For the Virtual Portals: object\_id
+-   For the Virtual Portals: object_id
 
 ## Themes and skins
 
@@ -13,7 +13,7 @@ Choose one of the following static resource options:
 
 -   **Static resources in the WebDAV file store**
 
-    Follow the staging to production documentation to export and import your themes and skins. For more information, see [Developing themes for a production portal](../dev-theme/themeopt_stagetoprod.md). To include these resources in your initial or differential release PAA, use the -DexportWebDavTheme=true parameter.
+    Follow the staging to production documentation to export and import your themes and skins. For more information, see [Developing themes for a production portal](../../../../build_sites/themes_skins/developing_theme/index.md). To include these resources in your initial or differential release PAA, use the -DexportWebDavTheme=true parameter.
 
     -   **Directory structure**
 
@@ -21,7 +21,7 @@ Choose one of the following static resource options:
 
 -   **Static resources in an .ear file**
 
-    Follow the staging to production documentation to export and import your themes and skins. Read [Developing themes for a production portal](../dev-theme/themeopt_stagetoprod.md). To include these resources in your initial or differential release PAA, use the -DappsToExtract parameter.
+    Follow the staging to production documentation to export and import your themes and skins. Read [Developing themes for a production portal](../../../../build_sites/themes_skins/developing_theme/index.md). To include these resources in your initial or differential release PAA, use the -DappsToExtract parameter.
 
     -   **Directory structure**
 
@@ -35,18 +35,18 @@ The following information is a list of portal server artifacts:
 -   action
 -   client
 -   component
--   content-node \(pages\)
+-   content-node (pages)
 -   credential-segment
 -   device-class
 -   global-settings
 -   language
 -   markup
 -   resource-type
--   skin \(definition\)
+-   skin (definition)
 -   task
--   theme \(definition\)
+-   theme (definition)
 -   services-settings
--   servlet \(definition\)
+-   servlet (definition)
 -   portal
 -   portlet-app
 -   portlet
@@ -64,17 +64,19 @@ The following information is a list of portal server artifacts:
 
 These artifacts are included by default in your initial or differential release PAA. If you are building a custom PAA, use an XMLAccess.xml file for installation or uninstallation.
 
--   **XMLAccess .xml files \(for installation\)**
+-   **XMLAccess .xml files (for installation)**
 
     Place these files in the following directory: content/xmlaccess/install.
 
-    **Note:** These files might contain the statements to install portlets and transformations out of the war directory and to create pages.
+    !!!note
+        These files might contain the statements to install portlets and transformations out of the war directory and to create pages.
 
--   **XMLAccess .xml files \(for uninstallation\)**
+-   **XMLAccess .xml files (for uninstallation)**
 
     Place these files in the following directory: content/xmlaccess/uninstall.
 
-    **Note:** These files might contain the statements to remove portlets, transformations, and pages.
+    !!!note
+        These files might contain the statements to remove portlets, transformations, and pages.
 
 -   **References**
 
@@ -93,7 +95,7 @@ These artifacts are included by default in your initial or differential release 
     -   common-resources
 -   **References**
 
-    See [Exporting content from the filestore](../dev-theme/themeopt_move_expfilestore.md).
+    See [Exporting content from the filestore](../../../../build_sites/themes_skins/developing_theme/dev_op_overview/manual_packaging_themes/themeopt_move_expfilestore.md).
 
 
 ## Personalization rules and campaigns
@@ -110,7 +112,7 @@ These artifacts are included by default in your initial or differential release 
 
 -   **References**
 
-    See [Staging Personalization rules to production](pzn_stage_prod.md).
+    See [Staging Personalization rules to production](../../../../manage_content/pzn/pzn_stage_prod.md).
 
 
 ## Web Content Manager data
@@ -133,7 +135,7 @@ To include Web Content Manager data in your initial release PAA, use the -Dexpor
 
 -   **References**
 
-    Read [Exporting and importing web content libraries](../wcm/wcm_config_wcmlibrary_export_main.md).
+    Read [Exporting and importing web content libraries](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcmlibrary_export/index.md).
 
 
 ## Portlet WAR files
@@ -142,11 +144,11 @@ These artifacts are included by default in your initial or differential release 
 
 If you are building a custom PAA, choose one or more of the following portlet options:
 
--   **JSR 168 and JSR 286 Portlets \(without an XMLAccess script to deploy\)**
+-   **JSR 168 and JSR 286 Portlets (without an XMLAccess script to deploy)**
 
     Place these portlets in the following directory: InstallableApps/portlets.
 
--   **JSR 168 and JSR 286 Portlets \(with an XMLAccess script to deploy\)**
+-   **JSR 168 and JSR 286 Portlets (with an XMLAccess script to deploy)**
 
     Place these portlets in the following directory: InstallableApps/war.
 
@@ -160,7 +162,8 @@ If you are building a custom PAA, choose one or more of the following portlet op
 
     Place these portlets in the following directory: InstallableApps/war.
 
-    **Note:** These .war files are not handled automatically. These files are copied to the archive and must be installed by an accompanied XMLAccess script.
+    !!!note
+        These .war files are not handled automatically. These files are copied to the archive and must be installed by an accompanied XMLAccess script.
 
 
 ## Shared libraries
@@ -179,23 +182,23 @@ The following list contains all portal components that are not handled by the in
 
 -   **Portal Server Performance Tuning parameters**
 
-    Follow the performance tuning guide: [Performance](http://www.lotus.com/ldd/portalwiki.nsf/xpViewCategories.xsp?lookupName=Performance)
+    Follow the performance tuning guide: [HCL Digital Experience Performance Tuning Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074411)
 
 -   **Active Site Analytics Statistics**
 
-    There are no applicable tools for exporting or importing Active Site Analytics Statistics. Statistics from staging server are not typically exported or imported. Read [Analyzing portal usage data](../admin-system/sa.md).
+    There are no applicable tools for exporting or importing Active Site Analytics Statistics. Statistics from staging server are not typically exported or imported. Read [Analyzing portal usage data](../../monitoring/analyze_portal_usage/index.md).
 
--   **WebSphere® Application Server Resource Environment Providers \(Portal service settings are stored as Resource Environment Providers\)**
+-   **WebSphere® Application Server Resource Environment Providers (Portal service settings are stored as Resource Environment Providers)**
 
     Run the wsadmin task to export. Run the following ConfigEngine task to import: update-properties.
 
     Read the following documentation:
 
     -   [http://www.ibm.com/developerworks/websphere/techjournal/0904\_chang/0904\_chang.html](http://www.ibm.com/developerworks/websphere/techjournal/0904_chang/0904_chang.html)
-    -   [Setting service configuration properties](../admin-system/adsetcfg.md)
+    -   [Setting service configuration properties](../../config_portal_behavior/service_config_properties/index.md)
 -   **External Security Manager**
 
-    Follow the staging to production documentation. Read [Staging and external security managers](dep_stageextac.md).
+    Follow the staging to production documentation. Read [Staging and external security managers](../../staging_to_production/dep_stageextac.md).
 
 -   **Custom components**
 
@@ -209,36 +212,20 @@ The following list contains all portal components that are not handled by the in
 
 -   **Vanity URLs**
 
-    These artifacts are included by default in your initial or differential release PAA. A vanity URL is a portal artifact that is stored with the portal page that it targets. Vanity URLs are managed and stored in the Web Content Manager Portal Site library. Therefore, if you want to stage your portal to production, it is not enough to stage the portal pages by using the portal XML configuration interface \(XMLAccess\). You must transfer data on both the portal and the Web Content Manager side.
-
-
+    These artifacts are included by default in your initial or differential release PAA. A vanity URL is a portal artifact that is stored with the portal page that it targets. Vanity URLs are managed and stored in the Web Content Manager Portal Site library. Therefore, if you want to stage your portal to production, it is not enough to stage the portal pages by using the portal XML configuration interface (XMLAccess). You must transfer data on both the portal and the Web Content Manager side.
 
 **Related information**  
-
-
-[Staging-server topology for Web Content Manager](../wcm/wcm_topology_staged.md)
-
-[Web content testing environments](../wcm/wcm_cms_server_uat.md)
-
-[Publishing personalization rules](../pzn/pzn_depub.md)
-
-[Working with the XML configuration interface](../admin-system/adxmltsk.md)
-
-[XML configuration reference](../admin-system/adxmlref.md)
-
-[Exporting and importing a web content library](../wcm/wcm_config_wcmlibrary_export.md)
-
-[Deleting a web content library](../panel_help/wcm_config_wcmlibrary_delete.md)
-
-[Using the XML configuration interface to work with virtual portals](../admin-system/advp_xml.md)
-
-[How to configure a web content staging environment](../wcm/wcm_config_prop_staging.md)
-
-[Administering managed pages](../wcm/wcm_mngpages_advadmin.md)
-
-[Exporting content from the filestore](../dev-theme/themeopt_move_expfilestore.md)
-
-[Staging Personalization rules to production](../deploy/pzn_stage_prod.md)
-
-[Exporting and importing web content libraries](../wcm/wcm_config_wcmlibrary_export_main.md)
+[Staging-server topology for Web Content Manager](../../../../manage_content/wcm/wcm_content_delivery/syndication/staging_wcm/index.md)<br>
+[Web content testing environments](../../../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_cms_server_uat.md)<br>
+[Publishing personalization rules](../../../../manage_content/pzn/publishing_pzn_rules/index.md)<br>
+[Working with the XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)<br>
+[XML configuration reference](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref.md)<br>
+[Exporting and importing a web content library](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcmlibrary_export/wcm_config_wcmlibrary_export.md)<br>
+[Deleting a web content library](../../../../manage_content/wcm/wcm_artifacts/web_content_library/manage_web_content_lib/wcm_config_wcmlibrary_delete.md)<br>
+[Using the XML configuration interface to work with virtual portals](../../../../build_sites/virtual_portal/vp_reference/vp_command_ref/advp_xml.md)<br>
+[How to configure a web content staging environment](../../../../manage_content/wcm/wcm_content_delivery/syndication/staging_wcm/wcm_config_prop_staging.md)<br>
+[Administering managed pages](../../../../manage_content/wcm/wcm_artifacts/managed_pages/advadmin_managedpages/index.md)<br>
+[Exporting content from the filestore](../../../../build_sites/themes_skins/developing_theme/dev_op_overview/manual_packaging_themes/themeopt_move_expfilestore.md)<br>
+[Staging Personalization rules to production](../../../..//manage_content/pzn/pzn_stage_prod.md<br>
+[Exporting and importing web content libraries](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcmlibrary_export/index.md)
 

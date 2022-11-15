@@ -6,9 +6,9 @@ Visibility rules use any type of information, including LDAP attributes, time of
 
 Visibility rules can be assigned to pages and portlets and will be triggered automatically by the portal as needed. Through the APIs, visibility rules behave like profiler rules where the only two possible profiles are **show** and **hide**. This allows visibility rules to be invoked programmatically and used in any custom application just as you would call a profiler rule. Visibility rules only apply to authenticated users.
 
--   **[Example: Show page or portlet](../pzn/pzn_example_visibility.md)**  
+-   **[Example: Show page or portlet](pzn_example_visibility.md)**  
 View an example of a visibility rule, Show Page that shows the specified page or portlet only during the specified time period, and only to users in the Midwest. For all other dates and users, the page or portlet is hidden.
--   **[Example: Show page or portlet](../pzn/pzn_example_visibility.md)**  
+-   **[Example: Show page or portlet](pzn_example_visibility.md)**  
 View an example of a visibility rule, Show Page that shows the specified page or portlet only during the specified time period, and only to users in the Midwest. For all other dates and users, the page or portlet is hidden.
 
 

@@ -17,7 +17,7 @@ if (home != null) {
 }
 ```
 
-Depending on the modification that you want to make, you might require additional preceding code statements. For more details refer to [Obtaining a controller for working with resources](ctrlrapit_obtn_ctrlr.md).
+Depending on the modification that you want to make, you might require additional preceding code statements. For more details refer to [Obtaining a controller for working with resources](/working_with_controllers/ctrlrapit_obtn_ctrlr.md).
 
 Subsequent code: After you have completed your modifications, you commit the controller so that the modification take effect. After that you cannot use or commit the controller any more, but you dispose it. To commit your modifications and dispose the controller, add the following statements to your code:
 
@@ -31,7 +31,7 @@ try {
 
 ```
 
-For more details about this refer to [Committing and persisting your modifications](ctrlrapit_comit.md).
+For more details about this refer to [Committing and persisting your modifications](/working_with_controllers/ctrlrapit_comit.md).
 
 -   **[Modifying portal resources and topologies](../controller_spi_modification/modify_portal_resources/index.md)**  
 The Controller SPI allows you to modify portal resources and the topology of your portal in different ways.
@@ -39,7 +39,7 @@ The Controller SPI allows you to modify portal resources and the topology of you
 The Controller SPI enables the modification of properties resources.
 
 
-???info "**Related information:**"  
+???info "Related information"  
     - [Obtaining a controller for working with resources](../working_with_controllers/index.md)
     - [Committing and persisting your modifications](../working_with_controllers/ctrlrapit_comit.md)
 

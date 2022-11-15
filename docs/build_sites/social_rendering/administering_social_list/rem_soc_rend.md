@@ -4,7 +4,7 @@ You can remove the Social Lists 1.0 library and its configuration to remove it f
 
 The difference between the deprecated Social Lists 1.0 library and the Social lists 1.1 library is the use of OneUI styles. The latest versions of the social rendering uses the Social Lists 1.1 library and does not depend on the OneUI styles.
 
-1.  In the Web Content Manager Authoring portlet, click **Social Lists 1.0** \> **Content** \> **Social Content site area**.
+1.  In the Web Content Manager Authoring portlet, click **Social Lists 1.0 > Content > Social Content site area**.
 
 2.  Click **Show hidden fields**.
 
@@ -16,26 +16,20 @@ The difference between the deprecated Social Lists 1.0 library and the Social li
 
 6.  Remove references in your applications to Social Lists 1.0 library and its related configuration artifacts.
 
-7.  Change to the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+7.  Change to the [wp\_profile\_root](../../../guide_me/wpsdirstr.md)/ConfigEngine directory.
 
 8.  Run the following command.
 
-    -   AIX® HP-UX Linux™ Solaris: ./ConfigEngine.sh remove-social-rendering-library -DPortalAdminPwd=password -DWasPassword=password
-    -   IBM® i: ConfigEngine.sh remove-social-rendering-library -DPortalAdminPwd=password -DWasPassword=password
-    -   Windows™: ConfigEngine.bat remove-social-rendering-library -DPortalAdminPwd=password -DWasPassword=password
-    -   z/OS®: ./ConfigEngine.sh remove-social-rendering-library -DPortalAdminPwd=password -DWasPassword=password
+    -   AIX and Linux: `./ConfigEngine.sh remove-social-rendering-library -DPortalAdminPwd=password -DWasPassword=password`
+    -   Windows™: `ConfigEngine.bat remove-social-rendering-library -DPortalAdminPwd=password -DWasPassword=password`
+
 9.  Examine the log output with the console, or the ConfigTrace.log file. If the remove-social-rendering-library task completed successfully, continue to the next step and remove the configuration that removes the drag and drop configurations for social rendering view definitions in the toolbar..
 
 10. Run the following command.
 
-    -   AIX HP-UX Linux Solaris: ./ConfigEngine.sh remove-social-rendering-config -DPortalAdminPwd=password -DWasPassword=password
-    -   IBM i: ConfigEngine.sh remove-social-rendering-config -DPortalAdminPwd=password -DWasPassword=password
-    -   Windows: ConfigEngine.bat remove-social-rendering-config -DPortalAdminPwd=password -DWasPassword=password
-    -   z/OS: ./ConfigEngine.sh remove-social-rendering-config -DPortalAdminPwd=password -DWasPassword=password
+    -   AIX and Linux: `./ConfigEngine.sh remove-social-rendering-config -DPortalAdminPwd=password -DWasPassword=password`
+    -   Windows: `ConfigEngine.bat remove-social-rendering-config -DPortalAdminPwd=password -DWasPassword=password`
 
-
-**Related information**  
-
-
-[Static resources](../dev-theme/themeopt_defaultparts_static.md)
+???+ info "Related information"
+    - [Static resources](../../create_sites/building_website/static_content/site_static_resources.md)
 

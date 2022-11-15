@@ -1,4 +1,4 @@
-# Basic monitoring
+# Basic Monitoring
 
 This topic describes options for monitoring an HCL Digital Experience 9.5 Kubernetes deployments installed using Helm.
 
@@ -17,17 +17,17 @@ With the Metrics Server installed, standard `kubectl top` commands can be used 
 !!!example
     To get memory and CPU usage details for the pods in your DX deployment:
 
-        ```
-        kubectl top pod -n your-namespace -l release=your-release-name
-        ```
+      ```
+      kubectl top pod -n your-namespace -l release=your-release-name
+      ```
 
-        In the above example `your-namespace` is the namespace in which your HCL Digital Experience 9.5 deployment is installed and `your-release-name` is the Helm release name you used when installing.
+    In the above example `your-namespace` is the namespace in which your HCL Digital Experience 9.5 deployment is installed and `your-release-name` is the Helm release name you used when installing.
 
     To get memory and CPU usage details for the current Kubernetes node:
 
-        ```
-        kubectl top node
-        ```
+      ```
+      kubectl top node
+      ```
 
 
 

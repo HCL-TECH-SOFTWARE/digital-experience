@@ -4,34 +4,16 @@ The <portal-core/\> tags are used to provide portal core functionality such as e
 
 The following table provides a brief description of each tag.
 
-**Note:** Do not use portal tags in portlet JSPs. The following tags are only for use in theme and skin JSPs.
+!!! note
+    Do not use portal tags in portlet JSPs. The following tags are only for use in theme and skin JSPs.
 
 |Tag|Description|
 |---|-----------|
-|[<portal-core:cacheProxyUrl/\>](#cacheproxyurl)|Creates a URL to the caching proxy servlet.**Note:** This tag is deprecated for HCL Portal 8.0.
-
-|
+|[<portal-core:cacheProxyUrl/\>](#cacheproxyurl)|Creates a URL to the caching proxy servlet.**Note:** This tag is deprecated for HCL Portal 8.0.|
 |[<portal-core:constants/\>](#constants)|Makes the <%= wpsBaseURL %\> and <%= wpsDocURL %\> constants available to the page.|
 |[<portal-core:defineObjects/\>](#defineobjects)|Defines a set of objects which can be used later on \(for example, `escapeXmlWriter`\).|
 |[<portal-core:init-lazy-set/\>](#defineobjects)|This tag initializes the lazy set functionality and is required to be called in the outer most JSP. For example in your theme it would be the default.jsp. It must not be placed in a dynamic content spot JSP.|
-|[<portal-core:lazy-set/\>](#defineobjects)|This tag evaluate the given EL expression unless it has been cached already with the current request and stores a variable in the request scope with the given name \(var\).Attributes:
-
--   **var**
-
-- variable name to be set into the request.
-
--   **elExpression**
-
-EL expression to be evaluated. It must not contain the `${}` because the JSP engine evaluates everything that is surrounded by `${}` as an EL Bean. This invalidates all performance improvements.
-
-
-For example:
-
-```
-<portal-core:lazy-set var="deviceClass" elExpression="wp.clientProfile['DeviceClass']"/>
-```
-
-|
+|[<portal-core:lazy-set/\>](#defineobjects)|This tag evaluate the given EL expression unless it has been cached already with the current request and stores a variable in the request scope with the given name \(var\).Attributes: <br/> -   **var** <br/> - variable name to be set into the request. <br/> -   **elExpression** <br/> EL expression to be evaluated. It must not contain the `${}` because the JSP engine evaluates everything that is surrounded by `${}` as an EL Bean. This invalidates all performance improvements. <br/> For example: <br><pre> ```<portal-core:lazy-set var="deviceClass" elExpression="wp.clientProfile['DeviceClass']"/> ``` <br>|
 |[<portal-core:pageRender/\>](#pagerender)|Used in the Home screen to render the content of the selected page. Do not confuse this with the <portal-core:pageRender/\> tag deprecated in V4.2.|
 |[<portal-core:screenRender/\>](#screen_render)|Starts the rendering of the screen. This tag should be used only in theme JSPs.|
 |[<portal-core:stateBase/\>](#statebase)|Stores a base URL which can be used instead of full, newly-coded URLs on each occurrence of a URL in the markup. This tag should occur only in the header section of the markup, which is provided by theme JSPs.|
@@ -44,7 +26,8 @@ The following section provides detailed descriptions of the <portal-core/\> JSP 
 
     Creates a URL to the caching proxy servlet. The URL created is fully cacheable and includes information about the requesting client. The CC/PP client profile is used for gathering information about the client for the URL. The purpose of this tag is to link .CSS files into the JSP. The tag has one attribute.
 
-    **Note:** For security reasons, the cache proxy servlet will only serve URLs pointing to resources located in the themes, skins, and screens directories. This makes all resources underneath these directories public. Also, any URLs containing the ".." characters will not be served.
+    !!! note
+        For security reasons, the cache proxy servlet will only serve URLs pointing to resources located in the themes, skins, and screens directories. This makes all resources underneath these directories public. Also, any URLs containing the ".." characters will not be served.
 
     Attributes
 

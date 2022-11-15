@@ -10,19 +10,7 @@ If you do not want to provide HTTPs security for your portal search seedlist, yo
 
     ./ConfigEngine.sh action-modify-servlet-transport-guarantee-none-wp.search.servlets/seedlist/servletEAR -DPortalAdminPwd=password -DWasPassword=password
 
--   **HP-UX**
-
-    ./ConfigEngine.sh action-modify-servlet-transport-guarantee-none-wp.search.servlets/seedlist/servletEAR -DPortalAdminPwd=password -DWasPassword=password
-
--   **IBM i**
-
-    ConfigEngine.sh action-modify-servlet-transport-guarantee-none-wp.search.servlets/seedlist/servletEAR -DPortalAdminPwd=password -DWasPassword=password
-
 -   **Linux**
-
-    ./ConfigEngine.sh action-modify-servlet-transport-guarantee-none-wp.search.servlets/seedlist/servletEAR -DPortalAdminPwd=password -DWasPassword=password
-
--   **Solaris**
 
     ./ConfigEngine.sh action-modify-servlet-transport-guarantee-none-wp.search.servlets/seedlist/servletEAR -DPortalAdminPwd=password -DWasPassword=password
 
@@ -30,11 +18,5 @@ If you do not want to provide HTTPs security for your portal search seedlist, yo
 
     ConfigEngine.bat action-modify-servlet-transport-guarantee-none-wp.search.servlets/seedlist/servletEAR -DPortalAdminPwd=password -DWasPassword=password
 
--   **z/OS**
-
-    ./ConfigEngine.sh action-modify-servlet-transport-guarantee-none-wp.search.servlets/seedlist/servletEAR -DPortalAdminPwd=password -DWasPassword=password
-
-
 For your updates to take effect, restart your portal server.
-
 

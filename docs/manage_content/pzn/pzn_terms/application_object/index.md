@@ -12,11 +12,10 @@ When you use application objects that are not installed, you must define the app
 
 The Device, Referrer, Public Render Parameter, and Shared Data application objects are installed and enabled with 8.5.
 
-**Optional:** To enable the Content Targeting Dialog in virtual portals, use XML access to manually create the hidden Content Targeting Dialog page for each virtual portal. From the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory, run the following task:
+**Optional:** To enable the Content Targeting Dialog in virtual portals, use XML access to manually create the hidden Content Targeting Dialog page for each virtual portal. From the wp_profile_root](../reference/wpsdirstr.md#wp_profile_root/ConfigEngine directory, run the following task:
 
--   AIX® HP-UX Linux™ Solaris z/OS®: `./xmlaccess.sh -in [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/pzn.ui/wp.pzn.ui.actions/config/templates/DeployPages.xml -url http://localhost:10039/wps/config/your\_virtual\_portal\_context -user admin\_user\_id -password admin\_password`
--   IBM i: `xmlaccess.sh -in [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/pzn.ui/wp.pzn.ui.actions/config/templates/DeployPages.xml -url http://localhost:10039/wps/config/your\_virtual\_portal\_context -user admin\_user\_id -password admin\_password`
--   Windows™: `xmlaccess.bat -in [PortalServer\_root](../reference/wpsdirstr.md#wp_root)\pzn.ui\wp.pzn.ui.actions\config\templates\DeployPages.xml -url http://localhost:10039/wps/config/your\_virtual\_portal\_context -user admin\_user\_id -password admin\_password`
+-   AIX® and Linux™: `./xmlaccess.sh -in [PortalServer_root](../reference/wpsdirstr.md#wp_root)/pzn.ui/wp.pzn.ui.actions/config/templates/DeployPages.xml -url http://localhost:10039/wps/config/your_virtual_portal_context -user admin_user_id -password admin_password`
+-   Windows™: `xmlaccess.bat -in [PortalServer_root](../reference/wpsdirstr.md#wp_root)\pzn.ui\wp.pzn.ui.actions\config\templates\DeployPages.xml -url http://localhost:10039/wps/config/your_virtual_portal_context -user admin_user_id -password admin_password`
 
 ## Custom Application Objects
 
@@ -44,6 +43,7 @@ Custom application objects contains both fixed and dynamic properties that are a
     The custom application object fixed properties are determined by the get() methods implemented in the class. For example, if getXyzProperty() is implemented, xyzProperty will be shown in the PZN portlet.
 
 - Dynamic Properties:
+
     Custom application object dynamic properties can be manually defined in the PZN portlet or via XML.
     -   To manually define the properties, select the application object in the PZN portlet and the details are displayed in the Personalization Editor. 
         In Manage Properties tab in the Personalization Editor section, lists all of the properties (fixed and dynamic). From the Add Dynamic Property button on the Manage Properties tab, you can manually define dynamic properties. To access these dynamic properties the application object class must extend the DynamicApplicationObject class.

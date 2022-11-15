@@ -6,16 +6,18 @@ Ensure you have the basic system requirements listed in the Prerequisites for th
 
 1.  Start the HCL Digital Experience server.
 
-2.  From a command prompt, navigate to [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine.
+2.  From a command prompt, navigate to wp_profile_root/ConfigEngine.
 
 3.  Enter the following commands to install the Personalization sample and create the users for this sample:
 
     -   UNIX™Linux™:
         -   `./ConfigEngine.sh create-pzndemo-users -DPortalAdminPwd=``password -DWasPassword=password`
         -   `./ConfigEngine.sh install-pzndemo -DPortalAdminPwd=password -DWasPassword=password`
+
     -   Windows™:
         -   `ConfigEngine.bat create-pzndemo-users -DPortalAdminPwd=password -DWasPassword=password`
         -   `ConfigEngine.bat install-pzndemo -DPortalAdminPwd=password -DWasPassword=password`
+
 4.  Stop the HCL Portal server.
 
 5.  Restart the HCL Portal server
@@ -26,7 +28,8 @@ Ensure you have the basic system requirements listed in the Prerequisites for th
     -   marge
     -   tawana
     -   andy
-7.  Navigate to **Personalization** \> **Demo**, then click through the different pages and portlets for each user. Notice the different information that displays for each user.
+    
+7.  Navigate to **Personalization > Demo**, then click through the different pages and portlets for each user. Notice the different information that displays for each user.
 
 8.  Log out of HCL Portal.
 
@@ -36,12 +39,4 @@ Ensure you have the basic system requirements listed in the Prerequisites for th
 The sample demo and database configuration is complete. You can now begin coding a basic personalized portlet.
 
 
-**Previous topic:**[Prerequisites for the Personalization portlet exercise](../pzn/pzn_demoprereq.md)
-
-**Next topic:**[Create the JSP file in Rational Application Developer](../pzn/pzn_demo_create_jsp_rad.md)
-
-
-**Previous topic:**[Prerequisites for the Personalization portlet exercise](../pzn/pzn_demoprereq.md)
-
-**Next topic:**[Create the JSP file in Rational Application Developer](../pzn/pzn_demo_create_jsp_rad.md)
 

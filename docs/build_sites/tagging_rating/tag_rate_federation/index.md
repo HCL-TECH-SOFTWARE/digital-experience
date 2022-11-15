@@ -21,7 +21,8 @@ For Blogs, Forums, Wikis and Profiles, the selected resource is rendered in a Co
 
 If you do not want to have a connections resource rendered in a Connections portlet, you can set a Connections Site as target of a redirect for a particular Connections feature. For details see *Administration of tag federation*.
 
-**Note:** The HCL Connections portlets must be deployed into HCL Portal and configured accordingly.
+!!! note
+    The HCL Connections portlets must be deployed into HCL Portal and configured accordingly.
 
 The following specifics regarding HCL Connections need to be mentioned:
 
@@ -44,12 +45,10 @@ During configuration or administration of the HCL Connections integration there 
 |Profiles|profiles|
 |Wikis|wikis|
 
--   **[Administering tag federation](../admin-system/tag_fed_admin.md)**  
+-   **[Administering tag federation](../tag_rate_federation/fed_admin/index.md)**  
 When tags from remote systems, such as HCL Connections are integrated into your HCL Digital Experience site, you need to schedule tasks to retrieve tags and related data from the remote system, and later to clean them up from the portal. You can also redirect the rendering of federated resources to HCL Connections and add icons to federated resources.
 
 
-**Related information**  
-
-
-[Specifying an icon for a federated resource](../admin-system/tag_fed_admin_spec_icon.md)
+???+ info "Related information"
+    - [Specifying an icon for a federated resource](../tag_rate_federation/fed_admin/tag_fed_admin_spec_icon.md)
 

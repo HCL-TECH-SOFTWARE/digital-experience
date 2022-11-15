@@ -225,7 +225,6 @@ For example, if the current page has the friendly path /home/mypage and contains
 
   -   If the href attribute of an anchor link starts with ?, then the remainder is considered query parameters and no rewriting occurs.
 
-
-???+ info "Related information:"
-  - [Using friendly URLs](../../../../../extend_dx/development_tools/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/mp_friendly_url.md)
+???+ info "Related information"
+  - [Using friendly URLs](../../../../../deployment/manage/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/mp_friendly_url.md)
 

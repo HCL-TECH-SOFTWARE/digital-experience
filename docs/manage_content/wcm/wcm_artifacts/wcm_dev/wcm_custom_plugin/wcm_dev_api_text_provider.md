@@ -22,7 +22,7 @@ To use a text provider, you must create a text provider class and then register 
 
         This method is used to prevent your text provider from appearing in the authoring UI.
 
-    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
+    See the Javadoc documentation for further information. The Javadoc files for Web Content Manager are in the [PortalServer_root](../../../../../guide_me/wpsdirstr.md)`/doc/Javadoc/spi_docs/com/ibm/workplace/wcm` directory.
 
 2.  Methods that are inherited from com.ibm.portal.Localized must also be implemented.
 
@@ -361,8 +361,6 @@ If you create a new plug-in application with the same names and IDs as an existi
 When sorting is applied to a set of items, the item title is used to sort the items, not the title specified in the text provider.
 
 
-**Related information**  
-
-
-[Configuring the validation of friendly URLs for web content](../wcm/configure_validate_friendly_urls.md)
+Related information:
+   - [Configuring the validation of friendly URLs for web content](../../../wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/customizing_content/friendlyurl_wcmviewer/validate_friendlyurl/configure_validate_friendly_urls.md)
 

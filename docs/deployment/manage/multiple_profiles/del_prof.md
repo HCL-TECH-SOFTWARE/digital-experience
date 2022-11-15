@@ -8,12 +8,13 @@ Complete the following steps to delete a profile.
 
 2.  Run the following task:
 
-    -   AIX®, Linux™, Solaris:- `./manageprofiles.sh -delete -profileName profilename` from the [AppServer\_root](../reference/wpsdirstr.md#was_root)/bin directory, where profilename is the name of the profile that you are deleting.
-    -   IBM® i:- `manageprofiles -delete -profileName profilename` from the [AppServer\_root](../reference/wpsdirstr.md#was_root)/bin directory, where profilename is the name of the profile that you are deleting.
-    -   Windows™:- `manageprofiles.bat -delete -profileName profilename` from the [AppServer\_root](../reference/wpsdirstr.md#was_root)\\bin directory, where profilename is the name of the profile that you are deleting.
-    **Note:** Deleting a profile takes several minutes to complete.
+    -   AIX® and Linux™: `./manageprofiles.sh -delete -profileName profilename` from the AppServer_root/bin directory, where profilename is the name of the profile that you are deleting.
+    -   Windows™: `manageprofiles.bat -delete -profileName profilename` from the AppServer_root\bin directory, where profilename is the name of the profile that you are deleting.
 
-3.  Delete the profile directory because it contains files that the manageprofiles command cannot delete, such as extraneous log files.
+    !!!note
+        Deleting a profile takes several minutes to complete.
+
+3.  Delete the profile directory because it contains files that the `manageprofiles` command cannot delete, such as extraneous log files.
 
 
 

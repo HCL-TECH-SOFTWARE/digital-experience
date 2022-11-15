@@ -6,16 +6,6 @@ Portal resources, such as pages, components or portlet instances are kept persis
 
 The delayed deletion of pages is performed by a cleanup service.
 
--   **[Configuring immediate or delayed deletion of portal pages](../admin-system/addelclnup_cfg.md)**  
-You can configure the deletion cleanup to happen either immediately when you delete the page or later.
--   **[Configuring your own delayed deletion schedule by using the XML configuration interface](../admin-system/addelclnup_cfgxml.md)**  
-You can use the HCL Digital Experience XML configuration interface to configure the delayed deletion schedule according to your requirements. You can define a daily, weekly, or monthly schedule. You can also use the XML configuration interface to run individual cleanup tasks at arbitrary intervals.
-
-
-**Related information**  
-
-
-[Creating and configuring search collections](../admin-system/srrcreatconfig.md)
-
-[Managing the content sources of a search collection](../admin-system/srtmngcontsrc.md)
-
+???+ info "Related information"  
+    -   [Creating and configuring search collections](../../../../build_sites/search/portal_search/administer_portal_search/setup_search_collections/srrcreatconfig.md)
+    -   [Managing the content sources of a search collection](../../../../build_sites/search/portal_search/administer_portal_search/setup_search_collections/mng_content_sources_search_collections/index.md)

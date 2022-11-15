@@ -12,5 +12,3 @@ If you want to change these default roles and the access permissions for the use
 
 -   To configure the scope of access permissions for users before creating a virtual portal, configure your realms and user groups accordingly.
 -   To change the access permissions of users of a virtual portal after creating a virtual portal, use the Portal Access Control portlets in that virtual portal. You can have the sub-administrators of the virtual portal perform this task.
-
-

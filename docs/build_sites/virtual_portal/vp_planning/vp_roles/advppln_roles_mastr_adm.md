@@ -23,25 +23,19 @@ Typically, only the master administrator should have the access permissions for 
 -   Using the XML configuration interface to run tasks that are related to one of the virtual portals
 -   Installing portlets, themes, and skins.
 
-**Note:** Do not grant the sub-administrators of virtual portals the access permissions to run any installation-related tasks, such as installation of portlets or themes. All virtual portals share a common Java virtual machine™ \(JVM\). Therefore, it is important to restrict the administration privileges of the virtual portal sub-administrators and prevent them from installing their own code artifacts, such as themes or portlets. Unstable or malicious code that is introduced on one virtual portal can destabilize the entire portal installation and all other virtual portals. A flexible way to introduce virtual portal-specific portlets without impacting any other virtual portal is to use web services for remote portlets \(WSRP\). By using WSRP, you can provide portlets on a remote server and then have the virtual portals consume those portlets so that users can access them remotely. For more information about using WSRP with your portal, go to *Using WSRP services*.
+!!! note
+    Do not grant the sub-administrators of virtual portals the access permissions to run any installation-related tasks, such as installation of portlets or themes. All virtual portals share a common Java virtual machine™ \(JVM\). Therefore, it is important to restrict the administration privileges of the virtual portal sub-administrators and prevent them from installing their own code artifacts, such as themes or portlets. Unstable or malicious code that is introduced on one virtual portal can destabilize the entire portal installation and all other virtual portals. A flexible way to introduce virtual portal-specific portlets without impacting any other virtual portal is to use web services for remote portlets \(WSRP\). By using WSRP, you can provide portlets on a remote server and then have the virtual portals consume those portlets so that users can access them remotely. For more information about using WSRP with your portal, go to *Using WSRP services*.
 
 For more information about Portal Access Control, go to *Controlling access*. For more information about virtual portal security, go to *Portal Access Control with virtual portals*.
 
 
-**Related information**  
 
-
-[Administering virtual portals](../admin-system/advp_adm.md)
-
-[Content of a virtual portal](../admin-system/advppln_content.md)
-
-[Controlling access](../admin-system/control_access.md)
-
-[Setting user and group permissions](../admin-system/sec_ugpp.md)
-
-[Setting resource permissions](../admin-system/sec_rpp.md)
-
-[WSRP services](../admin-system/wsrpc.md)
-
-[The XML configuration interface](../admin-system/admxmlai.md)
+???+ info "Related information:"
+    - [Administering virtual portals](../../adm_vp_task/index.md)
+    - [Content of a virtual portal](../advppln_content.md)
+    - [Controlling access](../../../../deployment/manage/security/controlling_access/index.md)
+    - [Setting user and group permissions](../../../../deployment/manage/security/controlling_access/sec_ugpp.md)
+    - [Setting resource permissions](../../../../deployment/manage/security/controlling_access/sec_rpp.md)
+    - [WSRP services](../../../../extend_dx/development_tools/wsrp/index.md)
+    - [The XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
 

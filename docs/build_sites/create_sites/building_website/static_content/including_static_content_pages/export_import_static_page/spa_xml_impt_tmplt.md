@@ -52,6 +52,6 @@ Sample file CreatePageFromTemplate.xml
 ```
 
 
-???+ info "Related information:"
-    - [Understanding the Portal 8.5 modularized theme](../../../../../themes_skins/portal85_modularized_theme/index.md)
+???+ info "Related information"
+    -   [Understanding the Portal 8.5 modularized theme](../../../../../themes_skins/portal85_modularized_theme/index.md)
 

@@ -1,5 +1,4 @@
 Title: Web content user assistance
 nav:
     - index.md
-    - Managing content with the authoring portlet: mng_content_with_auth_portlet
     - Editing web content portlet settings: editing_webcontent_portlet

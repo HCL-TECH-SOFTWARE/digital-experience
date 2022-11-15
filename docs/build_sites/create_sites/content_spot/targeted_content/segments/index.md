@@ -11,8 +11,9 @@ You can create managed segments in your content library. Creating managed segmen
 
 Your developer might have created segments in the Personalization area in the past. Depending on how the Add Segments dialog is configured, you might not see the segments that were created using Personalization.
 
--   **[Creating managed segments in your web content library](contarget_segments_mgd.md)**  
+
+-   **[Creating managed segments in your web content library](../segments/creating_managed_segments/index.md)**  
 You can create managed segments in your web content library so that you can target content to specific segments of users.
 -   **[Creating segments with personalization](contarget_segments.md)**  
-Learn more about creating segments with personalization through an example.
+Learn more about creating segments with personalization through an example. 
 

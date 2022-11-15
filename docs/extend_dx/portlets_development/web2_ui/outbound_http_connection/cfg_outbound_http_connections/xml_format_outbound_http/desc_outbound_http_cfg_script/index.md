@@ -27,22 +27,20 @@ The configuration settings of an outbound HTTP connection configuration script a
         Use the `meta-data` setting to specify general configuration properties of the proxy, for example HTTP-related parameters. Each `meta-data` setting must have a `name` and a `value`. To get a list of configuration parameters that are available in the portal, read *General configuration parameters by metadata*.
 
 
--   **[Variables](../dev-portlet/outbhttp_cfg_script_variables.md)**  
+-   **[Variables](outbhttp_cfg_script_variables.md)**  
 Variables settings define variables that are used in other sections of the configuration.
--   **[Context path mapping](../dev-portlet/outbhttp_cfg_script_cntxt_path_map.md)**  
+-   **[Context path mapping](outbhttp_cfg_script_cntxt_path_map.md)**  
 You use a context path mapping to map a specific context path to a specific target URL. The proxy resolves context path mappings before it applies the matching access policy.
--   **[Policies](../dev-portlet/outbhttp_cfg_script_acc_pol.md)**  
+-   **[Policies](outbhttp_cfg_script_acc_pol.md)**  
 Each policy setting defines an access policy for a URL pattern. You specify the pattern by using the url attribute. A url attribute can be either a URL, or the wildcard character, or URL part that ends with the wildcard character "\*". The following are examples for url attribute values: http://localhost/index.html \*http://www.ibm.com/developerWorks/\*.
--   **[IP filtering](../dev-portlet/outbhttp_cfg_script_ip_fltr.md)**  
+-   **[IP filtering](outbhttp_cfg_script_ip_fltr.md)**  
 You can use ipfilter settings to declare IP filtering rules and to either grant or deny a client access to the Ajax proxy.
--   **[Configuration metadata for outbound HTTP connections](../dev-portlet/outbhttp_cfg_script_metadata.md)**  
+-   **[Configuration metadata for outbound HTTP connections](outbhttp_cfg_script_metadata.md)**  
 You can add general proxy configuration parameters to the file proxy-config.xml by using meta-data settings.
--   **[Cookie rule](../dev-portlet/outbhttp_cfg_script_cookie_rule.md)**  
+-   **[Cookie rule](outbhttp_cfg_script_cookie_rule.md)**  
 You can use cookie rules to determine how you want the cookie to be handled.
 
 
-**Related information**  
-
-
-[The programming model for the outbound HTTP connection service](../dev-portlet/outbhttp_progr_model.md)
+???+ info "Related information"
+    - [The programming model for the outbound HTTP connection service](../../../outbhttp_progr_model.md)
 

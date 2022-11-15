@@ -14,21 +14,11 @@ Ensure that you install the latest available fix pack and cumulative fix. They m
 
 There are other considerations to keep in mind around the user IDs and passwords when compared to a regular installation. The xyzadmin is a reserved value and cannot be used as HCL Portal or WebSphere® Application Server administrator name. You must change the administrator name from your source environment if you are using this name.
 
-## Migration on z/OS®
 
-For the z/OS operating system, the new version of HCL Portal \(target\) must be on the same server as the earlier version \(source\). Migration to a different \(remote\) server is not supported.
+???+ info "Related information"  
+    -   [User IDs and passwords](../../../../get_started/plan_deployment/traditional_deployment/sec_chars.md)
+    -   [Replacing the HCL Digital Experience administrator user ID](../../../../deployment/manage/security/updating_userid_pwd/portalid.md)
+    -   [Replacing the WebSphere Application Server administrator user ID](../../../../deployment/manage/security/updating_userid_pwd/rep_was_id.md)
+    -   [Planning to install HCL Digital Experience](../../../../get_started/plan_deployment/traditional_deployment/index.md)
 
-
-**Related information**  
-
-
-[User IDs and passwords](../plan/sec_chars.md)
-
-[Replacing the HCL Digital Experience administrator user ID](../security/portalid.md)
-
-[Replacing the WebSphere Application Server administrator user ID](../security/rep_was_id.md)
-
-[Planning to install HCL Digital Experience](../plan/plan_installation.md)
-
-[Recommended fixes and updates for HCL Portal and HCL Web Content Management](https://support.hcltechsw.com/csm)
 

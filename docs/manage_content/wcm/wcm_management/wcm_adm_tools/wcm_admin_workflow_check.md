@@ -30,9 +30,11 @@ connect.businesslogic.module.workflowcontrolchecker.autoload=false
     http://[HOST]:[PORT]/wps/wcm/myconnect/?MOD=WorkflowControlChecker&library=Web+Content&repairInvalidWorkflow=true&fix=true
     ```
 
-    **Note:** If the "`library`" parameter is omitted, the default library that is configured in the **WCM WCMConfigService** service is used.
+    !!! note
+        If the "`library`" parameter is omitted, the default library that is configured in the **WCM WCMConfigService** service is used.
 
-    **Note:** If the "`&fix=true`" parameter is omitted, the tool runs in read-only mode and generates a report.
+    !!! note
+        If the "`&fix=true`" parameter is omitted, the tool runs in read-only mode and generates a report.
 
 
 -   **&library**

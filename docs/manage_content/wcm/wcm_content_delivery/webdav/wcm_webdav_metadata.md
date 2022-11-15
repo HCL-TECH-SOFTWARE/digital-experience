@@ -100,8 +100,6 @@ Here is a sample `access-control-user.xml` file for an item's user-defined acces
 ```
 
 
-**Related information**  
-
-
-[Managing metadata and access control settings for authoring templates with WebDAV](../wcm/wcm_webdav_authtemp.md)
+???+ info "Related information:"
+  - [Managing metadata and access control settings for authoring templates with WebDAV](../webdav/wcm_webdav_authtemp.md)
 

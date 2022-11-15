@@ -8,23 +8,22 @@ The relationship between a syndicator and a subscriber can be either a one-way o
 
 Application 1 syndicates one or more libraries to Application 2, and Application 2 subscribes from Application 1.
 
-![Application 1 syndicates one or more libraries to Application 2, and Application 2 subscribes from Application 1.](../images/syndication_one.jpg)
+![Application 1 syndicates one or more libraries to Application 2, and Application 2 subscribes from Application 1.](../../../../images/syndication_one.jpg)
 
 ## Two-way syndication
 
-![Both applications syndicate to each other, and both applications subscribe from each other.](../images/syndication_two.jpg)
+![Both applications syndicate to each other, and both applications subscribe from each other.](../../../../images/syndication_two.jpg)
 
-**Note:**
-
--   When two-way syndication is enabled, you must first establish the syndication relationship from Application 1 to Application 2. After the libraries are replicated to Application 2, you can set up the syndication relationship between Application 2 and Application 1.
--   When two-way syndication is used, all-item syndication must be enabled for each library that exists on both servers.
--   Although it is possible to set up more than one syndication relationship between the same two applications, there is no reason to do so. The additional syndication relationships are not required because when a syndication relationship is established between two applications, no further relationships are established.
+!!! note
+    -   When two-way syndication is enabled, you must first establish the syndication relationship from Application 1 to Application 2. After the libraries are replicated to Application 2, you can set up the syndication relationship between Application 2 and Application 1.
+    -   When two-way syndication is used, all-item syndication must be enabled for each library that exists on both servers.
+    -   Although it is possible to set up more than one syndication relationship between the same two applications, there is no reason to do so. The additional syndication relationships are not required because when a syndication relationship is established between two applications, no further relationships are established.
 
 ## Multiple syndication relationships
 
 Syndicators can syndicate libraries to multiple subscribers, and subscribers can subscribe to libraries from multiple syndicators.
 
-![Application 1 and Application 2 both syndicate to Application 3, and Application 3 subscribes from both Application 1 and Application 2.](../images/syndication_multi.jpg)
+![Application 1 and Application 2 both syndicate to Application 3, and Application 3 subscribes from both Application 1 and Application 2.](../../../../images/syndication_multi.jpg)
 
 ## Syndication methods
 
@@ -91,7 +90,7 @@ You can manually syndicate by using the following methods:
 
     -   **Rebuild with mirror**
 
-        If you select the mirror option, all items on the subscriber are reset to mirror the syndicator. All items that are newer on the syndicator are sent to the subscriber. Items that are newer on the subscriber are overwritten with the older version from the syndicator. Items that are created on the subscriber that do not exist on the syndicator are removed from the subscriber. Version history is not syndicated.
+        If you select the mirror option, all items on the subscriber are reset to mirror the syndicator. All items that are newer on the syndicator are sent to the subscriber. Items that are newer on the subscriber are overwritten with the later version from the syndicator. Items that are created on the subscriber that do not exist on the syndicator are removed from the subscriber. Version history is not syndicated.
 
         **Restriction:** The **Rebuild with mirror** option can only be used when syndicating between servers that use CF07 or higher.
 
@@ -99,9 +98,11 @@ You can manually syndicate by using the following methods:
 
         **Restriction:** The **Rebuild with mirror** option can be used only on a syndicator.
 
-        **Note:** The **Rebuild with mirror** option will not automatically cascade through all subscribers downstream of the syndicator. You might need to repeat the **Rebuild with mirror** action on subscribers further down the syndication chain to synchronize all servers.
+        !!! note
+            The **Rebuild with mirror** option will not automatically cascade through all subscribers downstream of the syndicator. You might need to repeat the **Rebuild with mirror** action on subscribers further down the syndication chain to synchronize all servers.
 
-        **Note:** With CF09 or higher installed, the **Rebuild with mirror** option automatically cascades through all subscribers downstream of the syndicator that are configured with automatic syndication. Downstream automatic syndication is paused while the upstream mirror is running. Syndication can still be run manually downstream while automatic syndication is paused downstream.
+        !!! note
+            With CF09 or higher installed, the **Rebuild with mirror** option automatically cascades through all subscribers downstream of the syndicator that are configured with automatic syndication. Downstream automatic syndication is paused while the upstream mirror is running. Syndication can still be run manually downstream while automatic syndication is paused downstream.
 
     |Action|Rebuild|Rebuild with Mirror|
     |------|-------|-------------------|
@@ -124,7 +125,7 @@ Cross-version syndication is supported between the following releases.
 
 Syndicating from a newer software level to an older software level is only supported between different fix-pack levels of the same release. When syndicating between releases, only older to newer is supported.
 
-See [Cross version syndication](../migrate/mig_content_options_cross-version.md) for further information.
+See [Cross version syndication](../../../../deployment/manage/migrate/planning_migration/migration_consideration/migrating_wcm_70_80/mig_content_options_cross-version.md) for further information.
 
 ## Web content libraries and syndication relationships
 
@@ -134,7 +135,7 @@ Because syndication is run on a library by library basis, it is important to con
 
 For easier management, you might divide your content further into three libraries, where one library contains data common to both the intranet and Internet sites and the other two libraries contain site-specific content. The following example demonstrates this configuration, with the addition of two other authoring portlets so that the content of each library is maintained by a different authoring portlet.
 
-![Example diagram showing syndication of multiple libraries](../images/JCRLibHRMktA.jpg)
+![Example diagram showing syndication of multiple libraries](../../../../images/JCRLibHRMktA.jpg)
 
 In this case you might set up several syndication relationships between the authoring server and the delivery servers:
 
@@ -143,7 +144,8 @@ In this case you might set up several syndication relationships between the auth
 -   The HR Library syndicates to the intranet site \(Human Resources Portal\).
 -   The Marketing Library syndicates to the Internet site \(Marketing Portal\).
 
-**Note:** Web Content Manager provides flexibility in how you set up your syndication relationships. If you need to syndicate multiple libraries from one server to another, you can choose to use one syndication relationship that includes all the libraries, or you can choose to use separate syndication relationships for each library, or even a combination of both approaches, depending on how many libraries you are syndicating. The best approach for your situation depends not only on how many libraries are involved but also on how the libraries are related to one another. For example, you use a single syndication relationship for libraries that reference each other, as when one library contains design items like templates that are used by content in the other library. However, if the libraries are independent of one another and you think you might want to suspend syndication of one library but not the other, separate syndication relationships for each library can provide that.
+!!! note
+    Web Content Manager provides flexibility in how you set up your syndication relationships. If you need to syndicate multiple libraries from one server to another, you can choose to use one syndication relationship that includes all the libraries, or you can choose to use separate syndication relationships for each library, or even a combination of both approaches, depending on how many libraries you are syndicating. The best approach for your situation depends not only on how many libraries are involved but also on how the libraries are related to one another. For example, you use a single syndication relationship for libraries that reference each other, as when one library contains design items like templates that are used by content in the other library. However, if the libraries are independent of one another and you think you might want to suspend syndication of one library but not the other, separate syndication relationships for each library can provide that.
 
 **Important:**
 
@@ -166,8 +168,6 @@ Although syndication can be used to keep data current between libraries on diffe
 
 
 
-**Related information**  
-
-
-[Syndication and staging](../deploy/dep_up_syn.md)
+???+ info "Related information:"
+    - [Syndication and staging](../../../../deployment/manage/staging_to_production/updates_with_syndication/dep_up_syn.md)
 

@@ -1,4 +1,4 @@
-# Database considerations for backup and restore
+# Database Considerations for Backup and Restore
 
 Before you back up HCL Portal databases, determine whether you need to perform offline or online backup, what your requirements are for storage capacity and backup frequency, and your preferred utility.
 
@@ -33,7 +33,8 @@ Next, consider the data storage requirements and the resources and utilities tha
 
     You can also use tools and commands provided by your database to manage the backup procedures.
 
-    **Note if using DB2:** For scheduling backup scripts, you can use either the DB2® Backup Wizard or the DB2 Task Center.
+    !!!note
+        For scheduling backup scripts, you can use either the DB2® Backup Wizard or the DB2 Task Center.
 
     -   The Backup Wizard provides a simple, step-by-step user interface for configuring backup options, selecting a storage location for backup data files, and scheduling the backup.
     -   The Task Center is an administrative component that allows you to create and schedule scripted functions.

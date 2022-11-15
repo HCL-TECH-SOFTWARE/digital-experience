@@ -8,13 +8,13 @@ If you performed a remote migration, then you must update the table prefix and j
 
     1.  Start the WebSphere® Application Server administrative console.
 
-    2.  Select **Resources** \> **Schedulers**.
+    2.  Select **Resources > Schedulers**.
 
 2.  Run the following task:
 
-    -   AIX® HP-UX Linux™ Solaris: `./ConfigEngine.sh action-clean-scheduled-tasks -DWasPassword=password -Drelease.DbPassword=password`
-    -   IBM® i: `ConfigEngine.sh action-clean-scheduled-tasks -DWasPassword=password -Drelease.DbPassword=password`
+    -   AIX® and Linux™: `./ConfigEngine.sh action-clean-scheduled-tasks -DWasPassword=password -Drelease.DbPassword=password`
     -   Windows™: `ConfigEngine.bat action-clean-scheduled-tasks -DWasPassword=password -Drelease.DbPassword=password`
+    
 3.  Restart the Portal server so that the default scheduled tasks that are required for operation are created.
 
 

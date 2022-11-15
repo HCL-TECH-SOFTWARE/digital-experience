@@ -38,9 +38,11 @@ Here is an example of how to set a list-rendering context that uses the generic 
 
 ```
 
-**Note:** If you want to test this example, you might have to adjust your proxy configuration to allow your portal to access the source URL. For more information, read the information about proxy configuration in the HCL Digital Experience documentation.
+!!! note
+    If you want to test this example, you might have to adjust your proxy configuration to allow your portal to access the source URL. For more information, read the information about proxy configuration in the HCL Digital Experience documentation.
 
-**Note:** If you want to test this example, you probably must adjust your outbound HTTP connection to allow your portal to access the source URL. For more information, read *Outbound HTTP connection*.
+!!! note
+    If you want to test this example, you probably must adjust your outbound HTTP connection to allow your portal to access the source URL. For more information, read *Outbound HTTP connection*.
 
 -   **[Nesting lists](plrf_nest_list_rendr_context.md)**  
 You can render nested lists by nesting list-rendering contexts. Nested lists can be useful if the individual entries in your list contain associated information in the form of a list as well. For example, you might want to show a list of communities, including all the community members for each community. In this case, you can retrieve the individual lists of community members by rendering nested lists from within the individual items of the community list.

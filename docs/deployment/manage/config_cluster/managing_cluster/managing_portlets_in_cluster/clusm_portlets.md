@@ -6,6 +6,7 @@ If a portlet is deployed through HCL Portal, it first takes whatever configurati
 
 If the portlet was deployed during initial installation, then the object ID might be the same as other portal installations based on the same version of HCL Portal. When multiple clusters are defined in the same cell that is based on this version, many portlets are common between the clusters. These portlets share object IDs.
 
-**Note:** When you deploy and activate portlets, while you are logged in to HCL Portal, you must log out and log back in to see the updated status for the portlets.
+!!!note
+    When you deploy and activate portlets, while you are logged in to HCL Portal, you must log out and log back in to see the updated status for the portlets.
 
 

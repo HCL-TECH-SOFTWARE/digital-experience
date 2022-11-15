@@ -1,4 +1,4 @@
-# Using the DB2 Backup wizard
+# Using the DB2 Backup Wizard
 
 Use the Backup wizard of IBM DB2 Universal Database Enterprise Server Edition to create online or offline backups. This sample scenario describes how to create a full offline backup of an HCL Portal database.
 
@@ -28,17 +28,19 @@ To perform a full offline backup of the WPSDB database, follow these steps:
 
     -   To specify a schedule for the backup task, click **Change** and click **Next**.
 
-        **Important:** Select a time when no users are working with the database or with applications that might be running on the server.
+        !!!important
+            Select a time when no users are working with the database or with applications that might be running on the server.
 
     -   To perform a backup without setting a schedule, click **Run now without saving task history** and click **Next**.
 11. Click **Show Command** to view the DB2 commands that the Backup wizard runs.
 
-    **Tip:** You can copy these commands to use in the Task Center as an alternative to using the Backup wizard the next time you want to back up the database.
+    !!!note "Tip"
+        You can copy these commands to use in the Task Center as an alternative to using the Backup wizard the next time you want to back up the database.
 
-    **Note:** The following example includes line breaks for readability. In actual practice, you need to type all commands, including the semicolons, on one line.
+    !!!note
+        The following example includes line breaks for readability. In actual practice, you need to type all commands, including the semicolons, on one line.
 
     ```
-    
     CONNECT TO WPSDB;QUIESCE DATABASE IMMEDIATE FORCE CONNECTIONS;CONNECT RESET;
     BACKUP DATABASE WPSDB TO "D:\BackupFiles\DB2backup\" WITH 2 BUFFERS 
     BUFFER 1024 PARALLELISM 1 WITHOUT PROMPTING;CONNECT TO WPSDB;
@@ -47,7 +49,6 @@ To perform a full offline backup of the WPSDB database, follow these steps:
     ```
 
 12. When you are satisfied with your settings for the database backup, click **Finish** to start the backup task.
-
 
 DB2 displays a message confirming that the backup task has completed successfully or that the task encountered and logged problems that need to be fixed.
 

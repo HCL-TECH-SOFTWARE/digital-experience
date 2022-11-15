@@ -748,10 +748,7 @@ The forums topic and reply attachments profile provides access to HCL Connection
 
 
 
-**Related information**  
-
-
-[Configuring file type icon mappings](../social/soc_rendr_cfg_filetype_map.md)
-
-[Configuring globally how social object data is served](../social/soc_rendr_cfg_data_serve.md)
+???+ info "Related information"
+    - [Configuring file type icon mappings](../../../../cfg_global_settings_social_rendering/cfg_filetype_icon_mappings/index.md)
+    - [Configuring globally how social object data is served](../../../../cfg_global_settings_social_rendering/soc_rendr_cfg_data_serve.md)
 

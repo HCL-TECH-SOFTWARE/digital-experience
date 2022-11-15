@@ -6,7 +6,8 @@ The easiest way to create proxy URLs in a portlet is to register the AJAX proxy 
 
 If you want the proxy to be able to access resources that require authentication, specify a second servlet mapping that is associated with a security constraint. In the sample, only authenticated users can access proxy URLs that match the URL pattern `/myproxy/*`.
 
-**Note:** You must associate the user roles that you specify in the `web.xml` file with the user roles of the portal server. You can do this by creating the corresponding role mappings for the respective application in the WebSphere® Integrated Solutions Console.
+!!!note
+      You must associate the user roles that you specify in the `web.xml` file with the user roles of the portal server. You can do this by creating the corresponding role mappings for the respective application in the WebSphere® Integrated Solutions Console.
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -56,10 +57,6 @@ If you want the proxy to be able to access resources that require authentication
 Registering the proxy servlet in the Web deployment descriptor of a portlet does not imply that the portlet is based on an application specific configuration. If no `proxy-config.xml` file is provided with the portlet, the proxy servlet uses the global proxy configuration instead. The only constraint that you need to consider is that for each servlet mapping, a corresponding context path mapping must exist in the proxy configuration. This can be either in the global or in the application specific configuration. For details on how to configure the AJAX proxy refer to the section about AJAX proxy configuration.
 
 
-**Related information**  
-
-
-[Configuring remote server access for links](../wcm/wcm_config_ecm_whitelist.md)
-
-[Adding an outbound connection policy](../dev-portlet/outbhttp_cfgsmptsk_add_ob_conn_plcy.md)
-
+???+ info "Related information"
+      - [Configuring remote server access for links](../../../../../../manage_content/wcm/wcm_content_delivery/cfg_webcontent_auth_env/wcm_config_ecm_whitelist.md)
+      - [Adding an outbound connection policy](../../../../web2_ui/outbound_http_connection/cfg_outbound_http_connections/sample_admin_tasks/outbhttp_cfgsmptsk_add_ob_conn_plcy.md)

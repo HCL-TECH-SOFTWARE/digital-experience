@@ -1,4 +1,4 @@
-# Configure labels and annotations
+# Configure Labels and Annotations
 
 This section documents the configuration of labels and annotations for different DX resources.
 
@@ -17,7 +17,7 @@ To configure annotations for Kubernetes services and pods, update your custom-va
 #### Sample annotations for core service
 To set annotation `KEY1` with value VALUE1 and annotation `KEY2` with value VALUE2 on the core service, add the following to your custom-values.yaml file:
 
-```
+```yaml
 annotations:
   service: 
     core: 
@@ -30,7 +30,7 @@ annotations:
 #### Sample annotations for core pods
 To set annotation `KEY1` with value VALUE1 and annotation `KEY2` with value VALUE2 on core pods, add the following to your custom-values.yaml file:
 
-```
+```yaml
 annotations:
   pod: 
     core: 
@@ -59,8 +59,8 @@ To configure labels for Kubernetes services and pods, update your custom-values.
 #### Sample labels for core services
 To set label `KEY1` with value VALUE1 and label `KEY2` with value VALUE2 on the core services, add the following to your custom-values.yaml file:
 
-```
-label:
+```yaml
+labels:
   service: 
     core: 
       - key: KEY1
@@ -72,8 +72,8 @@ label:
 #### Sample labels for core pods
 To set label `KEY1` with value VALUE1 and label `KEY2` with value VALUE2 on core pods, add the following to your custom-values.yaml file:
 
-```
-label:
+```yaml
+labels:
   pod: 
     core: 
       - key: KEY1
@@ -94,7 +94,7 @@ To configure environment variables for kubernetes pods, update your custom-value
 #### Sample environment variables for core pods
 To set environment variable `KEY1` with value `VALUE1` and environment variable `KEY2` with value `VALUE2` on core pods, add the following to your `custom-values.yaml` file:
 
-```
+```yaml
 environment:
   pod: 
     core: 

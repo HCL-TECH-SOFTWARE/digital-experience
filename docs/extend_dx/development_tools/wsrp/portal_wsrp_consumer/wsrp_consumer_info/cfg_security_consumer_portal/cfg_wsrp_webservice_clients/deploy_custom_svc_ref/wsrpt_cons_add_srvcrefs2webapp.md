@@ -79,7 +79,7 @@ service-ref>
 </service-ref>
     <service-ref>
     <description>WSRP 2.0 Alternative Service Reference 1</description>
-    <service-ref-name>**service/wsrp/AlternativeWSRPService\_v2**</service-ref-name>
+    <service-ref-name>**service/wsrp/AlternativeWSRPService_v2**</service-ref-name>
     <service-interface>javax.xml.ws.Service</service-interface>
     <service-qname xmlns:pfx="http://www.ibm.com/xmlns/prod/websphere/portal/wsrp/wsdl/v2">
         pfx:WSRPService_v2
@@ -87,7 +87,7 @@ service-ref>
 </service-ref>
     <service-ref>
     <description>WSRP 2.0 Alternative Service Reference 2</description>
-    <service-ref-name>**service/wsrp/WSRPService\_v2\_Second\_Alternative**</service-ref-name>
+    <service-ref-name>**service/wsrp/WSRPService_v2_Second_Alternative**</service-ref-name>
     <service-interface>javax.xml.ws.Service</service-interface>
     <service-qname xmlns:pfx="http://www.ibm.com/xmlns/prod/websphere/portal/wsrp/wsdl/v2">
         pfx:WSRPService_v2

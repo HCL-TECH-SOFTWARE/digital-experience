@@ -6,7 +6,8 @@ With Editor access to the portal or the portal page, you can add a wiki to a pag
 
 2.  If you did not already, create a page for the wiki or open an existing page.
 
-    **Note:** Wiki requires a certain amount of horizontal screen space to render properly, and is not supported for mobile devices. For desktops applications with limited horizontal screen space, use the portlet in a one-column layout.
+    !!! note
+        Wiki requires a certain amount of horizontal screen space to render properly, and is not supported for mobile devices. For desktops applications with limited horizontal screen space, use the portlet in a one-column layout.
 
 3.  Click the **Content** tab, then click **Communications**.
 
@@ -25,11 +26,10 @@ With Editor access to the portal or the portal page, you can add a wiki to a pag
 
 After you publish the site, click **New Page** to add content or click **Edit** to modify content. To delete a wiki page, click **Delete**.
 
-**Note:** Tagged web content that is displayed in the web content viewer is only available when there is a single instance of this portlet on the page. When you click a tag result, the Tag Center broadcasts the information on what content displays in the viewer with a public render parameter. If you have multiple instances of web content that is displayed in the web content viewer, then these instances display the content that you tagged rather than display the original content of these instances.
+!!! note
+    Tagged web content that is displayed in the web content viewer is only available when there is a single instance of this portlet on the page. When you click a tag result, the Tag Center broadcasts the information on what content displays in the viewer with a public render parameter. If you have multiple instances of web content that is displayed in the web content viewer, then these instances display the content that you tagged rather than display the original content of these instances.
 
 
-**Related information**  
-
-
-[Web Content Viewer best practices and limitations](../wcm/wcm_config_delivery_portlet_bestpractice.md)
+???+ info "Related information"
+    -   [Web Content Viewer best practices and limitations](../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/wcm_config_delivery_portlet_bestpractice.md)
 
