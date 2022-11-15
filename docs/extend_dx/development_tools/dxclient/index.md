@@ -57,8 +57,7 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 3.  Extract the DXClient.zip file locally.
 4.  To work with multiple versions of DXClient, update the `IMAGE_TAG` reference in the scripts file under the `/bin` folder. For example, `IMAGE_TAG=v95_CF200_20211201-1021`. By default it will be set in the executable script.
 5.  Run docker load < dxclient.tar.gz.
-
-6.  Optional (It is advisable to not set this incase you run multiple DXClient versions in your system). Open terminal, add the execution shell script to the bin directory to the PATH variable, to call dxclient from any directory.
+6.  Add the execution shell script to the bin directory to the PATH variable to be able to call dxclient from any directory.
 
     ```
     export PATH=<working-directory>/bin:$PATH
@@ -66,14 +65,7 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 
     For Microsoft Windows platforms:
 
-    Open command prompt, add `dxclient.bat` script in the bin directory to the PATH variable, to call DXClient from any directory.
-
-    ```
-    set PATH=<working-directory>\bin;%PATH%
-    ```
-
-    !!! note
-        You will loose these changes by closing the terminal / command prompt. If you set in system path permanently, kindly take the necessary steps to remove it. 
+    use `dxclient.bat` script in the bin directory to the PATH variable to be able to call DXClient from any directory.
 
 7.  Set appropriate permission.
 
@@ -95,53 +87,40 @@ Common command arguments can be pre-configured inside the `config.json` file ava
 
 ```
 {
-    "dxProtocol": "",
-    "dxConnectProtocol": "https",
-    "hostname": "",
-    "dxPort": "",
-    "dxSoapPort": "10033",
-    "dxConnectPort": "10202",
-    "dxContextRoot":"/wps",
-    "contenthandlerPath": "/wps/mycontenthandler",
-    "projectContext": "",
-    "virtualPortalContext": "",
-    "xmlConfigPath": "/wps/config",
-    "damAPIPort": "",
-    "ringAPIPort": "",
-    "damAPIVersion": "v1",
-    "ringAPIVersion": "v1",
-    "dxConnectHostname": "",
-    "dxConnectUsername": "",
-    "dxConnectPassword": "",
-    "dxUsername": "",
-    "dxPassword": "",
-    "dxProfileName": "",
-    "dxProfilePath": "",
-    "dxWASUsername": "",
-    "dxWASPassword": "",
     "enableLogger": true,
     "enableBackup": "false",
-    "lastModifiedAfter": "",
+    "dxProtocol": "",
+    "hostname": "",
+    "dxPort": "",
+    "dxContextRoot":"/wps",
+    "xmlConfigPath": "/wps/config",
+    "dxSoapPort": "10033",
+    "dxProfileName": "wp_profile",
+    "dxProfilePath": "",
+    "dxConnectHostname": "",
+    "dxConnectPort": "10202",
+    "dxConnectProtocol": "https",
+    "wcmSiteArea": "",
+    "wcmContentPath": "",
+    "wcmContentName": "",
+    "contenthandlerPath": "/wps/mycontenthandler",
+    "wcmContentId": "",
     "restoreAsPublished": false,
+    "wcmLibraryId": "",
+    "virtualPortalContext": "",
+    "projectContext": "",
+    "wcmLibraryName": "",
+    "lastModifiedAfter": "",
+    "damAPIPort": "",
+    "ringAPIPort": "",
+    "damAPIVersion": "",
+    "ringAPIVersion": "",
+    "wcmProjectName": "",
     "targetHostname": "",
     "targetDxConnectPort": "",
     "targetDxConnectUsername":"",
     "targetDxConnectPassword":"",
-    "targetDxProfileName": "",
-    "targetServerHostname": "",
-    "targetServerPort": "",
-    "targetServerUsername":"",
-    "targetServerPassword":"",
-    "targetServerProfileName": "",
-    "vaultUsername": "",
-    "vaultPassword": "",
-    "wcmContentName": "",
-    "wcmContentId": "",
-    "wcmContentPath": "",
-    "wcmSiteArea": "",
-    "wcmLibraryId": "",
-    "wcmLibraryName": "",
-    "wcmProjectName": ""
+    "targetDxProfileName": ""
 }
 
 ```
