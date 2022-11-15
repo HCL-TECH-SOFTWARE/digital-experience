@@ -1,25 +1,26 @@
 # DAM Access Control Management
 
-This topic describes details about DAM collection access feature that currently exists, that are not supported and also on how to assign permission to Users through DAM UI.
+This topic describes the details of DAM access control, its features and limitations and also on how to assign permission to Users through the DAM user interface.
 
-## Overview on DX Portal Access Control
+## Overview on DX Portal Access Control for DAM
 
-DX Portal Access Control follows an inheritance based tree structure. At the top of the tree is the virtual Resource Portal, below it is the virtual Resource Media Library and below that, is the resource instances you are registering with its children. By assigning a role on a resource to a user, the user gets permissions on the resource and its children. There is a way to block the inheritance with role blocks but it is not exposed in the initial configuration. 
+DX Portal Access Control follows an inheritance based tree structure. DAM is part of that tree just like WCM or Portal Pages. 
+At the top of the tree is the virtual Resource Portal, below it is the virtual Resource DIGITAL ASSET MANAGEMENT and below that, are the resource instances (the collections) you are registering with its children. By assigning a role on a resource to a user, the user gets permissions on the resource and its children. There is a way to block the inheritance with role blocks but it is not exposed in the initial configuration for collections, only for the virtual resource. 
 
-In DX perspective, possible Role Types are User (view only), Editor (view, edit, create), Manager (view, edit, create, delete), Administrator (view, edit, create, delete, set/remove access).
+For DAM only a subset of the roles is exposed. Possible Role Types are User (view only), Editor (view, edit, create), Administrator (view, edit, create, delete, set/remove access). Other roles existing in Portal Access Control like Manager or Privileged User are not exposed.
 
 Note: Currently, only highlighted roles (Administrator, Editor, User) are applicable in DAM. 
 
 ![Portal Access Control Roles](../../../../images/access_roles_portal.png)
 ## Overview on DAM Collection Access Control
 
-DAM collection is accessible by the currently logged in user based on his role and this access permission is managed by DX Portal Access Control mentioned above. 
+DAM collection is accessible by the currently logged in user based on his role and the access is managed by DX Portal Access Control mentioned above. 
 
-Note: Currently, only Administrator, Editor and User roles are exposed in DAM UI and since Manager role is not yet supported in DAM, each user who can create a collection will inherit Administrator role by default whether it is root level or child level collection. 
+Note: Currently, only Administrator, Editor and User roles are exposed in DAM UI, each user who can create a collection will inherit Administrator role by default whether it is root level or child level collection. 
 
 ### DAM Access Control in detail
 
-From the DAM perspective, each individual collection is a resource instance. 
+From the DAM perspective, each individual root level collection is a resource instance. 
 
 - User can view the collection if he has User role
 - User can view, create and edit the collection if he has Editor role 
@@ -28,6 +29,10 @@ From the DAM perspective, each individual collection is a resource instance.
 Note that Manager Role is not exposed in DAM UI currently.
 
 ![DAM Access Control Roles](../../../../images/access_roles_dam.png)
+
+# Out of the box access
+
+After install the ALl Authenticated User Group is assigned to the Manager role of the virtual resource DIGITAL ASSET MANAGEMENT and propagation is blocked. With that every authenticated user can create a root collection (and when doing that gets the Administrator role for that collection) but does not have access to other collections he did not create. You can change this as desired on the virtual resource.
 
 # Assigning Permission to User
 
