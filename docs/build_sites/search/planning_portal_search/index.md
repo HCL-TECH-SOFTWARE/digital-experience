@@ -12,10 +12,11 @@ To enhance your possibilities of working with search, you can install additional
 
 To prevent errors during crawls and ensure easy viewing of documents for users you need to enable Document Conversion Services. For more information see *Enabling Document Conversion Services*.
 
--   **[Security considerations](../admin-system/srcscrcnsd.md)**  
+
+-   **[Security considerations](../planning_portal_search/security_considerations/index.md)**  
 Learn about the security aspects that you need to consider with regards to content search in HCL Digital Experience Version 8.5.
 
-
+<!--
 **Previous topic:**[Searching for tagged content](../admin-system/tag_rate_search.md)
 
 **Next topic:**[Indexing web content](../wcm/wcm_dev_search_portal.md)
@@ -35,5 +36,5 @@ Learn about the security aspects that you need to consider with regards to conte
 
 [Administering Portal Search](../admin-system/srtadmsrch.md)
 
-[Exporting and importing search collections](../admin-system/srtexpimp.md)
+[Exporting and importing search collections](../admin-system/srtexpimp.md) -->
 

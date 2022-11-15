@@ -1,9 +1,8 @@
 ---
 id: wcm_dev_elements_authoring-tools_examples
-title: How to define authoring tools
+title: Define Authoring Tools
 ---
-
-
+# How to Define Authoring Tools
 
 
 You can format the design of an authoring tool in different ways, including displaying authoring tools as text-based links, or image-based links.
@@ -176,7 +175,8 @@ The default value of the `format` attribute for a placeholder tag is `tag`, so t
 </a>
 ```
 
-**Note:** It is not possible to launch the pop-up window in a separate browser window by adding `target="_blank"` to the HTML anchor tag in the design. If you want to use an authoring tool component with a pop-up dialog design within a static page, the HTML of your static page has to include the Dojo Toolkit. To include Dojo in a page you can add the following to the header section of your page:
+!!!note
+    It is not possible to launch the pop-up window in a separate browser window by adding `target="_blank"` to the HTML anchor tag in the design. If you want to use an authoring tool component with a pop-up dialog design within a static page, the HTML of your static page has to include the Dojo Toolkit. To include Dojo in a page you can add the following to the header section of your page:
 
 ```
 <script type="text/javascript" djConfig="parseOnLoad:false,isDebug:false" src="/portal_dojo/dojo/dojo.js">
@@ -199,16 +199,15 @@ To redirect users to another page for authoring tasks, specify a value of `url` 
 </a>
 ```
 
-**Note:** You can open the portal page in a separate browser window by adding `target="_blank"` to the HTML anchor tag in the design.
+!!!note
+    You can open the portal page in a separate browser window by adding `target="_blank"` to the HTML anchor tag in the design.
 
-**Related information**  
-
-
+<!-- **Related information**  
 [Inserting an image in an element](wcm_dev_elements_insert_image.md)
 
 [Inserting a link in an element](wcm_dev_elements_insert_link.md)
 
 [Inserting element tags](wcm_dev_elements_insert_tags.md)
 
-[Creating web content tags](wcm_dev_referencing_tags.md)
+[Creating web content tags](wcm_dev_referencing_tags.md) -->
 

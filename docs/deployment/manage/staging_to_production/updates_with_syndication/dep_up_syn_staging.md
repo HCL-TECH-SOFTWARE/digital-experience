@@ -8,46 +8,27 @@ The file is in the `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/
 
 1.  2.  To export these artifacts with the ExportManagedPagesRelease.xml file, use the xmlaccess command.
 
-    -   **AIX® Solaris Linux™**
+    -   **AIX® amd Linux™**
 
-        ./xmlaccess.sh -in /opt/IBM/WebSphere/PortalServer/doc/xml-samples/ExportManagedPagesRelease.xml -out /Sample1/content/xmlaccess/install/staging-version1.xml -url "http://stagingserver.example.com:port/wps/config" -user wpsadmin\_user\_ID -password wpsadmin\_pwd
-
-    -   **IBM® i**
-
-        xmlaccess.sh -in /QIBM/ProdData/WebSphere/PortalServer/V8/product\_offering/doc/xml-samples/ExportManagedPagesRelease.xml -out /Sample1/content/xmlaccess/install/staging-version1.xml -url "http://stagingserver.example.com:port/wps/config" -user wpsadmin\_user\_ID -password wpsadmin\_pwd
+        `./xmlaccess.sh -in /opt/IBM/WebSphere/PortalServer/doc/xml-samples/ExportManagedPagesRelease.xml -out /Sample1/content/xmlaccess/install/staging-version1.xml -url "http://stagingserver.example.com:port/wps/config" -user wpsadmin_user_ID -password wpsadmin_pwd`
 
     -   **Windows™**
 
-        xmlaccess.bat -in C:\\IBM\\WebSphere\\PortalServer\\doc\\xml-samples\\ExportManagedPagesRelease.xml -out \\Sample1\\content\\xmlaccess\\install\\staging-version1.xml -url "http://stagingserver.example.com:port/wps/config" -user wpsadmin\_user\_ID -password wpsadmin\_pwd
-
-    -   **z/OS®**
-
-        ./xmlaccess.sh -in /opt/IBM/WebSphere/PortalServer/doc/xml-samples/ExportManagedPagesRelease.xml -out /Sample1/content/xmlaccess/install/staging-version1.xml -url "http://stagingserver.example.com:port/wps/config" -user wpsadmin\_user\_ID -password wpsadmin\_pwd
+        `xmlaccess.bat -in C:\\IBM\WebSphere\PortalServer\doc\xml-samples\ExportManagedPagesRelease.xml -out \Sample1\content\xmlaccess\install\staging-version1.xml -url "http://stagingserver.example.com:port/wps/config" -user wpsadmin_user_ID -password wpsadmin_pwd`
 
     The exported configuration is stored in the staging-version1.xml file.
 
 3.  You can use the exported file to import these artifacts. Use the /Sample1/content/xmlaccess/install/staging-version1.xml file and use the xmlaccess command.
 
-    -   **AIX® Solaris Linux™**
+    -   **AIX® amd Linux™**
 
-        ./xmlaccess.sh -in /Sample1/content/xmlaccess/install/staging-version1.xml -out /Sample1/content/xmlaccess/install/staging-version1-Output.xml -url "http://productionserver.example.com:port/wps/config" -user wpsadmin\_user\_ID -password wpsadmin\_pwd
-
-    -   **IBM® i**
-
-        xmlaccess.sh -in /Sample1/content/xmlaccess/install/staging-version1.xml -out /Sample1/content/xmlaccess/install/staging-version1-Output.xml -url "http://productionserver.example.com:port/wps/config" -user wpsadmin\_user\_ID -password wpsadmin\_pwd
+        `./xmlaccess.sh -in /Sample1/content/xmlaccess/install/staging-version1.xml -out /Sample1/content/xmlaccess/install/staging-version1-Output.xml -url "http://productionserver.example.com:port/wps/config" -user wpsadmin_user_ID -password wpsadmin_pwd`
 
     -   **Windows™**
 
-        xmlaccess.bat -in C:\\Sample1\\content\\xmlaccess\\install\\staging-version1.xml -out C:\\Sample1\\content\\xmlaccess\\install\\staging-version1-Output.xml -url "http://stagingserver.example.com:port/wps/config" -user wpsadmin\_user\_ID -password wpsadmin\_pwd
-
-    -   **z/OS®**
-
-        ./xmlaccess.sh -in /Sample1/content/xmlaccess/install/staging-version1.xml -out /Sample1/content/xmlaccess/install/staging-version1-Output.xml -url "http://stagingserver.example.com:port/wps/config" -user wpsadmin\_user\_ID -password wpsadmin\_pwd
+        `xmlaccess.bat -in C:\\Sample1\content\xmlaccess\install\staging-version1.xml -out C:\\Sample1\content\xmlaccess\install\staging-version1-Output.xml -url "http://stagingserver.example.com:port/wps/config" -user wpsadmin_user_ID -password wpsadmin_pwd`
 
 
-
-**Related information**  
-
-
-[Syndication and staging](../deploy/dep_up_syn.md)
+???+ info "Related information" 
+    -   [Syndication and staging](../../../../deployment/manage/staging_to_production/updates_with_syndication/dep_up_syn.md)
 

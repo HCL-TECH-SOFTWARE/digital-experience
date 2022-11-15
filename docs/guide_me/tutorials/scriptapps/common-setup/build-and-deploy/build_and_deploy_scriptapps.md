@@ -2,13 +2,20 @@
 
 Execute the npm script dx-deploy-app, pre-set with the DX admin username and password.
 
-## Uploads via DXClient
-    ```bash
-    dxUsername=<username> dxPassword=<password> npm run dx-deploy-app 
+## Uploads via DXClient
+
+   === "MacOS or Linux"
+       ```bash
+       dxUsername=<username> dxPassword=<password> npm run dx-deploy-app 
+       ```
+   === "Windows"
+       ```bash
+       dxUsername=<username> dxPassword=<password> npm run dx-deploy-app-win
+       ```
 
    Sample successful _deployDxModule_ log:
 
-    ```bash
+   ```bash
         dxUsername=<username> dxPassword=<password> npm run dx-deploy-app 
             > sample-app@1.0.0 dx-deploy-app
             > dxclient deploy-Script Applicationlication push -dxUsername $dxUsername -dxPassword $dxPassword -wcmContentName "$npm_package_config_dxclient_wcmContentName" -wcmSiteArea "$npm_package_config_dxclient_wcmSiteArea" -mainHtmlFile $npm_package_config_dxclient_mainHtmlFile -contentRoot "$npm_package_config_dxclient_contentRoot" -dxProtocol $npm_package_config_dxclient_protocol -hostname $npm_package_config_dxclient_hostname -dxPort $npm_package_config_dxclient_port
@@ -33,7 +40,8 @@ Execute the npm script dx-deploy-app, pre-set with the DX admin username and pas
             2022-08-19 22:57:39 : Content push was successful.
             2022-08-19 22:57:39 : End content push to Portal.
             2022-08-19 22:57:39 : Body content: {"results":{"status":"success","importedFiles":{"file":[{"filename":"HTML/index.html"},{"filename":"JavaScript/main.bfc69d9380a37f7c3db2.bundle.js"}]},"skippedFiles":"","message":"The file that you selected was imported successfully.","contentId":"8ce2958e-86b0-4700-b6f1-ef7542c10f86"}}. 
-    ```
+   ```
+
 If there's a deployment error, check the DXClient logs in the &lt;app-folder&gt;/store/logs/logger.log file.
 
 ## Add Application to a Page

@@ -22,9 +22,11 @@ Define how search results are displayed for the menu element. These options incl
 
     4.  Enter the number of results pages to read ahead when you use a page navigation element. For example, if you enter 3, the page navigation element calculates results up to three pages ahead of the current page. Increasing this number improves the accuracy of the page navigation element. Lowering this number improves the performance of the page navigation element when rendered.
 
-    **Note:** To display multiple menu pages, you need to use a page navigation element. This element is referenced within the header or footer of the menu design.
+    !!!note
+        To display multiple menu pages, you need to use a page navigation element. This element is referenced within the header or footer of the menu design.
 
-    **Note:** Changes to paging options are not visible to users until the session cache is expired, or a user starts a new session.
+    !!!note
+        Changes to paging options are not visible to users until the session cache is expired, or a user starts a new session.
 
 3.  Specify the formatting options that are used to display the menu element.
 
@@ -35,25 +37,10 @@ Define how search results are displayed for the menu element. These options incl
     -   The text that is entered into the **Separator** field appears between each displayed menu result.
     -   The text that is entered into the **No result design** field is displayed if no matches are found for the menu search criteria.
 
-**Related information**  
+???+ info "Related information"  
+    -   [Inserting an image in an element](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_image.md)
+    -   [Inserting a link in an element](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_link.md)
+    -   [Inserting element tags](../../../../wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_tags.md)
+    -   [Creating web content tags](../../../../wcm_artifacts/tags/creating_web_content_tags/index.md)
 
-
-[Inserting an image in an element](../panel_help/wcm_dev_elements_insert_image.md)
-
-[Inserting a link in an element](../panel_help/wcm_dev_elements_insert_link.md)
-
-[Inserting element tags](../panel_help/wcm_dev_elements_insert_tags.md)
-
-[Creating web content tags](../panel_help/wcm_dev_referencing_tags.md)
-
-**References:**  
-
-
-[Inserting an image in an element](wcm_dev_elements_insert_image.md)
-
-[Inserting a link in an element](wcm_dev_elements_insert_link.md)
-
-[Inserting element tags](wcm_dev_elements_insert_tags.md)
-
-[Creating web content tags](wcm_dev_referencing_tags.md)
 

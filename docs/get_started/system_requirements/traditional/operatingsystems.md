@@ -1,6 +1,6 @@
 # Operating Systems
 
-The operating systems section specifies the operating systems that HCL Portal Server, Enable, and Extend 9.5 supports, and is organized by the operating system family. Operating system families include AIX, Linux, and Windows.
+The operating systems section specifies the operating systems that HCL Digital Experience 9.5 supports, and is organized by the operating system family. Operating system families include AIX, Linux, and Windows.
 
 Component support: Full / Partial / None
 
@@ -9,10 +9,13 @@ Component support: Full / Partial / None
 |-------|-------|-------|-------|-------|-------|-------|
 |AIX 7.1|Base|Base and later maintenance releases|POWER System - Big Endian|64-Exploit, 64-Tolerate|9.5|Full|
 |AIX 7.2|Base|Base and later maintenance releases|Power System - Big Endian|64-Exploit, 64-Tolerate|9.5|Full|
+|AIX 7.3|Base|Base and later maintenance releases|Power System - Big Endian|64-Exploit, 64-Tolerate|9.5|Full|
+
+!!! important "Installing DX on AIX 7.3"
+    If the AIX IIM installation fails using the IIM installer contained in the DX Setup zips (with missing library messages) then use the IBM AIX IIM later level (1.9.2.3 or later version) to ensure that the needed AIX 7.3 required libraries for install is present. Refer to the link below to check the list of IIM fix level and their corresponding download link: [Fix list for Installation Manager](https://www.ibm.com/support/pages/fix-list-installation-manager)
 
 !!! important "AIX support"
-
-	Portal Express offering does not support AIX.
+    Portal Express offering does not support AIX.
 
 ## Linux family
 |OS|OS Minimum|OS Supported Versions|Hardware|Bitness|Product Minimum|Components|
@@ -55,5 +58,5 @@ Windows 10 Pro|Base*|Base and later maintenance releases|x86-64|64-Exploit, 64-T
 |Windows Server 2019 Essential Edition|Base|Base and later maintenance releases|x86-64|64-Exploit, 64-Tolerate|9.5|Full|
 |Windows Server 2022|Base|Base and later maintenance releases|x86-64|64-Exploit, 64-Tolerate|9.5 CF199|Full|
 
-\*Support for developer platform only.
+*Support for developer platform only.
 

@@ -2,9 +2,9 @@
 
 To automatically run scope synchronization whenever syndication occurs, specify the tagging.syndication.enableTagSynchronization property in the Web Content Manager configuration service.
 
-1.  Log in to the WebSphere® Integrated Solutions Console \(`http://hostname.example.com:10027/ibm/console`\).
+1.  Log in to the WebSphere® Integrated Solutions Console (`http://hostname.example.com:10027/ibm/console`).
 
-2.  Click **Resources** \> **Resource Environment** \> **Resource Environment Providers**.
+2.  Click **Resources > Resource Environment > Resource Environment Providers**.
 
 3.  Click **WCM WCMConfigService**.
 
@@ -21,9 +21,6 @@ To automatically run scope synchronization whenever syndication occurs, specify 
 7.  Restart the portal.
 
 
-
-**Related information**  
-
-
-[Setting service configuration properties](../admin-system/adsetcfg.md)
+???+ info "Related information"  
+    -   [Setting service configuration properties](../../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 

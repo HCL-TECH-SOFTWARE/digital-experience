@@ -2,7 +2,8 @@
 
 The common profile provides general aspects that are available in various feeds that are served by HCL Connections. You can use the common profile when you create your own custom profiles.
 
-**Note:** You cannot use the common profile as is. Therefore, the common profile is not available to the Tag Helper.
+!!! note
+    You cannot use the common profile as is. Therefore, the common profile is not available to the Tag Helper.
 
 For more information about how to extend this profile, read *XPath list-rendering profile keys*.
 
@@ -101,10 +102,7 @@ In addition to these attributes, the common profile also provides access to the 
 
 
 
-**Related information**  
-
-
-[XPath list-rendering profile keys](../social/plrf_lr_profl_keys.md)
-
-[Configuring globally how social object data is served](../social/soc_rendr_cfg_data_serve.md)
+???+ info "Related information"
+    - [XPath list-rendering profile keys](../../../../../../extend_dx/ddc/integrating_remote_xml_data/syntax_xpath_based_list_rendering_profiles/plrf_lr_profl_keys.md)
+    - [Configuring globally how social object data is served](../../../../cfg_global_settings_social_rendering/soc_rendr_cfg_data_serve.md)
 

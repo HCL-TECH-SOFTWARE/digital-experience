@@ -47,7 +47,8 @@ When you create a social network configuration document for Facebook:
 
 3.  Select a message type:
 
-    **Note:** It is not recommended to reference rich text elements or HTML elements in any fields that do not support HTML.
+    !!! note
+        It is not recommended to reference rich text elements or HTML elements in any fields that do not support HTML.
 
     -   **Page wall post:**
 
@@ -97,7 +98,8 @@ When you create a social network configuration document for Facebook:
 
         1.  Select the appropriate visibility option.
 
-            **Note:** The visibility setting that is selected here does not override the default visibility setting of your Facebook application if the application has a more secure level of visibility. For example, if the visibility setting of your Facebook application is set to "Friends", you cannot change this to "Public" by selecting "Public" in this option.
+            !!! note
+                The visibility setting that is selected here does not override the default visibility setting of your Facebook application if the application has a more secure level of visibility. For example, if the visibility setting of your Facebook application is set to "Friends", you cannot change this to "Public" by selecting "Public" in this option.
 
         2.  Enter a default name, description, image, caption, and message template. Predefined tags for the image, caption, and message are included as a guide. For example:
             -   **Name:**
@@ -140,7 +142,8 @@ When you create a social network configuration document for Facebook:
                 [Element context="current" type="content" key="Message" format="length:100"]
                 ```
 
-    **Note:** Page notes are deprecated by Facebook.
+    !!! note
+        Page notes are deprecated by Facebook.
 
 
 

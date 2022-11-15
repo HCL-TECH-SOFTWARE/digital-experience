@@ -12,8 +12,6 @@ The given URLs are arranged in a hierarchical tree of **contexts**. The users ca
 -   You can administer the access permissions for users to individual contexts.
 -   If you change the name of a URL, the portal applies that name change to all mapping URLs that are affected by the change. Example: a change from `products/hardware/...` to `products/computer-hardware/...`
 
-**Related information**  
-
-
-[Searching](../panel_help/h_search_admin_portlets.md)
+???+ info "Related information" 
+    -   [Searching](../../../build_sites/portal_settings/manage_custom_unique_names/h_search_admin_portlets.md)
 

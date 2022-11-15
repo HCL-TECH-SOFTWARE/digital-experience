@@ -6,8 +6,8 @@ The REST service for Image Element Renditions supports access to and interaction
 
 HCL Digital Experience content and Digital Asset Management components support an image component and element, with the capability to have different versions optimize display to desktop, tablet, and smart phone channels. For more information on content images and rendition properties please see:
 
--   [Setting rendition properties on images](../renditions/rend_images.md)
--   [Generate renditions and versioning](../digital_asset_mgmt/dam_generate_renditions_and_versions.md)
+-   [Setting rendition properties on images](../../../../../manage_content/renditions/rend_images.md)
+-   [Generate renditions and versioning](../../../../../manage_content/digital_assets/usage/managing_dam/modify_dam/dam_generate_renditions_and_versions.md)
 
 The **Image Element Rendition Interactions REST API** allows developers to access and interact with image renditions using REST requests, as outlined in the descriptions and examples below.
 
@@ -15,7 +15,7 @@ The **Image Element Rendition Interactions REST API** allows developers to acces
 
 When placing a GET request for either a Web Content `LibraryImageComponent` or Content that contains a `LibraryImageComponent`, data on current image renditions will be returned in a `renditionList` after the resource URI for the default image.
 
-Within the `renditionList`, each `imageRendition` tag includes a name property \("desktop", "tablet", or "smart phone"\) to identify which platform it is intended to display on, as well as information about image height, width, file name, file type, and the rendition image's URI.
+Within the `renditionList`, each `imageRendition` tag includes a name property ("desktop", "tablet", or "smart phone") to identify which platform it is intended to display on, as well as information about image height, width, file name, file type, and the rendition image's URI.
 
 The sample below has both a Digital Asset Management and a non-Digital Asset Management image:
 

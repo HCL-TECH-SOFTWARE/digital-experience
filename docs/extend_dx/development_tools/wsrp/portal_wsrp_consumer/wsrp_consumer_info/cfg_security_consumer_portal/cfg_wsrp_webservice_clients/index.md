@@ -19,26 +19,14 @@ HCL Portal provides a set of default WSRP policy sets and client policy set bind
 
 For more detailed information about configuring the JAX-WS compliant web service clients, read the WebSphere Application Server product documentation.
 
-**Note:** The configuration of the WSRP service clients is managed outside HCL Portal. The portal WSRP Consumer supports all service client configurations that are configured in WebSphere Application Server. This support includes message level security, transport level security, and other quality of service configuration. However, the service client configuration of the WSRP Consumer must be compatible with the web service configuration of the WSRP Producer. Example: If the service providers of the Producer portal are configured for WS-Security, the service references of the Consumer portal must also be configured for WS-Security. Otherwise, the WSRP communication fails.
+!!!note
+    The configuration of the WSRP service clients is managed outside HCL Portal. The portal WSRP Consumer supports all service client configurations that are configured in WebSphere Application Server. This support includes message level security, transport level security, and other quality of service configuration. However, the service client configuration of the WSRP Consumer must be compatible with the web service configuration of the WSRP Producer. Example: If the service providers of the Producer portal are configured for WS-Security, the service references of the Consumer portal must also be configured for WS-Security. Otherwise, the WSRP communication fails.
 
 You can configure your WSRP Consumer portal to consume portlets from Producer portals that have different web service configurations. To do so, you deploy extra service references for the WSRP service clients. You can assign the service references to the ports of a Producer definition. This way, you can configure multiple WSRP Consumer side web service configurations. You can configure each service reference separately. Use this option only if your WSRP Consumer portal communicates with multiple Producer portals that have different web service configurations. For more detailed information, read the following topics.
 
-1.  [Communicating with Producer portals with different web service configurations](../admin-system/wsrpt_cons_cfg_wsrvc_clnt_xtra.md)  
-You can use your Consumer portal to communicate with Producer portals that have different web service configurations.
-2.  [Using the WSRP policy sets and client policy set bindings](../admin-system/wsrpt_cons_use_deflt_polsets.md)  
-HCL Portal provides a set of default WSRP policy sets and client policy set bindings. You can use them to configure the WSRP service clients and service references. In this case, you do not have to create your own policy sets and client policy set bindings. By alternative, you can create and use a policy set and client policy set binding of your choice.
-3.  [Creating and deploying custom service references](../admin-system/wsrpt_cons_crt_cust_wsrvc_refs.md)  
-In your WSRP Consumer portal, you can deploy extra service references for the WSRP service clients.
-
-
-**Related information**  
-
-
-[Securing the WSRP Producer by WS-Security](../admin-system/wsrpt_prod_sec_ws_wss.md)
-
-[Administering web services](http://pic.dhe.ibm.com/infocenter/wasinfo/v8r5/topic/com.ibm.websphere.nd.doc/ae/welc6tech_wbs_adm.html)
-
-[Administering message-level security for JAX-WS web services](http://pic.dhe.ibm.com/infocenter/wasinfo/v8r5/topic/com.ibm.websphere.nd.doc/ae/container_wssec_admin_message_security_jaxws.html)
-
-[Securing web services using policy sets](http://pic.dhe.ibm.com/infocenter/wasinfo/v8r5/topic/com.ibm.websphere.nd.doc/ae/twbs_securewbsps.html)
+???+ info "Related information"  
+    -   [Securing the WSRP Producer by WS-Security](../../../../../wsrp/portal_wsrp_producer/securing_wsrp_prod_portal/cfg_security_producer_portal/wsrpt_prod_sec_ws_wss.md)
+    -   [Administering web services](http://pic.dhe.ibm.com/infocenter/wasinfo/v8r5/topic/com.ibm.websphere.nd.doc/ae/welc6tech_wbs_adm.html)
+    -   [Administering message-level security for JAX-WS web services](http://pic.dhe.ibm.com/infocenter/wasinfo/v8r5/topic/com.ibm.websphere.nd.doc/ae/container_wssec_admin_message_security_jaxws.html)
+    -   [Securing web services using policy sets](http://pic.dhe.ibm.com/infocenter/wasinfo/v8r5/topic/com.ibm.websphere.nd.doc/ae/twbs_securewbsps.html)
 

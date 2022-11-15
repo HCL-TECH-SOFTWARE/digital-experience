@@ -12,7 +12,7 @@ The HCL Digital Experience 8.5 ready-to-use theme provides two new responsive pa
 
 ## Tablet navigation design
 
-![Welcome page displayed on a tablet.](../images/rwd_tablet_welcome.jpg)
+![Welcome page displayed on a tablet.](../../../images/rwd_tablet_welcome.jpg)
 
 1.  Tap the navigation button to show the navigation for your portal.
 2.  Tap this link to return to your portal home page.
@@ -24,11 +24,12 @@ You can have the navigation and portal navigation open individually or at the sa
 
 ## Mobile navigation markup
 
-The mobile navigation markup for both smartphone and tablet is created by the mobileNavigation.jsp file of the theme, found at [PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/theme/wp.theme.themes/default85/installedApps/DefaultTheme85.ear/DefaultTheme85.war/themes/html/dynamicSpots. The mobileNavigation.jsp file is controlled by the mobile navigation dynamic spot in theme.html: dyn-cs:id:85theme\_mobileNavigation
+The mobile navigation markup for both smartphone and tablet is created by the mobileNavigation.jsp file of the theme, found at [PortalServer\_root](../../../guide_me/wpsdirstr.md)/theme/wp.theme.themes/default85/installedApps/DefaultTheme85.ear/DefaultTheme85.war/themes/html/dynamicSpots. The mobileNavigation.jsp file is controlled by the mobile navigation dynamic spot in theme.html: dyn-cs:id:85theme\_mobileNavigation
 
 The navigation on mobile devices is rendered by the mobileNavigation.jsp file. Therefore, the primary, secondary, breadcrumb, and side navigation that is used on the desktop do not produce any output for a mobile device. The navigation is rendered for mobile, but is hidden when the page loads. On a tablet, the arrow button in the banner can be tapped to reveal the navigation. On a smartphone, the user can scroll up to see the first-level navigation pages. Since smartphones have little real estate, site designers might want to hide certain first-level pages, such as Administration, for these devices. Add the `com.ibm.portal.mobile.Hidden` metadata to the page to hide certain first-level pages. By default, the Administration, Application, and Tag Center pages are hidden.
 
-**Note:** If the expanded navigation for your Portal site ends up being long on a smartphone, it is possible part of the navigation can get cut off. This cut off happens because a maximum height is required to be set on the navigation in order for the CSS3 animations to work correctly. If your navigation does not fit into this maximum height, it can be adjusted by editing the mobilenav.css file of your custom theme in WebDAV at dav:fs-type1/themes/myCustomTheme/css/. Look for the following style declaration, increase the max-height, and save.
+!!! note
+   If the expanded navigation for your Portal site ends up being long on a smartphone, it is possible part of the navigation can get cut off. This cut off happens because a maximum height is required to be set on the navigation in order for the CSS3 animations to work correctly. If your navigation does not fit into this maximum height, it can be adjusted by editing the mobilenav.css file of your custom theme in WebDAV at dav:fs-type1/themes/myCustomTheme/css/. Look for the following style declaration, increase the max-height, and save.
 
 ```
 .wpthemeMobileNav ul.wpthemeExpandNav {
@@ -38,10 +39,7 @@ The navigation on mobile devices is rendered by the mobileNavigation.jsp file. T
 ```
 
 
-**Related information**  
-
-
-[Working with dynamic content spots](../dev-portlet/csa2r_dyn_cntnt_spot.md)
-
-[Customizing navigation](../dev-theme/themeopt_cust_nav.md)
+???+ info "Related information:"
+   - [Working with dynamic content spots](../customizing_theme/dynamic_content_spots/working_with_dcs/index.md)
+   - [Customizing navigation](../customizing_theme/cust_nav/)
 

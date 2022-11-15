@@ -13,9 +13,8 @@ If you created the portal site collection by navigating to the Manage Search por
     This file path length problem can occur particularly when the portal site collection is created on one of the following operating systems:
 
     -   AIX®
-    -   HP-UX
     -   Linux™
-    -   Solaris
+    
     For details about this length limitation, see the topic about what to do if Creating the portal site search collection fails.
 
 -   If you want to turn the summarizer off so summary information is not generated for your portal and web content.
@@ -38,24 +37,16 @@ If you created the portal site collection by navigating to the Manage Search por
 
 Portal Search starts a new crawl on the portal site search collection.
 
-**Notes:**
-
-1.  On a multilingual portal site, you can create multiple collections in different languages. For details, see the topic about Crawling a multilingual portal site.
-2.  When you start the crawl for the first time, a warning message might display. You can ignore this message. For more information, see the topic about Hints and tips for Portal Search crawls.
-
-
-**Related information**  
+!!! note
+    1.  On a multilingual portal site, you can create multiple collections in different languages. For details, see the topic about Crawling a multilingual portal site.
+    2.  When you start the crawl for the first time, a warning message might display. You can ignore this message. For more information, see the topic about Hints and tips for Portal Search crawls.
 
 
-[Searching on secured portal sites and pages and content management items](../admin-system/srtsrchscrprtlstepgs.md)
-
-[Exporting and importing search collections](../admin-system/srtexpimp.md)
-
-[Crawling a multilingual portal site](../admin-system/srtmultiling.md)
-
-[Hints and tips for Portal Search crawls](../admin-system/srrhinttips_crawl.md)
-
-[Manage Search](../panel_help/h_search_managesearch.md)
-
-[Users cannot see portal site search results in their preferred language](../admin-system/srrhinttips_no_lang.md)
+???+ info "Related information" 
+    - [Searching on secured portal sites and pages and content management items](../../../../search/planning_portal_search/security_considerations/srtsrchscrprtlstepgs.md)
+    - [Exporting and importing search collections](../setup_search_collections/srtexpimp.md)
+    - [Crawling a multilingual portal site](../../../searching_local_portal/srtmultiling.md)
+    - [Hints and tips for Portal Search crawls](../../hint_tips/srrhinttips_crawl.md)
+    - [Manage Search](../../../manage_search/h_search_managesearch.md)
+    - [Users cannot see portal site search results in their preferred language](../../hint_tips/srrhinttips_no_lang.md)
 

@@ -16,7 +16,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [Description](themeopt_el_bean_description.md) object for the current control; it is never null. You can use the value of the title object to retrieve the description in current locale.
+    Returns: [Description](../common_beans/themeopt_el_bean_description.md) object for the current control; it is never null. You can use the value of the title object to retrieve the description in current locale.
 
 -   **metadata**
 
@@ -30,7 +30,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [Metadata](themeopt_el_bean_meta.md), never null.
+    Returns: [Metadata](../common_beans/themeopt_el_bean_meta.md), never null.
 
 -   **objectID**
 
@@ -58,7 +58,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [Title](themeopt_el_bean_title.md) object for the current control; it is never null. You can use the value of the title object to retrieve the title in current locale.
+    Returns: [Title](../common_beans/themeopt_el_bean_title.md) object for the current control; it is never null. You can use the value of the title object to retrieve the title in current locale.
 
 
 

@@ -24,7 +24,7 @@ Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators
 !!!important
         Beginning with HCL DX Container Update CF200, use of the Operator \(dxctl\) method of container deployment is not supported. Customers should use Helm deployments and migrate existing Operator-based deployments to Helm.
 
-See the [HCL DX 9.5 Helm deployment](../../get_started/architecture_overview/kubernetes_deployment/index.md) topic for more information. 
+See the [HCL DX 9.5 Helm deployment](../../get_started/plan_deployment/hybrid_deployment/index.md) topic for more information. 
 
 ## Digital Asset Management
 
@@ -42,7 +42,7 @@ See the [DXClient and DXConnect tooling supporting CICD release processes](../.
 
 ## New User and Groups REST API Explorer
 
-The remote PUMA SPI gives you access to user profiles through REST services. It provides a remote interface for user and group management for the configured HCL DX user repository. Beginning with HCL DX 9.5 Container Update and CF 199, a new API explorer is available that allows developers using the Portal User Interface APIs to explore and test these APIs. See the Help Center topic [Remote REST service for PUMA](../../extend_dx/apis/puma_spi/remote_rest_service_for_puma/uprof_rest.md) for additional information.
+The remote PUMA SPI gives you access to user profiles through REST services. It provides a remote interface for user and group management for the configured HCL DX user repository. Beginning with HCL DX 9.5 Container Update and CF 199, a new API explorer is available that allows developers using the Portal User Interface APIs to explore and test these APIs. See the Help Center topic [Remote REST service for PUMA](../../extend_dx/apis/puma_spi/remote_rest_service_for_puma/index.md) for additional information.
 
 ## New Personalization REST APIs and Explorer
 
@@ -50,11 +50,11 @@ Beginning with HCL DX 9.5 Container Update and CF200, a new API explorer is avai
 
 ## New Search REST APIs Explorer
 
-The Digital Experience Search REST API provides developers programmatic access to search indexed Digital Experience content and web pages. Beginning with Container and CF Update CF200, a new Digital Experience Search REST API Explorer allows developers to explore and test the Digital Experience Search REST APIs. See the [HCL Digital Experience Search REST API Specification](../../build_sites/search/usage/search-rest-api/search.md) Help Center topic for more information.
+The Digital Experience Search REST API provides developers programmatic access to search indexed Digital Experience content and web pages. Beginning with Container and CF Update CF200, a new Digital Experience Search REST API Explorer allows developers to explore and test the Digital Experience Search REST APIs. See the [HCL Digital Experience Search REST API Specification](../../build_sites/search/search-rest-api/index.md) Help Center topic for more information.
 
 ## Access and Deploy HCL Digital Experience 9.5 on HCL Sofy
 
-[HCL SoFy](https://www.hcltechsw.com/sofy/catalog) is a next generation software development platform that accelerates deployment and integration of cloud-native products through the application of cloud-centered technologies and practices. Using HCL SoFy to access and deploy HCL Digital Experience 9.5, and other HCL software offerings and demo packs, you can quickly gain hands-on experience working with these cloud-native solutions. See the [Deploying HCL Digital Experience 9.5 with HCL Solution Factory \(SoFy\)](https://help.hcltechsw.com/digital-experience/9.5/containerization/hybrid_deployment_HCL_SoFy.html){:target="_blank"}<!-- (../containerization/hybrid_deployment_HCL_SoFy.md) --> Help Center topic for more information.
+[HCL SoFy](https://www.hcltechsw.com/sofy/catalog) is a next generation software development platform that accelerates deployment and integration of cloud-native products through the application of cloud-centered technologies and practices. Using HCL SoFy to access and deploy HCL Digital Experience 9.5, and other HCL software offerings and demo packs, you can quickly gain hands-on experience working with these cloud-native solutions. See the [Deploying HCL Digital Experience 9.5 with HCL Solution Factory (SoFy)](https://help.hcltechsw.com/digital-experience/9.5/containerization/hybrid_deployment_HCL_SoFy.html){:target="_blank"}<!-- (../containerization/hybrid_deployment_HCL_SoFy.md) --> Help Center topic for more information.
 
 ## New How-To Video
 

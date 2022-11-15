@@ -1,40 +1,40 @@
-# Creating Identity Provider settings at the Outbound Connection Service configuration \(ADFS\)
+# Creating Identity Provider settings at the Outbound Connection Service configuration (ADFS)
 
-Certain metadata settings such as the ADFS cookies, the Identity Provider URL, and the Partner URL are required to define a single sign-on \(SSO\) connection through Active Directory Federation Services \(ADFS\).
+Certain metadata settings such as the ADFS cookies, the Identity Provider URL, and the Partner URL are required to define a single sign-on (SSO) connection through Active Directory Federation Services (ADFS).
 
 The following metadata values are required to define an ADFS Identity Provider, where IdpName is the unique name of the Identity Provider:
 
--   **IdpName.IDP\_PROTOCOL**
+-   **IdpName.IDP_PROTOCOL**
 
     The protocol part of the Identity Provider login URL. Replace the value my\_idp\_prot with the value of the protocol part of the Identity Provider login URL, either `http` or `https`.
 
--   **IdpName.IDP\_HOST**
+-   **IdpName.IDP_HOST**
 
-    The host name part of the Identity Provider login URL. Replace the value my\_idp\_host with the Identity Provider login URL host name.
+    The host name part of the Identity Provider login URL. Replace the value my_idp_host with the Identity Provider login URL host name.
 
--   **IdpName.IDP\_PORT**
+-   **IdpName.IDP_PORT**
 
-    The port number of the Identity Provider login URL. Replace the value my\_idp\_port with the value of the Identity provider login URL port.
+    The port number of the Identity Provider login URL. Replace the value my_idp_port with the value of the Identity provider login URL port.
 
--   **IdpName.IDP\_URI**
+-   **IdpName.IDP_URI**
 
-    The URL path of the Identity Provider login URL. Replace the value my\_idp\_uri with the path of the Identity Provider login URL.
+    The URL path of the Identity Provider login URL. Replace the value my_idp_uri with the path of the Identity Provider login URL.
 
--   **IdpName.IDP\_AUTH\_COOKIE.1**
+-   **IdpName.IDP_AUTH_COOKIE.1**
 
     Authentication token that is created by the federation partner. The default value is `SamlSession`.
 
--   **IdpName.IDP\_AUTH\_TOKEN\_SOURCE**
+-   **IdpName.IDP_AUTH_TOKEN_SOURCE**
 
-    Determines where the AJAX proxy obtains the IDP authentication tokens. The IDP authentication tokens are the cookies that are required to authenticate the connection with the Identity Provider. By default, the AJAX procy creates an LTPA token from the user subject and uses this LTPA token to authenticate the connection with the Identity Provider. Because the ADFS Identity Provider does not support an LTPA-based authentication, set the value of this parameter to `cookies`. This setting lets the AJAX proxy use the authentication tokens that are defined in the metadata settings IdpName.IDP\_AUTH\_TOKEN\_COOKIE.n.
+    Determines where the AJAX proxy obtains the IDP authentication tokens. The IDP authentication tokens are the cookies that are required to authenticate the connection with the Identity Provider. By default, the AJAX procy creates an LTPA token from the user subject and uses this LTPA token to authenticate the connection with the Identity Provider. Because the ADFS Identity Provider does not support an LTPA-based authentication, set the value of this parameter to `cookies`. This setting lets the AJAX proxy use the authentication tokens that are defined in the metadata settings IdpName.IDP_AUTH_TOKEN_COOKIE.n.
 
--   **IdpName.IDP\_AUTH\_TOKEN\_COOKIE.n**
+-   **IdpName.IDP_AUTH_TOKEN_COOKIE.n**
 
     The authentication tokens that are required for authenticating against the Identity Provider. In the example that follows, the cookies `MSISAuth`, `MSISAuth1`, and `MSISAuthenticated` are defined.
 
--   **IdpName.PARAM\_NAME.1 and IdpName.PARAM\_VALUE.1**
+-   **IdpName.PARAM_NAME.1 and IdpName.PARAM_VALUE.1**
 
-    This setting defines the partner URL. Replace the value idp\_name\_partner\_url with the URL of the partner that runs the Service Provider service.
+    This setting defines the partner URL. Replace the value idp_name_partner_url with the URL of the partner that runs the Service Provider service.
 
 
 The following XML example creates the Identity Provider settings for an Active Directory Federation Services connection at the Outbound Connection Service Configuration and uses the following values:
@@ -109,10 +109,9 @@ Change these values according to your configuration.
 
 2.  After you save the XML file, run the ConfigEngine task update-outbound-http-connection-config to apply the Identity Provider settings at the global configuration profile.
 
-    -   AIX®, HP-UX, Linux™, Solaris: `./ConfigEngine.sh update-outbound-http-connection-config -DConfigFileName=XML\_file -DOutboundProfileType=global`
-    -   IBM® i: `ConfigEngine.sh update-outbound-http-connection-config -DConfigFileName=XML\_file -DOutboundProfileType=global`
+    -   AIX® and Linux™ : `./ConfigEngine.sh update-outbound-http-connection-config -DConfigFileName=XML\_file -DOutboundProfileType=global`
     -   Windows™: `ConfigEngine.bat update-outbound-http-connection-config -DConfigFileName=XML\_file -DOutboundProfileType=global`
-    where XML\_file is the file path to the XML file.
+    where XML_file is the file path to the XML file.
 
 
 

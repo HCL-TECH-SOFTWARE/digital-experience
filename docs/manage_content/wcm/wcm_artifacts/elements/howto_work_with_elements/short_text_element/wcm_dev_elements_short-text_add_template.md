@@ -3,10 +3,9 @@ id: wcm_dev_elements_short-text_add_template
 title: Adding a short text element to a template
 ---
 
+# Adding a short text element to a template
 
-
-
-You add a short text element to an authoring template when you want a short text element to be used by a set of items that use the same authoring template.
+Add a short text element to an authoring template when you want a short text element to be used by a set of items that use the same authoring template.
 
 1.  Open or create an authoring template.
 
@@ -28,13 +27,14 @@ You add a short text element to an authoring template when you want a short text
 
 10. Enter some default text in the short text field, or leave it blank if you want your content creators to enter text in this field.
 
-11. Click ![properties](../images/propIcon.jpg) to open the display properties of the element. This view is where you define how the element is displayed on the item form.
+11. Click ![properties](../short_text_element/_img/propIcon.jpg) to open the display properties of the element. This view is where you define how the element is displayed on the item form.
 
     1.  To display the element as a required field select **Identify this as a required field**.
 
     2.  To hide a field on the content form from all users select **Hide field**. You must specify a default value if the field is a required field.
 
-        **Note:** Administrators and managers can choose to display hidden fields and elements in an item by clicking **Show hidden fields**.
+        !!!note
+            Administrators and managers can choose to display hidden fields and elements in an item by clicking **Show hidden fields**.
 
     3.  Type the number of characters to use in **Field Width** to set the size of the displayed field. If you leave this blank, the default field size is used.
 

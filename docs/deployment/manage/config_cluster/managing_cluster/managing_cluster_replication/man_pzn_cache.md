@@ -4,7 +4,7 @@ Enable the Personalization cache replication if you want to propagate invalidati
 
 1.  Log in to the Deployment Manager WebSphere® Integrated Solutions Console.
 
-2.  Go to **Resources** \> **Cache instances** \> **Object cache instances**.
+2.  Go to **Resources > Cache instances > Object cache instances**.
 
 3.  Edit each of the following Personalization cache instances by clicking the link:
 

@@ -15,15 +15,15 @@ The frameworks used in the Sample Content UI are:
 -   TypeScript - provides the type safety for the application
 -   And Jest and Enzyme – that are test frameworks used to write the test cases for the application.
 
-![](../images/Dev_Sample_UI_Create.png "The Sample UI page shows you the list of contents
-                                                that corresponds to a search on the word 'Sample',
-                                                and an option to create a new content")
+The Sample UI page shows you the list of contents that corresponds to a search on the word 'Sample', and an option to create a new content:
+![](../assets/Dev_Sample_UI_Create.png)
 
-![](../images/Dev_Sample_UI_update.png "This shows how to create a new content")
+This shows how to create a new content:
+![](../assets/Dev_Sample_UI_update.png)
 
--   **[Sample Content UI prerequisites \| HCL Experience API](../open_api/sample_api_prerequisites.md)**  
+-   **[Sample Content UI prerequisites \| HCL Experience API](../openapi_prerequisites.md)**  
 There are certain prerequisites that need to be followed before Sample Content UI application can be used.
--   **[Getting started with Sample Content UI \| HCL Experience API](../open_api/getting_started_sample_api.md)**  
+-   **[Getting started with Sample Content UI \| HCL Experience API](./getting_started_sample_api.md)**  
 Learn how to get started with the Sample Content UI application on HCL Digital Experience 9.5.
 
 

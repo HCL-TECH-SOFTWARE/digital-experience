@@ -17,7 +17,8 @@ The following example represents a web content page with two content association
 </content-node>
 ```
 
-**Note:** If no content-mapping-info elements are present in an XML export document, there are currently no content associations defined for the web content page.
+!!! note
+  If no content-mapping-info elements are present in an XML export document, there are currently no content associations defined for the web content page.
 
 ## Import content associations
 
@@ -34,7 +35,8 @@ The following example updates a web content page to have two specific content as
 </content-node>
 ```
 
-**Note:** If no content-mapping-info element is present in an XML import document, no changes are made to the content associations currently defined for the web content page.
+!!! note
+  If no content-mapping-info element is present in an XML import document, no changes are made to the content associations currently defined for the web content page.
 
 ## Delete content associations
 
@@ -49,14 +51,8 @@ The following example updates a web content page to delete any defined content a
 ```
 
 
-**Related information**  
-
-
-[Web content associations](../wcm/wcm_delivery_contentmap_about.md)
-
-[Human readable URL mappings for virtual portals](../admin-system/advppln_shpux_urlmap.md)
-
-[Managing community associations](../admin-system/commpages_create_mapping.md)
-
-[Community associations and APIs](../admin-system/commpages_access_apis.md)
-
+???+ info "Related information:"
+    - [Web content associations](../../getting_started/wcm_delivery_contentmap_about.md)
+    - [Community associations and APIs](../../../../../../../extend_dx/integration/connections/configuration/managing_community_pages/commpages_access_apis.md)
+    - [Human readable URL mappings for virtual portals](../../../../../../../build_sites/virtual_portal/vp_planning/shape_vp_ux/advppln_shpux_urlmap.md)
+    - [Managing community associations](../../../../../../../extend_dx/integration/connections/configuration/managing_community_pages/commpages_create_mapping.md)

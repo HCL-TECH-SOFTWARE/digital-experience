@@ -14,7 +14,8 @@ The portal supports the following methods for portlet communication based on sha
 
     This applies to JSR 286 standard API portlets only. The Java Portlet Specification 2.0 for JSR 286 allows portlets to share navigational state information that is stored as render parameters. This method of data sharing is especially useful for coordinating the view state of multiple portlets that display different information items that are all related to the same parameter name, such as a customerID. In this case, the parameter should be represented as a shared render parameter. Shared render parameters are defined per portlet in the portlet application's portlet.xml. A similar common scenario is the coordination between a navigator and a viewer portlet. Public render parameters provide a simple programming model and allow bookmarking of the shared state and **Back** button support. Public render parameters can also be shared with remote portlets via the WSRP V 2.0 protocol. This is supported by HCL Digital Experience 8.5 and later versions.
 
-    **Note:** Information about render parameters is normally encoded into the URL. Therefore their names and values should be as short as possible in order to not exceed the URL length restrictions that many browsers have.
+    !!!note
+        Information about render parameters is normally encoded into the URL. Therefore their names and values should be as short as possible in order to not exceed the URL length restrictions that many browsers have.
 
 
 

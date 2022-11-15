@@ -5,10 +5,14 @@ This extension provides a redirection from the main domain to another locale bas
 To use this extension:
 
 1.  Edit the MLServletHomePageRedirection.jsp in the wcm-multilocale.ear:
+
     -   Comment out the lines in the getAvailableLocalesList method.
     -   Change s\_defaultLocale to match the default locale.
+
 2.  Update your HTTP Server. For example, if you are using IBM HTTP Server edit the following configuration settings:
+
     -   Add the following text to the end of the IBM HTTP Server configuration file:
+
         -   **Before version 8.5 CF03**
 
             ```
@@ -28,6 +32,7 @@ To use this extension:
             Where MLS\_CONTEXT\_ROOT is the context root for the multilingual solution application.
 
     -   For each locale in the **s\_availableLocales** list, also add the following text to the end of the IBM HTTP Server configuration file:
+
         -   **Before version 8.5 CF03**
 
             ```
@@ -53,7 +58,8 @@ To use this extension:
             -   SITE: The top-level site area for the specified library
             For example: `RewriteRule ^/en$ /wps/wcm/connect/english/Internet [PT]`
 
-            **Important:** Never map any of the locale redirections to the main domain.
+            !!! important
+                Never map any of the locale redirections to the main domain.
 
 
 ## How it works

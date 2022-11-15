@@ -46,13 +46,14 @@ Users can also delete content from the Search Results view.
 
 2.  Click the avatar icon of the content you wish to delete. Users can choose more than one content to delete, as shown below.
 
-    ![](../../../../assets/Authoring_actions_via_HCL_CC_Dashboard.png)
+    ![](../../../../assets/Authoring_actions_multi_select_via_HCL_CC_Dashboard.png)
 
 3.  Click the **Delete** from the main header.
 4.  A pop-up will ask to confirm the **Delete** action. Click **Delete** to confirm or **Cancel** cancel action.
 
+<!--
 ## HCL Digital Experience Solution Feedback
 
-HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1){:target="_blank"}.
+HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1){:target="_blank"}. -->
 
 

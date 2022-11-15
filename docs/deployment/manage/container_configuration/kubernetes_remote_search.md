@@ -10,11 +10,11 @@ This section shows how to configure Remote Search for your HCL Digital Experienc
 Using HCL Digital Experience 9.5 Remote Search images in the supported cloud container platforms, such as Red Hat OpenShift, require a different setup and configuration steps than those used to [set up Remote Search on a non-Docker or Kubernetes container platform](https://help.hcltechsw.com/digital-experience/9.5/admin-system/installrssman.html)<!-- (../admin-system/installrssman.md) -->.
 
 -   As information, the serverindex.xml file on the Remote Search server when deployed to on-premises environments may have a host name that is not accurate in a container environment with respect to the actual host name of the server hosting the Remote Search server.
--   Follow the guidance in this section to define collections in the core HCL DX 9.5 container environment with respect to JCR text search collections, rather than guidance published for the on-premises [\(non-Docker or Kubernetes\) platforms](https://help.hcltechsw.com/digital-experience/9.5/admin-system/srtcfg_jcr_colls.html)<!-- (../admin-system/srtcfg_jcr_colls.md) --> for the JCR collection URL.
+-   Follow the guidance in this section to define collections in the core HCL DX 9.5 container environment with respect to JCR text search collections, rather than guidance published for the on-premises [\(non-Docker or Kubernetes\) platforms](/../build_sites/search/portal_search/administer_portal_search/setup_search_collections/jcr_search_collections/index.md)<!-- (../admin-system/srtcfg_jcr_colls.md) --> for the JCR collection URL.
 
 ## Deploying Remote Search in HCL Digital Experience 9.5 OpenShift and Kubernetes platforms
 
-**Prerequisite**: Download the HCL Digital Experience 9.5 Docker containers from your HCL Digital Experience entitlements from the [HCL Software License Portal](https://www.hcltech.com/software/support/release).
+**Prerequisite**: Download the HCL Digital Experience 9.5 Docker containers from your HCL Digital Experience entitlements from the [HCL Software License Portal](https://www.hcltech.com/software/support/release){:target="_blank"}.
 
 The HCL DX 9.5 container update CF181 and later packages include a core software and Remote search container. Load both of these images into an OpenShift release platform supported by HCL DX 9.5 such as Red Hat OpenShift. Use CF195 and later if you deploy to a Kubernetes platform. See the following [Additional Routing Configuration for supported Kubernetes platforms](#additional-routing-configuration-for-supported-kubernetes-platforms) topic for information about deploying to Kubernetes container platforms such as Amazon EKS, Azure AKS, or Google GKE.
 
@@ -30,7 +30,7 @@ hcl-dx-dxrs-image-v95_CF181_xxxxxxxx-xxxx.tar.gz
 
 The first one \(dx-core-image\), is the core HCL DX 9.5 Portal and Web Content Manager image while the second one \(dx-dxrs-image\) is the remote search image.
 
-After the Remote Search images are loaded to the Kubernetes environment that you deploy to, follow deployment steps for that platform presented in the [HCL Digital Experience 9.5 Container Deployment](../deployment/helm_deployment.md) topic pages.
+After the Remote Search images are loaded to the Kubernetes environment that you deploy to, follow deployment steps for that platform presented in the [HCL Digital Experience 9.5 Container Deployment](../../install/container/helm_deployment/overview.md) topic.
 
 ## EJBs and host names
 
@@ -153,38 +153,36 @@ To configure Remote Search to DX 9.5 container deployments to supported Kubernet
 
 Sample Yaml:
 
-```
-
-          apiVersion: v1
-          kind: Service
-          metadata:
-           labels:
-            app: dx-deployment-remotesearch
-            release: dx-deployment
-           name: dx-deployment-service-remotesearch-lb
-          spec:
-           ports:
-           - name: was-admin
-             port: 9060
-             protocol: TCP
-             targetPort: 9060
-          - name: was-admin-sec
-            port: 9043
-            protocol: TCP
-            targetPort: 9043
-          - name: boot-port
-            port: 2809
-            protocol: TCP
-            targetPort: 2809
-          - name: rs-port
-            port: 9403
-            protocol: TCP
-            targetPort: 9403
-          selector:
-            app: dx-deployment-remotesearch
-          sessionAffinity: None
-          type: LoadBalancer
-        
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+  app: dx-deployment-remotesearch
+  release: dx-deployment
+  name: dx-deployment-service-remotesearch-lb
+spec:
+  ports:
+  - name: was-admin
+    port: 9060
+    protocol: TCP
+    targetPort: 9060
+  - name: was-admin-sec
+    port: 9043
+    protocol: TCP
+    targetPort: 9043
+  - name: boot-port
+    port: 2809
+    protocol: TCP
+    targetPort: 2809
+  - name: rs-port
+    port: 9403
+    protocol: TCP
+    targetPort: 9403
+  selector:
+    app: dx-deployment-remotesearch
+  sessionAffinity: None
+  type: LoadBalancer
 ```
 
 Apply this configuration using the following example command:

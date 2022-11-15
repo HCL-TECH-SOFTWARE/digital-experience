@@ -50,6 +50,7 @@ The drag-and-drop configurations for the community-focused list view definitions
 -   List of Community Content: `ibm.portal.instantiation.community.widgets= Forum,Bookmarks,Files,Blog,Activities,Wiki,Calendar`
 -   List of Community Files: `ibm.portal.instantiation.community.widgets=Files`
 
-**Note:** The portlet preferences that are described here are ignored on non-community pages, that is on pages that are not associated to a specific community.
+!!! note
+    The portlet preferences that are described here are ignored on non-community pages, that is on pages that are not associated to a specific community.
 
 

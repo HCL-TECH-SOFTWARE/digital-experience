@@ -7,7 +7,7 @@ Both portlets were removed from Web Content Manager Version 8.5 and are no longe
 If you already use only the JSR 286 version, then you do not need to plan for any additional steps for migration.
 
 1.  Check which version you currently have installed on your source environment.
-2.  Click the **Administration menu** icon. Then, click **Portlet Management** \> **Web Modules**.
+2.  Click the **Administration menu** icon. Then, click **Portlet Management > Web Modules**.
 
 3.  Search for the following files names:
 
@@ -25,8 +25,6 @@ If you already use only the JSR 286 version, then you do not need to plan for an
 
 
 
-**Related information**  
-
-
-[Converting a Portal API Web Content Viewer to the JSR 286 API](../migrate/migrt_ptlt_api_wcm.md)
+???+ info "Related information" 
+    -   [Converting a Portal API Web Content Viewer to the JSR 286 API](../../../../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/wcm_post_mig_update/migrt_ptlt_api_wcm.md)
 

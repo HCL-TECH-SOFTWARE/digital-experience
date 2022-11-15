@@ -1,6 +1,6 @@
 # Portal Access Control SPI
 
-The Portal Access Control \(PAC\) System Programming Interface \(SPI\) lets you directly retrieve and modify access control information for portal resources.
+The Portal Access Control (PAC) System Programming Interface (SPI) lets you directly retrieve and modify access control information for portal resources.
 
 You can retrieve the following main service interfaces through the `AccessControlHome` interface.
 

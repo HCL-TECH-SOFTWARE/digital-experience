@@ -1,4 +1,4 @@
-# Files conversion supported by DCS
+# File Types Supported for Conversion by DCS
 
 View a list of file types that are supported by DCS for conversion.
 
@@ -6,12 +6,12 @@ HCL Digital Experience has a feature that allows you to view documents as HTML f
 
 |Archive|Version|
 |-------|-------|
-|7z \(BZIP2 and split archives not supported\)| |
-|7z Self Extracting exe \(BZIP2 and split archives not supported\)| |
+|7z (BZIP2 and split archives not supported)| |
+|7z Self Extracting exe (BZIP2 and split archives not supported)| |
 |LZA Self Extracting Compress| |
 |LZH Compress| |
 |Microsoft™ Office Binder|95 - 97|
-|Microsoft Cabinet \(CAB\)| |
+|Microsoft Cabinet (CAB)| |
 |RAR|1.5, 2.0, 2.9|
 |Self-extracting.exe| |
 |UNIX™ Compress| |
@@ -27,8 +27,8 @@ HCL Digital Experience has a feature that allows you to view documents as HTML f
 |DBase|III, IV, V|
 |First Choice DB|Through 3.0|
 |Framework DB|3.0|
-|Microsoft Access \(text only\)|1.0, 2.0, 95 - 2010|
-|Microsoft Access Report Snapshot \(File ID only\)|2000 - 2003|
+|Microsoft Access (text only)|1.0, 2.0, 95 - 2010|
+|Microsoft Access Report Snapshot (File ID only)|2000 - 2003|
 |Microsoft Works DB for DOS|2.0|
 |Microsoft Works DB for Macintosh|2.0|
 |Microsoft Works DB for Windows™|3.0, 4.0|
@@ -43,7 +43,7 @@ HCL Digital Experience has a feature that allows you to view documents as HTML f
 
 |Email|Version|
 |-----|-------|
-|Apple Mail Message \(EMLX\)|2.0|
+|Apple Mail Message (EMLX)|2.0|
 |Encoded mail messages|MHT|
 |Encoded mail messages|Multi Part Alternative|
 |Encoded mail messages|Multi Part Digest|
@@ -53,46 +53,46 @@ HCL Digital Experience has a feature that allows you to view documents as HTML f
 |Encoded mail messages|TNEF|
 |EML with Digital Signature|SMIME|
 |IBM® Lotus Notes® Domino® XML Language DXL|8.5|
-|IBM Lotus Notes NSF \(File ID\)|7.x, 8.x|
-|IBM Lotus Notes NSF \(Win32, Win64, Linux™ x86-32 and Oracle Solaris 32-bit only with Notes® Client or Domino Server\)|8.x|
+|IBM Lotus Notes NSF (File ID)|7.x, 8.x|
+|IBM Lotus Notes NSF (Win32, Win64, Linux™ x86-32 and Oracle 32-bit only with Notes® Client or Domino Server)|8.x|
 |MBOX Mailbox|RFC 822|
-|Microsoft Outlook \(MSG\)|97 - 2013|
-|Microsoft Outlook Express® \(EML\)| |
-|Microsoft Outlook Forms Template \(OFT\)|97 - 2013|
+|Microsoft Outlook (MSG)|97 - 2013|
+|Microsoft Outlook Express® (EML)| |
+|Microsoft Outlook Forms Template (OFT)|97 - 2013|
 |Microsoft Outlook OST|97 - 2013|
 |Microsoft Outlook PST|97 - 2013|
-|Microsoft Outlook PST \(Mac\)|2001|
+|Microsoft Outlook PST (Mac)|2001|
 |MSG with Digital Signature|SMIME|
 
 |Multimedia|Version|
 |----------|-------|
-|AVI \(Metadata only| |
-|DICOM \(File ID only\)| |
-|Flash \(text extraction only\)|6.x, 7.x, Lite|
-|Flash \(File ID only\)|9, 10|
-|MP3 \(ID3 metadata only\)| |
-|MPEG-1 Audio layer 3 V ID3 v1 \(Metadata only\)| |
-|MPEG-1 Audio layer 3 V ID3 v2 \(Metadata only\)| |
-|MPEG-1 Video V 2 \(File ID only\)| |
-|MPEG-1 Video V 3 \(File ID only\)| |
-|MPEG-2 Audio \(File ID only\)| |
-|MPEG-4 \(Metadata only\)| |
-|MPEG-7 \(Metadata only\)| |
-|QuickTime \(Metadata only\)| |
-|Windows Media ASF \(Metadata only\)| |
-|Windows Media DVR-MS \(Metadata only\)| |
-|Windows Media Audio WMA \(Metadata only\)| |
-|Windows Media Playlist \(File ID only\)| |
-|Windows Media Video WMV \(Metadata only\)| |
-|WAV \(Metadata only\)| |
+|AVI (Metadata only| |
+|DICOM (File ID only)| |
+|Flash (text extraction only)|6.x, 7.x, Lite|
+|Flash (File ID only)|9, 10|
+|MP3 (ID3 metadata only)| |
+|MPEG-1 Audio layer 3 V ID3 v1 (Metadata only)| |
+|MPEG-1 Audio layer 3 V ID3 v2 (Metadata only)| |
+|MPEG-1 Video V 2 (File ID only)| |
+|MPEG-1 Video V 3 (File ID only)| |
+|MPEG-2 Audio (File ID only)| |
+|MPEG-4 (Metadata only)| |
+|MPEG-7 (Metadata only)| |
+|QuickTime (Metadata only\| |
+|Windows Media ASF (Metadata only)| |
+|Windows Media DVR-MS (Metadata only)| |
+|Windows Media Audio WMA (Metadata only)| |
+|Windows Media Playlist (File ID only)| |
+|Windows Media Video WMV (Metadata only)| |
+|WAV (Metadata only)| |
 
 |Other|Version|
 |-----|-------|
-|AOL Messenger \(File ID only\)|7.3|
-|Microsoft InfoPath \(File ID only\)|2007|
-|Microsoft Live Messenger \(via XML filter\)|10.0|
-|Microsoft Office Theme files \(File ID only\)|2007 - 2013|
-|Microsoft OneNote \(text only\)|2007, 2010|
+|AOL Messenger (File ID only)|7.3|
+|Microsoft InfoPath (File ID only)|2007|
+|Microsoft Live Messenger (via XML filter)|10.0|
+|Microsoft Office Theme files (File ID only)|2007 - 2013|
+|Microsoft OneNote (text only\)|2007, 2010|
 |Microsoft Project \(table view only\)|98 - 2003|
 |Microsoft Project \(table view only\)|2007, 2010|
 |Microsoft Windows Compiled Help \(File ID only\)|.chm|

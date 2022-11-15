@@ -12,7 +12,8 @@ A web content page always restricts the sharing scope for public rendering param
         1.  Go to the page where you want to add the new page, and edit the page.
         2.  Open the site toolbar, select **Create** \> **Page** use the Create Page tab to create the page. Select a web content page template for the new page.
 
-            **Note:** If managed pages are enabled, all page templates result in web content pages.
+            !!! note
+                If managed pages are enabled, all page templates result in web content pages.
 
         3.  Click **Create Page** to create a web content page from the selected template.
 
@@ -37,12 +38,8 @@ A web content page always restricts the sharing scope for public rendering param
 
 
 
-**Related information**  
-
-
-[Web content pages and templates](../wcm/wcm_delivery_webpagetemplate_about.md)
-
-[Adding sample content with the site toolbar](../wcm/wcm_delivery_ctsamples_shelf.md)
-
-[Enabling page-based access control for web content pages](../admin-system/mp_wcm_pageaccess.md)
+???+ info "Related information:"
+    - [Web content pages and templates](../getting_started/wcm_delivery_webpagetemplate_about.md)
+    - [Adding sample content with the site toolbar](../getting_started/creating_contentsamples/wcm_delivery_ctsamples_shelf.md)
+    - [Enabling page-based access control for web content pages](../customizing_content/mp_wcm_pageaccess.md)
 

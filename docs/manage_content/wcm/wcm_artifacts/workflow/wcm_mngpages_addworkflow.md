@@ -12,7 +12,8 @@ To use a custom workflow with a published page, you must create a page template 
 
 2.  Create a project to use for creating the page template.
 
-    **Note:** Because you can set a workflow only on draft items, you must create the template as a draft in the context of a project. After you add your custom workflow to the draft, publish the draft to make the page template available.
+    !!! note
+        Because you can set a workflow only on draft items, you must create the template as a draft in the context of a project. After you add your custom workflow to the draft, publish the draft to make the page template available.
 
 3.  In the **Web Content Authoring** tab, select **Project Views** \> **All Projects** and select the new project as the current context.
 
@@ -44,8 +45,6 @@ To use a custom workflow with a published page, you must create a page template 
 After you complete this task, you can select the new page template when you create a page in a project, and the custom workflow is automatically used.
 
 
-**Related information**  
-
-
-[Scope of edits](../wcm/wcm_mngpages_editscope.md)
+???+ info "Related information:"
+    - [Scope of edits](../projects/wcm_mngpages_editscope.md)
 

@@ -6,7 +6,8 @@ You can set the side navigation template for a specific page.
 
 2.  Export the page where you want to apply the side navigation template.
 
-    **Note:** You can export the page using XMLAccess or by using the Manage Pages portlet.
+    !!! note
+        You can export the page using XMLAccess or by using the Manage Pages portlet.
 
 3.  Add the page metadata key com.ibm.portal.theme.template.file.name.html with a value `<![CDATA[theme_sidenav.html]]>` to the exported XML file.
 

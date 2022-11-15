@@ -4,23 +4,22 @@ A JCR search collection is a special purpose search collection that is used by H
 
 The portal installation has the JCR search collection that is created by default. It is named JCRCollection1. If this collection is removed or does not exist for other reasons, you can manually re-create the JCR search collection. The portal also re-creates the JCR search collection if you edit Web Content Manager content. Web Content Manager Authoring and its search capability are required to have the JCR search collection available, paired with the respective content source. If the JCR search collection gets deleted, a search is not possible by using the Authoring portlet. The JCR search collection can be used only by a search portlet that knows what to do with the search result in which the returned information is useless in a more generic context of search. This search collection is also flagged so that it does not participate in search by using the All Sources search scope. An administrator cannot manually add it. The JCR search collection is a special purpose search collection that the JCR requires to allow specialized application to do low-level searches in the repository. The JCR search collection is required to be available only once.
 
-**Notes:**
+!!! note
+    -   **For Web Content Manager:**
 
--   **For Web Content Manager:**
+        If you use Web Content Manager, the `JCRCollection1` collection is created the first time that you create a web content item, if it does not exist. In this case, it might not be necessary to create the collection manually, although it is fine to create it manually first, if required. It is used by the search feature within the Web Content Manager authoring portlet. If you delete this search collection, you might not be able to search for items within the authoring portlet.
 
-    If you use Web Content Manager, the `JCRCollection1` collection is created the first time that you create a web content item, if it does not exist. In this case, it might not be necessary to create the collection manually, although it is fine to create it manually first, if required. It is used by the search feature within the Web Content Manager authoring portlet. If you delete this search collection, you might not be able to search for items within the authoring portlet.
+    -   **For virtual portals:**
 
--   **For virtual portals:**
+        When you create a virtual portal, the creation of the JCR search collection depends on whether you create the virtual portal with or without content:
 
-    When you create a virtual portal, the creation of the JCR search collection depends on whether you create the virtual portal with or without content:
+        -   If you create the virtual portal with content, the portal creates the JCR collection for the virtual portal by default.
+        -   If you create only the virtual portal and add no content to it, the portal creates no JCR collection with it. It gets created only when content is added to the virtual portal.
+        You can view the URL of the JCR search collection in the search administration portlet Manage Search of the virtual portal. The URL looks as follows: `http://host_name:port_number/wps/seedlist/myserver?Action=GetDocuments&Format=ATOM&Locale=en_US&Range=100&Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&Start=0&SeedlistId=wsid@ootb_crawlerwsid`Where wsid is the actual workspace ID of the virtual portal. The workspace ID is the identifier of the workspace in which the content item is created, stored, and maintained. For example, if the workspace ID of the virtual portal is 10, then the URL looks as follows:`http://host_name:port_number/wps/seedlist/myserver?Action=GetDocuments&Format=ATOM&Locale=en_US&Range=100&Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&Start=0&SeedlistId=10@ootb_crawler10` If the JCR search collection was deleted, or if you added content to an originally empty virtual portal and the JCR search collection was not automatically created, complete the following steps:
 
-    -   If you create the virtual portal with content, the portal creates the JCR collection for the virtual portal by default.
-    -   If you create only the virtual portal and add no content to it, the portal creates no JCR collection with it. It gets created only when content is added to the virtual portal.
-    You can view the URL of the JCR search collection in the search administration portlet Manage Search of the virtual portal. The URL looks as follows: `http://host_name:port_number/wps/seedlist/myserver?Action=GetDocuments&Format=ATOM&Locale=en_US&Range=100&Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&Start=0&SeedlistId=wsid@ootb_crawlerwsid`Where wsid is the actual workspace ID of the virtual portal. The workspace ID is the identifier of the workspace in which the content item is created, stored, and maintained. For example, if the workspace ID of the virtual portal is 10, then the URL looks as follows:`http://host_name:port_number/wps/seedlist/myserver?Action=GetDocuments&Format=ATOM&Locale=en_US&Range=100&Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&Start=0&SeedlistId=10@ootb_crawler10` If the JCR search collection was deleted, or if you added content to an originally empty virtual portal and the JCR search collection was not automatically created, complete the following steps:
-
-    -   If you are using a virtual portal, go to the Security tab of the content source to verify that the workspace ID of the virtual portal is correct.
-    -   If the JCR search collection was deleted, run the ConfigEngine task `create-textsearch-collections` to re-create the JCR search collection.
-    If neither of the preceding options succeed in creating the JCR search collection, manually set up the JCR search collection.
+        -   If you are using a virtual portal, go to the Security tab of the content source to verify that the workspace ID of the virtual portal is correct.
+        -   If the JCR search collection was deleted, run the ConfigEngine task `create-textsearch-collections` to re-create the JCR search collection.
+        If neither of the preceding options succeed in creating the JCR search collection, manually set up the JCR search collection.
 
 
 To set up a JCR search collection manually, proceed as follows:
@@ -41,7 +40,8 @@ To set up a JCR search collection manually, proceed as follows:
 
         The directory location for the collection where you intend the search collection to be created. This parameter is to be specified as index directory location/collection name. For example, if the index directory is c:/JCR and the collection name is JCRCollection1, then the location of the collection must be specified as c:/JCR/JCRCollection1.
 
-        **Note:** Verify that the jcr.textsearch.indexdirectory resource value is updated with c:/JCR. To view this resource and corresponding value, complete the following steps:
+        !!! note
+            Verify that the jcr.textsearch.indexdirectory resource value is updated with c:/JCR. To view this resource and corresponding value, complete the following steps:
 
         1.  Go to **Resources** \> **Resource Environment** \> **Resource Environment Providers** and select **JCR ConfigService PortalContent**.
         2.  In the Additional Properties section of the Configuration window, select **Custom properties**.
@@ -119,12 +119,11 @@ To set up a JCR search collection manually, proceed as follows:
     -   To start the crawler manually, go to the content source and click **Start Crawler** for the content source.
     -   To schedule the seedlist crawler, click **Edit Content Source**, and click the **Scheduler** tab. Specify the date and time and the frequency for the crawl. The crawler is triggered automatically at the time that you scheduled.
 
--   **[Re-creating a JCR search collection after it was deleted](../admin-system/recreate_jcr_sc.md)**  
+
+-   **[Re-creating a JCR search collection after it was deleted](recreate_jcr_sc.md)**  
 The portal installation has the JCR search collection created by default. It is named JCRCollection1. If this collection is removed or does not exist for other reasons, you can re-create the JCR search collection.
 
 
-**Related information**  
-
-
-[JCR search service configuration parameters](../admin-system/jcr_srrcfgsrvc.md)
+???+ info "Related information"
+    - [JCR search service configuration parameters](../../search_service_params/jcr_srrcfgsrvc.md)
 

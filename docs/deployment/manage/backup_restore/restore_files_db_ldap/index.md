@@ -1,17 +1,17 @@
-# Restoring files, databases, and the LDAP server\(s\)
+# Restoring Files, Databases, and the LDAP Servers
 
 When necessary, restore the HCL Digital Experience file system, databases, and LDAP server or servers that you backed up.
 
 Before you restore HCL Portal databases, remember to adhere to the following principles:
 
--   Whenever you restore HCL Portal databases, you must restore the databases for all of the nonshared database domains to ensure consistency: Release, LikeMinds, Java™ Content Repository \(JCR\), and Feedback are the nonshared database domains.
+-   Whenever you restore HCL Portal databases, you must restore the databases for all of the non-shared database domains to ensure consistency: Release, LikeMinds, Java™ Content Repository (JCR), and Feedback are the non-shared database domains.
 -   Restoring the databases of the shareable database domains is optional and might not be required when you do not want to lose recent user and community information: Customization and Community are the shareable database domains.
 -   Whenever you restore the HCL Portal databases, you must also restore the configuration and data files that were archived when the backup image was taken.
 -   Be sure that your database restoration rolls forward to the point when you performed the file system backup for the HCL Portal deployment. If you fail to do this step, the configuration and data files might not be synchronized with the information in the databases.
 -   The file system backup for HCL Portal includes directories that contain the configuration files.
 -   Consider whether you implemented separate databases for each database domain or multiple database domains by using the same database. For example, if all database domains were implemented by using a single HCL Portal database, then restoring this database restores the contents of all domains.
 -   If you are using IBM® DB2 Universal Database™ Enterprise Server Edition, you should understand the basics of DB2® data backup.
--   If you are using a different database management system \(DBMS\), refer to the DBMS documentation for backup instructions.
+-   If you are using a different database management system (DBMS), refer to the DBMS documentation for backup instructions.
 
 1.  Stop all servers.
 
@@ -35,14 +35,6 @@ Before you restore HCL Portal databases, remember to adhere to the following pri
     -   For IBM Domino®, refer to the Directory Services topics in the Domino Administrator Help.
     -   For other LDAP servers, refer to the product documentation for instructions.
 
--   **[Using the DB2 RESTORE DATABASE command](../admin-system/i_wadm_t_restr_db2_cmnd.md)**  
-Use the RESTORE DATABASE command of IBM DB2 Universal Database Enterprise Server Edition as an alternative to the DB2 Restore wizard to restore the databases that you backed up.
--   **[Using the DB2 Restore wizard](../admin-system/i_wadm_t_restr_db2_wiz.md)**  
-Use the Restore wizard of IBM DB2 Universal Database Enterprise Server Edition as an alternative to the DB2 RESTORE DATABASE command to restore the databases that you backed up.
-
-
-**Related information**  
-
-
-[Backup and recovery](../plan/mig_plan_backup_and_recovery.md)
+???+ info "Related information"
+    - [Backup and recovery](../../migrate/planning_migration/migration_consideration/mig_plan_backup_and_recovery.md)
 

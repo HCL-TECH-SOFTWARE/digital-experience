@@ -8,13 +8,13 @@ A single website might have multiple testing environments. Some testing environm
 
 When testing within an authoring environment a testing server is paired with an authoring server. The testing server simulates the delivery environment and is used to test major changes to a website.
 
-![Authoring environment that is configured to send and receive changes to and from a testing environment. Live changes are then sent to the website.](../images/wcm_authoring_uat.jpg)
+![Authoring environment that is configured to send and receive changes to and from a testing environment. Live changes are then sent to the website.](../../../../images/wcm_authoring_uat.jpg)
 
 ## System testing within a staging environment
 
 When testing within a staging environment, data from the authoring environment is syndicated to a staging environment. User acceptance testing happens in the staging environment. If all tests are passed, data is syndicated from staging to the delivery production environment.
 
-![Diagram depicting flow from authoring, to staging, to the live website by using syndication of live items](../images/wcm_staging_production.jpg)
+![Diagram depicting flow from authoring, to staging, to the live website by using syndication of live items](../../../../images/wcm_staging_production.jpg)
 
 Specific activities take place in each environment.
 
@@ -25,6 +25,7 @@ Specific activities take place in each environment.
     -   Test changes
     -   Publish changes
     -   Syndicate live items to the staging environment
+
 -   **Testing environment**
 
     Test changes.
@@ -37,10 +38,7 @@ Specific activities take place in each environment.
 
 
 
-**Related information**  
-
-
-[Staging to production list](../deploy/dep_stage_check.md)
-
-[HCL Web Content Manager \(WCM\) environments](../wcm/wcm_deploy.md)
+???+ info "Related information:"
+    - [Staging to production list](../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_stage_check.md)
+    - [HCL Web Content Manager \(WCM\) environments](../wcm_env/index.md)
 

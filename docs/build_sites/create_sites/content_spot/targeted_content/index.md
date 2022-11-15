@@ -20,18 +20,19 @@ You can simulate what a segment sees to ensure that the correct content item dis
 
 This demonstration shows the content that is viewed by three segments: Customers, vendors, and mobile. Each segment views different content. If you click through the segments on a live page, you would see a simulated targeted content experience.
 
-![When you click each link, each box highlights. A header and three boxes Customers Segment, which is highlighted, Vendors Segment and Mobile Segment.](../images/segment1-selected.jpg)
+![When you click each link, each box highlights. A header and three boxes Customers Segment, which is highlighted, Vendors Segment and Mobile Segment.](../../../../images/segment1-selected.jpg)
 
 If you click the **Vendors Segment** link on the page, it would highlight that box.
 
-![When you click each link, each box highlights. A header and three boxes Customers Segment, Vendors Segment, which is highlighted, and Mobile Segment.](../images/segment2-selected.jpg)
+![When you click each link, each box highlights. A header and three boxes Customers Segment, Vendors Segment, which is highlighted, and Mobile Segment.](../../../../images/segment2-selected.jpg)
 
 If you click the **Mobile Segment** link on the page, it would highlight that box.
 
-![When you click each link, each box highlights. A header and three boxes Customers Segment, Vendors Segment, and Mobile Segment, which is highlighted.](../images/segment3-selected.jpg)
+![When you click each link, each box highlights. A header and three boxes Customers Segment, Vendors Segment, and Mobile Segment, which is highlighted.](../../../../images/segment3-selected.jpg)
+
 
 -   **[Adding targeted content to a spot](content_targeted_create.md)**  
 You can add targeted content to a spot to match the best content with the most appropriate segments or audiences. You can also hide the spot for particular user segments.
--   **[Creating segments that display in the Add Segments dialog](contarget_segments_ovr.md)**  
+-   **[Creating segments that display in the Add Segments dialog](../targeted_content/segments/index.md)**  
 Your goal is to match the best segments with content items in your spot. If you do not see a segment that defines your audience, you can ask your developer to create new segments. Your developer should create new segments in your web content library to simplify the publishing process and to use other library features.
 

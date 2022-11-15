@@ -2,7 +2,8 @@
 
 The templating sample content that is provided with HCL Digital Experience is delivered in two web content libraries: Template Page Content 3.0 and Web Content Templates 3.0. You can use these libraries and their content as a starting point for working with web content page templates and developing your own templates.
 
-**Note:** If you want to customize the sample web content that HCL Portal provides, create copies of the sample web content libraries and customize those copies.
+!!! note
+    If you want to customize the sample web content that HCL Portal provides, create copies of the sample web content libraries and customize those copies.
 
 -   **Web Content Templates 3.0 library**
 

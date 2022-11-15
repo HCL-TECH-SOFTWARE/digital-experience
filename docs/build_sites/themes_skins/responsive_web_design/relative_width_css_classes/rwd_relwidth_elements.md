@@ -58,4 +58,3 @@ If you care about more than 5 levels up to 16 levels of variation in width, then
 
 You can override for both types if you choose, but it is only necessary if you created a layout that does not use both types on all containers.
 
-

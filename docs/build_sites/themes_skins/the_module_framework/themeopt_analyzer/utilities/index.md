@@ -12,7 +12,8 @@ The import and export features are compatible with later versions, so if you hav
 
     You can import data from an external system to create a simulated system to aid in troubleshooting.
 
-    **Note:** When you import display data, the portlet enters a simulation mode. When the portlet is in simulation mode, page browsing is disabled and resource contributions cannot be clicked or viewed.
+    !!! note
+        When you import display data, the portlet enters a simulation mode. When the portlet is in simulation mode, page browsing is disabled and resource contributions cannot be clicked or viewed.
 
 -   **Control Center**
 
@@ -26,13 +27,13 @@ The import and export features are compatible with later versions, so if you hav
 
         For example, updating the file dav:fs-type1/themes/Portal8.5/contributions/theme.json through any WebDAV client, is recognized from the default pattern and causes an automatic theme invalidation.
 
-        For more information, see [Configuration for resource aggregation](config_res_agg.md#).
+        For more information, see [Configuration for resource aggregation](../../../customizing_theme/cfg_portal_theme_and_modules/config_res_agg.md).
 
     -   **Invalidate system modules**
 
         Allows you to invalidate system modules that are defined in plugin.xml files during the theme invalidation process. However, this feature skips all.WAR files.
 
-        For more information, see [Configuration for resource aggregation](config_res_agg.md#).
+        For more information, see [Configuration for resource aggregation](../../../customizing_theme/cfg_portal_theme_and_modules/config_res_agg.md).
 
     -   **Remote Debugging**
 
@@ -55,14 +56,12 @@ The import and export features are compatible with later versions, so if you hav
     Provide an option to export all titles and descriptions of all known modules in the system to a .CSV file.
 
 
--   **[How to Clear the Theme Caches](../wcm/clear_themes_caches.md)**  
+-   **[How to Clear the Theme Caches](clear_themes_caches.md)**  
 The Theme Optimization Analyzer portlet which is part of the Portal administration gives users the ability to clear theme related caches.
--   **[How to Clear the Theme Caches](../wcm/clear_themes_caches.md)**  
+-   **[How to Clear the Theme Caches](clear_themes_caches.md)**  
 The Theme Optimization Analyzer portlet which is part of the Portal administration gives users the ability to clear theme related caches.
 
 
-**Related information**  
-
-
-[Resource Aggregator overview](../dev-theme/themeopt_reso_agg.md)
+???+ info Related information:"
+    - [Resource Aggregator overview](../../themeopt_reso_agg.md)
 

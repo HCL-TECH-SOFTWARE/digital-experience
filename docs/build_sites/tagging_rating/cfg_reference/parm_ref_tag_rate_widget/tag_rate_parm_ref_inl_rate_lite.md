@@ -2,11 +2,12 @@
 
 You configure rating widget instances by setting the JavaScript parameters listed here.
 
-**Note:** The parameters listed here are specific to the inline rating widget that was introduced with HCL Portal Version 8.5. For information about the earlier widgets and their parameters, read the appropriate topics in the HCL Portal Version 8.0 product documentation.
+!!! note
+    The parameters listed here are specific to the inline rating widget that was introduced with HCL Portal Version 8.5. For information about the earlier widgets and their parameters, read the appropriate topics in the HCL Portal Version 8.0 product documentation.
 
 To set the parameters, proceed as follows:
 
-1.  In HCL Web Content Manager, go to **Applications** \> **Content** \> **WCM Authoring** \> **Libraries** \> **Web Resources v70** \> **Components**.
+1.  In HCL Web Content Manager, go to **Web Content** \> **Authoring** \> **Libraries** \> **Web Resources v70** \> **Components**.
 2.  Select the check box for **HTML - Rating Widget Light - Stars**.
 3.  Click **Edit**.
 
@@ -105,12 +106,8 @@ The following parameters are optional for the rating widget. They correspond to 
 
 
 
-**Related information**  
-
-
-[General properties for tagging and rating](../admin-system/srvcfg_cpcfg4tr_genrl.md)
-
-[Properties for the rating widget](../admin-system/srvcfg_cpcfg4tr_dlgrate_altui.md)
-
-[The tag and rating widgets](../admin-system/tag_rate_ui_alt.md)
+???+ info "Related information"
+    - [General properties for tagging and rating](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/srvcfg_cpcfg4tr_genrl.md)
+    - [Properties for the rating widget](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cp_cfg_svc/srvcfg_cpcfg4tr_dlgrate_altui.md)
+    - [The tag and rating widgets](../../tagging_rating_ui/tagging_rating_widget/index.md)
 

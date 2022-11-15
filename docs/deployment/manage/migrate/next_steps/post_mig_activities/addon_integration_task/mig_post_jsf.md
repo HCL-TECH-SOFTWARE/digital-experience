@@ -1,6 +1,6 @@
 # JavaServer Faces implementation
 
-The default JavaServer Faces \(JSF\) implementation has changed starting in WebSphere Application Server 8.
+The default JavaServer Faces (JSF) implementation has changed starting in WebSphere Application Server 8.
 
 When you are migrating JSF portlets from an earlier version of HCL Digital Experience, be aware that WebSphereÂ® Application Server has changed the default JSF implementation starting in WebSphere Application Server 8. For more information, see *JavaServer Faces migration* in the WebSphere Application Server documentation.
 
@@ -53,13 +53,12 @@ The JSF implementation which supports the DX Portlet Bridge is provided by IBMâ€
 
 Prior to HCL taking ownership of the Portlet Bridge IBM claimed support for JSF 2.2 in the Portlet Bridge. Upon further review HCL has determined that the IBM implementation of JSF 2.2 in the Portlet Bridge was incomplete. As a result, we recommend customers utilizing JSF 2.2 applications to continue coding to the JSF 2.0 specifications and not use the new JSF 2.2 features.
 
-**Note:** JSF 2.2 claims backward compatibility so JSF 2.0 applications should work with potentially minor if any modifications.
+!!!note
+    JSF 2.2 claims backward compatibility so JSF 2.0 applications should work with potentially minor if any modifications.
 
 HCL remains committed to providing ongoing support for customers running portlets for many years to come as this is a key capability of the DX product. While HCL is investigating what is required to complete the JSF 2.2 bridge, we do not anticipate a solution being available in the short-term. HCL will update this statement as soon as we have determined a solution for the portlet bridge JSF 2.2 implementation.
 
 
-**Related information**  
-
-
-[Support for JavaServer Faces 2.2](../dev-portlet/dx_bridge_for_jsf_onwas9x.md)
+???+ info "Related information" 
+    -   [Support for JavaServer Faces 2.2](../../../../../../extend_dx/portlets_development/usage/jsf/index.md)
 

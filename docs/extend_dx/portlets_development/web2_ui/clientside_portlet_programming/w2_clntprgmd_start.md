@@ -36,7 +36,8 @@ Getting started with the client-side programming Model requires a few updates to
     </script>
     ```
 
-    **Note:** Use the tag `portlet-client-model:init` to create the scripting variable `portletWindowID` for use in the JSP. The following example shows how you can start an `XMLPortletRequest`:
+    !!!note
+         Use the tag `portlet-client-model:init` to create the scripting variable `portletWindowID` for use in the JSP. The following example shows how you can start an `XMLPortletRequest`:
 
     ```
     <script>

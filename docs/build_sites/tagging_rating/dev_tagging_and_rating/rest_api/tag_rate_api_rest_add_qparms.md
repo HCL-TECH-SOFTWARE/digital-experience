@@ -19,6 +19,7 @@ Use the query parameters `orderMetric` and `order` to sort entries of a result s
         -   RESOURCE\_SCHEME\_SPECIFIC\_PART
         -   RESOURCE\_URI
         -   RESOURCE\_TITLE
+
     -   **For the tag model:**
 
         -   TAG\_ID
@@ -29,6 +30,7 @@ Use the query parameters `orderMetric` and `order` to sort entries of a result s
         -   TAG\_RESOURCE\_ID
         -   TAG\_OWNER\_ID
         -   TAG\_SCOPE
+
     -   **For the tag space model:**
 
         -   TAG\_SPACE\_COUNT\_REVERSE\_NAME. This is the default.
@@ -37,6 +39,7 @@ Use the query parameters `orderMetric` and `order` to sort entries of a result s
         -   TAG\_SPACE\_CREATION\_DATE
         -   TAG\_SPACE\_LAST\_MODIFIED\_DATE
         -   TAG\_SPACE\_COUNT\_NAME
+
     -   **For the rating model:**
 
         -   RATING\_ID
@@ -46,12 +49,14 @@ Use the query parameters `orderMetric` and `order` to sort entries of a result s
         -   RATING\_RESOURCE\_ID
         -   RATING\_OWNER\_ID
         -   RATING\_SCOPE
+
     -   **For the rating space model:**
 
         -   RATING\_SPACE\_VALUE
         -   RATING\_SPACE\_COUNT
         -   RATING\_SPACE\_CREATION\_DATE
         -   RATING\_SPACE\_LAST\_MODIFIED\_DATE
+
 -   **order=ASC\|DESC**
 
     Use this parameter to specify whether you want to sort in ascending or descending order. Valid values are `ASC` and `DESC`.
@@ -80,21 +85,15 @@ You can use the query parameters `start-index` and `max-results` to limit the qu
 
 Examples:
 
-1.  ```
-uri=tos:typeahead&term=A&max-results=10
-```
+1.  `uri=tos:typeahead&term=A&max-results=10`
 
     This example returns a feed that contains at the most the first 10 elements of the result.
 
-2.  ```
-uri=tos:typeahead&term=A&start-index=20&max-results=10
-```
+2.  `uri=tos:typeahead&term=A&start-index=20&max-results=10`
 
     This example returns a feed that contains at the most 10 elements, starting with the 20th element from the result.
 
-3.  ```
-tm:name:tag\_name&start-index=5&max-results=5
-```
+3.  `tm:name:tag\_name&start-index=5&max-results=5`
 
     This example returns a feed that contains 5 tag entries of the overall result set that match the name `tag_name`, leaving out the first four results, and returning the following 5 tag entries.
 
@@ -188,6 +187,7 @@ tm:name:tag\_name&locale=de&locale=en
 This returns a feed that contains all tags that match the name `tag\_name` in the locale `de` or `en`.
 
 
+<!--
 **Related information**  
 
 
@@ -207,5 +207,5 @@ This returns a feed that contains all tags that match the name `tag\_name` in th
 
 [Type-ahead with the deprecated tag widget](../admin-system/tag_rate_api_rest_oth_qu_typahed.md)
 
-[Search suggestions for tag names](../admin-system/tag_rate_api_rest_oth_qu_opsrchsug.md)
-
+[Search suggestions for tag names](../admin-system/tag_rate_api_rest_oth_qu_opsrchsug.md) -->
+ 

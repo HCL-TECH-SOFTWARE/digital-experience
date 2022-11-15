@@ -320,7 +320,7 @@ If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernet
 
 If you are using a content delivery network \(CDN\) such as [Akamai](https://www.akamai.com/our-thinking/cdn/what-is-a-cdn){:target="_blank"}, using `Vary: Origin` may prevent you from caching content. To bypass this limitation, your CDN configuration must strip the `Vary` header on the way in, to reinstate your ability to cache content. On the way out, you can append the `Origin` parameter to the `Vary` header when serving a response using **'Modify Outgoing Response Header'**.
 
-???+ info "**Related information:**"  
+???+ info "Related information"  
     - [HCL Digital Asset Management](../../digital_assets/index.md)
     - [How to enable Practitioner Studio](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md)
     - [Docker image deployment](../../../deployment/install/docker/docker_image_deployment.md)

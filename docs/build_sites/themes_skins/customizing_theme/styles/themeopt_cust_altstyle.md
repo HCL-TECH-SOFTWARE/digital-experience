@@ -13,4 +13,3 @@ You can apply alternate styles to your portal pages using the HCL Portal 8.5 the
     When you click a style, that style is applied to the page.
 
 
-

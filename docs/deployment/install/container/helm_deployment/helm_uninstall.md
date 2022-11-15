@@ -2,7 +2,7 @@
 title: Uninstall
 ---
 
-# Uninstall Helm deployment
+# Uninstall Helm Deployment
 
 To remove your HCL Digital Experience 9.5 deployment from your Cluster deployed using Helm, it is recommended that you use Helm uninstall.
 

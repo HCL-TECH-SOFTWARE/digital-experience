@@ -2,7 +2,8 @@
 
 The Modify Site URLs for Search Engine Optimization option in the Configuration Wizard includes manual steps. For reference only, you can see the details of the manual step for refreshing the search collection.
 
-**Attention:** All steps for all database environments are included without consideration for your environment. Use the Configuration Wizard to generate custom instructions for your environment.
+!!!attention
+    All steps for all database environments are included without consideration for your environment. Use the Configuration Wizard to generate custom instructions for your environment.
 
 1.  Manual step: Refresh your search collection and regather documents.
 

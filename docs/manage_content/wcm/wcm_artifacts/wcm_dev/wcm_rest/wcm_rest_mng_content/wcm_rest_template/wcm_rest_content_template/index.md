@@ -206,11 +206,11 @@ Status Code :200
 Status Message : OK
 ```
 
--   **[How to set default content values for content templates by using REST](../wcm/wcm_rest_crud_cont_temp_default.md)**  
+-   **[How to set default content values for content templates by using REST](wcm_rest_crud_cont_temp_default.md)**  
 You can update and read default content values for content items that are created by using a content template.
--   **[How to set default properties for content templates by using REST](../wcm/wcm_rest_crud_cont_temp_props.md)**  
+-   **[How to set default properties for content templates by using REST](wcm_rest_crud_cont_temp_props.md)**  
 You can update and read the default properties of content items that are created by using a content template.
--   **[How to create or update an Option Selection Element](../wcm/wcm_rest_create_update_option_selection_element.md)**  
+-   **[How to create or update an Option Selection Element](wcm_rest_create_update_option_selection_element.md)**  
 You can create or update an Option Selection Element in a Content Template.
 
 

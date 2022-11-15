@@ -31,12 +31,17 @@ Perform the following steps to use the new integration service with Volt MX Foun
 
     ![](../../../../assets/Volt_MX_Foundry_Add_Operation.png "Add Operation for the Service")
 
+    !!!note
+        By default DDC generic JSON plugin supports **GET** but the generic DDC JSON plugin can now send requests with methods such as **POST**, **PUT**, **DELETE** etc by utilizing the extension of the plugin in the form of an optional content field named httpmethod. When using other resource methods such as **POST**, **PUT**, **DELETE**, it is mandatory to create a content template with the httpmethod optional field element.
+
+        ![](../../../../assets/Volt_MX_Foundry_Add_Post_Operation.png "Add Post operation service")
+
 6. Adding **Response Output**. Click the **Response Output** tab, then click **Add Parameter**. After clicking, a row will appear on the table. Add the **Name**, then the **Path** or the JSON Path. The path is based on the response of the target URL you define in Service Definition. Try the service by clicking **Save And Fetch Response**. If everything looks fine, then click **Save Operation**.
 
     ![](../../../../assets/Volt_MX_Foundry_Response_Output_And_Testing.png "Add JSON Path and Testing the Service")
 
-!!!note
-    You do not need to map all the responses in the  **Response Output** and can only map what you need. Make the response output flat as possible, as shown in the sample above.
+    !!!note
+        You do not need to map all the responses in the  **Response Output** and can only map what you need. Make the response output flat as possible, as shown in the sample above. The values you set here will be reused as properties in DDC.
 
 ## Publish and Test integration service with Volt MX Foundry
 
@@ -56,8 +61,11 @@ Perform the following steps to use the new integration service with Volt MX Foun
 
     ![](../../../../assets/Volt_MX_Foundry_Executing_API.png "Executing the API")
 
-!!!note
-    If you created your Operation **Public** in Operation Security Level you dont need any authorization.
+    !!!note
+        If you created your Operation **Public** in Operation Security Level you dont need any authorization.
+
+    !!!note
+        You will need the information on this page later during the setup to configure DDC accordingly.
 
 ## Creating Credential Vault Slot for the Volt MX Foundry Endpoint
 
@@ -93,52 +101,55 @@ If you chose **Anonymous App Users** for Operation Security Level, you need to s
 
 Since we already have the Credential Vault slot, we can now configure an outbound connection policy.
 
-1. Create an xml file on your local machine and modify it according to your needs. For more information, please visit this link [Adding an outbound connection policy](../../../portlets_development/usage/web2_ui/outbound_http_connection/cfg_outbound_http_connections/sample_admin_tasks/outbhttp_cfgsmptsk_add_ob_conn_plcy.md)
+1. Create an xml file on your local machine and modify it according to your needs. For more information, refer to the [Adding an outbound connection policy](../../portlets_development/web2_ui/outbound_http_connection/cfg_outbound_http_connections/sample_admin_tasks/outbhttp_cfgsmptsk_add_ob_conn_plcy.md) topic.
 
-You can use this sample outbound policy as a base:
-``` xml
-<?xml version="1.0" encoding="UTF-8"?>
-<proxy-rules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:noNamespaceSchemaLocation="http://www.ibm.com/xmlns/prod/sw/http/outbound/proxy-config/2.0">  
+    You can use this sample outbound policy as a base:
+    ``` xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <proxy-rules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.ibm.com/xmlns/prod/sw/http/outbound/proxy-config/2.0">  
 
-   <variables>
-        <!-- Note: The '.url' at the end of the name is not required but good practice to follow.-->
-      <dynamic-policy name="demo-volt-mx-foundry-service.url">
-        <!-- Step 1. Add the URL pattern. Use the base URL of your service. You can view it in the Developer Portal > API > your App > View. You should see a Swagger UI Page -->
-        <value>https://hcl-dx-dev.hclvoltmx.net/services/account/*</value>
-      </dynamic-policy>
-   </variables>  
-     
-   <policy name="demo_volt_mx_foundry_service" url="{$demo_volt_mx_foundry_service.url}" basic-auth-support="true">
-      <actions>
-        <!-- Step 2. Add the HTTP Method.  We will use GET since this is what we defined when we created the operation of our service.-->
-         <method>GET</method>
-      </actions>    
+      <variables>
+            <!-- Note: The '.url' at the end of the name is not required but good practice to follow.-->
+          <dynamic-policy name="demo-volt-mx-foundry-service.url">
+            <!-- Step 1. Add the URL pattern. Use the base URL of your service. You can view it in the Developer Portal > API > your App > View. You should see a Swagger UI Page -->
+            <value>https://hcl-dx-dev.hclvoltmx.net/services/account/*</value>
+          </dynamic-policy>
+      </variables>  
         
-      <!-- Step 3. Add the credential vault slot that we have created. The vault slot name is also the vault slot id hpaa.slotid you will need to put in the policy. -->
-      
-      <meta-data>
-         <name>hpaa.authtype</name>
-         <value>http-basic</value>
-      </meta-data>
-      <meta-data>
-         <name>hpaa.slotid</name>
-         <value>demo-volt-mx-foundry-service</value>
-      </meta-data>
-      <meta-data>
-         <name>forward-credentials-from-vault</name>
-         <value>true</value>
-      </meta-data>
-   </policy>                
-</proxy-rules>
-```
+      <policy name="demo_volt_mx_foundry_service" url="{$demo_volt_mx_foundry_service.url}" basic-auth-support="true">
+          <actions>
+            <!-- Step 2. Add the HTTP Method.  We will use GET or POST since this is what we defined when we created the operation of our service.-->
+            <method>GET</method>
+            <method>POST</method>
+          </actions>    
+            
+          <!-- Step 3. Add the credential vault slot that we have created. The vault slot name is also the vault slot id hpaa.slotid you will need to put in the policy. -->
+          
+          <meta-data>
+            <name>hpaa.authtype</name>
+            <value>http-basic</value>
+          </meta-data>
+          <meta-data>
+            <name>hpaa.slotid</name>
+            <value>demo-volt-mx-foundry-service</value>
+          </meta-data>
+          <meta-data>
+            <name>forward-credentials-from-vault</name>
+            <value>true</value>
+          </meta-data>
+      </policy>                
+    </proxy-rules>
+    ```
 
-2. Then you copy the file inside your HCL Digital Experience instance.
+2. Then you copy the file (for example: `demo_volt_mx_foundry_service_policy.xml`) inside your HCL Digital Experience instance.
 
 3. And deploy the policy using the **Config Engine**: `./ConfigEngine.sh update-outbound-http-connection-config -DWasPassword=password -DPortalAdminPwd=password -DConfigFileName=/tmp/demo_volt_mx_foundry_service_policy.xml`
+!!!note
+    The location of `ConfigEngine.sh` is based on your deployment. In a default deployment, the location would be `/opt/HCL` or `WebSphere/wp_profile/ConfigEngine`.
 
 !!!note
-    For additional resources regarding this topic, please read [Outbound HTTP connection](../../../portlets_development/usage/web2_ui/outbound_http_connection/outbound_http.md)
+    For additional resources, refer to the [Outbound HTTP connection](../../portlets_development/web2_ui/outbound_http_connection/index.md) topic.
 
 ## Adding HTTP Outbound Proxy and Signer Certificate
 
@@ -191,3 +202,4 @@ Steps to add the target URL and Certificate are as follows:
 5. Review and save the changes in the master configuration.
 
     ![](../../../../assets/WAS_Save_In_Master_Configuration.png "Save in master configuration")
+6. Restart the server to apply the changes.

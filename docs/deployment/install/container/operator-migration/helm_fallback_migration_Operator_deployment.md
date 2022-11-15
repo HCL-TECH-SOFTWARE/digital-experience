@@ -1,6 +1,12 @@
-# Revert Operator migration
+---
+tags: 
+    - fallback
+    - rollback
+hide: tags
+---
+# Revert Operator Migration
 
-This section shows the steps necessary to revert a DX 9.5 Container Deployment to the previous [Operator-based deployment](../../../manage/container_configuration/operator-based/deploy_container_platforms.md) in case of any error during the migration to Helm.
+This section shows the steps necessary to revert a DX 9.5 Container Deployment to the previous [Operator-based deployment](https://help.hcltechsw.com/digital-experience/9.5/containerization/deploy_container_platforms.html){:target="_blank"} in case of any error during the migration to Helm.
 
 Follow this guidance to create a backup to support the capability to restore the DX 9.5 Core and Digital Asset Management Operator deployment.
 

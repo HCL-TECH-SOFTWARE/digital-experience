@@ -36,6 +36,7 @@ You use the clear versions tool to clear the version history of an item.
         -   WorkflowStage
         -   WorkflowAction
         -   Cmpnt for components
+
     -   **library**
 
         Enter a library name. If the library parameter is omitted, the default library that is configured in the `WCM WCMConfigService` service by using the WebSphere® Integrated Solutions Console.
@@ -53,7 +54,8 @@ You use the clear versions tool to clear the version history of an item.
         If set to true, the last modified date of items that are updated by the module is preserved. If omitted or set to false, the last modified date is not preserved.
 
 
-**Note:** You cannot completely clear all versions. One version of an item always remains no matter what parameters you select when the version history is cleared.
+!!! note
+    You cannot completely clear all versions. One version of an item always remains no matter what parameters you select when the version history is cleared.
 
 ## Running the tool on a virtual portal
 
@@ -73,8 +75,6 @@ There are two methods available when the tool is run on a virtual portal:
 
 
 
-**Related information**  
-
-
-[Cloning data](../wcm/wcm_cloning_live.md)
+???+ info "Related information"
+    - [Cloning data](../wcm_adm_tools/wcm_cloning/wcm_cloning_live.md)
 

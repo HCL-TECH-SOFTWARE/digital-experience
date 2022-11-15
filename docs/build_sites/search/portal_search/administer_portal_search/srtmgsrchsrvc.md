@@ -17,12 +17,12 @@ To create or edit a portal search service, proceed as follows:
 
 Set or edit the parameter values depending on your requirements and configuration.
 
-**Notes for configuring a search service:**
+## Configuring a search service:
 
 -   Unless otherwise stated, the values that you set for parameters of a portal search service apply to that search service and all its collections. They do not affect other search services of the portal or their search collections.
 -   Unless otherwise stated, changing the value of a parameter apply to both the existing search collections and newly created search collections. Some parameters affect only newly created search collections. These parameters cannot be updated for existing search collections.
 -   The search administration portlet Manage Search lists the Default Portal Search Service and its collection Portal Content or other collections in the default portal language. It does not list these items in the language that the user selected as preferred language for the portal or set in the browser. Example: The portal default language is set to English and the user selected German as the preferred portal language or as the browser language. In this case, the Default Portal Search Service and its collections show in English.
--   SOAP support for remote search services was deprecated with HCL Portal Version 8.0. EJB is still supported.
+-   SOAP support for remote search services was deprecated with HCL Portal Version 8.0. EJB is now the only supported type.
 -   If you delete a search service, the portal does not delete the search collections that are related to this search service. Delete the search collections by using the Manage Search administration portlet. If you delete the default search service, it is re-created new when you restart the portal.
 
 For more detailed steps about how to manage search services refer to the Manage Search portlet help. For a list of the search service parameters and possible values, refer to *Search service configuration parameters*.
