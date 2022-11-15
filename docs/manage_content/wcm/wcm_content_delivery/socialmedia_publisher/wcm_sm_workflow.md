@@ -53,6 +53,6 @@ It is best practice to disable social media actions on all servers except your r
 -   `actions.disableDeleteSocialWorkflowActionsOnServers`
 -   `actions.disableUntrackSocialWorkflowActionsOnServers`
 
-See [Global configuration settings](../socialmedia_publisher/socialmedia_publisher_cfg/wcm_sm_config_doc_global.md) for further details.
+See [Global configuration settings](wcm_sm_config_doc_global.md) for further details.
 
 

@@ -1,5 +1,6 @@
 # Using a Personalization element
 
+
 A Personalization element stores a reference to a rule or content spot.
 
 -   **[Creating a Personalization component](wcm_dev_elements_pzn_creating.md)**  

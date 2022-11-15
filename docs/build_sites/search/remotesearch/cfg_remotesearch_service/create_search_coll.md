@@ -2,10 +2,9 @@
 
 Before you can begin using remote search service, you must create two new search collections, one for JCR search, and one for Portal search.
 
-1.  Manually create a JCR search collection by following the instructions that are outlined in [Setting up a JCR search collection](../../portal_search/administer_portal_search/setup_search_collections/jcr_search_collections/index.md).
+1.  Manually create a JCR search collection by following the instructions that are outlined in [Setting up a JCR search collection](srtcfg_jcr_colls.md).
 
-    !!! important
-        The steps that are outlined in *Setting up a JCR search collection* include instructions on how to create the new content source for the JCR search collection. Create the new content source for the JCR search collection before you create the Portal search collection.
+    **Important:** The steps that are outlined in *Setting up a JCR search collection* include instructions on how to create the new content source for the JCR search collection. Create the new content source for the JCR search collection before you create the Portal search collection.
 
 2.  Manually create a Portal search collection by completing the following steps:
 
@@ -41,4 +40,11 @@ Before you can begin using remote search service, you must create two new search
 
         The collection displays in the Collections from All Services pane.
 
+
 Manually create new content sources for the Portal search collection.
+
+
+**Previous topic:**[Creating a new search service](../admin-system/create_search_service.md)
+
+**Next topic:**[Creating a new content source](../admin-system/create_content_source.md)
+

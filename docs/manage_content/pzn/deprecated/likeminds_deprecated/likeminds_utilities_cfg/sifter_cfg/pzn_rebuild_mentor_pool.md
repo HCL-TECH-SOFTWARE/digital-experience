@@ -28,7 +28,7 @@ If you are running multiple instances of the `sifter`, use the following procedu
 
     The times are interpreted as follows:
 
-    ![Times](../../../../../../images/time2.jpg)
+    ![Times](../images/time2.jpg)
 
 3.  For each `sifter` instance you disabled, set a time to reload the mentor pool after it has been rebuilt.
 

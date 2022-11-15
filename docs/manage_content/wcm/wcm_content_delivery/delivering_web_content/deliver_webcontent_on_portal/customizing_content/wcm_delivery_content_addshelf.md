@@ -24,16 +24,14 @@ To include a web content item in the Applications palette of the site toolbar, f
 
 6.  From the section that is named **When this Portlet is added to the page**, select **Create content \(based on selection\)**.
 
-    !!! note
-        You cannot add portlets that use this setting to a page that does not have a default content association.
+    **Note:** You cannot add portlets that use this setting to a page that does not have a default content association.
 
 7.  In the **Content** section, specify the content item or site area that this web content viewer represents.
 
 
 After you complete these steps, the copy of the web content viewer that represents your web content is displayed in the Applications palette of the site toolbar. Whenever you add this portlet copy to a page, the associated content item or site area is copied into the site area that is associated to the page by the default content association.
 
-!!! note
-    For the XML configuration interface, create the copies of the web content viewer, you can also use the portal XML configuration interface. To specify the behavior of the setting Create content \(based on selection\) by using with the XML configuration interface, specify the following portlet preference in the XML import file:
+**Notes for the XML configuration interface:** To create the copies of the web content viewer, you can also use the portal XML configuration interface. To specify the behavior of the setting Create content \(based on selection\) by using with the XML configuration interface, specify the following portlet preference in the XML import file:
 
 -   **Preference:**
 
@@ -58,6 +56,8 @@ You can also specify the target site area that you want to be used when the port
 When you add the web content viewer that specifies this `WCM_COPY_CONTENT_RELATIVE_PATH` preference to a page, the portal first creates the specified site area under the default content association of the page. Afterward, the portal copies the web content that is associated with the web content viewer to the specified site area rather than to the default content association.
 
 
-???+ info "Related information:"
-    - [Customizing the Page Component palette](../../../../../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/customizing_page_cmpnt_palette/index.md)
+**Related information**  
+
+
+[Customizing the Page Component palette](../admin-system/epc_custom_add_site_toolbar.md)
 

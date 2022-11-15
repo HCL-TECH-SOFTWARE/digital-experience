@@ -1,4 +1,4 @@
-# Configure Applications
+# Configure applications
 
 ## Core
 

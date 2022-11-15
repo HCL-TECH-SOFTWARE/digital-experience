@@ -4,25 +4,24 @@ If you plan on creating and using virtual portals within a portal farm, there ar
 
 Perform the following steps to set up a virtual portal in a portal farm:
 
-!!!note
-    These instructions only apply if you create a farm with independent servers, each with its own Release database.
+**Note:** These instructions only apply if you create a farm with independent servers, each with its own Release database.
 
 1.  Create and configure your virtual portal. For more information see *Virtual portals*.
 
 2.  Change to the following directory:
 
-    -   Windows™: wp_profile_root/PortalServer/bin
-    -   AIX® and Linux™: wp_profile_root/PortalServer/bin
-
+    -   Windows™: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/bin
+    -   AIX® HP-UX Linux™ Solaris z/OS®: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/bin
+    -   IBM® i: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/bin
 3.  Use the following command to export content from your virtual portal:
 
     |Operating system|Command|
     |----------------|-------|
-    |Windows|`xmlaccess.bat -in ExportRelease.xml -user wpsadmin -password wpsadminpwd -url http://hostname:port/wps/config/virtualportalContext -out virtualportal_output.xml`|
-    |AIX and Linux|`./xmlaccess.sh -in ExportRelease.xml -user wpsadmin -password wpsadminpwd -url http://hostname:port/wps/config/virtualportalContext -out virtualportal_output.xml`|
+    |Windows|xmlaccess.bat -in ExportRelease.xml -user wpsadmin -password wpsadminpwd -url http://hostname:port/wps/config/virtualportalContext -out virtualportal\_output.xml|
+    |AIX HP-UX Linux Solaris z/OS|./xmlaccess.sh -in ExportRelease.xml -user wpsadmin -password wpsadminpwd -url http://hostname:port/wps/config/virtualportalContext -out virtualportal\_output.xml|
+    |IBM i|xmlaccess.sh -in ExportRelease.xml -user wpsadmin -password wpsadminpwd -url http://hostname:port/wps/config/virtualportalContext -out virtualportal\_output.xml|
 
-    !!!note
-        The exported configuration is stored in the virtualportal_output.xml file.
+    **Note:** The exported configuration is stored in the virtualportal\_output.xml file.
 
 4.  Run the create-virtual-portal configuration task on each portal farm to create an empty virtual portal, using the same name as the virtual portal you created in the first step. For more information see *Tasks for administering virtual portals*, *Creating a virtual portal*, and *Task: create-virtual-portal*.
 
@@ -30,8 +29,9 @@ Perform the following steps to set up a virtual portal in a portal farm:
 
     |Operating system|Command|
     |----------------|-------|
-    |Windows|`xmlaccess.bat -in virtualportal_output.xml -user wpsadmin -password wpsadminpwd -url http://hostname:port/wps/config/virtualportalContext -out Output.xml`|
-    |AIX and Linux|`./xmlaccess.sh -in virtualportal_output.xml -user wpsadmin -password wpsadminpwd -url http://hostname:port/wps/config/virtualportalContext -out Output.xml`|
+    |Windows|xmlaccess.bat -in virtualportal\_output.xml -user wpsadmin -password wpsadminpwd -url http://hostname:port/wps/config/virtualportalContext -out Output.xml|
+    |AIX HP-UX Linux Solaris z/OS|./xmlaccess.sh -in virtualportal\_output.xml -user wpsadmin -password wpsadminpwd -url http://hostname:port/wps/config/virtualportalContext -out Output.xml|
+    |IBM i|xmlaccess.sh -in virtualportal\_output.xml -user wpsadmin -password wpsadminpwd -url http://hostname:port/wps/config/virtualportalContext -out Output.xml|
 
 
 

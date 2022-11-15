@@ -4,8 +4,8 @@ You can install add-on functionality to your HCL Portal with the solution instal
 
 Complete the following steps to use the Configuration Wizard to install or uninstall the add-ons:
 
-1.  Access the Configuration Wizard. Go to http://your_server:10200/hcl/wizard.
-2.  Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw_profile.
+1.  Access the Configuration Wizard. Go to http://your\_server:10200/hcl/wizard.
+2.  Log in to the Configuration Wizard with the administrative ID for the configuration wizard profile, cw\_profile.
 3.  Click **Add On New Capability**
 4.  To interact with the solution installer through the configuration wizard, select **Install Add-ons** or **Uninstall Add-ons**.
 5.  Provide information about your environment.
@@ -32,9 +32,8 @@ Two different installation scenarios are supported through the **Add On New Capa
 
     In the advanced scenario, the additional configuration that is called **Deploy-Remove-PAA-assemblyName** is also the mechanism in which content is removed from the portal. Depending on what is required, you can select the type of function from the configuration option.
 
-    The **Deploy-Remove_PAA-*.*** option is added to the **Add-on new capability** section of the configuration wizard. After the configuration option is added to the configuration wizard, you can add modifications to thepaa file. When you uninstall by using the **Uninstall Add-ons** with the **Advanced** setting the **Deploy-Remove-PAA-*.** option is removed from the configuration wizard repository. However, the option still displays in the list of active configuration options under the **Add On New Capability section** of the wizard. To remove these items, you need to restart server1 in the cw\_profile. Restarting refreshes the repository and ensures that the items no longer show up.
+    The **Deploy-Remove\_PAA-\*.\*** option is added to the **Add-on new capability** section of the configuration wizard. After the configuration option is added to the configuration wizard, you can add modifications to thepaa file. When you uninstall by using the **Uninstall Add-ons** with the **Advanced** setting the **Deploy-Remove-PAA-\*.\*** option is removed from the configuration wizard repository. However, the option still displays in the list of active configuration options under the **Add On New Capability section** of the wizard. To remove these items, you need to restart server1 in the cw\_profile. Restarting refreshes the repository and ensures that the items no longer show up.
 
-    !!!note
-        If you install and deploy a paa file by using the advanced scenario, you must also remove the content that uses the paa-specific option before you uninstall. You can remove this content by using the advanced selection during the **Uninstall add-ons** option.
+    **Note:** If you install and deploy a paa file by using the advanced scenario, you must also remove the content that uses the paa-specific option before you uninstall. You can remove this content by using the advanced selection during the **Uninstall add-ons** option.
 
 

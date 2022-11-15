@@ -1,6 +1,6 @@
 # Setting external content URLs
 
-Learn how to set URLs that point to external content (`ExternalContentURL`).
+Learn how to set URLs that point to external content \(`ExternalContentURL`\).
 
 1.  Obtain a modifiable instance of an external content URL.
 

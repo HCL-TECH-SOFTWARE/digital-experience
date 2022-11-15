@@ -38,12 +38,12 @@ Proceed as follows:
 
 7.  Restart both WebSphere Application Server and HCL Portal for your changes to take effect.
 
-<!--
+
 -   **[Placing the Search Center on a public portal page](../admin-system/srt_sc_public.md)**  
 Depending on your environment, you might want to place the Search Center portlet on a public page of your HCL Digital Experience and have the search box in the portal theme take users who do a search to that public Search Center.
 
 
 **Previous topic:**[Configuring your portal site for search by internet search engines](../admin-system/srccfgextsrch.md)
 
-**Next topic:**[Configuring your custom portal themes to include the search box](../admin-system/srcconfthmsforsrch.md) -->
+**Next topic:**[Configuring your custom portal themes to include the search box](../admin-system/srcconfthmsforsrch.md)
 

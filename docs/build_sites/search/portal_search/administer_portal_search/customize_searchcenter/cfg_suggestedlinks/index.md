@@ -3,8 +3,8 @@
 As an administrator you can promote specific pages, documents, or other pieces of content by adding search keywords to them in the search results list. The portal then lists these documents as suggested links.
 
 -   You must be logged in as an administrator to add the Suggested Links portlet to the search center.
--   Ensure that tagging is enabled. For more information, see [Tagging and rating](../../../../../tagging_rating/index.md).
--   Ensure that Dojo tagging and rating options are enabled for your Search and Tag Center profile. For more information, see [Enabling and disabling the Dojo tagging and rating options for additional profiles](../../../../../tagging_rating/cfg_reference/tag_rate_nbldsbl_dojo_options.md).
+-   Ensure that tagging is enabled. For more information, see [Tagging and rating](tag_rate_mngadmin.md).
+-   Ensure that Dojo tagging and rating options are enabled for your Search and Tag Center profile. For more information, see [Enabling and disabling the Dojo tagging and rating options for additional profiles](tag_rate_nbldsbl_dojo_options.md).
 
 To add or edit keywords for suggested links, proceed as follows:
 
@@ -31,11 +31,9 @@ In a typical example scenario, you can work in two stages:
 1.  To add new tags or edit or delete existing keywords, you can use the Search Center, either from the main results view or from the Suggested Links portlet.
 2.  To browse an overview of the keywords that exist already, you can use the Suggested Links tab of the Tag Center. You can add and remove keywords from documents as required.
 
-!!! note
-    Suggested links are case-sensitive. The tagging and rating normalization parameter `com.ibm.wps.cp.tagging.normalization.displayNormalizedNames` does not apply to suggested links. For example, if an administrator adds a suggested link of `WebSphere`, a user search for `websphere` does not return `WebSphere` as a result. This action is independent of whether the tagging and rating parameter `com.ibm.wps.cp.tagging.normalization.displayNormalizedNames` is set to `true` or `false`.
+**Note:** Suggested links are case-sensitive. The tagging and rating normalization parameter `com.ibm.wps.cp.tagging.normalization.displayNormalizedNames` does not apply to suggested links. For example, if an administrator adds a suggested link of `WebSphere`, a user search for `websphere` does not return `WebSphere` as a result. This action is independent of whether the tagging and rating parameter `com.ibm.wps.cp.tagging.normalization.displayNormalizedNames` is set to `true` or `false`.
 
-<!---  
 -   **[Configuring the Suggested Links view](../admin-system/srtrecommendedlinks.md)**  
-Customize the display of search results to show users the preferred or recommended results and associated links. --->
+Customize the display of search results to show users the preferred or recommended results and associated links.
 
 

@@ -2,7 +2,7 @@
 
 Static resources include the markup that is defined by .html, .css, and .js files that are used by the theme. Some .json files are used to define menu options, module definitions, and module profiles.
 
-For more information about modularization and modules that are provided by the HCL Digital Experience Portal 8.5 Theme, see [Modules that are provided with the modularized theme](../the_module_framework/oob_modules/index.md). Each WebDAV folder has a readme file with additional information about each section.
+For more information about modularization and modules that are provided by the HCL Digital Experience Portal 8.5 Theme, see [Modules that are provided with the modularized theme](themeopt_oob.md#). Each WebDAV folder has a readme file with additional information about each section.
 
 On WebDAV: http://host:port/wps/mycontenthandler/dav/fs-type1.
 
@@ -59,8 +59,7 @@ The css directory contains the following directories and files:
             -   contextmenuCommon.css
     These files contain the compressed \(minified\) versions of the css definitions.
 
-    !!! note
-        Compressing the files makes the files harder to read, so uncompressed versions are provided. It is best to use uncompressed versions when you are editing and debugging your theme CSS.
+    **Note:** Compressing the files makes the files harder to read, so uncompressed versions are provided. It is best to use uncompressed versions when you are editing and debugging your theme CSS.
 
 
 The default directory includes the base styles for the theme. The default\_view.css file contains styles for view mode. The default\_edit.css file contains styles for edit mode. The default\_search.css file contains styles for search. These styles are applied to the default theme and optimize it for mobile devices. These styles apply to menus, navigation, layout, and footer.
@@ -122,7 +121,7 @@ This directory contains translated HTML files for the theme.
 
 fs-type1:\\themes\\Portal8.5\\profiles
 
-These are the several module profiles that define which modules are loaded when a page is loaded. For more information about deferred modules, see [Deferred and non-deferred modules](../the_module_framework/themeopt_module_defer.md). For more information about profiles, see [Included Profiles](../the_module_framework/specify_profiles/themeopt_mod_oob_profile.md).
+These are the several module profiles that define which modules are loaded when a page is loaded. For more information about deferred modules, see [Deferred and non-deferred modules](themeopt_module_defer.md#). For more information about profiles, see [Included Profiles](themeopt_mod_oob_profile.md#).
 
 ## Skins
 
@@ -149,6 +148,8 @@ Localized versions: fs-type1:\\themes\\Portal8.5\\nls
 -   theme\_sidenav.html: Defines a theme layout that uses a side navigation.
 
 
-???+ info "Related information"
-    - [Removing the previous version of social rendering](../../social_rendering/administering_social_list/rem_soc_rend.md)
+**Related information**  
+
+
+[Removing the previous version of social rendering](../social/rem_soc_rend.md)
 

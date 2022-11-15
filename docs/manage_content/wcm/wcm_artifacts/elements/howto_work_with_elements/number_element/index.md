@@ -1,5 +1,6 @@
 # Using a number element
 
+
 You use a number element to store a numerical value.
 
 -   **[Creating a number component](wcm_dev_elements_number_creating.md)**  

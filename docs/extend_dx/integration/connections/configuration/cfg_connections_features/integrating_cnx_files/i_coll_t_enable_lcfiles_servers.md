@@ -1,4 +1,4 @@
-# Set up predefined HCL Connections servers
+# Set up predefined HCL Connection servers
 
 Configuring integration with files is similar to configuring other federated documents. You must specify the remote server URL, a display name, and the supported interface type of the remote server.
 
@@ -36,8 +36,7 @@ To specify the values, you must add custom properties. Each property includes a 
 
         Value: The name of the credential vault slot that stores the credentials used for authentication with the remote server. Credential vault slots are set up and managed by the portal administrator. This property defines the default credential vault slot that is predefined in the user interface, although the user can also select a different slot if one is available. If this property is not defined, the user interface does not display a default credential vault slot, but you can still select a slot from the available list. This property is optional.
 
-        !!! note
-            The credential vault slot must contain the credentials that are required for authentication with the remote server.
+        **Note:** The credential vault slot must contain the credentials that are required for authentication with the remote server.
 
     -   **wp.federated.documents.ic\_personalized\_sc.override.authentication.enabled**
 

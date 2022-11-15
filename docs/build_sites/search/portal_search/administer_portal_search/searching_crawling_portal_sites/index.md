@@ -10,12 +10,11 @@ Users of your Portal can search across various types of sites. In addition to se
 -   Users of your Portal search external websites such as yahoo.com or google.com or cnn.com. When you run a crawler against external websites, you can collect and display external search results next to results from your local Portal site.
 -   External users search your Portal site. This works only for public pages of your Portal.
 
-<!--
 -   **[Resetting the default search collection](../admin-system/srtcrtprtlstecllc.md)**  
 Under certain circumstances, you might want to change the configuration of the portal site search collection. In this case, you must re-create the collection, as search collections cannot be modified.
 -   **[Crawling a remote portal site](../admin-system/srcsrchngpubportpgs.md)**  
 Configure Portal Search to crawl and index a remote, public portal site.
 -   **[Crawling an external site using a seedlist provider](../admin-system/srtseedlistcreate.md)**  
-The seedlist crawler is a special HTTP crawler that can be used to crawl external sites which publish their content using the seedlist format. The seedlist format is an ATOM/XML-based format specifically for publishing application content, including all its metadata. The format supports publishing only updated content between crawling sessions for more effective crawling. You can configure the seedlist crawler with general parameters, filters and schedulers, then run the crawler. -->
+The seedlist crawler is a special HTTP crawler that can be used to crawl external sites which publish their content using the seedlist format. The seedlist format is an ATOM/XML-based format specifically for publishing application content, including all its metadata. The format supports publishing only updated content between crawling sessions for more effective crawling. You can configure the seedlist crawler with general parameters, filters and schedulers, then run the crawler.
 
 

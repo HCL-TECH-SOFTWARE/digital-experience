@@ -22,7 +22,6 @@ When you use the Manage Pages and Page Properties portlets to create your static
 
     -   To render the page as a stand-alone static page, include the `<html>` element as a root element in the markup file.
     -   To render the page as part of a portal page, omit the `<html>` element.
-
 -   You can also include other resources as part of the page, such as cascading style sheets or graphic images. You must bundle all the files into a compressed file. This single compressed file is then used to create or update the static page.
 
 -   You can use portal frameworks such as Live Text with your static pages. To achieve this, include your static page as part of a dynamic portal page when you add the static page to your portal in a later step.
@@ -53,18 +52,18 @@ To update a static page, you make the required changes in the HTML file, then yo
 !!! note
     When you use only characters that can be encoded in ASCII in the names of the compressed file and the directories and files within the compressed file, you can use a compressed tool of your choice to create the file package. If you use characters that are not ASCII encoded, for example special characters or DBCS, in the names of the compressed file and the directories and files within the compressed file, you must create the compressed file by using the JRE tool `jar.exe`.
 
-
--   **[Example HTML markup for defining a portal page](spa_html_xmpl.md)**  
+<!---
+-   **[Example HTML markup for defining a portal page](../dev/spa_html_xmpl.md)**  
 Use these code samples as examples of HTML markup to create a portal page.
--   **[Class attributes for portlets on static pages](spa_plt_mcrfrmt.md)**  
+-   **[Class attributes for portlets on static pages](../dev/spa_plt_mcrfrmt.md)**  
  When you place a portlet on a static HTML page to be rendered by the portal, use a suitable CSS file to format the portlet. The CSS file makes use of the portlet microformat. You can make use of this microformat if you want to render portlets on your static HTML page with a skin of your choice. When you write the static page, you can use CSS or JavaScript techniques to convert the microformat into a friendly user interface. The portlet references in the static HTML page are replaced by the content of the portlet and the portlet microformat.
--   **[Class attributes for a portlet container on static pages](spa_contnr_mcrfrmt.md)**  
+-   **[Class attributes for a portlet container on static pages](../dev/spa_contnr_mcrfrmt.md)**  
 To render a portlet container on a static page, you use a CSS file that makes use of the container microformat. One of the benefits is that users with the required access rights can later move the portlets by drag and drop.
--   **[Class attributes for components on static pages](spa_compnt_mcrfrmt.md)**  
+-   **[Class attributes for components on static pages](../dev/spa_compnt_mcrfrmt.md)**  
  When you place a component on a static HTML page to be rendered by the portal, use a suitable CSS file to format the portlet. The CSS file uses the component microformat. You can use this microformat if you want to render components on your static HTML page with a skin of your choice. When you write the static page, you can use CSS or JavaScript techniques to convert the microformat into a friendly user interface. The component references in the static HTML page are replaced by the content of the component and the component microformat.
--   **[Navigation options for static pages](spa_nav_mcrfrmt.md)**  
+-   **[Navigation options for static pages](../dev/spa_nav_mcrfrmt.md)**  
 You can provide navigation for your static pages by using either the portal theme or by making use of the navigation microformat.
--   **[Portlets for adding dynamic elements to static pages](../creating_static_page/portlets_dynamic_elements/index.md)**  
+-   **[Portlets for adding dynamic elements to static pages](../dev/spa_portlets.md)**  
 If you want to add dynamic elements such as portal navigation to your static pages, you can use portlets that the portal provides. --->
 
 

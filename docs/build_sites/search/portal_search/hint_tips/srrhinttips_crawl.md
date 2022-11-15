@@ -1,6 +1,6 @@
 # Hints and tips for Portal Search crawls
 
-This page provides some useful tips about Portal Search crawls. For example, crawling can require extended memory and time, depending on your Portal Search environment and configuration.
+View some useful tips about Portal Search crawls. For example, crawling can require extended memory and time, depending on your Portal Search environment and configuration.
 
 ## HTTP crawler does not support JavaScript
 
@@ -22,7 +22,7 @@ To resolve this problem, edit the content source, select the **General Parameter
 
 Depending on your Portal Search environment, crawling can require large amounts of memory. Therefore, before you start a crawl, make sure that HCL Portal has enough free memory. Memory shortage can cause a corrupted search collection and eventually lead to a system freeze.
 
-To resolve this problem, raise the limit of the number of open files by using the `ulimit` command as root administrator.
+To resolve this problem, raise the limit to the number of open files by using the `ulimit` command as root administrator.
 
 Due to the resources needed for a crawl and index, it is useful that you schedule crawls to occur when user activity is relatively low.
 
@@ -70,8 +70,12 @@ To define a crawler user ID, select the **Security** tab, and update the user ID
 If you modify a content source that belongs to a search scope, update the scope manually to make sure that it still covers that content source. If you changed the name of the content source, edit the scope and make sure that the content source is still listed there. If not, you must add it again.
 
 
-???+ info "Related information"
-     - [Importing and exporting search collections](../../manage_search/search_collection/import_export_srch_coll.md)
-     - [Exporting and importing search collections](../administer_portal_search/setup_search_collections/srtexpimp.md)
-     - [Resetting the default search collection](../administer_portal_search/searching_crawling_portal_sites/srtcrtprtlstecllc.md)
+**Related information**  
+
+
+[Importing and exporting search collections](../panel_help/import_export_srch_coll.md)
+
+[Exporting and importing search collections](../admin-system/srtexpimp.md)
+
+[Resetting the default search collection](../admin-system/srtcrtprtlstecllc.md)
 

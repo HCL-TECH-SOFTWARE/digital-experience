@@ -21,11 +21,10 @@ The project template appears in the list of available templates in the Projects 
 
 **Setting a default project template:** To set a default project template to be used when new projects are created, select a project template in the library explorer view, and then click **More** \> **Set as Default**. To clear the default template, click **More** \> **Clear Default**. This setting is scoped to the virtual portal if managed pages are enabled.
 
-
-<!--
 **Related information**  
+
 
 [Authoring portlet: Creating a project template \(from the Web Content Authoring portlet as a site administrator\)](../panel_help/wcm_dev_projects_temp_creating.md)
 
-[Creating a project template \(from the site toolbar as an author\)](../panel_help/toolbar_project_create_template.md) -->
+[Creating a project template \(from the site toolbar as an author\)](../panel_help/toolbar_project_create_template.md)
 

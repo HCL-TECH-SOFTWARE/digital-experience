@@ -4,6 +4,8 @@ title: Content libraries for site templates
 ---
 
 
+
+
 The user that creates the site template can select a default content library for any sites that are created from the template. The user that runs the Site Wizard can change this selection. This selection does not apply to the Section Wizard. For sections, the content library is determined by the selected anchor page.
 
 A good practice is to store content in a library that is distinct from other site assets such as workflows, presentation and authoring templates and pages.

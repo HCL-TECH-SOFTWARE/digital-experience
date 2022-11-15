@@ -4,15 +4,15 @@ The portal Deployment Service provides services for accessing the configuration 
 
 In the WebSphere® Integrated Solutions Console, the portal Deployment Service is listed as **WP DeploymentService**.
 
-!!!note "Notes"
-    1.  The HCL Portal configuration is separated into two types:
+**Notes:**
 
-        -   Deployed configuration. This type of configuration is read-only. The deployed configuration is always read from the file `portlet.xml`.
-        -   Administrative configuration. This type of configuration is read and write.
-    
-        The deployed configuration can be modified by administrative changes, for example, by using administrative portlets or the XML configuration interface. The administrative configuration is never overwritten by changes to the deployed configuration.
+1.  The HCL Portal configuration is separated into two types:
 
-    2.  Portlet applications appear in the Enterprise Application list on the WebSphere Integrated Solutions Console. However, do not manage them from outside the portal. Instead, manage them by using the portal administration portlets or the XML configuration interface of the portal. You recognize web applications that comprise a portlet application by their administrative name, also called the display name. It is shown in the WebSphere Integrated Solutions Console. You can identify the name of such a portlet application by a portal-specific identifier prefix PA\_<name\>. This identifier is appended to the name. An example for such a name is PA\_WPS\_Welcome. The name in turn is derived from the name of the WAR file when the portlet application is installed. You can change this administrative name with an update of the portlet application.
+    -   Deployed configuration. This type of configuration is read-only. The deployed configuration is always read from the file `portlet.xml`.
+    -   Administrative configuration. This type of configuration is read and write.
+    The deployed configuration can be modified by administrative changes, for example, by using administrative portlets or the XML configuration interface. The administrative configuration is never overwritten by changes to the deployed configuration.
+
+2.  Portlet applications appear in the Enterprise Application list on the WebSphere Integrated Solutions Console. However, do not manage them from outside the portal. Instead, manage them by using the portal administration portlets or the XML configuration interface of the portal. You recognize web applications that comprise a portlet application by their administrative name, also called the display name. It is shown in the WebSphere Integrated Solutions Console. You can identify the name of such a portlet application by a portal-specific identifier prefix PA\_<name\>. This identifier is appended to the name. An example for such a name is PA\_WPS\_Welcome. The name in turn is derived from the name of the WAR file when the portlet application is installed. You can change this administrative name with an update of the portlet application.
 
 In the following list of properties, the values that are given in parentheses are the default values.
 
@@ -62,8 +62,7 @@ In the following list of properties, the values that are given in parentheses ar
 
     The default setting is false.
 
-    !!!note
-        Do not enable reloading in a production environment. Enable reloading only for portlet development and portlet debugging purposes.
+    **Note:** Do not enable reloading in a production environment. Enable reloading only for portlet development and portlet debugging purposes.
 
 -   **discard.config.interval = \(60\)**
 
@@ -81,11 +80,12 @@ In the following list of properties, the values that are given in parentheses ar
 
         Time interval \(in minutes\) for which a workspace is retained before it is discarded. It is then rebuilt for the next deployment task.
 
-    !!!note "Notes"
-        -   When you set this property, use good judgment. The proper use of this setting must be a compromise between performance and workspace consumption for the following reasons:
-            -   Discarding the workspace frequently has a negative impact on deployment performance. The larger your portal installation is, the longer it takes to discard and rebuild the workspace to save the configuration changes during WAR file deployment.
-            -   However, retaining a workspace keeps the `wp_xxx` temporary directories in the WebSphere® Application Server `wstemp` directory. Therefore, the temporary space that they occupy in the file system grows every time a WAR file is deployed and every time the portal is restarted.
-        -   The configuration service workspace is not discarded immediately after expiry of the time interval that you set. The cleanup is done the next time that a deployment operation is called. It checks for expired changes and discards the workspace that they occupy. If further deployment operations occurred *after* the last time that the timer interval expired and the workspace was released, the changes in the last allocated workspace remain in the file system even on portal shutdown. Nevertheless, the previous cleanup reduces the volume of occupied disk space to only those temporary files that were processed after the last cleanup interval.
+    **Notes:**
+
+    -   When you set this property, use good judgment. The proper use of this setting must be a compromise between performance and workspace consumption for the following reasons:
+        -   Discarding the workspace frequently has a negative impact on deployment performance. The larger your portal installation is, the longer it takes to discard and rebuild the workspace to save the configuration changes during WAR file deployment.
+        -   However, retaining a workspace keeps the `wp_xxx` temporary directories in the WebSphere® Application Server `wstemp` directory. Therefore, the temporary space that they occupy in the file system grows every time a WAR file is deployed and every time the portal is restarted.
+    -   The configuration service workspace is not discarded immediately after expiry of the time interval that you set. The cleanup is done the next time that a deployment operation is called. It checks for expired changes and discards the workspace that they occupy. If further deployment operations occurred *after* the last time that the timer interval expired and the workspace was released, the changes in the last allocated workspace remain in the file system even on portal shutdown. Nevertheless, the previous cleanup reduces the volume of occupied disk space to only those temporary files that were processed after the last cleanup interval.
 
 The following property protects deployment settings that users modified by using the WebSphere Integrated Solutions Console during WAR update through web module administration in the portal.
 

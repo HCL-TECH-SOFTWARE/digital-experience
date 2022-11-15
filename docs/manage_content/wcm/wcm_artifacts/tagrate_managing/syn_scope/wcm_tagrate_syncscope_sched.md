@@ -10,7 +10,7 @@ You can schedule scope synchronization to be run at specific times by defining t
 
         ```
         <?xml version="1.0" encoding="UTF-8"?> 
-        <request type="export" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PortalConfig_8.5.0.xsd" > 
+        <request type="export" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PortalConfig\_8.5.0.xsd" > 
           <portal action="locate"> 
             <task action="export" name="com.ibm.portal.cp.SynchronizationTask"/> 
           </portal> 
@@ -29,7 +29,7 @@ You can schedule scope synchronization to be run at specific times by defining t
 
         ```
         <?xml version="1.0" encoding="UTF-8"?> 
-        <request type="update" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PortalConfig_8.5.0.xsd"> 
+        <request type="update" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PortalConfig\_8.5.0.xsd"> 
           <portal action="locate"> 
             <task action="create" name="com.ibm.portal.cp.SynchronizationTask"> 
               <startTime>15:36</startTime> 
@@ -46,9 +46,9 @@ You can schedule scope synchronization to be run at specific times by defining t
 
 3.  If you want to set a minimum time before subsequent synchronizations are run, specify the `tagging.syndication.minimumTagSynchronizationTimeInterval` property in the Web Content Manager configuration service.
 
-    1.  Log in to the WebSphere® Integrated Solutions Console (`http://hostname.example.com:10027/ibm/console`).
+    1.  Log in to the WebSphere® Integrated Solutions Console \(`http://hostname.example.com:10027/ibm/console`\).
 
-    2.  Click **Resources > *Resource Environment > Resource Environment Providers**.
+    2.  Click **Resources** \> **Resource Environment** \> **Resource Environment Providers**.
 
     3.  Click **WP ConfigService**.
 
@@ -64,8 +64,12 @@ You can schedule scope synchronization to be run at specific times by defining t
 
 
 
-???+ info "Related information"  
-  - [Setting service configuration properties](../../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
-  - [Working with the XML configuration interface](../../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
-  - [XML configuration reference](../../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref.md)
+**Related information**  
+
+
+[Setting service configuration properties](../admin-system/adsetcfg.md)
+
+[Working with the XML configuration interface](../admin-system/adxmltsk.md)
+
+[XML configuration reference](../admin-system/adxmlref.md)
 

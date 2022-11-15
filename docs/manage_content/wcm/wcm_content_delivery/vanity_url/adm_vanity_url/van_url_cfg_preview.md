@@ -16,31 +16,57 @@ http://hostname/shoe-sale
 
 You switch between these two options by using the appropriate portal configuration tasks:
 
--   If you want the preview link to point to the HTTP server, run the portal configuration task `**enable-vanityurl-httpserver-preview`.
--   If you want the link to go to the vanity servlet and show the full vanity URL, run the portal configuration task `**disable-vanityurl-httpserver-preview`. This setting is the default.
+-   If you want the preview link to point to the HTTP server, run the portal configuration task `**en**able-vanityurl-httpserver-preview`.
+-   If you want the link to go to the vanity servlet and show the full vanity URL, run the portal configuration task `**dis**able-vanityurl-httpserver-preview`. This setting is the default.
 
 The syntax for these configuration tasks is as follows:
 
 -   **AIX®**
 
-    `./ConfigEngine.sh enable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password`
+    ./ConfigEngine.sh enable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
 
-    `./ConfigEngine.sh disable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password`
+    ./ConfigEngine.sh disable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
 
+-   **HP-UX**
+
+    ./ConfigEngine.sh enable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
+
+    ./ConfigEngine.sh disable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
+
+-   **IBM® i**
+
+    ConfigEngine.sh enable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
+
+    ConfigEngine.sh disable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
 
 -   **Linux™**
 
-    `./ConfigEngine.sh enable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password`
-    
-    `./ConfigEngine.sh disable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password`
+    ./ConfigEngine.sh enable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
+
+    ./ConfigEngine.sh disable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
+
+-   **Solaris**
+
+    ./ConfigEngine.sh enable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
+
+    ./ConfigEngine.sh disable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
 
 -   **Windows™**
 
-    `ConfigEngine.bat enable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password`
+    ConfigEngine.bat enable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
 
-    `ConfigEngine.bat disable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password`
+    ConfigEngine.bat disable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
+
+-   **z/OS®**
+
+    ./ConfigEngine.sh enable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
+
+    ./ConfigEngine.sh disable-vanityurl-httpserver-preview -DPortalAdminPwd=password -DWasPassword=password
 
 
-???+ info "Related information:"
-     - [Providing short vanity URLs](../adm_vanity_url/van_url_short.md)
+
+**Related information**  
+
+
+[Providing short vanity URLs](../wcm/van_url_short.md)
 

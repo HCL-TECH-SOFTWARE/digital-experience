@@ -6,8 +6,19 @@ The `com.ibm.wcp.analysis.beans.CustomLog` bean method signatures are:
 
 |CustomLog bean method signatures|Description|
 |--------------------------------|-----------|
-|<br><pre>\```<br>public void log( HttpServletRequest request,<br>                 String             key,<br>                 String             value );<br>```|Logs a single pair of custom key/value data.|
-|<br><pre>\```<br>public void log( HttpServletRequest request,<br>                 Hashtable          keyValueData );<br>```|Logs multiple pairs of custom key/value data.|
+|```
+public void log( HttpServletRequest request,
+                 String             key,
+                 String             value );
+```
+
+|Logs a single pair of custom key/value data.|
+|```
+public void log( HttpServletRequest request,
+                 Hashtable          keyValueData );
+```
+
+|Logs multiple pairs of custom key/value data.|
 
 The log methods generate a CustomLogEvent with the request and custom data. The CustomLogEvent is routed to all of the registered log listeners.
 

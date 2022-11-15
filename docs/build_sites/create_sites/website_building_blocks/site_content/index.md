@@ -7,11 +7,11 @@ In the example wireframe, content is highlighted. Depending on your point of vie
 
 ![Wireframe with content highlighted](../../../../images/wireframe_content.jpg)
 
-
+<!--- 
 -   **[Content stored in Web Content Manager](site-content-wcm.md)**  
 Use Web Content Manager to store and manage content. Web Content Manager separates the content from the presentation layer. Content authors enter information in authoring templates. The authoring template is then associated with a presentation template. The presentation template defines how the content is rendered and presented to the site visitor. As a result, you can rapidly change the look and feel of your content without editing the same elements repeatedly. Use the Web Content Viewer Portlet to render content from Web Content Manager.
 -   **[External content](site_external_content.md)**  
 Many capabilities are included to retrieve content from external sources. You can use Web Content Integrator, REST services for HCL Web Content Manager, Digital Data Connector \(DDC\) for HCL Portal, specialized portlets, WSRP, and other mechanisms to retrieve and render content from sources outside your digital experience.
 -   **[Social Content](site_social_content.md)**  
-Integrating social content into your digital experiences adds to the rich user experience. Capabilities such as community pages and HCL Connections portlets make that integration possible.
+Integrating social content into your digital experiences adds to the rich user experience. Capabilities such as community pages and HCL Connections portlets make that integration possible. --->
 

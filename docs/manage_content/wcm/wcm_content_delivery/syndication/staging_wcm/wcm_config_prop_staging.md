@@ -8,6 +8,8 @@ You define and manage staging environment options in the **WCM WCMConfigService*
 -   If you are using your staging environment for user acceptance testing before you syndicate to a delivery environment, then you need to ensure that all other settings configured on your staging server match the same settings on the delivery server.
 
 
-???+ info "Related information:"
-    - [Staging to production list](../../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_stage_check.md)
+**Related information**  
+
+
+[Staging to production list](../deploy/dep_stage_check.md)
 

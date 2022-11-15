@@ -6,7 +6,8 @@ In previous versions of Portal and HCL Digital Experience, the MashupMaker\_Inte
 
 -   To enable the mashup integration feature, register the .ear file with the following command:
 
-    -   AIX® and Linux™: `./ConfigEngine.sh action-create-ear-wp.mmi.deploy`
+    -   AIX® HP-UX Linux™ Solaris: `./ConfigEngine.sh action-create-ear-wp.mmi.deploy`
+    -   IBM® i: `./ConfigEngine.sh action-create-ear-wp.mmi.deploy`
     -   Windows™: `ConfigEngine.bat action-create-ear-wp.mmi.deploy`
 
 

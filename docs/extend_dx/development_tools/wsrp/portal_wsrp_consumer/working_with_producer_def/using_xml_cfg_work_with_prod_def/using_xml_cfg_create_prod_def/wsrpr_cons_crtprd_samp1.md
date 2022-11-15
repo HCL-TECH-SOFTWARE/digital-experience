@@ -11,7 +11,7 @@ The following XML sample shows how you use the XML configuration interface to cr
 ```
 <?xml version="1.0" encoding="UTF-8" ?> 
 <request type="update" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:noNamespaceSchemaLocation="PortalConfig_8.5.0.xsd" create-oids="true">
+   xsi:noNamespaceSchemaLocation="PortalConfig\_8.5.0.xsd" create-oids="true">
    <portal action="locate">
       <wsrp-producer action="update" uniquename="ibm.portal.MySampleProducer1">
          <porttype type="service-description" update="set">
@@ -29,7 +29,7 @@ The following XML sample shows how you use the XML configuration interface to cr
 
 ```
 
-Replace http://producer_portal_host:producer_port/wp_contextRoot with the appropriate values for the environment of your Producer.
+Replace http://producer\_portal\_host:producer\_port/wp\_contextRoot with the appropriate values for the environment of your Producer.
 
 This sample specifies the minimum required mandatory WSRP interfaces Service Description and Markup.
 
@@ -41,12 +41,12 @@ The following XML sample shows how you use the XML configuration interface to cr
 
 <?xml version="1.0" encoding="UTF-8" ?>
 <request type="update" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:noNamespaceSchemaLocation="PortalConfig_8.5.0.xsd" create-oids="true">
+   xsi:noNamespaceSchemaLocation="PortalConfig\_8.5.0.xsd" create-oids="true">
    <portal action="locate">
       <wsrp-producer action="update" **registration-required="true"** uniquename="ibm.portal.MySampleProducer2">
-         <wsdl-url>  http://producer_portal_host:producer_port/wp_contextRoot/wsdl/wsrp_service.wsdl</wsdl-url>
-         **<parameter name="regprop1" type="string" update="set">value1</parameter>
-         <parameter name="regprop2" type="string" update="set">value2</parameter>**
+         <wsdl-url>  http://producer\_portal\_host:producer\_port/wp\_contextRoot/wsdl/wsrp\_service.wsdl</wsdl-url>
+         **<parameter name="regprop1" type="string" update="set"\>value1</parameter\>
+         <parameter name="regprop2" type="string" update="set"\>value2</parameter\>**
          <preferences name="userattributes" update="set">
             <value>cn</value>
             <value>o</value>
@@ -61,15 +61,19 @@ The following XML sample shows how you use the XML configuration interface to cr
 
 ```
 
-Replace http://producer_portal_host:producer_port/wp_contextRoot/wsdl/wsrp_service.wsdl with the appropriate values for the environment of your Producer.
+Replace http://producer\_portal\_host:producer\_port/wp\_contextRoot/wsdl/wsrp\_service.wsdl with the appropriate values for the environment of your Producer.
 
 This sample also includes specification of user attributes.
 
 To use this sample with a HCL Portal Producer portal, set registration-required="false" and remove the parameter tags. This modification is necessary because the HCL Portal Producer does not support registration.
 
 
-???+ info "Related information"  
-   -  [Sample XML configuration files](../../../../../portal_admin_tools/xml_config_interface/xml_config_ref/admxmsmp.md)
-   -  [The XML configuration interface](../../../../../portal_admin_tools/xml_config_interface/index.md)
-   -  [Working with the XML configuration interface](../../../../../portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
+**Related information**  
+
+
+[Sample XML configuration files](../admin-system/admxmsmp.md)
+
+[The XML configuration interface](../admin-system/admxmlai.md)
+
+[Working with the XML configuration interface](../admin-system/adxmltsk.md)
 

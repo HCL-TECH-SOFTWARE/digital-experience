@@ -20,12 +20,12 @@ Prepare the operating system to ensure a successful HCL Digital Experience insta
     -   Use the `ulimit -c` command to set the maximum size to cores to unlimited.
     For information about these commands, see your operating system documentation.
 
-4.  Install and configure X server on Linux™ (such as X Window System or GNOME) to use the graphical user interface the installation program provides. For information about adding packages, read your operating system documentation.
+4.  Install and configure X server on Linux™ \(such as X Window System or GNOME\) to use the graphical user interface the installation program provides. For information about adding packages, read your operating system documentation.
 
-    !!! note
-        -   If you plan to install with a response file, X server is not required.
-        -   Installing libXtst.i686 using `yum`, along with the required prerequisites is sufficient to get the IBM Installation Manager graphical user interface to run.
+    **Note:**
 
+    -   If you plan to install with a response file, X server is not required.
+    -   Installing libXtst.i686 using `yum`, along with the required prerequisites is sufficient to get the IBM Installation Manager graphical user interface to run.
 5.  Ensure that all non-root users have the appropriate permissions to the /tmp/javasharedresources directory.
 
     For example, the non-root users must have at least 770 permissions.

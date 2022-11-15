@@ -45,5 +45,5 @@ Code sample
 
 The event that is associated with the target of the called dialog's end transition needs to match with the event of the calling dialog's incoming transition. In the sample, `dialog1` needs to have an incoming transition, which is triggered by the emission of an event `eZ` by `dialog2`. The transition endpoint that is referenced by the called dialogs end transitions target becomes irrelevant.
 
-
+**Parent topic:**[Dialog chaining and nesting](../screenflow/dlg_chng_nstng.md)
 

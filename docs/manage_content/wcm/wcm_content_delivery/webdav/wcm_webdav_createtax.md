@@ -38,8 +38,7 @@ taxonomies
 
     Taxonomies can be created under the generic `taxonomies` folder only, while categories can be created in either a `wcm.taxonomy.*` folder or a `wcm.category.*` folder.
 
-    !!! important
-        Some WebDAV clients create a folder with a default name, such as `New Folder`, and as soon as you enter the name of the new folder, the client sends a request to rename the already created folder. Because taxonomy and category folders require a corresponding prefix for creation, this client behavior does not work. If your WebDAV client uses this method to create new folders, you can first create the new taxonomy or category folder locally and then copy it into the WebDAV tree.
+    **Important:** Some WebDAV clients create a folder with a default name, such as `New Folder`, and as soon as you enter the name of the new folder, the client sends a request to rename the already created folder. Because taxonomy and category folders require a corresponding prefix for creation, this client behavior does not work. If your WebDAV client uses this method to create new folders, you can first create the new taxonomy or category folder locally and then copy it into the WebDAV tree.
 
     **Deleting taxonomies and categories:** To delete taxonomies or categories delete the corresponding folder. Taxonomies or categories that contain categories cannot be deleted until you have also first deleted the child items. Also if a category is still being referenced by another item, it cannot be deleted until you have first removed the corresponding references by using the authoring portlet.
 

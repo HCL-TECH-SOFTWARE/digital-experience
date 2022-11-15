@@ -10,6 +10,5 @@ To test if your syndicator and subscriber can connect to each other, click **Tes
 
 You can also monitor the status of individual syndicators and subscribers:
 
-<!--
-**Parent topic:**[How to manage syndicators and subscribers](../panel_help/wcm_syndication.md)-->
+**Parent topic:**[How to manage syndicators and subscribers](../panel_help/wcm_syndication.md)
 

@@ -4,18 +4,17 @@ To modify, create, or delete portal resources by using the Controller SPI, you f
 
 You do this by using a JNDI based lookup for the correct "home" interface, that is, the corresponding read-only interface.
 
-!!! note
-    The provider lookup for a controller home is possible from servlet level code and portlets.
+**Note:** The provider lookup for a controller home is possible from servlet level code and portlets.
 
 The following controllers are available via JNDI:
 
 -   **ContentModelController**
 
-    To obtain a ContentModelController, perform a lookup for the string ContentModelControllerHome.CONTENT_MODEL_CONTROLLER_JNDI_NAME.
+    To obtain a ContentModelController, perform a lookup for the string ContentModelControllerHome.CONTENT\_MODEL\_CONTROLLER\_JNDI\_NAME.
 
 -   **PortletModelController**
 
-    To obtain a ContentModelController, perform a lookup for the string PortletModelControllerHome.PORTLET_MODEL_CONTROLLER_JNDI_NAME.
+    To obtain a ContentModelController, perform a lookup for the string PortletModelControllerHome.PORTLET\_MODEL\_CONTROLLER\_JNDI\_NAME.
 
 
 The **LayoutModelController** cannot be obtained via a JNDI lookup. You obtain it through its associated **ContentModelController**.
@@ -33,8 +32,7 @@ if (home != null) {
 
 ```
 
-!!!note
-    To obtain a `ContentModelController`, you must pass an existing content model to the `createContentModelController` method of the `ContentModelControllerProvider`.
+**Note:** To obtain a `ContentModelController`, you must pass an existing content model to the `createContentModelController` method of the `ContentModelControllerProvider`.
 
 Example 2 - Obtaining a layout model controller for a specific page:
 
@@ -48,6 +46,11 @@ final LayoutModelController lmController = cmController.getLayoutModelController
 
 ```
 
-???+ info "Related information"   
-    -   [Obtain a model from the portal](../../../apis/model_spi/dgn_modelobt.md)
-    -   [Making modifications by using the Controller SPI](../../../apis/controller_spi/controller_spi_modification/index.md)
+
+**Related information**  
+
+
+[Obtain a model from the portal](../dev/dgn_modelobt.md)
+
+[Making modifications by using the Controller SPI](../dev/ctrlrapit_mdfy.md)
+

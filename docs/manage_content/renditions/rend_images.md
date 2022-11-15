@@ -1,4 +1,4 @@
-# Set Rendition Properties on Images
+# Setting rendition properties on images
 
 Renditions automatically render a version of your image that is best suited for the device connecting to the site.
 

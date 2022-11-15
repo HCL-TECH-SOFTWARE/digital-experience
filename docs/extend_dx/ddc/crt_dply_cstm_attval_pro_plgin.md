@@ -14,7 +14,10 @@ The actual attribute value processor implementations must implement the `com.ibm
 All three interfaces are defined in the public Digital Data Connector SPI. For more information about these interfaces, see *The developer HCL Portal SPI documentation.*
 
 
-???+ info "Related information:"
-    - [XPath list-rendering profile metadata keys](../ddc/integrating_remote_xml_data/syntax_xpath_based_list_rendering_profiles/plrf_lr_profl_metadata_keys.md)
-    - [BasicJSONSelection list-rendering profile metadata keys](../ddc/integrating_remote_json_data/syntax_basicjsonselection_based_list_rendering_profiles/plrf_lr_profl_metadata_keys_json.md)
+**Related information**  
+
+
+[XPath list-rendering profile metadata keys](../social/plrf_lr_profl_metadata_keys.md)
+
+[BasicJSONSelection list-rendering profile metadata keys](../social/plrf_lr_profl_metadata_keys_json.md)
 

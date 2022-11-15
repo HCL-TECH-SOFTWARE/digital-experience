@@ -114,7 +114,10 @@ The following list shows the set of list-rendering profile entry keys that are a
 
 
 
-???+ info "Related information:"
-    - [Common profile](../../../../build_sites/social_rendering/customizing_view_definitions/customizing_visualdesign/customizing_markup_gen/ddc_profiles_for_social_rend/soc_rendr_prfls_common.md)
-    - [Creating list-rendering profiles](../../working_with_list_rendering_profiles/plrf_crt_lr_profiles.md)
+**Related information**  
+
+
+[Common profile](../social/soc_rendr_prfls_common.md)
+
+[Creating list-rendering profiles](../social/plrf_crt_lr_profiles.md)
 

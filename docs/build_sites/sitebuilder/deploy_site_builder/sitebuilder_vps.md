@@ -6,15 +6,19 @@ Open a command line and browse to the ConfigEngine directory.
 
 -   **Windows™**
 
-    C:\\IBM/WebSphere\wp_profile\ConfigEngine
+    C:\\IBM/WebSphere\\wp\_profile\\ConfigEngine
 
 -   **AIX®**
 
-    /usr/IBM/WebSphere/wp_profile/ConfigEngine
+    /usr/IBM/WebSphere/wp\_profile/ConfigEngine
+
+-   **HP-UX**
+
+    /opt/IBM/WebSphere/wp\_profile/ConfigEngine
 
 -   **Linux™**
 
-    /opt/IBM/WebSphere/wp_profile/ConfigEngine
+    /opt/IBM/WebSphere/wp\_profile/ConfigEngine
 
 
 Run the ConfigEngine batch or script file with the import-libs-to-vp parameter to copy the library. For example:
@@ -23,12 +27,11 @@ Run the ConfigEngine batch or script file with the import-libs-to-vp parameter t
 
     `ConfigEngine.bat import-libs-to-vp -DVirtualPortalContext=your\_vp`
 
--   **AIX and Linux**
+-   **AIX®HP-UX Linux™**
 
     `./ConfigEngine.sh import-libs-to-vp -DVirtualPortalContext=your\_vp`
 
 
-!!! note
-    This task imports libraries for both Site Builder and the Script Application. If you have already run this task to import your Script Application libraries, you won't have to run this task again for Site Builder.
+**Note:** This task imports libraries for both Site Builder and the Script Application. If you have already run this task to import your Script Application libraries, you won't have to run this task again for Site Builder.
 
 

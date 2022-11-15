@@ -2,6 +2,7 @@ Title: Managing your HCL Portal environment
 nav:
     - index.md
     - apply_fixpacks.md
+    - iim_modify.md
     - iim_uninst_fix.md
-
+    - iim_roll.md
   

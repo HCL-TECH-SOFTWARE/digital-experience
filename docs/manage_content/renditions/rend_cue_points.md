@@ -1,4 +1,4 @@
-# Video Start and End Points
+# Video start and end points
 
 File components or elements that have a video file that is stored in an HTML5 video format, which includes MP4, webM, or ogg, are stored in Brightcove and have a Brightcove ID.
 

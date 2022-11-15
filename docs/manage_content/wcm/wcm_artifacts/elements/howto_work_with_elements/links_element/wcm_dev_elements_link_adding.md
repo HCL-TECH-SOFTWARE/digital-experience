@@ -1,15 +1,14 @@
 ---
 id: wcm_dev_elements_link_adding
-title: Adding a ink element to an item
+title: Adding a link element to an item
 ---
 
-# Adding a ink element to an item
+
 
 
 You add a link element to a site area or content item when you want a link to be used for a specific site area or content item.
 
-!!!note
-    You can add an element to a content item only if the manage elements feature is enabled in the authoring template that is used by the content item.
+**Note:** You can add an element to a content item only if the manage elements feature is enabled in the authoring template that is used by the content item.
 
 1.  Open or create a site area or content item.
 
@@ -31,8 +30,7 @@ You add a link element to a site area or content item when you want a link to be
 
 10. To add a link to a URL, either type or paste the URL in the **Type a URL** field.
 
-    !!!note
-        The inserted URL is rendered relative to the URL of the site area of the currently rendered content item. Internet protocols, such as "`Http://`", must be added at the beginning of the inserted link if an absolute URL is intended to be rendered.
+    **Note:** The inserted URL is rendered relative to the URL of the site area of the currently rendered content item. Internet protocols, such as "`Http://`", must be added at the beginning of the inserted link if an absolute URL is intended to be rendered.
 
 11. To add a link to web content, an image component, a file component, or an existing link component, click **Browse Content**.
 

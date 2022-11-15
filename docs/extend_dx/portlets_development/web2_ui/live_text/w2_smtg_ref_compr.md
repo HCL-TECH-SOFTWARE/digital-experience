@@ -15,6 +15,8 @@ However, the underlying technologies are different, and the functional possibili
 |Whether portlet wiring is supported|No wiring support is available.|Users can automate actions by pressing **Ctrl** and clicking on a menu item.|
 
 
-???+ info "Related information"
-    - [Portlet communication](../../portlet_communication/index.md)
+**Related information**  
+
+
+[Portlet communication](../dev-portlet/pltcom_ptlt_com.md)
 

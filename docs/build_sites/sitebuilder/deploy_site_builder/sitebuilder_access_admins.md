@@ -4,9 +4,8 @@ HCL Digital Experience administrators can use Site Builder to create sites or ad
 
 1.  Log in to the portal as an administrator.
 
-**Assign User access for anchor pages**
-
-2.  In the administration toolbar, click **Access** \> **Resource Permissions**.
+2.  -   **Assign User access for anchor pages**
+3.  In the administration toolbar, click **Access** \> **Resource Permissions**.
 
     1.  Click **Pages** on the **Select Resource Type** view.
 
@@ -28,9 +27,8 @@ HCL Digital Experience administrators can use Site Builder to create sites or ad
 
     10. Repeat this process for all necessary pages.
 
-**Assign User access for Web Content Libraries**
-
-3.  In the administration toolbar, click **Portal Content** \> **Web Content Libraries**.
+4.  -   **Assign User access for Web Content Libraries**
+5.  In the administration toolbar, click **Portal Content** \> **Web Content Libraries**.
 
     1.  Browse to the Site Builder Template Library.
 
@@ -46,7 +44,7 @@ HCL Digital Experience administrators can use Site Builder to create sites or ad
 
     7.  Click **Apply** and **Done**.
 
-4.  Open portal administration and click **Portal Content** \> **Web Content Libraries**.
+6.  Open portal administration and click **Portal Content** \> **Web Content Libraries**.
 
     1.  Browse to the library that the users and groups need to use as the source for initial content and supporting assets for their new sites and sections.
 
@@ -64,7 +62,7 @@ HCL Digital Experience administrators can use Site Builder to create sites or ad
 
     8.  Repeat this process for all necessary libraries.
 
-5.  In the administration toolbar, click **Portal Content** \> **Web Content Libraries**.
+7.  In the administration toolbar, click **Portal Content** \> **Web Content Libraries**.
 
     1.  Browse to the library that the users and groups need to use as the existing content library for their new sites and sections.
 
@@ -82,15 +80,14 @@ HCL Digital Experience administrators can use Site Builder to create sites or ad
 
     8.  Repeat this process for all necessary libraries.
 
-**Assign role access**
+8.  -   **Assign role access**
+    If the Site Builder administrators are required to import and export site and section templates, the following access roles must be set.
 
-If the Site Builder administrators are required to import and export site and section templates, the following access roles must be set.
+9.  In the administration toolbar, click **Access** \> **Resource Permissions**.
 
-6.  In the administration toolbar, click **Access** \> **Resource Permissions**.
+10. Click **Virtual Resources**.
 
-7. Click **Virtual Resources**.
-
-8. Click **PORTAL**.
+11. Click **PORTAL**.
 
     1.  Click the **Assign Access** icon.
 
@@ -100,13 +97,13 @@ If the Site Builder administrators are required to import and export site and se
 
     4.  Click **OK**.
 
-9. Click **PORTAL**.
+12. Click **PORTAL**.
 
     1.  Click **Apply**.
 
     2.  Click **Virtual Resources**.
 
-10. Click **XML ACCESS**.
+13. Click **XML ACCESS**.
 
     1.  Click the **Assign Access** icon.
 
@@ -116,25 +113,24 @@ If the Site Builder administrators are required to import and export site and se
 
     4.  Click **OK**.
 
-11. Click **XML ACCESS**.
+14. Click **XML ACCESS**.
 
     1.  Click **Apply**.
 
     2.  Click **Virtual Resources**.
 
-**Assign administrator access to the Site Builder portlet**
+15. -   **Assign administrator access to the Site Builder portlet**
+16. In the administration toolbar, click **Portlet Management** \> **Portlets**.
 
-12. In the administration toolbar, click **Portlet Management** \> **Portlets**.
+17. Search for the Site Builder portlet.
 
-13. Search for the Site Builder portlet.
+18. Click the **Access** icon.
 
-14. Click the **Access** icon.
+19. For the Administrator role, click the **Edit Role** icon.
 
-15. For the Administrator role, click the **Edit Role** icon.
+20. Add the users and groups you want to add as Site Builder Administrators.
 
-16. Add the users and groups you want to add as Site Builder Administrators.
-
-17. Click **OK**.
+21. Click **OK**.
 
 
 

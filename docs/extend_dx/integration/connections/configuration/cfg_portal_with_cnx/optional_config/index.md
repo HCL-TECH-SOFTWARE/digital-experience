@@ -4,9 +4,9 @@ Depending on your deployment, follow these steps to optimize the HCL Connections
 
 The following are some optional configuration steps that you can take to enhance the deployment of HCL Connections portlets for HCL Portal.
 
--   **[Community Pages](community_pages/index.md)**  
+-   **[Community Pages](../connect/c_connections_portlets_comm_pages_ovr.md)**  
 Integrate HCL Connections Communities into your Portal site to enhance your portal's social collaboration capabilities.
--   **[Configuring search integration](connections_search/index.md)**  
+-   **[Configuring search integration](../connect/connections_portlets_search_overview.md)**  
 HCL Connections search integration in HCL Digital Experience allows users to do search queries and view query results for HCL Connections content within the context of their portal environment.
 
 

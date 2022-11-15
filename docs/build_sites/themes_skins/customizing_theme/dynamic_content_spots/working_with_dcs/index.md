@@ -56,14 +56,15 @@ The following tables are an overview of the dynamic content spots that are most 
 |lm:title|Renders the title of the portlet.|
 |lm:description|Renders the description of the portlet.|
 |portlet.link:portlet|Outputs the markup <span id="portlet\_id"\></span\> to allow page to position itself at a particular portlet markup with a fragment identifier.|
-|wp\_analytics\_portlet\_dynspot Defined in Module: `wp_analytics`.|Provides the site analytics extension for portlets|
+|wp\_analytics\_portlet\_dynspot Defined in Module: `wp_analytics`.
+
+|Provides the site analytics extension for portlets|
 
 You can modify the dynamic content spot values two different ways.
 
 -   Dynamic content spots that are defined through module `wp_dynamicContentSpots_85` are part of the default theme and is cloned when you create your own theme. Rename the module in your theme, update the reference in the profile, and then you can change the values of the dynamic content spots.
 -   System dynamic content spots such as `wp_search_dynspot` can be changed by overriding dynamic content spots with the module framework. For example, you can create a module that redefines this dynamic content spot that requires the core module `wp_search`. Your dynamic content spot reference is used as a result.
 
-<!--
 -   **[Creating dynamic content spots](../dev-theme/themeopt_cust_creat_dyn_con_spot_parent.md)**  
 There are two ways you can create dynamic content spots. You can use a module, or a resource environment provider.
 -   **[Conditionally disable dynamic content spots](../dev-theme/themeopt_cust_dcsmarkupcontrol.md)**  
@@ -72,9 +73,12 @@ You can control whether a dynamic content spot is rendered into the page or not 
 You can use the modularized framework for dynamic content spots to override spots that were defined through resource environment providers.
 -   **[Dynamic content spot debugging](../dev-theme/themeopt_dyn_cnt_spt_debugging.md)**  
 Dynamic Content Spots add dynamic markup into static themes or skins. Sometimes, it is difficult to discern which parts of the page were contributed from which dynamic content spots.
--->
 
-???+ info Related information:"
-   - [Creating a dynamic content spot with resource environment providers](../working_with_dcs/creating_dcs/themeopt_cust_createdyncont.md)
-   - [Mobile navigation](../../../responsive_web_design/rwd_add_navphone.md)
+
+**Related information**  
+
+
+[Creating a dynamic content spot with resource environment providers](../dev-theme/themeopt_cust_createdyncont.md)
+
+[Mobile navigation](../rwd/rwd_add_navphone.md)
 

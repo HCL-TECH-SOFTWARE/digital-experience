@@ -3,7 +3,7 @@ id: wcm_dev_elements_jsp_props
 title: Selecting a JSP file
 ---
 
-# Selecting a JSP file
+
 
 
 You use the JSP element to select a JSP file to store in the component.

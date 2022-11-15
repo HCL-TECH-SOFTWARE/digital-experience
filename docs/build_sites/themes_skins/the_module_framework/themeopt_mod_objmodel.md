@@ -4,7 +4,7 @@ The theme modularization framework foresees the following major artifacts and re
 
 The relations of the major artifacts are depicted in the following figure:
 
-![Major artifact relations model](../../../images/themeopt-mod-objmod2.jpg)
+![Major artifact relations model](../images/themeopt-mod-objmod2.jpg)
 
 A theme is assigned to a portal page. Dynamic content spots are used to write all of the data for modules that have contributions for a certain type. The module framework provides the dynamic content spots co:config and co:head. The theme must provide one or more profiles, which declares the set of modules that are used for that profile. One of these profiles is used by each page to which the theme is applied. The profile that is used for the page is the default profile that the theme developer or administrator defines for the theme by setting the theme metadata resourceaggregation.profile.
 

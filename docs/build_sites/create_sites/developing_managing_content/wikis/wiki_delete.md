@@ -14,3 +14,5 @@ You can delete a wiki and all its pages by deleting the wiki from a project.
 
 5.  Publish the project.
 
+
+

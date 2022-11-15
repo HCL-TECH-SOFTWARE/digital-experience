@@ -11,3 +11,5 @@ If you want to implement this solution, be aware of the following limitations:
 
 -   You can run only a limited number of true portals on a single hardware machine. This is due to the memory volume required by the JVM.
 -   You cannot share applications or data between true portals.
+
+

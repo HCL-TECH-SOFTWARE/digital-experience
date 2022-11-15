@@ -30,8 +30,7 @@ For information about managing sensitive customer data, see [Editing Privacy th
 
 HCL Unica Discover can track both authenticated or unauthenticated pages. By default, Unica Discover does not store CSS, images, and JavaScript files because of the potential storage requirements. These files can be stored, but it is not recommended. Unica Discover pulls those assets at the time of replay, either from the live site or from a configured secondary location through customized replay rules. For more information, see the [HCL Unica Discover product documentation](https://help.hcltechsw.com/UnicaDiscover/12.1.0/en/index.html) or contact [HCL Support](https://support.hcltech.com/csm).
 
-<!---
 -   **[Installing the Unica Discover module for Digital Experience integration](../install/installing_the_unica_discover_module.md)**  
- Learn how to install the Unica Discover module for HCL Digital Experience integration. --->
+ Learn how to install the Unica Discover module for HCL Digital Experience integration.
 
 

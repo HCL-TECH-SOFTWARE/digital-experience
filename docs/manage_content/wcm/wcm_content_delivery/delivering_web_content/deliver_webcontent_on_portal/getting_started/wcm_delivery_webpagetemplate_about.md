@@ -66,14 +66,15 @@ In addition, the following changes take place automatically, depending on the in
 
 Web content viewers on the page template can be configured to reference content that is copied when a page is created from the template. When the page is created, the viewer configuration is automatically adjusted to point to the new content that is created during page instantiation.
 
-!!! note
-    Managed pages must be enabled to support page templates that store their associated web content in the Portal Site library. If you disable managed pages, the content that is associated with a template is no longer copied during page instantiation. In addition, the corresponding preferences of any web content viewers that are on the page are not adjusted.
+**Note:** Managed pages must be enabled to support page templates that store their associated web content in the Portal Site library. If you disable managed pages, the content that is associated with a template is no longer copied during page instantiation. In addition, the corresponding preferences of any web content viewers that are on the page are not adjusted.
 
 ## Hierarchical page templates
 
 It is possible to create a hierarchy of templates, for examples, a parent template page with a child page. If the page metadata `ibm.portal.instantiation.page.include.descendants` is set to `true` on the parent page, then creating a page from the parent template not only creates a single page but the complete hierarchy that includes the children.
 
 
-???+ info "Related information:"
-    - [Creating a web content page](../displaying_content/mp_wcm_createpage.md)
+**Related information**  
+
+
+[Creating a web content page](../admin-system/mp_wcm_createpage.md)
 

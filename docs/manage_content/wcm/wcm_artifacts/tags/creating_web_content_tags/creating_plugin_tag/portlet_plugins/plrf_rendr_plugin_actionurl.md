@@ -4,8 +4,7 @@ Use the ActionURL rendering plug-in to create portlet action URLs and to insert 
 
 Use this plug-in when you post form data from your web content to the Web Content Viewer portlet. For more details, read *Sending data to the Web Content Viewer portlet*.
 
-!!! note
-    This plug-in does not render the content between the opening and the closing tags.
+**Note:** This plug-in does not render the content between the opening and the closing tags.
 
 The syntax for this plug-in is as follows:
 
@@ -40,8 +39,12 @@ This plug-in uses the following attributes:
 
 This plug-in tag fragment generates a URL that triggers a portlet action named `post`. The Web Content Viewer rendering portlet that handles the action also receives the URI action parameter `action.uri` that points to `sr:forums`. Additionally, the portlet receives the `resultSessionAttribute` action parameter with the value `replyResult`.
 
-???+ info "Related information:"
-    - [Digital Data Connector \(DDC\) for HCL Portal](../../../../../../../extend_dx/ddc/index.md)
-    - [Receiving the result of an HTML form submission](../../../../../../../extend_dx/ddc/implementing_user_interactions/sending_data_to_webcontentviewer_portlet/plrf_sendata2wcv_receivhtmlform.md)
-    - [Creating list-rendering profiles](../../../../../../../extend_dx/ddc/working_with_list_rendering_profiles/plrf_crt_lr_profiles.md)
+**Related information**  
+
+
+[Digital Data Connector \(DDC\) for HCL Portal](../social/plrf_ovu.md)
+
+[Receiving the result of an HTML form submission](../social/plrf_sendata2wcv_receivhtmlform.md)
+
+[Creating list-rendering profiles](../social/plrf_crt_lr_profiles.md)
 

@@ -23,8 +23,7 @@ All authoring templates for a library are listed under the `authoringTemplates` 
 
 ```
 
-!!! note
-      You cannot modify the authoring template itself in WebDAV. To edit the authoring template, use the authoring portlet.
+**Note:** You cannot modify the authoring template itself in WebDAV. To edit the authoring template, use the authoring portlet.
 
 1.  To change the access control settings for an authoring template, edit the `access-control-system.xml` file for administrator settings or the `access-control-user.xml` file for user-defined settings.
 
@@ -32,6 +31,8 @@ All authoring templates for a library are listed under the `authoringTemplates` 
 
 
 
-???+ info "Related information:"
-      - [Metadata and access control for web content items in WebDAV](../webdav/wcm_webdav_metadata.md)
+**Related information**  
+
+
+[Metadata and access control for web content items in WebDAV](../wcm/wcm_webdav_metadata.md)
 

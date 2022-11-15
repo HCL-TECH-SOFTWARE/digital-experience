@@ -39,7 +39,6 @@ You can edit an existing markup type and its locale-specific settings.
         -   **Language** Indicates a language supported by the portal server.
         -   **Title** Indicates a title of the markup for this language. By default, this displays the markup name
         -   **Character set** Indicates the character set used by this language for this markup. The default character set is displayed if this has not been explicitly set.
-        
     3.  Click **OK** to save the changes to your locale-specific settings, or **Cancel** to return to the list of languages.
 
 4.  To save your changes click **OK**. To exit without saving your changes, click **Cancel**.

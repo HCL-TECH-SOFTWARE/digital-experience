@@ -9,9 +9,9 @@ To create a search form, you must:
 
 You reference both the HTML element and search component in a single presentation template. The search component is only rendered after a search query is run by a user.
 
--   **[Search query examples](./howto_create_search_query/wcm_dev_search_form_query_examples.md)**  
+-   **[Search query examples](../panel_help/wcm_dev_search_form_query_examples.md)**  
 These are examples of search queries you can create by using an HTML element.
--   **[Search result examples](./howto_display_search_results/wcm_dev_search_form_results_examples.md)**  
+-   **[Search result examples](../panel_help/wcm_dev_search_form_results_examples.md)**  
 These are examples of how to design your search results.
 
 

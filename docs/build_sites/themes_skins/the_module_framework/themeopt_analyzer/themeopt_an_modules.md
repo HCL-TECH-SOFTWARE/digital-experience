@@ -22,7 +22,7 @@ Use the **Examine modules by profile** section to explore the modules of a speci
 
 The **Select Profile** screen displays the themes and their profiles in the tree view and shows details on the selected branch in the details view. You can now learn more about the various artifacts that are installed in the system before you select a profile to examine.
 
-![Screen capture of Select profile screen.](../../../../images/themeopt_an_select_profile.JPG)
+![Screen capture of Select profile screen.](../images/themeopt_an_select_profile.JPG)
 
 The tree view also shows in parentheses which theme and profile is the default so this information is easily visible. All other information is shown in the details view, such as the location of the profile JSON file. The profile JSON file is an element that can be clicked and opens a new window and serves the resource in the browser when clicked.
 
@@ -48,19 +48,19 @@ You can get to the module explorer from different paths in the UI.
     -   Modules from Portlets: The root for all modules that are provided by capabilities that are assigned by the page's portlets.
         -   Modules: All modules that are provided by non-deferred capabilities that are assigned by the page's portlets.
         -   Deferred Modules: All modules that are provided by deferred capabilities that are assigned by the page's portlets.
-    ![Module explorer to examine modules by page in fix pack 03.](../../../../images/themeopt_an_mod_moduleByPage_cf03.jpg)
+    ![Module explorer to examine modules by page in fix pack 03.](../images/themeopt_an_mod_moduleByPage_cf03.jpg)
 
 2.  When you examine modules by profile, you have two root branches:
 
     -   Modules: The root for all modules in the none deferred section of the profile.
     -   Deferred Modules: The root for all modules in the deferred section of the profile.
-    ![Screen capture of Module explorer to examine modules by profile in CF03.](../../../../images/themeopt_an_mod_moduleByProfile_cf03.jpg)![Screen capture of Module explorer to examine modules by profile.](../../../../images/themeopt_an_mod_explorer_profile.JPG)
+    ![Screen capture of Module explorer to examine modules by profile in CF03.](../images/themeopt_an_mod_moduleByProfile_cf03.jpg)![Screen capture of Module explorer to examine modules by profile.](../images/themeopt_an_mod_explorer_profile.JPG)
 
 3.  When you examine the system and theme modules, you have one or two branches:
 
     -   System Modules: Contains all modules that are defined globally through a plugin.xml.
     -   Theme Modules: Contains all modules that are defined within the themes contribution folder as part of the JSON files. This branch is only shown when a theme is selected.
-    ![Screen capture of Module explorer to examine all modules in CF03.](../../../../images/themeopt_an_mod_allModules_cf03.jpg)![Screen capture of Module explorer to examine all modules.](../../../../images/themeopt_an_mod_explorer_all.JPG)
+    ![Screen capture of Module explorer to examine all modules in CF03.](../images/themeopt_an_mod_allModules_cf03.jpg)![Screen capture of Module explorer to examine all modules.](../images/themeopt_an_mod_explorer_all.JPG)
 
 
 When you expand a tree or branch, if it is large and takes more than 30 seconds to expand, the expansion process is stopped. You must expand those branches individually.
@@ -77,8 +77,7 @@ The module hierarchy has three main views:
 
     This view displays the parents of a module. The parent is a module that has a prerequisite of a child module. Module A has a prerequisite of module B, which means that B 's parent is A. It is useful to figure out who is using a specific module and verify whether the usage is correct.
 
-    !!! note
-        The parent is displayed as a child branch within the view, the tree is upside down.
+    **Note:** The parent is displayed as a child branch within the view, the tree is upside down.
 
     For instance: When you look at the `wp_client_main` module in the parent view, it has a child branch in the tree called `wp_status_bar`. Therefore, `wp_status_bar` is the parent of `wp_client_main`.
 
@@ -131,8 +130,7 @@ The details view displays the details for the selected module such as:
 -   Parents: Displays all parent modules for the module
 -   Contributions: Displays all contributions by contribution and sub contribution. The resources are elements that can be clicked, which open a new window and serves the resource in the browser when clicked.
 
-    !!! note
-        In simulation mode, the resources cannot be clicked.
+    **Note:** In simulation mode, the resources cannot be clicked.
 
 
 ## Searching within the module explorer

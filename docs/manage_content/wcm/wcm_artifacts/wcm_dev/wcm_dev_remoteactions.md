@@ -48,8 +48,7 @@ You can also append remote actions to the URL of a local web Content Viewer port
 
 **Custom authoring interfaces:** Remote actions are not intended to be used to create a custom authoring interface. There are limitations to the functions delivered using remote actions. For example, remote actions only support plain text. You cannot use remote actions to add markup into elements such as HTML elements. You instead use the Web Content Manager API to create custom authoring interfaces.
 
-!!! note
-    Each web content item can be identified by a DocumentId. The "docid" can be retrieved by using the web content API. In the following examples, the value of the "docid" parameter should be the DocumentId as retrieved by using the `DocumentID.getID()` API method. A document ID consists of a document type and a unique ID. The "docid" values that are provided in the examples are placeholders for real document IDs. For example, `com.ibm.workplace.wcm.api.WCM_Content/ID1`
+**Note:** Each web content item can be identified by a DocumentId. The "docid" can be retrieved by using the web content API. In the following examples, the value of the "docid" parameter should be the DocumentId as retrieved by using the `DocumentID.getID()` API method. A document ID consists of a document type and a unique ID. The "docid" values that are provided in the examples are placeholders for real document IDs. For example, `com.ibm.workplace.wcm.api.WCM_Content/ID1`
 
 ## Remote action types
 
@@ -78,22 +77,18 @@ You can also append remote actions to the URL of a local web Content Viewer port
     -   `com.ibm.workplace.wcm.api.WCM_TextComponent`
     -   `com.ibm.workplace.wcm.api.WCM_Workflow`
     -   `com.ibm.workplace.wcm.api.WCM_WorkflowStage`
-
     When creating a new content item, you can specify a default authoring template by providing the document ID of the authoring template in the atid parameter:
 
     -   `[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Content" atid="com.ibm.workplace.wcm.api.WCM_AuthoringTemplate/ID1"]`
-
     When creating site areas, content items and categories, you can specify the document ID of the parent item to save the new item under. Specify this ID in the pid parameter:
 
     -   `[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Content" pid="com.ibm.workplace.wcm.api.WCM_SiteArea/ID"]`
     -   `[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_SiteArea" pid="com.ibm.workplace.wcm.api.WCM_SiteArea/ID"]`
     -   `[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Category" pid="com.ibm.workplace.wcm.api.WCM_Taxonomy/ID"]`
-
     When creating site areas, you can specify the position of the new site area by using a position parameter. You can specify to save the new site area at the start or end relative to any existing site areas. If not specified, the new site area is saved at the start relative to any existing site areas:
 
     -   `[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_Content" position="start"]`
     -   `[plugin:RemoteAction action="new" type="com.ibm.workplace.wcm.api.WCM_SiteArea" position="end"]`
-
 -   **`delete`**
 
     This is used to delete an item. You must also specify the docid of the item.
@@ -101,7 +96,6 @@ You can also append remote actions to the URL of a local web Content Viewer port
     For example:
 
     -   `[plugin:RemoteAction action="delete" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1"]`
-
 -   **`edit`**
 
     This is used to open an item form in edit mode. You must also specify the docid of the item.
@@ -109,7 +103,6 @@ You can also append remote actions to the URL of a local web Content Viewer port
     For example:
 
     -   `[plugin:RemoteAction action="edit" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1"]`
-
 -   **`read`**
 
     This is used to open an item form in read-only mode. You must also specify the docid of the item.
@@ -117,7 +110,6 @@ You can also append remote actions to the URL of a local web Content Viewer port
     For example:
 
     -   `[plugin:RemoteAction action="read" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1"]`
-
 -   **`openmainview`**
 
     This is used to open a view within an authoring portlet. You must also specify a view parameter.
@@ -140,7 +132,6 @@ You can also append remote actions to the URL of a local web Content Viewer port
     -   `allpublisheditems`
     -   `alldeleteditems`
     -   `componentsbytype`
-
 -   **`move`**
 
     This is used to move a site area or content item.
@@ -151,7 +142,6 @@ You can also append remote actions to the URL of a local web Content Viewer port
     A move direction is specified as "1" for up and "-1" for down. For example, to move a content item up one position:
 
     -   `[plugin:RemoteAction action="move" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1" pid="com.ibm.workplace.wcm.api.WCM_SiteArea/ID1" moveDirection="1"]`
-
 -   **`link`**
 
     This will link a content item to a site area.
@@ -165,7 +155,6 @@ You can also append remote actions to the URL of a local web Content Viewer port
     When linking items, you can create a new parent item by using the autoCreateParent parameter. You must also specify the library where the item being linked is located by using the slibrary parameter. The ppath parameter is used to specify the existing parent that the new parent item is created under:
 
     -   `[plugin:RemoteAction action="link" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1" autoCreateParent="true" slibrary="libraryname" ppath="library1/sitearea1/sitearea2"]`
-
 -   **`copy`**
 
     This is used to make a copy of an item.
@@ -193,7 +182,6 @@ You can also append remote actions to the URL of a local web Content Viewer port
     When copying items you can create a new parent item by using the autoCreateParent parameter. You must also specify the library where the item being copied is located by using the slibrary parameter. The ppath parameter is used to specify the existing parent that the new parent item is created under:
 
     -   `[plugin:RemoteAction action="copy" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1" autoCreateParent="true" slibrary="libraryname" ppath="library1/sitearea1/sitearea2"]`
-
 -   **`approve`**
 
     This is used to approve an item in a workflow. You must also specify the docid of the item.
@@ -201,7 +189,6 @@ You can also append remote actions to the URL of a local web Content Viewer port
     For example:
 
     -   `[plugin:RemoteAction action="approve" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1"]`
-
 -   **`decline`**
 
     This is used to decline an item in a workflow. You must also specify the docid of the item.
@@ -209,7 +196,6 @@ You can also append remote actions to the URL of a local web Content Viewer port
     For example:
 
     -   `[plugin:RemoteAction action="decline" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1"]`
-
 -   **`saveandapprove`**
 
     This is used to approve an item in a workflow where that item is open in edit mode within the same session. You must also specify the docid of the item.
@@ -218,7 +204,6 @@ You can also append remote actions to the URL of a local web Content Viewer port
 
     -   `[plugin:RemoteAction action="saveandapprove" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1"]`
     -   `[plugin:RemoteAction action="saveandapprove" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1" isdraft="true"]`
-
 -   **`previousstage`**
 
     This is used to move an item to the previous stage in a workflow. You must also specify the docid of the item.
@@ -226,7 +211,6 @@ You can also append remote actions to the URL of a local web Content Viewer port
     For example:
 
     -   `[plugin:RemoteAction action="previousstage" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1"]`
-
 -   **`viewversions`**
 
     This is used to open the versions dialog for an item. You must also specify the docid of the item.
@@ -234,7 +218,6 @@ You can also append remote actions to the URL of a local web Content Viewer port
     For example:
 
     -   `[plugin:RemoteAction action="viewversions" docid="com.ibm.workplace.wcm.api.WCM_Content/ID1"]`
-
 -   **`viewhistory`**
 
     This is used to open the history dialog for an item. You must also specify the docid of the item.
@@ -267,8 +250,7 @@ The following parameters can be used to populate fields when creating or editing
 -   `wcmfield.content.keywords=`
 -   `wcmfield.element.elementname=`
 
-    !!! note
-        You replace elementname with the name of the element you are populating. The element parameter can only be used with the following element types:
+    **Note:** You replace elementname with the name of the element you are populating. The element parameter can only be used with the following element types:
 
     -   Text
     -   Html
@@ -368,7 +350,6 @@ You can add the following "save" parameters to a remote action tag.
     For example:
 
     -   `wcmfield.autosave="true"`
-    
 -   **`saveValidate`**
 
     This parameter determines if warning and error messages resulting from the autosave is displayed to the user. If set to "true", warning and error messages are displayed to the user. If set to false, messages are suppressed. The default is true.

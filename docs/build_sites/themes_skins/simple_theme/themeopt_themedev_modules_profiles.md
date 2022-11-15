@@ -4,8 +4,7 @@ You can define modules to include in profiles to customize the behavior and appe
 
 A module encapsulates a feature so that you can choose to include it in your theme based on the profile that you are using. A profile is a .json file that specifies which modules to load and whether to load them when the initial page loads \(non-deferred\) or after the page loads \(deferred\). The Simple Theme template includes two profiles: profile\_deferred.json and profile\_bootstrap.json. These profiles are identical except that profile\_bootstrap.json also loads the bootstrap module, which is required when you use bootstrap navigation.
 
-!!! note
-    If you create a new module, you need to include it in your profile before you can use it.
+**Note:** If you create a new module, you need to include it in your profile before you can use it.
 
 You can define modules in two ways:
 

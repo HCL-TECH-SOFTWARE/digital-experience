@@ -8,8 +8,7 @@ title: Adding a tagging widget to web content
 
 You can add a tagging widget to a content item by adding a `[Plugin:tags]` component to your presentation template. By default the plug-in component is rendered using the `HTML - Tagging Widget Light` design, which is included in the web content library `Web Resources v70`, or you can create your own design.
 
-!!! note
-    When using tagging and rating with web content, ensure that synchronization of the tagging and rating scopes has been set up for the portal.
+**Note:** When using tagging and rating with web content, ensure that synchronization of the tagging and rating scopes has been set up for the portal.
 
 1.  To add a tagging widget to a content item, include the tagging plug-in in your presentation template.
 
@@ -34,7 +33,6 @@ You can add a tagging widget to a content item by adding a `[Plugin:tags]` compo
 
         1.  The current web content library
         2.  The web content library `Web Resources v70`
-        
     -   **`actionScope=scope`**
 
         The `actionScope` parameter indicates the scope of tags that you want to show in this widget. For a list of possible values see the description of the `tagScope` parameter used with the inline tag widget. For example:

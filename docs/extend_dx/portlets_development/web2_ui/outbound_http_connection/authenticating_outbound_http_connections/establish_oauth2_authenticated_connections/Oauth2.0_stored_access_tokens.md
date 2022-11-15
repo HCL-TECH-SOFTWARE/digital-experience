@@ -50,20 +50,23 @@ If this feature is supported, then the OAuth 2.0 connection can be configured as
 
 Where
 
--   **https://www.myremotesite.com/RESOURCE***
+-   **https://www.myremotesite.com/RESOURCE\***
 
     This URL pattern is for the endpoint of your resource server that is protected by the Oauth2 access token flow.
 
--   **Name=idp.PARAM_NAME.n, value=GRANT_TYPE Name=idp.PARAM_VALUE.n, value=token**
+-   **Name=idp.PARAM\_NAME.n, value=GRANT\_TYPE Name=idp.PARAM\_VALUE.n, value=token**
 
     Required. The metadata value for `idp.PARAM_VALUE.n` specifies that this connection follows the access token flow. The value `idp` is a symbolic name that must match with the value of the `SSO_OAUTH2_IDP` metadata. The value n is for a number that must be unique within this metadata block.
 
--   **Name=idp.PARAM_NAME.n, value=ACCESS_TOKEN Name=idp.PARAM_VALUE.n, value={$$MyAccessTokenCvSlot}**
+-   **Name=idp.PARAM\_NAME.n, value=ACCESS\_TOKEN Name=idp.PARAM\_VALUE.n, value=\{$$MyAccessTokenCvSlot\}**
 
     Required. The metadata value for idp.PARAM\_VALUE.n specifies the client ID. The value `MyAccessTokenCvSlot` is for the ID of a credential vault slot, which contains the access token in its credentials. The user name of the referenced credential slot entry must be `Bearer`. The password of this credential slot entry must contain the access token. The value idp is a symbolic name that must match with the value of the `SSO_OAUTH2_IDP` metadata. The value n is for a number that must be unique within this metadata block. If this metadata is not specified, the token access request does not contain client credentials.
 
 
 For an example of a configuration for accessing Dropbox through Outbound HTTP Connections, see Setting up OAuth 2.0 for Dropbox by using stored access tokens.
+
+-   **[Setting up OAuth 2.0 for Dropbox by using stored access tokens](../dev-portlet/Oauth2.0_dropbox_stored_acess_tokens.md)**  
+Set up an OAuth 2.0 access for Dropbox by using stored access tokens. Follow these steps to set up an OAuth 2.0 connection of a Dropbox resource through the Ajax Proxy.
 
 # Setting up OAuth 2.0 for Dropbox by using stored access tokens
 
@@ -87,7 +90,7 @@ Set up an OAuth 2.0 access for Dropbox by using stored access tokens. Follow the
 
     1.  Log in to the WebSphere® Application Server admin console of the Proxy.
 
-    2.  Select **Security > SSL certificate** and **key management > Key stores and certificates**.
+    2.  Select **Security** \> **SSL certificate** and **key management** \> **Key stores and certificates**.
 
     3.  Click the truststore that is used by the Portal Server, Depending on your security configuration and topology, this `NodeDefaultTrustStore`, or `CellDefaultTrustStore`.
 
@@ -167,18 +170,24 @@ Set up an OAuth 2.0 access for Dropbox by using stored access tokens. Follow the
 
     3.  Apply the configuration at the Outbound HTTP Connections global configuration. Run the following task to export the outbound HTTP connection configuration to an XML document.
 
-    ```    
+        ```
         AIX: ./ConfigEngine.sh update-outbound-http-connection-config -DconfigFileName=/tmp/global\_oauth\_update.xml \
+                -DWasPassword=password -DPortalAdminPwd=password 
+        HP-UX: ./ConfigEngine.sh update-outbound-http-connection-config -DconfigFileName=/tmp/global\_oauth\_update.xml \
+                  -DWasPassword=password -DPortalAdminPwd=password 
+        IBM i: ConfigEngine.sh update-outbound-http-connection-config -DconfigFileName=/tmp/global\_oauth\_update.xml \
                 -DWasPassword=password -DPortalAdminPwd=password 
         Linux: ./ConfigEngine.sh update-outbound-http-connection-config -DconfigFileName=/tmp/global\_oauth\_update.xml \
                   -DWasPassword=password -DPortalAdminPwd=password 
+        Solaris: ./ConfigEngine.sh update-outbound-http-connection-config -DconfigFileName=/tmp/global\_oauth\_pdate.xml \
+                    -DWasPassword=password -DPortalAdminPwd=password 
         Windows: ConfigEngine.bat update-outbound-http-connection-config -DconfigFileName=/tmp/global\_oauth\_update.xml \
                   -DWasPassword=password -DPortalAdminPwd=password
         ```
 
         The protected resource is now ready-to-use.
 
-5.  Test the connection. To test the connection to the Dropbox resource through oauth2, you can upload a test file (for example, a jpg image or a plain text file ) to your Dropbox account. Then, use CURL to download the file through the Ajax proxy.
+5.  Test the connection. To test the connection to the Dropbox resource through oauth2, you can upload a test file \(for example, a jpg image or a plain text file \) to your Dropbox account. Then, use CURL to download the file through the Ajax proxy.
 
     1.  Upload a test resource to your Dropbox folder: open a browser and go to `https://www.dropbox.com/`. Sign in using your Dropbox credentials.
 

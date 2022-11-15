@@ -6,9 +6,9 @@ Before you begin this procedure, ensure that you have inserted the dynamic table
 
 1.  Open the Personalization Navigator.
 
-2.  Navigate to the Pers_Offers folder.
+2.  Navigate to the Pers\_Offers folder.
 
-3.  Select the **Per_Offers_User** resource collection.
+3.  Select the **Per\_Offers\_User** resource collection.
 
 4.  In the Personalization Editor, click **Edit**.
 
@@ -18,4 +18,12 @@ Before you begin this procedure, ensure that you have inserted the dynamic table
 You can now create a user profiler rule.
 
 
+**Previous topic:**[Insert dynamic table HTML/JSP code](../pzn/pzn_demo_insert_dynamic_table_code.md)
+
+**Next topic:**[Create the user profiler rule](../pzn/pzn_demo_create_user_profiler_rule.md)
+
+
+**Previous topic:**[Insert dynamic table HTML/JSP code](../pzn/pzn_demo_insert_dynamic_table_code.md)
+
+**Next topic:**[Create the user profiler rule](../pzn/pzn_demo_create_user_profiler_rule.md)
 

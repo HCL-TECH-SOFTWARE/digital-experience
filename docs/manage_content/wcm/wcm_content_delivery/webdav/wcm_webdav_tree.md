@@ -76,6 +76,9 @@ To organize your authoring templates, presentation templates, and components, yo
     -   wcm.comps.data.and.time
     -   wcm.comps.federated.content
     -   wcm.comps.file
+    -   .
+    -   .
+    -   .
     -   wcm.comps.user.selection
 -   CustomComponentFolder2
     -   wcm.comps.authoring.tools
@@ -83,11 +86,18 @@ To organize your authoring templates, presentation templates, and components, yo
     -   wcm.comps.data.and.time
     -   wcm.comps.federated.content
     -   wcm.comps.file
+    -   .
+    -   .
+    -   .
     -   wcm.comps.user.selection
 -   wcm.comps.authoring.tools
 -   wcm.comps.component.references
 -   wcm.comps.data.and.time
 -   wcm.comps.federated.content
 -   wcm.comps.file
+-   .
+-   .
+-   .
 -   wcm.comps.user.selection
+
 

@@ -42,10 +42,10 @@ When you create a resource collection, you must assign it a unique name. That na
 Application objects, along with resource collections, are Personalization authoring tools that are used for creating and implementing rules. Application objects make rules available to the rule author. They are available as an HTTP session. An application object is a current object, whereas a resource collection is not current and exists in a data store.
 -   **[Exporting and importing Personalization objects](pznImport.md)**  
 You can export a Personalization object to your local file system, and then import the Personalization object into the Personalization Navigator. For example, you might want to import a Personalization object into the Personalization Navigator to back up the Personalization object or to export the object to another server. Any item that you can select from the Personalization Navigator is an example of a Personalization object.
--   **[Versions](../personalization_2/pzn_version/index.md)**  
+-   **[Versions](pznVersions.md)**  
 
--   **[Personalized list](../personalization_2/personalized_list/index.md)**  
+-   **[Personalized list](pznPersonalizedList.md)**  
 The **Personalized List** portlet allows a user to display personalized content without having to build a custom JSP portlet.
--   **[Creating a publish server](../personalization_2/publish_server/index.md)**  
+-   **[Creating a publish server](pznCreatePublishServer.md)**  
 
 

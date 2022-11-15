@@ -16,5 +16,8 @@ You must have administrative access to the portlet to be able to configure it. C
 
 |Option|Description|
 |------|-----------|
-|-   Include tags for public content only <br/> -   Include tags for public content and private content|Specify whether to display tags for public content only or for public as well as your private content.|
+|-   Include tags for public content only
+-   Include tags for public content and private content
+
+|Specify whether to display tags for public content only or for public as well as your private content.|
 

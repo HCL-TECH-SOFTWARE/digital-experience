@@ -1,3 +1,7 @@
+---
+audience: [, , ]
+---
+
 # Packaging, deploying and compiling cooperative portlets
 
 When packaging, deploying, and compiling cooperative portlets, refer to these considerations on aspects of the process such as creating deployment descriptors and packaging the WAR file.
@@ -68,18 +72,17 @@ The `portlet.xml` file must specify the location of the WSDL file associated wit
     
     ```
 
-    !!!note
-        For standard portlets, you must use a special `<preference>` entry to specify the application portlet class.
+    **Note:** For standard portlets, you must use a special `<preference>` entry to specify the application portlet class.
 
-        ```xmp
-        <portlet-preferences>
-        <preference>
-            <name>com.ibm.portal.propertybroker.wsdllocation</name>
-            <value>/wsdl/OrderDetail.wsdl</value>
-        </preference>
-        </portlet-preferences>
-        
-        ```
+    ```xmp
+    <portlet-preferences>
+       <preference>
+          <name>com.ibm.portal.propertybroker.wsdllocation</name>
+          <value>/wsdl/OrderDetail.wsdl</value>
+       </preference>
+    </portlet-preferences>
+    
+    ```
 
 
 ## WAR file considerations

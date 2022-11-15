@@ -4,9 +4,14 @@ As a WSRP Producer, you must provide information to Consumers of your WSRP servi
 
 The exchange between Producers and Consumers includes the following information:
 
+-   [WSRP service description](wsrpc_prod_prep_info.md#web_srvc_dscrpt)
+-   [WSRP services configuration](wsrpc_prod_prep_info.md#wsrp_secy)
+-   [Information about portal users](wsrpc_prod_prep_info.md#inf_ptl_usrs)
+-   [Registration information](wsrpc_prod_prep_info.md#rgstr_info)
+
 ## WSRP service description
 
-WSRP Consumers need information about how to bind to the WSRP services that the Producer provides. This information is described in the Web Service Description Language (WSDL) document of the Producer. The WSDL document provides general technical information about how the Consumer connects to the Producer and about the related infrastructure. The Consumer can use the information in the WSDL document to bind to the Producer and retrieve the Producer's service description for further details about the Producer.
+WSRP Consumers need information about how to bind to the WSRP services that the Producer provides. This information is described in the Web Service Description Language \(WSDL\) document of the Producer. The WSDL document provides general technical information about how the Consumer connects to the Producer and about the related infrastructure. The Consumer can use the information in the WSDL document to bind to the Producer and retrieve the Producer's service description for further details about the Producer.
 
 The WSDL document provides information about various aspects and properties of the Producer:
 
@@ -31,6 +36,16 @@ If the Producer portal has security for its WSRP services set up, the administra
 
 If the Producer requires registration by the Consumer portal, the Producer must provide the required registration information to the Consumer.
 
-???+ info "Related information"  
-    -   [How Producer and Consumer portals communicate](../../../wsrp/learning_wsrp/wsrpc_comint.md)
+-   **[Producer checklist for exchanging information with a Consumer](../admin-system/wsrpr_prod_chklst.md)**  
+Use this list to check whether you provided and obtained all required information that you must exchange with the Consumer.
+
+
+**Previous topic:**[Securing a WSRP Producer portal](../admin-system/wsrpt_prod_prep_sec.md)
+
+**Next topic:**[Providing WSRP services as a Producer](../admin-system/wsrpt_prod_prvd_ws.md)
+
+**Related information**  
+
+
+[How Producer and Consumer portals communicate](../admin-system/wsrpc_comint.md)
 

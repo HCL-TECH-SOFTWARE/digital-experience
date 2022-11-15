@@ -3,7 +3,7 @@ id: wcm_dev_elements_pzn_props
 title: Defining a Personalization rule
 ---
 
-# Defining a Personalization rule
+
 
 
 You use the Personalization element to define a new personalization rule or select an existing personalization rule or content spot.
@@ -18,8 +18,7 @@ You use the Personalization element to define a new personalization rule or sele
 
 4.  Click **Clear** to remove a selected personalization rule.
 
-    !!!important
-        If the "New" button was used previously to create the personalization rule, the personalization rule is deleted and cannot be restored.
+    **Important:** If the "New" button was used previously to create the personalization rule, the personalization rule is deleted and cannot be restored.
 
 5.  Enter the total number of items to display in the **Results per page** field.
 
@@ -31,9 +30,14 @@ You use the Personalization element to define a new personalization rule or sele
     -   The text that is entered into the **Design for each search result** field defines the format of each result.
     -   The text that is entered into the **Separator** field appears between each displayed result.
 
-???+ info "Related information"  
-    -   [Inserting an image in an element](../../element_designs/wcm_dev_elements_insert_image.md)
-    -   [Inserting a link in an element](../../element_designs/wcm_dev_elements_insert_link.md)
-    -   [Inserting element tags](../../element_designs/wcm_dev_elements_insert_tags.md)
-    -   [Creating web content tags](../../../../wcm_artifacts/tags/creating_web_content_tags/index.md)
+**Related information**  
+
+
+[Inserting an image in an element](wcm_dev_elements_insert_image.md)
+
+[Inserting a link in an element](wcm_dev_elements_insert_link.md)
+
+[Inserting element tags](wcm_dev_elements_insert_tags.md)
+
+[Creating web content tags](wcm_dev_referencing_tags.md)
 

@@ -111,8 +111,8 @@ converter=com.ibm.wps.pe.task.DefaultConverter
 ```
 
 
+**Related information**  
 
-???+ info "Related information"
-    - [Converting a Portal API Web Content Viewer to the JSR 286 API](../../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/wcm_post_mig_update/migrt_ptlt_api_wcm.md)
 
+[Converting a Portal API Web Content Viewer to the JSR 286 API](../migrate/migrt_ptlt_api_wcm.md)
 

@@ -19,16 +19,19 @@ This query allows you to modify all of the following:
 -   The parameters `order`, `orderMetric`, `locales` . The parameters control how the type-ahead result looks. For more details see the topic about *Adding query parameters* under the sections about *Sorting the results* and *Locale sensitive queries*.
 -   The pagination of the type-ahead results, that is with which item the result list starts and how many results are displayed. For more details see the topic about *Adding query parameters* under the section about *Limiting the results*.
 
-!!! note
-    The type-ahead feature works only with the dialog tag widget of the default tagging user interface of portal versions earlier than V 8.5. With HCL Portal V 8.5, the tag and rating widgets of earlier portal versions are deprecated.
+**Note:** The type-ahead feature works only with the dialog tag widget of the default tagging user interface of portal versions earlier than V 8.5. With HCL Portal V 8.5, the tag and rating widgets of earlier portal versions are deprecated.
 
 You can configure how the tag names are displayed in terms of normalization. To do this, use the setting `com.ibm.wps.cp.tagging.normalization.displayNormalizedName` in the CP Configuration Service. The response of the suggestions is in the JSON \(JavaScript Object Notation\) format and consists of an array that contains the searched partial term and suggestions.
 
 Example: If the search term is `web`, then the response to tos:searchsuggestion&term=web contains the search suggestions `WebSphere`, `Website`, and `WebBrowser`. The notation in JSON is as follows in the mime type application/json: `["Web",["WebSphere", "Website", "WebBrowser"]]` . This is the format proposed by OpenSearch Suggestions extension Version 1.1 draft 1.
 
 
+**Related information**  
 
-???+ info "Related information"
-    - [Adding query parameters](../tag_rate_api_rest_add_qparms.md)
-    - [Normalizing tags](../../../howto_tagging_rating/tag_rate_adm_norm_local.md)
-    [OpenSearch Suggestions extension Version 1.1](https://github.com/dewitt/opensearch/blob/master/mediawiki/Specifications/OpenSearch/Extensions/Suggestions/1.1/Draft%201.wiki)
+
+[Adding query parameters](../admin-system/tag_rate_api_rest_add_qparms.md)
+
+[Normalizing tags](../admin-system/tag_rate_adm_norm_local.md)
+
+[OpenSearch Suggestions extension Version 1.1](https://github.com/dewitt/opensearch/blob/master/mediawiki/Specifications/OpenSearch/Extensions/Suggestions/1.1/Draft%201.wiki)
+

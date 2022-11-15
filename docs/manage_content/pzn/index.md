@@ -26,7 +26,7 @@ The engines rules engine, together with the recommendation engine and the resour
 
 The engine identifies the particular user. Personalization retrieves that person's profile. For example, a person may have a salary range included in her profile. Personalization then selects content that is appropriate for that profile. If a person has a high salary range, region code, or other information, Personalization can be configured to retrieve information about a commercial website premium product. The page is assembled with the proper personalized information. The user sees her personalized page.
 
-Beginning with [HCL DX 9.5 Container Update and CF 200](../../whatsnew/cf20/newcf200.md), a new API explorer is available that allows developers using the Digital Experience Personalization REST APIs to explore and test these APIs. See the topic Digital Experience Personalization REST API Explorer below for details.
+Beginning with [HCL DX 9.5 Container Update and CF 200](../overview/new_cf_95.md), a new API explorer is available that allows developers using the Digital Experience Personalization REST APIs to explore and test these APIs. See the topic Digital Experience Personalization REST API Explorer below for details.
 
 ## Types of Personalization
 
@@ -62,20 +62,20 @@ When complex filtering is required, a rule-based system may work better than col
 
 1.  [How a site is personalized](../pzn/pzn_how_site_personalized.md)  
 Use this topic to understand how to define a personalized list of new articles for a website, such as a section of an intranet site for targeted employee bulletins or where the content of the site is tailored to the particular user.
-2.  [Personalization terms](../pzn/pzn_terms/index.md)  
+2.  [Personalization terms](../pzn/pzn_concepts.md)  
 The concepts and principles for working with Portal Personalization require an understanding of terminology.
 3.  [The Personalization interface](../pzn/pzn_portlets.md)  
 The Portal Personalization user interface consists of three portlets: the Personalization Navigator, Personalization Editor, and the Personalized List.
-4.  [Publishing personalization rules](../pzn/publishing_pzn_rules/index.md)  
+4.  [Publishing personalization rules](../pzn/pzn_depub.md)  
 HCL Digital Experience Personalization sends published rules across HTTP to a servlet which resides on each personalization server.
 5.  [The Web Content resource collection](../pzn/pzn_wcm_rescoll.md)  
 The Web Content resource collection allows you to write rules that select lists of content from the HCL Web Content Manager.
 6.  [The Portal User resource collection](../pzn/pzn_usr_rescoll.md)  
 The Portal User resource collection uses public APIs provided by HCL Digital Experience to access user information.
-7.  [Developing a personalized portlet](../pzn/pzn_portlet/index.md)  
+7.  [Developing a personalized portlet](../pzn/pzn_demooverview.md)  
 This exercise demonstrates how to use Personalization features of HCL Digital Experience and Rational Application Developer to build your first personalized portlet. Your final result is a working portlet that uses Personalization rules and content spots to display personal news based on user attributes \(or profiles\).
-8. [Personalization programming reference](../pzn/pzn_programming_ref/index.md)  
+8. [Personalization programming reference](../pzn/pzn_programming_reference.md)  
 HCL Digital Experience provides the programming model, processes, and APIs for the Personalization rules and resource engines.
-9. [Personalization APIs](../pzn/pzn_apis/index.md)  
+9. [Personalization APIs](../pzn/pzn_apis.md)  
 
 

@@ -1,4 +1,4 @@
-# Troubleshooting Helm Deployment
+# Troubleshooting your Helm deployment
 
 This section shows how to find and resolve issues when deploying HCL DX 9.5 CF196 and later releases using Helm.
 

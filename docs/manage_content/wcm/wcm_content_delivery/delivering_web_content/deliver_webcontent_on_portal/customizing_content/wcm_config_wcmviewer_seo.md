@@ -2,15 +2,13 @@
 
 Search engine optimization \(SEO\) focuses on improving the visibility of a page or website in search engine results. A basic technique of SEO is adding HTML title and meta tags to your page source. These meta tags are used to define description information and other metadata that search web engines and crawlers can use when they create search indexes and collections. When you include content in a page with a web content viewer, you can improve the search engine optimization of the page by adding title and meta tags with values derived from the web content itself.
 
-!!! note
-    This support is available with Combined Cumulative Fix 12 for HCL Web Content Manager Version 7.
+**Note:** This support is available with Combined Cumulative Fix 12 for HCL Web Content Manager Version 7.
 
-By default, the HTML title for a page is defined by the page title in the portal. However, when you add a web content viewer to a page to render web content, you can override the value that is used for the HTML title. For metadata tags to be included as portlet preferences, you must set a custom HTML title so that only one portlet can contribute the metadata to the head section. If this default behavior does not suit your requirements, you can override it as described in step `3.4` of the following procedure.
+By default, the HTML title for a page is defined by the page title in the portal. However, when you add a web content viewer to a page to render web content, you can override the value that is used for the HTML title. For metadata tags to be included as portlet preferences, you must set a custom HTML title so that only one portlet can contribute the metadata to the head section. If this default behavior does not suit your requirements, you can override it as described in step [2.d](wcm_config_wcmviewer_seo.md#2d) of the following procedure.
 
 With the **Page Display Title** field in the portlet settings for the viewer, you can define an HTML title that better reflects the content on the page. You can even have the viewer pull the title directly from the rendered content.
 
-!!! note
-    Although multiple web content viewers on the same page can set meta tag values, this practice does not necessarily result in improved SEO. This issue can be further complicated when multiple viewers set different values for the same meta tag name. When you have multiple viewers on the same page, select the viewer whose content best represents what the page is about. You can then use that viewer to define a new HTML title and any meta tags.
+**Note:** Although multiple web content viewers on the same page can set meta tag values, this practice does not necessarily result in improved SEO. This issue can be further complicated when multiple viewers set different values for the same meta tag name. When you have multiple viewers on the same page, select the viewer whose content best represents what the page is about. You can then use that viewer to define a new HTML title and any meta tags.
 
 1.  To override the HTML title for a page and set meta tags, complete the following steps.
 2.  Select one web content viewer to be the primary viewer on the page. Click **Edit Shared Settings**, and select a value for the **Page Display Title** field in the portlet settings for the viewer.

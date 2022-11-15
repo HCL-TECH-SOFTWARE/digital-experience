@@ -23,8 +23,7 @@ For details about how to limit search results by scopes refer to [Searching by s
 
 To submit your search query, use the Search box that is available at the side of the portal theme bar.
 
-!!! note 
-    Depending on your installation and its customization, search might be available by other than the default means.
+**Note:** Depending on your installation and its customization, search might be available by other than the default means.
 
 1.  Click the arrow near Search text input field, and select a scope to search from the drop-down list of available scopes. The Search field displays the name of scope you picked. If you do not pick a scope, All Sources \(the default\) will be searched. For details about search scopes refer to [Searching by scopes](#sc_scopes).
 2.  To enter a search query, type your search string over the name of the selected scope in the entry field. For details about the search syntax refer to [Search syntax](#sc_syntax).
@@ -49,8 +48,15 @@ The following search scopes are available by default:
 |Search collection|Contents of Result List|
 |-----------------|-----------------------|
 |All Sources|Documents from Managed Web Content, from any indexed content that you have access to, and from any custom third-party links that have been configured by an administrator display in the same list. This does not pertain to external search services.|
-|My Favorites|Documents from places that you have marked as your favorites. These can be public places or places that require your membership. **Note:**After you add a place to **My Favorites**, it can take up to one hour until that place is available for selection under the scope **My Favorites**.|
-|My Places|Documents originating from all places to which you have explicit membership. **Note** 1.  Public places, that is places which do not require membership, fall under the **All Scopes** scope. 2.  After a place is added to the **My Places** scope, for example, when you become a member to a new place, it can take up to one hour until that place is available for selection under the scope **My Places**.|
+|My Favorites|Documents from places that you have marked as your favorites. These can be public places or places that require your membership. **Note:** After you add a place to **My Favorites**, it can take up to one hour until that place is available for selection under the scope **My Favorites**.
+
+|
+|My Places|Documents originating from all places to which you have explicit membership. **Notes:**
+
+1.  Public places, that is places which do not require membership, fall under the **All Scopes** scope.
+2.  After a place is added to the **My Places** scope, for example, when you become a member to a new place, it can take up to one hour until that place is available for selection under the scope **My Places**.
+
+|
 |Managed Web Content|Documents originating from the Managed Web Content source. This scope is available only if you have a Managed Web Content site.|
 |Custom links|Custom links are displayed in the pull-down selection list next to the search text entry field. They are typically third-party search facilities configured by your administrator|
 
@@ -85,8 +91,7 @@ To improve the effectiveness of your search queries, follow these guidelines:
 
     The minus sign eliminates or rejects the weekly status reports from the returned result set while the plus sign narrows the search to monthly reports.
 
-    !!! note
-        Do not use the minus sign \(-\) symbolic operator with a one-word search query alone. The minus sign \(-\) works only in combination with other search terms. For example, the following queries return the same results:
+    **Note:** Do not use the minus sign \(-\) symbolic operator with a one-word search query alone. The minus sign \(-\) works only in combination with other search terms. For example, the following queries return the same results:
 
     -   -weekly +monthly
     -   -weekly monthly
@@ -185,8 +190,7 @@ In both cases the Search Center shows more options for search:
 -   **Categories:** Click the link **Select categories**. The dialog window for selecting categories opens. Select a category. You can select multiple categories in the same action.
 -   **Other Document Properties:** Click the link **Select properties**. The dialog window for selecting properties opens. Select a property and specify a value for it. The properties are grouped by document type. Your search will be restricted to results with the value that you specified for that property. You can select multiple properties in the same action. You cannot select date and time properties.
 
-!!! note 
-    When you search Places in HCL Version 8.0, the Advanced search options can show the document owner's Distinguished Name rather than the real name. In this case contact your administrator.
+**Note:** When you search Places in HCL Version 8.0, the Advanced search options can show the document owner's Distinguished Name rather than the real name. In this case contact your administrator.
 
 ## Searching by facets
 
@@ -210,5 +214,13 @@ To refine your search, you can select one or multiple facets.
 
 To return and view a less restricted search result list, click the link **Remove selection** or the square box icon next to the appropriate facet. To clear **all** facet restrictions and return to the full search result list, click **Clear selections**.
 
-???+ info "Related information"
-    - [Portal Search](../../search/welcome_search.md)
+**Related information**  
+
+
+[Portal Search](../panel_help/welcome_search.md)
+
+**References:**  
+
+
+[Portal Search](welcome_search.md)
+

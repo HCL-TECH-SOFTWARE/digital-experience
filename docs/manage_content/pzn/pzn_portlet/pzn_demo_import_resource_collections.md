@@ -2,7 +2,7 @@
 
 Use the Personalization Navigator to create Workspace folders for the resource collections. Then import the resource collections into the Workspace of the Personalization Navigator.
 
-Before you can use the content and user resources in the Personalization Navigator, you must place these class files into a directory accessible by that portlet. To do this, export the pers_offers folder in RAD under Pers_Offers/Java Resources/JavaSource as a JAR file. Make the target location PortalServer_root/pzn/prereq.pzn/collections/pers_offers.jar. Accept the defaults and click **Finish**, then restart the server.
+Before you can use the content and user resources in the Personalization Navigator, you must place these class files into a directory accessible by that portlet. To do this, export the pers\_offers folder in RAD under Pers\_Offers/Java Resources/JavaSource as a JAR file. Make the target location [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/pzn/prereq.pzn/collections/pers\_offers.jar. Accept the defaults and click **Finish**, then restart the server.
 
 Ensure you have properly followed the steps in [Export the WAR file and install the portlet](pzn_demo_export_war_install_portlet.md).
 
@@ -16,17 +16,24 @@ Ensure you have properly followed the steps in [Export the WAR file and install 
 
 5.  Click **Import**.
 
-6.  Browse to find the Pzn_offers.hrf file in your installed Pers_Offers directory under Pers_Offers.war/WEB-INF/pzn-resourceCollections/pers\_offers.
+6.  Browse to find the Pzn\_offers.hrf file in your installed Pers\_Offers directory under Pers\_Offers.war/WEB-INF/pzn-resourceCollections/pers\_offers.
 
 7.  Click **Import**.
 
 8.  See the resource collection in the Workspace.
 
-9.  Do the same to import the Pers_Offers_User.hrf file.
+9.  Do the same to import the Pers\_Offers\_User.hrf file.
 
 
 You can now create a simple content rule.
 
 
+**Previous topic:**[Export the WAR file and install the portlet](../pzn/pzn_demo_export_war_install_portlet.md)
 
+**Next topic:**[Create a simple content rule](../pzn/pzn_demo_create_simple_content_rule.md)
+
+
+**Previous topic:**[Export the WAR file and install the portlet](../pzn/pzn_demo_export_war_install_portlet.md)
+
+**Next topic:**[Create a simple content rule](../pzn/pzn_demo_create_simple_content_rule.md)
 

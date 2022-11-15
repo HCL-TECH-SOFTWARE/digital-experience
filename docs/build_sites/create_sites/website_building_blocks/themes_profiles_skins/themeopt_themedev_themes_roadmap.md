@@ -23,7 +23,7 @@ Documentation resource: [Theme creation and resources](../../../themes_skins/get
 
 ## Create a new theme
 
-Use the Theme Manager portlet to create new themes with one click. To access the Theme Manager, click **Applications menu** \> **Themes** in your portal. The Theme Manager opens. You can quickly create a new theme that is based on a template when you click the **Create Theme** icon. To create a new theme, you enter a new theme title and an optional theme description. A theme template is selected for you, or you can select another template.
+Use the Theme Manager portlet to create new themes with one click. To access the Theme Manager, click **Applications menu** \> **Theme Development** in your portal. The Theme Manager opens. You can quickly create a new theme that is based on a template when you click the **Create Theme** icon. To create a new theme, you enter a new theme title and an optional theme description. A theme template is selected for you, or you can select another template.
 
 Documentation resource: [Theme Manager](../../../themes_skins/getting_started_with_themes/themeopt_themedev_manager.md)
 
@@ -31,7 +31,7 @@ Documentation resource: [Create Theme](../../../themes_skins/getting_started_wit
 
 ## Customize your new theme
 
-Using the Theme Manager portlet, you can modify the properties of a theme and its available skins in the Manage Theme Properties dialog. This dialog is accessed by clicking the gear icon next to the theme. In the dialog, you can modify the properties of both WAR-based and WebDAV-based themes, but not all modification options are available for WAR-based themes. When you select a theme in the Theme Manager and open the Manage Theme Properties dialog, all of the properties for that theme and its available skins display. The dialog includes five panes: General, Skins, Localization, Metadata, and Advanced. An easy first step toward customizing your theme is changing your theme logo to reflect your brand and business. You can modify an existing image or add a new image as your theme logo.
+You can modify the properties of a theme and its available skins in the Manage Theme Properties dialog. In the dialog, you can modify the properties of both WAR-based and WebDAV-based themes, but not all modification options are available for WAR-based themes. When you select a theme in the Theme Manager and open the Manage Theme Properties dialog, all of the properties for that theme and its available skins display. The dialog includes five panes: General, Skins, Localization, Metadata, and Advanced. An easy first step toward customizing your theme is changing your theme logo to reflect your brand and business. You can modify an existing image or add a new image as your theme logo.
 
 Documentation resource: [Manage Theme Properties](../../../themes_skins/getting_started_with_themes/themeopt_themedev_etp.md)
 

@@ -58,11 +58,11 @@ Use this API to create a new Personalization folder in the Personalization works
     2.  Click **Browse Nodes**.
     3.  To get the workspace `parentID`, navigate to **Properties** section and use the value of the **jcr:uuid** field as shown below.
 
-        ![Find workspace parentID](../../../../images/Find_parentId_workspace.png)
+        ![Find workspace parentID](../images/Find_parentId_workspace.png)
 
     4.  To get the `parentID` for an existing folder, click to select a folder from the **Children** section and use the value of the **jcr:uuid** field as shown below.
 
-        ![Find parentID for existing folder](../../../../images/Find_parentId_existingFolder.png)
+        ![Find parentID for existing folder](../images/Find_parentId_existingFolder.png)
 
 
 -   **Combined Response Structure:**
@@ -89,7 +89,7 @@ Use this API to create a new Personalization folder in the Personalization works
 
     Example:
 
-    ![Create a folder API](../../../../images/Create-folder-API.png)
+    ![Create a folder API](../images/Create-folder-API.png)
 
 -   **Response Structure Details:**
 
@@ -117,7 +117,10 @@ Use this API to create a new Personalization folder in the Personalization works
     |Error Code|Means|
     |----------|-----|
     |200|This code is returned when you create a folder successfully.|
-    |400|This code is returned if the input parameters are missing or invalid.  <br>   -   `Title` is missing in body.<br>    -   `Title` is empty in body.<br>    -   `ParentId` is invalid in body.|
+    |400|This code is returned if the input parameters are missing or invalid.    -   `Title` is missing in body.
+    -   `Title` is empty in body.
+    -   `ParentId` is invalid in body.
+|
     |401|This code is returned when the `LtpaToken` is invalid or expired.|
     |403|This code is returned when user access is restricted.|
     |409|This code is returned when we you are trying to create a folder with the same of an existing folder.|
@@ -160,23 +163,22 @@ The Update a Personalization Folder REST API is used to update an existing Perso
     3.  Provide the following Personalization Folder-ID details which is to be updated.
     4.  Provide either title or description or `parentId` of the Personalization folder in the request body.
 
-        !!! note
-          Updating a root folder/workspace is restricted. The API returns a 403 error code for this scenario.
+        **Note 1:** Updating a root folder/workspace is restricted. The API returns a 403 error code for this scenario.
 
-        !!! note 
-          The `parentId` input is to be passed if the selected Personalization folder has to be moved to a different location.
+        **Note 2:** The `parentId` input is to be passed if the selected Personalization folder has to be moved to a different location.
 
         To retrieve the `parentId` for a specific workspace or existing Personalization using the JCR explorer, follow the steps below:
 
-        1.  Navigate to the [WCM Support Tools](../../../../deployment/manage/troubleshooting/wcm_support_tools.md).
+        1.  Navigate to the [WCM Support Tools](../trouble/wcm_support_tools.md).
         2.  Click **Browse Nodes**.
         3.  To get the workspace `parentID`, navigate to **Properties** section and use the value of the **jcr:uuid** field as shown below.
 
-            ![JCR:UUID as workspace ID](../../../../images/Find_parentId_workspace-2.png "JCR:UUID as Workspace ID")
+            ![JCR:UUID as workspace ID](../images/Find_parentId_workspace-2.png "JCR:UUID as Workspace ID")
 
         4.  To get the `parentID` for an existing folder, click to select a folder from the **Children** section and use the value of the **jcr:uuid** field as shown below.
 
-            ![JCR:UUID as folder ID](../../../../images/Find_parentId_existingFolder-3.png)
+            ![JCR:UUID as folder ID](../images/Find_parentId_existingFolder-3.png "JCR:UUID as Personalization
+                                                              Folder-ID")
 
 
 -   **Combined Response Structure:**
@@ -228,9 +230,14 @@ The Update a Personalization Folder REST API is used to update an existing Perso
     |Error Code|Means|
     |----------|-----|
     |200|This code is returned when you update a folder successfully.|
-    |400|This code is returned if the input parameters are missing or invalid.  <br>  -   `Title` is missing in body.<br>  -   `Title` is empty in body.<br>  -   `ParentId` is invalid in body.|
+    |400|This code is returned if the input parameters are missing or invalid.    -   `Title` is missing in body.
+    -   `Title` is empty in body.
+    -   `ParentId` is invalid in body.
+|
     |401|This code is returned when the `LtpaToken` is invalid or expired.|
-    |403|This code is returned when user access is restricted.\(e.g. User tries to update a root folder/workspace\)|
+    |403|This code is returned when user access is restricted.\(e.g. User tries to update a root folder/workspace\)
+
+|
     |409|This code is returned when we you are trying to create a folder with the same of an existing folder.|
     |500|This code is returned when an internal server error occurs.|
 
@@ -259,7 +266,7 @@ The GET Personalization Folder ID REST API is used to get individual Personaliza
     2.  The login cookie contains the Authentication token. Leave the cookie field empty if you are already authenticated, unless you intend to put a token value.
     3.  Obtain the Personalization Folder ID details using the REST API `GET all` API command, as shown in the following example:
 
-        ![Get Folder API](../../../../images/Get-folder-API.png)
+        ![Get Folder API](../images/Get-folder-API.png)
 
 
 -   **Response structure details:**
@@ -307,7 +314,7 @@ The GET Personalization Folder list REST API is used to get or retrieve a list o
         -   The `parentid` of the folder you wish to get all descendant/children folders.
         For example:
 
-        ![Get all folders API](../../../../images/Get-all-folder-API.png)
+        ![Get all folders API](../images/Get-all-folder-API.png)
 
 
 -   **Response Structure Details:**
@@ -352,7 +359,7 @@ The GET Personalization Folder list REST API is used to get or retrieve a list o
 
     For example, here's a tree of custom folders that were created:
 
-    ![Example: Folders Tree](../../../../images/Example-Folders-Tree.png)
+    ![Example: Folders Tree](../images/Example-Folders-Tree.png)
 
     **Scenario 1:** If depth is `descendants`/`null` and parent is `null`, the response structure will display a list of all the descendant folders present in the workspace and the workspace \(root folder\) itself:
 
@@ -595,7 +602,11 @@ The GET Personalization Folder list REST API is used to get or retrieve a list o
     |Error Code|Means|
     |----------|-----|
     |200|This code is returned when you get all the list of folders details successfully.|
-    |400|This code is returned if the input parameters are missing or invalid. <br>   -   Limit is a decimal value.<br>   -   Offset is a decimal value.<br>    -   Depth is not among allowed depths.<br>    -   `ParentId` is invalid in body.|
+    |400|This code is returned if the input parameters are missing or invalid.    -   Limit is a decimal value.
+    -   Offset is a decimal value.
+    -   Depth is not among allowed depths.
+    -   `ParentId` is invalid in body.
+|
     |401|This code is returned when your `LtpaToken` is invalid/expired.|
     |403|This code is returned when access is restricted for user.|
     |404|This code is returned when the API URL is inaccessible.|
@@ -606,8 +617,7 @@ The GET Personalization Folder list REST API is used to get or retrieve a list o
 
 The DELETE Personalization Folder ID REST API is used to delete a selected Personalization Folder.
 
-!!! note 
-  When deleting a folder, it would delete all the rules and sub-folders created within it.
+**Note:** When deleting a folder, it would delete all the rules and sub-folders created within it.
 
 -   **DELETE Request format:**
 
@@ -629,7 +639,7 @@ The DELETE Personalization Folder ID REST API is used to delete a selected Perso
     2.  The login cookie contains the Authentication token. Leave the cookie field empty if you are already authenticated, unless you intend to put a token value.
     3.  Delete the Personalization Folder you wish to delete by providing the folder ID as shown in the following example:
 
-        ![Delete Folder API](../../../../images/Delete-folder-API.png)
+        ![Delete Folder API](../images/Delete-folder-API.png)
 
 
 -   **Response structure details:**

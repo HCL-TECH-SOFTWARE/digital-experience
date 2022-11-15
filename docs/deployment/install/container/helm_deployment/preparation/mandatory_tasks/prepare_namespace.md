@@ -1,4 +1,4 @@
-# Prepare a Namespace
+# Prepare a namespace
 
 You need to create a namespace in your Kubernetes cluster that contains all the resources related to your HCL DX 9.5 Container deployment. It is recommended that the namespace is created before the deployment because you may need to add an ImagePullSecret or configure the TLS certificate for HAProxy before deployment.
 
@@ -20,15 +20,15 @@ For OpenShift, you must create a namespace with specific settings.
 
 Use the following namespace definition and save it as namespace.yaml. You must replace `my-namespace` in the template with the name of the namespace you are using.
 
-```yaml
+```
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: my-namespace
-  annotations:
-    openshift.io/sa.scc.mcs: "s0:c24,c4"
-    openshift.io/sa.scc.supplemental-groups: "1001/10000"
-    openshift.io/sa.scc.uid-range: "1000/10000"
+    name: my-namespace
+    annotations:
+        openshift.io/sa.scc.mcs: "s0:c24,c4"
+        openshift.io/sa.scc.supplemental-groups: "1001/10000"
+        openshift.io/sa.scc.uid-range: "1000/10000"
 ```
 
 **OpenShift client**

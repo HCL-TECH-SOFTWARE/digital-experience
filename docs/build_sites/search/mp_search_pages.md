@@ -12,8 +12,7 @@ Follow these instructions to search for an item.
 
 4.  Click **Search**.
 
-    !!! note
-        Searches for users or user groups can be case-sensitive, depending on the attributes that are used.
+    **Note:** Searches for users or user groups can be case-sensitive, depending on the attributes that are used.
 
     Search Types:
 
@@ -34,4 +33,8 @@ Follow these instructions to search for an item.
     -   **Last modified**: Select this option to search by items that have been modified on or since a specific date. The input is expected in YYYY MM DD format.
     -   **All available**: Select this option to return a listing of all items. No input is required.
 
+
+**Previous topic:**[HCL Digital Experience Portal Search](../admin-system/admsrch.md)
+
+**Next topic:**[Search Center](../wcm/h_search_searchcenter.md)
 

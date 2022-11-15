@@ -10,11 +10,12 @@ You can adjust the page order of your pages using the Portal Administration menu
 
 3.  Use the **Move up** and **Move down** icons to adjust the order of your pages.
 
-    !!!note
-        If you are rearranging the tree structure of your pages, then you can use the **Mark** icon to mark the page, and then move it.
+    **Note:** If you are rearranging the tree structure of your pages, then you can use the **Mark** icon to mark the page, and then move it.
 
 
 
-???+ info "Related information" 
-    -   [Page order](../../../../../../deployment/manage/migrate/planning_migration/mig_plan_expectations/mig_expect_pages.md)
+**Related information**  
+
+
+[Page order](../migrate/mig_expect_pages.md)
 

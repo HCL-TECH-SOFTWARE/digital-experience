@@ -25,38 +25,38 @@ URLs are modeled via the com.ibm.portal.state.EngineURL interface. An EngineURL 
 
 The EngineURL interface provides the following methods:
 
--   **StateHolderController getState()**
+-   **StateHolderController getState\(\)**
 
     Returns a read-write interface to the navigational state carried by the URL.
 
--   **void setProtected(Boolean flag)**
+-   **void setProtected\(Boolean flag\)**
 
     Specifies whether the URL should point to the public or protected area.
 
--   **void setSecure(Boolean flag)**
+-   **void setSecure\(Boolean flag\)**
 
     Specifies whether a secure https connection is required.
 
--   **Writer writeCopy(Writer out)**
+-   **Writer writeCopy\(Writer out\)**
 
     Streams the URL to the given writer. Maintains the state of the URL. For example this method can be used to write the URL multiple times.
 
--   **Writer writeDispose(Writer out)**
+-   **Writer writeDispose\(Writer out\)**
 
     Streams the URL to the given writer and finally releases the state of the URL. The EngineURL object must not be accessed again after invoking this method.
 
--   **void dispose()**
+-   **void dispose\(\)**
 
-    The dispose() method is inherited from the Disposable interface. It must be invoked to indicate that the EngineURL object is no longer needed. The EngineURL object must not be accessed again after invoking this method. Alternatively, you can invoke the writeDispose() method, which calls dispose().
+    The dispose\(\) method is inherited from the Disposable interface. It must be invoked to indicate that the EngineURL object is no longer needed. The EngineURL object must not be accessed again after invoking this method. Alternatively, you can invoke the writeDispose\(\) method, which calls dispose\(\).
 
 
-The crucial method is the getState() method, which returns the state holder object this particular EngineURL instance refers to.
+The crucial method is the getState\(\) method, which returns the state holder object this particular EngineURL instance refers to.
 
-**Note:** The method returns a controller interface (StateHolderController) that allows the programmer to modify the state of this EngineURL. See [Accessor SPI](accessor_spi.md) for additional information about modifying the state.
+**Note:** The method returns a controller interface \(StateHolderController\) that allows the programmer to modify the state of this EngineURL. See [Accessor SPI](accessor_spi.md) for additional information about modifying the state.
 
 ## Resource URLs
 
-URLs that address generic resources such as, but not limited to, files, icons, and voice grammars cannot contain navigational states and are therefore modeled using a separate interface called com.ibm.portal.state.DisposableURL. The DisposableURL interface almost offers the same methods as EngineURL but does not provide a getState() method.
+URLs that address generic resources such as, but not limited to, files, icons, and voice grammars cannot contain navigational states and are therefore modeled using a separate interface called com.ibm.portal.state.DisposableURL. The DisposableURL interface almost offers the same methods as EngineURL but does not provide a getState\(\) method.
 
 Resource URLs can also be created using the URL generation Services that are offered along with the Navigational State SPI. See [URL generation services](url_gen_serv.md) for additional information.
 

@@ -8,7 +8,7 @@ Draft items can accumulate over time. Review and remove older draft items from y
 
 ## Versions
 
-The [Clear Versions tool](../wcm_adm_tools/wcm_admin_clear_versions.md) is used to remove later versions of web content items from your system that are no longer required. You can also adjust the [version control options](../../wcm_content_delivery/cfg_webcontent_auth_env/wcm_config_prop_authoring.md) for your server to disable automatic version creation and allow users decide which versions to keep.
+The [Clear Versions tool](../wcm/wcm_admin_clear_versions.md) is used to remove older versions of web content items from your system that are no longer required. You can also adjust the [version control options](../wcm/wcm_config_prop_authoring.md) for your server to disable automatic version creation and allow users decide which versions to keep.
 
 ## Expired content
 
@@ -20,11 +20,11 @@ You can delete published projects after their contents are published and the pro
 
 ## References to users and groups that no longer exist
 
-Use the [Member Fixer tool](../wcm_adm_tools/wcm_member_fixer/index.md) to update or remove references to users or groups that have changed, or have been removed.
+Use the [Member Fixer tool](../wcm/wcm_admin_member-fixer_overview.md) to update or remove references to users or groups that have changed, or have been removed.
 
 ## Item history
 
-Use the [item history tool](../wcm_adm_tools/wcm_admin_clear_history.md) to remove older item history details from web content items that are no longer required.
+Use the [item history tool](../wcm/wcm_admin_clear_history.md) to remove older item history details from web content items that are no longer required.
 
 ## Deleted items
 

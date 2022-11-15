@@ -22,9 +22,14 @@ You can enable inline editing in the design in two ways:
 **Note to developers:** When you create a custom theme, you must include a reference to the wcm\_inplaceEdit module to enable in-place editing in the custom theme.
 
 
-???+ info "Related information:"
-    - [Creating an editable element tag](../../../wcm_artifacts/tags/creating_web_content_tags/wcm_dev_referencing_elements_edit.md)
-    - [Creating an editable property tag](../../../wcm_artifacts/tags/creating_web_content_tags/wcm_dev_item-details_property_edit.md)
-    - [Creating an If Edit Mode tag](../../../wcm_artifacts/tags/creating_web_content_tags/wcm_dev_tag_ifeditmode.md)
-    - [Creating an If Not Edit Mode tag](../../../wcm_artifacts/tags/creating_web_content_tags/wcm_dev_tag_ifnoteditmode.md)
+**Related information**  
+
+
+[Creating an editable element tag](../panel_help/wcm_dev_referencing_elements_edit.md)
+
+[Creating an editable property tag](../panel_help/wcm_dev_item-details_property_edit.md)
+
+[Creating an If Edit Mode tag](../panel_help/wcm_dev_tag_ifeditmode.md)
+
+[Creating an If Not Edit Mode tag](../panel_help/wcm_dev_tag_ifnoteditmode.md)
 

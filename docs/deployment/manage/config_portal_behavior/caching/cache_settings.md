@@ -178,8 +178,7 @@ The following information lists the resources that contribute to the overall rem
         No
 
 
-!!!note
-    The Standard Portlet API specification defines the meaning of the `EXPIRATION_CACHE` value. HCL Portal uses this value to determine the lifetime of the portlet's output in a remote cache, just like the remote cache expiry for themes. The remote cache dynamic setting is an optimization to notify the container whether a portlet window can publish remote cache information at render time. The deployment descriptor specification shows how to deal with these settings.
+**Note:** The Standard Portlet API specification defines the meaning of the `EXPIRATION_CACHE` value. HCL Portal uses this value to determine the lifetime of the portlet's output in a remote cache, just like the remote cache expiry for themes. The remote cache dynamic setting is an optimization to notify the container whether a portlet window can publish remote cache information at render time. The deployment descriptor specification shows how to deal with these settings.
 
 The following information lists the resources that contribute to the overall remote cache information on a **Portlet Window**:
 
@@ -222,8 +221,7 @@ The following information lists the resources that contribute to the overall rem
         No
 
 
-!!!note
-    The portlet definition describes the portlet at a deployment time level given in the portlet deployment descriptor. Thus, attributes specified in the deployment descriptor are valid on all occurrences on all pages of this portlet. The portlet window describes the runtime entity for a portlet. While in the rendering phase of a portlet, the portlet can publish values or attributes via an API. Thus, attributes specified while rendering the portlet is portlet instance specific.
+**Note:** The portlet definition describes the portlet at a deployment time level given in the portlet deployment descriptor. Thus, attributes specified in the deployment descriptor are valid on all occurrences on all pages of this portlet. The portlet window describes the runtime entity for a portlet. While in the rendering phase of a portlet, the portlet can publish values or attributes via an API. Thus, attributes specified while rendering the portlet is portlet instance specific.
 
 Example code snippet for publishing the information at render time:
 

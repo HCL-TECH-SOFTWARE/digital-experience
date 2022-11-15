@@ -6,11 +6,11 @@ For a description of the timeout properties and the respective default values, g
 
 To define the timeout properties, configure the following configuration parameters on the Consumer:
 
-wsrp.consumer.connectiontimeout = (timeout in seconds)
+wsrp.consumer.connectiontimeout = \(timeout in seconds\)
 
-wsrp.consumer.writetimeout = (timeout in seconds)
+wsrp.consumer.writetimeout = \(timeout in seconds\)
 
-wsrp.consumer.responsetimeout = (timeout in seconds)
+wsrp.consumer.responsetimeout = \(timeout in seconds\)
 
 By default each of these parameters is `undefined`. The default setting means that the Consumer does not set a timeout property on an outgoing WSRP request. In this case, WebSphere Application Server uses the default timeout properties as described in *JAX-WS timeout properties.*
 

@@ -53,8 +53,7 @@ When you search for existing themes, the search results display in the Theme Man
 
     Delete the selected theme.
 
-    !!! note 
-        Themes that are necessary for system stability cannot be deleted.
+    **Note:** Themes that are necessary for system stability cannot be deleted.
 
 
 

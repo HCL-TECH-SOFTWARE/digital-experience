@@ -3,7 +3,7 @@ id: wcm_dev_elements_fileresource_props
 title: Selecting a file resource
 ---
 
-# Selecting a file resource
+
 
 
 Use the file resource element to select a file to store in this component.

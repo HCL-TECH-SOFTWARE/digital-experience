@@ -9,6 +9,7 @@ You can use component reference elements in two ways:
 
     For example, if you referenced a component-reference element called "Featured Product" in more than one presentation template the element that is referenced within the component-reference element can be changed without having to edit the presentation templates.
 
+
 ## Creating a component reference element
 
 To create a component reference element, you can either add a component reference element to an authoring template, site area or content item, or create a component reference component.

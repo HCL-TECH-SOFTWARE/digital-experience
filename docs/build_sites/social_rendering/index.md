@@ -55,7 +55,6 @@ You can use these view definitions and appearance components as starting points 
 
 To use social rendering, you need to set up your HCL Portal for integration with HCL Connections.
 
-<!--
 -   **[Roadmap: How to work with social rendering](../social/soc_rendr_roadmap.md)**  
 Before you can use social rendering in your HCL Digital Experience, you need to set up HCL Connections integration. After you do that, your users can start working with the default view definitions that social rendering provides. You might want to configure and customize the social data that is rendered on your portal pages for your site visitors. In this case, you can configure and administer social rendering as required for your portal. You can also customize the view definitions, or create your own custom appearance components.
 -   **[Working with lists of social objects](../social/soc_rendr_tsk_socl_list.md)**  
@@ -70,9 +69,12 @@ You can customize social rendering view definitions in a number of ways. For exa
 As an owner of an HCL Connections community, you can define the set of widgets that are available in the community. For this purpose, you use the Customize option in HCL Connections. For example, you might choose to add the Blog widget to a specific community. This way, community owners have control over the set of services available in the communities they own.
 -   **[Extending social lists by using the digital data connector](../social/soc_rendr_xtnd_sl_by_plrf.md)**  
 The social rendering feature in HCL Digital Experience 8.5 is implemented as an Digital Data Connector \(DDC\) for HCL Portal plug-in.
---->
 
-???+ info "Related information:"
-    - [Digital Data Connector profiles for social rendering](../social_rendering/customizing_view_definitions/customizing_visualdesign/customizing_markup_gen/ddc_profiles_for_social_rend/index.md)
-    - [Digital Data Connector \(DDC\) for HCL Portal](../../extend_dx/ddc/index.md)
+
+**Related information**  
+
+
+[Digital Data Connector profiles for social rendering](../social/soc_rendr_lst_rndr_prfls.md)
+
+[Digital Data Connector \(DDC\) for HCL Portal](../social/plrf_ovu.md)
 

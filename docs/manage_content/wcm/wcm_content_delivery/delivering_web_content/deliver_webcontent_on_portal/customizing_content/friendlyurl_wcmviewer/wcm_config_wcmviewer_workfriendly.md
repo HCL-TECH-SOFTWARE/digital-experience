@@ -30,8 +30,7 @@ For friendly URLs to work for a specific page, you must define a friendly URL na
 http://www.example.com:10039/wps/portal/appliances
 ```
 
-!!! note
-    When the portal displays a page using a friendly URL, the URL can include an encoded suffix at the end of the URL with the form `!ut/p/base\_codec/rich\_state`. This suffix contains information about the portals state that the portal might use when displaying the page. However, when bookmarking or sharing friendly URLs, it is not necessary to include the suffix.
+**Note:** When the portal displays a page using a friendly URL, the URL can include an encoded suffix at the end of the URL with the form `!ut/p/base\_codec/rich\_state`. This suffix contains information about the portals state that the portal might use when displaying the page. However, when bookmarking or sharing friendly URLs, it is not necessary to include the suffix.
 
 ## How friendly URLs for web content are constructed
 
@@ -75,13 +74,17 @@ The `page\_id` portion of the friendly URL is always evaluated first. Because of
     |-----------|---|
     |The user navigates to URL in the portal.|`http://www.example.com:10039/wps/portal/home/content_item_1/!ut/p/b1/dY07Do...`|
     |The user modifies the URL in the browsers address bar to go to `content_item_2`.|`http://www.example.com:10039/wps/portal/home/content_item_2/!ut/p/b1/dY07Do...`|
-    |Resulting URL.|`http://www.example.com:10039/wps/portal/home/content_item_1/!ut/p/b1/dY07Do...`Because the `rich\_state` portion of the URL still contains path information pointing to `content_item_1`, the portal overwrites the `path\_to\_content` portion of the URL. The user remains on the same page instead of being directed to the page where `content_item_2` is displayed.|
+    |Resulting URL.|`http://www.example.com:10039/wps/portal/home/content_item_1/!ut/p/b1/dY07Do...`Because the `rich\_state` portion of the URL still contains path information pointing to `content_item_1`, the portal overwrites the `path\_to\_content` portion of the URL. The user remains on the same page instead of being directed to the page where `content_item_2` is displayed.
+
+|
 
     |Description|URL|
     |-----------|---|
     |The user navigates to URL in the portal.|`http://www.example.com:10039/wps/portal/home/content_item_1/!ut/p/b1/dY07Do...`|
     |The user modifies the URL in the browsers address bar to go to `content_item_2`.|`http://www.example.com:10039/wps/portal/home/content_item_2`|
-    |Resulting URL.|`http://www.example.com:10039/wps/portal/home/content_item_2`Because the user removed the `rich\_state` portion of the URL when modifying the URL, the `path\_to\_content` portion of the URL is evaluated. The user is directed to the page where `content_item_2` is displayed.|
+    |Resulting URL.|`http://www.example.com:10039/wps/portal/home/content_item_2`Because the user removed the `rich\_state` portion of the URL when modifying the URL, the `path\_to\_content` portion of the URL is evaluated. The user is directed to the page where `content_item_2` is displayed.
+
+|
 
 
 ## Content URL generation filters and friendly URLs
@@ -100,7 +103,6 @@ http://host\_name:port\_number/context\_root/portal/page\_id/path\_to\_content/[
 -   The web content viewer displays a warning message in the following situations:
     -   The friendly URL for web content references a content item that cannot be located.
     -   The user does not have sufficient access rights to view the referenced content item.
-
 -   The portal page specified in the friendly URL for web content must have a default content mapping to an existing web content site area. If there is no default content mapping on the page, any web content viewers on the page display a warning message about the missing page context.
 -   If the target page does not contain a web content viewer that is configured to receive links, the content item specified in the friendly URL for web content is not displayed.
 -   If a web content viewer is not configured to broadcast links, links rendered by the viewer do not affect the friendly URL for web content.
@@ -109,7 +111,10 @@ http://host\_name:port\_number/context\_root/portal/page\_id/path\_to\_content/[
 -   The segments of a friendly URL for web content are not localized for multiple languages. The `path\_to\_content` portion of a friendly URL for web content is composed of the unlocalized names of web content folders, site areas, and content items. For example, if you name these items with English terms, the friendly URL for web content is constructed of these English terms, even if the portal language is not English.
 
 
-???+ info "Related information:"
-    - [Defining friendly URLs without state information for pages in your site](../../../../../../../deployment/manage/siteurl_cfg/changing_siteurl/cw_navstate/mp_friendly_short_url.md)
-    - [Changing the site URL after an installation](../../../../../../../deployment/manage/siteurl_cfg/changing_siteurl/index.md)
+**Related information**  
+
+
+[Defining friendly URLs without state information for pages in your site](../admin-system/mp_friendly_short_url.md)
+
+[Changing the site URL after an installation](../config/cfg_intr_seo.md)
 

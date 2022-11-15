@@ -1,4 +1,4 @@
-# Managing Feeds
+# Managing feeds
 
 When your feed configurations and feed jobs are ready to use, you use these tools to manage your feeds.
 
@@ -24,4 +24,6 @@ When your feed configurations and feed jobs are ready to use, you use these tool
 
     6.  To delete feed jobs, select the feed jobs that you want to delete and click **Delete**.
 
+
+**Parent topic:**[Web content feed management](../panel_help/wci_feed_manage.md)
 

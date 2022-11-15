@@ -28,7 +28,6 @@ Using site area elements to vary the locale presentation is used for parts of th
     -   The site manager has the option to select different components.
     -   If the site area is workflowed, all of the modified elements can be previewed at once.
     -   Suitable for multiple sites per locale.
-
 -   **Reasons to not use site area elements:**
 
     -   Not a good solution for fragments of the presentation template that are under the control of the designer rather than the site manager.
@@ -42,7 +41,6 @@ The `name="./item"` parameter is used in component tags for locale-specific desi
 
     -   Changes can be limited to the users that manage presentation.
     -   Scales better than using site area elements.
-    
 -   **Reasons to not use dot notation in tags:**
 
     -   Changes cannot be easily previewed.

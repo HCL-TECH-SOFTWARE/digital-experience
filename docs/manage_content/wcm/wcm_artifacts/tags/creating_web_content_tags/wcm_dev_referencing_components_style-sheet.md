@@ -8,8 +8,7 @@ title: Creating a style element tag
 
 The style element tag is used to reference a style sheet component that is selected as the default style sheet in an authoring template, or a style sheet component that is referenced within a site area or content item that uses a component reference.
 
-!!! note
-    To directly reference a specific style sheet component, use a component tag.
+**Note:** To directly reference a specific style sheet component, use a component tag.
 
 The format of a style element tag:
 
@@ -42,5 +41,7 @@ When you add the tag to your design, you can also add the following parameters t
 
 |Tag parameters|Details|
 |--------------|-------|
-|`start=" "``end=" "`|The start and end attributes are used to wrap the data that is returned by a tag within other tags, such as HTML. These attributes are not mandatory.|
+|`start=" "``end=" "`
+
+|The start and end attributes are used to wrap the data that is returned by a tag within other tags, such as HTML. These attributes are not mandatory.|
 

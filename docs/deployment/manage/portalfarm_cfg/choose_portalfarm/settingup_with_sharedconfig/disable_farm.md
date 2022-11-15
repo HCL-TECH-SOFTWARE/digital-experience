@@ -10,8 +10,8 @@ Perform the following steps to disable the farm mode:
 
 3.  Run the following task to disable the farm mode:
 
-    -   Windows™: `ConfigEngine.bat disable-farm-mode -DWasPassword=password`, from the wp_profile_root\ConfigEngine directory
-    -   UNIX™ and Linux™: `./ConfigEngine.sh disable-farm-mode -DWasPassword=password`, from the wp_profile_root/ConfigEngine directory
-
+    -   Windows™: ConfigEngine.bat disable-farm-mode -DWasPassword=password, from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory
+    -   UNIX™Linux™: ./ConfigEngine.sh disable-farm-mode -DWasPassword=password, from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory
+    -   IBM® i: ConfigEngine.sh disable-farm-mode -DWasPassword=password, from the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine directory
 
 

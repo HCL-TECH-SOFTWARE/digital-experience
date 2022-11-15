@@ -14,7 +14,7 @@ You can define global or theme-specific contributions that contain a theme modul
 
     The following figure depicts the XML schema for this extension point:
 
-    ![A contribution contains a contribution type.](../../../../images/themeopt-module-contribution-xsd.jpg)
+    ![A contribution contains a contribution type.](../images/themeopt-module-contribution-xsd.jpg)
 
 
 The following code is an example of a plugin.xml file where the module is deployed within a web application with the context root res:\{war:context-root\}/.
@@ -301,22 +301,24 @@ The following code is an example of a myModules.json file that is stored in the 
     This variable fetches the context root of the containing WAR file and inserts it in place. It only works for modules defined as part of a WAR file. This does not work for modules defined in WebDAV or somewhere else in the classloading hierarchy, for example, a shared application.
 
 
--   **[Defining theme modules](themeopt_mod_register.md)**  
+-   **[Defining theme modules](../dev-theme/themeopt_mod_register.md)**  
 You can define theme modules in XML or JSON.
--   **[Module schema definition](themeopt_mod_global.md)**  
+-   **[Module schema definition](../dev-theme/themeopt_mod_global.md)**  
 You can use these elements to define theme modules.
--   **[Profile schema definition](themeopt_mod_pro_def.md)**  
+-   **[Profile schema definition](../dev-theme/themeopt_mod_pro_def.md)**  
 You can write a profile schema with valid JSON.
--   **[Simple modules](../writing_module/simple_modules/index.md)**  
+-   **[Simple modules](../dev-theme/themeopt_simple_modules.md)**  
 Simple modules for the resource aggregator framework are provided in the WebDAV folder. You can define modules quickly with a limited set of features with these simple modules.
--   **[Dynamically extending an existing menu item from a module](../writing_module/rwd_add_menu_module.md)**  
+-   **[Dynamically extending an existing menu item from a module](../rwd/rwd_add_menu_module.md)**  
 You can use a module to add menu items to a menu where the menu item displays only on certain pages.
 
 
-???+ info "Related information:"
-[Resource Aggregator overview](../themeopt_reso_agg.md)
-[Modules and dynamic content spots](../../customizing_theme/dynamic_content_spots/working_with_dcs/themeopt_modules_dyn_cnt_spts.md)
+**Related information**  
 
-<!--
-[Components installed with Content Template](../ctc/ctc_inst_components.md) -->
+
+[Resource Aggregator overview](../dev-theme/themeopt_reso_agg.md)
+
+[Modules and dynamic content spots](../dev-theme/themeopt_modules_dyn_cnt_spts.md)
+
+[Components installed with Content Template](../ctc/ctc_inst_components.md)
 

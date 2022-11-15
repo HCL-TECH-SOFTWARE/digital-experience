@@ -19,6 +19,13 @@ Projects provide the content owner and the content author the flexibility needed
 -   Other content authors add articles. As content is ready, content is sent by content authors for approval and publishing from the project menu.
 -   Based on the template used, the project does not publish until all content in the project is ready to be published. The approval and publishing details are controlled by the Trip project template that is managed by the content owner.
 
-<!--
-???+ info "Related information:"
-    - [Authoring](../panel_help/welcome_authoring.md)-->
+**Related information**  
+
+
+[Authoring](../panel_help/welcome_authoring.md)
+
+**References:**  
+
+
+[Authoring](welcome_authoring.md)
+

@@ -8,4 +8,13 @@ Software requirements:
 -   Rational Application Developer Version 7.0.0.6 or 7.5 with the Portal Tools feature. No agent controller is required. No WebSphere Test Environment or integrated Portal environment is used in this example. For additional information about Rational Application Developer, visit the IBM software library.
 
 
+**Next topic:**[Install the Personalization sample](../pzn/pzn_demoinstall.md)
+
+
+**Next topic:**[Install the Personalization sample](../pzn/pzn_demoinstall.md)
+
+**Related information**  
+
+
+[Administering](../admin-system/administering_parent.md)
 

@@ -13,12 +13,17 @@ You should understand the following terms before proceeding:
 -   **Sifter** -- Creates mentors by analyzing stored user transactional data. The `sifter` runs in the background when you run the LikeMinds server.
 -   **Coverage** -- The volume or number of items rated or transactions performed.
 
--   **[Mentor selection and assignment](pzn_mentor_select_assign.md)**  
+-   **[Mentor selection and assignment](../pzn/pzn_mentor_select_assign.md)**  
 Several factors determine the fitness of any user as a mentor.
--   **[Number of sift priority users per batch](pzn_number_sift_priority_users.md)**  
+-   **[Number of sift priority users per batch](../pzn/pzn_number_sift_priority_users.md)**  
 Learn how to specify how many users to sift during a single batch.
--   **[Pausing the sifter during heavy database](pzn_pause_sifter_heavy_db.md)**  
+-   **[Pausing the sifter during heavy database](../pzn/pzn_pause_sifter_heavy_db.md)**  
 Learn how to configure the sifter during heavy database.
-
+-   **[Mentor selection and assignment](../pzn/pzn_mentor_select_assign.md)**  
+Several factors determine the fitness of any user as a mentor.
+-   **[Number of sift priority users per batch](../pzn/pzn_number_sift_priority_users.md)**  
+Learn how to specify how many users to sift during a single batch.
+-   **[Pausing the sifter during heavy database](../pzn/pzn_pause_sifter_heavy_db.md)**  
+Learn how to configure the sifter during heavy database.
 
 

@@ -17,8 +17,8 @@ A page navigation element can combine both shuttle and paging controls, as in th
 |Page Numbers|4,5,6|
 |Continuation|...|
 |Jump to page|Go to page:|
-|Next|>|
-|Last|>>|
+|Next|\>|
+|Last|\>\>|
 |Page size|Items to display: 10 \| 50 \| All|
 
 ## Creating a page navigation element

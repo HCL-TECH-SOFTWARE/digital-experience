@@ -27,7 +27,7 @@ To move existing nodes or insert new nodes, use the `insert()` method of the con
 5.  Persist your modifications by using the `commit()` method of the controller.
 
 
-Example 1 - Moving an existing portlet to a different container (error handling omitted):
+Example 1 - Moving an existing portlet to a different container \(error handling omitted\):
 
 ```
 // obtain locator of LayoutModelController

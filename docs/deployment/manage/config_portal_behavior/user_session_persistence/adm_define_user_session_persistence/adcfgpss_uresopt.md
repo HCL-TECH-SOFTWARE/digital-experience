@@ -17,8 +17,9 @@ The two persistent session option values have the following effects:
 
 The default setting is 0, that is, users cannot resume their last session.
 
-!!!note "Notes"
-    -   The defined session preservation settings as described in the topic about *Setting the session resume level for users* are in effect, independent of whether the administrator gave the users the resume option.
-    -   If you give users the resume option, set the session resume level to 1 or higher. Otherwise, the `persistent.session.option` property setting has no effect.
+**Notes:**
+
+-   The defined session preservation settings as described in the topic about *Setting the session resume level for users* are in effect, independent of whether the administrator gave the users the resume option.
+-   If you give users the resume option, set the session resume level to 1 or higher. Otherwise, the `persistent.session.option` property setting has no effect.
 
 

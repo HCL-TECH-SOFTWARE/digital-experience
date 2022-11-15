@@ -24,7 +24,9 @@ When you add the tag to your design, you can also add the following parameters t
 |Tag parameter|Description|
 |-------------|-----------|
 |`repeat=" "`|Enter the text to repeat at the beginning of the indent.|
-|`start=" "``end=" "`|The start and end attributes are used to wrap the data that is returned by a tag within other tags, such as HTML. These attributes are not mandatory.|
+|`start=" "``end=" "`
+
+|The start and end attributes are used to wrap the data that is returned by a tag within other tags, such as HTML. These attributes are not mandatory.|
 
 **Double-byte character sets:**
 
@@ -37,6 +39,8 @@ For example:
 ```
 
 
-???+ info "Related information:"
-    - [Creating web content tags](../creating_web_content_tags/index.md)
+**Related information**  
+
+
+[Creating web content tags](../panel_help/wcm_dev_referencing_tags.md)
 

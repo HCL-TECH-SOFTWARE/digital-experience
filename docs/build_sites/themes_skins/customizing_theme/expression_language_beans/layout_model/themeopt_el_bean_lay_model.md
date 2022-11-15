@@ -2,7 +2,7 @@
 
 Provides access to the tree and list model representation object of the layout of a page.
 
-Many of the following attributes return LayoutNode. However, [LayoutContainer](../layout_model/themeopt_el_bean_lay_container.md) and [LayoutControl](themeopt_el_bean_lay_control.md) are types of LayoutNode, and when you iterate, you can encounter either type.
+Many of the following attributes return LayoutNode. However, [LayoutContainer](themeopt_el_bean_lay_container.md) and [LayoutControl](themeopt_el_bean_lay_control.md) are types of LayoutNode, and when you iterate, you can encounter either type.
 
 Attributes:
 

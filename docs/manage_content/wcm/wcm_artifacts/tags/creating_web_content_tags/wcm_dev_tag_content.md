@@ -15,8 +15,7 @@ The format of an `Content` tag:
 
 ```
 
-!!! note
-    The content tag renders nothing in the case of an infinite loop. For example if a presentation template uses the content tag to render the current content, this will cause the same presentation template to render, which in turn will render the content, and so forth without end. Take care to avoid this occurring because it slows down the time that is taken to render the tag.
+**Note:** The content tag renders nothing in the case of an infinite loop. For example if a presentation template uses the content tag to render the current content, this will cause the same presentation template to render, which in turn will render the content, and so forth without end. Take care to avoid this occurring because it slows down the time that is taken to render the tag.
 
 To create an `Content` tag:
 
@@ -64,7 +63,19 @@ When you add the tag to your design, you can also add the following parameters t
 |Tag parameters|Details|
 |--------------|-------|
 |`presentationPath="``NamePath"`|You can specify a specific presentation template to be used to render the content item or site area, in place of the default.|
-|`renderMode="`"|You can specify a render mode to use in place of the default mode. <br> These render modes are predefined: summary, json, xml, html, default. You can use the Web Content Manager API to define further render modes. <br>-   **Default Presentation Template**: This presentation template is used to render an item within a Web Content Viewer portlet. <br>-   **Summary Presentation Template**: This presentation template is used when the summary render mode is used to render an item. <br>-   **JSON Record Presentation Template**: This presentation template is used when the JSON render mode is used to render an item on mobile devices. <br>-   **XML Document Presentation Template**: This presentation template is used when the XML render mode is used to render an item on mobile devices. <br>-   **HTML Document Presentation Template**: This presentation template is used when the HTML render mode is used to render an item as a complete web page. <br>You can create separate presentation templates for each type and select them when you create a site area template or content template:|
+|`renderMode="`"|You can specify a render mode to use in place of the default mode.
+
+These render modes are predefined: summary, json, xml, html, default. You can use the Web Content Manager API to define further render modes.
+
+-   **Default Presentation Template**: This presentation template is used to render an item within a Web Content Viewer portlet.
+-   **Summary Presentation Template**: This presentation template is used when the summary render mode is used to render an item.
+-   **JSON Record Presentation Template**: This presentation template is used when the JSON render mode is used to render an item on mobile devices.
+-   **XML Document Presentation Template**: This presentation template is used when the XML render mode is used to render an item on mobile devices.
+-   **HTML Document Presentation Template**: This presentation template is used when the HTML render mode is used to render an item as a complete web page.
+
+You can create separate presentation templates for each type and select them when you create a site area template or content template:
+
+|
 
 For example, setting a content or site area with a specified UUID to render by specifying the site area or content that is linked to by an element named `MyLinkElement`:
 

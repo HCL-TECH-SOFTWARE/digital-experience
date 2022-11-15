@@ -1,12 +1,8 @@
----
-title: Update Existing Application from CLI
----
-
 # Updating an existing Script Application instance with the command line push application
 
-You can use the Script Application push function to update an existing application on a portal page or to update an application in an HCL DX site area.
+You can use the Script Application push function to update an existing application on a portal page or to update an application in an HCL Web Content Manager site area.
 
-For details about how to create or update a Script Application instance in a site area, read [Creating and updating Script Applications with command line push support](https://help.hcltechsw.com/digital-experience/9.5/script-portlet/cmd_line_push_cmd.html).
+For details about how to create or update a Script Application instance in a site area, read *Creating and updating Script Applications with command line push support*.
 
 To update a Script Application instance that was added to a portal page from the Application toolbar, which is not associated with a site area, complete the following steps.
 

@@ -44,19 +44,19 @@ You can get to the capability explorer from different paths in the UI.
     -   Capabilities from Portlets: The root for all capabilities that are assigned by the page's portlets.
         -   Capabilities: All non-deferred capabilities that are provided by the page's portlets.
         -   Capabilities by a deferred section: All deferred capabilities that are provided by the page's portlets.
-    ![Screen capture of Capability explorer to examine capabilities by page.](../../../../images/themeopt_an_mod_capabilityByPage_cf03.jpg)
+    ![Screen capture of Capability explorer to examine capabilities by page.](../images/themeopt_an_mod_capabilityByPage_cf03.jpg)
 
 2.  When you examine the capabilities that are scoped by profile, you have two root branches:
 
     -   Capabilities: The root for all capabilities that are provided by modules in the none deferred section of the profile.
     -   Capabilities by a deferred section: The root for all capabilities that are provided by modules in the deferred section of the profile.
-    ![Screen capture of Capability explorer to examine capabilities by profile.](../../../../images/themeopt_an_mod_capabilityByProfile_cf03.jpg)![Screen capture of Capability explorer to examine capabilities by profile.](../../../../images/themeopt_an_capab_explorer_profile.JPG)
+    ![Screen capture of Capability explorer to examine capabilities by profile.](../images/themeopt_an_mod_capabilityByProfile_cf03.jpg)![Screen capture of Capability explorer to examine capabilities by profile.](../images/themeopt_an_capab_explorer_profile.JPG)
 
 3.  When you examine the system and theme capabilities, you have one or two branches:
 
     -   Capabilities by System Modules Contain all capabilities that are provided by modules that are defined globally through a plugin.xml.
     -   Capabilities by Theme Modules Contain all capabilities that are provided by modules that are defined within the themes capabilities folder as part of the JSON files. This branch is only shown when a theme is selected.
-    ![Screen capture of Capability explorer to examine all capabilities.](../../../../images/themeopt_an_mod_allCapabilities_cf03.jpg)![Screen capture of Capability explorer to examine all capabilities.](../../../../images/themeopt_an_capab_explorer_all.JPG)
+    ![Screen capture of Capability explorer to examine all capabilities.](../images/themeopt_an_mod_allCapabilities_cf03.jpg)![Screen capture of Capability explorer to examine all capabilities.](../images/themeopt_an_capab_explorer_all.JPG)
 
 
 When you expand a tree or branch, if it is large and takes more than 30 seconds to expand, the expansion process is stopped. You must expand those branches individually.
@@ -74,8 +74,7 @@ The details view displays the details for the selected module such as:
 -   Parents: Displays all parent modules for the module
 -   Contributions: Displays all contributions by contribution and sub contribution. The resources are elements that can be clicked, which open a new window and serves the resource in the browser when clicked.
 
-    !!! note
-        In simulation mode, the resources cannot be clicked.
+    **Note:** In simulation mode, the resources cannot be clicked.
 
 
 ## Searching within the capability explorer.

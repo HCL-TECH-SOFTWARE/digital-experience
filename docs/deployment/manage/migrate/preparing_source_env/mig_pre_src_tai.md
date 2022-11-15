@@ -5,7 +5,7 @@ The automated migration of the HCL Portal profile requires that the Trust Associ
 1.  Verify that TAI is enabled:
 2.  Log in to the WebSphere® Integrated Solutions Console.
 
-3.  Go to **Security > Global security**.
+3.  Go to **Security** \> **Global security**.
 
 4.  Ensure that **Enable administrative security** and **Enable application security** are selected.
 
@@ -16,18 +16,19 @@ The automated migration of the HCL Portal profile requires that the Trust Associ
 7.  If TAI is not enabled, complete the following steps:
 8.  Open a command line and change to the directory where HCL Portal ConfigEngine is installed, on the corresponding operating system:
 
-    -   UNIX™ and Linux™: wp_profile_root/ConfigEngine
-    -   Windows™: wp_profile_root\ConfigEngine
-
+    -   UNIX™Linux™: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)`/ConfigEngine`
+    -   z/OS®: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)`/ConfigEngine`
+    -   IBM® i: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)`/ConfigEngine`
+    -   Windows™: [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)`\ConfigEngine`
 9.  Enter the following command:
 
-    -   UNIX™ and Linux™: `ConfigEngine.sh enable-http-basic-auth-tai-sitemgmt -DPortalAdminPwd=password -DWasPassword=password`
+    -   UNIXLinux: `ConfigEngine.sh enable-http-basic-auth-tai-sitemgmt -DPortalAdminPwd=password -DWasPassword=password`
+    -   z/OS: `ConfigEngine.sh enable-http-basic-auth-tai-sitemgmt -DPortalAdminPwd=password -DWasPassword=password`
+    -   IBM i: `ConfigEngine.sh enable-http-basic-auth-tai-sitemgmt -DPortalAdminPwd=password -DWasPassword=password`
     -   Windows: `ConfigEngine.bat enable-http-basic-auth-tai-sitemgmt -DPortalAdminPwd=password -DWasPassword=password`
-    
     Use `-DPortalAdminPwd=password -DWasPassword=password` to specify the portal and WebSphere Application Server passwords.
 
-    !!!note
-        This task uses the settings in the file `wkplc_comp.properties` to configure the TAI. Although the TAI settings are pre-configured to work without requiring adjustment, you can change the settings before you run the task if you need to configure the TAI differently.
+    **Note:** This task uses the settings in the file `wkplc_comp.properties` to configure the TAI. Although the TAI settings are pre-configured to work without requiring adjustment, you can change the settings before you run the task if you need to configure the TAI differently.
 
 10. Stop and restart the portal.
 
@@ -39,7 +40,7 @@ The automated migration of the HCL Portal profile requires that the Trust Associ
 
     2.  Open the administrative console by using the URL that you obtained by the previous step.
 
-    3.  Click **Security > SSL certificate and key management > Key stores and certificates**.
+    3.  Click **Security** \> **SSL certificate and key management** \> **Key stores and certificates**.
 
     4.  On the keystores and certificates panel click **CellDefaultTrustStore** or **NodeDefaultTrustStore**, depending on whether you have a cluster or single node configuration.
 
@@ -51,7 +52,7 @@ The automated migration of the HCL Portal profile requires that the Trust Associ
 
         -   **Host**
 
-            The host name of the client server, for example your_target_server.your_co.com.
+            The host name of the client server, for example your\_target\_server.your\_co.com.
 
         -   **Port**
 
@@ -63,18 +64,16 @@ The automated migration of the HCL Portal profile requires that the Trust Associ
 
         -   **Alias**
 
-            The alias name, for example name_of_your_alias.
+            The alias name, for example name\_of\_your\_alias.
 
     8.  Select **Retrieve signer information**.
 
         The signer information is displayed.
 
-        !!!note
-            The error message `CWPKI0661E: Unable to get certificate signer information from host name "yourtargetserver.yourco.com" and port "9043". Verify host name and port are correct` might appear for one of two reasons:
+        **Note:** The error message `CWPKI0661E: Unable to get certificate signer information from host name "yourtargetserver.yourco.com" and port "9043". Verify host name and port are correct` might appear for one of two reasons:
 
         -   A certificate is imported from the target location.
         -   A previously deleted certificate has not timed out and been removed.
-
     9.  Click **OK**.
 
         Your alias is now shown in the list.
@@ -86,6 +85,9 @@ The automated migration of the HCL Portal profile requires that the Trust Associ
     12. Currently, if you have a clustered environment without automatic synchronization, you need to resynchronize the node agents.
 
 
-???+ info "Related information"
-    -   [Disabling TAI if disabled previously](../../../../deployment/manage/migrate/next_steps/post_mig_activities/admin_task/mig_post_tai.md)
+
+**Related information**  
+
+
+[Disabling TAI if disabled previously](../migrate/mig_post_tai.md)
 

@@ -23,12 +23,27 @@ There are different scenarios for creating a Producer definition:
 |The Producer requires registration and is enabled for WSRP registration. In this case the Producer provides a registration port. In this case, you can specify extra registration properties when you create the Producer definition in your Consumer portal.|. . . the Web Service Configuration portlet or the XML configuration interface.|. . . is not a valid scenario.|
 |The Producer requires registration and is not enabled for WSRP registration. In this case you must provide a registration handle that you obtained from the Producer.|. . . the Web Service Configuration portlet or the XML configuration interface.|. . . by using the XML configuration interface.|
 
-!!!note "Notes"
-    1.  The current implementation of the WSRP Producer in the portal does not support the WSRP registration interface. However, the WSRP Consumer in the portal can handle Producers that support WSRP registration interfaces.
-    2.  When you specify user attributes, make sure to avoid that any of the following events occur:
-        -   Sending security relevant attributes, such as passwords, over unsecured network connections
-        -   Passing sensitive data about your users to the Producer.
+**Notes:**
 
-???+ info "Related information"  
-    -   [Updating a WSRP Consumer](../../../../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/wsrp/mig_post_wsrp_consumer.md)
+1.  The current implementation of the WSRP Producer in the portal does not support the WSRP registration interface. However, the WSRP Consumer in the portal can handle Producers that support WSRP registration interfaces.
+2.  When you specify user attributes, make sure to avoid that any of the following events occur:
+    -   Sending security relevant attributes, such as passwords, over unsecured network connections
+    -   Passing sensitive data about your users to the Producer.
+
+-   **[Different types of Producers](../admin-system/wsrpc_cons_diff_prod.md)**  
+The information that you must provide with the Producer definition depends on the type of Producer.
+-   **[Using the Web Service Configuration portlet to work with Producer definitions online](../admin-system/wsrpt_cons_crtprd_plt.md)**  
+If you work online, you can use the Web Service Configuration portlet to create a Producer definition.
+-   **[Using the XML configuration interface to work with Producer definitions](../admin-system/wsrpt_cons_wrkprd_xml.md)**  
+You can use the XML configuration interface to work with Producer definitions in different ways.
+
+
+**Previous topic:**[Information that the Consumer exchanges with the Producer](../admin-system/wsrpc_cons_get_info.md)
+
+**Next topic:**[Consuming portlets in a Consumer portal](../admin-system/wsrpt_cons_prtlt.md)
+
+**Related information**  
+
+
+[Updating a WSRP Consumer](../migrate/mig_post_wsrp_consumer.md)
 

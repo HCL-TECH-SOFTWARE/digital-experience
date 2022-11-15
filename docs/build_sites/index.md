@@ -4,7 +4,6 @@ HCL Digital Experience provides an array of features that provides a seamless ex
 
 Setting up a website includes, creating pages, adding navigation, setting up search, and adding content to the site. Themes are used to customize the portal's look-and-feel. Out-of-the-box templates and the site wizard can help you set up your portal site faster. You can add wikis and blogs to your site and let users tag and rate content on your site.
 
-<!--
 ## [Building Sites](../build_sites/create_sites/index.md)
 Setting up a website includes creating pages, adding navigation, setting up search, and adding content to the site.
 
@@ -45,4 +44,4 @@ Website analytics applications can be used to track user interactions with onlin
 
 
 ## [Social Rendering](../build_sites/social_rendering/index.md)
-HCL Digital Experience page editors can use social rendering to feature social data that is hosted on a remote HCL Connections server in the context of portal pages. -->
+HCL Digital Experience page editors can use social rendering to feature social data that is hosted on a remote HCL Connections server in the context of portal pages.

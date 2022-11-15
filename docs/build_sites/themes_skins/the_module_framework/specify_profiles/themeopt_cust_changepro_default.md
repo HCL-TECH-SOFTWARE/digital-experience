@@ -51,3 +51,5 @@ You can change the profile for the theme or a specific page to define the module
 3.  Import the XML file using the command line or **Import XML**.
 
 4.  Restart HCL Portal.
+
+

@@ -49,8 +49,7 @@ HCL Portal still supports the WebSphere Application Server Lightweight Directory
 
 If you want to have the users of your virtual portals that are separated, you must apply the more advanced setup by using Federated Repositories. Then, configure separate realms for your virtual portals. When users access a virtual portal, the portal installation selects the appropriate realm that is based on the current virtual portal context. Within a virtual portal, only users of that corresponding realm are "visible". The administrator of a particular virtual portal can give access permissions only to users and groups in the population of that virtual portal. Therefore, when you create a virtual portal, the realm that represents the population of the new virtual portal must be a subset of the realm that is used by your portal installation.
 
-!!! note
-    This separation of user populations between virtual portals works only with Federated Repositories. The portal supports separate realms and user repositories for virtual portals only when you use the Federated Repositories.
+**Note:** This separation of user populations between virtual portals works only with Federated Repositories. The portal supports separate realms and user repositories for virtual portals only when you use the Federated Repositories.
 
 When you use the Federated Repositories, you can separate user groups and administrative users by configuring your virtual portals according to your business requirements. You do this based on the following relationships between user repositories, realms, and virtual portals:
 
@@ -68,41 +67,51 @@ When you use the Federated Repositories, you can separate user groups and admini
 
 -   User populations of realms can overlap. In other words, users can be members of multiple realms. If realms overlap, then these users can work in all the virtual portals that are associated with these realms.
 
-!!! important 
-    The administrator unique ID for the Java™ Content Repository \(JCR\) must be a distinguished name \(DN\) for a super administrator. You specify the administrator unique ID as the value defined in the **jcr.admin.uniqueName** property. To view this property, log in to WebSphere Integrated Solutions Console. Go to **Resources** \> **Resource Environment** \> **Resource Environment Providers** \> **JCR ConfigService PortalContent** \> **Custom properties** \> **jcr.admin.uniqueName**.
+**Important:** The administrator unique ID for the Java™ Content Repository \(JCR\) must be a distinguished name \(DN\) for a super administrator. You specify the administrator unique ID as the value defined in the **jcr.admin.uniqueName** property. To view this property, log in to WebSphere Integrated Solutions Console. Go to **Resources** \> **Resource Environment** \> **Resource Environment Providers** \> **JCR ConfigService PortalContent** \> **Custom properties** \> **jcr.admin.uniqueName**.
 
 For example, you can set up the following configurations:
 
 -   You can configure one LDAP suffix with all administrative users, for example dc=administrators,dc=ibm,dc=com and a separate LDAP suffix with the users, for example dc=users,dc=ibm,dc=com.
 -   You can configure separate LDAP suffixes that contain different user populations, for example dc=bank1,dc=com for Bank\_1 and dc=bank2,dc=com for Bank\_2.
 
-!!! note
-    -   **Considerations for deleting resources in virtual portals:**
+**Notes:**
 
-        The Portal Access Control administration in the Resource Permissions portlet shows users from different realms who have role mappings on shared resources by their object IDs. Therefore, apply special care and consideration when you delete such portal resources: Do not delete resources on which users from other realms have role mappings, if they are required in other virtual portals. This information applies to members of roles on portal resources that cannot be scoped and are therefore shared between the virtual portals. Role members who belong to the realm of your local virtual portal are displayed as usual, but role members who belong to different realms are displayed in a different manner:
+-   **Considerations for deleting resources in virtual portals:**
 
-        -   Role members for shared resources who belong to the realm of the virtual portal where you are currently working are listed by their actual names.
-        -   Role members for shared resources that do not belong to the realm of the current portal are listed by their portal object IDs. For example, a role member from a different realm might be represented as 8\_0\_B.
-        Find the list of role members. Click the **Administration menu** icon. Then, click **Access** \> **Resource Permissions**. From the list of Resource Types, select a Resource Type by clicking it. On the Resource Permissions page, click the **Assign Access** icon. The members are listed in the **Roles** column.
+    The Portal Access Control administration in the Resource Permissions portlet shows users from different realms who have role mappings on shared resources by their object IDs. Therefore, apply special care and consideration when you delete such portal resources: Do not delete resources on which users from other realms have role mappings, if they are required in other virtual portals. This information applies to members of roles on portal resources that cannot be scoped and are therefore shared between the virtual portals. Role members who belong to the realm of your local virtual portal are displayed as usual, but role members who belong to different realms are displayed in a different manner:
 
-    -   **How to grant virtual portal administrators access to web content libraries:**
+    -   Role members for shared resources who belong to the realm of the virtual portal where you are currently working are listed by their actual names.
+    -   Role members for shared resources that do not belong to the realm of the current portal are listed by their portal object IDs. For example, a role member from a different realm might be represented as 8\_0\_B.
+    Find the list of role members. Click the **Administration menu** icon. Then, click **Access** \> **Resource Permissions**. From the list of Resource Types, select a Resource Type by clicking it. On the Resource Permissions page, click the **Assign Access** icon. The members are listed in the **Roles** column.
 
-        Virtual portal administrators do not automatically have access to work with web content libraries when you use the administration portlet. To enable a virtual portal administrator to work with web content libraries, you need to assign them access to either the JCR content root node or individual web content libraries:
+-   **How to grant virtual portal administrators access to web content libraries:**
 
-        -   You can assign virtual portal administrators access to the JCR content root node with `Set access on root` in the Web Content Library view of the Administration portlet. For more information, go to the portlet online help.
-            -   Assign virtual portal administrators administrator access to the JCR content root node to enable them to create new libraries and view, edit, and delete all existing libraries.
-            -   Assign virtual portal administrators contributor access to the JCR content root node to enable them to create new libraries and view, edit, and delete libraries that they created.
-        -   You can also assign virtual portal administrators access to libraries they did not create by editing the access settings of individual libraries.
+    Virtual portal administrators do not automatically have access to work with web content libraries when you use the administration portlet. To enable a virtual portal administrator to work with web content libraries, you need to assign them access to either the JCR content root node or individual web content libraries:
+
+    -   You can assign virtual portal administrators access to the JCR content root node with `Set access on root` in the Web Content Library view of the Administration portlet. For more information, go to the portlet online help.
+        -   Assign virtual portal administrators administrator access to the JCR content root node to enable them to create new libraries and view, edit, and delete all existing libraries.
+        -   Assign virtual portal administrators contributor access to the JCR content root node to enable them to create new libraries and view, edit, and delete libraries that they created.
+    -   You can also assign virtual portal administrators access to libraries they did not create by editing the access settings of individual libraries.
 
 
-???+ info "Related information:"
-    - [Usage scenarios for virtual portals](../vp_overview/advpuscn_usage.md)
-    - [Securing](../../../deployment/manage/security/index.md)
-    - [Configuring](../../search/manage_search/search_collection/creating_content_source/configuring.md)
-    - [Realm support](../../../get_started/plan_deployment/traditional_deployment/user_registry_consideration/plan_realm.md)
-    - [Controlling access](../../../deployment/manage/security/controlling_access/index.md)
-    - [Virtual Member Manager integration](../../../get_started/plan_deployment/traditional_deployment/user_registry_consideration/plan_vmm_int.md)
-    - [Adding realm support](../../../deployment/manage/security/user_registry/cfg_realm.md)
-    - [Managing the users of virtual portals](../adm_vp_task/vp_adm_task/managing_users_vp/index.md)
-    - [Portal Access Control with virtual portals](../vp_planning/vp_roles/advppln_roles_pac4vp.md)
+**Related information**  
+
+
+[Usage scenarios for virtual portals](../admin-system/advpuscn_usage.md)
+
+[Securing](../security/securing_wp.md)
+
+[Configuring](../config/configuring_parent2.md)
+
+[Realm support](../plan/plan_realm.md)
+
+[Controlling access](../admin-system/control_access.md)
+
+[Virtual Member Manager integration](../plan/plan_vmm_int.md)
+
+[Adding realm support](../security/cfg_realm.md)
+
+[Managing the users of virtual portals](../admin-system/advp_tsk_mng_usr.md)
+
+[Portal Access Control with virtual portals](../admin-system/advppln_roles_pac4vp.md)
 

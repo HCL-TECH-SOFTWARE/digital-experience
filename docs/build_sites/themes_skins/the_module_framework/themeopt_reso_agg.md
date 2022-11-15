@@ -4,8 +4,7 @@ When the page renders, the Resource Aggregator processes all of the modules comi
 
 The module framework is based on modules that are specified in a profile, and a profile is assigned to a page. It takes all of the resources coming from the modules and aggregates, or combines, them into as few URIs to link on the page as possible to achieve optimal performance. Non-deferred modules are kept separate from deferred modules, so there ends up being two sets of URIs.
 
-!!! note
-    You can turn Remote Debugging on to break apart each resource as its own individual, uncompressed request for debugging purposes. For details on how to turn Remote Debugging on and off, see *Theme Optimization Analyzer Utilities*.
+**Note:** You can turn Remote Debugging on to break apart each resource as its own individual, uncompressed request for debugging purposes. For details on how to turn Remote Debugging on and off, see *Theme Optimization Analyzer Utilities*.
 
 For more information on how to create modules and profiles, see *Writing modules*. For more information on how to assign a profile, see *Specifying profiles*.
 
@@ -42,14 +41,19 @@ The portlet can call the API in the portlet processing, such as in `doHead` for 
 
 In most case, the returned list from getCombinedURI contains one URI. In a few cases, for example, with CSS size limits in Internet Explorer, it may return multiple URIs. The portlet must code to handle 1 to n.
 
-!!! note
-    ßYou must use this API with application-specific resources only. Shared, non-application-specific resources must be defined as modules or capabilities and specified as the portlet module dependencies, using the capability portlet preferences. It optimizes performance. It ensures multiple portlets on a page do not load the same resources. And it controls the order of resources that are loaded, because shared resources must load before application-specific resources.
+**Note:** You must use this API with application-specific resources only. Shared, non-application-specific resources must be defined as modules or capabilities and specified as the portlet module dependencies, using the capability portlet preferences. It optimizes performance. It ensures multiple portlets on a page do not load the same resources. And it controls the order of resources that are loaded, because shared resources must load before application-specific resources.
 
 
-???+ info "Related information:"
-    - [Writing modules](../the_module_framework/writing_module/index.md)
-    - [Change the auto-loading of portlet capabilities](../the_module_framework/change_the_auto_loading_of_portlet/index.md)
-    - [Specifying profiles with the user interface](../the_module_framework/specify_profiles/index.md)
-    - [Module dependencies in portlets](../the_module_framework/themeopt_mod_capfilters.md)
-    - [Utilities for theme issues](../the_module_framework/themeopt_analyzer/utilities/index.md)
+**Related information**  
+
+
+[Writing modules](../dev-theme/themeopt_mod_plugin_xml.md)
+
+[Change the auto-loading of portlet capabilities](../dev-theme/themeopt_chng_auto_load_cap.md)
+
+[Specifying profiles with the user interface](../dev-theme/themeopt_define_mod_ui.md)
+
+[Module dependencies in portlets](../dev-theme/themeopt_mod_capfilters.md)
+
+[Utilities for theme issues](../dev-theme/themeopt_an_util.md)
 

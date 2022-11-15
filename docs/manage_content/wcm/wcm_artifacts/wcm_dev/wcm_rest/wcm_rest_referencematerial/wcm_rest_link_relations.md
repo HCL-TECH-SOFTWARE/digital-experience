@@ -5,11 +5,13 @@ These definitions provide information on how different requests can be linked.
 |Relation|Purpose|Supported Operation to the Link HREF|Settable for PUT and POST operation|
 |--------|-------|------------------------------------|-----------------------------------|
 |`access-control`|The access settings of an item.|GET|NO|
-|`add-attachment`|Add attachment to the item (array component only, such as HTML, RichText component/element, and PresentationTemplate).|POST|NO|
+|`add-attachment`|Add attachment to the item \(array component only, such as HTML, RichText component/element, and PresentationTemplate\).|POST|NO|
 |`approve`|Approve the item in current stage and move it into next stage in the worklfow.|POST|NO|
 |`change-to-draft`|Go to the draft of the item.|POST|NO|
 |`content-template`|The content template of the item.|GET|YES|
-|`create-draft`|Create a draft of the item.Also adds an item to a project if created within a portal project context.|POST|NO|
+|`create-draft`|Create a draft of the item.Also adds an item to a project if created within a portal project context.
+
+|POST|NO|
 |`default-presentation`|The template set as the default presentation template for the item that is created from an authoring template.|GET|YES|
 |`delete`|Delete an item.|DELETE|NO|
 |`draft-of`|The published item link of the draft item.|GET|NO|

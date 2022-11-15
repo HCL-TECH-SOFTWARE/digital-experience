@@ -64,10 +64,14 @@ To determine the default link resolution method that is currently in effect in y
 You can disable this request attribute by setting the property `enable.default.social.object.resolution.mode.request.param` to the value `false` in WP Configuration Service resource environment provider. In this case, the attribute `ibm.portal.default.social.object.resolution.mode` is always set to the value `disabled`.
 
 
+**Related information**  
 
-???+ info "Related information:"
-    - [Configuration Service](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cfg_svc/index.md)
-    - [Concept of the lists of social objects provided with the social rendering feature](../working_with_social_objects/concept_list_social_objects/index.md)
-    - [Social object resolution](../working_with_social_objects/concept_list_social_objects/soc_rendr_soc_obj_resltn.md)
-    - [Digital Data Connector profiles for social rendering](../customizing_view_definitions/customizing_visualdesign/customizing_markup_gen/ddc_profiles_for_social_rend/index.md)
+
+[Configuration Service](../admin-system/srvcfgref_config.md)
+
+[Concept of the lists of social objects provided with the social rendering feature](../social/soc_rendr_undrstd.md)
+
+[Social object resolution](../social/soc_rendr_soc_obj_resltn.md)
+
+[Digital Data Connector profiles for social rendering](../social/soc_rendr_lst_rndr_prfls.md)
 

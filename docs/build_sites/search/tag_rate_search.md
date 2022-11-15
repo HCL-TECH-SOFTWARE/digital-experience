@@ -22,7 +22,7 @@ Advantages are as follows:
 
 By default the searches are case sensitive. If you want to perform a case insensitive search, an administrator needs to enable tag normalization in the CP Configuration Service. For details refer to the topic about the CP Configuration Service for tagging and rating
 
-<!-- 
+
 **Previous topic:**[Search Center](../wcm/h_search_searchcenter.md)
 
 **Next topic:**[Planning and preparing for Portal Search](../admin-system/srcbfrwrkgwtprtlsrch.md)
@@ -38,5 +38,5 @@ By default the searches are case sensitive. If you want to perform a case insens
 
 [Searching for tagged content](../admin-system/tag_rate_search.md)
 
-[Open Search - http://www.opensearch.org/Home](https://www.opensearch.org/Home) -->
+[Open Search - http://www.opensearch.org/Home](https://www.opensearch.org/Home)
 

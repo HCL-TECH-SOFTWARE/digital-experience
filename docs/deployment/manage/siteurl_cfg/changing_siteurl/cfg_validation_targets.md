@@ -71,6 +71,9 @@ The result of the conflict check is part of the ConfigEngine output. It might lo
 
 In this example, a conflict was found between a friendly name and virtual portal mapping.
 
+
 **Related information**  
-[Configuring access to a remote spell checker](../../remote_spell_checker/doc_pdm_remotespchk.md)
+
+
+[Configuring access to a remote spell checker](../config/doc_pdm_remotespchk.md)
 

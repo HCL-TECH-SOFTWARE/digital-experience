@@ -33,12 +33,25 @@ Search Service is a live search and uses REST to search on a target information 
     |LocationParam|scope|
     |RequestLocationType|/atom/scopes|
     |RestServiceHost|connections.host.com|
-    |RestServiceUnSecurePort|9081 **Note:** Use the direct server port for the Connections server, not the IHS port.|
-    |RestServiceSecurePort|9444 **Note:** Use the direct server port for the Connections server, not the IHS port.|
-    |UseHTTPOutbound|Takes a value of true or false (default).  Setting this parameter to true results in the RCSS code to use the HTTP Outbound service.|
-    |HTTPOutboundMappingPath|The value is a path, as defined in the HTTP Outbound proxy configuration. If the HTTP Outbound support is enabled, this parameter defaults to /IBM\_RCSS.  This value is the mapping path that is used when you access the HTTP Outbound service. A proxy configuration with this context path must exist in the proxy configuration. The configuration then determines how the HTTP invocation is handled.|
-    |highlight=\[\]|Use this setting to avoid Connection search feeds injecting bold tags to highlight search results.|
-    |includeField=\[\]|wikiLabel&includeField=pageLabel&includeField=community\_id&highlight=\[\]&query|
+    |RestServiceUnSecurePort|9081 **Note:** Use the direct server port for the Connections server, not the IHS port.
+
+|
+    |RestServiceSecurePort|9444**Note:** Use the direct server port for the Connections server, not the IHS port.
+
+|
+    |UseHTTPOutbound|Takes a value of true or false \(default\).
+
+ Setting this parameter to true results in the RCSS code to use the HTTP Outbound service.
+
+|
+    |HTTPOutboundMappingPath|The value is a path, as defined in the HTTP Outbound proxy configuration. If the HTTP Outbound support is enabled, this parameter defaults to /IBM\_RCSS
+
+ This value is the mapping path that is used when you access the HTTP Outbound service. A proxy configuration with this context path must exist in the proxy configuration. The configuration then determines how the HTTP invocation is handled.
+
+|
+    |highlight=\[\]|Use this setting to avoid Connection search feeds injecting bold tags to highlight search results.
+
+includeField=wikiLabel&includeField=pageLabel&includeField=community\_id&highlight=\[\]&query|
 
 5.  Log out and log in again before you create scopes for the RCSS service that you configured.
 

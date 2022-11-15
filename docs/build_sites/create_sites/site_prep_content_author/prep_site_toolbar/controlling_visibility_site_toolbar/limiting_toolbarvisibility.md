@@ -29,3 +29,4 @@ You can limit the visibility of the toolbar, Site Manager, and action bar to adm
 10. Click **OK**.
 
 11. Click **Done**.
+

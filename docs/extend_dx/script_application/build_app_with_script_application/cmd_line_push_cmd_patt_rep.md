@@ -1,12 +1,8 @@
----
-title: Generate Unique Namespace IDs
----
-
 # Add tokens to generate unique namespace IDs when applications are pushed or imported to a Script Application
 
 Associating JavaScript variable names and HTML IDs with a unique portlet namespace prevents applications from colliding with each other and uniquely identifies HTML element ID values and JavaScript variables. To use a unique portlet namespace, you can prefix or suffix any imported JavaScript, HTML, CSS, or JSON variable or ID with the token \_\_SPNS\_\_. The Script Application replaces the \_\_SPNS\_\_ token with the Web Content Manager ScriptPortletNamespace plug-in markup when a script application is pushed or imported from the developer client to the server. The Web Content Manager ScriptPortletNamespace plug-in markup generates the unique namespace for the application when it is rendered.
 
-When you use the `__SPNS__` token as a placeholder for the namespace in the external application representation, you can locally test applications that do not otherwise rely on HCL DX and portlet artifacts and markup.
+When you use the `__SPNS__` token as a placeholder for the namespace in the external application representation, you can locally test applications that do not otherwise rely on HCL Portal and portlet artifacts and markup.
 
 In the following example, the `__SPNS__` token represents a pattern that is replaced by the Script Application namespace plug-in markup when the application is pushed or imported to a Script Application from a local file system.
 
@@ -40,6 +36,6 @@ When the application is rendered, the Script Application Namespace plug-in repla
   });
 ```
 
-When you export the application to a compressed file, the Script Application Namespace plug-in markup replaces the `__SPNS__` token again so the application can be tested outside of the HCL DX environment.
+When you export the application to a compressed file, the Script Application Namespace plug-in markup replaces the `__SPNS__` token again so the application can be tested outside of the HCL Portal environment.
 
 

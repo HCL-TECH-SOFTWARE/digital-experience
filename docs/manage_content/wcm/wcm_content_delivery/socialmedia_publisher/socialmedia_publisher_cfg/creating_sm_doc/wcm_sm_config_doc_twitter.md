@@ -54,11 +54,9 @@ When you create a social network configuration document for Twitter:
     [profilecmpnt type="content" context="current" field="keywords" separator=" #" include="exact" start="#"]
     ```
 
-    !!! note
-        Rich Text is not supported for Twitter posts, so it is not recommended to reference rich text elements in your post message.
+    **Note:** Rich Text is not supported for Twitter posts, so it is not recommended to reference rich text elements in your post message.
 
-    !!! note
-        If your posts are exceeding the 140 character limit for Twitter posts, you can adjust length of the title by reducing the length option in the format parameter as shown in this example. Long category names, or a large number of categories, can also lead to exceeding the 140 character limit.
+    **Note:** If your posts are exceeding the 140 character limit for Twitter posts, you can adjust length of the title by reducing the length option in the format parameter as shown in this example. Long category names, or a large number of categories, can also lead to exceeding the 140 character limit.
 
 
 

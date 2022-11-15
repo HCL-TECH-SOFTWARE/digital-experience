@@ -205,252 +205,233 @@ Create a Gradle project to bundle the common dependencies of multiple Script App
 ### Add a Gradle Build Script
 1. Add a DxModule/build.gradle file with the following content:
    ```groovy
-   plugins {
-       id 'ear'
-       id 'war'
-       id "com.github.node-gradle.node" version "3.4.0"
-   }
-   OperatingSystem os = org.gradle.nativeplatform.platform.internal.DefaultNativePlatform.getCurrentOperatingSystem()
-   Architecture arch = org.gradle.nativeplatform.platform.internal.DefaultNativePlatform.getCurrentArchitecture()
-   def dxClientExec='dxclient'
-   if (os.windows) {
-       dxClientExec='dxclient.bat'
-   }
-   
-   
-   group 'com.company.dx.module.custom'
-   //version '1.0-SNAPSHOT'
-   
-   sourceCompatibility=11
-   targetCompatibility=11
-   
-   repositories {
-       mavenLocal()
-       mavenCentral()
-       maven {
-           url "https://plugins.gradle.org/m2/"
-       }
-   }
-   
-   dependencies {
-       deploy files(war)
-   }
-   
-   // to make sure old files are not going to mix in the bundle
-   task deleteDistDxModule{
-       delete(file("dist-dx-module"))
-   }
-   
-   def subModules = project.getProperty("subModulesCSV").split(",")
-   def allSubModulesTasks = [tasks.named("deleteDistDxModule")]
-   
-   subModules.each{ subModule ->
-       def appName = subModule.trim().replaceAll('-','').replaceAll('_','');
-       allSubModulesTasks.add (
-               tasks.create( 'npmInstall'+appName, NpxTask) {
-                   shouldRunAfter = ["deleteDistDxModule"]
-                   workingDir = file("${project.projectDir}/${subModule}")
-                   command = 'npm'
-                   args = ['install']
-               });
-       allSubModulesTasks.add (
-               tasks.create( 'npmBuild'+appName, NpxTask) {
-                   shouldRunAfter = ['npmInstall'+appName]
-                   workingDir = file("${project.projectDir}/${subModule}")
-                   command = 'npm'
-                   args = ['run', 'build-dxsubmodule']
-               });
-   }
-   
-   task buildAllSubModules(dependsOn: allSubModulesTasks){
-       // an array named allSubModulesTasks was dynamically generated from the subModules array to contain all needed npm calls
-       // all tasks needed were invoked via dependsOn parameter, so now we just need to echo that it's done
-       doLast {
-           println 'Task buildAllSubModules done'
-       }
-   }
-   
-   // to make sure the latest rootProject.name is in the web.xml file
-   task deleteWebXml{
-       delete(file("build/tmp/war/web.xml"))
-   }
-   
-   task prepareWebXml (type: Copy, dependsOn: 'deleteWebXml'){
-       from 'src/main/config/war/web.xml'
-       into 'build/tmp/war/'
-       filter { it.replaceAll('@@auto-replaced-with-rootProject.name@@', rootProject.name) }
-   }
-   
-   war {
-       dependsOn buildAllSubModules, prepareWebXml
-       webAppDirectory = file('src/main/webapp/')
-       webXml = file('build/tmp/war/web.xml')
-       from ('src/main/config/war/WEB-INF/') {
-           include '*'
-           into 'WEB-INF'
-           filter { it.replaceAll('@@auto-replaced-with-rootProject.name@@', rootProject.name) }
-       }
-       from ('dist-dx-module') {
-           include '*'
-           into '/'
-       }
-       manifest {
-           attributes 'Manifest-Version': 1
-           attributes 'Created-By': rootProject.name
-       }
-   }
-   
-   ear {
-       setLibDirName(null)
-       deploymentDescriptor {
-           setDisplayName(rootProject.name)
-           webModule(rootProject.name+'.war', '/'+rootProject.name)
-           setVersion('1.4')
-       }
-       from ('src/main/config/ear/META-INF/') {
-           include '*'
-           into 'META-INF'
-       }
-       manifest {
-           attributes 'Manifest-Version': 1
-           attributes 'Created-By': rootProject.name
-       }
-   }
-   
-   def getParamValue(String paramName){
-       if (project.hasProperty(paramName)){
-           return project.getProperty(paramName)
-       }
-       if (System.getProperties().containsKey(paramName)){
-           return System.getProperty(paramName)
-       }
-       return ""
-   }
-   
-   def checkRequiredParam(String paramName){
-       if (getParamValue(paramName).trim()==""){
-           throw new GradleException("#### Required gradle parameter or env value: -D$paramName=<****> OR -P$paramName=<****> ")
-       }
-   }
-   
-   task deployDxModule(type:Exec, dependsOn:'ear') {
-       doFirst{
-           checkRequiredParam("dxUsername")
-           checkRequiredParam("dxPassword")
-           logger.quiet('cd build/libs/')
-           logger.quiet('dxclient deploy-application'+
-                   ' --dxUsername ****'+
-                   ' --dxPassword ****'+
-                   ' --dxConnectUsername ****'+
-                   ' --dxConnectPassword ****'+
-                   ' --applicationFile '+ rootProject.name+'.ear'+
-                   ' --applicationName '+ rootProject.name+
-                   ' --dxProtocol '+ project.getProperty("dxProtocol")+
-                   ' --hostname '+ project.getProperty("dxHostname")+
-                   ' --dxPort '+ project.getProperty("dxPort")+
-                   ' --dxProfileName '+ project.getProperty("dxProfileName"));
-       }
-       workingDir './build/libs'
-       environment DXCLIENT_DISABLE_INTERACTIVE:'true'
-       commandLine dxClientExec, 'deploy-application',
-                   '--dxUsername', getParamValue("dxUsername"),
-                   '--dxPassword', getParamValue("dxPassword"),
-                   '--dxConnectUsername', getParamValue("dxUsername"),
-                   '--dxConnectPassword', getParamValue("dxPassword"),
-                   '--applicationFile', rootProject.name+'.ear',
-                   '--applicationName', rootProject.name,
-                   '--dxProtocol', project.getProperty("dxProtocol"),
-                   '--hostname', project.getProperty("dxHostname"),
-                   '--dxPort', project.getProperty("dxPort"),
-                   '--dxProfileName', project.getProperty("dxProfileName")
-   
-       standardOutput = new ByteArrayOutputStream()
-       ext.output = {
-           return standardOutput.toString()
-       }
-   }
-   
-   def allScriptAppsTasks = []
-   def baseFolder = project.getProperty("baseFolder")
-   def scriptAppFolders = project.getProperty("scriptAppFoldersCSV").split(",")
-   
-   scriptAppFolders.each{ folder ->
-       def appName = folder.substring(folder.lastIndexOf("/")+1).trim().replaceAll('-','').replaceAll('_','');
-       def appBaseFolder = baseFolder+folder
-       allScriptAppsTasks.add (
-           tasks.create( 'npmCleanStored'+appName) {
-               delete(file(appBaseFolder+"/store/dist-dx-scriptapp/"))
-           });
-       allScriptAppsTasks.add (
-           tasks.create( 'npmInstall'+appName, NpxTask) {
-               shouldRunAfter = ['deployDxModule']
-               workingDir = file(appBaseFolder)
-               command = 'npm'
-               args = ['install']
-           });
-       allScriptAppsTasks.add (
-           tasks.create( 'npmBuild'+appName, NpxTask) {
-               dependsOn = ['npmInstall'+appName]
-               shouldRunAfter = ['deployDxModule']
-               workingDir = file(appBaseFolder)
-               command = 'npm'
-               args = ['run', 'build']
-           });
-       allScriptAppsTasks.add (
-           tasks.create( 'deploy'+appName, NpxTask) {
-               dependsOn = ['npmBuild'+appName, 'npmCleanStored'+appName]
-               shouldRunAfter = ['deployDxModule']
-               environment = ['dxUsername':getParamValue("dxUsername"),
-                              'dxPassword':getParamValue("dxPassword"),
-                              'dxProtocol':project.getProperty("dxProtocol"),
-                              'dxHostname':project.getProperty("dxHostname"),
-                              'dxPort':project.getProperty("dxPort"),
-                              'DXCLIENT_DISABLE_INTERACTIVE':'true']
-               workingDir = file(appBaseFolder)
-               command = 'npm'
-               args = ['run', os.windows?'dx-deploy-app-use-env-win':'dx-deploy-app-use-env']
-           });
-   }
-   
-   task deployAllScriptApps(dependsOn: allScriptAppsTasks){
-       // an array named allScriptAppsTasks was dynamically generated from the scriptApps array to contain all needed npm calls
-       // all tasks needed were invoked via dependsOn parameter, so now we just need to echo that it's done
-       doLast {
-           println 'Task deployAllScriptApps done'
-       }
-   }
-   
-   task deployAll(dependsOn: ['deployDxModule', 'deployAllScriptApps']){
-       // all tasks needed were invoked via dependsOn parameter
-       doLast {
-           println 'Task deployAll done'
-       }
-   }
-   
-   
-   if (project.hasProperty("nodeInstall")) {
-       // Workaround node grade plugin not working on apple silicon https://github.com/node-gradle/gradle-node-plugin/issues/154
-       Boolean downloadNode = !os.isMacOsX() || arch.isAmd64()
-       node {
-           version = project.getProperty("nodeVersion")
-           npmVersion = project.getProperty("npmVersion")
-           download = downloadNode
-       }
-   
-       // Copy local node and npm to a fixed location for npmw
-       def fixedNode = tasks.register("fixedNode", Copy) {
-           from nodeSetup
-           into 'build/node'
-       }
-       tasks.named("nodeSetup").configure { finalizedBy fixedNode }
-   
-       def fixedNpm = tasks.register("fixedNpm", Copy) {
-           from npmSetup
-           into 'build/node'
-       }
-       tasks.named("npmSetup").configure { finalizedBy fixedNpm }
-   }
-   
+    plugins {
+        id 'ear'
+        id 'war'
+        id "com.github.node-gradle.node" version "3.4.0"
+    }
+    
+    group 'com.company.dx.module.custom'
+    //version '1.0-SNAPSHOT'
+    
+    sourceCompatibility=11
+    targetCompatibility=11
+    
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    
+    dependencies {
+        deploy files(war)
+    }
+    
+    // to make sure old files are not going to mix in the bundle
+    task deleteDistDxModule{
+        delete(file("dist-dx-module"))
+    }
+    
+    def subModules = project.getProperty("subModulesCSV").split(",")
+    def allSubModulesTasks = [tasks.named("deleteDistDxModule")]
+    
+    subModules.each{ subModule ->
+        def appName = subModule.replaceAll('-','').replaceAll('_','');
+        allSubModulesTasks.add (
+                tasks.create( 'npmInstall'+appName, NpxTask) {
+                    shouldRunAfter = ["deleteDistDxModule"]
+                    workingDir = file("${project.projectDir}/${subModule}")
+                    command = 'npm'
+                    args = ['install']
+                });
+        allSubModulesTasks.add (
+                tasks.create( 'npmBuild'+appName, NpxTask) {
+                    shouldRunAfter = ['npmInstall'+appName]
+                    workingDir = file("${project.projectDir}/${subModule}")
+                    command = 'npm'
+                    args = ['run', 'build-dxsubmodule']
+                });
+    }
+    
+    task buildAllSubModules(type:Exec, dependsOn: allSubModulesTasks){
+        // an array named allSubModulesTasks was dynamically generated from the subModules array to contain all needed npm calls
+        // all tasks needed were invoked via dependsOn parameter, so now we just need to echo that it's done
+        commandLine 'echo',' Task buildAllSubModules Done'
+    }
+    
+    // to make sure the latest rootProject.name is in the web.xml file
+    task deleteWebXml{
+        delete(file("build/tmp/war/web.xml"))
+    }
+    
+    task prepareWebXml (type: Copy, dependsOn: 'deleteWebXml'){
+        from 'src/main/config/war/web.xml'
+        into 'build/tmp/war/'
+        filter { it.replaceAll('@@auto-replaced-with-rootProject.name@@', rootProject.name) }
+    }
+    
+    war {
+        dependsOn buildAllSubModules, prepareWebXml
+        webAppDirectory = file('src/main/webapp/')
+        webXml = file('build/tmp/war/web.xml')
+        from ('src/main/config/war/WEB-INF/') {
+            include '*'
+            into 'WEB-INF'
+            filter { it.replaceAll('@@auto-replaced-with-rootProject.name@@', rootProject.name) }
+        }
+        from ('dist-dx-module') {
+            include '*'
+            into '/'
+        }
+        manifest {
+            attributes 'Manifest-Version': 1
+            attributes 'Created-By': rootProject.name
+        }
+    }
+    
+    ear {
+        setLibDirName(null)
+        deploymentDescriptor {
+            setDisplayName(rootProject.name)
+            webModule(rootProject.name+'.war', '/'+rootProject.name)
+            setVersion('1.4')
+        }
+        from ('src/main/config/ear/META-INF/') {
+            include '*'
+            into 'META-INF'
+        }
+        manifest {
+            attributes 'Manifest-Version': 1
+            attributes 'Created-By': rootProject.name
+        }
+    }
+    
+    def getParamValue(String paramName){
+        if (project.hasProperty(paramName)){
+            return project.getProperty(paramName)
+        }
+        if (System.getProperties().containsKey(paramName)){
+            return System.getProperty(paramName)
+        }
+        return ""
+    }
+    
+    def checkRequiredParam(String paramName){
+        if (getParamValue(paramName).trim()==""){
+            throw new GradleException("#### Required gradle parameter or env value: -D$paramName=<****> OR -P$paramName=<****> ")
+        }
+    }
+    
+    task deployDxModule(type:Exec, dependsOn:'ear') {
+        doFirst{
+            checkRequiredParam("dxUsername")
+            checkRequiredParam("dxPassword")
+            logger.quiet('cd build/libs/')
+            logger.quiet('dxclient deploy-application'+
+                    ' --dxUsername ****'+
+                    ' --dxPassword ****'+
+                    ' --dxConnectUsername ****'+
+                    ' --dxConnectPassword ****'+
+                    ' --applicationFile '+ rootProject.name+'.ear'+
+                    ' --applicationName '+ rootProject.name+
+                    ' --dxProtocol '+ project.getProperty("dxProtocol")+
+                    ' --hostname '+ project.getProperty("dxHostname")+
+                    ' --dxPort '+ project.getProperty("dxPort")+
+                    ' --dxProfileName '+ project.getProperty("dxProfileName"));
+        }
+        workingDir './build/libs'
+        commandLine 'dxclient', 'deploy-application',
+                '--dxUsername', getParamValue("dxUsername"),
+                '--dxPassword', getParamValue("dxPassword"),
+                '--dxConnectUsername', getParamValue("dxUsername"),
+                '--dxConnectPassword', getParamValue("dxPassword"),
+                '--applicationFile', rootProject.name+'.ear',
+                '--applicationName', rootProject.name,
+                '--dxProtocol', project.getProperty("dxProtocol"),
+                '--hostname', project.getProperty("dxHostname"),
+                '--dxPort', project.getProperty("dxPort"),
+                '--dxProfileName', project.getProperty("dxProfileName")
+        standardOutput = new ByteArrayOutputStream()
+        ext.output = {
+            return standardOutput.toString()
+        }
+    }
+    
+    def allScriptAppsTasks = []
+    def baseFolder = project.getProperty("baseFolder")
+    def scriptAppFolders = project.getProperty("scriptAppFoldersCSV").split(",")
+    
+    scriptAppFolders.each{ folder ->
+        def appName = folder.substring(folder.lastIndexOf("/")+1).replaceAll('-','').replaceAll('_','');
+        allScriptAppsTasks.add (
+                tasks.create( 'npmInstall'+appName, NpxTask) {
+                    shouldRunAfter = ['deployDxModule']
+                    workingDir = file(baseFolder+folder)
+                    command = 'npm'
+                    args = ['install']
+                });
+        allScriptAppsTasks.add (
+                tasks.create( 'npmBuild'+appName, NpxTask) {
+                    dependsOn = ['npmInstall'+appName]
+                    shouldRunAfter = ['deployDxModule']
+                    workingDir = file(baseFolder+folder)
+                    command = 'npm'
+                    args = ['run', 'build']
+                });
+        allScriptAppsTasks.add (
+                tasks.create( 'deploy'+appName, NpxTask) {
+                    dependsOn = ['npmBuild'+appName]
+                    shouldRunAfter = ['deployDxModule']
+                    environment = ['dxUsername':getParamValue("dxUsername"),
+                                   'dxPassword':getParamValue("dxPassword"),
+                                   'dxProtocol':project.getProperty("dxProtocol"),
+                                   'dxHostname':project.getProperty("dxHostname"),
+                                   'dxPort':project.getProperty("dxPort")]
+                    workingDir = file(baseFolder+folder)
+                    command = 'npm'
+                    args = ['run', 'dx-deploy-app-use-env']
+                });
+    }
+    
+    task deployAllScriptApps(type:Exec, dependsOn: allScriptAppsTasks){
+        // an array named allScriptAppsTasks was dynamically generated from the scriptApps array to contain all needed npm calls
+        // all tasks needed were invoked via dependsOn parameter, so now we just need to echo that it's done
+        commandLine 'echo',' Task deployAllScriptApps Done'
+    }
+    
+    task deployAll(type:Exec, dependsOn: ['deployDxModule', 'deployAllScriptApps']){
+        // all tasks needed were invoked via dependsOn parameter
+        commandLine 'echo',' Task deployAll Done'
+    }
+    
+    
+    if (project.hasProperty("nodeInstall")) {
+        // Workaround node grade plugin not working on apple silicon https://github.com/node-gradle/gradle-node-plugin/issues/154
+        OperatingSystem os = org.gradle.nativeplatform.platform.internal.DefaultNativePlatform.getCurrentOperatingSystem()
+        Architecture arch = org.gradle.nativeplatform.platform.internal.DefaultNativePlatform.getCurrentArchitecture()
+        Boolean downloadNode = !os.isMacOsX() || arch.isAmd64()
+        node {
+            version = project.getProperty("nodeVersion")
+            npmVersion = project.getProperty("npmVersion")
+            download = downloadNode
+        }
+    
+        // Copy local node and npm to a fixed location for npmw
+        def fixedNode = tasks.register("fixedNode", Copy) {
+            from nodeSetup
+            into 'build/node'
+        }
+        tasks.named("nodeSetup").configure { finalizedBy fixedNode }
+    
+        def fixedNpm = tasks.register("fixedNpm", Copy) {
+            from npmSetup
+            into 'build/node'
+        }
+        tasks.named("npmSetup").configure { finalizedBy fixedNpm }
+    }
+    
    ```
 
 ### Add Webpack Files
@@ -469,8 +450,7 @@ Create a Gradle project to bundle the common dependencies of multiple Script App
              dxmodules: './modules-index.js'
          },
          mode: "production",
-         target: 'web',
-         node: { global: true },
+         target: 'node',
          output: {
              filename: "[name].bundle.js",
              path: path.resolve(__dirname, "dist-dx-module"),

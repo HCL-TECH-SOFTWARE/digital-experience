@@ -34,7 +34,8 @@ You can select libraries specifically for the "insert links" and "insert images"
 5.  Select the required libraries and click **OK**.
 6.  Click **Done**.
 
-!!! note
-    If you syndicate or import a library, it is not automatically added to the list of configured libraries for an authoring portlet on the target server. You must add the syndicated or imported library to each authoring portlet on each server.
+**Note:**
+
+If you syndicate or import a library, it is not automatically added to the list of configured libraries for an authoring portlet on the target server. You must add the syndicated or imported library to each authoring portlet on each server.
 
 

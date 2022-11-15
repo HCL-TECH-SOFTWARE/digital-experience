@@ -30,7 +30,6 @@ To specify pow, set `db.applic.param.BestBets.Power`:
 db.applic.param.BestBets.Power = 1.0
 ```
 
-!!! note 
-    You can use these parameters for all of the Recommendation engines except for the Item Affinity Engine.
+**Note:** You can use these parameters for all of the Recommendation engines except for the Item Affinity Engine.
 
 

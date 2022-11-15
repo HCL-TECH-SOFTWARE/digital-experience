@@ -23,7 +23,7 @@ The version of Content Template 3.x that ran on Portal 7 was based on the PageBu
         ConfigEngine.bat action-create-ear-wp.mmi.deploy
         ```
 
-    -   **AIX and Linux™**
+    -   **AIX®HP-UX Linux™**
 
         ```
         ./ConfigEngine.sh action-create-ear-wp.mmi.deploy
@@ -44,7 +44,7 @@ The version of Content Template 3.x that ran on Portal 7 was based on the PageBu
     ```
 
 3.  Log in to HCL Digital Experience as an administrator.
-4.  Click the **Administration menu** icon. Then, click **Portal Settings > Import XML**.
+4.  Click the **Administration menu** icon. Then, click **Portal Settings** \> **Import XML**.
 5.  Import the file that is saved in Step 2.
 
 ## Enabling inline editing for Content Template version 3.x
@@ -58,6 +58,6 @@ Inline editing for Content Template version 3.x is not enabled during migration.
 
 ## Tagging and rating
 
-If you use tagging and rating, then you must enable the new tag and rating widgets after migration. For more information, see [Enabling the new tag and rating widgets after a portal upgrade](../../../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/mig_post_tagandrate.md).
+If you use tagging and rating, then you must enable the new tag and rating widgets after migration. For more information, see [Enabling the new tag and rating widgets after a portal upgrade](../migrate/mig_post_tagandrate.md).
 
 

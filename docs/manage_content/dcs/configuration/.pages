@@ -1,5 +1,4 @@
-title: Configure DCS
+title: Configure Document Conversion Services
 nav:
     - index.md
-    - For Systems Other than Windows: dcs_config_nonwin.md
-    - Images for OS Other than Windows: dcs_config_images.md
+    - dcs_config_nonwin.md    - dcs_config_i.md    - dcs_config_images.md

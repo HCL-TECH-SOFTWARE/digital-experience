@@ -10,7 +10,7 @@ You can restore a set of items within a library that either have the same label 
 
 1.  Click the **Administration menu** icon in the toolbar.
 
-2.  Click **Portal Content > Web Content Libraries**.
+2.  Click **Portal Content** \> **Web Content Libraries**.
 
 3.  Click **Additional Tasks**:
 
@@ -24,10 +24,11 @@ You can restore a set of items within a library that either have the same label 
 
 4.  Click **Additional Tasks** and then **View Report** to open a list of library restore reports.
 
-<!--
-**Parent topic:**[Managing web content libraries](../panel_help/wcm_admin_libraries.md)-->
+
+**Parent topic:**[Managing web content libraries](../panel_help/wcm_admin_libraries.md)
+
+**Related information**  
 
 
-???+ info "Related information:"
-    - [How to manage versions of items](../../../../../manage_content/wcm/mng_content_with_auth_portlet/item_management_features/wcm_managing_versions.md)
+[How to manage versions of items](../panel_help/wcm_managing_versions.md)
 

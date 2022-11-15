@@ -4,13 +4,13 @@ Use the Manage Search portlet to export search web collections from a source por
 
 1.  To include the security information when you export the search collection, add the WS\_KEY parameter to the search service that contains the source search collection that you want to export. Complete the following steps:
 
-    1.  To open the **Manage Search** portlet, click the **Administration menu** icon. Then, click **Search Administration > Manage Search**.
+    1.  To open the **Manage Search** portlet, click the **Administration menu** icon. Then, click **Search Administration** \> **Manage Search**.
 
     2.  Click **Search Services**.
 
     3.  Click the **Edit** icon for the search service that contains the search collection that you want to export.
 
-    4.  In the **Parameter key** field, enter WS_KEY.
+    4.  In the **Parameter key** field, enter WS\_KEY.
 
     5.  In the **New parameter value** field, enter secret.
 
@@ -18,8 +18,7 @@ Use the Manage Search portlet to export search web collections from a source por
 
     7.  Click **OK**.
 
-    !!!note
-        If you do not export the security information when you export a search collection, you must manually add the user name and password to each content source after you import the search collection into the target portal.
+    **Note:** If you do not export the security information when you export a search collection, you must manually add the user name and password to each content source after you import the search collection into the target portal.
 
 2.  Click **Manage Search.**
 
@@ -33,6 +32,8 @@ Use the Manage Search portlet to export search web collections from a source por
 
 
 
-???+ info "Related information"  
-    -   [Importing search web collections](../../../../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/mig_t_import_webcoll.md)
+**Related information**  
+
+
+[Importing search web collections](../migrate/mig_t_import_webcoll.md)
 

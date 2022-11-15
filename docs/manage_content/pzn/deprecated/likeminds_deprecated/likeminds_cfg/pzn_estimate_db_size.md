@@ -19,15 +19,121 @@ The following table gives typical numbers of rows, row sizes, and index sizes fo
 
 |Table|Rows in Typical Site|Row Size \(Bytes\)|Total Size|Index Size \(Bytes Per Row\)|Total Size|
 |-----|--------------------|------------------|----------|----------------------------|----------|
-|Lps\_User\_Rating|8,000,000|25|200 MB|about 20|160 MB|
-|Lps\_User\_Trx|8,000,000|32|256 MB|about 20|160 MB|
-|Lps\_User\_Mentor|5,000,000|25|125 MB|about 20|100 MB|
-|Lps\_User\_Data|100,000|typical: 100 maximum: 400|100-400MB|about 100|10 MB|
-|Lps\_Item\_Data|5000|136 \(for required fields only\)|68 MB|4|2 MB|
-|Lps\_MBA\_Scored|10,000|32|32 MB|about 20|1MB|
-|Lps\_Genre\_Data|10-1000|116|1160 KB-116 MB| |N/A|
-|Lps\_Item\_Genre|5000-20,000|12|60-240MB| |N/A|
-|Lps\_User\_Selector|25,000-100,000|12|30-120MB|4|100-400 MB|
+|Lps\_User\_Rating
+
+|8,000,000
+
+|25
+
+|200 MB
+
+|about 20
+
+|160 MB
+
+|
+|Lps\_User\_Trx
+
+|8,000,000
+
+|32
+
+|256 MB
+
+|about 20
+
+|160 MB
+
+|
+|Lps\_User\_Mentor
+
+|5,000,000
+
+|25
+
+|125 MB
+
+|about 20
+
+|100 MB
+
+|
+|Lps\_User\_Data
+
+|100,000
+
+|typical: 100
+
+ maximum: 400
+
+|100-400MB
+
+|about 100
+
+|10 MB
+
+|
+|Lps\_Item\_Data
+
+|5000
+
+|136 \(for required fields only\)
+
+|68 MB
+
+|4
+
+|2 MB
+
+|
+|Lps\_MBA\_Scored
+
+|10,000
+
+|32
+
+|32 MB
+
+|about 20
+
+|1MB
+
+|
+|Lps\_Genre\_Data
+
+|10-1000
+
+|116
+
+|1160 KB-116 MB
+
+| |N/A
+
+|
+|Lps\_Item\_Genre
+
+|5000-20,000
+
+|12
+
+|60-240MB
+
+| |N/A
+
+|
+|Lps\_User\_Selector
+
+|25,000-100,000
+
+|12
+
+|30-120MB
+
+|4
+
+|100-400 MB
+
+|
 
 In your size estimate, remember to include space for transaction logging and rollback areas. Because the LikeMinds server commits frequently, the rollback area need not be especially large relative to the database. Allow space equal to the size of the database for transaction logs, since the LikeMinds server performs frequent updates.
 

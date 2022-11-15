@@ -6,8 +6,7 @@ You can define the skin and assign it to a theme by using **Manage properties** 
 
 1.  Use the following code snippet as a template for the XMLAccess skin definition to import, where theme\_context, skin\_folder\_name, skin\_unique\_name, skin\_title, theme\_folder, skin\_folder\_name, and theme\_unique\_name are the unique values for your theme and skin.
 
-    !!! note
-		This template creates a title in English only, but you can add more locales.
+    **Note:** This template creates a title in English only, but you can add more locales.
 
     ```
     <?xml version="1.0" encoding="UTF-8"?>

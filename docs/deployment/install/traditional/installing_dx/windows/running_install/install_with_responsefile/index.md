@@ -9,8 +9,6 @@ Locate the sample response file in the SETUP\_root/products/WP95\_Server/native 
 
 The installation program verifies the operating system and its prerequisites, available disk space, and any required software prerequisites before installation. You cannot install two instances of the server at the same time, even if you are installing to different directories. You must install each server completely before you install the next one.
 
-## Procedure
-
 1.  If the repository URL requires authentication, use the IBM Installation Manager command-line tool to create a secure **Storage File**.
 
     The secure **Storage File** stores the credentials that are needed for the repositories. The IBM Installation Manager command-line tool imutilsc is available from the installation tools directory. The following information is an example of the imutilsc key ring file command:
@@ -25,20 +23,18 @@ The installation program verifies the operating system and its prerequisites, av
     	[ -verbose ]
     ```
 
-    !!! tip 
-        If you install on a different computer, copy the secure **Storage File** to that computer.
+    **Tip:** If you install on a different computer, copy the secure **Storage File** to that computer.
 
 2.  Go to the InstallationManager\_root/eclipse/tools directory.
 
 3.  Run the following task to install HCL Portal on an existing WebSphere Application Server:
 
-    !!! tip 
-        Add the `-secureStorageFile pathtosecureStorageFile -masterPasswordFile pathtomasterPasswordFile` parameters to the `imcl` command if you are using a secure **Storage File** to store credentials.
+    **Tip:** Add the -secureStorageFile pathtosecureStorageFile -masterPasswordFile pathtomasterPasswordFile parameters to the imcl command if you are using a secure **Storage File** to store credentials.
 
-    `imcl -acceptLicense input pathtoresponse.xml -log dirpath/logfilename`
+    imcl -acceptLicense input pathtoresponse.xml -log dirpath/logfilename
 
 
--   **[Creating a response file for installing HCL Digital Experience in Windows](inst_response-windows.md)**  
+-   **[Creating a response file for installing HCL Digital Experience in Windows](../install/inst_response-windows.md)**  
 Use IBM Installation Manager to record a response file based on your environment, and also to automate your installation on multiple servers.
 
 

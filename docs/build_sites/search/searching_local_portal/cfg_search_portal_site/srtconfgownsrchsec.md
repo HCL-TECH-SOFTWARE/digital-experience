@@ -22,13 +22,17 @@ Set up your own customized search collection for searching a secured portal site
 
 10. To enable search on the portal site for users, click **Start Collecting**.
 
-    !!! note
-        1.  You can crawl, index, and search secured portal pages only on your local portal installation. For security reasons, you cannot crawl secured pages of one portal site from another portal site.
-        2.  Under normal circumstances, exclude all administrative portlets and all portlets that represent highly dynamic content from being accessible to the crawler user. This includes such portlets that contain action links with Delete actions. Otherwise, the Delete action can be started through the crawler.
-        3.  You can include composite applications with the portal resources that you make available for search by users, when you customize the portal site search collection. To do this step, make sure that you give the crawler user ID the required access permissions to those composite applications.
-        4.  Instead of creating a new search collection and content source for the portal site search you can also use the collection and content source of the default portal site search setup. In this case, replace the completed user ID and password in the Edit Content Source Configuration panel with the one that you want to use.
-        5.  For details about how to create a search collection and a content source, see the topics *Creating and configuring search collections* and *Managing the content sources of a search collection*, and the *Manage Search* portlet help.
+    **Note:**
+
+    1.  You can crawl, index, and search secured portal pages only on your local portal installation. For security reasons, you cannot crawl secured pages of one portal site from another portal site.
+    2.  Under normal circumstances, exclude all administrative portlets and all portlets that represent highly dynamic content from being accessible to the crawler user. This includes such portlets that contain action links with Delete actions. Otherwise, the Delete action can be started through the crawler.
+    3.  You can include composite applications with the portal resources that you make available for search by users, when you customize the portal site search collection. To do this step, make sure that you give the crawler user ID the required access permissions to those composite applications.
+    4.  Instead of creating a new search collection and content source for the portal site search you can also use the collection and content source of the default portal site search setup. In this case, replace the completed user ID and password in the Edit Content Source Configuration panel with the one that you want to use.
+    5.  For details about how to create a search collection and a content source, see the topics *Creating and configuring search collections* and *Managing the content sources of a search collection*, and the *Manage Search* portlet help.
 
 
-???+ info "Related information"
-    -   [Searching on secured portal sites and pages and content management items](../../planning_portal_search/security_considerations/srtsrchscrprtlstepgs.md)
+**Related information**  
+
+
+[Searching on secured portal sites and pages and content management items](../admin-system/srtsrchscrprtlstepgs.md)
+

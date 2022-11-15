@@ -30,8 +30,7 @@ Import the base release and remaining portal artifacts on the target. This proce
 
 9.  Copy /opt/IBM/WebSphere/wp\_profile/PortalServer/deployed/archive from source to target.
 
-    !!!note
-        It is important to run this step as documented and not run before you run the clean-up tasks.
+    **Note:** It is important to run this step as documented and not run before you run the clean-up tasks.
 
 10. Go to the target portal profile bin directory: cd /opt/IBM/WebSphere/wp\_profile/PortalServer/bin
 
@@ -72,14 +71,13 @@ Import the base release and remaining portal artifacts on the target. This proce
 
 16. Copy and deploy all custom ear and war files from source to target, including pre-deployed portlets and themes.
 
-    !!!note
-        The general assumption is that your theme is an ear file. If you have your theme in WebDAV store, use the config task to export and import the custom theme.
+    **Note:** The general assumption is that your theme is an ear file. If you have your theme in WebDAV store, use the config task to export and import the custom theme.
 
     For example, BlueCo theme and skin were installed on the source portal. Therefore, BlueCo theme and skin are installed in the target portal through the WebSphere® Application Server Administration Console.
 
     1.  Log in the WebSphere Application Server Integrated Solutions Console.
 
-    2.  Follow the path **Applications > New Application > New Enterprise Application**.
+    2.  Follow the path **Applications** \> **New Application** \> **New Enterprise Application**.
 
     3.  Enter the path for custom enterprise application.
 

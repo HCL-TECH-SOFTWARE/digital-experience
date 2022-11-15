@@ -12,11 +12,11 @@ Follow these steps to edit images using HCL Digital Experience 9.5 Digital Asset
 
 1.  From the HCL Digital Experience 9.5 Digital Asset Management interface, hover over a media asset to access **Edit** options. Click the **Edit** \(pencil\) icon.
 
-    ![Edit digital media asset](../../../../../images/dam_05_edit_media.png)
+    ![Edit digital media asset](../../../images/dam_05_edit_media.png)
 
 2.  From the **Edit** page, several options are available to edit the image.
 
-    ![Edit > Crop options](../../../../../images/dam_edit_crop_options.png)
+    ![Edit > Crop options](../../../images/dam_edit_crop_options.png)
 
 3.  Select and click any of the following **Edit** options:
 
@@ -33,7 +33,7 @@ Follow these steps to edit images using HCL Digital Experience 9.5 Digital Asset
 
     -   **More** - Click to see additional actions available for the digital media asset.
 
-        ![Edit > More options](../../../../../images/dam_edit_more_options.png)
+        ![Edit > More options](../../../images/dam_edit_more_options.png)
 
         -   **Copy link** - Copy the URL address of the digital media asset.
         -   **Delete** - Delete the selected digital media asset.
@@ -43,9 +43,8 @@ Follow these steps to edit images using HCL Digital Experience 9.5 Digital Asset
 5.  Click **Apply**to save your changes.
 6.  To save your changes, click either **Save** or **Save as new** to save changes as a new digital asset.
 
-<!--
 ## HCL Digital Experience Solution Feedback
 
-HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).-->
+HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).
 
 

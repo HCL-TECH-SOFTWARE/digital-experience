@@ -10,8 +10,7 @@ A workflow item can be created by sending a POST request to the following URI wi
 /Workflow
 ```
 
-!!! note
-    A library link is required to specify the location to create the workflow.
+**Note:** A library link is required to specify the location to create the workflow.
 
 For example:
 

@@ -36,7 +36,7 @@ All of the theme modules providing functions for editing and managing the site, 
 
 5.  In the default version 8.0 theme, the names of the theme template files are theme.html and theme\_sidenav.html. The localized versions of theme.html can be found in the locale subfolder, nls.
 
-    For example theme_en.html. The theme template Plain.html does not need to be edited.
+    For example theme\_en.html. The theme template Plain.html does not need to be edited.
 
 6.  In the menuDefinitions directory, remove shelfActions.json and moreActions.json.
 
@@ -45,6 +45,9 @@ All of the theme modules providing functions for editing and managing the site, 
 8.  In the system directory, keep layouts.json and styles.json. Remove all other files.
 
 
-???+ info "Related information"
-    -   [Supported toolbar customization](./../../../../../../deployment/manage/migrate/planning_migration/dev_consideration/mig_plan_toolbar_customize.md)
+
+**Related information**  
+
+
+[Supported toolbar customization](../migrate/mig_plan_toolbar_customize.md)
 

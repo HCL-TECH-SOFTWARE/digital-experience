@@ -6,7 +6,7 @@ The custom listener class can implement the **LogListener** interface explicitly
 
 1.  Implement a class that extends `com.ibm.wcp.analysis.event.LogAdaptor`. Override the `handleEvent` methods that accept the event type of interest. You can also provide an implementation for `startHandlingEvents` and `stopHandlingEvents` if your listener needs to perform initialization or cleanup, respectively.
 2.  Install the class file for your custom listener in the classpath of the server where the Personalization run-time is installed.
-3.  Add the class name to the logListeners property in the FeedbackService.properties file, located in the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md)/PortalServer/config/config/services directory.
+3.  Add the class name to the logListeners property in the FeedbackService.properties file, located in the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/config/config/services directory.
 4.  Restart the Personalization run-time server.
 
 Note that custom listener classes \(other than customized feedback listeners\) are always enabled when the Personalization run-time enterprise application is running.

@@ -12,7 +12,7 @@ In this example, you are creating two segments by using a profiler rule: Smartph
 
 4.  The numbered screen capture, along with the corresponding table, provides the values and selections that are used in this example. Use these example values and selections to guide you in creating a profiler rule by using the device class attribute.
 
-    ![Screen capture of a profiler rule in the Personalization Editor](../../../../../../images/segment_profiler2.jpg)
+    ![Screen capture of a profiler rule in the Personalization Editor](../images/segment_profiler2.jpg)
 
     |Numbered item in screen capture|Description|
     |-------------------------------|-----------|

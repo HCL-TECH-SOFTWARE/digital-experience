@@ -26,7 +26,7 @@ There are several different types of Portal URLs depending on what task you are 
 
 -   **Piece-of-Content URLs**
 
-    Piece-of-content URLs or PoC URLs are late binding mechanism that targets content instead of Portal artifacts such as pages. They use a different URL entry point into HCL Portal (typically mypoc or mycontenthandler instead of myportal). A programming API is available for working with Piece-of-Content URLs.
+    Piece-of-content URLs or PoC URLs are late binding mechanism that targets content instead of Portal artifacts such as pages. They use a different URL entry point into HCL Portal \(typically mypoc or mycontenthandler instead of myportal\). A programming API is available for working with Piece-of-Content URLs.
 
 
 ## Methods for generating portal URLs
@@ -40,7 +40,7 @@ HCL Portal makes several options available to a programmer for generating these 
     -   Or if necessary when you modify an existing portlet, and upgrading is not a possibility, the older JSR 168 Portlet API is used.
     -   The HCL Portlet API is no longer supported. Older portlets that are written to this API must be migrated to the current standard.
 -   HCL Portal defined public render parameters. This method can support many use cases that previously required the use of the Navigational State API.
--   Friendly URL API method is specifically for use cases that involve Friendly URLs, including URLs that must be stateless (have no encoded Navigational State document).
+-   Friendly URL API method is specifically for use cases that involve Friendly URLs, including URLs that must be stateless \(have no encoded Navigational State document\).
 -   PoC URL API method is specifically for creating Piece-of-Content URLs.
 -   Vanity URL API method is specifically for working with Vanity URLs.
 -   Navigational State API method is the most full-featured and general programming tool for URL generation, but requires the most in-depth understanding and programming skill.
@@ -49,14 +49,14 @@ When you create cooperating portlets that require inter-portlet communication, t
 
 Mapping use cases to available programming tools
 
-|Task (Simplest to most Complex)|URL Generation Method|
+|Task \(Simplest to most Complex\)|URL Generation Method|
 |---------------------------------|---------------------|
 |Creating page navigation links between Portal pages at the theme level. For example, standard tabbed pages navigation.
 
-|These URLs are typically simple render URLs. In JSPs, use the <portal-navigation/> JSP tags. For more information about programming a Portal theme, see *Developing Themes and Skins* section.
+|These URLs are typically simple render URLs. In JSPs, use the <portal-navigation/\> JSP tags. For more information about programming a Portal theme, see *Developing Themes and Skins* section.
 
 |
-|A JSR 286 portlet, self-contained (no inter-portlet communication required), generating action URLs to itself and setting its own render parameters.
+|A JSR 286 portlet, self-contained \(no inter-portlet communication required\), generating action URLs to itself and setting its own render parameters.
 
 |-   JSR 286 defines a tag library for use in JSPs. This tag library is greatly expanded over the V1.0/JSR168 version. It has its own namespace to avoid collisions with the V1.0 library.
 
@@ -85,13 +85,13 @@ action="<portlet:actionURL/>">
 
 **Note:** An action URL must have the Navigational State document encoded on it.
 
--   To do the equivalent in java code instead of using the JSP tags, use the JSR 286 Portlet API, which is in package javax.portlet.* For more information, see the related link *Package javax.portlet.* In particular, see the RenderResponse interface. A RenderResponse is passed to the portlet's render method by the portlet container. RenderResponse implements MimeResponse, which provides 3 methods for creating self-referential URLs:
-    -   createRenderURL()
-    -   createActionURL()
-    -   createResourceURL()
+-   To do the equivalent in java code instead of using the JSP tags, use the JSR 286 Portlet API, which is in package javax.portlet.\* For more information, see the related link *Package javax.portlet.* In particular, see the RenderResponse interface. A RenderResponse is passed to the portlet's render method by the portlet container. RenderResponse implements MimeResponse, which provides 3 methods for creating self-referential URLs:
+    -   createRenderURL\(\)
+    -   createActionURL\(\)
+    -   createResourceURL\(\)
 
 |
-|A JSR 286 portlet, which requires inter-portlet communication with another JSR 286 portlet, but no page navigation (Portal view remains on the current page).
+|A JSR 286 portlet, which requires inter-portlet communication with another JSR 286 portlet, but no page navigation \(Portal view remains on the current page\).
 
 |It might be sufficient to use the JSR 286 render parameter support. However, other techniques also exist. For more information, see the *Portlet communication* section.
 
@@ -103,7 +103,7 @@ action="<portlet:actionURL/>">
 |
 |A JSR 286 portlet, which needs to
 
--   Generate a render link to another Portal page (causes page navigation).
+-   Generate a render link to another Portal page \(causes page navigation\).
 -   Optionally control the mode or window state of the targeted portlet.
 -   Optionally control the Portal state.
 -   Optionally control the render parameters of the targeted portlet.
@@ -115,7 +115,7 @@ action="<portlet:actionURL/>">
 
 These special public render parameters can be accessed through the normal JSR286 API `renderResponse.getParameter(<parameter qualified name>)`.
 
-Where `<parameter qualified name>` is the concatenation of the NAMESPACE_URI and one of the render parameter names, as defined in the following section. For example, http://www.ibm.com/xmlns/prod/websphere/portal/publicparams selection.
+Where `<parameter qualified name>` is the concatenation of the NAMESPACE\_URI and one of the render parameter names, as defined in the following section. For example, http://www.ibm.com/xmlns/prod/websphere/portal/publicparams selection.
 
 -   **To set Navigational State values by using render parameters:**
 
@@ -129,31 +129,31 @@ By setting these specific render parameters by using the normal JSR286 APIs, the
 -   This support requires the use of stateful URLs because the render parameters are only carried in the encoded Navigation State document.
 -   All these values are available as public constants in the com.ibm.portal.PublicRenderParameters class, which is a public API within the wp.model.api component. For complete details, see the HCL Portal javadoc *HCL Digital Experience, 8.5.0.0 SPI Specification.*
 
- The namespace of the HCL Portal specified public render parameter is http://www.ibm.com/xmlns/prod/websphere/portal/publicparams (available as NAMESPACE_URI). The following items are the special public render parameters that HCL Portal supports:
+ The namespace of the HCL Portal specified public render parameter is http://www.ibm.com/xmlns/prod/websphere/portal/publicparams \(available as NAMESPACE\_URI\). The following items are the special public render parameters that HCL Portal supports:
 
--   selection (NAME_SELECTION)
--   uri (NAME_URI)
--   parameters (NAME_PARAMETERS)
--   locale (NAME_LOCALE)
--   themeTemplate (NAME_THEME_TEMPLATE)
--   labelMappings (NAME_LABEL_MAPPINGS)
--   screenTemplate (NAME_SCREEN_TEMPLATE)
--   themePolicy (NAME_THEME_POLICY)
--   solo (NAME_SOLO)
--   showTools (NAME_SHOW_TOOLS)
--   hiddenContent (NAME_HIDDEN_CONTENT)
--   hiddenPages (NAME_HIDDEN_PAGES)
--   statePartition (NAME_STATE_PARTITION)
--   path-info (NAME_PATH_INFO)
--   focus (NAME_FOCUS)
--   deviceClass (NAME_DEVICE_CLASS)
--   digest (NAME_DIGEST)
--   pageMode (NAME_PAGE_MODE)
--   editMode (NAME_PAGE_EDIT_MODE)
--   infoMode (NAME_PAGE_INFO_MODE)
--   helpMode (NAME_PAGE_HELP_MODE)
+-   selection \(NAME\_SELECTION\)
+-   uri \(NAME\_URI\)
+-   parameters \(NAME\_PARAMETERS\)
+-   locale \(NAME\_LOCALE\)
+-   themeTemplate \(NAME\_THEME\_TEMPLATE\)
+-   labelMappings \(NAME\_LABEL\_MAPPINGS\)
+-   screenTemplate \(NAME\_SCREEN\_TEMPLATE\)
+-   themePolicy \(NAME\_THEME\_POLICY\)
+-   solo \(NAME\_SOLO\)
+-   showTools \(NAME\_SHOW\_TOOLS\)
+-   hiddenContent \(NAME\_HIDDEN\_CONTENT\)
+-   hiddenPages \(NAME\_HIDDEN\_PAGES\)
+-   statePartition \(NAME\_STATE\_PARTITION\)
+-   path-info \(NAME\_PATH\_INFO\)
+-   focus \(NAME\_FOCUS\)
+-   deviceClass \(NAME\_DEVICE\_CLASS\)
+-   digest \(NAME\_DIGEST\)
+-   pageMode \(NAME\_PAGE\_MODE\)
+-   editMode \(NAME\_PAGE\_EDIT\_MODE\)
+-   infoMode \(NAME\_PAGE\_INFO\_MODE\)
+-   helpMode \(NAME\_PAGE\_HELP\_MODE\)
 
- There also exists a Portal URL Generation Convenience API. This convenience API supports render URLs only. No state changes (action URLs) can be generated by using this API. The following items are the key classes in this API:
+ There also exists a Portal URL Generation Convenience API. This convenience API supports render URLs only. No state changes \(action URLs\) can be generated by using this API. The following items are the key classes in this API:
 
 -   `com.ibm.portal.portlet.service.url.PortalURLGenerationService`
 -   `com.ibm.portal.portlet.service.url.PortalURLWriter`
@@ -181,7 +181,7 @@ For more information, see *JSP tags for standard portlets*. An example of creati
 **Notes:**
 
 -   If a page has a correctly configured Friendly URL, then HCL Portal guarantees that any request that renders the page has the Friendly URL. The request does not have the Friendly URL only if the Friendly URL enforcement is explicitly turned off by using the `friendly.redirect.enabled` configuration setting.
--   Friendly URLs do not guarantee that they are free of Navigational State. If you need to remove Navigational State, further techniques are available. For more information, read *Defining friendly URLs without state information for pages in your site* and *<portal-navigation> tags*.
+-   Friendly URLs do not guarantee that they are free of Navigational State. If you need to remove Navigational State, further techniques are available. For more information, read *Defining friendly URLs without state information for pages in your site* and *<portal-navigation/\> tags*.
 
  To use the Friendly URL API, you need to get a `FriendlyURLFactory` instance. Depending on the type of code you are writing, you can get a `FriendlyURLFactory` instance in one of two ways:
 
@@ -254,7 +254,7 @@ The necessary interface documentation is in the HCL Portal SPI javadoc.
     -   Do the JNDI lookup and call `getVanityURLModelProvider()` in the constructor or an `init` method of your class, and save the returned `VanityURLModelProvider` instance in a static field in your class. This provider instance can be reused across requests.
     -   In a per-request method of the DataSource, call `modelProvider.getVanityURLModel(com.ibm.content.operations.registry.api.Context)`.
 
-Programming detail for a DataSource: In most cases, a DataSource is allocated by a dedicated factory. The factory is registered with the resolver framework to handle requests for a specific URI. When a request for that URI is received, the factory is started by the resolver framework and is passed a `com.ibm.content.operations.registry.api.Context` object. Make sure to understand the difference between this `COR Context` object and the `javax.naming.Context` class that is used by JNDI lookup. The factory allocates a new DataSource instance (or might retrieve an existing one from a pool) and calls `reset()` on the DataSource, passing the `COR Context` object. This object and the other parameters to `reset()`, must be saved in instance fields within the DataSource. They can be used on subsequent method calls until either `dispose()` is called or `reset()` is called again. Use the `COR Context` object on the call to `getVanityURLModel(com.ibm.content.operations.registry.api.Context)`.
+Programming detail for a DataSource: In most cases, a DataSource is allocated by a dedicated factory. The factory is registered with the resolver framework to handle requests for a specific URI. When a request for that URI is received, the factory is started by the resolver framework and is passed a `com.ibm.content.operations.registry.api.Context` object. Make sure to understand the difference between this `COR Context` object and the `javax.naming.Context` class that is used by JNDI lookup. The factory allocates a new DataSource instance \(or might retrieve an existing one from a pool\) and calls `reset()` on the DataSource, passing the `COR Context` object. This object and the other parameters to `reset()`, must be saved in instance fields within the DataSource. They can be used on subsequent method calls until either `dispose()` is called or `reset()` is called again. Use the `COR Context` object on the call to `getVanityURLModel(com.ibm.content.operations.registry.api.Context)`.
 
     -   On the `VanityURLModel` object, call `getLocator()`.
     -   On the `VanityURLModelLocator`, you can call any of the findBy methods, which return either a single `VanityURLNode` or an `IterableListModel<VanityURLNode>` list.
@@ -324,7 +324,7 @@ After you have a `VanityURLNode` instance through any of the appropriate ways, y
 
 **Note:** It is necessary to call `dispose()` on the returned service instance before it goes out of scope.
 
-Programming detail for a DataSource: In most cases, a DataSource is allocated by a dedicated factory. The factory is registered with the resolver framework to handle requests for a specific URI. When a request for that URI is received, the factory is started by the resolver framework and is passed a `com.ibm.content.operations.registry.api.Context` object. Make sure to understand the difference between this `COR Context` object and the `javax.naming.Context` class that is used by JNDI lookup. The factory allocates a new DataSource instance (or might retrieve an existing one from a pool) and calls `reset()` on the DataSource, passing the `COR Context` object. This object and the other parameters to `reset()`, must be saved in instance fields within the DataSource. They can be used on subsequent method calls until either `dispose()` is called or `reset()` is called again. Use the `COR Context` object on the call to `getCorPocService (com.ibm.content.operations.registry.api.Context)`.
+Programming detail for a DataSource: In most cases, a DataSource is allocated by a dedicated factory. The factory is registered with the resolver framework to handle requests for a specific URI. When a request for that URI is received, the factory is started by the resolver framework and is passed a `com.ibm.content.operations.registry.api.Context` object. Make sure to understand the difference between this `COR Context` object and the `javax.naming.Context` class that is used by JNDI lookup. The factory allocates a new DataSource instance \(or might retrieve an existing one from a pool\) and calls `reset()` on the DataSource, passing the `COR Context` object. This object and the other parameters to `reset()`, must be saved in instance fields within the DataSource. They can be used on subsequent method calls until either `dispose()` is called or `reset()` is called again. Use the `COR Context` object on the call to `getCorPocService (com.ibm.content.operations.registry.api.Context)`.
 
     -   On the resulting `CorPocService` instance, call `getURLFactory()`.
 
@@ -339,7 +339,7 @@ Programming detail for a DataSource: In most cases, a DataSource is allocated by
 -   **[URL generation by using the Navigational State SPI](../dev/nav_state_spi.md)**  
 The Navigational State API is used to read and modify the Navigational State document within a Portal URL. The Navigational State document is the seemingly random string of characters that appears in HCL Portal URLs. This string is a compressed, encoded XML document that contains a large amount of information that supports various Portal functions, including bookmark-ability of Portal pages and back button support.
 -   **[Creating custom links to portlets and pages](../dev-portlet/dgn_link.md)**  
-URLs encode navigational state information about HCL Portal (for example, the user's currently selected page) and about the portlets on a page (for example, the window state of the portlet) in a serialized form. Encoding navigational state information in the URL is used by the portal server to support use of the browser's back button.
+URLs encode navigational state information about HCL Portal \(for example, the user's currently selected page\) and about the portlets on a page \(for example, the window state of the portlet\) in a serialized form. Encoding navigational state information in the URL is used by the portal server to support use of the browser's back button.
 
 
 **Related information**  

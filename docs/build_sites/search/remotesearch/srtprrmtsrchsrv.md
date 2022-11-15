@@ -6,37 +6,32 @@ Get an overview of how you prepare your portal system for remote search service.
 
     1.  Application security: If you use SOAP over a secure server, the SOAP service itself is not secure.
     2.  Java 2 security: If you use SOAP, you must disable Java 2 security.
-    
-    !!! note
-        SOAP support for remote search services was deprecated with HCL Digital Experience Version 8.0. EJB is still supported.
+    **Note:** SOAP support for remote search services was deprecated with HCL Digital Experience Version 8.0. EJB is still supported.
 
 -   For EJB: If you use EJB, complete the following security administration tasks:
-    1.  Prepare security for remote search service in a single sign-on domain (SSO).
+    1.  Prepare security for remote search service in a single sign-on domain \(SSO\).
     2.  Add the signer certification of the remote search service server into the portal search server. To do this addition, proceed by the following steps:
-
         1.  Access the WebSphere® Integrated Solutions Console of the portal search server.
-        2.  Click **Security > SSL certificate and key management > Key stores and certificates > NodeDefaultTrustStore > Signer certificates > Retrieve from port**.
+        2.  Click **Security** \> **SSL certificate and key management** \> **Key stores and certificates** \> **NodeDefaultTrustStore** \> **Signer certificates** \> **Retrieve from port**.
 
-            !!!note "Cluster note"
-                In a clustered environment, the path is **Security > SSL certificate and key management > Key stores and certificates > CellDefaultTrustStore > Signer certificates > Retrieve from port**.
+            **Cluster note:** In a clustered environment, the path is **Security** \> **SSL certificate and key management** \> **Key stores and certificates** \> **CellDefaultTrustStore** \> **Signer certificates** \> **Retrieve from port**.
 
         3.  Enter the remote search service server host, its SOAP port, and an alias.
         4.  Click **OK**.
 
-1.  Copy the files WebScannerSoap.ear, WebScannerEjbEar.ear, and PseLibs.zip to the directory AppServer_root/installableApps on the computer on which you want to install the remote search service.
+1.  Copy the files WebScannerSoap.ear, WebScannerEjbEar.ear, and PseLibs.zip to the directory `[AppServer\_root](../reference/wpsdirstr.md#was_root)/installableApps` on the computer on which you want to install the remote search service.
 
     You find these files in the following locations of your portal installation:
 
-    -   The files WebScannerSoap.ear and WebScannerEjbEar.ear are in the directory PortalServer_root/search/prereq.webscanner/installableApps
-    -   The file PseLibs.zip is located under directory PortalServer_root/search/wp.search.libs/installableApps
-
+    -   The files WebScannerSoap.ear and WebScannerEjbEar.ear are in the directory `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/search/prereq.webscanner/installableApps`
+    -   The file PseLibs.zip is located under directory `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/search/wp.search.libs/installableApps`
 2.  Depending on the requirements of your environment, install one of the two applications WebScannerEJbEar.ear or WebScannerSoap.ear on a remote server. For example, this can be server1.
 
     Proceed by the following steps:
 
     1.  Access the WebSphere Integrated Solutions Console.
 
-    2.  Click **Applications > WebSphere Enterprise Application**.
+    2.  Click **Applications** \> **WebSphere Enterprise Application**.
 
     3.  Click **Install**.
 
@@ -46,7 +41,7 @@ Get an overview of how you prepare your portal system for remote search service.
 
     6.  On the following panels, accept the default settings.
 
-    7.  A message confirms that the application PSEStandalone (for EJB) or the application WebScannerEar (for SOAP) was installed successfully.
+    7.  A message confirms that the application PSEStandalone \(for EJB\) or the application WebScannerEar \(for SOAP\) was installed successfully.
 
     8.  Click **Save to Master Configuration**.
 
@@ -58,16 +53,16 @@ Get an overview of how you prepare your portal system for remote search service.
 
         For more information, refer to the topic about Enabling remote document conversion.
 
-    2.  Start the WebSphere Integrated Solutions Console and select **Environment > Shared Libraries**. Create a new shared library that is named PSE with a class path as follows:
+    2.  Start the WebSphere Integrated Solutions Console and select **Environment** \> **Shared Libraries**. Create a new shared library that is named PSE with a class path as follows:
 
         ```
-             $(APP_INSTALL_ROOT)/cell_name/dcs_war.ear/dcs.war/WEB-INF/lib/convertors.jar
-             $(APP_INSTALL_ROOT)/cell_name/dcs_war.ear/dcs.war/WEB-INF/lib/Export.jar
+             $(APP_INSTALL_ROOT)/cell\_name/dcs_war.ear/dcs.war/WEB-INF/lib/convertors.jar
+             $(APP_INSTALL_ROOT)/cell\_name/dcs_war.ear/dcs.war/WEB-INF/lib/Export.jar
         ```
 
-        where cell_name is the IBM WebSphere Application Server cell name where DCS is installed.
+        where cell\_name is the IBM WebSphere Application Server cell name where DCS is installed.
 
-    3.  Click **Apply > Save > Save** to save your changes.
+    3.  Click **Apply** \> **Save** \> **Save** to save your changes.
 
 4.  Extract the Portal Search libraries to the remote server and add them to the class path on the remote server. To do this step, proceed as follows:
 
@@ -77,21 +72,27 @@ Get an overview of how you prepare your portal system for remote search service.
 
     3.  Open the WebSphere Integrated Solutions Console.
 
-    4.  Click **Environment > Shared Libraries**.
+    4.  Click **Environment** \> **Shared Libraries**.
 
     5.  Create or modify the new shared library names PSE.
 
         When you create the library, check the option **Use an isolated class loader for this shared library**.
 
-    6.  Add the libraries `extract/lib` to the class path by adding a line to the class path and giving the full path: AppServer_root/installableApps/extract/lib`.
+    6.  Add the libraries `extract/lib` to the class path by adding a line to the class path and giving the full path: `[AppServer\_root](../reference/wpsdirstr.md#was_root)/installableApps/extract/lib`.
 
-        AppServer_root is the profile directory of your WebSphere Application Server installation. For example, this path can be:
+        `[AppServer\_root](../reference/wpsdirstr.md#was_root)` is the profile directory of your WebSphere Application Server installation. For example, this path can be:
 
         ```
-              /usr/WebSphere/AppServer/profiles/profile_name
+              /usr/WebSphere/AppServer/profiles/profile\_name
         ```
 
-    7.  Click **Apply > Save** to save your changes to the configuration.
+        For z/OS® this path can be:
+
+        ```
+             /WebSphere/VR1M0/AppServer/profiles/default
+        ```
+
+    7.  Click **Apply** \> **Save** to save your changes to the configuration.
 
 5.  Add a reference from the application WebScannerEJbEar.ear to the shared library. To add a reference, proceed as follows:
 
@@ -99,7 +100,7 @@ Get an overview of how you prepare your portal system for remote search service.
 
     2.  Navigate to **Websphere enterprise applications**.
 
-    3.  For EJB: Click the application **PSEStandalone > Shared library references**. For SOAP: Click the application **WebScannerEar > Shared library references**.
+    3.  For EJB: Click the application **PSEStandalone** \> **Shared library references**. For SOAP: Click the application **WebScannerEar** \> **Shared library references**.
 
     4.  For EJB: On the window that opens up click the check box for **PSEStandalone**, then click **Reference shared library**. For SOAP: On the window that opens up click the check box for **WebScannerEar**, then click **Reference shared library**.
 
@@ -107,7 +108,7 @@ Get an overview of how you prepare your portal system for remote search service.
 
     6.  Click the appropriate arrow so that **PSE** displays in the **Selected** list.
 
-    7.  Click **OK > OK**.
+    7.  Click **OK** \> **OK**.
 
     8.  Save the configuration.
 
@@ -115,20 +116,26 @@ Get an overview of how you prepare your portal system for remote search service.
 
 6.  On the WebSphere Integrated Solutions Console, determine the required values for configuring the portlet parameters, depending on whether you are using EJB or web service through SOAP:
 
-    -   For EJB: Determine the value for the port under **Servers > Server Types > WebSphere application servers > YourAppServer1 > Communications > Port > BOOTSTRAP_ADDRESS**.
-    -   For SOAP: Determine the value for the port number for the SOAP URL parameter. The appropriate port number for the SOAP URL parameter is the port on which the application server runs, in other words, the HTTP transport on which the remote server is configured to run. Determine the correct port number from **Application servers > server1 > Ports > WC_defaulthost**. The WC_defaulthost value is 10014; therefore, if you did not change the default, you can use this value. Make sure that the port number that is set in the following file matches this port:
+    -   For EJB: Determine the value for the port under **Servers** \> **Server Types** \> **WebSphere application servers** \> **YourAppServer1** \> **Communications** \> **Ports** \> **BOOTSTRAP\_ADDRESS**.
+    -   For SOAP: Determine the value for the port number for the SOAP URL parameter. The appropriate port number for the SOAP URL parameter is the port on which the application server runs, in other words, the HTTP transport on which the remote server is configured to run. Determine the correct port number from **Application servers** \> **server1** \> **Ports** \> **WC\_defaulthost**. The WC\_defaulthost value is 10014; therefore, if you did not change the default, you can use this value. Make sure that the port number that is set in the following file matches this port:
 
         ```
-        AppServer_root/installedApps/cell/WebScannerEar.ear/WebScannerSoap.war/
+        [AppServer\_root](../reference/wpsdirstr.md#was_root)/installedApps/cell/WebScannerEar.ear/WebScannerSoap.war/
              wsdl/com/ibm/hrl/portlets/WsPSE/WebScannerLiteServerSOAPService.wsdl
         ```
 
         Replace the variables as follows:
 
-        -   AppServer_root is the profile directory of your WebSphere Application Server installation. For example, this directory can be:
+        -   `[AppServer\_root](../reference/wpsdirstr.md#was_root)` is the profile directory of your WebSphere Application Server installation. For example, this directory can be:
 
             ```
                   /usr/WebSphere/AppServer/profiles/profile\_name
+            ```
+
+            For z/OS this directory can be:
+
+            ```
+                 /WebSphere/VR1M0/AppServer/profiles/default
             ```
 
         -   **`cell`** is the cell name of your remote search computer.
@@ -136,14 +143,14 @@ Get an overview of how you prepare your portal system for remote search service.
         Edit the file and look for the port that is given in the value for the SOAP address location. Example:
 
         ```
-          <soap: address location="http://localhost:**your_port_no**/WebScannerSOAP/servlet/rpcrouter"/> .
+          <soap: address location="http://localhost:**your\_port\_no**/WebScannerSOAP/servlet/rpcrouter"/> .
         ```
 
-        In the example the port is `your_port_no`. The default value for the WC_defaulthost is 10014.
+        In the example the port is `your\_port\_no`. The default value for the WC\_defaulthost is 10014.
 
-7.  In the WebSphere Integrated Solutions Console, go to **Resources > Asynchronous beans > Work managers**, create a new Work manager who is named PSEWorkManager with the following attributes:
+7.  In the WebSphere Integrated Solutions Console, go to **Resources** \> **Asynchronous beans** \> **Work managers**, create a new Work manager who is named PSEWorkManager with the following attributes:
 
-    **WebSphere Application Server V9:** If you upgraded to IBM® WebSphere Application Server Version 9.0, the WebSphere Integrated Solutions Console path is **Resources > Concurency > Work managers**.
+    **WebSphere Application Server V9:** If you upgraded to IBM® WebSphere Application Server Version 9.0, the WebSphere Integrated Solutions Console path is **Resources** \> **Concurency** \> **Work managers**.
 
     ```
     
@@ -156,13 +163,13 @@ Get an overview of how you prepare your portal system for remote search service.
     
     ```
 
-8.  Click **Apply > Save** to save your changes to the configuration.
+8.  Click **Apply** \> **Save** to save your changes to the configuration.
 
 9.  Start the application:
 
     1.  Open the WebSphere Integrated Solutions Console.
 
-    2.  Click **Applications > Application Types > WebSphere enterprise applications**.
+    2.  Click **Applications** \> **Application Types** \> **WebSphere enterprise applications**.
 
     3.  Scroll to `PSEStandalone` or `WebScannerEar`. You can use the filter feature to search for these names.
 
@@ -176,21 +183,20 @@ Get an overview of how you prepare your portal system for remote search service.
 
 12. In the portal server enable CSIv2 identity assertion. To complete this step, proceed as follows:
 
-    !!!note "Cluster note"
-        In a clustered environment, complete these steps on the Deployment Manager WebSphere Integrated Solutions Console.
+    **Cluster note:** In a clustered environment, complete these steps on the Deployment Manager WebSphere Integrated Solutions Console.
 
     1.  Enable CSIv2 Identity Assertion on the outbound connection:
 
         1.  Access the WebSphere Integrated Solutions Console of the portal server.
-        2.  Navigate to **Security > Global Security > RMI/IIOP security > CSIv2 outbound communications**.
+        2.  Navigate to **Security** \> **Global Security** \> **RMI/IIOP security** \> **CSIv2 outbound communications**.
         3.  Check **Use identity assertion**.
         4.  When you are done, restart the portal server.
     2.  Enable CSIv2 Identity Assertion on the inbound connection:
 
         1.  Access the WebSphere Integrated Solutions Console of the remote server.
-        2.  Navigate to **Security > Global Security > RMI/IIOP security > CSIv2 inbound communications**.
+        2.  Navigate to **Security** \> **Global Security** \> **RMI/IIOP security** \> **CSIv2 inbound communications**.
         3.  Check **Use identity assertion**.
-        4.  Under **Trusted identities**, enter either an asterisk (*) or the identity of the portal server.
+        4.  Under **Trusted identities**, enter either an asterisk \(\*\) or the identity of the portal server.
         5.  When you are done, restart the remote server.
         For more detailed information, refer to the WebSphere Application Server information center.
 
@@ -200,15 +206,13 @@ Get an overview of how you prepare your portal system for remote search service.
 
     1.  Open the following file with an editor:
 
-        PortalServer_root/search/wp.search.servlets/seedlist/servletEAR/installableApps/wp.search.seedlist.ear/wp.search.servlets.seedlist.war/WEB-INF/web.xml
+        `[PortalServer\_root](../reference/wpsdirstr.md#portal_server_root_prod)/search/wp.search.servlets/seedlist/servletEAR/installableApps/wp.search.seedlist.ear/wp.search.servlets.seedlist.war/WEB-INF/web.xml`
 
-        !!!note "Cluster note"
-            In a clustered environment, complete this step on the primary node and all secondary nodes.
+        **Cluster note:** In a clustered environment, complete this step on the primary node and all secondary nodes.
 
     2.  Update the following code:
 
-        !!!note "Cluster note"
-            In a clustered environment, complete this step on the primary node and all secondary nodes.
+        **Cluster note:** In a clustered environment, complete this step on the primary node and all secondary nodes.
 
         ```
         <user-data-constraint>     
@@ -227,13 +231,11 @@ Get an overview of how you prepare your portal system for remote search service.
 
     3.  Save the file.
 
-        !!!note "Cluster note"
-            In a clustered environment, complete this step on the primary node and all secondary nodes.
+        **Cluster note:** In a clustered environment, complete this step on the primary node and all secondary nodes.
 
     4.  Run the following portal ConfigEngine script:
 
-        !!!note "Cluster note"
-            In a clustered environment, complete this step on the primary node only.
+        **Cluster note:** In a clustered environment, complete this step on the primary node only.
 
         ```
         ./ConfigEngine.sh action-update-ear-wp.search.servlets/seedlist/servletEAR
@@ -243,9 +245,8 @@ Get an overview of how you prepare your portal system for remote search service.
 
 14. Back on your portal, configure Portal Search for remote search service.
 
-    !!!note "Cluster note"
-        In a clustered environment, complete this step on the primary node only.
+    **Cluster note:** In a clustered environment, complete this step on the primary node only.
 
-<!--
+
 **Parent topic:**[Remote search service](../admin-system/srcusgrmtsrchsrv.md)
--->
+

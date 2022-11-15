@@ -15,6 +15,8 @@ The parameters are set in the web.xml file of the web module that contains the s
 ```
 
 
-???+ info "Related information"
-    - [Adding static content to your custom theme](../../../developing_theme/dev_op_overview/manual_packaging_themes/themeopt_move_repack_addstatic.md)
+**Related information**  
+
+
+[Adding static content to your custom theme](../dev-theme/themeopt_move_repack_addstatic.md)
 

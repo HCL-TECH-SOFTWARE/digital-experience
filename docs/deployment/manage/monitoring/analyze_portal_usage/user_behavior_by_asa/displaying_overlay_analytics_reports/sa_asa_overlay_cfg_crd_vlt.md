@@ -16,15 +16,17 @@ Make sure you store the following Coremetrics® user information:
 -   The Coremetrics user name
 -   The Coremetrics authentication key.
 
-!!!note "Notes"
-   1.  The Credential Vault slot used for storing the user information must have the slot name `com.ibm.portal.asa.coremetrics.slot` .
-   2.  In the credential slot, you need to enter the Coremetrics user name and client ID, separated by a hash sign \( `**\#**` \), either as a shared user ID in the portal Administration user interface, or as an `external-id` in the XML configuration interface script.<br>
-   For example: If you have a Coremetrics user name `Bob` and a Coremetrics client ID `123456789`, enter these values as `"Bob#123456789"` in the credential slot. Here is a sample XML configuraion interface script for creating required Credential Vault entries:
+**Notes:**
+
+1.  The Credential Vault slot used for storing the user information must have the slot name `com.ibm.portal.asa.coremetrics.slot` .
+2.  In the credential slot, you need to enter the Coremetrics user name and client ID, separated by a hash sign \( `**\#**` \), either as a shared user ID in the portal Administration user interface, or as an `external-id` in the XML configuration interface script.
+
+For example: If you have a Coremetrics user name `Bob` and a Coremetrics client ID `123456789`, enter these values as `"Bob#123456789"` in the credential slot. Here is a sample XML configuraion interface script for creating required Credential Vault entries:
 
 ```
 <request    
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"    
-   xsi:noNamespaceSchemaLocation="PortalConfig_8.5.0.xsd"    
+   xsi:noNamespaceSchemaLocation="PortalConfig\_8.5.0.xsd"    
    type="update" create-oids="true">        
    <!-- Sample for updating the Credential Vault. 
         This script creates a new segment containing one slot in the portal Credential Vault.
@@ -42,8 +44,8 @@ Make sure you store the following Coremetrics® user information:
                <description>Credentials for accessing the CoreMetrics server</description>
                <keywords>CoreMetrics</keywords>      
             </localedata> 
-            <password-secret action="create" user="**user_id**" 
-               external-id="**coremetrics_user_name**#**coremetrics_client_id**">**coremetrics_auth_key**
+            <password-secret action="create" user="**user\_id**" 
+               external-id="**coremetrics\_user\_name**#**coremetrics\_client\_id**">**coremetrics\_auth\_key**
             </password-secret>            
          </credential-slot>        
       </credential-segment>    
@@ -54,25 +56,36 @@ Make sure you store the following Coremetrics® user information:
 
 In the sample XML script, replace the following variables with your actual Coremetrics user data values:
 
--   **user_id**
+-   **user\_id**
 
-    Replace this variable with the user ID that is defined under the Resource Environment Provider **WP_VaultService** in the entry `systemcred.dn` .
+    Replace this variable with the user ID that is defined under the Resource Environment Provider **WP\_VaultService** in the entry `systemcred.dn` .
 
--   **coremetrics_user_name**
+-   **coremetrics\_user\_name**
 
     Replace this variable by your Coremetrics® user name.
 
--   **coremetrics_client_id**
+-   **coremetrics\_client\_id**
 
     Replace this by your Coremetrics® client ID.
 
--   **coremetrics_auth_key**
+-   **coremetrics\_auth\_key**
 
     Replace this by your authentication key used by Coremetrics®. This allows URL queries to the Coremetrics® system.
 
 
-???+ info "Related information"  
-   -  [The XML configuration interface](../../../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
-   -  [Working with the XML configuration interface](../../../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
-   -  [Importing pages or page hierarchies by using the XML Import portlet](../../../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_admin_portlets_for_xml_config/adxmltsk_portlets_imp.md)
+
+**Previous topic:**[Configuring security for overlay analytics reports](../admin-system/sa_asa_overlay_stats_sec.md)
+
+**Next topic:**[Configuring the theme for overlay reports](../admin-system/sa_asa_overlay_cfg_theme.md)
+
+**Related information**  
+
+
+[Portlet authentication](../dev-portlet/wpsadvdev.md)
+
+[The XML configuration interface](../admin-system/admxmlai.md)
+
+[Working with the XML configuration interface](../admin-system/adxmltsk.md)
+
+[Importing pages or page hierarchies by using the XML Import portlet](../admin-system/adxmltsk_portlets_imp.md)
 

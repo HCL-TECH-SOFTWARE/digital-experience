@@ -2,8 +2,7 @@
 
 Blogs and blog libraries use the template libraries provided by HCL Web Content Manager. Blog libraries use Web Resources v70 library and Blog v70 library. Blogs use the Web Resources v70 and Blog Solo v70 library. The page hierarchy that is provided for these components is the common one defined by the Web Content Manager template libraries.
 
-!!! note
-    The Web Content Manager libraries described in this topic only work with the theme customizer used in the default theme. Customization to these libraries will affect all blogs and blog libraries on the site.
+**Note:** The Web Content Manager libraries described in this topic only work with the theme customizer used in the default theme. Customization to these libraries will affect all blogs and blog libraries on the site.
 
 ## Web Resources v70 library
 

@@ -15,7 +15,7 @@ The following two communication techniques are based on persistent portlet wires
 
 Note that you can create communication links in both directions between JSR 286 portlets and JSR 168 portlets by using the cooperative portlet API. However, that API does not support communication links between HCL and JSR 168 portlets.
 
--   **[Portlet wires](pltcom_wires.md)**  
+-   **[Portlet wires](../dev-portlet/pltcom_wires.md)**  
 Portlet Wires are used to direct the information flow between portlets that communicate using JSR 286 Portlet events or the WebSphere Portal Cooperative portlets API.
 
 

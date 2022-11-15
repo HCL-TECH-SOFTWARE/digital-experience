@@ -73,6 +73,8 @@ As noted previously, portlet events support complex Java types as payloads. The 
 To obtain optimal performance for transferring complex Java payloads, at the cost of a more complicated deployment process, remove the payload classes from the WAR file and deploy them in a class loader that is shared by both portlets. You can do this by using the IBM® WebSphere® Application Server shared libraries, or by placing the shared classes in the `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/PortalServer/config` directory.
 
 
-???+ info "Related information"
-    - [Public render parameters](../../../portlet_communication/pltcom_pubrndrprm.md)
+**Related information**  
+
+
+[Public render parameters](../dev-portlet/pltcom_pubrndrprm.md)
 

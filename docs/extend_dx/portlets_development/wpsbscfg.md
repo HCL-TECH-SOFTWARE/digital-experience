@@ -42,8 +42,10 @@ public class HelloWorld extends GenericPortlet {
 
 Compile your Java source files. Before you compile your Java source, set the class path for the compiler to find the JAR files for any portlet packages that your portlet uses by running the following command:
 
--   AIX® and Linux™: `./setupcmdLine.sh`
+-   AIX® HP-UX Linux™ Solaris: ./setupcmdLine.sh
+-   IBM i: setupcmdLine.sh
 -   Windows™: setupcmdLine.bat
+-   **z/OS®:** setupcmdLine.sh
 
 The following JAR files must be set in the class path to compile portlets:
 
@@ -55,7 +57,7 @@ The following JAR files must be set in the class path to compile portlets:
     |`public_api.jar`|Use this file if you use services from the Public API Javadoc package.|
     |`public_api.jar + public_spi.jar`|Use this file if you use services from the Public SP Javadoc package.|
 
-    These files are in the directory PortalServer_root/doc/compile.
+    These files are in the directory [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/doc/compile.
 
 -   **HCL DX portlets**
 
@@ -84,11 +86,11 @@ Then, compile the portlet using the fully qualified path to the Java portlet sou
 
     HCL DX class loading follows the WebSphere® Application Server hierarchy for class paths and search orders. You can reference a class if the parent class loader can reference it or your own class loader can reference it. You cannot reference a class if a child class loader references it. The graphic illustrates where HCL DX and portlet applications fit into the class loading hierarchy.
 
-    In the following graphic runtime class path patches (RCP) are at the beginning of the hierarchy. Runtime class path (RP) branches from runtime class path patches. Runtime extensions (RE) branches from runtime class path, and application extensions (AEX) branch from runtime extensions. Application class loaders (AC1), application class loaders (AC2), and application class loaders (AC3) are portlet applications that branch from application extensions.
+    In the following graphic runtime class path patches \(RCP\) are at the beginning of the hierarchy. Runtime class path \(RP\) branches from runtime class path patches. Runtime extensions \(RE\) branches from runtime class path, and application extensions \(AEX\) branch from runtime extensions. Application class loaders \(AC1\), application class loaders \(AC2\), and application class loaders \(AC3\) are portlet applications that branch from application extensions.
 
-    ![Portal class paths](../portlets_development/_img/classpaths.jpeg)
+    ![Portal class paths](../images/classpaths.jpg)
 
-    As illustrated, HCL DX is an application extension (AEX) in WebSphere® Application Server. The HCL DX core classes are in the class path PortalServer_root/shared/app. If an installed portlet application includes a class loader, the portlet application class loader is an application class loader (ACx) in HCL DX.
+    As illustrated, HCL DX is an application extension \(AEX\) in WebSphere® Application Server. The HCL DX core classes are in the class path [PortalServer\_root](../reference/wpsdirstr.md#wp_root)/shared/app. If an installed portlet application includes a class loader, the portlet application class loader is an application class loader \(ACx\) in HCL DX.
 
     If you suspect a classloading problem, ensure that the required classes are in the appropriate class path according to the classloading hierarchy.
 
@@ -174,8 +176,7 @@ The following samples can be packaged with the Hello World portlet.
 
 Before you package your portlet, the class files and resources must be arranged in the WAR file directory structure described here. A portlet application exists as a structured hierarchy of directories.
 
-!!!note
-    Do not package `.tld` files for tag libraries that are provided by the portal or application server installation with the portlet application WAR file. It includes the JSR 168 and 286 portlet tags and the Java Standard Tag Library (JSTL).
+**Note:** Do not package `.tld` files for tag libraries that are provided by the portal or application server installation with the portlet application WAR file. It includes the JSR 168 and 286 portlet tags and the Java Standard Tag Library \(JSTL\).
 
 -   **`/`**
 
@@ -208,8 +209,7 @@ Before you package your portlet, the class files and resources must be arranged 
     Location for the manifest file, `manifest.mf`, and the Java 2 security file, was.policy \(if present\). The manifest is in the standard JAR file format as defined by the Java 1.3 specification. The Java 2 security policy file is used to allow a portlet to execute operations that might be restricted if Java 2 security is enabled. The contents of the `/META-INF` directory is not served to clients.
 
 
-!!!note
-    The application server searches for security policy files in the location of the enterprise application archive rather than the web application archive. Therefore, the portal server copies `was.policy` from the `appname.war/META-INF` directory to the generated `appname.ear/META-INF` directory during deployment of a portlet WAR file.
+**Note:** The application server searches for security policy files in the location of the enterprise application archive rather than the web application archive. Therefore, the portal server copies `was.policy` from the `appname.war/META-INF` directory to the generated `appname.ear/META-INF` directory during deployment of a portlet WAR file.
 
 ## Packaging and deploying portlets
 
@@ -221,11 +221,9 @@ HCL DX includes an administrative portlet for installing, uninstalling, and upda
 
 -   Documentation source: [Packaging the portlet into a WAR file: HCL Portal 8.0 Product Documentation](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074915)
 
-!!!note
-    Because Windows limits the maximum path length to 260 characters, the name of the WAR file must be fewer than 25 characters. On a portal server running on Windows, installing a WAR file with a name that is more than 25 characters results in an error.
+**Note:** Because Windows limits the maximum path length to 260 characters, the name of the WAR file must be fewer than 25 characters. On a portal server running on Windows, installing a WAR file with a name that is more than 25 characters results in an error.
 
-!!!note "Tip"
-    You can also run the build-war-file or build-ear-file tasks to build the .war and .ear files. See the "Building .ear and .war files" link in the Related task section for information.
+**Tip:** You can also run the build-war-file or build-ear-file tasks to build the .war and .ear files. See the "Building .ear and .war files" link in the Related task section for information.
 
 -   **Packaging a portlet and resources into a WAR file**
 
@@ -259,29 +257,29 @@ HCL DX includes an administrative portlet for installing, uninstalling, and upda
         
         ```
 
-    After the WAR file is created, it can be installed to HCL DX as described in [Portal administration portlets](../../extend_dx/development_tools/portal_admin_tools/portal_admin_portlets/index.md).
+    After the WAR file is created, it can be installed to HCL DX as described in [Portal administration portlets](../admin-system/adpltadm.md).
 
 -   **Preparing the portlet application for installation**
 
-    To facilitate deployment of portlet applications and complex portlets, you can provide a portlet configuration file that can be invoked by the XML configuration interface (XMLAccess). The XML configuration interface allows the portlet developer to specify places, pages, themes, skins, supported markups and clients, and other settings for a portlet application. This is especially useful for portlets that use messaging because these portlets must be placed on the same page. For more information, see [The XML configuration interface](../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md).
+    To facilitate deployment of portlet applications and complex portlets, you can provide a portlet configuration file that can be invoked by the XML configuration interface \(XMLAccess\). The XML configuration interface allows the portlet developer to specify places, pages, themes, skins, supported markups and clients, and other settings for a portlet application. This is especially useful for portlets that use messaging because these portlets must be placed on the same page. For more information, see [The XML configuration interface](../admin-system/admxmlai.md).
 
     When you construct XMLAccess scripts for use in installing standard portlets, use the following values:
 
     -   uid attribute for the `<web-app>` element:
 
-        Use the uid attribute of the <portlet-app/> subelement with a `.webmod` suffix. As described later in this topic, the uid attribute of the <portlet-app/> subelement is dependent on the presence of the id attribute of the <portlet-app/> element from the portlet.xml.
+        Use the uid attribute of the <portlet-app/\> subelement with a `.webmod` suffix. As described later in this topic, the uid attribute of the <portlet-app/\> subelement is dependent on the presence of the id attribute of the <portlet-app/\> element from the portlet.xml.
 
-    -   uid attribute for the <portlet-app> element:
+    -   uid attribute for the <portlet-app\> element:
 
-        Use the id attribute of the <portlet-app/> element from the portlet.xml. If this value has not been specified, specify the WAR file name of the portlet application in its place. For portlet updates, the WAR file name must be the original name of the WAR file used to install the portlet application. That is, the WAR file name can be changed, but the uid must indicate the original uid used during portlet installation.
+        Use the id attribute of the <portlet-app/\> element from the portlet.xml. If this value has not been specified, specify the WAR file name of the portlet application in its place. For portlet updates, the WAR file name must be the original name of the WAR file used to install the portlet application. That is, the WAR file name can be changed, but the uid must indicate the original uid used during portlet installation.
 
-    -   name attribute for the <portlet> element:
+    -   name attribute for the <portlet\> element:
 
-        Use the content of the <portlet-name/> element from the portlet.xml.
+        Use the content of the <portlet-name/\> element from the portlet.xml.
 
-    -   referenceid attribute of the <servlet> element:
+    -   referenceid attribute of the <servlet\> element:
 
-        Use the content of the <portlet-name/> element from the portlet.xml appended with the `.servlet` suffix.
+        Use the content of the <portlet-name/\> element from the portlet.xml appended with the `.servlet` suffix.
 
     For example, a portlet application might use a portlet descriptor:
 
@@ -299,7 +297,7 @@ HCL DX includes an administrative portlet for installing, uninstalling, and upda
     
     ```
 
-    In this example, there is no ID attribute that is provided on the <portlet-app/> element. Therefore, the <portlet-app/> element of the XMLAccess script would use the WAR file name:
+    In this example, there is no ID attribute that is provided on the <portlet-app/\> element. Therefore, the <portlet-app/\> element of the XMLAccess script would use the WAR file name:
 
     ```xmp
      <web-app action="update" active="true" uid="com.ibm.wps.banner">

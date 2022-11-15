@@ -1,4 +1,4 @@
-# Select DX Applications to Deploy
+# Select DX applications to deploy
 
 HCL Digital Experience 9.5 consists of multiple applications and services that can be deployed. Depending on your needs, it might not be necessary to have all applications deployed.
 
@@ -6,7 +6,7 @@ HCL Digital Experience 9.5 consists of multiple applications and services that c
 
 You can easily enable or disable specific applications by adding the following parts to your custom-values.yaml file:
 
-```yaml
+```
 # Controls which application is deployed and configured
 applications:
   # Deploys Content Composer

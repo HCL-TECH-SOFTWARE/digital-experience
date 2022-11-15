@@ -8,9 +8,9 @@ If you are performing an in-place update of a cluster, the deployment manager sh
 
 1.  Back up your databases.
 
-2.  Clear out the temp and wstemp paths in wp_profile_root. If you do not complete this step, it can create long path names that prevent the restoreProfile task from working successfully.
+2.  Clear out the temp and wstemp paths in [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root). If you do not complete this step, it can create long path names that prevent the restoreProfile task from working successfully.
 
-3.  Back up the wp_profile_root using `manageprofiles -backupProfile` from AppServer/bin.
+3.  Back up the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root) using `manageprofiles -backupProfile` from AppServer/bin.
 
     For example: `./manageprofiles.sh -backupProfile -profileName wp_profile -backupFile /tmp/wp_profile_bak`.
 
@@ -21,8 +21,8 @@ If you are performing an in-place update of a cluster, the deployment manager sh
     -   lib/ext/commons-codec-1.3.jar
     -   lib/ext/commons-httpclient-3.0.1.jar
     -   lib/ext/openid4java-full-0.9.5.jar
-    -   lib/ext/wp.auth.base.sua_RedirectServletFilter.jar
-    -   lib/ext/wp.auth.base.sua_loginmodule.jar
+    -   lib/ext/wp.auth.base.sua\_RedirectServletFilter.jar
+    -   lib/ext/wp.auth.base.sua\_loginmodule.jar
     -   lib/ext/wp.auth.tai.jar
     -   lib/wp.user.connections.jar
     -   lib/wp.wire.jar
@@ -30,36 +30,31 @@ If you are performing an in-place update of a cluster, the deployment manager sh
     -   plugins/com.ibm.wp.was.plugin.jar
     -   plugins/wp.ext.jar
     -   properties/jndi.properties
-
-6.  Ensure that the wp_profile and cw_profile are cleaned up and the paths are deleted.
+6.  Ensure that the wp\_profile and cw\_profile are cleaned up and the paths are deleted.
 
 7.  Install only the Portal 8.5 binary. Do not create a Portal profile.
 
-8.  Test connecting to the Configuration Wizard in a browser. http://your_server:10200/hcl/wizard
+8.  Test connecting to the Configuration Wizard in a browser. http://your\_server:10200/hcl/wizard
 
-    !!!note
-        If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your_server:10200/hcl/wizard.
+    **Note:** If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your\_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your\_server:10200/hcl/wizard.
 
-9.  Restore the wp_profile_root using `manageprofiles restoreConfig` from AppServer/bin.
+9.  Restore the [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root) using `manageprofiles restoreConfig` from AppServer/bin.
 
     For example, `./manageprofiles.sh -restoreProfile -backupFile /tmp/wp_profile_bak`.
 
-    !!!note
-        The wp_profile_root is restored to the original path.
+    **Note:** The [wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root) is restored to the original path.
 
 10. If you are migrating a cluster, copy the filesForDmgr.zip in the PortalServerRoot/filesForDmgr path on your target primary node server to the existing WebSphere Application Server 8.5.5.2 deployment manager. Then, extract the files in the AppServer path.
 
-    !!!note
-        This task is essential to update the deployment manager to user the portal 8.5 plug-ins. Complete this step once. Do not repeat this step on all nodes.
+    **Note:** This task is essential to update the deployment manager to user the portal 8.5 plug-ins. Complete this step once. Do not repeat this step on all nodes.
 
 11. Complete the remaining steps for using the Configuration Wizard:
 
-12. Access the Configuration Wizard. http://your_server:10200/hcl/wizard.
+12. Access the Configuration Wizard. http://your\_server:10200/hcl/wizard.
 
-    !!!note
-        If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your_server:10200/hcl/wizard.
+    **Note:** If working with HCL Digital Experience 8.5 or 9 software level prior to CF18, the wizard address will be: http://your\_server:10200/ibm/wizard. After installing CF18, the configuration wizard will automatically be adjusted to http://your\_server:10200/hcl/wizard.
 
-13. Click **Migrate to a New Version > Migrate a Stand-alone Server** or **Migrate to a New Version > Migrate a Cluster Step 3: Upgrade Node Profiles**.
+13. Click **Migrate to a New Version** \> **Migrate a Stand-alone Server** or **Migrate to a New Version** \> **Migrate a Cluster Step 3: Upgrade Node Profiles**.
 
 14. Select **Same server** when you answer questions about your system.
 
@@ -70,6 +65,9 @@ If you are performing an in-place update of a cluster, the deployment manager sh
 17. Start your configuration with the **Upgrade the ConfigEngine** step.
 
 
-???+ info "Related information"  
-    -   [Configuration Wizard](../../../../../../extend_dx/development_tools/portal_admin_tools/cfg_wizard/index.md)
+
+**Related information**  
+
+
+[Configuration Wizard](../config/cw_overview.md)
 

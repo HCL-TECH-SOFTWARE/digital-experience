@@ -1,6 +1,6 @@
 # Remote REST service for PUMA
 
-The remote PUMA SPI gives you access to user profiles through REST services. It provides a remote interface for user and group management for the configured Portal user repository. It is based on the REST (REpresentational State Transfer) architecture model.
+The remote PUMA SPI gives you access to user profiles through REST services. It provides a remote interface for user and group management for the configured Portal user repository. It is based on the REST \(REpresentational State Transfer\) architecture model.
 
 The remote REST service for PUMA allows you to remotely perform the following tasks related to user and group data based on the HTTP protocol:
 

@@ -72,11 +72,17 @@ public interface `com.ibm.wcp.analysis.event.LogListener` extends java.util.Even
 }
 ```
 
--   **[FeedbackListener](pzn_feedbacklistener.md)**  
+-   **[FeedbackListener](../pzn/pzn_feedbacklistener.md)**  
 The FeedbackListener class routes data to the Feedback schema.
--   **[LMListener](pzn_lmlistener.md)**  
+-   **[LMListener](../pzn/pzn_lmlistener.md)**  
 The LMListener routes data of interest to the LikeMinds database layer.
--   **[Custom log listeners](../../feedback_analytics_cfg/custom_log_listeners/pzn_custom_log_listeners.md)**  
+-   **[Custom log listeners](../pzn/pzn_custom_log_listeners.md)**  
+When the log method of a logging bean is called, the feedback facility generates a log event. A log event is also generated when a rule is executed. Log listeners process these log events and either store the event data or perform custom processing with these events.
+-   **[FeedbackListener](../pzn/pzn_feedbacklistener.md)**  
+The FeedbackListener class routes data to the Feedback schema.
+-   **[LMListener](../pzn/pzn_lmlistener.md)**  
+The LMListener routes data of interest to the LikeMinds database layer.
+-   **[Custom log listeners](../pzn/pzn_custom_log_listeners.md)**  
 When the log method of a logging bean is called, the feedback facility generates a log event. A log event is also generated when a rule is executed. Log listeners process these log events and either store the event data or perform custom processing with these events.
 
 

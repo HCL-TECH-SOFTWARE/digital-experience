@@ -26,7 +26,12 @@ For more information about transitions, go to *Transitions* and for more informa
  </transition-endpoint>
 ```
 
-???+ info "Related information"
-     -    [Transitions](../transitions/index.md)
-     -    [Dialog chaining and nesting](../../../../../extend_dx/screenflow/developing_screenflow/creating_dialog_def/transitions/dialog_chain_nest/index.md)
+**Parent topic:**[Transition endpoints](../screenflow/ref_trnstn_endpnts.md)
+
+**Related information**  
+
+
+[Transitions](../screenflow/transitions.md)
+
+[Dialog chaining and nesting](../screenflow/dlg_chng_nstng.md)
 

@@ -31,8 +31,12 @@ To create a plug-in tag:
     |Tag parameters|Details|
     |--------------|-------|
     |`compute=" "`|If not specified, the default setting is "always", meaning that the value of the plug-in tag is evaluated each time that the tag is rendered within a list, such as a menu or navigator component. Use `compute="once"` to evaluate the tag only once.|
-    |`htmlencode=" "`|If `htmlencode="true"` reserved HTML characters are converted into character entities. For example, '`<`' is converted to '`&lt;`'. This parameter is useful if you would like to prevent users from adding malicious code, or if you want to prevent users from changing the design of their text by using HTML. If not specified, the default setting that is specified by the `cmpnt.htmlEncodeDefault` property in the **WCM WCMConfigService** service is used. By default, this property is set to true.|
-    |`start=" "``end=" "`|The start and end attributes are used to wrap the data that is returned by a tag within other tags, such as HTML. These attributes are not mandatory.|
+    |`htmlencode=" "`|If `htmlencode="true"` reserved HTML characters are converted into character entities. For example, '`<`' is converted to '`&lt;`'. This parameter is useful if you would like to prevent users from adding malicious code, or if you want to prevent users from changing the design of their text by using HTML. If not specified, the default setting that is specified by the `cmpnt.htmlEncodeDefault` property in the **WCM WCMConfigService** service is used. By default, this property is set to true.
+
+|
+    |`start=" "``end=" "`
+
+|The start and end attributes are used to wrap the data that is returned by a tag within other tags, such as HTML. These attributes are not mandatory.|
 
     -   **Simple tag**
 
@@ -62,8 +66,7 @@ To create a plug-in tag:
         [plugin:pluginname paramKey1="[IDCmpnt context='current' type='sitearea' field='id']"]
         ```
 
-        !!! note
-            You must use single quotation marks within the web content tag that is being used as a parameter value.
+        **Note:** You must use single quotation marks within the web content tag that is being used as a parameter value.
 
     -   **Plug-in tag with body content**
 
@@ -84,5 +87,13 @@ To create a plug-in tag:
 
 These topics contain information about the different plug-ins.
 
-???+ info "Related information:"
-    - [Using remote action plug-ins](../../../wcm_dev/wcm_custom_plugin/wcm_dev_remoteactions.md)
+**Related information**  
+
+
+[Using remote action plug-ins](../panel_help/wcm_dev_remoteactions.md)
+
+**References:**  
+
+
+[Using remote action plug-ins](wcm_dev_remoteactions.md)
+

@@ -13,4 +13,3 @@ nav:
     - Personalization APIs: pzn_apis
     - pzn_stage_prod.md
     - pzn_enable_logging_runtime_server.md
-    - deprecated

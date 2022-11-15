@@ -32,9 +32,9 @@ For more information about the access permissions that are required for previewi
 5.  Set the value of the property to false to suppress the message. The default value is true.
 
 
--   **[Disabling the preview option](wcm_preview_disable.md)**  
+-   **[Disabling the preview option](../wcm/wcm_preview_disable.md)**  
 If you do not want to offer the preview option in your authoring system, you can disable it globally or for individual virtual portals. If you disable the preview option, the portal no longer shows the preview context menu in the action bar of the site toolbar.
--   **[Disabling the More menu](wcm_moremenu_disable.md)**  
+-   **[Disabling the More menu](../wcm/wcm_moremenu_disable.md)**  
 If you do not want to offer the More menu and the information mode toggle in your authoring system, you can disable it globally or for individual virtual portals. If you disable the More menu, the portal no longer shows the preview context menu in the action bar of the site toolbar.
 
 

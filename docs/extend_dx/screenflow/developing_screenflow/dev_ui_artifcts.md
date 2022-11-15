@@ -95,15 +95,19 @@ Make similar changes to the Calendar portlet portlet 2.
 
 If you want to integrate forms such as passenger information form or widgets such as calendar, you can use such a portlet as a wrapper for these artifacts. For more information about developing portlets, go to *Developing portlets in the WebSphere® Portal Version 8.0 product documentation.*
 
-The portlets that can start screen flows are referred to as Dialog Instantiation and Initialization portlets (DIIPs). You can usually distinguish between two kinds of DIIPs:
+The portlets that can start screen flows are referred to as Dialog Instantiation and Initialization portlets \(DIIPs\). You can usually distinguish between two kinds of DIIPs:
 
 -   One type of DIIP triggers a new dialog instance by sending a well-defined start-event.
 -   The other type of DIIP triggers a new dialog that is based on the fact that a specific portlet emits a specific custom event.
 
 In either case, the event emission causes a new screen flow to be started and initialized with some initial data that the event payload transmits.
 
-With the Screen Flow Manager, different teams or even third-party vendors can develop different types of user interface (UI) artifacts. These artifacts are usually portlets, but can also be widgets or forms. For more details, go to *iWidgets Development in the IBM® Rational® Application Developer documentation*.
+With the Screen Flow Manager, different teams or even third-party vendors can develop different types of user interface \(UI\) artifacts. These artifacts are usually portlets, but can also be widgets or forms. For more details, go to *iWidgets Development in the IBM® Rational® Application Developer documentation*.
 
-???+ info "Related information"
-    -   [Transitions](../../../extend_dx/screenflow/developing_screenflow/creating_dialog_def/transitions/index.md)
+**Parent topic:**[Developing screen flows](../screenflow/dev_scrnflow.md)
+
+**Related information**  
+
+
+[Transitions](../screenflow/transitions.md)
 

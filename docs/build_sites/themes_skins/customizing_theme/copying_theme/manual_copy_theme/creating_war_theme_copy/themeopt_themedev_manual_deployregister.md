@@ -125,7 +125,6 @@ After you copy your static and dynamic theme resources and modify your dynamic r
 
 Your theme is now available for use on your portal. To verify, create a page, edit the page properties, and assign your theme to the page.
 
-!!! note
-    Your custom theme includes ready-to-use modules that are shared across themes and intentionally remain uncopied in the Theme Modules web application. The Theme Modules web application and the web application for your theme must remain started for your theme to operate.
+**Note:** Your custom theme includes ready-to-use modules that are shared across themes and intentionally remain uncopied in the Theme Modules web application. The Theme Modules web application and the web application for your theme must remain started for your theme to operate.
 
 

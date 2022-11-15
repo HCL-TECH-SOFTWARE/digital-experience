@@ -68,7 +68,7 @@ Find solutions to problems when you use Site Builder in the latest version of HC
 
     -   **Solution:**
 
-        Check that the user that is trying to import or export the template has the correct roles as described in the topic [Setting up Site Builder administrators](../sitebuilder/deploy_site_builder/sitebuilder_access_admins.md). Give them the required roles if they are meant to be able to import and export site and section template.
+        Check that the user that is trying to import or export the template has the correct roles as described in the topic [Setting up Site Builder administrators](sitebuilder_access_admins.md). Give them the required roles if they are meant to be able to import and export site and section template.
 
 
 

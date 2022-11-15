@@ -1,11 +1,10 @@
 # Human readable URL mappings for virtual portals
 
-You can provide human readable URLs for your users to access their virtual portals. For example, you can give each virtual portal a human readable URL, such as http://www.yourname.com:10039/wps/portal/yourcompanyhere. You can pass the human readable URL of a virtual portal to its users. They can then use it to access their virtual portal.
+You can provide human readable URLs for your users to access their virtual portals. For example, you can give each virtual portal a human readable URL, such as http://www.ibm.com:10039/wps/portal/tivoli. You can pass the human readable URL of a virtual portal to its users. They can then use it to access their virtual portal.
 
 When you create a virtual portal, you specify the human readable URL as required by your business environment. The URL mapping that you specify is assigned to the virtual portal during its initialization. The URL mapping points to the content root of the virtual portal.
 
-!!! note
-    URL mappings were deprecated with HCL Portal Version 8.5. Use friendly URLs instead. However, URL mappings are still used for internal purposes in the portal, for example, to map virtual portals.
+**Note:** URL mappings were deprecated with HCL Portal Version 8.5. Use friendly URLs instead. However, URL mappings are still used for internal purposes in the portal, for example, to map virtual portals.
 
 Internally, this URL mapping corresponds to a unique name wps.vp.internal\_ID\_of\_the\_virtual\_portal. The portal installation uses this unique name to identify and access the virtual portal unambiguously. The XML configuration interface and the Portal Scripting Interface also use this URL mapping to identify the virtual portal.
 
@@ -15,6 +14,7 @@ All URL mappings use the same context root and servlet name in the URL. This set
 
 For more information, see *URL mappings*.
 
+**Notes:**
 
 1.  There is a 1:1 relation between a virtual portal and its initial URL Mapping. Each mapped URL points to the root content node of one virtual portal. You cannot use the same URL Mapping for two different virtual portals.
 2.  You must not delete or modify the initial URL Mapping for a virtual portal or modify its unique name. Deleting this URL Mapping or modifying its unique name makes the virtual portal unusable. This setting is independent of whether you use the administration portlets URL Mapping or Custom Unique Names or the XML configuration interface to change the URL Mapping.
@@ -36,11 +36,18 @@ For more information, see *URL mappings*.
 
 
 
-???+ info "Related information:"
-    - [Using friendly URLs](../../../../extend_dx/development_tools/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/mp_friendly_url.md)
-    - [URL mapping](../../../../deployment/manage/config_portal_behavior/adurlmap.md)
-    - [XML configuration interface and content associations](../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/advance_adm_sample/contentmap/mp_wcm_contentmap_xml.md)
-    - [Automatically grant page access to community members](../../../../extend_dx/integration/connections/configuration/cfg_community_pages/commpages_delegate_access.md)
-    - [REST API and content associations](../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/advance_adm_sample/contentmap/mp_wcm_contentmap_restapi.md)
-    - [Access permissions](../../../../deployment/manage/security/controlling_access/resources_roles/sec_acc_rights.md)
+**Related information**  
+
+
+[Using friendly URLs](../admin-system/mp_friendly_url.md)
+
+[URL mapping](../admin-system/adurlmap.md)
+
+[XML configuration interface and content associations](../admin-system/mp_wcm_contentmap_xml.md)
+
+[Automatically grant page access to community members](../admin-system/commpages_delegate_access.md)
+
+[REST API and content associations](../admin-system/mp_wcm_contentmap_restapi.md)
+
+[Access permissions](../admin-system/sec_acc_rights.md)
 

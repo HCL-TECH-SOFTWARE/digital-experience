@@ -26,7 +26,6 @@ By default, you can specify any host name in a URL used to retrieve content. How
 
     -   Property name: `connect.connector.httpconnector.hosts.host\_name.defaultcacheexpires`, where `host\_name` is the fully qualified host name of the server for which you want to grant access. For example: `connect.connector.httpconnector.hosts.www.example.com.defaultcacheexpires`
     -   Value: `expiration\_time`. For example: `REL 9000s`
-
 6.  Specify a default cache setting for the host name you added by adding a property.
 
     Use the following format for new properties:
@@ -35,7 +34,10 @@ By default, you can specify any host name in a URL used to retrieve content. How
     -   Value: `true` or `false`
 
 
-???+ info "Related information"
-    - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
-    - [Cache expire parameters](../custom_caching/wcm_dev_caching_expire-parameters.md)
+**Related information**  
+
+
+[Setting service configuration properties](../admin-system/adsetcfg.md)
+
+[Cache expire parameters](../wcm/wcm_dev_caching_expire-parameters.md)
 

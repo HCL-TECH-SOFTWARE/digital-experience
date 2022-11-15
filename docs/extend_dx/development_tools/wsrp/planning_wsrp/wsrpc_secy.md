@@ -14,8 +14,7 @@ HCL Portal supports the following security mechanisms:
 
     -   It does not require configuration of the WSRP web services.
     -   It makes it possible for the WSRP Producer to accept and process both unauthenticated and authenticated requests. The Producer processes unauthenticated requests that do not contain an LTPA V2 cookie without establishing an individual security context. This way, it can serve requests from anonymous users.
-
--   **Web Services Security (WSS)**
+-   **Web Services Security \(WSS\)**
 
     You can configure the WSRP Consumer and WSRP Producer for Web Services Security according to the WS-Security standard. With a WS Security configuration, the WSRP Consumer sends a header that complies with the WS-Security standard as part of the WSRP request messages. The header contains credentials that identify and authenticate the user. For this option, both the WSRP Consumer and the WSRP Producer must be configured for Web Services Security.
 
@@ -38,7 +37,6 @@ For a WSRP Producer, security configuration is optional. A WSRP Consumer must us
 
     -   For a Consumer portal, you must define a security configuration that is compatible with the security configuration of the Producer portal from which you consume WSRP services. This configuration must include all the appropriate security aspects.
     -   On the Consumer portal, the consumed portlets behave like local portlets. Therefore, you can configure Portal Access Control for the remote portlets on the Consumer portal the in same way as for local portlets. If you use Web Services Security, do not make the affected remote portlets available to anonymous users on the Consumer portal. Instead, configure Portal Access Control to make the affected remote portlets available to authenticated users only.
-
 -   **For portals that work as both a Producer and a Consumer portal:**
 
     -   If you use your portal as both a Producer and a Consumer portal, the security configurations for both these roles are independent of each other.
@@ -46,10 +44,16 @@ For a WSRP Producer, security configuration is optional. A WSRP Consumer must us
 For more detailed information about Portal Access Control, read the sections about *Configuring Portal Access Control for a WSRP Producer portal* and *Managing Access Control*.
 
 
-???+ info "Related information"  
-    -   [Configuring Portal Access Control for a WSRP Producer portal](../../wsrp/portal_wsrp_producer/securing_wsrp_prod_portal/wsrpt_prod_sec_pac.md)
-    -   [Managing Access Control](../../../../deployment/manage/security/controlling_access/sec_ac_adm.md)
-    -   [WebSphere Application Server product documentation version 8.5](http://www-01.ibm.com/software/webservers/appserv/was/library/)
-    -   [Updating a WSRP Producer](../../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/wsrp/mig_post_wsrp_producer.md)
-    -   [Updating a WSRP Consumer](../../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/wsrp/mig_post_wsrp_consumer.md)
+**Related information**  
+
+
+[Configuring Portal Access Control for a WSRP Producer portal](../admin-system/wsrpt_prod_sec_pac.md)
+
+[Managing Access Control](../admin-system/sec_ac_adm.md)
+
+[WebSphere Application Server product documentation version 8.5](http://www-01.ibm.com/software/webservers/appserv/was/library/)
+
+[Updating a WSRP Producer](../migrate/mig_post_wsrp_producer.md)
+
+[Updating a WSRP Consumer](../migrate/mig_post_wsrp_consumer.md)
 

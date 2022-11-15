@@ -13,6 +13,10 @@ Use this approach if you are an organization with the following requirements:
 -   An organization that needs to make fault-tolerant systems
 -   An organization that needs to use services such as orchestration and auto-scaling to scale applications
 
+## Topology diagram
+
+![DX deployment topology](../../../../images/container_deploy.png)
+
 ## HCL Digital Experience 9.5 package contents
 
 The HCL Digital Experience 9.5 image files, available through the HCL DX 9.5 Container Update releases, can be downloaded from the [HCL Software License Portal](https://www.hcltech.com/software/support/release).

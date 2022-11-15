@@ -48,8 +48,7 @@ View the steps to create a single-sign on \(SSO\) domain between HCL Digital Exp
 
 4.  Verify that the system clocks are within 5 minutes of each other between the HCL Portal server or servers and the remote search service server.
 
-    !!! note
-        Failure to have the clocks in sync will lead to an import failure in the next step.
+    **Note:** Failure to have the clocks in sync will lead to an import failure in the next step.
 
 5.  Add the signer certification of the remote search service server into the portal server by completing the following steps:
 

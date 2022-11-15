@@ -58,16 +58,18 @@ Use **Include only** to choose one or more actions that run when the recommendat
 
 The evaluations **is empty** and **is not empty** allow a rule to check for the existence of a null value or an empty list. When you use either of these evaluations, one side of the evaluation is unnecessary and is removed.
 
-|Attribute|Is empty or Is not empty|Output|
+|Header| |Header|
 |------|--|------|
-|Resource attribute \(non-list type\)|is empty|true if attribute is null, otherwise false|
-| |is not empty|false is attribute is null, otherwise true|
+|Resource attribute \(non-list type\)
+
+|is empty|true if attribute is null, otherwise false|
+| |is not empty|false is attribute is null, otherwise true|
 |Resource attribute \(list type\)|is empty|true if list is empty, otherwise false|
-| |is not empty|false if list is empty, otherwise true|
+| |is not empty|false if list is empty, otherwise true|
 |Request Attributes or Session Attributes \(non-list type\)|is empty|false if attribute/parameter exists and value is not null; true if attribute/parameter does not exist or value is null|
-| |is not empty|true if attribute/parameter exists and value is not null; false if attribute/parameter does not exist or value is null|
+| |is not empty|true if attribute/parameter exists and value is not null; false if attribute/parameter does not exist or value is null|
 |Request Attributes or Session Attributes \(list type\)|is empty|true if attribute/parameter does not exist or list is empty; false if attribute/parameter exists and list has data|
-| |is not empty|false if attribute/parameter does not exist or list is empty; true if attribute/parameter exists and list has data|
+| |is not empty|false if attribute/parameter does not exist or list is empty; true if attribute/parameter exists and list has data|
 
 ## **is equal to**
 

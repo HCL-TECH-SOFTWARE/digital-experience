@@ -6,8 +6,7 @@ In this example, the `Always` action \(`Get Top Products`\) in `Get Products By 
 
 For example: The total rule returns content that meets the conditions in the earlier part of the binding or that meets the conditions in the later part.
 
-!!! note
-	It is possible for a nested binding to contain nested bindings.
+**Note:** It is possible for a nested binding to contain nested bindings.
 
 `Get Products By Location`:
 

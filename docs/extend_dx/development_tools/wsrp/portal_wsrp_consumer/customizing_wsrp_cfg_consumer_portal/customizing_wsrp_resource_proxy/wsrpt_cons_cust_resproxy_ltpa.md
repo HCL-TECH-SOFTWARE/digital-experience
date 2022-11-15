@@ -1,6 +1,6 @@
 # Customizing the WSRP resource proxy for LTPA token forwarding
 
-The WSRP resource proxy can forward single sign-on cookies (LTPA, LTPA2) from the client requests to resources in the same single sign-on domain.
+The WSRP resource proxy can forward single sign-on cookies \(LTPA, LTPA2\) from the client requests to resources in the same single sign-on domain.
 
 You can influence the LTPA token forwarding behavior. To do so, proceed as follows:
 

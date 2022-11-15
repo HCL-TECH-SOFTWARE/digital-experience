@@ -1,6 +1,6 @@
 # Setting internal content URLs
 
-Learn how to set URLs that point to portal internal content (`InternalContentURL`).
+Learn how to set URLs that point to portal internal content \(`InternalContentURL`\).
 
 1.  Obtain a modifiable instance of an internal content URL.
 

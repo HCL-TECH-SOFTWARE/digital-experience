@@ -3,7 +3,8 @@ id: wcm_dev_elements_user-selection_add_template
 title: Adding a user selection element to a template
 ---
 
-# Adding a user selection element to a template
+
+
 
 You add a user selection element to an authoring template when you want the user selection element to be used by a set of items that use the same authoring template.
 
@@ -23,14 +24,13 @@ You add a user selection element to an authoring template when you want the user
 
 8.  Go to the use selection element you created. Either select a default list of users and groups, or do nothing and allow your content creators select users and groups they create items based on this authoring template.
 
-9.  Click ![properties](../user_selection_element/_img/propIcon.jpg) to open the display properties of the element. This view is where you define how the element is displayed on the item form.
+9.  Click ![properties](../images/propIcon.jpg) to open the display properties of the element. This view is where you define how the element is displayed on the item form.
 
     1.  To display the element as a required field select **Identify this as a required field**.
 
     2.  To hide a field on the content form from all users select **Hide field**. You must specify a default value if the field is a required field.
 
-        !!!note
-            Administrators and managers can choose to display hidden fields and elements in an item by clicking **Show hidden fields**.
+        **Note:** Administrators and managers can choose to display hidden fields and elements in an item by clicking **Show hidden fields**.
 
     3.  Select the users or groups you want to grant exclusive edit access to a field or element by clicking **Add Editors**.
 

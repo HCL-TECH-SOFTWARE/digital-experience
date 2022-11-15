@@ -15,7 +15,7 @@ Implement `MapperFactory` to make the mappers available. You can register the `M
 
 The following code sample shows an example of how a `MapperFactory` can look.
 
-Code sample:
+Code sample
 
 ```
 
@@ -39,7 +39,7 @@ Code sample:
 
 The following code sample shows how you can register a `MapperFactory` with a plugin.xml file.
 
-Code sample:
+Code sample
 
 ```
 
@@ -57,6 +57,15 @@ Code sample:
 
 ```
 
-???+ info "Related information"
-    -   [Retrieve and store event payload](../../../../../extend_dx/screenflow/advance_concepts/retrieve_store_event_payload/index.md)
+-   **[Event mapper types](../screenflow/evnt_mprs_type.md)**  
+HCL UX Screen Flow Manager supports the following two types of event mappers: PayloadToContextMappers and ContextToPayloadMappers.
+-   **[Packaging of event mappers and JAXB serialization](../screenflow/pkg_evntmpr_jaxb_srlztn.md)**  
+It is good practice to package event mappers in a shared library rather than together with the business portlets.
+
+**Parent topic:**[Retrieve and store event payload](../screenflow/ret_str_evnt_pyld.md)
+
+**Related information**  
+
+
+[Retrieve and store event payload](../screenflow/ret_str_evnt_pyld.md)
 

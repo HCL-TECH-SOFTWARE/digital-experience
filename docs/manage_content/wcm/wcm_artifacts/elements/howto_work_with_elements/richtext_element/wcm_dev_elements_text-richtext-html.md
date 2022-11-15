@@ -30,11 +30,43 @@ The rich text editors that are used by Web Content Manager are supplied by other
 
 |Element type|Details|
 |------------|-------|
-|Short Text and Text elements|Web content tags cannot be used in short text and text elements.|
-|HTML elements|Any combination of web content tags can be used in HTML elements with the following exceptions:<br><br>1.  You cannot use single quotation marks around attribute values.<br>-   `[Component name='example']`<br>-   `[Component name='example' start='<a href="' end=' ">link</a>']`<br>-   `[Component name='example' start='<img src="' end=' "/>']`<br>2.  You cannot use double quotation marks inside attribute values<br>-   `[Component name="example" start="<a href="" end="">link</a>"]`<br>-   `[Component name="example" start="<img src="" end=""/>"]`|
-|Rich text elements|Basic Web Content Manager tags can be used in rich text elements. For example, the following tags can be used in Rich Text elements:<br><br>-   `[component name="test"]`<br>-   `[element type="content" context="current" key="body"]`<br><br>The following tag formats are invalid:<br><br>1.  The use of single quotation marks around attribute values.<br>-   `[Component name='example']`<br>-   `[Component name='example' start='<a href="' end=' ">link</a>']`<br>-   `[Component name='example' start='<img src="' end=' "/>']`<br>2.  The use of double quotation marks inside attribute values.<br>-   `[Component name="example" start="<a href="" end="">link</a>"]`<br>-   `[Component name="example" start="<img src="" end=""/>"]`<br>3.  Embedding tags inside other HTML tags.<br>-   `<a href='[Component name="example"]'>link</a>`<br>-   `<img src='[Component name="example"]'/>`|
+|Short Text and Text elements|Web content tags cannot be used in short text and text elements.
+
+|
+|HTML elements|Any combination of web content tags can be used in HTML elements with the following exceptions:
+
+1.  You cannot use single quotation marks around attribute values.
+    -   `[Component name='example']`
+    -   `[Component name='example' start='<a href="' end=' ">link</a>']`
+    -   `[Component name='example' start='<img src="' end=' "/>']`
+2.  You cannot use double quotation marks inside attribute values.
+    -   `[Component name="example" start="<a href="" end="">link</a>"]`
+    -   `[Component name="example" start="<img src="" end=""/>"]`
+
+|
+|Rich text elements|Basic Web Content Manager tags can be used in rich text elements. For example, the following tags can be used in Rich Text elements:
+
+-   `[component name="test"]`
+-   `[element type="content" context="current" key="body"]`
+
+The following tag formats are invalid:
+
+1.  The use of single quotation marks around attribute values.
+    -   `[Component name='example']`
+    -   `[Component name='example' start='<a href="' end=' ">link</a>']`
+    -   `[Component name='example' start='<img src="' end=' "/>']`
+2.  The use of double quotation marks inside attribute values.
+    -   `[Component name="example" start="<a href="" end="">link</a>"]`
+    -   `[Component name="example" start="<img src="" end=""/>"]`
+3.  Embedding tags inside other HTML tags.
+    -   `<a href='[Component name="example"]'>link</a>`
+    -   `<img src='[Component name="example"]'/>`
+
+|
 
 
-???+ info "Related information" 
-    -   [Setting service configuration properties](../../../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
+**Related information**  
+
+
+[Setting service configuration properties](../admin-system/adsetcfg.md)
 

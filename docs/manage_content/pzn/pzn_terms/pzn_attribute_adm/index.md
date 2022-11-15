@@ -14,5 +14,18 @@ Visibility rules determine what a user will see, or what has been targeted towar
 
 Access Control takes precedent over visibility rules. You must have access to a page or portlet prior to applying visibility rules. Access Control also determines if a page or portlet will be returned in a search; if a user does not have access, he will not be able to see the portlet or page in search results. If a user has access to a portlet or page, but has the visibility rule set to hide the page or portlet, it will show up in search results.
 
+-   **[Assigning attribute based administration rules to pages and portlets](../pzn/pzn_assign_att.md)**  
+Attribute based administration rules can be assigned manually via HCL Digital Experience Administration portlets or through the XML configuration interface.
+-   **[Changing the error condition behavior](../pzn/pzn_error_behavior.md)**  
+Update the PersonalizationService.properties file to override an error condition behavior globally.
 
+
+**Previous topic:**[Content resources](../pzn/pzn_content_resources.md)
+
+**Next topic:**[Rules](../pzn/pzn_rules.md)
+
+
+**Previous topic:**[Content resources](../pzn/pzn_content_resources.md)
+
+**Next topic:**[Rules](../pzn/pzn_rules.md)
 

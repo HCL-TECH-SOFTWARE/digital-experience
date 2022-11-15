@@ -32,8 +32,7 @@ This code sample shows a transition from a single portlet to multiple portlets w
 
 Some portlets are associated with different events than others. In the code sample, both the portlets that are referenced by the transition-endpoints `portlet2a` and `portlet2b` receive the event `e2a`. The portlet that is referenced by the transition endpoint `portlet2c` receives the event `e2c`.
 
-!!!note
-    In case multiple portlets are referenced as part of a target, all portlets must be on the same page.
+**Note:** In case multiple portlets are referenced as part of a target, all portlets must be on the same page.
 
 Code sample
 
@@ -93,8 +92,7 @@ In code sample, the portlet that is referenced by the transition-endpoint receiv
 -   Transition-endpoint `portlet2b` receives the events `e2` and `e2a`.
 -   Transition-endpoint `portlet2c` receives the events `e2` and `e2c`.
 
-!!!note
-    If pages and portlets are both referenced as targets, all portlets must be on the referenced page.
+**Note:** If pages and portlets are both referenced as targets, all portlets must be on the referenced page.
 
 Code sample:
 
@@ -125,7 +123,7 @@ Code sample:
 
 The following code sample shows an alternative way to declare what is declared in the previous code sample. Two of the previously shown transition-endpoints are merged into a single one. Both notations lead to the same effect.
 
-Code sample:
+Code sample
 
 ```
 
@@ -157,10 +155,9 @@ It is also possible to transmit multiple events to a single target transition-en
 
 In this particular sample, `portlet2a` receives the events `e2-1`,`e2-2`, `e2a-1`, and `e2a-2` and `portlet2b` receives the events `e2-1`,`e2-2`, and `e2b-1`.
 
-!!!note
-    Transmission of multiple events is supported only for targets.
+**Note:** Transmission of multiple events is supported only for targets.
 
-Code sample:
+Code sample
 
 ```
 
@@ -192,10 +189,9 @@ The following code sample shows a transition where the source points to multiple
 
 When any of the referenced source portlets, `portlet1a` or `portlet1b`, emits the event `e1`, the user is routed to the target portlet `portlet2`, which is fed with event `e2`.
 
-!!!note
-    For sources, it is not possible to alternatively reference multiple transition-endpoints as it was done with targets.
+**Note:** For sources, it is not possible to alternatively reference multiple transition-endpoints as it was done with targets.
 
-Code sample:
+Code sample
 
 ```
 
@@ -221,7 +217,7 @@ This transition represents the outgoing transition. When the transition is trigg
 
 In this code sample, when `portlet1` emits the event `e1`, `dialog2` is started and initialized with event `eX`. From here, continuing to a particular step of `dialog2` depends on the transitions that are defined as part of `dialog2`. For more information, go to the topic *Dialog Chaining and Nesting*.
 
-Code sample:
+Code sample
 
 ```
 
@@ -239,9 +235,12 @@ Code sample:
 </transition>
 ```
 
+**Parent topic:**[Transitions reference](../screenflow/ref_trnstntns.md)
+
+**Related information**  
 
 
-???+ info "Related information"
-    -   [Dialog chaining and nesting](../../../extend_dx/screenflow/developing_screenflow/creating_dialog_def/transitions/dialog_chain_nest/index.md)
-    -   [Transition endpoints](../../../extend_dx/screenflow/developing_screenflow/creating_dialog_def/transition_endpoints/index.md)
+[Dialog chaining and nesting](../screenflow/dlg_chng_nstng.md)
+
+[Transition endpoints](../screenflow/ref_trnstn_endpnts.md)
 

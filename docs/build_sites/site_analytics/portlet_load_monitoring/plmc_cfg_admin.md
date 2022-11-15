@@ -17,7 +17,6 @@ Here is an overview of the configuration and administration tasks and parameters
     -   Maximum number of concurrent requests that are allowed for a portlet
     -   Reactivation limit of concurrent requests that are allowed for reactivating the portlet
     -   Allowed average response time. You can configure the sample number of requests by which this average response time for portlets is calculated as mentioned previously under configuration tasks.
-    
 -   **Portlet load monitoring administration**
 
     You can also do the following administrative tasks on individual portlets by using the **Manage Portlets** portlet only:

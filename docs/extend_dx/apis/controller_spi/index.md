@@ -15,7 +15,17 @@ The resources that are exposed by the controller can be modified through specifi
 
 |Classes from the read-only model . . .|. . . are reflected in the Controller SPI by the following classes|
 |--------------------------------------|------------------------------------------------------------------|
-|-  `ContentNode`<br>-   `MarkupCapable`<br>-   `Localized`<br>-   `Identifiable`<br>-   `ActiveFlag`|-   `ModifiableContentNode`<br>-   `ModifiableMarkupCapable`<br>-   `ModifiableLocalized`<br>-   `ModifiableIdentifiable`<br>-   `ModifiableActiveFlag`|
+|`ContentNode`-   `MarkupCapable`
+-   `Localized`
+-   `Identifiable`
+-   `ActiveFlag`
+
+|`ModifiableContentNode` -   `ModifiableMarkupCapable`
+-   `ModifiableLocalized`
+-   `ModifiableIdentifiable`
+-   `ModifiableActiveFlag`
+
+|
 
 Further benefits of the Controller SPI are as follows:
 
@@ -68,9 +78,9 @@ A controller instance is based on a read-only model instance. Therefore it has t
 -   If the underlying model is scoped to a virtual portal, then so is the controller.
 
 
-???+ info "Related information"  
-    - [Model SPI overview](../model_spi/index.md) 
-    - [Administration tools for configuring outbound HTTP connections](../../portlets_development/web2_ui/outbound_http_connection/cfg_outbound_http_connections/adm_tools_for_cfg_outbound_http_conn/index.md) 
-    - [Obtaining the Controller SPI](../../portlets_development/web2_ui/outbound_http_connection/cfg_outbound_http_connections/adm_tools_for_cfg_outbound_http_conn/cfg_outbound_http_using_modelcontroller_spi/outbhttp_cfg_mcspi_obtstrlrspi.md)
-    - [The Java API](../../../manage_content/wcm/wcm_artifacts/managed_pages/advadmin_managedpages/wcm_mngpages_projectapi.md#java-api)
+???+ info "**Related information:**"  
+    - [Model SPI overview](/model_spi/index.md)
+    <!-- - [Administration tools for configuring outbound HTTP connections](../dev-portlet/outbhttp_cfg_tools.md) -->
+    <!-- - [Obtaining the Controller SPI](../dev-portlet/outbhttp_cfg_mcspi_obtstrlrspi.md) -->
+    <!-- - [The Java API](../admin-system/tag_rate_api_java.md) -->
 

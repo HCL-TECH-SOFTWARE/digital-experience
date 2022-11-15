@@ -7,18 +7,23 @@ To create such interactive designs, site designers need to implement an HTML for
 For more information about the action URL, render parameter, and session attribute rendering plug-ins, read *Utility rendering plug-ins*.
 
 The following topics describe how you implement user interactions that are related to forum topics by using the social-rendering specific data sink. Additionally, you can implement further user interaction by using the generic XML Digital Data Connector data sink and the social rendering list-rendering profiles. For more information, read *The generic XML Digital Data Connector data sink* and *Digital Data Connector profiles for social rendering*.
-<!---
+
 -   **[Interacting with forums](../wcm/wcm_dev_intract_forum.md)**  
 HCL Portal provides a built-in data sink that supports different interactions with forums.
 -   **[Creating a reply](../wcm/wcm_dev_intract_create_reply.md)**  
 When you run a createReply action, the forums data sink uses a number of extra form fields.
 -   **[Deleting a reply](../wcm/wcm_dev_intract_delete_reply.md)**  
 When you run a deleteReply action, the forums data sink uses a number of extra form fields.
---->
 
-???+ info "Related information:"
-    - [The social rendering Digital Data Connector plug-in](../../../social_rendering/extending_social_lists_using_ddc/soc_rendr_bean_lst_prvdr.md)
-    - [Sending data to the Web Content Viewer portlet](../../../../extend_dx/ddc/implementing_user_interactions/sending_data_to_webcontentviewer_portlet/index.md)
-    - [The generic XML Digital Data Connector data sink](../../../../extend_dx/ddc/implementing_user_interactions/sending_data_to_webcontentviewer_portlet/generic_xml_ddc_sink/index.md)
-    - [Digital Data Connector profiles for social rendering](../customizing_visualdesign/customizing_markup_gen/ddc_profiles_for_social_rend/index.md)
+
+**Related information**  
+
+
+[The social rendering Digital Data Connector plug-in](../social/soc_rendr_bean_lst_prvdr.md)
+
+[Sending data to the Web Content Viewer portlet](../social/plrf_sendata2wcv.md)
+
+[The generic XML Digital Data Connector data sink](../social/plrf_use_gen_xml_ddc_datasink.md)
+
+[Digital Data Connector profiles for social rendering](../social/soc_rendr_lst_rndr_prfls.md)
 

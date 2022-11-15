@@ -113,9 +113,9 @@ You can change the location of the theme template. For this purpose, the theme c
 </parameter>
 ```
 
--   **[Setting inherited theme templates](rwd_set_inherited_theme_template.md)**  
+-   **[Setting inherited theme templates](../rwd/rwd_set_inherited_theme_template.md)**  
 You can set a theme template to be used on a page and it automatically sets the template for all child pages that are associated with that page. The inherited metadata can be used when you want every page under a specific page to have the same theme template.
--   **[Renaming Theme Templates](rwd_renamethemetemp.md)**  
+-   **[Renaming Theme Templates](../rwd/rwd_renamethemetemp.md)**  
 You can rename the default filename of the theme template from theme.html. In the ready-to-use theme renaming the theme.html file is used to provide a different theme view for the administrative pages.
 
 

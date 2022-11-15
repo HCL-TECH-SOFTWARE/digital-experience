@@ -5,9 +5,9 @@ nav:
     - Web Content Library: web_content_library
     - Managed Pages: managed_pages
     - Projects: projects
-    - Workflow and Change management: workflow
+    - Workflow and change management: workflow
     - Tags: tags
-    - Tagging and Rating for Web Content: tagrate_managing
-    - Reserved Authoring Portlet: reserved_auth_portlet
-    - Personalizing Federated Documents: feddocs
+    - Tagging and rating for web content: tagrate_managing
+    - Reserved authoring portlet: reserved_auth_portlet
+    - Personalizing federated documents: feddocs
     - Develop WCM Assets: wcm_dev

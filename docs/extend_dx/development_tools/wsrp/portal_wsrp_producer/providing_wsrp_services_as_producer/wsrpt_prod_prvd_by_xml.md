@@ -4,7 +4,7 @@ A WSRP Producer can provide or withdraw portlets by using the XML configuration 
 
 To provide or withdraw the portlet by using the XML configuration interface, specify the provided attribute to the portlet tag:
 
--   **provided = "true | false"**
+-   **provided = "true \| false"**
 
     Use this attribute with the portlet tag to specify providing or withdrawing a portlet:
 
@@ -57,7 +57,12 @@ To provide or withdraw the portlet by using the XML configuration interface, spe
     
     ```
 
-???+ info "Related information"  
-    -   [Working with the XML configuration interface](../../../portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
-    -   [The XML configuration interface](../../../portal_admin_tools/xml_config_interface/index.md)
+
+
+**Related information**  
+
+
+[Working with the XML configuration interface](../admin-system/adxmltsk.md)
+
+[The XML configuration interface](../admin-system/admxmlai.md)
 

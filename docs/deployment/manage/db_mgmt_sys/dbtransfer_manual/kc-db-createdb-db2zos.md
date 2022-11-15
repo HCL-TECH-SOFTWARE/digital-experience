@@ -2,12 +2,11 @@
 
 Manual steps from the Configuration Wizard are included in HCL Digital Experience Product Documentation for reference and for advanced users. The procedure includes variables and steps for different databases. When you use the wizard to configure your deployment, it replaces the variable with information that you provided in the wizard. It also shows only the steps that are specific to your environment. The instructions that the wizard generates are specific to your environment.
 
-!!!attention
-       All steps for all database environments are included without consideration for your environment. Use the Configuration Wizard to generate custom instructions for your environment.
+**Attention:** All steps for all database environments are included without consideration for your environment. Use the Configuration Wizard to generate custom instructions for your environment.
 
 1.  Copy the downloaded script to the database server and extract it.
 
-2.  Use your preferred SQL processor, such as SPUFI, to run the script on the database server.
+2.  Use your preferred SQL processor, such as SPUFI, to run the script on the database server. Run the DB2® commands on z/OS® in the order that is listed in the script.
 
     Example of the script that the Configuration Wizard generates.
 

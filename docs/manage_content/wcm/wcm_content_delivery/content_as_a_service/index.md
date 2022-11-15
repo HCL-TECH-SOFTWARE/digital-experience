@@ -52,6 +52,8 @@ http://example.com/wps/mypoc?urile=wcm:path:/Web+Content/News/News1&page=ibm.por
 ```
 
 
-???+ info "Related information"
-    - [Writing links to web content](../../wcm_artifacts/tags/wcm_dev_writing-links.md)
+**Related information**  
+
+
+[Writing links to web content](../wcm/wcm_dev_writing-links.md)
 

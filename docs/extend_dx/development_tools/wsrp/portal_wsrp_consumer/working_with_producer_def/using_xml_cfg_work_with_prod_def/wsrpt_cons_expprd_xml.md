@@ -8,16 +8,21 @@ The following example shows how you use the portal XML configuration interface t
 
 <?xml version="1.0" encoding="UTF-8" ?> 
 <request xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-         xsi:noNamespaceSchemaLocation="PortalConfig_8.5.0.xsd" type="export">
+         xsi:noNamespaceSchemaLocation="PortalConfig\_8.5.0.xsd" type="export">
    <portal action="locate">
-      **<wsrp-producer action="export" objectid="*" \> **
+      **<wsrp-producer action="export" objectid="\*" /\> **
    </portal>
 </request>
 
 ```
 
-???+ info "Related information"  
-   -  [Sample XML configuration files](../../../../portal_admin_tools/xml_config_interface/xml_config_ref/admxmsmp.md)
-   -  [The XML configuration interface](../../../../portal_admin_tools/xml_config_interface/index.md)
-   -  [Working with the XML configuration interface](../../../../portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
+
+**Related information**  
+
+
+[Sample XML configuration files](../admin-system/admxmsmp.md)
+
+[The XML configuration interface](../admin-system/admxmlai.md)
+
+[Working with the XML configuration interface](../admin-system/adxmltsk.md)
 

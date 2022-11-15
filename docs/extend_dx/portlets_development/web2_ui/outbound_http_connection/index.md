@@ -41,24 +41,28 @@ You can use an outbound HTTP connection in the following two ways:
 
 The following image illustrates the two different ways to connect to a remote system by using outbound HTTP connections: ![Two ways of connecting to a remote system by using HTTP outbound connections](../images/HTTP_OutBound_graphic_1.jpg)
 
--   **[The programming model for the outbound HTTP connection service](outbhttp_progr_model.md)**  
+-   **[The programming model for the outbound HTTP connection service](../dev-portlet/outbhttp_progr_model.md)**  
 The outbound HTTP connection service can be used from the context of a servlet request service or from the context of a portlet request service. Here are some code examples.
--   **[HTTP proxy for Ajax applications, also known as Ajax Proxy](../outbound_http_connection/http_ajax_proxy/index.md)**  
+-   **[HTTP proxy for Ajax applications, also known as Ajax Proxy](../dev-portlet/outbhttp_httproxy_4_ajax_apps.md)**  
 One of the basic technologies that emerged in the context of the next generation web user interface is Ajax \(Asynchronous JavaScript and XML\). Using Ajax can increase the responsiveness and usability of your web applications.
--   **[Configuring outbound HTTP connections](../outbound_http_connection/cfg_outbound_http_connections/index.md)**  
+-   **[Configuring outbound HTTP connections](../dev-portlet/outbhttp_cfg_oh_conns.md)**  
 In HCL Portal Version 8.0 and earlier versions, outbound HTTP connections were accessible through the Ajax Proxy service. The Ajax Proxy service was configured by a configuration document named proxy-config.xml. You find this document in the /WEB-INF directory of the web module that uses the Ajax Proxy service. Starting with HCL Portal Version 8.5 and the new outbound connection service, the configuration of outbound HTTP connections is now part of the standard datastore-based portal configuration.
--   **[Authenticating outbound HTTP connections](../outbound_http_connection/authenticating_outbound_http_connections/index.md)**  
+-   **[Authenticating outbound HTTP connections](../dev-portlet/outbhttp_authntct.md)**  
 You can protect the access to the remote host by an authentication mechanism.
--   **[Using dynamic elements in outbound HTTP connection settings](outbhttp_dyn_elements.md)**  
+-   **[Using dynamic elements in outbound HTTP connection settings](../dev-portlet/outbhttp_dyn_elements.md)**  
 In some cases, it is useful to control configuration settings at run time. For example, an administrator might want to have the program decide at run time which policy rule is applied. In another scenario, parts of a policy rule configuration that are known only at run time must be included in the configuration.
--   **[Using programmatic extensions for outbound HTTP connections](../outbound_http_connection/programmatic_extensions_outbound_http_connections/index.md)**  
+-   **[Using programmatic extensions for outbound HTTP connections](../dev-portlet/outbhttp_progr_xtns.md)**  
 To extend the functions of an outbound connection, portal administrators can implement a custom outbound service filter.
--   **[Migration](outbound_http_migrate.md)**  
+-   **[Migration](../dev-portlet/outbound_http_migrate.md)**  
 HCL Portal Version 8.5 provides a migration process for the change from the Ajax proxy of previous portal versions to the new outbound HTTP connection.
 
 
-???+ info "Related information"
-    - [The generic XML Digital Data Connector plug-in](../../../../extend_dx/ddc/integrating_remote_xml_data/plrf_genrc_beanlst_provider.md)
-    - [The generic JSON Digital Data Connector plug-in](../../../../extend_dx/ddc/integrating_remote_json_data/plrf_genrc_beanlst_provider_json.md)
-    - [Changing from Ajax proxy to outbound HTTP connection](../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/mig_enable_outboundhttp.md)
+**Related information**  
+
+
+[The generic XML Digital Data Connector plug-in](../social/plrf_genrc_beanlst_provider.md)
+
+[The generic JSON Digital Data Connector plug-in](../social/plrf_genrc_beanlst_provider_json.md)
+
+[Changing from Ajax proxy to outbound HTTP connection](../migrate/mig_enable_outboundhttp.md)
 

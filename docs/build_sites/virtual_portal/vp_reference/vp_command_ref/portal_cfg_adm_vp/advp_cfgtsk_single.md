@@ -31,6 +31,8 @@ Here is an example for creating two virtual portals:
     ConfigEngine create-virtual-portal -DvirtualPortalList=vp1,vp2
     ```
 
+    -   For IBM® i: `ConfigEngine.sh create-virtual-portal -DvirtualPortalList=vp1,vp2`
     -   For Linux™: `ConfigEngine.sh create-virtual-portal -DvirtualPortalList=vp1,vp2`
     -   For Windows™: `ConfigEngine.bat create-virtual-portal -DvirtualPortalList=vp1,vp2`
+
 

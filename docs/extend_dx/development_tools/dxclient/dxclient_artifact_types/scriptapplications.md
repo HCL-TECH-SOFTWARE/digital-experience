@@ -8,7 +8,7 @@ The `deploy-scriptapplication` command is used with the DXClient tool to push or
 
 **Required Files**:
 
-The script application push command in the DXClient tool requires a Script Application zip file or an extracted folder of the same (identified by the `prebuiltZip` or `contentRoot` attributes respectively). For more information on Script Applications, refer to the [Build applications with the Script Application](../../../../guide_me/tutorials/scriptapps/common-setup/basic-scriptapp/basic_nowebpack_setup.md) topics in the HCL DX Help Center.
+The script application push command in the DXClient tool requires a Script Application zip file or an extracted folder of the same \(identified by the `prebuiltZip` or `contentRoot` attributes respectively\). For more information on Script Applications, refer to the [Build applications with the Script Application](https://help.hcltechsw.com/digital-experience/9.5/script-portlet/build_apps.html) topics in the HCL DX Help Center.
 
 **Command**
 
@@ -62,7 +62,7 @@ Use this attribute to specify the port on which to connect to the DX server:
 -dxPort <value>
 ```
 
-Use this attribute to specify the path to the content handler servlet on DX server (example: `/wps/mycontenthandler`):
+Use this attribute to specify the path to the content handler servlet on DX server \(example: `/wps/mycontenthandler`\):
 
 ```
 -contenthandlerPath <value>
@@ -118,7 +118,7 @@ Use this attribute to specify the port on which to connect to the DX server:
 -dxPort <value>
 ```
 
-Use this attribute to specify the path to the content handler servlet on the DX server (e.g. /wps/mycontenthandler):
+Use this attribute to specify the path to the content handler servlet on the DX server \(e.g. /wps/mycontenthandler\):
 
 ```
 -contenthandlerPath <value>
@@ -244,7 +244,7 @@ The `undeploy-scriptapplication` command is used to remove a script application 
 
 **Required file**
 
-This command invokes the `undeploy-scriptapplication` tool inside the DXClient. The `undeploy-scriptapplication` dxtool uses the provided files and execute the `undeploy scriptapplication` task.
+This command invokes the undeploy-scriptapplication tool inside the DXClient. The undeploy-scriptapplication dxtool uses the provided files and execute the undeploy scriptapplication task.
 
 **Command**
 
@@ -280,7 +280,7 @@ Use this attribute to specify the port on which to connect to the DX server:
 -dxPort <value>
 ```
 
-Use this attribute to specify the path to the content handler servlet on DX server (example, `/wps/mycontenthandler`):
+Use this attribute to specify the path to the content handler servlet on DX server \(example, `/wps/mycontenthandler`\):
 
 ```
 -contenthandlerPath <value>
@@ -375,7 +375,7 @@ Use this attribute to specify the port on which to connect to the DX server:
 -dxPort <value>
 ```
 
-Use this attribute to specify the path to the content handler servlet on DX server (example, `/wps/mycontenthandler`):
+Use this attribute to specify the path to the content handler servlet on DX server \(example, `/wps/mycontenthandler`\):
 
 ```
 -contenthandlerPath <value>
@@ -433,8 +433,7 @@ Log files from command execution can be found in the logs directory of the DXCli
 dxclient restore-scriptapplication -wcmContentID <wcm-content-id> -versionName <version-name> -restoreAsPublished <restore-as-published>
 ```
 
-!!!note
-    The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
+**Note:** The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
 
 <!--- ???Info "**Parent topic:"
 **[DXClient Artifact Types](../containerization/dxclientartifacts.md)

@@ -15,7 +15,6 @@ If you are using IBM® Rational® Application Developer to add resource referenc
     -   **Authentication:** Container
     -   **Sharing scope:** Sharable
     -   **Description:** This field is optional.
-    
 4.  In the section marked **WebSphere Bindings**, enter the JNDI name of your Feedback Datasource.
 
 5.  Save the file.

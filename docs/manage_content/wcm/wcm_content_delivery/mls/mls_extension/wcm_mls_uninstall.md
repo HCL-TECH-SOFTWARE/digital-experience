@@ -14,17 +14,25 @@ The following steps are required to uninstall the multilingual solution extensio
 
 4.  Ensure that the WasPassword and PortalAdminPwd passwords are set in the wkplc.properties file.
 
-5.  To completely remove the multilingual solution, run the following command on all servers or nodes in your system from the wp_profile_root/ConfigEngine directory:
+5.  To completely remove the multilingual solution, run the following command on all servers or nodes in your system from the `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)/ConfigEngine` directory:
 
     -   **Windows™**
 
-        `ConfigEngine.bat remove-wcm-mls`
+        ConfigEngine.bat remove-wcm-mls
 
-    -   **AIX® and Linux™**
+    -   **AIX® HP-UX Linux™ Solaris**
 
-        `./ConfigEngine.sh remove-wcm-mls`
+        ./ConfigEngine.sh remove-wcm-mls
 
-6.  Delete the **MLConfiguration_v7** library on base portal and all virtual portals.
+    -   **IBM® i**
+
+        ConfigEngine.sh remove-wcm-mls
+
+    -   **z/OS®**
+
+        ./ConfigEngine.sh remove-wcm-mls
+
+6.  Delete the **MLConfiguration\_v7** library on base portal and all virtual portals.
 
 7.  Restart the Portal Server.
 

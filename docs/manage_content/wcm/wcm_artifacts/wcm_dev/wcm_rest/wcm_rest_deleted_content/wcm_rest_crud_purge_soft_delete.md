@@ -2,8 +2,7 @@
 
 This new API lets you find any deleted items inside a given virtual Portal. Deleted items may be restored using the [Restore Version API](wcm_rest_crud_purge_restore_deleted.md), as described in that section of the documentation. An additional API is in progress to enable purging of the deleted item.
 
-!!! note
-    The APIs to Find Soft Deleted Content items is available for HCL Digital Experience 9.5 CF192 and higher releases.
+**Note:** The APIs to Find Soft Deleted Content items is available for HCL Digital Experience 9.5 CF192 and higher releases.
 
 ## Using the Find Soft Deleted Content Items API
 

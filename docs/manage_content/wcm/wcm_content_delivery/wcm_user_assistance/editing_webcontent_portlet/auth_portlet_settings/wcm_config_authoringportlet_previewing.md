@@ -9,7 +9,6 @@ The preview options determine how content can be previewed. Preview options are 
 3.  To allow users to preview content in a portlet that is on a different portal server, you must enter the URL to the remote portal page in the **Allow authors to preview content using the following URLs** field. The portal pages that are entered here must contain a web content viewer to display the content.
 
 
-!!! note
-    When you use a web content viewer to preview content, ensure that the web content viewer is configured to receive links from **Other portlets and this portlet**.
+**Note:** When you use a web content viewer to preview content, ensure that the web content viewer is configured to receive links from **Other portlets and this portlet**.
 
 

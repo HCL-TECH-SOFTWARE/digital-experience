@@ -12,20 +12,22 @@ If you encounter problems, you can also export your set of data as a compressed 
 
 The Theme Optimization Analyzer can be found in **Portal Analysis** \> **Theme Analyzer** in the **Administration** section of HCL Digital Experience.
 
--   **[Examine page profiles](themeopt_an_pagepro.md)**  
+-   **[Examine page profiles](../dev-theme/themeopt_an_pagepro.md)**  
 Use Examine page profile information to explore the whole page hierarchy of the system and display information about the set themes and profiles per page.
--   **[Examine modules](themeopt_an_modules.md)**  
+-   **[Examine modules](../dev-theme/themeopt_an_modules.md)**  
 Use the modules sections to explore the modules of a specific profile or all of the modules available with the system, theme, or both.
--   **[Examine contributions](themeopt_an_contrib.md)**  
+-   **[Examine contributions](../dev-theme/themeopt_an_contrib.md)**  
 Use the Contributions section to explore contributions defined as part of modules.
--   **[Examine capabilities](themeopt_an_capab.md)**  
+-   **[Examine capabilities](../dev-theme/themeopt_an_capab.md)**  
 Use the Capabilities section to explore capabilities that are defined as part of modules.
--   **[Validation reports](../themeopt_analyzer/validation_reports/index.md)**  
+-   **[Validation reports](../dev-theme/themopt_an_val_reports.md)**  
 Use the validation portlet to verify that your theme contains no errors. The validation report analyzes your theme and theme components for known issues and reports the number of errors, warnings, and informational messages. It also includes a detailed explanation about how to fix the errors that occur.
--   **[Utilities for theme issues](../themeopt_analyzer/utilities/index.md)**  
+-   **[Utilities for theme issues](../dev-theme/themeopt_an_util.md)**  
 If you need help with a theme issue, you can export your system data. Support personnel can then import and view your data as a simulated system to troubleshoot problems.
 
 
-???+ info "Related information:"
-    - [Troubleshooting modular themes](../troubleshooting_modular_themes/index.md)
+**Related information**  
+
+
+[Troubleshooting modular themes](../dev-theme/themeopt_mod_debug_ovr.md)
 
