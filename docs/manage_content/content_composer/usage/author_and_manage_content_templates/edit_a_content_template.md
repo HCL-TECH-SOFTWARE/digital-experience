@@ -4,15 +4,16 @@ This section provides the steps on how to edit a content template using HCL Cont
 
 ## Prerequisite
 
-Content Composer should be installed and configured to HCL Digital Experience 9.5 container release update CF181 or higher. See instructions to install to supported container environments in the [Install HCL Digital Experience 9.5 Components](../..//installation/install_config_cc_dam.md) topic.
+Content Composer should be installed and configured to HCL Digital Experience 9.5 container release update CF181 or higher. See instructions to install to supported container environments in the [Install HCL Digital Experience 9.5 Components](../../installation/install_config_cc_dam.md) topic.
 
-Content Composer is accessible from the Practitioner Studio interface \(after image configuration to your HCL Digital Experience 9.5 CF181 and higher deployment\).
+Content Composer is accessible from the Practitioner Studio interface (after image configuration to your HCL Digital Experience 9.5 CF181 and higher deployment).
 
 ## Set start and end of date range for Date and Time element
 
 Users can set start and end of date range for the Date and Time element of a newly-created or saved content template.
 
-1.  From your HCL Digital Experience 9.5 Practitioner Studio interface, select **Web Content \>****Content Composer** from the navigator, and click **Create \> Content Template** to create a new content template, or choose and click **Open Content Template** on a saved content template.
+1.  From your HCL Digital Experience 9.5 Practitioner Studio interface, select **Web Content > Content Composer** from the navigator, and click **Create > Content Template** to create a new content template, or choose and click **Open Content Template** on a saved content template.
+
 2.  On the content element interface, make sure that you are in **Edit mode**. Select the **Date and Time** element and complete the fields.
 
     ![](../../../../assets/Add_Element_new_content_template_HCL_Content_Composer.png "Add content elements to the new Content Template")
@@ -33,7 +34,7 @@ The Content Composer Web Content workflow selections can be accessed from the HC
 
     ![](../../../../assets/Select_new_content_template_HCL_Content_Composer.png "Create Content Template")
 
-3.  Complete the fields for your new Content Template: **Name** \(required field\), **Display Title**, and **Description** \(optional fields\).
+3.  Complete the fields for your new Content Template: **Name** (required field\), **Display Title**, and **Description** (optional fields).
 
     ![](../../../../assets/Complete_content_template_details.HCL_Content_Composer.png "Complete new Content Template fields")
 
@@ -57,7 +58,9 @@ The Content Composer Web Content workflow selections can be accessed from the HC
     ![](../../../../assets/View_new_content_template_HCL_Content_Composer_dashboard.png "View newly created Content Template in Dashboard")
 
 7.  Click **Open Content Template** just created and saved.
+
 8.  Select the **Read Only** selector to **Edit Mode**. Proceed to the Default Content area of the Content Template options and select **Workflow** on the right side of the interface.
+
 9.  Select **See All Workflows** and proceed to the Web Content location of the Digital Experience content structure to view the available workflows for selection to add the Content Template.
 
     In this example, the **Three Stage Workflow** option is selected.
@@ -65,8 +68,11 @@ The Content Composer Web Content workflow selections can be accessed from the HC
     ![](../../../../assets/Select_workflow_options_new_content_template_HCL_Content_Composer.png "Selecting Workflow options to manage web content")
 
 10. Select **See All Workflows** and proceed to the Web Content location of the Digital Experience content structure to view the available workflows for selection to add the Content Template. When done, select **Save** to save your settings and create your new content template, or **Save and Close**.
+
 11. Select **Create Content** from the Content Composer menu. Select the **Content Template with Workflow** from the Web Content location.
+
 12. Open the Content Template and place in Edit mode by moving the selector.
+
 13. Add a *Content Display Title* and text in the *Rich Text* element field. Select the *Location* of the Digital Experience site area to place the content for display.
 
     ![](../../../../assets/Working_with_content_items_in_the_selected_Content_Template.png "Working with content items in the selected Content
@@ -82,9 +88,9 @@ The Content Composer Web Content workflow selections can be accessed from the HC
 
     Select the *Date* and *Time* and confirm your selections.
 
-<!--
+
 ## HCL Digital Experience Solution Feedback
 
-HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1){:target="_blank"}. -->
+HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1){:target="_blank"}.
 
 
