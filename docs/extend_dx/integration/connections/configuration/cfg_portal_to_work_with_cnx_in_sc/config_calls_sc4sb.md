@@ -30,7 +30,7 @@ The instructions for deploying the HCL Connections portlets include a procedure 
         https://cntserv_exmp.com
         ```
 
-2.  Configure the HCL Connections server type by setting the custom property server.type in the WP HCL Connections Integration Service resource environment provider in the WebSphere Integrated Solutions Console. For detailed steps on how to set the server.type property, see *Configuring the HCL Connections server type* in the related links.
+2.  Configure the HCL Connections server type by setting the custom property server.type in the WP HCL Connections Integration Service resource environment provider in the WebSphere Integrated Solutions Console. For detailed steps on how to set the server.type property, see [Configuring the HCL Connections server type](../../../../../build_sites/social_rendering/cfg_global_settings_social_rendering/soc_rendr_cfg_connct_srvr_type.md).
 
 
 

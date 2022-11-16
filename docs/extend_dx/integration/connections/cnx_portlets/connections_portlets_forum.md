@@ -8,9 +8,9 @@ Use the Forums portlet to interact with IBM Connections Forums content without l
 
 ## Editing the shared settings for the Forums portlet
 
-You must have at least editor access for the page and for the portlet to be able to edit shared settings for Connections features. For more information about access levels, see the WebSphere Portal product wiki. Settings that you enter on this page can be overridden by settings on the **Personalize** page for a portlet. Choose**Edit Shared Settings** from the portlet menu and choose which view to display in the portlet. You can choose to display:
+You must have at least editor access for the page and for the portlet to be able to edit shared settings for Connections features. For more information about access levels, see the WebSphere Portal product wiki. Settings that you enter on this page can be overridden by settings on the **Personalize** page for a portlet. Choose **Edit Shared Settings** from the portlet menu and choose which view to display in the portlet. You can choose to display:
 
--   All forum topics for this community \(default\)
+-   All forum topics for this community (default)
 -   The most recent forum topic for this community
 -   The currently selected forum topic for this community
 
