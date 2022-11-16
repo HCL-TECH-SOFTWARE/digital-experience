@@ -29,7 +29,7 @@ The License Manager component communicates with the local license server to vali
 
 ## Procedure
 
-1. New property was added to helm configuration to map the local license server SSL certificate (which will be stored in kubernetes secret) to an environment variable. This property is optional and dx license manager instance will then automatically run an import to cacerts truststore script if the variable containes any value.
+1. New property was added to helm configuration to map the local license server SSL certificate (which will be stored in kubernetes secret) to an environment variable. This property is optional and dx license manager instance will then automatically run an import to cacerts truststore script if the variable contains any value.
 
     ```
     # License Certificate secret used for Local license server
