@@ -75,6 +75,7 @@ The License Manager component communicates with the local license server to vali
             "diskspace" : "ok"
         }
         ```
+    
     3. `licenseServer URL` – verify your connection to the Local License Server URL.
 
     4. `licenseFeatureNameWithVersion` – Configure this variable according to the [HCL DX Cloud Native 9.5 Tier 1 – 7](../../../../get_started/product_overview/index.md#hcl-digital-experience-cloud-native) offering  part your organization has acquired and is mapped to your HCL Flexnet server instance(s). See Table HCL Digital Experience Cloud Native 9.5 Tier 1 – 7 parts and Flexnet License Server Feature Name below.
