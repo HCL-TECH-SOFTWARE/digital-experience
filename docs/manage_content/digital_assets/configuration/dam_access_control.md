@@ -10,15 +10,15 @@ At the top of the tree is the virtual Resource Portal, below it is the virtual R
 For DAM, only a subset of the roles is exposed. Possible role types are User (view only), Editor (view, edit, create), and Administrator (view, edit, create, delete, set/remove access). Other roles existing in Portal Access Control like Manager or Privileged User are not exposed.
 
 !!! note
-   Currently, only highlighted roles (Administrator, Editor, User) are applicable in DAM. 
+    Currently, only highlighted roles (Administrator, Editor, User) are applicable in DAM. 
 
-![Portal Access Control Roles](../../../../images/access_roles_portal.png)
+![Portal Access Control Roles](../../../images/access_roles_portal.png)
 ## Overview on DAM Collection Access Control
 
 DAM collection is accessible by the currently logged in user based on his role and the access is managed by DX Portal Access Control as mentioned. 
 
 !!! note
-   Currently, only Administrator, Editor, and User roles are exposed in DAM UI, each user who can create a collection will inherit the Administrator role by default whether it is root level or child-level collection. 
+    Currently, only Administrator, Editor, and User roles are exposed in DAM UI, each user who can create a collection will inherit the Administrator role by default whether it is root level or child-level collection. 
 
 ### DAM Access Control in detail
 
@@ -29,9 +29,9 @@ From the DAM perspective, each individual root level collection is a resource in
 - Administrator role: The user can view, create, edit, and delete the collection and he can even assign/remove permission for other users as well.
 
 !!! note 
-   The Manager Role is not exposed in DAM UI currently.
+    The Manager Role is not exposed in DAM UI currently.
 
-![DAM Access Control Roles](../../../../images/access_roles_dam.png)
+![DAM Access Control Roles](../../../images/access_roles_dam.png)
 
 # Out of the box access
 
@@ -41,26 +41,26 @@ After installation, all Authenticated User Group is assigned to the Manager role
 
 In DAM, the user can assign permission to a collection tree at the root level if he has administrator permission for the root collection as below.
 
-![DAM Assign Permission to Users for a Root Collection](../../../../images/access_assign_to_user.png)
+![DAM Assign Permission to Users for a Root Collection](../../../images/access_assign_to_user.png)
 
 # Nested Collection Permissions
 
 DAM does not support assigning permissions at the nested collection level. We need to navigate to the root collection and assign permission to the users for the entire collection hierarchy if needed as you can see below.
 
-![DAM Nested Collection Permissions](../../../../images/access_nested_collection.png)
+![DAM Nested Collection Permissions](../../../images/access_nested_collection.png)
 
 # Changing Permissions on the collection tree for the users
 
 You can change collection permissions for any user from Administrator to Editor or User or vice versa.
 
-![DAM Changing Permission of Other Users for a Root Collection](../../../../images/access_change_for_other_user.png)
+![DAM Changing Permission of Other Users for a Root Collection](../../../images/access_change_for_other_user.png)
 
 # Downgrading Self Permission
 
 Downgrading self permission from Administrator to Editor or User will remove authority to upgrade back to Administrator as you can see below. In this case, the Administrator or Super Admin should add you back as Administrator if needed.
 
-![DAM Downgrade Self Permission](../../../../images/access_downgrade_self.png)
+![DAM Downgrade Self Permission](../../../images/access_downgrade_self.png)
 
-![DAM Upgrade Self Permission](../../../../images/access_upgrade_self_role_back_to_admin.png)
+![DAM Upgrade Self Permission](../../../images/access_upgrade_self_role_back_to_admin.png)
 
-![DAM Upgrade Self Permission Warning](../../../../images/access_upgrade_self_role_back_admin_warning.png)
+![DAM Upgrade Self Permission Warning](../../../images/access_upgrade_self_role_back_admin_warning.png)
