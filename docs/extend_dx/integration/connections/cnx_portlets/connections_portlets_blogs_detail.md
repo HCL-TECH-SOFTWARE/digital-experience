@@ -12,7 +12,7 @@ Use the Blogs portlets to interact with the IBM Connections Blogs feature so you
         The option to show ideation blogs is not available as a setting if the Blogs portlet is on a stand-alone page or if there is no Ideation blog in the associated community.
 
 -   If the Blogs portlet is deployed on a stand-alone page, and you are in the My Blogs view, you can click a blog to see the entries but you cannot click entries created by other users. To enter comments, vote for an idea, or recommend an entry, open Blogs in the web application.
--   Pin options in the Blogs Edit Shared Settings mode are not available from the My Blogs view of the portlet. You can pin the Blogs portlet only from the public views \(Latest Entries and All Blogs.\)
+-   Pin options in the Blogs Edit Shared Settings mode are not available from the My Blogs view of the portlet. You can pin the Blogs portlet only from the public views (Latest Entries and All Blogs.)
 
 The Blogs Detail portlet has three views, **Latest Entries**, **All Blogs**, and **My Blogs**.
 
@@ -42,11 +42,12 @@ The **My Blogs** view lists blogs for which you are an owner or member. From thi
         You cannot create an Ideation Blog from the Blogs portlet because it must be created within a community.
 
 
-**Tip:** If your site has a large number of blogs, use the Tags portlet to find blogs that interest you. You can also edit a blog and then access it by sorting by recently updated blogs.
+!!!tip
+    If your site has a large number of blogs, use the Tags portlet to find blogs that interest you. You can also edit a blog and then access it by sorting by recently updated blogs.
 
 ## Editing the shared settings for the Blogs portlet
 
-You must have at least editor access for the page and for the portlet to be able to edit shared settings for Connections features. For more information about access levels, see the WebSphere Portal product wiki. Settings that you enter on this page can be overridden by settings on the **Personalize** page for a portlet. Choose**Edit Shared Settings** from the portlet menu and choose which view to display in the portlet:
+You must have at least editor access for the page and for the portlet to be able to edit shared settings for Connections features. For more information about access levels, see the WebSphere Portal product wiki. Settings that you enter on this page can be overridden by settings on the **Personalize** page for a portlet. Choose **Edit Shared Settings** from the portlet menu and choose which view to display in the portlet:
 
 ## Configuring the Blogs portlet
 

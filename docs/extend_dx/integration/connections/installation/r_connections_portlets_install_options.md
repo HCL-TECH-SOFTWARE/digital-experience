@@ -25,10 +25,7 @@ You can customize your installation with the following options.
 |-DICrunAsAdmin|The default is false. This attribute determines whether adapter runs in admin mode or non-admin mode.|
 |-DICpumaFilterClassname|Always set to com.ibm.connections.vmm.adapter.filter.VMMPrincipalFilter|
 |-DICpumaFilterPosition|Set to 120.|
-|-Drepository.id|The LDAP repository identifier from the federated repository to configure the group repository relationship. To determine what repository identifier is set for a particular LDAP: 
-1.  Log in to the WebSphere Application Server administration console and go to **Security** \> **Global Security**.
-2.  Under the **User account repository** section, click **Configure** for **Federated repositories**.
-3.  In the **Related Items** section, select **Manage repositories**. All of the LDAP repositories are listed on the page and the repository IDs are listed under the **Repository Identifier** column.|
+|-Drepository.id|The LDAP repository identifier from the federated repository to configure the group repository relationship. To determine what repository identifier is set for a particular LDAP:<br> 1.  Log in to the WebSphere Application Server administration console and go to **Security** \> **Global Security**.<br>2.  Under the **User account repository** section, click **Configure** for **Federated repositories**.<br>3.  In the **Related Items** section, select **Manage repositories**. All of the LDAP repositories are listed on the page and the repository IDs are listed under the **Repository Identifier** column.|
 
 
 

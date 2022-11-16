@@ -28,7 +28,7 @@ The **My Blogs** view lists blogs for which you are an owner or member. From thi
 
 ## Editing the shared settings for the Bookmarks portlet
 
-You must have at least editor access for the page and for the portlet to be able to edit shared settings for Connections features. For more information about access levels, see the WebSphere Portal product wiki. Settings that you enter on this page can be overridden by settings on the **Personalize** page for a portlet. Choose**Edit Shared Settings** from the portlet menu and choose which view to display in the portlet. You can choose either**My Bookmarks**, **All Bookmarks**, or both.
+You must have at least editor access for the page and for the portlet to be able to edit shared settings for Connections features. For more information about access levels, see the WebSphere Portal product wiki. Settings that you enter on this page can be overridden by settings on the **Personalize** page for a portlet. Choose **Edit Shared Settings** from the portlet menu and choose which view to display in the portlet. You can choose either **My Bookmarks**, **All Bookmarks**, or both.
 
 ## Configuring the Bookmarks portlet
 
