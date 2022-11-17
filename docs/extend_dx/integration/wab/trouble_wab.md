@@ -56,7 +56,8 @@ The following items are known limitations:
 
     Starting with CF03, mobile support is provided for web applications that were developed and tested for rendering inside mobile device browsers. If the web application was originally built and tested for desktops, it does not work properly on mobile devices.
 
-    **Note:** Mobile devices might not show scroll bars for any overflow content. Instead, the swipe feature of the mobile is enabled.
+    !!!note
+        Mobile devices might not show scroll bars for any overflow content. Instead, the swipe feature of the mobile is enabled.
 
 -   **Edit Shared Settings does not work on mobile devices**
 

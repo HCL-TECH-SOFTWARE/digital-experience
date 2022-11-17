@@ -6,7 +6,7 @@ SSO is no longer supported on Android with Worklight 6.2.
 
 Both HCL Portal and MobileFirst® servers must be configured to use the same user registry, LTPA keys, and be set with a specified domain for SSO. For more information, see *Configuring Portal to use a user registry* and *Managing your user registry*. Or, if you are using the WebSphere® Application Server, see the WebSphere Application Server documentation.
 
-For more information about system support requirements, see [System requirements](http://www-01.ibm.com/support/knowledgecenter/SSHS8R_7.0.0/com.ibm.worklight.getstart.doc/start/r_supported_operating_systems_an.html).
+For more information about system support requirements, see [System requirements](../../../../../get_started/system_requirements/index.md).
 
 1.  Run the following configEngine tasks. These configEngine tasks are available only on the HCL Portal server. If the MobileFirst server is on WebSphere Application Server, run the following commands from the WebSphere Integrated Solutions Console. You can use steps B and C if MobileFirst is on the same instance as HCL Portal.
 

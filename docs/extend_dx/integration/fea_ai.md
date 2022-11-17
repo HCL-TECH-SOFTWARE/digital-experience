@@ -12,5 +12,5 @@ JCA also defines a standard Service Provider Interface \(SPI\) for integrating t
 
 Rational® Application Developer provides a complete development and unit test environment for applications that use JCA connectors, Web services, and microflows. Rational Application Developer tools include support for Web Service Definition Language \(WSDL\), developer versions of the connectors, the Web Services Invocation Framework \(WSIF\), and the microflow engine.
 
-**Parent topic:**[Integration](../overview/integration.md)
+
 
