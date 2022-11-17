@@ -131,7 +131,7 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 
 5.  Run docker load < dxclient.tar.gz.
 
-6.  Add the execution shell script to the bin directory to the PATH variable to be able to call dxclient from any directory.
+6.  Optional (It is advisable to not set this incase you run multiple DXClient versions in your system). Open terminal, add the execution shell script to the bin directory to the PATH variable, to call dxclient from any directory.
 
     ```
     export PATH=<working-directory>/bin:$PATH
@@ -139,7 +139,14 @@ See video: [CI/CD – DXClient in Container](https://www.youtube.com/watch?v=IFr
 
     For Microsoft Windows platforms:
 
-    use `dxclient.bat` script in the bin directory to the PATH variable to be able to call DXClient from any directory.
+    Open command prompt, add `dxclient.bat` script in the bin directory to the PATH variable, to call DXClient from any directory.
+
+    ```
+    set PATH=<working-directory>\bin;%PATH%
+    ```
+
+    !!! note
+        You will loose these changes by closing the terminal/command prompt. If you set in system path permanently, kindly take the necessary steps to remove it.
 
 7.  Set appropriate permission.
 
@@ -161,40 +168,53 @@ Common command arguments can be pre-configured inside the `config.json` file ava
 
 ```
 {
-    "enableLogger": true,
-    "enableBackup": "false",
     "dxProtocol": "",
+    "dxConnectProtocol": "https",
     "hostname": "",
     "dxPort": "",
-    "dxContextRoot":"/wps",
-    "xmlConfigPath": "/wps/config",
     "dxSoapPort": "10033",
-    "dxProfileName": "wp_profile",
-    "dxProfilePath": "",
-    "dxConnectHostname": "",
     "dxConnectPort": "10202",
-    "dxConnectProtocol": "https",
-    "wcmSiteArea": "",
-    "wcmContentPath": "",
-    "wcmContentName": "",
+    "dxContextRoot":"/wps",
     "contenthandlerPath": "/wps/mycontenthandler",
-    "wcmContentId": "",
-    "restoreAsPublished": false,
-    "wcmLibraryId": "",
-    "virtualPortalContext": "",
     "projectContext": "",
-    "wcmLibraryName": "",
-    "lastModifiedAfter": "",
+    "virtualPortalContext": "",
+    "xmlConfigPath": "/wps/config",
     "damAPIPort": "",
     "ringAPIPort": "",
-    "damAPIVersion": "",
-    "ringAPIVersion": "",
-    "wcmProjectName": "",
+    "damAPIVersion": "v1",
+    "ringAPIVersion": "v1",
+    "dxConnectHostname": "",
+    "dxConnectUsername": "",
+    "dxConnectPassword": "",
+    "dxUsername": "",
+    "dxPassword": "",
+    "dxProfileName": "",
+    "dxProfilePath": "",
+    "dxWASUsername": "",
+    "dxWASPassword": "",
+    "enableLogger": true,
+    "enableBackup": "false",
+    "lastModifiedAfter": "",
+    "restoreAsPublished": false,
     "targetHostname": "",
     "targetDxConnectPort": "",
     "targetDxConnectUsername":"",
     "targetDxConnectPassword":"",
-    "targetDxProfileName": ""
+    "targetDxProfileName": "",
+    "targetServerHostname": "",
+    "targetServerPort": "",
+    "targetServerUsername":"",
+    "targetServerPassword":"",
+    "targetServerProfileName": "",
+    "vaultUsername": "",
+    "vaultPassword": "",
+    "wcmContentName": "",
+    "wcmContentId": "",
+    "wcmContentPath": "",
+    "wcmSiteArea": "",
+    "wcmLibraryId": "",
+    "wcmLibraryName": "",
+    "wcmProjectName": ""
 }
 
 ```
