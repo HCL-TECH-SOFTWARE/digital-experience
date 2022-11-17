@@ -17,7 +17,6 @@ Detailed system requirements are the complete lists of hardware requirements, su
 - Docker
     - [Docker](docker/index.md)
 - All Platforms
-    - [Security](security.md)
     - [Other Software](othersoftware.md)
     - [Included Software](includedsoftware.md)
     - [Glossary](glossary.md)
