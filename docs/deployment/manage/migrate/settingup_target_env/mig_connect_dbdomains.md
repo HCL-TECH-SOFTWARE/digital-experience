@@ -15,11 +15,6 @@ Review the following list before you begin.
 
 1.  Use your Database tools to copy the source portal JCR domain and Release domain.
 
-    !!!note
-        If you are using IBM® DB2 Universal Database™ for z/OS®, review the following considerations:
-
-    -   If you plan to use the DB2 Administration Tool to copy the database domains, make sure that APAR PM16847 is applied.
-    -   Make sure that you verify the databases are not in a `COPY PENDING` state before you connect to the database copies described in the following step.
 2.  DB2 only: On the database copies, verify that the Statement Heap size is set to at least 32k.
 
     1.  List the database manager configuration parameters by running the following command db2 get db cfg for dbname.

@@ -3,7 +3,7 @@ id: wcm_managing_versions_working
 title: Restoring an item
 ---
 
-
+# Restoring an item
 
 
 Previous versions of items can be stored and then restored later if required.
@@ -12,7 +12,7 @@ Previous versions of items can be stored and then restored later if required.
 
     1.  Open an item in read mode and click **Versions**.
 
-    2.  Go to either **My items** \> **Deleted** or **All items** \> **Deleted**, select an item and click **Versions**.
+    2.  Go to either **My items > Deleted** or **All items > Deleted**, select an item and click **Versions**.
 
 2.  To view the details of a version, click **Read**.
 

@@ -8,9 +8,10 @@ After migration, a new theme is available for you to apply to your Portal pages.
 EJPFD0097E: No theme was found to render the page. Navigate to Administration and assign a working theme to restore full function to your site.
 ```
 
-**Note:** To use the Portal 7.0.0.2 theme with Portal 8.0 or later, you must copy the dojo16.json file from `[PortalServer\_root](../reference/wpsdirstr.md#wp_root)/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/v1.6` to the contributions folder of the 7.0.0.2 theme.
+!!!note
+    To use the Portal 7.0.0.2 theme with Portal 8.0 or later, you must copy the dojo16.json file from `PortalServer_root/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/v1.6` to the contributions folder of the 7.0.0.2 theme.
 
-1.  Click the **Administration menu** icon. Then, click **Portal User Interface** \> **Themes and Skins**.
+1.  Click the **Administration menu** icon. Then, click **Portal User Interface > Themes and Skins**.
 
 2.  Select the **Portal 8.5** theme from the **Themes** list in the portlet.
 
@@ -22,8 +23,6 @@ EJPFD0097E: No theme was found to render the page. Navigate to Administration an
 
 
 
-**Related information**  
-
-
-[Skins](../dev-theme/themeopt_cust_scopeskin.md)
+???+ info "Related information" 
+    -   [Skins](../../../../../../build_sites/themes_skins/customizing_theme/skins/index.md)
 

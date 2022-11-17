@@ -1,11 +1,11 @@
 # Adding HTML meta tags for Search Engine Optimization
 
-Search engine optimization \(SEO\) focuses on improving the visibility of a page or website in search engine results. A basic technique of SEO is adding HTML title and meta tags to your page source. These meta tags are used to define description information and other metadata that search web engines and crawlers can use when they create search indexes and collections. When you include content in a page with a web content viewer, you can improve the search engine optimization of the page by adding title and meta tags with values derived from the web content itself.
+Search engine optimization (SEO) focuses on improving the visibility of a page or website in search engine results. A basic technique of SEO is adding HTML title and meta tags to your page source. These meta tags are used to define description information and other metadata that search web engines and crawlers can use when they create search indexes and collections. When you include content in a page with a web content viewer, you can improve the search engine optimization of the page by adding title and meta tags with values derived from the web content itself.
 
 !!! note
     This support is available with Combined Cumulative Fix 12 for HCL Web Content Manager Version 7.
 
-By default, the HTML title for a page is defined by the page title in the portal. However, when you add a web content viewer to a page to render web content, you can override the value that is used for the HTML title. For metadata tags to be included as portlet preferences, you must set a custom HTML title so that only one portlet can contribute the metadata to the head section. If this default behavior does not suit your requirements, you can override it as described in step `3.4` of the following procedure.
+By default, the HTML title for a page is defined by the page title in the portal. However, when you add a web content viewer to a page to render web content, you can override the value that is used for the HTML title. For metadata tags to be included as portlet preferences, you must set a custom HTML title so that only one portlet can contribute the metadata to the head section. If this default behavior does not suit your requirements, you can override it as described in **Step 3.4** of the procedure below.
 
 With the **Page Display Title** field in the portlet settings for the viewer, you can define an HTML title that better reflects the content on the page. You can even have the viewer pull the title directly from the rendered content.
 
@@ -40,6 +40,7 @@ With the **Page Display Title** field in the portlet settings for the viewer, yo
     -   The **Manage Portlets** portlet of the administration interface. Locate the instance of the web content viewer you want to modify, and select the **Configure portlet** icon.
     -   The XML configuration interface. Export the page that contains the instance of the web content viewer you want to modify. Edit the exported XML file with the meta tags you want to add, and update the page by using the XML file along with the xmlaccess command.
     If you do not set a portlet preference for the attribute name, the attribute name "name" is used by default.
+    
 
     1.  Specify the portal preference for the name of the meta tag.
 
@@ -279,5 +280,21 @@ The following examples demonstrate the different ways of specifying portlet pref
     
     ```
 
+-   Setting the meta tag and using a relative URL to specify an image content item. You need to add `abs` to specify the format (e.g. `meta.tag.content.element.format.x = abs`).
 
+    ```
+    meta.tag.content.element.1 TestImage 
+    meta.tag.content.element.format.1 abs 
+    meta.tag.name.1 CustomMetaTag
+    ```
+
+    !!!note
+        The full URL should be included in a tag starting with `<meta content=.....>`.
+
+    Result:
+
+    ```
+    <meta name=”DC.date” content=”2011-08-01T08:15:30+02:00” scheme="W3CDTF"/>
+    
+    ```
 

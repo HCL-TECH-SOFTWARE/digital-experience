@@ -19,8 +19,7 @@ The shared file system root path is typically:
 
 -   AIX: /usr/IBM/WebSphere
 -   Linux: /opt/IBM/WebSphere
--   IBM i: /QIBM/IBM/WebSphere
--   Windows: C:\\IBM\\WebSphere
+-   Windows: C:\\IBM\WebSphere
 
 Create an empty file system on a central file server with enough capacity for a full installation. Then, mount it on the Farm Master as a writeable file system in the location where you would install HCL Portal. The mount point on the Farm Master is fixed after HCL Portal is installed. All other Farm members and workers need to use the same mount point and they need read/write access to the shared file system.
 
@@ -38,8 +37,6 @@ Use the following steps as a guide if you are using GPFS as your shared file sys
     -   mmchfs /dev/gpfs3nsd -F 250000
 
 
-**Related information**  
-
-
-[Installing the Farm Master and setting up the support server](../install/set_portal_farm_master.md)
+???+ info "Related information" 
+    -   [Installing the Farm Master and setting up the support server](../../../../../deployment/manage/portalfarm_cfg/choose_portalfarm/settingup_with_sharedconfig/set_portal_farm_master.md)
 

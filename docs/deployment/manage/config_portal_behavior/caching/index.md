@@ -4,6 +4,6 @@ Caching affects the performance of your HCL Digital Experience environment. Lear
 
 The [HCL Digital Experience Performance Tuning Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074411) provides information about caches for HCL Portal and HCLWeb Content Manager.
 
-**Related information**  
-[Back button behavior](../../troubleshooting/browser_behavior_scenarios/backbut.md)
+???+ info "Related information"   
+    -   [Back button behavior](../../troubleshooting/browser_behavior_scenarios/backbut.md)
 

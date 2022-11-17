@@ -6,7 +6,7 @@ For Content as a Service pages to work, you must have the new functions for HCL 
 
 The setup for Content as a Service pages comprises both resources that are shared across virtual portals and virtual portal scoped resources.
 
-1.  Change the directory to the wp_profile_root/ConfigEngine directory. If you are using IBM® z/OS®, open a UNIX System Services command prompt to change directories.
+1.  Change the directory to the wp_profile_root/ConfigEngine directory. 
 
 2.  Run the following command to initiate the setup of shared resources:
 

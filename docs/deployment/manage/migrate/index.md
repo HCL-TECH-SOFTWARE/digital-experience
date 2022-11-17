@@ -3,7 +3,7 @@
 Successful migration requires significant planning and preparation, understanding the tools that are involved, and careful execution of the appropriate steps in the order provided.
 
 -   **[Migration overview](mig_over.md)**  
-Migration is the process of collecting configuration data and applications from an earlier installed version of HCL Digital Experience and merging them into a newer installed version. So that the new environment is identical to the earlier environment. For the z/OS® platform, the new version must be on the same server as the earlier version. Migration to a different (remote) server is not supported.
+Migration is the process of collecting configuration data and applications from an earlier installed version of HCL Digital Experience and merging them into a newer installed version. So that the new environment is identical to the earlier environment.
 -   **[Planning for migration](../../manage/migrate/planning_migration/index.md)**  
  Completing a thorough plan before migrating to the latest version of HCL Digital Experience has a direct impact in the effort invested during the actual migration. Become familiar with the environment you are migrating to (target environment). Also, make sure that the environment you are migrating from (source environment) is up to date with fixes and meets the requirements for migration.
 -   **[Preparing your source environment](../../manage/migrate/preparing_source_env/index.md)**  

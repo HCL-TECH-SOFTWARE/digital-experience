@@ -7,7 +7,7 @@ By default, this feature is not enabled on HCL Digital Experience 9.5. Get the [
 !!! note
      While there are also DX 8.5/9.0 CF17 images, the one you need to enable this HCL Content Composer feature is the 9.5 Docker image.
 
-You can only enable Content Composer features in a Virtual Portal deployment pattern when Practitioner Studio is available \(for HCL DX 9.5 and later releases\). Refer to the [Woodburn Studio](../../../build_sites/woodburn_studio/index.md) and [Practitioner Studio](../../../build_sites/practitioner_studio/index.md) documentation topics on how to apply themes and create pages.
+You can only enable Content Composer features in a Virtual Portal deployment pattern when Practitioner Studio is available (for HCL DX 9.5 and later releases). Refer to the [Woodburn Studio](../../../build_sites/woodburn_studio/index.md) and [Practitioner Studio](../../../build_sites/practitioner_studio/index.md) documentation topics on how to apply themes and create pages.
 
 Follow these steps below to enable this support in your deployment:
 
@@ -88,7 +88,7 @@ To remove and disable content rendering from the virtual Portal:
 
 ## Grant access to all authenticated Portal users
 
-While setting permissions for other users can be done manually within the Resource Permissions portlet in Portal, there are also ConfigEngine tasks that can be used to grant `all authenticated portal users` access to the Content Composer page, portlet \(React Integration Portlet for Content\) and WCM REST service. These can be integrated into a CI/CD process if needed.
+While setting permissions for other users can be done manually within the Resource Permissions portlet in Portal, there are also ConfigEngine tasks that can be used to grant `all authenticated portal users` access to the Content Composer page, portlet (React Integration Portlet for Content) and WCM REST service. These can be integrated into a CI/CD process if needed.
 
 !!! note
      Permissions to access libraries, for example, `Web Content`, will still need to be set manually. In addition, the Editor role is the minimum level required for a user to utilize the WCM REST service, which is already included in these tasks.

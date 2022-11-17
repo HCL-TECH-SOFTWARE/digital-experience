@@ -4,9 +4,9 @@ This section provides the steps on how to delete a content template using HCL Co
 
 ## Prerequisite
 
-Content Composer should be installed and configured to HCL Digital Experience 9.5 container release update CF181 or higher. See instructions to install to supported container environments in the [Install HCL Digital Experience 9.5 Components](/installation/install_config_cc_dam.md) topic.
+Content Composer should be installed and configured to HCL Digital Experience 9.5 container release update CF181 or higher. See instructions to install to supported container environments in the [Install HCL Digital Experience 9.5 Components](../../installation/install_config_cc_dam.md) topic.
 
-Content Composer is accessible from the Practitioner Studio interface \(after image configuration to your HCL Digital Experience 9.5 CF181 and higher deployment\).
+Content Composer is accessible from the Practitioner Studio interface (after image configuration to your HCL Digital Experience 9.5 CF181 and higher deployment).
 
 ## Delete a content template
 
@@ -15,7 +15,7 @@ Content Composer is accessible from the Practitioner Studio interface \(after im
     ![](../../../../assets/HCL_DX_95_Practitioner_Studio_interface.png "Log in to HCL Digital Experience 9.5")
 
 2.  Select **Web Content** menu option to access the HCL Digital Experience 9.5 Content Composer user interface.
-3.  Access the content item you wish to delete. In this example, the content item example is obtained from **Content Composer \> Web Content \> Web Content Templates** site area location.
+3.  Access the content item you wish to delete. In this example, the content item example is obtained from **Content Composer > Web Content > Web Content Templates** site area location.
 
     ![](../../../../assets/opening_content_template_hcl_cc.png "Opening the content item")
 

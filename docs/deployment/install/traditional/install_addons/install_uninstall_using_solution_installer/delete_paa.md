@@ -1,6 +1,6 @@
 # Deleting PAA content after an uninstallation
 
-After you run the uninstall-paa task and removing the assembly from the ConfigEngine registry, the PAA content remains in the PAA directory. To remove any remaining content, run the delete-paa command. This command inspects the PAA directory and removes content that is not registered.
+After you run the `uninstall-paa` task and removing the assembly from the ConfigEngine registry, the PAA content remains in the PAA directory. To remove any remaining content, run the `delete-paa` command. This command inspects the PAA directory and removes content that is not registered.
 
 1.  Open a command prompt.
 
@@ -8,7 +8,7 @@ After you run the uninstall-paa task and removing the assembly from the ConfigEn
 
 3.  Run the following command:
 
-    !!!note "Tip"
+    !!!tip
         You can delete one assembly or you can delete multiple assemblies by using a comma-separated list. To delete multiple assemblies, enter -DassemblyList=assembly1,assembly2,assembly3.
 
     !!!note "Optional parameter"

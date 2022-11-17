@@ -175,7 +175,8 @@ The default value of the `format` attribute for a placeholder tag is `tag`, so t
 </a>
 ```
 
-**Note:** It is not possible to launch the pop-up window in a separate browser window by adding `target="_blank"` to the HTML anchor tag in the design. If you want to use an authoring tool component with a pop-up dialog design within a static page, the HTML of your static page has to include the Dojo Toolkit. To include Dojo in a page you can add the following to the header section of your page:
+!!!note
+    It is not possible to launch the pop-up window in a separate browser window by adding `target="_blank"` to the HTML anchor tag in the design. If you want to use an authoring tool component with a pop-up dialog design within a static page, the HTML of your static page has to include the Dojo Toolkit. To include Dojo in a page you can add the following to the header section of your page:
 
 ```
 <script type="text/javascript" djConfig="parseOnLoad:false,isDebug:false" src="/portal_dojo/dojo/dojo.js">

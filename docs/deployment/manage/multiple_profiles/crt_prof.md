@@ -1,17 +1,17 @@
 # Creating a Portal application server profile
 
-You can create Portal profiles on a single Portal installation with HCL Digital Experience. Additional profiles are created by using a profile template. Profile templates must be regenerated after you install a fix pack. Profile templates must be generated only on the original wp\_profile.
+You can create Portal profiles on a single Portal installation with HCL Digital Experience. Additional profiles are created by using a profile template. Profile templates must be regenerated after you install a fix pack. Profile templates must be generated only on the original wp_profile.
 
 The additional profiles can be created by using the Config Wizard workflow accessible through the following URL:
 
 ```
-`https://<HOSTNAME\>:10202/hcl/wizard/Wizard/default/ver=2.0/rparam=currentPage=com.ibm.wplc.config.wizard.panels.execute.SetCondition/rparam=workflow=Create%20Portal%20Profile%20Using%20Template/rparam=previousPage=com.ibm.wplc.config.wizard.panels.ActivityPanel`
+https://<HOSTNAME\>:10202/hcl/wizard/Wizard/default/ver=2.0/rparam=currentPage=com.ibm.wplc.config.wizard.panels.execute.SetCondition/rparam=workflow=Create%20Portal%20Profile%20Using%20Template/rparam=previousPage=com.ibm.wplc.config.wizard.panels.ActivityPanel
 ```
 
 Example:
 
 ```
-`https://xyz.rtp.raleigh.ibm.com:10202/hcl/wizard/Wizard/default/ver=2.0/rparam=currentPage=com.ibm.wplc.config.wizard.panels.execute.SetCondition/rparam=workflow=Create%20Portal%20Profile%20Using%20Template/rparam=previousPage=com.ibm.wplc.config.wizard.panels.ActivityPanel`
+https://xyz.rtp.raleigh.ibm.com:10202/hcl/wizard/Wizard/default/ver=2.0/rparam=currentPage=com.ibm.wplc.config.wizard.panels.execute.SetCondition/rparam=workflow=Create%20Portal%20Profile%20Using%20Template/rparam=previousPage=com.ibm.wplc.config.wizard.panels.ActivityPanel
 ```
 
 !!!note

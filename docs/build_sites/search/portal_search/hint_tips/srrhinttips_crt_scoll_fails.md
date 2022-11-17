@@ -19,6 +19,6 @@ Creating the portal site search collection can fail due to a file path length re
 
 
 *Related information*
-    - [Creating and configuring search collections](../portal_search/administer_portal_search/setup_search_collections/srrcreatconfig.md)
-    - [Managing the content sources of a search collection](../portal_search/administer_portal_search/setup_search_collections/mng_content_sources_search_collections/index.md)
+    - [Creating and configuring search collections](../administer_portal_search/setup_search_collections/srrcreatconfig.md)
+    - [Managing the content sources of a search collection](../administer_portal_search/setup_search_collections/mng_content_sources_search_collections/index.md)
 

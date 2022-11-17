@@ -12,6 +12,7 @@ Use the Project Explorer of IBM Rational Application Developer to create the use
 
     -   **SQL**
     -   **Web users**
+    
 5.  Select **Use an existing connection** and select **pzndemo_db** from the list of existing connections.
 
 6.  Click **Next**. The personalization resource wizard opens.

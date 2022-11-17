@@ -14,7 +14,7 @@ HCL Content Composer 9.5 CF192 and later releases now has a Version Comparison f
 
 Content Composer should be installed and configured to HCL Digital Experience 9.5 container release update CF181 or higher. See instructions to install to supported container environments in the [Install HCL Digital Experience 9.5 Components](../installation/install_config_cc_dam.md) topic.
 
-Content Composer is accessible from the Practitioner Studio interface \(after image configuration to your HCL Digital Experience 9.5 CF181 and higher deployment\).
+Content Composer is accessible from the Practitioner Studio interface (after image configuration to your HCL Digital Experience 9.5 CF181 and higher deployment).
 
 ## Version Comparison
 
@@ -32,11 +32,11 @@ Content authors can view and compare current to previous versions of a selected 
 
     ![Select Versions icon](../../../images/Select%20Versions%20icon.png "Select Versions icon")
 
-4.  **Versions** will display all current and previous versions of the selected content. In this example, there are two previous versions of the selected content aside from the Current Version \(which is Version 3\).
+4.  **Versions** will display all current and previous versions of the selected content. In this example, there are two previous versions of the selected content aside from the Current Version (which is Version 3).
 
     ![Select Versions to view and access all versions of selected content](../../../images/Select%20Versions%20to%20view%20and%20access%20all%20versions%20of%20selected%20content.png)
 
-5.  To compare the Current Version \(Version 3\) from a version \(in this example, Version 2\), hover to display the context menu \(three dot icon\) as shown in the image below. Then, select **Compare with current version**.
+5.  To compare the Current Version (Version 3) from a version (in this example, Version 2), hover to display the context menu (three-dot icon) as shown in the image below. Then, select **Compare with current version**.
 
     ![Select Compare With Current Version](../../../images/Select%20Compare%20with%20current%20version.png)
 
@@ -56,8 +56,8 @@ Content authors can view and compare current to previous versions of a selected 
 ## Restore, Compare and Merge a Content Version
 
 1.  Log in to your HCL Digital Experience 9.5 platform and select **Web Content** to edit from the Practitioner Studio navigator.
-2.  On the content, click the **Versions** icon, then hover to click to open the context menu \(three dot icon\) on the version you wish to edit.
-3.  **To restore to an older version**, select **Make Current**. In the example below, if Version 2 is selected from previous versions to be the current version, a new version will be created \(Version 4\).
+2.  On the content, click the **Versions** icon, then hover to click to open the context menu (three dot icon) on the version you wish to edit.
+3.  **To restore to an older version**, select **Make Current**. In the example below, if Version 2 is selected from previous versions to be the current version, a new version will be created (Version 4).
 
     ![Revert to an older version](../../../images/Revert%20to%20an%20older%20version-2.png)
 
@@ -69,7 +69,7 @@ Content authors can view and compare current to previous versions of a selected 
 
     ![Restore Version](../../../images/Restore%20Version.png)
 
-5.  This will now make Version 2 as the new Current Version \(Version 4\), while keeping a copy of Version 2 in the **Previous versions** list.
+5.  This will now make Version 2 as the new Current Version (Version 4), while keeping a copy of Version 2 in the **Previous versions** list.
 
     ![Update Current Version](../../../images/Update%20Current%20Version-2.png)
 
@@ -90,7 +90,7 @@ Content authors can view and compare current to previous versions of a selected 
 
 9.  **Merge and save** allows users to automatically create a new version from selected content version components. Once you select your desired components, click the drop-down arrow and select **Merge and save**.
 
-    Using the same example, this will generate a new version \(Version 4\), which will now be the new Current version. Version 3 will now be moved as a Previous Version.
+    Using the same example, this will generate a new version (Version 4), which will now be the new Current version. Version 3 will now be moved as a Previous Version.
 
 
 ## HCL Digital Experience Solution Feedback

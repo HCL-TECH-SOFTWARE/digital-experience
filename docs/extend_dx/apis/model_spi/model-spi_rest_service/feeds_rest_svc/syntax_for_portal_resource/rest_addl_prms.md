@@ -49,7 +49,7 @@ You can request a feed of a resource that is maintained in a tree model. If you 
 
     This returns all parents on the hierarchy higher than the given object ID with the depths of the value specified.
 
--   **\(absent\)**
+-   **(absent)**
 
     This returns an ATOM feed that contains the addressed node of the PortletModel. This is equivalent for a levels parameter with the value -1.
 
@@ -92,14 +92,14 @@ You can set the parameter to the following values:
 
     The empty representation mode returns no response body. However, the response headers, especially the HTTP status code, are the same as if you use the compact or full representation modes. For example, you can use this mode if a client wants to modify the resource, but does not evaluate the response for performance reasons.
 
--   **\(absent\)**
+-   **(absent)**
 
     If you omit the parameter, the full representation mode is used.
 
 
 ## Extension parameter
 
-For special use cases, for example in the context of federation, there is a parameter that allows you to manipulate the ATOM alternate link, also known as the view link. The value specified for this parameter must be a URI. If you specify this parameter, the Remote Model SPI performs a Piece Of Content \(POC\) lookup through the interface `com.ibm.portal.resolver.LookupService` with the view mode and the given URI. At this time the Remote Model SPI uses the default lookup service. Use the parameter as follows:
+For special use cases, for example in the context of federation, there is a parameter that allows you to manipulate the ATOM alternate link, also known as the view link. The value specified for this parameter must be a URI. If you specify this parameter, the Remote Model SPI performs a Piece Of Content (POC) lookup through the interface `com.ibm.portal.resolver.LookupService` with the view mode and the given URI. At this time the Remote Model SPI uses the default lookup service. Use the parameter as follows:
 
 ```
 [ &extension=uri ]

@@ -3,7 +3,7 @@ id: wcm_dev_elements_image_adding
 title: Adding an image element to an item
 ---
 
-
+# Adding an image element to an item
 
 
 You add an image element to a site area or content item when you want the image to be used for a specific site area or content item.
@@ -36,15 +36,15 @@ You add an image element to a site area or content item when you want the image 
 
         -   **Border**
 
-            Define the size of the border to appear around the image. \(0 = no border\)
+            Define the size of the border to appear around the image. (0 = no border)
 
         -   **Width**
 
-            Set the width of the image \(in pixels\). Optional.
+            Set the width of the image (in pixels). Optional.
 
         -   **Height**
 
-            Set the height of the image \(in pixels\). Optional.
+            Set the height of the image (in pixels). Optional.
 
         -   **Alternate text**
 

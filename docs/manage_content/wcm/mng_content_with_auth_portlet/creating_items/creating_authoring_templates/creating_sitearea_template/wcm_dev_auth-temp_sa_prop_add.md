@@ -3,8 +3,7 @@ id: wcm_dev_auth-temp_sa_prop_add
 title: Setting default site area properties
 ---
 
-
-
+# Setting default site area properties
 
 You can define default site area properties, such as rendering behavior, default content, and template maps.
 
@@ -27,12 +26,13 @@ You can define default site area properties, such as rendering behavior, default
     -   To edit an existing template map, select a template map from the index and then click **Edit**.
         -   Edit the template map and then click **Finish**.
     -   To remove an existing template map, select a template map from the index and then click **Remove**.
-    !!! note
+    
+    !!!note
         The template map that is selected here does not apply to the current site area, only to its children. The current site area uses the template map set in its most immediate ancestor.
 
 4.  If you select to render a site area directly, you can also select a different presentation template to use when this item is displayed instead of the one specified in the template map that is used by the item. To do this click **Select Presentation Template Override** and select an appropriate presentation template.
 
-    !!! note
+    !!!note
         The presentation template that you select must contain tags that are appropriate to this item if this item is to be displayed correctly.
 
 5.  If you do not want the content that is stored in a site area or any child items of a site area to be read by the search service, clear the **Search Collection Visibility** check box.

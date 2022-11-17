@@ -3,7 +3,7 @@
 Create a configuration file that fits the needs of your target HCL DX 9.5 Container deployment. The configuration file is the heart of your deployment using Helm. It defines how HCL Digital Experience 9.5 is deployed to supported platforms, and how it behaves during runtime operations. This section explains how to create your own configuration file and how to leverage the existing `values.yaml` inside the Helm Chart. It also explains how to optionally overwrite settings in case the default set may not be sufficient.
 
 !!!warning
-    Modification to any files (chart.yaml, templates, crds) in hcl-dx-deployment-vX.X.X\_XXXXXXXX-XXXX.tar.gz, except custom-values.yaml or values.yaml, is not supported.
+    Modification to any files (chart.yaml, templates, crds) in hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz, except custom-values.yaml or values.yaml, is not supported.
 
 !!!note
     From CF205 on you can directly retrieve the Helm Chart via the HCL Harbor Helm repository. If you wish to do so, please follow the instructions in [Configure Harbor Helm Repository](../optional_tasks/optional_configure_harbor_helm_repo.md) to pull the Helm Chart before you continue.

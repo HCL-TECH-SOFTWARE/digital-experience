@@ -106,7 +106,7 @@ The Solution Installer uses the following database properties:
     -   SQL Server: Microsoft SQL Server JDBC Driver
 -   **dsDbDriverType**
 
-    The type of the database driver that the data source connects to. Valid values are 2 and 4. For z/OS®, the recommended value is 4 unless the Monitor database resides on the same z/OS® LPAR as the CEI server, in which case 2 is recommended.
+    The type of the database driver that the data source connects to. Valid values are 2 and 4. 
 
 -   **dataSourceName**
 

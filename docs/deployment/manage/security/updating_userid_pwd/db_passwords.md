@@ -22,11 +22,9 @@ If database passwords are modified or expired, you must specify the new password
         -   lmDBAuth
         -   wcmDBAuth
 
-    4.  For z/OS®: Select the alias that you want to change; for example wpdbDS_WPSDBADM.
+    4.  Update the password accordingly.
 
-    5.  Update the password accordingly.
-
-    6.  Click **Apply**, and then click **Save** to save the configuration. You are informed that security.xml was changed.
+    5.  Click **Apply**, and then click **Save** to save the configuration. You are informed that security.xml was changed.
 
 3.  If you are an administrator and must change the DB2® password, you must change the database administrator user password on the system.
 
@@ -51,8 +49,6 @@ If database passwords are modified or expired, you must specify the new password
     4.  Select the **Log On** tab and change the DB2 administrator's user name and password.
 
     If you do not change the DB2 administrator's user name and password in the properties of each DB2 service, the DB2 database application does not start.
-
-6.  For z/OS: Start your HCL Portal server.
 
 
 Repeat for each JDBC Provider, data source, and alias that is affected.

@@ -1,4 +1,4 @@
-# Limitations
+## Limitations
 
 The following limitations exist in HCL Content Composer:
 
@@ -14,15 +14,19 @@ The following limitations exist in HCL Content Composer:
 
     1.  On a Kubernetes platform, it is recommended that you use authoring for any kind of content editing; or
     2.  Use the IBM Extended Cache Monitor for IBM WebSphere Application Server.
+        
         -   Documentation resource: [IBM Extended Cache Monitor for IBM WebSphere Application Server technology preview](https://www.ibm.com/developerworks/websphere/downloads/cache_monitor.html){:target="_blank"}
+
 -   HCL Content Composer 9.5 CF191 and higher releases supports the following Content Elements only:
+    
     -   Text elements
-    -   Media elements \(File and Image\)
+    -   Media elements (File and Image)
     -   Date and Time elements
     -   Component Reference elements
     -   Link elements
     -   Option Selection elements
     -   User Selection elements
+
 -   If HCL Content Composer CF19 through CF192 are deployed in a Hybrid Configuration, and if image element renditions are set and saved, the results will not be visible to the Content Composer page. This is a known issue, and the underlying content and template are saved successfully. This will be resolved in a future Content Composer update.
 
     Content authors may use the WCM Authoring portlet to preview the selected image renditions.

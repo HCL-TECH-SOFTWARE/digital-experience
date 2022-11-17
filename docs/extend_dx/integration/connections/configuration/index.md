@@ -16,7 +16,7 @@ Community associations associate a portal page with a community in HCL Connectio
 -   **[Configuring Portal to work with HCL Connections in SmartCloud for Social Business](../configuration/cfg_portal_to_work_with_cnx_in_sc/index.md)**  
 The HCL Connections integration assets that are used to integrate HCL Portal with on-premise HCL Connections can be used to integrate HCL Portal with HCL Connections in SmartCloud for Social Business as well.
 
-
 ???+ info "Related information"
     - [Integrating](https://help.hcltechsw.com/digital-experience/9.5/admin-system/integrating_parent.html)
+
 

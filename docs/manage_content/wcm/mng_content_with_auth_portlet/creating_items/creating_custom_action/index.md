@@ -5,7 +5,7 @@ A custom action is used to run a custom workflow action based on a Java class yo
 
 Before you create a custom workflow action, you must create a custom workflow class.
 
-To create a custom action, open the applications menu and go to **Content** \> **Web Content Management** and then click **New** \> **Workflow Actions** \> **Custom Action**.
+To create a custom action, open the applications menu and go to **Content > Web Content Management** and then click **New > Workflow Actions > **Custom Action**.
 
 1.  [Entering identification information](../wcm_dev_items_id.md)  
 Specify identification information for the current item, including the name and title for the item. The identification section is common to all item forms.

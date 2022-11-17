@@ -34,6 +34,6 @@ To add, remove or edit elements, click **Manage Elements** from the toolbar of a
 -   Use the arrows to change the order that the elements appear in an item form.
 
 
-!!! note
+!!!note
     Do not overuse elements in a single item. The more elements that you add to an item, the longer it takes to open in the authoring portlet.
 

@@ -1,6 +1,6 @@
 # Importing and exporting search collections
 
-You can export search collections from a source portal and import them into a target portal with the Import and Export Collection option. When you export and import a search collection, you are exporting and importing the configuration information and not the actual content from the search index. You might want to export or import verified search collections from a test portal to a production portal; from a local portal to a configuration with remote search; from a single portal to a portal cluster environment; or to stage your portal to production by using the Release Builder. The export and import operations are beneficial when you upgrade to software levels that are not compatible with the data storage format of older versions of the software.
+You can export search collections from a source portal and import them into a target portal with the Import and Export Collection option. When you export and import a search collection, you are exporting and importing the configuration information and not the actual content from the search index. You might want to export or import verified search collections from a test portal to a production portal; from a local portal to a configuration with remote search; from a single portal to a portal cluster environment; or to stage your portal to production by using the Release Builder. The export and import operations are beneficial when you upgrade to software levels that are not compatible with the data storage format of later versions of the software.
 
 Before you export a collection, make sure that the user who is running the portal application process has write access to the target directory location. Otherwise, you might get an error message, such as File not found.
 
@@ -42,7 +42,7 @@ Additionally to export and import your search collections, you must configure Po
 
 If you want to migrate from one portal version to a higher version, you need to delete the search collections between the export and the re-import. For more information, see *Migrating web search collections*.
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Exporting and importing search collections](../../../search/portal_search/administer_portal_search/setup_search_collections/srtexpimp.md)
     - [Hints and tips for Portal Search crawls](../../portal_search/hint_tips/srrhinttips_crawl.md)
     - [Planning and preparing for Portal Search](../../planning_portal_search/index.md)

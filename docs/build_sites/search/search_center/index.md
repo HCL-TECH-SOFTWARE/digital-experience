@@ -17,7 +17,7 @@ This explains some terms used in this documentation.
     Facets are used to filter search results based on different attributes of the search results. For example, this can be by the document or file type, or by the last modified date contained in the search results. Facets are available above the search results list. You can select different values for each facet. For example, for the facet Last Modified, you can select values such as Last 30 Days or Last 12 Months.
 
 
-For details about how to limit search results by scopes refer to [Searching by scopes](#sc_scopes). For details about how to refine search results by facets refer to [Searching by facets](#sc_faucets).
+For details about how to limit search results by scopes refer to [Searching by scopes](#searching-by-scopes). For details about how to refine search results by facets refer to [Searching by facets](#searching-by-facets).
 
 ## Searching for content
 
@@ -26,14 +26,14 @@ To submit your search query, use the Search box that is available at the side of
 !!! note 
     Depending on your installation and its customization, search might be available by other than the default means.
 
-1.  Click the arrow near Search text input field, and select a scope to search from the drop-down list of available scopes. The Search field displays the name of scope you picked. If you do not pick a scope, All Sources \(the default\) will be searched. For details about search scopes refer to [Searching by scopes](#sc_scopes).
-2.  To enter a search query, type your search string over the name of the selected scope in the entry field. For details about the search syntax refer to [Search syntax](#sc_syntax).
-3.  Click the **Search** icon \(magnifying glass\) to launch your query. Search displays the items that match your search terms on the Search Center tab page. The information about the search results appears grouped by columns for relevance, title, owner, and date. For details refer to [Search result list details](#sc_res_details).
+1.  Click the arrow near Search text input field, and select a scope to search from the drop-down list of available scopes. The Search field displays the name of scope you picked. If you do not pick a scope, All Sources \(the default\) will be searched. For details about search scopes refer to [Searching by scopes](#searching-by-scopes).
+2.  To enter a search query, type your search string over the name of the selected scope in the entry field. For details about the search syntax refer to [Search syntax](#search-syntax).
+3.  Click the **Search** icon \(magnifying glass\) to launch your query. Search displays the items that match your search terms on the Search Center tab page. The information about the search results appears grouped by columns for relevance, title, owner, and date. For details refer to [Search result list details](#search-result-list-details).
 4.  Change or refine your search using one of the following methods:
-    -   Refine your search by typing additional words in the Search text entry field. For details about the search syntax refer to [Search syntax](#sc_syntax).
-    -   Launch a search to a different content location by selecting the search scope as required. For details refer to [Searching by scopes](#sc_scopes).
-    -   Refine your search further by using the advanced search options. For details refer to [Advanced search](#sc_advanced).
-    -   Refine your search by using the search result facets. For details refer to [Searching by facets](#sc_faucets).
+    -   Refine your search by typing additional words in the Search text entry field. For details about the search syntax refer to [Search syntax](#search-syntax).
+    -   Launch a search to a different content location by selecting the search scope as required. For details refer to [Searching by scopes](#searching-by-scopes).
+    -   Refine your search further by using the advanced search options. For details refer to [Advanced search](#advanced-search).
+    -   Refine your search by using the search result facets. For details refer to [Searching by facets](#searching-by-facets).
     -   Optional: if your administrator has enabled search on metadata, you can narrow your search by specifying metadata of the searched documents. For example, you can search for documents by their title or description.
 5.  Click **Close Search** to leave the search results.
 
@@ -92,6 +92,7 @@ To improve the effectiveness of your search queries, follow these guidelines:
     -   -weekly monthly
     -   +monthly -weekly
     -   monthly -weekly
+
 -   Use an asterisk \(\*\) as a trailing wildcard at the end of a search term, in the format wildcar\*, but not \*ildcard or wil\*card.
 -   You can search documents by date and date ranges. The used date formats can be changed by the Portal administrator. Dates can be specified by using the format yyy-MM-dd. You can also specify the time as well as the date by using the format yyy-MM-dd,hh:mm. The following search terms are supported:
 
@@ -111,6 +112,7 @@ To improve the effectiveness of your search queries, follow these guidelines:
         -   \>=
         -   <
         -   <=
+
         If a beginning boundary is specified, an ending boundary can be specified as well, but is not required. Similarly, if an ending boundary is specified, a beginning boundary can be specified as well. The range can begin with either the ending or beginning boundary.
 
     Date queries can be combined with other terms. For instance, to find all status reports from 2014, you can use the following query: "status reports" \#creation\_date::\>=2014-01-01<2015-01-01
@@ -211,4 +213,4 @@ To refine your search, you can select one or multiple facets.
 To return and view a less restricted search result list, click the link **Remove selection** or the square box icon next to the appropriate facet. To clear **all** facet restrictions and return to the full search result list, click **Clear selections**.
 
 ???+ info "Related information"
-    - [Portal Search](../../search/welcome_search.md)
+    - [Portal Search](../../search/portal_search/index.md)
