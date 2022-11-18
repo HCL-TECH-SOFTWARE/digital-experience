@@ -4,4 +4,4 @@ nav:
     - kubernetes
     - traditional
     - docker
-    - othersoftware.md
+    #- othersoftware.md

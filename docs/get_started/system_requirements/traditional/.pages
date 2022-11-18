@@ -1,7 +1,10 @@
 nav:
-    - operatingsystems.md
-    - hardware.md
-    - hypervisors.md
-    - prerequisites.md
-    - databases.md
-    - ...
+   # - operatingsystems.md
+   # - hardware.md
+   # - hypervisors.md
+   # - prerequisites.md
+   # - databases.md
+   # - ...
+     - supported
+     - unsupported
+     - other_config
