@@ -15,6 +15,20 @@ The DAM staging framework allows you to stage your DAM content from an authoring
 
 ![Use separate Digital Asset Management and staging between HCL DX environments](../../../../images/new_dam_staging_options.png)
 
+### Configure LDAP
+
+**Both environments should share the same LDAP**
+The current limitation of the dxclient DAM Staging, it is recommended that both environment used for DAM staging should share same LDAP.
+It will still work with the environment with different LDAP but everything should be the same between LDAPs like DNs, username, passwords, etc.. (Both LDAP should have matching values).
+
+**The difference between the credentials used in dxclient register command and the credentials used in transferring files during staging**
+At present, the user are used to transfer files between the primary server and the subscriber in the DX deployment. The secret needs to be the primary portal admin user used for deployment of the DX environment. The user in the secret on the transferring server and the subscriber has to be the same. 
+The credentials used in the registration are only used for authentication and authorization during the dxclient registration steps and will not be used for transferring files during staging.
+
+**To create new secret for staging**
+There is only one secret. The secret is used to store the portal admin credentials used by the DX in its internal process. It is not possible to add a separate secret for staging. The values in secret can be updated through helm update command. However, when the credentials are updated in secret, they are actually changing the portal primary admin. The new user specified in secret will be the new primary portal admin.
+
+
 ## Manage DAM staging
 
 Use the `manage-dam-staging trigger-staging` command to trigger DAM staging.
