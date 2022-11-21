@@ -35,7 +35,7 @@ The Remote Model SPI uses feeds in the [Atom Syndication Format](http://www.ietf
 -   To create model resources: `HTTP POST`
 -   To delete model resources: `HTTP DELETE`
 
--   **[Feeds for REST services](../dev/rest_feed.md)**  
+**[Feeds for REST services](../model-spi_rest_service/feeds_rest_svc/index.md)**  
 When you access a REST service to get information or to modify a portal resource, the response and in some cases also the request works by means of a feed. A feed contains information about one or more portal resources in a specific format as exposed by portal models. Learn how you obtain feeds for portal resources and what the format of such feeds is.
 
 

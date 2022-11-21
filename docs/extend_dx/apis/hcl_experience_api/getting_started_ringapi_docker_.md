@@ -9,7 +9,8 @@ Follow these steps to get started with the HCL Experience API.
 3.  Extract the HCL Experience API installation binaries and, within a terminal, navigate to the extracted folder.
 4.  Verify if the extracted folder contains the Experience API images, for example, `hcl-dx-ringapi-image-v1.4.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`, `hcl-dx-experience-api-sample-ui-v0.2.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`, and readme (`README.md`) files.
 
-    **Note:** As HCL Digital Experience releases updated Experience API images, the image version number increases. For example, `hcl-dx-ringapi-image-v1.4.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`.
+    !!! note
+        As HCL Digital Experience releases updated Experience API images, the image version number increases. For example, `hcl-dx-ringapi-image-v1.4.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`.
 
 5.  Load the HCL Experience API image using the following command:
 

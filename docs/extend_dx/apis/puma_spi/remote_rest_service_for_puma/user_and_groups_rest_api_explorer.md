@@ -2,7 +2,7 @@
 
 The DX User and Groups REST API explorer can be used by developers creating solutions for HCL DX 9.5 on premises and container deployments to explore and test the PUMA APIs.
 
-The PUMA REST API provides a remote interface for user and group management for the configured HCL DX Portal user repository. The DX User and Groups API explorer is available for use with [HCL DX 9.5 CF and Container Update 199](../overview/new_cf_95.md) and later deployments on supported Kubernetes container-based and on-premises platforms. The DX User and Groups API explorer allows developers to explore and test the PUMA APIs.
+The PUMA REST API provides a remote interface for user and group management for the configured HCL DX Portal user repository. The DX User and Groups API explorer is available for use with [HCL DX 9.5 CF and Container Update 199](../../../../whatsnew/cf19/index.md) and later deployments on supported Kubernetes container-based and on-premises platforms. The DX User and Groups API explorer allows developers to explore and test the PUMA APIs.
 
 ## Access and launch the DX User and Groups REST API Explorer
 
@@ -18,7 +18,7 @@ Example:
 http://localhost:10039/dx/api/users/v1/explorer/
 ```
 
-![DX User and Group Management REST API](../images/DX_user_group_management_REST_API.png)
+![DX User and Group Management REST API](../../../../images/DX_user_group_management_REST_API.png)
 
 ## Using the DX User and Group API explorer
 
@@ -44,7 +44,7 @@ http://localhost:10039/dx/api/users/v1/explorer/
 
 -   **Payload**
 
-    See the [Remote REST service for PUMA](uprof_rest.md) Help Center topic for details on the body, headers, query parameters, response body, and other information.
+    See the [Remote REST service for PUMA](../../puma_spi/remote_rest_service_for_puma/index.md) Help Center topic for details on the body, headers, query parameters, response body, and other information.
 
 
 

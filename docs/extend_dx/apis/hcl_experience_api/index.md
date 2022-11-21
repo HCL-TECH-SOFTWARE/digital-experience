@@ -27,7 +27,8 @@ The HCL Experience API describes a high-level API through which the following sp
 -   **HCL Digital Asset Management API**: Presents developer entry points to the Digital Asset Management features of HCL Digital Experience 9.5.
 -   **HCL Image Processor API**: Presents developer entry points to the Digital Asset Management Image Processor functions of HCL Digital Experience 9.5.
 
-**Note:** Future HCL Digital Experience 9.5 feature functionality will also be exposed through the HCL Digital Experience API.
+!!! note
+    Future HCL Digital Experience 9.5 feature functionality will also be exposed through the HCL Digital Experience API.
 
 It is recommended that developers building solutions for HCL Digital Experience 9.5 running on Kubernetes automatically use the HCL Experience API for the scenarios that are covered.
 
