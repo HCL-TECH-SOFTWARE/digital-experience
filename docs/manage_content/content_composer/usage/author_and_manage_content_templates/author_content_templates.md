@@ -65,25 +65,25 @@ Follow these steps to create a new content template using Content Composer:
 
         ![](../../../../assets/HCL_Content_Composer_honoring_properties_fields.png)
 
-        **General Guidelines when filling in properties for **Default Content****:
+        **General Guidelines when filling in properties for **Default Content**:
 
-        1.  Setting both the Required and Hidden properties to true will make the element's default content a required field.
-        2.  Minimum property should always be less than or equal to the maximum property.
-        3.  Maximum property should always be greater than or equal to the minimum property.
-        4.  Dimension property such as Height and Width should always be greater than 1.
-        5.  Numeric fields do not accept alphabet letters and special characters except for scientific notation (Example: *3.14e2*).
+            1.  Setting both the Required and Hidden properties to true will make the element's default content a required field.
+            2.  Minimum property should always be less than or equal to the maximum property.
+            3.  Maximum property should always be greater than or equal to the minimum property.
+            4.  Dimension property such as Height and Width should always be greater than 1.
+            5.  Numeric fields do not accept alphabet letters and special characters except for scientific notation (Example: *3.14e2*).
 
         **Specific Guidelines for Text Elements**:
 
-        1.  When the Required property is set to true, the minimum and maximum for characters and words should be greater than 1. If not, it should be greater than 0.
-        2.  Minimum words must be less than half the maximum characters.
-        3.  For ShortTextComponent, maximum characters must be 250 or less.
+            1.  When the Required property is set to true, the minimum and maximum for characters and words should be greater than 1. If not, it should be greater than 0.
+            2.  Minimum words must be less than half the maximum characters.
+            3.  For ShortTextComponent, maximum characters must be 250 or less.
         
         **Specific Guidelines for Numeric Element only**:
 
-        1.  The Minimum and maximum value are ranging from -999999999999999999 to 999999999999999999.
-        2.  When whole numbers only property is set to true, minimum and maximum value must not have a decimal.
-        3.  The Maximum characters must be 250 or less.
+            1.  The Minimum and maximum value are ranging from -999999999999999999 to 999999999999999999.
+            2.  When whole numbers only property is set to true, minimum and maximum value must not have a decimal.
+            3.  The Maximum characters must be 250 or less.
 
 8.  When done, select **Save** to save your settings and create your new content template, or **Save and Close**, which will create your new content template with the saved settings and will redirect you to the new content template's location in the Content Composer dashboard.
 
@@ -149,5 +149,3 @@ The **Dashboard** view allows users to perform content authoring actions.
 ## HCL Digital Experience Solution Feedback
 
 HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1). -->
-
-
