@@ -18,7 +18,7 @@ See the [Enabling presentation of locales in friendly URLs](https://help.hcltech
 
 The Theme Editor portlet is a new addition to HCL Digital Experience Container Update CF193 and higher release capabilities. The portlet allows an administrator to edit static theme resources in WebDAV without the use of a WebDAV client or tool.
 
-See the [Theme Editor Portlet](../../build_sites/themes_skins/usage/customizing_theme/theme_editor_portlet.md) topic for more information.
+See the [Theme Editor Portlet](../../build_sites/themes_skins/customizing_theme/theme_editor_portlet.md) topic for more information.
 
 ## HCL Digital Experience 9.5 Container Custom Context Root URL
 
@@ -48,13 +48,13 @@ See the [DXClient and DXConnect tooling supporting CICD release processes](../..
 
 New and updated HCL DX APIs are introduced with the HCL DX CF193 Container Update release:
 
--   [Web Content Manager Multilingual Solution APIs](../../manage_content/wcm/wcm_dev/wcm_dev_api/wcm_mls_api.md)
+-   [Web Content Manager Multilingual Solution APIs](../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_dev_api/wcm_mls_api.md)
 
 ## HCL Digital Experience 9.5 Container Platform Support Matrix
 
 View the latest Kubernetes and OpenShift platforms tested and supported for specific HCL Digital Experience 9.5 Container Update deployments.
 
-See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../get_started/system_requirements/9.5_express/supportedsoftware.md) topic for more information.
+See the [HCL Digital Experience 9.5 Container Platform Support Matrix](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md) topic for more information.
 
 ## New HCL Digital Experience ‘How To’ Videos
 
