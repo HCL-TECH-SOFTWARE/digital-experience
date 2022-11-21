@@ -4,7 +4,7 @@
 
 **HCL DX is the fastest way for practitioners, developers, and IT to deliver trusted digital experiences at the intersection of content, applications and processes.**
 
-It is trusted by governments and companies around the world to deliver mission-critical experiences for their customers, citizens, suppliers and partners. Via HCL DX their teams are empowered to create and manage experiences such as customer self-service sites, citizen portals, city and state websites, contact center applications, B2B network sites, supplier and distributor portals and much more. In combination with [HCL Commerce](https://www.hcltechsw.com/commerce), HCL DX can also be used to provide B2B and B2C commerce experiences.
+It is trusted by governments and companies around the world to deliver mission-critical experiences for their customers, citizens, suppliers and partners. Via HCL DX, their teams are empowered to create and manage experiences such as customer self-service sites, citizen portals, city and state websites, contact center applications, B2B network sites, supplier and distributor portals and much more. In combination with [HCL Commerce](https://www.hcltechsw.com/commerce), HCL DX can also be used to provide B2B and B2C commerce experiences.
 
 These solutions integrate web content with applications and business processes, to support diverse user populations. HCL DX provides features to enable the composition of these experiences and to manage who sees what. It is built on a robust architecture that can scale to cope with high demand. [Learn more about HCL DX architecture here](../architecture_overview).
 
