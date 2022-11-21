@@ -19,13 +19,13 @@ Depending on the type of the modification, use the following HTTP verbs:
     Use this to delete existing resources
 
 
--   **[Setting titles and descriptions of resources](../dev/rest_feed_set_ttldscr.md)**  
+-   **[Setting titles and descriptions of resources](rest_feed_set_ttldscr.md)**  
 You can set titles and descriptions of resources with Portal Model REST services.
--   **[Creating Resources](../dev/rest_feed_crt_resrcs.md)**  
+-   **[Creating Resources](rest_feed_crt_resrcs.md)**  
 Portal Model REST services allow you to create new resources.
--   **[Putting a portlet on a page](../dev/rest_feed_pt_ptltnpg.md)**  
+-   **[Putting a portlet on a page](rest_feed_pt_ptltnpg.md)**  
 Portal Model REST services allow you to put portlets on pages.
--   **[Deleting resources](../dev/rest_feed_del_resrc.md)**  
+-   **[Deleting resources](rest_feed_del_resrc.md)**  
 Portal Model REST services allow you to delete resources.
 
 

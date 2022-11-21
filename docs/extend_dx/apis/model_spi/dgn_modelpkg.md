@@ -4,14 +4,14 @@ Sub-packages provide information on installed resources, hold Identification int
 
 The Model SPI includes the following sub packages.
 
--   [The sub package com.ibm.portal.admin](#admin)
--   [The sub package com.ibm.portal.content](#content)
--   [The sub package com.ibm.portal.identification](#identification)
--   [The sub package com.ibm.portal.navigation](#navigation)
--   [The sub package com.ibm.portal.portletmodel](#portletmodel)
--   [The sub package com.ibm.portal.wire](#portal_wire)
+-   [The sub package com.ibm.portal.admin](#the-sub-package-comibmportaladmin)
+-   [The sub package com.ibm.portal.content](#the-sub-package-comibmportalcontent)
+-   [The sub package com.ibm.portal.identification](#the-sub-package-comibmportalidentification)
+-   [The sub package com.ibm.portal.navigation](#the-sub-package-comibmportalnavigation)
+-   [The sub package com.ibm.portal.portletmodel](#the-sub-package-comibmportalportletmodel)
+-   [The sub package com.ibm.portal.wire](#the-sub-package-comibmportalwire)
 
-See [Model SPI overview](dgn_modelovw.md) for a description of the main package in the Model SPI: `com.ibm.portal`.
+See [Model SPI overview](../model_spi/index.md) for a description of the main package in the Model SPI: `com.ibm.portal`.
 
 ## The sub package com.ibm.portal.admin
 
@@ -31,9 +31,8 @@ The LanguageList contains all languages that are supported by the portal. The Ma
 
 Elements of this package define how content is represented in the portal. The two main models of this package are the ContentModel and the LayoutModel. The content model defines a tree structure for content elements (such as pages and labels); it is used to group these content elements logically.
 
-**Note:**
-
-The topology of the content model currently dictates the topology of the navigation model. For more information, see section *The sub package com.ibm.portal.navigation*. Theoretically, the topologies of content model and navigation model are allowed to diverge.
+!!! note
+    The topology of the content model currently dictates the topology of the navigation model. For more information, see section *The sub package com.ibm.portal.navigation*. Theoretically, the topologies of content model and navigation model are allowed to diverge.
 
 Currently, the elements of the content model can be pages, labels, or URLs. For each type, a specific ContentNode interface exists: ContentPage, ContentLabel, and ContentURL. Each content node has different information that is associated with it.
 
@@ -43,13 +42,13 @@ The elements of the layout model are either LayoutContainers that define rows an
 
 The following figure shows how page layout information and page content is represented. The figure depicts a page with three portlets. The surrounding vertical and horizontal containers define the layout while the controls hold the portlets that provide the actual content presented to the user.
 
-![The page topology is a tree structure with multiple nodes and the portal page is represented as multiple vertical and horizontal containers.](../images/content_top.jpg)
+![The page topology is a tree structure with multiple nodes and the portal page is represented as multiple vertical and horizontal containers.](../../../images/content_top.jpg)
 
 Content nodes can provide metadata through the com.ibm.portal.MetaDataProvider interface. Metadata can be used to associate arbitrary information with a content node. The content metadata model provides a view on metadata of the nodes in the content model. It aggregates the metadata of the individual nodes into one metadata object by using the hierarchy of the nodes as described in the content model.
 
 The following figure shows the relationship between the individual metadata that are shown by content nodes and the aggregated view that the content metadata model provides:
 
-![In this image, individual metadata from content nodes and the aggregated view that the content metadata model provides are connected.](../images/content_metadata.jpg)
+![In this image, individual metadata from content nodes and the aggregated view that the content metadata model provides are connected.](../../../images/content_metadata.jpg)
 
 The metadata of individual content nodes are shown in XML Access scripts by using the `<parameter>` tag.
 
@@ -91,13 +90,13 @@ The elements of the navigation model are NavigationNodes. Each such node can ref
 
 The figure shows how nodes in the navigation model can reference a node in the content model.
 
-![This image illustrates the relationship between the navigation model and the content model.](../images/content_nav.jpg)
+![This image illustrates the relationship between the navigation model and the content model.](../../../images/content_nav.jpg)
 
 When a user is going through the portal, the currently selected navigation node is important to render the current page. The NavigationSelectionModel reflects the current selection and represents a list that defines a path through the navigation model.
 
 The figure shows how the navigation selection model defines a path through the navigation model.
 
-![This image illustrates the relationship between the navigation model and the navigation selection model.](../images/nav_select.jpg)
+![This image illustrates the relationship between the navigation model and the navigation selection model.](../../../images/nav_select.jpg)
 
 The last node of this path is always the currently selected navigation node. Its referenced content node represents what is aggregated for the user to see (normally a page that is represented through a ContentPage object).
 

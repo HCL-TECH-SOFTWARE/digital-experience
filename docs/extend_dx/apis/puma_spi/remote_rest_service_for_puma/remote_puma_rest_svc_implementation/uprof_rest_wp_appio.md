@@ -51,7 +51,8 @@ Example 1: This example shows a server response to the `/um/secure/attributes/gr
 
 ```
 
-**Note:** The `atom:updated` does not contain any useful information, but it has to be added to comply to the ATOM specification.
+!!! note
+    The `atom:updated` does not contain any useful information, but it has to be added to comply to the ATOM specification.
 
 Example 2: The same URI including the option to expand the references, that is `/um/secure/attributes/groups?expandRefs=true`, gives the following server response:
 
@@ -210,8 +211,6 @@ For the operations of the PUMA SPI REST Service interface that use one of the me
 -   Successful PUT or DELETE operations return a status code of `200 OK`.
 
 
-**Related information**  
-
-
-[The Atom Publishing Protocol](https://datatracker.ietf.org/doc/html/draft-ietf-atompub-protocol-11)
+???+ info "Related information"
+    - [The Atom Publishing Protocol](https://datatracker.ietf.org/doc/html/draft-ietf-atompub-protocol-11)
 

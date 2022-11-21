@@ -49,13 +49,7 @@ The following table shows how a model is requested for specific use from the mod
 
 |Model source|The specific model is requested from the source, and the source returns the specific model|Model target that is returned and filtered for a specific use|
 |------------|------------------------------------------------------------------------------------------|-------------------------------------------------------------|
-|![This image represents a model source as a large tree structure where a parent node has multiple children nodes.](../images/model_source.jpg)
-
-|![This image represents a request and return from a model where an arrow extends from the model and back to the model.](../images/returns.jpg)
-
-|![This image represents a model target that is part of the model source and filtered for a specific use. The model target represents part of the tree structure of the model source, also with a parent node that has multiple children nodes.](../images/model_target.jpg)
-
-|
+|![This image represents a model source as a large tree structure where a parent node has multiple children nodes.](../../../images/model_source.jpg)|![This image represents a request and return from a model where an arrow extends from the model and back to the model.](../../../images/returns.jpg)|![This image represents a model target that is part of the model source and filtered for a specific use. The model target represents part of the tree structure of the model source, also with a parent node that has multiple children nodes.](../../../images/model_target.jpg)|
 
 ## Create a specific model from source information
 
@@ -98,34 +92,29 @@ List models become searchable the same way by which tree models do: SearchableLi
 
 A widespread interface on elements of models is Localized. This interface provides a title and description of an element. Title and description are properties that are locale-dependant. To obtain a title or description call getTitle(Locale) or getDescription(Locale), depending on the case.
 
-**Note:** An element returns a title or description only if such information exists in the exact locale that is passed in to the methods mentioned. No fallback mechanism is implemented inside of these methods. A suitable fallback mechanism must be employed by invokers of the methods of Localized, or the default that is provided by LocalizedStringResolver (see package `com.ibm.portal.model`) can be used.
+!!! note
+    An element returns a title or description only if such information exists in the exact locale that is passed in to the methods mentioned. No fallback mechanism is implemented inside of these methods. A suitable fallback mechanism must be employed by invokers of the methods of Localized, or the default that is provided by LocalizedStringResolver (see package `com.ibm.portal.model`) can be used.
 
--   **[Sub packages of the Model SPI](../dev/dgn_modelpkg.md)**  
+-   **[Sub packages of the Model SPI](dgn_modelpkg.md)**  
 Sub packages provide information on installed resources, hold Identification interface, and define the navigational model and the content that is represented in the Portal. The sub packages also represent portlets and their configuration data in the portal and the interconnections between the portlets.
--   **[Obtain a model from the portal](../dev/dgn_modelobt.md)**  
+-   **[Obtain a model from the portal](dgn_modelobt.md)**  
 Portal models can be obtained by using three different ways, depending on where the code that uses them is located.
--   **[Obtaining the object ID for a page or portlet](../dev/wpsobjid.md)**  
+-   **[Obtaining the object ID for a page or portlet](wpsobjid.md)**  
 There are several use cases when a portlet needs to obtain the object ID used to uniquely identify a portlet or a page. For example, the object ID of a page definition is required for a portlet to start a dynamic instance of that page.
--   **[Filtering the content model](../dev/dgn_modelfilter.md)**  
+-   **[Filtering the content model](dgn_modelfilter.md)**  
 By applying filters to the content model, you can exclude parts of the page hierarchy from the content model. Filtering is performed based on request data and metadata assigned to the pages.
--   **[Model SPI samples](../dev/dgn_modelxmp.md)**  
+-   **[Model SPI samples](dgn_modelxmp.md)**  
 The Model SPI can be used in portlets, themes, and skins. The models can be used with authenticated users and also with the anonymous user.
--   **[Remote Model SPI REST service](../dev/rest.md)**  
+-   **[Remote Model SPI REST service](../model_spi/model-spi_rest_service/index.md)**  
 The Remote Model SPI gives you access to portal models through REST services. It allows you to obtain and modify portal resources that are exposed by some of the models of the model SPI remotely, that is from clients that are outside the JVM of the server. This is achieved by means of REST services.
--   **[Digital Experience Remote Model API REST explorer](../dev/remote_model_rest_api.md)**  
+-   **[Digital Experience Remote Model API REST explorer](remote_model_rest_api.md)**  
 The Digital Experience Remote Model REST API explorer can be used by developers creating solutions for HCL DX 9.5 on premises and container deployments to explore and test the Remote Model APIs.
 
 
-**Related information**  
-
-
-[Controller SPI](../dev/ctrlrapic_ovu.md)
-
-[Setting flags](../dev/ctrlrapit_set_flag.md)
-
-[Administration tools for configuring outbound HTTP connections](../dev-portlet/outbhttp_cfg_tools.md)
-
-[Obtaining the Model SPI](../dev-portlet/outbhttp_cfg_mcspi_obtmapi.md)
-
-[The Java API](../admin-system/tag_rate_api_java.md)
+???+ info "Related information"
+    - [Controller SPI](../controller_spi/index.md)
+    - [Setting flags](../controller_spi/controller_spi_modification/modify_properties/ctrlrapit_set_flag.md)
+    - [Administration tools for configuring outbound HTTP connections](../../portlets_development/web2_ui/outbound_http_connection/cfg_outbound_http_connections/adm_tools_for_cfg_outbound_http_conn/index.md)
+    - [Obtaining the Model SPI](../../portlets_development/web2_ui/outbound_http_connection/cfg_outbound_http_connections/adm_tools_for_cfg_outbound_http_conn/cfg_outbound_http_using_modelcontroller_spi/outbhttp_cfg_mcspi_obtmapi.md)
+    - [The Java API](../../../build_sites/tagging_rating/dev_tagging_and_rating/tag_rate_api_java.md)
 

@@ -9,10 +9,9 @@ You can create URLs to the following target resources.
 -   Specific resources, such as an image file
 -   Protected resources - the URL is generated on the condition that the user has sufficient permissions
 
-**Notes:**
-
--   When you create URLs, all referenced resources must exist in the current environment. In particular, object IDs must be valid and refer to a resource and unique names must be resolvable to object IDs.
--   You cannot create URLs in one virtual portal that address portal resource in another virtual portal. The reason is that both object IDs and unique names relate to resources of the local virtual portal.
+!!! note
+    -   When you create URLs, all referenced resources must exist in the current environment. In particular, object IDs must be valid and refer to a resource and unique names must be resolvable to object IDs.
+    -   You cannot create URLs in one virtual portal that address portal resource in another virtual portal. The reason is that both object IDs and unique names relate to resources of the local virtual portal.
 
 Quick Links can also be used to access major areas of the site. Quick Links are also accessible from any location within the site, and you can customize them. Quick Links can be customized to provide one-click access to major areas of the site. Refer to the Adding a Quick Link section of this topic for more information.
 
@@ -52,7 +51,8 @@ To target the action phase on a standard portlet, you need to also include the p
 
 ```
 
-**Note:** To target the action phase of an IBM portlet, you must use the actionName attribute, which is described in <portal-navigation/> tags.
+!!! note 
+    To target the action phase of an IBM portlet, you must use the actionName attribute, which is described in <portal-navigation/> tags.
 
 The following example is used in the drop-down list in the toolbar to generate a URL to the Organize Favorites portlet. The noCheck value indicates that the user's access control is not checked prior to generating the tag content.
 
