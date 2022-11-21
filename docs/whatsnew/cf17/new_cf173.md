@@ -10,27 +10,27 @@ You can access the latest software requirements and updates that support HCL Dig
 
 ## Web Content Manager Mirror syndication - Disable full build option
 
-An option to disable the rebuild with the WCM mirror syndication option is now available. This option can be set using the WCM Configuration service on the syndicator. See [Manually syndicating items](../../manage_content/wcm/configuration/syndication/wcm_syndication_manual.md).
+An option to disable the rebuild with the WCM mirror syndication option is now available. This option can be set using the WCM Configuration service on the syndicator. See [Manually syndicating items](../../manage_content/wcm/wcm_content_delivery/syndication/manage_synd_subs/wcm_syndication_manual.md).
 
 ## New WCM Restore Version REST API
 
-The Restore version API supports restoring content versions to a previous level. See [How to use REST with Versions](../../manage_content/wcm/usage/wcm_dev/wcm_rest/wcm_rest_mng_content/wcm_rest_crud_versions.md).
+The Restore version API supports restoring content versions to a previous level. See [How to use REST with Versions](../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_rest/wcm_rest_mng_content/wcm_rest_crud_versions.md).
 
 ## New Enhanced WCM Content Template API Element Configuration
 
-The Enhanced Content Template API Element Configuration Updates allows the configuration of template elements to be updated. See [How to set default content values for content templates by using REST](../../manage_content/wcm/usage/wcm_dev/wcm_rest/wcm_rest_mng_content/wcm_rest_template/wcm_rest_content_template/wcm_rest_crud_cont_temp_default.md).
+The Enhanced Content Template API Element Configuration Updates allows the configuration of template elements to be updated. See [How to set default content values for content templates by using REST](../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_rest/wcm_rest_mng_content/wcm_rest_template/wcm_rest_content_template/wcm_rest_crud_cont_temp_default.md).
 
 ## New WCM Export Digital Asset Management references API
 
-The Web Content Manager Export DAM references API REST service can be used to retrieve content or components with references to externally managed resources, using the Digital Asset Manager plugin. See [How to use REST with content items](../../manage_content/wcm/usage/wcm_dev/wcm_rest/wcm_rest_mng_content/wcm_rest_crud_content.md).
+The Web Content Manager Export DAM references API REST service can be used to retrieve content or components with references to externally managed resources, using the Digital Asset Manager plugin. See [How to use REST with content items](../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_rest/wcm_rest_mng_content/wcm_rest_crud_content.md).
 
 ## New Experience API samples
 
-Two new samples are provided for use with the HCL Digital Experience 9.5 Experience API, supporting Sample login and content update process flow, and Get roles with authentication functions. See the [Experience API Sample Calls](../../extend_dx/apis/hcl_experience_api/usage/openapi_example_API_calls.md).
+Two new samples are provided for use with the HCL Digital Experience 9.5 Experience API, supporting Sample login and content update process flow, and Get roles with authentication functions. See the [Experience API Sample Calls](../../extend_dx/apis/hcl_experience_api/openapi_example_API_calls.md).
 
 ## New HCL Content Composer – Tech Preview in HCL Digital Experience 9.5 CF173
 
-Content Composer delivers simplified processes for creating and managing Digital Experience site content.  Users can access a Tech Preview of the Content Composer features in HCL Digital Experience 9.5 Container Update CF173 and higher releases. See [HCL Digital Experience 9.5 CF173 Content Composer – Tech Preview](../../manage_content/content_composer/index.md)for details.
+Content Composer delivers simplified processes for creating and managing Digital Experience site content.  Users can access a Tech Preview of the Content Composer features in HCL Digital Experience 9.5 Container Update CF173 and higher releases. See [HCL Digital Experience 9.5 CF173 Content Composer – Tech Preview](../../manage_content/content_composer/index.md) for details.
 
 ## New Digital Asset Management – Tech Preview in HCL Digital Experience 9.5 CF173
 

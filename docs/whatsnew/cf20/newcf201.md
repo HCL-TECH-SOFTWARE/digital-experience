@@ -17,7 +17,7 @@ Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators
 See the following Help Center topics for more information:
 
 -   [Containers overview](../../get_started/plan_deployment/container_deployment/index.md)
--   [Containerization Requirements and Limitations](../../get_started/system_requirements/9.5_express/supportedsoftware.md)
+-   [Containerization Requirements and Limitations](../../get_started/plan_deployment/container_deployment/limitations_requirements.md)
 -   [Additional Helm Tasks](../../deployment/install/container/helm_deployment/preparation/index.md)
 -   [Monitor the HCL Digital Experience Container Deployment using Metrics](../../deployment/manage/container_configuration/monitoring/basic_monitor_helm_deployment.md)
 

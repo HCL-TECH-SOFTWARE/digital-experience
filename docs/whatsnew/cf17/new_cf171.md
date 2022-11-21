@@ -16,13 +16,13 @@ Added option to override password in Docker. See [Docker deployment](../../deplo
 
 Added option to override password in OpenShift. See [OpenShift deployment](https://help.hcltechsw.com/digital-experience/9.5/containerization/openshift.html){:target="_blank"}<!-- (../containerization/openshift.md) -->.
 
-## Support for Kubernetes as verified in Amazon Elastic Container Service for Kubernetes \(EKS\)
+## Support for Kubernetes as verified in Amazon Elastic Container Service for Kubernetes (EKS)
 
 Added support for Kubernetes on AWS EKS. See [Deploy HCL Digital Experience 9.5 Container to Amazon EKS](https://help.hcltechsw.com/digital-experience/9.5/containerization/kubernetes_eks.html){:target="_blank"}<!-- (../containerization/kubernetes_eks.md) -->.
 
 ## Support for Auto-scaling and Route configuration
 
-Added support for auto-scaling based on available CPU and memory utilization and route configuration. See [Customizing the container deployment](../../deployment/manage/container_configuration/operator-based/customizing_container_deployment.md){:target="_blank"}<!-- (../containerization/customizing_container_deployment.md) -->.
+Added support for auto-scaling based on available CPU and memory utilization and route configuration. See [Customizing the container deployment](https://help.hcltechsw.com/digital-experience/9.5/containerization/customizing_container_deployment.html){:target="_blank"}<!-- (../containerization/customizing_container_deployment.md) -->.
 
 ## Downloading DX products and accessing Customer Support
 

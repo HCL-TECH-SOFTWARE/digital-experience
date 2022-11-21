@@ -66,6 +66,7 @@ For more information, refer to the following documents:
 
 ## Digital Asset Management extension plugin to Google Vision API service 
 Beginning with HCL Digital Experience 9.5 Container Update CF205, using a custom Digital Asset Management extension that provides integration with the Google Vision API, DX practitioners can leverage the integration to automate additional asset tagging to the DAM media item details. This feature can be used alongside traditional DAM asset tagging methods and can help content authors and marketing professionals fine-tune the relevance of their DAM assets in search results for target audiences. For more information, see the following documents:
+
 - [Image tagging](../../manage_content/digital_assets/configuration/dam_extensibility/image_tagging.md)
 
 - [Configuration DAM extension for Google Vision API](../../manage_content/digital_assets/configuration/dam_extensibility/configure_DAM_extension_to_google_vision_API.md)
@@ -73,7 +74,7 @@ Beginning with HCL Digital Experience 9.5 Container Update CF205, using a custom
 - [Media Asset metadata HCL Digital Asset Management](../../manage_content/digital_assets/usage/managing_dam/manage_media_assets.md).
 
 ## Updated Digital Asset Management Kaltura Video extension Plugin support
-The Digital Asset Management plugin extension method available to integrate the [Kaltura Video Content Management](https://corp.kaltura.com/video-content-management-system/){:target="_blank"} platform assets is updated. For more information, see [Configure DAM - Kaltura Integration](../../manage_content/digital_assets/configuration/configure_dam_kaltura.md), and [DAM Extensibility Configure of Kaltura](../../manage_content/digital_assets/configuration/dam_extensibility/kaltura_configuration.md) topics.
+The Digital Asset Management plugin extension method available to integrate the [Kaltura Video Content Management](https://corp.kaltura.com/video-content-management-system/){:target="_blank"} platform assets is updated. For more information, see [Configure DAM - Kaltura Integration](https://opensource.hcltechsw.com/digital-experience/cf205/productfeatures/digital_asset_mgmt/configure_dam_kaltura/), and [DAM Extensibility Configure of Kaltura](../../manage_content/digital_assets/configuration/dam_extensibility/kaltura_configuration.md) topics.
 
 ## HCL Web Experience Factory V8.5.1
 Along with the release of HCL Digital Experience CF205, HCL has released an updated version of HCL Web Experience Factory, version 8.5.1. This release includes support for Java 1.8 and Eclipse 4.2.2. For additional information, see [HCL Web Experience Factory](../../extend_dx/development_tools/wef/index.md).
