@@ -5,6 +5,7 @@ nav:
    # - prerequisites.md
    # - databases.md
    # - ...
-     - supported
-     - unsupported
-     - other_config
+     - index.md
+     - supported_config.md
+     - unsupported_config.md
+     - other_config.md

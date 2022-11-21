@@ -1,8 +1,10 @@
 # Other Configuration
 
-A "Other" Configuration” is a combination of HCL Software and other Dependent Products (usually at a specified version, release, fix or specification level) that has been validated by HCL.
+Many configurations of HCL Products and other software exist that are not explicitly listed in “Supported Configurations” or “Unsupported Configurations”, but which can reasonably be expected to perform within the accepted bounds of reliability, function, and performance.  
 
-HCL provides full support for configurations within this category. Support is provided under the terms of the product license, to ensure that the product operates within its specifications.  
+Configurations that fall into this category typically substitute a Dependent Product listed in the “Supported Configuration” for similar software. This may be a newer fix level of the Dependent Product or another software product that adheres to a supported specification. For example, this could be a newer WebSphere® Application Server (WAS) fix pack, an LDAP server that adheres to that standard or an external security manager that integrates via public APIs.
+
+Please make sure to review [HCL DX support statement for "Other Configurations"](/digital-experience/get_started/software_support/) before making a decision to use the Dependent Products listed below.
 
 
 ## Operating Systems
@@ -113,7 +115,12 @@ HCL Digital Experience 9.5 requires JDK 7.0 or later for installation.
 |HCL Connections|6.0 and later maintenance|8.5|
 |IBM Forms Experience Builder|8.6.3 and later maintenance|8.5|
 |HCL Sametime Communicate|9.0 and later maintenance|8.5|
-|HCL Sametime Complete|9.0 and later maintenance|8.5|
+|HCL Sametime Complete|9.0 and later maintenance|8.5|  
+
+!!! danger "Question on new releases (what to do?) - to be removed"
+	- **Sametime Premium** : Later releases are 11.5, 11.6 and 12.0  
+	reference: https://www.hcltechsw.com/resources/product-release/product-lifecycle-table?searchTerm=sametime 
+
 
 ## JDBC Drivers
 |Supported Software|Supported software minimum|Product minimum|
@@ -125,6 +132,7 @@ HCL Digital Experience 9.5 requires JDK 7.0 or later for installation.
 |Supported Software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
 |IBM Security Access Manager for Web|7.0, and later maintenance releases|8.5|
+|IBM Security Access Manager|9.0, and later maintenance releases|8.5|
 |Tivoli Directory Integrator|7.1.1, and later maintenance releases|8.5|
 
 ## Web Browsers 
@@ -139,3 +147,8 @@ HCL Digital Experience 9.5 requires JDK 7.0 or later for installation.
 |SRT WebDrive|2016 and later maintenance releases|8.5|
 |davfs2|1.5 and later maintenance releases|8.5|
 
+!!! danger "Question on new releases (what to do?) - to be removed"
+	- **SRT WebDrive** : Latest release is 2018  
+	reference: https://www.webdrive.com/software/regsoft/webdrive/v18/relnotes.html  
+	- **davfs2** : Latest release 1.7  
+	reference: https://savannah.nongnu.org/news/?group_id=10199  
