@@ -24,7 +24,7 @@ haproxy:
 ```console
 $ helm upgrade --install ingress-nginx ingress-nginx \
   --repo https://kubernetes.github.io/ingress-nginx \
-  --namespace ingress-nginx --create-namespace
+  --namespace dxns
 ```
 
 •  Check if the Ingress controller is deployed 
