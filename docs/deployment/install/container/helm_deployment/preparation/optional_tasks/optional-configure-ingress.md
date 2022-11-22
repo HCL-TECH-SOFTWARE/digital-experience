@@ -57,14 +57,14 @@ spec:
               number: 80
 ```
 
-- If SSL offloading is disabled on your `custom-values.yaml`. You can access your host via HTTP.
+- If SSL offloading is disabled on your `custom-values.yaml`. You can access your host via `http`.
 
 ```yaml
 haproxy:
     ssl: false
 ```
 
-- If SSL offloading is enabled on your `custom-values.yaml` we need to add Secret to the Ingress file as follows.
+- If SSL offloading is enabled on your `custom-values.yaml` and you can access your host via `https`, we need to add Secret to the Ingress file as follows.
 
 ```yaml
 haproxy:
@@ -76,5 +76,3 @@ ingressClassName: nginx
     tls:
     - secretName: dx-tls-cert
 ```
-
-you can access your host via HTTPS.
