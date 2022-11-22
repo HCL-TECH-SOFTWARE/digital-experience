@@ -12,7 +12,7 @@ With HAProxy replacing Ambassador in our DX deployment, it much easier to run in
 
 Here’s a basic guide on implementing a generic ingress on your DX cluster
 
-• In the `custom-values.yaml` by default HAProxy `serviceType` is set to `loadBalancer`. To test the external ingress you want to deploy you must set the serviceType to `ClusterIP`, with that HAProxy service will not have any External IP.
+- In the `custom-values.yaml` by default HAProxy `serviceType` is set to `loadBalancer`. To test the external ingress you want to deploy you must set the serviceType to `ClusterIP`, with that HAProxy service will not have any External IP.
 
 ```yaml
 haproxy:
@@ -27,7 +27,7 @@ $ helm upgrade --install ingress-nginx ingress-nginx \
   --namespace dxns
 ```
 
-•  Check if the Ingress controller is deployed 
+- Check if the Ingress controller is deployed 
 
 ```console
 $ Kubectl get all -n dxns
