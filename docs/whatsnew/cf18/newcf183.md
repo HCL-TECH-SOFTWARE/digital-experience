@@ -33,7 +33,7 @@ Take advantage of new step by step guidance for HCL Digital Experience practitio
 -   [Create a web content library](../../manage_content/wcm/wcm_artifacts/web_content_library/oob_content_createlib.md)
 -   [Virtual portals](../../build_sites/virtual_portal/index.md)
 -   [Backup and restore](../../deployment/manage/backup_restore/index.md)
--   [Configuration Wizard](../../deployment/manage/portal_admin_tools/cfg_wizard/cw_overview.md)
+-   [Configuration Wizard](../../deployment/manage/portal_admin_tools/cfg_wizard/index.md)
 -   [Combined Cumulative Fix Install](../../deployment/install/traditional/cf_install/index.md)
 -   [Rich text editor toolbar configuration options](../../manage_content/wcm/wcm_content_delivery/cfg_webcontent_auth_env/wcm_config_ephox_custom.md)
 -   [Data collection and symptom analysis](../../deployment/manage/troubleshooting/tools_for_troubleshooting_and_diagnostics/tbl_apdt_over.md)
