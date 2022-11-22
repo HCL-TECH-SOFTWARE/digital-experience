@@ -2,7 +2,7 @@
 
 This subscriber view is used to enter details of the syndicator that is being subscribed to, and display subscription and syndication information.
 
-To edit a subscriber, go to **Administration** \> **Portal Content** \> **Subscribers** and click the edit icon of the subscriber you want to edit.
+To edit a subscriber, go to **Administration > Portal Content > Subscribers** and click the edit icon of the subscriber you want to edit.
 
 |Field|Details|
 |-----|-------|

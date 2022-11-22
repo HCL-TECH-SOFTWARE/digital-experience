@@ -2,7 +2,7 @@
 
 Prepare the operating system to ensure a successful HCL Digital Experience installation.
 
-1.  If you have AIX® 7.1 Technology Level \(TL\) 1, Service Pack \(SP\) 0 or 1, find the corresponding technote available at the [HCL Digital Experience Knowledge Base Technical Articles](https://support.hcltechsw.com/csm?id=kb_category&kb_category=c0ef98b71bb0778083cb86e9cd4bcbf2) and complete the steps.
+1.  If you have AIX® 7.1 Technology Level (TL) 1, Service Pack (SP) 0 or 1, find the corresponding technote available at the [HCL Digital Experience Knowledge Base Technical Articles](https://support.hcltechsw.com/csm?id=kb_category&kb_category=c0ef98b71bb0778083cb86e9cd4bcbf2) and complete the steps.
 
 2.  Set the file descriptor limit to 10240.
 

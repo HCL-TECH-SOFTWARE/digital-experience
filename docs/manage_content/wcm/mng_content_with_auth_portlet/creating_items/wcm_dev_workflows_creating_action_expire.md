@@ -2,16 +2,11 @@
 id: wcm_dev_workflows_creating_action_expire
 title: Creating an expire action
 ---
-
-
-
+# Creating an expire action
 
 An expire action changes the status of an item from "published" to "expired".
 
-To create an expire action, open the applications menu and go to **Content** \> **Web Content Management** and then click
-
-!!! note
-    **New****Workflow Actions****Expire Action**
+To create an expire action, open the applications menu and go to **Content > Web Content Management** and then click **New > Workflow Actions > Expire Action**
 
 1.  [Entering identification information](wcm_dev_items_id.md)  
 Specify identification information for the current item, including the name and title for the item. The identification section is common to all item forms.

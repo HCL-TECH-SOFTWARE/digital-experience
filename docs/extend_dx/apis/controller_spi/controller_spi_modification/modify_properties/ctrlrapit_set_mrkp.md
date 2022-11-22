@@ -20,7 +20,7 @@ To set the supported markups for a resource, proceed as follows:
     For example, if you want to set a markup, use the `addMarkup` method.
 
 
-Example - Setting a supported markup on a layout control \(error handling omitted\):
+Example - Setting a supported markup on a layout control (error handling omitted):
 
 ```
 
@@ -38,6 +38,6 @@ Markup markup = markupList.getByName("html");
 
 ```
 
-For more detail about the markup list in the first line of the example and how to obtain it refer to [Obtain a model from the portal](/model_spi/dgn_modelobt.md).
+For more detail about the markup list in the first line of the example and how to obtain it refer to [Obtain a model from the portal](/apis/model_spi/dgn_modelobt.md).
 
 

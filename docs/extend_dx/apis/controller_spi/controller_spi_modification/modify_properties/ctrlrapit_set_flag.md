@@ -6,14 +6,14 @@ You set flags for resources either on modifiable instances of those resources or
 
 |Flag|Flag is associated to resource|Flag is set on|
 |----|------------------------------|--------------|
-|`ActiveFlag`|`ContentNode` \(resources that implement the `ActiveFlag` interface\)|`ModifiableContentNode`|
-|`BookmarkableFlag`|`ContentNode` \(resources that implement the `BookmarkableFlag` interface\)|`ModifiableContentNode`|
-|`ShareableFlag`|`ContentNode` \(resources that implement the `ShareableFlag` interface\)|`ModifiableContentNode`|
+|`ActiveFlag`|`ContentNode` (resources that implement the `ActiveFlag` interfac\)|`ModifiableContentNode`|
+|`BookmarkableFlag`|`ContentNode` (resources that implement the `BookmarkableFlag` interface)|`ModifiableContentNode`|
+|`ShareableFlag`|`ContentNode` (resources that implement the `ShareableFlag` interface)|`ModifiableContentNode`|
 |`AllPortletsAllowedFlag`|`ContentPage`|`LayoutModelController`|
 |`DeletableFlag`|`LayoutNode`|`LayoutModelController`|
 |`ModifiableFlag`|`LayoutNode`|`LayoutModelController`|
 
-!!!note "**Notes:**"
+!!!note
     1.  `ContentNode` is the super class of `ContentPage, ContentLabel, ContentURL`, and `InternalContentURL`.
     2.  `LayoutNode` is the super class of `LayoutContainer` and `LayoutControl`.
 

@@ -3,7 +3,7 @@ id: wcm_dev_drafts
 title: How to work with draft items
 ---
 
-
+# How to work with draft items
 
 
 Creating a draft of an item allows users to work on changes to that item without changing the published version of the item. Draft items can either be stand-alone items, or form part of a workflow. When the changes are completed, you can choose to either publish the item, or discard the changes by canceling the draft. You can create multiple drafts of a single item.
@@ -56,17 +56,9 @@ You use the following features to work with items during a workflow.
 |**Approve**|When joint approval is set, this tool is used to approve an item in the **All Items** and **My Items** views.|Reviewer or administrator.|Contributor access or higher to the item type.|
 |**Cancel draft**|This tool removes a draft item from a workflow altogether. This tool is displayed only after an item is published and a new draft is created.|Manager access or higher.|Contributor access or higher to the item type.|
 |**Reject**|Used when an item is rejected during a workflow. Runs any actions that are defined in the reject stage, and then sends the item back to the first stage of a workflow.|Reviewer access.|Contributor access or higher to the item type.|
-|**Next Stage****Expire**
-
-**Publish**
-
-**Submit for review**
-
-|Used to approve an item and send it to the next stage in a workflow.|Reviewer access.|Contributor access or higher to the item type.|
-|**Previous Stage****Withdraw from review**
-
+|**Next Stage > Expire > Publish > Submit for review**|Used to approve an item and send it to the next stage in a workflow.|Reviewer access.|Contributor access or higher to the item type.|
+|**Previous Stage > Withdraw from review**
 |These actions return an item to the stage previous to the current stage, or remove the item. When an item is moved to the previous stage, the entry workflow actions on the previous stage are run, but the exit workflow actions on the current stage are not.|Manager access or higher.Reviewers access on workflow stages where Reviewers are granted access to the previous stage tool.
-
 |Contributor access or higher to the item type.|
 |**Process now**|Manually processes an item if its status is pending. All actions in the stage are processed.|Administrator access|Not required.|
 

@@ -11,7 +11,7 @@ Migration to a new release requires setting up a target environment. The target 
 -   A remote migration
 -   The same system if you choose a local migration path
 
-Independently from the migration path that is chosen, the target environment requires a fresh, binary only, Portal installation. Meaning setting up the target environment without creating any profiles. For the z/OS® operating system, the new version must be on the same server as the earlier version. Remote migration is not supported for this operating system. In addition, for z/OS systems, the Configuration Wizard cannot be used for migration.
+Independently from the migration path that is chosen, the target environment requires a fresh, binary only, Portal installation. Meaning setting up the target environment without creating any profiles. 
 
 For more details on setting up the target environment, review the following topics in this section and the [Roadmaps for migration](../../../../deployment/manage/migrate/planning_migration/rm_migration/index.md).
 

@@ -5,11 +5,12 @@ Follow these steps to get started with the HCL Experience API.
 ## Getting Started
 
 1.  Download the HCL Experience API installation binaries. Log in to the [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release){:target="_blank"} to download the files from your HCL Digital Experience entitlements.
-2.  Refer to the [Image listing and Docker install](../../../deployment/install/container/image_list.md) Help Center topic for the latest list of container images and their file names, available for download, for example \(`hcl-dx-kubernetes-v95-CF19.zip`\).
+2.  Refer to the [Image listing and Docker install](../../../deployment/install/container/image_list.md) Help Center topic for the latest list of container images and their file names, available for download, for example (`hcl-dx-kubernetes-v95-CF19.zip`).
 3.  Extract the HCL Experience API installation binaries and, within a terminal, navigate to the extracted folder.
-4.  Verify if the extracted folder contains the Experience API images, for example, `hcl-dx-ringapi-image-v1.4.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`, `hcl-dx-experience-api-sample-ui-v0.2.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`, and readme \(`README.md`\) files.
+4.  Verify if the extracted folder contains the Experience API images, for example, `hcl-dx-ringapi-image-v1.4.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`, `hcl-dx-experience-api-sample-ui-v0.2.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`, and readme (`README.md`) files.
 
-    **Note:** As HCL Digital Experience releases updated Experience API images, the image version number increases. For example, `hcl-dx-ringapi-image-v1.4.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`.
+    !!! note
+        As HCL Digital Experience releases updated Experience API images, the image version number increases. For example, `hcl-dx-ringapi-image-v1.4.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`.
 
 5.  Load the HCL Experience API image using the following command:
 
@@ -54,8 +55,8 @@ Follow these steps to get started with the HCL Experience API.
         docker run -it -p 3000:3000 -p 3001:3001 -e PORTAL_HOST=172.16.1.4 -e PORTAL_PORT=30015 -e CORS_ORIGIN="http://localhost:3002, http://localhost:3003" hcl/dx/ringapi:v1.4.0.<YOUR_BUILD_NUMBER>
         ```
 
-8.  Verify if `http://<HOST>:<PORT>dx/api/core/v1/explorer` is accessible and shows the HCL Experience explorer \(example: http://127.0.0.1:3000/dx/api/core/v1/explorer\).
-9.  Verify if the GraphQL application is accessible through URL `http://<HOST>:<GRAPHQL_PORT>dx/api/core/v1/graphql` \(example: http://127.0.0.1:3001/dx/api/core/v1/graphql\).
+8.  Verify if `http://<HOST>:<PORT>dx/api/core/v1/explorer` is accessible and shows the HCL Experience explorer (example: http://127.0.0.1:3000/dx/api/core/v1/explorer).
+9.  Verify if the GraphQL application is accessible through URL `http://<HOST>:<GRAPHQL_PORT>dx/api/core/v1/graphql` (example: http://127.0.0.1:3001/dx/api/core/v1/graphql).
 10. To verify if the HCL Experience API is properly connected to HCL Digital Experience 9.5, please run the following command. Login credentials must be an authenticated username and password:
 
     ```
@@ -81,7 +82,7 @@ To use the REST service, for Web Content Manager a client user will be assigned 
 
 An administrator can edit the *WCM REST SERVICE* virtual resource. Click the **Administration menu** icon. Then, click **Access \> Resource Permissions \>Virtual Resources**. For more information, refer [Getting started with the REST service for Web Content Manager](../../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_dev_api/index.md).
 
-If you wish to use the dxrest \(in addition to mydxrest\) for the REST APIs, you need to change the default user configuration. You need to add '**Anonymous Portal User**' to the virtual resources in **WCM REST SERVICE**.
+If you wish to use the dxrest (in addition to mydxrest) for the REST APIs, you need to change the default user configuration. You need to add '**Anonymous Portal User**' to the virtual resources in **WCM REST SERVICE**.
 
 ![](../../../images/open_api_resources_permission.png)
 

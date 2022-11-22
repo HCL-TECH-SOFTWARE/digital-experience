@@ -12,7 +12,7 @@ In this example, you are creating two segments by using a profiler rule: North C
 
 4.  The numbered screen capture, along with the corresponding table, provides the values and selections that are used in this example. Use these example values and selections to guide you in creating a profiler rule that uses the device class attribute.
 
-    ![Screen capture of a profiler rule in the Personalization Editor](../images/segment_profiler2.jpg)
+    ![Screen capture of a profiler rule in the Personalization Editor](../../../../../../images/segment_profiler2.jpg)
 
     |Numbered item in screen capture|Description|
     |-------------------------------|-----------|
@@ -20,10 +20,7 @@ In this example, you are creating two segments by using a profiler rule: North C
     |2|By Located in, use the default folder to store your rule for this example.|
     |3|For Rule Type, select **Profiler**. A segment is another word for profile in the profiler rule.|
     |4|Click **Profile**, and enter North Carolina as the name for your segment. Click **Submit**.|
-    |5|In this example, you are defining a segment that is based on the state the device is located in. Define attributes and values for the North Carolina segment. Click **attribute**, and select **Device** \> **State**. The attribute label changes to current Device.State.**Note:**
-
-    -   You can also create other segments that are based on location by selecting Country, Latitude, or Longitude.
-|
+    |5|In this example, you are defining a segment that is based on the state the device is located in. Define attributes and values for the North Carolina segment. Click **attribute**, and select **Device** \> **State**. The attribute label changes to current Device.State. <br> **Note:** You can also create other segments that are based on location by selecting Country, Latitude, or Longitude.|
     |6|In this example, continue to use **is** as the comparison operator.|
     |7|Click **value** to enter North Carolina as the value for the condition. Click **Submit**.|
     |8|In this example, you are not setting up another condition for the North Carolina segment. Skip to add Profile.|

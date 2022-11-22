@@ -5,8 +5,10 @@ You need a creation context to define immutable properties of a resource that yo
 The creation context builder factory can do both of the following:
 
 -   Generate single creation contexts, that is contexts that contain only one or more immutable properties. Examples:
+
     -   A creation context for an object ID contains only the object ID property.
     -   A layout control creation context contains two properties, portlet definition and portlet entity.
+    
 -   Combine several creation contexts into one in order to define multiple immutable properties.
 
 !!!note

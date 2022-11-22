@@ -10,11 +10,10 @@ You can change the resource permissions for certain users or user groups. You ca
 
 You can completely disable the site toolbar along with the toolbar tabs for the entire system or for a certain virtual portal. To disable the site toolbar, follow the configuration settings that are documented in *Removing the site toolbar on a production server.*
 
-<!--
--   **[Limiting toolbar, Site Manager, and action bar visibility to administrators only](../controlling_visibility_site_toolbar/limiting_toolbarvisibility.md)**  
 
+-   **[Limiting toolbar, Site Manager, and action bar visibility to administrators only](../controlling_visibility_site_toolbar/limiting_toolbarvisibility.md)**  
 You can limit the visibility of the toolbar, Site Manager, and action bar to administrators only. You can also limit the visibility of the toolbar and Site Manager to administrators only without affecting the visibility of the action bar.
--->
+
 
 ???+ info "Related information"
     - [Removing the site toolbar on a production server](../wcm_mngpages_disabletool.md)

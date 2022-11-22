@@ -6,11 +6,11 @@
 When specifying values:
 
 -   Do NOT enclose any value in quotes. This will cause a failure in the configuration tasks.
--   Windows paths must use a forward slash (/) instead of a backward slash. A backward slash is an escaped character. C
+-   Windows paths must use a forward slash (/) instead of a backward slash. A backward slash is an escaped character.
 -   Windows long paths are acceptable.
 -   Properties are immutable. Once set, they cannot be changed when a configuration task is running.
 -   Property values can be defined in three ways: on the command line, in this property file, and in a build file. The configuration task uses the following order to determine the property value:
-    -   First the task checks the command line values, so specifying \(-DMyNode=somenode\) takes precedence.
+    -   First the task checks the command line values, so specifying (-DMyNode=somenode) takes precedence.
     -   Second, the task checks the property file values.
     -   Third, the task checks the build file property values.
 
@@ -87,12 +87,12 @@ Provide information about the WebSphere Application Server used in the WebSphere
 
     -   **Description**
 
-        User ID that is used for WebSphere Application Server security authentication. Type the value in lower case, regardless of the case used in the distinguished name \(DN\).
+        User ID that is used for WebSphere Application Server security authentication. Type the value in lower case, regardless of the case used in the distinguished name (DN).
 
         For an LDAP configuration:
 
         -   The ID cannot contain spaces
-        -   The ID is the fully qualified distinguished name \(DN\) of a current administrative user for the WebSphere Application Server.
+        -   The ID is the fully qualified distinguished name (DN) of a current administrative user for the WebSphere Application Server.
         For a configuration using a Virtual Manager User Registry database, the short version of the distinguished name must be used.
 
     -   **Default value**
@@ -199,7 +199,7 @@ Provide information about the WebSphere Application Server used in the WebSphere
 
     -   **Description**
 
-        The name of the application server for administration. For IBM i, if your WebSphere Application Server profile was created with a different WebSphere Application Server administrative server name, you should change this value to reflect that.
+        The name of the application server for administration.
 
     -   **Default value**
 
@@ -239,17 +239,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
         /opt/IBM/WebSphere/PortalServer
 
-        /QIBM/ProdData/WebSphere/PortalServer/V85/Server
-
-        /QIBM/ProdData/WebSphere/PortalServer/V85/Express
-
-        /opt/IBM/WebSphere/PortalServer
-
-        /opt/IBM/WebSphere/PortalServer
-
         c:/IBM/WebSphere/PortalServer
-
-        Otherwise: c:/IBM/WebSphere/Portal
 
     -   **Examples**
 
@@ -285,13 +275,13 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Examples**
 
-        The port is 80:
+        80
 
 -   **PortalAdminId**
 
     -   **Description**
 
-        This ID is the short name for the initial HCL Portal administrator user account. This name is used to create a full Distinguished Name (DN), which is used to create an account in the VMM file-based repository. If the ID includes spaces, then you must take extra steps to enter it on the command line by using the -D parameter.
+        This ID is the short name for the initial HCL Portal administrator user account. This name is used to create a full Distinguished Name (DN), which is used to create an account in the WIM file-based repository. If the ID includes spaces, then you must take extra steps to enter it on the command line by using the -D parameter.
 
         (UNIX only)For command line tasks, if you provide the ID by using the -D parameter, some tasks require that you enter the fully qualified user DN. If your fully qualified user DN contains a space, you cannot provide the DN using the -D parameter. For example, if your DN is `cn=wpsadmin,cn=users,o=Software Group,dc=yourco,dc=com,` then you must place the DN in the properties file or a parent properties file. If you create a parent properties file named mysecurity.properties, they you would run the following command: ./ConfigEngine.sh task_name -DparentProperties=/opt/mysecurity.properties.
 
@@ -325,7 +315,7 @@ Provide basic information about HCL Portal, such as installation directory, port
         -   Exclamation point {!}, Hyphen {-}, period {.}, question mark {?}, accent grave {`}, tilde {~} Open parenthesis {(}, and
         -   close parenthesis {)}
         -   Open bracket {[} and close bracket {]}
-        -   Underscore {_}, which is the only special character that is allowed in IBM i
+        -   Underscore {_}
     -   **Default value**
 
         No default value
@@ -380,7 +370,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        The value of this property is part of the URL that is used to access HCL Portal from a browser. Valid characters are alphabetic and numeric including underscore, forward slash, and dash. The value entered may contain forward slashes but may not start with a forward slash. Leave the Context root and Default home fields blank to remove the context root information. Or, modify the fields by adding a new context root and default home. Example URL if the context root is wps: `http://localhost:80/wps/portal`
+        The value of this property is part of the URL that is used to access HCL Portal from a browser. Valid characters are alphabetic and numeric including underscore, forward slash, and dash. The value entered may contain forward slashes but may not start with a forward slash. Leave the Context root and Default home fields blank to remove the context root information. Or, modify the fields by adding a new context root and default home. Example URL if the context root is wps: `http://localhost:80/wps/portal`.
 
     -   **Default value**
 
@@ -394,7 +384,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        Required for IBM i only. Specify the port block to use for HCL Portal Server.
+        Specify the port block to use for HCL Portal Server.
 
     -   **Default value**
 
@@ -408,7 +398,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        Required for z/OS only. The library where the ifaedjreg.jar file resides
+        The library where the ifaedjreg.jar file resides
 
     -   **Default value**
 
@@ -422,7 +412,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        Required for z/OS only. The library where the SMF DLLs reside.
+        The library where the SMF DLLs reside.
 
     -   **Default value**
 
@@ -436,7 +426,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        Required for z/OS only. The server's jobname, as specified in the MVS START command JOBNAME parameter. JOBNAME is the name of the task or script that runs when the server is running. MVS \(Multiple Virtual Storage\) is the name of the operating system that runs on the mainframe. The value is passed as a parameter to the server's start procedures to specify the location of the server's configuration files and identify the server to certain WebSphere for z/OS- exploited z/OS facilities \(for example, SAF\). The name must be seven or fewer characters and all uppercase.
+        The server's jobname, as specified in the MVS START command JOBNAME parameter. JOBNAME is the name of the task or script that runs when the server is running. MVS (Multiple Virtual Storage) is the name of the operating system that runs on the mainframe. The value is passed as a parameter to the server's start procedures to specify the location of the server's configuration files and identify the server to certain WebSphere for z/OS- exploited z/OS facilities (for example, SAF). The name must be seven or fewer characters and all uppercase.
 
     -   **Default value**
 
@@ -450,7 +440,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        Required for z/OS only. The cluster transition name of the WLM APPLENV \(WLM application environment\) name for this server. The name must be eight or fewer characters and all uppercase.
+        The cluster transition name of the WLM APPLENV (WLM application environment) name for this server. The name must be eight or fewer characters and all uppercase.
 
     -   **Default value**
 
@@ -464,7 +454,7 @@ Provide basic information about HCL Portal, such as installation directory, port
 
     -   **Description**
 
-        Required for z/OS only. The location of the SMP/E installation image for the HCL Portal SMP/E package.
+        The location of the SMP/E installation image for the HCL Portal SMP/E package.
 
     -   **Default value**
 
@@ -797,7 +787,7 @@ Configuration tasks that use the virtual portal configuration properties include
 
 ### 7.1. Add or update an LDAP
 
-Use the properties in this section to create (wp-create-ldap) or update (wp-update-federated-ldap\) the LDAP configuration in virtual member manager (VMM). If you are updating the LDAP configuration, the federated.ldap.id and federated.ldap.host must match the repository that you want to update.
+Use the properties in this section to create (wp-create-ldap) or update (wp-update-federated-ldap\) the LDAP configuration in WebSphere identity manager (WIM). If you are updating the LDAP configuration, the federated.ldap.id and federated.ldap.host must match the repository that you want to update.
 
 -   **federated.ldap.id**
 
@@ -949,7 +939,7 @@ Use the properties in this section to create (wp-create-ldap) or update (wp-upda
 
 ### 7.1.1. Group and PersonAccount entity types
 
-This section contains properties that tell VMM and Portal about the objectclasses and other LDAP attributes of the entity types. The supported entity types for Portal are Group and PersonAccount. VMM supports additional entity types, but Portal does not make use of them. The properties that are important for the 2 entity types are:
+This section contains properties that tell WIM and Portal about the objectclasses and other LDAP attributes of the entity types. The supported entity types for Portal are Group and PersonAccount. WIM supports additional entity types, but Portal does not make use of them. The properties that are important for the 2 entity types are:
 
 -   Group entity type:
     -   default objectClasses = groupOfNames
@@ -970,7 +960,7 @@ Provide information used to add or update your federated LDAP Group entity type.
 
     -   **Description**
 
-        Specify one or more object classes for the group entity type. Separate multiple object classes with a semicolon\(;\). Use object classes that are unique to groups only. If there are both users and groups with an objectclass of 'top', then you cannot use the object class 'top' here.
+        Specify one or more object classes for the group entity type. Separate multiple object classes with a semicolon(;). Use object classes that are unique to groups only. If there are both users and groups with an objectclass of 'top', then you cannot use the object class 'top' here.
 
     -   **Default value**
 
@@ -1010,9 +1000,9 @@ Provide information used to add or update your federated LDAP Group entity type.
 
     -   **Description**
 
-        Type one or more object classes to use when an entity type is created. Separate multiple object classes with a semicolon\(;\). If the value of this property is the same as the federated.ldap.et.group.objectClasses property, then you do not need to type a value for this property. If your LDAP is read-only, meaning portal is not allowed to write to it, then you do not need to type a value for this property.
+        Type one or more object classes to use when an entity type is created. Separate multiple object classes with a semicolon(;). If the value of this property is the same as the federated.ldap.et.group.objectClasses property, then you do not need to type a value for this property. If your LDAP is read-only, meaning portal is not allowed to write to it, then you do not need to type a value for this property.
 
-        Type one or more object classes to use when an entity type is created. Separate multiple object classes with a semicolon\(;\).
+        Type one or more object classes to use when an entity type is created. Separate multiple object classes with a semicolon(;).
 
         If the value of this field is the same as the **LDAP group objectclasses**, then leave this field empty.
 
@@ -1024,17 +1014,17 @@ Provide information used to add or update your federated LDAP Group entity type.
 
     -   **Examples**
 
-        \(Multiple group objectClasses\): groupOfUniqueNames;myPortalObjectClass
+        (Multiple group objectClasses): groupOfUniqueNames;myPortalObjectClass
 
 -   **federated.ldap.et.group.searchFilter**
 
     -   **Description**
 
-        VMM uses this filter during search requests for groups to your LDAP Server. Leave this property value blank, unless your LDAP group definitions are unusually complex. If the property value is blank, VMM dynamically formulates the filter that is based on the directory type and the objectclasses set for the entity type.
+        WIM uses this filter during search requests for groups to your LDAP Server. Leave this property value blank, unless your LDAP group definitions are unusually complex. If the property value is blank, WIM dynamically formulates the filter that is based on the directory type and the objectclasses set for the entity type.
 
         For example, if the objectclass of the group entity is "groupOfUniqueNames" and the naming attribute for a group is "cn", then the default filter would be: `(&(cn=*)(objectClass=groupOfUniqueNames))`
 
-        If you do need to specify the search filter for VMM to use to search for groups, the syntax is like a standard LDAP search filter.
+        If you do need to specify the search filter for WIM to use to search for groups, the syntax is like a standard LDAP search filter.
 
     -   **Default value**
 
@@ -1042,13 +1032,13 @@ Provide information used to add or update your federated LDAP Group entity type.
 
     -   **Examples**
 
-        : \(&\(cn=\*\)\(objectClass=myCustomGroupObjectClass\)\)
+        : (&(cn=*)(objectClass=myCustomGroupObjectClass))
 
 -   **federated.ldap.et.group.searchBases**
 
     -   **Description**
 
-        VMM performs a search operation for each search base that you enter, which affects performance. Minimize the number of search bases. Leave the value blank and VMM uses the baseEntries as the search bases that are configured for this repository. Specify one or more search bases if you need to limit where VMM searches for groups to the portion of the subtree below the baseEntries. For example, if the baseEntries are high up in the LDAP tree and a search returns results that should not be included. Separate multiple search bases with a semicolon \(;\).
+        WIM performs a search operation for each search base that you enter, which affects performance. Minimize the number of search bases. Leave the value blank and WIM uses the baseEntries as the search bases that are configured for this repository. Specify one or more search bases if you need to limit where WIM searches for groups to the portion of the subtree below the baseEntries. For example, if the baseEntries are high up in the LDAP tree and a search returns results that should not be included. Separate multiple search bases with a semicolon (;).
 
         If you use the portal configuration tools, it is only possible to create one base entry as specified by the federated.ldap.baseDN property. However, WebSphere Application Server allows multiple base entries per repository definition.
 
@@ -1066,7 +1056,7 @@ Provide information used to add or update your federated LDAP Group entity type.
 
     -   **Description**
 
-        Type one or more object classes for the entity type. Use object classes that are unique to users. If there are both users and groups with an objectclass of 'top', then you cannot use the object class 'top' here. Separate multiple object classes with a semicolon \(;\).
+        Type one or more object classes for the entity type. Use object classes that are unique to users. If there are both users and groups with an objectclass of 'top', then you cannot use the object class 'top' here. Separate multiple object classes with a semicolon (;).
 
     -   **Default value**
 
@@ -1106,7 +1096,7 @@ Provide information used to add or update your federated LDAP Group entity type.
 
     -   **Description**
 
-        Specify one or more object classes to use when an entity type is created. If the value of this property is the same as the federated.ldap.et.personaccount.objectClasses property, leave this value blank. If your LDAP is read-only, meaning portal is not allowed to it, leave this value blank. Separate multiple object classes with a semicolon\(;\).
+        Specify one or more object classes to use when an entity type is created. If the value of this property is the same as the federated.ldap.et.personaccount.objectClasses property, leave this value blank. If your LDAP is read-only, meaning portal is not allowed to it, leave this value blank. Separate multiple object classes with a semicolon(;).
 
     -   **Default value**
 
@@ -1120,11 +1110,11 @@ Provide information used to add or update your federated LDAP Group entity type.
 
     -   **Description**
 
-        VMM uses this filter during search requests for groups to your LDAP Server. Leave this property value blank, unless your LDAP group definitions are unusually complex. If the property value is blank, VMM dynamically formulates the filter that is based on the directory type and the objectclasses set for the entity type.
+        WIM uses this filter during search requests for groups to your LDAP Server. Leave this property value blank, unless your LDAP group definitions are unusually complex. If the property value is blank, WIM dynamically formulates the filter that is based on the directory type and the objectclasses set for the entity type.
 
         For example, if the objectclass of the PersonAccount entity is "inetOrgPerson" and the naming attribute for a user is "uid" then the default filter would be: `(&(uid=*)(objectClass=inetOrgPerson))`
 
-        If you do need to specify the search filter for VMM to use to search for groups, the syntax is like a standard LDAP search filter.
+        If you do need to specify the search filter for WIM to use to search for groups, the syntax is like a standard LDAP search filter.
 
     -   **Default value**
 
@@ -1132,13 +1122,13 @@ Provide information used to add or update your federated LDAP Group entity type.
 
     -   **Examples**
 
-        : \(&\(cn=\*\)\(objectClass=myCustomPersonAccountObjectClass\)\)
+        : (&(cn=*)(objectClass=myCustomPersonAccountObjectClass))
 
 -   **federated.ldap.et.personaccount.searchBases**
 
     -   **Description**
 
-        VMM performs a search operation for each search base that you enter, which affects performance. Minimize the number of search bases. Leave the value blank and VMM uses the baseEntries as the search bases that are configured for this repository. Specify one or more search bases if you need to limit where VMM searches for groups to the portion of the subtree below the baseEntries. For example, if the baseEntries are high up in the LDAP tree and a search returns results that should not be included. Separate multiple search bases with a semicolon \(;\).
+        WIM performs a search operation for each search base that you enter, which affects performance. Minimize the number of search bases. Leave the value blank and WIM uses the baseEntries as the search bases that are configured for this repository. Specify one or more search bases if you need to limit where WIM searches for groups to the portion of the subtree below the baseEntries. For example, if the baseEntries are high up in the LDAP tree and a search returns results that should not be included. Separate multiple search bases with a semicolon (;).
 
         If you use the portal configuration tools, it is only possible to create one base entry as specified by the federated.ldap.baseDN property. However, WebSphere Application Server allows multiple base entries per repository definition.
 
@@ -1198,7 +1188,7 @@ Provide information used to add or update your federated LDAP Group entity type.
 
     -   **Description**
 
-        Set the scope of the member attribute. This is similar to the scope setting for the membership attribute \(which is the attribute on the user object that tells what groups the user is a member of\), but in this case it tells VMM about the scope of the member record in the group object that tells what users are members of the group. Set the value to direct if the LDAP member attribute in your LDAP server's group objects contains direct members only. Set the value to nested if the LDAP member attribute in your LDAP server's group objects contains direct members and nested members. Note: It is very unusual for this to be anything other than "direct".
+        Set the scope of the member attribute. This is similar to the scope setting for the membership attribute \(which is the attribute on the user object that tells what groups the user is a member of\), but in this case it tells WIM about the scope of the member record in the group object that tells what users are members of the group. Set the value to direct if the LDAP member attribute in your LDAP server's group objects contains direct members only. Set the value to nested if the LDAP member attribute in your LDAP server's group objects contains direct members and nested members. Note: It is very unusual for this to be anything other than "direct".
 
     -   **Valid values**
 
@@ -1285,7 +1275,7 @@ Provide information that is used to add or update your federated LDAP user regis
 
         Oracle Directory Server: isMemberOf
 
-        SunOne \(versions prior to 6.3\): nsrole
+        SunOne (versions prior to 6.3): nsrole
 
         Novell eDirectory: groupMembership
 
@@ -1313,19 +1303,19 @@ Provide information that is used to add or update your federated LDAP user regis
 
     -   **Description**
 
-        This property tells VMM how much information the LDAP server returns when portal requests the group membership attribute value for a user object.
+        This property tells WIM how much information the LDAP server returns when portal requests the group membership attribute value for a user object.
 
         Set the value to all if the membership attribute contains a complete list of all possible group memberships for a user, already including consideration for group nesting, dynamic memberships, and static direct group memberships.
 
         Set the value to direct if the membership attribute contains only direct static group memberships, but not dynamic or nested group memberships.
 
-        Set the value to nested if the membership attribute contains both direct static memberships and memberships from groups that are nested within other groups. Dynamic group memberships are not included. You can configure VMM to additionally resolve dynamic group memberships. To configure dynamic group support, you must use the Integrated Solutions Console.
+        Set the value to nested if the membership attribute contains both direct static memberships and memberships from groups that are nested within other groups. Dynamic group memberships are not included. You can configure WIM to additionally resolve dynamic group memberships. To configure dynamic group support, you must use the Integrated Solutions Console.
 
-        The Virtual Member Manager \(VMM\) component within WebSphere Application Server uses this setting to determine what it needs to do to build a sufficiently complete list of group memberships for a user. Setting this parameter to accurately reflect your LDAP registry is important for both performance and correct operation. If your LDAP provides a complete set of group memberships, including nested groups, dynamic groups, and static direct groups, set the scope attribute to all. Otherwise, VMM redundantly resolves the nested group memberships.
+        The Virtual Member Manager \(WIM\) component within WebSphere Application Server uses this setting to determine what it needs to do to build a sufficiently complete list of group memberships for a user. Setting this parameter to accurately reflect your LDAP registry is important for both performance and correct operation. If your LDAP provides a complete set of group memberships, including nested groups, dynamic groups, and static direct groups, set the scope attribute to all. Otherwise, WIM redundantly resolves the nested group memberships.
 
-        Conversely, if your registry provides only direct group memberships, but group nesting is used in your application and directory, then set the scope property to direct. Otherwise, VMM fails to do the required work that is needed to complete the group membership list. As a result the full set of groups necessary for the application to operate correctly is not available.
+        Conversely, if your registry provides only direct group memberships, but group nesting is used in your application and directory, then set the scope property to direct. Otherwise, WIM fails to do the required work that is needed to complete the group membership list. As a result the full set of groups necessary for the application to operate correctly is not available.
 
-        Portal asks VMM to retrieve nested group membership information from the LDAP registry. If your security policy and LDAP registry are not set up to use nested groups, then set accessControlDataManagement.enableNestedGroups to false in the Access Control Data Management Service.
+        Portal asks WIM to retrieve nested group membership information from the LDAP registry. If your security policy and LDAP registry are not set up to use nested groups, then set accessControlDataManagement.enableNestedGroups to false in the Access Control Data Management Service.
 
     -   **Valid values**
 
@@ -1479,13 +1469,13 @@ Provide information that is used to add or update your federated LDAP user regis
 
     -   **Valid values**
 
-        EXACT\_DN
+        EXACT_DN
 
-        CERTIFICATE\_FILTER
+        CERTIFICATE_FILTER
 
     -   **Default value**
 
-        EXACT\_DN
+        EXACT_DN
 
     -   **Examples**
 
@@ -1495,7 +1485,7 @@ Provide information that is used to add or update your federated LDAP user regis
 
     -   **Description**
 
-        Specifies the filter certificate mapping property for the LDAP filter if client certificate authentication is used for HCL Portal. The filter is used to map attributes in the client certificate to entries within the LDAP repository. To use this filter, the value for federated.ldap.certificateMapMode must be set to CERTIFICATE\_FILTER. Filter syntax: $\{Client certificate attribute\}
+        Specifies the filter certificate mapping property for the LDAP filter if client certificate authentication is used for HCL Portal. The filter is used to map attributes in the client certificate to entries within the LDAP repository. To use this filter, the value for federated.ldap.certificateMapMode must be set to CERTIFICATE_FILTER. Filter syntax: ${Client certificate attribute}
 
     -   **Default value**
 
@@ -1503,7 +1493,7 @@ Provide information that is used to add or update your federated LDAP user regis
 
     -   **Examples**
 
-        : uid=$\{SubjectCN\}
+        : uid=${SubjectCN}
 
 -   **federated.ldap.supportPaging**
 
@@ -1529,7 +1519,7 @@ Provide information that is used to add or update your federated LDAP user regis
 
     -   **Description**
 
-        Select the authentication method to use. This corresponds to the "bind method" used by VMM to validate the password for a user during log in. NOTE: VMM currently only supports the Simple method.
+        Select the authentication method to use. This corresponds to the "bind method" used by WIM to validate the password for a user during log in. NOTE: WIM currently only supports the Simple method.
 
     -   **Default value**
 
@@ -1584,7 +1574,7 @@ Provide information that is used to add or update your federated LDAP user regis
         -   Set the value to never and the alias entries that are encountered during the search operation are processed as 'normal' entries. The alias entries are returned if they match the search filter.
         -   Set the value to always and the alias entries that are encountered during the search operation, in both the search base and entries within the scope of the search, are dereferenced.
         -   Set the value to finding and the LDAP dereference the search base entry but does not dereference any other alias entries within the search scope. Alias entries within the search scope of the dereferenced base are processed as 'normal' entries and are returned if they match the search filter.
-        -   Set the value to searching and the LDAP dereferences alias entries within the scope of the search but does not dereference the search base entry \(if it contains an alias\). The search base is processed as a 'normal' entry \(even if it is an alias entry\). It is returned if it matches the search filter and is in the search scope.
+        -   Set the value to searching and the LDAP dereferences alias entries within the scope of the search but does not dereference the search base entry (if it contains an alias). The search base is processed as a 'normal' entry (even if it is an alias entry). It is returned if it matches the search filter and is in the search scope.
     -   **Valid values**
 
         never
@@ -1717,7 +1707,7 @@ Provide information that is used to add or update your federated LDAP user regis
 
     -   **Description**
 
-        The maximum number of context instances that can be maintained concurrently by the context pool for this LDAP server by VMM. Specifying a value of 0 allows the pool to grow without bound. This is the only context pooling property that can be set by the initial LDAP repository setup ConfigEngine task \(wp-create-ldap\). See the Portal Tuning Guide for recommendations on setting on up context pooling in VMM under Portal. You can set other "cp.\*" properties and run the wp-update-ldap-contextpool task to completely configure VMM context pooling. VMM uses the maximum pool size per node in the cluster. Therefore the total number of connections that might be made to the LDAP server is the maximum context pool size value multiplied by the number of nodes in the cluster.
+        The maximum number of context instances that can be maintained concurrently by the context pool for this LDAP server by WIM. Specifying a value of 0 allows the pool to grow without bound. This is the only context pooling property that can be set by the initial LDAP repository setup ConfigEngine task (wp-create-ldap). See the Portal Tuning Guide for recommendations on setting on up context pooling in WIM under Portal. You can set other "cp.*" properties and run the wp-update-ldap-contextpool task to completely configure WIM context pooling. WIM uses the maximum pool size per node in the cluster. Therefore the total number of connections that might be made to the LDAP server is the maximum context pool size value multiplied by the number of nodes in the cluster.
 
     -   **Default value**
 
@@ -1730,13 +1720,13 @@ Provide information that is used to add or update your federated LDAP user regis
 
 ### 7.2. Add or update database
 
-The following properties are used for creating or updating a database user registry configuration. Database modification tasks of VMM need a connection to a running server instance. Your server must be running before you running the following tasks: `wp-create-db` or `wp-update-db`
+The following properties are used for creating or updating a database user registry configuration. Database modification tasks of WIM need a connection to a running server instance. Your server must be running before you running the following tasks: `wp-create-db` or `wp-update-db`
 
 -   **federated.db.DataSourceName**
 
     -   **Description**
 
-        The name of the data source to be used for this VMM database domain. It must comply with the WebSphere Application Server requirements. You cannot use the reserved names releaseDS, communityDS, customizationDS, jcrDS, lmdbDS, and feedback. You can use the same name for all portal database domains that are sharing user ID, password, and JDBC database URL.
+        The name of the data source to be used for this WIM database domain. It must comply with the WebSphere Application Server requirements. You cannot use the reserved names releaseDS, communityDS, customizationDS, jcrDS, lmdbDS, and feedback. You can use the same name for all portal database domains that are sharing user ID, password, and JDBC database URL.
 
     -   **Default value**
 
@@ -1750,7 +1740,7 @@ The following properties are used for creating or updating a database user regis
 
     -   **Description**
 
-        Database management software to use for the VMM Federated database domain.
+        Database management software to use for the WIM Federated database domain.
 
     -   **Valid values**
 
@@ -1758,9 +1748,9 @@ The following properties are used for creating or updating a database user regis
 
         db2
 
-        db2\_iseries
+        db2_iseries
 
-        db2\_zos
+        db2_zos
 
         oracle
 
@@ -1816,19 +1806,19 @@ The following properties are used for creating or updating a database user regis
 
     -   **Description**
 
-        The name of the database \(location name of the DB2 for z/OS subsystem\) to be used for this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.
+        The name of the database (location name of the DB2 for z/OS subsystem) to be used for this portal database domain. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.
 
     -   **Default value**
 
-        federated.db.DbType=db2: WPVMM
+        federated.db.DbType=db2: WPWIM
 
-        federated.db.DbType=db2\_iseries:
+        federated.db.DbType=db2_iseries:
 
-        federated.db.DbType=db2\_zos:
+        federated.db.DbType=db2_zos:
 
         federated.db.DbType=oracle:
 
-        federated.db.DbType=sqlserver2005: WPVMM
+        federated.db.DbType=sqlserver2005: WPWIM
 
         Otherwise: vmmfeddb
 
@@ -1836,7 +1826,7 @@ The following properties are used for creating or updating a database user regis
 
         Apache Derby: vmmfeddb
 
-        IBM DB2: WPVMM
+        IBM DB2: WPWIM
 
         IBM DB2 for i: /WPSDB
 
@@ -1844,13 +1834,13 @@ The following properties are used for creating or updating a database user regis
 
         Oracle Database: vmmfeddb
 
-        Microsoft SQL Server: WPVMM
+        Microsoft SQL Server: WPWIM
 
 -   **federated.db.id**
 
     -   **Description**
 
-        Specify a unique identifier for the repository within the cell. Characters that are not allowed in normal XML strings \( &amp; &lt; \> " ' \) cannot be used in the repository ID.
+        Specify a unique identifier for the repository within the cell. Characters that are not allowed in normal XML strings ( &amp; &lt; > " ' ) cannot be used in the repository ID.
 
     -   **Default value**
 
@@ -1909,7 +1899,7 @@ The following properties are used for creating or updating a database user regis
 
     -   **Description**
 
-        The name of JDBC provider to be used for the VMM database user registry. Note that the la.JdbcProviderName can be the same as this value, or different. The la.JdbcProviderName is the JDBC provider for the property extension database. This federated.db.JdbcProviderName is the JDBC provider for the VMM database user registry. Both of these databases can be in the same database provider, or in different providers. If they are in the same database, then the same provider name can be used. If they are in different databases, then different appropriate JDBC provider names must be used.
+        The name of JDBC provider to be used for the WIM database user registry. Note that the la.JdbcProviderName can be the same as this value, or different. The la.JdbcProviderName is the JDBC provider for the property extension database. This federated.db.JdbcProviderName is the JDBC provider for the WIM database user registry. Both of these databases can be in the same database provider, or in different providers. If they are in the same database, then the same provider name can be used. If they are in different databases, then different appropriate JDBC provider names must be used.
 
     -   **Default value**
 
@@ -1923,7 +1913,7 @@ The following properties are used for creating or updating a database user regis
 
     -   **Description**
 
-        The name to be used to qualify database objects of this VMM database domain. It must comply with your database management software requirements. This property that is combined with the properties database name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.
+        The name to be used to qualify database objects of this WIM database domain. It must comply with your database management software requirements. This property that is combined with the properties database name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.
 
     -   **Default value**
 
@@ -1959,7 +1949,7 @@ The following properties are used for creating or updating a database user regis
 
     -   **Examples**
 
-        Release, Community, Customization, VMM, and JCR: wps6TCP
+        Release, Community, Customization, WIM, and JCR: wps6TCP
 
         Feedback: fdbk6TCP
 
@@ -1977,7 +1967,7 @@ The following properties are used for creating or updating a database user regis
 
     -   **Examples**
 
-        Release, Community, Customization, JCR, and VMM: wpsNode
+        Release, Community, Customization, JCR, and WIM: wpsNode
 
         Feedback and LikeMinds: pznNode
 
@@ -2003,7 +1993,7 @@ The following properties are used for creating or updating a database user regis
 
     -   **Default value**
 
-        \*
+        *
 
     -   **Examples**
 
@@ -2013,7 +2003,7 @@ The following properties are used for creating or updating a database user regis
 
     -   **Description**
 
-        Identifies the integrated catalog facility catalog \(VCAT\) for the DB2 for z/OS storage group that is used for this portal database domain.
+        Identifies the integrated catalog facility catalog (VCAT) for the DB2 for z/OS storage group that is used for this portal database domain.
 
     -   **Default value**
 
@@ -2060,7 +2050,7 @@ Provide information that is needed to configure tables for your federated databa
 
     -   **Description**
 
-        Specify whether to report SQL errors while setting up the VMM federated database.
+        Specify whether to report SQL errors while setting up the WIM federated database.
 
     -   **Valid values**
 
@@ -2215,13 +2205,13 @@ Provide information that is needed to configure tables for your federated databa
 
 ### 7.3. Custom user registry properties
 
-The following properties are used to create or updated a custom user registry \(CUR\) in a federated security configuration. The properties are referenced when the following tasks are run: wp-create-cur and wp-update-federated-cur
+The following properties are used to create or updated a custom user registry (CUR) in a federated security configuration. The properties are referenced when the following tasks are run: wp-create-cur and wp-update-federated-cur
 
 -   **federated.cur.id**
 
     -   **Description**
 
-        This ID specifies a unique identifier for the repository within the cell. Characters that are not allowed in normal XML strings \( &amp; &lt; \> " ' \) cannot be used in the repository ID.
+        This ID specifies a unique identifier for the repository within the cell. Characters that are not allowed in normal XML strings ( &amp; &lt; > " ' ) cannot be used in the repository ID.
 
     -   **Default value**
 
@@ -2360,7 +2350,7 @@ The following properties are used to create or updated a custom user registry \(
         None available
 
 
-### 7.3.1. Federated custom user registry \(CUR\) custom properties
+### 7.3.1. Federated custom user registry (CUR) custom properties
 
 The following properties and values are used to create a custom property using the wp-create-cur-custom-property task.
 
@@ -2638,7 +2628,7 @@ The following properties are used the `wp-delete-repository` task.
 
     -   **Description**
 
-        The ID of the repository to be deleted from the VMM configuration. This parameter must be set to LA if you want to delete the property extension repository.
+        The ID of the repository to be deleted from the WIM configuration. This parameter must be set to LA if you want to delete the property extension repository.
 
     -   **Default value**
 
@@ -2649,15 +2639,15 @@ The following properties are used the `wp-delete-repository` task.
         None available
 
 
-## VMM property extension database properties
+## WIM property extension database properties
 
-Property extension database was previously called the lookaside database. The property extension database stores more attributes that cannot be stored in the LDAP user registry. Database modification tasks of VMM need a connection to a running server instance. Make sure that your server is running. The properties are used with the following tasks: wp-configure-la-complete and wp-add-la-property
+Property extension database was previously called the lookaside database. The property extension database stores more attributes that cannot be stored in the LDAP user registry. Database modification tasks of WIM need a connection to a running server instance. Make sure that your server is running. The properties are used with the following tasks: wp-configure-la-complete and wp-add-la-property
 
 -   **la.JdbcProviderName**
 
     -   **Description**
 
-        The name of JDBC provider for the VMM property extension database. Note that the federated.db.JdbcProviderName can be the same as this value, or different. The federated.db.JdbcProviderName is the JDBC provider for the VMM database user registry. This la.JdbcProviderName is the JDBC provider for the VMM property extension database. Both of these databases can be in the same database provider, or in different providers. If they are in the same database, then the same provider name can be used. If they are in different databases, then different appropriate JDBC provider names must be used.
+        The name of JDBC provider for the WIM property extension database. Note that the federated.db.JdbcProviderName can be the same as this value, or different. The federated.db.JdbcProviderName is the JDBC provider for the WIM database user registry. This la.JdbcProviderName is the JDBC provider for the WIM property extension database. Both of these databases can be in the same database provider, or in different providers. If they are in the same database, then the same provider name can be used. If they are in different databases, then different appropriate JDBC provider names must be used.
 
     -   **Default value**
 
@@ -2713,21 +2703,21 @@ Property extension database was previously called the lookaside database. The pr
 
     -   **Description**
 
-        The name of the database \(location name of the DB2 for z/OS subsystem\) to be used for the property extension database domain. Use the property extension domain store more properties outside of the user registry. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.
+        The name of the database (location name of the DB2 for z/OS subsystem) to be used for the property extension database domain. Use the property extension domain store more properties outside of the user registry. It must comply with your database management software requirements. This property that is combined with the properties schema name and JDBC database URL must be unique for the portal database domains release, community, customization, and JCR.
 
-        If you change the name of the HCL Portal data source due to a database migration, you must manually update the la.DbName property in the wpconfig\_dbdomain.properties file. The file is located here: portal\_server\_root/config/wpconfig\_dbdomain.properties
+        If you change the name of the HCL Portal data source due to a database migration, you must manually update the la.DbName property in the wpconfig_dbdomain.properties file. The file is located here: portal_server_root/config/wpconfig_dbdomain.properties
 
     -   **Default value**
 
-        la.DbType=db2: VMMLADB
+        la.DbType=db2: WIMLADB
 
-        la.DbType=db2\_iseries:
+        la.DbType=db2_iseries:
 
-        la.DbType=db2\_zos:
+        la.DbType=db2_zos:
 
         la.DbType=oracle:
 
-        la.DbType=sqlserver2005: VMMLADB
+        la.DbType=sqlserver2005: WIMLADB
 
         Otherwise: vmmladb
 
@@ -2735,15 +2725,15 @@ Property extension database was previously called the lookaside database. The pr
 
         Apache Derby: vmmladb
 
-        IBM DB2: VMMLADB
+        IBM DB2: WIMLADB
 
-        IBM DB2 for i: /VMMLADB
+        IBM DB2 for i: /WIMLADB
 
         DB2 for z/OS:
 
         Oracle Database: vmmladb
 
-        Microsoft SQL Server: VMMLADB
+        Microsoft SQL Server: WIMLADB
 
 -   **la.DataSourceName**
 
@@ -2886,7 +2876,7 @@ Property extension database was previously called the lookaside database. The pr
 
 ### 8.3. Add a property
 
-The following properties are used by wp-add-la-property and wp-add-property configuration tasks. Use wp-add-la-property if you are defining a new property to store in VMM property extension database. Use wp-add-property if you are defining a new property that maps to an attribute in LDAP or a custom registry. These tasks use a secured connection to WebSphere Application Server. Check the wp\_profile/properties/sas.client.props file and verify the following setting: com.ibm.CORBA.securityEnabled=true If you are using a remote telnet connection, set `com.ibm.CORBA.loginSource` to stdin or properties.
+The following properties are used by wp-add-la-property and wp-add-property configuration tasks. Use wp-add-la-property if you are defining a new property to store in WIM property extension database. Use wp-add-property if you are defining a new property that maps to an attribute in LDAP or a custom registry. These tasks use a secured connection to WebSphere Application Server. Check the wp_profile/properties/sas.client.props file and verify the following setting: com.ibm.CORBA.securityEnabled=true If you are using a remote telnet connection, set `com.ibm.CORBA.loginSource` to stdin or properties.
 
 -   **la.providerURL**
 
@@ -2970,9 +2960,9 @@ The following properties are used by wp-add-la-property and wp-add-property conf
 
     -   **Description**
 
-        Defines the type of data that is stored in the attribute that is being created. If this attribute is mapped to LDAP, this data type must match the corresponding attribute type in LDAP. Consult your LDAP administrator if you are unsure of the data types in LDAP. If this attribute is stored in the VMM property extension database, the data type must match the corresponding attribute type as defined in VMM's database.
+        Defines the type of data that is stored in the attribute that is being created. If this attribute is mapped to LDAP, this data type must match the corresponding attribute type in LDAP. Consult your LDAP administrator if you are unsure of the data types in LDAP. If this attribute is stored in the WIM property extension database, the data type must match the corresponding attribute type as defined in WIM's database.
 
-        While it is possible to add attributes of different types to VMM, the Registration/Edit My Profile Portlet is only capable of working with attributes of type String and Int. If you need UI support for other types, you would need your own custom form or portlet that can process those types. Portal does not have a UI that reads or updates group attributes. The one exception is the UI that is used to create a group.
+        While it is possible to add attributes of different types to WIM, the Registration/Edit My Profile Portlet is only capable of working with attributes of type String and Int. If you need UI support for other types, you would need your own custom form or portlet that can process those types. Portal does not have a UI that reads or updates group attributes. The one exception is the UI that is used to create a group.
 
     -   **Valid values**
 
@@ -3026,7 +3016,7 @@ The following properties are used by wp-add-la-property and wp-add-property conf
 
     -   **Description**
 
-        This value is only used for the `wp-add-property` task. Adding a property to VMM configuration of a repository does not add the property to the LDAP system. List of repositories that the new property is added to. The list of repositories must be separated by a comma. Leave the value blank to add the property to all repositories.
+        This value is only used for the `wp-add-property` task. Adding a property to WIM configuration of a repository does not add the property to the LDAP system. List of repositories that the new property is added to. The list of repositories must be separated by a comma. Leave the value blank to add the property to all repositories.
 
     -   **Default value**
 
@@ -3037,7 +3027,7 @@ The following properties are used by wp-add-la-property and wp-add-property conf
         None available
 
 
-## VMM LDAP entity type configuration
+## WIM LDAP entity type configuration
 
 Provide values for the following properties if you need to create, delete, or add an LDAP entity type configuration. The properties are used with the following configuration tasks: wp-create-ldap-entitytype , wp-delete-ldap-entitytype , and wp-add-ldap-entitytype-rdn .
 
@@ -3177,9 +3167,9 @@ Provide values for the following properties if you need to create, delete, or ad
         None available
 
 
-## VMM supported entity types configuration
+## WIM supported entity types configuration
 
-The `wp-update-entitytype` task updates the entity type 'entityTypeName' with the value of defaultParent and adds the RDN attribute to the existing list. The `wp-set-entitytype` task updates the entity type 'entityTypeName' with the value of defaultParent. It also resets the rdnProperties list to contain only rdnProperties entries for the value \(or values, if a semicolon-delimited list is supplied\) of the RDN attribute name property.
+The `wp-update-entitytype` task updates the entity type 'entityTypeName' with the value of defaultParent and adds the RDN attribute to the existing list. The `wp-set-entitytype` task updates the entity type 'entityTypeName' with the value of defaultParent. It also resets the rdnProperties list to contain only rdnProperties entries for the value (or values, if a semicolon-delimited list is supplied) of the RDN attribute name property.
 
 -   **entityTypeName**
 
@@ -3258,7 +3248,7 @@ The wp-update-entitytypes task updates the defaultParent of the entity types Gro
 
     -   **Description**
 
-        Type the default parent of the entity type PersonAccount. VMM creates new users as a child of the parent when no other explicit parent is specified. This value must be a descendant of the baseDN of the LDAP server and it must be a fully specified DN of the container, including the baseDN value. For example, if federated.ldap.baseDN=dc=yourco,dc=com then the parent might be personAccountParent=cn=users,dc=yourco,dc=com. It might also be personAccountParent=cn=users,ou=newPeopleGoHere,dc=yourco,dc=com.
+        Type the default parent of the entity type PersonAccount. WIM creates new users as a child of the parent when no other explicit parent is specified. This value must be a descendant of the baseDN of the LDAP server and it must be a fully specified DN of the container, including the baseDN value. For example, if federated.ldap.baseDN=dc=yourco,dc=com then the parent might be personAccountParent=cn=users,dc=yourco,dc=com. It might also be personAccountParent=cn=users,ou=newPeopleGoHere,dc=yourco,dc=com.
 
     -   **Default value**
 
@@ -3272,7 +3262,7 @@ The wp-update-entitytypes task updates the defaultParent of the entity types Gro
 
     -   **Description**
 
-        Type the default parent of the entity type Group. When an explicit parent is not specified for a new group, VMM uses the default parent that is specified here. The parent must be a descendant of the base DN of the LDAP server. It also must be a fully specified DN of the container, including the base DN value.
+        Type the default parent of the entity type Group. When an explicit parent is not specified for a new group, WIM uses the default parent that is specified here. The parent must be a descendant of the base DN of the LDAP server. It also must be a fully specified DN of the container, including the base DN value.
 
     -   **Default value**
 
@@ -3288,7 +3278,7 @@ The wp-update-entitytypes task updates the defaultParent of the entity types Gro
 
     -   **Description**
 
-        The RDN attribute is the first attribute in the Distinguished Name. Usually the attribute is "uid" or "cn", but it depends on how the DNs in your LDAP server are set up. It is possible to specify multiple attribute names that are separated by semicolons, but this is highly unusual. Do not leave this property blank. This property is primarily used when you create a new user through VMM. In combination with the default parent for the entity type, the attribute tells VMM how to create the DN for the new entry. The value \(or values, if multiple values are specified in a semicolon-delimited list\) is set as rdnProperties entries with the supportedEntityType stanza in VMM's wimconfig.xml configuration file.
+        The RDN attribute is the first attribute in the Distinguished Name. Usually the attribute is "uid" or "cn", but it depends on how the DNs in your LDAP server are set up. It is possible to specify multiple attribute names that are separated by semicolons, but this is highly unusual. Do not leave this property blank. This property is primarily used when you create a new user through WIM. In combination with the default parent for the entity type, the attribute tells WIM how to create the DN for the new entry. The value \(or values, if multiple values are specified in a semicolon-delimited list\) is set as rdnProperties entries with the supportedEntityType stanza in WIM's wimconfig.xml configuration file.
 
     -   **Default value**
 
@@ -3302,7 +3292,7 @@ The wp-update-entitytypes task updates the defaultParent of the entity types Gro
 
     -   **Description**
 
-        The RDN attribute is the first attribute in the Distinguished Name. Usually the attribute is "cn" for the Group entity type, but it depends on how the DNs in your LDAP server are set up. It is possible to specify multiple attribute names that are separated by semicolons, but this is highly unusual. Do not leave this property blank. This property is primarily used when you are creating a new group through VMM. In combination with the default parent for the entity type, the attribute tells VMM how to create the DN for the new entry. The value \(or values, if multiple values are specified in a semicolon-delimited list\) is set as rdnProperties entries with the supportedEntityType stanza in VMM's wimconfig.xml configuration file.
+        The RDN attribute is the first attribute in the Distinguished Name. Usually the attribute is "cn" for the Group entity type, but it depends on how the DNs in your LDAP server are set up. It is possible to specify multiple attribute names that are separated by semicolons, but this is highly unusual. Do not leave this property blank. This property is primarily used when you are creating a new group through WIM. In combination with the default parent for the entity type, the attribute tells WIM how to create the DN for the new entry. The value (or values, if multiple values are specified in a semicolon-delimited list) is set as rdnProperties entries with the supportedEntityType stanza in WIM's wimconfig.xml configuration file.
 
     -   **Default value**
 
@@ -3488,20 +3478,20 @@ The following properties are used with the `wp-create-ldap-groupconfig` task.
 
     -   **Description**
 
-        Tells VMM how much information your LDAP server returns when VMM requests the group membership attribute value for a user object. The group membership attribute is an attribute on the user object that contains the list of groups of which the user is a member. This scope property describes to VMM how complete the list is. For example, the list might include only static groups of which the user is a direct member or it might include dynamic memberships, or the results of resolving any nested group relationships.
+        Tells WIM how much information your LDAP server returns when WIM requests the group membership attribute value for a user object. The group membership attribute is an attribute on the user object that contains the list of groups of which the user is a member. This scope property describes to WIM how complete the list is. For example, the list might include only static groups of which the user is a direct member or it might include dynamic memberships, or the results of resolving any nested group relationships.
 
         -   Set the value to all if the membership attribute includes a complete list of all possible group memberships for a user, including nested, dynamic, and direct group memberships.
         -   Set the value to direct if the membership attribute includes only direct memberships.
         -   Set the value to nested if the membership attribute included both direct and nested memberships, but it does not include dynamic memberships. Nested refers to groups within other groups.
         Select the option that reflects your LDAP registry configuration. If your selection does not match the LDAP configuration, poor performance and failures might occur.
 
-        If the group membership attribute for the user objects within your LDAP returns only direct membership information and you select nested, when your application requests nested group information the operation will return incomplete results. Based on your selection, VMM expects the LDAP to return the nested group information. It does not do the additional work to determine the nested group information.
+        If the group membership attribute for the user objects within your LDAP returns only direct membership information and you select nested, when your application requests nested group information the operation will return incomplete results. Based on your selection, WIM expects the LDAP to return the nested group information. It does not do the additional work to determine the nested group information.
 
-        If your LDAP returns nested group information and VMM is configured to support dynamic groups, VMM tries to resolve the dynamic group membership information that is requested by an application. You must use the Integrated Solutions Console to configure dynamic groups in VMM.
+        If your LDAP returns nested group information and WIM is configured to support dynamic groups, WIM tries to resolve the dynamic group membership information that is requested by an application. You must use the Integrated Solutions Console to configure dynamic groups in WIM.
 
-        If your LDAP provides a complete set of group memberships, including nested groups, dynamic groups, and static direct groups, and you set the scope attribute to direct, VMM redundantly tries to resolve the nested group memberships.
+        If your LDAP provides a complete set of group memberships, including nested groups, dynamic groups, and static direct groups, and you set the scope attribute to direct, WIM redundantly tries to resolve the nested group memberships.
 
-        Portal asks VMM to retrieve nested group membership information from the LDAP registry. If your security policy and LDAP registry are not set up to use nested groups, then set accessControlDataManagement.enableNestedGroups to false in the Access Control Data Management Service.
+        Portal asks WIM to retrieve nested group membership information from the LDAP registry. If your security policy and LDAP registry are not set up to use nested groups, then set accessControlDataManagement.enableNestedGroups to false in the Access Control Data Management Service.
 
     -   **Valid values**
 
@@ -3542,7 +3532,7 @@ The following properties are used with the `wp-update-ldap-contextpool` task.
 
     -   **Description**
 
-        This value specifies the maximum number of context instances that can be maintained concurrently in the context pool for this LDAP server by VMM. This value must be greater than or equal to the preferred context pool size. However, specifying a value of 0 allows the pool to grow without bound. VMM uses the buffer pool size per node in the cluster. Therefore the total number of connections that might be made to the LDAP server is the maximum context pool size value multiplied by the number of nodes in the cluster.
+        This value specifies the maximum number of context instances that can be maintained concurrently in the context pool for this LDAP server by WIM. This value must be greater than or equal to the preferred context pool size. However, specifying a value of 0 allows the pool to grow without bound. WIM uses the buffer pool size per node in the cluster. Therefore the total number of connections that might be made to the LDAP server is the maximum context pool size value multiplied by the number of nodes in the cluster.
 
     -   **Default value**
 
@@ -3556,7 +3546,7 @@ The following properties are used with the `wp-update-ldap-contextpool` task.
 
     -   **Description**
 
-        This value specifies the initial \(minimum\) size of the context pool for this LDAP server in VMM. This value must be less than or equal to the preferred context pool size.
+        This value specifies the initial \(minimum\) size of the context pool for this LDAP server in WIM. This value must be less than or equal to the preferred context pool size.
 
     -   **Default value**
 
@@ -3570,7 +3560,7 @@ The following properties are used with the `wp-update-ldap-contextpool` task.
 
     -   **Description**
 
-        Specify the preferred size of the context pool for this LDAP server in VMM. The size must be greater than or equal to the initial context pool size, and less than or equal to the maximum context pool size, unless the maximum size is set to 0. If this value is less than the maximum size \(or if the maximum size is set to 0\) and the pool grows larger than the preferred size due to transient high load conditions, the pool shrinks back to the preferred size when the high load condition subsides. The preferred size value is treated as a "hint" which VMM gives a best effort to maintain, not a hard limit that is strictly enforced always.
+        Specify the preferred size of the context pool for this LDAP server in WIM. The size must be greater than or equal to the initial context pool size, and less than or equal to the maximum context pool size, unless the maximum size is set to 0. If this value is less than the maximum size \(or if the maximum size is set to 0\) and the pool grows larger than the preferred size due to transient high load conditions, the pool shrinks back to the preferred size when the high load condition subsides. The preferred size value is treated as a "hint" which WIM gives a best effort to maintain, not a hard limit that is strictly enforced always.
 
     -   **Default value**
 
@@ -3645,7 +3635,7 @@ The following properties are used to in multiple realm configuration tasks. If n
 
     -   **Description**
 
-        Indicates whether a virtual realm within the VMM configuration is actively in use currently in the security setup of the server; or is not currently in use but is eligible to be used; or is not eligible for use at all. The default is "active".
+        Indicates whether a virtual realm within the WIM configuration is actively in use currently in the security setup of the server; or is not currently in use but is eligible to be used; or is not eligible for use at all. The default is "active".
 
     -   **Valid values**
 
@@ -3784,7 +3774,7 @@ The following properties are used by the `wp-create-base-entry` , `wp-update-bas
 
     -   **Description**
 
-        The distinguished name \(DN\) in the repository that uniquely identifies the base entry name. In most cases, the name is not the same value as the base DN.
+        The distinguished name (DN) in the repository that uniquely identifies the base entry name. In most cases, the name is not the same value as the base DN.
 
     -   **Default value**
 
@@ -3805,18 +3795,18 @@ The following properties are used by the `wp-change-was-admin-user` and `wp-chan
 
         Type the fully qualified DN that exists in your LDAP registry that you want to use as the Portal Administrator account. The short login name for this administrator account must not be identical to the original administrative user ID short login name. If the DN includes spaces, then you must take extra steps to enter it on the command line by using the -D parameter.
 
-        \(UNIX only\)For command line tasks, if you provide the DN by using the -D parameter, some tasks require that you enter the fully qualified DN. If your fully qualified DN contains a space, you cannot provide the ID by using the -D parameter. For example, if your DN is `cn=someuser,cn=users,o=Software Group,dc=yourco,dc=com,` then you must place the DN in the properties file or a parent properties file. If you create a parent properties file named mysecurity.properties, your command is: ./ConfigEngine.sh task\_name -DparentProperties=/opt/mysecurity.properties.
+        (UNIX only)For command line tasks, if you provide the DN by using the -D parameter, some tasks require that you enter the fully qualified DN. If your fully qualified DN contains a space, you cannot provide the ID by using the -D parameter. For example, if your DN is `cn=someuser,cn=users,o=Software Group,dc=yourco,dc=com,` then you must place the DN in the properties file or a parent properties file. If you create a parent properties file named mysecurity.properties, your command is: ./ConfigEngine.sh task_name -DparentProperties=/opt/mysecurity.properties.
 
-        \(Windows only\)For command prompt tasks, if you provide the DN by using the -D parameter, some tasks require that you enter the fully qualified user DN. If your fully qualified DN contains a space, then you must place quotations around the fully qualified DN in the command. An example of a DN with spaces is: `cn=someuser,cn=users,o=Software Group,dc=yourco,dc=com,` An example of the DN provided using the -D parameter is: ConfigEngine.bat task\_name -DuserID="cn=someuser,cn=users,o=Software Group,dc=yourco,dc=com"
+        (Windows only)For command prompt tasks, if you provide the DN by using the -D parameter, some tasks require that you enter the fully qualified user DN. If your fully qualified DN contains a space, then you must place quotations around the fully qualified DN in the command. An example of a DN with spaces is: `cn=someuser,cn=users,o=Software Group,dc=yourco,dc=com,` An example of the DN provided using the -D parameter is: ConfigEngine.bat task_name -DuserID="cn=someuser,cn=users,o=Software Group,dc=yourco,dc=com"
 
         A valid user DN can contain the following characters:
 
-        -   Lowercase characters \{a-z\} and upper case characters \{A-Z\}
-        -   Numbers \{0-9\}
-        -   Exclamation point \{!\}, hyphen \{-\}, period \{.\}, question mark \{?\}, accent grave \{\`\}, tilde \{~\}
-        -   Open parenthesis \{\(\} and close parenthesis \{\)\}
-        -   Open bracket \{\[\} and close bracket \{\]\}
-        -   Underscore \{\_\}, which is the only special character allowed in IBM i
+        -   Lowercase characters {a-z} and upper case characters {A-Z}
+        -   Numbers {0-9}
+        -   Exclamation point {!}, hyphen {-}, period {.}, question mark {?}, accent grave {`}, tilde {~}
+        -   Open parenthesis {(} and close parenthesis {)}
+        -   Open bracket {[} and close bracket {]}
+        -   Underscore {_}
         -   Must be less than 200 characters
     -   **Default value**
 
@@ -3848,12 +3838,12 @@ The following properties are used by the `wp-change-was-admin-user` and `wp-chan
 
         Type the password for the DN that already exists in the user registry. Valid passwords contains only ASCII characters and the following characters:
 
-        -   Lowercase letter \{a-z\} and uppercase letters \{A-Z\}
-        -   Numbers \{0-9\}
-        -   Exclamation point \{!\}, hyphen \{-\}, period \{.\}, question mark \{?\}, accent grave \{\`\}, and tilde \{~\}
-        -   Open parenthesis \{\(\} and close parenthesis \{\)\}
-        -   Open bracket \{\[\} and close bracket \{\]\}
-        -   Underscore \{\_\}, which is the only special character that is allowed in IBM i
+        -   Lowercase letter {a-z} and uppercase letters {A-Z}
+        -   Numbers {0-9}
+        -   Exclamation point {!}, hyphen {-}, period {.}, question mark {?}, accent grave {`}, and tilde {~}
+        -   Open parenthesis {(} and close parenthesis {)}
+        -   Open bracket {[} and close bracket {]}
+        -   Underscore {_}
         -   The password cannot contain a space
         -   Must be 128 characters or less
     -   **Default value**
@@ -3897,7 +3887,7 @@ The `wp-update-attribute-config` task sets the overall required and unsupported 
 
     -   **Description**
 
-        This value specifies the new \(comma separated\) list of attributes that are required for user creation
+        This value specifies the new (comma separated) list of attributes that are required for user creation
 
     -   **Default value**
 
@@ -3911,7 +3901,7 @@ The `wp-update-attribute-config` task sets the overall required and unsupported 
 
     -   **Description**
 
-        This value specifies the new \(comma separated\) list of attributes that are ignored by portal.
+        This value specifies the new (comma separated) list of attributes that are ignored by portal.
 
     -   **Default value**
 
@@ -3922,7 +3912,7 @@ The `wp-update-attribute-config` task sets the overall required and unsupported 
         None available
 
 
-### 10.9. Restore VMM security
+### 10.9. Restore WIM security
 
 The following properties are used with the `wp-restore-default-repository-configuration` task.
 
@@ -3958,7 +3948,7 @@ The following properties are used with the `wp-restore-default-repository-config
 
     -   **Description**
 
-        This value specifies the ID \(short name\) of the WebSphere Application Server administrative user. The ID must exist in a user repository.
+        This value specifies the ID (short name) of the WebSphere Application Server administrative user. The ID must exist in a user repository.
 
     -   **Default value**
 
@@ -3986,7 +3976,7 @@ The following properties are used with the `wp-restore-default-repository-config
 
     -   **Description**
 
-        The user group \(short name\) with administrative permission in portal. The group must exist in the LDAP server.
+        The user group (short name) with administrative permission in portal. The group must exist in the LDAP server.
 
     -   **Default value**
 
@@ -4005,7 +3995,7 @@ The following properties are used with the `wp-configure-community-isolation` an
 
     -   **Description**
 
-        This value specifies whether the Boolean flag enables community isolation \(peer groups\).
+        This value specifies whether the Boolean flag enables community isolation (peer groups).
 
     -   **Valid values**
 
@@ -4045,7 +4035,7 @@ The following properties are used with the `wp-configure-community-isolation` an
 
     -   **Description**
 
-        The parent distinguished name \(DN\) for new external users.
+        The parent distinguished name (DN) for new external users.
 
     -   **Default value**
 

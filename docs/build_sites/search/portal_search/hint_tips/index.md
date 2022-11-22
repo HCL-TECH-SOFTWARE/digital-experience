@@ -47,26 +47,27 @@ The search administration portlet Manage Search lists the Default Portal Search 
 
 Search services and search collections are separate for individual virtual portals and are not shared between individual virtual portals. Set up separate search services and separate search collections for each individual virtual portal. These collections can be used to crawl and search the same set of documents.
 
-<!--
--   **[Hints and tips for improving quality of Portal Search results](../admin-system/srrhinttips_improve_quality_search.md)**  
+
+-   **[Hints and tips for improving quality of Portal Search results](srrhinttips_improve_quality_search.md)**  
 There are three options available to improve the quality of search results and thus the overall search experience for your site visitors. The three options are using the Suggested Links portlet, changing the default query operator from Or to And, and applying boost factors to specific metadata fields.
--   **[Hints and tips for Portal Search crawls](../admin-system/srrhinttips_crawl.md)**  
+-   **[Hints and tips for Portal Search crawls](srrhinttips_crawl.md)**  
 View some useful tips about Portal Search crawls. For example, crawling can require extended memory and time, depending on your Portal Search environment and configuration.
--   **[How Portal Search handles special characters when indexing](../admin-system/srrhinttips_spechars.md)**  
+-   **[How Portal Search handles special characters when indexing](srrhinttips_spechars.md)**  
 Portal Search indexes words that are composed of consecutive literals, that is letters, digits, and special characters. Learn how Portal Search handles special characters during indexing.
--   **[Uninstalling HCL Digital Experience does not delete search collections](../admin-system/srrhinttips_uninst_nodel_scoll.md)**  
+-   **[Uninstalling HCL Digital Experience does not delete search collections](srrhinttips_uninst_nodel_scoll.md)**  
 When you uninstall HCL Digital Experience, the directories and files for the search collections are not deleted. Therefore, before you uninstall HCL Digital Experience, delete all search collections by selecting the collections individually and clicking the option Delete Collection. If you do not delete, these files and directories remain on the hard disk drive. If you want to delete the search collection data after uninstalling HCL Digital Experience, you need to delete manually.
--   **[UNIX Linux operating systems might require higher limit of open files for Portal Search to work properly](../admin-system/srrhinttips_unix_morfile.md)**  
+-   **[UNIX Linux operating systems might require higher limit of open files for Portal Search to work properly](srrhinttips_unix_morfile.md)**  
 The limit for the number of open files in a UNIX Linux operating system might be too low for Portal Search to work properly. This might result in a Portlet Unavailable error.
--   **[The portal site search collection fails](../admin-system/srrhinttips_crt_scoll_fails.md)**  
+-   **[The portal site search collection fails](srrhinttips_crt_scoll_fails.md)**  
 Creating the portal site search collection can fail due to a file path length restriction.
--   **[On IBM i set USER.REGION variable](../admin-system/srrhinttips_i_ureg_var.md)**  
-Under IBM i, Portal Search collections might fail to collect documents.
--   **[Users cannot see portal site search results in their preferred language](../admin-system/srrhinttips_no_lang.md)**  
-If the preferred language of the crawler user ID does not match the language of the search collection, users might not see search results in their language. -->
+-   **[Users cannot see portal site search results in their preferred language](srrhinttips_no_lang.md)**  
+If the preferred language of the crawler user ID does not match the language of the search collection, users might not see search results in their language. 
 
+<!---
+-   **[On IBM i set USER.REGION variable](srrhinttips_i_ureg_var.md)**  
+Under IBM i, Portal Search collections might fail to collect documents. --->
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Planning and preparing for Portal Search](../../planning_portal_search/index.md)
     - [Managing the content sources of a search collection](../administer_portal_search/setup_search_collections/mng_content_sources_search_collections/index.md)
     - [Static content](../../../create_sites/building_website/static_content/index.md)

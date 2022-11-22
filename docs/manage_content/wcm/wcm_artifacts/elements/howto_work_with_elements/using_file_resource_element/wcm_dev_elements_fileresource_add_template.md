@@ -3,7 +3,7 @@ id: wcm_dev_elements_fileresource_add_template
 title: Adding a file resource element to a template
 ---
 
-
+# Adding a file resource element to a template
 
 
 You add a file resource element to an authoring template when you want the file resource to be used by a set of items that use the same authoring template.
@@ -26,7 +26,8 @@ You add a file resource element to an authoring template when you want the file 
 
 9.  Click **Upload a file** to select a file to store in the file resource component, or do nothing if you want your content creators to select a file.
 
-    **Note:** In CF06 or higher, click **Upload** to upload a file, or click **Select** to select a component. Selecting a component is useful if you need to store a file in a different library, or apply different access settings to the original file resource component.
+    !!!note
+        In CF06 or higher, click **Upload** to upload a file, or click **Select** to select a component. Selecting a component is useful if you need to store a file in a different library, or apply different access settings to the original file resource component.
 
 10. Click ![properties](../images/propIcon.jpg) to open the display properties of the element. This view is where you define how the element is displayed on the item form.
 
@@ -34,7 +35,8 @@ You add a file resource element to an authoring template when you want the file 
 
     2.  To hide a field on the content form from all users select **Hide field**. You must specify a default value if the field is a required field.
 
-        **Note:** Administrators and managers can choose to display hidden fields and elements in an item by clicking **Show hidden fields**.
+        !!!note
+            Administrators and managers can choose to display hidden fields and elements in an item by clicking **Show hidden fields**.
 
     3.  Specify the minimum and maximum byte values to restrict the size of files added to a file resource element. This setting is used to prevent your content creators from uploading large files that might be too large to realistically store and access from a web page.
 

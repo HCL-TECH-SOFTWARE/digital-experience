@@ -22,7 +22,7 @@ The custom Search Service that you created is listed in the Search Service page.
 
 To view and modify the Search Collections for the service type, click the name of a **Search Service**. Users can search multiple search collections with a search service. To help users request searches on a search collection, select a search service when you create a search collection.
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Remote search service](../remotesearch/index.md)
     - [Configuring search with Remote Content Server Search Service Type \(RCSS\)](../../../extend_dx/integration/connections/configuration/cfg_portal_with_cnx/optional_config/connections_search/connectors_portlets_search_rcss.md)
 

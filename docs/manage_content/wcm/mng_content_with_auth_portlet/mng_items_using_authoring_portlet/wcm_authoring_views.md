@@ -3,8 +3,7 @@ id: wcm_authoring_views
 title: Authoring portlet navigation options
 ---
 
-
-
+# Authoring portlet navigation options
 
 You select different navigation options to customize the authoring portlet for different types of users.
 

@@ -35,7 +35,9 @@ You can store web content in the HCL Digital Experience site library or in a sep
     -   This scenario is easy to set up, but means that the content cannot be syndicated, exported or imported separately.
     -   Managed pages must be enabled.
     -   The web content is moved or deleted when a page is moved or deleted.
--   **Storing web content in dedicated content libraries**
+
+-   **Storing web content in dedicated content libraries**    
+
 
     -   This scenario is easy to deploy if the content associations are set up correctly. The content can be syndicated, and exported or imported separately.
     -   The web content is associated with a page.
@@ -44,15 +46,14 @@ You can store web content in the HCL Digital Experience site library or in a sep
     !!! note
         When you store web content in dedicated content libraries, maintain the site area hierarchy so that it exactly matches the page hierarchy. For example, when you create a new page, also create a site area at the same point in the hierarchy, and associate it with the new page that you created. Similarly, when you rename, move, or delete pages, update, and synchronize the associated site areas accordingly.
 
-<!-- 
+
 -   **[Creating libraries](site_create_libs.md)**  
 Web content libraries are used to store your web content and managed pages. Syndication is used to keep libraries in synch between your different server environments.
--   **[Web content library default items](../wcm/wcm_library_default_items.md)**  
+-   **[Web content library default items](../../../../build_sites/create_sites/building_website/content_libraries/wcm_library_default_items.md)**  
 When you create a web content library, you can choose to include a set of default web content items in the new library. These items can be used as a starting point for your Web Content Manager system and website.
--   **[Create a content library](../panel_help/oob_content_createlib.md)**  
-
--   **[HCL Web Content Manager Multilingual Solution](../wcm/wcm_mls.md)**  
-The Web Content Manager Multilingual Solution is a set of tools that are used to manage translated versions of localized and regionalized websites. -->
+-   **[Create a content library](../../../../manage_content/wcm/wcm_artifacts/web_content_library/oob_content_createlib.md)**  
+-   **[HCL Web Content Manager Multilingual Solution](../../../../manage_content/wcm/wcm_content_delivery/mls/index.md)**  
+The Web Content Manager Multilingual Solution is a set of tools that are used to manage translated versions of localized and regionalized websites.
 
 
 

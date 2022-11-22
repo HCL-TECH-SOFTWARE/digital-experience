@@ -3,12 +3,12 @@ id: wcm_dev_content_linking_moving
 title: Moving a content item
 ---
 
-
+# Moving a content item
 
 
 You move content items from one site area to another using the **Move To** feature. This is different from linking content as the content you choose to move is removed from the original site area.
 
-**Template mappings:**
+## Template mappings
 
 When you choose a site area to link a content item to, ensure that the site area you choose has a valid template mapping between the authoring template and presentation template you would like to use with the selected content item.
 

@@ -11,7 +11,7 @@ This enables a Digital Asset Management staging scenario in which an administrat
     - The assets on the target system will be replaced.
     - Access Control is matched between environments, though it is possible to manipulate the access control data after completing the export.
     
-![Digital Asset Management access control staging to production scenario using XML Access](../../../images/admin-system-digital-asset-management-access-control-using-xml-access.png)
+![Digital Asset Management access control staging to production scenario using XML Access](../../../../images/admin-system-digital-asset-management-access-control-using-xml-access.png)
 
 
 ## Export Digital Asset Management Access Control Assets - Sample XML Access script

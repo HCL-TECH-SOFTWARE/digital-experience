@@ -48,11 +48,10 @@ When you create a new content source for a search collection, that content sourc
 4.  Click **Create**.
 
 
-<!--
 -   **[Setting the general parameters for a content source](st_gn_prm_cntsrc.md)**  
 Set the general parameters for the content source by completing the entry fields and making your selections in the General Parameters tab.
 -   **[Setting the advanced parameters for a content source](st_adv_prm_cntsrc.md)**  
 Set the advanced parameters for the content source by completing the entry fields and making your selections in the Advanced Parameters tab.
 -   **[Configuring](configuring.md)**  
-Configure the **Schedulers**, **Filters**, and **Security** from the respective tabs in the Create a New Content Source page. --->
+Configure the **Schedulers**, **Filters**, and **Security** from the respective tabs in the Create a New Content Source page.
 

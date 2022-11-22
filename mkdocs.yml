@@ -80,7 +80,7 @@ plugins:
   - awesome-pages
   - search
   - tags
-  #- mike:
+ # - mike:
   #    canonical_version: latest
   - git-revision-date-localized:
       type: date

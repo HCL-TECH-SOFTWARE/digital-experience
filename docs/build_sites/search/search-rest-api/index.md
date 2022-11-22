@@ -2,7 +2,7 @@
 
 The following topics describe-s- the API calls to search HCL Digital Experience. You can search HCL Digital Experience web pages and content to find content that contains a specific text string in its title or content, or is tagged with a specific tag.
 
-Beginning with [HCL DX 9.5 Container Update and CF 200](../../../whatsnew/combined_cumulative_fix_strategy.md), a new API explorer is available that allows developers using the Digital Experience Search REST APIs to explore and test these APIs. See the topic [Digital Experience Search REST API Explorer](index.md) below for details.
+Beginning with [HCL DX 9.5 Container Update and CF 200](../../../whatsnew/cf20/newcf200.md), a new API explorer is available that allows developers using the Digital Experience Search REST APIs to explore and test these APIs. See the topic [Digital Experience Search REST API Explorer](index.md) below for details.
 
 ## Context Paths
 
@@ -159,7 +159,7 @@ The following content is returned by the server:
 ```
 
 
-<!---
+
 -   **[Search scopes REST API specification](../search-rest-api/scope-spec.md)**  
 The Scopes API returns the set of supported values that can be passed to the scope parameter of the HCL Digital Experience Search API.
 -   **[Search indexes REST API specification](../search-rest-api/index-spec.md)**  
@@ -169,7 +169,7 @@ Constraints are part of the Search API. They provide a structured method for adv
 -   **[Search facets REST API specification](../search-rest-api/facets-spec.md)**  
 The following document describes the facet parameter of the Search API and the corresponding response elements. The facet parameter allows obtaining the facets, which are relevant for the search query. The facets that are supported in Portal Search include Tag, Person, Date, Source, and for status updates only Trend.
 -   **[Digital Experience Search REST API Explorer](../search-rest-api/serach_API_Explore.md)**  
-The Digital Experience Search REST API provides developers programmatic access to search indexed Digital Experience content and web pages. The Digital Experience Search REST API Explorer allows developers to explore and test the Digital Experience Search REST APIs. --->
+The Digital Experience Search REST API provides developers programmatic access to search indexed Digital Experience content and web pages. The Digital Experience Search REST API Explorer allows developers to explore and test the Digital Experience Search REST APIs. 
 
 
 ???+ info "Related information"

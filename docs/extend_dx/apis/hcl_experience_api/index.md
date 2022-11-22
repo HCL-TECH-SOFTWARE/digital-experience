@@ -27,14 +27,15 @@ The HCL Experience API describes a high-level API through which the following sp
 -   **HCL Digital Asset Management API**: Presents developer entry points to the Digital Asset Management features of HCL Digital Experience 9.5.
 -   **HCL Image Processor API**: Presents developer entry points to the Digital Asset Management Image Processor functions of HCL Digital Experience 9.5.
 
-**Note:** Future HCL Digital Experience 9.5 feature functionality will also be exposed through the HCL Digital Experience API.
+!!! note
+    Future HCL Digital Experience 9.5 feature functionality will also be exposed through the HCL Digital Experience API.
 
 It is recommended that developers building solutions for HCL Digital Experience 9.5 running on Kubernetes automatically use the HCL Experience API for the scenarios that are covered.
 
 The HCL Experience API is a component of the HCL Digital Experience offerings. HCL Digital Experience offering license and download packages are provided with HCL Digital Experience entitlements available to customers on the [HCL Software License Portal](https://www.hcltech.com/software/support/release){:target="_blank"}.
 
 !!!note
-    Beginning with Container Update and CF196, additional Experience APIs are introduced, which support development of [Design Studio \(Beta\)](../../../manage_content/design_studio/index.md) and [Web Content Manager](../../../manage_content/wcm/index.md) functions.
+    Beginning with Container Update and CF196, additional Experience APIs are introduced, which support development of [Design Studio (Beta)](../../../manage_content/design_studio/index.md) and [Web Content Manager](../../../manage_content/wcm/index.md) functions.
 
 Video: [Using the Digital Experience V2 Web Content Manager APIs](https://www.youtube.com/watch?v=7N4yVJUjqOo&list=PLEjl4yzB6ckH2QJw886wkwqmSotdCLxdf&index=6).
 

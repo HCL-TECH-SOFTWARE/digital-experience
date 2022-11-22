@@ -21,6 +21,6 @@ try {
 
 ```
 
-<!-- **Related information**  
-[Making modifications by using the Controller SPI](../dev/ctrlrapit_mdfy.md) -->
+???+ info "Related information"
+    - [Making modifications by using the Controller SPI](../controller_spi_modification/index.md)
 

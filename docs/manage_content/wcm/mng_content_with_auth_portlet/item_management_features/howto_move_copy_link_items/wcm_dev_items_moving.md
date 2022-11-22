@@ -3,7 +3,7 @@ id: wcm_dev_items_moving
 title: Moving other items between libraries
 ---
 
-
+# Moving other items between libraries
 
 
 You use the **Move** feature to move an item between libraries.

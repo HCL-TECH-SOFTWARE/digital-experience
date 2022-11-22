@@ -25,11 +25,11 @@ Plan ahead and apply special care when you modify these properties. There are tw
 
     They are used to override a global setting, for example the size of the cache, for a specific instance of a cache.
 
-Changing some or all of these properties can dramatically improve or impair portal performance. Therefore, it is recommended not to change the shared setting for any cache unless the consequences are understood and agreed. If you want to determine the optimal values for the size, lifetime, admit-threshold and replacement properties, monitor the cache properties during the staging phase of your portal installation. Use the Tivoli Performance viewer that is the WebSphere Application Server PMI client \(PMI = Performance Monitoring Interface\) to find the optimal settings for your environment.
+Changing some or all of these properties can dramatically improve or impair portal performance. Therefore, it is recommended not to change the shared setting for any cache unless the consequences are understood and agreed. If you want to determine the optimal values for the size, lifetime, admit-threshold and replacement properties, monitor the cache properties during the staging phase of your portal installation. Use the Tivoli Performance viewer that is the WebSphere Application Server PMI client (PMI = Performance Monitoring Interface) to find the optimal settings for your environment.
 
 The following list is the properties for the Cache Manager Service for both shared and non-shared caches:
 
--   **cacheglobal.enabled = \[ true \| false \] cacheinstance.cacheidentifier.enabled = \[ true \| false \]**
+-   **cacheglobal.enabled = [ true | false ] cacheinstance.cacheidentifier.enabled = [ true | false ]**
 
     Use this property to control whether caching is enabled or not. Use this property with care!
 
@@ -37,7 +37,7 @@ The following list is the properties for the Cache Manager Service for both shar
 
     Use this property to define the number of elements that can be put into the cache before eviction takes place. The eviction uses a "near LRU" algorithm.
 
--   **cacheglobal.shared = \[ true \| false \]cacheinstance.cacheidentifier.shared = \[ true \| false \]**
+-   **cacheglobal.shared = [ true | false ]cacheinstance.cacheidentifier.shared = [ true | false ]**
 
     Use this property to define whether a cluster-aware cache is to be used or not.
 
@@ -49,31 +49,31 @@ The following list is the properties for the Cache Manager Service for both shar
 
     Use this property to randomize cache entry lifetimes to some extent. If all entries in a cache have the same lifetime, it can result in high loads on the database when reloading entries, as large amounts of entries are evicted at the same time.
 
-    Specify the value for this property as a numeric value given in percent. For example, a value of 25 means that all cache entry lifetimes are up to 25% more or less than the default lifetime \(given by the lifetime parameter\). No cache entry will have a lifetime less than 50% of the default value, no matter how large you specify the value for this property. By default no value is specified. In this case lifetimes are not randomized, and all cache entries have the default lifetime.
+    Specify the value for this property as a numeric value given in percent. For example, a value of 25 means that all cache entry lifetimes are up to 25% more or less than the default lifetime (given by the lifetime parameter). No cache entry will have a lifetime less than 50% of the default value, no matter how large you specify the value for this property. By default no value is specified. In this case lifetimes are not randomized, and all cache entries have the default lifetime.
 
     If you set the default lifetime property to infinite by the value -1 , the lifetime randomization setting is not applied, even if you specify a value for the `randomizePercent` property.
 
     You can view the actual randomized lifetime of a cache entry by enabling tracing for class `com.ibm.wps.services.cache.AbstractCache`.
 
 
-You can set the following additional properties for non-shared caches. \(Setting them for shared caches does no harm, they will be ignored.\)
+You can set the following additional properties for non-shared caches. (Setting them for shared caches does no harm, they will be ignored.)
 
--   **cacheglobal.replacement= \[aggressive \| moderate \| conservative\]**
--   **cacheinstance.cacheidentifier.replacement= \[aggressive \| moderate \| conservative\]**
+-   **cacheglobal.replacement= [aggressive | moderate | conservative]**
+-   **cacheinstance.cacheidentifier.replacement= [aggressive | moderate | conservative]**
 
     Controls the eviction algorithm behavior.
 
 -   **cacheglobal.admin-threshold = number**
 -   **cacheinstance.cacheidentifier.admin-threshold = number**
 
-    Admittance threshold. Use this cache to keep unwanted entries from the cache. An entry is cached only if it is put into the cache as often as specified by the value for this property. If you want each entry to be cached, set this value to zero \(0\).
+    Admittance threshold. Use this cache to keep unwanted entries from the cache. An entry is cached only if it is put into the cache as often as specified by the value for this property. If you want each entry to be cached, set this value to zero (0).
 
 
 For information on the available caches, refer to the *HCL Digital Experience Performance Tuning Guide*.
 
-**Related information**  
-[Configuring the maximum number of items loaded from HCL Connections](../../../../../build_sites/social_rendering/cfg_global_settings_social_rendering/soc_rendr_cfg_connct_item_limit.md)<br>
-[HCL Digital Experience Performance Tuning Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074411)<br>
-[Performance tuning for Integrator for SAP](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_perf_tun.html)<br>
-[Shared database domains](../../../../../get_started/plan_deployment/traditional_deployment/database_consideration/db_domains_shared.md)
+???+ info "Related information" 
+    -   [Configuring the maximum number of items loaded from HCL Connections](../../../../../build_sites/social_rendering/cfg_global_settings_social_rendering/soc_rendr_cfg_connct_item_limit.md)
+    -   [HCL Digital Experience Performance Tuning Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074411)
+    -   [Performance tuning for Integrator for SAP](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_perf_tun.html)
+    -   [Shared database domains](../../../../../get_started/plan_deployment/traditional_deployment/database_consideration/db_domains_shared.md)
 

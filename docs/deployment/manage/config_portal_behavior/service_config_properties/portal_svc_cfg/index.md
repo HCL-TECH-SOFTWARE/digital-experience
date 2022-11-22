@@ -11,9 +11,9 @@ The configuration for each service is stored in and accessible for configuration
     -   For details about how to export a configuration from an existing portal and import it to another portal, refer to the documentation about the portal XML configuration interface.
 
 
-**Related information**  
-[Configuring your own delayed deletion schedule by using the XML configuration interface](../../../config_portal_behavior/delayed_cleanup/addelclnup_cfgxml.md)<br>
-[Digital Data Connector caches](../../../../../extend_dx/ddc/ddc_cache_tuning/plrf_caches.md)<br>
-[Working with the XML configuration interface](../../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)<br>
-[System event logging](../../../troubleshooting/logging_and_tracing/adsyslog.md)
+???+ info "Related information"  
+    -   [Configuring your own delayed deletion schedule by using the XML configuration interface](../../../config_portal_behavior/delayed_cleanup/addelclnup_cfgxml.md)
+    -   [Digital Data Connector caches](../../../../../extend_dx/ddc/ddc_cache_tuning/plrf_caches.md)
+    -   [Working with the XML configuration interface](../../../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
+    -   [System event logging](../../../troubleshooting/logging_and_tracing/adsyslog.md)
 

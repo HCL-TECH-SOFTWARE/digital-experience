@@ -20,7 +20,7 @@ You can restore a deleted item by restoring a version of an item. For more infor
 
 Users who are granted manager access or higher to a library can purge deleted items by selecting deleted items in the "All Items" view and then clicking **Purge**. This action removes all occurrences of the selected item, including all versions. You cannot restore purged items.
 
-You can view a list of deleted items in either the **My Items** \> **Deleted** or **All Items Deleted** views.
+You can view a list of deleted items in either the **My Items > Deleted** or **All Items Deleted** views.
 
 ???+ info "Related information:"
     - [How to manage versions of items](../item_management_features/wcm_managing_versions.md)

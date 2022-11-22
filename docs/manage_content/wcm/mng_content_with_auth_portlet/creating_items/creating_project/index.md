@@ -2,14 +2,11 @@
 id: wcm_dev_projects_creating
 title: Creating a project
 ---
-
-
-
+# Creating a project
 
 You use a project to manage changes to a set of items.
 
-To create a project, open the applications menu and go to **Content** \> **Web Content Management** and then click **New** \> **Project**. You then either select the default template, or one of the project templates you have access to.
-
+To create a project, open the applications menu and go to **Content > Web Content Management** and then click **New > Project**. You then either select the default template, or one of the project templates you have access to.
 
 
 1.  [Entering identification information](../wcm_dev_items_id.md)  

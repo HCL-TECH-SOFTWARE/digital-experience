@@ -1,7 +1,5 @@
 # How to manage authoring templates
 
-
-
 From time to time, you might need to reapply or change the authoring templates that are assigned to a set of items.
 
 -   **[Changing the authoring template for an item](wcm_dev_auth-temp_changing.md)**  

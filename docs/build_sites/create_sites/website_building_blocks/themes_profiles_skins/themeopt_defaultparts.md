@@ -16,11 +16,11 @@ By applying these concepts it is possible to turn on and off an arbitrary number
 
 The Portal 8.5 theme contains three types of files: JavaScript, dynamic content \(JSP files\) and static resources.
 
-<!-- 
+
 -   **[Static resources](../../building_website/static_content/site_static_resources.md)**  
 Static resources include the markup that is defined by .html, .css, and .js files that are used by the theme. Some .json files are used to define menu options, module definitions, and module profiles.
 -   **[Dynamic content \(jsp\) resources](../../../themes_skins/portal85_modularized_theme/themeopt_defaultparts_jsp.md)**  
-Dynamic content includes resources that are defined by jsp files that are used by the theme. -->
+Dynamic content includes resources that are defined by jsp files that are used by the theme. 
 
 ???+info "Related information:"  
     - [Setting up Client Certificate Authentication](../../../../deployment/manage/security/configuring_ssl/certauth.md)
@@ -29,7 +29,7 @@ Dynamic content includes resources that are defined by jsp files that are used b
     - [The module framework](../../../themes_skins/the_module_framework/index.md)
     - [Simple menu framework](../../../themes_skins/customizing_theme/menus/simple_menu_framework/index.md)
     - [Modules that are provided with the modularized theme](../../../themes_skins/the_module_framework/oob_modules/index.md)
-    - [Dynamically changing the language during the user session](../../../../extend_dx/development_tools/portal_admin_tools/language_support/adchglang_dynamic.md)
+    - [Dynamically changing the language during the user session](../../../../deployment/manage/portal_admin_tools/language_support/adchglang_dynamic.md)
 
 <!---
      - [<portal-logic/\> tags](../dev-portlet/dgn_ptllogic.md) --->

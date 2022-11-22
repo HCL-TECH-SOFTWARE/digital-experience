@@ -3,7 +3,7 @@ id: wcm_dev_expired_items
 title: How to manage expired items
 ---
 
-
+# How to manage expired items
 
 
 Expired items are items that were published but then removed from the live website. Only items that use a workflow can be expired.

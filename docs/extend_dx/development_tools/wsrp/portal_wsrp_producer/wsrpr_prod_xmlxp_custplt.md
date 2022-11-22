@@ -9,7 +9,7 @@ Here is an example XML script for exporting all customized WSRP portlet instance
 ```
 <request
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="PortalConfig\_8.5.0.xsd"
+    xsi:noNamespaceSchemaLocation="PortalConfig_8.5.0.xsd"
     type="export">
 
     <!-- Sample for exporting the customized portlet instances of a WSRP Producer -->

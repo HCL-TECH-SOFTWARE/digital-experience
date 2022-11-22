@@ -8,6 +8,7 @@ Use the following setting to specify the number of mentors to be assigned to eac
 <mentor_set_name>.max_mentors = 50
 ```
 
-**Note:** Use a value between 50-100. See [Maximum ratings a user needs before becoming a mentor](pzn_max_ratings_become_mentor.md) for guidelines on setting `<mentor_set_name>.max_mentors`
+!!! note 
+    Use a value between 50-100. See [Maximum ratings a user needs before becoming a mentor](pzn_max_ratings_become_mentor.md) for guidelines on setting `<mentor_set_name>.max_mentors`
 
 

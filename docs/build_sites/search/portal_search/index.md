@@ -36,17 +36,16 @@ Portal site administrators who are working with search also benefit from enhance
 -   Simplified setting up remote search service by using IBM Installation Manager or Helm processes for DX deployments on Kubernetes platforms.
 -   Administer portal search by using the Manager Search administration portlet.
 
-<!--
--   **[Portlets for working with Search](../admin-system/srrsrchportletslist.md)**  
+-   **[Portlets for working with Search](srrsrchportletslist.md)**  
 Get an overview of the portal search portlets.
--   **[Administering Portal Search](../admin-system/srtadmsrch.md)**  
+-   **[Administering Portal Search](../portal_search/administer_portal_search/index.md)**  
 You can administer and configure many details for Portal Search.
--   **[Hints and tips for using Portal Search](../admin-system/srrhinttips.md)**  
+-   **[Hints and tips for using Portal Search](../portal_search/hint_tips/index.md)**  
 View some useful tips for using Portal Search.
--   **[The portal site search collection fails](../admin-system/srrhinttips_crt_scoll_fails.md)**  
+-   **[The portal site search collection fails](../portal_search/hint_tips/srrhinttips_crt_scoll_fails.md)**  
 Creating the portal site search collection can fail due to a file path length restriction.
--   **[Portal Search trace and log files](../admin-system/srrlogtrac.md)**  
-Portal Search provides logging and tracing so that you can get additional information for resolving possible problems. -->
+-   **[Portal Search trace and log files](../portal_search/hint_tips/srrlogtrac.md)**  
+Portal Search provides logging and tracing so that you can get additional information for resolving possible problems.
 
 
 ???+ info "Related information"

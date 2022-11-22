@@ -19,12 +19,10 @@ Composite applications are no longer supported. If you have a composite applicat
 
 4.  Click **OK** to confirm the deletion.
 
-5.  Run the resource cleaner to ensure that no other pages exist in the database: [Scheduling the delayed cleanup of portal pages](../admin-system/adxmltsk_sked_delclnup.md).
+5.  Run the resource cleaner to ensure that no other pages exist in the database: [Scheduling the delayed cleanup of portal pages](../../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_xml_config_cmd_line/adxmltsk_sked_delclnup.md).
 
 
 
-**Related information**  
-
-
-[Unsupported features for HCL Digital Experience 8.5 and 9.0](../reference/intr_depc.md)
+<!-- ???+ info "Related information" 
+  - [Unsupported features for HCL Digital Experience 8.5 and 9.0](../reference/intr_depc.md) -->
 

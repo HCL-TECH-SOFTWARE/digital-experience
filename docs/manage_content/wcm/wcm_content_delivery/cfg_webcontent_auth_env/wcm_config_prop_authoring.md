@@ -107,7 +107,7 @@ If a version control strategy is not defined for an item type, then the version 
 
 ## Limiting versioning by setting the number of active versions
 
-There are properties that you can configure to remove the older versions when new versions are created. You can control the number of versions that you want to save by enabling the following property and by setting a threshold value for it in the `WCM WCMConfigService` resource environment provider.
+There are properties that you can configure to remove the later versions when new versions are created. You can control the number of versions that you want to save by enabling the following property and by setting a threshold value for it in the `WCM WCMConfigService` resource environment provider.
 
 ```
 versioning.service.auto.crop.enabled = true

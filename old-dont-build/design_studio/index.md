@@ -28,7 +28,7 @@ The following Digital Experience 9.5 features and services are **limited in acce
 -   Only Google Chrome or Microsoft Edge browsers are supported.
 -   Authoring is supported for the English language only.
 -   The Palace Hotel site is provided as an example. Additional example sites and updates are added in future Design Studio releases.
--   When you use Design Studio (Beta) with HCL DX 9.5 Container Update 199, the duplication of a WCM Container using the page editor may fail. To work around this, add a new WCM Container, and then add the desired content to the WCM container.
+-   When you use Design Studio (Beta) with HCL DX 9.5 Container Update 199, the duplication of a WCM Container using the page editor may fail. To work around this, add a new WCM Container and then add the desired content to the WCM container.
 
 ### Design Studio Site Design features
 

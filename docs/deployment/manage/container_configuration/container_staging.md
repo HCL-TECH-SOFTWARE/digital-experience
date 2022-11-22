@@ -25,7 +25,7 @@ Follow these steps to export the source HCL Portal server.
 /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://mysource.machine.fqdn:10039/wps/config -user <your DX admin user> –password <your DX admin user password> –in /opt/HCL/PortalServer/doc/xml-samples/ExportRelease.xml -out /tmp/ExportReleaseResults.xml
 ```
 
-5.  Save the output XML file \(ExportReleaseResults.xml\) to an external or shared drive, for use later when importing to the target environment.
+5.  Save the output XML file (ExportReleaseResults.xml) to an external or shared drive, for use later when importing to the target environment.
 6.  Export the content for each Virtual Portal that exists in the source environment, renaming each file uniquely for easy identification.
 
 ```
@@ -33,12 +33,12 @@ Follow these steps to export the source HCL Portal server.
 ```
 
 7.  Save the Virtual Portal output files to an external or shared drive for later use when importing to the target environment.
-8.  Save the /opt/HCL/wp\_profile/PortalServer/deployed/archive directory files to an external or shared drive, for later use when importing to the target environment.
+8.  Save the /opt/HCL/wp_profile/PortalServer/deployed/archive directory files to an external or shared drive, for later use when importing to the target environment.
 9.  If you are using PZN rules, export the PZN rules using the Personalization Administration Portlet functions and save the generated Workspace.nodes file to an external or shared drive, for later use when importing to the target environment.
     1.  Log in to the HCL Portal Home Page.
-    2.  Navigate to **Personalization** \> **Business Rules** \> **Extra Actions** \> **Export**.
+    2.  Navigate to **Personalization > Business Rules* > Extra Actions > Export**.
     3.  Save the output file.
-10. When applicable, save all custom files \(application and theme EAR files, WAR files\) to an external or shared drive, for use later when importing to the target environment.
+10. When applicable, save all custom files (application and theme EAR files, WAR files) to an external or shared drive, for use later when importing to the target environment.
 
 ## Import the source HCL Portal server
 
@@ -91,13 +91,14 @@ Log in to the machine from where you will access your HCL Portal Container.
         kubectl cp /tmp/* dx-deployment-nnnnn:/tmp/
         ```
 
-8.  Create a directory under /opt/HCL/wp\_profile to house any custom code or shared libraries.
+8.  Create a directory under /opt/HCL/wp_profile to house any custom code or shared libraries.
 
     1.  ```
       mkdir –p /opt/HCL/wp_profile/customApps
       ```
 
-    **Note:** In any containerized environment, all custom code and shared libraries need to exist under the persisted profile volume.
+    !!!note
+        In any containerized environment, all custom code and shared libraries need to exist under the persisted profile volume.
 
 9.  Move the copied files to the appropriate locations in the container.
     1.  ```
@@ -130,7 +131,7 @@ Log in to the machine from where you will access your HCL Portal Container.
       /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config -user <your DX admin user> -password <your DX admin user password> -in /tmp/ExportReleaseResults.xml -out /tmp/ExportReleaseResults_ImportResult.xml
       ```
 
-    The output displays a successful execution. If not, check /tmp/ExportReleaseResults\_ImportResult.xml for errors.
+    The output displays a successful execution. If not, check /tmp/ExportReleaseResults_ImportResult.xml for errors.
 
 14. Update the WCM content in the HCL Portal server instance:
 
@@ -142,7 +143,7 @@ Log in to the machine from where you will access your HCL Portal Container.
 
 15. If you are using PZN rules, import the PZN rules by using the Personalization Administration Portlet functions.
     1.  Log in to the HCL Portal home page.
-    2.  Navigate to **Personalization** \> **Business Rules** \> **Extra Actions** \> **Import**.
+    2.  Navigate to **Personalization > Business Rules > Extra Actions > Import**.
     3.  Browse to the /tmp/Workspace.nodes file and click **Import**.
 16. Log in to the HCL Portal home page and verify that the base server is functioning correctly:
 
@@ -170,23 +171,24 @@ Log in to the machine from where you will access your HCL Portal Container.
 
 Follow these steps to syndicate the source and target environments.
 
-**Note:** If you have larger libraries, the default database must be transferred to any of the supported databases. For information about supported databases, see [Database Management Systems](../config/config_dbms.md). If you want to know more about transferring the default database of the DX 9.5 Container to IBM DB2, see [Transfer HCL Digital Experience 9.5 container default database to IBM DB2](cw_containerdbtransfer_ibm_db2.md).
+!!!note
+    If you have larger libraries, the default database must be transferred to any of the supported databases. For information about supported databases, see [Database Management Systems](../../../deployment/manage/db_mgmt_sys/index.md). If you want to know more about transferring the default database of the DX 9.5 Container to IBM DB2, see [Transfer HCL Digital Experience 9.5 container default database to IBM DB2](https://help.hcltechsw.com/digital-experience/9.5/containerization/cw_containerdbtransfer_ibm_db2.html).
 
-1.  Since the Kubernetes deployment typically allows only SSL traffic, you need to update the SSL Signer certificates for the Syndicator and Subscriber setups so that they can communicate with each other. To do this, log into the WAS console \(`https://machine_name/ibm/console` or `https://machine_name:port/ibm/console`\) and go to the **Signer certificates** page that is available in the **Security \> SSL certificate and key management** menu:
+1.  Since the Kubernetes deployment typically allows only SSL traffic, you need to update the SSL Signer certificates for the Syndicator and Subscriber setups so that they can communicate with each other. To do this, log into the WAS console (`https://machine_name/ibm/console` or `https://machine_name:port/ibm/console`) and go to the **Signer certificates** page that is available in the **Security > SSL certificate and key management** menu:
 
     ![Signer certificates page](../../../images/signer_certificates_page.png)
 
 2.  Select **Retrieve from port** and create the signer certificate, and then save the certificate.
 3.  Log in to HCL Portal instance to configure syndication: http://my.target.fqdn/wps/portal.
 
-    Navigate to **Administration** \> **Security** \> **Credential Vault** \> **Add a Vault Slot**.
+    Navigate to **Administration > Security > Credential Vault > Add a Vault Slot**.
 
 4.  On the **Credential Vault** page, select **New** and provide the following:
     1.  **Name** - enter the name for the vault slot.
     2.  **Vault resource associated with vault slot** - select **new** and enter the vault resource name.
     3.  **Vault slot is shared** check box - tick this check box and provide the credentials for a user that has appropriate access on the source/syndication system: **Shared userid**, **Shared password**, and **Confirm password**.
     4.  Click **OK** to save the changes.
-5.  Navigate to **Portal Content** \> **Subscribers**. Click **Subscribe Now**.
+5.  Navigate to **Portal Content > Subscribers**. Click **Subscribe Now**.
 6.  In the **Subscribe to a syndicator** pop-up, provide the following:
     1.  **Syndicator URL**
     2.  **Syndicator Name**
@@ -198,20 +200,16 @@ Follow these steps to syndicate the source and target environments.
 9.  If you have Virtual Portals, you must repeat the syndication steps for each Virtual Portal.
 10. If needed, configure library permissions when syndication is completed.
 
-    **Note:** As with syndication between on-premise setups, it is possible to do a one-way syndication from an earlier to a later release.
+    !!!note
+        As with syndication between on-premise setups, it is possible to do a one-way syndication from an earlier to a later release.
 
     You do not need to disable Practitioner Studio to do this syndication.
 
 
 
-**Related information**  
-
-
-[Database Management Systems](../config/config_dbms.md)
-
-[HCL Digital Experience 9.5 Roadmap: Container deployment](../install/rm_container_deployment.md)
-
-[Configuring a remote search service](../admin-system/srtcfgrmtsrchsrv.md)
-
-[Transfer HCL Digital Experience 9.5 container default database to IBM DB2](../containerization/cw_containerdbtransfer_ibm_db2.md)
+???+ info "Related information"
+    -   [Database Management Systems](../../../deployment/manage/db_mgmt_sys/index.md)
+    -   [HCL Digital Experience 9.5 Roadmap: Container deployment](../../../get_started/plan_deployment/container_deployment/rm_container/rm_container_deployment.md)
+    -   [Configuring a remote search service](../../../build_sites/search/remotesearch/cfg_remotesearch_service/index.md)
+    -   [Transfer HCL Digital Experience 9.5 container default database to IBM DB2](https://help.hcltechsw.com/digital-experience/9.5/containerization/cw_containerdbtransfer_ibm_db2.html)
 

@@ -274,9 +274,9 @@ The following parameters are reserved for internal use only. Do not change their
     This parameter specifies the JNDI name of the work manager that Portal Search uses.
 
 
-<!---
--   **[JCR search service configuration parameters](../admin-system/jcr_srrcfgsrvc.md)**  
-The following search service configuration parameters can be modified to enable and configure searching for content that is stored in the JCR database. These JCR search service configuration parameters can be modified by accessing the JCR ConfigService PortalContent resource environment provider. --->
+
+-   **[JCR search service configuration parameters](jcr_srrcfgsrvc.md)**  
+The following search service configuration parameters can be modified to enable and configure searching for content that is stored in the JCR database. These JCR search service configuration parameters can be modified by accessing the JCR ConfigService PortalContent resource environment provider. 
 
 
 ???+ info "Related information"

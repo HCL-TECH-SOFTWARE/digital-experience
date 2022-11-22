@@ -3,7 +3,7 @@ id: wcm_managing_item_locks
 title: Locked and draft items
 ---
 
-
+# Locked and draft items
 
 
 As you collaborate with other users, you might encounter items that are locked because they are being edited by another user or because a draft item has been created.

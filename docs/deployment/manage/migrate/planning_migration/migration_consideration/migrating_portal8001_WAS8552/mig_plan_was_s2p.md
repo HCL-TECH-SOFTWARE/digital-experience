@@ -10,14 +10,12 @@ You can set up a staging server with a Portal 8.0.0.1 and WebSphere Application 
 
 3.  Install the HCL Digital Experience 8.5 and WebSphere Application Server 8.5.5.2 binary files on the target server.
 
-4.  Access the Configuration Wizard on the target server, and click **Migrate to a New Version** \> **Migrate a Stand-alone Server**.
+4.  Access the Configuration Wizard on the target server, and click **Migrate to a New Version > Migrate a Stand-alone Server**.
 
 5.  When you complete the migration of the stand-alone staging server, you can build it into a cluster if needed.
 
 
 
-**Related information**  
-
-
-[Configuration Wizard](../config/cw_overview.md)
+???+ info "Related information" 
+    -   [Configuration Wizard](../../../../../../deployment/manage/portal_admin_tools/cfg_wizard/index.md)
 
