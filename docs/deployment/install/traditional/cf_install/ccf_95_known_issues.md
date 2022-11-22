@@ -187,7 +187,7 @@ This page will contain the known issues for the HCL Portal 9.5 Combined Cumulati
 
 -   Solution: This is a known issue and is fixed by applying the WAS interim fix for PI67942 for WAS 8.5.5.10. This issue will also be fixed or included in WAS 8.5.5.11. [HCL Software](https://www.hcltechsw.com/wps/portal/about/welcome) page in the maintenance package.
 
--   Problem: A decrease in performance may occur when Textbox.io is used with large amounts of HTML \(~4000 lines/20,000 characters\) that can cause the Firefox browser to stop working when switching between code and design views.
+-   Problem: A decrease in performance may occur when Textbox.io or TinyMCE is used with large amounts of HTML \(~4000 lines/20,000 characters\) that can cause the Firefox browser to stop working when switching between code and design views.
 -   Solution: When switching between code and design views, save and close the content and then reopen it before returning to the design view. For other browsers, waiting and allowing processes to continue running eventually returns to the design view and no further action is required.
 
 -   Problem: If WAS 8.5.5.10 is installed with JDK8 for the Portal server profile and CF12 or later is installed, the following errors may be found in the ConfigTrace.logfile:
@@ -268,7 +268,7 @@ This page will contain the known issues for the HCL Portal 9.5 Combined Cumulati
         4.  Save changes.
         5.  Re-run `applyCF.bat`. After some initialization, the script will skip configuration steps that have already completed and pick up where it left off before the crash.
 
--   Problem: Where Textbox.io is the configured rich text editor in WCM, rapidly opening and re-saving an existing item containing a rich text element can cause the loss of existing content if the item is saved before the rich text content is fully loaded. This is only likely to be an issue in environments with high network latency.
+-   Problem: Where Textbox.io or TinyMCE is the configured rich text editor in WCM, rapidly opening and re-saving an existing item containing a rich text element can cause the loss of existing content if the item is saved before the rich text content is fully loaded. This is only likely to be an issue in environments with high network latency.
 -   Solution: Ensure when editing an existing content, site area, template or component containing a rich text element, the rich text content is fully loaded in the editor before re-saving the item.
 
 -   Problem: During the migration process the node may not start after upgrading to WAS 8.5.5.9 and before executing upgrade-profile. The node does not start with error message:
