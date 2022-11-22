@@ -16,7 +16,7 @@ Here’s a basic guide on implementing a generic ingress on your DX cluster
 
 ```yaml
 haproxy:
-    serviceType: ClusterIP
+  serviceType: ClusterIP
 ```
 
 - Install an Ingress controller of your choice, this will serve as the entry point to the cluster. The Ingress controller evaluates the rules that you will set on your ingress instance and it also handles redirection. NGINX Ingress Controller is used here as an example. To install a NGIX Ingress on your cluster
@@ -61,18 +61,18 @@ spec:
 
 ```yaml
 haproxy:
-    ssl: false
+  ssl: false
 ```
 
 - If SSL offloading is enabled on your `custom-values.yaml` and you can access your host via `https`, we need to add Secret to the Ingress file as follows.
 
 ```yaml
 haproxy:
-    ssl: false
+  ssl: false
 ```
 
 ```yaml
 ingressClassName: nginx
-    tls:
-    - secretName: dx-tls-cert
+  tls:
+  - secretName: dx-tls-cert
 ```
