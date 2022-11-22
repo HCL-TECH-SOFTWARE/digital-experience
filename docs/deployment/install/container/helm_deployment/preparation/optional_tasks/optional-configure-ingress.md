@@ -68,7 +68,7 @@ haproxy:
 
 ```yaml
 haproxy:
-  ssl: false
+  ssl: true
 ```
 
 ```yaml
