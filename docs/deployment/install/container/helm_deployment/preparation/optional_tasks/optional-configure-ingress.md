@@ -19,7 +19,7 @@ haproxy:
     serviceType: ClusterIP
 ```
 
-• Install an Ingress controller of your choice, this will serve as the entry point to the cluster. The Ingress controller evaluates the rules that you will set on your ingress instance and it also handles redirection. NGINX Ingress Controller is used here as an example. To install a NGIX Ingress on your cluster
+- Install an Ingress controller of your choice, this will serve as the entry point to the cluster. The Ingress controller evaluates the rules that you will set on your ingress instance and it also handles redirection. NGINX Ingress Controller is used here as an example. To install a NGIX Ingress on your cluster
 
 ```console
 $ helm upgrade --install ingress-nginx ingress-nginx \
@@ -33,7 +33,7 @@ $ helm upgrade --install ingress-nginx ingress-nginx \
 $ Kubectl get all -n dxns
 ```
 
-• Define an Ingress instance that will be used to configure the routing rules that point to the existing deployment of HAProxy as the internal service. Here we must configure a host and all of the request received by the host will be handle by `dx-deployment-haproxy`.
+- Define an Ingress instance that will be used to configure the routing rules that point to the existing deployment of HAProxy as the internal service. Here we must configure a host and all of the request received by the host will be handle by `dx-deployment-haproxy`.
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -57,14 +57,14 @@ spec:
               number: 80
 ```
 
-• If SSL offloading is disabled on your `custom-values.yaml`. You can access your host via HTTP.
+- If SSL offloading is disabled on your `custom-values.yaml`. You can access your host via HTTP.
 
 ```yaml
 haproxy:
     ssl: false
 ```
 
-• If SSL offloading is enabled on your `custom-values.yaml` we need to add Secret to the Ingress file as follows.
+- If SSL offloading is enabled on your `custom-values.yaml` we need to add Secret to the Ingress file as follows.
 
 ```yaml
 haproxy:
