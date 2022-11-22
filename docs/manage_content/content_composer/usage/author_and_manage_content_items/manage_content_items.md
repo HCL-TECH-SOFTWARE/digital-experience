@@ -45,6 +45,18 @@ Content users can view a light preview of uploaded content and more using HCL Co
 
 5.  Click the **Save** button or the drop-down to **Save and Close** in the upper right of the interface to save your completed content edits.
 
+## Move Content item
+
+Content users can move a content item to another site area location.
+
+1. Access the content item you wish to move. In this example, the content item example below \(**Image**\) is obtained from **Web Content \> Content \> Articles** site area location. Click the icon to select the content item. After doing so, click the **Move** icon on the header. 
+
+    ![Select Content Item to Move](../../../../assets/Select_Content_Item_to_Move_HCL_Content_Composer.png "Select Content Item to Move")
+
+2. A location selector should appear on the screen. Pick the site area to move the content to. After selecting, click the **Move** button to finalize moving of the content item.
+
+    ![Select a site area location and click Move](../../../../assets/Select_Site_Area_to_Move_Content_to_HCL_Content_Composer.png "Select a site area location and click Move")
+
 ## Add Comments
 
 !!!note
