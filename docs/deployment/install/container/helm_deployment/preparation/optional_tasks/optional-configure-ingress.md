@@ -4,9 +4,9 @@ With HAProxy replacing Ambassador in our DX deployment, it much easier to run in
 
 ## Prerequisites
 
-• Kube environment for testing
-• Helm is installed
-• HAproxy deployed on this environment
+- Kube environment for testing
+- Helm is installed
+- HAproxy deployed on this environment
 
 ## Ingress Iplementation
 
