@@ -22,9 +22,9 @@ haproxy:
 • Install an Ingress controller of your choice, this will serve as the entry point to the cluster. The Ingress controller evaluates the rules that you will set on your ingress instance and it also handles redirection. NGINX Ingress Controller is used here as an example. To install a NGIX Ingress on your cluster
 
 ```console
-$ helm upgrade --install ingress-nginx ingress-nginx \
-  --repo https://kubernetes.github.io/ingress-nginx \
-  --namespace dxns
+$ helm upgrade --install ingress-nginx ingress-nginx \ 
+--repo https://kubernetes.github.io/ingress-nginx \ 
+--namespace dxns
 ```
 
 •  Check if the Ingress controller is deployed 
