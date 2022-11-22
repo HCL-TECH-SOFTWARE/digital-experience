@@ -48,7 +48,7 @@ See the [Integrate HCL Unica Discover with HCL Digital Experience](../../build_s
 
 The Content-Security-Policy header is used by modern browsers to enhance the security of HCL Digital Experience site documents or web pages by allowing HCL Digital Experience administrators or developers declare which dynamic resources are allowed to load. With HCL Digital Experience Container Update CF192 and later releases, developers can apply platform support and guidance to update their DX sites to validate trusted sources before rendering pages to end users.
 
-See the [Content Security Policy Help Center](../../deployment/manage/security/content_sec_policy/index.md) topic for more information.
+See the [Content Security Policy Help Center](../../deployment/manage/security/information/integrity/content_sec_policy/index.md) topic for more information.
 
 ## New Digital Experience REST APIs
 

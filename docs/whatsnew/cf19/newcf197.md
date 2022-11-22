@@ -19,13 +19,13 @@ See the [Design Studio (Beta)](https://help.hcltechsw.com/digital-experience/9.
 
 ## Deploy HCL DX CF197 to container platforms using Helm
 
-Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to supported container platforms using Helm. Using a Helm Chart deployment can provide administrators a larger degree of transparency and control in deployment operations. Support for new HCL DX 9.5 CF197 deployments to Red Hat OpenShift, Microsoft Azure Elastic Kubernetes Service \(AKS\) and Amazon Elastic Kubernetes Service (EKS),and ability to update from HCL DX 9.5 version CF196 to CF197 is supported with the Google Kubernetes Engine (GKE) platform.
+Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to supported container platforms using Helm. Using a Helm Chart deployment can provide administrators a larger degree of transparency and control in deployment operations. Support for new HCL DX 9.5 CF197 deployments to Red Hat OpenShift, Microsoft Azure Elastic Kubernetes Service (AKS) and Amazon Elastic Kubernetes Service (EKS),and ability to update from HCL DX 9.5 version CF196 to CF197 is supported with the Google Kubernetes Engine (GKE) platform.
 
 See the [HCL DX 9.5 Helm deployment](../../deployment/install/container/helm_deployment/preparation/index.md) topic for more information.
 
 ## New HCL Digital Experience 9.5 Release Artifacts supporting CICD release processes
 
-The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and automate processes in the development and delivery process. Updates include new release artifact types supporting, Obtain failed Syndication reports for single or multiple items, and delete Digital Asset Management inactive schema from Persistence are provided in CF197.
+The HCL Digital Experience 9.5 DXClient and DXConnect servlet provides developers and administrators an approach to deploy changes or improvements to the HCL Digital Experience platform, and automate processes in the development and delivery process. Updates include new release artifact types supporting, obtain failed Syndication reports for single or multiple items, and delete Digital Asset Management inactive schema from Persistence are provided in CF197.
 
 See the [DXClient and DXConnect tooling supporting CICD release processes](../../extend_dx/development_tools/dxclient/index.md) topic for more information.
 

@@ -1,9 +1,9 @@
 # Unsupported features
 
-!!! important
-    Unsupported features and themes must be removed prior to migration. 
+!!!important
+    Unsupported features and themes must be removed prior to migration.
 
-## Recentlty unsupported features
+## Recently unsupported features
 Newly unsupported features and themes must be removed prior to migration.
 
 |Category|Unsupported|Recommended Action|Effective Date|
