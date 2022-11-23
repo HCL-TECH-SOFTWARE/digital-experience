@@ -6,11 +6,11 @@ This topic provides guidance to update artifacts in HCL Digital Experience conta
 
 In a Kubernetes environment, how can one achieve zero downtime deployments of new artifacts?
 
-In a “traditional” HCL Digital Experience deployment to on-premises platforms such as Windows, AIX, or Linux OS, adding new components such as a new theme, new portlets, new pages, new PZN rules, etc. is typically achieved by first validating these new artifacts in lower “non-production” cells prior to introduction to the production cell or cells. When referring to a “traditional” deployment, that refers to a single cluster in a single cell as depicted in the [HCL DX Roadmap: Production and delivery environment](../install/rm_production_cluster.html).
+In a “traditional” HCL Digital Experience deployment to on-premises platforms such as Windows, AIX, or Linux OS, adding new components such as a new theme, new portlets, new pages, new PZN rules, etc. is typically achieved by first validating these new artifacts in lower “non-production” cells prior to introduction to the production cell or cells. When referring to a “traditional” deployment, that refers to a single cluster in a single cell as depicted in the [HCL DX Roadmap: Production and delivery environment](../../../get_started/plan_deployment/traditional_deployment/roadmaps/rm_install_deployment/rm_clusters/rm_production_cluster.md).
 
 Once validated in non-production cells, the “least risk” topology for new artifacts \(as well as for individual and cumulative fixes\) is to employ a two-cell production environment with either active/active or active/passive access. New artifacts would be deployed into a cell that was “off-line” \(e.g. not in the active load balance\), validating that cell and then moving that cell to the active load balance. Using this process almost always guaranteed a zero-downtime deployment of fixes and artifacts. HCL Digital Experience refers to this topology as the “Gold Standard” topology for business critical deployments.
 
-![](../assets/HCL_DX_High%20Availability_Gold_Standard_topology.jpg "HCL Digital Experience High Availability “Gold Standard” topology")
+![](../../../assets/HCL_DX_High%20Availability_Gold_Standard_topology.jpg "HCL Digital Experience High Availability “Gold Standard” topology")
 
 One could always take more risk and not employ a two-cell HA environment for production. Rather, one could assume that if the new artifacts were proven in several lower environments, the risk of failure in a single cell production environment was very low.
 
@@ -42,7 +42,7 @@ Just like in the “traditional” WAS ND cluster, the lowest risk topology for 
 
 The main difference between deploying HCL DX with WAS ND services to Kubernetes and traditional on-premises platforms is that it is recommended to only allow a single POD of HCL DX to be active in Kubernetes while any configuration changes takes place. The process to deploy new artifacts to a Kubernetes environment mirrors the processes used to deploy those same artifacts to a traditional WAS ND based cluster. All existing deployment tooling is still present and available in the Kubernetes case.
 
-The reason one only wants one POD of the DX deployment active is due to the fact that the \(shared\) database might reflect differences with existing \(older\) PODs if multiple PODs were allowed to be active. Once all changes are complete, one can allow autoscaling of the number of HCL DX PODs back to the “production” number. For DX container autoscaling guidance, see [Customizing the Container Deployment](customizing_container_deployment.html).
+The reason one only wants one POD of the DX deployment active is due to the fact that the \(shared\) database might reflect differences with existing \(older\) PODs if multiple PODs were allowed to be active. Once all changes are complete, one can allow autoscaling of the number of HCL DX PODs back to the “production” number. For DX container autoscaling guidance, see [Customizing the Container Deployment](../../install/container/helm_deployment/overview.md).
 
 Note that during this process, this single HCL DX POD node can remain in the active load balance if one is running a single Kubernetes cluster.
 

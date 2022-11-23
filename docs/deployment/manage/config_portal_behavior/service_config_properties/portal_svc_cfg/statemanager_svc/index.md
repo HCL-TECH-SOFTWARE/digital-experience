@@ -10,13 +10,13 @@ The portal State Manager Service holds the following properties:
 
     This property specifies a list of one or more preprocessors that are used. It can take multiple values.
 
-    **Notes:**
+    !!! note
+        1.  If you want to add your own custom preprocessors in the WebSphere® Integrated Solutions Console, you must first enter the default values in the following sequence and then append your custom preprocessors to the end of the list. The reason is as follows:
+            -   If you specify a value for this parameter, that value overwrites the default value.
+            -   The default value is mandatory. Therefore, you cannot replace it by a different value.
+            -   The following preprocessors must be arranged in order, as for requests they are processed in that order.
+        2.  The required syntax is `(classname (, classname) * ) 1`.
 
-    1.  If you want to add your own custom preprocessors in the WebSphere® Integrated Solutions Console, you must first enter the default values in the following sequence and then append your custom preprocessors to the end of the list. The reason is as follows:
-        -   If you specify a value for this parameter, that value overwrites the default value.
-        -   The default value is mandatory. Therefore, you cannot replace it by a different value.
-        -   The following preprocessors must be arranged in order, as for requests they are processed in that order.
-    2.  The required syntax is `(classname (, classname) * ) 1`.
     The default value is as follows:
 
     ```
