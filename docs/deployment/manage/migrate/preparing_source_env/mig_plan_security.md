@@ -19,7 +19,7 @@ The following excerpt from the wkplc.properties file provides some examples of u
     -   Exclamation point {!}, Hyphen {-}, period {.}, question mark {?}, accent grave {`}, tilde {~}
     -   Open parenthesis {(} and close parenthesis {)}
     -   Open bracket {[} and close bracket {]}
-    -   Underscore {_}, which is the only special character that is allowed in IBM® i
+    -   Underscore {_}
     
     Examples: The following are example user IDs:
 

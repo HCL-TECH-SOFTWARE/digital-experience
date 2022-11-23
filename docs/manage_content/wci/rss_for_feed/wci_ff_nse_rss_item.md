@@ -7,13 +7,7 @@ The following elements are applied at the item level since they contain informat
 |Element parameters:|Details for this element:|
 |-------------------|-------------------------|
 |Allowable Values|This element has one of the following values depending on what happened when the input feed entry was processed:-   **OK**<br>
-The entry was processed completely with no warnings or errors.<br>
--   **WARN**<br>
-The entry was processed completely but one or more warnings were logged.<br>
--   **ERROR**<br>
-One or more error messages were logged. The entry might not have been saved in Web Content Manager.<br>
--   **FAIL**<br>
-The content item could not be saved or updated.<br>|
+The entry was processed completely with no warnings or errors.<br>-   **WARN**<br>The entry was processed completely but one or more warnings were logged.<br>-   **ERROR**<br>One or more error messages were logged. The entry might not have been saved in Web Content Manager.<br>- **FAIL**<br>The content item could not be saved or updated.<br>|
 |Required Attributes|None|
 |Optional Attributes|None|
 |Required sub-elements|None|
@@ -31,10 +25,7 @@ Example:
 |Element parameters:|Details for this element:|
 |-------------------|-------------------------|
 |Allowable Values|Each instance of this element contains the details of a warning or error message.|
-|Required Attributes|-   **level**<br>
-The value of this attribute indicates the severity of the message. Allowable values are: "WARN" and "ERROR".<br>
--   **code**<br>
-This attribute should hold the error code that is associated with the message.<br>|
+|Required Attributes|-   **level**<br>The value of this attribute indicates the severity of the message. Allowable values are: "WARN" and "ERROR".<br>-   **code**<br>This attribute should hold the error code that is associated with the message.<br>|
 |Optional Attributes|None|
 |Required sub-elements|None|
 |Optional sub-elements|None|

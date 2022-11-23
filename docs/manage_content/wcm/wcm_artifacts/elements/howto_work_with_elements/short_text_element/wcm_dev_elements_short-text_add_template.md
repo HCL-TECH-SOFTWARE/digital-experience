@@ -3,6 +3,8 @@ id: wcm_dev_elements_short-text_add_template
 title: Adding a short text element to a template
 ---
 
+# Adding a short text element to a template
+
 Add a short text element to an authoring template when you want a short text element to be used by a set of items that use the same authoring template.
 
 1.  Open or create an authoring template.

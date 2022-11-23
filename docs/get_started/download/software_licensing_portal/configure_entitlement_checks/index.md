@@ -3,7 +3,7 @@
 The [HCL Software License Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344) supports entitlement checking for several HCL Software solutions, including the [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7 offerings](https://blog.hcltechsw.com/digital-experience/introducing-new-hcl-digital-experience-cloud-native-9-5-bundle-with-user-session-pricing/) within the HCL Digital Experience portfolio. This enables customers to track their purchased software entitlement periods, and usage levels. 
 
 ## Overview
--   Beginning with HCL Digital Experience 9.5 Container Update CF207, you must specify certain entitlement check parameters within your [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7](../../../../get_started/product_overview/index.md#hcl-digital-experience-cloud-native) installations to accomplish entitlement checks. If you do not specify these entitlement check parameters, or fail to configure them correctly, then the entitlement check will not pass and will enter the grace period. To learn more about the various entitlement check scenarios, see [HCL Digital Experience Cloud Native 9.5 entitlement check scenarios](entitlement_checks_scenarios.md).
+-   Beginning with [HCL Digital Experience 9.5 Container Update CF207](../../../../whatsnew/cf20/newcf207.md), you must specify certain entitlement check parameters within your [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7](../../../../get_started/product_overview/index.md#hcl-digital-experience-cloud-native) installations to accomplish entitlement checks. If you do not specify these entitlement check parameters, or fail to configure them correctly, then the entitlement check will not pass and will enter the grace period. To learn more about the various entitlement check scenarios, see [HCL Digital Experience Cloud Native 9.5 entitlement check scenarios](entitlement_checks_scenarios.md).
 
 During the grace period, errors are displayed in your server logs. If you encounter these errors, contact HCL Support to resolve the issue. 
 -   For more information on Flexnet user and device management, see [What is the HCL License & Delivery Portal (FlexNet Portal?)](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344) knowledge article on the HCL Customer Support portal.
@@ -16,7 +16,7 @@ The following are the prerequisites for configuring Digital Experience Cloud Nat
 -   Your Digital Experience Cloud Native 9.5 (Tier 1 – 7) entitlements are mapped to your HCL Software License portal instance(s). 
     ![Digital Experience Cloud Native 9.5 (Tier 1 – 7) entitlements](../../software_licensing_portal/_img/DX_cloud_native_entitlements.png)
 -   See the How to check your Entitlements and Map Entitlements sections in the instructions: [What is the HCL Software License & Download Portal?](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344#a8) for guidance to locate and map your entitlements to your deployment servers.
--   You plan to deploy or update to an [HCL Digital Experience 9.5 Container Update CF207]() or higher release. 
+-   You plan to deploy or update to an [HCL Digital Experience 9.5 Container Update CF207](../../../../whatsnew/cf20/newcf207.md) or higher release. 
 
 Review the Architecture that presents the License Manager component of HCL Digital Experience v9.5 Container Update software below.
 
@@ -123,4 +123,6 @@ kubectl logs pod/dx-deployment-license-manager-0 -n dxns
 See the HCL Digital Experience Cloud Native 9.5 entitlement check scenarios for success and error messages and how to manage in the [HCL Digital Experience Cloud Native 9.5 entitlement check scenarios](entitlement_checks_scenarios.md) topic. 
 
 Entitlement checking to ensure the entitlement period for the DX Cloud Native 9.5 part is valid for the purchased term will be initiated at deployment start, upgrade, or configuration change processes. Entitlement checking will also occur once per day for active deployments. 
+
+Refer to [HCL Digital Experience Cloud Native 9.5 Support for Local License Manager](local_license_server_manager.md) topic for additional configurations needed to enable connectivity to a local license server.
 

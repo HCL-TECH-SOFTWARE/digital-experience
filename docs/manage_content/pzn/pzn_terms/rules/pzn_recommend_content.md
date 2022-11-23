@@ -8,7 +8,7 @@ When creating a Recommend Content rule, you specify one of three recommendation 
 
     This method is associated with the LikeMinds Clickstream Engine.
 
--   ****preferences explicitly expressed by the user****
+-   **preferences explicitly expressed by the user**
 
     Use this recommendation method to generate recommendations based on users' ratings of items. This method is associated with the LikeMinds Preference engine.
 
@@ -21,9 +21,8 @@ When creating a Recommend Content rule, you specify one of three recommendation 
     Item affinity rules make use of the LikeMinds transaction data being collected. They offer a method for generating recommendations from a known set of resources \(actually the results of another rule returning the same resource type\).
 
 
-**Notes:**
-
--   Before using Recommend Content rules, check with your system administrator to see which LikeMinds engines are configured and running on the production run-time server.
--   To preview results, the production LikeMinds database must contain data, including items, users, and transactions \(ratings or actions\). The problem of initial data priming is commonly called coldstart.
+!!! note
+    -   Before using Recommend Content rules, check with your system administrator to see which LikeMinds engines are configured and running on the production run-time server.
+    -   To preview results, the production LikeMinds database must contain data, including items, users, and transactions \(ratings or actions\). The problem of initial data priming is commonly called coldstart.
 
 

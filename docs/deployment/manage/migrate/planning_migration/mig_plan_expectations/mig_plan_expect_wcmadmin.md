@@ -5,8 +5,6 @@ In HCL Digital Experience 8.5, the update of the HCL Portal and HCL Web Content 
 For more information about administering HCL Digital Experience, read the *Administering* section of the product documentation.
 
 
-**Related information**  
-
-
-[Administering](../admin-system/administering_parent.md)
+<!-- ???+ info "Related information" 
+    -   [Administering](../admin-system/administering_parent.md) -->
 

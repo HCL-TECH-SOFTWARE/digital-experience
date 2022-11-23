@@ -29,12 +29,11 @@ The REST API for Portal Access Control provides the following URIs:
     `ac:access:oid:<resourceID>`
 
 
-**Notes:**
-
--   Member Collection Feed is defined as a collection.
--   Role Collection Feed is defined as a collection.
--   Member Collection Feed allows the HTTP method `POST`.
--   The available `<roleTypeName>` are listed in the table in the topic [Roles](https://help.hcltechsw.com/digital-experience/8.5/security/sec_roles.html).
+!!! note
+    -   Member Collection Feed is defined as a collection.
+    -   Role Collection Feed is defined as a collection.
+    -   Member Collection Feed allows the HTTP method `POST`.
+    -   The available `<roleTypeName>` are listed in the table in the topic [Roles](https://help.hcltechsw.com/digital-experience/8.5/security/sec_roles.html).
 
 ## Supported HTTP methods
 
@@ -133,6 +132,7 @@ The HTTP `DELETE` method
 -   Returns 200 if successful.
 -   Returns 404 if `resourceID` cannot be resolved.
 -   Returns 400 if
+
     -   `roleTypeName` is not applicable.
     -   The role does not exist.
     -   `principalID` cannot be resolved.
@@ -140,9 +140,9 @@ The HTTP `DELETE` method
 
 ## Member Collection feed and the GET method
 
-URI - `ac:member:<roleTypeName>@oid:<resourceID>`
+URI: `ac:member:<roleTypeName>@oid:<resourceID>`
 
-Parameters -
+Parameters:
 
 -   **start-index=n**
 
@@ -156,12 +156,12 @@ Parameters -
 The HTTP `GET` method
 
 -   Provides all members mapped to a single role for a resource.
--   Equivalent Portal Access Control Java API - accessControlHome.getRoleData\(resourceID\).getMappedPrincipals\(roleType\)
+-   Equivalent Portal Access Control Java API - accessControlHome.getRoleData(resourceID).getMappedPrincipals(roleType)
 -   Returns 200 if successful.
 -   Returns 404 if `resourceID` cannot be resolved.
 -   Returns 400 if `roleTypeName` is not applicable.
 
-The following code is the result of the `GET` method. Each entry element in the member collection contains a single member element that specifies the member identity. The edit link can be used to remove the member from the role \(DELETE on member feed\).
+The following code is the result of the `GET` method. Each entry element in the member collection contains a single member element that specifies the member identity. The edit link can be used to remove the member from the role (DELETE on member feed).
 
 ```
 <atom:entry ...>
@@ -185,9 +185,9 @@ The following code is the result of the `GET` method. Each entry element in the 
 
 ## Member Collection feed and the POST method
 
-URI - `ac:member: <roleTypeName>@oid:<resourceID>`
+URI: `ac:member: <roleTypeName>@oid:<resourceID>`
 
-Parameters - None.
+Parameters: None.
 
 The HTTP `POST` method
 
@@ -200,9 +200,12 @@ The HTTP `POST` method
 
 -   Returns 201 if successful.
 -   Returns 404 if
+
     -   `resourceID` cannot be resolved.
     -   The specified principal cannot be resolved from the distinguished name \(DN\) or email.
+
 -   Returns 400 if
+
     -   `roleTypeName` is not applicable.
     -   Specified principal cannot be resolved from `oid`.
     -   The current user does not have sufficient access rights.
@@ -226,7 +229,7 @@ As an alternative to `ac:id`, which is used to identify a Principal by using the
 
 -   **`ac:DN="uid=wpsadmin,o=defaultWIMFileBasedRealm"`**
 
-    Specifies the principal by using the distinguished name. The type can be user, group, or virtual \(for virtual principals\), where user is the default. Valid Virtual Principals are the ones defined in the following Javadoc: com.ibm.portal.um.PumaEnvironment.VirtualPrincipalNames and are currently all authenticated portal users, all portal user groups, and anonymous portal user.
+    Specifies the principal by using the distinguished name. The type can be user, group, or virtual (for virtual principals), where user is the default. Valid Virtual Principals are the ones defined in the following Javadoc: com.ibm.portal.um.PumaEnvironment.VirtualPrincipalNames and are currently all authenticated portal users, all portal user groups, and anonymous portal user.
 
 -   **`ac:email="wpsadmin@de.ibm.com"`**
 
@@ -235,9 +238,9 @@ As an alternative to `ac:id`, which is used to identify a Principal by using the
 
 ## Role feed and the GET method
 
-URI - `ac:role:<roleTypeName>@oid:<resourceID>`
+URI: `ac:role:<roleTypeName>@oid:<resourceID>`
 
-Parameters
+Parameters:
 
 -   **resolve-membership**
 
@@ -248,11 +251,13 @@ The HTTP `GET` method
 
 -   Returns information about a single role available for given resource.
 -   Role is only available if at least one principal is mapped to it, otherwise returns 404.
--   Equivalent Portal Access Control Java API - accessControlHome.getRoleData\(resourceID\).getRole\(RoleType\).
+-   Equivalent Portal Access Control Java API - accessControlHome.getRoleData(resourceID).getRole(RoleType).
 -   Returns 200 if successful.
 -   Returns 404 if
+
     -   `resourceID` cannot be resolved.
     -   The role for specified `roleTypeName` is not available.
+
 -   Returns 400 if `roleTypeName` is not applicable.
 
 The following is the result of the `GET` method:
@@ -292,6 +297,7 @@ Parameters -
     -   type=<roleTypeName\> to return the specified role, if available.
     -   inUse to return available roles. This value is the default value.
     -   all to return all applicable role types.
+
 -   **start-index=n**
 
     Specifies that the n-th member of the role is the first one in the result list.
@@ -392,9 +398,9 @@ The following is the result of the `GET` method:
 
 ## Resource Config feed and the PUT method
 
-UID - `ac:resourceconfig:oid:<resourceID>`
+UID: `ac:resourceconfig:oid:<resourceID>`
 
-Parameters
+Parameters:
 
 -   **mode**
 
@@ -406,8 +412,10 @@ Parameters
 The HTTP `PUT` method
 
 -   Updates the following resource configurations:
+
     -   Owner
     -   Role blocks
+
 -   Equivalent Portal Access Control Java API
 
     ```
@@ -420,7 +428,7 @@ The HTTP `PUT` method
 
 The `PUT` payload for the Resource Config feed is as follows
 
-URI - `ac:resourceconfig:oid:<resourceID>`
+URI: `ac:resourceconfig:oid:<resourceID>`
 
 The payload must be as follows
 
@@ -444,7 +452,7 @@ As an alternative to `ac:id`, which is used to identify the owner by using the `
 
 -   **`ac:DN="uid=wpsadmin,o=defaultWIMFileBasedRealm" ac:type=user`**
 
-    Specifies the principal by using the distinguished name. The type can be user, group, or virtual \(for virtual principals\), where user is the default.
+    Specifies the principal by using the distinguished name. The type can be user, group, or virtual (for virtual principals), where user is the default.
 
 -   **`ac:email="wpsadmin@de.ibm.com"`**
 
@@ -453,9 +461,9 @@ As an alternative to `ac:id`, which is used to identify the owner by using the `
 
 ## Allowed Access feed and the GET method
 
-UID - `ac:access:oid:<resourceID>`
+UID: `ac:access:oid:<resourceID>`
 
-Parameters - None.
+Parameters: None.
 
 The HTTP `GET` method
 

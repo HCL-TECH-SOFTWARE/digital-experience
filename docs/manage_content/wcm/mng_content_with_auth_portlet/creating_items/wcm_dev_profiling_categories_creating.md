@@ -3,15 +3,15 @@ id: wcm_dev_profiling_categories_creating
 title: Creating a category
 ---
 
-
+# Creating a category
 
 
 Categories are used to build a taxonomy.
 
-!!! note
+!!!note
     At least one taxonomy must exist before you can create a category.
 
-To create a category, open the applications menu and go to **Content** \> **Web Content Management** and then click **New** \> **Category**.
+To create a category, open the applications menu and go to **Content > Web Content Management** and then click **New > Category**.
 
 
 1.  [Entering identification information](wcm_dev_items_id.md)  

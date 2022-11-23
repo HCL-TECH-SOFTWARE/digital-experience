@@ -7,7 +7,6 @@ Before you begin:
 -   The custom table spaces must exist prior to the execution of database transfer.
 -   To see which table spaces can be customized in each domain, refer to the wp_profile_root/PortalServer/config/tablespaces/dbdomain.space_mapping.properties file.
 -   For details on creating table spaces refer to the documentation for the database.
--   When using IBM® DB2 Universal Database™ for z/OS® as a data store, HCL Portal requires that its indexes are not padded. Therefore, you must set the DSNZPARM parameters to RETVLCFK=NO or PADIX=NO, or both.
 
 If custom table spaces are assigned, each must be assigned explicitly. The default table spaces can be used to contain database objects; however the name of the default table space must be specified in the corresponding mapping files. This applies to all database domains that are transferred in a single database transfer.
 

@@ -10,7 +10,7 @@ If you want to set up your own search collection for searching your portal site,
 
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Customizing your search collection for secured portal pages](../../searching_local_portal/cfg_search_portal_site/srtconfgownsrchsec.md)
     - [Resetting the default search collection](../../portal_search/administer_portal_search/searching_crawling_portal_sites/srtcrtprtlstecllc.md)
     - [User roles and access](../../../../deployment/manage/security/controlling_access/wcm_security/wcm_cms_access/wcm_security_items.md)

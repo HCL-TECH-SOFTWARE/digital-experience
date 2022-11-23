@@ -11,32 +11,32 @@ To give users more insight on how to use Experience API, the following samples a
     1.  Log in to HCL Digital Experience 9.5 using `http://<PORTAL_HOST>:<PORTAL_PORT>/wps/portal`.
     2.  Go to **Web Content Authoring**.
 
-        **Note:**
+        !!! note
+            -   If you have Practitioner Studio enabled, navigate to **Web Content \> Authoring**.
+            -   If you do not have Practitioner Studio configured in your Digital Experience 9.5 deployment, navigate to **Content \> Authoring**.
 
-        -   If you have Practitioner Studio enabled, navigate to **Web Content \> Authoring**.
-        -   If you do not have Practitioner Studio configured in your Digital Experience 9.5 deployment, navigate to **Content \> Authoring**.
     3.  From **Authoring**, click on the **Web Content \> Content \> Articles**. A list of articles is displayed.
     4.  Click on any article and select **Properties \> Content Properties**.
     5.  Look for UUID value. If not available click on **More \> Show More Fields**.
     6.  Copy the UUID value.
     Use the UUID obtained in the previous process and use it to access content and logout flow:
 
-    1.  Open HCL Experience API explorer using `http://<HOST>:<PORT>/dx/api/core/v1/explorer` \(e.g. 'http://127.0.0.1:3000/dx/api/core/v1/explorer`\).
-    2.  Execute Login API endpoint `auth/login` by entering a valid username and password.
-    3.  Once the login is successful, execute the following content ID endpoint to fetch content based on the content ID:
+        1.  Open HCL Experience API explorer using `http://<HOST>:<PORT>/dx/api/core/v1/explorer` (e.g. 'http://127.0.0.1:3000/dx/api/core/v1/explorer`).
+        2.  Execute Login API endpoint `auth/login` by entering a valid username and password.
+        3.  Once the login is successful, execute the following content ID endpoint to fetch content based on the content ID:
 
-        ```
-        /{accessType}/webcontent/contents/{contentId}
-        ```
+            ```
+            /{accessType}/webcontent/contents/{contentId}
+            ```
 
-    4.  Pass the UUID value copied earlier as `contentID`. The json in the request body will need to be update to have a correct content name. For example:
+        4.  Pass the UUID value copied earlier as `contentID`. The json in the request body will need to be update to have a correct content name. For example:
 
-        ```
-        {"contentName": "Sample Article"}
-        ```
+            ```
+            {"contentName": "Sample Article"}
+            ```
 
-    5.  Verify if the content payload is received. It should contain information about the article you wanted to access.
-    6.  To log out of HCL Experience API, execute the Logout API command.
+        5.  Verify if the content payload is received. It should contain information about the article you wanted to access.
+        6.  To log out of HCL Experience API, execute the Logout API command.
 
 ## Sample scripts: Login, Get roles, Get roles with authentication
 
@@ -64,7 +64,7 @@ See example result:
 
         ![Experience API login script](./assets/ExperienceAPI_login_script.png)
 
-    2.  **Get Roles script \(Without authentication\)**
+    2.  **Get Roles script (Without authentication)**
 
         ```
         query{
@@ -79,7 +79,7 @@ See example result:
 
         ![Experience API get roles script without authorization](./assets/ExperienceAPI_get_roles_script.png)
 
-    3.  **Get Roles script \(With authentication\)** - Refer to the screenshot below to retrieve the cookie and pass using the HCL Experience API.
+    3.  **Get Roles script (With authentication)** - Refer to the screenshot below to retrieve the cookie and pass using the HCL Experience API.
 
         ```
         query{

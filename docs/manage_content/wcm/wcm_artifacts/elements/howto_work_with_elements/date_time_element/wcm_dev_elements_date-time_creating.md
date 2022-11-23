@@ -2,7 +2,7 @@
 
 You create a date and time component when you want to reuse a date and time component in multiple places in your website.
 
-To create a date and time component, open the applications menu and go to **Content** \> **Web Content Management** and then click **New** \> **Component** \> **Date and Time**.
+To create a date and time component, open the applications menu and go to **Content > Web Content Management** and then click **New > Component > Date and Time**.
 
 1.  [Entering identification information](../../../../../wcm/mng_content_with_auth_portlet/creating_items/wcm_dev_items_id.md)  
 Specify identification information for the current item, including the name and title for the item. The identification section is common to all item forms.

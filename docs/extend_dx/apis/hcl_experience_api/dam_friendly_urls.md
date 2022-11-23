@@ -5,6 +5,7 @@ This section describes the DAM API that allows you to create a friendly URL for 
 !!! note
     -   Starting with CF207, the collection unique-name option is added, which can be used in the friendly URLs instead of the collection IDs.
     -   By default, friendly URL feature is disabled. For instructions on how to enable and configure the friendly URLs, refer [Configure Friendly URLs](../../../manage_content/digital_assets/configuration/configure_dam_friendlyUrl.md).
+    -   A section called "URLs" has been added to the asset's inspector panel to allow users to copy the friendly URL & API URL
 
 !!!important "**Important:**"
     -   To set friendly URLs, assets must always have a unique name in a [collection](../../../manage_content/digital_assets/usage/managing_dam/manage_collections.md).
@@ -67,9 +68,11 @@ Before doing the steps in this section, you must have the following information 
 
 1.  Open the DAM API explorer.
 2.  From the `CollectionController` or `RenditionController`, select the API to use and provide the `collection_id`, `item_id`, or `rendition_id`.
+
     -   For the collection ID field, you can use the `collection_id` or the collection unique-name.
     -   For the media asset ID field, you can use the `item_id` or the file name of a specified media file.
     -   For the rendition ID field, you can use the `rendition_id` or the rendition type.
+
 3.  Click **Execute** to run the API.
 4.  Check the request API URL looks similar to the following:
 
@@ -78,15 +81,15 @@ Before doing the steps in this section, you must have the following information 
     ```
 
 5.  In the response data, check that the binary, thumbnail, and self URLs have friendly URLs similar to the following:
-    -   ```
+     ```
 binaryUrl: /collections/collection-one/items/car.jpg/renditions/Desktop?binary=true.
 ```
 
-    -   ```
+    ```
 thumbnailUrl: /collections/collection-one/items/car.jpg/renditions/Desktop?thumbnail=true.
 ```
 
-    -   ```
+    ```
 self: /collections/collection-one/items/car.jpg/renditions/Desktop.
 ```
 
@@ -95,17 +98,18 @@ self: /collections/collection-one/items/car.jpg/renditions/Desktop.
 
 If an asset happens to have the same name with another asset in a collection, a notification is displayed in the **Information** panel.
 
-![](../../../images/information_panel_rename_notification.png "Notification to rename an asset")
+![Notification to rename an asset](../../../images/information_panel_rename_notification.png)
 
 You can click **Rename** from the notification and provide a unique name.
 
-![](../../../images/dialog_rename_field.png "Rename asset dialog")
+![Rename asset dialog](../../../images/dialog_rename_field.png)
 
 ## What is collection unique-name?
 Collection unique-names are the unique identifier for each collection which can be used in friendly url instead of collection UUID to access DAM assets. Collection unique-names supports all languages as per existing system. Collection unique-name does not support any URL reserved characters(e.g. "?!#$&%'*+/;:,=@()\[]").
 
 ## How collection unique-names are generated?
 - While creating a collection, the user has a provision to enter a custom collection unique-name.
+
 ![](../../../images/CreateCollection_friendlyUrl-1.png "Create collection popup")
 ![](../../../images/CreateCollection_friendlyUrl-2.png "Create collection popup")
 
@@ -123,11 +127,13 @@ When creating a collection, DAM checks for any duplication of the unique-name an
 ![](../../../images/CreateCollectionError_friendlyUrl_1.png "Create collection duplicate unique name")
 ![](../../../images/CreateCollectionError_friendlyUrl_2.png "Create collection unsupported unique name")
 
+## Copying friendly URLs for assets
+Users can copy the friendly URL and API URL of an asset from the URLs section of the asset's inspector panel
+![](../../../images/Copy_friendlyUrl.png "Copy friendly URL")
 
-<!-- **Related information**  
-[Using friendly URLs](../admin-system/mp_friendly_url.md)
 
-[HCL Digital Asset Management](../digital_asset_mgmt/digital_asset_mgmt_overview.md)
-
-[Manage collections](../digital_asset_mgmt/manage_collections.md)
- -->
+???+ info "Related information"
+    - [Using friendly URLs](../../../deployment/manage/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/mp_friendly_url.md)
+    - [HCL Digital Asset Management](../../../manage_content/digital_assets/index.md)
+    - [Manage collections](../../../manage_content/digital_assets/usage/managing_dam/manage_collections.md)
+    

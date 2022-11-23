@@ -71,5 +71,5 @@ Code sample
  
 ```
 
-**Parent topic:**[Dialog chaining and nesting](../screenflow/dlg_chng_nstng.md)
+
 

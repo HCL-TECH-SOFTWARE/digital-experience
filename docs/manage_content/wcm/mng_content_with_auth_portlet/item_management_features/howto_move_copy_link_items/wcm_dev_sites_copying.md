@@ -3,7 +3,7 @@ id: wcm_dev_sites_copying
 title: Copying a site area
 ---
 
-
+# Copying a site area
 
 
 As your site framework evolves, you are required to edit your site framework by copying site areas from one section of your site framework to another. You use the **copy** feature to copy a site area in the site framework.

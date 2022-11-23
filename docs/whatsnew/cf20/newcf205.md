@@ -14,7 +14,7 @@ The HCL Digital Experience 9.5 Container Update and CF205 release includes the f
 -   The Ring API strictly enforces the case on query parameters
 -	New complementary DX training modules in the HCL Software Academy, and more
 
-Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=9bd40c1f1bbf5cd0534c4159cc4bcbbd#CF17){:target="_blank"} and [HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){:target="_blank"} for the list of software fixes, including Container Update releases. 
+Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases. 
 
 For the HCL DX 9.5 Container Update CF205 image list, see the [Container Image listings](../../deployment/install/docker/index.md) topic. 
 

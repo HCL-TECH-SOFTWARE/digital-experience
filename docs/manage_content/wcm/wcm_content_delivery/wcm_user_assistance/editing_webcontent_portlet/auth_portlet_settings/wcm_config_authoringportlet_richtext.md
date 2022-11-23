@@ -12,6 +12,10 @@ You can configure HCL Web Content Manager to use different editors for rich text
 
     Select this option to use the Textbox.io editor. Browser pop-up windows must be enabled to use this editor.
 
+    **Enhanced Editor**
+
+    Select this option to use the TinyMCE editor. Browser pop-up windows must be enabled to use this editor.
+
 -   **EditLive! Java Editor**
 
     Select this option to use the EditLive! Java editor. This editor requires a working Java runtime environment on the client computer. Browser pop-up windows must be enabled to use this editor.

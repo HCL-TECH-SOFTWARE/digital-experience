@@ -1,7 +1,5 @@
 # Item management features
 
-
-
 Web Content Manager includes a range of features that help you manage the web content items that are used in your system.
 
 -   **[Web content folders](wcm_dev_folders.md)**  

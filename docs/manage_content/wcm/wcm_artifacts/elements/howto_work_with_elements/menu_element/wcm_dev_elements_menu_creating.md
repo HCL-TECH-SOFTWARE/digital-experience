@@ -1,14 +1,14 @@
 ---
 id: wcm_dev_elements_menu_creating
-title: Creating a Menu Component
+title: Creating a menu component
 ---
 
-
+# Creating a menu component
 
 
 You can use a menu element only by creating a menu component. You cannot add a menu element to authoring templates, site areas, or content items.
 
-To create a menu component, open the applications menu and go to **Content** \> **Web Content Management** and then click **New** \> **Component** \> **Menu**.
+To create a menu component, open the applications menu and go to **Content > Web Content Management** and then click **New > Component > Menu**.
 
 1.  [Entering identification information](../../../../../wcm/mng_content_with_auth_portlet/creating_items/wcm_dev_items_id.md)  
 Specify identification information for the current item, including the name and title for the item. The identification section is common to all item forms.

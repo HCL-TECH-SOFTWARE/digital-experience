@@ -6,6 +6,6 @@ Portal resources, such as pages, components or portlet instances are kept persis
 
 The delayed deletion of pages is performed by a cleanup service.
 
-**Related information**  
-[Creating and configuring search collections](../../../../build_sites/search/portal_search/administer_portal_search/setup_search_collections/srrcreatconfig.md)<br>
-[Managing the content sources of a search collection](../../../../build_sites/search/portal_search/administer_portal_search/setup_search_collections/mng_content_sources_search_collections/index.md)
+???+ info "Related information"  
+    -   [Creating and configuring search collections](../../../../build_sites/search/portal_search/administer_portal_search/setup_search_collections/srrcreatconfig.md)
+    -   [Managing the content sources of a search collection](../../../../build_sites/search/portal_search/administer_portal_search/setup_search_collections/mng_content_sources_search_collections/index.md)

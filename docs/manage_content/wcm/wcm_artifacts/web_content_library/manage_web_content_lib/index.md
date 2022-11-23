@@ -2,7 +2,8 @@
 
 As an administrator you need to periodically assist content managers with library maintenance, such as disabling or deleting a library.
 
-**Important:** Some library tasks can reduce the performance of your server while they are running. Therefore, schedule library maintenance to occur during off-peak periods when the least number of users are accessing a library.
+!!!important
+    Some library tasks can reduce the performance of your server while they are running. Therefore, schedule library maintenance to occur during off-peak periods when the least number of users are accessing a library.
 
 -   **[Creating web content libraries](wcm_config_wcmlibraries.md)**  
 Administrator users can create web content libraries in the HCL Digital Experience administration portlet.

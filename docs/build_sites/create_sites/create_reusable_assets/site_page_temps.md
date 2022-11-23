@@ -28,5 +28,5 @@ Page templates are created in a specific area of the portal hierarchy located in
 
 ???+ info "Related information" 
     - [Transferring content associations to the Portal Site library](../../../manage_content/wcm/wcm_artifacts/managed_pages/cfg_managed_pages/wcm_config_mngpages_transfer.md)
-    - [Creating page templates](../../../extend_dx/development_tools/portal_admin_tools/portal_user_interface/managing_pages/managing_page_properties/h_mp_create_page_templates.md)
+    - [Creating page templates](../../../deployment/manage/portal_admin_tools/portal_user_interface/managing_pages/managing_page_properties/h_mp_create_page_templates.md)
 

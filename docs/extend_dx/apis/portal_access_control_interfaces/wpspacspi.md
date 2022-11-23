@@ -1,6 +1,6 @@
 # Portal Access Control SPI
 
-The Portal Access Control \(PAC\) System Programming Interface \(SPI\) lets you directly retrieve and modify access control information for portal resources.
+The Portal Access Control (PAC) System Programming Interface (SPI) lets you directly retrieve and modify access control information for portal resources.
 
 You can retrieve the following main service interfaces through the `AccessControlHome` interface.
 
@@ -38,7 +38,8 @@ You can use the **configuration model** to retrieve the hierarchy of protected r
 
     The RoleData provides read access to the role data of a single resource, such as role assignments.
 
-    **Note:** For performance reasons, make requests of the form "Is user x allowed to perform operation y on resource z ?" by using AccessControlRuntimeModel or AccessControlGlobalRuntimeModel, rather than by asking for explicit role assignments using the RoleData interface.
+    !!! note
+        For performance reasons, make requests of the form "Is user x allowed to perform operation y on resource z ?" by using AccessControlRuntimeModel or AccessControlGlobalRuntimeModel, rather than by asking for explicit role assignments using the RoleData interface.
 
 -   **com.ibm.portal.ac.RoleDataController**
 

@@ -3,6 +3,8 @@ id: wcm_dev_items_id
 title: Entering identification information
 ---
 
+# Entering identification information
+
 Specify identification information for the current item, including the name and title for the item. The identification section is common to all item forms.
 
 1.  Type the name of the item in the **Name** field. The name of site areas and content items are used to construct the URL path for those items. Component names are used when components are referenced in web content tags.

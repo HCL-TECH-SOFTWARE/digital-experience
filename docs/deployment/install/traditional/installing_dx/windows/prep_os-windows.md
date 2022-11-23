@@ -2,10 +2,13 @@
 
 Prepare the operating system to ensure a successful HCL Digital Experience installation.
 
+## Procedure
+
 1.  Check that the system login user ID you plan to use during installation has the following permissions and rights:
 
     -   The user ID must exist before the installation.
     -   The user ID must belong to the Windows™ local Administrators group.
+
 2.  Determine whether a user account is a member of the Administrators group:
 
     1.  Click **Start > Programs* > Administrative Tools > Computer Management**.
@@ -20,10 +23,10 @@ Prepare the operating system to ensure a successful HCL Digital Experience insta
 
     !!!note
         If you exceed the 259 maximum character length, you might receive one of the following error messages during configuration or in the IBM® Installation Manager log files:
+        -   The input line is too long.
+        -   The syntax of the command is incorrect.
+        -   The file name is too long.
 
-    -   The input line is too long.
-    -   The syntax of the command is incorrect.
-    -   The file name is too long.
     1.  Use a short installation path.
 
         For example, use C:\\WebSphere instead of C:\\Program Files\IBM\WebSphere

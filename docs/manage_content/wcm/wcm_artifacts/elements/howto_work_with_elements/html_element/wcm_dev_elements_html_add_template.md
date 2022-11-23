@@ -3,7 +3,7 @@ id: wcm_dev_elements_html_add_template
 title: Adding an HTML element to a template
 ---
 
-# Adding an HTML Element to a Template
+# Adding an HTML element to a template
 
 You add an HTML element to an authoring template when you want the HTML element to be used by a set of items that use the same authoring template.
 

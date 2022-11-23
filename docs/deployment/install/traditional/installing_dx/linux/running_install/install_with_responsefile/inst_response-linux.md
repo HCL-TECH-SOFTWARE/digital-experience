@@ -4,6 +4,8 @@ Use IBM Installation Manager to record a response file based on your environment
 
 You can also use the console mode to generate a response file. Go to [Installing HCL Digital Experience in Linux using the console](../../running_install/inst_console-linux.md) for more information. After you review the summary information, enter G to generate a response file instead of I to install.
 
+## Procedure
+
 1.  Start all servers and applications that require a port number to avoid port conflicts when you install HCL Portal. If you are installing multiple copies of HCL Digital Experience on your server, start the existing Configuration Wizard servers.
 
     !!!note
@@ -110,7 +112,7 @@ You can also use the console mode to generate a response file. Go to [Installing
 16. If you selected the **Portal Server Profile** package, click **Enter the Administrator user ID and password for the Portal Server**. Then, select either the **Standard** or **Advanced** configuration mode and then enter the parameter details for the selected configuration mode.
 
     !!!note
-        Select **Advanced** if you want to specify Uniform Resource Identifier \(URI\) information that is specific to your company.
+        Select **Advanced** if you want to specify Uniform Resource Identifier (URI) information that is specific to your company.
 
 17. Confirm the Summary information and then click **Install**.
 

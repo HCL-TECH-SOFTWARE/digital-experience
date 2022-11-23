@@ -1,6 +1,5 @@
 # Managing content with the authoring portlet
 
-
 You use the web content authoring portlet to create and manage web content items such as site areas, content items, authoring templates, presentation templates, components, categories, folders, projects, and workflow items.
 
 -   **[Managing items by using the authoring portlet](../mng_content_with_auth_portlet/mng_items_using_authoring_portlet/index.md)**  

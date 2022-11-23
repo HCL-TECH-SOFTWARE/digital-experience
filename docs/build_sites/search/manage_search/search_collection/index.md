@@ -38,13 +38,13 @@ To view the status of the search collection, click the collection name in the li
 !!! note
     If you delete the search collection before an upgrade to a higher version of HCL, make sure you export the search collection for later import before you delete it. For details, see *Migrating search collections*.
 
-<!---
+
 -   **[Creating a search collection](crting_srch_coll.md)**  
 Create a search collection for your search service.
 -   **[Importing and exporting search collections](import_export_srch_coll.md)**  
 You can export search collections from a source portal and import them into a target portal with the Import and Export Collection option. When you export and import a search collection, you are exporting and importing the configuration information and not the actual content from the search index. You might want to export or import verified search collections from a test portal to a production portal; from a local portal to a configuration with remote search; from a single portal to a portal cluster environment; or to stage your portal to production by using the Release Builder. The export and import operations are beneficial when you upgrade to software levels that are not compatible with the data storage format of older versions of the software.
 -   **[Manage the content sources of a search collection](mng_cntnt_source.md)**  
 To work with the content sources of a search collection, click the collection name in the list of search collections. Manage Search lists the Content Sources and the Search collection status information of the selected search collection. A search collection can be configured to cover more than one content source. From the Content Sources window, you can refresh, view status, and configure schedulers and crawlers for a specific content source.
--   **[Creating a content source](nw_cntnt_src.md)**  
-When you create a new content source for a search collection, that content source is crawled and the search collection is populated with documents from that content source. You can determine where the index crawls and what information it fetches. --->
+-   **[Creating a content source](../search_collection/creating_content_source/index.md)**  
+When you create a new content source for a search collection, that content source is crawled and the search collection is populated with documents from that content source. You can determine where the index crawls and what information it fetches.
 

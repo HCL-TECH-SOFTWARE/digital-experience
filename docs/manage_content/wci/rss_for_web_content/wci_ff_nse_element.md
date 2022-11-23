@@ -229,39 +229,12 @@ Example:
     -   ExternalLink: a URL.<br>
     -   ManagedContent: the GUID of an existing Web Content Manager item.<br>
     -   ExistingLink: the GUID of an existing link component.<br>|
-|Optional sub-elements|-   **linkText**
-
-This sub-element allows the feed producer to specify what is rendered between the `<a href="">` and `</a>` portions of the anchor tag. Possible values include:
-
-    -   A plain text string
-    -   A string of HTML markup that is either entity-encoded or enclosed in a CDATA tag
-    -   The GUID of a feed entry that describes an image component
-A required type attribute indicates which of the previous value types to use. It can be set to "text", "html", or "imageGuid".
-
-If the linkText sub-element is not included in the feed, the link text default to the value set in either "ExternalLink", "ManagedContent" or "ExistingLink".
-
--   **linkDescription**
-
-This sub-element provides a mechanism to specify a description for the link element. If this sub-element is not present, the description on the link element defaults to the value of the description of the site area or content item.
-
--   **linkTarget**
-
-The sub-element is used to set the target browser window where the link is displayed when it is clicked. Allowable values are: "none", "\_blank", "\_top", "\_self", "\_parent", and "\{NEW\_WINDOW\_NAME\}". If this element is not present in the feed the link target defaults to "none" meaning that the link will open in the same browser window as the page containing it.
-
--   **queryString**
-
-If present, the value of this sub-element is appended to the generated HREF of the link. This value must be encapsulated in a CDATA tag to prevent parsing problems.
-
--   **additionalAttributes**
-
-The value of this sub-element is inserted into the `<a>` tag as extra HTML attributes.
-
--   **allowClear**
-
-This sub-element controls whether the value in the link element can be deleted. It must be set to either "true" or "false". It defaults to "true" if this element is not present in the feed.
-
-
-|
+|Optional sub-elements|-   **linkText** <br>This sub-element allows the feed producer to specify what is rendered between the `<a href="">` and `</a>` portions of the anchor tag. Possible values include: <br>
+    -   A plain text string <br>
+    -   A string of HTML markup that is either entity-encoded or enclosed in a CDATA tag <br>
+    -   The GUID of a feed entry that describes an image component <br>
+A required type attribute indicates which of the previous value types to use. It can be set to "text", "html", or "imageGuid". <br>
+If the linkText sub-element is not included in the feed, the link text default to the value set in either "ExternalLink", "ManagedContent" or "ExistingLink". <br>-   **linkDescription** <br>This sub-element provides a mechanism to specify a description for the link element. If this sub-element is not present, the description on the link element defaults to the value of the description of the site area or content item. <br>-   **linkTarget** <br>The sub-element is used to set the target browser window where the link is displayed when it is clicked. Allowable values are: "none", "\_blank", "\_top", "\_self", "\_parent", and "\{NEW\_WINDOW\_NAME\}". If this element is not present in the feed the link target defaults to "none" meaning that the link will open in the same browser window as the page containing it. <br>-   **queryString** <br>If present, the value of this sub-element is appended to the generated HREF of the link. This value must be encapsulated in a CDATA tag to prevent parsing problems. <br>-   **additionalAttributes** <br>The value of this sub-element is inserted into the `<a>` tag as extra HTML attributes. <br>-   **allowClear** <br>This sub-element controls whether the value in the link element can be deleted. It must be set to either "true" or "false". It defaults to "true" if this element is not present in the feed.|
 
 -   **Simple Link to external URL for IBM.com**
 
@@ -321,29 +294,10 @@ This sub-element controls whether the value in the link element can be deleted. 
 |Applies to item types|Number components, site areas, and content items|
 |Required for item types|Number components.|
 |Allowable Values|A numerical value to be stored in a number element.|
-|Required Attributes|-   **name**
-
-The value of this attribute must match the name of an existing number element in a site area or content item.
-
-
-|
+|Required Attributes|-   **name** <br>The value of this attribute must match the name of an existing number element in a site area or content item.|
 |Optional Attributes|None|
-|Required sub-elements|-   **type**
-
-The value of this sub-element must be "number". This value is not case-sensitive.
-
--   **value**
-
-A numerical value to be stored in a number element.
-
-
-|
-|Optional sub-elements|-   **format**
-
-This allows the feed producer to specify the format for the number element. For example, if a value of "integer" is specified, then only data in the format of whole numbers are imported.
-
-
-|
+|Required sub-elements|-   **type** <br>The value of this sub-element must be "number". This value is not case-sensitive. <br>-   **value** <br>A numerical value to be stored in a number element.|
+|Optional sub-elements|-   **format** <br>This allows the feed producer to specify the format for the number element. For example, if a value of "integer" is specified, then only data in the format of whole numbers are imported.|
 
 Example:
 
@@ -365,25 +319,8 @@ Example:
 |Required Attributes|-   **name**<br>The value of this attribute must match the name of an existing option selection element in a site area or content item.|
 |Optional Attributes|None|
 |Required sub-elements|-   **type**<br>The value of this sub-element must be "option". This value is not case-sensitive.|
-|Optional sub-elements|-   **optionType**<br>
-This is used to define the type of option selection element.
-
-    -   Specify `user` when referencing from a list of user-defined options.
-    -   Specify `taxonomy` when referencing options from an existing taxonomy.
-You can only specify 1 option type per option selection element. If no option type is defined, "user" will be used by default.<br>-   **selectedCategory**<br>
-
-This is used with the option type of "taxonomy" and is used to specify the path to a category you want to use in the option selection element. You can use as many selectedCategory elements as you require.<br>
-
-If the taxonomy exists in a different library from the option selection element, you can also specify the library name. For example:<br>
-
-    ```
-<ibmwcm:selectedCategory library="shared">
-Days/Monday</ibmwcm:selectedCategory>
-    ```
-<br>
-You must specify the name of each category and taxonomy you want to reference. If they do not exist, they are created when the feed is processed.<br>
--   **selectedOption**<br>
-This is used with the option type of "user" and is used to specify a list of user-defined options. You can use as many selectedOption elements as you require.|
+|Optional sub-elements|-   **optionType**<br>This is used to define the type of option selection element. <br>-   Specify `user` when referencing from a list of user-defined options. <br> -   Specify `taxonomy` when referencing options from an existing taxonomy. <br> You can only specify 1 option type per option selection element. If no option type is defined, "user" will be used by default.<br>-   **selectedCategory**<br>This is used with the option type of "taxonomy" and is used to specify the path to a category you want to use in the option selection element. You can use as many selectedCategory elements as you require.<br>If the taxonomy exists in a different library from the option selection element, you can also specify the library name. For example:<br> <pre> \``` <br><ibmwcm:selectedCategory library="shared"> <br>Days/Monday</ibmwcm:selectedCategory> <br>    ```<br>
+<br>You must specify the name of each category and taxonomy you want to reference. If they do not exist, they are created when the feed is processed<br>-   **selectedOption**<br>This is used with the option type of "user" and is used to specify a list of user-defined options. You can use as many selectedOption elements as you require.|
 
 -   **Example 1:**
 
@@ -497,8 +434,7 @@ Example:
 |Required sub-elements|-   **type**<br>
 The value of this sub-element must be "styleSheet". This value is not case-sensitive.<br>
 -   **source**<br>
-A URL that points to a CSS file that is uploaded into the stylesheet component.
-|
+A URL that points to a CSS file that is uploaded into the stylesheet component.|
 |Optional sub-elements|-   **format**<br>
 This sub-element is used to specify the type of the stylesheet. Valid options are: "preferred", "alternate", and "persistent". If this sub-element is not present in the feed, or if any value other than the previous values is specified, the type will default to "preferred".<br>
 -   **mediaType**<br>

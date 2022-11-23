@@ -41,23 +41,9 @@ A called dialog can start only by triggering one of its start transitions and ca
 
 ```
 
--   **[Valid and invalid definitions](../screenflow/vld_invld_df.md)**  
-Whether you start a dialog in a chained or a nested fashion, the dialogs can be controlled through an attribute TYPE. The attribute TYPE is assigned to the transition-endpoint element. Valid values include CHAINED and NESTED. If you do not specify the attribute, the default attribute value CHAINED is applied.
--   **[Multiple start transitions](../screenflow/mtpl_strt_trnstsn.md)**  
-In case the called dialog has multiple start transitions that can be triggered by the emission of an event, the start transition that needs to be triggered can be controlled. To control which of the potentially matching start transitions must be triggered, an attribute ENTRY-POINT is assigned to the transition-endpoint element that references the dialog to be called.
--   **[Incoming transitions](../screenflow/incmng_trnstns.md)**  
-When the transitions return from the called dialog to the calling dialog, the incoming transitions can control how the transitions must continue.
--   **[Multiple outgoing transitions](../screenflow/mltpl_outgng_trnstns.md)**  
-When the calling dialog has multiple outgoing transitions from which the called dialog can be started, you must define how the transition continues. When you return from the called dialog, you must define that the continuation of transitions within the calling dialog differs. The continuation of transitions differs depending on where you exited the calling dialog.
 
-**Parent topic:**[Transitions](../screenflow/transitions.md)
-
-**Related information**  
-
-
-[Referencing dialogs](../screenflow/ref_dlgs.md)
-
-[Transitions from portlets](../screenflow/trnstn_frm_ptlts_ref.md)
-
-[Transitions from dialogs](../screenflow/trnstn_frm_dlgs_ref.md)
+???+ info "Related information"
+    -   [Referencing dialogs](../../../../../../extend_dx/screenflow/developing_screenflow/creating_dialog_def/transition_endpoints/ref_dlgs.md)
+    -   [Transitions from portlets](../../../../../../extend_dx/screenflow/transition_reference/trnstn_frm_ptlts_ref.md)
+    -   [Transitions from dialogs](../../../../../../extend_dx/screenflow/transition_reference/trnstn_frm_dlgs_ref.md)
 

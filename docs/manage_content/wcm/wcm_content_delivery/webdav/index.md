@@ -5,7 +5,7 @@ With WebDAV for HCL Digital Experience, you can use standard operating system to
 Before you can use WebDAV with web content, you need to set up a WebDAV client. After your client is set up, you can access the web content libraries with WebDAV with the following URL:
 
 ```
-http://server:port/portal\_context\_root/mycontenthandler/dav/content/libraries/
+http://server:port/portal_context_root/mycontenthandler/dav/content/libraries/
 ```
 
 For example:

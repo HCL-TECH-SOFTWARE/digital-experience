@@ -62,28 +62,5 @@ Perform the following steps to search:
 
 [Managing custom unique names](../panel_help/h_main_custom_names.md)
 
-[Managing virtual portals](../panel_help/h_main_virtual.md)
-
-**References:**  
-
-
-[Managing pages](h_main_managing_pages.md)
-
-[Managing Web modules](h_main_web_module.md)
-
-[Managing portlet applications](h_main_manage_portlet_app.md)
-
-[Managing portlets](h_main_manage_portlets.md)
-
-[Configuring your portal for Web services](h_main_web_services.md)
-
-[Working with resource permissions](h_main_resource_permissions.md)
-
-[Managing permissions for users and groups](h_main_ug_permissions.md)
-
-[Creating meaningful URLs for your site](h_main_url.md)
-
-[Managing custom unique names](h_main_custom_names.md)
-
-[Managing virtual portals](h_main_virtual.md) --->
+[Managing virtual portals](../panel_help/h_main_virtual.md) --->
 

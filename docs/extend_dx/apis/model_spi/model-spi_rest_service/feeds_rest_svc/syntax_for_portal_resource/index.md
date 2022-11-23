@@ -37,9 +37,9 @@ The meanings of the syntax elements are as follows:
     An arbitrary set of parameters. These include additional query parameters. For details refer to the following topics.
 
 
--   **[Model schemas for addressing resources](../dev/rest_addr_res.md)**  
+-   **[Model schemas for addressing resources](rest_addr_res.md)**  
 Addressing a resource includes specifying the model to which the resource is associated. To do this, you specify a schema.
--   **[Additional query parameters](../dev/rest_addl_prms.md)**  
+-   **[Additional query parameters](rest_addl_prms.md)**  
 In order to specify the extent and the contents of the requested feed, you may use additional query parameters. All additional query parameters are optional.
 
 

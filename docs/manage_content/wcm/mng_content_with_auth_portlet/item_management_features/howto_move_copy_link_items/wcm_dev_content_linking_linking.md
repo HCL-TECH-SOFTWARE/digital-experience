@@ -3,14 +3,13 @@ id: wcm_dev_content_linking_linking
 title: How to link or copy content items to site areas
 ---
 
-
-
+# How to link or copy content items to site areas
 
 When a content item is first created, you must select a site area to save the content item under. You can link content items to other site area with the **Link** and **Add Links** buttons. You can also copy a content item to a different site area with the **Copy** button.
 
 When you link a content item to other site areas, changes made to the content item appear everywhere the content item is linked to. If you copy a content item, a new content item is created and the link between the original content item and new content item is broken.
 
-**Template maps:**
+## Template maps
 
 When you select a site area to link a content item to, ensure that the site area you choose has a valid template mapping between the authoring template and presentation template you would like to use with the selected content item.
 

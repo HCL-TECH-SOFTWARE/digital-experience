@@ -51,11 +51,11 @@ Example: A feed that exposes full information on a layout container of a content
 
 ```
 
--   **[Syntax for addressing portal resources](../dev/rest_feed_obt.md)**  
+-   **[Syntax for addressing portal resources](../feeds_rest_svc/syntax_for_portal_resource/index.md)**  
 To obtain information about a portal resource or to modify a portal resource, you need to obtain a feed for this resource, or you send a request to a certain URL that can contain a feed. Find out how you can construct URLs to which you can send HTTP requests related to the REST service.
--   **[Elements of a model feed](../dev/rest_feed_elements.md)**  
+-   **[Elements of a model feed](rest_feed_elements.md)**  
 The following sections show sample feeds for the different models.
--   **[Use cases for modifying resources](../dev/rest_feed_mod_resrc.md)**  
+-   **[Use cases for modifying resources](../feeds_rest_svc/use_cases_for_resource_mod/index.md)**  
 Portal Model REST services allow you to create new resources, modify, move and delete existing resources. View some common use cases of resource modifications.
 
 
