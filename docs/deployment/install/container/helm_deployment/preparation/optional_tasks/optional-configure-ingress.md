@@ -5,7 +5,7 @@ With HAProxy replacing Ambassador in our DX deployment, it is much easier to run
 !!! note
         This document will only serve as a basic guide and implementing ingress are optional based on the cluster’s use case and user’s discretion, hence we do not ship any ingress implementation along with our current deployment.
 
-![Ingress Implementation](../../../_img/ingressOverview.png)
+![Ingress Implementation](../../_img/ingressOverview.png)
 
 ## Ingress Implementation
 
