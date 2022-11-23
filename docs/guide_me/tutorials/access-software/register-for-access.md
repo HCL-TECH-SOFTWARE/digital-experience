@@ -26,7 +26,7 @@ HCL Software has 3 main sites that require separate login. As we are working tow
 Indicated below are the steps on how to register as an HCL Customer or as an HCL Business Partner.
 
 !!!tip
-    If your company admin is already registered and has followed the steps below, you do not need to do this. Simply ask your admin to add you as a “Portal User” or “Portal User Admin” to be able to download product. Refer to this instruction on how to do this : "[Adding Users](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878#AddingUsers)".
+    If your company admin is already registered and has followed the steps below, you do not need to do this. Simply ask your admin to add you as a “Portal User” or “Portal User Admin” to be able to download product. Refer to [Adding Users](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878#AddingUsers) for instructions.
 
 === "For HCL Customers"
 

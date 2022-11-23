@@ -30,14 +30,14 @@ Add the 'Script Application Library' to the list of visible libraries in your DX
   ![Script Application Library](images/03ScriptApplicationLibrary.png)
 
 ## Clone The Portal 8.5 Theme to form a Test Theme 
-!!! note "The Portal 8.5 Theme is part of the HCL DX releases starting CF205. This theme has some out-of-the-box DX Modules to support ReactJS ScriptApps and will help out in [basic deployments](how_to/01_basic_deployments.md). There's no assurance that the steps detailed in this tutorial will work with versions prior to CF205, but you may try cloning an existing theme and then build and deploy your own DX Modules following these [steps](how_to/02_dependencies_as_module.md). "
+!!! note "The Portal 8.5 Theme is part of the HCL DX releases starting CF205. This theme has some out-of-the-box DX Modules to support ReactJS ScriptApps and will help out in [basic deployments](how_to/01_basic_deployments.md). There's no assurance that the steps detailed in this tutorial will work with versions prior to CF205, but you may try cloning an existing theme and then build and deploy your own DX Modules following these [steps](how_to/02_dependencies_as_module.md)."
 
 Copy the Portal 8.5 theme.
   ![Copy Theme](images/04CopyToTheme1.png)
 Assign a name for the theme.
   ![Assign Name](images/04CopyToTheme2.png)
   ![Status](images/04CopyToTheme3.png)
-Click the Done button.
+Click the **Done** button.
   ![Done Button](images/04CopyToTheme4.png)
 
 ## For Quick Build and Deploy, Use Out-Of-the-Box React Modules In your DX Theme 
@@ -54,9 +54,9 @@ For standalone ScriptApps, make sure that the React modules that are delivered w
 
 
 ![Select Theme](./images/04Themes.png)
-Select "Theme" from the Practitioner Studio Menu
+Select **Themes** from the Practitioner Studio Menu.
 
 ![Select Edit Theme](./images/05EditTheme.png)
-Click "Edit Theme"
+Click **Edit theme**.
 
 ![Edit the configured Module IDs in the theme profile](./images/06ModuleIDs.png)

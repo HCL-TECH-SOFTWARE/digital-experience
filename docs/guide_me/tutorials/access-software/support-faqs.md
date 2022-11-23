@@ -11,18 +11,19 @@ More information pertaining to the deal between IBM and HCL can be found on our 
 ### Am I able to contact HCL Support by phone?  Where is this information?
 Yes, HCL Software offers multiple methods of contacting Support.  You can either visit the HCL Customer Support Portal to submit a case, or you can contact our Customer Assistance Center team by phone for further assistance.
 
-HCL Customer Support Portal:  <https://support.hcltechsw.com/csm>
+HCL Customer Support Portal:  <https://support.hcltechsw.com/csm><br>
 HCL Software Support Phone directory:  <https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0010151>
 
 ### What are HCL’s Support offerings and terms and conditions?
 Please review the HCL Software Support Guide to obtain information on various support offerings, service level agreements (SLAs) and response time guidelines and case severity guidelines.
-<https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0010420>
+
+For more information, see <https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0010420>.
 
 ### Will I still be working with the same Support Engineers as I did when the products were supported by IBM?
 Many of the same individuals from the IBM support and development teams have transitioned to HCL. They will continue to serve customers and support these products. The only differences you should see are accessing support via the HCL Customer Portal, and that these individuals will eventually have an HCL email domain, rather than an IBM domain.
 
 ### What is the roadmap for the products that HCL has acquired?
-Please visit our Product Pages for more information pertaining to product capabilities and participate in their respective communities. <https://www.hcltechsw.com>
+Please visit our Product Pages for more information pertaining to product capabilities and participate in their respective communities. See <https://www.hcltechsw.com>.
 
 ## HCL Customer Support Portal and Accessing Support
 
@@ -38,10 +39,10 @@ If you are not already registered on the HCL Customer Support Portal, please rev
 In order to become an admin for your organizations account, please visit our registration site and register yourself (selecting admin role).  The registration site can be accessed here: <https://www.hcltechsw.com/about/welcome>
 
 ### I do not know who my organizations admin is for the Support Portal?
-Please call our Support center and a member of our CAC team will assist you. <https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0010151>.
+Please call our Support center and a member of our CAC team will assist you. For more information, see <https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0010151>.
 
 ### I do not believe I received a password reset email for the HCL Support Portal.  How can I check?
-The email would have been sent from the following address: ‘hcl_pnp_support@hcl.com’, with a subject line of ‘Password reset’.  First, check your junk mail folder to see if it was filtered to this location.  If it is not there, please check with your IT department to see if email from this sender is being blocked.  If neither option works, please call HCL Support for further assistance <https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0010151>.
+The email would have been sent from the following address: ‘hcl_pnp_support@hcl.com’, with a subject line of ‘Password reset’.  First, check your junk mail folder to see if it was filtered to this location.  If it is not there, please check with your IT department to see if email from this sender is being blocked.  If neither option works, please call HCL Support for further assistance. For more information, see <https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0010151>.
 
 ## Entitlements, License Management and HCL Software Sales
 
@@ -55,7 +56,7 @@ For assistance in renewing your product entitlement, please contact our Customer
 For assistance in renewing your product entitlement, please contact our Customer Success team by email:  Customersuccess@hcl.com  
 
 ### Where can I obtain a list of my contracts and agreements?
-Information pertaining to your contract(s) and agreement(s) is accessible on our eCommerce site.  Please visit <https://www.hcltechsw.com/welcome>
+Information pertaining to your contract(s) and agreement(s) is accessible on our eCommerce site.  Please visit <https://www.hcltechsw.com/welcome>.
 
 ### My entitlements are not matching what I had purchased while with IBM.  How can I resolve this?
 For assistance in reviewing your product entitlement(s), please contact our Customer Success team; Customersuccess@hcl.com.  
@@ -85,14 +86,14 @@ HCL is currently working on a solution to streamline this process by allowing Bu
 Once you log in with the User ID associated with the customer account, you will only be able to view cases that you have opened.  If you wish to see all cases that have been opened by any named caller under this customer account, your User ID will need to be granted Admin access.  If you do not have the Admin role, please contact the customer Admin and request to be added as an administrator on the customer account.  Keep in mind that until a solution is provided to allow for a single user ID to view multiple customer accounts, you will need to perform this step for all customer account User IDs where you need admin access.
 
 ### How do I reopen cases?
-Answer: If you need to reopen a case, contact the Customer Assistance Center (CAC) who will assist with reopening the case.
+If you need to reopen a case, contact the Customer Assistance Center (CAC) who will assist with reopening the case. For more information, see
 <https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0010151>.
 
 ### How can a Business Partner become an Admin for a customer’s account?
-Answer: For a Business Partner to become an admin for a customer’s account, the Business Partner should contact the Customer Account Admin to request this access.  The Customer account admin will be able to set the business partner up as an administrator on the account.
+For a Business Partner to become an admin for a customer’s account, the Business Partner should contact the Customer Account Admin to request this access.  The Customer account admin will be able to set the business partner up as an administrator on the account.
 
 ### How can a customer admin provide a Business Partner with admin access to the customer account?
-Please view the article “How do I create a new Contact“ which contains instructions on granting a user the customer_admin role.
+Please see [How to create a contact](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0010342#create_contact) which contains instructions on granting a user the customer_admin role.
 
 ### What roles can be assigned to contacts within a customer account?
 The following roles may be assigned to a contact within a customer account:

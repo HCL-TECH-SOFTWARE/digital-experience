@@ -29,7 +29,7 @@
     Check the information [here](../common-setup/post-deployment/important_things_to_note.md).
 
 ## Project Specific Settings (DX-Module)
-Full configuration steps are listed [here](../common-setup/optimized-scriptapps/dependencies_as_module.md)(common steps). You'll also need to apply the specific steps below:
+Full configuration steps are listed [here](../common-setup/optimized-scriptapps/dependencies_as_module.md) (common steps). You'll also need to apply the specific steps below:
 
 1. Create submodules folder for each group of dependencies.
     - Sample: React v16 -> DxModule/SubModuleReact16
@@ -214,21 +214,19 @@ Full configuration steps are listed [here](../common-setup/optimized-scriptapps/
     ```
    
 5. Assign an id for the root html tags unique for each of the ScriptApps. Make sure to use the same id in the corresponding index.jsx within the same ScriptApp.
-    1. SampleAppReact16
-       [SampleAppReact16/src/index.html](SampleAppReact16/src/index.html)
+    1. SampleAppReact16/src/index.html
     ```
         <div id="sample-app-react-16-root"></div>
     ```
-   [SampleAppReact16/src/index.jsx](SampleAppReact16/src/index.jsx)
+   SampleAppReact16/src/index.jsx
     ```
         const root = ReactDOM.createRoot(document.getElementById('sample-app-react-16-root'));
     ```
-    2. SampleAppReact18
-       [SampleAppReact18/public/index.html](SampleAppReact18/public/index.html)
+    2. SampleAppReact18/public/index.html
     ```
         <div id="sample-app-react-18-root"></div>]()
     ```
-   [SampleAppReact18/src/index.js](SampleAppReact18/src/index.js)
+   SampleAppReact18/src/index.js
     ```
         const root = ReactDOM.createRoot(document.getElementById('sample-app-react-18-root'));
     ```
