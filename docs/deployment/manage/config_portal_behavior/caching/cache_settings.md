@@ -32,7 +32,8 @@ The following information lists the resources that contribute to the overall rem
 
         Time in seconds, given as an integer between -1 and the value \(\(2 to the power of 31\)-1\)
 
-        **Note:** Use the value -1 if you never want the cache to expire.
+        !!! note
+            Use the value -1 if you never want the cache to expire.
 
     -   **Set with XML Access**
 
@@ -100,7 +101,8 @@ The following information lists the resources that contribute to the overall rem
 
         Time in seconds, given as an integer between -1 and the value \(\(2 to the power of 31\)-1\)
 
-        **Note:** Use the value -1 if you never want the cache to expire.
+        !!! note 
+            Use the value -1 if you never want the cache to expire.
 
     -   **Set with XML Access**
 
@@ -149,7 +151,8 @@ The following information lists the resources that contribute to the overall rem
 
         Time in seconds, given as an integer between -1 and the value \(\(2 to the power of 31\)-1\)
 
-        **Note:** Use the value -1 if you never want the cache to expire.
+        !!! note 
+            Use the value -1 if you never want the cache to expire.
 
     -   **Set with XML Access**
 
@@ -211,7 +214,8 @@ The following information lists the resources that contribute to the overall rem
 
         Time in seconds, given as an integer between -1 and the value \(\(2 to the power of 31\)-1\).
 
-        **Note:** Use the value -1 if you never want the cache to expire.
+        !!! note 
+            Use the value -1 if you never want the cache to expire.
 
     -   **Set with XML Access**
 
@@ -252,6 +256,7 @@ The following information lists the resources that contribute to the overall rem
         No
 
     -   **Set with user interface**
+    
 -   **vary**
 
     -   **Key**

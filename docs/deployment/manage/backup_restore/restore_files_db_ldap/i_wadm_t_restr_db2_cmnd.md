@@ -20,7 +20,8 @@ To replace an existing WPSDB database with the backup copy using the RESTORE DAT
     -   The time should be shortly after the completion of the backup.
     -   The best way to determine this time is to use **Show History** in the Task Center to review the output saved for the backup commands.
     -   Alternately, you can use the modification time of the saved backup file to determine when the backup task completed.
-    For example, use the following roll-forward command when the last backup completed at 1:23 AM:ROLLFORWARD DATABASE WPSDB TO 2007-06-25-01.23.00.000000 USING LOCAL TIME AND COMPLETE
+
+ For example, use the following roll-forward command when the last backup completed at 1:23 AM:ROLLFORWARD DATABASE WPSDB TO 2007-06-25-01.23.00.000000 USING LOCAL TIME AND COMPLETE
 
 
 

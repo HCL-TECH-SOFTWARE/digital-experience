@@ -14,12 +14,14 @@ The following properties configure both the Portal User Management and the PUMA 
 
     -   federated.ldap.loginProperties
     -   standalone.ldap.loginProperties
+
 -   **store.puma\_default.group.fbadefault.filter =**
 
     Defines the default search attribute for groups. Usually this is the same as the RDN attribute of the LDAP. Depending on your environment, it might be a different attribute. The value for this property should correspond to the value of one of the following properties in wkplc.properties, depending on your security configuration:
 
     -   federated.ldap.loginProperties
     -   standalone.ldap.loginProperties
+    
 -   **store.puma\_default.user.base.attributes =**
 
     Defines the attribute subset that portal loads during direct user lookups, for example at Login. Attributes that are not defined in this list are loaded by a separate request to the backend user store.

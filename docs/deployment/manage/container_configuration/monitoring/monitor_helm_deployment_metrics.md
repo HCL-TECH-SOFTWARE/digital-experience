@@ -4,11 +4,11 @@ This topic outlines the use of standards-based metrics to monitor activity and p
 
 ## Prometheus metrics and Grafana
 
-The [Digital Experience 9.5 Helm deployment](../../deployment/helm_deployment.md) supports monitoring the deployment activity with advanced metrics and visualization, by exposing standards-based [Prometheus](https://prometheus.io/)-compatible metrics. [Prometheus metrics](https://prometheus.io/) components can `scrape` the metrics of most of the DX 9.5 container applications. The collected data is queried from Prometheus and are visualized in operations dashboard solutions, such as [Grafana](https://grafana.com/). The following information can advise administrators which [Digital Experience 9.5 applications](../../architecture/application_architecture.md) can use these tools with some usage examples.
+The [Digital Experience 9.5 Helm deployment](../../../install/container/helm_deployment/overview.md) supports monitoring the deployment activity with advanced metrics and visualization, by exposing standards-based [Prometheus](https://prometheus.io/)-compatible metrics. [Prometheus metrics](https://prometheus.io/) components can `scrape` the metrics of most of the DX 9.5 container applications. The collected data is queried from Prometheus and are visualized in operations dashboard solutions, such as [Grafana](https://grafana.com/). The following information can advise administrators which [Digital Experience 9.5 applications](../../../../get_started/plan_deployment/container_deployment/application_architecture.md) can use these tools with some usage examples.
 
 ## Digital Experience 9.5 applications and Prometheus metrics
 
-The following [Digital Experience 9.5 applications](../../architecture/application_architecture.md) expose metrics that can be tracked with Prometheus metrics.
+The following [Digital Experience 9.5 applications](../../../../get_started/plan_deployment/container_deployment/application_architecture.md) expose metrics that can be tracked with Prometheus metrics.
 
 |Application|Port|Route|
 |-----------|----|-----|
@@ -34,7 +34,7 @@ Administrators can configure the HCL DX 9.5 metrics depending on their specific 
 
 ## Configure Prometheus metrics
 
-Metrics for the [Digital Experience 9.5 applications](../../architecture/application_architecture.md) in the DX 9.5 Helm chart are enabled by default, with `prometheusDiscoveryType` set to `annotations`. The metrics are configured independently for each DX 9.5 application. The parameter to disable metrics is included in the example configurations.
+Metrics for the [Digital Experience 9.5 applications](../../../../get_started/plan_deployment/container_deployment/application_architecture.md) in the DX 9.5 Helm chart are enabled by default, with `prometheusDiscoveryType` set to `annotations`. The metrics are configured independently for each DX 9.5 application. The parameter to disable metrics is included in the example configurations.
 
 |Parameter|Description|Default value|
 |---------|-----------|-------------|
@@ -96,7 +96,7 @@ The following dashboards are provided by [HCL Software](https://www.hcltechsw.co
 !!!important
     The resources outline here are optional deployment examples. HCL Software does not provide direct support for any issues related to the Prometheus metrics or the Grafana visualization tools.
 
-To leverage the full potential of the [Digital Experience 9.5 applications](../../architecture/application_architecture.md) metrics, an existing [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/grafana/) deployment can be used. Following is a list of additional metrics tracking and visualization services \(non-exhaustive\) that you can consider when developing solutions according to your deployment needs:
+To leverage the full potential of the [Digital Experience 9.5 applications](../../../../get_started/plan_deployment/container_deployment/application_architecture.md) metrics, an existing [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/grafana/) deployment can be used. Following is a list of additional metrics tracking and visualization services \(non-exhaustive\) that you can consider when developing solutions according to your deployment needs:
 
 -   [`kube-prometheus-stack`](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#kube-prometheus-stack) Helm chart that includes:
 
