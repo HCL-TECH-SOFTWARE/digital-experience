@@ -337,28 +337,28 @@ Do the following steps for each of your React Application.
     });
     
     ```
-    - Point the DllReferencePlugin of the app needing 1st submodule (i.e: React v16) to the correct context folder and manifest.
+    * Point the DllReferencePlugin of the app needing 1st submodule (i.e: React v16) to the correct context folder and manifest.
     ```js
             new DllReferencePlugin({
                 context: path.resolve(__dirname, '../DxModule/SubModuleReact16'),
                 manifest: require('../DxModule/SubModuleReact16/dx-dll-manifest-react16.json'),
             }),
     ```
-   - Point the DllReferencePlugin of the app needing 2nd submodule (i.e: React v18) to the correct context folder and manifest.
+   * Point the DllReferencePlugin of the app needing 2nd submodule (i.e: React v18) to the correct context folder and manifest.
     ```js
             new DllReferencePlugin({
                 context: path.resolve(__dirname, '../DxModule/SubModuleReact18'),
                 manifest: require('../DxModule/SubModuleReact18/dx-dll-manifest-react18.json'),
             }),
     ```
-    - Set the folder path and filenames for the bundled files. Make sure the output folder is the same as the one defined as config.dxclient.contentRoot in the package.json file.
+    * Set the folder path and filenames for the bundled files. Make sure the output folder is the same as the one defined as config.dxclient.contentRoot in the package.json file.
     ```js
        output: {
         filename: "[name].[contenthash].bundle.js",
         path: path.resolve(__dirname, "dist-dx-scriptapp")
        },
     ```
-    - Add a minimizer for the optimization step. Some apps may not need the manifest, favicon nor the filename portion below.
+    * Add a minimizer for the optimization step. Some apps may not need the manifest, favicon nor the filename portion below.
     ```js
        optimization: {
            minimizer: [
@@ -378,7 +378,7 @@ Do the following steps for each of your React Application.
            ]
        },
     ```
-9. Deployments via DXClient is recommended and is sufficient. In case that you want to add the use of [DX WebDevToolkit](https://github.com/HCL-TECH-SOFTWARE/WebDevToolkitForDx) in your development cycle, you'll need to add a sp-config.json file.
+4. Deployments via DXClient is recommended and is sufficient. In case that you want to add the use of [DX WebDevToolkit](https://github.com/HCL-TECH-SOFTWARE/WebDevToolkitForDx) in your development cycle, you'll need to add a sp-config.json file.
    - SampleAppReact16/sp-config.json
    ```json
    {
@@ -401,7 +401,7 @@ Do the following steps for each of your React Application.
                   ]
               }),
    ```
-10. Add if not yet included in the project, a tsconfig.json file.
+5. Add if not yet included in the project, a tsconfig.json file.
 
     ```js 
        {

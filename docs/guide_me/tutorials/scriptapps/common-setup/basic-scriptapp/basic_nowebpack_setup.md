@@ -17,7 +17,7 @@ This guide describes the steps on how to deploy a built React app into DX to bec
 
 !!!tip "Ensure your system is set up properly. Please read the system pre-requisites [here](../../pre_requisites.md)."
 
-!!!tip "Sample codes are available in [GitHub: Deploy a React App to DX as a ScriptApp](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/01WebpackWithDependencies)"
+!!!tip "Sample codes are available in [GitHub: Deploy a React App to DX as a ScriptApp](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/01WebpackWithDependencies)."
 
 ## How To Bundle and Deploy React Applications to DX
 

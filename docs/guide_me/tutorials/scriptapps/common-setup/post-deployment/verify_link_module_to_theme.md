@@ -2,7 +2,7 @@
 
 ## Verify in WebSphere Application Server
 
-To verify, login to the WebSphere console. Under the *Applications* tab, then the *Application Types* and then lastly in the *Business-level applications*, you can search for your application name in the table in the right-hand side.
+To verify, log in to the WebSphere console. Under the *Applications* tab, then the *Application Types*, and then lastly in the *Business-level applications*, you can search for your application name in the table in the right-hand side.
    ![Upload to WAS](../../images/17WASUpload7.png)
 
 ## Verify In HCL DX and Link to Theme
