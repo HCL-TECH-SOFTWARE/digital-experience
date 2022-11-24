@@ -60,16 +60,8 @@ Before you begin, create an empty shared directory to hold the exported web cont
 
     If you are using JSP components that you must manually copy any related JSP files to and from the same servers that you are exporting and importing to.
 
-
-<!---
--   **[Exporting and importing a web content library](../wcm/wcm_config_wcmlibrary_export.md)**  
-You can export the contents of a web content library to disk and import this data into another web content server. Use this feature to make a backup copy of a web content library, and to move data between servers. This function cannot be used to send updates, deletes, and moves. It is only suitable for populating new items.
--   **[Exporting and importing a web content library copy](../wcm/wcm_config_wcmlibrary_exportcopy.md)**  
-You can export the contents of a web content library to disk by creating a copy of the web content library. By working with an exported copy, you can import the copied library into the same web content server multiple times, resulting in a new library after each import without affecting previous copies. This is a quick way of creating new libraries that are fully populated with web content that you can easily adapt for other purposes. --->
-
-
 ???+ info "Related information"
     - [Resetting the web content event log](../wcm_config_reset_event_log.md)
-    - [Setting service configuration properties](../../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
-    - [Staging to production list](../../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_stage_check.md)
+    - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
+    - [Staging to production list](../../../../deployment/manage//staging_to_production/overview_of_staging_to_prod/dep_stage_check.md)
 

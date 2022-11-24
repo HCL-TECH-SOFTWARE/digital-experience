@@ -7,7 +7,7 @@ You configure the element by selecting either a taxonomy or a category to be the
 There are two element design options available: one is rendered when the logged in user selects the category that is to be displayed, and the other is rendered if the user does not select the category. These element designs are rich text elements, and are used in a similar fashion to the navigator and menu elements.
 
 !!!note
-    To use this feature, you must configure a property extension database to store user-specific data. See [Configuring a property extension database](../../../../../../deployment/manage/security/user_registry/update_user_registry/lookaside_db.md) for further information.
+    To use this feature, you must configure a property extension database to store user-specific data. See [Configuring a property extension database](../../../../../../deployment/manage/security/people/authentication/user_registry/update_user_registry/lookaside_db.md) for further information.
 
 ## Creating a taxonomy element
 

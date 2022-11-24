@@ -123,5 +123,5 @@ or
 
 
 ???+ info "Related information"
-    - [The XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
+    - [The XML configuration interface](../../../deployment/manage/portal_admin_tools/xml_config_interface/index.md)
 

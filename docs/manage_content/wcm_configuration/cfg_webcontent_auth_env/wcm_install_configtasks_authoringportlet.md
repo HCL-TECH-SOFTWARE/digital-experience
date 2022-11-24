@@ -29,5 +29,5 @@ If your site contains content in different languages, then a separate Web Conten
 
 
 ???+ info "Related information"
-    - [Managing portlets in your cluster](../../../../deployment/manage/config_cluster/managing_cluster/managing_portlets_in_cluster/index.md)
+    - [Managing portlets in your cluster](../../../deployment/manage/config_cluster/managing_cluster/managing_portlets_in_cluster/index.md)
 

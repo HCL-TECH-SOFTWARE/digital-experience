@@ -13,12 +13,3 @@ References to members in library items contain the distinguished name of the mem
 
 When a member that has been given permissions on a library is deleted, the member permissions are entirely removed from the library, so that any inherited permissions for items in the library will also be removed. Therefore, the member fixer task cannot be used to update these permissions to a different member. However, when an LDAP transfer is carried out, the member permissions on the library are maintained. So, the member fixer task can be run after an LDAP transfer to update or remove these permissions
 
-<!---
--   **[How to use the member fixer task](../wcm/wcm_admin_member-fixer.md)**  
-Enable the member fixer task, create custom mappings, and then run the task.
--   **[Member fixer with syndication](../wcm/wcm_admin_member-fixer_synd.md)**  
-You can configure your system to automatically run the member fixer tool when syndicating. The member fixer is run on the subscriber during syndication. It is run against items that have just been syndicated. Details of the member fixer operations are included in the syndication report.
--   **[Member fixer task frequently asked questions](../wcm/wcm_admin_member-fixer_examples.md)**  
-Some frequently asked question about how to use the web content member fixer task. --->
-
-

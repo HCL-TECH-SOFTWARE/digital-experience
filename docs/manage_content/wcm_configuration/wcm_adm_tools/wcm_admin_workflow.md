@@ -85,9 +85,9 @@ There are two methods available when the tool is run on a virtual portal:
 
 
 !!! note
-    After you enable workflows for an item type, ensure that workflows are also enabled for newly created items in the WCM WCMConfigService service. See the **Enabling workflows** section of the [Web content authoring options](../../wcm_content_delivery/cfg_webcontent_auth_env/wcm_config_prop_authoring.md) topic.
+    After you enable workflows for an item type, ensure that workflows are also enabled for newly created items in the WCM WCMConfigService service. See the **Enabling workflows** section of the [Web content authoring options](../../wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md) topic.
 
 
 ???+ info "Related information"
-    - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
+    - [Setting service configuration properties](../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 

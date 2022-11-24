@@ -15,5 +15,5 @@ The expiration parameter in a workflow is not related to the `Expires` parameter
 
 
 ???+ info "Related information"
-    - [Cache expire parameters](../../../wcm_management/custom_caching/wcm_dev_caching_expire-parameters.md)
+    - [Cache expire parameters](../../../wcm_configuration/custom_caching/wcm_dev_caching_expire-parameters.md)
 

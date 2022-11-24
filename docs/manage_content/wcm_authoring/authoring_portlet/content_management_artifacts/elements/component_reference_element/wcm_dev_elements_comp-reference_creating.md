@@ -14,7 +14,7 @@ To create a component reference component, open the applications menu and go to 
 Specify identification information for the current item, including the name and title for the item. The identification section is common to all item forms.
 2.  [Specifying a location for an item](../../../content_management_artifacts/common/items_location.md)  
 When you create an item, you can specify the location of the item.
-3.  [Selecting a component to reference](../../../../wcm_artifacts/elements/howto_work_with_elements/component_reference_element/wcm_dev_elements_comp-reference_props.md)  
+3.  [Selecting a component to reference](wcm_dev_elements_comp-reference_props.md)  
 The component reference element is used to store a reference to a component. You can select only one component reference at a time.
 4.  [Entering item properties](../../../content_management_artifacts/common/items_props.md)  
 Specify properties for the current item, including the location of the item and the list of authors and owners that are associated with the item. The item properties section is common to all item forms.

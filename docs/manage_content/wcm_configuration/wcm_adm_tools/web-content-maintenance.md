@@ -8,7 +8,7 @@ Draft items can accumulate over time. Review and remove older draft items from y
 
 ## Versions
 
-The [Clear Versions tool](../wcm_adm_tools/wcm_admin_clear_versions.md) is used to remove later versions of web content items from your system that are no longer required. You can also adjust the [version control options](../../wcm_content_delivery/cfg_webcontent_auth_env/wcm_config_prop_authoring.md) for your server to disable automatic version creation and allow users decide which versions to keep.
+The [Clear Versions tool](../wcm_adm_tools/wcm_admin_clear_versions.md) is used to remove later versions of web content items from your system that are no longer required. You can also adjust the [version control options](../../wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md) for your server to disable automatic version creation and allow users decide which versions to keep.
 
 ## Expired content
 

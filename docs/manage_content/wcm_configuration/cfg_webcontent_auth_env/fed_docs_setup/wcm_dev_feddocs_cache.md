@@ -22,5 +22,5 @@ The user-specific document list cache is explicitly invalidated each time the us
 
 
 ???+ info "Related information:"
-    - [Setting service configuration properties](../../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
+    - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 

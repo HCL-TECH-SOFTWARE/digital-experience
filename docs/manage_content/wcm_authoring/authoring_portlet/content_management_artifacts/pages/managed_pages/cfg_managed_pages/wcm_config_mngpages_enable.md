@@ -112,7 +112,7 @@ Each virtual portal has its own Portal Site library.
 
 
 ???+ info "Related information"  
-    -   [Transferring content associations to the Portal Site library](../../../../../manage_content/wcm/wcm_artifacts/managed_pages/cfg_managed_pages/wcm_config_mngpages_transfer.md)
-    -   [Page templates](../../../../../build_sites/sitebuilder/site_dev_with_sitebuilder/creating_sites_using_sitebuilder/sitebuilder_learn_pgtemplate.md)
-    -   [Enabling vanity URL support](../../../../../manage_content/wcm/wcm_content_delivery/vanity_url/adm_vanity_url/van_url_cfgtsk_enable_vus.md)
+    -   [Transferring content associations to the Portal Site library](wcm_config_mngpages_transfer.md)
+    -   [Page templates](../../../../../../../build_sites/sitebuilder/site_dev_with_sitebuilder/creating_sites_using_sitebuilder/sitebuilder_learn_pgtemplate.md)
+    -   [Enabling vanity URL support](../../../../../../wcm_delivery/vanity_url/adm_vanity_url/van_url_cfgtsk_enable_vus.md)
 

@@ -28,5 +28,5 @@ To convert the case to lowercase, set this parameter to lower.
     The Member fixer, when run automatically via Syndication, preserves the dates of the updated items.
 
 ???+ info "Related information"
-    - [Staging to production process](../../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_ovr.md)
+    - [Staging to production process](../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_ovr.md)
 

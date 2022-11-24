@@ -14,7 +14,7 @@ You use an indent tag to format element designs that require results to be inden
 Links to content items can be written as URLs.
 -   **[Contextual linking](wcm_dev_contextual_linking.md)**  
 Contextual linking is used in systems where content from one site is shared across multiple sites. When content is linked into a site, embedded links \(link elements and links in HTML\) reference the site the original content item is in. Contextual linking is used so that when content is linked from another site, the link is rendered relative to the current site if possible.
--   **[Custom caching](../../wcm_management/custom_caching/index.md)**  
+-   **[Custom caching](../../../../wcm_configuration/custom_caching/index.md)**  
 You can overrule the default caching parameters of a site by using "cache" and "expire" parameters in URLs and HCL Web Content Manager tags.
 
 

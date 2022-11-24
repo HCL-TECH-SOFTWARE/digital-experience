@@ -14,7 +14,7 @@ You can update the `WCM WCMConfigService` service to enable workflows for differ
 
 To enable workflows, create a new property for the item type to which you want to apply workflow, and specify a value of `com.aptrix.pluto.workflow.WorkflowControl` for the property.
 
-The workflow is only applied to items created after you update this setting. To add or remove workflows from existing items, run the workflow update tool. For information, refer to [Updating workflows by using the workflow update tool](../../wcm_management/wcm_adm_tools/wcm_admin_workflow.md).
+The workflow is only applied to items created after you update this setting. To add or remove workflows from existing items, run the workflow update tool. For information, refer to [Updating workflows by using the workflow update tool](../../wcm_configuration/wcm_adm_tools/wcm_admin_workflow.md).
 
 You can enable workflow for the following item types:
 
@@ -51,7 +51,7 @@ You can update the `WCM WCMConfigService` service to enable profiling for differ
 
 To enable profiling, create a new property for the item type to which you want to apply profiling, and specify a value of `com.aptrix.pluto.taxonomy.ProfileControl` for the property.
 
-The profiling feature is only applied to items created after you update this setting. To add or remove the profile section from existing items, [run the profile enablement tool](../../wcm_management/wcm_adm_tools/wcm_admin_profile_enable.md).
+The profiling feature is only applied to items created after you update this setting. To add or remove the profile section from existing items, [run the profile enablement tool](../../wcm_configuration/wcm_adm_tools/wcm_admin_profile_enable.md).
 
 You can enable profiling for the following item types:
 
@@ -247,7 +247,7 @@ This class can be overridden by adding the following setting: `inplaceEdit.defau
 
 As many classes as required are added to this setting, which is separated by spaces.
 
-You should base your custom classes on the default stylesheet at `[AppServer\_root](../reference/wpsdirstr.md#was_root)\installedApps\nodename\wcm.ear\wcm-inplaceEdit.war\css\default-style.css`.
+You should base your custom classes on the default stylesheet at `[AppServer\_root](../../../guide_me/wpsdirstr.md#was_root)\installedApps\nodename\wcm.ear\wcm-inplaceEdit.war\css\default-style.css`.
 
 !!! note 
     Any classes that are specified on the EditableElement or EditableProperty tag takes precedence over this value.
@@ -270,5 +270,5 @@ Content items that are created by using this option have no content template acc
 
 
 ???+ info "Related information"
-    - [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
+    - [Setting service configuration properties](../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 

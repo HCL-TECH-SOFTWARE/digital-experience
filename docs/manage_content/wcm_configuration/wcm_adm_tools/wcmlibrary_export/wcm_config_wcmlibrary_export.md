@@ -158,10 +158,10 @@ Follow these steps to export and import a web content library. The server that t
 
 
 ???+ info "Related information"
-    - [Staging to production list](../../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_stage_check.md)
-    - [Creating the initial release](../../../../../deployment/manage/staging_to_production/creating_deploying_initial_release/dep_cir.md)
-    - [Preparing the servers for initial staging](../../../../../deployment/manage/staging_to_production/creating_deploying_initial_release/dep_prep.md)
-    - [Deploying the initial release](../../../../../deployment/manage/staging_to_production/creating_deploying_initial_release/dep_deploy.md)
-    - [Deploying the differential release](../../../../../deployment/manage/staging_to_production/creating_deploying_diff_release/dep_deploy_diff.md)
-    - [Portal administration tools](../../../../../extend_dx/development_tools/portal_admin_tools/index.md)
+    - [Staging to production list](../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_stage_check.md)
+    - [Creating the initial release](../../../../deployment/manage/staging_to_production/creating_deploying_initial_release/dep_cir.md)
+    - [Preparing the servers for initial staging](../../../../deployment/manage/staging_to_production/creating_deploying_initial_release/dep_prep.md)
+    - [Deploying the initial release](../../../../deployment/manage/staging_to_production/creating_deploying_initial_release/dep_deploy.md)
+    - [Deploying the differential release](../../../../deployment/manage/staging_to_production/creating_deploying_diff_release/dep_deploy_diff.md)
+    - [Portal administration tools](../../../../deployment/manage/portal_admin_tools/index.md)
 

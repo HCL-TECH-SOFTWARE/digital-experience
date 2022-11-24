@@ -9,11 +9,3 @@ There are two basic cloning scenarios:
 
 !!! note 
     These procedures describe how to clone a web content repository only. To clone a HCL Portal environment, XMLAccess export and import are used to transfer the HCL Portal data to the target environment.
-
-<!--
--   **[Cloning preparation](../wcm/wcm_cloning_prepare.md)**  
-You must prepare your source and target systems before a web content repository is cloned.
--   **[Cloning data](../wcm/wcm_cloning_live.md)**  
-These procedures describe how to clone web content data from one system to another. -->
-
-

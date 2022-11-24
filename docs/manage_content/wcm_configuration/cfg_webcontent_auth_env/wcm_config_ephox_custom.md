@@ -130,6 +130,6 @@ For example, if the URL for accessing DX in your cloud environment is https://dx
 !!!note
     Ephox EditLive! is fully unsupported.
 
--   Documentation resource: [Newly unsupported features and themes for HCL Digital Experience 8.5 and 9.0](../../../../whatsnew/unsupported_features.md)
+-   Documentation resource: [Newly unsupported features and themes for HCL Digital Experience 8.5 and 9.0](../../../whatsnew/unsupported_features.md)
 
 

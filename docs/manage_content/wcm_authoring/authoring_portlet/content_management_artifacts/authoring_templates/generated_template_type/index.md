@@ -60,7 +60,7 @@ These items are created when you generate a new author-ready content template:
 
     When first created, the content template is visible in the toolbar. To hide the authoring template in the toolbar while it is being customized, add the keyword named ibm.toolbar.hiddenTemplate to the profile section and click **Save**. The content template is then hidden from the toolbar. Delete this keyword and save the authoring template when you are ready to allow content authors to use the new authoring template.
 
-    -   Documentation resource: [Hiding authoring templates from the Site Manager](../../../../build_sites/create_sites/site_prep_content_author/custom_site_manager/custom_create_content_view/epc_wcm_hide_authoring_templates.md)
+    -   Documentation resource: [Hiding authoring templates from the Site Manager](../../../../../../build_sites/create_sites/site_prep_content_author/custom_site_manager/custom_create_content_view/epc_wcm_hide_authoring_templates.md)
 
 -   **Update the content template:**
 

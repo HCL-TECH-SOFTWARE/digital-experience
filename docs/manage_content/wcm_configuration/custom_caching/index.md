@@ -21,11 +21,11 @@ There are two basic methods in which custom caching can be used with your defaul
     This scenario is used with sites that contain many elements that require different caching strategies.
 
 
--   **[Cache parameters](../wcm/wcm_dev_caching_cache-parameters.md)**  
+-   **[Cache parameters](wcm_dev_caching_cache-parameters.md)**  
 Use the cache parameters in HCL Web Content Manager tags and URLs to specify whether the retrieved data is cached or not. If it is cached, how it is cached. The cache parameter is not mandatory.
--   **[Cache expire parameters](../wcm/wcm_dev_caching_expire-parameters.md)**  
+-   **[Cache expire parameters](wcm_dev_caching_expire-parameters.md)**  
 You use the "expires" parameter in HCL Web Content Manager tags and URLs to specify how long to maintain data in the cache before it is expired. When data expires from a cache, the next request for the data will be retrieved from the original server. The expires parameter is not mandatory.
--   **[Caching HCL Web Content Manager elements](../wcm/wcm_dev_caching_components.md)**  
+-   **[Caching HCL Web Content Manager elements](wcm_dev_caching_components.md)**  
 You can apply caching to elements by using "connect" tags to reference elements within presentation templates instead of the component or element tag.
 
 

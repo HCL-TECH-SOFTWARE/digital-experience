@@ -24,5 +24,5 @@ Before you can access metadata from federated documents, you need to configure a
 
 
 ???+ info "Related information"
-    - [Access HCL Digital Asset Management](../../../digital_assets/usage/access_digital_asset_mgmt.md)
+    - [Access HCL Digital Asset Management](../../digital_assets/usage/access_digital_asset_mgmt.md)
 

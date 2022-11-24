@@ -2,7 +2,7 @@
 
 To take advantage of the site analysis logging available for the Web Content Viewer, you need to configure the WP SiteAnalyzerLogService service and activate the SiteAnalyzerJSRPortletLogger service.
 
-Before you activate the `SiteAnalyzerJSRPortletLogger` logger, you must ensure that site analysis is enabled for the portal in general, as described in [Logging and analyzing server side site data](../../../../../deployment/manage/monitoring/analyze_portal_usage/serverside_site_data/index.md).
+Before you activate the `SiteAnalyzerJSRPortletLogger` logger, you must ensure that site analysis is enabled for the portal in general, as described in [Logging and analyzing server side site data](../../../../deployment/manage/monitoring/analyze_portal_usage/serverside_site_data/index.md).
 
 1.  Log in to the WebSphere® Integrated Solutions Console.
 

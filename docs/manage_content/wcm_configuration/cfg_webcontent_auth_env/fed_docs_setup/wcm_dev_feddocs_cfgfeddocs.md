@@ -129,5 +129,5 @@ In addition to enabling or disabling credential vault slots for authentication, 
 
 
 ???+ info "Related information:"
-    - [Creating a federated documents selection rule](../../../wcm_artifacts/feddocs/wcm_dev_feddocs_createrule.md)
+    - [Creating a federated documents selection rule](../../../wcm_authoring/authoring_portlet/content_management_artifacts/feddocs/wcm_dev_feddocs_createrule.md)
 

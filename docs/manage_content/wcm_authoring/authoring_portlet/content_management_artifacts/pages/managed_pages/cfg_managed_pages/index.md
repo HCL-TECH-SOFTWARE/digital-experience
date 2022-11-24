@@ -14,5 +14,5 @@ When you enable manage pages, any web content pages that you have are converted 
 
 
 ???+ info "Related information" 
-    -   [Vanity URLs](../../../../wcm/wcm_content_delivery/vanity_url/index.md)
+    -   [Vanity URLs](../../../../../../wcm_delivery/vanity_url/index.md)
 

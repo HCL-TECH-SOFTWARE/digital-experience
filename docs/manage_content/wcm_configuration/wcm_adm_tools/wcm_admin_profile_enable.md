@@ -66,7 +66,7 @@ Use the profile enablement tool to enable or disable the profile feature on web 
 
         To prevent your session from timing out before the task finishes, you can append the option -DsessionTimeOut=timeOut to the command. This parameter sets the number of seconds in which the task must complete before its session will timeout. The default session timeout is 14,440 seconds, which is 4 hours. For large repositories, increase this setting. For example: -DsessionTimeOut=36000, which is 10 hours.
 
-4.  After you enable profiling for an item type, ensure that profiling is also enabled for newly created items in the WCM WCMConfigService service. See the **Enabling profiling** section of the [Web content authoring options](../../wcm_content_delivery/cfg_webcontent_auth_env/wcm_config_prop_authoring.md) topic.
+4.  After you enable profiling for an item type, ensure that profiling is also enabled for newly created items in the WCM WCMConfigService service. See the **Enabling profiling** section of the [Web content authoring options](../../wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md) topic.
 
 
 

@@ -2,7 +2,7 @@
 
 Create a selection rule that selects metadata of documents that are contained in a specific folder of a remote content management system or document repository.
 
-Before you create a rule to access federated documents information, ensure that you configure the feature as described in [Setting up support for federated documents](../../wcm_content_delivery/cfg_webcontent_auth_env/fed_docs_setup/index.md).
+Before you create a rule to access federated documents information, ensure that you configure the feature as described in [Setting up support for federated documents](../../../../wcm_configuration/cfg_webcontent_auth_env/fed_docs_setup/index.md).
 
 1.  Open the Personalization Navigator.
 
@@ -47,7 +47,7 @@ You can now use this rule in a personalization component to render the selection
 
 
 ???+ info "Related information"  
-    -   [Configuring the federated documents feature](../../wcm_content_delivery/cfg_webcontent_auth_env/fed_docs_setup/wcm_dev_feddocs_cfgfeddocs.md)
-    -   [Reserved authoring portlet](../../wcm_artifacts/reserved_auth_portlet/index.md)
-    -   [The module framework](../../../../build_sites/themes_skins/the_module_framework/index.md)
+    -   [Configuring the federated documents feature](../../../../wcm_configuration/cfg_webcontent_auth_env/fed_docs_setup/wcm_dev_feddocs_cfgfeddocs.md)
+    -   [Reserved authoring portlet](../../content_management_artifacts/reserved_auth_portlet/index.md)
+    -   [The module framework](../../../../../build_sites/themes_skins/the_module_framework/index.md)
 
