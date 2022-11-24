@@ -1,4 +1,5 @@
-Title: Tag Center
+title: Tag Center
 nav:
     - index.md
-    - Tag cloud: tag_cloud    - tag_result.md
+    - Tag cloud: tag_cloud
+    - tag_result.md

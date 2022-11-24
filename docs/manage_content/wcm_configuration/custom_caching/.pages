@@ -1,4 +1,6 @@
-Title: Custom caching
+title: Custom caching
 nav:
     - index.md
-    - wcm_dev_caching_cache-parameters.md    - wcm_dev_caching_expire-parameters.md    - wcm_dev_caching_components.md
+    - wcm_dev_caching_cache-parameters.md
+    - wcm_dev_caching_expire-parameters.md
+    - wcm_dev_caching_components.md

@@ -1,6 +1,8 @@
-Title: Using menu element
+title: Using menu element
 nav:
     - index.md
     - wcm_dev_elements_menu.md
-    - wcm_dev_elements_menu_creating.md    - wcm_dev_elements_menu_design.md
-    - wcm_dev_elements_menu_format.md    - wcm_dev_elements_menu_search.md
+    - wcm_dev_elements_menu_creating.md
+    - wcm_dev_elements_menu_design.md
+    - wcm_dev_elements_menu_format.md
+    - wcm_dev_elements_menu_search.md

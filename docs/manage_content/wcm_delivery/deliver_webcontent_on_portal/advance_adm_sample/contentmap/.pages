@@ -1,4 +1,6 @@
-Title: Content associations reference
+title: Content associations reference
 nav:
     - index.md
-    - mp_wcm_contentmap_xml.md    - mp_wcm_contentmap_pscript.md    - mp_wcm_contentmap_restapi.md
+    - mp_wcm_contentmap_xml.md
+    - mp_wcm_contentmap_pscript.md
+    - mp_wcm_contentmap_restapi.md

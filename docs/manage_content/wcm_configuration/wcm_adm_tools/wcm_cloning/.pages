@@ -1,4 +1,5 @@
-Title: How to clone a web content repository
+title: How to clone a web content repository
 nav:
     - index.md
-    - wcm_cloning_prepare.md    - wcm_cloning_live.md
+    - wcm_cloning_prepare.md
+    - wcm_cloning_live.md

@@ -1,8 +1,9 @@
-Title: Using a navigator element
+title: Using a navigator element
 nav:
     - index.md
     - wcm_dev_elements_navigator.md
     - wcm_dev_elements_navigator_creating.md
     - wcm_dev_elements_navigator_design.md
     - wcm_dev_elements_navigator_types.md
-    - wcm_dev_elements_navigator_display.md    - wcm_dev_elements_navigator_using.md
+    - wcm_dev_elements_navigator_display.md
+    - wcm_dev_elements_navigator_using.md

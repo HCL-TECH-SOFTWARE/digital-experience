@@ -1,4 +1,6 @@
-Title: How to manage a taxonomy
+title: How to manage a taxonomy
 nav:
     - index.md
-    - wcm_dev_profiling_taxonomy_editing.md    - wcm_dev_profiling_category_copying.md    - wcm_dev_profiling_category_moving.md
+    - wcm_dev_profiling_taxonomy_editing.md
+    - wcm_dev_profiling_category_copying.md
+    - wcm_dev_profiling_category_moving.md

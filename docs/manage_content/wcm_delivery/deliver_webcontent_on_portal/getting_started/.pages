@@ -1,4 +1,8 @@
-Title: Getting started with delivering web content on a portal page
+title: Getting started with delivering web content on a portal page
 nav:
     - index.md
-    - wcm_deploy_wcmviewer_about.md    - wcm_delivery_webpagetemplate_about.md    - wcm_delivery_contentmap_about.md    - Creating content with sample web content template items: creating_contentsamples    - wcm_config_delivery_portlet_linking.md
+    - wcm_deploy_wcmviewer_about.md
+    - wcm_delivery_webpagetemplate_about.md
+    - wcm_delivery_contentmap_about.md
+    - Creating content with sample web content template items: creating_contentsamples
+    - wcm_config_delivery_portlet_linking.md

@@ -1,5 +1,7 @@
-Title: Web Content Library
+title: Web Content Library
 nav:
     - index.md
-    - oob_content_createlib.md    - oob_content_auth.md    - oob_content_accesslib.md
+    - oob_content_createlib.md
+    - oob_content_auth.md
+    - oob_content_accesslib.md
     - Manage Web Content Libraries: manage_web_content_lib

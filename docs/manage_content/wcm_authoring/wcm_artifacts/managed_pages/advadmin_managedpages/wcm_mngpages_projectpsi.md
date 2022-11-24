@@ -187,7 +187,7 @@ Syntax:
 
 If any project attributes are translated, such as the title or description, you can retrieve those attributes with the nlsget method. Specify the attribute with one of the following parameters:
 
--   Title: title or t
+-   title: title or t
 -   Description: description, descr, or d
 
 Syntax:
