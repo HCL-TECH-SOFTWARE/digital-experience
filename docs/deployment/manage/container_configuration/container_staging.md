@@ -35,9 +35,11 @@ Follow these steps to export the source HCL Portal server.
 7.  Save the Virtual Portal output files to an external or shared drive for later use when importing to the target environment.
 8.  Save the /opt/HCL/wp_profile/PortalServer/deployed/archive directory files to an external or shared drive, for later use when importing to the target environment.
 9.  If you are using PZN rules, export the PZN rules using the Personalization Administration Portlet functions and save the generated Workspace.nodes file to an external or shared drive, for later use when importing to the target environment.
+
     1.  Log in to the HCL Portal Home Page.
     2.  Navigate to **Personalization > Business Rules* > Extra Actions > Export**.
     3.  Save the output file.
+
 10. When applicable, save all custom files (application and theme EAR files, WAR files) to an external or shared drive, for use later when importing to the target environment.
 
 ## Import the source HCL Portal server
@@ -75,17 +77,18 @@ Log in to the machine from where you will access your HCL Portal Container.
     The output displays a **BUILD SUCCESSFUL** message. If not, check the /opt/HCL/wp\_profile/logs/WebSphere\_Portal/SystemOut.log for errors.
 
 7.  Copy the output XML files, custom EAR and WAR files, Workspace.nodes file, and the ../deployed/archive directory files to a location on this local machine, making sure to preserve the file names and structure from the external or shared drive and then into the DX container.
-    1.  ```
+
+      ```
         cp /drive/* /tmp/
         ```
 
-    2.  OpenShift:
+    -   OpenShift:
 
         ```
         oc cp /tmp/* dx-deployment-nnnnn:/tmp/
         ```
 
-        Non OpenShift:
+    -     Non OpenShift:
 
         ```
         kubectl cp /tmp/* dx-deployment-nnnnn:/tmp/
@@ -93,7 +96,7 @@ Log in to the machine from where you will access your HCL Portal Container.
 
 8.  Create a directory under /opt/HCL/wp_profile to house any custom code or shared libraries.
 
-    1.  ```
+      ```
       mkdir –p /opt/HCL/wp_profile/customApps
       ```
 
@@ -101,11 +104,12 @@ Log in to the machine from where you will access your HCL Portal Container.
         In any containerized environment, all custom code and shared libraries need to exist under the persisted profile volume.
 
 9.  Move the copied files to the appropriate locations in the container.
-    1.  ```
+
+      ```
         mv /tmp/custom.ear /opt/HCL/wp_profile/customApps/
         ```
 
-    2.  ```
+      ```
         mv /tmp/deployed/archive/* /opt/HCL/wp_profile/PortalServer/deployed/archive/
         ```
 
@@ -114,19 +118,19 @@ Log in to the machine from where you will access your HCL Portal Container.
 12. Create any required configuration items. For example, URLs, namespace bindings, etc.
 13. Import the source server base content into the HCL Portal server in the container.
 
-    1.  OpenShift:
+    -   OpenShift:
 
         ```
         oc exec –it dx-deployment-nnnnn /bin/bash
         ```
 
-        Non OpenShift:
+    -     Non OpenShift:
 
         ```
         kubectl exec –it dx-deployment-nnnnn /bin/bash
         ```
 
-    2.  
+      
       ```
       /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config -user <your DX admin user> -password <your DX admin user password> -in /tmp/ExportReleaseResults.xml -out /tmp/ExportReleaseResults_ImportResult.xml
       ```
@@ -142,9 +146,11 @@ Log in to the machine from where you will access your HCL Portal Container.
     The output displays a **BUILD SUCCESSFUL** message. If not, check the /opt/HCL/wp\_profile/ConfigEngine/log/ConfigTrace.log for errors.
 
 15. If you are using PZN rules, import the PZN rules by using the Personalization Administration Portlet functions.
+
     1.  Log in to the HCL Portal home page.
     2.  Navigate to **Personalization > Business Rules > Extra Actions > Import**.
     3.  Browse to the /tmp/Workspace.nodes file and click **Import**.
+
 16. Log in to the HCL Portal home page and verify that the base server is functioning correctly:
 
     ```
@@ -184,17 +190,21 @@ Follow these steps to syndicate the source and target environments.
     Navigate to **Administration > Security > Credential Vault > Add a Vault Slot**.
 
 4.  On the **Credential Vault** page, select **New** and provide the following:
+
     1.  **Name** - enter the name for the vault slot.
     2.  **Vault resource associated with vault slot** - select **new** and enter the vault resource name.
     3.  **Vault slot is shared** check box - tick this check box and provide the credentials for a user that has appropriate access on the source/syndication system: **Shared userid**, **Shared password**, and **Confirm password**.
     4.  Click **OK** to save the changes.
+
 5.  Navigate to **Portal Content > Subscribers**. Click **Subscribe Now**.
 6.  In the **Subscribe to a syndicator** pop-up, provide the following:
+
     1.  **Syndicator URL**
     2.  **Syndicator Name**
     3.  **Subscriber Name**
     4.  **Credential Vault Slot** created in step 2.
     5.  Click **Next**.
+    
 7.  Select the libraries to syndicate and the **Scope** of the syndication.
 8.  Click **Finish**.
 9.  If you have Virtual Portals, you must repeat the syndication steps for each Virtual Portal.

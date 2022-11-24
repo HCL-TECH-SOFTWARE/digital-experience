@@ -4,7 +4,7 @@ This topic shows how to run manual Core configuration tasks on your HCL DX 9.5 C
 
 ## Running Core Config Engine tasks
 
-In an [HCL Digital Experience 9.5 Container deployment using Helm](../deployment/helm_deployment.md), some DX 9.5 Core configuration tasks \(such as change of context root\) are now performed using the Helm upgrade route. However, others \(such as database migration\) are performed using a Config Engine task, as they would be in an on-premise or hybrid environment.
+In an [HCL Digital Experience 9.5 Container deployment using Helm](../../install/container/helm_deployment/overview.md), some DX 9.5 Core configuration tasks \(such as change of context root\) are now performed using the Helm upgrade route. However, others \(such as database migration\) are performed using a Config Engine task, as they would be in an on-premise or hybrid environment.
 
 **Steps to run a Config Engine task:**
 
