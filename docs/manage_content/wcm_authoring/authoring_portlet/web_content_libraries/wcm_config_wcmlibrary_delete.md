@@ -23,9 +23,7 @@ To delete a library:
     !!! note
         Items that were previously deleted but not purged from the library are not included in the "total items deleted successfully" count.
 
-<!--
-**Parent topic:**[Managing web content libraries](../panel_help/wcm_admin_libraries.md) -->
 
 ???+ info "Related information:"
-    - [Staging to production list](../../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_stage_check.md)
+    - [Staging to production list](../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_stage_check.md)
 

@@ -10,5 +10,5 @@ You can configure the advanced settings of the web content viewer to limit resul
 
 
 ???+ info "Related information" 
-    -   [Synchronizing scopes for web content](../../wcm_artifacts/tagrate_managing/syn_scope/index.md)
+    -   [Synchronizing scopes for web content](./syn_scope/index.md)
 

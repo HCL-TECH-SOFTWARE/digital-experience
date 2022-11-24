@@ -8,7 +8,7 @@ This action prevents the library from being accessed from an authoring portlet, 
 
 1.  Go to **Administration** \> **HCL Portal** \> **Portal Content** \> **Web Content Libraries**.
 
-2.  Click ![Edit library](../../../../../images/edit.jpg) on the library you would like to edit.
+2.  Click ![Edit library](../../../../images/edit.jpg) on the library you would like to edit.
 
 3.  Clear the "Enabled" check box. This option disables the web content library.
 

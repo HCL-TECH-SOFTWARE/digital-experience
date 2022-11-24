@@ -31,6 +31,6 @@ This content is only rendered when in edit mode.
 ```
 
 ???+ info "Related information:"
-    - [Inline editing](../../../wcm_content_delivery/wcm_inline_editing/inline_editing/index.md)
-    - [Enabling inline editing for content items](../../../wcm_content_delivery/wcm_inline_editing/inline_editing/wcm_dev_inline_tags.md)
+    - [Inline editing](../../../../inline_editing/index.md)
+    - [Enabling inline editing for content items](../../../../inline_editing/wcm_dev_inline_tags.md)
 

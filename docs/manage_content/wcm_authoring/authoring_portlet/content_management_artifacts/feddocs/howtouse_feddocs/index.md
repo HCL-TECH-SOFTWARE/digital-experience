@@ -15,9 +15,9 @@ To access the information from a federated documents rule in your web content sy
 
 You can now preview your component and reference it from within presentation templates, other element designs, or a web content viewer.
 
--   **[Sample designs for a federated documents selection rule](../wcm/wcm_dev_feddocs_samples.md)**  
+-   **[Sample designs for a federated documents selection rule](wcm_dev_feddocs_samples.md)**  
 When you render document metadata information retrieved with a federated documents selection rule, you can tailor the header, footer, and menu search result designs for simple or more elaborate presentations.
--   **[AttributeResource values for federated documents](../wcm/wcm_dev_feddocs_attsdoc.md)**  
+-   **[AttributeResource values for federated documents](wcm_dev_feddocs_attsdoc.md)**  
 The AttributeResource tag is used as a placeholder to display attributes from a federated documents selection rule within a personalization element design. It cannot be used in a presentation template or other element types.
 
 

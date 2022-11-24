@@ -36,5 +36,5 @@ Once you add the tag to your design, you can also add the following parameters t
 |`start=" "`<br> `end=" "` |The start and end attributes are used to wrap the data that is returned by a tag within other tags, such as HTML. These attributes are not mandatory.|
 
 ???+ info "Related information:"
-    - [Creating a page navigation component](../../elements/howto_work_with_elements/page_nav_element/wcm_dev_elements_page-navigation_creating.md)
-    - [Page navigation design example](../../elements/howto_work_with_elements/page_nav_element/wcm_dev_elements_page-navigation_example.md)
+    - [Creating a page navigation component](../../elements/page_nav_element/wcm_dev_elements_page-navigation_creating.md)
+    - [Page navigation design example](../../elements/page_nav_element/wcm_dev_elements_page-navigation_example.md)

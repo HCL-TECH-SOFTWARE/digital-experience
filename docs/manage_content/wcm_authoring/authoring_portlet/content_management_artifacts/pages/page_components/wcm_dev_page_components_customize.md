@@ -15,9 +15,9 @@ Edit the authoring template named Your Page Component located at **Your Library 
     Once you have completed these changes, reapply the authoring template.
 
 
--   Documentation resource: [An overview of authoring templates](../../../../build_sites/create_sites/create_reusable_assets/wcm_dev_auth-temp_overview.md)
--   Documentation resource: [Creating authoring templates](../../../../manage_content/wcm/mng_content_with_auth_portlet/creating_items/creating_authoring_templates/index.md)
--   Documentation resource: [Reapplying an updated authoring template](../../../wcm/mng_content_with_auth_portlet/item_management_features/howto_manage_auth_templates/wcm_dev_auth-temp_reapply.md)
+-   Documentation resource: [An overview of authoring templates](../../../../../../build_sites/create_sites/create_reusable_assets/wcm_dev_auth-temp_overview.md)
+-   Documentation resource: [Creating authoring templates](../../authoring_templates/creating_content_template/index.md)
+-   Documentation resource: [Reapplying an updated authoring template](../../authoring_templates/howto_manage_auth_templates/wcm_dev_auth-temp_reapply.md)
 
 ## Assigning a workflow to the content item
 
@@ -27,7 +27,7 @@ By default, the content item for the page component used the system workflow. To
 2.  Select a workflow.
 3.  Publish the item.
 
--   Documentation resource: [How to work with draft items](../../../wcm/mng_content_with_auth_portlet/item_management_features/wcm_dev_drafts.md)
+-   Documentation resource: [How to work with draft items](../../../change_management/drafts.md)
 <!-- -   Documentation resource: [Content item workflow settings](../panel_help/wcm_dev_workflow_items_content.md) -->
 
 ## Update the CSS
@@ -44,8 +44,8 @@ The presentation templates used to display the content on a page are located at 
 
 If you add or remove elements from the content template, you must update the HTML in the presentation template as well. You can also edit each individual design used by your Page Component.
 
--   Documentation resource: [Presentation templates](../../../../build_sites/create_sites/create_reusable_assets/presentation_template/index.md)
--   Documentation resource: [Creating a presentation template](../../../wcm/mng_content_with_auth_portlet/creating_items/wcm_dev_pres-temp.md)
+-   Documentation resource: [Presentation templates](../../../../../../build_sites/create_sites/create_reusable_assets/presentation_template/index.md)
+-   Documentation resource: [Creating a presentation template](../../wcm_dev_pres-temp.md)
 
 ## Updating the icons
 
@@ -57,13 +57,13 @@ You can replace these images with your own icons. Image sizes of `18x18`, `32x32
 
 Update the localization settings to match the locales that are used by your site, or remove localizations if your site isn't localized. This is located at **Your Library > Localizations > Your Page Component**.
 
--   Documentation resource: [How to store translated text in a content item or site area](../../../wcm/wcm_artifacts/wcm_dev/wcm_dev_storing_translated_text.md)
+-   Documentation resource: [How to store translated text in a content item or site area](../../../../../wcm_development/wcm_dev_storing_translated_text.md)
 
 ## Move items into a different library
 
 By default, the items that are generated are created directly under the top-level sections of the library you specified when you generated the new templates. Use the **Move** feature to move these items to your preferred location.
 
--   Documentation resource: [Moving a content item](../../../wcm/mng_content_with_auth_portlet/item_management_features/howto_move_copy_link_items/wcm_dev_content_linking_moving.md)
+-   Documentation resource: [Moving a content item](../../content_items/howto_move_copy_link_items/wcm_dev_content_linking_moving.md)
 
 ## Displaying the page component in the Page Components palette
 
@@ -80,8 +80,8 @@ There are two ways you can make a page component be displayed in the Page Compon
     You can also add ibm.portal.toolbar.NewContent as a keyword in a site area. Any content items located under a site area tagged with ibm.portal.toolbar.NewContent will also be displayed within the Page Components palette. This is useful if you have a large number of page components and want to display them within sub-folders within the Page Components palette.
 
 
--   Documentation resource: [Moving a content item](../../../wcm/mng_content_with_auth_portlet/item_management_features/howto_move_copy_link_items/wcm_dev_content_linking_moving.md)
--   Documentation resource: [Creating new categories for the Page Component palette by using the Web Content Authoring Portlet](../../../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/customizing_page_cmpnt_palette/epc_newsource_cfgengine.md)
+-   Documentation resource: [Moving a content item](../../content_items/howto_move_copy_link_items/wcm_dev_content_linking_moving.md)
+-   Documentation resource: [Creating new categories for the Page Component palette by using the Web Content Authoring Portlet](../../../../../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/customizing_page_cmpnt_palette/epc_newsource_cfgengine.md)
 
 ## Hiding the page component from the Page Components palette
 
@@ -94,8 +94,8 @@ If you want to retire a page component so that it no longer appears in the Page 
 
 Page components already added to a site will remain visible on the site, but content authors will not be able to create a new page component of that type.
 
--   Documentation resource: [Moving a content item](../../../wcm/mng_content_with_auth_portlet/item_management_features/howto_move_copy_link_items/wcm_dev_content_linking_moving.md)
--   Documentation resource: [Creating new categories for the Page Component palette by using the Web Content Authoring Portlet](../../../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/customizing_page_cmpnt_palette/epc_newsource_cfgengine.md)
+-   Documentation resource: [Moving a content item](../../content_items/howto_move_copy_link_items/wcm_dev_content_linking_moving.md)
+-   Documentation resource: [Creating new categories for the Page Component palette by using the Web Content Authoring Portlet](../../../../../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/customizing_page_cmpnt_palette/epc_newsource_cfgengine.md)
 
 ## Deleting a page component
 

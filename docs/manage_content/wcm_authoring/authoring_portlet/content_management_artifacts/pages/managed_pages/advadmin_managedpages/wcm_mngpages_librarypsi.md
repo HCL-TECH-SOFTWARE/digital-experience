@@ -104,5 +104,5 @@ Retrieve library details with the details method. This method returns the follow
 
 
 ???+ info "Related information"  
-    -   [Command reference for the Portal Scripting Interface](../../../../../extend_dx/development_tools/portal_admin_tools/portal_scripting_interface/command_ref_psi/index.md)
+    -   [Command reference for the Portal Scripting Interface](../../../../../../../deployment/manage/portal_admin_tools/portal_scripting_interface/command_ref_psi/index.md)
 

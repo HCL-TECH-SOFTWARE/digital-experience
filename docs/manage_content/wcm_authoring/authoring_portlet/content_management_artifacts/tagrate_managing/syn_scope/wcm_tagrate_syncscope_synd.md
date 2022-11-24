@@ -22,5 +22,5 @@ To automatically run scope synchronization whenever syndication occurs, specify 
 
 
 ???+ info "Related information"  
-    -   [Setting service configuration properties](../../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
+    -   [Setting service configuration properties](../../../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 

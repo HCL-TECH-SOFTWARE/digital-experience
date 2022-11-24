@@ -84,8 +84,3 @@ The new context can be specified relative to the name path of the current contex
 [Element context="current" type="content" key="MyElement"]
 [/InContext]
 ```
-
-<!---
-???+ info "Related information:"
-[The role of the In Context tag in presentation templates \| CTC for HCL Digital Experience](../ctc/ctc_arch_prestemp_jspcontext.md) -->
-

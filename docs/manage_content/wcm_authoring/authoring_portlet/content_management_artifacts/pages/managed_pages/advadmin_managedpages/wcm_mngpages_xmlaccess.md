@@ -44,7 +44,7 @@ xmlaccess -in Export.xml -url http://www.example.com:10039/wps/config/\$project/
 Because pages are stored in the Portal Site library in Web Content Manager, each page has corresponding objects in the JCR database. You must be aware of this relation when you create, update, or delete pages with the XML configuration interface. If xmlaccess processing is interrupted, it can result in a mismatch between the page state and database state.
 
 !!!warning
-    If you redeploy your site daily, your JCR size increases because of page versions. Periodically clean up your versions to reduce the JCR size. Go to [Clearing version history](../../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcm_admin_clear_versions.md) for information.
+    If you redeploy your site daily, your JCR size increases because of page versions. Periodically clean up your versions to reduce the JCR size. Go to [Clearing version history](../../../../../../wcm_configuration/wcm_adm_tools/wcm_admin_clear_versions.md) for information.
 
 To ensure that page and database information for a page remain synchronized, use the `transaction-level` attribute of the `request` element in the XML file. For more information about using the `transaction-level` attribute, go to *XML configuration reference.*
 
@@ -88,5 +88,5 @@ You can exclude pages from being managed in Web Content Manager. You can prevent
 
 
 ???+ info "Related information"  
-    -   [Changes to the XML configuration interface](../../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/adxmlchg.md)
+    -   [Changes to the XML configuration interface](../../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/adxmlchg.md)
 

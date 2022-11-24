@@ -15,7 +15,7 @@ Instructions to back up Document Conversion Services (DCS) files, prior to the r
 -   **[Using Document Conversion Services with Stellent](dcs_stellent.md)**  
 For Linux, when using Stellent version 8.1.0 and later, the X-server dependency has been removed.
 -   **[Disable DCS](disable_3rdparty_dcs.md)**  
-Beginning with Digital Experience 95 CF205 release, Oracle DCS service for Digital Experience [Document Conversion Service](/index.md) is removed and will be replaced with an HCL supported DCS services.
+Beginning with Digital Experience 95 CF205 release, Oracle DCS service for Digital Experience [Document Conversion Service](index.md) is removed and will be replaced with an HCL supported DCS services.
 -   **[Configuring a remote Document Conversion Service](dcs_remote.md)**  
 To balance processing power, you can run document conversion services on a remote IBM WebSphere Application Server that supports document conversion services. Enabling the delegation of document conversion services to a remote server requires steps on both HCL Digital Experience and the remote server.
 -   **[Files conversion supported by DCS](dcs_view_html.md)**  
@@ -23,5 +23,5 @@ View a list of file types that are supported by DCS for conversion.
 
 
 ???+ info "Related information"  
-    - [Planning and preparing for Portal Search](../../build_sites/search/planning_portal_search/index.md)
+    - [Planning and preparing for Portal Search](../../../build_sites/search/planning_portal_search/index.md)
 

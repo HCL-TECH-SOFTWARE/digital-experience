@@ -15,6 +15,6 @@ To access the information from a federated documents rule in your web content sy
 
 
 ???+ info "Related information:"
-    - [Configure federated documents feature for files](../../../../extend_dx/integration/connections/configuration/cfg_connections_features/integrating_cnx_files/i_coll_t_enable_lcfiles_feddocs.md)
-    - [New Web Content Manager features](../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/wcm_migration_post_functions.md)
+    - [Configure federated documents feature for files](../../../../../extend_dx/integration/connections/configuration/cfg_connections_features/integrating_cnx_files/i_coll_t_enable_lcfiles_feddocs.md)
+    - [New Web Content Manager features](../../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/wcm_migration_post_functions.md)
 

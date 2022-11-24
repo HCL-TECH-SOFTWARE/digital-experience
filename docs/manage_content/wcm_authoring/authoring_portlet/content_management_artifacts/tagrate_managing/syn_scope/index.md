@@ -13,6 +13,6 @@ If automatic synchronization is not enabled for the scopes that are used for web
 
 
 ???+ info "Related information"  
-    -   [Applying tagging and rating scopes to web content](../../../wcm_artifacts/tagrate_managing/wcm_tagrate_scope.md)
-    -   [Setting service configuration properties](../../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
+    -   [Applying tagging and rating scopes to web content](../wcm_tagrate_scope.md)
+    -   [Setting service configuration properties](../../../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
 

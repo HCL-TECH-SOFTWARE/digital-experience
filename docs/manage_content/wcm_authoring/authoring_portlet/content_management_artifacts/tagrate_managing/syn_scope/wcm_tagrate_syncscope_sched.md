@@ -65,7 +65,7 @@ You can schedule scope synchronization to be run at specific times by defining t
 
 
 ???+ info "Related information"  
-  - [Setting service configuration properties](../../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
-  - [Working with the XML configuration interface](../../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
-  - [XML configuration reference](../../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref.md)
+  - [Setting service configuration properties](../../../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
+  - [Working with the XML configuration interface](../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
+  - [XML configuration reference](../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref.md)
 

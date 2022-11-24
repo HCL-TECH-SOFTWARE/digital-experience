@@ -19,7 +19,3 @@ This task can be used to assign users a specific level of access to all librarie
     3.  Grant users a specific level of access to all libraries available through the web content authoring portlet.
 
 4.  Click `Done`
-
-<!--
-**Parent topic:**[Managing web content libraries](../panel_help/wcm_admin_libraries.md) -->
-

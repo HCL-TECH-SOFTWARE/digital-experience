@@ -27,7 +27,7 @@ See the [Access control levels for Content Composer authors and editors](../conf
 
 The HCL Content Composer Dashboard has the following components:
 
-![](../../../assets/HCL%20CC%20Dashboard.png)
+![](../../../../assets/HCL%20CC%20Dashboard.png)
 
 -   **Main header** - This contains the HCL Content Composer **Create** content actions and content item Search Bar.
 -   **Content collections column** - This shows the content collections inside the HCL Content Composer library in a cascading menu system. When you select a collection, sub-collections are displayed off to the right side when applicable.

@@ -49,7 +49,7 @@ You must be an administrator to create web content libraries.
 
 10. Click **OK** to create the library.
 
-11. Add the new library to the list of configured libraries for each authoring portlet that requires access to the new library, including authoring portlets on servers that you subscribe your library to. For more information, see [Selecting web content libraries](../../../wcm_content_delivery/wcm_user_assistance/editing_webcontent_portlet/auth_portlet_settings/wcm_config_authoringportlet_libraries.md).
+11. Add the new library to the list of configured libraries for each authoring portlet that requires access to the new library, including authoring portlets on servers that you subscribe your library to. For more information, see [Selecting web content libraries](../../../wcm_delivery/wcm_user_assistance/editing_webcontent_portlet/auth_portlet_settings/wcm_config_authoringportlet_libraries.md).
 
 
 ### Renaming Libraries

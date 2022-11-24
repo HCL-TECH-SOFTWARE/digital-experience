@@ -10,7 +10,7 @@ You must search the Microsoft download site for the vcredist\_x86.exe, vcredist\
 
 ## Exporter task
 
-Run the exporter task from the [wp\_profile\_root](../../../guide_me/wpsdirstr.md)/PortalServer/config/oiexport/exporter directory to ensure that you installed all the libraries.
+Run the exporter task from the [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)/PortalServer/config/oiexport/exporter directory to ensure that you installed all the libraries.
 
 A successful task displays the following message:
 

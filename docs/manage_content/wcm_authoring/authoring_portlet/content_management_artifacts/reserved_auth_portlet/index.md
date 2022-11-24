@@ -42,5 +42,5 @@ If any of these problems occur, verify that the conditions for proper operation 
 
 
 ???+ info "Related information"  
-    -   [Creating a federated documents selection rule](../../wcm_artifacts/feddocs/wcm_dev_feddocs_createrule.md)
+    -   [Creating a federated documents selection rule](../feddocs/wcm_dev_feddocs_createrule.md)
 

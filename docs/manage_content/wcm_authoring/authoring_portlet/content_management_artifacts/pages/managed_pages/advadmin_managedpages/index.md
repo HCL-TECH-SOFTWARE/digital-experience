@@ -17,6 +17,6 @@ When Web Content Manager cannot determine the proper location of a page item in 
 
 
 ???+ info "Related information"  
-    -   [Vanity URLs](../../../wcm_content_delivery/vanity_url/index.md)
-    -   [Staging to production list](../../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_stage_check.md)
+    -   [Vanity URLs](../../../../../../wcm_delivery/vanity_url/index.md)
+    -   [Staging to production list](../../../../../../../deployment/manage/staging_to_production/overview_of_staging_to_prod/dep_stage_check.md)
 

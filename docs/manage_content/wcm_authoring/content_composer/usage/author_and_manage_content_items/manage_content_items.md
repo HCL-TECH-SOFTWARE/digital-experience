@@ -91,7 +91,7 @@ Content authors will be able to view and filter comments in HCL Content Composer
 
 2.  Open the content and move the workflow to the preferred stage and add a comment. In the example below, **Next stage - Publish** is selected and a comment is added.
 
-    ![Move workflow to preferred stage and add comment](../../../../../images/Move%20workflow%20to%20preferred%20stage%20and%20add%20comment.png "Move workflow to preferred stage and add comment")
+    ![Move workflow to preferred stage and add comment](../../../../../images/Move%20workflow%20to%20preferred%20stage%20and%20add%20comment.png)
 
 3.  Once the action is completed, the **Comments** icon will now be available on the right-side navigation. Click **Comments** to see the workflow comments.
 

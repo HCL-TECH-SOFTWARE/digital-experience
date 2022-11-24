@@ -20,7 +20,3 @@ In the rare event where a library becomes locked, you can use the unlock library
     ?MOD=UnlockLibrary&library=libraryname
     
     ```
-
-<!--
-**Parent topic:**[Managing web content libraries](../panel_help/wcm_admin_libraries.md) -->
-
