@@ -26,9 +26,9 @@ The ExportManagedPagesRelease.xml file or a Portal Application Archive (PAA) fil
 
 
 **Related information**  
-[Administering vanity URLs](../../../../manage_content/wcm/wcm_content_delivery/vanity_url/adm_vanity_url/index.md)<br>
-[Syndication](../../../../manage_content/wcm/wcm_content_delivery/syndication/index.md)<br>
-[Syndication relationships](../../../../manage_content/wcm/wcm_content_delivery/syndication/wcm_syndication_overview.md)<br>
+[Administering vanity URLs](../../../../manage_content/wcm_delivery/vanity_url/adm_vanity_url/index.md)<br>
+[Syndication](../../../../manage_content/wcm_delivery/syndication/index.md)<br>
+[Syndication relationships](../../../../manage_content/wcm_delivery/syndication/wcm_syndication_overview.md)<br>
 [Staging artifacts that are not transferred by syndication](../../staging_to_production/updates_with_syndication/dep_up_syn_staging.md)<br>
 [Creating the differential release](../../staging_to_production/creating_deploying_diff_release/dep_diff.md)<br>
 [The XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)

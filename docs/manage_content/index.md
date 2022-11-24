@@ -1,7 +1,28 @@
-# Manage Content
+# Manage Content and Assets
 
-HCL DX provides web content management capabilities to accelerate the creation, maintenance, and delivery of content across intranet, extranet, internet, and portal sites.
+HCL DX provides web content and digital asset management capabilities that allow you to create, manage and deliver content both headlessly and to websites delivered by HCL DX itself. HCL DX provides features to enable the management of both web content and digital assets such as lifecycle management, organization and editing capabilities, publication, versioning and other management capabilities. HCL DX also provides a built-in personalization engine, as well as the ability to integrate with other personalization engines such as HCL Unica.
 
+## What is it For?
+
+Web content and digital assets are critical components of a digital experience. You should use HCL DX to manage web content that you plan to either integrate into websites delivered by DX or access from remote, headless clients such as mobile apps. You should use HCL DX to manage web-ready digital assets, either for direct integration into your applications or for use in web content.
+
+## Who Should Use It?
+
+HCL web content management and digital asset management facilities are primarily aimed at non-technical users who are responsible for creation and management of content. This could be people specifically responsible for content editing, or users for whom content creation is a secondary responsibility.
+
+Web developers can also use the features of HCL DX to extend content and asset management capabilities, or to access content and assets via the product APIs. Development of sites on HCL DX is covered in the [Building Sites](../build_sites/index.md) section.
+
+## More Information
+
+This section describes several key features in more depth:
+* [Author Web Content](wcm_authoring/index.md) describes how to use HCL DX to create web content
+* [Deliver Web Content](wcm_delivery/index.md) describes how to use HCL DX to deliver web content
+* [Configure Web Content Manager](wcm_configuration/index.md) describes how to configure HCL DX content management services
+* [Extend Web Content Manager](wcm_development/index.md) describes how to use HCL DX to create web content
+* [Digital Asset Management](digital_assets/index.md) provides a comprehensive description of the digital asset system.
+* [Personalization](pzn/index.md) provides a comprehensive description of the built-in personalization system.
+
+<!--
 Web Content Manager is a comprehensive solution for creating, managing, and delivering content on your website.
 
 -   Use Web Content Manager to publish your information and pull in content from other sources, either RSS feeds or other content management systems. On a single page, you can publish your corporate news and highlight news from an external news source.
@@ -36,4 +57,4 @@ In addition to the authoring home pages, authors can edit content in context on 
 
 The HCL Web Content Manager Multilingual Solution download, available on the solution catalog, provides a reference implementation for a multilingual website. It includes a set of extension plugins that you can use to configure and deliver a multilingual site.
 
-
+-->

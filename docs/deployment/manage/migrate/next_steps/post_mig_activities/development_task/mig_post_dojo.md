@@ -14,5 +14,5 @@ See the following procedure for an example of how to search for these references
 
 ???+ info "Related information"
     -   [Dojo Toolkit](../../../../../../extend_dx/development_tools/dojo/dojo_overview.md)
-    -   [Using WebDAV with HCL Portal](../../../../../../manage_content/wcm/wcm_content_delivery/webdav/administer_webdav/index.md)
+    -   [Using WebDAV with HCL Portal](../../../../../../manage_content/wcm_delivery/webdav/administer_webdav/index.md)
 

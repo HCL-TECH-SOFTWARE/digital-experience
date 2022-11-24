@@ -76,7 +76,7 @@ These items are created when you generate a new author-ready content template:
 
         -   Documentation resource: [An overview of authoring templates](../../../build_sites/create_sites/create_reusable_assets/wcm_dev_auth-temp_overview.md) 
 
-        -   Documentation resource: [Creating authoring templates](../../../manage_content/wcm/mng_content_with_auth_portlet/creating_items/creating_authoring_templates/index.md)
+        -   Documentation resource: [Creating authoring templates](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/creating_authoring_templates/index.md)
 
 -   **Update the CSS**
 
@@ -92,18 +92,18 @@ These items are created when you generate a new author-ready content template:
 
     -   Documentation resource: [Presentation templates](../../../build_sites/create_sites/create_reusable_assets/presentation_template/index.md)
 
-    -   Documentation resource: [Creating a presentation template](../../../manage_content/wcm/mng_content_with_auth_portlet/creating_items/wcm_dev_pres-temp.md)
+    -   Documentation resource: [Creating a presentation template](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/wcm_dev_pres-temp.md)
 
 -   **Update or removed localizations**
 
     Update the localization settings to match the locales that are used by your site, or remove localizations if your site isn't localized. This is located at **Your Library** \> **Content** \> **Localizations** \> **Your text provider content item**.
 
-    -   Documentation resource: [How to store translated text in a content item or site area](.././../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_dev_storing_translated_text.md)
+    -   Documentation resource: [How to store translated text in a content item or site area](.././../../manage_content/wcm_development/wcm_dev_storing_translated_text.md)
     
 -   **Moving the generated items**
 
     By default, the items that are generated are created directly under the top-level sections of the library you specified when you generated the new templates. Use the **Move** feature to move these items to your preferred location.
 
-    -   Documentation resource: [Moving a content item](../../../manage_content/wcm/mng_content_with_auth_portlet/item_management_features/howto_move_copy_link_items/wcm_dev_content_linking_moving.md)
+    -   Documentation resource: [Moving a content item](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/content_items/howto_move_copy_link_items/wcm_dev_content_linking_moving.md)
 
 

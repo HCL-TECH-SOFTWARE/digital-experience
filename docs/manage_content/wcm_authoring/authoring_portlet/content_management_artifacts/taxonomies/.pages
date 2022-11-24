@@ -1,0 +1,7 @@
+title: Taxonomies
+nav:
+    - index.md
+    - ...
+    - wcm_dev_profiling_taxonomy_editing.md
+    - wcm_dev_profiling_category_copying.md
+    - wcm_dev_profiling_category_moving.md

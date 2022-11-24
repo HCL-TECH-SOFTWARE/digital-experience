@@ -119,7 +119,7 @@ To enable the folder selection wizard in Personalization, ensure that the `wp_fe
 
 
 ???+ info "Related information"
-    -   [Configuring the reserved authoring portlet](../../../../../manage_content/wcm/wcm_artifacts/reserved_auth_portlet/wcm_config_wcmviewer_reservedcfg.md)
-    -   [Inserting a Link in an Element](../../../../../manage_content/wcm/wcm_artifacts/elements/element_designs/wcm_dev_elements_insert_link.md)
-    -   [Personalizing federated documents](../../../../../manage_content/wcm/wcm_artifacts/feddocs/index.md)
+    -   [Configuring the reserved authoring portlet](../../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/reserved_auth_portlet/wcm_config_wcmviewer_reservedcfg.md)
+    -   [Inserting a Link in an Element](../../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/element_designs/wcm_dev_elements_insert_link.md)
+    -   [Personalizing federated documents](../../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/feddocs/index.md)
 

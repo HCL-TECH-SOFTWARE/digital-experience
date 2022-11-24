@@ -171,19 +171,19 @@ Use syndication to synchronize content between authoring, staging, and publishin
 
 1.  Plan your syndication strategies.
 
-    -   Documentation resource: [Syndication relationships](../../../../../manage_content/wcm/wcm_content_delivery/syndication/wcm_syndication_overview.md)
+    -   Documentation resource: [Syndication relationships](../../../../../manage_content/wcm_delivery/syndication/wcm_syndication_overview.md)
 
 2.  Define syndication properties.
 
-    -   Documentation resource: [Syndication properties](../../../../../manage_content/wcm/wcm_content_delivery/syndication/wcm_config_prop_syndication.md)
+    -   Documentation resource: [Syndication properties](../../../../../manage_content/wcm_delivery/syndication/wcm_config_prop_syndication.md)
 
 3.  Tune your syndication strategy to improve performance.
 
-    -   Documentation resource: [Syndication tuning](../../../../../manage_content/wcm/wcm_content_delivery/syndication/wcm_syndication_tuning.md)
+    -   Documentation resource: [Syndication tuning](../../../../../manage_content/wcm_delivery/syndication/wcm_syndication_tuning.md)
 
 4.  Create your syndication relationships.
 
-    -   Documentation resource: [Creating a syndication relationship by using the Administration Portlet](../../../../../manage_content/wcm/wcm_content_delivery/syndication/manage_synd_subs/wcm_syndication_settingup.md)
+    -   Documentation resource: [Creating a syndication relationship by using the Administration Portlet](../../../../../manage_content/wcm_delivery/syndication/manage_synd_subs/wcm_syndication_settingup.md)
 
 # Deploying the delivery environment
 

@@ -51,7 +51,7 @@ The portal administrator collects information about the content provider and its
             2.  Go to **Applications > Application Types > WebSphere enterprise applications**.
             3.  Find and click the **wp.vwat.servlet.ear** application link.
             4.  Under the **Web Module Properties** heading, click **Context Root For Web Modules**.
-            5.  Change the context root to /. This step can create name conflicts. Add a rewrite rule to avoid these conflicts. For more information read [Apache Module mod_rewrite](http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html) and [Providing short vanity URLs](../../../../manage_content/wcm/wcm_content_delivery/vanity_url/adm_vanity_url/van_url_short.md).
+            5.  Change the context root to /. This step can create name conflicts. Add a rewrite rule to avoid these conflicts. For more information read [Apache Module mod_rewrite](http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html) and [Providing short vanity URLs](../../../../manage_content/wcm_delivery/vanity_url/adm_vanity_url/van_url_short.md).
             6.  Click **OK**.
             7.  Click **Save** to save your changes to the master configuration.
             8.  Stop and restart the **wp.vwat.servlet.ear** application.
@@ -147,6 +147,6 @@ The portal administrator collects information about the content provider and its
         -   Go to the credential vault used for the authentication. Give the content user the correct permissions to the credential vault.
 
 ???+ info "Related information"  
-    -   [Providing short vanity URLs](../../../../manage_content/wcm/wcm_content_delivery/vanity_url/adm_vanity_url/van_url_short.md)
+    -   [Providing short vanity URLs](../../../../manage_content/wcm_delivery/vanity_url/adm_vanity_url/van_url_short.md)
     -   [Apache Module mod_rewrite](http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html)
 

@@ -51,8 +51,8 @@ You can store web content in the HCL Digital Experience site library or in a sep
 Web content libraries are used to store your web content and managed pages. Syndication is used to keep libraries in synch between your different server environments.
 -   **[Web content library default items](../../../../build_sites/create_sites/building_website/content_libraries/wcm_library_default_items.md)**  
 When you create a web content library, you can choose to include a set of default web content items in the new library. These items can be used as a starting point for your Web Content Manager system and website.
--   **[Create a content library](../../../../manage_content/wcm/wcm_artifacts/web_content_library/oob_content_createlib.md)**  
--   **[HCL Web Content Manager Multilingual Solution](../../../../manage_content/wcm/wcm_content_delivery/mls/index.md)**  
+-   **[Create a content library](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/web_content_library/oob_content_createlib.md)**  
+-   **[HCL Web Content Manager Multilingual Solution](../../../../manage_content/wcm_authoring/multi_lingual/index.md)**  
 The Web Content Manager Multilingual Solution is a set of tools that are used to manage translated versions of localized and regionalized websites.
 
 

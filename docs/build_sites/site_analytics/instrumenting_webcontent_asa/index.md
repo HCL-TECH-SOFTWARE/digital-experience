@@ -35,5 +35,5 @@ Web Content Viewers provide support for Active Site Analytics microformats by de
 
 
 ???+ info "Related information:"
-    - [Setting up site analysis for the Web Content Viewer](../../../manage_content/wcm/wcm_content_delivery/cfg_webcontent_delivery_env/wcmviewer_site_analytics_setup/index.md)
+    - [Setting up site analysis for the Web Content Viewer](../../../manage_content/wcm_delivery/cfg_webcontent_delivery_env/wcmviewer_site_analytics_setup/index.md)
 

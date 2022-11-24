@@ -74,6 +74,6 @@ If you make the web content available on your delivery portal by using syndicati
 ???+ info "Related information"  
     -   [Portlet API Web Content Viewer and Remote Web Content Viewer](../../../../../../../deployment/manage/migrate/planning_migration/migration_consideration/migrating_wcm_70_80/mig_pre_wcm_portlets.md)
     -   [Converting portlet instances and settings from the HCL DX API to the standard API](../../../../../../../extend_dx/portlets_development/portlet_api/converting_dx_portlets_to_java_standard_api/migrt_ptlt_api.md)
-    -   [Editing the settings of a Web Content Viewer](./../../../../../../../manage_content/wcm/wcm_content_delivery/wcm_user_assistance/editing_webcontent_portlet/editing_setting_of_web_content_viewer/index.md)
+    -   [Editing the settings of a Web Content Viewer](./../../../../../../../manage_content/wcm_delivery/wcm_user_assistance/editing_webcontent_portlet/editing_setting_of_web_content_viewer/index.md)
     -   [Unsupported features for HCL Digital Experience 8.5 and 9.0](../../../../../../../whatsnew/unsupported_features.md)
 

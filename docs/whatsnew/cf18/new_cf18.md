@@ -14,15 +14,15 @@ With the HCL Digital Experience CF18 Container and CF update, an updated JSF Por
 
 ## Apply Content Template REST API
 
-The Apply Content Template API allows a developer to apply a content template to a set of specific content items or all content items of a certain template. It is equivalent to the functionality in the user interface. See [How to set default content values for content templates by using REST](../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_rest/wcm_rest_mng_content/wcm_rest_template/wcm_rest_content_template/wcm_rest_crud_cont_temp_default.md) for details.
+The Apply Content Template API allows a developer to apply a content template to a set of specific content items or all content items of a certain template. It is equivalent to the functionality in the user interface. See [How to set default content values for content templates by using REST](../../manage_content/wcm_development/wcm_rest/wcm_rest_mng_content/wcm_rest_template/wcm_rest_content_template/wcm_rest_crud_cont_temp_default.md) for details.
 
 ## Enhanced Content Template API
 
-The Enhanced Web Content Manager Content Template API adds the ability to retrieve the configuration details of content template elements. See [How to retrieve the settings of the elements for content templates by using REST](../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_rest/wcm_rest_mng_content/wcm_rest_template/wcm_rest_elem_set_cont_temp.md) for details.
+The Enhanced Web Content Manager Content Template API adds the ability to retrieve the configuration details of content template elements. See [How to retrieve the settings of the elements for content templates by using REST](../../manage_content/wcm_development/wcm_rest/wcm_rest_mng_content/wcm_rest_template/wcm_rest_elem_set_cont_temp.md) for details.
 
 ## Rich Text Editor Textbox I/O Updates
 
-Updates are provided for the Textbox I/O Rich Text Editor, requiring use of Java 8. See [Rich text editor toolbar configuration options](../../manage_content/wcm/wcm_content_delivery/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) for details.
+Updates are provided for the Textbox I/O Rich Text Editor, requiring use of Java 8. See [Rich text editor toolbar configuration options](../../manage_content/wcm_delivery/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) for details.
 
 ## Sample Guidance to set Storage Class and Volume to deploy HCL Digital Experience 9.5 Containers to Amazon Elastic Kubernetes Service (EKS) and Red Hat OpenShift
 

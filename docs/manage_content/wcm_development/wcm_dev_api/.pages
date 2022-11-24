@@ -1,0 +1,9 @@
+title: HCL Web Content Manager API
+nav:
+    - index.md
+    - wcm_dev_api_using.md
+    - wcm_dev_api_using_query.md
+    - wcm_reference_wcm-jsp-tags.md
+    - wcm_dev_api_library.md
+    - wcm_dev_api_syndication.md
+    - wcm_mls_api.md

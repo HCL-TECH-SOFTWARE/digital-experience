@@ -70,21 +70,21 @@ The following features and updates are available to customers installing HCL Dig
 
 === "Containers"
 
-    Developers can now specify a library to apply a content template. See the [Apply Content Template API](../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_rest/wcm_rest_mng_content/wcm_rest_template/wcm_rest_content_template/wcm_rest_crud_cont_temp_default.md#apply-content-template-api) topic in the Help Center for more information.
+    Developers can now specify a library to apply a content template. See the [Apply Content Template API](../../manage_content/wcm_development/wcm_rest/wcm_rest_mng_content/wcm_rest_template/wcm_rest_content_template/wcm_rest_crud_cont_temp_default.md#apply-content-template-api) topic in the Help Center for more information.
 
 === "On-Premises"
 
-    Developers can now specify a library to apply a content template. See the [Apply Content Template API](../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_rest/wcm_rest_mng_content/wcm_rest_template/wcm_rest_content_template/wcm_rest_crud_cont_temp_default.md#apply-content-template-api) topic in the Help Center for more information.
+    Developers can now specify a library to apply a content template. See the [Apply Content Template API](../../manage_content/wcm_development/wcm_rest/wcm_rest_mng_content/wcm_rest_template/wcm_rest_content_template/wcm_rest_crud_cont_temp_default.md#apply-content-template-api) topic in the Help Center for more information.
 
 ## Syndication Administration updates 
 
 === "Containers"
 
-    The Syndication Administration updates extend Delegated Administration roles assignment to define specified user roles to execute syndicators. See the Help Center topic [Allowing delegated access for syndication](../../manage_content/wcm/wcm_content_delivery/syndication/manage_synd_subs/wcm_syndication_delegated_access.md) for more information.
+    The Syndication Administration updates extend Delegated Administration roles assignment to define specified user roles to execute syndicators. See the Help Center topic [Allowing delegated access for syndication](../../manage_content/wcm_delivery/syndication/manage_synd_subs/wcm_syndication_delegated_access.md) for more information.
 
 === "On-Premises"
 
-    The Syndication Administration updates extend Delegated Administration roles assignment to define specified user roles to execute syndicators. See the Help Center topic [Allowing delegated access for syndication](../../manage_content/wcm/wcm_content_delivery/syndication/manage_synd_subs/wcm_syndication_delegated_access.md) for more information.
+    The Syndication Administration updates extend Delegated Administration roles assignment to define specified user roles to execute syndicators. See the Help Center topic [Allowing delegated access for syndication](../../manage_content/wcm_delivery/syndication/manage_synd_subs/wcm_syndication_delegated_access.md) for more information.
 
 ## HCL Digital Experience Cloud Native 9.5 Entitlement checks
 

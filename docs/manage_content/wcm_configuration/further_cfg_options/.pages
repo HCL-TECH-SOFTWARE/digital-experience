@@ -1,0 +1,12 @@
+title: Further configuration options
+nav:
+    - index.md
+    - wcm_config_accesshost.md
+    - wcm_config_wasvariables.md
+    - wcm_config_scoped_vp.md
+    - wcm_config_disable_actions.md
+    - wcm_config_connect.md
+    - wcm_install_configtasks_removeauthoring.md
+    - wcm_config_smtp.md
+    - wcm_config_admin_multirealm.md
+    - wcm_config_admin_redirect.md
