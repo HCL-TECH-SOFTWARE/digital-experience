@@ -1,6 +1,6 @@
 ---
 id: wcm_favourites
-title: Favorite items or locations
+title: Favorite Items or Locations
 ---
 
 ## Favorite items or locations

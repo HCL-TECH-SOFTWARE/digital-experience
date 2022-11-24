@@ -1,6 +1,5 @@
 # Creating items
 
-
 The basic item creation task is the same for all item-types.
 
 1.  Click **New** and then select an item-type.
@@ -11,8 +10,9 @@ The basic item creation task is the same for all item-types.
 
 3.  Enter data and select parameters as required in each section of the form.
 
+## Artifact Types
 
--   **[Creating a folder](wcm_dev_folders_creating.md)**  
+-   **[Creating a folder](folders.md)**  
 You create a folder when you need to store a set of the same type of items in a logical grouping.
 -   **[Creating site areas](wcm_dev_sites_items_creating.md)**  
 To create a site framework, you need to create site areas.

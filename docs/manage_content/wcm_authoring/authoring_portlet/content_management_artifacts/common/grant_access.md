@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_items_access
-title: Granting users or groups access to an item
+title: Granting Access to an Item
 ---
 
 # Granting users or groups access to an item

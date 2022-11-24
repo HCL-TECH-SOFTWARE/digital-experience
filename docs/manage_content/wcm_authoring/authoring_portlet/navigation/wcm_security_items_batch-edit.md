@@ -1,10 +1,9 @@
 ---
 id: wcm_security_items_batch-edit
-title: Batch-editing access controls
+title: Batch Editing Access Control
 ---
 
 # Batch-editing access controls
-
 
 An administrator can apply access control settings for multiple items.
 

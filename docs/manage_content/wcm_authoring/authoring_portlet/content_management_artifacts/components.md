@@ -1,4 +1,4 @@
-# Creating components
+# Components
 
 You create components to store a single element that is reused in multiple locations in your website.
 

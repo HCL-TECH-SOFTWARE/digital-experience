@@ -1,4 +1,4 @@
-# Your home page
+# Your Home Page
 
 
 Your home page is a personalized landing page for all your common web content management tasks. It is a simpler and more personalized user interface than the more advanced library explorer.

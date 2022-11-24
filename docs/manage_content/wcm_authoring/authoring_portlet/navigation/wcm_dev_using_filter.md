@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_using_filter
-title: Filtering items displayed in an index
+title: Filtering Displayed Items
 ---
 
 # Filtering items displayed in an index

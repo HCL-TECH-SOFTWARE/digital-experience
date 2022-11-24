@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_using_search
-title: Searching for items
+title: Searching for Items
 ---
 
 # Searching for items
