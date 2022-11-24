@@ -53,7 +53,6 @@
       - installTheme.xml is the xml used when deploying your theme through dxclient.
       - uninstallTheme.xml is the xml used when undeploying your theme through dxclient.
 
-## Related Pages
-
-- [Exporting your theme from your system](export_theme.md)
-- [How to deploy Theme](import_theme.md)
+???+ info "Related information"
+      - [Exporting your theme from your system](export_theme.md)
+      - [How to deploy Theme](import_theme.md)

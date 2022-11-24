@@ -90,11 +90,11 @@ If you encounter any issue with finding a software or downloading a files, pleas
 
 From the Homepage View, you will noticed that there are no **Downloads** tab or **Your Downloads** widget in it.
 
-Where you can find the product is under the **List of Entitlements** which can be accessed from the **“Quick Links”** widget 
+Where you can find the product is under the **List of Entitlements** which can be accessed from the **Quick Links** widget. 
 
 ![List of entitlements](images/download7.png)
 
-Alternatively look under **Activation & Entitlements** tab then click on **List Entitlements**.
+Alternatively, look under **Activation & Entitlements** tab then click on **List Entitlements**.
 
 ![List of entitlements navigation](images/download8.png)
 
@@ -111,7 +111,7 @@ To be able to tell what’s Download Packages are associated with the Product or
 ![Download now](images/download11.png)
 
 
-Here’s a sample list of Download Packages associated with the selected entitlement after clicking the “Download Now” button.
+Here’s a sample list of Download Packages associated with the selected entitlement after clicking the **Download Now** button.
 
 ![List of downloads](images/download12.png)
 
@@ -125,9 +125,9 @@ If you only need to download a single file, you can click on the File Name hyper
 
 You may chose to download multiple files at the same time by selecting the files you want to download and clicking on **Download Selected Files**. If you are doing this for the first time, you will be prompted to download and install Download Manager.
 
-!!!warning "We don't recommend Download Manager
-    There are issues encountered with Download Manager and we recommend NOT to use it by downloading files individually instead.
+!!!warning 
+    We do not recommend Download Manager. There are issues encountered with Download Manager and we recommend NOT to use it by downloading files individually instead.
 
 ![Download manager](images/download14.png)
 
-If you encounter any issue with finding a software or downloading a files, please refer to ["Customer Support FAQ"](support-faqs.md) section to know how to get support.
+If you encounter any issue with finding a software or downloading a files, please refer to [Customer Support FAQ](support-faqs.md) section to know how to get support.

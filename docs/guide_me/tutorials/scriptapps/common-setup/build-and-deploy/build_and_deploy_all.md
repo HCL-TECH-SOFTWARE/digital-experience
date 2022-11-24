@@ -33,17 +33,16 @@
     
     BUILD SUCCESSFUL in 2m 17s
    ```
-2. In case of errors, check the details in the DXClient logs in the
+2. In case of errors, check the details in the DXClient logs in the:
+
     - DX Module: DxModule/build/libs/store/logs/logger.log
     - 1st ScriptApp: <ScriptApp01>/store/logs/logger.log
     - 2nd ScriptApp: <ScriptApp02>/store/logs/logger.log
 
-3. Please read the [Important Things to Note](../post-deployment/important_things_to_note.md).
-
-4. Verify and link the DX Module to a DX Theme. Follow this [guide](../post-deployment/verify_link_module_to_theme.md).
-
-5. Prepare your target DX page that will host the Script Application. Follow this [guide](../post-deployment/prepare_dx_page.md).
-
-6. Add the Script Application into the target DX page. Follow this [guide](../post-deployment/add_scriptapp_to_page.md).
-    - Sample: EducSampleScriptApp4A (from wcmContentName in <ScriptApp01>/package.json)
-    - Sample: EducSampleScriptApp4B (from wcmContentName in <ScriptApp02>/package.json)
+!!!note "Notes"
+    - Please read the [Important Things to Note](../post-deployment/important_things_to_note.md).
+    - Verify and link the DX Module to a DX Theme. Follow this [guide](../post-deployment/verify_link_module_to_theme.md).
+    - Prepare your target DX page that will host the Script Application. Follow this [guide](../post-deployment/prepare_dx_page.md).
+    - Add the Script Application into the target DX page. Follow this [guide](../post-deployment/add_scriptapp_to_page.md).
+        - Sample: EducSampleScriptApp4A (from wcmContentName in <ScriptApp01>/package.json)
+        - Sample: EducSampleScriptApp4B (from wcmContentName in <ScriptApp02>/package.json)

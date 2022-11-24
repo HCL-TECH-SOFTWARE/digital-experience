@@ -64,15 +64,15 @@ Sample successful gradle _ear_ task log:
 
 1. Check the EAR file generated in the build/libs folder.
 2. Login to your WebSphere console.
-3. Navigate to the new application window by opening the Application tab in the left-hand side and then click the new application link.
+3. Navigate to the new application window by opening the **Application** tab in the left-hand side and then click the **New Application** link.
    ![Upload to WAS](../../images/17WASUpload1.png)
-4. Click the New Enterprise Application link
-5. Click the Browse button to select the newly generated EAR file in the new directory 'build/libs'
+4. Click the **New Enterprise Application** link.
+5. Click the **Browse** button to select the newly generated EAR file in the new directory 'build/libs'.
    ![Upload to WAS](../../images/17WASUpload2.png)
 6. For now, you can click the next buttons as you go through the Install New Application process.
-7. Click the Finish button when you arrive in the last step.
+7. Click the **Finish** button when you arrive in the last step.
    ![Upload to WAS](../../images/17WASUpload3.png)
 8. The upload progress will be shown next.
    ![Upload to WAS](../../images/17WASUpload4.png)
-9. When it is done, click the Save link near the bottom.
+9. When it is done, click the **Save** link near the bottom.
    ![Upload to WAS](../../images/17WASUpload5.png)
