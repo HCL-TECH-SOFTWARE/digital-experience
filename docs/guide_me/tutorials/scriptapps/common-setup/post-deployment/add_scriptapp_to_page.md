@@ -3,7 +3,7 @@
 1. Click the [+] Add page components and applications icon near the upper left-most side:
    ![Click to open the shelf](../../images/12AddPageComponents.png)
 
-2. Click the Script Application icon.
+2. Click the **Script Application** icon.
    ![Choose script applications](../../images/13ClickScriptApp.png)
 
 3. Check if the script is loaded successfully.

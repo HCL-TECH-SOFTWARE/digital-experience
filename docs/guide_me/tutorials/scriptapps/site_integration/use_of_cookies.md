@@ -21,7 +21,7 @@ To achieve this we use the JSCookie library as an example.
 
 !!! warning "Note before continuing"
 
-    If you are using a single Script App you may import JS-Cookie library directly.  For multiple Script Apps, the recommended approach is to bundle dependencies via a [Dx Module](/digital-experience/guide_me/tutorials/scriptapps/how_to/02_dependencies_as_module/)
+    If you are using a single Script App you may import JS-Cookie library directly.  For multiple Script Apps, the recommended approach is to bundle dependencies via a [Dx Module](../how_to/02_dependencies_as_module.md).
 
 Assuming we have a DX Module setup from the How-To guides above. We can easily add JS-Cookie and/or other js library by navigating to the dependency submodule folder of your scriptapp (i.e: `../DxModule/SubModuleReact/`) and add the npm package by running the `npm install` command.
 
@@ -44,7 +44,7 @@ And redeploy your DX Module after installing and exporting the library.
 
 Now we have successfully added JS-Cookie on DX Module. Let use it on our Script App.
 
-We can use the JS-Cookie easily by [adding DX Module as a dependency](/digital-experience/guide_me/tutorials/scriptapps/how_to/03_apps_excluding_dependencies/) on your `package.json` file and importing it from DX Module on your Script App components. 
+We can use the JS-Cookie easily by [adding DX Module as a dependency](../how_to/03_apps_excluding_dependencies.md) on your `package.json` file and importing it from DX Module on your Script App components. 
 
 ```
 "dependencies": {
@@ -137,7 +137,7 @@ Below is a sample code of a script app using JS-Cookie with React via DX Module.
     }
     ```
 
-     - on the `handleSubmit` function. This is where we set cookies but first we need to remove existing cookies. Then we call the `validateAndAuthenticate` function to check if the user inputted a correct credentials then create a cookie when after authentication.
+     - On the `handleSubmit` function, this is where we set cookies but first we need to remove existing cookies. Then we call the `validateAndAuthenticate` function to check if the user inputted a correct credentials then create a cookie when after authentication.
     ```js
     function handleSubmit(event) {
       // removes any existing `wbi_authenticated` cookies first

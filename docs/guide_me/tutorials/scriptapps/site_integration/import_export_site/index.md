@@ -20,7 +20,7 @@ hide: tags
 
 ## Reference Site
 
-- WoodBurn Insurance Demo Site could be used as reference to try and test the steps detailed in this guide. You can find it [here](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/showcase-sites/WoodBurnInsurance).
+- WoodBurn Insurance Demo Site could be used as reference to try and test the steps detailed in this guide. You can find it [here](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/tree/main/showcase-sites/WoodBurnInsurance).
 
 ## Common Set-up
 
@@ -85,7 +85,7 @@ Here are the steps in order to deploy your exported DX Site:
 
 ## XML files
 
-   Sample XML files are available in the [WoodBurn Insurance reference site](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/showcase-sites/WoodBurnInsurance). DXClient samples are also available in the DX server located in the following directory: `<portal_server_home>/doc/xml-samples`.
+   Sample XML files are available in the [WoodBurn Insurance reference site](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/tree/main/showcase-sites/WoodBurnInsurance). DXClient samples are also available in the DX server located in the following directory: `<portal_server_home>/doc/xml-samples`.
 
 !!!note "When using Woodburn Insurance Demo"
     The following xml files are already included in the demo named theme-export.xml and site-export.xml respectively.
@@ -130,7 +130,7 @@ This xml will be used to export the metadata xml of theme.
     </request>
     ```
 
-- modify the objectid to match yours.
+- Modify the objectid to match yours.
 
       ```xml
          <portal action="locate">
@@ -139,7 +139,7 @@ This xml will be used to export the metadata xml of theme.
          </portal>
       ```
 
-- You can find the objectid by going to Theme Manager and then clicking the cog.
+- You can find the objectid by going to **Theme Manager** and then clicking the cog.
       ![Theme Manager](../../images/19theme_manager.png)
 - Skin objectid.
       ![Skin Object ID](../../images/19skin_objectid.png)
@@ -187,7 +187,7 @@ This xml is used to export the Page metadata and hierarchy xml of your site.
       </request>
       ```
 
-- modify the uniquename to match yours.
+- Modify the uniquename to match yours.
 
       ``` XML
             <content-node action="export" uniquename="Woodburn Insurance"  export-descendants="true"/>

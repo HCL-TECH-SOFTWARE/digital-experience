@@ -213,8 +213,8 @@ Full configuration steps are listed [here](../common-setup/optimized-scriptapps/
     const { React, ReactDOM } = ReactV1;
     ```
    
-5. Assign an id for the root html tags unique for each of the ScriptApps. Make sure to use the same id in the corresponding index.jsx within the same ScriptApp.
-    1. SampleAppReact16/src/index.html
+3. Assign an id for the root html tags unique for each of the ScriptApps. Make sure to use the same id in the corresponding index.jsx within the same ScriptApp.
+    - SampleAppReact16/src/index.html
     ```
         <div id="sample-app-react-16-root"></div>
     ```
@@ -222,7 +222,7 @@ Full configuration steps are listed [here](../common-setup/optimized-scriptapps/
     ```
         const root = ReactDOM.createRoot(document.getElementById('sample-app-react-16-root'));
     ```
-    2. SampleAppReact18/public/index.html
+    - SampleAppReact18/public/index.html
     ```
         <div id="sample-app-react-18-root"></div>]()
     ```
@@ -230,7 +230,7 @@ Full configuration steps are listed [here](../common-setup/optimized-scriptapps/
     ```
         const root = ReactDOM.createRoot(document.getElementById('sample-app-react-18-root'));
     ```
-7. Update the webpack.dev.js file to each of the ScriptApps (i.e: SampleAppReact16/webpack.dev.js, SampleAppReact16/webpack.dev.js). This configuration is intended for the development cycle only (via npm start) and will not be used for DX deployment.
+4. Update the webpack.dev.js file to each of the ScriptApps (i.e: SampleAppReact16/webpack.dev.js, SampleAppReact16/webpack.dev.js). This configuration is intended for the development cycle only (via npm start) and will not be used for DX deployment.
     - Configure the build entry pointing to the styles index file of the specific submodule. This will simulate the styling injection that will be done by DX in the HTML header of a DX page.
     - SampleAppReact16/webpack.dev.js:
     ```
@@ -247,7 +247,7 @@ Full configuration steps are listed [here](../common-setup/optimized-scriptapps/
       },
     ```
    
-8. Update the webpack.dx-scriptapp.js file to each of the ScriptApps. Point the DllReferencePlugin of the app needing React v16/v18 to the correct submodule context and manifest.
+5. Update the webpack.dx-scriptapp.js file to each of the ScriptApps. Point the DllReferencePlugin of the app needing React v16/v18 to the correct submodule context and manifest.
     - SampleAppReact16/webpack.dx-scriptapp.js
     ```
             new DllReferencePlugin({

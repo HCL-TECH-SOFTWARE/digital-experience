@@ -7,7 +7,7 @@ title: Account Management
 
 This section allows you to view the software entitlements and associated maintenance for your organization.
 
-To check your entitlements, hover on Accounts & Entitlements, and then click on **List Entitlements.**
+To check your entitlements, hover on **Activation & Entitlements**, and then click on **List Entitlements.**
 
 ![List entitlements](images/common1.png)
 
@@ -23,7 +23,7 @@ From the [HCL License & Delivery Portal](https://hclsoftware.flexnetoperations.c
 
 ![List users](images/common2.png)
 
-On the **Users** page under "Actions" button, click on **Create User.**
+On the **Users** page under **Actions**, click on **Create User.**
 
 ![Create user](images/common3.png)
 

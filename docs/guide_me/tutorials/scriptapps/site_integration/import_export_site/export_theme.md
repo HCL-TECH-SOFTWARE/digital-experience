@@ -1,6 +1,6 @@
 # Exporting your theme from your system
 
-## 1. Exporting the theme metadata.
+## Exporting the theme metadata.
 
 1. Use the directory where you want to export as your base directory when running the commands.
 2. Export your install theme xml file by running the following command.
@@ -36,37 +36,36 @@
     2. Ensure to place your correct credentials in the `{DXUSERNAME}` and `{DXPASSWORD}`.
 
 !!!success "Output"
-    Find in your base directory the xml output in store/outputFiles/xmlaccess (“The xml output file should look something like this: `Output-20220926153722.xml`”). Move the exported xmlfile to a different directory to ensure it would not be lost.
+    Find in your base directory the xml output in store/outputFiles/xmlaccess (The xml output file should look something like this: `Output-20220926153722.xml`). Move the exported xmlfile to a different directory to ensure it would not be lost.
 
 !!!tip "See more detailed information [here](https://help.hcltechsw.com/digital-experience/9.5/containerization/xmlaccess.html)."
 
-## 2. Exporting Theme source code
+## Exporting Theme source code
 
 1. Use the same directory as before.
-2. Find a undeploy request xml for your theme and then edit the uniquename to match yours or create yours like the following. Sample XML files can be found in the samples directory of DXClient or in DX server located in the following directory: `PortalServer_root/doc/xml-samples`.
-   !!!example "theme-export.xml"
+2. Find a undeploy request xml for your theme and then edit the uniquename to match yours or create yours like the following. Sample XML files can be found in the samples directory of DXClient or in DX server located in the following directory: `PortalServer_root/doc/xml-samples`. For example, theme-export.xml.
 
-       ```XML
-       <?xml version="1.0" encoding="UTF-8"?>
-       <request type="update" version="8.0.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PortalConfig_8.0.0.xsd">
-       <portal action="locate">
-       <skin action="delete" uniquename="custom.portal.skin.Woodburn%20Insurance.Standard"/>
-       <theme action="delete" uniquename="custom.portal.theme.Woodburn%20Insurance"/>
-       </portal>
-       </request>
-       ```
+         ```XML
+         <?xml version="1.0" encoding="UTF-8"?>
+         <request type="update" version="8.0.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PortalConfig_8.0.0.xsd">
+         <portal action="locate">
+         <skin action="delete" uniquename="custom.portal.skin.Woodburn%20Insurance.Standard"/>
+         <theme action="delete" uniquename="custom.portal.theme.Woodburn%20Insurance"/>
+         </portal>
+         </request>
+         ```
 
       - Modify the uniquename to match yours.
 
-       ```xml
-       <portal action="locate">
-       <skin action="delete" uniquename="custom.portal.skin.Woodburn%20Insurance.Standard"/>
-       <theme action="delete" uniquename="custom.portal.theme.Woodburn%20Insurance"/>
-       </portal>
-       ```
+         ```xml
+         <portal action="locate">
+         <skin action="delete" uniquename="custom.portal.skin.Woodburn%20Insurance.Standard"/>
+         <theme action="delete" uniquename="custom.portal.theme.Woodburn%20Insurance"/>
+         </portal>
+         ```
 
       - You can find it by going to Theme Manager and then clicking the cog.
-      ![Theme Manager](../../images/19theme_manager.png)
+         ![Theme Manager](../../images/19theme_manager.png)
       - For skin uniquename.
          ![Skin Object ID](../../images/19skin_objectid.png)
       - For theme uniquename.
@@ -121,11 +120,11 @@
       - if you are using Woodburn Insurance Demo it should be `"Woodburn Insurance"`.
 
 !!!success "Output"
-    Find in your base directory the exported theme zipped in store/outputFiles/themes/backup/webdav (“The zip output file should look something like this: `Woodburn Insurance-20220926104910.zip`”). Move the exported zip file to a different directory to ensure it would not be lost.
+    Find in your base directory the exported theme zipped in store/outputFiles/themes/backup/webdav (The zip output file should look something like this: `Woodburn Insurance-20220926104910.zip`). Move the exported zip file to a different directory to ensure it would not be lost.
 
 !!!tip "See more detailed information [here](https://help.hcltechsw.com/digital-experience/9.5/containerization/themes.html)."
 
-## 3. Redeploying Theme
+## Redeploying Theme
 
 1. Use the same directory as before.
 2. Deploy your theme by running the following command.
@@ -197,7 +196,6 @@
 
 !!!tip "See more detailed information [here](https://help.hcltechsw.com/digital-experience/9.5/containerization/themes.html)."
 
-## Related Pages
-
-- [Manually exporting the your DX Site Page Hierarchy](manual_export_site_page_hierarchy.md)
-- [How to deploy Theme](import_theme.md)
+???+ info "Related information"
+      - [Manually exporting the your DX Site Page Hierarchy](manual_export_site_page_hierarchy.md)
+      - [How to deploy Theme](import_theme.md)

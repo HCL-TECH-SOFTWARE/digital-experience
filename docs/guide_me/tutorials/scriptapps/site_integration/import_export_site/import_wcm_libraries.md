@@ -3,7 +3,7 @@
 ## Importing WCM library
 
 !!!danger
-    **DO NOT deploy script applications first** if you those have script applications in this library. Ensure that you import the wcm library first before redeploying or updating the script applications in it. The uuid of script applications will change if you deploy them first.
+    **DO NOT deploy script applications first** if you have those script applications in this library. Ensure that you import the wcm library first before redeploying or updating the script applications in it. The uuid of script applications will change if you deploy them first.
 
 1. Import the Woodburn Insurance wcm-library zip into your system by running the following command.
 
@@ -72,6 +72,5 @@
 
 !!!tip "See more detailed information [here](https://help.hcltechsw.com/digital-experience/9.5/containerization/wcmlibraries.html)."
 
-## Related Page
-
-- [Exporting your WCM library](export_wcm_library.md)
+???+ info "Related information"
+     - [Exporting your WCM library](export_wcm_library.md)

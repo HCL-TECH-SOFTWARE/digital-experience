@@ -6,7 +6,7 @@ title: Support FAQs
 ## General Information
 
 ### Where can I find more information about the IBM and HCL software deal?
-More information pertaining to the deal between IBM and HCL can be found on our HCL Welcome page : <https://www.hcltechsw.com/about/welcome>
+More information pertaining to the deal between IBM and HCL can be found on our HCL Welcome page: <https://www.hcltechsw.com/about/welcome>
 
 ### Am I able to contact HCL Support by phone?  Where is this information?
 Yes, HCL Software offers multiple methods of contacting Support.  You can either visit the HCL Customer Support Portal to submit a case, or you can contact our Customer Assistance Center team by phone for further assistance.
@@ -150,7 +150,7 @@ How to register to HCL Software portals - eCommerce, License & Delivery, Custome
 <https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0069114>
 
 How to reset your password on HCL License & Delivery Portal  
-<https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073419>
+<https://support.hcltechsw.com/csm?id=csm_index>
 
 How to Add a New User to an Account on HCL License & Delivery Portal  
 <https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0072851>
@@ -159,4 +159,4 @@ How to find HCL Product Releases in HCL License & Delivery Portal
 <https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0010149>
 
 Frequently Asked Questions for IBM to HCL product support transition
-<https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0041552>
+<https://support.hcltechsw.com/csm?id=csm_index>

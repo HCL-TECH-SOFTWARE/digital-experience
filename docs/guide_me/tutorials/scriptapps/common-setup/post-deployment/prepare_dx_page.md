@@ -14,5 +14,5 @@
       ![Select edit page properties](../../images/10EditPageProperties.png)
     
 
-4. Edit the theme settings in the Advanced tab. Select Theme (i.e: Script Application Test Theme) and Profile (i.e: Deferred with React) then click **Save** button.  
+4. Edit the theme settings in the Advanced tab. Select a **Theme** (i.e., Script Application Test Theme) and **Profile** (i.e., Deferred with React) then click **Save**.  
    ![Edit theme settings](../../images/11ThemeSettings.png)

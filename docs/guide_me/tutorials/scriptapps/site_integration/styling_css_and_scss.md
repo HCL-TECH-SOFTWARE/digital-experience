@@ -128,7 +128,7 @@ Sometimes, we want to add styles on DX Modules if we want share styles among our
 
 2. Import styles that you need in your script applications in `styles-index.css`.
 
-    For example, [smart-webcomponents-react](https://www.npmjs.com/package/smart-webcomponents-react) requires us to import its style to be able to use its components properly
+    For example, [smart-webcomponents-react](https://www.npmjs.com/package/smart-webcomponents-react) requires us to import its style to be able to use its components properly.
 
     !!! example "styles-index.css"
         ```css

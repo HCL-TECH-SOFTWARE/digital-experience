@@ -95,7 +95,8 @@ Do the following steps for each of your React Application.
            ...
        }
     ```
-    - If a homepage value is set in package.json, replace it with "./".
+
+    * If a homepage value is set in package.json, replace it with "./".
     ```js
       "homepage": "./",
     ```
@@ -258,7 +259,7 @@ Do the following steps for each of your React Application.
             dxmodulesstyles: path.resolve(__dirname, '../DxModule/SubModuleReact16/styles-index.css'),
           },
     ```
-
+    
     * Configure the temporary output folder, make sure the folder is not the same as the one for the DX deployment build.
 
     ```json
@@ -339,6 +340,7 @@ Do the following steps for each of your React Application.
     });
     
     ```
+
     * Point the DllReferencePlugin of the app needing 1st submodule (i.e: React v16) to the correct context folder and manifest.
     ```js
             new DllReferencePlugin({
@@ -346,13 +348,15 @@ Do the following steps for each of your React Application.
                 manifest: require('../DxModule/SubModuleReact16/dx-dll-manifest-react16.json'),
             }),
     ```
-   * Point the DllReferencePlugin of the app needing 2nd submodule (i.e: React v18) to the correct context folder and manifest.
+
+    * Point the DllReferencePlugin of the app needing 2nd submodule (i.e: React v18) to the correct context folder and manifest.
     ```js
             new DllReferencePlugin({
                 context: path.resolve(__dirname, '../DxModule/SubModuleReact18'),
                 manifest: require('../DxModule/SubModuleReact18/dx-dll-manifest-react18.json'),
             }),
     ```
+
     * Set the folder path and filenames for the bundled files. Make sure the output folder is the same as the one defined as config.dxclient.contentRoot in the package.json file.
     ```js
        output: {
@@ -360,6 +364,7 @@ Do the following steps for each of your React Application.
         path: path.resolve(__dirname, "dist-dx-scriptapp")
        },
     ```
+
     * Add a minimizer for the optimization step. Some apps may not need the manifest, favicon nor the filename portion below.
     ```js
        optimization: {
