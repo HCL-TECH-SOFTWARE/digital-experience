@@ -29,7 +29,7 @@ You add a file resource element to an authoring template when you want the file 
     !!!note
         In CF06 or higher, click **Upload** to upload a file, or click **Select** to select a component. Selecting a component is useful if you need to store a file in a different library, or apply different access settings to the original file resource component.
 
-10. Click ![properties](../images/propIcon.jpg) to open the display properties of the element. This view is where you define how the element is displayed on the item form.
+10. Click ![properties](../../../../../..//images/propIcon.jpg) to open the display properties of the element. This view is where you define how the element is displayed on the item form.
 
     1.  To display the element as a required field, select **Identify this as a required field**.
 

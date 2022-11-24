@@ -6,5 +6,5 @@ To create a user name component, open the applications menu and go to **Content 
 
 
 ???+ info "Related information"  
-    -   [How to work with elements](../../../../wcm_artifacts/elements/howto_work_with_elements/index.md)
+    -   [How to work with elements](../../elements/index.md)
 

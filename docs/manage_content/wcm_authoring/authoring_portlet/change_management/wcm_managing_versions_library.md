@@ -29,5 +29,5 @@ You can restore a set of items within a library that either have the same label 
 
 
 ???+ info "Related information:"
-    - [How to manage versions of items](../../../../../manage_content/wcm/mng_content_with_auth_portlet/item_management_features/wcm_managing_versions.md)
+    - [How to manage versions of items](./versions.md)
 

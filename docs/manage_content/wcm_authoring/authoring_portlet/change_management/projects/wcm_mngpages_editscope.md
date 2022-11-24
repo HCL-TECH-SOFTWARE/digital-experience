@@ -20,5 +20,5 @@ However, you can change the assigned workflow in the user interface to include m
 
 
 ???+ info "Related information"  
-    -   [Adding workflow to managed pages](../../../wcm/wcm_artifacts/workflow/wcm_mngpages_addworkflow.md)
+    -   [Adding workflow to managed pages](../workflow/wcm_mngpages_addworkflow.md)
 

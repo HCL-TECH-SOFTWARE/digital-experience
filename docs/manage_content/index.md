@@ -15,14 +15,12 @@ Web developers can also use the features of HCL DX to extend content and asset m
 ## More Information
 
 This section describes several key features in more depth:
-
-* [Web Content Management](wcm/index.md) provides a comprehensive description of the content management system.
-* [Content Composer](content_composer/index.md) describes the simplified content creation and management user interface.
+* [Author Web Content](wcm_authoring/index.md) describes how to use HCL DX to create web content
+* [Deliver Web Content](wcm_delivery/index.md) describes how to use HCL DX to deliver web content
+* [Configure Web Content Manager](wcm_configuration/index.md) describes how to configure HCL DX content management services
+* [Extend Web Content Manager](wcm_development/index.md) describes how to use HCL DX to create web content
 * [Digital Asset Management](digital_assets/index.md) provides a comprehensive description of the digital asset system.
-* [Document Conversion Services](dcs/index.md) covers features for converting various document types to HTML.
 * [Personalization](pzn/index.md) provides a comprehensive description of the built-in personalization system.
-* [Renditions](renditions/index.md) describes how the content management system manages image renditions.
-* [Web Content Integrator](wci/index.md) covers how HCL DX can ingest content from other applications.
 
 <!--
 Web Content Manager is a comprehensive solution for creating, managing, and delivering content on your website.

@@ -12,8 +12,8 @@ When a content item is first created, you must select a site area to save the co
 You move content items from one site area to another using the **Move To** feature. This is different from linking content as the content you choose to move is removed from the original site area.
 -   **[How to remove content item links from site areas](wcm_dev_content_linking_removing.md)**  
 You remove content items from site areas with the **Remove Links** or **Link** featured. This procedure is different from deleting content items because the content you choose to remove is removed from a site area, but not from the web content library.
--   **[Copying other items to a different library](wcm_dev_items_copying.md)**  
+-   **[Copying other items to a different library](../../../web_content_libraries/wcm_dev_items_copying.md)**  
 You use the **Copy** feature to copy an item from one library to another.
--   **[Moving other items between libraries](wcm_dev_items_moving.md)**  
+-   **[Moving other items between libraries](../../../web_content_libraries/wcm_dev_items_copying.md)**  
 You use the **Move** feature to move an item between libraries.
 

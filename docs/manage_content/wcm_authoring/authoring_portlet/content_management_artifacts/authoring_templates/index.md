@@ -2,9 +2,9 @@
 
 An authoring template is used to define the default authoring settings for site areas and content items. These settings include the design of the authoring form, what fields and elements appear on the authoring form, and default values for fields and elements. You must create authoring templates before you create site areas and content items.
 
--   **[Creating a site area template](../creating_authoring_templates/creating_sitearea_template/index.md)**  
+-   **[Creating a site area template](../authoring_templates/creating_sitearea_template/index.md)**  
 Create a site area template to configure the design of the authoring form and determine what elements can be included in the form.
--   **[Creating a content template](../creating_authoring_templates/creating_content_template/index.md)**  
+-   **[Creating a content template](../authoring_templates/creating_content_template/index.md)**  
 Create a content template to configure the design of the authoring form and determine what elements can be included in the form.
 -   **[Defining display settings of fields and elements](wcm_dev_auth-temp_fields.md)**  
 You can define the display properties of field and elements that are displayed on a content form. Different field and element types have different display properties.

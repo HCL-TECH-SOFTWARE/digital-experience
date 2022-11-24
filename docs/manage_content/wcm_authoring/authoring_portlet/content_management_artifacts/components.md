@@ -12,4 +12,4 @@ You create components to store a single element that is reused in multiple locat
 The following sections are common to all component types:
 
 ???+ info "Related information:"
-    - [How to work with elements](../../wcm_artifacts/elements/howto_work_with_elements/index.md)
+    - [How to work with elements](./elements/index.md)
