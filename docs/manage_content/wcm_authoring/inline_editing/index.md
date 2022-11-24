@@ -2,7 +2,7 @@
 
 An inline editing system is used to deliver editable websites such as an intranet or a wiki. It combines the features of both an authoring system and a delivery system.
 
--   **[Creating an authoring tools element](../../wcm_artifacts/elements/howto_work_with_elements/authoringtools_element/index.md)**  
+-   **[Creating an authoring tools element](../../wcm_authoring/authoring_portlet/content_management_artifacts/elements/authoringtools_element/index.md)**  
 The authoring tool element is used to add authoring portlet functions to web pages. When you create an authoring tool element, you need to define the layout of the authoring tool and any required actions, and select parameters for each action layout as required.
 
 ## Inline editing
@@ -32,9 +32,9 @@ You can enable inline editing for content item fields in your site design.
 
 
 ???+ info "Related information:"
-    - [Creating an editable property tag](../../../wcm_artifacts/tags/creating_web_content_tags/wcm_dev_item-details_property_edit.md)
-    - [Creating an editable element tag](../../../wcm_artifacts/tags/creating_web_content_tags/wcm_dev_referencing_elements_edit.md)
-    - [Creating an If Edit Mode tag](../../../wcm_artifacts/tags/creating_web_content_tags/wcm_dev_tag_ifeditmode.md)
+    - [Creating an editable property tag](../../wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/wcm_dev_item-details_property_edit.md)
+    - [Creating an editable element tag](../../wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/wcm_dev_referencing_elements_edit.md)
+    - [Creating an If Edit Mode tag](../../wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/wcm_dev_tag_ifeditmode.md)
 
 
 Inline editing enables users with edit access to a content item to edit that item from within the web page itself instead of using the authoring portlet. This feature is available when you display content with a web content viewer portlet.
@@ -62,7 +62,7 @@ You can enable inline editing for content item fields in your site design.
 
 
 ???+ info "Related information:"
-    - [Creating an editable property tag](../../../wcm_artifacts/tags/creating_web_content_tags/wcm_dev_item-details_property_edit.md)
-    - [Creating an editable element tag](../../../wcm_artifacts/tags/creating_web_content_tags/wcm_dev_referencing_elements_edit.md)
-    - [Creating an If Edit Mode tag](../../../wcm_artifacts/tags/creating_web_content_tags/wcm_dev_tag_ifeditmode.md)
+    - [Creating an editable property tag](../../wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/wcm_dev_item-details_property_edit.md)
+    - [Creating an editable element tag](../../wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/wcm_dev_referencing_elements_edit.md)
+    - [Creating an If Edit Mode tag](../../wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/wcm_dev_tag_ifeditmode.md)
 

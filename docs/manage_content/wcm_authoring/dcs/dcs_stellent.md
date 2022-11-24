@@ -2,7 +2,7 @@
 
 For Linux, when using Stellent version 8.1.0 and later, the X-server dependency has been removed.
 
-1.  Prepare the system using the steps outlined in [Configure Document Conversion Services](../../manage_content/dcs/configuration/index.md).
+1.  Prepare the system using the steps outlined in [Configure Document Conversion Services](./configuration/index.md).
 
 2.  Install **libXm.so.3** and **ln -sf /usr/X11R6/lib/libXm.so.3.0.2 /usr/X11R6/lib/libXm.so.2.0.1**.
 

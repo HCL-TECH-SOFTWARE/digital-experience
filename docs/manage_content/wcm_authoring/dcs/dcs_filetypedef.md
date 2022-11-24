@@ -147,6 +147,6 @@ For AIX and Linux, you must start IBM Workplace Services Express® from the cons
 !!!note
     Graphical conversions require access to an X Windows server. They require access to the **Xm**, **Xt**, and **X11** libraries. Also, the DISPLAY environment variable must be set to the account that Portal is running under. The DISPLAY must be valid at the point that Portal is started. Therefore, telnetting to a server and starting Portal from there does not work. You must start the portal from an X terminal.
 
-For AIX, refer to the prerequisites as described in [Configuring images for Document Conversion Services](../../manage_content/dcs/configuration/index.md).
+For AIX, refer to the prerequisites as described in [Configuring images for Document Conversion Services](./configuration/index.md).
 
 

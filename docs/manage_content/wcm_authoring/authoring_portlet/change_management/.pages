@@ -1,5 +1,15 @@
 title: Change Management
 nav:
+    - index.md
     - projects
     - workflow
+    - drafts.md
+    - published_items.md
+    - expired_items.md
+    - deleting.md
+    - item_locks.md
+    - references.md
+    - viewing_references.md
+    - versions.md
+    - versions_restore.md
     - ...

@@ -12,7 +12,7 @@ Content Composer is accessible from the Practitioner Studio interface (after ima
 
 1.  Log in to your HCL Digital Experience 9.5 platform, and select **Web Content** from the Practitioner Studio navigator.
 
-    ![Log in to HCL Digital Experience 9.5](../../../../assets/HCL_DX_95_Practitioner_Studio_interface.png)
+    ![Log in to HCL Digital Experience 9.5](../../../../../assets/HCL_DX_95_Practitioner_Studio_interface.png)
 
 2.  Select **Web Content** menu option to access the HCL Digital Experience 9.5 Content Composer user interface.
 
@@ -20,7 +20,7 @@ Content Composer is accessible from the Practitioner Studio interface (after ima
 
 4.  The content item editor interface is set in **Read Only** mode. Click the **More** drop down selector and select the **Delete** option as shown below:
 
-    ![Delete content template](../../../../assets/delete_content_item_from_hcl_cc.png)
+    ![Delete content template](../../../../../assets/delete_content_item_from_hcl_cc.png)
 
 5.  A pop-up will ask to confirm the **Delete** action. Click **Delete** to confirm or **Cancel** cancel action.
 
@@ -30,11 +30,11 @@ Users can also delete content from the Search Results view.
 
 1.  From the HCL Digital Experience 9.5 Content Composer user interface, enter a search term in the search box located in the upper right corner as shown in the example below:
 
-    ![Search content in Content Composer](../../../../assets/Search_content_HCL_Content_Composer.png)
+    ![Search content in Content Composer](../../../../../assets/Search_content_HCL_Content_Composer.png)
 
 2.  Click to select the content to delete. User can choose more than one content to delete, as shown below. Then click **Delete**.
 
-    ![](../../../../assets/Select_to_delete_HCL_Content_Composer_dashboard.png)
+    ![](../../../../../assets/Select_to_delete_HCL_Content_Composer_dashboard.png)
 
 3.  A pop-up will ask to confirm the **Delete** action. Click **Delete** to confirm or **Cancel** cancel action.
 
@@ -44,11 +44,11 @@ Users can also delete content from the Search Results view.
 
 1.  From the HCL Digital Experience 9.5 Content Composer user interface, enter a search term in the search box located in the upper right corner as shown in the example below:
 
-    ![Search content in Content Composer](../../../../assets/Search_content_HCL_Content_Composer.png)
+    ![Search content in Content Composer](../../../../../assets/Search_content_HCL_Content_Composer.png)
 
 2.  Click the avatar icon of the content you wish to delete. Users can choose more than one content to delete, as shown below.
 
-    ![](../../../../assets/Authoring_actions_via_HCL_CC_Dashboard.png)
+    ![](../../../../../assets/Authoring_actions_via_HCL_CC_Dashboard.png)
 
 3.  Click the **Delete** from the main header.
 

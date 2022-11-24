@@ -10,7 +10,7 @@ To delete an item:
 
 ## Referential integrity
 
-When you delete items that are referenced by other items, you need to resolve any references that are broken by deleting the item. A dialog opens listing the items that cannot be deleted. For more information about managing references, see [Managing references](wcm_managing_references.md).
+When you delete items that are referenced by other items, you need to resolve any references that are broken by deleting the item. A dialog opens listing the items that cannot be deleted. For more information about managing references, see [Managing references](references.md).
 
 ## Restoring items
 
@@ -23,4 +23,4 @@ Users who are granted manager access or higher to a library can purge deleted it
 You can view a list of deleted items in either the **My Items > Deleted** or **All Items Deleted** views.
 
 ???+ info "Related information:"
-    - [How to manage versions of items](../item_management_features/wcm_managing_versions.md)
+    - [How to manage versions of items](versions.md)

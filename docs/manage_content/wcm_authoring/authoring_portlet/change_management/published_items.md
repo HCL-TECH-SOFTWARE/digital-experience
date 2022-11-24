@@ -1,5 +1,4 @@
 ---
-id: wcm_dev_published_items
 title: Manage Published Items
 ---
 

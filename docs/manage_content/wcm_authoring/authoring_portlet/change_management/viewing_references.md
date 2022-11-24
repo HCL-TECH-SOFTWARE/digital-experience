@@ -1,5 +1,4 @@
 ---
-id: wcm_managing_viewing_references
 title: View References
 ---
 

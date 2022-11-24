@@ -2,7 +2,7 @@
 
 Oracle DCS is disabled in the Digital Experience 95 Cumulative Fix and Container CF205 release.
 
-Beginning with Digital Experience 95 CF205 release, Oracle DCS service for Digital Experience [Document Conversion Service](/index.md) is removed and will be replaced with an HCL supported DCS services. Because of this change, when you upgrade to CF205, you must take a note of the DCS files backup scenarios:
+Beginning with Digital Experience 95 CF205 release, Oracle DCS service for Digital Experience [Document Conversion Service](index.md) is removed and will be replaced with an HCL supported DCS services. Because of this change, when you upgrade to CF205, you must take a note of the DCS files backup scenarios:
 
 -   If you are upgrading from CF202 or later, Oracle DCS files will be automatically backed up to your Digital Experience profile location and you can continue to utilize Oracle DCS.
 -   If you are upgrading from CF201 or earlier, you must [manually back up](dcs_backup.md) your existing Oracle DCS files.

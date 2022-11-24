@@ -1,5 +1,4 @@
 ---
-id: wcm_managing_item_locks
 title: Locked and Draft Items
 ---
 

@@ -31,15 +31,15 @@ Side by side editing might be built by using a special editing page with contain
 Provide your own processing whenever the web content viewer portlet renders items.
 
 -   Create a ContextProcessor class, which implements the `com. com.ibm.workplace.wcm.api.ContextProcessor` interface.
--   Compile the ContextProcessor class into a new jar and place that jar in the [wp\_profile\_root](../../../../../guide_me/wpsdirstr.md)`\wcm\shared\app` directory.
+-   Compile the ContextProcessor class into a new jar and place that jar in the [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)`\wcm\shared\app` directory.
 
 ## Customizing the workflow synchronization email notifications
 
 Modify the default email notifications to provide your own wording.
 
-1.  Go to [wp\_profile\_root](../../../../../guide_me/wpsdirstr.md) `\paa\wcm_mls\components\wcm_mls\shared\app\` directory
-2.  Extract the contents of wcm.ml.emailnotifications.jar to [wp\_profile\_root](../../../../../guide_me/wpsdirstr.md)`\wcm\ prereq.wcm\wcm\shared\app` .
-3.  Remove the `[wp\_profile\_root](../reference/wpsdirstr.md#wp_profile_root)\wcm\prereq.wcm\wcm\shared\app\META-INF` directory.
+1.  Go to [wp\_profile\_root](../../../../guide_me/wpsdirstr.md) `\paa\wcm_mls\components\wcm_mls\shared\app\` directory
+2.  Extract the contents of wcm.ml.emailnotifications.jar to [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)`\wcm\ prereq.wcm\wcm\shared\app` .
+3.  Remove the `[wp\_profile\_root](../../../../guide_me/wpsdirstr.md#wp_profile_root)\wcm\prereq.wcm\wcm\shared\app\META-INF` directory.
 4.  Customize the workflow synchronization email notifications:
 
     |Message Key|Description|

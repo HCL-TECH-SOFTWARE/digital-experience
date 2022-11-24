@@ -8,7 +8,7 @@ In many cases, the number of languages or regions you require for a site is fixe
 
 3.  Update the relevant multilingual configuration file to reference your new library.
 
-4.  This step is optional. If the library being copied had Portal Page mappings, then you can have new mappings added against the copied library by running the following command from the [wp\_profile\_root](../../../../../guide_me/wpsdirstr.md)`/ConfigEngine` directory:
+4.  This step is optional. If the library being copied had Portal Page mappings, then you can have new mappings added against the copied library by running the following command from the [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)`/ConfigEngine` directory:
 
     -   **Windows™**
 

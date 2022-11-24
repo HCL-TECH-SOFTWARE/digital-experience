@@ -2,17 +2,17 @@
 
 The use of Content Composer features in a Virtual Portal deployment pattern is supported for HCL Content Composer beginning with Container Update 9.5 CF192.
 
-By default, this feature is not enabled on HCL Digital Experience 9.5. Get the [latest Docker image](../../../deployment/install/container/image_list.md) before you proceed with the following steps.
+By default, this feature is not enabled on HCL Digital Experience 9.5. Get the [latest Docker image](../../../../deployment/install/container/image_list.md) before you proceed with the following steps.
 
 !!! note
      While there are also DX 8.5/9.0 CF17 images, the one you need to enable this HCL Content Composer feature is the 9.5 Docker image.
 
-You can only enable Content Composer features in a Virtual Portal deployment pattern when Practitioner Studio is available (for HCL DX 9.5 and later releases). Refer to the [Woodburn Studio](../../../build_sites/woodburn_studio/index.md) and [Practitioner Studio](../../../build_sites/practitioner_studio/index.md) documentation topics on how to apply themes and create pages.
+You can only enable Content Composer features in a Virtual Portal deployment pattern when Practitioner Studio is available (for HCL DX 9.5 and later releases). Refer to the [Woodburn Studio](../../../../build_sites/woodburn_studio/index.md) and [Practitioner Studio](../../../../build_sites/practitioner_studio/index.md) documentation topics on how to apply themes and create pages.
 
 Follow these steps below to enable this support in your deployment:
 
-1.  [Create a Virtual Portal](../../../build_sites/virtual_portal/adm_vp_task/vp_adm_task/create_vp/index.md).
-2.  [Enable Practitioner Studio in the Virtual Portal](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
+1.  [Create a Virtual Portal](../../../../build_sites/virtual_portal/adm_vp_task/vp_adm_task/create_vp/index.md).
+2.  [Enable Practitioner Studio in the Virtual Portal](../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
 3.  In the Virtual Portal, enable rendering of content supported by DX APIs, for example, via Content Composer interfaces.
 
 ## Enable and install content rendering in the base Portal

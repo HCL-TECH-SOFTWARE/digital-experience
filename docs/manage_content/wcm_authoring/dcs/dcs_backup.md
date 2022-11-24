@@ -10,7 +10,7 @@ Instructions to back up Document Conversion Services \(DCS\) files, prior to the
 
 ## Back up DCS files
 
-Beginning with Digital Experience [CF203](https://help.hcltechsw.com/digital-experience/9.5/overview/new_noncf203.html){:target="_blank"} and [Container Update CF203](../../whatsnew/cf20/newcf203.md), a backup of DCS task is automatically provided. The backup can be verified in the `<WAS USER HOME\>/PortalServer/config/dcs.bak.zip` file. If using Digital Experience versions prior to CF and Container Update 203, perform a manual backup of the following DCS files:
+Beginning with Digital Experience [CF203](https://help.hcltechsw.com/digital-experience/9.5/overview/new_noncf203.html){:target="_blank"} and [Container Update CF203](../../../whatsnew/cf20/newcf203.md), a backup of DCS task is automatically provided. The backup can be verified in the `<WAS USER HOME\>/PortalServer/config/dcs.bak.zip` file. If using Digital Experience versions prior to CF and Container Update 203, perform a manual backup of the following DCS files:
 
 -   WpsInstallLocation/lwo/prereq.odc/shared/app/Export.jar
 -   WpsInstallLocation/lwo/prereq.odc/shared/app/export.cfg
@@ -24,7 +24,7 @@ Steps to back up the DCS files:
 
 ## Back up DCS files used in Remote Search
 
-[Digital Experience CF203](https://help.hcltechsw.com/digital-experience/9.5/overview/new_noncf203.html){:target="_blank"} and [Container Update CF203](../../whatsnew/cf20/newcf203.md) added a Config Engine task, which can be run to manually back up the DCS files that are used to support Remote Search.
+[Digital Experience CF203](https://help.hcltechsw.com/digital-experience/9.5/overview/new_noncf203.html){:target="_blank"} and [Container Update CF203](../../../whatsnew/cf20/newcf203.md) added a Config Engine task, which can be run to manually back up the DCS files that are used to support Remote Search.
 
 Instructions to manually back up DCS files supporting remote search if using a **Digital Experience CF or Container Update release prior to CF203** are as follows:
 

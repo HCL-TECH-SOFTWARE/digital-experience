@@ -16,7 +16,7 @@ Content users can view a light preview of uploaded content and more using HCL Co
 
 2.  On the content item editor interface, select the **More** drop down as shown below and select **Overview**.
 
-    ![](../../../../assets/Select_image_overview_HCL_Content_Composer.png "Select More drop down options")
+    ![](../../../../../assets/Select_image_overview_HCL_Content_Composer.png)
 
 3.  The light preview of the selected content will be shown in a new window. It will display:
 
@@ -33,13 +33,13 @@ Content users can view a light preview of uploaded content and more using HCL Co
 
 1.  Log in to your HCL Digital Experience 9.5 platform, and select **Web Content** from the Practitioner Studio navigator.
 
-    ![](../../../../assets/HCL_DX_95_Practitioner_Studio_interface.png "Log in to HCL Digital Experience 9.5")
+    ![Log in to HCL Digital Experience 9.5](../../../../../assets/HCL_DX_95_Practitioner_Studio_interface.png)
 
 2.  Select **Web Content** menu option to access the HCL Digital Experience 9.5 Content Composer interface.
 
 3.  From the Content Composer interface, navigate through the preset folders Access the content item you wish to edit. In this example, the content item example (**Image**) is obtained from **Web Content > Content > Articles** site area location. Select **Open Content**.
 
-    ![](../../../../assets/Open_Content_Item_HCL_Content_Composer.png "Opening the content item")
+    ![Opening the content item](../../../../../assets/Open_Content_Item_HCL_Content_Composer.png)
 
 4.  The content item editor interface is set in **Read Only** mode by default. Click the selector to switch the interface to **Edit Mode** to edit the selected content.
 
@@ -51,11 +51,11 @@ Content users can move a content item to another site area location.
 
 1. Access the content item you wish to move. In this example, the content item example below \(**Image**\) is obtained from **Web Content \> Content \> Articles** site area location. Click the icon to select the content item. After doing so, click the **Move** icon on the header. 
 
-    ![Select Content Item to Move](../../../../assets/Select_Content_Item_to_Move_HCL_Content_Composer.png "Select Content Item to Move")
+    ![Select Content Item to Move](../../../../../assets/Select_Content_Item_to_Move_HCL_Content_Composer.png)
 
 2. A location selector should appear on the screen. Pick the site area to move the content to. After selecting, click the **Move** button to finalize moving of the content item.
 
-    ![Select a site area location and click Move](../../../../assets/Select_Site_Area_to_Move_Content_to_HCL_Content_Composer.png "Select a site area location and click Move")
+    ![Select a site area location and click Move](../../../../../assets/Select_Site_Area_to_Move_Content_to_HCL_Content_Composer.png)
 
 ## Add Comments
 
@@ -64,19 +64,19 @@ Content users can move a content item to another site area location.
 
 1.  Follow the steps in creating new content from HCL Content Composer, then set a workflow that allows adding comments in the Content, for example the Three Stage Workflow. After adding the workflow, click the save and close button.
 
-    ![Select workflow and enable Entering comments](../../../../images/comment-3-stage-workflow.png "Select workflow and enable Entering comments")
+    ![Select workflow and enable Entering comments](../../../../../images/comment-3-stage-workflow.png)
 
 2.  Open the content that has been created and click the **Comments** tab located on the right side navigation.
 
-![Click Comment tab](../../../../images/comment-button-right-nav.png "Click Comment tab")
+![Click Comment tab](../../../../../images/comment-button-right-nav.png)
 
 3.  Add a comment in the text field box as shown below. Click **Send** to submit your comment. Note that the **Comments** text field box does not have any text and character limit.
 
-![](../../../../images/comment-text-field.png "Add comment and click Send")
+![Add comment and click Send](../../../../../images/comment-text-field.png )
 
 4.  The newly added comment will be displayed at the top.
 
-![New comment added](../../../../images/comment-with-new-user.png "New comment added")
+![New comment added](../../../../../images/comment-with-new-user.png)
 
 Please note that other content authors can also add comments in the newly-created content.
 
@@ -87,21 +87,21 @@ Content authors will be able to view and filter comments in HCL Content Composer
 
 1.  Follow the steps in creating new content from HCL Content Composer, then set a workflow in which entering comment on approval is enabled. In the example below, the **Three Stage Workflow** is selected.
 
-![Select workflow and enable Entering comment on approval](../../../../images/Three%20Stage%20Workflow%20-%20view%20and%20filter%20comments.png)
+![Select workflow and enable Entering comment on approval](../../../../../images/Three%20Stage%20Workflow%20-%20view%20and%20filter%20comments.png)
 
 2.  Open the content and move the workflow to the preferred stage and add a comment. In the example below, **Next stage - Publish** is selected and a comment is added.
 
-    ![Move workflow to preferred stage and add comment](../../../../images/Move%20workflow%20to%20preferred%20stage%20and%20add%20comment.png "Move workflow to preferred stage and add comment")
+    ![Move workflow to preferred stage and add comment](../../../../../images/Move%20workflow%20to%20preferred%20stage%20and%20add%20comment.png "Move workflow to preferred stage and add comment")
 
 3.  Once the action is completed, the **Comments** icon will now be available on the right-side navigation. Click **Comments** to see the workflow comments.
 
-    ![View selected Content's comments](../../../../images/View%20selected%20Content's%20comments.png "View selected Content's comments")
+    ![View selected Content's comments](../../../../../images/View%20selected%20Content's%20comments.png")
 
 4.  Click the dropdown button to filter the workflow comments according to time period as shown below. In this example, selecting **Today** will display all comments made on the current date.
 
-    ![Filter selected Content's comments](../../../../images/Filter%20selected%20Content's%20comments.png "Filter selected Content's comments")
+    ![Filter selected Content's comments](../../../../../images/Filter%20selected%20Content's%20comments.png)
 
-    ![](../../../../images/Filter%20selected%20Content's%20comments-2.png)
+    ![](../../../../../images/Filter%20selected%20Content's%20comments-2.png)
 
 <!--
 ## HCL Digital Experience Solution Feedback

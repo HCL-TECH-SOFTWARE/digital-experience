@@ -16,7 +16,7 @@ Users can set start and end of date range for the Date and Time element of a new
 
 2.  On the content element interface, make sure that you are in **Edit mode**. Select the **Date and Time** element and complete the fields.
 
-    ![](../../../../assets/Add_Element_new_content_template_HCL_Content_Composer.png "Add content elements to the new Content Template")
+    ![](../../../../../assets/Add_Element_new_content_template_HCL_Content_Composer.png "Add content elements to the new Content Template")
 
 3.  If done, select **Save** to save your settings and create your new content template, or **Save and Close**, which will create your new content template with the saved settings and will redirect you to the new content template's location in the Content Composer Dashboard.
 
@@ -28,34 +28,34 @@ The Content Composer Web Content workflow selections can be accessed from the HC
 
 1.  Log in to your HCL Digital Experience 9.5 platform, and select **Web Content** from the Practitioner Studio navigator.
 
-    ![](../../../../assets/HCL_DX_95_Practitioner_Studio_interface.png "Log in to HCL Digital Experience 9.5")
+    ![](../../../../../assets/HCL_DX_95_Practitioner_Studio_interface.png "Log in to HCL Digital Experience 9.5")
 
 2.  From the HCL Digital Experience 9.5 Content Composer, select **Create Content Template** to create a Content Template that will enable a workflow for use by content authors.
 
-    ![](../../../../assets/Select_new_content_template_HCL_Content_Composer.png "Create Content Template")
+    ![](../../../../../assets/Select_new_content_template_HCL_Content_Composer.png "Create Content Template")
 
 3.  Complete the fields for your new Content Template: **Name** (required field\), **Display Title**, and **Description** (optional fields).
 
-    ![](../../../../assets/Complete_content_template_details.HCL_Content_Composer.png "Complete new Content Template fields")
+    ![](../../../../../assets/Complete_content_template_details.HCL_Content_Composer.png "Complete new Content Template fields")
 
 4.  Select the location of your Digital Experience content structure where you will place the Content Template. Use the type-ahead feature available from the Content Template location drop down list to easily find and select the desired content structure location to place the new content template.
 
-    ![](../../../../assets/Select_content_template_location_HCL_Content_Composer.png "Setting the location of the Content Template")
+    ![](../../../../../assets/Select_content_template_location_HCL_Content_Composer.png "Setting the location of the Content Template")
 
 5.  Select **Elements** and add content elements, such as **Rich Text** field for input to the Content Template design. Complete the element details and optional properties for the selected content items, then select **Close**. The added Element is automatically applied to the newly created Content Template.
 
-    ![](../../../../assets/Add_Element_new_content_template_HCL_Content_Composer.png "Add content elements to the new Content Template")
+    ![](../../../../../assets/Add_Element_new_content_template_HCL_Content_Composer.png "Add content elements to the new Content Template")
 
 6.  Select **Default Content** tab to set default content values for title, elements, information, or workflow.
 
     !!!note
         In the **Workflow** section on the right, ticking **Enable workflow for items created with this authoring template** will require content authors to select a workflow when selecting the newly created content template.
 
-    ![](../../../../assets/Add_default_content_settings_new_content_template_HCL_Content_Composer.png "Add Default Content settings to the new Content Template")
+    ![](../../../../../assets/Add_default_content_settings_new_content_template_HCL_Content_Composer.png "Add Default Content settings to the new Content Template")
 
     When done, select **Save** to save your settings and create your new content template, or **Save and Close**, which will create your new content template with the saved settings and will redirect you to the new content template's location in the Content Composer dashboard.
 
-    ![](../../../../assets/View_new_content_template_HCL_Content_Composer_dashboard.png "View newly created Content Template in Dashboard")
+    ![](../../../../../assets/View_new_content_template_HCL_Content_Composer_dashboard.png "View newly created Content Template in Dashboard")
 
 7.  Click **Open Content Template** just created and saved.
 
@@ -65,7 +65,7 @@ The Content Composer Web Content workflow selections can be accessed from the HC
 
     In this example, the **Three Stage Workflow** option is selected.
 
-    ![](../../../../assets/Select_workflow_options_new_content_template_HCL_Content_Composer.png "Selecting Workflow options to manage web content")
+    ![](../../../../../assets/Select_workflow_options_new_content_template_HCL_Content_Composer.png "Selecting Workflow options to manage web content")
 
 10. Select **See All Workflows** and proceed to the Web Content location of the Digital Experience content structure to view the available workflows for selection to add the Content Template. When done, select **Save** to save your settings and create your new content template, or **Save and Close**.
 
@@ -75,16 +75,16 @@ The Content Composer Web Content workflow selections can be accessed from the HC
 
 13. Add a *Content Display Title* and text in the *Rich Text* element field. Select the *Location* of the Digital Experience site area to place the content for display.
 
-    ![](../../../../assets/Working_with_content_items_in_the_selected_Content_Template.png "Working with content items in the selected Content
+    ![](../../../../../assets/Working_with_content_items_in_the_selected_Content_Template.png "Working with content items in the selected Content
                                     Template")
 
 14. Click **Save** then reopen the content item and place the content item in Edit mode. Use the **Workflow** icon to view your options to edit or progress through the Workflow stages defined on the Workflow selected.
 
-    ![](../../../../assets/Reopening_and_editing_the_content_item.png "Reopening and editing the content item")
+    ![](../../../../../assets/Reopening_and_editing_the_content_item.png "Reopening and editing the content item")
 
 15. Select the **Expire Date** calendar icon to define an expiry date and time to manage your content publication timeline.
 
-    ![](../../../../assets/Defining_an_expiry_date.png "Defining an expiry date")
+    ![](../../../../../assets/Defining_an_expiry_date.png "Defining an expiry date")
 
     Select the *Date* and *Time* and confirm your selections.
 

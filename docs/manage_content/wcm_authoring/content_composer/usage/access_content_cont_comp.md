@@ -53,14 +53,14 @@ The HCL Content Composer Dashboard has the following components:
 
     -   Content type
 
-    ![Content metadata column](../../../images/Content_metadata_column.png "Content metadata column")
+    ![Content metadata column](../../../../images/Content_metadata_column.png)
 
     Content users can also access view, editing and delete options of the selected content or content template in this column.
 
-    ![Content view, editing and delete options](../../../images/Content%20view,%20editing%20and%20delete%20options.png "Content view, editing and delete options")
+    ![Content view, editing and delete options](../../../../images/Content%20view%2C%20editing%20and%20delete%20options.png)
 
-    -   Documentation resource: [Author and manage content items](../usage/author_and_manage_content_items/index.md)
-    -   Documentation resource: [Author and manage content templates](../usage/author_and_manage_content_templates/index.md)
+    -   Documentation resource: [Author and manage content items](./author_and_manage_content_items/index.md)
+    -   Documentation resource: [Author and manage content templates](./author_and_manage_content_templates/index.md)
 
 ## Search content and content templates with Content Composer
 
@@ -72,24 +72,24 @@ Follow the instructions below to search for content with the HCL Digital Experie
 
     In the example below, the Search Results page displays all content results related to the keyword “Article”. Click **X** to collapse the **Web Content** menu and view the Search Results in full.
 
-    ![Search results view](../../../images/Search%20results%20view.png "Search results view") 
+    ![Search results view](../../../../images/Search%20results%20view.png) 
     
-    ![Search results full view](../../../images/Search%20results%20view-2.png "Search results view")
+    ![Search results full view](../../../../images/Search%20results%20view-2.png)
 
 3.  When you select a single content item from Search Results, the content **Edit**, **Delete** and **Overview** buttons will be displayed on the Main Header and on the right side along the selected content item.
 
-    ![Edit, Delete and view Overview of selected content item](../../../images/Edit,%20Delete%20and%20view%20Overview.png "Edit, Delete and view Overview of selected content item")
+    ![Edit, Delete and view Overview of selected content item](../../../../images/Edit,%20Delete%20and%20view%20Overview.png)
 
     When you select a single content template from Search Results, the **Edit**, **Delete** and **Create Content** buttons for the selected content will be displayed on the Main Header.
 
-    ![Edit, Delete and Create Content of selected content template](../../../images/Edit,%20Delete%20and%20Create%20Content.png "Edit, Delete and Create Content of selected content template")
+    ![Edit, Delete and Create Content of selected content template](../../../../images/Edit,%20Delete%20and%20Create%20Content.png)
 
     If you select more than one content item and/or content template, only the **Delete** button will be displayed on the Main Header for the selected content items.
 
     !!!note
         This action is not applicable for workflow items.
 
-    ![Delete selected content items](../../../images/Delete%20selected%20content%20items.png "Delete selected content items")
+    ![Delete selected content items](../../../../images/Delete%20selected%20content%20items.png)
 
 <!--
 ## HCL Digital Experience Solution Feedback

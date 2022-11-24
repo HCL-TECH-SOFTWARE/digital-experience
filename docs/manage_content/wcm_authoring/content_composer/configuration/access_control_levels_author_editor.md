@@ -2,7 +2,7 @@
 
 Access control levels provide Content Composer authors and editors with role-based abilities to manage specific content create, edit, update, and delete tasks.
 
-These permissions align closely to those defined in [HCL Web Content Manager Access Control settings](../../../deployment/manage/security/controlling_access/wcm_security/index.md).
+These permissions align closely to those defined in [Web Content Manager Access Control settings](../../../../deployment/manage/security//people/authorization/controlling_access/wcm_security/index.md).
 
 ## Access control levels for Content Composer authors and editors
 
