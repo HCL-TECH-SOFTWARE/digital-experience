@@ -1,6 +1,6 @@
 ---
 id: wcm_managing_item_locks
-title: Locked and draft items
+title: Locked and Draft Items
 ---
 
 # Locked and draft items

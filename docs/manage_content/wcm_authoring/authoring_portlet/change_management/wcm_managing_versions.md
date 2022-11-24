@@ -1,4 +1,4 @@
-# How to manage versions of items
+# Manage Item Versions
 
 You can configure your system to either automatically save a version of an item each time it is published, or allow users to select when to save a version of an item. You can restore items individually, or choose to restore a set of items within a library that either have the same label or were versioned at, or before, a specified date and time.
 

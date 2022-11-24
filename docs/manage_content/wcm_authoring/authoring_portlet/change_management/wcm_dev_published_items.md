@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_published_items
-title: How to manage published items
+title: Manage Published Items
 ---
 
 # How to manage published items

@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_folders
-title: Web content folders
+title: Web Content Folders
 ---
 
 # Web content folders

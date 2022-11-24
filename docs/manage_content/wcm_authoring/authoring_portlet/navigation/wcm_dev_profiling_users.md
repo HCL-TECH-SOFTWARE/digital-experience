@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_profiling_users
-title: Editing user profiles
+title: Editing User Profiles
 ---
 
 # Editing user profiles

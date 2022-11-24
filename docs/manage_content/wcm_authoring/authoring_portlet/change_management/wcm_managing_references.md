@@ -1,4 +1,4 @@
-# Managing references
+# Managing References
 
 When you delete items that are referenced by other items, you need to resolve any references that are broken by deleting the item. A dialog opens listing the items that cannot be deleted.
 

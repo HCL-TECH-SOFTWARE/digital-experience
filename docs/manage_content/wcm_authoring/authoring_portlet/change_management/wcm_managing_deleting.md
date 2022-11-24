@@ -1,4 +1,4 @@
-# How to delete items
+# Delete Items
 
 You cannot always immediately delete items. Sometimes you need to take steps to prepare an item for deletion.
 

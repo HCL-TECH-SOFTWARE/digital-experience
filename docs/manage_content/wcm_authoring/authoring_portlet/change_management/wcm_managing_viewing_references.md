@@ -1,6 +1,6 @@
 ---
 id: wcm_managing_viewing_references
-title: Viewing references
+title: View References
 ---
 
 # Viewing references

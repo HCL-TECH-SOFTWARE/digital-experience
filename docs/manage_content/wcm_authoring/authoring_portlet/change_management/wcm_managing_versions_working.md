@@ -1,6 +1,5 @@
 ---
-id: wcm_managing_versions_working
-title: Restoring an item
+title: Restoring an Item
 ---
 
 # Restoring an item

@@ -3,6 +3,7 @@ nav:
     - index.md
     - accessing_authoring_portlet.md
     - navigation
-    - working_with_authoring_portlet
+    - web_content_libraries
     - content_management_artifacts
+    - change_management
     - accessibility.md

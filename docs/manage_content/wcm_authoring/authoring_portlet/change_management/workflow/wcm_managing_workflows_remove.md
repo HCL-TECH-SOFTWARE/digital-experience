@@ -1,6 +1,6 @@
 ---
 id: wcm_managing_workflows_remove
-title: Removing and adding workflows
+title: Add and Remove Workflows
 ---
 
 # Removing and adding workflows

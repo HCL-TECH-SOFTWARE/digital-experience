@@ -1,6 +1,5 @@
 ---
-id: wcm_dev_drafts
-title: How to work with draft items
+title: Work with Drafts
 ---
 
 # How to work with draft items

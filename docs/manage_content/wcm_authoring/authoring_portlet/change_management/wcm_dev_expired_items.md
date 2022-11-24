@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_expired_items
-title: How to manage expired items
+title: Manage Expired Items
 ---
 
 # How to manage expired items
