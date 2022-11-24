@@ -160,7 +160,7 @@ The following options are available to continue configuring your environment:
 
 -   **Configure syndication**
 
-    Documentation resource: [Syndication](../../../../../../manage_content/wcm/wcm_content_delivery/syndication/index.md)
+    Documentation resource: [Syndication](../../../../../../manage_content/wcm_delivery/syndication/index.md)
 
 -   **Update your user registry**
 

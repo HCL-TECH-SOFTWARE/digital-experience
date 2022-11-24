@@ -60,5 +60,5 @@ Complete the configuration of the federated documents feature to communicate wit
 
 ???+ info "Related information"
     - [Inserting a link to remote content](https://help.hcltechsw.com/digital-experience/8.5/panel_help/wcm_dev_elements_insert_link_ecm.html)
-    - [Personalizing federated documents](../../../../../../manage_content/wcm/wcm_artifacts/feddocs/index.md)
+    - [Personalizing federated documents](../../../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/feddocs/index.md)
 

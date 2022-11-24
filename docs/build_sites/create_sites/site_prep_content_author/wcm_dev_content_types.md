@@ -98,7 +98,7 @@ These items are created when you generate a new author-ready content template:
 
     Update the localization settings to match the locales that are used by your site, or remove localizations if your site isn't localized. This is located at **Your Library** \> **Content** \> **Localizations** \> **Your text provider content item**.
 
-    -   Documentation resource: [How to store translated text in a content item or site area](.././../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_dev_storing_translated_text.md)
+    -   Documentation resource: [How to store translated text in a content item or site area](.././../../manage_content/wcm_development/wcm_dev_storing_translated_text.md)
     
 -   **Moving the generated items**
 

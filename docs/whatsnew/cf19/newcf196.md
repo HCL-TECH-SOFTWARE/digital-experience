@@ -34,7 +34,7 @@ See the [Docker image deployment using Docker Compose](../../deployment/install/
 
 ## Web Content Manager Multilingual Solution Enhancements
 
-The [HCL Web Content Manager Multilingual Solution](../../manage_content/wcm/wcm_content_delivery/mls/index.md) is a set of tools used to manage translated versions Web Content Manager content for localized and regionalized websites. Beginning with the HCL Digital Experience 9.5 Container Update CF196 release, support is added to import and export multiple libraries to a format supported by a translation service, support a maximum field length, export changed contents from a library, and export to projects. A new option to switch the language in an HCL DX 9.5 mobile view is also available.
+The [HCL Web Content Manager Multilingual Solution](../../manage_content/wcm_authoring/multi_lingual/index.md) is a set of tools used to manage translated versions Web Content Manager content for localized and regionalized websites. Beginning with the HCL Digital Experience 9.5 Container Update CF196 release, support is added to import and export multiple libraries to a format supported by a translation service, support a maximum field length, export changed contents from a library, and export to projects. A new option to switch the language in an HCL DX 9.5 mobile view is also available.
 
 See the [How to export and import WCM library content using DXClient](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/wcm_mls_export_import.md) and [The Woodburn Studio demo site](../../build_sites/woodburn_studio/index.md) topics for more information.
 

@@ -4,7 +4,7 @@ You display data from external sources, such as SQL databases, by using the same
 
 ## Displaying data
 
-You can display content from external sources by using standard Java tag libraries and a [JSP element](../elements/howto_work_with_elements/jsp_element/wcm_dev_elements_jsp.md). Java code that uses standard Java APIs or tag libraries can be used to display and format data from databases, LDAP repositories, or send email.
+You can display content from external sources by using standard Java tag libraries and a [JSP element](../elements/jsp_element/wcm_dev_elements_jsp.md). Java code that uses standard Java APIs or tag libraries can be used to display and format data from databases, LDAP repositories, or send email.
 
 If you use a rendering portlet to display web content on a portal page, you can also use other HCL Digital Experience portlets on the same portal page to display data.
 

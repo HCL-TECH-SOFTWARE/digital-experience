@@ -13,7 +13,7 @@ You can then access the session attribute and the render parameter in your web c
 
 
 ???+ info "Related information:"
-    - [The action URL plug-in](../../../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/portlet_plugins/plrf_rendr_plugin_actionurl.md)
-    - [The session attribute plug-in](../../../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_session_attrbt.md)
-    - [The render parameter plug-in](../../../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_render_parm.md)
+    - [The action URL plug-in](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/creating_plugin_tag/portlet_plugins/plrf_rendr_plugin_actionurl.md)
+    - [The session attribute plug-in](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_session_attrbt.md)
+    - [The render parameter plug-in](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_render_parm.md)
 

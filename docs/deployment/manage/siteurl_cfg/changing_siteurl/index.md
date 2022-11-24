@@ -39,5 +39,5 @@ http://www.example.com:port/products/
         The wizard creates custom instructions based on selections that you make about your environment and configuration goals. If you want to view all possible instructions in the wizard, go to [Configuration Wizard instructions: Modify site URLs for search engine optimization](../../siteurl_cfg/changing_siteurl/cw_shorten_url/index.md). The instructions that you generate in the wizard might include or exclude specific steps that you view in the referenced topic based on your wizard selections.
 
 **Related information**  
-[About friendly URLs for web content](../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/customizing_content/friendlyurl_wcmviewer/wcm_config_wcmviewer_workfriendly.md)
+[About friendly URLs for web content](../../../../manage_content/wcm_delivery/delivering_web_content/deliver_webcontent_on_portal/customizing_content/friendlyurl_wcmviewer/wcm_config_wcmviewer_workfriendly.md)
 

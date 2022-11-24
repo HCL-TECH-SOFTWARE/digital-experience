@@ -17,7 +17,7 @@ If you have a HCL Web Content Manager only license, you can deliver your website
 ???+ info "Related information" 
 -   [Configuring Web Content Manager](../../../../manage_content/wcm/index.md)
 -   [Web Content Administration tools](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/index.md)
--   [Delivering web content](../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/index.md)
--   [The Web Content Manager API](../../../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_dev_api/index.md)
--   [REST Service for Web Content Manager](../../../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_rest/index.md)
+-   [Delivering web content](../../../../manage_content/wcm_delivery/delivering_web_content/index.md)
+-   [The Web Content Manager API](../../../../manage_content/wcm_development/wcm_dev_api/index.md)
+-   [REST Service for Web Content Manager](../../../../manage_content/wcm_development/wcm_rest/index.md)
 

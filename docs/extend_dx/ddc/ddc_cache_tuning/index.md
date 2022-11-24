@@ -10,4 +10,4 @@ The Digital Data Connector \(DDC\) for HCL Portal framework provides the caches 
 
 ???+ info "Related information:"
     - [Performance tuning for lists of social objects](../../../build_sites/social_rendering/administering_social_list/soc_rendr_perf_tune_cach.md)
-    - [Using the list-rendering cache](../../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/connector_plugins/plrf_tune_markup_chache.md)
+    - [Using the list-rendering cache](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/creating_plugin_tag/connector_plugins/plrf_tune_markup_chache.md)

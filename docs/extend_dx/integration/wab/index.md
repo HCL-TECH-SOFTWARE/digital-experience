@@ -26,5 +26,5 @@ The troubleshooting information is useful for planning and implementing your Web
 
 
 ???+ info "Related information"
-    - [Providing short vanity URLs](../../../manage_content/wcm/wcm_content_delivery/vanity_url/adm_vanity_url/van_url_short.md)
+    - [Providing short vanity URLs](../../../manage_content/wcm_delivery/vanity_url/adm_vanity_url/van_url_short.md)
 

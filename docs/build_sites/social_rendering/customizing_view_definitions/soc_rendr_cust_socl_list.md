@@ -152,7 +152,7 @@ The following settings and options are available for customizing social list vie
     - [Using the portal Tag Cloud with lists of social objects](../working_with_social_objects/using_portal_tagcloud_with_social_objects/index.md)
     - [Configuring the maximum number of items loaded from HCL Connections](../cfg_global_settings_social_rendering/soc_rendr_cfg_connct_item_limit.md)
     - [Customizing the visual design of your view definitions](../customizing_view_definitions/customizing_visualdesign/index.md)
-    - [Dynamic list-rendering contexts](../../../manage_content/wcm/wcm_artifacts/tags/creating_web_content_tags/creating_plugin_tag/connector_plugins/list_rendering_context/plrf_list_rndr_dynamic_cntxts.md)
+    - [Dynamic list-rendering contexts](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/creating_plugin_tag/connector_plugins/list_rendering_context/plrf_list_rndr_dynamic_cntxts.md)
     - [Social object resolution](../working_with_social_objects/concept_list_social_objects/soc_rendr_soc_obj_resltn.md)
     - [Managing community associations](../../../extend_dx/integration/connections/configuration/managing_community_pages/commpages_create_mapping.md)
     - [Administering Portal Search](../../search/portal_search/administer_portal_search/index.md)

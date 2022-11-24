@@ -61,13 +61,13 @@ Reference copy of the Portal Version 8.5.0. SPI, javadocs, and other specificati
     Get an overview of the process of creating portlets, learn about the concepts of the APIs used to develop portlets, and view the samples to get you started. Also, learn about integrating features such as single sign-on, cooperative sharing of information using the property broker, and migrating Struts applications to the portlet environment.
     - **[Standard Portlets API](../portlets_development/standard_portlet_api/index.md)**  
     Get an overview of the process of creating portlets, learn about the concepts of the APIs used to develop portlets, and view the samples to get you started. Also, learn about integrating features such as single sign-on, cooperative sharing of information using the property broker, and migrating Struts applications to the portlet environment.
-    - **[The HCL Web Content Manager API](../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_dev_api/index.md)**  
+    - **[The HCL Web Content Manager API](../../manage_content/wcm_development/wcm_dev_api/index.md)**  
     You can use the Web Content Manager API to extend functions of Web Content Manager.
     - **[Search REST API specification](../../build_sites/search/search-rest-api/index.md)**  
     The following document describes the API call to search HCL Digital Experience. You can search HCL to find content that contains a specific text string in its title or content, or is tagged with a specific tag.
     - **[Extending tagging and rating by using service APIs](../../build_sites/tagging_rating/dev_tagging_and_rating/index.md)**  
     Developers can enhance and extend the tagging and rating features of the portal. For this purpose the portal tagging and rating feature provides service APIs that you can use to enhance tagging and rating by your requirements.
-    - **[REST service for Web Content Manager](../../manage_content/wcm/wcm_artifacts/wcm_dev/wcm_rest/index.md)**  
+    - **[REST service for Web Content Manager](../../manage_content/wcm_development/wcm_rest/index.md)**  
     Application developers can use Representational State Transfer (REST) services to work with Web Content Manager. The REST service for Web Content Manager provides authoring access to content items and elements. The service follows the Atom Publication Protocol, and Atom feeds, and entries are accessible in XML (application/atom+xml) and JSON (application/json) format.
     - **[API for accessing Portlet load monitoring data](../../build_sites/site_analytics/portlet_load_monitoring/plmr_api.md)**  
     Portlet load monitoring provides an API for accessing the monitoring data. You can use this API to write custom code to access that data.

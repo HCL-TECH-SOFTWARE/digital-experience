@@ -82,5 +82,5 @@ The portal evaluates properties for virtual portals in the following order and r
     -   [Removing the site toolbar on a production server](../../../../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/wcm_mngpages_disabletool.md)
     -   [Disabling the toolbar logo](../../../../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/disable_toolbar_logo.md)
     -   [Customizing the More menu of the action bar](../../../../../build_sites/create_sites/site_prep_content_author/prep_site_toolbar/epc_custom_more_menu.md)
-    -   [Disabling the preview option](../../../../../manage_content/wcm/wcm_content_delivery/preview_another_user/wcm_preview_disable.md)
+    -   [Disabling the preview option](../../../../../manage_content/wcm_delivery/preview_another_user/wcm_preview_disable.md)
 

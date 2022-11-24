@@ -58,5 +58,5 @@ Registering the proxy servlet in the Web deployment descriptor of a portlet does
 
 
 ???+ info "Related information"
-      - [Configuring remote server access for links](../../../../../../manage_content/wcm/wcm_content_delivery/cfg_webcontent_auth_env/wcm_config_ecm_whitelist.md)
+      - [Configuring remote server access for links](../../../../../../manage_content/wcm_delivery/cfg_webcontent_auth_env/wcm_config_ecm_whitelist.md)
       - [Adding an outbound connection policy](../../../../web2_ui/outbound_http_connection/cfg_outbound_http_connections/sample_admin_tasks/outbhttp_cfgsmptsk_add_ob_conn_plcy.md)

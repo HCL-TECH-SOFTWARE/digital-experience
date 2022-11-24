@@ -17,5 +17,5 @@ By default, only web content items can be drag and dropped from the toolbar. You
 
 ???+ info "Related information"
     - [Site toolbar and Site Manager](../../../authoring_tools/site_site_toolbar.md)
-    - [Creating web content when you add a web content viewer to a page](../../../../../manage_content/wcm/wcm_content_delivery/delivering_web_content/deliver_webcontent_on_portal/customizing_content/wcm_delivery_content_addshelf.md)
+    - [Creating web content when you add a web content viewer to a page](../../../../../manage_content/wcm_delivery/delivering_web_content/deliver_webcontent_on_portal/customizing_content/wcm_delivery_content_addshelf.md)
 

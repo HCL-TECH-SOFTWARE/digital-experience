@@ -25,6 +25,6 @@ Embedding a toolbar into a theme dynamically integrates the toolbar without edit
 
 ???+ info "Related information" 
     -   [Adding or removing a module from a profile](../../../../../../../build_sites/themes_skins/the_module_framework/add_remove_oob_modules/index.md)
-    -   [Using WebDAV file store](../../../../../../../manage_content/wcm/wcm_content_delivery/webdav/administer_webdav/mash_webdav_store.md)
+    -   [Using WebDAV file store](../../../../../../../manage_content/wcm_delivery/webdav/administer_webdav/mash_webdav_store.md)
     <!-- -   [Setting a profile override on a page](../dev-theme/themeopt_cust_changepro_override.md) -->
 
