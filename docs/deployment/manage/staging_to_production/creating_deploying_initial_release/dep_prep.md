@@ -27,5 +27,5 @@ You must set up your production servers before you move content from the staging
 4.  If you have a clustered environment, turn off automatic node synchronization on all secondary nodes.
 
 **Related information**  
-[Exporting and importing a web content library](../../../../manage_content/wcm/wcm_management/wcm_adm_tools/wcmlibrary_export/wcm_config_wcmlibrary_export.md)
+[Exporting and importing a web content library](../../../../manage_content/wcm_configuration/wcm_adm_tools/wcmlibrary_export/wcm_config_wcmlibrary_export.md)
 

@@ -25,7 +25,7 @@ When you enable managed pages after migration, several considerations apply:
 -   Private pages
 Each virtual portal has its own Portal Site library.
 
--   In scenarios where the configured user realm does not contain the domain administrator, an alternative user must be provided. If you have a multi-realm configuration, see [Defining alternative administrators for multi-realm configurations](../../../../../manage_content/wcm/wcm_management/further_cfg_options/wcm_config_admin_multirealm.md).
+-   In scenarios where the configured user realm does not contain the domain administrator, an alternative user must be provided. If you have a multi-realm configuration, see [Defining alternative administrators for multi-realm configurations](../../../../../manage_content/wcm_configuration/further_cfg_options/wcm_config_admin_multirealm.md).
 
 !!!note
     To take advantage of the features available to managed pages in the user interface, your pages must use the Portal 8.5 theme.

@@ -18,7 +18,7 @@ See the [How to export and import WCM library content using DXClient](../../exte
 
 New options are available to flush the Web Content Manager Advanced cache, as a result of syndication operations, to help improve performance and reliability.
 
-See the [Web Content Manager Cache Parameters](../../manage_content/wcm/wcm_management/custom_caching/wcm_dev_caching_cache-parameters.md) topic for more information.
+See the [Web Content Manager Cache Parameters](../../manage_content/wcm_configuration/custom_caching/wcm_dev_caching_cache-parameters.md) topic for more information.
 
 ## Enhanced Cross Origin Resource Sharing Configuration
 
