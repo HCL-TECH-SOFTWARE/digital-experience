@@ -1,6 +1,5 @@
 ---
-id: wcm_overview_accessibility
-title: Authoring portlet accessibility features
+title: Accessibility Features
 ---
 
 # Authoring portlet accessibility features

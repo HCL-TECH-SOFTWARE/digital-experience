@@ -1,6 +1,5 @@
 ---
-id: wcm_authoring_accessing
-title: How to access the authoring portlet
+title: Access the Authoring Portlet
 ---
 
 # How to access the authoring portlet
