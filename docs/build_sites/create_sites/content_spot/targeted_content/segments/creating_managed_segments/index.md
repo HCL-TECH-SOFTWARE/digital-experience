@@ -4,7 +4,7 @@
 
 You can create managed segments in your web content library so that you can target content to specific segments of users.
 
-Before you create **Segments**, ensure that your system administrator has set up the proper access control permissions. Go to the *Access permissions for Business Rules* table in [Access permissions](../../../../../../deployment/manage/security/controlling_access/resources_roles/sec_acc_rights.md) for more information.
+Before you create **Segments**, ensure that your system administrator has set up the proper access control permissions. Go to the *Access permissions for Business Rules* table in [Access permissions](../../../../../../deployment/manage/security/people/authorization/controlling_access/resources_roles/sec_acc_rights.md) for more information.
 
 Managed segments help you split your audience into meaningful groups that share characteristics. You can create segment groups and segments by completing the **Segment Group** form. The information that you provide on the form appears in the Add Segments dialog when you configure a spot for targeted content.
 

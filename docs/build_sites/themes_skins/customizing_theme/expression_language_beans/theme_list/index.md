@@ -18,7 +18,7 @@ Attributes:
 
     Parameters: none
 
-    Returns: [Theme](themeopt_el_bean_theme.md), never null.
+    Returns: [Theme](../theme_list/theme/index.md), never null.
 
     Exception: `current` requires a valid main portal request. If the required context is not included, an exception is thrown.
 
@@ -38,7 +38,7 @@ Attributes:
 
         String or Identifiable object to look up the theme objects; it must not be null.
 
-    Returns: [Theme](themeopt_el_bean_theme.md); it can be null if not found.
+    Returns: [Theme](../theme_list/theme/index.md); it can be null if not found.
 
 -   **iterator**
 
@@ -53,6 +53,6 @@ Attributes:
 
     Parameters: none
 
-    Returns: An iterator with [Theme](themeopt_el_bean_theme.md) objects; it is never null.
+    Returns: An iterator with [Theme](../theme_list/theme/index.md) objects; it is never null.
 
 
