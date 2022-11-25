@@ -197,7 +197,8 @@ The following section provides detailed descriptions of the `<portal-navigation/
 
         For a portlet, this attribute indicates the state of the portlet window when it is displayed. If portlet state is not specified, the page is shown with the previous state of the portlet. This parameter is ignored if `layoutNode` is not set.
 
-        **Note:** Use caution when you use this tag to address portlets in solo state. The portlet must be able to exist in solo state that uses the `createReturnURI()` method. If a portlet without this method is placed in solo state, then users are forced to log out or close their browser windows to return to the portal.
+        !!! note
+            Use caution when you use this tag to address portlets in solo state. The portlet must be able to exist in solo state that uses the `createReturnURI()` method. If a portlet without this method is placed in solo state, then users are forced to log out or close their browser windows to return to the portal.
 
     -   **themeTemplate="template\_name"**
 
@@ -302,7 +303,8 @@ The following section provides detailed descriptions of the `<portal-navigation/
 
             This attribute creates a URL that either starts a page if all conditions for the page launch are fulfilled for the navigation node or if just like in the selection URL in `type="link"`.
 
-        **Note:** The global state of the portal navigation trees is collapsed by default \(with some exceptions, such as the Portal Administration navigation\). You can configure the default state of the portal navigation trees to expand all nodes by setting the Portal Configuration Service property `navigation.expansion.defaultstate` to `true`.
+        !!! note
+            The global state of the portal navigation trees is collapsed by default \(with some exceptions, such as the Portal Administration navigation\). You can configure the default state of the portal navigation trees to expand all nodes by setting the Portal Configuration Service property `navigation.expansion.defaultstate` to `true`.
 
     -   **varname**
 

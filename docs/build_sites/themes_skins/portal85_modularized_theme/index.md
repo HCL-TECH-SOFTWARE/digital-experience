@@ -22,7 +22,7 @@ Static resources include the markup that is defined by .html, .css, and .js file
 Dynamic content includes resources that are defined by jsp files that are used by the theme.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [Setting up Client Certificate Authentication](../../../deployment/manage/security/information/confidentiality/configuring_ssl/certauth.md)
     - [Changing the login and logout pages](../../../deployment/manage/security/people/authentication/external_sec_mgmt/sec_chg_login.md)
     - [Importing a static page from an installed template](../../create_sites/building_website/static_content/including_static_content_pages/export_import_static_page/spa_xml_impt_tmplt.md)

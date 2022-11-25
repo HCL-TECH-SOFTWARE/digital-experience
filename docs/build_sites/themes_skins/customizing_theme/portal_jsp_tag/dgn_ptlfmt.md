@@ -10,20 +10,21 @@ The following table provides a brief description of each tag.
 |Tag|Description|
 |---|-----------|
 |[<portal-fmt:answer/\>](#answer)|Returns the answer text for a key in the specified language. This tag can be used only within a <portal-skin:portletRender/\> or <portal-core:pageRender/\> tag.|
-|[<portal-fmt:bidi/\>](#if_bidi)|This tag is used to support the display of bidirectional languages.|
-|[<portal-fmt:description/\>](#navigationdesc)|Provides the description of an object that implements the `Localized` interface. This tag can be used in both theme and skin JSPs.|
-|[<portal-fmt:identification/\>](#ident)|Transforms a String representation of the ObjectID into an ObjectID. Also transforms an ObjectID into a String representation of the ObjectID.|
-|[<portal-fmt:problem/\>](#wps_problem)|Returns the problem text for a key in the specified language. This tag can be used only within a `<portal-skin:portletRender/>` or `<portal-core:pageRender/>` tag.|
-|[<portal-fmt:text/\>](#wps_text)|Returns the text for a key in the specified language. For information about how to set the bundle refer to the portletExt:setBundle tag under [JSP tags for standard portlets](jsrjsp.md).|
+|[<portal-fmt:bidi/\>](#bidirectional-languages)|This tag is used to support the display of bidirectional languages.|
+|[<portal-fmt:description/\>](#description)|Provides the description of an object that implements the `Localized` interface. This tag can be used in both theme and skin JSPs.|
+|[<portal-fmt:identification/\>](#)|Transforms a String representation of the ObjectID into an ObjectID. Also transforms an ObjectID into a String representation of the ObjectID.|
+|[<portal-fmt:problem/\>](#problem)|Returns the problem text for a key in the specified language. This tag can be used only within a `<portal-skin:portletRender/>` or `<portal-core:pageRender/>` tag.|
+|[<portal-fmt:text/\>](#text)|Returns the text for a key in the specified language. For information about how to set the bundle refer to the portletExt:setBundle tag under [JSP tags for standard portlets](../../../../extend_dx/portlets_development/portlet_dev_ref/jsrjsp.md).|
 |[<portal-fmt:textParam/\>](#textparam)|If the text that is retrieved contains placeholders in the form of "\{0\}", "\{1\}", "\{2\}", it can be set with this tag. This tag can be used only in the body of the `<portal-fmt:text/>` tag.|
-|[<portal-fmt:title/\>](#navigationtitle)|Provides the title of an object that implements the interface. This tag can be used in both theme and skin JSPs.|
+|[<portal-fmt:title/\>](#title)|Provides the title of an object that implements the interface. This tag can be used in both theme and skin JSPs.|
 |[<portal-fmt:user/\>](#user)|If the user is logged in, this tag returns one of the specified values of attribute.|
 
 ## Detailed descriptions of the <portal-fmt/\> tags
 
 The following section provides detailed descriptions of the <portal-fmt/\> JSP tags:
 
--   **<portal-fmt:answer bundle="bundle"\>**
+### Answer
+**<portal-fmt:answer bundle="bundle"\>**
 
     Returns the answer text for a key in the specified language. The following keys can be looked up in the resource bundle.
 
@@ -37,7 +38,8 @@ The following section provides detailed descriptions of the <portal-fmt/\> JSP t
     -   portlet.title.not.available.answer
     Each key corresponds to a problem key \(without the `.answer` suffix\). See the [<portal-fmt:problem\>](#wps_problem) tag for a complete description of each problem and an example.
 
--   **<portal-fmt:bidi dir="rtl\|ltr" attribute="portlet" locale="locale"\>**
+### Bidirectional languages
+**<portal-fmt:bidi dir="rtl\|ltr" attribute="portlet" locale="locale"\>**
 
     This tag is used to support bidirectional languages. Bidirectional languages contain text that reads in both directions. For example, URLs, code samples, or directory and file names can be read in the opposite direction of the rest of the text.
 
@@ -91,7 +93,8 @@ The following section provides detailed descriptions of the <portal-fmt/\> JSP t
     
     ```
 
--   **<portal-fmt:description locale="locale" varname="scripting\_variable" /\>**
+### Description
+**<portal-fmt:description locale="locale" varname="scripting\_variable" /\>**
 
     Provides the description of the object that is specified by `varname` or of the navigation node that is set in the `<portal-navigation:navigationLoop/>` tag. This tag can be used in both theme and skin JSPs.
 
@@ -117,7 +120,8 @@ The following section provides detailed descriptions of the <portal-fmt/\> JSP t
     
     ```
 
--   **<portal-fmt:identification action="setting" object="object\_name" var="variable\_name"/\>**
+### Identification
+**<portal-fmt:identification action="setting" object="object\_name" var="variable\_name"/\>**
 
     Transforms a String representation of the ObjectID into an ObjectID. Also transforms an ObjectID into a String representation of the ObjectID.
 
@@ -153,7 +157,8 @@ The following section provides detailed descriptions of the <portal-fmt/\> JSP t
     </portal-fmt:identification>
     ```
 
--   **<portal-fmt:problem bundle="bundle"\>**
+### Problem
+**<portal-fmt:problem bundle="bundle"\>**
 
     Returns the problem text for a given key in the specified language. The following keys can be looked up in the resource bundle.
 
@@ -185,13 +190,15 @@ The following section provides detailed descriptions of the <portal-fmt/\> JSP t
         
     ```
 
--   **<portal-fmt:text key="key" bundle="bundle"\>**
+### Text
+**<portal-fmt:text key="key" bundle="bundle"\>**
 
     Returns the text for a key in the specified language. The key indicates a parameter in a resource bundle or properties file, indicated by bundle. Both attributes are required. See the description of [<portal-fmt:textParam\>](#textparam) for an example and further description of the attributes of <portal-fmt:text/\>.
 
     Where possible, the `<i18n:bundle/>` and `<i18n:message/>` tags of the I18N tag library can be used instead of <portal-fmt:text/\>..
 
--   **<portal-fmt:textParam\>**
+###  TextParam
+**<portal-fmt:textParam\>**
 
     If the text that is retrieved contains placeholders in the form of "\{0\}", "\{1\}", "\{2\}", these can be set with this tag. This tag can be used only in the body of the <portal-fmt:text/\> tag. The text to be substituted for the placeholders must be entered as content for this tag. It can even be an expression.
 
@@ -215,7 +222,8 @@ The following section provides detailed descriptions of the <portal-fmt/\> JSP t
         
     ```
 
--   **<portal-fmt:title locale="locale" varname="localized\_object"/\>**
+### Title
+**<portal-fmt:title locale="locale" varname="localized\_object"/\>**
 
     Provides the title of the object that is specified in `varname`. The tag also implies the object if it is called inside of the <portal-navigation:navigationLoop/\> tag.
 
@@ -229,7 +237,8 @@ The following section provides detailed descriptions of the <portal-fmt/\> JSP t
 
         Optional. Specifies the name of the scripting variable holding the object. The <portal-navigation:navigation/\> tag sets this object to <%=wpsNavNode%\>.
 
--   **<portal-fmt:user attribute="value"/\>**
+### User
+**<portal-fmt:user attribute="value"/\>**
 
     If the user is logged in, this tag returns one of the specified user attributes. value can be any user attribute that is defined to Member Manager.
 

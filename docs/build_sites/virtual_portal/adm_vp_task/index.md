@@ -43,7 +43,7 @@ When you create a virtual portal by using the Virtual Portal Manager portlet, th
 Administering virtual portals and their content comprises the tasks described in the following topics.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [The master administrator](../vp_planning/vp_roles/advppln_roles_mastr_adm.md)
     - [Tasks for administering virtual portals](../adm_vp_task/vp_adm_task/index.md)
     - [Portal configuration tasks for administering virtual portals](../vp_reference/vp_command_ref/portal_cfg_adm_vp/index.md)
