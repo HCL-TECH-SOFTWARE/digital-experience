@@ -81,9 +81,9 @@ The following list shows the tasks for which you can assign extra access permiss
 
 ???+ info "Related information:"
     - [Preconfiguring the sub-administrators for virtual portals](../../vp_mgr_portlet/preconfig_vp/advp_precfg_subadm.md)
-    - [Controlling access](../../../../deployment/manage/security/controlling_access/index.md)
-    - [Setting user and group permissions](../../../../deployment/manage/security/controlling_access/sec_ugpp.md)
-    - [Setting resource permissions](../../../../deployment/manage/security/controlling_access/sec_rpp.md)
-    - [The XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
-    - [Portal Scripting Interface](../../../../extend_dx/development_tools/portal_admin_tools/portal_scripting_interface/index.md)
+    - [Controlling access](../../../../deployment/manage/security/people/authorization/controlling_access/index.md)
+    - [Setting user and group permissions](../../../../deployment/manage/security/people/authorization/controlling_access/sec_ugpp.md)
+    - [Setting resource permissions](../../../../deployment/manage/security/people/authorization/controlling_access/sec_rpp.md)
+    - [The XML configuration interface](../../../../deployment/manage/portal_admin_tools/xml_config_interface/index.md)
+    - [Portal Scripting Interface](../../../../deployment/manage/portal_admin_tools/portal_scripting_interface/index.md)
 

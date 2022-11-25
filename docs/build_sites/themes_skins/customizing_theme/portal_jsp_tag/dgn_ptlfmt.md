@@ -4,7 +4,8 @@ The <portal-fmt/\> tags are used to provide enhanced portal formatting capabilit
 
 The following table provides a brief description of each tag.
 
-**Note:** Do not use portal tags in portlet JSPs. The following tags are only for use in theme and skin JSPS.
+!!! note
+    Do not use portal tags in portlet JSPs. The following tags are only for use in theme and skin JSPS.
 
 |Tag|Description|
 |---|-----------|

@@ -23,12 +23,12 @@ Dynamic content includes resources that are defined by jsp files that are used b
 
 
 ???+ info "Related information:"
-    - [Setting up Client Certificate Authentication](../../../deployment/manage/security/configuring_ssl/certauth.md)
-    - [Changing the login and logout pages](../../../deployment/manage/security/external_sec_mgmt/sec_chg_login.md)
+    - [Setting up Client Certificate Authentication](../../../deployment/manage/security/information/confidentiality/configuring_ssl/certauth.md)
+    - [Changing the login and logout pages](../../../deployment/manage/security/people/authentication/external_sec_mgmt/sec_chg_login.md)
     - [Importing a static page from an installed template](../../create_sites/building_website/static_content/including_static_content_pages/export_import_static_page/spa_xml_impt_tmplt.md)
     - [The module framework](../the_module_framework/index.md)
     - [Simple menu framework](../customizing_theme/menus/simple_menu_framework/index.md)
     - [Modules that are provided with the modularized theme](../the_module_framework/oob_modules/index.md)
     - [<portal-logic/\> tags](../customizing_theme/portal_jsp_tag/dgn_ptllogic.md)
-    - [Dynamically changing the language during the user session](../../../extend_dx/development_tools/portal_admin_tools/language_support/adchglang_dynamic.md)
+    - [Dynamically changing the language during the user session](../../../deployment/manage/portal_admin_tools/language_support/adchglang_dynamic.md)
 

@@ -17,5 +17,5 @@ You can use the Virtual Portal Manager portlet to change the following settings 
 ???+ info "Related information:"
     - [Task: modify-virtual-portal](../../vp_reference/vp_command_ref/portal_cfg_adm_vp/advp_cfgtsk_modify.md)
     - [Task: delete-virtual-portal](../../vp_reference/vp_command_ref/portal_cfg_adm_vp/advp_cfgtsk_delete.md)
-    - [Working with the XML configuration interface](../../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
+    - [Working with the XML configuration interface](../../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
 

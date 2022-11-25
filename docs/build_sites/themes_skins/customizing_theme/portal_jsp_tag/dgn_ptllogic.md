@@ -343,6 +343,6 @@ The <portal-logic/> tags are used to provide tags for conditional logic.
 
 
 ???+ info "Related information"  
-    -   [Administering user impersonation](../../../../deployment/manage/security/users_and_groups/impersonation/index.md)
+    -   [Administering user impersonation](../../../../deployment/manage/security/people/authorization/users_and_groups/impersonation/index.md)
     -   [Understanding the Portal 8.5 modularized theme](../../../../build_sites/themes_skins/portal85_modularized_theme/index.md)
 

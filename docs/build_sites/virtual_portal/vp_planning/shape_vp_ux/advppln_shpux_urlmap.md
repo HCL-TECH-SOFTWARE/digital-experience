@@ -36,11 +36,11 @@ For more information, see *URL mappings*.
 
 
 
-???+ info "Related information:"
-    - [Using friendly URLs](../../../../extend_dx/development_tools/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/mp_friendly_url.md)
+???+ info "Related information"
+    - [Using friendly URLs](../../../../deployment/manage/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/mp_friendly_url.md)
     - [URL mapping](../../../../deployment/manage/config_portal_behavior/adurlmap.md)
-    - [XML configuration interface and content associations](../../../../manage_content/wcm_delivery/delivering_web_content/deliver_webcontent_on_portal/advance_adm_sample/contentmap/mp_wcm_contentmap_xml.md)
+    - [XML configuration interface and content associations](../../../../manage_content/wcm_delivery/deliver_webcontent_on_portal/advance_adm_sample/contentmap/mp_wcm_contentmap_xml.md)
     - [Automatically grant page access to community members](../../../../extend_dx/integration/connections/configuration/cfg_community_pages/commpages_delegate_access.md)
-    - [REST API and content associations](../../../../manage_content/wcm_delivery/delivering_web_content/deliver_webcontent_on_portal/advance_adm_sample/contentmap/mp_wcm_contentmap_restapi.md)
-    - [Access permissions](../../../../deployment/manage/security/controlling_access/resources_roles/sec_acc_rights.md)
+    - [REST API and content associations](../../../../manage_content/wcm_delivery/deliver_webcontent_on_portal/advance_adm_sample/contentmap/mp_wcm_contentmap_restapi.md)
+    - [Access permissions](../../../../deployment/manage/security/people/authorization/controlling_access/resources_roles/sec_acc_rights.md)
 
