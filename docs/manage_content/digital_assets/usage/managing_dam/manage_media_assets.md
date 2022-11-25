@@ -27,7 +27,6 @@ The following are supported media asset file formats in HCL Digital Experience 9
 |File type|Extension|
 |---------|---------|
 |.png|image/png|
-|.svg|image/svg+xml|
 |.gif|image/gif|
 |.jpg|image/jpeg|
 |.jpeg|image/jpeg|
@@ -36,8 +35,10 @@ The following are supported media asset file formats in HCL Digital Experience 9
 |.webp|image/webp|
 
 !!! note 
-    You can set the maximum file size for the DAM asset uploads. For more information on configuring the file size, refer to the [MediaTypeGroupController.updateById](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeGroupController.updateById) API documentation topic.
-
+    -   You can set the maximum file size for the DAM asset uploads. For more information on configuring the file size, refer to the [MediaTypeGroupController.updateById](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeGroupController.updateById) API documentation topic.
+    -   You can enable .svg file type (extension image/svg+xml) asset upload. For more information on enabling the svg file upload, refer to the 
+    [MediaTypeController.updateById](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeController.updateById)
+    this API documentation topic.
 |File type|Extension|
 |---------|---------|
 |.ogv|video/ogg|
