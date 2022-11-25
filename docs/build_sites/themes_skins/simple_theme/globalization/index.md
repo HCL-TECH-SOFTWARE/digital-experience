@@ -6,7 +6,7 @@ You must add and modify several files to add other locales to your custom theme.
 
 ## Theme template \(theme.html\)
 
-If your theme template contains translatable strings, you can delegate rendering to a specific HTML file for each locale. The following procedure adds support for German as an example, but you can add support for many other languages. Go to [Supported languages](../reference/supportedlanguages.md#) to learn more about the languages that are supported by HCL Digital Experience.
+If your theme template contains translatable strings, you can delegate rendering to a specific HTML file for each locale. The following procedure adds support for German as an example, but you can add support for many other languages. Go to [Supported languages](../../../../deployment/manage/portal_admin_tools/language_support/index.md) to learn more about the languages that are supported by HCL Digital Experience.
 
 1.  Add the following tags to the head section of your theme template:
 
@@ -25,7 +25,7 @@ If your theme template contains translatable strings, you can delegate rendering
 
 ## Skin template \(skin.html\)
 
-The skin template contains English strings for the menu hover text. You can delegate rendering to a specific skin HTML file for each locale. The following procedure adds support for German as an example, but you can add support for many other languages. Go to [Supported languages](../reference/supportedlanguages.md#) to learn more about the languages that are supported by HCL Digital Experience.
+The skin template contains English strings for the menu hover text. You can delegate rendering to a specific skin HTML file for each locale. The following procedure adds support for German as an example, but you can add support for many other languages. Go to [Supported languages](../../../../deployment/manage/portal_admin_tools/language_support/index.md) to learn more about the languages that are supported by HCL Digital Experience.
 
 1.  Add the following tag to the section tag of your template:
 

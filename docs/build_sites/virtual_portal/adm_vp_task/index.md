@@ -43,12 +43,12 @@ When you create a virtual portal by using the Virtual Portal Manager portlet, th
 Administering virtual portals and their content comprises the tasks described in the following topics.
 
 
-???+ info "Related information:"
+???+ info "Related information"
     - [The master administrator](../vp_planning/vp_roles/advppln_roles_mastr_adm.md)
     - [Tasks for administering virtual portals](../adm_vp_task/vp_adm_task/index.md)
     - [Portal configuration tasks for administering virtual portals](../vp_reference/vp_command_ref/portal_cfg_adm_vp/index.md)
-    - [The XML configuration interface](../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/index.md)
-    - [Working with the XML configuration interface](../../../extend_dx/development_tools/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
+    - [The XML configuration interface](../../../deployment/manage/portal_admin_tools/xml_config_interface/index.md)
+    - [Working with the XML configuration interface](../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
     - [Planning for virtual portals](../vp_planning/index.md)
     - [Separating and sharing resources between virtual portals](../vp_planning/advppln_scope.md)
     - [Preconfiguring the default content for virtual portals](../vp_mgr_portlet/preconfig_vp/advp_precfg_content.md)
