@@ -150,7 +150,7 @@ How to register to HCL Software portals - eCommerce, License & Delivery, Custome
 <https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0069114>
 
 How to reset your password on HCL License & Delivery Portal  
-<https://support.hcltechsw.com/csm?id=csm_index>
+<https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0089935>
 
 How to Add a New User to an Account on HCL License & Delivery Portal  
 <https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0072851>
@@ -158,5 +158,4 @@ How to Add a New User to an Account on HCL License & Delivery Portal
 How to find HCL Product Releases in HCL License & Delivery Portal
 <https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0010149>
 
-Frequently Asked Questions for IBM to HCL product support transition
-<https://support.hcltechsw.com/csm?id=csm_index>
+
