@@ -7,6 +7,6 @@ If you use the XML configuration interface to create a Producer definition, you 
 You can also use the XML configuration interface to export a Producer definition, and to create a Producer definition and consume a portlet from that Producer by using a single XML script.
 
 ???+ info "Related information"  
-   -  [The XML configuration interface](../../../../portal_admin_tools/xml_config_interface/index.md)
-   -  [Working with the XML configuration interface](../../../../portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
+   -  [The XML configuration interface](../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/index.md)
+   -  [Working with the XML configuration interface](../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
 
