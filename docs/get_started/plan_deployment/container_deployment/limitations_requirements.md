@@ -68,7 +68,6 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
     |Logging Sidecar|loggingSidecar|0.1|64MB|0|
     |Prereqs Checker|prereqsChecker|0.1|64MB|0|
 
-
 <!--
 ???+ info "Related information:"
     - [HCL Digital Experience 9.5 Roadmap: Container deployment](../container_deployment/rm_container/rm_container_deployment.md)
