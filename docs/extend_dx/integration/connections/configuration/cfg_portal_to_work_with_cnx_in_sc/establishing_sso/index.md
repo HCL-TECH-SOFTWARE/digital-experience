@@ -6,8 +6,10 @@ Since SmartCloud for Social Business uses a specific user repository, the follow
 
 -   Users do not have to maintain separate user names and passwords for HCL Portal and HCL Connections.
 -   A user logs on one time in to your digital experience and can view:
+
     -   Information from HCL Connections in SmartCloud for Social Business Rest APIs that are rendered by using portlets or HCL Web Content Manager rendering in HCL Portal.
     -   The SmartCloud for Social Business HCL Connections web user interface.
+
 -   The infrastructure to complete outbound calls must be configured to support SAML-based single sign-on (SSO), since single sign-on needs to be established for calls from the portal JVM to the HCL Connections server in SmartCloud for Social Business APIs. To configure support for SAML-based single sign-on, you must use one of the following identity providers:
 
     -   To use Tivoli Federated Identity Manager (TFIM) as your identity provider, view the information in [Configuration settings for Tivoli Federated Identity Manager (TFIM)](../../../../../portlets_development/web2_ui/outbound_http_connection/authenticating_outbound_http_connections/establish_sso_connections_thru_SAML20_tokens/cfg_saml_auth_conn/cfg_settings_tfim/index.md).
@@ -38,6 +40,6 @@ Single sign-on (SSO) for browser-based access to HCL Connections in SmartCloud f
 ???+ info "Related information"
     - [Configuration settings for Tivoli Federated Identity Manager (TFIM)](../../../../../portlets_development/web2_ui/outbound_http_connection/authenticating_outbound_http_connections/establish_sso_connections_thru_SAML20_tokens/cfg_saml_auth_conn/cfg_settings_tfim/index.md)
     - [Configuration settings for Active Directory Federation Services (ADFS)](../../../../../portlets_development/web2_ui/outbound_http_connection/authenticating_outbound_http_connections/establish_sso_connections_thru_SAML20_tokens/cfg_saml_auth_conn/cfg_settings_adfs/index.md)
-    - [Enable federated security](../../../../../../deployment/manage/security/user_registry/cw_ldap.md)
+    - [Enable federated security](../../../../../../deployment/manage/security/people/authentication/user_registry/cw_ldap.md)
     - [Enabling federated identity management](https://support.hcltechsw.com/csm)
 
